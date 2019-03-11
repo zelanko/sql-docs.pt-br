@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d79d404e72f13ade55f6bd64f261741d86b78347
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8637754097be0837f51ef3fda06375abcb084cae
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532545"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590431"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Melhorar o desempenho de índices de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,8 +83,8 @@ O arquivo de log de rastreamento segue o seguinte esquema de nomeação:
 `SQLFT<DatabaseID\><FullTextCatalogID\>.LOG[<n\>]`
   
 As partes variáveis do nome do arquivo de log de rastreamento são as seguintes.
--   <**DatabaseID**> – a ID de um banco de dados. <**dbid**> é um número de cinco dígitos com zeros à esquerda.  
--   <**FullTextCatalogID**> – ID do catálogo de texto completo. <**catid**> é um número de cinco dígitos com zeros à esquerda.  
+-   \<**DatabaseID**> – a ID de um banco de dados. <**dbid**> é um número de cinco dígitos com zeros à esquerda.  
+-   <**FullTextCatalogID**> – ID do catálogo de texto completo. \<**catid**> é um número de cinco dígitos com zeros à esquerda.  
 -   <**n**> – É um inteiro que indica um ou mais logs de rastreamento que existem do mesmo catálogo de texto completo.  
   
  Por exemplo, `SQLFT0000500008.2` é o arquivo de log de rastreamento de um banco de dados com a ID de banco de dados = 5 e a ID de catálogo de texto completo = 8. O 2 no final do nome do arquivo indica que há dois arquivos de log de rastreamento para esse par de banco de dados/catálogo.  
@@ -142,7 +142,7 @@ Para obter informações essenciais sobre as fórmulas a seguir, consulte as not
 2.  500 MB é uma estimativa da memória exigida por outros processos no sistema. Se o sistema estiver executando trabalho adicional, aumente esse valor de maneira correspondente.  
 3.  .*ism_size* é presumido como 8 MB para plataformas x64.  
   
- #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>Exemplo: estimar as necessidades de memória do fdhost.exe  
+ #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>Exemplo: estimar os requisitos de memória de fdhost.exe  
   
  Este exemplo é para um computador 8GM de RAM com 64 bits e 4 processadores de núcleo dual. O primeiro cálculo estima a memória necessária para fdhost.exe -*F*. O número de intervalos de rastreamento é `8`.  
   
@@ -152,7 +152,7 @@ Para obter informações essenciais sobre as fórmulas a seguir, consulte as not
   
  `M = 8192-640-500=7052`  
   
- #### <a name="example-setting-max-server-memory"></a>Exemplo: Definindo a configuração max server memory  
+ #### <a name="example-setting-max-server-memory"></a>Exemplo: configurando a memória máxima do servidor  
   
  Este exemplo usa as instruções [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) e [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] para definir **max server memory** com o valor calculado para *M* no exemplo anterior, `7052`:  
   

@@ -12,17 +12,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 967605ee7a4857347b4f1f7ca8ffc62ea0451d91
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c7967740fc56efab93129aa6846d70f7eb55c7de
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403641"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017912"
 ---
 # <a name="temporal-tables"></a>Tabelas temporais
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  O SQL Server 2016 introduziu o suporte para tabelas temporais com versão do sistema como um recurso de banco de dados que oferece suporte interno para fornecer informações sobre os dados armazenados na tabela em qualquer ponto no tempo, em vez de apenas os dados que estão corretos atualmente. Temporal é um recurso de banco de dados que foi introduzido no ANSI SQL 2011.  
+  O SQL Server 2016 introduziu o suporte para tabelas temporais (também conhecidas como tabelas temporais com versão do sistema) como um recurso de banco de dados que oferece suporte interno para fornecer informações sobre os dados armazenados na tabela em qualquer ponto no tempo, em vez de apenas os dados que estão corretos atualmente. Temporal é um recurso de banco de dados que foi introduzido no ANSI SQL 2011.  
   
  **Início Rápido**  
   
@@ -46,7 +46,7 @@ ms.locfileid: "52403641"
   
     -   [Consultando dados em uma tabela temporal com controle da versão do sistema](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)  
   
-    -   **Baixar o banco de dados de exemplo do Adventure Works:** para começar a usar Tabelas Temporais, baixe o [banco de dados AdventureWorks para SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502) com exemplos de script e siga as instruções na pasta 'Temporal'  
+    -   **Baixar o banco de dados de exemplo do Adventure Works:** Para começar a usar Tabelas Temporais, baixe o [banco de dados AdventureWorks para SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502) com exemplos de script e siga as instruções na pasta 'Temporal'  
   
 -   **Sintaxe:**  
   
@@ -56,7 +56,7 @@ ms.locfileid: "52403641"
   
     -   [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
   
--   **Vídeo:** para obter uma discussão de 20 minutos sobre o recurso temporal, veja [Temporal no SQL Server 2016](https://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016).  
+-   **Vídeo:** Para obter uma discussão de 20 minutos sobre o recurso temporal, veja [Temporal no SQL Server 2016](https://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016).  
   
 ## <a name="what-is-a-system-versioned-temporal-table"></a>O que é uma tabela temporal com versão do sistema?  
  Uma tabela temporal com versão do sistema é um tipo de tabela de usuário criada para manter um histórico completo de alterações de dados e permitir uma análise fácil de pontos no tempo. Esse tipo de tabela temporal é conhecido como tabela temporal com versão do sistema porque o período de validade para cada linha é gerenciado pelo sistema (ou seja, o mecanismo de banco de dados).  
@@ -81,9 +81,9 @@ ms.locfileid: "52403641"
 ## <a name="how-does-temporal-work"></a>Como funciona a tabela temporal?  
  A versão do sistema para uma tabela é implementada como um par de tabelas, uma tabela atual e uma tabela de histórico. Dentro de cada uma dessas tabelas, as seguintes colunas **datetime2** adicionais são usadas para definir o período de validade para cada registro:  
   
--   Coluna de início do período: o sistema registra a hora de início da linha na coluna, normalmente denotada como a coluna **SysStartTime** .  
+-   Coluna de início do período: O sistema registra a hora de início da linha na coluna, normalmente denotada como a coluna **SysStartTime**.  
   
--   Coluna de término do período: o sistema registra a hora de término da linha na coluna, normalmente denotada como a coluna **SysEndTime** .  
+-   Coluna de término do período: O sistema registra a hora de término da linha na coluna, normalmente denotada como a coluna **SysEndTime**.  
   
  A tabela atual contém o valor atual para cada linha. A tabela de histórico contém cada valor anterior para cada linha, se houver, e a hora de início e término do período para o qual ela era válida.  
   
@@ -107,13 +107,13 @@ CREATE TABLE dbo.Employee
  WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.EmployeeHistory));  
 ```  
   
- **INSERTS:** em uma **INSERT**, o sistema define o valor para a coluna **SysStartTime** como a hora de início da transação atual (no fuso horário UTC) com base no relógio do sistema e atribui o valor para a coluna **SysEndTime** para o valor máximo de 9999-12-31. Isso marca a linha como aberta.  
+ **INSERTS:** Em uma **INSERT**, o sistema define o valor para a coluna **SysStartTime** como a hora de início da transação atual (no fuso horário UTC) com base no relógio do sistema e atribui o valor para a coluna **SysEndTime** para o valor máximo de 9999-12-31. Isso marca a linha como aberta.  
   
- **UPDATES:** em uma **UPDATE**, o sistema armazena o valor anterior do registro na tabela de histórico e define o valor para a coluna **SysEndTime** como a hora de início da transação atual (no fuso horário UTC) com base no relógio do sistema. Isso marca a linha como fechada, com um período registrado para o qual a linha era válida. Na tabela atual, o registro é atualizado com o novo valor e o sistema define o valor para a coluna **SysStartTime** para a hora de início da transação (no fuso horário UTC) com base no relógio do sistema. O valor de registro atualizado na tabela atual para a coluna **SysEndTime** permanece o valor máximo de 9999-12-31.  
+ **UPDATES:** Em uma **UPDATE**, o sistema armazena o valor anterior do registro na tabela de histórico e define o valor para a coluna **SysEndTime** como a hora de início da transação atual (no fuso horário UTC) com base no relógio do sistema. Isso marca a linha como fechada, com um período registrado para o qual a linha era válida. Na tabela atual, o registro é atualizado com o novo valor e o sistema define o valor para a coluna **SysStartTime** para a hora de início da transação (no fuso horário UTC) com base no relógio do sistema. O valor de registro atualizado na tabela atual para a coluna **SysEndTime** permanece o valor máximo de 9999-12-31.  
   
- **DELETES:** em uma **DELETE**, o sistema armazena o valor anterior do registro na tabela de histórico e define o valor para a coluna **SysEndTime** como a hora de início da transação atual (no fuso horário UTC) com base no relógio do sistema. Isso marca a linha como fechada, com um período registrado para o qual a linha anterior era válida. Na tabela atual, a linha é removida. As consultas da tabela atual não retornarão essa linha. Somente as consultas que lidam com dados de histórico retornarão dados cujo linha está fechada.  
+ **DELETES:** Em uma **DELETE**, o sistema armazena o valor anterior do registro na tabela de histórico e define o valor para a coluna **SysEndTime** como a hora de início da transação atual (no fuso horário UTC) com base no relógio do sistema. Isso marca a linha como fechada, com um período registrado para o qual a linha anterior era válida. Na tabela atual, a linha é removida. As consultas da tabela atual não retornarão essa linha. Somente as consultas que lidam com dados de histórico retornarão dados cujo linha está fechada.  
   
- **MERGE:** em uma **MERGE**, a operação se comporta exatamente como se até três instruções (uma **INSERT**, uma **UPDATE**e/ou uma **DELETE**) fossem executadas, dependendo do que é especificado como ações na instrução **MERGE** .  
+ **MERGE:** Em uma **MERGE**, a operação se comporta exatamente como se até três instruções (uma **INSERT**, uma **UPDATE**e/ou uma **DELETE**) fossem executadas, dependendo do que é especificado como ações na instrução **MERGE**.  
   
 > [!IMPORTANT]  
 >  As horas registradas nas colunas datetime2 do sistema baseiam-se na hora de início da própria transação. Por exemplo, todas as linhas inseridas em uma única transação terão o mesmo horário UTC registrado na coluna correspondente ao início do período **SYSTEM_TIME** .  

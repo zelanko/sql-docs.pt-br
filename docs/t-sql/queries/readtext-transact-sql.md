@@ -20,22 +20,22 @@ ms.assetid: 91b69853-1381-4306-8343-afdb73105738
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3046b1d01ec7d005b32c4bd71598fe07e2b3b1b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b7dc6e8a4a3043d2d27072afb5975c50f6ecf9a
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798414"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662670"
 ---
 # <a name="readtext-transact-sql"></a>READTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Lê os valores de **text**, **ntext** ou **image** de uma coluna de **text**, **ntext** ou **image**, começando em um deslocamento especificado e lendo o número especificado de bytes.  
+Lê os valores **text**, **ntext** ou **image** de uma coluna **text**, **ntext** ou **image**. Começa lendo de um deslocamento especificado e lendo o número especificado de bytes.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use a função [SUBSTRING](../../t-sql/functions/substring-transact-sql.md) nesse caso.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,33 +45,32 @@ READTEXT { table.column text_ptr offset size } [ HOLDLOCK ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *table* **.** *column*  
- É o nome de uma tabela e uma coluna a partir das quais a leitura será feita. Os nomes de tabela e de coluna precisam estar de acordo com as regras para [identificadores](../../relational-databases/databases/database-identifiers.md). A especificação dos nomes de tabela e coluna é necessária; entretanto, a especificação do nome do banco de dados e de nomes de proprietário é opcional.  
+_table_ **.** _column_  
+É o nome de uma tabela e uma coluna a partir das quais a leitura será feita. Os nomes de tabela e de coluna precisam cumprir as regras de [identificadores](../../relational-databases/databases/database-identifiers.md). A especificação dos nomes de tabela e coluna é necessária; entretanto, a especificação do nome do banco de dados e de nomes de proprietário é opcional.  
   
- *text_ptr*  
- É um ponteiro de texto válido. *text_ptr* precisa ser **binary(16)**.  
+_text\_ptr_  
+É um ponteiro de texto válido. _text\_ptr_ deve ser **binary(16)**.  
   
- *offset*  
- É o número de bytes (quando os tipos de dados **text** ou **image** forem usados) ou de caracteres (quando o tipo de dados **ntext** for usado) a serem ignorados antes de iniciar a leitura dos dados de **text**, **image** ou **ntext**.  
+_offset_  
+É o número de bytes quando os tipos de dados **text** ou **image** são usados. Também pode ser o número de bytes para quando o tipo de dados **ntext** for usado para ignorar antes de iniciar a leitura dos dados de **text**, **image** ou **ntext**.  
   
- *size*  
- É o número de bytes (quando os tipos de dados **text** ou **image** forem usados) ou de caracteres (quando o tipo de dados **ntext** for usado) de dados a serem lidos. Se *size* for 0, 4 KB bytes de dados serão lidos.  
+_size_ É o número de bytes quando os tipos de dados **text** ou **image** são usados. Ele também pode ser o número de bytes para caracteres quando o tipo de dados **ntext** é usado para os dados serem lidos. Se _size_ for 0, 4 KB de dados serão lidos.  
   
- HOLDLOCK  
- Faz com que o valor de texto seja bloqueado para leituras até o final da transação. Outros usuários podem ler o valor, mas não podem modificá-lo.  
+HOLDLOCK  
+Faz com que o valor de texto seja bloqueado para leituras até o final da transação. Outros usuários podem ler o valor, mas não podem modificá-lo.  
   
 ## <a name="remarks"></a>Remarks  
- Use a função [TEXTPTR](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md) para obter um valor de *text_ptr* válido. TEXTPTR retorna um ponteiro para a coluna de **text**, **ntext** ou **image** na linha especificada ou para a coluna de **text**, **ntext**  ou **image** na última linha retornada pela consulta quando mais de uma linha é retornada. Como TEXTPTR retorna uma cadeia binária de 16 bytes, recomenda-se declarar uma variável local para conter o ponteiro de texto e usá-la com READTEXT. Para obter mais informações de como declarar uma variável local, confira [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md).  
+Use a função [TEXTPTR](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md) para obter um valor de _text\_ptr_ válido. TEXTPTR retorna um ponteiro para as colunas **text**, **ntext** ou **image** na linha especificada. TEXTPRT também pode retornar um ponteiro ou para as colunas **text**, **ntext** ou **image** na última linha que a consulta retorna caso a consulta retorne mais de uma linha. Como TEXTPTR retorna uma cadeia binária de 16 bytes, recomenda-se declarar uma variável local para conter o ponteiro de texto e usá-la com READTEXT. Para obter mais informações de como declarar uma variável local, confira [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md).  
   
- No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], podem existir ponteiros de texto em linha, mas podem não ser válidos. Para obter mais informações sobre a opção **text in row**, confira [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Para obter mais informações de como invalidar ponteiros de texto, confira [sp_invalidate_textptr &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
+No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], podem existir ponteiros de texto em linha, mas podem não ser válidos. Para obter mais informações sobre a opção **text in row**, confira [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Para obter mais informações de como invalidar ponteiros de texto, confira [sp_invalidate_textptr &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
   
- O valor da função @@TEXTSIZE substituirá o tamanho especificado para READTEXT se for menor que o tamanho especificado para READTEXT. A função @@TEXTSIZE especifica o limite do número de bytes de dados a serem retornados, definido pela instrução SET TEXTSIZE. Para obter mais informações de como definir a configuração de sessão para TEXTSIZE, confira [SET TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/statements/set-textsize-transact-sql.md).  
+O valor da função @@TEXTSIZE substituirá o tamanho especificado para READTEXT se for menor que o tamanho especificado para READTEXT. A função @@TEXTSIZE especifica o limite do número de bytes de dados a serem retornados, definido pela instrução SET TEXTSIZE. Para obter mais informações de como definir a configuração de sessão para TEXTSIZE, confira [SET TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/statements/set-textsize-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissões  
- As permissões de READTEXT usam como padrão os usuários que têm permissões SELECT na tabela especificada. As permissões são transferíveis quando são transferidas permissões SELECT.  
+As permissões de READTEXT usam como padrão os usuários que têm permissões SELECT na tabela especificada. As permissões são transferíveis quando são transferidas permissões SELECT.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir lê do segundo até o vigésimo sexto caracteres da coluna `pr_info` na tabela `pub_info`.  
+O exemplo a seguir lê do segundo até o vigésimo sexto caractere da coluna `pr_info` na tabela `pub_info`.  
   
 > [!NOTE]  
 >  Para executar este exemplo, você precisa instalar o banco de dados **pubs** de exemplo.  
@@ -89,8 +88,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [@@TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/functions/textsize-transact-sql.md)   
- [UPDATETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/updatetext-transact-sql.md)   
- [WRITETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/writetext-transact-sql.md)  
+[@@TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/functions/textsize-transact-sql.md)   
+[UPDATETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/updatetext-transact-sql.md)   
+[WRITETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/writetext-transact-sql.md)  
   
   

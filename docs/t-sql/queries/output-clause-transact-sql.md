@@ -28,15 +28,15 @@ helpviewer_keywords:
 - displaying deleted rows
 - UPDATE statement [SQL Server], OUTPUT clause
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: b4bef219ec0e9bd4526b8f7c015a1800d9753656
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b9058fcb7ffff72620c6560fbe81df6f33fa327d
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529867"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334733"
 ---
 # <a name="output-clause-transact-sql"></a>cláusula OUTPUT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -134,10 +134,10 @@ DELETE Sales.ShoppingCartItem
 ```  
   
  *column_name*  
- É uma referência de coluna explícita. Toda referência à tabela que está sendo modificada precisa ser corretamente qualificada pelo prefixo INSERTED ou DELETED, conforme necessário, por exemplo: INSERTED **.**_column\_name_.  
+ É uma referência de coluna explícita. Toda referência à tabela que está sendo modificada deve ser corretamente qualificada pelo prefixo INSERTED ou DELETED, conforme apropriado, por exemplo: INSERTED **.**_column\_name_.  
   
  $action  
- Está disponível apenas para a instrução MERGE. Especifica uma coluna do tipo **nvarchar(10)** na cláusula OUTPUT em uma instrução MERGE que retorna um entre três valores para cada linha: 'INSERT', 'UPDATE' ou 'DELETE', de acordo com a ação que foi realizada nessa linha.  
+ Está disponível apenas para a instrução MERGE. Especifica uma coluna do tipo **nvarchar(10)** na cláusula OUTPUT em uma instrução MERGE que retorna um entre três valores para cada linha: 'INSERT', 'UPDATE' ou 'DELETE', de acordo com a ação que foi executada na linha.  
   
 ## <a name="remarks"></a>Remarks  
  A cláusula OUTPUT \<dml_select_list> e a cláusula OUTPUT \<dml_select_list> INTO { **\@**_table\_variable_ | _output\_table_ } pode ser definida em uma única instrução INSERT, UPDATE, DELETE ou MERGE.  
@@ -337,7 +337,7 @@ GO
   
 ```  
   
-### <a name="b-using-output-with-a-delete-statement"></a>B. Usando OUTPUT com uma instrução DELETE  
+### <a name="b-using-output-with-a-delete-statement"></a>b. Usando OUTPUT com uma instrução DELETE  
  O exemplo a seguir exclui todas as linhas da tabela `ShoppingCartItem`. A cláusula `OUTPUT deleted.*` especifica que os resultados da instrução `DELETE`, que são todas as colunas nas linhas excluídas, sejam retornados para o aplicativo de chamada. A instrução `SELECT` que segue verifica os resultados da operação de exclusão na tabela `ShoppingCartItem`.  
   
 ```  

@@ -18,12 +18,12 @@ ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b408b3f4d71f80bb2317a58ddd0ff0f578807946
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 3737c5dabc8b88970a24cbadcc9617457cf862eb
+ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202805"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56828126"
 ---
 # <a name="connect-to-server-database-engine"></a>Conectar ao Servidor (Mecanismo de Banco de Dados)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,9 @@ Selecione a instância do servidor com a qual se conectar. Por padrão, é exibi
   
 > [!NOTE]  
 > Para conectar-se a uma instância de usuário ativa do [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], conecte-se usando o protocolo de pipes nomeados especificando o nome do pipe, por exemplo, `np:\\.\pipe\3C3DF6B1-2262-47\tsql\query`. Para obter mais informações, consulte a documentação do [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)].  
-  
+> [!NOTE]  
+> Geralmente, as conexões são persistidas no histórico de MRU ("Usados mais recentemente"). Para remover entradas de MRU, basta clicar na caixa de combinação **Nome do servidor**, selecionar o nome do servidor a ser removido e, em seguida, pressionar a tecla **DEL**.  
+   
 **Autenticação**  
 A versão atual do SSMS oferece cinco modos de autenticação ao conectar-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde_md.md)]. Se a caixa de diálogo Autenticação não corresponder à lista a seguir, baixe a versão mais recente do SSMS em [Baixar o SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md).  
 

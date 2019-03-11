@@ -1,18 +1,18 @@
 ---
 title: Novidades do Reporting Services (SSRS) | Microsoft Docs
-ms.date: 12/11/2018
+author: markingmyname
+ms.author: maghan
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: dbeb2a4c15327025077081abf3e166416a2fbea3
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+ms.date: 02/28/2019
+ms.openlocfilehash: c2635c764871bb8ff5d97c4c300d5585520db976
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295224"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018022"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Novidades do SQL Server Reporting Services (SSRS)
 
@@ -31,7 +31,7 @@ Para baixar o SQL Server 2017 Reporting Services, acesse o **[Centro de Download
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 ## <a name="sql-server-2019-preview-reporting-services"></a>Versão prévia do SQL Server 2019 Reporting Services
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] O Reporting Services não está disponível para o CTP 2.2. Instale a versão atual, [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md).
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] O Reporting Services não está disponível para o CTP 2.3. Instale a versão atual, [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md).
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"

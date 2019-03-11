@@ -1,7 +1,7 @@
 ---
 title: Estimativa de cardinalidade (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/06/2017
+ms.date: 02/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,17 +16,37 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f827b1de0a9cba06a17fc2b84724277e9daab22
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: ca1168e0e101f8d8d8c5ae75636f2923faf7e2a1
+ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328846"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56828016"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Estimativa de cardinalidade (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Este artigo ilustra como você pode avaliar e escolher a melhor configuração de CE (estimativa de cardinalidade) para o sistema SQL. A maior parte dos sistemas se beneficia da CE mais recente, pois ela é a mais precisa. A CE prevê o número de linhas que sua consulta provavelmente retornará. A previsão de cardinalidade é usada pelo Otimizador de Consulta para gerar o plano de consulta ideal. Com estimativas mais precisas, o Otimizador de Consulta normalmente pode fazer um trabalho melhor de produção de um plano de consulta melhor.  
+O Otimizador de Consulta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é baseado em custo. Isso significa que ele seleciona planos de consulta com o custo de processamento estimado mais baixo para ser executado. O Otimizador de Consulta determina o custo de execução de um plano de consulta com base em dois fatores principais:
+
+- O número total de linhas processadas em cada nível de um plano de consulta, chamado cardinalidade do plano.
+- O modelo de custo do algoritmo ditado pelos operadores usados na consulta.
+
+O primeiro fator, cardinalidade, é usado como um parâmetro de entrada do segundo fator, o modelo de custo. Portanto, a cardinalidade aprimorada gera custos melhor estimados e, consequentemente, planos de execução mais rápidos.
+
+A CE (estimativa de cardinalidade) em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é derivada principalmente de histogramas criados quando índices ou estatísticas são criados, manual ou automaticamente. Às vezes, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] também usa informações de restrição e novas consultas lógicas para determinar a cardinalidade.
+
+Nos casos a seguir, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não consegue calcular cardinalidades com precisão. Isso gera cálculos de custo inexatos que podem causar planos de consulta menos favoráveis. Evitando-se tais construções em consultas é possível melhorar o desempenho da consulta. Às vezes, formulações de consulta alternativas ou outras medidas são possíveis e são indicadas:
+
+- Consultas com predicados que usam operadores de comparação entre colunas diferentes da mesma tabela.
+- Consultas com predicados que usam operadores e qualquer um dos itens seguintes são true:
+  - Não há nenhuma estatística referente às colunas envolvidas em nenhum dos lados dos operadores.
+  - A distribuição de valores nas estatísticas não é uniforme, mas a consulta busca um conjunto de valores altamente seletivo. Essa situação pode ser especialmente verdadeira se o operador não for o operador de igualdade (=).
+  - O predicado usa o operador de comparação diferente de (! =) ou o operador lógico `NOT`.
+- Consultas que usem qualquer uma das funções internas do SQL Server ou uma função com valor escalar, definida pelo usuário, cujo argumento não é um valor constante.
+- Consultas que envolvem colunas de associação por aritmética ou operadores de concatenação de cadeias de caracteres.
+- Consultas que comparam variáveis cujos valores não são conhecidos quando a consulta é compilada e otimizada.
+
+Este artigo ilustra como você pode avaliar e escolher a melhor configuração de CE para seu sistema. A maior parte dos sistemas se beneficia da CE mais recente, pois ela é a mais precisa. A CE prevê o número de linhas que sua consulta provavelmente retornará. A previsão de cardinalidade é usada pelo Otimizador de Consulta para gerar o plano de consulta ideal. Com estimativas mais precisas, o Otimizador de Consulta normalmente pode fazer um trabalho melhor de produção de um plano de consulta melhor.  
   
 Provavelmente, seu sistema de aplicativos poderia ter uma consulta importante cujo plano é alterado para um plano mais lento devido à nova CE. Uma consulta desse tipo pode ser parecida com esta:  
   

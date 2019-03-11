@@ -5,7 +5,7 @@ keywords: SQL Server, SSMS, SQL Server Management Studio, Scripts, Gerar script
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/13/2018
-ms.topic: Tutorial
+ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: d2ebf81dcab52be193d1472f5f1dc4f4495aba50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ce0ffdaa26e0ca48eef710f8368b8cb2b0c92191
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711224"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662820"
 ---
 # <a name="tutorial-script-objects-in-sql-server-management-studio"></a>Tutorial: gerar script de objetos no SQL Server Management Studio
 Este tutorial ensina a gerar scripts T-SQL (Transact-SQL) para vários objetos encontrados no SQL Server Management Studio (SSMS). Neste tutorial, você encontra exemplos de como gerar script para os seguintes objetos:
@@ -47,7 +47,7 @@ Para concluir este tutorial, você precisará do SQL Server Management Studio, b
 - Instalar o [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - Baixar [Bancos de dados de exemplo do AdventureWorks2016](https://github.com/Microsoft/sql-server-samples/releases).
 
-As instruções para restaurar bancos de dados no SSMS são encontradas aqui: [Restaurando um banco de dados](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+Instruções para restaurar bancos de dados no SSMS são encontradas aqui: [Restaurar um banco de dados](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
 
 
 ## <a name="script-queries-from-the-gui"></a>Gerar script de consultas da GUI

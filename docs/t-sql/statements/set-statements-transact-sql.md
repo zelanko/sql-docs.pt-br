@@ -25,19 +25,19 @@ ms.assetid: f7e107f8-0fcf-408b-b30f-da2323eeb714
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 281b2f8baeabb5d56ef953ba595103caadf23efb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: caa103139a47214615ec4bb4f78a7268acf45dda
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780044"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590281"
 ---
 # <a name="set-statements-transact-sql"></a>Instruções SET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  A linguagem de programação [!INCLUDE[tsql](../../includes/tsql-md.md)] fornece várias instruções SET que alteram a sessão atual que controla informações específicas. As instruções SET são agrupadas nas categorias mostradas na tabela a seguir.  
+A linguagem de programação [!INCLUDE[tsql](../../includes/tsql-md.md)] fornece várias instruções SET que alteram a sessão atual que controla informações específicas. As instruções SET são agrupadas nas categorias mostradas na tabela a seguir.  
   
- Para obter informações sobre como configurar variáveis locais usando uma instrução [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md).  
+Para obter informações sobre como configurar variáveis locais usando uma instrução [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md).  
   
 |Categoria|Instruções|  
 |--------------|----------------|  
@@ -51,39 +51,44 @@ ms.locfileid: "47780044"
   
 ## <a name="considerations-when-you-use-the-set-statements"></a>Considerações sobre quando usar instruções SET  
   
--   Todas as instruções SET são implementadas na execução ou em tempo de execução para SET FIPS_FLAGGER, SET OFFSETS, SET PARSEONLY e SET QUOTED_IDENTIFIER. Essas instruções são implementadas no momento da análise.  
+- Todas as instruções SET executadas no tempo de execução, exceto essas instruções, que são executadas no momento da análise: 
+
+  - SET FIPS_FLAGGER
+  - SET OFFSETS
+  - SET PARSEONLY
+  - e SET QUOTED_IDENTIFIER  
   
--   Se uma instrução SET for executada em um procedimento armazenado ou disparador, seu valor será restaurado depois que o controle for retornado do procedimento armazenado ou disparador. Além disso, se uma instrução SET for especificada em uma cadeia de caracteres SQL dinâmica que seja executada usando **sp_executesql** ou EXECUTE, o valor da opção SET é restaurado depois que o controle é retornado do lote especificado na cadeia de caracteres SQL.  
+- Se uma instrução SET for executada em um procedimento armazenado ou gatilho, o valor da opção SET será restaurado depois que o procedimento armazenado ou o gatilho retornar o controle. Além disso, se uma instrução SET for especificada em uma cadeia de caracteres SQL dinâmica que seja executada usando **sp_executesql** ou EXECUTE, o valor da opção SET será restaurado depois que o controle for retornado do lote especificado na cadeia de caracteres SQL dinâmica.  
   
--   Os procedimentos armazenados são executados com as configurações SET especificadas no momento da execução, com exceção de SET ANSI_NULLS e SET QUOTED_IDENTIFIER. Os procedimentos armazenados que especificam que SET ANSI_NULLS ou SET QUOTED_IDENTIFIER usam a configuração especificada no momento da criação do procedimento armazenado. Se usada em um procedimento armazenado, qualquer configuração SET será ignorada.  
+- Os procedimentos armazenados são executados com as configurações SET especificadas no momento da execução, com exceção de SET ANSI_NULLS e SET QUOTED_IDENTIFIER. Os procedimentos armazenados que especificam que SET ANSI_NULLS ou SET QUOTED_IDENTIFIER usam a configuração especificada no momento da criação do procedimento armazenado. Se usada em um procedimento armazenado, qualquer configuração SET será ignorada.  
   
--   A configuração **user options** de **sp_configure** permite configurações em todo o servidor e funciona em vários bancos de dados. Essa configuração também se comporta como uma instrução SET explícita, a não ser que ocorra no momento de logon.  
+- A configuração **user options** de **sp_configure** permite configurações em todo o servidor e funciona em vários bancos de dados. Essa configuração também se comporta como uma instrução SET explícita, a não ser que ocorra no momento de logon.  
   
--   As configurações de banco de dados definidas usando ALTER DATABASE só são válidas em nível do banco de dados e entram em vigor apenas quando definidas explicitamente. As configurações de banco de dados substituem as configurações de opção de instância que são definidas usando **sp_configure**.  
+- As configurações de banco de dados definidas usando ALTER DATABASE só são válidas em nível do banco de dados e entram em vigor apenas quando definidas explicitamente. As configurações de banco de dados substituem as configurações de opção de instância que são definidas usando **sp_configure**.  
   
--   Para qualquer instrução SET com as configurações ON e OFF, é possível especificar uma configuração ON ou OFF para várias opções SET.  
+- Se uma instrução SET usa ON e OFF, você pode especificar qualquer um para várias opções SET.
   
     > [!NOTE]  
     >  Isso não se aplica às estatísticas relacionadas às opções SET.  
   
      Por exemplo, `SET QUOTED_IDENTIFIER, ANSI_NULLS ON` define QUOTED_IDENTIFIER e ANSI_NULLS como ON.  
   
--   As configurações da instrução SET substituem as configurações de opção de banco de dados equivalentes que são definidas usando ALTER DATABASE. Por exemplo, o valor especificado em uma instrução SET ANSI_NULLS substituirá a configuração de banco de dados por ANSI_NULLs. Além disso, algumas configurações de conexão são definidas automaticamente como ON quando um usuário se conecta a um banco de dados com base nos valores especificados pelo uso anterior da configuração de **sp_configure user options** ou dos valores que se aplicam a todas as conexões ODBC e OLE/DB.  
+- As configurações da instrução SET substituem as configurações de opção de banco de dados idênticas que são definidas usando ALTER DATABASE. Por exemplo, o valor especificado em uma instrução SET ANSI_NULLS substituirá a configuração de banco de dados por ANSI_NULLs. Além disso, algumas configurações de conexão são definidas automaticamente como ON quando um usuário se conecta a um banco de dados com base nos valores especificados pelo uso anterior da configuração de **sp_configure user options** ou dos valores que se aplicam a todas as conexões ODBC e OLE/DB.  
   
--   Instruções ALTER, CREATE e DROP DATABASE não aceitam a configuração SET LOCK_TIMEOUT.  
+- As instruções ALTER, CREATE e DROP DATABASE não aceitam a configuração SET LOCK_TIMEOUT.  
   
--   Quando uma instrução SET global ou de atalho, como SET ANSI_DEFAULTS, define várias configurações, emitindo o atalho, a instrução SET redefine as configurações anteriores por todas as opções afetadas pela instrução SET de atalho. Se uma opção SET individual que é afetada por uma instrução SET de atalho for explicitamente definida depois que a instrução SET é emitida, a instrução SET individual substitui as configurações de atalho correspondentes.  
+- Quando uma instrução SET global ou de atalho define várias configurações, emitindo o atalho, a instrução SET redefine as configurações anteriores por todas as opções afetadas pela instrução SET de atalho. Se uma opção SET que é afetada por uma instrução SET de atalho for definida depois que a instrução SET de atalho for emitida, a instrução SET individual substituirá as configurações de atalho comparáveis. Um exemplo de uma instrução SET de atalho seria SET ANSI_DEFAULTS.  
   
--   Quando lotes são usados, o contexto de banco de dados é determinado pelo lote estabelecido usando a instrução USE. Consultas ad hoc e todas as outras instruções que são executadas fora do procedimento armazenado e que são lotes herdam as configurações de opção do banco de dados e a conexão estabelecida pela instrução USE.  
+- Quando lotes são usados, o contexto de banco de dados é determinado pelo lote estabelecido usando a instrução USE. Consultas não planejadas e todas as outras instruções que são executadas fora do procedimento armazenado e que estão em lotes herdam as configurações de opção do banco de dados e a conexão estabelecida pela instrução USE.  
   
--   Solicitações MARS (Vários Conjuntos de Resultados Ativos) compartilham um estado global que contém as configurações de opção SET da sessão mais recente. Quando é executada, cada solicitação pode modificar as opções SET. As alterações são específicas do contexto de solicitação no qual elas foram definidas e não afetam outras solicitações MARS simultâneas. Entretanto, depois que a execução da solicitação é concluída, as novas opções SET são copiadas para o estado de sessão global. As novas solicitações executadas na mesma sessão depois dessa alteração usarão essas novas configurações de opção SET.  
+- Solicitações MARS (Vários Conjuntos de Resultados Ativos) compartilham um estado global que contém as configurações de opção SET da sessão mais recente. Quando uma solicitação é executada, ela pode modificar as opções SET. As alterações são específicas do contexto de solicitação no qual elas foram definidas e não afetam outras solicitações MARS simultâneas. Entretanto, depois que a execução da solicitação é concluída, as novas opções SET são copiadas para o estado de sessão global. As novas solicitações executadas na mesma sessão depois dessa alteração usarão essas novas configurações de opção SET.  
   
--   Quando um procedimento armazenado é executado, seja de um lote ou de outro procedimento armazenado, ele é executado nos valores de opção atualmente definidos no banco de dados que contém o procedimento armazenado. Por exemplo, quando o procedimento armazenado **db1.dbo.sp1** chama o procedimento armazenado **db2.dbo.sp2**, o procedimento armazenado **sp1** é executado na configuração de nível de compatibilidade atual do banco de dados **db1** e o procedimento armazenado **sp2** é executado na configuração de nível de compatibilidade atual do banco de dados **db2**.  
+- Quando um procedimento armazenado é executado, seja de um lote ou de outro procedimento armazenado, ele é executado nos valores de opção definidos no banco de dados que contém o procedimento armazenado. Por exemplo, quando o procedimento armazenado **db1.dbo.sp1** chama o procedimento armazenado **db2.dbo.sp2**, o procedimento armazenado **sp1** é executado na configuração de nível de compatibilidade atual do banco de dados **db1** e o procedimento armazenado **sp2** é executado na configuração de nível de compatibilidade atual do banco de dados **db2**.  
   
--   Quando uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] se refere a objetos que residem em vários bancos de dados, o contexto de banco de dados atual e o contexto de conexão atual se aplicam a essa instrução. Nesse caso, se a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] estiver em um lote, o contexto de conexão atual será o banco de dados definido pela instrução USE; se a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] estiver em um procedimento armazenado, o contexto de conexão será o banco de dados que contém o procedimento armazenado.  
+- Quando uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] se refere a objetos que residem em vários bancos de dados, o contexto de banco de dados atual e o contexto de conexão atual se aplicam a essa instrução. Nesse caso, se a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] estiver em um lote, o contexto de conexão atual será o banco de dados definido pela instrução USE; se a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] estiver em um procedimento armazenado, o contexto de conexão será o banco de dados que contém o procedimento armazenado.  
   
--   Ao criar e manipular índices em colunas computadas ou exibições indexadas, as opções SET ARITHABORT, CONCAT_NULL_YIELDS_NULL, QUOTED_IDENTIFIER, ANSI_NULLS, ANSI_PADDING e ANSI_WARNINGS devem ser definidas como ON. A opção NUMERIC_ROUNDABORT deve ser definida como OFF.  
+- Ao criar e manipular índices em colunas computadas ou exibições indexadas, você deve definir essas opções SET como ON: ARITHABORT, CONCAT_NULL_YIELDS_NULL, QUOTED_IDENTIFIER, ANSI_NULLS, ANSI_PADDING e ANSI_WARNINGS. Defina a opção NUMERIC_ROUNDABORT como OFF.  
   
-     Se qualquer uma dessas opções não for definida com os valores solicitados, haverá falha nas ações INSERT, UPDATE, DELETE, DBCC CHECKDB e DBCC CHECKTABLE em exibições ou tabelas indexadas com índices em colunas computadas. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerará um erro que lista todas as opções definidas incorretamente. Além disso, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processará as instruções SELECT nessas tabelas ou exibições indexadas como se os índices nas colunas computadas ou nas exibições não existissem.  
+  Se não definir uma dessas opções com os valores solicitados, haverá falha nas ações INSERT, UPDATE, DELETE, DBCC CHECKDB e DBCC CHECKTABLE em exibições ou tabelas indexadas com índices em colunas computadas. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerará um erro que lista todas as opções definidas incorretamente. Além disso, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processará as instruções SELECT nessas tabelas ou exibições indexadas como se os índices nas colunas computadas ou nas exibições não existissem.  
   
   

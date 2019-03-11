@@ -18,27 +18,27 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c0a22547436f8a511a5a61db35ec99a919d84e4b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc6b596f6cd55fbd0642768a3323fddb611033ba
+ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644024"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852861"
 ---
 # <a name="insert-sql-graph"></a>INSERT (SQL Graph)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-  Adiciona uma ou mais linhas a uma tabela `node` ou `edge` do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+Adiciona uma ou mais linhas a uma tabela `node` ou `edge` do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
 > [!NOTE]   
 >  Para obter instruções Transact-SQL padrão, consulte [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md).
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do artigo](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do artigo") [Convenções de sintaxe do Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="insert-into-node-table-syntax"></a>Sintaxe de INSERT na tabela Node 
 A sintaxe para inserção em uma tabela Node é a mesma de uma tabela normal. 
 
-```  
+```sql
 [ WITH <common_table_expression> [ ,...n ] ]  
 INSERT   
 {  
@@ -102,19 +102,19 @@ INSERT
   
  
 ## <a name="arguments"></a>Argumentos  
- Este documento descreve os argumentos relativos ao SQL Graph. Para obter uma lista completa e a descrição de argumentos compatíveis com a instrução INSERT, consulte [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)
+Este documento descreve os argumentos relativos ao SQL Graph. Para obter uma lista completa e a descrição de argumentos compatíveis com a instrução INSERT, consulte [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)
 
- INTO  
- É uma palavra-chave opcional que pode ser usada entre `INSERT` e a tabela de destino.  
+INTO  
+É uma palavra-chave opcional que pode ser usada entre `INSERT` e a tabela de destino.  
   
- *search_condition_with_match*   
- A cláusula `MATCH` pode ser usada em uma subconsulta durante a inserção em uma tabela de borda ou nó. Para obter a sintaxe da instrução `MATCH`, consulte [GRAPH MATCH (Transact-SQL)](../../t-sql/queries/match-sql-graph.md)
+*search_condition_with_match*   
+A cláusula `MATCH` pode ser usada em uma subconsulta durante a inserção em uma tabela de borda ou nó. Para obter a sintaxe da instrução `MATCH`, consulte [GRAPH MATCH (Transact-SQL)](../../t-sql/queries/match-sql-graph.md)
 
- *graph_search_pattern*   
- Padrão de pesquisa fornecido para a cláusula `MATCH` como parte do predicado de gráfico.
+*graph_search_pattern*   
+Padrão de pesquisa fornecido para a cláusula `MATCH` como parte do predicado de gráfico.
 
- *edge_table_column_list*   
- Os usuários devem fornecer valores para `$from_id` e `$to_id` ao fazer uma inserção em uma borda. Um erro será retornado se não um valor não for fornecido ou se valores NULL forem inseridos nessas colunas. 
+*edge_table_column_list*   
+Os usuários devem fornecer valores para `$from_id` e `$to_id` ao fazer uma inserção em uma borda. Um erro será retornado se não um valor não for fornecido ou se valores NULL forem inseridos nessas colunas. 
   
 
 ## <a name="remarks"></a>Remarks  
@@ -122,48 +122,48 @@ A inserção em um nó é igual à inserção em qualquer tabela relacional. Os 
 
 Ao fazer uma inserção em uma tabela de borda, os usuários devem fornecer valores para as colunas `$from_id` e `$to_id`.   
 
-A inserção BULK para a tabela de nó permanece igual a de uma tabela relacional.
+A BULK INSERT para a tabela de nó é a mesma que a de uma tabela relacional.
 
 Antes da inserção em massa em uma tabela de borda, as tabelas de nó devem ser importadas. Em seguida, os valores para `$from_id` e `$to_id` podem ser extraídos da coluna `$node_id` da tabela de nó e inseridos como bordas. 
 
   
 ### <a name="permissions"></a>Permissões  
- A permissão INSERT é necessária na tabela de destino.  
+A permissão INSERT é necessária na tabela de destino.  
   
- As permissões INSERT usam como padrão os membros da função de servidor fixa **sysadmin**, as funções de banco de dados fixa **db_owner** e **db_datawriter** e o proprietário da tabela. Os membros das funções **sysadmin**, **db_owner** e **db_securityadmin** e o proprietário da tabela podem transferir permissões para outros usuários.  
+As permissões INSERT usam como padrão os membros da função de servidor fixa **sysadmin**, as funções de banco de dados fixa **db_owner** e **db_datawriter** e o proprietário da tabela. Os membros das funções **sysadmin**, **db_owner** e **db_securityadmin** e o proprietário da tabela podem transferir permissões para outros usuários.  
   
- Para executar INSERT com a opção BULK da função OPENROWSET, você precisa ser membro da função de servidor fixa **sysadmin** ou **bulkadmin**.  
+Para executar INSERT com a opção BULK da função OPENROWSET, você precisa ser membro da função de servidor fixa **sysadmin** ou **bulkadmin**.  
   
 
 ## <a name="examples"></a>Exemplos  
   
 #### <a name="a--insert-into-node-table"></a>A.  Inserir na tabela de nó  
- O exemplo a seguir cria uma tabela de nó Person e insere 2 linhas nessa tabela.
+O exemplo a seguir cria uma tabela de nó Person e insere duas linhas nessa tabela.
 
- ```
- -- Create person node table
- CREATE TABLE dbo.Person (ID integer PRIMARY KEY, name varchar(50)) AS NODE;
+```sql
+-- Create person node table
+CREATE TABLE dbo.Person (ID integer PRIMARY KEY, name varchar(50)) AS NODE;
  
- -- Insert records for Alice and John
- INSERT INTO dbo.Person VALUES (1, 'Alice');
- INSERT INTO dbo.Person VALUES (2,'John');
- ```
+-- Insert records for Alice and John
+INSERT INTO dbo.Person VALUES (1, 'Alice');
+INSERT INTO dbo.Person VALUES (2,'John');
+```
   
-#### <a name="b--insert-into-edge-table"></a>B.  Inserir na tabela de borda  
- O exemplo a seguir cria uma tabela de borda de amigo e insere uma borda na tabela.
+#### <a name="b--insert-into-edge-table"></a>b.  Inserir na tabela de borda  
+O exemplo a seguir cria uma tabela de borda de amigo e insere uma borda na tabela.
 
- ```
- -- Create friend edge table
- CREATE TABLE dbo.friend (start_date DATE) AS EDGE;
+```sql
+-- Create friend edge table
+CREATE TABLE dbo.friend (start_date DATE) AS EDGE;
 
- -- Create a friend edge, that connect Alice and John
- INSERT INTO dbo.friend VALUES ((SELECT $node_id FROM dbo.Person WHERE name = 'Alice'),
+-- Create a friend edge, that connect Alice and John
+INSERT INTO dbo.friend VALUES ((SELECT $node_id FROM dbo.Person WHERE name = 'Alice'),
         (SELECT $node_id FROM dbo.Person WHERE name = 'John'), '9/15/2011');
- ```
+```
 
   
 ## <a name="see-also"></a>Consulte Também  
- [INSERT TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [Processamento de grafo com o SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md)  
+[INSERT TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+[Processamento de grafo com o SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md)  
 
 

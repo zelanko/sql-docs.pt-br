@@ -14,12 +14,12 @@ ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d8c51d95fe74171fe9b90c439c34ea37700419b2
-ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
+ms.openlocfilehash: 02f99b295f653719231ff19d4dae0df0e82218b8
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991869"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590481"
 ---
 # <a name="about-change-data-capture-sql-server"></a>Sobre o change data capture (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "53991869"
 ## <a name="understanding-change-data-capture-and-the-capture-instance"></a>Compreendendo o Change Data Capture e a instância de captura  
  Antes do rastreamento das alterações em qualquer tabela individual dentro de um banco de dados, a captura de dados de alterações deve ser explicitamente habilitada para o banco de dados. Isso é feito usando o procedimento armazenado [sys.sp_cdc_enable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md). Quando o banco de dados está habilitado, é possível identificar as tabelas de origem como tabelas controladas usando o procedimento armazenado [sys.sp_cdc_enable_table](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md). Quando uma tabela está habilitada para Change Data Capture, uma instância de captura associada é criada para dar suporte à disseminação dos dados de alteração na tabela de origem. A instância de captura consiste em uma tabela de alteração e até duas funções de consulta. Os metadados que descrevem os detalhes de configuração da instância de captura são mantidos nas tabelas de metadados da captura de dados de alterações **cdc.change_tables**, **cdc.index_columns**e **cdc.captured_columns**. Estas informações podem ser recuperadas usando o procedimento armazenado [sys.sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md).  
   
- Todos os objetos associados a uma instância de captura são criados no esquema de captura de dados de alteração do banco de dados habilitado. Os requisitos para o nome da instância de captura deve ser um nome de objeto válido e exclusivo entre as instâncias de captura de banco de dados. Por padrão, o nome é \<*schema name*_*table name*> da tabela de origem. Sua tabela de alteração associada é nomeada acrescentando **_CT** ao nome da instância de captura. A função usada para consultar todas as alterações é nomeada acrescentando **fn_cdc_get_all_changes_** ao nome da instância de captura. Se a instância de captura for configurada para dar suporte a **net changes**, a função de consulta **net_changes** também será criada e nomeada, acrescentando **fn_cdc_get_net_changes\_** ao nome da instância de captura.  
+ Todos os objetos associados a uma instância de captura são criados no esquema de captura de dados de alteração do banco de dados habilitado. Os requisitos para o nome da instância de captura deve ser um nome de objeto válido e exclusivo entre as instâncias de captura de banco de dados. Por padrão, o nome é \<*schema name*\_*table name*> da tabela de origem. Sua tabela de alteração associada é nomeada acrescentando **_CT** ao nome da instância de captura. A função usada para consultar todas as alterações é nomeada acrescentando **fn_cdc_get_all_changes_** ao nome da instância de captura. Se a instância de captura for configurada para dar suporte a **net changes**, a função de consulta **net_changes** também será criada e nomeada, acrescentando **fn_cdc_get_net_changes\_** ao nome da instância de captura.  
   
 ## <a name="change-table"></a>Tabela de alteração  
  As primeiras cinco colunas de uma tabela de alteração de captura de dados de alterações são colunas de metadados. Elas fornecem informações adicionais pertinentes à alteração registrada. As colunas restantes espelham as colunas capturadas identificadas da tabela de origem em nome e, geralmente, em tipo. Estas colunas mantêm os dados de coluna capturados que são juntados na tabela de origem.  

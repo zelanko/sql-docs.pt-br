@@ -22,12 +22,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 22ea90a5876c6c824f7e80683503f1f8bf863675
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 374a32ab01e201a093702469a4e03445045203d9
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017067"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662770"
 ---
 # <a name="binary-and-varbinary-transact-sql"></a>binary e varbinary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,12 +35,12 @@ ms.locfileid: "56017067"
 Tipos de dados binários de comprimento fixo ou comprimento variável.
   
 ## <a name="arguments"></a>Argumentos  
-**binary** [ ( *n* ) ] Dados binários de comprimento fixo com um tamanho de *n* bytes, em que *n* é um valor de 1 a 8.000. O tamanho do armazenamento é *n* bytes.
+**binary** [ ( _n_ ) ] Dados binários de comprimento fixo com um tamanho de _n_ bytes, em que _n_ é um valor de 1 a 8.000. O tamanho do armazenamento é _n_ bytes.
   
-**varbinary** [ ( *n* | **max**) ] Dados binários de tamanho variável. *n* pode ser um valor de 1 a 8.000. **max** indica que o tamanho de armazenamento máximo é de 2^31-1 bytes. O tamanho do armazenamento é o tamanho real dos dados inseridos + 2 bytes. Os dados inseridos podem ter 0 bytes de comprimento. O sinônimo ANSI SQL para **varbinary** é **binary varying**.
+**varbinary** [ ( _n_ | **max**) ] Dados binários de tamanho variável. _n_ pode ser um valor de 1 a 8.000. **max** indica que o tamanho de armazenamento máximo é de 2^31-1 bytes. O tamanho do armazenamento é o tamanho real dos dados inseridos + 2 bytes. Os dados inseridos podem ter 0 bytes de comprimento. O sinônimo ANSI SQL para **varbinary** é **binary varying**.
   
 ## <a name="remarks"></a>Remarks  
-Quando *n* não é especificado em uma definição de dados ou instrução de declaração de variável, o tamanho padrão é 1. Quando *n* não é especificado com a função CAST, o tamanho padrão é 30.
+O tamanho padrão é 1 quando _n_ não é especificado em uma definição de dados ou instrução de declaração de variável. Quando _n_ não é especificado com a função CAST, o tamanho padrão é 30.
 
 | Tipo de dados | Use quando... |
 | --- | --- |
@@ -50,11 +50,23 @@ Quando *n* não é especificado em uma definição de dados ou instrução de de
 
 
 ## <a name="converting-binary-and-varbinary-data"></a>Convertendo dados binary e varbinary
-Quando os dados são convertidos de um tipo de dados de cadeia de caracteres (**char**, **varchar**, **nchar**, **nvarchar**, **binary**, **varbinary**, **text**, **ntext** ou **image**) em um tipo de dados **binary** ou **varbinary** de tamanho diferente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] preenche ou trunca os dados à direita. Quando outros tipos de dados são convertidos em **binary** ou **varbinary**, os dados são preenchidos ou truncados à esquerda. O preenchimento é realizado por meio de zeros hexadecimais.
+Quando são convertidos dados de um tipo de dados String em um tipo de dados **binary** ou **varbinary** de tamanho diferente, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] preenche ou trunca os dados à direita. Esses tipos de dados de cadeia de caracteres são:
+
+* **char** 
+* **varchar**
+* **nchar**
+* **nvarchar**
+* **binary**
+* **varbinary**
+* **text**
+* **ntext**
+* **imagem**
+
+Quando outros tipos de dados são convertidos em **binary** ou **varbinary**, os dados são preenchidos ou truncados à esquerda. O preenchimento é realizado por meio de zeros hexadecimais.
   
-A conversão de dados em tipos de dados **binary** e **varbinary** é útil se os dados **binary** são a maneira mais fácil de mover os dados. A conversão de qualquer valor de qualquer tipo em um valor binário de tamanho grande o suficiente e, em seguida, novamente no tipo, sempre resulta no mesmo valor se ambas as conversões ocorrem na mesma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A representação binária de um valor pode ser alterada de uma versão para outra do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+A conversão de dados em tipos de dados **binary** e **varbinary** é útil se os dados **binary** são a maneira mais fácil de mover os dados. Em algum momento, você pode converter um tipo de valor em um valor binário de tamanho grande o suficiente e, em seguida, convertê-lo novamente. Essa conversão sempre resultará no mesmo valor se ambas as conversões estiverem acontecendo na mesma versão de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A representação binária de um valor pode ser alterada de uma versão para outra do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
-Você pode converter **int**, **smallint** e **tinyint** em **binary** ou **varbinary**, mas se você converter o valor **binary** de volta para um valor inteiro, esse valor será diferente do valor inteiro original, caso tenha ocorrido truncamento. Por exemplo, a instrução SELECT a seguir mostra que o valor inteiro `123456` normalmente é armazenado como um binário `0x0001e240`:
+Você pode converter **int**, **smallint** e **tinyint** em **binary** ou **varbinary**. Se converter o valor **binary** de volta para um valor inteiro, esse valor será diferente do valor inteiro original se houver truncamento. Por exemplo, a instrução SELECT a seguir mostra que o valor inteiro `123456` é armazenado como um binário `0x0001e240`:
   
 ```sql
 SELECT CAST( 123456 AS BINARY(4) );  

@@ -22,12 +22,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 76db4e710c2bd3d6eac25383a1db66a3720280ca
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d2ddd236ee002015390336c25039158bba70a998
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014497"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590351"
 ---
 # <a name="data-type-conversion-database-engine"></a>Conversão de tipo de dados (Mecanismo de Banco de Dados)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -100,7 +100,7 @@ A tabela a seguir descreve as conversões de tipo de dados do [!INCLUDE[ssNoVers
 |**datetime**, **smalldatetime**|**Data**|  
 |Tudo definido como NULL|**Variant** definida como Null|  
   
-Todos os valores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] únicos são convertidos em um valor [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] único, com a exceção dos valores **binary**, **varbinary** e **image**. Esses valores são convertidos em uma matriz **Byte()** unidimensional em [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Essa matriz tem um intervalo de **Byte(** 0 to *length*1 **)** em que *length* é o número de bytes nos valores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **binary**, **varbinary** ou **image**.
+Todos os valores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] únicos são convertidos em um valor [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] único, com a exceção dos valores **binary**, **varbinary** e **image**. Esses valores são convertidos em uma matriz **Byte()** unidimensional em [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Essa matriz tem um intervalo de **Byte(** 0 to _length_ 1 **)** em que *length* é o número de bytes nos valores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **binary**, **varbinary** ou **image**.
   
 Estas são as conversões de tipos de dados [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] para tipos de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   

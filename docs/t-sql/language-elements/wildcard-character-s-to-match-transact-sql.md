@@ -22,21 +22,21 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df735e98cb20643f9030c77f8e5dcc22ab126fef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4620f38c01f1bd7c4158387a607da12fbb95b865
+ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847454"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56425811"
 ---
 # <a name="--wildcard---characters-to-match-transact-sql"></a>\[ \] (Curinga – caracteres para correspondência) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Encontra a correspondência de qualquer caractere único dentro do intervalo ou conjunto especificado entre colchetes `[ ]`. Esses caracteres curinga podem ser usados em comparações de cadeias de caracteres que envolvem a correspondência de padrões, como `LIKE` e `PATINDEX`.  
+Encontra a correspondência de qualquer caractere único dentro do intervalo ou conjunto especificado entre colchetes `[ ]`. Esses caracteres curinga podem ser usados em comparações de cadeias de caracteres que envolvem a correspondência de padrões, como `LIKE` e `PATINDEX`.  
   
 ## <a name="examples"></a>Exemplos  
 ### <a name="a-simple-example"></a>A: Exemplo simples   
-O exemplo a seguir retorna os nomes dos que começam com a letra `m`. `[n-z]` especifica que a segunda letra deve estar em algum lugar no intervalo de `n` a `z`. O caractere curinga `%` percentual permite caracteres ou nenhum caractere que começa com o caractere 3. Os bancos de dados `model` e `msdb` atendem a esse critério. O banco de dados `master` não atende a esse critério e é excluído do conjunto de resultados.
+O exemplo a seguir retorna os nomes dos que começam com a letra `m`. `[n-z]` especifica que a segunda letra deve estar em algum lugar no intervalo de `n` a `z`. O caractere curinga `%` percentual permite caracteres ou nenhum caractere que começa com o caractere 3. Os bancos de dados `model` e `msdb` atendem a esse critério. O banco de dados `master` não atende ao critério e é excluído do conjunto de resultados.
  
 ```sql
 SELECT name FROM sys.databases
@@ -53,7 +53,7 @@ msdb
  Você pode ter outros bancos de dados qualificados instalados.
 
 
-### <a name="b-more-complex-example"></a>B: Exemplo mais complexo   
+### <a name="b-more-complex-example"></a>B: exemplo mais complexo   
  O exemplo a seguir usa o operador [] para encontrar as IDs e os nomes de todos os funcionários da [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] que possuem endereços com um código postal de quatro dígitos.  
   
 ```sql  
@@ -67,7 +67,7 @@ INNER JOIN Person.Address AS a ON a.AddressID = ea.AddressID
 WHERE a.PostalCode LIKE '[0-9][0-9][0-9][0-9]';  
 ```  
   
- Este é o conjunto de resultados:  
+ O conjunto de resultados é o seguinte:  
   
 ```  
 EmployeeID      FirstName      LastName      PostalCode  

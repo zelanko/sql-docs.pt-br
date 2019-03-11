@@ -25,18 +25,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2f36af646ee1fb41279b8401c5e2bdf18ed6896
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 60bec45b4feacff0390bfb359010767dc3bcd2af
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299383"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801400"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char e varchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [Compartilhe seus comentários sobre o Sumário do SQL Docs!](https://aka.ms/sqldocsurvey)
 
 Tipos de dados de caractere que sejam de comprimento fixo, **char** ou de comprimento variável, **varchar**. A partir do [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], quando uma ordenação habilitada por UTF-8 é usada, esses tipos de dados armazenam o intervalo completo de dados de caractere [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) e usam a codificação de caracteres [UTF-8](https://www.wikipedia.org/wiki/UTF-8). Se uma ordenação não UTF-8 for especificada, esses tipos de dados armazenarão apenas um subconjunto de caracteres compatíveis com a página de código correspondente dessa ordenação.
   
@@ -46,7 +43,7 @@ Tipos de dados de caractere que sejam de comprimento fixo, **char** ou de compri
 **varchar** [ ( *n* | **max** ) ] dados de cadeia de caracteres de comprimento variável. *n* define o tamanho da cadeia de caracteres em bytes e pode ser um valor entre 1 a 8.000. **max** indica que o tamanho de armazenamento máximo é 2^31-1 bytes (2 GB). Para conjuntos de caracteres de codificação de byte único, como *Latino*, o tamanho de armazenamento é *n* bytes + 2 bytes e a quantidade de caracteres que pode ser armazenada também é *n*. Para codificação de conjuntos de caracteres multibyte, o tamanho de armazenamento ainda será *n* bytes + 2 bytes, mas a quantidade de caracteres que pode ser armazenada pode ser menor que *n*. Os sinônimos ISO para **varchar** são **charvarying** ou **charactervarying**. Para saber mais sobre conjuntos de caracteres, consulte [Conjuntos de caracteres multibyte e de byte único](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).
 
 ## <a name="remarks"></a>Remarks  
-Quando *n* não é especificado em uma definição de dados ou instrução de declaração de variável, o tamanho padrão é 1. Quando *n* não é especificado ao usar as funções CAST e CONVERT, o tamanho padrão é 30.
+Quando *n* não é especificado em uma definição de dados ou instrução de declaração de variável, o tamanho padrão é 1. Se *n* não for especificado ao usar as funções CAST e CONVERT, o tamanho padrão será 30.
   
 Os objetos que usam **char** ou **varchar** são atribuídos à ordenação padrão do banco de dados, a menos que uma ordenação específica seja atribuída usando da cláusula COLLATE. A ordenação controla a página de código que é usada para armazenar os dados de caractere.
 
@@ -67,17 +64,17 @@ Se SET ANSI_PADDING for OFF quando CREATE TABLE ou ALTER TABLE for executada, um
   
 > [!WARNING]
 > Cada coluna varchar(max) ou nvarchar(max) não nula requer 24 bytes de alocação fixa adicional que conta para o limite de linha de 8.060 bytes durante uma operação de classificação. Isso pode criar um limite implícito para o número de colunas varchar(max) ou nvarchar(max) não nulas que podem ser criadas em uma tabela.  
-Nenhum erro especial é fornecido quando a tabela é criada (além do aviso comum de que o tamanho máximo da linha excede o máximo permitido de 8.060 bytes) ou no momento da inserção de dados. Esse tamanho de linha pode causar erros (por exemplo, o erro 512) durante algumas operações normais, como uma atualização de chave de índice clusterizado ou classificações do conjunto de colunas completo, que os usuários não podem prever até que uma operação seja executada.
+Nenhum erro especial é fornecido quando a tabela é criada (além do aviso comum de que o tamanho máximo da linha excede o máximo permitido de 8.060 bytes) ou no momento da inserção de dados. Esse tamanho de linha maior pode causar erros (por exemplo, o erro 512) durante algumas operações normais, como uma atualização de chave de índice clusterizado ou classificações do conjunto de colunas completo, que os usuários podem prever até que uma operação seja executada.
   
 ##  <a name="_character"></a> Convertendo dados de caractere  
-Quando são convertidas expressões character a um tipo de dados character de um tamanho diferente, os valores muito longos para o novo tipo de dados são truncados. O tipo **uniqueidentifier** é considerado um tipo de caractere para fins de conversão de uma expressão de caractere e, portanto, está sujeito às regras de truncamento para conversão em um tipo de caractere. Consulte a seção de Exemplos a seguir.
+Quando são convertidas expressões character a um tipo de dados character de um tamanho diferente, os valores muito longos para o novo tipo de dados são truncados. O tipo **uniqueidentifier** é considerado um tipo de caractere para fins de conversão de uma expressão de caracteres e, portanto, está sujeito às regras de truncamento de conversão em um tipo de caractere. Consulte a seção de Exemplos a seguir.
   
 Quando uma expressão character é convertida em uma expressão character de um tipo de dados ou tamanho diferente, como de **char(5)** em **varchar(5)** ou **char(20)** para **char(15)**, a ordenação do valor de entrada é atribuída ao valor convertido. Se uma expressão noncharacter for convertida em um tipo de dados character, a ordenação padrão do banco de dados atual será atribuída ao valor convertido. Em qualquer caso, você pode atribuir uma ordenação específica usando a cláusula [COLLATE](../../t-sql/statements/collations.md).
   
 > [!NOTE]  
-> Há suporte para conversões de página de código em tipos de dados **char** e **varchar**, mas não no tipo de dados **text**. Como em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a perda de dados não é informada durante as conversões de página de código.  
+> Há suporte para conversões de página de código em tipos de dados **char** e **varchar**, mas não no tipo de dados **text**. Assim como em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a perda de dados não é informada durante as conversões de página de código.  
   
-As expressões character que estão sendo convertidas em um tipo de dados **numeric** aproximado podem incluir notação exponencial opcional (um e minúsculo ou um E maiúsculo seguido por um sinal de mais (+) ou menos (-) opcional e, depois, um número).
+Expressões de caracteres que estão sendo convertidas a um tipo de dados **numeric** aproximado podem incluir notação exponencial opcional. Esta notação é um e (minúsculo) ou um E (maiúsculo) seguido por um sinal de mais (+) ou menos (-) opcional e, em seguida, de um número.
   
 As expressões character que estão sendo convertidas a um tipo de dados **numeric** exato devem consistir em dígitos, um ponto decimal e um sinal opcional de mais (+) ou menos (-). Os espaços em branco à esquerda são ignorados. Na cadeia de caracteres não são permitidos separadores de vírgula, como o separador de milhar em 123,456.00.
   
@@ -109,7 +106,7 @@ SELECT DATALENGTH(CONVERT(char, @myVariable)) AS 'VarcharDefaultLength';
 ```  
   
 ### <a name="c-converting-data-for-display-purposes"></a>C. Convertendo dados para fins de exibição  
-O exemplo a seguir converte duas colunas em tipos de caracteres e aplica um estilo que se aplica a um formato específico aos dados exibidos. Um tipo **money** é convertido em dados de caractere e o estilo 1 é aplicado, o que exibe os valores com vírgulas a cada três dígitos à esquerda do ponto decimal e dois dígitos à direita do ponto decimal. Um tipo **datatime** é convertido em dados de caractere e o estilo 3 é aplicado, o que exibe os dados no formato dd/mm/aa. Na cláusula WHERE, um tipo **money** é convertido em um tipo de caractere para executar uma operação de comparação de cadeia de caracteres.
+O exemplo a seguir converte duas colunas em tipos de caracteres e aplica um estilo que se aplica a um formato específico aos dados exibidos. Um tipo **money** é convertido em dados de caractere e o estilo 1 é aplicado, o que exibe os valores com vírgulas a cada três dígitos à esquerda do ponto decimal e dois dígitos à direita do ponto decimal. Um tipo **datetime** é convertido em dados de caractere e o estilo 3 é aplicado, o que exibe os dados no formato dd/mm/aa. Na cláusula WHERE, um tipo **money** é convertido em um tipo de caractere para executar uma operação de comparação de cadeia de caracteres.
   
 ```sql
 USE AdventureWorks2012;  

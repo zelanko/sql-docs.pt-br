@@ -27,19 +27,19 @@ ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 81fd7b18058430b3132471f67a8b94e4444873e7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 17e717fd999109390c001bdab9aeee5629c1a119
+ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393038"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56425791"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Cria um objeto de metadados de chave mestra de coluna em um banco de dados. Uma entrada de metadados de chave mestra de coluna que representa uma chave, armazenada em um repositório de chaves externas, que é usada para proteger (criptografar) as chaves de criptografia de coluna ao usar o recursos [Always Encrypted &#40;Mecanismo de Banco de Dados&#41; ](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Múltiplas chaves mestras de coluna permitem a rotação de chaves; altere periodicamente a chave para aumentar a segurança. Você pode criar uma chave mestra de coluna em um repositório de chaves e seu objeto de metadados correspondente no banco de dados usando o Pesquisador de Objetos no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou no PowerShell. Para obter detalhes, veja [Visão geral do gerenciamento de chaves para Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).  
+Cria um objeto de metadados de chave mestra de coluna em um banco de dados. Uma entrada de metadados de chave mestra de coluna representa uma chave, armazenada em um repositório de chave externa. A chave protege (criptografa) as chaves de criptografia de coluna ao usar o recurso [&#40;Mecanismo de Banco de Dados&#41; Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Múltiplas chaves mestras de coluna permitem a rotação periódica de chaves para aumentar a segurança. Crie uma chave mestra de coluna em um repositório de chaves e seu objeto de metadados relacionado no banco de dados usando o Pesquisador de Objetos no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou no PowerShell. Para obter detalhes, veja [Visão geral do gerenciamento de chaves para Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
 
 > [!IMPORTANT]
@@ -58,51 +58,58 @@ CREATE COLUMN MASTER KEY key_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *key_name*  
- É o nome pelo qual a chave mestra de coluna será conhecida no banco de dados.  
+*key_name*  
+O nome da chave mestra de coluna no banco de dados.  
   
- *key_store_provider_name*  
- Especifica o nome de um provedor de repositório de chaves, que é um componente de software do cliente que encapsula um repositório de chaves que contém a chave mestra de coluna. Um driver cliente habilitado para Always Encrypted usa um nome de provedor de repositório de chaves para pesquisar um provedor de repositório de chaves no Registro do driver de provedores de repositório de chaves. O driver usa o provedor para descriptografar chaves de criptografia de coluna, protegidas pela chave mestra da coluna, armazenadas no repositório de chaves subjacente. Um valor de texto não criptografado da chave de criptografia de coluna então é usado para criptografar parâmetros de consulta, correspondentes às colunas de banco de dados criptografadas, ou para descriptografar os resultados da consulta de colunas criptografadas.  
+*key_store_provider_name*  
+Especifica o nome de um provedor de repositório de chaves. Um provedor de repositório de chaves é um componente de software do lado do cliente com um repositório de chaves que contém a chave mestra de coluna. 
+
+Um driver cliente, habilitado com o Always Encrypted:
+
+- Usa o nome do provedor do repositório de chaves 
+- Pesquisa o provedor do repositório de chaves no Registro do driver dos provedores do repositório de chaves 
+
+Em seguida, o driver usa o provedor para descriptografar chaves de criptografia de coluna. As chaves de criptografia de coluna são protegidas pela chave mestra da coluna. A chave mestra da coluna é armazenada no repositório de chaves subjacente. Um valor de texto não criptografado da chave de criptografia de coluna então é usado para criptografar parâmetros de consulta, correspondentes às colunas de banco de dados criptografadas. Ou a chave de criptografia da coluna descriptografa os resultados da consulta de colunas criptografadas.  
   
- Bibliotecas de drivers de cliente habilitadas para Always Encrypted incluem provedores de repositório de chaves para repositórios de chaves populares.   
+Bibliotecas de drivers de cliente habilitadas para Always Encrypted incluem provedores de repositório de chaves para repositórios de chaves populares.   
   
-Um conjunto de provedores disponíveis depende do tipo e da versão do driver do cliente. veja a documentação do Always Encrypted para drivers específicos:
+Um conjunto de provedores disponíveis depende do tipo e da versão do driver do cliente. Veja a documentação do Always Encrypted para drivers específicos:
 
 [Desenvolver aplicativos usando o Always Encrypted com o Provedor do .NET Framework para SQL Server](../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
 
 
-As tabelas abaixo capturam os nomes de provedores do sistema:  
+A tabela a seguir mostra os nomes de provedores de sistema:  
   
 |Nome do Provedor do repositório de chaves|Repositório de chaves subjacente|  
     |-----------------------------|--------------------------|
     |'MSSQL_CERTIFICATE_STORE'|Repositório de Certificados do Windows| 
     |'MSSQL_CSP_PROVIDER'|Um repositório, como um HSM (módulo de segurança de hardware) compatível com o Microsoft CryptoAPI.|
-    |'MSSQL_CNG_STORE'|Um repositório, como um HSM (módulo de segurança de hardware) (HSM) compatível com a Cryptography API Next Generation.|  
+    |'MSSQL_CNG_STORE'|Um repositório, como um HSM (módulo de segurança de hardware), compatível com a API Cryptography Next Generation.|  
     |'Azure_Key_Vault'|Veja [Introdução ao Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)|  
   
 
- Você pode implementar um provedor de repositório de chaves personalizado para armazenar chaves mestras de coluna em um repositório para o qual não há nenhum provedor de repositório de chave mestra interno em seu driver de cliente habilitado para Always Encrypted.  Observe que os nomes de provedores de repositório de chaves personalizado não podem começar com 'MSSQL _', que é um prefixo reservado para provedores de repositório de chaves [!INCLUDE[msCoName](../../includes/msconame-md.md)]. 
+No seu driver cliente habilitado para Always Encrypted, é possível configurar um provedor de repositório de chaves personalizado para armazenar chaves mestras de coluna para as quais não há nenhum provedor de repositório de chaves interno. Os nomes de provedores de repositório de chaves personalizado não podem começar com 'MSSQL_', que é um prefixo reservado para provedores de repositório de chaves [!INCLUDE[msCoName](../../includes/msconame-md.md)]. 
 
   
- key_path  
- O caminho da chave no repositório de chave mestra de coluna. O caminho da chave deve ser válido no contexto de cada aplicativo cliente que deve criptografar ou descriptografar dados armazenados em uma coluna (indiretamente) protegida pela chave mestra de coluna referenciada, e o aplicativo cliente precisa ter permissão para acessar a chave. O formato do caminho da chave é específico do provedor do repositório de chaves. A lista a seguir descreve o formato de caminhos de chave para provedores de repositório de chaves do sistema Microsoft específicos.  
+key_path  
+O caminho da chave no repositório de chave mestra de coluna. O caminho da chave deve ser válido para cada aplicativo cliente que deve criptografar ou descriptografar dados. Os dados são armazenados em uma coluna (indiretamente) protegida pela chave mestra de coluna referenciada. O aplicativo cliente deve ter acesso à chave. O formato do caminho da chave é específico do provedor do repositório de chaves. A lista a seguir descreve o formato de caminhos de chave para provedores de repositório de chaves do sistema Microsoft específicos.  
   
 -   **Nome do provedor:** MSSQL_CERTIFICATE_STORE  
   
-     **Formato do caminho da chave:** *CertificateStoreName*/*CertificateStoreLocation*/*CertificateThumbprint*  
+    **Formato do caminho da chave:** *CertificateStoreName*/*CertificateStoreLocation*/*CertificateThumbprint*  
   
      Onde:  
   
-     *CertificateStoreLocation*  
-     Local do repositório de certificados, que deve ser o Usuário Atual ou o Computador Local. Para obter mais informações, veja [Computador local e repositórios de certificados do usuário atual](https://msdn.microsoft.com/library/windows/hardware/ff548653.aspx).  
+    *CertificateStoreLocation*  
+    Local do repositório de certificados, que deve ser o Usuário Atual ou o Computador Local. Para obter mais informações, veja [Computador local e repositórios de certificados do usuário atual](https://msdn.microsoft.com/library/windows/hardware/ff548653.aspx).  
   
-     *CertificateStore*  
-     Nome do repositório de certificados, por exemplo 'Meu'.  
+    *CertificateStore*  
+    Nome do repositório de certificados, por exemplo 'Meu'.  
   
-     *CertificateThumbprint*  
-     Impressão digital do certificado.  
+    *CertificateThumbprint*  
+    Impressão digital do certificado.  
   
-     **Exemplos:**  
+    **Exemplos:**  
   
     ```  
     N'CurrentUser/My/BBF037EC4A133ADCA89FFAEC16CA5BFA8878FB94'  
@@ -112,17 +119,17 @@ As tabelas abaixo capturam os nomes de provedores do sistema:
   
 -   **Nome do provedor:** MSSQL_CSP_PROVIDER  
   
-     **Formato do caminho da chave:** *ProviderName*/*KeyIdentifier*  
+    **Formato do caminho da chave:** *ProviderName*/*KeyIdentifier*  
   
-     Onde:  
+    Onde:  
   
-     *ProviderName*  
-     O nome de um CSP (Provedor de Serviço de Criptografia), que implementa a CAPI, para o repositório de chave mestra de coluna. Se você usar um HSM como um repositório de chaves, esse deverá ser o nome do CSP dado pelo seu fornecedor HSM. O provedor deve ser instalado em um computador cliente.  
+    *ProviderName*  
+    O nome de um CSP (Provedor de Serviço de Criptografia), que implementa a CAPI, para o repositório de chave mestra de coluna. Se você usar um HSM como um repositório de chaves, o nome do provedor deverá ser o nome do CSP dado pelo seu fornecedor HSM. O provedor deve ser instalado em um computador cliente.  
   
-     *KeyIdentifier*  
-     Identificador da chave, usado como uma chave mestra de coluna, no repositório de chaves.  
+    *KeyIdentifier*  
+    Identificador da chave, usado como uma chave mestra de coluna, no repositório de chaves.  
   
-     **Exemplos:**  
+    **Exemplos:**  
   
     ```  
     N'My HSM CSP Provider/AlwaysEncryptedKey1'  
@@ -130,17 +137,17 @@ As tabelas abaixo capturam os nomes de provedores do sistema:
   
 -   **Nome do provedor:** MSSQL_CNG_STORE  
   
-     **Formato do caminho da chave:** *ProviderName*/*KeyIdentifier*  
+    **Formato do caminho da chave:** *ProviderName*/*KeyIdentifier*  
   
-     Onde:  
+    Onde:  
   
-     *ProviderName*  
-     Nome do KSP (provedor de armazenamento de chaves), que implementa a API Cryptography: Next Generation (CNG) API para o repositório de chaves mestras de coluna. Se você usar um HSM como um repositório de chaves, esse deverá ser o nome do KSP dado pelo seu fornecedor HSM. O provedor precisa ser instalado em um computador cliente.  
+    *ProviderName*  
+    Nome do KSP (Provedor de Armazenamento de Chaves), que implementa a API CNG (Cryptography Next Generation) para o repositório de chave mestra de coluna. Se você usar um HSM como um repositório de chaves, o nome do provedor deverá ser o nome do KSP dado pelo seu fornecedor HSM. O provedor deve ser instalado em um computador cliente.  
   
-     *KeyIdentifier*  
-     Identificador da chave, usado como uma chave mestra de coluna, no repositório de chaves.  
+    *KeyIdentifier*  
+    Identificador da chave, usado como uma chave mestra de coluna, no repositório de chaves.  
   
-     **Exemplos:**  
+    **Exemplos:**  
   
     ```  
     N'My HSM CNG Provider/AlwaysEncryptedKey1'  
@@ -148,33 +155,33 @@ As tabelas abaixo capturam os nomes de provedores do sistema:
 
 -   **Nome do provedor:** AZURE_KEY_STORE  
   
-     **Formato do caminho da chave:** *KeyUrl*  
+    **Formato do caminho da chave:** *KeyUrl*  
   
-     Onde:  
+    Onde:  
   
-     *KeyUrl*  
-     A URL da chave no Azure Key Vault
+    *KeyUrl*  
+    A URL da chave no Azure Key Vault
 
 ENCLAVE_COMPUTATIONS  
-Especifica que chave mestra da coluna é habilitada para enclave, o que significa que todas as chaves de criptografia de coluna criptografadas com essa chave mestra de coluna podem ser compartilhadas com um enclave seguro do lado do servidor e usadas para cálculos dentro de enclave. Para obter mais informações, consulte [Always Encrypted com enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+Especifica se a chave mestra da coluna está habilitada para enclave. Você pode compartilhar todas as chaves de criptografia de coluna, criptografadas com a chave mestra de coluna, com um enclave seguro no servidor e usá-las para cálculos dentro do enclave. Para obter mais informações, consulte [Always Encrypted com enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
- *signature*  
-Um literal binário que é resultado de assinar digitalmente o *caminho da chave* e a configuração ENCLAVE_COMPUTATIONS com a chave mestra da coluna (a assinatura reflete se ENCLAVE_COMPUTATIONS foi especificado ou não). A assinatura protege os valores assinados de serem alterados por usuários não autorizados. Um driver cliente habilitado para Always Encrypted pode verificar a assinatura e retornar um erro para o aplicativo se a assinatura for inválida. A assinatura deve ser gerada usando ferramentas do lado do cliente. Para obter mais informações, consulte [Always Encrypted com enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+*signature*  
+Um literal binário que é um resultado de assinar digitalmente o *caminho da chave* e a configuração ENCLAVE_COMPUTATIONS com a chave mestra de coluna. A assinatura reflete se ENCLAVE_COMPUTATIONS for especificado ou não. A assinatura protege os valores assinados de serem alterados por usuários não autorizados. Um driver de cliente habilitado para Always Encrypted verificará a assinatura e retornará um erro para o aplicativo se a assinatura for inválida. A assinatura deve ser gerada usando ferramentas do lado do cliente. Para obter mais informações, consulte [Always Encrypted com enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
   
   
 ## <a name="remarks"></a>Remarks  
 
-É necessário criar uma entrada de metadados de chave mestra de coluna antes de uma entrada de metadados de chave de criptografia de coluna poder ser criada no banco de dados e antes de qualquer coluna no banco de dados poder ser criptografada usando Always Encrypted. Observe que uma entrada de chave mestra de coluna nos metadados não contém a chave mestra de coluna real, que deve ser armazenada em um repositório de chaves de coluna externa (fora do SQL Server). O nome do provedor de repositório de chaves e o caminho da chave mestra de coluna nos metadados devem ser válidos para um aplicativo cliente poder usar a chave mestra de coluna para descriptografar uma chave de criptografia de coluna criptografada com a chave mestra de coluna e consultar colunas criptografadas.
+Crie uma entrada de metadados de chave mestra de coluna antes de uma entrada de metadados de chave de criptografia de coluna ser criada no banco de dados e antes de qualquer coluna no banco de dados poder ser criptografada usando Always Encrypted. Uma entrada de chave mestra de coluna nos metadados não contém a chave mestra de coluna real. A chave mestra de coluna deve ser armazenada em um repositório de chaves de coluna externo (fora do SQL Server). O nome do provedor de repositório de chaves e o caminho da chave mestra de coluna nos metadados devem ser válidos para um aplicativo cliente. O aplicativo cliente precisa usar a chave mestra de coluna para descriptografar uma chave de criptografia de coluna. A chave de criptografia de coluna é criptografada com a chave mestra de coluna. O aplicativo cliente também precisa consultar colunas criptografadas.
 
 
   
 ## <a name="permissions"></a>Permissões  
- Requer a permissão **ALTER ANY COLUMN MASTER KEY**.  
+Requer a permissão **ALTER ANY COLUMN MASTER KEY**.  
   
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-creating-a-column-master-key"></a>A. Criando uma chave mestra de coluna  
- Criando uma entrada de metadados de chave mestra de coluna para uma chave mestra de coluna armazenada no repositório de certificados para aplicativos cliente que usam o provedor MSSQL_CERTIFICATE_STORE para acessar a chave mestra de coluna:  
+O exemplo a seguir cria uma entrada de metadados de chave mestra de coluna para uma chave mestra de coluna. A chave mestra de coluna é armazenada no Repositório de Certificados para aplicativos cliente que usam o provedor MSSQL_CERTIFICATE_STORE para acessar a chave mestra de coluna:  
   
 ```  
 CREATE COLUMN MASTER KEY MyCMK  
@@ -184,7 +191,7 @@ WITH (
    );  
 ```  
   
- Criando uma entrada de metadados de chave mestra de coluna para uma chave mestra de coluna que é acessada por aplicativos cliente que usam o provedor MSSQL_CNG_STORE:  
+Criar uma entrada de metadados de chave mestra de coluna para uma chave mestra de coluna. Aplicativos cliente, que usam o provedor MSSQL_CNG_STORE, acessam a chave mestra de coluna:  
   
 ```  
 CREATE COLUMN MASTER KEY MyCMK  
@@ -194,7 +201,7 @@ WITH (
 );  
 ```  
   
- Criando uma entrada de metadados da chave mestra de coluna para uma chave mestra da coluna armazenada no Azure Key Vault, para aplicativos cliente que usam o provedor AZURE_KEY_VAULT, para acessar a chave mestra de coluna.  
+Criar uma entrada de metadados de chave mestra de coluna para uma chave mestra de coluna. A chave mestra de coluna é armazenada no Azure Key Vault, para aplicativos cliente que usam o provedor AZURE_KEY_VAULT, para acessar a chave mestra de coluna.  
   
 ```  
 CREATE COLUMN MASTER KEY MyCMK  
@@ -204,7 +211,7 @@ WITH (
         MyCMK/4c05f1a41b12488f9cba2ea964b6a700');  
 ```  
   
- Criando uma entrada de metadados da chave mestra da coluna para uma chave mestra da coluna armazenada em um repositório de chaves mestra de coluna personalizadas:  
+Criar uma entrada de metadados de chave mestra de coluna para uma chave mestra de coluna. A chave mestra de coluna é armazenada em um repositório de chave mestra de coluna personalizada:  
   
 ```  
 CREATE COLUMN MASTER KEY MyCMK  
@@ -213,8 +220,8 @@ WITH (
     KEY_PATH = 'https://contoso.vault/sales_db_tce_key'  
 );  
 ```  
-### <a name="b-creating-an-enclave-enabled-column-master-key"></a>B. Criando uma chave mestra da coluna habilitada para enclave  
- Criando uma entrada de metadados de chave mestra de coluna para uma chave mestra de coluna habilitada para enclave armazenada no repositório de certificados para aplicativos cliente que usam o provedor MSSQL_CERTIFICATE_STORE para acessar a chave mestra de coluna:  
+### <a name="b-creating-an-enclave-enabled-column-master-key"></a>b. Criando uma chave mestra da coluna habilitada para enclave  
+O exemplo a seguir cria uma entrada de metadados de chave mestra de coluna para uma chave mestra de coluna habilitada para enclave. A chave mestra de coluna habilitada para enclave é armazenada em um Repositório de Certificados, para aplicativos cliente que usam o provedor MSSQL_CERTIFICATE_STORE, para acessar a chave mestra de coluna:  
   
 ```  
 CREATE COLUMN MASTER KEY MyCMK  
@@ -225,7 +232,7 @@ WITH (
   );  
 ```  
   
- Criando uma entrada de metadados da chave mestra de coluna para uma chave mestra da coluna habilitada para enclave armazenada no Azure Key Vault, para aplicativos cliente que usam o provedor AZURE_KEY_VAULT, para acessar a chave mestra de coluna.  
+Criar uma entrada de metadados de chave mestra de coluna para uma chave mestra de coluna habilitada para enclave. A chave mestra de coluna habilitada para enclave é armazenada no Azure Key Vault, para aplicativos cliente que usam o provedor AZURE_KEY_VAULT, para acessar a chave mestra de coluna.  
   
 ```  
 CREATE COLUMN MASTER KEY MyCMK  

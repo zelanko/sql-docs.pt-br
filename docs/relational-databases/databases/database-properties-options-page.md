@@ -13,12 +13,12 @@ ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 49e6357f4f108b05b0f28442d0e526445a5a5ad7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ce814d567aa695be417fa4fa92d988938dfec6bf
+ms.sourcegitcommit: 0f452eca5cf0be621ded80fb105ba7e8df7ac528
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659365"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57007589"
 ---
 # <a name="database-properties-options-page"></a>Propriedades do banco de dados (página Opções)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51659365"
  Especifique a ordenação do banco de dados selecionando na lista. Para saber mais, veja [Definir ou alterar a ordenação de banco de dados](../../relational-databases/collations/set-or-change-the-database-collation.md).  
   
  **Modelo de recuperação**  
- Especifique um dos seguintes modelos para recuperar o banco de dados: **Full**, **Bulk-Logged**ou **simples**. Para obter mais informações sobre modelos de recuperação, veja [Modelos de recuperação &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
+ Especifique um dos seguintes modelos para recuperar o banco de dados: **Completo**, **Bulk-Logged**ou **Simples**. Para obter mais informações sobre modelos de recuperação, veja [Modelos de recuperação &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
  **Nível de compatibilidade**  
  Especifique a última versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aceita pelo banco de dados. Para obter os valores possíveis, consulte [Nível de compatibilidade ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). Quando um banco de dados do SQL Server é atualizado, o nível de compatibilidade de banco de dados é mantido se possível ou alterado para o nível mínimo com suporte para o novo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
@@ -44,7 +44,7 @@ ms.locfileid: "51659365"
 ## <a name="automatic"></a>Automatic  
  **Fechamento Automático**  
  Especifique se o banco de dados é fechado corretamente e libera recursos depois da saída do último usuário. Os valores possíveis são **True** e **False**. Quando **True**, o banco de dados é desligado corretamente e seus recursos são liberados depois do logoff do último usuário.  
-  
+
  **Estatísticas incrementais de criação automática**  
  Especifique se você deseja usar a opção incremental durante a criação de estatísticas por partição. Para obter informações sobre estatísticas incrementais, veja [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md).  
   
@@ -63,6 +63,15 @@ ms.locfileid: "51659365"
  Quando definidas como **False**, as consultas que iniciam uma atualização automática de estatísticas desatualizadas aguardarão até que as estatísticas possam ser usadas no plano de otimização da consulta.  
   
  A configuração dessa opção como **True** não tem nenhum efeito, salvo se **Atualização Automática de Estatísticas** também estiver definida como **True**.  
+
+## <a name="azure"></a>Azure
+Quando conectado ao Banco de Dados SQL do Azure, esta seção tem configurações para controlar o SLO (objetivo de nível de serviço). O SLO padrão para um novo banco de dados é Standard S2.
+
+  **Objetivo de nível de serviço atual** O SLO específico para usar. Os valores válidos são restritos pela edição selecionada. Se o valor SLO desejado não estiver na lista, você pode digitar o valor.
+
+  **Edição** A edição do Banco de Dados SQL do Azure a usar, tal como Basic ou Premium. Se o valor de edição que você precisa não estiver na lista, você poderá digitar o valor, que precisará corresponder ao valor usado nas APIs REST do Azure.
+  
+  **Max Size** O tamanho máximo do banco de dados. Se o valor do tamanho desejado não estiver na lista, você poderá digitá-lo. Deixe em branco para o tamanho padrão do SLO e da edição informados.
   
 ## <a name="containment"></a>Containment  
  Nos bancos de dados independentes, algumas configurações geralmente definidas no nível de servidor podem ser configuradas no nível de banco de dados.  
@@ -123,7 +132,7 @@ ms.locfileid: "51659365"
  Especifique o nome de diretório para obter os dados FILESTREAM associados ao banco de dados selecionado.  
   
  **Acesso Não Transacionado a FILESTREAM**  
- Especifique uma das seguintes opções para acesso não transacional através do sistema de arquivos aos dados FILESTREAM armazenados em FileTables: **OFF**, **READ_ONLY**ou **FULL**. Se FILESTREAM não estiver habilitado no servidor, esse valor será definido como OFF e será desabilitado. Para obter mais informações, veja [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
+ Especifique uma das seguintes opções para acesso não transacional através do sistema de arquivos aos dados FILESTREAM armazenados em FileTables: **OFF**, **READ_ONLY** ou **FULL**. Se FILESTREAM não estiver habilitado no servidor, esse valor será definido como OFF e será desabilitado. Para obter mais informações, veja [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
   
 ## <a name="miscellaneous"></a>Diversos  
 **Permitir o isolamento de instantâneo**  

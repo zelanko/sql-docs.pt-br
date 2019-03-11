@@ -2,7 +2,7 @@
 title: Embutimento de UDF escalar em bancos de dados Microsoft SQL | Microsoft Docs
 description: Recurso de embutimento de UDF escalar para melhorar o desempenho de consultas que invocam UDFs escalares no SQL Server (2018 e posteriores) e no Banco de Dados SQL do Azure.
 ms.custom: ''
-ms.date: 11/06/2018
+ms.date: 02/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ author: s-r-k
 ms.author: karam
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 709f4a25ec4536c9ff1ba10cdaddd2ef8c104db2
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.openlocfilehash: 0c2ed03ea43643aa8aaecd3e1600ee3e258929ed
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51222065"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017922"
 ---
 # <a name="scalar-udf-inlining"></a>Embutimento de UDF escalar
 
@@ -38,9 +38,9 @@ Funções Definidas pelo Usuário implementadas no Transact-SQL e que retornam u
 Normalmente, UDFs escalares acabam tendo um desempenho ruim devido aos seguintes motivos.
 
 - **Invocação iterativa:** UDFs são invocados de maneira iterativa, uma vez a cada tupla qualificada. Isso resulta em custos adicionais repetido de comutação de contexto repetida devido à invocação de função. Especialmente, UDFs que executam consultas SQL em sua definição são gravemente afetadas.
-- **Falta de custos:** durante a otimização, somente operadores relacionais terão o custo calculado, enquanto os operadores escalares não terão. Antes da introdução de UDFs escalares, outros operadores escalares geralmente eram baratos e não exigiam avaliação de custo. Um pequeno custo de CPU adicionado para uma operação de escalar foi suficiente. Há cenários em que o custo real é significativo e ainda assim permanece sub-representado.
+- **Falta de custos:** Durante a otimização, somente operadores relacionais terão o custo calculado, enquanto os operadores escalares não terão. Antes da introdução de UDFs escalares, outros operadores escalares geralmente eram baratos e não exigiam avaliação de custo. Um pequeno custo de CPU adicionado para uma operação de escalar foi suficiente. Há cenários em que o custo real é significativo e ainda assim permanece sub-representado.
 - **Execução interpretada:** UDFs são avaliados como um lote de instruções, executados instrução a instrução. Cada instrução em si é compilada e o plano compilado é armazenado em cache. Embora essa estratégia de armazenamento em cache economize algum tempo, pois evita recompilações, cada instrução é executada em isolamento. Nenhuma otimização entre instruções é executada.
-- **Execução serial:** o SQL Server não permite paralelismo dentro da consulta em consultas que invocam UDFs. 
+- **Execução serial:** O SQL Server não permite paralelismo dentro da consulta em consultas que invocam UDFs. 
 
 ## <a name="automatic-inlining-of-scalar-udfs"></a>Embutimento automático de UDFs escalares
 
@@ -141,16 +141,17 @@ Dependendo da complexidade da lógica na UDF, o plano de consulta resultante tam
 Uma UDF T-SQL escalar poderá ser embutida se todas as seguintes condições forem verdadeiras:
 
 - A UDF é escrita usando as seguintes construções:
-    - `DECLARE`, `SET`: declaração de variável e atribuições.
-    - `SELECT`: consulta SQL com atribuições variáveis únicas/múltiplas<sup>1</sup>.
-    - `IF`/`ELSE`: ramificação com níveis arbitrários de aninhamento.
-    - `RETURN`: instruções de retorno únicas ou múltiplas.
-    - `UDF`: chamadas de função aninhadas/recursivas<sup>2</sup>.
-    - Outros: operações relacionais, como `EXISTS`, `ISNULL`.
+    - `DECLARE`, `SET`: Declaração de variável e atribuições.
+    - `SELECT`: Consulta SQL com atribuições variáveis únicas/múltiplas<sup>1</sup>.
+    - `IF`/`ELSE`: Ramificação com níveis arbitrários de aninhamento.
+    - `RETURN`: Instruções de retorno únicas ou múltiplas.
+    - `UDF`: Chamadas de função aninhadas/recursivas<sup>2</sup>.
+    - Outros: Operações relacionais, como `EXISTS`, `ISNULL`.
 - A UDF não invoca nenhuma função intrínseca que seja dependente de tempo (como `GETDATE()`) ou tenha efeitos colaterais<sup>3</sup> (como `NEWSEQUENTIALID()`).
 - A UDF usa a cláusula `EXECUTE AS CALLER` (o comportamento padrão se a cláusula `EXECUTE AS` não for especificada).
 - A UDF não faz referência a variáveis de tabela nem parâmetros com valor de tabela.
 - A consulta que invoca uma UDF escalar não faz referência a uma chamada UDF escalar em sua cláusula `GROUP BY`.
+- A consulta que invoca um UDF escalar em sua lista de seleção com a cláusula `DISTINCT` não faz referência a uma chamada UDF escalar em sua cláusula `ORDER BY`.
 - A UDF não é compilada nativamente (há suporte para interoperabilidade).
 - A UDF não é usada em uma coluna computada nem em uma definição de restrição de verificação.
 - A UDF não faz referência a tipos definidos pelo usuário.

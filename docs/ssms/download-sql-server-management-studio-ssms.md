@@ -1,7 +1,7 @@
 ---
 title: Baixar o SQL Server Management Studio (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/19/2018
+ms.date: 03/02/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: sstein
@@ -24,28 +24,29 @@ ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dnethi
 ms.author: dinethi
 manager: craigg
-ms.openlocfilehash: 2cd175d44e403d98d5dad8134878e902fe71d08c
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 4e109a44ced3a640ee64f7099dc45da5655c5e3f
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801510"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334723"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Baixar o SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-O SSMS é um ambiente integrado para gerenciar qualquer infraestrutura de SQL, do SQL Server para o Banco de Dados SQL do Azure. O SSMS fornece ferramentas para configurar, monitorar e administrar instâncias do SQL. Use o SSMS para implantar, monitorar e atualizar os componentes da camada de dados usados pelos seus aplicativos, além de construir consultas e scripts.
+O SSMS (SQL Server Management Studio) é um ambiente integrado para gerenciar qualquer infraestrutura de SQL, do SQL Server para o Banco de Dados SQL do Azure. O SSMS fornece ferramentas para configurar, monitorar e administrar instâncias do SQL Server e bancos de dados. Use o SSMS para implantar, monitorar e atualizar os componentes da camada de dados usados pelos seus aplicativos, além de construir consultas e scripts.
 
-Use o SQL Server Management Studio (SSMS) para consultar, criar e gerenciar seus bancos de dados e data warehouses, independentemente de onde estiverem – no computador local ou na nuvem.
+Use o SSMS para consultar, criar e gerenciar seus bancos de dados e data warehouses, independentemente de onde estiverem – no computador local ou na nuvem.
 
-**O SSMS é gratuito!**
+O SSMS é gratuito!
 
-**[O SSMS 18.0 Versão Prévia Pública 6 já está disponível](#ssms-180-preview-6) e é a última geração do *SQL Server Management Studio* que dá suporte ao [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]!**
+[O SSMS 18.0 Versão Prévia Pública 7 já está disponível](#ssms-180-preview-7) e é a última geração do *SQL Server Management Studio* que dá suporte ao [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
 ## <a name="ssms-1791-is-the-current-general-availability-ga-version-of-ssms"></a>O SSMS 17.9.1 é a atual versão de GA (disponibilidade geral) do SSMS
 
-**[![baixar](../ssdt/media/download.png) Baixar o SQL Server Management Studio 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154)**
-<br>**[![baixar](../ssdt/media/download.png) Baixar o pacote de atualização do SQL Server Management Studio 17.9.1 (atualiza o 17.x para o 17.9.1)](https://go.microsoft.com/fwlink/?linkid=2043430)**
+[![baixar](../ssdt/media/download.png) Baixar o SQL Server Management Studio 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154)
+
+[![baixar](../ssdt/media/download.png) Baixar o pacote de atualização do SQL Server Management Studio 17.9.1 (atualiza o 17.x para o 17.9.1)](https://go.microsoft.com/fwlink/?linkid=2043430)
 
 **Informações da versão**
 
@@ -73,82 +74,69 @@ Para obter mais detalhes sobre o SSMS 17.9.1, confira o [Log de alterações do 
   * Verifique se todas as atualizações mais recentes do sistema operacional estão instaladas no computador.
   * As ações indicadas geralmente são necessárias uma única vez. Há alguns casos em que uma reinicialização é necessária durante as atualizações adicionais para a mesma versão principal do SSMS. Para obter atualizações secundárias, todos os pré-requisitos do SSMS já estão instalados no computador.
 
-## <a name="ssms-180-preview-6"></a>SSMS 18.0 (versão prévia 6)
+## <a name="ssms-180-preview-7"></a>SSMS 18.0 (Versão Prévia 7)
 
-**O SSMS 18.0 Versão Prévia Pública 6 já está disponível e é a última geração do *SQL Server Management Studio* que dá suporte ao [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]!**
+**O SSMS 18.0 Versão Prévia Pública 7 já está disponível e é a última geração do *SQL Server Management Studio* que dá suporte ao [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
 
-**[![download](../ssdt/media/download.png) Baixar o SQL Server Management Studio 18.0 (versão prévia 6)](https://go.microsoft.com/fwlink/?linkid=2052501)**
+**[![baixar](../ssdt/media/download.png) Baixar o SQL Server Management Studio 18.0 (versão prévia 7)](https://go.microsoft.com/fwlink/?linkid=2078638)**
 
-A *versão prévia 6* é a última versão prévia pública do SSMS 18.0. Se você tiver uma versão prévia anterior do SSMS 18.0 instalada, desinstale-a antes de instalar a versão prévia 6 do SSMS 18.0.
+A *versão prévia 7* é a última versão prévia pública do SSMS 18.0. Se você tiver uma versão prévia anterior do SSMS 18.0 instalada, desinstale-a antes de instalar a versão prévia 7 do SSMS 18.0.
 
 **Informações da versão**
 
-- Número da versão: 18.0 (versão prévia 6)<br>
-- Número de build: 15.0.18075.0<br>
-- Data de lançamento: 18 de dezembro de 2018
+- Número da versão: 18.0 (versão prévia 7)<br>
+- Número de build: 15.0.18092.0<br>
+- Data de lançamento: 1º de março de 2019
 
 Se você tem sugestões ou comentários ou deseja relatar problemas, a melhor maneira de entrar em contato com a equipe do SSMS é usando o [UserVoice](https://aka.ms/sqlfeedback).
 
 A instalação do SSMS 18.x não atualiza nem substitui versões do SSMS 17.x ou anteriores. O SSMS 18.x é instalado lado a lado com versões anteriores para que ambas versões estejam disponíveis para uso.
 
-Se um computador contiver instalações lado a lado do SSMS, verifique se você iniciou a versão correta para suas necessidades específicas. A versão mais recente é rotulada *Microsoft SQL Server Management Studio 18*:
+Se um computador contiver instalações lado a lado do SSMS, verifique se você iniciou a versão correta para suas necessidades específicas. A versão mais recente é rotulada **Microsoft SQL Server Management Studio 18**:
  
-
-## <a name="available-languages-ssms-180-preview-6"></a>Idiomas disponíveis (SSMS 18.0 versão prévia 6)
+## <a name="available-languages-ssms-180-preview-7"></a>Idiomas disponíveis (SSMS 18.0 versão prévia 7)
 
 Esta versão do SSMS pode ser instalada nos seguintes idiomas:
 
-SQL Server Management Studio 18.0 (versão prévia 6):<br>
-[Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=2052501&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=2052501&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2052501&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=2052501&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=2052501&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2052501&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=2052501&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2052501&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=2052501&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2052501&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=2052501&clcid=0x40a)
+SQL Server Management Studio 18.0 (versão prévia 7):<br>
+[Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=2078638&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=2078638&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2078638&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=2078638&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=2078638&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2078638&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=2078638&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2078638&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=2078638&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2078638&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=2078638&clcid=0x40a)
 
 Pacote de atualização do SQL Server Management Studio 18.0 (atualiza para o 18.0):<br>
-Nenhuma opção de atualização está disponível neste momento. Se você tiver uma versão prévia anterior do SSMS 18.0 instalada, desinstale-a antes de instalar a versão prévia 6 do SSMS 18.0.
+Nenhuma opção de atualização está disponível neste momento. Se você tiver uma versão prévia anterior do SSMS 18.0 instalada, desinstale-a antes de instalar a versão prévia 7 do SSMS 18.0.
 
 > [!NOTE]
 > O módulo do SQL Server PowerShell é uma instalação separada por meio da Galeria do PowerShell. Para obter mais informações, consulte [Baixar o Módulo SQL Server PowerShell](download-sql-server-ps-module.md).
 
+## <a name="new-in-this-release-ssms-180-preview-7"></a>Novo nesta versão (SSMS 18.0 versão prévia 7)
 
-## <a name="new-in-this-release-ssms-180-preview-6"></a>Novo nesta versão (SSMS 18.0 versão prévia 6)
-
-O SSMS 18.0 (versão prévia 6) é a versão mais recente do SQL Server Management Studio. A geração 18.x do SSMS dá suporte a quase todas as áreas de recursos do SQL Server 2008 por meio da versão prévia do SQL Server 2019.
+O SSMS 18.0 (versão prévia 7) é a versão mais recente do SQL Server Management Studio. A geração 18.x do SSMS dá suporte a quase todas as áreas de recursos do SQL Server 2008 por meio da versão prévia do SQL Server 2019.
 
 Para obter detalhes sobre as novidades nesta versão, confira o [log de alterações do SSMS](sql-server-management-studio-changelog-ssms.md).
 
-
-## <a name="supported-sql-offerings-ssms-180-preview-6"></a>Ofertas de SQL com suporte (SSMS 18.0 versão prévia 6)
+## <a name="supported-sql-offerings-ssms-180-preview-7"></a>Ofertas de SQL com suporte (SSMS 18.0 versão prévia 7)
 
 * Esta versão do SSMS funciona com todas as [versões com suporte do SQL Server 2008 – [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) e fornece o maior nível de suporte para trabalhar com os recursos de nuvem mais recentes no Banco de Dados SQL do Azure e SQL Data Warehouse do Azure.
 * Além disso, o SSMS 18.x pode ser instalado lado a lado com o SSMS 17.x, o SSMS 16.x ou o SSMS do SQL Server 2014 e anteriores.
 * SSIS (SQL Server Integration Services) – a versão SSMS 17.x ou posterior não permite a conexão com o serviço herdado do SQL Server Integration Services. Para conectar-se a uma versão anterior do Integration Services herdado, use a versão do SSMS alinhada com a versão do SQL Server. Por exemplo, use o SSMS 16.x para conectar ao serviço herdado do SQL Server Integration Services 2016. O SSMS 17.x e o SSMS 16.x podem ser instalados lado a lado no mesmo computador. Desde o lançamento do SQL Server 2012, o banco de dados de catálogo do SSIS, o SSISDB, é a maneira recomendada para armazenar, gerenciar, executar e monitorar os pacotes do Integration Services. Para obter detalhes, veja o [Catálogo do SSIS](../integration-services/catalog/ssis-catalog.md).
 
-## <a name="supported-operating-systems-ssms-180-preview-6"></a>Sistemas operacionais com suporte (SSMS 18.0 versão prévia 6)
+## <a name="supported-operating-systems-ssms-180-preview-7"></a>Sistemas operacionais com suporte (SSMS 18.0 versão prévia 7)
 
 Esta versão do SSMS é compatível com as seguintes plataformas de 64 bits quando usada com o service pack mais recente disponível:
 
-- Windows 10 (64 bits) *
-- Windows Server 2016 *
+- Windows 10 (64-bit) <sup>*</sup>
+- Windows Server 2016 <sup>*</sup>
 - Windows Server 2012 R2 (64 bits)
 - Windows Server 2012 (64 bits)
 - Windows Server 2008 R2 (64 bits)
 
-\* Exige a versão 1607 (10.0.14939) ou posterior
+<sup>*</sup> Exige a versão 1607 (10.0.14939) ou posterior
 
 > [!NOTE]
 > O SSMS é executado somente no Windows. Se você precisar de uma ferramenta que seja executada em plataformas diferentes do Windows, confira o Azure Data Studio. O Azure Data Studio é uma nova ferramenta multiplataforma executada no macOS, no Linux e no Windows. Para obter detalhes, veja [Azure Data Studio](../azure-data-studio/what-is.md).
   
+## <a name="release-notes-ssms-180-preview-7"></a>Notas sobre a versão (SSMS 18.0 Versão Prévia 7)
 
-
-
-## <a name="release-notes-ssms-180-preview-6"></a>Notas sobre a versão (SSMS 18.0 versão prévia 6)
-
-Os seguintes problemas são conhecidos na versão prévia 6 do SSMS 18.0:
-
-SSMS
-
-- Clicar duas vezes em um arquivo .sql inicia o SSMS, mas não abre o script real.
-  - Solução alternativa: arraste e solte o arquivo .sql para o editor do SSMS.
-
-
+N/A
 
 ## <a name="previous-releases"></a>Versões anteriores
 

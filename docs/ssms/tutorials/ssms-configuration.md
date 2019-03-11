@@ -5,21 +5,21 @@ keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/16/2018
-ms.topic: Tutorial
+ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: f37ea9b96748e660894aed98a4bc37c7fd710aac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 173123f180047c35ce93a64928770f55525f651b
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661324"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662680"
 ---
 # <a name="tutorial-sql-server-management-studio-components-and-configuration"></a>Tutorial: componentes e configuração do SQL Server Management Studio
-Este tutorial descreve os diversos componentes de janela no SSMS (SQL Server Management Studio) e algumas opções de configuração básicas para seu espaço de trabalho. Neste artigo, você aprenderá como: 
+Este tutorial descreve os diversos componentes de janela no SSMS (SQL Server Management Studio) e algumas opções de configuração básicas para seu workspace. Neste artigo, você aprenderá como: 
 
 > [!div class="checklist"]
 > * Identificar os componentes que formam o ambiente de SSMS
@@ -35,14 +35,14 @@ Para concluir este tutorial, você precisará do SQL Server Management Studio.
 - Instalar o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 ## <a name="sql-server-management-studio-components"></a>Componentes do SQL Server Management Studio
-Esta seção descreve os vários componentes de janela que estão disponíveis no espaço de trabalho e como usá-los. 
+Esta seção descreve os vários componentes de janela que estão disponíveis no workspace e como usá-los. 
 
 - Para fechar uma janela, selecione o **X** no canto direito da barra de título. 
 - Para reabrir uma janela, selecione a janela no menu **Exibir**. 
 
     ![No menu Exibir](media/ssms-configuration/viewmenu.png)
 
-- **Pesquisador de Objetos** (F8): o Pesquisador de Objetos é um modo de exibição de árvore de todos os objetos de banco de dados em um servidor. Essa exibição inclui os bancos de dados do Mecanismo de Banco de Dados do SQL Server, SQL Server Analysis Services, SQL Server Reporting Services e SQL Server Integration Services. O Pesquisador de Objetos inclui informações de todos os servidores conectados a ele. 
+- **Pesquisador de Objetos** (F8): Pesquisador de Objetos é uma exibição de árvore de todos os objetos de banco de dados em um servidor. Essa exibição inclui os bancos de dados do Mecanismo de Banco de Dados do SQL Server, SQL Server Analysis Services, SQL Server Reporting Services e SQL Server Integration Services. O Pesquisador de Objetos inclui informações de todos os servidores conectados a ele. 
     
     ![Pesquisador de Objetos](media/ssms-configuration/objectexplorer.png)
 - **Janela de Consulta** (Ctrl+N): depois de selecionar **Nova Consulta**, insira suas consultas T-SQL (Transact-SQL) nesta janela. Os resultados das suas consultas também são exibidos aqui.
@@ -121,7 +121,7 @@ Esta seção descreve como modificar algumas configurações básicas no SSMS us
      ![Alterar fontes e cores](media/ssms-configuration/fontsandcolors.png)
 
 ### <a name="change-startup-options"></a>Alterar opções de inicialização
-- As opções de inicialização determinam como seu espaço de trabalho aparece ao abrir o SSMS pela primeira vez. Para alterar as opções de inicialização, selecione **Ferramentas** > **Opções** > **Inicialização**:
+- As opções de inicialização determinam como seu workspace aparece ao abrir o SSMS pela primeira vez. Para alterar as opções de inicialização, selecione **Ferramentas** > **Opções** > **Inicialização**:
  
     ![Alterar opções de inicialização](media/ssms-configuration/startup.png)
 

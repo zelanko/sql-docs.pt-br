@@ -18,40 +18,39 @@ ms.assetid: c310f6df-7adf-493b-b56b-8e3143b13ae7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee8240f506c11bec768eb6a9510871b3ff1deaa8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4958921d446e4678ce09eeb4c16f8faf5809dd2a
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035287"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590231"
 ---
 # <a name="replace-value-of-xml-dml"></a>substituir o valor de (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Atualiza o valor de um nó no documento.  
+Atualiza o valor de um nó no documento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
-  
+```sql
 replace value of Expression1   
 with Expression2  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Expression1*  
- Identifica um nó cujo valor será atualizado. Deve identificar apenas um único nó. Ou seja, a *Expression1* precisa ser um singleton estático. Se o XML for digitado, o tipo do nó deverá ser um tipo simples. Se forem selecionados vários nós, um erro será gerado. Se *Expression1* retornar uma sequência vazia, não ocorrerá nenhuma substituição de valor e nenhum erro será retornado. *Expression1* precisa retornar um único elemento que tenha um conteúdo de tipo simples (tipos de lista ou atômicos), um nó de texto ou um nó de atributo. *Expression1* não pode ser um tipo de união, um tipo complexo, uma instrução de processamento, um nó de documento nem um nó de comentário. Se for, um erro será retornado.  
+*Expression1*  
+Identifica um nó cujo valor será atualizado. Deve identificar apenas um único nó. Ou seja, a *Expression1* precisa ser um singleton estático. Se o XML for digitado, o tipo do nó deverá ser um tipo simples. Quando forem selecionados vários nós, um erro será gerado. Se *Expression1* retornar uma sequência vazia, não ocorrerá nenhuma substituição de valor e nenhum erro será retornado. *Expression1* precisa retornar um único elemento que tenha um conteúdo de tipo simples (tipos de lista ou atômicos), um nó de texto ou um nó de atributo. *Expression1* não pode ser um tipo de união, um tipo complexo, uma instrução de processamento, um nó de documento nem um nó de comentário ou um erro será retornado.  
   
- *Expression2*  
- Identifica o novo valor do nó. Pode ser uma expressão que retorna um nó simplesmente tipado, porque **data()** será usado implicitamente. Se o valor for uma lista de valores, a instrução **update** substituirá o valor antigo pela lista. Ao modificar uma instância XML tipada, *Expression2* precisará ser do mesmo tipo ou de um subtipo da *Expression*1. Caso contrário, um erro é retornado. Ao modificar uma instância XML não tipada, *Expression2* precisará ser uma expressão que possa ser atomizada. Caso contrário, um erro é retornado.  
+*Expression2*  
+Identifica o novo valor do nó. Pode ser uma expressão que retorna um nó tipo simples, porque **data()** será usado implicitamente. Se o valor for uma lista de valores, a instrução **update** substituirá o valor antigo pela lista. Ao modificar uma instância XML tipada, *Expression2* precisará ser do mesmo tipo ou de um subtipo da *Expression*1. Caso contrário, um erro é retornado. Ao modificar uma instância XML não tipada, *Expression2* precisará ser uma expressão que possa ser atomizada. Caso contrário, um erro é retornado.  
   
 ## <a name="examples"></a>Exemplos  
- Os exemplos a seguir da instrução XML DML **replace value of** ilustra como atualizar nós em um documento XML.  
+Os exemplos a seguir da instrução XML DML **replace value of** ilustra como atualizar nós em um documento XML.  
   
 ### <a name="a-replacing-values-in-an-xml-instance"></a>A. Substituindo valores em uma instância XML  
- No exemplo a seguir, uma instância de documento é atribuída primeiro a uma variável do tipo **XML**. Em seguida, as instruções XML DML **replace value of** atualizam os valores no documento.  
+No exemplo a seguir, uma instância de documento é atribuída primeiro a uma variável do tipo **XML**. Em seguida, as instruções XML DML **replace value of** atualizam os valores no documento.  
   
-```  
+```sql
 DECLARE @myDoc xml;  
 SET @myDoc = '<Root>  
 <Location LocationID="10"   
@@ -77,12 +76,12 @@ SET @myDoc.modify('
 SELECT @myDoc;  
 ```  
   
- Observe que o destino atualizado deve ser, no máximo, um nó que seja explicitamente especificado na expressão de caminho adicionando um "[1]" no fim da expressão.  
+O destino atualizado deve ser, no máximo, um nó que seja explicitamente especificado na expressão de caminho adicionando um "[1]" no fim da expressão.  
   
 ### <a name="b-using-the-if-expression-to-determine-replacement-value"></a>b. Usando a expressão if para determinar o valor de substituição  
- É possível especificar a expressão **if** na Expression2 da instrução **replace value of XML DML**, como mostra o exemplo a seguir. Expression1 identifica que o atributo LaborHours do primeiro centro de trabalho será atualizado. A Expression2 usa uma expressão **if** para determinar o novo valor do atributo LaborHours.  
+É possível especificar a expressão **if** na Expression2 da instrução **replace value of XML DML**, como mostra o exemplo a seguir. Expression1 identifica que o atributo LaborHours do primeiro centro de trabalho será atualizado. A Expression2 usa uma expressão **if** para determinar o novo valor do atributo LaborHours.  
   
-```  
+```sql
 DECLARE @myDoc xml  
 SET @myDoc = '<Root>  
 <Location LocationID="10"   
@@ -107,9 +106,9 @@ SELECT @myDoc
 ```  
   
 ### <a name="c-updating-xml-stored-in-an-untyped-xml-column"></a>C. Atualizando XML armazenado em uma coluna XML sem tipo  
- O exemplo a seguir atualiza XML armazenado em uma coluna:  
+O exemplo a seguir atualiza XML armazenado em uma coluna:  
   
-```  
+```sql
 drop table T  
 go  
 CREATE TABLE T (i int, x xml)  
@@ -137,11 +136,11 @@ FROM T
 ```  
   
 ### <a name="d-updating-xml-stored-in-a-typed-xml-column"></a>D. Atualizando XML armazenado em uma coluna XML com tipo  
- Este exemplo substitui os valores em um documento de instruções de fabricação armazenado em uma coluna XML digitada.  
+Este exemplo substitui os valores em um documento de instruções de fabricação armazenado em uma coluna XML digitada.  
   
- No exemplo, primeiro você cria uma tabela (T) com uma coluna XML digitada no banco de dados AdventureWorks. Depois, você copia a instância XML de instruções de fabricação da coluna Instructions na tabela ProductModel para a tabela T. Em seguida, as inserções são aplicadas ao XML na tabela T.  
+No exemplo, primeiro você cria uma tabela (T) com uma coluna XML digitada no banco de dados AdventureWorks. Depois, você copia a instância XML de instruções de fabricação da coluna Instructions na tabela ProductModel para a tabela T. Em seguida, as inserções são aplicadas ao XML na tabela T.  
   
-```  
+```sql
 use AdventureWorks  
 go  
 drop table T  
@@ -190,12 +189,12 @@ select Instructions
 from T  
 ```  
   
- Observe o uso de **cast** ao substituir o valor de LotSize. Isso é necessário quando o valor dever ser de um tipo específico. Neste exemplo, se 500 fosse o valor, a conversão explícita não seria necessária.  
+Observe o uso de **cast** ao substituir o valor de LotSize. Isso é necessário quando o valor deve ser de um tipo específico. Neste exemplo, se 500 fosse o valor, a conversão explícita não seria necessária.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Comparar XML digitado com XML não digitado](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
- [Criar instâncias de dados XML](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [Métodos de tipos de dados xml](../../t-sql/xml/xml-data-type-methods.md)   
- [XML DML &#40;linguagem de manipulação de dados XML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+[Comparar XML digitado com XML não digitado](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
+[Criar instâncias de dados XML](../../relational-databases/xml/create-instances-of-xml-data.md)   
+[Métodos de tipos de dados xml](../../t-sql/xml/xml-data-type-methods.md)   
+[XML DML &#40;linguagem de manipulação de dados XML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

@@ -20,19 +20,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef3f36df1c96d2909e401b83441ddeb7f3cc9d31
-ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
+ms.openlocfilehash: 492bd95f917d6973e4ff2797c170be58d16d0c40
+ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55513867"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676084"
 ---
 # <a name="binarychecksum--transact-sql"></a>BINARY_CHECKSUM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 Retorna o valor binário da soma de verificação calculado em uma linha de tabela ou em uma lista de expressões.
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do artigo](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do artigo") [Convenções de sintaxe do Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -58,11 +58,11 @@ Uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) de q
  **int**
   
 ## <a name="remarks"></a>Remarks  
-`BINARY_CHECKSUM(*)`, calculado em qualquer linha de uma tabela, retorna o mesmo valor enquanto a linha não for modificada subsequentemente. `BINARY_CHECKSUM` satisfaz as propriedades de uma função de hash: quando aplicado em quaisquer duas listas de expressões retorna o mesmo valor se os elementos correspondentes das duas listas tiverem o mesmo tipo e forem iguais quando comparados com o operador de igualdade (=). Para essa definição, dizemos que valores nulos, de um tipo especificado, são comparados como valores iguais. Se, pelo menos, um dos valores na lista de expressões for alterado, a soma de verificação da expressão também poderá ser alterada. No entanto, isso não é garantido. Portanto, para detectar se os valores foram alterados, recomendamos o uso de `BINARY_CHECKSUM` somente se o aplicativo puder tolerar uma alteração ausente ocasional. Caso contrário, considere a possibilidade de usar o `HASHBYTES`. Com um algoritmo de hash MD5 especificado, a probabilidade de que `HASHBYTES` retornará o mesmo resultado para duas entradas diferentes é muito menor em comparação com `BINARY_CHECKSUM`.
+`BINARY_CHECKSUM(*)`, calculado em qualquer linha de uma tabela, retorna o mesmo valor contanto que a linha não seja modificada posteriormente. `BINARY_CHECKSUM` satisfaz as propriedades de uma função de hash: quando aplicado em quaisquer duas listas de expressões retorna o mesmo valor se os elementos correspondentes das duas listas tiverem o mesmo tipo e forem iguais quando comparados com o operador de igualdade (=). Para essa definição, dizemos que valores nulos, de um tipo especificado, são comparados como valores iguais. Se, pelo menos, um dos valores na lista de expressões for alterado, a soma de verificação da expressão também poderá ser alterada. Entretanto, essa alteração não é garantida e, para detectar se os valores foram alterados, recomendamos o uso de `BINARY_CHECKSUM` somente se o aplicativo pode tolerar uma alteração ausente ocasional. Caso contrário, considere a possibilidade de usar o `HASHBYTES`. Com um algoritmo de hash MD5 especificado, a probabilidade de que `HASHBYTES` retornará o mesmo resultado para duas entradas diferentes é muito menor que `BINARY_CHECKSUM`.
   
 `BINARY_CHECKSUM` pode operar sobre uma lista de expressões e retorna o mesmo valor para uma lista especificada. `BINARY_CHECKSUM` aplicado sobre duas listas de expressões retorna o mesmo valor se os elementos correspondentes das duas listas tiverem o mesmo tipo e representação de byte. Nessa definição, os valores nulos de um tipo especificado são considerados como possuidores da mesma representação de byte.
   
-`BINARY_CHECKSUM` e `CHECKSUM` são funções semelhantes. Elas podem ser usadas para calcular um valor de soma em uma lista de expressões e a ordem das expressões afeta o valor resultante. A ordem das colunas usada para `BINARY_CHECKSUM(*)` é a mesma especificada na definição de tabela ou exibição. Isso inclui as colunas computadas.
+`BINARY_CHECKSUM` e `CHECKSUM` são funções semelhantes. Elas podem ser usadas para calcular um valor de soma em uma lista de expressões e a ordem das expressões afeta o valor resultante. A ordem das colunas usada para `BINARY_CHECKSUM(*)` é a mesma especificada na definição de tabela ou exibição. Essa ordem inclui as colunas computadas.
   
 `BINARY_CHECKSUM` e `CHECKSUM` retornam valores diferentes para os tipos de dados de cadeia de caracteres, em que a localidade pode fazer com que as cadeias de caracteres com uma representação diferente sejam comparadas como iguais. Os tipos de dados de cadeia de caracteres são  
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
-ms.openlocfilehash: eaa93142b7a00f581d90dcb0a7be4a94a4ae6477
-ms.sourcegitcommit: ee76381cfb1c16e0a063315c9c7005f10e98cfe6
+ms.openlocfilehash: 26b11ac46da7239f2fef98ef838e2e7c6f775aef
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55072851"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56803151"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Solucionar problemas de conectividade do PolyBase Kerberos
 
@@ -68,7 +68,7 @@ Esses arquivos estão localizados em:
 
 Por exemplo, o padrão para o SQL Server 2016 é `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase\Hadoop\conf`.
 
-Atualize  **core-site** e adicione as três propriedades abaixo. Defina os valores de acordo com o ambiente:
+Atualize **core-site.xml** e adicione as três propriedades abaixo. Defina os valores de acordo com o ambiente:
 
 ```xml
 <property>
@@ -212,7 +212,7 @@ Se a ferramenta foi executada e as propriedades de arquivo do caminho de destino
 
 ### <a name="mit-kdc"></a>MIT KDC  
 
-Todos os SPNs registrados com o KDC, incluindo os administradores, podem ser exibidos por meio da execução de **kadmin.local** > (logon do administrador) > **listprincs** no host do KDC ou em qualquer cliente do KDC. Se o Kerberos está configurado corretamente no cluster do Hadoop, deve haver um SPN para cada um dos serviços disponíveis no cluster (por exemplo: `nn`, `dn`, `rm`, `yarn`, `spnego` etc.) Os arquivos keytab correspondentes (substitutos para senhas) podem ser vistos em **/etc/security/keytabs**, por padrão. Eles são criptografados usando a chave privada do KDC.  
+Todos os SPNs registrados com o KDC, incluindo os administradores, podem ser exibidos por meio da execução de **kadmin.local** > (logon do administrador) > **listprincs** no host do KDC ou em qualquer cliente do KDC. Se o Kerberos está configurado corretamente no cluster do Hadoop, deve haver um SPN para cada um dos serviços disponíveis no cluster (por exemplo: `nn`, `dn`, `rm`, `yarn`, `spnego` etc.) Os arquivos keytab correspondentes (substitutos para senhas) podem ser vistos em  **/etc/security/keytabs**, por padrão. Eles são criptografados usando a chave privada do KDC.  
 
 Também considere usar a ferramenta [`kinit`](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) para verificar as credenciais de administrador no KDC localmente. Um exemplo de uso seria:  `kinit identity@MYREALM.COM`. Um prompt de senha indica que a identidade existe.  Os logs do KDC estão disponíveis em **/var/log/krb5kdc.log** por padrão, que inclui todas as solicitações de tíquetes, bem como o IP do cliente que fez a solicitação. Deve haver duas solicitações de IP do computador do SQL Server no qual a ferramenta foi executada: primeiro para o TGT do Servidor de Autenticação, como **AS\_REQ**, seguido por um **TGS\_REQ** para o ST do Servidor de Concessão de Tíquetes.
 

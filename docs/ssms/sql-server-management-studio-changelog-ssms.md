@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio – Changelog (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/19/2018
+ms.date: 03/02/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 00fc30593980e92b5f510550a4181c4f3a5b6f91
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 8d953127249bb6f82626dfff647b15dc40aba859
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802920"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334833"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,69 +25,89 @@ Este artigo fornece detalhes sobre atualizações, aprimoramentos e correções 
 
 
 
-## <a name="ssms-180-preview-6download-sql-server-management-studio-ssmsmd"></a>[SSMS 18.0 (versão prévia 6)](download-sql-server-management-studio-ssms.md)
+## <a name="ssms-180-preview-7download-sql-server-management-studio-ssmsmd"></a>[SSMS 18.0 (Versão Prévia 7)](download-sql-server-management-studio-ssms.md)
 
-Número de build: 15.0.18075.0<br>
-Data de lançamento: 18 de dezembro de 2018
+Número de build: 15.0.18092.0<br>
+Data de lançamento: 1º de março de 2019
 
-A Versão Prévia 6 é nossa mais recente versão prévia pública do SSMS 18.0. Para a versão de GA (disponibilidade geral) mais recente do SSMS, [baixe e instale o SSMS 17.9.1](#ssms-1791-latest-ga-release).
+A Versão Prévia 7 é nossa mais recente versão prévia pública do SSMS 18.0. Para a versão de GA (disponibilidade geral) mais recente do SSMS, [baixe e instale o SSMS 17.9.1](#ssms-1791-latest-ga-release).
 
-### <a name="whats-new-in-preview-6"></a>O que há de novo na versão prévia 6
+### <a name="whats-new-in-preview-7"></a>O que há de novo na Versão Prévia 7
 
-Esta seção lista as novidades na versão prévia do SSMS 18.0 6. Para um log de alterações completo desde o SSMS 17.9.1, confira [SSMS 18.0 versão prévia – log de alterações cumulativo até a versão prévia 6](#ssms-180-preview---cumulative-changelog-through-preview-6).
+Esta seção lista as novidades na Versão Prévia 7 do SSMS 18.0. Para um log de alterações completo desde o SSMS 17.9.1, confira [SSMS 18.0 Versão Prévia – log de alterações cumulativo até a Versão Prévia 7](#ssms-180-preview---cumulative-changelog-through-preview-7).
 
 - **SSMS**
-  - Adicionado "Migrar para o Azure" no menu Ferramentas – integramos o [Assistente de Migração de Banco de Dados](https://aka.ms/get-dma) e o [Serviço de Migração de Banco de Dados do Azure](https://aka.ms/get-dms) para fornecer acesso rápido e fácil para ajudar a acelerar suas migrações para o Azure.
-  - A versão anterior do SSMS 18.0 (< Versão Prévia 6) tinha o atalho de teclas "Bancos de Dados Disponíveis" associado a **CTRL+ALT+J**. Na Versão Prévia 6 e posteriores, a associação de teclas foi restaurada para **CTRL+U**, como ocorria no SSMS 17.x.
-  - Adicionada lógica para solicitar ao usuário a confirmação das transações abertas quando "Alterar a conexão" for usado.
+  - Adicionada a funcionalidade para migrar as configurações de um usuário do SSMS de uma versão anterior do SSMS (17.x ou mais antiga que a 18.0 Versão Prévia) quando o SSMS é iniciado pela primeira vez.
+  - Adicionado suporte à ordenação `UTF8_BIN2`.
+  - Adicionado suporte para [restrições de borda](../relational-databases/tables/graph-edge-constraints.md) em SMO e SSMS.
+  - Adicionado **Testemunha em nuvem** como um novo tipo de quorum e como um novo tipo de recurso de SMO e SSMS.
+  - Adicionada lógica para notificar o usuário que uma importação de arquivo simples pode ter resultado em uma renomeação das colunas.
+  - Adicionado suporte do plano de execução para LocalCube RelOp para `DW ROLLUP` e `CUBE`.
+  - Adicionado suporte para importar/exportar aplicativo da camada de dados com tabelas de grafo.
+  - Alterado o conjunto de regras de avaliação de vulnerabilidade que são executadas em Instâncias Gerenciadas do Banco de Dados SQL do Azure, de modo que os resultados de varredura de avaliação de vulnerabilidade podem ser consistentes com o Banco de Dados SQL do Azure.
+  - A [Avaliação de Vulnerabilidades SQL](../relational-databases/security/sql-vulnerability-assessment.md) agora dá suporte ao SQL DW do Azure.
+  - Adicionado o recurso de **Classificação de dados** ao SMO. O objeto Column expõe novas propriedades: `SensitivityLabelName`, `SensitivityLabelId`, `SensitivityInformationTypeName`, `SensitivityInformationTypeId`, e `IsClassified` (somente leitura).
+    Para obter mais informações, consulte https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql.
+  - Adicionado o item de menu **Relatório de Classificação** ao menu **Classificação de Dados**.
+  - Adicionado **Logons do AAD** como um novo tipo de logon do SMO e SSMS quando conectado a uma Instância Gerenciada do SQL do Azure.
+  - No Azure Data Studio, habilitada a execução de uma consulta ou criação de um novo notebook ao clicar com o botão direito do mouse em um banco de dados no Pesquisador de Objetos.
+  - No Visualizador de XEvent, habilitada a janela de plano de execução para mais XEvents.
+  - Mascaramento de dados:
+    - Os arquivos de configuração JSON agora são compatíveis
+    - O formato do arquivo de configuração XML foi alterado para ser mais flexível em sua progressão.  Arquivos de configuração existentes precisarão ser recriados.
+    - Bancos de dados que contêm tabelas com otimização de memória e temporais agora podem ser mascarados.  Algumas restrições ainda se aplicam às tabelas com otimização de memória e temporais propriamente ditas.
+    - A operação de cópia do banco de dados para bancos de dados locais agora usa a opção `COPY_ONLY` para a etapa `BACKUP DATABASE`.
+    - O banco de dados mascarado agora está definido para o modelo de recuperação `SIMPLE` enquanto a operação de mascaramento está em andamento para reduzir o uso de log, depois ele retorna ao seu valor original após a conclusão.
+    - O banco de dados mascarado agora é denominado `<output database name>-MaskInProgress` enquanto a operação está em andamento e é renomeado para `<output database name>` depois que a operação de mascaramento tem êxito.
+    - Alterações exibem a ordem das colunas na configuração da interface do usuário para que a ordem seja ordinal em vez de em ordem alfabética.
+    - Removida a opção de seleção em massa de colunas na interface do usuário de configuração para evitar comportamento inesperado.
+    - Aprimorada a lógica de repetição interna para falhas de conexão e de comando.
 
 - **SSIS**
-  - Quando você usa o SQL Agent do MI pelo SSMS, pode configurar o gerenciador de conexão e o parâmetro na etapa de trabalho de agente do SSIS.
-
+    - Ao se conectar ao BD SQL do Azure ou à Instância Gerenciada do BD SQL do Azure, você pode se conectar a ele com `<default>` como banco de dados inicial.
+    - Adicionado um novo item de entrada **Experimentar o SSIS no Azure Data Factory** sob o nó **Catálogos do Integration Services**, que pode ser usado para iniciar o **Assistente de criação do Integration Runtime** e criar o **Azure-SSIS Integration Runtime** rapidamente.
+    - Adicionado um botão **Criar SSIS IR** em **Assistente de Criação de Catálogo**, que pode ser usado para iniciar o **Assistente de criação do Integration Runtime** e criar o **Azure-SSIS Integration Runtime** rapidamente.
+    - `ISDeploymentWizard` agora dá suporte à autenticação do SQL Server, à autenticação integrada do Azure Active Directory e à autenticação de senha do Azure Active Directory no modo de linha de comando.
 
 ### <a name="bug-fixes"></a>Correções de bugs
 
-- **Editor do SSMS**
-  - Nova função TRANSLATE agora reconhecida pelo IntelliSense. Para obter detalhes, consulte https://feedback.azure.com/forums/908035-sql-server/suggestions/32898430.
-  - IntelliSense aperfeiçoado na função interna FORMAT. Para obter detalhes, consulte https://feedback.azure.com/forums/908035-sql-server/suggestions/32898676.
-  - LAG e LEAD agora são reconhecidos como funções internas. Para obter detalhes, consulte https://feedback.azure.com/forums/908035-sql-server/suggestions/32898757.
-  - Corrigido um problema em que o IntelliSense gerava um aviso ao usar "ALTER TABLE...ADD CONSTRAINT...WITH(ONLINE=ON)"
+- **SMO**
+    - Corrigida a regressão de desempenho na transferência de tabelas externas.
+    - Corrigido um problema na segurança de thread de `ServerConnection` que estava fazendo com que o SMO vazasse instâncias de `SqlConnection` ao direcionar para o BD SQL do Azure.
+    - Corrigido um problema que causava um `StringBuilder.FormatError` ao tentar restaurar um banco de dados que tinha chaves `{}` em seu nome.
+
+- **SSMS geral**
+    - Corrigido um problema que fazia com que o SSMS travasse/falhasse durante a edição de T-SQL.
+    - Corrigido um problema em que `ApplicationIntent` não era passado em conexões em `Registered Servers`.
+    - Corrigido um problema em que o formulário da **Nova interface do usuário do Assistente de Sessão XEvent** não era renderizado corretamente em monitores com alto DPI.
+    - Corrigido um problema ao tentar importar um arquivo `.bacpac`.
+    - Corrigido um problema em que tentar exibir as propriedades de um banco de dados com `FILEGROWTH > 2048GB` gerava um erro de estouro aritmético.
+    - Corrigido um problema impedindo que o SSMS abrisse um arquivo .sql ao clicar duas vezes nele.
 
 - **Script de Objeto**
-  - Corrigido um problema em que tentar usar script de um índice espacial com GEOMETRY_AUTO_GRID/GEOGRAPHY_AUTO_GRID em um Banco de Dados SQL do Azure gerava um erro.
+    - Corrigido um problema que fazia com que o script de banco de dados de um Banco de Dados SQL do Azure fosse sempre direcionado a uma instância do SQL Server local, mesmo se as configurações de script do **Pesquisador de Objetos** fossem definidas para corresponder à origem.
+    - Corrigido um problema ao tentar criar script em uma tabela em um banco de dados do SQL Data Warehouse do Azure envolvendo índices clusterizados e não clusterizados que estavam gerando instruções T-SQL incorretas.
+    - Corrigido um problema ao tentar criar scripts em uma tabela em um banco de dados do SQL Data Warehouse do Azure tanto com índices columnstore quanto com índices clusterizados que estavam gerando instruções T-SQL incorretas (instruções duplicadas).
+    - Corrigida a criação de scripts de tabela particionada sem valores de intervalo (bancos de dados de data warehouse do SQL Azure).
+    - Corrigido um problema que impedia a criação de script de uma auditoria ou especificação de auditoria `SERVER_PERMISSION_CHANGE_GROUP`.
+    - Corrigido um problema que impedia a criação de scripts para estatísticas do SQL Data Warehouse do Azure. Veja os [Fóruns de comentários do Microsoft Azure](https://feedback.azure.com/forums/908035-sql-server/suggestions/32897296).
 
-- **SMO**
-  - Corrigido um problema em que um aplicativo escrito usando SMO encontrava um erro ao tentar enumerar bancos de dados do mesmo servidor em vários threads, mesmo usando instâncias separadas do SqlConnection em cada thread.
+- **Instância Gerenciada do Banco de Dados SQL do Azure**
+    - Corrigido um problema que fazia com que o clique com o botão direito do mouse em um banco de dados e a seleção de **Importar aplicativo da camada de dados** falhasse.
+    - Corrigido um problema que fazia com que o clique com o botão direito do mouse em um `TempDB` mostrasse erros.
+    - Corrigido um problema em que, ao criar script com a instrução `ALTER DB ADD FILE` no SMO, o script T-SQL gerado ficava vazio.
 
-- **Classificação de Dados**
-  - Corrigido um problema ao salvar as classificações no painel de classificação de dados com outros painéis de classificação de dados abertos em outros bancos de dados.
-
-- **Banco de Dados SQL do Azure**
-  - Habilitada a opção de submenu de propriedades Estatísticas no menu Estatísticas no Azure, já que tem suporte total já algum tempo agora.
-
-- **Repositório de Dados de Consultas**
-  - Corrigido um problema em que uma exceção "DocumentFrame (SQLEditors)" era gerada.
-  - Corrigido um problema ao tentar definir um intervalo de tempo personalizado nos relatórios de Repositório de Consultas internos em que o usuário não conseguia selecionar AM ou PM no intervalo de início/término.
-
-- **Assistente para Copiar Banco de Dados**
-  - Assistente para Gerar script/Transferência/Copiar Banco de Dados tenta criar uma tabela com uma memória na tabela, não forçar ansi_padding em.
-  - Assistente de Transferir tarefa do Banco de dados/Copiar Banco de Dados quebrado no SQL Server 2017 e SQL Server 2019.
-  - Criação da tabela de script do Assistente para Gerar scripts/Transferir/Copiar Banco de Dados antes da criação da fonte de dados externa associada.
-
-- **Profiler**
-  - Adicionado o evento de "Consulta de Regravação de Tabela Agregada" aos eventos do Profiler.
-
-- **Plano de Execução**
-  - Novas propriedades de operador de concessão de memória são exibidas incorretamente quando há mais de um thread.
-
+- **Assistente de Arquivo Simples**
+    - Corrigido um problema em que o assistente não era capaz de importar arquivos CSV de coluna única.
+    - Corrigido um problema em que o assistente de importação não era capaz de processar valores decimais negativos.
+    
 ### <a name="known-issues"></a>Problemas conhecidos
 
-- Clicar duas vezes em um arquivo .sql inicia o SSMS, mas não abre o script real.
-  - Solução alternativa: arraste e solte o arquivo .sql para o editor do SSMS.
+- N/A
 
-## <a name="ssms-180-preview---cumulative-changelog-through-preview-6"></a>Versão Prévia do SSMS 18.0 – log de alterações cumulativo até a versão prévia 6
+## <a name="ssms-180-preview---cumulative-changelog-through-preview-7"></a>Versão Prévia do SSMS 18.0 – log de alterações cumulativo até a versão prévia 7
 
-Se não há um rótulo de *versão prévia 5* ou *versão prévia 6*, é a indicação de que a alteração apareceu em nossa primeira versão prévia pública do SSMS 18.0, ou seja, SSMS 18.0 *versão prévia 4*.
+Se não há um rótulo de *versão prévia 5*, *versão prévia 6* ou *versão prévia 7*, é a indicação de que a alteração apareceu em nossa primeira versão prévia pública do SSMS 18.0, ou seja, SSMS 18.0 *versão prévia 4*.
 
 ### <a name="whats-new"></a>Novidades
 
@@ -140,6 +160,7 @@ Se não há um rótulo de *versão prévia 5* ou *versão prévia 6*, é a indic
   - [Novo na Versão Prévia 6] Adicionado "Migrar para o Azure" no menu Ferramentas – integramos o [Assistente de Migração de Banco de Dados](https://aka.ms/get-dma) e o [Serviço de Migração de Banco de Dados do Azure](https://aka.ms/get-dms) para fornecer acesso rápido e fácil para ajudar a acelerar suas migrações para o Azure.
   - [Novo na Versão Prévia 6] A versão anterior do SSMS 18.0 (< Versão Prévia 6) tinha o atalho de teclas "Bancos de Dados Disponíveis" associado a **CTRL+ALT+J**. Na Versão Prévia 6 e posteriores, a associação de teclas foi restaurada para **CTRL+U**, como ocorria no SSMS 17.x.
   - [Novo na Versão Prévia 6] Adicionada lógica para solicitar ao usuário a confirmação das transações abertas quando "Alterar a conexão" for usado.
+  - [Novo na Versão Prévia 7] Adicionado suporte para ordenação de `UTF8_BIN2`.
 
 - **SMO**
   - Estender o suporte do SMO para a criação de índice retomável
@@ -148,16 +169,21 @@ Se não há um rótulo de *versão prévia 5* ou *versão prévia 6*, é a indic
   - [Novo na Versão Prévia 5] Exposta a nova propriedade ProductUpdateLevel no objeto de servidor, que mapeia para o nível de manutenção para a versão do SQL em uso (por exemplo, CU12, RTM, etc.)
   - [Novo na Versão Prévia 5] Exposta a nova propriedade LastGoodCheckDbTime no objeto de banco de dados, que mapeia para a propriedade de banco de dados "lastgoodcheckdbtime". Se essa propriedade não estiver disponível, um valor padrão de 1/1/1900 12:00:00 AM será retornado.
   - [Novo na Versão Prévia 5] Movida a localização para o arquivo RegSrvr.xml (arquivo de configuração do Servidor Registrado) para "%AppData%\Microsoft\SQL Server Management Studio" (sem controle de versão, assim, pode ser compartilhado entre as versões do SSMS)
+  - [Novo na Versão Prévia 7] Adicionado **Testemunha em nuvem** como um novo tipo de quorum e como um novo tipo de recurso de SMO e SSMS.
+  - [Novo na Versão Prévia 7] Adicionado suporte para [restrições de borda](../relational-databases/tables/graph-edge-constraints.md) em SMO e SSMS.
+
 
 - **Integração do Azure Data Studio**
   - Item de menu adicionado para iniciar/baixar o Azure Data Studio
   - [Novo na Versão Prévia 5] Adicionado o item de menu "Iniciar Azure Data Studio" ao Pesquisador de Objetos
+  - [Novo na Versão Prévia 7] No Azure Data Studio, habilitada a execução de uma consulta ou criação de um novo notebook ao clicar com o botão direito do mouse em um banco de dados no Pesquisador de Objetos.
 
 - **Plano de Execução**
   - Adicionado tempo real decorrido, linhas reais versus estimativa no nó do operador ShowPlan se elas estiverem disponíveis. Com isso, o plano real parecerá consistentes com o plano de Estatísticas de Consulta ao Vivo.
   - Dica de ferramenta modificada e comentário adicionado ao clicar no botão Editar Consulta para um ShowPlan, para indicar ao usuário que o ShowPlan poderá ser truncado pelo mecanismo do SQL se a consulta tiver mais de 4.000 caracteres.
   - Adicionada lógica para exibir o "operador Materializer (seleção externa)"
   - Adicione o atributo BatchModeOnRowStoreUsed de plano de execução para identificar facilmente as consultas que estão usando o recurso "verificação de modo de lote em rowstores". Sempre que uma consulta executa a verificação de modo de lote em rowstores, um novo atributo (BatchModeOnRowStoreUsed="true") é adicionado ao elemento StmtSimple.
+  - [Novo na Versão Prévia 7] Adicionado suporte do plano de execução para LocalCube RelOp para `DW ROLLUP` e `CUBE`.
 
 - **Atualização de nível de compatibilidade do banco de dados**
   - [Novo na Versão Prévia 5] Adicionada uma nova opção em <Database name> -> Tarefas -> Atualizar Banco de Dados. Isso iniciará o novo QTA (Assistente de Ajuste de Consulta) para orientar o usuário no processo de:
@@ -166,15 +192,24 @@ Se não há um rótulo de *versão prévia 5* ou *versão prévia 6*, é a indic
     - Coleta de uma segunda passagem de dados de desempenho sobre a mesma carga de trabalho.
     - Detectar regressões de carga de trabalho e fornecer recomendações testadas para melhorar o desempenho da carga de trabalho.
 
-  Isso está perto do processo de atualização de banco de dados documentado em https://docs.microsoft.com/sql/relational-databases/performance/query-store-usage-scenarios#CEUpgrade, exceto pela última etapa, em que o QTA não se baseia em um estado anterior sabidamente válido para gerar recomendações.
+    Isso é semelhante ao processo de atualização de banco de dados documentado em [Manter a estabilidade do desempenho durante a atualização para um SQL Server mais recente](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade), exceto pela última etapa, na qual o QTA não se baseia em um estado válido anteriormente conhecido para gerar recomendações.
 
 - **Repositório de Consultas**
   - [Novo na Versão Prévia 5] A usabilidade de alguns relatórios (consumos gerais de recursos) foi aprimorada, adicionando um separador de milhar a números a serem exibidos no eixo y dos gráficos.
   - [Novo na Versão Prévia 5] Adicionado um novo relatório de Estatísticas de Espera de Consulta.
 
 - **Mascaramento de Dados**
-  - [Novo na Versão Prévia 5, Add2018114] Adicionado Mascaramento de Dados Estáticos. A Máscara de Dados Estáticos é uma ferramenta de proteção de dados que permite aos usuários criar uma cópia do seu Banco de Dados SQL e mascarar dados confidenciais na cópia. O recurso vai se mostrar útil para aqueles que compartilham seu banco de dados de produção com usuários de não produção, tais como a equipe de desenvolvimento/teste ou a equipe de análise. Para obter mais informações, confira [Máscara de Dados Estáticos para Banco de Dados SQL do Azure e SQL Server](https://azure.microsoft.com/blog/static-data-masking-preview/).
-
+  - [Novo na Versão Prévia 5] Adicionado Mascaramento de Dados Estáticos. A Máscara de Dados Estáticos é uma ferramenta de proteção de dados que permite aos usuários criar uma cópia do seu Banco de Dados SQL e mascarar dados confidenciais na cópia. O recurso vai se mostrar útil para aqueles que compartilham seu banco de dados de produção com usuários de não produção, tais como a equipe de desenvolvimento/teste ou a equipe de análise. Para obter mais informações, confira [Máscara de Dados Estáticos para Banco de Dados SQL do Azure e SQL Server](https://azure.microsoft.com/blog/static-data-masking-preview/).
+  - [Novo na Versão Prévia 7] Os arquivos de configuração JSON agora são compatíveis
+  - [Novo na Versão Prévia 7] O formato do arquivo de configuração XML foi alterado para ser mais flexível em sua progressão.  Arquivos de configuração existentes precisarão ser recriados.
+  - [Novo na Versão Prévia 7] Bancos de dados que contêm tabelas com otimização de memória e temporais agora podem ser mascarados.  Algumas restrições ainda se aplicam às tabelas com otimização de memória e temporais propriamente ditas.
+  - [Novo na Versão Prévia 7] A operação de cópia do banco de dados para bancos de dados locais agora usa a opção `COPY_ONLY` para a etapa `BACKUP DATABASE`.
+  - [Novo na Versão Prévia 7] O banco de dados mascarado agora está definido para o modelo de recuperação `SIMPLE` enquanto a operação de mascaramento está em andamento para reduzir o uso de log, depois ele retorna ao seu valor original após a conclusão.
+  - [Novo na Versão Prévia 7] O banco de dados mascarado agora é denominado `<output database name>-MaskInProgress` enquanto a operação está em andamento e é renomeado para `<output database name>` depois que a operação de mascaramento tem êxito.
+  - [Novo na Versão Prévia 7] Alterações exibem a ordem das colunas na configuração da interface do usuário para que a ordem seja ordinal em vez de em ordem alfabética.
+  - [Novo na Versão Prévia 7] Removida a opção de seleção em massa de colunas na interface do usuário de configuração para evitar comportamento inesperado.
+  - [Novo na Versão Prévia 7] Aprimorada a lógica de repetição interna para falhas de conexão e de comando.
+ 
 - **Always On**
   - RTO de nova operação de hash (tempo de recuperação estimado) e RPO (perda de dados estimada) no painel Always On do SSMS. A documentação está sendo atualizada em https://docs.microsoft.com/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups
 
@@ -184,12 +219,20 @@ Se não há um rótulo de *versão prévia 5* ou *versão prévia 6*, é a indic
 - **SSIS**
   - [Novo na Versão Prévia 5] Suporte adicionado para permitir aos clientes agendar pacotes do SSIS nos Azure-SSIS IRs que estão na nuvem do Azure Governamental
   - [Novo na Versão Prévia 6] Quando você usa o SQL Agent do MI pelo SSMS, pode configurar o gerenciador de conexão e o parâmetro na etapa de trabalho de agente do SSIS.
+  - [Novo na Versão Prévia 7] Ao se conectar ao BD SQL do Azure ou à Instância Gerenciada do BD SQL do Azure, você pode se conectar a ele com "\<default\>" como banco de dados inicial.
+  - [Novo na Versão Prévia 7] Adicionado um novo item de entrada "Experimentar o SSIS no Azure Data Factory" sob o nó "Catálogos do Integration Services", que pode ser usado para iniciar o Assistente de criação do "Integration Runtime" e criar o "Azure-SSIS Integration Runtime" rapidamente.
+  - [Novo na Versão Prévia 7] Adicionado um botão "Criar SSIS IR" no "Assistente de Criação de Catálogo", que pode ser usado para iniciar o "Assistente de Criação do Integration Runtime" e criar o "Azure-SSIS Integration Runtime" rapidamente.
+  - [Novo na Versão Prévia 7] O ISDeploymentWizard agora dá suporte à autenticação do SQL, à autenticação integrada do Azure Active Directory e à autenticação de senha do Azure Active Directory no modo de linha de comando.
 
 - **Classificação de Dados**
   - Menu de tarefas de classificação de dados reorganizado: adicionado um submenu ao menu de tarefas do banco de dados e uma opção para abrir o relatório usando o menu sem primeiro abrir a janela de dados de classificar.
+  - [Novo na versão prévia 7] Adicionado o novo recurso 'Classificação de dados' para o SMO. O objeto Column expõe novas propriedades: SensitivityLabelName, SensitivityLabelId, SensitivityInformationTypeName, SensitivityInformationTypeId e IsClassified (somente leitura). Para obter mais informações, consulte: https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql?view=azuresqldb-current 
+  - [Novo na Versão Prévia 7] Adicionado o item de menu "Relatório de Classificação" ao menu "Classificação de Dados".
 
 - **Avaliação de Vulnerabilidade**
-  - [Novo na Versão Prévia 5] Habilitado o menu de tarefas de Avaliação de Vulnerabilidade no SQL Azure DW.
+  - [Novo na Versão Prévia 5] Habilitado o menu de tarefas de Avaliação de Vulnerabilidade no SQL DW do Azure.
+  - [Novo na Versão Prévia 7] Alterado o conjunto de regras de avaliação de vulnerabilidade que são executadas em servidores de Instância Gerenciada do SQL do Azure, de modo que os resultados de varredura de "Avaliação de Vulnerabilidade" serão consistentes com aqueles no BD SQL do Azure. 
+  - [Novo na Versão Prévia 7] A "avaliação de vulnerabilidade" agora dá suporte ao SQL DW do Azure.
 
 - **Always Encrypted**
   - A caixa de seleção Habilitar Always Encrypted na nova guia Always Encrypted na caixa de diálogo Conectar-se ao Servidor agora oferece uma maneira fácil de habilitar/desabilitar o Always Encrypted para uma conexão de banco de dados. 
@@ -199,6 +242,20 @@ Se não há um rótulo de *versão prévia 5* ou *versão prévia 6*, é a indic
     - Um campo de texto para especificar a URL de atestado de enclave na caixa de diálogo Conectar ao Servidor (a nova guia Always Encrypted).
     - A nova caixa de seleção na caixa de diálogo Nova Chave Mestra da Coluna para controlar se uma nova chave mestra da coluna permite cálculos de enclave.
     - Outras caixas de diálogo de gerenciamento de chaves do Always Encrypted agora expõem as informações sobre quais chaves mestras da coluna permitem cálculos de enclave.
+
+- **Assistente de Importação de Arquivo Simples**
+  - [Novo na Versão Prévia 7] Adicionada lógica para notificar o usuário que uma importação de arquivo simples pode ter resultado em uma renomeação das colunas.
+
+- **Assistente de Aplicativo da Camada de Dados**
+  - [Novo na Versão Prévia 7] Adicionado suporte para importar/exportar aplicativo da camada de dados com tabelas de grafo.
+
+- **Instância Gerenciada do SQL do Azure**
+  - [Novo na Versão Prévia 7] Adicionado **Logons do AAD** como um novo tipo de logon do SMO e SSMS quando conectado a uma Instância Gerenciada do Banco de Dados SQL do Azure.
+
+- **Visualizador do XEvent**
+  - [Novo na Versão Prévia 7] No Visualizador de XEvent, habilitada a janela de plano de execução para mais XEvents.
+
+
 
 
 ### <a name="bug-fixes"></a>Correções de bugs
@@ -212,6 +269,7 @@ Se não há um rótulo de *versão prévia 5* ou *versão prévia 6*, é a indic
   - [Novo na Versão Prévia 5] Corrigida uma pane no SSSM ao tentar usar os servidores do SQL Azure e o Servidor de Gerenciamento Central. Para obter detalhes, consulte https://feedback.azure.com/forums/908035/suggestions/33374884. 
   - [Novo na Versão Prévia 5] Corrigido um travamento no Pesquisador de Objetos ao otimizar a maneira como a propriedade IsFullTextEnabled é recuperada
   - [Novo na Versão Prévia 5] Corrigido um travamento no "Assistente para Copiar Banco de Dados" evitando a compilação de consultas desnecessárias para recuperar propriedades de Banco de Dados
+  - [Novo na versão prévia 7] Corrigido um problema que estava fazendo com que o SSMS travasse/falhasse durante a edição de T-SQL. 
 
 - **Caixa de diálogo de conexão**
   - Habilitada a remoção de nomes de usuário da lista anterior de nome de usuário quando é pressionada a tecla DEL (veja detalhes em https://feedback.azure.com/forums/908035/suggestions/32897632)
@@ -227,6 +285,14 @@ Se não há um rótulo de *versão prévia 5* ou *versão prévia 6*, é a indic
   - Corrigido um problema em que a página "**Ferramentas | Opções | Pesquisador de Objetos do SQL Server** | Comandos não era redimensionada corretamente.
   - O SSMS agora desabilitará por padrão o download automático de DTD no editor de XMLA – o editor de script XMLA (que usa o serviço de linguagem XML) agora por padrão impedirá o download automático de DTD para arquivos XMLA potencialmente mal-intencionados.  Isso é controlado desativando a configuração "Baixar DTDs e esquemas automaticamente" em Ferramentas->Opções->Ambiente->Editor de Texto->XML->Diversos.  
   - [Novo na Versão Prévia 5] Restaurado CTRL+D para ser o atalho como costumava ser na versão mais antiga do SSMS. Para obter detalhes, confira https://feedback.azure.com/forums/908035/suggestions/35544754
+
+- **SSMS geral**
+  - [Novo na versão prévia 7] Corrigido um problema que estava fazendo com que o SSMS travasse/falhasse durante a edição de T-SQL.
+  - [Novo na Versão Prévia 7] Corrigido um problema em que `ApplicationIntent` não era passado em conexões em `Registered Servers`.
+  - [Novo na Versão Prévia 7] Corrigido um problema em que o formulário da **Nova interface do usuário do Assistente de Sessão XEvent** não era renderizado corretamente em monitores com alto DPI.
+  - [Novo na Versão Prévia 7] Corrigido um problema ao tentar importar um arquivo `.bacpac`.
+  - [Novo na Versão Prévia 7] Corrigido um problema em que tentar exibir as propriedades de um banco de dados com `FILEGROWTH > 2048GB` gerava um erro de estouro aritmético.
+  - [Novo na Versão Prévia 7] Corrigido um problema impedindo que o SSMS abrisse um arquivo .sql ao clicar duas vezes nele.
 
 - **Editor do SSMS**
   - Corrigido um problema na "Tabela do sistema SQL" em que restaurar as cores padrão estava mudando a cor para verde-limão, em vez de verde padrão, dificultando a leitura em uma tela de fundo branco (veja detalhes em https://feedback.azure.com/forums/908035-sql-server/suggestions/32896906)
@@ -249,7 +315,7 @@ Se não há um rótulo de *versão prévia 5* ou *versão prévia 6*, é a indic
   - Corrigido um problema antigo em que a tecla DELETE não estava funcionando no OE durante a tentativa de renomear um objeto. Para obter detalhes, confira https://feedback.azure.com/forums/908035-sql-server/suggestions/33073510
   - Ao exibir as propriedades de arquivos de banco de dados existentes, o tamanho é exibido em uma coluna "Tamanho (MB)" em vez de "Tamanho inicial (MB)", que é o exibido durante a criação de um banco de dados. Para obter detalhes, confira https://feedback.azure.com/forums/908035-sql-server/suggestions/32629024
   - Item de menu de contexto "Design" desabilitado em "Tabelas de Grafo", pois não há suporte para esses tipos de tabelas na versão atual do SSMS.
-  - [Novo na Versão Prévia 5, em ciclo] Corrigido um problema em que a caixa de diálogo "'Nova agenda de trabalho" não renderizava corretamente em monitores com alto DPI. Para obter detalhes, confira https://feedback.azure.com/admin/v3/suggestions/35541262 
+  - [Novo na Versão Prévia 5] Corrigido um problema em que a caixa de diálogo "'Nova agenda de trabalho" não renderizava corretamente em monitores com alto DPI. Para obter detalhes, confira https://feedback.azure.com/admin/v3/suggestions/35541262 
   - [Novo na Versão Prévia 5] Corrigida/aprimorada a maneira como um problema em que um tamanho de banco de dados ("tamanho (MB)") é exibido nos detalhes do Pesquisador de Objetos: apenas 2 dígitos decimais e formatado usando o separador de milhares. Para obter detalhes, confira https://feedback.azure.com/forums/908035/suggestions/34379308
   - [Novo na Versão Prévia 5] Corrigido um problema que fazia com que a criação de um "Índice Espacial" falhasse com um erro como "Para realizar esta ação, defina a propriedade PartitionScheme".
   - [Novo na Versão Prévia 5] Melhorias de desempenho secundárias no Pesquisador de Objetos para evitar a emissão de consultas extras, quando possível.
@@ -266,6 +332,12 @@ Se não há um rótulo de *versão prévia 5* ou *versão prévia 6*, é a indic
   - Omita a sintaxe de grafo "como borda" e "como nó" ao executar script de uma tabela no SQL Server 2016 e anteriores.
   - Corrigido um problema em que o script de objetos de banco de dados falhava ao se conectar a um Banco de Dados SQL do Azure usando o AAD com MFA.
   - [Novo na Versão Prévia 6] Corrigido um problema em que tentar usar script de um índice espacial com GEOMETRY_AUTO_GRID/GEOGRAPHY_AUTO_GRID em um Banco de Dados SQL do Azure gerava um erro.
+  - [Novo na Versão Prévia 7] Corrigido um problema que fazia com que o script de banco de dados de um Banco de Dados SQL do Azure fosse sempre direcionado a uma instância do SQL Server local, mesmo se as configurações de script do **Pesquisador de Objetos** fossem definidas para corresponder à origem.
+- [Novo na Versão Prévia 7] Corrigido um problema ao tentar criar script em uma tabela em um banco de dados do SQL Data Warehouse do Azure envolvendo índices clusterizados e não clusterizados que estavam gerando instruções T-SQL incorretas.
+- [Novo na Versão Prévia 7] Corrigido um problema ao tentar criar scripts em uma tabela em um banco de dados do SQL Data Warehouse do Azure tanto com índices columnstore quanto com índices clusterizados que estavam gerando instruções T-SQL incorretas (instruções duplicadas).
+- [Novo na Versão Prévia 7] Corrigida a criação de scripts de tabela particionada sem valores de intervalo (bancos de dados de data warehouse do SQL Azure).
+- [Novo na Versão Prévia 7] Corrigido um problema que impedia a criação de script de uma auditoria ou especificação de auditoria `SERVER_PERMISSION_CHANGE_GROUP`.
+- [Novo na Versão Prévia 7] Corrigido um problema que impedia a criação de scripts para estatísticas do SQL Data Warehouse do Azure. Veja os [Fóruns de comentários do Microsoft Azure](https://feedback.azure.com/forums/908035-sql-server/suggestions/32897296).
 
 - **Criador de Tabelas**
   - [Novo na Versão Prévia Preview X, X<4] Corrigida uma pane em "Editar 200 linhas"
@@ -274,7 +346,10 @@ Se não há um rótulo de *versão prévia 5* ou *versão prévia 6*, é a indic
 - **SMO**
   - Corrigido um problema em que o SMO/ServerConnection não tratava conexões baseadas em SqlCredential corretamente. Para obter detalhes, confira https://feedback.azure.com/forums/908035-sql-server/suggestions/33698941
   - [Novo na Versão Prévia 6] Corrigido um problema em que um aplicativo escrito usando SMO encontrava um erro ao tentar enumerar bancos de dados do mesmo servidor em vários threads, mesmo usando instâncias separadas do SqlConnection em cada thread.
-
+  - [Novo na Versão Prévia 7] Corrigida a regressão de desempenho na transferência de tabelas externas.
+  - [Novo na Versão Prévia 7] Corrigido um problema na segurança de thread de `ServerConnection` que estava fazendo com que o SMO vazasse instâncias de `SqlConnection` ao direcionar para o BD SQL do Azure.
+  - [Novo na Versão Prévia 7] Corrigido um problema que causava um `StringBuilder.FormatError` ao tentar restaurar um banco de dados que tinha chaves `{}` em seu nome.
+ 
 - **AS**
   - Corrigido um problema em que as "Configurações Avançadas" na interface do usuário de AS XEvent estavam cortadas
   - [Novo na Versão Prévia 5] Corrigido um problema em que a análise de DAX gera uma exceção de o arquivo não encontrado
@@ -292,6 +367,8 @@ Se não há um rótulo de *versão prévia 5* ou *versão prévia 6*, é a indic
   - Corrigido um problema relacionado ao tratamento incorreto de tipos de ponto flutuante (em localidades que usam um delimitador diferente para pontos flutuantes)
   - Corrigido um problema relacionado à importação de bits quando os valores são 0 ou 1. Para obter detalhes, confira https://feedback.azure.com/forums/908035-sql-server/suggestions/32898535
   - Corrigido um problema em que as flutuações foram inseridas como valores nulos. 
+  - [Novo na Versão Prévia 7] Corrigido um problema em que o assistente de importação não era capaz de processar valores decimais negativos.
+  - [Novo na Versão Prévia 7] Corrigido um problema em que o assistente não era capaz de importar arquivos CSV de coluna única.
 
 - **HADR / AG**
   - [Novo na Versão Prévia 5] Corrigido um problema em que as funções no Assistente de Grupos de Disponibilidade de Failover eram sempre exibidas como "Resolvendo" 
@@ -324,6 +401,9 @@ Se não há um rótulo de *versão prévia 5* ou *versão prévia 6*, é a indic
   - [Novo na Versão Prévia 5] Aprimorado o script de objetos de Grupos de Arquivo do SMO.
   - [Novo na Versão Prévia 5] Interface do usuário aprimorada para credenciais e auditorias.
   - [Novo na Versão Prévia 5] Adicionado suporte para Lógica de Replicação.
+  - [Novo na Versão Prévia 7] Corrigido um problema que fazia com que o clique com o botão direito do mouse em um banco de dados e a seleção de **Importar aplicativo da camada de dados** falhasse.
+  - [Novo na Versão Prévia 7] Corrigido um problema que fazia com que o clique com o botão direito do mouse em um `TempDB` mostrasse erros.
+  - [Novo na Versão Prévia 7] Corrigido um problema em que, ao criar script com a instrução `ALTER DB ADD FILE` no SMO, o script T-SQL gerado ficava vazio.
 
 - **Banco de Dados SQL do Azure**
   - Corrigido um problema em que a lista de banco de dados não era preenchida corretamente para a janela de consulta de BD SQL do Azure quando conectado a um banco de dados de usuário no BD do SQL do Azure em vez de conectado ao mestre.
@@ -362,6 +442,9 @@ Se não há um rótulo de *versão prévia 5* ou *versão prévia 6*, é a indic
 - **Plano de Execução**
   - [Novo na Versão Prévia 6] Novas propriedades de operador de concessão de memória são exibidas incorretamente quando há mais de um thread.
 
+- **Mascaramento de Dados**
+  - [Novo na versão prévia 7] Corrigido um bug em que ocorria falha ao copiar automaticamente bancos de dados locais com vários arquivos de tabela com otimização de memória de fluxo de arquivos e de log.
+
 ### <a name="deprecated-features"></a>Recursos preteridos
 
 Os seguintes recursos não estão mais disponíveis no SSMS:
@@ -385,8 +468,7 @@ Os seguintes recursos não estão mais disponíveis no SSMS:
 
 ### <a name="known-issues"></a>Problemas conhecidos
 
-- Clicar duas vezes em um arquivo .sql inicia o SSMS, mas não abre o script real.
-  - Solução alternativa: arraste e solte o arquivo .sql para o editor do SSMS.
+- N/A
 
 
 ## <a name="ssms-1791-latest-ga-release"></a>SSMS 17.9.1 (versão mais recente de GA)
@@ -410,13 +492,6 @@ A versão 17.9.1 é uma pequena atualização da versão 17.9 com as seguintes c
 
 [Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40a)
 
-
-
-
-
-
-
-
 ## <a name="ssms-179"></a>SSMS 17.9
 
 ![baixar](../ssdt/media/download.png) [SSMS 17.9](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409)
@@ -433,7 +508,6 @@ Data de lançamento: 4 de setembro de 2018
 ### <a name="whats-new"></a>Novidades
 
 **SSMS geral**
-
 
 Plano de execução:
 

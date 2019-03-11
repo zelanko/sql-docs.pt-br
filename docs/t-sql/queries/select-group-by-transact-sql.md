@@ -1,7 +1,7 @@
 ---
 title: GROUP BY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/03/2017
+ms.date: 03/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -33,12 +33,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3aafd6afb6e619cb9d4112fe5c7fcd1c1775d84b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 536283eb15d0b2f40e896520ab5d73327320bf56
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509048"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227188"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT – GROUP BY – Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -91,6 +91,7 @@ GROUP BY
 GROUP BY {
       column-name [ WITH (DISTRIBUTED_AGG) ]  
     | column-expression
+    | ROLLUP ( <group_by_expression> [ ,...n ] ) 
 } [ ,...n ]
 
 ```  
@@ -266,7 +267,7 @@ GROUP BY GROUPING SETS ( Country, () );
 
 Aplica-se a: SQL Server e Banco de Dados SQL do Azure
 
-Observação: esta sintaxe é fornecida apenas para fins de compatibilidade com versões anteriores. Ela será removida em uma versão futura. Evite usar essa sintaxe em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que a usam no momento.
+OBSERVAÇÃO: Esta sintaxe é fornecida apenas para fins de compatibilidade com versões anteriores. Ela será removida em uma versão futura. Evite usar essa sintaxe em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que a usam no momento.
 
 Especifica a inclusão de todos os grupos nos resultados, independentemente se eles atendem aos critérios de pesquisa na cláusula WHERE. Os grupos que não atendem aos critérios de pesquisa têm NULL para a agregação. 
 
@@ -279,7 +280,7 @@ Aplica-se a: SQL Data Warehouse do Azure e Parallel Data Warehouse
 
 A dica de consulta DISTRIBUTED_AGG força o sistema de MPP (processamento paralelo massivo) a redistribuir uma tabela em uma coluna específica antes de executar uma agregação. Somente uma coluna na cláusula GROUP BY pode ter uma dica de consulta DISTRIBUTED_AGG. Depois que a consulta for concluída, a tabela redistribuída será descartada. A tabela original não é alterada.  
 
-Observação: a dica de consulta DISTRIBUTED_AGG é fornecida para fins de compatibilidade com versões anteriores do Parallel Data Warehouse e não melhora o desempenho na maioria das consultas. Por padrão, o MPP já redistribui os dados conforme o necessário para melhorar o desempenho das agregações. 
+OBSERVAÇÃO: A dica de consulta DISTRIBUTED_AGG é fornecida para fins de compatibilidade com versões anteriores do Parallel Data Warehouse e não melhora o desempenho na maioria das consultas. Por padrão, o MPP já redistribui os dados conforme o necessário para melhorar o desempenho das agregações. 
   
 ## <a name="general-remarks"></a>Comentários gerais
 
@@ -300,7 +301,7 @@ Cláusula ORDER BY:
 Valores NULL:
 - Se uma coluna de agrupamento contiver valores NULL, todos os valores NULL serão considerados iguais e serão coletados em um único grupo.   
   
-## <a name="limitations-and-restrictions"></a>Limitações e restrições
+## <a name="limitations-and-restrictions"></a>Limitações e Restrições
 
 Aplica-se a: SQL Server (começando com o 2008) e SQL Data Warehouse do Azure
 
@@ -344,7 +345,7 @@ A cláusula GROUP BY é compatível com todos os recursos de GROUP BY incluídos
 |Recurso|SQL Server Integration Services|Nível de compatibilidade 100 ou superior do SQL Server|Nível de compatibilidade 90 do SQL Server 2008 ou posterior.|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |Agregações de DISTINCT|Não há suporte para WITH CUBE ou WITH ROLLUP.|Há suporte para WITH CUBE, WITH ROLLUP, GROUPING SETS, CUBE ou ROLLUP.|Igual ao nível de compatibilidade 100.|  
-|Função definida pelo usuário com nome CUBE ou ROLLUP na cláusula GROUP BY|A função definida pelo usuário **dbo.cube(**_arg1_**,**_...argN_**)** ou **dbo.rollup(**_arg1_**,**..._argN_**)** na cláusula GROUP BY é permitida.<br /><br /> Por exemplo: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|A função definida pelo usuário **dbo.cube (**_arg1_**,**...argN **)** ou **dbo.rollup(** arg1 **,**_...argN_**)** na cláusula GROUP BY não é permitida.<br /><br /> Por exemplo: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> A seguinte mensagem de erro é retornada: "sintaxe incorreta próxima à palavra-chave 'cube'&#124;'rollup'".<br /><br /> Para evitar esse problema, substitua `dbo.cube` por `[dbo].[cube]` ou `dbo.rollup` por `[dbo].[rollup]`.<br /><br /> O exemplo a seguir é permitido: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|A função definida pelo usuário **dbo.cube (**_arg1_**,**_...argN_) ou **dbo.rollup(**_arg1_**,**_...argN_**)** na cláusula GROUP BY é permitida<br /><br /> Por exemplo: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
+|Função definida pelo usuário com nome CUBE ou ROLLUP na cláusula GROUP BY|A função definida pelo usuário **dbo.cube(**_arg1_**,**_...argN_**)** ou **dbo.rollup(**_arg1_**,**..._argN_**)** na cláusula GROUP BY é permitida.<br /><br /> Por exemplo: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|A função definida pelo usuário **dbo.cube (**_arg1_**,**...argN **)** ou **dbo.rollup(** arg1 **,**_...argN_**)** na cláusula GROUP BY não é permitida.<br /><br /> Por exemplo: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> A mensagem de erro a seguir será retornada: "Sintaxe incorreta próxima à palavra-chave 'cube'&#124;'rollup."<br /><br /> Para evitar esse problema, substitua `dbo.cube` por `[dbo].[cube]` ou `dbo.rollup` por `[dbo].[rollup]`.<br /><br /> O exemplo a seguir é permitido: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|A função definida pelo usuário **dbo.cube (**_arg1_**,**_...argN_) ou **dbo.rollup(**_arg1_**,**_...argN_**)** na cláusula GROUP BY é permitida<br /><br /> Por exemplo: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
 |GROUPING SETS|Sem suporte|Tem suporte|Tem suporte|  
 |CUBE|Sem suporte|Tem suporte|Sem suporte|  
 |ROLLUP|Sem suporte|Tem suporte|Sem suporte|  
@@ -368,7 +369,7 @@ GROUP BY SalesOrderID
 ORDER BY SalesOrderID;  
 ```  
   
-### <a name="b-use-a-group-by-clause-with-multiple-tables"></a>B. Usar uma cláusula GROUP BY com várias tabelas  
+### <a name="b-use-a-group-by-clause-with-multiple-tables"></a>b. Usar uma cláusula GROUP BY com várias tabelas  
  O exemplo a seguir recupera o número de funcionários de cada `City` da tabela `Address` unida à tabela `EmployeeAddress`. Este exemplo usa o AdventureWorks. 
   
 ```sql  
