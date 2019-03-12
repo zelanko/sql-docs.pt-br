@@ -11,12 +11,12 @@ ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2e598a2b383e0580a3be7eccc460c36ec863ffb0
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 42c28c1852c5d9c2e931973413a7671ed77b9e6a
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616677"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578286"
 ---
 # <a name="sql-data-developer"></a>SQL Data Developer
 Use plataforma de dados SQL da Microsoft para criar soluções centralizadas em dados em dispositivos móveis e desktops para servidores web, servidores corporativos e a nuvem.  
@@ -28,7 +28,7 @@ Use plataforma de dados SQL da Microsoft para criar soluções centralizadas em 
 * [LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md): LocalDB de uso durante o desenvolvimento para escrever e testar o código Transact-SQL sem a necessidade de gerenciar uma instância de servidor completo do SQL Server.
 
 ## <a name="sql-data-tools"></a>Ferramentas de dados SQL
-* [SQL Server Data Tools ](../ssdt/download-sql-server-data-tools-ssdt.md) : relatórios de uso SSDT para compilação de bancos de dados relacionais, bancos de dados SQL do Azure, pacotes do Integration Services, modelos de dados do Analysis Services e Reporting Services.
+* [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) : relatórios de uso SSDT para compilação de bancos de dados relacionais, bancos de dados SQL do Azure, pacotes do Integration Services, modelos de dados do Analysis Services e Reporting Services.
 * [Ferramentas de gerenciamento do SQL Server](../ssms/download-sql-server-management-studio-ssms.md): usar SSMS configurar, monitorar e administrar instâncias do SQL Server.
 
 ## <a name="sql-data-access"></a>Acesso a dados do SQL

@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
-ms.openlocfilehash: 19543e33782d2d175f5ddfbc065f6016cbed3fcc
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+ms.openlocfilehash: 1543846ec5353f5419b12bb5747b1ced53d2b4f0
+ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029575"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57556238"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Integração de servidor de relatório do Power BI (Configuration Manager)
 
@@ -20,7 +20,7 @@ ms.locfileid: "50029575"
 
 A página  **Integração do Power BI** no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager é usada para registrar o servidor de relatório no locatário gerenciado do Azure AD (Active Directory) desejado, a fim de permitir que os usuários do servidor de relatório fixem itens de relatório com suporte nos dashboards do [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] . Para obter uma lista dos itens com suporte que podem ser fixados, veja [Fixar itens do Reporting Services nos dashboards do Power BI](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).
 
-##  <a name="bkmk_requirements"></a> Requisitos para integração do Power BI
+## <a name="bkmk_requirements"></a> Requisitos para integração do Power BI
 
 Além de uma conexão de Internet ativa para que você possa navegar até o serviço do [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] , estes são os requisitos para concluir a integração do [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)].
 
@@ -44,7 +44,7 @@ Um administrador pode examinar os arquivos de log do  [!INCLUDE[ssRSnoversion](.
 
     notification!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Error occurred processing subscription fcdb8581-d763-4b3b-ba3e-8572360df4f9: PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared data set. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified.
 
-##  <a name="bkmk_steps2integrate"></a> Para integrar e registrar o Servidor de Relatório
+## <a name="bkmk_steps2integrate"></a> Para integrar e registrar o Servidor de Relatório
 
 Conclua as seguintes etapas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. Para obter mais informações, consulte [Gerenciador de Configurações do Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
 
@@ -61,7 +61,7 @@ Conclua as seguintes etapas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnover
 
 5. Selecione o botão **Copiar** na janela **Resultados** para copiar os detalhes do registro na área de transferência do Windows e salvá-los para referência futura.
 
-##  <a name="bkmk_unregister"></a> Cancelar o registro com o Power BI
+## <a name="bkmk_unregister"></a> Cancelar o registro com o Power BI
 
 **Cancelar o registro:** o cancelamento do registro do servidor de relatório do Azure Active Directory resultará no seguinte:
 
@@ -145,12 +145,16 @@ Na segunda vez que um usuário fixar um item, as etapas de 1 a 4 são ignoradas 
 
 ![ssRS-subscription-to-powerbi-flow](../../reporting-services/install-windows/media/ssrs-subscription-to-powerbi-flow.png)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/QhPQObqmMPc" frameborder="0" allowfullscreen></iframe>
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/QhPQObqmMPc" frameborder="0" allowfullscreen></iframe>
+
+## <a name="considerations-and-limitations"></a>Considerações e limitações
+
+* Não há suporte para locatários virais e governamental.
 
 ## <a name="next-steps"></a>Próximas etapas
 
 [Minhas Configurações para integração do Power BI](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
-[Fixar itens do Reporting Services nos dashboards do Power BI](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)   
-[Painéis no Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
+[Fixar itens do Reporting Services nos dashboards do Power BI](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)
+[painéis no Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 
 Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

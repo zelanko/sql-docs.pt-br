@@ -34,15 +34,15 @@ helpviewer_keywords:
 - progress reporting [DBCC statements]
 - informational statements [SQL Server]
 ms.assetid: c6da8c04-5b6b-459a-9f76-110c92ca8b29
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 30b407b4cbfd10f6a5844978bbabbb9bf26e2784
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e746569eb629eb41c96cc7738e9529949307532e
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731344"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685713"
 ---
 # <a name="dbcc-transact-sql"></a>DBCC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -101,12 +101,12 @@ A definição de uma unidade de andamento depende da fase atual de execução do
 |---------------------|-----------------|------------------------------------|  
 |DBCC TABLE CHECK|A consistência lógica e física dos objetos no banco de dados é verificada nessa fase.|Andamento relatado no nível da página do banco de dados.<br /><br /> O valor do relatório de andamento é atualizado a cada 1000 páginas do banco de dados verificadas.|  
 |DBCC TABLE REPAIR|As correções de banco de dados são executadas nessa fase, se REPAIR_FAST, REPAIR_REBUILD ou REPAIR_ALLOW_DATA_LOSS for especificado e houver erros de objeto que precisem ser corrigidos.|Andamento relatado no nível de correção individual.<br /><br /> O contador é atualizado para todas as correções concluídas.|  
-|DBCC ALLOC CHECK|As estruturas de alocação do banco de dados são verificadas durante essa fase.<br /><br /> Observação: o DBCC CHECKALLOC executa as mesmas verificações.|O andamento não é relatado|  
+|DBCC ALLOC CHECK|As estruturas de alocação do banco de dados são verificadas durante essa fase.<br /><br /> Observação: DBCC CHECKALLOC executa as mesmas verificações.|O andamento não é relatado|  
 |DBCC ALLOC REPAIR|As correções de banco de dados são realizadas nessa fase se REPAIR_FAST, REPAIR_REBUILD ou REPAIR_ALLOW_DATA_LOSS for especificado e houver erros de alocação que precisem ser corrigidos.|O andamento não é relatado.|  
 |DBCC SYS CHECK|As tabelas do sistema de banco de dados são verificadas nessa fase.|Andamento relatado no nível da página do banco de dados.<br /><br /> O valor do relatório de andamento é atualizado a cada 1.000 páginas do banco de dados verificado.|  
 |DBCC SYS REPAIR|As correções de banco de dados são realizadas nessa fase se REPAIR_FAST, REPAIR_REBUILD ou REPAIR_ALLOW_DATA_LOSS for especificado e houver erros de tabelas do sistema que precisem ser corrigidos.|Andamento relatado no nível de correção individual.<br /><br /> O contador é atualizado para todas as correções concluídas.|  
-|DBCC SSB CHECK|Os objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agente de Serviços são verificados nessa fase.<br /><br /> Observação: esta fase não será executada quando DBCC CHECKTABLE for executado.|O andamento não é relatado.|  
-|DBCC CHECKCATALOG|A consistência dos catálogos de banco de dados é verificada nessa fase.<br /><br /> Observação: esta fase não será executada quando DBCC CHECKTABLE for executado.|O andamento não é relatado.|  
+|DBCC SSB CHECK|Os objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agente de Serviços são verificados nessa fase.<br /><br /> Observação: Essa fase não é executada quando DBCC CHECKTABLE é executado.|O andamento não é relatado.|  
+|DBCC CHECKCATALOG|A consistência dos catálogos de banco de dados é verificada nessa fase.<br /><br /> Observação: Essa fase não é executada quando DBCC CHECKTABLE é executado.|O andamento não é relatado.|  
 |DBCC IVIEW CHECK|A consistência lógica de todas as exibições indexadas presentes no banco de dados é verificada nessa fase.|O andamento é relatado no nível da exibição de banco de dados individual que está sendo verificada.|  
   
 ## <a name="informational-statements"></a>Instruções informativas  
@@ -144,6 +144,6 @@ A definição de uma unidade de andamento depende da fase atual de execução do
 |[DBCC dllname (FREE)](../../t-sql/database-console-commands/dbcc-dllname-free-transact-sql.md)|[DBCC HELP](../../t-sql/database-console-commands/dbcc-help-transact-sql.md)|  
 |[DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)|[DBCC TRACEOFF](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)|  
 |[DBCC FREESESSIONCACHE](../../t-sql/database-console-commands/dbcc-freesessioncache-transact-sql.md)|[DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)|  
-|[DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)|[DBCC CLONEDATABASE](../../t-sql/database-console-commands/dbcc-clonedatabase-transact-sql.md) <br /><br /> **Aplica-se a:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 até [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|[DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)|[DBCC CLONEDATABASE](../../t-sql/database-console-commands/dbcc-clonedatabase-transact-sql.md) <br /><br /> **Aplica-se ao**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
   
   

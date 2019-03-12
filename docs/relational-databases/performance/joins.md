@@ -17,12 +17,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d9f218c3ff39e16ec656f9bbca24400920d99b76
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 3ffde66939be441877add9b5a3ee4c843b031bc3
+ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377008"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57556248"
 ---
 # <a name="joins-sql-server"></a>Joins (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -236,7 +236,7 @@ Os resultados não facilitam a distinção de um NULL nos dados de um NULL que r
 [Operadores de comparação &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md)    
 [Conversão de tipo de dados &#40;Mecanismo de Banco de Dados&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
 [Subconsultas](../../relational-databases/performance/subqueries.md)      
-[Junções adaptáveis](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins)    
+[Junções adaptáveis](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins)    
 
 
   

@@ -23,12 +23,12 @@ ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9bbc09590943948d27ebd989b38b6ea9f2c94559
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa99cc5549d463b48b8eff8989df312abf5d4f0f
+ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844944"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57736812"
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,10 +64,10 @@ RECONFIGURE [ WITH OVERRIDE ]
  O padrão das permissões de RECONFIGURE é concedida aos possuidores da permissão ALTER SETTINGS. As funções de servidor fixas **sysadmin** e **serveradmin** contêm esta permissão implicitamente.    
     
 ## <a name="examples"></a>Exemplos    
- O exemplo a seguir define o limite superior para a opção de configuração `recovery interval` como `75` minutos e usa `RECONFIGURE WITH OVERRIDE` para instalá-la. Por padrão, os intervalos de recuperação maiores que 60 minutos não são recomendados e nem permitidos. Entretanto, como a opção `WITH OVERRIDE` está especificada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não verifica se o valor especificado (`90`) é válido para a opção de configuração `recovery interval`.    
+ O exemplo a seguir define o limite superior para a opção de configuração `recovery interval` como `75` minutos e usa `RECONFIGURE WITH OVERRIDE` para instalá-la. Por padrão, os intervalos de recuperação maiores que 60 minutos não são recomendados e nem permitidos. Entretanto, como a opção `WITH OVERRIDE` está especificada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não verifica se o valor especificado (`75`) é válido para a opção de configuração `recovery interval`.    
     
 ```    
-EXEC sp_configure 'recovery interval', 75'    
+EXEC sp_configure 'recovery interval', 75    
 RECONFIGURE WITH OVERRIDE;    
 GO    
 ```    

@@ -20,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6b2ff8188f2733fd0467ac39266bc9f0510de621
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b8c69ac0361f29c81341831b25e3591716484902
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515477"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579699"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>Criar funções definidas pelo usuário (Mecanismo de Banco de Dados)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -200,7 +200,7 @@ O ingresso em uma MSTVF em uma cláusula `FROM` é possível, mas pode resultar 
 > [!IMPORTANT]
 > As MSTVFs têm uma estimativa de cardinalidade fixa de 100 começando com [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e de 1 para versões anteriores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    
 > Começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], otimizar um plano de execução que usa as MSTVFs pode aproveitar a execução intercalada, que resulta no uso de cardinalidade real em vez da heurística acima.     
-> Para obter mais informações, consulte [Interleaved execution for multi-statement table valued functions](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions) (Execução intercalada para funções com valor de tabela de várias instruções).
+> Para obter mais informações, consulte [Interleaved execution for multi-statement table valued functions](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs) (Execução intercalada para funções com valor de tabela de várias instruções).
 
 > [!NOTE]  
 > ANSI_WARNINGS não é cumprido quando você passa parâmetros em um procedimento armazenado, em uma função definida pelo usuário ou quando declara ou define variáveis em uma instrução de lote. Por exemplo, se a variável for definida como **char(3)** e, em seguida, configurada com um valor maior que três caracteres, os dados serão truncados até o tamanho definido e a instrução `INSERT` ou `UPDATE` terá êxito.

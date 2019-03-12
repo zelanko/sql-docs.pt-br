@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df69488ebf433257ba4b1af7c13ec1c299afa831
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 04681d455fe4589135cd0b112c310e2dd0a027b3
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256371"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579096"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>Usar um arquivo de formato para mapear colunas de uma tabela para campos de arquivo de dados (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -102,10 +102,10 @@ Compare as alterações:
 
 ```
 O arquivo de formato modificado agora reflete:
-* O primeiro campo de dados do `myRemap.bcp` é mapeado para a primeira coluna, ` myRemap.. PersonID`
+* O primeiro campo de dados do `myRemap.bcp` é mapeado para a primeira coluna, `myRemap.. PersonID`
 * O segundo campo de dados do `myRemap.bcp` é mapeado para a terceira coluna, `myRemap.. LastName`
 * O terceiro campo de dados do `myRemap.bcp` é mapeado para a segunda coluna, `myRemap.. FirstName`
-* O quarto campo de dados do `myRemap.bcp` é mapeado para a quarta coluna, ` myRemap.. Gender`
+* O quarto campo de dados do `myRemap.bcp` é mapeado para a quarta coluna, `myRemap.. Gender`
 
 ### Criando um arquivo de formato XML <a name="xml_format_file"></a>  
 Examine [Arquivos de formato XML (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md) para obter informações detalhadas.  O comando a seguir usará o [utilitário bcp](../../tools/bcp-utility.md) para criar um arquivo de formato XML, `myRemap.xml`, com base no esquema de `myRemap`.  Além disso, o qualificador `c` é usado para especificar dados de caractere, `t,` é usado para especificar uma vírgula como um terminador de campo e `T` é usado para especificar uma conexão confiável usando a segurança integrada.  O qualificador `x` deve ser usado para gerar um arquivo de formato baseado em XML.  No prompt de comando, digite o seguinte comando:

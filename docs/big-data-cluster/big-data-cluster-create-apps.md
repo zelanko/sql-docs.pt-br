@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 6d0f5fba93b74aa5751635c9a10f320c85036bbb
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 8d784b82c56ca99027491bf257c90dddf4eb9b6b
+ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017822"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57756631"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>Como implantar um aplicativo no cluster de big data do SQL Server 2019 (visualização)
 
 Este artigo descreve como implantar e gerenciar o script de R e Python como um aplicativo dentro de um cluster de big data do SQL Server 2019 (visualização).
- 
-## <a name="whats-new-and-improved"></a>O que é novo e aprimorado 
+
+## <a name="whats-new-and-improved"></a>O que é novo e aprimorado
 
 - Um único utilitário de linha de comando para gerenciar o cluster e aplicativo.
 - Simplifica a implantação de aplicativo, fornecendo um controle granular por meio de arquivos de especificações.
@@ -80,13 +80,12 @@ Se você estiver usando o AKS, você precisará executar o comando a seguir para
 kubectl get svc endpoint-service-proxy -n <name of your cluster>
 ```
 
-
 ## <a name="kubeadm-or-minikube"></a>Kubeadm ou Minikube
 
 Se você estiver usando Kubeadm ou Minikube para executar o comando a seguir para obter o endereço IP para fazer logon no cluster
 
 ```bash
-kubectl get node --selector='node-role.kubernetes.io/master' 
+kubectl get node --selector='node-role.kubernetes.io/master'
 ```
 
 ## <a name="create-an-app"></a>Criar um aplicativo
@@ -101,16 +100,17 @@ mssqlctl app create -n <app_name> -v <version_number> --spec <directory containi
 
 O comando a seguir mostra um exemplo de como pode ser este comando:
 
-Isso pressupõe que você tenha o arquivo chamado `spec.yaml` dentro de `addpy` pasta. O `addpy` pasta contém o `add.py` e `spec.yaml` o `spec.yaml` é um arquivo de especificação para o `add.py` aplicativo.
+Isso pressupõe que você tenha o arquivo chamado `spec.yaml` dentro de `addpy` pasta.
+O `addpy` pasta contém o `add.py` e `spec.yaml` o `spec.yaml` é um arquivo de especificação para o `add.py` aplicativo.
 
 
-`add.py` cria um aplicativo do python a seguir: 
+`add.py` cria um aplicativo do python a seguir:
 
 ```py
 #add.py
 def add(x,y):
         result = x+y
-        return result;
+        return result
 result=add(x,y)
 ```
 
@@ -119,9 +119,9 @@ O script a seguir está um exemplo do conteúdo para `spec.yaml`:
 ```yaml
 #spec.yaml
 name: add-app #name of your python script
-version: v1  #version of the app 
-runtime: Python #the languge this app uses (R or Python)
-src: ./add.py #full path to the loction of the app
+version: v1  #version of the app
+runtime: Python #the language this app uses (R or Python)
+src: ./add.py #full path to the location of the app
 entrypoint: add #the function that will be called upon execution
 replicas: 1  #number of replicas needed
 poolsize: 1  #the pool size that you need your app to scale
@@ -144,13 +144,13 @@ Você pode verificar se o aplicativo é implantado usando o comando lista:
 mssqlctl app list
 ```
 
-Se a implantação não está completa você deve ver a `state` Mostrar `WaitingforCreate` como o exemplo a seguir: 
+Se a implantação não está completa você deve ver a `state` Mostrar `WaitingforCreate` como o exemplo a seguir:
 
-```
+```json
 [
   {
     "name": "add-app",
-    `state`: "WaitingforCreate",
+    "state": "WaitingforCreate",
     "version": "v1"
   }
 ]
@@ -158,11 +158,11 @@ Se a implantação não está completa você deve ver a `state` Mostrar `Waiting
 
 Após a implantação for bem-sucedida, você deverá ver a `state` alterar para `Ready` status:
 
-```
+```json
 [
   {
     "name": "add-app",
-    `state`: `Ready`,
+    "state": "Ready",
     "version": "v1"
   }
 ]
@@ -192,11 +192,11 @@ mssqlctl app list --name add-app --version v1
 
 Você deve ver saídas semelhantes ao exemplo a seguir:
 
-```
+```json
 [
   {
     "name": "add-app",
-    `state`: `Ready`,
+    "state": "Ready",
     "version": "v1"
   }
 ]
@@ -218,7 +218,7 @@ mssqlctl app run --name add-app --version v1 --inputs x=1,y=2
 
 Se a execução foi bem-sucedida, você deverá ver sua saída como especificou quando criou o aplicativo. A seguir, é mostrado um exemplo.
 
-```
+```json
 {
   "changedFiles": [],
   "consoleOutput": "",
@@ -233,13 +233,13 @@ Se a execução foi bem-sucedida, você deverá ver sua saída como especificou 
 
 ## <a name="create-an-app-skeleton"></a>Criar um esqueleto do aplicativo
 
-O comando init fornece um scaffold com os artefatos relevantes que é necessários para implantar um aplicativo. O exemplo a seguir cria hello, você pode fazer isso executando o comando a seguir.
+O comando init fornece um andaime com os artefatos relevantes que é necessário para implantar um aplicativo. O exemplo a seguir cria hello, você pode fazer isso executando o comando a seguir.
 
-```
+```bash
 mssqlctl app init --name hello --version v1 --template python
 ```
 
-Isso criará uma pasta chamada hello.  Você pode execute cd no diretório e inspecione os arquivos gerados na pasta. Spec.YAML define o aplicativo, como nome, versão e código-fonte. Você pode editar a especificação para alterar o nome, versão, entrada e saídas.
+Isso criará uma pasta chamada hello.  Você pode `cd` no diretório e inspecione os arquivos gerados na pasta. Spec.YAML define o aplicativo, como nome, versão e código-fonte. Você pode editar a especificação para alterar o nome, versão, entrada e saídas.
 
 Aqui está um exemplo de saída do comando de inicialização que você verá na pasta
 
@@ -255,7 +255,7 @@ spec.yaml
 
 O comando descrição fornece informações detalhadas sobre o aplicativo, incluindo o ponto de extremidade em seu cluster. Isso normalmente é usado por um desenvolvedor de aplicativo para compilar um aplicativo usando o cliente do swagger e usando o serviço Web para interagir com o aplicativo de maneira RESTful.
 
-```
+```json
 {
   "input_param_defs": [
     {
@@ -278,10 +278,9 @@ O comando descrição fornece informações detalhadas sobre o aplicativo, inclu
       "type": "int"
     }
   ],
-  `state`: `Ready`,
+  "state": "Ready",
   "version": "v1"
 }
-
 ```
 
 ## <a name="delete-an-app"></a>Excluir um aplicativo

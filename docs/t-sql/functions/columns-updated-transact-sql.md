@@ -21,12 +21,12 @@ ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 02cc6ae014dc52df01e08c13b9610be5ffa50c6b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1a252e56d7e625632fdb2d8cb929056daa14815
+ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720314"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57736767"
 ---
 # <a name="columnsupdated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ COLUMNS_UPDATED ( )
   
 `COLUMNS_UPDATED` retorna um ou mais bytes ordenados da esquerda para a direita. O bit mais à direita de cada byte é o bit menos significativo. O mais à direita do byte mais à esquerda representa a primeira coluna na tabela; o próximo bit à esquerda representa a segunda coluna, e assim por diante. `COLUMNS_UPDATED` retornará vários bytes se a tabela na qual o gatilho foi criado contiver mais que oito colunas, ficando o byte menos significativo na extrema esquerda. `COLUMNS_UPDATED` retorna TRUE para todas as colunas em ações INSERT porque as colunas têm valores explícitos ou implícitos (NULL) inseridos.
   
-Para testar as atualizações ou inserções feitas em colunas específicas, a sintaxe deve ser seguida por um operador bit a bit e um bitmask inteiro das colunas testadas. Por exemplo, digamos que a tabela **t1** contenha as colunas **C1**, **C2**, **C3**, **C4** e **C5**. Para verificar se as colunas **C2**, **C3** e **C4** foram todas atualizadas com sucesso (tendo a tabela **t1** um gatilho UPDATE), siga a sintaxe com **& 14**. Para testar se apenas a coluna **C2** foi atualizada, especifique **& 2**. Veja o [Exemplo A](https://github.com/MicrosoftDocs/sql-docs/blob/live/docs/t-sql/functions/columns-updated-transact-sql.md#a-using-columns_updated-to-test-the-first-eight-columns-of-a-table) e o [Exemplo B](https://github.com/MicrosoftDocs/sql-docs/blob/live/docs/t-sql/functions/columns-updated-transact-sql.md#b-using-columns_updated-to-test-more-than-eight-columns) para obter exemplos reais.
+Para testar as atualizações ou inserções feitas em colunas específicas, a sintaxe deve ser seguida por um operador bit a bit e um bitmask inteiro das colunas testadas. Por exemplo, digamos que a tabela **t1** contenha as colunas **C1**, **C2**, **C3**, **C4** e **C5**. Para verificar se as colunas **C2**, **C3** e **C4** foram todas atualizadas com sucesso (tendo a tabela **t1** um gatilho UPDATE), siga a sintaxe com **& 14**. Para testar se apenas a coluna **C2** foi atualizada, especifique **& 2**. Veja o [Exemplo A](#a-using-columns_updated-to-test-the-first-eight-columns-of-a-table) e o [Exemplo B](#b-using-columns_updated-to-test-more-than-eight-columns) para obter exemplos reais.
   
 Use `COLUMNS_UPDATED` em qualquer lugar dentro de um gatilho INSERT ou UPDATE do [!INCLUDE[tsql](../../includes/tsql-md.md)].
   
@@ -181,7 +181,7 @@ SELECT * FROM dbo.auditEmployeeData;
 GO  
 ```  
   
-### <a name="b-using-columnsupdated-to-test-more-than-eight-columns"></a>B. Usando COLUMNS_UPDATED para testar mais de oito colunas  
+### <a name="b-using-columnsupdated-to-test-more-than-eight-columns"></a>b. Usando COLUMNS_UPDATED para testar mais de oito colunas  
 Para testar atualizações que afetam outras colunas além das oito primeiras colunas da tabela, use a função `SUBSTRING` para testar o bit correto retornado por `COLUMNS_UPDATED`. Este exemplo testa as atualizações que afetam as colunas `3`, `5` e `9` na tabela `AdventureWorks2012.Person.Person`.
   
 ```sql

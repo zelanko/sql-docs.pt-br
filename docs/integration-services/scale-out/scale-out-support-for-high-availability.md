@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 4e3429a52d24b9bb9fbb0de18c1687cfdaa76d30
-ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
+ms.openlocfilehash: 43bfe4364543adee0e63e1d123680a82bb3bae39
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53246735"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578326"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Suporte do Scale Out para alta disponibilidade
 
@@ -77,7 +77,7 @@ O log no SSISDB é feito pelo logon **##MS_SSISLogDBWorkerAgentLogin##**, cuja s
 ### <a name="63-update-the-connection-string-used-for-logging"></a>6.3 Atualize a cadeia de conexão usada para o log.
 Chame o procedimento armazenado `[catalog].[update_logdb_info]` com os seguintes valores de parâmetro:
 
--   `@server_name = '[Availability Group Listener DNS name],[Port]' `
+-   `@server_name = '[Availability Group Listener DNS name],[Port]'`
 
 -   `@connection_string = 'Data Source=[Availability Group Listener DNS name],[Port];Initial Catalog=SSISDB;User Id=##MS_SSISLogDBWorkerAgentLogin##;Password=[Password]];'`
 

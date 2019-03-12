@@ -56,12 +56,12 @@ ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 953fcb26527f709abd9679da3a3f061976d3ef74
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 5be56de82834133127700b945440ffb0e013fa4c
+ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334793"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57556150"
 ---
 # <a name="hints-transact-sql---query"></a>Dicas (Transact-SQL) – consulta
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -269,13 +269,13 @@ Os seguintes nomes de dica são compatíveis:
 *  'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES' <a name="use_hint_correlation"></a>      
    Faz com que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gere um plano usando a seletividade mínima ao estimar predicados AND para os filtros a serem considerados para correlação. Esse nome de dica é paralelo ao [sinalizador de rastreamento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137 quando usado com o modelo de estimativa de cardinalidade do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e com versões anteriores, e tem um efeito semelhante quando o [sinalizador de rastreamento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471 é usado com o modelo de estimativa de cardinalidade do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ou superior.
 *  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'       
-   Desabilita junções adaptáveis do modo de lote. Para obter mais informações, confira [Junções Adaptáveis de modo de lote](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins).
+   Desabilita junções adaptáveis do modo de lote. Para obter mais informações, confira [Junções Adaptáveis de modo de lote](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins).
 *  'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'       
-   Desabilita os comentários de concessão de memória do modo de lote. Para obter mais informações, veja [Batch mode memory grant feedback](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback) (Comentários de concessão de memória de modo de lote).   
+   Desabilita os comentários de concessão de memória do modo de lote. Para obter mais informações, veja [Batch mode memory grant feedback](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-memory-grant-feedback) (Comentários de concessão de memória de modo de lote).   
 * 'DISABLE_DEFERRED_COMPILATION_TV'    
   Desabilita a compilação adiada de variável da tabela. Para saber mais, veja [Compilação adiada de variável da tabela](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation).
 *  'DISABLE_INTERLEAVED_EXECUTION_TVF'      
-   Desabilita a execução intercalada para funções com valor de tabela de várias instruções. Para saber mais, veja [Execução intercalada para funções com valor de tabela de várias instruções](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions).
+   Desabilita a execução intercalada para funções com valor de tabela de várias instruções. Para saber mais, veja [Execução intercalada para funções com valor de tabela de várias instruções](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs).
 *  'DISABLE_OPTIMIZED_NESTED_LOOP'      
    Instrui o processador de consultas a não usar uma operação de classificação (classificação em lote) para junções otimizadas de loops aninhados ao gerar um plano de consulta. Esse nome de dica é paralelo ao [sinalizador de rastreamento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2340.
 *  'DISABLE_OPTIMIZER_ROWGOAL' <a name="use_hint_rowgoal"></a>      
@@ -290,7 +290,7 @@ Os seguintes nomes de dica são compatíveis:
 *  'DISABLE_PARAMETER_SNIFFING'      
    Instrui o otimizador de consulta a usar a distribuição média de dados durante a compilação de uma consulta com um ou mais parâmetros. Essa instrução cria o plano de consulta independentemente do valor de parâmetro que foi usado pela primeira vez quando a consulta foi compilada. Esse nome de dica é paralelo ao [sinalizador de rastreamento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 ou à definição de PARAMETER_SNIFFING=OFF da [Configuração de Escopo do Banco de Dados](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 * 'DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK'    
-  Desabilita os comentários de concessão de memória do modo de linha. Para obter mais informações, veja [Batch mode memory grant feedback](../../relational-databases/performance/adaptive-query-processing.md#row-mode-memory-grant-feedback) (Comentários de concessão de memória de modo de lote).
+  Desabilita os comentários de concessão de memória do modo de linha. Para obter mais informações, veja [Batch mode memory grant feedback](../../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback) (Comentários de concessão de memória de modo de lote).
 * 'DISABLE_TSQL_SCALAR_UDF_INLINING'    
   Desabilita o embutimento de UDF escalar. Para saber mais, confira [Scalar UDF Inlining](../../relational-databases/user-defined-functions/scalar-udf-inlining.md) (Embutimento de UDF escalar).
 * 'DISALLOW_BATCH_MODE'    
