@@ -25,12 +25,12 @@ ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: ce6ac47c2348f1acd082cb86e1d4756df6012a91
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: a00de2fba9416b4ec64dd218fe830ad7cb4212c5
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662800"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955837"
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,16 +51,16 @@ DBCC FREESYSTEMCACHE
 ## <a name="arguments"></a>Argumentos  
 ( 'ALL' [,_pool\_name_ ] )  
 ALL especifica todos os caches suportados.  
-_pool\_name_ especifica um cache de pool do Resource Governor. Somente as entradas associadas a esse pool serão liberadas.  
+_pool\_name_ especifica um cache de pool do Resource Governor. Somente as entradas associadas a esse pool são liberadas.  
   
 MARK_IN_USE_FOR_REMOVAL  
-Remove de forma assíncrona as entradas atualmente utilizadas de seus respectivos caches quando elas não são mais utilizadas. As novas entradas criadas no cache depois que o DBCC FREESYSTEMCACHE WITH MARK_IN_USE_FOR_REMOVAL for executado não serão afetadas.  
+Libera de forma assíncrona as entradas usadas no momento de seus respectivos caches quando elas deixam de ser usadas. As novas entradas criadas no cache não serão afetadas depois que o DBCC FREESYSTEMCACHE WITH MARK_IN_USE_FOR_REMOVAL for executado.  
   
 NO_INFOMSGS  
 Suprime todas as mensagens informativas.  
   
 ## <a name="remarks"></a>Remarks  
-A execução de DBCC FREESYSTEMCACHE limpa o cache de planos para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A limpeza do cache de planos gera uma recompilação de todos os planos de execução subsequentes e pode provocar uma redução repentina e temporária no desempenho de consultas. Para cada armazenamento em cache limpo no cache do plano, o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conterá a seguinte mensagem informativa: "O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontrou %d ocorrências de liberação de armazenamento em cache '% s' (parte do cache do plano) devido às operações 'DBCC FREEPROCCACHE' ou 'DBCC FREESYSTEMCACHE'". Essa mensagem é registrada a cada cinco minutos, contanto que o cache seja liberado dentro desse intervalo de tempo.
+A execução de DBCC FREESYSTEMCACHE limpa o cache de planos da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A limpeza do cache de planos gera uma recompilação de todos os planos de execução subsequentes e pode provocar uma redução repentina e temporária no desempenho de consultas. Para cada armazenamento em cache limpo no cache de planos, o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conterá a seguinte mensagem informativa: "O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontrou %d ocorrências de liberação do armazenamento em cache '%s' (parte do cache de planos) devido às operações 'DBCC FREEPROCCACHE' ou 'DBCC FREESYSTEMCACHE'". Essa mensagem é registrada a cada cinco minutos, contanto que o cache seja liberado dentro desse intervalo de tempo.
 
 ## <a name="result-sets"></a>Conjuntos de resultados  
 DBCC FREESYSTEMCACHE retorna: "A execução do DBCC foi concluída. Se o DBCC imprimiu mensagens de erro, entre em contato com o administrador do sistema".
