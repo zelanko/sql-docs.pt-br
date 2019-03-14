@@ -12,18 +12,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 45966a43686992f2b8f5f735cc6b9fef566a800d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e7e3f28304a61d79736a0c51450dc57d0a1ef97d
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669325"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579616"
 ---
 # <a name="database-engine-tutorials"></a>Tutoriais do Mecanismo de Banco de Dados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Esta seção contém tutoriais para [!INCLUDE[ssDECurrent](../includes/ssdecurrent-md.md)].  
   
-[Tutorial: introdução ao Mecanismo de Banco de Dados](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
+[Tutorial: Introdução ao Mecanismo de Banco de Dados](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
 Este tutorial ensina como conectar-se a uma instância do [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 [Tutorial: SQL Server Management Studio](../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
@@ -35,27 +35,27 @@ Este tutorial ensina as habilidades básicas de gravar as instruções do [!INCL
 [Tutorial: Orientador de Otimização do Mecanismo de Banco de Dados](../tools/dta/tutorial-database-engine-tuning-advisor.md)  
 Este tutorial apresenta o uso do orientador para analisar como as consultas são processadas e, em seguida, examinar as recomendações para melhorar o desempenho da consulta.  
   
-[Tutorial: Usando o tipo de dados hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)  
+[Tutorial: Usar o tipo de dados hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)  
 Este tutorial ensina a converter uma tabela em uma estrutura hierárquica, e gerencia os dados na tabela.  
   
-[Tutorial: Assinando procedimentos armazenados com um certificado](../relational-databases/tutorial-signing-stored-procedures-with-a-certificate.md)  
+[Tutorial: Assinar procedimentos armazenados com um certificado](../relational-databases/tutorial-signing-stored-procedures-with-a-certificate.md)  
 Este tutorial ilustra como assinar procedimentos armazenados usando um certificado gerado pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-[Tutorial: Ownership Chains and Context Switching](../relational-databases/tutorial-ownership-chains-and-context-switching.md)  
+[Tutorial: Cadeias de Propriedade e Comutação de Contexto](../relational-databases/tutorial-ownership-chains-and-context-switching.md)  
 Este tutorial usa um cenário para ilustrar os conceitos de segurança do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] envolvendo cadeias de propriedade e alternância de contexto de usuário.  
   
-[Tutorial: Administrando servidores com o uso do Gerenciamento Baseado em Políticas](../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
+[Tutorial: Administrar servidores com gerenciamento baseado em políticas](../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
 Este tutorial ensina como criar políticas que impõem padrões de administração de site.  
   
-[Tutorial: Backup e restauração do SQL Server para o serviço de armazenamento de Blob do Windows Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+[Tutorial: Backup e restauração do SQL Server para o serviço de Armazenamento de Blobs do Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
 Este tutorial ilustra como fazer um backup do SQL Server e uma restauração do SQL Server para o serviço de armazenamento de Blob do Windows Azure.  
   
-[Tutorial: Como usar o serviço de Armazenamento de Blobs do Microsoft Azure com os bancos de dados do SQL Server 2016 ](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+[Tutorial: Como usar o serviço de Armazenamento de Blobs do Microsoft Azure com os bancos de dados do SQL Server 2016](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
 Este tutorial explica como armazenar diretamente os arquivos de dados do SQL Server no serviço de armazenamento de Blob do Windows Azure.  
   
 ## <a name="see-also"></a>Consulte Também  
 [Tutoriais do SQL Server 2016](../sql-server/tutorials-for-sql-server-2016.md)  
-[TechNet WIKI: exemplos do SQL Server 2012](https://go.microsoft.com/fwlink/?linkID=220734)  
+[TechNet WIKI: Amostras do SQL Server 2012](https://go.microsoft.com/fwlink/?linkID=220734)  
   
   
   

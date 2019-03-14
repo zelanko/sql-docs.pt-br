@@ -17,12 +17,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2ac6f2a1692d72eecbcd97dbc3536dcebd6f2ec
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c9c0d51046b7ac30cbf1f2a608c51c34974b75d9
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356021"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579386"
 ---
 # <a name="subqueries-sql-server"></a>Subconsultas (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -490,7 +490,7 @@ GO
 Esta instrução não pode ser convertida em uma junção. A junção análoga não igual tem um significado diferente: encontra os nomes de produtos que estão em alguma subcategoria que não é uma bicicleta pronta.      
 
 ### <a name="upsert"></a> Subconsultas nas instruções UPDATE, DELETE e INSERT
-Subconsultas podem ser aninhadas nas instruções `UPDATE`, `DELETE`, `INSERT` e `SELECT `(DML) de manipulação de dados.    
+Subconsultas podem ser aninhadas nas instruções `UPDATE`, `DELETE`, `INSERT` e `SELECT` de DML (manipulação de dados).    
 
 O exemplo a seguir dobra o valor na coluna *ListPrice* na tabela *Production.Product*. A subconsulta na cláusula `WHERE` faz referência à tabela *Purchasing.ProductVendor* para restringir as linhas atualizadas na tabela *Product* somente àquelas fornecidas pela *BusinessEntity* 1540.
 

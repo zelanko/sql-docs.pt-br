@@ -20,16 +20,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f757719563cd2f5ba190b3d2d0f0b3b33f38df40
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1c5979aade2147d74c2ff34b5d6cc2e48771bab2
+ms.sourcegitcommit: 1968bf31c63210f7f62ea553e67aa792950c89bb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666405"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725457"
 ---
 # <a name="track-data-changes-sql-server"></a>Controle de alterações de dados (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fornece dois recursos que controlam alterações em dados de bancos de dados: [captura de dados de alterações](#Capture) e [controle de alterações](#Tracking). Esses recursos permitem que os aplicativos determinem as alterações de DML (operações de inserção, atualização e exclusão) que foram feitas em tabelas de usuários em um banco de dados. A captura de dados de alteração e o controle de alterações podem ser habilitados no mesmo banco de dados; nenhuma consideração especial necessária. Para obter as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que dão suporte à captura de dados de alterações e ao controle de alterações, veja [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Há suporte para o controle de alterações no [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fornece dois recursos que controlam alterações em dados de bancos de dados: [captura de dados de alterações](#Capture) e [controle de alterações](#Tracking). Esses recursos permitem que os aplicativos determinem as alterações de DML (operações de inserção, atualização e exclusão) que foram feitas em tabelas de usuários em um banco de dados. A captura de dados de alteração e o controle de alterações podem ser habilitados no mesmo banco de dados; nenhuma consideração especial necessária. Para obter as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que dão suporte à captura de dados de alterações e ao controle de alterações, veja [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Há suporte para o controle de alterações no [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. A captura de dados de alterações só é compatível com o SQL Server e a Instância Gerenciada do Banco de Dados SQL do Azure.
   
 ## <a name="benefits-of-using-change-data-capture-or-change-tracking"></a>Benefícios do uso da captura de dados de alterações ou do controle de alterações  
  Um requisito importante para a eficiência de alguns aplicativos é a capacidade de consultar os dados que foram alterados em um banco de dados. Em geral, para determinar alterações de dados, os desenvolvedores de aplicativos devem implementar um método personalizado de controle nos aplicativos usando uma combinação de gatilhos, colunas de carimbo de data/hora e tabelas adicionais. A criação desses aplicativos costumava envolve uma implementação muito trabalhosa, leva a atualizações de esquema e frequentemente acarreta uma sobrecarga de alto desempenho.  
@@ -58,7 +58,7 @@ ms.locfileid: "51666405"
 |**Alterações controladas**|||  
 |Alterações de DML|Sim|Sim|  
 |**Informações controladas**|||  
-|Dados do histórico|Sim|não|  
+|Dados do histórico|Sim|Não|  
 |Se a coluna foi alterada|Sim|Sim|  
 |Tipo de DML|Sim|Sim|  
   
@@ -89,7 +89,7 @@ ms.locfileid: "51666405"
 |Tipo de coluna|Alterações capturadas em tabelas de alteração|Limitações|  
 |--------------------|---------------------------------------|-----------------|  
 |Colunas esparsas|Sim|Não dão suporte à captura de alterações durante o uso de columnset.|  
-|Colunas computadas|não|As alterações feitas a colunas computadas não são rastreadas. A coluna aparecerá na tabela de alterações com o tipo apropriado, mas terá um valor de NULL.|  
+|Colunas computadas|Não|As alterações feitas a colunas computadas não são rastreadas. A coluna aparecerá na tabela de alterações com o tipo apropriado, mas terá um valor de NULL.|  
 |XML|Sim|As alterações a elementos XML individuais não são rastreadas.|  
 |timestamp|Sim|O tipo de dados na tabela de alterações é convertido em binário.|  
 |Tipos de dados BLOB|Sim|A imagem anterior da coluna BLOB somente será armazenada se a própria coluna for alterada.|  

@@ -13,12 +13,12 @@ ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 21021402a10494306a3b667c5f7b83977dc7d205
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d436072e81212203aff568feba1d764b07c31b8a
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512538"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579256"
 ---
 # <a name="connecting-with-sqlcmd"></a>Conectando com sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -46,7 +46,7 @@ Na versão atual, as seguintes opções estão disponíveis:
   
 - -C Confiar em certificado do servidor.  
 
-- -d *database_name* problema uma `USE ` *database_name* instrução ao iniciar `sqlcmd`.  
+- -d *database_name* problema uma `USE` *database_name* instrução ao iniciar `sqlcmd`.  
 
 - -D Faz com que o valor passado para a opção -S do `sqlcmd` seja interpretada como um nome da fonte de dados (DSN). Para obter mais informações, veja "Suporte para DSN no `sqlcmd` e no `bcp`" no final deste tópico.  
   
@@ -64,7 +64,7 @@ Na versão atual, as seguintes opções estão disponíveis:
   
 - -k Remover ou substituir caracteres de controle.  
   
-- **-K**_aplicativo\_intenção_  
+- **-K**_application\_intent_  
 Declara o tipo de carga de trabalho de aplicativo ao conectar-se a um servidor. O único valor com suporte no momento é **ReadOnly**. Se **-K** não for especificado, o `sqlcmd` não oferecerá suporte à conectividade com uma réplica secundária em um grupo de disponibilidade AlwaysOn. Para obter mais informações, consulte [Driver ODBC no Linux e macOS – alta disponibilidade e recuperação de desastres](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
@@ -74,8 +74,8 @@ Declara o tipo de carga de trabalho de aplicativo ao conectar-se a um servidor. 
 
 - -m *error_level* Controlar quais mensagens de erro são enviadas para stdout.  
   
-- **-M**_com várias sub-redes\_failover_  
-Sempre especifique **-M** ao se conectar ao ouvinte do grupo de disponibilidade de um grupo de disponibilidade do [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] ou de uma Instância de Cluster de Failover do [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. **-M** proporciona maior rapidez na detecção de failovers e conexão ao servidor ativo (no momento). Se **-M** não for especificado, **-M** estará desativado. Para obter mais informações sobre [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], consulte [Driver ODBC no Linux e macOS – alta disponibilidade e recuperação de desastres](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
+- **-M**_multisubnet\_failover_  
+Sempre especifique **-M** ao se conectar ao ouvinte do grupo de disponibilidade de um grupo de disponibilidade do [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] ou de uma Instância de Cluster de Failover do [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. **-M** proporciona maior rapidez na detecção de failovers e conexão ao servidor ativo (no momento). Se **-M** não estiver especificado, **-M** está desativado. Para obter mais informações sobre [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], consulte [Driver ODBC no Linux e macOS – alta disponibilidade e recuperação de desastres](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
 > Não há suporte para **-M** no CTP para SUSE Linux. No entanto, você pode especificar a palavra-chave **MultiSubnetFailover=Yes** em um arquivo DSN passado para o `sqlcmd`. Para obter mais informações, veja "Suporte para DSN no `sqlcmd` e no `bcp`" no final deste tópico.  
@@ -210,19 +210,19 @@ Há suporte para as seguintes entradas em um DSN em Linux ou macOS:
 
 -   **ApplicationIntent=ReadOnly**  
 
--   **Banco de dados =**_banco de dados\_nome_  
+-   **Banco de dados=**_database\_name_  
   
 -   **Driver = ODBC Driver 11 para SQL Server** ou **Driver = ODBC Driver 13 para SQL Server**
   
 -   **MultiSubnetFailover=Yes**  
   
--   **Server =**_server\_nome\_ou\_IP\_endereço_  
+-   **Servidor=**_server\_name\_ou\_IP\_address_  
   
 -   **Trusted_Connection=yes**|**no**  
   
 Em um DSN, apenas a entrada DRIVER é necessária, mas para se conectar a um servidor, o `sqlcmd` ou o `bcp` precisa do valor na entrada SERVER.  
 
-Se a mesma opção for especificada tanto no DSN quanto na linha de comando do `sqlcmd` ou do `bcp`, a opção de linha de comando substituirá o valor usado no DSN. Por exemplo, se o DSN tiver uma entrada DATABASE e a linha de comando do `sqlcmd` incluir **-d**, o valor passado para **-d** será usado. Se **Trusted_Connection=yes** for especificado no DSN, a autenticação Kerberos será usada e o nome de usuário (**–U**) e a senha (**–P**), se fornecidos, serão ignorados.
+Se a mesma opção for especificada tanto no DSN quanto na linha de comando do `sqlcmd` ou do `bcp`, a opção de linha de comando substituirá o valor usado no DSN. Por exemplo, se o DSN tiver uma entrada DATABASE e a linha de comando do `sqlcmd` incluir **-d**, o valor passado para **-d** será usado. Se **Trusted_Connection=yes** for especificado no DSN, a autenticação Kerberos será usada e o nome de usuário (**-U**) e a senha (**-P**), se fornecidos, serão ignorados.
 
 Os scripts existentes que invocam `isql` podem ser modificados para usar `sqlcmd` com a definição do seguinte alias: `alias isql="sqlcmd -D"`.  
 

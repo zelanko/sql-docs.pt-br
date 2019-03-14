@@ -11,19 +11,19 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 1612e35dc2b586825d47979b6baa1a002b0d9895
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: b9a699ba1764af5728f7731626dc94400dc4d246
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419811"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578806"
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Trabalho de Expansão de Integration Services (SSIS)
 
 O Trabalho do Scale Out executa o serviço Trabalho do Scale Out para efetuar pull de tarefas de execução no Mestre do Scale Out. Em seguida, o trabalho executa os pacotes localmente com `ISServerExec.exe`.
 
 ## <a name="configure-the-scale-out-worker-service"></a>Configurar o serviço Trabalho do Scale Out
-Configure o serviço Trabalho do Scale Out usando o arquivo ` \<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`. É necessário reiniciar o serviço depois de atualizar o arquivo de configuração.
+Configure o serviço Trabalho do Scale Out usando o arquivo `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`. É necessário reiniciar o serviço depois de atualizar o arquivo de configuração.
 
 |Configuração  |Descrição  |Valor padrão|
 |---------|---------|---------|
@@ -36,16 +36,16 @@ Configure o serviço Trabalho do Scale Out usando o arquivo ` \<drive\>:\Program
 |StoreName|O nome do repositório no qual está o certificado do trabalho.|Meu|
 |AgentHeartbeatInterval|O intervalo de pulsação do Trabalho de Expansão.|00:01:00|
 |TaskHeartbeatInterval|O intervalo no qual o Trabalho de Expansão relata o estado da tarefa.|00:00:10|
-|HeartbeatErrorTollerance|Após esse período de tempo, na última pulsação de tarefa com êxito, a tarefa será terminada se for recebida uma resposta de erro da pulsação.|00:10:00|
+|HeartbeatErrorTolerance|Após esse período de tempo, na última pulsação de tarefa com êxito, a tarefa será terminada se for recebida uma resposta de erro da pulsação.|00:10:00|
 |TaskRequestMaxCPU|O limite superior de CPU para tarefas de solicitação do Trabalho de Expansão.|70.0|
 |TaskRequestMinMemory|O limite inferior de memória, em MB, para tarefas de solicitação do Trabalho de Expansão.|100.0|
 |MaxTaskCount|O número máximo de tarefas que o Trabalho de Expansão pode conter.|10|
-|LeaseInternval|O intervalo de concessão de uma tarefa contida pelo Trabalho de Expansão.|00:01:00|
+|LeaseInterval|O intervalo de concessão de uma tarefa contida pelo Trabalho de Expansão.|00:01:00|
 |TasksRootFolder|A pasta de logs de tarefas. Se o valor estiver vazio, o caminho de pasta `\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Tasks` será usado. [account] é a conta que executa o serviço Trabalho de Expansão. Por padrão, a conta é SSISScaleOutWorker140.|Empty (vazio)|
 |TaskLogLevel|O nível de log de tarefas do Trabalho de Expansão. (Verbose 0x01, Information 0x02, Warning 0x04, Error 0x08, Progress 0x10, CriticalError 0x20, Audit 0x40)|126 (Information, Warning, Error, Progress, CriticalError, Audit)|
 |TaskLogSegment|O período de tempo de um arquivo de log de tarefas.|00:00:00|
 |TaskLogEnabled|Especifica se o log de tarefas está habilitado.|true|
-|ExecutionLogCacheFolder|A pasta usada para armazenar em cache o log de execução de pacote. Se o valor estiver vazio, o caminho de pasta ` \<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Agent\ELogCache` será usado. [account] é a conta que executa o serviço Trabalho de Expansão. Por padrão, a conta é SSISScaleOutWorker140.|Empty (vazio)|
+|ExecutionLogCacheFolder|A pasta usada para armazenar em cache o log de execução de pacote. Se o valor estiver vazio, o caminho de pasta `\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Agent\ELogCache` será usado. [account] é a conta que executa o serviço Trabalho de Expansão. Por padrão, a conta é SSISScaleOutWorker140.|Empty (vazio)|
 |ExecutionLogMaxBufferLogCount|O número máximo de logs de execução armazenados em cache em um buffer de log de execução na memória.|10000|
 |ExecutionLogMaxInMemoryBufferCount|O número máximo de buffers de log de execução na memória de logs de execução.|10|
 |ExecutionLogRetryCount|O número de repetições se o log de execução falhar.|3|

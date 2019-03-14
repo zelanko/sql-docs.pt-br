@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d8d0a557640795462f4da21345f07df9db96be97
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: 5ac0dbfdc3a4acd94a7892372ddb336a3bb70642
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421313"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579661"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -221,33 +221,33 @@ Permite configurar a funcionalidade de soltar automaticamente para [tabelas temp
 
 DISABLE_INTERLEAVED_EXECUTION_TVF = { ON | OFF }
 
-**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-Permite habilitar ou desabilitar a execução Intercalada para funções com valor de tabela com várias instruções no escopo do banco de dados ou da instrução, mantendo o nível de compatibilidade do banco de dados como 140 e superior. A execução intercalada é um recurso que faz parte do processamento de consulta adaptável em [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Para obter mais informações, veja [Processamento de consultas adaptáveis](../../relational-databases/performance/adaptive-query-processing.md)
+Permite habilitar ou desabilitar a execução Intercalada para funções com valor de tabela com várias instruções no escopo do banco de dados ou da instrução, mantendo o nível de compatibilidade do banco de dados como 140 e superior. A execução intercalada é um recurso que faz parte do processamento de consulta adaptável em [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Para saber mais, confira [Processamento de consulta inteligente](../../relational-databases/performance/intelligent-query-processing.md)
 
 DISABLE_BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
 
-**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-Permite habilitar ou desabilitar junções adaptáveis no escopo do banco de dados ou da instrução, mantendo o nível de compatibilidade do banco de dados como 140 e superior. O recurso Junções adaptáveis faz parte do [processamento de consulta adaptável](../../relational-databases/performance/adaptive-query-processing.md) no [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
+Permite habilitar ou desabilitar junções adaptáveis no escopo do banco de dados ou da instrução, mantendo o nível de compatibilidade do banco de dados como 140 e superior. O recurso Junções adaptáveis faz parte do [Processamento de consulta inteligente](../../relational-databases/performance/intelligent-query-processing.md) apresentado em [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
 
 ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
 **Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (o recurso está na versão prévia pública)
 
-Permite habilitar ou desabilitar Comentários de concessão de memória de modo de linha no escopo do banco de dados, mantendo o nível de compatibilidade do banco de dados como 150 e superior. A memória do modo de linha concede a comentários um recurso que faz parte do [Processamento de consulta adaptável](../../relational-databases/performance/adaptive-query-processing.md) lançado no SQL Server 2017 (há suporte para o modo de linha no SQL Server 2019 e Banco de Dados SQL do Azure).
+Permite habilitar ou desabilitar Comentários de concessão de memória de modo de linha no escopo do banco de dados, mantendo o nível de compatibilidade do banco de dados como 150 e superior. A memória do modo de linha concede a comentários um recurso que faz parte do [Processamento de consulta inteligente](../../relational-databases/performance/intelligent-query-processing.md) lançado no SQL Server 2017 (há suporte para o modo de linha no SQL Server 2019 e no Banco de Dados SQL do Azure).
 
 BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
 **Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
 
-Permite habilitar ou desabilitar Comentários de concessão de memória de modo de lote no escopo do banco de dados, mantendo o nível de compatibilidade do banco de dados como 140 e superior. O recurso Comentários de concessão de memória de modo de lote faz parte do [processamento de consulta adaptável](../../relational-databases/performance/adaptive-query-processing.md) no SQL Server 2017.
+Permite habilitar ou desabilitar Comentários de concessão de memória de modo de lote no escopo do banco de dados, mantendo o nível de compatibilidade do banco de dados como 140 e superior. O recurso Comentários de concessão de memória de modo de lote faz parte do [Processamento de consulta inteligente](../../relational-databases/performance/intelligent-query-processing.md) no SQL Server 2017.
 
 BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF}
 
 **Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
 
-Permite habilitar ou desabilitar junções adaptáveis do modo de lote no escopo do banco de dados, mantendo o nível de compatibilidade do banco de dados como 140 e superior. Junções adaptáveis do modo de lote é um recurso que faz parte do [processamento de consulta adaptável](../../relational-databases/performance/adaptive-query-processing.md) no SQL Server 2017.
+Permite habilitar ou desabilitar junções adaptáveis do modo de lote no escopo do banco de dados, mantendo o nível de compatibilidade do banco de dados como 140 e superior. As junções adaptáveis do modo de lote é um recurso que faz parte do [Processamento de consulta inteligente](../../relational-databases/performance/intelligent-query-processing.md) no SQL Server 2017.
 
 BATCH_MODE_ON_ROWSTORE = { ON | OFF}
 
@@ -386,7 +386,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
 ```
 
 ### <a name="g-set-identitycache"></a>G. Definir IDENTITY_CACHE
-**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando pelo [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (o recurso está em versão prévia pública)
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando pelo [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (o recurso está em versão prévia pública)
 
 Este exemplo desabilita o cache de identidade.
 

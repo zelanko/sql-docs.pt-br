@@ -1,5 +1,5 @@
 ---
-title: 'Etapa 4: adicionar configurações de pacote | Microsoft Docs'
+title: 'Etapa 4: Adicionar configurações de pacote | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c9ed2d231414ca36bef186a8d2e70d491a469fb4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51ca1188b8954564fc929dd0cdc34715466aee8b
+ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605684"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57756671"
 ---
 # <a name="lesson-1-4---adding-package-configurations"></a>Lição 1-4 – adicionar configurações de pacote
 Nessa tarefa, você adicionará uma configuração a cada pacote. As configurações atualizam os valores das propriedades e dos objetos do pacote em tempo de execução.  
@@ -32,6 +32,8 @@ Serão criados dois arquivos de configuração, DataTransferConfig.dtsConfig e L
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] reconhece que Datatransferconfig.dtsconfig e LoadXMLData.dtsConfig são dependências dos pacotes DataTransfer e LoadXMLData, e automaticamente incluirá os arquivos de configuração quando você criar o pacote de implantação na próxima lição.  
   
 ### <a name="to-create-indirect-configuration-for-the-datatransfer-package"></a>Para criar configuração indireta para o pacote DataTransfer  
+
+Verifique o modelo de implantação atual do projeto e defina-o como **Modelo de Implantação de Pacote**, se necessário. No menu **Projeto**, clique em **Converter em Modelo de Implantação de Pacote**
   
 1.  No Gerenciador de Soluções, clique duas vezes em DataTransfer.dtsx.  
   
@@ -130,7 +132,7 @@ Serão criados dois arquivos de configuração, DataTransferConfig.dtsConfig e L
 12. Na caixa de diálogo **Organizador de Configurações do Pacote** , verifique se a opção LoadXMLData EV Configuration é a primeira da lista e LoadXMLData Configuration é a segunda da lista e clique em **Fechar**.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
-[Etapa 5: Testando os pacotes atualizados](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
+[Etapa 5: Testar os pacotes atualizados](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
 ## <a name="see-also"></a>Consulte Também  
 [Configurações do Pacote](../integration-services/packages/package-configurations.md)  

@@ -17,12 +17,12 @@ ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5ab315e41607d528a1d34be6e61a6344350eb240
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 69efd860fe91080960ffb12995bea675e4686878
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215253"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579656"
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>Visão geral de Grupos de Disponibilidade AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "53215253"
  A implantação do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] para HA no Windows exige um WSFC (Cluster de Failover do Windows Server). Cada réplica de disponibilidade de determinado grupo de disponibilidade deve residir em um nó diferente do mesmo WSFC. A única exceção é que, embora tenha sido migrado para outro cluster WSFC, um grupo de disponibilidade pode temporariamente abranger dois clusters. 
 
  >[!NOTE]
- >Para obter informações sobre grupos de disponibilidade no Linux, consulte [Grupo de disponibilidade AlwaysOn para o SQL Server no Linux ](../../../linux/sql-server-linux-availability-group-overview.md). 
+ >Para obter informações sobre grupos de disponibilidade no Linux, confira [Grupo de disponibilidade Always On para SQL Server em Linux](../../../linux/sql-server-linux-availability-group-overview.md). 
 
  Em uma configuração de HA, uma função de cluster é criada para cada grupo de disponibilidade criado. O cluster WSFC monitora essa função para avaliar a integridade da réplica primária. O quorum para o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] é baseado em todos os nós no cluster WSFC independentemente de se um determinado nó de cluster hospeda qualquer réplica de disponibilidade. Ao contrário do espelhamento do banco de dados, não há nenhuma função de testemunha no [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
   

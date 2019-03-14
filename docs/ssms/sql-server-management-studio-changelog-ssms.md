@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d953127249bb6f82626dfff647b15dc40aba859
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 048e3b88ff45147e30121c3b754527b71d30ea7b
+ms.sourcegitcommit: 5285fe5402d4ecb5788a1a89e200cc31b9006c31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334833"
+ms.locfileid: "57401928"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -115,7 +115,7 @@ Se não há um rótulo de *versão prévia 5*, *versão prévia 6* ou *versão p
   - Menor Tamanho de Download
     - O tamanho atual do pacote é menor que a metade do tamanho do SSMS 17.x (~400 MB). O tamanho acabará aumentando um pouco quando os componentes IS forem adicionados de volta ao SSMS, mas não deverá ser tão grande quanto costumava ser.
   - SSMS baseia-se no novo Shell Isolado do VS 2017
-    - Isso significa que se trata de um shell moderno (escolhemos o VS 2107 15.6.4). O novo shell desbloqueia todas as correções de acessibilidade que ocorreram no SSMS e no Visual Studio.
+    - Isso significa que se trata de um shell moderno (escolhemos o VS 2017 15.6.4). O novo shell desbloqueia todas as correções de acessibilidade que ocorreram no SSMS e no Visual Studio.
   - Melhorias de acessibilidade do SSMS
     - Foi trabalhoso solucionar problemas de Acessibilidade em todas as ferramentas (SSMS, DTA e Profiler)
   - O SSMS pode ser instalado em uma pasta personalizada
@@ -153,7 +153,7 @@ Se não há um rótulo de *versão prévia 5*, *versão prévia 6* ou *versão p
   - Classificação de dados: recomendações atualizadas
   - IntelliSense aperfeiçoado no Editor, especialmente para v140 T-SQL
   - Adicionado suporte na interface do usuário do SSMS para UTF-8 na caixa de diálogo de ordenação.
-  - Alterado para "Gerenciador de credenciais do Windows" para senhas MRU da caixa de diálogo de conexão. Isso resolve um problema antigo em que a persistência de senhas nem sempre era confiável. Para obter detalhes, consulte https://feedback.azure.com/forums/908035-sql-server/suggestions/32896486.
+  - Alterado para "Gerenciador de credenciais do Windows" para senhas MRU da caixa de diálogo de conexão. Isso resolve um problema antigo em que a persistência de senhas nem sempre era confiável. Para obter detalhes, confira https://feedback.azure.com/forums/908035-sql-server/suggestions/32896486.
   - Suporte aprimorado para sistemas com vários monitores, garantindo que cada vez mais caixas de diálogo e janelas sejam exibidas no monitor esperado.
   - A configuração do servidor "padrão de soma de verificação de backup" foi exposta na nova página de configurações do banco de dados da caixa de diálogo Propriedades do Servidor. Para obter detalhes, confira https://feedback.azure.com/forums/908035-sql-server/suggestions/34634974
   - [Novo na Versão Prévia 5] O "tamanho máximo para arquivos de log de erros" foi exposto em "Configurar os logs de erro do SQL Server". Para obter detalhes, confira https://feedback.azure.com/forums/908035/suggestions/33624115 
@@ -266,7 +266,7 @@ Se não há um rótulo de *versão prévia 5*, *versão prévia 6* ou *versão p
   - Corrigido um travamento que ocorria ao se conectar a um BD SQL do Azure usando MFA enquanto rastreamentos ADAL estão habilitados
   - Corrigido um travamento (ou travamento percebido) nas Estatísticas de Consulta ao Vivo quando invocadas do Monitor de Atividade (o problema manifestado ao usar a autenticação do SQL Server com nenhum conjunto de "Informações de Persistência de Segurança").
   - Corrigido um travamento ao selecionar "Relatórios" no Pesquisador de Objetos que pode se manifestar em conexões de alta latência ou não acessibilidade temporária dos recursos.
-  - [Novo na Versão Prévia 5] Corrigida uma pane no SSSM ao tentar usar os servidores do SQL Azure e o Servidor de Gerenciamento Central. Para obter detalhes, consulte https://feedback.azure.com/forums/908035/suggestions/33374884. 
+  - [Novo na Versão Prévia 5] Corrigida uma pane no SSSM ao tentar usar os servidores do SQL Azure e o Servidor de Gerenciamento Central. Para obter detalhes, confira https://feedback.azure.com/forums/908035/suggestions/33374884. 
   - [Novo na Versão Prévia 5] Corrigido um travamento no Pesquisador de Objetos ao otimizar a maneira como a propriedade IsFullTextEnabled é recuperada
   - [Novo na Versão Prévia 5] Corrigido um travamento no "Assistente para Copiar Banco de Dados" evitando a compilação de consultas desnecessárias para recuperar propriedades de Banco de Dados
   - [Novo na versão prévia 7] Corrigido um problema que estava fazendo com que o SSMS travasse/falhasse durante a edição de T-SQL. 
@@ -311,7 +311,7 @@ Se não há um rótulo de *versão prévia 5*, *versão prévia 6* ou *versão p
   - Corrigido um problema em que o assistente para "Importar Aplicativo da Camada de Dados" estava falhando ao iniciar da árvore de Armazenamento do Azure.
   - Corrigido um problema em "Configuração do Database Mail" em que o status da caixa de seleção SSL não era persistente (veja detalhes em https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541)
   - Corrigido um problema em que o SSMS esmaecia a opção para fechar conexões existentes ao tentar restaurar o banco de dados com is_auto_update_stats_async_on
-  - Corrigido um problema em que clicar com o botão direito do mouse em nós do OE (por exemplo, "Tabelas" e esperar para executar uma ação, como filtrar tabelas acessando Filtro > Configurações de Filtro, o formulário de configurações de filtro podia aparecer na outra tela, em vez de no local em que o SSMS está ativo no momento). Para obter detalhes, consulte https://feedback.azure.com/forums/908035-sql-server/suggestions/34284106.
+  - Corrigido um problema em que clicar com o botão direito do mouse em nós do OE (por exemplo, "Tabelas" e esperar para executar uma ação, como filtrar tabelas acessando Filtro > Configurações de Filtro, o formulário de configurações de filtro podia aparecer na outra tela, em vez de no local em que o SSMS está ativo no momento). Para obter detalhes, confira https://feedback.azure.com/forums/908035-sql-server/suggestions/34284106.
   - Corrigido um problema antigo em que a tecla DELETE não estava funcionando no OE durante a tentativa de renomear um objeto. Para obter detalhes, confira https://feedback.azure.com/forums/908035-sql-server/suggestions/33073510
   - Ao exibir as propriedades de arquivos de banco de dados existentes, o tamanho é exibido em uma coluna "Tamanho (MB)" em vez de "Tamanho inicial (MB)", que é o exibido durante a criação de um banco de dados. Para obter detalhes, confira https://feedback.azure.com/forums/908035-sql-server/suggestions/32629024
   - Item de menu de contexto "Design" desabilitado em "Tabelas de Grafo", pois não há suporte para esses tipos de tabelas na versão atual do SSMS.
@@ -380,7 +380,7 @@ Se não há um rótulo de *versão prévia 5*, *versão prévia 6* ou *versão p
 
 - **Fazer backup/restaurar/anexar/desanexar o banco de dados**
   - Corrigido um problema em que o usuário não conseguia anexar um banco de dados quando o nome do arquivo físico do arquivo .mdf não coincide com o nome do arquivo original
-  - Corrigido um problema em que o SSMS podia não encontrar um plano de restauração válido ou podia encontrar um abaixo do ideal. Para obter detalhes, consulte https://feedback.azure.com/forums/908035-sql-server/suggestions/32897752.
+  - Corrigido um problema em que o SSMS podia não encontrar um plano de restauração válido ou podia encontrar um abaixo do ideal. Para obter detalhes, confira https://feedback.azure.com/forums/908035-sql-server/suggestions/32897752.
   - Corrigida uma falha no SSMS ao tentar restaurar um backup de URL (isso foi uma regressão introduzida em versões prévias anteriores).
   - [Novo na Versão Prévia 5] Corrigido um problema em que o Assistente "Anexar banco de dados" não exibia arquivos secundários que eram renomeados. Agora, o arquivo é exibido e um comentário sobre ele é adicionado (por exemplo, "Não encontrado"). Para obter detalhes, confira https://feedback.azure.com/forums/908035/suggestions/32897434
 
@@ -690,7 +690,7 @@ Script:
 Telemetria: 
 - Corrigido o problema de falha no SSMS ao tentar se conectar a um servidor, depois de recusar sem enviar telemetria.
  
-Banco de Dados SQL do Azure: 
+Banco de dados SQL do Azure: 
 - Corrigido um problema em que o usuário não conseguia definir nem alterar o nível de compatibilidade (na lista suspensa de vazio). Observação: para definir o nível de compatibilidade como 150, o usuário ainda precisa usar o botão *Script* e editar manualmente o script. 
  
 SMO: 
@@ -805,7 +805,7 @@ Database Mail:
 
 
 
-## <a name="downloadssdtmediadownloadpng-ssms-175httpsgomicrosoftcomfwlinklinkid867670"></a>![download](../ssdt/media/download.png) [SSMS 17.5](https://go.microsoft.com/fwlink/?linkid=867670)
+## <a name="downloadssdtmediadownloadpng-ssms-175httpsgomicrosoftcomfwlinklinkid867670"></a>![baixar](../ssdt/media/download.png) [SSMS 17.5](https://go.microsoft.com/fwlink/?linkid=867670)
 Disponível ao público geral | Número de build: 14.0.17224.0
 
 [Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x40a)

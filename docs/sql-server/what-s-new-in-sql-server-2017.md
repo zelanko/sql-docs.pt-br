@@ -11,18 +11,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: cfe10c3f5c3db33a5e9e0e417477cf2e36a2f035
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6a8e2aabc262eae4f25bf1cc5056955b58b874d0
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406443"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579356"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Novidades no SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 O SQL Server 2017 é uma etapa importante para transformar o SQL Server em uma plataforma que oferece opções de linguagens de desenvolvimento, tipos de dados, locais ou nuvens e sistemas operacionais, utilizando a capacidade do SQL Server no Linux, em contêineres do Docker baseados em Linux e no Windows. Este tópico resume o que há de novo para áreas de recurso específico e inclui links para obter detalhes adicionais. Para obter mais informações relacionadas ao SQL Server no Linux, consulte [Documentação do SQL Server no Linux](https://docs.microsoft.com/sql/linux/)
 
-[![Baixar do Centro de Avaliação](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **Experimente:** [Baixar a versão do SQL Server 2017, agosto de 2017](https://go.microsoft.com/fwlink/?LinkID=829477).
+[![Baixe do Centro de Avaliação](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **Experimente:** [Baixe o SQL Server 2017 – versão de outubro de 2017:](https://go.microsoft.com/fwlink/?LinkID=829477).
 
 > [!NOTE]
 > Além das alterações abaixo, atualizações cumulativas são liberadas em intervalos regulares após a versão GA. Essas atualizações cumulativas fornecem várias melhorias e correções. Para obter informações sobre a última versão da atualização cumulativa, consulte [Atualizações cumulativas do SQL Server 2017](https://aka.ms/sql2017cu).
@@ -33,7 +33,7 @@ O SQL Server 2017 inclui vários novos recursos, aprimoramentos e melhorias de d
 - **Os assemblies CLR** agora são adicionados a uma lista de permissões como uma solução alternativa para o recurso `clr strict security`, descrito no CTP 2.0. [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) e [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) são adicionados para dar suporte à lista de permissões de assemblies confiáveis (RC1).  
 - A **Recompilação de índice online retomável** retoma uma operação de recompilação de índice online de onde ela parou após uma falha, como o failover de uma réplica ou espaço em disco insuficiente ou pausa e posteriormente retoma uma operação de recompilação de índice online. Veja [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) e [Diretrizes para operações de índice online](../relational-databases/indexes/guidelines-for-online-index-operations.md). (CTP 2.0)
 - A opção **IDENTITY_CACHE** da ALTER DATABASE SCOPED CONFIGURATION permite evitar lacunas nos valores de colunas de identidade caso um servidor reinicie inesperadamente ou faça failover para um servidor secundário. Veja [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). (CTP 2.0)
-- Uma nova geração de melhorias do processo de consulta que adaptará estratégias de otimização para as condições de tempo de execução da carga de trabalho do aplicativo. Para a primeira versão da família de recursos de **processamento de consulta adaptável**, temos três novas melhorias: **junções adaptáveis de modo de lote**, **comentários de concessão de memória de modo de lote** e **execução intercalada** para funções com valor de tabela de várias instruções.  Veja [Processamento de consultas adaptável em bancos de dados SQL](../relational-databases/performance/adaptive-query-processing.md).
+- Uma nova geração de melhorias do processo de consulta que adaptará estratégias de otimização para as condições de tempo de execução da carga de trabalho do aplicativo. Para a primeira versão da família de recursos de **processamento de consulta adaptável**, temos três novas melhorias: **junções adaptáveis de modo de lote**, **comentários de concessão de memória de modo de lote** e **execução intercalada** para funções com valor de tabela de várias instruções.  Confira [Processamento de consulta inteligente em bancos de dados SQL](../relational-databases/performance/intelligent-query-processing.md).
 - O **Ajuste automático de banco de dados** fornece informações sobre possíveis problemas de desempenho de consultas e pode corrigir automaticamente os problemas identificados. Consulte [Ajuste automático](../relational-databases/automatic-tuning/automatic-tuning.md). (CTP 2.0)
 - Os novos **recursos de banco de dados do gráfico** para modelagem de relações de muitos-para-muitos têm uma nova sintaxe [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) para a criação de nós e tabelas de borda e a palavra-chave [MATCH](../t-sql/queries/match-sql-graph.md) para consultas. Consulte [Processamento de Gráficos com o SQL Server 2017](../relational-databases/graphs/sql-graph-overview.md). (CTP 2.0)
 - Uma opção sp_configure chamada `clr strict security` está habilitada por padrão para aprimorar a segurança de assemblies do CLR. Consulte [Segurança rígida do CLR](../database-engine/configure-windows/clr-strict-security.md). (CTP 2.0)

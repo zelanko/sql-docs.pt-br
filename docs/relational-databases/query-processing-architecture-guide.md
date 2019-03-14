@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ee8109bc7d6499352b2d1caf47381faa3df9cf3a
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 881949902c2c198db4f03b2741a822d9c2b2e13e
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802402"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579726"
 ---
 # <a name="query-processing-architecture-guide"></a>Guia da Arquitetura de Processamento de Consultas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -133,7 +133,7 @@ As etapas básicas usadas pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md
 5. O mecanismo relacional processa os dados retornados do mecanismo de armazenamento no formato definido para o conjunto de resultados e retorna o conjunto de resultados ao cliente.
 
 ### <a name="ConstantFolding"></a> Dobragem de constantes e avaliação de expressões 
-O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] avalia algumas expressões constantes antecipadamente para melhorar o desempenho de consulta. Isto é chamado de dobra constante. Uma constante é um [!INCLUDE[tsql](../includes/tsql-md.md)] literal, como 3, 'ABC', ' 2005 – 12 – 31', 1.0e3 ou 0x12345678.
+O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] avalia algumas expressões constantes antecipadamente para melhorar o desempenho de consulta. Isto é chamado de dobra constante. Uma constante é um [!INCLUDE[tsql](../includes/tsql-md.md)] literal, como 3, 'ABC', ' 2005-12-31', 1.0e3 ou 0x12345678.
 
 #### <a name="foldable-expressions"></a>Expressões dobráveis
 O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa a dobra constante com os seguintes tipos de expressões:
@@ -334,7 +334,7 @@ O Otimizador de Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md
   * Predicados de critérios de pesquisa na cláusula WHERE
   * Operações de união
   * Funções de agregação
-  * Cláusulas`GROUP BY` 
+  * Cláusulas `GROUP BY`
   * Referências de tabela
 * O custo estimado do uso do índice é o custo mais baixo de qualquer mecanismo de acesso considerado pelo otimizador de consulta. 
 * Toda tabela referenciada na consulta (diretamente ou ao expandir uma exibição para acessar suas tabelas subjacentes) que corresponde a uma referência de tabela na exibição indexada deve ter o mesmo conjunto de dicas aplicado na consulta.
@@ -1192,7 +1192,7 @@ GO
  [Eventos estendidos](../relational-databases/extended-events/extended-events.md)  
  [Melhor prática com o Repositório de Consultas](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [Estimativa de cardinalidade](../relational-databases/performance/cardinality-estimation-sql-server.md)  
- [Processamento de consulta adaptável](../relational-databases/performance/adaptive-query-processing.md)   
+ [Processamento de consulta inteligente](../relational-databases/performance/intelligent-query-processing.md)   
  [Precedência de operador](../t-sql/language-elements/operator-precedence-transact-sql.md)    
  [Planos de execução](../relational-databases/performance/execution-plans.md)    
  [Central de desempenho do Mecanismo de Banco de Dados do SQL Server e do Banco de Dados SQL do Azure](../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 346b348f2df1ccb6cd6373dad130b10c71ea1bcb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 4ecb639dd907367a033ef48e15c86828fc908a6b
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679784"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578136"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
   Use este tópico para aprender a criar, modificar e excluir agendas compartilhadas do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] .  Para gerenciar agendas programadas para modo nativo, use a página Agendas no portal da Web ou a pasta Agendas Compartilhadas no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Para o modo do SharePoint, use as páginas de gerenciamento para o aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -34,7 +34,7 @@ ms.locfileid: "47679784"
   
 -   **Portal da Web:** Na página Agendas Compartilhadas da página Configurações do Site, examine os valores nos campos Data da Última Execução, Data da Próxima Execução e Status. Se uma agenda não for mais executada devido à expiração, a data de validade será exibida no campo Status. Para obter mais informações, veja [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md).
   
--   **[!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)]:** Exibindo a página Relatórios de uma determinada agenda compartilhada. Esta página lista todos os relatórios e todos os conjuntos de dados compartilhados que usam a agenda compartilhada. Para obter mais informações, consulte [Reporting Services no SQL Server Management Studio ](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md).
+-   **[!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)]:** Exibindo a página Relatórios de uma determinada agenda compartilhada. Esta página lista todos os relatórios e todos os conjuntos de dados compartilhados que usam a agenda compartilhada. Para obter mais informações, confira [Reporting Services no SQL Server Management Studio](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md).
   
 -  **Logs:** Exibindo os arquivos de log de execução do relatório ou logs de rastreamento para determinar se os relatórios foram executados nos horários especificados pela agenda. Para obter mais informações, consulte [Fontes e arquivos de log do Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   
@@ -138,7 +138,7 @@ clique em **Cancelar**
   
 ## <a name="see-also"></a>Consulte Também  
  [Schedules](../../reporting-services/subscriptions/schedules.md)   
- [Pausar e retomar agendamentos compartilhados](../../reporting-services/subscriptions/pause-and-resume-shared-schedules.md)   
+ [Pause and Resume Shared Schedules](../../reporting-services/subscriptions/pause-and-resume-shared-schedules.md)   
  [Armazenar um relatório em cache &#40;Gerenciador de Relatórios&#41;](../../reporting-services/report-server/cache-a-report-report-manager.md)   
  [Adicionar um instantâneo ao histórico de relatórios &#40;Gerenciador de Relatórios&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)  
   

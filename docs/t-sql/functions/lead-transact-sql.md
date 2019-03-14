@@ -20,12 +20,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fa6df6038d13ffae258a2b71baaaa9b3415ebbc1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 335e923b802e98545ab6cb100d292dfe695202b0
+ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695804"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57572829"
 ---
 # <a name="lead-transact-sql"></a>LEAD (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -49,7 +49,7 @@ LEAD ( scalar_expression [ ,offset ] , [ default ] )
  O número de linhas à frente da linha atual da qual obter um valor. Se não for especificado, o padrão será 1. *offset* pode ser uma coluna, subconsulta ou outra expressão avaliada para um inteiro positivo ou pode ser convertida implicitamente em **bigint**. *offset* não pode ser um valor negativo nem uma função analítica.  
   
  *default*  
- O valor a ser retornado quando *scalar_expression* em *offset* for NULL. Se um valor padrão não for especificado, NULL será retornado. *default* pode ser uma coluna, subconsulta ou outra expressão, mas não pode ser uma função analítica. *default* deve ter o tipo compatível com *scalar_expression*.  
+ O valor a ser retornado quando *offset* estiver além do escopo da partição. Se um valor padrão não for especificado, NULL será retornado. *default* pode ser uma coluna, subconsulta ou outra expressão, mas não pode ser uma função analítica. *default* deve ter o tipo compatível com *scalar_expression*.
   
  OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_**)**  
  *partition_by_clause* divide o conjunto de resultados produzido pela cláusula FROM em partições às quais a função é aplicada. Se não for especificado, a função tratará todas as linhas do conjunto de resultados da consulta como um único grupo. *order_by_clause* determina a ordem dos dados antes de a função ser aplicada. Quando *partition_by_clause* é especificado, ela determina a ordem dos dados em cada partição. *order_by_clause* é obrigatória. Para obter mais informações, consulte [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
@@ -86,7 +86,7 @@ BusinessEntityID SalesYear   CurrentQuota          NextQuota
 275              2006        1324000.00            0.00  
 ```  
   
-### <a name="b-compare-values-within-partitions"></a>B. Comparar valores dentro de partições  
+### <a name="b-compare-values-within-partitions"></a>b. Comparar valores dentro de partições  
  O exemplo a seguir usa a função LEAD para comparar as vendas no ano até o momento entre funcionários. A cláusula PARTITION BY é especificada para particionar as linhas no conjunto de resultados por território de vendas. A função LEAD é aplicada separadamente a cada partição e a computação é reiniciada para cada partição. A cláusula ORDER BY especificada na cláusula OVER ordena as linhas em cada partição antes de a função ser aplicada. A cláusula ORDER BY na instrução SELECT ordena as linhas em todo o conjunto de resultados. Observe que, como não há um valor inicial disponível para a última linha de cada partição, o padrão de zero (0) é retornado.  
   
 ```sql  

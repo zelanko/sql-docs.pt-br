@@ -1,7 +1,7 @@
 ---
 title: Nome de ordenação do Windows (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 03/06/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b871541215597d82d1ccda81cebe1b9cbe3a433
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 49f84b9e41116dd235f219a0487b48770ef4f81f
+ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56827986"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57572839"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Nome de ordenação do Windows (Transact-SQL)
 
@@ -42,7 +42,7 @@ Especifica o nome de ordenação do Windows na cláusula COLLATE em [!INCLUDE[ss
 CollationDesignator_<ComparisonStyle>
 
 <ComparisonStyle> :: =
-{ CaseSensitivity_AccentSensitivity [ _KanatypeSensitive ] [ _WidthSensitive ]
+{ CaseSensitivity_AccentSensitivity [ _KanatypeSensitive ] [ _WidthSensitive ] [ _VariationSelectorSensitive ]
 }
 | { _BIN | _BIN2 }
 ```
@@ -51,41 +51,53 @@ CollationDesignator_<ComparisonStyle>
 
 *CollationDesignator* Especifica as regras de ordenação básicas usadas pela ordenação do Windows. As regras de ordenação básicas abrangem o seguinte:
 
-- As regras de classificação que são aplicadas quando a classificação do dicionário é especificada. As regras de classificação são baseadas no alfabeto ou no idioma.
-- A página de código usada para armazenar dados de caractere não Unicode.
+- As regras de classificação e comparação aplicadas quando a classificação do dicionário é especificada. As regras de classificação são baseadas no alfabeto ou no idioma.
+- A página de código usada para armazenar dados **varchar**.
 
 Alguns exemplos são:
 
-- Latin1_General ou francês: ambos usam página de código 1252.
+- Latin1\_General ou francês: ambos usam a página de código 1252.
 - Turco: usa página de código 1254.
 
-*CaseSensitivity*
+*CaseSensitivity*  
 **CI** especifica que não diferencia maiúsculas de minúsculas, **CS** especifica que diferencia maiúsculas de minúsculas.
 
-*AccentSensitivity*
+*AccentSensitivity*  
 **AI** especifica que não diferencia acentos, **AS** especifica que diferencia acento.
 
-*KanatypeSensitive*
-**Omitted** especifica que não diferencia caracteres kana, **KS** especifica que faz distinção de caracteres kana.
+*KanatypeSensitive*  
+**Omitido** especifica que não diferencia caracteres kana, **KS** especifica que faz distinção de caracteres kana.
 
-*WidthSensitivity*
-**Omitted** especifica que não diferencia largura, **WS** especifica que diferencia largura.
+*WidthSensitivity*  
+**Omitido** especifica que não diferencia largura, **WS** especifica que distingue largura.
 
-**BIN** Especifica a ordem de classificação binária compatível com versões anteriores que será usada.
+*VariationSelectorSensitivity*  
+**Aplica-se ao**: [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
 
-**BIN2** Especifica a ordem de classificação binária que usa semântica de comparação de ponto de código.
+**Omitted** especifica que não diferencia seletor de variação, **VSS** especifica que diferencia seletor de variação.
+
+**BIN**  
+Especifica a ordem de classificação binária compatível com versões anteriores que será usada.
+
+**BIN2**  
+Especifica a ordem de classificação binária que usa semântica de comparação de ponto de código.
 
 ## <a name="remarks"></a>Remarks
 
- Dependendo da versão da ordenação, alguns pontos de código podem estar indefinidos. Por exemplo, compare:
+De acordo com a versão da ordenação, alguns pontos de código podem não ter pesos de classificação e/ou mapeamentos de maiúsculas/minúsculas definidos. Por exemplo, compare a saída da função `LOWER` quando ela recebe o mesmo caractere, mas em diferentes versões da mesma ordenação:
 
 ```sql
-SELECT LOWER(nchar(504) COLLATE Latin1_General_CI_AS);
-SELECT LOWER (nchar(504) COLLATE Latin1_General_100_CI_AS);
-GO
+SELECT NCHAR(504) COLLATE Latin1_General_CI_AS AS [Uppercase],
+       NCHAR(505) COLLATE Latin1_General_CI_AS AS [Lowercase];
+-- Ǹ    ǹ
+
+
+SELECT LOWER(NCHAR(504) COLLATE Latin1_General_CI_AS) AS [Version80Collation],
+       LOWER(NCHAR(504) COLLATE Latin1_General_100_CI_AS) AS [Version100Collation];
+-- Ǹ    ǹ
 ```
 
-A primeira linha retorna um caractere em letra maiúscula quando a ordenação é Latin1_General_CI_AS, porque este ponto de código é indefinido nesta ordenação.
+A primeira instrução mostra as formas maiúsculas e minúsculas desse caractere na ordenação mais antiga (a ordenação não afeta a disponibilidade dos caracteres ao trabalhar usando dados Unicode). No entanto, a segunda instrução mostra que um caractere maiúsculo é retornado quando a ordenação é Latin1\_General\_CI\_AS, porque esse ponto de código não tem um mapeamento de minúsculas definido na ordenação em questão.
 
 Ao trabalhar com alguns idiomas, pode ser crítico evitar ordenações mais antigas. Por exemplo, isso se aplica ao télugu.
 
@@ -95,24 +107,24 @@ Em alguns casos, as ordenações do Windows e ordenações do [!INCLUDE[ssNoVers
 
 A seguir estão alguns exemplos de nomes de ordenação do Windows:
 
-- **Latin1_General_100_**
+- **Latin1\_General\_100\_CI\_AS**
 
-  A ordenação usa as regras de classificação do dicionário Latin1 Geral, página de código 1252. Não diferencia maiúsculas de minúsculas e diferencia acento. A ordenação usa as regras de classificação do dicionário Latin1 Geral e é mapeada para a página de código 1252. Mostrará o número de versão da ordenação se for uma ordenação do Windows: _90 ou _100. Não diferencia maiúsculas de minúsculas (CI) e diferencia acento (AS).
+  A ordenação usa as regras de classificação do dicionário Latin1 Geral e é mapeada para a página de código 1252. É uma versão da ordenação \_100, não diferencia maiúsculas de minúsculas (CI) e diferencia acento (AS).
 
-- **Estonian_CS_AS**
+- **Estonian\_CS\_AS**
 
-  A ordenação usa as regras de classificação do dicionário estoniano, página de código 1257. Diferencia maiúsculas de minúsculas e diferencia acento.
+  A ordenação usa as regras de classificação do dicionário estoniano e mapeia para a página de código 1257. É uma versão de ordenação \_80 (sem indicação do número de versão no nome), diferencia maiúsculas de minúsculas (CS) e diferencia acento (AS).
 
-- **Latin1_General_BIN**
+- **Japanese\_Bushu\_Kakusu\_140\_BIN2**
 
-  A ordenação usa página de código 1252 e regras de classificação binárias. As regras de classificação do dicionário Latin1 Geral são ignoradas.
+  A ordenação usa regras de classificação de ponto de código binário e mapeia para a página de código 932. É uma versão de ordenação \_140 é as regras de classificação do dicionário Japanese Bushu Kakusu são ignoradas.
 
 ## <a name="windows-collations"></a>Ordenações do Windows
 
 Para listar as ordenações do Windows suportadas pela instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], execute a seguinte consulta.
 
 ```sql
-SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
+SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 ```
 
 A tabela a seguir lista todas as ordenações do Windows com suporte no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].

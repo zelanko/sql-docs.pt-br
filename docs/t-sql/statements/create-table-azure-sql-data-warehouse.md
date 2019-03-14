@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 71e394c613f40b56fee354101410aa422d918e86
-ms.sourcegitcommit: 4cf0fafe565b31262e4148b572efd72c2a632241
+ms.openlocfilehash: 52628b3742574bc4e3079750526a5424d65012fe
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56464782"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579657"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (SQL Data Warehouse do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -184,7 +184,7 @@ Igual a `datetime`, exceto que você pode especificar o número de segundos frac
 |`7`|27|7|  
   
  `datetime`  
- Armazena a data e a hora do dia com 19 a 23 caracteres de acordo com o calendário gregoriano. A data pode conter ano, mês e dia. A hora contém horas, minutos e segundos. Como opção, você pode exibir três dígitos para segundos fracionários. O tamanho de armazenamento é de 8 bytes.  
+ Armazena a data e a hora do dia com 19 a 23 caracteres de acordo com o calendário gregoriano. A data pode conter ano, mês e dia. A hora contém horas, minutos e segundos. Como opção, você pode exibir três dígitos para segundos fracionários. O tamanho do armazenamento é de 8 bytes.  
   
  `smalldatetime`  
  Armazena uma data e uma hora. O tamanho de armazenamento é de 4 bytes.  
@@ -222,8 +222,8 @@ Igual a `datetime`, exceto que você pode especificar o número de segundos frac
 | Precisão | Bytes de armazenamento  |  
 | ---------: |-------------: |  
 |  1-9       |             5 |  
-| 10–19      |             9 |  
-| 20–28      |            13 |  
+| 10-19      |             9 |  
+| 20-28      |            13 |  
 | 29-38      |            17 |  
   
  `money` | `smallmoney`  

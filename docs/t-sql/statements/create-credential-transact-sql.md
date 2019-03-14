@@ -25,12 +25,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 91cc75f835320b6cf15c20cbb7d72101dc2868df
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: e9fba374be6a12a440138e3fa6a70975c5d3fdd7
+ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327777"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57556158"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -146,10 +146,12 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
 ### <a name="d-creating-a-credential-using-a-sas-token"></a>D. Criando uma credencial usando um token SAS  
  **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
- O exemplo a seguir cria uma credencial de assinatura de acesso compartilhado usando um token SAS.  Veja um tutorial sobre como criar uma política de acesso armazenado e uma assinatura de acesso compartilhado em um contêiner do Azure e, depois, criar uma credencial usando a assinatura de acesso compartilhado no [Tutorial: usar o serviço de Armazenamento de Blobs do Microsoft Azure com os bancos de dados do SQL Server 2016](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
+ O exemplo a seguir cria uma credencial de assinatura de acesso compartilhado usando um token SAS.  Veja um tutorial sobre como criar uma política de acesso armazenado e uma assinatura de acesso compartilhado em um contêiner do Azure e, depois, criar uma credencial usando a assinatura de acesso compartilhado no [Tutorial: Como usar o serviço de Armazenamento de Blobs do Microsoft Azure com os bancos de dados do SQL Server 2016](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
 > [!IMPORTANT]  
 >  O argumento **CREDENTIAL NAME** exige que o nome corresponda ao caminho do contêiner, comece com https e não contenha uma barra "/" à direita. O argumento **IDENTITY** exige o nome, *SHARED ACCESS SIGNATURE*. O argumento **SECRET** exige o token de assinatura de acesso compartilhado.  
+>
+>  O **segredo de SHARED ACCESS SIGNATURE** não deve ter **?** à esquerda.
   
 ```  
 USE master  

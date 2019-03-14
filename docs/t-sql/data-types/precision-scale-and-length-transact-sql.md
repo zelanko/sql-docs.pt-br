@@ -22,12 +22,12 @@ ms.assetid: fbc9ad2c-0d3b-4e98-8fdd-4d912328e40a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4a5023afdfe6b1ebe4267c0bff9741f6651e4bde
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a27c434bb10b863459b138f98b9974b4d25794c3
+ms.sourcegitcommit: 5285fe5402d4ecb5788a1a89e200cc31b9006c31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020417"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57401788"
 ---
 # <a name="precision-scale-and-length-transact-sql"></a>Precisão, escala e comprimento (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ A tabela a seguir define como a precisão e a escala do resultado são calculada
 -   As duas expressões são do tipo **decimal**.  
 -   Uma expressão é **decimal** e a outra é um tipo de dados com uma precedência inferior a **decimal**.  
   
-As expressões de operandos são indicadas como expressão e1, com precisão p1 e escala s1, e expressão e2, com precisão p2 e escala s2. A precisão e a escala de qualquer expressão que não seja **decimal** é aquela do tipo de dados da expressão.
+As expressões de operandos são indicadas como expressão e1, com precisão p1 e escala s1, e expressão e2, com precisão p2 e escala s2. A precisão e a escala de qualquer expressão que não seja **decimal** serão aquelas definidas para o tipo de dados da expressão. A função max(a,b) significa o seguinte: obter o maior valor de "a" ou "b". Da mesma forma, min(a,b) obterá o menor valor de "a" ou "b".
   
 |Operação|Precisão de resultado|Escala de resultado*|  
 |---|---|---|

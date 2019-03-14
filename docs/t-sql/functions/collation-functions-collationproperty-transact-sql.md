@@ -20,17 +20,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01459443d4fbcfeb770f24fad61adabc0bc1dc91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 66a53dcece274df879242ac8a7d3315882bad84f
+ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785914"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57572789"
 ---
-# <a name="collation-functions---collationproperty-transact-sql"></a>Funções de agrupamento – COLLATIONPROPERTY (Transact-SQL)
+# <a name="collation-functions---collationproperty-transact-sql"></a>Funções de ordenação – COLLATIONPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Essa função retorna a propriedade de um agrupamento especificado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+Essa função retorna a propriedade solicitada de uma ordenação especificada.
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -42,17 +42,17 @@ COLLATIONPROPERTY( collation_name , property )
   
 ## <a name="arguments"></a>Argumentos  
 *collation_name*  
-O nome do agrupamento. O argumento *collation_name* tem um tipo de dados **nvarchar (128)** sem nenhum valor padrão.
+O nome da ordenação. O argumento *collation_name* tem um tipo de dados **nvarchar (128)** sem nenhum valor padrão.
   
 *property*  
 A propriedade Collation. O argumento *property* tem um tipo de dados **varchar (128)** e pode ter qualquer um dos seguintes valores:
   
 |Nome da propriedade|Descrição|  
 |---|---|
-|**CodePage**|Página de código de não Unicode do agrupamento. Veja o [Apêndice G: Tabelas de mapeamento do DBCS/Unicode](https://msdn.microsoft.com/library/cc194886.aspx) e o [Apêndice H: Páginas de código](https://msdn.microsoft.com/library/cc195051.aspx) para converter esses valores e ver seus mapeamentos de caracteres.|  
-|**LCID**|Windows LCID do agrupamento. Veja a [Estrutura de LCID](https://msdn.microsoft.com/library/cc233968.aspx) para converter esses valores (você precisará converter **varbinary** primeiro).|  
-|**ComparisonStyle**|Estilo de comparação do agrupamento do Windows. Retorna 0 para todos os agrupamentos binários, tanto (\_BIN) quanto (\_BIN2), bem como quando todas as propriedades diferenciam maiúsculas e minúsculas. Valores de bitmask:<br /><br /> Ignorar maiúsculas e minúsculas: 1<br /><br /> Ignorar acento: 2<br /><br /> Ignorar Kana: 65536<br /><br /> Ignorar largura: 131072<br /><br /> Observação: a opção \_VSS (seletor sensível à variação) não é representada nesse valor, embora afete o comportamento da comparação.|  
-|**Versão**|A versão do agrupamento, derivada do campo de versão de ID do agrupamento. Retorna um valor inteiro entre 0 e 3.<br /><br /> Agrupamentos com "140" no nome retornam 3.<br /><br /> Agrupamentos com "100" no nome retornam 2.<br /><br /> Agrupamentos com "90" no nome retornam 1.<br /><br /> Todos os outros agrupamentos retornam 0.|  
+|**CodePage**|Página de código de não Unicode da ordenação. É o conjunto de caracteres usado para dados **varchar**. Veja o [Apêndice G: Tabelas de mapeamento do DBCS/Unicode](https://msdn.microsoft.com/library/cc194886.aspx) e o [Apêndice H: Páginas de código](https://msdn.microsoft.com/library/cc195051.aspx) para converter esses valores e ver seus mapeamentos de caracteres.<br /><br />Tipo de dados base: **int**|  
+|**LCID**|ID de localidade do Windows da ordenação. É a cultura usada para regras de classificação e comparação. Veja a [Estrutura de LCID](https://msdn.microsoft.com/library/cc233968.aspx) para converter esses valores (você precisará converter **varbinary** primeiro).<br /><br />Tipo de dados base: **int**|  
+|**ComparisonStyle**|Estilo de comparação da ordenação do Windows. Retorna 0 para ordenações primárias – (\_BIN) e (\_BIN2) – bem como quando todas as propriedades são confidenciais – (\_CS\_AS\_KS\_WS), (\_CS\_AS\_KS\_WS\_SC) e (\_CS\_AS\_KS\_WS\_VSS). Valores de bitmask:<br /><br /> Ignorar maiúsculas e minúsculas: 1<br /><br /> Ignorar acento: 2<br /><br /> Ignorar Kana: 65536<br /><br /> Ignorar largura: 131072<br /><br /> Observação: a opção \_VSS (seletor sensível à variação) não é representada nesse valor, embora afete o comportamento da comparação.<br /><br />Tipo de dados base: **int**|  
+|**Versão**|A versão da ordenação. Retorna um valor entre 0 e 3.<br /><br /> Ordenações com "140" no nome retornam 3.<br /><br /> Ordenações com "100" no nome retornam 2.<br /><br /> Ordenações com "90" no nome retornam 1.<br /><br /> Todas as outras ordenações retornam 0.<br /><br />Tipo de dados base: **tinyint**|  
   
 ## <a name="return-types"></a>Tipos de retorno
 **sql_variant**

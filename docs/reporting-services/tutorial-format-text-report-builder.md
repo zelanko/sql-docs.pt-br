@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ddc7aefa65f87e5647186358e0f7ae0019964ff0
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+ms.openlocfilehash: 42d55cf53d282b2c092769cf4435fd240ba0cbce
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289625"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579336"
 ---
 # <a name="tutorial-format-text-report-builder"></a>Tutorial: Formatar texto (Construtor de Relatórios)
 
@@ -50,7 +50,7 @@ Para obter informações sobre os requisitos, consulte [Pré-requisitos para tut
 
     Se o painel **Dados do Relatório** não estiver visível, na guia **Exibir** , marque **Dados do Relatório**.
   
-2.  Na caixa **Nome**, digite: **TextDataSource**  
+2.  Na caixa **Nome** , digite: **TextDataSource**  
   
 3.  Clique em **Usar uma conexão inserida no meu relatório**.  
   
@@ -67,7 +67,7 @@ Para obter informações sobre os requisitos, consulte [Pré-requisitos para tut
   
 2.  Verifique se a fonte de dados é **TextDataSource**.  
   
-3.  Na caixa **Nome**, digite: **TextDataset.**  
+3.  Na caixa **Nome** , digite: **TextDataset.**  
   
 4.  Verifique se o tipo de consulta **Texto** está selecionado e, em seguida, clique em **Designer de Consulta**.  
   
@@ -355,9 +355,9 @@ O relatório será salvo no servidor de relatório. O nome do servidor de relat�
 
 ## <a name="next-steps"></a>Next Steps
 
-Há várias maneiras de formatar um texto no Construtor de Relatórios. [Tutorial: Criar um relatório de forma livre](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contém mais exemplos.  
+Há várias maneiras de formatar um texto no Construtor de Relatórios. O [Tutorial: Criação de um relatório de forma livre](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contém mais exemplos.  
 
-[Tutoriais do Construtor de Relatórios ](../reporting-services/report-builder-tutorials.md) 
+[Tutoriais do Construtor de Relatórios](../reporting-services/report-builder-tutorials.md) 
 [Formatação de Itens de Relatório](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
 [Construtor de Relatórios no SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 

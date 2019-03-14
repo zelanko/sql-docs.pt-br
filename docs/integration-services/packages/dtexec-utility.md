@@ -11,12 +11,12 @@ ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7e213eb323de92abf048bdd94e8e2463f42f5cb3
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: cf64e248d8fb9cb727114521cac9b6444fc1f710
+ms.sourcegitcommit: 5285fe5402d4ecb5788a1a89e200cc31b9006c31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591420"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57401878"
 ---
 # <a name="dtexec-utility"></a>Utilitário dtexec
   O utilitário de prompt de comando **dtexec** é usado para configurar e executar pacotes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . O utilitário **dtexec** fornece acesso a toda a configuração e recursos de execução de pacotes, como parâmetros, conexões, propriedades, variáveis, logs e indicadores de progresso. O utilitário **dtexec** permite carregar pacotes destas origens: do servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , de um arquivo de projeto .ispac, de um banco de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , do Armazenamento de Pacotes do [!INCLUDE[ssIS](../../includes/ssis-md.md)] e do sistema de arquivos.  
@@ -38,6 +38,8 @@ ms.locfileid: "53591420"
 -   [Regras de sintaxe](#syntaxRules)  
   
 -   [Usando dtexec a partir do xp_cmdshell](#cmdshell)  
+
+-   [Usanr dtexec no Bash](#bash)
   
 -   [Sintaxe](#syntax)  
   
@@ -139,7 +141,15 @@ EXEC @returncode = xp_cmdshell 'dtexec /f "C:\UpsertData.dtsx"'
 ```  
   
 > **IMPORTANTE:** No [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a opção **xp_cmdshell** é desabilitada por padrão nas novas instalações. A opção pode ser habilitada com a execução do procedimento armazenado de sistema **sp_configure** . Para obter mais informações, veja [Opção de configuração de servidor xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
-  
+
+##  <a name="bash"></a> Usar dtexec no Bash
+
+O shell **Bash** é um shell popular para Linux. Ele também pode ser usado no Windows. Você pode executar o dtexec no prompt do Bash. Observe que um ponto e vírgula (`;`) é um operador de delimitador de comando no Bash. Isso é particularmente importante ao passar valores para o pacote usando as opções `/Conn[ection]`, `/Par[arameter]` ou '`/Set`, pois elas usam o ponto e vírgula para separar o nome e o valor do item fornecido. O exemplo a seguir mostra como escapar corretamente o ponto e vírgula e outros itens ao usar o Bash e passar valores para um pacote:
+
+```bash
+dtexec /F MyPackage.dtsx /CONN "MyConnection"\;"\"MyConnectionString\""
+```
+
 ##  <a name="syntax"></a> Sintaxe  
   
 ```  
@@ -449,7 +459,7 @@ dtexec /option [value] [/option [value]]...
   
     > **IMPORTANTE:** Quando configurado para verificar a assinatura do pacote, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] apenas verifica se a assinatura digital está presente, se é válida e se provém de uma origem confiável. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] não verifica se o pacote foi alterado.  
   
-    > **OBSERVAÇÃO:** O valor opcional do Registro **BlockedSignatureStates** pode especificar uma configuração mais restritiva do que a opção de assinatura digital definida no ** ou na linha de comando do **dtexec** . Nesta situação, a configuração de Registro mais restritiva substitui as outras configurações.  
+    > **OBSERVAÇÃO:** O valor opcional do Registro **BlockedSignatureStates** pode especificar uma configuração mais restritiva do que a opção de assinatura digital definida no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou na linha de comando do **dtexec** . Nesta situação, a configuração de Registro mais restritiva substitui as outras configurações.  
   
 -   **/VerifyV[ersionID]** _versionID_: (Opcional). Verifica o GUID de versão do pacote a ser executado, comparando-o ao valor especificado no argumento *version_id* durante a fase de validação do pacote.  
   
