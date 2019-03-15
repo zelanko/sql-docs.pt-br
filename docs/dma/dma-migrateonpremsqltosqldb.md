@@ -2,7 +2,7 @@
 title: Migrar SQL Server no local ou o SQL Server em VMs do Azure para o banco de dados SQL usando o Assistente de migração de dados | Microsoft Docs
 description: Saiba como usar o Assistente de migração de dados para migrar um SQL Server no local para o banco de dados SQL
 ms.custom: ''
-ms.date: 10/20/2018
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,21 +12,21 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, on-premises SQL Server
 ms.assetid: ''
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: db4b48d736b46c0381749943916272e763a077c7
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: d807396f7c8bd334de38cdc1744f6bee90d619e0
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643844"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57974055"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>Migrar SQL Server no local ou o SQL Server em VMs do Azure para banco de dados do SQL Azure usando o Assistente de migração de dados
 
 O Assistente de migração de dados fornece perfeitas avaliações do SQL Server local e as atualizações para versões posteriores do SQL Server ou as migrações para o SQL Server em VMs do Azure ou banco de dados SQL.
 
-Este artigo fornece instruções passo a passo para migração do SQL Server local para o banco de dados SQL usando o Assistente de migração de dados.   
+Este artigo fornece instruções passo a passo para migração do SQL Server local para o banco de dados SQL usando o Assistente de migração de dados.   
 
 ## <a name="create-a-new-migration-project"></a>Criar um novo projeto de migração
 

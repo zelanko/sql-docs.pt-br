@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f148c4cee111febc5d1e0203cc5eb484ec556d4f
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 16f3ffbbd1435e9006bcbc26c86fb53dfca9bf65
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801340"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973126"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Baixe e instale o Azure Data Studio
 
@@ -38,11 +38,12 @@ Para obter detalhes sobre a versão mais recente, consulte as [notas de versão]
 
 ## <a name="get-azure-data-studio-for-windows"></a>Obter o Azure Data Studio para o Windows
 
-Esta versão do [!INCLUDE[name-sos](../includes/name-sos-short.md)] inclui um instalador padrão do Windows e um arquivo .zip:
+Esta versão do [!INCLUDE[name-sos](../includes/name-sos-short.md)] inclui uma experiência padrão do Windows installer e um arquivo. zip.
+
+O *instalador do usuário* é recomendado porque ele não requer privilégios de administrador, que simplifica a instalações e atualizações. O instalador do usuário não requer privilégios de administrador que o local está na sua pasta de AppData Local (LOCALAPPDATA) do usuário. O instalador do usuário também fornece uma experiência mais suave de atualização em segundo plano. Para obter mais informações, consulte [configuração do usuário para Windows](https://code.visualstudio.com/updates/v1_26#_user-setup-for-windows).
+
 
 **Instalador de usuário** (recomendado)
-
-O instalador do usuário é recomendado porque ele não requer privilégios de administrador, que simplifica a instalações e atualizações.
 
 1. Baixe e execute o [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] *usuário* instalador para Windows](https://go.microsoft.com/fwlink/?linkid=2072725).
 2. Inicie o aplicativo [!INCLUDE[name-sos-short](../includes/name-sos-short.md)].

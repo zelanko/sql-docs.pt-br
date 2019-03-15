@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/20/2017
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,17 +14,17 @@ ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 41732b25c7b2c02f5b6b8a319e057d204a3a3384
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 455fe1c3f5a19b498730909f1c56bf98b03ae51b
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611375"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57972765"
 ---
 # <a name="creating-a-connection-string"></a>Criando uma cadeia de conexão
 Uma cadeia de caracteres de conexão consiste em uma lista de pares de valor do argumento (ou seja, parâmetros), separada por ponto e vírgula. Por exemplo:  
   
-```  
+```syntax
 "arg1=val1; arg2=val2; ... argN=valN;"  
 ```  
   
@@ -32,7 +32,7 @@ Uma cadeia de caracteres de conexão consiste em uma lista de pares de valor do 
   
  ADO reconhece os seguintes cinco argumentos em uma cadeia de conexão.  
   
-|Argumento|Description|  
+|Argumento|Descrição|  
 |--------------|-----------------|  
 |*Provedor*|Especifica o nome de um provedor a ser usado para a conexão.|  
 |*Nome do Arquivo*|Especifica o nome de um arquivo específico do provedor (por exemplo, um objeto de fonte de dados persistentes) que contém informações de conexão predefinidos.|  
@@ -42,9 +42,9 @@ Uma cadeia de caracteres de conexão consiste em uma lista de pares de valor do 
   
  Outros argumentos são passados para o provedor nomeado na *provedor* argumento, sem nenhum processamento pelo ADO.  
   
- O aplicativo HelloData no [HelloData: um simples aplicativo de ADO](../../../ado/guide/data/hellodata-a-simple-ado-application.md) usada a seguinte cadeia de conexão:  
+ O aplicativo HelloData no [HelloData: Um aplicativo ADO simples](../../../ado/guide/data/hellodata-a-simple-ado-application.md) usada a seguinte cadeia de conexão:  
   
-```  
+```vb
 m_sConnStr = "Provider=SQLOLEDB;Data Source=MySqlServer;" & _  
              "Initial Catalog=Northwind;Integrated Security='SSPI';"  
 ```  
@@ -53,7 +53,7 @@ m_sConnStr = "Provider=SQLOLEDB;Data Source=MySqlServer;" & _
   
  Acordo com o OLE DB Provider para SQL Server, você pode substituir "Server" para o *fonte de dados* parâmetro e "Banco de dados" para o *catálogo inicial* parâmetro. Assim, a cadeia de conexão a seguir geraria resultados idênticos àquele acima:  
   
-```  
+```vb
 m_sConnStr = "Provider=SQLOLEDB;Server=MySqlServer;" & _  
              "Database=Northwind;Integrated Security='SSPI';"  
 ```

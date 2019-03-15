@@ -3,55 +3,45 @@ title: Operacionalizar o código R usando procedimentos armazenados – serviço
 description: Inserir o código de idioma R em um procedimento armazenado do SQL Server para torná-lo disponível para qualquer aplicativo cliente que têm acesso a um banco de dados do SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 03/15/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3fc96e57fffb3e000a7e1a19887ed27651df9009
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 2b8e6a655ef96da042575a3b48809dbad1215242
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432179"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57976266"
 ---
-# <a name="operationalize-r-code-machine-learning-services"></a>Operacionalizar o código de R (serviços de Machine Learning)
+# <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>Operacionalizar o código R usando procedimentos armazenados no SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Os desenvolvedores de banco de dados são responsáveis por integrar várias tecnologias e reunir os resultados para que possam ser compartilhados por toda a empresa. O desenvolvedor de banco de dados funciona com os desenvolvedores de aplicativos, os desenvolvedores SQL e os cientistas de dados para projetar e implantar soluções.
+Ao usar os recursos de R e Python em serviços do SQL Server Machine Learning, a abordagem mais comum para mover as soluções para um ambiente de produção está inserindo o código em procedimentos armazenados. Este artigo resume os principais pontos para o desenvolvedor do SQL a considerar ao operacionalização código R usando o SQL Server.
 
-Este artigo resume os principais pontos para o desenvolvedor de banco de dados a serem considerados ao operacionalização código R usando o SQL Server.
+## <a name="deploy-production-ready-script-using-t-sql-and-stored-procedures"></a>Implantar o script pronta para produção usando o T-SQL e procedimentos armazenados
 
-## <a name="get-started-with-r-code-in-sql-server"></a>Introdução ao código R no SQL Server
+Integração de soluções de ciência de dados tem significado tradicionalmente recodificar extensivo para dar suporte a desempenho e a integração. Serviços do SQL Server Machine Learning simplifica essa tarefa, pois o código R e Python pode ser executado no SQL Server e chamado usando procedimentos armazenados. Para obter mais informações sobre a mecânica de incorporação de código em procedimentos armazenados, consulte:
 
-Tradicionalmente, integração de soluções de aprendizado de máquina tem significava recodificar extensivo para dar suporte a desempenho e a integração. No entanto, mover o código R e Python em um ambiente de produção é muito mais fácil no SQL Server Machine Learning Services, porque o código pode ser executado no SQL Server e chamado usando procedimentos armazenados. Você pode continuar a usar ferramentas familiares e não precisa instalar um ambiente de desenvolvimento de R. 
-
-Para obter mais informações sobre a sintaxe básica, consulte:
-
++ [Guia de início rápido: Script de R "Hello world" no SQL Server](../../advanced-analytics/tutorials//quickstart-r-run-using-tsql.md)
 + [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
-+ [Usando o código R no SQL](../../advanced-analytics/tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md).
 
-Para obter um exemplo de como você pode implantar o código R em produção, usando procedimentos armazenados, consulte:
+Um exemplo mais completo de implantar o código R em produção, usando procedimentos armazenados pode ser encontrado em [Tutorial: Análise de dados de R para desenvolvedores do SQL](../../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)
 
-+ [No banco de dados do Analytics para desenvolvedores do SQL](../../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md).
+## <a name="guidelines-for-optimizing-r-code-for-sql"></a>Diretrizes para otimizar o código R para SQl
 
-## <a name="optimize-your-r-code"></a>Otimizar seu código R
-
-É claro, convertendo seu código R no SQL é mais fácil se algumas otimizações são feitas com antecedência no código R ou Python. Eles incluem evitando os tipos de dados que causam problemas, evitando as conversões de dados desnecessários e reescrever o código de R como uma única chamada de função que pode ser facilmente parametrizada. Para obter mais informações, consulte:
+Convertendo seu código R no SQL é mais fácil se algumas otimizações são feitas com antecedência no código R ou Python. Eles incluem evitando os tipos de dados que causam problemas, evitando as conversões de dados desnecessários e reescrever o código de R como uma única chamada de função que pode ser facilmente parametrizada. Para obter mais informações, consulte:
 
 + [Tipos de dados e bibliotecas do R](r-libraries-and-data-types.md)
-
 + [Convertendo código R para uso no R Services](converting-r-code-for-use-in-sql-server.md)
-
 + [Usar funções auxiliares de sqlrutils](ref-r-sqlrutils.md)
 
 ## <a name="integrate-r-and-python-with-applications"></a>Integrar o R e Python com aplicativos
 
-Porque você pode iniciar os serviços de aprendizado de máquina de um procedimento armazenado, você pode executar scripts R ou Python de qualquer aplicativo que possa enviar uma instrução T-SQL e lidar com os resultados.
+Como R ou Python pode ser executado de um procedimento armazenado, você pode executar scripts em qualquer aplicativo que possa enviar uma instrução T-SQL e lidar com os resultados. Por exemplo, você pode treinar novamente um modelo em um agendamento usando o [tarefa executar T-SQL](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task) no Integration Services, ou usando outro Agendador de trabalho que pode executar um procedimento armazenado.
 
-Por exemplo, você pode treinar novamente um modelo em um agendamento usando a tarefa executar T-SQL no Integration Services, ou usar outro Agendador de trabalho que pode executar um procedimento armazenado.
-
-A pontuação é uma tarefa importante que pode facilmente ser automatizada ou iniciada a partir de aplicativos externos. Treinar o modelo com antecedência, usando o R ou Python ou um procedimento armazenado e salvar o modelo em formato binário em uma tabela. Em seguida, o modelo pode ser carregado em uma variável como parte de uma chamada de procedimento armazenado, usando uma destas opções para a pontuação do T-SQL:
+A pontuação é uma tarefa importante que pode facilmente ser automatizada ou iniciada a partir de aplicativos externos. Treinar o modelo com antecedência, usando o R ou Python ou um procedimento armazenado, e [salvar o modelo em formato binário](../tutorials/walkthrough-build-and-save-the-model.md) a uma tabela. Em seguida, o modelo pode ser carregado em uma variável como parte de uma chamada de procedimento armazenado, usando uma destas opções para a pontuação do T-SQL:
 
 + [Em tempo real](../real-time-scoring.md) pontuação, otimizado para pequenos lotes
 + Pontuação, para chamar a partir de um aplicativo de linha única
@@ -69,7 +59,7 @@ Vejam esses modelos de solução para obter exemplos de como integrar um aplicat
 
 ## <a name="boost-performance-and-scale"></a>Aumentar o desempenho e escala
 
-Embora a linguagem R de software livre tenha limitações, o pacote RevoScaleR APIs podem operar em grandes conjuntos de dados e se beneficiar de cálculos no banco de dados de vários segmentos, com vários núcleos e vários processos.
+Embora a linguagem R de software livre tenha limitações em relação a grandes conjuntos de dados, o [APIs do pacote RevoScaleR](ref-r-revoscaler.md) incluído com o serviço do SQL Server Machine Learning podem operar em grandes conjuntos de dados e se beneficiar com multithread , cálculos de no banco de dados de vários núcleos e vários processos.
 
 Se sua solução R usa agregações complexas ou envolve grandes conjuntos de dados, você pode aproveitar as agregações de altamente eficientes em memória e índices columnstore do SQL Server e deixar que o código R tratar os cálculos estatísticos e de pontuação.
 
@@ -80,15 +70,11 @@ Para obter mais informações sobre como melhorar o desempenho no SQL Server Mac
 
 ## <a name="adapt-r-code-for-other-platforms-or-compute-contexts"></a>Adaptar o código de R para outras plataformas ou contextos de computação
 
-O mesmo código R executado nos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dados podem ser usados em outras fontes de dados, como Hadoop e em outros contextos de computação.
+O mesmo código R executado nos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dados podem ser usados em outras fontes de dados, como o Spark em HDFS, quando você usa o [opção de servidor autônoma](../install/sql-machine-learning-standalone-windows-install.md) na instalação do SQL Server ou quando você instala o produto com marca de não-SQL, Microsoft Machine Learning Server (anteriormente conhecida como **Microsoft R Server**):
 
-Para obter mais informações sobre as plataformas com suporte pelo Microsoft R, consulte:
++ [Documentação do servidor do Machine Learning](https://docs.microsoft.com/r-server/)
 
-+ [Introdução ao Microsoft R](https://docs.microsoft.com/r-server/)
-
-+ [Explore o RevoScaleR](https://docs.microsoft.com/r-server/r/tutorial-r-to-revoscaler)
-
-Para obter mais informações sobre como você pode otimizar suas soluções do Microsoft R para execução em várias plataformas ou de dados grandes, consulte:
++ [Explorar R para RevoScaleR](https://docs.microsoft.com/r-server/r/tutorial-r-to-revoscaler)
 
 + [Algoritmos de agrupamento de gravação](https://docs.microsoft.com/r-server/r/how-to-developer-write-chunking-algorithms)
 

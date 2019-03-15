@@ -3,17 +3,17 @@ title: Instalação de componentes de R e Python – Machine Learning do SQL Ser
 description: Execute a instalação de linha de comando do SQL Server para adicionar a linguagem R e a integração do Python para uma instância do mecanismo de banco de dados do SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/21/2018
+ms.date: 03/13/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8e3c101eae8e02446a9e47b17255e2ca2b501774
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 3f78447054d96f1552ae09c62f3b8a2f18bc58bf
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645508"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57976346"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>Instalar componentes da linha de comando do R e Python de aprendizado de máquina do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -48,7 +48,7 @@ Quando você instala pelo prompt de comando, o [!INCLUDE[ssNoVersion](../../incl
 
 | Argumentos | Descrição |
 |-----------|-------------|
-| / RECURSOS = AdvancedAnalytics | Instala a versão no banco de dados: Serviços de Machine Learning do SQL Server 2017 (no banco de dados) ou SQL Server 2016 R Services (no banco de dados).  |
+| /FEATURES = AdvancedAnalytics | Instala a versão no banco de dados: Serviços de Machine Learning do SQL Server 2017 (no banco de dados) ou SQL Server 2016 R Services (no banco de dados).  |
 | /FEATURES = SQL_INST_MR | Aplica-se ao SQL Server 2017 apenas. Combinar isso com AdvancedAnalytics. Instala o recurso (no banco de dados) R, incluindo Microsoft R Open e pacotes de R proprietários. O recurso do SQL Server 2016 R Services é R somente, portanto, não há nenhum parâmetro para essa versão.|
 | /FEATURES = SQL_INST_MPY | Aplica-se ao SQL Server 2017 apenas. Combinar isso com AdvancedAnalytics. Instala o recurso de Python (no banco de dados), incluindo Anaconda e os pacotes do Python proprietários. |
 | /FEATURES = SQL_SHARED_MR | Instala o recurso do R para a versão autônoma: SQL Server 2017 Machine Learning Server (autônomo) ou SQL Server 2016 R Server (autônomo). Um servidor autônomo é um "recurso compartilhado" não associado a uma instância do mecanismo de banco de dados.|
@@ -57,7 +57,7 @@ Quando você instala pelo prompt de comando, o [!INCLUDE[ssNoVersion](../../incl
 | /IACCEPTPYTHONLICENSETERMS | Indica que você aceitou os termos de licença para usar os componentes do Python. |
 | /IACCEPTSQLSERVERLICENSETERMS | Indica que você aceitou os termos de licença para usar o SQL Server.|
 | /MRCACHEDIRECTORY | Para a instalação offline, define a pasta que contém os arquivos de CAB do componente de R. |
-| / MPYCACHEDIRECTORY | Para a instalação offline, define a pasta que contém os arquivos de CAB do componente de Python. |
+| / MPYCACHEDIRECTORY | Reservado para uso futuro. Use % TEMP % para armazenar arquivos de CAB do componente de Python para instalação em computadores que não têm uma conexão de internet. |
 
 
 ## <a name="indb"></a> No banco de dados instalações de instâncias
@@ -132,13 +132,13 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQL_INST_MR /INSTANCENAME=MSSQLSERVER
 
 ## <a name="silent"></a> Instalação silenciosa
 
-Uma instalação silenciosa suprime a verificação de locais de arquivo. cab. Por esse motivo, você deve especificar o local em que os arquivos. cab devem ser descompactada. Você pode o diretório temporário para isso.
+Uma instalação silenciosa suprime a verificação de locais de arquivo. cab. Por esse motivo, você deve especificar o local em que os arquivos. cab devem ser descompactada. Para Python, arquivos CAB devem estar localizados em % TEMP *. Para R, você pode definir a pasta de caminho usando, você pode o diretório temporário para isso.
  
 ```cmd  
 Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,SQL_INST_MPY 
 /INSTANCENAME=MSSQLSERVER /SQLSYSADMINACCOUNTS="<username>" 
 /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS 
-/MRCACHEDIRECTORY=%temp% /MPYCACHEDIRECTORY=%temp%
+/MRCACHEDIRECTORY=%temp% 
 ```
 
 ## <a name="shared-feature"></a> Instalações autônomas de servidores

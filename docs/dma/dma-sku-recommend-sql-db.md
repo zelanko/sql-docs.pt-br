@@ -2,7 +2,7 @@
 title: Identificar a SKU certa de banco de dados de SQL do Azure para seu banco de dados local (Assistente de migração de dados) | Microsoft Docs
 description: Saiba como usar o Assistente de migração de dados para identificar o direito de SKU de banco de dados SQL do Azure para seu banco de dados local
 ms.custom: ''
-ms.date: 01/11/2019
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 002a9fc587d742c235aedb0f773864296bdf645b
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: 578e6ac47e84ad764cb050112eae768ff21444f3
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226493"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973815"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>Identificar a SKU certa de banco de dados de SQL do Azure para seu banco de dados local
 
@@ -75,22 +75,22 @@ Use o arquivo de saída de contadores de desempenho da etapa anterior como entra
 
 Execute o dmacmd.exe com os seguintes argumentos:
 
-- **/ Ação = SkuRecommendation**: Insira esse argumento para executar avaliações de SKU.
-- **/ SkuRecommendationInputDataFilePath**: O caminho para o arquivo de contador são coletados na seção anterior.
-- **/ SkuRecommendationTsvOutputResultsFilePath**: O caminho para gravar os resultados de saída no formato TSV.
-- **/ SkuRecommendationJsonOutputResultsFilePath**: O caminho para gravar os resultados de saída no formato JSON.
-- **/ SkuRecommendationHtmlResultsFilePath**: Caminho no qual gravar os resultados de saída no formato HTML.
+- **/Action=SkuRecommendation**: Insira esse argumento para executar avaliações de SKU.
+- **/SkuRecommendationInputDataFilePath**: O caminho para o arquivo de contador são coletados na seção anterior.
+- **/SkuRecommendationTsvOutputResultsFilePath**: O caminho para gravar os resultados de saída no formato TSV.
+- **/SkuRecommendationJsonOutputResultsFilePath**: O caminho para gravar os resultados de saída no formato JSON.
+- **/SkuRecommendationHtmlResultsFilePath**: Caminho no qual gravar os resultados de saída no formato HTML.
 
 Além disso, você precisa escolher um dos argumentos a seguir:
 - Impedir que a atualização de preço
-    - **/ SkuRecommendationPreventPriceRefresh**: Impede que o preço de atualização ocorra. Use se executando no modo offline.
+    - **/SkuRecommendationPreventPriceRefresh**: Impede que o preço de atualização ocorra. Use se executando no modo offline.
 - Obter os preços mais recentes 
-    - **/ SkuRecommendationCurrencyCode**: A moeda na qual exibir os preços (por exemplo "US").
-    - **/ SkuRecommendationOfferName**: A oferta de nome (por exemplo "MS-AZR - 0003P"). Para obter mais informações, consulte o [detalhes da oferta do Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) página.
-    - **/ SkuRecommendationRegionName**: A região (por exemplo, nomeie "Oeste dos EUA").
-    - **/ SkuRecommendationSubscriptionId**: A ID da assinatura.
-    - **/ AzureAuthenticationTenantId**: O locatário de autenticação.
-    - **/ AzureAuthenticationClientId**: A ID do cliente do aplicativo AAD usado para autenticação.
+    - **/SkuRecommendationCurrencyCode**: A moeda na qual exibir os preços (por exemplo "US").
+    - **/SkuRecommendationOfferName**: A oferta de nome (por exemplo "MS-AZR-0003P"). Para obter mais informações, consulte o [detalhes da oferta do Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) página.
+    - **/SkuRecommendationRegionName**: A região (por exemplo, nomeie "WestUS").
+    - **/SkuRecommendationSubscriptionId**: A ID da assinatura.
+    - **/AzureAuthenticationTenantId**: O locatário de autenticação.
+    - **/AzureAuthenticationClientId**: A ID do cliente do aplicativo AAD usado para autenticação.
     - Uma das seguintes opções de autenticação:
         - Interativo
             - **AzureAuthenticationInteractiveAuthentication**: Definido como true para uma janela pop-up de autenticação.

@@ -2,7 +2,7 @@
 title: Práticas recomendadas para o Assistente de migração de dados (SQL Server) | Microsoft Docs
 description: Conheça as práticas recomendadas para migrar bancos de dados do SQL Server com o Assistente de migração de dados
 ms.custom: ''
-ms.date: 10/20/2018
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Best Practices
 ms.assetid: ''
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 79eade425e87da3784221686b7ccdc99e85b96bc
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: cb355cbe1e32c97e59d61eb55ca70023b03acd6b
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643824"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973665"
 ---
 # <a name="best-practices-for-running-data-migration-assistant"></a>Práticas recomendadas para executar o Assistente de migração de dados
 Este artigo fornece algumas informações de prática recomendadas para instalação, avaliação e migração.
@@ -41,4 +41,4 @@ Não instale e execute o Assistente de migração de dados diretamente no comput
 
 - Habilitar criptografar a conexão ao se conectar a servidores de origem e destino. Usando o SSL a criptografia aumenta a segurança dos dados transmitidos pelas redes entre o Assistente de migração de dados e a instância do SQL Server, que é útil especialmente ao migrar logons do SQL Server. Se a criptografia SSL não é usada e a rede estiver comprometida por um invasor, os logons do SQL que está sendo migrados poderia obter interceptados e/ou modificado em dinamicamente pelo invasor.
 
-    No entanto, se todos os acessos envolverem uma configuração de intranet segura, a criptografia poderá não ser necessária. Habilitação da criptografia reduz o desempenho porque a sobrecarga extra que é necessária para criptografar e descriptografar os pacotes. Para obter mais informações, consulte [criptografando conexões com o SQL Server](https://go.microsoft.com/fwlink/?linkid=832513).
+    No entanto, se todos os acessos envolverem uma configuração de intranet segura, a criptografia poderá não ser necessária. Habilitação da criptografia reduz o desempenho porque a sobrecarga extra que é necessária para criptografar e descriptografar os pacotes. Para obter mais informações, consulte [criptografando conexões com o SQL Server](https://go.microsoft.com/fwlink/?linkid=832513).

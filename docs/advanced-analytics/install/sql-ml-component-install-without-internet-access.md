@@ -3,17 +3,17 @@ title: Instalar a linguagem R e componentes do Python sem acesso à internet - a
 description: Offline ou desconectada Machine Learning R e Python instalação na instância isolada do SQL Server atrás de um firewall de rede.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/01/2018
+ms.date: 03/13/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 01f871b6f6a96c053daca13060cac1223415eb20
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 37cd555ec099b11c6dbf792ff5f4e0ac869a0792
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596987"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57976316"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>Instalar o R e Python de aprendizado em computadores sem acesso à internet de máquina do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,8 +22,8 @@ Por padrão, instaladores de se conectar a sites de download da Microsoft para o
 
 Análise no banco de dados consistem na instância do mecanismo de banco de dados, além de componentes adicionais para a integração de R e Python, dependendo da versão do SQL Server. 
 
-+ SQL Server 2017 inclui o R e Python. 
-+ SQL Server 2016 é somente para R. 
++ SQL Server 2017 inclui o R e Python 
++ SQL Server 2016 é somente para R.
 
 Em um servidor isolado, os recursos específicos do idioma de R/Python e aprendizado de máquina são adicionados por meio de arquivos CAB. 
 
@@ -42,7 +42,7 @@ Versão  |Link de download  |
 ---------|---------------|
 Microsoft R Open     |[SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
 Microsoft R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
-Python de Microsoft Open     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
+Microsoft Python Open     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
 Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
 
 ###  <a name="2---get-sql-server-2017-installation-media"></a>2 - obter a mídia de instalação do SQL Server 2017
@@ -75,7 +75,9 @@ Uma forma de obter um arquivo. ISO que contém a mídia de instalação é por m
 
 ## <a name="transfer-files"></a>Transferir arquivos
 
-Copie a mídia de instalação do SQL Server (. ISO ou. cab) e arquivos de análise no banco de dados CAB para o computador de destino. Coloque os arquivos CAB e o arquivo de mídia de instalação na mesma pasta no computador de destino, tais como **Downloads** ou a pasta temp * % do usuário de instalação.
+Copie a mídia de instalação do SQL Server (. ISO ou. cab) e arquivos de análise no banco de dados CAB para o computador de destino. Coloque os arquivos CAB e o arquivo de mídia de instalação na mesma pasta no computador de destino, como a pasta TEMP * % do usuário de instalação.
+
+A pasta % TEMP % é necessária para os arquivos CAB do Python. Para R, você pode usar % TEMP % ou defina o parâmetro myrcachedirectory para o caminho do CAB.
 
 Captura de tela a seguir mostra os arquivos CAB do SQL Server 2017 e ISO. Downloads do SQL Server 2016 uma aparência diferentes: nome do arquivo menos arquivos (nenhum Python) e a mídia de instalação é para 2016.
 
