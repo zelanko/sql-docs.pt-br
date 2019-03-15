@@ -51,7 +51,7 @@ Quando você instala o SQL Server no Linux, você deve configurar um repositóri
 
 É importante observar que há dois tipos principais de repositórios para cada distribuição:
 
-- **As atualizações cumulativas (CU)**: O repositório de atualização cumulativa (CU) contém os pacotes para a versão base do SQL Server e correções de bug ou melhorias desde essa versão. As atualizações cumulativas são específicas para uma versão de lançamento, como o SQL Server 2017. Elas são lançadas em um ritmo regular.
+- **As atualizações cumulativas**: O repositório de atualização cumulativa contém os pacotes para a versão base do SQL Server e correções de bug ou melhorias desde essa versão. As atualizações cumulativas são específicas para uma versão de lançamento, como o SQL Server 2017. Elas são lançadas em um ritmo regular.
 
 - **GDR**: O repositório GDR contém pacotes para a versão base do SQL Server e apenas correções críticas e atualizações de segurança desde essa versão. Essas atualizações também são adicionadas para a próxima versão CU.
 
@@ -224,17 +224,17 @@ Depois de configurar o repositório correto, você poderá [instale](sql-server-
 
 ::: zone pivot="ld2-rhel"
 > [!IMPORTANT]
-> Neste ponto, se você optar por usar o [início rápido do RHEL](quickstart-install-connect-red-hat.md), lembre-se de que você já configurou o repositório de destino. Não repita essa etapa nos tutoriais. Isso é especialmente verdadeiro se você configurar o repositório GDR, porque o guia de início rápido usa o repositório CU.
+> Neste ponto, se você optar por usar o [início rápido do RHEL](quickstart-install-connect-red-hat.md), lembre-se de que você já configurou o repositório de destino. Não repita essa etapa nos tutoriais. Isso é especialmente verdadeiro se você configurar o repositório GDR, porque o guia de início rápido usa o repositório da atualização cumulativa.
 ::: zone-end
 
 ::: zone pivot="ld2-sles"
 > [!IMPORTANT]
-> Neste ponto, se você optar por usar o [início rápido do SLES](quickstart-install-connect-suse.md), lembre-se de que você já configurou o repositório de destino. Não repita essa etapa nos tutoriais. Isso é especialmente verdadeiro se você configurar o repositório GDR, porque o guia de início rápido usa o repositório CU.
+> Neste ponto, se você optar por usar o [início rápido do SLES](quickstart-install-connect-suse.md), lembre-se de que você já configurou o repositório de destino. Não repita essa etapa nos tutoriais. Isso é especialmente verdadeiro se você configurar o repositório GDR, porque o guia de início rápido usa o repositório da atualização cumulativa.
 ::: zone-end
 
 ::: zone pivot="ld2-ubuntu"
 > [!IMPORTANT]
-> Neste ponto, se você optar por usar o [início rápido do Ubuntu](quickstart-install-connect-ubuntu.md), lembre-se de que você já configurou o repositório de destino. Não repita essa etapa nos tutoriais. Isso é especialmente verdadeiro se você configurar o repositório GDR, porque o guia de início rápido usa o repositório CU.
+> Neste ponto, se você optar por usar o [início rápido do Ubuntu](quickstart-install-connect-ubuntu.md), lembre-se de que você já configurou o repositório de destino. Não repita essa etapa nos tutoriais. Isso é especialmente verdadeiro se você configurar o repositório GDR, porque o guia de início rápido usa o repositório da atualização cumulativa.
 ::: zone-end
 
 Para obter mais informações sobre como instalar o SQL Server 2017 no Linux, consulte [orientação de instalação do SQL Server no Linux](sql-server-linux-setup.md).
