@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 936bc010838b3869c567117a9e87cdc2c4ce6d52
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 1c98f6110aa6cc0bbb86f04a685211d7dc58447a
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596118"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072150"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Cenários de ciência de dados e modelos de solução
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,7 +56,7 @@ Cada solução inclui dados de exemplo, o código R ou o código do Python e pro
 
 ## <a name="customer-churn"></a>Rotatividade de clientes
 
-[Modelo de previsão de variação de cliente (SQL Server R Services)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/Churn/Introduction.md)
+[Modelo de previsão de variação de cliente (SQL Server R Services)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/Churn/README.md)
 
 **O que:** Analisar e prever a rotatividade de clientes é importante em qualquer setor em que a perda de clientes para concorrentes deve ser gerenciada e impediu: serviços bancários, telecomunicações e varejo, para citar alguns. O objetivo da análise de variação é identificar quais clientes têm a probabilidade de variação e tomar medidas apropriadas para manter esses clientes e seus negócios.
 
@@ -64,7 +64,7 @@ Cada solução inclui dados de exemplo, o código R ou o código do Python e pro
   
 ## <a name="predictive-maintenance"></a>Manutenção preditiva
 
-[Modelo de manutenção preditiva (SQL Server 2016)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/PredictiveMaintenance/Introduction.md)
+[Modelo de manutenção preditiva (SQL Server 2016)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/PredictiveMaintenance/README.md)
 
 **O que:** Manutenção preditiva tem como objetivo aumentar a eficiência das tarefas de manutenção capturando falhas passadas e usar essas informações para prever quando ou onde um dispositivo poderá falhar. A capacidade de prever a obsolescência do dispositivo é especialmente importante para aplicativos que dependem de dados distribuídos ou sensores. Esse método também pode ser aplicado para monitorar ou prever o erro em dispositivos IoT (Internet das coisas).
 

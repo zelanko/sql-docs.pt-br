@@ -1,6 +1,6 @@
 ---
 title: Propriedades OLAP do Analysis Services | Microsoft Docs
-ms.date: 06/07/2018
+ms.date: 03/15/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 936b05f8d54d3a5e67e7e03a02cc7907c56eab02
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 8e2643488710548b3a773730e9b9898125783dc3
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072513"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072340"
 ---
 # <a name="olap-properties"></a>Propriedades OLAP
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte às propriedades do servidor OLAP listadas nas seguintes tabelas. Para obter mais informações sobre propriedades adicionais do servidor e como defini-las, consulte [Propriedades do servidor do Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
@@ -266,7 +266,10 @@ Abordagem para calcular os requisitos de cache de dimensão:
   
  **MaxRolapOrConditions**  
  Uma propriedade avançada que não deve ser alterada, exceto sob orientação do suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
-  
+ 
+ **RowsetSerializationLimit**   
+ Aplica-se ao Azure Analysis Services. Limita o número de linhas retornadas em um conjunto de linhas para os clientes. Valor padrão é -1, o que significa que nenhum limite é aplicado. Se aplica a consultas DAX e MDX. Ele pode ser usado para proteger recursos do servidor de exportação de dados abrangentes. Consultas enviadas ao servidor que excedem o limite são canceladas e um erro será retornado.  
+
  **UseCalculationCacheRegistry**  
  Uma propriedade avançada que não deve ser alterada, exceto sob orientação do suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   

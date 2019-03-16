@@ -21,17 +21,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e8df3c13b42df1b842d784fedd1720d2e9bfc258
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.openlocfilehash: 04d221372a0d91ed45ba339c1077ea1be68542df
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626385"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072350"
 ---
 # <a name="sysdmexecquerystats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retorna estatísticas de desempenho de agregação de planos de consulta em cache no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A exibição contém uma linha por instrução de consulta dentro do plano em cache e o tempo de vida das linhas é ligado ao próprio plano. Quando um plano é removido do cache, as linhas correspondentes são eliminadas desta exibição.  
+Retorna estatísticas de desempenho de agregação de planos de consulta em cache no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A exibição contém uma linha por instrução de consulta dentro do plano em cache e o tempo de vida das linhas é ligado ao próprio plano. Quando um plano é removido do cache, as linhas correspondentes são eliminadas desta exibição.  
   
 > [!NOTE]
 > Uma consulta inicial de **DM exec_query_stats** pode produzir resultados inexatos se houver uma carga de trabalho atualmente em execução no servidor. Mais resultados precisos podem ser determinados pela reexecução da consulta.  
@@ -41,11 +41,11 @@ ms.locfileid: "53626385"
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**sql_handle**|**varbinary(64)**  |É um token que se refere ao lote ou procedimento armazenado de que a consulta faz parte.<br /><br /> **sql_handle**, junto com **statement_start_offset** e **statement_end_offset**, pode ser usado para recuperar o texto SQL da consulta, chamando o **sys.dm_exec_sql_ texto** função de gerenciamento dinâmico.|  
+|**sql_handle**|**varbinary(64)**  |É um token que identifica exclusivamente o lote ou procedimento armazenado que a consulta faz parte.<br /><br /> **sql_handle**, junto com **statement_start_offset** e **statement_end_offset**, pode ser usado para recuperar o texto SQL da consulta, chamando o **sys.dm_exec_sql_ texto** função de gerenciamento dinâmico.|  
 |**statement_start_offset**|**int**|Indica, em bytes, começando com 0, a posição inicial da consulta que a linha descreve dentro do texto de seu lote ou objeto persistente.|  
 |**statement_end_offset**|**int**|Indica, em bytes, começando com 0, a posição final da consulta que a linha descreve dentro do texto de seu lote ou objeto persistente. Para versões anteriores [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], um valor -1 indica o final do lote. Comentários à direita não estão incluídos.|  
 |**plan_generation_num**|**bigint**|Um número de sequência que pode ser usado para distinguir entre instâncias de planos após uma recompilação.|  
-|**plan_handle**|**varbinary(64)**|Um token que se refere ao plano compilado de que a consulta faz parte. Esse valor pode ser passado para o [. DM exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) a função de gerenciamento dinâmico para obter o plano de consulta.<br /><br /> Sempre será 0x000 quando um procedimento armazenado compilado nativamente consultar uma tabela com otimização de memória.|  
+|**plan_handle**|**varbinary(64)**|É um token que identifica exclusivamente um plano de execução de consulta para um lote que foi executado e seu plano reside no cache de plano ou em execução no momento. Esse valor pode ser passado para o [. DM exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) a função de gerenciamento dinâmico para obter o plano de consulta.<br /><br /> Sempre será 0x000 quando um procedimento armazenado compilado nativamente consultar uma tabela com otimização de memória.|  
 |**creation_time**|**datetime**|Hora em que o plano foi compilado.|  
 |**last_execution_time**|**datetime**|Hora do início da execução do plano.|  
 |**execution_count**|**bigint**|Número de vezes que o plano foi executado desde sua última compilação.|  

@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f366e091cccad7dbc317093f090bf2547f95b1df
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 8d23ba5a1fbb88bd430c1422019087a5df70c884
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411523"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072330"
 ---
 # <a name="sysdmexeccachedplans-transact-sql"></a>sys.dm_exec_cached_plans (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STA
 ### <a name="a-returning-the-batch-text-of-cached-entries-that-are-reused"></a>A. Retornando o texto de lote de entradas em cache que são reutilizadas  
  O exemplo seguinte retorna o texto SQL de todas as entradas em cache que foram usadas mais de uma vez.  
   
-```  
+```sql  
 SELECT usecounts, cacheobjtype, objtype, text   
 FROM sys.dm_exec_cached_plans   
 CROSS APPLY sys.dm_exec_sql_text(plan_handle)   
@@ -75,7 +75,7 @@ GO
 ### <a name="b-returning-query-plans-for-all-cached-triggers"></a>b. Retornando planos de consulta para todos os gatilhos em cache  
  O exemplo seguinte retorna os planos de consulta de todos os gatilhos em cache.  
   
-```  
+```sql  
 SELECT plan_handle, query_plan, objtype   
 FROM sys.dm_exec_cached_plans   
 CROSS APPLY sys.dm_exec_query_plan(plan_handle)   
@@ -86,7 +86,7 @@ GO
 ### <a name="c-returning-the-set-options-with-which-the-plan-was-compiled"></a>C. Retornando as opções SET com que o plano foi compilado  
  O exemplo seguinte retorna as opções SET com que o plano foi compilado. O `sql_handle` para o plano também é retornado. O operador PIVOT é usado para saída de `set_options` e `sql_handle` atributos como colunas em vez de linhas. Para obter mais informações sobre o valor retornado em `set_options`, consulte [exec_plan_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md).  
   
-```  
+```sql  
 SELECT plan_handle, pvt.set_options, pvt.sql_handle  
 FROM (  
       SELECT plan_handle, epa.attribute, epa.value   
@@ -101,7 +101,7 @@ GO
 ### <a name="d-returning-the-memory-breakdown-of-all-cached-compiled-plans"></a>D. Retornando a análise de memória de todos os planos compilados em cache  
  O exemplo seguinte retorna uma análise da memória usada por todos os planos compilados no cache.  
   
-```  
+```sql  
 SELECT plan_handle, ecp.memory_object_address AS CompiledPlan_MemoryObject,   
     omo.memory_object_address, type, page_size_in_bytes   
 FROM sys.dm_exec_cached_plans AS ecp   

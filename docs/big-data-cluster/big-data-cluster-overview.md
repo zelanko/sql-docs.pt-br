@@ -5,23 +5,23 @@ description: Saiba mais sobre clusters de big data de 2019 do SQL Server (visual
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/06/2018
+ms.date: 12/07/2018
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 4e5f45d51e80753bb65e5fa1d620ca105af28344
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 996913979669aa85088d6d640436b5610293eb35
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241987"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072121"
 ---
 # <a name="what-are-sql-server-2019-big-data-clusters"></a>Quais são os clusters do SQL Server 2019 grandes dados?
 
 Começando com [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], clusters de grandes dados do SQL Server permitem que você implante clusters escalonáveis de contêineres do HDFS, Spark e do SQL Server em execução no Kubernetes. Esses componentes são executados lado a lado para que você possa ler, gravar e processar big data do Transact-SQL ou o Spark, permitindo que você facilmente combinar e analisar seus dados relacionais de alto valor com grandes volumes de dados grandes.
 
-Para obter mais informações sobre novos recursos e problemas conhecidos para a versão mais recente, consulte o [notas de versão](big-data-cluster-release-notes.md).
+Para obter mais informações sobre novos recursos e problemas conhecidos para a versão mais recente, consulte o [notas de versão](release-notes-big-data-cluster.md).
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -75,10 +75,11 @@ Um cluster de big data do SQL Server é um cluster de contêineres do Linux orqu
 O Kubernetes é um orquestrador de contêiner do código-fonte aberto, que pode dimensionar as implantações de contêiner conforme a necessidade. A tabela a seguir define a terminologia importante Kubernetes:
 
 |||
-|--|--|
+|:--|:--|
 | **Cluster** | Um cluster Kubernetes é um conjunto de computadores, conhecidos como nós. Um nó controla o cluster e é designado o nó mestre; os nós restantes são nós de trabalho. O mestre de Kubernetes é responsável por distribuir o trabalho entre os trabalhadores e para monitorar a integridade do cluster. |
 | **Nó** | Um nó executa aplicativos em contêineres. Ele pode ser um computador físico ou uma máquina virtual. Um cluster Kubernetes pode conter uma mistura de nós físicos de máquina e máquina virtual. |
 | **pod** | Um pod é a unidade atômica de implantação do Kubernetes. Um pod é um grupo lógico de um ou mais contêineres- e associados a recursos necessários para executar um aplicativo. Cada pod é executado em um nó; um nó pode executar um ou mais pods. O mestre de Kubernetes atribui automaticamente os pods para nós no cluster. |
+| &nbsp; ||
 
 Em clusters de grandes dados do SQL Server, o Kubernetes é responsável pelo estado dos clusters grandes dados do SQL Server; Kubernetes cria e configura os nós de cluster, atribui pods para nós e monitora a integridade do cluster.
 

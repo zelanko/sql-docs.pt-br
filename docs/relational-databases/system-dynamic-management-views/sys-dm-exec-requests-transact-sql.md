@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6320c20a9f27df7170caaba3e9749069f2365d7a
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 87be8cba02cac7f0ff6b1cd0fa966241745e5483
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590110"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072230"
 ---
 # <a name="sysdmexecrequests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
@@ -41,10 +41,10 @@ Retorna informações sobre cada solicitação sendo executada no [!INCLUDE[ssNo
 |start_time|**datetime**|Carimbo de data e hora em que a solicitação chegou. Não permite valor nulo.|  
 |status|**nvarchar(30)**|Status da solicitação. Pode ser um dos seguintes:<br /><br /> Plano de fundo<br />Executando<br />Executável<br />Hibernando<br />Suspenso<br /><br /> Não permite valor nulo.|  
 |command|**nvarchar(32)**|Identifica o tipo atual de comando que está sendo processado. Os tipos de comando comuns incluem:<br /><br /> SELECT<br />INSERT<br />UPDATE<br />DELETE<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> O texto da solicitação pode ser recuperado usando sys.dm_exec_sql_text com o sql_handle correspondente para a solicitação. Os processos de sistema internos definem o comando com base no tipo de tarefa que eles executam. As tarefas podem incluir o seguinte:<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> Não permite valor nulo.|  
-|sql_handle|**varbinary(64)**|Mapa de hash do texto SQL da solicitação. Permite valor nulo.|  
+|sql_handle|**varbinary(64)**|É um token que identifica exclusivamente o lote ou procedimento armazenado que a consulta faz parte. Permite valor nulo.|  
 |statement_start_offset|**int**|Número de caracteres no procedimento em lote ou armazenado atualmente em execução no qual a instrução atualmente em execução se inicia. Pode ser usado junto com a função de gerenciamento dinâmico sql_handle, statement_end_offset e sys.dm_exec_sql_text para recuperar a instrução atualmente em execução da solicitação. Permite valor nulo.|  
 |statement_end_offset|**int**|Número de caracteres no procedimento em lote ou armazenado atualmente em execução no qual a instrução atualmente em execução termina. Pode ser usado junto com a função de gerenciamento dinâmico sql_handle, statement_end_offset e sys.dm_exec_sql_text para recuperar a instrução atualmente em execução da solicitação. Permite valor nulo.|  
-|plan_handle|**varbinary(64)**|Mapa de hash do plano para execução SQL. Permite valor nulo.|  
+|plan_handle|**varbinary(64)**|É um token que identifica exclusivamente um plano de execução de consulta para um lote que está sendo executado. Permite valor nulo.|  
 |database_id|**smallint**|ID do banco de dados no qual a solicitação está em execução. Não permite valor nulo.|  
 |user_id|**int**|ID do usuário que enviou a solicitação. Não permite valor nulo.|  
 |connection_id|**uniqueidentifier**|ID da conexão em que a solicitação chegou. Permite valor nulo.|  
@@ -190,4 +190,4 @@ GO
 - [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)
 - [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)
 - [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)
-- [DM exec_sql_text & #40](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
+- [sys.dm_exec_sql_text &#40](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  

@@ -17,12 +17,12 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 8bb66c5bb9b4f69b32efd7761ae08677ee243fee
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 63e1d22670929448110083c31e9900e462d576bc
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044622"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072300"
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -58,23 +58,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 ## <a name="remarks"></a>Comentários
 Essa função do sistema está disponível começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1. Consulte o artigo [3190871](https://support.microsoft.com/en-us/help/3190871)
 
-Essa função do sistema funciona em ambos **standard** e **leve** infraestrutura de criação de perfil de estatísticas de execução de consulta.  
-  
-**Padrão** infraestrutura de criação de perfil de estatísticas podem ser habilitadas usando:
-  -  [SET STATISTICS XML EM](../../t-sql/statements/set-statistics-xml-transact-sql.md)
-  -  [SET STATISTICS PROFILE EM](../../t-sql/statements/set-statistics-profile-transact-sql.md)
-  -  o `query_post_execution_showplan` evento estendido.  
-  
-**Lightweight** infraestrutura de criação de perfil de estatísticas estão disponível em [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 e pode ser habilitado:
-  -  Globalmente usando o rastreamento de sinalizador 7412.
-  -  Usando o [ *query_thread_profile* ](https://support.microsoft.com/kb/3170113) evento estendido.
-  
-> [!NOTE]
-> Uma vez habilitado pelo sinalizador de rastreamento 7412, criação de perfil leve será habilitada para qualquer consumidor das estatísticas de execução de consulta infraestrutura em vez de padrão de criação de perfil, como o DMV de criação de perfil [DM exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md).
-> No entanto, a criação de perfil padrão ainda é usada para SET STATISTICS XML *incluir plano real* ação no [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], e `query_post_execution_showplan` xEvent.
-
-> [!IMPORTANT]
-> Em TPC-C, como testes de carga de trabalho, permitindo que a infraestrutura de criação de perfil de estatísticas leve adiciona uma sobrecarga de 1,5 a 2 por cento. Por outro lado, a infraestrutura de criação de perfil de padrão de estatísticas pode adicionar até 90% de sobrecarga para o mesmo cenário de carga de trabalho.
+Essa função do sistema funciona em ambos **standard** e **leve** infraestrutura de criação de perfil de estatísticas de execução de consulta. Para obter mais informações, confira [Infraestrutura de Criação de Perfil de Consulta](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md).  
 
 ## <a name="permissions"></a>Permissões  
  Requer a permissão `VIEW SERVER STATE` no servidor.  
