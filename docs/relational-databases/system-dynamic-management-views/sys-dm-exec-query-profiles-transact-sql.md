@@ -1,5 +1,5 @@
 ---
-title: DM exec_query_profiles (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_query_profiles (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2016
 ms.prod: sql
@@ -21,17 +21,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1fb79f056e533f4aabacdab5e3467bedce22b696
-ms.sourcegitcommit: e0178cb14954c45575a0bab73dcc7547014d03b3
+ms.openlocfilehash: 6f4758f443ebb5398ecc1e3b3d833d375b068c4a
+ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "52860089"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58080403"
 ---
 # <a name="sysdmexecqueryprofiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  Monitora o progresso da consulta em tempo real, enquanto a consulta está em execução. Por exemplo, use este DMV para determinar que parte da consulta está executando lentamente. Adicione esse DMV com outros DMVs de sistema usando as colunas identificadas no campo de descrição. Ou, adicione esse DMV com outros contadores de desempenho (como o Monitor de Desempenho, xperf) usando colunas de carimbo de data/hora.  
+Monitora o progresso da consulta em tempo real, enquanto a consulta está em execução. Por exemplo, use este DMV para determinar que parte da consulta está executando lentamente. Adicione esse DMV com outros DMVs de sistema usando as colunas identificadas no campo de descrição. Ou, adicione esse DMV com outros contadores de desempenho (como o Monitor de Desempenho, xperf) usando colunas de carimbo de data/hora.  
   
 ## <a name="table-returned"></a>Tabela retornada  
  Os contadores retornados são por operador por thread. Os resultados são dinâmicos e não correspondem aos resultados das opções existentes, tal como SET STATISTICS XML ON, que só cria saída quando a consulta é concluída.  
@@ -40,8 +40,8 @@ ms.locfileid: "52860089"
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|Identifica a sessão na qual esta consulta é executada. Referencia dm_exec_sessions.session_id.|  
 |request_id|**int**|Identifica a solicitação de destino. Referencia dm_exec_sessions.request_id.|  
-|sql_handle|**varbinary(64)**|Identifica a consulta de destino. Referencia dm_exec_query_stats.sql_handle.|  
-|plan_handle|**varbinary(64)**|Identificar a consulta de destino. Referencia dm_exec_query_stats.plan_handle.|  
+|sql_handle|**varbinary(64)**|É um token que identifica exclusivamente o lote ou procedimento armazenado que a consulta faz parte. Referencia dm_exec_query_stats.sql_handle.|  
+|plan_handle|**varbinary(64)**|É um token que identifica exclusivamente um plano de execução de consulta para um lote que foi executado e seu plano reside no cache de plano ou em execução no momento. References dm_exec_query_stats.plan_handle.|  
 |physical_operator_name|**nvarchar(256)**|Nome do operador físico.|  
 |node_id|**int**|Identifica um nó do operador na árvore de consulta.|  
 |thread_id|**int**|Distingue os threads (para uma consulta paralela) que pertencem ao mesmo nó do operador de consulta.|  
@@ -76,30 +76,22 @@ ms.locfileid: "52860089"
 |estimated_read_row_count|**bigint**|**Aplica-se a:** Começando com [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Número estimado de linhas a serem lidos por um operador antes da aplicação de predicado residual.|  
   
 ## <a name="general-remarks"></a>Comentários gerais  
- Se o nó do plano de consulta não tiver nenhuma E/S, todos os contadores relacionados com E/S serão definidos como NULL.  
+ Se o nó do plano de consulta não tiver nenhuma e/s, todos os I/O-related contadores são definidos como NULL.  
   
- Os contadores relacionados com E/S relatados por este DMV são mais granulares do que os relatados por SET STATISTICS IO nas seguintes duas formas:  
+ Os contadores de I/O-related relatados por esta DMV são mais granulares do que aqueles relatados pelo `SET STATISTICS IO` duas maneiras a seguir:  
   
--   SET STATISTICS IO agrupa os contadores para todas as E/S para uma determinada tabela. Com este DMV, você terá contadores separados para cada nó no plano de consulta que realiza E/S para a tabela.  
+-   `SET STATISTICS IO` agrupa os contadores para todas as e/s para uma determinada tabela junto. Com este DMV, você terá contadores separados para cada nó no plano de consulta que realiza E/S para a tabela.  
   
 -   Se houver uma varredura paralela, este DMV relata os contadores para cada um das threads paralelas que trabalham na varredura.
  
-Começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, as estatísticas de execução de consulta padrão infraestrutura de criação de perfil existe lado a lado com estatísticas de execução de consulta leve infraestrutura de criação de perfil. A nova consulta execução estatísticas criação de perfil infra-estrutura reduz drasticamente a sobrecarga de desempenho de coleta de estatísticas de execução de consulta por operador, como o número real de linhas. Esse recurso pode ser habilitado usando global inicialização [7412 do sinalizador de rastreamento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), ou é ativado automaticamente quando o evento estendido query_thread_profile é usado.
+Começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, as estatísticas de execução de consulta padrão infraestrutura de criação de perfil existe lado a lado com estatísticas de execução de consulta leve infraestrutura de criação de perfil. 
 
->[!NOTE]
-> Não há suporte para CPU e tempo decorrido em que a infraestrutura de criação de perfil de estatísticas de execução de consulta leve para reduzir o impacto de desempenho.
+`SET STATISTICS XML ON` e `SET STATISTICS PROFILE ON` sempre usar as estatísticas de execução de consulta padrão infraestrutura de criação de perfil.
 
-Defina o STATISTICS XML ON e SET STATISTICS PROFILE ON sempre usar as estatísticas de execução de consulta herdada infraestrutura de criação de perfil.
-
-Para habilitar a saída no DM exec_query_profiles faça o seguinte:
-
-No [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 e posterior, use SET STATISTICS PROFILE ON ou SET STATISTICS XML ON junto com a consulta sob investigação. Isso habilita a infraestrutura de criação de perfil e produz resultados no DMV para a sessão em que o comando SET foi executado. Se você estiver investigando uma consulta em execução de um aplicativo e não é possível habilitar as opções SET com ele, você pode criar um evento estendido usando o evento query_post_execution_showplan que ativará a infraestrutura de criação de perfil. 
-
-Na [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, você pode também ativar [sinalizador de rastreamento 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) ou usar o evento estendido do query_thread_profile.
+Para habilitar a saída em `sys.dm_exec_query_profiles` habilitar a infraestrutura de criação de perfil de consulta. Para obter mais informações, confira [Infraestrutura de Criação de Perfil de Consulta](../../relational-databases/performance/query-profiling-infrastructure.md).    
 
 >[!NOTE]
 > A consulta sob investigação deve iniciar depois que a infraestrutura de criação de perfil foi habilitada. Se a consulta já está em execução, iniciar uma sessão de evento estendido não produzirá resultados no DM exec_query_profiles.
-
 
 ## <a name="permissions"></a>Permissões  
 
@@ -107,14 +99,14 @@ Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SE
 Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` permissão no banco de dados.   
    
 ## <a name="examples"></a>Exemplos  
- Etapa 1: Faça logon em uma sessão em que planeja executar a consulta que você analisará com sys.dm_exec_query_profiles. Para configurar a consulta para criação de perfil usar SET STATISTICS PROFILE. Execute a consulta nessa mesma sessão.  
+ Etapa 1: Faça logon em uma sessão na qual você planeja executar a consulta que você analisará com `sys.dm_exec_query_profiles`. Para configurar a consulta para uso de perfil `SET STATISTICS PROFILE ON`. Execute a consulta nessa mesma sessão.  
   
-```  
+```sql  
 --Configure query for profiling with sys.dm_exec_query_profiles  
 SET STATISTICS PROFILE ON;  
 GO  
 
---Or enable query profiling globally under SQL Server 2016 SP1 or above  
+--Or enable query profiling globally under SQL Server 2016 SP1 or above (not needed in SQL Server 2019)  
 DBCC TRACEON (7412, -1);  
 GO 
   
@@ -125,7 +117,7 @@ GO
   
  A instrução a seguir resume os progressos realizado pela consulta atualmente em execução na sessão 54. Para fazer isso, ela calcula o número total de linhas de saída de todos as threads para cada nó e o compara com o número estimado de linhas de saída para esse nó.  
   
-```  
+```sql  
 --Run this in a different session than the session in which your query is running. 
 --Note that you may need to change session id 54 below with the session id you want to monitor.
 SELECT node_id,physical_operator_name, SUM(row_count) row_count, 
