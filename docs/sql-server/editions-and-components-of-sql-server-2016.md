@@ -33,12 +33,12 @@ ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 78a5b1462316f859339f5922a0fa9aa098c6e854
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: a5c0b2714637068f72aa9e8caf7f7213c865131f
+ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803281"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974475"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>Edições e recursos com suporte do SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -177,7 +177,9 @@ A Developer edition continua a dar suporte a apenas um cliente para o [SQL Serve
 |Contêineres de vários fluxos de arquivos|Sim|Sim <sup>2</sup>|Sim <sup>2</sup>|Sim <sup>2</sup>|Sim <sup>2</sup>|
 |Memória de página grande com reconhecimento para NUMA e alocação de matriz de buffer|Sim|Não <sup>4</sup>|Não|Não|Não|
 |Buffer Pool Extension|Sim|Sim|Não|Não|Não|
-|Administração do recurso de E/S|Sim|Não|Não|Não|Não|  
+|Administração do recurso de E/S|Sim|Não|Não|Não|Não|
+|Read-Ahead|Sim|Não|Não|Não|Não|
+|Exame avançado|Sim|Não|Não|Não|Não|
 |Durabilidade atrasada|Sim|Sim|Sim|Sim|Sim|
 
 <sup>1</sup> Tamanho de dados de OLTP na memória e cache do segmento Columnstore são limitados a quantidade de memória especificada por edição na seção limites de escala. Os graus de máximos de paralelismo é limitado. Os graus de paralelismo do processo (DOP) de criação de um índice é limitado a 2 DOP para a Standard Edition e 1 DOP para a Web e a Express Editions. Refere-se a índices de columnstore criados em tabelas baseadas em disco e tabelas com otimização de memória.

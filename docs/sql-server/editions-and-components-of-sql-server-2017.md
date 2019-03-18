@@ -34,12 +34,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 79280cd1e9499cf9a76f50c6aad255dbd3db81ef
-ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
+ms.openlocfilehash: db8b22746702fa0df86478dadee700938cd63c40
+ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57556168"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974495"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Edições e recursos com suporte do SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -195,6 +195,8 @@ A Developer edition continua a dar suporte a apenas um cliente para o [SQL Serve
 |Memória de página grande com reconhecimento para NUMA e alocação de matriz de buffer|Sim|Não|Não|Não|Não|
 |Buffer Pool Extension|Sim|Sim|Não|Não|Não|
 |Administração do recurso de E/S|Sim|Não|Não|Não|Não|  
+|Read-Ahead|Sim|Não|Não|Não|Não|
+|Exame avançado|Sim|Não|Não|Não|Não|
 |Durabilidade atrasada|Sim|Sim|Sim|Sim|Sim|
 |Ajuste Automático|Sim|Não|Não|Não|Não|
 |Junções Adaptáveis de Modo de Lote|Sim|Não|Não|Não|Não|
@@ -407,7 +409,3 @@ Para obter informações sobre os recursos do Business Intelligence Client compa
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
-
-
-
-isso é um teste
