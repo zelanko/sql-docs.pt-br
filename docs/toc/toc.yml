@@ -825,7 +825,7 @@ items:
       items:
       - name: Configuração
         items:
-        - name: UPGRADE
+        - name: Atualizar
           href: ../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md
         - name: Modos de quorum e votação
           href: ../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md
@@ -877,7 +877,7 @@ items:
               href: ../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md
             - name: 'Exemplo: Configurar com certificados (T-SQL)'
               href: ../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md
-          - name: UPGRADE
+          - name: Atualizar
             href: ../database-engine/database-mirroring/upgrading-mirrored-instances.md
           - name: Remover espelhamento
             href: ../database-engine/database-mirroring/remove-database-mirroring-sql-server.md
@@ -1687,7 +1687,7 @@ items:
       href: ../relational-databases/user-defined-functions/rename-user-defined-functions.md
     - name: Exibição
       href: ../relational-databases/user-defined-functions/view-user-defined-functions.md
-  - name: exibições
+  - name: Exibições
     href: ../relational-databases/views/views.md
     items:
     - name: Criar
@@ -1704,7 +1704,7 @@ items:
       href: ../relational-databases/views/rename-views.md
     - name: DELETE
       href: ../relational-databases/views/delete-views.md
-  - name: dados XML
+  - name: Dados XML
     href: ../relational-databases/xml/xml-data-sql-server.md
     items:
     - name: Colunas e tipo de dados XML
@@ -3269,7 +3269,7 @@ items:
         href: ../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-triggers.md
       - name: Funções definidas pelo usuário
         href: ../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-user-defined-functions.md
-      - name: exibições
+      - name: Exibições
         href: ../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-views.md
       - name: Permissões
         href: ../relational-databases/server-management-objects-smo/tasks/granting-revoking-and-denying-permissions.md
@@ -3940,6 +3940,11 @@ items:
     href: ../relational-databases/sql-server-index-design-guide.md
   - name: Arquitetura de páginas e extensões
     href: ../relational-databases/pages-and-extents-architecture-guide.md
+    items:
+    - name: Leitura de páginas
+      href: ../relational-databases/reading-pages.md
+    - name: Gravação de páginas
+      href: ../relational-databases/writing-pages.md
   - name: Validação e otimização após a migração
     href: ../relational-databases/post-migration-validation-and-optimization-guide.md
   - name: Arquitetura de processamento de consultas
@@ -3952,11 +3957,6 @@ items:
     href: ../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md
   - name: Arquitetura de gerenciamento de memória
     href: ../relational-databases/memory-management-architecture-guide.md
-    items:
-    - name: Leitura de páginas
-      href: ../relational-databases/reading-pages.md
-    - name: Gravação de páginas
-      href: ../relational-databases/writing-pages.md
 - name: Instalação
   href: redirectfrom-installation-10.md
   items:
@@ -4397,6 +4397,7 @@ items:
       - name: Página Avançada
         href: ../database-engine/configure-windows/server-properties-advanced-page.md
 - name: Migrar e carregar dados
+  href: ../toc/sectionfor-migrate-load-data-overall-sql-server.md
   items:
   - name: SSIS (SQL Server Integration Services) ++
     href: ../integration-services/index.md
@@ -4698,7 +4699,7 @@ items:
               href: ../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md
             - name: Reinicializar as assinaturas
               href: ../relational-databases/replication/reinitialize-subscriptions.md
-      - name: Administer
+      - name: Administrar
         items:
         - name: Scripts de informações Dist & Pub
           href: ../relational-databases/replication/administration/distributor-and-publisher-information-script.md
@@ -8420,22 +8421,14 @@ items:
     items:
     - name: Baixar o SSDT
       href: ../ssdt/download-sql-server-data-tools-ssdt.md
-    - name: Visão geral
-      items:
-      - name: Log de mudanças para o SSDT
-        href: ../ssdt/changelog-for-sql-server-data-tools-ssdt.md
-      - name: Estrutura de aplicativo da camada de dados – termos de licença
-        href: ../ssdt/data-tier-application-framework-license-terms.md
-      - name: Versões anteriores do SSDT e SSDT-BI
-        href: ../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
-      - name: Suporte do Azure Active Directory
-        href: ../ssdt/azure-active-directory.md
-      - name: Ferramentas do SQL Server
-        href: ../ssdt/sql-server-tools.md
-      - name: Termos de Licença – SSDT
-        href: ../ssdt/sql-server-data-tools-license-terms.md
-      - name: Termos de Licença – SSDT (VS 2017)
-        href: ../ssdt/sql-server-data-tools-license-terms-vs2017.md
+    - name: Log de mudanças para o SSDT
+      href: ../ssdt/changelog-for-sql-server-data-tools-ssdt.md
+    - name: Versões anteriores do SSDT e SSDT-BI
+      href: ../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
+    - name: Suporte do Azure Active Directory
+      href: ../ssdt/azure-active-directory.md
+    - name: Ferramentas do SQL Server
+      href: ../ssdt/sql-server-tools.md
     - name: Desenvolvimento de banco de dados offline orientado a projetos
       href: ../ssdt/project-oriented-offline-database-development.md
       items:
@@ -9775,8 +9768,6 @@ items:
           href: ../ssms/visual-db-tools/print-query-results-visual-database-tools.md
     - name: Recursos
       items:
-      - name: Termos de Licença
-        href: ../ssms/sql-server-management-studio-license-terms.md
       - name: Assistência ao usuário no SSMS
         href: ../ssms/user-assistance-in-sql-server-management-studio.md
       - name: Dados de uso anônimos
@@ -10140,7 +10131,7 @@ items:
             href: ../linux/sql-server-linux-kubernetes-deploy.md
           - name: Gerenciar
             href: ../linux/sql-server-linux-kubernetes-manage.md
-          - name: Connect
+          - name: Conectar
             href: ../linux/sql-server-linux-kubernetes-connect.md
           - name: Criar scripts de implantação
             href: ../linux/sql-server-linux-kubernetes-create-deployment.md
@@ -11322,10 +11313,6 @@ items:
         href: ../powershell/encode-and-decode-sql-server-identifiers.md
       - name: Retirar identificadores do SQL Server
         href: ../powershell/escape-sql-server-identifiers.md
-    - name: Recursos
-      items:
-      - name: Termos de licença do PowerShell do SQL Server
-        href: ../powershell/sql-server-powershell-license-terms.md
     - name: Referência de cmdlet
       items:
       - name: Cmdlets do SqlServer
@@ -11961,6 +11948,10 @@ items:
         href: ../relational-databases/system-catalog-views/sys-pdw-table-distribution-properties-transact-sql.md
       - name: sys.pdw_table_mappings
         href: ../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md
+      - name: sys.workload-management-workload-classifier-details
+        href: ../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md
+      - name: sys.workload-management-workload-classifiers
+        href: ../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md
     - name: Stretch Database
       items:
       - name: sys.remote_data_archive_databases
@@ -16639,6 +16630,8 @@ items:
           href: ../t-sql/statements/create-user-transact-sql.md
         - name: VIEW
           href: ../t-sql/statements/create-view-transact-sql.md
+        - name: WORKLOAD CLASSIFIER
+          href: ../t-sql/statements/create-workload-classifier-transact-sql.md
         - name: WORKLOAD GROUP
           href: ../t-sql/statements/create-workload-group-transact-sql.md
         - name: XML INDEX
@@ -16781,6 +16774,8 @@ items:
           href: ../t-sql/statements/drop-user-transact-sql.md
         - name: VIEW
           href: ../t-sql/statements/drop-view-transact-sql.md
+        - name: WORKLOAD CLASSIFIER
+          href: ../t-sql/statements/drop-workload-classifier-transact-sql.md
         - name: WORKLOAD GROUP
           href: ../t-sql/statements/drop-workload-group-transact-sql.md
         - name: XML SCHEMA COLLECTION
@@ -17183,9 +17178,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: Manipulando namespaces em XQuery
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: c1bcf717605ff5c3cd1cf5722154fe518721c9e6
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: d658d240d44697d6d3632142b1d4034468ffc91f
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579786"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57974565"
