@@ -33,7 +33,7 @@ PDOStatement PDO::query ($statement[, $fetch_style);
 #### <a name="parameters"></a>Parâmetros  
 *$statement*: a instrução SQL que você quer executar.  
   
-*$fetch_style*: as instruções opcionais sobre como executar a consulta. Para obter mais detalhes, consulte a seção Comentários. $*fetch_style* em PDO::query pode ser substituído por $*fetch_style* em PDO::fetch.  
+*$fetch_style*: as instruções opcionais sobre como executar a consulta. Para obter mais detalhes, consulte a seção Comentários.  $*fetch_style* em PDO::query pode ser substituído por *$fetch_style* em PDO::fetch.  
   
 ## <a name="return-value"></a>Valor retornado  
 Se a chamada for bem-sucedida, o PDO::query retornará um objeto PDOStatement. Se a chamada falhar, PDO::query gerará um objeto PDOException ou retornará false, dependendo da configuração de PDO::ATTR_ERRMODE.  
