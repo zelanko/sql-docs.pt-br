@@ -3,7 +3,7 @@ title: Extensão do SQL Server 2019 (visualização)
 titleSuffix: Azure Data Studio
 description: Extensão de 2019 Preview do SQL Server para o Studio de dados do Azure
 ms.custom: seodec18
-ms.date: 02/13/2019
+ms.date: 03/18/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -11,13 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c90be7f91c4f3bb465e2cf29b8ee69e2f8d8b6e9
-ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
+ms.openlocfilehash: dfa49b1611c7fd9b196e57ea08575388aa90329b
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56231053"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161544"
 ---
 # <a name="sql-server-2019-extension-preview"></a>Extensão do SQL Server 2019 (visualização)
 
@@ -31,9 +30,9 @@ Para instalar a extensão de 2019 do SQL Server (versão prévia), baixe e insta
 
    |Plataforma|Download|Data de liberação|Versão
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2072794)|13 de fevereiro de 2019 |0.10.2
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2072793)|13 de fevereiro de 2019 |0.10.2
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2072792)|13 de fevereiro de 2019 |0.10.2
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083220)|18 de março de 2019 |0.11.0
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083219)|18 de março de 2019 |0.11.0
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083218)|18 de março de 2019 |0.11.0
 
 1. No estúdio de dados do Azure, escolha **instalar a extensão do pacote VSIX** da **arquivo** menu e selecione o arquivo. VSIX baixado.
 
@@ -44,6 +43,14 @@ Para instalar a extensão de 2019 do SQL Server (versão prévia), baixe e insta
 1. Após o recarregamento, a extensão instalará as dependências. Você pode ver o progresso na janela de saída, e pode levar vários minutos.
 
 1. Após as dependências de concluir a instalação, feche e reabra o estúdio de dados do Azure. O **cluster de big data do SQL Server** tipo de conexão não está disponível até que você reinicie o estúdio de dados do Azure.
+
+## <a name="release-notes-v0110"></a>Notas de versão (v0.11.0)
+  * Suporte de Jupyter Notebook, oferecem suporte especificamente para os kernels Spark e Python3, foi movido no estúdio de dados do Azure. Esta extensão não é mais necessária para usar os blocos de anotações.
+  * Várias correções de bugs nos assistentes de dados externos:
+    * Mapeamentos de tipo Oracle foram atualizados para corresponder as alterações enviadas no SQL Server de 2019 CTP 2.3.
+    * Corrigido um problema em que novos esquemas digitadas no controle de mapeamento de tabela foram perdidas.
+    * Corrigido um problema em que a verificação de um nó de banco de dados nos mapeamentos de tabela não resultou em todas as tabelas e modos de exibição que está sendo verificados.
+
 
 ## <a name="release-notes-v0102"></a>Notas de versão (v0.10.2)
 ### <a name="sql-server-2019-support"></a>Suporte do SQL Server de 2019

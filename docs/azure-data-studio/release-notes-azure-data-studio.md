@@ -11,16 +11,47 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b481151636db4f54212c96b0ea21f989afb917d3
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 746f3d97ed0157f6b97128dbfdf1b88a5276062c
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57581664"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161623"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notas de versão do estúdio de dados do Azure
 
 **[Baixe e instale a versão mais recente!](download.md)**
+
+## <a name="march-2019"></a>Março de 2019
+
+18 de março de 2019 &nbsp;  /  &nbsp; versão: 1.5.1
+
+&nbsp;
+
+| Alterar | Detalhes |
+| :----- | :------ |
+| Adicionado [extensão PostgreSQL para o Studio de dados do Azure](postgres-extension.md) | Recursos com suporte: <br/>&bull; &nbsp; Caixa de diálogo de Conexão <br/>&bull; &nbsp; Pesquisador de objetos <br/>&bull; &nbsp; Editor de consultas <br/>&bull; &nbsp; Criação de gráficos <br/>&bull; &nbsp; Painéis <br/>&bull; &nbsp; Trechos de código <br/>&bull; &nbsp; Editar dados <br/>&bull; &nbsp; Blocos de anotações |
+| Blocos de anotações do SQL adicionado | Adicionado suporte do Kernel do SQL ao Visualizador interno de bloco de anotações: <br/>&bull; &nbsp; Dá suporte a T-SQL <br/>&bull; &nbsp; Suporte PGSQL |
+| Extensão do PowerShell adicionada  | Traz o [extensão do PowerShell](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell) experiência do VS Code.  |
+| Extensão de dacpac do SQL Server adicionada  | Remove Data-Tier Application Wizard da extensão de importação do SQL Server em uma nova extensão.  |
+| Extensões de comunidade adicionada QueryPlan.show | Adiciona o suporte de integração para visualizar os planos de consulta  |
+| Extensão de visualização do SQL Server de 2019 atualizado | &bull; &nbsp; Suporte de Jupyter Notebook, especificamente kernels de Python3 e Spark, foram movidos para a ferramenta de Azure Data Studio core. <br/>&bull; &nbsp; Correções de bugs para o Assistente de dados externa  |
+| Bugs resolvidos e problemas. | Ver [Bugs e problemas no GitHub](https://github.com/Microsoft/azuredatastudio/milestone/25?closed=1). |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>Problemas conhecidos
+- [#4427](https://github.com/Microsoft/azuredatastudio/issues/4427): Ao clicar em Run na célula antes de Kernel estiver pronta para resultados de Spark em um Erro Fatal **solução alternativa:** Aguarde até que os kernels são carregados até executar todas as células
+- [#4493](https://github.com/Microsoft/azuredatastudio/issues/4493): ANÚNCIOS iniciados a partir do SSMS usando a autenticação do SQL - prompts de senha do usuário **solução alternativa:** Use a autenticação do Windows por enquanto. 
+- [#4494](https://github.com/Microsoft/azuredatastudio/issues/4494): Não é possível instalar o recurso de bloco de anotações do SQL <br/>
+**Solução alternativa:** Siga as etapas de solução [aqui](https://github.com/Microsoft/azuredatastudio/issues/4494#issuecomment-473043832). 
+- [#4503](https://github.com/Microsoft/azuredatastudio/issues/4503): O estúdio de dados do Azure não pode ser aberto diretamente na pasta Downloads (Mac) <br />
+**Solução alternativa:** Reinicie o computador depois de descompactar o aplicativo. Serão investigados. 
+- [#4539](https://github.com/Microsoft/azuredatastudio/issues/4539):  Salvar como do bloco de anotações perde o contexto de conexão <br />
+**Solução alternativa:** Será corrigido na próxima versão. 
+- [#4458](https://github.com/Microsoft/azuredatastudio/issues/4458): Extrair Dacpac falhar SqlToolsService se versão inválida for usada <br/>
+**Solução alternativa:** Reiniciar o Studio de dados do Azure e verifique se a versão correta é usada.
+- Novos ícones de bloco de anotações e abrir Notebook são perdidos <br/> 
+**Solução alternativa:** O tipo de conexão herdado foi preterido. Recomendamos que você se conectar ao ponto de extremidade do SQL Server e você obterá todas as ações (novo bloco de anotações, o trabalho do Spark) conforme o esperado. 
 
 ## <a name="february-2019"></a>Fevereiro de 2019
 

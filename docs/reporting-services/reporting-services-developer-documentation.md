@@ -1,6 +1,8 @@
 ---
 title: Documentação do desenvolvedor do Reporting Services | Microsoft Docs
-ms.date: 03/17/2017
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -9,18 +11,16 @@ helpviewer_keywords:
 - developer's guide [Reporting Services]
 - Reporting Services, programming
 - programming [Reporting Services]
-ms.assetid: d8afa405-1012-4349-a72d-e10d94f8453d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 89a5bcc19baead2f0ba8413635fe330048963cfd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.date: 03/17/2017
+ms.openlocfilehash: 6d107e0f2a02397306cabf2f8a8a20f79cda4212
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835494"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57972845"
 ---
 # <a name="reporting-services-developer-documentation"></a>Documentação do desenvolvedor do Reporting Services
-  O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] oferece várias interfaces de programação que você pode usar em seus próprios aplicativos. Você pode usar os recursos e as capacidades existentes do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para criar relatório personalizado e ferramentas de gerenciamento nos sites da Web e nos aplicativos do Windows ou você poderá estender a plataforma do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+  O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] oferece várias interfaces de programação que você pode usar em seus próprios aplicativos. Você pode usar os recursos e as capacidades existentes do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para criar relatório personalizado e ferramentas de gerenciamento nos sites da Web e nos aplicativos do Windows ou você poderá estender a plataforma do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
  Estender a plataforma do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] inclui a criação de novos componentes e recursos que podem ser usados para acesso a dados, entrega de relatório e muito mais. Você pode comercializar esses componentes e recursos para empresas que estiverem usando o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] em sua organização.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "47835494"
  O [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dá suporte a um conjunto completo de solicitações baseadas na URL que você pode usar como um ponto de acesso rápido e fácil para navegação e exibição de relatório. Você pode usar esta tecnologia junto com o serviço Web do servidor de relatório para integrar uma solução de relatório completa em seus aplicativos comerciais personalizados. O acesso de URL será particularmente útil quando você estiver integrando relatórios como parte de um portal de Web ou exibindo relatórios de um navegador da Web.  
   
  [Extensões do Reporting Services](../reporting-services/extensions/reporting-services-extensions.md)  
- A arquitetura modular do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] foi desenhada para extensibilidade. Uma API de código gerenciado está disponível de forma que você possa desenvolver, instalar e gerenciar facilmente extensões consumidas por muitos componentes do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Você pode criar assemblies usando o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] e adicionar uma nova funcionalidade de renderização, segurança, entrega e processamento de dados do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] de acordo com suas necessidades de negócios em evolução.  
+ A arquitetura modular do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] foi desenhada para extensibilidade. Uma API de código gerenciado está disponível de forma que você possa desenvolver, instalar e gerenciar facilmente extensões consumidas por muitos componentes do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Você pode criar assemblies usando o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] e adicionar uma nova funcionalidade de renderização, segurança, entrega e processamento de dados do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] de acordo com suas necessidades de negócios em evolução.  
   
  [Itens de relatório personalizados](../reporting-services/custom-report-items/custom-report-items.md)  
  Descreve como criar Itens de Relatório Personalizados para adicionar funcionalidade à RDL ou estender a funcionalidade de controles existentes.  

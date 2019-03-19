@@ -14,12 +14,12 @@ ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e593e7ce4de4ad4535bf59868e01419e74e2bf8b
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 34d019792a898290c65371e32f83b49911cb27a3
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591280"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973816"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Grupos de disponibilidade Always On: interoperabilidade (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ Os seguintes recursos interoperam com [!INCLUDE[ssHADR](../../../includes/sshadr
   [Guia de migração: Migrando para Grupos de Disponibilidade Always On de implantações anteriores que combinam espelhamento de banco de dados e envio de logs](https://msdn.microsoft.com/library/jj635217)
   [Guia de soluções Always On do Microsoft SQL Server para alta disponibilidade e recuperação de desastres](https://go.microsoft.com/fwlink/?LinkId=227600)
   [White papers da Microsoft para SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)
-  [White papers da equipe de consultoria de cliente do SQL Server](https://sqlcat.com/)
+  [White papers da equipe de consultoria de cliente do SQL Server](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)
 
 ## <a name="see-also"></a>Consulte Também
 
