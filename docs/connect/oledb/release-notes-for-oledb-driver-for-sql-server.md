@@ -1,53 +1,80 @@
 ---
 title: Notas de versão (OLE DB Driver para SQL Server) | Microsoft Docs
-ms.date: 02/12/2019
+ms.date: 02/13/2019
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
-author: David-Engel
-ms.author: v-daveng
-ms.openlocfilehash: 36dc1b7325265da6231b75e9f4db46854b0b219f
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+ms.reviewer: genemi
+author: mateusz-kmiecik
+ms.author: v-makmie
+ms.openlocfilehash: 2a1d6d216f4f7ec7fee0f5f9aa5810c78f1936e6
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744356"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161763"
 ---
-# <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>Notas de versão do Driver do Microsoft OLE DB para SQL Server
+# <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>Notas de versão do Microsoft OLE DB Driver para SQL Server
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
 Esta página discute o que foi adicionado em cada versão do Driver da Microsoft OLE DB para SQL Server.
 
-## <a name="whats-new-in-version-1821"></a>Novidades da versão 18.2.1
+<!--
+USE THE TABLE FORMAT!
+Hello, from now on, please use the table-based format standard for all new Release Notes content.
+See section "## 18.2.1" for a live example in this article.
+Thank you. For questions, contact GeneMi. (2019/03/16)
+-->
 
-**Recursos adicionados:**
+## <a name="1821"></a>18.2.1
 
-* Suporte para codificação do servidor UTF-8. Para obter mais informações, consulte: [suporte a UTF-8 no Driver do OLE DB para SQL Server](features/utf-8-support-in-oledb-driver-for-sql-server.md).
-* Suporte para autenticação do Azure Active Directory. Para saber mais, confira [Usar o Azure Active Directory](features/using-azure-active-directory.md).
+<!--
+USE THE TABLE FORMAT!
+Hello, from now on, please use the table-based format standard for all new Release Notes content.
+See section "## 18.2.1" for a live example in this article.
+Thank you. For questions, contact GeneMi. (2019/03/16)
+-->
 
-## <a name="whats-new-in-version-1810"></a>Novidades da versão 18.1.0
+Fevereiro de 2019
 
-**Recursos adicionados:**
+### <a name="features-added"></a>Recursos adicionados
 
-* Suporte para `UseFMTONLY` palavra-chave de cadeia de caracteres de conexão e `SSPROP_INIT_USEFMTONLY` propriedade de inicialização.
-`UseFMTONLY` Controla como os metadados são recuperados ao se conectar ao [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e mais recente.  
-Para obter mais informações, consulte:
-  * [Uso de palavras-chave de cadeia de conexão com o Driver do OLE DB para SQL Server](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)
+| Recurso adicionado | Detalhes |
+| :------------ | :------ |
+| Suporte para codificação do servidor UTF-8. | &bull; &nbsp; [Suporte a UTF-8 no OLE DB Driver para SQL Server](features/utf-8-support-in-oledb-driver-for-sql-server.md). |
+| Suporte para autenticação do Azure Active Directory. | &bull; &nbsp; [Como usar o Azure Active Directory](features/using-azure-active-directory.md). |
+| &nbsp; | &nbsp; |
 
-**Bugs corrigidos:**
+## <a name="1810"></a>18.1.0
 
-* Fixo versão incorreta do arquivo de formato BCP. O 18.0 do Driver de banco de dados OLE incorretamente define a versão do arquivo de formato BCP para 18.0 em vez de 11.0. Arquivos de formato gerados pelo 18.0 do Driver de banco de dados OLE não podem ser lido pelo 18.1 do Driver de banco de dados OLE. Se você precisar usar arquivos de formato gerados pela versão anterior do driver com o novo driver, você pode editar manualmente os arquivos para alterar a versão 11.0.
+Julho de 2018
 
-## <a name="whats-new-in-version-1802"></a>Novidades da versão 18.0.2
+### <a name="features-added"></a>Recursos adicionados
 
-**Recursos adicionados**:
+| Recurso adicionado | Detalhes |
+| :------------ | :------ |
+| Suporte para o `UseFMTONLY` palavra-chave da cadeia de conexão e para o `SSPROP_INIT_USEFMTONLY` propriedade de inicialização. | `UseFMTONLY` Controla como os metadados são recuperados ao se conectar ao [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e mais recente.<br/><br/>&bull; &nbsp; [Como usar palavras-chave de cadeia de conexão com o OLE DB Driver para SQL Server](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
+| &nbsp; | &nbsp; |
 
-* Suporte para `MultiSubnetFailover` palavra-chave de cadeia de caracteres de conexão e `SSPROP_INIT_MULTISUBNETFAILOVER` propriedade de inicialização.  
-Para obter mais informações, consulte:  
-  * [Suporte ao Driver do OLE DB para SQL Server para alta disponibilidade e recuperação de desastre](features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)  
-  * [Uso de palavras-chave de cadeia de conexão com o Driver do OLE DB para SQL Server](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)
+### <a name="bugs-fixed"></a>Bugs corrigidos
+
+| Correções de bugs | Detalhes |
+| :-------- | :------ |
+| Fixo versão incorreta do arquivo de formato BCP. | O 18.0 do Driver de banco de dados OLE incorretamente define a versão do arquivo de formato BCP para 18.0, em vez de como 11.0.<br/><br/>Arquivos de formato gerados pelo 18.0 do Driver de banco de dados OLE não podem ser lido pelo 18.1 do Driver de banco de dados OLE.<br/><br/>Se você precisar usar arquivos de formato gerados pela versão anterior do driver com o novo driver, você pode editar manualmente os arquivos para alterar a versão 11.0. |
+| &nbsp; | &nbsp; |
+
+## <a name="1802"></a>18.0.2
+
+### <a name="features-added"></a>Recursos adicionados
+
+| Recurso adicionado | Detalhes |
+| :------------ | :------ |
+| Suporte para o `MultiSubnetFailover` palavra-chave da cadeia de conexão e o `SSPROP_INIT_MULTISUBNETFAILOVER` propriedade de inicialização. | &bull; &nbsp; [Suporte do OLE DB Driver para SQL Server para alta disponibilidade e recuperação de desastres](features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).<br/><br/>&bull; &nbsp; [Como usar palavras-chave de cadeia de conexão com o OLE DB Driver para SQL Server](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
+| &nbsp; | &nbsp; |
 
 ## <a name="see-also"></a>Confira também
+
 [Driver do Microsoft OLE DB para SQL Server](oledb-driver-for-sql-server.md)
