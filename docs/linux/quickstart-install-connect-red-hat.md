@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: linux
 ms.custom: sql-linux, seodec18
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: 03e3b5d578c8fee68098674e9b82501a290bafda
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: dce4418dee10ff356d5c922350cd2fda29b44795
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579236"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277296"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Início Rápido: Instalar o SQL Server e criar um banco de dados no Red Hat
 
@@ -25,7 +25,7 @@ ms.locfileid: "57579236"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-Neste início rápido, você instala o SQL Server 2017 ou 2019 do SQL Server no Red Hat Enterprise Linux (RHEL) 7.3 +. Você se conectar com **sqlcmd** para criar seu primeiro banco de dados e executar consultas.
+Neste início rápido, você instala o SQL Server 2017 ou 2019 do SQL Server no Red Hat Enterprise Linux (RHEL). Você se conectar com **sqlcmd** para criar seu primeiro banco de dados e executar consultas.
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
@@ -40,7 +40,7 @@ Neste início rápido, você instalar a visualização de 2019 do SQL Server no 
 
 ## <a name="prerequisites"></a>Prerequisites
 
-Você deve ter um RHEL 7.3 ou 7.4 máquina com **pelo menos 2 GB** de memória.
+Você deve ter um computador RHEL 7.3, 7.4, 7.5 ou 7.6 com **pelo menos 2 GB** de memória.
 
 Para instalar o Red Hat Enterprise Linux em seu próprio computador, vá para [ https://access.redhat.com/products/red-hat-enterprise-linux/evaluation ](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation). Você também pode criar máquinas virtuais RHEL no Azure. Ver [criar e gerenciar VMs do Linux com a CLI do Azure](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)e use `--image RHEL` na chamada para `az vm create`.
 

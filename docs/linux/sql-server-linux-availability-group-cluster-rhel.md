@@ -5,18 +5,18 @@ description: Saiba mais sobre clusters de grupo de disponibilidade ao executar o
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 06/14/2017
+ms.date: 03/12/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: c498a9ef5422f82671000d6c0e82756df85947cb
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: 44d39a44597a789c031ee10b862bffa2af6da883
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160585"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305625"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Configurar o Cluster do RHEL para o grupo de disponibilidade do SQL Server
 
@@ -89,7 +89,7 @@ Cada nó do cluster deve ter uma assinatura apropriada para RHEL e a alta dispon
    sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms
    ```
 
-Para obter mais informações, consulte [Pacemaker – o software livre, Cluster de alta disponibilidade](https://www.opensourcerers.org/pacemaker-the-open-source-high-availability-cluster/). 
+Para obter mais informações, consulte [Pacemaker – o software livre, Cluster de alta disponibilidade](https://clusterlabs.org/pacemaker/). 
 
 Depois de configurar a assinatura, conclua as seguintes etapas para configurar o Pacemaker:
 
@@ -111,7 +111,7 @@ Isolamento de nível de nó garante que um nó não é executado todos os recurs
 
 Para obter informações sobre STONITH e isolamento, consulte os seguintes artigos:
 
-* [Clusters do pacemaker do zero](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)
+* [Clusters do pacemaker do zero](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/index.html)
 * [Isolamento e STONITH](https://clusterlabs.org/doc/crm_fencing.html)
 * [Complemento de alta disponibilidade do Red Hat com o Pacemaker: Isolamento](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
 
@@ -143,10 +143,10 @@ Para atualizar o valor da propriedade `true` executar:
 sudo pcs property set start-failure-is-fatal=true
 ```
 
-Para atualizar o `ag1` propriedade de recurso `failure-timeout` para `60s` executar:
+Para atualizar o `ag_cluster` propriedade de recurso `failure-timeout` para `60s` executar:
 
 ```bash
-pcs resource update ag1 meta failure-timeout=60s
+pcs resource update ag_cluster meta failure-timeout=60s
 ```
 
 

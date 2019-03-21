@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: b5ffda90f0d4b2b85ed29af65da5ea12592e4423
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 1801551b179cf7040f1eb5cbaa05d8eb3bebc564
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979912"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306034"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configurar o cluster de disco compartilhado do Red Hat Enterprise Linux para SQL Server
 
@@ -203,7 +203,7 @@ Para obter mais informações sobre como usar o NFS, consulte os seguintes recur
 
 * [NFS servidores e firewalld | Stack Exchange](https://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
 * [Montar um Volume do NFS | Guia de administradores de rede do Linux](https://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
-* [Configuração do servidor NFS](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/3/html/Reference_Guide/s1-nfs-server-export.html)
+* [Configuração do servidor NFS | Portal do cliente do Red Hat](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig)
 
 ### <a name="mount-database-files-directory-to-point-to-the-shared-storage"></a>Montar o diretório de arquivos de banco de dados para apontar para o armazenamento compartilhado
 
@@ -276,7 +276,7 @@ Neste ponto, ambas as instâncias do SQL Server são configuradas para executar 
 
    > Se você estiver usando outro firewall que não tem uma configuração de alta disponibilidade interna, as seguintes portas precisam ser abertas para o Pacemaker seja capaz de se comunicar com outros nós no cluster
    >
-   > * TCP: Portas 2224, 3121, 21064
+   > * TCP: Ports 2224, 3121, 21064
    > * UDP: Porta 5405
 
 1. Instale os pacotes do Pacemaker em cada nó.
@@ -336,7 +336,7 @@ Neste ponto, ambas as instâncias do SQL Server são configuradas para executar 
    - **Nome de recurso do sistema de arquivos**: Um nome para o recurso de sistema de arquivos.
    - **dispositivo**: Caminho de compartilhamento de NFS
    - **dispositivo**: O caminho local que ele está montado no compartilhamento
-   - **fsType**: Tipo de compartilhamento de arquivo (ou seja, nfs)
+   - **fstype**: Tipo de compartilhamento de arquivo (ou seja, nfs)
 
    Atualize os valores do script a seguir para o seu ambiente. Execute em um nó para configurar e iniciar o serviço clusterizado.  
 

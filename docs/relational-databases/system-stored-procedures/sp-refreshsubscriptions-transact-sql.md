@@ -16,17 +16,17 @@ ms.assetid: 6cb9b1ce-1ce7-43ab-9451-201f79ed1ffa
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 318ae27808eee1b91debc8ec5d5e3ed0e33088c8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9b7f489bf0ee637463fa9c7b2552563c09f3faad
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52809138"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306254"
 ---
 # <a name="sprefreshsubscriptions-transact-sql"></a>sp_refreshsubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Adicione assinaturas a novos artigos em uma assinatura pull para todos os Assinantes existentes na publicação. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
+  Adicione assinaturas a novos artigos para todos os assinantes existentes a uma publicação de atualização imediata. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,7 +38,7 @@ sp_refreshsubscriptions [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publication** =] **'***publicação***'**  
+ [ **@publication** = ] **'***publication***'**  
  É a publicação para a qual atualizar assinaturas. *publicação* está **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
