@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: cd5c39f230db8fc72388d006fc17302956424633
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: feba6aca66d4428733b11db778c6b590dfde9f8b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227308"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290772"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Notas de versão do SQL Server 2017 no Linux
 
@@ -30,7 +30,7 @@ As notas de versão a seguir se aplicam a [!INCLUDE[ssSQL17](../includes/sssql17
 
 | Plataforma | Sistema de Arquivos | Guia de Instalação |
 |-----|-----|-----|
-| Área de trabalho, servidor e estação de trabalho do Red Hat Enterprise Linux 7.3 ou 7.4 | XFS ou EXT4 | [Guia de instalação](quickstart-install-connect-red-hat.md) | 
+| Red Hat Enterprise Linux 7.3, 7.4, 7.5 ou 7.6 Server | XFS ou EXT4 | [Guia de instalação](quickstart-install-connect-red-hat.md) | 
 | SUSE Enterprise Linux Server v12 SP2 | XFS ou EXT4 | [Guia de instalação](quickstart-install-connect-suse.md) |
 | Ubuntu 16.04LTS | XFS ou EXT4 | [Guia de instalação](quickstart-install-connect-ubuntu.md) | 
 | Docker Engine 1.8 + no Windows, Mac ou Linux | N/D | [Guia de instalação](quickstart-install-connect-docker.md) | 
@@ -68,9 +68,9 @@ A tabela a seguir lista o histórico de lançamento para [!INCLUDE[ssSQL17](../i
 
 ## <a id="cuinstall"></a> Como instalar atualizações
 
-Se você tiver configurado o repositório de atualização cumulativa (**mssql-server-2017**), em seguida, você obterá a atualização cumulativa mais recente do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] quando você executar novas instalações de pacotes. O repositório da atualização cumulativa é o padrão de todos os pacotes de artigos de instalação para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no Linux. Se você tiver configurado o repositório GDR (**mssql-server 2017 gdr**), você só receberá atualizações críticas de segurança lançadas desde GA. Se você precisar de contêiner do Docker CU ou atualizações GDR, consulte as imagens oficiais para [Microsoft SQL Server no Linux para o mecanismo do Docker](https://hub.docker.com/r/microsoft/mssql-server). Para obter mais informações sobre a configuração do repositório, consulte [configurar repositórios para o SQL Server no Linux](sql-server-linux-change-repo.md).
+Se você tiver configurado o repositório CU (**mssql-server-2017**), em seguida, você obterá o CU mais recente do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] quando você executar novas instalações de pacotes. O repositório do CU é o padrão de todos os pacotes de artigos de instalação para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no Linux. Se você tiver configurado o repositório GDR (**mssql-server 2017 gdr**), você só receberá atualizações críticas de segurança lançadas desde GA. Se você precisar de contêiner do Docker CU ou atualizações GDR, consulte as imagens oficiais para [Microsoft SQL Server no Linux para o mecanismo do Docker](https://hub.docker.com/r/microsoft/mssql-server). Para obter mais informações sobre a configuração do repositório, consulte [configurar repositórios para o SQL Server no Linux](sql-server-linux-change-repo.md).
 
-Se você estiver atualizando existente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pacotes, execute o comando de atualização apropriado para cada pacote obter a atualização cumulativa mais recente. Para obter instruções de atualização específica para cada pacote, consulte os guias de instalação a seguir:
+Se você estiver atualizando existente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pacotes, execute o comando de atualização apropriado para cada pacote obter o CU mais recente. Para obter instruções de atualização específica para cada pacote, consulte os guias de instalação a seguir:
 
 - [Instalar o pacote do SQL Server](sql-server-linux-setup.md#upgrade)
 - [Instalar o pacote de pesquisa de texto completo](sql-server-linux-setup-full-text-search.md)
@@ -135,7 +135,7 @@ Para instalações de pacote manual ou off-line, você pode baixar os pacotes De
 
 ## <a id="CU9-GDR2"></a> CU9-GDR2 (agosto de 2018)
 
-Esta é uma atualização de segurança que também inclui a atualização cumulativa lançada anteriormente (CU9) para [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] versão para esta versão é 14.0.3035.2. Para obter informações sobre as correções e aprimoramentos nesta versão, consulte [ https://support.microsoft.com/help/4293805 ](https://support.microsoft.com/help/4293805).
+Esta é uma atualização de segurança que também inclui o CU lançado anteriormente (CU9) para [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] versão para esta versão é 14.0.3035.2. Para obter informações sobre as correções e aprimoramentos nesta versão, consulte [ https://support.microsoft.com/help/4293805 ](https://support.microsoft.com/help/4293805).
 
 ### <a name="package-details"></a>Detalhes do pacote
 
