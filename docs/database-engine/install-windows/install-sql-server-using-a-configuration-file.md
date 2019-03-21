@@ -1,6 +1,5 @@
 ---
 title: Instalar o SQL Server usando um arquivo de configuração | Microsoft Docs
-ms.custom: ''
 ms.date: 09/07/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +10,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 1c52536b52fa63b61b24247f9df3854b712d86c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c5127fd5aec582db4f8e574f29cab5cec3809252
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672254"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58072201"
 ---
 # <a name="install-sql-server-using-a-configuration-file"></a>Instalar o SQL Server usando um arquivo de configuração
 
@@ -24,7 +23,7 @@ ms.locfileid: "47672254"
  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A Instalação fornece a capacidade de gerar um arquivo de configuração baseado no padrão do sistema e em entradas de tempo de execução. É possível usar o arquivo de configuração para implantar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em toda a empresa com a mesma configuração. Também é possível padronizar instalações manuais em toda a empresa criando um arquivo em lotes que inicie o Setup.exe. 
  
-Este artigo foi especificamente atualizado para o SQL Server 2016 e o SQL Server 2017. Para versões anteriores do SQL Server, consulte [Instalar o SQL Server 2014 usando um arquivo de configuração](install-sql-server-2016-using-a-configuration-file.md).
+Este artigo é mantido para versões do SQL Server 2016 e posterior. Para versões anteriores do SQL Server, consulte [Instalar o SQL Server 2014 usando um arquivo de configuração](/../../2014/database-engine/install-windows/install-sql-server-using-a-configuration-file.md).
  
 A Instalação dá suporte ao uso do arquivo de configuração apenas através do prompt de comando. A ordem de processamento dos parâmetros ao usar o arquivo de configuração é descrita a seguir:  
   

@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8f7302384bbf264061c73b79a919855aa762994f
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: a69835d1952a860bebe36aaf6793c548e09a5743
+ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579766"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974445"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Novidades no [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -209,13 +209,15 @@ Suporte completo para a amplamente utilizada codificação de caracteres UTF-8 c
 
 Por exemplo, `LATIN1_GENERAL_100_CI_AS_SC` para `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. A UTF-8 só está disponível para agrupamentos do Windows com suporte para caracteres suplementares, conforme introduzido no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. `NCHAR` e `NVARCHAR` permitem somente a codificação UTF-16 e permanecem inalterados.
 
-Esse recurso pode fornecer economia de armazenamento significativa dependendo do conjunto de caracteres utilizado. Por exemplo, a alteração de um tipo de dados de coluna existente com cadeias de caracteres Latinas de `NCHAR(10)` para `CHAR(10)` usando uma ordenação habilitada para UTF-8 resulta em 50% de redução nos requisitos de armazenamento. Essa redução ocorre porque `NCHAR(10)` exige 20 bytes para armazenamento, enquanto `CHAR(10)` requer 10 bytes para a mesma cadeia de caracteres Unicode.
+Esse recurso pode fornecer economia de armazenamento significativa dependendo do conjunto de caracteres utilizado. Por exemplo, a alteração de um tipo de dados de coluna existente com cadeias de caracteres ASCII (Latinas) de `NCHAR(10)` para `CHAR(10)` usando uma ordenação habilitada para UTF-8 resulta em 50% de redução nos requisitos de armazenamento. Essa redução ocorre porque `NCHAR(10)` exige 20 bytes para armazenamento, enquanto `CHAR(10)` requer 10 bytes para a mesma cadeia de caracteres Unicode.
 
 Para obter mais informações, consulte [Suporte a ordenações e a Unicode](../relational-databases/collations/collation-and-unicode-support.md).
 
-O CTP 2.1 adiciona suporte para selecionar a ordenação de UTF-8 como padrão durante a instalação do [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
+O **CTP 2.1** adiciona suporte para selecionar a ordenação de UTF-8 como padrão durante a instalação do [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
-O CTP 2.2 adiciona suporte para codificação de caracteres UTF-8 com replicação do SQL Server.
+O **CTP 2.2** adiciona suporte para usar codificação de caracteres UTF-8 com replicação do SQL Server.
+
+O **CTP 2.3** adiciona suporte para usar codificação de caracteres UTF-8 com uma ordenação BIN2 (UTF8_BIN2).
 
 ### <a name="resumable-online-index-create-ctp-20"></a>Criação de índice online retomável (CTP 2.0)
 
@@ -383,6 +385,8 @@ Para obter informações detalhadas, consulte [Novidades dos Serviços do Machin
 A infraestrutura de criação de perfil com consulta leve (LWP) fornece dados de desempenho de consulta de maneira mais eficiente do que os mecanismos de criação de perfil padrão. A criação de perfil leve agora está habilitada por padrão. Ela foi introduzida no [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1. A criação de perfil leve oferece um mecanismo de coleção de estatísticas de execução de consulta com uma sobrecarga esperada de 2% da CPU, em comparação com uma sobrecarga de até 75% da CPU para o mecanismo de criação de perfil com consulta padrão. Em versões anteriores, ela ficava DESATIVADA por padrão. Os administradores de banco de dados podiam habilitá-la com o [sinalizador de rastreamento 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
 
 Para obter mais informações sobre essa criação de perfil leve, confira [Infraestrutura de criação de perfil de consulta](../relational-databases/performance/query-profiling-infrastructure.md).
+
+**CTP 2.3** Uma nova configuração com escopo de banco de dados `LIGHTWEIGHT_QUERY_PROFILING` é introduzida para habilitar ou desabilitar a infraestrutura de criação de perfil de consulta leve.
 
 ### <a id="polybase"></a>Novos conectores de PolyBase
 

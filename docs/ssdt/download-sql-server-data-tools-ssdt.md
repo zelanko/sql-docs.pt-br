@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 4f511b2a88d40cccd0c1c54316e0bdfaec46e681
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 1c485156992dbb78157af56b7d5066ee40a92e36
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57588095"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58051945"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Baixar e instalar o SSDT (SQL Server Data Tools) para o Visual Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ O instalador lista instâncias disponíveis do Visual Studio às quais adicionar
 
 > [!IMPORTANT]
 > - Antes de instalar o SSDT para o Visual Studio 2017 (15.9.0), desinstale as extensões *Projetos do Analysis Services* e *Projetos do Reporting Services* caso já estejam instaladas, e feche todas as instâncias do VS.
-> - O SSDT para Visual Studio 2017 desde 15.8.2 não oferece suporte à criação de pacotes com Fonte/destino Teradata. Use o SSDT para Visual Studio 2017 (15.8).
+> - Use o SSDT para Visual Studio 2017 versão 15.8.0 ou anterior para criar pacotes do SSIS que contêm a Origem/destino Teradata. VS 2017 (15.8.2) não pode criar pacotes do SSIS que contêm a Origem/destino Teradata. 
 
 
 

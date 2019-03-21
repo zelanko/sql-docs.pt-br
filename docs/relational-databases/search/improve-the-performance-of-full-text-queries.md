@@ -1,23 +1,22 @@
 ---
 title: Melhorar o desempenho de consultas de texto completo | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 ms.assetid: 0658dc74-25eb-4486-bbd6-e85c1f92c272
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bff25614ff82a274e5c98bc62cc25a6f1003a1b5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a618f039e4a882318f8be00ebd0a05aef9d80efb
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677355"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973415"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>Melhorar o desempenho de consultas de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "51677355"
 -   Para aplicativos que contêm afirmações de relação seletiva, as consultas que usam predicados relacionais seletivos e predicados de texto completo não seletivos podem ter melhor desempenho quando escritas para usar o otimizador de consulta. Dessa forma, o otimizador de consulta pode decidir se poderá explorar o predicado ou a aplicação de intervalo para gerar um plano de consulta eficaz. Esta abordagem é mais simples e geralmente mais eficiente do que a indexação de dados relacionais como dados de texto completo.  
   
 ## <a name="related-resources"></a>Recursos relacionados  
- [Pesquisa de Texto Completo do SQL Server 2008: Operações internas e aprimoramentos](https://go.microsoft.com/fwlink/?LinkId=129544)  
+ [Pesquisa de texto completo do SQL Server 2008: recursos internos e aprimoramentos](https://go.microsoft.com/fwlink/?LinkId=129544)  
   
 ## <a name="see-also"></a>Consulte Também  
  [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md)   

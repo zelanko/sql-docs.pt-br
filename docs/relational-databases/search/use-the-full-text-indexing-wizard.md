@@ -1,10 +1,8 @@
 ---
 title: Usar o Assistente para Indexação de Texto Completo | Microsoft Docs
-ms.custom: ''
 ms.date: 08/19/2016
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 f1_keywords:
@@ -21,16 +19,17 @@ helpviewer_keywords:
 - Full-Text Indexing Wizard
 - full-text search [SQL Server], Full-Text Indexing Wizard
 ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fcbe86b8a0deb419854e3ec364317872507a20e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 250334bceefa2a3cac6226d32792a8be5ef89206
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731754"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973840"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Usar o Assistente para Indexação de Texto Completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "47731754"
 4. **Idioma do Separador de Palavras.** Selecione um idioma da lista suspensa. Essa seleção será usada para indicar os separadores de palavras corretos para o índice. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa separadores de palavras para identificar limites das palavras nos dados de indexação de texto completo.  
   
 5.  **Coluna de Tipo.** Selecione o nome da coluna que possui o tipo de documento de coluna que está sendo indexado com texto completo.  
-> **OBSERVAÇÃO:** a  **Coluna de Tipo** só será habilitada quando a coluna nomeada na coluna **Colunas Disponíveis** for do tipo **varbinary(max)** ou **image**.  
+> **OBSERVAÇÃO:** a **Coluna de Tipo** só será habilitada quando a coluna nomeada na coluna **Colunas Disponíveis** for do tipo **varbinary(max)** ou **image**.  
   
 6. **Semântica Estatística.** Especifique se habilitará a indexação semântica da coluna selecionada. Para obter mais informações, veja [Pesquisa semântica &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
@@ -79,7 +78,7 @@ ms.locfileid: "47731754"
   
 9.  **Selecione o catálogo de texto completo**  
 
-     **Selecionar um catálogo:** selecione um catálogo de texto completo na lista. O catálogo padrão para o banco de dados será o item selecionado por padrão na lista. Se não houver catálogos disponíveis, a lista permanecerá desabilitada e a caixa de seleção **Criar um novo catálogo** estará marcada e desabilitada.  
+     **Selecionar um catálogo:** Selecione um catálogo de texto completo na lista. O catálogo padrão para o banco de dados será o item selecionado por padrão na lista. Se não houver catálogos disponíveis, a lista permanecerá desabilitada e a caixa de seleção **Criar um novo catálogo** estará marcada e desabilitada.  
   
   OU
   

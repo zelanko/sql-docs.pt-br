@@ -16,12 +16,12 @@ ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 668fe6a825be365aa605febaaea7aafdd71ddf7d
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: ac844c8155202270dc9661c256259dd67d5f60ab
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997568"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973425"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server, objeto Databases
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "53997568"
 |**Tamanho de Logs ativos totais no Pool de Logs**|Logs ativos atuais totais armazenados no gerenciador de buffer em cache compartilhado em bytes.|
 |**Tamanho do Pool compartilhado total no Pool de Logs**|Uso total de memória atual do gerenciador do buffer em cache compartilhado em bytes.|
 |**Log Shrinks**|Número total de reduções de log para este banco de dados.|  
-|**Truncamentos de Log**|O número de vezes que o log de transações foi reduzido.|  
+|**Truncamentos de Log**|o número de vezes que o log de transações foi truncado. (no Modo de recuperação simples).|  
 |**Percent Log Used**|Porcentagem de espaço no log que está em uso.|  
 |**Repl. Xacts pendentes**|Número de transações no log de transações do banco de dados de publicação marcado para replicação, mas ainda não enviadas ao banco de dados de distribuição.|  
 |**Repl. Trans. Taxa**|Número de transações por segundo de leitura do log de transações do banco de dados de publicação enviadas ao banco de dados de distribuição.|  

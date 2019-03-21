@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
-ms.openlocfilehash: 26b11ac46da7239f2fef98ef838e2e7c6f775aef
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 980bbb179c92e95d0386e672ed0b62d7ac8cc968
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803151"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57976326"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Solucionar problemas de conectividade do PolyBase Kerberos
 
@@ -38,7 +38,7 @@ Primeiramente, é necessário entender o protocolo Kerberos em um alto nível. H
 1. O recurso protegido (HDFS, MR2, YARN, histórico de trabalhos etc.)
 1. Centro de distribuição de chaves (conhecido como um controlador de domínio no Active Directory)
 
-Cada recurso protegido do Hadoop é registrado no  **KDC (Centro de Distribuição de Chaves)** com um único **SPN (Nome da Entidade de Serviço)** quando Kerberos é configurado no cluster Hadoop. A meta é que o cliente obtenha um tíquete de usuário temporário, chamado **tgt (Tíquete de Concessão de Tíquete)**, para solicitar outro tíquete temporário, chamado **ST (Tíquete de Serviço)** ao KDC no SPN específico que se deseja acessar.  
+Cada recurso protegido do Hadoop é registrado no **KDC (Centro de Distribuição de Chaves)** com um único **SPN (Nome da Entidade de Serviço)** quando o Kerberos é configurado no cluster Hadoop. A meta é que o cliente obtenha um tíquete de usuário temporário, chamado **Tíquete de Concessão de Tíquete (TGT)**, para solicitar outro tíquete temporário, chamado **Tíquete de Serviço (ST)** ao KDC no SPN específico que se deseja acessar.  
 
 No PolyBase, quando uma autenticação é solicitada em qualquer recurso protegido por Kerberos, o handshake com quatro viagens de ida e volta a seguir ocorre:
 
@@ -102,7 +102,7 @@ A ferramenta é executada independentemente do SQL Server, portanto, ela não pr
 | *Porta do nó de nome* | A porta do nó de nome. Refere-se ao argumento "LOCATION" em seu CREATE EXTERNAL DATA SOURCE T-SQL. Por exemplo, 8020. |
 | *Entidade de Serviço* | A entidade de serviço do administrador para o KDC. Corresponde ao argumento "IDENTITY" no seu `CREATE DATABASE SCOPED CREDENTIAL` T-SQL.|
 | *Senha do serviço* | Em vez de digitar a senha no console, armazene-a em um arquivo e passe o caminho do arquivo aqui. O conteúdo do arquivo deve corresponder ao usado como seu argumento "SECRET" no seu `CREATE DATABASE SCOPED CREDENTIAL` T-SQL. |
-| *Caminho do arquivo HDFS remoto (opcional) * | O caminho de um arquivo existente a ser acessado. Se não estiver especificado, a raiz "/" será usada. |
+| *Caminho do arquivo HDFS remoto (opcional) * | O caminho de um arquivo existente a ser acessado. Se não estiver especificado, a raiz "/" será usada. |
 
 ## <a name="example"></a>Exemplo
 
@@ -210,11 +210,12 @@ Se a ferramenta foi executada e as propriedades de arquivo do caminho de destino
 
 ## <a name="debugging-tips"></a>Dicas de depuração
 
-### <a name="mit-kdc"></a>MIT KDC  
+### <a name="mit-kdc"></a>MIT KDC  
 
-Todos os SPNs registrados com o KDC, incluindo os administradores, podem ser exibidos por meio da execução de **kadmin.local** > (logon do administrador) > **listprincs** no host do KDC ou em qualquer cliente do KDC. Se o Kerberos está configurado corretamente no cluster do Hadoop, deve haver um SPN para cada um dos serviços disponíveis no cluster (por exemplo: `nn`, `dn`, `rm`, `yarn`, `spnego` etc.) Os arquivos keytab correspondentes (substitutos para senhas) podem ser vistos em  **/etc/security/keytabs**, por padrão. Eles são criptografados usando a chave privada do KDC.  
+Todos os SPNs registrados com o KDC, incluindo os administradores, podem ser exibidos por meio da execução de **kadmin.local** > (logon do administrador) > **listprincs** no host do KDC ou em qualquer cliente do KDC. Se o Kerberos está configurado corretamente no cluster do Hadoop, deve haver um SPN para cada um dos serviços disponíveis no cluster (por exemplo: `nn`, `dn`, `rm`, `yarn`, `spnego` etc.) Os arquivos keytab correspondentes (substitutos para senhas) podem ser vistos em **/etc/security/keytabs**, por padrão. Eles são criptografados usando a chave privada do KDC.  
 
-Também considere usar a ferramenta [`kinit`](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) para verificar as credenciais de administrador no KDC localmente. Um exemplo de uso seria:  `kinit identity@MYREALM.COM`. Um prompt de senha indica que a identidade existe.  Os logs do KDC estão disponíveis em **/var/log/krb5kdc.log** por padrão, que inclui todas as solicitações de tíquetes, bem como o IP do cliente que fez a solicitação. Deve haver duas solicitações de IP do computador do SQL Server no qual a ferramenta foi executada: primeiro para o TGT do Servidor de Autenticação, como **AS\_REQ**, seguido por um **TGS\_REQ** para o ST do Servidor de Concessão de Tíquetes.
+Também considere usar a ferramenta [`kinit`](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) para verificar as credenciais de administrador no KDC localmente. Um exemplo de uso seria: `kinit identity@MYREALM.COM`. Um prompt de senha indica que a identidade existe.  
+Os logs do KDC estão disponíveis em **/var/log/krb5kdc.log** por padrão, que inclui todas as solicitações de tíquetes, bem como o IP do cliente que fez a solicitação. Deve haver duas solicitações de IP do computador do SQL Server no qual a ferramenta foi executada: primeiro para o TGT do Servidor de Autenticação, como **AS\_REQ**, seguido por um **TGS\_REQ** para o ST do Servidor de Concessão de Tíquetes.
 
 ```bash
  [root@MY-KDC log]# tail -2 /var/log/krb5kdc.log 
@@ -224,7 +225,7 @@ Também considere usar a ferramenta [`kinit`](https://web.mit.edu/kerberos/krb5-
 
 ### <a name="active-directory"></a>Active Directory 
 
-No Active Directory, os SPNs podem ser exibidos por meio do Painel de Controle > Usuários e Computadores do Active Directory > *MyRealm* > *MyOrganizationalUnit*. Se o Kerberos está configurado corretamente no cluster do Hadoop, há um SPN para cada um dos serviços disponíveis (por exemplo: `nn`, `dn`, `rm`, `yarn`, `spnego` etc.)
+No Active Directory, os SPNs podem ser exibidos por meio do Painel de Controle > Usuários e Computadores do Active Directory > *MyRealm* > *MyOrganizationalUnit*. Se o Kerberos está configurado corretamente no cluster do Hadoop, há um SPN para cada um dos serviços disponíveis (por exemplo: `nn`, `dn`, `rm`, `yarn`, `spnego` etc.)
 
 ### <a name="general-debugging-tips"></a>Dicas gerais de depuração
 

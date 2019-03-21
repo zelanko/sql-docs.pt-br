@@ -1,7 +1,7 @@
 ---
 title: Instalar o SQL Server por meio do prompt de comando | Microsoft Docs
 ms.custom: ''
-ms.date: 01/17/2018
+ms.date: 03/13/2019
 ms.prod: sql
 ms.technology: install
 ms.reviewer: ''
@@ -85,12 +85,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 1aa7350ca8232f0b57a8d7ecf960d69838b26d8b
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: a0aa770bfbf3486dedf045b6a6da3f88c89bbade
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662980"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57976430"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Instalar o SQL Server do prompt de comando
 
@@ -274,7 +274,7 @@ Use as diretrizes a seguir para desenvolver comandos de instalação com a sinta
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT<br /><br /> **Necessário**|Especifica a conta de inicialização do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [Necessário](#Accounts)|Especifica a senha da conta de inicialização do serviço [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **Opcional**|Especifica o modo de [inicialização](#Accounts) do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
-|Serviços de Machine Learning/Python (no banco de dados)|MPYCACHEDIRECTORY|Use esse parâmetro para especificar o diretório de Cache para suporte a recurso Python em Serviços de Machine Learning do SQL Server 2017 ou Machine Learning Server (Autônomo). Essa configuração normalmente é usada ao instalar componentes do Python da [linha de comando em um computador sem acesso à Internet](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access).|  
+|Serviços de Machine Learning/Python (no banco de dados)|MPYCACHEDIRECTORY|Reservado para uso futuro. Use %TEMP% para armazenar arquivos .CAB do Python para instalação em um computador que não tem uma conexão com a Internet. |  
 |Serviços de Machine Learning/R (no banco de dados)|MRCACHEDIRECTORY|Use esse parâmetro para especificar o diretório de Cache para suporte a recurso Microsoft R Open, SQL Server 2016 R Services, SQL Server 2016 R Server (Autônomo) ou R em Serviços de Machine Learning do SQL Server 2017 ou Machine Learning Server (Autônomo). Essa configuração normalmente é usada ao instalar componentes do R da [linha de comando em um computador sem acesso à Internet](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access).|  
   
 ###### <a name="sample-syntax"></a>Sintaxe de exemplo:  

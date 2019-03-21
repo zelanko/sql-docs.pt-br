@@ -11,12 +11,12 @@ ms.assetid: 5270689a-46d4-4847-b41f-3bed1899e955
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1f2b44f49f7fb439472028a220392723529f68b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e937a9fa9d3eba7c766192c83d69a514054f762a
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819784"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973015"
 ---
 # <a name="catalogvalidateproject-ssisdb-database"></a>catalog.validate_project (Banco de Dados SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ catalog.validate_project [ @folder_name = ] folder_name
     , [ @validate_type = ] validate_type  
     , [ @validation_id = ] validation_id OUTPUT  
  [  , [ @use32bitruntime = ] use32bitruntime ]  
- [  , [ @target_environment = ] target_environment ]  
+ [  , [ @environment_scope = ] environment_scope ]  
  [  , [ @reference_id = ] reference_id ]  
 ```  
   
@@ -43,7 +43,7 @@ catalog.validate_project [ @folder_name = ] folder_name
  O nome do projeto. O *project_name* é **nvarchar(128)**.  
   
  [ @validate_type = ] *validate_type*  
- Indica o tipo de validação a ser executado. Use o caractere `F` para executar uma validação completa. O *validate_type* é **char(1)**.  
+ Indica o tipo de validação a ser executado. Use o caractere `F` para executar uma validação completa. Esse parâmetro é opcional, o caractere `F` será usado por padrão. O *validate_type* é **char(1)**.  
   
  [ @validation_id = ] *validation_id*  
  Retorna o ID (identificador exclusivo) da validação. O *validation_id* é **bigint**.  
@@ -52,7 +52,7 @@ catalog.validate_project [ @folder_name = ] folder_name
  Indica se o tempo de execução de 32 bits deve ser usado para executar o pacote em um sistema operacional de 64 bits. Use o valor `1` para executar o pacote com o tempo de execução de 32 bits ao executar em um sistema operacional de 64 bits. Use o valor `0` para executar o pacote com o tempo de execução de 64 bits ao executar em um sistema operacional de 64 bits. Esse parâmetro é opcional. O *use32bitruntime* é **bit**.  
   
  [ @environment_scope = ] *environment_scope*  
- Indica as referências de ambiente que são consideradas pela validação. Quando o valor for `A`, todas as referências de ambiente associadas ao projeto serão incluídas na validação. Quando o valor for `S`, apenas uma única referência de ambiente será incluída. Quando o valor for `D`, nenhuma referência de ambiente será incluída e cada parâmetro deverá ter um valor padrão literal a fim de ser aprovado na validação. Esse parâmetro é opcional, o caractere `D` será usado por padrão. O *environment_scope* é **Char(1)**.  
+ Indica as referências de ambiente que são consideradas pela validação. Quando o valor for `A`, todas as referências de ambiente associadas ao projeto serão incluídas na validação. Quando o valor for `S`, apenas uma única referência de ambiente será incluída. Quando o valor for `D`, nenhuma referência de ambiente será incluída e cada parâmetro deverá ter um valor padrão literal a fim de ser aprovado na validação. Esse parâmetro é opcional, o caractere `D` será usado por padrão. O *environment_scope* é **char(1)**.  
   
  [ @reference_id = ] *reference_id*  
  A ID exclusiva da referência do ambiente. Esse parâmetro é necessário apenas quando uma única referência de ambiente é incluída na validação, quando *environment_scope* é `S`. O *reference_id* é **bigint**.  

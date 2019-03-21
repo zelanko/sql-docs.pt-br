@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/28/2019
+ms.date: 03/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5ac0dbfdc3a4acd94a7892372ddb336a3bb70642
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 13ad41189f1d8d1b9a7401502dec4d24e6e37c1d
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579661"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974385"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -45,7 +45,9 @@ Essa instrução permite várias definições de configuração de banco de dado
 - Habilite ou desabilite a coleta de estatísticas de execução para módulos T-SQL compilados nativamente.
 - Habilitar ou desabilitar online pelas opções padrão para instruções DDL compatíveis com a sintaxe ONLINE=.
 - Habilitar ou desabilitar retomáveis pelas opções padrão para instruções DDL compatíveis com a sintaxe RESUMABLE=.
-- Habilitar ou desabilitar a funcionalidade de remoção automática de tabelas temporárias globais
+- Habilitar ou desabilitar a funcionalidade de remoção automática de tabelas temporárias globais. 
+- Habilite ou desabilite recursos de [processamento de consulta inteligente](../../relational-databases/performance/intelligent-query-processing.md).
+- Habilite ou desabilite a [infraestrutura de criação de perfil de consulta leve](../../relational-databases/performance/query-profiling-infrastructure.md).
 
 ![Ícone de link](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -67,18 +69,20 @@ ALTER DATABASE SCOPED CONFIGURATION
     | PARAMETER_SNIFFING = { ON | OFF | PRIMARY}
     | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY}
     | IDENTITY_CACHE = { ON | OFF }
+    | INTERLEAVED_EXECUTION_TVF = {  ON | OFF }
+    | BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF  }
+    | BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
+    | TSQL_SCALAR_UDF_INLINING = { ON | OFF }
+    | ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+    | ELEVATE_RESUMABLE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
     | OPTIMIZE_FOR_AD_HOC_WORKLOADS = { ON | OFF }
     | XTP_PROCEDURE_EXECUTION_STATISTICS = { ON | OFF }
     | XTP_QUERY_EXECUTION_STATISTICS = { ON | OFF }
-    | ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
-    | ELEVATE_RESUMABLE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
-    | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
-    | BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
-    | BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF  }
+    | ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF }
     | BATCH_MODE_ON_ROWSTORE = { ON | OFF }
     | DEFERRED_COMPILATION_TV = { ON | OFF }
-    | INTERLEAVED_EXECUTION_TVF = {  ON | OFF }
-    | ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF }
+    | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
+    | LIGHTWEIGHT_QUERY_PROFILING = { ON | OFF }
 }
 ```
 
@@ -87,6 +91,10 @@ ALTER DATABASE SCOPED CONFIGURATION
 FOR SECONDARY
 
 Especifica as definições para bancos de dados secundários (todos os bancos de dados secundários precisam ter valores idênticos).
+
+CLEAR PROCEDURE_CACHE    
+
+Limpa o cache do procedimento (plano) para o banco de dados e pode ser executado tanto no primário quanto no secundário.  
 
 MAXDOP **=** {\<value> | PRIMARY } **\<value>**
 
@@ -139,10 +147,6 @@ PRIMARY
 
 Esse valor só é válido nos secundários enquanto o banco de dados está no primário e especifica que o valor dessa configuração em todos os secundários será o valor definido para o primário. Se a configuração do primário for alterada, o valor nos secundários será alterado da maneira apropriada sem precisar ser definido explicitamente. PRIMARY é a configuração padrão dos secundários.
 
-CLEAR PROCEDURE_CACHE
-
-Limpa o cache do procedimento (plano) para o banco de dados e pode ser executado tanto no primário quanto no secundário.
-
 IDENTITY_CACHE **=** { **ON** | OFF }
 
 **Aplica-se a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
@@ -151,6 +155,76 @@ Habilita ou desabilita o cache de identidade no nível do banco de dados. O padr
 
 > [!NOTE]
 > Essa opção só pode ser definida para o primário. Para obter mais informações, confira [colunas de identidade](create-table-transact-sql-identity-property.md).
+
+INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }
+
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+
+Permite habilitar ou desabilitar a execução Intercalada para funções com valor de tabela com várias instruções no escopo do banco de dados ou da instrução, mantendo o nível de compatibilidade do banco de dados como 140 e superior. A execução intercalada é um recurso que faz parte do processamento de consulta adaptável em [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Para saber mais, confira [Processamento de consulta inteligente](../../relational-databases/performance/intelligent-query-processing.md).
+
+> [!NOTE]
+> Para o nível de compatibilidade do banco de dados 130 ou menor, esta configuração com escopo de banco de dados não tem nenhum efeito.
+
+BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
+
+**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+
+Permite habilitar ou desabilitar Comentários de concessão de memória de modo de lote no escopo do banco de dados, mantendo o nível de compatibilidade do banco de dados como 140 e superior. Os comentários de concessão de memória de modo de lote é um recurso que faz parte do [Processamento de consulta inteligente](../../relational-databases/performance/intelligent-query-processing.md) introduzido no [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
+
+> [!NOTE]
+> Para o nível de compatibilidade do banco de dados 130 ou menor, esta configuração com escopo de banco de dados não tem nenhum efeito.
+
+BATCH_MODE_ADAPTIVE_JOINS **=** { **ON** | OFF}
+
+**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+
+Permite habilitar ou desabilitar junções adaptáveis do modo de lote no escopo do banco de dados, mantendo o nível de compatibilidade do banco de dados como 140 e superior. As junções adaptáveis do modo de lote é um recurso que faz parte do [Processamento de consulta inteligente](../../relational-databases/performance/intelligent-query-processing.md) introduzido no [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
+
+> [!NOTE]
+> Para o nível de compatibilidade do banco de dados 130 ou menor, esta configuração com escopo de banco de dados não tem nenhum efeito.
+
+TSQL_SCALAR_UDF_INLINING **=** { **ON** | OFF }
+
+**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (o recurso está na versão prévia pública)
+
+Permite habilitar ou desabilitar o inlining UDF do T-SQL Scalar no escopo do banco de dados, mantendo o nível de compatibilidade do banco de dados como 150 e superior. O inlining UDF do T-SQL Scalar é um recurso que faz parte da família de recursos de [Processamento de consulta inteligente](../../relational-databases/performance/intelligent-query-processing.md).
+
+> [!NOTE] 
+> Para o nível de compatibilidade do banco de dados 140 ou menor, esta configuração com escopo de banco de dados não tem nenhum efeito.
+
+ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+
+**Aplica-se a**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (o recurso está na versão prévia pública)
+
+Permite que você selecione as opções para fazer com que o mecanismo eleve automaticamente operações com suporte para online. O padrão é OFF, o que significa que as operações não serão elevadas para online, a menos que especificado na instrução. [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) reflete o valor atual de ELEVATE_ONLINE. Essas opções serão aplicadas somente a operações que têm suporte para online.
+
+FAIL_UNSUPPORTED
+
+Este valor eleva todas as operações DDL com suporte para ONLINE. Operações que não oferecem suporte à execução online falharão e gerarão um aviso.
+
+WHEN_SUPPORTED
+
+Este valor eleva operações que dão suporte a ONLINE. As operações sem suporte online serão executadas offline.
+
+> [!NOTE]
+> Você pode substituir a configuração padrão ao enviar uma instrução com a opção ONLINE especificada.
+
+ELEVATE_RESUMABLE= { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+
+**Aplica-se a**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] e [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (o recurso está na versão prévia pública)
+
+Permite que você selecione as opções para fazer com que o mecanismo eleve automaticamente operações com suporte para retomáveis. O padrão é OFF, o que significa que as operações não serão elevadas para retomáveis, a menos que especificado na instrução. [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) reflete o valor atual de ELEVATE_RESUMABLE. Essas opções serão aplicadas somente a operações que têm suporte para retomável.
+
+FAIL_UNSUPPORTED
+
+Este valor eleva todas as operações DDL com suporte para RESUMABLE. Operações que não oferecem suporte à execução retomável falharão e gerarão um aviso.
+
+WHEN_SUPPORTED
+
+Este valor eleva operações que dão suporte a RESUMABLE. As operações que não dão suporte a retomáveis são executadas de modo não retomável.
+
+> [!NOTE]
+> Você pode substituir a configuração padrão ao enviar uma instrução com a opção RESUMABLE especificada.
 
 OPTIMIZE_FOR_AD_HOC_WORKLOADS **=** { ON | **OFF** }
 
@@ -176,41 +250,34 @@ As estatísticas de execução de nível de instrução para módulos T-SQL comp
 
 Para obter mais informações sobre monitoramento de desempenho de módulos [!INCLUDE[tsql](../../includes/tsql-md.md)] compilados nativamente, confira [Monitorando o desempenho de procedimentos armazenados compilados nativamente](../../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md).
 
-ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+ROW_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
 
-**Aplica-se a**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (o recurso está na versão prévia pública)
+**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (o recurso está na versão prévia pública)
 
-Permite que você selecione as opções para fazer com que o mecanismo eleve automaticamente operações com suporte para online. O padrão é OFF, o que significa que as operações não serão elevadas para online, a menos que especificado na instrução. [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) reflete o valor atual de ELEVATE_ONLINE. Essas opções serão aplicadas somente a operações que têm suporte para online.
-
-FAIL_UNSUPPORTED
-
-Este valor eleva todas as operações DDL com suporte para ONLINE. Operações que não oferecem suporte à execução online falharão e gerarão um aviso.
-
-WHEN_SUPPORTED
-
-Este valor eleva operações que dão suporte a ONLINE. As operações sem suporte online serão executadas offline.
+Permite habilitar ou desabilitar Comentários de concessão de memória de modo de linha no escopo do banco de dados, mantendo o nível de compatibilidade do banco de dados como 150 e superior. Os comentários de concessão de memória são um recurso que faz parte do [Processamento de consulta inteligente](../../relational-databases/performance/intelligent-query-processing.md) introduzido no [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] (o modo de linha é compatível com [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).
 
 > [!NOTE]
-> Você pode substituir a configuração padrão ao enviar uma instrução com a opção ONLINE especificada.
+> Para o nível de compatibilidade do banco de dados 140 ou menor, esta configuração com escopo de banco de dados não tem nenhum efeito.
 
-ELEVATE_RESUMABLE= { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+BATCH_MODE_ON_ROWSTORE **=** { **ON** | OFF}
 
-**Aplica-se a**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] e [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] como uma versão prévia públicado recurso
+**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (o recurso está na versão prévia pública)
 
-Permite que você selecione as opções para fazer com que o mecanismo eleve automaticamente operações com suporte para retomáveis. O padrão é OFF, o que significa que as operações não serão elevadas para retomáveis, a menos que especificado na instrução. [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) reflete o valor atual de ELEVATE_RESUMABLE. Essas opções serão aplicadas somente a operações que têm suporte para retomável.
-
-FAIL_UNSUPPORTED
-
-Este valor eleva todas as operações DDL com suporte para RESUMABLE. Operações que não oferecem suporte à execução retomável falharão e gerarão um aviso.
-
-WHEN_SUPPORTED
-
-Este valor eleva operações que dão suporte a RESUMABLE. As operações que não dão suporte a retomáveis são executadas de modo não retomável.
+Permite habilitar ou desabilitar o modo de lote em rowstore no escopo do banco de dados, mantendo o nível de compatibilidade do banco de dados como 150 e superior. O modo de lote em rowstore é um recurso que faz parte da família de recursos de [Processamento de consulta inteligente](../../relational-databases/performance/intelligent-query-processing.md).
 
 > [!NOTE]
-> Você pode substituir a configuração padrão ao enviar uma instrução com a opção RESUMABLE especificada.
+> Para o nível de compatibilidade do banco de dados 140 ou menor, esta configuração com escopo de banco de dados não tem nenhum efeito.
 
-GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
+DEFERRED_COMPILATION_TV **=** { **ON** | OFF}
+
+**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (o recurso está na versão prévia pública)
+
+Permite habilitar ou desabilitar a compilação adiada de variável de tabela no escopo do banco de dados, mantendo o nível de compatibilidade do banco de dados como 150 e superior. Compilação adiada de variável de tabela é um recurso que faz parte da família de recursos [Processamento de consulta inteligente](../../relational-databases/performance/intelligent-query-processing.md).
+
+> [!NOTE]
+> Para o nível de compatibilidade do banco de dados 140 ou menor, esta configuração com escopo de banco de dados não tem nenhum efeito.
+
+GLOBAL_TEMPORARY_TABLE_AUTODROP **=** { **ON** | OFF }
 
 **Aplica-se a**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (o recurso está na versão prévia pública)
 
@@ -219,47 +286,11 @@ Permite configurar a funcionalidade de soltar automaticamente para [tabelas temp
 - Com bancos de dados únicos e pools elásticos do [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], essa opção pode ser definida nos bancos de dados de usuários individuais do servidor do Banco de Dados SQL.
 - Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e na instância gerenciada [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], essa opção é definida em `TempDB` e a configuração dos bancos de dados de usuário individuais não tem nenhum efeito.
 
-DISABLE_INTERLEAVED_EXECUTION_TVF = { ON | OFF }
+LIGHTWEIGHT_QUERY_PROFILING **=** { **ON** | OFF}
 
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
 
-Permite habilitar ou desabilitar a execução Intercalada para funções com valor de tabela com várias instruções no escopo do banco de dados ou da instrução, mantendo o nível de compatibilidade do banco de dados como 140 e superior. A execução intercalada é um recurso que faz parte do processamento de consulta adaptável em [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Para saber mais, confira [Processamento de consulta inteligente](../../relational-databases/performance/intelligent-query-processing.md)
-
-DISABLE_BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
-
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
-
-Permite habilitar ou desabilitar junções adaptáveis no escopo do banco de dados ou da instrução, mantendo o nível de compatibilidade do banco de dados como 140 e superior. O recurso Junções adaptáveis faz parte do [Processamento de consulta inteligente](../../relational-databases/performance/intelligent-query-processing.md) apresentado em [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
-
-ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
-
-**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (o recurso está na versão prévia pública)
-
-Permite habilitar ou desabilitar Comentários de concessão de memória de modo de linha no escopo do banco de dados, mantendo o nível de compatibilidade do banco de dados como 150 e superior. A memória do modo de linha concede a comentários um recurso que faz parte do [Processamento de consulta inteligente](../../relational-databases/performance/intelligent-query-processing.md) lançado no SQL Server 2017 (há suporte para o modo de linha no SQL Server 2019 e no Banco de Dados SQL do Azure).
-
-BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
-
-**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
-
-Permite habilitar ou desabilitar Comentários de concessão de memória de modo de lote no escopo do banco de dados, mantendo o nível de compatibilidade do banco de dados como 140 e superior. O recurso Comentários de concessão de memória de modo de lote faz parte do [Processamento de consulta inteligente](../../relational-databases/performance/intelligent-query-processing.md) no SQL Server 2017.
-
-BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF}
-
-**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
-
-Permite habilitar ou desabilitar junções adaptáveis do modo de lote no escopo do banco de dados, mantendo o nível de compatibilidade do banco de dados como 140 e superior. As junções adaptáveis do modo de lote é um recurso que faz parte do [Processamento de consulta inteligente](../../relational-databases/performance/intelligent-query-processing.md) no SQL Server 2017.
-
-BATCH_MODE_ON_ROWSTORE = { ON | OFF}
-
-**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (o recurso está na versão prévia pública)
-
-Permite habilitar ou desabilitar o modo de lote em rowstore no escopo do banco de dados, mantendo o nível de compatibilidade do banco de dados como 150 e superior. O modo de lote em rowstore é um recurso que faz parte da família de recursos de [Processamento de consulta inteligente](../../relational-databases/performance/intelligent-query-processing.md).
-
-DEFERRED_COMPILATION_TV = { ON | OFF}
-
-**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (o recurso está na versão prévia pública)
-
-Permite habilitar ou desabilitar a compilação adiada de variável de tabela no escopo do banco de dados, mantendo o nível de compatibilidade do banco de dados como 150 e superior. Compilação adiada de variável de tabela é um recurso que faz parte da família de recursos [Processamento de consulta inteligente](../../relational-databases/performance/intelligent-query-processing.md).
+Permite que você habilite ou desabilite a [infraestrutura de criação de perfil de consulta leve](../../relational-databases/performance/query-profiling-infrastructure.md). A LWP (infraestrutura de criação de perfil de consulta leve) fornece dados de desempenho de consulta de maneira mais eficiente do que os mecanismos de criação de perfil padrão e é habilitada por padrão.
 
 ## <a name="Permissions"></a> Permissões
 
@@ -386,7 +417,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
 ```
 
 ### <a name="g-set-identitycache"></a>G. Definir IDENTITY_CACHE
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando pelo [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (o recurso está em versão prévia pública)
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando pelo [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (o recurso está em versão prévia pública)
 
 Este exemplo desabilita o cache de identidade.
 

@@ -22,12 +22,12 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b1342d023b1edc828105dbbda2e18b0ca09877de
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 4eb114e5309b1733e90b417517c885e23ec09a42
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591640"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58072200"
 ---
 # <a name="server-memory-server-configuration-options"></a>Opções Server Memory de configuração do servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -121,26 +121,29 @@ Para habilitar a opção Bloquear Páginas na Memória:
   
 ## <a name="providing-the-maximum-amount-of-memory-to-sql-server"></a>Fornecendo a quantidade máxima de memória para o SQL Server  
 A memória pode ser configurada até o limite de espaço do endereço virtual do processo em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Limites de memória para as versões do Windows e do Windows Server](/windows/desktop/Memory/memory-limits-for-windows-releases#physical_memory_limits_windows_server_2016).
-  
-## <a name="examples"></a>Exemplos  
-  
-### <a name="example-a"></a>Exemplo A  
- O exemplo a seguir define a opção `max server memory` como 4 GB:  
-  
-```sql  
-sp_configure 'show advanced options', 1;  
-GO  
-RECONFIGURE;  
-GO  
-sp_configure 'max server memory', 4096;  
-GO  
-RECONFIGURE;  
-GO  
-```  
-  
+
+## <a name="examples"></a>Exemplos
+
+### <a name="example-a-set-the-max-server-memory-option-to-4-gb"></a>Exemplo A. Defina a opção de memória máxima do servidor como 4 GB.
+ O exemplo a seguir define a opção `max server memory` como 4 GB.  Observe que, embora `sp_configure` especifique o nome da opção como `max server memory (MB)`, o exemplo demonstra a omissão do `(MB)`.
+
+```sql
+sp_configure 'show advanced options', 1;
+GO
+RECONFIGURE;
+GO
+sp_configure 'max server memory', 4096;
+GO
+RECONFIGURE;
+GO
+```
+Isso produzirá uma instrução semelhante a:
+
+> Opção de configuração “memória máxima do servidor (MB)” alterada de 2147483647 para 4096. Execute a instrução RECONFIGURE para instalar.
+
 ### <a name="example-b-determining-current-memory-allocation"></a>Exemplo B. Determinando a Alocação de Memória Atual  
  A instrução a seguir retorna informações sobre a memória alocada atualmente.  
-  
+
 ```sql  
 SELECT 
   physical_memory_in_use_kb/1024 AS sql_physical_memory_in_use_MB, 
@@ -155,6 +158,14 @@ SELECT
     process_virtual_memory_low AS sql_process_virtual_memory_low
 FROM sys.dm_os_process_memory;  
 ```  
+
+### <a name="example-c-determining-value-for-max-server-memory-mb"></a>Exemplo C. Determinando o valor para “memória máxima do servidor (MB)”
+A consulta a seguir retorna informações sobre o valor configurado atualmente e o valor em uso pelo SQL Server.  Essa consulta retornará resultados independentemente se “mostrar opções avançadas” for verdadeiro.
+
+```sql
+SELECT c.value, c.value_in_use
+FROM sys.configurations c WHERE c.[name] = 'max server memory (MB)'
+```
   
 ## <a name="see-also"></a>Consulte Também  
  [Guia de arquitetura de gerenciamento de memória](../../relational-databases/memory-management-architecture-guide.md)   

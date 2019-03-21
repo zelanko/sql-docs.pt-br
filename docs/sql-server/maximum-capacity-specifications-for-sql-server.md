@@ -21,12 +21,12 @@ ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6cb5b9ecbcc187a059747e9d3121ac50611a0418
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.openlocfilehash: b92410945bd9d123b103272943a663b87b8adec8
+ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319397"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973805"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Especificações de capacidade máxima do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "56319397"
 |Bytes por chave de índice para tabelas com otimização de memória||2.500 bytes para um índice não clusterizado. Nenhum limite para um índice de hash, desde que todas as chaves de índice caibam em linha.|Em uma tabela com otimização de memória, um índice não clusterizado não pode ter colunas de chave cujos tamanhos máximos de declarados excedem 2.500 bytes. É irrelevante se os dados reais nas colunas de chave são menores que os tamanhos máximos declarados.<br /><br /> Para uma chave de índice de hash, não há um limite fixo no tamanho.<br /><br /> Para índices em tabelas com otimização de memória, não há nenhum conceito de colunas incluídas, pois inerentemente todos os índices abrangem todas as colunas.<br /><br /> Para uma tabela com otimização de memória, mesmo que o tamanho da linha seja 8.060 bytes, algumas colunas de comprimento variável podem ser fisicamente armazenadas fora desses 8.060 bytes. No entanto, os tamanhos máximos declarados de todas as colunas de chave para todos os índices em uma tabela, além de quaisquer colunas de comprimento fixo adicionais, devem caber nos 8.060 bytes.|  
 |Bytes por chave estrangeira||900||  
 |Bytes por chave primária||900||  
-|Bytes por linha||8,060|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dá suporte ao armazenamento de estouro de linha, o que permite que colunas de comprimento variável sejam enviadas por push para fora da linha. Somente uma raiz de 24 bytes é armazenada no registro principal para colunas de comprimento variável empurradas para fora da linha; por isso, o limite efetivo de linha é maior que nas versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter mais informações, consulte o tópico "Dados de estouro de linha que excedem 8 KB" nos Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
+|Bytes por linha||8,060|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dá suporte ao armazenamento de estouro de linha, o que permite que colunas de comprimento variável sejam enviadas por push para fora da linha. Somente uma raiz de 24 bytes é armazenada no registro principal para colunas de comprimento variável empurradas para fora da linha; por isso, o limite efetivo de linha é maior que nas versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para saber mais, confira [Large Row Support](../relational-databases/pages-and-extents-architecture-guide.md#large-row-support) (Suporte de linha grande).|  
 |Bytes por linha em tabelas com otimização de memória||8,060|Começando no [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] , as tabelas com otimização de memória dão suporte ao armazenamento fora da linha. Colunas de comprimento variável são enviadas por push para fora da linha se os tamanhos máximos de todas as colunas na tabela excederem 8.060 bytes. Esta é uma decisão de tempo de compilação. Apenas uma referência de 8 bytes é armazenada na linha para colunas armazenadas fora de linha. Para obter mais informações, consulte [Tamanho da tabela e da linha em tabelas com otimização de memória](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md).|  
 |Bytes em texto de fonte de um procedimento armazenado||Menor que o tamanho do lote ou 250 MB||  
 |Bytes por coluna **varchar(max)**, **varbinary(max)**, **xml**, **text**ou **image**||2^31-1||  

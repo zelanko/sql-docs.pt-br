@@ -1,23 +1,22 @@
 ---
 title: Reverter os separadores de palavras usados por pesquisa à versão anterior | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b5251c082e2a31493110fe63f2bfb044c6a3a2f2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5714b90b0d3222c947afc3988fa88e6d478691ef
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674996"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974395"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>Reverter os separadores de palavras usados por pesquisa à versão anterior
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -155,7 +154,7 @@ ms.locfileid: "51674996"
     > [!WARNING]  
     >  Esta alteração afeta todos os idiomas que usam NaturalLanguage6.dll na versão anterior atual e na anterior.  
   
-5.  No Registro, navegue até o nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID**.  
+5.  No Registro, navegue até o seguinte nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID**.  
   
 6.  Use as etapas a seguir para adicionar novas chaves para as ClassIDs COM para o separador de palavras e as interfaces de lematizador anteriores para os idiomas selecionados:  
   
@@ -184,7 +183,7 @@ ms.locfileid: "51674996"
     > [!WARNING]  
     >  Esta alteração afeta todos os idiomas que usam NaturalLanguage6.dll na versão anterior atual e na anterior.  
   
-3.  No Registro, navegue até o nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID**.  
+3.  No Registro, navegue até o seguinte nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID**.  
   
 4.  Se as chaves a seguir não existirem, use as etapas a seguir para adicionar novas chaves para as ClassIDs COM para o separador de palavras atual e interfaces de lematizador para o idioma selecionado:  
   
@@ -225,7 +224,7 @@ ms.locfileid: "51674996"
 |CLSID anterior|45EACA36-DBE9-4e4a-A26D-5C201902346D|65170AE4-0AD2-4fa5-B3BA-7CD73E2DA825|  
 |Nome de arquivo anterior|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |CLSID atual|dfa00c33-bf19-482e-a791-3c785b0149b4|8a474d89-6e2f-419c-8dd5-9b50edc8c787|  
-|Nome do arquivo atual|MsWb7.dll|MSWB7.dll|  
+|Nome do arquivo atual|MSWB7.dll|MSWB7.dll|  
   
  **Japonês (jpn), LCID 1041**  
   
@@ -243,7 +242,7 @@ ms.locfileid: "51674996"
 |CLSID anterior|2C9F6BEB-C5B0-42b6-A5EE-84C24DC0D8EF|F7A465EE-13FB-409a-B878-195B420433AF|  
 |Nome de arquivo anterior|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |CLSID atual|69483c30-a9af-4552-8f84-a0796ad5285b|CF923CB5-1187-43ab-B053-3E44BED65FFA|  
-|Nome do arquivo atual|MsWb7.dll|MSWB7.dll|  
+|Nome do arquivo atual|MSWB7.dll|MSWB7.dll|  
   
  **Russo (rus), LCID 1049**  
   
@@ -252,7 +251,7 @@ ms.locfileid: "51674996"
 |CLSID anterior|2CB6CDA4-1C14-4392-A8EC-81EEF1F2E079|E06A0DDD-E81A-4e93-8A8D-F386C3A1B670|  
 |Nome de arquivo anterior|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |CLSID atual|aaa3d3bd-6de7-4317-91a0-d25e7d3babc3|d42c8b70-adeb-4b81-a52f-c09f24f77dfa|  
-|Nome do arquivo atual|MsWb7.dll|MSWB7.dll|  
+|Nome do arquivo atual|MSWB7.dll|MSWB7.dll|  
   
 ##  <a name="newnew"></a> Idiomas para os quais nem o nome de arquivo atual ou anterior é NaturalLanguage6.dll  
  Para os idiomas na tabela a seguir, os nomes de arquivo dos separadores de palavras e lematizadores anteriores são diferentes dos nomes de arquivo das novas versões. Nem o nome de arquivo atual nem o anterior é NaturalLanguage6.dll. Você não tem que substituir os arquivos, porque a instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] copia a versão atual e a anterior dos componentes para a pasta Binn. No entanto, você também tem que alterar um conjunto de entradas do Registro para especificar a versão anterior ou a atual dos componentes.  
@@ -276,7 +275,7 @@ ms.locfileid: "51674996"
   
 1.  Não remova os arquivos para a versão atual dos componentes da pasta Binn.  
   
-2.  No Registro, navegue até o nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID**.  
+2.  No Registro, navegue até o seguinte nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID**.  
   
 3.  Use as etapas a seguir para adicionar novas chaves para as ClassIDs COM para o separador de palavras e as interfaces de lematizador anteriores para os idiomas selecionados:  
   
@@ -300,7 +299,7 @@ ms.locfileid: "51674996"
   
 1.  Não remova os arquivos para a versão anterior dos componentes da pasta Binn.  
   
-2.  No Registro, navegue até o nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID**.  
+2.  No Registro, navegue até o seguinte nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID**.  
   
 3.  Se as chaves a seguir não existirem, use as etapas a seguir para adicionar novas chaves para as ClassIDs COM para o separador de palavras atual e interfaces de lematizador para o idioma selecionado:  
   

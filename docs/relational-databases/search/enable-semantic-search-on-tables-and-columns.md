@@ -4,21 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server], enabling
 ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
-ms.openlocfilehash: 502403eab1376679471b6825fb6b58333947c47f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f9ac78de3ea95d7cace9a32001db1fddda9bab50
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522307"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973565"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Habilitar a pesquisa semântica em tabelas e colunas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "52522307"
   
 -   Você pode criar um índice semântico em colunas que tenham qualquer um dos tipos de dados com suporte para indexação de texto completo. Para obter mais informações, veja [Criar e gerenciar índices de texto completo](../../relational-databases/search/create-and-manage-full-text-indexes.md).  
   
--   Você pode especificar qualquer tipo de documento com suporte para indexação de texto completo para colunas **varbinary(max)** . Para obter mais informações, consulte [Como determinar os tipos de documento que podem ser indexados](#doctypes) neste tópico.  
+-   Você pode especificar qualquer tipo de documento com suporte para indexação de texto completo para colunas **varbinary(max)** . Para saber mais, confira [Como determinar os tipos de documento que podem ser indexados](#doctypes) neste tópico.  
   
 -   A indexação semântica cria dois tipos de índices para as colunas que você seleciona – um índice de frases-chave e um índice de similaridade de documento. Você não pode selecionar somente um tipo de índice ou o outro quando habilita a indexação semântica. Entretanto, você pode consultar esses dois índices separadamente. Para obter mais informações, veja [Localizar frases-chave em documentos com a pesquisa semântica](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md) e [Localizar documentos semelhantes e relacionados com a pesquisa semântica](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  
   
@@ -275,7 +275,7 @@ GO
   
  Se o tipo de documento que você deseja indexar não estiver na lista de tipos com suporte, talvez seja preciso localizar, baixar e instalar filtros adicionais. Para obter mais informações, consulte [Exibir ou alterar filtros registrados e separadores de palavras](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).  
   
-##  <a name="BestPracticeFilegroup"></a> Prática recomendada: considerar a criação de um grupo de arquivos separado para os índices de texto completo e semânticos  
+##  <a name="BestPracticeFilegroup"></a> Melhor prática: considerar a criação de um grupo de arquivos separado para os índices de texto completo e semânticos  
  Considere criar um grupo de arquivos separado para os índices de texto completo e semântico se a alocação de espaço em disco for um problema. Os índices semânticos são criados no mesmo grupo de arquivos que o índice de texto completo. Um índice semântico totalmente populado pode conter uma grande quantidade de dados.  
  
 ##  <a name="IssueNoResults"></a> Problema: a pesquisa em coluna específica não retorna resultados  

@@ -1,7 +1,7 @@
 ---
 title: Guia de arquitetura de páginas e extensões | Microsoft Docs
 ms.custom: ''
-ms.date: 09/23/2018
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f5dcb8899b64a7dc21367b5deda5aa6bd473a65
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 95748a37b656c1ab203ed0cff354c5a641a9c7ed
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748476"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974365"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Guia de arquitetura de página e extensões
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,6 +64,18 @@ As linhas não podem passar de uma página para outra, no entanto, partes da lin
 Essa restrição é suavizada para tabelas que contêm colunas varchar, nvarchar, varbinary ou sql_variant. Quando o tamanho total da linha de todas as colunas fixas e variáveis em uma tabela exceder a limitação de 8.060 bytes, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] moverá uma ou mais colunas de comprimento variável dinamicamente para as páginas na unidade de alocação ROW_OVERFLOW_DATA, iniciando com a coluna com a maior largura. 
 
 Isso é feito sempre que uma operação de inserção ou atualização aumenta o tamanho total da linha além do limite de 8.060 bytes. Quando uma coluna é movida para uma página na unidade de alocação ROW_OVERFLOW_DATA, é mantido um ponteiro de 24 bytes na página original da unidade de alocação IN_ROW_DATA. Se uma operação subsequente reduzir o tamanho da linha, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] moverá as colunas dinamicamente para a página de dados original. 
+
+##### <a name="row-overflow-considerations"></a>Considerações sobre dados de estouro de linha 
+
+Quando você combina colunas de tipo de dado CLR definido pelo usuário, varchar, nvarchar, varbinary ou sql_variant que excedem 8.060 bytes por linha, considere o seguinte: 
+-  A movimentação de registros volumosos para outra página ocorre dinamicamente à medida que os registros aumentam com base nas operações de atualização. As operações de atualização que diminuem os registros podem fazer com que os registros sejam retornados para a página original na unidade de alocação IN_ROW_DATA. A consulta e execução de outras operações de seleção, como classificações ou junções em grandes registros que contêm tempo de processamento de dados de estouro de linha lento, uma vez que esses registros são processados de forma síncrona em vez de assíncrona.   
+   Portanto, quando você cria uma tabela com várias colunas de tipo de dado CLR definido pelo usuário, varchar, nvarchar, varbinary ou sql_variant, considere a porcentagem de linhas com probabilidade de exceder e a frequência com que os dados de estouro devem ser provavelmente consultados. Se houver provavelmente consultas frequentes em várias linhas dos dados de estouro de linha, considere normalizar a tabela de modo que algumas colunas sejam movidas para outra tabela. Em seguida, isso pode ser consultado em uma operação JOIN assíncrona. 
+-  O comprimento de colunas individuais deve ainda se encaixar no limite de 8.000 bytes para colunas varchar, nvarchar, varbinary, sql_variant e colunas tipo de dado CLR definido pelo usuário. Só os comprimentos combinados delas podem exceder o limite de linha de 8.060 bytes de uma tabela.
+-  A soma de outras colunas de tipo de dados, inclusive dados char e nchar deve enquadrar-se no limite de linha de 8.060 bytes. Dados de objeto grandes também estão isentos do limite de linha de 8.060 bytes. 
+-  A chave de um índice clusterizado não pode conter colunas varchar que tenham dados existentes na unidade de alocação ROW_OVERFLOW_DATA. Se um índice clusterizado for criado em uma coluna varchar e os dados existentes estiverem na unidade de alocação IN_ROW_DATA, as ações subsequentes de inserção ou atualização na coluna que efetuaria o push dos dados da linha apresentarão falha. Para saber mais sobre unidades de alocação, veja Organização de tabela e índice.
+-  Você pode incluir colunas contendo dados de estouro de linha como colunas de chave ou não chave de um índice não clusterizado.
+-  O limite do tamanho de registros para tabelas que usam colunas esparsas é de 8.018 bytes. Quando os dados convertidos mais os dados de registros existentes ultrapassam os 8.018 bytes, é retornado o [ERRO MSSQLSERVER 576](../relational-databases/errors-events/database-engine-events-and-errors.md). Quando colunas são convertidas entre tipos esparsos e não esparsos, o Mecanismo de Banco de Dados mantém uma cópia dos dados de registros atuais. Isso dobra temporariamente o armazenamento exigido para o registro.
+-  Para obter informações sobre tabelas ou índices que podem conter dados de estouro de linha, use a função de gerenciamento dinâmico [sys.dm_db_index_physical_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).
 
 ### <a name="extents"></a>Extensões 
 
@@ -177,4 +189,6 @@ O intervalo entre as páginas DCM e BCM é o mesmo que o intervalo entre as pág
 
 ## <a name="see-also"></a>Consulte Também
 [sys.allocation_units &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
-[Heaps &#40;Tabelas sem índices clusterizados&#41;](../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures)    
+[Heaps &#40;Tabelas sem índices clusterizados&#41;](../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures)       
+[Lendo Páginas](../relational-databases/reading-pages.md)   
+[Gravando Páginas](../relational-databases/writing-pages.md)   

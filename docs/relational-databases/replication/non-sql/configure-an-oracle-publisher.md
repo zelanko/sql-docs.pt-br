@@ -13,12 +13,12 @@ ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0489d3d1486cb447a16b9658a17c0e6f4d9f41f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b91e4f912de3eff2d64e7cbbf35aad56cbccbcd
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825184"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58072220"
 ---
 # <a name="configure-an-oracle-publisher"></a>Configurar um publicador Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,6 +37,7 @@ ms.locfileid: "47825184"
 -   Publicando dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para não assinantes do[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
 
 -   A publicação de dados para e do Oracle tem as seguintes restrições:  
+
   | |2016 ou anterior |2017 ou posterior |
   |-------|-------|--------|
   |Replicação do Oracle |Dá suporte apenas ao Oracle 10g ou anterior |Dá suporte apenas ao Oracle 10g ou anterior |

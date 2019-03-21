@@ -19,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 49f84b9e41116dd235f219a0487b48770ef4f81f
-ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
+ms.openlocfilehash: 1816363425276ec532e5cc04433630e8e6b9bcac
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57572839"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974345"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Nome de ordenação do Windows (Transact-SQL)
 
@@ -42,8 +42,9 @@ Especifica o nome de ordenação do Windows na cláusula COLLATE em [!INCLUDE[ss
 CollationDesignator_<ComparisonStyle>
 
 <ComparisonStyle> :: =
-{ CaseSensitivity_AccentSensitivity [ _KanatypeSensitive ] [ _WidthSensitive ] [ _VariationSelectorSensitive ]
+{ CaseSensitivity_AccentSensitivity [ _KanatypeSensitive ] [ _WidthSensitive ] [ _VariationSelectorSensitive ] 
 }
+| { _UTF8 }
 | { _BIN | _BIN2 }
 ```
 
@@ -72,9 +73,14 @@ Alguns exemplos são:
 **Omitido** especifica que não diferencia largura, **WS** especifica que distingue largura.
 
 *VariationSelectorSensitivity*  
-**Aplica-se ao**: [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
+**Aplica-se ao**: A partir do [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
 
 **Omitted** especifica que não diferencia seletor de variação, **VSS** especifica que diferencia seletor de variação.
+
+**UTF8**  
+**Aplica-se ao**: A partir do [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
+
+Especifica a codificação UTF-8 a ser usada para tipos de dados qualificados. Para obter mais informações, consulte [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md).
 
 **BIN**  
 Especifica a ordem de classificação binária compatível com versões anteriores que será usada.
@@ -83,7 +89,6 @@ Especifica a ordem de classificação binária compatível com versões anterior
 Especifica a ordem de classificação binária que usa semântica de comparação de ponto de código.
 
 ## <a name="remarks"></a>Remarks
-
 De acordo com a versão da ordenação, alguns pontos de código podem não ter pesos de classificação e/ou mapeamentos de maiúsculas/minúsculas definidos. Por exemplo, compare a saída da função `LOWER` quando ela recebe o mesmo caractere, mas em diferentes versões da mesma ordenação:
 
 ```sql
