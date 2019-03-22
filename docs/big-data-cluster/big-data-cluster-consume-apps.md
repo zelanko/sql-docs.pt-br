@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.reviewer: rothja
-ms.openlocfilehash: 3ebebd290788511682098f2300d41dc0e9908517
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: bc55e90ad8aced555858008bc77715299a064b2a
+ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222205"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58342839"
 ---
 # <a name="consume-an-app-deployed-on-sql-server-big-data-cluster-using-a-restful-web-service"></a>Consumir um aplicativo implantado no cluster de big data do SQL Server usando um serviço web RESTful
 
@@ -67,8 +67,8 @@ mssqlctl app describe --name addpy --version v1
     }
   ],
   "links": {
-    "app": "https://10.1.1.3:30777/api/app/add-app/v1",
-    "swagger": "https://10.1.1.3:30777/api/app/add-app/v1/swagger.json"
+    "app": "https://10.1.1.3:30777/api/app/addpy/v1",
+    "swagger": "https://10.1.1.3:30777/api/app/addpy/v1/swagger.json"
   },
   "name": "add-app",
   "output_param_defs": [
@@ -86,7 +86,7 @@ Anote o endereço IP (`10.1.1.3` neste exemplo) e o número da porta (`30777`) n
 
 ## <a name="generate-a-jwt-access-token"></a>Gerar um token de acesso JWT
 
-Para acessar o serviço web RESTful para o aplicativo que você tiver implantado, abra a seguinte URL no seu navegador: `https://[IP]:[PORT]/api/docs/swagger.json` usando o endereço IP e porta em execução que você recuperou o `describe` comando acima. Você terá que fazer logon com as mesmas credenciais usadas para `mssqlctl login`.
+Para acessar o serviço web RESTful para o aplicativo você implantou pela primeira vez para gerar um token de acesso JWT. Abra a seguinte URL no seu navegador: `https://[IP]:[PORT]/api/docs/swagger.json` usando o endereço IP e porta em execução que você recuperou o `describe` comando acima. Você terá que fazer logon com as mesmas credenciais usadas para `mssqlctl login`.
 
 Cole o conteúdo da `swagger.json` para o [Editor do Swagger](https://editor.swagger.io) para entender quais métodos estão disponíveis:
 
@@ -101,9 +101,9 @@ O resultado dessa solicitação lhe dará um JWT `access_token`, que você preci
 ## <a name="execute-the-app-using-the-restful-web-service"></a>Execute o aplicativo usando o serviço web RESTful
 
 > [!NOTE]
-> Se você quiser, você pode abrir a URL para o `swagger` que foi retornado quando você executou `mssqlctl app describe --name addpy --version [version]` no seu navegador. Você terá que fazer logon com as mesmas credenciais usadas para `mssqlctl login`. O conteúdo a `swagger.json` você pode colar em [Editor do Swagger](https://editor.swagger.io). Você verá que o serviço web expõe o `run` método.
+> Se você quiser, você pode abrir a URL para o `swagger` que foi retornado quando você executou `mssqlctl app describe --name [appname] --version [version]` em seu navegador, que deve ser semelhante ao `https://[IP]:[PORT]/api/app/[appname]/[version]/swagger.json`. Você terá que fazer logon com as mesmas credenciais usadas para `mssqlctl login`. O conteúdo a `swagger.json` você pode colar em [Editor do Swagger](https://editor.swagger.io). Você verá que o serviço web expõe o `run` método.
 
-Você pode usar sua ferramenta favorita para chamar o `run` método (`https://[IP]:[PORT]/api/app/addpy/[version]/run`), passando os parâmetros no corpo da solicitação POST como json. Neste exemplo usaremos [Postman](https://www.getpostman.com/). Antes de fazer a chamada, você precisará definir a `Authorization` para `Bearer Token` e cole o token que você recuperou anteriormente. Isso definirá um cabeçalho em sua solicitação. Consulte a captura de tela abaixo.
+Você pode usar sua ferramenta favorita para chamar o `run` método (`https://[IP]:[PORT]/api/app/[appname]/[version]/run`), passando os parâmetros no corpo da solicitação POST como json. Neste exemplo usaremos [Postman](https://www.getpostman.com/). Antes de fazer a chamada, você precisará definir a `Authorization` para `Bearer Token` e cole o token que você recuperou anteriormente. Isso definirá um cabeçalho em sua solicitação. Consulte a captura de tela abaixo.
 
 ![Postman executar cabeçalhos](media/big-data-cluster-consume-apps/postman_run_1.png)
 
