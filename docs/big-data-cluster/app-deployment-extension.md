@@ -9,12 +9,12 @@ ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8f45817510cb63937544fa4f0f7af5bb42a0c883
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 761818cd83df5db38b3877184b03b7e5d634aa63
+ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018462"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58222020"
 ---
 # <a name="how-to-use-vs-code-to-deploy-applications-to-sql-server-big-data-clusters"></a>Como usar o VS Code para implantar aplicativos em clusters de grandes dados do SQL Server
 
@@ -105,7 +105,7 @@ Instantaneamente, você pode implantar esse aplicativo por meio das lentes de c�
 
 ![Implantar o botão do aplicativo](media/vs-extension/deploy_app_lightning.png)
 
-![Implantar o aplicativo Codelens](media/vs-extension/deploy_app_codelens.png)
+![Implantar o aplicativo CodeLens](media/vs-extension/deploy_app_codelens.png)
 
 Você será notificado quando o aplicativo está pronto para consumo de acordo com o estado do aplicativo na barra lateral:
 
@@ -127,9 +127,11 @@ Você pode exibir todos os aplicativos que você implantou na barra lateral com 
   - swagger
   - detalhes
 
-Se você clicar `Links`, você verá que você pode acessar o `swagger.json` do seu aplicativo implantado, portanto, que escrever seus próprios clientes que chamam o seu aplicativo:
+Se você clicar `Links`, você verá que você pode acessar o `swagger.json` do seu aplicativo implantado, para que você possa escrever seus próprios clientes que chamam o seu aplicativo:
 
-![Swagger](media/vs-extension/swagger.png)
+![swagger](media/vs-extension/swagger.png)
+
+Ver [consumir aplicativos em clusters de big data](big-data-cluster-consume-apps.md) para obter mais informações.
 
 ### <a name="app-run"></a>Execução do aplicativo
 
@@ -173,7 +175,7 @@ Para excluir um aplicativo, simplesmente clique na Lixeira pode botão ao lado d
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Você também pode consultar os exemplos adicionais neste [exemplos de implantar o aplicativo](https://aka.ms/sql-app-deploy) para experimentar com a extensão.
+Explore como integrar aplicativos implantados no SQL Server em seus próprios aplicativos em clusters do big data [consumir aplicativos em clusters de big data](big-data-cluster-consume-apps.md) para obter mais informações. Você também pode consultar os exemplos adicionais neste [exemplos de implantar o aplicativo](https://aka.ms/sql-app-deploy) para experimentar com a extensão.
 
 Para obter mais informações sobre clusters de grandes dados do SQL Server, consulte [quais são os clusters do SQL Server 2019 big data?](big-data-cluster-overview.md).
 

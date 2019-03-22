@@ -7,8 +7,8 @@ items:
   items:
   - name: Novidades no Reporting Services
     href: ../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md
-  - name: Log de alterações
-    href: ../reporting-services/change-log-sql-server-reporting-services.md
+  - name: Notas sobre a versão para o SSRS 2017 e posterior
+    href: ../reporting-services/release-notes-reporting-services.md
   - name: Conceitos do Reporting Services (SSRS)
     href: ../reporting-services/reporting-services-concepts-ssrs.md
   - name: Recursos e tarefas do Reporting Services
@@ -1625,8 +1625,8 @@ items:
       href: ../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md
     - name: Suporte do Visualizador de Relatórios
       href: ../reporting-services/application-integration/reportviewer-controls-support.md
-    - name: Log de alteração de controles do Visualizador de Relatórios
-      href: ../reporting-services/application-integration/changelog.md
+    - name: Notas sobre a versão para os controles do Visualizador de Relatórios do SSRS
+      href: ../reporting-services/application-integration/release-notes-ssrs-application-integration.md
   - name: Integrando o Reporting Services diretamente
     items:
     - name: Optando entre acesso à URL e SOAP
@@ -1956,9 +1956,9 @@ items:
       href: ../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md
     - name: 'Tutorial: Apresentando expressões'
       href: ../reporting-services/tutorial-introducing-expressions.md
-ms.openlocfilehash: 0557511d395eaac697bcf609582dc69a8ee5cfd4
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: 9810e2d55fea922b6812d5d0539e8283f4977033
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57974525"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290862"

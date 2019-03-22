@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8d784b82c56ca99027491bf257c90dddf4eb9b6b
-ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
+ms.openlocfilehash: 8f661acacf17a8977f437abdcefcd3763305229b
+ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57756631"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58222051"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>Como implantar um aplicativo no cluster de big data do SQL Server 2019 (visualização)
 
@@ -253,7 +253,7 @@ spec.yaml
 
 ## <a name="describe-an-app"></a>Descrever um aplicativo
 
-O comando descrição fornece informações detalhadas sobre o aplicativo, incluindo o ponto de extremidade em seu cluster. Isso normalmente é usado por um desenvolvedor de aplicativo para compilar um aplicativo usando o cliente do swagger e usando o serviço Web para interagir com o aplicativo de maneira RESTful.
+O comando descrição fornece informações detalhadas sobre o aplicativo, incluindo o ponto de extremidade em seu cluster. Isso normalmente é usado por um desenvolvedor de aplicativo para compilar um aplicativo usando o cliente do swagger e usando o serviço Web para interagir com o aplicativo de maneira RESTful. Ver [consumir aplicativos em clusters de big data](big-data-cluster-consume-apps.md) para obter mais informações.
 
 ```json
 {
@@ -293,6 +293,6 @@ mssqlctl app delete --name add-app --version v1
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Você também pode conferir exemplos adicionais no [exemplos de implantar o aplicativo](https://aka.ms/sql-app-deploy).
+Explore como integrar aplicativos implantados no SQL Server em seus próprios aplicativos em clusters do big data [consumir aplicativos em clusters de big data](big-data-cluster-consume-apps.md) para obter mais informações. Você também pode conferir exemplos adicionais no [exemplos de implantar o aplicativo](https://aka.ms/sql-app-deploy).
 
 Para obter mais informações sobre clusters de grandes dados do SQL Server, consulte [quais são os clusters do SQL Server 2019 big data?](big-data-cluster-overview.md).

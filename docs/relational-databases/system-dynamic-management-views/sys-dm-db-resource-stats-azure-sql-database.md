@@ -1,7 +1,7 @@
 ---
 title: sys.DM db_resource_stats (banco de dados SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/14/2018
+ms.date: 03/21/2019
 ms.service: sql-database
 ms.reviewer: ''
 ms.topic: language-reference
@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: b05472f52bf182768740c8c01e8b60021dc898f6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f3b8defbb43cd07afe38915c6a0c14cb226fbf2c
+ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030147"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58325499"
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "56030147"
 |avg_cpu_percent|**decimal (5,2)**|Utilização média de computação, em porcentagem, do limite da camada de serviço.|  
 |avg_data_io_percent|**decimal (5,2)**|Média de dados de utilização e/s em percentual do limite da camada de serviço.|  
 |avg_log_write_percent|**decimal (5,2)**|Média de utilização de taxa de transferência de e/s como porcentagem do limite da camada de serviço de gravação.|  
-|avg_memory_usage_percent|**decimal (5,2)**|Utilização média de memória, em porcentagem, do limite da camada de serviço.<br /><br /> Isso inclui a memória usada para armazenamento de objetos OLTP na memória.|  
+|avg_memory_usage_percent|**decimal (5,2)**|Utilização média de memória, em porcentagem, do limite da camada de serviço.<br /><br /> Isso inclui a memória usada para páginas de pool de buffer e o armazenamento de objetos OLTP na memória.|  
 |xtp_storage_percent|**decimal (5,2)**|Utilização de armazenamento para o OLTP na memória em percentual do limite da camada de serviço (no final do intervalo de emissão de relatórios). Isso inclui a memória usada para armazenamento dos seguintes objetos OLTP na memória: variáveis de tabela, índices e tabelas com otimização de memória. Ele também inclui a memória usada para processar operações ALTER TABLE.<br /><br /> Retorna 0 se não for usado o OLTP in-memory no banco de dados.|  
 |max_worker_percent|**decimal (5,2)**|Máximo de trabalhos simultâneos (solicitações) em porcentagem do limite da camada de serviço do banco de dados.|  
 |max_session_percent|**decimal (5,2)**|Máximo de sessões simultâneas em percentual do limite da camada de serviço do banco de dados.|  
