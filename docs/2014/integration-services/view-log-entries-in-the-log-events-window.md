@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Integration Services packages, logs
 - packages [Integration Services], logs
 ms.assetid: c02123c3-67fc-4370-ad14-91ed259f1873
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 51c08b271229e207f72b594d87e3c9f95b6770f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3e3f5e41c6e20abbdcf78759c078632543217617
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172726"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385314"
 ---
 # <a name="view-log-entries-in-the-log-events-window"></a>Exibir entradas de log na janela Eventos de Log
   Este procedimento descreve como executar um pacote e exibir as entradas de log que ele grava. Você pode exibir as entradas de log em tempo real. As entradas de log, gravadas na janela **Eventos de Log** , também podem ser copiadas e salvas para uma análise posterior.  
@@ -52,6 +52,6 @@ ms.locfileid: "48172726"
 9. Abra um editor de textos, cole e salve a entrada de log em um arquivo de texto.  
   
 ## <a name="see-also"></a>Consulte também  
- [Registro em Log do SSIS &#40;Integration Services&#41;](performance/integration-services-ssis-logging.md)  
+ [Registro em Log do Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)  
   
   

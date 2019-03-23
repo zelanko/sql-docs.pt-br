@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Script Transformation Editor
 ms.assetid: 709f048e-0b8b-46c3-9dde-3e912361157f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ed1cd92ee057ce9a6901bab931d1986237ff7384
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9d83a1a0c8cc9493b2c0703824d7ec02bd840d91
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081366"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58383175"
 ---
 # <a name="script-transformation-editor-connection-managers-page"></a>Editor de Transformação Scripts (página Gerenciadores de Conexões)
   Use a página **Gerenciadores de Conexões** do **Editor de Transformação Scripts** para especificar as conexões que serão usadas pelo script.  
@@ -48,10 +48,10 @@ ms.locfileid: "48081366"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Selecione o tipo de componente Script](../../2014/integration-services/select-script-component-type.md)   
- [Editor de transformação scripts &#40;página de colunas de entrada&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
- [Editor de transformação scripts &#40;entradas e saídas de página&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
- [Editor de transformação scripts &#40;página Script&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
+ [Selecionar Tipo de Componente do Script](../../2014/integration-services/select-script-component-type.md)   
+ [Editor de Transformação Scripts &#40;página Colunas de Entrada&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
+ [Editor de Transformação Scripts &#40;Página Entradas e Saídas&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
+ [Editor de Transformação Scripts &#40;Página Script&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
  [Exemplos de componentes de Script adicionais](extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
   
   

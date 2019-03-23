@@ -22,15 +22,15 @@ helpviewer_keywords:
 - term extractions [Integration Services]
 - stemming words [Integration Services]
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f6d63836dbc6827eb47daaf4110bc678357012d3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d0caed882338b4ac1ce2f3e1e225693017ff1605
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762429"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378374"
 ---
 # <a name="term-extraction-transformation"></a>Transformação Extração de Termos
   A transformação Extração de Termo extrai termos de texto em uma coluna de entrada de transformação e grava os termos em uma coluna de saída de transformação. A transformação trabalha apenas com texto em inglês e usa seu próprio dicionário de inglês e informações linguísticas sobre o inglês.  
@@ -65,7 +65,7 @@ ms.locfileid: "52762429"
 ### <a name="identification-of-words"></a>Identificação de palavras  
  Primeiro, a transformação Extração de Termos identifica palavras executando as seguintes tarefas:  
   
--   Separando o texto em palavras usando espaços, quebras de linha e outros delimitadores vocabulares da língua inglesa. Por exemplo, sinais de pontuação tais como *?* e *** são caracteres delimitadores de palavras.  
+-   Separando o texto em palavras usando espaços, quebras de linha e outros delimitadores vocabulares da língua inglesa. Por exemplo, sinais de pontuação tais como *?* e *:* são caracteres delimitadores de palavras.  
   
 -   Preservando palavras que estão conectadas por hífens ou sublinhadas. Por exemplo, as palavras *protegido por cópia* e *somente leitura* permanecem como uma palavra simples.  
   

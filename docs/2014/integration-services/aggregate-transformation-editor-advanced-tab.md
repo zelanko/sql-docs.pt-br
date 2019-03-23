@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Aggregate Transformation Editor
 ms.assetid: 186a9736-2554-40a0-9cb2-877a8db5fde8
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2b0acde35830734d5b5cf344b36357dc766958dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 605a92e00b21d64679076fabcb41068b94921779
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112246"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386142"
 ---
 # <a name="aggregate-transformation-editor-advanced-tab"></a>Editor de Transformação Agregação (guia Avançado)
   Use a guia **Avançado** da caixa de diálogo **Editor de Transformação Agregação** para definir propriedades de componentes, especificar agregações e definir propriedades de colunas de entrada e saída.  
@@ -36,7 +36,7 @@ ms.locfileid: "48112246"
  **Escala de Chave**  
  Especifique, opcionalmente, o número aproximado de chaves que a agregação espera. A transformação usa estas informações para otimizar seu tamanho de cache inicial. Por padrão, o valor desta opção é **Não Especificado**. Se for especificada a **Escala de chave** e o **Número de chaves** , o **Número de chaves** terá precedência.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |Não Especificado|A propriedade **Escala de chave** não é usada.|  
 |Baixa|A agregação pode gravar aproximadamente 500.000 chaves.|  
@@ -49,7 +49,7 @@ ms.locfileid: "48112246"
  **Escala de distinção de contagem**  
  Especifique, opcionalmente, o número aproximado de valores de distinção que a agregação pode gravar. Por padrão, o valor desta opção é **Não Especificado**. Se for especificada a **Escala de Distinção de Contagem** e as **Chaves de Distinção de Contagem** , as **Chaves de Distinção de Contagem** terão precedência.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |Não Especificado|A propriedade Escala de Distinção de Contagem não é usada.|  
 |Baixa|A agregação pode gravar aproximadamente 500.000 valores de distinção.|  
@@ -64,7 +64,7 @@ ms.locfileid: "48112246"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de transformação de agregação &#40;guia de agregações&#41;](../../2014/integration-services/aggregate-transformation-editor-aggregations-tab.md)   
+ [Editor de Transformação Agregação &#40;guia Agregações&#41;](../../2014/integration-services/aggregate-transformation-editor-aggregations-tab.md)   
  [Agregar valores em um conjunto de dados por meio da transformação Agregação](data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
   

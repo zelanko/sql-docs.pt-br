@@ -19,20 +19,20 @@ f1_keywords:
 helpviewer_keywords:
 - Package Installer Wizard
 ms.assetid: 6fca44d9-5001-4644-bcf3-c2d10a674b97
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 000207f277cd0c54428cdc81b16027b7efa3aa3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 68f464d49680e3563f44768e9d8ad29d947a8b24
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129626"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380184"
 ---
 # <a name="package-installation-wizard-ui-reference"></a>Referência da interface do usuário do Assistente de Instalação de Pacotes
   Use o **Assistente de Instalação de Pacotes** para implantar um projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , inclusive os pacotes e arquivos diversos contidos nele, bem como todas as dependências do pacote.  
   
- Antes de implantar pacotes, você pode criar configurações e implantá-las com os pacotes. O [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] usa configurações para atualizar dinamicamente as propriedades de pacotes e objetos de pacote em tempo de execução. Por exemplo, a cadeia de conexão de uma conexão OLE DB pode ser definida dinamicamente em tempo de execução fornecendo-se uma configuração que mapeie um valor para uma propriedade que contenha a cadeia de conexão.  
+ Antes de implantar pacotes, você pode criar configurações e implantá-las com os pacotes. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] usa configurações para atualizar dinamicamente as propriedades de pacotes e objetos de pacote em tempo de execução. Por exemplo, a cadeia de conexão de uma conexão OLE DB pode ser definida dinamicamente em tempo de execução fornecendo-se uma configuração que mapeie um valor para uma propriedade que contenha a cadeia de conexão.  
   
  Você não pode executar o Assistente de Instalação de Pacotes enquanto não criar um projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e um utilitário de implantação. Para obter mais informações, consulte [Implantar pacotes por meio do utilitário de implantação](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md).  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48129626"
  **Arquivo de configuração**  
  Edite o conteúdo de um arquivo de configuração selecionando o arquivo na lista.  
   
- **Tópicos relacionados:** [Criar configurações do pacote](../../2014/integration-services/create-package-configurations.md)  
+ **Tópicos relacionados:** [Criar configurações de pacote](../../2014/integration-services/create-package-configurations.md)  
   
  **Caminho**  
  Exiba o caminho da propriedade a ser configurada.  
@@ -152,7 +152,7 @@ ms.locfileid: "48129626"
  Para selecionar a pasta na caixa de diálogo **Pacote do SSIS** , clique em procurar (...). Entretanto, a caixa de diálogo não fornece uma maneira para selecionar a pasta padrão. Se desejar usar a pasta padrão, digite "/" na caixa de texto.  
   
 > [!NOTE]  
->  Se o caminho do pacote não for válido, a seguinte mensagem de erro será exibida: "Um ou mais argumentos são inválidos".  
+>  Se você não inserir um caminho de pacote válido, a seguinte mensagem de erro será exibida: "Um ou mais argumentos são inválidos."  
   
  **Depender do armazenamento do servidor para criptografia**  
  Selecione esta opção para usar os recursos do [!INCLUDE[ssDE](../includes/ssde-md.md)] para ajudar a manter a segurança dos pacotes.  

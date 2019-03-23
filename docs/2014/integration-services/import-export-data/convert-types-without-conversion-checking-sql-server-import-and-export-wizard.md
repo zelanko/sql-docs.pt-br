@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.nomappingfile.f1
 ms.assetid: 87d9d3e5-477f-4117-a37f-bff53ea3e14d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5a45cd0e817308d3df1e82d9513e4bae18fd2096
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ea8b678731a10b483c233cdb17b394a22f647060
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789608"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374604"
 ---
 # <a name="convert-types-without-conversion-checking-sql-server-import-and-export-wizard"></a>Converter tipos sem verificação de conversão (Assistente de Importação e Exportação do SQL Server)
   Use o **converter tipos sem verificar a conversão** página para examinar os mapeamentos que o assistente executa quando o assistente não pode localizar um ou mais do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] arquivos de mapeamento e conversão de tipo de dados. Esta página inclui informações que ajudam a identificar o(s) arquivo(s) perdido(s).  

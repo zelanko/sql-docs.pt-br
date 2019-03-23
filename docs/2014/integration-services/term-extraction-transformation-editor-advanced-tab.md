@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Term Extraction Transformation Editor
 ms.assetid: 87118281-6e3c-499e-bac4-fa4c24bb12c6
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ce44e2709013a6d56d47ad30c90ecf5d92825503
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea6582aacefc7c17450e59689bec29c260a38d07
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185326"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385034"
 ---
 # <a name="term-extraction-transformation-editor-advanced-tab"></a>Editor de Transformação Extração de Termos (guia Avançado)
   Use a guia **Avançado** da caixa de diálogo **Editor de Transformação de Extração de Termos** para especificar propriedades de extração, como frequência, comprimento e se devem ser extraídas palavras ou frases.  
@@ -41,7 +41,7 @@ ms.locfileid: "48185326"
  Especifique que a pontuação é a frequência do termo.  
   
  **TFIDF**  
- Especifique que a pontuação é o valor TFIDF do termo. A pontuação TFIDF é o produto da Frequência do Termo e da Frequência de Documento Inversa, definido como: TFIDF de um termo T = (frequência de T) * log ((nºs de linhas na Entrada) / (nº de linhas com T))  
+ Especifique que a pontuação é o valor TFIDF do termo. A pontuação TFIDF é o produto da frequência do termo e a frequência de documento inversa, definido como: TFIDF de um termo T = (frequência de T) * log ((#rows na entrada) / (#rows com T))  
   
  **Limite de frequência**  
  Especifique o número de vezes que uma palavra ou frase deve aparecer antes de ser extraída. O valor padrão é 2.  
@@ -57,8 +57,8 @@ ms.locfileid: "48185326"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de transformação extração de termo &#40;guia de extração de termos&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
- [Editor de transformação extração de termo &#40;guia de exclusão&#41;](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
- [Transformação Pesquisa de Termos](data-flow/transformations/lookup-transformation.md)  
+ [Editor de Transformação Extração de Termos &#40;Guia Extração de Termos&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
+ [Editor de Transformação Extração de Termos &#40;Guia Exclusão&#41;](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
+ [Transformação Pesquisa de Termo](data-flow/transformations/lookup-transformation.md)  
   
   

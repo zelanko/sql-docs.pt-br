@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: 7f60ff18-9ad6-4169-af62-edcb04525b0e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 98194dfc8ac2bfcfecc1d60e14f8bacd17c45113
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc1fc6573b977a0f959aef51c960182904f660d0
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144466"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385894"
 ---
 # <a name="configure-data-viewer-general-tab"></a>Configurar Visualizador de Dados (guia Geral)
   Um visualizador de dados exibe os dados conforme eles migram pelo caminho que conecta dois componentes de fluxo de dados durante uma execução de pacote.  
@@ -43,6 +43,6 @@ ms.locfileid: "48144466"
  [Configurar Visualizador de dados &#40;guia de histograma&#41;](../../2014/integration-services/configure-data-viewer-histogram-tab.md)   
  [Configurar Visualizador de dados &#40;guia de plotagem de dispersão&#41;](../../2014/integration-services/configure-data-viewer-scatter-plot-tab.md)   
  [Fluxo de Dados](data-flow/data-flow.md)   
- [Depurar o fluxo de dados](troubleshooting/debugging-data-flow.md)  
+ [Depurando fluxo de dados](troubleshooting/debugging-data-flow.md)  
   
   

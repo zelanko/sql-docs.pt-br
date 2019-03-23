@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.createtablesql.f1
 ms.assetid: 0d6f6b3b-d023-4770-a8a9-65b2977c8d05
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fad96ece925ad610f8bd5efc91538ac192a940aa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7f541ad24e87bf5bdea9ed8b8c2523a73c81daa9
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764438"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376164"
 ---
 # <a name="create-table-sql-statement-sql-server-import-and-export-wizard"></a>Instrução Create Table SQL (Assistente de Importação e Exportação do SQL Server)
   Use o **instrução SQL Create Table** caixa de diálogo para exibir a instrução que foi gerada automaticamente ou modificá-lo para suas finalidades. Se você modificar essa instrução, também poderá fazer alterações associadas ao mapeamento de coluna e poderá manter a instrução SQL editada manualmente.  

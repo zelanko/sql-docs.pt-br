@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Jobs Task Editor
 ms.assetid: 96531920-92d4-4a3b-a38a-6f0c8bc78ada
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7836d55463e653dcb6c1c3da2f26d969ca46bfe0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 80a2f9703085019bdbc955f30a9f59b927d61217
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158396"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377824"
 ---
 # <a name="transfer-jobs-task-editor-general-page"></a>Editor da Tarefa Transferir Trabalhos (página Geral)
   Use a página **Geral** da caixa de diálogo do **Editor da Tarefa Transferir Trabalhos** para nomear e descrever a tarefa Transferir Trabalhos. Para obter mais informações sobre a tarefa Transferir Trabalhos, consulte [Transfer Jobs Task](control-flow/transfer-jobs-task.md).  
@@ -41,7 +41,7 @@ ms.locfileid: "48158396"
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Tarefas do Integration Services](control-flow/integration-services-tasks.md)   
- [Editor da tarefa de trabalhos de transferência &#40;página de trabalhos&#41;](../../2014/integration-services/transfer-jobs-task-editor-jobs-page.md)   
+ [Editor da Tarefa Transferir Trabalhos &#40;página Trabalhos&#41;](../../2014/integration-services/transfer-jobs-task-editor-jobs-page.md)   
  [Página Expressões](expressions/expressions-page.md)  
   
   

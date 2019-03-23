@@ -3,7 +3,7 @@ title: Notas de versão
 titleSuffix: Azure Data Studio
 description: Notas de versão Data Studio do Azure
 ms.custom: seodec18
-ms.date: 03/06/2019
+ms.date: 03/22/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,16 +11,27 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 746f3d97ed0157f6b97128dbfdf1b88a5276062c
-ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
+ms.openlocfilehash: 359723a1e2d75b7cbbd3a88c9a0ba7ee89fdf420
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161623"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381584"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notas de versão do estúdio de dados do Azure
 
 **[Baixe e instale a versão mais recente!](download.md)**
+
+## <a name="march-2019-hotfix"></a>Março de 2019 (Hotfix)
+
+22 de março de 2019 &nbsp;  /  &nbsp; versão: 1.5.2 &nbsp;  /  &nbsp; versão do Hotfix
+
+&nbsp;
+
+| Alterar | Detalhes |
+| :----- | :------ |
+| Correção de alguns problemas descobertos na 1.5.1. | Ver [março de versão do Hotfix, no GitHub](https://github.com/Microsoft/azuredatastudio/milestone/28).<br/> <br/>&bull; &nbsp; Corrigido um problema em que o usuário não foi possível fechar aberto da tarefa "Abrir Notebook" no painel de controle de bloco de anotações <br/>&bull; &nbsp; Corrigido o problema em que o bloco de anotações do JSON tem extra} depois de salvar <br/>&bull; &nbsp; Problema corrigido onde grades de notebook não estão respondendo às alterações de tema <br/>&bull; &nbsp; Correção do problema em que caminho completo do bloco de anotações foi exibido no cabeçalho da guia. Agora, somente o nome do arquivo é mostrado. |
+| &nbsp; | &nbsp; |
 
 ## <a name="march-2019"></a>Março de 2019
 

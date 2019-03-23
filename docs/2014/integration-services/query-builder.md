@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Query Builder dialog box
 ms.assetid: 780752c9-6e3c-4f44-aaff-4f4d5e5a45c5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0cd620197e78c70f4d351d3dcb69dc5cf4459296
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e09e41535ad878a3f20ae74df07ace7bda6fa7e4
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116976"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384104"
 ---
 # <a name="query-builder"></a>Construtor de Consultas
   Use a caixa de diálogo **Construtor de Consultas** para criar uma consulta a ser usada na tarefa Executar SQL, na origem e no destino OLE DB e na transformação Pesquisa.  
@@ -47,7 +47,7 @@ ms.locfileid: "48116976"
  **Barra de Ferramentas**  
  Use a barra de ferramentas para gerenciar conjuntos de dados, selecionar painéis para exibição e controlar funções de consulta.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Painel Mostrar/Ocultar Diagrama**|Exibe ou oculta o painel **Diagrama** .|  
 |**Painel Mostrar/Ocultar Grade**|Exibe ou oculta o painel **Grade** .|  
@@ -64,7 +64,7 @@ ms.locfileid: "48116976"
  **Definição da Consulta**  
  A definição de consulta fornece uma barra de ferramentas e painéis nos quais definir e testar a consulta.  
   
-|Painel|Description|  
+|Painel|Descrição|  
 |----------|-----------------|  
 |Painel**Diagrama** |Exibe a consulta em um diagrama. O diagrama mostra as tabelas incluídas na consulta e como elas estão unidas. Marque ou desmarque a caixa de seleção próxima a uma coluna em uma tabela para adicioná-la ou removê-la da saída da consulta.<br /><br /> Quando você adiciona tabelas à consulta, o Construtor de Consultas cria junções entre tabelas com base em tabelas, dependendo das chaves na tabela. Para adicionar uma junção, arraste um campo de uma tabela sobre um campo em outra tabela. Para gerenciar uma junção, clique com o botão direito do mouse na junção e selecione uma opção de menu.<br /><br /> Clique com o botão direito do mouse no painel **Diagrama** para adicionar ou remover tabelas, selecionar todas as tabelas e mostrar ou ocultar painéis.|  
 |Painel**Grade** |Exibe a consulta em uma grade. Você pode usar esse painel para adicionar e remover colunas da consulta e alterar as configurações de cada coluna.|  
@@ -73,9 +73,9 @@ ms.locfileid: "48116976"
   
 ## <a name="see-also"></a>Consulte também  
  [Tarefa Executar SQL](control-flow/execute-sql-task.md)   
- [Origem OLE DB](data-flow/ole-db-source.md)   
+ [Origem de OLE DB](data-flow/ole-db-source.md)   
  [Destino OLE DB](data-flow/ole-db-destination.md)   
- [Transformação pesquisa](data-flow/transformations/lookup-transformation.md)   
+ [Transformação Pesquisa](data-flow/transformations/lookup-transformation.md)   
  [Serviços de integração &#40;SSIS&#41; consultas](integration-services-ssis-queries.md)   
  [MERGE em pacotes do Integration Services](control-flow/merge-in-integration-services-packages.md)  
   

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - <= (less than or equal to operator)
 - greater than or equal to (>=)
 ms.assetid: 52ad504d-2f54-44de-b5e2-620577c0e289
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0f4638de533ed395b55af25e2647a5bbaec92966
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e4db32776e59c6100594933fd8706129e8652790
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823650"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386424"
 ---
 # <a name="gt-greater-than-or-equal-to-ssis-expression"></a>&gt;= (Maior ou igual a) (Expressão SSIS)
   Executa uma comparação para determinar se a primeira expressão é maior que ou igual à segunda. O avaliador de expressões converte automaticamente muitos tipos de dados antes de executar a comparação.  

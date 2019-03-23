@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cacheconnection.f1
 ms.assetid: 0d8f9324-0c35-4eea-b06d-da3cc2426d2c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0b9ede014f68d06f84132664ee3f4e1413f715e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af7696c1d5194af721b6ff803736193db0285b8b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130826"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385044"
 ---
 # <a name="cache-connection-manager-editor"></a>Editor do Gerenciador de Conexões de Cache
   O gerenciador de conexões de Cache lê um conjunto de dados de referência da transformação Cache ou de um arquivo cache (.caw) e salva os dados em um arquivo cache. Os dados sempre são armazenados na memória.  
@@ -88,18 +88,18 @@ ms.locfileid: "48130826"
  Especifique o tipo de dados da coluna  
   
  `Length`  
- Especifica o tipo de dados da coluna. Se aplicável ao tipo de dados, você pode atualizar `Length`.  
+ Especifica o tipo de dados da coluna. Se aplicável ao tipo de dados, você pode atualizar a `Length`.  
   
  `Precision`  
- Especifica a precisão de alguns tipos de dados de coluna. A precisão é o número de dígitos em um número. Se aplicável ao tipo de dados, você pode atualizar `Precision`.  
+ Especifica a precisão de alguns tipos de dados de coluna. A precisão é o número de dígitos em um número. Se aplicável ao tipo de dados, você pode atualizar a `Precision`.  
   
  `Scale`  
- Especifica a escala de alguns tipos de dados de coluna. A escala é o número de dígitos à direita da casa decimal em um número. Se aplicável ao tipo de dados, você pode atualizar `Scale`.  
+ Especifica a escala de alguns tipos de dados de coluna. A escala é o número de dígitos à direita da casa decimal em um número. Se aplicável ao tipo de dados, você pode atualizar a `Scale`.  
   
  `Code Page`  
- Especifica a página de código para o tipo de coluna. Se aplicável ao tipo de dados, você pode atualizar `Code Page`.  
+ Especifica a página de código para o tipo de coluna. Se aplicável ao tipo de dados, você pode atualizar a `Code Page`.  
   
 ## <a name="see-also"></a>Consulte também  
- [Transformação Pesquisa](data-flow/transformations/lookup-transformation.md)  
+ [Lookup Transformation](data-flow/transformations/lookup-transformation.md)  
   
   

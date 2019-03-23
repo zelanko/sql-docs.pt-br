@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Export Column Transformation Editor
 ms.assetid: b659a5c2-5509-4b5b-9c82-136c971d5c7f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e12fa5ca9d9295ffe1311062215217044ada2135
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d7682e3c22885b50e1516a8f30cce468852ae2c7
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048386"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378050"
 ---
 # <a name="export-column-transformation-editor-columns-page"></a>Editor de Transformação Exportar Colunas (página Colunas)
   Use a página **Colunas** da caixa de diálogo **Exportar Editor de Transformação Colunas** para especificar as colunas no fluxo de dados a serem extraídas para arquivos. Você pode especificar se a transformação Exportar Coluna acrescenta dados a um arquivo ou substitui um arquivo existente.  
@@ -41,10 +41,10 @@ ms.locfileid: "48048386"
  Especifique se a transformação exclui o conteúdo dos arquivos existentes antes de gravar dados. O padrão é `false`.  
   
  **Gravar BOM**  
- Especifique se deve ser gravada uma BOM (marca de ordem de byte) no arquivo. Uma BOM só é gravada se os dados têm o `DT_NTEXT` ou tipo de dados DT_WSTR e não são acrescentados a um arquivo de dados existente.  
+ Especifique se deve ser gravada uma BOM (marca de ordem de byte) no arquivo. Uma BOM só é gravada se os dados forem do tipo `DT_NTEXT`ou DT_WSTR e não estiverem anexados a um arquivo de dados existente.  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Exportar Editor de transformação de coluna &#40;página de saída de erro&#41;](../../2014/integration-services/export-column-transformation-editor-error-output-page.md)  
+ [Exportar Editor de Transformação Colunas &#40;Página Saída de Erro&#41;](../../2014/integration-services/export-column-transformation-editor-error-output-page.md)  
   
   

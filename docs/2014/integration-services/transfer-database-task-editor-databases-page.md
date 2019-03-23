@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Database Task Editor
 ms.assetid: ccdb74d0-4bea-420c-a726-2e0eb8957e0a
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 69a3c17a5b247c3c1ccefa5887404ad0865c673e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 05a7b731ff6befc293b4779eb604ae15d04c0cb8
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070628"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379725"
 ---
 # <a name="transfer-database-task-editor-databases-page"></a>Editor da Tarefa Transferir Banco de Dados (página Bancos de Dados)
   Use a página **Bancos de Dados** da caixa de diálogo **Editor da Tarefa Transferir Banco de Dados** para especificar as propriedades para os bancos de dado de origem e de destino envolvidos na tarefa Transferir Banco de Dados. A tarefa Transferir Banco de Dados copia ou move um bancos de dados [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] entre duas instâncias do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Essa tarefa também pode ser usada para copiar um banco de dados dentro do mesmo servidor. Para obter mais informações sobre essa tarefa, consulte [Tarefa Transferir Banco de Dados](control-flow/transfer-database-task.md).  
@@ -54,7 +54,7 @@ ms.locfileid: "48070628"
   
  As opções desta propriedade estão listadas na seguinte tabela:  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Verdadeiro**|Substitui o banco de dados no servidor de destino.|  
 |**Falso**|Não substitui o banco de dados no servidor de destino.|  
@@ -83,7 +83,7 @@ ms.locfileid: "48070628"
   
  As opções desta propriedade estão listadas na seguinte tabela:  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Verdadeiro**|Anexa novamente o banco de dados de origem.|  
 |**Falso**|Não anexa novamente o banco de dados de origem.|  
@@ -91,8 +91,8 @@ ms.locfileid: "48070628"
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Tarefas do Integration Services](control-flow/integration-services-tasks.md)   
- [Editor da tarefa de banco de dados transferir &#40;página geral&#41;](general-page-of-integration-services-designers-options.md)   
- [Página expressões](expressions/expressions-page.md)   
- [Gerenciador de Conexões SMO](connection-manager/smo-connection-manager.md)  
+ [Editor da Tarefa Transferir Banco de Dados &#40;Página Geral&#41;](general-page-of-integration-services-designers-options.md)   
+ [Página Expressões](expressions/expressions-page.md)   
+ [Gerenciador de conexões SMO](connection-manager/smo-connection-manager.md)  
   
   

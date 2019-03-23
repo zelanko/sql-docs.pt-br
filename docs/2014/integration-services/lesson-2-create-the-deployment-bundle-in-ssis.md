@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ab17289d-c3d4-4a5e-b7f5-4fea8ae21707
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0824811762ff693a55fa67750be5a654f27ea5e7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 8ec7519a4ea203693e6520eee569639a3259215f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375548"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385386"
 ---
 # <a name="lesson-2-creating-the-deployment-bundle"></a>Lição 2: Criando o pacote de implantação
-  No [lição 1: Preparando para criar o pacote de implantação](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md), você criou o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] projeto chamado Tutorial de implantação, adicionou os pacotes e arquivos de suporte para o projeto e implementou configurações em pacotes.  
+  Na [Lição 1: Preparando para criar o pacote de implantação](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md), você criou o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] projeto chamado Tutorial de implantação, adicionou os pacotes e arquivos de suporte para o projeto e implementou configurações em pacotes.  
   
  Nesta lição, você criará um pacote de implantação, que é uma pasta que contém os itens que você precisa para instalar os pacotes em outro computador. O pacote de implantação incluirá um manifesto de implantação, cópias dos pacotes e cópias dos arquivos de suporte do projeto do Tutorial de Implantação. O manifesto de implantação lista os pacotes, os diversos arquivos e as configurações do pacote de implantação.  
   

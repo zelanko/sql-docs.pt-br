@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e8be4778dc8ca28372132e3ca9447d5804454195
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b788f82fc28ee39e7d65ae484da49313eea7c610
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356345"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381194"
 ---
 # <a name="step-1-building-the-deployment-utility"></a>Etapa 1: Compilando o utilitário de implantação
   Nesta tarefa, você configurará e compilará um utilitário de implantação para o projeto do Tutorial de Implantação.  
@@ -56,7 +56,7 @@ ms.locfileid: "53356345"
   
      Compilação concluída – 0 erros, 0 avisos  
   
-     = = = Compilação: 0 bem-sucedido, 0 com falha, 1 atualizado, 0 ignorado = = =  
+     ========== Compilação: 0 bem-sucedido, 0 com falha, 1 atualizado, 0 ignorado = = =  
   
 5.  No menu **Arquivo** , clique em **Sair**. Se for solicitado que você salve as alterações dos itens do Tutorial de Implantação, clique em **Sim**.  
   

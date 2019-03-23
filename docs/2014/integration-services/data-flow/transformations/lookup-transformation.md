@@ -16,15 +16,15 @@ helpviewer_keywords:
 - lookups [Integration Services]
 - exact matches [Integration Services]
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 66c285e24c2a981464c93001c1df41f164e60b1e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 47b04c547700eda94d4c4f19b4a1211f8cdbf694
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353803"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386544"
 ---
 # <a name="lookup-transformation"></a>transformação Pesquisa
   A transformação Pesquisa executa pesquisas unindo dados em colunas de entrada com colunas em um conjunto de dados de referência. Você usa a pesquisa para acessar informações adicionais em uma tabela relacionada que tem como base valores de colunas comuns.  
@@ -129,7 +129,7 @@ ms.locfileid: "53353803"
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
--   Vídeo, [como: Implementar uma transformação pesquisa em modo Cache cheio](https://go.microsoft.com/fwlink/?LinkId=131031), em msdn.microsoft.com  
+-   Vídeo, [Como Implementar uma transformação pesquisa em modo Cache cheio](https://go.microsoft.com/fwlink/?LinkId=131031), em msdn.microsoft.com  
   
 -   Entrada de blog, [Práticas recomendadas para usar os modos de cache de transformação de pesquisa](https://go.microsoft.com/fwlink/?LinkId=146623), em blogs.msdn.com  
   

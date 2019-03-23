@@ -17,22 +17,22 @@ helpviewer_keywords:
 - SSIS packages, property expressions
 - property expressions [Integration Services]
 ms.assetid: cd0e171a-08be-45d6-81dc-ed94f37698b8
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d561840bfe2c10d7b269bb952b934d22dd957d32
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2fd6b938d13e880f7ec8d48d3e4ca9665ee9cd65
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135196"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378594"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>Propriedades de fluxo de dados que podem ser definidas usando expressões
   Os valores de certas propriedades dos objetos de fluxo de dados podem ser especificados usando expressões de propriedades disponíveis no contêiner da tarefa de Fluxo de Dados.  
   
  Para obter informações sobre como usar expressões de propriedade, consulte [Usar expressões de propriedade em pacotes](expressions/use-property-expressions-in-packages.md).  
   
- É possível usar expressões de propriedade para personalizar configurações para cada instância implantada de um pacote. Você também pode usar expressões de propriedades para especificar restrições de tempo de execução para um pacote, usando a opção **/set** com o utilitário de prompt de comando **dtexec** . Por exemplo, você pode restringir a `MaximumThreads` usada pela transformação classificação, ou o `MaxMemoryUsage` das transformações agrupamento difuso e pesquisa difusa. Se irrestritas, essas transformações podem armazenar em cache grandes quantias de dados na memória.  
+ É possível usar expressões de propriedade para personalizar configurações para cada instância implantada de um pacote. Você também pode usar expressões de propriedades para especificar restrições de tempo de execução para um pacote, usando a opção **/set** com o utilitário de prompt de comando **dtexec** . Por exemplo, você pode restringir o `MaximumThreads` usado pela transformação Classificação ou o `MaxMemoryUsage` das transformações Agrupamento Difuso e Pesquisa Difusa. Se irrestritas, essas transformações podem armazenar em cache grandes quantias de dados na memória.  
   
  Para especificar uma expressão de propriedade para uma das propriedades de objetos de fluxo de dados listadas nesse tópico, exiba a janela **Propriedades** para a tarefa de Fluxo de Dados selecionando a tarefa de Fluxo de Dados na superfície **Fluxo de Controle** do designer, ou selecionando a guia **Fluxo de Dados** do designer sem selecionar nenhum componente individual ou caminho. Selecione a propriedade **Expressões** e clique nas reticências (...) para exibir a caixa de diálogo **Editor de Expressões de Propriedades** . Abra a lista suspensa **Propriedade** para selecionar uma propriedade e digite uma expressão na caixa de texto **Expressão** ou clique nas reticências (...) para exibir a caixa de diálogo **Construtor de Expressões** .  
   

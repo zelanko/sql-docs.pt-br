@@ -13,15 +13,15 @@ f1_keywords:
 - sql12.dts.configwizard.finishdtsconfiguration.f1
 - sql12.dts.configwizard.welcome.f1
 ms.assetid: adca6938-6d5a-40ec-950e-dceb79d044fe
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f984034b21680842bdb4813f4f8d9489edb0913b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 042f1146295d0a8358a7f89a38929a77e6f761a1
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160376"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376184"
 ---
 # <a name="package-configuration-wizard-ui-reference"></a>Referência da interface do usuário do Assistente de Configuração de Pacotes
   Use o **Assistente de Configuração de Pacotes** para criar configurações que atualizem as propriedades de um pacote do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e seus respectivos objetos em tempo de execução. Esse assistente é executado quando você adiciona uma nova configuração ou modifica uma existente na caixa de diálogo **Organizador de Configurações do Pacote** . Para abrir a caixa de diálogo **Organizador de Configurações do Pacote**, selecione **Configurações de Pacote** no menu **SSIS** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Para obter mais informações, consulte [Criar configurações de pacote](../../2014/integration-services/create-package-configurations.md).  
@@ -50,7 +50,7 @@ ms.locfileid: "48160376"
  **Tipo de configuração**  
  Selecione o tipo de fonte na qual deseja armazenar a configuração usando as seguintes opções:  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Arquivo de configuração XML**|Armazene a configuração como um arquivo XML. Se este valor for selecionado, as opções dinâmicas serão exibidas na seção **Tipo de Configuração**.|  
 |**Variável de ambiente**|Armazene a configuração em uma das variáveis de ambiente. Se este valor for selecionado, as opções dinâmicas serão exibidas na seção **Tipo de Configuração**.|  
@@ -67,7 +67,7 @@ ms.locfileid: "48160376"
  **Especificar as definições de configuração diretamente**  
  Use para especificar as configurações diretamente.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Nome do arquivo de configuração**|Digite o caminho do arquivo de configuração gerado pelo assistente.|  
 |**Procurar**|Use a caixa de diálogo **Selecionar Local do Arquivo de Configuração** para especificar o caminho do arquivo de configuração gerado pelo assistente. Se o arquivo não existir, ele será criado pelo assistente.|  
@@ -75,7 +75,7 @@ ms.locfileid: "48160376"
  **O local de configuração é armazenado em uma variável de ambiente**  
  Use para especificar a variável de ambiente na qual você deseja armazenar a configuração.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Variável de ambiente**|Selecione uma variável de ambiente da lista.|  
   
@@ -87,14 +87,14 @@ ms.locfileid: "48160376"
  **Especificar as definições de configuração diretamente**  
  Use para especificar as configurações diretamente.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Entrada de Registro**|Digite a chave do Registro que contém as informações de configuração. O formato é \<registry key>.<br /><br /> A chave do Registro já deve existir em HKEY_CURRENT_USER e deve ter um valor chamado Value (valor). O valor pode ser um DWORD ou uma cadeia de caracteres.<br /><br /> Se desejar usar uma chave do Registro que não está na raiz de HKEY_CURRENT_USER, use o formato \<Registry key\registry key\\...> para identificar a chave.|  
   
  **O local de configuração é armazenado em uma variável de ambiente**  
  Use para especificar a variável de ambiente na qual deseja armazenar a configuração.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Variável de ambiente**|Selecione uma variável de ambiente da lista.|  
   
@@ -102,14 +102,14 @@ ms.locfileid: "48160376"
  **Especificar as definições de configuração diretamente**  
  Use para especificar as configurações diretamente.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Variável pai**|Especifique a variável no pacote pai que contém as informações de configuração.|  
   
  **O local de configuração é armazenado em uma variável de ambiente**  
  Use para especificar a variável de ambiente que armazena a configuração.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Variável de ambiente**|Selecione uma variável de ambiente da lista.|  
   
@@ -117,7 +117,7 @@ ms.locfileid: "48160376"
  **Especificar as definições de configuração diretamente**  
  Use para especificar as configurações diretamente.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Conexão**|Selecione uma conexão da lista ou clique em **Nova** para criar uma nova conexão.|  
 |**Tabela de configuração**|Selecione uma tabela existente ou clique em **Nova** para gravar uma instrução SQL que cria uma nova tabela.|  
@@ -126,7 +126,7 @@ ms.locfileid: "48160376"
  **O local de configuração é armazenado em uma variável de ambiente**  
  Use para especificar a variável de ambiente onde a configuração está armazenada.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Variável de ambiente**|Selecione uma variável de ambiente da lista.|  
   

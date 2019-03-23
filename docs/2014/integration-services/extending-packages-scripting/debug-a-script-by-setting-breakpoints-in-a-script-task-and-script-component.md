@@ -10,15 +10,15 @@ helpviewer_keywords:
 - breakpoints [Integration Services]
 - scripts [Integration Services], breakpoints
 ms.assetid: 6c03464f-3f7d-4882-b7f8-8e396f8e2944
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6d3104a749db2099434bb5e3c2c0d8cde374f620
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 97c41b4ca75336f70b049239112132c89b05fba5
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789408"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374683"
 ---
 # <a name="debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component"></a>Depurar um script definindo pontos de interrupção em uma tarefa Script e um componente Script
   Este procedimento descreve como definir pontos de interrupção nos scripts que são usados na tarefa Script e componente Script.  

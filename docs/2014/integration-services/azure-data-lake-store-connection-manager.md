@@ -12,14 +12,14 @@ f1_keywords:
 - SQL11.DTS.DESIGNER.AFPADLSCM.F1
 ms.assetid: 7f1323f9-9dc3-4378-9c70-bbc65bfeabfd
 author: yualan
-ms.author: douglasl
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a462b44137c59f92a4bb9dc38a13318d71a32043
-ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
+ms.openlocfilehash: dc1918bec6dc8f0cfa242341b59fefd477854887
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53531031"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379055"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Gerenciador de conexões do Azure Data Lake Store
   O **Gerenciador de conexão do Azure Data Lake Store** permite que um pacote do SSIS para se conectar a um serviço do Azure Data Lake Store por meio de dois tipos de autenticação: Identidade de usuário do Azure AD e a identidade de serviço do Azure AD.  

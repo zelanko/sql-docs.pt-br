@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.connection.f1
 ms.assetid: 7de3f438-bdd6-49b5-937a-47369e754943
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 77e31f4857d056da79fb65b6f6261a1d92f016e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 553603a6f8164dd2388a551d085413cd3c253b4c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052446"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380144"
 ---
 # <a name="ado-net-source-editor-connection-manager-page"></a>Editor de origem ADO NET (Página Gerenciador de Conexões)
   Use a página **Gerenciador de Conexões** da caixa de diálogo **Editor de Origem ADO NET** para selecionar o gerenciador de conexões [!INCLUDE[vstecado](../includes/vstecado-md.md)] para a origem. Essa página também permite que você selecione uma tabela ou exibição a partir do banco de dados.  
@@ -43,7 +43,7 @@ ms.locfileid: "48052446"
  **Modo de acesso aos dados**  
  Especifique o método para selecionar os dados da origem.  
   
-|Opção|Description|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |Tabela ou exibição|Recupere os dados de uma tabela ou visualize na fonte de dados [!INCLUDE[vstecado](../includes/vstecado-md.md)] .|  
 |Comando SQL|Recupere os dados da fonte de dados [!INCLUDE[vstecado](../includes/vstecado-md.md)] usando uma consulta SQL.|  
@@ -71,8 +71,8 @@ ms.locfileid: "48052446"
  Use a caixa de diálogo **Abrir** para localizar o arquivo com contém o texto da consulta SQL.  
   
 ## <a name="see-also"></a>Consulte também  
- [Editor de origem do ADO NET &#40;página de colunas&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
- [Editor de origem do ADO NET &#40;página de saída de erro&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
+ [Editor de Origem ADO NET &#40;Página Colunas&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
+ [Editor de Origem ADO NET &#40;Página Saída de Erro&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
  [Gerenciador de conexões ADO.NET](connection-manager/ado-net-connection-manager.md)  
   
   

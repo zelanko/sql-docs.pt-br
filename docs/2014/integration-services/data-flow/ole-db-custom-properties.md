@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 13a82d41-dd7a-4708-bc84-4407a536c877
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ebe1af2269d082826a31852ee77fbf529516e1c8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 996acc5f8e9b47af683c8d8376515f7f59e63120
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818182"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374901"
 ---
 # <a name="ole-db-custom-properties"></a>Propriedades personalizadas OLE DB
   **Propriedades personalizadas de fontes**  

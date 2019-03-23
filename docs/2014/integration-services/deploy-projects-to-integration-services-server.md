@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: 6e9402f4-4d50-49ff-820d-65a77829c4a5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2f3f982eeee9abc016575b8acd068b8ef2e7450f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 76c3c915224af50fce1265f733082054e0eeaa98
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408173"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386624"
 ---
 # <a name="deploy-projects-to-integration-services-server"></a>Implantar projetos no servidor do Integration Services
   Na versão atual do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], você pode implantar seus projetos no servidor do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . O servidor do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] permite gerenciar pacotes, executar pacotes, e configura valores de tempo de execução para pacotes por meio de ambientes.  
@@ -30,7 +30,7 @@ ms.locfileid: "52408173"
   
 1.  Criar um catálogo do SSISDB se ainda não tiver criado. Para obter mais informações, consulte [Criar o catálogo SSIS](catalog/ssis-catalog.md).  
   
-2.  Converta o projeto no modelo de implantação de projeto executando o **Assistente de Conversão de Projeto do Integration Services** . Para obter mais informações, consulte as instruções abaixo: [Para converter um projeto para o modelo de implantação de projeto](#convert)  
+2.  Converta o projeto no modelo de implantação de projeto executando o **Assistente de Conversão de Projeto do Integration Services** . Para obter mais informações, confira as instruções abaixo: [Para converter um projeto no modelo de implantação de projeto](#convert)  
   
     -   Se você criou o projeto no [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)], por padrão o projeto usará o modelo de implantação de projeto.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "52408173"
   
      Para obter mais informações sobre a atualização de pacotes, consulte [Atualizar pacotes do Integration Services](install-windows/upgrade-integration-services-packages.md) e [Atualizar pacotes do Integration Services usando o Assistente de Atualização de Pacote SSIS](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md).  
   
-3.  Implante o projeto no servidor do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Para obter mais informações, consulte as instruções abaixo: [Para implantar um projeto para o servidor do Integration Services](#deploy).  
+3.  Implante o projeto no servidor do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Para obter mais informações, confira as instruções abaixo: [Para implantar um projeto no Servidor do Integration Services](#deploy).  
   
 4.  (Opcional) Crie um ambiente para o projeto implantado. Para obter mais informações, consulte [Criar e mapear um ambiente de servidor](../../2014/integration-services/create-and-map-a-server-environment.md).  
   

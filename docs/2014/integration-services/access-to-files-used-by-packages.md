@@ -17,15 +17,15 @@ helpviewer_keywords:
 - files [Integration Services], security
 - SQL Server Integration Services packages, security
 ms.assetid: 2e3ddea9-5289-4289-a70e-11c018f34977
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6b6e78e04a64f9bddeeb4f24ba2f90919b9d228c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eed6f09197585e7eb8575c43146ed730497af8a0
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214986"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378484"
 ---
 # <a name="access-to-files-used-by-packages"></a>Acesso aos arquivos usados por pacotes
   O nível de proteção do pacote não protege arquivos armazenados fora do pacote. Esses arquivos incluem o seguinte:  
@@ -39,7 +39,7 @@ ms.locfileid: "48214986"
  Esses arquivos devem ser protegidos separadamente, especialmente se eles incluírem informações confidenciais.  
   
 ## <a name="configuration-files"></a>Arquivos de configuração  
- Se você tiver informações confidenciais em uma configuração, como informações de logon e senha, deverá salvar a configuração no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ou usar uma ACL (lista de controle de acesso), para restringir acesso ao local ou à pasta na qual você armazena os arquivos e só permitir o acesso a determinadas contas. Normalmente, você concede acesso às contas que você permite que executem pacotes, e às contas que gerenciam e solucionam problemas de pacotes, que podem incluir revisão do conteúdo de configuração, ponto de verificação e arquivos de log. O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornece o armazenamento mais seguro porque oferece proteção nos níveis de servidor e de banco de dados. Para salvar configurações no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use o tipo de configuração do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para salvar no sistema de arquivos, use o tipo de configuração XML.  
+ Se você tiver informações confidenciais em uma configuração, como informações de logon e senha, deverá salvar a configuração no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ou usar uma ACL (lista de controle de acesso), para restringir acesso ao local ou à pasta na qual você armazena os arquivos e só permitir o acesso a determinadas contas. Normalmente, você concede acesso às contas que você permite que executem pacotes, e às contas que gerenciam e solucionam problemas de pacotes, que podem incluir revisão do conteúdo de configuração, ponto de verificação e arquivos de log. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornece o armazenamento mais seguro porque oferece proteção nos níveis de servidor e de banco de dados. Para salvar configurações no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use o tipo de configuração do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para salvar no sistema de arquivos, use o tipo de configuração XML.  
   
  Para obter mais informações, consulte [Configurações de pacote](../../2014/integration-services/package-configurations.md), [Criar configurações de pacote](../../2014/integration-services/create-package-configurations.md)e [Considerações de segurança para uma instalação do SQL Server](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   

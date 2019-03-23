@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Source Editor
 ms.assetid: 8d14019e-cb60-4bc1-b71e-7f2326de8317
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 43218f87bb8a19fc35b3191603e9324e94145a64
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2a8dd63e2e3d75c1d56c7c930fe5dfc53cf67228
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106406"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386234"
 ---
 # <a name="excel-source-editor-error-output-page"></a>Editor de Origem do Excel (página Saída de Erro)
   Use a página **Saída de Erro** da caixa de diálogo **Editor de Origem do Excel** para selecionar opções de tratamento de erro e definir propriedades em colunas de saída de erros.  
@@ -37,7 +37,7 @@ ms.locfileid: "48106406"
  **Erro**  
  Especifique o que deve acontecer quando ocorre um erro: ignorar a falha, redirecionar a linha ou causar falha no componente.  
   
- **Tópicos Relacionados:** [Tratamento de erros em dados](data-flow/error-handling-in-data.md)  
+ **Tópicos relacionados:** [Tratamento de erro em dados](data-flow/error-handling-in-data.md)  
   
  **Truncation**  
  Especifique o que deve acontecer quando ocorre um truncamento: ignorar a falha, redirecionar a linha ou causar falha do componente.  
@@ -53,9 +53,9 @@ ms.locfileid: "48106406"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de origem do Excel &#40;página do Gerenciador de Conexão&#41;](../../2014/integration-services/excel-source-editor-connection-manager-page.md)   
- [Editor de origem do Excel &#40;página de colunas&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
- [Gerenciador de Conexões do Excel](connection-manager/excel-connection-manager.md)   
+ [Editor de Origem do Excel &#40;Página Gerenciador de Conexões&#41;](../../2014/integration-services/excel-source-editor-connection-manager-page.md)   
+ [Editor de Fonte do Excel &#40;Página Colunas&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
+ [Gerenciador de conexões do Excel](connection-manager/excel-connection-manager.md)   
  [Loop através de arquivos e tabelas do Excel por meio de um contêiner do Loop Foreach](control-flow/foreach-loop-container.md)  
   
   

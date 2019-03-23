@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: de47ea98-135e-4730-900e-dac629848798
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c0368fefac4c927ee1f1483ba433feb13b3c1dc5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5069000307f1cc677437cd1313e493015a774664
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125176"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377144"
 ---
 # <a name="flat-file-connection-manager-editor-preview-page"></a>Editor do Gerenciador de Conexões de Arquivos Simples (página Visualização)
   Use o nó **Visualização** da caixa de diálogo **Editor do Gerenciador de Conexões de Arquivos Simples** para exibir os conteúdos do arquivo de origem em um formato tabular.  
@@ -45,8 +45,8 @@ ms.locfileid: "48125176"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor do Gerenciador de Conexão de arquivo simples &#40;página geral&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor do Gerenciador de Conexão de arquivo simples &#40;página de colunas&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   
+ [Editor do Gerenciador de Conexões de Arquivos Simples &#40;Página Geral&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor do Gerenciador de Conexões de Arquivos Simples &#40;Página Colunas&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   
  [Editor do Gerenciador de Conexões de Arquivos Simples &#40;Página Avançado&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)  
   
   

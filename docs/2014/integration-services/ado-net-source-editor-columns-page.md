@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.columns.f1
 ms.assetid: fbc205b9-2001-4737-a76b-1ba777344bd9
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7489a23fdf7b9501b4b7bc0a41967b0407558a22
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8a5fbff347c6b06d500f3baebe3dd980000f0bd2
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106420"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58383213"
 ---
 # <a name="ado-net-source-editor-columns-page"></a>Editor de Origem ADO NET (Página Colunas)
   Use a página **Colunas** da caixa de diálogo do **Editor de Origem ADO NET** para mapear uma coluna de saída em cada coluna externa (origem).  
@@ -44,8 +44,8 @@ ms.locfileid: "48106420"
  Forneça um nome exclusivo para cada coluna de saída. O padrão é o nome da coluna externa (origem) selecionada; porém, é possível escolher qualquer nome descritivo exclusivo. O nome fornecido será exibido no Designer [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
 ## <a name="see-also"></a>Consulte também  
- [Editor de origem do ADO NET &#40;página do Gerenciador de Conexão&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
- [Editor de origem do ADO NET &#40;página de saída de erro&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
+ [Editor de Origem ADO NET &#40;página Gerenciador de Conexões&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
+ [Editor de Origem ADO NET &#40;Página Saída de Erro&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
  [Gerenciador de conexões ADO.NET](connection-manager/ado-net-connection-manager.md)  
   
   

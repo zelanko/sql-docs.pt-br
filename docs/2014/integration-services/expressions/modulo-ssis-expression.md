@@ -11,15 +11,15 @@ helpviewer_keywords:
 - remainder of division operation
 - modulo operator (%)
 ms.assetid: e2920821-2f5b-4c76-8db8-8b9eddf4606f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 97000d3568f7922126e264d022bd97154170b776
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 163dbfecd4605c6c9624d94c047b1c7e893d8fcd
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752128"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384324"
 ---
 # <a name="modulo-ssis-expression"></a>(Módulo) (Expressão SSIS)
   Fornece o resto inteiro após dividir a primeira expressão numérica pela segunda.  

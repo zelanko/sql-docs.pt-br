@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Aggregate Transformation Editor
 ms.assetid: a01cb124-ec79-4673-b1a1-bf4d60ee1b45
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4aaf14095eab05110845178f4115fc87ea19947a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: db633e9afa480d03b31cf02a84db2813b1e30516
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224456"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378026"
 ---
 # <a name="aggregate-transformation-editor-aggregations-tab"></a>Editor de Transformação Agregação (guia Agregações)
   Use a guia **Agregações** da caixa de diálogo **Editor de Transformação Agregação** para especificar colunas para agregação e propriedades de agregação. Você pode aplicar diversas agregações. Esta transformação não gera uma saída de erro.  
@@ -45,7 +45,7 @@ ms.locfileid: "48224456"
  **Escala de Chave**  
  Na exibição avançada, especifique, opcionalmente, o número aproximado de chaves que a agregação pode gravar. Por padrão, o valor desta opção é **Não Especificado**. Se as propriedades **Escala de Chave** e **Chaves** forem definidas, o valor de **Chaves** terá precedência.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |Não Especificado|A propriedade Chave de Escala não é usada.|  
 |Baixa|A agregação pode gravar aproximadamente 500.000 chaves.|  
@@ -67,12 +67,12 @@ ms.locfileid: "48224456"
  **Operação**  
  Escolha na lista de operações disponíveis, usando a tabela abaixo como guia.  
   
-|Operação|Description|  
+|Operação|Descrição|  
 |---------------|-----------------|  
 |**GroupBy**|Divide conjuntos de dados em grupos. Colunas que contêm qualquer tipo de dados podem ser utilizadas para agrupamento. Para obter mais informações, consulte GROUP BY.|  
 |**Sum**|Soma os valores em uma coluna. Somente colunas com tipos de dados numéricos podem ser somadas. Para obter mais informações, consulte SUM.|  
 |**Médio**|Retorna a média dos valores da coluna em uma coluna. A média só poderá ser obtida em colunas com tipos de dados numéricos. Para obter mais informações, consulte AVG.|  
-|**Contagem**|Retorna o número de itens de um grupo. Para obter mais informações, consulte COUNT.|  
+|**Count**|Retorna o número de itens de um grupo. Para obter mais informações, consulte COUNT.|  
 |**CountDistinct**|Retorna o número de valores não nulos exclusivos de um grupo. Para obter mais informações, consulte COUNT e Distinct.|  
 |**Mínimo**|Retorna o valor mínimo de um grupo. Restrito a tipos de dados numéricos.|  
 |**Máximo**|Retorna o valor máximo em um grupo. Restrito a tipos de dados numéricos.|  
@@ -83,9 +83,9 @@ ms.locfileid: "48224456"
  **Count Distinct Scale**  
  Especifique, opcionalmente, o número aproximado de valores de distinção que a agregação pode gravar. Por padrão, o valor desta opção é **Não Especificado**. Se os dois `CountDistinctScale` e **CountDistinctKeys** forem especificados, **CountDistinctKeys** terá precedência.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|Não Especificado|O `CountDistinctScale` propriedade não é usada.|  
+|Não Especificado|A propriedade `CountDistinctScale` não é usada.|  
 |Baixa|A agregação pode gravar aproximadamente 500.000 valores de distinção.|  
 |Média|A agregação pode gravar aproximadamente 5.000.000 valores distintos.|  
 |Alta|A agregação pode gravar mais de 25.000.000 de valores de distinção.|  
@@ -95,7 +95,7 @@ ms.locfileid: "48224456"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de transformação de agregação &#40;guia Avançado&#41;](../../2014/integration-services/aggregate-transformation-editor-advanced-tab.md)   
+ [Editor de Transformação Agregação &#40;guia Avançado&#41;](../../2014/integration-services/aggregate-transformation-editor-advanced-tab.md)   
  [Agregar valores em um conjunto de dados por meio da transformação Agregação](data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
   

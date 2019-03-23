@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Term Lookup Transformation Editor
 ms.assetid: be3575dc-e79c-49f6-8243-ad270bce77d5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c0138c9b016b89f2e524ecffc025203e705f1f0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c8f5dd315e7a6a7122768d4ebc893d8d7ad5ec90
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189769"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387184"
 ---
 # <a name="term-lookup-transformation-editor-advanced-tab"></a>Editor de Transformação Pesquisa de Termos (guia Avançado)
   Use a guia **Avançado** da caixa de diálogo **Editor de Transformação Pesquisa de Termos** para especificar se a pesquisa deve diferenciar maiúsculas e minúsculas.  
@@ -36,8 +36,8 @@ ms.locfileid: "48189769"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de transformação de pesquisa de termo &#40;guia da tabela de referência&#41;](../../2014/integration-services/term-lookup-transformation-editor-reference-table-tab.md)   
- [Editor de transformação de pesquisa de termo &#40;guia de pesquisa de termos&#41;](../../2014/integration-services/term-lookup-transformation-editor-term-lookup-tab.md)   
+ [Editor de Transformação Pesquisa de Termos &#40;Guia Tabela de Referência&#41;](../../2014/integration-services/term-lookup-transformation-editor-reference-table-tab.md)   
+ [Editor de Transformação Pesquisa de Termos &#40;Guia Pesquisa de Termos&#41;](../../2014/integration-services/term-lookup-transformation-editor-term-lookup-tab.md)   
  [Transformação Extração de Termos](data-flow/transformations/term-extraction-transformation.md)  
   
   

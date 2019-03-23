@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Analysis Services Processing Task Editor
 ms.assetid: ce79d133-fbd9-4037-a033-e75cbf28a22d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e5599005737a852be6174448223b38318b218a51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 820fa0e277f2f1643c6d44d95f09a4d48546a4ab
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186746"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381854"
 ---
 # <a name="analysis-services-processing-task-editor-general-page"></a>Editor da Tarefa Processamento do Analysis Services (Página Geral)
   Use a página **Geral** da caixa de diálogo **Editor da Tarefa Processamento do Analysis Services** para nomear e descrever a tarefa Processamento do Analysis Service.  
@@ -39,7 +39,7 @@ ms.locfileid: "48186746"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor da tarefa processamento do Analysis Services &#40;página do Analysis Services&#41;](../../2014/integration-services/analysis-services-processing-task-editor-analysis-services-page.md)   
+ [Editor da Tarefa Processamento do Analysis Services &#40;Página Analysis Services&#41;](../../2014/integration-services/analysis-services-processing-task-editor-analysis-services-page.md)   
  [Tarefa Executar DDL do Analysis Services](control-flow/analysis-services-execute-ddl-task.md)  
   
   

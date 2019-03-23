@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Data Profile Viewer [Integration Services]
 - Data Profiling task [Integration Services], viewer
 ms.assetid: 3469c60a-8f4f-46ba-999a-cb9070197fea
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8b91e91d726123a057ba6aa8850633d4d3656354
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4806d8117e2c28a18fe1ba3252334fd5fa495849
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065136"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377514"
 ---
 # <a name="data-profile-viewer-f1-help"></a>Ajuda de F1 do Visualizador de Perfil de Dados
   Use o Visualizador de Perfil de Dados para exibir a saída da tarefa Criação de Perfil de Dados.  
@@ -55,10 +55,10 @@ ms.locfileid: "48065136"
  Exibe o comprimento máximo de valores nesta coluna.  
   
  **Ignorar Espaços à Esquerda**  
- Exibe se este perfil foi calculado com um `IgnoreLeadingSpaces` valor de True ou False. Esta propriedade foi definida na página **Solicitações de Perfil** do Editor de Tarefa Criação de Perfil de Dados.  
+ Exibe se este perfil foi computado com um valor `IgnoreLeadingSpaces` de True ou False. Esta propriedade foi definida na página **Solicitações de Perfil** do Editor de Tarefa Criação de Perfil de Dados.  
   
  **Ignorar Espaços à Direita**  
- Exibe se este perfil foi calculado com um `IgnoreTrailingSpaces` valor de True ou False. Esta propriedade foi definida na página **Solicitações de Perfil** do Editor de Tarefa Criação de Perfil de Dados.  
+ Exibe se este perfil foi computado com um valor `IgnoreTrailingSpaces` de True ou False. Esta propriedade foi definida na página **Solicitações de Perfil** do Editor de Tarefa Criação de Perfil de Dados.  
   
  **Contagem de Linhas**  
  Exibe o número de linhas na tabela ou exibição.  
@@ -126,7 +126,7 @@ ms.locfileid: "48065136"
  **Value**  
  Exibe os valores distintos encontrados na coluna cujo perfil está sendo criado.  
   
- **Contagem**  
+ **Count**  
  Exibe o número de linhas nas quais a coluna cujo perfil está sendo criado tem o valor exibido na coluna **Valor** .  
   
  **Porcentagem**  
@@ -145,7 +145,7 @@ ms.locfileid: "48065136"
  **\<column1>, \<column2>, etc.**  
  Exibe os valores em duplicata encontrados na coluna cujo perfil está sendo criado.  
   
- **Contagem**  
+ **Count**  
  Exibe o número de linhas nas quais a coluna especificada tem o valor exibido na primeira coluna.  
   
 ### <a name="profile-type--functional-dependency-profile"></a>Tipo de Perfil = Perfil de Dependência Funcional  
@@ -196,11 +196,11 @@ ms.locfileid: "48065136"
  **\<column1>, \<column2>, etc.**  
  Exibe os valores na coluna de subconjunto ou colunas que não foram localizadas na coluna ou colunas do superconjunto.  
   
- **Contagem**  
+ **Count**  
  Exibe o número de linhas nas quais a coluna especificada tem o valor exibido na primeira coluna.  
   
 ## <a name="see-also"></a>Consulte também  
- [Visualizador de perfil de dados](control-flow/data-profile-viewer.md)   
+ [Visualizador de Perfil de Dados](control-flow/data-profile-viewer.md)   
  [Tarefa e visualizador da tarefa Criação de Perfil de Dados](control-flow/data-profiling-task-and-viewer.md)  
   
   

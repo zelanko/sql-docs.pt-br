@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - XML Source Editor
 ms.assetid: 5162c400-b2fc-4711-af0f-609132fbaaad
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b22b2c8690e7c680c0087c3a44766cde16f96878
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c0d986d9093b85b701660bf1fd262c412a28cb3e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063686"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58382024"
 ---
 # <a name="xml-source-editor-columns-page"></a>Editor de Origem XML (página Colunas)
   Use o nó **Colunas** da caixa de diálogo do **Editor de Origem XML** para mapear uma coluna de saída para uma coluna externa (origem).  
@@ -39,8 +39,8 @@ ms.locfileid: "48063686"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de origem XML &#40;página do Gerenciador de Conexão&#41;](../../2014/integration-services/xml-source-editor-connection-manager-page.md)   
- [Editor de origem XML &#40;página de saída de erro&#41;](../../2014/integration-services/xml-source-editor-error-output-page.md)   
+ [Editor de Origem XML &#40;Página Gerenciador de Conexões&#41;](../../2014/integration-services/xml-source-editor-connection-manager-page.md)   
+ [Editor de Origem XML &#40;Página Saída de Erro&#41;](../../2014/integration-services/xml-source-editor-error-output-page.md)   
  [Extrair dados por meio da origem XML](data-flow/extract-data-by-using-the-xml-source.md)  
   
   
