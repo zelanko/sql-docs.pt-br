@@ -14,15 +14,15 @@ helpviewer_keywords:
 - packages [Integration Services], logs
 - Integration Services packages, log providers
 ms.assetid: 3f715b95-7074-4f5c-8ae2-246998052e78
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a81f799308a62440b2aec53972db9c828b87e124
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 25531ce8e4a405b1e52a0f1f8d81fb536087cff7
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353331"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389274"
 ---
 # <a name="developing-a-custom-log-provider"></a>Desenvolvendo um provedor de log personalizado
   O [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] tem recursos de log extensos que possibilitam capturar eventos que ocorrem durante a execução do pacote. O [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] inclui vários provedores de logs que permitem a criação e o armazenamento de logs em formatos como XML, texto, banco de dados ou no log de eventos do Windows. Se os provedores de log e os formatos de saída fornecidos não atenderem totalmente aos seus requisitos, você poderá criar um provedor de log personalizado.  

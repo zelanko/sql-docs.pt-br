@@ -10,15 +10,15 @@ f1_keywords:
 - SQL11.SSIS.AZURE.F1
 - SQL12.SSIS.AZURE.F1
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 771b7425ca166a05eb5290f576a7fa2cad3f19be
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 536dce64880c1e70b1b8a0c4b419811c1b32a975
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787038"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394515"
 ---
 # <a name="azure-feature-pack"></a>Feature Pack do Azure
 O Feature Pack do SSIS (SQL Server Integration Services) para Azure é uma extensão que oferece os componentes listados nesta página para o SSIS se conectar aos serviços do Azure, transferir dados entre o Azure e fontes de dados locais e processar dados armazenados no Azure.
@@ -105,6 +105,6 @@ Você deve instalar os seguintes pré-requisitos antes de instalar este feature 
   
  E use o contêiner Loop Foreach com o enumerador de blob do Azure para processar dados em vários arquivos de blob.  
   
- ![SSIS-AzureConnector-3 CloudArchive](media/ssis-azureconnector-cloudarchive-3.png "SSIS-AzureConnector-CloudArchive-3")  
+ ![SSIS-AzureConnector-CloudArchive-3](media/ssis-azureconnector-cloudarchive-3.png "SSIS-AzureConnector-CloudArchive-3")  
   
   

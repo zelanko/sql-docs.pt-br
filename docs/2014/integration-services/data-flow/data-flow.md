@@ -14,15 +14,15 @@ helpviewer_keywords:
 - data flow [Integration Services]
 - errors [Integration Services], data flow outputs
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 038fdb6f07604d3fac1fcbd8e9ee632e3af2fbdc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 3883fdccb7f118ebd8954da670b968b745f36e27
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360238"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394394"
 ---
 # <a name="data-flow"></a>Fluxo de Dados
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornece três tipos diferentes de componentes de fluxo de dados: fontes, transformações e destinos. As fontes extraem dados de armazenamentos de dados, como tabelas e exibições em bancos de dados relacionais, arquivos e bancos de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . As transformações modificam, resumem e limpam dados. Os destinos carregam dados em repositórios de dados ou criam conjuntos de dados na memória.  
@@ -108,7 +108,7 @@ ms.locfileid: "53360238"
 ## <a name="transformations"></a>Transformações  
  A capacidade das transformações varia amplamente. As transformações podem executar tarefas como atualizar, resumir, limpar, mesclar e distribuir dados. É possível modificar valores em colunas, pesquisar valores em tabelas, limpar dados e agregar valores de colunas.  
   
- As entradas e saídas de uma transformação definem as colunas de dados de entrada e de saída. Dependendo da operação executada nos dados, algumas transformações têm uma única entrada e várias saídas, enquanto outras têm várias entradas e uma única saída. As transformações também podem incluir saídas de erro, que fornecem informações sobre o erro que ocorreu, junto com os dados que falhou: Por exemplo, dados cadeia de caracteres que não pôde ser convertidos para um tipo de dados inteiro. O modelo de objeto do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] não restringe o número de entradas, de saídas regulares e de saídas de erro que as transformações podem conter. Você pode criar transformações personalizadas que implementam qualquer combinação de várias entradas, saídas regulares e saídas de erro.  
+ As entradas e saídas de uma transformação definem as colunas de dados de entrada e de saída. Dependendo da operação executada nos dados, algumas transformações têm uma única entrada e várias saídas, enquanto outras têm várias entradas e uma única saída. As transformações também podem incluir saídas de erro, que fornecem informações sobre o erro ocorrido, juntamente com os dados com falha: por exemplo, os dados String que não puderam ser convertidos em um tipo de dados Integer. O modelo de objeto do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] não restringe o número de entradas, de saídas regulares e de saídas de erro que as transformações podem conter. Você pode criar transformações personalizadas que implementam qualquer combinação de várias entradas, saídas regulares e saídas de erro.  
   
  A entrada de uma transformação é definida como uma ou mais colunas de entrada. Algumas transformações do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] também podem fazer referência a colunas externas como entrada. Por exemplo, a entrada da transformação Comando OLE DB inclui colunas externas. Uma coluna de saída é uma coluna que a transformação adiciona ao fluxo de dados. Saídas regulares e saídas de erro contêm colunas de saída. Essas colunas de saída, por sua vez, agem como colunas de entrada para o próximo componente do fluxo de dados, seja outra transformação ou um destino.  
   
@@ -178,7 +178,7 @@ ms.locfileid: "53360238"
  As fontes têm saídas, os destinos têm entradas e as transformações têm entradas e saídas. Além disso, vários componentes de fluxo de dados podem ser configurados para usar uma saída de erro.  
   
 ### <a name="inputs"></a>Entradas  
- Destinos e transformações têm entradas. Uma entrada contém uma ou mais colunas de entrada, que podem fazer referência a colunas externas se o componente de fluxo de dados tiver sido configurado para usá-las. Entradas podem ser configuradas para monitorar e controlar o fluxo de dados: Por exemplo, você pode especificar se o componente deve falhar em resposta a um erro, ignorar erros ou redirecionar as linhas de erro para a saída de erro. Você também pode atribuir uma descrição à entrada ou atualizar o nome da entrada. No Designer [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , as entradas são configuradas usando a caixa de diálogo **Editor Avançado** . Para obter mais informações sobre o **Editor Avançado** , consulte [Integration Services User Interface](../integration-services-user-interface.md).  
+ Destinos e transformações têm entradas. Uma entrada contém uma ou mais colunas de entrada, que podem fazer referência a colunas externas se o componente de fluxo de dados tiver sido configurado para usá-las. As entradas podem ser configuradas para monitorar e controlar o fluxo de dados: por exemplo, você pode especificar se o componente deverá falhar em resposta a um erro, ignorar os erros ou redirecionar as linhas de erro à saída de erro. Você também pode atribuir uma descrição à entrada ou atualizar o nome da entrada. No Designer [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , as entradas são configuradas usando a caixa de diálogo **Editor Avançado** . Para obter mais informações sobre o **Editor Avançado** , consulte [Integration Services User Interface](../integration-services-user-interface.md).  
   
 ### <a name="outputs"></a>Saídas  
  Fontes e transformações sempre têm saídas. Uma saída contém uma ou mais colunas de saída, que podem fazer referência a colunas externas se o componente de fluxo de dados tiver sido configurado para usá-las. As saídas podem ser configuradas para fornecer informações úteis ao processamento downstream dos dados. Por exemplo, você pode indicar se a saída é classificada. Você também pode fornecer uma descrição para a saída ou atualizar o nome da saída. No Designer [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , as saídas são configuradas usando a caixa de diálogo **Editor Avançado** .  
@@ -189,7 +189,7 @@ ms.locfileid: "53360238"
  Para obter mais informações, consulte [Tratamento de erros em dados](error-handling-in-data.md).  
   
 ### <a name="columns"></a>Colunas  
- Entradas, saídas e saídas de erro são coleções de colunas. Cada coluna é configurável e dependendo da coluna tipo de entrada, saída ou externa - [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornece propriedades diferentes para a coluna. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornece três maneiras diferentes de definir propriedades de coluna: programaticamente, por meio das caixas de diálogo específicas aos componentes ou por meio da caixa de diálogo **Editor Avançado**.  
+ Entradas, saídas e saídas de erro são coleções de colunas. Cada coluna é configurável e, dependendo do tipo de coluna, como entrada, saída ou externa, o [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornece propriedades diferentes para cada uma. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornece três maneiras diferentes de definir propriedades de coluna: programaticamente, por meio das caixas de diálogo específicas aos componentes ou por meio da caixa de diálogo **Editor Avançado**.  
   
 ## <a name="paths"></a>Caminhos  
  Os caminhos conectam os componentes de fluxo de dados. No Designer [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , você pode exibir e modificar as propriedades de caminho, exibir os metadados de saída do ponto inicial do caminho e anexar visualizadores de dados a um caminho.  

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - packages [Integration Services], running
 - remote packages [Integration Services]
 ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b0cefe1fa46cda13a177f07ebcbf19c02efa8337
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: d1cc7358a7058af9feb3f0540085ab140cfd8a7b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370388"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379104"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>Carregando e executando um pacote remoto programaticamente
   Para executar pacotes remotos de um computador local que não tenha o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instalado, inicie-os de forma que eles sejam executados no computador remoto em que o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] está instalado. Para isso, o computador local deve usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, um serviço Web ou um componente remoto para iniciar os pacotes no computador remoto. Se você tentar iniciar os pacotes remotos diretamente do computador local, eles serão carregados e tentarão executar do computador local. Se o computador local não tiver o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instalado, os pacotes não serão executados.  
@@ -420,7 +420,7 @@ namespace LaunchSSISPackageSvcTestCS
   
 ## <a name="external-resources"></a>Recursos externos  
   
--   Vídeo, [como: Automatizar a execução de pacotes SSIS usando o SQL Server Agent (vídeo do SQL Server)](https://technet.microsoft.com/sqlserver/ff686764.aspx), em technet.microsoft.com  
+-   Vídeo, [Como Automatizar a execução de pacotes SSIS usando o SQL Server Agent (vídeo do SQL Server)](https://technet.microsoft.com/sqlserver/ff686764.aspx), em technet.microsoft.com  
   
 ![Ícone do Integration Services (pequeno)](../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   

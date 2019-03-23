@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB Destination Editor
 ms.assetid: 3c01f480-16c9-49eb-b40c-13cbc90b019d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 35627cefd3bbdf4bec280baaa9dcdb1b43391e05
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a24a8b6eb8c0f6cde72a6760270873c05c5de44a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176836"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390074"
 ---
 # <a name="ole-db-destination-editor-error-output-page"></a>Editor de Destino de OLE DB (página Saída de Erro)
   Use a página **Saída de Erro** da caixa de diálogo **Editor de Destino OLE DB** para especificar opções de tratamento de erros.  
@@ -37,7 +37,7 @@ ms.locfileid: "48176836"
  **Erro**  
  Especifique o que deve acontecer quando ocorre um erro: ignorar a falha, redirecionar a linha ou causar falha no componente.  
   
- **Tópicos Relacionados:** [Tratamento de erros em dados](data-flow/error-handling-in-data.md)  
+ **Tópicos relacionados:** [Tratamento de erro em dados](data-flow/error-handling-in-data.md)  
   
  **Truncation**  
  Não usado.  
@@ -53,8 +53,8 @@ ms.locfileid: "48176836"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de destino do OLE DB &#40;página do Gerenciador de Conexão&#41;](../../2014/integration-services/ole-db-destination-editor-connection-manager-page.md)   
- [Editor de destino do OLE DB &#40;página mapeamentos&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
+ [Editor de Destino OLE DB &#40;Página Gerenciador de Conexões&#41;](../../2014/integration-services/ole-db-destination-editor-connection-manager-page.md)   
+ [Editor de Destino de OLE DB &#40;Página Mapeamentos&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
  [Carregar dados por meio do destino OLE DB](data-flow/load-data-by-using-the-ole-db-destination.md)  
   
   

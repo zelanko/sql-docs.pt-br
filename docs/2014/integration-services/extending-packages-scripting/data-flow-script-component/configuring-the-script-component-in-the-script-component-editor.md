@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SSIS Script component, configuring
 - Script component [Integration Services], configuring
 ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a702321888ad49a9ca5e3bea90abdde6924c8dc8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1b2b588c61742d5ab9c57d934b0f4f11230f1ca5
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360098"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380864"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>Configurando o componente Script no Editor de Componentes de Script
   Antes de escrever um código personalizado no componente Script, primeiro selecione o tipo de componente de fluxo de dados que deseja criar – origem, transformação ou destino – e, em seguida, configure os metadados e as propriedades do componente no **Editor de Transformação Scripts**.  

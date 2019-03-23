@@ -17,15 +17,15 @@ helpviewer_keywords:
 - events [Integration Services], raising
 - predefined events [Integration Services]
 ms.assetid: 1d8c5358-9384-47a8-b7cb-7b0650384119
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 454d14e0ee0973b5bba7ca0357bbc890812ddbd9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: f3d0feff8d95a8fb0d1e7b6279e36567e06c7f81
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358598"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390814"
 ---
 # <a name="raising-and-defining-events-in-a-data-flow-component"></a>Gerando e definindo eventos em um componente de fluxo de dados
   Desenvolvedores de componente podem gerar um subconjunto dos eventos definidos na interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> por meio de chamada dos métodos expostos na propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>. Você também pode definir eventos personalizados usando a coleção <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.EventInfos%2A> e gerá-los durante a execução usando o método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A>. Esta seção descreve como criar e gerar um evento, e fornece diretrizes sobre quando você deve gerar eventos em tempo de design.  

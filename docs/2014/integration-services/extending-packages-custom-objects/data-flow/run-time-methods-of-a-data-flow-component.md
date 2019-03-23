@@ -13,15 +13,15 @@ helpviewer_keywords:
 - run-time [Integration Services]
 - data flow components [Integration Services], run-time methods
 ms.assetid: fd9e4317-18dd-43af-bbdc-79db32183ac4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f501b2fd05327619d9e561a9f99b21bf909ec3af
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: e107660073716019f48def8578a424ead92abf32
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370748"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393494"
 ---
 # <a name="run-time-methods-of-a-data-flow-component"></a>Métodos de tempo de execução de um componente de fluxo de dados
   No tempo de execução, a tarefa de fluxo de dados examina a sequência de componentes, prepara um plano de execução e gerencia um pool de threads de trabalho que executa o plano de trabalho. A tarefa carrega linhas de dados de origens, processa essas linhas através de transformações e as salva em destinos.  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - expressions [Integration Services], packages
 - SSIS packages, expressions
 ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f2a8dba54a8e638da5777456341321d38abbb01f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 2a9d7fe2f1f65f0a698e727e5bad6df392c91546
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352325"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376234"
 ---
 # <a name="integration-services-ssis-expressions"></a>Expressões do SSIS (Integration Services)
   Uma expressão é uma combinação de símbolos (identificadores, literais, funções e operadores) gera um único valor de dados. Expressões simples podem ser uma única constante, variável ou função. Na maioria das vezes, as expressões são complexas, usando diversos operadores e funções e consultando diversas colunas e variáveis. No [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], as expressões podem ser usadas para definir condições para instruções CASE, criar e atualizar valores em colunas de dados, atribuir valores às variáveis, atualizar ou preencher propriedades em tempo de execução, definir restrições em restrições de precedência e fornecem as expressões usadas pelo contêiner Loop For.  

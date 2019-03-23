@@ -17,15 +17,15 @@ helpviewer_keywords:
 - running packages [Integration Services]
 - programmatically load and run packages [SSIS]
 ms.assetid: 2f9fc1a8-a001-4c54-8c64-63b443725422
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 084f2630733f4db5ba0b47035d1a93c56ba685d3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 00d213bf8ca554b60edc8dc3de3f1290cd00f538
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361108"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374657"
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>Carregando e executando um pacote local programaticamente
   É possível executar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] conforme necessário ou em horários predeterminados por meio dos métodos descritos em [Executando pacotes](../packages/run-integration-services-ssis-packages.md). Entretanto, bastam algumas linhas de código para executar um pacote de um aplicativo personalizado, como, por exemplo, um aplicativo Windows Forms, um aplicativo do console, um formulário/serviço da Web ASP.NET ou um serviço do Windows.  

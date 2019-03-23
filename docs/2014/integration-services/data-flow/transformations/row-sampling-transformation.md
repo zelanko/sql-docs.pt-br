@@ -17,15 +17,15 @@ helpviewer_keywords:
 - packages [Integration Services], samples
 - datasets [Integration Services], sample
 ms.assetid: b6caafd3-30b2-4368-82af-a44611d4cd39
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b49cd9482fb54a3d292842cd174904078e3b1ab1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 954e8b2a2f36ccab1cff97174089560913291074
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805458"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391234"
 ---
 # <a name="row-sampling-transformation"></a>Transformação Amostragem de Linhas
   A transformação Amostragem de Linhas é usada para obter um subconjunto selecionado aleatoriamente de um conjunto de dados de entrada. Você pode especificar o tamanho exato da amostra de saída e especificar uma semente para o gerador de números aleatórios.  

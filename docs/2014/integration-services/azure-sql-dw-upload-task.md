@@ -12,14 +12,14 @@ f1_keywords:
 - SQL11.DTS.DESIGNER.AFPDWUPTASK.F1
 ms.assetid: 112cf764-f85a-4c1a-b732-d299d717c0d4
 author: yualan
-ms.author: douglasl
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 651ad07d91d3cf8a351ca6faa9f912c6bd01c07c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1e5e39f8049a5f2832e7a37381c4d22ef2483b62
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063696"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388854"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Tarefa de Upload do SQL DW do Azure
 A **Tarefa de Upload do SQL DW do Azure** permite que um pacote do SSIS carregue dados locais em uma tabela no SQL Data Warehouse (DW) do Azure. O formato de arquivo de dados de origem com suporte atualmente é texto delimitado em codificação UTF8. O processo de carregamento segue a abordagem PolyBase eficiente. Especificamente, os dados serão primeiro carregados no Armazenamento de Blobs do Azure e, em seguida, no SQL DW do Azure. Portanto, é necessário uma conta de Armazenamento de Blobs do Azure para usar essa tarefa.
@@ -28,7 +28,7 @@ Para adicionar uma **Tarefa de Upload do SQL DW do Azure**, arraste-a da Caixa d
 
 Na página **Geral** , defina as propriedades a seguir.
 
-Campo|Description
+Campo|Descrição
 -----|-----------
 LocalDirectory|Especifica o diretório local que contém os arquivos de dados a serem carregados.
 Recursivamente|Especifica se os subdiretórios devem ser pesquisados recursivamente.

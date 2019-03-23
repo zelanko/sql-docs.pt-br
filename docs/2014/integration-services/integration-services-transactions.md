@@ -12,15 +12,15 @@ helpviewer_keywords:
 - tasks [Integration Services], transactions
 - transactions [Integration Services]
 ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 41ab59a7eedcfcdfb2c93217397da1b3cd81e8e6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b0359ca10e7279f4a80bec082a8e049f4641c9b2
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360648"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389054"
 ---
 # <a name="integration-services-transactions"></a>Transações do Integration Services
   Os pacotes usam transações para associar as ações do banco de dados realizadas pelas tarefas em unidades atômicas e, ao fazer isso, a integridade dos dados é mantida. Todos tipos de contêineres do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], como os pacotes, o Loop For, o Loop Foreach, os contêineres de sequência e os hosts de tarefa que encapsulam cada tarefa, podem ser configurados para usar transações. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece três opções para configurar transações: **NotSupported**, **suporte**, e **necessária**.  

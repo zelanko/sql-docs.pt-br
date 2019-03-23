@@ -13,15 +13,15 @@ helpviewer_keywords:
 - examples [Integration Services]
 - SSIS Script task, examples
 ms.assetid: b0dd77ee-ee11-4cd9-87aa-61dd67f2fe1c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1cb5174933c946b8ec790d0fa30fb090049a4a48
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: d47fa22b8207facc5b4bc22a4077b8bd81837ec2
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362508"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390124"
 ---
 # <a name="script-task-examples"></a>Exemplos de tarefa Script
   A tarefa Script é uma ferramenta com vários fins que pode ser usada em um pacote para preencher quase todos os requisitos que não sejam satisfeitos pelas tarefas incluídas no [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Este tópico lista exemplos de código da tarefa Script, que demonstram algumas das funcionalidades disponíveis.  

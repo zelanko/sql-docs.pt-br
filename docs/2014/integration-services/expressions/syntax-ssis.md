@@ -10,15 +10,15 @@ helpviewer_keywords:
 - expressions [Integration Services], syntax
 - syntax [Integration Services]
 ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 809ce46e388dcc96a407e70cf5eb33c4e5afa44f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 79939ea5addd97833faaf1d955b72ae17e487ceb
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351000"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389844"
 ---
 # <a name="syntax-ssis"></a>Sintaxe (SSIS)
   A sintaxe de expressão [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] é semelhante à sintaxe que as linguagens C e C# usam. Expressões incluem elementos como identificadores (colunas e variáveis), literais, operadores e funções. Este tópico resume os requisitos exclusivos da sintaxe do avaliador de expressão como eles se aplicam a diferentes elementos de expressão.  

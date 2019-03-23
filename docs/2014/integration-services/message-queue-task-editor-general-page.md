@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Message Queue Task Editor
 ms.assetid: 09368b18-37a5-4321-a173-7cfe5d42d2a2
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ea436e349a19d10eeb86a62b74f154b56b60ef7a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7668cf38f01f049b95423547430e1027a4ab6090
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204006"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375854"
 ---
 # <a name="message-queue-task-editor-general-page"></a>Editor da Tarefa Fila de Mensagens (página Geral)
   Use a **página Geral** da caixa de diálogo do **Editor da Tarefa Fila de Mensagens** para nomear e descrever a tarefa Fila de Mensagens, especificar o formato da mensagem e indicar se a tarefa envia ou recebe mensagens.  
@@ -43,15 +43,15 @@ ms.locfileid: "48204006"
  **MSMQConnection**  
  Selecione um gerenciador de conexões de MSMQ existente ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
   
- **Tópicos relacionados**: [Gerenciador de conexões MSMQ](connection-manager/msmq-connection-manager.md), [Editor do Gerenciador de Conexões MSMQ](../../2014/integration-services/msmq-connection-manager-editor.md)  
+ **Tópicos relacionados**: [Gerenciador de Conexão do MSMQ](connection-manager/msmq-connection-manager.md), [Editor do Gerenciador de Conexão MSMQ](../../2014/integration-services/msmq-connection-manager-editor.md)  
   
  **Mensagem**  
  Especifique se a tarefa Fila de Mensagens envia ou recebe mensagens. Se você selecionar **Enviar mensagem**, será listada a página Enviar no painel esquerdo da caixa de diálogo; se você selecionar **Receber mensagem**, será listada a página Receber. Por padrão, esse valor está definido como **Enviar mensagem**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor da tarefa fila de mensagens &#40;página receber&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
- [Editor da tarefa fila de mensagens &#40;Enviar página&#41;](../../2014/integration-services/message-queue-task-editor-send-page.md)   
+ [Editor da Tarefa Fila de Mensagens &#40;Página Receber&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
+ [Editor da Tarefa Fila de Mensagens &#40;Página Enviar&#41;](../../2014/integration-services/message-queue-task-editor-send-page.md)   
  [Página Expressões](expressions/expressions-page.md)  
   
   

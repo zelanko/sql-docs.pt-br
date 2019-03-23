@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.loaddimwizard.scdsupport.f1
 ms.assetid: 36de99d5-5368-48e0-b876-17e9c6862c6c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6f5b4fe2c52bfcf1c667f286756e330d42455a29
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c49f0ce7498215d5758557fba4c67740dca1239e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805088"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388964"
 ---
 # <a name="slowly-changing-dimension-columns-slowly-changing-dimension-wizard"></a>Colunas da Dimensão de Alteração Lenta (Assistente para Dimensões de Alteração Lenta)
   Use a caixa de diálogo **Colunas de Dimensão de Alteração Lenta** para selecionar um tipo de alteração para cada coluna de dimensão de alteração lenta.  

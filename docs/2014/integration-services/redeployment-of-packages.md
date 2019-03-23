@@ -11,15 +11,15 @@ helpviewer_keywords:
 - redeploying packages [Integration Services]
 - deploying packages [Integration Services], redeploying
 ms.assetid: 86806efb-8cf4-4f9d-9824-1152cb4c495c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2612fa2930147c5a655ec13bd3adbdf3c4bd7cd0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 15d41b9c0e31fe4bfd86349888071721b7493661
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195584"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378936"
 ---
 # <a name="redeployment-of-packages"></a>Reimplantação de pacotes
   Após a implantação de um projeto, talvez seja necessário atualizar ou estender a funcionalidade de pacotes e reimplantar o projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que contém os pacotes atualizados. Como parte do processo de reimplantação dos pacotes, você deve revisar as propriedades de configuração incluídas no utilitário de implantação. Por exemplo, você pode desejar não permitir mudanças de configuração depois que o pacote for reimplantado.  
@@ -30,6 +30,6 @@ ms.locfileid: "48195584"
  Se você atualizar apenas alguns pacotes do projeto, talvez não queira reimplantar o projeto todo. Para implantar apenas alguns pacotes, você pode criar um novo projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , adicionar os pacotes atualizados ao novo projeto e compilar e implantar o projeto. As configurações de pacotes são copiadas automaticamente com o pacote quando você adiciona o pacote a um projeto diferente.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Implantar pacotes usando o utilitário de implantação](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md)  
+ [Implantar pacotes por meio do utilitário de implantação](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md)  
   
   

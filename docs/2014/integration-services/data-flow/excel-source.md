@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - sources [Integration Services], Excel
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ed41329f41471e2c62384561ae983e24f279114a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: eb7800a18e8df28848d775746bab6d90f75d7439
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369258"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390924"
 ---
 # <a name="excel-source"></a>Origem do Excel
   A origem do Excel extrai dados de planilhas ou intervalos em pastas de trabalho do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  

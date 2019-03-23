@@ -11,20 +11,20 @@ helpviewer_keywords:
 - viewing packages
 - connections [Integration Services], packages
 ms.assetid: 783e653c-0f1f-45ed-b3ef-5ba07b019f27
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cffcc0e48851f3d023251d03d210fb78e3d1bd09
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c45b7feb32c9e85ac571f04a1c975c49b7211aee
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163356"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394534"
 ---
 # <a name="view-integration-services-packages-in-sql-server-management-studio-ssis-service"></a>Exibir pacotes do Integration Services no SQL Server Management Studio (serviço SSIS)
     
 > [!IMPORTANT]  
->  Esse tópico discute o serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , um serviço do Windows para o gerenciamento de pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . O [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] dá suporte ao serviço para compatibilidade de versões anteriores com versões anteriores do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. A partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], você pode gerenciar objetos como pacotes no servidor do Integration Services.  
+>  Esse tópico discute o serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , um serviço do Windows para o gerenciamento de pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] dá suporte ao serviço para compatibilidade de versões anteriores com versões anteriores do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. A partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], você pode gerenciar objetos como pacotes no servidor do Integration Services.  
   
  Este procedimento descreve como se conectar ao [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] em [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e exibir uma lista dos pacotes gerenciados pelo serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
@@ -46,7 +46,7 @@ ms.locfileid: "48163356"
 2.  Expanda as subpastas Pacotes Armazenados para exibir os pacotes.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gerenciamento de Pacotes &#40;Serviço SSIS&#41;](service/package-management-ssis-service.md)   
+ [Gerenciamento de pacotes &#40;Serviço SSIS&#41;](service/package-management-ssis-service.md)   
  [Usar o SQL Server Management Studio](../database-engine/use-sql-server-management-studio.md)  
   
   

@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: 58aa3dee-4774-4e0b-a956-96d199be4c3a
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9ffea1dbde4e4d124fb71438d4f3a7ca8b81248d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 067bb5a2da9a93bc29e93a3844a29e1a4028c7d0
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225146"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380464"
 ---
 # <a name="flat-file-connection-manager-editor-advanced-page"></a>Editor do Gerenciador de Conexões de Arquivos Simples (página Avançado)
   Use a página **Avançado** da caixa de diálogo **Editor do Gerenciador de Conexões de Arquivos Simples** para definir propriedades que especificam como o Integration Services lê e grava dados em arquivos simples. Você pode alterar os nomes das colunas no arquivo simples e definir propriedades que incluem tipo de dados e delimitadores em cada coluna no arquivo.  
@@ -39,12 +39,12 @@ ms.locfileid: "48225146"
  **Configurar as propriedades de cada coluna**  
  Selecione uma coluna no painel esquerdo para exibir suas propriedades no painel direito. Consulte a tabela a seguir para obter uma descrição das propriedades dos tipos de dados. Algumas das propriedades listadas são configuráveis apenas para alguns formatos de arquivo simples.  
   
-|Propriedade|Description|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |**ColumnType**|Denota se a coluna é delimitada, de largura fixa ou com imperfeição à direita. Esta propriedade é somente leitura. Arquivos irregulares à direita são arquivos em que toda coluna tem uma largura fixa, à exceção da última coluna. Ela é delimitada pelo delimitador de linha.|  
-|**OutputColumnWidth**|Especifique um valor a ser armazenado como contagem de bytes; para arquivos Unicode, esse valor corresponde a uma contagem de caracteres. Na tarefa Fluxo de Dados, esse valor é usado para definir a largura de coluna de saída para a fonte de Arquivo Simples.<br /><br /> Observação: no modelo de objeto, o nome desta propriedade é MaximumWidth.|  
+|**OutputColumnWidth**|Especifique um valor a ser armazenado como contagem de bytes; para arquivos Unicode, esse valor corresponde a uma contagem de caracteres. Na tarefa Fluxo de Dados, esse valor é usado para definir a largura de coluna de saída para a fonte de Arquivo Simples.<br /><br /> Observação: No modelo de objeto, o nome desta propriedade é MaximumWidth.|  
 |**DataType**|Seleciona na lista de tipos de dados disponíveis. Para obter mais informações, consulte [Integration Services Data Types](data-flow/integration-services-data-types.md).|  
-|**TextQualified**|Indica se os dados de texto são cercados por caracteres do qualificador de texto, como caracteres de aspas. Os valores válidos são:<br /><br /> **True**: os dados de texto no arquivo simples são qualificados.<br /><br /> **False**: os dados de texto no arquivo simples não são qualificados.|  
+|**TextQualified**|Indica se os dados de texto são cercados por caracteres do qualificador de texto, como caracteres de aspas. Os valores válidos são:<br /><br /> **True**: Os dados de texto no arquivo simples são qualificados.<br /><br /> **False**: Os dados de texto no arquivo simples não são qualificados.|  
 |**Nome**|Forneça um nome de coluna descritivo. Se você não digitar um nome, o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] criará um nome automaticamente, no formato Coluna 0, Coluna 1 e assim por diante.|  
 |**DataScale**|Especifica a escala de dados numéricos. A escala se refere ao número de casas decimais. Para obter mais informações, consulte [Integration Services Data Types](data-flow/integration-services-data-types.md).|  
 |**ColumnDelimiter**|Seleciona na lista de delimitadores de coluna disponíveis. Escolha delimitadores com pouca probabilidade de ocorrer no texto. Esse valor é ignorado para colunas de largura fixa.<br /><br /> **{CR}{LF}**. As colunas são delimitadas por uma combinação de retorno de carro e alimentação de linha.<br /><br /> **{CR}**. As colunas são delimitadas por um retorno de carro.<br /><br /> **{LF}**. As colunas são delimitadas por uma alimentação de linha.<br /><br /> **Porto e vírgula {;}**. As colunas são delimitadas por um ponto-e-vírgula.<br /><br /> **Dois pontos {:}**. As colunas são delimitadas por dois-pontos.<br /><br /> **Vírgula {,}**. As colunas são delimitadas por uma vírgula.<br /><br /> **Tabulação {t}**. As colunas são delimitadas por uma tabulação.<br /><br /> **Barra vertical {&#124;}**. As colunas são delimitadas por uma barra vertical.|  
@@ -54,7 +54,7 @@ ms.locfileid: "48225146"
  **Nova**  
  Adicione uma nova coluna, clicando em **Nova**. Por padrão, o botão **Nova** adiciona uma nova coluna ao final da lista. O botão também tem as opções a seguir, disponíveis na lista suspensa.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Adicionar Coluna**|Adiciona uma nova coluna fim da lista.|  
 |**Insert Before**|Insere uma nova coluna antes da coluna selecionada.|  
@@ -68,8 +68,8 @@ ms.locfileid: "48225146"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor do Gerenciador de Conexão de arquivo simples &#40;página geral&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor do Gerenciador de Conexão de arquivo simples &#40;página de colunas&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   
+ [Editor do Gerenciador de Conexões de Arquivos Simples &#40;Página Geral&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor do Gerenciador de Conexões de Arquivos Simples &#40;Página Colunas&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   
  [Editor do Gerenciador de Conexões de Arquivos Simples &#40;Página Visualização&#41;](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)  
   
   

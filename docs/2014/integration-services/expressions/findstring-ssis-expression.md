@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FINDSTRING function
 ms.assetid: c83cb1b1-3c52-4496-b518-4c9253b9336d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dc77f0d87be4595e672cec61b43d041f0b89a22a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7efc711e97abde1d33a7dd4194bd2953b959ef6a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782528"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390424"
 ---
 # <a name="findstring-ssis-expression"></a>FINDSTRING (Expressão SSIS)
   Retorna o local da ocorrência especificada de uma cadeia de caracteres dentro de uma expressão de caractere. O resultado de retorno é o índice da ocorrência. O parâmetro de cadeia de caracteres deve ser avaliado como uma expressão de caractere e o parâmetro de ocorrência deve ser avaliado como um inteiro. Se a cadeia de caracteres não for localizada, o valor de retorno será 0. Se a cadeia de caracteres acontecer menos vezes que o argumento de ocorrência especifica, o valor de retorno será 0.  

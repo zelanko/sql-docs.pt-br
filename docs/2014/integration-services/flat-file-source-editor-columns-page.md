@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Source Editor
 ms.assetid: b5af5f65-c087-44fd-b5ae-d0441245fef2
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f65e6e5dd0561960c36eea953b39b71906981fa9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2a698bf1a8078f969875ce9deba28c3673f1c292
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118726"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394374"
 ---
 # <a name="flat-file-source-editor-columns-page"></a>Editor de Fonte de Arquivo Simples (página Colunas)
   Use o nó **Colunas** da caixa de diálogo **Editor de Fonte de Arquivo Simples** para mapear uma coluna de saída para cada coluna externa (fonte).  
@@ -42,8 +42,8 @@ ms.locfileid: "48118726"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de origem de arquivo simples &#40;página do Gerenciador de Conexão&#41;](../../2014/integration-services/flat-file-source-editor-connection-manager-page.md)   
- [Editor de origem de arquivo simples &#40;página de saída de erro&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   
+ [Editor de Fonte de Arquivo Simples &#40;Página Gerenciador de Conexões&#41;](../../2014/integration-services/flat-file-source-editor-connection-manager-page.md)   
+ [Editor de Fonte de Arquivo Simples &#40;Página Saída de Erro&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   
  [Gerenciador de Conexões de Arquivos Simples](connection-manager/file-connection-manager.md)  
   
   

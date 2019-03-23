@@ -12,15 +12,15 @@ helpviewer_keywords:
 - mapping result sets to variables [Integration Services]
 - variables [Integration Services], mapping result sets to
 ms.assetid: f76738b6-dc75-4ff9-a3dd-8b083d8e410e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a166c760ecb3dafabbfaa8e131f1a8948429dc61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4c6114fac83862198b37647f6350d657df878ca5
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069647"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379625"
 ---
 # <a name="map-result-sets-to-variables-in-an-execute-sql-task"></a>Mapear conjuntos de resultados para variáveis em uma tarefa Executar SQL
   Este tópico descreve como criar um mapeamento entre um conjunto de resultados e uma variável em uma tarefa Executar SQL. O mapeamento de um conjunto de resultados para uma variável disponibiliza o conjunto de resultados para outros elementos no pacote. Por exemplo, um script em uma tarefa Script pode ler a variável e usar os valores do conjunto de resultados; ou uma origem XML pode consumir o conjunto de resultados armazenado em uma variável. Se o conjunto de resultados for gerado por um pacote pai, ele poderá ser disponibilizado para um pacote filho chamado por uma tarefa Executar Pacote, mapeando o conjunto de resultados para uma variável no pacote pai e, em seguida, criando uma configuração de variável de pacote pai no pacote filho para armazenar o valor da variável pai.  
@@ -64,9 +64,9 @@ ms.locfileid: "48069647"
  [Tarefa Executar SQL](control-flow/execute-sql-task.md)   
  [Conjuntos de resultados na tarefa Executar SQL](result-sets-in-the-execute-sql-task.md)   
  [Tarefa executar pacote](control-flow/execute-package-task.md)   
- [Configurações de pacote](../../2014/integration-services/package-configurations.md)   
+ [Configurações do Pacote](../../2014/integration-services/package-configurations.md)   
  [Criar configurações de pacote](../../2014/integration-services/create-package-configurations.md)   
  [Use os valores de variáveis e parâmetros em um pacote filho](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)   
- [Serviços de integração &#40;SSIS&#41; variáveis](integration-services-ssis-variables.md)  
+ [Variáveis do SSIS &#40;Integration Services&#41;](integration-services-ssis-variables.md)  
   
   

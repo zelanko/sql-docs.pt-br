@@ -13,15 +13,15 @@ helpviewer_keywords:
 - parameterized SQL statements [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: a3ca65e8-65cf-4272-9a81-765a706b8663
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f0899922eb2cdec88e73901f14ebeb6dfe953622
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: e09e00b4c5dcaf355b5a7691413ed2f8f972d5a6
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367209"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389684"
 ---
 # <a name="parameters-and-return-codes-in-the-execute-sql-task"></a>Parâmetros e códigos de retorno na Tarefa Executar SQL
   As instruções SQL e os procedimentos armazenados frequentemente usam parâmetros `input`, parâmetros `output` e códigos de retorno. No [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], a tarefa Executar SQL tem suporte para os tipos de parâmetros `Input`, `Output` e `ReturnValue`. Use o tipo `Input` para parâmetros de entrada, `Output` para parâmetros de saída e `ReturnValue` para códigos de retorno.  

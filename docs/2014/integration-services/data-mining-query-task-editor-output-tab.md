@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Query Task Editor
 ms.assetid: 62f9e015-6fe0-4396-ad90-3ad51bf00025
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6e87ebbf69eaaee40c42344a8334a0309300ddd6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7be72475f5aa6db32b65d4a9f542cd9fe82756c0
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203746"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393594"
 ---
 # <a name="data-mining-query-task-editor-output-tab"></a>Editor da Tarefa Consulta de Mineração de Dados (guia Saída)
   Use a guia **Saída** da caixa de diálogo **Editor da Tarefa Consulta de Mineração de Dados** para especificar o destino da consulta de previsão.  
@@ -52,8 +52,8 @@ ms.locfileid: "48203746"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor da tarefa consulta de mineração de dados &#40;guia modelo de mineração&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
- [Editor da tarefa consulta de mineração de dados &#40;guia de consulta&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
+ [Editor da Tarefa Consulta de Mineração de Dados &#40;Guia Modelo de Mineração&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
+ [Editor da Tarefa Consulta de Mineração de Dados &#40;Guia Consulta&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
  [Designer de Mineração de dados](../analysis-services/data-mining/data-mining-designer.md)  
   
   

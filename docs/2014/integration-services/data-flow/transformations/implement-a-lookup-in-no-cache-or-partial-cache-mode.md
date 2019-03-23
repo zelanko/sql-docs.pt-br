@@ -12,15 +12,15 @@ helpviewer_keywords:
 - lookups [Integration Services]
 - exact matches [Integration Services]
 ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fb778827f9193cd9fae136e078e353241d2b55ae
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 97da627058fa6da67e8ef623b267d0f7cbaa6c7e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769737"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374505"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>Implementar uma pesquisa no modo Sem Cache ou Cache Parcial
   Você pode configurar a transformação Pesquisa para usar o modo cache parcial ou sem-cache:  

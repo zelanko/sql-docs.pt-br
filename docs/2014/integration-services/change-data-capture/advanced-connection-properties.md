@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 4edfab68-7e68-45e8-a3f3-a0049ff7eb9e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 66681c42718e2c71e89eb673f30764af670ede73
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a7a5744aa2adcaab74ca09bbb962c8c69d985b79
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770798"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379184"
 ---
 # <a name="advanced-connection-properties"></a>Propriedades Avançadas de Conexão
   Use a caixa de diálogo **Propriedades Avançadas de Conexão** para adicionar mais parâmetros de conexão à cadeia de conexão.  

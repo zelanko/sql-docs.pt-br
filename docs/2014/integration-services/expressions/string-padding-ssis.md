@@ -11,15 +11,15 @@ helpviewer_keywords:
 - expressions [Integration Services], string padding
 - string padding
 ms.assetid: d3fed73d-e0d4-4c67-9355-fb7083a72dd6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7141a102efe167c07147dce19ac2a88aa4606f3b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 069fa1deababf347d7c45b62952960f7535115bf
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359318"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393791"
 ---
 # <a name="string-padding-ssis"></a>Preenchimento de cadeia (SSIS)
   O avaliador de expressão não verifica se uma cadeia de caracteres contém espaços à esquerda e à direita, e não preenche as cadeias de caracteres para que fiquem com o mesmo comprimento antes de compará-las. Se as expressões exigirem preenchimento de cadeia de caracteres, você poderá usar o operador + para concatenar valores de coluna e cadeias de caracteres vazias. Para obter mais informações, consulte [+ &#40;Concatenar&#41; &#40;Expressão SSIS&#41;](concatenate-ssis-expression.md).  

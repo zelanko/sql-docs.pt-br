@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Destination Editor
 ms.assetid: ad44268b-d705-422c-a0c2-d532812502e1
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ff6e51c15678d50b6ebb39614441419dd13ad3f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 39c766acdd171db17c2b3f5ba0623b57a36ca145
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48047567"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387794"
 ---
 # <a name="excel-destination-editor-mappings-page"></a>Editor de Destino do Excel (página Mapeamentos)
   Use a página **Mapeamentos** da caixa de diálogo do **Editor de Destinos do Excel** para mapear colunas de entrada para colunas de destino.  
@@ -42,8 +42,8 @@ ms.locfileid: "48047567"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de destino do Excel &#40;página do Gerenciador de Conexão&#41;](../../2014/integration-services/excel-destination-editor-connection-manager-page.md)   
- [Editor de destino do Excel &#40;página de saída de erro&#41;](../../2014/integration-services/excel-destination-editor-error-output-page.md)   
+ [Editor de Destinos do Excel &#40;Página Gerenciador de Conexões&#41;](../../2014/integration-services/excel-destination-editor-connection-manager-page.md)   
+ [Editor de Destinos do Excel &#40;Página Saída de Erro&#41;](../../2014/integration-services/excel-destination-editor-error-output-page.md)   
  [Loop através de arquivos e tabelas do Excel por meio de um contêiner do Loop Foreach](control-flow/foreach-loop-container.md)  
   
   

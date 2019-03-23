@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer SQL Server Objects Task Editor
 ms.assetid: dedd85df-8f6a-40a4-ba28-ca35cdfa3982
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c626f2bf1f1c886b432091636f37554720e9969c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aa17cef1fddd5d131424dc645763683d59b75325
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142836"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375354"
 ---
 # <a name="transfer-sql-server-objects-task-editor-general-page"></a>Editor da Tarefa Transferir Objetos do SQL Server (página Geral)
   Use a página **Geral** da caixa de diálogo **Editor da Tarefa Transferir Objetos do SQL Server** para nomear e descrever a tarefa Transferir Objetos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para obter mais informações sobre essa tarefa, consulte [Transfer SQL Server Objects Task](control-flow/transfer-sql-server-objects-task.md).  

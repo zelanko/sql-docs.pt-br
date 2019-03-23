@@ -11,15 +11,15 @@ helpviewer_keywords:
 - hresults [Integration Services]
 - errors [Integration Services], listed
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: edcc54e1915e0fe78ace560c0d7db7d52509e2c5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ec7f81ec412a2ed597f8cd282b637fc5adf73ebf
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372518"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394584"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Referência de mensagens e erros do Integration Services
   As tabelas a seguir listam erros, advertências e mensagens informativas do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , em ordem numérica crescente, dentro de cada categoria, acompanhados de seus códigos numéricos e nomes simbólicos. Cada um desses erros está definido como um campo da classe <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> no namespace <xref:Microsoft.SqlServer.Dts.Runtime> .  
@@ -193,7 +193,7 @@ ms.locfileid: "53372518"
 |0xC0014048|-1073659832|DTS_E_INVALIDPATHTOPACKAGE|O caminho de pacote especificado não contém um nome de pacote. Isso ocorre quando o caminho não contém pelo menos uma barra ou uma barra invertida.|  
 |0xC0014049|-1073659831|DTS_E_FOLDERNOTFOUND|Não é possível encontrar a pasta "%1".|  
 |0xC001404A|-1073659830|DTS_E_FINDFOLDERONSQLSERVER_OLEDB|Durante uma tentativa de encontrar uma pasta no SQL, um erro OLE DB foi encontrado com o código de erro 0x%1!8.8X! (%2).|  
-|0xC001404B|-1073659829|DTS_E_OPENLOGFAILED|O provedor de log SSIS não conseguiu abrir o log. Código de erro: 0x%1!8.8x!.|  
+|0xC001404B|-1073659829|DTS_E_OPENLOGFAILED|O provedor de log SSIS não conseguiu abrir o log. Código de erro: 0x%1!8.8X!.|  
 |0xC001404C|-1073659828|DTS_E_GETCONNECTIONINFOS|Falha ao obter coleção ConnectionInfos com o erro 0x%1!8.8X! "%2". Esse erro ocorre quando a chamada ao IDTSApplication100::get_ConnectionInfos falha.|  
 |0xC001404D|-1073659827|DTS_E_VARIABLEDEADLOCK|Deadlock detectado ao tentar bloquear variáveis. Os bloqueios não podem ser adquiridos depois de 16 tentativas. Os bloqueios expiraram.|  
 |0xC001404E|-1073659826|DTS_E_NOTDISPENSED|A coleção Variables não foi retornada de VariableDispenser. Foi tentada uma operação permitida somente em coleções dispensadas.|  
@@ -358,7 +358,7 @@ ms.locfileid: "53372518"
 |0xC001F206|-1073614330|DTS_E_DTSNAME_BEGINSWITHALPHA|O nome de objeto "%1" não é válido. O nome deve começar com um caractere alfabético.|  
 |0xC001F207|-1073614329|DTS_E_DTSNAME_BEGINSWITHALPHAUNDERBAR|O nome de objeto "%1" não é válido. O nome deve começar com um caractere alfabético ou sublinhado "_".|  
 |0xC001F208|-1073614328|DTS_E_DTSNAME_ALPHADIGITUNDERBAR|O nome de objeto "%1" não é válido. O nome deve conter apenas caracteres alfanuméricos ou sublinhados "_".|  
-|0xC001F209|-1073614327|DTS_E_DTSNAME_VALIDFILENAME|O nome de objeto "%1" não é válido. O nome não pode conter nenhum dos caracteres a seguir: / \ : ? " \< >&#124;|  
+|0xC001F209|-1073614327|DTS_E_DTSNAME_VALIDFILENAME|O nome de objeto "%1" não é válido. O nome não pode conter nenhum dos caracteres a seguir: / \ : ? " \< > &#124;|  
 |0xC001F420|-1073613792|DTS_E_FAILLOADINGPROPERTY|Falha ao carregar a propriedade de valor "%1" usando a persistência padrão.|  
 |0xC001F422|-1073613790|DTS_E_NODELISTENUM_INVALIDCONNMGRTYPE|O gerenciador de conexões "%1" não é do tipo "%2"|  
 |0xC001F423|-1073613789|DTS_E_NODELISTENUM_XPATHISEMPTY|"%1" está vazio|  
@@ -1244,7 +1244,7 @@ ms.locfileid: "53372518"
 |0xC0202004|-1071636476|DTS_E_INCORRECTCOLUMNCOUNT|O número de colunas está incorreto.|  
 |0xC0202005|-1071636475|DTS_E_COLUMNNOTFOUND|Não é possível encontrar a coluna "%1" na fonte de dados.|  
 |0xC0202007|-1071636473|DTS_E_OLEDBRECORD|Está disponível um registro OLE DB.  Origem: "%1" Hresult: 0x%2!8.8x!  Descrição: "%3".|  
-|0xC0202009|-1071636471|DTS_E_OLEDBERROR|Código de Erro SSIS DTS_E_OLEDBERROR.  Ocorreu um erro OLE DB. Código de erro: 0x%1!8.8x!.|  
+|0xC0202009|-1071636471|DTS_E_OLEDBERROR|Código de Erro SSIS DTS_E_OLEDBERROR.  Ocorreu um erro OLE DB. Código de erro: 0x%1!8.8X!.|  
 |0xC020200A|-1071636470|DTS_E_ALREADYCONNECTED|O componente já está conectado. O componente precisa ser desconectado antes de tentar conectá-lo.|  
 |0xC020200B|-1071636469|DTS_E_INCORRECTSTOCKPROPERTYVALUE|O valor da propriedade "%1" está incorreto.|  
 |0xC020200E|-1071636466|DTS_E_CANNOTOPENDATAFILE|Não é possível abrir o arquivo de dados "%1".|  
@@ -1686,7 +1686,7 @@ ms.locfileid: "53372518"
 |0xC0208301|-1071611135|DTS_E_TXCHARMAP_INVALIDMAPFLAGANDDATATYPE|O tipo de dados da coluna "%1" não pode ser mapeado como especificado.|  
 |0xC0208302|-1071611134|DTS_E_TXFUZZYLOOKUP_UNSUPPORTED_MATCH_INDEX_VERSION|Não existe suporte para a versão (%1) do índice de correspondência pré-existente "%2". A versão esperada é "%3". Esse erro ocorre se a versão persistente nos metadados de índice não corresponde à versão para a qual o código atual foi criado. Corrija o erro, recriando o índice com a versão atual do código.|  
 |0xC0208303|-1071611133|DTS_E_TXFUZZYLOOKUP_INVALID_MATCH_INDEX|A tabela "%1" parece não ser um índice válido de correspondência pré-criado. Esse erro ocorre quando o registro de metadados não pode ser carregado do índice especificado pré-criado.|  
-|0xC0208304|-1071611132|DTS_E_TXFUZZYLOOKUP_UNABLE_TO_READ_MATCH_INDEX|Não é possível ler o índice de correspondência "%1" especificado e pré-criado.  Código de erro OLEDB: 0x%2!8.8x!.|  
+|0xC0208304|-1071611132|DTS_E_TXFUZZYLOOKUP_UNABLE_TO_READ_MATCH_INDEX|Não é possível ler o índice de correspondência "%1" especificado e pré-criado.  Código de erro OLEDB: 0x%2!8.8X!.|  
 |0xC0208305|-1071611131|DTS_E_TXFUZZYLOOKUP_NO_JOIN_COLUMNS|Não havia nenhuma coluna de entrada com uma junção válida para uma coluna da tabela de referência.  Verifique se existe pelo menos uma junção definida, usando as propriedades JoinToReferenceColumn e JoinType da coluna de entrada.|  
 |0xC0208306|-1071611130|DTS_E_TXFUZZYLOOKUP_INDEX_DOES_NOT_CONTAIN_COLUMN|O índice de correspondência "%1" pré-existente especificado não foi criado originalmente com informações de correspondência difusa para a coluna "%2".  Ele deve ser recriado para incluir essas informações. Esse erro ocorre quando o índice foi criado com uma coluna que não era de junção difusa.|  
 |0xC0208307|-1071611129|DTS_E_TXFUZZYLOOKUP_IDENTIFIER_PROPERTY|O nome "%1" atribuído à propriedade "%2" não é um nome válido de identificador SQL. Esse erro ocorre se o nome da propriedade não estiver de acordo com as especificações de um nome de identificador SQL.|  
@@ -1991,8 +1991,8 @@ ms.locfileid: "53372518"
 |0xC02092B5|-1071607115|DTS_E_COMMITFAILED|Falha em uma confirmação.|  
 |0xC02092B6|-1071607114|DTS_E_USEBINARYFORMATREQUIRESANSIFILE|A propriedade personalizada "%1" em %2 só pode ser usada com arquivos ANSI.|  
 |0xC02092B7|-1071607113|DTS_E_USEBINARYFORMATREQUIRESBYTES|A propriedade personalizada "%1" em %2 só pode ser usada com DT_BYTES.|  
-|0xC0209302|-1071607038|DTS_E_OLEDB_NOPROVIDER_ERROR|Código de erro SSIS DTS_E_OLEDB_NOPROVIDER_ERROR.  O provedor OLE DB %2 solicitado não está registrado. Código de erro: 0x%1!8.8x!.|  
-|0xC0209303|-1071607037|DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR|Código de erro SSIS DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR.  O provedor OLE DB solicitado %2 não está registrado--talvez nenhum provedor de 64 bits esteja disponível.  Código de erro: 0x%1!8.8x!.|  
+|0xC0209302|-1071607038|DTS_E_OLEDB_NOPROVIDER_ERROR|Código de erro SSIS DTS_E_OLEDB_NOPROVIDER_ERROR.  O provedor OLE DB %2 solicitado não está registrado. Código de erro: 0x%1!8.8X!.|  
+|0xC0209303|-1071607037|DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR|Código de erro SSIS DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR.  O provedor OLE DB solicitado %2 não está registrado--talvez nenhum provedor de 64 bits esteja disponível.  Código de erro: 0x%1!8.8X!.|  
 |0xC0209306|-1071607034|DTS_E_MULTICACHECOLMAPPINGS|A coluna de cache, "%1", está mapeada para mais de uma coluna. Remova os mapeamentos de coluna duplicados.|  
 |0xC0209307|-1071607033|DTS_E_COLNOTMAPPEDTOCACHECOL|%1 não é mapeada para uma coluna de cache válida.|  
 |0xC0209308|-1071607032|DTS_E_CACHECOLDATATYPEINCOMPAT|Não é possível mapear a coluna de entrada, "%1", e a coluna de cache, "%2", porque os tipos de dados não coincidem.|  
@@ -2036,7 +2036,7 @@ ms.locfileid: "53372518"
 |0x80012019|-2147409895|DTS_W_CONFIGFORMATINVALID|A entrada de configuração "%1" tinha um formato incorreto. Isso pode ocorrer por falta de delimitador ou erros de formatação, como um delimitador inválido de matriz.|  
 |0x8001201A|-2147409894|DTS_W_NOPARENTVARIABLES|A configuração não ocorreu a partir de uma variável pai "%1" porque não existia nenhuma coleção de variáveis pai.|  
 |0x8001201B|-2147409893|DTS_W_CONFIGFILEFAILEDIMPORT|Falha ao importar o arquivo de configuração: "%1".|  
-|0x8001201C|-2147409892|DTS_W_PARENTVARIABLENOTFOUND|A configuração não ocorreu a partir de uma variável pai "%1" porque não existia nenhuma coleção de variáveis pai. Código de erro: 0x%2!8.8x!.|  
+|0x8001201C|-2147409892|DTS_W_PARENTVARIABLENOTFOUND|A configuração não ocorreu a partir de uma variável pai "%1" porque não existia nenhuma coleção de variáveis pai. Código de erro: 0x%2!8.8X!.|  
 |0x8001201D|-2147409891|DTS_W_CONFIGFILEEMPTY|O arquivo de configuração estava vazio e não continha nenhuma entrada de configuração.|  
 |0x80012023|-2147409885|DTS_W_INVALIDCONFIGURATIONTYPE|O tipo para a configuração "%1" não é válido. Isso pode ocorrer quando se tenta definir a propriedade de tipo de um objeto de configuração como um tipo inválido.|  
 |0x80012025|-2147409883|DTS_W_REGISTRYCONFIGURATIONTYPENOTFOUND|O tipo de configuração para a configuração de registro não foi encontrado na chave "%1". Adicione um valor chamado ConfigType à chave do registro e atribua a ela um valor de cadeia de caracteres de "Variable", "Property", "ConnectionManager", "LoggingProvider" ou "ForEachEnumerator".|  

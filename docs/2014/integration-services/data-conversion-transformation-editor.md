@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Conversion Transformation Editor
 ms.assetid: 7b4e4873-e8fe-4549-a965-65bebdb270bc
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 73360a385cfe4c9f44dd2be5296c7d2144b3439d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad50b2ecf95daa7abb4c9aaef420b4dbfd14c8e7
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129796"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376135"
 ---
 # <a name="data-conversion-transformation-editor"></a>Editor de Transformação Conversão de Dados
   Use a caixa de diálogo **Editor de Transformação Conversão de Dados** para selecionar as colunas a converter, selecionar o tipo de dados ao qual converter a coluna e definir atributos de conversão.  
@@ -38,7 +38,7 @@ ms.locfileid: "48129796"
  Selecione colunas a converter na lista de colunas de entrada disponíveis. Suas seleções serão refletidas nas caixas de seleção marcadas acima.  
   
  **Alias de Saída**  
- Digite um alias para cada coluna nova. O padrão é `Copy of` seguido pelo nome da coluna de entrada; no entanto, você pode escolher qualquer nome descritivo exclusivo.  
+ Digite um alias para cada coluna nova. O padrão é `Copy of` seguido do nome da coluna de entrada; no entanto, é possível escolher qualquer nome descritivo exclusivo.  
   
  **Tipo de Dados**  
  Selecione na lista um tipo de dados disponível. Para obter mais informações, consulte [Integration Services Data Types](data-flow/integration-services-data-types.md).  

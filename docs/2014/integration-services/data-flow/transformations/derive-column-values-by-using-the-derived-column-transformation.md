@@ -12,15 +12,15 @@ helpviewer_keywords:
 - columns [Integration Services], values
 - Derived Column transformation
 ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4d0a6a918c2b4a41272b4c09b87d64b925fbf028
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 39b8e065b6b3cbd013089700de07376edc9a656c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785148"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391144"
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>Derivar valores de coluna por meio da transformação Coluna Derivada
   Para adicionar e configurar uma transformação Coluna Derivada, o pacote já deve incluir pelo menos uma tarefa de Fluxo de Dados e uma origem.  

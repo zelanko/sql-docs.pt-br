@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Fuzzy Grouping Transformation Editor
 ms.assetid: 24f4539f-2a9f-4acd-acc7-06228a07f7df
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 420be3d4dc236804343aa6281107e1a9c579b097
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dc69475a26bde2045c06429462b5de306c4f932f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095206"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376174"
 ---
 # <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>Editor de Transformação Agrupamento Difuso (guia Colunas)
   Use a guia **Colunas** da caixa de diálogo **Editor de Transformação Agrupamento Difuso** para especificar as colunas usadas para agrupar linhas com valores duplicados.  
@@ -58,7 +58,7 @@ ms.locfileid: "48095206"
  **Numerais**  
  Especifique a significância dos numerais à esquerda e à direita na comparação dos dados da coluna. Por exemplo, se os numerais à esquerda forem significativos, "123 Main Street" não será grupado com "456 Main Street".  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Nenhum**|Numerais à esquerda e à direita não são significativos.|  
 |**À Esquerda**|Apenas numerais à esquerda são significativos.|  

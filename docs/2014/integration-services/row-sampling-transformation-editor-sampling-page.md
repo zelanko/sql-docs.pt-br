@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Row Sampling Transformation Editor
 ms.assetid: 544c7709-6de0-4c08-bda3-759985be9a05
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cc815dd914df7f7bb3c3fa1e65b274143ddc4741
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 13117cd751b093497b2faaacd42ff9558fac654d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069976"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392024"
 ---
 # <a name="row-sampling-transformation-editor-sampling-page"></a>Editor de Transformação Amostragem de Linhas (página Amostragem)
   Use a caixa de diálogo **Editor de Transformação Amostragem de Linhas** para dividir uma parte de uma entrada em uma amostra usando um número de linhas especificado. Essa transformação divide a entrada em duas saídas separadas.  

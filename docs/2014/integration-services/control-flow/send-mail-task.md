@@ -15,15 +15,15 @@ helpviewer_keywords:
 - messages [Integration Services]
 - sending messages
 ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6f1bcb08da6b28555502bb39658fb2f1fcbacb3b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 3308899190aa63ebb9be93c4c9af15d5e0f94600
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354279"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380123"
 ---
 # <a name="send-mail-task"></a>Tarefa Enviar Email
   A tarefa Enviar Email envia uma mensagem de email. Usando a tarefa Enviar Email, um pacote pode enviar mensagens se as tarefas no fluxo de trabalho do pacote tiverem êxito ou falharem ou enviar mensagens em resposta a um evento que o pacote ativa em tempo de execução. Por exemplo, a tarefa pode notificar um administrador de banco de dados sobre o êxito ou a falha da tarefa Fazer Backup do Banco de Dados.  

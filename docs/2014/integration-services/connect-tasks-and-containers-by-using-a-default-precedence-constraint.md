@@ -13,25 +13,25 @@ helpviewer_keywords:
 - default precedence constraints
 - containers [Integration Services], precedence constraints
 ms.assetid: 8f31f15f-98ff-4c35-b41f-8b8cfd148d75
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c0c61c5db632121f99f8c22c8dd474d5597cb547
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a900b6c2bb6e55d57bcf32aff0ac6ea4667bdd7f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221536"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389234"
 ---
 # <a name="connect-tasks-and-containers-by-using-a-default-precedence-constraint"></a>Como conectar tarefas e contêineres por meio de uma restrição de precedência padrão
   Restrições de precedência conectam dois executáveis. Um executável pode ser qualquer tarefa ou um contêiner Loop For, Loop Foreach ou Sequência. Este procedimento descreve como definir o comportamento padrão de restrições de precedência e como conectar executáveis usando as restrições de precedência padrão.  
   
-## <a name="creating-default-precedence-constraints"></a>Criando restrições de precedência padrão   
- Quando você usa primeiro [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, o valor padrão de uma restrição de precedência é `Success`. Siga estas etapas para configurar o [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer para usar um valor padrão diferente para restrições de precedência.  
+## <a name="creating-default-precedence-constraints"></a>Criando restrições de precedência padrão  
+ Quando você usa o [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer pela primeira vez, o valor padrão de uma restrição de precedência é `Success`. Siga estas etapas para configurar o [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer para usar um valor padrão diferente para restrições de precedência.  
   
 #### <a name="to-set-the-default-value-for-precedence-constraints"></a>Para definir o valor padrão de restrições de precedência  
   
-1.  Abra o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+1.  Abra [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 2.  No menu **Ferramentas** , clique em **Opções**.  
   

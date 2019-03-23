@@ -13,18 +13,18 @@ helpviewer_keywords:
 - packages [Integration Services], running
 - running package [Integration Services], managing
 ms.assetid: 11bf44e6-f6b0-475f-b816-40e914dbac80
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 993f5cc3cba13e9a7d2c6380f719d5e7b24ca0a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ac4874c47f4aae25b87a72b1a6a62ddeb3f7962c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140556"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387814"
 ---
 # <a name="viewing-and-stopping-packages-running-on-the-integration-services-server"></a>Exibindo e parando pacotes que são executados no servidor do Integration Services
-  O `SSISDB` banco de dados armazena o histórico de execução em tabelas internas que não são visíveis aos usuários. Porém, ele expõe as informações necessárias por meio de exibições públicas que você pode consultar. Ele também fornece procedimentos armazenados que você pode chamar para executar tarefas comuns relacionadas a pacotes.  
+  O banco de dados do `SSISDB` armazena o histórico da execução em tabelas internas que não são visíveis aos usuários. Porém, ele expõe as informações necessárias por meio de exibições públicas que você pode consultar. Ele também fornece procedimentos armazenados que você pode chamar para executar tarefas comuns relacionadas a pacotes.  
   
  Normalmente você gerencia objetos do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no servidor no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. No entanto, você também pode consultar as exibições de banco de dados e chamar os procedimentos armazenados diretamente, ou escrever código personalizado que chame a API gerenciada. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e a API gerenciada consultam as exibições e chamam os procedimentos armazenados para executar muitas de suas tarefas. Por exemplo, você pode exibir a lista de pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que estão em execução atualmente no servidor e solicitar a interrupção de pacotes, se necessário.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "48140556"
   
  Para obter informações sobre os outros métodos que podem ser usados para exibir a lista de pacotes em execução, consulte os tópicos a seguir.  
   
- Acesso ao [!INCLUDE[tsql](../includes/tsql-md.md)]  
+ [!INCLUDE[tsql](../includes/tsql-md.md)] acesso  
  Para exibir a lista de pacotes em execução no servidor, consulte a exibição [catalog.executions &#40;Banco de Dados SSISDB&#41;](/sql/integration-services/system-views/catalog-executions-ssisdb-database) para obter pacotes que têm um status 2.  
   
  Acesso programático por meio de API gerenciada  
@@ -44,7 +44,7 @@ ms.locfileid: "48140556"
   
  Para obter informações sobre os outros métodos que podem ser usados para interromper um pacote em execução, consulte os tópicos a seguir.  
   
- Acesso ao [!INCLUDE[tsql](../includes/tsql-md.md)]  
+ [!INCLUDE[tsql](../includes/tsql-md.md)] acesso  
  Para interromper um pacote em execução no servidor, chame o procedimento armazenado, [catalog.stop_operation &#40;Banco de Dados SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database).  
   
  Acesso programático por meio de API gerenciada  
@@ -55,7 +55,7 @@ ms.locfileid: "48140556"
   
  Para obter informações sobre os outros métodos que podem ser usados para exibir o histórico de pacotes em execução, consulte os tópicos a seguir.  
   
- Acesso ao [!INCLUDE[tsql](../includes/tsql-md.md)]  
+ [!INCLUDE[tsql](../includes/tsql-md.md)] acesso  
  Para exibir informações sobre os pacotes que foram executados, consulte a exibição [catalog.executions &#40;Banco de Dados SSISDB&#41;](/sql/integration-services/system-views/catalog-executions-ssisdb-database).  
   
  Acesso programático por meio de API gerenciada  
@@ -63,6 +63,6 @@ ms.locfileid: "48140556"
   
 ## <a name="see-also"></a>Consulte também  
  [Execução de projetos e pacotes](packages/run-integration-services-ssis-packages.md)   
- [Relatórios para solução de problemas de execução de pacote](troubleshooting/troubleshooting-reports-for-package-execution.md)  
+ [Solucionando problemas de relatórios para execução de pacotes](troubleshooting/troubleshooting-reports-for-package-execution.md)  
   
   

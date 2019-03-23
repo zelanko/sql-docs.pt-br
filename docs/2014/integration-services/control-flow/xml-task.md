@@ -12,15 +12,15 @@ helpviewer_keywords:
 - XML [Integration Services]
 - XML task [Integration Services]
 ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1b696dd451c5b6f76419e4fb4cb501e2e62bba24
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a878a61678fcad2fe15ac71d8ed7d29f24057852
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759318"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374892"
 ---
 # <a name="xml-task"></a>XML Task
   A tarefa XML é usada para se trabalhar com dados XML. Usando essa tarefa, um pacote pode recuperar documentos XML, aplicar operações aos documentos usando folhas de estilos XSLT e expressões XPath, mesclar vários documentos ou validar, comparar e salvar os documentos atualizados em arquivos e variáveis.  

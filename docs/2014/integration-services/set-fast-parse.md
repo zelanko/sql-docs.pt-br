@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: dcd1dc09-6eaf-440b-9ce6-fef779ff794f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 960876737e552e7c5a9af75cc23d7e43e3799735
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e8914ebe397d6e38b95673cef264e537ec820a31
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170606"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391804"
 ---
 # <a name="set-fast-parse"></a>Definir a análise rápida
   A propriedade de análise rápida deve ser definida para cada coluna da origem ou transformação que use a análise rápida. Para definir a propriedade, use o Editor avançado da fonte Flat File e da transformação de Conversão de Dados.  

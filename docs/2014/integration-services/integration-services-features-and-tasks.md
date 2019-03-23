@@ -11,15 +11,15 @@ helpviewer_keywords:
 - development [Integration Services]
 - Integration Services, programming
 ms.assetid: c0b3f4c2-b77c-4485-be77-cec5fd382c86
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 61871299c35df0495932f1b149fe99ab858edaa5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3cb4eb52fe100dfe44f4008e22818880fe61b246
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524868"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388574"
 ---
 # <a name="integration-services-features-and-tasks"></a>Recursos e tarefas do Integration Services
   Encontre informações que qualquer pessoa-designer, desenvolvedor, analista ou administrador-precisa para criar e desenvolver [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] pacotes. Em seguida, aprenda a incorporar esses pacotes em seus aplicativos e sites da Web.  

@@ -11,15 +11,15 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Error Messages task [Integration Services]
 ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 321b5ef94cd25651e8f9ff03c6977d3639b5be2f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: eaefd6e7ae4748505db9bd84601de6166f9d5f98
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754358"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388364"
 ---
 # <a name="transfer-error-messages-task"></a>Tarefa Transferir Mensagens de Erro
   A tarefa Transferir Mensagens de Erro transfere uma ou mais mensagens de erro do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definidas pelo usuário entre instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Mensagens definidas pelo usuário são mensagens com um identificador igual ou maior que 50000. Mensagens com identificador menor que 50000 são mensagens de erro do sistema e não podem ser transferidas usando-se a tarefa Transferir Mensagens de Erro.  

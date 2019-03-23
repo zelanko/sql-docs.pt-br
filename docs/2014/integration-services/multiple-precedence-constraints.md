@@ -13,20 +13,20 @@ helpviewer_keywords:
 - precedence constraints [Integration Services], multiple
 - constrained executables [Integration Services]
 ms.assetid: 71c53ead-3d19-4bc1-aafd-e5b32595b420
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 368d8faf917094ce1dd306cc4ffd385eb3254363
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5f06a05ff275151e2488b1f3ec89c8d9cb7afb12
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084856"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375584"
 ---
 # <a name="multiple-precedence-constraints"></a>Várias restrições de precedência
   Uma restrição de precedência conecta dois executáveis: duas tarefas, dois contêineres, ou um de cada. Eles são conhecidos como o executável de precedência e o executável restrito. Um executável restrito pode ter múltiplas restrições de precedência. Para obter mais informações, consulte [Precedence Constraints](control-flow/precedence-constraints.md).  
   
- Reunir cenários de restrição complexos por agrupamento de restrições permite que você implemente o fluxo de controle complexo em pacotes. Por exemplo, na ilustração a seguir, tarefa D está vinculada à tarefa A por uma `Success` restrição, a tarefa D está vinculada à tarefa B por uma `Failure` restrição e a tarefa D está vinculada à tarefa C por uma `Success` restrição. As restrições de precedência entre as Tarefas D e A, entre as Tarefas D e B e entre as Tarefas D e C participam de uma relação lógica *and* . Portanto, para que a Tarefa D seja executada, a Tarefa A deve ser executada com êxito, a Tarefa B deve falhar e a Tarefa C deve ser executada com êxito.  
+ Reunir cenários de restrição complexos por agrupamento de restrições permite que você implemente o fluxo de controle complexo em pacotes. Por exemplo, na ilustração a seguir, a Tarefa D está vinculada à Tarefa A por uma restrição `Success`, a Tarefa D está vinculada à Tarefa B por uma restrição `Failure` e a Tarefa D está vinculada à Tarefa C por uma restrição `Success`. As restrições de precedência entre as Tarefas D e A, entre as Tarefas D e B e entre as Tarefas D e C participam de uma relação lógica *and* . Portanto, para que a Tarefa D seja executada, a Tarefa A deve ser executada com êxito, a Tarefa B deve falhar e a Tarefa C deve ser executada com êxito.  
   
  ![Tarefas vinculadas por restrições de precedência](media/precedenceconstraints.gif "Tarefas vinculadas por restrições de precedência")  
   

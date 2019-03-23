@@ -14,15 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - Configure SSIS Logs dialog box
 ms.assetid: 4b980275-cd9a-4943-8c36-727d51f9a484
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4730b52983c778fd71f778412552913d2ee6cbef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dbba1b7712bcbdccc821e419b3101065c3164913
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120563"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375204"
 ---
 # <a name="configure-ssis-logs-dialog-box"></a>caixa de diálogo Configurar Logs do SSIS
   Use a caixa de diálogo **Configurar Logs de SSIS** para definir as opções do log para um pacote.  
@@ -76,7 +76,7 @@ ms.locfileid: "48120563"
  **Configuração**  
  Selecione um gerenciador de conexões existente na lista ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões. Dependendo do tipo de provedor de log, você poderá configurar um gerenciador de conexões OLE DB ou um gerenciador de conexões Arquivo. O provedor de log do [!INCLUDE[msCoName](../includes/msconame-md.md)] Log de Eventos do Windows não requer conexão.  
   
- Tópicos relacionados: [Gerenciador de conexões OLE DB](connection-manager/ole-db-connection-manager.md) , [Gerenciador de Conexões de Arquivos](connection-manager/file-connection-manager.md)  
+ Tópicos relacionados: [Gerenciador de Conexão do OLE DB](connection-manager/ole-db-connection-manager.md) manager, [Gerenciador de Conexão de arquivo](connection-manager/file-connection-manager.md)  
   
  **Delete (excluir)**  
  Selecione um provedor de log e clique em **Excluir**.  
@@ -94,7 +94,7 @@ ms.locfileid: "48120563"
  **Avançado**  
  Marque ou desmarque os eventos para log e marque ou desmarque informações que serão usadas no log de cada evento. Clique em **Básico** para ocultar todos os detalhes de log, exceto a lista de eventos. As informações a seguir estão disponíveis para log:  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Computer**|O nome do computador no qual o evento de log ocorreu.|  
 |**Operador**|O nome de usuário da pessoa que iniciou o pacote.|  

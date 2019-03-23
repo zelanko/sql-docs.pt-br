@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcsource.errorhandling.f1
 ms.assetid: b2f6866c-db07-4cb3-9f38-889f8d2b03e6
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1bf6d22a2cbe6111f9cce1a3be446c507969ca82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 804431fea189d0dbe8e236591453571a5546cd5c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158416"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394494"
 ---
 # <a name="odbc-source-editor-error-output-page"></a>Editor de Origem ODBC (página Saída de Erro)
   Use a página **Saída de Erro** da caixa de diálogo **Editor de Origem ODBC** para selecionar as opções para tratamento de erros.  
@@ -48,7 +48,7 @@ ms.locfileid: "48158416"
 ### <a name="truncation"></a>Truncation  
  Selecione como a origem ODBC deve tratar o truncamento em um fluxo: ignorar a falha, redirecionar a linha ou causar falha no componente.  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descrição  
  Não usado.  
   
 ### <a name="set-this-value-to-selected-cells"></a>Definir este valor para células selecionadas  
@@ -70,7 +70,7 @@ ms.locfileid: "48158416"
  A linha que está causando o erro ou o truncamento é direcionada para a saída do erro da origem ODBC. Para obter mais informações, consulte [ODBC Source](data-flow/odbc-source.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Editor de origem ODBC &#40;página do Gerenciador de Conexão&#41;](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
- [Editor de origem ODBC &#40;página de colunas&#41;](../../2014/integration-services/odbc-source-editor-columns-page.md)  
+ [Editor de Fonte ODBC &#40;Página Gerenciador de Conexões&#41;](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
+ [Editor de Fonte ODBC &#40;Página Colunas&#41;](../../2014/integration-services/odbc-source-editor-columns-page.md)  
   
   

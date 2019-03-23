@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Bulk Insert Task Editor
 ms.assetid: b6eb576f-7a56-4fa0-a97c-5f7ab9d0f44d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1eff4034dfb3f7bf7120ec5976a398427d0cd207
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12f4cd15127d1b4adef4439d7d6081d8bcd15a97
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152766"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392645"
 ---
 # <a name="bulk-insert-task-editor-general-page"></a>Editor da Tarefa Inserção em Massa (página Geral)
   Use a página **Geral** da caixa de diálogo **Editor da Tarefa Inserção em Massa** para nomear e descrever a tarefa Inserção em Massa.  
@@ -39,9 +39,9 @@ ms.locfileid: "48152766"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor da tarefa inserção em massa de &#40;página de Conexão&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
- [Editor da tarefa inserção em massa de &#40;página de opções&#41;](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   
- [Página expressões](expressions/expressions-page.md)   
+ [Editor da Tarefa Inserção em Massa &#40;Página Conexão&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
+ [Editor da Tarefa Inserção em Massa &#40;Página Opções&#41;](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   
+ [Página Expressões](expressions/expressions-page.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [Fluxo de Controle](control-flow/control-flow.md)  
   

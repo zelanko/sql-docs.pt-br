@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Flow Path Editor dialog box
 ms.assetid: 72a9ff1d-3748-41d1-a9b2-63f4a77bba24
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 43403bd87ba8cd836e035f14a9456b6338e0c92d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3268aa2ffcb69ccde4ae08513ff17a4c9572b10e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216746"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393274"
 ---
 # <a name="data-flow-path-editor-general-page"></a>Editor de Caminho do Fluxo de Dados (página Geral)
   Use a caixa de diálogo **Editor de Caminho de Fluxo de Dados** para definir propriedades de caminho, visualizar metadados de colunas e gerenciar os visualizadores de dados que estão anexados ao caminho.  

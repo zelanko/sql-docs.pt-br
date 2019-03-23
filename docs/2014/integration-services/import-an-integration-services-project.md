@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: 3301c328-b0f5-4517-915c-93713413e453
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8f81996093aa6ac42eaab9c6057c9c8bb706055b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8fb6b68cbb30e9bbf19f854cf1dd1e7e0dd19d25
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203796"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394434"
 ---
 # <a name="import-an-integration-services-project"></a>Importar um projeto do Integration Services
   Use o **Assistente de Projeto de Importação** do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para criar um projeto de um arquivo de implantação existente (.ispac) ou de um projeto implantado no catálogo do Integration Services. Este recurso é especialmente útil quando você não tiver a cópia original do projeto, mas desejar criar um de um arquivo .ispac ou catálogo SSISDB.  

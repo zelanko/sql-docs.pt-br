@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.ssis.ssms.iscatalogprop.general.f1
 - sql12.ssis.ssms.iscreatecatalog.f1
 ms.assetid: 3e2fcf11-e010-41c6-bc26-e4b281c0bfbc
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ca73310cbbb45097eeb5a130364ee1f2580e8059
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 849346f33a3118029a46241644d7f1cce6dc7481
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156936"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374464"
 ---
 # <a name="catalog-properties-dialog-box"></a>Caixa de diálogo Propriedades do Catálogo
   Use a caixa de diálogo de Propriedades do Catálogo para configurar o catálogo do SSISDB. As propriedades do catálogo definem como dados confidenciais são criptografados, como dados de operações e de controle de versão de projeto são retidos, e quando o tempo limite de operações de validação expira. O catálogo do SSISDB é um armazenamento e ponto de administração central para projetos, pacotes, parâmetros e ambientes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -36,7 +36,7 @@ ms.locfileid: "48156936"
   
 ##  <a name="open_dialog"></a> Abrir a caixa de diálogo Propriedades do Catálogo  
   
-1.  Abra [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
+1.  Abra [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
 2.  Conecte-se ao Mecanismo de Banco de Dados do Microsoft SQL Server.  
   
@@ -47,9 +47,9 @@ ms.locfileid: "48156936"
 ### <a name="options"></a>Opções  
  A tabela a seguir descreve determinadas propriedades na caixa de diálogo e as propriedades correspondentes na exibição de catalog.catalog_property.  
   
-|Nome da Propriedade (caixa de diálogo Propriedades do Catálogo)|Nome da Propriedade (exibição catalog.catalog_property)|Description|  
+|Nome da Propriedade (caixa de diálogo Propriedades do Catálogo)|Nome da Propriedade (exibição catalog.catalog_property)|Descrição|  
 |-----------------------------------------------------|------------------------------------------------------|-----------------|  
-|Nome do Algoritmo de Criptografia|ENCRYPTION_CLEANUP_ENABLED|Especifica o tipo de criptografia usado para criptografar os valores dos parâmetros confidenciais no catálogo. O valores possíveis são os seguintes:<br /><br /> **DES**<br /><br /> **TRIPLE_DES**<br /><br /> **TRIPLE_DES_3KEY**<br /><br /> **DESPX**<br /><br /> **AES_128**<br /><br /> **AES_192**<br /><br /> **AES_256** (padrão)|  
+|Nome do Algoritmo de Criptografia|ENCRYPTION_CLEANUP_ENABLED|Especifica o tipo de criptografia usado para criptografar os valores dos parâmetros confidenciais no catálogo. O valores possíveis são os seguintes:<br /><br /> **DES**<br /><br /> **TRIPLE_DES**<br /><br /> **TRIPLE_DES_3KEY**<br /><br /> **DESPX**<br /><br /> **AES_128**<br /><br /> **AES_192**<br /><br /> **AES_256** (default)|  
 |Tempo Limite de Validação (segundos)|VALIDATION_TIMEOUT|Especifique o número máximo de segundos que a validação de um projeto ou de um pacote pode ser executada antes de ser parada. O valor padrão é 300 segundos.<br /><br /> A execução da validação é uma operação assíncrona. Quanto maior for o projeto ou o pacote, mais tempo será necessário para a validação.<br /><br /> Para obter informações sobre como validar projetos e pacotes, consulte [Tipos de dados do Integration Services em expressões](expressions/integration-services-data-types-in-expressions.md).|  
 |Limpar Logs Periodicamente|OPERATION_CLEANUP_ENABLED|Defina a propriedade como True para indicar que o trabalho do SQL Server Agent, limpeza de operações, é executada. Caso contrário, defina a propriedade como False.|  
 |Período de Retenção (dias)|RETENTION_WINDOW|Especifique a idade máxima dos dados de operações permitidos (em dias). Dados mais antigos do que o número de dias especificado serão removidos pelo trabalho do SQL Agent, limpeza de operações.|  

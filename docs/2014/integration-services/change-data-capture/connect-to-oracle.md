@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - connOra
 ms.assetid: 711ac7ff-5d3d-4533-80ca-d1fecdb3048f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0ab9dce0de35ee8b6d63023e37c0a2a7742b1f13
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1ca7eb5b4883edf9ab718c731049da4c3be44324
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779919"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391034"
 ---
 # <a name="connect-to-oracle"></a>Conectar-se ao Oracle
   Quando você adiciona ou edita as tabelas usadas na instância de CDC pela primeira vez, você deverá se conectar ao banco de dados Oracle. Você deve inserir as credenciais de um usuário Oracle que pode acessar o esquema das tabelas a ser capturado. Insira o seguinte nesta caixa de diálogo:  
@@ -26,9 +26,9 @@ ms.locfileid: "52779919"
   
  Selecione uma destas opções:  
   
--   **Autenticação do Windows**: Selecione esta opção para usar as credenciais de domínio do Windows atual. Você só poderá usar esta opção se o banco de dados Oracle estiver configurado para funcionar com autenticação do Windows.  
+-   **Autenticação do Windows**: Selecione essa opção para usar as credenciais de domínio atuais do Windows. Você só poderá usar esta opção se o banco de dados Oracle estiver configurado para funcionar com autenticação do Windows.  
   
--   **Autenticação do Oracle**: Se você selecionar essa opção, você deve digitar o **nome de usuário** e **senha** para o usuário no banco de dados Oracle, você está se conectando.  
+-   **Autenticação do Oracle**: Se você selecionar essa opção, precisará digitar o **Nome de Usuário** e a **Senha** do usuário no Oracle Database ao qual você está se conectando.  
   
 ## <a name="see-also"></a>Consulte também  
  [Adicionar tabelas a uma instância CDC](add-tables-to-a-cdc-instance.md)  

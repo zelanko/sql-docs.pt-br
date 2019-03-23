@@ -17,15 +17,15 @@ helpviewer_keywords:
 - expressions [Integration Services], identifiers
 - qualified identifiers [Integration Services]
 ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 83c0d4b810f3835659849bd63766d45b101d5339
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 04217451f1a330b3a9b4e4a7ff91e6c6d35574eb
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360268"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380695"
 ---
 # <a name="identifiers-ssis"></a>Identificadores (SSIS)
   Em expressões, identificadores são colunas e variáveis, que estão disponíveis para a operação. Expressões podem usar identificadores regulares e qualificados.  

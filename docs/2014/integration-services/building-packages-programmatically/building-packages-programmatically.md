@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: reference
 ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b49f6b4ae3ec88339927f083b58e016dbc38639b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 188e2b824a033365ec366d3b5f7474b261b1bbf2
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370418"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393644"
 ---
 # <a name="building-packages-programmatically"></a>Compilando pacotes programaticamente
   Se precisar criar pacotes dinamicamente ou gerenciar e executar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fora do ambiente de desenvolvimento, você poderá manipular pacotes programaticamente. Nessa abordagem, você tem uma série de opções:  

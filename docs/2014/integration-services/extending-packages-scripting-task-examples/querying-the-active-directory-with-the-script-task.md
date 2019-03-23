@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - Active Directory [Integration Services]
 ms.assetid: a88fefbb-9ea2-4a86-b836-e71315bac68e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c60d7954d0ecd0c7201885e7128b75ddc46aa53b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: bbcea29ad75eb84b9c8099e5998e307ecbd7943c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368948"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392064"
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>Consultando o Active Directory com a tarefa Script
   Aplicativos de processamento de dados corporativos, como pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], em geral, precisam processar dados de forma diferente com base na classificação, no nome do cargo ou em outras características dos funcionários armazenadas no Active Directory. O Active Directory é um serviço de diretório do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows que fornece um repositório centralizado de metadados, não apenas sobre usuários, mas também sobre outros ativos organizacionais como computadores e impressoras. O namespace `System.DirectoryServices` no Microsoft .NET Framework fornece classes para trabalhar com o Active Directory, a fim de ajudar você a direcionar o fluxo de processamento de dados com base nas informações que ele armazena.  

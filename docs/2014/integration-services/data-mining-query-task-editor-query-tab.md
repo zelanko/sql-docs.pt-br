@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Query Task Editor
 ms.assetid: 72b1755d-d226-46c5-b862-0c9333196a10
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ac3a7fd31f13ec513c1590d265b1984969ae8e12
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 361c1c06afb8c599e983751ea7d7deef656631e6
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193056"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377223"
 ---
 # <a name="data-mining-query-task-editor-query-tab"></a>Editor da Tarefa Consulta de Mineração de Dados (guia Consulta)
   Use a guia **Consulta** da caixa de diálogo **Tarefa Consulta de Mineração de Dados** para criar consultas de previsão baseadas em um modelo de mineração. Nessa caixa de diálogo, você também pode associar parâmetros e conjuntos de resultados a variáveis.  
@@ -41,12 +41,12 @@ ms.locfileid: "48193056"
  **Consulta de mineração de dados**  
  Digite uma consulta de mineração de dados.  
   
- **Tópicos relacionados:**  [Referência de &#40;extensões DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
+ **Tópicos relacionados:**  [Referência de DMX &#40;extensões DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
   
  **Construir Nova Consulta**  
  Crie a consulta de mineração de dados usando uma ferramenta gráfica.  
   
- **Tópicos relacionados:** [Data Mining Query](control-flow/data-mining-query.md)  
+ **Tópicos relacionados:** [Consulta de mineração de dados](control-flow/data-mining-query.md)  
   
 ## <a name="parameter-mapping-tab-options"></a>Opções da guia Mapeamento de Parâmetros  
  **Nome do parâmetro**  
@@ -81,8 +81,8 @@ ms.locfileid: "48193056"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor da tarefa consulta de mineração de dados &#40;guia modelo de mineração&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
- [Editor da tarefa consulta de mineração de dados &#40;guia de saída&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
- [Designer de Mineração de dados](../analysis-services/data-mining/data-mining-designer.md)  
+ [Editor da Tarefa Consulta de Mineração de Dados &#40;Guia Modelo de Mineração&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
+ [Editor da Tarefa Consulta de Mineração de Dados &#40;Guia Saída&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
+ [Designer de Mineração de Dados](../analysis-services/data-mining/data-mining-designer.md)  
   
   

@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Package Roles dialog box
 ms.assetid: 63f13416-c0aa-4480-a336-ef1e6e31a860
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d45ea589ee41aa5895acf0ee1c475aea19bbaeed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: abdbf8215b782f5db4343365a26d479542fc2dad
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225206"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374574"
 ---
 # <a name="package-roles-dialog-box-ui-reference"></a>Referência da interface do usuário da caixa de diálogo Funções do Pacote
   Use a caixa de diálogo **Funções do Pacote**, disponível no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], para especificar as funções de nível de banco de dados que têm acesso de leitura e as que têm acesso de gravação ao pacote. As funções de nível de banco de dados se aplicam apenas a pacotes armazenados no banco de dados **msdbmsdb** do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - indexes [Integration Services]
 - Rebuild Index task
 ms.assetid: 021884dd-e72d-47b2-99e8-b741410509c3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 96f93c693f06512c2e53ce9a8ae5f1e7e54ecb60
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9e89c081c1c543c198a827955ab4865709ead391
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759928"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392684"
 ---
 # <a name="rebuild-index-task"></a>Tarefa Recriar Índice
   A tarefa Recriar Índice recria índices em tabelas e exibições de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações sobre o gerenciamento de índices, consulte [Reorganizar e recriar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  

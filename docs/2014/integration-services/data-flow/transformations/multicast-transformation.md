@@ -14,15 +14,15 @@ helpviewer_keywords:
 - datasets [Integration Services], multiple outputs
 - multiple transformations
 ms.assetid: 32194784-1684-40cd-9f91-1aba4d8360d3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 99a0cdc035b14f24107397b67ffafecfe90fd8a2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a05605ca5c2b35b0a5e35c8228a2a144f20d7905
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804938"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374048"
 ---
 # <a name="multicast-transformation"></a>Transformação Difusão Seletiva
   A transformação Multicast distribui sua entrada em uma ou mais saídas. Essa transformação é semelhante à transformação de divisão condicional. Ambas as transformações dirigem uma entrada para saídas múltiplas. A diferença entre as duas é que a transformação de difusão seletiva dirige todas as linhas para todas as saídas e a divisão condicional dirige uma linha para uma única saída. Para obter mais informações, consulte [Conditional Split Transformation](conditional-split-transformation.md).  

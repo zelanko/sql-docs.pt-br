@@ -12,15 +12,15 @@ helpviewer_keywords:
 - packages [Integration Services], creating
 - SQL Server Integration Services packages, creating
 ms.assetid: bb3c085b-1458-49fa-8348-6a76b6e97ea6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c2748cf548a6a5c60ceab764afb27fff111f3ea1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 7053c5cd9780e578697c1bc08e6bb1b0c32ca1f9
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372358"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391574"
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>Copiar pacotes nas Ferramentas de Dados do SQL Server
   Os pacotes criados no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] por meio do [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer são salvos no sistema de arquivos. Para salvar um pacote no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou no repositório de pacotes, salve uma cópia do pacote. Para obter mais informações, consulte [Salvar uma cópia de um pacote](../../2014/integration-services/save-a-copy-of-a-package.md).  

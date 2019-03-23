@@ -10,18 +10,18 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.SUMMARY.RENDER.CUSTOM.REPORT.F1
 ms.assetid: e976e7c0-a805-4370-bf73-356c8e3becfb
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 224345a2dc32f12e925a6f97299c91a5e2f7e9b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6be914812be9d58fb59316b1b4793eb5d9e07043
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096166"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394084"
 ---
 # <a name="reports-for-the-integration-services-server"></a>Relatórios do servidor do Integration Services
-  Na versão atual do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], estão disponíveis em relatórios padrão [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para ajudá-lo a monitorar [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] projetos que foram implantados a [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server. Esses relatórios ajudam a exibir o status e o histórico do pacote e, se necessário, a identificar a causa de falhas na execução do pacote.  
+  Na versão atual do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], os relatórios padrão estão disponíveis no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para ajudar a monitorar projetos do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , que foram implantados no servidor do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Esses relatórios ajudam a exibir o status e o histórico do pacote e, se necessário, a identificar a causa de falhas na execução do pacote.  
   
  Na parte superior de cada página de relatório, o ícone de voltar leva você à página anteriormente exibida, o ícone de atualização atualiza as informações exibidas na página e o ícone de impressão permite imprimir a página atual.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "48096166"
   
  O relatório exibe as seções de informações a seguir.  
   
-|Seção|Description|  
+|Seção|Descrição|  
 |-------------|-----------------|  
 |**Informações de Execução**|Mostra o número de execuções que estão em estados diferentes (com falha, executando, teve sucesso, outros) nas últimas 24 horas.|  
 |**Informações do Pacote**|Mostra o número total de pacotes que foram executados nas últimas 24 horas.|  
@@ -46,9 +46,9 @@ ms.locfileid: "48096166"
   
  O relatório exibe as seções de informações a seguir.  
   
-|Seção|Description|  
+|Seção|Descrição|  
 |-------------|-----------------|  
-|Filtro|Mostra o filtro atual aplicado ao relatório, como o intervalo de horas de início.|  
+|Filtrar|Mostra o filtro atual aplicado ao relatório, como o intervalo de horas de início.|  
 |Informações de Execução|Mostra a hora de início, a hora de término e a duração para cada execução do pacote. Você pode exibir uma lista de valores de parâmetros que foram usados com uma execução de pacote, como valores que foram transmitidos a um pacote filho usando a tarefa Executar Pacote. Para exibir a lista de parâmetros, clique em Visão Geral.|  
   
  Para obter mais informações sobre como usar a tarefa Executar Pacote para disponibilizar valores para um pacote filho, consulte [Tarefa Executar Pacote](control-flow/execute-package-task.md).  
@@ -60,7 +60,7 @@ ms.locfileid: "48096166"
   
  O relatório exibe as seções de informações a seguir.  
   
-|Seção|Description|  
+|Seção|Descrição|  
 |-------------|-----------------|  
 |Filtrar|Mostra o filtro atual aplicado ao relatório, como conexões com uma cadeia de caracteres especificada e o intervalo de **Hora da Última Falha** .<br /><br /> Você define o intervalo de **Hora da Última Falha** para exibir apenas as falhas de conexão que ocorreram durante um intervalo de datas. O intervalo pode abranger vários dias, meses ou anos.|  
 |Detalhes|Mostra a cadeia de conexão, o número de execuções em que uma conexão falhou, e a data da última falha na conexão.|  

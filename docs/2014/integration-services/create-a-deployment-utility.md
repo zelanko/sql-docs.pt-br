@@ -11,15 +11,15 @@ helpviewer_keywords:
 - deploying packages [Integration Services], deployment utility
 - deployment utility [Integration Services]
 ms.assetid: 354322a4-ae8c-4d92-8e71-42d29dbd0614
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fe7bd725bc7fc9be7289c4834a3df8f44e36c41b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c725218ac66be169d59f2b32f42e156361b13a51
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102196"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392854"
 ---
 # <a name="create-a-deployment-utility"></a>Criar um utilitário de implantação
   A primeira etapa da implantação de pacotes é a criação de um utilitário de implantação para um projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . O utilitário de implantação é uma pasta que contém os arquivos necessários para a implantação dos pacotes em um projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] em um servidor diferente. O utilitário de implantação é criado no computador no qual o projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] é armazenado.  
@@ -30,7 +30,7 @@ ms.locfileid: "48102196"
   
  A tabela a seguir lista as propriedades do utilitário de implantação.  
   
-|Propriedade|Description|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |AllowConfigurationChange|Um valor que especifica se as configurações podem ser atualizadas durante a implantação.|  
 |CreateDeploymentUtility|Um valor que especifica se um utilitário de implantação do pacote é criado quando o projeto é compilado. Essa propriedade deve ser `True` para criar um utilitário de implantação.|  
@@ -50,7 +50,7 @@ ms.locfileid: "48102196"
   
 4.  Para atualizar as configurações do pacote quando os pacotes são implantados, defina **AllowConfigurationChanges** para `True`.  
   
-5.  Definir `CreateDeploymentUtility` para `True`.  
+5.  Defina `CreateDeploymentUtility` como `True`.  
   
 6.  Opcionalmente, atualize o local do utilitário de implantação modificando a propriedade do `DeploymentOutputPath`.  
   
@@ -61,9 +61,9 @@ ms.locfileid: "48102196"
 9. Visualize o progresso da compilação e os erros de compilação na janela **Saída** .  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurações de pacote](../../2014/integration-services/package-configurations.md)   
+ [Configurações do Pacote](../../2014/integration-services/package-configurations.md)   
  [Criar configurações de pacote](../../2014/integration-services/create-package-configurations.md)   
- [Implantar pacotes usando o utilitário de implantação](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md)   
+ [Implantar pacotes por meio do utilitário de implantação](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md)   
  [Implantação de pacote &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
   
   

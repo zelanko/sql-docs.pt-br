@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - XML Source Editor
 ms.assetid: 2ddb97c2-1e43-478f-8872-b6efd41b931e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3126888e0e2d64d2091ace450c276881c408259b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8369b2cb34c6355d9957e2a41ed382b25b11f537
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111736"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389524"
 ---
 # <a name="xml-source-editor-error-output-page"></a>Editor de Origem XML (página Saída de Erro)
   Use a página **Saída de Erro** da caixa de diálogo **Editor de Origem XML** , para selecionar opções de manipulação de erros e definir propriedades em colunas de saída de erros.  
@@ -37,7 +37,7 @@ ms.locfileid: "48111736"
  **Erro**  
  Especifique o que deve acontecer quando ocorre um erro: ignorar a falha, redirecionar a linha ou causar falha no componente.  
   
- **Tópicos Relacionados:** [Tratamento de erros em dados](data-flow/error-handling-in-data.md)  
+ **Tópicos relacionados:** [Tratamento de erro em dados](data-flow/error-handling-in-data.md)  
   
  **Truncation**  
  Especifique o que deve acontecer quando ocorre um truncamento: ignorar a falha, redirecionar a linha ou causar falha do componente.  
@@ -53,8 +53,8 @@ ms.locfileid: "48111736"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de origem XML &#40;página do Gerenciador de Conexão&#41;](../../2014/integration-services/xml-source-editor-connection-manager-page.md)   
- [Editor de origem XML &#40;página de colunas&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
+ [Editor de Origem XML &#40;Página Gerenciador de Conexões&#41;](../../2014/integration-services/xml-source-editor-connection-manager-page.md)   
+ [Editor de Origem XML &#40;Página Colunas&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
  [Extrair dados por meio da origem XML](data-flow/extract-data-by-using-the-xml-source.md)  
   
   

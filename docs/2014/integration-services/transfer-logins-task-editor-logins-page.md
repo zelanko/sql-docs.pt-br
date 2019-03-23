@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Logins Task Editor
 ms.assetid: bf244c24-bd45-4ece-b66b-78b488f35c5b
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 877d7d8e4831a785586680ce57d21975443da645
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 131c74b2637fb0181e55838b1430fb0b33a14d3f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070046"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388534"
 ---
 # <a name="transfer-logins-task-editor-logins-page"></a>Editor da Tarefa Transferir Logons (página Logons)
   Use a página **Logons** da caixa de diálogo **Editor da Tarefa de Transferir Logons** para especificar as propriedades para copiar um ou mais logons [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de uma instância de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para outra. Para obter mais informações sobre essa tarefa, consulte [Tarefa Transferir Logons](control-flow/transfer-logins-task.md).  
@@ -38,7 +38,7 @@ ms.locfileid: "48070046"
  **LoginsToTransfer**  
  Selecione os logons [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para copiar da fonte para o servidor de destino. As opções desta propriedade estão listadas na seguinte tabela:  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**AllLogins**|Todos os logons [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no servidor de origem serão copiados para o servidor de destino.|  
 |**SelectedLogins**|Apenas os logons especificados com **LoginsList** serão copiados para o servidor de destino.|  
@@ -55,7 +55,7 @@ ms.locfileid: "48070046"
   
  As opções desta propriedade estão listadas na seguinte tabela:  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**FailTask**|A tarefa irá falhar se já existirem logons com o mesmo nome no servidor de destino.|  
 |**Overwrite**|A tarefa irá substituir logons de mesmo nome no servidor de destino.|  
@@ -67,9 +67,9 @@ ms.locfileid: "48070046"
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Tarefas do Integration Services](control-flow/integration-services-tasks.md)   
- [Transferir logons Editor da tarefa &#40;página geral&#41;](general-page-of-integration-services-designers-options.md)   
- [Página expressões](expressions/expressions-page.md)   
- [Gerenciador de Conexão do SMO](connection-manager/smo-connection-manager.md)   
+ [Editor da Tarefa Transferir Logons &#40;Página Geral&#41;](general-page-of-integration-services-designers-options.md)   
+ [Página Expressões](expressions/expressions-page.md)   
+ [Gerenciador de conexões SMO](connection-manager/smo-connection-manager.md)   
  [Senhas fortes](../relational-databases/security/strong-passwords.md)   
  [Considerações sobre segurança para uma instalação do SQL Server](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   

@@ -8,27 +8,27 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: c4128993-2333-48c7-84b1-e51cdcea393d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ac839255a5c065d312852de582607de4ae0c2949
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 255d805d9fa7a36203f6791da3b01d93174d4268
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199176"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392154"
 ---
 # <a name="create-a-user-defined-role"></a>Criar uma função definida pelo usuário
     
 ### <a name="to-create-a-user-defined-role"></a>Para criar uma função definida pelo usuário  
   
-1.  Abra o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+1.  Abra [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 2.  Clique em **Pesquisador de Objetos** no menu **Exibir** .  
   
 3.  Na barra de ferramentas do Pesquisador de Objetos, clique em **Conectar**e clique em **Mecanismo de Banco de Dados**.  
   
-4.  Na caixa de diálogo **Conectar ao Servidor** , forneça um nome de um servidor e selecione um modo de autenticação. Você pode usar um ponto (.), (local), ou `localhost` para indicar o servidor local.  
+4.  Na caixa de diálogo **Conectar ao Servidor** , forneça um nome de um servidor e selecione um modo de autenticação. Você pode usar um ponto (.), (local) ou `localhost` para indicar o servidor local.  
   
 5.  Clique em **Conectar**.  
   

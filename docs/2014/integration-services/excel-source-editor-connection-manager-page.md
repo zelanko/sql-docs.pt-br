@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Source Editor
 ms.assetid: 428e04e0-ad98-45d0-8345-12ec1b67b2eb
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a247233157dbf83fe29089eff9c67442e00b8809
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1f2389946ac8780fb15fb5708138883ac0219369
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157726"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388054"
 ---
 # <a name="excel-source-editor-connection-manager-page"></a>Editor de Origem do Excel (página Gerenciador de Conexões)
   Use o nó **Gerenciador de Conexões** da caixa de diálogo **Editor de Origem do Excel** para selecionar a pasta de trabalho do [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] para a origem que será usada. A origem do Excel lê os dados de uma planilha ou intervalo nomeado em uma pasta de trabalho existente.  
@@ -40,7 +40,7 @@ ms.locfileid: "48157726"
  **Modo de acesso aos dados**  
  Especifique o método para selecionar os dados da origem.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |Tabela ou exibição|Recupere dados de uma planilha ou intervalo nomeado no arquivo do Excel.|  
 |Nome da tabela ou variável do nome de exibição|Especifique a planilha ou o nome do intervalo em uma variável.<br /><br /> **Informações relacionadas:** [Usar variáveis em pacotes](../../2014/integration-services/use-variables-in-packages.md)|  
@@ -82,8 +82,8 @@ ms.locfileid: "48157726"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de origem do Excel &#40;página de colunas&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
- [Editor de origem do Excel &#40;página de saída de erro&#41;](../../2014/integration-services/excel-source-editor-error-output-page.md)   
+ [Editor de Fonte do Excel &#40;Página Colunas&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
+ [Editor de Origem do Excel &#40;Página Saída de Erro&#41;](../../2014/integration-services/excel-source-editor-error-output-page.md)   
  [Gerenciador de Conexões do Excel](connection-manager/excel-connection-manager.md)   
  [Loop através de arquivos e tabelas do Excel por meio de um contêiner do Loop Foreach](control-flow/foreach-loop-container.md)  
   

@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sorting data [Integration Services]
 - aggregations [Integration Services]
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5fb7bfa7d068d8ea83fab4c98e6e8f733af7985a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 030318d65d469546f946679e9c9173bfdb1a3f36
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361468"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392774"
 ---
 # <a name="data-flow-performance-features"></a>Recursos de desempenho de fluxo de dados
   Este tópico fornece sugestões sobre como projetar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para evitar problemas comuns de desempenho. Este tópico também provê informações sobre recursos e ferramentas que podem ser usados para diagnosticar o desempenho de pacotes.  

@@ -20,15 +20,15 @@ f1_keywords:
 helpviewer_keywords:
 - DTExecUI utility
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5f5b1b235cf3cf3a97198a97ee6a8520a6034635
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 3648798bdbdfb6114fb44b0c4086340bb32d1085
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134666"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374934"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>Referência da interface do usuário do utilitário de Execução de Pacotes (DtExecUI)
   Use o **Utilitário do Pacote de Execução** para executar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . O utilitário executa pacotes que estão armazenados em um dos três locais: o banco de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o Repositório de pacotes [!INCLUDE[ssIS](../../includes/ssis-md.md)] e o sistema de arquivos Essa interface do usuário, que pode ser aberta no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou digitando `dtexecui` em um prompt de comando, é uma alternativa à execução de pacotes usando o **DTExec** ferramenta de prompt de comando.  

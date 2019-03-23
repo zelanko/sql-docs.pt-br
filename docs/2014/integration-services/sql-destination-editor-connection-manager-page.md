@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - SQL Server Destination Editor
 ms.assetid: 423e1654-54af-47c6-ab6f-98670534557d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 73f175bc92c49423cd58bc65ce67712f916b1ab5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 506ed2c0f672d769d5ffb739b1f5109f7a19cf51
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229416"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58383964"
 ---
 # <a name="sql-destination-editor-connection-manager-page"></a>Editor do Destino SQL (página Gerenciador de Conexões)
   Use a página **Gerenciador de Conexões** da caixa de diálogo **Editor de Destinos SQL** para especificar informações de fonte de dados e visualizar os resultados. O destino do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] carrega dados em tabelas ou exibições em um banco de dados do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -48,8 +48,8 @@ ms.locfileid: "48229416"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de destinos SQL &#40;página mapeamentos&#41;](../../2014/integration-services/sql-destination-editor-mappings-page.md)   
- [Editor de destinos SQL &#40;página Avançado&#41;](../../2014/integration-services/sql-destination-editor-advanced-page.md)   
+ [Editor de Destinos SQL &#40;página Mapeamentos&#41;](../../2014/integration-services/sql-destination-editor-mappings-page.md)   
+ [Editor de Destinos SQL &#40;página Avançado&#41;](../../2014/integration-services/sql-destination-editor-advanced-page.md)   
  [Carregar dados em massa por meio do destino do SQL Server](data-flow/bulk-load-data-by-using-the-sql-server-destination.md)  
   
   

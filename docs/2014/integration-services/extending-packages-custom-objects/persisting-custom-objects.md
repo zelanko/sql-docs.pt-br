@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - custom objects [Integration Services], persisting
 ms.assetid: 97c19716-6447-4c1c-b277-cc2e6c1e6a6c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7605e9226803d3c8d8ab322e7141018c053b1310
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 29e265db3d0751f306fcd50125502c287cac8f62
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352290"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392824"
 ---
 # <a name="persisting-custom-objects"></a>Persistência de objetos personalizados
   Você não precisa implementar a persistência personalizada para os objetos personalizados que você criar, desde que suas propriedades usem somente tipos de dados simples como `integer` e `string`. A implementação padrão de persistência salva os metadados para seu objeto junto com os valores de todas as suas propriedades.  

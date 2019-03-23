@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: reference
 ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c3c58f5c81ee876239fa3b5ed0a5cbd9b0164b27
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ecbaa54a723fae6a3c5fd11363bf42f1f2a57da0
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370258"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376464"
 ---
 # <a name="running-and-managing-packages-programmatically"></a>Executando e gerenciando pacotes programaticamente
   Se precisar gerenciar e executar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fora do ambiente de desenvolvimento, você poderá manipular pacotes programaticamente. Nesta abordagem, você tem uma série de opções:  

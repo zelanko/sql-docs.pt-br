@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Configure ODBC Connection Manager dialog box
 ms.assetid: a596eeaf-68b2-4560-b77d-d2f72ddba926
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d48ee0ce47b26e4c873d7982e7e998133d3b668f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a79e359fb941ed847d1dadbf2ae499e06b9e2e29
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111716"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388684"
 ---
 # <a name="odbc-connection-manager-ui-reference"></a>Referência da interface do usuário do Gerenciador de Conexões ODBC
   Use a caixa de diálogo **Configurar Gerenciador de Conexões ODBC** para adicionar uma conexão com uma fonte de dados ODBC.  

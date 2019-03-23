@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - accMsDes
 ms.assetid: b168c64e-c1b5-42d4-a92a-84de1dd0324e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1a1a46e47dc7c40bf3747c4be55290a02bf6d9d8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c552ef16cc2f9502a365ba09c7f8868eccd53396
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770848"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377164"
 ---
 # <a name="access-the-cdc-designer-console"></a>Acessar o CDC Designer Console
   Você pode acessar o CDC Designer Console do computador onde instalou o console. Para obter mais informações sobre a instalação, consulte Instalação.  

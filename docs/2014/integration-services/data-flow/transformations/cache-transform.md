@@ -11,15 +11,15 @@ f1_keywords:
 helpviewer_keywords:
 - Cache transform
 ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ec77c14fee07cc393a19f22405678f601613ad94
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 301a6b6970c03b620783af7ca176de34846557d9
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767198"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377673"
 ---
 # <a name="cache-transform"></a>transformação Cache
   A Transformação Cache gera um conjunto de dados de referência para uma Transformação Pesquisa, gravando dados de uma fonte de dados conectada no fluxo de dados para um gerenciador de conexões de Cache. A transformação Pesquisa executa pesquisas, unindo dados em colunas de entrada de uma fonte de dados conectados com colunas no banco de dados de referência.  

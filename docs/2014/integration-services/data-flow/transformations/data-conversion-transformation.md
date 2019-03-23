@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Data Conversion transformation
 - data types [Integration Services], converting
 ms.assetid: fd515bbc-6f49-4d0c-ae7f-6ea3c3f24a1c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 344b9a24e78960b9eb9f4fece56924b2eb941c0f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 762bf6b25fec66f5281d32ca9c5d15aa6e64ce31
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358588"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374654"
 ---
 # <a name="data-conversion-transformation"></a>transformação Conversão de Dados
   A transformação Conversão de Dados converte os dados de uma coluna de entrada em um tipo diferente de dados e os copia em uma nova coluna de saída. Por exemplo, um pacote pode extrair dados de várias fontes e usar essa transformação para converter colunas em tipos de dados exigidos pelo armazenamento dos dados de destino. Você pode aplicar várias conversões em uma única coluna de entrada.  

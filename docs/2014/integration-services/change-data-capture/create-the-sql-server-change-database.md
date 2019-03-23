@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - oraIns
 ms.assetid: 4f79c24a-e99a-4a06-8637-51eeec406259
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7e95a47f2a2fc7444822c19b67bf2d95626fa62c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 72785cffa01da7bf00248d442b1d3ce4103c45a8
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770968"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391174"
 ---
 # <a name="create-the-sql-server-change-database"></a>Criar o banco de dados de alteração do SQL Server
   Quando você inicia o assistente Nova Instância, a página Criar Banco de Dados CDC é aberta. Use a página Criar Banco de Dados CDC para fornecer informações sobre a nova instância CDC e criar um novo banco de dados de alteração.  

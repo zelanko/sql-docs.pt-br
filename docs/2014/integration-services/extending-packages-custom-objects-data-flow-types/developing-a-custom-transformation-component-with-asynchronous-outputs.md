@@ -20,15 +20,15 @@ helpviewer_keywords:
 - PrimeOutput method
 - data flow components [Integration Services], transformation components
 ms.assetid: 1c3e92c7-a4fa-4fdd-b9ca-ac3069536274
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2bc5b4ab835039b90ef6c43bec3bd781bc5b30b8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5bb52fc5c8a3789cc945a2ea850d0849335917e4
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354347"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389294"
 ---
 # <a name="developing-a-custom-transformation-component-with-asynchronous-outputs"></a>Desenvolvendo um componente de transformação personalizado com saídas assíncronas
   Você usa um componente com saídas assíncronas quando uma transformação só consegue liberar linhas depois de o componente receber todas as suas linhas de saída, ou quando a transformação não gera exatamente uma linha de saída para cada linha recebida como entrada. Por exemplo, a transformação Agregação só consegue calcular uma soma em linhas depois de ler todas as linhas. Em contraste, você pode usar um componente com saídas síncronas a qualquer momento quando modifica cada linha de dados percorrida por ele. Você pode modificar os dados de cada linha estabelecida, ou criar uma ou mais colunas novas, cada qual com um valor para cada linha de entrada. Para obter mais informações sobre a diferença entre componentes síncronos e assíncronos, consulte [Compreender as transformações síncronas e assíncronas](../understanding-synchronous-and-asynchronous-transformations.md).  

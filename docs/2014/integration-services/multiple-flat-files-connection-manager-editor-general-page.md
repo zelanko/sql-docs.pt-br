@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Multiple Flat Files Connection Manager Editor
 ms.assetid: 00129d43-2772-413b-bdf8-ac5de81cf4a5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3c7af9641ffc033c2c7173eaf74884700de7a3ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8d1932d314e8d2c1eb48526d87246da2051bc3b5
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176436"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391634"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-general-page"></a>Editor do Gerenciador de Conexões de Vários Arquivos Simples (página Geral)
   Use a página **Geral** da caixa de diálogo do **Editor do Gerenciador de Conexões de Vários Arquivos Simples** para selecionar um grupo de arquivos que têm o mesmo formato de dados e para especificar seu formato de dados. Uma conexão de vários arquivos simples habilita um pacote a conectar-se com um grupo de arquivos de texto que têm o mesmo formato.  
@@ -52,7 +52,7 @@ ms.locfileid: "48176436"
  **Formato**  
  Indique se será usada formatação delimitada, de largura fixa ou irregular à direita. Todos os arquivos devem ter o mesmo formato de dados.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |Delimitado|As colunas são separadas por delimitadores, especificados na página **Colunas** .|  
 |Largura fixa|As colunas têm uma largura fixa, especificada arrastando as linhas do marcador na página **Colunas** .|  
@@ -64,7 +64,7 @@ ms.locfileid: "48176436"
  **Delimitador de linha de cabeçalho**  
  Selecione na lista de delimitadores de linhas de cabeçalho ou digite o texto do delimitador.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**{CR}{LF}**|A linha do cabeçalho é delimitada por uma combinação de retorno de carro e avanço de linha.|  
 |**{CR}**|A linha do cabeçalho é delimitada por um retorno de carro.|  
@@ -83,8 +83,8 @@ ms.locfileid: "48176436"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor do Gerenciador de Conexão vários arquivos simples &#40;página de colunas&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
- [Editor do Gerenciador de Conexão vários arquivos simples &#40;página Avançado&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   
- [Editor do Gerenciador de Conexão vários arquivos simples &#40;página de visualização&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
+ [Editor do Gerenciador de Conexões de Vários Arquivos Simples &#40;Página Colunas&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
+ [Editor do Gerenciador de Conexões de Vários Arquivos Simples &#40;Página Avançado&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   
+ [Editor do Gerenciador de Conexões de Vários Arquivos Simples &#40;Página Visualização&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
   

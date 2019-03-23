@@ -15,15 +15,15 @@ helpviewer_keywords:
 - running packages [Integration Services]
 - Integration Services, (See also Integration Services packages)
 ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b54c533fd86c780f69583acc2a329d7f348502c7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5a3ecbe615d60a703b66dff78cd77ddfde0a20d1
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798994"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389284"
 ---
 # <a name="execution-of-projects-and-packages"></a>Execução de projetos e pacotes
   Para executar um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , você pode usar uma de várias ferramentas dependendo de onde esses pacotes estão armazenados. As ferramentas estão listadas na tabela abaixo.  

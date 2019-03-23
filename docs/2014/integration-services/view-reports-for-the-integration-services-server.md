@@ -8,18 +8,18 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: dd81edf9-58a9-425a-91ac-2873606e820a
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e9ccae1f9ff9d2ab69408e36d8c8ef1cc071eaf9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4948973576eb0b541892fe84bc86edea1514fe92
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077216"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389044"
 ---
 # <a name="view-reports-for-the-integration-services-server"></a>Exibir relatórios do servidor do Integration Services
-  Na versão atual do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], estão disponíveis em relatórios padrão [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para ajudá-lo a monitorar [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] projetos que foram implantados a [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server.  Para saber mais sobre os relatórios, consulte [Relatórios do servidor do Integration Services](../../2014/integration-services/reports-for-the-integration-services-server.md).  
+  Na versão atual do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], os relatórios padrão estão disponíveis no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para ajudar a monitorar projetos do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , que foram implantados no servidor do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  Para saber mais sobre os relatórios, consulte [Relatórios do servidor do Integration Services](../../2014/integration-services/reports-for-the-integration-services-server.md).  
   
 ### <a name="to-view-reports-for-the-integration-services-server"></a>Para exibir relatórios do servidor do Integration Services  
   

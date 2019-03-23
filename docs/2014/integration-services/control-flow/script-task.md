@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Script task [Integration Services], about Script task
 - Script task [Integration Services]
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fc99090255eb0667c09f180be0b52d570b6cb682
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 7c710065bf0a87b5ec3850010344f2ef5114022e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371318"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376304"
 ---
 # <a name="script-task"></a>Tarefa Script
   A tarefa Script fornece código para execução de funções que não estão disponíveis nas tarefas internas e transformações fornecidas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . A tarefa Script também pode combinar funções em um script em vez de usar tarefas e transformações múltiplas. A tarefa Script é usada para trabalho que deve ser feito uma vez em um pacote (ou uma vez por objeto enumerado), e não para trabalho a ser feito uma vez por linha de dados.  

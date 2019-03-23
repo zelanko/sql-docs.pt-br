@@ -11,15 +11,15 @@ f1_keywords:
 helpviewer_keywords:
 - Web Service task [Integration Services]
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ee28bbfa3cea482f934b3491f51e0caf601f5465
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 86b86039f3e308953d41f5a463b0716a76d5c361
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363158"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377304"
 ---
 # <a name="web-service-task"></a>Tarefa Serviços Web
   A tarefa Serviço Web executa um método de serviço Web. Você pode usar essa tarefa para os seguintes propósitos:  
@@ -82,7 +82,7 @@ ms.locfileid: "53363158"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WebServiceTask.WebServiceTask>  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- Vídeo, [como: Chamar um serviço Web usando a tarefa de serviço da Web (vídeo do SQL Server)](https://go.microsoft.com/fwlink/?LinkId=259642), em technet.microsoft.com.  
+ Vídeo, [Como Chamar um serviço Web usando a tarefa de serviço da Web (vídeo do SQL Server)](https://go.microsoft.com/fwlink/?LinkId=259642), em technet.microsoft.com.  
   
  Resposta da Curadoria, [Consumir serviços Web no SSIS usando scripts](https://go.microsoft.com/fwlink/?LinkId=321996), em curatedviews.cloudapp.net.  
   

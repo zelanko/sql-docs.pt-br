@@ -13,15 +13,15 @@ helpviewer_keywords:
 - locale-sensitive parsing [Integration Services]
 - fast parse [Integration Services]
 ms.assetid: fa3975ce-9d21-408a-857d-f85e30af27b0
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 92dc9782a00a55a9409bd5e87dd00a423002d200
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a89b37f2210b2a80d22747a816e4f937cbc54ee1
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105436"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375634"
 ---
 # <a name="numeric-data-formats"></a>Formatos de dados numéricos
   A análise rápida fornece uma análise de dados rápida e simples a um conjunto de rotinas sem diferenciação de localidade. A análise rápida suporta apenas um conjunto limitado de formatos para tipos de dados de números inteiros.  

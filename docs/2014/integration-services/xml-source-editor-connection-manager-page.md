@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - XML Source Editor
 ms.assetid: e6507403-a3ce-4b6f-91fc-a7de9f7b6283
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7c10a7febfcb5df1f2702498fe30148f1794095b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52933b6bc560ecf2e1d7efda8b54502bafe72a6b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096046"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393883"
 ---
 # <a name="xml-source-editor-connection-manager-page"></a>Editor de Origem XML (página Gerenciador de Conexões)
   Use a página **Gerenciador de Conexões** do **Editor de Origem XML** para especificar um arquivo XML e o XSD que transforma os dados XML.  
@@ -31,10 +31,10 @@ ms.locfileid: "48096046"
  **Modo de acesso aos dados**  
  Especifique o método para selecionar os dados da origem.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |Localização do arquivo XML|Recupera dados de um arquivo XML.|  
-|Arquivo XML de variável|Especifica o nome de arquivo XML em uma variável.<br /><br /> **Informações relacionadas**: [Usar variáveis em pacotes](../../2014/integration-services/use-variables-in-packages.md)|  
+|Arquivo XML de variável|Especifica o nome de arquivo XML em uma variável.<br /><br /> **Informações relacionadas ao**: [Usar variáveis em pacotes](../../2014/integration-services/use-variables-in-packages.md)|  
 |Dados XML de variável|Recupera dados XML de uma variável.|  
   
  **Usar esquema embutido**  
@@ -68,8 +68,8 @@ ms.locfileid: "48096046"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de origem XML &#40;página de colunas&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
- [Editor de origem XML &#40;página de saída de erro&#41;](../../2014/integration-services/xml-source-editor-error-output-page.md)   
+ [Editor de Origem XML &#40;Página Colunas&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
+ [Editor de Origem XML &#40;Página Saída de Erro&#41;](../../2014/integration-services/xml-source-editor-error-output-page.md)   
  [Extrair dados por meio da origem XML](data-flow/extract-data-by-using-the-xml-source.md)  
   
   

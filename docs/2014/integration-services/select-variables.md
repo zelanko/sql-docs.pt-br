@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Select Variables dialog box
 ms.assetid: 7069a82b-905b-47a5-aee4-6fba24204979
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b25d629c510e6220ee361643502a2e178a7ae172
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: afae34484d4513c9ef6a33435fb023dbb8190fd4
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176136"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390804"
 ---
 # <a name="select-variables"></a>Selecionar variáveis
   Use a caixa de diálogo **Selecionar Variáveis** para especificar as variáveis a serem usadas em uma operação de envio de mensagem na tarefa Fila de Mensagens. A lista das **Variáveis Disponíveis** inclui variáveis do sistema e aquelas definidas por usuários que estão no escopo da tarefa Fila de Mensagens ou no seu contêiner pai. A tarefa usa as variáveis da lista de **Variáveis Selecionadas** .  
@@ -41,7 +41,7 @@ ms.locfileid: "48176136"
  **Nova Variável**  
  Crie uma nova variável.  
   
- **Tópicos relacionados:** [Adicionar variável](../../2014/integration-services/add-variable.md)  
+ **Tópicos relacionados:** [Adicionar Variável](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Tarefa Fila de Mensagens](control-flow/message-queue-task.md)  

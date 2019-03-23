@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.ssis.ssms.ispackageprop.general.f1
 - sql12.ssis.ssms.packageproperties.f1
 ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 727c6e221accc9cc0d1ce46a5907a5e450d6e21b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ab3cdf0079d0c01d95b73339e1fce8960658f93a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813348"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374374"
 ---
 # <a name="package-properties-dialog-box"></a>Caixa de diálogo Propriedades do Pacote
   Use a caixa de diálogo **Propriedades do Pacote** para exibir propriedades de pacotes individuais armazenados no servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  

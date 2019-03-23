@@ -13,15 +13,15 @@ helpviewer_keywords:
 - copying columns
 - Copy Column transformation
 ms.assetid: 1c72a313-9026-46bc-a57f-c6b3f47346f8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c8fa6132b9b9dbf439a6b177e6f7d18214e9df1c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7ebdcc68c4fe8c4782251e2f4e5896e4557e23e6
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817996"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374343"
 ---
 # <a name="copy-column-transformation"></a>transformação Copiar Coluna
   A transformação Copiar Coluna cria novas colunas com a cópia de colunas de entrada e a adição de novas colunas à saída da transformação. Mais tarde no fluxo de dados, transformações diferentes podem ser aplicadas às cópias da coluna. Por exemplo, você pode usar a transformação Copiar Coluna para criar uma cópia de uma coluna e, em seguida, converter os dados copiados em caracteres maiúsculos por meio da transformação Mapa de Caracteres ou aplicar agregações à coluna nova por meio da transformação Agregação.  

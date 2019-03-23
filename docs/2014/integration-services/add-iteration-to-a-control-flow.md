@@ -15,15 +15,15 @@ helpviewer_keywords:
 - iterations [Integration Services]
 - For Loop containers
 ms.assetid: eb3a7494-88ae-4165-9d0f-58715eb1734a
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4093d5ce5feb9a5498fbc6213e5c63cc8bf83536
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26c555b22ae219eeec9e0b1670f407c2504ac7f7
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48047837"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389244"
 ---
 # <a name="add-iteration-to-a-control-flow"></a>Adicionar iteração a um fluxo de controle
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclui o contêiner Loop For, um elemento de fluxo de controle que torna simples a inclusão de um looping que repete condicionalmente um fluxo de controle em um pacote. Para obter mais informações, consulte [Contêiner Loop For](control-flow/for-loop-container.md).  
@@ -32,7 +32,7 @@ ms.locfileid: "48047837"
   
  O contêiner Loop For não fornece nenhuma funcionalidade, ele só fornece a estrutura na qual você cria o fluxo de controle repetível. Para fornecer funcionalidade de contêiner, você deve incluir no mínimo uma tarefa no contêiner Loop For. Para obter mais informações, consulte [Tarefas do Integration Services](control-flow/integration-services-tasks.md).  
   
- O contêiner Loop For pode incluir um fluxo de controle com várias tarefas, além de outros contêineres. Adicionar tarefas e contêineres ao contêiner Loop For é semelhante a adicioná-las a um pacote, exceto que você arrasta as tarefas e contêineres para o contêiner Loop Forem e não para o pacote. Se o contêiner Loop For incluir mais de uma tarefa ou contêiner, você poderá conectá-los usando as restrições de precedência, assim como faria em um pacote. Para obter mais informações, consulte [Precedence Constraints](control-flow/precedence-constraints.md).  
+ O contêiner Loop For pode incluir um fluxo de controle com várias tarefas, além de outros contêineres. Adicionar tarefas e contêineres ao contêiner Loop For é semelhante a adicioná-las a um pacote, exceto que você arrasta as tarefas e contêineres para o contêiner Loop Forem e não para o pacote. Se o contêiner Loop For incluir mais de uma tarefa ou contêiner, você poderá conectá-los usando as restrições de precedência, assim como faria em um pacote. Para obter informações, consulte [Restrições de precedência](control-flow/precedence-constraints.md).  
   
 ## <a name="using-expressions-in-for-loop-configuration"></a>Usando expressões na configuração de Loop For  
  Quando você configura o contêiner Loop For especificando uma condição de avaliação, valor de inicialização ou atribuição de valor, pode usar expressões ou literais.  

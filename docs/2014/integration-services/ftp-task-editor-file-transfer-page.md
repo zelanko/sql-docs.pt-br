@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - File Transfer Protocol Task Editor
 ms.assetid: 37e52220-feb2-474c-ad88-fa1b1059acd4
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f4de5cf0a8e932c30c0eea619b185aa37f0cf875
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a7797245901cd4d01f82995defcf44498fba1e1f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533334"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390024"
 ---
 # <a name="ftp-task-editor-file-transfer-page"></a>Editor da Tarefa FTP (página Transferência de Arquivos)
   Use a página **Transferência de Arquivos** da caixa de diálogo **Editor da Tarefa FTP** para configurar a operação FTP executada pela tarefa.  
@@ -70,13 +70,13 @@ ms.locfileid: "52533334"
  **RemoteVariable**  
  Selecione uma variável definida pelo usuário existente ou clique em \<**Nova variável...**> para criar uma variável definida pelo usuário.  
   
- **Tópicos relacionados:** [Serviços de integração &#40;SSIS&#41; variáveis](integration-services-ssis-variables.md), Adicionar variável  
+ **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), Adicionar variável  
   
 ### <a name="isremotepathvariable--false"></a>IsRemotePathVariable = False  
  **RemotePath**  
  Selecione um gerenciador de conexões FTP existente ou clique em \<**Nova conexão…**> para criar um gerenciador de conexões.  
   
- **Tópicos relacionados:** [Gerenciador de Conexão de FTP](connection-manager/ftp-connection-manager.md), [Editor do Gerenciador de Conexão de FTP](../../2014/integration-services/ftp-connection-manager-editor.md)  
+ **Tópicos relacionados:** [Gerenciador de Conexões de FTP](connection-manager/ftp-connection-manager.md), [Editor do Gerenciador de Conexões de FTP](../../2014/integration-services/ftp-connection-manager-editor.md)  
   
 ## <a name="islocalpathvariable-dynamic-options"></a>Opções dinâmicas de IsLocalPathVariable  
   
@@ -84,7 +84,7 @@ ms.locfileid: "52533334"
  **LocalVariable**  
  Selecione uma variável definida pelo usuário existente ou clique em \<**Nova variável...**> para criar uma variável.  
   
- **Tópicos relacionados:** [Serviços de integração &#40;SSIS&#41; variáveis](integration-services-ssis-variables.md), Adicionar variável  
+ **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), Adicionar variável  
   
 ### <a name="islocalpathvariable--false"></a>IsLocalPathVariable = False  
  **LocalPath**  

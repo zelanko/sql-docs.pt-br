@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Conditional Split transformation
 - route rows to different outputs [Integration Services]
 ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f6d5c075898bc503a58c6b90641788d01e9b97d0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: dcfbbac9eacc96384a723088cf8f20cc939bdc48
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814903"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374684"
 ---
 # <a name="conditional-split-transformation"></a>Transformação Divisão Condicional
   A transformação Divisão Condicional pode rotear linhas de dados para saídas diferentes, dependendo do conteúdo dos dados. A implementação da transformação Divisão Condicional é semelhante a uma estrutura de decisão CASE em uma linguagem de programação. A transformação avalia expressões e, com base nos resultados, direciona a linha de dados para a saída especificada. Essa transformação também fornece uma saída padrão, de forma que, se uma linha não corresponder a nenhuma expressão, ela será direcionada para a saída padrão.  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - counters [Integration Services]
 - data flow engine [Integration Services]
 ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 70694b2814ab23ad13e29a1348e7bfb73d884fbc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 79c9e433a6b5bcf9babee0060fdf028775e0e8a4
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367668"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388174"
 ---
 # <a name="performance-counters"></a>Contadores de desempenho
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instala um conjunto de contadores de desempenho que podem ser usados para monitorar o desempenho do mecanismo de fluxo de dados. Por exemplo, é possível observar o contador "Buffers em spool" para determinar se os buffers de dados estão sendo gravados temporariamente no disco durante a execução de um pacote. Essa troca reduz o desempenho e indica que o computador não tem memória suficiente.  

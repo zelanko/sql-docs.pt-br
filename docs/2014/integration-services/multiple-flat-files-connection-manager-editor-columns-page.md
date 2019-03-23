@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Multiple Flat Files Connection Manager Editor
 ms.assetid: ad0cb668-0df2-4d4e-9a20-d20692a0b67a
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8c349dc8c445d2ac117533fde3b1c47c6761d58b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 241bd91cf05f3a7317dcdbfe6684b7266fee947c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058176"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58373935"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-columns-page"></a>Editor do Gerenciador de Conexões de Vários Arquivos Simples (página Colunas)
   Use o nó **Colunas** da caixa de diálogo **Editor do Gerenciador de Conexões de Vários Arquivos Simples** para especificar as informações da linha e da coluna e visualizar o primeiro arquivo selecionado.  
@@ -40,7 +40,7 @@ ms.locfileid: "48058176"
  **Delimitador de linha**  
  Selecione na lista de delimitadores de linha disponíveis ou digite o texto delimitador.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**{CR}{LF}**|As linhas são delimitadas por uma combinação de retorno de carro e avanço de linha.|  
 |**{CR}**|As linhas são delimitadas por um retorno de carro.|  
@@ -54,7 +54,7 @@ ms.locfileid: "48058176"
  **Delimitador de coluna**  
  Selecione na lista de delimitadores de coluna disponíveis ou digite o texto delimitador.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**{CR}{LF}**|As colunas são delimitadas por uma combinação de retorno de carro e alimentação de linha.|  
 |**{CR}**|As colunas são delimitadas por um retorno de carro.|  
@@ -95,7 +95,7 @@ ms.locfileid: "48058176"
  **Delimitador de linha**  
  Selecione na lista de delimitadores de linha disponíveis ou digite o texto delimitador.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**{CR}{LF}**|As linhas são delimitadas por uma combinação de retorno de carro e avanço de linha.|  
 |**{CR}**|As linhas são delimitadas por um retorno de carro.|  
@@ -111,8 +111,8 @@ ms.locfileid: "48058176"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor do Gerenciador de Conexão vários arquivos simples &#40;página geral&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor do Gerenciador de Conexão vários arquivos simples &#40;página Avançado&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   
- [Editor do Gerenciador de Conexão vários arquivos simples &#40;página de visualização&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
+ [Editor do Gerenciador de Conexões de Vários Arquivos Simples &#40;Página Geral&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor do Gerenciador de Conexões de Vários Arquivos Simples &#40;Página Avançado&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   
+ [Editor do Gerenciador de Conexões de Vários Arquivos Simples &#40;Página Visualização&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
   

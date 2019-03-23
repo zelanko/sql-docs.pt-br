@@ -13,25 +13,25 @@ helpviewer_keywords:
 - security [Integration Services],protection levels
 - protection level for packages [Integration Services]
 ms.assetid: 904a5580-82ba-4a26-b0c5-d1c989975f61
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 766a0c03bc47527d27fec6e50f2525284a6bdd0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e700eed316e9dce3e5d87f6014913505376f535f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204146"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388104"
 ---
 # <a name="set-or-change-the-protection-level-of-packages"></a>Definir ou alterar o nível de proteção de pacotes
   Para controlar o acesso ao conteúdo de pacotes e aos valores confidenciais que eles contêm, como senhas, defina o valor da propriedade `ProtectionLevel`. Os pacotes contidos em um projeto precisam ter o mesmo nível de proteção que o projeto, para criar o projeto. Se você alterou os parâmetros da propriedade `ProtectionLevel` no projeto, precisa atualizar manualmente os parâmetros de propriedade para os pacotes.  
   
  Para obter informações sobre como determinar a `ProtectionLevel` as configurações que são apropriadas para pacotes em diferentes fases no ciclo de vida do pacote, consulte [controle de acesso para dados confidenciais em pacotes](security/access-control-for-sensitive-data-in-packages.md). Para obter uma visão geral dos recursos de segurança no [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], consulte [Visão geral de segurança &#40;Integration Services&#41;](security/security-overview-integration-services.md).  
   
- Os procedimentos neste tópico descrevem como usar o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ou o utilitário de prompt de comando dtutil para alterar o `ProtectionLevel` propriedade.  
+ Os procedimentos deste tópico descrevem como usar o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ou o utilitário de prompt de comando dtutil para alterar a propriedade `ProtectionLevel`.  
   
 > [!NOTE]  
->  Além dos procedimentos neste tópico, normalmente você pode definir ou alterar o `ProtectionLevel` propriedade de um pacote ao importar ou exportar o pacote. Você também pode alterar a propriedade de `ProtectionLevel` de um pacote ao usar o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para salvar um pacote.  
+>  Além dos procedimentos deste tópico, tipicamente você pode definir ou alterar a propriedade `ProtectionLevel` de um pacote ao importar ou exportar o pacote. Você também pode alterar a propriedade de `ProtectionLevel` de um pacote ao usar o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para salvar um pacote.  
   
 ### <a name="to-set-or-change-the-protection-level-of-a-package-in-sql-server-data-tools"></a>Para definir ou alterar o nível de proteção de um pacote nas Ferramentas de Dados do SQL Server  
   
@@ -57,13 +57,13 @@ ms.locfileid: "48204146"
   
 3.  Abra uma janela do prompt de comando.  
   
-4.  No prompt de comando, navegue até a pasta que contém o pacote ou pacotes para o qual você deseja definir o `ProtectionLevel` propriedade.  
+4.  No prompt de comando, navegue para a pasta que contém o pacote ou pacotes para os quais você deseja definir a propriedade `ProtectionLevel`.  
   
      Os exemplos de sintaxe mostrados na etapa a seguir assumem que essa é a pasta atual.  
   
 5.  Defina ou altere o nível de proteção do pacote ou pacotes usando um comando semelhante ao dos seguintes exemplos:  
   
-    -   O seguinte comando define o `ProtectionLevel` propriedade de um pacote individual no sistema de arquivos como nível 2, "Criptografar dados confidenciais com senha", com a senha, "senha forte":  
+    -   O comando a seguir define a propriedade `ProtectionLevel` de um pacote individual no sistema de arquivos como nível 2, "Criptografar dados confidenciais com senha", com a senha, "senha forte":  
   
          `dtutil.exe /file "C:\Package.dtsx" /encrypt file;"C:\Package.dtsx";2;strongpassword`  
   
@@ -74,6 +74,6 @@ ms.locfileid: "48204146"
          Se você usar um comando semelhante em um arquivo em lotes, digite o espaço reservado do arquivo, "%f", como "%%f" no arquivo em lotes.  
   
 ## <a name="see-also"></a>Consulte também  
- [Utilitário dtutil](dtutil-utility.md)  
+ [dtutil Utility](dtutil-utility.md)  
   
   

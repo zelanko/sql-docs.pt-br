@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Web Service Task Editor
 ms.assetid: 4d7df283-430d-4f0f-9dd4-5909554cd5eb
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d349947ed06ec406dad4f928cdbbc97838aec409
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4890f4c56e207432a5b64cd04a0bfeac15135b1b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538672"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374744"
 ---
 # <a name="web-service-task-editor-general-page"></a>Editor da Tarefa Serviço da Web (página Geral)
   Use a página **Geral** da caixa de diálogo **Editor da Tarefa Serviços da Web** para especificar um gerenciador de conexões HTTP, o local do arquivo WSDL (linguagem WSDL) usado pela tarefa, descrever a tarefa Serviços da Web e baixar o arquivo WSDL.  

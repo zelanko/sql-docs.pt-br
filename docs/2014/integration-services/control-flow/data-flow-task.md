@@ -15,15 +15,15 @@ helpviewer_keywords:
 - data flow [Integration Services], Data Flow task
 - Integration Services, performance
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2afaa918e25c9473513dfdac82cde3223e83df38
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: eab0ef5519aea7f563104d61146ed5f441d15981
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366858"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392095"
 ---
 # <a name="data-flow-task"></a>Tarefa de Fluxo de Dados
   A tarefa de Fluxo de Dados encapsula o mecanismo de fluxo de dados que move dados entre as origens e os destinos, permitindo que o usuário transforme, limpe e modifique os dados à medida que são movidos. A adição de uma tarefa de Fluxo de Dados em um pacote de fluxo de controle permite que o pacote extraia, transforme e carregue dados.  
@@ -86,7 +86,7 @@ ms.locfileid: "53366858"
   
  Muitos eventos de log gravam várias entradas, e as mensagens para várias entradas de log contêm dados complexos. Para facilitar a compreensão e comunicar o conteúdo de mensagens complexas, você pode analisar a mensagem de texto. Dependendo do local dos logs, você poderá usar as instruções Transact-SQL ou um componente Script para separar o texto complexo em colunas ou em outros formatos que considere mais útil.  
   
- Por exemplo, a tabela a seguir contém a mensagem "Foram fornecidas linhas para um componente de fluxo de dados como entrada. :  : 1185: Saída de origem OLE DB: 1180: Classificação: 1181: Classificar entrada: 76", analisado em colunas. A mensagem foi gravada pelo evento `OnPipelineRowsSent` quando foram enviadas linhas da origem OLE DB para a transformação Classificação.  
+ Por exemplo, a tabela a seguir contém a mensagem "Foram fornecidas linhas para um componente de fluxo de dados como entrada. :  : 1185 : Saída de origem OLE DB: 1180 : Classificação: 1181 : Classificar entrada: 76", analisado em colunas. A mensagem foi gravada pelo evento `OnPipelineRowsSent` quando foram enviadas linhas da origem OLE DB para a transformação Classificação.  
   
 |coluna|Descrição|Valor|  
 |------------|-----------------|-----------|  

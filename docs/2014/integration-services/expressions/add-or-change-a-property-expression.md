@@ -10,15 +10,15 @@ helpviewer_keywords:
 - expressions [Integration Services], creating
 - expressions [Integration Services], property expressions
 ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8144f0a050afd484d77a12c13780de461587513b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: bd9095a11ef304c256b6c5a60560a71866e744fd
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807378"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390134"
 ---
 # <a name="add-or-change-a-property-expression"></a>Adicionar ou alterar uma expressão de propriedade
   Você pode criar expressões de propriedade para pacotes, tarefas contêineres Loop Foreach, contêineres Loop For, contêineres de Sequência, manipuladores de eventos, gerenciadores de conexões de nível de pacote e projeto, e provedores de logs.  

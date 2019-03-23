@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Model Training Editor
 ms.assetid: 0891254c-74c2-4482-b41a-fd69b1677b23
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 71f7bf54684a762d72689e37a8ca324a49b7a750
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2c2dc53c1bd3644e1c7dfdb9a4ff1310f6caa7e1
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198126"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58382154"
 ---
 # <a name="data-mining-model-training-editor-columns-tab"></a>Editor de Treinamento de Modelo de Mineração de Dados (guia Colunas)
   Use a página **Colunas** da caixa de diálogo do **Editor de Treinamento do Modelo de Mineração de Dados** para mapear colunas de entrada para colunas na estrutura de mineração.  
@@ -42,6 +42,6 @@ ms.locfileid: "48198126"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de treinamento do modelo de mineração de dados &#40;guia de Conexão&#41;](../../2014/integration-services/data-mining-model-training-editor-connection-tab.md)  
+ [Editor de Treinamento de Modelo de Mineração de Dados &#40;guia Conexão&#41;](../../2014/integration-services/data-mining-model-training-editor-connection-tab.md)  
   
   

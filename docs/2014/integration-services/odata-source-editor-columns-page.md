@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - Sql12.dts.designer.odatasource.columns.f1
 ms.assetid: d640e9e4-86c3-4cb7-a6c2-e82624303696
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a00e3658d64723b0d1e120d95f76ccec4d5a5f52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4c3b66b5b2a9595deffce79ed0e23e03a65fdeaf
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149566"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391534"
 ---
 # <a name="odata-source-editor-columns-page"></a>Editor de Origem do OData (página Colunas)
   Use a página **Colunas** da caixa de diálogo **Editor de Origem OData** para selecionar as colunas externas (origem) a serem incluídas na saída e para mapeá-las para as colunas de saída.  
@@ -34,8 +34,8 @@ ms.locfileid: "48149566"
  Forneça um nome exclusivo para cada coluna de saída. O padrão é o nome da coluna externa (origem) selecionada; porém, é possível escolher qualquer nome descritivo exclusivo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Editor de origem OData &#40;página de Conexão&#41;](../../2014/integration-services/odata-source-editor-connection-page.md)   
- [Editor de origem OData &#40;página de saída de erro&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
+ [Editor de Origem do OData &#40;Página Conexão&#41;](../../2014/integration-services/odata-source-editor-connection-page.md)   
+ [Editor de Fonte OData &#40;Página Saída de Erro&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
  [Origem do OData](data-flow/odata-source.md)   
  [Gerenciador de Conexões OData](connection-manager/odata-connection-manager.md)  
   

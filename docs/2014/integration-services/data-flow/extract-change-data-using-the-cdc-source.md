@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 604fbafb-15fa-4d11-8487-77d7b626eed8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a96c531302c92e61e2a2e0b9feb875d0a1097c43
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e0290e656105ebb33a7f73fc043beed64f1c25bc
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805188"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374484"
 ---
 # <a name="extract-change-data-using-the-cdc-source"></a>Extrair dados de alteração por meio da origem CDC
   Para adicionar e configurar uma origem de CDC, o pacote já deve incluir pelo menos uma tarefa de Fluxo de Dados e uma tarefa Controle de CDC.  
@@ -48,7 +48,7 @@ ms.locfileid: "52805188"
   
     -   **Tudo com valores antigos**: Retorna as alterações no intervalo de processamento de CDC atual incluindo os valores antigos (**antes da atualização**). Para cada operação de atualização, haverá duas linhas, uma com os valores antes da atualização e outra com o valor depois da atualização.  
   
-    -   **NET**: Retorna apenas uma alteração de linha por linha de origem modificada no intervalo de processamento CDC atual. Se uma linha de origem tiver sido atualizada várias vezes, a alteração combinada será gerada (por exemplo, insert+update é gerado como uma única atualização e update+delete é gerado como uma única exclusão). Ao trabalhar em modo de processamento de alteração Líquido, é possível dividir as alterações para saídas Excluir, Inserir e Atualizar, e tratá-las em paralelo porque a única linha de origem aparece em mais de uma saída.  
+    -   **Net**: Retorna apenas uma alteração de linha por linha de origem modificada no intervalo de processamento CDC atual. Se uma linha de origem tiver sido atualizada várias vezes, a alteração combinada será gerada (por exemplo, insert+update é gerado como uma única atualização e update+delete é gerado como uma única exclusão). Ao trabalhar em modo de processamento de alteração Líquido, é possível dividir as alterações para saídas Excluir, Inserir e Atualizar, e tratá-las em paralelo porque a única linha de origem aparece em mais de uma saída.  
   
     -   **Líquido com máscara atualizada**: Esse modo é semelhante ao modo líquido normal, mas também adiciona colunas Boolianas com o nome padrão **_ $\<nome da coluna >\_Changed** que indica a linha de alteração de colunas alteradas na atual.  
   

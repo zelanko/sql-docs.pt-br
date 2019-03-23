@@ -1,5 +1,5 @@
 ---
-title: 'Etapa 4: Adicionando configurações de pacote | Microsoft Docs'
+title: 'Etapa 4: Adicionar configurações de pacote | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d8284f25e54cadbedd4cb14e07970af249fe4521
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c1d98187fbe76e726dadfe163d75a27c51fd60e9
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364008"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388325"
 ---
 # <a name="step-4-adding-package-configurations"></a>Etapa 4: Adicionando configurações de pacote
   Nessa tarefa, você adicionará uma configuração a cada pacote. As configurações atualizam os valores das propriedades e dos objetos do pacote em tempo de execução.  
@@ -129,7 +129,7 @@ ms.locfileid: "53364008"
 12. Na caixa de diálogo **Organizador de Configurações do Pacote** , verifique se a opção LoadXMLData EV Configuration é a primeira da lista e LoadXMLData Configuration é a segunda da lista e clique em **Fechar**.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Etapa 5: Testando os pacotes atualizados](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
+ [Etapa 5: Testar os pacotes atualizados](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
 ![Ícone do Integration Services (pequeno)](media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   

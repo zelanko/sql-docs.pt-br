@@ -10,15 +10,15 @@ helpviewer_keywords:
 - incremental loads [SQL Server change data capture]
 - change data capture [SQL Server], Integration Services and
 ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6a65ec13f342dc890511e7b99258a41456cd989b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 391bf9204beeb6222a6e736125e5630bd5b1565e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362388"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375873"
 ---
 # <a name="change-data-capture-ssis"></a>Change Data Capture (SSIS)
   No [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o change data capture oferece uma solução efetiva para o desafio de executar de forma eficiente as cargas incrementais de tabelas de origem para data marts e data warehouses.  

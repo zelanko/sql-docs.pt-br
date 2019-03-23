@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: 960c351a-ccb9-4e52-acd4-442246a3a328
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5369cadb43cd49bc8dfa045282e5716d0dd04744
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 208280aa29edc8671f960ad689cdcaffa8175260
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189016"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393104"
 ---
 # <a name="configure-data-viewer-scatter-plot-tab"></a>Configurar Visualizador de Dados (guia Dispersão)
   Use a guia **Dispersão (x, y)** da caixa de diálogo **Configurar Visualizador de Dados** para especificar duas colunas para plotar uma em relação à outra. Um gráfico de dispersão plota os valores dos dados de duas colunas numéricas uma em relação à outra. Cada registro de dados se torna um ponto na plotagem. O gráfico reflete o conteúdo de apenas um buffer.  
@@ -38,6 +38,6 @@ ms.locfileid: "48189016"
  [Configurar Visualizador de dados &#40;guia de grade&#41;](../../2014/integration-services/configure-data-viewer-grid-tab.md)   
  [Configurar Visualizador de dados &#40;guia de histograma&#41;](../../2014/integration-services/configure-data-viewer-histogram-tab.md)   
  [Fluxo de Dados](data-flow/data-flow.md)   
- [Depurar o fluxo de dados](troubleshooting/debugging-data-flow.md)  
+ [Depurando fluxo de dados](troubleshooting/debugging-data-flow.md)  
   
   

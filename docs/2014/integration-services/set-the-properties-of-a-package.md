@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SSIS packages, properties
 - SQL Server Integration Services packages, properties
 ms.assetid: 0d20346e-475c-412f-b3ff-7bce25242b7a
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9aa4740db5d0dcc0668ec59efd99ec20f5724a53
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0937c9edb1ebf2acf61119f5a34f81b1c1251b28
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111756"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374544"
 ---
 # <a name="set-the-properties-of-a-package"></a>Definir as propriedades de um pacote
   Este procedimento descreve como configurar as propriedades do pacote na janela **Propriedades**.  
@@ -47,7 +47,7 @@ ms.locfileid: "48111756"
 5.  No menu **Arquivo** , clique em **Salvar Itens Selecionados** para salvar o pacote atualizado.  
   
 ## <a name="see-also"></a>Consulte também  
- [Serviços de integração &#40;SSIS&#41; pacotes](../../2014/integration-services/integration-services-ssis-packages.md)   
+ [Pacotes do Integration Services &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md)   
  [Definir as propriedades do pacote](set-package-properties.md)  
   
   

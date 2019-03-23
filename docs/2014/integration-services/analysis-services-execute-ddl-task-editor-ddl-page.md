@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Analysis Services Execute DDL Task Editor
 ms.assetid: f21bf8d0-ec5f-4c18-9de0-8875addb927b
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a4ebac7cac4a62dde5c89aa3e37146c78eb79d19
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: eb9bb4127e521300a8406786c931b9f70bd87add
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535428"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379824"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>Editor da Tarefa Executar DDL do Analysis Services (Página DDL)
   Use a página **DDL** da caixa de diálogo **Editor da Tarefa Executar DDL do Analysis Services** para especificar uma conexão com um projeto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ou um banco de dados [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e para fornecer informações sobre a origem das instruções DDL (linguagem de definição de dados).  
@@ -31,7 +31,7 @@ ms.locfileid: "52535428"
  **Conexão**  
  Selecione um projeto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ou um gerenciador de conexões [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] na lista ou clique em \<**Nova conexão...**> e use a caixa de diálogo **Adicionar Gerenciador de Conexões do Analysis Services** para criar uma nova conexão.  
   
- **Tópicos relacionados:** [Adicionar referência de interface do usuário da caixa de diálogo Gerenciador de Conexão do Analysis Services](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [Gerenciador de Conexão do Analysis Services](connection-manager/analysis-services-connection-manager.md)  
+ **Tópicos relacionados:** [Referência da interface do usuário da caixa de diálogo Adicionar Gerenciador de Conexões do Analysis Services](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [Gerenciador de Conexão do Analysis Services](connection-manager/analysis-services-connection-manager.md)  
   
  **SourceType**  
  Especifique a origem da instrução DDL. As opções desta propriedade estão listadas na seguinte tabela:  
@@ -52,7 +52,7 @@ ms.locfileid: "52535428"
  **Origem**  
  Selecione uma conexão de Arquivo na lista ou clique em \<**Nova conexão...**> e use a caixa de diálogo **Adicionar Gerenciador de Conexões de Arquivos** para criar uma nova conexão.  
   
- **Tópicos relacionados:** [Gerenciador de Conexão de arquivo](connection-manager/file-connection-manager.md)  
+ **Tópicos relacionados:** [Gerenciador de Conexão de Arquivo](connection-manager/file-connection-manager.md)  
   
 ### <a name="sourcetype--variable"></a>SourceType = Variable  
  **Origem**  

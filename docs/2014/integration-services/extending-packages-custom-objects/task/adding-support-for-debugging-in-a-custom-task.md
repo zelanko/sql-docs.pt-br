@@ -18,15 +18,15 @@ helpviewer_keywords:
 - SSIS custom tasks, debugging
 - debugging [Integration Services], custom tasks
 ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a16f1bae7c824d61d379e79b983077db44069709
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 44b583c062280cb080228d7db3bd24a312a350fd
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377876"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394334"
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>Adicionando suporte para depurando em uma tarefa personalizada
   O mecanismo de tempo de execução [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] permite a suspensão de pacotes, tarefas e outros tipos de contêineres durante a execução usando pontos de interrupção. O uso de pontos de interrupção permite que você analise e corrija erros que impedem a execução adequada de seu aplicativo ou de tarefas. A arquitetura de ponto de interrupção permite ao cliente avaliar o valor do tempo de execução de objetos no pacote em pontos definidos da execução enquanto o processamento da tarefa fica suspenso.  

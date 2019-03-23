@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5d9e677f-b872-497d-9cde-472184a214ab
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 058010d0e32fb26cf4c12e720342af04bd784768
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fd64fe5cad5f85c41830d25dce279ba09915626b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804778"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391524"
 ---
 # <a name="how-to-manage-a-cdc-instance"></a>How to Manage a CDC Instance
   Este procedimento descreve como usar o CDC Designer Console para gerenciar operações de instância CDC em tempo de execução.  

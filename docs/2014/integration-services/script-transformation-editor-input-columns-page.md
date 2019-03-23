@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Script Transformation Editor
 ms.assetid: d6e4ce84-3335-48e6-82d3-1c359ed87f63
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d467606c562b0fd9b5f1176ecbe14322aa634a24
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b71f12c9f36f74799c47538b30a058b529fdfa6d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164886"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391704"
 ---
 # <a name="script-transformation-editor-input-columns-page"></a>Editor de Transformação Scripts (página Colunas de Entrada)
   Use a página **Colunas de Entrada** da caixa de diálogo **Editor de Transformação Scripts** para definir propriedades nas colunas de entrada.  
@@ -48,10 +48,10 @@ ms.locfileid: "48164886"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Selecione o tipo de componente Script](../../2014/integration-services/select-script-component-type.md)   
- [Editor de transformação scripts &#40;entradas e saídas de página&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
- [Editor de transformação scripts &#40;página Script&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
- [Editor de transformação scripts &#40;página de gerenciadores de Conexão&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
- [Exemplos de componentes de Script adicionais](extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
+ [Selecionar Tipo de Componente do Script](../../2014/integration-services/select-script-component-type.md)   
+ [Editor de Transformação Scripts &#40;Página Entradas e Saídas&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
+ [Editor de Transformação Scripts &#40;Página Script&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
+ [Editor de Transformação Scripts &#40;Página Gerenciadores de Conexões&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
+ [Exemplos de componentes Script adicionais](extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
   
   

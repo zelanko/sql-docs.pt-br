@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5bb582f9-68d3-4c1e-ab02-6fc16807f1a5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 85bab82173ce0caa5997774978b616340d6e5a30
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 09d597cb7776362c44ca53e8d544f66608d8d37c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772958"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377194"
 ---
 # <a name="connection-to-sql-server"></a>Conexão com o SQL Server
   Quando um logon sem uma função de banco de dados que inclui permissão de gravação (por exemplo a função **db_owner**) ao banco de dados MSXDBCDC tenta criar uma instância Oracle CDC, a caixa de diálogo Conecte-se ao SQL Server é exibida.  

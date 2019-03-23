@@ -13,15 +13,15 @@ f1_keywords:
 - sql12.ssis.ssms.isenvprop.permissions.f1
 - sql12.ssis.ssms.isenvprop.general.f1
 ms.assetid: b1cbb697-713f-48e4-b234-b23724d87451
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1116cc2e1040326237a31039fa2b52618c3f559e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 8d40f86706a8c2b9c3d8815398457073ca7acce0
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408223"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393264"
 ---
 # <a name="create-and-map-a-server-environment"></a>Criar e mapear um ambiente de servidor
   Você cria um ambiente de servidor para especificar valores de tempo de execução para pacotes contidos em um projeto que você implantou no servidor do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Você pode mapear as variáveis de ambiente para parâmetros, para um pacote específico, para pacotes de ponto de entrada ou para todos os pacotes em um projeto específico. Um pacote de ponto de entrada é geralmente um pacote pai que executa um pacote filho.  

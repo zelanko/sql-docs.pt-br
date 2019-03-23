@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: 2d847adf-4b3d-4949-a195-ef43de275077
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4e807fad8929ccb087b9ba55615b235a2950cdb1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 171bb649f5e4f91df947ed2a0a3113786755efe4
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376778"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378124"
 ---
 # <a name="data-flow-taps"></a>Toques de Fluxo de Dados
   O [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] introduz um novo recurso que permite adicionar um toque de dados em um caminho de fluxo de dados de um pacote em tempo de execução e direcionar a saída do toque de dados para um arquivo externo. Para usar esse recurso, você deverá implantar seu projeto SSIS usando o modelo de implantação de projeto em um servidor SSIS. Depois que você implantar o pacote no servidor, precisará executar scripts T-SQL no banco de dados SSISDB para adicionar toques de dados antes de executar o pacote. Aqui está um cenário de exemplo:  

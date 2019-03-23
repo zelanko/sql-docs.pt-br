@@ -11,15 +11,15 @@ helpviewer_keywords:
 - restarting packages
 - starting packages
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 945bb384f522aa483c490fccd92768078a2d315a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1f41ed858bedd18ec68794d5e7d1c13100af5254
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365050"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394134"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Reiniciar pacotes por meio de pontos de verificação
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pode reinicializar pacotes que falharam a partir do ponto de falha, em vez de executar novamente todo o pacote. Se um pacote estiver configurado para usar pontos de verificação, serão gravadas informações sobre a execução do pacote em um arquivo de ponto de verificação. Quando o pacote com falha é executado novamente, o arquivo do ponto de verificação é usado para reiniciar o pacote a partir do ponto de falha. Se o pacote for executado com êxito, o arquivo de ponto de verificação é excluído e recriado na próxima vez que o pacote for executado.  

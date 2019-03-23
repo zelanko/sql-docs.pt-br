@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.columns.f1
 ms.assetid: bcf3030e-98d8-4445-967c-33c3f8ecb4fc
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4369ab3606310e38a4bf6927f6abfae10fdc0ffb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4f1c9a636023e4dc9c5c9ffb69240921e780ed38
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187876"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389924"
 ---
 # <a name="cdc-source-editor-columns-page"></a>Editor de Origem CDC (página Colunas)
   Use a página **Colunas** da caixa de diálogo do **Editor de Origem CDC** para mapear uma coluna de saída em cada coluna externa (origem).  
@@ -45,7 +45,7 @@ ms.locfileid: "48187876"
  Insira um nome exclusivo para cada coluna de saída. O padrão é o nome da coluna externa (origem) selecionada; porém, é possível escolher qualquer nome descritivo exclusivo. O nome inserido é exibido no Designer SSIS.  
   
 ## <a name="see-also"></a>Consulte também  
- [Editor de origem CDC &#40;página do Gerenciador de Conexão&#41;](../../2014/integration-services/cdc-source-editor-connection-manager-page.md)   
- [Editor de origem CDC &#40;página de saída de erro&#41;](../../2014/integration-services/cdc-source-editor-error-output-page.md)  
+ [Editor de Origem CDC &#40;Página Gerenciador de Conexões&#41;](../../2014/integration-services/cdc-source-editor-connection-manager-page.md)   
+ [Editor de Origem CDC &#40;Página Saída de Erro&#41;](../../2014/integration-services/cdc-source-editor-error-output-page.md)  
   
   

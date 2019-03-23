@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: 2e232566-1c3d-4134-adfc-bfd9db210e6d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a6ce4cb57a7ee3329bb3eb123a23b740ba5b156c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9a06c6b71be6e889cc223aa72338ae70f0ea82e3
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085826"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393951"
 ---
 # <a name="configure-data-viewer-column-chart-tab"></a>Configurar Visualizador de Dados (guia Gráfico de Colunas)
   Use a guia **Gráfico de Colunas** da caixa de diálogo **Configurar Visualizador de Dados** para especificar uma coluna a ser exibida como barras em um gráfico. O número de barras mostra o número de valores de dados distintos na coluna e a altura da barra mostra o número de instâncias de cada valor. O gráfico reflete o conteúdo de apenas um buffer.  
@@ -35,6 +35,6 @@ ms.locfileid: "48085826"
  [Configurar Visualizador de dados &#40;guia de histograma&#41;](../../2014/integration-services/configure-data-viewer-histogram-tab.md)   
  [Configurar Visualizador de dados &#40;guia de plotagem de dispersão&#41;](../../2014/integration-services/configure-data-viewer-scatter-plot-tab.md)   
  [Fluxo de Dados](data-flow/data-flow.md)   
- [Depurar o fluxo de dados](troubleshooting/debugging-data-flow.md)  
+ [Depurando fluxo de dados](troubleshooting/debugging-data-flow.md)  
   
   

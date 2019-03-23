@@ -11,15 +11,15 @@ helpviewer_keywords:
 - debugging [Integration Services], scripts
 - scripts [Integration Services], debugging
 ms.assetid: fddf57d8-8607-4f88-85a0-1b683087b491
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 454e4878590a11da1789d2bedba049af5f587874
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c8eee57be7c7bb9167c24bec117fd2f88a5bb745
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799006"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375601"
 ---
 # <a name="debugging-script"></a>Depurando script
   Os scripts usados pela tarefa Script e um componente Script são gravados no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] VSTA (Tools for Applications).  

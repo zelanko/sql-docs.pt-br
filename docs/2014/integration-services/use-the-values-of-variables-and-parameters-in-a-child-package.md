@@ -13,15 +13,15 @@ helpviewer_keywords:
 - packages [Integration Services], configurations
 - variables [Integration Services], adding
 ms.assetid: 9b939edb-4e17-48e5-8428-855beb10049c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 99194829b63bfbc41caa4ef1e400eb37cf6de64d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c1e942df4681595be19f31aa6a9d7c6fd3a6dd12
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055626"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374954"
 ---
 # <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a>Usar os valores de variáveis e parâmetros em um pacote filho
   Este procedimento descreve como criar uma configuração de pacote que usa o tipo de configuração variável pai. Este tipo de configuração habilita um pacote filho que é executado de um pacote pai para acessar uma variável no pai.  
@@ -105,9 +105,9 @@ ms.locfileid: "48055626"
 13. Clique em **Fechar**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurações de pacote](../../2014/integration-services/package-configurations.md)   
+ [Configurações do Pacote](../../2014/integration-services/package-configurations.md)   
  [Criar configurações de pacote](../../2014/integration-services/create-package-configurations.md)   
- [Serviços de integração &#40;SSIS&#41; variáveis](integration-services-ssis-variables.md)   
+ [Variáveis do SSIS &#40;Integration Services&#41;](integration-services-ssis-variables.md)   
  [Usar variáveis em pacotes](../../2014/integration-services/use-variables-in-packages.md)  
   
   

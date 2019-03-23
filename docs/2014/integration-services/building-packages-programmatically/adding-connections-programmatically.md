@@ -21,15 +21,15 @@ helpviewer_keywords:
 - SSIS connection managers
 - adding package connections
 ms.assetid: d90716d1-4c65-466c-b82c-4aabbee1e3e5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f4e55e0c5e931ce36c68a260e09217fcaeb8d31d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b1258797d76df49a2622335ee798120632706c78
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360378"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393604"
 ---
 # <a name="adding-connections-programmatically"></a>Adicionando conexões programaticamente
   A classe <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> representa conexões físicas com fontes de dados externas. A classe <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> isola os detalhes de implementação da conexão do tempo de execução. Isso permite que o tempo de execução interaja com cada gerenciador de conexões de uma maneira consistente e previsível. Gerenciadores de conexões contêm um conjunto de propriedades de estoque que todas as conexões têm em comum, como <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ID%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Description%2A> e <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A>. Porém, as propriedades <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A> e <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A> são, ordinariamente, as únicas propriedades necessárias para configurar um gerenciador de conexões. Ao contrário de outros paradigmas de programação, em que as classes de conexão expõem métodos como `Open` ou `Connect` para estabelecer fisicamente uma conexão com a fonte de dados, o mecanismo de tempo de execução gerencia todas as conexões para o pacote enquanto ele é executado.  

@@ -13,31 +13,31 @@ helpviewer_keywords:
 - Integration Services service, remote instance
 - service [Integration Services], connecting
 ms.assetid: 9487aff1-44d8-42c1-8176-bb9891d4632d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: eff4eb190c8225cf1d45f184515ccc5244a3a7ff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2d2e64744ea39296d16fbe88ad20993e8909988d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222766"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375274"
 ---
 # <a name="connect-to-a-remote-integration-services-server-ssis-service"></a>Conectar-se a um servidor remoto do Integration Services (serviço SSIS)
     
 > [!IMPORTANT] 
-> Esse tópico discute o serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , um serviço do Windows para o gerenciamento de pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . O [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] dá suporte ao serviço para compatibilidade de versões anteriores com versões anteriores do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. A partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], você pode gerenciar objetos como pacotes no servidor do Integration Services.  
+> Esse tópico discute o serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , um serviço do Windows para o gerenciamento de pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] dá suporte ao serviço para compatibilidade de versões anteriores com versões anteriores do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. A partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], você pode gerenciar objetos como pacotes no servidor do Integration Services.  
   
  Para se conectar a uma instância do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] em um servidor remoto, a partir do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ou de outro aplicativo de gerenciamento, é necessário um conjunto específico de direitos no servidor para os usuários do aplicativo.  
   
 > [!IMPORTANT] 
-> Para gerenciar pacotes armazenados em um servidor remoto, você não precisa conectar-se à instância do serviço do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] naquele servidor remoto. Em vez disso, edite o arquivo de configuração do serviço do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] de forma que o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] exiba os pacotes armazenados no servidor remoto. Para obter mais informações, consulte [Configurando o serviço Integration Services &#40; Serviço SSIS&#41;](service/integration-services-service-ssis-service.md).  
+> Para gerenciar pacotes armazenados em um servidor remoto, você não precisa conectar-se à instância do serviço do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] naquele servidor remoto. Em vez disso, edite o arquivo de configuração do serviço do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] de forma que o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] exiba os pacotes armazenados no servidor remoto. Para obter mais informações, consulte [Configurando o Serviço Integration Services &#40;Serviço SSIS#41;](service/integration-services-service-ssis-service.md).  
   
 ## <a name="connecting-to-integration-services-on-a-remote-server"></a>Conectando-se ao Integration Services em um servidor remoto  
   
 #### <a name="to-connect-to-integration-services-on-a-remote-server"></a>Para se conectar ao Integration Services em um servidor remoto  
   
-1.  Abra o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+1.  Abra [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 2.  Selecione **Arquivo**, **Conectar Pesquisador de Objetos** para exibir a caixa de diálogo **Conectar ao Servidor** .  
   

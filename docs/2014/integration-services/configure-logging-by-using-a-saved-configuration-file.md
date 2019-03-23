@@ -11,15 +11,15 @@ helpviewer_keywords:
 - containers [Integration Services], logs
 - logs [Integration Services], containers
 ms.assetid: e5fdbbcb-94ca-4912-aa7c-0d89cebbd308
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f3c22ca7f44844b434dc74e881830363a79475ee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 605e9f2635ceef0546f4c8e37f74a04a2d27ece0
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146386"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374364"
 ---
 # <a name="configure-logging-by-using-a-saved-configuration-file"></a>Configurar o log por meio de um arquivo de configuração salvo
   Este procedimento descreve como configurar o registro em log de novos contêineres em um pacote carregando um arquivo de configuração de registro em log salvo anteriormente.  
@@ -53,6 +53,6 @@ ms.locfileid: "48146386"
 9. Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
 ## <a name="see-also"></a>Consulte também  
- [Registro em Log do SSIS &#40;Integration Services&#41;](performance/integration-services-ssis-logging.md)  
+ [Registro em Log do Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)  
   
   

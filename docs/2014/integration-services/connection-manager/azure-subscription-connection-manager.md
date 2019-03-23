@@ -10,22 +10,22 @@ f1_keywords:
 - sql12.dts.designer.afpsubscrconn.f1
 - sql11.dts.designer.afpsubscrconn.f1
 ms.assetid: e1225327-c308-4c50-8f44-c411f52ef378
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 991b65c5a0b9ef78811bd1dbc543ffb9c4ad0e31
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6ea90d10a0228321d33a4c55076e9ed46a14c80c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774138"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58373804"
 ---
 # <a name="azure-subscription-connection-manager"></a>Gerenciador de Conexões da Assinatura do Azure
   O Gerenciador de conexão do Azure HDInsight permite que um pacote do SSIS para se conectar a uma assinatura do Azure usando os valores especificados para as propriedades: ID da assinatura do Azure e o certificado de gerenciamento.  
   
 1.  Na caixa de diálogo **Adicionar Gerenciador de Conexões SSIS** mostrada acima, escolha **Assinatura do Azure**e clique em **Adicionar**.  Você deve ver a caixa de diálogo **Editor do Gerenciador de Conexões da Assinatura do Azure** a seguir.  
   
-     ![SSIS AzureSubscriptionManager](../media/ssis-azuresubscriptionmanager.png "AzureSubscriptionManager SSIS")  
+     ![SSIS-AzureSubscriptionManager](../media/ssis-azuresubscriptionmanager.png "SSIS-AzureSubscriptionManager")  
   
 2.  Insira sua ID de assinatura do Azure, que identifica exclusivamente uma assinatura do Azure, em **ID da assinatura do Azure**.  O valor pode ser encontrado no [Portal de Gerenciamento do Azure](https://manage.windowsazure.com) na página **Configurações** :  
   

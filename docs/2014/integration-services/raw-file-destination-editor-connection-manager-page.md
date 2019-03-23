@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.rawfiledestinationconnectionmanager.f1
 ms.assetid: a0ec9643-3b44-4467-b855-f45ae4794f7f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3dca00ca68a700fa6e0283ed46d924b5ad4855f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 326cdd6f3a0a243d56e2d941b261a98a0888e2f1
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162656"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376007"
 ---
 # <a name="raw-file-destination-editor-connection-manager-page"></a>Editor de destino Arquivo Bruto (página Gerenciador de Conexões)
   Use o Editor de Destino Arquivo Bruto para configurar o destino Arquivo Bruto para gravar dados brutos em um arquivo.  
@@ -63,6 +63,6 @@ ms.locfileid: "48162656"
  Especifique um nome alternativo a ser usado para a coluna de saída.  
   
 ## <a name="see-also"></a>Consulte também  
- [Destino do Arquivo Bruto](data-flow/raw-file-destination.md)  
+ [Destino do arquivo bruto](data-flow/raw-file-destination.md)  
   
   

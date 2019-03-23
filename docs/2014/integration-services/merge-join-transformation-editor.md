@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Merge Join Transformation Editor
 ms.assetid: ac06f419-30b3-42aa-8b34-42000bec4285
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6f6f584d49bfa238a5eda76b18f0dccb59db303f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b0eff54a87d3b38f1cf027d272d75c36d2e15316
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186826"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380883"
 ---
 # <a name="merge-join-transformation-editor"></a>Editor de Transformação Mesclagem
   Use a caixa de diálogo **Editor de Transformação Mesclar Junção** para especificar o tipo de junção, as colunas de junção e as colunas de saída para mesclar duas entradas combinadas por uma junção.  
@@ -50,9 +50,9 @@ ms.locfileid: "48186826"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Classificar dados para as transformações mesclagem e Merge Join](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
- [Estender um conjunto de dados por meio da transformação junção de mesclagem](data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md)   
- [Transformação mesclar](data-flow/transformations/merge-transformation.md)   
+ [Classificar dados para as transformações Mesclagem e Junção de Mesclagem](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
+ [Estender um conjunto de dados por meio da transformação Junção de Mesclagem](data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md)   
+ [Transformação Mesclar](data-flow/transformations/merge-transformation.md)   
  [Transformação Unir Tudo](data-flow/transformations/union-all-transformation.md)  
   
   

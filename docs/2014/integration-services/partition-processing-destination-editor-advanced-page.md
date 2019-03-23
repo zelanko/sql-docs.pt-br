@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Partition Processing Destination Editor
 ms.assetid: 2039ee0f-069d-479d-90b2-2a12481b1162
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d9b37af7069468bff1235c713f82f0b3444d0683
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e3eee8a69013975f7bfe9febcfa85d8143dcef68
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062356"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374885"
 ---
 # <a name="partition-processing-destination-editor-advanced-page"></a>Editor de Destino de Processamento de Partições (página Avançado)
   Use a página **Avançado** da caixa de diálogo **Editor de Destino de Processamento de Partições** para configurar a manipulação de erros.  
@@ -37,7 +37,7 @@ ms.locfileid: "48062356"
  **Ação de erro de chave**  
  Especifique como manipular registros que possuem valores de chave inaceitáveis.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**ConvertToUnknown**|Converta o valor de chave inaceitável em um valor Desconhecido.|  
 |**DiscardRecord**|Descarte o registro.|  
@@ -54,7 +54,7 @@ ms.locfileid: "48062356"
  **Ação se houver erro**  
  Especifique a ação a ser tomada quando o limite de erros for atingido, caso tenha selecionado **Parar se houver erro**.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**StopProcessing**|Pare o processamento.|  
 |**StopLogging**|Pare de registrar os erros.|  
@@ -62,7 +62,7 @@ ms.locfileid: "48062356"
  **Chave não encontrada**  
  Especifique a ação a ser tomada mediante erro de chave não encontrada. Por padrão, este valor é **ReportAndContinue**.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignore o erro e continue o processamento.|  
 |**ReportAndContinue**|Relate o erro e continue o processamento.|  
@@ -71,7 +71,7 @@ ms.locfileid: "48062356"
  **Chave duplicada**  
  Especifique a ação a ser tomada mediante erro de chave duplicada. Por padrão, esse valor é **IgnoreError**.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignore o erro e continue o processamento.|  
 |**ReportAndContinue**|Relate o erro e continue o processamento.|  
@@ -80,7 +80,7 @@ ms.locfileid: "48062356"
  **Chave nula convertida em desconhecida**  
  Especifique a ação a ser tomada quando uma chave nula foi convertida no valor Desconhecido. Por padrão, esse valor é **IgnoreError**.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignore o erro e continue o processamento.|  
 |**ReportAndContinue**|Relate o erro e continue o processamento.|  
@@ -89,7 +89,7 @@ ms.locfileid: "48062356"
  **Chave nula não permitida**  
  Especifique a ação a ser tomada quando chaves nulas não forem permitidas, e uma chave nula for encontrada. Por padrão, este valor é **ReportAndContinue**.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignore o erro e continue o processamento.|  
 |**ReportAndContinue**|Relate o erro e continue o processamento.|  
@@ -103,6 +103,6 @@ ms.locfileid: "48062356"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de destino de processamento de partições &#40;página mapeamentos&#41;](../../2014/integration-services/partition-processing-destination-editor-mappings-page.md)  
+ [Editor de Destino de Processamento de Partições &#40;Página Mapeamentos&#41;](../../2014/integration-services/partition-processing-destination-editor-mappings-page.md)  
   
   

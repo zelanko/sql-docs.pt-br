@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Lookup Transformation Editor
 ms.assetid: e90d6b69-5a26-43c5-8433-5c3c9588e08c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 37d42dde548394599cec00020a91383fde97e034
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: f5c2971b1d4da669cadc57f0a557b32bf2b1adde
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371538"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389814"
 ---
 # <a name="lookup-transformation-editor-connection-page"></a>Editor da Transformação Pesquisa (página Conexão)
   Use a página **Conexão** da caixa de diálogo **Editor da Transformação Pesquisa** para selecionar um gerenciador de conexões. Se você selecionar um gerenciador de conexões OLE DB, também poderá selecionar uma consulta, tabela ou exibição para gerar o conjunto de dados de referência.  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - replacing string expression
 - REPLACE function
 ms.assetid: a6837043-ea70-4c6a-9c7a-6868b02b2adc
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ee88a12261d44c5090ae8d8f6ecac9f4b4ee216b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b1970fae04a4dff260fe9eafa30125e63e9cf1a1
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754408"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374704"
 ---
 # <a name="replace-ssis-expression"></a>REPLACE (Expressão SSIS)
   Retorna uma expressão de caractere depois de substituir uma cadeia de caracteres na expressão por uma cadeia diferente ou vazia.  

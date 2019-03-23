@@ -13,22 +13,22 @@ helpviewer_keywords:
 - SQL Server Integration Services projects, creating
 - SSIS projects, creating
 ms.assetid: 1e23f259-0401-4333-ab4f-89809aae63b1
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c4a571c48c0fa745d77c4d1def9a4e517376fad6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e08af39df21d7a1774e1d7eed5e0f7602fd3489
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075656"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393814"
 ---
 # <a name="create-a-new-integration-services-project"></a>Criar um novo projeto do Integration Services
   Este procedimento cria um novo projeto e uma nova solução do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
 ### <a name="to-create-a-new-integration-services-project"></a>Para criar um novo projeto Integration Services  
   
-1.  Abra o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+1.  Abra [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 2.  No menu **Arquivo** , aponte para **Novo**e clique em **Projeto**.  
   

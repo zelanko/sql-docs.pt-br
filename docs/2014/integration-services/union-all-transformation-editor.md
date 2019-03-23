@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Union All Transformation Editor
 ms.assetid: 32fbc1c1-da83-4684-9479-31fc3e2df98c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f34b73358bf9a268e4a2eef14f51800b0c9fea94
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: def728a5b32970553d8bf639f58d4cfba96fc31e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138796"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391104"
 ---
 # <a name="union-all-transformation-editor"></a>Editor de Transformação Union All
   Use a caixa de diálogo **Editor de Transformação Union All** para mesclar vários conjuntos de linhas de entrada em um único conjunto de linhas de saída. Incluindo a transformação Union All em um fluxo de dados, é possível mesclar dados de vários fluxos de dados, criar conjuntos de dados complexos aninhando transformações Union All e mesclar as linhas novamente após corrigir erros nos dados.  
@@ -39,8 +39,8 @@ ms.locfileid: "48138796"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Mesclar dados por meio o Union All Transformation](data-flow/transformations/merge-data-by-using-the-union-all-transformation.md)   
- [Transformação mesclar](data-flow/transformations/merge-transformation.md)   
+ [Mesclar dados por meio da transformação Unir Tudo](data-flow/transformations/merge-data-by-using-the-union-all-transformation.md)   
+ [Transformação Mesclar](data-flow/transformations/merge-transformation.md)   
  [Transformação Junção de Mesclagem](data-flow/transformations/merge-join-transformation.md)  
   
   

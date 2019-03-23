@@ -13,15 +13,15 @@ helpviewer_keywords:
 - date data types
 - date and time formats for fast parse
 ms.assetid: bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d84f3158b41f2cff79572ad7a65c3033a4d2ca77
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a2f7e59f10b7a54e46e259fff8a4f60b42803a19
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112736"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377504"
 ---
 # <a name="date-and-time-formats"></a>Formatos de data e hora
   A análise rápida fornece um conjunto de rotinas simples e rápidas para analisar dados. A análise rápida oferece suporte aos seguintes formatos de tipos de dados de data e hora.  
@@ -33,7 +33,7 @@ ms.locfileid: "48112736"
   
 -   Os formatos ISO 8601, como listados na seguinte tabela:  
   
-    |Formato|Description|  
+    |Formatar|Descrição|  
     |------------|-----------------|  
     |AAAAMMDD<br /><br /> AAAA-MM-DD|Os formatos básico e estendido para um ano de quatro dígitos, um mês de dois dígitos e um dia de dois dígitos. No formato estendido, as datas são separadas por um hífen (-).|  
     |AAAA-MM|Os formatos básico e estendido de precisão reduzida para um ano de quatro dígitos e um mês de dois dígitos. No formato estendido, as datas são separadas por um hífen (-).|  
@@ -64,7 +64,7 @@ ms.locfileid: "48112736"
   
 -   Os formatos de hora ISO 8601, como listados na seguinte tabela:  
   
-    |Formato|Description|  
+    |Formatar|Descrição|  
     |------------|-----------------|  
     |HHMISS<br /><br /> HH:MI:SS|Os formatos básico e estendido para uma hora de dois dígitos, um minuto de dois dígitos e um segundo de dois dígitos. No formato estendido, a hora é separada por dois pontos (:).|  
     |HHMI<br /><br /> HH:MI|Os formatos básico e estendido truncados para uma hora de dois dígitos e um minuto de dois dígitos. No formato estendido, a hora é separada por dois pontos (:).|  
@@ -73,7 +73,7 @@ ms.locfileid: "48112736"
   
 -   Os formatos de hora que especificam um fuso horário, como listados na seguinte tabela:  
   
-    |Formato|Description|  
+    |Formatar|Descrição|  
     |------------|-----------------|  
     |+HH:MI<br /><br /> +HHMI|Os formatos básico e estendido que indicam o número de horas e minutos que são adicionados ao tempo universal coordenado (UTC) para obter a hora local.|  
     |-HH:MI<br /><br /> -HHMI|Os formatos básico e estendido que indicam o número de horas e minutos que são subtraídos do UTC para obter a hora local.|  
@@ -91,7 +91,7 @@ ms.locfileid: "48112736"
   
 -   Os formatos de hora que incluem uma fração decimal, como listados na seguinte tabela:  
   
-    |Formato|Description|  
+    |Formatar|Descrição|  
     |------------|-----------------|  
     |HH [.nnnnnnn]|n é um valor entre 0 e 9999999 que representa uma fração de horas. As chaves indicam que esse valor é opcional.<br /><br /> Por exemplo, o valor 12.750 indica 12:45.|  
     |HHMI [.nnnnnnn]<br /><br /> HH:MI [.nnnnnnn]|n é um valor entre 0 e 9999999 que representa uma fração de minutos. As chaves indicam que esse valor é opcional.<br /><br /> Por exemplo, o valor 1220.500 indica 12:20:30.|  

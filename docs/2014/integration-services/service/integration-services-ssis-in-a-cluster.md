@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1785363fd89092f286080f44e210bb6b35cb6a16
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b70dbab14424335fe210f5a9b1ddbdbda4f90deb
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758748"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392855"
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>SSIS (Integration Services) em um cluster
   Clusterizar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] não é recomendável, porque o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] não é um serviço clusterizado ou que reconheça clusters e não dá suporte ao failover de um nó de cluster para outro. Portanto, em um ambiente clusterizado, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] deve ser instalado e iniciado como um serviço autônomo em cada nó do cluster.  

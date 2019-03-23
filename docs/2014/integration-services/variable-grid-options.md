@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Choose Variable Columns dialog box
 ms.assetid: 7cccc230-3b20-4074-804f-3448d9616a83
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 36f44d123216d11034092806a4f7d616f8968d90
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 89828a105e04c54c1bfecda59670a273583998cb
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172646"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393895"
 ---
 # <a name="variable-grid-options"></a>Opções de Grade Variáveis
   Use a caixa de diálogo **Opções de Grade Variáveis** para selecionar as colunas para serem exibidas na janela **Variáveis** e para selecionar os filtros para serem aplicados na lista de variáveis. Para obter mais informações sobre as propriedades de variáveis correspondentes, consulte [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md).  
@@ -34,7 +34,7 @@ ms.locfileid: "48172646"
  **Mostrar variáveis de todos os escopos**  
  Selecione para mostrar variáveis dentro do escopo do pacote, e dentro do escopo de contêineres, tarefas ou manipuladores de eventos no pacote. Marque essa opção para mostrar somente variáveis dentro do escopo do pacote e dentro do escopo de um contêiner, tarefa ou manipulador de eventos selecionado.  
   
- Para obter mais informações sobre escopo variável, consulte [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md).  
+ Para obter mais informações sobre escopo variável, consulte [Variáveis do SSIS &#40;Integration Services&#41;](integration-services-ssis-variables.md).  
   
 ## <a name="options-for-columns"></a>Opções para colunas  
  Selecione as colunas que você quer que sejam exibidas na janela **Variáveis** .  
@@ -54,9 +54,9 @@ ms.locfileid: "48172646"
 -   **Expression**  
   
 ## <a name="see-also"></a>Consulte também  
- [Janela variáveis](../../2014/integration-services/variables-window.md)   
- [Serviços de integração &#40;SSIS&#41; variáveis](integration-services-ssis-variables.md)   
+ [Janela Variáveis](../../2014/integration-services/variables-window.md)   
+ [Variáveis do SSIS &#40;Integration Services&#41;](integration-services-ssis-variables.md)   
  [Usar variáveis em pacotes](../../2014/integration-services/use-variables-in-packages.md)   
- [Serviços de integração &#40;SSIS&#41; manipuladores de eventos](integration-services-ssis-event-handlers.md)  
+ [Manipuladores de eventos do Integration Services &#40;SSIS&#41](integration-services-ssis-event-handlers.md)  
   
   
