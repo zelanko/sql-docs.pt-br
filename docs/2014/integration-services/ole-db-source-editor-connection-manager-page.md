@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB Source Editor
 ms.assetid: 53699902-8699-4547-b56b-a5b2079e98b6
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c25e36d44b4b088bb2874039d4c292d76759da73
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65d762ffb798d6ec3826a41ff06c73c2011543ab
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172976"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384475"
 ---
 # <a name="ole-db-source-editor-connection-manager-page"></a>Editor de Origem OLE DB (página Gerenciador de Conexões)
   Use a página **Gerenciador de Conexões** da caixa de diálogo **Editor de Origem OLE DB** para selecionar o gerenciador de conexões OLE DB para a origem. Essa página também permite que você selecione uma tabela ou exibição a partir do banco de dados.  
@@ -53,7 +53,7 @@ ms.locfileid: "48172976"
  **Modo de acesso aos dados**  
  Especifique o método para selecionar os dados da origem.  
   
-|Opção|Description|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |Tabela ou exibição|Recupere os dados de uma tabela ou exibição na fonte de dados OLE DB.|  
 |Nome da tabela ou variável do nome de exibição|Especifique a tabela ou nome de exibição em uma variável.<br /><br /> **Informações relacionadas:** [Usar variáveis em pacotes](../../2014/integration-services/use-variables-in-packages.md)|  
@@ -98,9 +98,9 @@ ms.locfileid: "48172976"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de origem OLE DB &#40;página de colunas&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
- [Editor de origem OLE DB &#40;página de saída de erro&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
+ [Editor de Origem de OLE DB &#40;Página Colunas&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
+ [Editor de Origem OLE DB &#40;Página Saída de Erro&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
  [Extrair dados por meio da origem OLE DB](data-flow/extract-data-by-using-the-ole-db-source.md)   
- [Gerenciador de Conexões OLE DB](connection-manager/ole-db-connection-manager.md)  
+ [Gerenciador de conexões OLE DB](connection-manager/ole-db-connection-manager.md)  
   
   

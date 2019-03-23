@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 07508c40-6c08-4359-96cd-8ff17671244d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: df3510840e06cef8a2807232102346177a1365b0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8f9d36b6394aa3921a9262a8b4afc544033c7a20
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52790716"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385324"
 ---
 # <a name="odbc-destination-custom-properties"></a>Propriedades personalizadas de destino ODBC
   A tabela a seguir descreve as propriedades personalizadas do destino ODBC. Todas as propriedades podem ser definidas a partir de expressões de propriedades SSIS.  

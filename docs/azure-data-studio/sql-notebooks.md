@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: ceaf172fc36ee92d15be326d4356061ea1674df1
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 5189d997e0408ead627556f5dc3a2b8f0c975fa3
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161926"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392714"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Como usar notebooks no estúdio de dados do Azure
 
@@ -85,7 +85,7 @@ Depois que a instalação for bem-sucedida, você encontrará uma notificação 
 
 |Kernel|Descrição
 |:-----|:-----
-| SQL Kernel | Escreva código SQL no SQL Server.
+| SQL Kernel | Escreva o código de SQL direcionado a seu banco de dados relacional.
 |PySpark3 e o Kernel PySpark| Escreva o código do Python usando computação Spark do cluster.
 |Spark Kernel|Escreva código Scala e o R usando computação Spark do cluster.
 |Python Kernel|Escreva o código do Python para o desenvolvimento local.

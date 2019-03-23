@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - precedence constraints [Integration Services], values
 ms.assetid: ab9d8e8e-b7da-44b2-b89f-b215d799f032
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b08747188adf73ad2d11dc921022510a077ae3e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3bb07b6cc317e4d522e178751fe228fce69457fb
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111832"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386444"
 ---
 # <a name="set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu"></a>Definir o valor de uma restrição de precedência por meio do menu de atalho
   Este procedimento descreve como definir um valor de restrição de precedência usando o menu de atalho.  

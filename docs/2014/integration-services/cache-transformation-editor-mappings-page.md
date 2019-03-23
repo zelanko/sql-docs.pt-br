@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cachetransmap.f1
 ms.assetid: ffd53f18-9646-458a-a84a-f2467d601ea5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: af8dd4e4671f808f762d5044fd261047386fe2d4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7d38fa3d3e6631f4284f9572f98a0dac1d05e61
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157416"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391154"
 ---
 # <a name="cache-transformation-editor-mappings-page"></a>Editor da Transformação Cache (página Mapeamentos)
   Use a página **Mapeamentos** do **Editor da Transformação Cache** para mapear as colunas de entrada na Transformação Cache para as colunas de destino no Gerenciador de conexões de cache.  
@@ -48,6 +48,6 @@ ms.locfileid: "48157416"
  Exiba todas as colunas de destino disponíveis.  
   
 ## <a name="see-also"></a>Consulte também  
- [Editor de transformação de cache &#40;página do Gerenciador de Conexão&#41;](../../2014/integration-services/cache-transformation-editor-connection-manager-page.md)  
+ [Editor de Transformação Cache &#40;Página Gerenciador de Conexões&#41;](../../2014/integration-services/cache-transformation-editor-connection-manager-page.md)  
   
   

@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Select SMO Enumeration dialog box
 ms.assetid: 64ada1fe-21a2-4675-98fc-d5c803aa32f0
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8165829254c1e67cd513852d338a5ea3489de751
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 274a56641ae4f452b8eda8bca00663b1a9e83380
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201746"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387276"
 ---
 # <a name="select-smo-enumeration-dialog-box"></a>Caixa de diálogo Selecionar Enumeração SMO
   Use a caixa de diálogo **Selecionar Enumeração SMO** para especificar o objeto do SMO (Objetos de Gerenciamento do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]) na instância especificada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para enumerar e selecionar o tipo de enumeração.  

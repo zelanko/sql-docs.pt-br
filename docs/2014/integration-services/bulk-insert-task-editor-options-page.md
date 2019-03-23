@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Bulk Insert Task Editor
 ms.assetid: b3702811-3eb8-4b28-9190-5ae7a1a7bb6f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 105c9b66e82c4c5dee12bbe8f54d60b960032a70
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e8ef0cc4c24383abe3554b71cda7c462d54a924d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146316"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381044"
 ---
 # <a name="bulk-insert-task-editor-options-page"></a>Editor da Tarefa Inserção em Massa (página de Opções)
   Use a página **Opções** da caixa de diálogo **Editor da Tarefa Inserção em Massa** para definir as propriedades da operação de inserção em massa. A tarefa Inserção em Massa copia uma grande quantidade de dados em uma exibição ou tabela do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -63,9 +63,9 @@ ms.locfileid: "48146316"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor da tarefa inserção em massa de &#40;página geral&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor da tarefa inserção em massa de &#40;página de Conexão&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
- [Página expressões](expressions/expressions-page.md)   
+ [Editor da Tarefa Inserção em Massa &#40;Página Geral&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor da Tarefa Inserção em Massa &#40;Página Conexão&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
+ [Página Expressões](expressions/expressions-page.md)   
  [Fluxo de Controle](control-flow/control-flow.md)  
   
   

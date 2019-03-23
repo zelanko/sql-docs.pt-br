@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - logs [Integration Services], enabling
 ms.assetid: b69a8593-5bb0-4f04-87d2-f8e7bd7eb4fc
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2a93245b97bf7c6c382f533c6d6e317b399f9e54
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f878b194389f81980c924896ae4c2b97da81761
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172492"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387014"
 ---
 # <a name="enable-package-logging-in-sql-server-data-tools"></a>Habilitar o log de pacote no SQL Server Data Tools
   Este procedimento descreve como adicionar registros a um pacote, configurar os registros no nível do pacote e salvar a configuração dos registros em um arquivo XML. Você só pode adicionar os registros no nível do pacote, mas o pacote não precisa executar os registros para habilitar os registros nos contêineres incluídos no pacote.  
@@ -69,7 +69,7 @@ ms.locfileid: "48172492"
 11. Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
 ## <a name="see-also"></a>Consulte também  
- [Serviços de integração &#40;SSIS&#41; registro em log](performance/integration-services-ssis-logging.md)   
- [Registro em Log do SSIS &#40;Integration Services&#41;](performance/integration-services-ssis-logging.md)  
+ [Registro em Log do Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)   
+ [Registro em Log do Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)  
   
   

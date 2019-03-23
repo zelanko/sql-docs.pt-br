@@ -11,22 +11,22 @@ helpviewer_keywords:
 - modifying variables
 - variables [Integration Services], properties
 ms.assetid: f98ddbec-f668-4dba-a768-44ac3ae0536f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9cd85ac29d34f40e9473f28444c8b727543d6ecf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4aaac5f66e8c01364419d8d2d9d5e853bf929ef7
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075586"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385521"
 ---
 # <a name="set-the-properties-of-a-user-defined-variable"></a>Definir as propriedades de uma variável definida pelo usuário
   Para definir as propriedades de uma variável definida pelo usuário no [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], você pode usar um dos seguintes recursos:  
   
 -   Janela Variáveis.  
   
--   Janela Propriedades. A janela **Propriedades** lista propriedades para configurar variáveis não disponíveis na janela **Variáveis** : Description, EvaluateAsExpression, Expression, ReadOnly, ValueType e IncludeInDebugDump.  
+-   Janela Propriedades. O **propriedades** janela lista de propriedades para configurar variáveis que não estão disponíveis na **variáveis** janela: Descrição, EvaluateAsExpression, Expression, ReadOnly, ValueType e IncludeInDebugDump.  
   
 > [!NOTE]  
 >  O [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] também fornece um conjunto de variáveis do sistema cujas propriedades não podem ser atualizadas, com a exceção da propriedade RaiseChangedEvent.  
@@ -53,7 +53,7 @@ ms.locfileid: "48075586"
   
  **Definindo as propriedades de nome e Namespace**  
   
- Os valores de `Name` e `Namespace` propriedades devem começar com uma letra de caractere alfabético, conforme definido pelo Unicode Standard 2.0 ou um sublinhado (_). Os caracteres subsequentes podem ser letras ou números conforme definido no padrão Unicode Standard 2.0 ou o sublinhado (\_).  
+ Os valores das propriedades `Name` e `Namespace` devem começar com uma letra de caractere alfabético, conforme definido pelo Unicode Standard 2.0 ou um sublinhado (_). Os caracteres subsequentes podem ser letras ou números conforme definido no padrão Unicode Standard 2.0 ou o sublinhado (\_).  
   
 ## <a name="using-the-variables-window-to-set-properties"></a>Usando a janela Variáveis para definir propriedades  
   
@@ -98,7 +98,7 @@ ms.locfileid: "48075586"
 8.  Para salvar o pacote atualizado, no menu **Arquivo** , clique em **Salvar Itens Selecionados**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Serviços de integração &#40;SSIS&#41; variáveis](integration-services-ssis-variables.md)   
+ [Variáveis do SSIS &#40;Integration Services&#41;](integration-services-ssis-variables.md)   
  [Usar variáveis em pacotes](../../2014/integration-services/use-variables-in-packages.md)   
  [Adicionar, excluir, alterar o escopo de uma variável definida pelo usuário em um pacote](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
   

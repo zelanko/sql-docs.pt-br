@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - SQL Server Destination Editor
 ms.assetid: 3ca00cf8-3460-43e9-9705-af4c530f7fbd
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 31ecbc1d0ef82482938ff073580d54edc3cb2bdd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e69ccbba805040dbc88b04fc91378e1038c5fdb4
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084456"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391894"
 ---
 # <a name="sql-destination-editor-mappings-page"></a>Editor de Destino SQL (página Mapeamentos)
   Use a página **Mapeamentos** da caixa de diálogo **Editor de Destino SQL** para mapear colunas de entrada para colunas de destino.  
@@ -42,8 +42,8 @@ ms.locfileid: "48084456"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de destinos SQL &#40;página do Gerenciador de Conexão&#41;](../../2014/integration-services/sql-destination-editor-connection-manager-page.md)   
- [Editor de destinos SQL &#40;página Avançado&#41;](../../2014/integration-services/sql-destination-editor-advanced-page.md)   
+ [Editor de Destinos SQL &#40;página Gerenciador de Conexões&#41;](../../2014/integration-services/sql-destination-editor-connection-manager-page.md)   
+ [Editor de Destinos SQL &#40;página Avançado&#41;](../../2014/integration-services/sql-destination-editor-advanced-page.md)   
  [Carregar dados em massa por meio do destino do SQL Server](data-flow/bulk-load-data-by-using-the-sql-server-destination.md)  
   
   

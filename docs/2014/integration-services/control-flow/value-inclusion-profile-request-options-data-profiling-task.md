@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f06a9aecd070fe3272d665372bf374d24ed4e60f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 0a2037297db3f8a303ffd08fb31241e51505aeff
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350811"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392004"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>Opções da solicitação do perfil Inclusão de Valor (tarefa Criação de Perfil de Dados)
   Use o painel **Propriedades da Solicitação** da página **Solicitações de Perfil** para definir as opções da **Solicitação do Perfil de Inclusão de Valor** selecionada no painel de solicitações. Um perfil de Inclusão de Valor computa a sobreposição nos valores entre duas colunas ou conjuntos de colunas. Portanto, esse perfil também pode determinar se uma coluna ou conjunto de colunas é apropriado para servir como uma chave estrangeira entre as tabelas selecionadas. Esse perfil também pode ajudá-lo a identificar problemas em seus dados, como valores inválidos. Por exemplo, você usa um perfil de inclusão de valor para criar um perfil para a coluna ProductID de uma tabela de vendas. O perfil descobre que a coluna contém valores que não são encontrados na coluna ProductID da tabela Produtos.  
