@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Precedence Constraint Editor dialog box
 - precedence constraints [Integration Services], properties
 ms.assetid: d990f600-5c09-4cd5-8528-0a58d79dc9f2
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 82d10d177de353736336d8cebd0a9a171ae4e9c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8b0c8d2eec40078e58b80170b37c4885b72ad2b8
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140646"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388114"
 ---
 # <a name="set-the-properties-of-a-precedence-constraint"></a>Definir as propriedades de uma restrição de precedência
   Para definir propriedades em restrições de precedência, você pode usar uma destas ferramentas:  
@@ -69,7 +69,7 @@ ms.locfileid: "48140646"
   
     |Propriedade de leitura/gravação|Ação de configuração|  
     |--------------------------|--------------------------|  
-    |Description|Forneça uma descrição.|  
+    |Descrição|Forneça uma descrição.|  
     |EvalOp|Selecione uma operação de avaliação. Se o `Expression`, **ExpressionAndConstant**, ou **ExpressionOrConstant** operação for selecionada, você pode especificar uma expressão.|  
     |Expression|Se a operação de avaliação incluir uma expressão, forneça uma expressão. A expressão deve ser avaliada como um booliano. Para obter mais informações sobre a linguagem de expressão, consulte [Expressões do Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).|  
     |LogicalAnd|Definir `LogicalAnd` para especificar se a restrição de precedência é avaliada juntamente com outras restrições de precedência, quando vários executáveis precederem e estiverem vinculados ao executável restrito|  

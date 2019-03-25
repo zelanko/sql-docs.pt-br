@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.dts.designer.toolbox.F1
 - sql12.dts.designer.toolboxfavorites.F1
 ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dec02ad946483f74b25a3b1ae514a20e1abc4523
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ed3b13619fa8206e9b4fa2054294c520f05ed890
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372008"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381844"
 ---
 # <a name="ssis-toolbox"></a>Caixa de Ferramentas do SSIS
   Todos os componentes que estão instalados no computador local, inclusive componentes de terceiros criados para o SQL Server 2008 e 2008 R2, aparecem agora automaticamente na nova **Caixa de Ferramentas do SSIS**. Quando você instalar componentes adicionais, clique com o botão direito do mouse dentro da caixa de ferramentas e clique em **Atualizar Caixa de Ferramentas** para adicionar os componentes.  
@@ -31,7 +31,7 @@ ms.locfileid: "53372008"
   
  Na **Caixa de Ferramentas do SSIS**, o fluxo de controle e os componentes de fluxo de dados são organizados em categorias.  Você pode expandir e recolher categorias para exibir e pode alterar a organização de componentes de acordo com suas preferências.  Você pode restaurar a organização padrão, clicando com o botão direito do mouse dentro da caixa de ferramentas e clicar em **Restaurar Padrões da Caixa de Ferramentas**.  
   
- As categorias **Favoritos** e **Comum** aparecem na caixa de ferramentas quando você seleciona as guias **Fluxo de Controle**, **Fluxo de Dados**e **Manipuladores de Eventos** . A categoria **Outras Tarefas** aparece na caixa de ferramentas quando você seleciona a guia **Fluxo de Controle** ou a guia **Manipuladores de Eventos** . As categorias Outras Transformações, **Outras Fontes**e **Outros Destinos** aparecem na caixa de ferramenta quando você seleciona a guia **Fluxo de Dados** .  
+ As categorias **Favoritos** e **Comum** aparecem na caixa de ferramentas quando você seleciona as guias **Fluxo de Controle**, **Fluxo de Dados**e **Manipuladores de Eventos** . A categoria **Outras Tarefas** aparece na caixa de ferramentas quando você seleciona a guia **Fluxo de Controle** ou a guia **Manipuladores de Eventos** . As categorias **Outras Transformações**, **Outras Fontes**e **Outros Destinos** aparecem na caixa de ferramenta quando você seleciona a guia **Fluxo de Dados** .  
   
  Quando você cria um novo projeto de SSIS ou abre um existente, a **Caixa de Ferramentas do SSIS** é exibida automaticamente. Você também pode abrir a caixa de ferramentas clicando no botão caixa de ferramentas localizado no canto superior direito da superfície de design de pacote.  
   
