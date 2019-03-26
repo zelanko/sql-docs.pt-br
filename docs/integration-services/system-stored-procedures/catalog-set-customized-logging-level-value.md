@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: d83fb763-c7c6-4e20-bd10-0f995598b198
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 14604d6b11f6413ee25a938b521794a11f874373
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a2b4980494126ff3777882153fd58b1a9c03bf29
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626454"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277005"
 ---
 # <a name="catalogsetcustomizedlogginglevelvalue"></a>catalog.set_customized_logging_level_value
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

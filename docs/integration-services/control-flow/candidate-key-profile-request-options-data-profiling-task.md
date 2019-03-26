@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cd0b38936ce66b1047b225bd87f4c80ebd43f18b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db7471411d629dfb55de9f074a31e68d34e52bd3
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599205"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276178"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>Opções da solicitação do perfil Chave de Candidato (tarefa Criação de Perfil de Dados)
   Use o painel **Propriedades da Solicitação** da página **Solicitações de Perfil** para definir as opções da **Solicitação de Perfil de Chave de Candidato** selecionada no painel de solicitações. Um perfil Chave de Candidato informa se uma coluna ou conjunto de colunas é uma chave, ou uma chave aproximada, para a tabela selecionada. Esse perfil também pode ajudar a identificar problemas em seus dados, como valores em duplicata em uma possível coluna de chave.  
@@ -95,7 +95,7 @@ ms.locfileid: "47599205"
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**Default**|Classifica e compara dados com base no agrupamento da coluna na tabela de origem.|  
+|**Default**|Classifica e compara dados com base na ordenação da coluna na tabela de origem.|  
 |**BinarySort**|Classifica e compara dados com base nos padrões de bit definidos para cada caractere. A ordem de classificação binária faz distinção entre maiúsculas e minúsculas e acentuação. Binário é também a ordem de classificação mais rápida.|  
 |**DictionarySort**|Classifica e compara dados com base nas regras de classificação e comparação, conforme definidas em dicionários do idioma ou alfabeto associado.|  
   
