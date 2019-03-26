@@ -13,15 +13,15 @@ helpviewer_keywords:
 - expressions [Integration Services], examples
 - examples [Integration Services]
 ms.assetid: c7794ba3-0de5-466b-ae8a-9ddd27360049
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5c7a5538b4856fc64eb42acc0496690fc7733d8b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 919692adf35cbf78b11073905294925fef8e23b5
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639513"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271335"
 ---
 # <a name="examples-of-advanced-integration-services-expressions"></a>Exemplos de expressões avançadas do Integration Services
   Esta seção fornece exemplos de expressões avançadas que combinam múltiplos operadores e funções. Se uma expressão for usada em uma restrição precedente ou na transformação Divisão Condicional, ela deve ser avaliada como uma expressão Booleana. No entanto, essa restrição não se aplica a expressões usadas em expressões de propriedades, variáveis, na transformação Coluna Derivada ou no contêiner Loop For.  

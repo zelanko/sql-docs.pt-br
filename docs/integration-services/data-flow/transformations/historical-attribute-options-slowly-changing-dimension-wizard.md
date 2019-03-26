@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.loaddimwizard.histattriboption.f1
 ms.assetid: a176ec66-ec39-4c99-99d1-c1afa8450e1e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1a5a01a87bb8b8d52f4d3857c3b44aee3dbde52a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 63fa732880237631af9e6ec53f72f595f745a11a
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847574"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271228"
 ---
 # <a name="historical-attribute-options-slowly-changing-dimension-wizard"></a>Opções de Atributo Histórico (Assistente para Dimensões de Alteração Lenta)
   Use a caixa de diálogo **Opções de Atributo Histórico** para mostrar atributos históricos por datas de início e de término ou para registrar atributos históricos em uma coluna criada especialmente para este propósito.  

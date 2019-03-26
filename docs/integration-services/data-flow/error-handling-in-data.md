@@ -20,15 +20,15 @@ helpviewer_keywords:
 - data flow [Integration Services], errors
 - expressions [Integration Services], errors
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c08e1b617755d50b49de7c9286e6f5a512039527
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 3a60ec842c22f5c11972b9765f230a00c672ca0e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641817"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277174"
 ---
 # <a name="error-handling-in-data"></a>Tratamento de erros em dados
   Quando um componente de fluxo de dados aplica uma transformação aos dados da coluna, extrai dados de fontes ou carrega dados nos destinos, podem ocorrer erros. Frequentemente, os erros ocorrem por causa de valores de dados inesperados. Por exemplo, uma conversão de dados falha porque uma coluna contém uma cadeia de caracteres em vez de um número, uma inserção em uma coluna de banco de dados falha porque os dados são uma data e a coluna tem um tipo de dados numéricos, ou uma expressão não é avaliada porque o valor de uma coluna é zero, resultando em uma operação matemática que não é válida.  
@@ -69,12 +69,12 @@ Use a caixa de diálogo **Configurar Saída de Erro** para configurar opções d
  **Erro**  
  Se aplicável, especifique o que deve acontecer quando ocorrer um erro: ignorar a falha, redirecionar a linha ou falhar o componente.  
   
- **Tópicos Relacionados:** [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md)  
+ **Tópicos relacionados:** [Tratamento de erro em dados](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **Truncation**  
  Se aplicável, especifique o que deve acontecer quando ocorrer um truncamento: ignorar a falha, redirecionar a linha ou falhar o componente.  
   
- **Tópicos Relacionados:** [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md)  
+ **Tópicos relacionados:** [Tratamento de erro em dados](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **Descrição**  
  Visualize a descrição da operação.  

@@ -11,19 +11,19 @@ helpviewer_keywords:
 - interoperability and coexistence [Integration Services]
 - Integration Services, interoperability and coexistence
 ms.assetid: edfbcd56-012f-462e-a542-95491394fda9
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a6662176bc0a266982ec1e81dadff815e1490061
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a4cc990067381cacc14275b5f7948c63284b216a
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645764"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275536"
 ---
 # <a name="installing-integration-services-versions-side-by-side"></a>Instalando as Versões do Integration Services Lado a Lado
   Você pode instalar   
-      [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services (SSIS) lado a lado com versões anteriores do SSIS. Este tópico descreve algumas limitações das instalações lado a lado.  
+      [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o Integration Services (SSIS) lado a lado com versões anteriores do SSIS. Este tópico descreve algumas limitações das instalações lado a lado.  
   
 ## <a name="designing-and-maintaining-packages"></a>Criação e manutenção de pacotes  
  Para criar e manter pacotes destinados ao SQL Server 2016, SQL Server 2014 ou SQL Server 2012, use o SQL Server Data Tools (SSDT) para Visual Studio 2015. Para obter o SSDT, consulte [Baixar o SQL Server Data Tools mais recente](../../ssdt/download-sql-server-data-tools-ssdt.md).  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - data flow components [Integration Services], mapping data types
 - data types [Integration Services], converting
 ms.assetid: 941260d0-4ec3-4bf0-ab48-2b26733e6b24
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3560a83c6e292a5e3a46e97b5e34c3bac9eac894
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 776a26444181ce722651952c45ea0b6b655a41ba
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641790"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271892"
 ---
 # <a name="working-with-data-types-in-the-data-flow"></a>Trabalhando com tipos de dados no fluxo de dados
   Ao desenvolver um componente de fluxo de dados personalizado no Integration Services, você trabalha constantemente com tipos de dados por meio da cópia de dados entre os buffers de fluxo de dados e a transformação de valores. As informações deste tópico ajudam você a escolher os tipos de dados corretos do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] e a usar os métodos corretos quando estiver trabalhando com eles.  

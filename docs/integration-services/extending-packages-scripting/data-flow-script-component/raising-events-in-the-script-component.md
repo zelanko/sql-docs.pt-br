@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - Script component [Integration Services], raising events
 ms.assetid: bb389073-e1d0-4794-8d29-c8b293b6a5e3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4c4ac1a5246ecf59e73b8b4bbe9f7621178fa3b5
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 45dabaa011300d9dc7ec1aba99912498c242b61f
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640054"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272694"
 ---
 # <a name="raising-events-in-the-script-component"></a>Gerando eventos no componente Script
   Os eventos fornecem um modo de relatar erros, avisos e outras informações, como o progresso ou status da tarefa, ao pacote que os contém. O pacote fornece manipuladores de eventos para gerenciar notificações de eventos. O componente Script pode gerar eventos chamando métodos na propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> da classe **ScriptMain**. Para obter mais informações sobre como pacotes [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] manipulam eventos, consulte [Manipuladores de Eventos do SSIS &#40;Integration Services&#41;](../../../integration-services/integration-services-ssis-event-handlers.md).  

@@ -3,22 +3,21 @@ title: Mapeamentos de coluna (Assistente de Importação e Exportação do SQL S
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.columnmapandtransform.f1
 ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 790542daa3cf69f5d1cd149a3356545fe69b03e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 852e150955371d78fe8170a2f4fc3be037d35ccd
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733864"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58222090"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>Mapeamentos de coluna (Assistente de Importação e Exportação do SQL Server)
   Depois de selecionar as tabelas existentes e exibições para copiar ou examinar a consulta que você forneceu, ao clicar em **Editar mapeamentos**, o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mostra a caixa de diálogo **Mapeamentos de Colunas** . Nesta página você especifica e configura colunas de destino para receber os dados copiados das colunas de origem. Geralmente, você não precisa alterar nada nesta página.

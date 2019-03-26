@@ -16,15 +16,15 @@ helpviewer_keywords:
 - variables [Integration Services], updating
 - counting rows
 ms.assetid: b68293b9-a68c-40be-9d81-77342da1be29
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2c121536dcd9055515eae54b2447b996895e8800
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 61f4236d4bfe3578afc83bb9ac034e2ebc792928
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641713"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270007"
 ---
 # <a name="row-count-transformation"></a>Transformação Contagem de Linhas
   A transformação Contagem de Linhas conta as linhas quando passam por um fluxo de dados e armazena a contagem final em uma variável.  

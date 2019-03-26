@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Expression Builder dialog box
 ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9898ec238e8548f55f07b27bdca1fc512c55a413
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 199c6a433523fed4a4cb164669529b2426df37f7
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804305"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275187"
 ---
 # <a name="expression-builder"></a>Construtor de Expressões
   Use a caixa de diálogo **Construtor de Expressões** para criar e editar uma expressão de propriedade ou para gravar a expressão que define o valor de uma variável usando uma interface gráfica do usuário que lista as variáveis e oferece uma referência interna às funções, às conversões de tipo e aos operadores que a linguagem de expressão [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui.  
@@ -41,7 +41,7 @@ ms.locfileid: "47804305"
   
 |Termo|Definição|  
 |----------|----------------|  
-|**Variables**|Expanda a pasta de **Variáveis** e arraste as mesmas para a caixa **Expressão** .|  
+|**Variáveis**|Expanda a pasta de **Variáveis** e arraste as mesmas para a caixa **Expressão** .|  
 |**Funções Matemáticas**<br /><br /> **Funções de cadeia de caracteres**<br /><br /> **Funções Data/Hora**<br /><br /> **Funções NULL**<br /><br /> **Conversões de Tipos**<br /><br /> **Operadores**|Expanda as pastas e arraste as funções, conversões de tipos e operadores para a caixa **Expressão** .|  
 |**Expression**|Edite ou digite uma expressão.'|  
 |**Valor avaliado**|Lista o resultado da avaliação da expressão.|  
@@ -49,7 +49,7 @@ ms.locfileid: "47804305"
   
 ## <a name="see-also"></a>Consulte Também  
  [Página Expressões](../../integration-services/expressions/expressions-page.md)   
- [Editor de expressões de propriedades](../../integration-services/expressions/property-expressions-editor.md)   
+ [Editor de Expressões de Propriedades](../../integration-services/expressions/property-expressions-editor.md)   
  [Variáveis do SSIS &#40;Integration Services&#41;](../../integration-services/integration-services-ssis-variables.md)   
  [Variáveis do sistema](../../integration-services/system-variables.md)  
   

@@ -21,15 +21,15 @@ helpviewer_keywords:
 - tasks [Integration Services], custom
 - TaskHost object
 ms.assetid: dcbd8615-fa6d-4ddb-b8a5-0b19dddd6239
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d2c4f5455a1a305805a7d2322906c569b400b062
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb1b49bed3d8f3b9a839060bfe5480e9574e12ad
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603674"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270982"
 ---
 # <a name="developing-a-custom-task"></a>Desenvolvendo uma tarefa personalizada
   O [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] usa tarefas para executar unidades de trabalho como suporte à extração, transformação e carregamento de dados. O [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] inclui várias tarefas que executam as ações usadas mais frequentemente, da execução de uma instrução SQL ao download de um arquivo de um site de FTP. Se as tarefas incluídas e as ações suportadas não satisfizerem seus requisitos completamente, você poderá criar uma tarefa personalizada.  

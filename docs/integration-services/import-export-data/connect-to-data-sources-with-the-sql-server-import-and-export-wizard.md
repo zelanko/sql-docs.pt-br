@@ -3,20 +3,19 @@ title: Conectar-se a fontes de dados com o Assistente de Importação e Exporta�
 ms.custom: ''
 ms.date: 02/15/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: fd726506-54b7-433b-bf70-3642235b7b31
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 28fc6d66c9f64be96220154f011a62fe3af97676
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d17b7115fb0a748c16fc7093100d67f377610268
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669524"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58221881"
 ---
 # <a name="connect-to-data-sources-with-the-sql-server-import-and-export-wizard"></a>Conectar-se a fontes de dados com o Assistente de Importação e Exportação do SQL Server
 Os tópicos nesta seção mostram como se conectar a várias fontes de dados usadas quando você executa o Assistente de Importação e Exportação do SQL Server. Você precisa fornecer informações de conexão para as fontes de dados nas páginas **Escolher uma fonte de dados** e **Escolher um destino** do assistente.

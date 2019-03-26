@@ -3,22 +3,21 @@ title: Instrução Create Table do SQL (Assistente de Importação e Exportaçã
 ms.custom: ''
 ms.date: 02/16/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.createtablesql.f1
 ms.assetid: 0d6f6b3b-d023-4770-a8a9-65b2977c8d05
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dec571f93da2ca51aadc6a79a54090bcb0eab08d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84b78d8a063b933008e420eba29ce22e3bc0f305
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601144"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58222000"
 ---
 # <a name="create-table-sql-statement-sql-server-import-and-export-wizard"></a>Instrução Create Table SQL (Assistente de Importação e Exportação do SQL Server)
 Se você selecionar **Criar tabela de destino** e, em seguida, selecionar **Editar SQL** na caixa de diálogo **Mapeamentos de Colunas** , o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mostrará a caixa de diálogo **Instrução SQL Create Table** . Nessa página, examine e, opcionalmente, personalize o comando **CREATE TABLE** que o assistente executará para criar a nova tabela de destino.

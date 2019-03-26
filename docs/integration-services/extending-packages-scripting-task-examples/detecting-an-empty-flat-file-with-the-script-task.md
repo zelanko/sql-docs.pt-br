@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SSIS Script task, empty flat files
 - Script task [Integration Services], examples
 ms.assetid: 1b4defb8-886a-483d-8056-d1b91d37bc90
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: aa0d3b3709d5861a0bbf9c3dfc95feb2ce8bd99e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ac64165e396272c525d7abfba2a3584947cf3e2
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729904"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274341"
 ---
 # <a name="detecting-an-empty-flat-file-with-the-script-task"></a>Detectando um arquivo simples vazio com a tarefa Script
   A origem Arquivo Simples não determina se um arquivo simples contém linhas de dados antes de tentar processá-las. Talvez você queira aumentar a eficácia de um pacote, especialmente de um pacote que itera em diversos arquivos simples, ignorando os arquivos que não contêm linhas de dados. A tarefa Script pode procurar um arquivo simples vazio antes de o pacote começar a processar o fluxo de dados.  

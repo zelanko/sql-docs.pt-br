@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - oraDb
 ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 227f488e3393352ae083576676b7934b722b0ce9
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e14dc619cfe913239e47090ccc2a635454ea6e92
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203715"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271707"
 ---
 # <a name="connect-to-an-oracle-source-database"></a>Conectar a um banco de dados de origem Oracle
   Use a página do Oracle de origem para fornecer as informações necessárias para conectar-se ao banco de dados de origem Oracle. A instância CDC lerá os logs de refazer do banco de dados Oracle aos quais você está conectado.  

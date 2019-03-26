@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.sapbwsource.erroroutput.f1
 ms.assetid: b6e23b0c-949a-46d1-8424-4dc3d9035e79
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 26239ef4b8194fbcf6d423376d282bf981409882
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0919a2ec47d6b7910a2ddc753dd0fca613c8b57
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742254"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273739"
 ---
 # <a name="sap-bw-source-editor-error-output-page"></a>Editor de Origem de SAP BW (página Saída de Erro)
   Use a página **Saída de Erro** do **Editor de Origem SAP BW** , para selecionar opções de tratamento de erro e definir propriedades em colunas de saída de erros.  

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e7f4c132-a5ec-49d8-a964-45775432731f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6246042a70aca4edc07a36bc0dabe95be56c6d7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 10af58bf19696175926090a87f87551e4738c674
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657965"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271639"
 ---
 # <a name="look-up-infoobject"></a>Pesquisar InfoObject
   Use a caixa de diálogo **Pesquisar InfoObject** para pesquisar um InfoObject definido no sistema SAP Netweaver BW. Quando a lista de InfoObjects disponível é exibida, selecione o InfoObject que você quer e o destino do SAP BW preencherá as opções associadas com os valores necessários.  
@@ -82,10 +82,10 @@ ms.locfileid: "47657965"
 ## <a name="see-also"></a>Consulte Também  
  [Criar InfoCube para os Dados da Transação](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
  [Criar InfoSource](../../integration-services/data-flow/create-infosource.md)   
- [Criar InfoSource para os dados da transação](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   
+ [Criar InfoSource para os Dados da Transação](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   
  [Criar InfoSource para dados mestre](../../integration-services/data-flow/create-infosource-for-master-data.md)   
- [Criar novo InfoObject](../../integration-services/data-flow/create-new-infoobject.md)   
+ [Criar Novo InfoObject](../../integration-services/data-flow/create-new-infoobject.md)   
  [Editor de Destino SAP BW &#40;Página Gerenciador de Conexões&#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
- [Ajuda F1 do Microsoft Connector para SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
+ [Ajuda F1 do Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

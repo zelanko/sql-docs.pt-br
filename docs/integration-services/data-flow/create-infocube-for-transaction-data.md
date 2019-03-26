@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 673cea01-a260-4fce-a1a0-f73839289805
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b2f17affc1bb3e9179a62269d9f98e9d5d1fd9d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cdca90b8cdde1e9995da7ec28d29191dd2a36200
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824754"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270719"
 ---
 # <a name="create-infocube-for-transaction-data"></a>Criar InfoCube para os dados da transação
   Use a caixa de diálogo **Criar InfoCube para os Dados da Transação** para criar um novo InfoCube para dados de transação no sistema SAP Netweaver BW.  

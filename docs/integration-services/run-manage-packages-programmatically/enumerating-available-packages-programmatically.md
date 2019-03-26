@@ -12,15 +12,15 @@ helpviewer_keywords:
 - existence testing [Integration Services]
 - enumerating packages [Integration Services]
 ms.assetid: 254ec7ee-d3ff-4361-8995-46e9b9c4dc95
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0a9ee4631e7fbc03d31078230d78458df5eef722
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad1532d5f3cca914ad169eb9dec95a16960a7344
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700304"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271613"
 ---
 # <a name="enumerating-available-packages-programmatically"></a>Enumerando pacotes disponíveis programaticamente
   <a name="top"></a> Ao trabalhar programaticamente com pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], talvez você queira determinar se existe um pacote ou pasta individual ou enumerar os pacotes salvos que estão disponíveis para carregamento e execução. A classe <xref:Microsoft.SqlServer.Dts.Runtime.Application> do namespace <xref:Microsoft.SqlServer.Dts.Runtime> fornece diversos métodos para atender a esses requisitos.    

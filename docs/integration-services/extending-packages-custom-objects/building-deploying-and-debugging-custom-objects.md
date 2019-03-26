@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - custom objects [Integration Services]
 ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 424fb19d14d1851cd647f0fa21a4d3271c8dd2b6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7ed254b6dd9b9bca5216962f769a55db99823dff
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502876"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271326"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>Compilando, implantando e depurando objetos personalizados
   Depois de escrever o código de um objeto personalizado do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], você deve compilar o assembly, implantá-lo e integrá-lo ao Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] para disponibilizar seu uso em pacotes, além de testá-lo e depurá-lo.  

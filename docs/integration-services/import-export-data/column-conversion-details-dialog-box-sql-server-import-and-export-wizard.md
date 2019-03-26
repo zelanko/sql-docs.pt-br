@@ -3,22 +3,21 @@ title: Caixa de diálogo Detalhes da Conversão de Coluna (Assistente de Importa
 ms.custom: ''
 ms.date: 02/16/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.issuedetails.f1
 ms.assetid: e2d00a39-dfbd-4821-a4d8-a5bd1164ed4d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8de113586457c8bc13c0f6656ed78c18708534dd
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: ac4a69a7aca5a1e354e345a47e23b413fc9d3422
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905706"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58221910"
 ---
 # <a name="column-conversion-details-dialog-box-sql-server-import-and-export-wizard"></a>Caixa de diálogo Detalhes da Conversão de Coluna (Assistente de Importação e Exportação do SQL Server)
   Se você clicar duas vezes na linha de uma coluna individual na página **Revisar Mapeamento de Tipo de Dados** , o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mostrará a caixa de diálogo **Detalhes de Conversão de Coluna** . Nesta página, você pode examinar as informações detalhadas de conversão de uma coluna individual. Essas informações incluem os itens a seguir.

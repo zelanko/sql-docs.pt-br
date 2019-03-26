@@ -14,15 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - Execute Process task [Integration Services]
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6787b6dff349baea30c40b70af21cc9079cda6ae
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 098b86edd8e424e758e9df5cae2f9f9553c45864
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506445"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271471"
 ---
 # <a name="execute-process-task"></a>Tarefa Executar Processo
   A tarefa Executar Processo executa um aplicativo ou arquivo de lote como parte de um fluxo de trabalho do pacote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Embora você possa usar a tarefa Executar Processo para abrir qualquer aplicativo padrão, como [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] ou [!INCLUDE[ofprword](../../includes/ofprword-md.md)], você geralmente o utiliza para executar aplicativos de negócios ou arquivos de lote que trabalham em uma fonte de dados. Por exemplo, você pode usar a tarefa Executar Processo para expandir um arquivo de texto compactado. Depois, o pacote pode usar o arquivo de texto como uma fonte de dados para o fluxo de dados no pacote. Como outro exemplo, você pode usar a tarefa Executar Processo para executar um aplicativo [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] personalizado que gera um relatório de vendas diário. Em seguida, você pode anexar o relatório a uma tarefa Enviar Email e encaminhar o relatório para uma lista de distribuição.  
@@ -115,7 +115,7 @@ ms.locfileid: "52506445"
  **StandardInputVariable**  
  Selecione a variável para fornecer a entrada ao processo ou clique em \<**Nova variável...**> para criar uma nova variável:  
   
- **Tópicos relacionados:** [Adicionar variável](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Tópicos relacionados:** [Adicionar Variável](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **StandardOutputVariable**  
  Selecione uma variável para capturar a saída do processo ou clique em \<**Nova variável...**> para criar uma nova variável.  

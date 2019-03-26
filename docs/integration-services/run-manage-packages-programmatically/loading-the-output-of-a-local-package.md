@@ -14,15 +14,15 @@ helpviewer_keywords:
 - data flow [Integration Services], loading results
 - loading data flow results
 ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4ec5e67b6a2f593f2869cf72fa2983305e084f8d
-ms.sourcegitcommit: 258c32f7e85a38aaf674da3478ae3ed10648d1f1
+ms.openlocfilehash: cf9107bb5a6e514e84fb17ae143491c9c3637991
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53414151"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272925"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>Carregando a saída de um pacote local
   Aplicativos cliente podem ler a saída de pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] quando a saída é salva em destinos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio de [!INCLUDE[vstecado](../../includes/vstecado-md.md)] ou quando a saída é salva em um destino de arquivo simples por meio das classes no namespace **System.IO**. Entretanto, um aplicativo cliente também consegue ler a saída de um pacote diretamente da memória, sem precisar de uma etapa intermediária para manter os dados. A resposta para essa solução é o namespace **Microsoft.SqlServer.Dts.DtsClient**, que contém implementações especializadas das interfaces **IDbConnection**, **IDbCommand** e **IDbDataParameter** do namespace **System.Data**. O assembly Microsoft.SqlServer.Dts.DtsClient.dll é instalado por padrão em **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**.  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - data flow components [Integration Services], execution plans
 - execution plans [Integration Services]
 ms.assetid: 679d9ff0-641e-47c3-abb8-d1a7dcb279dd
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d1ede86329f0082bac1927ca0c75fc64d6116a56
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 0bc51d3b3a1f7265d73e43526da6b70e70f35978
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591710"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270442"
 ---
 # <a name="execution-plan-and-buffer-allocation"></a>Plano de execução e alocação de buffer
   Antes da execução, a tarefa de fluxo de dados examina seus componentes e gera um plano de execução para cada sequência de componentes. Essa seção fornece detalhes sobre o plano de execução, como visualizá-lo e como buffers de entrada e saída são alocados com base no plano de execução.  

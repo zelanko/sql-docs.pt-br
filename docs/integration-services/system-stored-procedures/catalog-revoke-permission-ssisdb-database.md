@@ -11,15 +11,15 @@ helpviewer_keywords:
 - revoke_permission stored procedure [Integration Services]
 - catalog.revoke_permission stored procedure [Integration Services]
 ms.assetid: 850b9c26-5c7c-47b9-a61c-5cf9bb5948cf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4853ade7b4888ae8471f05230672e097e87f3131
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: b2ba95693f64cecdefc140e38f9ae048ca9945b5
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132076"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274712"
 ---
 # <a name="catalogrevokepermission-ssisdb-database"></a>catalog.revoke_permission (Banco de Dados SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Integration Services, data types
 - SQL Server Integration Services, data types
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 76559f2d4a8c96a64792e4ecf095094c3cb1229e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: b3c641f9ade72d1a821739f84e20e04305951a25
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641753"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274418"
 ---
 # <a name="integration-services-data-types"></a>Tipos de dados do Integration Services
   Quando dados entram em um fluxo de dados em um pacote, a fonte que extrai esses dados converte-os em um tipo de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Dados numéricos são atribuídos a um tipo de dados numéricos, dados de cadeia são atribuídos a um tipo de dados de caractere e datas são atribuídas a um tipo de dados de data. Outros dados, como GUIDs e BLOBs, também são atribuídos aos tipos de dados apropriados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Se dados tiverem um tipo de dados que não pode ser convertido em um tipo de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , ocorrerá um erro.  
@@ -237,10 +237,10 @@ ms.locfileid: "51641753"
 |DT_I1|||||||  
 |DT_I2|SMALLINT|SMALLINT|Short||smallint|SMALLINT|  
 |DT_I4|INT|INT|Longo||INTEGER|INTEGER|  
-|DT_I8|BIGINT|BIGINT|||BIGINT|bigint|  
+|DT_I8|BIGINT|BIGINT|||bigint|bigint|  
 |DT_NUMERIC|decimal, numeric|decimal, numeric|Decimal|NUMBER, INT|decimal, numeric|decimal, numeric|  
 |DT_R4|REAL|REAL|Single||real|real|  
-|DT_R8|float|FLOAT|Double|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  
+|DT_R8|FLOAT|FLOAT|Double|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  
 |DT_STR|char, varchar||varchar||char, varchar|char, varchar|  
 |DT_UI1|TINYINT|TINYINT|Byte||||  
 |DT_UI2|||||||  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - splitting dataset
 - datasets [Integration Services], splitting
 ms.assetid: 23b3e84f-9296-4dc9-81c0-c7f06ae3f1ff
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0031ddcf40b84670e50756bd5491c8b438d6fa21
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d0aa607818b9c02bed24f54bcdf12c10aeb03bab
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720724"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276567"
 ---
 # <a name="split-a-dataset-by-using-the-conditional-split-transformation"></a>Dividir um conjunto de dados por meio da transformação Divisão Condicional
   Para adicionar e configurar uma transformação Divisão Condicional, o pacote já deve incluir pelo menos uma tarefa de Fluxo de Dados e uma origem.  
@@ -66,6 +66,6 @@ ms.locfileid: "47720724"
  [Caminhos do Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
  [Tipos de dados do Integration Services](../../../integration-services/data-flow/integration-services-data-types.md)   
  [Tarefa de Fluxo de Dados](../../../integration-services/control-flow/data-flow-task.md)   
- [Expressões do SSIS &#40;Integration Services&#41;](../../../integration-services/expressions/integration-services-ssis-expressions.md)  
+ [Expressões do Integration Services &#40;SSIS&#41;](../../../integration-services/expressions/integration-services-ssis-expressions.md)  
   
   

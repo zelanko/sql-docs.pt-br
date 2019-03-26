@@ -3,22 +3,21 @@ title: Escolher uma fonte de dados (Assistente de Importação e Exportação do
 ms.custom: ''
 ms.date: 01/28/2019
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.chooseadatasource.f1
 ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a93eb928b8d9a756380879ad8cc30475ffd223e9
-ms.sourcegitcommit: 92c524119d7df5daf69ec144d532ddcb2e46abc0
+ms.openlocfilehash: 08baea2a92d21d9dca3a53dc17d6499f77e193d3
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55290416"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58222070"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>Escolher uma fonte de dados (Assistente de Importação e Exportação do SQL Server)
   Após a página de boas-vindas, o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exibe **Escolher uma Fonte de Dados**. Nessa página, você fornece informações sobre a fonte de dados e sobre como se conectar a ela.

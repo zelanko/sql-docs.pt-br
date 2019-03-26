@@ -1,7 +1,7 @@
 ---
 title: Exibir os Eventos Estendidos equivalentes às classes do Rastreamento do SQL | Microsoft Docs
 ms.custom: ''
-ms.date: 03/04/2017
+ms.date: 03/05/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,46 +16,48 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3dca735754367f7ca69fb36f6e5437e421c55a30
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 85482d1df6e27d103b97ce3e00b02baeea3a9a5f
+ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537597"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58417178"
 ---
 # <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>Exibir os Eventos Estendidos equivalentes às classes de evento de Rastreamento do SQL
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Se você desejar usar os Eventos Estendidos para coletar dados de evento equivalentes a colunas e classes de evento do Rastreamento do SQL, será útil entender como os eventos do Rastreamento do SQL são mapeados para os eventos e as ações dos Eventos Estendidos.  
   
  Você pode usar o seguinte procedimento para exibir os eventos e as ações dos Eventos Estendidos que são equivalentes a cada evento do Rastreamento do SQL e suas colunas associadas.  
   
-## <a name="to-view-the-extended-events-equivalents-to-sql-trace-events-using-query-editor"></a>Para exibir os equivalentes de Eventos Estendidos a eventos do Rastreamento do SQL usando o Editor de Consulta  
-  
--   No Editor de Consultas do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], execute a seguinte consulta:  
-  
-    ```sql  
-    USE MASTER;  
-    GO  
-    SELECT DISTINCT  
-       tb.trace_event_id,  
-       te.name AS 'Event Class',  
-       em.package_name AS 'Package',  
-       em.xe_event_name AS 'XEvent Name',  
-       tb.trace_column_id,  
-       tc.name AS 'SQL Trace Column',  
-       am.xe_action_name as 'Extended Events action'  
-    FROM (sys.trace_events te LEFT OUTER JOIN sys.trace_xe_event_map em  
-       ON te.trace_event_id = em.trace_event_id) LEFT OUTER JOIN sys.trace_event_bindings tb  
-       ON em.trace_event_id = tb.trace_event_id LEFT OUTER JOIN sys.trace_columns tc  
-       ON tb.trace_column_id = tc.trace_column_id LEFT OUTER JOIN sys.trace_xe_action_map am  
-       ON tc.trace_column_id = am.trace_column_id  
-    ORDER BY te.name, tc.name  
-    ```  
-  
- Ao exibir os resultados, observe o seguinte:  
-  
--   Se todas as colunas retornarem NULL com exceção da coluna Event Class, isso indicará que a classe de evento não foi migrada do Rastreamento do SQL.  
+## <a name="to-view-the-extended-events-equivalents-to-sql-trace-events-using-query-editor"></a>Para exibir os equivalentes de Eventos Estendidos a eventos do Rastreamento do SQL usando o Editor de Consulta
+
+- No Editor de Consultas do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], execute a seguinte consulta:
+
+   ```sql
+   USE MASTER;
+   GO
+   SELECT DISTINCT
+      tb.trace_event_id,
+      te.name            AS 'Event Class',
+      em.package_name    AS 'Package',
+      em.xe_event_name   AS 'XEvent Name',
+      tb.trace_column_id,
+      tc.name            AS 'SQL Trace Column',
+      am.xe_action_name  AS 'Extended Events action'
+   FROM
+                sys.trace_events         te
+      LEFT JOIN sys.trace_xe_event_map   em ON te.trace_event_id  = em.trace_event_id
+      LEFT JOIN sys.trace_event_bindings tb ON em.trace_event_id  = tb.trace_event_id
+      LEFT JOIN sys.trace_columns        tc ON tb.trace_column_id = tc.trace_column_id
+      LEFT JOIN sys.trace_xe_action_map  am ON tc.trace_column_id = am.trace_column_id
+   ORDER BY te.name, tc.name
+   ```
+
+Ao exibir os resultados, observe o seguinte:  
+
+- Se todas as colunas retornarem NULL com exceção da coluna Event Class, isso indicará que a classe de evento não foi migrada do Rastreamento do SQL.  
   
 -   Se apenas o valor da coluna Extended Events for NULL, isso indicará que qualquer um das seguintes condições é verdadeira:  
   

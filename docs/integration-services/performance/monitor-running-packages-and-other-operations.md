@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.ssis.ssms.isoperations.executions.f1
 - sql13.ssis.ssms.isoperations.general.f1
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4ac0343ffe46613e85fc1985a836dd3f05f3d46e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 291dc0fb1be05a9818d7f351867c5c6d25276ee2
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623674"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271214"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>Monitorar a execução de pacotes e outras operações
   Você pode monitorar execuções de pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , validações de projeto e outras operações usando uma ou mais das ferramentas a seguir. Algumas ferramentas, como toques de dados, estão disponíveis somente para os projetos que são implantados no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -32,7 +32,7 @@ ms.locfileid: "47623674"
   
      Para saber mais, confira [Reports for the Integration Services Server](#reports).  
   
--   exibições  
+-   Exibições  
   
      Para obter mais informações, consulte [Exibições &#40;Catálogo do Integration Services&#41;](../../integration-services/system-views/views-integration-services-catalog.md).  
   
@@ -152,7 +152,7 @@ ms.locfileid: "47623674"
   
 |Seção|Descrição|  
 |-------------|-----------------|  
-|Filtro|Mostra o filtro atual aplicado ao relatório, como o intervalo de horas de início.|  
+|Filtrar|Mostra o filtro atual aplicado ao relatório, como o intervalo de horas de início.|  
 |Informações de Execução|Mostra a hora de início, a hora de término e a duração para cada execução do pacote. Você pode exibir uma lista de valores de parâmetros que foram usados com uma execução de pacote, como valores que foram transmitidos a um pacote filho usando a tarefa Executar Pacote. Para exibir a lista de parâmetros, clique em Visão Geral.|  
   
  Para obter mais informações sobre como usar a tarefa Executar Pacote para disponibilizar valores para um pacote filho, consulte [Tarefa Executar Pacote](../../integration-services/control-flow/execute-package-task.md).  
@@ -206,4 +206,4 @@ ms.locfileid: "47623674"
 
 ## <a name="see-also"></a>Consulte Também  
  [Execução de projetos e pacotes](../packages/deploy-integration-services-ssis-projects-and-packages.md)   
- [Relatórios para solução de problemas de execução de pacote](../troubleshooting/troubleshooting-reports-for-package-execution.md)  
+ [Solucionando problemas de relatórios para execução de pacotes](../troubleshooting/troubleshooting-reports-for-package-execution.md)  

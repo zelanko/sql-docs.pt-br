@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Server Integration Services packages, connection managers
 - custom connection managers [Integration Services]
 ms.assetid: bda0b29e-57f5-4879-b04d-1396dc56daa8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2ad82c5b70d56f3deefc9a06dcc2303e33f95c4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e9229ee947a770c9b587a6c4fc5b679c3ab2af90
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779084"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272658"
 ---
 # <a name="developing-a-custom-connection-manager"></a>Desenvolvendo um gerenciador de conexões personalizado
   O [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] usa gerenciadores de conexões para encapsular as informações necessárias para conexão a uma fonte de dados externa. O [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] inclui vários gerenciadores de conexões que dão suporte a conexões às fontes de dados usadas mais comumente, de bancos de dados corporativos a arquivos de texto e planilhas do Excel. Se os gerenciadores de conexões e as fontes de dados externas suportadas pelo [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] não satisfizerem totalmente os seus requisitos, você pode criar um gerenciador de conexões personalizado.  

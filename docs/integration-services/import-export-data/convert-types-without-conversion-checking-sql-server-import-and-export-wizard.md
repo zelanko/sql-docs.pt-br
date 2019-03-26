@@ -3,22 +3,21 @@ title: Converter tipos sem verificação de conversão (Assistente de Importaç�
 ms.custom: ''
 ms.date: 01/11/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.nomappingfile.f1
 ms.assetid: 87d9d3e5-477f-4117-a37f-bff53ea3e14d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1b46fb0abc31649dd7162e4ddb8de2db5c024080
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5e0afe01fea1855dde6e174a12d6a9971e78b83
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796564"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58222160"
 ---
 # <a name="convert-types-without-conversion-checking-sql-server-import-and-export-wizard"></a>Converter tipos sem verificação de conversão (Assistente de Importação e Exportação do SQL Server)
   Depois de selecionar as tabelas existentes e exibições para copiar ou examinar a consulta que você forneceu, o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode mostrar **Converter tipos sem verificar a conversão**. O assistente mostra essa página quando não é possível localizar um ou mais dos arquivos de mapeamento e de conversão de tipo de dados necessários para mapear os tipos de dados entre a origem e o destino. A página inclui informações que ajudam você a compreender o que está faltando.

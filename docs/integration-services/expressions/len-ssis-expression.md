@@ -11,15 +11,15 @@ helpviewer_keywords:
 - LEN function
 - number of characters
 ms.assetid: d961398b-e4d0-4936-be17-8f4c5882a640
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 09ef57d07b85f432e7b0ef4e4e814d5aa89a7979
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 836be2ee439fa39b433b2c89755e4402bad2e8e3
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611314"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270517"
 ---
 # <a name="len-ssis-expression"></a>LEN (Expressão SSIS)
   Retorna o número de caracteres em uma expressão character. Se a cadeia de caracteres incluir espaços em branco à esquerda e à direita, a função os incluirá na contagem. LEN retorna valores idênticos para a mesma cadeia de caracteres de byte único e duplo.  

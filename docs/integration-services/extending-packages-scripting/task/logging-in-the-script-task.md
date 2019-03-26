@@ -19,15 +19,15 @@ helpviewer_keywords:
 - Script task [Integration Services], logs
 - packages [Integration Services], logs
 ms.assetid: 2e11fc15-df18-4309-bd2d-fc58aa4b9b7a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: baa0e4e5cc4134b4efbd84ffbba8a422af7f4e8a
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: ac9506695640938df31fd71bd1f82f634deda580
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640011"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274471"
 ---
 # <a name="logging-in-the-script-task"></a>Registrando a tarefa Script
   O uso de log em pacotes do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] permite que você grave informações detalhadas sobre o progresso da execução, resultados e problemas, por meio do registro de eventos predefinidos ou mensagens definidas pelo usuário para análise posterior. A tarefa Script pode usar o método <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> do objeto **Dts** para registrar dados definidos pelo usuário. Se o registro em log estiver habilitado e o evento **ScriptTaskLogEntry** for selecionado para o registro na guia **Detalhes** da caixa de diálogo **Configurar Logs de SSIS**, uma única chamada ao método <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> armazenará as informações do evento em todos os provedores de log configurados para a tarefa.  

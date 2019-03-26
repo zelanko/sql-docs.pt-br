@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SSIS Script task, vs. custom managed tasks
 - custom tasks [Integration Services], scripts
 ms.assetid: c0aea822-a21e-44e1-a3d3-8777bd0a1c34
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ba27959fa5c98b26bd6dc4fdf60d695829c7382d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec0b2486845e723feda79db87679a72a6ca4caf9
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653416"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270649"
 ---
 # <a name="comparing-scripting-solutions-and-custom-objects"></a>Comparando soluções de script e objetos personalizados
   Uma tarefa Script ou componente Script do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pode implementar muitas das funcionalidades possíveis em uma tarefa gerenciada personalizada ou em um componente de fluxo de dados. Eis algumas considerações para ajudar você a escolher o tipo apropriado de tarefa para suas necessidades:  

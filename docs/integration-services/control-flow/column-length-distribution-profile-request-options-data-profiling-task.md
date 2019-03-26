@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 1a4de41f-f38d-40ea-ba1b-6c0ef67ea52a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 955a9ba92639151792976037eee64de4c13eb222
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ef0a1d9957a4884ddd579d6bf94103c4b1c5bd6d
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825874"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270768"
 ---
 # <a name="column-length-distribution-profile-request-options-data-profiling-task"></a>Opções de solicitação do perfil Distribuição de Comprimento de Coluna (tarefa Criação de Perfil de Dados)
   Use o painel **Propriedades da Solicitação** da página **Solicitações de Perfil** para definir as opções da **Solicitação de Perfil de Distribuição de Comprimento de Coluna** selecionada no painel de solicitações. Um Perfil de Distribuição de Comprimento de Coluna reporta todos os comprimentos distintos de valores de cadeia de caracteres na coluna selecionada e a porcentagem de linhas na tabela que cada comprimento representa. Esse perfil pode ajudá-lo a identificar problemas em seus dados, como valores inválidos. Por exemplo, você cria o perfil de uma coluna com códigos de estados dos Estados Unidos com dois caracteres e descobre valores maiores que dois caracteres.  

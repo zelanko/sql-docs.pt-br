@@ -18,15 +18,15 @@ helpviewer_keywords:
 - flat files
 - Flat File source
 ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ea4388b453043cb380e7247d6688597300d51366
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: b1a7e2f0320790959df4f29bfd586f70acec9de7
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639683"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271054"
 ---
 # <a name="flat-file-source"></a>Fonte de Arquivo Simples
   A fonte de Arquivo Simples lê dados de um arquivo de texto. O arquivo de texto pode ser delimitado, ter largura fixa ou formato misto.  
@@ -117,7 +117,7 @@ ms.locfileid: "51639683"
  **Erro**  
  Especifique o que deve acontecer quando ocorre um erro: ignorar a falha, redirecionar a linha ou causar falha no componente.  
   
- **Tópicos Relacionados:** [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md)  
+ **Tópicos relacionados:** [Tratamento de erro em dados](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **Truncation**  
  Especifique o que deve acontecer quando ocorre um truncamento: ignorar a falha, redirecionar a linha ou causar falha do componente.  

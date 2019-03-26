@@ -11,15 +11,15 @@ helpviewer_keywords:
 - operations view [Integration Services]
 - catalog.operations view [Integration Services]
 ms.assetid: 9455c5b1-60ff-45fc-8599-cc3abbd6daf5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2844d9c1a1c8ea7263de09c1dc2b5544b11fd783
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74a8e5a027d07aebb7d203ee478fc2968fd0a12f
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828416"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271828"
 ---
 # <a name="catalogoperations-ssisdb-database"></a>catalog.operations (Banco de Dados SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c3a062cd23809db8edf5439f252dabcc6d905dad
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 7fdf13c7a0a2d318846b1140b26c6e56c2290024
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641183"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271176"
 ---
 # <a name="cdc-flow-components"></a>Componentes de fluxo CDC
   Os componentes Change Data Capture da Attunity para Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] Microsoft ajudam os desenvolvedores do SSIS a trabalharem com CDC e reduzir a complexidade de pacotes CDC.  

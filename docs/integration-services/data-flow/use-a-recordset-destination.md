@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Recordset destination
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d47d625bada340c98726a725c03c5e4ae1c6ae72
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1c1df83eff1f9800e9a17a9241b902b2522cebb
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808414"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271027"
 ---
 # <a name="use-a-recordset-destination"></a>Usar um destino do conjunto de registros
   O destino do Conjunto de Registros não salva dados em uma fonte de dados externa. Em vez disso, o destino do Conjunto de Registros salva dados na memória em um conjunto de registros armazenado em uma variável de pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] do tipo de dados **Objeto** . Depois que o destino do Conjunto de Registros salva os dados, geralmente você usa um contêiner Loop Foreach com o enumerador ADO Foreach para processar uma linha do conjunto de registros de cada vez. O enumerador ADO Foreach salva o valor de cada coluna da linha atual em uma variável de pacote separada. Em seguida, as tarefas que você configura dentro do contêiner Loop Foreach leem esses valores das variáveis e executam alguma ação com eles.  

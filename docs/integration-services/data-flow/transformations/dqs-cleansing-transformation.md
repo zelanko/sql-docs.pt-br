@@ -14,15 +14,15 @@ helpviewer_keywords:
 - data correction
 - correct data
 ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a8749700b557852b9807d28ee7cae2295504fa24
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: ea4d69647f0f3908fe48fa09ac78005f597013d3
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979982"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271984"
 ---
 # <a name="dqs-cleansing-transformation"></a>Transformação de Limpeza DQS
   A transformação de Limpeza DQS usa o DQS (Data Quality Services) para corrigir dados de uma fonte de dados conectada com a aplicação de regras aprovadas, que foram criadas para a fonte de dados conectada ou uma fonte de dados semelhante. Para obter informações sobre regras de correção de dados, consulte [DQS Knowledge Bases and Domains](../../../data-quality-services/dqs-knowledge-bases-and-domains.md). Para obter mais informações sobre o DQS, consulte [Data Quality Services Concepts](../../../data-quality-services/data-quality-services-concepts.md).  

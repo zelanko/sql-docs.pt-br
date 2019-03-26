@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.ssis.ssms.isprojectprop.general.f1
 - sql13.ssis.ssms.isprojectprop.permissions.f1
 ms.assetid: d5cf52f5-1fe2-438a-98a3-fe117360acf8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3fb345425a06b5c32cd8ae46837dd440c86432fb
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 14fd2981a20bea0aac3d5ab06cf1a1a55cadad6a
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419010"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276835"
 ---
 # <a name="project-properties-dialog-box"></a>Caixa de diálogo Propriedades do Projeto
   Um projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] é uma unidade de implantação. Cada projeto pode conter pacotes, parâmetros e referências de ambiente. Um projeto é um objeto protegível e pode definir permissões para principais de banco de dados. Quando um projeto é reimplantado, a versão anterior dele pode ser armazenada no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  

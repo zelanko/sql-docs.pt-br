@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 85b7d512-0ea7-47f5-8937-b1af6592b5b5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2bff9b44a6070cb0d0d0bf948fe6ecbc98b8cf0f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4cae6eec034f56f94635ec33bd2550e96a726d7c
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720534"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270505"
 ---
 # <a name="delete-packages"></a>Excluir pacotes
   No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], você pode excluir pacotes salvos no sistema de arquivos. Se você excluir um pacote, ele será excluído permanentemente e não poderá ser restaurado em um projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - programmatically saving a package
 - saving a package programmatically
 ms.assetid: 4204f817-d5df-475a-9338-d7f01305d566
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 822f6a364b06c6e2a88c8880cbe97fe94dba510f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 993c9bcaeb92f7ec4eabc11beaf444e97622821f
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650914"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271168"
 ---
 # <a name="saving-a-package-programmatically"></a>Salvando um pacote programaticamente
   Depois de criar um pacote novo programaticamente, ou modificar um existente, em geral você deseja salvar as alterações.  

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - '- (subtract)'
 - subtract operator (-)
 ms.assetid: b48da086-37dd-460a-8a4b-912f52c9b158
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e544a284cca78a48835af719fe881a995ee87580
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0abad5caf128ac49a3d764684716436f54a14322
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506120"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271068"
 ---
 # <a name="--subtract-ssis-expression"></a>- (Subtração) (Expressão SSIS)
   Subtrai a segunda expressão numérica da primeira.  

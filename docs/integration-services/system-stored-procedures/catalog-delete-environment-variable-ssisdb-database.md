@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 894b3bdb-aa34-463e-aba4-1b68ad96a0ef
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 33137ce59bdafa567b1f675ddaa06cf59cd0b6fe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fecf77944ef9c3601c40405def1641604ddb3b0f
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752184"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276475"
 ---
 # <a name="catalogdeleteenvironmentvariable-ssisdb-database"></a>catalog.delete_environment_variable (Banco de Dados SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

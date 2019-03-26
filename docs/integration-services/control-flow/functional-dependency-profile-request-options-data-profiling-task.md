@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bd08837dffff9fb77ff8dd0f43d3b558fc6af2d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ac20c9f13bbf39bc4ffd46cb6b036c8314684ca
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688784"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274946"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>Opções da solicitação do perfil Dependência Funcional (tarefa Criação de Perfil de Dados)
   Use o painel **Propriedades da Solicitação** da página **Solicitações de Perfil** para definir as opções da **Solicitação de Perfil de Dependência Funcional** selecionada no painel de solicitações. Um perfil de Dependência Funcional informa até que ponto os valores em uma coluna (a coluna dependente) dependem dos valores em outra coluna ou conjunto de colunas (a coluna determinante). Esse perfil também pode ajudá-lo a identificar problemas em seus dados, como valores inválidos. Por exemplo, você perfila a dependência entre uma coluna Código Postal e uma coluna estado dos Estados Unidos. Nesse perfil, o mesmo Código Postal deve sempre ter o mesmo estado, mas o perfil descobre violações da dependência.  
@@ -87,7 +87,7 @@ ms.locfileid: "47688784"
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**Default**|Classifica e compara dados com base no agrupamento da coluna na tabela de origem.|  
+|**Default**|Classifica e compara dados com base na ordenação da coluna na tabela de origem.|  
 |**BinarySort**|Classifica e compara dados com base nos padrões de bit definidos para cada caractere. A ordem de classificação binária faz distinção entre maiúsculas e minúsculas e acentuação. Binário é também a ordem de classificação mais rápida.|  
 |**DictionarySort**|Classifica e compara dados com base nas regras de classificação e comparação, conforme definidas em dicionários do idioma ou alfabeto associado.|  
   

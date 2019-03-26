@@ -16,15 +16,15 @@ helpviewer_keywords:
 - string functions
 - Character Map transformation [Integration Services]
 ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 28b21fbe189151578b073a51050b3b7aeb95b79b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: cb26cf898282273ea94b07c7d3b6c618d476a35b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640433"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272995"
 ---
 # <a name="character-map-transformation"></a>Transformação Mapas de Caracteres
   A transformação Mapa de Caracteres aplica funções de cadeia de caracteres, como a conversão de letra minúscula em maiúscula, em dados de caracteres. Essa transformação funciona apenas em dados de coluna com um tipo de dados de cadeia de caracteres.  

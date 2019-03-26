@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Integration Services packages, about packages
 - Integration Services packages
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6e4eb0d6b5f40e3acd6b44d86dda24764de6e3bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e44feb2ee9355a5992de3063a669da5b7bb589e8
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671714"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272758"
 ---
 # <a name="integration-services-ssis-packages"></a>Pacotes do SSIS (Integration Services)
   Um pacote é uma coleção organizada de conexões, elementos de fluxo de controle, elementos de fluxo de dados, manipuladores de eventos, variáveis, parâmetros e configurações que você agrupa usando as ferramentas de design gráfico fornecidas pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ou cria programaticamente.  Você salva o pacote concluído no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], no armazenamento de pacotes do [!INCLUDE[ssIS](../includes/ssis-md.md)] ou no sistema de arquivos, ou pode implantar o projeto ssISnoversion para o servidor do [!INCLUDE[ssIS](../includes/ssis-md.md)] . O pacote é a unidade de trabalho que é recuperada, executada e salva.  
@@ -87,8 +87,8 @@ ms.locfileid: "47671714"
   
 |Entrada de log|Descrição|  
 |---------------|-----------------|  
-|**PackageStart**|Indica que o pacote começou a ser executado.<br /><br /> Observação: esta entrada de log é gravada no log automaticamente. Não é possível excluí-la.|  
-|**PackageEnd**|Indica que o pacote foi concluído.<br /><br /> Observação: esta entrada de log é gravada no log automaticamente. Não é possível excluí-la.|  
+|**PackageStart**|Indica que o pacote começou a ser executado.<br /><br /> Observação: Esta entrada de log é gravada no log automaticamente. Não é possível excluí-la.|  
+|**PackageEnd**|Indica que o pacote foi concluído.<br /><br /> Observação: Esta entrada de log é gravada no log automaticamente. Não é possível excluí-la.|  
 |**Diagnostic**|Fornece informações sobre a configuração do sistema que afeta a execução de pacotes como os executáveis numéricos que podem ser executados simultaneamente.|  
   
 ## <a name="set-the-properties-of-a-package"></a>Definir as propriedades de um pacote  

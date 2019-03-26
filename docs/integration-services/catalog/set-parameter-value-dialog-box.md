@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ce9c2201-4e9a-4495-948f-b68deeaa7955
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f6892f59a80eafeabdbf62164e5aac448e9d2b4a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a07c27744956f2156f7806ad3e7a1763e374fa17
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410153"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270877"
 ---
 # <a name="set-parameter-value-dialog-box"></a>Caixa de diálogo Definir Valor do Parâmetro
   Use a caixa de diálogo **Definir Valor do Parâmetro** para definir valores de parâmetros e propriedades do gerenciador de conexões para projetos e pacotes.  

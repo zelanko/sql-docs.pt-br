@@ -21,15 +21,15 @@ helpviewer_keywords:
 - error outputs [Integration Services]
 - asynchronous error outputs [Integration Services]
 ms.assetid: a2a3e7c8-1de2-45b3-97fb-60415d3b0934
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f81faab9a9ef4e9ecfeb1438dc45e27bf963e8f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 53a05f64b2d6051c30cfde9972f5347418a76361
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671474"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279340"
 ---
 # <a name="using-error-outputs-in-a-data-flow-component"></a>Usando saídas de erro em um componente de fluxo de dados
   Os objetos <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> especiais chamados saídas de erro podem ser adicionados a componentes para permitir que o componente redirecione linhas que não pode processar durante a execução. Os problemas que um componente pode encontrar são geralmente categorizados como erros ou truncamentos, e são específicos a cada componente. Os componentes que oferecem saídas de erro fornecem aos seus usuários a flexibilidade de lidar com condições de erro filtrando linhas de erro para fora do conjunto de resultados, falhando o componente quando ocorre um problema ou ignorando erros e continuando.  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation [Integration Services]
 ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 43edd7fbdaf744ae9c5ea401e28ccef930d91f2d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3ed0f4852fb347a13d3b92e10cedce29cbf2a8cf
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506976"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275287"
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>Transformação Pesquisa em modo de cache cheio – Gerenciador de conexões OLE DB
   Você pode configurar a transformação Pesquisa para usar o modo cache cheio e um gerenciador de conexões OLE DB. No modo cache cheio, o conjunto de dados de referência é carregado no cache antes que a transformação Pesquisa seja executada.  

@@ -3,22 +3,21 @@ title: Executando Operação (Assistente de Importação e Exportação do SQL S
 ms.custom: ''
 ms.date: 01/11/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.performingoperation.f1
 ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f1a48018175dd7c0a92a83fdc68d6451324cd2fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 05b5e0867d9bbe5ab4ea5e583db40a21aaafe76c
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738184"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58221970"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>Executando Operação (Assistente de Importação e Exportação do SQL Server)
 Depois de examinar as escolhas que você fez no assistente e clicar em **Concluir** na página **Concluir o assistente** , o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mostra **Realizando Operação**. Nessa página, você pode ver o andamento e o resultado das operações que você configurou nas páginas anteriores. Você não precisa realizar nenhuma ação nesta página.
