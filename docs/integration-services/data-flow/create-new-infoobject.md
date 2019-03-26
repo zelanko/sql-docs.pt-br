@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 91460ffacc5712daecac31073434dcd6a11225a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e5d0ac61e65618527d5da8c7a8bcf2b5808b143
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753506"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290762"
 ---
 # <a name="create-new-infoobject"></a>Criar Novo InfoObject
   Use a caixa de diálogo **Criar Novo InfoObject** para criar um novo InfoObject no sistema SAP Netweaver BW.  
@@ -156,7 +156,7 @@ ms.locfileid: "47753506"
 ## <a name="see-also"></a>Consulte Também  
  [Criar InfoCube para os Dados da Transação](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
  [Criar InfoSource](../../integration-services/data-flow/create-infosource.md)   
- [Criar InfoSource para os dados da transação](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   
+ [Criar InfoSource para os Dados da Transação](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   
  [Criar InfoSource para dados mestre](../../integration-services/data-flow/create-infosource-for-master-data.md)   
  [Ajuda F1 do Microsoft Connector para SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   

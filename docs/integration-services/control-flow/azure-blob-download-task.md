@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.dts.designer.afpblobdltask.f1
 - sql14.dts.designer.afpblobdltask.f1
 ms.assetid: 8a63bf44-71be-456d-9a5c-be7c31aff065
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 633422f298418f3b2fdf95aea7aca7b604bfce6c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9a1a8c8c23519ca6f0ceb4ab1d2a3e587f7a86f8
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637524"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58283160"
 ---
 # <a name="azure-blob-download-task"></a>Tarefa de Download do Blob do Azure
 A Tarefa de Download do Blob do Azure permite que um pacote SSIS baixe arquivos de um armazenamento de blob do Azure.

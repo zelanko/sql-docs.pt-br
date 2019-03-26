@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 7d6aece1a3e43fd7a732dd61864349f8f3c92520
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 79337a1eb89de27f5522b5432e77f43f62d4489c
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802263"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306244"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Escolher um método de upgrade do mecanismo de banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,7 +29,7 @@ Há várias abordagens a serem consideradas quando você está planejando fazer 
   
 -   Para baixar o [!INCLUDE[SSnoversion](../../includes/ssnoversion-md.md)], acesse o  **[Centro de Avaliação](https://www.microsoft.com/evalcenter/evaluate-sql-server)**.  
   
--   Tem uma conta do Azure?  Em seguida, acesse **[aqui](https://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.FreeLicenseSQLServer2016SP1DeveloperWindowsServer2016)** para criar uma Máquina Virtual com o [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition já instalado.  
+-   Tem uma conta do Azure?  Em seguida, acesse **[aqui](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2016?tab=Overview)** para criar uma Máquina Virtual com o [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition já instalado.  
   
 > [!NOTE]  
 >  Você também pode atualizar o banco de dados do SQL Azure ou virtualizar seu ambiente SQL Server como parte de seu plano de atualização. Estes artigos estão fora do escopo deste artigo, mas veja abaixo alguns links:

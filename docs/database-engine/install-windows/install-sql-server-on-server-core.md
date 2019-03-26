@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 932f2384b24b55a6516fe84cd16f608a1a8e2d0e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c8cc018a1c9fddd35c80f73ce4f141b0b526ad4f
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533346"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306214"
 ---
 # <a name="install-sql-server-on-server-core"></a>Instalar o SQL Server no Server Core
 
@@ -47,21 +47,21 @@ A opção de instalação do Server Core oferece um ambiente mínimo para a exec
 |Pesquisa de Texto Completo|Sim||  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Sim||  
 |[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]|Sim||  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|não||  
-|SSDT ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools)|não||  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Não||  
+|SSDT ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools)|Não||  
 |Conectividade das ferramentas de cliente|Sim||  
 |Servidor do Integration Services|Sim||  
-|Compatibilidade das ferramentas de cliente com versões anteriores|não||  
-|SDK de Ferramentas de cliente|não||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manuais Online|não||  
+|Compatibilidade das ferramentas de cliente com versões anteriores|Não||  
+|SDK de Ferramentas de cliente|Não||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manuais Online|Não||  
 |Ferramentas de Gerenciamento - Básicas|Apenas remoto|Não há suporte para a instalação desses recursos no Server Core. Esses componentes podem ser instalados em um servidor diferente que não seja o Server Core e conectados aos serviços do [!INCLUDE[ssDE](../../includes/ssde-md.md)] instalados no Server Core.|  
 |Ferramentas de Gerenciamento – Completas|Apenas remoto|Não há suporte para a instalação desses recursos no Server Core. Esses componentes podem ser instalados em um servidor diferente que não seja o Server Core e conectados aos serviços do [!INCLUDE[ssDE](../../includes/ssde-md.md)] instalados no Server Core.|  
-|Distributed Replay Controller|não||  
+|Distributed Replay Controller|Não||  
 |Distributed Replay Client|Apenas remoto|Não há suporte para a instalação desses recursos no Server Core. Esses componentes podem ser instalados em um servidor diferente que não seja o Server Core e conectados aos serviços do [!INCLUDE[ssDE](../../includes/ssde-md.md)] instalados no Server Core.|  
 |SDK de Conectividade de Cliente do SQL|Sim||  
 |Microsoft Sync Framework|Sim|O Microsoft Sync Framework não está incluído no pacote de instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Baixe a versão apropriada do Sync Framework nesta página do [Centro de Download da Microsoft](https://go.microsoft.com/fwlink/?LinkId=221788) (https://go.microsoft.com/fwlink/?LinkId=221788)) e instale-a em um computador que executa o Server Core.|  
-|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|não||  
-|[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|não||  
+|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|Não||  
+|[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|Não||  
   
 ## <a name="supported-scenarios"></a>Cenários com suporte  
  A tabela a seguir mostra a matriz de cenários com suporte para a instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] em um Server Core.  
@@ -73,7 +73,7 @@ A opção de instalação do Server Core oferece um ambiente mínimo para a exec
 |Idioma do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na combinação de idioma/localidade do sistema operacional|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em inglês no Windows em japonês<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em inglês no Windows em alemão<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em inglês no Windows em chinês<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em inglês no Windows em árabe<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em inglês no Windows em tailandês<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em inglês no Windows em turco<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em inglês no Windows em português (Portugal)<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em inglês no Windows em inglês|  
 |Windows Edition|[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation|  
   
-## <a name="upgrade"></a>UPGRADE 
+## <a name="upgrade"></a>Atualizar 
  Em instalações do Server Core, atualizar de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] para [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tem suporte.  
   
 ## <a name="install"></a>Instalar  
@@ -333,7 +333,7 @@ Se você fechar acidentalmente o prompt de comando, siga estas etapas para inici
  [Edições e recursos com suporte do SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)   
  [Instalar o Server Core](https://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)   
  [Configurar uma instalação do Server Core do Windows Server 2016 com Sconfig.cmd](https://technet.microsoft.com/windows-server-docs/get-started/sconfig-on-ws2016)   
- [Cmdlets de cluster de failover no Windows PowerShell](https://technet.microsoft.com/itpro/powershell/windows/failover-clusters/index)   
+ [Cmdlets de cluster de failover no Windows PowerShell](/powershell/module/failoverclusters/)
 
   
   

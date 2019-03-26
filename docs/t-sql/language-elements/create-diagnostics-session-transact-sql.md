@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9eefa5a7120f64f5dc6f621a2a74956a461619d9
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 86da716e81c9bcf499c09d28a55c92e3b6f6eebd
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394019"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305964"
 ---
 # <a name="create-diagnostics-session-transact-sql"></a>CREATE DIAGNOSTICS SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -64,7 +64,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
  O número de eventos a serem persistidos em uma exibição. Por exemplo, se 100 for especificado, os 100 eventos mais recentes que corresponderem aos critérios de filtro serão persistidos na sessão de diagnóstico. Se menos de 100 eventos correspondentes forem encontrados, a sessão de diagnóstico conterá menos de 100 eventos. *max_item_count_num* precisa ser pelo menos 100 e menor ou igual a 100.000.  
   
  *event_name*  
- Define os eventos reais a serem coletados na sessão de diagnóstico.  *event_name* é um dos eventos listados em [sys.pdw_diag_events](https://msdn.microsoft.com/d813aac0-cea1-4f53-b8e8-d26824bc2587) em que `sys.pdw_diag_events.is_enabled='True'`.  
+ Define os eventos reais a serem coletados na sessão de diagnóstico.  *event_name* é um dos eventos listados em [sys.pdw_diag_events](../../relational-databases/system-catalog-views/sys-pdw-diag-events-transact-sql.md) em que `sys.pdw_diag_events.is_enabled='True'`.  
   
  *filter_property_name*  
  O nome da propriedade na qual os resultados devem ser restringidos. Por exemplo, se você desejar limitar com base na ID de sessão, *filter_property_name* deverá ser *SessionId*. Consulte *property_name* abaixo para obter uma lista de valores possíveis para *filter_property_name*.  
@@ -90,7 +90,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
 |SPID|A ID de processo do serviço.|  
   
 ## <a name="remarks"></a>Remarks  
- Cada usuário tem permissão para no máximo 10 sessões de diagnóstico simultâneas. Consulte [sys.pdw_diag_sessions](https://msdn.microsoft.com/ca111ddc-2787-4205-baf0-1a242c0257a9) para obter uma lista das sessões atuais e descarte as sessões desnecessárias usando `DROP DIAGNOSTICS SESSION`.  
+ Cada usuário tem permissão para no máximo 10 sessões de diagnóstico simultâneas. Consulte [sys.pdw_diag_sessions](../../relational-databases/system-catalog-views/sys-pdw-diag-sessions-transact-sql.md) para obter uma lista das sessões atuais e descarte as sessões desnecessárias usando `DROP DIAGNOSTICS SESSION`.  
   
  As sessões de diagnóstico continuarão a coletar metadados até serem descartadas.  
   
@@ -149,7 +149,7 @@ SELECT * FROM master.sysdiag.MYDIAGSESSION;
 DROP DIAGNOSTICS SESSION MYDIAGSESSION;  
 ```  
   
-### <a name="b-alternative-diagnostic-session"></a>B. Sessão de diagnóstico alternativa  
+### <a name="b-alternative-diagnostic-session"></a>b. Sessão de diagnóstico alternativa  
  Um segundo exemplo com propriedades um pouco diferentes.  
   
 ```  

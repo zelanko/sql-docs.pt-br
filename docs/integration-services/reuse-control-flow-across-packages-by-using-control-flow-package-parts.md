@@ -13,15 +13,15 @@ f1_keywords:
 - sql13.dts.designer.addcopyexistingpackagepart.f1
 - sql13.dts.designer.packagepart.general.f1
 ms.assetid: 1edc91d9-1fab-4fe5-aed3-6f581fe32c18
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 11b6d7d881a034fa79315c37345d7845d868fc2b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 867822310e1eaef3bd1d715d2f026609d72d0272
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542652"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282710"
 ---
 # <a name="reuse-control-flow-across-packages-by-using-control-flow-package-parts"></a>Reutilizar o fluxo de controle entre pacotes usando partes do pacote do fluxo de controle
   Salve um contêiner ou tarefa de fluxo de controle frequentemente usado em um arquivo de parte autônomo, um arquivo ".dtsxp", e reutilize-o várias vezes em um ou mais pacotes usando as partes do pacote do fluxo de controle. Essa capacidade de reutilização facilita o desenvolvimento e manutenção dos pacotes do SSIS.  

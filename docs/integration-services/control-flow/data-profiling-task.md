@@ -14,15 +14,15 @@ helpviewer_keywords:
 - data profiling
 - profiling data
 ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 23abd4f7ebe0cb0cc3c18053914d6aa531fcde7d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 2512be2c3fcac33c3bb87700f8925a0f4743a8a4
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640683"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275085"
 ---
 # <a name="data-profiling-task"></a>Tarefa Criação de Perfil de Dados
   A tarefa Criação de Perfil de Dados computa vários perfis ajudam a familiarizar-se com uma fonte de dados e a identificar problemas nos dados que precisam ser corrigidos.  

@@ -18,15 +18,16 @@ ms.assetid: 2163bc7a-3816-4304-9c40-8954804f5465
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8328c6bc65d7b0f05e9ce38f908b4f3d64b25b82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: = azuresqldb-current||>= sql-server-2016||=azure-sqldw-latest||>= sql-server-linux-2017||= sqlallproducts-allversions
+ms.openlocfilehash: 8c283fd85aedec31f8774145155fe3b1d7ac9c10
+ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755196"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58342938"
 ---
 # <a name="stringescape-transact-sql"></a>STRING_ESCAPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Faz o escape dos caracteres especiais em textos e retorna o texto com caracteres com escape. **STRING_ESCAPE** é uma função determinística.  
   
@@ -42,7 +43,7 @@ STRING_ESCAPE( text , type )
  *text*  
  É uma expressão **nvarchar**[expression](../../t-sql/language-elements/expressions-transact-sql.md) que representa o objeto que deve ter escape.  
   
- *tipo*  
+ *type*  
  Regras de escape que serão aplicadas. Atualmente, o valor com suporte é `'json'`.  
   
 ## <a name="return-types"></a>Tipos de retorno  
@@ -86,7 +87,7 @@ escapedText
 \\\t\/\n\\\\\t\"\t
 ```  
   
-### <a name="b-format-json-object"></a>B. Formatar objeto JSON  
+### <a name="b-format-json-object"></a>b. Formatar objeto JSON  
  A consulta a seguir cria o texto JSON com base nas variáveis de número e cadeia de caracteres e faz o escape dos caracteres JSON especiais em variáveis.  
   
 ```  

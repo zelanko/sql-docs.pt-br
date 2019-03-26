@@ -12,15 +12,15 @@ f1_keywords:
 - sql13.SSIS.SSMS.ISPROJECTPROP.REFERENCES.F1
 - sql13.SSIS.SSMS.ISPROJECTPROP.PARAMETERS.F1
 ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 179c3418f6d8c13c4974d6b5b023e1905140c6a3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 4df9d8299d7c423dc0fe96fb41222cc041a01146
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410203"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58283150"
 ---
 # <a name="configure-dialog-box"></a>Caixa de diálogo Configurar
   Use a caixa de diálogo **Configurar** para configurar parâmetros, gerenciadores de conexões e referências a ambientes para projetos e pacotes.  

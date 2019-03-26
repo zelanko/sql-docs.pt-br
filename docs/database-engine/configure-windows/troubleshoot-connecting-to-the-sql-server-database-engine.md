@@ -14,12 +14,12 @@ ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fd08989eb41f5b5a2b1c3f677f8dcff64b25b6ea
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 34f57edd8b58476a7077f601692086c80c89d0c0
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802750"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305994"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Solucionar problemas na conexão com o Mecanismo de Banco de Dados do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ Antes de solucionar um problema de conexão de outro computador, primeiro teste 
 Se você receber um erro neste ponto, deverá resolvê-lo antes de continuar. Há muitas possibilidades que podem representar um problema. Seu logon pode não estar autorizado a se conectar. O banco de dados padrão pode estar ausente.
 
 > [!NOTE]
->    Algumas mensagens de erro passadas para o cliente intencionalmente não fornecem informações suficientes para solucionar o problema. Esse é um recurso de segurança para evitar o fornecimento de informações sobre o SQL Server a um invasor. Para exibir as informações completas sobre o erro, examine o log de erros do SQL Server. Os detalhes são fornecidos abaixo. Se você estiver recebendo o erro **18456 Logon falhou para usuário**, o tópico dos Manuais Online [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) contém informações adicionais sobre códigos de erro. E o blog de Aaron Bertrand tem uma lista abrangente dos códigos de erro em [Solucionando o erro 18456](https://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx). Você pode exibir o log de erros com o SSMS (se puder se conectar), na seção Gerenciamento do Pesquisador de Objetos. Caso contrário, você pode exibir o log de erros com o programa do Bloco de Notas do Windows. O local padrão varia de acordo com a versão e pode ser alterado durante a instalação. O local padrão do [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] é `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`.  
+>    Algumas mensagens de erro passadas para o cliente intencionalmente não fornecem informações suficientes para solucionar o problema. Esse é um recurso de segurança para evitar o fornecimento de informações sobre o SQL Server a um invasor. Para exibir as informações completas sobre o erro, examine o log de erros do SQL Server. Os detalhes são fornecidos abaixo. Se você estiver recebendo o erro **18456 Logon falhou para usuário**, o tópico dos Manuais Online [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) contém informações adicionais sobre códigos de erro. E o blog de Aaron Bertrand tem uma lista abrangente dos códigos de erro em [Solucionando o erro 18456](https://sqlblog.org/2011/01/14/troubleshooting-error-18456). Você pode exibir o log de erros com o SSMS (se puder se conectar), na seção Gerenciamento do Pesquisador de Objetos. Caso contrário, você pode exibir o log de erros com o programa do Bloco de Notas do Windows. O local padrão varia de acordo com a versão e pode ser alterado durante a instalação. O local padrão do [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] é `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`.  
 
 4.   Se você puder se conectar usando memória compartilhada, teste a conexão usando TCP. Você pode forçar uma conexão TCP especificando **tcp:** antes do nome. Por exemplo:
 
