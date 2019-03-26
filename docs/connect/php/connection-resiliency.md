@@ -9,17 +9,17 @@ ms.topic: conceptual
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
-ms.openlocfilehash: 6afbf85f5e141736ac4a78dc381205228bd5ddaa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a2361c8a2e8cbc709d50a9139678a08e2e850e2d
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527097"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305914"
 ---
 # <a name="idle-connection-resiliency"></a>Resiliência da Conexão Ociosa
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[Resiliência de Conexão](https://msdn.microsoft.com/library/dn632678.aspx) é o princípio de que uma conexão ociosa quebrada possa ser restabelecido, dentro de determinados limites. Se uma conexão ao Microsoft SQL Server falhar, a resiliência de conexão permite que o cliente tentar restabelecer a conexão automaticamente. Resiliência de Conexão é uma propriedade de fonte de dados; somente SQL Server 2014 e versões posterior e banco de dados SQL do Azure dão suporte a resiliência de conexão.
+[Resiliência de Conexão](../odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) é o princípio de que uma conexão ociosa quebrada possa ser restabelecido, dentro de determinados limites. Se uma conexão ao Microsoft SQL Server falhar, a resiliência de conexão permite que o cliente tentar restabelecer a conexão automaticamente. Resiliência de Conexão é uma propriedade de fonte de dados; somente SQL Server 2014 e versões posterior e banco de dados SQL do Azure dão suporte a resiliência de conexão.
 
 Resiliência de Conexão é implementada com duas conexão palavras-chave que podem ser adicionadas às cadeias de caracteres de conexão: **ConnectRetryCount** e **ConnectRetryInterval**.
 
@@ -131,4 +131,4 @@ Statement 2 successful.
 ```
 
 ## <a name="see-also"></a>Consulte Também
-[Resiliência de conexão no driver ODBC do Windows](https://docs.microsoft.com/sql/connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver)
+[Resiliência de conexão no driver ODBC do Windows](../odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)

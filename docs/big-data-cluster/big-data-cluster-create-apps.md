@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8f661acacf17a8977f437abdcefcd3763305229b
-ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
+ms.openlocfilehash: 83dc07ed6336c637aaf17fdcfc1075854fe542b7
+ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58222051"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58434427"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>Como implantar um aplicativo no cluster de big data do SQL Server 2019 (visualização)
 
@@ -137,6 +137,9 @@ Para testar isso, copie as linhas acima do código em dois arquivos no diretóri
 ```bash
 mssqlctl app create --spec ./addpy
 ```
+
+> [!NOTE]
+> O `spec.yaml` arquivo especifica tanto uma `poolsize` e um número de `replicas`. O número de `replicas` Especifica o número de cópias do serviço precisa ser implantados. O `poolsize` Especifica o número de pools que você deseja criar por réplica. Essas configurações têm um impacto na quantidade de solicitações para que a implantação pode manipular em paralelo. O número máximo de solicitações em um determinado momento é igual a `replicas` vezes `poolsize`, ou seja, Se você tiver 5 réplicas e 2 pools por réplica a implantação pode lidar com 10 solicitações em paralelo. Consulte a imagem abaixo, para uma representação gráfica dos `replicas` e `poolsize`: ![Tamanho_do_pool e réplicas](media/big-data-cluster-create-apps/poolsize-vs-replicas.png)
 
 Você pode verificar se o aplicativo é implantado usando o comando lista:
 

@@ -1,7 +1,7 @@
 ---
 title: Backup e restauração de bancos de dados do Analysis Services | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 03/25/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -22,12 +22,12 @@ ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 48fafd92104745ac438c212847e9b2976e84db6d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a74de18847236ca36677678da130aca87c128262
+ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352695"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58434467"
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Backup e restauração de bancos de dados do Analysis Services
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclui backup e restauração de forma que você possa recuperar um banco de dados e seus objetos de um ponto específico no tempo. Backup e restauração também é uma técnica válida por migrar bancos de dados para servidores atualizados, mover bancos de dados entre servidores ou implantar um banco de dados para um servidor de produção. Para fins de recuperação de dados, se você ainda não tem um plano de backup e seus dados são valiosos, deve criar e implementar um plano o mais breve possível.  
@@ -36,7 +36,7 @@ ms.locfileid: "53352695"
   
  Para um backup completo que inclua dados de origem, você tem que fazer o backup do banco de dados que contém os detalhes dos dados. Especificamente, se você estiver usando o armazenamento de banco de dados ROLAP ou DirectQuery, os dados detalhados serão armazenados em um banco de dados relacional externo do SQL Server que é diferente do banco de dados do Analysis Services. Caso contrário, se todos os objetos forem de tabela ou multidimensionais, o backup do Analysis Services incluirá os metadados e os dados de origem.  
   
- Um benefício claro de automatizar o backup é que os instantâneos de dados sempre estarão tão atualizados quanto à frequência automatizada de backup especifica. Agendadores automatizados garantem o não esquecimento dos backups. A restauração de um banco de dados também pode ser automatizada e ser uma boa maneira de replicar dados, mas certifique-se de fazer o backup do arquivo da chave de criptografia na instância para a qual deseja fazer a replicação. O recurso de sincronização é dedicado à replicação de banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , mas somente para os dados obsoletos. Todos os recursos mencionados aqui podem ser implementados pela interface do usuário, por meio de comandos XML/A ou executados programaticamente pelo AMO. Para obter mais informações sobre estratégias de backup, consulte [Backup Strategies with SQL Server 2005 Analysis Services](https://go.microsoft.com/fwlink/?LinkId=81888).  
+ Um benefício claro de automatizar o backup é que os instantâneos de dados sempre estarão tão atualizados quanto à frequência automatizada de backup especifica. Agendadores automatizados garantem o não esquecimento dos backups. A restauração de um banco de dados também pode ser automatizada e ser uma boa maneira de replicar dados, mas certifique-se de fazer o backup do arquivo da chave de criptografia na instância para a qual deseja fazer a replicação. O recurso de sincronização é dedicado à replicação de banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , mas somente para os dados obsoletos. Todos os recursos mencionados aqui podem ser implementados pela interface do usuário, por meio de comandos XML/A ou executados programaticamente pelo AMO.  
   
  Este tópico inclui as seguintes seções:  
   
