@@ -9,12 +9,12 @@ ms.prod: sql
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
-ms.openlocfilehash: 426b0eed5b53760e872ebd18b11fce4de5ff22b9
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: d4df6baceb764777628f60691ed29ddb8ec0f8c4
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044910"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305854"
 ---
 # <a name="sql-server-monitoring-partners"></a>Parceiros de monitoramento do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ Para saber mais sobre alguns dos nossos outros parceiros, veja [Parceiros de alt
 <!--Get Started Links-->
 
 <!--Datasheet Links-->
-[sentryone_datasheet]:https://www.sentryone.com/platform 
+[sentryone_datasheet]:https://www.sentryone.com/products/sentryone-platform/database-performance-monitoring
 [solarwinds_datasheet]:https://www.solarwinds.com/-/media/solarwinds/swdcv2/licensed-products/database-performance-analyzer-sql-server/resources/datasheets/dpa-datasheet-sql-server.ashx
 
 <!--Marketplace Links -->
