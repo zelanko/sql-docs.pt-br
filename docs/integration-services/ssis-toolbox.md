@@ -12,15 +12,15 @@ f1_keywords:
 - sql13.dts.designer.toolbox.F1
 - sql13.dts.designer.toolboxcommon.F1
 ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 96ad709b12fc8bcbdb588fc1abb511b4b4ee081e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: f1ae0a9f644234a7e887758cf56ebcbc89593ee4
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640823"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289632"
 ---
 # <a name="ssis-toolbox"></a>Caixa de Ferramentas do SSIS
   Todos os componentes instalados automaticamente no computador local serão exibidos na **Caixa de Ferramentas do SSIS**. Quando você instalar componentes adicionais, clique com o botão direito do mouse dentro da caixa de ferramentas e clique em **Atualizar Caixa de Ferramentas** para adicionar os componentes.  
@@ -38,7 +38,7 @@ Obtenha mais informações sobre um componente na caixa de ferramentas, clicando
 ## <a name="toolbox-categories"></a>Categorias de caixa de ferramentas
  Na **Caixa de Ferramentas do SSIS**, o fluxo de controle e os componentes de fluxo de dados são organizados em categorias.  Você pode expandir e recolher categorias e reorganizar os componentes.  Restaure a organização padrão, clicando com o botão direito do mouse dentro da caixa de ferramentas e clicar em **Restaurar Padrões da Caixa de Ferramentas**.  
   
- As categorias **Favoritos** e **Comum** aparecem na caixa de ferramentas quando você seleciona as guias **Fluxo de Controle**, **Fluxo de Dados**e **Manipuladores de Eventos** . A categoria **Outras Tarefas** aparece na caixa de ferramentas quando você seleciona a guia **Fluxo de Controle** ou a guia **Manipuladores de Eventos** . As categorias Outras Transformações, **Outras Fontes**e **Outros Destinos** aparecem na caixa de ferramenta quando você seleciona a guia **Fluxo de Dados** .  
+ As categorias **Favoritos** e **Comum** aparecem na caixa de ferramentas quando você seleciona as guias **Fluxo de Controle**, **Fluxo de Dados**e **Manipuladores de Eventos** . A categoria **Outras Tarefas** aparece na caixa de ferramentas quando você seleciona a guia **Fluxo de Controle** ou a guia **Manipuladores de Eventos** . As categorias **Outras Transformações**, **Outras Fontes**e **Outros Destinos** aparecem na caixa de ferramenta quando você seleciona a guia **Fluxo de Dados** .  
 
  ## <a name="add-azure-components-to-the-toolbox"></a>Adicionar componentes do Azure à Caixa de Ferramentas  
  O Feature Pack do Azure para o Integration Services contém gerenciadores de conexões para conectar-se a fontes de dados do Azure e tarefas para realizar as operações comuns do Azure. Instale o Feature Pack para adicionar esses itens à Caixa de Ferramentas. Para obter mais informações, consulte [Feature Pack do Azure para o Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
