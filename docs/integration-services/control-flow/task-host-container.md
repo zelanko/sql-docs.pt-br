@@ -13,15 +13,15 @@ helpviewer_keywords:
 - containers [Integration Services], Task Host
 - Task Host container
 ms.assetid: 7394a2c2-1b07-427d-b94a-9792e7783d35
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2e4cbadcc7f2b31147403e24f943d9a88ed91ee1
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: ca1549c1116f21cd19d0b9aa7fb6669711e7855c
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640263"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276109"
 ---
 # <a name="task-host-container"></a>Contêiner Host da Tarefa
   O contêiner do host da tarefa encapsula uma única tarefa. No Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] , o host da tarefa não é configurado separadamente, ele é configurado quando você define as propriedades da tarefa que ele encapsula. Para obter mais informações sobre as tarefas que os contêineres do host da tarefa encapsulam, consulte [Tarefas do Integration Services](../../integration-services/control-flow/integration-services-tasks.md).  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - destinations [Integration Services], ADO.NET
 - ADO.NET destination
 ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a462e54379a5a916d6b302f99ef6f44d2148399a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: dfbfa62ed23dff43aa6177043f269513adcf4c36
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209085"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275513"
 ---
 # <a name="ado-net-destination"></a>Destino do ADO NET
   O destino ADO NET carrega dados em uma variedade de bancos de dados compatíveis com o [!INCLUDE[vstecado](../../includes/vstecado-md.md)]que utilizam uma tabela ou exibição de banco de dados. Você tem a opção de carregar esses dados em uma tabela ou exibição existente ou de criar uma nova tabela e carregar os dados nessa tabela.  

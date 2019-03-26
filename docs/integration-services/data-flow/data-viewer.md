@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Viewer dialog box
 ms.assetid: 6351309a-688f-4e82-9697-1712130f10a1
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c186241a51a0d3c282e8ae12e7ef4ff6737497d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d2232235b1d89384f269edb3a1632f8ff9db067
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662964"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290822"
 ---
 # <a name="data-viewer"></a>Visualizador de Dados
   Se um caminho for configurado para usar um visualizador de dados, o Visualizador de Dados exibirá o buffer de dados por buffer à medida que os dados se movimentarem entre dois componentes de fluxo de dados.  

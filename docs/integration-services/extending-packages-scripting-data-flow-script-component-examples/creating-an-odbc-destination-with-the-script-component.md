@@ -13,15 +13,15 @@ helpviewer_keywords:
 - destinations [Integration Services], components
 - Script component [Integration Services], examples
 ms.assetid: d198c866-78f4-4a50-ae15-333160645815
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4678c0230a58f53bd56aa973db94fb97f753dbd1
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: 7b698e0e3aaafbe3e05b8fb9d100872af1f5c3e0
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100437"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275485"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>Criando um destino ODBC com o componente Script
   No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], você normalmente salva os dados em um destino ODBC usando um destino [!INCLUDE[vstecado](../../includes/vstecado-md.md)] e o Provedor de Dados [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para ODBC. Porém, você também pode criar um destino ODBC ad hoc para uso em um único pacote. Para criar esse destino ODBC ad hoc, use o componente Script conforme demonstrado no exemplo seguinte.  

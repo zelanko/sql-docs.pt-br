@@ -13,15 +13,15 @@ helpviewer_keywords:
 - operators [Integration Services]
 - expressions [Integration Services], operators
 ms.assetid: 33df3a3d-1f5c-429b-a3b9-52b7d8689089
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4395090e03c904970b5cefcd71b0570a3e184a1e
-ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
+ms.openlocfilehash: ef0f0c4cb73c28d23eec35a30f8d120c9b49c66f
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52321722"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280370"
 ---
 # <a name="operators-ssis-expression"></a>Operadores (Expressão SSIS)
   Esta seção descreve os operadores que a linguagem de expressão fornece e a precedência e a associação de operadores usados pelo avaliador de expressão.  

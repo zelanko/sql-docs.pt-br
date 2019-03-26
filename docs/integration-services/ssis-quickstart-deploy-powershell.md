@@ -6,15 +6,15 @@ ms.prod: sql
 ms.prod_service: integration-services
 ms.custom: ''
 ms.technology: integration-services
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 59ac1e0a2cf1dc26aaf2d7121930c7bb4548a0ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 39d1986d599233b9578fca32ff993ea6cfed4492
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796582"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282700"
 ---
 # <a name="deploy-an-ssis-project-with-powershell"></a>Implantar um projeto do SSIS com o PowerShell
 Este guia de início rápido demonstra como usar um script do PowerShell para se conectar a um servidor de banco de dados e implantar um projeto do SSIS no Catálogo do SSIS.

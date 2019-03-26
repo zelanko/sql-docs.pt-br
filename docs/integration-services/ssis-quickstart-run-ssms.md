@@ -6,15 +6,15 @@ ms.prod: sql
 ms.prod_service: integration-services
 ms.custom: ''
 ms.technology: integration-services
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 37f78397bb5462c214f223ed41ced44b5c45386c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1807c1d2cafd6e499d226c83d1556abc3ddb71b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837514"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276064"
 ---
 # <a name="run-an-ssis-package-with-sql-server-management-studio-ssms"></a>Executar um pacote do SSIS com o SSMS (SQL Server Management Studio)
 Este guia de início rápido demonstra como usar o SSMS (SQL Server Management Studio) para se conectar ao banco de dados do Catálogo do SSIS e, em seguida, executar um pacote do SSIS armazenado no Catálogo do SSIS do Pesquisador de Objetos no SSMS.

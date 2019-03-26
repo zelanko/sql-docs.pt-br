@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.hdfsfiledest.f1
 ms.assetid: 4338ce9f-c077-4301-aca5-47ed070ec94d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: db467aa42e6924b02eb68d7300e41cf9d49b4743
-ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
+ms.openlocfilehash: 6a18a12c10e23e44b597ec6dc5bddebf6a5a77db
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54898931"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275786"
 ---
 # <a name="hdfs-file-destination"></a>Destino de Arquivo HDFS
   O componente Destino de Arquivo HDFS permite que um pacote do SSIS grave dados de um arquivo HDFS. Os formatos de arquivo com suporte são Texto, Avro e ORC.

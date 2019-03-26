@@ -17,15 +17,15 @@ helpviewer_keywords:
 - joining datasets [Integration Services]
 - joins [SQL Server], SSIS
 ms.assetid: cd8b0412-f83b-4bd2-b227-e53dcfd941a8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6fc41dc0b30164410ca1e5d770632f9866ca26c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: acd1c079dbbd79b3cdedd94351cb99829d2f0339
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833525"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277735"
 ---
 # <a name="merge-join-transformation"></a>Merge Join Transformation
   A transformação Junção de Mesclagem fornece uma saída que é gerada unindo-se dois conjuntos de dados ordenados que usam uma junção FULL, LEFT ou INNER. Por exemplo, você pode usar uma associação de LEFT para unir uma tabela que inclui informações de produtos com uma tabela que lista o país/região no qual um produto foi fabricado. O resultado é uma tabela que lista todos os produtos e seu país/região de origem.  
@@ -89,7 +89,7 @@ ms.locfileid: "47833525"
   
 ## <a name="see-also"></a>Consulte Também  
  [Transformação Mesclar](../../../integration-services/data-flow/transformations/merge-transformation.md)   
- [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
+ [Transformação Unir Tudo](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [Transformações do Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   

@@ -11,15 +11,15 @@ f1_keywords:
 - SQL13.DTS.DESIGNER.AFPADLSDEST.F1
 - sql14.dts.designer.afpadlsdest.f1
 ms.assetid: 4c4f504f-dd2b-42c5-8a20-1a8ad9a5d632
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0bfa4975840a93f0081cdc7fed376c748416fa06
-ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
+ms.openlocfilehash: 89f94d89bdc5249881e66fe884eda18bb81018d6
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54211027"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280630"
 ---
 # <a name="azure-data-lake-store-destination"></a>Destino do Azure Data Lake Store
   O componente **Destino do Azure Data Lake Store** permite que um pacote SSIS grave dados em um Azure Data Lake Store. Os formatos de arquivo compatíveis são: Texto, Avro e ORC. 

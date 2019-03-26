@@ -19,15 +19,15 @@ helpviewer_keywords:
 - containers [Integration Services], events
 - events [Integration Services], about events
 ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0aab1631f282ff05af8f7e2a1089d7234325ef1e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 1bed8f1e69ca8e3590abb7fe9cf8cd226ac5be24
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642103"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281210"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Manipuladores de eventos do SSIS (Integration Services)
   Em tempo de execução, os executáveis (pacotes e contêineres Loop Foreach, Loop For, de Sequência e de host da tarefa) geram eventos. Por exemplo, um evento OnError será gerado quando acontecer um erro. Você pode criar manipuladores de eventos personalizados para esses eventos a fim de estender a funcionalidade do pacote e fazer com que os pacotes sejam mais fáceis de administrar em tempo de execução. Os manipuladores de eventos podem executar tarefas como:  

@@ -14,12 +14,12 @@ ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 3bdc541e919e9a30d4ab043ef9c13d78a2f4b445
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: d25a38a0c7bd274e07d0932d6b8ef451a22dda06
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327347"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306074"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Gerenciamento extensível de chaves do TDE do SQL Server usando o Azure Key Vault – Etapas de Configuração
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -176,7 +176,7 @@ Versão do SQL Server  |Link de instalação redistribuível
  
     1. Crie sua chave de criptografia localmente em um dispositivo HSM local. (Certifique-se de que ela é uma chave RSA 2048 assimétrica, para que ela seja compatível com o SQL Server.)
     2. Importe a chave de criptografia no Cofre de Chaves do Azure. Veja as etapas abaixo para saber como fazer isso.
-    3. Antes de usar a chave no Cofre de Chaves do Azure pela primeira vez, faça um backup da chave do Cofre de Chaves do Azure. Saiba mais sobre o comando [Backup-AzureKeyVaultKey](https://msdn.microsoft.com/library/mt126292.aspx) .
+    3. Antes de usar a chave no Cofre de Chaves do Azure pela primeira vez, faça um backup da chave do Cofre de Chaves do Azure. Saiba mais sobre o comando [Backup-AzureKeyVaultKey](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault) .
     4. Sempre que qualquer alteração for feita na chave (por exemplo, adicionar ACLs, adicionar marcas, adicionar atributos da chave), certifique-se de fazer outro backup da chave do Azure Key Vault.
 
         > [!NOTE]  

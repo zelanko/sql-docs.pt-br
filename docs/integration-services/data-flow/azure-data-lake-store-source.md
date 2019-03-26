@@ -11,15 +11,15 @@ f1_keywords:
 - SQL13.DTS.DESIGNER.AFPADLSSRC.F1
 - sql14.dts.designer.afpadlssrc.f1
 ms.assetid: f9c3311f-7316-48d6-bf10-d810e70b4304
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a5ec780327f12a4d81063c155aa5d3666b004ea6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 8f37ede2738d9fd9da71b0b1e34411a099a42cbb
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210136"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281500"
 ---
 # <a name="azure-data-lake-store-source"></a>Fonte do Azure Data Lake Store
   O componente de **Fonte do Azure Data Lake Store** permite que um pacote SSIS leia dados de um Azure Data Lake Store. Os formatos de arquivo compatíveis são: Texto e Avro.

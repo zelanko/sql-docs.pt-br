@@ -11,15 +11,15 @@ helpviewer_keywords:
 - packages view [Integration Services]
 - catalog.packages view [Integration Services]
 ms.assetid: a634e94d-f492-4dfd-9611-a35f545106a1
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1558aeed5266d573fcf7b99ced456a4d2de09940
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 608e3fd8ebf7de4e2f84357c8b7a1874c33e1230
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818954"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279611"
 ---
 # <a name="catalogpackages-ssisdb-database"></a>catalog.packages (Banco de dados SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

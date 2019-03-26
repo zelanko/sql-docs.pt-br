@@ -15,15 +15,15 @@ helpviewer_keywords:
 - enumerated constants [Integration Services]
 - property expressions [Integration Services]
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 706ea141faa1e83c915e8ee01ff12f2d20dc10d5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a3a0cee0f7aeb5df60c80e23c0ae90af5a066db3
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529709"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279123"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Constantes enumeradas em expressões de propriedade
   Se as expressões de propriedade incluírem valores de uma lista de membros de enumerador, a expressão deverá usar o valor numérico do membro de enumerador em vez do nome amigável do membro. Por exemplo, se uma expressão definir a propriedade **LoggingMode** , use o valor numérico 2 em vez do nome amigável Desabilitada.  
@@ -51,7 +51,7 @@ ms.locfileid: "52529709"
   
 |Nome amigável em DTSPackageType|Valor numérico|  
 |-------------------------------------|-------------------|  
-|Default|0|  
+|Padrão|0|  
 |DTSWizard|1|  
 |DTSDesigner|2|  
 |SQLReplication|3|  
@@ -70,7 +70,7 @@ ms.locfileid: "52529709"
   
 |Nome amigável em DTSPriorityClass|Valor numérico|  
 |---------------------------------------|-------------------|  
-|Default|0|  
+|Padrão|0|  
 |AboveNormal|1|  
 |Normal|2|  
 |BelowNormal|3|  

@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Add Analysis Services Connection Manager
 ms.assetid: 9d5e1bb1-adda-4985-80f6-56e14d5d295c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f7372a68fb108b1ebccbc8354f338f17ef207a6c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f5aadd19858a0936ea4356efcd73226a63e2d095
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609124"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282905"
 ---
 # <a name="add-analysis-services-connection-manager-dialog-box-ui-reference"></a>Referência da interface do usuário da caixa de diálogo Adicionar Gerenciador de Conexões do Analysis Services
   Use a caixa de diálogo **Adicionar Gerenciador de Conexões do Analysis Services** para criar uma conexão com um servidor executando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ou para editar propriedades de conexão.  

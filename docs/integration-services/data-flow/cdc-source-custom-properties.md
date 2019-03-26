@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 744e9357-94a9-4202-abe8-1d3d202697e9
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e399e410a39bf54e568af12eec1308dd6012063f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b82c9db104783e4a725964a2d781d4f3ded40aeb
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728734"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289699"
 ---
 # <a name="cdc-source-custom-properties"></a>Propriedades personalizadas da origem CDC
   A tabela a seguir descreve as propriedades personalizadas da origem CDC. Todas as propriedades são de leitura/gravação.  

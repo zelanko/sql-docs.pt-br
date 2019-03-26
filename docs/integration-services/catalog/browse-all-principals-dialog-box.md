@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.ssms.browseprincipals.f1
 ms.assetid: f11d2c5e-ee05-45f3-8dc2-0feb99b2f76f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2e764f1cfd8cca7d8504a5389475e770cf934f8f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3cb979449214daa1cf9d4d03a01cd53f72eabef0
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396669"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276925"
 ---
 # <a name="browse-all-principals-dialog-box"></a>Caixa de diálogo Procurar Todas as Entidades de Segurança
   Use a caixa de diálogo **Procurar Todas as Entidades de Segurança** para selecionar uma entidade de segurança de banco de dados para alterar as permissões da entidade de segurança no projeto selecionado ou em todos os projetos contidos em uma pasta selecionada.  

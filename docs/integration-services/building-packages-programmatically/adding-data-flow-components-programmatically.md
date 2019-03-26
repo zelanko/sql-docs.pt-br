@@ -15,15 +15,15 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - data flow [Integration Services], components
 ms.assetid: c06065cf-43e5-4b6b-9824-7309d7f5e35e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: aa96f8071ba6331dbfab8b708cd023f40f8a52cb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 399a5b83aff03813418f3c32e00dd11f518a1b51
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506177"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280130"
 ---
 # <a name="adding-data-flow-components-programmatically"></a>Adicionando componentes de fluxo de dados programaticamente
   Ao compilar um fluxo de dados, comece adicionando componentes. Em seguida, configure esses componentes e os conecte para estabelecer o fluxo de dados em tempo de execução. Esta seção descreve como adicionar um componente à tarefa de fluxo de dados, criar a instância tempo de design do componente e configurar o componente. Para obter informaçõessobre como conectar componentes, consulte [Conectar componentes do fluxo de dados programaticamente](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md).  

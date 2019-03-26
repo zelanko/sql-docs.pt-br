@@ -6,15 +6,15 @@ ms.prod: sql
 ms.prod_service: integration-services
 ms.custom: ''
 ms.technology: integration-services
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ab9935609c1876a89254d4864452debc424491ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a0e2fe956221614bd2fe24198f57ec02eba72c2
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808294"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281970"
 ---
 # <a name="deploy-an-ssis-project-from-ssms-with-transact-sql"></a>Implantar um projeto do SSIS por meio do SSMS com o Transact-SQL
 

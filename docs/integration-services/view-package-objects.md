@@ -17,15 +17,15 @@ helpviewer_keywords:
 - viewing package objects
 - SQL Server Integration Services packages, properties
 ms.assetid: a85c0245-0a68-4eb0-83b1-9b11df80bd10
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d25f5360e2582cb752dfdc5c92be928da437e06e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 582d0a4475ba6e6c20198ffdf50dd2e776cad480
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664484"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58283090"
 ---
 # <a name="view-package-objects"></a>Exibir objetos do pacote
   No Designer do [!INCLUDE[ssIS](../includes/ssis-md.md)] , a guia **Explorador de Pacotes** fornece uma exibição de explorer do pacote. A exibição reflete a hierarquia de contêiner da arquitetura [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . O contêiner de pacote está no topo da hierarquia e você expande o pacote para exibir as conexões, executáveis, manipuladores de eventos, provedores de log, restrições de precedência e variáveis no pacote.  
@@ -63,7 +63,7 @@ ms.locfileid: "47664484"
  [Contêineres do Integration Services](../integration-services/control-flow/integration-services-containers.md)   
  [Restrições de precedência](../integration-services/control-flow/precedence-constraints.md)   
  [Variáveis do SSIS &#40;Integration Services&#41;](../integration-services/integration-services-ssis-variables.md)   
- [Manipuladores de eventos do SSIS &#40;Integration Services&#41;](../integration-services/integration-services-ssis-event-handlers.md)   
+ [Manipuladores de eventos do Integration Services &#40;SSIS&#41](../integration-services/integration-services-ssis-event-handlers.md)   
  [Registro em Log do SSIS &#40;Integration Services&#41;](../integration-services/performance/integration-services-ssis-logging.md)  
   
   

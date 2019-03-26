@@ -19,15 +19,15 @@ helpviewer_keywords:
 - user interface [Integration Services]
 - SSIS custom tasks, user interface
 ms.assetid: 1e940cd1-c5f8-4527-b678-e89ba5dc398a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7f191ce84bc89b2958b4d72d6ec3d491e4f34eeb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be57f4c502aae46719e25b4f0dfce56ad44246d2
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689434"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58283010"
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>Desenvolvendo uma interface do usuário para uma tarefa personalizada
   O modelo de objeto do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] permite que desenvolvedores de tarefas personalizadas criem facilmente uma interface de usuário personalizada para uma tarefa que pode ser integrada e exibida no [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. A interface de usuário pode fornecer informações úteis para o usuário no Designer [!INCLUDE[ssIS](../../../includes/ssis-md.md)], e orientar usuários na configuração correta das propriedades e definições da tarefa personalizada.  

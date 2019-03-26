@@ -6,15 +6,15 @@ ms.prod: sql
 ms.prod_service: integration-services
 ms.custom: ''
 ms.technology: integration-services
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 49fece6dd4ef883272160f035a308cb7245bdc09
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1eccdb5f36d0340097bfb6eb280eb06cf2c04ec5
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718554"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280520"
 ---
 # <a name="run-an-ssis-package-with-c-code-in-a-net-app"></a>Executar um pacote do SSIS com o código C# em um aplicativo .NET
 Este guia de início rápido demonstra como gravar código C# para se conectar a um servidor de banco de dados e executar um pacote do SSIS.
