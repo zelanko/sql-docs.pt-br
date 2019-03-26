@@ -14,15 +14,15 @@ helpviewer_keywords:
 - statements [Integration Services]
 - Execute T-SQL Statement task [Integration Services]
 ms.assetid: 7e9086ca-d27e-46c0-bfad-d61333ebd55e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c620b8da5b94e3437ecbf17f889c8caa518e743a
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 89643620c85dcd453d86a972f46156f11137ce3a
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640183"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290752"
 ---
 # <a name="execute-t-sql-statement-task"></a>Tarefa Executar Instrução T-SQL
   A tarefa Executar Instrução T-SQL executa instruções Transact-SQL. Para obter mais informações, consulte [Referência do Transact-SQL &#40;Mecanismo de Banco de Dados&#41;](../../t-sql/transact-sql-reference-database-engine.md) e [Integration Services &#40;SSIS&#41; Consultas](../../integration-services/integration-services-ssis-queries.md).  

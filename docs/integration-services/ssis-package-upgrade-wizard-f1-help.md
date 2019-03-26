@@ -16,15 +16,15 @@ f1_keywords:
 - sql13.is.upgradewizard.completewizard.f1
 - sql13.is.upgradewizard.upgradingpackage.f1
 ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4c1d1da13379b9a273ca3b5e0c1809434c7ed165
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e51589ee33e03fca23167357f7022d817f808981
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829484"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289992"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>Ajuda F1 do Assistente de Atualização de Pacotes SSIS
   Use o Assistente de Atualização de Pacote do SSIS para fazer upgrade de pacotes criados por versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para o formato de pacote da versão atual do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  

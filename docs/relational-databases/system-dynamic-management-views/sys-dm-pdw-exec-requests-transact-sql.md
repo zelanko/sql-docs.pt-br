@@ -1,7 +1,7 @@
 ---
 title: sys.dm_pdw_exec_requests (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/19/2019
+ms.date: 03/22/2019
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 3ab6f627c096326ce5c56828777bb9baf386e81a
-ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
+ms.openlocfilehash: a218f2a80b755c30dcbf608197a3a306321d41f4
+ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356449"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58417158"
 ---
 # <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -43,7 +43,7 @@ ms.locfileid: "58356449"
 |resource_class|**nvarchar(20)**|A classe de recurso para esta solicitação. Consulte relacionados **concurrency_slots_used** na [sys.dm_pdw_resource_waits &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md).  Para obter mais informações sobre classes de recursos, consulte [gerenciamento de carga de trabalho e classes de recursos](https://docs.microsoft.com/azure/sql-data-warehouse/resource-classes-for-workload-management) |Classes de recurso estáticas</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>Classes de recurso dinâmicas</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
 |importância (versão prévia para o SQL DW Gen2)|**nvarchar(32)**|A importância de definição da solicitação foi enviada com. Solicitações com uma menor importância permanecerá na fila em estado suspenso, se as solicitações de importância mais alta são enviadas.  Solicitações com importância mais alta serão executadas antes de solicitações de prioridade inferiores que foram enviadas anteriormente.  Para obter mais informações sobre a importância, consulte [importância da carga de trabalho](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance).  |NULL</br>low</br>below_normal</br>normal</br>above_normal</br>high|
   
- Para obter informações sobre o máximo de linhas mantido por esta exibição, consulte "Mínimo e máximo valores" no [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
+ Para obter informações sobre o máximo de linhas mantido por esta exibição, consulte a seção de metadados na [limites de capacidade](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) tópico.   
   
 ## <a name="permissions"></a>Permissões
 
