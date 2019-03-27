@@ -2405,8 +2405,6 @@ items:
       href: ../connect/jdbc/application-security.md
     - name: Usando criptografia SSL
       href: ../connect/jdbc/using-ssl-encryption.md
-    - name: Modo FIPS
-      href: ../connect/jdbc/fips-mode.md
       items:
       - name: Compreendendo o suporte a SSL
         href: ../connect/jdbc/understanding-ssl-support.md
@@ -2414,6 +2412,8 @@ items:
         href: ../connect/jdbc/connecting-with-ssl-encryption.md
       - name: Configurando o cliente para criptografia SSL
         href: ../connect/jdbc/configuring-the-client-for-ssl-encryption.md
+    - name: Modo FIPS
+      href: ../connect/jdbc/fips-mode.md
   - name: Melhorando o desempenho e a confiabilidade com o JDBC Driver
     href: ../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md
     items:
@@ -7644,9 +7644,9 @@ items:
     href: ../ado/reference/ado-programmer-s-reference.md
   - name: Glossário ADO
     href: ../ado/ado-glossary.md
-ms.openlocfilehash: 235d73fea1e5e76eda65ef130568276ca92ef3fb
-ms.sourcegitcommit: 8d7442ae25acd6cb5cab2abcc5973cd60d0a6ff2
+ms.openlocfilehash: 67cfc70b3bdd5744c91ace414dc04d4b9090f4d7
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57461814"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478301"
