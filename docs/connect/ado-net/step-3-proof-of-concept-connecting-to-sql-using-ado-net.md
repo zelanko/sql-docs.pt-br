@@ -11,16 +11,16 @@ ms.assetid: aebe3dc6-3ee4-4d11-8e43-5d32b3f91490
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3f38de8f15e6e14d3822254812f98364104ea603
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 80ef78038cad742dbe2105b6999d021ec41e8a3a
+ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603964"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58342886"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>Etapa 3: Prova de conceito da conexão ao SQL usando ADO.NET
 
-- Artigo anterior:&nbsp;&nbsp;&nbsp;[etapa 2: criar um banco de dados SQL para o desenvolvimento ADO.NET](step-2-create-a-sql-database-for-ado-net-development.md)  
+- Artigo anterior:&nbsp;&nbsp;&nbsp;[Etapa 2: criar um banco de dados SQL para o desenvolvimento do ADO.NET](step-2-create-a-sql-database-for-ado-net-development.md)  
 - Próximo artigo:&nbsp;&nbsp;&nbsp;[Etapa 4: conectar-se de forma resiliente ao SQL com o ADO.NET](step-4-connect-resiliently-to-sql-with-ado-net.md)  
 
   
@@ -31,7 +31,7 @@ Este exemplo de código do c# deve ser considerado uma prova de conceito apenas.
 O método **SqlConnection. Open** é usado para se conectar ao banco de dados SQL.  
 
 
-```CSharp  
+```csharp
     // C# , ADO.NET  
     using System;
     using QC = System.Data.SqlClient;  // System.Data.dll  
@@ -74,7 +74,7 @@ O método ExecuteReader:
   
   
   
-```CSharp  
+```csharp
     using System;  // C# , ADO.NET  
     using DT = System.Data;            // System.Data.dll  
     using QC = System.Data.SqlClient;  // System.Data.dll  
@@ -162,7 +162,7 @@ Este exemplo demonstra como:
   
   
   
-```CSharp  
+```csharp
     using System;  // C# , ADO.NET  
     using DT = System.Data;            // System.Data.dll  
     using QC = System.Data.SqlClient;  // System.Data.dll  

@@ -13,12 +13,12 @@ ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 24fce778851f514d680a2701cc9c4dcc9ccb277c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 2ffaf0e89e1fdbd0a1722ad038ad9e360decf237
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419067"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305884"
 ---
 # <a name="using-integrated-authentication"></a>Como usar a autenticação integrada
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -51,7 +51,7 @@ Verifique se está usando o `kinit` ou PAM (módulo de autenticação conectáve
   
 -   Execute `kinit`, passando um nome da entidade de segurança e uma senha.  
   
--   Execute o `kinit`, passando um nome da entidade de segurança e um local de um arquivo keytab contendo a chave da entidade de segurança criada pelo `ktutil`.  
+-   Execute o `kinit`, passando um nome de entidade e um local de um arquivo keytab contendo a chave da entidade criada pelo `ktutil`.  
   
 -   Verifique se o logon no sistema foi feito usando o PAM (módulo de autenticação conectável) do Kerberos.
 
@@ -67,7 +67,7 @@ O logon no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa a co
   
 Para auditar atividades no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em nome dos usuários além da conta do sistema, o aplicativo deve usar [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE AS**.  
   
-Para melhorar o desempenho do aplicativo, um aplicativo pode usar o pool de conexões com Autenticação Integrada e auditoria. No entanto, a combinação do pool de conexões, da Autenticação Integrada e da auditoria gera um risco de segurança, pois o gerenciador do driver unixODBC permite que diferentes usuários reutilizem conexões em pool. Para obter mais informações, consulte [ODBC Connection Pooling](https://www.unixodbc.org/doc/conn_pool.html).  
+Para melhorar o desempenho do aplicativo, um aplicativo pode usar o pool de conexões com Autenticação Integrada e auditoria. No entanto, a combinação do pool de conexões, da Autenticação Integrada e da auditoria gera um risco de segurança, pois o gerenciador do driver unixODBC permite que diferentes usuários reutilizem conexões em pool. Para obter mais informações, consulte [ODBC Connection Pooling](http://www.unixodbc.org/doc/conn_pool.html).  
 
 Antes da reutilização, um aplicativo deve redefinir conexões em pool executando `sp_reset_connection`.  
 
@@ -83,7 +83,7 @@ Os desenvolvedores podem implantar um aplicativo que usa um servidor vinculado o
   
 -   O servidor de aplicativos é autenticado como um banco de dados diferente e se conecta ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se autentica como um usuário de banco de dados para outro banco de dados ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
+-   O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] autentica-se como um usuário de banco de dados para outro banco de dados ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 Depois que a autenticação integrada for configurada, as credenciais serão passadas para o servidor vinculado.  
   
