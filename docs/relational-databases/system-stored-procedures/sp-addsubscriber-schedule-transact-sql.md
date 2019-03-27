@@ -16,12 +16,12 @@ ms.assetid: a6225033-5c3b-452f-ae52-79890a3590ed
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 86965fca878f07a93833fe04be9df702dea3050c
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 7d9c899f5ae956f9e434bb7374d95aaa186a2923
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204206"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493778"
 ---
 # <a name="spaddsubscriberschedule-transact-sql"></a>sp_addsubscriber_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,19 +50,16 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@subscriber =** ] **'***assinante***'**  
- É o nome do Assinante. *assinante* está **sysname**. O nome do Assinante deve ser exclusivo no banco de dados, não deve existir e não deve ser NULL.  
+`[ @subscriber = ] 'subscriber'` É o nome do assinante. *assinante* está **sysname**. O nome do Assinante deve ser exclusivo no banco de dados, não deve existir e não deve ser NULL.  
   
- [  **@agent_type =** ] *agent_type*  
- É o tipo de agente. *agent_type* está **smallint**, e pode ser um destes valores.  
+`[ @agent_type = ] agent_type` É o tipo de agente. *agent_type* está **smallint**, e pode ser um destes valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**0** (padrão)|Agente de Distribuição|  
 |**1**|Merge Agent|  
   
- [  **@frequency_type =** ] *frequency_type*  
- É a frequência de agendamento do Agente de Distribuição. *frequency_type* está **int**, e pode ser um destes valores.  
+`[ @frequency_type = ] frequency_type` É a frequência de agendamento do agente de distribuição. *frequency_type* está **int**, e pode ser um destes valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -75,11 +72,9 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 |**64** (padrão)|Iniciar automaticamente|  
 |**128**|Recorrente|  
   
- [  **@frequency_interval =** ] *frequency_interval*  
- É o valor a ser aplicado à frequência definida *frequency_type*. *frequency_interval* está **int**, com um padrão de **1**.  
+`[ @frequency_interval = ] frequency_interval` É o valor a ser aplicado à frequência definida *frequency_type*. *frequency_interval* está **int**, com um padrão de **1**.  
   
- [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
- É a data do Distribution Agent. Esse parâmetro é usado quando *frequency_type* é definido como **32** (mensal relativo). *frequency_relative_interval* está **int**, e pode ser um destes valores.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` É a data do Distribution Agent. Esse parâmetro é usado quando *frequency_type* é definido como **32** (mensal relativo). *frequency_relative_interval* está **int**, e pode ser um destes valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -89,11 +84,9 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 |**8**|Quarto|  
 |**16**|Last|  
   
- [  **@frequency_recurrence_factor =** ] *frequency_recurrence_factor*  
- É o fator de recorrência usado pelo *frequency_type*. *frequency_recurrence_factor* está **int**, com um padrão de **0**.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` É o fator de recorrência usado pelo *frequency_type*. *frequency_recurrence_factor* está **int**, com um padrão de **0**.  
   
- [  **@frequency_subday =** ] *frequency_subday*  
- É a frequência de reagendamento durante o período definido. *frequency_subday* está **int**, e pode ser um destes valores.  
+`[ @frequency_subday = ] frequency_subday` É a frequência de reagendamento durante o período definido. *frequency_subday* está **int**, e pode ser um destes valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -102,23 +95,17 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 |**4** (padrão)|Minuto|  
 |**8**|Hora|  
   
- [  **@frequency_subday_interval =** ] *frequency_subday_interval*  
- É o intervalo de *frequency_subday*. *frequency_subday_interval* está **int**, com um padrão de **5**.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` É o intervalo de *frequency_subday*. *frequency_subday_interval* está **int**, com um padrão de **5**.  
   
- [  **@active_start_time_of_day =** ] *active_start_time_of_day*  
- É a hora do dia do primeiro agendamento do Agente de Distribuição, formatada como HHMMSS. *active_start_time_of_day* está **int**, com um padrão de **0**.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` É a hora do dia quando o agente de distribuição é o primeiro agendada, formatada como HHMMSS. *active_start_time_of_day* está **int**, com um padrão de **0**.  
   
- [  **@active_end_time_of_day =** ] *active_end_time_of_day*  
- É a hora do dia do último agendamento do Agente de Distribuição, formatada como HHMMSS. *active_end_time_of_day*está **int**, com um padrão de 235959, que significa que 11:59:59 P.M. medida em um relógio de 24 horas.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` É a hora do dia em que o Distribution Agent deixa de ser agendado, formatada como HHMMSS. *active_end_time_of_day*está **int**, com um padrão de 235959, que significa que 11:59:59 P.M. medida em um relógio de 24 horas.  
   
- [  **@active_start_date =** ] *active_start_date*  
- É a data do primeiro agendamento do Agente de Distribuição, formatada como AAAAMMDD. *active_start_date* está **int**, com um padrão de **0**.  
+`[ @active_start_date = ] active_start_date` É a data do Distribution Agent primeiro agendada, formatada como AAAAMMDD. *active_start_date* está **int**, com um padrão de **0**.  
   
- [  **@active_end_date =** ] *active_end_date*  
- É a data do último agendamento do Agente de Distribuição, formatada como AAAAMMDD. *active_end_date* está **int**, com um padrão de 99991231, que significa 31 de dezembro de 9999.  
+`[ @active_end_date = ] active_end_date` É a data em que o Distribution Agent deixa de ser agendado, formatada como AAAAMMDD. *active_end_date* está **int**, com um padrão de 99991231, que significa 31 de dezembro de 9999.  
   
- [  **@publisher =** ] **'***publisher***'**  
- Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
+`[ @publisher = ] 'publisher'` Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
 >  *Publisher* não deve ser especificado para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  

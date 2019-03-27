@@ -16,12 +16,12 @@ ms.assetid: 0db80e08-fb77-4d0c-aa41-455b13ffa9b4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 07213247345280e992c2fbd5552d5cdfb96747ab
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 31895afacaee167bccf5144f1ab94e344a36be5f
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133556"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492466"
 ---
 # <a name="spchangearticlecolumndatatype-transact-sql"></a>sp_changearticlecolumndatatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,26 +48,19 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=** ] **'**_publicação_**'**  
- É o nome da publicação Oracle. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação Oracle. *publicação* está **sysname**, sem padrão.  
   
- [  **@article =** ] **'**_artigo_**'**  
- É o nome do artigo. *artigo* está **sysname**, sem padrão.  
+`[ @article = ] 'article'` É o nome do artigo. *artigo* está **sysname**, sem padrão.  
   
- [ **@column**=] **'**_coluna_**'**  
- É o nome da coluna da qual alterar o mapeamento de tipos de dados. *coluna* está **sysname**, sem padrão.  
+`[ @column = ] 'column'` É o nome da coluna para o qual alterar o tipo de dados de mapeamento. *coluna* está **sysname**, sem padrão.  
   
- [ **@type** =] **'**_tipo_**'**  
- É o nome da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados na coluna de destino. *tipo de* está **sysname**, com um padrão NULL.  
+`[ @type = ] 'type'` É o nome da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados na coluna de destino. *tipo de* está **sysname**, com um padrão NULL.  
   
- [ **@length** =] *comprimento*  
- É o comprimento do tipo de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na coluna de destino. *comprimento* está **bigint**, com um padrão NULL.  
+`[ @length = ] length` É o comprimento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados na coluna de destino. *comprimento* está **bigint**, com um padrão NULL.  
   
- [ **@precision**=] *precisão*  
- É a precisão do tipo de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na coluna de destino. *precisão* está **bigint**, com um padrão NULL.  
+`[ @precision = ] precision` É a precisão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados na coluna de destino. *precisão* está **bigint**, com um padrão NULL.  
   
- [ **@publisher**=] **'**_publisher_**'**  
- Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
+`[ @publisher = ] 'publisher'` Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

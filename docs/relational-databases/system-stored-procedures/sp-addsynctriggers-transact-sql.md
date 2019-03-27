@@ -16,12 +16,12 @@ ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 89a6a997fd272985bd60d0b5d574fea07463f54d
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 3ae733d560c227ccf282dfe4caed3935d9ffaebe
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588281"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493638"
 ---
 # <a name="spaddsynctriggers-transact-sql"></a>sp_addsynctriggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,59 +58,41 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@sub_table=**] **'**_sub_table_**'**  
- É o nome da tabela do Assinante. *sub_table* está **sysname**, sem padrão.  
+`[ @sub_table = ] 'sub_table'` É o nome da tabela do assinante. *sub_table* está **sysname**, sem padrão.  
   
- [  **@sub_table_owner=**] **'**_sub_table_owner_**'**  
- Corresponde ao nome do proprietário da tabela do Assinante. *sub_table_owner* está **sysname**, sem padrão.  
+`[ @sub_table_owner = ] 'sub_table_owner'` É o nome do proprietário da tabela do assinante. *sub_table_owner* está **sysname**, sem padrão.  
   
- [  **@publisher=**] **'**_publisher_**'**  
- É o nome do servidor do Publicador. *Publisher* está **sysname**, sem padrão.  
+`[ @publisher = ] 'publisher'` É o nome do servidor do publicador. *Publisher* está **sysname**, sem padrão.  
   
- [  **@publisher_db=**] **'**_publisher_db_**'**  
- É o nome do banco de dados Publicador. *publisher_db* está **sysname**, sem padrão. Se NULL, será usado o banco de dados atual.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados publicador. *publisher_db* está **sysname**, sem padrão. Se NULL, será usado o banco de dados atual.  
   
- [  **@publication=**] **'**_publicação_**'**  
- É o nome da publicação. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, sem padrão.  
   
- [  **@ins_proc=**] **'**_ins_proc_**'**  
- É o nome do procedimento armazenado que oferece suporte às inserções de transação síncrona no Publicador. *ins_proc* está **sysname**, sem padrão.  
+`[ @ins_proc = ] 'ins_proc'` É o nome do procedimento armazenado que oferece suporte às inserções de transação síncrona no publicador. *ins_proc* está **sysname**, sem padrão.  
   
- [  **@upd_proc=**] **'**_upd_proc_**'**  
- É o nome do procedimento armazenado que oferece suporte às atualizações de transação síncrona no Publicador. *ins_proc* está **sysname**, sem padrão.  
+`[ @upd_proc = ] 'upd_proc'` É o nome do procedimento armazenado que dá suporte a atualizações de transação síncrona no publicador. *ins_proc* está **sysname**, sem padrão.  
   
- [  **@del_proc=**] **'**_del_proc_**'**  
- É o nome do procedimento armazenado que oferece suporte às exclusões de transação síncrona no Publicador. *ins_proc* está **sysname**, sem padrão.  
+`[ @del_proc = ] 'del_proc'` É o nome do procedimento armazenado que oferece suporte às exclusões de transação síncrona no publicador. *ins_proc* está **sysname**, sem padrão.  
   
- [  **@cftproc =** ] **'**_cftproc_**'**  
- É o nome do procedimento gerado automaticamente usado por publicações que permitem a atualização enfileirada. *cftproc* está **sysname**, sem padrão. Para publicações que permitem atualização imediata, este valor é o NULL. Este parâmetro se aplica a publicações que permitem atualização feita fila (Atualização Feita fila e Atualização Imediata com Atualização Feita fila como Failover).  
+`[ @cftproc = ] 'cftproc'` É o nome do procedimento gerado automaticamente usado por publicações que permitem atualização em fila. *cftproc* está **sysname**, sem padrão. Para publicações que permitem atualização imediata, este valor é o NULL. Este parâmetro se aplica a publicações que permitem atualização feita fila (Atualização Feita fila e Atualização Imediata com Atualização Feita fila como Failover).  
   
- [  **@proc_owner =** ] **'**_proc_owner_**'**  
- Especifica a conta de usuário no Publicador na qual todos os procedimentos armazenados gerados automaticamente para a publicação de atualização (enfileirada e/ou imediata) foram criados. *proc_owner* está **sysname** sem nenhum padrão.  
+`[ @proc_owner = ] 'proc_owner'` Especifica a conta de usuário no publicador na qual todos os procedimentos armazenados gerados automaticamente para a atualização de publicação (enfileirada e/ou imediata) foram criados. *proc_owner* está **sysname** sem nenhum padrão.  
   
- [  **@identity_col=**] **'**_identity_col_**'**  
- É o nome da coluna de identidade no Publicador. *identity_col* está **sysname**, com um padrão NULL.  
+`[ @identity_col = ] 'identity_col'` É o nome da coluna de identidade no publicador. *identity_col* está **sysname**, com um padrão NULL.  
   
- [  **@ts_col=**] **'**_timestamp_col_**'**  
- É o nome da **carimbo de hora** coluna no publicador. *timestamp_col* está **sysname**, com um padrão NULL.  
+`[ @ts_col = ] 'timestamp_col'` É o nome da **carimbo de hora** coluna no publicador. *timestamp_col* está **sysname**, com um padrão NULL.  
   
- [  **@filter_clause=**] **'**_filter_clause_**'**  
- É uma cláusula de restrição (WHERE) que define um filtro horizontal. Ao inserir a cláusula de restrição, omita a palavra-chave onde. *filter_clause*está **nvarchar (4000)**, com um padrão NULL.  
+`[ @filter_clause = ] 'filter_clause'` É uma restrição cláusula (WHERE) que define um filtro horizontal. Ao inserir a cláusula de restrição, omita a palavra-chave onde. *filter_clause*está **nvarchar (4000)**, com um padrão NULL.  
   
- [  **@primary_key_bitmap =**] **'**_primary_key_bitmap_**'**  
- É um mapa de bits das colunas de chave primária na tabela. *primary_key_bitmap* está **varbinary(4000)**, sem padrão.  
+`[ @primary_key_bitmap = ] 'primary_key_bitmap'` É um mapa de bits das colunas de chave primária na tabela. *primary_key_bitmap* está **varbinary(4000)**, sem padrão.  
   
- [  **@identity_support =** ] *identity_support*  
- Ativa e desativa o tratamento do intervalo de identidade automático quando a atualização na fila é usada. *identity_support* é um **bit**, com um padrão de **0**. **0** significa que não há nenhuma identidade de intervalo de suporte, **1** permite a manipulação de intervalo de identidade automática.  
+`[ @identity_support = ] identity_support` Ativa e desativa o tratamento de intervalo de identidade automático quando a atualização na fila é usada. *identity_support* é um **bit**, com um padrão de **0**. **0** significa que não há nenhuma identidade de intervalo de suporte, **1** permite a manipulação de intervalo de identidade automática.  
   
- [  **@independent_agent =** ] *independent_agent*  
- Indica se há um único Distribution Agent (um agente independente) para esta publicação ou um Distribution Agent por par de banco de dados de publicação e banco de dados de assinatura (um agente compartilhado). Esse valor reflete o valor da propriedade ndependent_agent da publicação definida no Publicador. *independent_agent* é um pouco com um padrão de **0**. Se **0**, o agente é um agente compartilhado. Se **1**, o agente é um agente independente.  
+`[ @independent_agent = ] independent_agent` Indica se há um único agente de distribuição (um agente independente) para esta publicação, ou um agente de distribuição por publicação banco de dados e a assinatura do banco de dados par (um agente compartilhado). Esse valor reflete o valor da propriedade ndependent_agent da publicação definida no Publicador. *independent_agent* é um pouco com um padrão de **0**. Se **0**, o agente é um agente compartilhado. Se **1**, o agente é um agente independente.  
   
- [  **@distributor =** ] **'**_distribuidor_**'**  
- É o nome do distribuidor. *distribuidor* está **sysname**, sem padrão.  
+`[ @distributor = ] 'distributor'` É o nome do distribuidor. *distribuidor* está **sysname**, sem padrão.  
   
- [ **@pubversion**=] *pubversion*  
- Indica a versão do Publicador. *pubversion* está **int**, com um padrão de 1. **1** significa que é a versão do publicador [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 2 ou anterior; **2** significa que o publicador é [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 3 (SP3) ou posterior. *pubversion* deve ser explicitamente definida como **2** quando a versão do publicador for [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] SP3 ou posterior.  
+`[ @pubversion = ] pubversion` Indica a versão do publicador. *pubversion* está **int**, com um padrão de 1. **1** significa que é a versão do publicador [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 2 ou anterior; **2** significa que o publicador é [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 3 (SP3) ou posterior. *pubversion* deve ser explicitamente definida como **2** quando a versão do publicador for [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] SP3 ou posterior.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

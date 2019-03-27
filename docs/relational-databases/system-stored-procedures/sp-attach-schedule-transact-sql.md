@@ -18,12 +18,12 @@ ms.assetid: 80c80eaf-cf23-4ed8-b8dd-65fe59830dd1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f04aefa642e21901a3070d71164f50f01cbc2ec7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4102c272fe9d880e6213917091b6078a413aebf8
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732835"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494298"
 ---
 # <a name="spattachschedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,20 +43,16 @@ sp_attach_schedule
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@job_id=** ] *job_id*  
- O número de identificação do trabalho para o qual a agenda é adicionada. *job_id*está **uniqueidentifier**, com um padrão NULL.  
+`[ @job_id = ] job_id` O número de identificação do trabalho ao qual a agenda é adicionada. *job_id*está **uniqueidentifier**, com um padrão NULL.  
   
- [  **@job_name =** ] **'***job_name***'**  
- O nome do trabalho ao qual a agenda é adicionada. *job_name*está **sysname**, com um padrão NULL.  
+`[ @job_name = ] 'job_name'` O nome do trabalho ao qual a agenda é adicionada. *job_name*está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
 >  Qualquer um dos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados.  
   
- [  **@schedule_id =** ] *schedule_id*  
- O número de identificação da agenda a ser definida para o trabalho. *schedule_id*está **int**, com um padrão NULL.  
+`[ @schedule_id = ] schedule_id` O número de identificação da agenda a ser definida para o trabalho. *schedule_id*está **int**, com um padrão NULL.  
   
- [  **@schedule_name =** ] **'***schedule_name***'**  
- O nome da agenda a ser definida para o trabalho. *schedule_name*está **sysname**, com um padrão NULL.  
+`[ @schedule_name = ] 'schedule_name'` O nome da agenda a ser definida para o trabalho. *schedule_name*está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
 >  Qualquer um dos *schedule_id* ou *schedule_name* deve ser especificado, mas não podem ser especificados.  

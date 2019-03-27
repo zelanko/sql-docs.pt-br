@@ -16,12 +16,12 @@ ms.assetid: 055f4765-0574-47c3-bf7d-6ef6e9bd8b34
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a36f49bb392d8f29ff52bb574f1dff9c9813eccd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f72ed9339522d3cce0936ca2f6143fb35ce3252e
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764658"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494008"
 ---
 # <a name="spaddagentparameter-transact-sql"></a>sp_add_agent_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@profile_id=** ] *profile_id*  
- É a ID do perfil dos **MSagent_profiles** na tabela a **msdb** banco de dados. *profile_id* está **int**, sem padrão.  
+`[ @profile_id = ] profile_id` É a ID do perfil dos **MSagent_profiles** na tabela a **msdb** banco de dados. *profile_id* está **int**, sem padrão.  
   
  Para descobrir que tipo de agente isso *profile_id* representa, localize a *profile_id* no [MSagent_profiles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) tabela e, em seguida, observe o *agent_type* valor do campo. Os valores são os seguintes:  
   
@@ -53,8 +52,7 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
 |**4**|Merge Agent|  
 |**9**|Queue Reader Agent|  
   
- [  **@parameter_name=** ] **'***parameter_name***'**  
- É o nome do parâmetro. *parameter_name* está **sysname**, sem padrão. Para obter uma lista de parâmetros já definidos nos perfis de sistema, consulte [perfis de agente de replicação](../../relational-databases/replication/agents/replication-agent-profiles.md). Para uma lista completa de parâmetros válidos para cada agente, consulte os seguintes tópicos:  
+`[ @parameter_name = ] 'parameter_name'` É o nome do parâmetro. *parameter_name* está **sysname**, sem padrão. Para obter uma lista de parâmetros já definidos nos perfis de sistema, consulte [perfis de agente de replicação](../../relational-databases/replication/agents/replication-agent-profiles.md). Para uma lista completa de parâmetros válidos para cada agente, consulte os seguintes tópicos:  
   
 -   [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
@@ -66,8 +64,7 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
   
 -   [Agente de Leitor de Fila de Replicação](../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
- [  **@parameter_value=**] **'***parameter_value***'**  
- É o valor a ser atribuído ao parâmetro. *parameter_value* está **nvarchar (255)**, sem padrão.  
+`[ @parameter_value = ] 'parameter_value'` É o valor a ser atribuído ao parâmetro. *parameter_value* está **nvarchar (255)**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

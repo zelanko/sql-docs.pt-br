@@ -16,12 +16,12 @@ ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc55175177aec3db50df14bc27ec425c5eedf97f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 35b18161e9d0022e0f7df29498a94c40646a5055
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128066"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493968"
 ---
 # <a name="spaddpublicationsnapshot-transact-sql"></a>sp_addpublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -58,11 +58,9 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'**_publicação_**'**  
- É o nome da publicação. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, sem padrão.  
   
- [  **@frequency_type=**] *frequency_type*  
- É a frequência de execução do Agente de Instantâneo. *frequency_type* está **int**, e pode ser um dos valores a seguir.  
+`[ @frequency_type = ] frequency_type` É a frequência com a qual o Snapshot Agent é executado. *frequency_type* está **int**, e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -74,21 +72,19 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |**64**|Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent inicia.|  
 |**128**|Executar quando o computador estiver ocioso|  
   
- [  **@frequency_interval=**] *frequency_interval*  
- É o valor a ser aplicado à frequência definida *frequency_type*. *frequency_interval* está **int**, e pode ser um dos valores a seguir.  
+`[ @frequency_interval = ] frequency_interval` É o valor a ser aplicado à frequência definida *frequency_type*. *frequency_interval* está **int**, e pode ser um dos valores a seguir.  
   
 |Valor de frequency_type|Efeito em frequency_interval|  
 |------------------------------|-----------------------------------|  
 |**1**|*frequency_interval* não é usado.|  
 |**4** (padrão)|Cada *frequency_interval* dias, com um padrão de diariamente.|  
-|**8**|*frequency_interval* é um ou mais dos seguintes (combinado com um [ &#124; (Bitwise OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) operador lógico):<br /><br /> **1** = domingo&#124;<br /><br /> **2** = segunda-feira&#124;<br /><br /> **4** = terça-feira&#124;<br /><br /> **8** = quarta-feira&#124;<br /><br /> **16** = quinta-feira&#124;<br /><br /> **32** = sexta-feira&#124;<br /><br /> **64** = sábado|  
+|**8**|*frequency_interval* é um ou mais dos seguintes (combinado com um [ &#124; (Bitwise OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) operador lógico):<br /><br /> **1** = domingo&#124;<br /><br /> **2** = segunda-feira&#124;<br /><br /> **4** = terça-feira&#124;<br /><br /> **8** = quarta-feira&#124;<br /><br /> **16** = Thursday &#124;<br /><br /> **32** = sexta-feira&#124;<br /><br /> **64** = sábado|  
 |**16**|Sobre o *frequency_interval* dia do mês.|  
-|**32**|*frequency_interval* é um dos seguintes:<br /><br /> **1** = domingo&#124;<br /><br /> **2** = segunda-feira&#124;<br /><br /> **3** = terça-feira&#124;<br /><br /> **4** = quarta-feira&#124;<br /><br /> **5** = quinta-feira&#124;<br /><br /> **6** = sexta-feira&#124;<br /><br /> **7** = sábado&#124;<br /><br /> **8** = dia&#124;<br /><br /> **9** = dia da semana&#124;<br /><br /> **10** = dia de fim de semana|  
+|**32**|*frequency_interval* é um dos seguintes:<br /><br /> **1** = domingo&#124;<br /><br /> **2** = segunda-feira&#124;<br /><br /> **3** = terça-feira&#124;<br /><br /> **4** = quarta-feira&#124;<br /><br /> **5** = Thursday &#124;<br /><br /> **6** = sexta-feira&#124;<br /><br /> **7** = sábado&#124;<br /><br /> **8** = dia&#124;<br /><br /> **9** = dia da semana&#124;<br /><br /> **10** = dia de fim de semana|  
 |**64**|*frequency_interval* não é usado.|  
 |**128**|*frequency_interval* não é usado.|  
   
- [  **@frequency_subday=**] *frequency_subday*  
- É a unidade para *freq_subday_interval*. *frequency_subday* está **int**, e pode ser um destes valores.  
+`[ @frequency_subday = ] frequency_subday` É a unidade para *freq_subday_interval*. *frequency_subday* está **int**, e pode ser um destes valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -97,56 +93,42 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |**4** (padrão)|Minuto|  
 |**8**|Hora|  
   
- [  **@frequency_subday_interval=**] *frequency_subday_interval*  
- É o intervalo de *frequency_subday*. *frequency_subday_interval* está **int**, com um padrão de 5, que significa que a cada 5 minutos.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` É o intervalo de *frequency_subday*. *frequency_subday_interval* está **int**, com um padrão de 5, que significa que a cada 5 minutos.  
   
- [  **@frequency_relative_interval=**] *frequency_relative_interval*  
- É a data de execução do Agente de Instantâneo. *frequency_relative_interval* está **int**, com um padrão de 1.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` É a data em que o Snapshot Agent é executado. *frequency_relative_interval* está **int**, com um padrão de 1.  
   
- [  **@frequency_recurrence_factor=**] *frequency_recurrence_factor*  
- É o fator de recorrência usado pelo *frequency_type*. *frequency_recurrence_factor* está **int**, com um padrão de 0.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` É o fator de recorrência usado pelo *frequency_type*. *frequency_recurrence_factor* está **int**, com um padrão de 0.  
   
- [  **@active_start_date=**] *active_start_date*  
- É a data do primeiro agendamento do Agente de Instantâneo, formatada como AAAAMMDD. *active_start_date* está **int**, com um padrão de 0.  
+`[ @active_start_date = ] active_start_date` É a data quando o agente de instantâneo é primeiro agendada, formatada como AAAAMMDD. *active_start_date* está **int**, com um padrão de 0.  
   
- [  **@active_end_date=**] *active_end_date*  
- É a data em que o Agente de Instantâneo para de ser agendado, formatada como AAAAMMDD. *active_end_date* está **int**, com um padrão de 99991231, que significa 31 de dezembro de 9999.  
+`[ @active_end_date = ] active_end_date` É a data em que o Snapshot Agent deixa de ser agendado, formatada como AAAAMMDD. *active_end_date* está **int**, com um padrão de 99991231, que significa 31 de dezembro de 9999.  
   
- [  **@active_start_time_of_day=**] *active_start_time_of_day*  
- É a hora do dia do primeiro agendamento do Agente de Instantâneo, formatada como HHMMSS. *active_start_time_of_day* está **int**, com um padrão de 0.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` É a hora do dia quando o agente de instantâneo é o primeiro agendada, formatada como HHMMSS. *active_start_time_of_day* está **int**, com um padrão de 0.  
   
- [  **@active_end_time_of_day=**] *active_end_time_of_day*  
- É a hora do dia do último agendamento do Agente de Instantâneo, formatada como HHMMSS. *active_end_time_of_day* está **int**, com um padrão de 235959, que significa que 11:59:59 P.M. medida em um relógio de 24 horas.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` É a hora do dia em que o Snapshot Agent deixa de ser agendado, formatada como HHMMSS. *active_end_time_of_day* está **int**, com um padrão de 235959, que significa que 11:59:59 P.M. medida em um relógio de 24 horas.  
   
- [  **@snapshot_job_name =** ] **'**_snapshot_agent_name_**'**  
- É o nome de um trabalho existente do Agente de Instantâneo se um trabalho existente estiver sendo usado. *snapshot_agent_name* está **nvarchar(100)** com um valor padrão de NULL. Esse parâmetro é para uso interno e não deve ser especificado ao criar uma nova publicação. Se *snapshot_agent_name* for especificado, então *job_login* e *job_password* deve ser NULL.  
+`[ @snapshot_job_name = ] 'snapshot_agent_name'` É o nome de um nome de trabalho do agente de instantâneo existente se um trabalho existente estiver sendo usado. *snapshot_agent_name* está **nvarchar(100)** com um valor padrão de NULL. Esse parâmetro é para uso interno e não deve ser especificado ao criar uma nova publicação. Se *snapshot_agent_name* for especificado, então *job_login* e *job_password* deve ser NULL.  
   
- [ **@publisher_security_mode**=] *publisher_security_mode*  
- É o modo de segurança usado pelo agente ao conectar-se ao Publicador. *publisher_security_mode* está **smallint**, com um padrão de 1. **0** especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação, e **1** Especifica a autenticação do Windows. Um valor de **0** deve ser especificado para não - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @publisher_security_mode = ] publisher_security_mode` É o modo de segurança usado pelo agente ao se conectar ao publicador. *publisher_security_mode* está **smallint**, com um padrão de 1. **0** especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação, e **1** Especifica a autenticação do Windows. Um valor de **0** deve ser especificado para não - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [ **@publisher_login**=] **'**_publisher_login_**'**  
- É o logon usado na conexão com o Publicador. *publisher_login* está **sysname**, com um padrão NULL. *publisher_login* deve ser especificado quando *publisher_security_mode* é **0**. Se *publisher_login* for NULL e *publisher_security_mode* está **1**, em seguida, a conta especificada na *job_login* será usado quando conectar-se ao publicador.  
+`[ @publisher_login = ] 'publisher_login'` É o logon usado ao conectar-se ao publicador. *publisher_login* está **sysname**, com um padrão NULL. *publisher_login* deve ser especificado quando *publisher_security_mode* é **0**. Se *publisher_login* for NULL e *publisher_security_mode* está **1**, em seguida, a conta especificada na *job_login* será usado quando conectar-se ao publicador.  
   
- [ **@publisher_password**=] **'**_publisher_password_**'**  
- É a senha usada ao conectar-se ao Publicador. *publisher_password* está **sysname**, com um padrão NULL.  
+`[ @publisher_password = ] 'publisher_password'` É a senha usada ao conectar-se ao publicador. *publisher_password* está **sysname**, com um padrão NULL.  
   
 > [!IMPORTANT]  
 >  Não armazene informações de autenticação em arquivos de script. Para ajudar a melhorar a segurança, recomendamos que você forneça nomes de login e senhas em tempo de execução.  
   
- [ **@job_login**=] **'**_job_login_**'**  
- É o logon para a conta sob a qual o agente é executado. No banco de dados de instância gerenciada do SQL, use uma conta do SQL Server. *job_login* está **nvarchar(257)**, com um padrão NULL. Essa conta sempre é usada para conexões do agente para o distribuidor. Você deve fornecer esse parâmetro ao criar um novo trabalho do Agente de Instantâneo.  
+`[ @job_login = ] 'job_login'` É o logon para a conta sob a qual o agente é executado. No banco de dados de instância gerenciada do SQL, use uma conta do SQL Server. *job_login* está **nvarchar(257)**, com um padrão NULL. Essa conta sempre é usada para conexões do agente para o distribuidor. Você deve fornecer esse parâmetro ao criar um novo trabalho do Agente de Instantâneo.  
   
 > [!NOTE]
 >  Para não - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores, isso deve ser o mesmo logon especificado em [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  
   
- [ **@job_password**=] **'**_job_password_**'**  
- É a senha da conta do Windows na qual o agente é executado. *job_password* está **sysname**, sem padrão. Você deve fornecer esse parâmetro ao criar um novo trabalho do Agente de Instantâneo.  
+`[ @job_password = ] 'job_password'` É a senha para a conta do Windows sob a qual o agente é executado. *job_password* está **sysname**, sem padrão. Você deve fornecer esse parâmetro ao criar um novo trabalho do Agente de Instantâneo.  
   
 > [!IMPORTANT]  
 >  Não armazene informações de autenticação em arquivos de script. Para ajudar a melhorar a segurança, recomendamos que você forneça nomes de login e senhas em tempo de execução.  
   
- [ **@publisher**=] **'**_publisher_**'**  
- Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
+`[ @publisher = ] 'publisher'` Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
 >  *Publisher* não deve ser usado durante a criação de um agente de instantâneo em um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  

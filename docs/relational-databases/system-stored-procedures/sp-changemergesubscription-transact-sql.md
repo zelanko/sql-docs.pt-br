@@ -16,12 +16,12 @@ ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9ac79494bfb0d08503be6e138bce748596eb8165
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3b37e09147652e856ac0c4c8160c1d7d3caf6f6d
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819052"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493948"
 ---
 # <a name="spchangemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,20 +43,15 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'**_publicação_**'**  
- É o nome da publicação a ser alterada. *publicação* está **sysname**, com um padrão NULL. A publicação já deve existir e ser adequada às regras para identificadores.  
+`[ @publication = ] 'publication'` É o nome da publicação a ser alterada. *publicação* está **sysname**, com um padrão NULL. A publicação já deve existir e ser adequada às regras para identificadores.  
   
- [  **@subscriber=**] **'**_assinante_**'**  
- É o nome do Assinante. *assinante* está **sysname**, com um padrão NULL.  
+`[ @subscriber = ] 'subscriber'` É o nome do assinante. *assinante* está **sysname**, com um padrão NULL.  
   
- [  **@subscriber_db=**] **'**_subscriber_db_**'**  
- É o nome do banco de dados de assinatura. *subscriber_db*está **sysname**, com um padrão NULL.  
+`[ @subscriber_db = ] 'subscriber_db'` É o nome do banco de dados de assinatura. *subscriber_db*está **sysname**, com um padrão NULL.  
   
- [  **@property=**] **'**_propriedade_**'**  
- É a propriedade a ser alterada para a publicação determinada. *propriedade* está **sysname**, e pode ser um dos valores na tabela.  
+`[ @property = ] 'property'` É a propriedade a ser alterada para a publicação determinada. *propriedade* está **sysname**, e pode ser um dos valores na tabela.  
   
- [  **@value=**] **'**_valor_**'**  
- É o novo valor especificado *propriedade*. *valor* está **nvarchar (255)**, e pode ser um dos valores na tabela.  
+`[ @value = ] 'value'` É o novo valor especificado *propriedade*. *valor* está **nvarchar (255)**, e pode ser um dos valores na tabela.  
   
 |Propriedade|Valor|Descrição|  
 |--------------|-----------|-----------------|  
@@ -72,7 +67,7 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 ||**0**|Use Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao se conectar ao Assinante.|  
 |**subscriber_login**||Nome de logon no Assinante.|  
 |**subscriber_password**||Senha forte para o logon de Assinante fornecido.|  
-|**sync_type**|**Automático**|Esquema e dados iniciais de tabelas publicadas são transferidos ao Assinante primeiro.|  
+|**sync_type**|**automatic**|Esquema e dados iniciais de tabelas publicadas são transferidos ao Assinante primeiro.|  
 ||**None**|O Assinante já tem o esquema e os dados iniciais para as tabelas publicadas; tabelas de sistema e dados são sempre transferidos.|  
 |**use_interactive_resolver**|**true**|Permite resolver conflitos interativamente para todos os artigos que permitem resolução interativa.|  
 ||**false**|Conflitos são resolvidos automaticamente usando um resolvedor padrão ou resolvedor personalizado.|  

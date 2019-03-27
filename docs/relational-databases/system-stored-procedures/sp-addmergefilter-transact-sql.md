@@ -16,12 +16,12 @@ ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 31ada2bfb184e24011ee91dde82fc9abfb319320
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6f2843456f4f95d1019b51f82082d59977ce14d5
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777908"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493691"
 ---
 # <a name="spaddmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,43 +46,34 @@ sp_addmergefilter [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=** ] **'**_publicação_**'**  
- É o nome da publicação na qual o filtro de mesclagem está sendo adicionado. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação na qual o filtro de mesclagem está sendo adicionado. *publicação* está **sysname**, sem padrão.  
   
- [  **@article=** ] **'**_artigo_**'**  
- É o nome do artigo no qual o filtro de mesclagem está sendo adicionado. *artigo* está **sysname**, sem padrão.  
+`[ @article = ] 'article'` É o nome do artigo no qual o filtro de mesclagem está sendo adicionado. *artigo* está **sysname**, sem padrão.  
   
- [  **@filtername=** ] **'**_filtername_**'**  
- É o nome do filtro. *FilterName* é um parâmetro obrigatório. *FilterName*está **sysname**, sem padrão.  
+`[ @filtername = ] 'filtername'` É o nome do filtro. *FilterName* é um parâmetro obrigatório. *FilterName*está **sysname**, sem padrão.  
   
- [  **@join_articlename=** ] **'**_join_articlename_**'**  
- É o artigo pai ao qual o artigo filho, especificado por *artigo*, deve ser Unido com a cláusula de junção especificada por *join_filterclause*, para determinar as linhas no artigo filho que atendem aos o critério de filtro de filtro de mesclagem. *join_articlename* está **sysname**, sem padrão. O artigo deve estar na publicação fornecida por *publicação*.  
+`[ @join_articlename = ] 'join_articlename'` É o artigo pai ao qual o artigo filho, especificado por *artigo*, deve ser Unido com a cláusula de junção especificada por *join_filterclause*, para determinar as linhas no artigo filho que atendem aos o critério de filtro de filtro de mesclagem. *join_articlename* está **sysname**, sem padrão. O artigo deve estar na publicação fornecida por *publicação*.  
   
- [  **@join_filterclause=** ] *join_filterclause*  
- É a cláusula de junção que deve ser usada para unir o artigo filho especificado por *artigo*e o artigo pai especificado por *join_article*, para determinar as linhas que qualificam o filtro de mesclagem. *join_filterclause* está **nvarchar (1000)**.  
+`[ @join_filterclause = ] join_filterclause` É a cláusula de junção que deve ser usada para unir o artigo filho especificado por *artigo*e o artigo pai especificado por *join_article*, para determinar as linhas que qualificam o filtro de mesclagem. *join_filterclause* está **nvarchar (1000)**.  
   
- [  **@join_unique_key=** ] *join_unique_key*  
- Especifica se a junção entre o artigo filho *artigo*e o artigo pai *join_article*é um-para-muitos, um para um, muitos-para-um ou muitos-para-muitos. *join_unique_key* está **int**, com um padrão de 0. **0** indica uma junção muitos-para-um ou muitos-para-muitos. **1** indica uma junção ou um-para-muitos. Esse valor é **1** quando as colunas de junção formam uma chave exclusiva *join_article*, ou se *join_filterclause* entre uma chave estrangeira em *artigo* e uma chave primária em *join_article*.  
+`[ @join_unique_key = ] join_unique_key` Especifica se a junção entre o artigo filho *artigo*e o artigo pai *join_article*é um-para-muitos, um para um, muitos-para-um ou muitos-para-muitos. *join_unique_key* está **int**, com um padrão de 0. **0** indica uma junção muitos-para-um ou muitos-para-muitos. **1** indica uma junção ou um-para-muitos. Esse valor é **1** quando as colunas de junção formam uma chave exclusiva *join_article*, ou se *join_filterclause* entre uma chave estrangeira em *artigo* e uma chave primária em *join_article*.  
   
 > [!CAUTION]  
 >  Apenas defina esse parâmetro como **1** se você tiver uma restrição na coluna de junção na tabela subjacente para o artigo pai que garanta exclusividade. Se *join_unique_key* é definido como **1** incorretamente, poderá ocorrer não convergência de dados.  
   
- [  **@force_invalidate_snapshot=** ] *force_invalidate_snapshot*  
- Confirma que a ação tomada por esse procedimento armazenado pode invalidar um instantâneo existente. *force_invalidate_snapshot* é um **bit**, com um padrão **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Confirma que a ação tomada por esse procedimento armazenado pode invalidar um instantâneo existente. *force_invalidate_snapshot* é um **bit**, com um padrão **0**.  
   
  **0** Especifica que as alterações no artigo de mesclagem não fará com que o instantâneo seja inválido. Se o procedimento armazenado detectar que a alteração requer um novo instantâneo, ocorrerá um erro e nenhuma alteração será feita.  
   
  **1** Especifica que as alterações no artigo de mesclagem podem invalidar o instantâneo ser inválida e se houver assinaturas existentes que exigem um novo instantâneo, dará permissão para o instantâneo existente seja marcado como obsoleto e um novo instantâneo gerado.  
   
- [  **@force_reinit_subscription=** ] *force_reinit_subscription*  
- Confirma que a ação tomada por esse procedimento armazenado pode exigir que as assinaturas existentes sejam reinicializadas. *force_reinit_subscription* é um **bit**, com um padrão de 0.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Reconhece que a ação tomada por esse procedimento armazenado pode requerer que as assinaturas existentes sejam reinicializadas. *force_reinit_subscription* é um **bit**, com um padrão de 0.  
   
  **0** Especifica que as alterações no artigo de mesclagem não fará com que a assinatura seja reiniciada. Se o procedimento armazenado detectar que a alteração irá requerer que as assinaturas existentes sejam reiniciadas, ocorrerá um erro e nenhuma alteração será feita.  
   
  **1** Especifica que as alterações no artigo de mesclagem fará com que as assinaturas existentes sejam reinicializadas e dá permissão para que ocorra a reinicialização da assinatura.  
   
- [  **@filter_type=** ] *filter_type*  
- Especifica o tipo de filtro que está sendo adicionado. *filter_type* está **tinyint**, e pode ser um dos valores a seguir.  
+`[ @filter_type = ] filter_type` Especifica o tipo de filtro que está sendo adicionado. *filter_type* está **tinyint**, e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  

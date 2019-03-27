@@ -16,12 +16,12 @@ ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 079e2591323b60ea86f93c3cbaedc423cc85d420
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: c01d00362dc55deb1fa9da8df49beebdaf82b170
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135036"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492768"
 ---
 # <a name="spadddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -48,55 +48,44 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publisher=**] **'**_publisher_**'**  
- É o nome do Publicador. *Publisher* está **sysname**, sem padrão.  
+`[ @publisher = ] 'publisher'` É o nome do publicador. *Publisher* está **sysname**, sem padrão.  
   
- [  **@distribution_db=**] **'**_distribution_db_**'**  
- É o nome do banco de dados de distribuição. *distributor_db* está **sysname**, sem padrão. Esse parâmetro é usado por agentes de replicação para conexão com o Publicador.  
+`[ @distribution_db = ] 'distribution_db'` É o nome do banco de dados de distribuição. *distributor_db* está **sysname**, sem padrão. Esse parâmetro é usado por agentes de replicação para conexão com o Publicador.  
   
- [  **@security_mode=**] *security_mode*  
- É o modo de segurança implementado. Esse parâmetro só é usado por agentes de replicação para se conectar ao publicador para assinaturas de atualização enfileirada ou com um não - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *security_mode* está **int**, e pode ser um destes valores.  
+`[ @security_mode = ] security_mode` É o modo de segurança implementado. Esse parâmetro só é usado por agentes de replicação para se conectar ao publicador para assinaturas de atualização enfileirada ou com um não - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *security_mode* está **int**, e pode ser um destes valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**0**|Agentes de replicação no Distribuidor usam a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conexão com o Publicador.|  
 |**1** (padrão)|Agentes de replicação no Distribuidor usam a Autenticação do Windows para conexão com o Publicador.|  
   
- [  **@login=**] **'**_logon_**'**  
- É o logon. Esse parâmetro é necessário se *security_mode* é **0**. *login* é **sysname**, com um padrão de NULL. Esse parâmetro é usado por agentes de replicação para conexão com o Publicador.  
+`[ @login = ] 'login'` É o logon. Esse parâmetro é necessário se *security_mode* é **0**. *login* é **sysname**, com um padrão de NULL. Esse parâmetro é usado por agentes de replicação para conexão com o Publicador.  
   
- [  **@password=**] **'**_senha_**'**]  
- É a senha. *senha* está **sysname**, com um padrão NULL. Esse parâmetro é usado por agentes de replicação para conexão com o Publicador.  
+`[ @password = ] 'password']` É a senha. *senha* está **sysname**, com um padrão NULL. Esse parâmetro é usado por agentes de replicação para conexão com o Publicador.  
   
 > [!IMPORTANT]  
 >  Não use uma senha em branco. Use uma senha forte.  
   
- [  **@working_directory=**] **'**_working_directory_**'**  
- É o nome do diretório de trabalho usado para armazenar dados e arquivos de esquema para a publicação. *working_directory* está **nvarchar (255)** e assume como padrão a pasta ReplData para essa instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], por exemplo `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`. O nome deve ser especificado no formato UNC.  
+`[ @working_directory = ] 'working_directory'` É o nome do diretório de trabalho usado para armazenar dados e arquivos de esquema para a publicação. *working_directory* está **nvarchar (255)** e assume como padrão a pasta ReplData para essa instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], por exemplo `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`. O nome deve ser especificado no formato UNC.  
 
  Para o banco de dados SQL Azure, use `\\<storage_account>.file.core.windows.net\<share>`.
 
- [  **@storage_connection_string =**] **'**_storage_connection_string_**'**  
- É necessário para o banco de dados SQL. Use a chave de acesso no Portal do Azure em armazenamento > configurações.
+`[ @storage_connection_string = ] 'storage_connection_string'` É necessário para o banco de dados SQL. Use a chave de acesso no Portal do Azure em armazenamento > configurações.
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
 
- [  **@trusted=**] **'**_confiável_**'**  
- Esse parâmetro foi substituído e é fornecido apenas para compatibilidade com versões anteriores. *confiável* está **nvarchar (5)** e defini-lo como qualquer coisa, exceto **falso** resultará em erro.  
+`[ @trusted = ] 'trusted'` Esse parâmetro foi preterido e é fornecido para compatibilidade com versões anteriores. *confiável* está **nvarchar (5)** e defini-lo como qualquer coisa, exceto **falso** resultará em erro.  
   
- [  **@encrypted_password=**] *encrypted_password*  
- Definindo *encrypted_password* não é mais suportada. Tentativa de definir isso **bits** parâmetro **1** resultará em erro.  
+`[ @encrypted_password = ] encrypted_password` Definindo *encrypted_password* não é mais suportada. Tentativa de definir isso **bits** parâmetro **1** resultará em erro.  
   
- [  **@thirdparty_flag =**] *thirdparty_flag*  
- É quando o Publicador é [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *thirdparty_flag* está **bit**, e pode ser um dos valores a seguir.  
+`[ @thirdparty_flag = ] thirdparty_flag` É quando o publicador é [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *thirdparty_flag* está **bit**, e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**0** (padrão)|Banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**1**|Banco de dados diferente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
- [ **@publisher_type**=] **'**_publisher_type_**'**  
- Especifica o tipo do Publicador quando o Publicador não é [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publisher_type* é sysname, e pode ser um dos valores a seguir.  
+`[ @publisher_type = ] 'publisher_type'` Especifica o tipo de publicador quando o publicador não é [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publisher_type* é sysname, e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  

@@ -18,12 +18,12 @@ ms.assetid: e8a21642-8440-419a-8585-93d3d9d44f00
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f51d462e46a86a3c824a7e37aeb1f30ba28d987b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: a1cc9a65d1d4b6baba4d457d28ee36f0ac6156a1
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212915"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492188"
 ---
 # <a name="spaddrole-transact-sql"></a>sp_addrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@rolename =** ] **'***função***'**  
- É o nome da nova função de banco de dados. *função* é um **sysname**, sem padrão. *função* deve ser um identificador válido (ID) e ainda não deve existir no banco de dados atual.  
+`[ @rolename = ] 'role'` É o nome da nova função de banco de dados. *função* é um **sysname**, sem padrão. *função* deve ser um identificador válido (ID) e ainda não deve existir no banco de dados atual.  
   
- [  **@ownername =**] **'***proprietário***'**  
- É o proprietário da nova função de banco de dados. *proprietário* é um **sysname**, com um padrão de usuário de execução atual. *proprietário* deve ser um usuário de banco de dados ou função de banco de dados no banco de dados atual.  
+`[ @ownername = ] 'owner'` É o proprietário da nova função de banco de dados. *proprietário* é um **sysname**, com um padrão de usuário de execução atual. *proprietário* deve ser um usuário de banco de dados ou função de banco de dados no banco de dados atual.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

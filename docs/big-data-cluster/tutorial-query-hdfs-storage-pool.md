@@ -5,17 +5,17 @@ description: Este tutorial demonstra como consultar dados do HDFS em um cluster 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/06/2018
+ms.date: 03/27/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: bb0a028f45567e967f80f11425865098265ab35a
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: a8752f4879f4b03f89378e4f30c44c10dc272694
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241667"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494398"
 ---
 # <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>Tutorial: Consulta HDFS em um cluster de big data do SQL Server
 
@@ -33,7 +33,7 @@ Neste tutorial, você aprenderá como:
 ## <a id="prereqs"></a> Pré-requisitos
 
 - [Ferramentas de big data](deploy-big-data-tools.md)
-   - **Kubectl**
+   - **kubectl**
    - **Azure Data Studio**
    - **Extensão do SQL Server de 2019**
 - [Carregar dados de exemplo no seu cluster de big data](tutorial-load-sample-data.md)
@@ -44,18 +44,18 @@ O pool de armazenamento contém dados de sequência de cliques da web em um arqu
 
 1. No estúdio de dados do Azure, conecte-se à instância mestre do SQL Server do seu cluster de big data. Para obter mais informações, consulte [conectar-se a instância mestre do SQL Server](connect-to-big-data-cluster.md#master).
 
-2. Clique duas vezes em que a conexão na **servidores** janela para mostrar o painel do servidor para a instância mestre do SQL Server. Selecione **nova consulta**.
+1. Clique duas vezes em que a conexão na **servidores** janela para mostrar o painel do servidor para a instância mestre do SQL Server. Selecione **nova consulta**.
 
    ![Consulta de instância mestre do SQL Server](./media/tutorial-query-hdfs-storage-pool/sql-server-master-instance-query.png)
 
-3. Execute o seguinte comando Transact-SQL para alterar o contexto para o **vendas** banco de dados na instância do mestre.
+1. Execute o seguinte comando Transact-SQL para alterar o contexto para o **vendas** banco de dados na instância do mestre.
 
    ```sql
    USE Sales
    GO
    ```
 
-4. Defina o formato do arquivo CSV para ler do HDFS. Pressione F5 para executar a instrução.
+1. Defina o formato do arquivo CSV para ler do HDFS. Pressione F5 para executar a instrução.
 
    ```sql
    CREATE EXTERNAL FILE FORMAT csv_file
@@ -69,7 +69,15 @@ O pool de armazenamento contém dados de sequência de cliques da web em um arqu
    );
    ```
 
-5. Criar uma tabela externa que pode ler o `/clickstream_data` do pool de armazenamento. O **SqlStoragePool** está acessível da instância do mestre de um cluster de big data.
+1. Se ele ainda não existir, crie uma fonte de dados externa ao pool de armazenamento.
+
+   ```sql
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
+     CREATE EXTERNAL DATA SOURCE SqlStoragePool
+     WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
+   ```
+
+1. Criar uma tabela externa que pode ler o `/clickstream_data` do pool de armazenamento. O **SqlStoragePool** está acessível da instância do mestre de um cluster de big data.
 
    ```sql
    CREATE EXTERNAL TABLE [web_clickstreams_hdfs]

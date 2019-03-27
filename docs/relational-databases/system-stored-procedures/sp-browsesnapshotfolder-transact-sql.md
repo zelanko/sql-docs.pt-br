@@ -16,12 +16,12 @@ ms.assetid: 0872edf2-4038-4bc1-a68d-05ebfad434d2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1bd85e4d3e76df8cf5fe0b30350fb1a02959516f
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: a2ace8d02997b7c0647be0b7abe26ff098849905
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591150"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493998"
 ---
 # <a name="spbrowsesnapshotfolder-transact-sql"></a>sp_browsesnapshotfolder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_browsesnapshotfolder [@publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'**_publicação_**'**  
- É o nome da publicação que contém o artigo. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação que contém o artigo. *publicação* está **sysname**, sem padrão.  
   
- [  **@subscriber=**] **'**_assinante_**'**  
- É o nome do Assinante. *assinante* está **sysname**, com um padrão NULL.  
+`[ @subscriber = ] 'subscriber'` É o nome do assinante. *assinante* está **sysname**, com um padrão NULL.  
   
- [  **@subscriber_db=**] **'**_subscriber_db_**'**  
- É o nome do banco de dados de assinatura. *subscriber_db* está **sysname**, com um padrão NULL.  
+`[ @subscriber_db = ] 'subscriber_db'` É o nome do banco de dados de assinatura. *subscriber_db* está **sysname**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

@@ -16,12 +16,12 @@ ms.assetid: 64f111fd-fb7d-4459-93f7-65f0f8dd7efe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 508eaa25657393dba0d84e0bda6eb0582b3f90fb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 399fe5322cb8cb5c3d20a486aac3baa810439ce7
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822070"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492349"
 ---
 # <a name="spadjustpublisheridentityrange-transact-sql"></a>sp_adjustpublisheridentityrange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'***publicação***'**  
- É o nome da publicação na qual são realocados novos intervalos de identidades. *publicação* está **sysname**, com um padrão NULL.  
+`[ @publication = ] 'publication'` É o nome da publicação na qual são realocados novos intervalos de identidade. *publicação* está **sysname**, com um padrão NULL.  
   
- [  **@table_name=**] **'***table_name***'**  
- É o nome da tabela na qual são realocados novos intervalos de identidades. *table_name* está **sysname**, com um padrão NULL.  
+`[ @table_name = ] 'table_name'` É o nome da tabela na qual são realocados novos intervalos de identidade. *table_name* está **sysname**, com um padrão NULL.  
   
- [  **@table_owner=**] **'***table_owner***'**  
- É o nome do proprietário da tabela no Publicador. *table_owner* está **sysname**, com um padrão NULL. Se *table_owner* não for especificado, o nome do usuário atual será usado.  
+`[ @table_owner = ] 'table_owner'` É o proprietário da tabela no publicador. *table_owner* está **sysname**, com um padrão NULL. Se *table_owner* não for especificado, o nome do usuário atual será usado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

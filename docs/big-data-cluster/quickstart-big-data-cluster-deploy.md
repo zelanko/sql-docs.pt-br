@@ -5,17 +5,17 @@ description: Passo a passo uma implantação de clusters de big data 2019 do SQL
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: d3567b3bc82a97c831abac252bebd0c523ed3fac
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: b89ec7cd24ed61f08cf44f934066a9b0fc619434
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227109"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493549"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Início Rápido: Implantar um cluster de big data do SQL Server no serviço de Kubernetes do Azure (AKS)
 
@@ -160,7 +160,7 @@ kubectl get svc endpoint-service-proxy -n <your-cluster-name>
 ```
 
 > [!NOTE]
-> No CTP 2.3, você verá um aviso de segurança ao acessar a página da web, porque os clusters de big data está usando certificados gerados automaticamente SSL.
+> No CTP 2.4, você verá um aviso de segurança ao acessar a página da web, porque os clusters de big data está usando certificados gerados automaticamente SSL.
 
 ## <a name="connect-to-the-cluster"></a>Conectar-se ao cluster
 

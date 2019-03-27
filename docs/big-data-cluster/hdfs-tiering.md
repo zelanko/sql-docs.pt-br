@@ -6,20 +6,20 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: craigg
-ms.date: 02/29/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 04f493109997d4b673a6a308de5c9ebee6eac7e4
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: 1199d8d522df83c626f04f30c8937b57a5359f5c
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57239120"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493768"
 ---
 # <a name="configure-hdfs-tiering-on-sql-server-2019-big-data-clusters"></a>Configurar camadas em clusters do SQL Server 2019 grandes dados do HDFS
 
-Disposição em camadas HDFS fornece a capacidade de montar externa, sistema de arquivos compatível com HDFS no HDFS. Este artigo explica como configurar o HDFS disposição em camadas para clusters de big data de 2019 do SQL Server (versão prévia). Neste momento, CTP 2.3 só dá suporte à conexão ao Azure Data Lake armazenamento Gen2, que é o foco deste artigo.
+Disposição em camadas HDFS fornece a capacidade de montar externa, sistema de arquivos compatível com HDFS no HDFS. Este artigo explica como configurar o HDFS disposição em camadas para clusters de big data de 2019 do SQL Server (versão prévia). Neste momento, o CTP 2.4 suporta apenas conectar-se ao Azure Data Lake armazenamento Gen2, que é o foco deste artigo.
 
 ## <a name="hdfs-tiering-overview"></a>Visão geral de disposição em camadas do HDFS
 
@@ -78,7 +78,7 @@ As etapas a seguir montagem o armazenamento remoto do HDFS no Azure Data Lake no
 1. Montar o armazenamento HDFS remoto no Azure usando **montagem do armazenamento mssqlctl criar**. Substitua os valores de espaço reservado antes de executar o comando a seguir:
 
    ```bash
-   mssqlctl storage mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --local-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
+   mssqlctl storage mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
    ```
 
    > [!NOTE]
@@ -97,7 +97,7 @@ mssqlctl storage mount status
 Para listar o status de uma montagem de um caminho específico no HDFS, use o seguinte comando:
 
 ```bash
-mssqlctl storage mount status --local-path <mount-path-in-hdfs>
+mssqlctl storage mount status --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a id="delete"></a> Excluir a montagem
@@ -105,7 +105,7 @@ mssqlctl storage mount status --local-path <mount-path-in-hdfs>
 Para excluir a montagem, use o **mssqlctl armazenamento montagem exclusão** de comando e especifique o caminho de montagem no HDFS:
 
 ```bash
-mssqlctl storage mount delete --local-path <mount-path-in-hdfs>
+mssqlctl storage mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a id="issues"></a> Limitações e problemas conhecidos

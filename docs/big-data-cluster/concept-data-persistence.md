@@ -5,17 +5,17 @@ description: Saiba mais sobre o funcionamento da persistência de dados em um cl
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: bcb5ee903ab2e5c24cdc2bc705d9b29a4299ba1b
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 1dcf390fe87239cde45e8c7fda1bc5cebd10f0ed
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017952"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494158"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Persistência de dados com o cluster de big data do SQL Server no Kubernetes
 
@@ -26,7 +26,7 @@ ms.locfileid: "57017952"
 A maneira de cluster de big data do SQL Server consome esses volumes persistentes é por meio [Classes de armazenamento](https://kubernetes.io/docs/concepts/storage/storage-classes/). Você pode criar classes de armazenamento diferentes para diferentes tipos de armazenamento e especificá-los no momento da implantação de cluster de big data. Você pode configurar qual classe de armazenamento a ser usado para qual finalidade (pool). Cluster de big data do SQL Server cria [declarações de volume persistente](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) com o nome de classe de armazenamento especificado para cada pod que requer volumes persistentes. Ele, em seguida, monta os volumes persistentes correspondentes no pod.
 
 > [!NOTE]
-> Para o CTP 2.3, apenas `ReadWriteOnce` é suporte para o modo de acesso para o cluster inteiro.
+> Para o CTP 2.4, apenas `ReadWriteOnce` é suporte para o modo de acesso para o cluster inteiro.
 
 ## <a name="deployment-settings"></a>Configurações de implantação
 

@@ -5,17 +5,17 @@ description: Aprenda a implantar clusters de big data de 2019 do SQL Server (ver
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: fb09a5b13adc7f673c83a91635451435e4a8c945
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 5efefd5bc94aa8d1842ee244c947e48e90604834
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477691"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493728"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Como implantar clusters de grandes dados do SQL Server no Kubernetes
 
@@ -87,7 +87,7 @@ A configuração do cluster pode ser personalizada usando um conjunto de variáv
 | **ACCEPT_EULA** | Sim | N/D | Aceite o contrato de licença do SQL Server (por exemplo, 'Yes').  |
 | **CLUSTER_NAME** | Sim | N/D | O nome do namespace para implantar o SQLServer cluster de big data em Kubernetes. |
 | **CLUSTER_PLATFORM** | Sim | N/D | A plataforma em que o cluster Kubernetes é implantado. Pode ser `aks`, `minikube`, `kubernetes`|
-| **CLUSTER_COMPUTE_POOL_REPLICAS** | Não | 1 | O número de réplicas de pool de computação para criar. No CTP 2.3 apenas com o valor permitido é 1. |
+| **CLUSTER_COMPUTE_POOL_REPLICAS** | Não | 1 | O número de réplicas de pool de computação para criar. No CTP 2.4 apenas com o valor permitido é 1. |
 | **CLUSTER_DATA_POOL_REPLICAS** | Não | 2 | O número de dados do pool réplicas para criar. |
 | **CLUSTER_STORAGE_POOL_REPLICAS** | Não | 2 | O número de réplicas de pool de armazenamento para criar. |
 | **DOCKER_REGISTRY** | Sim | TBD | O registro privado onde as imagens usadas para implantar o cluster são armazenadas. |
@@ -278,13 +278,13 @@ Atualmente, a única maneira de atualizar um cluster de big data para uma nova v
    **Windows:**
 
    ```powershell
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.4/mssqlctl/requirements.txt
    ```
 
    **Linux:**
 
    ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.4/mssqlctl/requirements.txt --user
    ```
 
    > [!IMPORTANT]

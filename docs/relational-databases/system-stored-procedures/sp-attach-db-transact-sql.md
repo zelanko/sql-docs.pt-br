@@ -18,12 +18,12 @@ ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1b0a6fdf71643f438201aae39010f25d2e43d15c
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: cc0ab6b4dc44d14b375b13da971c0849eb42b0b3
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588830"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494348"
 ---
 # <a name="spattachdb-transact-sql"></a>sp_attach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,11 +48,9 @@ sp_attach_db [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@dbname=** ] **'**_dbnam_ **'**  
- É o nome do banco de dados a ser anexado ao servidor. O nome deve ser exclusivo. *DBName* está **sysname**, com um padrão NULL.  
+`[ @dbname = ] 'dbnam_ '` É o nome do banco de dados a ser anexado ao servidor. O nome deve ser exclusivo. *DBName* está **sysname**, com um padrão NULL.  
   
- [  **@filename1=** ] **'**_filename_n_**'**  
- É o nome físico, incluindo o caminho, do arquivo de banco de dados. *filename_n* está **nvarchar (260)**, com um padrão NULL. Podem ser especificados até 16 nomes de arquivo. Os nomes de parâmetros começam em **@filename1** e aumente a **@filename16**. A lista de nomes de arquivo deve incluir, pelo menos, o arquivo primário. O arquivo primário contém as tabelas de sistema que apontam para outros arquivos no banco de dados. A lista também deve incluir quaisquer arquivos que tenham sido movidos depois que o banco de dados foi desanexado.  
+`[ @filename1 = ] 'filename_n'` É o nome físico, incluindo o caminho, de um arquivo de banco de dados. *filename_n* está **nvarchar (260)**, com um padrão NULL. Podem ser especificados até 16 nomes de arquivo. Os nomes de parâmetros começam em **@filename1** e aumente a **@filename16**. A lista de nomes de arquivo deve incluir, pelo menos, o arquivo primário. O arquivo primário contém as tabelas de sistema que apontam para outros arquivos no banco de dados. A lista também deve incluir quaisquer arquivos que tenham sido movidos depois que o banco de dados foi desanexado.  
   
 > [!NOTE]  
 >  Este argumento mapeia para o parâmetro FILENAME da instrução CREATE DATABASE. Para obter mais informações, consulte [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  

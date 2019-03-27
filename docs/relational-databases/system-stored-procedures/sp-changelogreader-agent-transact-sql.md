@@ -16,12 +16,12 @@ ms.assetid: 929b2fa7-1267-41d0-8b69-e9ab26a62c0f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 529ad27a4ebc220f8d17a58e9c05605e785237a7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6d3671c96b73fa1fb8138a7085748704c7a38d76
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807718"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494218"
 ---
 # <a name="spchangelogreaderagent-transact-sql"></a>sp_changelogreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -44,32 +44,26 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@job_login**=] **'***job_login***'**  
- É o logon para a conta sob a qual o agente é executado. *job_login* está **nvarchar(257)**, com um padrão NULL. No banco de dados de instância gerenciada do SQL, use uma conta do SQL Server. *Isso não pode ser alterado para um não -* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *publicador.*  
+`[ @job_login = ] 'job_login'` É o logon para a conta sob a qual o agente é executado. *job_login* está **nvarchar(257)**, com um padrão NULL. No banco de dados de instância gerenciada do SQL, use uma conta do SQL Server. *Isso não pode ser alterado para um não -* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *publicador.*  
   
- [ **@job_password**=] **'***job_password***'**  
- É a senha para a conta sob a qual o agente é executado. *job_password* está **sysname**, com um padrão NULL.  
+`[ @job_password = ] 'job_password'` É a senha para a conta sob a qual o agente é executado. *job_password* está **sysname**, com um padrão NULL.  
   
 > [!IMPORTANT]  
 >  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for necessário armazenar credenciais em um arquivo de script, você deverá proteger o arquivo para impedir acesso não autorizado.  
   
- [ **@publisher_security_mode**=] *publisher_security_mode*  
- É o modo de segurança usado pelo agente ao conectar-se ao Publicador. *publisher_security_mode* está **smallint**, com um padrão NULL. **0** especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação, e **1** Especifica a autenticação do Windows.  
+`[ @publisher_security_mode = ] publisher_security_mode` É o modo de segurança usado pelo agente ao se conectar ao publicador. *publisher_security_mode* está **smallint**, com um padrão NULL. **0** especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação, e **1** Especifica a autenticação do Windows.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [ **@publisher_login**=] **'***publisher_login***'**  
- É o logon usado na conexão com o Publicador. *publisher_login* está **sysname**, com um padrão NULL. *publisher_login* deve ser especificado quando *publisher_security_mode* é **0**. Se *publisher_login* for NULL e *publisher_security_mode* está **1**, em seguida, a conta do Windows especificada na *job_login* é usado quando conectar-se ao publicador.  
+`[ @publisher_login = ] 'publisher_login'` É o logon usado ao conectar-se ao publicador. *publisher_login* está **sysname**, com um padrão NULL. *publisher_login* deve ser especificado quando *publisher_security_mode* é **0**. Se *publisher_login* for NULL e *publisher_security_mode* está **1**, em seguida, a conta do Windows especificada na *job_login* é usado quando conectar-se ao publicador.  
   
- [ **@publisher_password**=] **'***publisher_password***'**  
- É a senha usada ao conectar-se ao Publicador. *publisher_password* está **sysname**, com um padrão NULL.  
+`[ @publisher_password = ] 'publisher_password'` É a senha usada ao conectar-se ao publicador. *publisher_password* está **sysname**, com um padrão NULL.  
   
 > [!IMPORTANT]  
 >  Não use uma senha em branco. Use uma senha forte. Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for necessário armazenar credenciais em um arquivo de script, você deverá proteger o arquivo para impedir acesso não autorizado.  
   
- [ **@publisher**=] **'***publisher***'**  
- É o nome do Publicador. *Publisher* está **sysname**, com um padrão NULL. Esse parâmetro só tem suporte para Editores não SQL Server.  
+`[ @publisher = ] 'publisher'` É o nome do publicador. *Publisher* está **sysname**, com um padrão NULL. Esse parâmetro só tem suporte para Editores não SQL Server.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

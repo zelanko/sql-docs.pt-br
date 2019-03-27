@@ -16,12 +16,12 @@ ms.assetid: 28a629a1-7374-4614-9b04-279d290a942a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 75390bbbc490046af6db4e47a7ca10cefac2546c
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 97f04e8d30b29b43528adc6fe2ab2abdb2d54531
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591870"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493618"
 ---
 # <a name="spaddmergepublication-transact-sql"></a>sp_addmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,70 +76,52 @@ sp_addmergepublication [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication =** ] **'**_publicação_**'**  
- É o nome da publicação de mesclagem a ser criada. *publicação* está **sysname**, sem padrão e deve não ser a palavra-chave todos. O nome da publicação deve ser exclusivo no banco de dados.  
+`[ @publication = ] 'publication'` É o nome da publicação de mesclagem para criar. *publicação* está **sysname**, sem padrão e deve não ser a palavra-chave todos. O nome da publicação deve ser exclusivo no banco de dados.  
   
- [  **@description =** ] **'**_descrição_**'**  
- É a descrição da publicação. *Descrição* está **nvarchar (255)**, com um padrão NULL.  
+`[ @description = ] 'description'` É a descrição da publicação. *Descrição* está **nvarchar (255)**, com um padrão NULL.  
   
- [  **@retention =** ] *retenção*  
- É o período de retenção na retenção de unidades de período, para o qual salvar as alterações para o determinado *publicação*. *retenção* está **int**, com um padrão de 14 unidades. Unidades de período de retenção são definidas por *retention_period_unit*. Se a assinatura não estiver sincronizada dentro do período de retenção e as alterações pendentes que por ventura tenha recebido tiverem sido removidas por uma operação de limpeza no Distribuidor, a assinatura irá expirar e deverá ser reiniciada. O período de retenção máximo permitido é o número de dias entre 31 de dezembro, 9999 e a data atual.  
+`[ @retention = ] retention` É o período de retenção na retenção de unidades de período, para o qual salvar as alterações para o determinado *publicação*. *retenção* está **int**, com um padrão de 14 unidades. Unidades de período de retenção são definidas por *retention_period_unit*. Se a assinatura não estiver sincronizada dentro do período de retenção e as alterações pendentes que por ventura tenha recebido tiverem sido removidas por uma operação de limpeza no Distribuidor, a assinatura irá expirar e deverá ser reiniciada. O período de retenção máximo permitido é o número de dias entre 31 de dezembro, 9999 e a data atual.  
   
 > [!NOTE]  
 >  O período de retenção para publicações de mesclagem tem um período de tolerância de 24 horas para acomodar Assinantes em fusos horários diferentes. Por exemplo, se você definir um período de retenção de um dia, o período de retenção real será de 48 horas.  
   
- [  **@sync_mode =** ] **'**_sync_mode_**'**  
- É o modo de sincronização inicial de assinantes na publicação. *sync_mode* está **nvarchar (10)**, e pode ser um dos valores a seguir.  
+`[ @sync_mode = ] 'sync_mode'` É o modo de sincronização inicial de assinantes na publicação. *sync_mode* está **nvarchar (10)**, e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**nativo** (padrão)|Produz saída de programa de cópia em massa em modo nativo de todas as tabelas.|  
 |**character**|Produz saída de programa de cópia em massa em modo de caractere de todas as tabelas. Necessário para dar suporte à [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] e não-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes.|  
   
- [  **@allow_push =** ] **'**_allow_push_**'**  
- Especifica se podem ser criadas assinaturas push para a publicação determinada. *allow_push* está **nvarchar (5)**, com um padrão de TRUE, que permite assinaturas push na publicação.  
+`[ @allow_push = ] 'allow_push'` Especifica se podem ser criadas assinaturas push para a publicação determinada. *allow_push* está **nvarchar (5)**, com um padrão de TRUE, que permite assinaturas push na publicação.  
   
- [  **@allow_pull =** ] **'**_allow_pull_**'**  
- Especifica se podem ser criadas assinaturas pull para a publicação determinada. *allow_pull* está **nvarchar (5)**, com um padrão de TRUE, que permite assinaturas pull na publicação. Você deve especificar verdadeiro para dar suporte [!INCLUDE[ssEW](../../includes/ssew-md.md)] assinantes.  
+`[ @allow_pull = ] 'allow_pull'` Especifica se podem ser criadas assinaturas pull para a publicação determinada. *allow_pull* está **nvarchar (5)**, com um padrão de TRUE, que permite assinaturas pull na publicação. Você deve especificar verdadeiro para dar suporte [!INCLUDE[ssEW](../../includes/ssew-md.md)] assinantes.  
   
- [  **@allow_anonymous =** ] **'**_allow_anonymous_**'**  
- Especifica se podem ser criadas assinaturas anônimas para a publicação determinada. *allow_anonymous* está **nvarchar (5)**, com um padrão de TRUE, que permite assinaturas anônimas na publicação. Para dar suporte à [!INCLUDE[ssEW](../../includes/ssew-md.md)] assinantes, você deve especificar **verdadeiro**.  
+`[ @allow_anonymous = ] 'allow_anonymous'` Especifica se podem ser criadas assinaturas anônimas para a publicação determinada. *allow_anonymous* está **nvarchar (5)**, com um padrão de TRUE, que permite assinaturas anônimas na publicação. Para dar suporte à [!INCLUDE[ssEW](../../includes/ssew-md.md)] assinantes, você deve especificar **verdadeiro**.  
   
- [  **@enabled_for_internet =** ] **'**_enabled_for_internet_**'**  
- Especifica se a publicação está habilitada para a Internet, e determina se o protocolo FTP pode ser usado para transferir os arquivos de instantâneo para um assinante. *enabled_for_internet* está **nvarchar (5)**, com um padrão de FALSE. Se **verdadeira**, os arquivos de sincronização para a publicação são colocados no diretório C:\Program Files\Microsoft SQL server\mssql\mssql.x\repldata\ftp. O usuário deve criar o diretório Ftp. Se **falsos**, a publicação não está habilitada para acesso à Internet.  
+`[ @enabled_for_internet = ] 'enabled_for_internet'` Especifica se a publicação está habilitada para a Internet e determina se o protocolo de transferência de arquivo (FTP) pode ser usado para transferir os arquivos de instantâneo para um assinante. *enabled_for_internet* está **nvarchar (5)**, com um padrão de FALSE. Se **verdadeira**, os arquivos de sincronização para a publicação são colocados no diretório C:\Program Files\Microsoft SQL server\mssql\mssql.x\repldata\ftp. O usuário deve criar o diretório Ftp. Se **falsos**, a publicação não está habilitada para acesso à Internet.  
   
- [  **@centralized_conflicts =**] **'**_centralized_conflicts_**'**  
- Esse parâmetro foi preterido e tem suporte somente para a compatibilidade com versões anteriores de scripts. Use *conflict_logging* para especificar o local onde os registros de conflito são armazenados.  
+`[ @centralized_conflicts = ] 'centralized_conflicts'` Esse parâmetro foi preterido e só tem suporte para a compatibilidade com versões anteriores de scripts. Use *conflict_logging* para especificar o local onde os registros de conflito são armazenados.  
   
- [  **@dynamic_filters =**] **'**_dynamic_filters_**'**  
- Permite que a publicação de mesclagem use filtros de linha com parâmetros. *dynamic_filters* está **nvarchar (5)**, com um padrão de FALSE.  
+`[ @dynamic_filters = ] 'dynamic_filters'` Permite que a publicação de mesclagem use filtros de linha com parâmetros. *dynamic_filters* está **nvarchar (5)**, com um padrão de FALSE.  
   
 > [!NOTE]  
 >  Você não deve especificar esse parâmetro mas, em vez disso, permitir que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] determine se filtros de linha com parâmetros estão sendo usado usados. Se você especificar um valor de **verdadeira** para *dynamic_filters*, você deve definir um filtro de linha com parâmetros para o artigo. Para obter mais informações, consulte [Definir e modificar um filtro de linha com parâmetros para um artigo de mesclagem](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
- [  **@snapshot_in_defaultfolder =** ] **'**_snapshot_in_default_folder_**'**  
- Especifica se os arquivos de instantâneo são armazenados na pasta padrão. *snapshot_in_default_folder* está **nvarchar (5)**, com um padrão de TRUE. Se **verdadeira**, arquivos de instantâneo podem ser encontrados na pasta padrão. Se **falsos**, os arquivos de instantâneo serão armazenados no local alternativo especificado por *alternate_snapshot_folder*. Os locais alternativos podem ser um outro servidor, uma unidade de rede ou uma mídia removível (como um CD-ROM ou discos removíveis). Você também pode salvar os arquivos de instantâneo em um site de FTP para recuperação posterior pelo Assinante. Observe que esse parâmetro pode ser verdadeiro e ainda ter um local especificado por *alt_snapshot_folder*. Essa combinação Especifica que os arquivos de instantâneo serão armazenados em ambos os locais padrão e alternativo.  
+`[ @snapshot_in_defaultfolder = ] 'snapshot_in_default_folder'` Especifica se os arquivos de instantâneo são armazenados na pasta padrão. *snapshot_in_default_folder* está **nvarchar (5)**, com um padrão de TRUE. Se **verdadeira**, arquivos de instantâneo podem ser encontrados na pasta padrão. Se **falsos**, os arquivos de instantâneo serão armazenados no local alternativo especificado por *alternate_snapshot_folder*. Os locais alternativos podem ser um outro servidor, uma unidade de rede ou uma mídia removível (como um CD-ROM ou discos removíveis). Você também pode salvar os arquivos de instantâneo em um site de FTP para recuperação posterior pelo Assinante. Observe que esse parâmetro pode ser verdadeiro e ainda ter um local especificado por *alt_snapshot_folder*. Essa combinação Especifica que os arquivos de instantâneo serão armazenados em ambos os locais padrão e alternativo.  
   
- [  **@alt_snapshot_folder =** ] **'**_alternate_snapshot_folder_**'**  
- Especifica o local da pasta alternativa para o instantâneo. *alternate_snapshot_folder* está **nvarchar (255)**, com um padrão NULL.  
+`[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'` Especifica o local da pasta alternativa para o instantâneo. *alternate_snapshot_folder* está **nvarchar (255)**, com um padrão NULL.  
   
- [  **@pre_snapshot_script =** ] **'**_pre_snapshot_script_**'**  
- Especifica um ponteiro para um **. SQL** local do arquivo. *pre_snapshot_script* está **nvarchar (255)**, com um padrão NULL. O Agente de Mesclagem executará o script pré-instantâneo antes de qualquer script de objeto replicado ao aplicar o instantâneo no Assinante. O script é executado no contexto de segurança usado pelo Agente de Mesclagem ao se conectar ao banco de dados de assinatura. Não são executados scripts de pré-instantâneo em [!INCLUDE[ssEW](../../includes/ssew-md.md)] assinantes.  
+`[ @pre_snapshot_script = ] 'pre_snapshot_script'` Especifica um ponteiro para um **. SQL** local do arquivo. *pre_snapshot_script* está **nvarchar (255)**, com um padrão NULL. O Agente de Mesclagem executará o script pré-instantâneo antes de qualquer script de objeto replicado ao aplicar o instantâneo no Assinante. O script é executado no contexto de segurança usado pelo Agente de Mesclagem ao se conectar ao banco de dados de assinatura. Não são executados scripts de pré-instantâneo em [!INCLUDE[ssEW](../../includes/ssew-md.md)] assinantes.  
   
- [  **@post_snapshot_script =** ] **'**_post_snapshot_script_**'**  
- Especifica um ponteiro para um **. SQL** local do arquivo. *post_snapshot_script* está **nvarchar (255)**, com um padrão NULL. O Agente de Mesclagem executará o script pós-instantâneo depois que todos os outros scripts de objeto replicado tenham sido aplicados durante uma sincronização inicial. O script é executado no contexto de segurança usado pelo Agente de Mesclagem ao se conectar ao banco de dados de assinatura. Não são executados scripts de pós-instantâneo em [!INCLUDE[ssEW](../../includes/ssew-md.md)] assinantes.  
+`[ @post_snapshot_script = ] 'post_snapshot_script'` Especifica um ponteiro para um **. SQL** local do arquivo. *post_snapshot_script* está **nvarchar (255)**, com um padrão NULL. O Agente de Mesclagem executará o script pós-instantâneo depois que todos os outros scripts de objeto replicado tenham sido aplicados durante uma sincronização inicial. O script é executado no contexto de segurança usado pelo Agente de Mesclagem ao se conectar ao banco de dados de assinatura. Não são executados scripts de pós-instantâneo em [!INCLUDE[ssEW](../../includes/ssew-md.md)] assinantes.  
   
- [  **@compress_snapshot =** ] **'**_compress_snapshot_**'**  
- Especifica que o instantâneo gravado para o **@alt_snapshot_folder** local deve ser compactado no [!INCLUDE[msCoName](../../includes/msconame-md.md)] formato CAB. *compress_snapshot* está **nvarchar (5)**, com um padrão de FALSE. **False** Especifica que o instantâneo não será compactado; **verdadeira** Especifica que o instantâneo deve ser compactado. Arquivos de instantâneo maiores que 2 GB não podem ser compactados. Arquivos de instantâneo compactados são descompactados no local onde o Agente de Mesclagem é executado; as assinaturas pull são geralmente usadas com instantâneos compactados para que os arquivos sejam descompactados no Assinante. O instantâneo na pasta padrão não pode ser compactado. Para dar suporte à [!INCLUDE[ssEW](../../includes/ssew-md.md)] assinantes, você deve especificar **falso**.  
+`[ @compress_snapshot = ] 'compress_snapshot'` Especifica que o instantâneo gravado para o **@alt_snapshot_folder** local deve ser compactado no [!INCLUDE[msCoName](../../includes/msconame-md.md)] formato CAB. *compress_snapshot* está **nvarchar (5)**, com um padrão de FALSE. **False** Especifica que o instantâneo não será compactado; **verdadeira** Especifica que o instantâneo deve ser compactado. Arquivos de instantâneo maiores que 2 GB não podem ser compactados. Arquivos de instantâneo compactados são descompactados no local onde o Agente de Mesclagem é executado; as assinaturas pull são geralmente usadas com instantâneos compactados para que os arquivos sejam descompactados no Assinante. O instantâneo na pasta padrão não pode ser compactado. Para dar suporte à [!INCLUDE[ssEW](../../includes/ssew-md.md)] assinantes, você deve especificar **falso**.  
   
- [  **@ftp_address =** ] **'**_ftp_address_**'**  
- É o endereço de rede do serviço FTP para o Distribuidor. *ftp_address* está **sysname**, com um padrão NULL. Especifica onde os arquivos de instantâneo de publicação ficam localizados para o agente de mesclagem de um assinante para acompanhar. Como essa propriedade é armazenada para cada publicação, cada publicação pode ter outro *ftp_address*. A publicação deve oferecer suporte à propagação de instantâneos por meio de FTP.  
+`[ @ftp_address = ] 'ftp_address'` É o endereço de rede do serviço FTP para o distribuidor. *ftp_address* está **sysname**, com um padrão NULL. Especifica onde os arquivos de instantâneo de publicação ficam localizados para o agente de mesclagem de um assinante para acompanhar. Como essa propriedade é armazenada para cada publicação, cada publicação pode ter outro *ftp_address*. A publicação deve oferecer suporte à propagação de instantâneos por meio de FTP.  
   
- [  **@ftp_port=** ] *ftp_port*  
- É o número da porta do serviço FTP para o Distribuidor. *ftp_port* está **int**, com um padrão de 21. Especifica onde os arquivos de instantâneo de publicação ficam localizados para serem captados pelo Agente de Mesclagem ou por um Assinante. Como essa propriedade é armazenada para cada publicação, cada publicação pode ter seu próprio *ftp_port*.  
+`[ @ftp_port = ] ftp_port` É o número da porta do serviço FTP para o distribuidor. *ftp_port* está **int**, com um padrão de 21. Especifica onde os arquivos de instantâneo de publicação ficam localizados para serem captados pelo Agente de Mesclagem ou por um Assinante. Como essa propriedade é armazenada para cada publicação, cada publicação pode ter seu próprio *ftp_port*.  
   
- [  **@ftp_subdirectory =** ] **'**_ftp_subdirectory_**'**  
- Especifica onde os arquivos de instantâneo estarão disponíveis para serem retirados pelo assinante se a publicação oferecer suporte à propagação de instantâneo usando o FTP. *ftp_subdirectory* está **nvarchar (255)**, com um padrão NULL. Como essa propriedade é armazenada para cada publicação, cada publicação pode ter seu próprio *ftp_subdirctory* ou optar por não ter um subdiretório indicado com um valor nulo.  
+`[ @ftp_subdirectory = ] 'ftp_subdirectory'` Especifica onde os arquivos de instantâneo estarão disponíveis para o Merge Agent do assinante para acompanhar se a publicação oferece suporte à propagação de instantâneo usando FTP. *ftp_subdirectory* está **nvarchar (255)**, com um padrão NULL. Como essa propriedade é armazenada para cada publicação, cada publicação pode ter seu próprio *ftp_subdirctory* ou optar por não ter um subdiretório indicado com um valor nulo.  
   
  Na pré-geração de instantâneos para publicação com filtros com parâmetros, o instantâneo de dados de cada partição de Assinante precisa estar em sua própria pasta. A estrutura de diretório para instantâneos pré-gerados por meio de FTP deve seguir a estrutura a seguir:  
   
@@ -148,49 +130,38 @@ sp_addmergepublication [ @publication = ] 'publication'
 > [!NOTE]  
 >  Os valores acima em itálico dependerão das especificações da publicação e da partição de Assinante.  
   
- [  **@ftp_login =** ] **'**_ftp_login_**'**  
- O nome de usuário é usado para se conectar ao serviço FTP. *ftp_login* está **sysname**, com um padrão de 'anonymous'.  
+`[ @ftp_login = ] 'ftp_login'` O nome de usuário é usado para se conectar ao serviço FTP. *ftp_login* está **sysname**, com um padrão de 'anonymous'.  
   
- [  **@ftp_password =** ] **'**_ftp_password_**'**  
- É a senha de usuário usada para se conectar ao serviço FTP. *ftp_password* está **sysname**, com um padrão NULL.  
+`[ @ftp_password = ] 'ftp_password'` A senha do usuário é usada para se conectar ao serviço FTP. *ftp_password* está **sysname**, com um padrão NULL.  
   
 > [!IMPORTANT]  
 >  Não use uma senha em branco. Use uma senha forte.  
   
- [  **@conflict_retention =** ] *conflict_retention*  
- Especifica o período de retenção, em dias, durante o qual os conflitos são retidos. *conflict_retention* está **int**, com um padrão de 14 dias antes do conflito de linha é limpo da tabela de conflitos.  
+`[ @conflict_retention = ] conflict_retention` Especifica o período de retenção em dias, para o qual os conflitos são retidos. *conflict_retention* está **int**, com um padrão de 14 dias antes do conflito de linha é limpo da tabela de conflitos.  
   
- [  **@keep_partition_changes =** ] **'**_keep_partition_changes_**'**  
- Especifica se otimizações de alteração de partição devem ser habilitadas quando partições pré-computadas não podem ser usadas. *keep_partition_changes* está **nvarchar (5)**, com um padrão de TRUE. **False** significa que as alterações de partição não é otimizadas e quando partições pré-computadas não forem usadas, as partições enviadas a todos os assinantes serão verificadas quando os dados forem alterados em uma partição. **True** significa que as alterações de partição é otimizadas e somente assinantes com linhas nas partições alteradas são afetados. Ao usar partições pré-computadas, defina *use_partition_groups* à **verdadeiro** e defina *keep_partition_changes* para **false**. Para obter mais informações, consulte [Optimize Parameterized Filter Performance with Precomputed Partitions](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md) (Otimizar o desempenho do filtro parametrizado com partições pré-computadas).  
+`[ @keep_partition_changes = ] 'keep_partition_changes'` Especifica se é para habilitar otimizações de alteração de partição quando partições pré-computadas não podem ser usadas. *keep_partition_changes* está **nvarchar (5)**, com um padrão de TRUE. **False** significa que as alterações de partição não é otimizadas e quando partições pré-computadas não forem usadas, as partições enviadas a todos os assinantes serão verificadas quando os dados forem alterados em uma partição. **True** significa que as alterações de partição é otimizadas e somente assinantes com linhas nas partições alteradas são afetados. Ao usar partições pré-computadas, defina *use_partition_groups* à **verdadeiro** e defina *keep_partition_changes* para **false**. Para obter mais informações, consulte [Optimize Parameterized Filter Performance with Precomputed Partitions](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md) (Otimizar o desempenho do filtro parametrizado com partições pré-computadas).  
   
 > [!NOTE]  
 >  Se você especificar um valor de **verdadeira** para *keep_partition_changes*, especifique um valor de **1** para o parâmetro do agente de instantâneo **- MaxNetworkOptimization** . Para obter mais informações sobre esse parâmetro, consulte [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md). Para obter informações sobre como especificar parâmetros de agente, consulte [administração do agente de replicação](../../relational-databases/replication/agents/replication-agent-administration.md).  
   
  Com o [!INCLUDE[ssEW](../../includes/ssew-md.md)] assinantes *keep_partition_changes* deve ser definido como true para assegurar que as exclusões são propagadas corretamente. Quando definido como falso, o assinante pode ter mais linhas do que o esperado.  
   
- [  **@allow_subscription_copy=** ] **'**_allow_subscription_copy_**'**  
- Habilita ou desabilita a capacidade para copiar os bancos de dados de assinatura que assinam essa publicação. *allow_subscription_copy* está **nvarchar (5)**, com um padrão de FALSE. O tamanho do banco de dados de assinatura copiado deve ser menor de 2 gigabytes (GB).  
+`[ @allow_subscription_copy = ] 'allow_subscription_copy'` Habilita ou desabilita a capacidade de copiar os bancos de dados de assinatura que assinam essa publicação. *allow_subscription_copy* está **nvarchar (5)**, com um padrão de FALSE. O tamanho do banco de dados de assinatura copiado deve ser menor de 2 gigabytes (GB).  
   
- [  **@allow_synctoalternate =** ] **'**_allow_synctoalternate_**'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @allow_synctoalternate = ] 'allow_synctoalternate'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@validate_subscriber_info =** ] **'**_validate_subscriber_info_**'**  
- Lista as funções usadas para definir uma partição de Assinante dos dados publicados quando filtros de linha com parâmetros são usados. *validate_subscriber_info* está **nvarchar(500)**, com um padrão NULL. Essa informação é usada pelo Agente de Mesclagem para validar a partição do Assinante. Por exemplo, se [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) é usado no filtro de linha com parâmetros, o parâmetro deve ser `@validate_subscriber_info=N'SUSER_SNAME()'`.  
+`[ @validate_subscriber_info = ] 'validate_subscriber_info'` Lista as funções que são usadas para definir uma partição de assinante dos dados publicados quando filtros de linha com parâmetros são usados. *validate_subscriber_info* está **nvarchar(500)**, com um padrão NULL. Essa informação é usada pelo Agente de Mesclagem para validar a partição do Assinante. Por exemplo, se [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) é usado no filtro de linha com parâmetros, o parâmetro deve ser `@validate_subscriber_info=N'SUSER_SNAME()'`.  
   
 > [!NOTE]  
 >  Você não deve especificar esse parâmetro, mas sim permitir que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] determine automaticamente os critérios de filtragem.  
   
- [  **@add_to_active_directory =** ] **'**_add_to_active_directory_**'**  
- Esse parâmetro foi preterido e tem suporte somente para a compatibilidade com versões anteriores de scripts. Você não pode mais adicionar informações de publicação ao [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory.  
+`[ @add_to_active_directory = ] 'add_to_active_directory'` Esse parâmetro foi preterido e só tem suporte para a compatibilidade com versões anteriores de scripts. Você não pode mais adicionar informações de publicação ao [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory.  
   
- [  **@max_concurrent_merge =** ] *maximum_concurrent_merge*  
- O número máximo de processos de mesclagem simultâneos. *maximum_concurrent_merge* está **int** com um padrão de 0. Um valor de **0** para essa propriedade significa que não há nenhum limite para o número de processos de mesclagem simultâneos em execução em um determinado momento. Essa propriedade define um limite para o número de processos de mesclagem simultâneos que pode ser executado em uma publicação de mesclagem de uma vez. Se houver mais processos de mesclagem agendados ao mesmo tempo do que o valor permitido para execução, os trabalhos em excesso serão enfileirados e esperarão até que o processo de mesclagem em execução no momento seja concluído.  
+`[ @max_concurrent_merge = ] maximum_concurrent_merge` O número máximo de processos de mesclagem. *maximum_concurrent_merge* está **int** com um padrão de 0. Um valor de **0** para essa propriedade significa que não há nenhum limite para o número de processos de mesclagem simultâneos em execução em um determinado momento. Essa propriedade define um limite para o número de processos de mesclagem simultâneos que pode ser executado em uma publicação de mesclagem de uma vez. Se houver mais processos de mesclagem agendados ao mesmo tempo do que o valor permitido para execução, os trabalhos em excesso serão enfileirados e esperarão até que o processo de mesclagem em execução no momento seja concluído.  
   
- [  **@max_concurrent_dynamic_snapshots =**] *max_concurrent_dynamic_snapshots*  
- O número máximo de sessões de Agente de Instantâneo que podem ser executadas simultaneamente para gerar instantâneos de dados filtrados para partições de Assinante. *maximum_concurrent_dynamic_snapshots* está **int** com um padrão de 0. Se **0**, não há nenhum limite para as número sessões de instantâneo. Se houver mais processos de instantâneo agendados ao mesmo tempo do que o valor permitido para execução, os trabalhos em excesso serão enfileirados e esperarão até que o processo de instantâneo em execução no momento seja concluído.  
+`[ @max_concurrent_dynamic_snapshots = ] max_concurrent_dynamic_snapshots` O número máximo de sessões do Snapshot Agent que podem ser executadas simultaneamente para gerar os instantâneos de dados filtrados para partições de assinante. *maximum_concurrent_dynamic_snapshots* está **int** com um padrão de 0. Se **0**, não há nenhum limite para as número sessões de instantâneo. Se houver mais processos de instantâneo agendados ao mesmo tempo do que o valor permitido para execução, os trabalhos em excesso serão enfileirados e esperarão até que o processo de instantâneo em execução no momento seja concluído.  
   
- [  **@use_partition_groups =** ] **'**_use_partition_groups_**'**  
- Especifica se as partições pré-computadas devem ser usadas para otimizar o processo de sincronização. *use_partition_groups* está **nvarchar (5)**, e pode ser um destes valores:  
+`[ @use_partition_groups = ] 'use_partition_groups'` Especifica que partições pré-computadas devem ser usadas para otimizar o processo de sincronização. *use_partition_groups* está **nvarchar (5)**, e pode ser um destes valores:  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -200,16 +171,14 @@ sp_addmergepublication [ @publication = ] 'publication'
   
  Partições pré-computadas são usadas por padrão. Para evitar o uso de partições de pré-computadas *use_partition_groups* deve ser definida como **falso**. Quando NULL, o sistema decidirá se partições pré-computadas podem ser usadas. Se as pré-calculadas partições não podem ser usadas, em seguida, esse valor efetivamente se torna **falsos** sem gerar erros. Nesses casos, *keep_partition_changes* pode ser definido como **verdadeiro** para fornecer alguma otimização. Para obter mais informações, consulte [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md) e [otimizar o desempenho de filtro parametrizado com partições pré-computadas](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
- [  **@publication_compatibility_level =** ] *backward_comp_level*  
- Indica a compatibilidade com versões anteriores da publicação. *backward_comp_level* está **nvarchar(6)**, e pode ser um destes valores:  
+`[ @publication_compatibility_level = ] backward_comp_level` Indica a compatibilidade com versões anteriores da publicação. *backward_comp_level* está **nvarchar(6)**, e pode ser um destes valores:  
   
 |Valor|Versão|  
 |-----------|-------------|  
 |**90RTM**|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|  
 |**100RTM**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
   
- [  **@replicate_ddl =** ] *replicate_ddl*  
- Indica se a replicação de esquema tem suporte para a publicação. *replicate_ddl* está **int**, com um padrão de 1. **1** indica que instruções de DDL (linguagem) de definição de dados executadas no publicador são replicadas, e **0** indica que instruções DDL não são replicadas. Para obter mais informações, consulte [Make Schema Changes on Publication Databases](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md) (Fazer alterações de esquema em bancos de dados de publicação).  
+`[ @replicate_ddl = ] replicate_ddl` Indica se a replicação de esquema tem suporte para a publicação. *replicate_ddl* está **int**, com um padrão de 1. **1** indica que instruções de DDL (linguagem) de definição de dados executadas no publicador são replicadas, e **0** indica que instruções DDL não são replicadas. Para obter mais informações, consulte [Make Schema Changes on Publication Databases](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md) (Fazer alterações de esquema em bancos de dados de publicação).  
   
  O *@replicate_ddl* parâmetro é honrado quando uma instrução DDL adiciona uma coluna. O *@replicate_ddl* parâmetro é ignorado quando uma instrução DDL altera ou remove uma coluna pelos seguintes motivos.  
   
@@ -219,23 +188,18 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 -   Quando uma instrução DDL adiciona uma nova coluna, sysarticlecolumns não inclui a nova coluna. Instruções DML não tentarão replicar dados para a nova coluna. O parâmetro é honrado porque replicar ou não replicar o DDL são aceitáveis.  
   
- [  **@allow_subscriber_initiated_snapshot =** ] **'**_allow_subscriber_initiated_snapshot_**'**  
- Indica se os assinantes dessa publicação podem iniciar o processo de instantâneo para gerar o instantâneo filtrado para sua partição de dados. *allow_subscriber_initiated_snapshot* está **nvarchar (5)**, com um padrão de FALSE. **True** indica que os assinantes podem iniciar o processo de instantâneo.  
+`[ @allow_subscriber_initiated_snapshot = ] 'allow_subscriber_initiated_snapshot'` Indica se os assinantes dessa publicação podem iniciar o processo de instantâneo para gerar o instantâneo filtrado para sua partição de dados. *allow_subscriber_initiated_snapshot* está **nvarchar (5)**, com um padrão de FALSE. **True** indica que os assinantes podem iniciar o processo de instantâneo.  
   
- [  **@allow_web_synchronization =** ] **'**_allow_web_synchronization_**'**  
- Especifica se a publicação está habilitada para sincronização da Web. *allow_web_synchronization* está **nvarchar (5)**, com um padrão de FALSE. **True** Especifica que as assinaturas dessa publicação podem ser sincronizadas pelo HTTPS. Para obter mais informações, consulte [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md). Para dar suporte à [!INCLUDE[ssEW](../../includes/ssew-md.md)] assinantes, você deve especificar **verdadeiro**.  
+`[ @allow_web_synchronization = ] 'allow_web_synchronization'` Especifica se a publicação está habilitada para sincronização da Web. *allow_web_synchronization* está **nvarchar (5)**, com um padrão de FALSE. **True** Especifica que as assinaturas dessa publicação podem ser sincronizadas pelo HTTPS. Para obter mais informações, consulte [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md). Para dar suporte à [!INCLUDE[ssEW](../../includes/ssew-md.md)] assinantes, você deve especificar **verdadeiro**.  
   
- [  **@web_synchronization_url=** ] **'**_web_synchronization_url_**'**  
- Especifica o valor padrão da URL da Internet usado para sincronização da Web. *web_synchronization_url eu*s **nvarchar(500)**, com um padrão NULL. Define a URL de Internet padrão, se um não for definido explicitamente quando [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) é executado.  
+`[ @web_synchronization_url = ] 'web_synchronization_url'` Especifica o valor padrão de URL da Internet usado para sincronização da Web. *web_synchronization_url eu*s **nvarchar(500)**, com um padrão NULL. Define a URL de Internet padrão, se um não for definido explicitamente quando [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) é executado.  
   
- [  **@allow_partition_realignment =** ] **'**_allow_partition_realignment_**'**  
- Determina se exclusões serão enviadas para o Assinante quando modificação da linha no Publicador causar a mudança de sua partição. *allow_partition_realignment* está **nvarchar (5)**, com um padrão de TRUE. **True** envia exclusões para o assinante para refletir os resultados de uma alteração de partição, removendo dados que não fazem parte da partição do assinante. **False** deixa os dados de uma partição antiga no assinante, onde as alterações feitas a esses dados no publicador não serão replicadas para esse assinante, mas as alterações feitas no assinante serão replicadas para o publicador. Definindo *allow_partition_realignment* à **falso** é usado para manter os dados em uma assinatura de uma partição antiga quando os dados precisam estar acessíveis para fins históricos.  
+`[ @allow_partition_realignment = ] 'allow_partition_realignment'` Determina se exclusões serão enviadas ao assinante quando modificação da linha no publicador faz com que ele altere sua partição. *allow_partition_realignment* está **nvarchar (5)**, com um padrão de TRUE. **True** envia exclusões para o assinante para refletir os resultados de uma alteração de partição, removendo dados que não fazem parte da partição do assinante. **False** deixa os dados de uma partição antiga no assinante, onde as alterações feitas a esses dados no publicador não serão replicadas para esse assinante, mas as alterações feitas no assinante serão replicadas para o publicador. Definindo *allow_partition_realignment* à **falso** é usado para manter os dados em uma assinatura de uma partição antiga quando os dados precisam estar acessíveis para fins históricos.  
   
 > [!NOTE]  
 >  Os dados permanecem no assinante como resultado da configuração *allow_partition_realignment* à **falso** devem ser tratados como se fosse somente leitura; no entanto, isso não é imposto pelo sistema de replicação.  
   
- [  **@retention_period_unit =** ] **'**_retention_period_unit_**'**  
- Especifica as unidades para a período de retenção definido *retenção*. *retention_period_unit* está **nvarchar (10)**, e pode ser um dos valores a seguir.  
+`[ @retention_period_unit = ] 'retention_period_unit'` Especifica as unidades para a período de retenção definido *retenção*. *retention_period_unit* está **nvarchar (10)**, e pode ser um dos valores a seguir.  
   
 |Valor|Versão|  
 |-----------|-------------|  
@@ -244,17 +208,14 @@ sp_addmergepublication [ @publication = ] 'publication'
 |**month**|O período de retenção é especificado em meses.|  
 |**year**|O período de retenção é especificado em anos.|  
   
- [  **@generation_leveling_threshold=** ] *generation_leveling_threshold*  
- Especifica o número de alterações que estão contidos em uma geração. Uma geração é uma coleção de alterações que é entregue a um Publicador ou Assinante. *generation_leveling_threshold* está **int**, com um valor padrão de 1000.  
+`[ @generation_leveling_threshold = ] generation_leveling_threshold` Especifica o número de alterações que estão contidos em uma geração. Uma geração é uma coleção de alterações que é entregue a um Publicador ou Assinante. *generation_leveling_threshold* está **int**, com um valor padrão de 1000.  
   
- [  **@automatic_reinitialization_policy =** ] *automatic_reinitialization_policy*  
- Especifica se as alterações são carregadas do assinante antes de uma reinicialização automática exigida por uma alteração na publicação, onde um valor de **1** foi especificado para **@force_reinit_subscription**. *automatic_reinitialization_policy* é bit, com um valor padrão de 0. **1** significa que as alterações são carregadas do assinante antes que ocorra uma reinicialização automática.  
+`[ @automatic_reinitialization_policy = ] automatic_reinitialization_policy` Especifica se as alterações são carregadas do assinante antes de uma reinicialização automática exigida por uma alteração na publicação, onde um valor de **1** foi especificado para **@force_reinit_subscription**. *automatic_reinitialization_policy* é bit, com um valor padrão de 0. **1** significa que as alterações são carregadas do assinante antes que ocorra uma reinicialização automática.  
   
 > [!IMPORTANT]  
 >  Se você adicionar, descartar ou alterar um filtro com parâmetros, as alterações pendentes no Assinante não poderão ser carregadas no Publicador durante a reinicialização. Para carregar alterações pendentes, sincronize todas as assinaturas antes de alterar o filtro.  
   
- [  **@conflict_logging =** ] **'**_conflict_logging_**'**  
- Especifica onde são armazenados registros de conflito. *conflict_logging* está **nvarchar(15)**, e pode ser um dos seguintes valores:  
+`[ @conflict_logging = ] 'conflict_logging'` Especifica onde os registros de conflito são armazenados. *conflict_logging* está **nvarchar(15)**, e pode ser um dos seguintes valores:  
   
 |Valor|Descrição|  
 |-----------|-----------------|  

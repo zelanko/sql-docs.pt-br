@@ -16,12 +16,12 @@ ms.assetid: ef50ccf6-e360-4e4b-91b9-6706b8fabefa
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 26026329ec092c769d545b4dbe99bd317b095bbe
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 0fc4df3d84e2652c8ee328d0dbe79a71c068994a
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134056"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493348"
 ---
 # <a name="spadddynamicsnapshotjob-transact-sql"></a>sp_adddynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,17 +57,13 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'***publicação***'**  
- É o nome da publicação à qual o trabalho de instantâneo de dados filtrados está sendo adicionado. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação à qual o trabalho de instantâneo de dados filtrados está sendo adicionado. *publicação* está **sysname**, sem padrão.  
   
- [ **@suser_sname**=] **'***suser_sname***'**  
- É o valor usado ao criar um instantâneo de dados filtrados para uma assinatura filtrada pelo valor da [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) função no assinante. *suser_sname* está **sysname**, sem padrão. *suser_sname* deve ser NULL se essa função não é usada para filtrar dinamicamente a publicação.  
+`[ @suser_sname = ] 'suser_sname'` É o valor usado ao criar um instantâneo de dados filtrados para uma assinatura filtrada pelo valor da [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) função no assinante. *suser_sname* está **sysname**, sem padrão. *suser_sname* deve ser NULL se essa função não é usada para filtrar dinamicamente a publicação.  
   
- [ **@host_name**=] **'***host_name***'**  
- É o valor usado ao criar um instantâneo de dados filtrados para uma assinatura filtrada pelo valor da [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) função no assinante. *HOST_NAME* está **sysname**, sem padrão. *HOST_NAME* deve ser NULL se essa função não é usada para filtrar dinamicamente a publicação.  
+`[ @host_name = ] 'host_name'` É o valor usado ao criar um instantâneo de dados filtrados para uma assinatura filtrada pelo valor da [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) função no assinante. *HOST_NAME* está **sysname**, sem padrão. *HOST_NAME* deve ser NULL se essa função não é usada para filtrar dinamicamente a publicação.  
   
- [ **@dynamic_snapshot_jobname**=] **'***dynamic_snapshot_jobname***'**  
- É o nome do trabalho de instantâneo de dados filtrados criado. *dynamic_snapshot_jobname* está **sysname**, com padrão de NULL, e é um parâmetro OUTPUT opcional. Se especificado, *dynamic_snapshot_jobname* deve resolver para um trabalho único no distribuidor. Se não for especificado, um nome de trabalho será automaticamente gerado e retornado no conjunto de resultados, onde o nome será criado como segue:  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` É o nome do trabalho de instantâneo de dados filtrados criado. *dynamic_snapshot_jobname* está **sysname**, com padrão de NULL, e é um parâmetro OUTPUT opcional. Se especificado, *dynamic_snapshot_jobname* deve resolver para um trabalho único no distribuidor. Se não for especificado, um nome de trabalho será automaticamente gerado e retornado no conjunto de resultados, onde o nome será criado como segue:  
   
 ```  
 'dyn_' + <name of the standard snapshot job> + <GUID>  
@@ -76,11 +72,9 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 > [!NOTE]  
 >  Ao gerar o nome do trabalho de instantâneo dinâmico, você pode truncar o nome do trabalho de instantâneo padrão.  
   
- [ **@dynamic_snapshot_jobid**=] **'***dynamic_snapshot_jobid***'**  
- É um identificador do trabalho de instantâneo de dados filtrados criado. *dynamic_snapshot_jobid* está **uniqueidentifier**, com padrão de NULL, e é um parâmetro OUTPUT opcional.  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` É um identificador para o trabalho de instantâneo de dados filtrados criado. *dynamic_snapshot_jobid* está **uniqueidentifier**, com padrão de NULL, e é um parâmetro OUTPUT opcional.  
   
- [  **@frequency_type=**] *frequency_type*  
- É a frequência do agendamento do trabalho de instantâneo de dados filtrados. *frequency_type* está **int**, e pode ser um destes valores.  
+`[ @frequency_type = ] frequency_type` É a frequência de agendamento do trabalho de instantâneo de dados filtrados. *frequency_type* está **int**, e pode ser um destes valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -93,8 +87,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**64**|Iniciar automaticamente|  
 |**128**|Recorrente|  
   
- [  **@frequency_interval =** ] *frequency_interval*  
- É o período (medido em dias) quando o trabalho de instantâneo de dados filtrados é executado. *frequency_interval* está **int**, com um valor padrão de 1 e depende do valor de *frequency_type*.  
+`[ @frequency_interval = ] frequency_interval` É o período (medido em dias) quando o trabalho de instantâneo de dados filtrado é executado. *frequency_interval* está **int**, com um valor padrão de 1 e depende do valor de *frequency_type*.  
   
 |Valor de *frequency_type*|Efeito em *frequency_interval*|  
 |--------------------------------|-------------------------------------|  
@@ -106,8 +99,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**64**|*frequency_interval* não é usado.|  
 |**128**|*frequency_interval* não é usado.|  
   
- [  **@frequency_subday=**] *frequency_subday*  
- Especifica as unidades para *frequency_subday_interval*. *frequency_subday* está **int**, e pode ser um destes valores.  
+`[ @frequency_subday = ] frequency_subday` Especifica as unidades para *frequency_subday_interval*. *frequency_subday* está **int**, e pode ser um destes valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -116,11 +108,9 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**4** (padrão)|Minuto|  
 |**8**|Hora|  
   
- [  **@frequency_subday_interval=**] *frequency_subday_interval*  
- É o número de *frequency_subday* períodos que ocorrem entre cada execução do trabalho. *frequency_subday_interval* está **int**, com um padrão de 5.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` É o número de *frequency_subday* períodos que ocorrem entre cada execução do trabalho. *frequency_subday_interval* está **int**, com um padrão de 5.  
   
- [  **@frequency_relative_interval=**] *frequency_relative_interval*  
- É a ocorrência do trabalho de instantâneo de dados filtrado em cada mês. Esse parâmetro é usado quando *frequency_type* é definido como **32** (mensal relativo). *frequency_relative_interval* está **int**, e pode ser um destes valores.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` É a ocorrência do trabalho de instantâneo de dados filtrados em cada mês. Esse parâmetro é usado quando *frequency_type* é definido como **32** (mensal relativo). *frequency_relative_interval* está **int**, e pode ser um destes valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -130,20 +120,15 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**8**|Quarto|  
 |**16**|Last|  
   
- [  **@frequency_recurrence_factor=**] *frequency_recurrence_factor*  
- É o fator de recorrência usado pelo *frequency_type*. *frequency_recurrence_factor* está **int**, com um padrão de 0.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` É o fator de recorrência usado pelo *frequency_type*. *frequency_recurrence_factor* está **int**, com um padrão de 0.  
   
- [  **@active_start_date=**] *active_start_date*  
- É a data do primeiro agendamento do trabalho de instantâneo de dados filtrados, formatada como AAAAMMDD. *active_start_date* está **int**, com um padrão NULL.  
+`[ @active_start_date = ] active_start_date` É a data quando o trabalho de instantâneo de dados filtrado é primeiro agendada, formatada como AAAAMMDD. *active_start_date* está **int**, com um padrão NULL.  
   
- [  **@active_end_date=**] *active_end_date*  
- É a data do último agendamento do trabalho de instantâneo de dados filtrados, formatada como AAAAMMDD. *active_end_date* está **int**, com um padrão NULL.  
+`[ @active_end_date = ] active_end_date` A data quando o trabalho for interrompido de instantâneo os dados filtrados está sendo agendada, formatada como AAAAMMDD. *active_end_date* está **int**, com um padrão NULL.  
   
- [  **@active_start_time_of_day=**] *active_start_time_of_day*  
- É a hora do dia do primeiro agendamento do trabalho de instantâneo de dados filtrados, formatada como HHMMSS. *active_start_time_of_day* está **int**, com um padrão NULL.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` É a hora do dia quando o trabalho de instantâneo os dados filtrados pela primeira vez é agendada, formatada como HHMMSS. *active_start_time_of_day* está **int**, com um padrão NULL.  
   
- [  **@active_end_time_of_day=**] *active_end_time_of_day*  
- A hora do dia quando o trabalho for interrompido de instantâneo os dados filtrados está sendo agendada, formatada como HHMMSS. *active_end_time_of_day* está **int**, com um padrão NULL.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` A hora do dia quando o trabalho for interrompido de instantâneo os dados filtrados está sendo agendada, formatada como HHMMSS. *active_end_time_of_day* está **int**, com um padrão NULL.  
   
 ## <a name="result-set"></a>Conjunto de resultados  
   

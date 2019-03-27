@@ -18,12 +18,12 @@ ms.assetid: 8c9dce6b-d2a3-4ca7-a832-8f59a5adb214
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f361039f611a6b7a383649fb18a4af155a0c2b28
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a713687d41c21a3c99c30d6b7192d7c59e41505
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710604"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492718"
 ---
 # <a name="spchangelogshippingprimarydatabase-transact-sql"></a>sp_change_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,20 +51,15 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@database =** ] '*banco de dados*'  
- É o nome do banco de dados do servidor primário. *primary_database* está **sysname**, sem padrão.  
+`[ @database = ] 'database'` É o nome do banco de dados no servidor primário. *primary_database* está **sysname**, sem padrão.  
   
- [  **@backup_directory =** ] '*backup_directory*'  
- É o caminho para a pasta de backup no servidor primário. *backup_directory* está **nvarchar(500)**, sem padrão, e não pode ser NULL.  
+`[ @backup_directory = ] 'backup_directory'` É o caminho para a pasta de backup no servidor primário. *backup_directory* está **nvarchar(500)**, sem padrão, e não pode ser NULL.  
   
- [  **@backup_share =** ] '*backup_share*'  
- É o caminho da rede para o diretório de backup no servidor primário. *backup_share* está **nvarchar(500)**, sem padrão, e não pode ser NULL.  
+`[ @backup_share = ] 'backup_share'` É o caminho de rede para o diretório de backup no servidor primário. *backup_share* está **nvarchar(500)**, sem padrão, e não pode ser NULL.  
   
- [  **@backup_retention_period =** ] '*backup_retention_period*'  
- É o período de tempo, em minutos, para reter o arquivo de backup de logs no diretório de backup no servidor primário. *backup_retention_period* está **int**, sem padrão, e não pode ser NULL.  
+`[ @backup_retention_period = ] 'backup_retention_period'` É o período de tempo, em minutos, para reter o arquivo de backup de log no diretório de backup no servidor primário. *backup_retention_period* está **int**, sem padrão, e não pode ser NULL.  
   
- [  **@monitor_server_security_mode =** ] '*monitor_server_security_mode*'  
- O modo de segurança usado para conexão ao servidor monitor.  
+`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'` O modo de segurança usado para se conectar ao servidor do monitor.  
   
  1 = Autenticação do Windows.  
   
@@ -72,20 +67,15 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
   
  *monitor_server_security_mode* está **bit** e não pode ser NULL.  
   
- [  **@monitor_server_login =** ] '*monitor_server_login*'  
- É o nome de usuário da conta usada para acessar o servidor monitor.  
+`[ @monitor_server_login = ] 'monitor_server_login'` É o nome de usuário da conta usada para acessar o servidor monitor.  
   
- [  **@monitor_server_password =** ] '*monitor_server_password*'  
- Senha da conta usada para acessar o servidor monitor.  
+`[ @monitor_server_password = ] 'monitor_server_password'` É a senha da conta usada para acessar o servidor monitor.  
   
- [  **@backup_threshold =** ] '*backup_threshold*'  
- É o período de tempo, em minutos, após o último backup antes de uma *threshold_alert* erro será gerado. *backup_threshold* está **int**, com um padrão de 60 minutos.  
+`[ @backup_threshold = ] 'backup_threshold'` É o período de tempo, em minutos, após o último backup antes de uma *threshold_alert* erro será gerado. *backup_threshold* está **int**, com um padrão de 60 minutos.  
   
- [  **@threshold_alert =** ] '*threshold_alert*'  
- O alerta a ser emitido quando o limite do backup for excedido. *alerta de limite* está **int** e não pode ser NULL.  
+`[ @threshold_alert = ] 'threshold_alert'` O alerta a ser gerado quando o limite de backup é excedido. *alerta de limite* está **int** e não pode ser NULL.  
   
- [  **@threshold_alert_enabled =** ] '*threshold_alert_enabled*'  
- Especifica se um alerta é gerado quando *backup_threshold* for excedido.  
+`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` Especifica se um alerta é gerado quando *backup_threshold* for excedido.  
   
  1 = habilitado.  
   
@@ -93,11 +83,9 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
   
  *threshold_alert_enabled* está **bit** e não pode ser NULL.  
   
- [  **@history_retention_period =** ] '*history_retention_period*'  
- É o período em minutos no qual o histórico é retido. *history_retention_period* está **int**. O valor 14420 será usado se nenhum valor for especificado.  
+`[ @history_retention_period = ] 'history_retention_period'` É o período de tempo em minutos no qual o histórico é retido. *history_retention_period* está **int**. O valor 14420 será usado se nenhum valor for especificado.  
   
- [ **@backup_compression**=] *backup_compression_option*  
- Especifica se uma configuração de envio de log usa [compactação de backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Este parâmetro é suportado somente no [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (ou em uma versão posterior).  
+`[ @backup_compression = ] backup_compression_option` Especifica se uma configuração de envio de log usa [compactação de backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Este parâmetro é suportado somente no [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (ou em uma versão posterior).  
   
  0 = Desabilitado. Nunca compacte backups de log.  
   

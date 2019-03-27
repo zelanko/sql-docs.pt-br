@@ -16,12 +16,12 @@ ms.assetid: 8abaa8c1-d99e-4788-970f-c4752246c577
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 636a0a23c70170ce625b9e462e2715c1c884bda7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e10d4e46e01f4da5a36d7bdf59d7566f2a989e75
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210115"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493148"
 ---
 # <a name="sparticlecolumn-transact-sql"></a>sp_articlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,47 +48,37 @@ sp_articlecolumn [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'**_publicação_**'**  
- É o nome da publicação que contém esse artigo. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação que contém esse artigo. *publicação* está **sysname**, sem padrão.  
   
- [  **@article=**] **'**_artigo_**'**  
- É o nome do artigo. *artigo* está **sysname**, sem padrão.  
+`[ @article = ] 'article'` É o nome do artigo. *artigo* está **sysname**, sem padrão.  
   
- [  **@column=**] **'**_coluna_**'**  
- É o nome da coluna a ser adicionada ou removida. *coluna* está **sysname**, com um padrão NULL. Se for NULL, todas as colunas serão publicadas.  
+`[ @column = ] 'column'` É o nome da coluna a ser adicionada ou descartada. *coluna* está **sysname**, com um padrão NULL. Se for NULL, todas as colunas serão publicadas.  
   
- [  **@operation=**] **'**_operação_**'**  
- Especifica se as colunas devem ser adicionadas ou removidas de um artigo. *operação* está **nvarchar (5)**, com um padrão de add. **Adicionar** marca a coluna para replicação. **Descartar** desmarca a coluna.  
+`[ @operation = ] 'operation'` Especifica se deve adicionar ou remover colunas em um artigo. *operação* está **nvarchar (5)**, com um padrão de add. **Adicionar** marca a coluna para replicação. **Descartar** desmarca a coluna.  
   
- [  **@refresh_synctran_procs=**] *refresh_synctran_procs*  
- Especifica se os procedimentos armazenados com suporte para assinaturas de atualização imediata são gerados para corresponderem ao número de colunas replicadas. *refresh_synctran_procs* está **bit**, com um padrão de **1**. Se **1**, os procedimentos armazenados são gerados.  
+`[ @refresh_synctran_procs = ] refresh_synctran_procs` Especifica se os procedimentos armazenados que dão suporte a assinaturas de atualização imediata são gerados para corresponder ao número de colunas replicadas. *refresh_synctran_procs* está **bit**, com um padrão de **1**. Se **1**, os procedimentos armazenados são gerados.  
   
- [  **@ignore_distributor =**] *ignore_distributor*  
- Indica se esse procedimento armazenado será executado sem conexão com o distribuidor. *ignore_distributor* está **bit**, com um padrão de **0**. Se **0**, o banco de dados deve ser habilitado para publicação e o cache de artigo deve ser atualizado para refletir as novas colunas replicadas por esse artigo. Se **1**, permite que colunas de artigos sejam descartadas para artigos que residem em um banco de dados não publicado; devem ser usados somente em situações de recuperação.  
+`[ @ignore_distributor = ] ignore_distributor` Indica se esse procedimento armazenado será executado sem conexão com o distribuidor. *ignore_distributor* está **bit**, com um padrão de **0**. Se **0**, o banco de dados deve ser habilitado para publicação e o cache de artigo deve ser atualizado para refletir as novas colunas replicadas por esse artigo. Se **1**, permite que colunas de artigos sejam descartadas para artigos que residem em um banco de dados não publicado; devem ser usados somente em situações de recuperação.  
   
- [  **@change_active =** ] *change_active*  
- Permite modificar as colunas em publicações que têm assinaturas. *change_active* é um **int** com um padrão de **0**. Se **0**, colunas não são modificadas. Se **1**, colunas podem ser adicionadas ou descartadas de artigos ativos que têm assinaturas.  
+`[ @change_active = ] change_active` Permite modificar as colunas em publicações que têm assinaturas. *change_active* é um **int** com um padrão de **0**. Se **0**, colunas não são modificadas. Se **1**, colunas podem ser adicionadas ou descartadas de artigos ativos que têm assinaturas.  
   
- [ **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- Confirma que a ação tomada por esse procedimento armazenado pode invalidar um instantâneo existente. *force_invalidate_snapshot* é um **bit**, com um padrão de **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Confirma que a ação tomada por esse procedimento armazenado pode invalidar um instantâneo existente. *force_invalidate_snapshot* é um **bit**, com um padrão de **0**.  
   
  **0** Especifica que as alterações no artigo fazem com que o instantâneo seja inválido. Se o procedimento armazenado detectar que a alteração requer um novo instantâneo, ocorrerá um erro e nenhuma alteração será feita.  
   
  **1** Especifica que as alterações no artigo podem invalidar o instantâneo ser inválida e se houver assinaturas existentes que exigem um novo instantâneo, dará permissão para o instantâneo existente seja marcado como obsoleto e um novo instantâneo seja gerado.  
   
- [ **@force_reinit_subscription =** ] *force_reinit_subscription*  
+ [**@force_reinit_subscription =** ] *force_reinit_subscription*  
  Confirma que a ação tomada por esse procedimento armazenado pode exigir que as assinaturas existentes sejam reinicializadas. *force_reinit_subscription* é um **bit**, com um padrão de **0**.  
   
  **0** Especifica que as alterações no artigo fazem com que a assinatura seja reiniciada. Se o procedimento armazenado detectar que a alteração irá requerer assinaturas sejam reiniciadas, ocorrerá um erro e nenhuma alteração é feita. **1** Especifica que as alterações no artigo fazem com que as assinaturas existentes sejam reinicializadas e dá permissão para que ocorra a reinicialização da assinatura.  
   
- [  **@publisher=** ] **'**_publisher_**'**  
- Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
+`[ @publisher = ] 'publisher'` Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
 >  *Publisher* não deve ser usado com um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
   
- [  **@internal=** ] **'**_interno_**'**  
- Somente para uso interno.  
+`[ @internal = ] 'internal'` Somente para uso interno.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

@@ -16,12 +16,12 @@ ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5356ebc173e435595315badf9a3c2abe224d186b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7918e257428fd85ddb54867ee5144f45a3bf89f1
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802378"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493838"
 ---
 # <a name="spbrowsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,29 +45,21 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@xact_seqno_start =**] **'**_xact_seqno_start_**'**  
- Especifica o número de sequência exato de valor mais baixo a ser retornado. *xact_seqno_start* está **nchar (22)**, com um padrão de 0x00000000000000000000.  
+`[ @xact_seqno_start = ] 'xact_seqno_start'` Especifica o número de sequência exato valor mais baixo para retornar. *xact_seqno_start* está **nchar (22)**, com um padrão de 0x00000000000000000000.  
   
- [  **@xact_seqno_end =**] **'**_xact_seqno_end_**'**  
- Especifica o número de sequência exato mais alto a ser retornado. *xact_seqno_end* está **nchar (22)**, com um padrão de 0xFFFFFFFFFFFFFFFFFFFF.  
+`[ @xact_seqno_end = ] 'xact_seqno_end'` Especifica o número de sequência exato mais alto para retornar. *xact_seqno_end* está **nchar (22)**, com um padrão de 0xFFFFFFFFFFFFFFFFFFFF.  
   
- [  **@originator_id =**] **'**_originator_id_**'**  
- Especifica se comandos com a especificada *originator_id* são retornados. *originator_id* está **int**, com um padrão NULL.  
+`[ @originator_id = ] 'originator_id'` Especifica se comandos com a especificada *originator_id* são retornados. *originator_id* está **int**, com um padrão NULL.  
   
- [  **@publisher_database_id =**] **'**_publisher_database_id_**'**  
- Especifica se comandos com a especificada *publisher_database_id* são retornados. *publisher_database_id* está **int**, com um padrão NULL.  
+`[ @publisher_database_id = ] 'publisher_database_id'` Especifica se comandos com a especificada *publisher_database_id* são retornados. *publisher_database_id* está **int**, com um padrão NULL.  
   
- [  **@article_id =**] **'**_article_id_**'**  
- Especifica se comandos com a especificada *article_id* são retornados. *article_id* está **int**, com um padrão NULL.  
+`[ @article_id = ] 'article_id'` Especifica se comandos com a especificada *article_id* são retornados. *article_id* está **int**, com um padrão NULL.  
   
- [  **@command_id =**] *command_id*  
- É o local do comando na [MSrepl_commands &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) a ser decodificado. *command_id* está **int**, com um padrão NULL. Se for especificado, todos os outros parâmetros Além disso, devem ser especificados e *xact_seqno_start*deve ser idêntico ao *xact_seqno_end*.  
+`[ @command_id = ] command_id` É o local do comando na [MSrepl_commands &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) a ser decodificado. *command_id* está **int**, com um padrão NULL. Se for especificado, todos os outros parâmetros Além disso, devem ser especificados e *xact_seqno_start*deve ser idêntico ao *xact_seqno_end*.  
   
- [  **@agent_id =**] *agent_id*  
- Especifica que apenas comandos para um agente de replicação específico são retornados. *agent_id* está **int**, com um valor padrão de NULL.  
+`[ @agent_id = ] agent_id` Especifica que somente os comandos para um agente de replicação específico são retornados. *agent_id* está **int**, com um valor padrão de NULL.  
   
- [  **@compatibility_level =**] *compatibility_level*  
- É a versão do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no qual o *compatibility_level* está **int**, com um valor padrão de 9000000.  
+`[ @compatibility_level = ] compatibility_level` É a versão do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no qual o *compatibility_level* está **int**, com um valor padrão de 9000000.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -82,7 +74,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 |**article_id**|**int**|ID do artigo.|  
 |**type**|**int**|Tipo de comando.|  
 |**partial_command**|**bit**|Indica se esse é um comando parcial ou não.|  
-|**hashKey**|**int**|Somente para uso interno.|  
+|**hashkey**|**int**|Somente para uso interno.|  
 |**originator_publication_id**|**int**|ID da publicação de origem da transação.|  
 |**originator_db_version**|**int**|Versão do banco de dados onde a transação originou.|  
 |**originator_lsn**|**varbinary(16)**|Identifica o LSN (número de sequência de log) para o comando na publicação de origem. Usado em replicação transacional ponto a ponto.|  

@@ -16,12 +16,12 @@ ms.assetid: 44e7abcd-778c-4728-a03e-7e7e78d3ce22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 849564fcda37c022413d9e0758abe50279497a0b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: be3ccf8b0c85b61f536c381e4a42d1b5e37fbacf
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125101"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493253"
 ---
 # <a name="sparticlevalidation-transact-sql"></a>sp_article_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +45,11 @@ sp_article_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'**_publicação_**'**  
- É o nome da publicação na qual o artigo existe. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação na qual o artigo existe. *publicação* está **sysname**, sem padrão.  
   
- [  **@article=**] **'**_artigo_**'**  
- É o nome do artigo a ser validado. *artigo* está **sysname**, sem padrão.  
+`[ @article = ] 'article'` É o nome do artigo para validar. *artigo* está **sysname**, sem padrão.  
   
- [  **@rowcount_only=**] *type_of_check_requested*  
- Especifica se apenas a contagem de linhas da tabela é retornada. *type_of_check_requested* está **smallint**, com um padrão de **1**.  
+`[ @rowcount_only = ] type_of_check_requested` Especifica se apenas o número de linhas da tabela é retornado. *type_of_check_requested* está **smallint**, com um padrão de **1**.  
   
  Se **0**, execute um número de linhas e uma [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] soma de verificação compatível com 7.0.  
   
@@ -60,8 +57,7 @@ sp_article_validation [ @publication = ] 'publication'
   
  Se **2**, executar uma soma de verificação do número de linhas e binário.  
   
- [  **@full_or_fast=**] *full_or_fast*  
- É o método usado para calcular a contagem de linhas. *full_or_fast* está **tinyint**, e pode ser um destes valores.  
+`[ @full_or_fast = ] full_or_fast` O método é usado para calcular o número de linhas. *full_or_fast* está **tinyint**, e pode ser um destes valores.  
   
 |**Value**|**Descrição**|  
 |---------------|---------------------|  
@@ -69,17 +65,13 @@ sp_article_validation [ @publication = ] 'publication'
 |**1**|Executa uma contagem rápida de **sysindexes**. Contagem de linhas em **sysindexes** é mais rápido do que contar linhas na tabela atual. No entanto, **sysindexes** é atualizado com lentidão, e o número de linhas pode não ser preciso.|  
 |**2** (padrão)|Executa uma contagem rápida condicional tentando primeiro o método rápido. Se o método rápido mostrar diferenças, reverterá ao método completo. Se *expected_rowcount* for NULL e o procedimento armazenado estiver sendo usado para obter o valor, um COUNT(*) completo sempre será usado.|  
   
- [  **@shutdown_agent=**] *shutdown_agent*  
- Especifica se o Distribution Agent deve ou não ser desligado imediatamente após a conclusão da validação. *shutdown_agent* está **bit**, com um padrão de **0**. Se **0**, o agente de distribuição não é desligado. Se **1**, o Distribution Agent desligará após o artigo é validado.  
+`[ @shutdown_agent = ] shutdown_agent` Especifica se o Distribution agent deve desligado imediatamente após a conclusão da validação. *shutdown_agent* está **bit**, com um padrão de **0**. Se **0**, o agente de distribuição não é desligado. Se **1**, o Distribution Agent desligará após o artigo é validado.  
   
- [  **@subscription_level=**] *subscription_level*  
- Especifica se a validação deve ou não ser escolhida por um conjunto de assinantes. *subscription_level* está **bit**, com um padrão de **0**. Se **0**, validação é aplicada a todos os assinantes. Se **1**, validação é aplicada somente a um subconjunto de assinantes especificado por chamadas para **sp_marksubscriptionvalidation** na transação aberta atual.  
+`[ @subscription_level = ] subscription_level` Especifica se a validação é captada por um conjunto de assinantes. *subscription_level* está **bit**, com um padrão de **0**. Se **0**, validação é aplicada a todos os assinantes. Se **1**, validação é aplicada somente a um subconjunto de assinantes especificado por chamadas para **sp_marksubscriptionvalidation** na transação aberta atual.  
   
- [  **@reserved=**] *reservado*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @reserved = ] reserved` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ **@publisher**=] **'**_publisher_**'**  
- Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
+`[ @publisher = ] 'publisher'` Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
 >  *Publisher* não deve ser usado ao solicitar uma validação em um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  

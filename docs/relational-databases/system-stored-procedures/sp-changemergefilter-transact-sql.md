@@ -16,12 +16,12 @@ ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c199af62d7cd5cb95c382b412182bb24c957bf89
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 32facb58645e0fbb3750ca02da0d3a22b320fc67
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127076"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493078"
 ---
 # <a name="spchangemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,20 +44,15 @@ sp_changemergefilter [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=** ] **'**_publicação_**'**  
- É o nome da publicação. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, sem padrão.  
   
- [  **@article=** ] **'**_artigo_**'**  
- É o nome do artigo. *artigo* está **sysname**, sem padrão.  
+`[ @article = ] 'article'` É o nome do artigo. *artigo* está **sysname**, sem padrão.  
   
- [  **@filtername=** ] **'**_filtername_**'**  
- É o nome atual do filtro. *FilterName* está **sysname**, sem padrão.  
+`[ @filtername = ] 'filtername'` É o nome atual do filtro. *FilterName* está **sysname**, sem padrão.  
   
- [  **@property=** ] **'**_propriedade_**'**  
- É o nome da propriedade a ser alterada. *propriedade* está **sysname**, sem padrão.  
+`[ @property = ] 'property'` É o nome da propriedade a ser alterada. *propriedade* está **sysname**, sem padrão.  
   
- [  **@value=**] **'**_valor_**'**  
- É o novo valor da propriedade especificada. *valor*está **nvarchar (1000)**, sem padrão.  
+`[ @value = ] 'value'` É o novo valor para a propriedade especificada. *valor*está **nvarchar (1000)**, sem padrão.  
   
  Essa tabela descreve as propriedades de artigos e os valores dessas propriedades.  
   
@@ -66,21 +61,19 @@ sp_changemergefilter [ @publication= ] 'publication'
 |**filter_type**|**1**|Filtro de junção.<br /><br /> Essa opção é requerida para suporte a Assinantes [!INCLUDE[ssEW](../../includes/ssew-md.md)].|  
 ||**2**|Relação de registro lógico.|  
 ||**3**|Filtro de junção é também uma relação de registro lógico.|  
-|**FilterName**||Nome do filtro.|  
+|**filtername**||Nome do filtro.|  
 |**join_articlename**||Nome do artigo de junção.|  
 |**join_filterclause**||Cláusula de filtro.|  
 |**join_unique_key**|**true**|A junção está em uma chave exclusiva|  
 ||**false**|A junção não está em uma chave exclusiva.|  
   
- [ **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- Confirma que a ação tomada por esse procedimento armazenado pode invalidar um instantâneo existente. *force_invalidate_snapshot* é um **bit**, com um padrão **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Confirma que a ação tomada por esse procedimento armazenado pode invalidar um instantâneo existente. *force_invalidate_snapshot* é um **bit**, com um padrão **0**.  
   
  **0** Especifica que as alterações no artigo de mesclagem fazem com que o instantâneo seja inválido. Se o procedimento armazenado detectar que a alteração requer um novo instantâneo, ocorrerá um erro e nenhuma alteração será feita.  
   
  **1** significa que as alterações no artigo de mesclagem podem invalidar o instantâneo ser inválida e se houver assinaturas existentes que exigem um novo instantâneo, dará permissão para o instantâneo existente seja marcado como obsoleto e um novo instantâneo seja gerado.  
   
- [  **@force_reinit_subscription =** ] *force_reinit_subscription*  
- Confirma que a ação tomada por esse procedimento armazenado pode exigir que as assinaturas existentes sejam reinicializadas. *force_reinit_subscription* é um **bit** com um padrão de **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Reconhece que a ação tomada por esse procedimento armazenado pode requerer que as assinaturas existentes sejam reinicializadas. *force_reinit_subscription* é um **bit** com um padrão de **0**.  
   
  **0** Especifica que as alterações no artigo de mesclagem fazem com que a assinatura seja reiniciada. Se o procedimento armazenado detectar que a alteração irá requerer assinaturas existentes para ser reiniciada, ocorrerá um erro e nenhuma alteração será feita.  
   

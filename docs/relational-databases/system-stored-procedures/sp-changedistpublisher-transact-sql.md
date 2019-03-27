@@ -16,12 +16,12 @@ ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 81f6b1ca0ea65068851756dc2a1b91cb84c52227
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 06a0e5e2edb793a94e8d8542ca17734f23824121
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128226"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494019"
 ---
 # <a name="spchangedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publisher=** ] **'**_publisher_**'**  
- É o nome do Publicador. *Publisher* está **sysname**, sem padrão.  
+`[ @publisher = ] 'publisher'` É o nome do publicador. *Publisher* está **sysname**, sem padrão.  
   
- [  **@property=** ] **'**_propriedade_**'**  
- É uma propriedade a ser alterada para o publicador determinado. *propriedade* está **sysname** e pode ser um destes valores.  
+`[ @property = ] 'property'` É uma propriedade para alterar para o publicador determinado. *propriedade* está **sysname** e pode ser um destes valores.  
   
- [ **@value=** ] **'**_value_**'**  
- É o valor da propriedade determinada. *valor* está **nvarchar (255)**, com um padrão NULL.  
+`[ @value = ] 'value'` É o valor para a propriedade especificada. *valor* está **nvarchar (255)**, com um padrão NULL.  
   
- [  **@storage_connection_string =**] **'**_storage_connection_string_**'**  
- É necessário para a instância gerenciada do banco de dados SQL, deve coincidir com a chave de acesso para o volume de armazenamento do banco de dados SQL. 
+`[ @storage_connection_string = ] 'storage_connection_string'` É necessário para a instância gerenciada do banco de dados SQL, deve coincidir com a chave de acesso para o volume de armazenamento do banco de dados SQL. 
 
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
@@ -60,7 +56,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
   
 |Propriedade|Valores|Descrição|  
 |--------------|------------|-----------------|  
-|**Active Directory**|**true**|Ativa o Publicador.|  
+|**active**|**true**|Ativa o Publicador.|  
 ||**false**|Desativa o Publicador.|  
 |**distribution_db**||Nome do banco de dados de distribuição.|  
 |**login**||Nome de logon.|  

@@ -5,17 +5,17 @@ description: Este artigo descreve o controlador de um cluster de big data do SQL
 author: mihaelablendea
 ms.author: mihaelab
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8f9a8a82315f98f6013f70a7bc7aa38443849edc
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 25afe48d2191bf77301331ed30850bf0af0baff0
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478041"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58491789"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-2019-big-data-cluster"></a>O que é o controlador em um cluster de big data do SQL Server 2019?
 
@@ -29,8 +29,8 @@ O serviço do controlador fornece as seguintes funcionalidades principais:
 - Expor as ferramentas de monitoramento para observar o estado do cluster
 - Ferramentas de solução de problemas para detectar e reparar problemas inesperados de expor
 - Gerenciar a segurança de cluster: Certifique-se de pontos de extremidade do cluster seguro, gerenciar usuários e funções, configurar as credenciais para a comunicação dentro do cluster
-- Gerenciar o fluxo de trabalho de atualizações para que eles são implementados com segurança (não disponível no CTP 2.3)
-- Gerenciar a alta disponibilidade e recuperação de desastres para serviços com estado no cluster (não disponível no CTP 2.3)
+- Gerenciar o fluxo de trabalho de atualizações para que eles são implementados com segurança (não disponível no CTP 2.4)
+- Gerenciar a alta disponibilidade e recuperação de desastres para serviços com estado no cluster (não disponível no CTP 2.4)
 
 ## <a name="deploying-the-controller-service"></a>Implantando o serviço do controlador
 

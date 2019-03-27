@@ -6,16 +6,16 @@ author: lgongmsft
 ms.author: shivprashant
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/14/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9f766c343152fa601cc22e59e3385c454ec23879
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: f89568860fa656efbb93eb9b72eb647f88ce6089
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161878"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494108"
 ---
 # <a name="deploy-a-big-data-cluster-with-gpu-support-and-run-tensorflow"></a>Implantar um cluster de big data com suporte GPU e executar o TensorFlow
 
@@ -196,7 +196,7 @@ Os seguintes blocos de anotações de dois exemplo demonstram aos modelos de cla
 Coloque o arquivo de notebook apropriado para seu computador local e, em seguida, abrir e executá-lo no estúdio de dados do Azure usando o kernel PySpark3. A menos que você tenha uma necessidade específica para uma versão mais antiga do CUDA ou o TensorFlow, escolha CUDA 9/CUDNN 7/TensorFlow 1.12.0. Para obter mais informações sobre como usar blocos de anotações com clusters de big data, consulte [como usar blocos de anotações na visualização do SQL Server 2019](notebooks-guidance.md).
 
 > [!NOTE]
-> Observe que os blocos de anotações, instalar software em locais de sistema. Isso é possível porque os blocos de anotações, atualmente, executam com privilégios de raiz no CTP 2.3.
+> Observe que os blocos de anotações, instalar software em locais de sistema. Isso é possível porque os blocos de anotações, atualmente, executam com privilégios de raiz no CTP 2.4.
 
 Depois de instalar o TensorFlow e bibliotecas de GPU NVIDIA GPU, os blocos de anotações listam dispositivos GPU disponíveis. Em seguida, eles se ajustar e avaliar um modelo do TensorFlow para reconhecer usando o conjunto de dados MNIST de dígitos manuscritos. Depois de verificar o espaço em disco disponível, baixe e execute o exemplo de classificação de imagens CIFAR 10 da [ https://github.com/tensorflow/models.git ](https://github.com/tensorflow/models.git). Ao executar o exemplo de CIFAR 10 em clusters que tenham GPUs diferentes, você pode observar o aumento de velocidade oferecidas por cada geração de GPU disponível no Azure.
 

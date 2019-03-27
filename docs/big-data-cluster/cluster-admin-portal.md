@@ -5,17 +5,17 @@ description: Saiba como usar o portal de administração de cluster para monitor
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 9048de9c5f1a1241a6d7049f8eeb15efef87cabb
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 2ed73006850a5174c6df07ed09302ea48decf6d2
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017852"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492858"
 ---
 # <a name="how-to-use-the-cluster-administration-portal-to-monitor-a-sql-server-big-data-cluster"></a>Como usar o portal de administração de cluster para monitorar um cluster de big data do SQL Server
 
@@ -35,7 +35,7 @@ Siga as [guia de início rápido para implantar o cluster de big data](quickstar
 Quando o pod de controlador estiver em execução, você pode usar o portal de administração de cluster para monitorar a implantação. Você pode acessar o portal usando o IP endereço e porta número externa para o `endpoint-service-proxy` (por exemplo: **https://\<endereço ip\>: 30777/portal**). As credenciais para acessar o portal de administração é os valores de `CONTROLLER_USERNAME` e `CONTROLLER_PASSWORD` variáveis de ambiente fornecidas acima.
 
 > [!NOTE]
-> Para o CTP 2.3, há um aviso de segurança ao acessar a página da web, pois ele está usando certificados gerados automaticamente SSL.
+> Para CTP 2.4, há um aviso de segurança ao acessar a página da web, pois ele está usando certificados gerados automaticamente SSL.
 
 ## <a name="overview"></a>Visão geral
 

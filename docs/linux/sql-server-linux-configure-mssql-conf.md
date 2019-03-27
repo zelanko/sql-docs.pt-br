@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: bcebae572cb6704051712e44fd0dcf71a2eff5ea
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 4db08a718f834d03ddef103b2a4dc16a2c3733b8
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018072"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494388"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurar o SQL Server no Linux com a ferramenta mssql-conf
 
@@ -511,8 +511,8 @@ Há várias outras configurações para o mssql-conf que você pode usar para mo
 
 | configuração de MSSQL-conf | Descrição |
 |---|---|
-| distributedtransaction.allowonlysecurerpccalls | Configurar chamadas rpc apenas seguro para transações distribuídas |
-| distributedtransaction.fallbacktounsecurerpcifnecessary | Configurar chamadas rpc apenas de segurança para distribuído |transações
+| distributedtransaction.allowonlysecurerpccalls | Configurar segura somente chamadas RPC para transações distribuídas |
+| distributedtransaction.fallbacktounsecurerpcifnecessary | Configurar segurança somente chamadas RPC para distribuído |transações
 | distributedtransaction.maxlogsize | Tamanho do arquivo DTC transações log em MB. O padrão é 64MB |
 | distributedtransaction.memorybuffersize | Tamanho do buffer circular na qual os rastreamentos são armazenados. Esse tamanho estará em MB e o padrão é 10MB |
 | distributedtransaction.servertcpport | Porta do servidor de rpc MSDTC |
@@ -664,7 +664,7 @@ Para desativar todas as configurações feitas com `mssql-conf set`, chame **mss
    sudo /opt/mssql/bin/mssql-conf unset network.tcpport
    ```
 
-1. Reinicie o serviço do SQL Server.
+1. Reinicie o serviço SQL Server.
 
    ```bash
    sudo systemctl restart mssql-server

@@ -16,12 +16,12 @@ ms.assetid: a3d63fd6-f360-4a2f-8a82-a0dc15f650b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b06d348358a141771816230179ca7deae4e4353a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 10c46ac2ff35d73453976a91276246d3e810e425
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132856"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492828"
 ---
 # <a name="sparticleview-transact-sql"></a>sp_articleview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,50 +47,40 @@ sp_articleview [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'**_publicação_**'**  
- É o nome da publicação que contém o artigo. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação que contém o artigo. *publicação* está **sysname**, sem padrão.  
   
- [  **@article=**] **'**_artigo_**'**  
- É o nome do artigo. *artigo* está **sysname**, sem padrão.  
+`[ @article = ] 'article'` É o nome do artigo. *artigo* está **sysname**, sem padrão.  
   
- [  **@view_name=**] **'**_view_name_**'**  
- É o nome da exibição que define o artigo publicado. *view_name* está **nvarchar(386)**, com um padrão NULL.  
+`[ @view_name = ] 'view_name'` É o nome da exibição que define o artigo publicado. *view_name* está **nvarchar(386)**, com um padrão NULL.  
   
- [  **@filter_clause=**] **'**_filter_clause_**'**  
- É uma cláusula de restrição (WHERE) que define um filtro horizontal. Ao inserir a cláusula de restrição, omita a palavra-chave WHERE. *filter_clause* está **ntext**, com um padrão NULL.  
+`[ @filter_clause = ] 'filter_clause'` É uma restrição cláusula (WHERE) que define um filtro horizontal. Ao inserir a cláusula de restrição, omita a palavra-chave WHERE. *filter_clause* está **ntext**, com um padrão NULL.  
   
- [  **@change_active =** ] *change_active*  
- Permite modificar as colunas em publicações que têm assinaturas. *change_active* é um **int**, com um padrão de **0**. Se **0**, colunas não são alteradas. Se **1**, modos de exibição podem ser criados ou recriados em artigos ativos que têm assinaturas.  
+`[ @change_active = ] change_active` Permite modificar as colunas em publicações que têm assinaturas. *change_active* é um **int**, com um padrão de **0**. Se **0**, colunas não são alteradas. Se **1**, modos de exibição podem ser criados ou recriados em artigos ativos que têm assinaturas.  
   
- [ **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- Confirma que a ação tomada por esse procedimento armazenado pode invalidar um instantâneo existente. *force_invalidate_snapshot* é um **bit**, com um padrão de **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Confirma que a ação tomada por esse procedimento armazenado pode invalidar um instantâneo existente. *force_invalidate_snapshot* é um **bit**, com um padrão de **0**.  
   
  **0** Especifica que as alterações no artigo fazem com que o instantâneo seja inválido. Se o procedimento armazenado detectar que a alteração requer um novo instantâneo, ocorrerá um erro e nenhuma alteração será feita.  
   
  **1** Especifica que as alterações no artigo podem invalidar o instantâneo ser inválida e se houver assinaturas existentes que exigem um novo instantâneo, dará permissão para o instantâneo existente seja marcado como obsoleto e um novo instantâneo seja gerado.  
   
- [  **@force_reinit_subscription =]** _force_reinit_subscription_  
- Confirma que a ação tomada por esse procedimento armazenado pode exigir que as assinaturas existentes sejam reinicializadas. *force_reinit_subscription* é um **bit** com um padrão de **0**.  
+`[ @force_reinit_subscription = ] _force_reinit_subscription_` Reconhece que a ação tomada por esse procedimento armazenado pode requerer que as assinaturas existentes sejam reinicializadas. *force_reinit_subscription* é um **bit** com um padrão de **0**.  
   
  **0** Especifica que as alterações no artigo fazem com que a assinatura seja reiniciada. Se o procedimento armazenado detectar que a alteração irá requerer assinaturas sejam reiniciadas, ocorrerá um erro e nenhuma alteração é feita.  
   
  **1** Especifica que as alterações no artigo faz com que uma assinatura existente seja reiniciada e dá permissão para que ocorra a reinicialização da assinatura.  
   
- [ **@publisher**=] **'**_publisher_**'**  
- Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
+`[ @publisher = ] 'publisher'` Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
 >  *Publisher* não deve ser usado durante a publicação de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
   
- [ **@refreshsynctranprocs** =] *refreshsynctranprocs*  
- Especifica se os procedimentos armazenados usados para sincronizar replicações são recriados automaticamente. *refreshsynctranprocs* está **bit**, com um padrão de 1.  
+`[ @refreshsynctranprocs = ] refreshsynctranprocs` É se os procedimentos armazenados usados para sincronizar replicações são recriados automaticamente. *refreshsynctranprocs* está **bit**, com um padrão de 1.  
   
  **1** significa que os procedimentos armazenados são recriados.  
   
  **0** significa que os procedimentos armazenados não são recriados.  
   
- [ **@internal**=] *interno*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @internal = ] internal` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

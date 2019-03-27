@@ -18,12 +18,12 @@ ms.assetid: 24200295-9a54-4cab-9922-fb2e88632721
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 40e397bd63d8018d2043a1aced4824f48e4ddc9a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 11d0115c1f8bea82385d7c69365489a93351a5c5
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135866"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493128"
 ---
 # <a name="spaddapprole-transact-sql"></a>sp_addapprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,13 +43,11 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@rolename =** ] **'**_função_**'**  
- É o nome da nova função de aplicativo. *função* está **sysname**, sem padrão. *função* deve ser um identificador válido e não pode existir no banco de dados atual.  
+`[ @rolename = ] 'role'` É o nome da nova função de aplicativo. *função* está **sysname**, sem padrão. *função* deve ser um identificador válido e não pode existir no banco de dados atual.  
   
  Os nomes de função de aplicativo podem conter de 1 até 128 caracteres, inclusive cartas, símbolos e números. Nomes de função não podem conter uma barra invertida (\\) nem ser nulo ou uma cadeia de caracteres vazia (").  
   
- [  **@password =** ] **'**_senha_**'**  
- É a senha necessária para ativar a função de aplicativo. *senha* está **sysname**, sem padrão. *senha* não pode ser NULL.  
+`[ @password = ] 'password'` É a senha necessária para ativar a função de aplicativo. *senha* está **sysname**, sem padrão. *senha* não pode ser NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

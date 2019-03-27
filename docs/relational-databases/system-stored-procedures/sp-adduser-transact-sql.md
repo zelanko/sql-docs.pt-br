@@ -18,12 +18,12 @@ ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 73859064fc8a56a53fd5ea6cb1295d81ed0e4150
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 46b1548f1eb587aa62c0d0427661d97d97bf3cc7
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766524"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492934"
 ---
 # <a name="spadduser-transact-sql"></a>sp_adduser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +45,11 @@ sp_adduser [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@loginame =** ] **'***logon***'**  
- É o nome do logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do logon do Windows. *login* é um **sysname**, sem padrão. *login* deve ser um existente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon ou logon do Windows.  
+`[ @loginame = ] 'login'` É o nome da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon ou logon do Windows. *login* é um **sysname**, sem padrão. *login* deve ser um existente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon ou logon do Windows.  
   
- [  **@name_in_db =** ] **'***usuário***'**  
- É o nome do novo usuário de banco de dados. *usuário* é um **sysname**, com um padrão NULL. Se *usuário* não for especificado, o nome do novo usuário de banco de dados assumirá o *login* nome. Especificando *usuário* fornece um nome do novo usuário no banco de dados diferente do nome de logon de nível de servidor.  
+`[ @name_in_db = ] 'user'` É o nome para o novo usuário de banco de dados. *usuário* é um **sysname**, com um padrão NULL. Se *usuário* não for especificado, o nome do novo usuário de banco de dados assumirá o *login* nome. Especificando *usuário* fornece um nome do novo usuário no banco de dados diferente do nome de logon de nível de servidor.  
   
- [  **@grpname =** ] **'***função***'**  
- É a função de banco de dados da qual o novo usuário se torna um membro. *função* está **sysname**, com um padrão NULL. *função* deve ser uma função de banco de dados válido no banco de dados atual.  
+`[ @grpname = ] 'role'` É a função de banco de dados da qual o novo usuário se torna um membro. *função* está **sysname**, com um padrão NULL. *função* deve ser uma função de banco de dados válido no banco de dados atual.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -89,7 +86,7 @@ GO
 EXEC sp_adduser 'Vidur', 'Vidur', 'Recruiting';  
 ```  
   
-### <a name="b-adding-a-database-user-with-the-same-login-id"></a>B. Adicionando um usuário de banco de dados com a mesma ID de logon  
+### <a name="b-adding-a-database-user-with-the-same-login-id"></a>b. Adicionando um usuário de banco de dados com a mesma ID de logon  
  O exemplo a seguir adiciona o usuário `Arvind` ao banco de dados atual para o logon `Arvind` do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse usuário pertence ao padrão **pública** função.  
   
 ```  

@@ -18,19 +18,19 @@ ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d2586f1ad5f7be9b5916caea7699ca9c90f22db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 97964286b3281eee4e5b6850065c85034628bfdc
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691404"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493248"
 ---
 # <a name="spcertifyremovable-transact-sql"></a>sp_certify_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Verifica se um banco de dados está configurado corretamente para distribuição em mídias removíveis e informa qualquer problema ao usuário.  
   
-> **IMPORTANTE:** [! INCLUIR[ssNoteDepFutureAvoid](../../t-sql/statements/create-database-sql-server-transact-sql.md) em vez disso.  
+> **IMPORTANTE:** [!INCLUDE[ssNoteDepFutureAvoid](../../t-sql/statements/create-database-sql-server-transact-sql.md) instead.  
   
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -44,11 +44,9 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@dbname=**] **'***dbname***'**  
- Especifica o banco de dados a ser verificado. *DBName* está **sysname**.  
+`[ @dbname = ] 'dbname'` Especifica o banco de dados a ser verificado. *DBName* está **sysname**.  
   
- [  **@autofix=**] **'auto'**  
- Atribui a propriedade do banco de dados e todos os objetos de banco de dados ao administrador de sistema e descarta quaisquer usuários de banco de dados criados pelo usuário e permissões não padrão. *auto* está **nvarchar(4)**, com um padrão NULL.  
+`[ @autofix = ] 'auto'` Fornece a propriedade de banco de dados e todos os objetos de banco de dados para o administrador do sistema e descarta quaisquer usuários de banco de dados criados pelo usuário e permissões não padrão. *auto* está **nvarchar(4)**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

@@ -16,12 +16,12 @@ ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9eb6d52d72dec4efab7e744fd4eafd2d9a5eb612
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6ca4142ca78d0842b535036e99464b9a1b7dc2c9
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788478"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493251"
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,11 @@ sp_changemergepublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'***publicação***'**  
- O nome da publicação. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` O nome da publicação. *publicação* está **sysname**, sem padrão.  
   
- [  **@property=**] **'***propriedade***'**  
- A propriedade a ser alterada para a publicação determinada. *propriedade* está **sysname**, e pode ser um dos valores listado na tabela a seguir.  
+`[ @property = ] 'property'` A propriedade a ser alterada para a publicação determinada. *propriedade* está **sysname**, e pode ser um dos valores listado na tabela a seguir.  
   
- [  **@value=**] **'***valor***'**  
- O novo valor da propriedade especificada. *valor* está **nvarchar (255)**, e pode ser um dos valores listado na tabela a seguir.  
+`[ @value = ] 'value'` O novo valor para a propriedade especificada. *valor* está **nvarchar (255)**, e pode ser um dos valores listado na tabela a seguir.  
   
  Essa tabela descreve as propriedades da publicação que podem ser alteradas e as restrições nos valores dessas propriedades.  
   
@@ -114,9 +111,9 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**false**|Arquivos de instantâneo são armazenados no local alternativo especificado por *alt_snapshot_folder*. Essa combinação Especifica que os arquivos de instantâneo são armazenados em locais padrão e alternativo.|  
 |**snapshot_ready**|**true**|Instantâneo disponível para a publicação.|  
 ||**false**|Instantâneo não disponível para a publicação.|  
-|**status**|**Active Directory**|Publicação com status ativo.|  
-||**inativo**|Publicação com status inativo.|  
-|**sync_mode**|**nativo** ou<br /><br /> **BCP nativo**|Saída de programa de cópia em massa em modo nativo de todas as tabelas é usada para o instantâneo inicial.|  
+|**status**|**active**|Publicação com status ativo.|  
+||**inactive**|Publicação com status inativo.|  
+|**sync_mode**|**nativo** ou<br /><br /> **bcp native**|Saída de programa de cópia em massa em modo nativo de todas as tabelas é usada para o instantâneo inicial.|  
 ||**character**<br /><br /> ou **bcp de caractere**|Saída de programa de cópia em massa em modo de caractere de todas as tabelas é usada para o instantâneo inicial, que é exigido de todos os Assinantes não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**use_partition_groups**<br /><br /> Observação: Depois de usar partition_groups, se quiser reverter usando **setupbelongs**e defina **use_partition_groups = false** na **changemergearticle**, isso pode não ser corretamente refletida após um instantâneo é tirado. Os gatilhos que são gerados através do instantâneo são compatíveis com grupos de partição.<br /><br /> A solução alternativa para esse cenário é definir o status como Inactive, modificar a **use_partition_groups**e, em seguida, defina o status como Active Directory.|**true**|A publicação usa partições pré-computadas.|  
 ||**false**|A publicação não usa partições pré-computadas.|  
@@ -124,8 +121,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**web_synchronization_url**||Valor padrão do URL da Internet usado para sincronização da Web.|  
 |NULL (padrão)||Retorna a lista de valores com suporte para *propriedade*.|  
   
- [ **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- Confirma que a ação executada por esse procedimento armazenado pode invalidar um instantâneo existente. *force_invalidate_snapshot* é um **bit**, com um padrão de **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Confirma que a ação tomada por esse procedimento armazenado pode invalidar um instantâneo existente. *force_invalidate_snapshot* é um **bit**, com um padrão de **0**.  
   
  **0** Especifica que alterações na publicação não invalidam o instantâneo. Se o procedimento armazenado detectar que a alteração requer um novo instantâneo, ocorrerá um erro e nenhuma alteração será feita.  
   
@@ -133,8 +129,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
  Consulte a seção Comentários para obter as propriedades que, quando alteradas, requerem a geração de um novo instantâneo.  
   
- [  **@force_reinit_subscription =** ] *force_reinit_subscription*  
- Confirma que a ação executada por esse procedimento armazenado pode exigir que as assinaturas existentes sejam reinicializadas. *force_reinit_subscription* é um **bit** com um padrão de **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Reconhece que a ação tomada por esse procedimento armazenado pode requerer que as assinaturas existentes sejam reinicializadas. *force_reinit_subscription* é um **bit** com um padrão de **0**.  
   
  **0** Especifica que alterações na publicação não requerem que as assinaturas sejam reinicializadas. Se o procedimento armazenado detectar que a alteração irá requerer assinaturas existentes para ser reiniciada, ocorrerá um erro e nenhuma alteração será feita.  
   

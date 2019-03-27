@@ -16,12 +16,12 @@ ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 26ced1d422c1f47ebd88404b7cf3996df8b9c649
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: dbdd156c20378eda748cef17ec58f6ecf7129cb9
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126046"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494378"
 ---
 # <a name="spaddpullsubscription-transact-sql"></a>sp_addpullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,37 +45,29 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publisher=**] **'***publisher***'**  
- É o nome do Publicador. *Publisher* está **sysname**, sem padrão.  
+`[ @publisher = ] 'publisher'` É o nome do publicador. *Publisher* está **sysname**, sem padrão.  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
- É o nome do banco de dados Publicador. *publisher_db* está **sysname**, com um padrão NULL. *publisher_db* é ignorado por Publicadores Oracle.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados publicador. *publisher_db* está **sysname**, com um padrão NULL. *publisher_db* é ignorado por Publicadores Oracle.  
   
- [  **@publication=**] **'***publicação***'**  
- É o nome da publicação. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, sem padrão.  
   
- [  **@independent_agent=**] **'***independent_agent***'**  
- Especifica se existe um Agente de Distribuição autônomo para esta publicação. *independent_agent* está **nvarchar (5)**, com um padrão de TRUE. Se **verdadeira**, há um Distribution Agent autônomo para essa publicação. Se **falsos**, há um agente de distribuição para cada par de banco de dados publicador/assinante do banco de dados. *independent_agent* é uma propriedade da publicação e deve ter o mesmo valor aqui, pois ele tem no publicador.  
+`[ @independent_agent = ] 'independent_agent'` Especifica se há um Distribution Agent autônomo para essa publicação. *independent_agent* está **nvarchar (5)**, com um padrão de TRUE. Se **verdadeira**, há um Distribution Agent autônomo para essa publicação. Se **falsos**, há um agente de distribuição para cada par de banco de dados publicador/assinante do banco de dados. *independent_agent* é uma propriedade da publicação e deve ter o mesmo valor aqui, pois ele tem no publicador.  
   
- [  **@subscription_type=**] **'***subscription_type***'**  
- É o tipo de assinatura. *subscription_type* está **nvarchar(9)**, com um padrão de **anônimo**. Você deve especificar um valor de **pull** para *subscription_type*, a menos que você deseja criar uma assinatura sem registrá-la no publicador. Nesse caso, você deve especificar um valor de **anônimo**. Isso é necessário em casos nos quais você não pode estabelecer uma conexão [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com o Publicador durante configuração da assinatura.  
+`[ @subscription_type = ] 'subscription_type'` É o tipo de assinatura. *subscription_type* está **nvarchar(9)**, com um padrão de **anônimo**. Você deve especificar um valor de **pull** para *subscription_type*, a menos que você deseja criar uma assinatura sem registrá-la no publicador. Nesse caso, você deve especificar um valor de **anônimo**. Isso é necessário em casos nos quais você não pode estabelecer uma conexão [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com o Publicador durante configuração da assinatura.  
   
- [  **@description=**] **'***descrição***'**  
- É a descrição da publicação. *Descrição* está **nvarchar(100)**, com um padrão NULL.  
+`[ @description = ] 'description'` É a descrição da publicação. *Descrição* está **nvarchar(100)**, com um padrão NULL.  
   
- [  **@update_mode=**] **'***update_mode***'**  
- É o tipo de atualização. *update_mode* está **nvarchar (30)**, e pode ser um dos valores a seguir.  
+`[ @update_mode = ] 'update_mode'` É o tipo de atualização. *update_mode* está **nvarchar (30)**, e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**somente leitura** (padrão)|A assinatura é somente leitura. Qualquer alteração no Assinante não será mandada de volta ao Publicador. Deve ser usado quando não são feitas atualizações no Assinante.|  
-|**Synctran**|Habilita suporte para assinaturas de atualização imediata.|  
+|**synctran**|Habilita suporte para assinaturas de atualização imediata.|  
 |**tran em fila**|Habilita a assinatura de atualização enfileirada. As modificações de dados podem ser feitas no Assinante, armazenadas em uma fila e, depois, propagadas ao Publicador.|  
 |**failover**|Habilita a assinatura para atualização imediata com atualização enfileirada como um failover. Modificações de dados podem ser feitas no Assinante e propagadas ao Publicador imediatamente. Se o Publicador e o Assinante não estiverem conectados, as modificações de dados feitas no Assinante poderão ser armazenadas em uma fila até que o Assinante e o Publicador sejam reconectados.|  
 |**failover em fila**|Habilita a assinatura como uma assinatura de atualização enfileirada com a capacidade de alterar para o modo de atualização imediata. Modificações de dados podem ser feitas no Assinante e armazenadas em uma fila até que a conexão seja estabelecida entre o Assinante e o Publicador. Quando uma conexão contínua é estabelecida, o modo de atualização pode ser alterado para atualização imediata. *Não há suportada para Publicadores Oracle*.|  
   
- [  **@immediate_sync =**] *immediate_sync*  
- Especifica se os arquivos de sincronização serão criados ou recriados em cada execução do Agente de Instantâneo. *immediate_sync* está **bit** com um padrão de 1 e deve ser definido com o mesmo valor de *immediate_sync* na **sp_addpublication**. *immediate_sync* é uma propriedade da publicação e deve ter o mesmo valor aqui, pois ele tem no publicador.  
+`[ @immediate_sync = ] immediate_sync` É se os arquivos de sincronização são criados ou recriados cada vez que o Snapshot Agent é executado. *immediate_sync* está **bit** com um padrão de 1 e deve ser definido com o mesmo valor de *immediate_sync* na **sp_addpublication**. *immediate_sync* é uma propriedade da publicação e deve ter o mesmo valor aqui, pois ele tem no publicador.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -95,7 +87,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
  Somente os membros dos **sysadmin** função de servidor fixa ou **db_owner** banco de dados fixa podem executar **sp_addpullsubscription**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Criar uma assinatura pull](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Criar uma assinatura atualizável para uma publicação transacional](../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md) [assinar publicações](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)   
  [sp_change_subscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   

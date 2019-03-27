@@ -16,12 +16,12 @@ ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f699a4f7dcf333301889211a0db45248935acdce
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 8ab11ccb8853c00439583162f33e76d0e14622a1
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130196"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493138"
 ---
 # <a name="spchangedynamicsnapshotjob-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,17 +52,13 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication =** ] **'***publicação***'**  
- É o nome da publicação. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, sem padrão.  
   
- [  **@dynamic_snapshot_jobname =** ] **'***dynamic_snapshot_jobname***'**  
- É o nome do trabalho de instantâneo que está sendo alterado. *dynamic_snapshot_jobname*está **sysname**, com o valor padrão de n' %'. Se *dynamic_snapshot_jobid* for especificado, você deve usar o valor padrão para *dynamic_snapshot_jobname*.  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` O nome do trabalho de instantâneo está sendo alterado. *dynamic_snapshot_jobname*está **sysname**, com o valor padrão de n' %'. Se *dynamic_snapshot_jobid* for especificado, você deve usar o valor padrão para *dynamic_snapshot_jobname*.  
   
- [  **@dynamic_snapshot_jobid =** ] **'***dynamic_snapshot_jobid***'**  
- É a ID do trabalho de instantâneo que está sendo alterado. *dynamic_snapshot_jobid* está **uniqueidentifier**, com o valor padrão de NULL. Se *dynamic_snapshot_jobname*for especificado, você deve usar o valor padrão para *dynamic_snapshot_jobid*.  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` A ID do trabalho de instantâneo está sendo alterada. *dynamic_snapshot_jobid* está **uniqueidentifier**, com o valor padrão de NULL. Se *dynamic_snapshot_jobname*for especificado, você deve usar o valor padrão para *dynamic_snapshot_jobid*.  
   
- [  **@frequency_type =** ] *frequency_type*  
- É a frequência de agendamento do agente. *frequency_type* está **int**, e pode ser um dos valores a seguir.  
+`[ @frequency_type = ] frequency_type` É a frequência de agendamento do agente. *frequency_type* está **int**, e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -76,8 +72,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**128**|Recorrente|  
 |NULL (padrão)||  
   
- [  **@frequency_interval =** ] *frequency_interval*  
- Os dias em que o agente é executado. *frequency_interval* está **int**, e pode ser um dos valores a seguir.  
+`[ @frequency_interval = ] frequency_interval` Os dias em que o agente é executado. *frequency_interval* está **int**, e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -93,8 +88,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**10**|Dias de fim de semana|  
 |NULL (padrão)||  
   
- [  **@frequency_subday =** ] *frequency_subday*  
- É a frequência de reagendamento durante o período definido. *frequency_subday* está **int**, e pode ser um dos valores a seguir.  
+`[ @frequency_subday = ] frequency_subday` É a frequência de reagendamento durante o período definido. *frequency_subday* está **int**, e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -104,11 +98,9 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**8**|Hora|  
 |NULL (padrão)||  
   
- [  **@frequency_subday_interval =** ] *frequency_subday_interval*  
- É o intervalo de *frequency_subday*. *frequency_subday_interval* está **int**, com um padrão NULL.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` É o intervalo de *frequency_subday*. *frequency_subday_interval* está **int**, com um padrão NULL.  
   
- [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
- É a data de execução do Agente de Mesclagem. Esse parâmetro é usado quando *frequency_type* é definido como **32** (mensal relativo). *frequency_relative_interval* está **int**, e pode ser um dos valores a seguir.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` É a data em que o Merge Agent é executado. Esse parâmetro é usado quando *frequency_type* é definido como **32** (mensal relativo). *frequency_relative_interval* está **int**, e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -119,26 +111,19 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**16**|Last|  
 |NULL (padrão)||  
   
- [  **@frequency_recurrence_factor =** ] *frequency_recurrence_factor*  
- É o fator de recorrência usado pelo *frequency_type*. *frequency_recurrence_factor* está **int**, com um padrão NULL.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` É o fator de recorrência usado pelo *frequency_type*. *frequency_recurrence_factor* está **int**, com um padrão NULL.  
   
- [  **@active_start_date =** ] *active_start_date*  
- É a data do primeiro agendamento do Agente de Mesclagem, formatada como AAAAMMDD. *active_start_date* está **int**, com um padrão NULL.  
+`[ @active_start_date = ] active_start_date` É a data quando o Merge Agent é primeiro agendada, formatada como AAAAMMDD. *active_start_date* está **int**, com um padrão NULL.  
   
- [  **@active_end_date =** ] *active_end_date*  
- É a data do último agendamento do Agente de Mesclagem, formatada como AAAAMMDD. *active_end_date* está **int**, com um padrão NULL.  
+`[ @active_end_date = ] active_end_date` É a data em que o Merge Agent deixa de ser agendado, formatada como AAAAMMDD. *active_end_date* está **int**, com um padrão NULL.  
   
- [  **@active_start_time_of_day =** ] *active_start_time_of_day*  
- É a hora do dia do primeiro agendamento do Agente de Mesclagem, formatada como HHMMSS. *active_start_time_of_day* está **int**, com um padrão NULL.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` É a hora do dia quando o Merge Agent é o primeiro agendada, formatada como HHMMSS. *active_start_time_of_day* está **int**, com um padrão NULL.  
   
- [  **@active_end_time_of_day =** ] *active_end_time_of_day*  
- É a hora do dia do último agendamento do Agente de Mesclagem, formatada como HHMMSS. *active_end_time_of_day* está **int**, com um padrão NULL.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` É a hora do dia em que o Merge Agent deixa de ser agendado, formatada como HHMMSS. *active_end_time_of_day* está **int**, com um padrão NULL.  
   
- [  **@job_login=** ] **'***job_login***'**  
- É a conta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sob a qual o Agente de Instantâneo é executado ao gerar o instantâneo para uma assinatura usando um filtro de linha com parâmetros. *job_login* está **nvarchar(257)**, com um valor padrão de NULL.  
+`[ @job_login = ] 'job_login'` É o [!INCLUDE[msCoName](../../includes/msconame-md.md)] conta Windows na qual o Snapshot Agent é executado ao gerar o instantâneo para uma assinatura usando um filtro de linha com parâmetros. *job_login* está **nvarchar(257)**, com um valor padrão de NULL.  
   
- [  **@job_password=** ] **'***job_password***'**  
- É a senha da conta do Windows na qual o Agente de Instantâneo é executado ao gerar o instantâneo para uma assinatura usando um filtro de linha com parâmetros. *job_password* está **nvarchar(257)**, com um valor padrão de NULL.  
+`[ @job_password = ] 'job_password'` É a senha para a conta do Windows na qual o Snapshot Agent é executado ao gerar o instantâneo para uma assinatura usando um filtro de linha com parâmetros. *job_password* está **nvarchar(257)**, com um valor padrão de NULL.  
   
 > [!IMPORTANT]  
 >  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for necessário armazenar credenciais em um arquivo de script, você deverá proteger o arquivo para impedir acesso não autorizado.  

@@ -1,5 +1,5 @@
 ---
-title: SP_CHANGEARTICLE (Transact-SQL) | Microsoft Docs
+title: sp_changearticle (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/28/2015
 ms.prod: sql
@@ -16,12 +16,12 @@ ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6b15212edcb043ed86e3d2cd18c5f33624660692
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: cbfbb923a831901bd42724759372f8b1f7ccbc0c
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130676"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493448"
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,17 +44,13 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'**_publicação_**'**  
- É o nome da publicação que contém o artigo. *publicação* está **sysname**, com um padrão NULL.  
+`[ @publication = ] 'publication'` É o nome da publicação que contém o artigo. *publicação* está **sysname**, com um padrão NULL.  
   
- [  **@article=**] **'**_artigo_**'**  
- É o nome do artigo cuja propriedade deve ser alterada. *artigo* está **sysname**, com um padrão NULL.  
+`[ @article = ] 'article'` É o nome do artigo cuja propriedade deve ser alterado. *artigo* está **sysname**, com um padrão NULL.  
   
- [  **@property=**] **'**_propriedade_**'**  
- É uma propriedade de artigo a ser alterada. *propriedade* está **nvarchar(100)**.  
+`[ @property = ] 'property'` É uma propriedade de artigo a ser alterada. *propriedade* está **nvarchar(100)**.  
   
- [  **@value=**] **'**_valor_**'**  
- É o valor novo da propriedade de artigo. *valor* está **nvarchar (255)**.  
+`[ @value = ] 'value'` É o novo valor da propriedade de artigo. *valor* está **nvarchar (255)**.  
   
  Essa tabela descreve as propriedades de artigos e os valores dessas propriedades.  
   
@@ -66,7 +62,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**dest_object**||Fornecido para compatibilidade com versões anteriores. Use **dest_table**.|  
 |**dest_table**||Nova tabela de destino.|  
 |**destination_owner**||Nome do proprietário do objeto de destino.|  
-|**filtro**||Novo procedimento armazenado a ser usado para filtrar a tabela (filtragem horizontal). O padrão é NULO. Não pode ser alterado para publicações em replicação ponto a ponto.|  
+|**filter**||Novo procedimento armazenado a ser usado para filtrar a tabela (filtragem horizontal). O padrão é NULO. Não pode ser alterado para publicações em replicação ponto a ponto.|  
 |**fire_triggers_on_snapshot**|**true**|Gatilhos de usuário replicados são executados quando o instantâneo inicial é aplicado.<br /><br /> Observação: Para gatilhos a serem replicados, o valor de máscara de bits da *schema_option* deve incluir o valor **0x100**.|  
 ||**false**|Gatilhos de usuário replicados não são executados quando o instantâneo inicial é aplicado.|  
 |**identity_range**||Controla o tamanho de intervalos de identidade atribuídos atribuído ao Assinante. Sem suporte para replicação ponto a ponto.|  
@@ -132,7 +128,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**parameters**|As alterações são propagadas ao Assinante usando comandos com parâmetros. Essa é a configuração padrão para um novo artigo.|  
 ||**Literais de cadeia de caracteres**|As alterações são propagadas ao Assinante usando valores de literal de cadeia de caracteres.|  
 |**sync_object**||Nome da tabela ou exibição usado para produzir um arquivo de saída de sincronização. O padrão é NULO. Sem suporte para Publicadores Oracle.|  
-|**espaço de tabela**||Identifica o espaço de tabela usado pela tabela de log para um artigo publicado de um banco de dados de Oracle. Para obter mais informações, consulte [Gerenciar espaços de tabela Oracle](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md).|  
+|**tablespace**||Identifica o espaço de tabela usado pela tabela de log para um artigo publicado de um banco de dados de Oracle. Para obter mais informações, consulte [Gerenciar espaços de tabela Oracle](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md).|  
 |**threshold**||Valor percentual para controle quando o Distribution Agent atribuir um novo intervalo de identidade. Sem suporte para replicação ponto a ponto.|  
 |**type**||Sem suporte para Publicadores Oracle.|  
 ||**logbased**|Artigo com base em log.|  
@@ -146,8 +142,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**upd_cmd**||Instrução UPADTE a ser executada; caso contrário, será construída do log.|  
 |NULL|NULL|Retorna uma lista de propriedades de artigo que podem ser alteradas.|  
   
- [ **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- Confirma que a ação tomada por esse procedimento armazenado pode invalidar um instantâneo existente. *force_invalidate_snapshot* é um **bit**, com um padrão de **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Confirma que a ação tomada por esse procedimento armazenado pode invalidar um instantâneo existente. *force_invalidate_snapshot* é um **bit**, com um padrão de **0**.  
   
  **0** Especifica que as alterações no artigo fazem com que o instantâneo seja inválido. Se o procedimento armazenado detectar que a alteração requer um novo instantâneo, ocorrerá um erro e nenhuma alteração será feita.  
   
@@ -155,8 +150,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  Consulte a seção Comentários das propriedades que, quando alteradas, requerem a geração de um novo instantâneo.  
   
- [  **@force_reinit_subscription=]**_force_reinit_subscription_  
- Confirma que a ação tomada por esse procedimento armazenado pode exigir que as assinaturas existentes sejam reinicializadas. *force_reinit_subscription* é um **bit** com um padrão de **0**.  
+`[ @force_reinit_subscription = ]force_reinit_subscription_` Reconhece que a ação tomada por esse procedimento armazenado pode requerer que as assinaturas existentes sejam reinicializadas. *force_reinit_subscription* é um **bit** com um padrão de **0**.  
   
  **0** Especifica que as alterações no artigo fazem com que a assinatura seja reiniciada. Se o procedimento armazenado detectar que a alteração irá requerer assinaturas existentes para ser reiniciada, ocorrerá um erro e nenhuma alteração será feita.  
   
@@ -164,8 +158,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  Consulte a seção Comentários para as propriedades que, quando alteradas, requerem que todas as assinaturas existentes sejam reiniciadas.  
   
- [ **@publisher**=] **'**_publisher_**'**  
- Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
+`[ @publisher = ] 'publisher'` Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
 >  *Publisher* não deve ser usado ao alterar as propriedades do artigo em uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
@@ -202,7 +195,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
 -   **destination_owner**  
   
--   **filtro**  
+-   **filter**  
   
 -   **ins_cmd**  
   

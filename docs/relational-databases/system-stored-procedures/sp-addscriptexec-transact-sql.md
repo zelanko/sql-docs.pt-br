@@ -16,12 +16,12 @@ ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 00c5b4b94bc0a4347991944ccaa7898e75f244f0
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 97e6d74a619bc19571dda69a63ac8b3caf27f6d3
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130686"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492944"
 ---
 # <a name="spaddscriptexec-transact-sql"></a>sp_addscriptexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,21 +41,17 @@ sp_addscriptexec [ @publication = ] publication
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=** ] **'**_publicação_**'**  
- É o nome da publicação. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, sem padrão.  
   
- [  **@scriptfile=** ] **'**_scriptfile_**'**  
- É o caminho completo para o arquivo script SQL. *ScriptFile* está **nvarchar (4000)**, sem padrão.  
+`[ @scriptfile = ] 'scriptfile'` É o caminho completo para o arquivo de script SQL. *ScriptFile* está **nvarchar (4000)**, sem padrão.  
   
- [  **@skiperror=** ] **'**_skiperror_**'**  
- Indica se o Distribution Agent ou Merge Agent devem parar quando um erro é encontrado durante o processamento de script. *SkipError* está **bit**, com um padrão de 0.  
+`[ @skiperror = ] 'skiperror'` Indica se o Distribution Agent ou Merge Agent deve parar quando um erro é encontrado durante o processamento de script. *SkipError* está **bit**, com um padrão de 0.  
   
  **0** = o agente irá parar.  
   
  **1** = o agente continua o script e ignora o erro.  
   
- [  **@publisher=** ] **'**_publisher_**'**  
- Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
+`[ @publisher = ] 'publisher'` Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
 >  *Publisher* não deve ser usado durante a publicação de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  

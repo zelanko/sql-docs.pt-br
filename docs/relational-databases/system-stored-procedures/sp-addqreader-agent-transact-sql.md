@@ -16,12 +16,12 @@ ms.assetid: dc9f591a-e67e-4ba8-bf47-defd5eda0822
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9424228f5f1bd70c17ebb0f4f421f4f0f923930c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5ce192a0d3510f6034ff223f6573bf1e058516e9
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822320"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494312"
 ---
 # <a name="spaddqreaderagent-transact-sql"></a>sp_addqreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,20 +41,16 @@ sp_addqreader_agent [ @job_login = ] 'job_login'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@job_login**=] **'***job_login***'**  
- É o logon da conta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows na qual o agente é executado. *job_login* está **nvarchar(257)**, sem padrão. Essa conta do Windows sempre é usada para conexões de agente com o Distribuidor.  
+`[ @job_login = ] 'job_login'` É o logon para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows da conta na qual o agente é executado. *job_login* está **nvarchar(257)**, sem padrão. Essa conta do Windows sempre é usada para conexões de agente com o Distribuidor.  
   
- [ **@job_password**=] **'***job_password***'**  
- É a senha da conta do Windows na qual o agente é executado. *job_password* está **sysname**, sem padrão.  
+`[ @job_password = ] 'job_password'` É a senha para a conta do Windows sob a qual o agente é executado. *job_password* está **sysname**, sem padrão.  
   
 > [!IMPORTANT]  
 >  Não armazene informações de autenticação em arquivos de script. Para melhor segurança, nomes de logon e senhas devem ser fornecidos em tempo de execução.  
   
- [ **@job_name**=] **'***job_name***'**  
- É o nome de um trabalho de agente existente. *job_name* está **sysname**, com um valor padrão de NULL. Esse parâmetro só é especificado quando o agente é criado usando um trabalho existente em vez de um trabalho recém-criado (o padrão).  
+`[ @job_name = ] 'job_name'` É o nome de um trabalho de agente existente. *job_name* está **sysname**, com um valor padrão de NULL. Esse parâmetro só é especificado quando o agente é criado usando um trabalho existente em vez de um trabalho recém-criado (o padrão).  
   
- [  **@frompublisher=** ] *frompublisher*  
- Especifica se o procedimento está sendo executado no publicador. *frompublisher* é bit, com um valor padrão de **0**. Um valor de **1** significa que o procedimento está sendo executado no publicador do banco de dados de publicação.  
+`[ @frompublisher = ] frompublisher` Especifica se o procedimento está sendo executado no publicador. *frompublisher* é bit, com um valor padrão de **0**. Um valor de **1** significa que o procedimento está sendo executado no publicador do banco de dados de publicação.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

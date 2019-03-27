@@ -18,12 +18,12 @@ ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6fc52fd7af36d2238c53d8cbd877b7a6d43cd1dd
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 16468053ee1e0d09b5be37c034800c122c1d16c9
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591480"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493279"
 ---
 # <a name="spaddschedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,14 +55,11 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@schedule_name =** ] **'**_schedule_name_**'**  
- O nome da agenda. *schedule_name* está **sysname**, sem padrão.  
+`[ @schedule_name = ] 'schedule_name'` O nome da agenda. *schedule_name* está **sysname**, sem padrão.  
   
- [  **@enabled =** ] *habilitado*  
- Indica o status atual da agenda. *habilitada* está **tinyint**, com um padrão de **1** (habilitado). Se **0**, o agendamento não está habilitado. Quando o agendamento não está habilitado, nenhum trabalho é executado nele.  
+`[ @enabled = ] enabled` Indica o status atual da agenda. *habilitada* está **tinyint**, com um padrão de **1** (habilitado). Se **0**, o agendamento não está habilitado. Quando o agendamento não está habilitado, nenhum trabalho é executado nele.  
   
- [  **@freq_type =** ] *freq_type*  
- Um valor que indica quando um trabalho deve ser executado. *freq_type* está **int**, com um padrão de **0**, e pode ser um destes valores.  
+`[ @freq_type = ] freq_type` Um valor que indica quando um trabalho a ser executado. *freq_type* está **int**, com um padrão de **0**, e pode ser um destes valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -74,8 +71,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**64**|Executado quando o serviço SQLServerAgent é iniciado|  
 |**128**|Executar quando o computador estiver ocioso|  
   
- [  **@freq_interval =** ] *freq_interval*  
- Os dias em que um trabalho é executado. *freq_interval* está **int**, com um padrão de **1**e depende do valor de *freq_type*.  
+`[ @freq_interval = ] freq_interval` Os dias em que um trabalho é executado. *freq_interval* está **int**, com um padrão de **1**e depende do valor de *freq_type*.  
   
 |Valor de *freq_type*|Efeito em *freq_interval*|  
 |---------------------------|--------------------------------|  
@@ -87,8 +83,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**64** (quando o serviço SQLServerAgent é iniciado)|*freq_interval* não é usado.|  
 |**128**|*freq_interval* não é usado.|  
   
- [ **@freq_subday_type =** ] *freq_subday_type*  
- Especifica as unidades para *freq_subday_interval*. *freq_subday_type* está **int**, com um padrão de **0**, e pode ser um destes valores.  
+`[ @freq_subday_type = ] freq_subday_type` Especifica as unidades para *freq_subday_interval*. *freq_subday_type* está **int**, com um padrão de **0**, e pode ser um destes valores.  
   
 |Valor|Descrição (unidade)|  
 |-----------|--------------------------|  
@@ -97,11 +92,9 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**0x4**|Minutes (minutos)|  
 |**0x8**|Hours (horas)|  
   
- [  **@freq_subday_interval =** ] *freq_subday_interval*  
- O número de *freq_subday_type* períodos ocorrer entre cada execução de um trabalho. *freq_subday_interval* está **int**, com um padrão de **0**. Observação: Intervalo deve ser maior que 10 segundos. *freq_subday_interval* é ignorado nos casos em que *freq_subday_type* é igual a **1**.  
+`[ @freq_subday_interval = ] freq_subday_interval` O número de *freq_subday_type* períodos ocorrer entre cada execução de um trabalho. *freq_subday_interval* está **int**, com um padrão de **0**. Observação: Intervalo deve ser maior que 10 segundos. *freq_subday_interval* é ignorado nos casos em que *freq_subday_type* é igual a **1**.  
   
- [  **@freq_relative_interval =** ] *freq_relative_interval*  
- Ocorrência de um trabalho de *freq_interval* em cada mês, se *freq_interval* é 32 (mensal relativo). *freq_relative_interval* está **int**, com um padrão de **0**, e pode ser um destes valores. *freq_relative_interval* é ignorado nos casos em que *freq_type* não é igual a 32.  
+`[ @freq_relative_interval = ] freq_relative_interval` Ocorrência de um trabalho de *freq_interval* em cada mês, se *freq_interval* é 32 (mensal relativo). *freq_relative_interval* está **int**, com um padrão de **0**, e pode ser um destes valores. *freq_relative_interval* é ignorado nos casos em que *freq_type* não é igual a 32.  
   
 |Valor|Descrição (unidade)|  
 |-----------|--------------------------|  
@@ -111,36 +104,27 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**8**|Quarto|  
 |**16**|Last|  
   
- [  **@freq_recurrence_factor =** ] *freq_recurrence_factor*  
- O número de semanas ou meses entre execuções agendadas de um trabalho. *freq_recurrence_factor* é usado somente se *freq_type* é **8**, **16**, ou **32**. *freq_recurrence_factor* está **int**, com um padrão de **0**.  
+`[ @freq_recurrence_factor = ] freq_recurrence_factor` O número de semanas ou meses entre execuções agendadas de um trabalho. *freq_recurrence_factor* é usado somente se *freq_type* é **8**, **16**, ou **32**. *freq_recurrence_factor* está **int**, com um padrão de **0**.  
   
- [  **@active_start_date =** ] *active_start_date*  
- A data na qual a execução de um trabalho pode começar. *active_start_date* está **int**, com um padrão NULL, que indica a data de hoje. A data é formatada como DDMMAAAA. Se *active_start_date* não for nulo, a data deve ser maior que ou igual a 19900101.  
+`[ @active_start_date = ] active_start_date` A data em que a execução de um trabalho pode começar. *active_start_date* está **int**, com um padrão NULL, que indica a data de hoje. A data é formatada como DDMMAAAA. Se *active_start_date* não for nulo, a data deve ser maior que ou igual a 19900101.  
   
  Depois que a agenda estiver criada, reveja a data de início e confirme se essa é a data correta. Para obter mais informações, consulte a seção "Agendando datas de início" em [criar e anexar agendamentos a trabalhos](../../ssms/agent/create-and-attach-schedules-to-jobs.md).  
   
  Para agendamentos semanais ou mensais, o agente ignora se active_start_date está no passado e usa a data atual. Quando um agendamento do SQL Agent é criado usando o sp_add_schedule, há uma opção para especificar o parâmetro active_start_date que é a data em que a execução do trabalho será iniciada. Se o tipo de agendamento for semanal ou mensal e o parâmetro active_start_date for definido como uma data no passado, o parâmetro active_start_date será ignorado e a data atual será usada para active_start_date.  
   
- [  **@active_end_date =** ] *active_end_date*  
- A data na qual a execução de um trabalho pode parar. *active_end_date* está **int**, com um padrão de **99991231**, que indica 31 de dezembro de 9999. Formatada como AAAAMMDD.  
+`[ @active_end_date = ] active_end_date` A data na qual a execução de um trabalho pode parar. *active_end_date* está **int**, com um padrão de **99991231**, que indica 31 de dezembro de 9999. Formatada como AAAAMMDD.  
   
- [ **@active_start_time =** ] *active_start_time*  
- A hora em qualquer dia entre *active_start_date* e *active_end_date* para iniciar a execução de um trabalho. *active_start_time* está **int**, com um padrão de **000000**, que indica 12:00:00: 00 em um relógio de 24 horas e deve ser inserido com o formato HHMMSS.  
+`[ @active_start_time = ] active_start_time` A hora em qualquer dia entre *active_start_date* e *active_end_date* para iniciar a execução de um trabalho. *active_start_time* está **int**, com um padrão de **000000**, que indica 12:00:00: 00 em um relógio de 24 horas e deve ser inserido com o formato HHMMSS.  
   
- [  **@active_end_time =** ] *active_end_time*  
- A hora em qualquer dia entre *active_start_date* e *active_end_date* para terminar a execução de um trabalho. *active_end_time* está **int**, com um padrão de **235959**, que indica a 11:59:59 P.M. em um relógio de 24 horas e deve ser inserido com o formato HHMMSS.  
+`[ @active_end_time = ] active_end_time` A hora em qualquer dia entre *active_start_date* e *active_end_date* para terminar a execução de um trabalho. *active_end_time* está **int**, com um padrão de **235959**, que indica a 11:59:59 P.M. em um relógio de 24 horas e deve ser inserido com o formato HHMMSS.  
   
- [ **@owner_login_name**=] **'**_owner_login_name_**'**  
- O nome da entidade de segurança do servidor que possui a agenda. *owner_login_name* está **sysname**, com um padrão NULL, que indica que a agenda é pertence ao criador.  
+`[ @owner_login_name = ] 'owner_login_name'` O nome da entidade de servidor que possui a agenda. *owner_login_name* está **sysname**, com um padrão NULL, que indica que a agenda é pertence ao criador.  
   
- [ **@schedule_uid**=] _schedule_uid_**saída**  
- Um identificador exclusivo da agenda. *schedule_uid* é uma variável do tipo **uniqueidentifier**.  
+`[ @schedule_uid = ] _schedule_uidOUTPUT` Um identificador exclusivo da agenda. *schedule_uid* é uma variável do tipo **uniqueidentifier**.  
   
- [ **@schedule_id**=] _schedule_id_**saída**  
- Um identificador da agenda. *schedule_id* é uma variável do tipo **int**.  
+`[ @schedule_id = ] _schedule_idOUTPUT` Um identificador para a agenda. *schedule_id* é uma variável do tipo **int**.  
   
- [ **@originating_server**= ] *server_name*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @originating_server = ] server_name` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

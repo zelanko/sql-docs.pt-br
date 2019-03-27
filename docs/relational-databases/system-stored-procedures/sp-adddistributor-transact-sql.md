@@ -18,12 +18,12 @@ ms.assetid: 35415502-68d0-40f6-993c-180e50004f1e
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: db37da85e4b707970436b926f6e772bd74402311
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ada0d0323f4fe8e7f73150560161d8b65738dc13
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774428"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494308"
 ---
 # <a name="spadddistributor-transact-sql"></a>sp_adddistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,20 +43,16 @@ sp_adddistributor [ @distributor= ] 'distributor'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@distributor=**] **'***distribuidor***'**  
- É o nome do servidor de distribuição. *distribuidor* está **sysname**, sem padrão. Esse parâmetro só é usado na configuração de um Distribuidor remoto. Adiciona entradas para as propriedades do distribuidor o **msdb... MSdistributor** tabela.  
+`[ @distributor = ] 'distributor'` É o nome do servidor de distribuição. *distribuidor* está **sysname**, sem padrão. Esse parâmetro só é usado na configuração de um Distribuidor remoto. Adiciona entradas para as propriedades do distribuidor o **msdb... MSdistributor** tabela.  
   
- [  **@heartbeat_interval=**] *heartbeat_interval*  
- É o número máximo de minutos que um agente pode continuar sem registrar uma mensagem de progresso. *heartbeat_interval* está **int**, com um padrão de 10 minutos. Um trabalho do SQL Server Agent é criado e executado nesse intervalo para verificar os status dos agentes de replicação em execução.  
+`[ @heartbeat_interval = ] heartbeat_interval` É o número máximo de minutos que um agente pode prosseguir sem registrar uma mensagem de progresso. *heartbeat_interval* está **int**, com um padrão de 10 minutos. Um trabalho do SQL Server Agent é criado e executado nesse intervalo para verificar os status dos agentes de replicação em execução.  
   
- [  **@password=**] **'***senha***'**]  
- É a senha das **distributor_admin** logon. *senha* está **sysname**, com um padrão NULL. Se for NULL ou uma cadeia de caracteres vazia, a senha será reajustada a um valor aleatório. A senha deve ser configurada quando o primeiro distribuidor remoto é adicionado. **distributor_admin** login e *senha* são armazenados para entrada de servidor vinculado usado para um *distribuidor* conexão RPC, incluindo conexões locais. Se *distribuidor* é local, a senha para **distributor_admin** é definido como um novo valor. Para Publicadores com um distribuidor remoto, o mesmo valor de *senha* deve ser especificado ao executar **sp_adddistributor** no publicador e distribuidor. [sp_changedistributor_password](../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md) pode ser usado para alterar a senha do distribuidor.  
+`[ @password = ] 'password']` É a senha das **distributor_admin** logon. *senha* está **sysname**, com um padrão NULL. Se for NULL ou uma cadeia de caracteres vazia, a senha será reajustada a um valor aleatório. A senha deve ser configurada quando o primeiro distribuidor remoto é adicionado. **distributor_admin** login e *senha* são armazenados para entrada de servidor vinculado usado para um *distribuidor* conexão RPC, incluindo conexões locais. Se *distribuidor* é local, a senha para **distributor_admin** é definido como um novo valor. Para Publicadores com um distribuidor remoto, o mesmo valor de *senha* deve ser especificado ao executar **sp_adddistributor** no publicador e distribuidor. [sp_changedistributor_password](../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md) pode ser usado para alterar a senha do distribuidor.  
   
 > [!IMPORTANT]  
 >  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for necessário armazenar credenciais em um arquivo de script, você deverá proteger o arquivo para impedir acesso não autorizado.  
   
- [  **@from_scripting=** ] *from_scripting*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @from_scripting = ] from_scripting` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

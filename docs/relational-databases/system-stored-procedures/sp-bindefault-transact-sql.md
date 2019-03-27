@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f14b269b65b6a6c30e7ac8de25aebafa7b7c38be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 715387bcb15e27b0d53a7f000b0f97c2be5a4bbe
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835664"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494248"
 ---
 # <a name="spbindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,19 +46,16 @@ sp_bindefault [ @defname = ] 'default' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@defname=** ] **'***padrão***'**  
- É o nome do valor padrão criado por CREATE DEFAULT. *padrão* está **nvarchar(776)**, sem padrão.  
+`[ @defname = ] 'default'` É o nome do padrão que é criado por CREATE DEFAULT. *padrão* está **nvarchar(776)**, sem padrão.  
   
- [  **@objname=** ] **'***object_name***'**  
- É o nome da tabela e da coluna ou o tipo de dados de alias aos quais o valor padrão será associado. *object_name* está **nvarchar(776)** sem nenhum padrão. *object_name* não pode ser definido com o **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml**, ou CLR tipos definidos pelo usuário.  
+`[ @objname = ] 'object_name'` É o nome da tabela e coluna ou o tipo de dados do alias ao qual o padrão deve ser associado. *object_name* está **nvarchar(776)** sem nenhum padrão. *object_name* não pode ser definido com o **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml**, ou CLR tipos definidos pelo usuário.  
   
  Se *object_name* é um nome de uma parte, ele será resolvido como um tipo de dados de alias. Se for um nome de duas ou três partes, primeiro é resolvido como uma tabela e coluna; e se essa resolução falhar, ele será resolvido como um tipo de dados de alias. Por padrão, as colunas existentes do tipo de dados de alias herdam *padrão*, a menos que um padrão foi associado diretamente à coluna. Um padrão não pode ser associado a um **texto**, **ntext**, **imagem**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml**, **timestamp**, ou CLR coluna de tipo definido pelo usuário, uma coluna com a propriedade IDENTITY, uma coluna computada ou uma coluna que já tem uma restrição padrão.  
   
 > [!NOTE]  
 >  *object_name* pode conter colchetes **[]** como identificadores delimitados. Para obter mais informações, consulte [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
- [  **@futureonly=** ] **'***futureonly_flag***'**  
- É usado apenas ao associar um padrão a um tipo de dados de alias. *futureonly_flag* está **varchar(15)** com um padrão NULL. Quando esse parâmetro é definido como **futureonly**, as colunas existentes desse tipo de dados não podem herdar o novo padrão. Este parâmetro nunca é usado ao associar um padrão a uma coluna. Se *futureonly_flag* for NULL, o novo padrão é associado a quaisquer colunas do tipo de dados de alias que atualmente não tenham padrão ou que estejam usando o padrão existente do tipo de dados de alias.  
+`[ @futureonly = ] 'futureonly_flag'` É usado apenas ao associar um padrão a um tipo de dados de alias. *futureonly_flag* está **varchar(15)** com um padrão NULL. Quando esse parâmetro é definido como **futureonly**, as colunas existentes desse tipo de dados não podem herdar o novo padrão. Este parâmetro nunca é usado ao associar um padrão a uma coluna. Se *futureonly_flag* for NULL, o novo padrão é associado a quaisquer colunas do tipo de dados de alias que atualmente não tenham padrão ou que estejam usando o padrão existente do tipo de dados de alias.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -84,7 +81,7 @@ GO
 EXEC sp_bindefault 'today', 'HumanResources.Employee.HireDate';  
 ```  
   
-### <a name="b-binding-a-default-to-an-alias-data-type"></a>B. Associando um padrão a um tipo de dados de alias.  
+### <a name="b-binding-a-default-to-an-alias-data-type"></a>b. Associando um padrão a um tipo de dados de alias.  
  Já existem um padrão denominado `def_ssn` e um tipo de dados de alias denominado `ssn`. O exemplo a seguir associa o padrão `def_ssn` a `ssn`. Quando uma tabela for criada, o padrão será herdado por todas as colunas que tenham o tipo de dados de alias `ssn` designado. As colunas existentes do tipo **ssn** também herdam o padrão **def_ssn**, a menos que **futureonly** for especificado para *futureonly_flag* valor, ou, a menos que a coluna tem um padrão associado diretamente a ele. Os padrões associados a colunas sempre têm precedência aos associados a tipos de dados.  
   
 ```  

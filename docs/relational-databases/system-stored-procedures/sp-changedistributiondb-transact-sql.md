@@ -16,12 +16,12 @@ ms.assetid: 66f73185-ea9e-43f9-86ed-9dd933cee2f6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 031fc14eba8cdea8cdbff41d18d6e6ab6bc42a68
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 2966a784f647d402b849d5899b76b0614122b932
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133846"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492488"
 ---
 # <a name="spchangedistributiondb-transact-sql"></a>sp_changedistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,9 @@ sp_changedistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@database=**] **'**_banco de dados_**'**  
- É o nome do banco de dados de distribuição. *banco de dados* está **sysname**, sem padrão.  
+`[ @database = ] 'database'` É o nome do banco de dados de distribuição. *banco de dados* está **sysname**, sem padrão.  
   
- [  **@property=**] **'**_propriedade_**'**  
- É a propriedade a ser alterada para o banco de dados determinado. *propriedade* está **sysname**, e pode ser um destes valores.  
+`[ @property = ] 'property'` É a propriedade a ser alterada para determinado banco de dados. *propriedade* está **sysname**, e pode ser um destes valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -53,8 +51,7 @@ sp_changedistributiondb [ @database= ] 'database'
 |**min_distretention**|Período mínimo de retenção de distribuição.|  
 |NULL (padrão)|Todos disponíveis *propriedade* valores são impressos.|  
   
- [  **@value=**] **'**_valor_**'**  
- É o novo valor da propriedade especificada. *valor* está **nvarchar (255)**, com um padrão NULL.  
+`[ @value = ] 'value'` É o novo valor para a propriedade especificada. *valor* está **nvarchar (255)**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

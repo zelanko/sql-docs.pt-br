@@ -21,17 +21,17 @@ ms.assetid: 160a6b29-5e80-44ab-80ec-77d4280f627c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d18fa2ca30559ee31ed5caeaddf361f0895986d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab5c15d15c77688c06eedec1d54e82c7b8199380
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685514"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492924"
 ---
 # <a name="spaddserver-transact-sql"></a>sp_addserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Define o nome da instância local do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando o computador que hospeda [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é renomeado, use **sp_addserver** para informar a instância da [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] do novo nome do computador. Esse procedimento deve ser executado em todas as instâncias do [!INCLUDE[ssDE](../../includes/ssde-md.md)] hospedadas no computador. O nome da instância de [!INCLUDE[ssDE](../../includes/ssde-md.md)] não pode ser alterado. Para alterar o nome de instância de uma instância nomeada, instale uma nova instância com o nome desejado, desanexe os arquivos de bancos de dados da instância antiga, anexe os bancos de dados à nova instância e remova a instância antiga. Como alternativa, você pode criar um nome de alias de cliente no computador cliente, redirecionando a conexão para um nome de servidor e de instância diferente ou para uma combinação **server:port** sem alterar o nome da instância no computador do servidor.  
+  Define o nome da instância local do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando o computador que hospeda [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é renomeado, use **sp_addserver** para informar a instância da [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] do novo nome do computador. Esse procedimento deve ser executado em todas as instâncias do [!INCLUDE[ssDE](../../includes/ssde-md.md)] hospedadas no computador. O nome da instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] não pode ser alterado. Para alterar o nome de instância de uma instância nomeada, instale uma nova instância com o nome desejado, desanexe os arquivos de bancos de dados da instância antiga, anexe os bancos de dados à nova instância e remova a instância antiga. Como alternativa, você pode criar um nome de alias de cliente no computador cliente, redirecionando a conexão para um nome de servidor e de instância diferente ou para uma combinação **server:port** sem alterar o nome da instância no computador do servidor.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,20 +45,17 @@ sp_addserver [ @server = ] 'server' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@server =** ] **'***server***'**  
- É o nome do servidor. Os nomes de servidor devem ser exclusivos e seguir as regras de nomes do computador do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, embora não sejam permitidos espaços. *server* é **sysname**, sem padrão.  
+`[ @server = ] 'server'` É o nome do servidor. Os nomes de servidor devem ser exclusivos e seguir as regras de nomes do computador do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, embora não sejam permitidos espaços. *server* é **sysname**, sem padrão.  
   
- Quando várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estão instalados em um computador, uma instância funciona como se ele está em um servidor separado. Especificar uma instância nomeada consultando *server* como *NomedoServidor \ NomedaInstância*.  
+ Quando diversas instâncias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estão instaladas em um computador, uma instância funciona como se estivesse em um servidor separado. Especificar uma instância nomeada consultando *server* como *NomedoServidor \ NomedaInstância*.  
   
- [  **@local =** ] **'LOCAL'**  
- Especifica se o servidor que está sendo adicionado é um servidor local. **@local** está **varchar(10)**, com um padrão NULL. Especificando **@local** como **LOCAL** define **@server** como o nome do servidor local e faz com que o @@SERVERNAME função para retornar o valor dos *server*.  
+`[ @local = ] 'LOCAL'` Especifica que o servidor que está sendo adicionado como um servidor local. **@local** está **varchar(10)**, com um padrão NULL. Especificando **@local** como **LOCAL** define **@server** como o nome do servidor local e faz com que o @@SERVERNAME função para retornar o valor dos *server*.  
   
- A Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] define essa variável como o nome do computador durante a instalação. Por padrão, o nome do computador é os maneira como os usuários se conectar a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sem a necessidade de configuração adicional.  
+ A Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] define essa variável como o nome do computador durante a instalação. Por padrão, o nome do computador é o modo como os usuários se conectam a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sem necessidade de configuração adicional.  
   
  A definição local entra em vigor apenas depois de o [!INCLUDE[ssDE](../../includes/ssde-md.md)] ser reiniciado. Apenas um servidor local pode ser definido em cada instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
- [  **@duplicate_ok =** ] **'duplicate_OK'**  
- Especifica se um nome de servidor duplicado é permitido. **@duplicate_OK** está **varchar(13)**, com um padrão NULL. **@duplicate_OK** só pode ter o valor **duplicate_OK** ou nulo. Se **duplicate_OK** for especificado e o nome do servidor que está sendo adicionado já existe, nenhum erro será gerado. Se não forem usados parâmetros nomeados, **@local** deve ser especificado.  
+`[ @duplicate_ok = ] 'duplicate_OK'` Especifica se um nome de servidor duplicado é permitido. **@duplicate_OK** está **varchar(13)**, com um padrão NULL. **@duplicate_OK** só pode ter o valor **duplicate_OK** ou nulo. Se **duplicate_OK** for especificado e o nome do servidor que está sendo adicionado já existe, nenhum erro será gerado. Se não forem usados parâmetros nomeados, **@local** deve ser especificado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -74,7 +71,7 @@ sp_addserver [ @server = ] 'server' ,
  Exige uma associação na função de servidor fixa **setupadmin** .  
   
 ## <a name="examples"></a>Exemplos  
- A exemplo a seguir altera a [!INCLUDE[ssDE](../../includes/ssde-md.md)] entrada para o nome do computador que hospeda [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para `ACCOUNTS`.  
+ O exemplo a seguir altera a entrada do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para o nome do computador que hospeda o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para `ACCOUNTS`.  
   
 ```  
 sp_addserver 'ACCOUNTS', 'local';  

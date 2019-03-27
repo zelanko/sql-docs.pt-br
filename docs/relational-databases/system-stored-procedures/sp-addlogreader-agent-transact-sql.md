@@ -16,12 +16,12 @@ ms.assetid: d83096b9-96ee-4789-bde0-940d4765b9ed
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6fdec3ada9bec27f6ecca2ea6a888d01640f6edb
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 7b3968f7c196c63ed66b98f19acd1dcf4d972336
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210835"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494337"
 ---
 # <a name="spaddlogreaderagent-transact-sql"></a>sp_addlogreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,35 +47,28 @@ sp_addlogreader_agent [ @job_login = ] 'job_login'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@job_login**=] **'**_job_login_**'**  
- É o logon da conta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows na qual o agente é executado. *job_login* está **nvarchar(257)**, com um valor padrão de NULL. Essa conta do Windows sempre é usada para conexões de agente com o Distribuidor.  
+`[ @job_login = ] 'job_login'` É o logon para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows da conta na qual o agente é executado. *job_login* está **nvarchar(257)**, com um valor padrão de NULL. Essa conta do Windows sempre é usada para conexões de agente com o Distribuidor.  
   
 > [!NOTE]
 >  Para não - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores, isso deve ser o mesmo logon especificado em [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  
   
- [ **@job_password**=] **'**_job_password_**'**  
- É a senha da conta do Windows na qual o agente é executado. *job_password* está **sysname**, com um valor padrão de NULL.  
+`[ @job_password = ] 'job_password'` É a senha para a conta do Windows sob a qual o agente é executado. *job_password* está **sysname**, com um valor padrão de NULL.  
   
 > [!IMPORTANT]  
 >  Não armazene informações de autenticação em arquivos de script. Para melhor segurança, nomes de logon e senhas devem ser fornecidos em tempo de execução.  
   
- [ **@job_name**=] **'**_job_name_**'**  
- É o nome de um trabalho de agente existente. *job_name* está **sysname**, com um valor padrão de NULL. Esse parâmetro só é especificado quando o agente é iniciado usando um trabalho existente em vez de um trabalho recém-criado (o padrão).  
+`[ @job_name = ] 'job_name'` É o nome de um trabalho de agente existente. *job_name* está **sysname**, com um valor padrão de NULL. Esse parâmetro só é especificado quando o agente é iniciado usando um trabalho existente em vez de um trabalho recém-criado (o padrão).  
   
- [ **@publisher_security_mode**=] *publisher_security_mode*  
- É o modo de segurança usado pelo agente ao conectar-se ao Publicador. *publisher_security_mode* está **smallint**, com um padrão de **1**. **0** especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação, e **1** Especifica a autenticação do Windows. Um valor de **0** deve ser especificado para não - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores.  
+`[ @publisher_security_mode = ] publisher_security_mode` É o modo de segurança usado pelo agente ao se conectar ao publicador. *publisher_security_mode* está **smallint**, com um padrão de **1**. **0** especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação, e **1** Especifica a autenticação do Windows. Um valor de **0** deve ser especificado para não - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores.  
   
- [ **@publisher_login**=] **'**_publisher_login_**'**  
- É o logon usado na conexão com o Publicador. *publisher_login* está **sysname**, com um padrão NULL. *publisher_login* deve ser especificado quando *publisher_security_mode* é **0**. Se *publisher_login* for NULL e *publisher_security_mode* está **1**, em seguida, a conta do Windows especificada na *job_login* será usado ao conectar-se ao publicador.  
+`[ @publisher_login = ] 'publisher_login'` É o logon usado ao conectar-se ao publicador. *publisher_login* está **sysname**, com um padrão NULL. *publisher_login* deve ser especificado quando *publisher_security_mode* é **0**. Se *publisher_login* for NULL e *publisher_security_mode* está **1**, em seguida, a conta do Windows especificada na *job_login* será usado ao conectar-se ao publicador.  
   
- [ **@publisher_password**=] **'**_publisher_password_**'**  
- É a senha usada ao conectar-se ao Publicador. *publisher_password* está **sysname**, com um padrão NULL.  
+`[ @publisher_password = ] 'publisher_password'` É a senha usada ao conectar-se ao publicador. *publisher_password* está **sysname**, com um padrão NULL.  
   
 > [!IMPORTANT]  
 >  Não armazene informações de autenticação em arquivos de script. Para melhor segurança, nomes de logon e senhas devem ser fornecidos em tempo de execução.  
   
- [ **@publisher**=] **'**_publisher_**'**  
- É o nome do não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
+`[ @publisher = ] 'publisher'` É o nome do não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
 >  Esse parâmetro não deve ser especificado para um Editor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

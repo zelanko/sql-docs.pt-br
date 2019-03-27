@@ -18,12 +18,12 @@ ms.assetid: d29e1c24-3a3c-47a4-a726-4584afa6038a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 35bd51c2c2d1d9e3ed82cd06cd4a4524b9f7e422
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c7dab148af9d8c3db8a9b1503ad33975c790120
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635904"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493218"
 ---
 # <a name="spaddlogshippingsecondarydatabase-transact-sql"></a>sp_add_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,23 +54,17 @@ sp_add_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@secondary_database** =] '*secondary_database*'  
- É o nome do banco de dados secundário. *secondary_database* está **sysname**, sem padrão.  
+`[ @secondary_database = ] 'secondary_database'` É o nome do banco de dados secundário. *secondary_database* está **sysname**, sem padrão.  
   
- [ **@primary_server** =] '*primary_server*'  
- O nome da instância primária do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] na configuração de envio de logs. *primary_server* está **sysname** e não pode ser NULL.  
+`[ @primary_server = ] 'primary_server'` O nome da instância primária do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] na configuração de envio de logs. *primary_server* está **sysname** e não pode ser NULL.  
   
- [ **@primary_database** =] '*primary_database*'  
- É o nome do banco de dados do servidor primário. *primary_database* está **sysname**, sem padrão.  
+`[ @primary_database = ] 'primary_database'` É o nome do banco de dados no servidor primário. *primary_database* está **sysname**, sem padrão.  
   
- [ **@restore_delay** =] '*restore_delay*'  
- A quantidade de tempo, em minutos, que o servidor secundário espera antes de restaurar um determinado arquivo de backup. *restore_delay* está **int** e não pode ser NULL. O valor padrão é 0.  
+`[ @restore_delay = ] 'restore_delay'` A quantidade de tempo, em minutos, em que o servidor secundário espera antes de restaurar um determinado arquivo de backup. *restore_delay* está **int** e não pode ser NULL. O valor padrão é 0.  
   
- [ **@restore_all** =] '*restore_all*'  
- Se definido como 1, o servidor secundário restaura todos os backups de log de transações disponíveis quando o trabalho de restauração é executado. Caso contrário, ele será interrompido depois que um arquivo for restaurado. *restore_all* está **bit** e não pode ser NULL.  
+`[ @restore_all = ] 'restore_all'` Se definido como 1, o servidor secundário restaura todos os backups de log de transações disponíveis quando o trabalho de restauração é executada. Caso contrário, ele será interrompido depois que um arquivo for restaurado. *restore_all* está **bit** e não pode ser NULL.  
   
- [ **@restore_mode** =] '*restore_mode*'  
- O modo de restauração do banco de dados secundário.  
+`[ @restore_mode = ] 'restore_mode'` O modo de restauração de banco de dados secundário.  
   
  0 = Log de restauração com NORECOVERY.  
   
@@ -78,29 +72,21 @@ sp_add_log_shipping_secondary_database
   
  *Restaure* está **bit** e não pode ser NULL.  
   
- [ **@disconnect_users** =] '*disconnect_users*'  
- Se definido como 1, os usuários são desconectados do banco de dados secundário quando uma operação de restauração é executada. Padrão = 0. *Desconecte* é que os usuários **bit** e não pode ser NULL.  
+`[ @disconnect_users = ] 'disconnect_users'` Se definido como 1, os usuários são desconectados do banco de dados secundário quando uma operação de restauração é executada. Padrão = 0. *Desconecte* é que os usuários **bit** e não pode ser NULL.  
   
- [ **@block_size** =] '*block_size*'  
- Tamanho, em bytes, usado como tamanho de bloco para o dispositivo de backup. *block_size* está **int** com um valor padrão de -1.  
+`[ @block_size = ] 'block_size'` O tamanho, em bytes, que é usado como o tamanho do bloco para o dispositivo de backup. *block_size* está **int** com um valor padrão de -1.  
   
- [ **@buffer_count** =] '*buffer_count*'  
- Número total de buffers usado pela operação de backup ou restauração. *buffer_count* está **int** com um valor padrão de -1.  
+`[ @buffer_count = ] 'buffer_count'` O número total de buffers usados pela operação de backup ou restauração. *buffer_count* está **int** com um valor padrão de -1.  
   
- [ **@max_transfer_size** =] '*max_transfer_size*'  
- O tamanho, em bytes, da solicitação máxima de entrada ou de saída emitida por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o dispositivo de backup. *max_transfersize* está **int** e pode ser NULL.  
+`[ @max_transfer_size = ] 'max_transfer_size'` O tamanho, em bytes, da entrada máximo ou solicitação de saída que é emitida por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o dispositivo de backup. *max_transfersize* está **int** e pode ser NULL.  
   
- [ **@restore_threshold** =] '*restore_threshold*'  
- Número de minutos permitidos a decorrer entre operações de restauração antes que um alerta seja gerado. *restore_threshold* está **int** e não pode ser NULL.  
+`[ @restore_threshold = ] 'restore_threshold'` O número de minutos permitidos a decorrer entre operações de restauração antes que um alerta seja gerado. *restore_threshold* está **int** e não pode ser NULL.  
   
- [ **@threshold_alert** =] '*threshold_alert*'  
- É o alerta a ser gerado quando o limite do backup for excedido. *alerta de limite* está **int**, com um padrão de 14.420.  
+`[ @threshold_alert = ] 'threshold_alert'` É o alerta a ser emitido quando o limite de backup é excedido. *alerta de limite* está **int**, com um padrão de 14.420.  
   
- [ **@threshold_alert_enabled** =] '*threshold_alert_enabled*'  
- Especifica se um alerta é gerado quando *backup_threshold* for excedido. O valor de um (1), padrão, significa que o alerta é emitido. *threshold_alert_enabled* está **bit**.  
+`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` Especifica se um alerta é gerado quando *backup_threshold* for excedido. O valor de um (1), padrão, significa que o alerta é emitido. *threshold_alert_enabled* está **bit**.  
   
- [ **@history_retention_period** =] '*history_retention_period*'  
- É o período em minutos no qual o histórico é retido. *history_retention_period* está **int**, com um padrão NULL. O valor 14420 será usado se nenhum valor for especificado.  
+`[ @history_retention_period = ] 'history_retention_period'` É o período de tempo em minutos no qual o histórico é retido. *history_retention_period* está **int**, com um padrão NULL. O valor 14420 será usado se nenhum valor for especificado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

@@ -16,12 +16,12 @@ ms.assetid: 2ea27001-74f4-463e-bf1b-b6b5a86b9219
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ad6e8fe499e3ffe57a745cfb924bdc792938dd9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 991ee7139ae4a323a1d426d1882e4f6b3a4df871
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810938"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493508"
 ---
 # <a name="spaddtabletocontents-transact-sql"></a>sp_addtabletocontents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@table_name=**] **'**_table_name_**'**  
- É o nome da tabela. *table_name* está **sysname**, sem padrão.  
+`[ @table_name = ] 'table_name'` É o nome da tabela. *table_name* está **sysname**, sem padrão.  
   
- [  **@owner_name=**] **'**_owner_name_**'**  
- É o nome do proprietário da tabela. *owner_name* está **sysname**, com um padrão NULL.  
+`[ @owner_name = ] 'owner_name'` É o nome do proprietário da tabela. *owner_name* está **sysname**, com um padrão NULL.  
   
- [  **@filter_clause=** ] **'**_filter_clause_**'**  
- Especifica uma cláusula de filtro que controla quais linhas dos dados recém-carregados devem ser adicionadas às tabelas de controle de mesclagem. *filter_clause* está **nvarchar (4000)**, com um valor padrão de NULL. Se *filter_clause* é **nulo**, em massa de todas as linhas carregadas são adicionadas.  
+`[ @filter_clause = ] 'filter_clause'` Especifica uma cláusula de filtro que controla quais linhas dos dados recém-carregados devem ser adicionadas às tabelas de controle de mesclagem. *filter_clause* está **nvarchar (4000)**, com um valor padrão de NULL. Se *filter_clause* é **nulo**, em massa de todas as linhas carregadas são adicionadas.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

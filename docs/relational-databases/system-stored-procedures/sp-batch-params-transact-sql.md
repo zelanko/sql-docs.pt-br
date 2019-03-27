@@ -18,12 +18,12 @@ ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a759490fdd2306d7fecfd34484708e5c24970217
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: b66e8b2d1b0d397a24c4ff5c702c00aff14988d4
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126836"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492808"
 ---
 # <a name="spbatchparams-transact-sql"></a>sp_batch_params (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@tsqlbatch =**] **'**_tsqlbatch_**'**  
- É uma cadeia de caracteres Unicode que contém um [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou lote para o qual parâmetro informações são que você deseja. *tsqlbatch* está **nvarchar (max)** ou implicitamente conversível em **nvarchar (max)**.  
+`[ @tsqlbatch = ] 'tsqlbatch'` É uma cadeia de caracteres Unicode que contém um [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou lote para o qual parâmetro informações são que você deseja. *tsqlbatch* está **nvarchar (max)** ou implicitamente conversível em **nvarchar (max)**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  None  
@@ -58,7 +57,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 |**LENGTH**|**int**|Tamanho da transferência dos dados. Esse valor será NULL.|  
 |**ESCALA**|**smallint**|Número de dígitos à direita da vírgula decimal. Esse valor será NULL.|  
 |**RADIX**|**smallint**|É a base para tipos numéricos. Esse valor será NULL.|  
-|**PERMITE VALOR NULO**|**smallint**|Especifica a condição de nulidade:<br /><br /> 1 = O tipo de dados do parâmetro pode ser criado permitindo valores nulos.<br /><br /> 0 = Não são permitidos valores nulos.<br /><br /> Esse valor será NULL.|  
+|**NULLABLE**|**smallint**|Especifica a condição de nulidade:<br /><br /> 1 = O tipo de dados do parâmetro pode ser criado permitindo valores nulos.<br /><br /> 0 = Não são permitidos valores nulos.<br /><br /> Esse valor será NULL.|  
 |**SQL_DATA_TYPE**|**smallint**|Valor do tipo de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como ele aparece no campo TYPE do descritor. Esta coluna é igual à coluna **DATA_TYPE**, com exceção dos tipos de dados **datetime** e **interval** ISO. Esta coluna sempre retorna um valor. Esse valor será NULL.|  
 |**SQL_DATETIME_SUB**|**smallint**|O **datetime** ou ISO **intervalo** subcódigo se o valor de **SQL_DATA_TYPE** for SQL_DATETIME ou SQL_INTERVAL. Para tipos de dados diferente de **datetime** e ISO **intervalo**, essa coluna será NULL. Esse valor será NULL.|  
 |**CHAR_OCTET_LENGTH**|**int**|Comprimento máximo em bytes de um **caractere** ou **binário** parâmetro de tipo de dados. Para todos os outros tipos de dados, esta coluna retorna um valor nulo. Esse valor é sempre NULL.|  

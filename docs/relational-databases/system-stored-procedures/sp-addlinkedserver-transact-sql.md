@@ -18,12 +18,12 @@ ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: be80ed76713788f81704609c4828e0a871ffdc7d
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: b4ff861015fc669defee69fece5c26ee45d66eaa
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590100"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493898"
 ---
 # <a name="spaddlinkedserver-transact-sql"></a>sp_addlinkedserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,31 +45,24 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@server=** ] **'**_servidor_**'**  
- É o nome do servidor vinculado a ser criado. *server* é **sysname**, sem padrão.  
+`[ @server = ] 'server'` É o nome do servidor vinculado para criar. *server* é **sysname**, sem padrão.  
   
- [  **@srvproduct=** ] **'**_product_name_**'**  
- É o nome do produto da fonte de dados OLE DB a ser adicionado como um servidor vinculado. *product_name* está **nvarchar (** 128 **)**, com um padrão NULL. Se **SQL Server**, *provider_name*, *data_source*, *local*, *provider_string*, e *catálogo* não deve ser especificado.  
+`[ @srvproduct = ] 'product_name'` É o nome do produto da fonte de dados OLE DB para adicionar como um servidor vinculado. *product_name* está **nvarchar (** 128 **)**, com um padrão NULL. Se **SQL Server**, *provider_name*, *data_source*, *local*, *provider_string*, e *catálogo* não deve ser especificado.  
   
- [  **@provider=** ] **'**_provider_name_**'**  
- É o identificador programático exclusivo (PROGID) do provedor OLE DB que corresponde a essa fonte de dados. *provider_name* deve ser exclusivo para o provedor OLE DB especificado instalado no computador atual. *provider_name* está **nvarchar (** 128 **)**, com um padrão de NULL; no entanto, se *provider_name* é omitido, SQLNCLI será usado. (Use SQLNCLI, e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fará o redirecionamento para a última versão do provedor OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.) Espera-se que o provedor OLE DB seja registrado com o PROGID especificado fornecido no Registro.  
+`[ @provider = ] 'provider_name'` É o identificador programático exclusivo (PROGID) do provedor OLE DB que corresponde a essa fonte de dados. *provider_name* deve ser exclusivo para o provedor OLE DB especificado instalado no computador atual. *provider_name* está **nvarchar (** 128 **)**, com um padrão de NULL; no entanto, se *provider_name* é omitido, SQLNCLI será usado. (Use SQLNCLI, e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fará o redirecionamento para a última versão do provedor OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.) Espera-se que o provedor OLE DB seja registrado com o PROGID especificado fornecido no Registro.  
   
- [  **@datasrc=** ] **'**_data_source_**'**  
- É o nome da fonte de dados conforme interpretada pelo provedor OLE DB. *data_source* está **nvarchar (** 4000 **)**. *data_source* é passado como a propriedade DBPROP_INIT_DATASOURCE para inicializar o provedor OLE DB.  
+`[ @datasrc = ] 'data_source'` É o nome da fonte de dados conforme interpretado pelo provedor OLE DB. *data_source* is **nvarchar(** 4000 **)**. *data_source* é passado como a propriedade DBPROP_INIT_DATASOURCE para inicializar o provedor OLE DB.  
   
- [  **@location=** ] **'**_local_**'**  
- É o local do banco de dados conforme interpretado pelo provedor OLE DB. *local* está **nvarchar (** 4000 **)**, com um padrão NULL. *local* é passado como a propriedade DBPROP_INIT_LOCATION para inicializar o provedor OLE DB.  
+`[ @location = ] 'location'` É o local do banco de dados conforme interpretado pelo provedor OLE DB. *local* está **nvarchar (** 4000 **)**, com um padrão NULL. *local* é passado como a propriedade DBPROP_INIT_LOCATION para inicializar o provedor OLE DB.  
   
- [  **@provstr=** ] **'**_provider_string_**'**  
- É a cadeia de conexão específica ao provedor OLE DB que identifica uma fonte de dados exclusiva. *provider_string* está **nvarchar (** 4000 **)**, com um padrão NULL. *provstr* é passada para IDataInitialize ou definido como a propriedade DBPROP_INIT_PROVIDERSTRING para inicializar o provedor OLE DB.  
+`[ @provstr = ] 'provider_string'` É a cadeia de caracteres de conexão específica do provedor OLE DB que identifica uma fonte de dados exclusivo. *provider_string* está **nvarchar (** 4000 **)**, com um padrão NULL. *provstr* é passada para IDataInitialize ou definido como a propriedade DBPROP_INIT_PROVIDERSTRING para inicializar o provedor OLE DB.  
   
  Quando o servidor vinculado é criado em relação a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client, a instância pode ser especificada usando a palavra-chave SERVER como SERVER =*servername*\\*instancename*para especificar uma instância específica do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *servername* é o nome do computador no qual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver em execução, e *instancename* é o nome da instância específica do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à qual o usuário será conectado.  
   
 > [!NOTE]
 >  Para acessar um banco de dados espelho, uma cadeia de conexão deve conter o nome do banco de dados. Esse nome é necessário para habilitar tentativas de failover pelo provedor de acesso de dados. O banco de dados pode ser especificado na **@provstr** ou **@catalog** parâmetro. Opcionalmente, a cadeia de conexão também pode fornecer um nome de parceiro de failover.  
   
- [  **@catalog=** ] **'**_catálogo_**'**  
- É o catálogo a ser usado quando uma conexão for feita ao provedor OLE DB. *catálogo* está **sysname**, com um padrão NULL. *catálogo* é passado como a propriedade DBPROP_INIT_CATALOG para inicializar o provedor OLE DB. Quando o servidor vinculado for definido em relação a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o catálogo se referirá ao banco de dados padrão ao qual o servidor vinculado estará mapeado.  
+`[ @catalog = ] 'catalog'` É o catálogo a ser usado quando uma conexão é feita para o provedor OLE DB. *catálogo* está **sysname**, com um padrão NULL. *catálogo* é passado como a propriedade DBPROP_INIT_CATALOG para inicializar o provedor OLE DB. Quando o servidor vinculado for definido em relação a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o catálogo se referirá ao banco de dados padrão ao qual o servidor vinculado estará mapeado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -85,7 +78,7 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Provedor OLE DB Native Client|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] <sup>1</sup> (padrão)||||||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Provedor OLE DB Native Client||**SQLNCLI**|Nome de rede do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (para instância padrão)|||Nome do banco de dados (opcional)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Provedor OLE DB Native Client||**SQLNCLI**|*servername*\\*instancename* (para uma instância específica)|||Nome do banco de dados (opcional)|  
-|Oracle, versão 8 e posterior|Provedor Oracle para OLE DB|Any (qualquer)|**OraOLEDB. Oracle**|Alias para o banco de dados de Oracle||||  
+|Oracle, versão 8 e posterior|Provedor Oracle para OLE DB|Any (qualquer)|**OraOLEDB.Oracle**|Alias para o banco de dados de Oracle||||  
 |Access/Jet|Microsoft OLE DB Provider for Jet|Any (qualquer)|**Microsoft.Jet.OLEDB.4.0**|Caminho completo de arquivo de banco de dados de Jet||||  
 |Fonte de dados ODBC|Microsoft OLE DB Provider para ODBC|Any (qualquer)|**MSDASQL**|DSN do sistema da fonte de dados ODBC||||  
 |Fonte de dados ODBC|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider para ODBC|Any (qualquer)|**MSDASQL**|||Cadeia de conexão ODBC||  

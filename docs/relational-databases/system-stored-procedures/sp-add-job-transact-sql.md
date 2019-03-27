@@ -18,12 +18,12 @@ ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c6ac15a78e8689e76fc9687a6cd8784eb1fc4dd2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: eb371603230c0c3b6fbee0012c89ce402711fb6e
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537866"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493228"
 ---
 # <a name="spaddjob-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,29 +55,21 @@ sp_add_job [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@job_name =** ] **'**_job_name_**'**  
- O nome do trabalho. O nome deve ser exclusivo e não pode conter a porcentagem (**%**) caracteres. *job_name*está **nvarchar (128)**, sem padrão.  
+`[ @job_name = ] 'job_name'` O nome do trabalho. O nome deve ser exclusivo e não pode conter a porcentagem (**%**) caracteres. *job_name*está **nvarchar (128)**, sem padrão.  
   
- [  **@enabled =** ] *habilitado*  
- Indica o status do trabalho adicionado. *habilitada*está **tinyint**, com um padrão de 1 (habilitado). Se **0**, o trabalho não está habilitado e não é executado de acordo com a sua agenda; no entanto, ele pode ser executado manualmente.  
+`[ @enabled = ] enabled` Indica o status do trabalho adicionado. *habilitada*está **tinyint**, com um padrão de 1 (habilitado). Se **0**, o trabalho não está habilitado e não é executado de acordo com a sua agenda; no entanto, ele pode ser executado manualmente.  
   
- [  **@description =** ] **'**_descrição_**'**  
- A descrição do trabalho. *Descrição* está **nvarchar(512)**, com um padrão NULL. Se *descrição* for não omitido, será usada "Nenhuma descrição disponível".  
+`[ @description = ] 'description'` A descrição do trabalho. *Descrição* está **nvarchar(512)**, com um padrão NULL. Se *descrição* for não omitido, será usada "Nenhuma descrição disponível".  
   
- [  **@start_step_id =** ] *step_id*  
- O número de identificação da primeira etapa a ser executada para o trabalho. *step_id*está **int**, com um padrão de 1.  
+`[ @start_step_id = ] step_id` O número de identificação da primeira etapa a ser executada para o trabalho. *step_id*está **int**, com um padrão de 1.  
   
- [  **@category_name =** ] **'**_categoria_**'**  
- A categoria do trabalho. *categoria*está **sysname**, com um padrão NULL.  
+`[ @category_name = ] 'category'` A categoria do trabalho. *categoria*está **sysname**, com um padrão NULL.  
   
- [  **@category_id =** ] *category_id*  
- Um mecanismo independente de idioma para especificar uma categoria de trabalho. *category_id*está **int**, com um padrão NULL.  
+`[ @category_id = ] category_id` Um mecanismo independente de idioma para especificar uma categoria de trabalho. *category_id*está **int**, com um padrão NULL.  
   
- [  **@owner_login_name =** ] **'**_logon_**'**  
- O nome do logon que é o proprietário do trabalho. *login*está **sysname**, com um padrão NULL, que é interpretado como o nome de logon atual. Somente os membros dos **sysadmin** função de servidor fixa pode definir ou alterar o valor para **@owner_login_name**. Se os usuários que não são membros do **sysadmin** função definir ou alterar o valor de **@owner_login_name**, falha na execução deste procedimento armazenado e um erro será retornado.  
+`[ @owner_login_name = ] 'login'` O nome do logon que possui o trabalho. *login*está **sysname**, com um padrão NULL, que é interpretado como o nome de logon atual. Somente os membros dos **sysadmin** função de servidor fixa pode definir ou alterar o valor para **@owner_login_name**. Se os usuários que não são membros do **sysadmin** função definir ou alterar o valor de **@owner_login_name**, falha na execução deste procedimento armazenado e um erro será retornado.  
   
- [  **@notify_level_eventlog =** ] *eventlog_level*  
- Um valor que indica quando colocar uma entrada no log de aplicativo do Microsoft Windows para este trabalho. *eventlog_level*está **int**, e pode ser um destes valores.  
+`[ @notify_level_eventlog = ] eventlog_level` Um valor que indica quando colocar uma entrada no log de aplicativo do Microsoft Windows para este trabalho. *eventlog_level*está **int**, e pode ser um destes valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -86,32 +78,24 @@ sp_add_job [ @job_name = ] 'job_name'
 |**2** (padrão)|Caso haja falha|  
 |**3**|Always|  
   
- [  **@notify_level_email =** ] *email_level*  
- Um valor que indica quando enviar um email após a conclusão deste trabalho. *email_level*está **int**, com um padrão de **0**, que indica nunca. *email_level*usa os mesmos valores *eventlog_level*.  
+`[ @notify_level_email = ] email_level` Um valor que indica quando enviar um email após a conclusão deste trabalho. *email_level*está **int**, com um padrão de **0**, que indica nunca. *email_level*usa os mesmos valores *eventlog_level*.  
   
- [  **@notify_level_netsend =** ] *netsend_level*  
- Um valor que indica quando enviar uma mensagem da rede após a conclusão deste trabalho. *netsend_level*está **int**, com um padrão de **0**, que indica nunca. *netsend_level* usa os mesmos valores *eventlog_level*.  
+`[ @notify_level_netsend = ] netsend_level` Um valor que indica quando enviar uma mensagem de rede após a conclusão deste trabalho. *netsend_level*está **int**, com um padrão de **0**, que indica nunca. *netsend_level* usa os mesmos valores *eventlog_level*.  
   
- [  **@notify_level_page =** ] *page_level*  
- Um valor que indica quando enviar uma página após a conclusão deste trabalho. *page_level*está **int**, com um padrão de **0**, que indica nunca. *page_level*usa os mesmos valores *eventlog_level*.  
+`[ @notify_level_page = ] page_level` Um valor que indica quando enviar uma página após a conclusão deste trabalho. *page_level*está **int**, com um padrão de **0**, que indica nunca. *page_level*usa os mesmos valores *eventlog_level*.  
   
- [  **@notify_email_operator_name =** ] **'**_email_name_**'**  
- O nome de email da pessoa para enviar email quando *email_level* for atingido. *email_name* está **sysname**, com um padrão NULL.  
+`[ @notify_email_operator_name = ] 'email_name'` O nome de email da pessoa para enviar email quando *email_level* for atingido. *email_name* está **sysname**, com um padrão NULL.  
   
- [  **@notify_netsend_operator_name =** ] **'**_netsend_name_**'**  
- O nome do operador para quem a mensagem da rede será enviada após a conclusão deste trabalho. *netsend_name*está **sysname**, com um padrão NULL.  
+`[ @notify_netsend_operator_name = ] 'netsend_name'` O nome do operador para quem a mensagem de rede é enviada após a conclusão deste trabalho. *netsend_name*está **sysname**, com um padrão NULL.  
   
- [  **@notify_page_operator_name =** ] **'**_page_name_**'**  
- O nome da pessoa para quem uma mensagem de pager será enviada após a conclusão deste trabalho. *page_name*está **sysname**, com um padrão NULL.  
+`[ @notify_page_operator_name = ] 'page_name'` O nome da pessoa para a página após a conclusão deste trabalho. *page_name*está **sysname**, com um padrão NULL.  
   
- [  **@delete_level =** ] *delete_level*  
- Um valor que indica quando excluir o trabalho. *delete_value*está **int**, com um padrão de 0, o que significa nunca. *delete_level*usa os mesmos valores *eventlog_level*.  
+`[ @delete_level = ] delete_level` Um valor que indica quando excluir o trabalho. *delete_value*está **int**, com um padrão de 0, o que significa nunca. *delete_level*usa os mesmos valores *eventlog_level*.  
   
 > [!NOTE]  
 >  Quando *delete_level* é **3**, o trabalho é executado apenas uma vez, independentemente de quaisquer agendas definidas para o trabalho. Além disso, se um trabalho excluir a si próprio, todo o histórico do trabalho também será excluído.  
   
- [  **@job_id =** ] _job_id_**saída**  
- O número de identificação atribuído ao trabalho caso ele seja criado com êxito. *job_id*é uma variável de saída do tipo **uniqueidentifier**, com um padrão NULL.  
+`[ @job_id = ] _job_idOUTPUT` O número de identificação atribuído ao trabalho se criado com êxito. *job_id*é uma variável de saída do tipo **uniqueidentifier**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

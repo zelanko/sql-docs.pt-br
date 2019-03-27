@@ -18,12 +18,12 @@ ms.assetid: 69531611-113f-46b5-81a6-7bf496d0353c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: aa737688a974170ece1817503b4b02de440e679a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 854edf82c32058c45df4ab4f71803933f59f2582
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604875"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494098"
 ---
 # <a name="spaddlogshippingprimarydatabase-transact-sql"></a>sp_add_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,57 +56,41 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@database=** ] '*banco de dados*'  
- É o nome do banco de dados primário de envio de logs. *banco de dados* está **sysname**, sem padrão, e não pode ser NULL.  
+`[ @database = ] 'database'` É o nome do log envio banco de dados primário. *banco de dados* está **sysname**, sem padrão, e não pode ser NULL.  
   
- [  **@backup_directory=** ] '*backup_directory*'  
- É o caminho para a pasta de backup no servidor primário. *backup_directory* está **nvarchar(500)**, sem padrão, e não pode ser NULL.  
+`[ @backup_directory = ] 'backup_directory'` É o caminho para a pasta de backup no servidor primário. *backup_directory* está **nvarchar(500)**, sem padrão, e não pode ser NULL.  
   
- [  **@backup_share=** ] '*backup_share*'  
- É o caminho da rede para o diretório de backup no servidor primário. *backup_share* está **nvarchar(500)**, sem padrão, e não pode ser NULL.  
+`[ @backup_share = ] 'backup_share'` É o caminho de rede para o diretório de backup no servidor primário. *backup_share* está **nvarchar(500)**, sem padrão, e não pode ser NULL.  
   
- [  **@backup_job_name=** ] '*backup_job_name*'  
- É o nome do trabalho do SQL Server Agent no servidor primário que copia o backup na pasta de backup. *backup_job_name* está **sysname** e não pode ser NULL.  
+`[ @backup_job_name = ] 'backup_job_name'` É o nome do trabalho do SQL Server Agent no servidor primário que copia o backup na pasta de backup. *backup_job_name* está **sysname** e não pode ser NULL.  
   
- [  **@backup_retention_period=** ] *backup_retention_period*  
- É o período de tempo, em minutos, para reter o arquivo de backup de logs no diretório de backup no servidor primário. *backup_retention_period* está **int**, sem padrão, e não pode ser NULL.  
+`[ @backup_retention_period = ] backup_retention_period` É o período de tempo, em minutos, para reter o arquivo de backup de log no diretório de backup no servidor primário. *backup_retention_period* está **int**, sem padrão, e não pode ser NULL.  
   
- [  **@monitor_server=** ] '*monitor_server*'  
- É o nome do servidor monitor. *Monitor_server* está **sysname**, sem padrão, e não pode ser NULL.  
+`[ @monitor_server = ] 'monitor_server'` É o nome do servidor monitor. *Monitor_server* está **sysname**, sem padrão, e não pode ser NULL.  
   
- [  **@monitor_server_security_mode=** ] *monitor_server_security_mode*  
- O modo de segurança usado para conexão ao servidor monitor.  
+`[ @monitor_server_security_mode = ] monitor_server_security_mode` O modo de segurança usado para se conectar ao servidor do monitor.  
   
  1 = Autenticação do Windows.  
   
  0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação. *monitor_server_security_mode* está **bit** e não pode ser NULL.  
   
- [ **@monitor_server_login=** ] '*monitor_server_login*'  
- É o nome de usuário da conta usada para acessar o servidor monitor.  
+`[ @monitor_server_login = ] 'monitor_server_login'` É o nome de usuário da conta usada para acessar o servidor monitor.  
   
- [  **@monitor_server_password=** ] '*monitor_server_password*'  
- Senha da conta usada para acessar o servidor monitor.  
+`[ @monitor_server_password = ] 'monitor_server_password'` É a senha da conta usada para acessar o servidor monitor.  
   
- [  **@backup_threshold=** ] *backup_threshold*  
- É o período de tempo, em minutos, após o último backup antes de uma *threshold_alert* erro será gerado. *backup_threshold* está **int**, com um padrão de 60 minutos.  
+`[ @backup_threshold = ] backup_threshold` É o período de tempo, em minutos, após o último backup antes de uma *threshold_alert* erro será gerado. *backup_threshold* está **int**, com um padrão de 60 minutos.  
   
- [  **@threshold_alert=** ] *threshold_alert*  
- É o alerta a ser gerado quando o limite do backup for excedido. *alerta de limite* está **int**, com um padrão de 14.420.  
+`[ @threshold_alert = ] threshold_alert` É o alerta a ser emitido quando o limite de backup é excedido. *alerta de limite* está **int**, com um padrão de 14.420.  
   
- [  **@threshold_alert_enabled=** ] *threshold_alert_enabled*  
- Especifica se um alerta será gerado quando *backup_threshold* for excedido. O valor zero (0), o padrão, significa que o alerta está desabilitado e não será aumentado. *threshold_alert_enabled* está **bit**.  
+`[ @threshold_alert_enabled = ] threshold_alert_enabled` Especifica se um alerta será gerado quando *backup_threshold* for excedido. O valor zero (0), o padrão, significa que o alerta está desabilitado e não será aumentado. *threshold_alert_enabled* está **bit**.  
   
- [  **@history_retention_period=** ] *history_retention_period*  
- É a duração de tempo em minutos na qual o histórico será retido. *history_retention_period* está **int**, com um padrão NULL. Se nenhum valor for especificado, será usado o valor 14.420.  
+`[ @history_retention_period = ] history_retention_period` É o período de tempo em minutos no qual o histórico será retido. *history_retention_period* está **int**, com um padrão NULL. Se nenhum valor for especificado, será usado o valor 14.420.  
   
- [  **@backup_job_id=** ] *backup_job_id* saída  
- A ID de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent associada ao trabalho de backup no servidor primário. *backup_job_id* está **uniqueidentifier** e não pode ser NULL.  
+`[ @backup_job_id = ] backup_job_id OUTPUT` O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ID do agente de trabalho associado com o trabalho de backup no servidor primário. *backup_job_id* está **uniqueidentifier** e não pode ser NULL.  
   
- [  **@primary_id=** ] *primary_id* saída  
- A ID do banco de dados primário para a configuração de envio de log. *primary_id* está **uniqueidentifier** e não pode ser NULL.  
+`[ @primary_id = ] primary_id OUTPUT` A ID do banco de dados primário para a configuração de envio de logs. *primary_id* está **uniqueidentifier** e não pode ser NULL.  
   
- [ **@backup_compression**=] *backup_compression_option*  
- Especifica se uma configuração de envio de log usa [compactação de backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Este parâmetro é suportado somente no [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (ou em uma versão posterior).  
+`[ @backup_compression = ] backup_compression_option` Especifica se uma configuração de envio de log usa [compactação de backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Este parâmetro é suportado somente no [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (ou em uma versão posterior).  
   
  0 = Desabilitado. Nunca compacte backups de log.  
   

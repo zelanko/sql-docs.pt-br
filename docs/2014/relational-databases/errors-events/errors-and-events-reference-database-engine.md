@@ -14,21 +14,19 @@ ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 638570c8a2be779b11b0ec852d17ea4815960054
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 537ea93edb56b84be0cbeff5633b943252a98ff8
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356416"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493498"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>Referência de erros e eventos (Mecanismo de Banco de Dados)
-  O [eventos and Errors Message Center](https://go.microsoft.com/fwlink/?LinkId=47660) no TechNet é a principal fonte de informações sobre mensagens de erro para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ela melhora a experiência do usuário ao pesquisar informações sobre mensagens de erro no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como também em outros produtos da Microsoft, permitindo aos clientes executar pesquisas de texto completo e filtrar resultados com base em produto, versão, fonte e identificador numérico ou simbólico. Além disso, a nova interface fornece suporte para várias linguagens. O Centro será atualizado continuamente com novas informações de solução de problemas sobre erros encontrados com frequência.  
-  
- Aperfeiçoamentos futuros para o Events and Errors Message Center tornará o conteúdo de solução de problemas disponível em formato disponível para download, permitindo-lhe acesso a ele a partir de um computador que não esteja conectado à Internet.  
+
+Esta seção contém mensagens de erro de mecanismo de banco de dados selecionadas que precisam de explicações detalhadas.
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Eventos de mecanismo de banco de dados e erros] (banco de dados-mecanismo-eventos-e-errors.md0  
- Descreve o formato de mensagens de erro do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e explica como exibir mensagens de erro e como retorná-las aos aplicativos.  
+ [Erros e eventos do mecanismo de banco de dados](database-engine-events-and-errors.md) descreve o formato de [!INCLUDE[ssDE](../../includes/ssde-md.md)] mensagens de erro e explica como exibir mensagens de erro e retornar mensagens de erro para aplicativos.  
   
  Fornece uma explicação das mensagens de erro do [!INCLUDE[ssDE](../../includes/ssde-md.md)] , as possíveis causas e ações que podem ser realizadas para corrigir o problema.  
   

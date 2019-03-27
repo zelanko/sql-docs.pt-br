@@ -16,12 +16,12 @@ ms.assetid: 4c3fee32-a43f-4757-a029-30aef4696afb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f0869cfb6914766e2ab43e138831e2992aa6977b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 698a5941bc8e9920942e7ec7c962144b4ab24b62
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209195"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492878"
 ---
 # <a name="sparticlefilter-transact-sql"></a>sp_articlefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,34 +44,27 @@ sp_articlefilter [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'**_publicação_**'**  
- É o nome da publicação que contém o artigo. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação que contém o artigo. *publicação* está **sysname**, sem padrão.  
   
- [  **@article=**] **'**_artigo_**'**  
- É o nome do artigo. *artigo* está **sysname**, sem padrão.  
+`[ @article = ] 'article'` É o nome do artigo. *artigo* está **sysname**, sem padrão.  
   
- [  **@filter_name=**] **'**_filter_name_**'**  
- É o nome do procedimento armazenado de filtro a ser criado a partir de *filter_name*. *filter_name* está **nvarchar(386)**, com um padrão NULL. Você deve especificar um nome exclusivo para o filtro de artigo.  
+`[ @filter_name = ] 'filter_name'` É o nome do procedimento armazenado de filtro a ser criado a partir de *filter_name*. *filter_name* está **nvarchar(386)**, com um padrão NULL. Você deve especificar um nome exclusivo para o filtro de artigo.  
   
- [  **@filter_clause=**] **'**_filter_clause_**'**  
- É uma cláusula de restrição (WHERE) que define um filtro horizontal. Ao inserir a cláusula de restrição, omita a palavra-chave onde. *filter_clause* está **ntext**, com um padrão NULL.  
+`[ @filter_clause = ] 'filter_clause'` É uma restrição cláusula (WHERE) que define um filtro horizontal. Ao inserir a cláusula de restrição, omita a palavra-chave onde. *filter_clause* está **ntext**, com um padrão NULL.  
   
- [ **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- Confirma que a ação tomada por esse procedimento armazenado pode invalidar um instantâneo existente. *force_invalidate_snapshot* é um **bit**, com um padrão de **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Confirma que a ação tomada por esse procedimento armazenado pode invalidar um instantâneo existente. *force_invalidate_snapshot* é um **bit**, com um padrão de **0**.  
   
  **0** Especifica que as alterações no artigo fazem com que o instantâneo seja inválido. Se o procedimento armazenado detectar que a alteração requer um novo instantâneo, ocorrerá um erro e nenhuma alteração será feita.  
   
  **1** Especifica que as alterações no artigo podem invalidar o instantâneo ser inválida e se houver assinaturas existentes que exigem um novo instantâneo, dará permissão para o instantâneo existente seja marcado como obsoleto e um novo instantâneo seja gerado.  
   
- [  **@force_reinit_subscription =** ] *force_reinit_subscription*  
- Confirma que a ação tomada por esse procedimento armazenado pode exigir que as assinaturas existentes sejam reinicializadas. *force_reinit_subscription* é um **bit**, com um padrão de **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Reconhece que a ação tomada por esse procedimento armazenado pode requerer que as assinaturas existentes sejam reinicializadas. *force_reinit_subscription* é um **bit**, com um padrão de **0**.  
   
  **0** Especifica que as alterações no artigo não causa uma necessidade das assinaturas sejam reinicializadas. Se o procedimento armazenado detectar que a alteração irá requerer assinaturas sejam reiniciadas, ocorrerá um erro e nenhuma alteração é feita.  
   
  **1** Especifica que as alterações no artigo faz com que as assinaturas existentes sejam reinicializadas e dá permissão para que ocorra a reinicialização da assinatura.  
   
- [  **@publisher=** ] **'**_publisher_**'**  
- Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
+`[ @publisher = ] 'publisher'` Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
 >  *Publisher* não deve ser usado com um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  

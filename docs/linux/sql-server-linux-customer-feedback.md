@@ -4,17 +4,17 @@ description: Descreve como os comentários do cliente do SQL Server é coletado 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 06/22/2018
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: fdc8ad5f7f91f4572bfde40ca7cc63f06ca9dafa
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: eb7eee9446942e2ca8252f8711af23a73c4173d9
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227348"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494208"
 ---
 # <a name="customer-feedback-for-sql-server-on-linux"></a>Comentários do cliente para o SQL Server no Linux
 

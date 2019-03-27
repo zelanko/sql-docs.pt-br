@@ -16,12 +16,12 @@ ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: af1d0e22b4dab79ac7ac9b8d91c198c349280655
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: e9d2baf65dedf1116a85f7271b1929e0ead4ca23
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134316"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493701"
 ---
 # <a name="spchangemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,17 +43,13 @@ sp_changemergearticle [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'***publicação***'**  
- É o nome da publicação na qual o artigo existe. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação na qual o artigo existe. *publicação* está **sysname**, sem padrão.  
   
- [  **@article=**] **'***artigo***'**  
- É o nome do artigo a ser alterado. *artigo* está **sysname**, sem padrão.  
+`[ @article = ] 'article'` É o nome do artigo a alterar. *artigo* está **sysname**, sem padrão.  
   
- [  **@property=**] **'***propriedade***'**  
- É a propriedade a ser alterada para um determinado artigo e publicação. *propriedade* está **nvarchar (30)**, e pode ser um dos valores listado na tabela.  
+`[ @property = ] 'property'` É a propriedade a ser alterada para um determinado artigo e publicação. *propriedade* está **nvarchar (30)**, e pode ser um dos valores listado na tabela.  
   
- [  **@value=**] **'***valor***'**  
- É o novo valor da propriedade especificada. *valor* está **nvarchar (1000)**, e pode ser um dos valores listado na tabela.  
+`[ @value = ] 'value'` É o novo valor para a propriedade especificada. *valor* está **nvarchar (1000)**, e pode ser um dos valores listado na tabela.  
   
  Essa tabela descreve as propriedades de artigos e os valores dessas propriedades.  
   
@@ -76,7 +72,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**description**||Entrada descritiva para o artigo.|  
 |**destination_owner**||Nome do proprietário do objeto no banco de dados, se não estiver **dbo**.|  
 |**identity_range**||**bigint** que especifica o tamanho do intervalo a ser usado ao atribuir novos valores de identidade, se o artigo tiver **identityrangemanagementoption** definido como **automático** ou **auto_identity_ intervalo** definido como **verdadeiro**. Aplica-se apenas a um artigo de tabela. Para obter mais informações, consulte a seção "Replicação de mesclagem" do [replicar colunas de identidade](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
-|**identityrangemanagementoption**|**Manual**|Desabilita gerenciamento automático do intervalo de identidade. Marca colunas de identidade com NOT FOR REPLICATION para ativar o tratamento manual do intervalo de identidade. Para obter mais informações, consulte [Replicar colunas de identidade](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
+|**identityrangemanagementoption**|**manual**|Desabilita gerenciamento automático do intervalo de identidade. Marca colunas de identidade com NOT FOR REPLICATION para ativar o tratamento manual do intervalo de identidade. Para obter mais informações, consulte [Replicar colunas de identidade](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 ||**None**|Desabilita todo o gerenciamento do intervalo de identidade.|  
 |**logical_record_level_conflict_detection**|**true**|Um conflito será detectado se forem feitas alterações no registro lógico. Requer que **logical_record_level_conflict_resolution** ser definido como **verdadeiro**.|  
 ||**false**|Detecção de conflito padrão é usada conforme especificado por **column_tracking**.|  
@@ -136,7 +132,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x8000000000**|Converte o **geografia** e **geometry** tipos de dados **varbinary (max)** para que colunas desses tipos podem ser replicadas para assinantes que executam o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||**0x10000000000**|Replica índices em colunas do tipo **geografia** e **geometry**.|  
 ||NULL|O sistema gera automaticamente uma opção de esquema válida para o artigo.|  
-|**status**|**Active Directory**|O script de processamento inicial para publicação da tabela é executado.|  
+|**status**|**active**|O script de processamento inicial para publicação da tabela é executado.|  
 ||**unsynced**|O script de processamento inicial para publicar a tabela é executado da próxima vez que o Snapshot Agent é executado.|  
 |**stream_blob_columns**|**true**|Uma otimização de fluxo de dados é usada ao replicar colunas de objeto binário grande. Porém, certas funcionalidades de replicação de mesclagem, como registros lógicos, ainda podem impedir que a otimização de fluxo seja usada. *stream_blob_columns* é definido como true quando FILESTREAM está habilitado. Isso permite a replicação de dados FILESTREAM para executar da maneira ideal e reduzir a utilização de memória. Para forçar os artigos da tabela FILESTREAM a não usarem o fluxo de blob, defina *stream_blob_columns* como false.<br /><br /> **\*\* Importante \* \***  a habilitação dessa otimização de memória pode prejudicar o desempenho do Merge Agent durante a sincronização. Esta opção só deve ser usada ao replicar colunas que contêm megabytes de dados.|  
 ||**false**|A otimização não é usada ao replicar colunas de objeto binário grande.|  
@@ -149,8 +145,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0**|A assinatura digital em um resolvedor personalizado não é verificada para determinar se é de uma fonte confiável.|  
 |NULL (padrão)||Retorna a lista de valores com suporte para *propriedade*.|  
   
- [ **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- Confirma que a ação tomada por esse procedimento armazenado pode invalidar um instantâneo existente. *force_invalidate_snapshot* é um **bit**, com um padrão de **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Confirma que a ação tomada por esse procedimento armazenado pode invalidar um instantâneo existente. *force_invalidate_snapshot* é um **bit**, com um padrão de **0**.  
   
  **0** Especifica que as alterações no artigo de mesclagem fazem com que o instantâneo seja inválido. Se o procedimento armazenado detectar que a alteração requer um novo instantâneo, ocorrerá um erro e nenhuma alteração será feita.  
   
@@ -158,8 +153,7 @@ sp_changemergearticle [ @publication = ] 'publication'
   
  Consulte a seção Comentários das propriedades que, quando alteradas, requerem a geração de um novo instantâneo.  
   
- [  **@force_reinit_subscription =** ] *force_reinit_subscription*  
- Confirma que a ação tomada por esse procedimento armazenado pode exigir que as assinaturas existentes sejam reinicializadas. *force_reinit_subscription* é um **bit**, com um padrão de **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Reconhece que a ação tomada por esse procedimento armazenado pode requerer que as assinaturas existentes sejam reinicializadas. *force_reinit_subscription* é um **bit**, com um padrão de **0**.  
   
  **0** Especifica que as alterações no artigo de mesclagem fazem com que a assinatura seja reiniciada. Se o procedimento armazenado detectar que a alteração irá requerer assinaturas existentes para ser reiniciada, ocorrerá um erro e nenhuma alteração será feita.  
   

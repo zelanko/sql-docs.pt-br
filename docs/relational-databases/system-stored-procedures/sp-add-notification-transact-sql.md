@@ -18,12 +18,12 @@ ms.assetid: 0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bb19049185ab79178213b1dc042a1c23f8978374
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a7c6e4531597faf9cacb883cf3ea3432b6e8ff9f
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704594"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492516"
 ---
 # <a name="spaddnotification-transact-sql"></a>sp_add_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,16 +41,13 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@alert_name=** ] **'***alerta***'**  
- O alerta para esta notificação. *alerta* está **sysname**, sem padrão.  
+`[ @alert_name = ] 'alert'` O alerta para esta notificação. *alerta* está **sysname**, sem padrão.  
   
- [  **@operator_name=** ] **'***operador***'**  
- O operador a ser notificado quando o alerta ocorrer. *operador* está **sysname**, sem padrão.  
+`[ @operator_name = ] 'operator'` O operador a ser notificado quando o alerta ocorre. *operador* está **sysname**, sem padrão.  
   
- [  **@notification_method=** ] *notification_method*  
- O método através do qual o operador é notificado. *notification_method* está **tinyint**, sem padrão. *notification_method* pode ser um ou mais desses valores combinados com um **OR** operador lógico.  
+`[ @notification_method = ] notification_method` O método pelo qual o operador é notificado. *notification_method* está **tinyint**, sem padrão. *notification_method* pode ser um ou mais desses valores combinados com um **OR** operador lógico.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|Email|  
 |**2**|Pager|  
@@ -77,7 +74,7 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir adiciona uma notificação de email para o alerta especificado (`Test Alert`).  
   
-> **Observação:** Este exemplo supõe que `Test Alert` já existe e que `François Ajenstat` é um nome de operador válido.  
+> **OBSERVAÇÃO:** Este exemplo supõe que `Test Alert` já existe e que `François Ajenstat` é um nome de operador válido.  
   
 ```  
 USE msdb ;  

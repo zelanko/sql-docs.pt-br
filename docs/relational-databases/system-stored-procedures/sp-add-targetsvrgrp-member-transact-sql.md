@@ -18,12 +18,12 @@ ms.assetid: 5021ed5b-acca-4f8b-b9db-18733059c359
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5ea36ea5efe4c693193761887659a445affe2855
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b41cc93b9f7158ab682a1a8569901899c258328
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758374"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494168"
 ---
 # <a name="spaddtargetsvrgrpmember-transact-sql"></a>sp_add_targetsvrgrp_member (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,9 @@ sp_add_targetsvrgrp_member [ @group_name = ] 'group_name' , [ @server_name = ] '
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@group_name=** ] **'***group_name***'**  
- O nome do grupo. *group_name* está **sysname**, sem padrão.  
+`[ @group_name = ] 'group_name'` O nome do grupo. *group_name* está **sysname**, sem padrão.  
   
- [ **@server_name=** ] **'***server_name***'**  
- O nome do servidor que deve ser adicionado ao grupo especificado. *nome_do_servidor* está **nvarchar (30)**, sem padrão.  
+`[ @server_name = ] 'server_name'` O nome do servidor que deve ser adicionado ao grupo especificado. *nome_do_servidor* está **nvarchar (30)**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
