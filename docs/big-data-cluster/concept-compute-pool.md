@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 272f10cfed8f7cd1b07633b81642323a8c74b6d7
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: d9189c6533563a44b597dddc99e263d78750aa6a
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227128"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477861"
 ---
 # <a name="what-are-compute-pools-in-a-sql-server-2019-big-data-cluster"></a>Quais são os pools de computação em um cluster de big data do SQL Server 2019?
 
@@ -31,6 +31,7 @@ Um pool de computação pode agir como um grupo de escala horizontal do PolyBase
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para saber mais sobre os clusters de grandes dados do SQL Server, consulte a visão geral a seguir:
+Para saber mais sobre os clusters de grandes dados do SQL Server, consulte os seguintes recursos:
 
 - [Quais são os clusters do SQL Server 2019 grandes dados?](big-data-cluster-overview.md)
+- [Workshop: Arquitetura de clusters de grandes dados do Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

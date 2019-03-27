@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 24b5799b71f9102785bdcb6103324d8bf8b1ad96
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: 9c3809e481e00c94f01c1968a82638df3e37f80f
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227298"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477942"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-2019-big-data-cluster"></a>O que é a instância mestre em um cluster de big data do SQL Server 2019?
 
@@ -66,6 +66,7 @@ Com clusters do SQL Server 2019 big data, você pode fazer mais com seu Lagos de
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para saber mais sobre os clusters de grandes dados do SQL Server, consulte a visão geral a seguir:
+Para saber mais sobre os clusters de grandes dados do SQL Server, consulte os seguintes recursos:
 
 - [Quais são os clusters do SQL Server 2019 grandes dados?](big-data-cluster-overview.md)
+- [Workshop: Arquitetura de clusters de grandes dados do Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

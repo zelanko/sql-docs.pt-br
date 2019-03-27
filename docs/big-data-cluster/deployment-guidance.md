@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 817ffcc1ea17a8526304b4bc9064c1becfff90f9
-ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
+ms.openlocfilehash: fb09a5b13adc7f673c83a91635451435e4a8c945
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161634"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477691"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Como implantar clusters de grandes dados do SQL Server no Kubernetes
 
@@ -347,4 +347,7 @@ Para monitorar ou solucionar problemas de uma implantação, use **kubectl** par
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Experimente alguns dos novos recursos e Aprenda [como usar blocos de anotações na visualização do SQL Server 2019](notebooks-guidance.md).
+Para saber mais sobre os clusters de grandes dados do SQL Server, consulte os seguintes recursos:
+
+- [Quais são os clusters do SQL Server 2019 grandes dados?](big-data-cluster-overview.md)
+- [Workshop: Arquitetura de clusters de grandes dados do Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

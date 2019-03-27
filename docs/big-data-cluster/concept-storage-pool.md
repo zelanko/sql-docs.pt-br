@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: c89ddc5d155af4542b5101e9a6e394effc5d9fd3
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 7dfb89103bb83fc77c590e5c5b5984cbd96b197d
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241517"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477921"
 ---
 # <a name="what-is-the-storage-pool-sql-server-2019-big-data-clusters"></a>O que é o pool de armazenamento (clusters de big data de 2019 do SQL Server)?
 
@@ -37,6 +37,7 @@ Nós de armazenamento serão responsáveis por:
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para saber mais sobre os clusters de grandes dados do SQL Server, consulte a visão geral a seguir:
+Para saber mais sobre os clusters de grandes dados do SQL Server, consulte os seguintes recursos:
 
 - [Quais são os clusters do SQL Server 2019 grandes dados?](big-data-cluster-overview.md)
+- [Workshop: Arquitetura de clusters de grandes dados do Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

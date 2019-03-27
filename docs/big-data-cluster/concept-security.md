@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8ad12de9456fef0d4803ae83479e615bffa0edcc
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 5e440a3502e5062013ac5e3b716036f107a13c6a
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241417"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477981"
 ---
 # <a name="security-concepts-for-sql-server-big-data-clusters"></a>Conceitos de segurança para clusters de grandes dados do SQL Server
 
@@ -53,16 +53,16 @@ Alguns desses logons são para os serviços se comunicam entre si e outros são 
 Após o provisionamento do cluster, um número de senhas do usuário final precisa ser definido usando variáveis de ambiente. Estas são as senhas que os administradores do SQL e os administradores de cluster usam para acessar serviços:
 
 Nome de usuário do controlador:
- + CONTROLLER_USERNAME = < controller_username >
+ + CONTROLLER_USERNAME=<controller_username>
 
 Senha do controlador:  
- + CONTROLLER_PASSWORD = < controller_password >
+ + CONTROLLER_PASSWORD=<controller_password>
 
 Senha de SA do SQL Master: 
- + MSSQL_SA_PASSWORD = < controller_sa_password >
+ + MSSQL_SA_PASSWORD=<controller_sa_password>
 
 Senha para acessar o ponto de extremidade HDFS/Spark:
- + KNOX_PASSWORD = < knox_password >
+ + KNOX_PASSWORD=<knox_password>
 
 ### <a name="intra-cluster-authentication"></a>Autenticação de dentro do cluster
 
@@ -81,7 +81,7 @@ Comunicação com os serviços não-SQL dentro do cluster de big data, como o Li
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para saber mais sobre os clusters de grandes dados do SQL Server, consulte os seguintes artigos:
+Para saber mais sobre os clusters de grandes dados do SQL Server, consulte os seguintes recursos:
 
 - [Quais são os clusters do SQL Server 2019 grandes dados?](big-data-cluster-overview.md)
-- [Guia de início rápido: Implantar um cluster de big data do SQL Server no Kubernetes](quickstart-big-data-cluster-deploy.md)
+- [Workshop: Arquitetura de clusters de grandes dados do Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
