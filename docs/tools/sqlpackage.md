@@ -2,27 +2,27 @@
 title: SqlPackage.exe | Microsoft Docs
 ms.prod: sql
 ms.technology: ssdt
-ms.date: 06/27/2018
+ms.date: 06/28/2018
 ms.reviewer: alayu; sstein
 ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: d9a3dc9088c833b3448927c1455052c40f185ec7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1204b3a4aabf4a170901154c656b5f84d05fda82
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033597"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527588"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
 O **SqlPackage.exe** é um utilitário de linha de comando que automatiza as seguintes tarefas de desenvolvimento de banco de dados:  
   
-- [Extrair](#help-for-the-extract-action): cria um arquivo (.dacpac) de instantâneo de um banco de dados do SQL Server dinâmico ou do Banco de Dados SQL do Azure.  
+- [Extract](#help-for-the-extract-action): cria um arquivo (.dacpac) de instantâneo de um banco de dados do SQL Server dinâmico ou do Banco de Dados SQL do Azure.  
   
-- [Publicar](#publish-parameters-properties-and-sqlcmd-variables): atualiza um esquema de banco de dados incrementalmente para que corresponda ao esquema de um arquivo .dacpac de origem. Se o banco de dados não existir no servidor, a operação de publicação irá criá-lo. Caso contrário, o banco de dados existente é atualizado.  
+- [Publish](#publish-parameters-properties-and-sqlcmd-variables): atualiza um esquema de banco de dados incrementalmente para que corresponda ao esquema de um arquivo .dacpac de origem. Se o banco de dados não existir no servidor, a operação de publicação irá criá-lo. Caso contrário, o banco de dados existente é atualizado.  
   
 - [Export](#export-parameters-and-properties): exporta um banco de dados dinâmico – incluindo o esquema e os dados de usuário do banco de dados – do SQL Server ou do Banco de Dados SQL do Azure para um pacote BACPAC (arquivo .bacpac).  
   
@@ -30,13 +30,13 @@ O **SqlPackage.exe** é um utilitário de linha de comando que automatiza as seg
   
 - [DeployReport](#deployreport-parameters-and-properties): cria um relatório XML das alterações que teriam sido feitas por uma ação de publicação.  
   
-- [DriftReport](#driftreport-parameters): cria um relatório XML das alterações que teriam sido feitas a um banco de dados registrado desde o último registro.  
+- [DriftReport](#driftreport-parameters): cria um relatório XML das alterações que teriam sido feitas a um banco de dados registrado desde a última vez que ele foi registrado.  
   
-- [Script](#script-parameters-and-properties): cria um script de atualização incremental Transact-SQL que atualiza o esquema de um destino para que corresponda ao esquema de origem.  
+- [Script](#script-parameters-and-properties): cria um script de atualização incremental Transact-SQL que atualiza o esquema de um destino para que corresponda ao esquema de uma origem.  
   
 A linha de comando do **SqlPackage.exe** permite que você especifique essas ações junto com parâmetros e propriedades específicos da ação.  
 
-**[Baixe a versão mais recente](sqlpackage-download.md)**. Para obter detalhes sobre a versão mais recente, consulte o [notas de versão](sqlpackage-release-notes.md).
+**[Baixe a versão mais recente](sqlpackage-download.md)**. Para obter detalhes sobre a versão mais recente, consulte o [notas de versão](release-notes-sqlpackage.md).
   
 ## <a name="command-line-syntax"></a>Sintaxe da linha de comando
 
@@ -211,7 +211,7 @@ Uma operação de publicação SqlPackage.exe atualiza o esquema de um banco de 
 |**/p:**|NoAlterStatementsToChangeClrTypes=(BOOLEAN)|Especifica se a publicação sempre deverá cancelar e recriar um assembly se houver uma diferença em vez de emitir uma instrução ALTER ASSEMBLY.|
 |**/p:**|PopulateFilesOnFileGroups=(BOOLEAN 'True')|Especifica se um novo arquivo também será criado quando um novo FileGroup for criado no banco de dados de destino.|
 |**/p:**|RegisterDataTierApplication=(BOOLEAN)|Especifica se o esquema está registrado com o servidor de banco de dados.|
-|**/p:**|RunDeploymentPlanExecutors=(BOOLEAN)|Especifica se os colaboradores de DeploymentPlanExecutor devem ser executados quando outras operações são executadas.|
+|**/p:**|RunDeploymentPlanExecutors=(BOOLEAN)|Especifica se os colaboradores de DeploymentPlanExecutor devem ser executados quando outras operações forem executadas.|
 |**/p:**|ScriptDatabaseCollation=(BOOLEAN)|Especifica se diferenças na ordenação do banco de dados deverão ser ignoradas ou atualizadas quando você publicar em um banco de dados.|
 |**/p:**|ScriptDatabaseCompatibility=(BOOLEAN)|Especifica se diferenças na compatibilidade do banco de dados deverão ser ignoradas ou atualizadas quando você publicar em um banco de dados.|
 |**/p:**|ScriptDatabaseOptions=(BOOLEAN 'True')|Especifica se as propriedades do banco de dados de destino devem ser definidas ou atualizadas como parte da ação de publicação.|
@@ -428,7 +428,7 @@ Uma ação de relatório do **SqlPackage.exe** cria um relatório XML das altera
  |**/p:**|NoAlterStatementsToChangeClrTypes=(BOOLEAN)|Especifica se a publicação sempre deverá cancelar e recriar um assembly se houver uma diferença em vez de emitir uma instrução ALTER ASSEMBLY. |
 |**/p:**|PopulateFilesOnFileGroups=(BOOLEAN 'True')|Especifica se um novo arquivo também será criado quando um novo FileGroup for criado no banco de dados de destino. |
 |**/p:**|RegisterDataTierApplication=(BOOLEAN)|Especifica se o esquema está registrado com o servidor de banco de dados. 
-|**/p:**|RunDeploymentPlanExecutors=(BOOLEAN)|Especifica se os colaboradores de DeploymentPlanExecutor devem ser executados quando outras operações são executadas.|
+|**/p:**|RunDeploymentPlanExecutors=(BOOLEAN)|Especifica se os colaboradores de DeploymentPlanExecutor devem ser executados quando outras operações forem executadas.|
 |**/p:**|ScriptDatabaseCollation=(BOOLEAN)|Especifica se diferenças na ordenação do banco de dados deverão ser ignoradas ou atualizadas quando você publicar em um banco de dados. |
 |**/p:**|ScriptDatabaseCompatibility=(BOOLEAN)|Especifica se diferenças na compatibilidade do banco de dados deverão ser ignoradas ou atualizadas quando você publicar em um banco de dados. |
 |**/p:**|ScriptDatabaseOptions=(BOOLEAN 'True')|Especifica se as propriedades do banco de dados de destino devem ser definidas ou atualizadas como parte da ação de publicação. |
@@ -589,7 +589,7 @@ Uma ação de script do **SqlPackage.exe** cria um script de atualização incre
 |**/p:**|NoAlterStatementsToChangeClrTypes=(BOOLEAN)|Especifica se a publicação sempre deverá cancelar e recriar um assembly se houver uma diferença em vez de emitir uma instrução ALTER ASSEMBLY.|
 |**/p:**|PopulateFilesOnFileGroups=(BOOLEAN 'True')|Especifica se um novo arquivo também será criado quando um novo FileGroup for criado no banco de dados de destino.|
 |**/p:**|RegisterDataTierApplication=(BOOLEAN)|Especifica se o esquema está registrado com o servidor de banco de dados.|
-|**/p:**|RunDeploymentPlanExecutors=(BOOLEAN)|Especifica se os colaboradores de DeploymentPlanExecutor devem ser executados quando outras operações são executadas.|
+|**/p:**|RunDeploymentPlanExecutors=(BOOLEAN)|Especifica se os colaboradores de DeploymentPlanExecutor devem ser executados quando outras operações forem executadas.|
 |**/p:**|ScriptDatabaseCollation=(BOOLEAN)|Especifica se diferenças na ordenação do banco de dados deverão ser ignoradas ou atualizadas quando você publicar em um banco de dados.|
 |**/p:**|ScriptDatabaseCompatibility=(BOOLEAN)|Especifica se diferenças na compatibilidade do banco de dados deverão ser ignoradas ou atualizadas quando você publicar em um banco de dados.|
 |**/p:**|ScriptDatabaseOptions=(BOOLEAN 'True')|Especifica se as propriedades do banco de dados de destino devem ser definidas ou atualizadas como parte da ação de publicação.|
