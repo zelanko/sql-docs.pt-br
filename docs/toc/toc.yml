@@ -1708,7 +1708,7 @@ items:
       href: ../relational-databases/views/rename-views.md
     - name: DELETE
       href: ../relational-databases/views/delete-views.md
-  - name: Dados XML
+  - name: dados XML
     href: ../relational-databases/xml/xml-data-sql-server.md
     items:
     - name: Colunas e tipo de dados XML
@@ -6894,6 +6894,7 @@ items:
     - name: Considerações para usar servidores de teste
       href: ../relational-databases/performance/considerations-for-using-test-servers.md
     - name: Processamento de consulta inteligente
+      displayName: adaptive
       href: ../relational-databases/performance/intelligent-query-processing.md
     - name: Centro de desempenho
       href: ../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md
@@ -9791,12 +9792,12 @@ items:
         href: ../ssms/user-assistance-in-sql-server-management-studio.md
       - name: Dados de uso anônimos
         href: ../ssms/sql-server-management-studio-telemetry-ssms.md
-  - name: sqlpackage
+  - name: SqlPackage.exe
     items:
     - name: Instalar sqlpackage
       href: ../tools/sqlpackage-download.md
     - name: Notas de versão
-      href: ../tools/sqlpackage-release-notes.md
+      href: ../tools/release-notes-sqlpackage.md
     - name: ref do sqlpackage
       href: ../tools/sqlpackage.md
   - name: SQL Server Profiler
@@ -16161,7 +16162,7 @@ items:
         - name: Bit a bit
           href: ../t-sql/language-elements/bitwise-operators-transact-sql.md
           items:
-          - name: '& (Bitwise AND)'
+          - name: '& (AND de bit a bit)'
             href: ../t-sql/language-elements/bitwise-and-transact-sql.md
           - name: '& = (Bit a Bit e Atribuição)'
             href: ../t-sql/language-elements/bitwise-and-equals-transact-sql.md
@@ -16182,13 +16183,13 @@ items:
             href: ../t-sql/language-elements/equals-transact-sql.md
           - name: '> (Maior que)'
             href: ../t-sql/language-elements/greater-than-transact-sql.md
-          - name: < (Less Than)
+          - name: < (Menor que)
             href: ../t-sql/language-elements/less-than-transact-sql.md
           - name: '>= (Maior que ou igual a)'
             href: ../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md
-          - name: <= (Menor que ou Igual a)
+          - name: <= (Menor ou igual a)
             href: ../t-sql/language-elements/less-than-or-equal-to-transact-sql.md
-          - name: <> (Not Equal To)
+          - name: <> (Diferente de)
             href: ../t-sql/language-elements/not-equal-to-transact-sql-traditional.md
           - name: '!< (Não é menor que)'
             href: ../t-sql/language-elements/not-less-than-transact-sql.md
@@ -17226,9 +17227,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: Manipulando namespaces em XQuery
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: 8efef6d8d30133dff4c5ca71d37a753e0168a4e5
-ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
+ms.openlocfilehash: 31c97681d909e7179c9376e187cabea94afe20d3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58417228"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538678"
