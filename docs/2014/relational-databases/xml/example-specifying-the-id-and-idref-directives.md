@@ -1,5 +1,5 @@
 ---
-title: 'Exemplo: especificando as diretivas ID e IDREF | Microsoft Docs'
+title: 'Exemplo: Especificando as diretivas ID e IDREF | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - IDREF directive
 - ID directive
 ms.assetid: 7ff1ea73-71ca-4786-bd42-564f1b5de2d9
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cb7daf7eb63adf5b1c0978879225f161e2e00cba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f985745f450b402781685ded5c0a655e3f4e497c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211367"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532018"
 ---
 # <a name="example-specifying-the-id-and-idref-directives"></a>Exemplo: Especificando as diretivas ID e IDREF
   Este exemplo é quase igual ao exemplo [Especificando a diretiva ELEMENTXSINIL](example-specifying-the-elementxsinil-directive.md) . A única diferença é que a consulta especifica as diretivas **ID** e **IDREF**. Essas diretivas substituem os tipos do atributo **SalesPersonID** nos elementos <`OrderHeader`> e <`OrderDetail`>. Isso forma vínculos intradocumento. Você precisa do esquema para ver os tipos substituídos. Portanto, a consulta especifica a opção **XMLDATA** na cláusula FOR XML para recuperar o esquema.  

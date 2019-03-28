@@ -18,12 +18,12 @@ ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cae733bf78928ccd83550adc8a4b525f6a996189
-ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
+ms.openlocfilehash: 54f36b46f75bf943ecf08aafd93a6b861c2da90a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53266097"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538578"
 ---
 # <a name="sptracesetevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,11 +46,9 @@ sp_trace_setevent [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@traceid=** ] *trace_id*  
- É a ID do rastreamento a ser modificado. *trace_id* está **int**, sem padrão. O usuário emprega este *trace_id* valor para identificar, modificar e controlar o rastreamento.  
+`[ @traceid = ] trace_id` É a ID do trace a ser modificado. *trace_id* está **int**, sem padrão. O usuário emprega este *trace_id* valor para identificar, modificar e controlar o rastreamento.  
   
- [  **@eventid=** ] *event_id*  
- É a ID do evento a ser ativado. *event_id* está **int**, sem padrão.  
+`[ @eventid = ] event_id` É a ID do evento para ativar. *event_id* está **int**, sem padrão.  
   
  Esta tabela lista os eventos que podem ser adicionados ou removidos de um rastreamento.  
   
@@ -217,7 +215,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |187|TM: Rollback Tran starting|Ocorre quando uma solicitação ROLLBACK TRANSACTION é iniciada.|  
 |188|TM: Rollback Tran concluída|Ocorre quando uma solicitação ROLLBACK TRANSACTION é concluída.|  
 |189|Lock: Timeout (timeout > 0)|Ocorre quando uma solicitação para um bloqueio em um recurso, como uma página, expira.|  
-|190|Relatório de progresso: Operação de índice online|Relata o progresso de uma operação de criação de índice online quando o processo de criação está sendo executado.|  
+|190|Relatório de andamento: Operação de índice online|Relata o progresso de uma operação de criação de índice online quando o processo de criação está sendo executado.|  
 |191|TM: Salvar Tran starting|Ocorre quando uma solicitação SAVE TRANSACTION é iniciada.|  
 |192|TM: Save Tran concluída|Ocorre quando uma solicitação SAVE TRANSACTION é concluída.|  
 |193|Background Job Error|Ocorre quando um trabalho em segundo plano é terminado de maneira anormal.|  
@@ -239,8 +237,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |218|Guia de plano malsucedido|Indica que o SQL Server não pôde produzir um plano de execução, para uma consulta ou lote, que continha um guia de plano. O SQL Server tentou gerar um plano de execução para esta consulta ou lote sem aplicar o guia de plano. Um guia de plano inválido pode ser a causa deste problema. Você pode validar o guia de plano usando a função de sistema sys.fn_validate_plan_guide.|  
 |235|Audit Fulltext||  
   
- [  **@columnid=** ] *column_id*  
- É a ID da coluna a ser adicionada para o evento. *column_id* está **int**, sem padrão.  
+`[ @columnid = ] column_id` É a ID da coluna a ser adicionada para o evento. *column_id* está **int**, sem padrão.  
   
  A tabela a seguir lista as colunas que podem ser adicionadas a um evento.  
   

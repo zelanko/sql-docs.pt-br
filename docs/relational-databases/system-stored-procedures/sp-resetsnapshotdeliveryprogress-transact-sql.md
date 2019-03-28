@@ -16,12 +16,12 @@ ms.assetid: 5df7d86b-d343-4d9b-88b1-74429ed092e6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ec8d4086d1733d91692565d4d6ff112b8f264d35
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c791fedcd483024c2bc6d564ce3f774fa2fded77
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773708"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530188"
 ---
 # <a name="spresetsnapshotdeliveryprogress-transact-sql"></a>sp_resetsnapshotdeliveryprogress (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_resetsnapshotdeliveryprogress [ [ @verbose_level = ] verbose_level ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@verbose_level**=] *verbose_level*  
- Especifica a quantidade de informações a ser retornada. *verbose_level*está **int**, com um padrão de **1**. Um valor de **1** significa que um erro é retornado se os bloqueios necessários não podem ser obtidos na **MSsnapshotdeliveryprogress** tabela, e **0** significa que nenhum erro será retornado.  
+`[ @verbose_level = ] verbose_level` Especifica a quantidade de informações retornadas. *verbose_level*está **int**, com um padrão de **1**. Um valor de **1** significa que um erro é retornado se os bloqueios necessários não podem ser obtidos na **MSsnapshotdeliveryprogress** tabela, e **0** significa que nenhum erro será retornado.  
   
- [ **@drop_table**=] **'***drop_table***'**  
- Especifica se deve descartar ou truncar as tabela que contém informações sobre o progresso do instantâneo. *drop_table* é **nvarchar (5)**, com um padrão de **FALSE**. false significa que a tabela é truncada, e true significa que a tabela é removida.  
+`[ @drop_table = ] 'drop_table'` Especifica se deve descartar ou truncar as tabela que contém informações sobre o progresso do instantâneo. *drop_table* é **nvarchar (5)**, com um padrão de **FALSE**. false significa que a tabela é truncada, e true significa que a tabela é removida.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

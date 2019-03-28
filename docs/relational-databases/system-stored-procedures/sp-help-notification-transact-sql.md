@@ -18,12 +18,12 @@ ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ccc926844f6d3c054a69cb51f3156dc8e186a98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d003b1f15500b1f6d0b8490d9e712a6a34b100a3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833574"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538628"
 ---
 # <a name="sphelpnotification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,33 +45,28 @@ sp_help_notification
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@object_type =**] **'***object_type***'**  
- O tipo de informação a ser retornado. *object_type*está **char(9)**, sem padrão. *object_type* pode ser ALERTS, que lista os alertas atribuídos ao nome de operador fornecido *,* ou OPERATORS, que lista os operadores responsáveis pelo nome de alerta fornecido *.*  
+`[ @object_type = ] 'object_type'` O tipo de informação a ser retornado. *object_type*está **char(9)**, sem padrão. *object_type* pode ser ALERTS, que lista os alertas atribuídos ao nome de operador fornecido *,* ou OPERATORS, que lista os operadores responsáveis pelo nome de alerta fornecido *.*  
   
- [  **@name =**] **'***nome***'**  
- Um nome de operador (se *object_type* for OPERATORS) ou um nome de alerta (se *object_type* for ALERTS). *nome da* está **sysname**, sem padrão.  
+`[ @name = ] 'name'` Um nome de operador (se *object_type* for OPERATORS) ou um nome de alerta (se *object_type* for ALERTS). *nome da* está **sysname**, sem padrão.  
   
- [  **@enum_type =**] **'***enum_type***'**  
- O *object_type*informações que são retornadas. *enum_type* é ACTUAL na maioria dos casos. *enum_type*está **char(10)**, sem padrão e pode ser um destes valores.  
+`[ @enum_type = ] 'enum_type'` O *object_type*informações que são retornadas. *enum_type* é ACTUAL na maioria dos casos. *enum_type*está **char(10)**, sem padrão e pode ser um destes valores.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |ACTUAL|Lista apenas os *object_types* associado *nome*.|  
 |ALL|Lista todos os*object_types* incluindo aqueles que não estão associados *nome*.|  
 |TARGET|Lista apenas os *object_types* correspondência fornecido *target_name*, independentemente da associação com*nome*.|  
   
- [  **@notification_method =**] *notification_method*  
- Um valor numérico que determina as colunas de método de notificação que devem ser retornadas. *notification_method* está **tinyint**, e pode ser um dos valores a seguir.  
+`[ @notification_method = ] notification_method` Um valor numérico que determina as colunas de método de notificação para retornar. *notification_method* está **tinyint**, e pode ser um dos valores a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|Email: retorna apenas o **use_email** coluna.|  
 |**2**|Pager: retorna apenas o **use_pager** coluna.|  
 |**4**|NetSend: retorna apenas o **use_netsend** coluna.|  
 |**7**|Tudo: retorna todas as colunas.|  
   
- [  **@target_name =**] **'***target_name***'**  
- Um nome de alerta a ser pesquisado (se *object_type* for ALERTS) ou um nome de operador a ser pesquisado (se *object_type* for OPERATORS). *target_name* é necessária somente se *enum_type* é o destino. *target_name* está **sysname**, com um padrão NULL.  
+`[ @target_name = ] 'target_name'` Um nome de alerta a ser pesquisado (se *object_type* for ALERTS) ou um nome de operador a ser pesquisado (se *object_type* for OPERATORS). *target_name* é necessária somente se *enum_type* é o destino. *target_name* está **sysname**, com um padrão NULL.  
   
 ## <a name="return-code-valves"></a>Valores de código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -79,7 +74,7 @@ sp_help_notification
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Se *object_type* é **alertas**, o conjunto de resultados listará todos os alertas para um determinado operador.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**alert_id**|**int**|Número de identificador de alerta.|  
 |**alert_name**|**sysname**|Nome do alerta.|  
@@ -92,7 +87,7 @@ sp_help_notification
   
  Se **object_type** é **OPERADORES**, o conjunto de resultados listará todos os operadores para um determinado alerta.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**operator_id**|**int**|Número de identificação do operador.|  
 |**operator_name**|**sysname**|Nome do operador.|  

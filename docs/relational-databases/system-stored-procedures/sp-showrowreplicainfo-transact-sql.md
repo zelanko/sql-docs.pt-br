@@ -16,12 +16,12 @@ ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 51b5b2aa6c6f815f1b2f5f37c9093698955ffd3b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 0d009b05fea2a2c587f97dc4b2416588932ad0bc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136106"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530358"
 ---
 # <a name="spshowrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,24 +41,20 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@ownername**=] **'***ownername***'**  
- É o nome do proprietário da tabela. *ownername* está **sysname**, com um padrão NULL. Esse parâmetro é útil para diferenciar tabelas se um banco de dados contiver várias tabelas com o mesmo nome, mas cada tabela tiver um proprietário diferente.  
+`[ @ownername = ] 'ownername'` É o nome do proprietário. *ownername* está **sysname**, com um padrão NULL. Esse parâmetro é útil para diferenciar tabelas se um banco de dados contiver várias tabelas com o mesmo nome, mas cada tabela tiver um proprietário diferente.  
   
- [  **@tablename =**] **'***tablename***'**  
- É o nome da tabela que contém a linha para a qual as informações são retornadas. *TableName* está **sysname**, com um padrão NULL.  
+`[ @tablename = ] 'tablename'` É o nome da tabela que contém a linha para o qual as informações são retornadas. *TableName* está **sysname**, com um padrão NULL.  
   
- [  **@rowguid =**] *rowguid*  
- É o identificador exclusivo da linha. *ROWGUID* está **uniqueidentifier**, sem padrão.  
+`[ @rowguid = ] rowguid` É o identificador exclusivo da linha. *ROWGUID* está **uniqueidentifier**, sem padrão.  
   
- [ **@show**=] **'***Mostrar***'**  
- Determina a quantidade de informações a serem retornadas no conjunto de resultados. *Mostrar* está **nvarchar (20)** com um padrão de ambos. Se **linha**, somente informações de versão de linha são retornadas. Se **colunas**, somente informações de versão de coluna são retornadas. Se **ambos**, linhas e de informações da coluna são retornadas.  
+`[ @show = ] 'show'` Determina a quantidade de informações a serem retornadas no conjunto de resultados. *Mostrar* está **nvarchar (20)** com um padrão de ambos. Se **linha**, somente informações de versão de linha são retornadas. Se **colunas**, somente informações de versão de coluna são retornadas. Se **ambos**, linhas e de informações da coluna são retornadas.  
   
 ## <a name="result-sets-for-row-information"></a>Conjuntos de resultado para informações de linha  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**server_name**|**sysname**|Nome do servidor que hospeda o banco de dados que fez a entrada da versão de linha.|  
-|**DB_NAME**|**sysname**|Nome do banco de dados que fez essa entrada.|  
+|**db_name**|**sysname**|Nome do banco de dados que fez essa entrada.|  
 |**db_nickname**|**binary(6)**|Apelido do banco de dados que fez essa entrada.|  
 |**version**|**int**|Versão da entrada.|  
 |**current_state**|**nvarchar(9)**|Retorna informações sobre o estado atual da linha.<br /><br /> **y** -dados de linha representam o estado atual da linha.<br /><br /> **n** -dados de linha não representam o estado atual da linha.<br /><br /> **\<n/a >** – não aplicável.<br /><br /> **\<desconhecido >** -não é possível determinar o estado atual.|  
@@ -70,10 +66,10 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**server_name**|**sysname**|Nome do servidor que hospeda o banco de dados que fez a entrada da versão da coluna.|  
-|**DB_NAME**|**sysname**|Nome do banco de dados que fez essa entrada.|  
+|**db_name**|**sysname**|Nome do banco de dados que fez essa entrada.|  
 |**db_nickname**|**binary(6)**|Apelido do banco de dados que fez essa entrada.|  
 |**version**|**int**|Versão da entrada.|  
-|**colName**|**sysname**|Nome da coluna de artigo que a entrada de versão da coluna representa.|  
+|**colname**|**sysname**|Nome da coluna de artigo que a entrada de versão da coluna representa.|  
 |**comment**|**nvarchar(255)**|Informações adicionais sobre essa entrada de versão de coluna. Geralmente, esse campo fica vazio.|  
   
 ## <a name="result-set-for-both"></a>Conjunto de resultados para ambas  

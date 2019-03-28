@@ -18,12 +18,12 @@ ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0798359bedc959e792f56b3d81507329b618f217
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2dd164f25848d4c6b4f913ca2ddc746d7801fb78
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781314"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536608"
 ---
 # <a name="sysmailhelpaccountsp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,9 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@account_id** = ] *account_id*  
- A ID da conta para a qual as informações serão listadas. *account_id* está **int**, com um padrão NULL.  
+`[ @account_id = ] account_id` A ID da conta da conta para listar informações. *account_id* está **int**, com um padrão NULL.  
   
- [ **@account_name** = ] **'***account_name***'**  
- O nome da conta para a qual listar informações. *account_name* está **sysname**, com um padrão NULL.  
+`[ @account_name = ] 'account_name'` O nome da conta para listar informações. *account_name* está **sysname**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -54,10 +52,10 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
   
 ||||  
 |-|-|-|  
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |**account_id**|**int**|O ID da conta.|  
 |**name**|**sysname**|O nome da conta.|  
-|**Descrição**|**nvarchar(256)**|A descrição da conta.|  
+|**description**|**nvarchar(256)**|A descrição da conta.|  
 |**email_address**|**nvarchar(128)**|O endereço de email a partir do qual as mensagens serão enviadas.|  
 |**display_name**|**nvarchar(128)**|O nome para exibição da conta.|  
 |**replyto_address**|**nvarchar(128)**|O endereço onde as respostas às mensagens desta conta são enviadas.|  

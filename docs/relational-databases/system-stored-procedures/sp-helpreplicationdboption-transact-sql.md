@@ -16,12 +16,12 @@ ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 29fcbe7f5e7b2b7e72c88390df9d5fe20c0f7352
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a56e8cb4531fbe48e2a66242d23406d6d647573c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812028"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536698"
 ---
 # <a name="sphelpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,20 +40,17 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@dbname=**] **'***dbname***'**  
- É o nome do banco de dados. *DBName* está **sysname**, com um padrão de **%**. Se **%**, em seguida, o conjunto de resultados contém todos os bancos de dados no publicador, caso contrário, apenas informações sobre o banco de dados especificado serão retornadas. Não são retornadas informações para nenhum banco de dados para o qual o usuário não tenha a permissão apropriada, como descrita abaixo.  
+`[ @dbname = ] 'dbname'` É o nome do banco de dados. *DBName* está **sysname**, com um padrão de **%**. Se **%**, em seguida, o conjunto de resultados contém todos os bancos de dados no publicador, caso contrário, apenas informações sobre o banco de dados especificado serão retornadas. Não são retornadas informações para nenhum banco de dados para o qual o usuário não tenha a permissão apropriada, como descrita abaixo.  
   
- [  **@type=**] **'***tipo***'**  
- Restringe o conjunto de resultados para conter apenas bancos de dados no qual a opção de replicação especificada *tipo* valor tiver sido habilitado. *tipo de* está **sysname**, e pode ser um dos valores a seguir.  
+`[ @type = ] 'type'` Restringe o conjunto de resultados para conter apenas bancos de dados no qual a opção de replicação especificada *tipo* valor tiver sido habilitado. *tipo de* está **sysname**, e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**Publicar**|Replicação transacional permitida.|  
+|**publish**|Replicação transacional permitida.|  
 |**publicação de mesclagem**|Replicação de mesclagem permitida.|  
 |**replicação permitida** (padrão)|Replicação transacional ou replicação de mesclagem permitida.|  
   
- [  **@reserved=** ] *reservado*  
- Especifica se as informações sobre as publicações e assinaturas existentes são retornadas. *reservado* está **bit**, com um valor padrão de 0. Se **1**, o conjunto de resultados inclui informações sobre se o banco de dados especificado tem qualquer publicações ou assinaturas existentes.  
+`[ @reserved = ] reserved` Especifica se as informações sobre publicações e assinaturas existentes são retornadas. *reservado* está **bit**, com um valor padrão de 0. Se **1**, o conjunto de resultados inclui informações sobre se o banco de dados especificado tem qualquer publicações ou assinaturas existentes.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   

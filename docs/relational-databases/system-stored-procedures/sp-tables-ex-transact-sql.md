@@ -18,12 +18,12 @@ ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f034b1247f9865b83077ed11f644d6fdbbc4cecd
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 5d135b3b4b0f9d63ccd89db04be259f3c7031b7e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589381"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538488"
 ---
 # <a name="sptablesex-transact-sql"></a>sp_tables_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,20 +45,15 @@ sp_tables_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@table_server=** ] **'**_table_server_**'**  
- É o nome do servidor vinculado para o qual as informações de tabela devem ser retornadas. *table_server* está **sysname**, sem padrão.  
+`[ @table_server = ] 'table_server'` É o nome do servidor vinculado para o qual retornar informações de tabela. *table_server* está **sysname**, sem padrão.  
   
- [ **,** [  **@table_name=** ] **'**_table_name_**'**]  
- É o nome do proprietário da tabela usada para retornar informações de tipo de dados. *table_name*está **sysname**, com um padrão NULL.  
+``[ , [ @table_name = ] 'table_name']`` É o nome da tabela para a qual retornar informações de tipo de dados. *table_name*está **sysname**, com um padrão NULL.  
   
- [  **@table_schema=** ] **'**_table_schema_**'**]  
- É o esquema de tabela. *table_schema*está **sysname**, com um padrão NULL.  
+`[ @table_schema = ] 'table_schema']` É o esquema da tabela. *table_schema*está **sysname**, com um padrão NULL.  
   
- [  **@table_catalog=** ] **'**_table_catalog_**'**  
- É o nome do banco de dados em que a especificada *table_name* reside. *table_catalog* está **sysname**, com um padrão NULL.  
+`[ @table_catalog = ] 'table_catalog'` É o nome do banco de dados em que a especificada *table_name* reside. *table_catalog* está **sysname**, com um padrão NULL.  
   
- [  **@table_type=** ] **'**_table_type_**'**  
- É o tipo da tabela a ser retornada. *TABLE_TYPE* está **sysname**, com um padrão de NULL e pode ter um dos valores a seguir.  
+`[ @table_type = ] 'table_type'` É o tipo da tabela para retornar. *TABLE_TYPE* está **sysname**, com um padrão de NULL e pode ter um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -71,8 +66,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**TABLE**|Nome de uma tabela de usuário.|  
 |**VIEW**|Nome de uma exibição.|  
   
- [  **@fUsePattern=** ] **'**_fUsePattern_**'**  
- Determina se os caracteres **_**, **%**, **[**, e **]** são interpretados como caracteres curinga. Os valores válidos são 0 (correspondência de padrão desativada) e 1 (correspondência de padrão ativada). *fUsePattern* está **bit**, com um padrão de 1.  
+`[ @fUsePattern = ] 'fUsePattern'` Determina se os caracteres **_**, **%**, **[**, e **]** são interpretados como caracteres curinga. Os valores válidos são 0 (correspondência de padrão desativada) e 1 (correspondência de padrão ativada). *fUsePattern* está **bit**, com um padrão de 1.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  None  
@@ -85,7 +79,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**TABLE_SCHEM**|**sysname**|Nome do proprietário de tabela. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta coluna representa o nome do usuário de banco de dados que criou a tabela. Esse campo sempre retorna um valor.|  
 |**TABLE_NAME**|**sysname**|Nome da tabela. Esse campo sempre retorna um valor.|  
 |**TABLE_TYPE**|**varchar(32)**|Tabela, tabela do sistema ou exibição.|  
-|**COMENTÁRIOS**|**varchar(254)**|O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não retorna um valor para essa coluna.|  
+|**REMARKS**|**varchar(254)**|O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não retorna um valor para essa coluna.|  
   
 ## <a name="remarks"></a>Comentários  
  **sp_tables_ex** é executado consultando o conjunto de linhas de tabelas do **IDBSchemaRowset** interface do provedor OLE DB correspondente a *table_server*. O *table_name*, *table_schema*, *table_catalog*, e *coluna* parâmetros são passados para essa interface para restringir as linhas retornado.  

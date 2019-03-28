@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4cb96efa-9358-44a3-a8ee-a7e181bed089
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: dc5cc9c4d7bb7ca9b2d758e33142d140bf6fc6fa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 82519f069aaa59020e2dccb760df5d2a24c9178b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818978"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537878"
 ---
 # <a name="spdropanonymousagent-transact-sql"></a>sp_dropanonymousagent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,11 +37,9 @@ sp_dropanonymousagent [ @subid= ] sub_id    , [ @type= ] type
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@subid=**] *sub_id*  
- É o identificador global de uma assinatura anônima. *sub_id* está **uniqueidentifier**, sem padrão. Esse identificador pode ser recuperado no assinante usando **sp_helppullsubscription**. O valor de **subid** campo do conjunto de resultados retornado é esse identificador global.  
+`[ @subid = ] sub_id` É o identificador global para uma assinatura anônima. *sub_id* está **uniqueidentifier**, sem padrão. Esse identificador pode ser recuperado no assinante usando **sp_helppullsubscription**. O valor de **subid** campo do conjunto de resultados retornado é esse identificador global.  
   
- [  **@type=**] *tipo*  
- É o tipo de assinatura. *tipo de* está **int**, sem padrão. Os valores válidos são **1** ou **2**. Especificar **1**, se a replicação de instantâneo ou replicação transacional usando o agente de distribuição. Especificar **2**, se usar o agente de mesclagem de replicação de mesclagem.  
+`[ @type = ] type` É o tipo de assinatura. *tipo de* está **int**, sem padrão. Os valores válidos são **1** ou **2**. Especificar **1**, se a replicação de instantâneo ou replicação transacional usando o agente de distribuição. Especificar **2**, se usar o agente de mesclagem de replicação de mesclagem.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

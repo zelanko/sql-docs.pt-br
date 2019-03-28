@@ -16,12 +16,12 @@ ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9ac0fe99f835dae638cb65b24e569857fb77b098
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ef51624f3d14ef12be1c37b17727b70f5f31df10
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759949"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526418"
 ---
 # <a name="spcheckforsynctrigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,21 +40,20 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@tabid =** ] '*tabid*'  
+ [**@tabid =** ] '*tabid*'  
  É a ID de objeto da tabela onde gatilhos de atualização imediata estão sendo verificados. *tabid* está **int** sem nenhum padrão.  
   
- [ **@trigger_op =** ] '*trigger_output_parameters*' saída  
+ [**@trigger_op =** ] '*trigger_output_parameters*' OUTPUT  
  Especifica se o parâmetro de saída deve retornar o tipo de gatilho de onde ele está sendo chamado. *trigger_output_parameters* está **char(10)** e pode ser um destes valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**Ins**|Gatilho INSERT|  
-|**UPD**|Gatilho UPDATE|  
-|**/DEL**|Gatilho DELETE|  
+|**Upd**|Gatilho UPDATE|  
+|**Del**|Gatilho DELETE|  
 |NULL (padrão)||  
   
- [  **@fonpublisher =** ] *fonpublisher*  
- Especifica o local onde o procedimento armazenado é executado. *fonpublisher* está **bit**, com um valor padrão de 0. Se for 0 a execução será no Assinante e se for 1 a execução será no Editor.  
+`[ @fonpublisher = ] fonpublisher` Especifica o local em que o procedimento armazenado é executado. *fonpublisher* está **bit**, com um valor padrão de 0. Se for 0 a execução será no Assinante e se for 1 a execução será no Editor.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 indica que o procedimento armazenado não está sendo chamado dentro do contexto de um gatilho da atualização imediata. 1 indica que ele está sendo chamado dentro do contexto de um gatilho de atualização imediata e é o tipo de gatilho que está sendo retornado em *@trigger_op*.  

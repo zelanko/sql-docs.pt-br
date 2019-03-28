@@ -18,12 +18,12 @@ ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5ef0cb341c0f37f6961eebb759f2a236510044f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4bc7254d8a3eafa3c7c7d152d323051a3c5bea94
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097486"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537428"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Exibir ou alterar o modelo de recuperação de um banco de dados (SQL Server)
   Este tópico descreve como exibir ou alterar o modelo de recuperação de um banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. Um *modelo de recuperação* é uma propriedade de banco de dados que controla como as transações são registradas, se o log de transações exige (e permite) backup e que tipos de operações de restauração estão disponíveis. Existem três modelos de recuperação: simples, completo e bulk-logged. Geralmente, um banco de dados usa o modelo de recuperação completa ou o modelo de recuperação simples. É possível alternar para outro modelo de recuperação do banco de dados a qualquer momento. Os banco de dados **modelo** define o modelo de recuperação padrão de novos bancos de dados.  
@@ -42,7 +42,7 @@ ms.locfileid: "48097486"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Recomendações de acompanhamento:**  [depois que você alterar o modelo de recuperação](#FollowUp)  
+-   **Siga as recomendações:**  [Após você alterar o modelo de recuperação](#FollowUp)  
   
 -   [Tarefas relacionadas](#RelatedTasks)  
   
@@ -96,7 +96,7 @@ ms.locfileid: "48097486"
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo mostra como consultar a exibição de catálogo [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) para aprender o modelo de recuperação do banco de dados **modelo** .  
   
-```tsql  
+```sql  
 SELECT name, recovery_model_desc  
    FROM sys.databases  
       WHERE name = 'model' ;  
@@ -112,12 +112,12 @@ GO
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo mostra como alterar o modelo de recuperação no banco de dados `model` para `FULL` usando a opção `SET RECOVERY` da instrução [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options) .  
   
-```tsql  
+```sql  
 USE master ;  
 ALTER DATABASE model SET RECOVERY FULL ;  
 ```  
   
-##  <a name="FollowUp"></a> Recomendações de acompanhamento: Depois de alterar o modelo de recuperação  
+##  <a name="FollowUp"></a> Siga as recomendações: Após você alterar o modelo de recuperação  
   
 -   **Depois de alternar entre os modelos de recuperação completa e bulk-logged**  
   
@@ -154,7 +154,7 @@ ALTER DATABASE model SET RECOVERY FULL ;
   
 -   [Criar um trabalho](../../ssms/agent/create-a-job.md)  
   
--   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
+-   [Desabilitar ou habilitar um trabalho](../../ssms/agent/disable-or-enable-a-job.md)  
   
 ##  <a name="RelatedContent"></a> Conteúdo relacionado  
   

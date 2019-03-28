@@ -18,12 +18,12 @@ ms.assetid: 1a0be7b1-8f31-4b4c-aadb-586c0e00ed04
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 905386a1e346ed982c3ad84baf57f532aa5b020f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b6480c498914c4ec0bc02ba21552615bbdd28f6e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828354"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535688"
 ---
 # <a name="sphelpjobsteplog-transact-sql"></a>sp_help_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,27 +43,23 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@job_id =**] **'***job_id***'**  
- O número de identificação do trabalho para o qual as informações do log de etapas de trabalho serão retornadas. *job_id* está **int**, com um padrão NULL.  
+`[ @job_id = ] 'job_id'` O número de identificação do trabalho para o qual retornar informações do log de etapa de trabalho. *job_id* está **int**, com um padrão NULL.  
   
- [  **@job_name =**] **'***job_name***'**  
- O nome do trabalho. *job_name* está **sysname**, com um padrão NULL.  
+`[ @job_name = ] 'job_name'` O nome do trabalho. *job_name* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
 >  Qualquer um dos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados.  
   
- [  **@step_id =**] *step_id*  
- O número de identificação da etapa no trabalho. Se não for incluído, todas as etapas do trabalho serão incluídas. *step_id* está **int**, com um padrão NULL.  
+`[ @step_id = ] step_id` O número de identificação da etapa no trabalho. Se não for incluído, todas as etapas do trabalho serão incluídas. *step_id* está **int**, com um padrão NULL.  
   
- [  **@step_name =**] **'***step_name***'**  
- O nome da etapa no trabalho. *step_name* está **sysname**, com um padrão NULL.  
+`[ @step_name = ] 'step_name'` O nome da etapa no trabalho. *step_name* está **sysname**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|Identificador exclusivo do trabalho.|  
 |**job_name**|**sysname**|Nome do trabalho.|  

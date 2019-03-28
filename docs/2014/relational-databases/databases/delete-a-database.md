@@ -17,12 +17,12 @@ ms.assetid: 1fd8c0f5-03e1-449a-af45-b8cacb479d9c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d0abed3b23b563c6b2620ad93d3f59d58bebd67
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ffda3be2194b26b46f9633c3bdf76d60d36ce73c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789038"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538538"
 ---
 # <a name="delete-a-database"></a>Excluir um banco de dados
   Este tópico descreve como excluir um banco de dados definido pelo usuário no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -49,7 +49,7 @@ ms.locfileid: "52789038"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   Bancos de dados de sistema não podem ser excluídos.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "52789038"
   
 3.  Confirme se o banco de dados correto está selecionado e depois clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-delete-a-database"></a>Para excluir um banco de dados  
   
@@ -90,14 +90,14 @@ ms.locfileid: "52789038"
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. O exemplo remove os bancos de dados `Sales` e `NewSales` .  
   
-```tsql  
+```sql  
 USE master ;  
 GO  
 DROP DATABASE Sales, NewSales ;  
 GO  
 ```  
   
-##  <a name="FollowUp"></a> Acompanhar: Depois de excluir um banco de dados  
+##  <a name="FollowUp"></a> Acompanhamento: Depois de excluir um banco de dados  
  Faça backup do banco de dados **mestre** . Se o **mestre** precisar ser restaurado, todos os bancos de dados que tiverem sido excluídos desde o último backup do **mestre** ainda terão referências nas exibições do catálogo do sistema e poderão gerar mensagens de erro.  
   
 ## <a name="see-also"></a>Consulte também  

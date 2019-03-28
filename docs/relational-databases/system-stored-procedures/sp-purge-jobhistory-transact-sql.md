@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b421d32e8c8ac3d4f56ecaf95448ecafc92c8e17
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab2f2fcb07fb181fd32d5a60f9fd2d8f25725f96
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663385"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535678"
 ---
 # <a name="sppurgejobhistory-transact-sql"></a>sp_purge_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,17 +44,14 @@ sp_purge_jobhistory
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@job_name=** ] **'***job_name***'**  
- O nome do trabalho para o qual os registros históricos serão excluídos. *job_name*está **sysname**, com um padrão NULL. Qualquer um dos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados.  
+`[ @job_name = ] 'job_name'` O nome do trabalho para o qual excluir os registros de histórico. *job_name*está **sysname**, com um padrão NULL. Qualquer um dos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados.  
   
 > [!NOTE]  
 >  Membros do **sysadmin** fixo de função de servidor ou os membros da **SQLAgentOperatorRole** banco de dados fixa podem executar **sp_purge_jobhistory** sem especificar um *job_name* ou *job_id*. Quando **sysadmin** os usuários não especificarem esses argumentos, o histórico de trabalhos para todos os trabalhos locais e multisservidor será excluído no tempo especificado por *oldest_date*. Quando **SQLAgentOperatorRole** os usuários não especificarem esses argumentos, o histórico de trabalhos de todos os trabalhos locais será excluído no tempo especificado por *oldest_date*.  
   
- [ **@job_id=** ] *job_id*  
- O número de identificação do trabalho cujos registros serão excluídos. *job_id*está **uniqueidentifier**, com um padrão NULL. Qualquer um dos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados. Consulte a observação na descrição da **@job_name** para obter informações sobre como **sysadmin** ou **SQLAgentOperatorRole** os usuários podem usar esse argumento.  
+`[ @job_id = ] job_id` O número de identificação do trabalho para os registros a serem excluídos. *job_id*está **uniqueidentifier**, com um padrão NULL. Qualquer um dos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados. Consulte a observação na descrição da **@job_name** para obter informações sobre como **sysadmin** ou **SQLAgentOperatorRole** os usuários podem usar esse argumento.  
   
- [ **@oldest_date** = ] *oldest_date*  
- O registro mais antigo a ser retido no histórico. *oldest_date* está **datetime**, com um padrão NULL. Quando *oldest_date* for especificado, **sp_purge_jobhistory** remove somente os registros mais antigos que o valor especificado.  
+`[ @oldest_date = ] oldest_date` O registro mais antigo a ser retido no histórico. *oldest_date* está **datetime**, com um padrão NULL. Quando *oldest_date* for especificado, **sp_purge_jobhistory** remove somente os registros mais antigos que o valor especificado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

@@ -18,12 +18,12 @@ ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 24b70a8327a69496438be7739e3b5eba6b24533f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f0f892bf81811538eeb06b18feb725778464910b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746384"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528378"
 ---
 # <a name="sphelpjobsinschedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_help_jobs_in_schedule
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@schedule_id =** ] *schedule_id*  
- O identificador da agenda para o qual listar informações. *schedule_id* está **int**, sem padrão. Qualquer um dos *schedule_id* ou *schedule_name* pode ser especificado.  
+`[ @schedule_id = ] schedule_id` O identificador da agenda para listar informações. *schedule_id* está **int**, sem padrão. Qualquer um dos *schedule_id* ou *schedule_name* pode ser especificado.  
   
- [  **@schedule_name =** ] **'***schedule_name***'**  
- O nome da agenda para a qual listar informações. *schedule_name* está **sysname**, sem padrão. Qualquer um dos *schedule_id* ou *schedule_name* pode ser especificado.  
+`[ @schedule_name = ] 'schedule_name'` O nome da agenda para listar informações. *schedule_name* está **sysname**, sem padrão. Qualquer um dos *schedule_id* ou *schedule_name* pode ser especificado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -54,16 +52,16 @@ sp_help_jobs_in_schedule
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Retorna o seguinte conjunto de resultados:  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|A ID exclusiva do trabalho.|  
 |**originating_server**|**nvarchar(30)**|Nome do servidor do qual o trabalho originou.|  
 |**name**|**sysname**|Nome do trabalho.|  
-|**habilitado**|**tinyint**|Indica se o trabalho está habilitado para ser executado.|  
-|**Descrição**|**nvarchar(512)**|Descrição do trabalho.|  
+|**enabled**|**tinyint**|Indica se o trabalho está habilitado para ser executado.|  
+|**description**|**nvarchar(512)**|Descrição do trabalho.|  
 |**start_step_id**|**int**|ID da etapa do trabalho em que a execução deve começar.|  
 |**category**|**sysname**|Categoria do trabalho.|  
-|**Proprietário**|**sysname**|Proprietário do trabalho.|  
+|**owner**|**sysname**|Proprietário do trabalho.|  
 |**notify_level_eventlog**|**int**|Bitmask que indica sob quais circunstâncias um evento de notificação deve ser registrado no log de aplicativos do Microsoft Windows. Pode ser um destes valores:<br /><br /> **0** = nunca<br /><br /> **1** = quando um trabalho for bem-sucedido<br /><br /> **2** = quando o trabalho falhar<br /><br /> **3** = sempre que o trabalho for concluído (independentemente do resultado do trabalho)|  
 |**notify_level_email**|**int**|Bitmask que indica sob quais circunstâncias um email de notificação deve ser enviado quando um trabalho é concluído. Os valores possíveis são os mesmos para **notify_level_eventlog**.|  
 |**notify_level_netsend**|**int**|Bitmask que indica sob quais circunstâncias uma mensagem de rede deve ser enviada quando um trabalho é concluído. Os valores possíveis são os mesmos para **notify_level_eventlog**.|  

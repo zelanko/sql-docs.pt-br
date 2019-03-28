@@ -16,12 +16,12 @@ ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 78328463828b3c4a93b72ddc8790df13677dee81
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 13f48722b940c26cda8b29258f16f641f74d15e9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125362"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531888"
 ---
 # <a name="spdropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,34 +44,27 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'**_publicação_**'**  
- É o nome da publicação da qual remover um artigo. *publicação*está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação na qual descartar um artigo. *publicação*está **sysname**, sem padrão.  
   
- [  **@article=**] **'**_artigo_**'**  
- É o nome do artigo a ser removido da publicação determinada. *artigo*está **sysname**, sem padrão. Se **todos os**, todos os artigos existentes na publicação de mesclagem especificada serão removidos. Mesmo se *artigo* é **todos os**, a publicação ainda deverá ser descartada separadamente do artigo.  
+`[ @article = ] 'article'` É o nome do artigo para remover da publicação determinada. *artigo*está **sysname**, sem padrão. Se **todos os**, todos os artigos existentes na publicação de mesclagem especificada serão removidos. Mesmo se *artigo* é **todos os**, a publicação ainda deverá ser descartada separadamente do artigo.  
   
- [  **@ignore_distributor=**] *ignore_distributor*  
- Indica se esse procedimento armazenado será executado sem se conectar ao Distribuidor. *ignore_distributor* está **bit**, com um padrão de **0**.  
+`[ @ignore_distributor = ] ignore_distributor` Indica se esse procedimento armazenado é executado sem se conectar ao distribuidor. *ignore_distributor* está **bit**, com um padrão de **0**.  
   
- [  **@reserved=**] *reservado*  
- É reservado para uso futuro. *reservado* está **nvarchar (20)**, com um padrão NULL.  
+`[ @reserved = ] reserved` É reservado para uso futuro. *reservado* está **nvarchar (20)**, com um padrão NULL.  
   
- [  **@force_invalidate_snapshot=**] *force_invalidate_snapshot*  
- Habilita ou desabilita a capacidade de ter um instantâneo invalidado. *force_invalidate_snapshot* é um **bit**, com um padrão **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Habilita ou desabilita a capacidade de invalidar um instantâneo. *force_invalidate_snapshot* é um **bit**, com um padrão **0**.  
   
  **0** Especifica que as alterações no artigo de mesclagem fazem com que o instantâneo seja inválido.  
   
  **1** significa que as alterações no artigo de mesclagem pode invalidar o instantâneo ser inválido, e se esse for o caso, um valor de **1** dá permissão para a ocorrência do novo instantâneo.  
   
- [  **@force_reinit_subscription =** ] *force_reinit_subscription*  
- Confirma que a remoção do artigo exige que as assinaturas existentes sejam reinicializadas. *force_reinit_subscription* é um **bit**, com um padrão de **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Confirma que o descarte do artigo requer assinaturas existentes sejam reinicializadas. *force_reinit_subscription* é um **bit**, com um padrão de **0**.  
   
  **0** Especifica que o descarte do artigo não causa a reinicialização da assinatura.  
   
  **1** significa que o descarte o artigo faz com que as assinaturas existentes sejam reinicializadas e dá permissão para a reinicialização da assinatura ocorra.  
   
- [  **@ignore_merge_metadata=** ] *ignore_merge_metadata*  
- Somente para uso interno.  
+`[ @ignore_merge_metadata = ] ignore_merge_metadata` Somente para uso interno.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a9a24c843ed45a42fe4072b47c5642d81520a75e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f483c6fe53ab980893ba8e1104b46e073336b027
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214135"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533978"
 ---
 # <a name="sprefreshparameterencryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -47,11 +47,9 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 ## <a name="arguments"></a>Argumentos
 
-[  **@name =** ] **'***module_name***'**   
-É o nome do procedimento armazenado, função definida pelo usuário, exibição, gatilho DML, gatilho DDL de nível do banco de dados ou gatilho DDL do nível de servidor. *module_name* não pode ser um common language runtime (CLR) procedimento armazenado ou uma função CLR. *module_name* não pode ser associada a esquema. *module_name* é `nvarchar`, sem padrão. *module_name* pode ser um identificador de várias partes, mas só pode se referir a objetos no banco de dados atual.
+`[ @name = ] 'module_name'` É o nome do procedimento armazenado, função definida pelo usuário, exibição, gatilho DML, gatilho DDL no nível de banco de dados ou gatilho DDL no nível do servidor. *module_name* não pode ser um common language runtime (CLR) procedimento armazenado ou uma função CLR. *module_name* não pode ser associada a esquema. *module_name* é `nvarchar`, sem padrão. *module_name* pode ser um identificador de várias partes, mas só pode se referir a objetos no banco de dados atual.
 
-[  **@namespace =** ] **'** < classe > **'**   
-É a classe do módulo especificado. Quando *module_name* é um gatilho DDL, `<class>` é necessária. `<class>` é `nvarchar(20)`. As entradas válidas são `DATABASE_DDL_TRIGGER` e `SERVER_DDL_TRIGGER`.    
+`[ @namespace = ] ' < class > '` É a classe do módulo especificado. Quando *module_name* é um gatilho DDL, `<class>` é necessária. `<class>` é `nvarchar(20)`. As entradas válidas são `DATABASE_DDL_TRIGGER` e `SERVER_DDL_TRIGGER`.    
 
 ## <a name="return-code-values"></a>Valores do código de retorno  
 

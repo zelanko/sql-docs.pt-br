@@ -17,12 +17,12 @@ ms.assetid: 055f9c6a-5c18-4942-98e7-ec918f0ff975
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 58ee1265918a96133ac0b25b9dd2ac516607b0fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2a59277110d91ffd40a2db7d62fd3a01aa109dfc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187036"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536628"
 ---
 # <a name="remove-defunct-filegroups-sql-server"></a>Remover grupos de arquivos expirados (SQL Server)
   Este tópico descreve como remover grupos de arquivos expirados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -86,9 +86,9 @@ ms.locfileid: "48187036"
   
 2.  Na barra Padrão, clique em **Nova Consulta**.  
   
-3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. (**Observação:** este exemplo parte do princípio que os arquivos e o grupo de arquivos já existem. Para criar esses objetos, veja o exemplo B no tópico [Opções de arquivos e grupos de arquivos ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options).) O primeiro exemplo remove os arquivos `test1dat3` e `test1dat4` do grupo de arquivos expirados usando a instrução `ALTER DATABASE` com a cláusula `REMOVE FILE`. O segundo exemplo remove o grupo de arquivos expirados `Test1FG1` usando a cláusula `REMOVE FILEGROUP`.  
+3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. (**Observação:** Este exemplo supõe que os arquivos e o grupo de arquivos já existem. Para criar esses objetos, veja o exemplo B no tópico [Opções de arquivos e grupos de arquivos ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options).) O primeiro exemplo remove os arquivos `test1dat3` e `test1dat4` do grupo de arquivos expirados usando a instrução `ALTER DATABASE` com a cláusula `REMOVE FILE`. O segundo exemplo remove o grupo de arquivos expirados `Test1FG1` usando a cláusula `REMOVE FILEGROUP`.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE AdventureWorks2012  
@@ -99,7 +99,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE AdventureWorks2012  

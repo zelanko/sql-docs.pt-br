@@ -18,12 +18,12 @@ ms.assetid: ce2b07f5-23b1-4f49-8e7b-c18cf3f3d45b
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 297f0040f127ae210f8507374f940e4439cdf0d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2262bf4d05e10ef20a531794cd342a5ee903fe3a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855614"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536728"
 ---
 # <a name="spsyspolicyrenamepolicy-transact-sql"></a>sp_syspolicy_rename_policy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,11 @@ sp_syspolicy_rename_policy { [ @name = ] 'name' | [ @policy_id = ] policy_id }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@name=** ] **'***name***'**  
- É o nome da política que você deseja renomear. *nome da* está **sysname**e deve ser especificado se *policy_id* é NULL.  
+`[ @name = ] 'name'` É o nome da política que você deseja renomear. *nome da* está **sysname**e deve ser especificado se *policy_id* é NULL.  
   
- [  **@policy_id=** ] *policy_id*  
- É o identificador da política que você deseja renomear. *policy_id* está **int**e deve ser especificado se *nome* é NULL.  
+`[ @policy_id = ] policy_id` É o identificador para a política que você deseja renomear. *policy_id* está **int**e deve ser especificado se *nome* é NULL.  
   
- [ **@new_name=** ] **'***new_name***'**  
- É o novo nome para a política. *new_name* está **sysname**e é necessária. Não pode ser NULL ou uma cadeia de caracteres vazia.  
+`[ @new_name = ] 'new_name'` É o novo nome para a política. *new_name* está **sysname**e é necessária. Não pode ser NULL ou uma cadeia de caracteres vazia.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -63,7 +60,7 @@ sp_syspolicy_rename_policy { [ @name = ] 'name' | [ @policy_id = ] policy_id }
  Requer a associação à função de banco de dados fixa PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Possível elevação de credenciais: os usuários na função PolicyAdministratorRole podem criar gatilhos de servidor e agendar execuções de políticas que possam afetar a operação da instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por exemplo, os usuários da função PolicyAdministratorRole podem criar uma política que impeça a criação da maioria dos objetos no [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Devido a essa possível elevação de credenciais, a função PolicyAdministratorRole deve ser concedida somente para usuários que sejam confiáveis no controle da configuração do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  Possível elevação de credenciais: Os usuários na função PolicyAdministratorRole podem criar gatilhos de servidor e agendar execuções de políticas que podem afetar a operação da instância da [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por exemplo, os usuários da função PolicyAdministratorRole podem criar uma política que impeça a criação da maioria dos objetos no [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Devido a essa possível elevação de credenciais, a função PolicyAdministratorRole deve ser concedida somente para usuários que sejam confiáveis no controle da configuração do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo seguinte renomeia uma política chamada 'Test Policy 1' para 'Test Policy 2'.  

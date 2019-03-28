@@ -10,15 +10,15 @@ ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dc60d3491e4203db8f548dcbafd7c3b5373d266c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f3296d0162136a441d141d32089a674a67e7b5b0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123906"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526558"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>Padrão de aplicativo para particionamento de tabelas com otimização de memória
-  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] dá suporte a um padrão em que um valor limitado de dados ativos é mantido em uma tabela com otimização de memória, enquanto os dados acessados com menos frequência são processados no disco. Normalmente, isso seria um cenário onde os dados são armazenados com base em um `datetime` chave.  
+  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] dá suporte a um padrão em que um valor limitado de dados ativos é mantido em uma tabela com otimização de memória, enquanto os dados acessados com menos frequência são processados no disco. Geralmente, esse seria um cenário onde os dados são armazenados com base em uma chave `datetime`.  
   
  Você pode emular tabelas particionadas usando tabelas com otimização de memória mantendo uma tabela particionada e uma tabela com otimização de memória com um esquema comum. Os dados atuais seriam inseridos e atualizados na tabela com otimização de memória, enquanto os dados acessados com menos frequência seriam mantidos na tabela particionada tradicional.  
   
@@ -46,7 +46,7 @@ Manutenção de dados ativos
   
  A primeira parte deste exemplo cria o banco de dados e os objetos necessários. A segunda parte do exemplo mostra como mover dados de uma tabela com otimização de memória em uma tabela particionada.  
   
-```tsql  
+```sql  
 CREATE DATABASE partitionsample;  
 GO  
   

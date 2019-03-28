@@ -18,12 +18,12 @@ ms.assetid: ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 189861d10e308b79862f2485413aabf37a1b6aff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7ba29ca0d4522367e22273b4f07720f4e563ef6f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716334"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526571"
 ---
 # <a name="spmsxenlist-transact-sql"></a>sp_msx_enlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,9 @@ sp_msx_enlist [@msx_server_name =] 'msx_server'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@msx_server_name =**] **'***msx_server***'**  
- O nome do servidor de administração multisservidor (mestre). *msx_server* está **sysname**, sem padrão.  
+`[ @msx_server_name = ] 'msx_server'` O nome do servidor de administração multisservidor (mestre). *msx_server* está **sysname**, sem padrão.  
   
- [  **@location =**] **'***local***'**  
- O local do servidor de destino a ser adicionado. *local* está **nvarchar(100)**, com um padrão NULL.  
+`[ @location = ] 'location'` O local do servidor de destino para adicionar. *local* está **nvarchar(100)**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

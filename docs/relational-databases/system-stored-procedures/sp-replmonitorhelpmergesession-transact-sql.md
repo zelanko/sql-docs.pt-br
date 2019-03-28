@@ -16,12 +16,12 @@ ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e08a08bbd3343386ed4b07749bde5216ae23c8b4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 224d304a44c3e66eb8f2c18f4c581bf271f926f9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789188"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538498"
 ---
 # <a name="spreplmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@agent_name** =] **'***agent_name***'**  
- É o nome do agente. *agent_name* está **nvarchar(100)** sem nenhum padrão.  
+`[ @agent_name = ] 'agent_name'` É o nome do agente. *agent_name* está **nvarchar(100)** sem nenhum padrão.  
   
- [ **@hours** =] *horas*  
- É o intervalo de tempo, em horas, para o qual as informações da sessão do agente são retornadas. *horas* está **int**, que pode ser um dos intervalos a seguir.  
+`[ @hours = ] hours` É o intervalo de tempo, em horas, para o qual as informações de sessão de histórico de agente são retornadas. *horas* está **int**, que pode ser um dos intervalos a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -55,36 +53,32 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 |**0** (padrão)|Retorna informações sobre todas as execuções de agente anteriores.|  
 |> **0**|Retorna informações sobre o agente de execuções que ocorreram nas últimas *horas* número de horas.|  
   
- [ **@session_type** =] *session_type*  
- Filtra o conjunto de resultados baseado no resultado final da sessão. *session_type* está **int**, e pode ser um destes valores.  
+`[ @session_type = ] session_type` Filtra o conjunto de resultados com base no resultado final da sessão. *session_type* está **int**, e pode ser um destes valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**1** (padrão)|Sessões de agente com um resultado de repetição ou êxito.|  
 |**0**|Sessões de agente com um resultado de falha.|  
   
- [ **@publisher** =] **'***publisher***'**  
- É o nome do Publicador. *Publisher* está **sysname**, com um padrão NULL. Esse parâmetro é usado ao executar **sp_replmonitorhelpmergesession** no assinante.  
+`[ @publisher = ] 'publisher'` É o nome do publicador. *Publisher* está **sysname**, com um padrão NULL. Esse parâmetro é usado ao executar **sp_replmonitorhelpmergesession** no assinante.  
   
- [ **@publisher_db** =] **'***publisher_db***'**  
- É o nome do banco de dados de publicação. *publisher_db* está **sysname**, com um padrão NULL. Esse parâmetro é usado ao executar **sp_replmonitorhelpmergesession** no assinante.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados de publicação. *publisher_db* está **sysname**, com um padrão NULL. Esse parâmetro é usado ao executar **sp_replmonitorhelpmergesession** no assinante.  
   
- [  **@publication=** ] **'***publicação***'**  
- É o nome da publicação. *publicação* está **sysname**, com um padrão NULL. Esse parâmetro é usado ao executar **sp_replmonitorhelpmergesession** no assinante.  
+`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, com um padrão NULL. Esse parâmetro é usado ao executar **sp_replmonitorhelpmergesession** no assinante.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**Session_id**|**int**|ID da sessão de trabalho do agente.|  
-|**Status**|**int**|Status de execução do agente:<br /><br /> **1** = início<br /><br /> **2** = êxito<br /><br /> **3** = em andamento<br /><br /> **4** = ocioso<br /><br /> **5** = repetir<br /><br /> **6** = falha|  
+|**Status**|**int**|Status de execução do agente:<br /><br /> **1** = início<br /><br /> **2** = êxito<br /><br /> **3** = em andamento<br /><br /> **4** = ocioso<br /><br /> **5** = repetir<br /><br /> **6** = Fail|  
 |**StartTime**|**datetime**|Começou a sessão de trabalho do agente de tempo.|  
 |**EndTime**|**datetime**|Sessão de trabalho do agente de tempo foi concluída.|  
 |**Duration**|**int**|Duração acumulada, em segundos, dessa sessão de trabalho.|  
 |**UploadedCommands**|**int**|Número de comandos carrgeado durante a sessão do agente.|  
 |**DownloadedCommands**|**int**|Número de comandos baixados durante a sessão do agente.|  
 |**ErrorMessages**|**int**|Número de mensagens de erro geradas durante a sessão do agente.|  
-|**Identificação de erro**|**int**|ID do erro ocorrido.|  
+|**ErrorID**|**int**|ID do erro ocorrido.|  
 |**PercentageDone**|**decimal**|Porcentagem estimada do total de alterações que já foi entregue em uma sessão ativa.|  
 |**TimeRemaining**|**int**|Número estimado de segundos restantes em uma sessão ativa.|  
 |**CurrentPhase**|**int**|É a fase atual da sessão de uma sessão ativa, que pode ser uma das seguintes:<br /><br /> **1** = carregamento<br /><br /> **2** = download|  

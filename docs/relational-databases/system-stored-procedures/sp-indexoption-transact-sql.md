@@ -18,12 +18,12 @@ ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d6df698f13298bf290ad1a0cb9e94ccac0bfce3f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15e30a28a816b8105762e9f4cbfc4a0892cae1be
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596414"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538568"
 ---
 # <a name="spindexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47596414"
  O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] faz automaticamente escolhas de bloqueio no nível de página, linha ou tabela. Você não precisa definir essas opções manualmente. **sp_indexoption** é fornecido para usuários especialistas que sabem com certeza que um determinado tipo de bloqueio sempre é apropriado.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] Em vez disso, use [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] Instead, use [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,21 +47,18 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@IndexNamePattern=**] **'***table_or_index_name***'**  
- É o nome qualificado ou não qualificado de uma tabela ou índice definido pelo usuário. *table_or_index_name* está **nvarchar(1035)**, sem padrão. As aspas são necessárias somente se um nome de índice ou tabela qualificado for especificado. Se um nome de tabela totalmente qualificado, incluindo um nome de banco de dados, for fornecido, o nome de banco de dados deve ser o nome do banco de dados atual. Se um nome de tabela for especificado sem-índice, o valor de opção especificado será definido para todos os índices nessa tabela e para a própria tabela se não houver um índice clusterizado.  
+`[ @IndexNamePattern = ] 'table_or_index_name'` É o nome qualificado ou não qualificado de um índice ou de tabela definido pelo usuário. *table_or_index_name* está **nvarchar(1035)**, sem padrão. As aspas são necessárias somente se um nome de índice ou tabela qualificado for especificado. Se um nome de tabela totalmente qualificado, incluindo um nome de banco de dados, for fornecido, o nome de banco de dados deve ser o nome do banco de dados atual. Se um nome de tabela for especificado sem-índice, o valor de opção especificado será definido para todos os índices nessa tabela e para a própria tabela se não houver um índice clusterizado.  
   
- [  **@OptionName =**] **'***option_name***'**  
- É um nome de opção de índice. *option_name* está **varchar(35)**, sem padrão. *option_name* pode ter um dos valores a seguir.  
+`[ @OptionName = ] 'option_name'` É um nome de opção de índice. *option_name* está **varchar(35)**, sem padrão. *option_name* pode ter um dos valores a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**AllowRowLocks**|No caso de TRUE, são permitidos bloqueios de linha ao acessar o índice. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando os bloqueios de linha são usados. No caso de FALSE, não são usados bloqueios de linha. O padrão é TRUE.|  
 |**AllowPageLocks**|No caso de TRUE, são permitidos bloqueios de página ao acessar o índice. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando os bloqueios de página são usados. No caso de FALSE, não são usados bloqueios de página. O padrão é TRUE.|  
 |**DisAllowRowLocks**|No caso de TRUE, não são usados bloqueios de linha. No caso de FALSE, são permitidos bloqueios de linha ao acessar o índice. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando os bloqueios de linha são usados.|  
 |**DisAllowPageLocks**|No caso de TRUE, não são usados bloqueios de página. No caso de FALSE, são permitidos bloqueios de página ao acessar o índice. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando os bloqueios de página são usados.|  
   
- [  **@OptionValue =**] **'***valor***'**  
- Especifica se o *option_name* configuração está habilitada (TRUE, ON, Sim ou 1) ou desabilitado (FALSE, OFF, não ou 0). *valor* está **varchar(12)**, sem padrão.  
+`[ @OptionValue = ] 'value'` Especifica se o *option_name* configuração está habilitada (TRUE, ON, Sim ou 1) ou desabilitado (FALSE, OFF, não ou 0). *valor* está **varchar(12)**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou superior a 0 (falha)  

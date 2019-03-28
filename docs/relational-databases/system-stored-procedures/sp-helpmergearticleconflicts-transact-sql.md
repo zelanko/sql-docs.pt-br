@@ -16,12 +16,12 @@ ms.assetid: 4678a2b9-9a5f-4193-a20d-2e11fc896c3a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 56d221f51a492de7cc85af158fa6f60f589fdf31
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e02cbdeaaf754819b3a0efa15aa9515cc8515e62
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806438"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534028"
 ---
 # <a name="sphelpmergearticleconflicts-transact-sql"></a>sp_helpmergearticleconflicts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'***publicação***'**  
- É o nome da publicação de mesclagem. *publicação* é **sysname**, com um padrão de **%**, que retorna todos os artigos no banco de dados que tem conflitos.  
+`[ @publication = ] 'publication'` É o nome da publicação de mesclagem. *publicação* é **sysname**, com um padrão de **%**, que retorna todos os artigos no banco de dados que tem conflitos.  
   
- [  **@publisher=**] **'***publisher***'**  
- É o nome do publicador. *publisher* é **sysname**, com um padrão NULL.  
+`[ @publisher = ] 'publisher'` É o nome do publicador. *publisher* é **sysname**, com um padrão NULL.  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
- É o nome do banco de dados publicador. *publisher_db* é **sysname**, com um padrão NULL.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados publicador. *publisher_db* é **sysname**, com um padrão NULL.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   

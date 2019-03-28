@@ -13,12 +13,12 @@ ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 17252769c0f9347f5f67dbf073a207d827963630
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 80a7b0dd13688dca542587fbebd20c5b1818972a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377538"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537578"
 ---
 # <a name="install-and-configure-semantic-search"></a>Instalar e configurar a pesquisa semântica
   Descreve os pré-requisitos para a pesquisa semântica estatística e como instalá-los ou verificá-los.  
@@ -30,7 +30,7 @@ ms.locfileid: "53377538"
   
  Um valor de retorno 1 indica que a pesquisa de texto completo e a pesquisa semântica estão instaladas; um valor de retorno 0 indica que não estão instaladas.  
   
-```tsql  
+```sql  
 SELECT SERVERPROPERTY('IsFullTextInstalled');  
 GO  
 ```  
@@ -79,7 +79,7 @@ GO
   
  Por padrão, o nome do banco de dados é **semanticsdb**. Se desejar, você poderá atribuir ao banco de dados um nome diferente quando anexá-lo. Você tem que fornecer esse nome ao registrar o banco de dados na etapa subsequente.  
   
-```tsql  
+```sql  
 CREATE DATABASE semanticsdb  
             ON ( FILENAME = 'C:\Microsoft Semantic Language Database\semanticsdb.mdf' )  
             LOG ON ( FILENAME = 'C:\Microsoft Semantic Language Database\semanticsdb_log.ldf' )  
@@ -92,7 +92,7 @@ GO
  **3. Registre o banco de dados de estatísticas semânticas de idioma.**  
  Chame o procedimento armazenado [sp_fulltext_semantic_register_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql) e forneça o nome que você atribuiu ao banco de dados quando o anexou.  
   
-```tsql  
+```sql  
 EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = N'semanticsdb';  
 GO  
 ```  
@@ -101,7 +101,7 @@ GO
  **Cancelar o registro do banco de dados de estatísticas semânticas de idioma.**  
  Chame o procedimento armazenado [sp_fulltext_semantic_unregister_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql). Você não precisa fornecer o nome do banco de dados, já que uma instância pode ter somente um banco de dados de estatísticas semânticas de idioma.  
   
-```tsql  
+```sql  
 EXEC sp_fulltext_semantic_unregister_language_statistics_db;  
 GO  
 ```  
@@ -109,7 +109,7 @@ GO
  **Desanexe o banco de dados de estatísticas semânticas de idioma.**  
  Chame o procedimento armazenado [sp_detach_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql) e forneça o nome do banco de dados.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
   

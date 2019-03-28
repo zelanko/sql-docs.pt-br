@@ -18,12 +18,12 @@ ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0cf6feb850bbc898d69b01c897d1be295c378566
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d223267bbc181b325343014609525cbb2777881b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763254"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538508"
 ---
 # <a name="sphelpjobactivity-transact-sql"></a>sp_help_jobactivity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,14 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@job_id =**] *job_id*  
- O número de identificação do trabalho. *job_id*está **uniqueidentifier**, com um padrão NULL.  
+`[ @job_id = ] job_id` O número de identificação do trabalho. *job_id*está **uniqueidentifier**, com um padrão NULL.  
   
- [  **@job_name =**] **'***job_name***'**  
- O nome do trabalho. *job_name*está **sysname**, com um padrão NULL.  
+`[ @job_name = ] 'job_name'` O nome do trabalho. *job_name*está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
 >  Qualquer um dos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados.  
   
- [ **@session_id** =] *session_id*  
- A id da sessão sobre a qual relatar informações. *session_id* está **int**, com um padrão NULL.  
+`[ @session_id = ] session_id` A id de sessão para relatar informações sobre. *session_id* está **int**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -59,7 +56,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Retorna o seguinte conjunto de resultados:  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|Número de identificação da sessão do agente.|  
 |**job_id**|**uniqueidentifier**|Identificador do trabalho.|  

@@ -13,12 +13,12 @@ ms.assetid: 0137971b-fb48-4a3e-822a-3df2b9bb09d7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 31b2bd29c2a9e0a8e8e29f08bee0016e7b3dc55d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 61a5e8c1e3dad99318f14a49f1386757a4ebabe3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802878"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536758"
 ---
 # <a name="enable-or-disable-data-collection"></a>Habilitar ou desabilitar a coleta de dados
   Este tópico descreve como habilitar ou desabilitar a coleta de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -56,7 +56,7 @@ ms.locfileid: "52802878"
   
 2.  Clique com o botão direito do mouse em **Coleta de Dados**e clique em **Desabilitar Coleta de Dados**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-enable-the-data-collector"></a>Para habilitar o coletor de dados  
   
@@ -66,7 +66,7 @@ ms.locfileid: "52802878"
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo usa [sp_syscollector_enable_collector](/sql/relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql) para habilitar o coletor de dados.  
   
-```tsql  
+```sql  
 USE msdb;  
 GO  
 EXEC dbo.sp_syscollector_enable_collector ;  
@@ -80,7 +80,7 @@ EXEC dbo.sp_syscollector_enable_collector ;
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo usa [sp_syscollector_disable_collector](/sql/relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql) para desabilitar o coletor de dados.  
   
-```tsql  
+```sql  
 USE msdb;  
 GO  
 EXEC dbo.sp_syscollector_disable_collector;  

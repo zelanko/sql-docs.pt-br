@@ -16,12 +16,12 @@ ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: bfe5d9f7bc5c95055af06b0582f2ddcf88ae7cdf
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 6fa6606d7daf4a1b61ff986d1d7c5675b5ae5f1f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125706"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531808"
 ---
 # <a name="spchangereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,28 +41,24 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@login_type** =] *login_type*  
- É o tipo de autenticação para as credenciais fornecidas. *login_type* está **tinyint**, sem padrão.  
+`[ @login_type = ] login_type` É o tipo de autenticação para as credenciais fornecidas. *login_type* está **tinyint**, sem padrão.  
   
  **1** = autenticação integrada do Windows  
   
  **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação  
   
- [ **@login** =] **'**_logon_**'**  
- É o nome da conta do Windows ou do logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo alterado. *login* está **nvarchar(257)**, sem padrão  
+`[ @login = ] 'login'` É o nome da conta do Windows ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon sendo alterado. *login* está **nvarchar(257)**, sem padrão  
   
- [ **@password** =] **'**_senha_**'**  
- É a nova senha a ser armazenado especificado *login*. *senha* está **sysname**, sem padrão.  
+`[ @password = ] 'password'` É a nova senha a ser armazenado especificado *login*. *senha* está **sysname**, sem padrão.  
   
 > [!NOTE]  
 >  Depois de alterar a senha de replicação de um agente, você deve parar e reiniciar cada agente que a usa para que a alteração entre em vigor para aquele agente.  
   
- [ **@server** =] **'**_servidor_**'**  
- É a conexão de servidor para a qual a senha armazenada está sendo alterada. *servidor* está **sysname**, e pode ser um destes valores:  
+`[ @server = ] 'server'` É a conexão de servidor para o qual a senha armazenada está sendo alterada. *servidor* está **sysname**, e pode ser um destes valores:  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**distribuidor**|Todas as conexões do agente com o Distribuidor.|  
+|**distributor**|Todas as conexões do agente com o Distribuidor.|  
 |**publisher**|Todas as conexões do agente com o Publicador.|  
 |**Assinante**|Todas as conexões do agente com o Assinante.|  
 |**%** (padrão)|Todas as conexões do agente com todos os servidores em uma topologia de replicação.|  

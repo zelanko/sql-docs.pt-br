@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - strings [SQL Server], XML
 ms.assetid: bf069da8-de1e-44d2-a1fb-ade383076ac1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 48a6063193b0ad629316bb1a7d6180c27178561b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 77a061d9a4bc1b1e320cf8af01599cdc52e139f8
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076676"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537458"
 ---
 # <a name="for-xml-support-for-string-data-types"></a>Suporte a FOR XML para tipos de dados de cadeia de caracteres
   O XML gerado pelos caracteres de espaço em branco do FOR XML nos dados tem a entidade definida.  
@@ -42,7 +42,7 @@ FOR XML AUTO;
 go  
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
  <T c1="1" c2="Special character 0xD for carriage return   

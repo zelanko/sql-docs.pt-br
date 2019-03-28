@@ -14,12 +14,12 @@ ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 88cc979d7888a5844731c63ec96898572d31acc8
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: b0588bbc8c21c9946ac72a2db92c593e48973dfa
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641468"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528358"
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>Configurar as opções de configuração de servidor user connections
   Este tópico descreve como configurar a opção de configuração de servidor **user options** no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A opção **user options** especifica padrões globais para todos os usuários. Uma lista de opções de processamento de consulta padrão é definida para a duração da sessão de trabalho de um usuário. A opção **user options** permite alterar os valores padrão das opções SET (se as configurações padrão do servidor não forem apropriadas).  
@@ -85,7 +85,7 @@ ms.locfileid: "52641468"
   
      Por padrão, nenhuma opção de usuário está configurada.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-configure-the-user-options-configuration-option"></a>Para configurar a opção de configuração user options:  
   
@@ -95,7 +95,7 @@ ms.locfileid: "52641468"
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo mostra como usar [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) para configurar `user options` para alterar as configurações para a opção de servidor ANSI_WARNINGS.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'user options', 8 ;  
@@ -105,7 +105,7 @@ GO
   
 ```  
   
-##  <a name="FollowUp"></a> Acompanhar: Depois de configurar a opção de configuração user options  
+##  <a name="FollowUp"></a> Acompanhamento: Depois de configurar a opção de configuração user options  
  A configuração entra em vigor imediatamente sem reiniciar o servidor.  
   
 ## <a name="see-also"></a>Consulte também  

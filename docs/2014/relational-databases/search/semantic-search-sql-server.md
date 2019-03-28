@@ -15,15 +15,15 @@ ms.assetid: cd8faa9d-07db-420d-93f4-a2ea7c974b97
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 59e94ef56028c80da3fd04432a2b23997c91a8e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea08ef15d62f2897fdba5a966d43a639a3fc1efe
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215646"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538528"
 ---
 # <a name="semantic-search-sql-server"></a>Pesquisa semântica (SQL Server)
-  A Pesquisa Semântica Estatística fornece uma profunda compreensão de documentos não estruturados armazenados em bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] extraindo e indexando *frases-chave*estatisticamente relevantes. Portanto, essas frases-chave também são usadas para identificar e indexar *documentos semelhantes ou relacionados*.  
+  A Pesquisa Semântica Estatística fornece uma profunda compreensão de documentos não estruturados armazenados em bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] extraindo e indexando *frases-chave* estatisticamente relevantes. Portanto, essas frases-chave também são usadas para identificar e indexar *documentos semelhantes ou relacionados*.  
   
  Você consulta esses índices semânticos usando três funções de conjunto de linhas do Transact-SQL para recuperar os resultados como dados estruturados.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "48215646"
 ###  <a name="find1"></a> Localizar as frases-chave em um documento  
  A consulta a seguir obtém as frases-chave que foram identificadas no documento de exemplo. Apresenta os resultados em ordem decrescente pela contagem que classifica a significância estatística de cada frase-chave. Essa consulta chama a função [semantickeyphrasetable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semantickeyphrasetable-transact-sql).  
   
-```tsql  
+```sql  
 SET @Title = 'Sample Document.docx'  
   
 SELECT @DocID = DocumentID  
@@ -73,7 +73,7 @@ SELECT @Title AS SourceTitle, DocumentTitle AS MatchedTitle,
 ###  <a name="find3"></a> Localizar as frases-chave que tornam documentos semelhantes ou relacionados  
  A consulta a seguir obtém as frases-chave que tornam os 2 documentos de exemplo semelhantes ou relacionados a outro documento. Apresenta os resultados em ordem decrescente pela contagem que classifica o peso de cada frase-chave. Essa consulta chama a função [semanticsimilaritydetailstable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql).  
   
-```tsql  
+```sql  
 SET @SourceTitle = 'first.docx'  
 SET @MatchedTitle = 'second.docx'  
   

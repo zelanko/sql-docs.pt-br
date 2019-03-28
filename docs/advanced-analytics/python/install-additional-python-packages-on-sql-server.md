@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/10/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: fc038f94fc24b8c0f795efc18c62acc1656877a7
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: cc83ed8500e93147163e3166b895c7333b4222cd
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432309"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510293"
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>Instalar novos pacotes de Python no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -80,7 +80,7 @@ Abra o prompt de comando do Python associado à instância.
 
   O caminho completo do **Scripts** pasta em uma instalação padrão é o seguinte:
 
-    Server\MSSQL14 SQL do C:\Program Files\Microsoft. MSSQLSERVER\PYTHON_SERVICES\Scripts
+    C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Scripts
 
 + Se você estiver usando o Visual Studio 2017 ou Visual Studio 2015 com as extensões do Python, você pode executar `pip install` do **ambientes do Python** janela. Clique em **pacotes**e na caixa de texto, forneça o nome ou local do pacote a instalar. Você não precisa digitar `pip install`; ele é preenchido para você automaticamente. 
 

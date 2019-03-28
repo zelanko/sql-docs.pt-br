@@ -1,5 +1,5 @@
 ---
-title: sp_cdc_enable_table (Transact-SQL) | Microsoft Docs
+title: sys.sp_cdc_enable_table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2b234aba562c095d2861bddec5310cf321b5d331
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 40b94782cf542800922b69291654ff7d46dcfde0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591060"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537608"
 ---
 # <a name="sysspcdcenabletable-transact-sql"></a>sys.sp_cdc_enable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,28 +55,23 @@ sys.sp_cdc_enable_table
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@source_schema =** ] **'**_source_schema_**'**  
- É o nome do esquema ao qual a tabela de origem pertence. *source_schema* está **sysname**, sem padrão, e não pode ser NULL.  
+`[ @source_schema = ] 'source_schema'` É o nome do esquema no qual a tabela de origem pertence. *source_schema* está **sysname**, sem padrão, e não pode ser NULL.  
   
- [  **@source_name =** ] **'**_source_name_**'**  
- É o nome da tabela de origem na qual habilitar a captura de dados de alteração. *source_name* está **sysname**, sem padrão, e não pode ser NULL.  
+`[ @source_name = ] 'source_name'` É o nome da tabela de origem no qual você deseja habilitar a captura de dados de alteração. *source_name* está **sysname**, sem padrão, e não pode ser NULL.  
   
  *source_name* deve existir no banco de dados atual. Tabelas de **cdc** esquema não pode ser habilitado para change data capture.  
   
- [  **@role_name =** ] **'**_nome_função_**'**  
- É o nome da função de banco de dados usada como acesso aos dados de alteração. *role_name* está **sysname** e deve ser especificado. Se explicitamente definido como NULL, nenhuma função associada será usada para limitar o acesso aos dados de alteração.  
+`[ @role_name = ] 'role_name'` É o nome da função de banco de dados usada como acesso a dados de alteração. *role_name* está **sysname** e deve ser especificado. Se explicitamente definido como NULL, nenhuma função associada será usada para limitar o acesso aos dados de alteração.  
   
  Se a função existir atualmente, ela será usada. Se a função não existir, será feita uma tentativa de criar uma função de banco de dados com o nome especificado. Os espaços em branco do nome da função à direita da cadeia de caracteres são eliminados antes de tentar criar a função. Se o chamador não for autorizado a criar uma função dentro do banco de dados, a operação de procedimento armazenado irá falhar.  
   
- [  **@capture_instance =** ] **'**_capture_instance_**'**  
- É o nome da instância de captura usada para nomear objetos do Change Data Capture específicos. *capture_instance* está **sysname** e não pode ser NULL.  
+`[ @capture_instance = ] 'capture_instance'` É que o nome da instância de captura usada para nome específico da instância change data capture objetos. *capture_instance* está **sysname** e não pode ser NULL.  
   
  Se não for especificado, o nome é derivado do nome do esquema de origem mais o nome da tabela de origem no formato *schemaname_sourcename*. *capture_instance* não pode exceder 100 caracteres e deve ser exclusivo no banco de dados. Se especificado ou derivado, *capture_instance* é cortado de qualquer espaço em branco à direita da cadeia de caracteres.  
   
  Uma tabela de origem pode ter um máximo de duas instâncias de captura. Para obter mais informações, consulte [sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md).  
   
- [  **@supports_net_changes =** ] *supports_net_changes*  
- Indica se o suporte à consulta de alterações líquidas será habilitado para esta instância de captura. *supports_net_changes* está **bit** com um padrão de 1, se a tabela tem uma chave primária ou a tabela tem um índice exclusivo que foi identificado usando o @index_name parâmetro. Caso contrário, o parâmetro será padronizado como 0.  
+`[ @supports_net_changes = ] supports_net_changes` Indica se o suporte para consultar alterações líquidas precisa ser habilitado para esta instância de captura. *supports_net_changes* está **bit** com um padrão de 1, se a tabela tem uma chave primária ou a tabela tem um índice exclusivo que foi identificado usando o @index_name parâmetro. Caso contrário, o parâmetro será padronizado como 0.  
   
  Se for 0, somente as funções de suporte à consulta de todas as alterações serão geradas.  
   
@@ -84,11 +79,9 @@ sys.sp_cdc_enable_table
   
  Se *supports_net_changes* é definido como 1, *index_name* deve ser especificado, ou a tabela de origem deve ter uma chave primária definida.  
   
- [  **@index_name =** ] **'**_index_name_'  
- O nome de um índice exclusivo a ser usado para identificar exclusivamente as linhas na tabela de origem. *index_name* está **sysname** e pode ser NULL. Se especificado, *index_name* deve ser um índice exclusivo válido na tabela de origem. Se *index_name* for especificado, as colunas de índice identificadas tem precedência sobre quaisquer colunas de chave primária definidas como o identificador de linha exclusivo para a tabela.  
+`[ @index_name = ] 'index_name_'` O nome de um índice exclusivo para identificar exclusivamente linhas na tabela de origem. *index_name* está **sysname** e pode ser NULL. Se especificado, *index_name* deve ser um índice exclusivo válido na tabela de origem. Se *index_name* for especificado, as colunas de índice identificadas tem precedência sobre quaisquer colunas de chave primária definidas como o identificador de linha exclusivo para a tabela.  
   
- [  **@captured_column_list =** ] **'**_captured_column_list_**'**  
- Identifica as colunas da tabela de origem a serem incluídas na tabela de alteração. *captured_column_list* está **nvarchar (max)** e pode ser NULL. Se for NULL, todas as colunas serão incluídas na tabela de alteração.  
+`[ @captured_column_list = ] 'captured_column_list'` Identifica as colunas da tabela de origem que devem ser incluídos na tabela de alteração. *captured_column_list* está **nvarchar (max)** e pode ser NULL. Se for NULL, todas as colunas serão incluídas na tabela de alteração.  
   
  Nomes de Coluna devem ser colunas válidas na tabela de origem. Colunas definidas em um índice de chave primária ou colunas definidas em um índice referenciado por *index_name* deve ser incluído.  
   
@@ -96,13 +89,11 @@ sys.sp_cdc_enable_table
   
  *captured_column_list* não pode conter os seguintes nomes de coluna reservados: **_ $start_lsn**, **_ $end_lsn**, **_ $seqval**, **_ $ operação**, e **_ $update_mask**.  
   
- [  **@filegroup_name =** ] **'**_filegroup_name_**'**  
- É o grupo de arquivos a ser usado para a tabela de alteração criada para a instância de captura. *filegroup_name* está **sysname** e pode ser NULL. Se especificado, *filegroup_name* deve ser definida para o banco de dados atual. Se for NULL, o grupo de arquivos padrão será usado.  
+`[ @filegroup_name = ] 'filegroup_name'` É o grupo de arquivos a ser usado para a tabela de alteração criada para a instância de captura. *filegroup_name* está **sysname** e pode ser NULL. Se especificado, *filegroup_name* deve ser definida para o banco de dados atual. Se for NULL, o grupo de arquivos padrão será usado.  
   
  Recomendamos a criação de um grupo de arquivos separado para tabelas de alteração do Change Data Capture.  
   
- [  **@allow_partition_switch=** ] **'**_allow_partition_switch_**'**  
- Indica se o comando SWITCH PARTITION de ALTER TABLE pode ser executado em uma tabela que está habilitada para o Change Data Capture. *allow_partition_switch* está **bit**, com um padrão de 1.  
+`[ @allow_partition_switch = ] 'allow_partition_switch'` Indica se o comando SWITCH PARTITION de ALTER TABLE pode ser executado em uma tabela que está habilitada para change data capture. *allow_partition_switch* está **bit**, com um padrão de 1.  
   
  Para tabelas não particionadas, a configuração de alternância é sempre 1 e a configuração real é ignorada. Se a alternância estiver explicitamente definida como 0 para uma tabela não particionada, o aviso 22857 será emitido para indicar que a configuração de alternância foi ignorada. Se a alternância estiver explicitamente definida como 0 para uma tabela particionada, o aviso 22356 será emitido para indicar que as operações de alternância da partição na tabela de origem não serão permitidas. Finalmente, se a configuração de alternância estiver explicitamente definida como 1 ou permitida para ser padronizada como 1 e a tabela habilitada estiver particionada, o aviso 22855 será emitido para indicar que as alternâncias de partição não serão bloqueadas. Se ocorrer qualquer alternância de partição, o Change Data Capture não controlará as alterações resultantes da alternância. Isso provocará inconsistências de dados quando os dados de alteração forem consumidos.  
   
@@ -147,7 +138,7 @@ EXECUTE sys.sp_cdc_enable_table
 GO  
 ```  
   
-### <a name="b-enabling-change-data-capture-by-specifying-additional-optional-parameters"></a>b. Habilitando o Change Data Capture especificando parâmetros opcionais adicionais  
+### <a name="b-enabling-change-data-capture-by-specifying-additional-optional-parameters"></a>B. Habilitando o Change Data Capture especificando parâmetros opcionais adicionais  
  O exemplo a seguir habilita o Change Data Capture na tabela `HumanResources.Department`. Todos os parâmetros, exceto o `@allow_partition_switch` são especificados.  
   
 ```  
@@ -166,10 +157,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [sp_cdc_disable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql.md)   
+ [sys.sp_cdc_disable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql.md)   
  [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
  [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
  [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
- [sp_cdc_help_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)  
+ [sys.sp_cdc_help_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)  
   
   

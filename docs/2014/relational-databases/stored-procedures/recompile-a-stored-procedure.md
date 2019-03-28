@@ -15,12 +15,12 @@ ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ee4e94ff48db339bbe5c012f821368306bfb253
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 43ae01b9173693370d5e422d4f26b6175101ff12
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406535"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536559"
 ---
 # <a name="recompile-a-stored-procedure"></a>Recompilar um procedimento armazenado
   Este tópico descreve como recompilar um procedimento armazenado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Há três maneiras de fazer isso: `WITH RECOMPILE` opção na definição do procedimento ou quando o procedimento é chamado, o `RECOMPILE` dica de consulta em instruções individuais ou usando o `sp_recompile` procedimento armazenado do sistema. Este tópico descreve como usar a opção WITH RECOMPILE ao criar uma definição de procedimento e executar um procedimento existente. Também descreve como usar o procedimento armazenado do sistema sp_recompile para recompilar um procedimento existente.  
@@ -65,7 +65,7 @@ ms.locfileid: "52406535"
  `sp_recompile` Procedimento armazenado do sistema  
  Exige a permissão ALTER no procedimento especificado.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>Para recompilar um procedimento armazenado usando a opção WITH RECOMPILE  
   
@@ -105,7 +105,7 @@ AS
   
      E copie e cole o segundo exemplo de código na janela de consulta e clique em **Executar**. Isso executa o procedimento e recompila o plano de consulta do procedimento.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXECUTE HumanResources.uspGetAllEmployees WITH RECOMPILE;  
@@ -123,7 +123,7 @@ GO
   
      Em seguida, copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Isso não executa o procedimento, mas marca-o para recompilação de modo que seu plano de consulta seja atualizada na próxima vez em que o procedimento for executado.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_recompile N'HumanResources.uspGetAllEmployees';  

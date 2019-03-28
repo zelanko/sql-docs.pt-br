@@ -16,12 +16,12 @@ ms.assetid: 651c017b-9e9a-48f2-a0bd-6fc896eab334
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f4829928bbf1f8e13483de69a749e748bd9dd095
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 2221762934011c2268a40d0162bde7e62dbcf256
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779058"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528218"
 ---
 # <a name="sphelpmergearticlecolumn-transact-sql"></a>sp_helpmergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'***publicação***'**  
- É o nome da publicação. *publicação* é **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação. *publicação* é **sysname**, sem padrão.  
   
- [  **@article=**] **'***artigo***'**  
- É o nome de uma tabela ou exibição que é o artigo do qual recuperar informações. *artigo* é **sysname**, sem padrão.  
+`[ @article = ] 'article'` É o nome de uma tabela ou exibição que é o artigo do qual recuperar informações. *artigo* é **sysname**, sem padrão.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -51,7 +49,7 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
 |-----------------|---------------|-----------------|  
 |**column_id**|**sysname**|Identifica a coluna.|  
 |**column_name**|**sysname**|É o nome da coluna para uma tabela ou exibição.|  
-|**Publicado**|**bit**|Especifica se o nome da coluna é publicado.<br /><br /> **1** Especifica que a coluna está sendo publicada.<br /><br /> **0** Especifica que não é publicado.|  
+|**published**|**bit**|Especifica se o nome da coluna é publicado.<br /><br /> **1** Especifica que a coluna está sendo publicada.<br /><br /> **0** Especifica que não é publicado.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

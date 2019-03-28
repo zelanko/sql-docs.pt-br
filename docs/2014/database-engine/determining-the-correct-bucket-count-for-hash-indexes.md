@@ -10,12 +10,12 @@ ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 56999c5e74648ecd36adea3ee941627c1e2e607b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 42fe996b3521316279caf3fcf7adb3e155a83dbd
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377893"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536688"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>Determinando o número de buckets correto para índices de hash não clusterizados
   Você deve especificar um valor para o parâmetro `BUCKET_COUNT` quando cria a tabela com otimização de memória. Este tópico faz recomendações para determinar o valor apropriado para o parâmetro `BUCKET_COUNT`. Se você não puder determinar o número de buckets correto, use um índice não clusterizado.  Um valor incorreto de `BUCKET_COUNT`, especialmente muito baixo, pode afetar significativamente o desempenho da carga de trabalho, bem como o tempo de recuperação do banco de dados. É melhor superestimar o número de buckets.  
@@ -38,7 +38,7 @@ ms.locfileid: "53377893"
 ### <a name="primary-key-and-unique-indexes"></a>Chave primária e índices exclusivos  
  Como o índice de chave primária é exclusivo, o número de valores distintos na chave corresponde ao número de linhas na tabela. Para obter uma chave primária de exemplo em (SalesOrderID, SalesOrderDetailID) na tabela Sales.SalesOrderDetail no banco de dados AdventureWorks, emita a seguinte consulta para calcular o número de valores de chave primária distintos, que corresponde ao número de linhas na tabela:  
   
-```tsql  
+```sql  
 SELECT COUNT(*) AS [row count]   
 FROM Sales.SalesOrderDetail  
 ```  
@@ -48,7 +48,7 @@ FROM Sales.SalesOrderDetail
 ### <a name="non-unique-indexes"></a>Índices não exclusivos.  
  Para outros índices, como, por exemplo um índice de várias colunas em (SpecialOfferID, ProductID), emita a seguinte consulta para determinar o número de valores de chaves de índice exclusivo:  
   
-```tsql  
+```sql  
 SELECT COUNT(*) AS [SpecialOfferID_ProductID index key count]  
 FROM   
    (SELECT DISTINCT SpecialOfferID, ProductID   
@@ -65,7 +65,7 @@ FROM
 ## <a name="troubleshooting-the-bucket-count"></a>Solucionando problemas no número de buckets  
  Para solucionar problemas de contagem de bucket em tabelas com otimização de memória, use [DM db_xtp_hash_index_stats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-hash-index-stats-transact-sql) para obter estatísticas sobre os buckets vazios e o comprimento das cadeias de linha. A consulta a seguir pode ser usada para obter estatísticas sobre todos os índices de hash no banco de dados atual. A consulta poderá levar alguns minutos para ser executada se houver grandes tabelas no banco de dados.  
   
-```tsql  
+```sql  
 SELECT   
    object_name(hs.object_id) AS 'object name',   
    i.name as 'index name',   
@@ -99,7 +99,7 @@ FROM sys.dm_db_xtp_hash_index_stats AS hs
   
  Como exemplo, considere a seguinte tabela e script para inserir linhas de exemplo na tabela:  
   
-```tsql  
+```sql  
 CREATE TABLE [Sales].[SalesOrderHeader_test]  
 (  
    [SalesOrderID] [uniqueidentifier] NOT NULL DEFAULT (newid()),  

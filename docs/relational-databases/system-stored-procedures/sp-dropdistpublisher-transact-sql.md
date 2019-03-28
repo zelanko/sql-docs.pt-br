@@ -16,12 +16,12 @@ ms.assetid: c0bdd3de-3be0-455c-898a-98d4660e7ce3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 93124cff94bdf9df97cc1cbb0cf55c40414f1819
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 8acc73e057ff8b91987406e74a28563fecfc9278
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127549"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526448"
 ---
 # <a name="spdropdistpublisher-transact-sql"></a>sp_dropdistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,18 +40,15 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publisher=** ] **'**_publisher_**'**  
- É o Publicador a ser removido. *Publisher* está **sysname**, sem padrão.  
+`[ @publisher = ] 'publisher'` É o publicador a ser removido. *Publisher* está **sysname**, sem padrão.  
   
- [  **@no_checks=** ] *no_checks*  
- Especifica se **sp_dropdistpublisher** verifica se o publicador desinstalou o servidor como distribuidor. *no_checks* está **bit**, com um padrão de **0**.  
+`[ @no_checks = ] no_checks` Especifica se **sp_dropdistpublisher** verifica se o publicador desinstalou o servidor como distribuidor. *no_checks* está **bit**, com um padrão de **0**.  
   
  Se **0**, replicação verificará se o publicador remoto desinstalou o servidor local como o distribuidor. Se o Publicador for local, a replicação verificará se não há objetos de publicação ou distribuição restantes no servidor local.  
   
  Se **1**, todos os objetos de replicação associados com o publicador de distribuição são descartados, mesmo que um publicador remoto não pode ser alcançado. Depois de fazer isso, o publicador remoto deve desinstalar a replicação usando [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md) com **@ignore_distributor**  =  **1**.  
   
- [  **@ignore_distributor=** ] *ignore_distributor*  
- Especifica se os objetos de distribuição são deixados no Distribuidor quando o Publicador é removido. *ignore_distributor* está **bit** e pode ser um destes valores:  
+`[ @ignore_distributor = ] ignore_distributor` Especifica se os objetos de distribuição são deixados no distribuidor quando o publicador é removido. *ignore_distributor* está **bit** e pode ser um destes valores:  
   
  **1** = objetos de distribuição que pertencem ao *publisher* permanecem no distribuidor.  
   

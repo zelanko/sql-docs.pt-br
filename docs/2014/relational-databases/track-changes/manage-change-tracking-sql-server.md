@@ -15,12 +15,12 @@ ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: be3f9c61d3c035959def4a46f91eff605e475569
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c9d0deb3567daa64afb46c96a4e93c9da9c0972a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808798"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528248"
 ---
 # <a name="manage-change-tracking-sql-server"></a>Gerenciar o controle de alterações (SQL Server)
   Este tópico descreve como gerenciar o controle de alterações. Ele também descreve como configurar a segurança e determinar os efeitos sobre o armazenamento e o desempenho quando você usa o controle de alterações.  
@@ -96,7 +96,7 @@ ms.locfileid: "52808798"
   
  Assim como ocorre em outras tabelas internas, você pode determinar o espaço usado para as tabelas de controle de alterações usando o procedimento armazenado [sp_spaceused](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql) . Os nomes das tabelas internas podem ser obtidos usando a exibição de catálogo [sys.internal_tables](/sql/relational-databases/system-catalog-views/sys-internal-tables-transact-sql) , conforme mostrado no exemplo a seguir.  
   
-```tsql  
+```sql  
 sp_spaceused 'sys.change_tracking_309576141'  
 sp_spaceused 'sys.syscommittab'  
 ```  

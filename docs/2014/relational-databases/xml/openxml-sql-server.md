@@ -20,15 +20,15 @@ helpviewer_keywords:
 - XML [SQL Server], OPENXML statement
 - element-centric mapping [SQL Server]
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 707e525515104d417b287d33009aa025cc27bff8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eb674ea7bd9540f7ae74bf9ad8737bdb83c237f7
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208509"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538598"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
   OPENXML, uma palavra-chave do [!INCLUDE[tsql](../../includes/tsql-md.md)] , fornece um conjunto de linhas em documentos XML na memória que é semelhante a uma tabela ou exibição. OPENXML permite acesso a dados XML ainda que ele seja um conjunto de linhas relacional. Ele faz isso fornecendo uma exibição do conjunto de linhas da representação interna de um documento XML. Os registros no conjunto de linhas podem ser armazenados em tabelas do banco de dados.  
@@ -137,7 +137,7 @@ EXEC sp_xml_removedocument @docHandle;
   
  A tabela a seguir descreve a estrutura da tabela de borda.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|É a ID exclusiva do nó do documento.<br /><br /> O elemento raiz tem um valor de ID igual a 0. Os valores negativos da ID são reservados.|  
 |**parentid**|**bigint**|Identifica o pai do nó. O pai identificado por esse ID necessariamente não é o elemento pai. No entanto isso depende do Tipo do Nó cujo o pai é identificado por esse ID. Por exemplo, se o nó for um nó de texto, seu pai poderá ser um nó de atributo.<br /><br /> Se o nó estiver no nível superior no documento XML, seu **ParentID** será NULL.|  

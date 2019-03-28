@@ -14,12 +14,12 @@ ms.assetid: a6ebb026-026f-4c39-b6a9-b9998c3babab
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a0af353d79fcb84d1ca4b8921048c3c5f502c29f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 2c2abc45712be58eabd4ed6ef4c9b276438e8afe
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771548"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535718"
 ---
 # <a name="define-and-modify-a-static-row-filter"></a>Definir e modificar um filtro de linha estático
   Este tópico descreve como definir e modificar um filtro de linhas estático no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -40,7 +40,7 @@ ms.locfileid: "52771548"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   Se você adicionar, modificar ou excluir um filtro de linhas estático após a inicialização de assinaturas na publicação, será preciso gerar um novo instantâneo e reinicializar todas as assinaturas depois de fazer a alteração. Para obter mais informações sobre os requisitos para alterações de propriedades, consulte [Alterar propriedades da publicação e do artigo](change-publication-and-article-properties.md).  
   
@@ -70,19 +70,19 @@ ms.locfileid: "52771548"
   
     -   A área de texto **Instrução de filtro** inclui o texto padrão que está no formato de:  
   
-        ```tsql  
+        ```sql  
         SELECT <published_columns> FROM [schema].[tablename] WHERE  
         ```  
   
     -   O texto padrão não pode ser alterado; digite a cláusula de filtro depois da palavra-chave WHERE usando sintaxe padrão do SQL. A cláusula de filtro completa aparecerá como:  
   
-        ```tsql  
+        ```sql  
         SELECT <published_columns> FROM [HumanResources].[Employee] WHERE [LoginID] = 'adventure-works\ranjit0'  
         ```  
   
     -   Um filtro de linhas estático pode incluir uma função definida pelo usuário. A cláusula de filtro completa para um filtro de linhas estático com uma função definida pelo usuário será exibida como:  
   
-        ```tsql  
+        ```sql  
         SELECT <published_columns> FROM [Sales].[SalesOrderHeader] WHERE MyFunction([Freight]) > 100  
         ```  
   
@@ -102,7 +102,7 @@ ms.locfileid: "52771548"
   
 1.  Na página **Filtrar Linhas da Tabela** do Assistente para Nova Publicação ou na página **Filtrar Linhas** da caixa de diálogo **Propriedades da Publicação – \<Publicação>**, selecione um filtro no painel **Tabelas Filtradas** e clique em **Excluir**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  Ao criar artigos de tabela, você pode definir uma cláusula WHERE para filtrar linhas para fora de um artigo. Você também pode alterar um filtro de linha depois que ele estiver definido. Os filtros de linhas estáticos podem ser criados e modificados programaticamente usando os procedimentos armazenados de replicação.  
   
 #### <a name="to-define-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>Para definir um filtro de linhas estático para um instantâneo ou publicação transacional  

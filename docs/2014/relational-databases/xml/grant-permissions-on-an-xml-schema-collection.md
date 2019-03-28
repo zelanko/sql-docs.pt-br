@@ -10,15 +10,15 @@ helpviewer_keywords:
 - granting permissions [SQL Server], XML schema collections
 - ALTER permission
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 365a47a47abd0e74c1716971998f145501a3cae4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e009f0fe22156f9a652dd19fceddf02bbc48c247
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150907"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530178"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>Conceder permissões em uma coleção de esquemas XML
   É possível conceder permissões para criar uma coleção de esquema XML e também permissões em um objeto da coleção de esquemas XML.  
@@ -57,11 +57,11 @@ ms.locfileid: "48150907"
   
 -   A permissão TAKE OWNERSHIP é necessária para transferir a propriedade da coleção de esquemas XML de uma entidade de segurança para outra.  
   
--   A permissão REFERENCES autoriza a entidade de segurança para usar a coleção de esquemas XML para digitar ou restringir `xml` colunas em tabelas, exibições e parâmetros de tipo. A permissão REFERENCES também é necessária quando uma coleção de esquemas XML faz referência à outra.  
+-   A permissão REFERENCES autoriza a entidade de segurança a usar a coleção de esquemas XML para digitar ou restringir colunas de tipo `xml` em tabelas, exibições e parâmetros. A permissão REFERENCES também é necessária quando uma coleção de esquemas XML faz referência à outra.  
   
 -   A permissão VIEW DEFINITION permite que a entidade de segurança consulte o conteúdo de uma coleção de esquema XML por meio de XML_SCHEMA_NAMESPACE ou de exibições de catálogo, desde que a entidade de segurança tenha uma das permissões ALTER, REFERENCES ou CONTROL na coleção.  
   
--   A permissão EXECUTE é necessária para validar valores inseridos ou atualizados pela entidade de segurança na coleção de esquemas XML que está digitando ou restringindo o `xml` colunas, variáveis e parâmetros de tipo. Essa permissão também é necessária para consultar o XML armazenado nessas colunas e variáveis.  
+-   A permissão EXECUTE é necessária para validar valores inseridos ou atualizados pela entidade de segurança na coleção de esquemas XML que está digitando ou restringindo as variáveis, os parâmetros e as colunas de tipo `xml`. Essa permissão também é necessária para consultar o XML armazenado nessas colunas e variáveis.  
   
 ## <a name="examples"></a>Exemplos  
  Os cenários nos exemplos seguintes ilustram como as permissões de esquema XML funcionam. Cada exemplo cria o banco de dados, os esquemas relacionais e os logons de teste necessários. Esses logons recebem as permissões necessárias na coleção de esquema XML. Cada exemplo faz a limpeza necessária no final.  

@@ -18,12 +18,12 @@ ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 525a66fa00981c4360295ee9c704102cd1224220
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 703b6464d035d06583193aedaa330257fc38fe34
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591460"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530368"
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_OAMethod objecttoken , methodname
  *MethodName*  
  É o nome de método do objeto OLE a ser chamado.  
   
- _ReturnValue_**saída**  
+ _returnvalue_  **OUTPUT**  
  É o valor de retorno do método do objeto OLE. Se for especificado, deverá ser uma variável local do tipo de dados apropriado.  
   
  Se o método retornar um único valor, especifique uma variável local para *returnvalue*, que retorna o método retorna o valor na variável local, ou seja, não especifique *returnvalue*, que retorna o método retorna o valor ao cliente como um conjunto de resultados de coluna única e uma linha.  
@@ -65,8 +65,7 @@ sp_OAMethod objecttoken , methodname
   
 -   O método retornar uma matriz como um parâmetro de saída.  
   
- [ _@parametername_ **=** ] *parâmetro*[ **saída** ]  
- É um parâmetro de método. Se especificado, *parâmetro* deve ser um valor de tipo de dados apropriado.  
+`[ _@parametername = ] parameter[ OUTPUT ]` É um parâmetro de método. Se especificado, *parâmetro* deve ser um valor de tipo de dados apropriado.  
   
  Para obter o valor retornado de um parâmetro de saída *parâmetro* deve ser uma variável local de tipo de dados apropriado, e **saída** deve ser especificado. Se um parâmetro constante for especificado, ou se **saída** não for especificado, qualquer retornar o valor de um parâmetro de saída é ignorado.  
   
@@ -124,7 +123,7 @@ BEGIN
 END;  
 ```  
   
-### <a name="b-getting-a-property"></a>b. Obtendo uma propriedade  
+### <a name="b-getting-a-property"></a>B. Obtendo uma propriedade  
  O exemplo a seguir obtém a `HostName` propriedade (da criado anteriormente **SQLServer** objeto) e o armazena em uma variável local.  
   
 ```  

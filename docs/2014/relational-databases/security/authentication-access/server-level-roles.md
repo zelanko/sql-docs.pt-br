@@ -22,12 +22,12 @@ ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 714bfb68234a10a61b8ed41651da4f9f7037320e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 95ffdd52ff4c71039a87f177e67d51cb81830c68
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351743"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531848"
 ---
 # <a name="server-level-roles"></a>Funções de nível de servidor
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornece funções do nível de servidor para ajudar a gerenciar as permissões em um servidor. Estas funções são entidades de segurança que agrupam outras entidades de segurança. Essas funções abrangem todo o servidor em seus escopos de permissões. (As*funções* são como *grupos* no sistema operacional Windows.)  
@@ -62,7 +62,7 @@ ms.locfileid: "53351743"
 ## <a name="server-level-permissions"></a>Permissão em nível de servidor  
  Somente podem ser acrescentadas permissões do nível de servidor a funções de servidor definidas pelo usuário. Para listar as permissões em nível de servidor, execute a instrução a seguir. As permissões em nível de servidor são:  
   
-```tsql  
+```sql  
 SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;  
 ```  
   

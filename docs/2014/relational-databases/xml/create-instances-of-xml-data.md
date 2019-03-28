@@ -16,15 +16,15 @@ helpviewer_keywords:
 - XML [SQL Server], generating instances
 - white space [XML in SQL Server]
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8dea24689dc1dad9836c6ef2a53cf5e40f078c47
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ae842748d2d510c5c00f329f5e28cd49a0c86ef3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077126"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538618"
 ---
 # <a name="create-instances-of-xml-data"></a>Criar instâncias de dados XML
   Este tópico descreve como gerar instâncias XML.  
@@ -79,7 +79,7 @@ set @x = '<root>      <child/>     </root>'
 select @x   
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 <root><child/></root>  
@@ -121,7 +121,7 @@ INSERT INTO T VALUES (3, cast (@s as xml))
 INSERT INTO T VALUES (3, convert (xml, @s))   
 ```  
   
-### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>Exemplo: Converter uma cadeia de caracteres em xml com tipo e atribuí-la a uma variável  
+### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>Exemplo: Converter uma cadeia de caracteres em xml tipado e atribuí-lo a uma variável  
  No exemplo a seguir, uma cadeia de caracteres é convertida `xml` de tipo e atribuído a uma variável do `xml` tipo de dados:  
   
 ```  
@@ -157,7 +157,7 @@ SET @xmlDoc = (SELECT ProductModelID, Name
 SELECT @xmlDoc  
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 <Production.ProductModel ProductModelID="19" Name="Mountain-100" />...  
@@ -180,7 +180,7 @@ go
  Para obter mais informações sobre FOR XML, consulte [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md).  
   
 > [!NOTE]  
->  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna instâncias de tipo de dados `xml`ao cliente como um resultado das diferentes construções do servidor como consultas FOR XML que usam a diretiva TYPE ou onde o tipo de dados `xml` é usado para retornar XML de colunas, variáveis e parâmetros de saída SQL. No código do aplicativo cliente, o provedor ADO.NET solicita que isso `xml` informações de tipo de dados ser enviados em uma codificação binária do servidor. Porém, se você estiver usando FOR XML sem a diretiva TYPE, os dados XML retornarão como um tipo de cadeia de caracteres. De qualquer forma, o provedor cliente sempre poderá controlar qualquer formulário de XML.  
+>  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna instâncias de tipo de dados `xml`ao cliente como um resultado das diferentes construções do servidor como consultas FOR XML que usam a diretiva TYPE ou onde o tipo de dados `xml` é usado para retornar XML de colunas, variáveis e parâmetros de saída SQL. No código do aplicativo cliente, o provedor ADO.NET solicita que essas informações de tipo de dados `xml` sejam enviadas em uma codificação binária do servidor. Porém, se você estiver usando FOR XML sem a diretiva TYPE, os dados XML retornarão como um tipo de cadeia de caracteres. De qualquer forma, o provedor cliente sempre poderá controlar qualquer formulário de XML.  
   
 ## <a name="using-constant-assignments"></a>Usando atribuições de constantes  
  Uma constante de cadeia de caracteres pode ser usada onde uma instância das `xml` tipo de dados é esperado. Isso é o mesmo que uma CAST implícita de cadeia de caracteres em XML. Por exemplo:  
@@ -209,7 +209,7 @@ INSERT INTO T VALUES (3, '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Recuperar e consultar dados XML](retrieve-and-query-xml-data.md)|Descreve as partes de instâncias XML que não são preservadas quando são armazenadas em bancos de dados.|  
   

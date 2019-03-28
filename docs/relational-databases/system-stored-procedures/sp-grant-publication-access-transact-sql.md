@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 17993952-def6-4a16-b1c1-323ec42967f8
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 64a1e4f2b1d7b31461cbcc23b21e996aea060b4a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c86bf467eb83e372b7c90375ae95d659c98532a4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791688"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533998"
 ---
 # <a name="spgrantpublicationaccess-transact-sql"></a>sp_grant_publication_access (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,14 +38,11 @@ sp_grant_publication_access [ @publication = ] 'publication', [ @login = ] 'logi
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publication**=] **'***publicação***'**  
- É o nome da publicação a ser acessada. **'***publicação***'** é **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação a ser acessada. **'***publicação***'** é **sysname**, sem padrão.  
   
- [ **@login**=] **'***logon***'**  
- É a ID do logon. **'***login***'** é **sysname**, sem padrão.  
+`[ @login = ] 'login'` É a ID de logon. **'***login***'** é **sysname**, sem padrão.  
   
- [  **@reserved =**] **'***reservado***'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

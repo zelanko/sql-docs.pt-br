@@ -10,20 +10,20 @@ helpviewer_keywords:
 - XML [SQL Server]
 - XML [SQL Server], about XML
 ms.assetid: 6a1793c9-9856-485c-aac5-88fda62f61a8
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a9c07abd9f7c9ce9ed03bb571a4dc25a77b3c497
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da462979ee21e09a55015f9c9d30d72edd1ce67d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226396"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530228"
 ---
 # <a name="xml-data-sql-server"></a>Dados XML (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece uma plataforma avançada para o desenvolvimento de aplicativos avançados para gerenciamento de dados semi-estruturados. O suporte para XML é integrado em todos os componentes no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e inclui o seguinte:  
   
--   O `xml` tipo de dados. Os valores XML podem ser armazenados de modo nativo em uma coluna de tipo de dados `xml` que pode ser classificada por tipo de acordo com uma coleção de esquemas XML ou deixada sem-tipo. A coluna XML pode ser indexada.  
+-   O tipo de dados `xml`. Os valores XML podem ser armazenados de modo nativo em uma coluna de tipo de dados `xml` que pode ser classificada por tipo de acordo com uma coleção de esquemas XML ou deixada sem-tipo. A coluna XML pode ser indexada.  
   
 -   A capacidade de especificar uma consulta XQuery em dados XML armazenados em colunas e variáveis do tipo `xml`.  
   

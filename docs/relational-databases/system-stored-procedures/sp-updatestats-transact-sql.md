@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5eb82ba893b39da389640f7b139279f8caf70da6
-ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
+ms.openlocfilehash: 51fd5471ac678a1d61986aaa9219eec923c38485
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586239"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535758"
 ---
 # <a name="spupdatestats-transact-sql"></a>sp_updatestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,8 +45,7 @@ sp_updatestats [ [ @resample = ] 'resample']
  0 (êxito) ou 1 (falha)  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@resample** =] **'resample'**  
- Especifica que **sp_updatestats** usará a opção RESAMPLE das [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) instrução. Se **'resample'** não for especificado, **sp_updatestats** atualizará as estatísticas usando a amostragem padrão. **Criar nova amostra** está **varchar(8)** com um valor padrão NO.  
+`[ @resample = ] 'resample'` Especifica que **sp_updatestats** usará a opção RESAMPLE das [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) instrução. Se **'resample'** não for especificado, **sp_updatestats** atualizará as estatísticas usando a amostragem padrão. **Criar nova amostra** está **varchar(8)** com um valor padrão NO.  
   
 ## <a name="remarks"></a>Comentários  
  **sp_updatestats** executa `UPDATE STATISTICS`, especificando o `ALL` palavra-chave, em todas as tabelas internas e definidas pelo usuário no banco de dados. sp_updatestats exibe mensagens que indicam seu progresso. Quando a atualização é concluída, ela informa que as estatísticas foram atualizadas em todas as tabelas.  

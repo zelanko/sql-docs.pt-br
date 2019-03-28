@@ -16,12 +16,12 @@ ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d28c8da014a3922a9dbd1cba533b4cbf1d7a9215
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: d2cb929ffc3506d6dcb4a0745c53b47a45fdb469
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590070"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538608"
 ---
 # <a name="spmergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,33 +44,26 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication =**] **'**_publicação_**'**  
- É o nome da publicação. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, sem padrão.  
   
- [  **@article =**] **'**_artigo_**'**  
- É o nome do artigo na publicação. *artigo* está **sysname**, sem padrão.  
+`[ @article = ] 'article'` É o nome do artigo na publicação. *artigo* está **sysname**, sem padrão.  
   
- [  **@column =**] **'**_coluna_**'**  
- Identifica as colunas nas quais criar a partição vertical. *coluna* está **sysname**, com um padrão NULL. Se NULL e `@operation = N'add'`, todas as colunas da tabela de origem serão adicionadas ao artigo por padrão. *coluna* não pode ser NULL quando *operação* é definido como **drop**. Para excluir colunas de um artigo, execute **sp_mergearticlecolumn** e especifique *coluna* e `@operation = N'drop'` para cada coluna a ser removido especificado *artigo*.  
+`[ @column = ] 'column'` Identifica as colunas no qual criar a partição vertical. *coluna* está **sysname**, com um padrão NULL. Se NULL e `@operation = N'add'`, todas as colunas da tabela de origem serão adicionadas ao artigo por padrão. *coluna* não pode ser NULL quando *operação* é definido como **drop**. Para excluir colunas de um artigo, execute **sp_mergearticlecolumn** e especifique *coluna* e `@operation = N'drop'` para cada coluna a ser removido especificado *artigo*.  
   
- [  **@operation =**] **'**_operação_**'**  
- É o status da replicação. *operação* está **nvarchar(4)**, com um padrão de ADD. **Adicionar** marca a coluna para replicação. **Descartar** limpa a coluna.  
+`[ @operation = ] 'operation'` É o status de replicação. *operação* está **nvarchar(4)**, com um padrão de ADD. **Adicionar** marca a coluna para replicação. **Descartar** limpa a coluna.  
   
- [  **@schema_replication=**] **'**_schema_replication_**'**  
- Especifica que uma alteração no esquema será propagada quando Agente de Mesclagem for executado. *schema_replication* está **nvarchar (5)**, com um padrão de FALSE.  
+`[ @schema_replication = ] 'schema_replication'` Especifica que uma alteração de esquema será propagada quando Merge Agent é executado. *schema_replication* está **nvarchar (5)**, com um padrão de FALSE.  
   
 > [!NOTE]  
 >  Somente **falsos** tem suporte para *schema_replication*.  
   
- [ **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- Habilita ou desabilita a capacidade de ter um instantâneo invalidado. *force_invalidate_snapshot* é um **bit**, com um padrão de **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Habilita ou desabilita a capacidade de invalidar um instantâneo. *force_invalidate_snapshot* é um **bit**, com um padrão de **0**.  
   
  **0** Especifica que as alterações no artigo de mesclagem não fará com que o instantâneo seja inválido.  
   
  **1** Especifica que as alterações no artigo de mesclagem podem invalidar o instantâneo ser inválido, e se esse for o caso, um valor de **1** dá permissão para a ocorrência do novo instantâneo.  
   
- [  **@force_reinit_subscription =]**_force_reinit_subscription_  
- Habilita ou desabilita a capacidade de fazer com que a assinatura seja reinicializada. *force_reinit_subscription* é um pouco com um padrão de **0**.  
+`[ @force_reinit_subscription = ]force_reinit_subscription_` Habilita ou desabilita a capacidade de ter a assinatura seja reinicializada. *force_reinit_subscription* é um pouco com um padrão de **0**.  
   
  **0** Especifica que as alterações no artigo de mesclagem não fará com que a assinatura seja reiniciada.  
   

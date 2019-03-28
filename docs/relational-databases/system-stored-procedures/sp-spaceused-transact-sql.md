@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 036dd5fd4898f7b7abc55eba4971ce599b746423
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61cd3c5c4ba15d42c1b1fe261703cfbb67b3e24f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608805"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538548"
 ---
 # <a name="spspaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -47,7 +47,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 
 Para [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] e [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)], `sp_spaceused` deve especificar os parâmetros nomeados (por exemplo `sp_spaceused (@objname= N'Table1');` em vez de depender da posição ordinal de parâmetros. 
 
- [  **@objname=**] **'***objname***'** 
+`[ @objname = ] 'objname'`
    
  É o nome qualificado ou não qualificado da tabela, da exibição indexada ou da fila para a qual as informações de uso do espaço são solicitadas. As aspas são obrigatórias apenas se um nome de objeto qualificado for especificado. Se um nome de objeto totalmente qualificado (incluindo um nome de banco de dados) for fornecido, o nome de banco de dados deve ser o nome do banco de dados atual.  
 Se *objname* não for especificado, os resultados são retornados para o banco de dados inteiro.  
@@ -55,15 +55,13 @@ Se *objname* não for especificado, os resultados são retornados para o banco d
 > [!NOTE]  
 > [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] e [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] só há suporte para objetos de banco de dados e tabela.
   
- [  **@updateusage=**] **'***updateusage***'**  
- Indica que DBCC UPDATEUSAGE deve ser executado para atualizar as informações de uso do espaço. Quando *objname* não é especificado, a instrução é executada no banco de dados inteiro; caso contrário, a instrução é executada no *objname*. Os valores podem ser **verdadeira** ou **falso**. *UPDATEUSAGE* está **varchar(5)**, com um padrão de **false**.  
+`[ @updateusage = ] 'updateusage'` Indica que DBCC UPDATEUSAGE deve ser executado para atualizar as informações de uso de espaço. Quando *objname* não é especificado, a instrução é executada no banco de dados inteiro; caso contrário, a instrução é executada no *objname*. Os valores podem ser **verdadeira** ou **falso**. *UPDATEUSAGE* está **varchar(5)**, com um padrão de **false**.  
   
- [  **@mode=**] **'***modo***'**  
- Indica o escopo dos resultados. Para uma tabela ampliada ou banco de dados, o *modo* parâmetro permite que você inclua ou exclua a parte remota do objeto. Para obter mais informações, consulte [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
+`[ @mode = ] 'mode'` Indica o escopo dos resultados. Para uma tabela ampliada ou banco de dados, o *modo* parâmetro permite que você inclua ou exclua a parte remota do objeto. Para obter mais informações, consulte [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
   
  O *modo* argumento pode ter os seguintes valores:  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |ALL|Retorna as estatísticas de armazenamento do objeto ou banco de dados incluindo a parte local e a parte remota.|  
 |LOCAL_ONLY|Retorna as estatísticas de armazenamento somente a parte local do objeto ou banco de dados. Se o objeto ou o banco de dados não estiver habilitada para Stretch, retorna as mesmas estatísticas, como quando @mode = ALL.|  
@@ -71,17 +69,16 @@ Se *objname* não for especificado, os resultados são retornados para o banco d
   
  *modo* está **varchar(11)**, com um padrão de **n' '**.  
   
- [  **@oneresultset=**] *oneresultset*  
- Indica se deve retornar um único conjunto de resultados. O *oneresultset* argumento pode ter os seguintes valores:  
+`[ @oneresultset = ] oneresultset` Indica se deve retornar um único conjunto de resultados. O *oneresultset* argumento pode ter os seguintes valores:  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |0|Quando *@objname* é nulo ou não é especificado, os dois conjuntos de resultados são retornados. Dois conjuntos de resultados é o comportamento padrão.|  
 |1|Quando *@objname* = null ou não é especificado, um único conjunto de resultados será retornado.|  
   
  *oneresultset* está **bit**, com um padrão de **0**.  
 
-[ **@include_total_xtp_storage**] **'***include_total_xtp_storage***'**  
+`[ @include_total_xtp_storage] 'include_total_xtp_storage'`
 **Aplica-se a:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], [!INCLUDE[sssds-md](../../includes/sssds-md.md)].  
   
  Quando @oneresultset= 1, o parâmetro @include_total_xtp_storage determina se o conjunto de resultados único inclui colunas para o armazenamento MEMORY_OPTIMIZED_DATA. O valor padrão é 0, ou seja, por padrão (se o parâmetro é omitido) as colunas XTP não são incluídas no conjunto de resultados.  
@@ -92,22 +89,22 @@ Se *objname* não for especificado, os resultados são retornados para o banco d
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Se *objname* for omitido e o valor de *oneresultset* for 0, os seguintes conjuntos de resultados são retornados para fornecer informações de tamanho de banco de dados atual.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|Nome do banco de dados atual.|  
 |**database_size**|**varchar(18)**|Tamanho do banco de dados atual em megabytes. **database_size** inclui arquivos de log e de dados.|  
 |**espaço não alocado**|**varchar(18)**|Espaço no banco de dados que não foi reservado para objetos de banco de dados.|  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**reserved**|**varchar(18)**|Total de espaço alocado por objetos no banco de dados.|  
 |**data**|**varchar(18)**|Total de espaço usado por dados.|  
 |**index_size**|**varchar(18)**|Total de espaço usado por índices.|  
-|**não utilizado**|**varchar(18)**|Total de espaço reservado para objetos no banco de dados, mas ainda não usado.|  
+|**unused**|**varchar(18)**|Total de espaço reservado para objetos no banco de dados, mas ainda não usado.|  
   
  Se *objname* for omitido e o valor de *oneresultset* é 1, o seguinte conjunto de resultados único é retornado para fornecer informações de tamanho de banco de dados atual.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|Nome do banco de dados atual.|  
 |**database_size**|**varchar(18)**|Tamanho do banco de dados atual em megabytes. **database_size** inclui arquivos de log e de dados.|  
@@ -115,22 +112,22 @@ Se *objname* não for especificado, os resultados são retornados para o banco d
 |**reserved**|**varchar(18)**|Total de espaço alocado por objetos no banco de dados.|  
 |**data**|**varchar(18)**|Total de espaço usado por dados.|  
 |**index_size**|**varchar(18)**|Total de espaço usado por índices.|  
-|**não utilizado**|**varchar(18)**|Total de espaço reservado para objetos no banco de dados, mas ainda não usado.|  
+|**unused**|**varchar(18)**|Total de espaço reservado para objetos no banco de dados, mas ainda não usado.|  
   
  Se *objname* for especificado, o seguinte conjunto de resultados será retornado para o objeto especificado.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(128)**|Nome do objeto para o qual foram solicitadas informações de uso do espaço.<br /><br /> O nome de esquema do objeto não é retornado. Se o nome do esquema for necessário, use o [DM db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) ou [db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) exibições de gerenciamento dinâmico para obter informações sobre o tamanho equivalente.|  
 |**rows**|**char(20)**|Número de linhas existentes na tabela. Se o objeto especificado for uma fila [!INCLUDE[ssSB](../../includes/sssb-md.md)], essa coluna indicará o número de mensagens na fila.|  
 |**reserved**|**varchar(18)**|Quantidade total de espaço reservado para *objname*.|  
 |**data**|**varchar(18)**|Quantidade total de espaço usado pelos dados no *objname*.|  
 |**index_size**|**varchar(18)**|Quantidade total de espaço usado pelos índices *objname*.|  
-|**não utilizado**|**varchar(18)**|Quantidade total de espaço reservado para *objname* , mas ainda não usado.|  
+|**unused**|**varchar(18)**|Quantidade total de espaço reservado para *objname* , mas ainda não usado.|  
  
 Isso é o modo padrão, quando nenhum parâmetro for especificado. Os seguintes conjuntos de resultados são retornados detalhando informações de tamanho do banco de dados em disco. 
 
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|Nome do banco de dados atual.|  
 |**database_size**|**varchar(18)**|Tamanho do banco de dados atual em megabytes. **database_size** inclui arquivos de log e de dados. Se o banco de dados tiver um grupo de arquivos MEMORY_OPTIMIZED_DATA, isso inclui o tamanho em disco total de todos os arquivos de ponto de verificação no grupo de arquivos.|  
@@ -138,16 +135,16 @@ Isso é o modo padrão, quando nenhum parâmetro for especificado. Os seguintes 
 
 Espaço usado por tabelas no banco de dados: (este conjunto de resultados não reflete a tabelas com otimização de memória, pois não há nenhuma estatística por tabela de uso do disco) 
 
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**reserved**|**varchar(18)**|Total de espaço alocado por objetos no banco de dados.|  
 |**data**|**varchar(18)**|Total de espaço usado por dados.|  
 |**index_size**|**varchar(18)**|Total de espaço usado por índices.|  
-|**não utilizado**|**varchar(18)**|Total de espaço reservado para objetos no banco de dados, mas ainda não usado.|
+|**unused**|**varchar(18)**|Total de espaço reservado para objetos no banco de dados, mas ainda não usado.|
 
 O seguinte conjunto de resultados é retornado **só se** o banco de dados tem um grupo de arquivos MEMORY_OPTIMIZED_DATA pelo menos um contêiner: 
 
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**xtp_precreated**|**varchar(18)**|Tamanho total dos arquivos de ponto de verificação com o estado PRECREATED, em KB. Contagens até o espaço não alocado no banco de dados como um todo. [Por exemplo, se houver 600.000 KB de arquivos de ponto de verificação pré-criados, esta coluna contém 600000 ' KB']|  
 |**xtp_used**|**varchar(18)**|Tamanho total dos arquivos de ponto de verificação com os estados de em construção, o ativo e o destino de mesclagem, em KB. Isso é o espaço em disco usado ativamente para dados em tabelas com otimização de memória.|  
@@ -155,7 +152,7 @@ O seguinte conjunto de resultados é retornado **só se** o banco de dados tem u
 
 Se *objname* é omitido, o valor de oneresultset é 1, e *include_total_xtp_storage* é 1, o seguinte conjunto de resultados único é retornado para fornecer informações de tamanho de banco de dados atual. Se `include_total_xtp_storage` for 0 (o padrão), as três últimas colunas são omitidas. 
 
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|Nome do banco de dados atual.|  
 |**database_size**|**varchar(18)**|Tamanho do banco de dados atual em megabytes. **database_size** inclui arquivos de log e de dados. Se o banco de dados tiver um grupo de arquivos MEMORY_OPTIMIZED_DATA, isso inclui o tamanho em disco total de todos os arquivos de ponto de verificação no grupo de arquivos.|
@@ -163,7 +160,7 @@ Se *objname* é omitido, o valor de oneresultset é 1, e *include_total_xtp_stor
 |**reserved**|**varchar(18)**|Total de espaço alocado por objetos no banco de dados.|  
 |**data**|**varchar(18)**|Total de espaço usado por dados.|  
 |**index_size**|**varchar(18)**|Total de espaço usado por índices.|  
-|**não utilizado**|**varchar(18)**|Total de espaço reservado para objetos no banco de dados, mas ainda não usado.|
+|**unused**|**varchar(18)**|Total de espaço reservado para objetos no banco de dados, mas ainda não usado.|
 |**xtp_precreated**|**varchar(18)**|Tamanho total dos arquivos de ponto de verificação com o estado PRECREATED, em KB. Essa conta para o espaço não alocado no banco de dados como um todo. Retorna NULL se o banco de dados não tiver um grupo de arquivos memory_optimized_data pelo menos um contêiner. *Essa coluna só estará incluído se @include_total_xtp_storage= 1*.| 
 |**xtp_used**|**varchar(18)**|Tamanho total dos arquivos de ponto de verificação com os estados de em construção, o ativo e o destino de mesclagem, em KB. Isso é o espaço em disco usado ativamente para dados em tabelas com otimização de memória. Retorna NULL se o banco de dados não tiver um grupo de arquivos memory_optimized_data pelo menos um contêiner. *Essa coluna só estará incluído se @include_total_xtp_storage= 1*.| 
 |**xtp_pending_truncation**|**varchar(18)**|Tamanho total dos arquivos de ponto de verificação com o estado WAITING_FOR_LOG_TRUNCATION, em KB. Isso é o espaço em disco usado para arquivos de ponto de verificação que aguardam limpeza, depois que o truncamento de log acontece. Retorna NULL se o banco de dados não tiver um grupo de arquivos memory_optimized_data pelo menos um contêiner. Essa coluna só estará incluído se `@include_total_xtp_storage=1`.|

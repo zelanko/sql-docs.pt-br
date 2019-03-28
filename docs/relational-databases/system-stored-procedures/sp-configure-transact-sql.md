@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: f3b983411fade381b926e05a3bdbb81355bf4c02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23b75beb0782fc0a13155d12890cbe3a620e1733
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852334"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530238"
 ---
 # <a name="spconfigure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -61,13 +61,11 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@configname=** ] **'***option_name***'**  
- É o nome de uma opção de configuração. *option_name* é **varchar(35)**, com um padrão de NULL. O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] reconhece qualquer cadeia de caracteres única que faça parte do nome de configuração. Se não for especificado, a lista completa de opções será retornada.  
+`[ @configname = ] 'option_name'` É o nome de uma opção de configuração. *option_name* é **varchar(35)**, com um padrão de NULL. O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] reconhece qualquer cadeia de caracteres única que faça parte do nome de configuração. Se não for especificado, a lista completa de opções será retornada.  
   
  Para obter informações sobre as opções de configuração disponíveis e suas configurações, consulte [opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
- [ **@configvalue=** ] **'***value***'**  
- É a nova definição de configuração. *value* é **int**, com um padrão NULL. O valor máximo depende da opção individual.  
+`[ @configvalue = ] 'value'` É a nova definição de configuração. *value* é **int**, com um padrão NULL. O valor máximo depende da opção individual.  
   
  Para ver o valor máximo para cada opção, consulte a **máximo** coluna o **sys. Configurations** exibição do catálogo.  
   
@@ -79,7 +77,7 @@ RECONFIGURE
   
  Os valores para **config_value** e **run_value** não são automaticamente equivalentes. Depois de atualizar uma definição de configuração por meio **sp_configure**, o administrador do sistema deve atualizar o valor de configuração usando RECONFIGURE ou RECONFIGURE WITH OVERRIDE. Para obter mais informações, consulte a seção Comentários.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(35)**|O nome da opção de configuração.|  
 |**minimum**|**int**|Valor mínimo da opção de configuração.|  
@@ -126,7 +124,7 @@ GO
 EXEC sp_configure 'show advanced option', '1';  
 ```  
   
- Aqui está a mensagem: "Opção de configuração 'show advanced options' alterada de 0 para 1. Execute a instrução RECONFIGURE para instalar”.  
+ Aqui está a mensagem: "Opção de configuração 'show advanced options' alterada de 0 a 1. Execute a instrução RECONFIGURE para instalar”.  
   
  Execute `RECONFIGURE` e exiba todas as opções de configuração:  
   

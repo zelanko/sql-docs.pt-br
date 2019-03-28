@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 064018cdc595935ce3987fc44bc7be7da74bbd02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d4191a53db7c4921f026e4b6e6f8406b2ce5c24
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727694"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534018"
 ---
 # <a name="sphelpindex-transact-sql"></a>sp_helpindex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,15 +41,14 @@ sp_helpindex [ @objname = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@objname=** ] **'***name***'**  
- É o nome qualificado ou não qualificado de uma tabela ou exibição definida pelo usuário. As aspas só serão necessárias se um nome de exibição ou tabela qualificado for especificado. Se um nome completamente qualificado, incluindo um nome de banco de dados, for fornecido, o nome do banco de dados deverá ser o nome do banco de dados atual. *nome da* está **nvarchar(776)**, sem padrão.  
+`[ @objname = ] 'name'` É o nome qualificado ou de uma tabela definida pelo usuário ou a exibição. As aspas só serão necessárias se um nome de exibição ou tabela qualificado for especificado. Se um nome completamente qualificado, incluindo um nome de banco de dados, for fornecido, o nome do banco de dados deverá ser o nome do banco de dados atual. *nome da* está **nvarchar(776)**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**index_name**|**sysname**|Nome do índice.|  
 |**index_description**|**varchar(210)**|Descrição do índice, incluindo o grupo de arquivos em que ele se localiza.|  

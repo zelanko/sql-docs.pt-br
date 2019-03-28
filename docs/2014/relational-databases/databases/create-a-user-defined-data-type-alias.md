@@ -15,12 +15,12 @@ ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 85eebaa5abbf97b5b7787a788b4294b504a30e10
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b073e6025bc1483db2482a03d525b758d39efea4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768818"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530208"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>Criar um alias de tipo de dados definido pelo usuário
   Este tópico descreve como criar um novo alias de tipo de dados definido pelo usuário no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -41,7 +41,7 @@ ms.locfileid: "52768818"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   O nome de um alias de tipo de dados definido pelo usuário deve estar de acordo com as regras para identificadores.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "52768818"
   
 7.  Na área **Associação** , preencha a caixa **Padrão** ou **Regra** caso queira associar um padrão ou uma regra ao novo alias de tipo de dados. Padrões e regras não podem ser criados no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Use [!INCLUDE[tsql](../../includes/tsql-md.md)]. Código de exemplo para criação de padrões e regras disponíveis no Explorador de Modelos.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-create-a-user-defined-data-type-alias"></a>Para criar um alias de tipo de dados definido pelo usuário  
   
@@ -118,7 +118,7 @@ ms.locfileid: "52768818"
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo cria um alias de tipo de dados com base no tipo de dados `varchar` fornecido pelo sistema. O alias de tipo de dados `ssn` é usado para colunas contendo números de previdência social de 11 dígitos (999-99-9999). A coluna não pode ser NULL.  
   
-```tsql  
+```sql  
 CREATE TYPE ssn  
 FROM varchar(11) NOT NULL ;  
 ```  

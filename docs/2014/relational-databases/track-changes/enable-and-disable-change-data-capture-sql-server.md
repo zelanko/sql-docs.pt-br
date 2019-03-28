@@ -15,12 +15,12 @@ ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0e4756834e28ad07e42f57235a30e59fd924da22
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f66cb56380f0e027d08e53154c05b7ad1e3be89f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202105"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533008"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>Habilitar e desabilitar o Change Data Capture (SQL Server)
   Este tópico descreve como habilitar e desabilitar o Change data Capture para um banco de dados e uma tabela.  
@@ -37,7 +37,7 @@ ms.locfileid: "53202105"
 > [!IMPORTANT]  
 >  Para localizar os modelos no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vá para **Exibir**, clique em **Explorador de Modelos**e selecione **Modelos do SQL Server**. **Change Data Capture** é uma subpasta. Nesta pasta, você encontrará todos os modelos referenciados neste tópico. Também há um ícone do **Explorador de Modelos** na barra de ferramentas [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
-```tsql  
+```sql  
 -- ====  
 -- Enable Database for CDC template   
 -- ====  
@@ -57,7 +57,7 @@ GO
 > [!IMPORTANT]  
 >  Para localizar os modelos no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vá para **Exibir**, clique em **Explorador de Modelos**e em **Modelos do SQL Server**. **Change Data Capture** é uma subpasta na qual você encontrará todos os modelos referenciados neste tópico. Também há um ícone do **Explorador de Modelos** na barra de ferramentas [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
-```tsql  
+```sql  
 -- =======  
 -- Disable Database for Change Data Capture template   
 -- =======  
@@ -80,7 +80,7 @@ GO
   
  Por padrão, a tabela de alteração está localizada no grupo de arquivos padrão do banco de dados. Proprietários de banco de dados que queiram controlar o posicionamento de tabelas de alterações individuais podem usar o parâmetro *@filegroup_name* para especificar determinado grupo de arquivos para a tabela de alterações associada à instância de captura. O grupo de arquivos nomeado já deve existir. Geralmente, é recomendável que tabelas de alterações sejam colocadas em um grupo de arquivos separado das tabelas de origem. Consulte a `Enable a Table Specifying Filegroup Option` modelo para obter um exemplo que mostra o uso do *@filegroup_name* parâmetro.  
   
-```tsql  
+```sql  
 -- =========  
 -- Enable a Table Specifying Filegroup Option Template  
 -- =========  
@@ -102,7 +102,7 @@ GO
   
  Se você não quiser usar uma função associada, defina explicitamente o parâmetro *@role_name* como NULL. Consulte o modelo `Enable a Table Without Using a Gating Role` para obter um exemplo de como habilitar uma tabela sem uma função associada.  
   
-```tsql  
+```sql  
 -- =========  
 -- Enable a Table Without Using a Gating Role template   
 -- =========  
@@ -127,7 +127,7 @@ GO
   
  Consulte o modelo `Enable a Table for All and Net Changes Queries` para obter um exemplo que demonstra a criação de uma instância de captura com ambas as funções de consulta.  
   
-```tsql  
+```sql  
 -- =============  
 -- Enable a Table for All and Net Changes Queries template   
 -- =============  
@@ -151,7 +151,7 @@ GO
   
  Consulte o modelo Desabilitar uma Instância de Captura para uma Tabela para obter um exemplo de como desabilitar uma tabela.  
   
-```tsql  
+```sql  
 -- =====  
 -- Disable a Capture Instance for a Table template   
 -- =====  

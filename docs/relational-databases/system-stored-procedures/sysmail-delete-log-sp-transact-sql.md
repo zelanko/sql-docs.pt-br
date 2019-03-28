@@ -18,12 +18,12 @@ ms.assetid: e94b37a1-70ad-46a5-86c0-721892156f7c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fb2db3e60d416324a413bf9d6eb69f6125bc00b5
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 6c6c183034b93f06f7c8bc62b73f97316a204005
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588451"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537718"
 ---
 # <a name="sysmaildeletelogsp-transact-sql"></a>sysmail_delete_log_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@logged_before** =] **'**_logged_before_**'**  
- Exclui entradas até a data e hora especificadas pelo *logged_before* argumento. *logged_before* está **datetime** com NULL como padrão. NULL indica todas as datas.  
+`[ @logged_before = ] 'logged_before'` Exclui entradas até a data e hora especificadas pelo *logged_before* argumento. *logged_before* está **datetime** com NULL como padrão. NULL indica todas as datas.  
   
- [ **@event_type** =] **'**_event_type_**'**  
- Exclui entradas de log de tipo especificado como o *event_type*. *event_type* está **varchar(15)** sem nenhum padrão. As entradas válidas são **sucesso**, **aviso**, **erro**, e **informativa**. NULL indica todos os tipos de evento.  
+`[ @event_type = ] 'event_type'` Exclui entradas de log de tipo especificado como o *event_type*. *event_type* está **varchar(15)** sem nenhum padrão. As entradas válidas são **sucesso**, **aviso**, **erro**, e **informativa**. NULL indica todos os tipos de evento.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -69,7 +67,7 @@ EXECUTE msdb.dbo.sysmail_delete_log_sp ;
 GO  
 ```  
   
-### <a name="b-deleting-the-oldest-events"></a>b. Excluindo os eventos mais antigos  
+### <a name="b-deleting-the-oldest-events"></a>B. Excluindo os eventos mais antigos  
  O exemplo a seguir exclui os eventos no log do Database Mail anteriores a 9 de outubro de 2005.  
   
 ```  
