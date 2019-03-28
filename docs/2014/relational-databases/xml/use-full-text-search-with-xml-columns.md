@@ -10,15 +10,15 @@ helpviewer_keywords:
 - xml columns [full-text search]
 - indexes [full-text search]
 ms.assetid: 8096cfc6-1836-4ed5-a769-a5d63b137171
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 345b7324b66e10a8117e24d4a573c2011c47abda
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 897002d437dcee8a6c64750f964c957c18a077f3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190936"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530898"
 ---
 # <a name="use-full-text-search-with-xml-columns"></a>Usar a pesquisa de texto completo com colunas XML
   É possível criar um índice de texto completo em colunas de XML que indexa o conteúdo dos valores de XML, mas ignora a marcação XML. Marcas de elemento são usadas como limites do token. Os seguintes itens são indexados:  
@@ -33,7 +33,7 @@ ms.locfileid: "48190936"
   
 2.  Em seguida, consulte esses valores de XML que usam o índice XML na coluna XML.  
   
-## <a name="example-combining-full-text-search-with-xml-querying"></a>Exemplo: Combinando pesquisa de texto completo com consulta XML  
+## <a name="example-combining-full-text-search-with-xml-querying"></a>Exemplo: Combinando a pesquisa de texto completo com consulta XML  
  Após o índice de texto completo ter sido criado na coluna XML, a seguinte consulta verifica se um valor XML contém as palavras "custom" no título de um manual:  
   
 ```  

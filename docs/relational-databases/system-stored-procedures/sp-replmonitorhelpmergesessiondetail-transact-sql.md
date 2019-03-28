@@ -16,12 +16,12 @@ ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8e661ed27a586b45bbcfd812e6e47d169daa70b8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: dbafa8dd407269fa23ca37574f18a12be519c448
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813048"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534628"
 ---
 # <a name="spreplmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@session_id** =] *session_id*  
- Especifica uma sessão de agente. *session_id* está **int** sem nenhum padrão.  
+`[ @session_id = ] session_id` Especifica uma sessão de agente. *session_id* está **int** sem nenhum padrão.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -54,7 +53,7 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 |**Updates**|**int**|Número de atualizações em uma sessão.|  
 |**Deletes**|**int**|Número de exclusões em uma sessão.|  
 |**Conflicts**|**int**|Número de conflitos ocorrido em uma sessão.|  
-|**Identificação de erro**|**int**|ID de um erro de sessão.|  
+|**ErrorID**|**int**|ID de um erro de sessão.|  
 |**SeqNo**|**int**|Ordem das sessões no conjunto de resultados.|  
 |**RowType**|**int**|Indica que tipo de informação que cada linha no conjunto de resultados representa.<br /><br /> **0** = inicialização<br /><br /> **1** = resumo de carregamento<br /><br /> **2** = detalhes do carregamento do artigo<br /><br /> **3** = resumo de download<br /><br /> **4** = detalhes de download do artigo|  
 |**SchemaChanges**|**int**|Número de alterações de esquema em uma sessão.|  

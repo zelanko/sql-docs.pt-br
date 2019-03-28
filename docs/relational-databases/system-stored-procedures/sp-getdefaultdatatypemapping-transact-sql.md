@@ -16,12 +16,12 @@ ms.assetid: b8401de1-f135-41d0-ba79-ce8fe1f48c00
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2559c69e5857bbc5796d68d19b7d760476594b87
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 31755bb0ca1ba00d8d9b6f61b6091ce2e997f58e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589190"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528348"
 ---
 # <a name="spgetdefaultdatatypemapping-transact-sql"></a>sp_getdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,8 +52,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@source_dbms**=] **'**_source_dbms_**'**  
- É o nome do DBMS no qual os tipos de dados são mapeados. *source_dbms* está **sysname**, e pode ser um dos seguintes valores:  
+`[ @source_dbms = ] 'source_dbms'` É o nome do DBMS do qual os tipos de dados são mapeados. *source_dbms* está **sysname**, e pode ser um dos seguintes valores:  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -62,26 +61,19 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
   
  Você deve especificar esse parâmetro.  
   
- [  **@source_version=** ] **'**_source_version_**'**  
- É o número da versão do DBMS de origem. *source_version* está **varchar(10)**, com um valor padrão de NULL.  
+`[ @source_version = ] 'source_version'` É o número de versão do DBMS de origem. *source_version* está **varchar(10)**, com um valor padrão de NULL.  
   
- [ **@source_type**=] **'**_source_type_**'**  
- É o tipo de dados no DBMS de origem. *source_type* está **sysname**, sem padrão.  
+`[ @source_type = ] 'source_type'` É o tipo de dados no DBMS de origem. *source_type* está **sysname**, sem padrão.  
   
- [  **@source_length=** ] *source_length*  
- É o comprimento do tipo de dados no DBMS de origem. *source_length* está **bigint**, com um valor padrão de NULL.  
+`[ @source_length = ] source_length` É o comprimento do tipo de dados no DBMS de origem. *source_length* está **bigint**, com um valor padrão de NULL.  
   
- [  **@source_precision=** ] *source_precision*  
- É a precisão do tipo de dados no DBMS de origem. *source_precision* está **bigint**, com um valor padrão de NULL.  
+`[ @source_precision = ] source_precision` É a precisão do tipo de dados no DBMS de origem. *source_precision* está **bigint**, com um valor padrão de NULL.  
   
- [  **@source_scale=** ] *source_scale*  
- É a escala do tipo de dados no DBMS de origem. *source_scale* está **int**, com um valor padrão de NULL.  
+`[ @source_scale = ] source_scale` É a escala do tipo de dados no DBMS de origem. *source_scale* está **int**, com um valor padrão de NULL.  
   
- [  **@source_nullable=** ] *source_nullable*  
- Especifica se o tipo de dados no DBMS de origem dá suporte a um valor de NULL. *source_nullable* está **bit**, com um valor padrão de **1**, que significa que valores NULL têm suporte.  
+`[ @source_nullable = ] source_nullable` É se o tipo de dados no DBMS de origem suportar um valor NULL. *source_nullable* está **bit**, com um valor padrão de **1**, que significa que valores NULL têm suporte.  
   
- [ **@destination_dbms** =] **'**_destination_dbms_**'**  
- O nome do DBMS de destino. *destination_dbms* está **sysname**, e pode ser um dos seguintes valores:  
+`[ @destination_dbms = ] 'destination_dbms'` É o nome do DBMS de destino. *destination_dbms* está **sysname**, e pode ser um dos seguintes valores:  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -92,26 +84,19 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
   
  Você deve especificar esse parâmetro.  
   
- [ **@destination_version**=] **'**_destination_version_**'**  
- É a versão de produto do DBMS de destino. *destination_version* está **varchar(10)**, com um valor padrão de NULL.  
+`[ @destination_version = ] 'destination_version'` É a versão de produto do DBMS de destino. *destination_version* está **varchar(10)**, com um valor padrão de NULL.  
   
- [ **@destination_type**=] **'**_destination_type_**'** saída  
- É o tipo de dados listado no DBMS de destino. *destination_type* está **sysname**, com um valor padrão de NULL.  
+`[ @destination_type = ] 'destination_type' OUTPUT` O tipo de dados é listado no DBMS de destino. *destination_type* está **sysname**, com um valor padrão de NULL.  
   
- [  **@destination_length=** ] *destination_length* saída  
- É o comprimento do tipo de dados no DBMS de destino. *destination_length* está **bigint**, com um valor padrão de NULL.  
+`[ @destination_length = ] destination_length OUTPUT` É o comprimento do tipo de dados no DBMS de destino. *destination_length* está **bigint**, com um valor padrão de NULL.  
   
- [  **@destination_precision=** ] *destination_precision* saída  
- É a precisão do tipo de dados no DBMS de destino. *destination_precision* está **bigint**, com um valor padrão de NULL.  
+`[ @destination_precision = ] destination_precision OUTPUT` É a precisão do tipo de dados no DBMS de destino. *destination_precision* está **bigint**, com um valor padrão de NULL.  
   
- [  **@destination_scale=** ] _destination_scale_**saída**  
- É a escala do tipo de dados no DBMS de destino. *destination_scale* está **int**, com um valor padrão de NULL.  
+`[ @destination_scale = ] _destination_scaleOUTPUT` É a escala do tipo de dados no DBMS de destino. *destination_scale* está **int**, com um valor padrão de NULL.  
   
- [  **@destination_nullable=** ] _destination_nullable_**saída**  
- Especifica se o tipo de dados no DBMS de destino dá suporte a um valor de NULL. *destination_nullable* está **bit**, com um valor padrão de NULL. **1** significa que valores NULL têm suporte.  
+`[ @destination_nullable = ] _destination_nullableOUTPUT` É se o tipo de dados no DBMS de destino dá suporte a um valor NULL. *destination_nullable* está **bit**, com um valor padrão de NULL. **1** significa que valores NULL têm suporte.  
   
- [  **@dataloss=** ] _perda de dados_**saída**  
- Especifica se o mapeamento tem o potencial de perda de dados. *perda de dados* está **bit**, com um valor padrão de NULL. **1** significa que há um potencial perda de dados.  
+`[ @dataloss = ] _datalossOUTPUT` É se o mapeamento tem o potencial de perda de dados. *perda de dados* está **bit**, com um valor padrão de NULL. **1** significa que há um potencial perda de dados.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

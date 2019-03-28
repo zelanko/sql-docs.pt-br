@@ -16,12 +16,12 @@ ms.assetid: b884f9ef-ae89-4cbc-a917-532c3ff6ed41
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f60300d796a67627600dfc6680f3aafc94c5c48c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5852bfb2842406e8fa33ca9d99e294c6974e44cd
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751878"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529778"
 ---
 # <a name="spdropagentprofile-transact-sql"></a>sp_drop_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_drop_agent_profile [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@profile_id=**] *profile_id*  
- É a ID do perfil a ser removido. *profile_id* está **int**, sem padrão.  
+`[ @profile_id = ] profile_id` É a ID do perfil a ser removido. *profile_id* está **int**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

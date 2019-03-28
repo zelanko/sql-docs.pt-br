@@ -13,12 +13,12 @@ ms.assetid: b845e73a-bb01-4de2-aac2-8ac12abebc95
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 07db329a7ba6cb65e5beb94d34f90d1e55582915
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: bab64e8a33baae2c87e8068a1e4d23799742b55c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367778"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536268"
 ---
 # <a name="view-cluster-quorum-nodeweight-settings"></a>Exibir configurações de NodeWeight de quorum de cluster
   Este tópico descreve como exibir configurações de NodeWeight para cada nó de membro em um cluster WSFC (Windows Server Failover Clustering). As configurações de NodeWeight são usadas durante a votação de quorum para dar suporte à recuperação de desastre e a cenários com várias sub-redes para instâncias de cluster de failover do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -43,7 +43,7 @@ ms.locfileid: "53367778"
 ###  <a name="Security"></a> Segurança  
  O usuário deve ser uma conta de domínio que seja membro do grupo Administradores local em cada nó do cluster WSFC.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 ##### <a name="to-view-nodeweight-settings"></a>Para exibir configurações de NodeWeight  
   
@@ -54,7 +54,7 @@ ms.locfileid: "53367778"
 ### <a name="example-transact-sql"></a>Exemplo (Transact-SQL)  
  O exemplo a seguir consulta um modo de exibição do sistema para retornar valores para todos os nós no cluster dessa instância.  
   
-```tsql  
+```sql  
 SELECT  member_name, member_state_desc, number_of_quorum_votes  
  FROM   sys.dm_hadr_cluster_members;  
 ```  

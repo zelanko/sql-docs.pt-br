@@ -18,12 +18,12 @@ ms.assetid: 517e07eb-9685-4b06-90af-b1cc496700b7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f88ec7714528e8ce6e019be25ca4d83e49592096
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 90269bc6fab7cd496561b9dfe5cae6bf0ff36bbe
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060862"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527169"
 ---
 # <a name="restore-files-and-filegroups-over-existing-files-sql-server"></a>Restaurar arquivos e grupos de arquivos sobre arquivos existentes (SQL Server)
   Este tópico descreve como restaurar arquivos e grupos de arquivos sobre arquivos existentes no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -50,7 +50,7 @@ ms.locfileid: "48060862"
   
 -   RESTORE não é permitido em uma transação explícita ou implícita.  
   
--   No modelo de recuperação completa ou bulk-logged, antes de poder restaurar arquivos, você deve fazer backup do log de transações ativas (conhecido como a parte final do log). Para obter mais informações, veja [Fazer backup de um log de transações &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)).  
+-   No modelo de recuperação completa ou bulk-logged, antes de poder restaurar arquivos, você deve fazer backup do log de transações ativas (conhecido como a parte final do log). Para obter mais informações, veja [Back Up a Transaction Log &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md).  
   
 -   Para restaurar um banco de dados criptografado, é necessário ter acesso ao certificado ou à chave assimétrica usada para criptografar o banco de dados. Sem o certificado ou a chave assimétrica, o banco de dados não pode ser restaurado. Como resultado, o certificado usado para criptografar a chave de criptografia do banco de dados deverá ser retido enquanto o backup for necessário. Para obter mais informações, consulte [SQL Server Certificates and Asymmetric Keys](../security/sql-server-certificates-and-asymmetric-keys.md).  
   
@@ -89,8 +89,8 @@ ms.locfileid: "48060862"
     |-----------------|------------|  
     |**Restaurar**|As caixas de seleção selecionadas indicam os conjuntos de backup a serem restaurados.|  
     |**Nome**|O nome do conjunto de backup.|  
-    |**Tipo de arquivo**|Especifica o tipo de dados no backup: **Dados**, **Log**ou **Filestream Data**. Dados que são contidos em tabelas estão nos arquivos **Dados** . Dados de log de transações estão nos arquivos **Log** . Dados de BLOB (objeto binário grande) armazenados no sistema de arquivos estão localizados em arquivos de **Dados do Fluxo de Arquivos** .|  
-    |**Tipo**|Tipo de backup realizado: **Completo**, **Diferencial**ou **Log de Transações**.|  
+    |**Tipo de arquivo**|Especifica o tipo de dados no backup: **Dados**, **Log**, ou **dados Filestream**. Dados que são contidos em tabelas estão nos arquivos **Dados** . Dados de log de transações estão nos arquivos **Log** . Dados de BLOB (objeto binário grande) armazenados no sistema de arquivos estão localizados em arquivos de **Dados do Fluxo de Arquivos** .|  
+    |**Tipo**|O tipo de backup realizado: **Total**, **Diferencial** ou **Log de Transações**.|  
     |**Servidor**|Nome da instância do Mecanismo de Banco de Dados que executou a operação de backup.|  
     |**Nome Lógico do Arquivo**|O nome lógico do arquivo.|  
     |**Backup de banco de dados**|Nome do banco de dados envolvido na operação de backup.|  
@@ -139,7 +139,7 @@ ms.locfileid: "48060862"
 ###  <a name="TsqlExample"></a> Exemplo (Transact-SQL)  
  O exemplo seguinte restaura os arquivos e grupos de arquivos para o banco de dados `MyNwind` e substitui qualquer arquivo existente do mesmo nome. Também serão aplicados dois logs de transações para restaurar o banco de dados a hora atual.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 -- Restore the files and filesgroups for MyNwind.  

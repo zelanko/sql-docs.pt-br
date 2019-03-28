@@ -16,12 +16,12 @@ ms.assetid: 61f27234-531d-4b37-8fa3-fe4c32e6f521
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f521f416c7415d2a27554e7f3d91f5df89023798
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 2e365c4a71c7bfdb5deece18e19c9950dd2ddf45
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210405"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526358"
 ---
 # <a name="sphelptracertokens-transact-sql"></a>sp_helptracertokens (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,17 +40,14 @@ sp_helptracertokens [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=** ] **'***publicação***'**  
- É o nome da publicação na qual os tokens de rastreamento foram inseridos. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação na qual rastreamento tokens foram inseridos. *publicação* está **sysname**, sem padrão.  
   
- [  **@publisher=** ] **'***publisher***'**  
- O nome do publicador. *Publisher* está **sysname**, com um padrão NULL.  
+`[ @publisher = ] 'publisher'` O nome do publicador. *Publisher* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]
 >  Esse parâmetro só deve ser especificado para não - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores.  
   
- [  **@publisher_db=** ] **'***publisher_db***'**  
- O nome do banco de dados de publicação. *publisher_db* está **sysname**, com um valor padrão de NULL. Esse parâmetro será ignorado se o procedimento armazenado for executado no Publicador.  
+`[ @publisher_db = ] 'publisher_db'` O nome do banco de dados de publicação. *publisher_db* está **sysname**, com um valor padrão de NULL. Esse parâmetro será ignorado se o procedimento armazenado for executado no Publicador.  
   
 ## <a name="result-set"></a>Conjunto de resultados  
   

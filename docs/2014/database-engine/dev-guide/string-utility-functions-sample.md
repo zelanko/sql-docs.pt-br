@@ -12,12 +12,12 @@ ms.assetid: 9623013f-15f1-4614-8dac-1155e57c880c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fe1a3a45ce60ae4678b1b146ff41714db33bf69d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 83a9816afeae77036616bec4e850c09f613f0f74
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368868"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531308"
 ---
 # <a name="string-utility-functions-sample"></a>Exemplo Funções de utilitário de cadeia de caracteres
   O exemplo Utilitários de Cadeia de Caracteres contém uma função de streaming com valor de tabela gravada em Visual C# e Visual Basic, que divide uma cadeia de caracteres separada por vírgula em uma tabela com uma coluna. Ele também contém uma função de agregação que converte uma coluna de cadeia de caracteres em uma cadeia de caracteres separada por vírgula.  Além disso, estão implementadas uma função escalar e uma função com valor de tabela, que fornece a funcionalidade de substituição de expressão regular e pesquisa de expressão regular.  
@@ -885,7 +885,7 @@ GO
   
  Esse é o `test.sql`, que testa o exemplo por meio da execução das funções.  
   
-```tsql  
+```sql  
 USE AdventureWorks  
 GO  
   

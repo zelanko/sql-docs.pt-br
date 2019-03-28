@@ -16,12 +16,12 @@ ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9ac45c3b25e1a13366ae273b8d21d7e41e768251
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 92cd44dcc30a0843409c908cb3cc3a76276519aa
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748299"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528198"
 ---
 # <a name="spreplmonitorhelpsubscription-transact-sql"></a>sp_replmonitorhelpsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,17 +45,13 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publisher** =] **'***publisher***'**  
- É o nome do Publicador do qual o status está sendo monitorado. *Publisher* está **sysname**, com um valor padrão de NULL. Se **nulo**, informações serão retornadas para todos os publicadores que usam o distribuidor.  
+`[ @publisher = ] 'publisher'` É o nome do publicador do qual o status está sendo monitorado. *Publisher* está **sysname**, com um valor padrão de NULL. Se **nulo**, informações serão retornadas para todos os publicadores que usam o distribuidor.  
   
- [ **@publisher_db** =] **'***publisher_db***'**  
- É o nome do banco de dados publicado. *publisher_db* está **sysname**, com um valor padrão de NULL. Se for NULL, as informações serão retornadas para todos os bancos de dados publicados no Publicador.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados publicado. *publisher_db* está **sysname**, com um valor padrão de NULL. Se for NULL, as informações serão retornadas para todos os bancos de dados publicados no Publicador.  
   
- [ **@publication** =] **'***publicação***'**  
- É o nome da publicação que está sendo monitorada. *publicação* está **sysname**, com um valor padrão de NULL.  
+`[ @publication = ] 'publication'` É o nome da publicação que está sendo monitorado. *publicação* está **sysname**, com um valor padrão de NULL.  
   
- [ **@publication_type** =] *publication_type*  
- Se o tipo de publicação. *publication_type* está **int**, e pode ser um destes valores.  
+`[ @publication_type = ] publication_type` Se o tipo de publicação. *publication_type* está **int**, e pode ser um destes valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -64,8 +60,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**2**|Publicação de mesclagem.|  
 |NULL (padrão)|A replicação tenta determinar o tipo de publicação.|  
   
- [ **@mode** =] *modo*  
- É o modo de filtragem a ser usado ao retornar informações de monitoramento de assinatura. *modo* está **int**, e pode ser um destes valores.  
+`[ @mode = ] mode` É o modo de filtragem a ser usado ao retornar assinatura informações de monitoramento. *modo* está **int**, e pode ser um destes valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -78,28 +73,25 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**6**|Retorna somente assinaturas que estão sendo atualmente sincronizadas.|  
 |**7**|Retorna somente assinaturas que não estão sendo atualmente sincronizadas.|  
   
- [ **@topnum** =] *topnum*  
- Restringe o conjunto de resultados a apenas o número especificado de assinaturas no topo dos dados retornados. *topnum* está **int**, sem padrão.  
+`[ @topnum = ] topnum` Restringe o conjunto de resultados para apenas o número especificado de assinaturas no topo dos dados retornados. *topnum* está **int**, sem padrão.  
   
- [ **@exclude_anonymous** =] *exclude_anonymous*  
- Especifica se assinaturas pull anônimas serão excluídas do conjunto de resultados. *exclude_anonymous* está **bit**, com um padrão de **0**; um valor de **1** significa que as assinaturas anônimas serão excluídas e um valor de **0**  significa que eles são incluídos.  
+`[ @exclude_anonymous = ] exclude_anonymous` É se as assinaturas pull anônimas serão excluídas do conjunto de resultados. *exclude_anonymous* está **bit**, com um padrão de **0**; um valor de **1** significa que as assinaturas anônimas serão excluídas e um valor de **0**  significa que eles são incluídos.  
   
- [  **@refreshpolicy=** ] *refreshpolicy*  
- Somente para uso interno.  
+`[ @refreshpolicy = ] refreshpolicy` Somente para uso interno.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**status**|**int**|Verifica o status de todos os agentes de replicação associados com a publicação e retorna o status mais alto encontrado na seguinte ordem:<br /><br /> **6** = falha<br /><br /> **5** = tentando novamente<br /><br /> **2** = parado<br /><br /> **4** = ocioso<br /><br /> **3** = em andamento<br /><br /> **1** = iniciado|  
-|**Aviso**|**int**|Aviso de limite máximo gerado por uma assinatura pertencente à publicação, que pode ser o resultado de OR lógico de um ou mais desses valores.<br /><br /> **1** = expiration – uma assinatura para uma publicação transacional não foi sincronizada dentro do limite de período de retenção.<br /><br /> **2** = latency – o tempo necessário para replicar dados de um publicador transacional para o assinante excede o limite, em segundos.<br /><br /> **4** = mergeexpiration – uma assinatura para uma publicação de mesclagem não foi sincronizada dentro do limite de período de retenção.<br /><br /> **8** = mergefastrunduration – o tempo necessário para concluir a sincronização de uma assinatura de mesclagem excede o limite, em segundos, em uma conexão de rede rápida.<br /><br /> **16** = mergeslowrunduration - o tempo necessário para concluir a sincronização de uma assinatura de mesclagem excede o limite, em segundos, em uma conexão de rede lenta ou discada.<br /><br /> **32** = mergefastrunspeed – a taxa de entrega de linhas durante a sincronização de uma assinatura de mesclagem falhou em manter a taxa de limite, em linhas por segundo, em uma conexão de rede rápida.<br /><br /> **64** = mergeslowrunspeed – a taxa de entrega de linhas durante a sincronização de uma assinatura de mesclagem falhou em manter a taxa de limite, em linhas por segundo, em uma conexão de rede lenta ou discada.|  
+|**warning**|**int**|Aviso de limite máximo gerado por uma assinatura pertencente à publicação, que pode ser o resultado de OR lógico de um ou mais desses valores.<br /><br /> **1** = expiration – uma assinatura para uma publicação transacional não foi sincronizada dentro do limite de período de retenção.<br /><br /> **2** = latency – o tempo necessário para replicar dados de um publicador transacional para o assinante excede o limite, em segundos.<br /><br /> **4** = mergeexpiration – uma assinatura para uma publicação de mesclagem não foi sincronizada dentro do limite de período de retenção.<br /><br /> **8** = mergefastrunduration – o tempo necessário para concluir a sincronização de uma assinatura de mesclagem excede o limite, em segundos, em uma conexão de rede rápida.<br /><br /> **16** = mergeslowrunduration - o tempo necessário para concluir a sincronização de uma assinatura de mesclagem excede o limite, em segundos, em uma conexão de rede lenta ou discada.<br /><br /> **32** = mergefastrunspeed – a taxa de entrega de linhas durante a sincronização de uma assinatura de mesclagem falhou em manter a taxa de limite, em linhas por segundo, em uma conexão de rede rápida.<br /><br /> **64** = mergeslowrunspeed – a taxa de entrega de linhas durante a sincronização de uma assinatura de mesclagem falhou em manter a taxa de limite, em linhas por segundo, em uma conexão de rede lenta ou discada.|  
 |**Assinante**|**sysname**|É o nome do Assinante.|  
 |**subscriber_db**|**sysname**|É o nome do banco de dados usado para a assinatura.|  
 |**publisher_db**|**sysname**|É o nome do banco de dados de publicação.|  
-|**publicação**|**sysname**|É o nome de uma publicação.|  
+|**publication**|**sysname**|É o nome de uma publicação.|  
 |**publication_type**|**int**|É o tipo de publicação, que pode ser um destes valores:<br /><br /> **0** = publicação transacional<br /><br /> **1** = publicação de instantâneo<br /><br /> **2** = publicação de mesclagem|  
-|**subtipo**|**int**|É o tipo de assinatura, que pode ter um dos seguintes valores:<br /><br /> **0** = push<br /><br /> **1** = pull<br /><br /> **2** = anônimo|  
-|**latência**|**int**|A latência mais alta, em segundos, para alterações de dados propagadas pelo Log Reader ou Distribution Agents para uma publicação transacional.|  
+|**subtype**|**int**|É o tipo de assinatura, que pode ter um dos seguintes valores:<br /><br /> **0** = push<br /><br /> **1** = pull<br /><br /> **2** = anônimo|  
+|**latency**|**int**|A latência mais alta, em segundos, para alterações de dados propagadas pelo Log Reader ou Distribution Agents para uma publicação transacional.|  
 |**latencythreshold**|**int**|É a latência máxima para a publicação transacional acima da qual uma advertência será gerada.|  
 |**agentnotrunning**|**int**|É a quantidade de tempo, em horas, durante a qual o agente não executou.|  
 |**agentnotrunningthreshold**|**int**|É a quantidade de tempo, em horas, em que o agente não executou, antes que um aviso fosse gerado.|  

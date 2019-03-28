@@ -16,12 +16,12 @@ ms.assetid: d73ad03c-e5b3-4606-a0ee-7d75e12762a6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8ddf4c57901682cb099dc0e92c09b763651e32f6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 8a5463d23cca4f1fb9da549bb53706e8485ae439
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131706"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527828"
 ---
 # <a name="spvalidatemergesubscription-transact-sql"></a>sp_validatemergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,14 @@ sp_validatemergesubscription [@publication=] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [**@publication=**] **'***publicação***'**  
+ [**@publication=**] **'***publication***'**  
  É o nome da publicação. *publicação* está **sysname**, sem padrão.  
   
- [  **@subscriber=** ] **'***assinante***'**  
- É o nome do Assinante. *assinante* está **sysname**, sem padrão.  
+`[ @subscriber = ] 'subscriber'` É o nome do assinante. *assinante* está **sysname**, sem padrão.  
   
- [  **@subscriber_db=** ] **'***subscriber_db***'**  
- É o nome do banco de dados de assinatura. *subscriber_db* está **sysname**, sem padrão.  
+`[ @subscriber_db = ] 'subscriber_db'` É o nome do banco de dados de assinatura. *subscriber_db* está **sysname**, sem padrão.  
   
- [  **@level=** ] *nível*  
- É o tipo de validação a ser executado. *nível* está **tinyint**, sem padrão. O nível pode ser um destes valores:  
+`[ @level = ] level` É o tipo de validação a ser executado. *nível* está **tinyint**, sem padrão. O nível pode ser um destes valores:  
   
 |Valor de nível|Descrição|  
 |-----------------|-----------------|  

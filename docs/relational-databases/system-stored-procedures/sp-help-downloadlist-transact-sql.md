@@ -18,12 +18,12 @@ ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: caaeb391fabb112ed2a530148baf61e829e6b80a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f6bb56be8654b37eea250122068ef52e165a2d99
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857075"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538278"
 ---
 # <a name="sphelpdownloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,54 +47,45 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@job_id=** ] *job_id*  
- O número de identificação do trabalho para o qual as informações devem ser retornadas. *job_id* está **uniqueidentifier**, com um padrão NULL.  
+`[ @job_id = ] job_id` O número de identificação do trabalho para o qual retornar informações. *job_id* está **uniqueidentifier**, com um padrão NULL.  
   
- [ **@job_name=** ] **'***job_name***'**  
- O nome do trabalho. *job_name* está **sysname**, com um padrão NULL.  
+`[ @job_name = ] 'job_name'` O nome do trabalho. *job_name* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
 >  Qualquer um dos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados.  
   
- [  **@operation=** ] **'***operação***'**  
- A operação válida para o trabalho especificado. *operação* está **varchar(64)**, com um padrão de NULL, e pode ser um destes valores.  
+`[ @operation = ] 'operation'` A operação válida para o trabalho especificado. *operação* está **varchar(64)**, com um padrão de NULL, e pode ser um destes valores.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**DEFEITO**|Operação de servidor que solicita o servidor de destino a inscrição do servidor mestre **SQLServerAgent** service.|  
 |**DELETE**|Operação de trabalho que remove um trabalho inteiro.|  
 |**INSERT**|Operação de trabalho que insere um trabalho inteiro ou atualiza um trabalho existente. Esta operação inclui todas as etapas de trabalho e agendas, se aplicável.|  
-|**NOVAMENTE SE INSCREVER**|Operação de servidor que faz com que o servidor de destino reenvie suas informações de inscrição, incluindo o intervalo de sondagem e o fuso horário do domínio multisservidor. O servidor de destino também baixa novamente os a **MSXOperator** detalhes.|  
+|**RE-ENLIST**|Operação de servidor que faz com que o servidor de destino reenvie suas informações de inscrição, incluindo o intervalo de sondagem e o fuso horário do domínio multisservidor. O servidor de destino também baixa novamente os a **MSXOperator** detalhes.|  
 |**SET-POLL**|Operação de servidor que define o intervalo, em segundos, para que os servidores de destino sondem o domínio multisservidor. Se especificado, *valor* será interpretado como o valor de intervalo necessário, e pode ser um valor de **10** para **28.800**.|  
 |**START**|Operação de trabalho que solicita o início da execução do trabalho.|  
 |**STOP**|Operação de trabalho que solicita a parada da execução do trabalho.|  
-|**HORA DA SINCRONIZAÇÃO**|Operação de servidor que faz com que o servidor de destino sincronize seu relógio de sistema com o domínio multisservidor. Como esta é uma operação cara, execute-a de maneira limitada e infrequente.|  
+|**SYNC-TIME**|Operação de servidor que faz com que o servidor de destino sincronize seu relógio de sistema com o domínio multisservidor. Como esta é uma operação cara, execute-a de maneira limitada e infrequente.|  
 |**UPDATE**|Operação de trabalho que atualiza apenas o **sysjobs** informações para um trabalho, não as etapas de trabalho ou agendas. É chamado automaticamente pelo **sp_update_job**.|  
   
- [ **@object_type=** ] **'***object_type***'**  
- O tipo do objeto para o trabalho especificado. *object_type* está **varchar(64)**, com um padrão NULL. *object_type* pode ser JOB ou SERVER. Para obter mais informações sobre válida *object_type*valores, consulte [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
+`[ @object_type = ] 'object_type'` O tipo de objeto para o trabalho especificado. *object_type* está **varchar(64)**, com um padrão NULL. *object_type* pode ser JOB ou SERVER. Para obter mais informações sobre válida *object_type*valores, consulte [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
   
- [  **@object_name=** ] **'***object_name***'**  
- O nome do objeto. *object_name* está **sysname**, com um padrão NULL. Se *object_type* é o trabalho, *object_name*é o nome do trabalho. Se *object_type*é o servidor, *object_name*é o nome do servidor.  
+`[ @object_name = ] 'object_name'` O nome do objeto. *object_name* está **sysname**, com um padrão NULL. Se *object_type* é o trabalho, *object_name*é o nome do trabalho. Se *object_type*é o servidor, *object_name*é o nome do servidor.  
   
- [ **@target_server=** ] **'***target_server***'**  
- O nome do servidor de destino. *target_server* está **nvarchar (128)**, com um padrão NULL.  
+`[ @target_server = ] 'target_server'` O nome do servidor de destino. *target_server* está **nvarchar (128)**, com um padrão NULL.  
   
- [  **@has_error=** ] *has_error*  
- Especifica se o trabalho deve confirmar erros. *has_error* está **tinyint**, com um padrão NULL, que indica que nenhum erro deve ser confirmado. **1** indica que todos os erros devem ser confirmados.  
+`[ @has_error = ] has_error` É se o trabalho deve confirmar erros. *has_error* está **tinyint**, com um padrão NULL, que indica que nenhum erro deve ser confirmado. **1** indica que todos os erros devem ser confirmados.  
   
- [ **@status=** ] *status*  
- O status do trabalho. *status* está **tinyint**, com um valor padrão de NULL.  
+`[ @status = ] status` O status do trabalho. *status* está **tinyint**, com um valor padrão de NULL.  
   
- [  **@date_posted=** ] *date_posted*  
- A data e a hora a partir das quais todas as entradas feitas na data e hora especificadas ou depois devem ser incluídas no conjunto de resultados. *date_posted* está **datetime**, com um padrão NULL.  
+`[ @date_posted = ] date_posted` A data e hora para que todas as entradas feitas em ou após a data e hora especificadas devem ser incluídos no resultado definido. *date_posted* está **datetime**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|Número de identificação inteiro exclusivo da instrução.|  
 |**source_server**|**nvarchar(30)**|Nome do computador do servidor do qual a instrução veio. Na [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versão 7.0, isso é sempre o nome do computador do servidor mestre (MSX).|  

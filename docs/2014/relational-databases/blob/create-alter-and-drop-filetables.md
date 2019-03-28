@@ -14,12 +14,12 @@ ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 373cee8bf85815db18c50eb2919600ffec258f0b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c5348d022c5921a34280e9f9b608017035ebc4fc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516498"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530658"
 ---
 # <a name="create-alter-and-drop-filetables"></a>Criar, alterar e remover FileTables
   Descreve como criar uma nova FileTable, ou alterar ou remover uma FileTable existente.  
@@ -67,7 +67,7 @@ ms.locfileid: "52516498"
   
  O exemplo a seguir cria uma nova FileTable e especifica valores definidos pelo usuário para **FILETABLE_DIRECTORY** e **FILETABLE_COLLATE_FILENAME**.  
   
-```tsql  
+```sql  
 CREATE TABLE DocumentStore AS FileTable  
     WITH (   
           FileTable_Directory = 'DocumentTable',  
@@ -78,7 +78,7 @@ GO
   
  O exemplo a seguir também cria uma nova FileTable. Como os valores definidos pelo usuário não são especificados, o nome de **FILETABLE_DIRECTORY** se torna o nome do FileTable, o valor de **FILETABLE_COLLATE_FILENAME** se torna database_default e a chave primária e as restrições exclusivas recebem nomes gerados pelo sistema.  
   
-```tsql  
+```sql  
 CREATE TABLE DocumentStore AS FileTable;  
 GO  
 ```  
@@ -113,7 +113,7 @@ GO
   
  **Exemplo**  
   
-```tsql  
+```sql  
 ALTER TABLE filetable_name  
     SET ( FILETABLE_DIRECTORY = N'directory_name' );  
 GO  
@@ -144,7 +144,7 @@ GO
 ##  <a name="BasicsOtherObjects"></a> Outros objetos de banco de dados são criados quando você cria uma FileTable  
  Quando você cria uma nova FileTable, também são criados alguns índices e restrições definidos pelo sistema. Você não pode alterar ou remover esses objetos. Eles desaparecem apenas quando a própria FileTable é removida. Para ver a lista desses objetos, consulte a exibição de catálogo [sys.filetable_system_defined_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql).  
   
-```tsql  
+```sql  
 --View all objects for all filetables, unsorted  
 SELECT * FROM sys.filetable_system_defined_objects;  
 GO  

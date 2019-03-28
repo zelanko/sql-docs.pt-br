@@ -18,12 +18,12 @@ ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6ee0f3e2f7858959b04394e4e809df3ab71dcc83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 034c4ab2c8ce57ac072e9711fb4e6d621584f273
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846634"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529298"
 ---
 # <a name="spserverinfo-transact-sql"></a>sp_server_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,19 +40,18 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@attribute_id =** ] **'***attribute_id***'**  
- É o ID inteiro do atributo. *attribute_id* está **int**, com um padrão NULL.  
+`[ @attribute_id = ] 'attribute_id'` É a ID de inteiro do atributo. *attribute_id* está **int**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  None  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**ATTRIBUTE_ID**|**int**|Número do ID do atributo.|  
-|**ATTRIBUTE_NAME**|**varchar (** 60 **)**|Nome do atributo.|  
-|**ATTRIBUTE_VALUE**|**varchar (** 255 **)**|Configuração atual do atributo.|  
+|**ATTRIBUTE_NAME**|**varchar(** 60 **)**|Nome do atributo.|  
+|**ATTRIBUTE_VALUE**|**varchar(** 255 **)**|Configuração atual do atributo.|  
   
  A tabela a seguir lista os atributos. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Bibliotecas de cliente do ODBC atualmente usam atributos **1**, **2**, **18**, **22**, e **500** na conexão tempo.  
   

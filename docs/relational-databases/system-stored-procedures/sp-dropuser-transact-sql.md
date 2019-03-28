@@ -18,12 +18,12 @@ ms.assetid: e28f18f9-7ecf-4568-89f4-fe5c520df386
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0f4e2a7537de3e33ffccd6bf0a9ebb7f4b6e33ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d96004357962ee822df7458a30d740fc836de658
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854015"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532948"
 ---
 # <a name="spdropuser-transact-sql"></a>sp_dropuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_dropuser [ @name_in_db = ] 'user'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@name_in_db =**] **'***usuário***'**  
- É o nome do usuário a ser removido. *usuário* é um **sysname**, sem padrão. *usuário* deve existir no banco de dados atual. Ao especificar um logon do Windows, use o nome pelo qual o banco de dados conhece o logon.  
+`[ @name_in_db = ] 'user'` É o nome de usuário a ser removido. *usuário* é um **sysname**, sem padrão. *usuário* deve existir no banco de dados atual. Ao especificar um logon do Windows, use o nome pelo qual o banco de dados conhece o logon.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

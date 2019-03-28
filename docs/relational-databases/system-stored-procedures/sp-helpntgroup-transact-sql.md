@@ -18,12 +18,12 @@ ms.assetid: 02b4f7c1-480a-436c-8bae-7a2488be45d2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c23e80cf3024b238595785f0976f52ae41c8defc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee2dc4474bb2949aba396674da19fcd1e197a042
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739764"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531559"
 ---
 # <a name="sphelpntgroup-transact-sql"></a>sp_helpntgroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,15 +40,14 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@ntname =** ] **'***nome***'**  
- É o nome do grupo do Windows. *nome da* está **sysname**, com um padrão NULL. *nome* deve ser um grupo do Windows válido com acesso ao banco de dados atual. Se *nome* não for especificado, todos os grupos do Windows com acesso ao banco de dados atual são incluídos na saída.  
+`[ @ntname = ] 'name'` É o nome do grupo do Windows. *nome da* está **sysname**, com um padrão NULL. *nome* deve ser um grupo do Windows válido com acesso ao banco de dados atual. Se *nome* não for especificado, todos os grupos do Windows com acesso ao banco de dados atual são incluídos na saída.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**NTGroupName**|**sysname**|Nome do grupo do Windows.|  
 |**NTGroupId**|**smallint**|Identificador de grupo (ID).|  

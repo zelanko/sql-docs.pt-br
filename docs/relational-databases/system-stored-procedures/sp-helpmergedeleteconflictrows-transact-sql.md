@@ -16,12 +16,12 @@ ms.assetid: 222be651-5690-4341-9dfb-f9ec1d80c970
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e31a8827f940e0dd5a3debe2d03bf675f33df3cd
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 6c60f56980aedc29c8262089748a77f113cc0449
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591170"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536478"
 ---
 # <a name="sphelpmergedeleteconflictrows-transact-sql"></a>sp_helpmergedeleteconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,24 +41,20 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'**_publicação_**'**  
- É o nome da publicação. *publicação* está **sysname**, com um padrão de **%**. Se a publicação for especificada, serão retornados todos os conflitos qualificados pela publicação.  
+`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, com um padrão de **%**. Se a publicação for especificada, serão retornados todos os conflitos qualificados pela publicação.  
   
- [  **@source_object=**] **'**_source_object_**'**  
- É o nome do objeto de origem. *source_object* está **nvarchar(386)**, com um padrão NULL.  
+`[ @source_object = ] 'source_object'` É o nome do objeto de origem. *source_object* está **nvarchar(386)**, com um padrão NULL.  
   
- [  **@publisher=**] **'**_publisher_**'**  
- É o nome do publicador. *publisher* é **sysname**, com um padrão NULL.  
+`[ @publisher = ] 'publisher'` É o nome do publicador. *publisher* é **sysname**, com um padrão NULL.  
   
- [  **@publisher_db=**] **'**_publisher_db_**'**  
- É o nome do banco de dados publicador. *publisher_db* é **sysname**, com um padrão NULL.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados publicador. *publisher_db* é **sysname**, com um padrão NULL.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**source_object**|**nvarchar(386)**|Objeto de origem para o conflito de exclusão.|  
-|**ROWGUID**|**uniqueidentifier**|Identificador de linha para o conflito de exclusão.|  
+|**rowguid**|**uniqueidentifier**|Identificador de linha para o conflito de exclusão.|  
 |**conflict_type**|**int**|Código que indica tipo de conflito:<br /><br /> **1** = UpdateConflict: Conflito é detectado no nível de linha.<br /><br /> **2** = ColumnUpdateConflict: Conflito detectado no nível de coluna.<br /><br /> **3** = UpdateDeleteWinsConflict: Exclusão ganha o conflito.<br /><br /> **4** = UpdateWinsDeleteConflict: O rowguid excluído que perde o conflito é registrado nessa tabela.<br /><br /> **5** = UploadInsertFailed: Inserção do assinante não pôde ser aplicada no publicador.<br /><br /> **6** = DownloadInsertFailed: Inserção do publicador não pôde ser aplicada no assinante.<br /><br /> **7** = UploadDeleteFailed: Exclusão no assinante não pôde ser carregada no publicador.<br /><br /> **8** = DownloadDeleteFailed: Exclusão no publicador não pôde ser baixada no assinante.<br /><br /> **9** = UploadUpdateFailed: Atualização do assinante não puderam ser aplicada no publicador.<br /><br /> **10** = DownloadUpdateFailed: Atualização do publicador não puderam ser aplicada ao assinante.|  
 |**reason_code**|**Int**|Código de erro que pode ser sensível ao contexto.|  
 |**reason_text**|**varchar(720)**|Descrição de erro que pode ser sensível ao contexto.|  

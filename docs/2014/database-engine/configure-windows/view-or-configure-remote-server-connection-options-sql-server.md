@@ -14,12 +14,12 @@ ms.assetid: 356d3e6b-8514-4bd2-a683-9de147949b2b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9e831941097d4614b92c3d6e9b57400f0eab8430
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 5dfc0aa145f106fc57c25a6249b928ee27ab4b87
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641188"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531468"
 ---
 # <a name="view-or-configure-remote-server-connection-options-sql-server"></a>Exibir ou configurar opções de conexão de servidor remoto (SQL Server)
   Este tópico descreve como exibir ou configurar as opções de conexão de servidor remoto no nível de servidor no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -36,7 +36,7 @@ ms.locfileid: "52641188"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Acompanhamento:**  [Depois de configurar opções de conexão de servidor remoto](#FollowUp)  
+-   **Acompanhamento:**  [depois de configurar opções de conexão de servidor remoto](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -57,7 +57,7 @@ ms.locfileid: "52641188"
   
 4.  Repita os etapas 1 até 3, no outro servidor do par de servidor remoto.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-view-remote-server-connection-options"></a>Para exibir as opções de conexão de servidor remoto  
   
@@ -67,7 +67,7 @@ ms.locfileid: "52641188"
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo usa [sp_helpserver](/sql/relational-databases/system-stored-procedures/sp-helpserver-transact-sql) para retornar informações sobre todos os servidores remotos.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 EXEC sp_helpserver ;  
@@ -81,12 +81,12 @@ EXEC sp_helpserver ;
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo mostra como usar [sp_serveroption](/sql/relational-databases/system-stored-procedures/sp-serveroption-transact-sql) para configurar um servidor remoto. O exemplo configura um servidor remoto correspondente a outra instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], `SEATTLE3`, para que seja compatível com ordenação com a instância local do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-```tsql  
+```sql  
 USE master;  
 EXEC sp_serveroption 'SEATTLE3', 'collation compatible', 'true';  
 ```  
   
-##  <a name="FollowUp"></a> Acompanhar: Depois de configurar opções de conexão de servidor remoto  
+##  <a name="FollowUp"></a> Acompanhamento: depois de configurar opções de conexão de servidor remoto  
  O servidor remoto deve ser interrompido e reiniciado para que a configuração entre em vigor.  
   
 ## <a name="see-also"></a>Consulte também  

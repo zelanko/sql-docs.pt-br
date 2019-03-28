@@ -16,12 +16,12 @@ ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a103f309067b5e78024a1687c24bb37bf5c3a8b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: eec9be936a14b0d5c78b5bc183516a8118c339a2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779748"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533438"
 ---
 # <a name="sphelpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'***publicação***'**  
- É o nome da publicação sobre a qual recuperar informações. *publicação*está **sysname**, com um padrão de **%**, que retorna informações sobre todos os artigos de mesclagem contidos em todas as publicações no banco de dados atual.  
+`[ @publication = ] 'publication'` É o nome da publicação sobre a qual recuperar informações. *publicação*está **sysname**, com um padrão de **%**, que retorna informações sobre todos os artigos de mesclagem contidos em todas as publicações no banco de dados atual.  
   
- [  **@article=**] **'***artigo***'**  
- É o nome do artigo do qual retornar informações. *artigo*está **sysname**, com um padrão de **%**, que retorna informações sobre todos os artigos de mesclagem na determinada publicação.  
+`[ @article = ] 'article'` É o nome do artigo para o qual retornar informações. *artigo*está **sysname**, com um padrão de **%**, que retorna informações sobre todos os artigos de mesclagem na determinada publicação.  
   
 ## <a name="result-set"></a>Conjunto de resultados  
   
@@ -78,7 +76,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**fast_multicol_updateproc**|**int**|Habilita ou desabilita o Merge Agent para aplicar as alterações em várias colunas na mesma linha em uma instrução UPDATE; em que **1** significa que várias colunas são atualizadas em uma instrução, e **0** significa que instruções UPDATE separadas são problemas para cada coluna atualizada.|  
 |**check_permissions**|**int**|Valor inteiro que representa o bitmap de permissões de nível de tabela verificadas. Para obter uma lista de valores possíveis, consulte [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).|  
 |**processing_order**|**int**|A ordem na qual as alterações de dados são aplicadas a artigos em uma publicação.|  
-|**upload_options**|**tinyint**|Define restrições em atualizações feitas em um Assinante com uma assinatura de cliente, que pode ser um dos valores a seguir.<br /><br /> **0** = não há restrições em atualizações feitas em um assinante com assinatura de cliente; todas as alterações são carregadas no publicador.<br /><br /> **1** = as alterações são permitidas em um assinante com assinatura de cliente, mas eles não são carregados no publicador.<br /><br /> **2** = não são permitidas alterações em um assinante com assinatura de cliente.<br /><br /> Para obter mais informações, consulte [Optimize Merge Replication Performance with Download-Only Articles](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md) (Otimizar o desempenho da replicação de mesclagem com artigos somente para download).|  
+|**upload_options**|**tinyint**|Define restrições em atualizações feitas em um Assinante com uma assinatura de cliente, que pode ser um dos valores a seguir.<br /><br /> **0** = não há restrições em atualizações feitas em um assinante com assinatura de cliente; todas as alterações são carregadas no publicador.<br /><br /> **1** = as alterações são permitidas em um assinante com assinatura de cliente, mas eles não são carregados no publicador.<br /><br /> **2** = não são permitidas alterações em um assinante com assinatura de cliente.<br /><br /> Para obter mais informações, consulte [Otimizar o desempenho da replicação de mesclagem com artigos somente para download](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).|  
 |**identityrangemanagementoption**|**int**|Se o tratamento de intervalo de identidade automático estiver habilitado; em que **1** está habilitado e **0** está desabilitado.|  
 |**delete_tracking**|**bit**|Se as exclusões são replicadas; em que **1** significa que as exclusões são replicadas, e **0** significa que eles não são.|  
 |**compensate_for_errors**|**bit**|Indica se ações compensatórias são tomadas quando forem encontrados erros durante a sincronização. em que **1** indica que as ações compensatórias são tomadas, e **0** significa que as ações de compensação não são executadas.|  

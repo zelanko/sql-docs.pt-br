@@ -14,12 +14,12 @@ ms.assetid: 4c4beea2-6cbc-4352-9db6-49ea8130bb64
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7f527d9767a6e821d0d4d5527fcad70e37f16e3c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d93e6cfa3ce6e958b31c1156cd4fc5fa046ad5ee
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799108"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530458"
 ---
 # <a name="create-a-database"></a>Criar um banco de dados
   Este tópico descreve como criar um banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -44,7 +44,7 @@ ms.locfileid: "52799108"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   No máximo 32.767 bancos de dados podem ser especificados em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -100,7 +100,7 @@ ms.locfileid: "52799108"
   
 12. Para criar o banco de dados, clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-create-a-database"></a>Para criar um banco de dados  
   
@@ -110,7 +110,7 @@ ms.locfileid: "52799108"
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo cria o banco de dados `Sales`. Como a palavra-chave PRIMARY não é usada, o primeiro arquivo (`Sales`_`dat`) torna-se o arquivo primário. Como nem MB nem KB é especificado no parâmetro SIZE do arquivo `Sales`\_`dat` , ele usa MB e é alocado em megabytes. O backup do banco de dados `Sales`\_`log` é alocado em megabytes porque o sufixo `MB` é explicitamente declarado no parâmetro `SIZE` .  
   
-```tsql  
+```sql  
 USE master ;  
 GO  
 CREATE DATABASE Sales  

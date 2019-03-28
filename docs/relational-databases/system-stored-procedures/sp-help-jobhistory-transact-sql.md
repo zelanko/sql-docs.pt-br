@@ -18,12 +18,12 @@ ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c355fb36e5bc0562b4e20b48ab2a3f33e182c22c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b2ee476694098f4734c31439b48a7ec9efdc892
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742194"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534428"
 ---
 # <a name="sphelpjobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,40 +54,29 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@job_id=** ] *job_id*  
- O número de identificação do trabalho. *job_id* está **uniqueidentifier**, com um padrão NULL.  
+`[ @job_id = ] job_id` O número de identificação do trabalho. *job_id* está **uniqueidentifier**, com um padrão NULL.  
   
- [ **@job_name=** ] **'***job_name***'**  
- O nome do trabalho. *job_name* está **sysname**, com um padrão NULL.  
+`[ @job_name = ] 'job_name'` O nome do trabalho. *job_name* está **sysname**, com um padrão NULL.  
   
- [  **@step_id=** ] *step_id*  
- O número de identificação da etapa. *step_id* está **int**, com um padrão NULL.  
+`[ @step_id = ] step_id` O número de identificação de etapa. *step_id* está **int**, com um padrão NULL.  
   
- [  **@sql_message_id=** ] *sql_message_id*  
- O número de identificação da mensagem de erro retornada pelo Microsoft SQL Server ao executar o trabalho. *sql_message_id* está **int**, com um padrão NULL.  
+`[ @sql_message_id = ] sql_message_id` O número de identificação da mensagem de erro retornada pelo Microsoft SQL Server ao executar o trabalho. *sql_message_id* está **int**, com um padrão NULL.  
   
- [ **@sql_severity=** ] *sql_severity*  
- O nível de severidade da mensagem de erro retornada pelo Microsoft SQL Server ao executar o trabalho. *sql_severity* está **int**, com um padrão NULL.  
+`[ @sql_severity = ] sql_severity` O nível de severidade da mensagem de erro retornado pelo SQL Server ao executar o trabalho. *sql_severity* está **int**, com um padrão NULL.  
   
- [ **@start_run_date=** ] *start_run_date*  
- A data em que o trabalho foi iniciado. *start_run_date*está **int**, com um padrão NULL. *start_run_date* deve ser inserida no formato AAAAMMDD, em que AAAA é um ano de quatro caracteres, MM é um nome de mês de dois caracteres e DD é o nome de um dia de dois caracteres.  
+`[ @start_run_date = ] start_run_date` A data em que o trabalho foi iniciado. *start_run_date*está **int**, com um padrão NULL. *start_run_date* deve ser inserida no formato AAAAMMDD, em que AAAA é um ano de quatro caracteres, MM é um nome de mês de dois caracteres e DD é o nome de um dia de dois caracteres.  
   
- [ **@end_run_date=** ] *end_run_date*  
- A data em que o trabalho foi concluído. *end_run_date* está **int**, com um padrão NULL. *end_run_date*deve ser inserida no formato AAAAMMDD, em que AAAA é um ano de quatro dígitos, MM é um nome de mês de dois caracteres e DD é o nome de um dia de dois caracteres.  
+`[ @end_run_date = ] end_run_date` A data em que o trabalho foi concluído. *end_run_date* está **int**, com um padrão NULL. *end_run_date*deve ser inserida no formato AAAAMMDD, em que AAAA é um ano de quatro dígitos, MM é um nome de mês de dois caracteres e DD é o nome de um dia de dois caracteres.  
   
- [ **@start_run_time=** ] *start_run_time*  
- A hora em que o trabalho foi iniciado. *start_run_time* está **int**, com um padrão NULL. *start_run_time*deve ser inserida no formato HHMMSS, onde HH é uma hora do dia de dois caracteres, MM é um minuto de dois caracteres do dia e SS é um segundo do dia de dois caracteres.  
+`[ @start_run_time = ] start_run_time` A hora em que o trabalho foi iniciado. *start_run_time* está **int**, com um padrão NULL. *start_run_time*deve ser inserida no formato HHMMSS, onde HH é uma hora do dia de dois caracteres, MM é um minuto de dois caracteres do dia e SS é um segundo do dia de dois caracteres.  
   
- [  **@end_run_time=** ] *end_run_time*  
- A hora em que a execução do trabalho foi concluída. *end_run_time* está **int**, com um padrão NULL. *end_run_time*deve ser inserida no formato HHMMSS, onde HH é uma hora do dia de dois caracteres, MM é um minuto de dois caracteres do dia e SS é um segundo do dia de dois caracteres.  
+`[ @end_run_time = ] end_run_time` A hora em que o trabalho concluído sua execução. *end_run_time* está **int**, com um padrão NULL. *end_run_time*deve ser inserida no formato HHMMSS, onde HH é uma hora do dia de dois caracteres, MM é um minuto de dois caracteres do dia e SS é um segundo do dia de dois caracteres.  
   
- [ **@minimum_run_duration=** ] *minimum_run_duration*  
- O período de tempo mínimo para a conclusão do trabalho. *minimum_run_duration* está **int**, com um padrão NULL. *minimum_run_duration*deve ser inserida no formato HHMMSS, onde HH é uma hora do dia de dois caracteres, MM é um minuto de dois caracteres do dia e SS é um segundo do dia de dois caracteres.  
+`[ @minimum_run_duration = ] minimum_run_duration` O comprimento mínimo de tempo para a conclusão do trabalho. *minimum_run_duration* está **int**, com um padrão NULL. *minimum_run_duration*deve ser inserida no formato HHMMSS, onde HH é uma hora do dia de dois caracteres, MM é um minuto de dois caracteres do dia e SS é um segundo do dia de dois caracteres.  
   
- [ **@run_status=** ] *run_status*  
- O status da execução do trabalho. *run_status* está **int**, com um padrão de NULL, e pode ser um destes valores.  
+`[ @run_status = ] run_status` O status de execução do trabalho. *run_status* está **int**, com um padrão de NULL, e pode ser um destes valores.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**0**|Falhou|  
 |**1**|Teve êxito|  
@@ -96,17 +85,13 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**4**|Mensagem em andamento|  
 |**5**|Unknown (desconhecido)|  
   
- [  **@minimum_retries=** ] *minimum_retries*  
- O número mínimo de horas para repetir a execução de um trabalho. *minimum_retries* está **int**, com um padrão NULL.  
+`[ @minimum_retries = ] minimum_retries` O número mínimo de vezes para que repetir a execução de um trabalho. *minimum_retries* está **int**, com um padrão NULL.  
   
- [ **@oldest_first=** ] *oldest_first*  
- Define se a saída deve ser apresentada com os trabalhos mais antigos primeiro. *oldest_first* está **int**, com um padrão de **0**, que apresenta os trabalhos mais recentes primeiro. **1** apresenta os trabalhos mais antigos primeiro.  
+`[ @oldest_first = ] oldest_first` Especifica se deve ser apresentada a saída com os trabalhos mais antigos primeiro. *oldest_first* está **int**, com um padrão de **0**, que apresenta os trabalhos mais recentes primeiro. **1** apresenta os trabalhos mais antigos primeiro.  
   
- [  **@server=** ] **'***server***'**  
- O nome do servidor no qual o trabalho foi executado. *servidor* está **nvarchar (30)**, com um padrão NULL.  
+`[ @server = ] 'server'` O nome do servidor no qual o trabalho foi executado. *servidor* está **nvarchar (30)**, com um padrão NULL.  
   
- [  **@mode=** ] **'***modo***'**  
- Especifica se o SQL Server imprime todas as colunas no conjunto de resultados (**completo**) ou um resumo das colunas. *modo* está **varchar(7)**, com um padrão de **resumo**.  
+`[ @mode = ] 'mode'` Especifica se o SQL Server imprime todas as colunas no conjunto de resultados (**completo**) ou um resumo das colunas. *modo* está **varchar(7)**, com um padrão de **resumo**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -114,7 +99,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 ## <a name="result-sets"></a>Conjuntos de resultados  
  A lista de colunas real depende do valor de *modo*. O conjunto mais abrangente de colunas é mostrado abaixo e é retornado quando *modo* é FULL.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|Número de identificação de entrada de histórico.|  
 |**job_id**|**uniqueidentifier**|Número de identificação do trabalho.|  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - AUTO FOR XML mode
 - XML [SQL Server], construction
 ms.assetid: 2b6b5c61-c5bd-49d2-8c0c-b7cf15857906
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d058a399d25d7049dc376b0590c65f27c9d8dc2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5c7676d046a504a6f230df7a1352e791802ce7b1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205876"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530468"
 ---
 # <a name="for-xml-sql-server"></a>FOR XML (SQL Server)
   Uma consulta SELECT retorna resultados como um conjunto de linhas. Opcionalmente, é possível recuperar resultados formais de uma consulta SQL como XML com a especificação da cláusula FOR XML na consulta. É possível usar a cláusula FOR XML em consultas de nível superior e em subconsultas. A cláusula FOR XML de nível superior pode ser usada apenas na instrução SELECT. Em subconsultas, FOR XML pode ser usado nas instruções INSERT, UPDATE e DELETE. Ele também pode ser usado em instruções de atribuição.  

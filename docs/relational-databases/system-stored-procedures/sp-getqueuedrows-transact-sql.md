@@ -16,12 +16,12 @@ ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 30e0828c7d116c2c48c398ecdee78899ad8913db
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fa6ce6b4e0d1c3fbefe7256f3ca96c84d59e664d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818878"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535408"
 ---
 # <a name="spgetqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@tablename =**] **'***tablename***'**  
- É o nome da tabela. *TableName* está **sysname**, sem padrão. A tabela deve ser uma parte de uma assinatura em fila.  
+`[ @tablename = ] 'tablename'` É o nome da tabela. *TableName* está **sysname**, sem padrão. A tabela deve ser uma parte de uma assinatura em fila.  
   
- [  **@owner =**] **'***proprietário***'**  
- É o proprietário da assinatura. *proprietário* está **sysname**, com um padrão NULL.  
+`[ @owner = ] 'owner'` É o proprietário da assinatura. *proprietário* está **sysname**, com um padrão NULL.  
   
- [  **@tranid =** ] **'***transaction_id***'**  
- Permite que a saída seja filtrada pela ID da transação. *transaction_id* está **nvarchar(70)**, com um padrão NULL. Se especificada, a ID da transação associada ao comando em fila será exibida. Se for NULL, são exibidos todos os comandos na fila.  
+`[ @tranid = ] 'transaction_id'` Permite que a saída seja filtrada pela ID da transação. *transaction_id* está **nvarchar(70)**, com um padrão NULL. Se especificada, a ID da transação associada ao comando em fila será exibida. Se for NULL, são exibidos todos os comandos na fila.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

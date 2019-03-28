@@ -13,12 +13,12 @@ ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8b72f500a425b7a55cab285a881c3ff915b9fb82
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5174b5c859fa76ceeccdb99b7a46f510fd62d923
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358698"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530428"
 ---
 # <a name="native-compilation-advisor"></a>Orientador de compilação nativa
   A ferramenta de relatórios de desempenho da transação (consulte [Determinando se uma tabela ou um procedimento armazenado deve ser movido para o OLTP na memória](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) informa sobre quais procedimentos armazenados interpretados no banco de dados serão beneficiados se usarem a compilação nativa. Depois de identificar um procedimento armazenado que você gostaria de ser aprovado para usar a compilação nativa, você poderá usar o orientador de compilação nativa para ajudá-lo a migrar o procedimento armazenado interpretado para compilação nativa. Para obter mais informações sobre procedimentos armazenados nativamente compilados, consulte [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md).  
@@ -39,7 +39,7 @@ ms.locfileid: "53358698"
 ## <a name="code-sample"></a>Exemplo de código  
  O exemplo a seguir mostra um procedimento armazenado interpretado e o procedimento armazenado equivalente para compilação nativa. O exemplo supõe um diretório chamado c:\data.  
   
-```tsql  
+```sql  
 CREATE DATABASE Demo  
 ON  
 PRIMARY(NAME = [Demo_data],  

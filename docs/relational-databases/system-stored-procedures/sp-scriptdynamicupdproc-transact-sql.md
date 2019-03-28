@@ -16,12 +16,12 @@ ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 65f1990c1c35278e67036f2bb3699f268a2aca8a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 002f74a57ee17f2699325d97e7335dcdae2a8aa4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751839"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535308"
 ---
 # <a name="spscriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_scriptdynamicupdproc [ @artid =] artid
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@artid=**] *artid*  
- É a ID do artigo. *artid* está **int**, sem padrão.  
+`[ @artid = ] artid` É a ID do artigo. *artid* está **int**, sem padrão.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Retorna um conjunto de resultados que consiste em uma única **nvarchar (4000)** coluna. O conjunto de resultados forma a instrução completa CREATE PROCEDURE usada para criar o procedimento armazenado personalizado.  

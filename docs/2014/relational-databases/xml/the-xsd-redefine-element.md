@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - xsd:redefine element
 ms.assetid: 5f3e9b65-f10e-4db2-a62c-b270ac11d04e
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8d7fe9246e0b689335d43a124c4a2391778f127a
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 7e9fa3dedafc05406dcc521429130f98a215d294
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905010"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526128"
 ---
 # <a name="the-ltxsdredefinegt-element"></a>O elemento &lt;xsd:redefine&gt;
   O elemento **redefine** do W3C XSD fornece suporte para redefinição de componentes de esquema. Entretanto, há suporte para essa diretiva é potencialmente cara para o desempenho e também requer que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] revalide todas as instâncias da `xml` tipo de dados associado ao esquema redefinido. Portanto o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não oferece suporte a esse elemento. Esquemas XML que incluem o elemento **\<xsd:redefine>** são rejeitados pelo servidor.  

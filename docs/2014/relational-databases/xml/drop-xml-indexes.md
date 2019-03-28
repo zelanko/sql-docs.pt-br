@@ -11,15 +11,15 @@ helpviewer_keywords:
 - dropping indexes
 - XML indexes [SQL Server], dropping
 ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 82fd8836bb4fda85a7fdadd6345826cf432485cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c4b1706f81808d90e02df32df7e56828b054bd05
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194146"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535498"
 ---
 # <a name="drop-xml-indexes"></a>Descartar índices XML
   A instrução [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] pode ser usada para remover índices primários ou secundários XML e não XML existentes. No entanto nenhuma opção de DROP INDEX se aplica a índices XML. Se você descartar o índice XML primário, qualquer índice secundário que estiver presente também será excluído.  
@@ -27,7 +27,7 @@ ms.locfileid: "48194146"
  A sintaxe de DROP com *TableName.IndexName* está sendo desativada e não tem suporte para índices XML.  
   
 ## <a name="example-creating-and-dropping-a-primary-xml-index"></a>Exemplo: Criando e descartando um índice XML primário  
- No exemplo a seguir, um índice XML é criado em um `xml` coluna de tipo.  
+ No exemplo a seguir, um índice XML é criado em um tipo de coluna `xml`.  
   
 ```  
 DROP TABLE T  
@@ -51,7 +51,7 @@ DROP INDEX PIdx_T_XmlCol ON T
   
  Quando uma tabela é descartada, todos os índices XML que ela contém também são descartados automaticamente. No entanto uma coluna XML não poderá ser descartada de uma tabela se existir um índice XML na coluna.  
   
- No exemplo a seguir, um índice XML é criado em um `xml` coluna de tipo. Para obter mais informações, consulte [Comparar XML digitado com XML não digitado](../xml/compare-typed-xml-to-untyped-xml.md).  
+ No exemplo a seguir, um índice XML é criado em um tipo de coluna `xml`. Para obter mais informações, consulte [Comparar XML digitado com XML não digitado](../xml/compare-typed-xml-to-untyped-xml.md).  
   
 ```  
 CREATE TABLE TestTable(  

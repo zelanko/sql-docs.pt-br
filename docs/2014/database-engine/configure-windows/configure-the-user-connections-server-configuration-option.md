@@ -16,12 +16,12 @@ ms.assetid: 53beee6e-59fe-4276-9abb-8f1cec2a3508
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 477b61320413f83be28b9cc5e87d2c8eb26b4105
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: d4d780294ca82b8d8b577a62446f4d8bd8bb4b93
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52639504"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528578"
 ---
 # <a name="configure-the-user-connections-server-configuration-option"></a>Configurar a opção de configuração de servidor user connections
   Este tópico descreve como definir a opção de configuração de servidor **user connections** no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A opção **user connections** especifica o número máximo de conexões de usuário simultâneas permitido em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O número real de conexões de usuário permitidas depende também da versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que você está usando e dos limites de seu aplicativo ou aplicativos e hardware. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite um máximo de 32.767 conexões de usuário. Como **conexões de usuário** é uma opção dinâmica (autoconfigurável), o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ajusta o número máximo de conexões de usuário automaticamente conforme o necessário, até o valor máximo permitido. Por exemplo, se somente 10 usuários estiverem conectados, 10 objetos de conexão de usuário serão alocados. Na maioria dos casos, não é necessário alterar o valor dessa opção. O padrão é 0, o que significa que as permitidas conexões máximas (32,767) de usuário são permitidas.  
@@ -72,7 +72,7 @@ ms.locfileid: "52639504"
   
 4.  Reinicie o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-configure-the-user-connections-option"></a>Para configurar a opção user connections  
   
@@ -82,7 +82,7 @@ ms.locfileid: "52639504"
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo mostra como usar [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) para configurar o valor da opção `user connections` como `325` usuários.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'show advanced options', 1;  
@@ -98,7 +98,7 @@ GO
   
  Para obter mais informações, veja [Opções de configuração do servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Acompanhar: Depois de configurar a opção user connections  
+##  <a name="FollowUp"></a> Acompanhamento: Depois de configurar a opção user connections  
  O servidor deve ser reiniciado para que a configuração entre em vigor.  
   
 ## <a name="see-also"></a>Consulte também  

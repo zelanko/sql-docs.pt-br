@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - xs:QName type
 ms.assetid: 72c5bfde-b0b2-4372-bf36-97ba930dea06
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0904dc1a1e79c6f3669992bee19b7489bf0bce42
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b8c251686085de410a3b0885a4e1755217ee6c2d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227076"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535078"
 ---
 # <a name="the-xsqname-type"></a>The xs:QName Type
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não oferece suporte a tipos derivados de **xs:QName** por meio do uso de um elemento de restrição de Esquema XML. Além disso, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não oferece suporte a tipos de união com **QName** como um tipo de membro.  
@@ -50,6 +50,6 @@ GO
  As duas instruções falham com um erro.  
   
 ## <a name="see-also"></a>Consulte também  
- [Requisitos e limitações para o uso de Coleções de Esquemas XML no servidor](requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
+ [Requisitos e limitações de uso de coleções de esquema XML no servidor](requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

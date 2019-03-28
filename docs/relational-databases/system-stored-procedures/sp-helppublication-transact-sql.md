@@ -16,12 +16,12 @@ ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a0e823731ff80c714bc31a54210dbcd0e0fea18
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: d6f2760d225848503d93ea361a54a0069ce16c14
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205205"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532968"
 ---
 # <a name="sphelppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication =** ] **'***publicação***'**  
- É o nome da publicação a ser exibida. *publicação* é sysname, com um padrão de **%**, que retorna informações sobre todas as publicações.  
+`[ @publication = ] 'publication'` É o nome da publicação a ser exibida. *publicação* é sysname, com um padrão de **%**, que retorna informações sobre todas as publicações.  
   
- [  **@found =** ] **'***encontrado***'** saída  
- É um sinalizador para indicar linhas de retorno. *encontrado*está **int** e um parâmetro OUTPUT, com um padrão de **23456**. **1** indica que a publicação foi localizada. **0** indica a publicação não foi encontrada.  
+`[ @found = ] 'found' OUTPUT` É um sinalizador para indicar linhas de retorno. *encontrado*está **int** e um parâmetro OUTPUT, com um padrão de **23456**. **1** indica que a publicação foi localizada. **0** indica a publicação não foi encontrada.  
   
- [ **@publisher** =] **'***publisher***'**  
- Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *publicador* é sysname, com um padrão NULL.  
+`[ @publisher = ] 'publisher'` Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *publicador* é sysname, com um padrão NULL.  
   
 > [!NOTE]  
 >  *Publisher* não deve ser especificado ao solicitar informações da publicação de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  

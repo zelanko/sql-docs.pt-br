@@ -16,12 +16,12 @@ ms.assetid: e68fe0b9-5993-4880-917a-b0f661f8459b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e49099c2bf0ecd7974531c9f1b840e77805cf218
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: aad2574457285208b47af26d0729c725a22c05b0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131346"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536888"
 ---
 # <a name="spmarksubscriptionvalidation-transact-sql"></a>sp_marksubscriptionvalidation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publication**=] **'***publicação***'**  
- É o nome da publicação. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, sem padrão.  
   
- [ **@subscriber**=] **'***assinante***'**  
- É o nome do Assinante. *assinante* é sysname, sem padrão.  
+`[ @subscriber = ] 'subscriber'` É o nome do assinante. *assinante* é sysname, sem padrão.  
   
- [  **@destination_db=**] **'***destination_db***'**  
- É o nome do banco de dados de destino. *destination_db* está **sysname**, sem padrão.  
+`[ @destination_db = ] 'destination_db'` É o nome do banco de dados de destino. *destination_db* está **sysname**, sem padrão.  
   
- [  **@publisher=** ] **'***publisher***'**  
- Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
+`[ @publisher = ] 'publisher'` Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
 >  *Publisher* não deve ser usado para uma publicação que pertence a um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  

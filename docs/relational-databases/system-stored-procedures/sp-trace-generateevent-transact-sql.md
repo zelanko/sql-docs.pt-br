@@ -18,19 +18,19 @@ ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cce91def9566105550788a8a46ea6c2b6bb959aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8a24bb05e8f10e2920bd206531723c228d6c1734
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826544"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529348"
 ---
 # <a name="sptracegenerateevent-transact-sql"></a>sp_trace_generateevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Cria um evento definido pelo usuário no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
->**Observação:** esse procedimento armazenado está **não** preterido. Todos os outros procedimentos armazenados relacionados a rastreamento são substituídos.  
+>**OBSERVAÇÃO:**  Esse procedimento armazenado está **não** preterido. Todos os outros procedimentos armazenados relacionados a rastreamento são substituídos.  
   
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -45,19 +45,16 @@ sp_trace_generateevent [ @eventid = ] event_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@eventid=**] *event_id*  
- É a ID do evento a ser ativado. *event_id* está **int**, sem padrão. A ID deve ser um dos números de evento de 82 a 91, que representam eventos definidos pelo usuário conforme definido com [sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
+`[ @eventid = ] event_id` É a ID do evento para ativar. *event_id* está **int**, sem padrão. A ID deve ser um dos números de evento de 82 a 91, que representam eventos definidos pelo usuário conforme definido com [sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
   
- [ **@userinfo**= ] **'***user_info***'**  
- É a cadeia de caracteres opcional definida pelo usuário que identifica o motivo do evento. *user_info* está **nvarchar (128)**, com um padrão NULL.  
+`[ @userinfo = ] 'user_info'` A cadeia de caracteres opcional definida pelo usuário é identificar o motivo para o evento. *user_info* está **nvarchar (128)**, com um padrão NULL.  
   
- [ **@userdata**=] *user_data*  
- São os dados opcionais especificados pelo usuário para o evento. *user_data* está **varbinary(8000)**, com um padrão NULL.  
+`[ @userdata = ] user_data` É o dado opcional especificada pelo usuário para o evento. *user_data* está **varbinary(8000)**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  A tabela a seguir descreve os valores de código que os usuários podem obter após a conclusão do procedimento armazenado.  
   
-|Código de retorno|Description|  
+|Código de retorno|Descrição|  
 |-----------------|-----------------|  
 |**0**|Nenhum erro.|  
 |**1**|Erro desconhecido.|  

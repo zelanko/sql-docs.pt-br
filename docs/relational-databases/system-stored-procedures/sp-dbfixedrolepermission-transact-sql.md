@@ -18,12 +18,12 @@ ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e7305e73d1f2f35d5cb4666e68114c9ee8f58e7
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 41c84c97027c8bfae82d3ac457c454f6a4d497e6
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126206"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533358"
 ---
 # <a name="spdbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@rolename =** ] **'**_função_**'**  
- É o nome de uma função de banco de dados fixa do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *função* está **sysname**, com um padrão NULL. Se *função* não for especificado, as permissões para todas as funções de banco de dados fixas são exibidas.  
+`[ @rolename = ] 'role'` É o nome do válido [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] função fixa de banco de dados. *função* está **sysname**, com um padrão NULL. Se *função* não for especificado, as permissões para todas as funções de banco de dados fixas são exibidas.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

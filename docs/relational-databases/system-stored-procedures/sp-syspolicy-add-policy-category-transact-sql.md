@@ -18,12 +18,12 @@ ms.assetid: b682fac4-23c6-4662-8d05-c38f3b45507e
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ff44121317827976f65db8ebb49bc2eda37d42bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b223f8429d010382e444dd2e57a6fa7735200151
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779884"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526088"
 ---
 # <a name="spsyspolicyaddpolicycategory-transact-sql"></a>sp_syspolicy_add_policy_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,11 @@ sp_syspolicy_add_policy_category [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@name=** ] **'***name***'**  
- É o nome da categoria de política. *nome da* está **sysname**e é necessária. *nome* não pode ser nulo ou uma cadeia de caracteres vazia.  
+`[ @name = ] 'name'` É o nome da categoria de política. *nome da* está **sysname**e é necessária. *nome* não pode ser nulo ou uma cadeia de caracteres vazia.  
   
- [  **@mandate_database_subscriptions =** ] *mandate_database_subscriptions*  
- Determina se assinatura de banco de dados é designada para a categoria de política. *mandate_database_subscriptions* é um **bit** valor, com um padrão de 1 (habilitado).  
+`[ @mandate_database_subscriptions = ] mandate_database_subscriptions` Determina se a assinatura do banco de dados é designada para a categoria de política. *mandate_database_subscriptions* é um **bit** valor, com um padrão de 1 (habilitado).  
   
- [  **@policy_category_id=** ] *policy_category_id*  
- É o identificador da categoria de política. *policy_category_id* está **int**e é retornada como OUTPUT.  
+`[ @policy_category_id = ] policy_category_id` É o identificador para a categoria de política. *policy_category_id* está **int**e é retornada como OUTPUT.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -61,7 +58,7 @@ sp_syspolicy_add_policy_category [ @name = ] 'name'
  Requer a associação à função de banco de dados fixa PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Possível elevação de credenciais: os usuários na função PolicyAdministratorRole podem criar gatilhos de servidor e agendar execuções de políticas que possam afetar a operação da instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por exemplo, os usuários da função PolicyAdministratorRole podem criar uma política que impeça a criação da maioria dos objetos no [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Devido a essa possível elevação de credenciais, a função PolicyAdministratorRole deve ser concedida somente para usuários que sejam confiáveis no controle da configuração do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  Possível elevação de credenciais: Os usuários na função PolicyAdministratorRole podem criar gatilhos de servidor e agendar execuções de políticas que podem afetar a operação da instância da [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por exemplo, os usuários da função PolicyAdministratorRole podem criar uma política que impeça a criação da maioria dos objetos no [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Devido a essa possível elevação de credenciais, a função PolicyAdministratorRole deve ser concedida somente para usuários que sejam confiáveis no controle da configuração do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria uma categoria de política na qual a assinatura da categoria não é obrigatória. Isso significa que podem ser configurados bancos de dados individuais para aceitar ou rejeitar políticas da categoria.  

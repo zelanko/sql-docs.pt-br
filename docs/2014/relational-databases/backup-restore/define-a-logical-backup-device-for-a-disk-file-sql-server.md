@@ -16,12 +16,12 @@ ms.assetid: 86331d43-c738-4523-ae3d-7d6700348ed1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5e64f320b5540eb5ff7a4b3ebeb75d42abb3d61b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0ae32391bd2f10525b89015272d11bcdb6468298
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197366"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537089"
 ---
 # <a name="define-a-logical-backup-device-for-a-disk-file-sql-server"></a>Definir um dispositivo de backup lógico para um arquivo de disco (SQL Server)
   Este tópico descreve como definir um dispositivo de backup lógico para uma arquivo de disco no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Um dispositivo lógico é um nome definido pelo usuário que aponta para um dispositivo de backup físico específico (um arquivo de disco ou uma unidade de fita).  A inicialização do dispositivo físico acontece depois, quando um backup é gravado no dispositivo de backups.  
@@ -87,7 +87,7 @@ ms.locfileid: "48197366"
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo mostra como usar [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql) para definir um dispositivo de backup lógico para um arquivo de disco. O exemplo adiciona o dispositivo de backup em disco denominado `mydiskdump`, com o nome físico `c:\dump\dump1.bak`.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_addumpdevice 'disk', 'mydiskdump', 'c:\dump\dump1.bak' ;  

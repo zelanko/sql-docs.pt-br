@@ -18,12 +18,12 @@ ms.assetid: ddace1cc-ff23-4b61-8efb-8ded3df438bb
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 8d4d4f2deb5c81ff737251ea39422567b4d0a9f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc78d8620bdb4f8b028bc188f115ed3f1f1d2318
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667554"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537908"
 ---
 # <a name="spsyspolicysetconfigenabled-transact-sql"></a>sp_syspolicy_set_config_enabled (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_syspolicy_set_config_enabled [ @value = ] value
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@value=** ] *valor*  
- Determina se o Gerenciamento Baseado em Políticas está habilitado. *valor* está **sqlvariant**, e pode ser um dos seguintes valores:  
+`[ @value = ] value` Determina se o gerenciamento baseado em políticas está habilitado. *valor* está **sqlvariant**, e pode ser um dos seguintes valores:  
   
 -   0 (ou 'false') = Desabilitado  
   
@@ -57,7 +56,7 @@ sp_syspolicy_set_config_enabled [ @value = ] value
  Requer a associação à função de banco de dados fixa PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Possível elevação de credenciais: os usuários na função PolicyAdministratorRole podem criar gatilhos de servidor e agendar execuções de políticas que possam afetar a operação da instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por exemplo, os usuários da função PolicyAdministratorRole podem criar uma política que impeça a criação da maioria dos objetos no [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Devido a essa possível elevação de credenciais, a função PolicyAdministratorRole deve ser concedida somente para usuários que sejam confiáveis no controle da configuração do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  Possível elevação de credenciais: Os usuários na função PolicyAdministratorRole podem criar gatilhos de servidor e agendar execuções de políticas que podem afetar a operação da instância da [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por exemplo, os usuários da função PolicyAdministratorRole podem criar uma política que impeça a criação da maioria dos objetos no [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Devido a essa possível elevação de credenciais, a função PolicyAdministratorRole deve ser concedida somente para usuários que sejam confiáveis no controle da configuração do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir habilita o Gerenciamento Baseado em Políticas.  

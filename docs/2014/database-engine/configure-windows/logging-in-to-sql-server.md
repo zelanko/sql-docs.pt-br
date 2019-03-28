@@ -21,12 +21,12 @@ ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7f054808a5432c7be95eeb419308012603f46069
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: d1536592d7a5463dc1e15df20aee4fe188323cf5
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369308"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531718"
 ---
 # <a name="logging-in-to-sql-server"></a>Fazendo o logon no SQL Server
   Você pode fazer o logon para uma instância de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando qualquer uma das ferramentas de administração gráficas ou em um prompt de comando.  
@@ -47,7 +47,7 @@ ms.locfileid: "53369308"
 |----------------------|-------------------------------|  
 |Conexão para uma instância padrão que usa o protocolo padrão. (Esta é a entrada indicada para uma instância padrão.)|APPHOST|  
 |Conexão a uma instância nomeada que usa o protocolo padrão. (Esta é a entrada indicada para uma instância nomeada.)|APPHOST\SQLEXPRESS|  
-|Conexão para uma instância padrão no mesmo computador que usa um período para indicar que a instância está sendo executada no computador local.|para obter informações sobre a ferramenta de configuração e recursos adicionais.|  
+|Conexão para uma instância padrão no mesmo computador que usa um período para indicar que a instância está sendo executada no computador local.|.|  
 |Conexão a uma instância nomeada no mesmo computador usando um período para indicar que a instância está sendo executada no computador local.|.\SQLEXPRESS|  
 |Conexão a uma instância padrão no mesmo computador usando localhost para indicar que a instância está sendo executada no computador local.|localhost|  
 |Conexão a uma instância nomeada no mesmo computador usando localhost para indicar que a instância está sendo executada no computador local.|localhost\SQLEXPRESS|  
@@ -71,7 +71,7 @@ ms.locfileid: "53369308"
 ## <a name="verifying-your-connection-protocol"></a>Verificando o protocolo de conexão  
  Quando conectado ao [!INCLUDE[ssDE](../../includes/ssde-md.md)], a consulta a seguir retornará o protocolo usado para a conexão atual, junto com o método de autenticação (NTLM ou Kerberos), e indicará se a conexão é criptografada.  
   
-```tsql  
+```sql  
 SELECT net_transport, auth_scheme, encrypt_option   
 FROM sys.dm_exec_connections   
 WHERE session_id = @@SPID;  

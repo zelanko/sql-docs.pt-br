@@ -16,12 +16,12 @@ ms.assetid: d6b1aa4b-3369-4255-a892-c0e5cc9cb693
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 99b577b27b8edd2f37f1af3a13162f1b1aaa8c42
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b69d1ae90224b94d5db5f9658942e1beed0b61d1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747648"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526918"
 ---
 # <a name="spreplmonitorhelppublicationthresholds-transact-sql"></a>sp_replmonitorhelppublicationthresholds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,17 +42,13 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publisher**=] **'***publisher***'**  
- É o nome do Publicador. *Publisher* está **sysname**, sem padrão.  
+`[ @publisher = ] 'publisher'` É o nome do publicador. *Publisher* está **sysname**, sem padrão.  
   
- [ **@publisher_db**=] **'***publisher_db***'**  
- É o nome do banco de dados publicado. *publisher_db* está **sysname**, sem padrão.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados publicado. *publisher_db* está **sysname**, sem padrão.  
   
- [ **@publication**=] **'***publicação***'**  
- É o nome da publicação. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, sem padrão.  
   
- [ **@publication_type**=] *publication_type*  
- Se o tipo de publicação. *publication_type* está **int**, e pode ser um destes valores.  
+`[ @publication_type = ] publication_type` Se o tipo de publicação. *publication_type* está **int**, e pode ser um destes valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -69,7 +65,7 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
 |**title**|**sysname**|Nome da métrica de desempenho da replicação.|  
 |**value**|**int**|O valor de limite da métrica de desempenho.|  
 |**shouldalert**|**bit**|É se um alerta deve ser gerado quando a métrica excede o limite definido para esta publicação; um valor de **1** indica que um alerta deve ser gerado.|  
-|**IsEnabled**|**bit**|É se o monitoramento está habilitado para esta métrica de desempenho de replicação para esta publicação; um valor de **1** indica que o monitoramento está habilitado.|  
+|**isenabled**|**bit**|É se o monitoramento está habilitado para esta métrica de desempenho de replicação para esta publicação; um valor de **1** indica que o monitoramento está habilitado.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

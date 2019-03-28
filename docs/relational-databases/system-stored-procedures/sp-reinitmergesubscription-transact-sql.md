@@ -16,12 +16,12 @@ ms.assetid: 249a4048-e885-48e0-a92a-6577f59de751
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2fddf00f340fa4e8ea47402c4da9a67955b4ba68
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1188bb26c8c63267f30110bf890589d1670fdf8b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808668"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531438"
 ---
 # <a name="spreinitmergesubscription-transact-sql"></a>sp_reinitmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication =** ] **'***publicação***'**  
- É o nome da publicação. *publicação* está **sysname**, com um padrão de **todos os**.  
+`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, com um padrão de **todos os**.  
   
- [  **@subscriber =** ] **'***assinante***'**  
- É o nome do Assinante. *assinante* está **sysname**, com um padrão de **todos os**.  
+`[ @subscriber = ] 'subscriber'` É o nome do assinante. *assinante* está **sysname**, com um padrão de **todos os**.  
   
- [  **@subscriber_db =** ] **'***subscriber_db***'**  
- É o nome do banco de dados do Assinante. *subscriber_db* está **sysname**, com um padrão de **todos os**.  
+`[ @subscriber_db = ] 'subscriber_db'` É o nome do banco de dados do assinante. *subscriber_db* está **sysname**, com um padrão de **todos os**.  
   
- [  **@upload_first =** ] **'***upload_first***'**  
- Especifica se as alterações no Assinante são carregadas antes da assinatura ser reinicializada. *upload_first* está **nvarchar (5)**, com um padrão de FALSE. Se **verdadeira**, as alterações são carregadas antes que a assinatura seja reiniciada. Se **falsos**, as alterações não são carregadas.  
+`[ @upload_first = ] 'upload_first'` É se as alterações no assinante são carregadas antes que a assinatura seja reiniciada. *upload_first* está **nvarchar (5)**, com um padrão de FALSE. Se **verdadeira**, as alterações são carregadas antes que a assinatura seja reiniciada. Se **falsos**, as alterações não são carregadas.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

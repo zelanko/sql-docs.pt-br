@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - EXPLICIT mode
 ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5262c3697964cf82969669012afd8fb29a0b8e8e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3d24f945eeb64975c71e416ed1e53d04fd5ffff9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812218"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526978"
 ---
 # <a name="example-retrieving-employee-information"></a>Exemplo: Recuperando informações de funcionários
   Este exemplo recupera uma ID e um nome de funcionário para cada funcionário. No banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , a employeeID pode ser obtida na coluna BusinessEntityID da tabela Employee. Nomes de funcionários podem ser obtidos da tabela Person. A coluna BusinessEntityID pode ser usada para unir as tabelas.  

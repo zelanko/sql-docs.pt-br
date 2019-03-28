@@ -17,12 +17,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eebda510e90c499a0bae774d1288d3b886896d25
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a288f5c9f42e282694b864e4493d02dcd6cfa3a3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766608"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527839"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Criar servidores vinculados (Mecanismo de Banco de Dados do SQL Server)
   Este tópico mostra como criar um servidor vinculado e acessar dados de outro [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Criar um servidor vinculado permite trabalhar com dados de várias origens. O servidor vinculado não precisa ser outra instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas esse é um cenário comum.  
@@ -192,14 +192,14 @@ ms.locfileid: "52766608"
      **Oferece suporte ao operador 'Like'**  
      Indica que o provedor oferece suporte a consultas que usam a palavra-chave LIKE.  
   
-###  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+###  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  Para criar um servidor vinculado usando [!INCLUDE[tsql](../../includes/tsql-md.md)], use as instruções [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)[CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql) e [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql).  
   
 ##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-transact-sql"></a>Para criar um servidor vinculado para outra instância do SQL Server usando Transact-SQL  
   
 1.  No Editor de Consultas, digite o comando [!INCLUDE[tsql](../../includes/tsql-md.md)] a seguir para vincular a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominada `SRVR002\ACCTG`:  
   
-    ```tsql  
+    ```sql  
     USE [master]  
     GO  
     EXEC master.dbo.sp_addlinkedserver   
@@ -211,7 +211,7 @@ ms.locfileid: "52766608"
   
 2.  Execute o código a seguir para configurar o servidor vinculado para usar as credenciais de domínio do logon que está usando o servidor vinculado.  
   
-    ```tsql  
+    ```sql  
     EXEC master.dbo.sp_addlinkedsrvlogin   
         @rmtsrvname = N'SRVR002\ACCTG',   
         @locallogin = NULL ,   
@@ -220,13 +220,13 @@ ms.locfileid: "52766608"
   
     ```  
   
-##  <a name="FollowUp"></a> Acompanhar: tarefas a serem executadas após a criação de um servidor vinculado  
+##  <a name="FollowUp"></a> Acompanhamento: tarefas a serem executadas após a criação de um servidor vinculado  
   
 #### <a name="to-test-the-linked-server"></a>Para testar o servidor vinculado  
   
 -   Execute o código a seguir para testar a conexão com o servidor vinculado. Este exemplo retorna os nomes dos bancos de dados no servidor vinculado.  
   
-    ```tsql  
+    ```sql  
     SELECT name FROM [SRVR002\ACCTG].master.sys.databases ;  
     GO  
   
@@ -236,7 +236,7 @@ ms.locfileid: "52766608"
   
 -   Use nomes de quatro partes para referir-se a um objeto em um servidor vinculado. Execute o código a seguir para retornar uma lista de todos os logons no servidor local e seus logons correspondentes no servidor vinculado.  
   
-    ```tsql  
+    ```sql  
     SELECT local.name AS LocalLogins, linked.name AS LinkedLogins  
     FROM master.sys.server_principals AS local  
     LEFT JOIN [SRVR002\ACCTG].master.sys.server_principals AS linked  

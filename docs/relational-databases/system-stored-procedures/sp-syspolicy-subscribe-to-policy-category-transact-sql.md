@@ -18,12 +18,12 @@ ms.assetid: de88cc49-bcc8-4dc6-8e59-ad85cfbfb2fb
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 4af05ca0f4b4f042bcd2a59cda213f35537592ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2cb53d5d24bb450773bd1b421d749f7c8195fccc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743374"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532488"
 ---
 # <a name="spsyspolicysubscribetopolicycategory-transact-sql"></a>sp_syspolicy_subscribe_to_policy_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_syspolicy_subscribe_to_policy_category [ @policy_category = ] 'policy_categor
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@policy_category=** ] **'***policy_category***'**  
- É o nome da categoria de política que você deseja que o banco de dados assine. *policy_category* está **sysname**e é necessária.  
+`[ @policy_category = ] 'policy_category'` É o nome da categoria de política que você deseja inscrever-se para o banco de dados. *policy_category* está **sysname**e é necessária.  
   
  Para obter valores para *policy_category*, consulte a exibição do sistema syspolicy_policy_categories.  
   

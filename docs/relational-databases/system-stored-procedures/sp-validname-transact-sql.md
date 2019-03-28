@@ -19,12 +19,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 68e3cd191dc397574e739faa62f315f018bcb466
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8cdd1fd6120f74030875dbe1d624f3b5b162c3d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836664"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529938"
 ---
 # <a name="spvalidname-transact-sql"></a>sp_validname (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_validname [@name =] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@name=** ] **'***name***'**  
- É o nome da [identificadores](../../relational-databases/databases/database-identifiers.md) para o qual verificar a validade. *nome da* está **sysname**, sem padrão. *nome* não pode ser NULL, não pode ser uma cadeia de caracteres vazia e não pode conter um caractere zero binário.  
+`[ @name = ] 'name'` É o nome da [identificadores](../../relational-databases/databases/database-identifiers.md) para o qual verificar a validade. *nome da* está **sysname**, sem padrão. *nome* não pode ser NULL, não pode ser uma cadeia de caracteres vazia e não pode conter um caractere zero binário.  
   
- [  **@raise_error=** ] *gerar_erro*  
- Especifica se um erro deve ser gerado. *gerar_erro* está **bit**, com um padrão de 1. Isso significa que aparecerão erros. 0 faz com que nenhuma mensagem de erro apareça.  
+`[ @raise_error = ] raise_error` Especifica se deve gerar um erro. *gerar_erro* está **bit**, com um padrão de 1. Isso significa que aparecerão erros. 0 faz com que nenhuma mensagem de erro apareça.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -58,7 +56,7 @@ sp_validname [@name =] 'name'
  [Procedimentos armazenados do mecanismo de banco de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [NCHAR &#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)   
- [nchar e nvarchar &#40;Transact-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
+ [nchar and nvarchar &#40;Transact-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
  [ntext, text e image &#40;Transact-SQL&#41;](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

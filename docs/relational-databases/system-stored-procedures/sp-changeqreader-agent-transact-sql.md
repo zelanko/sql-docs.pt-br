@@ -16,12 +16,12 @@ ms.assetid: d3fe79c5-31ef-4565-bf38-b476b5fb16f7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 21da0ca61d2d9075fe7c962156443fd85f3ebefd
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 994ec0ee8fa6cd5424f808d884eb3355ffdc22ba
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135117"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526118"
 ---
 # <a name="spchangeqreaderagent-transact-sql"></a>sp_changeqreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,20 +40,17 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@job_login**=] **'**_job_login_**'**  
- É o logon da conta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows na qual o agente é executado. *job_login* está **nvarchar(257)**, com um padrão NULL.  
+`[ @job_login = ] 'job_login'` É o logon para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows da conta na qual o agente é executado. *job_login* está **nvarchar(257)**, com um padrão NULL.  
   
- [ **@job_password**=] **'**_job_password_**'**  
- É a senha da conta do Windows na qual o agente é executado. *job_password* está **sysname**, com um padrão NULL.  
+`[ @job_password = ] 'job_password'` É a senha para a conta do Windows sob a qual o agente é executado. *job_password* está **sysname**, com um padrão NULL.  
   
- [  **@frompublisher=** ] *frompublisher*  
- Especifica se o procedimento está sendo executado no Publicador. *frompublisher* é bit, com um valor padrão de **0**. Um valor de **1** significa que o procedimento está sendo executado no publicador do banco de dados de publicação.  
+`[ @frompublisher = ] frompublisher` É se o procedimento está sendo executado no publicador. *frompublisher* é bit, com um valor padrão de **0**. Um valor de **1** significa que o procedimento está sendo executado no publicador do banco de dados de publicação.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="remarks"></a>Comentários  
- **sp_changeqreader_agent** é usado em replicação transacional.  
+ **sp_changeqreader_agent** is used in transactional replication.  
   
  **sp_changeqreader_agent** é usado para alterar a conta do Windows na qual um Queue Reader agent é executado. Você pode alterar a senha de um logon de Windows existente ou pode fornecer um logon e uma senha de Windows novos.  
   

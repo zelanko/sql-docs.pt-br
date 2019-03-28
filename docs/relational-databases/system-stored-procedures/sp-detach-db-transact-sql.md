@@ -19,12 +19,12 @@ ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bf38282332f1cf8c3a5d3dd7716f9adc21e7bd8f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1b5dfd9cf062e5767606d83c3beb8a25b36387f1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201905"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538218"
 ---
 # <a name="spdetachdb-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,16 +46,13 @@ sp_detach_db [ @dbname= ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@dbname =** ] **'***database_name***'**  
- É o nome do banco de dados a ser desanexado. *Database_Name* é um **sysname** valor, com um valor padrão de NULL.  
+`[ @dbname = ] 'database_name'` É o nome do banco de dados a ser desanexado. *Database_Name* é um **sysname** valor, com um valor padrão de NULL.  
   
- [  **@skipchecks =** ] **'***skipchecks***'**  
- Especifica se UPDATE STATISTIC deve ser ignorado ou executado. *skipchecks* é um **nvarchar (10)** valor, com um valor padrão de NULL. Para ignorar UPDATE STATISTICS, especifique **verdadeira**. Para executar explicitamente UPDATE STATISTICS, especifique **falsos**.  
+`[ @skipchecks = ] 'skipchecks'` Especifica se deve ignorar ou executar UPDATE STATISTIC. *skipchecks* é um **nvarchar (10)** valor, com um valor padrão de NULL. Para ignorar UPDATE STATISTICS, especifique **verdadeira**. Para executar explicitamente UPDATE STATISTICS, especifique **falsos**.  
   
  Por padrão, UPDATE STATISTICS é executado para atualizar as informações sobre os dados nas tabelas e os índices. A execução de UPDATE STATISTICS é útil para bancos de dados que serão movidos para mídias somente leitura.  
   
- [  **@keepfulltextindexfile=** ] **'***KeepFulltextIndexFile***'**  
- Especifica se o arquivo de índice de texto completo associado ao banco de dados que está sendo desanexado não será descartado durante a operação de desanexação. *KeepFulltextIndexFile* é um **nvarchar (10)** valor com um padrão de **true**. Se *KeepFulltextIndexFile* é **falso**, todos os arquivos de índice de texto completo associado com o banco de dados e os metadados do índice de texto completo são descartados, a menos que o banco de dados é somente leitura. Se for NULL ou **verdadeira**, texto completo relacionadas a metadados são mantidos.  
+`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` Especifica se o arquivo de índice de texto completo associado com o banco de dados que está sendo desanexado não será descartado do banco de dados durante a operação de desanexação. *KeepFulltextIndexFile* é um **nvarchar (10)** valor com um padrão de **true**. Se *KeepFulltextIndexFile* é **falso**, todos os arquivos de índice de texto completo associado com o banco de dados e os metadados do índice de texto completo são descartados, a menos que o banco de dados é somente leitura. Se for NULL ou **verdadeira**, texto completo relacionadas a metadados são mantidos.  
   
 > [!IMPORTANT]
 >  O**@keepfulltextindexfile** parâmetro será removido em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Não use esse parâmetro em desenvolvimentos novos e modifique, assim que possível, os aplicativos que atualmente o usam.  

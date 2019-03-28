@@ -18,12 +18,12 @@ ms.assetid: e4546c13-9fba-4bab-8b42-d6f18b33ec25
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c136a58e8d23f67a5c703d6f840858757661686b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b5fdea72621ef18cc032fbf806ec0cb7faad4739
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769554"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537868"
 ---
 # <a name="sprevokeloginfromproxy-transact-sql"></a>sp_revoke_login_from_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,14 +43,11 @@ sp_revoke_login_from_proxy
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@name=** ] **'***name***'**  
- O nome da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login, a função de servidor, ou **msdb** função de banco de dados para remover o acesso. *nome da* está **nvarchar(256)** sem nenhum padrão.  
+`[ @name = ] 'name'` O nome da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login, a função de servidor, ou **msdb** função de banco de dados para remover o acesso. *nome da* está **nvarchar(256)** sem nenhum padrão.  
   
- [ **@proxy_id=** ] *id*  
- A ID do proxy do qual o acesso será removido. Qualquer um dos *identificação* ou *proxy_name* deve ser especificado, mas não podem ser especificados. O *identificação* é **int**, com um padrão NULL.  
+`[ @proxy_id = ] id` A id do proxy do qual remover o acesso. Qualquer um dos *identificação* ou *proxy_name* deve ser especificado, mas não podem ser especificados. O *identificação* é **int**, com um padrão NULL.  
   
- [  **@proxy_name=** ] **'***proxy_name***'**  
- O nome do proxy do qual o acesso será removido. Qualquer um dos *identificação* ou *proxy_name* deve ser especificado, mas não podem ser especificados. O *proxy_name* é **sysname**, com um padrão NULL.  
+`[ @proxy_name = ] 'proxy_name'` O nome do proxy do qual remover o acesso. Qualquer um dos *identificação* ou *proxy_name* deve ser especificado, mas não podem ser especificados. O *proxy_name* é **sysname**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

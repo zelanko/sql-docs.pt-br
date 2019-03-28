@@ -12,12 +12,12 @@ ms.assetid: f5de748d-1c55-4714-9661-38fe62e5095f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f25abacdc7c68b1598a27fd208ddb6cfde9739d5
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: e499315b2807245a34d3ec4fe7d7616e98b76512
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640467"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536331"
 ---
 # <a name="configure-the-remote-access-server-configuration-option"></a>Configurar a opção remote access de configuração de servidor
   Este tópico descreve como configurar a opção de configuração de servidor **remote access** no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A opção **remote access** controla a execução de procedimentos armazenados de servidores locais ou remotos nos quais instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estão sendo executadas. O valor padrão dessa opção é 1. Isso concede permissão para executar procedimentos armazenados locais de servidores remotos ou procedimentos armazenados remotos do servidor local. Para evitar que procedimentos armazenados locais sejam executados a partir de um servidor remoto ou que procedimentos armazenados remotos sejam executados no servidor local, defina a opção como 0.  
@@ -43,7 +43,7 @@ ms.locfileid: "52640467"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   A opção **remote access** se aplica apenas aos servidores que são adicionados usando [sp_addserver](/sql/relational-databases/system-stored-procedures/sp-addserver-transact-sql)e está incluída para ter compatibilidade com versões anteriores.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "52640467"
   
 3.  Em **Conexões do servidor remoto**, marque ou desmarque a caixa de seleção **Permitir conexões remotas com este servidor** .  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-configure-the-remote-access-option"></a>Para configurar a opção remote access  
   
@@ -72,7 +72,7 @@ ms.locfileid: "52640467"
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo mostra como usar [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) para definir o valor da opção `remote access` como `0`.  
   
-```tsql  
+```sql  
 EXEC sp_configure 'remote access', 0 ;  
 GO  
 RECONFIGURE ;  
@@ -82,7 +82,7 @@ GO
   
  Para obter mais informações, veja [Opções de configuração do servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Acompanhar: Depois de configurar a opção remote access  
+##  <a name="FollowUp"></a> Acompanhamento: Depois de configurar a opção remote access  
  Essa configuração não entrará em vigor até que você reinicie o SQL Server.  
   
 ## <a name="see-also"></a>Consulte também  

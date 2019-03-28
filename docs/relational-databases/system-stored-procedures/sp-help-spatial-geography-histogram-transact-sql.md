@@ -18,12 +18,12 @@ ms.assetid: 5c5bd319-055d-4cd6-8c5a-06354cc056cc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2fa398eade8b3cac1497c1168882dbacbc6e9817
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a6fa55cd5359c64f2a124ff85429745c995fae96
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659478"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538158"
 ---
 # <a name="sphelpspatialgeographyhistogram-transact-sql"></a>sp_help_spatial_geography_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,27 +41,23 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@tabname =**] **'***tabname***'**  
- É o nome qualificado ou não da tabela para a qual o índice espacial foi especificado.  
+`[ @tabname = ] 'tabname'` É o nome qualificado ou da tabela para a qual o índice espacial foi especificado.  
   
  As aspas somente serão requeridas se uma tabela qualificada for especificada. Se um nome completamente qualificado, incluindo um nome de banco de dados, for fornecido, o nome do banco de dados deverá ser o nome do banco de dados atual. *tabname* está **sysname**, sem padrão.  
   
- [  **@colname =** ] **'***columnname***'**  
- É o nome da coluna espacial especificada. *ColumnName* é um **sysname**, sem padrão.  
+`[ @colname = ] 'columnname'` É o nome da coluna espacial especificada. *ColumnName* é um **sysname**, sem padrão.  
   
- [  **@resolution =** ] **'***resolução***'**  
- É a resolução da caixa delimitadora. Os valores válidos são de 10 a 5000. *resolução* é um **tinyint**, sem padrão.  
+`[ @resolution = ] 'resolution'` É a resolução da caixa delimitadora. Os valores válidos são de 10 a 5000. *resolução* é um **tinyint**, sem padrão.  
   
- [  **@sample =** ] **'***exemplo***'**  
- É a porcentagem da tabela usada. Os valores válidos são de 0 a 100. *TABLESAMPLE* é um **float**. Valor padrão é 100.  
+`[ @sample = ] 'sample'` É a porcentagem da tabela que é usada. Os valores válidos são de 0 a 100. *TABLESAMPLE* é um **float**. Valor padrão é 100.  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor de tabela é retornado. A grade a seguir descreve o conteúdo da coluna da tabela.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**cellid**|**int**|Representa a identificação exclusiva de cada célula, com uma contagem inicial a partir de 1.|  
-|**célula**|**geografia**|É um polígono retangular que representa cada célula. A forma de célula é idêntica à forma de célula usada para a indexação espacial.|  
+|**cell**|**geografia**|É um polígono retangular que representa cada célula. A forma de célula é idêntica à forma de célula usada para a indexação espacial.|  
 |**row_count**|**bigint**|Indica o número de objetos espaciais que estão tocando ou contendo a célula.|  
   
 ## <a name="permissions"></a>Permissões  

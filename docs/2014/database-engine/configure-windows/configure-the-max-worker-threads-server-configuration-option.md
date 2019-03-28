@@ -13,12 +13,12 @@ ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cc0552791f64e39ec3dc83b419d6db6884106780
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5d4aae8a264bd77d51c3365183ee510043ae814b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368758"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536068"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>Configurar a opção max worker threads de configuração de servidor
   Este tópico descreve como configurar a opção de configuração de servidor **max worker threads** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A opção **max worker threads** configura o número de threads de trabalho que estão disponíveis para os processos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa os serviços de thread nativos dos sistemas operacionais de forma que um ou mais threads ofereçam suporte a cada rede à qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte simultaneamente, outro thread controle pontos de verificação de banco de dados e um pool de threads controle todos os usuários. O valor padrão de **max worker threads** é 0. Isso habilita o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a configurar automaticamente o número de threads de trabalho na inicialização. A configuração padrão é a melhor para a maioria dos sistemas. No entanto, dependendo de sua configuração de sistema, a definição de **max worker threads** com um valor específico às vezes melhora o desempenho.  
@@ -39,11 +39,11 @@ ms.locfileid: "53368758"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Acompanhamento:**  [Depois de configurar a opção max worker threads](#FollowUp)  
+-   **Acompanhamento:**  [após você configurar a opção max worker threads](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   Quando o número real de solicitações de consulta é menor que a quantidade definida em **max worker threads**, um thread controla cada solicitação de consulta. Porém, se o número real de solicitação de consulta exceder a quantia definida em **max worker threads**, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fará o pool dos threads de trabalho de forma que próximo thread de trabalho disponível possa controlar a solicitação.  
   
@@ -117,7 +117,7 @@ WHERE s.is_user_process = 0;
   
      Use a opção **max worker threads** para configurar o número de threads de trabalho disponível para os processos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A configuração padrão para **max worker threads** é a melhor para a maioria dos sistemas. No entanto, dependendo de sua configuração de sistema, definir **máximo de threads de trabalho** como um valor menor algumas vezes melhora o desempenho.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-configure-the-max-worker-threads-option"></a>Para configurar a opção max worker threads  
   
@@ -127,7 +127,7 @@ WHERE s.is_user_process = 0;
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo mostra como usar o [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) para configurar a opção `max worker threads` como `900`.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'show advanced options', 1;  
@@ -143,7 +143,7 @@ GO
   
  Para obter mais informações, veja [Opções de configuração do servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Acompanhar: Após você configurar a opção max worker threads  
+##  <a name="FollowUp"></a> Acompanhamento: Após você configurar a opção max worker threads  
  A alteração entrará em vigor imediatamente sem exigir que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] reinicie.  
   
 ## <a name="see-also"></a>Consulte também  

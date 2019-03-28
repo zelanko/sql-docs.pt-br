@@ -14,12 +14,12 @@ ms.assetid: c7317eec-c0e9-479e-a4a7-83b6b6c58d59
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3eced987f2f19e5379ab14ebc88eca37b8e19d8a
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 824ea1587955884f10a53579865d2029cc63eefc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49084965"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530888"
 ---
 # <a name="modify-or-rename-dml-triggers"></a>Modificar ou renomear gatilhos DML
   Este tópico descreve como modificar um gatilho DML no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -48,7 +48,7 @@ ms.locfileid: "49084965"
   
 ###  <a name="Recommendations"></a> Recomendações  
   
--   Recomendamos que você não use o procedimento armazenado [sp_rename](/sql/relational-databases/system-stored-procedures/sp-rename-transact-sql) para renomear um gatilho. A alteração de qualquer parte de um nome de objeto pode quebrar scripts e procedimentos armazenados. Renomear um gatilho não altera o nome do objeto correspondente na coluna de definição da exibição de catálogo [sys.sql_modules](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql) . É recomendável que você remova e recrie o gatilho em vez disso.  
+-   Recomendamos que você não use o procedimento armazenado [sp_rename](/sql/relational-databases/system-stored-procedures/sp-rename-transact-sql) para renomear um gatilho. A alteração de qualquer parte de um nome de objeto pode quebrar scripts e procedimentos armazenados. Renomear um gatilho não altera o nome do objeto correspondente na coluna de definição da exibição de catálogo [sys.sql_modules](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql) . Nós recomendamos que você remova e recrie o gatilho.  
   
 -   Se você alterar o nome de um objeto referenciado por um gatilho DML, é preciso modificar o gatilho para que seu texto reflita o novo nome. Portanto, antes de renomear um objeto, exiba primeiramente as dependências do objeto para determinar se algum gatilho foi afetado pela mudança proposta.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "49084965"
   
 3.  Copie e cole os seguintes exemplos na consulta. Execute o primeiro exemplo para criar um gatilho DML que imprime uma mensagem definida pelo usuário para o cliente quando um usuário tenta adicionar ou alterar dados na tabela `SalesPersonQuotaHistory` . Execute a instrução [ALTER TRIGGER](/sql/t-sql/statements/alter-trigger-transact-sql) para modificar o gatilho a ser disparado apenas nas atividades `INSERT` . Esse gatilho é útil porque lembra ao usuário que atualiza ou insere linhas nessa tabela que também notifique o departamento `Compensation` .  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID(N'Sales.bonus_reminder', N'TR') IS NOT NULL  
@@ -110,7 +110,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER TRIGGER Sales.bonus_reminder  
@@ -129,7 +129,7 @@ GO
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo usa as instruções [DROP TRIGGER](/sql/t-sql/statements/drop-trigger-transact-sql) e [ALTER TRIGGER](/sql/t-sql/statements/alter-trigger-transact-sql) para renomear o gatilho `Sales.bonus_reminder` como `Sales.bonus_reminder_2`.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID(N'Sales.bonus_reminder', N'TR') IS NOT NULL  

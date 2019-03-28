@@ -16,12 +16,12 @@ ms.assetid: 7be62480-ed6a-4262-a071-1feba73b1c02
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: de81f6e7f5f375e2b71414385e4c27e2ceb8082f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 88b723e47b177c6a505a0821ddd4925c7179a15b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187556"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531338"
 ---
 # <a name="delete-a-backup-device-sql-server"></a>Excluir um dispositivo de backup (SQL Server)
   Este tópico descreve como excluir um dispositivo de backup no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -67,9 +67,9 @@ ms.locfileid: "48187556"
   
 2.  Na barra Padrão, clique em **Nova Consulta**.  
   
-3.  Copie e cole o seguinte exemplo na consulta. Este exemplo mostra como usar [sp_dropdevice](/sql/relational-databases/system-stored-procedures/sp-dropdevice-transact-sql) para excluir um dispositivo de backup. Execute o primeiro exemplo para criar o dispositivo de backup `mybackupdisk` e o nome físico `c:\backup\backup1.bak`. Execute `sp_dropdevice` para excluir o `mybackupdisk` dispositivo de backup. O parâmetro `delfile` exclui o nome físico.  
+3.  Copie e cole o seguinte exemplo na consulta. Este exemplo mostra como usar [sp_dropdevice](/sql/relational-databases/system-stored-procedures/sp-dropdevice-transact-sql) para excluir um dispositivo de backup. Execute o primeiro exemplo para criar o dispositivo de backup `mybackupdisk` e o nome físico `c:\backup\backup1.bak`. Execute `sp_dropdevice` para excluir o dispositivo de backup `mybackupdisk`. O parâmetro `delfile` exclui o nome físico.  
   
-```tsql  
+```sql  
 --Define a backup device and physical name.   
 USE AdventureWorks2012 ;  
 GO  

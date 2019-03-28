@@ -18,12 +18,12 @@ ms.assetid: b58d06f2-d6c9-4c8e-95bd-027c50f4621a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: de13b3b3ff39ac9aacdbcd7beb996a353593f609
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4395114f266345cb7583c45285366c5bd2b7afff
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677154"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537128"
 ---
 # <a name="sysmaildeleteprofileaccountsp-transact-sql"></a>sysmail_delete_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sysmail_delete_profileaccount_sp  {   [ @profile_id = ] profile_id | [ @profile_
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@profile_id** =] *profile_id*  
- A ID do perfil a ser excluído. *profile_id* está **int**, com um padrão NULL. Ambos os *profile_id* ou o *profile_name* pode ser especificado.  
+`[ @profile_id = ] profile_id` A ID de perfil do perfil para excluir. *profile_id* está **int**, com um padrão NULL. Ambos os *profile_id* ou o *profile_name* pode ser especificado.  
   
- [ **@profile_name** =] **'***profile_name***'**  
- O nome do perfil a ser excluído. *profile_name* está **sysname**, com um padrão NULL. Ambos os *profile_id* ou o *profile_name* pode ser especificado.  
+`[ @profile_name = ] 'profile_name'` O nome do perfil a ser excluído. *profile_name* está **sysname**, com um padrão NULL. Ambos os *profile_id* ou o *profile_name* pode ser especificado.  
   
- [ **@account_id** = ] *account_id*  
- O ID da conta a ser excluída. *account_id* está **int**, com um padrão NULL. Ambos os *account_id* ou o *account_name* pode ser especificado.  
+`[ @account_id = ] account_id` A ID da conta para excluir. *account_id* está **int**, com um padrão NULL. Ambos os *account_id* ou o *account_name* pode ser especificado.  
   
- [ **@account_name** = ] **'***account_name***'**  
- O nome da conta a ser excluída. *account_name* está **sysname**, com um padrão NULL. Ambos os *account_id* ou o *account_name* pode ser especificado.  
+`[ @account_name = ] 'account_name'` O nome da conta a ser excluída. *account_name* está **sysname**, com um padrão NULL. Ambos os *account_id* ou o *account_name* pode ser especificado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

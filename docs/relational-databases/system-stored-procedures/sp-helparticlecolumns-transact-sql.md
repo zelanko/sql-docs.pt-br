@@ -16,12 +16,12 @@ ms.assetid: 9ea55df3-2e99-4683-88ad-bde718288bc7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ff0ca57ba2e6e77854bab011fa83dc2001337a3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 34bd2f98c00d6d481662235df9ba26016cc20468
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205922"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527048"
 ---
 # <a name="sphelparticlecolumns-transact-sql"></a>sp_helparticlecolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_helparticlecolumns [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication =**] **'***publicação***'**  
- É o nome da publicação que contém o artigo. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação que contém o artigo. *publicação* está **sysname**, sem padrão.  
   
- [  **@article=**] **'***artigo***'**  
- É o nome do artigo que tem suas colunas retornadas. *artigo* está **sysname**, sem padrão.  
+`[ @article = ] 'article'` É o nome do artigo que tem suas colunas retornadas. *artigo* está **sysname**, sem padrão.  
   
- [ **@publisher**=] **'***publisher***'**  
- Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
+`[ @publisher = ] 'publisher'` Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
 >  *Publisher* não deve ser especificado quando o artigo solicitado é publicado por um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
@@ -59,9 +56,9 @@ sp_helparticlecolumns [ @publication = ] 'publication'
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**id da coluna**|**int**|Identificador para a coluna.|  
+|**column id**|**int**|Identificador para a coluna.|  
 |**column**|**sysname**|Nome da coluna.|  
-|**Publicado**|**bit**|Se a coluna for publicada:<br /><br /> **0** = Não<br /><br /> **1** = Sim|  
+|**published**|**bit**|Se a coluna for publicada:<br /><br /> **0** = Não<br /><br /> **1** = Sim|  
 |**tipo de publicador**|**sysname**|Tipo de dados da coluna no Publicador.|  
 |**tipo de assinante**|**sysname**|Tipo de dados da coluna no Assinante.|  
   

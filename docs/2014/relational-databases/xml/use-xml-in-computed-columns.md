@@ -10,15 +10,15 @@ helpviewer_keywords:
 - computed columns, XML
 - XML [SQL Server], computed columns
 ms.assetid: 1313b889-69b4-4018-9868-0496dd83bf44
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 734b19d9b0098759831eb71fa36fc6d737f6f6e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9bfa88e56e5f914afd4f027634d0f069406c009
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094936"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530598"
 ---
 # <a name="use-xml-in-computed-columns"></a>Usar XML em colunas computadas
   Instâncias XML ser exibidas como uma origem de uma coluna computada ou como um tipo de coluna computada. Os exemplos neste tópico mostram como usar XML com colunas computadas.  
@@ -85,7 +85,7 @@ FROM T
   
 ### <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Promover valores XML frequentemente usados com colunas computadas](promote-frequently-used-xml-values-with-computed-columns.md)|Descreve como usar promoção de propriedades com colunas computadas e tabelas de propriedades.|  
   

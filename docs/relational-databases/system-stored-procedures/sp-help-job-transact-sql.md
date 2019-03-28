@@ -18,12 +18,12 @@ ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 18dde2c47f1da8c20457a9a0fbdd86c7adfe6e56
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 509dd27a784fd14b5aefc811065b265f37c3f6c3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818014"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528137"
 ---
 # <a name="sphelpjob-transact-sql"></a>sp_help_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,19 +53,16 @@ sp_help_job { [ @job_id = ] job_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@job_id =**] *job_id*  
- O número de identificação do trabalho. *job_id* está **uniqueidentifier**, com um padrão NULL.  
+`[ @job_id = ] job_id` O número de identificação do trabalho. *job_id* está **uniqueidentifier**, com um padrão NULL.  
   
- [  **@job_name =**] **'***job_name***'**  
- O nome do trabalho. *job_name* está **sysname**, com um padrão NULL.  
+`[ @job_name = ] 'job_name'` O nome do trabalho. *job_name* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
 >  Para exibir um trabalho específico, ou *job_id* ou *job_name* deve ser especificado.  Omitir ambas *job_id* e *job_name* para retornar informações sobre todos os trabalhos.
   
- [  **@job_aspect =**] **'***job_aspect***'**  
- O atributo de trabalho a ser exibido. *job_aspect* está **varchar(9)**, com um padrão de NULL, e pode ser um destes valores.  
+`[ @job_aspect = ] 'job_aspect'` O atributo de trabalho para exibir. *job_aspect* está **varchar(9)**, com um padrão de NULL, e pode ser um destes valores.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**ALL**|Informações de aspecto do trabalho|  
 |**JOB**|Informações do trabalho|  
@@ -73,25 +70,19 @@ sp_help_job { [ @job_id = ] job_id
 |**STEPS**|Informações de etapa do trabalho|  
 |**DESTINOS**|Informações de destino|  
   
- [  **@job_type =**] **'***job_type***'**  
- O tipo dos trabalhos a serem incluídos no relatório. *job_type* está **varchar(12)**, com um padrão NULL. *job_type* pode ser **LOCAL** ou **MULTISSERVIDOR**.  
+`[ @job_type = ] 'job_type'` O tipo de trabalhos a serem incluídos no relatório. *job_type* está **varchar(12)**, com um padrão NULL. *job_type* pode ser **LOCAL** ou **MULTISSERVIDOR**.  
   
- [  **@owner_login_name =**] **'***login_name***'**  
- O nome de logon do proprietário do trabalho. *login_name* está **sysname**, com um padrão NULL.  
+`[ @owner_login_name = ] 'login_name'` O nome de logon do proprietário do trabalho. *login_name* está **sysname**, com um padrão NULL.  
   
- [  **@subsystem =**] **'***subsistema***'**  
- O nome do subsistema. *subsistema* está **nvarchar(40)**, com um padrão NULL.  
+`[ @subsystem = ] 'subsystem'` O nome do subsistema. *subsistema* está **nvarchar(40)**, com um padrão NULL.  
   
- [  **@category_name =**] **'***categoria***'**  
- O nome da categoria. *categoria* está **sysname**, com um padrão NULL.  
+`[ @category_name = ] 'category'` O nome da categoria. *categoria* está **sysname**, com um padrão NULL.  
   
- [  **@enabled =**] *habilitado*  
- Um número que indica se as informações são mostradas para trabalhos habilitados ou desabilitados. *habilitada* está **tinyint**, com um padrão NULL. **1** indica trabalhos habilitados, e **0** indica trabalhos desabilitados.  
+`[ @enabled = ] enabled` Um número que indica se as informações são mostradas para habilitado trabalhos ou desabilitados. *habilitada* está **tinyint**, com um padrão NULL. **1** indica trabalhos habilitados, e **0** indica trabalhos desabilitados.  
   
- [  **@execution_status =**] *status*  
- O status da execução dos trabalhos. *status* está **int**, com um padrão de NULL, e pode ser um destes valores.  
+`[ @execution_status = ] status` O status de execução para os trabalhos. *status* está **int**, com um padrão de NULL, e pode ser um destes valores.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**0**|Retorna somente os trabalhos que não estão ociosos ou suspensos.|  
 |**1**|Em execução.|  
@@ -101,17 +92,13 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|Suspenso.|  
 |**7**|Executando ações de conclusão.|  
   
- [  **@date_comparator =**] **'***date_comparison***'**  
- O operador de comparação a ser usado em comparações de *date_created* e *date_modified*. *date_comparison* está **char(1)** e pode ser =, \<, ou >.  
+`[ @date_comparator = ] 'date_comparison'` O operador de comparação a ser usado em comparações de *date_created* e *date_modified*. *date_comparison* está **char(1)** e pode ser =, \<, ou >.  
   
- [  **@date_created =**] *date_created*  
- A data em que o trabalho foi criado. *Date_Created*está **datetime**, com um padrão NULL.  
+`[ @date_created = ] date_created` A data em que o trabalho foi criado. *Date_Created*está **datetime**, com um padrão NULL.  
   
- [  **@date_last_modified =**] *date_modified*  
- A data em que o trabalho foi modificado pela última vez. *date_modified* está **datetime**, com um padrão NULL.  
+`[ @date_last_modified = ] date_modified` A data em que o trabalho foi modificado pela última vez. *date_modified* está **datetime**, com um padrão NULL.  
   
- [  **@description =**] **'***description_pattern***'**  
- A descrição do trabalho. *description_pattern* está **nvarchar(512)**, com um padrão NULL. *description_pattern* pode incluir os caracteres de curinga do SQL Server para correspondência de padrões.  
+`[ @description = ] 'description_pattern'` A descrição do trabalho. *description_pattern* está **nvarchar(512)**, com um padrão NULL. *description_pattern* pode incluir os caracteres de curinga do SQL Server para correspondência de padrões.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -119,16 +106,16 @@ sp_help_job { [ @job_id = ] job_id
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Se nenhum argumento for especificado, **sp_help_job** retorna este conjunto de resultados.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|A ID exclusiva do trabalho.|  
 |**originating_server**|**nvarchar(30)**|Nome do servidor do qual o trabalho originou.|  
 |**name**|**sysname**|Nome do trabalho.|  
-|**habilitado**|**tinyint**|Indica se o trabalho está habilitado para ser executado.|  
-|**Descrição**|**nvarchar(512)**|Descrição do trabalho.|  
+|**enabled**|**tinyint**|Indica se o trabalho está habilitado para ser executado.|  
+|**description**|**nvarchar(512)**|Descrição do trabalho.|  
 |**start_step_id**|**int**|ID da etapa do trabalho em que a execução deve começar.|  
 |**category**|**sysname**|Categoria do trabalho.|  
-|**Proprietário**|**sysname**|Proprietário do trabalho.|  
+|**owner**|**sysname**|Proprietário do trabalho.|  
 |**notify_level_eventlog**|**int**|**Bitmask** que indica sob quais circunstâncias um evento de notificação deve ser registrado no log de aplicativo do Microsoft Windows. Pode ser um destes valores:<br /><br /> **0** = nunca<br /><br /> **1** = quando um trabalho for bem-sucedido<br /><br /> **2** = quando o trabalho falhar<br /><br /> **3** = sempre que o trabalho for concluído (independentemente do resultado do trabalho)|  
 |**notify_level_email**|**int**|**Bitmask** que indica sob quais circunstâncias um email de notificação deve ser enviado quando um trabalho é concluído. Os valores possíveis são os mesmos para **notify_level_eventlog**.|  
 |**notify_level_netsend**|**int**|**Bitmask** que indica sob quais circunstâncias uma mensagem de rede deve ser enviada quando um trabalho é concluído. Os valores possíveis são os mesmos para **notify_level_eventlog**.|  
@@ -158,7 +145,7 @@ sp_help_job { [ @job_id = ] job_id
   
  Este é o conjunto de resultados para etapas de trabalho.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**step_id**|**int**|Identificador exclusivo (para este trabalho) da etapa.|  
 |**step_name**|**sysname**|Nome da etapa.|  
@@ -186,11 +173,11 @@ sp_help_job { [ @job_id = ] job_id
   
  Este é o conjunto de resultados para agendas de trabalho.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|Identificador da agenda (exclusivo em todos os trabalhos).|  
 |**schedule_name**|**sysname**|Nome da agenda (exclusivo somente para este trabalho).|  
-|**habilitado**|**int**|Se a agenda está ativa (**1**) ou não (**0**).|  
+|**enabled**|**int**|Se a agenda está ativa (**1**) ou não (**0**).|  
 |**freq_type**|**int**|Valor que indica quando o trabalho será executado:<br /><br /> **1** = uma vez<br /><br /> **4** = diariamente<br /><br /> **8** = semanalmente<br /><br /> **16** = mensalmente<br /><br /> **32** = mensalmente, relativo a **freq_interval**<br /><br /> **64** = executar quando **SQLServerAgent** inicia o serviço.|  
 |**freq_interval**|**int**|Dias quando o trabalho é executado. O valor depende do valor de **freq_type**. Para obter mais informações, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
 |**freq_subday_type**|**Int**|Unidades para **freq_subday_interval**. Para obter mais informações, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
@@ -210,7 +197,7 @@ sp_help_job { [ @job_id = ] job_id
   
  Este é o conjunto de resultados para servidores de destino de trabalho.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Identificador do servidor de destino.|  
 |**server_name**|**nvarchar(30)**|Nome do computador do servidor de destino.|  

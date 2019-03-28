@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - AUTO FOR XML mode, BINARY BASE64 option
 ms.assetid: 86a7bb85-7f83-412a-b775-d2c379702fe9
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 591f2c00534f00529870b4eaa3742eef886d8e6d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1bda0167e1e55c3ded715de96027a153ec5a65de
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159916"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533758"
 ---
 # <a name="use-the-binary-base64-option"></a>Usar a opção BINARY BASE64
   A opção BINARY BASE64 é especificada na consulta. Os dados binários são retornados no formato de codificação na base64. Por padrão, se a opção BINARY BASE64 não for especificada, o modo AUTO oferecerá suporte à codificação de URL dos dados binários. Isto é, em vez dos dados binários, uma referência a uma URL relativa à raiz virtual do banco de dados onde a consulta é executada é retornada. Essa referência pode ser usada para acessar os dados binários reais em operações subsequentes usando a consulta dboject SQLXML ISAPI. A consulta deve fornecer informações suficientes, como colunas de chave primária para identificar a imagem.  
@@ -49,7 +49,7 @@ FROM MyTable
 FOR XML AUTO, BINARY BASE64;  
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 <MyTable Col1="1" Col2="Bw==" />  

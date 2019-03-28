@@ -16,12 +16,12 @@ ms.assetid: 7dac5e68-bf84-433a-a531-66921f35126f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5b7ebae98b83c743fa2ea111a2809b3d1a043005
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 93462a0f9529b20b3a74d37a3b844eb643e9f7b3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774128"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526638"
 ---
 # <a name="spmschangedistributionagentproperties-transact-sql"></a>sp_MSchange_distribution_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,26 +44,19 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publisher** =] **'***publisher***'**  
- É o nome do Publicador. *Publisher* está **sysname**, sem padrão.  
+`[ @publisher = ] 'publisher'` É o nome do publicador. *Publisher* está **sysname**, sem padrão.  
   
- [  **@publisher_db=** ] **'***publisher_db***'**  
- É o nome do banco de dados de publicação. *publisher_db* está **sysname**, sem padrão.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados de publicação. *publisher_db* está **sysname**, sem padrão.  
   
- [  **@publication =** ] **'***publicação***'**  
- É o nome da publicação. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, sem padrão.  
   
- [  **@subscriber=** ] **'***assinante***'**  
- É o nome do Assinante. *assinante* está **sysname**, sem padrão.  
+`[ @subscriber = ] 'subscriber'` É o nome do assinante. *assinante* está **sysname**, sem padrão.  
   
- [  **@subscriber_db=** ] **'***subscriber_db***'**  
- É o nome do banco de dados de assinatura. *subscriber_db* está **sysname**, sem padrão.  
+`[ @subscriber_db = ] 'subscriber_db'` É o nome do banco de dados de assinatura. *subscriber_db* está **sysname**, sem padrão.  
   
- [  **@property =** ] **'***propriedade***'**  
- É a propriedade da publicação a ser alterada. *propriedade* está **sysname**, sem padrão.  
+`[ @property = ] 'property'` É a propriedade de publicação a alterar. *propriedade* está **sysname**, sem padrão.  
   
- [  **@value =** ] **'***valor***'**  
- É o novo valor da propriedade. *valor* está **nvarchar(524)**, com um padrão NULL.  
+`[ @value = ] 'value'` É o novo valor da propriedade. *valor* está **nvarchar(524)**, com um padrão NULL.  
   
  Esta tabela descreve as propriedades do trabalho do Agente de Distribuição que podem ser alteradas e restrições nos valores dessas propriedades.  
   
@@ -83,7 +76,7 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
 |**subscriber_type**|**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinante|  
 ||**1**|Servidor de fontes de dados ODBC|  
 ||**3**|Provedor OLE DB|  
-|**fluxos de assinatura**||Denota o número de conexões permitido pelo Agente de Distribuição para aplicar lotes de alterações em paralelo a um Assinante. *Não há suportada para não -* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *assinantes, Publicadores Oracle ou assinaturas ponto a ponto.*|  
+|**subscriptionstreams**||Denota o número de conexões permitido pelo Agente de Distribuição para aplicar lotes de alterações em paralelo a um Assinante. *Não há suportada para não -* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *assinantes, Publicadores Oracle ou assinaturas ponto a ponto.*|  
   
 > [!NOTE]  
 >  Depois de alterar o logon ou a senha de um agente, você deve parar e reiniciar o agente antes que as alterações entrem em vigor.  

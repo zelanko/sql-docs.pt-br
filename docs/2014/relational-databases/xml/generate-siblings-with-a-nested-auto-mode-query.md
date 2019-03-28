@@ -10,15 +10,15 @@ helpviewer_keywords:
 - queries [XML in SQL Server], nested AUTO mode
 - nested AUTO mode query
 ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 883d66d07c776a7391b28f59c6f091c3f42ca3e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b0db2a84b4be80fffec0f05aed11f39a3bcea7db
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164966"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534468"
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>Gerar irmãos com uma consulta aninhada em modo AUTO
   O exemplo a seguir mostra como gerar irmãos usando uma consulta aninhada em modo AUTO. A única outra maneira de gerar esse tipo de XML é usar o modo EXPLICIT. No entanto isso pode ser trabalhoso.  
@@ -124,7 +124,7 @@ WHERE SalesOrderID=43659 or SalesOrderID=43660
 FOR XML AUTO, TYPE  
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 <Sales.SalesOrderHeader SalesOrderID="43659" SalesPersonID="279" CustomerID="676">  
@@ -144,7 +144,7 @@ FOR XML AUTO, TYPE
   
 -   A consulta anterior é adicionada na cláusula `FROM` . O resultado da consulta é retornado como uma tabela. Observe o alias de `XmlCol` que é adicionado.  
   
--   A cláusula `SELECT` especifica um XQuery em relação à `XmlCol` retornada na cláusula `FROM` . O `query()` método da `xml` tipo de dados é usado para especificar o XQuery. Para obter mais informações, veja [Método query&#40;&#41; &#40;tipo de dados xml&#41;](/sql/t-sql/xml/query-method-xml-data-type).  
+-   A cláusula `SELECT` especifica um XQuery em relação à `XmlCol` retornada na cláusula `FROM` . O método `query()` do tipo de dados `xml` é usado para especificar o XQuery. Para obter mais informações, veja [Método query&#40;&#41; &#40;tipo de dados xml&#41;](/sql/t-sql/xml/query-method-xml-data-type).  
   
     ```  
     SELECT XmlCol.query('<Root> { /* } </Root>')  

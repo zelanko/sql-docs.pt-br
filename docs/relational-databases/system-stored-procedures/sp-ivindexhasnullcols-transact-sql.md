@@ -16,12 +16,12 @@ ms.assetid: ed2cde63-37e1-43cf-b6ba-3b6114a0f797
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5e9ab98dc5beb4f2e07ac7fa62386f9fd44703ab
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 77a0e3f1795545e553347ae699e719af2ad506b4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823320"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531562"
 ---
 # <a name="spivindexhasnullcols-transact-sql"></a>sp_ivindexhasnullcols (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_ivindexhasnullcols [ @viewname = ] 'view_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@viewname**=] **'***view_name***'**  
- É o nome da exibição a ser verificada. *view_name* está **sysname**, sem padrão.  
+`[ @viewname = ] 'view_name'` É o nome de exibição a ser verificada. *view_name* está **sysname**, sem padrão.  
   
- [ **@fhasnullcols**=] *field_has_null_columns* saída  
- É o sinalizador que indica se o índice de exibição tem colunas que permitem NULL. *view_name* está **sysname**, sem padrão. Retorna um valor de **1** se o índice de exibição tem colunas que permitem NULL. Retorna um valor de **0** se o modo de exibição não contiver colunas que permitem valores nulos.  
+`[ @fhasnullcols = ] field_has_null_columns OUTPUT` É o sinalizador que indica se o índice de exibição tem colunas que permitem NULL. *view_name* está **sysname**, sem padrão. Retorna um valor de **1** se o índice de exibição tem colunas que permitem NULL. Retorna um valor de **0** se o modo de exibição não contiver colunas que permitem valores nulos.  
   
 > [!NOTE]  
 >  Se o próprio procedimento armazenado retorna um código de retorno **1**, que significa que a execução do procedimento armazenado teve uma falha, esse valor é **0** e deve ser ignorado.  

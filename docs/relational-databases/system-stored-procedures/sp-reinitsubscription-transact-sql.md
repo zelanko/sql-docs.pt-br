@@ -16,12 +16,12 @@ ms.assetid: d56ae218-6128-4ff9-b06c-749914505c7b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: da8e0d9ab1959251bf5e41e35e4b3d647e072d8a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b9d03099ae48bf463df82d1392e97d4729ec518a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207325"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528778"
 ---
 # <a name="spreinitsubscription-transact-sql"></a>sp_reinitsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,32 +45,24 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'***publicação***'**  
- É o nome da publicação. *publicação* está **sysname**, com um padrão de all.  
+`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, com um padrão de all.  
   
- [  **@article=**] **'***artigo***'**  
- É o nome do artigo. *artigo* está **sysname**, com um padrão de all. Para uma publicação de atualização imediata, *artigo* deve ser **todos os**; caso contrário, o procedimento armazenado ignora a publicação e relata um erro.  
+`[ @article = ] 'article'` É o nome do artigo. *artigo* está **sysname**, com um padrão de all. Para uma publicação de atualização imediata, *artigo* deve ser **todos os**; caso contrário, o procedimento armazenado ignora a publicação e relata um erro.  
   
- [  **@subscriber=**] **'***assinante***'**  
- É o nome do Assinante. *assinante* está **sysname**, sem padrão.  
+`[ @subscriber = ] 'subscriber'` É o nome do assinante. *assinante* está **sysname**, sem padrão.  
   
- [  **@destination_db=**] **'***destination_db***'**  
- É o nome do banco de dados de destino. *destination_db* está **sysname**, com um padrão de all.  
+`[ @destination_db = ] 'destination_db'` É o nome do banco de dados de destino. *destination_db* está **sysname**, com um padrão de all.  
   
- [  **@for_schema_change=**] **'***for_schema_change***'**  
- Indica se a reinicialização ocorre como resultado de uma alteração de esquema no banco de dados de publicação. *for_schema_change* está **bit**, com um padrão de 0. Se **0**, assinaturas ativas para publicações que permitem atualização imediata serão reativadas desde que a publicação inteira e não apenas alguns de seus artigos sejam reinicializados. Isso significa que a reinicialização está ocorrendo como resultado de alterações de esquema. Se **1**, assinaturas ativas não serão reativadas até que o Snapshot Agent é executado.  
+`[ @for_schema_change = ] 'for_schema_change'` Indica se a reinicialização ocorre como resultado de uma alteração de esquema no banco de dados de publicação. *for_schema_change* está **bit**, com um padrão de 0. Se **0**, assinaturas ativas para publicações que permitem atualização imediata serão reativadas desde que a publicação inteira e não apenas alguns de seus artigos sejam reinicializados. Isso significa que a reinicialização está ocorrendo como resultado de alterações de esquema. Se **1**, assinaturas ativas não serão reativadas até que o Snapshot Agent é executado.  
   
- [  **@publisher=** ] **'***publisher***'**  
- Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
+`[ @publisher = ] 'publisher'` Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
 >  *Publisher* não deve ser usada para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores.  
   
- [  **@ignore_distributor_failure=** ] *ignore_distributor_failure*  
- Permite a reinicialização mesmo que o Distribuidor não exista ou esteja offline. *ignore_distributor_failure* está **bit**, com um padrão de 0. Se **0**, reinicialização falhará se o distribuidor não existe ou está offline.  
+`[ @ignore_distributor_failure = ] ignore_distributor_failure` Permite a reinicialização, mesmo se o distribuidor não existe ou está offline. *ignore_distributor_failure* está **bit**, com um padrão de 0. Se **0**, reinicialização falhará se o distribuidor não existe ou está offline.  
   
- [  **@invalidate_snapshot=** ] *invalidate_snapshot*  
- Invalida o instantâneo da publicação existente. *invalidate_snapshot* está **bit**, com um padrão de 0. Se **1**, um novo instantâneo é gerado para a publicação.  
+`[ @invalidate_snapshot = ] invalidate_snapshot` Invalida o instantâneo da publicação existente. *invalidate_snapshot* está **bit**, com um padrão de 0. Se **1**, um novo instantâneo é gerado para a publicação.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

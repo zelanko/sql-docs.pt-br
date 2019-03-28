@@ -16,12 +16,12 @@ ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 19fafb4b3ef3737018aaae21992f0b6a859c7ef3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f733740b062983f14379f71a48b77f73392aceae
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796419"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529528"
 ---
 # <a name="sphelpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,25 +42,21 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publisher=**] **'***publisher***'**  
- É o nome do Publicador que está participando da atualização desse Assinante. *Publisher* está **sysname**, sem padrão. O Publicador já deve estar configurado para publicação.  
+`[ @publisher = ] 'publisher'` É o nome do publicador que está participando da atualização desse assinante. *Publisher* está **sysname**, sem padrão. O Publicador já deve estar configurado para publicação.  
   
- [  **@publisher_db =**] **'***publisher_db***'**  
- É o nome do banco de dados de publicação. *publisher_db* está **sysname**, sem padrão.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados de publicação. *publisher_db* está **sysname**, sem padrão.  
   
- [  **@publication=**] **'***publicação***'**  
- É o nome da publicação que está participando da atualização desse Assinante. *publicação*está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação que está participando da atualização desse assinante. *publicação*está **sysname**, sem padrão.  
   
- [  **@failover_mode_id=**] **'***failover_mode_id***' saída**  
- Retorna o valor inteiro do modo de failover e é um **saída** parâmetro. *failover_mode_id* é um **tinyint** com um padrão de **0**. Ele retorna **0** para atualização imediata e **1** de atualização enfileirada.  
+`[ @failover_mode_id = ] 'failover_mode_id' OUTPUT` Retorna o valor inteiro do modo de failover e é um **saída** parâmetro. *failover_mode_id* é um **tinyint** com um padrão de **0**. Ele retorna **0** para atualização imediata e **1** de atualização enfileirada.  
   
- [**@failover_mode=**] **'***failover_mode***' saída**  
+ [**@failover_mode=**] **'***failover_mode***'OUTPUT**  
  Retorna o modo no qual são feitas modificações de dados no Assinante. *failover_mode* é um **nvarchar (10)** com um padrão NULL. É um **saída** parâmetro.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**Imediata**|Atualização imediata: as atualizações feitas no Assinante são imediatamente propagadas no Publicador, usando 2PC (protocolo de confirmação de duas fases).|  
-|**em fila**|Atualização enfileirada: atualizações feitas no Assinante são armazenadas em uma fila.|  
+|**immediate**|Atualização imediata: as atualizações feitas no Assinante são imediatamente propagadas no Publicador, usando 2PC (protocolo de confirmação de duas fases).|  
+|**queued**|Atualização enfileirada: atualizações feitas no Assinante são armazenadas em uma fila.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

@@ -18,12 +18,12 @@ ms.assetid: 850cef4e-6348-4439-8e79-fd1bca712091
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 522dcff230177b807299d1647e0333517f93d8bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bca9c53780bb3258f73a274240c0bb5e63e126c3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728964"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538458"
 ---
 # <a name="sphelpalert-transact-sql"></a>sp_help_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,20 +44,15 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@alert_name =**] **'***alert_name***'**  
- O nome do alerta. *alert_name* está **nvarchar (128)**. Se *alert_name* não é especificado, serão retornadas informações sobre todos os alertas.  
+`[ @alert_name = ] 'alert_name'` O nome do alerta. *alert_name* está **nvarchar (128)**. Se *alert_name* não é especificado, serão retornadas informações sobre todos os alertas.  
   
- [  **@order_by =**] **'***order_by***'**  
- A ordem de classificação a ser usada para produzir os resultados. *order_by*está **sysname**, com um padrão de N '*nome*'.  
+`[ @order_by = ] 'order_by'` A ordem de classificação a ser usado para produzir os resultados. *order_by*está **sysname**, com um padrão de N '*nome*'.  
   
- [  **@alert_id =**] *alert_id*  
- O número de identificação do alerta sobre o qual relatar informações. *alert_id*está **int**, com um padrão NULL.  
+`[ @alert_id = ] alert_id` O número de identificação do alerta para relatar informações sobre. *alert_id*está **int**, com um padrão NULL.  
   
- [  **@category_name =**] **'***categoria***'**  
- A categoria do alerta. *categoria* está **sysname**, com um padrão NULL.  
+`[ @category_name = ] 'category'` A categoria do alerta. *categoria* está **sysname**, com um padrão NULL.  
   
- [ **@legacy_format**=] *legacy_format*  
- Especifica se um conjunto de resultados legado deve ser produzido. *legacy_format* está **bit**, com um padrão de **0**. Quando *legacy_format* é **1**, **sp_help_alert** retorna o conjunto de resultados retornado por **sp_help_alert** no Microsoft SQL Server 2000.  
+`[ @legacy_format = ] legacy_format` Especifica se deve produzir um conjunto de resultados legado. *legacy_format* está **bit**, com um padrão de **0**. Quando *legacy_format* é **1**, **sp_help_alert** retorna o conjunto de resultados retornado por **sp_help_alert** no Microsoft SQL Server 2000.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -65,16 +60,16 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Quando **@legacy_format** é **0**, **sp_help_alert** produz o seguinte conjunto de resultados.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Identificador inteiro exclusivo atribuído pelo sistema.|  
-|**name**|**sysname**|Nome do alerta (por exemplo, demonstração: completo **msdb** log).|  
+|**name**|**sysname**|Nome do alerta (por exemplo, demonstração: Completo **msdb** log).|  
 |**event_source**|**nvarchar(100)**|Origem do evento. Sempre será **MSSQLServer** para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versão 7.0|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|Número de erro de mensagem que define o alerta. (Normalmente corresponde a um número de erro no **sysmessages** tabela). Se for usada gravidade para definir o alerta **message_id** é **0** ou nulo.|  
 |**severity**|**int**|Nível de gravidade (de **9** por meio **25**, **110**, **120**, **130**, ou **140**) que define o alerta.|  
-|**habilitado**|**tinyint**|Status de alerta está habilitado no momento (**1**) ou não (**0**). Um alerta não habilitado não é enviado.|  
+|**enabled**|**tinyint**|Status de alerta está habilitado no momento (**1**) ou não (**0**). Um alerta não habilitado não é enviado.|  
 |**delay_between_responses**|**int**|Período de espera, em segundos, entre respostas ao alerta.|  
 |**last_occurrence_date**|**int**|Data em que o alerta ocorreu pela última vez.|  
 |**last_occurrence_time**|**int**|Hora em que o alerta ocorreu pela última vez.|  
@@ -99,16 +94,16 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
   
  Quando **@legacy_format** é **1**, **sp_help_alert** produz o seguinte conjunto de resultados.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Identificador inteiro exclusivo atribuído pelo sistema.|  
-|**name**|**sysname**|Nome do alerta (por exemplo, demonstração: completo **msdb** log).|  
+|**name**|**sysname**|Nome do alerta (por exemplo, demonstração: Completo **msdb** log).|  
 |**event_source**|**nvarchar(100)**|Origem do evento. Sempre será **MSSQLServer** para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versão 7.0|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|Número de erro de mensagem que define o alerta. (Normalmente corresponde a um número de erro no **sysmessages** tabela). Se for usada gravidade para definir o alerta **message_id** é **0** ou nulo.|  
 |**severity**|**int**|Nível de gravidade (de **9** por meio **25**, **110**, **120**, **130**, ou 1**40**) que define o alerta.|  
-|**habilitado**|**tinyint**|Status de alerta está habilitado no momento (**1**) ou não (**0**). Um alerta não habilitado não é enviado.|  
+|**enabled**|**tinyint**|Status de alerta está habilitado no momento (**1**) ou não (**0**). Um alerta não habilitado não é enviado.|  
 |**delay_between_responses**|**int**|Período de espera, em segundos, entre respostas ao alerta.|  
 |**last_occurrence_date**|**int**|Data em que o alerta ocorreu pela última vez.|  
 |**last_occurrence_time**|**int**|Hora em que o alerta ocorreu pela última vez.|  

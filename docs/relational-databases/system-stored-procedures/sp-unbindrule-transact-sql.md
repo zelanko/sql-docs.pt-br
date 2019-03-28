@@ -18,12 +18,12 @@ ms.assetid: f54ee155-c3c9-4f1a-952e-632a8339f0cc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f35db2f08be985359de4723cdb9aa393ad608232
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86efa9f7951277e6effdae9f59669fb7101f6f67
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624155"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527278"
 ---
 # <a name="spunbindrule-transact-sql"></a>sp_unbindrule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,14 +44,12 @@ sp_unbindrule [ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@objname=** ] **'***object_name***'**  
- É o nome da tabela e da coluna ou o tipo de dados do alias do qual a regra é desassociada. *object_name* está **nvarchar(776)**, sem padrão. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta resolver identificadores de duas partes primeiro para nomes das colunas e, em seguida, para tipos de dados do alias. Ao desvincular uma regra de um tipo de dados de alias, as colunas do tipo de dados que tiverem a mesma regra também serão desvinculadas. As colunas desse tipo de dados com regras vinculadas diretamente não serão afetadas.  
+`[ @objname = ] 'object_name'` É o nome da tabela e coluna ou o tipo de dados de alias do qual a regra é desvinculada. *object_name* está **nvarchar(776)**, sem padrão. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta resolver identificadores de duas partes primeiro para nomes das colunas e, em seguida, para tipos de dados do alias. Ao desvincular uma regra de um tipo de dados de alias, as colunas do tipo de dados que tiverem a mesma regra também serão desvinculadas. As colunas desse tipo de dados com regras vinculadas diretamente não serão afetadas.  
   
 > [!NOTE]  
 >  *object_name* pode conter colchetes **[]** como caracteres de identificador delimitados. Para obter mais informações, consulte [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
- [  **@futureonly=** ] **'***futureonly_flag***'**  
- É usado apenas ao desvincular uma regra de um tipo de dados de alias. *futureonly_flag* está **varchar(15)**, com um padrão NULL. Quando *futureonly_flag* é **futureonly**, as colunas existentes desse tipo de dados não perdem a regra especificada.  
+`[ @futureonly = ] 'futureonly_flag'` É usado apenas ao desvincular uma regra de um tipo de dados de alias. *futureonly_flag* está **varchar(15)**, com um padrão NULL. Quando *futureonly_flag* é **futureonly**, as colunas existentes desse tipo de dados não perdem a regra especificada.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

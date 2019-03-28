@@ -18,12 +18,12 @@ ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 102e9122b93938b8e16d2e8714eed8d1372d21ad
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: f1ab6c1408b9f9c2de2e4070ab35e34ea8a458df
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591520"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526758"
 ---
 # <a name="spupdatejobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,32 +62,23 @@ sp_update_jobstep
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@job_id =**] *job_id*  
- O número de identificação do trabalho ao qual a etapa pertence. *job_id*está **uniqueidentifier**, com um padrão NULL. Qualquer um dos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados.  
+`[ @job_id = ] job_id` O número de identificação do trabalho ao qual a etapa pertence. *job_id*está **uniqueidentifier**, com um padrão NULL. Qualquer um dos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados.  
   
- [  **@job_name =**] **'**_job_name_**'**  
- O nome do trabalho ao qual a etapa pertence. *job_name*está **sysname**, com um padrão NULL. Qualquer um dos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados.  
+`[ @job_name = ] 'job_name'` O nome do trabalho ao qual a etapa pertence. *job_name*está **sysname**, com um padrão NULL. Qualquer um dos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados.  
   
- [  **@step_id =**] *step_id*  
- O número de identificação da etapa de trabalho que será modificado. Esse número não pode ser alterado. *step_id*está **int**, sem padrão.  
+`[ @step_id = ] step_id` O número de identificação da etapa de trabalho a ser modificado. Esse número não pode ser alterado. *step_id*está **int**, sem padrão.  
   
- [  **@step_name =**] **'**_step_name_**'**  
- É um novo nome para a etapa. *step_name*está **sysname**, com um padrão NULL.  
+`[ @step_name = ] 'step_name'` É um novo nome para a etapa. *step_name*está **sysname**, com um padrão NULL.  
   
- [  **@subsystem =**] **'**_subsistema_**'**  
- O subsistema usado pelo Microsoft SQL Server Agent para executar *comando*. *subsistema* está **nvarchar(40)**, com um padrão NULL.  
+`[ @subsystem = ] 'subsystem'` O subsistema usado pelo Microsoft SQL Server Agent para executar *comando*. *subsistema* está **nvarchar(40)**, com um padrão NULL.  
   
- [  **@command =**] **'**_comando_**'**  
- O comando a ser executado por meio *subsistema*. *comando* está **nvarchar (max)**, com um padrão NULL.  
+`[ @command = ] 'command'` O comando a ser executado por meio *subsistema*. *comando* está **nvarchar (max)**, com um padrão NULL.  
   
- [  **@additional_parameters =**] **'**_parâmetros_**'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @additional_parameters = ] 'parameters'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@cmdexec_success_code =**] *success_code*  
- O valor retornado por uma **CmdExec** comando de subsistema para indicar que *comando* foi executada com êxito. *success_code* está **int**, com um padrão NULL.  
+`[ @cmdexec_success_code = ] success_code` O valor retornado por uma **CmdExec** comando de subsistema para indicar que *comando* foi executada com êxito. *success_code* está **int**, com um padrão NULL.  
   
- [  **@on_success_action =**] *success_action*  
- A ação a ser executada se a etapa tiver êxito. *success_action* é **tinyint**, com um padrão de NULL, e pode ser um destes valores.  
+`[ @on_success_action = ] success_action` A ação a ser executada se a etapa tiver êxito. *success_action* é **tinyint**, com um padrão de NULL, e pode ser um destes valores.  
   
 |Valor|Descrição (ação)|  
 |-----------|----------------------------|  
@@ -96,11 +87,9 @@ sp_update_jobstep
 |**3**|Ir para a próxima etapa.|  
 |**4**|Vá para a etapa *success_step_id.*|  
   
- [  **@on_success_step_id =**] *success_step_id*  
- O número de identificação da etapa neste trabalho a ser executado se a etapa tiver êxito e *success_action* é **4**. *success_step_id* está **int**, com um padrão NULL.  
+`[ @on_success_step_id = ] success_step_id` O número de identificação da etapa neste trabalho a ser executado se a etapa tiver êxito e *success_action* é **4**. *success_step_id* está **int**, com um padrão NULL.  
   
- [  **@on_fail_action =**] *fail_action*  
- A ação a ser executada se a etapa falhar. *fail_action* está **tinyint**, com um padrão de NULL e pode ter um destes valores.  
+`[ @on_fail_action = ] fail_action` A ação a ser executada se a etapa falhar. *fail_action* está **tinyint**, com um padrão de NULL e pode ter um destes valores.  
   
 |Valor|Descrição (ação)|  
 |-----------|----------------------------|  
@@ -109,36 +98,27 @@ sp_update_jobstep
 |**3**|Ir para a próxima etapa.|  
 |**4**|Vá para a etapa *fail_step_id * *.*|  
   
- [  **@on_fail_step_id =**] *fail_step_id*  
- O número de identificação da etapa neste trabalho a ser executado se a etapa falhar e *fail_action* é **4**. *fail_step_id* está **int**, com um padrão NULL.  
+`[ @on_fail_step_id = ] fail_step_id` O número de identificação da etapa neste trabalho a ser executado se a etapa falhar e *fail_action* é **4**. *fail_step_id* está **int**, com um padrão NULL.  
   
- [  **@server =**] **'**_servidor_**'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *servidor* está **nvarchar (128)**, com um padrão NULL.  
+`[ @server = ] 'server'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *servidor* está **nvarchar (128)**, com um padrão NULL.  
   
- [  **@database_name =**] **'**_banco de dados_**'**  
- O nome do banco de dados no qual executar uma etapa [!INCLUDE[tsql](../../includes/tsql-md.md)]. *banco de dados*está **sysname**. Os nomes entre colchetes ([ ]) não são permitidos. O valor padrão é NULL.  
+`[ @database_name = ] 'database'` O nome do banco de dados no qual executar um [!INCLUDE[tsql](../../includes/tsql-md.md)] etapa. *banco de dados*está **sysname**. Os nomes entre colchetes ([ ]) não são permitidos. O valor padrão é NULL.  
   
- [  **@database_user_name =**] **'**_usuário_**'**  
- O nome da conta de usuário a ser usada ao executar uma etapa [!INCLUDE[tsql](../../includes/tsql-md.md)]. *usuário*está **sysname**, com um padrão NULL.  
+`[ @database_user_name = ] 'user'` O nome da conta de usuário para usar ao executar um [!INCLUDE[tsql](../../includes/tsql-md.md)] etapa. *usuário*está **sysname**, com um padrão NULL.  
   
- [  **@retry_attempts =**] *retry_attempts*  
- O número de novas tentativas a serem usadas se esta etapa apresentar falha. *retry_attempts*está **int**, com um padrão NULL.  
+`[ @retry_attempts = ] retry_attempts` O número de novas tentativas a ser usado se a etapa atual falhar. *retry_attempts*está **int**, com um padrão NULL.  
   
- [  **@retry_interval =**] *intervalo_de_repetição*  
- A quantidade de tempo, em minutos, entre as novas tentativas. *intervalo_de_repetição* está **int**, com um padrão NULL.  
+`[ @retry_interval = ] retry_interval` A quantidade de tempo em minutos entre as tentativas de repetição. *intervalo_de_repetição* está **int**, com um padrão NULL.  
   
- [  **@os_run_priority =**] *run_priority*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @os_run_priority = ] run_priority` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@output_file_name =**] **'**_file_name_**'**  
- O nome do arquivo no qual a saída desta etapa é gravado. *file_name* está **nvarchar(200)**, com um padrão NULL. Este parâmetro é válido somente com comandos executados nos subsistemas do [!INCLUDE[tsql](../../includes/tsql-md.md)] ou CmdExec.  
+`[ @output_file_name = ] 'file_name'` O nome do arquivo no qual a saída desta etapa é salvo. *file_name* está **nvarchar(200)**, com um padrão NULL. Este parâmetro é válido somente com comandos executados nos subsistemas do [!INCLUDE[tsql](../../includes/tsql-md.md)] ou CmdExec.  
   
  Para definir output_file_name novamente como NULL, você deve definir *output_file_name* em uma cadeia de caracteres vazia (' ') ou em uma cadeia de caracteres em branco, mas você não pode usar o **CHAR(32)** função. Por exemplo, defina este argumento como uma cadeia de caracteres vazios como segue:  
   
  **@output_file_name = ' '**  
   
- [  **@flags =**] *sinalizadores*  
- Uma opção que controla comportamento. *sinalizadores* está **int**, e pode ser um destes valores.  
+`[ @flags = ] flags` Uma opção que controla comportamento. *sinalizadores* está **int**, e pode ser um destes valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -148,11 +128,9 @@ sp_update_jobstep
 |**8**|Grava o log na tabela (substitui o histórico existente)|  
 |**16**|Grava o log na tabela (anexa ao histórico existente)|  
   
- [ **@proxy_id**=] *proxy_id*  
- O número da ID do proxy com o qual a etapa de trabalho é executada. *proxy_id* é do tipo **int**, com um padrão NULL. Se nenhum *proxy_id* for especificado, nenhum *proxy_name* for especificado e nenhuma *user_name* for especificado, a etapa de trabalho é executado como a conta de serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente.  
+`[ @proxy_id = ] proxy_id` O número de identificação do que a etapa de trabalho é executado como proxy. *proxy_id* é do tipo **int**, com um padrão NULL. Se nenhum *proxy_id* for especificado, nenhum *proxy_name* for especificado e nenhuma *user_name* for especificado, a etapa de trabalho é executado como a conta de serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente.  
   
- [ **@proxy_name**=] **'**_proxy_name_**'**  
- O nome do proxy com o qual a etapa de trabalho é executada. *proxy_name* é do tipo **sysname**, com um padrão NULL. Se nenhum *proxy_id* for especificado, nenhum *proxy_name* for especificado e nenhuma *user_name* for especificado, a etapa de trabalho é executado como a conta de serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente.  
+`[ @proxy_name = ] 'proxy_name'` O nome do que a etapa de trabalho é executado como proxy. *proxy_name* é do tipo **sysname**, com um padrão NULL. Se nenhum *proxy_id* for especificado, nenhum *proxy_name* for especificado e nenhuma *user_name* for especificado, a etapa de trabalho é executado como a conta de serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

@@ -19,12 +19,12 @@ ms.assetid: 864fd0e6-9d61-4f07-92ef-145318d2f881
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 06520164758a50d604b2effbdae23f73dde7128c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 29a95b506fbbfb5342410d8d393f0091dd98834b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763514"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534458"
 ---
 # <a name="spupdateproxy-transact-sql"></a>sp_update_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,26 +48,19 @@ sp_update_proxy
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@proxy_id**= ] *id*  
- O número de identificação de proxy do proxy a ser alterado. O *proxy_id* é **int**, com um padrão NULL.  
+`[ @proxy_id = ] id` O número de identificação de proxy do proxy a ser alterado. O *proxy_id* é **int**, com um padrão NULL.  
   
- [ **@proxy_name**= ] **'***proxy_name***'**  
- O nome do proxy a ser alterado. O *proxy_name* é **sysname**, com um padrão NULL.  
+`[ @proxy_name = ] 'proxy_name'` O nome do proxy a ser alterado. O *proxy_name* é **sysname**, com um padrão NULL.  
   
- [ **@credential_name** =] **'***credential_name***'**  
- O nome da nova credencial para o proxy. O *credential_name* é **sysname**, com um padrão NULL. Qualquer um dos *credential_name* ou *credential_id* pode ser especificado.  
+`[ @credential_name = ] 'credential_name'` O nome da nova credencial para o proxy. O *credential_name* é **sysname**, com um padrão NULL. Qualquer um dos *credential_name* ou *credential_id* pode ser especificado.  
   
- [ **@credential_id** =] *credential_id*  
- O número de identificação da nova credencial para o proxy. O *credential_id* é **int**, com um padrão NULL. Qualquer um dos *credential_name* ou *credential_id* pode ser especificado.  
+`[ @credential_id = ] credential_id` O número de identificação da nova credencial para o proxy. O *credential_id* é **int**, com um padrão NULL. Qualquer um dos *credential_name* ou *credential_id* pode ser especificado.  
   
- [ **@new_name**= ] **'***new_name***'**  
- O novo nome do proxy. O *new_name* é **sysname**, com um padrão NULL. Quando fornecido, o procedimento altera o nome do proxy a ser *new_name*. Quando esse argumento for NULL, o nome do proxy permanecerá inalterado.  
+`[ @new_name = ] 'new_name'` O novo nome do proxy. O *new_name* é **sysname**, com um padrão NULL. Quando fornecido, o procedimento altera o nome do proxy a ser *new_name*. Quando esse argumento for NULL, o nome do proxy permanecerá inalterado.  
   
- [ **@enabled** =] *is_enabled*  
- É se o proxy está habilitado. O *is_enabled* sinalizador é **tinyint**, com um padrão NULL. Quando *is_enabled* é **0**, o proxy não está habilitado e não pode ser usado por uma etapa de trabalho. Quando esse argumento for NULL, o status do proxy permanecerá inalterado.  
+`[ @enabled = ] is_enabled` É se o proxy está habilitado. O *is_enabled* sinalizador é **tinyint**, com um padrão NULL. Quando *is_enabled* é **0**, o proxy não está habilitado e não pode ser usado por uma etapa de trabalho. Quando esse argumento for NULL, o status do proxy permanecerá inalterado.  
   
- [ **@description**=] **'***descrição***'**  
- A nova descrição do proxy. O *descrição* é **nvarchar(512)**, com um padrão NULL. Quando esse argumento for NULL, a descrição do proxy permanecerá inalterada.  
+`[ @description = ] 'description'` A nova descrição do proxy. O *descrição* é **nvarchar(512)**, com um padrão NULL. Quando esse argumento for NULL, a descrição do proxy permanecerá inalterada.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

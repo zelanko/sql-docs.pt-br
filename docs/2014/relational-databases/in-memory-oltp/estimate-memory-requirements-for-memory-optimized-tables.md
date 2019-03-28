@@ -10,12 +10,12 @@ ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 37931bd25b0a2024e555a7881397fd558d2f260a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 15b3b27f859b2ea2ed3008d33f19a682aeef833b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509234"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533460"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Estimar requisitos de memória para tabelas com otimização de memória
   Se você estiver criando um novo [!INCLUDE[hek_2](../../includes/hek-2-md.md)] tabela com otimização de memória ou migrar uma tabela existente com base em disco para uma tabela com otimização de memória, é importante ter uma estimativa razoável das necessidades de memória de cada tabela, portanto, você pode provisionar o servidor com o suficiente memória. Esta seção descreve como estimar a quantidade de memória necessária para manter dados para uma tabela com otimização de memória.  
@@ -39,7 +39,7 @@ ms.locfileid: "52509234"
 ##  <a name="bkmk_ExampleTable"></a> Exemplo de tabela com otimização de memória  
  Considere o esquema de tabela com otimização de memória a seguir:  
   
-```tsql  
+```sql  
   
 CREATE TABLE t_hk (  
 col1 int NOT NULL PRIMARY KEY NONCLUSTERED,  
@@ -86,7 +86,7 @@ GO
   
  Os índices de hash atingem muito rápido pesquisas de igualdade como:  
   
-```tsql  
+```sql  
   
 SELECT * FROM t_hk  
    WHERE Col2 = 3  
@@ -95,7 +95,7 @@ SELECT * FROM t_hk
   
  Os índices não clusterizados são mais rápidos para pesquisas de intervalo como:  
   
-```tsql  
+```sql  
   
 SELECT * FROM t_hk  
    WHERE Col2 >= 3  
@@ -104,7 +104,7 @@ SELECT * FROM t_hk
   
  Se você estiver migrando uma tabela com base em disco, poderá usar o seguinte para determinar o número de valores exclusivos para o índice t1c2_index.  
   
-```tsql  
+```sql  
   
 SELECT COUNT(DISTINCT [Col2])  
   FROM t_hk  
@@ -144,7 +144,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  Os índices não clusterizados são os melhores quando usado para pesquisas de intervalo, como exemplificadas pela seguinte consulta:  
   
-```tsql  
+```sql  
   
 SELECT * FROM t_hk  
    WHERE c2 > 5  

@@ -1,5 +1,5 @@
 ---
-title: sp_cdc_change_job (Transact-SQL) | Microsoft Docs
+title: sys.sp_cdc_change_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,12 +20,12 @@ ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cfbf93fc858f52cd35401bd80fe5ede7dee86a3d
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 644873dd367705b02c3d14fcc7d95e0c9c81736e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591740"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536098"
 ---
 # <a name="sysspcdcchangejob-transact-sql"></a>sys.sp_cdc_change_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,21 +48,17 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@job_type=** ] **'**_job_type_**'**  
- Tipo de trabalho a ser modificado. *job_type* está **nvarchar (20)** com um padrão de 'capture'. As entradas válidas são 'capture' e 'cleanup'.  
+`[ @job_type = ] 'job_type'` Tipo de trabalho a ser modificado. *job_type* está **nvarchar (20)** com um padrão de 'capture'. As entradas válidas são 'capture' e 'cleanup'.  
   
- [ **@maxtrans** ] **=** _max_trans_  
- O número máximo de transações a processar em cada ciclo de exame. *max_trans* está **int** com um padrão NULL, que indica nenhuma alteração para esse parâmetro. Se especificado, o valor deve ser um inteiro positivo.  
+`[ @maxtrans ] = max_trans_` Número máximo de transações a serem processadas em cada ciclo de verificação. *max_trans* está **int** com um padrão NULL, que indica nenhuma alteração para esse parâmetro. Se especificado, o valor deve ser um inteiro positivo.  
   
  *max_trans* é válido somente para trabalhos de captura.  
   
- [ **@maxscans** ] **=** _max_scans_  
- O número máximo de ciclos de exame a executar para extrair todas as linhas do log. *max_scans* está **int** com um padrão NULL, que indica nenhuma alteração para esse parâmetro.  
+`[ @maxscans ] = max_scans_` Número máximo de ciclos de exame a executar para extrair todas as linhas do log. *max_scans* está **int** com um padrão NULL, que indica nenhuma alteração para esse parâmetro.  
   
  *max_scan* é válido somente para trabalhos de captura.  
   
- [ **@continuous** ] **=** _contínua_  
- Indica se o trabalho de captura deve ser executado continuamente (1) ou apenas uma vez (0). *contínua* está **bit** com um padrão NULL, que indica nenhuma alteração para esse parâmetro.  
+`[ @continuous ] = continuous_` Indica se o trabalho de captura deve ser executado continuamente (1), ou apenas uma vez (0). *contínua* está **bit** com um padrão NULL, que indica nenhuma alteração para esse parâmetro.  
   
  Quando *contínua* = 1, o [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) trabalho examina o log e processa até (*max_trans* \* *max_scans*) transações. Ele, em seguida, aguardará o número de segundos especificado no *polling_interval* antes de iniciar a próxima verificação de log.  
   
@@ -74,18 +70,15 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
  *contínua* é válido somente para trabalhos de captura.  
   
- [ **@pollinginterval** ] **=** _polling_interval_  
- Número de segundos entre ciclos de exame de log. *polling_interval* está **bigint** com um padrão NULL, que indica nenhuma alteração para esse parâmetro.  
+`[ @pollinginterval ] = polling_interval_` Número de segundos entre ciclos de exame de log. *polling_interval* está **bigint** com um padrão NULL, que indica nenhuma alteração para esse parâmetro.  
   
  *polling_interval* é válido somente para captura de trabalhos quando *contínua* é definido como 1.  
   
- [ **@retention** ] **=** _retenção_  
- O número de minutos que as linhas de alteração devem ser retidas em tabelas de alteração. *retenção* está **bigint** com um padrão NULL, que indica nenhuma alteração para esse parâmetro. O valor máximo é 52494800 (100 anos). Se especificado, o valor deve ser um inteiro positivo.  
+`[ @retention ] = retention_` Número de minutos que as linhas de alteração serão retidas em tabelas de alteração. *retenção* está **bigint** com um padrão NULL, que indica nenhuma alteração para esse parâmetro. O valor máximo é 52494800 (100 anos). Se especificado, o valor deve ser um inteiro positivo.  
   
  *retenção* é válido somente para trabalhos de limpeza.  
   
- [  **@threshold=** ] **'**_excluir limite_**'**  
- O número máximo de entradas de exclusão que podem ser excluídas por meio de uma única instrução na limpeza. *excluir o limite* está **bigint** com um padrão NULL, que indica nenhuma alteração para esse parâmetro. *Excluir limite* é válido somente para trabalhos de limpeza.  
+`[ @threshold = ] 'delete threshold'` Número máximo de entradas de exclusão que podem ser excluídas usando uma única instrução na limpeza. *excluir o limite* está **bigint** com um padrão NULL, que indica nenhuma alteração para esse parâmetro. *Excluir limite* é válido somente para trabalhos de limpeza.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -118,7 +111,7 @@ EXECUTE sys.sp_cdc_change_job
 GO  
 ```  
   
-### <a name="b-changing-a-cleanup-job"></a>b. Alterando um trabalho de limpeza  
+### <a name="b-changing-a-cleanup-job"></a>B. Alterando um trabalho de limpeza  
  O exemplo a seguir atualiza um trabalho de limpeza no banco de dados `AdventureWorks2012`. Todos os parâmetros válidos para esse tipo de trabalho, exceto **@threshold**, são especificados. O valor de **@threshold** não é modificado.  
   
 ```  
@@ -131,7 +124,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
+ [dbo.cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
  [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
  [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
   

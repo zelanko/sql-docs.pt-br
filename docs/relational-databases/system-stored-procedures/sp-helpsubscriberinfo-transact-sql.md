@@ -16,12 +16,12 @@ ms.assetid: fbabe1ec-57cf-425c-bae7-af7f5d3198fd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 14ab67bb9d69272960bbce3e1a7cfa059c609e3f
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 18a1de1e3b7dc1f312094a9023e0af9df014214b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589800"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526368"
 ---
 # <a name="sphelpsubscriberinfo-transact-sql"></a>sp_helpsubscriberinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@subscriber =** ] **'**_assinante_**'**  
- É o nome do Assinante. *assinante* está **sysname**, com um padrão de **%**, que retorna todas as informações.  
+`[ @subscriber = ] 'subscriber'` É o nome do assinante. *assinante* está **sysname**, com um padrão de **%**, que retorna todas as informações.  
   
- [  **@publisher =** ] **'**_publisher_**'**  
- É o nome do Publicador. *Publisher* está **sysname**e assume como padrão o nome do servidor atual.  
+`[ @publisher = ] 'publisher'` É o nome do publicador. *Publisher* está **sysname**e assume como padrão o nome do servidor atual.  
   
 > [!NOTE]  
 >  *publicador* não deve ser especificado, exceto quando ele for um publicador Oracle.  

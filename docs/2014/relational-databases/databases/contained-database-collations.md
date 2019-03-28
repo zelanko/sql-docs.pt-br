@@ -12,12 +12,12 @@ ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8bb735093eb7b2e41e1822facca6c03ace45a911
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f1345051d06493a456172a183defce3a8bd555ca
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789698"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526508"
 ---
 # <a name="contained-database-collations"></a>Ordenações de banco de dados independentes
   Várias propriedades afetam a ordem de classificação e a semântica de igualdade dos dados textuais, incluindo diferenciação de maiúsculas e minúsculas, distinção de acentos e o idioma base em uso. Essas qualidades são demonstradas para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pela escolha da ordenação dos dados. Para obter uma discussão mais detalhada sobre as ordenações, consulte [Suporte a ordenações e a Unicode](../collations/collation-and-unicode-support.md).  
@@ -32,13 +32,13 @@ ms.locfileid: "52789698"
 ### <a name="example-1"></a>Exemplo 1  
  Por exemplo, se estivéssemos trabalhando em Beijing, nós poderíamos usar uma ordenação de chinês:  
   
-```tsql  
+```sql  
 ALTER DATABASE MyDB COLLATE Chinese_Simplified_Pinyin_100_CI_AS;  
 ```  
   
  Agora, se criarmos uma coluna, sua ordenação padrão será essa ordenação de chinês, mas podemos escolher outra se quisermos:  
   
-```tsql  
+```sql  
 CREATE TABLE MyTable  
       (mycolumn1 nvarchar,  
       mycolumn2 nvarchar COLLATE Frisian_100_CS_AS);  
@@ -51,7 +51,7 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```tsql  
+```sql  
 name            collation_name  
 --------------- ----------------------------------  
 mycolumn1       Chinese_Simplified_Pinyin_100_CI_AS  
@@ -63,7 +63,7 @@ mycolumn2       Frisian_100_CS_AS
 ### <a name="example-2"></a>Exemplo 2  
  Por exemplo, considere o banco de dados (chinês) acima quando usado em uma instância com uma ordenação **Latin1_General**:  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max)) ;  
@@ -87,7 +87,7 @@ JOIN #T2
   
  Podemos corrigir isso agrupando explicitamente a tabela temporária. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] torna isso um pouco mais fácil ao fornecer a palavra-chave `DATABASE_DEFAULT` para a cláusula `COLLATE`.  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max) COLLATE DATABASE_DEFAULT);  
@@ -137,7 +137,7 @@ END;
   
  No exemplo de tabela temp descrito anteriormente, podemos ver que esse comportamento de ordenação elimina a necessidade de uma cláusula `COLLATE` explícita na maioria dos usos da tabela temp. Em um banco de dados contido, esse código agora é executado sem erro, mesmo que as ordenações de banco de dados e de instância sejam diferentes:  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max));  

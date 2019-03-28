@@ -16,12 +16,12 @@ ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c868fe69df1f3fd34fe0c1f550507e7db7b6c944
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 42d64a5a62fd1d1371604c7d8311ba42dabf7861
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823420"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529708"
 ---
 # <a name="spreplcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@maxtrans=**] *maxtrans*  
- É o número de transações para retornar informações sobre. *maxtrans* está **int**, com um padrão de **1**, que especifica a próxima transação à espera de distribuição.  
+`[ @maxtrans = ] maxtrans` É o número de transações para retornar informações sobre. *maxtrans* está **int**, com um padrão de **1**, que especifica a próxima transação à espera de distribuição.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -51,7 +50,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |**id do artigo**|**int**|A ID do artigo.|  
 |**partial_command**|**bit**|Indica se este é um comando parcial ou não.|  
 |**command**|**varbinary(1024)**|O valor do comando.|  
-|**Xactid**|**binary(10)**|ID da transação.|  
+|**xactid**|**binary(10)**|ID da transação.|  
 |**xact_seqno**|**varbinary(16)**|O número de sequência da transação.|  
 |**publication_id**|**int**|A ID da publicação.|  
 |**command_id**|**int**|ID do comando em [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md).|  

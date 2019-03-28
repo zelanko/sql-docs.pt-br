@@ -15,12 +15,12 @@ ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ccd9e2be26c8d514e17a4aa03af422cd648fe426
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 31afdbb14229fa7c0eaf13f1b3a215e31356945f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666595"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528808"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>Índice espacial procedimentos armazenados – argumentos e propriedades
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,16 +41,13 @@ ms.locfileid: "51666595"
 -   [sp_help_spatial_geography_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@tabname =**] **'***tabname***'**  
- É o nome qualificado ou não da tabela para a qual o índice espacial foi especificado.  
+`[ @tabname = ] 'tabname'` É o nome qualificado ou da tabela para a qual o índice espacial foi especificado.  
   
  As aspas somente serão requeridas se uma tabela qualificada for especificada. Se um nome completamente qualificado, incluindo um nome de banco de dados, for fornecido, o nome do banco de dados deverá ser o nome do banco de dados atual. *tabname* está **nvarchar**(776), sem padrão.  
   
- [  **@indexname =** ] **'***indexname***'**  
- É o nome do índice espacial especificado. *indexName* está **sysname** sem nenhum padrão.  
+`[ @indexname = ] 'indexname'` É o nome do índice espacial especificado. *indexName* está **sysname** sem nenhum padrão.  
   
- [  **@verboseoutput =** ] **'***verboseoutput***'**  
- É o intervalo dos nomes de propriedade e valores a ser retornado.  
+`[ @verboseoutput = ] 'verboseoutput'` É o intervalo de nomes de propriedade e valores a serem retornados.  
   
  0 = propriedades principais  
   
@@ -58,11 +55,9 @@ ms.locfileid: "51666595"
   
  *verboseoutput* está **tinyint** sem nenhum padrão.  
   
- [  **@query_sample =** ] **'***query_sample***'**  
- É um exemplo de consulta representativo que pode ser usado para testar a utilidade do índice. Pode ser um objeto representativo ou uma janela de consulta. *query_sample* está **geometria** sem nenhum padrão.  
+`[ @query_sample = ] 'query_sample'` É um exemplo de consulta representativo que pode ser usado para testar a utilidade do índice. Pode ser um objeto representativo ou uma janela de consulta. *query_sample* está **geometria** sem nenhum padrão.  
   
- [  **@xml_output =** ] **'***xml_output***'**  
- É um parâmetro de saída que retorna o conjunto de resultados em um fragmento XML. *xml_output* está **xml** sem nenhum padrão.  
+`[ @xml_output = ] 'xml_output'` Um parâmetro de saída que retorna o resultado é definido em um fragmento XML. *xml_output* está **xml** sem nenhum padrão.  
   
 ## <a name="properties"></a>Propriedades  
  Definir **@verboseoutput** = 0 para retornar as propriedades principais, conforme mostrado na tabela a seguir. **@verboseoutput** > 0 para retornar todas as propriedades do índice espacial.  
@@ -70,7 +65,7 @@ ms.locfileid: "51666595"
  **Base_Table_Rows**  
  O número de linhas da tabela base. O valor é **bigint**.  
   
- **Colunas Bounding_Box_xmin**  
+ **Bounding_Box_xmin**  
  Mínimo de X delimitadora do índice espacial para propriedades da caixa **geometria** tipo. Esse valor da propriedade é NULL para **geografia**tipo. O valor é **float**.  
   
  **Bounding_Box_ymin**  

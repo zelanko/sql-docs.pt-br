@@ -10,12 +10,12 @@ ms.assetid: e365e9ca-c34b-44ae-840c-10e599fa614f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aced288e62fefe46777993fd46130b8dd65e8d1b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 26f0193d40a01858bc3fe651a23b389a4ffcb6ea
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510019"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527788"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>Diretrizes para níveis de isolamento da transação com tabelas com otimização de memória
   Em vários cenários, você deve especificar o nível de isolamento da transação. O isolamento da transação para tabelas com otimização de memória difere das tabelas baseadas em disco.  
@@ -62,7 +62,7 @@ ms.locfileid: "52510019"
   
  O exemplo de transação de confirmação automática a seguir mostra uma junção entre uma tabela com otimização de memória Customers e uma tabela normal [Order History], como parte de um lote ad hoc:  
   
-```tsql  
+```sql  
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
 GO  
 SELECT *   
@@ -73,7 +73,7 @@ LEFT JOIN dbo.[Order History] AS oh
   
  O seguinte exemplo de transações explícitas ou implícitas mostra a mesma junção, mas dessa vez em uma transação de usuário explícita. A tabela com otimização de memória Customers é acessada no isolamento de instantâneo, conforme indicado através da dica de tabela WITH (SNAPSHOT), e a tabela [Order History] normal é acessada no isolamento de leitura confirmada:  
   
-```tsql  
+```sql  
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED  
 GO  
 BEGIN TRAN  
@@ -105,7 +105,7 @@ COMMIT
   
  Observe que a lógica de sondagem precisa estar fora do escopo da transação, pois ela está usando o isolamento de instantâneo para acessar a tabela t1. O uso da lógica de sondagem no escopo de uma transação criará uma transação demorada, que é uma prática incorreta.  
   
-```tsql  
+```sql  
 -- poll table  
 WHILE NOT EXISTS (SELECT 1 FROM dbo.t1)  
 BEGIN   

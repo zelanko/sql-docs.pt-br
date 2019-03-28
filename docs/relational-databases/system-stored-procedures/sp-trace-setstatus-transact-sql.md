@@ -18,12 +18,12 @@ ms.assetid: 29e7a7d7-b9c1-414a-968a-fc247769750d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2a350cf6b7f37aca830f4c74c23ce214f86376f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b71e79f28abb5932fc9a7a644bf466f848c1e6e7
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702384"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534798"
 ---
 # <a name="sptracesetstatus-transact-sql"></a>sp_trace_setstatus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,15 +43,13 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@traceid=** ] *trace_id*  
- É a ID do rastreamento a ser modificado. *trace_id* está **int**, sem padrão. O usuário emprega este *trace_id* valor para identificar, modificar e controlar o rastreamento. Para obter informações sobre como recuperar o *trace_id*, consulte [sys. fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md).  
+`[ @traceid = ] trace_id` É a ID do trace a ser modificado. *trace_id* está **int**, sem padrão. O usuário emprega este *trace_id* valor para identificar, modificar e controlar o rastreamento. Para obter informações sobre como recuperar o *trace_id*, consulte [sys. fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md).  
   
- [ **@status=** ] *status*  
- Especifica a ação a ser implementada no rastreamento. *status* está **int**, sem padrão.  
+`[ @status = ] status` Especifica a ação a ser implementada no rastreamento. *status* está **int**, sem padrão.  
   
  A tabela a seguir descreve o status que pode ser especificado.  
   
-|Status|Description|  
+|Status|Descrição|  
 |------------|-----------------|  
 |**0**|Interrompe o rastreamento especificado.|  
 |**1**|Inicia o rastreamento especificado.|  
@@ -63,7 +61,7 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
 ## <a name="return-code-values"></a>Valores do código de retorno  
  A tabela a seguir descreve os valores de código que os usuários podem obter após a conclusão do procedimento armazenado.  
   
-|Código de retorno|Description|  
+|Código de retorno|Descrição|  
 |-----------------|-----------------|  
 |**0**|Nenhum erro.|  
 |**1**|Erro desconhecido.|  

@@ -18,12 +18,12 @@ ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4c1e161a678b6834123aabf1eb5126445927a7fe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a8549d33b000744f4d8430ee306e0083455894c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650765"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531758"
 ---
 # <a name="sysmaildeletemailitemssp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +41,9 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@sent_before=** ] **'***sent_before***'**  
- Exclui emails até a data e hora fornecido como o *sent_before* argumento. *sent_before* está **datetime** com NULL como padrão. NULL indica todas as datas.  
+`[ @sent_before = ] 'sent_before'` Exclui emails até a data e hora fornecido como o *sent_before* argumento. *sent_before* está **datetime** com NULL como padrão. NULL indica todas as datas.  
   
- [ **@sent_status=** ] **'***sent_status***'**  
- Exclui emails do tipo especificado pelo *sent_status*. *sent_status* está **varchar(8)** sem nenhum padrão. As entradas válidas são **enviado**, **unsent**, **repetindo**, e **falha**. NULL indica todos os status.  
+`[ @sent_status = ] 'sent_status'` Exclui emails do tipo especificado pelo *sent_status*. *sent_status* está **varchar(8)** sem nenhum padrão. As entradas válidas são **enviado**, **unsent**, **repetindo**, e **falha**. NULL indica todos os status.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

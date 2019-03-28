@@ -15,12 +15,12 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5f432950cadf2b30b84dc00fd900737bfe21f81b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: c43fbe12b8449fb231ee9a2f479ff17ac0281493
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124886"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530748"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Criar um backup completo de banco de dados (SQL Server)
   Este tópico descreve como criar um backup de banco de dados completo no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)]ou PowerShell.  
@@ -50,7 +50,7 @@ ms.locfileid: "54124886"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   A instrução BACKUP não é permitida em uma transação explícita ou implícita.  
   
@@ -170,7 +170,7 @@ ms.locfileid: "54124886"
 > [!NOTE]  
 >  Alternativamente, é possível usar o Assistente de Plano de Manutenção para criar backups de bancos de dados.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-create-a-full-database-backup"></a>Para criar um backup de banco de dados completo  
   
@@ -204,7 +204,7 @@ ms.locfileid: "54124886"
          ENCRYPTION (ALGORITHM, SERVER CERTIFICATE |ASYMMETRIC KEY)  
          No SQL Server 2014 ou em versões posteriores somente, especifique o algoritmo de criptografia a ser usado, e o certificado ou chave assimétrica usada para proteger a criptografia.  
   
-         Descrição **=** { **'*`text`*'** | **@**_text_ variável_ }  
+         DESCRIPTION **=** { **'*`text`*'** | **@**_text_variable_ }  
          Especifica o texto de forma livre que descreve o conjunto de backup. A cadeia de caracteres pode conter um máximo de 255 caracteres.  
   
          NAME **=** { *backup_set_name* | **@**_backup_set_name_var_ }  
@@ -227,7 +227,7 @@ ms.locfileid: "54124886"
 #### <a name="a-backing-up-to-a-disk-device"></a>A. Fazendo backup para um dispositivo de disco.  
  O exemplo a seguir faz backup de banco de dados completo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] em um disco, usando `FORMAT` para criar um novo conjunto de mídia.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BACKUP DATABASE AdventureWorks2012  
@@ -238,10 +238,10 @@ TO DISK = 'Z:\SQLServerBackups\AdventureWorks2012.Bak'
 GO  
 ```  
   
-#### <a name="b-backing-up-to-a-tape-device"></a>b. Fazendo backup para um dispositivo de fita  
+#### <a name="b-backing-up-to-a-tape-device"></a>B. Fazendo backup para um dispositivo de fita  
  O exemplo a seguir faz backup do banco de dados completo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]em fita, anexando o backup aos backups anteriores.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BACKUP DATABASE AdventureWorks2012  
@@ -254,7 +254,7 @@ GO
 #### <a name="c-backing-up-to-a-logical-tape-device"></a>C. Fazendo backup em um dispositivo de fita lógico  
  O exemplo a seguir cria um dispositivo de backup lógico para uma unidade de fita. O exemplo faz backup completo do banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] nesse dispositivo.  
   
-```tsql  
+```sql  
 -- Create a logical backup device,   
 -- AdventureWorks2012_Bak_Tape, for tape device \\.\tape0.  
 USE master;  

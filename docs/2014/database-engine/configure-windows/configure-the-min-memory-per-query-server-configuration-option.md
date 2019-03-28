@@ -15,12 +15,12 @@ ms.assetid: ecd3fb79-b4a6-432f-9ef5-530e0d42d5a6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 185ad6db579052c127c73c1770283e877174ab31
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: dfee7265529419aecf2b05831503ed134b93f525
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640067"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529598"
 ---
 # <a name="configure-the-min-memory-per-query-server-configuration-option"></a>Configurar a opção min memory per query de configuração de servidor
   Este tópico descreve como configurar o `min memory per query` na opção de configuração do servidor [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. O `min memory per query` opção especifica a quantidade mínima de memória (em quilobytes) que será alocada para a execução de uma consulta. Por exemplo, se `min memory per query` é definida como 2.048 KB, é garantido que a consulta obter no mínimo esse total de memória. O valor padrão é 1.024 KB. O valor mínimo é de 512 KB e o valor máximo é 2.147.483.647 KB (2 GB).  
@@ -45,7 +45,7 @@ ms.locfileid: "52640067"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   A opção amount of min memory per query tem precedência sobre a [Opção index create memory](configure-the-index-create-memory-server-configuration-option.md). Quando ambas as opções são modificadas, e a index create memory é inferior à min memory per query, você recebe uma mensagem de aviso, mas o valor é definido. Durante a execução da consulta, você receberá um outro aviso semelhante.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "52640067"
   
 3.  Na caixa **Memória mínima por consulta** , insira a quantidade mínima de memória (em quilobytes) que será alocada para a execução de uma consulta.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-configure-the-min-memory-per-query-option"></a>Para configurar a opção min memory per query  
   
@@ -80,7 +80,7 @@ ms.locfileid: "52640067"
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo mostra como usar [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) para definir o valor da opção `min memory per query` como `3500` KB.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'show advanced options', 1;  
@@ -94,7 +94,7 @@ GO
   
 ```  
   
-##  <a name="FollowUp"></a> Acompanhar: Depois de configurar a opção min memory per query  
+##  <a name="FollowUp"></a> Acompanhamento: Depois de configurar a opção min memory per query  
  A configuração entra em vigor imediatamente sem reiniciar o servidor.  
   
 ## <a name="see-also"></a>Consulte também  

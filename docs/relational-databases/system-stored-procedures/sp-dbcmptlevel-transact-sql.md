@@ -18,12 +18,12 @@ ms.assetid: 508c686d-2bd4-41ba-8602-48ebca266659
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 094235cd508f4265a68861de60e9e4c2d35ee4b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96bd1aa87dba90963588db74935294c0dcdd8f0b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841784"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527418"
 ---
 # <a name="spdbcmptlevel-transact-sql"></a>sp_dbcmptlevel (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,9 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@dbname=** ] *nome*  
- É o nome do banco de dados para o qual o nível de compatibilidade será alterado. Os nomes de banco de dados devem obedecer às regras para identificadores. *nome da* está **sysname**, com um padrão NULL.  
+`[ @dbname = ] name` É o nome do banco de dados para o qual o nível de compatibilidade deve ser alterado. Os nomes de banco de dados devem obedecer às regras para identificadores. *nome da* está **sysname**, com um padrão NULL.  
   
- [  **@new_cmptlevel=** ] *versão*  
- É a versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com a qual o banco de dados será compatível. *versão* está **tinyint**, com um padrão NULL. O valor deve ser um dos seguintes:  
+`[ @new_cmptlevel = ] version` É a versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com que o banco de dados é compatível. *versão* está **tinyint**, com um padrão NULL. O valor deve ser um dos seguintes:  
   
  **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
   

@@ -12,12 +12,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 889c6d1b1a4e61286a96c2b57acd1a1148a069a4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 69d37727f321e4fd2f38ca30184baba6ab432fe9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043377"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530398"
 ---
 # <a name="spdatatypeinfo90-sql-data-warehouse"></a>sp_datatype_info_90 (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -36,11 +36,9 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@data_type=** ] *data_type*  
- É o número de código do tipo de dados especificado. Para obter uma lista de todos os tipos de dados, omita este parâmetro. *data_type* está **int**, com um padrão de 0.  
+`[ @data_type = ] data_type` É o número de código para o tipo de dados especificado. Para obter uma lista de todos os tipos de dados, omita este parâmetro. *data_type* está **int**, com um padrão de 0.  
   
- [ **@ODBCVer=** ] *odbc_version*  
- É a versão do ODBC usada. *odbc_version* está **tinyint**, com um padrão de 2.  
+`[ @ODBCVer = ] odbc_version` É a versão do ODBC que é usado. *odbc_version* está **tinyint**, com um padrão de 2.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  None  

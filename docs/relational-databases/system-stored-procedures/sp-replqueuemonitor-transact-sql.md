@@ -16,12 +16,12 @@ ms.assetid: 6909a3f1-43a2-4df5-a6a5-9e6f347ac841
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e8eb21085625c7f2f0071c18da80501774088fdc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3f174940b27adbaba75efd6660f09140c403bf8b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789368"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529878"
 ---
 # <a name="spreplqueuemonitor-transact-sql"></a>sp_replqueuemonitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,17 +42,13 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publisher** =] **'***publisher***'**  
- É o nome do Publicador. *Publisher* está **sysname**, com um padrão NULL. O servidor deve ser configurado para publicação. NULL para todos os Publicadores.  
+`[ @publisher = ] 'publisher'` É o nome do publicador. *Publisher* está **sysname**, com um padrão NULL. O servidor deve ser configurado para publicação. NULL para todos os Publicadores.  
   
- [ **@publisherdb** =] **'***publisher_db***'** ]  
- É o nome do banco de dados de publicação. *publisher_db* está **sysname**, com um padrão NULL. NULL para todos os bancos de dados de publicação.  
+`[ @publisherdb = ] 'publisher_db' ]` É o nome do banco de dados de publicação. *publisher_db* está **sysname**, com um padrão NULL. NULL para todos os bancos de dados de publicação.  
   
- [ **@publication** =] **'***publicação***'** ]  
- É o nome da publicação. *publicação*está **sysname**, com um padrão NULL. NULL para todas as publicações.  
+`[ @publication = ] 'publication' ]` É o nome da publicação. *publicação*está **sysname**, com um padrão NULL. NULL para todas as publicações.  
   
- [ **@tranid** =] **'***tranid***'** ]  
- É a ID da transação. *tranid*está **sysname**, com um padrão NULL. NULL para todas as transações.  
+`[ @tranid = ] 'tranid' ]` É a ID da transação. *tranid*está **sysname**, com um padrão NULL. NULL para todas as transações.  
   
  [**@queuetype=** ] **'***queuetype***'** ]  
  É o tipo de fila que armazena transações. *queuetype* está **tinyint** com um padrão de **0**, e pode ser um destes valores.  

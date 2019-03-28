@@ -16,12 +16,12 @@ ms.assetid: df169b21-d10a-41df-b3a1-654cfb58bc21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 027e2f2f423024a374533decd6f35bb9bf7ccb3e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8a3f0fa918d0247f5fd6dbe11c4a91a2376c52dd
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760218"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530808"
 ---
 # <a name="spenumeratependingschemachanges-transact-sql"></a>sp_enumeratependingschemachanges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_enumeratependingschemachanges [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=** ] **'***publicação***'**  
- É o nome da publicação. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, sem padrão.  
   
- [  **@starting_schemaversion=** ] *starting_schemaversion*  
- É a alteração de esquema de número mais baixo a ser incluída no conjunto de resultados.  
+`[ @starting_schemaversion = ] starting_schemaversion` É a alteração de esquema de número mais baixa para incluir no conjunto de resultados.  
   
 ## <a name="result-set"></a>Conjunto de resultados  
   
@@ -51,7 +49,7 @@ sp_enumeratependingschemachanges [ @publication = ] 'publication'
 |-----------------|---------------|-----------------|  
 |**article_name**|**sysname**|Nome do artigo ao qual se aplica a alteração de esquema, ou **Publication-wide** para alterações de esquema que se aplicam a toda a publicação.|  
 |**schemaversion**|**int**|O número da alteração de esquema pendente.|  
-|**SchemaType**|**sysname**|Um valor de texto que representa o tipo de alteração de esquema.|  
+|**schematype**|**sysname**|Um valor de texto que representa o tipo de alteração de esquema.|  
 |**schematext**|**nvarchar(max)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] que descreve a alteração de esquema.|  
 |**schemastatus**|**nvarchar(10)**|Indica se uma alteração de esquema está pendente para o artigo, que pode ser um dos valores seguintes:<br /><br /> **Active Directory** = alteração de esquema está pendente<br /><br /> **inativo** = alteração de esquema está inativa<br /><br /> **Ignorar** = alteração de esquema não é replicada|  
 |**schemaguid**|**uniqueidentifier**|Identifica a alteração de esquema.|  

@@ -17,12 +17,12 @@ ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2ac104808f5d4e0b2b612c8f3ebbd17f34fc6493
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 86340f1bdb9b178c23295c61378d781e2d4a83cc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358578"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533238"
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Secundárias ativas: Réplicas secundárias legíveis (grupos de disponibilidade) Always On
   Os recursos secundários ativos do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] incluem suporte para acesso somente leitura para uma ou mais réplicas secundárias (*réplicas secundárias legíveis*). Uma réplica secundária legível permite acesso somente leitura a todos os seus bancos de dados secundários. No entanto, os bancos de dados secundários legíveis não são definidos como somente leitura. Eles são dinâmicos. Um banco de dados secundário determinado muda conforme as alterações nos dados do banco de dados primário correspondente são aplicadas ao banco de dados secundário. Para uma réplica secundária típica, os dados, incluindo tabelas com otimização de memória durável, nos bancos de dados secundários estão quase em tempo real. Além disso, os índices de texto completo são sincronizados com os bancos de dados secundários. Em muitas circunstâncias, a latência de dados entre um banco de dados primário e o banco de dados secundário correspondente é de somente alguns segundos.  
@@ -210,7 +210,7 @@ GO
   
 -   Para consultas que são executadas somente em tabelas com otimização de memória, os únicos níveis de isolamento com suporte são instantâneo, leitura repetível e serializável. Todas as consultas com nível de isolamento de leitura não confirmada ou confirmada retornarão um erro a menos que você habilite a opção MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT no nível do banco de dados.  
   
-    ```tsql  
+    ```sql  
     SET TRANSACTION ISOLATION LEVEL READ_COMMITTED  
     -- This is not allowed  
     BEGIN TRAN  
@@ -228,7 +228,7 @@ GO
   
 -   Nenhuma dica de bloqueio tem suporte em tabelas com otimização de memória. Por exemplo, todas as consultas a seguir falham com um erro. Somente a dica NOLOCK é permitida e é NOOP quando usada com tabelas com otimização de memória.  
   
-    ```tsql  
+    ```sql  
     SELECT * FROM t_hk WITH (PAGLOCK)  
     SELECT * FROM t_hk WITH (READPAST)  
     SELECT * FROM t_hk WITH (ROWLOCK)  
@@ -240,7 +240,7 @@ GO
   
 -   Para transações entre contêineres, as transações com nível de isolamento da sessão "instantâneo" que não há suporte para tabelas com otimização de memória de acesso. Por exemplo,  
   
-    ```tsql  
+    ```sql  
     SET TRANSACTION ISOLATION LEVEL SNAPSHOT  
     -- This is not allowed  
     BEGIN TRAN  

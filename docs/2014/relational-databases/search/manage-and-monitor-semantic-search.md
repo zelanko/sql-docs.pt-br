@@ -13,23 +13,23 @@ ms.assetid: eb5c3b29-da70-42aa-aa97-7d35a3f1eb98
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fa98ef3ab18aa3f5bff7045ae39d08b075c44148
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1d68b9452a03c127fe39018c19abab1073dae7c5
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107416"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534978"
 ---
 # <a name="manage-and-monitor-semantic-search"></a>Gerenciar e monitorar a pesquisa semântica
   Descreve o processo de indexação semântica e as tarefas relacionadas ao gerenciamento e monitoramento dos índices.  
   
-##  <a name="HowToMonitorStatus"></a> Como Verificar o Status da indexação semântica  
+##  <a name="HowToMonitorStatus"></a> Como: Verificar o status da indexação semântica  
  **A primeira fase da indexação semântica está concluída?**  
  Consulte a exibição de gerenciamento dinâmico [sys.dm_fts_index_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql) e verifique as colunas **status** e **status_description**.  
   
  A primeira fase da indexação inclui a população do índice de palavras-chave de texto completo e o índice de frases-chave semântico, além da extração de dados de similaridade de documentos.  
   
-```tsql  
+```sql  
 USE database_name  
 GO  
   
@@ -50,13 +50,13 @@ SELECT * FROM sys.dm_fts_semantic_similarity_population WHERE table_id = OBJECT_
 GO  
 ```  
   
-##  <a name="HowToCheckSize"></a> Como Verificar o tamanho dos índices semânticos  
+##  <a name="HowToCheckSize"></a> Como: Verificar o tamanho dos índices semânticos  
  **O que é o tamanho lógico de um índice de frases-chave semântico ou um índice de similaridade semântica de documentos?**  
  Consulte a exibição de gerenciamento dinâmico [sys.dm_db_fts_index_physical_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql).  
   
  O tamanho lógico é exibido em número de páginas de índice.  
   
-```tsql  
+```sql  
 USE database_name  
 GO  
   
@@ -67,7 +67,7 @@ GO
  **O que é o tamanho total dos índices de texto completo e semânticos para um catálogo de texto completo?**  
  Consulta a propriedade **IndexSize** da função de metadados [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql).  
   
-```tsql  
+```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'IndexSize')  
 GO  
 ```  
@@ -75,12 +75,12 @@ GO
  **Quantos itens são indexados nos índices de texto completo e semânticos para um catálogo de texto completo?**  
  Consulta a propriedade **ItemCount** da função de metadados [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql).  
   
-```tsql  
+```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'ItemCount')  
 GO  
 ```  
   
-##  <a name="HowToForcePopulation"></a> Como Forçar a população dos índices semânticos  
+##  <a name="HowToForcePopulation"></a> Como: Forçar a população dos índices semânticos  
  Você pode forçar a população de índices de texto completo e semânticos usando a cláusula START/STOP/PAUSE ou RESUME POPULATION com a mesma sintaxe e o comportamento descrito para índices de texto completo. Para obter mais informações, veja [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql) e [Popular índices de texto completo](../indexes/indexes.md).  
   
  Como a indexação semântica é dependente da indexação de texto completo, os índices semânticos são populados apenas quando os índices de texto completo associados são populados.  
@@ -103,7 +103,7 @@ GO
   
  Quando a indexação semântica é desabilitada e suspensa, as consultas em dados semânticos continuam a funcionar com êxito e retornar dados previamente indexados. Esse comportamento não é consistente com o comportamento da Pesquisa de Texto Completo.  
   
-```tsql  
+```sql  
 -- To disable semantic indexing on a table  
 USE database_name  
 GO  
@@ -133,7 +133,7 @@ GO
 2.  **Fase 2**. O índice semântico de similaridade de documentos é então populado. Esse índice depende de ambos os índices que foram populados na fase anterior.  
   
 ##  <a name="BestPracticeUnderstand"></a>   
-##  <a name="ProblemNotPopulated"></a> Problema: Os índices semânticos não são populados  
+##  <a name="ProblemNotPopulated"></a> Problema: os índices semânticos não são populados  
  **Os índices de texto completo associados são populados?**  
  Como a indexação semântica é dependente da indexação de texto completo, os índices semânticos são populados apenas quando os índices de texto completo associados são populados.  
   

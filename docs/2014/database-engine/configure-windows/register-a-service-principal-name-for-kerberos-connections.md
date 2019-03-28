@@ -16,12 +16,12 @@ ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5def842b7b65523d207433680ebd017536b7f2aa
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 5acd507be99d7ff36245e723d20aebc36f42a917
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130946"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529658"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Registrar um nome de entidade de serviço para conexões de Kerberos
   Para usar a autenticação Kerberos com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , é preciso satisfazer estas duas condições:  
@@ -100,7 +100,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 |-|-|  
 |MSSQLSvc/*fqdn:port*|O SPN padrão gerado pelo provedor quando o protocolo TCP é usado. *port* é um número de porta TCP.|  
 |MSSQLSvc/*fqdn*|O SPN padrão gerado pelo provedor para uma instância padrão quando um protocolo diferente de TCP é usado. *fqdn* é um nome de domínio totalmente qualificado.|  
-|MSSQLSvc /*fqdn:InstanceName*|O SPN padrão gerado pelo provedor para uma instância nomeada quando um protocolo diferente de TCP é usado. *InstanceName* é o nome de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|MSSQLSvc/*fqdn:InstanceName*|O SPN padrão gerado pelo provedor para uma instância nomeada quando um protocolo diferente de TCP é usado. *InstanceName* é o nome de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 ##  <a name="Auto"></a> Registro automático de SPN  
  Quando uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] é iniciada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta registrar o SPN para o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando a instância é interrompida, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta cancelar o SPN. Para uma conexão TCP/IP, o SPN é registrado no formato *MSSQLSvc/\<FQDN>*:*\<tcpport>*. Tanto as instâncias nomeadas quanto as instâncias padrão são registradas como *MSSQLSvc*, dependendo do valor *\<tcpport>* para fazer a diferenciação entre as instâncias.  
@@ -147,7 +147,7 @@ setspn -A MSSQLSvc/myhost.redmond.microsoft.com:instancename accountname
   
  Para determinar o método de autenticação de uma conexão, execute a seguinte consulta.  
   
-```tsql  
+```sql  
 SELECT net_transport, auth_scheme   
 FROM sys.dm_exec_connections   
 WHERE session_id = @@SPID;  

@@ -16,12 +16,12 @@ ms.assetid: b6e9e0d2-9144-434d-88af-4874f2582399
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d28ff96d07aa1b7e65097fbf7946b40dfb56adea
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e3d9af0e5eff8aff2715ff2be6caa1757702fb8b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808738"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529558"
 ---
 # <a name="spunregistercustomscripting-transact-sql"></a>sp_unregister_custom_scripting (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,21 +40,18 @@ sp_unregister_custom_scripting [ @type  = ] 'type'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@type** =] **'***tipo***'**  
- É o tipo de procedimento armazenado personalizado ou o script que está sendo removido. *tipo de* está **varchar(16)**, sem padrão e pode ser um dos valores a seguir.  
+`[ @type = ] 'type'` O tipo de procedimento armazenado personalizado ou script está sendo removido. *tipo de* está **varchar(16)**, sem padrão e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**insert**|Procedimento armazenado personalizado registrado ou script executado quando uma instrução INSERT é replicada.|  
-|**Atualização**|Procedimento armazenado personalizado registrado ou script executado quando uma instrução UPDATE é replicada.|  
+|**update**|Procedimento armazenado personalizado registrado ou script executado quando uma instrução UPDATE é replicada.|  
 |**delete**|Procedimento armazenado personalizado registrado ou script executado quando uma instrução DELETE é replicada.|  
 |**custom_script**|Procedimento armazenado personalizado registrado ou script executado ao término do gatilho DDL (Data Definition Language).|  
   
- [ **@publication** =] **'***publicação***'**  
- Nome da publicação para a qual o procedimento armazenado personalizado ou o script está sendo removido. *publicação* está **sysname**, com um padrão NULL.  
+`[ @publication = ] 'publication'` Nome da publicação para o qual o procedimento armazenado personalizado ou script está sendo removido. *publicação* está **sysname**, com um padrão NULL.  
   
- [ **@article** =] **'***artigo***'**  
- Nome do artigo para o qual o procedimento armazenado personalizado ou o script está sendo removido. *artigo* está **sysname**, com um padrão NULL.  
+`[ @article = ] 'article'` Nome do artigo para o qual o procedimento armazenado personalizado ou script está sendo removido. *artigo* está **sysname**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

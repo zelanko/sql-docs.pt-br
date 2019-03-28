@@ -21,12 +21,12 @@ ms.assetid: 525cfcfc-f317-478d-ba84-72e62285f160
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3d3e6ad6a0cf8ed5c84279b621badc939b1e97a8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ee22bbf5028959d0aab178924d38465c9d98b432
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791708"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527448"
 ---
 # <a name="spchecksubsetfilter-transact-sql"></a>sp_check_subset_filter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +45,11 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@filtered_table**=] **'***filtered_table***'**  
- É o nome de uma tabela filtrada. *filtered_table* está **nvarchar (400)**, sem padrão.  
+`[ @filtered_table = ] 'filtered_table'` É o nome de uma tabela filtrada. *filtered_table* está **nvarchar (400)**, sem padrão.  
   
- [ **@subset_filterclause** =] **'***subset_filterclause***'**  
- É a cláusula de filtro que está sendo testada. *subset_filterclause* está **nvarchar (1000)**, sem padrão.  
+`[ @subset_filterclause = ] 'subset_filterclause'` A cláusula de filtro está sendo testada. *subset_filterclause* está **nvarchar (1000)**, sem padrão.  
   
- [ **@has_dynamic_filters**=] *has_dynamic_filters*  
- Especifica se a cláusula de filtro é um filtro de linha com parâmetros. *has_dynamic_filters* está **bit**, com um padrão de NULL e é um parâmetro de saída. Retorna um valor de **1** quando a cláusula de filtro é um filtro de linha com parâmetros.  
+`[ @has_dynamic_filters = ] has_dynamic_filters` É se a cláusula de filtro é um filtro de linha com parâmetros. *has_dynamic_filters* está **bit**, com um padrão de NULL e é um parâmetro de saída. Retorna um valor de **1** quando a cláusula de filtro é um filtro de linha com parâmetros.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   

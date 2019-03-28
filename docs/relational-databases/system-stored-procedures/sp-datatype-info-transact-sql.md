@@ -18,12 +18,12 @@ ms.assetid: 045f3b5d-6bb7-4748-8b4c-8deb4bc44147
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b8d56f7989d3f0c76c3eaa46309ab029fc3d42d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3eadc5efc471f44998abddc596f1acc5c6e378ca
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601124"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527928"
 ---
 # <a name="spdatatypeinfo-transact-sql"></a>sp_datatype_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -41,18 +41,16 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@data_type=** ] *data_type*  
- É o número de código do tipo de dados especificado. Para obter uma lista de todos os tipos de dados, omita este parâmetro. *data_type* está **int**, com um padrão de 0.  
+`[ @data_type = ] data_type` É o número de código para o tipo de dados especificado. Para obter uma lista de todos os tipos de dados, omita este parâmetro. *data_type* está **int**, com um padrão de 0.  
   
- [ **@ODBCVer=** ] *odbc_version*  
- É a versão do ODBC usada. *odbc_version* está **tinyint**, com um padrão de 2.  
+`[ @ODBCVer = ] odbc_version` É a versão do ODBC que é usado. *odbc_version* está **tinyint**, com um padrão de 2.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  None  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |TYPE_NAME|**sysname**|Tipo de dados dependente do DBMS.|  
 |DATA_TYPE|**smallint**|Código do tipo ODBC para o qual são mapeadas todas as colunas deste tipo.|  
@@ -61,7 +59,7 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 |LITERAL_SUFFIX|**varchar(** 32 **)**|Caractere ou caracteres usados para terminar uma constante. Por exemplo, uma marca de aspas simples (**'**) para tipos de caractere e nenhuma aspa para binário.|  
 |CREATE_PARAMS|**varchar(** 32 **)**|Descrição dos parâmetros de criação para este tipo de dados. Por exemplo, **decimais** é "precision, scale" **float** for NULL, e **varchar** é "max_length".|  
 |NULLABLE|**smallint**|Especifica possibilidade de nulidade:<br /><br /> 1 = Permite valores nulos.<br /><br /> 0 = Não permite valores nulos.|  
-|CASE_SENSITIVE|**smallint**|Especifica diferenciação de maiúsculas e minúsculas.<br /><br /> 1 = Todas as colunas deste tipo fazem diferenciação de maiúsculas e minúsculas (para agrupamentos).<br /><br /> 0 = Todas as colunas deste tipo não fazem distinção entre maiúsculas e minúsculas.|  
+|CASE_SENSITIVE|**smallint**|Especifica diferenciação de maiúsculas e minúsculas.<br /><br /> 1 = Todas as colunas deste tipo fazem diferenciação de maiúsculas e minúsculas (para ordenações).<br /><br /> 0 = Todas as colunas deste tipo não fazem distinção entre maiúsculas e minúsculas.|  
 |SEARCHABLE|**smallint**|Especifica o recurso de pesquisa do tipo de coluna:<br /><br /> 1 = Não pode ser pesquisado.<br /><br /> 2 = Pesquisável com LIKE.<br /><br /> 3 = Pesquisável com WHERE.<br /><br /> 4 = Pesquisável com WHERE ou LIKE.|  
 |UNSIGNED_ATTRIBUTE|**smallint**|Especifica o sinal do tipo de dados.<br /><br /> 1 = Tipo de dados não assinado.<br /><br /> 0 = Tipo de dados assinado.|  
 |MONEY|**smallint**|Especifica o **dinheiro** tipo de dados.<br /><br /> 1 = **dinheiro** tipo de dados.<br /><br /> 0 = não é um **dinheiro** tipo de dados.|  

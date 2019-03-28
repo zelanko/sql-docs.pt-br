@@ -13,12 +13,12 @@ ms.assetid: cfbc6158-ab96-44b4-87eb-ea278c1b0c6b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c99c44ea6d73f9dde4984772d3aca77d77b9fcf7
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 106f4ca8951200110349809065b35ba65a7f8411
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52639394"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529488"
 ---
 # <a name="configure-the-remote-proc-trans-server-configuration-option"></a>Configurar a opção remote proc trans de configuração de servidor
   Este tópico descreve como configurar a opção de configuração de servidor **remote proc trans** no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A opção **remote proc trans** ajuda a proteger as ações de um procedimento servidor-para-servidor por meio de uma transação MS DTC (Coordenador de Transações Distribuídas da [!INCLUDE[msCoName](../../includes/msconame-md.md)] ).  
@@ -71,7 +71,7 @@ ms.locfileid: "52639394"
   
 3.  Em **Conexões de servidor remoto**, marque a caixa de seleção **Requer transações distribuídas para servidor para comunicação de servidor** .  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-configure-the-remote-proc-trans-option"></a>Para configurar a opção remote proc trans  
   
@@ -81,7 +81,7 @@ ms.locfileid: "52639394"
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo mostra como usar [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) para definir o valor da opção `remote proc trans` como `1`.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'remote proc trans', 1 ;  
@@ -93,7 +93,7 @@ GO
   
  Para obter mais informações, veja [Opções de configuração do servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Acompanhar: Depois de configurar a opção remote proc trans  
+##  <a name="FollowUp"></a> Acompanhamento: Depois de configurar a opção remote proc trans  
  A configuração entra em vigor imediatamente sem reiniciar o servidor.  
   
 ## <a name="see-also"></a>Consulte também  

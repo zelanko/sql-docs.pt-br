@@ -18,12 +18,12 @@ ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0ca437ccef3a986d4db7bf72d6017e0e2f515d3
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: ff94284ba1f60d40697ad5a1e209b284dfaaefdf
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588452"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535188"
 ---
 # <a name="spstoredprocedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@sp_name =** ] **'**_nome_**'**  
- É o nome do procedimento usado para retornar as informações do catálogo. *nome da* está **nvarchar(390)**, com um padrão NULL. Há suporte para a correspondência do padrão curinga.  
+`[ @sp_name = ] 'name'` É o nome do procedimento usado para retornar informações de catálogo. *nome da* está **nvarchar(390)**, com um padrão NULL. Há suporte para a correspondência do padrão curinga.  
   
- [  **@sp_owner =** ] **'**_esquema_**'**  
- É o nome do esquema ao qual o procedimento pertence. *esquema* está **nvarchar(384)**, com um padrão NULL. Há suporte para a correspondência do padrão curinga. Se *proprietário* não é especificado, serão aplicadas as regras de visibilidade de procedimento padrão do DBMS subjacente.  
+`[ @sp_owner = ] 'schema'` É o nome do esquema ao qual pertence o procedimento. *esquema* está **nvarchar(384)**, com um padrão NULL. Há suporte para a correspondência do padrão curinga. Se *proprietário* não é especificado, serão aplicadas as regras de visibilidade de procedimento padrão do DBMS subjacente.  
   
  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se o esquema atual contiver um procedimento com o nome especificado, será retornado esse procedimento. Se um procedimento armazenado não qualificado for especificado, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] procurará o procedimento na ordem seguinte:  
   
@@ -57,11 +55,9 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 -   O esquema **dbo** no banco de dados atual.  
   
- [  **@qualifier =** ] **'**_qualificador_**'**  
- É o nome do qualificador do procedimento. *qualificador* está **sysname**, com um padrão NULL. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas no formato (_qualificador_**.** _esquema_**.** _nome_. Na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *qualificador* representa o nome do banco de dados. Em alguns produtos, representa o nome do servidor do ambiente de banco de dados da tabela.  
+`[ @qualifier = ] 'qualifier'` É o nome do qualificador de procedimento. *qualificador* está **sysname**, com um padrão NULL. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas no formato (_qualificador_**.** _esquema_**.** _nome_. Na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *qualificador* representa o nome do banco de dados. Em alguns produtos, representa o nome do servidor do ambiente de banco de dados da tabela.  
   
- [  **@fUsePattern =** ] **'**_fUsePattern_**'**  
- Determina se os caracteres sublinhado (_), porcentagem (%) ou colchetes ([ ]) são interpretados como curingas. *fUsePattern* está **bit**, com um padrão de 1.  
+`[ @fUsePattern = ] 'fUsePattern'` Determina se o caractere de sublinhado (_), porcentagem (%)) ou colchetes []) são interpretados como caracteres curinga. *fUsePattern* está **bit**, com um padrão de 1.  
   
  **0** = padrão de correspondência está desativado.  
   
@@ -80,7 +76,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 |**NUM_INPUT_PARAMS**|**int**|Reservado para uso futuro.|  
 |**NUM_OUTPUT_PARAMS**|**int**|Reservado para uso futuro.|  
 |**NUM_RESULT_SETS**|**int**|Reservado para uso futuro.|  
-|**COMENTÁRIOS**|**varchar(254)**|Descrição do procedimento. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não retorna um valor para essa coluna.|  
+|**REMARKS**|**varchar(254)**|Descrição do procedimento. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não retorna um valor para essa coluna.|  
 |**PROCEDURE_TYPE**|**smallint**|Tipo do procedimento. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sempre retorna 2.0. Este valor pode ser um dos seguintes:<br /><br /> 0 = SQL_PT_UNKNOWN<br /><br /> 1 = SQL_PT_PROCEDURE<br /><br /> 2 = SQL_PT_FUNCTION|  
   
 ## <a name="remarks"></a>Comentários  
@@ -104,7 +100,7 @@ GO
 EXEC sp_stored_procedures;  
 ```  
   
-### <a name="b-returning-a-single-stored-procedure"></a>b. Retornando um único procedimento armazenado  
+### <a name="b-returning-a-single-stored-procedure"></a>B. Retornando um único procedimento armazenado  
  O exemplo a seguir retorna um conjunto de resultados do procedimento armazenado `uspLogError`.  
   
 ```  

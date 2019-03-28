@@ -14,12 +14,12 @@ ms.assetid: 12e9fe6a-20a5-4c6e-9cc9-d500c003b70a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f073c73568a5ef9a48c9157dcb41b46430a5ab84
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: d9e936c25db4522a949fb97257e136ba6799697f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641469"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532758"
 ---
 # <a name="configure-the-media-retention-server-configuration-option"></a>Configurar a opção de configuração de servidor media retention
   Este tópico descreve como configurar a opção de configuração de servidor **media retention** no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A opção **media retention** especifica a duração da retenção de cada conjunto de backups. A opção ajuda a proteger os backups para que não sejam substituídos até que o número especificado de dias tenha se passado. Depois de configurar a opção **media retention** , não é necessário especificar a quantidade de tempo para reter backups de sistema cada vez em que se executa um backup. O valor padrão é 0 dias e o valor máximo é 365 dias.  
@@ -44,7 +44,7 @@ ms.locfileid: "52641469"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   Se você usar a mídia de backup antes do número de dias definido, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] emitirá uma mensagem de aviso. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não emitirá um aviso a menos que você altere o padrão.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "52641469"
   
 3.  Em **Backup/Restauração**, na caixa **Retenção de mídia de backup padrão** , digite ou selecione um valor de 0 a 365 para definir o número de dias que a mídia de backup será retida depois do backup de log de bancos de dados ou de transações.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-configure-the-media-retention-option"></a>Para configurar a opção media retention  
   
@@ -79,7 +79,7 @@ ms.locfileid: "52641469"
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo mostra como usar [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) para definir o valor da opção `media retention` como `60` dias.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'show advanced options', 1;  
@@ -95,7 +95,7 @@ GO
   
  Para obter mais informações, veja [Opções de configuração do servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Acompanhar: Depois de configurar a opção media retention  
+##  <a name="FollowUp"></a> Acompanhamento: Depois de configurar a opção media retention  
  A configuração entra em vigor imediatamente sem reiniciar o servidor.  
   
 ## <a name="see-also"></a>Consulte também  

@@ -18,12 +18,12 @@ ms.assetid: 314ec720-3a37-48f7-bb6b-8d5b894bf843
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 358918d91a13cf879d56ff5afd23d9aea0c8d81f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 16d5c1815e42e419940223b7f25a565e04ab0508
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627926"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533248"
 ---
 # <a name="spmsxsetaccount-transact-sql"></a>sp_msx_set_account (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,9 @@ sp_msx_set_account [ @credential_name = ] 'credential_name'  | [ @credential_id 
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@credential_name=** ] **'***credential_name***'**  
- O nome da credencial a ser usada para fazer o logon no servidor mestre. O nome fornecido deve ser o nome de uma credencial existente. Qualquer um dos *credential_name* ou *credential_id* deve ser especificado.  
+`[ @credential_name = ] 'credential_name'` O nome da credencial a ser usada para fazer logon no servidor mestre. O nome fornecido deve ser o nome de uma credencial existente. Qualquer um dos *credential_name* ou *credential_id* deve ser especificado.  
   
- [  **@credential_id=** ] *credential_id*  
- O identificador da credencial a ser usada para fazer o logon no servidor mestre. Ele deve ser um identificador para uma credencial existente. Qualquer um dos *credential_name* ou *credential_id* deve ser especificado.  
+`[ @credential_id = ] credential_id` O identificador de credencial a ser usada para fazer logon no servidor mestre. Ele deve ser um identificador para uma credencial existente. Qualquer um dos *credential_name* ou *credential_id* deve ser especificado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

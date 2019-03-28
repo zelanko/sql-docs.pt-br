@@ -16,12 +16,12 @@ ms.assetid: 4e8d6343-2a38-421d-a3f3-c37d437a0f88
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d9158521710ec866955f5b028a2338f9c6f6ff0b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1797200ce5369f49035f1a950d606e34e584edc2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823150"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526218"
 ---
 # <a name="spmergemetadataretentioncleanup-transact-sql"></a>sp_mergemetadataretentioncleanup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_mergemetadataretentioncleanup [ [ @num_genhistory_rows = ] num_genhistory_row
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@num_genhistory_rows=** ] *num_genhistory_rows* saída  
- Retorna o número de linhas limpas dos [MSmerge_genhistory](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md) tabela. *num_genhistory_rows* está **int**, com um padrão de **0**.  
+`[ @num_genhistory_rows = ] num_genhistory_rows OUTPUT` Retorna o número de linhas limpas dos [MSmerge_genhistory](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md) tabela. *num_genhistory_rows* está **int**, com um padrão de **0**.  
   
- [  **@num_contents_rows=** ] *num_contents_rows* saída  
- Retorna o número de linhas limpas dos [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) tabela. *num_contents_rows* está **int**, com um padrão de **0**.  
+`[ @num_contents_rows = ] num_contents_rows OUTPUT` Retorna o número de linhas limpas dos [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) tabela. *num_contents_rows* está **int**, com um padrão de **0**.  
   
- [  **@num_tombstone_rows=** ] *num_tombstone_rows* saída  
- Retorna o número de linhas limpas dos [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) tabela. *num_tombstone_rows* está **int**, com um padrão de **0**.  
+`[ @num_tombstone_rows = ] num_tombstone_rows OUTPUT` Retorna o número de linhas limpas dos [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) tabela. *num_tombstone_rows* está **int**, com um padrão de **0**.  
   
- [  **@aggressive_cleanup_only=** ] *aggressive_cleanup_only*  
- Somente para uso interno.  
+`[ @aggressive_cleanup_only = ] aggressive_cleanup_only` Somente para uso interno.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

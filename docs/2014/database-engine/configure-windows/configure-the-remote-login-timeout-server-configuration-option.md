@@ -12,12 +12,12 @@ ms.assetid: 077adebe-0e3f-42a5-a75e-5e6d04847e2b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 769e7891b389cb6ee1ec60189aa47db3a3c35f57
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 3f2a3a0515674e5a6a5a9e4cb4788ddcf4a37da8
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641127"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530868"
 ---
 # <a name="configure-the-remote-login-timeout-server-configuration-option"></a>Configurar a opção de configuração de servidor remote login timeout
   Este tópico descreve como configurar a opção de configuração de servidor **remote login timeout** no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A opção **remote login timeout** especifica quantos segundos será necessário esperar antes de retornar de uma tentativa malsucedida para fazer logon em um servidor remoto. Por exemplo, se você está tentando fazer logon em um servidor remoto e esse servidor está inoperante, o **remote login timeout** ajuda a assegurar que não seja necessário aguardar indefinidamente antes do computador cessar as tentativas de fazer logon. O valor padrão desta opção é 10 segundos. Um valor 0 permite uma espera infinita.  
@@ -43,7 +43,7 @@ ms.locfileid: "52641127"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   A opção **remote login timeout** afeta conexões com provedores OLE DB feitas para consultas heterogêneas.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "52641127"
   
      Use a opção **remote login timeout** para especificar quantos segundos esperar antes de retornar de uma tentativa malsucedida de fazer o logon remoto.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-configure-the-remote-login-timeout-option"></a>Para configurar a opção remote login timeout  
   
@@ -74,7 +74,7 @@ ms.locfileid: "52641127"
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo mostra como usar [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) para definir o valor da opção `remote login timeout` como `35` segundos.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'remote login timeout', 35 ;  
@@ -86,7 +86,7 @@ GO
   
  Para obter mais informações, veja [Opções de configuração do servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Acompanhar: Depois de configurar a opção remote login timeout  
+##  <a name="FollowUp"></a> Acompanhamento: Depois de configurar a opção remote login timeout  
  A configuração entra em vigor imediatamente sem reiniciar o servidor.  
   
 ## <a name="see-also"></a>Consulte também  

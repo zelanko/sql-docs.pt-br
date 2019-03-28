@@ -14,12 +14,12 @@ ms.assetid: 579867ec-57cb-4cb8-af35-9688c1e9e15d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 320b2e33ed1f36ab2e67625047897a5e8710b2c4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ccc7b96f4275b09b90b8120813b93f860ec07b9a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783748"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533568"
 ---
 # <a name="view-or-change-the-compatibility-level-of-a-database"></a>Exibir ou alterar o nível de compatibilidade de um banco de dados
   Este tópico descreve como exibir ou alterar o nível de compatibilidade de um banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Antes de alterar o nível de compatibilidade de um banco de dados, você deve entender o impacto da alteração em seus aplicativos. Para obter mais informações, veja [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).  
@@ -61,7 +61,7 @@ ms.locfileid: "52783748"
   
 5.  Para alterar o nível de compatibilidade, selecione uma opção diferente da lista. As escolhas são **SQL Server 2008 (100)**, **SQL Server 2012 (110)** ou **SQL Server 2014 (120)**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-view-the-compatibility-level-of-a-database"></a>Para exibir as informações sobre o nível de compatibilidade de um banco de dados  
   
@@ -71,7 +71,7 @@ ms.locfileid: "52783748"
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo retorna o nível de compatibilidade do banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT compatibility_level  
@@ -88,7 +88,7 @@ GO
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo altera o nível de compatibilidade de [!INCLUDE[ssSampleDBobject](../../includes/sssql14-md.md)].  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012  
 SET COMPATIBILITY_LEVEL = 120;  
 GO  

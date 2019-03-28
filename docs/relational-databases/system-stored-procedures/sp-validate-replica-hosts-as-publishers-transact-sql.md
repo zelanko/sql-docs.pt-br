@@ -16,12 +16,12 @@ ms.assetid: 45001fc9-2dbd-463c-af1d-aa8982d8c813
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cdbfcad1bb03e88d335c8acddc1ff7eb8c75b2eb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a6786b8f26cd9040492bb03fff8ed18cd14be5ff
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791578"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528418"
 ---
 # <a name="spvalidatereplicahostsaspublishers-transact-sql"></a>sp_validate_replica_hosts_as_publishers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +41,11 @@ sp_validate_replica_hosts_as_publishers
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@original_publisher** =] **'***original_publisher***'**  
- O nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que publicou originalmente o banco de dados. *original_publisher* está **sysname**, sem padrão.  
+`[ @original_publisher = ] 'original_publisher'` O nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que publicou originalmente o banco de dados. *original_publisher* está **sysname**, sem padrão.  
   
- [ **@publisher_db** =] **'***publisher_db***'**  
- O nome do banco de dados que está sendo publicado. *publisher_db* está **sysname**, sem padrão.  
+`[ @publisher_db = ] 'publisher_db'` O nome do banco de dados que está sendo publicado. *publisher_db* está **sysname**, sem padrão.  
   
- [ **@redirected_publisher** =] **'***redirected_publisher***'**  
- O destino de redirecionamento quando **sp_redirect_publisher** foi chamado para o publicador original/publicação de banco de dados par. *redirected_publisher* está **sysname**, sem padrão.  
+`[ @redirected_publisher = ] 'redirected_publisher'` O destino de redirecionamento quando **sp_redirect_publisher** foi chamado para o publicador original/publicação de banco de dados par. *redirected_publisher* está **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -68,7 +65,7 @@ sp_validate_replica_hosts_as_publishers
 >   
 >  Msg 21899, Level 11, State 1, Procedure **sp_hadr_verify_subscribers_at_publisher**, Line 109  
 >   
->  A consulta no publicador redirecionado 'MyReplicaHostName' para determinar se havia entradas de sysserver para os assinantes do publicador original 'MyOriginalPublisher' falhou com erro '976', mensagem de erro ' erro 976, nível 14, estado 1, mensagem: O banco de dados de destino, 'MyPublishedDB', está participando de um grupo de disponibilidade e não está acessível para consultas no momento. Qualquer movimento de dados é suspenso ou a réplica de disponibilidade não é habilitada para acesso de leitura. Para permitir o acesso somente leitura a esse banco de dados e a outros no grupo de disponibilidade, habilite o acesso de leitura para uma ou mais réplicas de disponibilidade secundárias no grupo.  Para obter mais informações, consulte a instrução **ALTER AVAILABILITY GROUP** nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+>  A consulta no publicador redirecionado 'MyReplicaHostName' para determinar se havia entradas de sysserver para os assinantes do publicador original 'MyOriginalPublisher' falhou com o erro '976', mensagem de erro ' Erro 976, Nível 14, Estado 1, Mensagem: O banco de dados de destino, 'MyPublishedDB', está participando de um grupo de disponibilidade e atualmente não está acessível para consultas. Qualquer movimento de dados é suspenso ou a réplica de disponibilidade não é habilitada para acesso de leitura. Para permitir o acesso somente leitura a esse banco de dados e a outros no grupo de disponibilidade, habilite o acesso de leitura para uma ou mais réplicas de disponibilidade secundárias no grupo.  Para obter mais informações, consulte a instrução **ALTER AVAILABILITY GROUP** nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 >   
 >  Foram encontrados um ou mais erros de validação de publicador para o host de réplica 'MyReplicaHostName'.  
   

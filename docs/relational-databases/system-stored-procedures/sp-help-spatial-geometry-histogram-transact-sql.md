@@ -18,12 +18,12 @@ ms.assetid: 036aaf61-df3e-40f7-aa4e-62983c5a37bd
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c29562bbdaeff69084547c3505fc84def3a0c668
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 914c68d313d77d1cb363f44daee2935976161418
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663226"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534288"
 ---
 # <a name="sphelpspatialgeometryhistogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,39 +45,31 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@tabname =**] **'***tabname***'**  
- É o nome qualificado ou não da tabela para a qual o índice espacial foi especificado.  
+`[ @tabname = ] 'tabname'` É o nome qualificado ou da tabela para a qual o índice espacial foi especificado.  
   
  As aspas somente serão requeridas se uma tabela qualificada for especificada. Se um nome completamente qualificado, incluindo um nome de banco de dados, for fornecido, o nome do banco de dados deverá ser o nome do banco de dados atual. *tabname* está **sysname**, sem padrão.  
   
- [  **@colname =** ] **'***colname***'**  
- É o nome da coluna espacial especificada. *colName* é um **sysname**, sem padrão.  
+`[ @colname = ] 'colname'` É o nome da coluna espacial especificada. *colName* é um **sysname**, sem padrão.  
   
- [  **@resolution =** ] **'***resolução***'**  
- É a resolução da caixa delimitadora. Os valores válidos são de 10 a 5000. *resolução* é um **tinyint**, sem padrão.  
+`[ @resolution = ] 'resolution'` É a resolução da caixa delimitadora. Os valores válidos são de 10 a 5000. *resolução* é um **tinyint**, sem padrão.  
   
- [  **@xmin =** ] **'***xmin***'**  
- É a propriedade de caixa delimitadora do mínimo de X. *xMin* é um **float**, sem padrão.  
+`[ @xmin = ] 'xmin'` É a propriedade de caixa delimitadora do mínimo de X. *xMin* é um **float**, sem padrão.  
   
- [  **@ymin =** ] **'***ymin***'**  
- É a propriedade de caixa delimitadora do mínimo de Y. *yMin* é um **float**, sem padrão.  
+`[ @ymin = ] 'ymin'` É a propriedade de caixa delimitadora do mínimo de Y. *yMin* é um **float**, sem padrão.  
   
- [  **@xmax =** ] **'***xmax***'**  
- É a propriedade de caixa delimitadora do máximo de X. *xMax* é um **float**, sem padrão.  
+`[ @xmax = ] 'xmax'` É a propriedade de caixa delimitadora do máximo de X. *xMax* é um **float**, sem padrão.  
   
- [  **@ymax =** ] **'***ymax***'**  
- É a propriedade de caixa delimitadora do máximo de Y. *yMax* é um **float**, sem padrão.  
+`[ @ymax = ] 'ymax'` É a propriedade de caixa delimitadora do máximo de Y. *yMax* é um **float**, sem padrão.  
   
- [  **@sample =** ] **'***exemplo***'**  
- É a porcentagem da tabela usada. Os valores válidos são de 0 a 100. *amostra* é um **float**. Valor padrão é 100.  
+`[ @sample = ] 'sample'` É a porcentagem da tabela que é usada. Os valores válidos são de 0 a 100. *amostra* é um **float**. Valor padrão é 100.  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor de tabela é retornado. A grade a seguir descreve o conteúdo da coluna da tabela.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**cellid**|**int**|Representa a ID exclusiva de cada célula. A contagem é iniciada a partir de 1.|  
-|**célula**|**geometria**|É um polígono retangular que representa cada célula. A forma de célula é idêntica à forma de célula usada para a indexação espacial.|  
+|**cell**|**geometria**|É um polígono retangular que representa cada célula. A forma de célula é idêntica à forma de célula usada para a indexação espacial.|  
 |**row_count**|**bigint**|Indica o número de objetos espaciais que estão tocando ou contendo a célula.|  
   
 ## <a name="permissions"></a>Permissões  

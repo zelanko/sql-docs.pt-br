@@ -14,12 +14,12 @@ ms.assetid: 0fc4aa01-65a3-4a33-9ef4-caca41add238
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a2e2d2f89b12274694bde8c4f9743416fa2ba253
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 7f5aa6fd5a6ebc10cc91f749ee4745e3676c4a3c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641087"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526168"
 ---
 # <a name="configure-the-query-wait-server-configuration-option"></a>Configurar a opção de configuração de servidor query wait
   Este tópico descreve como configurar a opção de configuração de servidor **query wait** no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. As consultas que solicitam muita memória (como as que envolvem classificação e hash) são enfileiradas quando não há memória disponível executar a consulta. A opção **espera de consulta** especifica o tempo em segundos (de 0 a 2147483647) que uma consulta deve esperar por recursos antes de o tempo limite ser excedido. O valor padrão dessa opção é -1. Isso significa que o tempo limite é calculado como 25 vezes o custo de consulta estimado.  
@@ -64,7 +64,7 @@ ms.locfileid: "52641087"
   
 3.  Em **Paralelismo**, digite o valor desejado para a opção **query wait** .  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-configure-the-query-wait-option"></a>Para configurar a opção query wait  
   
@@ -74,7 +74,7 @@ ms.locfileid: "52641087"
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo mostra como usar [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) para definir o valor da opção `query wait` como `7500` segundos.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'show advanced options', 1;  
@@ -90,7 +90,7 @@ GO
   
  Para obter mais informações, veja [Opções de configuração do servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Acompanhar: Depois de configurar a opção query wait  
+##  <a name="FollowUp"></a> Acompanhamento: Depois de configurar a opção query wait  
  A configuração entra em vigor imediatamente sem reiniciar o servidor.  
   
 ## <a name="see-also"></a>Consulte também  

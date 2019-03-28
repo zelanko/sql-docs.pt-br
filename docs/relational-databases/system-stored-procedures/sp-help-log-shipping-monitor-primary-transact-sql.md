@@ -18,12 +18,12 @@ ms.assetid: d9dfcb8f-1da6-49ca-a2c8-411574915434
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 04e1fb52d74366893ff43deb9fabad9cac7135cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2952023dac4833ade3f67e3a59026a5865352c5e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843885"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531008"
 ---
 # <a name="sphelplogshippingmonitorprimary-transact-sql"></a>sp_help_log_shipping_monitor_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,18 +42,16 @@ sp_help_log_shipping_monitor_primary
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@primary_server =** ] '*primary_server*'  
- O nome da instância primária do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] na configuração de envio de logs. *primary_server* está **sysname** e não pode ser NULL.  
+`[ @primary_server = ] 'primary_server'` O nome da instância primária do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] na configuração de envio de logs. *primary_server* está **sysname** e não pode ser NULL.  
   
- [  **@primary_database =** ] '*primary_database*'  
- É o nome do banco de dados do servidor primário. *primary_database* está **sysname**, sem padrão.  
+`[ @primary_database = ] 'primary_database'` É o nome do banco de dados no servidor primário. *primary_database* está **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Description|  
+|Nome da coluna|Descrição|  
 |-----------------|-----------------|  
 |**primary_id**|A ID do banco de dados primário para a configuração de envio de log.|  
 |**primary_server**|Nome da instância primária do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] na configuração de envio de logs.|  

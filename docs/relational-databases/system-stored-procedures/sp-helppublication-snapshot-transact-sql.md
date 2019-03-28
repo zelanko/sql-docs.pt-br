@@ -16,12 +16,12 @@ ms.assetid: 97b4a7ae-40a5-4328-88f1-ff5d105bbb34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9f1c6d0b3da4718db35f852b2d76f4e14431bdc3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 0154f155c82554ba30ce71c9e7091fdc7565f587
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209255"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526618"
 ---
 # <a name="sphelppublicationsnapshot-transact-sql"></a>sp_helppublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication =** ] **'***publicação***'**  
- É o nome da publicação. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, sem padrão.  
   
- [  **@publisher =** ] **'***publisher***'**  
- Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
+`[ @publisher = ] 'publisher'` Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
 >  *Publisher* não deve ser usado ao adicionar um artigo a uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  

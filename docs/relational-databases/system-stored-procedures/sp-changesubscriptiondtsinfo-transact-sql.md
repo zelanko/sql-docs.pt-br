@@ -16,12 +16,12 @@ ms.assetid: 64fc085f-f81b-493b-b59a-ee6192d9736d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5e691c78e0ef0ddf775b5a23baa7dde1d96f72a9
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: f252d55a41def8e816e6e7843fb57574caacf385
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129239"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536058"
 ---
 # <a name="spchangesubscriptiondtsinfo-transact-sql"></a>sp_changesubscriptiondtsinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,20 +41,16 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@job_id=**] *job_id*  
- É a ID do trabalho do Distribution Agent da assinatura push. *job_id* está **varbinary (16)**, sem padrão. Para localizar a ID do trabalho de distribuição, execute **sp_helpsubscription** ou **sp_helppullsubscription**.  
+`[ @job_id = ] job_id` É a ID do trabalho do Distribution Agent para a assinatura push. *job_id* está **varbinary (16)**, sem padrão. Para localizar a ID do trabalho de distribuição, execute **sp_helpsubscription** ou **sp_helppullsubscription**.  
   
- [ **@dts_package_name**=] **'**_dts_package_name_**'**  
- Especifica o nome do pacote DTS. *dts_package_name* é um **sysname**, com um padrão NULL. Por exemplo, para especificar um pacote chamado **DTSPub_Package**, você especificaria `@dts_package_name = N'DTSPub_Package'`.  
+`[ @dts_package_name = ] 'dts_package_name'` Especifica o nome do pacote DTS. *dts_package_name* é um **sysname**, com um padrão NULL. Por exemplo, para especificar um pacote chamado **DTSPub_Package**, você especificaria `@dts_package_name = N'DTSPub_Package'`.  
   
- [ **@dts_package_password**=] **'**_dts_package_password_**'**  
- Especifica a senha no pacote. *dts_package_password* está **sysname** com um padrão de NULL, que especifica que a propriedade de senha deve ser deixado inalterado.  
+`[ @dts_package_password = ] 'dts_package_password'` Especifica a senha do pacote. *dts_package_password* está **sysname** com um padrão de NULL, que especifica que a propriedade de senha deve ser deixado inalterado.  
   
 > [!NOTE]  
 >  Um pacote DTS deve ter uma senha.  
   
- [ **@dts_package_location**=] **'**_dts_package_location_**'**  
- Especifica o local do pacote. *dts_package_location* é um **nvarchar(12**, com um padrão de NULL, que especifica que o local do pacote deve ser deixado inalterado. O local do pacote pode ser alterado para **distribuidor** ou **assinante**.  
+`[ @dts_package_location = ] 'dts_package_location'` Especifica o local do pacote. *dts_package_location* é um **nvarchar(12**, com um padrão de NULL, que especifica que o local do pacote deve ser deixado inalterado. O local do pacote pode ser alterado para **distribuidor** ou **assinante**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

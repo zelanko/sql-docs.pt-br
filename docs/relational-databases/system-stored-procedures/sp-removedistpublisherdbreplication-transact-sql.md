@@ -16,12 +16,12 @@ ms.assetid: 9bfe002a-25b5-4226-bcfb-feb2060d6b4a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d57034b65559e696a9692a1c71e612c7d921661b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3ef656dd25ea3d0a62baf7ca52653c22b9d895ea
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754638"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532832"
 ---
 # <a name="spremovedistpublisherdbreplication-transact-sql"></a>sp_removedistpublisherdbreplication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_removedistpublisherdbreplication [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publisher=** ] **'***publisher***'**  
- É o nome do servidor do Publicador. *Publisher* está **sysname**, sem padrão.  
+`[ @publisher = ] 'publisher'` É o nome do servidor do publicador. *Publisher* está **sysname**, sem padrão.  
   
- [  **@publisher_db=** ] **'***publisher_db***'**  
- É o nome do banco de dados de publicação. *publisher_db* está **sysname** sem nenhum padrão.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados de publicação. *publisher_db* está **sysname** sem nenhum padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

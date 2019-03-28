@@ -16,12 +16,12 @@ ms.assetid: 7352d94a-f8f2-42ea-aaf1-d08c3b5a0e76
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0343855bbc3d82e58a0a0252109dee6255ee766f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 2afa58b9fe8844aa4bb74187ef77393f0bc5681f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134046"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527529"
 ---
 # <a name="spdroppullsubscription-transact-sql"></a>sp_droppullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publisher=** ] **'**_publisher_**'**  
- É o nome do servidor remoto. *Publisher* está **sysname**, sem padrão. Se **todos os**, a assinatura será descartada em todos os publicadores.  
+`[ @publisher = ] 'publisher'` É o nome do servidor remoto. *Publisher* está **sysname**, sem padrão. Se **todos os**, a assinatura será descartada em todos os publicadores.  
   
- [  **@publisher_db=** ] **'**_publisher_db_**'**  
- É o nome do banco de dados Publicador. *publisher_db* está **sysname**, sem padrão. **todos os** significa que todos os bancos de dados do publicador.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados publicador. *publisher_db* está **sysname**, sem padrão. **todos os** significa que todos os bancos de dados do publicador.  
   
- [  **@publication=** ] **'**_publicação_**'**  
- É o nome da publicação. *publicação* está **sysname**, sem padrão. Se **todos os**, a assinatura será descartada em todas as publicações.  
+`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, sem padrão. Se **todos os**, a assinatura será descartada em todas as publicações.  
   
- [  **@reserved=** ] *reservado*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @reserved = ] reserved` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

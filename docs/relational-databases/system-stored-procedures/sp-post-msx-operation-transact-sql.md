@@ -18,12 +18,12 @@ ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aa0293daf2c7dacf65450d8d3b9323b2903e77ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f36ad40a2b16401218fe2a5927407464fe6ac11b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832694"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536118"
 ---
 # <a name="sppostmsxoperation-transact-sql"></a>sp_post_msx_operation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,29 +46,23 @@ sp_post_msx_operation
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@operation =**] **'***operação***'**  
- O tipo da operação postada. *operação*está **varchar(64)**, sem padrão. Operações válidas dependem *object_type*.  
+`[ @operation = ] 'operation'` O tipo de operação para a operação postada. *operação*está **varchar(64)**, sem padrão. Operações válidas dependem *object_type*.  
   
 |Tipo de objeto|Operação|  
 |-----------------|---------------|  
-|**JOB**|INSERT<br /><br /> UPDATE<br /><br /> Delete (excluir)<br /><br /> START<br /><br /> STOP|  
-|**SERVIDOR**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
-|**AGENDA**|INSERT<br /><br /> UPDATE<br /><br /> Delete (excluir)|  
+|**JOB**|INSERT<br /><br /> UPDATE<br /><br /> DELETE<br /><br /> START<br /><br /> STOP|  
+|**SERVER**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
+|**AGENDA**|INSERT<br /><br /> UPDATE<br /><br /> DELETE|  
   
- [  **@object_type =**] **'***objeto***'**  
- O tipo de objeto para o qual uma operação será postada. Os tipos válidos são **trabalho**, **SERVER**, e **AGENDA**. *objeto* está **varchar(64)**, com um padrão de **trabalho**.  
+`[ @object_type = ] 'object'` O tipo de objeto para o qual uma operação post. Os tipos válidos são **trabalho**, **SERVER**, e **AGENDA**. *objeto* está **varchar(64)**, com um padrão de **trabalho**.  
   
- [  **@job_id =**] *job_id*  
- O número de identificação do trabalho ao qual a operação se aplica. *job_id* está **uniqueidentifier**, sem padrão. **0x00** indica todos os trabalhos. Se *objeto* é **SERVER**, em seguida, *job_id*não é necessária.  
+`[ @job_id = ] job_id` O número de identificação do trabalho ao qual a operação se aplica. *job_id* está **uniqueidentifier**, sem padrão. **0x00** indica todos os trabalhos. Se *objeto* é **SERVER**, em seguida, *job_id*não é necessária.  
   
- [  **@specific_target_server =**] **'***target_server***'**  
- O nome do servidor de destino ao qual a operação especificada se aplica. Se *job_id* for especificado, mas *target_server* não for especificado, as operações serão postadas para todos os servidores de trabalho do trabalho. *target_server* está **nvarchar (30)**, com um padrão NULL.  
+`[ @specific_target_server = ] 'target_server'` O nome do servidor de destino para o qual a operação especificada aplica-se. Se *job_id* for especificado, mas *target_server* não for especificado, as operações serão postadas para todos os servidores de trabalho do trabalho. *target_server* está **nvarchar (30)**, com um padrão NULL.  
   
- [  **@value =**] *valor*  
- O intervalo de sondagem, em segundos. *value* é **int**, com um padrão NULL. Especifique esse parâmetro somente se *operação* é **SET-POLL**.  
+`[ @value = ] value` O intervalo de sondagem, em segundos. *value* é **int**, com um padrão NULL. Especifique esse parâmetro somente se *operação* é **SET-POLL**.  
   
- [  **@schedule_uid=** ] *schedule_uid*  
- O identificador exclusivo da agenda à qual a operação se aplica. *schedule_uid* está **uniqueidentifier**, sem padrão.  
+`[ @schedule_uid = ] schedule_uid` O identificador exclusivo da agenda à qual a operação se aplica. *schedule_uid* está **uniqueidentifier**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dfb494c7b25d3a580059e4d1ad3250abbe91ee54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d59f7e05180ce2f0528159d64b0199ae8975464a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828956"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528588"
 ---
 # <a name="sphelptrigger-transact-sql"></a>sp_helptrigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,13 +42,11 @@ sp_helptrigger [ @tabname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@tabname=** ] **'***tabela***'**  
- É o nome da tabela do banco de dados atual para a qual as informações de gatilho devem ser retornadas. *tabela* está **nvarchar(776)**, sem padrão.  
+`[ @tabname = ] 'table'` É o nome da tabela no banco de dados atual para o qual retornar informações de gatilho. *tabela* está **nvarchar(776)**, sem padrão.  
   
- [  **@triggertype=** ] **'***tipo***'**  
- É o tipo de gatilho DML sobre o qual retornar informações. *tipo de* está **char(6)**, com um padrão de NULL, e pode ser um destes valores.  
+`[ @triggertype = ] 'type'` É o tipo de gatilho DML para retornar informações sobre. *tipo de* está **char(6)**, com um padrão de NULL, e pode ser um destes valores.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**DELETE**|Retorna informações do gatilho DELETE.|  
 |**INSERT**|Retorna informações do gatilho INSERT.|  
@@ -60,13 +58,13 @@ sp_helptrigger [ @tabname = ] 'table'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  A tabela a seguir mostra as informações contidas no conjunto de resultados.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**trigger_name**|**sysname**|Nome do gatilho.|  
 |**trigger_owner**|**sysname**|Nome do proprietário da tabela em que o gatilho é definido.|  
 |**isupdate**|**int**|1 = Gatilho UPDATE<br /><br /> 0 = Não é um gatilho UPDATE|  
 |**isdelete**|**int**|1 = Gatilho DELETE<br /><br /> 0 = Não é um gatilho DELETE|  
-|**propriedade IsInsert**|**int**|1 = Gatilho INSERT<br /><br /> 0 = Não é um gatilho INSERT|  
+|**isinsert**|**int**|1 = Gatilho INSERT<br /><br /> 0 = Não é um gatilho INSERT|  
 |**isafter**|**int**|1 = Gatilho AFTER<br /><br /> 0 = Não é um gatilho AFTER|  
 |**isinsteadof**|**int**|1 = Gatilho INSTEAD OF<br /><br /> 0 = Não é um gatilho INSTEAD OF|  
 |**trigger_schema**|**sysname**|Nome do esquema ao qual o gatilho pertence.|  

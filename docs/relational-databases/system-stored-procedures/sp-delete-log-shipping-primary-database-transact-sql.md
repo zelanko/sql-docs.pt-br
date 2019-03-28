@@ -18,12 +18,12 @@ ms.assetid: cb1d5d00-2805-4d47-bd04-545232067345
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4b560b807dc1efbb2f89b0d446b962e2791a8e46
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4eb1854e0e0062b7c9a59263b6f8847e26de94ee
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810564"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535018"
 ---
 # <a name="spdeletelogshippingprimarydatabase-transact-sql"></a>sp_delete_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,7 @@ sp_delete_log_shipping_primary_database
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@database =** ] '*banco de dados*'  
- É o nome do banco de dados primário de envio de logs. *banco de dados* está **sysname**, sem padrão, e não pode ser NULL.  
+`[ @database = ] 'database'` É o nome do log envio banco de dados primário. *banco de dados* está **sysname**, sem padrão, e não pode ser NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

@@ -18,12 +18,12 @@ ms.assetid: dd9920e1-7064-4c05-93d8-9303103fa1d6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9075b653b6cdb9baec70a182b560201efcb6c965
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4409b44a04411357d0109fb643fd13fcff6451b9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724264"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538188"
 ---
 # <a name="spinvalidatetextptr-transact-sql"></a>sp_invalidate_textptr (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_invalidate_textptr [ [ @TextPtrValue = ] textptr_value ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@TextPtrValue=** ] *textptr_value*  
- É o ponteiro de texto em linha a ser invalidado. *textptr_value* está **varbinary (** 16 **)**, com um padrão NULL. Se for NULL, **sp_invalidate_textptr** invalida todos os ponteiros de texto em linha na transação.  
+`[ @TextPtrValue = ] textptr_value` É o ponteiro de texto em linha a ser invalidado. *textptr_value* está **varbinary (** 16 **)**, com um padrão NULL. Se for NULL, **sp_invalidate_textptr** invalida todos os ponteiros de texto em linha na transação.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

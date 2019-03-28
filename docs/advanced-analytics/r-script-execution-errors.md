@@ -4,22 +4,22 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/31/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 5e4ac26b10a8a9f7e17345e927ee89ea6c731fb1
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 2df4fa2fd9ef52fe5edbca9440f73f351553f1ed
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53644885"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511523"
 ---
 # <a name="r-scripting-errors-in-sql-server"></a>Erros de script do R no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este artigo documenta várias gerrors. inittabem durante a execução de código R no SQL Server. A lista não é abrangente. Há muitos pacotes e erros podem variar entre as versões do mesmo pacote. É recomendável publicar erros de script na [Fórum do Machine Learning Server](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR), que oferece suporte para os componentes usados no R Services (no banco de dados), o Microsoft R Client e Microsoft R Server de aprendizado de máquina.
 
-**Aplica-se a:** SQL Server 2016 R Services, serviços de aprendizado de máquina do SQL Server 2017
+**Aplica-se a:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services
 
 
 ## <a name="valid-script-fails-in-t-sql-or-in-stored-procedures"></a>Falha de script válida em T-SQL ou em procedimentos armazenados

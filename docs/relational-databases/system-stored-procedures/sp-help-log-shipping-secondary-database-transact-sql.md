@@ -18,12 +18,12 @@ ms.assetid: 11ce42ca-d3f1-44c8-9cac-214ca8896b9a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 19bac76afeb56bf196b7f717596777435d813f04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ce38780d40347f237f3a09a6dea5376fb1cf47d9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846424"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527028"
 ---
 # <a name="sphelplogshippingsecondarydatabase-transact-sql"></a>sp_help_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,18 +44,16 @@ sp_help_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@secondary_database =** ] '*secondary_database*'  
- É o nome do banco de dados secundário. *secondary_database* está **sysname**, sem padrão.  
+`[ @secondary_database = ] 'secondary_database'` É o nome do banco de dados secundário. *secondary_database* está **sysname**, sem padrão.  
   
- [  **@secondary_id =** ] '*secondary_id*'  
- ID de servidor secundário na configuração de envio de logs. *secondary_id* está **uniqueidentifier** e não pode ser NULL.  
+`[ @secondary_id = ] 'secondary_id'` A ID para o servidor secundário na configuração de envio de logs. *secondary_id* está **uniqueidentifier** e não pode ser NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Description|  
+|Nome da coluna|Descrição|  
 |-----------------|-----------------|  
 |**secondary_id**|ID de servidor secundário na configuração de envio de logs.|  
 |**primary_server**|O nome da instância primária do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] na configuração de envio de logs.|  

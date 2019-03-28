@@ -12,12 +12,12 @@ ms.assetid: b920ec34-ba8b-4bb8-af53-a3ffd06bafa6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1f9398a700af30876d438b110392215b40337c91
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 558218b4cff8e9d4ce100a92135f0fee4e0e09c8
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641307"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527118"
 ---
 # <a name="configure-the-fill-factor-server-configuration-option"></a>Configurar a opção fill factor de configuração de servidor
   Este tópico descreve como configurar a opção de configuração de servidor **fill factor** no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. O fator de preenchimento é fornecido para ajustar o armazenamento e o desempenho de dados de índice. Quando um índice é criado ou recriado, o valor de fator de preenchimento determina a porcentagem de espaço em cada página de nível folha a ser preenchida com dados, reservando o restante como espaço livre para futuro crescimento. Para obter mais informações, veja [Especificar fator de preenchimento para um índice](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).  
@@ -59,7 +59,7 @@ ms.locfileid: "52641307"
   
 3.  Na caixa **Fator de preenchimento padrão do índice** , digite ou selecione o fator de preenchimento do índice desejado.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-configure-the-fill-factor-option"></a>Para configurar a opção fill factor  
   
@@ -69,7 +69,7 @@ ms.locfileid: "52641307"
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo mostra como usar [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) para definir o valor da opção `fill factor` como `100`.  
   
-```tsql  
+```sql  
 Use AdventureWorks2012;  
 GO  
 sp_configure 'show advanced options', 1;  
@@ -84,7 +84,7 @@ GO
   
  Para obter mais informações, veja [Opções de configuração do servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Acompanhar: Depois de configurar a opção fill factor  
+##  <a name="FollowUp"></a> Acompanhamento: Depois de configurar a opção fill factor  
  O servidor deve ser reiniciado para que a configuração entre em vigor.  
   
 ## <a name="see-also"></a>Consulte também  

@@ -16,12 +16,12 @@ ms.assetid: 7947a788-3fd7-469f-84db-b03ba89a153c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4a4c8eb45ad7864466ccedc3de5b034325279322
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: f5c9091e3a949e5a358f5bd1305d096491782012
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589750"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537308"
 ---
 # <a name="spmschangesnapshotagentproperties-transact-sql"></a>sp_MSchange_snapshot_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,17 +57,13 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publisher** =] **'**_publisher_**'**  
- É o nome do Publicador. *Publisher* está **sysname**, sem padrão.  
+`[ @publisher = ] 'publisher'` É o nome do publicador. *Publisher* está **sysname**, sem padrão.  
   
- [  **@publisher_db=** ] **'**_publisher_db_**'**  
- É o nome do banco de dados de publicação. *publisher_db* está **sysname**, sem padrão.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados de publicação. *publisher_db* está **sysname**, sem padrão.  
   
- [  **@publication =** ] **'**_publicação_**'**  
- É o nome da publicação. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, sem padrão.  
   
- [  **@frequency_type =** ] *frequency_type*  
- É a frequência de execução do Agente de Instantâneo. *frequency_type* está **int**, e pode ser um destes valores.  
+`[ @frequency_type = ] frequency_type` É a frequência com a qual o Snapshot Agent é executado. *frequency_type* está **int**, e pode ser um destes valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -79,11 +75,9 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 |**20**|Mensalmente, relativo ao intervalo de frequência|  
 |**40**|Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent inicia|  
   
- [  **@frequency_interval =** ] *frequency_interval*  
- É o valor a ser aplicado à frequência definida *frequency_type*. *frequency_interval* está **int**, sem padrão.  
+`[ @frequency_interval = ] frequency_interval` É o valor a ser aplicado à frequência definida *frequency_type*. *frequency_interval* está **int**, sem padrão.  
   
- [  **@frequency_subday =** ] *frequency_subday*  
- É a unidade do *freq_subday_interval*. *frequency_subday* está **int**, e pode ser um destes valores.  
+`[ @frequency_subday = ] frequency_subday` É a unidade do *freq_subday_interval*. *frequency_subday* está **int**, e pode ser um destes valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -92,53 +86,39 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 |**4**|Minuto|  
 |**8**|Hora|  
   
- [  **@frequency_subday_interval=**] *frequency_subday_interval*  
- É o intervalo de *frequency_subday*. *frequency_subday_interval* está **int**, sem padrão.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` É o intervalo de *frequency_subday*. *frequency_subday_interval* está **int**, sem padrão.  
   
- [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
- É a data de execução do Agente de Instantâneo. *frequency_relative_interval* está **int**, sem padrão.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` É a data em que o Snapshot Agent é executado. *frequency_relative_interval* está **int**, sem padrão.  
   
- [  **@frequency_recurrence_factor =** ] *frequency_recurrence_factor*  
- É o fator de recorrência usado pelo *frequency_type*. *frequency_recurrence_factor* está **int**, sem padrão.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` É o fator de recorrência usado pelo *frequency_type*. *frequency_recurrence_factor* está **int**, sem padrão.  
   
- [  **@active_start_date =** ] *active_start_date*  
- É a data do primeiro agendamento do Agente de Instantâneo, formatada como AAAAMMDD. *active_start_date* está **int**, sem padrão.  
+`[ @active_start_date = ] active_start_date` É a data quando o agente de instantâneo é primeiro agendada, formatada como AAAAMMDD. *active_start_date* está **int**, sem padrão.  
   
- [  **@active_end_date =** ] *active_end_date*  
- É a data em que o Agente de Instantâneo para de ser agendado, formatada como AAAAMMDD. *active_end_date* está **int**, sem padrão.  
+`[ @active_end_date = ] active_end_date` É a data em que o Snapshot Agent deixa de ser agendado, formatada como AAAAMMDD. *active_end_date* está **int**, sem padrão.  
   
- [  **@active_start_time_of_day=**] *active_start_time_of_day*  
- É a hora do dia do primeiro agendamento do Agente de Instantâneo, formatada como HHMMSS. *active_start_time_of_day* está **int**, sem padrão.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` É a hora do dia quando o agente de instantâneo é o primeiro agendada, formatada como HHMMSS. *active_start_time_of_day* está **int**, sem padrão.  
   
- [  **@active_end_time_of_day=**] *active_end_time_of_day*  
- É a hora do dia do último agendamento do Agente de Instantâneo, formatada como HHMMSS. *active_end_time_of_day* está **int**, sem padrão.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` É a hora do dia em que o Snapshot Agent deixa de ser agendado, formatada como HHMMSS. *active_end_time_of_day* está **int**, sem padrão.  
   
- [  **@snapshot_job_name =** ] **'**_snapshot_agent_name_**'**  
- É o nome de um trabalho existente do Agente de Instantâneo se um trabalho existente estiver sendo usado. *snapshot_agent_name* está **nvarchar(100)**, sem padrão.  
+`[ @snapshot_job_name = ] 'snapshot_agent_name'` É o nome de um nome de trabalho do agente de instantâneo existente se um trabalho existente estiver sendo usado. *snapshot_agent_name* está **nvarchar(100)**, sem padrão.  
   
- [ **@publisher_security_mode**=] *publisher_security_mode*  
- É o modo de segurança usado pelo agente ao conectar-se ao Publicador. *publisher_security_mode* está **int**, sem padrão. **0** especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação, e **1** Especifica a autenticação do Windows. Um valor de **0** deve ser especificado para não - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @publisher_security_mode = ] publisher_security_mode` É o modo de segurança usado pelo agente ao se conectar ao publicador. *publisher_security_mode* está **int**, sem padrão. **0** especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação, e **1** Especifica a autenticação do Windows. Um valor de **0** deve ser especificado para não - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [ **@publisher_login**=] **'**_publisher_login_**'**  
- É o logon usado na conexão com o Publicador. *publisher_login* está **sysname**, sem padrão. *publisher_login* deve ser especificado quando *publisher_security_mode* é **0**. Se *publisher_login* for NULL e publisher *_ * * security_mode* é **1**, em seguida, a conta do Windows especificada na *job_login* será usado ao conectar-se ao publicador.  
+`[ @publisher_login = ] 'publisher_login'` É o logon usado ao conectar-se ao publicador. *publisher_login* está **sysname**, sem padrão. *publisher_login* deve ser especificado quando *publisher_security_mode* é **0**. Se *publisher_login* for NULL e publisher *_ * * security_mode* é **1**, em seguida, a conta do Windows especificada na *job_login* será usado ao conectar-se ao publicador.  
   
- [ **@publisher_password**=] **'**_publisher_password_**'**  
- É a senha usada ao conectar-se ao Publicador. *publisher_password* está **nvarchar(524)**, sem padrão.  
+`[ @publisher_password = ] 'publisher_password'` É a senha usada ao conectar-se ao publicador. *publisher_password* está **nvarchar(524)**, sem padrão.  
   
 > [!IMPORTANT]  
 >  Não armazene informações de autenticação em arquivos de script. Para ajudar a melhorar a segurança, recomendamos que você forneça nomes de login e senhas em tempo de execução.  
   
- [ **@job_login**=] **'**_job_login_**'**  
- É o logon da conta do Windows na qual o agente é executado. *job_login* está **nvarchar(257)**, sem padrão. Essa conta do Windows sempre é usada para conexões de agente com o Distribuidor. Você deve fornecer esse parâmetro ao criar um novo trabalho do Agente de Instantâneo. *Isso não pode ser alterado para um não -* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *publicador.*  
+`[ @job_login = ] 'job_login'` É o logon para a conta do Windows sob a qual o agente é executado. *job_login* está **nvarchar(257)**, sem padrão. Essa conta do Windows sempre é usada para conexões de agente com o Distribuidor. Você deve fornecer esse parâmetro ao criar um novo trabalho do Agente de Instantâneo. *Isso não pode ser alterado para um não -* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *publicador.*  
   
- [ **@job_password**=] **'**_job_password_**'**  
- É a senha da conta do Windows na qual o agente é executado. *job_password* está **sysname**, sem padrão. Você deve fornecer esse parâmetro ao criar um novo trabalho do Agente de Instantâneo.  
+`[ @job_password = ] 'job_password'` É a senha para a conta do Windows sob a qual o agente é executado. *job_password* está **sysname**, sem padrão. Você deve fornecer esse parâmetro ao criar um novo trabalho do Agente de Instantâneo.  
   
 > [!IMPORTANT]  
 >  Não armazene informações de autenticação em arquivos de script. Para ajudar a melhorar a segurança, recomendamos que você forneça nomes de login e senhas em tempo de execução.  
   
- [ **@publisher_type**=] **'**_publisher_type_**'**  
- Especifica o tipo de Publicador quando o Publicador não está sendo executado em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publisher_type* está **sysname**, e pode ser um dos valores a seguir.  
+`[ @publisher_type = ] 'publisher_type'` Especifica o tipo de publicador quando o publicador não está em execução em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publisher_type* está **sysname**, e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  

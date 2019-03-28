@@ -10,15 +10,15 @@ helpviewer_keywords:
 - names [SQL Server], columns with
 - XPath node test
 ms.assetid: b48adccd-3b6b-486a-b326-20f57170186f
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b2ac7154d80a33907cb27bf191dcb41bca866894
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 804ca2ebe3aa307272645fa5a626ea2212367f87
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783918"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530848"
 ---
 # <a name="columns-with-the-name-of-an-xpath-node-test"></a>Colunas com o nome de um teste de nó XPath
   Se o nome da coluna for um dos testes de nó XPath, o conteúdo será mapeado conforme mostrado na tabela a seguir. Quando o nome de coluna é um teste de nó XPath, o conteúdo é mapeado para o nó correspondente. Se o tipo SQL da coluna for `xml`, será retornado um erro.  

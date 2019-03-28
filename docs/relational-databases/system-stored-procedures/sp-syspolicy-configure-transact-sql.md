@@ -18,12 +18,12 @@ ms.assetid: 70c10922-9345-4190-ba69-808a43f760da
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 4b27da09e0e57029b65c21110a93de46ed0d81a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9ae7fdde89c9f927fbc56a9ca395138c264e931
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783964"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532108"
 ---
 # <a name="spsyspolicyconfigure-transact-sql"></a>sp_syspolicy_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,7 @@ sp_syspolicy_configure [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@name =** ] **'***nome***'**  
- É o nome do parâmetro que você deseja configurar. *nome da* está **sysname**, é necessário e não pode ser nulo ou uma cadeia de caracteres vazia.  
+`[ @name = ] 'name'` É o nome da configuração que você deseja configurar. *nome da* está **sysname**, é necessário e não pode ser nulo ou uma cadeia de caracteres vazia.  
   
  *nome* pode ser qualquer um dos seguintes valores:  
   
@@ -52,8 +51,7 @@ sp_syspolicy_configure [ @name = ] 'name'
   
 -   'LogOnSuccess' - Especifica se o Gerenciamento Baseado em Políticas registra em log avaliações de política com êxito.  
   
- [  **@value =** ] *valor*  
- É o valor que está associado com o valor especificado para *nome*. *valor* está **sql_variant**e é necessária.  
+`[ @value = ] value` É o valor que está associado com o valor especificado para *nome*. *valor* está **sql_variant**e é necessária.  
   
 -   Se você especificar 'Enabled' para *nome*, você pode usar qualquer um dos seguintes valores:  
   
@@ -81,7 +79,7 @@ sp_syspolicy_configure [ @name = ] 'name'
  Requer a associação à função de banco de dados fixa PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Possível elevação de credenciais: os usuários na função PolicyAdministratorRole podem criar gatilhos de servidor e agendar execuções de políticas que possam afetar a operação da instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por exemplo, os usuários da função PolicyAdministratorRole podem criar uma política que impeça a criação da maioria dos objetos no [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Devido a essa possível elevação de credenciais, a função PolicyAdministratorRole deve ser concedida somente para usuários que sejam confiáveis no controle da configuração do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  Possível elevação de credenciais: Os usuários na função PolicyAdministratorRole podem criar gatilhos de servidor e agendar execuções de políticas que podem afetar a operação da instância da [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por exemplo, os usuários da função PolicyAdministratorRole podem criar uma política que impeça a criação da maioria dos objetos no [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Devido a essa possível elevação de credenciais, a função PolicyAdministratorRole deve ser concedida somente para usuários que sejam confiáveis no controle da configuração do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir habilita o Gerenciamento Baseado em Políticas.  

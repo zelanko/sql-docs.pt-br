@@ -18,12 +18,12 @@ ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3eae9eeceec6d32ca616244f2ebd77f96d23e614
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: b36c576fb5bb3bb3cc168430902223802ca937a3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124146"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535168"
 ---
 # <a name="spdropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +41,9 @@ sp_dropmessage [ @msgnum = ] message_number
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@msgnum =** ] *message_number*  
- É o número da mensagem a ser descartada. *message_number* deve ser uma mensagem definida pelo usuário que tem um número maior que 50000. *message_number* está **int**, com um padrão NULL.  
+`[ @msgnum = ] message_number` É o número de mensagem para descartar. *message_number* deve ser uma mensagem definida pelo usuário que tem um número maior que 50000. *message_number* está **int**, com um padrão NULL.  
   
- [  **@lang =** ] **'**_idioma_**'**  
- É o idioma da mensagem a ser descartada. Se **todos os** for especificado, todas as versões de idioma do *message_number* são descartados. *linguagem* está **sysname**, com um padrão NULL.  
+`[ @lang = ] 'language'` É o idioma da mensagem a ser descartada. Se **todos os** for especificado, todas as versões de idioma do *message_number* são descartados. *linguagem* está **sysname**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -70,7 +68,7 @@ GO
 EXEC sp_dropmessage 50001;  
 ```  
   
-### <a name="b-dropping-a-user-defined-message-that-includes-a-localized-version"></a>b. Descartando uma mensagem definida pelo usuário que inclui uma versão localizada  
+### <a name="b-dropping-a-user-defined-message-that-includes-a-localized-version"></a>B. Descartando uma mensagem definida pelo usuário que inclui uma versão localizada  
  O exemplo a seguir descarta uma mensagem definida pelo usuário, número `60000`, que inclui uma versão localizada da mensagem.  
   
 ```  

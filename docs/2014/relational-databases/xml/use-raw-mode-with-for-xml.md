@@ -15,15 +15,15 @@ helpviewer_keywords:
 - RAW mode
 - XMLDATA option
 ms.assetid: 02c1bc0b-760c-4589-9ab1-6927c6d9c734
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d074ad6fe9dcd3a26a9c9be84a326291df9f5aed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aec0ec20c9bd46a06560f5ce6ebd374e937f0343
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084227"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537038"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>Usar modo RAW com FOR XML
   O modo RAW transforma cada linha no conjunto de resultados da consulta em um elemento XML que tem o identificador genérico \<row> ou o nome do elemento fornecido opcionalmente. Por padrão, cada valor de coluna no conjunto de linhas que não é NULL é mapeado para um atributo do elemento \<row>. Se a diretiva ELEMENTS for adicionada à cláusula FOR XML, cada valor de coluna será mapeado para um subelemento do elemento \<row>. Em conjunto com a diretiva ELEMENTS, é possível especificar opcionalmente a opção XSINIL para mapear valores de coluna NULL no conjunto de resultados para um elemento que tem o atributo xsi:nil=`"`true`"`.  
@@ -37,17 +37,17 @@ ms.locfileid: "48084227"
   
 -   [Exemplo: Recuperando informações de modelo de produto como XML](example-retrieving-product-model-information-as-xml.md)  
   
--   [Exemplo: Especificando XSINIL com a política ELEMENTS](example-specifying-xsinil-with-the-elements-directive.md)  
+-   [Exemplo: Especificando XSINIL com a diretiva ELEMENTS](example-specifying-xsinil-with-the-elements-directive.md)  
   
 -   [Exemplo: Solicitando esquemas como resultados com as opções XMLDATA e XMLSCHEMA](example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
   
 -   [Exemplo: Recuperando dados binários](example-retrieving-binary-data.md)  
   
--   [Exemplo: Renomeando o elemento &#60;row&#62;](example-renaming-the-row-element.md)  
+-   [Exemplo: Renomear o &#60;linha&#62; elemento](example-renaming-the-row-element.md)  
   
 -   [Exemplo: Especificando um elemento raiz para o XML gerado por FOR XML](example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
   
--   [Exemplo: Consultando colunas de tipo XML](example-querying-xmltype-columns.md)  
+-   [Exemplo: Consultando colunas XMLType](example-querying-xmltype-columns.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Adicionar namespaces a consultas com WITH XMLNAMESPACES](add-namespaces-to-queries-with-with-xmlnamespaces.md)   

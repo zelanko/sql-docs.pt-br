@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 03/13/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 3f78447054d96f1552ae09c62f3b8a2f18bc58bf
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: d852cc745578d852b2c8235ebcaf3614020a1bb8
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57976346"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511743"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>Instalar componentes da linha de comando do R e Python de aprendizado de máquina do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

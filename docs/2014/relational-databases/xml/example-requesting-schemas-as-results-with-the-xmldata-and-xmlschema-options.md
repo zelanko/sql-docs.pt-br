@@ -1,5 +1,5 @@
 ---
-title: 'Exemplo: Solicitando esquemas como resultados com as opções XMLDATA e XMLSCHEMA | Microsoft Docs'
+title: 'Exemplo: solicitando esquemas como resultados com as opções XMLDATA e XMLSCHEMA | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,17 +10,17 @@ helpviewer_keywords:
 - RAW mode, requesting schema example
 - RAW mode, with XMLDATA and XMLSCHEMA
 ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8d0337ea25181ab45426353e69a4f37124aa33bc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: a2a18dd84f5f0a83cc3c6f42bf664c178c1ba6b9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126536"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526188"
 ---
-# <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>Exemplo: Solicitando esquemas como resultados com as opções XMLDATA e XMLSCHEMA
+# <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>Exemplo: solicitando esquemas como resultados com as opções XMLDATA e XMLSCHEMA
   A consulta a seguir retorna o esquema XML-DATA que descreve a estrutura do documento.  
   
 ## <a name="example"></a>Exemplo  

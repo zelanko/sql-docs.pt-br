@@ -16,12 +16,12 @@ ms.assetid: 08bd20c8-c6be-4be2-be9f-2b5e1d7bee43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 46de29c32442bb2c7672eb7043d10c185327963b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5a212ef8d5f19d2c73512deae188627062d663c5
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783258"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527088"
 ---
 # <a name="spunregistercustomresolver-transact-sql"></a>sp_unregistercustomresolver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_unregistercustomresolver [ @article_resolver = ] 'article_resolver'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@article_resolver =** ] **'***article_resolver***'**  
- Especifica o nome da lógica comercial personalizada cujo registro está sendo cancelado. *article_resolver* está **nvarchar (255)**, sem padrão. Se a lógica de negócios que está sendo removida for um componente COM, esse parâmetro será o nome amigável do componente. Se a lógica de negócios for um assembly .NET Framework, esse parâmetro será o nome do assembly.  
+`[ @article_resolver = ] 'article_resolver'` Especifica o nome da lógica de negócios personalizada que está sendo registrada. *article_resolver* está **nvarchar (255)**, sem padrão. Se a lógica de negócios que está sendo removida for um componente COM, esse parâmetro será o nome amigável do componente. Se a lógica de negócios for um assembly .NET Framework, esse parâmetro será o nome do assembly.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

@@ -16,12 +16,12 @@ ms.assetid: 8fb4a9c3-19af-4a34-8004-572729ba3d15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f7c9120872253706d45c813f78b8c437b3ff0484
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f732d1b8ab70fa5b188147f493af050a80bdca5b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786228"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534198"
 ---
 # <a name="sphelpagentparameter-transact-sql"></a>sp_help_agent_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_help_agent_parameter [ [ @profile_id = ] profile_id ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@profile_id=**] *profile_id*  
- É a ID do perfil a partir de [MSagent_parameters &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) tabela. *profile_id* está **int**, com um padrão de **-1**, que retorna todos os parâmetros.  
+`[ @profile_id = ] profile_id` É a ID do perfil a partir de [MSagent_parameters &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) tabela. *profile_id* está **int**, com um padrão de **-1**, que retorna todos os parâmetros.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   

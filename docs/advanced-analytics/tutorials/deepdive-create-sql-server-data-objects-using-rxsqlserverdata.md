@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/26/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: cbd6f8bb9fd44be44132fd71e7e8eca3c9625b43
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 45643dbcdc2876fe0794ddb731abe6334537169c
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596387"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510353"
 ---
 # <a name="create-sql-server-data-objects-using-rxsqlserverdata-sql-server-and-revoscaler-tutorial"></a>Criar objetos de dados do SQL Server usando RxSqlServerData (tutorial do SQL Server e o RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

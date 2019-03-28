@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - names [SQL Server], columns with
 ms.assetid: 0b738e44-6108-4417-a9a4-abeb7680d899
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a4c56f14cc359bdbf325e0ee083217939d27ee75
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe23dba019511137c9ad817ecdf87fae1938bbd6
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108027"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532188"
 ---
 # <a name="column-names-with-the-path-specified-as-data"></a>Nomes de colunas com o caminho especificado como data()
   Se o caminho especificado como nome da coluna for "data()", o valor será tratado com um valor atômico no XML gerado. Um caractere de espaço será adicionado ao XML se o próximo item na serialização também for um valor atômico. Isso é útil quando você está criando elemento de tipo lista e valores de atributos. A consulta a seguir recupera a ID e o nome do modelo do produto e a lista de produtos naquele modelo do produto.  
@@ -37,7 +37,7 @@ WHERE ProductModelID= 7
 FOR XML PATH('ProductModelData');  
 ```  
   
- O SELECT aninhado recupera uma lista de IDs de produtos. Ele especifica "data()" como o nome da coluna para IDs de produtos. Como o modo PATH especifica uma cadeia de caracteres vazia para o nome do elemento de linha, não há nenhum elemento de linha gerado. Em vez disso, os valores são retornados conforme são atribuídos a um atributo ProductIDs do elemento de linha <`ProductModelData`> do SELECT pai. Este é o resultado:  
+ O SELECT aninhado recupera uma lista de IDs de produtos. Ele especifica "data()" como o nome da coluna para IDs de produtos. Como o modo PATH especifica uma cadeia de caracteres vazia para o nome do elemento de linha, não há nenhum elemento de linha gerado. Em vez disso, os valores são retornados conforme são atribuídos a um atributo ProductIDs do elemento de linha <`ProductModelData`> do SELECT pai. Esse é o resultado:  
   
  `<ProductModelData ProductModelID="7"`  
   

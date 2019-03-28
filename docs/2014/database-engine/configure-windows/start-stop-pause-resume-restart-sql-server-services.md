@@ -40,12 +40,12 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4b70ae7a69ce316b98c892c4dbf4059bfbc97ca4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 341640e4aff44fbc14c85f61b5a98246f857538a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360892"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530478"
 ---
 # <a name="start-stop-pause-resume-restart-the-database-engine-sql-server-agent-or-sql-server-browser-service"></a>Iniciar, parar, pausar, retomar, reiniciar o mecanismo de banco de dados, o SQL Server Agent ou o serviço SQL Server Browser
   Este tópico descreve como iniciar, parar, pausar, retomar ou reiniciar o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, ou o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serviço de navegador usando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], **net** comandos em um prompt de comando, [!INCLUDE[tsql](../../includes/tsql-md.md)], ou o PowerShell.  
@@ -247,20 +247,20 @@ ms.locfileid: "53360892"
   
     -   Para pausar um serviço, substitua **net start** com **net pause**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  O [!INCLUDE[ssDE](../../includes/ssde-md.md)] pode ser parado com a instrução `SHUTDOWN`.  
   
 #### <a name="to-stop-the-includessdeincludesssde-mdmd-using-includetsqlincludestsql-mdmd"></a>Para parar o [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
 -   Para aguardar a conclusão de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] e procedimentos armazenados em execução atualmente e parar o [!INCLUDE[ssDE](../../includes/ssde-md.md)], execute a instrução a seguir.  
   
-    ```tsql  
+    ```sql  
     SHUTDOWN;   
     ```  
   
 -   Para parar o [!INCLUDE[ssDE](../../includes/ssde-md.md)] imediatamente, execute a instrução a seguir.  
   
-    ```tsql  
+    ```sql  
     SHUTDOWN WITH NOWAIT;   
     ```  
   

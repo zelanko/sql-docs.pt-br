@@ -11,12 +11,12 @@ ms.assetid: 29e57ebd-828f-4dff-b473-c10ab0b1c597
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bb40218b2547f14634c060f2c242318101d0ea7b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 05afd5377ee1d64a28349b46fbc79a9f048c5577
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524919"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529858"
 ---
 # <a name="lesson-3-create-a-sql-server-credential"></a>Lição 3: Criar uma credencial do SQL Server
   Nesta lição, você criará uma credencial para armazenar as informações de segurança usadas para acessar a conta de armazenamento do Windows Azure.  
@@ -38,7 +38,7 @@ ms.locfileid: "52524919"
   
 4.  Copie e cole o exemplo a seguir na janela de consulta, e modifique conforme necessário. A instrução a seguir criará uma credencial do SQL Server para armazenar o certificado de acesso compartilhado do contêiner de armazenamento.  
   
-    ```tsql  
+    ```sql  
   
     USE master  
     CREATE CREDENTIAL credentialname - this name should match the container path and it must start with https.   
@@ -52,7 +52,7 @@ ms.locfileid: "52524919"
   
 5.  Para ver todas as credenciais disponíveis, você pode executar a instrução a seguir na janela de consulta:  
   
-    ```tsql  
+    ```sql  
     SELECT * from sys.credentials  
     ```  
   

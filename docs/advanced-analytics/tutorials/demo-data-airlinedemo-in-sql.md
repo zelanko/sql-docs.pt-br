@@ -1,19 +1,19 @@
 ---
 title: Conjunto de dados de demonstração de voo de companhia aérea para tutoriais do SQL Server Python e R - aprendizagem de máquina do SQL Server
-Description: Create a database containing the Airline dataset from R and Python. This dataset is used in exercises showing how to wrap R language or Python code in a SQL Server stored procedure.
+Description: Crie um banco de dados que contém o conjunto de dados de companhia aérea do R e Python. Esse conjunto de dados é usado em exercícios que mostra como encapsular a linguagem R ou o código do Python em um procedimento armazenado do SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/22/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 10d2f013c103dee3de02335ca2acf82d4320b623
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 69f95876a880684ee09b83ad32341a781bc4f5cf
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596977"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510183"
 ---
 #  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>Dados de demonstração de chegada de voo de companhia aérea para tutoriais do SQL Server Python e R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

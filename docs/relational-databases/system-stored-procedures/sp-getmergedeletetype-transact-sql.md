@@ -16,12 +16,12 @@ ms.assetid: 64450e4d-844d-4176-874e-f3845536f7d2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ec9d53433d0b06cfc017fde9d312e943a6a3c6d7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3056c5c298fc1987e7c6f25e4a28220d3e033115
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816148"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535198"
 ---
 # <a name="spgetmergedeletetype-transact-sql"></a>sp_getmergedeletetype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,14 +38,11 @@ sp_getmergedeletetype [ @source_object = ] 'source_object', [ @rowguid =] 'rowgu
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@source_object =**] **'***source_object***'**  
- É o nome do objeto de origem. *source_object* está **nvarchar(386)**, sem padrão.  
+`[ @source_object = ] 'source_object'` É o nome do objeto de origem. *source_object* está **nvarchar(386)**, sem padrão.  
   
- [  **@rowguid=**] **'***rowguid***'**  
- É o identificador de linha do tipo de exclusão. *ROWGUID* está **uniqueidentifier**, sem padrão.  
+`[ @rowguid = ] 'rowguid'` É o identificador de linha para o tipo de exclusão. *ROWGUID* está **uniqueidentifier**, sem padrão.  
   
- [  **@delete_type=**] *delete_type* **saída**  
- É o código que indica o tipo de exclusão. *delete_type* está **int**, sem padrão. *delete_type* também é um parâmetro de saída, e pode ser um destes valores.  
+`[ @delete_type = ] delete_type OUTPUT` O código que indica o tipo de exclusão. *delete_type* está **int**, sem padrão. *delete_type* também é um parâmetro de saída, e pode ser um destes valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  

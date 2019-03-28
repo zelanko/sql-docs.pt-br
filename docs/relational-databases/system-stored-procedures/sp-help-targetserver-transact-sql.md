@@ -18,12 +18,12 @@ ms.assetid: f841d3bd-901a-4980-ad0b-1c6eeba3f717
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aacb30e4c809f965635b9d8640d8fcd690cd340f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c809679694811d23b01dee426aa1afdd7d5cf06
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747424"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529688"
 ---
 # <a name="sphelptargetserver-transact-sql"></a>sp_help_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,7 @@ sp_help_targetserver
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@server_name=** ] **'***server_name***'**  
- O nome do servidor do qual retornar informações. *nome_do_servidor* está **nvarchar (30)**, com um padrão NULL.  
+`[ @server_name = ] 'server_name'` O nome do servidor para o qual retornar informações. *nome_do_servidor* está **nvarchar (30)**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -50,11 +49,11 @@ sp_help_targetserver
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Se *nome_do_servidor* não for especificado, **sp_help_targetserver** retorna este conjunto de resultados.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Número de identificação do servidor.|  
 |**server_name**|**nvarchar(30)**|Nome de servidor.|  
-|**Local**|**nvarchar(200)**|Localização do servidor especificado.|  
+|**location**|**nvarchar(200)**|Localização do servidor especificado.|  
 |**time_zone_adjustment**|**int**|Ajuste de fuso horário, em horas, com base na hora de Greenwich (GMT).|  
 |**enlist_date**|**datetime**|Data do alistamento do servidor especificado.|  
 |**last_poll_date**|**datetime**|Data da última vez em que o servidor foi  sondado para trabalhos.|  

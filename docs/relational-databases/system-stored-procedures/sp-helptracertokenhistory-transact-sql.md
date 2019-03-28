@@ -16,12 +16,12 @@ ms.assetid: 96910d1c-be76-43eb-9c93-4477e6761749
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04bd9a7d072f31fd6791e8cea7b17e14650e63c7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 268f94665641e29156c20ea55debf26db63e1142
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215402"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526628"
 ---
 # <a name="sphelptracertokenhistory-transact-sql"></a>sp_helptracertokenhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,20 +41,16 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=** ] **'***publicação***'**  
- É o nome da publicação na qual o token de rastreamento foi inserido. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação na qual o token de rastreamento foi inserido. *publicação* está **sysname**, sem padrão.  
   
- [  **@tracer_id=** ] *tracer_id*  
- É a ID do token de rastreamento na [MStracer_tokens &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) tabela para o histórico de quais informações são retornadas. *tracer_id* está **int**, sem padrão.  
+`[ @tracer_id = ] tracer_id` É a ID do token de rastreamento na [MStracer_tokens &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) tabela para o histórico de quais informações são retornadas. *tracer_id* está **int**, sem padrão.  
   
- [  **@publisher=** ] **'***publisher***'**  
- O nome do publicador. *Publisher* está **sysname**, com um padrão NULL.  
+`[ @publisher = ] 'publisher'` O nome do publicador. *Publisher* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]
 >  Esse parâmetro só deve ser especificado para não - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores.  
   
- [  **@publisher_db=** ] **'***publisher_db***'**  
- O nome do banco de dados de publicação. *publisher_db* está **sysname**, com um valor padrão de NULL. Esse parâmetro será ignorado se o procedimento armazenado for executado no Publicador.  
+`[ @publisher_db = ] 'publisher_db'` O nome do banco de dados de publicação. *publisher_db* está **sysname**, com um valor padrão de NULL. Esse parâmetro será ignorado se o procedimento armazenado for executado no Publicador.  
   
 ## <a name="result-set"></a>Conjunto de resultados  
   

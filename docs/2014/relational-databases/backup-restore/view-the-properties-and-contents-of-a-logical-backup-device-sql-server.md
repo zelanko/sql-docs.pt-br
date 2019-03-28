@@ -20,12 +20,12 @@ ms.assetid: 3a309074-e816-454d-b6c3-fcfdde0cbf74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7b5f3392f3dbb21c2aeeed3fc5e34d5cf1c0e63b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e593a5d64b6a1b009a68c434fe9ce1a32cb2de20
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229456"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535829"
 ---
 # <a name="view-the-properties-and-contents-of-a-logical-backup-device-sql-server"></a>Exibir as propriedades e o conteúdo de um dispositivo de backup lógico (SQL Server)
   Este tópico descreve como exibir as propriedades e o conteúdo de um dispositivo de backup lógico no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -89,7 +89,7 @@ ms.locfileid: "48229456"
   
 3.  Use a instrução [RESTORE LABELONLY](/sql/t-sql/statements/restore-statements-labelonly-transact-sql) . Este exemplo retorna informações sobre o dispositivo de backup lógico `AdvWrks2008R2Backup` .  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 RESTORE LABELONLY  
    FROM AdvWrks2008R2Backup ;  

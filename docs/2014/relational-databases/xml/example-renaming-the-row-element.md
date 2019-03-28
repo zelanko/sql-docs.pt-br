@@ -1,5 +1,5 @@
 ---
-title: 'Exemplo: renomeando o elemento &lt;row&gt; | Microsoft Docs'
+title: 'Exemplo: Renomeando a &lt;linha&gt; elemento | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, renaming <row> example
 ms.assetid: b042292a-0b6e-40a3-b254-71c06e626706
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 92308ee94df30ad14b752b6cd55877dc784ab22b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01b835696c5e64182cffb72aea80d53b3c3bb776
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057106"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532128"
 ---
-# <a name="example-renaming-the-ltrowgt-element"></a>Exemplo: renomeando o elemento &lt;row&gt;
+# <a name="example-renaming-the-ltrowgt-element"></a>Exemplo: Renomeando a &lt;linha&gt; elemento
   Para cada linha no conjunto de resultados, o modo RAW gera um elemento `<row>`. Opcionalmente, é possível especificar outro nome para esse elemento especificando um argumento opcional para o modo RAW, conforme mostrado nesta consulta. A consulta retorna um elemento <`ProductModel`> para cada linha do conjunto de dados.  
   
 ## <a name="example"></a>Exemplo  

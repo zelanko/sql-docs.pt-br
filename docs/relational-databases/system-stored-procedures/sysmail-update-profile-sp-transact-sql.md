@@ -18,12 +18,12 @@ ms.assetid: eaedf7ce-a8d5-4ab9-99e0-d77d5be19e90
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c979104c30ec9b134f2d73acb2d85ecd22490371
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2b1616fdf7b690d61c6a2605cc15da2508a3fb9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854196"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534658"
 ---
 # <a name="sysmailupdateprofilesp-transact-sql"></a>sysmail_update_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +41,11 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@profile_id** =] *profile_id*  
- A id de perfil a ser atualizada. *profile_id* está **int**, com um padrão NULL. Pelo menos um dos *profile_id* ou *profile_name* deve ser especificado. Se ambos forem especificados, o procedimento alterará o nome do perfil.  
+`[ @profile_id = ] profile_id` A id de perfil a ser atualizada. *profile_id* está **int**, com um padrão NULL. Pelo menos um dos *profile_id* ou *profile_name* deve ser especificado. Se ambos forem especificados, o procedimento alterará o nome do perfil.  
   
- [ **@profile_name** =] **'***profile_name***'**  
- O nome do perfil a ser atualizado ou o novo nome para o perfil. *profile_name* está **sysname**, com um padrão NULL. Pelo menos um dos *profile_id* ou *profile_name* deve ser especificado. Se ambos forem especificados, o procedimento alterará o nome do perfil.  
+`[ @profile_name = ] 'profile_name'` O nome do perfil a ser atualizado ou o novo nome para o perfil. *profile_name* está **sysname**, com um padrão NULL. Pelo menos um dos *profile_id* ou *profile_name* deve ser especificado. Se ambos forem especificados, o procedimento alterará o nome do perfil.  
   
- [ **@description** =] **'***descrição***'**  
- A nova descrição do perfil. *Descrição* está **nvarchar(256)**, com um padrão NULL.  
+`[ @description = ] 'description'` A nova descrição para o perfil. *Descrição* está **nvarchar(256)**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

@@ -16,12 +16,12 @@ ms.assetid: 81bd0d3a-48dc-42b1-b662-c630f61fc630
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 55fc802a476d22514251f7a399974283603ea853
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 4e07931ebbecafdede044582ca06c2636ab195d8
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135586"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526598"
 ---
 # <a name="spenumcustomresolvers-transact-sql"></a>sp_enumcustomresolvers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_enumcustomresolvers [ [ @distributor =] 'distributor']
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@distributor =**] **'**_distribuidor_**'**  
- É o nome do Distribuidor em que o resolvedor personalizado está localizado. *distribuidor* está **sysname**, com um padrão NULL. *Esse parâmetro é preterido e será removido em uma versão futura.*  
+`[ @distributor = ] 'distributor'` É o nome do distribuidor onde o resolvedor personalizado está localizado. *distribuidor* está **sysname**, com um padrão NULL. *Esse parâmetro é preterido e será removido em uma versão futura.*  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   

@@ -16,12 +16,12 @@ ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 08e25ee6f2de589c3d7367c140bd0ea63d4cec1e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 30640cac3b2d8d39ec06d5a05f49c38665b39683
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812959"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537138"
 ---
 # <a name="spdropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,23 +43,17 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=** ] **'**_publicação_**'**  
- É o nome da publicação associada. *publicação* está **sysname**, com um padrão NULL. Se **todos os**, todas as assinaturas para todas as publicações do assinante especificado serão canceladas. *publicação* é um parâmetro obrigatório.  
+`[ @publication = ] 'publication'` É o nome da publicação associada. *publicação* está **sysname**, com um padrão NULL. Se **todos os**, todas as assinaturas para todas as publicações do assinante especificado serão canceladas. *publicação* é um parâmetro obrigatório.  
   
- [  **@article=** ] **'**_artigo_**'**  
- É o nome do artigo. *artigo* está **sysname**, com um valor padrão de NULL. Se **todos os**, especificado de assinaturas para todos os artigos para cada publicação e no assinante serão descartadas. Use **todos os** para publicações que permitem imediatas de atualização.  
+`[ @article = ] 'article'` É o nome do artigo. *artigo* está **sysname**, com um valor padrão de NULL. Se **todos os**, especificado de assinaturas para todos os artigos para cada publicação e no assinante serão descartadas. Use **todos os** para publicações que permitem imediatas de atualização.  
   
- [  **@subscriber=** ] **'**_subscribe_r **'**  
- É o nome do Assinante que terá suas assinaturas removidas. *assinante* está **sysname**, sem padrão. Se **todos os**, todas as assinaturas para todos os assinantes serão descartadas.  
+`[ @subscriber = ] 'subscribe_r'` É o nome do assinante que terá suas assinaturas descartadas. *assinante* está **sysname**, sem padrão. Se **todos os**, todas as assinaturas para todos os assinantes serão descartadas.  
   
- [  **@destination_db=** ] **'**_destination_db_**'**  
- É o nome do banco de dados de destino. *destination_db* está **sysname**, com um padrão NULL. Se for NULL, todas as assinaturas daquele Assinante serão descartadas.  
+`[ @destination_db = ] 'destination_db'` É o nome do banco de dados de destino. *destination_db* está **sysname**, com um padrão NULL. Se for NULL, todas as assinaturas daquele Assinante serão descartadas.  
   
- [  **@ignore_distributor =** ] *ignore_distributor*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @ignore_distributor = ] ignore_distributor` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@reserved=** ] **'**_reservado_**'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

@@ -13,12 +13,12 @@ ms.assetid: 23029395-3e93-4c29-b7d6-e5a47a3526ff
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7907a8e1187169c8c7581e3ad5f81eef2dde15b2
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: ed7b46308c7ffc39117accbb68dfd68b9847f721
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640727"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536598"
 ---
 # <a name="view-or-configure-the-backup-compression-default-server-configuration-option"></a>Exibir ou configurar a opção de configuração de servidor backup compression default
   Este tópico descreve como exibir ou configurar a opção de configuração de servidor **padrão de compactação de backup** em [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. A opção de **padrão de compactação de backup** determina se a instância de servidor cria backups compactados por padrão. Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está instalado, a opção de **padrão de compactação de backup** está desativada.  
@@ -43,7 +43,7 @@ ms.locfileid: "52640727"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   A compactação de backup não está disponível em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
@@ -76,7 +76,7 @@ ms.locfileid: "52640727"
   
      Se você for membro da função de servidor fixa **sysadmin** ou **serveradmin** , também será possível alterar a configuração padrão clicando na caixa **Compactar backup** .  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-view-the-backup-compression-default-option"></a>Para exibir a opção padrão de compactação de backup  
   
@@ -86,7 +86,7 @@ ms.locfileid: "52640727"
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo consulta a exibição de catálogo [sys.configurations](/sql/relational-databases/system-catalog-views/sys-configurations-transact-sql) para determinar o valor de `backup compression default`. O valor 0 significa que a compactação de backup está desativada e o valor 1 significa que a compactação de backup está habilitada.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 SELECT value   
@@ -104,7 +104,7 @@ GO
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo mostra como usar [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) para configurar a instância de servidor para criar backups compactados por padrão.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_configure 'backup compression default', 1 ;  
@@ -115,7 +115,7 @@ GO
   
  Para obter mais informações, veja [Opções de configuração do servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Acompanhar: Depois de configurar a opção backup compression default  
+##  <a name="FollowUp"></a> Acompanhamento: Depois de configurar a opção backup compression default  
  A configuração entra em vigor imediatamente sem reiniciar o servidor.  
   
 ## <a name="see-also"></a>Consulte também  

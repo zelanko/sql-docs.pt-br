@@ -16,12 +16,12 @@ ms.assetid: ff84e8e2-d496-482c-b23e-38a6626596e6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 83edeb0c94276e10528b05bc5a1cd8d9474d07aa
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 54098c536fa368c4a2b58d387911e646db15a4d4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127906"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526798"
 ---
 # <a name="spchangesubscriberschedule-transact-sql"></a>sp_changesubscriber_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,44 +49,31 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@subscriber=**] **'**_assinante_**'**  
- É o nome do Assinante. *assinante* está **sysname**. O nome do Assinante deve ser exclusivo no banco de dados, não deve existir e não deve ser NULL.  
+`[ @subscriber = ] 'subscriber'` É o nome do assinante. *assinante* está **sysname**. O nome do Assinante deve ser exclusivo no banco de dados, não deve existir e não deve ser NULL.  
   
- [  **@agent_type=**] *tipo*  
- É o tipo de agente. *tipo de* está **smallint**, com um padrão de **0**. **0** indica um Distribution Agent. **1** indica um Merge Agent.  
+`[ @agent_type = ] type` É o tipo de agente. *tipo de* está **smallint**, com um padrão de **0**. **0** indica um Distribution Agent. **1** indica um Merge Agent.  
   
- [  **@frequency_type=**] *frequency_type*  
- É a frequência de agendamento da tarefa de distribuição. *frequency_type* está **int**, com um padrão de **64**. Há 10 colunas agendadas.  
+`[ @frequency_type = ] frequency_type` É a frequência de agendamento da tarefa de distribuição. *frequency_type* está **int**, com um padrão de **64**. Há 10 colunas agendadas.  
   
- [  **@frequency_interval=**] *frequency_interval*  
- O valor aplicado à frequência definida *frequency_type*. *frequency_interval* está **int**, com um padrão de **1**.  
+`[ @frequency_interval = ] frequency_interval` O valor aplicado à frequência definida *frequency_type*. *frequency_interval* está **int**, com um padrão de **1**.  
   
- [  **@frequency_relative_interval=**] *frequency_relative_interval*  
- É a data da tarefa de distribuição. *frequency_relative_interval* está **int**, com um padrão de **1**.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` É a data da tarefa de distribuição. *frequency_relative_interval* está **int**, com um padrão de **1**.  
   
- [  **@frequency_recurrence_factor=**] *frequency_recurrence_factor*  
- É o fator de recorrência usado pelo *frequency_type*. *frequency_recurrence_factor* está **int**, com um padrão de **0**.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` É o fator de recorrência usado pelo *frequency_type*. *frequency_recurrence_factor* está **int**, com um padrão de **0**.  
   
- [  **@frequency_subday=**] *frequency_subday*  
- É a frequência, em minutos, de reagendamento durante o período definido. *frequency_subday* está **int**, com um padrão de **4**.  
+`[ @frequency_subday = ] frequency_subday` É a frequência, em minutos, de reagendamento durante o período definido. *frequency_subday* está **int**, com um padrão de **4**.  
   
- [  **@frequency_subday_interval=**] *frequency_subday_interval*  
- É o intervalo de *frequency_subday*. *frequency_subday_interval* está **int**, com um padrão de **5**.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` É o intervalo de *frequency_subday*. *frequency_subday_interval* está **int**, com um padrão de **5**.  
   
- [  **@active_start_time_of_day=**] *active_start_time_of_day*  
- É a hora do dia do primeiro agendamento da tarefa de distribuição. *active_start_time_of_day* está **int**, com um padrão de **0**.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` É a hora do dia quando a tarefa de distribuição está agendada pela primeira vez. *active_start_time_of_day* está **int**, com um padrão de **0**.  
   
- [  **@active_end_time_of_day=**] *active_end_time_of_day*  
- É a hora do dia do último agendamento da tarefa de distribuição. *active_end_time_of_day* está **int**, com um padrão de **235959**, que significa que 11:59:59 P.M. em um relógio de 24 horas.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` É a hora do dia em que a tarefa de distribuição deixa de ser agendado. *active_end_time_of_day* está **int**, com um padrão de **235959**, que significa que 11:59:59 P.M. em um relógio de 24 horas.  
   
- [  **@active_start_date=**] *active_start_date*  
- É a data do primeiro agendamento da tarefa de distribuição, formatada como AAAAMMDD. *active_start_date* está **int**, com um padrão de **0**.  
+`[ @active_start_date = ] active_start_date` É a data quando a tarefa de distribuição é primeiro agendada, formatada como AAAAMMDD. *active_start_date* está **int**, com um padrão de **0**.  
   
- [  **@active_end_date=**] *active_end_date*  
- É a data do último agendamento da tarefa de distribuição, formatada como AAAAMMDD. *active_end_date* está **int**, com um padrão de **99991231**, que significa 31 de dezembro de 9999.  
+`[ @active_end_date = ] active_end_date` É a data em que a tarefa de distribuição deixa de ser agendado, formatada como AAAAMMDD. *active_end_date* está **int**, com um padrão de **99991231**, que significa 31 de dezembro de 9999.  
   
- [ **@publisher**=] **'**_publisher_**'**  
- Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
+`[ @publisher = ] 'publisher'` Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
 >  *Publisher* não deve ser usado ao alterar as propriedades do artigo em uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  

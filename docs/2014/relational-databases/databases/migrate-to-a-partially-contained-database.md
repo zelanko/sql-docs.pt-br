@@ -12,12 +12,12 @@ ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e8a7910b943b3d913e419d49fa4641bdc689e4e0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0e535935da5c99668e39ab4f84eb98ccd5bab064
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803688"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528678"
 ---
 # <a name="migrate-to-a-partially-contained-database"></a>Migrate to a Partially Contained Database
   Este tópico discute como preparar para alterar para o modelo de banco de dados independente parcialmente e, em seguida, fornece as etapas de migração.  
@@ -53,7 +53,7 @@ ms.locfileid: "52803688"
 ### <a name="enabling-contained-databases-using-transact-sql"></a>Habilitando bancos de dados independentes usando Transact-SQL  
  O exemplo a seguir habilita bancos de dados independentes na instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
-```tsql  
+```sql  
 sp_configure 'contained database authentication', 1;  
 GO  
 RECONFIGURE ;  
@@ -75,7 +75,7 @@ GO
 ### <a name="converting-a-database-to-partially-contained-using-transact-sql"></a>Convertendo um banco de dados para independente parcialmente usando Transact-SQL  
  O exemplo a seguir converte um banco de dados chamado `Accounting` para um banco de dados independente parcialmente.  
   
-```tsql  
+```sql  
 USE [master]  
 GO  
 ALTER DATABASE [Accounting] SET CONTAINMENT = PARTIAL  
@@ -94,7 +94,7 @@ GO
 ##  <a name="users"></a> Migrando usuários para usuários de bancos de dados independentes  
  O exemplo a seguir migra todos os usuários baseados em logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para usuários de bancos de dados independentes com senhas. O exemplo exclui os logons que não estão habilitados. O exemplo deve ser executado no banco de dados independente.  
   
-```tsql  
+```sql  
 DECLARE @username sysname ;  
 DECLARE user_cursor CURSOR  
     FOR   

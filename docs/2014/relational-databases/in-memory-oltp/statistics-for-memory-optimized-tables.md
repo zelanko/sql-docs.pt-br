@@ -10,12 +10,12 @@ ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee7c3d44f3575fd1bf25a6e304a379ca6ca6391b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4e47a8c6f5b0da31aea9168bbbc56bd9b28afb96
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136066"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530828"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>Estatísticas para tabelas com otimização de memória
   O otimizador de consulta usa estatísticas sobre colunas para criar planos de consulta que melhoram o desempenho das consultas. As estatísticas são coletadas de tabelas no banco de dados e armazenadas nos metadados do banco de dados.  
@@ -41,7 +41,7 @@ ms.locfileid: "48136066"
 ## <a name="guidelines-for-statistics-when-deploying-memory-optimized-tables"></a>Diretrizes para estatísticas ao implantar tabelas com otimização de memória  
  Para garantir que o otimizador de consulta tenha estatísticas atualizadas durante a criação de planos de consulta, implante tabelas com otimização de memória usando estas cinco etapas:  
   
-1.  Crie tabelas e índices. Os índices são especificados em linha no `CREATE TABLE` instruções.  
+1.  Crie tabelas e índices. Os índices são especificados em linha nas instruções `CREATE TABLE`.  
   
 2.  Carregue dados nas tabelas.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48136066"
   
 4.  Crie procedimentos armazenados que acessam as tabelas.  
   
-5.  Executar a carga de trabalho, que pode conter uma mistura de interpretado e compilados nativamente [!INCLUDE[tsql](../../../includes/tsql-md.md)] armazenados, procedimentos, bem como lotes ad hoc.  
+5.  Execute a carga de trabalho, que pode conter uma mistura de procedimentos armazenados [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretado e compilados nativamente, bem como lotes ad hoc.  
   
  A criação de procedimentos armazenados compilados nativamente após o carregamento dos dados e a atualização das estatísticas garante que o otimizador tenha estatísticas disponíveis para as tabelas com otimização de memória. Isso garantirá planos de consulta eficientes quando o procedimento for compilado.  
   
@@ -58,15 +58,15 @@ ms.locfileid: "48136066"
   
  Se os dados são alterados frequentemente, você deve atualizar as estatísticas com frequência. Por exemplo, atualize as estatísticas da tabelas após uma atualização do lote. Depois de atualizar as estatísticas, descarte e recrie os procedimentos armazenados compilados nativamente para que eles possam se beneficiar das estatísticas atualizadas.  
   
- para obter informações sobre a ferramenta de configuração e recursos adicionais.  
+ .  
   
  Não atualize as estatísticas durante picos de carga de trabalho.  
   
  Para atualizar estatísticas:  
   
--   Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] à [criar um plano de manutenção](../maintenance-plans/create-a-maintenance-plan.md) com um [estatística de tarefa de atualização](../maintenance-plans/update-statistics-task-maintenance-plan.md)  
+-   Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para [Create a Maintenance Plan](../maintenance-plans/create-a-maintenance-plan.md) com uma [Tarefa de Atualização de Estatísticas](../maintenance-plans/update-statistics-task-maintenance-plan.md)  
   
--   Ou atualize estatísticas usando um script [!INCLUDE[tsql](../../../includes/tsql-md.md)], conforme discutido abaixo.  
+-   Ou atualize estatísticas usando um script [!INCLUDE[tsql](../../../includes/tsql-md.md)] , conforme discutido abaixo.  
   
  Para atualizar as estatísticas de uma única tabela com otimização de memória (*myschema*. *Mytable*), execute o seguinte script:  
   
@@ -76,7 +76,7 @@ UPDATE STATISTICS myschema.Mytable WITH FULLSCAN, NORECOMPUTE
   
  Para atualizar estatísticas de todas as tabelas com otimização de memória no banco de dados atual, execute o seguinte script:  
   
-```tsql  
+```sql  
 DECLARE @sql NVARCHAR(MAX) = N''  
   
 SELECT @sql += N'  
@@ -90,7 +90,7 @@ EXEC sp_executesql @sql
   
  O exemplo a seguir relata quando as estatísticas em tabelas com otimização de memória foram atualizadas pela última vez. Essas informações podem ajudá-lo a decidir se você precisar atualizar as estatísticas.  
   
-```tsql  
+```sql  
 select t.object_id, t.name, sp.last_updated as 'stats_last_updated'  
 from sys.tables t join sys.stats s on t.object_id=s.object_id cross apply sys.dm_db_stats_properties(t.object_id, s.stats_id) sp  
 where t.is_memory_optimized=1  

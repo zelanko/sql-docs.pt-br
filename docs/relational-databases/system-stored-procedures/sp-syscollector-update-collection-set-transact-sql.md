@@ -19,12 +19,12 @@ ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f9e7ba855bde4caa04efea0411857705eb4bf976
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7d77ec36f36260226a78136b46656b1e2e8187e5
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702734"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527168"
 ---
 # <a name="spsyscollectorupdatecollectionset-transact-sql"></a>sp_syscollector_update_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,20 +56,15 @@ sp_syscollector_update_collection_set
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@collection_set_id =** ] *collection_set_id*  
- É o identificador local exclusivo do conjunto de coleta. *collection_set_id* está **int** e deve ter um valor se *nome* é NULL.  
+`[ @collection_set_id = ] collection_set_id` É o identificador local exclusivo para o conjunto de coleta. *collection_set_id* está **int** e deve ter um valor se *nome* é NULL.  
   
- [  **@name =** ] '*nome*'  
- É o nome do conjunto de coleta. *nome da* está **sysname** e deve ter um valor se *collection_set_id* é NULL.  
+`[ @name = ] 'name'` É o nome do conjunto de coleta. *nome da* está **sysname** e deve ter um valor se *collection_set_id* é NULL.  
   
- [  **@new_name =** ] '*new_name*'  
- É o novo nome do conjunto de coleta. *new_name* está **sysname**, e se usado, não pode ser uma cadeia de caracteres vazia. *new_name* deve ser exclusivo. Para obter uma lista dos nomes dos conjuntos de coleta atuais, consulte a exibição de sistema syscollector_collection_sets.  
+`[ @new_name = ] 'new_name'` É o novo nome para o conjunto de coleta. *new_name* está **sysname**, e se usado, não pode ser uma cadeia de caracteres vazia. *new_name* deve ser exclusivo. Para obter uma lista dos nomes dos conjuntos de coleta atuais, consulte a exibição de sistema syscollector_collection_sets.  
   
- [  **@target =** ] '*destino*'  
- Reservado para uso futuro.  
+`[ @target = ] 'target'` Reservado para uso futuro.  
   
- [  **@collection_mode =** ] *collection_mode*  
- É o tipo de coleta de dados a ser usado. *collection_mode* está **smallint** e pode ter um dos seguintes valores:  
+`[ @collection_mode = ] collection_mode` É o tipo de coleta de dados para usar. *collection_mode* está **smallint** e pode ter um dos seguintes valores:  
   
  0 - Modo de cache. A coleta e o carregamento de dados estão em agendas separadas. Especifique o modo cache para a coleta contínua.  
   
@@ -77,27 +72,21 @@ sp_syscollector_update_collection_set
   
  Se a alteração do modo não armazenado em cache para o modo de cache (0), você deve também especificar *schedule_uid* ou *schedule_name*.  
   
- [  **@days_until_expiration=** ] *days_until_expiration*  
- É o número de dias durante os quais os dados coletados são salvos no data warehouse de gerenciamento. *days_until_expiration* está **smallint**. *days_until_expiration* deve ser 0 ou um número inteiro positivo.  
+`[ @days_until_expiration = ] days_until_expiration` É o número de dias que os dados coletados são salvos no data warehouse de gerenciamento. *days_until_expiration* está **smallint**. *days_until_expiration* deve ser 0 ou um número inteiro positivo.  
   
- [  **@proxy_id =** ] *proxy_id*  
- É o identificador exclusivo de uma conta proxy do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. *proxy_id* está **int**.  
+`[ @proxy_id = ] proxy_id` É o identificador exclusivo para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conta proxy do agente. *proxy_id* está **int**.  
   
- [  **@proxy_name =** ] '*proxy_name*'  
- É o novo nome do proxy. *proxy_name* está **sysname** e é anulável.  
+`[ @proxy_name = ] 'proxy_name'` É o nome do proxy. *proxy_name* está **sysname** e é anulável.  
   
- [ **@schedule_uid** =] '*schedule_uid*'  
- É o GUID que aponta para uma agenda. *schedule_uid* está **uniqueidentifier**.  
+`[ @schedule_uid = ] 'schedule_uid'` É o GUID que aponta para um agendamento. *schedule_uid* está **uniqueidentifier**.  
   
  Para obter *schedule_uid*, consultar a tabela de sistema sysschedules.  
   
  Quando *collection_mode* é definido como 0, *schedule_uid* ou *schedule_name* deve ser especificado. Quando *collection_mode* é definido como 1, *schedule_uid* ou *schedule_name* será ignorado se especificado.  
   
- [  **@schedule_name =** ] '*schedule_name*'  
- É o nome da agenda. *schedule_name* está **sysname** e é anulável. Se especificado, *schedule_uid* deve ser NULL. Para obter *schedule_name*, consultar a tabela de sistema sysschedules.  
+`[ @schedule_name = ] 'schedule_name'` É o nome da agenda. *schedule_name* está **sysname** e é anulável. Se especificado, *schedule_uid* deve ser NULL. Para obter *schedule_name*, consultar a tabela de sistema sysschedules.  
   
- [  **@logging_level =** ] *logging_level*  
- É o nível de registro em log. *logging_level* está **smallint** com um dos seguintes valores:  
+`[ @logging_level = ] logging_level` É o nível de log. *logging_level* está **smallint** com um dos seguintes valores:  
   
  0 - informações de execução de log e eventos do [!INCLUDE[ssIS](../../includes/ssis-md.md)] que monitoram:  
   
@@ -119,8 +108,7 @@ sp_syscollector_update_collection_set
   
  O valor padrão para *logging_level* é 1.  
   
- [  **@description =** ] '*descrição*'  
- É a descrição do conjunto de coleta. *Descrição* está **nvarchar (4000)**.  
+`[ @description = ] 'description'` É a descrição do conjunto de coleta. *Descrição* está **nvarchar (4000)**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

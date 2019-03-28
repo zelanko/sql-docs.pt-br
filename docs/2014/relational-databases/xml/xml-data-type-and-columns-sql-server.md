@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df5d06478e5e48de00efcbdb7b872a7a1907eec0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 755685601bb97f7e0b8980024df07e27967f3cd3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369998"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530818"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>Tipos e colunas de dados XML (SQL Server)
   Este tópico discute as vantagens e as limitações do `xml` tipo de dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e ajuda você a escolher como armazenar dados XML.  
@@ -113,7 +113,7 @@ ms.locfileid: "53369998"
   
  O armazenamento XML nativo é útil quando você tem documentos XML que têm um intervalo de estruturas ou documentos XML que estão de acordo com esquemas diferentes ou complexos muito difíceis de mapear para estruturas relacionais.  
   
-#### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>Exemplo: Modelagem de dados XML usando o tipo de dados xml  
+#### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>Exemplo: Modelando dados XML com o tipo de dados xml  
  Considere o manual de um produto em formato XML composto por um capítulo separado para cada tópico e com várias seções dentro de cada capítulo. Uma seção pode conter subseções. Como resultado, \<section> é um elemento recursivo. Os manuais de produtos contêm uma grande quantidade de conteúdo misto, diagramas e material técnico. Os dados são semiestruturados. Os usuários podem desejar executar uma pesquisa contextual para obter tópicos de interesse, como pesquisar a seção sobre "índice clusterizado" dentro do capítulo sobre "indexação" e consultar as quantidades técnicas.  
   
  Um modelo de armazenamento apropriado para seus documentos XML é uma coluna de tipo de dados `xml`. Isso preserva o conteúdo de InfoSet de seus dados XML. A indexação de colunas XML beneficia o desempenho de consultas.  
@@ -142,7 +142,7 @@ ms.locfileid: "53369998"
   
  Os exemplos incluem dados relacionais expostos como XML para troca de dados e serviços da Web e dados XML com esquema fixo. Para obter mais informações, consulte [MSDN Online Library](https://go.microsoft.com/fwlink/?linkid=31174).  
   
-#### <a name="example-modeling-data-using-an-annotated-xml-schema-axsd"></a>Exemplo: Modelagem de dados usando um esquema XML anotado (AXSD)  
+#### <a name="example-modeling-data-using-an-annotated-xml-schema-axsd"></a>Exemplo: Modelando dados usando um AXSD (Esquema XML Anotado)  
  Para ilustrar, assuma que você tem dados relacionais existentes, como clientes, pedidos e itens de linha que deseja tratar como XML. Defina uma exibição XML usando AXSD sobre dados relacionais. A exibição XML permite carregar dados XML em massa em suas tabelas e consultar e atualizar os dados relacionais usando a exibição XML. Esse modelo é útil se você precisar trocar dados que contêm marcação XML com outros aplicativos enquanto seus aplicativos SQL funcionam sem interrupção.  
   
 ### <a name="hybrid-model"></a>Modelo híbrido  

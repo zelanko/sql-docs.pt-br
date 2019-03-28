@@ -13,12 +13,12 @@ ms.assetid: 9fe6454e-8c0e-4b50-937b-d9871b20fd13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1bcaade651e2e63bb2cabf6f0a8fc016781ba45b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9f3e7c74fcaebb0aaaf246cba94e32c6b602b6e5
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748969"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534558"
 ---
 # <a name="add-a-collection-item-to-a-collection-set-transact-sql"></a>Adicionar um item de coleta a um conjunto de coletas (Transact-SQL)
   Você pode adicionar um item de coleta a um conjunto de coleta existente usando os procedimentos armazenados fornecidos com o coletor de dados.  
@@ -29,7 +29,7 @@ ms.locfileid: "52748969"
   
 1.  Interrompa o conjunto de coleta ao qual você deseja adicionar o item executando o procedimento armazenado **sp_syscollector_stop_collection_set** . Por exemplo, para parar um conjunto de coleta denominado "Conjunto de Coleta de Teste", execute as seguintes instruções:  
   
-    ```tsql  
+    ```sql  
     USE msdb  
     DECLARE @csid int  
     SELECT @csid = collection_set_id  
@@ -44,7 +44,7 @@ ms.locfileid: "52748969"
   
 2.  Declare o conjunto de coleta ao qual você deseja adicionar o item de coleta. O código a seguir fornece um exemplo de como declarar a ID do conjunto de coleta.  
   
-    ```tsql  
+    ```sql  
     DECLARE @collection_set_id_1 int  
     SELECT @collection_set_id_1 = collection_set_id FROM [msdb].[dbo].[syscollector_collection_sets]  
     WHERE name = N'Test Collection Set'; -- name of collection set  
@@ -52,7 +52,7 @@ ms.locfileid: "52748969"
   
 3.  Declare o tipo de coletor. O código a seguir fornece um exemplo de como declarar o tipo de coletor de Consultas T-SQL Genérico.  
   
-    ```tsql  
+    ```sql  
     DECLARE @collector_type_uid_1 uniqueidentifier  
     SELECT @collector_type_uid_1 = collector_type_uid FROM [msdb].[dbo].[syscollector_collector_types]   
        WHERE name = N'Generic T-SQL Query Collector Type';  
@@ -60,7 +60,7 @@ ms.locfileid: "52748969"
   
      Execute o código a seguir para obter uma lista dos tipos de coletores instalados:  
   
-    ```tsql  
+    ```sql  
     USE msdb  
     SELECT * from syscollector_collector_types  
     GO  
@@ -68,7 +68,7 @@ ms.locfileid: "52748969"
   
 4.  Execute o procedimento armazenado **sp_syscollector_create_collection_item** para criar o item de coleta. Você deve declarar o esquema do item de coleta para que ele seja mapeado para o esquema necessário para o tipo de coletor desejado. O exemplo a seguir usa o esquema de entrada de Consultas T-SQL Genérico.  
   
-    ```tsql  
+    ```sql  
     DECLARE @collection_item_id int;  
     EXEC [msdb].[dbo].[sp_syscollector_create_collection_item]   
     @name=N'OS Wait Stats', --name of collection item  

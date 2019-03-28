@@ -13,15 +13,15 @@ helpviewer_keywords:
 - extracting information of XML nodes [SQL Server]
 - OPENXML statement, metaproperties
 ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 15c3a98ad0e74ba7a1d5ee6d683f6de2e7353984
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 291d1429cdd7dbc4b4737f55b98dea2ba467512f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107609"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535378"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>Especificar metapropriedades no OPENXML
   Atributos de metapropriedades em um documento XML são atributos que descrevem as propriedades de um item XML, como elemento, atributo ou qualquer outro nó DOM. Esses atributos não existem fisicamente no documento de texto XML. No entanto o OPENXML fornece essas metapropriedades para todos os itens XML. Essas metapropriedades permitem extrair informações, como posicionamento local e informações de namespace, de nós XML. Essas informações fornecem mais detalhes do que os que estão aparentes na representação textual.  
@@ -37,7 +37,7 @@ ms.locfileid: "48107609"
 > [!NOTE]  
 >  Não é possível fazer referência a essas metapropriedades em qualquer navegação XPath.  
   
-|Atributo de metapropriedade|Description|  
+|Atributo de metapropriedade|Descrição|  
 |----------------------------|-----------------|  
 |**\@mp:id**|Fornece um identificador de todo o documento gerado pelo sistema do nó DOM. Desde que o documento não seja reanalisado, essa ID faz referência ao mesmo nó XML.<br /><br /> Uma ID de XML de **0** indica que o elemento é um elemento raiz. A ID de XML de seu pai é NULL.|  
 |**\@mp:localname**|Armazena a parte local do nome do nó. Ele é usado com um URI de namespace e de prefixo para nomear nós de elementos ou atributos.|  
@@ -48,7 +48,7 @@ ms.locfileid: "48107609"
   
  Essa tabela mostra as propriedades pai adicionais que são fornecidas e que permitem recuperar informações sobre a hierarquia.  
   
-|Atributo de metapropriedade pai|Description|  
+|Atributo de metapropriedade pai|Descrição|  
 |-----------------------------------|-----------------|  
 |**\@mp:parentid**|Corresponde a **../\@mp:id**|  
 |**\@mp:parentlocalname**|Corresponde a **../\@mp:localname**|  
@@ -102,7 +102,7 @@ FROM OPENXML (@idoc, '/root/Customer/Order', 9)
 EXEC sp_xml_removedocument @idoc  
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 id   oid         date                amount    parentIDNo  parentLocalName    

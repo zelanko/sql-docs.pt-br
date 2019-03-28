@@ -14,12 +14,12 @@ ms.assetid: 6786bd1e-ad97-430a-8dfb-d4ba952d6c4d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 992b72f07b6cd2e223cb0556bd1fb32d03206122
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d5783f393cbbe70e89e2d1ee4b7e05481fdc3ab9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214806"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536138"
 ---
 # <a name="enable-or-disable-backup-checksums-during-backup-or-restore-sql-server"></a>Habilitar ou desabilitar as somas de verificação de backup durante backup ou restauração (SQL Server)
   Este tópico descreve como habilitar ou desabilitar somas de verificação de backup durante processos de backup ou restauração de bancos de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -69,7 +69,7 @@ ms.locfileid: "48214806"
   
 3.  Para habilitar somas de verificação de backup em uma instrução [BACKUP](/sql/t-sql/statements/backup-transact-sql) , especifique a opção WITH CHECKSUM. Para desabilitar somas de verificação de backup, especifique a opção WITH NO_CHECKSUM. Esse é o comportamento padrão, com exceção de um backup compactado. O exemplo a seguir especifica que somas de verificação serão executadas.  
   
-```tsql  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
  TO DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'  
    WITH CHECKSUM;  
@@ -84,7 +84,7 @@ GO
   
 3.  Para habilitar somas de verificação de backup em uma instrução [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) , especifique a opção WITH CHECKSUM. Esse é o comportamento padrão de um backup compactado. Para desabilitar somas de verificação de backup, especifique a opção WITH NO_CHECKSUM. Esse é o comportamento padrão, com exceção de um backup compactado. O exemplo a seguir especifica que somas de verificação de backup serão executadas.  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012   
  FROM DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'  
    WITH CHECKSUM;  

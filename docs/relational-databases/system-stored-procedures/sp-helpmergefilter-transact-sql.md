@@ -16,12 +16,12 @@ ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3785eb45e8ecca7a573f499d8c48b184a22e6efc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 668233ad7ee79617caa60933a9eef33c5a810164
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779358"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534698"
 ---
 # <a name="sphelpmergefilter-transact-sql"></a>sp_helpmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,21 +40,18 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'***publicação***'**  
- É o nome da publicação. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, sem padrão.  
   
- [  **@article=**] **'***artigo***'**  
- É o nome do artigo. *artigo* está **sysname**, com um padrão de **%**, que retorna os nomes de todos os artigos.  
+`[ @article = ] 'article'` É o nome do artigo. *artigo* está **sysname**, com um padrão de **%**, que retorna os nomes de todos os artigos.  
   
- [  **@filtername=**] **'***filtername***'**  
- É o nome do filtro sobre o qual retornar informações. *FilterName* está **sysname**, com um padrão de **%**, que retorna informações sobre todos os filtros definidos em um artigo ou publicação.  
+`[ @filtername = ] 'filtername'` É o nome do filtro sobre o qual retornar informações. *FilterName* está **sysname**, com um padrão de **%**, que retorna informações sobre todos os filtros definidos em um artigo ou publicação.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**join_filterid**|**int**|ID do filtro de junção.|  
-|**FilterName**|**sysname**|Nome do filtro.|  
+|**filtername**|**sysname**|Nome do filtro.|  
 |**nome do artigo**|**sysname**|Nome do artigo de junção.|  
 |**join_filterclause**|**nvarchar(2000)**|Cláusula de filtro que qualifica a junção.|  
 |**join_unique_key**|**int**|Se a junção está em uma chave exclusiva.|  

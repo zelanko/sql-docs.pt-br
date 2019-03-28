@@ -20,12 +20,12 @@ ms.assetid: 50a73574-1a69-448e-83dd-9abcc7cb7e1a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 345584f406830689c4f0bec2a563314d798595a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 37b4a53461b2ebd485941ecad89e3672e7c31b62
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073126"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532578"
 ---
 # <a name="use-marked-transactions-to-recover-related-databases-consistently-full-recovery-model"></a>Usar transações marcadas para recuperar bancos de dados relacionados consistentemente (modelo de recuperação completa)
   Este tópico é relevante apenas para bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que estejam usando modelos de recuperação completa ou bulk-logged.  
@@ -89,7 +89,7 @@ ms.locfileid: "48073126"
 ### <a name="examples"></a>Exemplos  
  O exemplo a seguir restaura o log de transações até a marca na transação marcada denominada `ListPriceUpdate`.  
   
-```tsql  
+```sql  
 USE AdventureWorks  
 GO  
 BEGIN TRANSACTION ListPriceUpdate  
@@ -127,7 +127,7 @@ RESTORE LOG AdventureWorks
   
  Por exemplo, considere um banco de dados particionado que exista em várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Em cada instância é um banco de dados chamado `coyote`. Primeiro, em todos os bancos de dados, crie um procedimento armazenado, por exemplo, `sp_SetMark`.  
   
-```tsql  
+```sql  
 CREATE PROCEDURE sp_SetMark  
 @name nvarchar (128)  
 AS  
@@ -139,7 +139,7 @@ GO
   
  Em seguida, crie um procedimento armazenado `sp_MarkAll` que contenha uma transação que coloque uma marca em cada banco de dados. `sp_MarkAll` pode ser executado em qualquer instância.  
   
-```tsql  
+```sql  
 CREATE PROCEDURE sp_MarkAll  
 @name nvarchar (128)  
 AS  

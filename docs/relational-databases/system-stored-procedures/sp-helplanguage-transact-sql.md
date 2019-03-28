@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9c70e32de4ad1c44f5d38262573a075e81417ec5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d1b567b7d20f4d588fe0ca70f68be4318ce24398
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756534"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531668"
 ---
 # <a name="sphelplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,26 +42,25 @@ sp_helplanguage [ [ @language = ] 'language' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@language=** ] **'***idioma***'**  
- É o nome do idioma alternativo para o qual exibir informações. *linguagem* está **sysname**, com um padrão NULL. Se *linguagem* for especificado, serão retornadas informações sobre o idioma especificado. Se o idioma não for especificado, informações sobre todos os idiomas na **sys. syslanguages** exibição de compatibilidade é retornada.  
+`[ @language = ] 'language'` É o nome do idioma alternativo para o qual exibir informações. *linguagem* está **sysname**, com um padrão NULL. Se *linguagem* for especificado, serão retornadas informações sobre o idioma especificado. Se o idioma não for especificado, informações sobre todos os idiomas na **sys. syslanguages** exibição de compatibilidade é retornada.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**langid**|**smallint**|Número de identificação do idioma.|  
 |**dateformat**|**nchar(3)**|Formato da data.|  
-|**DATEFIRST**|**tinyint**|Primeiro dia da semana: 1 para segunda-feira, 2 para terça-feira e assim por diante, até 7 para domingo.|  
-|**Atualizar**|**int**|Versão da última atualização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para este idioma.|  
+|**datefirst**|**tinyint**|Primeiro dia da semana: 1 para segunda-feira, 2 para terça-feira e assim por diante, até 7 para domingo.|  
+|**upgrade**|**int**|Versão da última atualização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para este idioma.|  
 |**name**|**sysname**|Nome do idioma.|  
 |**alias**|**sysname**|Nome alternativo do idioma.|  
 |**meses**|**nvarchar(372)**|Nomes de meses.|  
 |**shortmonths**|**nvarchar(132)**|Nomes abreviados de meses.|  
 |**Dias**|**nvarchar(217)**|Nomes de dias.|  
-|**LCID**|**int**|ID de localidade do Windows para o idioma.|  
+|**lcid**|**int**|ID de localidade do Windows para o idioma.|  
 |**msglangid**|**smallint**|ID do grupo de mensagens do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 ## <a name="permissions"></a>Permissões  

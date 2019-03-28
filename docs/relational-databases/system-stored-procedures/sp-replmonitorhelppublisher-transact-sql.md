@@ -16,12 +16,12 @@ ms.assetid: 171501fe-4b74-4647-96c3-7691c777e01b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5f8a7e698fcb4eeb0f1e10c00acf4c34d233f755
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f5f537dcb0f41c975ebbb7b5c6a27c2b2e306a09
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794908"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532168"
 ---
 # <a name="spreplmonitorhelppublisher-transact-sql"></a>sp_replmonitorhelppublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_replmonitorhelppublisher [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publisher** =] **'***publisher***'**  
- É o nome do Publicador do qual o status está sendo monitorado. *Publisher* está **sysname**, com um valor padrão de NULL. Se for NULL, as informações serão retornadas para todos os Publicadores que usam o Distribuidor.  
+`[ @publisher = ] 'publisher'` É o nome do publicador do qual o status está sendo monitorado. *Publisher* está **sysname**, com um valor padrão de NULL. Se for NULL, as informações serão retornadas para todos os Publicadores que usam o Distribuidor.  
   
- [  **@refreshpolicy=** ] *refreshpolicy*  
- Somente para uso interno.  
+`[ @refreshpolicy = ] refreshpolicy` Somente para uso interno.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -52,7 +50,7 @@ sp_replmonitorhelppublisher [ [ @publisher = ] 'publisher' ]
 |**publisher**|**sysname**|É o nome de um Publicador.|  
 |**distribution_db**|**sysname**|É o nome do banco de dados de distribuição usado por um determinado Publicador.|  
 |**status**|**int**|Status máximo de todos os agentes de replicação associados com publicações neste Publicador, que pode ter um destes valores.<br /><br /> **1** = iniciado<br /><br /> **2** = foi bem-sucedida<br /><br /> **3** = em andamento<br /><br /> **4** = ocioso<br /><br /> **5** = tentando novamente<br /><br /> **6** = falha|  
-|**Aviso**|**int**|Aviso de limite máximo gerado por uma assinatura pertencente a uma publicação neste Publicador, que pode ser o resultado do OR lógico de um ou mais destes valores.<br /><br /> **1** = expiration – uma assinatura para uma publicação transacional não foi sincronizada dentro do limite de período de retenção.<br /><br /> **2** = latency – o tempo necessário para replicar dados de um publicador transacional para o assinante excede o limite, em segundos.<br /><br /> **4** = mergeexpiration – uma assinatura para uma publicação de mesclagem não foi sincronizada dentro do limite de período de retenção.<br /><br /> **8** = mergefastrunduration – o tempo necessário para concluir a sincronização de uma assinatura de mesclagem excede o limite, em segundos, em uma conexão de rede rápida.<br /><br /> **16** = mergeslowrunduration - o tempo necessário para concluir a sincronização de uma assinatura de mesclagem excede o limite, em segundos, em uma conexão de rede lenta ou discada.<br /><br /> **32** = mergefastrunspeed – a taxa de entrega de linhas durante a sincronização de uma assinatura de mesclagem falhou em manter a taxa de limite, em linhas por segundo, em uma conexão de rede rápida.<br /><br /> **64** = mergeslowrunspeed – a taxa de entrega de linhas durante a sincronização de uma assinatura de mesclagem falhou em manter a taxa de limite, em linhas por segundo, em uma conexão de rede lenta ou discada.|  
+|**warning**|**int**|Aviso de limite máximo gerado por uma assinatura pertencente a uma publicação neste Publicador, que pode ser o resultado do OR lógico de um ou mais destes valores.<br /><br /> **1** = expiration – uma assinatura para uma publicação transacional não foi sincronizada dentro do limite de período de retenção.<br /><br /> **2** = latency – o tempo necessário para replicar dados de um publicador transacional para o assinante excede o limite, em segundos.<br /><br /> **4** = mergeexpiration – uma assinatura para uma publicação de mesclagem não foi sincronizada dentro do limite de período de retenção.<br /><br /> **8** = mergefastrunduration – o tempo necessário para concluir a sincronização de uma assinatura de mesclagem excede o limite, em segundos, em uma conexão de rede rápida.<br /><br /> **16** = mergeslowrunduration - o tempo necessário para concluir a sincronização de uma assinatura de mesclagem excede o limite, em segundos, em uma conexão de rede lenta ou discada.<br /><br /> **32** = mergefastrunspeed – a taxa de entrega de linhas durante a sincronização de uma assinatura de mesclagem falhou em manter a taxa de limite, em linhas por segundo, em uma conexão de rede rápida.<br /><br /> **64** = mergeslowrunspeed – a taxa de entrega de linhas durante a sincronização de uma assinatura de mesclagem falhou em manter a taxa de limite, em linhas por segundo, em uma conexão de rede lenta ou discada.|  
 |**publicationcount**|**int**|É o número de publicações que pertencem ao Publicador.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

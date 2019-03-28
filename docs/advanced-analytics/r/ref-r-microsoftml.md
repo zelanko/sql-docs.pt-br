@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/04/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 37f52a5ac891ab1d52a9b6335a62fdf2789df9b1
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 73d9dcf56c0eb5e69704adf169946f6aa28a432c
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645305"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512253"
 ---
 # <a name="microsoftml-r-library-in-sql-server"></a>MicrosoftML (biblioteca de R no SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ O **MicrosoftML** biblioteca é distribuída em vários produtos da Microsoft, m
 O **MicrosoftML** biblioteca é com base em R 3.4.3 e está disponível apenas quando você instala um dos seguintes produtos da Microsoft ou downloads:
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
-+ [Serviços de aprendizado de máquina do SQL Server 2017](../install/sql-machine-learning-services-windows-install.md)
++ [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 ou posterior](https://docs.microsoft.com/machine-learning-server/)
 + [Microsoft R client](set-up-a-data-science-client.md)
 
@@ -89,7 +89,7 @@ Esta seção lista as funções por categoria para lhe dar uma ideia de como cad
 
 | Nome da função | Descrição |
 |---------------|-------------|
-|[rxpredict. Mlmodel](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxpredict) | Executa a biblioteca de pontuação do SQL Server, usando o procedimento armazenado, ou de código de R, permitindo a pontuação em tempo real fornecer muito mais rápido desempenho de previsão.|
+|[rxPredict.mlModel](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxpredict) | Executa a biblioteca de pontuação do SQL Server, usando o procedimento armazenado, ou de código de R, permitindo a pontuação em tempo real fornecer muito mais rápido desempenho de previsão.|
 |[rxFeaturize](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfeaturize) | Transforma os dados de um conjunto de dados de entrada para um conjunto de dados de saída.|
 |[mlModel](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/mlmodel) | Fornece um resumo de um modelo de aprendizado de máquina do Microsoft R.|
 
@@ -126,7 +126,7 @@ Esta seção lista as funções por categoria para lhe dar uma ideia de como cad
 
 | Nome da função | Descrição |
 |---------------|-------------|
-|[Otimizador](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/optimizer) | Especifica os algoritmos de otimização para o [rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet) algoritmo de aprendizado de máquina.|
+|[optimizer](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/optimizer) | Especifica os algoritmos de otimização para o [rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet) algoritmo de aprendizado de máquina.|
 
 
 ## <a name="8-package-state-functions"></a>Funções de estado do pacote de 8

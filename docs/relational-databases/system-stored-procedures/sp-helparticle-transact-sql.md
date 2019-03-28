@@ -16,12 +16,12 @@ ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0ebb3f1e81fbace678d281116643e1fcd97c3dc1
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 43eada100fb1de531c0d16082bdf0977e479ccfb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212496"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536139"
 ---
 # <a name="sphelparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,23 +42,18 @@ sp_helparticle [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication =**] **'***publicação***'**  
- É o nome da publicação. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, sem padrão.  
   
- [  **@article=**] **'***artigo***'**  
- É o nome de um artigo na publicação. *artigo* está **sysname**, com um padrão de **%**. Se *artigo* não é fornecido, informações sobre todos os artigos da publicação especificada serão retornadas.  
+`[ @article = ] 'article'` É o nome de um artigo na publicação. *artigo* está **sysname**, com um padrão de **%**. Se *artigo* não é fornecido, informações sobre todos os artigos da publicação especificada serão retornadas.  
   
- [  **@returnfilter=**] *returnfilter*  
- Especifica se a cláusula de filtro deve ser retornada. *returnfilter* está **bit**, com um padrão de **1**, que retorna a cláusula de filtro.  
+`[ @returnfilter = ] returnfilter` Especifica se a cláusula de filtro deve ser retornada. *returnfilter* está **bit**, com um padrão de **1**, que retorna a cláusula de filtro.  
   
- [ **@publisher**=] **'***publisher***'**  
- Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
+`[ @publisher = ] 'publisher'` Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
 >  *Publisher* não deve ser especificado quando solicitar informações sobre um artigo publicado por um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
   
- [  **@found=** ] *encontrado* saída  
- Somente para uso interno.  
+`[ @found = ] found OUTPUT` Somente para uso interno.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -71,7 +66,7 @@ sp_helparticle [ @publication = ] 'publication'
 |**objeto de sincronização**|**nvarchar(257)**|Nome da exibição que define o artigo publicado.|  
 |**type**|**smallint**|O tipo de artigo:<br /><br /> **1** = baseado em log.<br /><br /> **3** = baseado em log com filtro manual.<br /><br /> **5** = baseado em log com exibição manual.<br /><br /> **7** = baseado em log com filtro manual e exibição manual.<br /><br /> **8** = execução de procedimento armazenado.<br /><br /> **24** = a execução do procedimento armazenado serializável.<br /><br /> **32** = procedimento armazenado (somente esquema).<br /><br /> **64** = exibição (somente esquema).<br /><br /> **96** = função de agregação (somente esquema).<br /><br /> **128** = função (somente esquema).<br /><br /> **257** = a exibição indexada baseado em log.<br /><br /> **259** = exibição indexada baseado em log com filtro manual.<br /><br /> **261** = a exibição indexada baseado em log com exibição manual.<br /><br /> **263** = a exibição indexada baseado em log com filtro manual e exibição manual.<br /><br /> **320** = a exibição indexada (somente esquema).<br /><br />|  
 |**status**|**tinyint**|Pode ser o [& (AND bit a bit)](../../t-sql/language-elements/bitwise-and-transact-sql.md) resultado de uma ou mais ou destas propriedades do artigo:<br /><br /> **0x00** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **0x01** = artigo está ativo.<br /><br /> **0x08** = incluir o nome da coluna em instruções insert.<br /><br /> **0x16** = usar instruções com parâmetros.<br /><br /> **0x32** = usar instruções com parâmetros e incluir o nome da coluna em instruções insert.|  
-|**filtro**|**nvarchar(257)**|Procedimento armazenado usado para filtrar a tabela horizontalmente. Esse procedimento armazenado deve ter sido criado usando a cláusula FOR REPLICATION.|  
+|**filter**|**nvarchar(257)**|Procedimento armazenado usado para filtrar a tabela horizontalmente. Esse procedimento armazenado deve ter sido criado usando a cláusula FOR REPLICATION.|  
 |**description**|**nvarchar(255)**|Entrada descritiva para o artigo.|  
 |**insert_command**|**nvarchar(255)**|O tipo de comando de replicação usado ao replicar inserções com artigos de tabela. Para obter mais informações, consulte [Especificar como as alterações são propagadas para artigos transacionais](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
 |**update_command**|**nvarchar(255)**|O tipo de comando de replicação usado ao replicar atualizações com artigos de tabela. Para obter mais informações, consulte [Especificar como as alterações são propagadas para artigos transacionais](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
@@ -84,7 +79,7 @@ sp_helparticle [ @publication = ] 'publication'
 |**dest_owner**|**sysname**|Nome do proprietário do objeto de destino.|  
 |**source_owner**|**sysname**|Proprietário do objeto de origem.|  
 |**unqua_source_object**|**sysname**|Nome do objeto de origem, sem o nome do proprietário.|  
-|**sync_object_owner**|**sysname**|Proprietário da exibição que define o artigo publicado. para obter informações sobre a ferramenta de configuração e recursos adicionais.|  
+|**sync_object_owner**|**sysname**|Proprietário da exibição que define o artigo publicado. .|  
 |**unqualified_sync_object**|**sysname**|Nome da exibição que define o artigo publicado, sem o nome do proprietário.|  
 |**filter_owner**|**sysname**|Proprietário do filtro.|  
 |**unqua_filter**|**sysname**|Nome do filtro, sem o nome do proprietário.|  

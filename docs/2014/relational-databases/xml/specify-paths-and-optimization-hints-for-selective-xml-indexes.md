@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d8d5493c63b48c627dbc2cb192d8e10f8bfc4a43
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fd0d493f71bd0a6ac0e2d81d1427027ccdb6496c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533996"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528798"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>Especificar caminhos e dicas de otimização para índices XML seletivos
   Este tópico descreve como especificar caminhos de nós a serem indexados e dicas de otimização de indexação ao criar ou alterar índices XML seletivos.  
@@ -61,7 +61,7 @@ ms.locfileid: "52533996"
   
  Veja aqui um exemplo de índice XML seletivo criado com mapeamentos padrão. Para todos os três caminhos, o tipo de nó padrão (**xs:untypedAtomic**) e a cardinalidade são usados.  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX example_sxi_UX_default  
 ON Tbl(xmlcol)  
 FOR  
@@ -92,7 +92,7 @@ mypath03 = '/a/b/d'
   
  É possível otimizar o índice XML seletivo mostrado da seguinte maneira:  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX example_sxi_UX_optimized  
 ON Tbl(xmlcol)  
 FOR  
@@ -116,7 +116,7 @@ pathY = '/a/b/d' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON
   
  Considere a consulta a seguir.  
   
-```tsql  
+```sql  
 SELECT T.record,  
     T.xmldata.value('(/a/b/d)[1]', 'NVARCHAR(200)')  
 FROM myXMLTable T  
@@ -124,7 +124,7 @@ FROM myXMLTable T
   
  A consulta especificada retorna um valor do caminho `/a/b/d` empacotado em um tipo de dados NVARCHAR(200); assim o tipo de dados a ser especificado para o nó é óbvio. Entretanto, não há nenhum esquema para especificar a cardinalidade do nó em XML não tipado. Para especificar que o nó `d` aparece no máximo uma vez no nó pai `b`, crie um índice XML seletivo que use a dica de otimização SINGLETON da seguinte maneira:  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX example_sxi_US  
 ON Tbl(xmlcol)  
 FOR  
@@ -223,7 +223,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
      Considere a seguinte consulta simples no [documento XML de exemplo](#sample) neste tópico:  
   
-    ```tsql  
+    ```sql  
     SELECT T.record FROM myXMLTable T  
     WHERE T.xmldata.exist('/a/b[./c = "43"]') = 1  
     ```  
@@ -238,7 +238,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
  Para melhorar o desempenho da instrução SELECT mostrada acima, é possível criar o seguinte índice XML seletivo:  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX simple_sxi  
 ON Tbl(xmlcol)  
 FOR  
@@ -251,7 +251,7 @@ FOR
 ### <a name="indexing-identical-paths"></a>Indexando caminhos idênticos  
  Não é possível promover caminhos idênticos ao mesmo tipo de dados em nomes de caminho diferentes. Por exemplo, a consulta a seguir gera um erro, porque `pathOne` e `pathTwo` são idênticos:  
   
-```tsql  
+```sql  
 CREATE SELECTIVE INDEX test_simple_sxi ON T1(xmlCol)  
 FOR  
 (  
@@ -262,7 +262,7 @@ FOR
   
  Entretanto, é possível promover caminhos idênticos como tipos de dados diferentes com nomes diferentes. Por exemplo, agora a consulta a seguir é aceitável, porque os tipos de dados são diferentes:  
   
-```tsql  
+```sql  
 CREATE SELECTIVE INDEX test_simple_sxi ON T1(xmlCol)  
 FOR  
 (  
@@ -278,7 +278,7 @@ FOR
   
  Esta é uma XQuery simples que usa o método exist():  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('/a/b/c/d/e/h') = 1  
 ```  
@@ -293,7 +293,7 @@ WHERE T.xmldata.exist('/a/b/c/d/e/h') = 1
   
  Esta é uma variação mais complexa da XQuery anterior, com um predicado aplicado:  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('/a/b/c/d/e[./f = "SQL"]') = 1  
 ```  
@@ -309,7 +309,7 @@ WHERE T.xmldata.exist('/a/b/c/d/e[./f = "SQL"]') = 1
   
  Esta é uma consulta mais complexa com uma cláusula value():  
   
-```tsql  
+```sql  
 SELECT T.record,  
     T.xmldata.value('(/a/b/c/d/e[./f = "SQL"]/g)[1]', 'nvarchar(100)')  
 FROM myXMLTable T  
@@ -327,7 +327,7 @@ FROM myXMLTable T
   
  Veja aqui uma consulta que usa uma cláusula FLWOR em uma cláusula exist(). (O nome FLWOR vem das cinco cláusulas que podem formar uma expressão XQuery FLWOR: for, let, where, order by e return.)  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('  
   For $x in /a/b/c/d/e  
@@ -380,7 +380,7 @@ WHERE T.xmldata.exist('
   
  Considere o exemplo a seguir:  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('/a/b[./c=5]') = 1  
 ```  

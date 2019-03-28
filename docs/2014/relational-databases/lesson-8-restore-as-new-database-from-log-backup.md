@@ -11,12 +11,12 @@ ms.assetid: ebba12c7-3d13-4c9d-8540-ad410a08356d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b25bd1ad06b92aa3d9e1ba9cb4be4caa5d587d1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 38d807fae60099022e847e4799196305ccfbadf8
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207908"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534438"
 ---
 # <a name="lesson-9-restore-a-database-from-windows-azure-storage"></a>Lição 9: Restaurar um banco de dados a partir do Armazenamento do Windows Azure
   Nesta lição, você aprenderá a restaurar um arquivo de backup de banco de dados do Armazenamento do Windows Azure para um banco de dados, que reside no local ou em uma máquina virtual do Windows Azure. Para acompanhar esta lição, você não precisará concluir as lições 4, 5, 6, 7 e 8.  
@@ -43,9 +43,9 @@ ms.locfileid: "48207908"
   
 3.  Copie e cole o script completo a seguir na janela de consulta. Modifique o script conforme necessário.  
   
-     **Observação:** executar o `RESTORE` instrução para restaurar o backup do banco de dados (. bak) no armazenamento do Windows Azure para uma instância de banco de dados em outro computador.  
+     **Observação:** execute a instrução `RESTORE` para restaurar o backup de banco de dados (.bak) no Armazenamento do Microsoft Azure para uma instância do banco de dados em outro computador.  
   
-    ```tsql  
+    ```sql  
   
     USE master   
     GO   
@@ -96,6 +96,6 @@ ms.locfileid: "48207908"
   
     ```  
   
- **Fim do Tutorial: arquivos de dados do SQL Server no serviço de armazenamento do Windows Azure**  
+ **Fim do Tutorial: Arquivos de dados do SQL Server no serviço de armazenamento do Windows Azure**  
   
   

@@ -19,19 +19,19 @@ ms.assetid: b2b52258-642b-462e-8e0f-18c09d2eccf4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b4f4e9c799e7c2554807bf43083dece0f1899896
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3fa03aae36fd7de30f8efd88742b1e3a73907a0f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194292"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530768"
 ---
 # <a name="create-dml-triggers"></a>Criar gatilhos DML
   Este tópico descreve como criar um gatilho DML [!INCLUDE[tsql](../../includes/tsql-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TRIGGER.  
   
 ##  <a name="Top"></a> Antes de começar  
   
-### <a name="limitations-and-restrictions"></a>Limitações e restrições  
+### <a name="limitations-and-restrictions"></a>Limitações e Restrições  
  Para obter uma lista de limitações e restrições relacionadas à criação de gatilhos DML, veja [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql).  
   
 ###  <a name="Permissions"></a> Permissões  
@@ -60,7 +60,7 @@ ms.locfileid: "48194292"
     |---------------|-----------|  
     |Autor|*Seu nome*|  
     |Data de criação|*A data de hoje*|  
-    |Description|Verifica a avaliação de crédito de fornecedor antes de permitir uma nova ordem de compra com o fornecedor a ser inserido.|  
+    |Descrição|Verifica a avaliação de crédito de fornecedor antes de permitir uma nova ordem de compra com o fornecedor a ser inserido.|  
     |Schema_Name|Purchasing|  
     |Trigger_Name|NewPODetail2|  
     |Table_Name|PurchaseOrderDetail|  
@@ -70,7 +70,7 @@ ms.locfileid: "48194292"
   
 7.  No **Editor de Consultas**, substitua o comentário `-- Insert statements for trigger here` pela seguinte instrução:  
   
-    ```tsql  
+    ```sql  
     IF @@ROWCOUNT = 1  
     BEGIN  
        UPDATE Purchasing.PurchaseOrderHeader  

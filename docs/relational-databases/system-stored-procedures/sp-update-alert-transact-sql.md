@@ -18,12 +18,12 @@ ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 24cd1864fc31524dcd661cd9eb108d8cb4fa1b77
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54d96cf86b55a7c5a24917672bcae470a3bf7335
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846716"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529568"
 ---
 # <a name="spupdatealert-transact-sql"></a>sp_update_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,31 +63,23 @@ sp_update_alert
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@name =**] **'***nome***'**  
- O nome do alerta a ser atualizado. *nome da* está **sysname**, sem padrão.  
+`[ @name = ] 'name'` O nome do alerta que será atualizado. *nome da* está **sysname**, sem padrão.  
   
- [  **@new_name =**] **'***new_name***'**  
- Um nome novo para o alerta. O nome deve ser exclusivo. *new_name* está **sysname**, com um padrão NULL.  
+`[ @new_name = ] 'new_name'` Um novo nome para o alerta. O nome deve ser exclusivo. *new_name* está **sysname**, com um padrão NULL.  
   
- [  **@enabled =**] *habilitado*  
- Especifica se o alerta está habilitado (**1**) ou não habilitado (**0**). *habilitada* está **tinyint**, com um padrão NULL. Um alerta deve estar habilitado para ser disparado.  
+`[ @enabled = ] enabled` Especifica se o alerta está habilitado (**1**) ou não habilitado (**0**). *habilitada* está **tinyint**, com um padrão NULL. Um alerta deve estar habilitado para ser disparado.  
   
- [  **@message_id =**] *message_id*  
- Uma mensagem nova ou número de erro para a definição alerta. Normalmente, *message_id* corresponde a um número de erro no **sysmessages** tabela. *message_id* está **int**, com um padrão NULL. Uma mensagem ID pode ser usada somente se for a configuração de nível de severidade do alerta **0**.  
+`[ @message_id = ] message_id` Um número de erro ou mensagem de novo para a definição de alerta. Normalmente, *message_id* corresponde a um número de erro no **sysmessages** tabela. *message_id* está **int**, com um padrão NULL. Uma mensagem ID pode ser usada somente se for a configuração de nível de severidade do alerta **0**.  
   
- [  **@severity =**] *gravidade*  
- Um novo nível de gravidade (de **1** por meio **25**) para a definição de alerta. Qualquer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mensagem enviada para o log de aplicativo do Windows com a gravidade especificada ativará o alerta. *gravidade* está **int**, com um padrão NULL. Um nível de severidade pode ser usado somente se a configuração de ID de mensagem para o alerta for **0**.  
+`[ @severity = ] severity` Um novo nível de gravidade (de **1** por meio **25**) para a definição de alerta. Qualquer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mensagem enviada para o log de aplicativo do Windows com a gravidade especificada ativará o alerta. *gravidade* está **int**, com um padrão NULL. Um nível de severidade pode ser usado somente se a configuração de ID de mensagem para o alerta for **0**.  
   
- [  **@delay_between_responses =**] *delay_between_responses*  
- O novo período de espera, em segundos, entre respostas ao alerta. *delay_between_responses* está **int**, com um padrão NULL.  
+`[ @delay_between_responses = ] delay_between_responses` O novo período de espera, em segundos, entre respostas ao alerta. *delay_between_responses* está **int**, com um padrão NULL.  
   
- [  **@notification_message =**] **'***notification_message***'**  
- O texto revisado de uma mensagem adicional enviada ao operador como parte de email, **net send**, ou notificação de pager. *notification_message* está **nvarchar(512)**, com um padrão NULL.  
+`[ @notification_message = ] 'notification_message'` O texto revisado de uma mensagem adicional enviada ao operador como parte de email, **net send**, ou notificação de pager. *notification_message* está **nvarchar(512)**, com um padrão NULL.  
   
- [  **@include_event_description_in =**] *include_event_description_in*  
- Especifica se a descrição do erro do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a partir do log de aplicativo do Windows deve ser incluída na mensagem de notificação. *include_event_description_in* está **tinyint**, com um padrão de NULL, e pode ser um ou mais destes valores.  
+`[ @include_event_description_in = ] include_event_description_in` Especifica se a descrição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erro do log de aplicativo Windows deve ser incluído na mensagem de notificação. *include_event_description_in* está **tinyint**, com um padrão de NULL, e pode ser um ou mais destes valores.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**0**|None|  
 |**1**|Email|  
@@ -95,59 +87,43 @@ sp_update_alert
 |**4**|**net send**|  
 |**7**|Todos|  
   
- [  **@database_name =**] **'***banco de dados***'**  
- O nome do banco de dados no qual o erro deve ocorrer para que o alerta seja acionado. *banco de dados* é **sysname.** Os nomes entre colchetes ([ ]) não são permitidos. O valor padrão é NULL.  
+`[ @database_name = ] 'database'` O nome do banco de dados no qual o erro deve ocorrer para o alerta seja acionado. *banco de dados* é **sysname.** Os nomes entre colchetes ([ ]) não são permitidos. O valor padrão é NULL.  
   
- [  **@event_description_keyword =**] **'***event_description_keyword***'**  
- Uma cadeia de caracteres que deve ser localizada na descrição do erro no log de mensagens de erro. Os caracteres correspondentes ao padrão da expressão LIKE do [!INCLUDE[tsql](../../includes/tsql-md.md)] podem ser usados. *event_description_keyword* está **nvarchar(100)**, com um padrão NULL. Esse parâmetro é útil para filtrar nomes de objeto (por exemplo, **% customer_table %**).  
+`[ @event_description_keyword = ] 'event_description_keyword'` Uma sequência de caracteres que deve ser encontrado na descrição do erro no log de mensagem de erro. Os caracteres correspondentes ao padrão da expressão LIKE do [!INCLUDE[tsql](../../includes/tsql-md.md)] podem ser usados. *event_description_keyword* está **nvarchar(100)**, com um padrão NULL. Esse parâmetro é útil para filtrar nomes de objeto (por exemplo, **% customer_table %**).  
   
- [  **@job_id =**] *job_id*  
- O número de identificação do trabalho. *job_id* está **uniqueidentifier**, com um padrão NULL. Se *job_id* for especificado, *job_name* deverão ser omitidos.  
+`[ @job_id = ] job_id` O número de identificação do trabalho. *job_id* está **uniqueidentifier**, com um padrão NULL. Se *job_id* for especificado, *job_name* deverão ser omitidos.  
   
- [  **@job_name =**] **'***job_name***'**  
- O nome do trabalho executado em resposta a esse alerta. *job_name* está **sysname**, com um padrão NULL. Se *job_name* for especificado, *job_id* deverão ser omitidos.  
+`[ @job_name = ] 'job_name'` O nome do trabalho executado em resposta a esse alerta. *job_name* está **sysname**, com um padrão NULL. Se *job_name* for especificado, *job_id* deverão ser omitidos.  
   
- [  **@occurrence_count =** ] *occurrence_count*  
- Redefine o número de vezes em que o alerta ocorreu. *occurrence_count* está **int**, com um padrão de NULL e pode ser definido somente como **0**.  
+`[ @occurrence_count = ] occurrence_count` Redefine o número de vezes que o alerta ocorreu. *occurrence_count* está **int**, com um padrão de NULL e pode ser definido somente como **0**.  
   
- [  **@count_reset_date =**] *count_reset_date*  
- Redefine a data em que a contagem de ocorrências foi redefinida pela última vez. *count_reset_date* está **int**, com um padrão NULL.  
+`[ @count_reset_date = ] count_reset_date` Redefine a data em que a contagem de ocorrências foi redefinida pela última vez. *count_reset_date* está **int**, com um padrão NULL.  
   
- [  **@count_reset_time =**] *count_reset_time*  
- Redefine a hora em que a contagem de ocorrências foi redefinida pela última vez. *count_reset_time* está **int**, com um padrão NULL.  
+`[ @count_reset_time = ] count_reset_time` Redefine a hora em que a contagem de ocorrências foi redefinida pela última vez. *count_reset_time* está **int**, com um padrão NULL.  
   
- [  **@last_occurrence_date =**] *last_occurrence_date*  
- Redefine a data em que o alerta ocorreu pela última vez. *last_occurrence_date* está **int**, com um padrão de NULL e pode ser definido somente como **0**.  
+`[ @last_occurrence_date = ] last_occurrence_date` Redefine a data em que o alerta ocorreu pela última vez. *last_occurrence_date* está **int**, com um padrão de NULL e pode ser definido somente como **0**.  
   
- [  **@last_occurrence_time =**] *last_occurrence_time*  
- Redefine a hora em que o alerta ocorreu pela última vez. *last_occurrence_time* está **int**, com um padrão de NULL e pode ser definido somente como **0**.  
+`[ @last_occurrence_time = ] last_occurrence_time` Redefine a hora em que o alerta ocorreu pela última vez. *last_occurrence_time* está **int**, com um padrão de NULL e pode ser definido somente como **0**.  
   
- [  **@last_response_date =**] *last_response_date*  
- Redefine a data em que o alerta foi respondido pela última vez pelo serviço SQLServerAgent. *last_response_date* está **int**, com um padrão de NULL e pode ser definido somente como **0**.  
+`[ @last_response_date = ] last_response_date` Redefine a data em que o alerta foi respondido pela última vez pelo serviço SQLServerAgent. *last_response_date* está **int**, com um padrão de NULL e pode ser definido somente como **0**.  
   
- [  **@last_response_time =**] *last_response_time*  
- Redefine a hora em que o alerta foi respondido pela última vez pelo serviço SQLServerAgent. *last_response_time* está **int**, com um padrão de NULL e pode ser definido somente como **0**.  
+`[ @last_response_time = ] last_response_time` Redefine a hora em que o alerta foi respondido pela última vez pelo serviço SQLServerAgent. *last_response_time* está **int**, com um padrão de NULL e pode ser definido somente como **0**.  
   
- [  **@raise_snmp_trap =**] *raise_snmp_trap*  
- Reservado.  
+`[ @raise_snmp_trap = ] raise_snmp_trap` Reservado.  
   
- [  **@performance_condition =**] **'***performance_condition***'**  
- Um valor expressado no formato **'***itemcomparatorvalue***'**. *performance_condition* está **nvarchar(512)**, com um padrão de NULL e consiste nestes elementos.  
+`[ @performance_condition = ] 'performance_condition'` Um valor expressado no formato **'***itemcomparatorvalue***'**. *performance_condition* está **nvarchar(512)**, com um padrão de NULL e consiste nestes elementos.  
   
-|Elemento Format|Description|  
+|Elemento Format|Descrição|  
 |--------------------|-----------------|  
 |*Item*|Um objeto de desempenho, contador de desempenho ou instância nomeada do contador|  
 |*Comparador*|Um destes operadores: **>**, **<**, **=**|  
 |*Value*|Valor numérico do contador|  
   
- [  **@category_name =**] **'***categoria***'**  
- O nome da categoria do alerta. *categoria* está **sysname** com um padrão NULL.  
+`[ @category_name = ] 'category'` O nome da categoria de alerta. *categoria* está **sysname** com um padrão NULL.  
   
- [ **@wmi_namespace**=] **'***wmi_namespace***'**  
- O namespace WMI para consulta de eventos. *wmi_namespace* está **sysname**, com um padrão NULL.  
+`[ @wmi_namespace = ] 'wmi_namespace'` O namespace do WMI para consulta de eventos. *wmi_namespace* está **sysname**, com um padrão NULL.  
   
- [ **@wmi_query**= ] **'***wmi_query***'**  
- A consulta que especifica o evento WMI do alerta. *wmi_query* está **nvarchar(512)**, com um padrão NULL.  
+`[ @wmi_query = ] 'wmi_query'` A consulta que especifica o evento WMI para o alerta. *wmi_query* está **nvarchar(512)**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

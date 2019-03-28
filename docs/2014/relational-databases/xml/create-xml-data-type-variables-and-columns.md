@@ -10,15 +10,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], variables
 - xml data type [SQL Server], columns
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 27f4458299fd82a1afe74122edba3cbf886d9425
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3fe1414131991a35b316a50da730f42e8b02d462
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114096"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527288"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>Criar variáveis e colunas de tipo de dados XML
   O tipo de dados `xml` é um tipo de dados interno no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e é um pouco semelhante a outros tipos internos, como `int` e `varchar`. Como com outros tipos internos, você pode usar o `xml` tipo de dados como um tipo de coluna quando você cria uma tabela como um tipo de variável, um tipo de parâmetro, um tipo de retorno de função, ou em [CAST e CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql).  
@@ -53,7 +53,7 @@ CREATE PROCEDURE SampleProc(@XmlDoc xml) AS ...
 ## <a name="assigning-defaults"></a>Atribuindo padrões  
  Em uma tabela, é possível atribuir uma instância XML padrão a uma coluna de tipo `xml`. É possível fornecer o XML padrão de uma de duas maneiras: usando uma constante XML ou usando uma conversão explícita para o tipo `xml`.  
   
- Para fornecer o XML padrão como uma constante XML, use sintaxe conforme mostrado no exemplo a seguir. Observe que a cadeia de caracteres é implicitamente CONVERTIDA para `xml` tipo.  
+ Para fornecer o XML padrão como uma constante XML, use sintaxe conforme mostrado no exemplo a seguir. Observe que a cadeia de caracteres é implicitamente CAST para tipo `xml`.  
   
 ```  
 CREATE TABLE T (XmlColumn xml default N'<element1/><element2/>')  
@@ -87,11 +87,11 @@ CREATE TABLE T (XmlColumn xml NOT NULL)
   
 -   COLLATE  
   
-     O XML fornece sua própria codificação. Agrupamentos são aplicados apenas a tipos de cadeia de caracteres. O tipo de dados `xml` não é um tipo de cadeia de caracteres. No entanto ele tem representação de cadeia de caracteres e permite conversão em tipos de cadeia de caracteres e vice-versa.  
+     O XML fornece sua própria codificação. Ordenações são aplicadas apenas a tipos de cadeia de caracteres. O tipo de dados `xml` não é um tipo de cadeia de caracteres. No entanto ele tem representação de cadeia de caracteres e permite conversão em tipos de cadeia de caracteres e vice-versa.  
   
 -   RULE  
   
- Uma alternativa ao uso de restrições é criar um wrapper, função definida pelo usuário para encapsular o `xml` método de tipo de dados e especificar função definida pelo usuário na restrição de verificação, conforme mostrado no exemplo a seguir.  
+ Uma alternativa ao uso de restrições é criar um wrapper, função definida pelo usuário para encapsular o método de tipo de dados `xml` e especificar função definida pelo usuário na restrição de verificação, conforme mostrado no exemplo a seguir.  
   
  No exemplo a seguir, a restrição na `Col2` especifica que cada instância XML armazenada nessa coluna deve ter um elemento `<ProductDescription>` que contém um atributo `ProductID` . Essa restrição é imposta pela função definida pelo usuário:  
   
@@ -135,9 +135,9 @@ INSERT INTO T values(1,'<Product />')
   
 -   Você deseja criar um índice XML na coluna de tipo de dados `xml` e a chave primária da tabela principal é a mesma que sua chave de clustering. Para obter mais informações, veja [Índices XML &#40;SQL Server&#41;](xml-indexes-sql-server.md).  
   
- Criar o `xml` coluna de tipo de dados em uma tabela separada, se as seguintes condições forem verdadeiras:  
+ Crie uma coluna de tipo de dados `xml`na mesma tabela quando um das seguintes condições for verdadeira:  
   
--   Você deseja criar um índice XML no `xml` coluna de tipo de dados, mas a chave primária da tabela principal é diferente da sua chave de clustering, a tabela principal não tem uma chave primária ou a tabela principal é um heap (sem chave de clustering). Isto poderá ser verdade se a tabela principal já existir.  
+-   Você deseja criar um índice XML na coluna de tipo de dados `xml`, mas a chave primária da tabela principal é diferente de sua chave de clustering ou a tabela principal não tem uma chave primária ou a tabela principal é um heap (sem chave de clustering). Isto poderá ser verdade se a tabela principal já existir.  
   
 -   Você não deseja que as verificações de tabela se tornem mais lentas por causa da presença da coluna XML na tabela. Isso usará espaço se for armazenado dentro da linha ou fora da linha.  
   

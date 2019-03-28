@@ -16,12 +16,12 @@ ms.assetid: da564112-f769-4e67-9251-5699823e8c86
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad32cd5b8e6936bc646fa664052a307a9e0d7ed0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4643cfc08db68e5369cfca25d2de76d314ffb347
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779368"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530668"
 ---
 # <a name="sphelpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,39 +44,32 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'***publicação***'**  
- É o nome da publicação. *publicação* está **sysname**, com um padrão de **%**. A publicação já deve existir e obedecer às regras para identificadores. Se for NULL ou **%**, serão retornadas informações sobre todas as publicações de mesclagem e assinaturas no banco de dados atual.  
+`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, com um padrão de **%**. A publicação já deve existir e obedecer às regras para identificadores. Se for NULL ou **%**, serão retornadas informações sobre todas as publicações de mesclagem e assinaturas no banco de dados atual.  
   
- [  **@subscriber=**] **'***assinante***'**  
- É o nome do Assinante. *assinante* está **sysname**, com um padrão de **%**. Se for NULL ou %, informações sobre todas as assinaturas da publicação determinada serão retornadas.  
+`[ @subscriber = ] 'subscriber'` É o nome do assinante. *assinante* está **sysname**, com um padrão de **%**. Se for NULL ou %, informações sobre todas as assinaturas da publicação determinada serão retornadas.  
   
- [  **@subscriber_db=**] **'***subscriber_db***'**  
- É o nome do banco de dados de assinatura. *subscriber_db*está **sysname**, com um padrão de **%**, que retorna informações sobre todos os bancos de dados de assinatura.  
+`[ @subscriber_db = ] 'subscriber_db'` É o nome do banco de dados de assinatura. *subscriber_db*está **sysname**, com um padrão de **%**, que retorna informações sobre todos os bancos de dados de assinatura.  
   
- [  **@publisher=**] **'***publisher***'**  
- É o nome do Publicador. O Publicador deve ser um servidor válido. *Publisher*está **sysname**, com um padrão de **%**, que retorna informações sobre todos os publicadores.  
+`[ @publisher = ] 'publisher'` É o nome do publicador. O Publicador deve ser um servidor válido. *Publisher*está **sysname**, com um padrão de **%**, que retorna informações sobre todos os publicadores.  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
- É o nome do banco de dados Publicador. *publisher_db*está **sysname**, com um padrão de **%**, que retorna informações sobre todos os bancos de dados do publicador.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados publicador. *publisher_db*está **sysname**, com um padrão de **%**, que retorna informações sobre todos os bancos de dados do publicador.  
   
- [  **@subscription_type=**] **'***subscription_type***'**  
- É o tipo de assinatura. *subscription_type*está **nvarchar(15)**, e pode ser um destes valores.  
+`[ @subscription_type = ] 'subscription_type'` É o tipo de assinatura. *subscription_type*está **nvarchar(15)**, e pode ser um destes valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**envio por push** (padrão)|Assinatura push.|  
-|**Pull**|Assinatura Pull|  
+|**pull**|Assinatura Pull|  
 |**ambos**|Assinaturas push e pull|  
   
- [  **@found=**] **'***encontrado***' saída**  
- É um sinalizador para indicar linhas de retorno. *encontrado*está **int** e um parâmetro de saída, com um padrão NULL. **1** indica que a publicação foi localizada. **0** indica a publicação não foi encontrada.  
+`[ @found = ] 'found'OUTPUT` É um sinalizador para indicar linhas de retorno. *encontrado*está **int** e um parâmetro de saída, com um padrão NULL. **1** indica que a publicação foi localizada. **0** indica a publicação não foi encontrada.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**subscription_name**|**sysname**|O nome da assinatura.|  
-|**publicação**|**sysname**|Nome da publicação.|  
+|**publication**|**sysname**|Nome da publicação.|  
 |**publisher**|**sysname**|Nome do Publicador.|  
 |**publisher_db**|**sysname**|Nome do banco de dados publicador.|  
 |**Assinante**|**sysname**|Nome do Assinante.|  
@@ -92,7 +85,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**offload_enabled**|**bit**|Especifica se execução de descarga de um agente de replicação foi definida para executar no Assinante. Se for NULL, a execução será executada no Publicador.|  
 |**offload_server**|**sysname**|Nome do servidor para onde o agente está executando.|  
 |**use_interactive_resolver**|**int**|Retorna se o resolvedor interativo é usado ou não durante a reconciliação. Se **0**, o resolvedor interativo não é usado.|  
-|**nome do host**|**sysname**|Valor fornecido quando uma assinatura é filtrada pelo valor de [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) função.|  
+|**hostname**|**sysname**|Valor fornecido quando uma assinatura é filtrada pelo valor de [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) função.|  
 |**subscriber_security_mode**|**smallint**|É o modo de segurança no assinante, onde **1** significa que a autenticação do Windows, e **0** significa [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação.|  
 |**subscriber_login**|**sysname**|É o nome de logon no Assinante.|  
 |**subscriber_password**|**sysname**|A senha do Assinante atual nunca é retornada. O resultado é mascarado por um "**\*\*\*\*\*\***" cadeia de caracteres.|  

@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - xsd:simpleType declarations
 ms.assetid: 557b972d-3af9-40bf-8382-72b05c9de1c1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bd9d3d1660f549c93ae77106712364c15a41aa3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f0b24a9c02e38ba8165e015cdf8d1b107e64cbaf
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159136"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534058"
 ---
 # <a name="values-for-ltxsdsimpletypegt-declarations"></a>Valores para declarações &lt;xsd:simpleType&gt;
   A tabela a seguir descreve as restrições aplicadas com base em todas as enumerações de tipo simples XSD reconhecidas.  
@@ -41,6 +41,6 @@ ms.locfileid: "48159136"
 |`anyURI`|Valores deste tipo não podem ter mais que 4000 caracteres Unicode de comprimento.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Requisitos e limitações para o uso de Coleções de Esquemas XML no servidor](requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
+ [Requisitos e limitações de uso de coleções de esquema XML no servidor](requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

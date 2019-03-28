@@ -1,5 +1,5 @@
 ---
-title: 'Exemplo: especificando a diretiva XMLTEXT | Microsoft Docs'
+title: 'Exemplo: Especificando a diretiva XMLTEXT | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,18 +9,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - XMLTEXT directive
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fc9d79c82df85e680ccf298f3d7f7997be87610b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 75f04b8dfb6cfec70c6fc141178dfb56c9ffd94c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075816"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537348"
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>Exemplo: Especificando a diretiva XMLTEXT
-  Este exemplo ilustra como os dados na coluna de estouro são resolvidos usando o `XMLTEXT` diretiva em um `SELECT` instrução usando o modo EXPLICIT.  
+  Este exemplo ilustra como dados na coluna de estouro são resolvidos usando a diretiva `XMLTEXT` em uma instrução `SELECT` no modo EXPLICIT.  
   
  Considere a tabela `Person` . Esta tabela tem uma coluna `Overflow` que armazena a parte não consumida do documento XML.  
   
@@ -52,7 +52,7 @@ FOR XML EXPLICIT;
   
 -   Como o atributo `PersonID` no elemento <`xmltext`> entra em conflito com o atributo `PersonID` recuperado no mesmo nível de elemento, o atributo no elemento <`xmltext`> é ignorado, mesmo que `PersonID` seja NULL. Geralmente, um atributo substitui um atributo do mesmo nome no estouro.  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
  `<Parent PersonID="P1" PersonName="Joe" attr1="data">content</Parent>`  
   
@@ -86,7 +86,7 @@ FROM Person
 FOR XML EXPLICIT;  
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
  `<Parent PersonID="P1" PersonName="Joe" attr1="data">content</Parent>`  
   
@@ -112,7 +112,7 @@ FROM Person
 FOR XML EXPLICIT  
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
  `<Parent PersonID="P1" PersonName="Joe">`  
   
@@ -147,7 +147,7 @@ FROM Person
 FOR XML EXPLICIT;  
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
  `<Parent PersonID="P1" attr1="data">content<PersonName>Joe</PersonName>`  
   

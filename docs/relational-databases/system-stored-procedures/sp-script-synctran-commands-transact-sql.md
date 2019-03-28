@@ -16,12 +16,12 @@ ms.assetid: f132694a-dd05-405b-9d84-21acce9e564a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a4956a449c0b972fffba462a907e899791fadfa5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a9ee35eb4c5d67ff50f4f08c1cfa29596e27aec2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791398"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536169"
 ---
 # <a name="spscriptsynctrancommands-transact-sql"></a>sp_script_synctran_commands (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_script_synctran_commands [@publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publication** =] **'***publicação***'**  
- É o nome da publicação para a qual gerar um script. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação a ser inserido no script. *publicação* está **sysname**, sem padrão.  
   
- [ **@article** =] **'***artigo***'**  
- É o nome do artigo para o qual gerar um script. *artigo* está **sysname**, com um padrão de **todos os**, que especifica todos os artigos são incluídos no script.  
+`[ @article = ] 'article'` É o nome do artigo a ser inserido no script. *artigo* está **sysname**, com um padrão de **todos os**, que especifica todos os artigos são incluídos no script.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

@@ -19,12 +19,12 @@ ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ed8c11a7d5f333a086482d2882a6aef7a97370e3
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 9d3529d01966c7f9780183d663823d8f4033f47a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256971"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535778"
 ---
 # <a name="spsyscollectorupdatecollectortype-transact-sql"></a>sp_syscollector_update_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,20 +45,15 @@ sp_syscollector_update_collector_type [ @collector_type_uid = ] 'collector_type_
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@collector_type_uid =** ] **'***collector_type_uid***'**  
- É o GUID do tipo de coletor. *collector_type_uid* está **uniqueidentifier**, e se for NULL, ele será automaticamente criado e retornado como OUTPUT.  
+`[ @collector_type_uid = ] 'collector_type_uid'` É o GUID para o tipo de coletor. *collector_type_uid* está **uniqueidentifier**, e se for NULL, ele será automaticamente criado e retornado como OUTPUT.  
   
- [ **@name =** ] **'***name***'**  
- É o nome do tipo de coletor. *nome da* está **sysname** e deve ser especificado.  
+`[ @name = ] 'name'` É o nome do tipo de coletor. *nome da* está **sysname** e deve ser especificado.  
   
- [ **@parameter_schema =** ] **'***parameter_schema***'**  
- É o esquema XML deste tipo de coletor. *parameter_schema* está **xml** e pode ser necessário para determinados tipos de coletor. Se não for necessário, esse argumento poderá ser NULL.  
+`[ @parameter_schema = ] 'parameter_schema'` É o esquema XML para esse tipo de coletor. *parameter_schema* está **xml** e pode ser necessário para determinados tipos de coletor. Se não for necessário, esse argumento poderá ser NULL.  
   
- [ **@collection_package_id =** ] *collection_package_id*  
- É um identificador exclusivo local que aponta para o pacote de coleta do [!INCLUDE[ssIS](../../includes/ssis-md.md)] usado pelo conjunto de coleta. *collection_package_id* está **uniqueidentifer** e é necessária. Para obter o valor de *collection_package_id*, consulte a exibição de sistema syscollector_collector_types no banco de dados msdb.  
+`[ @collection_package_id = ] collection_package_id` É um identificador exclusivo local que aponta para o [!INCLUDE[ssIS](../../includes/ssis-md.md)] usado pelo conjunto de coleta do pacote de coleta. *collection_package_id* está **uniqueidentifer** e é necessária. Para obter o valor de *collection_package_id*, consulte a exibição de sistema syscollector_collector_types no banco de dados msdb.  
   
- [ **@upload_package_id =** ] *upload_package_id*  
- É um identificador exclusivo local que aponta para o pacote de carregamento do [!INCLUDE[ssIS](../../includes/ssis-md.md)] usado pelo conjunto de coleta. *upload_package_id* está **uniqueidentifier** e é necessária. Para obter o valor de *upload_package_id*, consulte a exibição de sistema syscollector_collector_types no banco de dados msdb.  
+`[ @upload_package_id = ] upload_package_id` É um identificador exclusivo local que aponta para o [!INCLUDE[ssIS](../../includes/ssis-md.md)] carregar pacote usado pelo conjunto de coleta. *upload_package_id* está **uniqueidentifier** e é necessária. Para obter o valor de *upload_package_id*, consulte a exibição de sistema syscollector_collector_types no banco de dados msdb.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

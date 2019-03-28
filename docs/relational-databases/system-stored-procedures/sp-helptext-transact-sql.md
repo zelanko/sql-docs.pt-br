@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 95316400d336a13304f1da0850ecdcc9565fe5bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b518c7b79ca6a054b5d6435ea7cb2fe10e419b7
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707324"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536318"
 ---
 # <a name="sphelptext-transact-sql"></a>sp_helptext (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,18 +41,16 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@objname =** ] **'***nome***'**  
- É o nome qualificado ou não qualificado de um objeto de escopo de esquema definido pelo usuário. Somente serão requeridas aspas se um objeto qualificado for especificado. Se um nome completamente qualificado, incluindo um nome de banco de dados, for fornecido, o nome do banco de dados deverá ser o nome do banco de dados atual. O objeto deve estar no banco de dados atual. *nome da* está **nvarchar(776)**, sem padrão.  
+`[ @objname = ] 'name'` É o nome qualificado ou não qualificado de um objeto definido pelo usuário no escopo do esquema. Somente serão requeridas aspas se um objeto qualificado for especificado. Se um nome completamente qualificado, incluindo um nome de banco de dados, for fornecido, o nome do banco de dados deverá ser o nome do banco de dados atual. O objeto deve estar no banco de dados atual. *nome da* está **nvarchar(776)**, sem padrão.  
   
- [  **@columnname =** ] **'***computed_column_name***'**  
- É o nome da coluna computada para a qual exibir informações de definição. A tabela que contém a coluna deve ser especificada como *nome*. *column_name* está **sysname**, sem padrão.  
+`[ @columnname = ] 'computed_column_name'` É o nome da coluna computada para a qual exibir informações de definição. A tabela que contém a coluna deve ser especificada como *nome*. *column_name* está **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**Texto**|**nvarchar(255)**|Definição do objeto|  
   

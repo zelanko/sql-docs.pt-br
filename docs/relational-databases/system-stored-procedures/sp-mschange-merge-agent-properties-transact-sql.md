@@ -16,12 +16,12 @@ ms.assetid: f775fa0f-28c7-4863-89ce-7bcfa1ab8b5e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ad4b46cbf4c19b637bdc836e5c311321273de63
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6f682400bc827d66878499b6e625671d5b9061da
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769778"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535638"
 ---
 # <a name="spmschangemergeagentproperties-transact-sql"></a>sp_MSchange_merge_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,26 +44,19 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publisher** =] **'***publisher***'**  
- É o nome do Publicador. *Publisher* está **sysname**, sem padrão.  
+`[ @publisher = ] 'publisher'` É o nome do publicador. *Publisher* está **sysname**, sem padrão.  
   
- [  **@publisher_db=** ] **'***publisher_db***'**  
- É o nome do banco de dados de publicação. *publisher_db* está **sysname**, sem padrão.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados de publicação. *publisher_db* está **sysname**, sem padrão.  
   
- [  **@publication =** ] **'***publicação***'**  
- É o nome da publicação. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, sem padrão.  
   
- [  **@subscriber=** ] **'***assinante***'**  
- É o nome do Assinante. *assinante* está **sysname**, sem padrão.  
+`[ @subscriber = ] 'subscriber'` É o nome do assinante. *assinante* está **sysname**, sem padrão.  
   
- [  **@subscriber_db=** ] **'***subscriber_db***'**  
- É o nome do banco de dados de assinatura. *subscriber_db* está **sysname**, sem padrão.  
+`[ @subscriber_db = ] 'subscriber_db'` É o nome do banco de dados de assinatura. *subscriber_db* está **sysname**, sem padrão.  
   
- [  **@property =** ] **'***propriedade***'**  
- É a propriedade da publicação a ser alterada. *propriedade* está **sysname**, sem padrão.  
+`[ @property = ] 'property'` É a propriedade de publicação a alterar. *propriedade* está **sysname**, sem padrão.  
   
- [  **@value =** ] **'***valor***'**  
- É o novo valor da propriedade. *valor* está **nvarchar(524)**, com um padrão NULL.  
+`[ @value = ] 'value'` É o novo valor da propriedade. *valor* está **nvarchar(524)**, com um padrão NULL.  
   
  Essa tabela descreve as propriedades do trabalho de Agente de Mesclagem que podem ser alteradas e restrições nos valores dessas propriedades.  
   

@@ -18,12 +18,12 @@ ms.assetid: 40e44df7-d3e3-44ee-b149-08aba629a21f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 14702941897ebfec4b8646f8015a659f370e31ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1c02660752e2b461a24eed6df8aa31416b5c4bfd
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856974"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538168"
 ---
 # <a name="spresynctargetserver-transact-sql"></a>sp_resync_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,7 @@ sp_resync_targetserver
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@server_name =**] **'***server***'**  
- O nome do servidor a ser sincronizado novamente. *server* é **sysname**, sem padrão. Se **todos os** for especificado, todos os servidores de destino são ressincronizados.  
+`[ @server_name = ] 'server'` O nome do servidor para sincronizar novamente. *server* é **sysname**, sem padrão. Se **todos os** for especificado, todos os servidores de destino são ressincronizados.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/15/2018
 ms.topic: conceptual
-ms.author: heidist
-author: HeidiSteen
+ms.author: davidph
+author: dphansen
 manager: cgronlun
-ms.openlocfilehash: dd92ba0e080da0dd8ed387ae0a9f3d431232c896
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 3a4a0c740268a8e2d6691e3c8a87634cc05f9ab1
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432849"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510413"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>Perguntas frequentes sobre atualização e instalação para o aprendizado de máquina do SQL Server ou Microsoft R Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

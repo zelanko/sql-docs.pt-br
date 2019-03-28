@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/15/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: ed1fbe8be63cd184fd49b1e76f94583bd50cf380
-ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
+ms.openlocfilehash: a7e55ac47fdb28a18c8a41b3535e67fc8886cfea
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161513"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58509623"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>Pontuação com sp_rxPredict no aprendizado de máquina do SQL Server em tempo real
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

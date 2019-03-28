@@ -10,23 +10,23 @@ ms.assetid: f17f21df-959d-4e20-92f3-bd707d555a46
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e77025a5cc8e410c1bdbb36b0946dd3134c9ca1b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: add4bbb072a91ad05d58d57f43821c441595afef
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155496"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58525838"
 ---
 # <a name="implementing-sqlvariant-in-a-memory-optimized-table"></a>Implementando SQL_VARIANT em uma tabela com otimização de memória
-  Considere um exemplo de uma tabela com `SQL_VARIANT` coluna:  
+  Considere um exemplo de uma tabela com a coluna `SQL_VARIANT`:  
   
-```tsql  
+```sql  
 CREATE TABLE [dbo].[T1]([Key] [sql_variant] NOT NULL)  
 ```  
   
  Suponha que a coluna de chave possa ser apenas um `BIGINT` ou `NVARCHAR(300)`. Você pode modelar essa tabela como se segue:  
   
-```tsql  
+```sql  
 -- original disk-based table  
 CREATE TABLE [dbo].[T1_disk]([Key] int not null primary key,  
        [Value] [sql_variant])  
@@ -66,7 +66,7 @@ from dbo.T1_inmem
   
  Agora, você pode carregar dados em [T1_HK] de T1 abrindo um cursor em T1:  
   
-```tsql  
+```sql  
 DECLARE T1_rows_cursor CURSOR FOR    
 select *  
 FROM dbo.T1  
@@ -114,7 +114,7 @@ DEALLOCATE T1_rows_cursor
   
  Você pode converter dados de volta para `SQL_VARIANT` como se segue:  
   
-```tsql  
+```sql  
 case [Key_enum] when 1 then convert(sql_variant, [Key_bi])   
                        else convert(sql_variant, [Key_nv])   
                        end  

@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - AUTO FOR XML mode, heuristics in shaping returned XML
 ms.assetid: 6c5cb6c1-2921-4ba1-8100-0bf8074f9103
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 45da06ed01776c94cc1f453b198e85ce181db75d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 91fa97c61734f378163fdac9adf1918caefabc7a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162716"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528929"
 ---
 # <a name="auto-mode-heuristics-in-shaping-returned-xml"></a>Heurística de modo AUTO na formação do XML retornado
   O modo AUTO determina a forma do  XML retornado com base na consulta. Para determinar como os elementos devem ser aninhados, a heurística do modo AUTO compara valores da coluna em linhas adjacentes. São comparadas colunas de todos os tipos, menos **ntext**, **text**, **image**e **xml**. São comparadas colunas do tipo **(n)varchar(max)** e **varbinary(max)** .  

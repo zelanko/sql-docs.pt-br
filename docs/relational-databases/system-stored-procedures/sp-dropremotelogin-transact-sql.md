@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: fa52c7e66a690b54c33330e09fe4373962ea2f9b
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 910f4f02c17ba0f6524648b9ac1eb201d735b238
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589310"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527918"
 ---
 # <a name="spdropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,14 +44,11 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@remoteserver =** ] **'**_remoteserver_**'**  
- É o nome do servidor remoto mapeado para o logon remoto que será removido. *remoteserver* está **sysname**, sem padrão. *remoteserver* já deve existir.  
+`[ @remoteserver = ] 'remoteserver'` É o nome do servidor remoto mapeado para o logon remoto a ser removido. *remoteserver* está **sysname**, sem padrão. *remoteserver* já deve existir.  
   
- [  **@loginame =** ] **'**_logon_**'**  
- É o nome do logon opcional no servidor local que está associado ao servidor remoto. *login* é **sysname**, com um padrão de NULL. *logon* já deve existir se especificado.  
+`[ @loginame = ] 'login'` É o nome de logon opcional no servidor local que está associado com o servidor remoto. *login* é **sysname**, com um padrão de NULL. *logon* já deve existir se especificado.  
   
- [  **@remotename =** ] **'**_remote_name_**'**  
- É o nome opcional do logon remoto mapeado para *login* durante o logon do servidor remoto. *remote_name* está **sysname**, com um padrão NULL.  
+`[ @remotename = ] 'remote_name'` É o nome opcional do logon remoto mapeado para *login* durante o logon do servidor remoto. *remote_name* está **sysname**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -77,7 +74,7 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 EXEC sp_dropremotelogin 'ACCOUNTS';  
 ```  
   
-### <a name="b-dropping-a-login-mapping"></a>b. Descartando um mapeamento de logon  
+### <a name="b-dropping-a-login-mapping"></a>B. Descartando um mapeamento de logon  
  O exemplo a seguir remove a entrada para o mapeamento de logons remotos do servidor remoto `ACCOUNTS` do logon local `Albert`.  
   
 ```  

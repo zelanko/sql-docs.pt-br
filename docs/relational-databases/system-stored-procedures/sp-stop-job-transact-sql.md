@@ -18,12 +18,12 @@ ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8c5f625b2fa697a305cf6ea96b3ace59f9f5ee0b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eda439b53c72e41154d4891495470fc271028aee
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843905"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529508"
 ---
 # <a name="spstopjob-transact-sql"></a>sp_stop_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,20 +45,16 @@ sp_stop_job
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@job_name =**] **'***job_name***'**  
- O nome do trabalho a ser interrompido. *job_name* está **sysname**, com um padrão NULL.  
+`[ @job_name = ] 'job_name'` O nome do trabalho a ser interrompido. *job_name* está **sysname**, com um padrão NULL.  
   
- [  **@job_id =**] *job_id*  
- O número de identificação do trabalho a ser interrompido. *job_id* está **uniqueidentifier**, com um padrão NULL.  
+`[ @job_id = ] job_id` O número de identificação do trabalho a ser interrompido. *job_id* está **uniqueidentifier**, com um padrão NULL.  
   
- [  **@originating_server =**] **'***master_server***'**  
- O nome do servidor mestre. Se for especificado, todos os trabalhos multisservidor serão interrompidos. *master_server* está **nvarchar (128)**, com um padrão NULL. Especifique esse parâmetro somente ao chamar **sp_stop_job** em um servidor de destino.  
+`[ @originating_server = ] 'master_server'` O nome do servidor mestre. Se for especificado, todos os trabalhos multisservidor serão interrompidos. *master_server* está **nvarchar (128)**, com um padrão NULL. Especifique esse parâmetro somente ao chamar **sp_stop_job** em um servidor de destino.  
   
 > [!NOTE]  
 >  Apenas um dos três primeiros parâmetros pode ser especificado.  
   
- [  **@server_name =**] **'***target_server***'**  
- O nome do servidor de destino específico no qual um trabalho multisservidor será interrompido. *target_server* está **nvarchar (128)**, com um padrão NULL. Especifique esse parâmetro somente ao chamar **sp_stop_job** em um servidor mestre para um trabalho multisservidor.  
+`[ @server_name = ] 'target_server'` O nome do servidor de destino específico no qual interromper um trabalho multisservidor. *target_server* está **nvarchar (128)**, com um padrão NULL. Especifique esse parâmetro somente ao chamar **sp_stop_job** em um servidor mestre para um trabalho multisservidor.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

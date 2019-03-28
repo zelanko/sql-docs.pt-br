@@ -18,12 +18,12 @@ ms.assetid: e09d0d50-94d5-48fd-b284-445ddea6dfcd
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 944ddb3e319421a92a29f5263f018f3b812e46bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd98f116bfa471797d2e9b340561c4eef121e0a7
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793344"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526158"
 ---
 # <a name="spsyspolicydeletepolicycategory-transact-sql"></a>sp_syspolicy_delete_policy_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,9 @@ sp_syspolicy_delete_policy_category { [ @name = ] 'name' | [ @policy_category_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@name=** ] **'***name***'**  
- É o nome da categoria de política. *nome da* está **sysname**e deve ser especificado se *policy_category_id* é NULL.  
+`[ @name = ] 'name'` É o nome da categoria de política. *nome da* está **sysname**e deve ser especificado se *policy_category_id* é NULL.  
   
- [  **@policy_category_id=** ] *policy_category_id*  
- É o identificador da categoria de política. *policy_category_id* está **int**e deve ser especificado se *nome* é NULL.  
+`[ @policy_category_id = ] policy_category_id` É o identificador para a categoria de política. *policy_category_id* está **int**e deve ser especificado se *nome* é NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -60,7 +58,7 @@ sp_syspolicy_delete_policy_category { [ @name = ] 'name' | [ @policy_category_id
  Requer a associação à função de banco de dados fixa PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Possível elevação de credenciais: os usuários na função PolicyAdministratorRole podem criar gatilhos de servidor e agendar execuções de políticas que possam afetar a operação da instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por exemplo, os usuários da função PolicyAdministratorRole podem criar uma política que impeça a criação da maioria dos objetos no [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Devido a essa possível elevação de credenciais, a função PolicyAdministratorRole deve ser concedida somente para usuários que sejam confiáveis no controle da configuração do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  Possível elevação de credenciais: Os usuários na função PolicyAdministratorRole podem criar gatilhos de servidor e agendar execuções de políticas que podem afetar a operação da instância da [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por exemplo, os usuários da função PolicyAdministratorRole podem criar uma política que impeça a criação da maioria dos objetos no [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Devido a essa possível elevação de credenciais, a função PolicyAdministratorRole deve ser concedida somente para usuários que sejam confiáveis no controle da configuração do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir exclui uma categoria de política chamada 'Finance'.  

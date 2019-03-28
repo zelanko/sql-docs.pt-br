@@ -18,12 +18,12 @@ ms.assetid: 26054e76-53b7-4004-8d48-92ba3435e9d7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bb380be46723ce605a3021e1796a42bcb824ef36
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fcaf967abcce0cdce2ed232446016c57138fd56d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755975"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531778"
 ---
 # <a name="sphelpfulltextcolumnscursor-transact-sql"></a>sp_help_fulltext_columns_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,21 +45,18 @@ sp_help_fulltext_columns_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@cursor_return =**] *@cursor_variable* SAÍDA  
- É a variável de saída do tipo **cursor**. O cursor resultante é rolável, dinâmico, somente leitura.  
+`[ @cursor_return = ] @cursor_variable OUTPUT` É a variável de saída do tipo **cursor**. O cursor resultante é rolável, dinâmico, somente leitura.  
   
- [  **@table_name =**] **'***table_name***'**  
- É o nome de uma ou duas partes da tabela para a qual são solicitadas informações de índice de texto completo. *table_name* está **nvarchar(517)**, com um valor padrão de NULL. Se *table_name* for omitido, as informações de coluna de índice de texto completo são recuperadas para cada tabela indexada de texto completo.  
+`[ @table_name = ] 'table_name'` É o nome da tabela de uma ou duas partes para o qual as informações de índice de texto completo são solicitadas. *table_name* está **nvarchar(517)**, com um valor padrão de NULL. Se *table_name* for omitido, as informações de coluna de índice de texto completo são recuperadas para cada tabela indexada de texto completo.  
   
- [  **@column_name =**] **'***column_name***'**  
- É o nome da coluna na qual para a qual os metadados de índice de texto completo são desejados. *column_name* está **sysname** com um valor padrão de NULL. Se *column_name* for omitido ou for NULL, as informações de coluna de texto completo serão retornadas para cada coluna indexada de texto completo de *table_name*. Se *table_name* também for omitido ou for NULL, as informações de coluna de índice de texto completo serão retornadas para cada coluna indexada de texto completo de todas as tabelas no banco de dados.  
+`[ @column_name = ] 'column_name'` É o nome da coluna para o qual os metadados do índice de texto completo é desejado. *column_name* está **sysname** com um valor padrão de NULL. Se *column_name* for omitido ou for NULL, as informações de coluna de texto completo serão retornadas para cada coluna indexada de texto completo de *table_name*. Se *table_name* também for omitido ou for NULL, as informações de coluna de índice de texto completo serão retornadas para cada coluna indexada de texto completo de todas as tabelas no banco de dados.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou (1) falha  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**TABLE_OWNER**|**sysname**|Proprietário da tabela. Esse é o nome do usuário de banco de dados que criou a tabela.|  
 |**TABLE_ID**|**int**|Identificação da tabela.|  

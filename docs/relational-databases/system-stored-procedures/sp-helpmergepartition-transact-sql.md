@@ -16,12 +16,12 @@ ms.assetid: 184188cc-f519-445d-97ce-aae38f1eb550
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 673baf1b41e3ffcceaa635191352af376008313e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ddf87e08b113d3512a8d824ff4abdf1359476e32
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779348"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530150"
 ---
 # <a name="sphelpmergepartition-transact-sql"></a>sp_helpmergepartition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,17 +40,14 @@ sp_helpmergepartition [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=** ] **'***publicação***'**  
- É o nome da publicação. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, sem padrão.  
   
- [  **@suser_sname=** ] **'***suser_sname***'**  
- É o valor de SUSER_SNAME usado para definir uma partição. *suser_sname* está **sysname**, com um valor padrão de NULL. Forneça esse parâmetro para limitar o conjunto de resultados só a partições onde SUSER_SNAME resolve para o valor fornecido.  
+`[ @suser_sname = ] 'suser_sname'` É o valor SUSER_SNAME usado para definir uma partição. *suser_sname* está **sysname**, com um valor padrão de NULL. Forneça esse parâmetro para limitar o conjunto de resultados só a partições onde SUSER_SNAME resolve para o valor fornecido.  
   
 > [!NOTE]  
 >  Quando *suser_sname* for fornecido, *host_name* deve ser NULL  
   
- [  **@host_name=** ] **'***host_name***'**  
- É o valor de HOST_NAME usado para definir uma partição. *HOST_NAME* está **sysname**, com um valor padrão de NULL. Forneça esse parâmetro para limitar o conjunto de resultados só a partições onde HOST_NAME resolve para o valor fornecido.  
+`[ @host_name = ] 'host_name'` É o valor HOST_NAME usado para definir uma partição. *HOST_NAME* está **sysname**, com um valor padrão de NULL. Forneça esse parâmetro para limitar o conjunto de resultados só a partições onde HOST_NAME resolve para o valor fornecido.  
   
 > [!NOTE]  
 >  Quando *suser_sname* for fornecido, *host_name* deve ser NULL  
@@ -59,8 +56,8 @@ sp_helpmergepartition [ @publication= ] 'publication'
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**partição**|**int**|Identifica a partição do Assinante.|  
-|**HOST_NAME**|**sysname**|Valor usado ao criar a partição para uma assinatura filtrada pelo valor de [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) função no assinante.|  
+|**partition**|**int**|Identifica a partição do Assinante.|  
+|**host_name**|**sysname**|Valor usado ao criar a partição para uma assinatura filtrada pelo valor de [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) função no assinante.|  
 |**suser_sname**|**sysname**|Valor usado ao criar a partição para uma assinatura filtrada pelo valor de [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) função no assinante.|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|Local do instantâneo de dados filtrado para a partição do Assinante.|  
 |**date_refreshed**|**datetime**|Último data em que o trabalho de instantâneo foi executado para gerar o instantâneo de dados filtrado para a partição.|  

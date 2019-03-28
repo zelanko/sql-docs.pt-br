@@ -18,12 +18,12 @@ ms.assetid: 4c237944-453d-49fb-8d0e-4596945ac147
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5393a2c9808584cfcc52088ad32f63c8a4ec2562
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 59581d72f60e4138db7c19cc8f0487abaaeec381
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731474"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528408"
 ---
 # <a name="spdeletedatabasebackuphistory-transact-sql"></a>sp_delete_database_backuphistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_delete_database_backuphistory [ @database_name = ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@database_name=** ] *database_name*  
- Especifica o nome do banco de dados envolvido nas operações de backup e restauração. *Database_Name* está **sysname**, sem padrão.  
+`[ @database_name = ] database_name` Especifica o nome do banco de dados envolvido em operações de backup e restauração. *Database_Name* está **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

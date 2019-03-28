@@ -13,12 +13,12 @@ ms.assetid: 6b06db5b-cfdc-4ce0-addd-ec643460605b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0b0575c3be5e0a5ce30267f32934ff073c5c3d86
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5c131f413c8b7be0dad8432c5711b19e74253aab
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748878"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536119"
 ---
 # <a name="create-a-custom-collection-set-that-uses-the-generic-t-sql-query-collector-type-transact-sql"></a>Criar um conjunto de coleta personalizado que usa o tipo de coletor de Consultas T-SQL genérico (Transact-SQL)
   É possível criar um conjunto de coleta personalizado com itens de coleta que usam o tipo de coletor de Consultas T-SQL Genérico, usando os procedimentos armazenados fornecidos com o coletor de dados. A execução dessa tarefa envolve o uso do Editor de Consultas no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para aplicar os seguintes procedimentos:  
@@ -78,7 +78,7 @@ ms.locfileid: "52748878"
   
 1.  Como o novo item de coleta é baseado em um tipo de coletor genérico já instalado, você pode executar o código a seguir para definir o GUID que corresponde ao tipo de coletor de Consultas T-SQL Genérico.  
   
-    ```tsql  
+    ```sql  
     DECLARE @collector_type_uid uniqueidentifier;  
     SELECT @collector_type_uid = collector_type_uid FROM [msdb].[dbo].[syscollector_collector_types]   
     WHERE name = N'Generic T-SQL Query Collector Type';  
@@ -87,7 +87,7 @@ ms.locfileid: "52748878"
   
 2.  Use o procedimento armazenado sp_syscollector_create_collection_item para criar o item de coleta. Declare o esquema do item de coleta para que ele seja mapeado para o esquema exigido para o tipo de coletor de Consultas T-SQL Genérico.  
   
-    ```tsql  
+    ```sql  
     EXEC sp_syscollector_create_collection_item   
         @name=N'Query Stats - Test 1',   
         @parameters=N'  
@@ -108,7 +108,7 @@ ms.locfileid: "52748878"
   
 1.  Antes de iniciar o novo conjunto de coleta, execute a consulta a seguir para verificar se o novo conjunto de coleta e seu item de coleta foram criados.  
   
-    ```tsql  
+    ```sql  
     USE msdb;  
     SELECT * FROM syscollector_collection_sets;  
     SELECT * FROM syscollector_collection_items;  
@@ -120,7 +120,7 @@ ms.locfileid: "52748878"
 ## <a name="example"></a>Exemplo  
  O exemplo de código a seguir combina os exemplos documentados nas etapas anteriores. Observe que a frequência da coleta definida para o item de coleta (5 segundos) é ignorada porque o modo de coleta do conjunto de coleta está definido como 0, que é um modo de armazenamento em cache. Para obter mais informações, consulte [Data Collection](data-collection.md).  
   
-```tsql  
+```sql  
 USE msdb;  
   
 DECLARE @collection_set_id int;  

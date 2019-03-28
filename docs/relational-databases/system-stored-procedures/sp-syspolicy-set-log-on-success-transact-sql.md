@@ -18,12 +18,12 @@ ms.assetid: 6b33383b-5949-488a-a911-59299a270f46
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a075986a0a28e88fc9bb5891d043598315c47c8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c0969aec1ba6e429c5b3a79d6ff0f5d638cd8f4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751204"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538348"
 ---
 # <a name="spsyspolicysetlogonsuccess-transact-sql"></a>sp_syspolicy_set_log_on_success (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,7 @@ sp_syspolicy_set_log_on_success [ @value = ] value
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@value=** ] *valor*  
- Determina se as avaliações de política com êxito serão registradas em log. *valor* está **sqlvariant**, e pode ser um dos seguintes valores:  
+`[ @value = ] value` Determina se as avaliações de política com êxito são registradas. *valor* está **sqlvariant**, e pode ser um dos seguintes valores:  
   
 -   0 ou 'false' = As avaliações de política com êxito não são registradas em log.  
   
@@ -59,7 +58,7 @@ sp_syspolicy_set_log_on_success [ @value = ] value
 ## <a name="permissions"></a>Permissões  
  Requer a associação à função de banco de dados fixa PolicyAdministratorRole.  
   
-> **IMPORTANTE:** Possível elevação de credenciais: os usuários na função PolicyAdministratorRole podem criar gatilhos de servidor e agendar execuções de políticas que possam afetar a operação da instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por exemplo, os usuários da função PolicyAdministratorRole podem criar uma política que impeça a criação da maioria dos objetos no [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Devido a essa possível elevação de credenciais, a função PolicyAdministratorRole deve ser concedida somente para usuários que sejam confiáveis no controle da configuração do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+> **IMPORTANTE:** Possível elevação de credenciais: Os usuários na função PolicyAdministratorRole podem criar gatilhos de servidor e agendar execuções de políticas que podem afetar a operação da instância da [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por exemplo, os usuários da função PolicyAdministratorRole podem criar uma política que impeça a criação da maioria dos objetos no [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Devido a essa possível elevação de credenciais, a função PolicyAdministratorRole deve ser concedida somente para usuários que sejam confiáveis no controle da configuração do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir habilita o log de avaliações de política com êxito.  

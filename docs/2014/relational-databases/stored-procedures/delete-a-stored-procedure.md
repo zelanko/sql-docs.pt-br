@@ -14,20 +14,20 @@ ms.assetid: 232dbf4d-392a-406f-af3a-579518cd8e46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 16b9c9fde041339e10c554541dc03e2ddc315bcc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 78b78021f32faed097a4faf29ea139dd85f429e1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211157"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532628"
 ---
 # <a name="delete-a-stored-procedure"></a>Excluir um procedimento armazenado
     
 ##  <a name="Top"></a> Este tópico descreve como excluir um procedimento armazenado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
--   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Security](#Security)  
+-   **Antes de começar:**  [Limitações e Restrições](#Restrictions), [Segurança](#Security)  
   
--   **To delete a procedure, using:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Para excluir um procedimento usando:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -72,7 +72,7 @@ ms.locfileid: "48211157"
   
 4.  Obtenha o nome do procedimento armazenado a ser removido no banco de dados atual. No Pesquisador de Objetos, expanda **Programação** e, depois, expanda **Procedimentos Armazenados**. Outra alternativa é executar a instrução a seguir no editor de consultas.  
   
-    ```tsql  
+    ```sql  
     SELECT name AS procedure_name   
         ,SCHEMA_NAME(schema_id) AS schema_name  
         ,type_desc  
@@ -83,7 +83,7 @@ ms.locfileid: "48211157"
   
 5.  Copie e cole o exemplo a seguir no editor de consultas e insira um nome de procedimento armazenado a ser excluído do banco de dados atual.  
   
-    ```tsql  
+    ```sql  
     DROP PROCEDURE <stored procedure name>;  
     GO  
     ```  

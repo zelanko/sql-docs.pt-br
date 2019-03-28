@@ -4,15 +4,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/31/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 64f930a72dbb7f8c6aff8338f22dd3e9b7cc7bbe
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 7eed38e54b0c4e77af8f7b3ede0af2d98b9c58b2
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645355"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510783"
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>Como usar funções RevoScaleR para localizar ou instalar pacotes R no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -114,7 +114,7 @@ print(sqlPackagePaths)
 
 **Resultados**
 
-"SQL de arquivos e Microsoft Server/MSSQL14 da c: / programa. MSSQLSERVER/R_SERVICES/biblioteca/RevoScaleR"
+"C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER/R_SERVICES/library/RevoScaleR"
 
 > [!TIP]
 > Se você habilitou a opção ver a saída do console SQL, você poderá receber mensagens de status da função que precede o `print` instrução. Depois de terminar de testar seu código, definir `consoleOutput` como FALSE no construtor de contexto de computação para eliminar mensagens.

@@ -16,12 +16,12 @@ ms.assetid: bdc8aaa0-ff2d-40c2-84b2-4ba513ced279
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74154300cd85e18d17c3f8c6499acb2f331bcdbf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5e59a60279f4efa74ef21863212f75761eee99b1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759778"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537858"
 ---
 # <a name="spsubscriptioncleanup-transact-sql"></a>sp_subscription_cleanup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_subscription_cleanup [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publisher=**] **'***publisher***'**  
- É o nome do Publicador. *Publisher* está **sysname**, sem padrão.  
+`[ @publisher = ] 'publisher'` É o nome do publicador. *Publisher* está **sysname**, sem padrão.  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
- É o nome do banco de dados Publicador. *publisher_db* está **sysname**, sem padrão.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados publicador. *publisher_db* está **sysname**, sem padrão.  
   
- [  **@publication=**] **'***publicação***'**  
- É o nome da publicação. *publicação* está **sysname**, com um padrão NULL. Se for NULL, assinaturas que usam uma publicação de agente compartilhada no banco de dados de publicação serão excluídas.  
+`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, com um padrão NULL. Se for NULL, assinaturas que usam uma publicação de agente compartilhada no banco de dados de publicação serão excluídas.  
   
- [  **@reserved=**] **'***reservado***'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

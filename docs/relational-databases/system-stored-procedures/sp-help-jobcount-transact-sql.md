@@ -18,12 +18,12 @@ ms.assetid: ae8ef851-646c-4889-bc11-c8ec78762572
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0274c825b18e1377e337b614068db7fc75c7a917
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 604feac612c2c937593cdd484a05d45462396823
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732024"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537198"
 ---
 # <a name="sphelpjobcount-transact-sql"></a>sp_help_jobcount (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_help_jobcount
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@schedule_id=** ] *schedule_id*  
- O identificador da agenda a ser listado. *schedule_id* está **int**, sem padrão. Qualquer um dos *schedule_id* ou *schedule_name* pode ser especificado.  
+`[ @schedule_id = ] schedule_id` O identificador da agenda à lista. *schedule_id* está **int**, sem padrão. Qualquer um dos *schedule_id* ou *schedule_name* pode ser especificado.  
   
- [  **@schedule_name=** ] **'***schedule_name***'**  
- O nome da agenda a ser listada. *schedule_name* está **sysname**, sem padrão. Qualquer um dos *schedule_id* ou *schedule_name* pode ser especificado.  
+`[ @schedule_name = ] 'schedule_name'` O nome da agenda à lista. *schedule_name* está **sysname**, sem padrão. Qualquer um dos *schedule_id* ou *schedule_name* pode ser especificado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -54,7 +52,7 @@ sp_help_jobcount
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Retorna o seguinte conjunto de resultados:  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**JobCount**|**int**|Número de trabalhos para a agenda especificada.|  
   

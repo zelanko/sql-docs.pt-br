@@ -1,5 +1,5 @@
 ---
-title: 'Exemplos: usando OPENXML | Microsoft Docs'
+title: 'Exemplos: Usando OPENXML | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -23,17 +23,17 @@ helpviewer_keywords:
 - element-centric mapping [SQL Server]
 - edge tables
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f08cf0902bb58164957fde69ad49aec8f1d4155c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9887a9af6735b54a78dd72ed3a90aeff70c7990f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106886"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536898"
 ---
-# <a name="examples-using-openxml"></a>Exemplos: usando OPENXML
+# <a name="examples-using-openxml"></a>Exemplos: Usando OPENXML
   Os exemplos neste tópico mostram como o OPENXML é usado para criar uma exibição de conjunto de linhas de um documento XML. Para obter informações sobre a sintaxe do OPENXML, veja [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql). Os exemplos mostram todos os aspectos do OPENXML, mas não especificam metapropriedades no OPENXML. Para obter mais informações sobre como especificar metapropriedades no OPENXML, veja [Especificar metapropriedades no OPENXML](specify-metaproperties-in-openxml.md).  
   
 ## <a name="examples"></a>Exemplos  
@@ -84,7 +84,7 @@ FROM OPENXML (@DocHandle, '/ROOT/Customer',1)
 EXEC sp_xml_removedocument @DocHandle  
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 CustomerID ContactName            
@@ -129,7 +129,7 @@ FROM      OPENXML (@XmlDocumentHandle, '/ROOT/Customer',2)
 EXEC sp_xml_removedocument @XmlDocumentHandle  
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 CustomerID ContactName            
@@ -192,7 +192,7 @@ WITH (OrderID     int         '../@OrderID',
 EXEC sp_xml_removedocument @XmlDocumentHandle  
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 OrderID CustomerID        OrderDate          ProdID    Qty  
@@ -329,7 +329,7 @@ FROM OPENXML (@docHandle, '/root/Customer/Order', 1)
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 oid   amount        comment  
@@ -389,7 +389,7 @@ FROM OPENXML (@docHandle, '/root/Customer/Order', 1)
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 oid   date                        amount  
@@ -512,7 +512,7 @@ FROM OPENXML (@docHandle, '/ROOT/Customer/Order/OrderDetail/@ProductID')
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 ProdID      Qty         OID  
@@ -578,7 +578,7 @@ EXEC sp_xml_removedocument @h
   
  Especificamente, você está passando uma variável de tipo **xml** (\@x) para a função **sp_xml_preparedocument()**.  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 id  lname   xmlname                   OverFlow  

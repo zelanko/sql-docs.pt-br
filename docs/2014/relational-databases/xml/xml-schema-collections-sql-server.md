@@ -18,15 +18,15 @@ helpviewer_keywords:
 - XML schema collections [SQL Server]
 - schema collections [SQL Server], about XML schema collections
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3a86a39aa3473495b5eed6bc2eff92376a5a68cc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 45f3dfbf7a4caa2744ef57a352b0434e7eb1bf37
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362778"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533708"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Coleções de esquema XML (SQL Server)
   Conforme descrito no tópico [xml &#40;Transact-SQL&#41;](/sql/t-sql/xml/xml-transact-sql), o SQL Server fornece armazenamento nativo de dados XML por meio de `xml` tipo de dados. Opcionalmente, você pode associar esquemas XSD com uma variável ou uma coluna de `xml` tipo por meio de uma coleção de esquemas XML. A coleção de esquema XML armazena os esquemas XML importados e, em seguida, é usada para fazer o seguinte:  
@@ -171,7 +171,7 @@ ms.locfileid: "53362778"
   
  Esses são ilustrados nos exemplos a seguir.  
   
-### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>Exemplo: Enumere os Namespaces XML em uma coleção de esquema XML  
+### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>Exemplo: Enumerar os namespaces XML em uma coleção de esquemas XML  
  Use a consulta a seguir para a coleção de esquema XML "myCollection":  
   
 ```  
@@ -190,7 +190,7 @@ SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')
   
  Esquemas XML individuais dentro da coleção podem ser obtidos como `xml` instâncias de tipo de dados, especificando o namespace de destino como o terceiro argumento para **xml_schema_namespace ()**. Isso é mostrado no exemplo a seguir.  
   
-### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Exemplo: Um esquema especificado de uma coleção de esquemas XML de saída  
+### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Exemplo: Gerar um esquema especificado com base em uma coleção de esquemas XML  
  A instrução a seguir produz o esquema XML com o namespace de destino "<https://www.microsoft.com/books>" da coleção de esquemas XML "myCollection" dentro do esquema relacional dbo.  
   
 ```  

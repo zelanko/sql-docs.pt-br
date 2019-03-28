@@ -18,12 +18,12 @@ ms.assetid: 57971787-f9f5-4199-9f64-c2b61a308906
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 18408265b75503bc73905eb561f118e4ea950fa8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba2120b4c48ac9df9cc901b4ee789d95f9fc0357
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729894"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533288"
 ---
 # <a name="sphelpjobserver-transact-sql"></a>sp_help_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,24 +43,21 @@ sp_help_jobserver
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@job_id=** ] *job_id*  
- O número de identificação do trabalho para o qual as informações devem ser retornadas. *job_id* está **uniqueidentifier**, com um padrão NULL.  
+`[ @job_id = ] job_id` O número de identificação do trabalho para o qual retornar informações. *job_id* está **uniqueidentifier**, com um padrão NULL.  
   
- [ **@job_name=** ] **'***job_name***'**  
- O nome do trabalho cujas informações serão retornadas. *job_name* está **sysname**, com um padrão NULL.  
+`[ @job_name = ] 'job_name'` O nome do trabalho para o qual retornar informações. *job_name* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
 >  Qualquer um dos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados.  
   
- [ **@show_last_run_details=** ] *show_last_run_details*  
- Especifica se as informações da última execução fazem parte do conjunto de resultados. *show_last_run_details* está **tinyint**, com um padrão de **0**. **0** não inclui informações da última execução, e **1** faz.  
+`[ @show_last_run_details = ] show_last_run_details` Especifica se as informações da última execução fazem parte do conjunto de resultados. *show_last_run_details* está **tinyint**, com um padrão de **0**. **0** não inclui informações da última execução, e **1** faz.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Número de identificação do servidor de destino.|  
 |**server_name**|**nvarchar(30)**|Nome do computador do servidor de destino.|  
@@ -69,7 +66,7 @@ sp_help_jobserver
   
  Se **sp_help_jobserver** é executada com *show_last_run_details* definido como **1**, o conjunto de resultados terá essas colunas adicionais.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**last_run_date**|**int**|Data em que a execução do trabalho foi iniciada pela última vez nesse servidor de destino.|  
 |**last_run_time**|**int**|Hora em que a execução do trabalho foi iniciada pela última vez nesse servidor.|  

@@ -19,12 +19,12 @@ ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d30c8adfc19daa58f4aa3782072c6a9b08f11d83
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f45fe94756ffa30a458aabbb078f6b01c9821918
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108726"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536388"
 ---
 # <a name="restore-pages-sql-server"></a>Restaurar páginas (SQL Server)
   Este tópico descreve como restaurar páginas no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A meta da restauração de uma página é restaurar uma ou mais páginas danificadas sem restaurar todo o banco de dados. Geralmente, as páginas candidatas à restauração foram marcadas como "suspeitas" por causa de um erro encontrado durante seu acesso. Páginas suspeitas são identificadas na tabela [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) do banco de dados **msdb** .  
@@ -133,8 +133,8 @@ ms.locfileid: "48108726"
     |Cabeçalho|Valores|  
     |------------|------------|  
     |**Nome**|O nome do conjunto de backup.|  
-    |**Componente**|O componente com backup: **Banco de Dados**, **Arquivo** ou **\<blank>** (para logs de transações).|  
-    |**Tipo**|Tipo de backup realizado: **Completo**, **Diferencial**ou **Log de Transações**.|  
+    |**Componente**|O componente de backup: **Banco de Dados**, **Arquivo** ou **\<em branco>** (para logs de transação).|  
+    |**Tipo**|O tipo de backup realizado: **Total**, **Diferencial** ou **Log de Transações**.|  
     |**Servidor**|O nome da instância [!INCLUDE[ssDE](../../includes/ssde-md.md)] que executou a operação de backup.|  
     |**Backup de banco de dados**|Nome do banco de dados envolvido na operação de backup.|  
     |**Posição**|A posição do conjunto de backup no volume.|  
@@ -204,7 +204,7 @@ ms.locfileid: "48108726"
 ###  <a name="TsqlExample"></a> Exemplo (Transact-SQL)  
  O exemplo a seguir restaura quatro páginas danificadas do arquivo `B` com `NORECOVERY`. Em seguida, dois backups de log são aplicados com `NORECOVERY`, seguido pelo backup do final do log que é restaurado com `RECOVERY`. Este exemplo executa uma restauração online. No exemplo, a ID de arquivo de `B` é `1`, e as IDs de página das páginas danificadas são `57`, `202`, `916`e `1016`.  
   
-```tsql  
+```sql  
 RESTORE DATABASE <database> PAGE='1:57, 1:202, 1:916, 1:1016'  
    FROM <file_backup_of_file_B>   
    WITH NORECOVERY;  

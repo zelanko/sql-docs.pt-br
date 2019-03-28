@@ -18,12 +18,12 @@ ms.assetid: fe651af9-267e-45ec-b4e7-4b0698fb1be3
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f5ffa31a27809412e2882b410e6745ba475fcb69
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6660eba76675fbe261af33f647d60456ced839d2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658844"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536958"
 ---
 # <a name="spsyspolicydeletepolicyexecutionhistory-transact-sql"></a>sp_syspolicy_delete_policy_execution_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +41,9 @@ sp_syspolicy_delete_policy_execution_history [ @policy_id = ] policy_id ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@policy_id=** ] *policy_id*  
- É o identificador da política cujo histórico de execução você deseja excluir. *policy_id* está **int**e é necessária. Pode ser NULL.  
+`[ @policy_id = ] policy_id` É o identificador da política para o qual você deseja excluir o histórico de execução. *policy_id* está **int**e é necessária. Pode ser NULL.  
   
- [  **@oldest_date=** ] **'***oldest_date***'**  
- É a data mais antiga para a qual você deseja manter o histórico de execução de política. Qualquer histórico de execução anterior a essa data será excluído. *oldest_date* está **datetime**e é necessária. Pode ser NULL.  
+`[ @oldest_date = ] 'oldest_date'` É a data mais antiga para a qual você deseja manter o histórico de execução. Qualquer histórico de execução anterior a essa data será excluído. *oldest_date* está **datetime**e é necessária. Pode ser NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -76,7 +74,7 @@ ON a.policy_id = b.policy_id
  Requer a associação à função de banco de dados fixa PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Possível elevação de credenciais: os usuários na função PolicyAdministratorRole podem criar gatilhos de servidor e agendar execuções de políticas que possam afetar a operação da instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por exemplo, os usuários da função PolicyAdministratorRole podem criar uma política que impeça a criação da maioria dos objetos no [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Devido a essa possível elevação de credenciais, a função PolicyAdministratorRole deve ser concedida somente para usuários que sejam confiáveis no controle da configuração do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  Possível elevação de credenciais: Os usuários na função PolicyAdministratorRole podem criar gatilhos de servidor e agendar execuções de políticas que podem afetar a operação da instância da [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por exemplo, os usuários da função PolicyAdministratorRole podem criar uma política que impeça a criação da maioria dos objetos no [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Devido a essa possível elevação de credenciais, a função PolicyAdministratorRole deve ser concedida somente para usuários que sejam confiáveis no controle da configuração do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo seguinte exclui o histórico de execução de política anterior a uma data específica de uma política com ID 7.  

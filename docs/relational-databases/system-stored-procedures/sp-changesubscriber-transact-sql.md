@@ -16,12 +16,12 @@ ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 466b2c0316cb5de9b38200fd643d0302c5b1ae93
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1f31a00e0c42bc56dffac191ff9a934bb77b95df
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203095"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534528"
 ---
 # <a name="spchangesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,29 +57,21 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@subscriber=**] **'***assinante***'**  
- É o nome do Assinante no qual alterar as opções. *assinante* está **sysname**, sem padrão.  
+`[ @subscriber = ] 'subscriber'` É o nome do assinante no qual alterar as opções. *assinante* está **sysname**, sem padrão.  
   
- [  **@type=**] *tipo*  
- É o tipo de Assinante. *tipo de* está **tinyint**, com um padrão NULL. **0** indica uma [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinante. **1** Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou em outro servidor de origem de dados ODBC assinante.  
+`[ @type = ] type` É o tipo de assinante. *tipo de* está **tinyint**, com um padrão NULL. **0** indica uma [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinante. **1** Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou em outro servidor de origem de dados ODBC assinante.  
   
- [  **@login=**] **'***logon***'**  
- É a ID do logon de Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *login* é **sysname**, com um padrão de NULL.  
+`[ @login = ] 'login'` É o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ID de logon de autenticação. *login* é **sysname**, com um padrão de NULL.  
   
- [  **@password=**] **'***senha***'**  
- É a senha de Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *senha* está **sysname**, com um padrão de **%**. **%** indica que nenhuma alteração para a propriedade de senha.  
+`[ @password = ] 'password'` É o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senha de autenticação. *senha* está **sysname**, com um padrão de **%**. **%** indica que nenhuma alteração para a propriedade de senha.  
   
- [  **@commit_batch_size=**] *commit_batch_size*  
- Com suporte somente para compatibilidade com versões anteriores.  
+`[ @commit_batch_size = ] commit_batch_size` Suporte para compatibilidade com versões anteriores.  
   
- [  **@status_batch_size=**] *status_batch_size*  
- Com suporte somente para compatibilidade com versões anteriores.  
+`[ @status_batch_size = ] status_batch_size` Suporte para compatibilidade com versões anteriores.  
   
- [  **@flush_frequency=**] *flush_frequency*  
- Com suporte somente para compatibilidade com versões anteriores.  
+`[ @flush_frequency = ] flush_frequency` Suporte para compatibilidade com versões anteriores.  
   
- [  **@frequency_type=**] *frequency_type*  
- É a frequência de agendamento da tarefa de distribuição. *frequency_type* está **int**, e pode ser um destes valores.  
+`[ @frequency_type = ] frequency_type` É a frequência de agendamento da tarefa de distribuição. *frequency_type* está **int**, e pode ser um destes valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -92,11 +84,9 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**64**|Iniciar automaticamente|  
 |**128**|Recorrente|  
   
- [  **@frequency_interval=**] *frequency_interval*  
- É o intervalo de *frequency_type*. *frequency_interval* está **int**, com um padrão NULL.  
+`[ @frequency_interval = ] frequency_interval` É o intervalo de *frequency_type*. *frequency_interval* está **int**, com um padrão NULL.  
   
- [  **@frequency_relative_interval=**] *frequency_relative_interval*  
- É a data da tarefa de distribuição. Esse parâmetro é usado quando *frequency_type* é definido como **32** (mensal relativo). *frequency_relative_interval* está **int**, e pode ser um destes valores.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` É a data da tarefa de distribuição. Esse parâmetro é usado quando *frequency_type* é definido como **32** (mensal relativo). *frequency_relative_interval* está **int**, e pode ser um destes valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -106,11 +96,9 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**8**|Quarto|  
 |**16**|Last|  
   
- [  **@frequency_recurrence_factor=**] *frequency_recurrence_factor*  
- É a frequência com que a tarefa de distribuição deve ser repetido durante o definido *frequency_type*. *frequency_recurrence_factor* está **int**, com um padrão NULL.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` É a frequência com que a tarefa de distribuição deve ser repetido durante o definido *frequency_type*. *frequency_recurrence_factor* está **int**, com um padrão NULL.  
   
- [  **@frequency_subday=**] *frequency_subday*  
- É a frequência de reagendamento durante o período definido. *frequency_subday* está **int**, e pode ser um destes valores.  
+`[ @frequency_subday = ] frequency_subday` É a frequência de reagendamento durante o período definido. *frequency_subday* está **int**, e pode ser um destes valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -119,34 +107,26 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**4**|Minuto|  
 |**8**|Hora|  
   
- [  **@frequency_subday_interval=**] *frequency_subday_interval*  
- É o intervalo de *frequence_subday*. *frequency_subday_interval* está **int**, com um padrão NULL.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` É o intervalo de *frequence_subday*. *frequency_subday_interval* está **int**, com um padrão NULL.  
   
- [  **@active_start_time_of_day=**] *active_start_time_of_day*  
- É a hora do dia do primeiro agendamento da tarefa de distribuição, formatada como HHMMSS. *active_start_time_of_day* está **int**, com um padrão NULL.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` É a hora do dia quando a tarefa de distribuição é o primeira agendada, formatada como HHMMSS. *active_start_time_of_day* está **int**, com um padrão NULL.  
   
- [  **@active_end_time_of_day=**] *active_end_time_of_day*  
- É a hora do dia do último agendamento da tarefa de distribuição, formatada como HHMMSS. *active_end_time_of_day*está **int**, com um padrão NULL.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` É a hora do dia em que a tarefa de distribuição deixa de ser agendado, formatada como HHMMSS. *active_end_time_of_day*está **int**, com um padrão NULL.  
   
- [  **@active_start_date=**] *active_start_date*  
- É a data do primeiro agendamento da tarefa de distribuição, formatada como AAAAMMDD. *active_start_date* está **int**, com um padrão NULL.  
+`[ @active_start_date = ] active_start_date` É a data quando a tarefa de distribuição é primeiro agendada, formatada como AAAAMMDD. *active_start_date* está **int**, com um padrão NULL.  
   
- [  **@active_end_date=**] *active_end_date*  
- É a data do último agendamento da tarefa de distribuição, formatada como AAAAMMDD. *active_end_date*está **int**, com um padrão NULL.  
+`[ @active_end_date = ] active_end_date` É a data em que a tarefa de distribuição deixa de ser agendado, formatada como AAAAMMDD. *active_end_date*está **int**, com um padrão NULL.  
   
- [  **@description=**] **'***descrição***'**  
- É uma descrição de texto opcional. *Descrição* está **nvarchar (255)**, com um padrão NULL.  
+`[ @description = ] 'description'` É uma descrição de texto opcional. *Descrição* está **nvarchar (255)**, com um padrão NULL.  
   
- [  **@security_mode=**] *security_mode*  
- É o modo de segurança implementado. *security_mode* está **int**, e pode ser um destes valores.  
+`[ @security_mode = ] security_mode` É o modo de segurança implementado. *security_mode* está **int**, e pode ser um destes valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Autenticação|  
 |**1**|Autenticação do Windows|  
   
- [ **@publisher**=] **'***publisher***'**  
- Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
+`[ @publisher = ] 'publisher'` Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
 >  *Publisher* não deve ser usado ao alterar as propriedades do artigo em uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  

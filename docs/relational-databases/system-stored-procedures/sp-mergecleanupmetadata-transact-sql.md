@@ -16,12 +16,12 @@ ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d3ae8edeff1792cf3a1c70d4e80dea638402e30d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 6924ef36c57036cf6cad6e25a6dc5cebfa5fa5f2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210955"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528998"
 ---
 # <a name="spmergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication =** ] **'***publicação***'**  
- É o nome da publicação. *publicação* está **sysname**, com um padrão de **%**, que limpa metadados para todas as publicações. A publicação já deve existir se explicitamente especificada.  
+`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, com um padrão de **%**, que limpa metadados para todas as publicações. A publicação já deve existir se explicitamente especificada.  
   
- [  **@reinitialize_subscriber =** ] **'***assinante***'**  
- Especifica se o Assinante deve ser reinicializado. *assinante* está **nvarchar (5)**, pode ser **verdadeira** ou **FALSE**, com um padrão de **TRUE**. Se **verdadeira**, as assinaturas serão marcadas para reinicialização. Se **falsos**, as assinaturas não são marcadas para reinicialização.  
+`[ @reinitialize_subscriber = ] 'subscriber'` Especifica se deve reinicializar o assinante. *assinante* está **nvarchar (5)**, pode ser **verdadeira** ou **FALSE**, com um padrão de **TRUE**. Se **verdadeira**, as assinaturas serão marcadas para reinicialização. Se **falsos**, as assinaturas não são marcadas para reinicialização.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

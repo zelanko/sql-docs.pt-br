@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ae3b5a2d826fbafc5bc9f5bfc265794e7898a0d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a78ec7a666c40c1c1bd742545139aa2e9ea0aec
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640775"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534888"
 ---
 # <a name="sphelpstats-transact-sql"></a>sp_helpstats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,11 +45,9 @@ sp_helpstats[ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@objname=**] **'***object_name***'**  
- Especifica a tabela na qual fornecer informações de estatísticas. *object_name* está **nvarchar(520)** e não pode ser nulo. Um nome de uma ou duas partes pode ser especificado.  
+`[ @objname = ] 'object_name'` Especifica a tabela na qual fornecer informações de estatísticas. *object_name* está **nvarchar(520)** e não pode ser nulo. Um nome de uma ou duas partes pode ser especificado.  
   
- [  **@results=**] **'***valor***'**  
- Especifica a extensão de informações a fornecer. As entradas válidas são **todos os** e **estatísticas**. **Todos os** lista estatísticas para todos os índices e também as colunas que têm as estatísticas criadas; **STATS** lista apenas estatísticas não associadas a um índice. *valor* está **nvarchar (5)** com um padrão de STATS.  
+`[ @results = ] 'value'` Especifica a extensão de informações para fornecer. As entradas válidas são **todos os** e **estatísticas**. **Todos os** lista estatísticas para todos os índices e também as colunas que têm as estatísticas criadas; **STATS** lista apenas estatísticas não associadas a um índice. *valor* está **nvarchar (5)** com um padrão de STATS.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -57,7 +55,7 @@ sp_helpstats[ @objname = ] 'object_name'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  A tabela a seguir descreve as colunas do conjunto de resultados.  
   
-|Nome da coluna|Description|  
+|Nome da coluna|Descrição|  
 |-----------------|-----------------|  
 |**statistics_name**|O nome das estatísticas. Retorna **sysname** e não pode ser nulo.|  
 |**statistics_keys**|As chaves nas quais estatísticas são baseadas. Retorna **nvarchar(2078)** e não pode ser nulo.|  

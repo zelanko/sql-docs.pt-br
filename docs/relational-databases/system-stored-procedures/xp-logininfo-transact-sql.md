@@ -18,12 +18,12 @@ ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c9ed0ee742d1562d8b573b71e5d62b7d10bc7d02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c214c8b061e2530c4dcf4b178b6028cbdca01fa
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843824"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530018"
 ---
 # <a name="xplogininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,12 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@acctname =** ] **'***account_name***'**  
- É o nome de um usuário ou grupo do Windows que recebeu acesso ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *account_name* está **sysname**, com um padrão NULL. Se *account_name* não for especificado, todos os grupos do Windows e os usuários do Windows que tenham sido explicitamente concedido permissão de logon são relatados. *account_name* deve ser totalmente qualificado. Por exemplo, 'ADVWKS4\macraes' ou 'BUILTIN\Administrators'.  
+`[ @acctname = ] 'account_name'` É o nome de um usuário do Windows ou grupo acesso concedido ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *account_name* está **sysname**, com um padrão NULL. Se *account_name* não for especificado, todos os grupos do Windows e os usuários do Windows que tenham sido explicitamente concedido permissão de logon são relatados. *account_name* deve ser totalmente qualificado. Por exemplo, 'ADVWKS4\macraes' ou 'BUILTIN\Administrators'.  
   
  **'todos'** | **'membros'**  
  Especifica se as informações sobre todos os caminhos de permissão para a conta ou sobre os membros do grupo do Windows devem ser relatadas. **@option** está **varchar(10)**, com um padrão NULL. A menos que **todos os** for especificado, somente o primeiro caminho de permissão é exibido.  
   
- [  **@privilege =** ] *variable_name*  
- É um parâmetro de saída que retorna o nível de privilégio da conta do Windows especificada. *variable_name* está **varchar(10)**, com um padrão de 'Not wanted'. O nível de privilégio retornado é **usuário**, **admin**, ou **nulo**.  
+`[ @privilege = ] variable_name` É um parâmetro de saída que retorna o nível de privilégio da conta do Windows especificada. *variable_name* está **varchar(10)**, com um padrão de 'Not wanted'. O nível de privilégio retornado é **usuário**, **admin**, ou **nulo**.  
   
  OUTPUT  
  Quando for especificado, põe *variable_name* no parâmetro de saída.  
@@ -59,11 +57,11 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**nome da conta**|**sysname**|Nome da conta do Windows completamente qualificada.|  
 |**type**|**char(8)**|Tipo de conta do Windows. Os valores válidos são **usuário** ou **grupo**.|  
-|**privilégio**|**char(9)**|Privilégio de acesso para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os valores válidos são **admin**, **usuário**, ou **nulo**.|  
+|**privilege**|**char(9)**|Privilégio de acesso para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os valores válidos são **admin**, **usuário**, ou **nulo**.|  
 |**nome de logon mapeado**|**sysname**|Contas de usuário que tem o privilégio de usuário **mapeada de nome de logon** mostra o nome de logon mapeado que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta usar ao efetuar logon nesta conta usando as regras mapeadas com o nome de domínio é adicionado antes dele.|  
 |**caminho de permissão**|**sysname**|Associação de grupo que permitiu o acesso à conta.|  
   

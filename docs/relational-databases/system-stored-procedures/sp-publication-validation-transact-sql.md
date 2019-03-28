@@ -16,12 +16,12 @@ ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8612b3713113435461ca59845710b9f7284f1a78
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 124d5d14f810a32e32ce92cbb96afe4569804c67
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591400"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537168"
 ---
 # <a name="sppublicationvalidation-transact-sql"></a>sp_publication_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ sp_publication_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [**@publication=**] **'**_publicação '_  
+ [**@publication=**] **'**_publication'_  
  É o nome da publicação. *publicação* está **sysname**, sem padrão.  
   
  [**@rowcount_only=**] *rowcount_only*  
@@ -63,11 +63,9 @@ sp_publication_validation [ @publication = ] 'publication'
 |**1**|Efetua contagem rápida de **sysindexes**. Contagem de linhas em [sys. sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) é muito mais rápido do que contar linhas na tabela atual. No entanto, porque [sys. sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) é lentamente atualizado, o número de linhas pode não ser preciso.|  
 |**2** (padrão)|Efetua contagem rápida condicional tentando primeiro o método rápido. Se o método rápido mostrar diferenças, reverterá ao método completo. Se *expected_rowcount* for NULL e o procedimento armazenado estiver sendo usado para obter o valor, um COUNT(*) completo sempre será usado.|  
   
- [  **@shutdown_agent=**] *shutdown_agent*  
- Especifica se o Agente de Distribuição deve ou não ser desligado imediatamente após a conclusão da validação. *shutdown_agent* está **bit**, com um padrão de **0**. Se **0**, o agente de replicação não desligará. Se **1**, o agente de replicação desligará após o último artigo é validado.  
+`[ @shutdown_agent = ] shutdown_agent` É se o Distribution Agent deve desligado imediatamente após a conclusão da validação. *shutdown_agent* está **bit**, com um padrão de **0**. Se **0**, o agente de replicação não desligará. Se **1**, o agente de replicação desligará após o último artigo é validado.  
   
- [ **@publisher** =] **'**_publisher_**'**  
- Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
+`[ @publisher = ] 'publisher'` Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
 >  *Publisher* não deve ser usado ao solicitar uma validação em um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  

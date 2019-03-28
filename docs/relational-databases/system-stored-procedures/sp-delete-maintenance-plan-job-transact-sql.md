@@ -18,12 +18,12 @@ ms.assetid: 1c2148c3-2928-4d9b-b1c8-3512cfbd6a63
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c4daab0b36ff21fea956c1c5b0db27588cc5acee
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: decba4eca9eb858bae8543ce5f5ed66ad723acca
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168696"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533788"
 ---
 # <a name="spdeletemaintenanceplanjob-transact-sql"></a>sp_delete_maintenance_plan_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,11 +46,9 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@plan_id =**] **'**_plano\_id_**'**  
- Especifica a ID do plano de manutenção. *plan_id* está **uniqueidentifier**, e deve ser uma ID válida.  
+`[ @plan_id = ] 'plan\_id'` Especifica a ID do plano de manutenção. *plan_id* está **uniqueidentifier**, e deve ser uma ID válida.  
   
- [  **@job_id =**] **'**_trabalho\_id_**'**  
- Especifica o ID do trabalho ao qual o plano de manutenção está associado. *job_id* está **uniqueidentifier**, e deve ser uma ID válida.  
+`[ @job_id = ] 'job\_id'` Especifica a ID do trabalho ao qual o plano de manutenção está associado. *job_id* está **uniqueidentifier**, e deve ser uma ID válida.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

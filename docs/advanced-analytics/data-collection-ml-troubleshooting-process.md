@@ -4,15 +4,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 02/28/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a4fdd31cddaba1c46cc14ae6dbdeeb6ad92449da
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: fe383652a63b0972097fc739cf33bd3fcbe2e7e6
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579126"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58513223"
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>Solucionar problemas de coleta de dados para aprendizado de máquina
 

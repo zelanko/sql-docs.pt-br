@@ -18,12 +18,12 @@ ms.assetid: b8171fb1-c11d-4244-8618-a12e28a150ce
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5223c0d48d1baacdd8660a4fcc006d13115f1f4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e6ec60d6b11f9d17a6f5446e2840688fd1e4cb75
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732214"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536828"
 ---
 # <a name="spremovejobfromtargets-transact-sql"></a>sp_remove_job_from_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,17 +43,13 @@ sp_remove_job_from_targets [ @job_id = ] job_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@job_id =**] *job_id*  
- O número de identificação de trabalho do trabalho do qual remover os servidores de destino especificados ou grupos de servidores de destino. Qualquer um dos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados. *job_id* está **uniqueidentifier**, com um padrão NULL.  
+`[ @job_id = ] job_id` O número de identificação do trabalho do qual remover os servidores de destino especificados ou grupos de servidores de destino. Qualquer um dos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados. *job_id* está **uniqueidentifier**, com um padrão NULL.  
   
- [  **@job_name =**] **'***job_name***'**  
- O nome do trabalho do qual remover os servidores de destino especificados ou grupos de servidores de destino. Qualquer um dos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados. *job_name* está **sysname**, com um padrão NULL.  
+`[ @job_name = ] 'job_name'` O nome do trabalho do qual remover os servidores de destino especificados ou grupos de servidores de destino. Qualquer um dos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados. *job_name* está **sysname**, com um padrão NULL.  
   
- [  **@target_server_groups =**] **'***target_server_groups***'**  
- Uma lista separada por vírgulas de grupos de servidores de destino a serem removidos do trabalho especificado. *target_server_groups* está **nvarchar(1024)**, com um padrão NULL.  
+`[ @target_server_groups = ] 'target_server_groups'` Uma lista separada por vírgulas de grupos de servidores de destino a ser removido do trabalho especificado. *target_server_groups* está **nvarchar(1024)**, com um padrão NULL.  
   
- [  **@target_servers =**] **'***target_servers***'**  
- Uma lista separada por vírgulas de servidores de destino a serem removidos do trabalho especificado. *target_servers* está **nvarchar(1024)**, com um padrão NULL.  
+`[ @target_servers = ] 'target_servers'` Uma lista separada por vírgulas de servidores de destino a ser removido do trabalho especificado. *target_servers* está **nvarchar(1024)**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

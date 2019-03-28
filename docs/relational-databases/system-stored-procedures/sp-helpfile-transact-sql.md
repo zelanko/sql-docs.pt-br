@@ -18,12 +18,12 @@ ms.assetid: 1546e0ae-5a99-4e01-9eb9-d147fa65884c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 06e0e3f1f75c95924ec5d2adb52f19c7dae65735
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6447f9a8a8504539400154c29c34d7340fcdb2d8
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650424"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536298"
 ---
 # <a name="sphelpfile-transact-sql"></a>sp_helpfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,24 +40,23 @@ sp_helpfile [ [ @filename= ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@filename =** ] **'***nome***'**  
- É o nome lógico de qualquer arquivo no banco de dados atual. *nome da* está **sysname**, com um padrão NULL. Se *nome* não é especificado, os atributos de todos os arquivos de banco de dados atual serão retornados.  
+`[ @filename = ] 'name'` É o nome lógico de qualquer arquivo no banco de dados atual. *nome da* está **sysname**, com um padrão NULL. Se *nome* não é especificado, os atributos de todos os arquivos de banco de dados atual serão retornados.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome do arquivo lógico.|  
 |**fileid**|**smallint**|Identificador numérico do arquivo. Não é retornada se *nome* for especificado *.*|  
 |**filename**|**nchar(260)**|Nome do arquivo físico.|  
 |**filegroup**|**sysname**|Grupo de arquivos ao qual o arquivo pertence.<br /><br /> NULL = Ele é um arquivo de log. Ele nunca faz parte de um grupo de arquivos.|  
 |**size**|**nvarchar(15)**|Tamanho do arquivo em kilobytes.|  
-|**tamanho máximo**|**nvarchar(15)**|Tamanho máximo até o qual o arquivo pode crescer. Um valor UNLIMITED neste campo indica que o arquivo cresce até o disco ficar cheio.|  
+|**maxsize**|**nvarchar(15)**|Tamanho máximo até o qual o arquivo pode crescer. Um valor UNLIMITED neste campo indica que o arquivo cresce até o disco ficar cheio.|  
 |**growth**|**nvarchar(15)**|Incremento de crescimento do arquivo. Ele indica a quantidade de espaço adicionada ao arquivo sempre que um novo espaço é necessário.<br /><br /> 0 = Arquivo tem um tamanho fixo e não crescerá.|  
-|**Uso**|**varchar(9)**|Para o arquivo de dados, o valor será **'dados'** e para o arquivo de log é o valor **'log apenas'**.|  
+|**usage**|**varchar(9)**|Para o arquivo de dados, o valor será **'dados'** e para o arquivo de log é o valor **'log apenas'**.|  
   
 ## <a name="permissions"></a>Permissões  
  Requer associação à função **pública** .  

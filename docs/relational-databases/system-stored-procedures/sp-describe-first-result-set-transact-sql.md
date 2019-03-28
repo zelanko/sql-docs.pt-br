@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62abd4d684c809e9dbf3f2863091f1f103808d87
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 1063facd150c6dfd6273f1fd78b6f507d062788e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400629"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528158"
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -43,16 +43,13 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **\@tsql =** ] **'***SQL_batch Transact***'**  
- Uma ou mais instruções [!INCLUDE[tsql](../../includes/tsql-md.md)]. *SQL_batch Transact* pode ser **nvarchar (***n***)** ou **nvarchar (max)**.  
+`[ \@tsql = ] 'Transact-SQL_batch'` Um ou mais [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções. *SQL_batch Transact* pode ser **nvarchar (***n***)** ou **nvarchar (max)**.  
   
- [  **\@params =** ] **N'***parâmetros***'**  
- \@params fornece uma cadeia de caracteres de declaração de parâmetros para o [!INCLUDE[tsql](../../includes/tsql-md.md)] lote, que é similar a sp_executesql. Parâmetros podem ser **nvarchar (n)** ou **nvarchar (max)**.  
+`[ \@params = ] N'parameters'` \@params fornece uma cadeia de caracteres de declaração de parâmetros para o [!INCLUDE[tsql](../../includes/tsql-md.md)] lote, que é similar a sp_executesql. Parâmetros podem ser **nvarchar (n)** ou **nvarchar (max)**.  
   
  É uma cadeia de caracteres que contém as definições de todos os parâmetros que foram inseridos na [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. A cadeia de caracteres deve ser uma constante Unicode ou uma variável Unicode. Cada definição de parâmetro consiste em um nome de parâmetro e um tipo de dados. *n* é um espaço reservado que indica definições de parâmetro adicionais. Todo parâmetro especificado na instrução deve ser definido em \@params. Se o [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou lote na instrução não contiverem parâmetros, \@params não é necessária. NULL é o valor padrão para esse parâmetro.  
   
- [  **\@browse_information_mode =** ] *tinyint*  
- Especifica se colunas de chave adicionais e informações de tabela de origem são retornadas. Se definido como 1, cada consulta será analisada como se incluísse uma opção FOR BROWSE na consulta. Colunas de chave adicionais e informações de tabela de origem são retornadas.  
+`[ \@browse_information_mode = ] tinyint` Especifica se as colunas de chave adicionais e informações de tabela de origem serão retornados. Se definido como 1, cada consulta será analisada como se incluísse uma opção FOR BROWSE na consulta. Colunas de chave adicionais e informações de tabela de origem são retornadas.  
   
 -   Se for definido como 0, nenhuma informação será retornada.  
   
@@ -143,7 +140,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
     -   **varchar(a)** à **varchar(a')** onde um ' > um.  
   
-    -   **varchar(a)** para **varchar (max)**  
+    -   **varchar(a)** to **varchar(max)**  
   
     -   **nvarchar(a)** à **nvarchar(a')** onde um ' > um.  
   
@@ -179,7 +176,7 @@ WHERE object_id = @id1'
 , @params = N'@id1 int'  
 ```  
   
-#### <a name="b-browse-mode-examples"></a>b. Exemplos do modo de procura  
+#### <a name="b-browse-mode-examples"></a>B. Exemplos do modo de procura  
  Os três exemplos a seguir ilustram a principal diferença entre os modos de procurar informações. Somente as colunas relevantes foram incluídas nos resultados da consulta.  
   
  Exemplo que usa 0 indicando que nenhuma informação foi retornada.  
@@ -287,7 +284,7 @@ ELSE
     SELECT d AS b FROM t2;'  
 ```  
   
- Resultado: b **varchar (20) NULL**  
+ Result: b **varchar(20)NULL**  
   
 #### <a name="error-because-column-types-cannot-be-matched"></a>Erro porque os tipos de coluna não podem ser correspondidos  
  Os tipos de coluna diferem nos primeiros possíveis conjuntos de resultados diferentes.  

@@ -18,12 +18,12 @@ ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a293be4b745f30f4ee4a9bff6226e4e2ef80676f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: c81843220b9613bfc59f03d197f369e77a850f84
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209835"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534038"
 ---
 # <a name="spchangesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,23 +49,17 @@ sp_changesubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publication**=] **'**_publicação_**'**  
- É o nome da publicação a ser alterada. *publicação*está **sysname**, sem padrão  
+`[ @publication = ] 'publication'` É o nome da publicação a ser alterada. *publicação*está **sysname**, sem padrão  
   
- [ **@article** =] **'**_artigo_**'**  
- É o nome do artigo a ser alterado. *artigo* está **sysname**, sem padrão.  
+`[ @article = ] 'article'` É o nome do artigo a alterar. *artigo* está **sysname**, sem padrão.  
   
- [ **@subscriber** =] **'**_assinante_**'**  
- É o nome do Assinante. *assinante* está **sysname**, sem padrão.  
+`[ @subscriber = ] 'subscriber'` É o nome do assinante. *assinante* está **sysname**, sem padrão.  
   
- [ **@destination_db** =] **'**_destination_db_**'**  
- É o nome do banco de dados de assinatura. *destination_db* está **sysname**, sem padrão.  
+`[ @destination_db = ] 'destination_db'` É o nome do banco de dados de assinatura. *destination_db* está **sysname**, sem padrão.  
   
- [  **@property=**] **'**_propriedade_**'**  
- É a propriedade a ser alterada para a assinatura determinado. *propriedade* está **nvarchar (30)**, e pode ser um dos valores na tabela.  
+`[ @property = ] 'property'` É a propriedade a ser alterada para a assinatura fornecida. *propriedade* está **nvarchar (30)**, e pode ser um dos valores na tabela.  
   
- [  **@value=**] **'**_valor_**'**  
- É o novo valor especificado *propriedade*. *valor* está **nvarchar (4000)**, e pode ser um dos valores na tabela.  
+`[ @value = ] 'value'` É o novo valor especificado *propriedade*. *valor* está **nvarchar (4000)**, e pode ser um dos valores na tabela.  
   
 |Propriedade|Valor|Descrição|  
 |--------------|-----------|-----------------|  
@@ -80,13 +74,12 @@ sp_changesubscription [ @publication = ] 'publication'
 ||**0**|Use Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao se conectar ao Assinante.|  
 |**subscriber_provider**||PROGID (identificador programático) exclusivo com o qual o provedor OLE DB para fonte de dados não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é registrado. *Essa propriedade só é válida para não -* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *assinantes.*|  
 |**subscriber_providerstring**||Cadeia de conexão específica de provedor OLE DB que identifica a fonte de dados. *Essa propriedade só é válida para não -* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *assinantes.*|  
-|**fluxos de assinatura**||É o número de conexões permitido por Agente de Distribuição para aplicar lotes de alterações em paralelo a um Assinante. Um intervalo de valores de **1** à **64** há suporte para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores. Esta propriedade deve ser **0** para não -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes, Publicadores Oracle ou assinaturas ponto a ponto.|  
+|**subscriptionstreams**||É o número de conexões permitido por Agente de Distribuição para aplicar lotes de alterações em paralelo a um Assinante. Um intervalo de valores de **1** à **64** há suporte para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores. Esta propriedade deve ser **0** para não -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes, Publicadores Oracle ou assinaturas ponto a ponto.|  
 |**subscriber_type**|**1**|Servidor de fontes de dados ODBC|  
 ||**3**|Provedor OLE DB|  
 |**memory_optimized**|**bit**|Indica que a assinatura dá suporte a tabelas com otimização de memória. *memory_optimized* está **bit**, onde 1 é igual a true (a assinatura dá suporte a tabelas com otimização de memória).|  
   
- [  **@publisher =** ] **'**_publisher_**'**  
- Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
+`[ @publisher = ] 'publisher'` Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
 >  *Publisher* não deve ser especificado para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  

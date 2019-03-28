@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/12/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: b204ab644e4b454bc3671801f32b089a8210c521
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: e0cded793f6017398641ffa055deec62010b2b3d
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645166"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510603"
 ---
 # <a name="revoscalepy-python-module-in-sql-server"></a>revoscalepy (módulo de Python no SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -35,7 +35,7 @@ O **revoscalepy** biblioteca é distribuída em vários produtos da Microsoft, m
 
 O **revoscalepy** módulo é com base em Python 3.5 e está disponível apenas quando você instala um dos seguintes produtos da Microsoft ou downloads:
 
-+ [Serviços de aprendizado de máquina do SQL Server 2017](../install/sql-machine-learning-services-windows-install.md)
++ [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 ou posterior](https://docs.microsoft.com/machine-learning-server/)
 + [Bibliotecas de cliente do Python para um cliente de ciência de dados](setup-python-client-tools-sql.md)
 

@@ -16,12 +16,12 @@ ms.assetid: 66f36e1d-0287-4fac-8a51-71f9f0d7ad5b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 959de8a29f1523527a12672d3ea872d7fad408c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 14a96a44967c41b185d3196c9d6577f67547e77a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096006"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537408"
 ---
 # <a name="define-a-logical-backup-device-for-a-tape-drive-sql-server"></a>Definir um dispositivo de backup lógico para uma unidade de fita (SQL Server)
   Este tópico descreve como definir um dispositivo de backup lógico para uma unidade de fita no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Um dispositivo lógico é um nome definido pelo usuário que aponta para um dispositivo de backup físico específico (um arquivo de disco ou uma unidade de fita).  A inicialização do dispositivo físico acontece depois, quando um backup é gravado no dispositivo de backups.  
@@ -86,7 +86,7 @@ ms.locfileid: "48096006"
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo mostra como usar [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql) para definir um dispositivo de backup lógico para uma fita. O exemplo adiciona o dispositivo de backup em fita denominado `tapedump1`, com o nome físico `\\.\tape0`.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_addumpdevice 'tape', 'tapedump1', '\\.\tape0' ;  

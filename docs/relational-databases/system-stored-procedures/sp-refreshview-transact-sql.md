@@ -18,12 +18,12 @@ ms.assetid: 9ce1d07c-ee66-4a83-8c73-cd2cc104dd08
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e707eb96cd07f784e1089a5131a44eb0ce248b7f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e41bcab4680d1e3bbaf08e2fbab112799fd5976
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640815"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533148"
 ---
 # <a name="sprefreshview-transact-sql"></a>sp_refreshview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_refreshview [ @viewname = ] 'viewname'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@viewname=** ] **'***viewname***'**  
- É o nome da exibição. *viewname* está **nvarchar**, sem padrão. *viewname* pode ser um identificador de várias partes, mas só pode se referir a exibições no banco de dados atual.  
+`[ @viewname = ] 'viewname'` É o nome da exibição. *viewname* está **nvarchar**, sem padrão. *viewname* pode ser um identificador de várias partes, mas só pode se referir a exibições no banco de dados atual.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou um número diferente de zero (falha)  

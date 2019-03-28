@@ -16,12 +16,12 @@ ms.assetid: 73257c2e-cc4c-48e7-9d66-7ef045bdd4f5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 97b527ef6d3b0363874d770e950106a7127c5483
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 293c00f0112dd35de9a546d8c34f237a8561ec40
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819248"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532158"
 ---
 # <a name="spvupgrademergeobjects-transact-sql"></a>sp_vupgrade_mergeobjects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,14 +46,11 @@ sp_vupgrade_mergeobjects [ [@login = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@login=**] **'***logon***'**  
- É o logon do administrador do sistema a ser usado ao criar novos objetos do sistema no banco de dados de distribuição. *login* é **sysname**, com um padrão de NULL. Esse parâmetro não é necessário se *security_mode* é definido como **1**, que é a autenticação do Windows.  
+`[ @login = ] 'login'` É o logon de administrador do sistema a ser usado ao criar novos objetos de sistema no banco de dados de distribuição. *login* é **sysname**, com um padrão de NULL. Esse parâmetro não é necessário se *security_mode* é definido como **1**, que é a autenticação do Windows.  
   
- [  **@password=**] **'***senha***'**  
- É a senha do administrador do sistema a ser usada ao criar novos objetos do sistema no banco de dados de distribuição. *senha* está **sysname**, com um padrão de **'** (cadeia de caracteres vazia). Esse parâmetro não é necessário se *security_mode* é definido como **1**, que é a autenticação do Windows.  
+`[ @password = ] 'password'` É a senha de administrador do sistema a ser usado ao criar novos objetos de sistema no banco de dados de distribuição. *senha* está **sysname**, com um padrão de **'** (cadeia de caracteres vazia). Esse parâmetro não é necessário se *security_mode* é definido como **1**, que é a autenticação do Windows.  
   
- [  **@security_mode=**] **'***security_mode***'**  
- É o modo de segurança do logon a ser usado ao criar novos objetos do sistema no banco de dados de distribuição. *security_mode* está **bit** com um valor padrão de **1**. Se **0**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação será usada. Se **1**, autenticação do Windows será usada. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @security_mode = ] 'security_mode'` É o modo de segurança de logon a ser usado ao criar novos objetos de sistema no banco de dados de distribuição. *security_mode* está **bit** com um valor padrão de **1**. Se **0**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação será usada. Se **1**, autenticação do Windows será usada. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

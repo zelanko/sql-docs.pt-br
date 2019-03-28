@@ -17,12 +17,12 @@ ms.assetid: 72603b21-3065-4b56-8b01-11b707911b05
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8cc98f791b4d0a8cba9b2c1030cd207cc2f1092c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2d056e61abd08a75b1a1b62117d351b2c55d7e09
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175136"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531358"
 ---
 # <a name="restore-files-and-filegroups-sql-server"></a>Restaurar arquivos e grupos de arquivos (SQL Server)
   Este tópico descreve como restaurar arquivos e grupos de arquivos no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -51,7 +51,7 @@ ms.locfileid: "48175136"
   
 -   No modelo de recuperação simples, o arquivo deve pertencer a um grupo de arquivos somente leitura.  
   
--   No modelo de recuperação completa ou bulk-logged, antes de poder restaurar arquivos, você deve fazer backup do log de transações ativas (conhecido como a parte final do log). Para obter mais informações, veja [Fazer backup de um log de transações &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)).  
+-   No modelo de recuperação completa ou bulk-logged, antes de poder restaurar arquivos, você deve fazer backup do log de transações ativas (conhecido como a parte final do log). Para obter mais informações, veja [Back Up a Transaction Log &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md).  
   
 -   Para restaurar um banco de dados criptografado, é necessário ter acesso ao certificado ou à chave assimétrica usada para criptografar o banco de dados. Sem o certificado ou a chave assimétrica, o banco de dados não pode ser restaurado. Como resultado, o certificado usado para criptografar a chave de criptografia do banco de dados deverá ser retido enquanto o backup for necessário. Para obter mais informações, consulte [SQL Server Certificates and Asymmetric Keys](../security/sql-server-certificates-and-asymmetric-keys.md).  
   
@@ -94,8 +94,8 @@ ms.locfileid: "48175136"
     |-----------------|------------|  
     |**Restaurar**|As caixas de seleção selecionadas indicam os conjuntos de backup a serem restaurados.|  
     |**Nome**|O nome do conjunto de backup.|  
-    |**Tipo de arquivo**|Especifica o tipo de dados no backup: **Dados**, **Log**ou **Filestream Data**. Dados que são contidos em tabelas estão nos arquivos **Dados** . Dados de log de transações estão nos arquivos **Log** . Dados de BLOB (objeto binário grande) armazenados no sistema de arquivos estão localizados em arquivos de **Dados do Fluxo de Arquivos** .|  
-    |**Tipo**|Tipo de backup realizado: **Completo**, **Diferencial**ou **Log de Transações**.|  
+    |**Tipo de arquivo**|Especifica o tipo de dados no backup: **Dados**, **Log**, ou **dados Filestream**. Dados que são contidos em tabelas estão nos arquivos **Dados** . Dados de log de transações estão nos arquivos **Log** . Dados de BLOB (objeto binário grande) armazenados no sistema de arquivos estão localizados em arquivos de **Dados do Fluxo de Arquivos** .|  
+    |**Tipo**|O tipo de backup realizado: **Total**, **Diferencial** ou **Log de Transações**.|  
     |**Servidor**|Nome da instância do Mecanismo de Banco de Dados que executou a operação de backup.|  
     |**Nome Lógico do Arquivo**|O nome lógico do arquivo.|  
     |**Backup de banco de dados**|Nome do banco de dados envolvido na operação de backup.|  
@@ -131,7 +131,7 @@ ms.locfileid: "48175136"
     |Título da coluna|Valores|  
     |-----------------|------------|  
     |**Nome do arquivo original**|O caminho completo do arquivo de backup de origem.|  
-    |**Tipo de arquivo**|Especifica o tipo de dados no backup: **Dados**, **Log**ou **Filestream Data**. Dados que são contidos em tabelas estão nos arquivos **Dados** . Dados de log de transações estão nos arquivos **Log** . Dados de BLOB (objeto binário grande) armazenados no sistema de arquivos estão localizados em arquivos de **Dados do Fluxo de Arquivos** .|  
+    |**Tipo de arquivo**|Especifica o tipo de dados no backup: **Dados**, **Log**, ou **dados Filestream**. Dados que são contidos em tabelas estão nos arquivos **Dados** . Dados de log de transações estão nos arquivos **Log** . Dados de BLOB (objeto binário grande) armazenados no sistema de arquivos estão localizados em arquivos de **Dados do Fluxo de Arquivos** .|  
     |**Restaurar Como**|O caminho completo do arquivo de banco de dados a ser restaurado. Para especificar um novo arquivo de restauração, clique na caixa de texto e edite o caminho sugerido e o nome do arquivo. Alterar o caminho ou o nome do arquivo na coluna **Restaurar Como** é equivalente ao uso da opção MOVE em uma declaração RESTORE [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
   
 11. O painel **Estado de recuperação** determina o estado do banco de dados após a operação de restauração.  
@@ -181,7 +181,7 @@ ms.locfileid: "48175136"
 ###  <a name="TsqlExample"></a> Exemplo (Transact-SQL)  
  Este exemplo restaura os arquivos e grupos de arquivos para o banco de dados `MyDatabase` . Para restaurar o banco de dados para a hora atual, dois logs de transações são aplicados.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 -- Restore the files and filesgroups for MyDatabase.  

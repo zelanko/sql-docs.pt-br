@@ -14,12 +14,12 @@ ms.assetid: 76e8a6ba-1381-4620-b356-4311e1331ca7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 116fd45b97011060aab0dd79519648542ec5255c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 463b077fe6ac972f87dcf90773c07575e839bb14
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084116"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530048"
 ---
 # <a name="create-a-stored-procedure"></a>Criar um procedimento armazenado
   Este tópico descreve como criar um procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e a declaração [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE PROCEDURE.  
@@ -27,7 +27,7 @@ ms.locfileid: "48084116"
 ##  <a name="Top"></a>   
 -   **Antes de começar:**  [Permissões](#Permissions)  
   
--   **To create a procedure, using:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Para criar um procedimento usando:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="Permissions"></a> Permissões  
  Requer a permissão CREATE PROCEDURE no banco de dados e a permissão ALTER no esquema no qual o procedimento está sendo criado.  
@@ -56,7 +56,7 @@ ms.locfileid: "48084116"
     |---------------|-----------|  
     |Autor|*Seu nome*|  
     |Data de criação|*A data de hoje*|  
-    |Description|Retorna dados de funcionário.|  
+    |Descrição|Retorna dados de funcionário.|  
     |Procedure_name|HumanResources.uspGetEmployeesTest|  
     |@Param1|@LastName|  
     |@Datatype_For_Param1|`nvarchar`(50)|  
@@ -69,7 +69,7 @@ ms.locfileid: "48084116"
   
 7.  No **Editor de Consultas**, substitua a instrução SELECT pela seguinte instrução:  
   
-    ```tsql  
+    ```sql  
     SELECT FirstName, LastName, Department  
     FROM HumanResources.vEmployeeDepartmentHistory  
     WHERE FirstName = @FirstName AND LastName = @LastName  

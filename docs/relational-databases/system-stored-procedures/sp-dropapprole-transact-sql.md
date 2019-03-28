@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ea1aefe6-8f7d-46e9-a3cb-7b037b393e73
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 150fd6e01efb67281146e5b7dfff79bde27636dc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 5cc9f79ab588a042894c199564820d06d9585bf1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130596"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533378"
 ---
 # <a name="spdropapprole-transact-sql"></a>sp_dropapprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,8 +42,7 @@ sp_dropapprole [@rolename = ] 'role'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@rolename =** ] **'**_função_**'**  
- É a função de aplicativo a ser removida. *função* é um **sysname**, sem padrão. *função* deve existir no banco de dados atual.  
+`[ @rolename = ] 'role'` É a função de aplicativo a ser removido. *função* é um **sysname**, sem padrão. *função* deve existir no banco de dados atual.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

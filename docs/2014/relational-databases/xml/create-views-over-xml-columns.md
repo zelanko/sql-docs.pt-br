@@ -9,18 +9,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - views [XML in SQL Server]
 ms.assetid: eb5f0439-1f69-49c2-8759-e59bda1633b7
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 767844d7b195ece286b8f19cc34855bf50185a0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2d1e37f341c0606947b37eb10e8e3123ad410204
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049826"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538358"
 ---
 # <a name="create-views-over-xml-columns"></a>Criar exibições sobre colunas XML
-  Você pode usar um `xml` coluna de tipo para criar modos de exibição. O exemplo a seguir cria um modo de exibição na qual o valor de uma `xml` coluna de tipo é recuperada usando o `value()` método da `xml` tipo de dados.  
+  É possível usar uma coluna de tipo `xml` para criar exibições. O exemplo a seguir cria uma exibição na qual o valor de uma coluna de tipo `xml` é recuperada usando o método `value()` do tipo de dados `xml`.  
   
 ```  
 -- Create the table.  
@@ -47,7 +47,7 @@ SELECT *
 FROM   MyView  
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 ProductID   PName        
@@ -55,11 +55,11 @@ ProductID   PName
 1           SomeName   
 ```  
   
- Observe os seguintes pontos sobre como usar o `xml` tipo de dados para criar exibições:  
+ Observe os seguintes pontos sobre o uso do tipo de dados `xml` para criar exibições:  
   
 -   O tipo de dados xml pode ser criado em uma exibição materializada. A exibição materializada não pode ser baseada em um método de tipo de dados xml. No entanto ela pode ser convertida em uma coleção de esquema XML diferente da coluna de tipo xml na tabela base.  
   
--   O `xml` tipo de dados não pode ser usado em exibições particionadas distribuídas.  
+-   O tipo de dados `xml` não pode ser usado em Exibições Particionadas Distribuídas.  
   
 -   Predicados SQL que são executados em relação à exibição não serão enviados por push para o XQuery da definição da exibição.  
   

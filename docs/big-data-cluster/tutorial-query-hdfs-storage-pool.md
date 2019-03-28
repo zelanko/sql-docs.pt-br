@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a8752f4879f4b03f89378e4f30c44c10dc272694
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 57851a4e0f4cedde1e630afeca49ff26c971c7b5
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494398"
+ms.locfileid: "58511113"
 ---
 # <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>Tutorial: Consulta HDFS em um cluster de big data do SQL Server
 
@@ -73,8 +73,14 @@ O pool de armazenamento contém dados de sequência de cliques da web em um arqu
 
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
-     CREATE EXTERNAL DATA SOURCE SqlStoragePool
-     WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
+   BEGIN
+     IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
+       CREATE EXTERNAL DATA SOURCE SqlStoragePool
+       WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
+     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
+       CREATE EXTERNAL DATA SOURCE SqlStoragePool
+       WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
+   END
    ```
 
 1. Criar uma tabela externa que pode ler o `/clickstream_data` do pool de armazenamento. O **SqlStoragePool** está acessível da instância do mestre de um cluster de big data.

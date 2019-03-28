@@ -1,7 +1,7 @@
 ---
 title: sys.dm_pdw_exec_requests (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/22/2019
+ms.date: 03/26/2019
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a218f2a80b755c30dcbf608197a3a306321d41f4
-ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
+ms.openlocfilehash: ca750b483aee088a6997f9f0b1beac6d15b0d9df
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58417158"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58509863"
 ---
 # <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -41,7 +41,7 @@ ms.locfileid: "58417158"
 |database_id|**int**|Identificador do banco de dados usado pelo contexto explícito (por exemplo, USE DB_X).|Consulte a ID na [sys. Databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |command|**nvarchar(4000)**|Contém o texto completo da solicitação enviado pelo usuário.|Qualquer texto de consulta ou de solicitação válido. Consultas que têm mais de 4000 bytes são truncadas.|  
 |resource_class|**nvarchar(20)**|A classe de recurso para esta solicitação. Consulte relacionados **concurrency_slots_used** na [sys.dm_pdw_resource_waits &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md).  Para obter mais informações sobre classes de recursos, consulte [gerenciamento de carga de trabalho e classes de recursos](https://docs.microsoft.com/azure/sql-data-warehouse/resource-classes-for-workload-management) |Classes de recurso estáticas</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>Classes de recurso dinâmicas</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
-|importância (versão prévia para o SQL DW Gen2)|**nvarchar(32)**|A importância de definição da solicitação foi enviada com. Solicitações com uma menor importância permanecerá na fila em estado suspenso, se as solicitações de importância mais alta são enviadas.  Solicitações com importância mais alta serão executadas antes de solicitações de prioridade inferiores que foram enviadas anteriormente.  Para obter mais informações sobre a importância, consulte [importância da carga de trabalho](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance).  |NULL</br>low</br>below_normal</br>normal</br>above_normal</br>high|
+|importância (versão prévia para o SQL DW Gen2)|**nvarchar(32)**|A importância de definição da solicitação foi enviada com. Solicitações com uma menor importância permanecerá na fila em estado suspenso, se as solicitações de importância mais alta são enviadas.  Solicitações com importância mais alta serão executadas antes de solicitações de prioridade inferiores que foram enviadas anteriormente.  Para obter mais informações sobre a importância, consulte [importância da carga de trabalho](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance).  |NULL</br>low</br>below_normal</br>normal (padrão)</br>above_normal</br>high|
   
  Para obter informações sobre o máximo de linhas mantido por esta exibição, consulte a seção de metadados na [limites de capacidade](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) tópico.   
   

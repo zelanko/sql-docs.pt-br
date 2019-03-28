@@ -19,12 +19,12 @@ ms.assetid: 7bbaee48-dfc7-45c0-b11f-c636b6a7e720
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 706a10db6bc16deb34a428444b2918c5c1ff6b37
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e2ad81b1d92bb45d9ab15ca11897804cc0d333a9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716766"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531398"
 ---
 # <a name="spsyscollectorruncollectionset-transact-sql"></a>sp_syscollector_run_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,11 +47,9 @@ sp_syscollector_run_collection_set [[ @collection_set_id = ] collection_set_id ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@collection_set_id =** ] *collection_set_id*  
- É o identificador local exclusivo do conjunto de coleta. *collection_set_id* está **int** e deve ter um valor se *nome* é NULL.  
+`[ @collection_set_id = ] collection_set_id` É o identificador local exclusivo para o conjunto de coleta. *collection_set_id* está **int** e deve ter um valor se *nome* é NULL.  
   
- [  **@name =** ] **'***nome***'**  
- É o nome do conjunto de coleta. *nome da* está **sysname** e deve ter um valor se *collection_set_id* é NULL.  
+`[ @name = ] 'name'` É o nome do conjunto de coleta. *nome da* está **sysname** e deve ter um valor se *collection_set_id* é NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

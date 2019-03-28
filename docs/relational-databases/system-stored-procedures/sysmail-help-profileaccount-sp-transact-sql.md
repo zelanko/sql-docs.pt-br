@@ -18,12 +18,12 @@ ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 779519ef5ba3098e205a70d8c5923adc993f44f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff6dbe9abcd1378370a17a053b69ea59c01fee75
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700744"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527198"
 ---
 # <a name="sysmailhelpprofileaccountsp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,17 +44,13 @@ sysmail_help_profileaccount_sp
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@profile_id** =] *profile_id*  
- É a ID do perfil a ser listado. *profile_id* está **int**, com um padrão NULL. Qualquer um dos *profile_id* ou *profile_name* deve ser especificado.  
+`[ @profile_id = ] profile_id` É a ID do perfil a ser listado. *profile_id* está **int**, com um padrão NULL. Qualquer um dos *profile_id* ou *profile_name* deve ser especificado.  
   
- [ **@profile_name** =] **'***profile_name***'**  
- É o nome do perfil a ser listado. *profile_name* está **sysname**, com um padrão NULL. Qualquer um dos *profile_id* ou *profile_name* deve ser especificado.  
+`[ @profile_name = ] 'profile_name'` É o nome do perfil a ser listado. *profile_name* está **sysname**, com um padrão NULL. Qualquer um dos *profile_id* ou *profile_name* deve ser especificado.  
   
- [ **@account_id** = ] *account_id*  
- É a ID de conta a ser listada. *account_id* está **int**, com um padrão NULL. Quando *account_id* e *account_name* forem ambos NULL, que lista todas as contas no perfil.  
+`[ @account_id = ] account_id` É a ID de conta à lista. *account_id* está **int**, com um padrão NULL. Quando *account_id* e *account_name* forem ambos NULL, que lista todas as contas no perfil.  
   
- [ **@account_name** = ] **'***account_name***'**  
- É o nome da conta a ser listada. *account_name* está **sysname**, com um padrão NULL. Quando *account_id* e *account_name* forem ambos NULL, que lista todas as contas no perfil.  
+`[ @account_name = ] 'account_name'` É o nome da conta à lista. *account_name* está **sysname**, com um padrão NULL. Quando *account_id* e *account_name* forem ambos NULL, que lista todas as contas no perfil.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -64,7 +60,7 @@ sysmail_help_profileaccount_sp
   
 ||||  
 |-|-|-|  
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |**profile_id**|**int**|O ID do perfil.|  
 |**profile_name**|**sysname**|O nome do perfil.|  
 |**account_id**|**int**|A ID da conta da conta.|  

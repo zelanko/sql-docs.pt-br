@@ -18,12 +18,12 @@ ms.assetid: 0ecbec81-e637-44a9-a61e-11bf060ef084
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0bef77291c0a719b9cdc96106d3c173dff652da1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1904b1549613e53c685d784628696e84b134a03
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644674"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534708"
 ---
 # <a name="sppassword-transact-sql"></a>sp_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,17 +45,14 @@ sp_password [ [ @old = ] 'old_password' , ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@old=** ] **'***old_password***'**  
- É a senha antiga. *old_password* está **sysname**, com um padrão NULL.  
+`[ @old = ] 'old_password'` É a senha antiga. *old_password* está **sysname**, com um padrão NULL.  
   
- [  **@new=** ] **'***nova_senha***'**  
- É a nova senha. *nova_senha* está **sysname**, sem padrão. *old_password* deve ser especificado se os parâmetros nomeados não forem usados.  
+`[ @new = ] 'new_password'` É a nova senha. *nova_senha* está **sysname**, sem padrão. *old_password* deve ser especificado se os parâmetros nomeados não forem usados.  
   
 > [!IMPORTANT]  
 >  Não use uma senha NULL. Use uma senha forte. Para saber mais, confira [Strong Passwords](../../relational-databases/security/strong-passwords.md).  
   
- [  **@loginame=** ] **'***logon***'**  
- É o nome de logon afetado pela mudança de senha. *login* é **sysname**, com um padrão de NULL. *login* já deve existir e pode ser especificado somente por membros da **sysadmin** ou **securityadmin** funções de servidor fixas.  
+`[ @loginame = ] 'login'` É o nome de logon afetado pela alteração de senha. *login* é **sysname**, com um padrão de NULL. *login* já deve existir e pode ser especificado somente por membros da **sysadmin** ou **securityadmin** funções de servidor fixas.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

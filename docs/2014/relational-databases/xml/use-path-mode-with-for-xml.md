@@ -15,15 +15,15 @@ helpviewer_keywords:
 - column names [SQL Server]
 - XPath queries [SQL Server]
 ms.assetid: a685a9ad-3d28-4596-aa72-119202df3976
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3dc982de67c3fc1ddd874b38c1e14eec49d3b0af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3e7dba8ee18697f2c8940eab2ea6489e6eec687c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220576"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533808"
 ---
 # <a name="use-path-mode-with-for-xml"></a>Usar o modo PATH com FOR XML
   Conforme descrito em [Construindo XML usando FOR XML](for-xml-sql-server.md), o modo PATH fornece uma maneira simples de combinar elementos e atributos. O modo PATH também é uma maneira simples de introduzir aninhamento adicional para representar propriedades complexas. É possível usar consultas em modo FOR XML EXPLICIT para construir esse XML a partir de um conjunto de linhas, mas o modo PATH fornece uma alternativa simples para as consultas em modo EXPLICIT que são potencialmente trabalhosas. O modo PATH, juntamente com a capacidade de escrever consultas FOR XML aninhadas e a diretiva TYPE para retornar instâncias do tipo **xml** , permite escrever consultas com menos complexidade.  
@@ -48,7 +48,7 @@ ms.locfileid: "48220576"
   
 -   [Suporte a namespace em modo PATH](namespace-support-in-path-mode.md)  
   
--   [Exemplos: Usando modo PATH](examples-using-path-mode.md)  
+-   [Exemplos: Usando o modo PATH](examples-using-path-mode.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Adicionar namespaces a consultas com WITH XMLNAMESPACES](add-namespaces-to-queries-with-with-xmlnamespaces.md)   

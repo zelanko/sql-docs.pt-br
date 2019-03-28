@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8194c74acb14a78482cc1e1de8fae38682699d3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a35880dd299cc9eff81643dd5d955101c5eec68
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679625"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532478"
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_describe_undeclared_parameters
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **\@tsql =** ] **'**_Transact-SQL\_lote_**'**  
- Uma ou mais instruções [!INCLUDE[tsql](../../includes/tsql-md.md)]. *SQL_batch Transact* pode ser **nvarchar (**_n_**)** ou **nvarchar (max)**.  
+`[ \@tsql = ] 'Transact-SQL\_batch'` Um ou mais [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções. *SQL_batch Transact* pode ser **nvarchar (**_n_**)** ou **nvarchar (max)**.  
   
- [  **\@params =** ] **N'**_parâmetros_**'**  
- \@params fornece uma cadeia de caracteres de declaração de parâmetros para o [!INCLUDE[tsql](../../includes/tsql-md.md)] funciona em lotes, da mesma forma que a forma de sp_executesql. *Parâmetros* pode ser **nvarchar (**_n_**)** ou **nvarchar (max)**.  
+`[ \@params = ] N'parameters'` \@params fornece uma cadeia de caracteres de declaração de parâmetros para o [!INCLUDE[tsql](../../includes/tsql-md.md)] funciona em lotes, da mesma forma que a forma de sp_executesql. *Parâmetros* pode ser **nvarchar (**_n_**)** ou **nvarchar (max)**.  
   
  É uma cadeia de caracteres que contém as definições de todos os parâmetros que foram inseridos em *SQL_batch Transact*. A cadeia de caracteres deve ser uma constante Unicode ou uma variável Unicode. Cada definição de parâmetro consiste em um nome de parâmetro e um tipo de dados. n é um espaço reservado que indica definições de parâmetro adicionais. Se a instrução Transact-SQL ou lote na instrução não contiver parâmetros, \@params não é necessária. O valor padrão para este parâmetro é NULL.  
   
@@ -60,7 +58,7 @@ sp_describe_undeclared_parameters
 ## <a name="result-sets"></a>Conjuntos de resultados  
  **sp_describe_undeclared_parameters** retorna o conjunto de resultados a seguir.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int NOT NULL**|Contém a posição ordinal do parâmetro no conjunto de resultados. A posição do primeiro parâmetro será especificada como 1.|  
 |**name**|**sysname NOT NULL**|Contém o nome do parâmetro.|  

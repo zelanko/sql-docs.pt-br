@@ -10,12 +10,12 @@ ms.assetid: 64a9eade-22c3-4a9d-ab50-956219e08df1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 65d6680d7e03960c0c59e83413be58cb74e5f028
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7f5355af9adb2ae2a06fab1041b22959165dfaf2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158106"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537768"
 ---
 # <a name="migrating-computed-columns"></a>Criando colunas computadas
   As colunas computadas não têm suporte em tabelas com otimização de memória. No entanto, você pode simular uma coluna computada.  
@@ -25,7 +25,7 @@ ms.locfileid: "48158106"
 ## <a name="non-persisted-computed-columns"></a>Colunas computadas não persistentes  
  Para simular os efeitos de uma coluna computada não persistente, crie uma exibição na tabela com otimização de memória. Na instrução SELECT que define a exibição, adicione a definição de coluna computada à exibição. A não ser em um procedimento armazenado compilado nativamente, as consultas que usam valores da coluna computada devem ler a exibição. Nos procedimentos armazenados compilados nativamente, você deve atualizar qualquer instrução select, update ou delete de acordo com sua definição de coluna computada.  
   
-```tsql  
+```sql  
 -- Schema for the table dbo.OrderDetails:  
 -- OrderId int not null primary key,  
 -- ProductId int not null,  
@@ -47,7 +47,7 @@ CREATE VIEW dbo.v_order_details AS
 ## <a name="persisted-computed-columns"></a>Colunas computadas persistentes  
  Para simular os efeitos de uma coluna computada persistente, crie um procedimento armazenado para inserção na tabela e outro procedimento armazenado para atualizar a tabela. Ao inserir ou atualizar a tabela, chame esses procedimentos armazenados para executar essas tarefas. Nos procedimentos armazenados, calcule o valor do campo computado de acordo com as entradas, praticamente da mesma maneira que a coluna computada é definida na tabela baseada em disco original. Em seguida, insira ou atualize a tabela conforme necessário no procedimento armazenado.  
   
-```tsql  
+```sql  
 -- Schema for the table dbo.OrderDetails:  
 -- OrderId int not null primary key,  
 -- ProductId int not null,  

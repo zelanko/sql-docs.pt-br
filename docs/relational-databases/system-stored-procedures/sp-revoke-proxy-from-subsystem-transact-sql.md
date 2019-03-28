@@ -18,12 +18,12 @@ ms.assetid: b87bc8ba-3ea8-4aed-b54b-32c3d82d9d2a
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a8b2444785cf5b640614ee57192832151e3bc9e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4079a6afda1f303369a2d8b9defc8bbeb3c4608d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812415"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527228"
 ---
 # <a name="sprevokeproxyfromsubsystem-transact-sql"></a>sp_revoke_proxy_from_subsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,16 +44,13 @@ sp_revoke_proxy_from_subsystem
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@proxy_id** = ] *id*  
- O número de identificação de proxy do proxy do qual o acesso será revogado. O *proxy_id* é **int**, com um padrão NULL. Qualquer um dos *proxy_id* ou *proxy_name* deve ser especificado, mas não podem ser especificados.  
+`[ @proxy_id = ] id` O número de identificação de proxy do proxy acesso será revogado. O *proxy_id* é **int**, com um padrão NULL. Qualquer um dos *proxy_id* ou *proxy_name* deve ser especificado, mas não podem ser especificados.  
   
- [ **@proxy_name** =] **'***proxy_name***'**  
- O nome do proxy do qual o acesso será revogado. O *proxy_name* é **sysname**, com um padrão NULL. Qualquer um dos *proxy_id* ou *proxy_name* deve ser especificado, mas não podem ser especificados.  
+`[ @proxy_name = ] 'proxy_name'` O nome do proxy acesso será revogado. O *proxy_name* é **sysname**, com um padrão NULL. Qualquer um dos *proxy_id* ou *proxy_name* deve ser especificado, mas não podem ser especificados.  
   
- [ **@subsystem_id** = ] *id*  
- O número de identificação do subsistema do qual o acesso será revogado. O *subsystem_id* é **int**, com um padrão NULL. Qualquer um dos *subsystem_id* ou *subsystem_name* deve ser especificado, mas não podem ser especificados. A tabela a seguir lista os valores padrão para cada subsistema.  
+`[ @subsystem_id = ] id` O número de identificação do subsistema para revogar o acesso para o. O *subsystem_id* é **int**, com um padrão NULL. Qualquer um dos *subsystem_id* ou *subsystem_name* deve ser especificado, mas não podem ser especificados. A tabela a seguir lista os valores padrão para cada subsistema.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**2**|Script do ActiveX<br /><br /> **\*\* Importante \* \***  será removido do subsistema ActiveX Scripting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.|  
 |**3**|Sistema Operacional (CmdExec)|  
@@ -67,10 +64,9 @@ sp_revoke_proxy_from_subsystem
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] execução de pacotes|  
 |**12**|Scripts PowerShell|  
   
- [ **@subsystem_name**= ] **'***subsystem_name***'**  
- O nome do subsistema do qual o acesso será revogado. O *subsystem_name* é **sysname**, com um padrão NULL. Qualquer um dos *subsystem_id* ou *subsystem_name* deve ser especificado, mas não podem ser especificados. A tabela a seguir lista os valores padrão para cada subsistema.  
+`[ @subsystem_name = ] 'subsystem_name'` O nome do subsistema para revogar o acesso para o. O *subsystem_name* é **sysname**, com um padrão NULL. Qualquer um dos *subsystem_id* ou *subsystem_name* deve ser especificado, mas não podem ser especificados. A tabela a seguir lista os valores padrão para cada subsistema.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |ActiveScripting|Script do ActiveX|  
 |CmdExec|Sistema Operacional (CmdExec)|  

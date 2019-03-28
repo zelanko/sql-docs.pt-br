@@ -1,5 +1,5 @@
 ---
-title: 'Exemplo: recuperando informações de modelo de produto como XML | Microsoft Docs'
+title: 'Exemplo: Recuperando informações de modelo de produto como XML | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, retrieving XML information example
 ms.assetid: 3828b4ca-3ab2-444f-9c58-8be6e7f064a6
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4ec7ed358ab8c6c5f42e378a23dd4ba911800ae3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b48b333a5619aaad7f7f6af1c6e8cf908ba35bb1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219876"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537758"
 ---
 # <a name="example-retrieving-product-model-information-as-xml"></a>Exemplo: Recuperando informações de modelo de produto como XML
   A consulta a seguir retorna informações sobre modelos de produtos. `RAW` O modo é especificado na cláusula `FOR XML` .  
@@ -52,7 +52,7 @@ FOR XML RAW, ELEMENTS;
 GO  
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 <row>  
@@ -65,7 +65,7 @@ GO
 </row>  
 ```  
   
- Opcionalmente, você pode especificar o `TYPE` diretiva para recuperar os resultados como `xml` tipo. A política `TYPE` não altera o conteúdo dos resultados. Apenas o tipo de dados dos resultados é afetado.  
+ Opcionalmente, é possível especificar a política `TYPE` para recuperar os resultados como tipo `xml`. A política `TYPE` não altera o conteúdo dos resultados. Apenas o tipo de dados dos resultados é afetado.  
   
 ```  
 USE AdventureWorks2012;  

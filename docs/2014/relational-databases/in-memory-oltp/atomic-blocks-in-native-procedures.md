@@ -10,12 +10,12 @@ ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4bad6da6de694d9b835a6d3fe23fbc68d8642f50
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 83ec721d214633df7daf9ace5ae45c3cdb51ca97
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124096"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532835"
 ---
 # <a name="atomic-blocks"></a>Blocos atômicos
   `BEGIN ATOMIC` não faz parte do padrão ANSI SQL. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte a blocos atômicos somente no nível superior dos procedimentos armazenados compilados nativamente.  
@@ -29,13 +29,13 @@ ms.locfileid: "48124096"
 ## <a name="transactions-and-error-handling"></a>Transações e tratamento de erros  
  Se uma transação já existir em uma sessão (porque um lote executou uma instrução `BEGIN TRANSACTION` e a transação permanece ativa), iniciar um bloco atômico criará um ponto de salvamento na transação. Se o bloco sair sem uma exceção, um novo ponto de salvamento criado para o bloco é confirmado, mas a transação não será confirmada até que isso ocorra no nível da sessão. Se o bloco lançar uma exceção, os efeitos do bloco serão revertidos, mas a transação no nível da sessão continuará, a menos que a exceção seja decretada por transação. Por exemplo, um conflito de gravação é decretado por transação, mas não um erro de conversão de tipo.  
   
- Se não houver transação ativa em uma sessão, `BEGIN ATOMIC` iniciará uma nova transação. Se nenhuma exceção for lançada fora do escopo do bloco, a transação será confirmada no fim do bloco. Se o bloco lançar uma exceção (ou seja, se a exceção não for capturada e tratada no bloco), a transação será revertida. Para transações que abrangem um único bloco atômico (um único procedimento armazenado compilado nativamente), você não precisa escrever explícito `BEGIN TRANSACTION` e `COMMIT` ou `ROLLBACK` instruções.  
+ Se não houver transação ativa em uma sessão, `BEGIN ATOMIC` iniciará uma nova transação. Se nenhuma exceção for lançada fora do escopo do bloco, a transação será confirmada no fim do bloco. Se o bloco lançar uma exceção (ou seja, se a exceção não for capturada e tratada no bloco), a transação será revertida. Para transações que abrangem um único bloco atômico (um único procedimento armazenado compilado nativamente), você não precisa gravar instruções `BEGIN TRANSACTION` e `COMMIT` ou `ROLLBACK` explícitas.  
   
- Compilado nativamente suporte a procedimentos armazenados do `TRY`, `CATCH`, e `THROW` construções de tratamento de erros. `RAISERROR` Não há suporte.  
+ Os procedimentos armazenados compilados nativamente oferecem suporte às construções `TRY`, `CATCH` e `THROW` para tratamento de erros. Não há suporte para `RAISERROR`.  
   
  O exemplo a seguir ilustra o comportamento de tratamento de erros com blocos atômicos e procedimentos armazenados compilados nativamente:  
   
-```tsql  
+```sql  
 -- sample table  
 CREATE TABLE dbo.t1 (  
   c1 int not null primary key nonclustered  
@@ -126,20 +126,20 @@ GO
  As mensagens de erro a seguir específicas de tabelas com otimização de memória são decretadas por transação. Se elas ocorrerem no escopo de um bloco atômico, a transação será anulada: 10772, 41301, 41302, 41305, 41325, 41332 e 41333.  
   
 ## <a name="session-settings"></a>Configurações da sessão  
- As configurações da sessão nos blocos atômicos são corrigidas quando o procedimento armazenado é compilado. Algumas configurações podem ser especificadas com `BEGIN ATOMIC` enquanto outras configurações sempre são corrigidas para o mesmo valor.  
+ As configurações da sessão nos blocos atômicos são corrigidas quando o procedimento armazenado é compilado. Algumas configurações podem ser especificadas com `BEGIN ATOMIC`, enquanto outras configurações sempre são corrigidas para o mesmo valor.  
   
  As seguintes opções são necessárias com `BEGIN ATOMIC`:  
   
-|Configuração necessária|Description|  
+|Configuração necessária|Descrição|  
 |----------------------|-----------------|  
-|`TRANSACTION ISOLATION LEVEL`|Valores com suporte são `SNAPSHOT`, `REPEATABLEREAD`, e `SERIALIZABLE`.|  
+|`TRANSACTION ISOLATION LEVEL`|Os valores com suporte são `SNAPSHOT`, `REPEATABLEREAD` e `SERIALIZABLE`.|  
 |`LANGUAGE`|Determina os formatos de data e hora, e as mensagens do sistema. Todos os idiomas e alias em [sys.syslanguages &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslanguages-transact-sql) têm suporte.|  
   
  As seguintes configurações são opcionais:  
   
-|Configuração opcional|Description|  
+|Configuração opcional|Descrição|  
 |----------------------|-----------------|  
-|`DATEFORMAT`|Há suporte para todos os formatos de data do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando especificado, `DATEFORMAT` substitui o formato de data padrão associado com `LANGUAGE`.|  
+|`DATEFORMAT`|Há suporte para todos os formatos de data do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando especificado, `DATEFORMAT` substitui o formato de data padrão associado a `LANGUAGE`.|  
 |`DATEFIRST`|Quando especificado, `DATEFIRST` substitui o padrão associado a `LANGUAGE`.|  
 |`DELAYED_DURABILITY`|Valores com suporte são `OFF` e `ON`.<br /><br /> Confirmações de transação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser completamente duráveis, o padrão ou duráveis atrasadas. Para obter mais informações, consulte [Controlar a durabilidade da transação](../logs/control-transaction-durability.md).|  
   

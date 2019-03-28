@@ -16,12 +16,12 @@ ms.assetid: 13867145-3dad-47a4-8d50-a65175418479
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 33aa0ee68e649dbf1fd2d0fa7373cab64560fa5d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 91b4cca35fa5de3b6f19190a476ea82a69b53d81
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816198"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526308"
 ---
 # <a name="spscriptsubconflicttable-transact-sql"></a>sp_scriptsubconflicttable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,11 +38,9 @@ sp_scriptsubconflicttable [@publication =] 'publication'    , [@article =] 'arti
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'***publicação***'**  
- É o nome da publicação que contém o artigo. O nome deve ser exclusivo no banco de dados. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação que contém o artigo. O nome deve ser exclusivo no banco de dados. *publicação* está **sysname**, sem padrão.  
   
- [  **@article=**] **'***artigo***'**  
- É o nome do artigo de assinatura. *artigo* está **sysname**, sem padrão.  
+`[ @article = ] 'article'` É o nome do artigo de assinatura. *artigo* está **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

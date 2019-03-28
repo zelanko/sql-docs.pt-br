@@ -16,12 +16,12 @@ ms.assetid: 0dd971a4-ee38-4dd3-9f30-ef77fc58dd11
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 52cab6d00ad25bdc16a4acf14109ff5c74a4bcca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a7aa0f0ba295d8e152877d11ceb39fb6eb4f3c87
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134196"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531298"
 ---
 # <a name="restore-a-differential-database-backup-sql-server"></a>Restaurar um backup diferencial de banco de dados (SQL Server)
   Este tópico descreve como restaurar um backup de banco de dados diferencial no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -90,7 +90,7 @@ ms.locfileid: "48134196"
   
          Após adicionar os dispositivos desejados à caixa de listagem **Mídia de backup** , clique em **OK** para voltar à página **Geral** .  
   
-         Na caixa de listagem **Origem: Dispositivo: Banco de Dados** , selecione o nome do banco de dados que deve ser restaurado.  
+         Na caixa de listagem **Fonte: Dispositivo: Banco de Dados**, selecione o nome do banco de dados que deve ser restaurado.  
   
          **Observação** Essa lista estará disponível apenas quando **Dispositivo** for selecionado. Apenas os bancos de dados que têm backups no dispositivo selecionado estarão disponíveis.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "48134196"
   
 #### <a name="to-restore-a-differential-database-backup"></a>Para restaurar um backup de banco de dados diferencial  
   
-1.  Execute uma instrução RESTORE DATABASE, especificando a cláusula NORECOVERY, para restaurar o backup de banco de dados completo que vem antes do backup de banco de dados diferencial. Para obter mais informações, consulte [Como restaurar um backup completo](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md).  
+1.  Execute uma instrução RESTORE DATABASE, especificando a cláusula NORECOVERY, para restaurar o backup de banco de dados completo que vem antes do backup de banco de dados diferencial. Para obter mais informações, confira [Como Restaurar um Backup completo](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md).  
   
 2.  Execute a instrução RESTORE DATABASE para restaurar o backup de banco de dados diferencial, especificando:  
   
@@ -154,7 +154,7 @@ ms.locfileid: "48134196"
 #### <a name="a-restoring-a-differential-database-backup"></a>A. Restaurando um backup de banco de dados diferencial  
  Este exemplo restaura um banco de dados e um backup de banco de dados diferencial do banco de dados `MyAdvWorks` .  
   
-```tsql  
+```sql  
 -- Assume the database is lost, and restore full database,   
 -- specifying the original full database backup and NORECOVERY,   
 -- which allows subsequent restore operations to proceed.  
@@ -174,7 +174,7 @@ GO
 #### <a name="b-restoring-a-database-differential-database-and-transaction-log-backup"></a>B. Restaurando um backup de banco de dados, de banco de dados diferencial e de log de transações  
  Este exemplo restaura um banco de dados, um backup de banco de dados diferencial e um backup de log de transações do banco de dados `MyAdvWorks` .  
   
-```tsql  
+```sql  
 -- Assume the database is lost at this point. Now restore the full   
 -- database. Specify the original full database backup and NORECOVERY.  
 -- NORECOVERY allows subsequent restore operations to proceed.  

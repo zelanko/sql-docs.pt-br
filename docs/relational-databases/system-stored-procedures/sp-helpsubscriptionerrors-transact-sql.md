@@ -16,12 +16,12 @@ ms.assetid: 01c8bc21-939e-490d-8cc8-219c068be31e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f98790bbf68309eef561662a6eb0be9f1da34971
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5cae5cfd4c047041437180ced7bf93c4a75cce00
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818798"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526048"
 ---
 # <a name="sphelpsubscriptionerrors-transact-sql"></a>sp_helpsubscriptionerrors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,20 +42,15 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publisher=** ] **'***publisher***'**  
- É o nome do Publicador. *Publisher* está **sysname**, sem padrão.  
+`[ @publisher = ] 'publisher'` É o nome do publicador. *Publisher* está **sysname**, sem padrão.  
   
- [  **@publisher_db=** ] **'***publisher_db***'**  
- É o nome do banco de dados de publicação. *publisher_db* está **sysname**, sem padrão.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados de publicação. *publisher_db* está **sysname**, sem padrão.  
   
- [  **@publication=** ] **'***publicação***'**  
- É o nome da publicação. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, sem padrão.  
   
- [  **@subscriber=** ] **'***assinante***'**  
- É o nome do Assinante. *assinante* está **sysname**, sem padrão.  
+`[ @subscriber = ] 'subscriber'` É o nome do assinante. *assinante* está **sysname**, sem padrão.  
   
- [  **@subscriber_db=** ] **'***subscriber_db***'**  
- É o nome do banco de dados de assinatura. *subscriber_db* está **sysname**, sem padrão.  
+`[ @subscriber_db = ] 'subscriber_db'` É o nome do banco de dados de assinatura. *subscriber_db* está **sysname**, sem padrão.  
   
 ## <a name="result-set"></a>Conjunto de resultados  
   

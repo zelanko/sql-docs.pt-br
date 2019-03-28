@@ -18,12 +18,12 @@ ms.assetid: 619716b5-95dc-4538-82ae-4b90b9da8ebc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d6e7c28e628254fd33269ab4ee200fee0067870
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a01132d30a293bca084669a733834c7d034048e4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741044"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538178"
 ---
 # <a name="sphelpfilegroup-transact-sql"></a>sp_helpfilegroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,15 +40,14 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@filegroupname =** ] **'***nome***'**  
- É o nome lógico de qualquer grupo de arquivos no banco de dados atual. *nome da* está **sysname**, com um padrão NULL. Se *nome* não for especificado, todos os grupos de arquivos no banco de dados atual são listados e somente o primeiro conjunto de resultados mostrado na seção conjuntos de resultados é exibido.  
+`[ @filegroupname = ] 'name'` É o nome lógico de qualquer grupo de arquivos de banco de dados atual. *nome da* está **sysname**, com um padrão NULL. Se *nome* não for especificado, todos os grupos de arquivos no banco de dados atual são listados e somente o primeiro conjunto de resultados mostrado na seção conjuntos de resultados é exibido.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**groupname**|**sysname**|Nome do grupo de arquivos.|  
 |**groupid**|**smallint**|Identificador de grupo de arquivos numérico.|  
@@ -56,13 +55,13 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
   
  Se *nome* é uma linha para cada arquivo no grupo de arquivos especificado, será retornada.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**file_in_group**|**sysname**|Nome lógico do arquivo no grupo de arquivos.|  
 |**fileid**|**smallint**|Identificador de arquivos numérico.|  
 |**filename**|**nchar(260)**|O nome  físico do arquivo que inclui o caminho de diretório.|  
 |**size**|**nvarchar(15)**|Tamanho do arquivo em kilobytes.|  
-|**tamanho máximo**|**nvarchar(15)**|Tamanho máximo do arquivo.<br /><br /> É o tamanho máximo até o qual o arquivo pode crescer. Um valor UNLIMITED neste campo indica que o arquivo cresce até o disco ficar cheio.|  
+|**maxsize**|**nvarchar(15)**|Tamanho máximo do arquivo.<br /><br /> É o tamanho máximo até o qual o arquivo pode crescer. Um valor UNLIMITED neste campo indica que o arquivo cresce até o disco ficar cheio.|  
 |**growth**|**nvarchar(15)**|Incremento de crescimento do arquivo. Isso indica a quantidade de espaço adicionada ao arquivo sempre que um novo espaço é necessário.<br /><br /> 0 = Arquivo tem um tamanho fixo e não crescerá.|  
   
 ## <a name="permissions"></a>Permissões  

@@ -18,12 +18,12 @@ ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d96a4c72996ab34b03706cc71f6b406344164685
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: f37fc61b294cc460fe1d1e41b301ac2c7b1c1077
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591620"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527458"
 ---
 # <a name="sysmailhelpprincipalprofilesp-transact-sql"></a>sysmail_help_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,17 +42,13 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@principal_id=** ] *principal_id*  
- É a ID do usuário de banco de dados ou função na **msdb** banco de dados para a associação à lista. *principal_id* está **int**, com um padrão NULL. Qualquer um dos *principal_id* ou *principal_name* pode ser especificado.  
+`[ @principal_id = ] principal_id` É a ID do usuário de banco de dados ou função na **msdb** banco de dados para a associação à lista. *principal_id* está **int**, com um padrão NULL. Qualquer um dos *principal_id* ou *principal_name* pode ser especificado.  
   
- [  **@principal_name=** ] **'**_principal_name_**'**  
- É o nome do usuário de banco de dados ou função na **msdb** banco de dados para a associação à lista. *principal_name* está **sysname**, com um padrão NULL. Qualquer um dos *principal_id* ou *principal_name* pode ser especificado.  
+`[ @principal_name = ] 'principal_name'` É o nome do usuário de banco de dados ou função na **msdb** banco de dados para a associação à lista. *principal_name* está **sysname**, com um padrão NULL. Qualquer um dos *principal_id* ou *principal_name* pode ser especificado.  
   
- [  **@profile_id=** ] *profile_id*  
- É a ID do perfil da associação a ser listada. *profile_id* está **int**, com um padrão NULL. Qualquer um dos *profile_id* ou *profile_name* pode ser especificado.  
+`[ @profile_id = ] profile_id` É a ID do perfil da associação a ser listada. *profile_id* está **int**, com um padrão NULL. Qualquer um dos *profile_id* ou *profile_name* pode ser especificado.  
   
- [  **@profile_name=** ] **'**_profile_name_**'**  
- É o nome do perfil da associação a ser listada. *profile_name* está **sysname**, com um padrão NULL. Qualquer um dos *profile_id* ou *profile_name* pode ser especificado.  
+`[ @profile_name = ] 'profile_name'` É o nome do perfil para a associação à lista. *profile_name* está **sysname**, com um padrão NULL. Qualquer um dos *profile_id* ou *profile_name* pode ser especificado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -96,7 +92,7 @@ principal_id principal_name     profile_id  profile_name                   is_de
 5            danw               9           AdventureWorks Administrator   1  
 ```  
   
-### <a name="b-listing-information-for-all-associations"></a>b. Listando informações de todas as associações  
+### <a name="b-listing-information-for-all-associations"></a>B. Listando informações de todas as associações  
  O exemplo a seguir mostra a lista de informações de todas as associações na instância.  
   
 ```  

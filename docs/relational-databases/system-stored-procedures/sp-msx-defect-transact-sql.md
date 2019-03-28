@@ -18,12 +18,12 @@ ms.assetid: 0dfd963a-3bc5-4b58-94f7-aec976da2883
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b811fd8b1bb6be9c63794006888db253a8c341e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 16e523bc26b8469f3ee7306f3e6fd2902ef727bb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843344"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528528"
 ---
 # <a name="spmsxdefect-transact-sql"></a>sp_msx_defect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_msx_defect [@forced_defection =] forced_defection
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@forced_defection =**] *forced_defection*  
- Especifica se deve ou não forçar a remoção ocorra se o Master SQLServerAgent foi perdido permanentemente devido a um irreversivelmente danificado **msdb** banco de dados, ou no **msdb** backup de banco de dados. *forced_defection*está **bit**, com um padrão de **0**, que indica que nenhuma remoção forçada deve ocorrer. Um valor de **1** força a remoção.  
+`[ @forced_defection = ] forced_defection` Especifica se deve ou não forçar a remoção ocorra se o Master SQLServerAgent foi perdido permanentemente devido a um irreversivelmente danificado **msdb** banco de dados, ou no **msdb** backup de banco de dados. *forced_defection*está **bit**, com um padrão de **0**, que indica que nenhuma remoção forçada deve ocorrer. Um valor de **1** força a remoção.  
   
  Depois de forçar uma remoção pela execução **sp_msx_defect**, um membro das **sysadmin** a função de servidor fixa no Master SQLServerAgent deve executar o comando a seguir para concluir a remoção:  
   

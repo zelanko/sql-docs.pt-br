@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0228a3f0719bd6a56142e571323fdf809e534337
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61301b0c6916ba11cb54cc0c8d8ab961cc3ae659
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635679"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534318"
 ---
 # <a name="sphelpfulltextsystemcomponents-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -46,12 +46,11 @@ sp_help_fulltext_system_components
  'all'  
  Retorna informações de todos os componentes de texto completo.  
   
- [ **@component_type=** ] *component_type*  
- Especifica o tipo do componente. *component_type* pode ser uma das seguintes opções:  
+`[ @component_type = ] component_type` Especifica o tipo de componente. *component_type* pode ser uma das seguintes opções:  
   
 -   **wordbreaker**  
   
--   **filtro**  
+-   **filter**  
   
 -   **manipulador de protocolo**  
   
@@ -59,8 +58,7 @@ sp_help_fulltext_system_components
   
  Se um caminho completo for especificado, *param* também deverá ser especificado com o caminho completo para a DLL do componente, ou uma mensagem de erro será retornada.  
   
- [ **@param=** ] *param*  
- Dependendo do tipo de componente, esse parâmetro poderá ser um dos seguintes: um LCID (identificador de localidade), a extensão do arquivo com o prefixo ".", o nome completo do componente do manipulador de protocolo ou o caminho completo para a DLL do componente.  
+`[ @param = ] param` Dependendo do tipo de componente, essa é uma das seguintes opções: um identificador de localidade (LCID), a extensão de arquivo com "." de prefixo, o nome completo do componente do manipulador de protocolo ou o caminho completo para a DLL do componente.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou (1) falha  
@@ -68,7 +66,7 @@ sp_help_fulltext_system_components
 ## <a name="result-sets"></a>Conjuntos de resultados  
  O conjunto de resultados a seguir é retornado para os componentes de sistema.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**componenttype**|**sysname**|Tipo de componente. Um dos seguintes:<br /><br /> filtro<br /><br /> protocol handler<br /><br /> wordbreaker|  
 |**componentname**|**sysname**|O nome do componente.|  
@@ -79,7 +77,7 @@ sp_help_fulltext_system_components
   
  O seguinte conjunto de resultados é retornado somente se um ou mais de um catálogo de texto completo existirem e usarem *component_type*.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**dbid**|**int**|ID do banco de dados.|  
 |**ftcatid**|**int**|Identificação do catálogo de texto completo.|  

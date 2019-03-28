@@ -12,12 +12,12 @@ ms.assetid: b5185c1e-56de-41a8-a9c3-eec663750cde
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 20a59cf2ac94b060c917a4cea2bbbb69dd877120
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c96b5b5f7ae92dd85f2c93dcb0423dcc342c5152
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371348"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534608"
 ---
 # <a name="contact-creation-using-clr-and-xml"></a>Criação de Contact usando CLR e XML
   O exemplo Contact do SQL Server fornece alguns utilitários úteis que formam uma camada de funcionalidade extra no banco de dados de exemplo base AdventureWorks2012. O primeiro utilitário cria registros de contato para vários tipos de pessoas envolvidas no banco de dados AdventureWorks2012. As informações de contato são especificadas por meio de XML e são passadas para um procedimento armazenado baseado no C# ou no VB para criar o XML e colocá-las nas tabelas adequadas no banco de dados.  
@@ -1386,7 +1386,7 @@ End Class
   
  Este é o script de instalação do [!INCLUDE[tsql](../../includes/tsql-md.md)] (`Install.sql`) que implanta o assembly e cria o procedimento armazenado no banco de dados.  
   
-```tsql  
+```sql  
 use AdventureWorks  
 GO  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - XML data islands [SQL Server]
 - data islands [SQL Server]
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 43b7fb86b7529de3629d07d294f0fd663b93561d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a27720408db760604852410d9733983d7d67f18e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368668"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532828"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Usar resultados de FOR XML no código do aplicativo
   Usando cláusulas FOR XML com consultas SQL, é possível recuperar e até converter resultados de consultas como dados XML. Essa funcionalidade permite fazer o seguinte quando os resultados da consulta FOR XML podem ser usados no código do aplicativo XML:  

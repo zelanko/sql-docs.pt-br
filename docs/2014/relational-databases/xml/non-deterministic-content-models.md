@@ -10,15 +10,15 @@ helpviewer_keywords:
 - non-deterministic content models
 - content models [XML in SQL Server]
 ms.assetid: 9d4513e7-dd19-4491-b7c7-28bc7c2f8589
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df49312f86513e1860fbb3bc14cd33ca1edc845e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea86115b88c693e70faa677fdea518f8886bae0f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113748"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531268"
 ---
 # <a name="non-deterministic-content-models"></a>modelos de conteúdo não determinístico
   Antes do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 (SP1), o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejeitava esquemas XML que tinham modelos de conteúdo não determinístico.  
@@ -79,6 +79,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Requisitos e limitações para o uso de Coleções de Esquemas XML no servidor](requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
+ [Requisitos e limitações de uso de coleções de esquema XML no servidor](requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

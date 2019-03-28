@@ -18,12 +18,12 @@ ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b678182b4580cfac23d6e777c492d22b8f458fba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e0bbf6e8befa751ee680cd97c2a29ad9f0fe084
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617994"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527688"
 ---
 # <a name="sphelpproxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,18 +44,15 @@ sp_help_proxy
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@proxy_id** = ] *id*  
- O número de identificação de proxy do proxy para o qual listar informações. O *proxy_id* é **int**, com um padrão NULL. Ambos os *id* ou o *proxy_name* pode ser especificado.  
+`[ @proxy_id = ] id` O número de identificação de proxy do proxy para listar informações. O *proxy_id* é **int**, com um padrão NULL. Ambos os *id* ou o *proxy_name* pode ser especificado.  
   
- [ **@proxy_name** =] **'***proxy_name***'**  
- O nome do proxy para o qual listar informações. O *proxy_name* é **sysname**, com um padrão NULL. Ambos os *id* ou o *proxy_name* pode ser especificado.  
+`[ @proxy_name = ] 'proxy_name'` O nome do proxy para listar informações. O *proxy_name* é **sysname**, com um padrão NULL. Ambos os *id* ou o *proxy_name* pode ser especificado.  
   
- [ **@subsystem_name** =] '*subsystem_name*'  
- O nome do subsistema para o qual listar proxies. O *subsystem_name* é **sysname**, com um padrão NULL. Quando *subsystem_name* for especificado, *nome* também deve ser especificado.  
+`[ @subsystem_name = ] 'subsystem_name'` O nome do subsistema para listar proxies. O *subsystem_name* é **sysname**, com um padrão NULL. Quando *subsystem_name* for especificado, *nome* também deve ser especificado.  
   
  A tabela a seguir lista os valores padrão para cada subsistema.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |ActiveScripting|Script do ActiveX|  
 |CmdExec|Sistema Operacional (CmdExec)|  
@@ -69,21 +66,20 @@ sp_help_proxy
 |Dts|Execução do pacote SSIS|  
 |PowerShell|Scripts PowerShell|  
   
- [ **@name** =] '*nome*'  
- O nome de um login do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o qual listar proxies. O nome é **nvarchar(256)**, com um padrão NULL. Quando *nome* for especificado, *subsystem_name* também deve ser especificado.  
+`[ @name = ] 'name'` O nome de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login para listar proxies. O nome é **nvarchar(256)**, com um padrão NULL. Quando *nome* for especificado, *subsystem_name* também deve ser especificado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|Número de identificação de proxy.|  
 |**name**|**sysname**|O nome do proxy.|  
 |**credential_identity**|**sysname**|O nome de domínio de Microsoft Windows e o nome de usuário para a credencial associada ao proxy.|  
-|**habilitado**|**tinyint**|Se esse proxy está habilitado. { **0** = não habilitado, **1** = habilitado}|  
-|**Descrição**|**nvarchar(1024)**|A descrição para esse proxy.|  
+|**enabled**|**tinyint**|Se esse proxy está habilitado. { **0** = não habilitado, **1** = habilitado}|  
+|**description**|**nvarchar(1024)**|A descrição para esse proxy.|  
 |**user_sid**|**varbinary(85)**|A identificação de segurança do Windows do usuário do Windows para esse proxy.|  
 |**credential_id**|**int**|O identificador para a credencial associada a esse proxy.|  
 |**credential_identity_exists**|**int**|Especifica se credential_identity existe. {0 = não existe, 1 = existe}|  

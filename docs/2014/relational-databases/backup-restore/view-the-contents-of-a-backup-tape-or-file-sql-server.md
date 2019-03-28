@@ -17,12 +17,12 @@ ms.assetid: cd6674a2-ca55-4b5a-a971-878ba001821e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cbfe09a2d8110a98885686e078146cfccc305c51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dfee2d0f32ffaaf73527effdeea13d43b83a39fb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051517"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537279"
 ---
 # <a name="view-the-contents-of-a-backup-tape-or-file-sql-server"></a>Exibir o conteúdo de um arquivo ou fita de backup (SQL Server)
   Este tópico descreve como exibir o conteúdo de uma fita ou arquivo de backup no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -78,7 +78,7 @@ ms.locfileid: "48051517"
   
 3.  Use instrução [RESTORE HEADERONLY](/sql/t-sql/statements/restore-statements-headeronly-transact-sql) . Este exemplo retorna informações sobre o arquivo chamado `AdventureWorks2012-FullBackup.bak`:  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 RESTORE HEADERONLY   
 FROM DISK = N'C:\AdventureWorks2012-FullBackup.bak' ;  

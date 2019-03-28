@@ -10,15 +10,15 @@ helpviewer_keywords:
 - promoting properties [XML in SQL Server]
 - property promotion [XML in SQL Server]
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bcd6d8cb39405e525b779678e0b203ca1246e1af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b5b2d167ca9bb2f5a39802bacceb3dd0eb3c96d5
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065290"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533308"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Promover valores XML frequentemente usados com colunas computadas
   Se as consultas forem feitas principalmente em um pequeno número de valores de elementos e atributos, você poderá desejar promover essas quantidades em colunas relacionais. Isso é útil quando consultas são emitidas em uma pequena parte dos dados XML enquanto toda a instância XML é recuperada. A criação de um índice XML na coluna XML não é necessária. Em vez disso, a coluna promovida pode ser indexada. As consultas devem ser escritas para usar a coluna promovida. Isto é, o otimizador de consultas não destina consultas novamente na coluna XML para a coluna promovida.  
@@ -28,7 +28,7 @@ ms.locfileid: "48065290"
 ## <a name="computed-column-based-on-the-xml-data-type"></a>Coluna computada com base no tipo de dados xml  
  Uma coluna computada pode ser criada usando uma função definida pelo usuário que invoca `xml` métodos de tipo de dados. O tipo da coluna computada pode ser qualquer tipo SQL, inclusive XML. Isso é ilustrado no exemplo a seguir.  
   
-### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>Exemplo: Coluna computada com base no método do tipo de dados xml  
+### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>Exemplo: Coluna computada com base no método de tipo de dados xml  
  Crie a função definida pelo usuário para um número ISBN de livro:  
   
 ```  
@@ -84,14 +84,14 @@ WHERE  ISBN = '0-7356-1588-2'
   
     -   Escreva consultas para acesso do SQL às tabelas de propriedades e para acesso do XML à coluna XML na tabela base, com junções entre as tabelas usando suas chaves primárias.  
   
-### <a name="example-create-a-property-table"></a>Exemplo: Crie uma tabela de propriedades  
+### <a name="example-create-a-property-table"></a>Exemplo: Criar uma tabela de propriedades  
  Para ilustração, assuma que você quer promover o nome dos autores. Os livros têm um ou mais autores, de forma que nome é uma propriedade com vários valores. Cada nome é armazenado em uma linha separada de uma tabela de propriedades. A chave primária da tabela base é duplicada na tabela de propriedades para junção retroativa.  
   
 ```  
 create table tblPropAuthor (propPK int, propAuthor varchar(max))  
 ```  
   
-### <a name="example-create-a-user-defined-function-to-generate-a-rowset-from-an-xml-instance"></a>Exemplo: Crie uma função definida pelo usuário para gerar um conjunto de linhas de uma instância XML  
+### <a name="example-create-a-user-defined-function-to-generate-a-rowset-from-an-xml-instance"></a>Exemplo: Criar uma função definida pelo usuário para gerar um conjunto de linhas de uma instância XML  
  A função com valor de tabela a seguir, udf_XML2Table, aceita um valor de chave primária e uma instância XML. Ela recupera o nome de todos os autores dos elementos de <`book`> e retorna um conjunto de linhas de chave primária, primeiros pares de nomes.  
   
 ```  
@@ -163,7 +163,7 @@ FROM     T JOIN tblPropAuthor ON T.pk = tblPropAuthor.propPK
 WHERE    tblPropAuthor.propAuthor = 'David'  
 ```  
   
-### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>Exemplo: Solução usando a função com valor de tabela de streaming de CLR  
+### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>Exemplo: Solução usando o função com valor de tabela de Streaming de CLR  
  Esta solução é composta das seguintes etapas:  
   
 1.  Definir uma classe CLR, SqlReaderBase, que implementa ISqlReader e gera um streaming, saída com valor de tabela, aplicando uma expressão de caminho em uma instância XML.  

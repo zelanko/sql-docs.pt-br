@@ -12,19 +12,19 @@ ms.assetid: 9f527883-031b-442f-8e95-24bc0151ecbf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eb5e3618c2d4770a9c4604c772ba572b1b40b961
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 186294182e39845ce600c04b35804759b61eb0f6
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170386"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531018"
 ---
 # <a name="find-similar-and-related-documents-with-semantic-search"></a>Localizar documentos semelhantes e relacionados com a pesquisa semântica
   Descreve como localizar documentos ou valores de texto semelhantes ou relacionados, e informações sobre como eles são semelhantes ou relacionados, em colunas configuradas para indexação semântica estatística.  
   
 ##  <a name="BasicsQuerySimilar"></a> Localizar documentos semelhantes ou relacionados  
   
-###  <a name="HowToQuerySimilar"></a> Como Localizar documentos semelhantes ou relacionados com SEMANTICSIMILARITYTABLE  
+###  <a name="HowToQuerySimilar"></a> Como: Localizar documentos semelhantes ou relacionados com SEMANTICSIMILARITYTABLE  
  Para identificar documentos semelhantes ou relacionados em uma coluna específica, consulte a função [semanticsimilaritytable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritytable-transact-sql).  
   
  **SEMANTICSIMILARITYTABLE** retorna uma tabela de zero, uma ou mais linhas cujo conteúdo na coluna especificada é semanticamente semelhante ao documento especificado. Essa função de conjunto de linhas pode ser referenciada na cláusula FROM de uma instrução SELECT como um nome de tabela normal.  
@@ -53,7 +53,7 @@ GO
   
 ##  <a name="BasicsQuerySimilarity"></a> Localizando informações sobre como os documentos são semelhantes ou relacionados  
   
-###  <a name="HowToQuerySimilarity"></a> Como Localizar informações sobre como os documentos são semelhantes ou relacionados com SEMANTICSIMILARITYDETAILSTABLE  
+###  <a name="HowToQuerySimilarity"></a> Como: Encontre informações sobre como os documentos são semelhantes ou relacionados com SEMANTICSIMILARITYDETAILSTABLE  
  Para obter informações sobre as frases-chave que tornam documentos semelhantes ou relacionados, consulte a função [semanticsimilaritydetailstable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql).  
   
  **SEMANTICSIMILARITYDETAILSTABLE** retorna uma tabela de zero, uma ou mais linhas de frases-chave comuns entre dois documentos (um documento de origem e um documento correspondente) cujo conteúdo é semanticamente semelhante. Essa função de conjunto de linhas pode ser referenciada na cláusula FROM de uma instrução SELECT como um nome de tabela normal.  
@@ -66,7 +66,7 @@ GO
 ###  <a name="HowToSimilarPhrases"></a> Exemplo: Localizar as principais frases-chave semelhantes entre documentos  
  O exemplo a seguir recupera as cinco frases-chave com a pontuação de similaridade mais alta entre os candidatos especificados na tabela **HumanResources.JobCandidate** do banco de dados de exemplo AdventureWorks2012.  
   
-```tsql  
+```sql  
 SELECT TOP(5) KEY_TBL.keyphrase, KEY_TBL.score  
 FROM SEMANTICSIMILARITYDETAILSTABLE  
     (  

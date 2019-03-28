@@ -19,12 +19,12 @@ ms.assetid: c8b07189-7c35-414b-acc1-45bd6e7e17c3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ee0703a0dca2c6ba958f52dee0f8850ea2c8244e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 633dff3e79a32f73c9ec7c4c376a60969db45aef
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536388"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531768"
 ---
 # <a name="spdropdevice-transact-sql"></a>sp_dropdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_dropdevice [ @logicalname = ] 'device'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@logicalname=** ] **'**_dispositivo_**'**  
- É o nome lógico do dispositivo de banco de dados ou do dispositivo de backup, conforme listado em **master.dbo.sysdevices.name**. *dispositivo* está **sysname**, sem padrão.  
+`[ @logicalname = ] 'device'` É o nome lógico do dispositivo de banco de dados ou do dispositivo de backup, conforme listado em **master.dbo.sysdevices.name**. *dispositivo* está **sysname**, sem padrão.  
   
- [  **@delfile=** ] **'**_delfile_**'**  
- Especifica se o arquivo de dispositivo de backup físico deve ser excluído. *delfile* está **varchar(7)**. Se for especificado como **DELFILE**, o arquivo de disco de dispositivo de backup físico é excluído.  
+`[ @delfile = ] 'delfile'` Especifica se o arquivo de dispositivo de backup físico deve ser excluído. *delfile* is **varchar(7)**. Se for especificado como **DELFILE**, o arquivo de disco de dispositivo de backup físico é excluído.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

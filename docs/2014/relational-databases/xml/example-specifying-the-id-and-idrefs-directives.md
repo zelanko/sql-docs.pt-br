@@ -1,5 +1,5 @@
 ---
-title: 'Exemplo: especificando as diretivas ID e IDREFS | Microsoft Docs'
+title: 'Exemplo: Especificando as diretivas ID e IDREFS | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ helpviewer_keywords:
 - IDREFS directive
 - ID directive
 ms.assetid: 99b9f0d8-ecbb-4225-859f-881066c09785
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 27c4cd38ee8995e9d60bf2f80297c1140e53f5d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8771eb523153a2a03b7e10dd58b3c1a85504f63e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056266"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531248"
 ---
 # <a name="example-specifying-the-id-and-idrefs-directives"></a>Exemplo: Especificando as diretivas ID e IDREFS
-  Um atributo de elemento pode ser especificado como uma `ID` atributo de tipo e o `IDREFS` atributo, em seguida, pode ser usado para se referir a ele. Isso habilita vínculos intradocumento e é semelhante às relações de chave primária e de chave estrangeira em bancos de dados relacionais.  
+  Um atributo de elemento pode ser especificado como um atributo de tipo `ID`, e o atributo `IDREFS` pode ser usado para se referir a ele. Isso habilita vínculos intradocumento e é semelhante às relações de chave primária e de chave estrangeira em bancos de dados relacionais.  
   
  Este exemplo ilustra como as diretivas `ID` e `IDREFS` podem ser usadas para criar atributos de tipos `ID` e `IDREFS`. Como os IDs não podem ser valores inteiros, os valores de ID neste exemplo são convertidos. Em outras palavras, seus tipos são convertidos. Prefixos são usados para os valores de ID.  
   

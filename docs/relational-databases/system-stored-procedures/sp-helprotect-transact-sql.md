@@ -18,12 +18,12 @@ ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 23b0ba70ee6141ab8453aa3e6949ceff2d537b2c
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 8f98f62b10b38d726feec2bd427bc7d1fc6dcea9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591180"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534498"
 ---
 # <a name="sphelprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,19 +48,15 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@name =** ] **'**_object_statement_**'**  
- É o nome do objeto no banco de dados atual ou uma instrução, que tem as permissões a serem relatadas. *object_statement* está **nvarchar(776)**, com um padrão NULL, que retorna todas as permissões de objeto e a instrução. Se o valor for um objeto (tabela, exibição, procedimento armazenado ou procedimento armazenado estendido), ele deverá ser um objeto válido no banco de dados atual. O nome do objeto pode incluir um qualificador de proprietário no formato _proprietário_**.** _objeto_.  
+`[ @name = ] 'object_statement'` É o nome do objeto no banco de dados atual ou uma instrução, que tem as permissões para o relatório. *object_statement* está **nvarchar(776)**, com um padrão NULL, que retorna todas as permissões de objeto e a instrução. Se o valor for um objeto (tabela, exibição, procedimento armazenado ou procedimento armazenado estendido), ele deverá ser um objeto válido no banco de dados atual. O nome do objeto pode incluir um qualificador de proprietário no formato _proprietário_**.** _objeto_.  
   
  Se *object_statement* é uma instrução, ele pode ser uma instrução CREATE.  
   
- [  **@username =** ] **'**_security_account_**'**  
- É o nome da entidade de segurança para a qual são retornadas permissões. *security_account* está **sysname**, com um padrão NULL, que retorna todos os objetos de banco de dados atual. *security_account* deve existir no banco de dados atual.  
+`[ @username = ] 'security_account'` É o nome da entidade de segurança para o qual são retornadas permissões. *security_account* está **sysname**, com um padrão NULL, que retorna todos os objetos de banco de dados atual. *security_account* deve existir no banco de dados atual.  
   
- [  **@grantorname =** ] **'**_concessor_**'**  
- É o nome da entidade de segurança que concedeu permissões. *concessor* está **sysname**, com um padrão NULL, que retorna todas as informações de permissões concedidas por qualquer entidade de segurança no banco de dados.  
+`[ @grantorname = ] 'grantor'` É o nome da entidade de segurança que concedeu permissões. *concessor* está **sysname**, com um padrão NULL, que retorna todas as informações de permissões concedidas por qualquer entidade de segurança no banco de dados.  
   
- [  **@permissionarea =** ] **'**_tipo_**'**  
- É uma cadeia de caracteres que indica se deve exibir permissões de objeto (cadeia de caracteres **s**), permissões de instrução (cadeia de caracteres **s**), ou ambos (**SO**). *tipo de* está **varchar(10)**, com um padrão de **SO**. *tipo de* pode ser qualquer combinação de **s** e **s**, com ou sem vírgulas ou espaços entre **s** e **s**.  
+`[ @permissionarea = ] 'type'` É uma cadeia de caracteres que indica se deve exibir permissões de objeto (cadeia de caracteres **s**), permissões de instrução (cadeia de caracteres **s**), ou ambos (**SO**). *tipo de* está **varchar(10)**, com um padrão de **SO**. *tipo de* pode ser qualquer combinação de **s** e **s**, com ou sem vírgulas ou espaços entre **s** e **s**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -108,7 +104,7 @@ EXEC sp_helprotect @grantorname = 'dbo';
 EXEC sp_helprotect 'titles';  
 ```  
   
-### <a name="b-listing-the-permissions-for-a-user"></a>b. Listando as permissões de um usuário  
+### <a name="b-listing-the-permissions-for-a-user"></a>B. Listando as permissões de um usuário  
  O exemplo seguinte lista todas as permissões que usuário `Judy` tem no banco de dados atual.  
   
 ```  

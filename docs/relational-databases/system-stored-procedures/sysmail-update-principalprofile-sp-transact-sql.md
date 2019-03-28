@@ -18,12 +18,12 @@ ms.assetid: 9fe96e9a-4758-4e4a-baee-3e1217c4426c
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 04a3fe5351b3c7fc3a6dd711e6e2d638b079c136
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a2af55b8c5354dd90e80a0a2a9d149f56abdef27
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601814"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533856"
 ---
 # <a name="sysmailupdateprincipalprofilesp-transact-sql"></a>sysmail_update_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,20 +42,15 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@principal_id** = ] *principal_id*  
- A ID do usuário de banco de dados ou função na **msdb** banco de dados para associação a ser alterada. *principal_id* está **int**, com um padrão NULL. Qualquer um dos *principal_id* ou *principal_name* deve ser especificado.  
+`[ @principal_id = ] principal_id` A ID do usuário de banco de dados ou função na **msdb** banco de dados para associação a ser alterada. *principal_id* está **int**, com um padrão NULL. Qualquer um dos *principal_id* ou *principal_name* deve ser especificado.  
   
- [ **@principal_name** =] **'***principal_name***'**  
- O nome do usuário de banco de dados ou função na **msdb** banco de dados para associação a ser excluída. *principal_name* está **sysname**, com um padrão NULL. Qualquer um dos *principal_id* ou *principal_name* pode ser especificado.  
+`[ @principal_name = ] 'principal_name'` O nome do usuário de banco de dados ou função na **msdb** banco de dados para associação a ser excluída. *principal_name* está **sysname**, com um padrão NULL. Qualquer um dos *principal_id* ou *principal_name* pode ser especificado.  
   
- [ **@profile_id** =] *profile_id*  
- A ID do perfil da associação a ser alterada. *profile_id* está **int**, com um padrão NULL. Qualquer um dos *profile_id* ou *profile_name* deve ser especificado.  
+`[ @profile_id = ] profile_id` A id do perfil da associação a ser alterada. *profile_id* está **int**, com um padrão NULL. Qualquer um dos *profile_id* ou *profile_name* deve ser especificado.  
   
- [ **@profile_name** =] **'***profile_name***'**  
- O nome do perfil da associação a ser alterada. *profile_name* está **sysname**, com um padrão NULL. Qualquer um dos *profile_id* ou *profile_name* deve ser especificado.  
+`[ @profile_name = ] 'profile_name'` O nome do perfil da associação a ser alterada. *profile_name* está **sysname**, com um padrão NULL. Qualquer um dos *profile_id* ou *profile_name* deve ser especificado.  
   
- [ **@is_default** = ] **'***is_default***'**  
- Se este é o perfil padrão para o usuário do banco de dados. Um usuário de banco de dados pode ter somente um perfil padrão. *is_default* está **bit**, sem padrão.  
+`[ @is_default = ] 'is_default'` É se esse perfil é o perfil padrão para o usuário de banco de dados. Um usuário de banco de dados pode ter somente um perfil padrão. *is_default* está **bit**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

@@ -18,12 +18,12 @@ ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 258a9e6002fccd27b4980140c49679b26c78f64b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb4dc6bce6ae10c040123b4a00c29e5ad0f57506
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791994"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535958"
 ---
 # <a name="sphelpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@name_in_db =** ] **'***security_account***'**  
- É o nome do usuário ou função do banco de dados no banco de dados atual. *security_account* deve existir no banco de dados atual. *security_account* está **sysname**, com um padrão NULL. Se *security_account* não for especificado, **sp_helpuser** retorna informações sobre todas as entidades de banco de dados.  
+`[ @name_in_db = ] 'security_account'` É o nome de usuário de banco de dados ou função de banco de dados no banco de dados atual. *security_account* deve existir no banco de dados atual. *security_account* está **sysname**, com um padrão NULL. Se *security_account* não for especificado, **sp_helpuser** retorna informações sobre todas as entidades de banco de dados.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -52,7 +51,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 ## <a name="result-sets"></a>Conjuntos de resultados  
  A tabela a seguir mostra o conjunto de resultados quando nenhum dos dois uma conta de usuário nem uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o usuário do Windows é especificado para *security_account*.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**UserName**|**sysname**|Usuários no banco de dados atual.|  
 |**RoleName**|**sysname**|Funções às quais **nome de usuário** pertence.|  
@@ -64,14 +63,14 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
   
  A tabela a seguir mostra o conjunto de resultados quando nenhum usuário é especificado e existem aliases no banco de dados atual.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Logons com aliases para usuários no banco de dados atual.|  
 |**UserNameAliasedTo**|**sysname**|Nome de usuário no banco de dados atual para o qual o logon possui alias.|  
   
  A tabela a seguir mostra o conjunto de resultados quando uma função é especificada para *security_account*.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**Nome_função**|**sysname**|Nome da função no banco de dados atual.|  
 |**Role_id**|**smallint**|ID de função para a função no banco de dados atual.|  

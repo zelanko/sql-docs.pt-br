@@ -1,5 +1,5 @@
 ---
-title: 'Exemplo: especificando a diretiva CDATA | Microsoft Docs'
+title: 'Exemplo: Especificando a diretiva CDATA | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - CDATA directive
 ms.assetid: 949071e6-787f-480d-bb86-3ac16a027af1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 050cf86e0f4a73aadb62b63ecccf46d69b78535f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa5cec5be4153547d60e1592c21f00470ab1a5fe
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094876"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531658"
 ---
 # <a name="example-specifying-the-cdata-directive"></a>Exemplo: Especificando a diretiva CDATA
   Se a diretiva for definida como **CDATA**, os dados contidos não serão codificados como entidade, mas colocados na seção CDATA. Os atributos **CDATA** não devem ter nomes.  
@@ -38,7 +38,7 @@ WHERE   ProductModelID=19
 FOR XML EXPLICIT  
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 <ProductModel ProdModelID="19" Name="Mountain-100">  

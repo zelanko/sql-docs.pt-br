@@ -16,12 +16,12 @@ ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c1d4addec6f0b5a7faff69d513c655450202d099
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: bf42231158f646e34c63bd148ba66c9780b14785
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210845"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529588"
 ---
 # <a name="sphelpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,22 +44,18 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@source_dbms**=] **'***source_dbms***'**  
- É o nome do DBMS no qual os tipos de dados são mapeados. *source_dbms* está **sysname**, e pode ser um dos valores a seguir.  
+`[ @source_dbms = ] 'source_dbms'` É o nome do DBMS do qual os tipos de dados são mapeados. *source_dbms* está **sysname**, e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|A origem é um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|A origem é um banco de dados Oracle.|  
   
- [ **@source_version**=] **'***source_version***'**  
- É a versão de produto do DBMS de origem. *source_version*está **varchar(10)**, e se não for especificado, o tipo de dados mapeamentos de todas as versões de origem DBMS serão retornados. Habilita o conjunto de resultados a ser filtrado pela versão de fonte do DBMS.  
+`[ @source_version = ] 'source_version'` É a versão de produto do DBMS de origem. *source_version*está **varchar(10)**, e se não for especificado, o tipo de dados mapeamentos de todas as versões de origem DBMS serão retornados. Habilita o conjunto de resultados a ser filtrado pela versão de fonte do DBMS.  
   
- [ **@source_type**=] **'***source_type***'**  
- É o tipo de dados listado no DBMS de origem. *source_type* está **sysname**, e se não for especificado, mapeamentos de todos os tipos de dados no DBMS de origem serão retornados. Habilita o conjunto de resultados a ser filtrado pelo tipo de dados no DBMS de origem.  
+`[ @source_type = ] 'source_type'` O tipo de dados é listado no DBMS de origem. *source_type* está **sysname**, e se não for especificado, mapeamentos de todos os tipos de dados no DBMS de origem serão retornados. Habilita o conjunto de resultados a ser filtrado pelo tipo de dados no DBMS de origem.  
   
- [ **@destination_dbms** =] **'***destination_dbms***'**  
- O nome do DBMS de destino. *destination_dbms* está **sysname**, e pode ser um dos valores a seguir.  
+`[ @destination_dbms = ] 'destination_dbms'` É o nome do DBMS de destino. *destination_dbms* está **sysname**, e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -68,14 +64,11 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 |**DB2**|O destino é um banco de dados IBM DB2.|  
 |**SYBASE**|O destino é um banco de dados Sybase.|  
   
- [ **@destination_version**=] **'***destination_version***'**  
- É a versão de produto do DBMS de destino. *destination_version*está **varchar(10)**, e se não for especificado, mapeamentos de todas as versões do DBMS de destino serão retornados. Habilita o conjunto de resultados a ser filtrado pela versão de destino do DBMS.  
+`[ @destination_version = ] 'destination_version'` É a versão de produto do DBMS de destino. *destination_version*está **varchar(10)**, e se não for especificado, mapeamentos de todas as versões do DBMS de destino serão retornados. Habilita o conjunto de resultados a ser filtrado pela versão de destino do DBMS.  
   
- [ **@destination_type**=] **'***destination_type***'**  
- É o tipo de dados listado no DBMS de destino. *destination_type*está **sysname**, e se não for especificado, mapeamentos de todos os tipos de dados no DBMS de destino serão retornados. Habilita o conjunto de resultados a ser filtrado pelo tipo de dados no DBMS de destino.  
+`[ @destination_type = ] 'destination_type'` O tipo de dados é listado no DBMS de destino. *destination_type*está **sysname**, e se não for especificado, mapeamentos de todos os tipos de dados no DBMS de destino serão retornados. Habilita o conjunto de resultados a ser filtrado pelo tipo de dados no DBMS de destino.  
   
- [ **@defaults_only**=] *defaults_only*  
- Especifica se os mapeamentos de tipos de dados padrão são retornados. *defaults_only* está **bit**, com um padrão de **0**. **1** significa que somente os dados padrão mapeamentos de tipo são retornados. **0** significa que o padrão e todos os dados definidos pelo usuário mapeamentos de tipo são retornados.  
+`[ @defaults_only = ] defaults_only` É se apenas os mapeamentos de tipo de dados padrão são retornados. *defaults_only* está **bit**, com um padrão de **0**. **1** significa que somente os dados padrão mapeamentos de tipo são retornados. **0** significa que o padrão e todos os dados definidos pelo usuário mapeamentos de tipo são retornados.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   

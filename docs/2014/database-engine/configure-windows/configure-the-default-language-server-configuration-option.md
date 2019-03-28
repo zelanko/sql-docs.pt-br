@@ -12,12 +12,12 @@ ms.assetid: c08c26d8-5a62-487e-a4ee-4c529e4f9287
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8e22c0edc9c88871c4dee79ba927eb39ea9eab41
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: e0f9a295cb5c49b9a88d70187cd49527df5ba83b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641327"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536488"
 ---
 # <a name="configure-the-default-language-server-configuration-option"></a>Configurar opção default language de configuração de servidor
   Este tópico descreve como configurar a opção de configuração de servidor **default language** no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A opção **default language** especifica o idioma padrão para logons recém-criados. Para definir o idioma padrão, especifique o valor **langid** do idioma desejado. O valor **langid** pode ser obtido consultando a exibição de compatibilidade **sys.syslanguages** .  
@@ -61,7 +61,7 @@ ms.locfileid: "52641327"
   
      O idioma padrão é inglês.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-configure-the-default-language-option"></a>Para configurar a opção default language  
   
@@ -71,7 +71,7 @@ ms.locfileid: "52641327"
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo mostra como usar [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) para configurar a opção `default language` como francês (`2`).  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'default language', 2 ;  
@@ -82,7 +82,7 @@ GO
   
  Para obter mais informações, veja [Opções de configuração do servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Acompanhar: Depois de configurar a opção default language  
+##  <a name="FollowUp"></a> Acompanhamento: Depois de configurar a opção default language  
  A configuração entra em vigor imediatamente sem reiniciar o servidor.  
   
 ## <a name="see-also"></a>Consulte também  

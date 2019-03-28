@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - tables [XML]
 ms.assetid: 0d951424-9862-41fe-bd46-127f1c059bcb
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8ef5193919d57fc5867dc45cafafd847f9767f48
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 223f587b35a55b6f2df6d31ca64f48aac96fd6f1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353646"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530688"
 ---
 # <a name="change-existing-columns-to-xml-columns"></a>Converter colunas existentes em colunas XML
   A instrução ALTER TABLE oferece suporte ao tipo de dados `xml`. Por exemplo, é possível alterar qualquer coluna de tipo cadeia de caracteres para o tipo de dados `xml`. Observe que nesses casos os documentos contidos na coluna devem estar bem formados. Além disso, se você estiver alterando o tipo da coluna de cadeia de caracteres para xml com tipo, os documentos da coluna serão validados em relação aos esquemas XSD especificados.  

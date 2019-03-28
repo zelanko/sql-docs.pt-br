@@ -18,12 +18,12 @@ ms.assetid: 7e1f017e-c898-4225-b375-6a73ef9aac7b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 43d9180ace10e61bbb9a9e65f48e718b8b426ea8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1fc6f82a6f39755b6810a3a1043833fcc13213a0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763874"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529128"
 ---
 # <a name="sphelpextendedproc-transact-sql"></a>sp_helpextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,18 +43,17 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@funcname =**] **'***procedimento***'**  
- É o nome do procedimento armazenado estendido para o qual as informações são relatadas. *procedimento* está **sysname**, com um padrão NULL.  
+`[ @funcname = ] 'procedure'` É o nome do procedimento armazenado estendido para o qual as informações são relatadas. *procedimento* está **sysname**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de Dados|Description|  
+|Nome da coluna|Tipo de Dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome do procedimento armazenado estendido.|  
-|**DLL**|**nvarchar(255)**|O nome da DLL.|  
+|**dll**|**nvarchar(255)**|O nome da DLL.|  
   
 ## <a name="remarks"></a>Comentários  
  Quando *procedimento* for especificado, **sp_helpextendedproc** procedimento armazenado estendido de relatórios no especificado. Quando esse parâmetro não for fornecido, **sp_helpextendedproc** retorna todas as estendido nomes de procedimento armazenado e os nomes DLL para o qual cada procedimento armazenado estendido pertence.  

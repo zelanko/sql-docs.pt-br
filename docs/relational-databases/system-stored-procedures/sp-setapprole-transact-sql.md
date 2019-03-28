@@ -18,12 +18,12 @@ ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 78cf616c0b09d1404f0c7e7fe5f3b382f08d59a8
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: c18aa6fefb23bb3d388069773aa1633c29859e90
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168795"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533528"
 ---
 # <a name="spsetapprole-transact-sql"></a>sp_setapprole (Transact-SQL)
 
@@ -46,11 +46,9 @@ sp_setapprole [ @rolename = ] 'role',
 
 ## <a name="arguments"></a>Argumentos
 
- [  **@rolename =** ] **'***função***'**  
- É o nome da função de aplicativo definida no banco de dados atual. *função* está **sysname**, sem padrão. *função* deve existir no banco de dados atual.  
+`[ @rolename = ] 'role'` É o nome da função de aplicativo definido no banco de dados atual. *função* está **sysname**, sem padrão. *função* deve existir no banco de dados atual.  
   
- [  **@password =** ] **{criptografar N'***senha***'}**  
- É a senha necessária para ativar a função de aplicativo. *senha* está **sysname**, sem padrão. *senha* pode ser ofuscado usando o ODBC **criptografar** função. Quando você usa o **criptografar** função, a senha deve ser convertida em uma cadeia de caracteres Unicode colocando **N** antes da primeira marca de aspas simples.  
+`[ @password = ] { encrypt N'password' }` É a senha necessária para ativar a função de aplicativo. *senha* está **sysname**, sem padrão. *senha* pode ser ofuscado usando o ODBC **criptografar** função. Quando você usa o **criptografar** função, a senha deve ser convertida em uma cadeia de caracteres Unicode colocando **N** antes da primeira marca de aspas simples.  
   
  Não há suporte para a opção de criptografia em conexões que usam **SqlClient**.  
   
@@ -63,11 +61,9 @@ sp_setapprole [ @rolename = ] 'role',
  **@encrypt= 'odbc'**  
  Especifica que o ODBC será ofuscado pela senha usando o ODBC **criptografar** função antes de enviar a senha para o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Isso pode ser especificado somente quando um cliente ODBC ou o provedor OLE DB para SQL Server for utilizado.  
   
- [  **@fCreateCookie =** ] **verdadeira** | **false**  
- Especifica se um cookie deve ser criado. **True** é implicitamente convertido em 1. **False** é implicitamente convertido em 0.  
+`[ @fCreateCookie = ] true | false` Especifica se um cookie deve ser criado. **True** é implicitamente convertido em 1. **False** é implicitamente convertido em 0.  
   
- [  **@cookie =** ]  **@cookie SAÍDA**  
- Especifica um parâmetro de saída para conter o cookie. O cookie é gerado apenas se o valor de **@fCreateCookie** é **true**. **varbinary(8000)**  
+`[ @cookie = ] @cookie OUTPUT` Especifica um parâmetro de saída para conter o cookie. O cookie é gerado apenas se o valor de **@fCreateCookie** é **true**. **varbinary(8000)**  
   
 > [!NOTE]  
 > O parâmetro **OUTPUT** de cookie para **sp_setapprole** está documentado atualmente como **varbinary(8000)** , que tem o tamanho máximo correto. No entanto, a implementação atual retorna **varbinary(50)**. Aplicativos devem continuar a reservar **varbinary(8000)** para que o aplicativo continue a operar corretamente se o cookie retornar aumentos de tamanho em uma versão futura.

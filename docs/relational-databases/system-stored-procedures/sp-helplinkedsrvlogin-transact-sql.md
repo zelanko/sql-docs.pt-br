@@ -18,12 +18,12 @@ ms.assetid: a2b1eba0-bf71-47e7-a4c7-9f55feec82a3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4242494c94518817dd7ba161ddc16e1c47b51952
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32d7d0098c5548666b1d2fc77e11f82c2c3fd5fe
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659094"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536848"
 ---
 # <a name="sphelplinkedsrvlogin-transact-sql"></a>sp_helplinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,18 +41,16 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@rmtsrvname=**] **'***rmtsrvname***'**  
- É o nome do servidor vinculado para o qual o mapeamento de logon se aplica. *rmtsrvname* está **sysname**, com um padrão NULL. Se for NULL, todos os mapeamentos de logon definidos em todos os servidores vinculados definidos no computador local que executa o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serão retornados.  
+`[ @rmtsrvname = ] 'rmtsrvname'` É o nome do servidor vinculado para o qual o mapeamento de logon se aplica. *rmtsrvname* está **sysname**, com um padrão NULL. Se for NULL, todos os mapeamentos de logon definidos em todos os servidores vinculados definidos no computador local que executa o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serão retornados.  
   
- [  **@locallogin=**] **'***locallogin***'**  
- É o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login no servidor local que tem um mapeamento para o servidor vinculado *rmtsrvname*. *locallogin* está **sysname**, com um padrão NULL. NULL Especifica que todos os mapeamentos de logon definidos em *rmtsrvname* são retornados. Se não for NULL, um mapeamento de *locallogin* à *rmtsrvname* já deve existir. *locallogin* pode ser um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon ou um usuário do Windows. O usuário do Windows deve ter acesso ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diretamente ou por meio de sua associação em um grupo do Windows com acesso concedido.  
+`[ @locallogin = ] 'locallogin'` É o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login no servidor local que tem um mapeamento para o servidor vinculado *rmtsrvname*. *locallogin* está **sysname**, com um padrão NULL. NULL Especifica que todos os mapeamentos de logon definidos em *rmtsrvname* são retornados. Se não for NULL, um mapeamento de *locallogin* à *rmtsrvname* já deve existir. *locallogin* pode ser um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon ou um usuário do Windows. O usuário do Windows deve ter acesso ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diretamente ou por meio de sua associação em um grupo do Windows com acesso concedido.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**Servidor vinculado**|**sysname**|Nomes do servidor vinculado.|  
 |**Logon local**|**sysname**|Logon local ao qual o mapeamento aplica.|  

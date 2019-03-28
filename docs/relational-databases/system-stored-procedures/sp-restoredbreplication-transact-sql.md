@@ -16,12 +16,12 @@ ms.assetid: a2c5ee32-e6d9-46e9-8031-8ff13c20acf7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 383c37219a0c1e901f58bcee7ccc436c36973d1c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4e116b0350e23f3ae86e3c7de819b47ecae13baf
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775268"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534688"
 ---
 # <a name="sprestoredbreplication-transact-sql"></a>sp_restoredbreplication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_restoredbreplication [ @srv_orig = ] 'original_server_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@srv_orig =** ] **'***original_server_name***'**  
- O nome do servidor onde o backup foi criado. *original_server_name* está **sysname**, sem padrão.  
+`[ @srv_orig = ] 'original_server_name'` O nome do servidor onde o backup foi criado. *original_server_name* está **sysname**, sem padrão.  
   
- [  **@db_orig =** ] **'***original_database_name***'**  
- O nome do banco de dados cujo backup foi efetuado. *original_database_name* está **sysname**, sem padrão.  
+`[ @db_orig = ] 'original_database_name'` O nome do banco de dados que foi feito o backup. *original_database_name* está **sysname**, sem padrão.  
   
- [  **@keep_replication =** ] *keep_replication*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @keep_replication = ] keep_replication` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@perform_upgrade=** ] *perform_upgrade*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @perform_upgrade = ] perform_upgrade` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

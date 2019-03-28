@@ -16,12 +16,12 @@ ms.assetid: 030e5226-0585-439f-b8cd-36f48367d86d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ded79b417b868cc82cb1a59e34d72c3a5bf9f045
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0f72558a573e0cee0ab7fb2ab9b762246964a884
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748198"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526178"
 ---
 # <a name="spreplsetoriginator-transact-sql"></a>sp_replsetoriginator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_replsetoriginator [ @server_name= ] 'server_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@server_name=**] **'***nome_do_servidor***'**  
- É o nome do servidor onde a transação está sendo aplicada. *originating_server* está **sysname**, sem padrão.  
+`[ @server_name = ] 'server_name'` É o nome do servidor em que a transação está sendo aplicada. *originating_server* está **sysname**, sem padrão.  
   
- [  **@database_name=**] **'***database_name***'**  
- É o nome do banco de dados onde a transação está sendo aplicada. *originating_db* está **sysname**, sem padrão.  
+`[ @database_name = ] 'database_name'` É o nome do banco de dados onde a transação está sendo aplicada. *originating_db* está **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

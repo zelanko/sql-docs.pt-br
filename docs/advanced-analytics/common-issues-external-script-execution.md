@@ -4,15 +4,15 @@ ms.prod: sql
 ms.technology: ''
 ms.date: 05/31/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a3437e5f7081aa47cb33e33546a79aca0b100309
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: bddc2d2e4021ee0df196078b47e3ecbba96833b6
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53644916"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58509693"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>Problemas comuns com o serviço Launchpad e execução de script externo no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -178,9 +178,9 @@ EXEC sp_execute_external_script @language = N'R',
 
 *Mensagem(ns) STDOUT do script externo:*
 
-*[1] "c:\\arquivos de programa\\Microsoft SQL Server\\MSSQL13. SQL2016\\R_SERVICES "*
+*[1] "C:\\Program Files\\Microsoft SQL Server\\MSSQL13.SQL2016\\R_SERVICES"*
 
-*[1] "SQL de arquivos e Microsoft Server/MSSQL13 da c: / programa. SQL2016 / / biblioteca R_SERVICES"*
+*[1] "C:/Program Files/Microsoft SQL Server/MSSQL13.SQL2016/R_SERVICES/library"*
 
 Para resolver o problema, reinstale o pacote para a biblioteca de instância do SQL Server.
 

@@ -16,12 +16,12 @@ ms.assetid: 798586d7-05f3-4a5e-bea8-a34b7b52d0fd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7de6c03b133746156f414687fd661f70b40e842e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 76d83e2d36307280249ccd886c464e8cd484c296
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128113"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533218"
 ---
 # <a name="spdropmergefilter-transact-sql"></a>sp_dropmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,24 +40,19 @@ sp_dropmergefilter [ @publication= ] 'publication', [ @article= ] 'article'     
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'**_publicação_**'**  
- É o nome da publicação. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, sem padrão.  
   
- [  **@article=**] **'**_artigo_**'**  
- É o nome do artigo. *artigo* está **sysname**, sem padrão.  
+`[ @article = ] 'article'` É o nome do artigo. *artigo* está **sysname**, sem padrão.  
   
- [  **@filtername=**] **'**_filtername_**'**  
- É o nome do filtro a ser removido. *FilterName* está **sysname**, sem padrão.  
+`[ @filtername = ] 'filtername'` É o nome do filtro a ser removido. *FilterName* está **sysname**, sem padrão.  
   
- [  **@force_invalidate_snapshot=** ] *force_invalidate_snapshot*  
- Habilita ou desabilita a capacidade de ter um instantâneo invalidado. *force_invalidate_snapshot* é um **bit**, com um padrão **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Habilita ou desabilita a capacidade de invalidar um instantâneo. *force_invalidate_snapshot* é um **bit**, com um padrão **0**.  
   
  **0** Especifica que as alterações no artigo de mesclagem fazem com que o instantâneo seja inválido.  
   
  **1** significa que as alterações no artigo de mesclagem pode invalidar o instantâneo ser inválido. Se esse for o caso, um valor de **1** dá permissão para a ocorrência do novo instantâneo.  
   
- [ **@force_reinit_subscription**=] *force_reinit_subscription*  
- Habilita ou desabilita a capacidade de marcar uma assinatura como não válida. *force_reinit_subscription* é um **bit**, com um padrão **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Habilita ou desabilita a capacidade de marcar uma assinatura como não é válido. *force_reinit_subscription* é um **bit**, com um padrão **0**.  
   
  **0** Especifica que as alterações no filtro de artigo de mesclagem não invalidam as assinaturas sejam inválidos.  
   

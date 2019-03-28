@@ -16,12 +16,12 @@ ms.assetid: 045d3cd1-712b-44b7-a56a-c9438d4077b9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aaeebd1aa2d6fe4ea443c7ed18ac157135ae4d64
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8aa102f134d262eb2342e3774c1960f33f8adffc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747739"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538228"
 ---
 # <a name="sprepldone-transact-sql"></a>sp_repldone (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,20 +45,15 @@ sp_repldone [ @xactid= ] xactid
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@xactid=**] *xactid*  
- É o número de sequência de log (LSN) do primeiro registro para a última transação distribuída do servidor. *Xactid* está **binário (10)**, sem padrão.  
+`[ @xactid = ] xactid` É o número de sequência de log (LSN) do primeiro registro para a última transação distribuída do servidor. *Xactid* está **binário (10)**, sem padrão.  
   
- [  **@xact_seqno=**] *xact_seqno*  
- É o LSN do último registro para a última transação distribuída do servidor. *xact_seqno* está **binário (10)**, sem padrão.  
+`[ @xact_seqno = ] xact_seqno` É o LSN do último registro para a última transação distribuída do servidor. *xact_seqno* está **binário (10)**, sem padrão.  
   
- [  **@numtrans=**] *numtrans*  
- É o número de transações distribuídas. *numtrans* está **int**, sem padrão.  
+`[ @numtrans = ] numtrans` É o número de transações distribuídas. *numtrans* está **int**, sem padrão.  
   
- [  **@time=**] *tempo*  
- É o número de milissegundos, se fornecido, necessário para distribuir o último lote de transações. *tempo* está **int**, sem padrão.  
+`[ @time = ] time` É o número de milissegundos, se fornecido, necessário para distribuir o último lote de transações. *tempo* está **int**, sem padrão.  
   
- [  **@reset=**] *redefinir*  
- É o status de redefinição. *Redefinir* está **int**, sem padrão. Se **1**, replicados de todas as transações no log serão marcadas como distribuídas. Se **0**, o log de transações será redefinido para a primeira transação replicada e não há transações replicadas são marcadas como distribuídas. *Redefinir* é válido somente quando ambos *xactid* e *xact_seqno* são NULL.  
+`[ @reset = ] reset` É o status de redefinição. *Redefinir* está **int**, sem padrão. Se **1**, replicados de todas as transações no log serão marcadas como distribuídas. Se **0**, o log de transações será redefinido para a primeira transação replicada e não há transações replicadas são marcadas como distribuídas. *Redefinir* é válido somente quando ambos *xactid* e *xact_seqno* são NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

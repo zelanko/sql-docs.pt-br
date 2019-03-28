@@ -16,12 +16,12 @@ ms.assetid: af45e2b2-57fb-4bcd-a58b-e61401fb3b26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4c04df4cb844faf42506c781607a220e98a7db17
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5458d7a7693c742768a9a8a5e0c2f8583f1ca9ba
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779108"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535608"
 ---
 # <a name="spredirectpublisher-transact-sql"></a>sp_redirect_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +41,11 @@ sp_redirect_publisher
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@original_publisher** =] **'***original_publisher***'**  
- O nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que publicou originalmente o banco de dados. *original_publisher* está **sysname**, sem padrão.  
+`[ @original_publisher = ] 'original_publisher'` O nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que publicou originalmente o banco de dados. *original_publisher* está **sysname**, sem padrão.  
   
- [ **@publisher_db** =] **'***publisher_db***'**  
- O nome do banco de dados que está sendo publicado. *publisher_db* está **sysname**, sem padrão.  
+`[ @publisher_db = ] 'publisher_db'` O nome do banco de dados que está sendo publicado. *publisher_db* está **sysname**, sem padrão.  
   
- [ **@redirected_publisher** =] **'***redirected_publisher***'**  
- O nome do ouvinte do grupo de disponibilidade associado ao grupo de disponibilidade que será o novo publicador. *redirected_publisher* está **sysname**, sem padrão. Quando o ouvinte do grupo de disponibilidade estiver configurado para a porta não padrão, especifique o número da porta junto com o nome do ouvinte, por exemplo, `'Listenername,51433'`  
+`[ @redirected_publisher = ] 'redirected_publisher'` O nome de ouvinte de grupo disponibilidade associado ao grupo de disponibilidade que será o novo publicador. *redirected_publisher* está **sysname**, sem padrão. Quando o ouvinte do grupo de disponibilidade estiver configurado para a porta não padrão, especifique o número da porta junto com o nome do ouvinte, por exemplo, `'Listenername,51433'`  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

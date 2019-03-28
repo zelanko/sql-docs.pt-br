@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 758eadb1d5b3724bd829c556ca93ce8ae4a3bfa0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a00800150f5f100f97687df59bc4603f07d0fcc3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206236"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534578"
 ---
 # <a name="selective-xml-indexes-sxi"></a>SXI (índices XML seletivos)
   Os índices XML seletivos são outro tipo de índice XML que está disponível para você além de índices XML comuns. Os objetivos do recurso de índice XML seletivo são os seguintes:  
@@ -78,7 +78,7 @@ ms.locfileid: "48206236"
   
  Se você precisa consultar somente esses dados no caminho `/book/title` e no caminho `/book/subjects` , poderá criar o seguinte índice XML seletivo:  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX SXI_index  
 ON Tbl(xmlcol)  
 FOR   
@@ -123,7 +123,7 @@ FOR
   
 -   Indexação de nós com tipos XS binários: por exemplo, base64Binary e hexBinary.  
   
--   Especificação dos nós a serem indexados com expressões XPath que contêm o caractere curinga `*` ao final: por exemplo,  `/a/b/c/*`, `/a//b/*`ou `/a/b/*:c`.  
+-   Especificação de nós a serem indexados com expressões XPath que contêm o caractere curinga `*` no final: Por exemplo, `/a/b/c/*`, `/a//b/*`, ou `/a/b/*:c`.  
   
 -   Indexação de qualquer eixo que não seja o filho, o atributo ou o descendente. A ocorrência `//<step>` é permitida como um caso especial.  
   

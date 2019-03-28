@@ -18,12 +18,12 @@ ms.assetid: d0769566-8f5c-4c8a-84d3-ee17ea6e0cb4
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 496515aaf8abc1e9f5eec313655199e97b5a5bcb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a5e3db87aedd9a13ac7af90284362bb82ab3a13
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658954"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526698"
 ---
 # <a name="spsyspolicyupdatepolicycategorysubscription-transact-sql"></a>sp_syspolicy_update_policy_category_subscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,19 +43,15 @@ sp_syspolicy_update_policy_category_subscription [ @policy_category_subscription
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
- É o identificador da assinatura da categoria de política que você deseja atualizar. *policy_category_subscription_id* está **int**e é necessária.  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id` É o identificador para a assinatura de categoria de política que você deseja atualizar. *policy_category_subscription_id* está **int**e é necessária.  
   
- [ **@target_type=** ] **'** target_type **'**  
- É o tipo de destino da assinatura da categoria. *target_type* está **sysname**, com um padrão NULL.  
+`[ @target_type = ] 'target_type'` É o tipo de destino da assinatura da categoria. *target_type* está **sysname**, com um padrão NULL.  
   
  Se você especificar *target_type*, o valor deve ser definido como 'DATABASE'.  
   
- [  **@target_object=** ] **'** target_object **'**  
- É o nome do banco de dados que assinará a categoria de política. *target_object* está **sysname**, com um padrão NULL.  
+`[ @target_object = ] 'target_object'` É o nome do banco de dados que assinará a categoria de política. *target_object* está **sysname**, com um padrão NULL.  
   
- [  **@policy_category=** ] **'** policy_category **'**  
- É o nome da categoria de política que você deseja que o banco de dados assine. *policy_category* está **sysname**, com um padrão NULL.  
+`[ @policy_category = ] 'policy_category'` É o nome da categoria de política que você deseja inscrever-se para o banco de dados. *policy_category* está **sysname**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -77,7 +73,7 @@ ON a.policy_category_id = b.policy_category_id;
  Requer a associação à função de banco de dados fixa PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Possível elevação de credenciais: os usuários na função PolicyAdministratorRole podem criar gatilhos de servidor e agendar execuções de políticas que possam afetar a operação da instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por exemplo, os usuários da função PolicyAdministratorRole podem criar uma política que impeça a criação da maioria dos objetos no [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Devido a essa possível elevação de credenciais, a função PolicyAdministratorRole deve ser concedida somente para usuários que sejam confiáveis no controle da configuração do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  Possível elevação de credenciais: Os usuários na função PolicyAdministratorRole podem criar gatilhos de servidor e agendar execuções de políticas que podem afetar a operação da instância da [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por exemplo, os usuários da função PolicyAdministratorRole podem criar uma política que impeça a criação da maioria dos objetos no [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Devido a essa possível elevação de credenciais, a função PolicyAdministratorRole deve ser concedida somente para usuários que sejam confiáveis no controle da configuração do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir atualiza uma assinatura de categoria de política existente de forma que o banco de dados do AdventureWorks2012 assina a categoria de política 'Finance’.  

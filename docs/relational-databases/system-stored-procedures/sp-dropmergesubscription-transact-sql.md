@@ -16,12 +16,12 @@ ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 34ba40387c246fe5f7f2de8dd74197b7cd43c0f5
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 1b360eed1619317e7ca3092bc47da086c520bf04
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130736"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535548"
 ---
 # <a name="spdropmergesubscription-transact-sql"></a>sp_dropmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,31 +43,25 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=** ] **'**_publicação_**'**  
- É o nome da publicação. *publicação* está **sysname**, com um padrão NULL. A publicação já deve existir e obedecer às regras para identificadores.  
+`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, com um padrão NULL. A publicação já deve existir e obedecer às regras para identificadores.  
   
- [  **@subscriber=**] **'**_assinante_**'**  
- É o nome do Assinante. *assinante* está **sysname**, com um padrão NULL.  
+`[ @subscriber = ] 'subscriber'` É o nome do assinante. *assinante* está **sysname**, com um padrão NULL.  
   
- [  **@subscriber_db=** ] **'**_subscriber_db_**'**  
- É o nome do banco de dados de assinatura. *subscription_database*está **sysname**, com um padrão NULL.  
+`[ @subscriber_db = ] 'subscriber_db'` É o nome do banco de dados de assinatura. *subscription_database*está **sysname**, com um padrão NULL.  
   
- [  **@subscription_type=** ] **'**_subscription_type_**'**  
- É o tipo de assinatura. *subscription_type*está **nvarchar(15)**, e pode ser um destes valores.  
+`[ @subscription_type = ] 'subscription_type'` É o tipo de assinatura. *subscription_type*está **nvarchar(15)**, e pode ser um destes valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**Todos os**|Assinaturas push, pull e anônimas|  
+|**all**|Assinaturas push, pull e anônimas|  
 |**Anônimo**|Assinatura anônima.|  
-|**envio por push**|Assinatura push.|  
-|**Pull**|Assinatura pull.|  
+|**push**|Assinatura push.|  
+|**pull**|Assinatura pull.|  
 |**ambos** (padrão)|Assinaturas push e pull.|  
   
- [  **@ignore_distributor =** ] *ignore_distributor*  
- Indica se esse procedimento armazenado será executado sem se conectar ao Distribuidor. *ignore_distributor* está **bit**, com um padrão de **0**. Esse parâmetro pode ser usado para descartar uma assinatura sem tarefas de limpeza no Distribuidor. Também é útil, se for necessário reinstalar o Distribuidor.  
+`[ @ignore_distributor = ] ignore_distributor` Indica se esse procedimento armazenado é executado sem se conectar ao distribuidor. *ignore_distributor* está **bit**, com um padrão de **0**. Esse parâmetro pode ser usado para descartar uma assinatura sem tarefas de limpeza no Distribuidor. Também é útil, se for necessário reinstalar o Distribuidor.  
   
- [  **@reserved=** ] *reservado*  
- É reservado para uso futuro. *reservado* está **bit**, com um padrão de **0**.  
+`[ @reserved = ] reserved` É reservado para uso futuro. *reservado* está **bit**, com um padrão de **0**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

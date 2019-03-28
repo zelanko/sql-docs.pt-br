@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 883496e1a0f31e69b09c8e4f5eeebdb94e006e68
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7eecd8743d24ab783e163ab10abc0441362b37a4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732734"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528128"
 ---
 # <a name="spgrantproxytosubsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,16 +41,13 @@ sp_grant_proxy_to_subsystem
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@proxy_id =** ] *id*  
- O número de identificação de proxy do proxy ao qual o acesso será concedido. O *proxy_id* é **int**, com um padrão NULL. Qualquer um dos *proxy_id* ou *proxy_name* deve ser especificado, mas não podem ser especificados.  
+`[ @proxy_id = ] id` O número de identificação de proxy do proxy para conceder acesso. O *proxy_id* é **int**, com um padrão NULL. Qualquer um dos *proxy_id* ou *proxy_name* deve ser especificado, mas não podem ser especificados.  
   
- [  **@proxy_name =** ] **'***proxy_name***'**  
- O nome do proxy ao qual o acesso será concedido. O *proxy_name* é **sysname**, com um padrão NULL. Qualquer um dos *proxy_id* ou *proxy_name* deve ser especificado, mas não podem ser especificados.  
+`[ @proxy_name = ] 'proxy_name'` O nome do proxy para conceder acesso. O *proxy_name* é **sysname**, com um padrão NULL. Qualquer um dos *proxy_id* ou *proxy_name* deve ser especificado, mas não podem ser especificados.  
   
- [  **@subsystem_id =** ] *id*  
- O número de identificação do subsistema ao qual o acesso será concedido. O *subsystem_id* é **int**, com um padrão NULL. Qualquer um dos *subsystem_id* ou *subsystem_name* deve ser especificado, mas não podem ser especificados. A tabela a seguir lista os valores padrão para cada subsistema.  
+`[ @subsystem_id = ] id` O número de identificação do subsistema para conceder acesso a. O *subsystem_id* é **int**, com um padrão NULL. Qualquer um dos *subsystem_id* ou *subsystem_name* deve ser especificado, mas não podem ser especificados. A tabela a seguir lista os valores padrão para cada subsistema.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)]Script do ActiveX<br /><br /> **\*\* Importante \* \***  será removido do subsistema ActiveX Scripting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.|  
 |**3**|Sistema Operacional (**CmdExec**)|  
@@ -64,10 +61,9 @@ sp_grant_proxy_to_subsystem
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] execução de pacotes|  
 |**12**|Scripts PowerShell|  
   
- [  **@subsystem_name =** ] **'***subsystem_name***'**  
- O nome do subsistema ao qual o acesso será concedido. O **subsystem_name** é **sysname**, com um padrão NULL. Qualquer um dos *subsystem_id* ou *subsystem_name* deve ser especificado, mas não podem ser especificados. A tabela a seguir lista os valores padrão para cada subsistema.  
+`[ @subsystem_name = ] 'subsystem_name'` O nome do subsistema para conceder acesso a. O **subsystem_name** é **sysname**, com um padrão NULL. Qualquer um dos *subsystem_id* ou *subsystem_name* deve ser especificado, mas não podem ser especificados. A tabela a seguir lista os valores padrão para cada subsistema.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**ActiveScripting**|Script do ActiveX|  
 |**CmdExec**|Sistema Operacional (**CmdExec**)|  

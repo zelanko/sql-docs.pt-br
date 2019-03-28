@@ -13,12 +13,12 @@ ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aa7359fc1436cfbb4222dcc63f9bb700720bf3cb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 38c29f8d70b3cc72baf81e2ae23082fe270ba573
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772558"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537388"
 ---
 # <a name="set-or-change-the-database-collation"></a>Definir ou alterar a ordenação de banco de dados
   Este tópico descreve como definir e alterar a ordenação de banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Se nenhuma ordenação for especificada, será usada a ordenação do servidor.  
@@ -41,7 +41,7 @@ ms.locfileid: "52772558"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   Ordenações somente Unicode do Windows podem ser usadas somente com a cláusula COLLATE para aplicar ordenações aos tipos de dados `nchar`, `nvarchar` e `ntext` em dados nos níveis de coluna e de expressão. Não é possível usá-los com a cláusula COLLATE para alterar a ordenação de uma instância de banco de dados ou de servidor.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "52772558"
   
 3.  Quando terminar, clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-set-the-database-collation"></a>Para definir a ordenação de banco de dados  
   
@@ -92,7 +92,7 @@ ms.locfileid: "52772558"
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo mostra como usar a cláusula [COLLATE](/sql/t-sql/statements/collations) para especificar um nome de ordenação. O exemplo cria o banco de dados `MyOptionsTest` que usa a ordenação `Latin1_General_100_CS_AS_SC`. Depois de criar o banco de dados, execute a instrução `SELECT` para verificar a configuração.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 IF DB_ID (N'MyOptionsTest') IS NOT NULL  
@@ -118,7 +118,7 @@ GO
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo mostra como usar a cláusula [COLLATE](/sql/t-sql/statements/collations) em uma instrução [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) para alterar o nome da ordenação. Execute a instrução `SELECT` para verificar a alteração.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE MyOptionsTest  

@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ecf9b63dda28bd65912d606a69b1e188af713be9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 340d50725a13da4993ade63d890f2300ba38763b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594356"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527188"
 ---
 # <a name="spfulltexttable-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47594356"
   Marca ou desmarca uma tabela para indexação de texto completo.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md), [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md), e [DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md) em vez disso.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Em vez disso, use [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md), [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md)e [DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md) .  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,13 +50,11 @@ sp_fulltext_table
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@tabname=**] **'***qualified_table_name***'**  
- É um nome de tabela de uma ou duas partes. A tabela deve existir no banco de dados atual. *qualified_table_name* está **nvarchar(517)**, sem padrão.  
+`[ @tabname = ] 'qualified_table_name'` É um nome de tabela de uma ou duas partes. A tabela deve existir no banco de dados atual. *qualified_table_name* está **nvarchar(517)**, sem padrão.  
   
- [  **@action=**] **'***ação***'**  
- É a ação a ser executada. *ação* está **nvarchar (50)**, sem padrão e pode ser um destes valores.  
+`[ @action = ] 'action'` É a ação a ser executada. *ação* está **nvarchar (50)**, sem padrão e pode ser um destes valores.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Criar**|Cria os metadados para um índice de texto completo para a tabela referenciada pela *qualified_table_name* e especifica que os dados de índice de texto completo para essa tabela devem residir no *fulltext_catalog_name*. Essa ação também designa o uso de *unique_index_name* como a coluna de chave de texto completo. Este índice exclusivo já deve estar presente e deve ser definido em uma coluna da tabela.<br /><br /> Uma pesquisa de texto completo não pode ser executada nessa tabela até que o catálogo de texto completo seja populado.|  
 |**Drop**|Descarta os metadados no índice de texto completo para *qualified_table_name*. Se o índice de texto completo for ativo, será desativado automaticamente antes de ser descartado. Não é necessário remover colunas antes de descartar o índice de texto completo.|  
@@ -71,11 +69,9 @@ sp_fulltext_table
 |**start_incremental**|Inicia uma população incremental do índice de texto completo na tabela.|  
 |**Parar**|Interrompe uma população completa ou incremental.|  
   
- [  **@ftcat=**] **'***fulltext_catalog_name***'**  
- É um nome de catálogo de texto completo válido e existente para um **criar** ação. Para todas as outras ações, esse parâmetro deve ser NULL. *fulltext_catalog_name* está **sysname**, com um padrão NULL.  
+`[ @ftcat = ] 'fulltext_catalog_name'` É um nome de catálogo de texto completo válido e existente para um **criar** ação. Para todas as outras ações, esse parâmetro deve ser NULL. *fulltext_catalog_name* está **sysname**, com um padrão NULL.  
   
- [  **@keyname=**] **'***unique_index_name***'**  
- É um índice válido única coluna de chave exclusivo não anulável em *qualified_table_name* para um **criar** ação. Para todas as outras ações, esse parâmetro deve ser NULL. *unique_index_name* está **sysname**, com um padrão NULL.  
+`[ @keyname = ] 'unique_index_name'` É um índice válido única coluna de chave exclusivo não anulável em *qualified_table_name* para um **criar** ação. Para todas as outras ações, esse parâmetro deve ser NULL. *unique_index_name* está **sysname**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -88,7 +84,7 @@ sp_fulltext_table
   
  Se a tabela é reativada e o índice não é populado novamente, o antigo índice permanece disponível para consultas em qualquer coluna restante habilitada para texto completo que não seja nova. É feita a correspondência de dados de colunas excluídas nas consultas que especificam uma pesquisa de todas as colunas de texto completo.  
   
- Depois que uma tabela tiver sido definida para indexação de texto completo, alternando a texto completo coluna de chave exclusiva de um tipo de dados para outro, seja alterando o tipo de dados dessa coluna ou alterar a chave exclusiva de texto completo de uma coluna para outra, sem uma nova população completa pode causar uma falha ocorrer durante uma consulta subsequente e retornar a mensagem de erro: "conversão no tipo *data_type* falhou para o valor de chave de pesquisa de texto completo *key_value*." Para evitar isso, descarte a definição de texto completo para essa tabela usando o **drop** ação de **sp_fulltext_table** e redefine-a usando **sp_fulltext_table** e **sp_fulltext_column**.  
+ Depois que uma tabela é definida para indexação de texto completo, a alternância da coluna de chave exclusiva de texto completo de um tipo de dados para outro, seja alterando o tipo de dados dessa coluna ou a chave exclusiva de texto completo de uma coluna para outra, sem uma nova população completa, pode fazer com que ocorra uma falha durante uma consulta subsequente e seja retornada a mensagem de erro: "Conversão no tipo *data_type* falhou para o valor de chave de pesquisa de texto completo *key_value*." Para evitar isso, descarte a definição de texto completo para essa tabela usando o **drop** ação de **sp_fulltext_table** e redefine-a usando **sp_fulltext_table** e **sp_fulltext_column**.  
   
  A coluna de chave de texto completo deve ser definida para ter 900 bytes ou menos. É recomendável que o tamanho da coluna de chave seja o menor possível por motivos de desempenho.  
   

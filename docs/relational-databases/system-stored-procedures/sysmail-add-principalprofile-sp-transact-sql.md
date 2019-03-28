@@ -18,12 +18,12 @@ ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 794a7c9013fff188500c26232a597a7dd4c6283d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf12b97028d3d98f7d5cc5ab034db95411d913dc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756265"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528498"
 ---
 # <a name="sysmailaddprincipalprofilesp-transact-sql"></a>sysmail_add_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,20 +42,15 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@principal_id** = ] *principal_id*  
- A ID do usuário de banco de dados ou função na **msdb** banco de dados para a associação. *principal_id* está **int**, com um padrão NULL. Qualquer um dos *principal_id* ou *principal_name* deve ser especificado. Um *principal_id* dos **0** faz desse perfil um perfil público, concedendo acesso a todas as entidades no banco de dados.  
+`[ @principal_id = ] principal_id` A ID do usuário de banco de dados ou função na **msdb** banco de dados para a associação. *principal_id* está **int**, com um padrão NULL. Qualquer um dos *principal_id* ou *principal_name* deve ser especificado. Um *principal_id* dos **0** faz desse perfil um perfil público, concedendo acesso a todas as entidades no banco de dados.  
   
- [ **@principal_name** =] **'***principal_name***'**  
- O nome do usuário de banco de dados ou função na **msdb** banco de dados para a associação. *principal_name* está **sysname**, com um padrão NULL. Qualquer um dos *principal_id* ou *principal_name* deve ser especificado. Um *principal_name* dos **'public'** faz desse perfil um perfil público, concedendo acesso a todas as entidades no banco de dados.  
+`[ @principal_name = ] 'principal_name'` O nome do usuário de banco de dados ou função na **msdb** banco de dados para a associação. *principal_name* está **sysname**, com um padrão NULL. Qualquer um dos *principal_id* ou *principal_name* deve ser especificado. Um *principal_name* dos **'public'** faz desse perfil um perfil público, concedendo acesso a todas as entidades no banco de dados.  
   
- [ **@profile_id** =] *profile_id*  
- A ID do perfil da associação. *profile_id* está **int**, com um padrão NULL. Qualquer um dos *profile_id* ou *profile_name* deve ser especificado.  
+`[ @profile_id = ] profile_id` A id do perfil da associação. *profile_id* está **int**, com um padrão NULL. Qualquer um dos *profile_id* ou *profile_name* deve ser especificado.  
   
- [ **@profile_name** =] **'***profile_name***'**  
- O nome do perfil para a associação. *profile_name* está **sysname**, sem padrão. Qualquer um dos *profile_id* ou *profile_name* deve ser especificado.  
+`[ @profile_name = ] 'profile_name'` O nome do perfil para a associação. *profile_name* está **sysname**, sem padrão. Qualquer um dos *profile_id* ou *profile_name* deve ser especificado.  
   
- [ **@is_default** = ] *is_default*  
- Especifica se esse perfil é o perfil padrão para o principal. Uma entidade de segurança deve ter exatamente um perfil padrão. *is_default* está **bit**, sem padrão.  
+`[ @is_default = ] is_default` Especifica se este perfil é o perfil padrão para a entidade de segurança. Uma entidade de segurança deve ter exatamente um perfil padrão. *is_default* está **bit**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

@@ -16,12 +16,12 @@ ms.assetid: 7a76a645-97eb-47ac-b3ea-e2d75012cbed
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c81f2878c5573174b7f50f15f2ef2adf9329021a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a39fe7efd35094330b6885094145b5340bd7f2b8
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808278"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527468"
 ---
 # <a name="sphelpsubscriptionproperties-transact-sql"></a>sp_helpsubscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publisher=**] **'***publisher***'**  
- É o nome do Publicador. *Publisher* está **sysname**, com um padrão de **%**, que retorna informações sobre todos os publicadores.  
+`[ @publisher = ] 'publisher'` É o nome do publicador. *Publisher* está **sysname**, com um padrão de **%**, que retorna informações sobre todos os publicadores.  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
- É o nome do banco de dados Publicador. *publisher_db* está **sysname**, com um padrão de **%**, que retorna informações sobre todos os bancos de dados do publicador.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados publicador. *publisher_db* está **sysname**, com um padrão de **%**, que retorna informações sobre todos os bancos de dados do publicador.  
   
- [  **@publication=**] **'***publicação***'**  
- É o nome da publicação. *publicação* está **sysname**, com um padrão de **%**, que retorna informações sobre todas as publicações.  
+`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, com um padrão de **%**, que retorna informações sobre todas as publicações.  
   
- [  **@publication_type=**] *publication_type*  
- É o tipo de publicação. *publication_type* é **int**, com um padrão NULL. Se for fornecido, *publication_type* deve ser um dos seguintes valores:  
+`[ @publication_type = ] publication_type` É o tipo de publicação. *publication_type* é **int**, com um padrão NULL. Se for fornecido, *publication_type* deve ser um dos seguintes valores:  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -65,12 +61,12 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 |-----------------|---------------|-----------------|  
 |**publisher**|**sysname**|Nome do Publicador.|  
 |**publisher_db**|**sysname**|Nome do banco de dados publicador.|  
-|**publicação**|**sysname**|Nome da publicação.|  
+|**publication**|**sysname**|Nome da publicação.|  
 |**publication_type**|**int**|O tipo de publicação:<br /><br /> **0** = transacional<br /><br /> **1** = instantâneo<br /><br /> **2** = mesclagem|  
 |**publisher_login**|**sysname**|ID do logon usado no Publicador para Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**publisher_password**|**nvarchar(524)**|Senha usada no Publicador para Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (criptografada).|  
 |**publisher_security_mode**|**int**|Modo de segurança usado no Publicador:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação<br /><br /> **1** = autenticação do Windows|  
-|**distribuidor**|**sysname**|Nome do Distribuidor.|  
+|**distributor**|**sysname**|Nome do Distribuidor.|  
 |**distributor_login**|**sysname**|O logon do Distribuidor|  
 |**distributor_password**|**nvarchar(524)**|Senha do Distribuidor (criptografada).|  
 |**distributor_security_mode**|**int**|Modo de segurança usado no Distribuidor:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação<br /><br /> **1** = autenticação do Windows|  
@@ -93,7 +89,7 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 |**internet_password**|**nvarchar(524)**|Senha para o logon que o Merge Agent usa ao se conectar ao servidor da Web que está hospedando a sincronização da Web usando Autenticação Básica.|  
 |**internet_security_mode**|**int**|O modo de autenticação usado ao se conectar ao servidor Web que está hospedando a sincronização da Web, onde um valor de **1** significa autenticação do Windows e um valor de **0** significa que a autenticação básica.|  
 |**internet_timeout**|**int**|Período de tempo, em segundos, antes que uma solicitação de sincronização da Web expire.|  
-|**nome do host**|**nvarchar(128)**|Especifica o valor para HOST_NAME() onde essa função é usada no filtro de linha com parâmetros da cláusula WHERE.|  
+|**hostname**|**nvarchar(128)**|Especifica o valor para HOST_NAME() onde essa função é usada no filtro de linha com parâmetros da cláusula WHERE.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

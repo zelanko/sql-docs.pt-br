@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/18/2018
 ms.topic: overview
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: f1cbc4a7c02597c6c8bece8c47976fabdb4959e7
-ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
+ms.openlocfilehash: 47edd434445d57c5ca25373b5dc15fa328f94019
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53731973"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58513232"
 ---
 # <a name="r-server-standalone-and-machine-learning-server-standalone-in-sql-server"></a>R Server (autônomo) e Machine Learning Server (autônomo) no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,7 +32,7 @@ SQL Server 2016 é apenas o R. O SQL Server 2017 oferece suporte às linguagens 
 | Componente | Descrição |
 |-----------|-------------|
 | Pacotes do R | [**RevoScaleR** ](ref-r-revoscaler.md) é a biblioteca principal para o R escalonável com funções de manipulação de dados, transformação, visualização e análise.  <br/>[**MicrosoftML** ](ref-r-microsoftml.md) adiciona algoritmos de aprendizado de máquina para criar modelos personalizados para análise de sentimento, análise de imagem e análise de texto. <br/>[**sqlRUtils** ](ref-r-sqlrutils.md) fornece funções auxiliares para colocar os scripts do R em um procedimento armazenado T-SQL, registrando um procedimento armazenado com um banco de dados e executar o procedimento armazenado de um ambiente de desenvolvimento de R.<br/>[**mrsdeploy** ](operationalization-with-mrsdeploy.md) ofertas da web de implantação do serviço (no SQL Server 2017 somente). <br/>[**olapR** ](ref-r-olapr.md) é para especificar consultas MDX em R.|
-| Microsoft R Open MRO) | [**MRO** ](https://mran.microsoft.com/open) é a distribuição do código-fonte aberto da Microsoft do R. O pacote e o interpretador são incluídos. Sempre use a versão do MRO agrupado em instalação. |
+| Microsoft R Open (MRO) | [**MRO** ](https://mran.microsoft.com/open) é a distribuição do código-fonte aberto da Microsoft do R. O pacote e o interpretador são incluídos. Sempre use a versão do MRO agrupado em instalação. |
 | Ferramentas do R | Janelas do console de R e prompts de comando são ferramentas padrão em uma distribuição de R. Para encontrá-los em \Program files\Microsoft Server\140\R_SERVER\bin\x64 SQL. |
 | Exemplos de R e scripts |  Pacotes de R e RevoScaleR do código-fonte aberto incluem conjuntos de dados internos para que você pode criar e executar o script usando os dados previamente instalados. Examine para que eles \Program files\Microsoft SQL Server\140\R_SERVER\library\datasets e \library\RevoScaleR. |
 | Pacotes do Python | [**revoscalepy** ](../python/ref-py-revoscalepy.md) é a biblioteca principal para o Python escalonável com funções de manipulação de dados, transformação, visualização e análise. <br/>[**microsoftml** ](../python/ref-py-microsoftml.md) adiciona algoritmos de aprendizado de máquina para criar modelos personalizados para análise de sentimento, análise de imagem e análise de texto.  |

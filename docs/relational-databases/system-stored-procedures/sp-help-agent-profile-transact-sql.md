@@ -16,12 +16,12 @@ ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d75fde4ff1ccabd56243e1a1ccdff8051923fefb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 35e0ace5f88e15ce4afc0da797d949039398e898
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794888"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535908"
 ---
 # <a name="sphelpagentprofile-transact-sql"></a>sp_help_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,8 +39,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@agent_type=**] *agent_type*  
- É o tipo de agente. *agent_type* está **int**, com um padrão de **0**, e pode ser um destes valores.  
+`[ @agent_type = ] agent_type` É o tipo de agente. *agent_type* está **int**, com um padrão de **0**, e pode ser um destes valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -50,8 +49,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 |**4**|Merge Agent|  
 |**9**|Queue Reader Agent|  
   
- [  **@profile_id=**] *profile_id*  
- É a ID do perfil a ser exibido. *profile_id* está **int**, com um padrão de **-1**, que retorna todos os perfis de **MSagent_profiles** tabela.  
+`[ @profile_id = ] profile_id` É a ID do perfil a ser exibido. *profile_id* está **int**, com um padrão de **-1**, que retorna todos os perfis de **MSagent_profiles** tabela.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   

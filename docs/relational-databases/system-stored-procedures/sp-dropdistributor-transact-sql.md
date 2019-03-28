@@ -16,12 +16,12 @@ ms.assetid: 0644032f-5ff0-4718-8dde-321bc9967a03
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1e2bde09ee15af5ebf6ef48cfd52222fe030a937
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8f1a1baec088af48cd18972c177463fbb3f574eb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783008"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530678"
 ---
 # <a name="spdropdistributor-transact-sql"></a>sp_dropdistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,15 +39,13 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@no_checks=**] *no_checks*  
- Indica se os objetos dependentes devem ser verificados antes da remoção do Distribuidor. *no_checks* está **bit**, com um padrão de 0.  
+`[ @no_checks = ] no_checks` Indica se é verificar se há objetos dependentes antes de descartar o distribuidor. *no_checks* está **bit**, com um padrão de 0.  
   
  Se **0**, **sp_dropdistributor** verificações para certificar-se de que todos os objetos de publicação e distribuição, além do distribuidor tem sido descartados.  
   
  Se **1**, **sp_dropdistributor** descarta todos os objetos de publicação e distribuição antes de desinstalar o distribuidor.  
   
- [  **@ignore_distributor=**] *ignore_distributor*  
- Indica se esse procedimento armazenado será executado sem se conectar ao Distribuidor. *ignore_distributor* está **bit**, com um padrão de **0**.  
+`[ @ignore_distributor = ] ignore_distributor` Indica se esse procedimento armazenado é executado sem se conectar ao distribuidor. *ignore_distributor* está **bit**, com um padrão de **0**.  
   
  Se **0**, **sp_dropdistributor** conecta-se ao distribuidor e remove todos os objetos de replicação. Se **sp_dropdistributor** não conseguir se conectar ao distribuidor, o procedimento armazenado falhará.  
   

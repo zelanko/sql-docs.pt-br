@@ -16,12 +16,12 @@ ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 409f79007479fabe82b1c904f3bc0db943e3c116
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: bfc49e712e75a862c9c43ce99cc35b56c014cebc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817858"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534648"
 ---
 # <a name="spsetsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,24 +44,20 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publisher=** ] **'***publisher***'**  
- É o nome do Publicador. *Publisher* está **sysname**, sem padrão.  
+`[ @publisher = ] 'publisher'` É o nome do publicador. *Publisher* está **sysname**, sem padrão.  
   
- [  **@publisher_db=** ] **'***publisher_db***'**  
- É o nome do banco de dados de publicação. *publisher_db* está **sysname**, sem padrão. Para um publicador não SQL Server, *publisher_db* é o nome do banco de dados de distribuição.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados de publicação. *publisher_db* está **sysname**, sem padrão. Para um publicador não SQL Server, *publisher_db* é o nome do banco de dados de distribuição.  
   
- [  **@publication=** ] **'***publicação***'**  
- É o nome da publicação. *publicação* está **sysname**, sem padrão. Quando o agente de distribuição é compartilhado por mais de uma publicação, você deve especificar um valor de ALL para *publicação*.  
+`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, sem padrão. Quando o agente de distribuição é compartilhado por mais de uma publicação, você deve especificar um valor de ALL para *publicação*.  
   
- [  **@xact_seqno=** ] *xact_seqno*  
- É o LSN da próxima transação no Distribuidor a ser aplicada no Assinante. *xact_seqno* está **varbinary (16)**, sem padrão.  
+`[ @xact_seqno = ] xact_seqno` É o LSN da próxima transação no distribuidor a ser aplicado no assinante. *xact_seqno* está **varbinary (16)**, sem padrão.  
   
 ## <a name="result-set"></a>Conjunto de resultados  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**XACT_SEQNO ORIGINAL**|**varbinary(16)**|É o LSN original da próxima transação a ser aplicada no Assinante.|  
-|**XACT_SEQNO ATUALIZADO**|**varbinary(16)**|É o LSN atualizado da próxima transação a ser aplicada no Assinante.|  
+|**ORIGINAL XACT_SEQNO**|**varbinary(16)**|É o LSN original da próxima transação a ser aplicada no Assinante.|  
+|**UPDATED XACT_SEQNO**|**varbinary(16)**|É o LSN atualizado da próxima transação a ser aplicada no Assinante.|  
 |**CONTAGEM DE FLUXO DE ASSINATURA**|**int**|O número de fluxos de assinatura usado durante a última sincronização.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

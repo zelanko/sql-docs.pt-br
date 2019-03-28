@@ -18,12 +18,12 @@ ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b043b71ca3f0349ce8ed7ac7accf136f4b7eff60
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3461d6f80bb1ac693cca78954e5165fb7f012436
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595224"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529738"
 ---
 # <a name="sphelplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@LoginNamePattern =** ] **'***logon***'**  
- É o nome de um logon. *login* é **sysname**, com um padrão de NULL. *logon* deve existir se especificado. Se *login* não é especificado, serão retornadas informações sobre todos os logons.  
+`[ @LoginNamePattern = ] 'login'` É um nome de logon. *login* é **sysname**, com um padrão de NULL. *logon* deve existir se especificado. Se *login* não é especificado, serão retornadas informações sobre todos os logons.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -49,18 +48,18 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 ## <a name="result-sets"></a>Conjuntos de resultados  
  O primeiro relatório contém informações sobre cada logon especificado, como mostrado na tabela a seguir.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Nome de logon.|  
 |**SID**|**varbinary(85)**|Identificador de segurança de Logon (SID).|  
 |**DefDBName**|**sysname**|Padrão de banco de dados que **LoginName** usa ao se conectar a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**DefLangName**|**sysname**|Idioma padrão usado pelo **LoginName**.|  
 |**Auser**|**char(5)**|Sim = **LoginName** tem um nome de usuário associado em um banco de dados.<br /><br /> Não = **LoginName** não tem um nome de usuário associado.|  
-|**ARemote**|**CARACT (7)**|Sim = **LoginName** tem um logon remoto associado.<br /><br /> Não = **LoginName** não tem um logon associado.|  
+|**ARemote**|**char(7)**|Sim = **LoginName** tem um logon remoto associado.<br /><br /> Não = **LoginName** não tem um logon associado.|  
   
  O segundo relatório contém informações sobre usuários mapeados para cada logon, e as associações de função do logon, conforme mostrado na tabela a seguir.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Nome de logon.|  
 |**DBName**|**sysname**|Padrão de banco de dados que **LoginName** usa ao se conectar a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  

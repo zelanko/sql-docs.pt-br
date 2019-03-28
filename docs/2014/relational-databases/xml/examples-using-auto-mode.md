@@ -1,5 +1,5 @@
 ---
-title: 'Exemplos: usando o modo AUTO | Microsoft Docs'
+title: 'Exemplos: Usando o modo AUTO | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,20 +9,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - AUTO FOR XML mode, examples
 ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 969721724f3d2dd171c56d5d62e56b41ec0ece73
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 93a26764a7111a01b07d23c61bfbfb5c4a728e72
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081966"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538448"
 ---
-# <a name="examples-using-auto-mode"></a>Exemplos: Usando modo AUTO
+# <a name="examples-using-auto-mode"></a>Exemplos: Usando o modo AUTO
   Os exemplos a seguir ilustram o uso do modo AUTO. Muitas dessas consultas são especificadas em relação a documentos XML de instruções da fabricação de bicicletas que são armazenados na coluna da tabela ProductModel no banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
-## <a name="example-retrieving-customer-order-and-order-detail-information"></a>Exemplo: Recuperando informações de cliente, pedido e detalhes do pedido  
+## <a name="example-retrieving-customer-order-and-order-detail-information"></a>Exemplo: Recuperando o cliente, pedido e informações de detalhes do pedido  
  Essa consulta recupera informações de cliente, pedido e detalhes do pedido de um cliente específico.  
   
 ```  
@@ -176,7 +176,7 @@ WHERE ProductPhotoID=70
 FOR XML AUTO;  
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
  `-- result`  
   
@@ -195,7 +195,7 @@ WHERE ProductPhotoID=70
 FOR XML AUTO, BINARY BASE64;  
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
  `-- result`  
   
@@ -212,7 +212,7 @@ WHERE  ProductPhotoID=70
 FOR XML AUTO;  
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
  `<Production.PRODUCTPHOTO`  
   
@@ -222,7 +222,7 @@ FOR XML AUTO;
   
  Isso pode ser um problema, principalmente quando são executadas consultas de dbobject em um banco de dados que diferencia maiúsculas e minúsculas. Para evitar isso, as maiúsculas e minúsculas do nome da tabela ou coluna especificado nas consultas devem corresponder às maiúsculas e minúsculas do nome da tabela ou coluna do banco de dados.  
   
-## <a name="example-understanding-the-encoding"></a>Exemplo: Entendendo a codificação  
+## <a name="example-understanding-the-encoding"></a>Exemplo: Noções básicas sobre a codificação  
  Este exemplo mostra as várias codificações que ocorrem no resultado.  
   
  Crie esta tabela:  
@@ -243,7 +243,7 @@ INSERT INTO [Special Chars] VALUES ('&', 0x20), ('#', 0x20);
 SELECT * FROM [Special Chars] FOR XML AUTO;  
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
  `<Special_x0020_Chars`  
   

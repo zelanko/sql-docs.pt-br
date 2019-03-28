@@ -18,12 +18,12 @@ ms.assetid: b58d4a07-5c40-4f17-b66e-6d6b17188dda
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0993299edffce3139b468bf3ca27d49f88e8638b
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: a11fb3f879336f5217abe138c91755154df868b5
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591330"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534268"
 ---
 # <a name="sptableprivilegesex-transact-sql"></a>sp_table_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,20 +44,15 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@table_server =** ] **'**_table_server_**'**  
- É o nome do servidor vinculado para o qual as informações devem ser retornadas. *table_server* está **sysname**, sem padrão.  
+`[ @table_server = ] 'table_server'` É o nome do servidor vinculado para o qual retornar informações. *table_server* está **sysname**, sem padrão.  
   
- [  **@table_name =** ] **'**_table_name_**'**]  
- É o nome da tabela para a qual fornecer informações de privilégio de tabela. *table_name* está **sysname**, com um padrão NULL.  
+`[ @table_name = ] 'table_name']` É o nome da tabela para a qual fornecer informações de privilégio de tabela. *table_name* está **sysname**, com um padrão NULL.  
   
- [  **@table_schema =** ] **'**_table_schema_**'**  
- É o esquema de tabela. Em alguns ambientes DBMS, é o proprietário da tabela. *table_schema* está **sysname**, com um padrão NULL.  
+`[ @table_schema = ] 'table_schema'` É o esquema da tabela. Em alguns ambientes DBMS, é o proprietário da tabela. *table_schema* está **sysname**, com um padrão NULL.  
   
- [  **@table_catalog =** ] **'**_table_catalog_**'**  
- É o nome do banco de dados em que a especificada *table_name* reside. *table_catalog* está **sysname**, com um padrão NULL.  
+`[ @table_catalog = ] 'table_catalog'` É o nome do banco de dados em que a especificada *table_name* reside. *table_catalog* está **sysname**, com um padrão NULL.  
   
- [  **@fUsePattern =**] **'**_fUsePattern_**'**  
- Determina se os caracteres '_', '%', '[' e ']' são interpretados como caracteres curinga. Os valores válidos são 0 (correspondência de padrão desativada) e 1 (correspondência de padrão ativada). *fUsePattern* está **bit**, com um padrão de 1.  
+`[ @fUsePattern = ] 'fUsePattern'` Determina se os caracteres '_', '%', ' [', e ']' são interpretados como caracteres curinga. Os valores válidos são 0 (correspondência de padrão desativada) e 1 (correspondência de padrão ativada). *fUsePattern* está **bit**, com um padrão de 1.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  None  
@@ -72,7 +67,7 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
 |**CONCESSOR**|**sysname**|Nome de usuário de banco de dados que concedeu permissões neste **TABLE_NAME** para listado **usuário autorizado**. Na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna é sempre igual a **TABLE_OWNER**. Esse campo sempre retorna um valor. Além disso, a coluna GRANTOR pode ser o proprietário do banco de dados (**TABLE_OWNER**) ou um usuário a quem o proprietário do banco de dados concedeu permissão usando a cláusula WITH GRANT OPTION na instrução GRANT.|  
 |**USUÁRIO AUTORIZADO**|**sysname**|Nome de usuário de banco de dados que concedeu permissões neste **TABLE_NAME** por listado **CONCESSOR**. Esse campo sempre retorna um valor.|  
 |**PRIVILÉGIO**|**varchar(** 32 **)**|Uma das permissões de tabela disponíveis. As permissões de tabela podem ter um dos valores a seguir, ou outros valores que tenham suporte na fonte de dados quando a implementação é definida.<br /><br /> Selecione = **ao usuário autorizado** pode recuperar dados para um ou mais das colunas.<br /><br /> INSERT = **ao usuário autorizado** pode fornecer dados para novas linhas para uma ou mais das colunas.<br /><br /> UPDATE = **ao usuário autorizado** pode modificar dados existentes para um ou mais das colunas.<br /><br /> Excluir = **ao usuário autorizado** pode remover linhas da tabela.<br /><br /> REFERÊNCIAS = **ao usuário autorizado** pode fazer referência a uma coluna em uma tabela estrangeira em uma relação de chave estrangeira/chave primária. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], as relações de chave primária/chave estrangeira são definidas usando restrições de tabela.<br /><br /> O escopo de ação dado para o **ao usuário autorizado** por uma tabela específica privilégio é dependente da fonte de dados. Por exemplo, a permissão UPDATE pode habilitar o **ao usuário autorizado** para atualizar todas as colunas em uma tabela em uma fonte de dados e somente aquelas colunas para o qual o **CONCESSOR** possui permissão UPDATE em outra fonte de dados.|  
-|**IS_GRANTABLE**|**varchar (** 3 **)**|Indica se o **ao usuário autorizado** tem permissão para conceder permissões a outros usuários. Isso é frequentemente chamado de permissão de "concessão com concessão". Pode ser YES, NO ou NULL. Um valor desconhecido ou NULL refere-se a uma fonte de dados na qual a "concessão com concessão" não é aplicável.|  
+|**IS_GRANTABLE**|**varchar(** 3 **)**|Indica se o **ao usuário autorizado** tem permissão para conceder permissões a outros usuários. Isso é frequentemente chamado de permissão de "concessão com concessão". Pode ser YES, NO ou NULL. Um valor desconhecido ou NULL refere-se a uma fonte de dados na qual a "concessão com concessão" não é aplicável.|  
   
 ## <a name="remarks"></a>Comentários  
  Os resultados retornados são ordenados por **TABLE_QUALIFIER**, **TABLE_OWNER**, **TABLE_NAME**, e **PRIVILÉGIO**.  

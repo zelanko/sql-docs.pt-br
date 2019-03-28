@@ -18,12 +18,12 @@ ms.assetid: 86e24a5f-a869-43f6-b83e-c52b7b01b5ff
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cfd733d24d36b733dcefed3eea89b7be9342cd93
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 09cbcf4fca5fefa14dd435e5e91b27c8460194db
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608815"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537058"
 ---
 # <a name="sphelpfulltexttables-transact-sql"></a>sp_help_fulltext_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,18 +44,16 @@ sp_help_fulltext_tables [ [ @fulltext_catalog_name = ] 'fulltext_catalog_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@fulltext_catalog_name=**] **'***fulltext_catalog_name***'**  
- É o nome do catálogo de texto completo. *fulltext_catalog_name* está **sysname**, com um padrão NULL. Se *fulltext_catalog_name* for omitido ou for NULL, todas as tabelas indexadas de texto completo associadas com o banco de dados são retornadas. Se *fulltext_catalog_name* for especificado, mas *table_name* for omitido ou for NULL, as informações de índice de texto completo são recuperadas para cada tabela indexada de texto completo associada a este catálogo. Se os dois *fulltext_catalog_name* e *table_name* forem especificados, uma linha será retornada se *table_name* associado *fulltext_catalog_name*; Caso contrário, ocorrerá um erro.  
+`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` É o nome do catálogo de texto completo. *fulltext_catalog_name* está **sysname**, com um padrão NULL. Se *fulltext_catalog_name* for omitido ou for NULL, todas as tabelas indexadas de texto completo associadas com o banco de dados são retornadas. Se *fulltext_catalog_name* for especificado, mas *table_name* for omitido ou for NULL, as informações de índice de texto completo são recuperadas para cada tabela indexada de texto completo associada a este catálogo. Se os dois *fulltext_catalog_name* e *table_name* forem especificados, uma linha será retornada se *table_name* associado *fulltext_catalog_name*; Caso contrário, ocorrerá um erro.  
   
- [  **@table_name=**] **'***table_name***'**  
- É o nome de uma ou duas partes da tabela para a qual são solicitados metadados de texto completo. *table_name* está **nvarchar(517)**, com um valor padrão de NULL. Se apenas *table_name* for especificado, somente a linha relevante ao *table_name* é retornado.  
+`[ @table_name = ] 'table_name'` É o nome da tabela de uma ou duas partes para o qual os metadados de texto completo são solicitados. *table_name* está **nvarchar(517)**, com um valor padrão de NULL. Se apenas *table_name* for especificado, somente a linha relevante ao *table_name* é retornado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou (1) falha  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**TABLE_OWNER**|**sysname**|Proprietário da tabela. Esse é o nome do usuário de banco de dados que criou a tabela.|  
 |**TABLE_NAME**|**sysname**|Nome da tabela.|  

@@ -16,12 +16,12 @@ ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 128efbfb754508cf3ad395c89b2085f7f8b6297e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b7f1bfc868b34ac16e1c38aedc9193002d35d5b8
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783027"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532719"
 ---
 # <a name="splookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,23 +43,17 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@article_resolver =** ] **'***article_resolver***'**  
- Especifica o nome da lógica comercial personalizada cujo registro está sendo cancelado. *article_resolver* está **nvarchar (255)**, sem padrão. Se a lógica corporativa que está sendo removida for um componente COM, então esse parâmetro será o nome amigável do componente. Se a lógica corporativa for um assembly [!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework, esse parâmetro será o nome do assembly.  
+`[ @article_resolver = ] 'article_resolver'` Especifica o nome da lógica de negócios personalizada que está sendo registrada. *article_resolver* está **nvarchar (255)**, sem padrão. Se a lógica corporativa que está sendo removida for um componente COM, então esse parâmetro será o nome amigável do componente. Se a lógica corporativa for um assembly [!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework, esse parâmetro será o nome do assembly.  
   
- [ **@resolver_clsid**=] **'***resolver_clsid***'** saída  
- É o valor CLSID do objeto COM associado ao nome da lógica comercial personalizada especificada na *article_resolver* parâmetro. *resolver_clsid* está **nvarchar (50)**, com um padrão NULL.  
+`[ @resolver_clsid = ] 'resolver_clsid' OUTPUT` É o valor CLSID do objeto COM associado ao nome da lógica comercial personalizada especificada na *article_resolver* parâmetro. *resolver_clsid* está **nvarchar (50)**, com um padrão NULL.  
   
- [  **@is_dotnet_assembly=** ] **'***is_dotnet_assembly***'** saída  
- Especifica o tipo da lógica comercial personalizada que está sendo registrada. *is_dotnet_assembly* está **bit**, com um padrão de 0. **1** indica que a lógica de negócios personalizada que está sendo registrada é um manipulador de lógica de negócios Assembly; **0** indica que ele é um componente COM.  
+`[ @is_dotnet_assembly = ] 'is_dotnet_assembly' OUTPUT` Especifica o tipo de lógica de negócios personalizada que está sendo registrado. *is_dotnet_assembly* está **bit**, com um padrão de 0. **1** indica que a lógica de negócios personalizada que está sendo registrada é um manipulador de lógica de negócios Assembly; **0** indica que ele é um componente COM.  
   
- [  **@dotnet_assembly_name=** ] **'***dotnet_assembly_name***'** saída  
- É o nome do assembly que implementa o manipulador de lógica de negócios. *dotnet_assembly_name* está **nvarchar (255)**, com um valor padrão de NULL.  
+`[ @dotnet_assembly_name = ] 'dotnet_assembly_name' OUTPUT` É o nome do assembly que implementa o manipulador de lógica de negócios. *dotnet_assembly_name* está **nvarchar (255)**, com um valor padrão de NULL.  
   
- [  **@dotnet_class_name=** ] **'***dotnet_class_name***'** saída  
- É o nome da classe que substitui <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> para implementar o manipulador de lógica de negócios. *dotnet_class_name* está **nvarchar (255)**, com um valor padrão de NULL.  
+`[ @dotnet_class_name = ] 'dotnet_class_name' OUTPUT` É o nome da classe que substitui <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> para implementar o manipulador de lógica de negócios. *dotnet_class_name* está **nvarchar (255)**, com um valor padrão de NULL.  
   
- [  **@publisher=** ] **'***publisher***'**  
- É o nome do Publicador. *Publisher* está **sysname**, com um valor padrão de NULL. Use este parâmetro quando o procedimento armazenado não é chamado do Publicador. Se não for especificado, será assumido que o servidor local é o Publicador.  
+`[ @publisher = ] 'publisher'` É o nome do publicador. *Publisher* está **sysname**, com um valor padrão de NULL. Use este parâmetro quando o procedimento armazenado não é chamado do Publicador. Se não for especificado, será assumido que o servidor local é o Publicador.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

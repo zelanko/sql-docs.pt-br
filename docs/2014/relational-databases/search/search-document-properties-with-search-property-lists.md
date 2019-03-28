@@ -18,12 +18,12 @@ ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 77cb1127b7dbb7b2a49e3bafcd0b3eccc45b92ed
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ec774e4c8500df0fe9af42bf6cf48f5f691f72bc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800368"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530288"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Pesquisar propriedades de documento com listas de propriedades de pesquisa
   Anteriormente, o conteúdo das propriedades de documento não podia ser diferenciado do conteúdo do corpo do documento. Essa limitação restringia as consultas de texto completo a pesquisas genéricas em documentos inteiros. No entanto, agora você pode configurar um índice de texto completo para dar suporte à pesquisa com escopo de propriedade, como Author e Title, para tipos de documento com suporte em uma coluna de dados binários `varbinary`, `varbinary(max)` (incluindo `FILESTREAM`) ou `image`. Esse formulário de pesquisa é conhecido como *pesquisa de propriedade*.  
@@ -169,7 +169,7 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
 ##  <a name="Ov_CONTAINS_using_PROPERTY"></a> Consultando propriedades de pesquisa com CONTAINS  
  A sintaxe básica de [CONTAINS](/sql/t-sql/queries/contains-transact-sql) de uma consulta de texto completo com escopo de propriedade é a seguinte:  
   
-```tsql  
+```sql  
 SELECT column_name FROM table_name  
   WHERE CONTAINS ( PROPERTY ( column_name, 'property_name' ), '<contains_search_condition>' )  
 ```  

@@ -15,12 +15,12 @@ ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 83fc6db21fd2892ebbc42b329515a94b371cb1ce
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 2597a2e8f1f97635ed52bf639d57f8de3c26fcd4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641537"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528668"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>Exibir ou alterar propriedades de servidor (SQL Server)
   Este tópico descreve como exibir ou alterar as propriedades de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou SQL Server Configuration Manager.  
@@ -41,11 +41,11 @@ ms.locfileid: "52641537"
   
      [SQL Server Configuration Manager](#PowerShellProcedure)  
   
--   **Acompanhamento:**  [Depois que você altere as propriedades do servidor](#FollowUp)  
+-   **Acompanhamento:**  [depois que você altera as propriedades de servidor](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   Ao usar sp_configure, você deve executar RECONFIGURE ou RECONFIGURE WITH OVERRIDE depois de definir uma opção de configuração. A instrução RECONFIGURE WITH OVERRIDE normalmente é reservada para opções de configuração que devem ser usadas com extrema cautela. Entretanto, RECONFIGURE WITH OVERRIDE funciona com todas as opções de configuração e você pode usá-la em vez de RECONFIGURE.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "52641537"
   
 2.  Na caixa de diálogo **Propriedades do Servidor** , clique em uma página para exibir ou alterar informações de servidor sobre ela. Algumas propriedades são somente leitura.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-view-server-properties-by-using-the-serverproperty-built-in-function"></a>Para exibir propriedades de servidor usando a função interna SERVERPROPERTY  
   
@@ -79,7 +79,7 @@ ms.locfileid: "52641537"
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo usa a função [SERVERPROPERTY](/sql/t-sql/functions/serverproperty-transact-sql) em uma função interna em uma instrução `SELECT` para retornar informações sobre o servidor atual. Essa situação é útil quando existem diversas instâncias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instaladas no servidor Windows e o cliente deve abrir outra conexão à mesma instância usada pela conexão atual.  
   
-    ```tsql  
+    ```sql  
     SELECT CONVERT( sysname, SERVERPROPERTY('servername'));  
     GO  
     ```  
@@ -92,7 +92,7 @@ ms.locfileid: "52641537"
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo consulta a exibição de catálogo [sys.servers](/sql/relational-databases/system-catalog-views/sys-servers-transact-sql) para retornar o nome (`name`) e a ID (`server_id`) do servidor atual e o nome do provedor OLE DB (`provider`) para conectar a um servidor vinculado.  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks2012;   
     GO  
     SELECT name, server_id, provider  
@@ -126,7 +126,7 @@ ms.locfileid: "52641537"
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo mostra como usar [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) para alterar a propriedade de um servidor. O exemplo altera o valor da opção `fill factor` para `100`. O servidor deve ser reiniciado para que a alteração entre em vigor.  
   
-```tsql  
+```sql  
 Use AdventureWorks2012;  
 GO  
 sp_configure 'show advanced options', 1;  
@@ -154,7 +154,7 @@ GO
   
 4.  Na caixa de diálogo **Propriedades do SQL Server (\<***instancename***>)**, altere as propriedades do servidor na guia **Serviço** ou na guia **Avançado** e, depois, clique em **OK**.  
   
-##  <a name="FollowUp"></a> Acompanhar: Depois que você altere as propriedades do servidor  
+##  <a name="FollowUp"></a> Acompanhamento: depois que você altera as propriedades de servidor  
  Para algumas propriedades, o servidor terá que ser reiniciado antes de a alteração entrar em vigor.  
   
 ## <a name="see-also"></a>Consulte também  

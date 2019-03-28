@@ -19,12 +19,12 @@ ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 528881f91b39e2dd25ce76c63c5cbead33392265
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0cd447f6ad12ee12c96f6bcbb6af858aa32fdb06
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057477"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532888"
 ---
 # <a name="execute-a-stored-procedure"></a>Executar um procedimento armazenado
   Este tópico descreve como executar um procedimento armazenado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -51,9 +51,9 @@ ms.locfileid: "48057477"
   
 ###  <a name="Restrictions"></a> Limitações e restrições  
   
--   O agrupamento de banco de dados de chamada é usado durante a correspondência de nomes dos procedimentos do sistema. Portanto, em seu aplicativo, você deve sempre fazer a diferenciação exata entre maiúsculas e minúsculas nos nomes em chamadas de procedimento. Por exemplo, este código falhará se for executado no contexto de um banco de dados que tenha um agrupamento com diferenciação de maiúsculas e minúsculas:  
+-   A ordenação de banco de dados de chamada é usada durante a correspondência de nomes dos procedimentos do sistema. Portanto, em seu aplicativo, você deve sempre fazer a diferenciação exata entre maiúsculas e minúsculas nos nomes em chamadas de procedimento. Por exemplo, este código falhará se for executado no contexto de um banco de dados que tenha uma ordenação com diferenciação de maiúsculas e minúsculas:  
   
-    ```tsql  
+    ```sql  
     EXEC SP_heLP; -- Will fail to resolve because SP_heLP does not equal sp_help  
     ```  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48057477"
   
      Procedimentos armazenados do sistema começam com o prefixo **sp_**. Como eles aparecem logicamente em todos os bancos de dados definidos pelo usuário e o sistema, podem ser executados de qualquer banco de dados sem ter que qualificar totalmente o nome de procedimento. No entanto, recomendamos que você qualifique por esquema todos os nomes dos procedimentos armazenados do sistema com o nome do esquema **sys** para evitar conflitos de nomes. O exemplo a seguir mostra o método recomendado para chamar um procedimento armazenado do sistema.  
   
-    ```tsql  
+    ```sql  
     EXEC sys.sp_who;  
     ```  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48057477"
   
      O exemplo a seguir mostra o método recomendado para executar um procedimento armazenado definido pelo usuário. Observe que o procedimento aceita um parâmetro de entrada. Para obter informações sobre como especificar parâmetros de entrada e saída, veja [Especificar parâmetros](specify-parameters.md).  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     EXEC dbo.uspGetEmployeeManagers @BusinessEntityID = 50;  
@@ -85,7 +85,7 @@ ms.locfileid: "48057477"
   
      -Ou-  
   
-    ```tsql  
+    ```sql  
     EXEC AdventureWorks2012.dbo.uspGetEmployeeManagers 50;  
     GO  
     ```  
@@ -164,7 +164,7 @@ ms.locfileid: "48057477"
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo mostra como executar um procedimento armazenado que espera um parâmetro. O exemplo executa o procedimento armazenado `uspGetEmployeeManagers` com o valor  `6` especificado como o parâmetro `@EmployeeID` .  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC dbo.uspGetEmployeeManagers 6;  
@@ -179,7 +179,7 @@ GO
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo mostra como usar [sp_procoption](/sql/relational-databases/system-stored-procedures/sp-procoption-transact-sql) para definir um procedimento para execução automática.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_procoption @ProcName = '<procedure name>'   
@@ -195,7 +195,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo mostra como usar [sp_procoption](/sql/relational-databases/system-stored-procedures/sp-procoption-transact-sql) para interromper a execução automática de um procedimento.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_procoption @ProcName = '<procedure name>'   

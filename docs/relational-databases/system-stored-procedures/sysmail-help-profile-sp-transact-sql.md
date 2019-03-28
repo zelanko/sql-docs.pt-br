@@ -18,12 +18,12 @@ ms.assetid: d7169a8e-92b1-49eb-9124-3b2f69755ddb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b953f619ab422eba81a925375d9ae8b0cd60e82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b2bd1919210f08dc0323400ceddeb47f74d21cc9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836454"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536448"
 ---
 # <a name="sysmailhelpprofilesp-transact-sql"></a>sysmail_help_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,9 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@profile_id** =] *profile_id*  
- A id do perfil do qual retornar informações. *profile_id* está **int**, com um padrão NULL.  
+`[ @profile_id = ] profile_id` A id de perfil para retornar informações para. *profile_id* está **int**, com um padrão NULL.  
   
- [ **@profile_name** =] **'***profile_name***'**  
- O nome do perfil do qual retornar informações. *profile_name* está **sysname**, com um padrão NULL.  
+`[ @profile_name = ] 'profile_name'` O nome do perfil para retornar informações para. *profile_name* está **sysname**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -54,10 +52,10 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
   
 ||||  
 |-|-|-|  
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |**profile_id**|**int**|A ID de perfil para o perfil.|  
 |**name**|**sysname**|O nome de perfil para o perfil.|  
-|**Descrição**|**nvarchar(256)**|A descrição para o perfil.|  
+|**description**|**nvarchar(256)**|A descrição para o perfil.|  
   
 ## <a name="remarks"></a>Comentários  
  Quando um nome de perfil ou a id do perfil for especificado, **sysmail_help_profile_sp** retorna informações sobre esse perfil. Caso contrário, **sysmail_help_profile_sp** retorna informações sobre cada perfil na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância.  

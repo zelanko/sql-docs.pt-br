@@ -15,15 +15,15 @@ helpviewer_keywords:
 - inline XSD schema generation [SQL Server]
 - XMLDATA option
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ad003060588215c0d5a218ade5103f5748e5ebfc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 9b6c8233b95f3f95235bb4f618358d4680d3088f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369558"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529328"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>Gerar um esquema XSD embutido
   Em uma cláusula FOR XML, é possível solicitar que a consulta retorne um esquema embutido junto com os resultados da consulta. Para obter um esquema XDR, use a palavra-chave XMLDATA na cláusula FOR XML. Para obter um esquema XSD, use a palavra-chave XMLSCHEMA.  
@@ -313,7 +313,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  `</row>`  
   
-### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>Caso 2: Uma chave e uma coluna não chave do mesmo tipo  
+### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>Caso 2: Uma coluna de chave e uma de não chave do mesmo tipo  
  A consulta a seguir ilustra uma coluna de chave e uma de não chave do mesmo tipo.  
   
 ```  
@@ -391,7 +391,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  Observe que, no esquema XSD embutido, o elemento <`Col`> correspondente a Col2 tem minOccurs definido como 0.  
   
-### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>Caso 3: Os dois elementos de diferentes tipos e colunas correspondentes podem ser NULL  
+### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>Caso 3: Os dois elementos de tipos diferentes e colunas correspondentes podem ser NULL  
  A consulta seguinte é especificada para a tabela de exemplo mostrada no caso 2:  
   
 ```  

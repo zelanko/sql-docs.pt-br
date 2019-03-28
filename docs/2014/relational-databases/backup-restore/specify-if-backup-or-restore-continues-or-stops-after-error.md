@@ -15,12 +15,12 @@ ms.assetid: 042be17a-b9b0-4629-b6bb-b87a8bc6c316
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5586e7f4ff8ebdfbb7f2db44dc79155eca60b8fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 79ab28861fb4ad1eb3fb166e0cccb6b30ff89f86
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203676"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537378"
 ---
 # <a name="specify-whether-a-backup-or-restore-operation-continues-or-stops-after-encountering-an-error-sql-server"></a>Especificar se uma operação de backup ou restauração para ou continua depois de encontrar um erro (SQL Server)
   Este tópico descreve como especificar se uma operação de backup ou restauração continuará ou será interrompida após encontrar um erro no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -70,7 +70,7 @@ ms.locfileid: "48203676"
   
 3.  Na instrução [BACKUP](/sql/t-sql/statements/backup-transact-sql) , especifique a opção CONTINUE_AFTER ERROR para continuar ou a opção STOP_ON_ERROR para parar. O comportamento padrão é parar depois de encontrar um erro. Este exemplo instrui a operação de backup a continuar apesar de encontrar um erro.  
   
-```tsql  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
  TO DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'  
    WITH CHECKSUM, CONTINUE_AFTER_ERROR;  
@@ -85,7 +85,7 @@ GO
   
 3.  Na instrução [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) , especifique a opção CONTINUE_AFTER ERROR para continuar ou a opção STOP_ON_ERROR para parar. O comportamento padrão é parar depois de encontrar um erro. Este exemplo instrui a operação de restauração a continuar apesar de encontrar um erro.  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012   
  FROM DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'   
    WITH CHECKSUM, CONTINUE_AFTER_ERROR;  

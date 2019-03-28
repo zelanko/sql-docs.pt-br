@@ -18,12 +18,12 @@ ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c6d514adfed27693456338ece6fa58638e319475
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d47f8d8ebd0e37f106e7610937af8f6585820cce
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629804"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533428"
 ---
 # <a name="sphelpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,19 +40,18 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@dbname=** ] **'***name***'**  
- É o nome do banco de dados cujas informações são reportadas. *nome da* está **sysname**, sem padrão. Se *nome* não for especificado, **sp_helpdb** relatórios em todos os bancos de dados a **sys. Databases** exibição do catálogo.  
+`[ @dbname = ] 'name'` É o nome do banco de dados para os quais informações são relatadas. *nome da* está **sysname**, sem padrão. Se *nome* não for especificado, **sp_helpdb** relatórios em todos os bancos de dados a **sys. Databases** exibição do catálogo.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome do banco de dados.|  
-|**tamanho de BD**|**nvarchar(13)**|Tamanho total do banco de dados.|  
-|**Proprietário**|**sysname**|Banco de dados proprietário, como **sa**.|  
+|**db_size**|**nvarchar(13)**|Tamanho total do banco de dados.|  
+|**owner**|**sysname**|Banco de dados proprietário, como **sa**.|  
 |**dbid**|**smallint**|ID do banco de dados.|  
 |**created**|**nvarchar(11)**|A data em que o banco de dados foi criado.|  
 |**status**|**nvarchar(600)**|Lista de valores separados por vírgula de opções de banco de dados que estão atualmente definidas no banco de dados.<br /><br /> As opções avaliadas como boolianas serão listadas apenas se estiverem habilitadas. Opções não Boolianas são listadas com seus valores correspondentes na forma de *option_name*=*valor*.<br /><br /> Para obter mais informações, veja [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
@@ -60,16 +59,16 @@ sp_helpdb [ [ @dbname= ] 'name' ]
   
  Se *nome* for especificado, há um conjunto de resultados adicionais que mostra a alocação de arquivo para o banco de dados especificado.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**nchar(128)**|Nome do arquivo lógico.|  
 |**fileid**|**smallint**|ID do arquivo.|  
 |**filename**|**nchar(260)**|Nome do arquivo do -sistema operacional (nome do arquivo físico).|  
 |**filegroup**|**nvarchar(128)**|Grupo de arquivos ao qual o arquivo pertence.<br /><br /> NULL = ele é um arquivo de log. Ele nunca faz parte de um grupo de arquivos.|  
 |**size**|**nvarchar(18)**|Tamanho do arquivo em megabytes.|  
-|**tamanho máximo**|**nvarchar(18)**|Tamanho máximo até o qual o arquivo pode crescer. Um valor UNLIMITED neste campo indica que o arquivo cresce até o disco ficar cheio.|  
+|**maxsize**|**nvarchar(18)**|Tamanho máximo até o qual o arquivo pode crescer. Um valor UNLIMITED neste campo indica que o arquivo cresce até o disco ficar cheio.|  
 |**growth**|**nvarchar(18)**|Incremento de crescimento do arquivo. Indica a quantidade de espaço adicionada ao arquivo sempre que um novo espaço for necessário.|  
-|**Uso**|**varchar(9)**|Uso do arquivo Para um arquivo de dados, o valor será **'dados'** e para o arquivo de log é o valor **'log apenas'**.|  
+|**usage**|**varchar(9)**|Uso do arquivo Para um arquivo de dados, o valor será **'dados'** e para o arquivo de log é o valor **'log apenas'**.|  
   
 ## <a name="remarks"></a>Comentários  
  O **status** quais opções foram definidas como ON no banco de dados de relatórios do conjunto de colunas no resultado. Todas as opções de banco de dados não são informadas por meio de **status** coluna. Para ver uma lista completa das configurações de opção de banco de dados atual, use o **sys. Databases** exibição do catálogo.  

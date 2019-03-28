@@ -18,12 +18,12 @@ ms.assetid: c851c1ab-3b29-4b99-9902-78c2665a844b
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 17fe4fd7edad9df6bccace9d301516ae7683edf3
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: c6a6e31b4dc36e0f280dfb03d8eadf09a7d4ff7c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255661"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534858"
 ---
 # <a name="xpgrantlogin-transact-sql"></a>xp_grantlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@loginame =** ] **'**_login_**'**  
- É o nome do usuário ou grupo do Windows a ser adicionado. O usuário do Windows ou grupo deve ser qualificado com um nome de domínio do Windows na forma *domínio*\\*usuário*. *login* está **sysname**, sem padrão.  
+`[ @loginame = ] 'login'` É o nome do usuário do Windows ou grupo a ser adicionado. O usuário do Windows ou grupo deve ser qualificado com um nome de domínio do Windows na forma *domínio*\\*usuário*. *login* está **sysname**, sem padrão.  
   
- [ **@logintype =** ] **'**_logintype_**'**  
- É o nível de segurança do logon que está recebendo o acesso. *logintype* está **varchar(5)**, com um padrão NULL. Somente **admin** pode ser especificado. Se **admin** for especificado, *login* tem acesso concedido ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e adicionado como um membro do **sysadmin** função de servidor fixa.  
+`[ @logintype = ] 'logintype'` É o nível de segurança do logon que está sendo concedido acesso. *logintype* está **varchar(5)**, com um padrão NULL. Somente **admin** pode ser especificado. Se **admin** for especificado, *login* tem acesso concedido ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e adicionado como um membro do **sysadmin** função de servidor fixa.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

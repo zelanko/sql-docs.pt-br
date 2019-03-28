@@ -18,19 +18,19 @@ ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9fac8fd56139b340df2a2c4cdcfc7376de02dcab
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 3f842060c6ca621fc52fa34f08838541dc65e993
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168846"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535628"
 ---
 # <a name="sphelpmaintenanceplan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna informações sobre o plano de manutenção especificado. Se um plano não for especificado, este procedimento armazenado retornará informações sobre todos os planos de manutenção.  
   
-> **Observação:** esse procedimento armazenado é usado com planos de manutenção de banco de dados. Este recurso foi substituído por planos de manutenção que não usam esse procedimento armazenado. Use esse procedimento para manter planos de manutenção de banco de dados em instalações que foram atualizadas de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+> **OBSERVAÇÃO:** Este procedimento armazenado é usado com planos de manutenção de banco de dados. Este recurso foi substituído por planos de manutenção que não usam esse procedimento armazenado. Use esse procedimento para manter planos de manutenção de banco de dados em instalações que foram atualizadas de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
@@ -45,23 +45,22 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@plan_id =**] **'**_plano\_id_**'**  
- Especifica a ID do plano do plano de manutenção. *plan_id* está **UNIQUEIDENTIFIER**. O padrão é NULO.  
+`[ @plan_id = ] 'plan\_id'` Especifica a ID do plano do plano de manutenção. *plan_id* está **UNIQUEIDENTIFIER**. O padrão é NULO.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  None  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Se *plan_id* for especificado, **sp_help_maintenance_plan** retornará três tabelas: plano, o banco de dados e o trabalho.  
+ Se *plan_id* for especificado, **sp_help_maintenance_plan** retornará três tabelas: Plano, o banco de dados e o trabalho.  
   
 ### <a name="plan-table"></a>Tabela de plano  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**plan_id**|**uniqueidentifier**|Identificação do plano de manutenção.|  
 |**plan_name**|**sysname**|Nome do plano de manutenção.|  
 |**date_created**|**datetime**|Data em que o plano de manutenção foi criado.|  
-|**Proprietário**|**sysname**|Proprietário do plano de manutenção.|  
+|**owner**|**sysname**|Proprietário do plano de manutenção.|  
 |**max_history_rows**|**int**|Número máximo de linhas alocado para o registro do histórico do plano de manutenção na tabela de sistema.|  
 |**remote_history_server**|**int**|O nome do servidor remoto para o qual o relatório de histórico poderia ser escrito.|  
 |**max_remote_history_rows**|**int**|Número máximo de linhas alocado na tabela do sistema em um servidor remoto para o qual o relatório de histórico poderia ser escrito.|  
@@ -72,13 +71,13 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
   
 ### <a name="database-table"></a>Tabela de banco de dados  
   
-|Nome da coluna|Description|  
+|Nome da coluna|Descrição|  
 |-----------------|-----------------|  
 |**database_name**|Nome de todos os bancos de dados associados a esse plano de manutenção. *database_name* é **sysname**.|  
   
 ### <a name="job-table"></a>Tabela de trabalho  
   
-|Nome da coluna|Description|  
+|Nome da coluna|Descrição|  
 |-----------------|-----------------|  
 |**job_id**|ID de todos os trabalhos associados ao plano de manutenção. *job_id* está **uniqueidentifier**.|  
   

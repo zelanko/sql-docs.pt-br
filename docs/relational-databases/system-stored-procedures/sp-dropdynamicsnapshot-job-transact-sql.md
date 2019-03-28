@@ -16,12 +16,12 @@ ms.assetid: 128e428a-01b3-4062-8c6e-d22d5fa268a9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e4612c7b20e448eecbd6c83a3d09d0796dcff542
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 04564b2d2830a6bd925a1c334c8026b376d0894f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126251"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526378"
 ---
 # <a name="spdropdynamicsnapshotjob-transact-sql"></a>sp_dropdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,20 +41,16 @@ sp_dropdynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'**_publicação_**'**  
- É o nome da publicação da qual o trabalho de instantâneo de dados filtrados está sendo removido. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação da qual o trabalho de instantâneo de dados filtrados está sendo removido. *publicação* está **sysname**, sem padrão.  
   
- [ **@dynamic_snapshot_jobname**=] **'**_dynamic_snapshot_jobname_**'**  
- É o nome do trabalho do instantâneo de dados filtrado que está sendo removido. *dynamic_snapshot_jobname*é sysname, e se não for fornecido, será padronizado para qualquer trabalho que o nome é associado ao *dynamic_snapshot_jobid*.  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` O nome do trabalho de instantâneo de dados filtrados está sendo removido. *dynamic_snapshot_jobname*é sysname, e se não for fornecido, será padronizado para qualquer trabalho que o nome é associado ao *dynamic_snapshot_jobid*.  
   
- [ **@dynamic_snapshot_jobid**=] **'**_dynamic_snapshot_jobid_**'**  
- É um identificador do trabalho de instantâneo de dados filtrado que está sendo removido. *dynamic_snapshot_jobid*está **uniqueidentifier**, com um padrão NULL.  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` Um identificador para o trabalho de instantâneo de dados filtrados está sendo removido. *dynamic_snapshot_jobid*está **uniqueidentifier**, com um padrão NULL.  
   
 > [!IMPORTANT]  
 >  Somente *dynamic_snapshot_jobid*ou *dynamic_snapshot_jobname* pode ser especificado. Se não forem fornecidos valores para uma *dynamic_snapshot_jobid*ou *dynamic_snapshot_jobname*, todos os trabalhos de instantâneo dinâmico para a publicação são removidos.  
   
- [  **@ignore_distributor =**] *ignore_distributor*  
- *ignore_distributor* está **bit**, com um padrão de **0**. Esse parâmetro pode ser usado para descartar um trabalho de instantâneo dinâmico sem realizar tarefas de limpeza no Distribuidor.  
+`[ @ignore_distributor = ] ignore_distributor` *ignore_distributor* está **bit**, com um padrão de **0**. Esse parâmetro pode ser usado para descartar um trabalho de instantâneo dinâmico sem realizar tarefas de limpeza no Distribuidor.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

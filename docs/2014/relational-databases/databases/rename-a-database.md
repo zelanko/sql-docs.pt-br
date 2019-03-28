@@ -13,12 +13,12 @@ ms.assetid: 44c69d35-abcb-4da3-9370-5e0bc9a28496
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8226ca15ed39dd6cc24c7235f54a047d2af86508
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f014cb37c6c28a0c9a91bd811b9e94d734167e1e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783618"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531419"
 ---
 # <a name="rename-a-database"></a>Renomear um banco de dados
   Este tópico descreve como renomear um banco de dados definido pelo usuário no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. O nome do banco de dados pode incluir qualquer caractere que segue as regras para identificadores.  
@@ -41,7 +41,7 @@ ms.locfileid: "52783618"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   Os bancos de dados de sistema não podem ser renomeados.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "52783618"
   
 4.  Digite o novo nome do banco de dados e, depois, clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-rename-a-database"></a>Para renomear um banco de dados  
   
@@ -72,7 +72,7 @@ ms.locfileid: "52783618"
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo altera o nome do banco de dados `AdventureWorks2012` para `Northwind`.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE AdventureWorks2012  
@@ -81,7 +81,7 @@ GO
 ```  
   
 ###  <a name="TsqlExample"></a>   
-##  <a name="FollowUp"></a> Acompanhar: Depois de renomear um banco de dados  
+##  <a name="FollowUp"></a> Acompanhamento: Depois de renomear um banco de dados  
  Faça backup do banco de dados **mestre** e, em seguida, renomeie qualquer banco de dados.  
   
 ## <a name="see-also"></a>Consulte também  

@@ -18,12 +18,12 @@ ms.assetid: c440f5c9-9884-4196-b07c-55d87afb17c3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4d45252f16703cb52a3e78c1b236dd9d4cbfbde4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f12ce5837e47ce9cb647d1f7364ce23ad921e26c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846394"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526268"
 ---
 # <a name="spnotifyoperator-transact-sql"></a>sp_notify_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,28 +48,21 @@ sp_notify_operator
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@profile_name=** ] **'***profilename***'**  
- O nome do perfil do Database Mail a ser usado para enviar a mensagem. *ProfileName* está **nvarchar (128)**. Se *profilename* não for especificado, o perfil de email de banco de dados padrão será usado.  
+`[ @profile_name = ] 'profilename'` O nome do perfil do Database Mail para usar para enviar a mensagem. *ProfileName* está **nvarchar (128)**. Se *profilename* não for especificado, o perfil de email de banco de dados padrão será usado.  
   
- [ **@id=** ] *id*  
- O identificador do operador para envio da mensagem. *ID* está **int**, com um padrão NULL. Um dos *identificação* ou *nome* deve ser especificado.  
+`[ @id = ] id` O identificador do operador para enviar a mensagem. *ID* está **int**, com um padrão NULL. Um dos *identificação* ou *nome* deve ser especificado.  
   
- [ **@name=** ] **'***name***'**  
- O nome do operador para o qual enviar a mensagem. *nome da* está **nvarchar (128)**, com um padrão NULL. Um dos *identificação* ou *nome* deve ser especificado.  
+`[ @name = ] 'name'` O nome do operador para enviar a mensagem. *nome da* está **nvarchar (128)**, com um padrão NULL. Um dos *identificação* ou *nome* deve ser especificado.  
   
-> **Observação:** um endereço de email deve ser definido para o operador que ele possa receber mensagens.  
+> **OBSERVAÇÃO:** Um endereço de email deve ser definido para o operador para que ele possa receber mensagens.  
   
- [  **@subject=** ] **'***assunto***'**  
- O assunto da mensagem de email. *Assunto* está **nvarchar(256)** sem nenhum padrão.  
+`[ @subject = ] 'subject'` O assunto da mensagem de email. *Assunto* está **nvarchar(256)** sem nenhum padrão.  
   
- [  **@body=** ] **'***mensagem***'**  
- O corpo da mensagem de email. *mensagem* está **nvarchar (max)** sem nenhum padrão.  
+`[ @body = ] 'message'` O corpo da mensagem de email. *mensagem* está **nvarchar (max)** sem nenhum padrão.  
   
- [ **@file_attachments=** ] **'***attachment***'**  
- O nome de um arquivo a ser anexado à mensagem de email. *anexo* está **nvarchar(512)**, sem padrão.  
+`[ @file_attachments = ] 'attachment'` O nome de um arquivo a ser anexado à mensagem de email. *anexo* está **nvarchar(512)**, sem padrão.  
   
- [ **@mail_database=** ] **'***mail_host_database***'**  
- Especifica o nome do banco de dados host de email. *mail_host_database* está **nvarchar (128)**. Se nenhum *mail_host_database* for especificado, o **msdb** banco de dados é usado por padrão.  
+`[ @mail_database = ] 'mail_host_database'` Especifica o nome do host de database mail. *mail_host_database* is **nvarchar(128)**. Se nenhum *mail_host_database* for especificado, o **msdb** banco de dados é usado por padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

@@ -18,19 +18,19 @@ ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a15e965cef7109d42383d1a4dc4750c5dfef7374
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: fb0923c57006041c8d01fd0beecbc7cef08c1135
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213765"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535258"
 ---
 # <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 Captura dados de diagnóstico e informações de integridade sobre o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para detectar falhas potenciais. O procedimento é executado no modo de repetição e envia resultados periodicamente. Pode ser invocado a partir de uma conexão comum ou DAC.  
   
-**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,8 +41,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@repeat_interval** =] **'***repeat_interval_in_seconds***'**  
- Indica o intervalo de tempo no qual o procedimento armazenado será executado repetidamente para enviar informações de integridade.  
+`[ @repeat_interval = ] 'repeat_interval_in_seconds'` Indica o intervalo de tempo em que o procedimento armazenado será executado repetidamente para enviar informações de integridade.  
   
  *repeat_interval_in_seconds* está **int** com o padrão de 0. Os valores de parâmetros válidos são 0 ou qualquer valor igual ou superior a 5. O procedimento armazenado deve ser executado por pelo menos 5 segundos para retornar dados completos. O valor mínimo de execução do procedimento armazenado no modo de repetição é de 5 segundos.  
   
@@ -69,7 +68,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
  Aqui estão as descrições dos cinco componentes:  
   
--   **sistema**: Coleta dados de uma perspectiva do sistema em spinlocks, condições de processamento severas, tarefas não produzidas, falhas de página e uso da CPU. Essas informações produzem uma recomendação de estado de integridade geral.  
+-   **system**: Coleta dados de uma perspectiva do sistema em spinlocks, condições de processamento severas, tarefas não produzidas, falhas de página e uso da CPU. Essas informações produzem uma recomendação de estado de integridade geral.  
   
 -   **recurso**:  Coleta dados de uma perspectiva de recurso na memória física e virtual, pools de buffers, páginas, cache e outros objetos de memória. Essas informações produz uma recomendação de estado de integridade geral.  
   

@@ -18,12 +18,12 @@ ms.assetid: a828e55c-633a-41cf-9769-a0698b446e6c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ce8549b95348085699694c17027c2dd393f5b1f5
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: b00e0eed5a27c9d795de027f82b01763c44ab80e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169176"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526478"
 ---
 # <a name="sysmailaddprofilesp-transact-sql"></a>sysmail_add_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,11 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@profile_name** =] **'**_perfil\_nome_**'**  
- O nome para o novo perfil. *profile_name* está **sysname**, sem padrão.  
+`[ @profile_name = ] 'profile\_name'` O nome para o novo perfil. *profile_name* está **sysname**, sem padrão.  
   
- [ **@description** =] **'**_descrição_**'**  
- A descrição opcional para o novo perfil. *Descrição* está **nvarchar(256)**, sem padrão.  
+`[ @description = ] 'description'` A descrição opcional para o novo perfil. *Descrição* está **nvarchar(256)**, sem padrão.  
   
- [ **@profile_id** =] _nova\_perfil\_id_**saída**  
- Retorna a ID para o novo perfil. *new_profile_id* está **int**, com um padrão NULL.  
+`[ @profile_id = ] _new\_profile\_idOUTPUT` Retorna a ID para o novo perfil. *new_profile_id* está **int**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

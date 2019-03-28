@@ -12,12 +12,12 @@ ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aa4fd0543c45e26f305506280bccce1f83107e55
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ca25b7c537c333d6bc9eb7745ea2ec6ad6055c4b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393289"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536498"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>Trabalhar com diretórios e caminhos em FileTables
   Descreve a estrutura de diretórios na qual os arquivos são armazenados em FileTables.  
@@ -34,7 +34,7 @@ ms.locfileid: "52393289"
 ##  <a name="BestPracticeRelativePaths"></a> Como: Usar caminhos relativos para código portátil  
  Para manter código e aplicativos independentes do computador e do banco de dados atuais, evite escrever código baseado em caminhos de arquivo absolutos. Em vez disso, obtenha o caminho completo para um arquivo em tempo de execução usando as funções [FileTableRootPath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/filetablerootpath-transact-sql) e [GetFileNamespacePath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql) juntas, conforme mostrado no exemplo a seguir. Por padrão, a função `GetFileNamespacePath` retorna o caminho relativo do arquivo sob o caminho raiz do banco de dados.  
   
-```tsql  
+```sql  
 USE database_name;  
 DECLARE @root nvarchar(100);  
 DECLARE @fullpath nvarchar(1000);  

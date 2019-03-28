@@ -16,12 +16,12 @@ ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 90705da83013de65423aa2984293f8f780194de0
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 07259854acfcad39a583b117a51bcda9de809486
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588930"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527878"
 ---
 # <a name="sphelpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,27 +43,21 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication =** ] **'**_publicação_**'**  
- É o nome da publicação associada. *publicação* está **sysname**, com um padrão de **%**, que retorna todas as informações de assinatura para esse servidor.  
+`[ @publication = ] 'publication'` É o nome da publicação associada. *publicação* está **sysname**, com um padrão de **%**, que retorna todas as informações de assinatura para esse servidor.  
   
- [  **@article=** ] **'**_artigo_**'**  
- É o nome do artigo. *artigo* está **sysname**, com um padrão de **%**, que retorna todas as informações de assinatura para as publicações e assinantes selecionados. Se **todos os**, apenas uma entrada é retornada para a assinatura completa em uma publicação.  
+`[ @article = ] 'article'` É o nome do artigo. *artigo* está **sysname**, com um padrão de **%**, que retorna todas as informações de assinatura para as publicações e assinantes selecionados. Se **todos os**, apenas uma entrada é retornada para a assinatura completa em uma publicação.  
   
- [  **@subscriber=** ] **'**_assinante_**'**  
- É o nome do Assinante no qual obter informações de assinaturas. *assinante* está **sysname**, com um padrão de **%**, que retorna todas as informações de assinatura para as publicações e assinantes selecionados.  
+`[ @subscriber = ] 'subscriber'` É o nome do assinante no qual obter informações de assinatura. *assinante* está **sysname**, com um padrão de **%**, que retorna todas as informações de assinatura para as publicações e assinantes selecionados.  
   
- [  **@destination_db=** ] **'**_destination_db_**'**  
- É o nome do banco de dados de destino. *destination_db* está **sysname**, com um padrão de **%**.  
+`[ @destination_db = ] 'destination_db'` É o nome do banco de dados de destino. *destination_db* está **sysname**, com um padrão de **%**.  
   
- [  **@found=** ] **'**_encontrado_**'** saída  
- É um sinalizador para indicar linhas de retorno. *encontrado*está **int** e um parâmetro de saída, com um padrão de 23456.  
+`[ @found = ] 'found'OUTPUT` É um sinalizador para indicar linhas de retorno. *encontrado*está **int** e um parâmetro de saída, com um padrão de 23456.  
   
  **1** indica que a publicação foi localizada.  
   
  **0** indica a publicação não foi encontrada.  
   
- [ **@publisher**=] **'**_publisher_**'**  
- É o nome do Publicador. *Publisher* está **sysname**e assume como padrão o nome do servidor atual.  
+`[ @publisher = ] 'publisher'` É o nome do publicador. *Publisher* está **sysname**e assume como padrão o nome do servidor atual.  
   
 > [!NOTE]  
 >  *publicador* não deve ser especificado, exceto quando ele for um publicador Oracle.  
@@ -73,10 +67,10 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**Assinante**|**sysname**|Nome do Assinante.|  
-|**publicação**|**sysname**|Nome da publicação.|  
+|**publication**|**sysname**|Nome da publicação.|  
 |**article**|**sysname**|Nome do artigo.|  
 |**banco de dados de destino**|**sysname**|Nome do banco de dados de destino no qual os dados replicados são colocados.|  
-|**status da assinatura**|**tinyint**|O status da assinatura:<br /><br /> **0** = inativo<br /><br /> **1** = assinado<br /><br /> **2** = ativo|  
+|**status da assinatura**|**tinyint**|O status da assinatura:<br /><br /> **0** = inativo<br /><br /> **1** = assinado<br /><br /> **2** = Active|  
 |**tipo de sincronização**|**tinyint**|O tipo de sincronização da assinatura:<br /><br /> **1** = automático<br /><br /> **2** = nenhum|  
 |**tipo de assinatura**|**int**|O tipo de assinatura:<br /><br /> **0** = push<br /><br /> **1** = pull<br /><br /> **2** = anônimo|  
 |**assinatura completa**|**bit**|Se a assinatura é para todos os artigos na publicação:<br /><br /> **0** = Não<br /><br /> **1** = Sim|  

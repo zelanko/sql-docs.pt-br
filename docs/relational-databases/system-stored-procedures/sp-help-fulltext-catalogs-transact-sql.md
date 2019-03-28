@@ -18,12 +18,12 @@ ms.assetid: 1b94f280-e095-423f-88bc-988c9349d44c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 89e46b81abfc50f8d793d55da850cf0ce9ee12c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06429303e70cd63e15b35d4d88181379c65bb09b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680996"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532988"
 ---
 # <a name="sphelpfulltextcatalogs-transact-sql"></a>sp_help_fulltext_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_help_fulltext_catalogs [ @fulltext_catalog_name = ] 'fulltext_catalog_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@fulltext_catalog_name=**] **'***fulltext_catalog_name***'**  
- É o nome do catálogo de texto completo. *fulltext_catalog_name* está **sysname**. Se este parâmetro for omitido ou tiver o valor NULL, serão retornadas informações sobre todos os catálogos de texto completo associados ao banco de dados atual.  
+`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` É o nome do catálogo de texto completo. *fulltext_catalog_name* está **sysname**. Se este parâmetro for omitido ou tiver o valor NULL, serão retornadas informações sobre todos os catálogos de texto completo associados ao banco de dados atual.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou (1) falha  
@@ -52,7 +51,7 @@ sp_help_fulltext_catalogs [ @fulltext_catalog_name = ] 'fulltext_catalog_name'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Esta tabela mostra o conjunto de resultados, ordenada por **ftcatid**.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**fulltext_catalog_id**|**smallint**|Identificador do catálogo de texto completo.|  
 |**NOME**|**sysname**|Nome do catálogo de texto completo.|  

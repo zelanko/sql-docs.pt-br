@@ -18,12 +18,12 @@ ms.assetid: 45b3dc1c-1cde-45b7-a248-5195c12973e9
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 8914ce54d85e99213d923d7bebc186f61f928cf9
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 8980ab1f968bcc842fdd17a6095a9945fcc26b42
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100474"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526818"
 ---
 # <a name="spchangeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,11 +46,9 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@objname =** ] **'**_objeto_**'**  
- É o nome de uma tabela, exibição ou função definida pelo usuário já existente, ou de um procedimento armazenado no banco de dados atual. *objeto* é um **nvarchar(776)**, sem padrão. *objeto* pode ser qualificado com o proprietário do objeto existente, na forma _existing_owner_**.** _objeto_ se o esquema e seu proprietário tiverem o mesmo nome.  
+`[ @objname = ] 'object'` É o nome de uma tabela existente, exibição, função definida pelo usuário ou procedimento armazenado no banco de dados atual. *objeto* é um **nvarchar(776)**, sem padrão. *objeto* pode ser qualificado com o proprietário do objeto existente, na forma _existing_owner_**.** _objeto_ se o esquema e seu proprietário tiverem o mesmo nome.  
   
- [  **@newowner=**] **'**_proprietário_ **'**  
- É o nome da conta de segurança que será o novo proprietário do objeto. *proprietário* está **sysname**, sem padrão. *proprietário* deve ser um usuário de banco de dados válido, a função de servidor [!INCLUDE[msCoName](../../includes/msconame-md.md)] logon do Windows ou grupo do Windows com acesso ao banco de dados atual. Se o novo proprietário for um usuário ou grupo do Windows para o qual não há uma entidade correspondente no nível de banco de dados, será criado um usuário de banco de dados.  
+`[ @newowner = ] 'owner_ '` É o nome da conta de segurança que será o novo proprietário do objeto. *proprietário* está **sysname**, sem padrão. *proprietário* deve ser um usuário de banco de dados válido, a função de servidor [!INCLUDE[msCoName](../../includes/msconame-md.md)] logon do Windows ou grupo do Windows com acesso ao banco de dados atual. Se o novo proprietário for um usuário ou grupo do Windows para o qual não há uma entidade correspondente no nível de banco de dados, será criado um usuário de banco de dados.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

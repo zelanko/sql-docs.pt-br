@@ -16,12 +16,12 @@ ms.assetid: 9e1cb96e-5889-4f97-88cd-f60cf313ce68
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74aa782a7dcf6abdc71ca82dc104406948f21989
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 74b5ff58db964bff29e863eec39e76313220f556
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802298"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533088"
 ---
 # <a name="spdropmergepublication-transact-sql"></a>sp_dropmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_dropmergepublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'***publicação***'**  
- É o nome da publicação a ser removida. *publicação* está **sysname**, sem padrão. Se **todos os**, todas as publicações de mesclagem existentes são removidas, bem como o trabalho do agente de instantâneo associado a eles. Se você especificar um valor específico para *publicação*, somente aquela publicação e seu trabalho de agente de instantâneo associado serão descartados.  
+`[ @publication = ] 'publication'` É o nome da publicação a ser removida. *publicação* está **sysname**, sem padrão. Se **todos os**, todas as publicações de mesclagem existentes são removidas, bem como o trabalho do agente de instantâneo associado a eles. Se você especificar um valor específico para *publicação*, somente aquela publicação e seu trabalho de agente de instantâneo associado serão descartados.  
   
- [  **@ignore_distributor =**] *ignore_distributor*  
- Usado para remover uma publicação sem tarefas de limpeza no Distribuidor. *ignore_distributor* está **bit**, com um padrão de **0**. Esse parâmetro também é usado ao reinstalar o Distribuidor.  
+`[ @ignore_distributor = ] ignore_distributor` Usado para descartar uma publicação sem tarefas de limpeza no distribuidor. *ignore_distributor* está **bit**, com um padrão de **0**. Esse parâmetro também é usado ao reinstalar o Distribuidor.  
   
- [  **@reserved=**] *reservado*  
- É reservado para uso futuro. *reservado* está **bit**, com um padrão de **0**.  
+`[ @reserved = ] reserved` É reservado para uso futuro. *reservado* está **bit**, com um padrão de **0**.  
   
- [  **@ignore_merge_metadata=** ] *ignore_merge_metadata*  
- Somente para uso interno.  
+`[ @ignore_merge_metadata = ] ignore_merge_metadata` Somente para uso interno.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

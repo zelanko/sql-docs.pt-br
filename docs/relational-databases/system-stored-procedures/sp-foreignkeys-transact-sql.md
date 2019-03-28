@@ -18,12 +18,12 @@ ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b0fc8552157e9864ed45306ec268fefb4eec87bf
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: af2441fadc30254871a5d74209d645fc93a99456
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589935"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533818"
 ---
 # <a name="spforeignkeys-transact-sql"></a>sp_foreignkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,26 +46,19 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@table_server =** ] **'**_table_server_**'**  
- É o nome do servidor vinculado para o qual as informações de tabela devem ser retornadas. *table_server* está **sysname**, sem padrão.  
+`[ @table_server = ] 'table_server'` É o nome do servidor vinculado para o qual retornar informações de tabela. *table_server* está **sysname**, sem padrão.  
   
- [  **@pktab_name =** ] **'**_pktab_name_**'**  
- É o nome da tabela com uma chave primária. *pktab_name* está **sysname**, com um padrão NULL.  
+`[ @pktab_name = ] 'pktab_name'` É o nome da tabela com uma chave primária. *pktab_name* está **sysname**, com um padrão NULL.  
   
- [  **@pktab_schema =** ] **'**_pktab_schema_**'**  
- É o nome do esquema com uma chave primária. *pktab_schema*está **sysname**, com um padrão NULL. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ele contém o nome do proprietário.  
+`[ @pktab_schema = ] 'pktab_schema'` É o nome do esquema com uma chave primária. *pktab_schema*está **sysname**, com um padrão NULL. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ele contém o nome do proprietário.  
   
- [  **@pktab_catalog =** ] **'**_pktab_catalog_**'**  
- É o nome do catálogo com uma chave primária. *pktab_catalog*está **sysname**, com um padrão NULL. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ele contém o nome do banco de dados.  
+`[ @pktab_catalog = ] 'pktab_catalog'` É o nome do catálogo com uma chave primária. *pktab_catalog*está **sysname**, com um padrão NULL. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ele contém o nome do banco de dados.  
   
- [  **@fktab_name =** ] **'**_fktab_name_**'**  
- É o nome do proprietário da tabela com uma chave estrangeira. *fktab_name*está **sysname**, com um padrão NULL.  
+`[ @fktab_name = ] 'fktab_name'` É o nome da tabela com uma chave estrangeira. *fktab_name*está **sysname**, com um padrão NULL.  
   
- [  **@fktab_schema =** ] **'**_fktab_schema_**'**  
- É o nome do esquema com uma chave estrangeira. *fktab_schema*está **sysname**, com um padrão NULL.  
+`[ @fktab_schema = ] 'fktab_schema'` É o nome do esquema com uma chave estrangeira. *fktab_schema*está **sysname**, com um padrão NULL.  
   
- [  **@fktab_catalog =** ] **'**_fktab_catalog_**'**  
- É o nome do catálogo com uma chave estrangeira. *fktab_catalog*está **sysname**, com um padrão NULL.  
+`[ @fktab_catalog = ] 'fktab_catalog'` É o nome do catálogo com uma chave estrangeira. *fktab_catalog*está **sysname**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  None  
@@ -86,7 +79,7 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 |**KEY_SEQ**|**smallint**|Número de sequência da coluna em uma chave primária de várias colunas. Esse campo sempre retorna um valor.|  
 |**UPDATE_RULE**|**smallint**|Ação aplicada à chave estrangeira quando a operação SQL é uma atualização. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna 0, 1 ou 2 para estas colunas:<br /><br /> 0=CASCADE altera para chave estrangeira.<br /><br /> 1=NO ACTION altera se a chave estrangeira estiver presente.<br /><br /> 2=SET_NULL define a chave estrangeira como NULL.|  
 |**DELETE_RULE**|**smallint**|Ação aplicada à chave estrangeira quando a operação SQL é uma exclusão. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna 0, 1 ou 2 para estas colunas:<br /><br /> 0=CASCADE altera para chave estrangeira.<br /><br /> 1=NO ACTION altera se a chave estrangeira estiver presente.<br /><br /> 2=SET_NULL define a chave estrangeira como NULL.|  
-|**COLUNAS FK_NAME**|**sysname**|Identificador de chave estrangeira. Será NULL se não for aplicável à fonte de dados. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna o nome da restrição de FOREIGN KEY.|  
+|**FK_NAME**|**sysname**|Identificador de chave estrangeira. Será NULL se não for aplicável à fonte de dados. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna o nome da restrição de FOREIGN KEY.|  
 |**PK_NAME**|**sysname**|Identificador da chave primária. Será NULL se não for aplicável à fonte de dados. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna o nome da restrição de PRIMARY KEY.|  
 |**CAPACIDADE DE ADIAMENTO**|**smallint**|Indica se a verificação de restrição é adiável.|  
   

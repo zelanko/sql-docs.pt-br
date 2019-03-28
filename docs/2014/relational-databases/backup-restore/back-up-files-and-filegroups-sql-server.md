@@ -16,12 +16,12 @@ ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7a30880a6fd4acc62f13954c18f0ca8883f90754
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f3d98314bf142340d97d218b93670a14c9f56e3a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537367"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530758"
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>Fazer backup de arquivos e de grupos de arquivos (SQL Server)
   Este tópico descreve como fazer backup de arquivos e grupos de arquivos no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)]ou PowerShell. Quando o tamanho de banco de dados e exigências de desempenho tornarem um backup de banco de dados completo impraticável, então você poderá criar um backup de arquivo. Um *backup de arquivo* contém todos os dados em um ou mais arquivos (ou grupos de arquivos). Para obter mais informações sobre backups de arquivos, veja [Backups completos de arquivos &#40;SQL Server&#41;](full-file-backups-sql-server.md) e [Backups diferenciais &#40;SQL Server&#41;](differential-backups-sql-server.md).  
@@ -46,7 +46,7 @@ ms.locfileid: "52537367"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   A instrução BACKUP não é permitida em uma transação explícita ou implícita.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "52537367"
   
     -   [Exibir ou configurar a opção de configuração de servidor backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-back-up-files-and-filegroups"></a>Para efetuar backup de arquivos e grupos de arquivos  
   
@@ -178,7 +178,7 @@ ms.locfileid: "52537367"
 #### <a name="a-creating-a-file-backup-of-two-files"></a>A. Criando um backup de arquivo de dois arquivos  
  O exemplo a seguir cria um backup diferencial de arquivo só do arquivo `SGrp1Fi2` do `SalesGroup1` e o arquivo `SGrp2Fi2` do grupo de arquivos `SalesGroup2` .  
   
-```tsql  
+```sql  
 --Backup the files in the SalesGroup1 secondary filegroup.  
 BACKUP DATABASE Sales  
    FILE = 'SGrp1Fi2',   
@@ -187,10 +187,10 @@ BACKUP DATABASE Sales
 GO  
 ```  
   
-#### <a name="b-creating-a-full-file-backup-of-the-secondary-filegroups"></a>b. Criando um backup completo de arquivos dos grupos de arquivos secundários  
+#### <a name="b-creating-a-full-file-backup-of-the-secondary-filegroups"></a>B. Criando um backup completo de arquivos dos grupos de arquivos secundários  
  O exemplo a seguir cria um backup de arquivo completo de todos os arquivos dos dois grupos de arquivos secundários.  
   
-```tsql  
+```sql  
 --Back up the files in SalesGroup1.  
 BACKUP DATABASE Sales  
    FILEGROUP = 'SalesGroup1',  
@@ -202,7 +202,7 @@ GO
 #### <a name="c-creating-a-differential-file-backup-of-the-secondary-filegroups"></a>C. Criando um backup diferencial de arquivos dos grupos de arquivos secundários  
  O exemplo a seguir cria um backup diferencial de cada arquivo nos dois grupos de arquivos secundários.  
   
-```tsql  
+```sql  
 --Back up the files in SalesGroup1.  
 BACKUP DATABASE Sales  
    FILEGROUP = 'SalesGroup1',  

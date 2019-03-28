@@ -19,12 +19,12 @@ ms.assetid: c7b99463-4bab-4e9b-9217-fcb0898dc757
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a0c32ad8dbbdd38ff0741e6b1f38c9cc084b27a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4850be4c112f9c0b987d543873cb55af08372455
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787118"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533228"
 ---
 # <a name="display-data-and-log-space-information-for-a-database"></a>Exibir dados e informações de espaço de log para um banco de dados
   Este tópico descreve como exibir os dados e as informações de espaço de log para um banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -58,7 +58,7 @@ ms.locfileid: "52787118"
   
 3.  Clique com o botão direito do mouse em um banco de dados, aponte para **Relatórios**, aponte para **Relatórios Padrão**e clique em **Uso do Disco**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-display-data-and-log-space-information-for-a-database-by-using-spspaceused"></a>Para exibir dados e informações de espaço de log para um banco de dados usando sp_spaceused  
   
@@ -68,7 +68,7 @@ ms.locfileid: "52787118"
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo usa o procedimento armazenado de sistema [sp_spaceused](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql) para relatar informações de espaço em disco para a tabela `Vendor` e seus índices.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_spaceused N'Purchasing.Vendor';  
@@ -83,7 +83,7 @@ GO
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo consulta a exibição de catálogo [sys.database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) para retornar informações específicas sobre os dados e arquivos de log no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT file_id, name, type_desc, physical_name, size, max_size  

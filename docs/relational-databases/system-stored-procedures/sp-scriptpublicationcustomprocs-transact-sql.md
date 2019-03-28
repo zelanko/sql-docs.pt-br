@@ -16,12 +16,12 @@ ms.assetid: b06102d5-4284-4834-b126-bc0baea49be5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2b57ae49875c07607e153b793c76db31d5dd347b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5270ff98483e31db3d9a034f01730c2424809099
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808638"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536928"
 ---
 # <a name="spscriptpublicationcustomprocs-transact-sql"></a>sp_scriptpublicationcustomprocs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publication**=] **'***publication_name***'**  
- É o nome da publicação. *publication_name* está **sysname** sem nenhum padrão.  
+`[ @publication = ] 'publication_name'` É o nome da publicação. *publication_name* está **sysname** sem nenhum padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

@@ -18,12 +18,12 @@ ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aaf644b6a8795e9c68e0053eaed0023c4b9299b6
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 47a8665027ce251a391049aa71ba12b246c1c625
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588400"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528878"
 ---
 # <a name="spcolumnsex-transact-sql"></a>sp_columns_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,23 +45,17 @@ sp_columns_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@table_server =** ] **'**_table_server_**'**  
- É o nome do servidor vinculado para o qual as informações de coluna devem ser retornadas. *table_server* está **sysname**, sem padrão.  
+`[ @table_server = ] 'table_server'` É o nome do servidor vinculado para o qual retornar informações de coluna. *table_server* está **sysname**, sem padrão.  
   
- [  **@table_name =** ] **'**_table_name_**'**  
- É o nome da tabela para a qual as informações de coluna devem ser retornadas. *table_name* está **sysname**, com um padrão NULL.  
+`[ @table_name = ] 'table_name'` É o nome da tabela para a qual retornar informações de coluna. *table_name* está **sysname**, com um padrão NULL.  
   
- [  **@table_schema =** ] **'**_table_schema_**'**  
- É o nome do esquema da tabela para o qual as informações de coluna devem ser retornadas. *table_schema* está **sysname**, com um padrão NULL.  
+`[ @table_schema = ] 'table_schema'` É o nome do esquema da tabela para a qual retornar informações de coluna. *table_schema* está **sysname**, com um padrão NULL.  
   
- [  **@table_catalog =** ] **'**_table_catalog_**'**  
- É o nome do catálogo da tabela para o qual as informações de coluna devem ser retornadas. *table_catalog* está **sysname**, com um padrão NULL.  
+`[ @table_catalog = ] 'table_catalog'` É o nome do catálogo da tabela para a qual retornar informações de coluna. *table_catalog* está **sysname**, com um padrão NULL.  
   
- [  **@column_name =** ] **'**_coluna_**'**  
- É o nome da coluna do banco de dados para a qual fornecer informações. *coluna* está **sysname**, com um padrão NULL.  
+`[ @column_name = ] 'column'` É o nome da coluna de banco de dados para o qual fornecer informações. *coluna* está **sysname**, com um padrão NULL.  
   
- [  **@ODBCVer =** ] **'**_ODBCVer_**'**  
- É a versão do ODBC está sendo usada. *ODBCVer* está **int**, com um padrão de 2. Isto indica ODBC versão 2. Os valores válidos são 2 ou 3. Para obter informações sobre as diferenças de comportamento entre as versões 2 e 3, consulte a especificação de SQLColumns ODBC.  
+`[ @ODBCVer = ] 'ODBCVer'` É a versão do ODBC que está sendo usado. *ODBCVer* está **int**, com um padrão de 2. Isto indica ODBC versão 2. Os valores válidos são 2 ou 3. Para obter informações sobre as diferenças de comportamento entre as versões 2 e 3, consulte a especificação de SQLColumns ODBC.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  None  
@@ -75,19 +69,19 @@ sp_columns_ex [ @table_server = ] 'table_server'
 |**TABLE_NAME**|**sysname**|Nome da tabela ou exibição. Esse campo sempre retorna um valor.|  
 |**COLUMN_NAME**|**sysname**|Nome da coluna para cada coluna do **TABLE_NAME** retornado. Esse campo sempre retorna um valor.|  
 |**DATA_TYPE**|**smallint**|Valor inteiro que corresponde aos indicadores de tipo ODBC. Se for um tipo de dados que não pode ser mapeado para um tipo ODBC, este valor será NULL. O nome do tipo de dados nativo é retornado na **TYPE_NAME** coluna.|  
-|**TYPE_NAME**|**varchar (** 13 **)**|Cadeia de caracteres que representa um tipo de dados. O DBMS subjacente apresenta este nome de tipo de dados.|  
+|**TYPE_NAME**|**varchar(** 13 **)**|Cadeia de caracteres que representa um tipo de dados. O DBMS subjacente apresenta este nome de tipo de dados.|  
 |**COLUMN_SIZE**|**int**|Número de dígitos significativos. O valor retornado para o **precisão** coluna está na base 10.|  
 |**BUFFER_LENGTH**|**int**|Tamanho da transferência dos dados.1|  
 |**DECIMAL_DIGITS**|**smallint**|Número de dígitos à direita da vírgula decimal.|  
 |**NUM_PREC_RADIX**|**smallint**|É a base para tipos de dados numéricos.|  
-|**PERMITE VALOR NULO**|**smallint**|Especifica possibilidade de nulidade:<br /><br /> 1 = NULL é possível.<br /><br /> 0 = NOT NULL.|  
-|**COMENTÁRIOS**|**varchar (** 254 **)**|Esse campo sempre retorna NULL.|  
-|**COLUMN_DEF**|**varchar (** 254 **)**|Valor padrão da coluna.|  
+|**NULLABLE**|**smallint**|Especifica possibilidade de nulidade:<br /><br /> 1 = NULL é possível.<br /><br /> 0 = NOT NULL.|  
+|**REMARKS**|**varchar(** 254 **)**|Esse campo sempre retorna NULL.|  
+|**COLUMN_DEF**|**varchar(** 254 **)**|Valor padrão da coluna.|  
 |**SQL_DATA_TYPE**|**smallint**|Valor do tipo de dados SQL conforme exibido no campo TYPE do descritor. Esta coluna é igual a **DATA_TYPE** coluna, exceto para o **datetime** e SQL-92 **intervalo** tipos de dados. Esta coluna sempre retorna um valor.|  
 |**SQL_DATETIME_SUB**|**smallint**|Código de subtipo para **datetime** e o SQL-92 **intervalo** tipos de dados. Para outros tipos de dados, esta coluna retorna NULL.|  
 |**CHAR_OCTET_LENGTH**|**int**|Comprimento máximo em bytes de uma coluna do tipo de dados caractere ou inteiro. Para todos os outros tipos de dados, esta coluna retorna NULL.|  
 |**ORDINAL_POSITION**|**int**|Posição ordinal da coluna na tabela. A primeira coluna na tabela é 1. Esta coluna sempre retorna um valor.|  
-|**IS_NULLABLE**|**varchar (** 254 **)**|Possibilidade de nulidade da coluna na tabela. As regras ISO são seguidas para determinar a possibilidade de nulidade. Um DBMS em conformidade com ISO SQL não pode retornar uma cadeia de caracteres vazia.<br /><br /> YES = A coluna pode incluir NULLS.<br /><br /> NO = A coluna não pode incluir NULLS.<br /><br /> Esta coluna retorna uma cadeia de caracteres de comprimento zero se a possibilidade de nulidade for desconhecida.<br /><br /> O valor retornado para essa coluna é diferente do valor retornado para o **NULLABLE** coluna.|  
+|**IS_NULLABLE**|**varchar(** 254 **)**|Possibilidade de nulidade da coluna na tabela. As regras ISO são seguidas para determinar a possibilidade de nulidade. Um DBMS em conformidade com ISO SQL não pode retornar uma cadeia de caracteres vazia.<br /><br /> YES = A coluna pode incluir NULLS.<br /><br /> NO = A coluna não pode incluir NULLS.<br /><br /> Esta coluna retorna uma cadeia de caracteres de comprimento zero se a possibilidade de nulidade for desconhecida.<br /><br /> O valor retornado para essa coluna é diferente do valor retornado para o **NULLABLE** coluna.|  
 |**SS_DATA_TYPE**|**tinyint**|Tipo de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usado por procedimentos armazenados estendidos.|  
   
  Para obter mais informações, consulte a documentação do Microsoft ODBC.  

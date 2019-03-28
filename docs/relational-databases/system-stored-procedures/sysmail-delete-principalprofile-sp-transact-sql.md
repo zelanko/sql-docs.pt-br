@@ -18,12 +18,12 @@ ms.assetid: 8fc14700-e17a-4073-9a96-7fc23e775c69
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c292ba89a3b79dc19ca038672cf5cc587a55ed4f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae63fabdca36e70daa6da28daa136a5dfcec8e1f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673174"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527778"
 ---
 # <a name="sysmaildeleteprincipalprofilesp-transact-sql"></a>sysmail_delete_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sysmail_delete_principalprofile_sp  { [ @principal_id = ] principal_id | [ @prin
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@principal_id** = ] *principal_id*  
- É a ID do usuário de banco de dados ou função na **msdb** banco de dados para associação a ser excluída. *principal_id* está **int**, com um padrão NULL. Para fazer um perfil público em um perfil privado, forneça a ID da entidade **0** ou o nome da entidade **'public'**. Qualquer um dos *principal_id* ou *principal_name* deve ser especificado.  
+`[ @principal_id = ] principal_id` É a ID do usuário de banco de dados ou função na **msdb** banco de dados para associação a ser excluída. *principal_id* está **int**, com um padrão NULL. Para fazer um perfil público em um perfil privado, forneça a ID da entidade **0** ou o nome da entidade **'public'**. Qualquer um dos *principal_id* ou *principal_name* deve ser especificado.  
   
- [ **@principal_name** =] **'***principal_name***'**  
- É o nome do usuário de banco de dados ou função na **msdb** banco de dados para associação a ser excluída. *principal_name* está **sysname**, com um padrão NULL. Para fazer um perfil público em um perfil privado, forneça a ID da entidade **0** ou o nome da entidade **'public'**. Qualquer um dos *principal_id* ou *principal_name* deve ser especificado.  
+`[ @principal_name = ] 'principal_name'` É o nome do usuário de banco de dados ou função na **msdb** banco de dados para associação a ser excluída. *principal_name* está **sysname**, com um padrão NULL. Para fazer um perfil público em um perfil privado, forneça a ID da entidade **0** ou o nome da entidade **'public'**. Qualquer um dos *principal_id* ou *principal_name* deve ser especificado.  
   
- [ **@profile_id** =] *profile_id*  
- É a ID do perfil da associação a ser excluída. *profile_id* está **int**, com um padrão NULL. Qualquer um dos *profile_id* ou *profile_name* deve ser especificado.  
+`[ @profile_id = ] profile_id` É a ID do perfil da associação a ser excluída. *profile_id* está **int**, com um padrão NULL. Qualquer um dos *profile_id* ou *profile_name* deve ser especificado.  
   
- [ **@profile_name** =] **'***profile_name***'**  
- É o nome do perfil da associação a ser excluída. *profile_name* está **sysname**, com um padrão NULL. Qualquer um dos *profile_id* ou *profile_name* deve ser especificado.  
+`[ @profile_name = ] 'profile_name'` É o nome do perfil da associação a ser excluída. *profile_name* está **sysname**, com um padrão NULL. Qualquer um dos *profile_id* ou *profile_name* deve ser especificado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

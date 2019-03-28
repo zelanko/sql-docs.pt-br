@@ -15,12 +15,12 @@ ms.assetid: 9e8ac097-84b7-46c7-85e3-c1e79f94d747
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b71a548dabd286437db73224195622ef576bd28b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 10ad92286011f6f81fbaff5ab4908007e16bdd45
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748938"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528458"
 ---
 # <a name="view-or-change-the-properties-of-a-database"></a>Exibir ou alterar as propriedades de um banco de dados
   Este tópico descreve como exibir ou alterar os propriedades de um banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Depois de alterar uma propriedade de banco de dados, a modificação entra em vigor imediatamente.  
@@ -60,7 +60,7 @@ ms.locfileid: "52748938"
   
 3.  Na caixa de diálogo **Propriedades do Banco de Dados** , selecione uma página para exibir as informações correspondentes. Por exemplo, selecione a página **Arquivos** para exibir os dados e as informações do arquivo de log.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-view-a-property-of-a-database-by-using-databasepropertyex"></a>Para exibir uma propriedade de um banco de dados usando DATABASEPROPERTYEX  
   
@@ -70,7 +70,7 @@ ms.locfileid: "52748938"
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo usa a função do sistema [DATABASEPROPERTYEX](/sql/t-sql/functions/databasepropertyex-transact-sql) para retornar o status da opção de banco de dados AUTO_SHRINK no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Um valor de retorno 1 significa que a opção está definida como ON e um valor de retorno 0 significa que a opção está definida como OFF.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT DATABASEPROPERTYEX('AdventureWorks2012', 'IsAutoShrink');  
@@ -86,7 +86,7 @@ GO
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo consulta a exibição de catálogo [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) para exibir várias propriedades do banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Este exemplo retorna o número de identificação de banco de dados (`database_id`), se o banco de dados for somente leitura ou de leitura/gravação (`is_read_only`), a ordenação do banco de dados (`collation_name`) e o nível de compatibilidade do banco de dados (`compatibility_level`).  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT database_id, is_read_only, collation_name, compatibility_level  

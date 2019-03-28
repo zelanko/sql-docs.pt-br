@@ -16,12 +16,12 @@ ms.assetid: 63a4ec6e-ce79-4bf1-9d37-5ac88f8d6beb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7f5bb18d06fd8ab9545825174cba0723f0d553ee
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e3c4797478b114918ce2bd79abb9e4671a0dd022
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791518"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529928"
 ---
 # <a name="spdeletepeerrequesthistory-transact-sql"></a>sp_deletepeerrequesthistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_deletepeerrequesthistory [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=** ] **'***publicação***'**  
- Nome da publicação para a qual a solicitação de status foi feita. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` Nome da publicação para o qual a solicitação de status foi feita. *publicação* está **sysname**, sem padrão.  
   
- [  **@request_id=** ] *request_id*  
- Especifica uma solicitação de status individual para que todas as respostas a essa solicitação sejam excluídas. *request_id* está **int**, com um valor padrão de NULL.  
+`[ @request_id = ] request_id` Especifica uma solicitação de status individuais, para que todas as respostas a essa solicitação sejam excluídas. *request_id* está **int**, com um valor padrão de NULL.  
   
- [  **@cutoff_date=** ] *cutoff_date*  
- Especifica uma data de prazo, antes da qual todos os registros de resposta anteriores são excluídos. *cutoff_date* está **datetime**, com um valor padrão de NULL.  
+`[ @cutoff_date = ] cutoff_date` Especifica uma data de corte antes da qual todos os registros de resposta anteriores são excluídos. *cutoff_date* está **datetime**, com um valor padrão de NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

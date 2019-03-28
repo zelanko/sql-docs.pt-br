@@ -18,12 +18,12 @@ ms.assetid: e9ef4c99-abde-4038-b6a3-a25dcbaf0958
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 719038f8ce72bdb05ad9dbf3c3585c377abb3a75
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f3a3140c154f5d4eb224259001333747ce410e67
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526230"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533860"
 ---
 # <a name="spdeletejobsteplog-transact-sql"></a>sp_delete_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,27 +44,21 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@job_id =**] **'**_job_id_**'**  
- O número de identificação do trabalho que contém o log de etapas do trabalho a ser removido. *job_id* está **int**, com um padrão NULL.  
+`[ @job_id = ] 'job_id'` O número de identificação do trabalho para o trabalho que contém o log de etapa de trabalho a ser removido. *job_id* está **int**, com um padrão NULL.  
   
- [  **@job_name =**] **'**_job_name_**'**  
- O nome do trabalho. *job_name* está **sysname**, com um padrão NULL.  
+`[ @job_name = ] 'job_name'` O nome do trabalho. *job_name* está **sysname**, com um padrão NULL.  
   
 > **OBSERVAÇÃO:** Qualquer um dos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados.  
   
- [  **@step_id =**] *step_id*  
- O número de identificação da etapa no trabalho para o qual o log da etapa de trabalho deve ser excluído. Se não estiver incluído, todos os logs de etapa de trabalho no trabalho são excluídos, a menos que **@older_than** ou **@larger_than** são especificados. *step_id* está **int**, com um padrão NULL.  
+`[ @step_id = ] step_id` O número de identificação da etapa do trabalho para o qual o log de etapa de trabalho a ser excluído. Se não estiver incluído, todos os logs de etapa de trabalho no trabalho são excluídos, a menos que **@older_than** ou **@larger_than** são especificados. *step_id* está **int**, com um padrão NULL.  
   
- [  **@step_name =**] **'**_step_name_**'**  
- O nome da etapa no trabalho para o qual o log da etapa de trabalho deve ser excluído. *step_name* está **sysname**, com um padrão NULL.  
+`[ @step_name = ] 'step_name'` O nome da etapa do trabalho para o qual o log de etapa de trabalho a ser excluído. *step_name* está **sysname**, com um padrão NULL.  
   
 > **OBSERVAÇÃO:** Qualquer um dos *step_id* ou *step_name* pode ser especificado, mas não podem ser especificados.  
   
- [  **@older_than =**] **'**_data_**'**  
- A data e hora do log de etapa de trabalho mais antigo a ser mantido. Todos os logs de etapa de trabalho mais antigos do que essa data e hora são removidos. *data* está **datetime**, com um padrão NULL. Ambos **@older_than** e **@larger_than** pode ser especificado.  
+`[ @older_than = ] 'date'` A data e hora do log de etapa de trabalho mais antigo que você deseja manter. Todos os logs de etapa de trabalho mais antigos do que essa data e hora são removidos. *data* está **datetime**, com um padrão NULL. Ambos **@older_than** e **@larger_than** pode ser especificado.  
   
- [  **@larger_than =**] **'**_size_in_bytes_**'**  
- O tamanho em bytes do maior log de etapa de trabalho a ser mantido. Todos os logs de etapa de trabalho maiores que esse serão removidos. Ambos **@larger_than** e **@older_than** pode ser especificado.  
+`[ @larger_than = ] 'size_in_bytes'` O tamanho em bytes do maior log de etapas de trabalho que você deseja manter. Todos os logs de etapa de trabalho maiores que esse serão removidos. Ambos **@larger_than** e **@older_than** pode ser especificado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -104,7 +98,7 @@ EXEC dbo.sp_delete_jobsteplog
 GO  
 ```  
   
-### <a name="b-removing-the-job-step-log-for-a-particular-job-step"></a>b. Removendo o log de etapa de trabalho de uma determinada etapa de trabalho  
+### <a name="b-removing-the-job-step-log-for-a-particular-job-step"></a>B. Removendo o log de etapa de trabalho de uma determinada etapa de trabalho  
  O exemplo a seguir remove o logs de etapa de trabalho para a etapa 2 do trabalho `Weekly Sales Data Backup`.  
   
 ```  

@@ -14,12 +14,12 @@ ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 12500b5e327be1de7f201af4c3040b1368c63c5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0479b16e7cc767b8e036a9632c0e9c80177c7837
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154269"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535298"
 ---
 # <a name="back-up-a-transaction-log-sql-server"></a>Fazer backup de um log de transações (SQL Server)
   Este tópico descreve como fazer backup de um log de transações no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)]ou PowerShell.  
@@ -172,7 +172,7 @@ ms.locfileid: "48154269"
   
  Este exemplo cria um backup de log de transações do banco de dados [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] para o dispositivo de backup criado anteriormente e denominado `MyAdvWorks_FullRM_log1`.  
   
-```tsql  
+```sql  
 BACKUP LOG AdventureWorks2012  
    TO MyAdvWorks_FullRM_log1;  
 GO  

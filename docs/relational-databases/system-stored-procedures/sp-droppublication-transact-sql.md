@@ -16,12 +16,12 @@ ms.assetid: b52b37e6-4fec-40cf-abba-7dce4ff395fd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a05845955116454ae23b2cd97e25250dbb1e6331
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 0b8cda79919c318b6bee5817731e4ca83aea17aa
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124086"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529748"
 ---
 # <a name="spdroppublication-transact-sql"></a>sp_droppublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_droppublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=** ] **'**_publicação_**'**  
- É o nome da publicação a ser removida. *publicação* está **sysname**, sem padrão. Se **todos os** for especificado, todas as publicações serão descartadas do banco de dados, exceto aquelas com assinatura.  
+`[ @publication = ] 'publication'` É o nome da publicação a ser removido. *publicação* está **sysname**, sem padrão. Se **todos os** for especificado, todas as publicações serão descartadas do banco de dados, exceto aquelas com assinatura.  
   
- [  **@ignore_distributor =** ] *ignore_distributor*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @ignore_distributor = ] ignore_distributor` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

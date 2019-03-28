@@ -1,5 +1,5 @@
 ---
-title: SP_WHO (Transact-SQL) | Microsoft Docs
+title: sp_who (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 132dfb08-fa79-422e-97d4-b2c4579c6ac5
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d748f06a592283c49d85624c97f4db7afdc188e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dbed86af1415f89a59b7de85061a6db1db324307
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628954"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536330"
 ---
 # <a name="spwho-transact-sql"></a>sp_who (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@loginame =** ] **'***login***'** | *ID de sessão* | **'ACTIVE'**  
- É usado para filtrar o conjunto de resultados.  
+`[ @loginame = ] 'login' | session ID | 'ACTIVE'` É usado para filtrar o conjunto de resultados.  
   
  *login* está **sysname** que identifica os processos que pertencem a um logon específico.  
   
@@ -57,13 +56,13 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
 ## <a name="result-sets"></a>Conjuntos de resultados  
  **SP_WHO** retorna um conjunto de resultados com as informações a seguir.  
   
-|coluna|Data type|Description|  
+|coluna|Data type|Descrição|  
 |------------|---------------|-----------------|  
 |**spid**|**smallint**|ID da sessão.|  
 |**ecid**|**smallint**|ID do contexto de execução de determinado thread associado a uma ID de sessão específica.<br /><br /> ECID = {0, 1, 2, 3,... *n*}, onde 0 representa sempre principal ou thread pai e {1, 2, 3,... *n*} representa os subthreads.|  
-|**status**|**nchar(30)**|Status do processo. Os valores possíveis são:<br /><br /> **inativo**. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está reiniciando a sessão.<br /><br /> **executando**. A sessão está executando um ou mais lotes. Quando são habilitados MARS (Vários Conjuntos de Resultados Ativos), uma sessão pode executar vários lotes. Para obter mais informações, confira [Usando o MARS &#40;conjunto de resultados ativos múltiplos&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **plano de fundo**. A sessão está executando uma tarefa em segundo plano, como detecção de deadlock.<br /><br /> **reversão**. A sessão tem uma reversão de transação em processo.<br /><br /> **pendente**. A sessão está aguardando que um thread de trabalho seja disponibilizado.<br /><br /> **executável**. A tarefa da sessão está na fila executável de um agendador enquanto aguarda para obter um quantum de hora.<br /><br /> **spinloop**. A tarefa da sessão está aguardando que um spinlock seja liberado.<br /><br /> **suspenso**. A sessão está aguardando que um evento, como E/S, seja concluído.|  
-|**LoginName**|**nchar(128)**|Nome de logon associado a determinado processo.|  
-|**nome do host**|**nchar(128)**|Nome do host ou computador de cada processo.|  
+|**status**|**nchar(30)**|Status do processo. Os valores possíveis são:<br /><br /> **dormant**. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está reiniciando a sessão.<br /><br /> **executando**. A sessão está executando um ou mais lotes. Quando são habilitados MARS (Vários Conjuntos de Resultados Ativos), uma sessão pode executar vários lotes. Para obter mais informações, confira [Usando o MARS &#40;conjunto de resultados ativos múltiplos&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **background**. A sessão está executando uma tarefa em segundo plano, como detecção de deadlock.<br /><br /> **rollback**. A sessão tem uma reversão de transação em processo.<br /><br /> **pendente**. A sessão está aguardando que um thread de trabalho seja disponibilizado.<br /><br /> **runnable**. A tarefa da sessão está na fila executável de um agendador enquanto aguarda para obter um quantum de hora.<br /><br /> **spinloop**. A tarefa da sessão está aguardando que um spinlock seja liberado.<br /><br /> **suspended**. A sessão está aguardando que um evento, como E/S, seja concluído.|  
+|**loginame**|**nchar(128)**|Nome de logon associado a determinado processo.|  
+|**hostname**|**nchar(128)**|Nome do host ou computador de cada processo.|  
 |**blk**|**char(5)**|ID de sessão do processo de bloqueio, se houver. Caso contrário, essa coluna será zero.<br /><br /> Quando uma transação associada a uma ID de sessão especificada for bloqueada por uma transação distribuída órfã, essa coluna retornará um '-2' para o bloqueio da transação órfã.|  
 |**dbname**|**nchar(128)**|Banco de dados usado pelo processo.|  
 |**cmd**|**nchar(16)**|Comando [!INCLUDE[ssDE](../../includes/ssde-md.md)] (instrução [!INCLUDE[tsql](../../includes/tsql-md.md)], processo [!INCLUDE[ssDE](../../includes/ssde-md.md)] interno e assim por diante) sendo executado para o processo.|  

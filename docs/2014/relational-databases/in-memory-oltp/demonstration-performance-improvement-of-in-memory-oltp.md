@@ -1,5 +1,5 @@
 ---
-title: 'Demonstração: melhoria do desempenho do OLTP in-memory | Microsoft Docs'
+title: 'Demonstração: Aprimoramento do desempenho do OLTP in-memory | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2ee9f530580d9c3aaff2d10a260be20a1970e8a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8c9477a318d2cb4f9886d67da8a4f8b5967cc180
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127986"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537278"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Demonstração: aprimoramento do desempenho do OLTP na memória
   Este exemplo mostra as melhorias de desempenho ao usar OLTP na Memória, comparando as diferenças nos tempos de resposta ao executar uma consulta Transact-SQL idêntica em tabelas baseadas em disco tradicionais e com otimização de memória. Além disso, um procedimento armazenado compilado nativamente também é criado (com base na mesma consulta) e executado para demonstrar que você normalmente obtém os melhores tempos de resposta ao consultar uma tabela com otimização de memória com um procedimento armazenado compilados nativamente. Este exemplo mostra apenas um aspecto das melhorias de desempenho ao acessar dados em tabelas com otimização de memória; a eficiência do acesso a dados ao executar inserções. Este exemplo é de thread único e não aproveita os benefícios de simultaneidade do OLTP na memória. Uma carga de trabalho que usa a simultaneidade apresentará um maior ganho de desempenho.  
@@ -33,7 +33,7 @@ ms.locfileid: "48127986"
   
  Para configurar o banco de dados **imoltp** para nosso exemplo, crie primeiro uma pasta vazia: **c:\imoltp_data**, e, em seguida, execute o seguinte código:  
   
-```tsql  
+```sql  
 USE master  
 GO  
   
@@ -55,7 +55,7 @@ GO
   
  Em seguida, execute o seguinte código para criar a tabela baseada em disco, 2 (duas) tabelas com otimização de memória e o procedimento armazenado compilado nativamente que será usado para demonstrar os métodos de acesso de dados diferentes:  
   
-```tsql  
+```sql  
 USE imoltp  
 GO  
   
@@ -120,7 +120,7 @@ GO
   
  Para concluir o exemplo, execute o seguinte código várias vezes. Ignore os resultados da primeira execução, que são afetados negativamente pela alocação de memória inicial.  
   
-```tsql  
+```sql  
 SET STATISTICS TIME OFF;  
 SET NOCOUNT ON;  
   

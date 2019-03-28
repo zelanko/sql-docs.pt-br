@@ -13,12 +13,12 @@ ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7e217aedd1c6d3b2c58d946ed455bf9398cd7798
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7a90d40b158acf786ccb5bcdf962c2d6077c59dd
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818348"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535178"
 ---
 # <a name="control-transaction-durability"></a>Controlar a durabilidade da transação
   As confirmações de transações do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser totalmente duráveis, o padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ou duráveis atrasadas (também conhecido como confirmação lenta).  
@@ -34,7 +34,7 @@ ms.locfileid: "52818348"
  As transações completamente duráveis gravam o log de transações no disco antes de devolver o controle para o cliente. Você deve usar transações completamente duráveis sempre que:  
   
 -   O sistema não puder tolerar perda de dados.   
-    Consulte a seção [Onde posso perder os dados?](control-transaction-durability.md#bkmk_dataloss) para obter mais informações sobre quando você pode perder alguns dos seus dados.  
+    Consulte a seção [Onde posso perder os dados?](#when-can-i-lose-data) para obter mais informações sobre quando você pode perder alguns dos seus dados.  
   
 -   O gargalo não seja devido à latência de gravação do log de transações.  
   
@@ -87,10 +87,10 @@ ms.locfileid: "52818348"
   
 ## <a name="how-to-control-transaction-durability"></a>Como controlar a durabilidade da transação  
   
-###  <a name="bkmk_DbControl"></a> Controle de nível de banco de dados  
+### <a name="database-level-control"></a>Controle de nível de banco de dados  
  Você, o DBA, pode controlar se os usuários podem usar a durabilidade da transação atrasada em um banco de dados com a instrução a seguir. Você deve definir a configuração de durabilidade atrasada com ALTER DATABASE.  
   
-```tsql  
+```sql  
 ALTER DATABASE ... SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }  
 ```  
   
@@ -98,27 +98,27 @@ ALTER DATABASE ... SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }
  [padrão] Com essa configuração, todas as transações confirmadas no banco de dados são completamente duráveis, independentemente da configuração do nível de confirmação (DELAYED_DURABILITY=[ON | OFF]). Não há nenhuma necessidade de modificação e recompilação do procedimento armazenado. Isso permite garantir que a durabilidade atrasada nunca coloque os dados em risco.  
   
  `ALLOWED`  
- Com essa configuração, a durabilidade de cada transação é determinada no nível da transação – DELAYED_DURABILITY = { *OFF* | ON }. Confira [Controle no nível do bloco atômico – procedimentos armazenados e compilados nativamente](control-transaction-durability.md#compiledproccontrol) e [Nível de controle COMMIT – Transact-SQL](control-transaction-durability.md#bkmk_t-sqlcontrol) para obter mais informações.  
+ Com essa configuração, a durabilidade de cada transação é determinada no nível da transação – DELAYED_DURABILITY = { *OFF* | ON }. Ver [controle de nível de bloco atômico – procedimentos armazenados compilados nativamente](#atomic-block-level-control---natively-compiled-stored-procedures) e [controle de nível COMMIT – Transact-SQL](#commit-level-control---t-sql) para obter mais informações.  
   
  `FORCED`  
  Com essa configuração, cada transação que é confirmada no banco de dados é durável atrasada. Independentemente de a transação especificar completamente durável (DELAYED_DURABILITY = OFF) ou não fizer nenhuma especificação, a transação será durável atrasada. Essa configuração é útil quando a durabilidade da transação atrasada é útil para um banco de dados e você não quer alterar o código do aplicativo.  
   
-###  <a name="CompiledProcControl"></a> Controle no nível do bloco atômico – procedimentos armazenados e compilados nativamente  
+### <a name="atomic-block-level-control---natively-compiled-stored-procedures"></a>Controle de nível de bloco atômico – procedimentos armazenados compilados nativamente  
  O código a seguir fica dentro do bloco atômico.  
   
-```tsql  
+```sql  
 DELAYED_DURABILITY = { OFF | ON }  
 ```  
   
  `OFF`  
- [padrão] A transação será completamente durável, a menos que a opção DELAYED_DURABLITY = FORCED esteja em vigor; nesse caso, a confirmação será assíncrona e, portanto, durável atrasada. Consulte [Controle de nível de banco de dados](control-transaction-durability.md#bkmk_dbcontrol) para obter mais informações.  
+ [padrão] A transação será completamente durável, a menos que a opção DELAYED_DURABLITY = FORCED esteja em vigor; nesse caso, a confirmação será assíncrona e, portanto, durável atrasada. Consulte [Controle de nível de banco de dados](#database-level-control) para obter mais informações.  
   
  `ON`  
- A transação será durável atrasada, a menos que a opção DELAYED_DURABLITY = DISABLED esteja em vigor; nesse caso, a confirmação será síncrona e completamente durável.  Consulte [Controle de nível de banco de dados](control-transaction-durability.md#bkmk_dbcontrol) para obter mais informações.  
+ A transação será durável atrasada, a menos que a opção DELAYED_DURABLITY = DISABLED esteja em vigor; nesse caso, a confirmação será síncrona e completamente durável.  Consulte [Controle de nível de banco de dados](#database-level-control) para obter mais informações.  
   
  **Código de exemplo:**  
   
-```tsql  
+```sql  
 CREATE PROCEDURE <procedureName> ...  
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER  
 AS BEGIN ATOMIC WITH   
@@ -138,19 +138,19 @@ END
 |`DELAYED_DURABILITY = OFF`|O bloco atômico inicia uma nova transação completamente durável.|O bloco atômico cria um ponto de salvamento na transação existente e, em seguida, inicia a nova transação.|  
 |`DELAYED_DURABILITY = ON`|O bloco atômico inicia uma nova transação durável atrasada.|O bloco atômico cria um ponto de salvamento na transação existente e, em seguida, inicia a nova transação.|  
   
-###  <a name="bkmk_T-SQLControl"></a> Controle de nível COMMIT –[!INCLUDE[tsql](../../includes/tsql-md.md)]  
+### <a name="commit-level-control---t-sql"></a>Confirmar o controle de nível - (T-SQL)
  A sintaxe de COMMIT é estendida para que você possa forçar a durabilidade da transação atrasada. Se DELAYED_DURABILITY for DISABLED ou FORCED no nível de banco de dados (veja acima) essa opção COMMIT será ignorada.  
   
-```tsql  
+```sql  
 COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [ WITH ( DELAYED_DURABILITY = { OFF | ON } ) ]  
   
 ```  
   
  `OFF`  
- [padrão] A transação COMMIT será completamente durável, a menos que a opção de banco de dados DELAYED_DURABLITY = FORCED esteja em vigor; nesse caso, a COMMIT é assíncrona e, portanto, durável atrasada. Consulte [Controle de nível de banco de dados](control-transaction-durability.md#bkmk_dbcontrol) para obter mais informações.  
+ [padrão] A transação COMMIT será completamente durável, a menos que a opção de banco de dados DELAYED_DURABLITY = FORCED esteja em vigor; nesse caso, a COMMIT é assíncrona e, portanto, durável atrasada. Consulte [Controle de nível de banco de dados](#database-level-control) para obter mais informações.  
   
  `ON`  
- A transação COMMIT será durável atrasada, a menos que a opção de banco de dados DELAYED_DURABLITY = DISABLED esteja em vigor; nesse caso, a COMMIT é síncrona e, portanto, completamente durável. Consulte [Controle de nível de banco de dados](control-transaction-durability.md#bkmk_dbcontrol) para obter mais informações.  
+ A transação COMMIT será durável atrasada, a menos que a opção de banco de dados DELAYED_DURABLITY = DISABLED esteja em vigor; nesse caso, a COMMIT é síncrona e, portanto, completamente durável. Consulte [Controle de nível de banco de dados](#database-level-control) para obter mais informações.  
   
 ### <a name="summary-of-options-and-their-interactions"></a>Resumo de opções e suas interações  
  Esta tabela resume as interações entre as configurações de durabilidade atrasada de nível de banco de dados e as configurações no nível da confirmação. As configurações no nível de banco de dados sempre têm precedência sobre configurações no nível de confirmação.  
@@ -169,7 +169,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
   
 -   Executar o procedimento armazenado do sistema `sp_flush_log`. Esse procedimento força uma liberação para o disco dos registros de log de todas as transações duráveis confirmadas anteriormente. Para obter mais informações, consulte [sys.sp_flush_log &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-flush-log-transact-sql).  
   
-##  <a name="bkmk_OtherSQLFeatures"></a> Durabilidade atrasada e outros [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recursos  
+##  <a name="delayed-durability-and-other-sql-server-features"></a>Durabilidade atrasada e outros recursos do SQL Server  
  **Controle de alterações e alterar captura de dados**  
  Todas as transações com controle de alterações são completamente duráveis. Uma transação terá a propriedade de controle de alterações se fizer alguma operação de gravação nas tabelas que estão habilitadas para controle de alterações. Não há suporte para o uso de durabilidade atrasada para bancos de dados que usam o CDC (Change Data Capture).   
   
@@ -194,13 +194,13 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  **Backup de log**  
  Somente as transações que se tornaram duráveis são incluídas no backup.  
   
-##  <a name="bkmk_DataLoss"></a> Onde posso perder os dados?  
+## <a name="when-can-i-lose-data"></a>Quando posso perder os dados?  
  Se você implementar durabilidade atrasada em qualquer de suas tabelas, você deve compreender que certas circunstâncias podem levar à perda de dados. Se você não puder tolerar perda de dados, não use a durabilidade atrasada em suas tabelas.  
   
 ### <a name="catastrophic-events"></a>Eventos catastróficos  
  No caso de um evento catastrófico, como uma falha do servidor, você perderá os dados de todas as transações confirmadas que não foram salvas em disco. As transações duráveis atrasadas são salvas no disco sempre que uma transação totalmente durável é executada em qualquer tabela (duráveis com otimização de memória ou baseada em disco) no banco de dados ou quando o `sp_flush_log` é chamado. Se estiver usando transações duráveis atrasadas, você pode querer criar uma pequena tabela no banco de dados que você pode atualizar periodicamente ou chamar periodicamente o `sp_flush_log` para salvar todas as transações confirmadas pendentes. O log de transações também é liberado sempre que fica cheio, mas é difícil de prever e impossível de controlar.  
   
-### <a name="includessnoversionincludesssnoversion-mdmd-shutdown-and-restart"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desligamento e reinício  
+### <a name="sql-server-shutdown-and-restart"></a>Reinicialização e desligamento do SQL Server  
  Para durabilidade atrasada, não há diferença entre um desligamento inesperado e um desligamento/reinício esperado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Como os eventos catastróficos, você também deve se planejar para a perda de dados. Em um desligamento planejado/reinício, algumas transações que não foram gravadas em disco podem primeiro ser salvas em disco, mas você não deve planejar isso. Planeje mesmo se um desligamento/reinício, seja planejado ou não, perda os dados da mesma forma que um evento catastrófico.  
   
 ## <a name="see-also"></a>Consulte também  

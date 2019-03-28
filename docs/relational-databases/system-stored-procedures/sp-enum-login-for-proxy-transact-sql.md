@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 9250f4c7da207561c935d7aa1c72ac4df7104526
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf71a75b86698fc78c56c26d87878a14a2ba91a1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799426"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535578"
 ---
 # <a name="spenumloginforproxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,21 +42,18 @@ sp_enum_login_for_proxy
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@name**=] '*nome*'  
- O nome de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entidade de segurança, logon, função de servidor, ou **msdb** função de banco de dados para listar proxies. O nome é **nvarchar(256)**, com um padrão NULL.  
+`[ @name = ] 'name'` O nome de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entidade de segurança, logon, função de servidor, ou **msdb** função de banco de dados para listar proxies. O nome é **nvarchar(256)**, com um padrão NULL.  
   
- [ **@proxy_id**= ] *id*  
- O número de identificação de proxy do proxy para o qual listar informações. O *proxy_id* é **int**, com um padrão NULL. Ambos os *id* ou o *proxy_name* pode ser especificado.  
+`[ @proxy_id = ] id` O número de identificação de proxy do proxy para listar informações. O *proxy_id* é **int**, com um padrão NULL. Ambos os *id* ou o *proxy_name* pode ser especificado.  
   
- [ **@proxy_name**= ] **'***proxy_name***'**  
- O nome do proxy para o qual listar informações. O *proxy_name* é **sysname**, com um padrão NULL. Ambos os *id* ou o *proxy_name* pode ser especificado.  
+`[ @proxy_name = ] 'proxy_name'` O nome do proxy para listar informações. O *proxy_name* é **sysname**, com um padrão NULL. Ambos os *id* ou o *proxy_name* pode ser especificado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|Número de identificação de proxy.|  
 |**proxy_name**|**sysname**|O nome do proxy.|  

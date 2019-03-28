@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ELEMENTXSINIL directive
 ms.assetid: bbcb6f9e-a51b-4775-9795-947c9d6d758f
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 597efb8e1385bf869e4109bd6961b64e477f2fb3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1a23baa7791aea37c4c90077c21391001ddc538a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221246"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534808"
 ---
-# <a name="example-specifying-the-elementxsinil-directive"></a>Exemplo: Especificando a diretiva ELEMENTXSINIL
+# <a name="example-specifying-the-elementxsinil-directive"></a>Exemplo: especificando a diretiva ELEMENTXSINIL
   Quando você especifica a política ELEMENT para recuperar o XML centrado em elemento, se a coluna tiver um valor NULL, o elemento correspondente não será gerado pelo modo EXPLICIT. Opcionalmente, é possível especificar a diretiva ELEMENTXSINIL para solicitar o elemento gerador de valores NULL em que o atributo `xsi:nil` é definido com o valor TRUE.  
   
  A consulta a seguir constrói XML que inclui um endereço de funcionário. Para colunas `AddressLine2` e `City` , os nomes das colunas especificam a diretiva `ELEMENTXSINIL` . Isso gera o elemento para valores NULL nas colunas `AddressLine2` e `City` do conjunto de linhas.  

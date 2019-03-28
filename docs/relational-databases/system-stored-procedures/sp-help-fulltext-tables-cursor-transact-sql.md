@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 87566a816638e38e9adbf4e2dd6ebfef1f741e3c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d43903af7a4626c7d9645e1b750696b15cc692ec
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851994"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534562"
 ---
 # <a name="sphelpfulltexttablescursor-transact-sql"></a>sp_help_fulltext_tables_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -46,21 +46,18 @@ sp_help_fulltext_tables_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@cursor_return=** ] *@cursor_variable* SAÍDA  
- É a variável de saída do tipo **cursor**. O cursor é somente leitura, rolável e dinâmico.  
+`[ @cursor_return = ] @cursor_variable OUTPUT` É a variável de saída do tipo **cursor**. O cursor é somente leitura, rolável e dinâmico.  
   
- [  **@fulltext_catalog_name=** ] **'***fulltext_catalog_name***'**  
- É o nome do catálogo de texto completo. *fulltext_catalog_name* está **sysname**, com um padrão NULL. Se *fulltext_catalog_name* for omitido ou for NULL, todas as tabelas indexadas de texto completo associadas com o banco de dados são retornadas. Se *fulltext_catalog_name* for especificado, mas *table_name* for omitido ou for NULL, as informações de índice de texto completo são recuperadas para cada tabela indexada de texto completo associada a este catálogo. Se os dois *fulltext_catalog_name* e *table_name* forem especificados, uma linha será retornada se *table_name* associado *fulltext_catalog_name*; Caso contrário, ocorrerá um erro.  
+`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` É o nome do catálogo de texto completo. *fulltext_catalog_name* está **sysname**, com um padrão NULL. Se *fulltext_catalog_name* for omitido ou for NULL, todas as tabelas indexadas de texto completo associadas com o banco de dados são retornadas. Se *fulltext_catalog_name* for especificado, mas *table_name* for omitido ou for NULL, as informações de índice de texto completo são recuperadas para cada tabela indexada de texto completo associada a este catálogo. Se os dois *fulltext_catalog_name* e *table_name* forem especificados, uma linha será retornada se *table_name* associado *fulltext_catalog_name*; Caso contrário, ocorrerá um erro.  
   
- [  **@table_name=**] **'***table_name***'**  
- É o nome de uma ou duas partes da tabela para a qual são solicitados metadados de texto completo. *table_name* está **nvarchar(517)**, com um valor padrão de NULL. Se apenas *table_name* for especificado, somente a linha relevante ao *table_name* é retornado.  
+`[ @table_name = ] 'table_name'` É o nome da tabela de uma ou duas partes para o qual os metadados de texto completo são solicitados. *table_name* está **nvarchar(517)**, com um valor padrão de NULL. Se apenas *table_name* for especificado, somente a linha relevante ao *table_name* é retornado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou (1) falha  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**TABLE_OWNER**|**sysname**|Proprietário da tabela. Esse é o nome do usuário de banco de dados que criou a tabela.|  
 |**TABLE_NAME**|**sysname**|Nome da tabela.|  

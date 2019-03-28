@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d298e167e17bea6cc3995479d8ddf8abf4e3531
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc8cae9353ad780a0711c77e138246f0be0d7d15
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594345"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534418"
 ---
 # <a name="sphelprole-transact-sql"></a>sp_helprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,15 +41,14 @@ sp_helprole [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@rolename =** ] **'***função***'**  
- É o nome de uma função do banco de dados atual. *função* está **sysname**, com um padrão NULL. *função* deve existir no banco de dados atual. Se *função* não é especificado, serão retornadas informações sobre todas as funções de banco de dados atual.  
+`[ @rolename = ] 'role'` É o nome de uma função de banco de dados atual. *função* está **sysname**, com um padrão NULL. *função* deve existir no banco de dados atual. Se *função* não é especificado, serão retornadas informações sobre todas as funções de banco de dados atual.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**RoleName**|**sysname**|Nome da função no banco de dados atual.|  
 |**RoleId**|**smallint**|ID da **RoleName**.|  

@@ -18,12 +18,12 @@ ms.assetid: b2fc4ce1-0a8e-44d2-b206-7dc7b258d8c9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 62a8246c6d694ae002a615e803c520127ab595c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fff543b074936f8bf1d69d841a1e81e402e9b0ae
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630174"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535428"
 ---
 # <a name="sphelpschedule-transact-sql"></a>sp_help_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,17 +44,13 @@ sp_help_schedule
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@schedule_id =** ] *id*  
- O identificador da agenda a ser listado. *schedule_name* está **int**, sem padrão. Qualquer um dos *schedule_id* ou *schedule_name* pode ser especificado.  
+`[ @schedule_id = ] id` O identificador da agenda à lista. *schedule_name* está **int**, sem padrão. Qualquer um dos *schedule_id* ou *schedule_name* pode ser especificado.  
   
- [  **@schedule_name =** ] **'***schedule_name***'**  
- O nome da agenda a ser listada. *schedule_name* está **sysname**, sem padrão. Qualquer um dos *schedule_id* ou *schedule_name* pode ser especificado.  
+`[ @schedule_name = ] 'schedule_name'` O nome da agenda à lista. *schedule_name* está **sysname**, sem padrão. Qualquer um dos *schedule_id* ou *schedule_name* pode ser especificado.  
   
- [ **@attached_schedules_only** = ] *attached_schedules_only* ]  
- Especifica se apenas agendas com um trabalho anexado devem ser mostradas. *attached_schedules_only* está **bit**, com um padrão de **0**. Quando *attached_schedules_only* é **0**, todas as agendas são mostradas. Quando *attached_schedules_only* é **1**, o conjunto de resultados contém apenas as agendas que estão anexadas a um trabalho.  
+`[ @attached_schedules_only = ] attached_schedules_only ]` Especifica se deve mostrar apenas agendas que um trabalho anexado. *attached_schedules_only* está **bit**, com um padrão de **0**. Quando *attached_schedules_only* é **0**, todas as agendas são mostradas. Quando *attached_schedules_only* é **1**, o conjunto de resultados contém apenas as agendas que estão anexadas a um trabalho.  
   
- [ **@include_description** =] *include_description*  
- Especifica se descrições devem ser incluídas no conjunto de resultados. *include_description* está **bit**, com um padrão de **0**. Quando *include_description* é **0**, o *schedule_description* coluna do conjunto de resultados contém um espaço reservado. Quando *include_description* é **1**, a descrição da agenda será incluída no conjunto de resultados.  
+`[ @include_description = ] include_description` Especifica se devem ser incluídas descrições no conjunto de resultados. *include_description* está **bit**, com um padrão de **0**. Quando *include_description* é **0**, o *schedule_description* coluna do conjunto de resultados contém um espaço reservado. Quando *include_description* é **1**, a descrição da agenda será incluída no conjunto de resultados.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -62,12 +58,12 @@ sp_help_schedule
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Este procedimento retorna o seguinte conjunto de resultados:  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|Número do identificador de agenda.|  
 |**schedule_uid**|**uniqueidentifier**|Identificador da agenda.|  
 |**schedule_name**|**sysname**|Nome da agenda.|  
-|**habilitado**|**int**|Se a agenda foi habilitada (**1**) ou não habilitado (**0**).|  
+|**enabled**|**int**|Se a agenda foi habilitada (**1**) ou não habilitado (**0**).|  
 |**freq_type**|**int**|Valor que indica quando o trabalho a ser executado.<br /><br /> **1** = uma vez<br /><br /> **4** = diariamente<br /><br /> **8** = semanalmente<br /><br /> **16** = mensalmente<br /><br /> **32** = mensalmente, relativo a **freq_interval**<br /><br /> **64** = executar quando o serviço SQLServerAgent é iniciado.|  
 |**freq_interval**|**int**|Dias quando o trabalho é executado. O valor depende do valor de **freq_type**. Para obter mais informações, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_subday_type**|**int**|Unidades para **freq_subday_interval**. Para obter mais informações, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  

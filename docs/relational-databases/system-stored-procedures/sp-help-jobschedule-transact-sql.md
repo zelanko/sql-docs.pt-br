@@ -18,12 +18,12 @@ ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 36e00cf0e5d39722fee1c60fc86f0e6f81fd7e43
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 982596981c6c363abcad57b94427fcb4178c2c65
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100351"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532878"
 ---
 # <a name="sphelpjobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,22 +44,18 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@job_id=** ] *job_id*  
- O número de identificação do trabalho. *job_id*está **uniqueidentifier**, com um padrão NULL.  
+`[ @job_id = ] job_id` O número de identificação do trabalho. *job_id*está **uniqueidentifier**, com um padrão NULL.  
   
- [  **@job_name=** ] **'**_job_name_**'**  
- O nome do trabalho. *job_name*está **sysname**, com um padrão NULL.  
+`[ @job_name = ] 'job_name'` O nome do trabalho. *job_name*está **sysname**, com um padrão NULL.  
   
-> **OBSERVAÇÃO:** Qualquer um dos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados.  
+> [!NOTE]
+> Qualquer um dos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados.
+
+`[ @schedule_name = ] 'schedule_name'` O nome do item de agenda para o trabalho. *schedule_name*está **sysname**, com um padrão NULL.  
   
- [  **@schedule_name=** ] **'**_schedule_name_**'**  
- O nome do item de agenda que será definido para o trabalho. *schedule_name*está **sysname**, com um padrão NULL.  
+`[ @schedule_id = ] schedule_id` O número de identificação do item de agenda para o trabalho. *schedule_id*está **int**, com um padrão NULL.  
   
- [  **@schedule_id=** ] *schedule_id*  
- O número de identificação do item de agenda do trabalho. *schedule_id*está **int**, com um padrão NULL.  
-  
- [  **@include_description=** ] *include_description*  
- Especifica se deve ser incluída a descrição da agenda no conjunto de resultados. *include_description* está **bit**, com um padrão de **0**. Quando *include_description* é **0**, a descrição da agenda não está incluída no conjunto de resultados. Quando *include_description* é **1**, a descrição da agenda será incluída no conjunto de resultados.  
+`[ @include_description = ] include_description` Especifica se deve incluir a descrição da agenda no conjunto de resultados. *include_description* está **bit**, com um padrão de **0**. Quando *include_description* é **0**, a descrição da agenda não está incluída no conjunto de resultados. Quando *include_description* é **1**, a descrição da agenda será incluída no conjunto de resultados.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -70,7 +66,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|Número do identificador de agenda.|  
 |**schedule_name**|**sysname**|Nome da agenda.|  
-|**habilitado**|**int**|Se a agenda foi habilitada (**1**) ou não habilitado (**0**).|  
+|**enabled**|**int**|Se a agenda foi habilitada (**1**) ou não habilitado (**0**).|  
 |**freq_type**|**int**|Valor que indica quando o trabalho a ser executado.<br /><br /> **1** = uma vez<br /><br /> **4** = diariamente<br /><br /> **8** = semanalmente<br /><br /> **16** = mensalmente<br /><br /> **32** = mensalmente, relativo a **freq_interval**<br /><br /> **64** = executar quando **SQLServerAgent** inicia o serviço.|  
 |**freq_interval**|**int**|Dias quando o trabalho é executado. O valor depende do valor de **freq_type**. Para obter mais informações, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_subday_type**|**int**|Unidades para **freq_subday_interval**. Para obter mais informações, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
@@ -120,7 +116,7 @@ EXEC dbo.sp_help_jobschedule
 GO  
 ```  
   
-### <a name="b-returning-the-job-schedule-for-a-specific-schedule"></a>b. Retornando a agenda de trabalho de uma agenda específica  
+### <a name="b-returning-the-job-schedule-for-a-specific-schedule"></a>B. Retornando a agenda de trabalho de uma agenda específica  
  O exemplo a seguir retorna as informações da agenda chamada `NightlyJobs` e do trabalho chamado `RunReports`.  
   
 ```  
@@ -152,5 +148,3 @@ GO
  [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
  [sp_update_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
-  

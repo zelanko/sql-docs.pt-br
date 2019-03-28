@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 71b5b57625a8feb5d268898ff4865c2039bd358c
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 1155937c8634fe9859b13b84f2e42be6ceb825d0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100501"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530418"
 ---
 # <a name="spcolumns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,22 +46,17 @@ sp_columns [ @table_name = ] object
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **\@table_name =**] *objeto*  
- É o nome do objeto usado para retornar informações do catálogo. *objeto* pode ser uma tabela, exibição ou outro objeto que tem colunas como funções com valor de tabela. *objeto* está **nvarchar(384)**, sem padrão. Há suporte para a correspondência do padrão curinga.  
+`[ \@table_name = ] object` É o nome do objeto que é usado para retornar informações de catálogo. *objeto* pode ser uma tabela, exibição ou outro objeto que tem colunas como funções com valor de tabela. *objeto* está **nvarchar(384)**, sem padrão. Há suporte para a correspondência do padrão curinga.  
   
- [  **\@table_owner =**] *proprietário*  
- É o proprietário do objeto usado para retornar informações do catálogo. *proprietário* está **nvarchar(384)**, com um padrão NULL. Há suporte para a correspondência do padrão curinga. Se *proprietário* não é especificado, serão aplicadas as regras de visibilidade do objeto padrão do DBMS subjacente.  
+`[ \@table_owner = ] owner` É o proprietário do objeto do objeto que é usado para retornar informações de catálogo. *proprietário* está **nvarchar(384)**, com um padrão NULL. Há suporte para a correspondência do padrão curinga. Se *proprietário* não é especificado, serão aplicadas as regras de visibilidade do objeto padrão do DBMS subjacente.  
   
  Se o usuário atual possuir um objeto com o nome especificado, as colunas desse objeto serão retornadas. Se *proprietário* não for especificado e o usuário atual não possuir um objeto com especificado *objeto*, **sp_columns** procurará um objeto com especificado  *objeto* pertencente ao proprietário do banco de dados. Se existir, as colunas desse objeto serão retornadas.  
   
- [  **\@table_qualifier =**] *qualificador*  
- É o nome do qualificador do objeto. *qualificador* está **sysname**, com um padrão NULL. Vários produtos DBMS dão suporte à nomenclatura de três partes para objetos (_qualificador_**.** _proprietário_**.** _nome_). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Em alguns produtos, ela representa o nome do servidor do ambiente de banco de dados do objeto.  
+`[ \@table_qualifier = ] qualifier` É o nome do qualificador do objeto. *qualificador* está **sysname**, com um padrão NULL. Vários produtos DBMS dão suporte à nomenclatura de três partes para objetos (_qualificador_**.** _proprietário_**.** _nome_). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Em alguns produtos, ela representa o nome do servidor do ambiente de banco de dados do objeto.  
   
- [  **\@column_name =**] *coluna*  
- É uma única coluna, usada quando apenas uma coluna de informações de catálogo é desejada. *coluna* está **nvarchar(384)**, com um padrão NULL. Se *coluna* não é especificado, todas as colunas são retornadas. Na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *coluna* representa o nome da coluna conforme listado na **syscolumns** tabela. Há suporte para a correspondência do padrão curinga. Para interoperabilidade máxima, o cliente de gateway deve pressupor correspondência apenas do padrão SQL-92 (os caracteres curinga % e _).  
+`[ \@column_name = ] column` É uma única coluna e é usada quando somente uma coluna de informações de catálogo é desejada. *coluna* está **nvarchar(384)**, com um padrão NULL. Se *coluna* não é especificado, todas as colunas são retornadas. Na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *coluna* representa o nome da coluna conforme listado na **syscolumns** tabela. Há suporte para a correspondência do padrão curinga. Para interoperabilidade máxima, o cliente de gateway deve pressupor correspondência apenas do padrão SQL-92 (os caracteres curinga % e _).  
   
- [  **\@ODBCVer =**] *ODBCVer*  
- É a versão do ODBC está sendo usada. *ODBCVer* está **int**, com um padrão de 2. Isto indica ODBC versão 2. Os valores válidos são 2 ou 3. Para as diferenças de comportamento entre as versões 2 e 3, consulte o ODBC **SQLColumns** especificação.  
+`[ \@ODBCVer = ] ODBCVer` É a versão do ODBC que está sendo usado. *ODBCVer* está **int**, com um padrão de 2. Isto indica ODBC versão 2. Os valores válidos são 2 ou 3. Para as diferenças de comportamento entre as versões 2 e 3, consulte o ODBC **SQLColumns** especificação.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  None  
@@ -81,8 +76,8 @@ sp_columns [ @table_name = ] object
 |**LENGTH**|**int**|Tamanho da transferência dos dados. <sup>1</sup>|  
 |**ESCALA**|**smallint**|Número de dígitos à direita da vírgula decimal.|  
 |**RADIX**|**smallint**|Base para tipos de dados numéricos.|  
-|**PERMITE VALOR NULO**|**smallint**|Especifica possibilidade de nulidade:<br /><br /> 1 = NULL é possível.<br /><br /> 0 = NOT NULL.|  
-|**COMENTÁRIOS**|**varchar(254)**|Esse campo sempre retorna NULL.|  
+|**NULLABLE**|**smallint**|Especifica possibilidade de nulidade:<br /><br /> 1 = NULL é possível.<br /><br /> 0 = NOT NULL.|  
+|**REMARKS**|**varchar(254)**|Esse campo sempre retorna NULL.|  
 |**COLUMN_DEF**|**nvarchar(4000)**|Valor padrão da coluna.|  
 |**SQL_DATA_TYPE**|**smallint**|Valor do tipo de dados SQL conforme exibido no campo TYPE do descritor. Esta coluna é igual a **DATA_TYPE** coluna, exceto para o **datetime** e SQL-92 **intervalo** tipos de dados. Esta coluna sempre retorna um valor.|  
 |**SQL_DATETIME_SUB**|**smallint**|Código de subtipo para **datetime** e o SQL-92 **intervalo** tipos de dados. Para outros tipos de dados, esta coluna retorna NULL.|  

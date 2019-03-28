@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/17/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 4e48d51e45cdc9f1cd56f22228d95370b8f75711
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 8e5f874e43e70ce1bddfe21b745199fef44aa04a
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432739"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510623"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>Arquitetura de extensibilidade em serviços do SQL Server Machine Learning 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

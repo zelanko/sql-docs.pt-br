@@ -18,12 +18,12 @@ ms.assetid: 908d01cc-e704-45d9-9e85-d2df6da3e6f5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 46b99e16505cf6f7a08503a98f37ced7bedcdb12
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9fa56614c65dfc14982c62fb71ce117f8872805c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520808"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527988"
 ---
 # <a name="spdefaultlanguage-transact-sql"></a>sp_defaultlanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,9 @@ sp_defaultlanguage [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@loginame =** ] **'**_logon_**'**  
- É o nome de logon. *login* está **sysname**, sem padrão. *login* pode ser uma existente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon ou um usuário do Windows ou grupo.  
+`[ @loginame = ] 'login'` É o nome de logon. *login* está **sysname**, sem padrão. *login* pode ser uma existente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon ou um usuário do Windows ou grupo.  
   
- [  **@language =** ] **'**_idioma_**'**  
- É o idioma padrão do logon. *linguagem* está **sysname**, com um padrão NULL. *linguagem* deve ser um idioma válido no servidor. Se *linguagem* não for especificado, *idioma* é definido como o idioma padrão do servidor; padrão é definida pelo **sp_configure** variável de configuração **idioma padrão**. A alteração do idioma padrão de servidor não altera o idioma padrão para logons existentes.  
+`[ @language = ] 'language'` É o idioma padrão do logon. *linguagem* está **sysname**, com um padrão NULL. *linguagem* deve ser um idioma válido no servidor. Se *linguagem* não for especificado, *idioma* é definido como o idioma padrão do servidor; padrão é definida pelo **sp_configure** variável de configuração **idioma padrão**. A alteração do idioma padrão de servidor não altera o idioma padrão para logons existentes.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -78,7 +76,7 @@ GO
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [@@LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/functions/language-transact-sql.md)   
  [Instruções SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [sys. syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)   
+ [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

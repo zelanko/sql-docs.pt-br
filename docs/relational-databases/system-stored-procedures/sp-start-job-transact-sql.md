@@ -18,12 +18,12 @@ ms.assetid: 8a91df6a-eb84-4512-9a17-4a6e32a9538a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 78c6a92d11cc192e2b0643c264352adcfb30d759
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 85878b79ec98b3523f18ed1c5c4d3f1bf08fc540
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715154"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526658"
 ---
 # <a name="spstartjob-transact-sql"></a>sp_start_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,23 +46,17 @@ sp_start_job
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@job_name=** ] **'***job_name***'**  
- O nome do trabalho a ser iniciado. Qualquer um dos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados. *job_name* está **sysname**, com um padrão NULL.  
+`[ @job_name = ] 'job_name'` O nome do trabalho a ser iniciado. Qualquer um dos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados. *job_name* está **sysname**, com um padrão NULL.  
   
- [ **@job_id=** ] *job_id*  
- O número de identificação do trabalho a ser iniciado. Qualquer um dos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados. *job_id* está **uniqueidentifier**, com um padrão NULL.  
+`[ @job_id = ] job_id` O número de identificação do trabalho a ser iniciado. Qualquer um dos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados. *job_id* está **uniqueidentifier**, com um padrão NULL.  
   
- [ **@error_flag=** ] *error_flag*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @error_flag = ] error_flag` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ **@server_name=** ] **'***server_name***'**  
- O servidor de destino no qual iniciar o trabalho. *nome_do_servidor* está **nvarchar (128)**, com um padrão NULL. *server_name* deve ser um dos servidores de destino ao qual o trabalho atualmente está direcionado.  
+`[ @server_name = ] 'server_name'` O servidor de destino na qual iniciar o trabalho. *nome_do_servidor* está **nvarchar (128)**, com um padrão NULL. *server_name* deve ser um dos servidores de destino ao qual o trabalho atualmente está direcionado.  
   
- [  **@step_name=** ] **'***step_name***'**  
- O nome da etapa na qual a execução do trabalho será iniciada. Aplica-se apenas a trabalhos locais. *step_name* está **sysname**, com um padrão de NULL  
+`[ @step_name = ] 'step_name'` O nome da etapa na qual iniciar a execução do trabalho. Aplica-se apenas a trabalhos locais. *step_name* está **sysname**, com um padrão de NULL  
   
- [ **@output_flag=** ] *output_flag*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @output_flag = ] output_flag` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

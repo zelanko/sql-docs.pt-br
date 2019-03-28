@@ -16,12 +16,12 @@ ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c713b4efcfd37c245f340769a4725b0792d7528b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 94d074985848bb510c15907f6b17dc492904f5c0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210047"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537828"
 ---
 # <a name="splinkpublication-transact-sql"></a>sp_link_publication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,17 +50,13 @@ sp_link_publication [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publisher**=] **'***publisher***'**  
- É o nome do Publicador ao qual vincular-se. *Publisher* está **sysname**, sem padrão.  
+`[ @publisher = ] 'publisher'` É o nome do publicador ao qual vincular. *Publisher* está **sysname**, sem padrão.  
   
- [ **@publisher_db**=] **'***publisher_db***'**  
- É o nome do banco de dados Publicador ao qual vincular-se. *publisher_db* está **sysname**, sem padrão.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados para vincular ao publicador. *publisher_db* está **sysname**, sem padrão.  
   
- [ **@publication**=] **'***publicação***'**  
- É o nome da publicação a qual vincular-se. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação para vincular a. *publicação* está **sysname**, sem padrão.  
   
- [ **@security_mode**=] *security_mode*  
- É o modo de segurança usado pelo Assinante para conexão a um Publicador remoto para atualização imediata. *security_mode* está **int**, e pode ser um destes valores. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @security_mode = ] security_mode` É o modo de segurança usado pelo assinante para se conectar a um publicador remoto para atualização imediata. *security_mode* está **int**, e pode ser um destes valores. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -68,14 +64,11 @@ sp_link_publication [ @publisher = ] 'publisher'
 |**1**|Usa o contexto de segurança (Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Autenticação do Windows) do usuário que faz a alteração no Assinante.<br /><br /> Observação: Essa conta também deve existir no Publicador com privilégios suficientes. Ao usar Autenticação do Windows, deve haver suporte para delegação de conta de segurança.|  
 |**2**|Usa um logon de servidor vinculado existente, definido pelo usuário criado usando **sp_link_publication**.|  
   
- [ **@login**=] **'***logon***'**  
- É o logon. *login* é **sysname**, com um padrão de NULL. Esse parâmetro deve ser especificado quando *security_mode* é **0**.  
+`[ @login = ] 'login'` É o logon. *login* é **sysname**, com um padrão de NULL. Esse parâmetro deve ser especificado quando *security_mode* é **0**.  
   
- [ **@password**=] **'***senha***'**  
- É a senha. *senha* está **sysname**, com um padrão NULL. Esse parâmetro deve ser especificado quando *security_mode* é **0**.  
+`[ @password = ] 'password'` É a senha. *senha* está **sysname**, com um padrão NULL. Esse parâmetro deve ser especificado quando *security_mode* é **0**.  
   
- [  **@distributor=** ] **'***distribuidor***'**  
- É o nome do distribuidor. *distribuidor* está **sysname**, com um padrão NULL.  
+`[ @distributor = ] 'distributor'` É o nome do distribuidor. *distribuidor* está **sysname**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

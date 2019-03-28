@@ -11,15 +11,15 @@ helpviewer_keywords:
 - queries [XML in SQL Server], nested FOR XML
 - nested FOR XML queries
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a804585f215b7328890d2f0400c77307af7b1b4b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7a06d30f25f5c78236fe30f148b254ee817dfc0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211136"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528460"
 ---
 # <a name="use-nested-for-xml-queries"></a>Usar consultas FOR XML aninhadas
   O `xml` tipo de dados e o [diretiva TYPE em consultas FOR XML](type-directive-in-for-xml-queries.md) permitem que o XML retornado por consultas FOR XML seja processado no servidor e no cliente.  
@@ -39,7 +39,7 @@ SELECT @x
 --<row ProductModelID="119" Name="Bike Wash" />  
 ```  
   
- Além disso, é possível processar o XML retornado na variável, `@x`, usando um do `xml` métodos de tipo de dados. Por exemplo, é possível recuperar o valor do atributo `ProductModelID` usando o [método value()](/sql/t-sql/xml/value-method-xml-data-type).  
+ Além disso, é possível processar o XML retornado na variável, `@x`, usando um dos métodos de tipo de dados `xml`. Por exemplo, é possível recuperar o valor do atributo `ProductModelID` usando o [método value()](/sql/t-sql/xml/value-method-xml-data-type).  
   
 ```  
 DECLARE @i int;  
@@ -57,7 +57,7 @@ FOR XML RAW, TYPE,ROOT('myRoot');
   
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 <myRoot>  
@@ -66,7 +66,7 @@ FOR XML RAW, TYPE,ROOT('myRoot');
 </myRoot>  
 ```  
   
- Como o resultado é de `xml` tipo, você pode especificar uma da `xml` métodos diretamente em relação a esse XML de tipo de dados conforme mostrado na consulta a seguir. Na consulta, o [método query() (tipo de dados xml)](/sql/t-sql/xml/query-method-xml-data-type) é usado para recuperar o primeiro elemento filho <`row`> do elemento <`myRoot`>.  
+ Como o resultado é de tipo `xml`, é possível especificar um dos métodos de tipo de dados `xml` diretamente em relação a esse XML, conforme mostrado na consulta a seguir. Na consulta, o [método query() (tipo de dados xml)](/sql/t-sql/xml/query-method-xml-data-type) é usado para recuperar o primeiro elemento filho <`row`> do elemento <`myRoot`>.  
   
 ```  
 SELECT  (SELECT ProductModelID, Name  
@@ -76,14 +76,14 @@ SELECT  (SELECT ProductModelID, Name
   
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 <row ProductModelID="122" Name="All-Purpose Bike Stand" />  
 ```  
   
 ## <a name="returning-inner-for-xml-query-results-to-outer-queries-as-xml-type-instances"></a>Retornando resultados de consulta FOR XML interna para consultas externas como instâncias de tipo xml  
- Você pode escrever aninhados `FOR XML` consultas em que o resultado da consulta interna é retornado como um `xml` tipo para a consulta externa. Por exemplo:  
+ É possível escrever consultas `FOR XML` aninhadas em que o resultado da consulta interna é retornado como um tipo `xml` para a consulta externa. Por exemplo:  
   
 ```  
 SELECT Col1,   

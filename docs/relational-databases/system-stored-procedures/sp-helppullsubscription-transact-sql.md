@@ -16,12 +16,12 @@ ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b094d8bb3f9bd2cebfd9184976aeb57de77886e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 10a8184fdad0c25c2377c5ed9df0a318aba736a2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801798"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527768"
 ---
 # <a name="sphelppullsubscription-transact-sql"></a>sp_helppullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publisher=**] **'***publisher***'**  
- É o nome do servidor remoto. *Publisher* está **sysname**, com um padrão de **%**, que retorna informações para todos os publicadores.  
+`[ @publisher = ] 'publisher'` É o nome do servidor remoto. *Publisher* está **sysname**, com um padrão de **%**, que retorna informações para todos os publicadores.  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
- É o nome do banco de dados Publicador. *publisher_db* está **sysname**, com um padrão de **%**, que retorna todos os bancos de dados do publicador.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados publicador. *publisher_db* está **sysname**, com um padrão de **%**, que retorna todos os bancos de dados do publicador.  
   
- [  **@publication=**] **'***publicação***'**  
- É o nome da publicação. *publicação* está **sysname**, com um padrão de **%**, que retorna todas as publicações. Se esse parâmetro for igual a ALL, somente assinaturas pull com independent_agent = **0** são retornados.  
+`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, com um padrão de **%**, que retorna todas as publicações. Se esse parâmetro for igual a ALL, somente assinaturas pull com independent_agent = **0** são retornados.  
   
- [  **@show_push=**] **'***show_push***'**  
- Especifica se todas as assinaturas push devem ser retornadas. *show_push*está **nvarchar (5)**, com um padrão de FALSE, que não retorna assinaturas push.  
+`[ @show_push = ] 'show_push'` É se todas as assinaturas push devem ser retornados. *show_push*está **nvarchar (5)**, com um padrão de FALSE, que não retorna assinaturas push.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -59,7 +55,7 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |-----------------|---------------|-----------------|  
 |**publisher**|**sysname**|Nome do Publicador.|  
 |**banco de dados do publicador**|**sysname**|Nome do banco de dados publicador.|  
-|**publicação**|**sysname**|Nome da publicação.|  
+|**publication**|**sysname**|Nome da publicação.|  
 |**independent_agent**|**bit**|Indica se existe um Distribution Agent autônomo para essa publicação.|  
 |**tipo de assinatura**|**int**|O tipo de assinatura da publicação.|  
 |**Agente de distribuição**|**nvarchar(100)**|O Distribution Agent que trata a assinatura.|  
@@ -76,7 +72,7 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**logon do publicador**|**sysname**|ID do logon usado no Publicador para Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**senha do publicador**|**nvarchar(524)**|A senha (criptografada) usada no Publicador para Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**security_mode de publicador**|**int**|O modo de segurança implementado no Publicador.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação<br /><br /> **1** = autenticação do Windows<br /><br /> **2** = os gatilhos de sincronização usam um estático **sysservers** entrada de fazer a chamada de procedimento remoto (RPC), e *publisher* deve ser definido no **sysservers**tabela como um servidor remoto ou vinculado.|  
-|**distribuidor**|**sysname**|Nome do Distribuidor.|  
+|**distributor**|**sysname**|Nome do Distribuidor.|  
 |**distributor_login**|**sysname**|A ID de logon usado no Distribuidor para Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**distributor_password**|**nvarchar(524)**|A senha (criptografada) usada no Distribuidor para Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**distributor_security_mode**|**int**|Modo de segurança implementado no distribuidor:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação<br /><br /> **1** = autenticação do Windows|  

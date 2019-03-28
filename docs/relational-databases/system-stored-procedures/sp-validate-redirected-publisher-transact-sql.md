@@ -16,12 +16,12 @@ ms.assetid: 2b7fdbad-17e4-4442-b0b2-9b5e8f84b91d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 47bf5c0ada106a11bdef72debf401de0640ff11f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 56e490fa3a860b3fc4e18e72d674c70d29130f5b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818918"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527298"
 ---
 # <a name="spvalidateredirectedpublisher-transact-sql"></a>sp_validate_redirected_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +41,11 @@ ms.locfileid: "52818918"
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@original_publisher** =] **'***original_publisher***'**  
- O nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que publicou originalmente o banco de dados. *original_publisher* está **sysname**, sem padrão.  
+`[ @original_publisher = ] 'original_publisher'` O nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que publicou originalmente o banco de dados. *original_publisher* está **sysname**, sem padrão.  
   
- [ **@publisher_db** =] **'***publisher_db***'**  
- O nome do banco de dados que está sendo publicado. *publisher_db* está **sysname**, sem padrão.  
+`[ @publisher_db = ] 'publisher_db'` O nome do banco de dados que está sendo publicado. *publisher_db* está **sysname**, sem padrão.  
   
- [ **@redirected_publisher** =] **'***redirected_publisher***'**  
- O destino de redirecionamento especificado quando **sp_redirect_publisher** foi chamado para o par publicador/banco de dados. *redirected_publisher* está **sysname**, sem padrão.  
+`[ @redirected_publisher = ] 'redirected_publisher'` O destino de redirecionamento especificado quando **sp_redirect_publisher** foi chamado para o par publicador/banco de dados. *redirected_publisher* está **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

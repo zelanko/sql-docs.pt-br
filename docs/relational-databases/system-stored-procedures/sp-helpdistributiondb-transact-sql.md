@@ -16,12 +16,12 @@ ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: df84387d42a0f4d2f5cd74ac6b821f8b01ddb06b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5d143889672754be353b5868e955841d9e2869bc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818908"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533320"
 ---
 # <a name="sphelpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@database=**] **'***database_name***'**  
- É o nome do banco de dados para o qual as propriedades são retornadas. *Database_Name* está **sysname**, com um padrão de **%** para todos os bancos de dados associados ao distribuidor e no qual o usuário tem permissões.  
+`[ @database = ] 'database_name'` É o nome do banco de dados para o qual as propriedades são retornadas. *Database_Name* está **sysname**, com um padrão de **%** para todos os bancos de dados associados ao distribuidor e no qual o usuário tem permissões.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -56,7 +55,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 |**data_file**|**nvarchar(255)**|Nome do arquivo de banco de dados.|  
 |**data_file_size**|**int**|Tamanho de arquivo de dados inicial em megabytes.|  
 |**log_folder**|**nvarchar(255)**|Nome do diretório para o arquivo de log de banco de dados.|  
-|**Arquivo_de_log**|**nvarchar(255)**|Nome do arquivo de log.|  
+|**log_file**|**nvarchar(255)**|Nome do arquivo de log.|  
 |**log_file_size**|**int**|Tamanho de arquivo de log inicial em megabytes.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
