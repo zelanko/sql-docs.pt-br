@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9d093983408502d391c4025e03ba0a590e8f77a
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 9330c41ccf23cdb03add4c15fc2160594c2ff7a7
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617867"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618293"
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,26 +56,26 @@ sys.dm_db_index_physical_stats (
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *database_id* | NULO | 0 | PADRÃO  
+ *database_id* | NULL | 0 | DEFAULT  
  É a ID do banco de dados. *database_id* está **smallint**. As entradas válidas são o número da ID de um banco de dados, NULL, 0 ou DEFAULT. O padrão é 0. NULL, 0 e DEFAULT são valores equivalentes neste contexto.  
   
  Especifique NULL para retornar informações de todos os bancos de dados na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se você especificar NULL para *database_id*, você também deverá especificar NULL para *object_id*, *index_id*, e *partition_number*.  
   
  A função interna [DB_ID](../../t-sql/functions/db-id-transact-sql.md) pode ser especificado. Quando você usar DB_ID sem especificar um nome de banco de dados, o nível de compatibilidade do banco de dados atual deverá ser 90 ou mais.  
   
- *object_id* | NULO | 0 | PADRÃO  
+ *object_id* | NULL | 0 | DEFAULT  
  É a ID do objeto da tabela ou exibição em que o índice está ativado. *object_id* é **int**.  
   
  As entradas válidas são o número da ID de uma tabela e de uma exibição, NULL, 0 ou DEFAULT. O padrão é 0. NULL, 0 e DEFAULT são valores equivalentes neste contexto. Como de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], as entradas válidas também incluem o nome de fila do service broker ou o nome de tabela interna da fila. Quando os parâmetros padrão são aplicados (ou seja, todos os objetos, todos os índices, etc), informações de fragmentação para todas as filas são incluídos no conjunto de resultados.  
   
  Especifique NULL para retornar informações de todas as tabelas e exibições no banco de dados especificado. Se você especificar NULL para *object_id*, você também deverá especificar NULL para *index_id* e *partition_number*.  
   
- *index_id* | 0 | NULO | -1 | PADRÃO  
+ *index_id* | 0 | NULL | -1 | DEFAULT  
  É a ID do índice. *index_id* está **int**. As entradas válidas são o número de identificação de um índice, 0 se *object_id* for um heap, NULL, -1 ou padrão. O padrão é -1. NULL, -1 e DEFAULT são valores equivalentes neste contexto.  
   
  Especifique NULL para retornar informações de todos os índices de uma tabela base ou exibição. Se você especificar NULL para *index_id*, você também deverá especificar NULL para *partition_number*.  
   
- *partition_number* | NULO | 0 | PADRÃO  
+ *partition_number* | NULL | 0 | DEFAULT  
  É o número da partição no objeto. *partition_number* está **int**. As entradas válidas são o *partion_number* de um índice ou heap, NULL, 0 ou DEFAULT. O padrão é 0. NULL, 0 e DEFAULT são valores equivalentes neste contexto.  
   
  Especifique NULL para retornar informações de todas as partições do objeto proprietário.  
@@ -197,7 +197,7 @@ GO
   
 -   Usar ALTER INDEX REBUILD, a substituição de DBCC DBREINDEX, para reconstruir o índice online ou offline. Para obter mais informações, consulte [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
- A fragmentação sozinha não é uma razão suficiente para reorganizar ou reconstruir um índice. O efeito principal da fragmentação é que ela reduz a velocidade da taxa de transferência read-ahead da página durante os exames de índice. O resultado é tempos de resposta mais lentos. Se a carga de trabalho da consulta em uma tabela ou índice fragmentado não envolver exames porque a carga de trabalho é composta por pesquisas singleton, a remoção da fragmentação poderá não ter efeito algum. Para obter mais informações, consulte este [site da Microsoft](https://go.microsoft.com/fwlink/?linkid=31012).  
+ A fragmentação sozinha não é uma razão suficiente para reorganizar ou reconstruir um índice. O efeito principal da fragmentação é que ela reduz a velocidade da taxa de transferência read-ahead da página durante os exames de índice. O resultado é tempos de resposta mais lentos. Se a carga de trabalho da consulta em uma tabela ou índice fragmentado não envolver exames porque a carga de trabalho é composta por pesquisas singleton, a remoção da fragmentação poderá não ter efeito algum.
   
 > [!NOTE]  
 >  Executar DBCC SHRINKFILE ou DBCC SHRINKDATABASE poderá apresentar fragmentação se um índice for movido parcial ou completamente durante a operação de redução. Assim, se for necessário executar uma operação de redução, você deverá fazer isso antes da remoção da fragmentação.  
@@ -265,7 +265,7 @@ GO
   
 ```  
   
-### <a name="b-returning-information-about-a-heap"></a>b. Retornando informações sobre um heap  
+### <a name="b-returning-information-about-a-heap"></a>B. Retornando informações sobre um heap  
  O exemplo a seguir retorna todas as estatísticas do heap `dbo.DatabaseLog` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Como a tabela contém dados LOB, uma linha é retornada para a unidade de alocação `LOB_DATA`, além da linha retornada para `IN_ROW_ALLOCATION_UNIT` que está armazenando as páginas de dados do heap. A execução dessa consulta requer, no mínimo, a permissão CONTROL na tabela `dbo.DatabaseLog`.  
   
 ```  

@@ -26,12 +26,12 @@ ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a5b13d9d2095df5d464b7102e1527c21c36c4f5c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 12e5d699615018c2d9e20a8fd49953931850a106
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376178"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618163"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importar um arquivo BACPAC para criar um novo banco de dados de usuário
   Importar um arquivo DAC (aplicativo da camada de dados) – um arquivo .bacpac – para criar uma cópia do banco de dados original, com os dados, em uma nova instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. As operações de importação-exportação podem ser combinadas para migrar um DAC ou banco de dados entre instâncias ou para criar um backup lógico, como criar uma cópia no local de um banco de dados implantado no [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -43,8 +43,7 @@ ms.locfileid: "53376178"
   
 2.  A importação em massa copia os dados do arquivo de exportação.  
   
- Há um aplicativo de exemplo nos Laboratórios [!INCLUDE[ssSDS](../../includes/sssds-md.md)] que podem ser usados para testar a exportação e importação de DACs e bancos de dados. Para obter instruções sobre como baixar e usar o exemplo, consulte [Importação e exportação para banco de dados SQL do Windows Azure](https://go.microsoft.com/fwlink/?LinkId=219404).  
-  
+ 
 ## <a name="sql-server-utility"></a>Utilitário do SQL Server  
  Se você importar um DAC para uma instância gerenciada do Mecanismo de Banco de Dados, o DAC importado será incorporado no Utilitário do SQL Server na próxima vez que o conjunto de coleta do utilitário for enviado da instância para o ponto de controle do utilitário. O DAC estará presente no nó **Aplicativos da Camada de Dados Implantados** do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Aplicativos da Camada de Dados Implantados** details page.  
   

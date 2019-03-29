@@ -12,18 +12,16 @@ ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 09f3cf66d28a70eecd82adde490d02b521fd80ed
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5941b15c0aea7319d132e05b902133d3d8b986fa
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374398"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618223"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>Usar relatórios personalizados com propriedades de nó do Pesquisador de Objetos
   Os relatórios personalizados podem ser executados no contexto de um nó selecionado do Pesquisador de objetos se eles referenciarem os parâmetros de relatório desse nó. Isso permite que um relatório personalizado use o contexto atual, por exemplo, o banco de dados atual, ou um banco de dados ou objeto de servidor  
   
-## <a name="report-samples"></a>Exemplos de relatório  
- [Exemplos de relatórios](https://go.microsoft.com/fwlink/?LinkId=81792), inclusive relatórios padrão criados pela [!INCLUDE[msCoName](../../includes/msconame-md.md)], estão disponíveis para download. Esses exemplos podem ser modificados com o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="object-explorer-node-report-parameters"></a>Parâmetros de relatório do nó do Pesquisador de Objetos  
   

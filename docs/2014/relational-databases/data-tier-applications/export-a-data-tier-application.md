@@ -24,12 +24,12 @@ ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 85e3268bcca9f4800bd59fa5be541dc6f9502ef5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 40ecf3d032aaece172f7b3c456a9eef6c6cf1b30
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368698"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618133"
 ---
 # <a name="export-a-data-tier-application"></a>Exportar um aplicativo da camada de dados
   A exportação de um aplicativo de camada de dados implantado (DAC) ou de um banco de dados cria um arquivo de exportação que contém as definições dos objetos no banco de dados e todos os dados contidos nas tabelas. O arquivo de exportação pode ser importado para outra instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)], ou para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. As operações de importação-exportação podem ser combinadas para migrar um DAC entre instâncias, criar um backup lógico ou criar uma cópia no local de um banco de dados implantado no [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -43,9 +43,8 @@ ms.locfileid: "53368698"
   
  O processo de exportação define a versão de DAC como 1.0.0.0 e a descrição de DAC no arquivo de exportação para uma cadeia de caracteres vazia. Se o banco de dados foi implantado de um DAC, a definição do DAC no arquivo de exportação conterá o nome atribuído ao DAC original; caso contrário, o nome do DAC será definido como o nome do banco de dados.  
   
- Há um aplicativo de exemplo nos Laboratórios [!INCLUDE[ssSDS](../../includes/sssds-md.md)] que podem ser usados para testar a exportação e importação de DACs e bancos de dados. Para obter instruções sobre como baixar e usar o exemplo, consulte [Importação e exportação para banco de dados SQL do Windows Azure](https://go.microsoft.com/fwlink/?LinkId=219404).  
-  
-###  <a name="LimitationsRestrictions"></a> Limitações e Restrições  
+ 
+###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
  Um DAC ou banco de dados só pode ser exportado de um banco de dados no [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ou [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) ou posterior.  
   
  Você não poderá exportar um banco de dados com objetos sem suporte em um DAC ou usuários contidos. Para obter mais informações sobre os tipos de objetos com suporte em um DAC, consulte [DAC Support For SQL Server Objects and Versions](dac-support-for-sql-server-objects-and-versions.md).  

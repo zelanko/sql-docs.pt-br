@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: b89ec7cd24ed61f08cf44f934066a9b0fc619434
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 00810eb3f57fdaf8f87fc0db16744ab9e3334f70
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493549"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618143"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Início Rápido: Implantar um cluster de big data do SQL Server no serviço de Kubernetes do Azure (AKS)
 
@@ -78,14 +78,14 @@ Use as etapas a seguir para executar o script de implantação. Esse script cria
    | **Nome de usuário do docker** | O nome de usuário de Docker fornecido como parte da visualização pública limitada. |
    | **Senha do docker** | A senha de Docker fornecida como parte da visualização pública limitada. |
    | **Região do Azure** | A região do Azure para o novo cluster do AKS (padrão **westus**). |
-   | **Tamanho da máquina** | O [tamanho de máquina](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) a ser usado para nós no cluster do AKS (padrão **Standard_L4s**). |
-   | **Nós de trabalho** | O número de nós de trabalho no cluster do AKS (padrão **3**). |
+   | **Tamanho da máquina** | O [tamanho de máquina](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) a ser usado para nós no cluster do AKS (padrão **Standard_L8s**). |
+   | **Nós de trabalho** | O número de nós de trabalho no cluster do AKS (padrão **1**). |
    | **Nome do cluster** | O nome do cluster do AKS e o cluster de big data. O nome do cluster deve ser apenas caracteres alfanuméricos em letras minúsculas e sem espaços. (padrão **sqlbigdata**). |
    | **Senha** | Senha para o controlador, o gateway HDFS/Spark e a instância mestre (padrão **MySQLBigData2019**). |
    | **Usuário do controlador** | Nome de usuário para o usuário controlador (padrão: **admin**). |
 
    > [!IMPORTANT]
-   > O padrão **Standard_L4s** tamanho da máquina pode não estar disponível em todas as regiões do Azure. Se você selecionar um tamanho de máquina diferente, certifique-se de que o número total de discos que podem ser anexados em todos os nós do cluster é maior que ou igual a 24. Cada declaração de volume persistente no cluster exige um disco anexado. Atualmente, o cluster de big data requer declarações de volume persistente 24. Por exemplo, o [Standard_L4s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series) tamanho da máquina dá suporte a 16 discos conectados, portanto, três nós significa que os discos de 48 podem ser anexados.
+   > O padrão **Standard_L8s** tamanho da máquina pode não estar disponível em todas as regiões do Azure. Se você selecionar um tamanho de máquina diferente, certifique-se de que o número total de discos que podem ser anexados em todos os nós do cluster é maior que ou igual a 24. Cada declaração de volume persistente no cluster exige um disco anexado. Atualmente, o cluster de big data requer declarações de volume persistente 24. Por exemplo, o [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series) tamanho da máquina dá suporte a 32 discos anexados, portanto, é possível avaliar a clusters de big data com um único nó desse tamanho de máquina.
 
    > [!NOTE]
    > O `sa` conta é um administrador do sistema na instância mestre do SQL Server que é criada durante a instalação. Depois de criar a implantação, o `MSSQL_SA_PASSWORD` variável de ambiente é detectável executando `echo $MSSQL_SA_PASSWORD` no contêiner de instância principal. Para fins de segurança, altere sua `sa` senha na instância mestre após a implantação. Para obter mais informações, consulte [alterar a senha SA](../linux/quickstart-install-connect-docker.md#sapassword).

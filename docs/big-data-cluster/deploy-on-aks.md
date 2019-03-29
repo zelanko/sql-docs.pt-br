@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: ae8a8b2869a46a9157c805edcb8c6d74ca49e3d0
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: ac8632c3966da750e9eb7d7053dad1d102760c8c
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017992"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618233"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-big-data-cluster-preview-deployments"></a>Configurar o serviço Kubernetes do Azure para implantações de cluster (versão prévia) do SQL Server 2019 big data
 
@@ -39,9 +39,9 @@ Este artigo descreve as etapas para implantar o Kubernetes no AKS usando a CLI d
 - Versão mínima 1.10 para o servidor de Kubernetes. Para o AKS, você precisará usar `--kubernetes-version` parâmetro para especificar uma versão diferente do padrão.
 
 - Para obter uma experiência ideal ao validar cenários básicos de AKS, use:
-   - Mínimo de 3 VMs do agente
-   - 4 vCPUs por VM
+   - 8 vCPUs em todos os nós
    - 32 GB de memória por VM
+   - 24 ou anexados mais discos em todos os nós
 
    > [!TIP]
    > Infraestrutura do Azure oferece várias opções de tamanho para VMs, consulte [aqui](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) para seleções na região em que você planeja implantar.
@@ -76,18 +76,18 @@ Um grupo de recursos do Azure é um grupo lógico no qual Azure recursos são im
 
 ## <a name="create-a-kubernetes-cluster"></a>Criar um cluster Kubernetes
 
-1. Criar um cluster Kubernetes no AKS com o [criar az aks](https://docs.microsoft.com/cli/azure/aks) comando. O exemplo a seguir cria um cluster Kubernetes chamado *kubcluster* com três nós de agente do Linux. Certifique-se de que criar o cluster do AKS no mesmo grupo de recursos que você usou nas seções anteriores.
+1. Criar um cluster Kubernetes no AKS com o [criar az aks](https://docs.microsoft.com/cli/azure/aks) comando. O exemplo a seguir cria um cluster Kubernetes chamado *kubcluster* com um nó de agente do Linux de tamanho **Standard_L8s**. Certifique-se de que criar o cluster do AKS no mesmo grupo de recursos que você usou nas seções anteriores.
 
     ```azurecli
    az aks create --name kubcluster \
     --resource-group sqlbigdatagroup \
     --generate-ssh-keys \
-    --node-vm-size Standard_L4s \
-    --node-count 3 \
+    --node-vm-size Standard_L8s \
+    --node-count 1 \
     --kubernetes-version 1.10.9
     ```
 
-   Você pode aumentar ou diminuir o número de nós de agente do Kubernetes, alterando a `--node-count <n>` onde `<n>` é o número de nós de agente que você deseja usar. Isso não inclui o nó mestre do Kubernetes, que é gerenciado pelo AKS em segundo plano. Portanto, no exemplo acima, há **3** VMs de tamanho **Standard_L4s** usadas para os nós de agente do cluster do AKS.
+   Você pode aumentar ou diminuir o número de nós de agente do Kubernetes, alterando a `--node-count <n>` onde `<n>` é o número de nós de agente que você deseja usar. Isso não inclui o nó mestre do Kubernetes, que é gerenciado pelo AKS em segundo plano. O exemplo anterior usa apenas um único nó para fins de avaliação.
 
    Após alguns minutos, o comando for concluído e retorna informações formatadas em JSON sobre o cluster.
 

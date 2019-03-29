@@ -5,17 +5,17 @@ description: Este artigo descreve as últimas atualizações e problemas conheci
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/28/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 2502396dba4b88a9750aa3bfc62c4153711e1426
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: c7c80b69ac7120f2cd88500d3c276a313ef34390
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510333"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618303"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Notas de versão para clusters de grandes dados no SQL Server
 
@@ -31,8 +31,11 @@ As seções a seguir descrevem os novos recursos e problemas conhecidos para clu
 
 | Novo recurso ou atualização | Detalhes |
 |:---|:---|
-| Suporte para orientação na GPU para executar com o TensorFlow no Spark de aprendizagem profunda. | [Implantar um cluster de big data com suporte GPU e executar o TensorFlow](spark-gpu-tensorflow.md) |
+| Suporte para orientação na GPU para executar com o TensorFlow no Spark de aprendizagem profunda. | [Implantar um cluster de big data com suporte GPU e executar o TensorFlow](spark-gpu-tensorflow.md). |
 | **SqlDataPool** e **SqlStoragePool** fontes de dados não são mais criadas por padrão. | Criá-los manualmente, se necessário. Consulte a [problemas conhecidos](#externaltablesctp24). |
+| `INSERT INTO SELECT` suporte para o pool de dados. | Por exemplo, consulte [Tutorial: Ingestão de dados para um pool de dados do SQL Server com o Transact-SQL](tutorial-data-pool-ingest-sql.md). |
+| `FORCE SCALEOUTEXECUTION` e `DISABLE SCALEOUTEXECUTION` opção. | Força ou desabilita o uso da computação do pool para consultas em tabelas externas. Por exemplo, `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)`. |
+| Recomendações atualizadas de implantação do AKS. | Ao avaliar a clusters de big data no AKS, agora recomendamos usar um único nó de tamanho **Standard_L8s**. |
 | Atualização de tempo de execução do Spark para Spark 2.4. | |
 
 ### <a name="known-issues"></a>Problemas conhecidos

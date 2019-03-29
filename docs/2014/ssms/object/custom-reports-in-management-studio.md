@@ -14,12 +14,12 @@ ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3417b4905fd43734fb058d05db81f7318d87539d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: e02e5f55032f7a5d4e11e1ee4c908e84a83e00f8
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354682"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618283"
 ---
 # <a name="custom-reports-in-management-studio"></a>Relatórios personalizados no Management Studio
   No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], muitos nós do Pesquisador de Objetos exibem um conjunto de relatórios padrão criados pela [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Esses relatórios resumem as informações de servidor que costumam ser solicitadas. Começando com o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2, os administradores podem executar relatórios personalizados que foram criados no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
@@ -70,8 +70,7 @@ ms.locfileid: "53354682"
 > [!CAUTION]  
 >  Qualquer instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] válida pode ser inserida em um relatório e executada dele. Quando um relatório é executado utilizando-se uma conta de usuário com altos privilégios, qualquer uma dessas instruções inseridas pode ser executada sem desafio.  
   
-## <a name="report-samples"></a>Exemplos de relatório  
- [Exemplos de relatórios](https://go.microsoft.com/fwlink/?LinkId=81792), inclusive relatórios padrão criados pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)], estão disponíveis para download. Esses exemplos podem ser modificados com o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+
   
 ## <a name="see-also"></a>Consulte também  
  [Adicionar um relatório personalizado ao Management Studio](add-a-custom-report-to-management-studio.md)   
