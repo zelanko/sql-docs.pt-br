@@ -20,22 +20,36 @@ ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1c719694e18a5c1654b639abfb83ed1c473361d8
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ae19cf74753b07dba1e6c274f1a102e1fe745f1c
+ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699681"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58325519"
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>Trabalhar com várias versões e instâncias do SQL Server
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a várias instâncias do [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no mesmo computador. Você também pode atualizar versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um computador em que versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] já estejam instaladas. Para ver os cenários de atualização com suporte, confira [Atualizações de versão e edição com suporte](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
+É possível instalar várias instâncias do SQL Server ou instalar o SQL Server em um computador em que versões anteriores do SQL Server já estão instaladas.
+
+Os seguintes itens relacionados ao SQL Server são compatíveis com a instalação de várias instâncias no mesmo computador:
+
+- Mecanismo de Banco de Dados
+
+- Analysis Services
+
+::: moniker range="<=sql-server-2016||=sqlallproducts-allversions"
+- Reporting Services
+::: moniker-end
+
+É possível atualizar versões anteriores do SQL Server em um computador em que outras versões anteriores do SQL Server já estão instaladas. Para ver os cenários de atualização com suporte, confira [Atualizações de versão e edição com suporte](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).
   
-## <a name="version-components-and-numbering"></a>Componentes de versão e numeração  
- Os conceitos a seguir são úteis para entender o comportamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para instâncias lado a lado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+## <a name="version-components-and-numbering"></a>Componentes de versão e numeração
+
+ Os conceitos a seguir são úteis para entender o comportamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para instâncias lado a lado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
- O formato de versão de produto padrão para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é MM.nn.bbbb.rr onde cada segmento é definido como:  
+ O formato de versão de produto padrão para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é MM.nn.bbbb.rr onde cada segmento é definido como:
   
  MM - versão principal  
   
@@ -45,66 +59,71 @@ ms.locfileid: "51699681"
   
  rr - número de revisão da compilação  
   
- Em cada versão principal ou secundária do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], há um incremento ao número de versão para diferenciá-la de versões anteriores. Esta alteração para a versão é usada para muitos propósitos. Isto inclui exibir informações de versão na interface do usuário, controlar como são substituídos os arquivos durante a atualização, aplicar pacotes de serviço e também como um mecanismo para diferenciação funcional entre as versões sucessivas.  
+ Em cada versão principal ou secundária do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], há um incremento ao número de versão para diferenciá-la de versões anteriores. Esta alteração para a versão é usada para muitos propósitos. Isto inclui exibir informações de versão na interface do usuário, controlar como são substituídos os arquivos durante a atualização, aplicar pacotes de serviço e também como um mecanismo para diferenciação funcional entre as versões sucessivas.
   
-### <a name="components-shared-by-all-versions-of-includessnoversionincludesssnoversion-mdmd"></a>Componentes compartilhados por todas as versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Alguns componentes são compartilhados por todas as instâncias de todas as versões instaladas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando você instalar versões diferentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lado a lado na mesma máquina, esses componentes serão atualizados automaticamente para a versão mais recente. Esses componentes são geralmente desinstalados automaticamente quando a última instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é desinstalada.  
+### <a name="components-shared-by-all-versions-of-includessnoversionincludesssnoversion-mdmd"></a>Componentes compartilhados por todas as versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+ Alguns componentes são compartilhados por todas as instâncias de todas as versões instaladas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando você instalar versões diferentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lado a lado na mesma máquina, esses componentes serão atualizados automaticamente para a versão mais recente. Esses componentes são geralmente desinstalados automaticamente quando a última instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é desinstalada.
   
- Exemplos: Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Gravador VSS do Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Exemplos: Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Gravador VSS do Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
-### <a name="components-shared-across-all-instances-of-the-same-major-version-of-includessnoversionincludesssnoversion-mdmd"></a>Componentes compartilhados por todas as instâncias da mesma versão principal do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] As versões que têm a mesma versão principal compartilham alguns componentes em todas as instâncias. Se os componentes compartilhados forem selecionados durante a atualização, os componentes existentes serão atualizados para a versão mais recente.  
+### <a name="components-shared-across-all-instances-of-the-same-major-version-of-includessnoversionincludesssnoversion-mdmd"></a>Componentes compartilhados por todas as instâncias da mesma versão principal do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] As versões que têm a mesma versão principal compartilham alguns componentes em todas as instâncias. Se os componentes compartilhados forem selecionados durante a atualização, os componentes existentes serão atualizados para a versão mais recente.
   
- Exemplos: [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]e Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+Exemplos: [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]e Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
   
-### <a name="components-shared-across-minor-versions"></a>Componentes compartilhados em versões secundárias  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] As versões que têm os mesmos componentes compartilhados de versão principal.secundária.  
+### <a name="components-shared-across-minor-versions"></a>Componentes compartilhados em versões secundárias
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] As versões que têm os mesmos componentes compartilhados de versão principal.secundária.
   
- Exemplo: arquivos de suporte à instalação.  
+Exemplo: Arquivos de suporte à Instalação.
   
-### <a name="components-specific-to-an-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Componentes específicos de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Alguns componentes ou serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são específicos de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eles também são conhecidos como capazes de reconhecimento de instância. Eles compartilham a mesma versão que a instância que os hospeda e são usados exclusivamente para aquela instância.  
+### <a name="components-specific-to-an-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Componentes específicos de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+Alguns componentes ou serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são específicos de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eles também são conhecidos como capazes de reconhecimento de instância. Eles compartilham a mesma versão que a instância que os hospeda e são usados exclusivamente para aquela instância.
   
- Exemplos: [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+Exemplos: [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-### <a name="components-that-are-independent-of-the-includessnoversionincludesssnoversion-mdmd-versions"></a>Componentes que são independentes das versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Alguns componentes são instalados durante a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , mas são independentes das versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eles podem ser compartilhados por versões principais ou por todas as versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+### <a name="components-that-are-independent-of-the-includessnoversionincludesssnoversion-mdmd-versions"></a>Componentes que são independentes das versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+Alguns componentes são instalados durante a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , mas são independentes das versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eles podem ser compartilhados por versões principais ou por todas as versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+
+Exemplos: Microsoft Sync Framework, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
   
- Exemplos: Microsoft Sync Framework, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
+Para obter mais informações sobre a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact, veja [Instalar o SQL Server 2016 por meio do Assistente de Instalação &#40;Instalação&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md). Para obter mais informações sobre como desinstalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact, veja [Desinstalar uma instância existente do SQL Server &#40;Instalação&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md).  
   
- Para obter mais informações sobre a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact, veja [Instalar o SQL Server 2016 por meio do Assistente de Instalação &#40;Instalação&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md). Para obter mais informações sobre como desinstalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact, veja [Desinstalar uma instância existente do SQL Server &#40;Instalação&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md).  
-  
-## <a name="using-includessnoversionincludesssnoversion-mdmd-side-by-side-with-previous-versions-of-includessnoversionincludesssnoversion-mdmd"></a>Usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lado a lado com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Você pode instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um computador que já está executando instâncias de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se já existir uma instância padrão no computador, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deverá ser instalado como uma instância nomeada.  
+## <a name="using-includessnoversionincludesssnoversion-mdmd-side-by-side-with-previous-versions-of-includessnoversionincludesssnoversion-mdmd"></a>Usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lado a lado com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+Você pode instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um computador que já está executando instâncias de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se já existir uma instância padrão no computador, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deverá ser instalado como uma instância nomeada.  
   
 > [!CAUTION]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O SysPrep não dá suporte à instalação lado a lado de instâncias preparadas do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no mesmo computador. Por exemplo, você não pode preparar uma instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] lado a lado com uma instância preparada do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. No entanto, você pode instalar diversas instâncias preparadas da mesma versão principal do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lado a lado no mesmo computador. Para obter mais informações, consulte [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md).  
->   
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] não pode ser instalado lado a lado com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um computador executando o Windows Server 2008 R2 Server Core SP1. Para obter mais informações sobre instalações Server Core, veja [Instalar o SQL Server 2016 no Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O SysPrep não dá suporte à instalação lado a lado de instâncias preparadas do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no mesmo computador. Por exemplo, você não pode preparar uma instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] lado a lado com uma instância preparada do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. No entanto, você pode instalar diversas instâncias preparadas da mesma versão principal do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lado a lado no mesmo computador. Para obter mais informações, consulte [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md).  
+>
+> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] não pode ser instalado lado a lado com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um computador executando o Windows Server 2008 R2 Server Core SP1. Para obter mais informações sobre instalações Server Core, veja [Instalar o SQL Server 2016 no Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
   
-A tabela a seguir mostra o suporte lado a lado para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]:  
+A tabela a seguir mostra o suporte lado a lado para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]:
   
-|Instância existente do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|Suporte lado a lado|  
+|Instância existente do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|suporte lado a lado|  
 |--------------------------------------------------|----------------------------|  
 |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (64 bits) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 32 bits<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (64 bits) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 32 bits<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (64 bits) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 32 bits<br /><br /> [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (64 bits) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 32 bits<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (64 bits) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 32 bits<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (64 bits) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)] <br /><br /> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|  
 
-A tabela a seguir mostra o suporte lado a lado para o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] com as versões anteriores:  
-  
+A tabela a seguir mostra o suporte lado a lado para o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] com as versões anteriores:
+
 |Instância existente do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|Suporte lado a lado para as versões anteriores|  
 |--------------------------------------------------|----------------------------|  
 |[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 32 bits<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (64 bits) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 32 bits<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (64 bits) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 32 bits<br /><br /> [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (64 bits) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 32 bits<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (64 bits) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 32 bits<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (64 bits) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]|  
 
+## <a name="preventing-ip-address-conflicts"></a>Impedindo conflitos de endereço IP
+
+Quando uma Instância de Cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for instalada lado a lado com uma instância autônoma do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], procure evitar conflitos de número de porta TCP nos endereços IP. Conflitos normalmente ocorrem quando duas instâncias do [!INCLUDE[ssDE](../../includes/ssde-md.md)] são ambas configuradas para usar a porta TCP padrão (1433). Para evitar conflitos, configure uma instância para usar uma porta fixa não padrão. A configuração de uma porta fixa é normalmente mais fácil na instância autônoma. A configuração do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para usar portas diferentes impedirá um conflito inesperado do Endereço IP/porta TCP que bloqueie uma inicialização de instância quando uma Instância de Cluster de Failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] falhar no nó em espera.
   
-## <a name="preventing-ip-address-conflicts"></a>Impedindo conflitos de endereço IP  
- Quando uma Instância de Cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for instalada lado a lado com uma instância autônoma do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], procure evitar conflitos de número de porta TCP nos endereços IP. Conflitos normalmente ocorrem quando duas instâncias do [!INCLUDE[ssDE](../../includes/ssde-md.md)] são ambas configuradas para usar a porta TCP padrão (1433). Para evitar conflitos, configure uma instância para usar uma porta fixa não padrão. A configuração de uma porta fixa é normalmente mais fácil na instância autônoma. A configuração do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para usar portas diferentes impedirá um conflito de Endereço IP/porta TCP inesperado que bloqueie uma inicialização de instância quando uma Instância de Cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] falhar para o nó em espera  
-  
-## <a name="see-also"></a>Consulte Também  
- [Requisitos de hardware e de software para a instalação do SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
- [Instalar o SQL Server por meio do Assistente de Instalação &#40;Instalação&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
- [Atualizações de versão e edição com suporte](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
- [Fazer upgrade do SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)   
- [Edições e recursos com suporte do SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)   
- [Edições e recursos com suporte do SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)   
- [Compatibilidade com versões anteriores_excluída](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
-  
-  
+## <a name="see-also"></a>Consulte Também
+
+* [Requisitos de Hardware e Software para a Instalação do SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
+* [Instalar o SQL Server por meio do Assistente de Instalação &#40;Instalação&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
+* [Atualizações de versão e edição com suporte](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)
+* [Atualizar o SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)
+* [Edições e recursos com suporte do SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)
+* [Edições e recursos com suporte do SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)
+* [Compatibilidade com versões anteriores_excluída](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)

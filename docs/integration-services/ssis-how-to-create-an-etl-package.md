@@ -15,15 +15,15 @@ helpviewer_keywords:
 - logs [Integration Services], tutorials
 - walkthroughs [Integration Services]
 ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bc033012e2bf0799902e1bd5bcc1a5f31471c5c2
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: a603dc915f05f55db4eac3c3ed0347dc2d5eaf32
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383301"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271132"
 ---
 # <a name="ssis-how-to-create-an-etl-package"></a>SSIS: Como criar um pacote ETL
 
@@ -53,22 +53,22 @@ Para executar esse tutorial, os seguintes componentes devem estar instalados:
     - Os pacotes de exemplo pressupõem que os arquivos de dados estão na pasta `C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Creating a Simple ETL Package`. Se você descompactar o download em outro local, talvez precise atualizar o caminho do arquivo em vários locais nos pacotes de exemplo.
 
 ## <a name="lessons-in-this-tutorial"></a>Lições neste tutorial  
-[Lição 1: Criar um projeto e pacote básico com o SSIS](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)  
+[Lição 1: criar um projeto e pacote básico com o SSIS](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)  
 Nesta lição, você criará um pacote ETL simples que extrairá dados de um único arquivo simples, transformará os dados usando transformações de pesquisa e, por fim, carregará o resultado em um destino da tabela de fatos.  
   
-[Lição 2: Adicionando um loop com o SSIS](../integration-services/lesson-2-adding-looping-with-ssis.md)  
+[Lição 2: adicionar um loop com o SSIS](../integration-services/lesson-2-adding-looping-with-ssis.md)  
 Nesta lição, você expandirá o pacote criado na Lição 1 para aproveitar os novos recursos de looping para extrair vários arquivos simples em um único processo de fluxo de dados.  
   
-[Lição 3: Adicionar o log com o SSIS](../integration-services/lesson-3-add-logging-with-ssis.md)  
+[Lição 3: adicionar registro em log com o SSIS](../integration-services/lesson-3-add-logging-with-ssis.md)  
 Nesta lição, você expandirá o pacote criado na lição 2 para aproveitar os novos recursos de registro de log.  
   
-[Lição 4: Adicionar o redirecionamento de fluxo de erro com o SSIS](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
+[Lição 4: adicionar o redirecionamento de fluxo de erro com o SSIS](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
 Nesta lição, você expandirá o pacote criado na lição 3 para aproveitar as novas configurações de saída de erro.  
   
-[Lição 5: Adicionar configurações do pacote SSIS ao modelo de implantação de pacotes](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
+[Lição 5: adicionar configurações do pacote SSIS ao Modelo de Implantação de Pacotes](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
 Nesta lição, você expandirá o pacote criado na lição 4 para aproveitar as novas opções de configuração de pacote.  
   
-[Lição 6: Usando parâmetros com o modelo de implantação de projetos no SSIS](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
+[Lição 6: usar parâmetros com o modelo de implantação de projetos no SSIS](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
 Nesta lição, você expandirá o pacote criado na lição 5 para usar os novos parâmetros com o modelo de implantação de projeto.  
   
   

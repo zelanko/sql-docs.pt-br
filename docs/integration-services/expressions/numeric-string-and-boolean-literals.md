@@ -15,15 +15,15 @@ helpviewer_keywords:
 - literals [Integration Services]
 - mapping literals [Integration Services]
 ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d8ece192518501869f9d4d8d11934fc4dbaaaf78
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d4b6dec2cd9698d347ca247e26f4b931cb6ab56d
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728164"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279160"
 ---
 # <a name="numeric-string-and-boolean-literals"></a>Literais boolianos, de cadeia de caracteres e numéricos
  Expressões podem incluir literais numérico, de cadeia de caracteres e boolianos. O avaliador de expressão aceita uma variedade de literais numéricos como inteiros, decimais e constantes de ponto flutuante. O avaliador de expressão também dá suporte a sufixos longos e flutuantes, que especificam como o avaliador de expressão trata os valores, e uma notação científica em literais numéricos.  
@@ -111,7 +111,7 @@ ms.locfileid: "47728164"
 |\xhhhh|Caractere Unicode em notação hexadecimal|  
   
 ## <a name="boolean-literals"></a>Literais boolianos  
- O avaliador de expressão aceita os literais boolianos habituais: **True** e **False**. O avaliador de expressão não faz distinção entre maiúsculas e minúsculas e qualquer combinação de letras maiúsculas e minúsculas é permitida. Por exemplo, TRUE funciona tão bem quanto True.  
+ O avaliador de expressão dá suporte aos literais boolianos usuais: **True** e **False**. O avaliador de expressão não faz distinção entre maiúsculas e minúsculas e qualquer combinação de letras maiúsculas e minúsculas é permitida. Por exemplo, TRUE funciona tão bem quanto True.  
   
 > **OBSERVAÇÃO:** Em uma expressão, um literal booliano deve ser delimitado por espaços.  
   

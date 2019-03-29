@@ -13,15 +13,15 @@ f1_keywords:
 - sql13.ssis.designer.cdcsource.columns.f1
 - sql13.ssis.designer.cdcsource.errorhandling.f1
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d99085d1f743177a24c7902daebf584455f38a79
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: c487852af232224304e0d746f0ab32bf0fe90dbe
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642224"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290532"
 ---
 # <a name="cdc-source"></a>Origem CDC
   A origem CDC lê um intervalo de dados de alteração de tabelas de alteração do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e entrega o downstream de alterações a outros SSIS componentes.  
@@ -49,7 +49,7 @@ ms.locfileid: "51642224"
 ## <a name="error-handling"></a>Tratamento de erros  
  A origem CDC tem uma saída de erro. A saída de erro de componente inclui as colunas de saída seguintes:  
   
--   **Código de Erro**: o valor sempre é -1.  
+-   **Código do Erro**: O valor padrão é sempre -1.  
   
 -   **Coluna de Erro**: a coluna de origem que causa o erro (para erros de conversão).  
   
@@ -153,7 +153,7 @@ use <cdc-enabled-database-name>
  **Modo de processamento CDC**  
  Selecione o modo de processamento que melhor trata suas necessidades de processamento. As opções possíveis são:  
   
--   **Tudo**: retorna as alterações no intervalo CDC atual sem os valores **Antes da Atualização** .  
+-   **Tudo**: retorna as alterações no intervalo CDC atual sem os valores **Antes da Atualização**.  
   
 -   **Todos com valores antigos**: retorna as alterações no intervalo de processamento CDC atual, incluindo os valores antigos (**Antes da Atualização**). Para cada operação de atualização, haverá duas linhas, uma com os valores antes da atualização e outra com o valor depois da atualização.  
   

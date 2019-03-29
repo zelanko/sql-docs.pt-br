@@ -10,17 +10,17 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.packagepublishwizard.f1
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 968ae6356d2f9d9b84b8cf2d5bf6b012b000b7b2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0096e6ff64267e6568abd22729f250a4c76adc03
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521226"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281860"
 ---
-# <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Passo a passo: publicar um Pacote SSIS como um modo SQL
+# <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Passo a passo: Publicar um pacote do SSIS como uma exibição SQL
   Este passo a passo fornece as etapas detalhadas para publicar um pacote SSIS como um modo SQL em um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="prerequisites"></a>Prerequisites  
@@ -30,7 +30,7 @@ ms.locfileid: "52521226"
   
 2.  [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md).  
   
-## <a name="step-1-build-and-deploy-ssis-project-to-the-ssis-catalog"></a>Etapa 1: Compilar e implantar o projeto do SSIS no catálogo do SSIS  
+## <a name="step-1-build-and-deploy-ssis-project-to-the-ssis-catalog"></a>Etapa 1: compilar e implantar o projeto do SSIS no catálogo do SSIS  
  Nesta etapa, você cria um pacote do SSIS que extrai dados de uma fonte de dados para a qual o SSIS dá suporte (neste exemplo, usamos um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) e promove a saída dos dados usando um componente de Destino do Streaming de Dados. Em seguida, você compila e implanta o projeto do SSIS no catálogo do SSIS.  
   
 1.  Inicie o **SQL Server Data Tools**. Clique no menu **Iniciar** , aponte para **Todos os Programas**, aponte para **Microsoft SQL Server**e clique em **SQL Server Data Tools**.  
@@ -82,7 +82,7 @@ ms.locfileid: "52521226"
   
     2.  Siga as instruções no assistente para implantar o projeto no catálogo do SSIS no servidor de banco de dados local. O exemplo a seguir usa **Power BI** como o nome da pasta e **SSISPackagePublishing** como o nome do projeto no catálogo do SSIS.  
   
-## <a name="step-2-use-the-ssis-data-feed-publishing-wizard-to-publish-ssis-package-as-a-sql-view"></a>Etapa 2: Usar o Assistente de publicação do feed de dados do SSIS para publicar o pacote do SSIS como um modo SQL  
+## <a name="step-2-use-the-ssis-data-feed-publishing-wizard-to-publish-ssis-package-as-a-sql-view"></a>Etapa 2: usar o Assistente de publicação do feed de dados do SSIS para publicar o pacote do SSIS como um modo SQL  
  Nesta etapa, você usará o Assistente de publicação do feed de dados do SSIS (SQL Server Integration Services) para publicar o pacote do SSIS como um modo de exibição em um banco de dados do SQL Server. Os dados de saída do pacote podem ser consumidos ao consultar esse modo de exibição.  
   
  O Assistente de publicação do feed de dados do SSIS cria um servidor vinculado usando o SSISOLEDB (provedor OLE DB para SSIS) e, em seguida, cria um modo SQL que consiste em uma consulta no servidor vinculado. Essa consulta inclui o nome da pasta, o nome do projeto e o nome do pacote no catálogo do SSIS.  
@@ -101,7 +101,7 @@ ms.locfileid: "52521226"
   
          ![Assistente de Publicação de Feed de Dados – Página Configurações do Pacote](../../integration-services/data-flow/media/dsd-feedpublishingwizard-packagesettingspage.jpg "Assistente de Publicação de Feed de Dados – Página Configurações do Pacote")  
   
-    2.  Clique em **Procurar** ao lado do campo Caminho, procure o catálogo do SSIS, selecione o pacote do SSIS que deseja publicar (por exemplo: **SSISDB**->**SSISPackagePublishing**->**Package.dtsx**), e clique em **OK**.  
+    2.  Clique em **Procurar** ao lado do campo Caminho, procure o catálogo do SSIS, selecione o pacote do SSIS que deseja publicar (por exemplo: **SSISDB**->**SSISPackagePublishing**->**Package.dtsx**) e clique em **OK**.  
   
          ![Assistente de Publicação de Feed de Dados – Procurar Pacote](../../integration-services/data-flow/media/dsd-feedpublishingwizard-browseforpackage.jpg "Assistente de Publicação de Feed de Dados – Procurar Pacote")  
   
@@ -156,7 +156,7 @@ ms.locfileid: "52521226"
     > [!NOTE]  
     >  Não há suporte para os seguintes tipos de dados: text, ntext, image, nvarchar(max), varchar(max) e varbinary(max).  
   
-## <a name="step-3-test-the-sql-view"></a>Etapa 3: Testar o modo SQL  
+## <a name="step-3-test-the-sql-view"></a>Etapa 3: testar o modo SQL  
  Aqui, você executará o modo SQL criado pelo Assistente de publicação do feed de dados do SSIS.  
   
 1.  Inicie o SQL Server Management Studio.  
@@ -167,7 +167,7 @@ ms.locfileid: "52521226"
   
 4.  Confirme que você vê os resultados do pacote do SSIS.  
   
-## <a name="step-4-verify-the-ssis-package-execution"></a>Etapa 4: Verificar a execução de pacote do SSIS  
+## <a name="step-4-verify-the-ssis-package-execution"></a>Etapa 4: verificar a execução de pacote do SSIS  
  Nesta etapa, você verificará que o pacote do SSIS foi executado.  
   
 1.  No SQL Server Management Studio, expanda **Catálogos do Integration Services**, expanda **SSISDB**, expanda a **pasta** na qual seu projeto SSIS existe, expanda **projetos**, expanda o nó do projeto e expanda **Pacotes**.  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - hresults [Integration Services]
 - errors [Integration Services], listed
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b95d209a033f30c13ea1bd21d99e845733fa9857
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 9f1e05ab7d98bdbcfdb33a3feb82e84498bb4eaf
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642403"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290882"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Referência de mensagens e erros do Integration Services
   As tabelas a seguir listam erros, advertências e mensagens informativas do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , em ordem numérica crescente, dentro de cada categoria, acompanhados de seus códigos numéricos e nomes simbólicos. Cada um desses erros está definido como um campo da classe <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> no namespace <xref:Microsoft.SqlServer.Dts.Runtime> .  
@@ -569,7 +569,7 @@ ms.locfileid: "51642403"
 |0xC00291BE|-1073573442|DTS_E_SCRIPTTASK_INVALID_SCRIPT_LANGUAGE|A linguagem de script especificada não é válida.|  
 |0xC00291BF|-1073573441|DTS_E_SCRIPTTASK_INVALID_ENTRY_POINT|Ponto de entrada não encontrado.|  
 |0xC00291C0|-1073573440|DTS_E_SCRIPTTASK_LANGUAGE_EMPTY|A linguagem de script não está especificada. Verifique se foi especificada uma linguagem de script válida.|  
-|0xC00291C1|-1073573439|DTS_E_SCRIPTTASK_INITIALIZATION_WITH_NULL_TASK|Inicialização da interface do usuário: a tarefa é nula.|  
+|0xC00291C1|-1073573439|DTS_E_SCRIPTTASK_INITIALIZATION_WITH_NULL_TASK|Inicialização da interface de usuário: A tarefa é nula.|  
 |0xC00291C2|-1073573438|DTS_E_SCRIPTTASK_UI_INITIALIZATION_WITH_WRONG_TASK|A interface do usuário de Tarefa Script foi inicializada com uma tarefa incorreta.|  
 |0xC00291C3|-1073573437|DTS_E_SENDMAILTASK_RECIPIENT_EMPTY|Nenhum destinatário foi especificado.|  
 |0xC00291C4|-1073573436|DTS_E_SENDMAILTASK_SMTP_SERVER_NOT_SPECIFIED|O servidor SMTP (Simple Mail Transfer Protocol) não está especificado. Forneça um nome ou endereço IP válido do servidor SMTP.|  
@@ -789,7 +789,7 @@ ms.locfileid: "51642403"
 |0xC00292A7|-1073573209|DTS_E_TRANSFERDBTASK_NOOVERWRITEDB|O banco de dados "%1" já existe no servidor de destino "%2".|  
 |0xC00292A8|-1073573208|DTS_E_TRANSFERDBTASK_MUSTHAVESOURCEFILES|É necessário especificar pelo menos um arquivo de origem.|  
 |0xC00292A9|-1073573207|DTS_E_TRANSFERDBTASKS_SRCFILENOTFOUND|Não foi possível encontrar o arquivo "%1" no banco de dados de origem "%2".|  
-|0xC00292B3|-1073573197|DTS_E_MSMQTASK_FIPS1402COMPLIANCE|A operação solicitada não é permitida em sistemas compatíveis com U.S. FIPS 140-2.|  
+|0xC00292B3|-1073573197|DTS_E_MSMQTASK_FIPS1402COMPLIANCE|A operação solicitada não é permitida em sistemas em conformidade com U.S. FIPS 140-2.|  
 |0xC002F210|-1073548784|DTS_E_SQLTASK_ERROREXECUTINGTHEQUERY|Falha na execução da consulta "%1", com o erro a seguir: "%2". Possíveis razões da falha: problemas com a consulta, propriedade "ResultSet" não definida corretamente, parâmetros não definidos corretamente ou conexão não estabelecida corretamente.|  
 |0xC002F300|-1073548544|DTS_E_TRANSFERSPTASK_ERRORREADINGSPNAMES|Erro ao ler os nomes de procedimento armazenado do arquivo xml.|  
 |0xC002F301|-1073548543|DTS_E_TRANSFERSPTASK_INVALIDDATANODE|Nó de dados inválido para a tarefa Transferir Procedimento Armazenado.|  
@@ -1114,7 +1114,7 @@ ms.locfileid: "51642403"
 |0xC00470F4|-1073450764|DTS_E_EXPREVALINVALIDNULLSCALE|O valor é %1!d! especificado como parâmetro de escala da função NULL com o tipo de dados %2 está fora do intervalo. A escala deve ficar no intervalo de %3!d! a %4!d!. A escala não deve exceder a precisão e não deve ser negativa.|  
 |0xC00470F5|-1073450763|DTS_E_EXPREVALINVALIDNULLLENGTH|O valor é %1!d! especificado como parâmetro de comprimento da função "NULL" com o tipo de dados %2 é negativo e inválido. O comprimento deve ser positivo.|  
 |0xC00470F6|-1073450762|DTS_E_NEGATIVESNOTALLOWED|Não pode ser atribuído valor negativo a %1.|  
-|0xC00470F7|-1073450761|DTS_E_FASTPARSENOTALLOWED|A propriedade personalizada "%1" para "%2" não pode ser definida como verdadeira.  O tipo de dados de coluna deve ser um dos seguintes: DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4, DT_UI8, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAMPOFFSET, DT_DATE, DT_DBDATE, DT_DBTIME, DT_DBTIME2 ou DT_FILETIME.|  
+|0xC00470F7|-1073450761|DTS_E_FASTPARSENOTALLOWED|A propriedade personalizada "%1" para "%2" não pode ser definida como verdadeira.  O tipo de dados de coluna deve ser um destes:  DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4, DT_UI8, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAMPOFFSET, DT_DATE, DT_DBDATE, DT_DBTIME, DT_DBTIME2 ou DT_FILETIME.|  
 |0xC00470F8|-1073450760|DTS_E_CANNOTREATTACHPATH|Não é possível reanexar "%1". Exclua o caminho, adicione um novo e anexe.|  
 |0xC00470F9|-1073450759|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSPLURALSINGULAR|A função "%1" requer %2!d! parâmeros, não %3!d! parâmetro. O nome da função foi reconhecido, mas o número de parâmetros não é válido.|  
 |0xC00470FA|-1073450758|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSSINGULARPLURAL|A função "%1" requer %2!d! parâmetro, não %3!d! parâmetros. O nome da função foi reconhecido, mas o número de parâmetros não é válido.|  
@@ -1244,7 +1244,7 @@ ms.locfileid: "51642403"
 |0xC0202003|-1071636477|DTS_E_ACQUIREDCONNECTIONUNAVAILABLE|Não é possível acessar as conexões adquiridas.|  
 |0xC0202004|-1071636476|DTS_E_INCORRECTCOLUMNCOUNT|O número de colunas está incorreto.|  
 |0xC0202005|-1071636475|DTS_E_COLUMNNOTFOUND|Não é possível encontrar a coluna "%1" na fonte de dados.|  
-|0xC0202007|-1071636473|DTS_E_OLEDBRECORD|Está disponível um registro OLE DB.  Origem: "%1" Hresult: 0x%2!8.8X!  Descrição: "%3".|  
+|0xC0202007|-1071636473|DTS_E_OLEDBRECORD|Está disponível um registro OLE DB.  Origem: "%1"  Hresult: 0x%2!8.8X!  Descrição: "%3".|  
 |0xC0202009|-1071636471|DTS_E_OLEDBERROR|Código de Erro SSIS DTS_E_OLEDBERROR.  Ocorreu um erro OLE DB. Código de erro: 0x%1!8.8X!.|  
 |0xC020200A|-1071636470|DTS_E_ALREADYCONNECTED|O componente já está conectado. O componente precisa ser desconectado antes de tentar conectá-lo.|  
 |0xC020200B|-1071636469|DTS_E_INCORRECTSTOCKPROPERTYVALUE|O valor da propriedade "%1" está incorreto.|  

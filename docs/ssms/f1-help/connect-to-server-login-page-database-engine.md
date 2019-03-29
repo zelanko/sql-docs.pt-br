@@ -13,12 +13,12 @@ ms.assetid: e08cfbc3-bed5-4401-a13b-1c66d902fe32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 164c5e51d28cc09bb2161d729812c8f74fb5f08f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 75ae49d16f9b6a2cb49e7d50da36a045d43a5354
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210995"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306184"
 ---
 # <a name="connect-to-server-login-page-database-engine"></a>Conectar ao Servidor (página Logon) Mecanismo de Banco de Dados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ Ao registrar um servidor a partir do Pesquisador de Objetos, selecione o tipo de
   
 Ao conectar-se a uma instância do Mecanismo de Banco de Dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio do [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], você deve usar a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e especificar um banco de dados na caixa de diálogo **Conectar ao Servidor** , na guia **Propriedades da Conexão** . Verifique se você marcou a caixa de seleção **Criptografar conexão** .  
   
-Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conecta-se ao **mestre**. Se você especificar um banco de dados do usuário, somente esse banco de dados e seus objetos serão exibidos no Pesquisador de Objetos. Se você se conectar ao **mestre**, todos os bancos de dados serão exibidos. Para obter mais informações, consulte [Visão geral do banco de dados SQL do Microsoft Azure](https://go.microsoft.com/fwlink/?LinkId=163948).  
+Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conecta-se ao **mestre**. Se você especificar um banco de dados do usuário, somente esse banco de dados e seus objetos serão exibidos no Pesquisador de Objetos. Se você se conectar ao **mestre**, todos os bancos de dados serão exibidos. Confira mais informações em [Visão geral do Banco de Dados SQL do Microsoft Azure](/azure/sql-database/sql-database-technical-overview/).
   
 **Nome do servidor**  
 Selecione a instância do servidor com a qual se conectar. Por padrão, é exibida a instância de servidor usada na última conexão.  
@@ -48,7 +48,7 @@ A versão atual do SSMS oferece cinco modos de autenticação ao conectar-se a u
   
 Ao conectar-se a uma instância do Mecanismo de Banco de Dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio do [!INCLUDE[ssSDS](../../includes/sssds-md.md)], você deve usar a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e especificar um banco de dados na caixa de diálogo **Conectar ao Servidor** , na guia **Propriedades da Conexão** . Verifique se você marcou a caixa de seleção **Criptografar conexão** .  
   
-Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conecta-se ao **mestre**. Se você especificar um banco de dados de usuário ao se conectar ao [!INCLUDE[ssSDS](../../includes/sssds-md.md)], somente esse banco de dados e seus objetos serão exibidos no Pesquisador de Objetos. Se você se conectar ao **mestre**, todos os bancos de dados serão exibidos. Para obter mais informações, consulte [Visão geral do banco de dados SQL do Microsoft Azure](https://go.microsoft.com/fwlink/?LinkId=163948).  
+Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conecta-se ao **mestre**. Se você especificar um banco de dados de usuário ao se conectar ao [!INCLUDE[ssSDS](../../includes/sssds-md.md)], somente esse banco de dados e seus objetos serão exibidos no Pesquisador de Objetos. Se você se conectar ao **mestre**, todos os bancos de dados serão exibidos. Confira mais informações em [Visão geral do Banco de Dados SQL do Microsoft Azure](/azure/sql-database/sql-database-technical-overview/).  
   
 > **Autenticação do Windows**  
 > [!INCLUDE[msCoName](../../includes/msconame_md.md)] O modo de Autenticação do Windows permite que um usuário se conecte por uma conta de usuário Windows.  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - prediction queries [Integration Services]
 - Data Mining Query task [Integration Services]
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 184f3337f706d2a19210a8304d6b351b352ea309
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 3e2e77caa45d704c1ecaccb1bb85b6bf6845dd47
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639893"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281960"
 ---
 # <a name="data-mining-query-task"></a>Data Mining Query Task
   A tarefa Consulta de Mineração de Dados executa consultas de previsão com base em modelos internos de mineração de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. A consulta de previsão cria uma previsão para novos dados usando modelos de mineração. Por exemplo, uma consulta de previsão pode prever quantos veleiros serão vendidos durante os meses de verão ou gerar uma lista de possíveis clientes para a compra de um veleiro.  
@@ -84,12 +84,12 @@ ms.locfileid: "51639893"
  **Conexão**  
  Selecione um gerenciador de conexões do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] na lista, ou clique em **Novo** para criar um novo gerenciador de conexões.  
   
- **Tópicos relacionados:**  [Gerenciador de conexões do Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
+ **Tópicos relacionados:**  [Gerenciador de Conexões do Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
   
  **Nova**  
  Crie um novo gerenciador de conexões do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
- **Tópicos relacionados:** [Referência da interface do usuário da caixa de diálogo Adicionar Gerenciador de Conexões do Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **Tópicos relacionados:** [Referência de IU da caixa de diálogo Adicionar Gerenciador de Conexões do Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **Estrutura de mineração**  
  Selecione uma estrutura de mineração na lista.  
@@ -116,12 +116,12 @@ ms.locfileid: "51639893"
  **Consulta de mineração de dados**  
  Digite uma consulta de mineração de dados.  
   
- **Tópicos relacionados:**  [Referência de &#40;extensões DMX&#41;](../../dmx/data-mining-extensions-dmx-reference.md)  
+ **Tópicos relacionados:**  [Referência de DMX &#40;extensões DMX&#41;](../../dmx/data-mining-extensions-dmx-reference.md)  
   
  **Construir Nova Consulta**  
  Crie a consulta de mineração de dados usando uma ferramenta gráfica.  
   
- **Tópicos relacionados:** [Data Mining Query](../../integration-services/control-flow/data-mining-query.md)  
+ **Tópicos relacionados:** [Consulta de mineração de dados](../../integration-services/control-flow/data-mining-query.md)  
   
 ### <a name="parameter-mapping-tab-options"></a>Opções da guia Mapeamento de Parâmetros  
  **Nome do parâmetro**  

@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.ssis.designer.cdccontroltask.f1
 - sql13.ssis.designer.cdccontroltask.config.f1
 ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b187fb1d2e5595ef1ec75ed99c9a6e3f85029f3e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 87815205efb5598dd2901b46d4220092f76cde4a
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640693"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58283030"
 ---
 # <a name="cdc-control-task"></a>Tarefa Controle de CDC
   A tarefa Controle de CDC é usada para controlar o ciclo de vida de pacotes de captura de dados de alterações (CDC). Ela trata a sincronização de pacotes CDC com o pacote de carga inicial e o gerenciamento de intervalos de LSN (número de sequência de log) processados na execução de um pacote CDC. Além disso, a tarefa Controle de CDC lida com cenários de erro e recuperação.  
@@ -42,14 +42,14 @@ ms.locfileid: "51640693"
 |Operação|Descrição|  
 |---------------|-----------------|  
 |GetProcessingRange|Esta operação é usada antes da chamada ao fluxo de dados que usa o fluxo de dados de Origem CDC. Ele estabelece um intervalo de LSNs que o fluxo de dados de origem de CDC lê quando é invocado. O intervalo é armazenado em uma variável de pacote SSIS que é usada pela Origem de CDC durante o processamento de fluxo de dados.<br /><br /> Para obter mais informações sobre os armazenados, consulte [Definir uma variável de estado](../../integration-services/data-flow/define-a-state-variable.md).|  
-|MarkProcessedRange|: Esta operação é executada depois de cada execução de CDC (depois que o fluxo de dados de CDC é concluído com êxito) para registrar o último LSN que foi processado completamente na execução de CDC. Da próxima vez que o GetProcessingRange for executado, essa posição será o início do intervalo de processamento.|  
+|MarkProcessedRange|: esta operação é executada depois de cada execução de CDC (depois que o fluxo de dados de CDC é concluído com êxito) para registrar o último LSN que foi processado completamente na execução de CDC. Da próxima vez que o GetProcessingRange for executado, essa posição será o início do intervalo de processamento.|  
   
 ## <a name="handling-cdc-state-persistency"></a>Lidando com a persistência de estado CDC  
  A tarefa Controle de CDC mantém um estado persistente entre ativações. As informações armazenadas no estado CDC são usadas para determinar e manter o intervalo de processamento do pacote CDC e para detectar condições de erro. O estado persistente é armazenado como uma cadeia de caracteres. Para obter mais informações, consulte [Definir uma variável de estado](../../integration-services/data-flow/define-a-state-variable.md).  
   
  A tarefa Controle de CDC oferece suporte a dois tipos de persistência de estado  
   
--   Persistência de Estado Manual: nesse caso, a tarefa Controle de CDC gerencia o estado armazenado em uma variável de pacote, mas o desenvolvedor do pacote deve ler a variável de um repositório persistente antes de chamar o Controle de CDC e depois gravá-lo nesse repositório persistente após o Controle de CDC ser chamado pela última vez e a execução do CDC for concluída.  
+-   Persistência de Estado Manual: neste caso, a tarefa Controle de CDC gerencia o estado armazenado em uma variável de pacote, mas o desenvolvedor do pacote deve ler a variável de um repositório persistente antes de chamar o Controle de CDC e depois gravá-lo nesse repositório persistente após o Controle de CDC ser chamado pela última vez e a execução do CDC for concluída.  
   
 -   Persistência de Estado Automática: o estado CDC é armazenado em uma tabela em um banco de dados. O estado é armazenado com um nome fornecido na propriedade **StateName** em uma tabela nomeada na propriedade **Tabela a Ser Usada para Armazenar o Estado** , localizada em um gerenciador de conexões selecionado para armazenar o estado. O padrão é o gerenciador de conexões de origem, mas a prática comum é usar o gerenciador de conexões de destino. A tarefa Controle de CDC atualiza o valor do estado na tabela de estado e isso é confirmado como parte da transação de ambiente.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "51640693"
   
 -   **Marcar o intervalo processado**: esta operação é usada em um pacote de processamento de alteração no fim de uma execução de CDC (depois que o fluxo de dados de CDC é concluído com êxito) para registrar o último LSN que foi processado completamente na execução de CDC. Da próxima vez que o `GetProcessingRange` é executado, esta posição determina o início do próximo intervalo de processamento.  
   
--   **Reiniciar estado de CDC**: esta operação é usada para reiniciar o estado de CDC persistente associado ao contexto de CDC atual. Depois que esta operação é executada, o LSN máximo atual da tabela `sys.fn_cdc_get_max_lsn` do carimbo de data/hora de LSN torna-se o início do intervalo para o próximo intervalo de processamento. Esta operação exige uma conexão com o banco de dados de origem.  
+-   **Redefinir estado de CDC**: Esta operação é usada para reiniciar o estado de CDC persistente associado ao contexto de CDC atual. Depois que esta operação é executada, o LSN máximo atual da tabela `sys.fn_cdc_get_max_lsn` do carimbo de data/hora de LSN torna-se o início do intervalo para o próximo intervalo de processamento. Esta operação exige uma conexão com o banco de dados de origem.  
   
      Um exemplo de quando esta operação é usada é quando você deseja processar somente os registros de alteração recém-criados e ignorar todos os registros de alteração antigos.  
   

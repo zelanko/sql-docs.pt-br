@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0a346d55b84b115a7a128d02fdedd1ff7f6b800d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 740b85a52908437d2cdbca5e47e0797c1e0ba08b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527138"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290282"
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>Lição 3-2 – executar o Assistente de Instalação de Pacotes
 Nesta tarefa, você executará o Assistente de Instalação de Pacotes para implantar os pacotes do projeto Tutorial de Implantação em uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Somente pacotes podem ser instalados na tabela sysssispackages no banco de dados msdb do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Os arquivos que dão suporte incluídos no pacote de implantação serão implantados no sistema de arquivos.  
@@ -82,11 +82,11 @@ Em uma lição anterior, você modificou os pacotes no tutorial para usar as con
   
     Como os valores das variáveis de ambiente no computador de destino diferem dos valores das variáveis de ambiente no computador de desenvolvimento, várias avisos são exibidos na página Validação de Pacote. Você deve esperar por quatro avisos:  
   
-    -   O arquivo de configuração: “C:\DeploymentTutorial\DataTransferConfig.dtsConfig” não é válido. Verifique o nome do arquivo de configuração.  
+    -   O arquivo de configuração: "C:\DeploymentTutorial\DataTransferConfig.dtsConfig" não é válido. Verifique o nome do arquivo de configuração.  
   
     -   Falha ao carregar pelo menos uma das entradas de configuração no pacote. Verifique as entradas de configuração e os avisos anteriores para ver a descrição da configuração em que houve falha.  
   
-    -   O arquivo de configuração: “C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig” não é válido. Verifique o nome do arquivo de configuração.  
+    -   O arquivo de configuração: "C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig" não é válido. Verifique o nome do arquivo de configuração.  
   
     -   Falha ao carregar pelo menos uma das entradas de configuração no pacote. Verifique as entradas de configuração e os avisos anteriores para ver a descrição da configuração em que houve falha.  
   
@@ -100,7 +100,7 @@ Em uma lição anterior, você modificou os pacotes no tutorial para usar as con
     > Um arquivo de log temporário é criado para ser usado na validação do pacote. Esse arquivo não é usado quando o pacote é executado.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
-[Etapa 3: Testando os pacotes implantados](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
+[Etapa 3: testar os pacotes implantados](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
   
 ## <a name="see-also"></a>Consulte Também  
 [Serviço Integration Services &#40;Serviço SSIS&#41;](../integration-services/service/integration-services-service-ssis-service.md)  

@@ -13,15 +13,15 @@ f1_keywords:
 - sql13.dts.designer.odatasource.columns.f1
 - sql13.dts.designer.odatasource.erroroutput.f1
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 820541da1699e2e74a9ec0b9a5f00f094a14f38c
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: f5ba8afdf4acadd114363280501f29e1616349ae
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638654"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290612"
 ---
 # <a name="odata-source"></a>Origem do OData
 Use o componente OData Source em um pacote do SSIS para consumir os dados do serviço do OData (Protocolo Open Data).
@@ -54,12 +54,12 @@ Para descobrir os tipos de dados das colunas em sua fonte de dados, verifique a 
   
 |Linhas|ATOM|JSON|JSON (Light)|  
 |-|-|-|-|  
-|10.000|113 segundos|74 segundos|68 segundos|  
+|10000|113 segundos|74 segundos|68 segundos|  
 |1.000.000|1.110 segundos|853 segundos|665 segundos|  
   
 ## <a name="related-topics-in-this-section"></a>Tópicos relacionados nesta seção  
   
--   [Tutorial: Usando o OData Source](../../integration-services/data-flow/tutorial-using-the-odata-source.md)  
+-   [Tutorial: Uso do OData Source](../../integration-services/data-flow/tutorial-using-the-odata-source.md)  
   
 -   [Modifique a consulta de origem do OData em tempo de execução](../../integration-services/data-flow/modify-odata-source-query-at-runtime.md)  
   
@@ -102,7 +102,7 @@ Para descobrir os tipos de dados das colunas em sua fonte de dados, verifique a 
   
 #### <a name="use-collection-or-resource-path--resource-path"></a>Use o caminho da coleção ou do recurso = Caminho do recurso  
  **Resource path**  
- Digite um caminho de recurso. Por exemplo: Funcionários  
+ Digite um caminho de recurso. Por exemplo: Employees  
   
 ## <a name="odata-source-editor-columns-page"></a>Editor de Origem do OData (página Colunas)
   Use a página **Colunas** da caixa de diálogo **Editor de Origem OData** para selecionar as colunas externas (origem) a serem incluídas na saída e para mapeá-las para as colunas de saída.  
@@ -130,7 +130,7 @@ Para descobrir os tipos de dados das colunas em sua fonte de dados, verifique a 
  **Erro**  
  Especifique o que deve acontecer quando ocorre um erro: ignorar a falha, redirecionar a linha ou causar falha no componente.  
   
- **Tópicos Relacionados:** [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md)  
+ **Tópicos relacionados:** [Tratamento de erro em dados](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **Truncation**  
  Especifique o que deve acontecer quando ocorre um truncamento: ignorar a falha, redirecionar a linha ou causar falha do componente.  

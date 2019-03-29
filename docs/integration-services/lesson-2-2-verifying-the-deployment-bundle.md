@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 6c13f5c9-c75e-4e52-94dc-2d2db2c578fe
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6b5f0799a26848f70bc67b24708a5d4352339d50
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c15564e665361caef562aa9add1c28b267a8a512
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532060"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58283133"
 ---
 # <a name="lesson-2-2---verifying-the-deployment-bundle"></a>Lição 2-2 – verificar o pacote de implantação
 Na lição 1, você criou o projeto do Tutorial de Implantação e adicionou pacotes e arquivos auxiliares ao projeto; na tarefa anterior você compilou um utilitário de implantação para o projeto.  
@@ -56,7 +56,7 @@ Nesta tarefa, você verificará o conteúdo do pacote de implantação. O pacote
 5.  Saia do Internet Explorer ou do editor de textos.  
   
 ## <a name="next-lesson"></a>Próxima lição  
-[Lição 3: Instalar os pacotes SSIS](../integration-services/lesson-3-install-ssis-packages.md)  
+[Lição 3: instalar os pacotes SSIS](../integration-services/lesson-3-install-ssis-packages.md)  
   
   
   

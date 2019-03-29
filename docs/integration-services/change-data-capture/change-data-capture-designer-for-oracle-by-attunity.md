@@ -10,24 +10,24 @@ ms.topic: conceptual
 f1_keywords:
 - desCons
 ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3acfc4beeb64631a1c8bc00fe5e4a6ca2c31f470
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: bb127d4c413a4b08927b0dca57dbea3b62039b2a
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641233"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280850"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Change Data Capture Designer para Oracle da Attunity
   O CDC Designer Console é usado para desenvolver e manter Instâncias Oracle CDC. O CDC Designer Console é um snap-in do Console de Gerenciamento Microsoft que contém os seguintes elementos:  
   
--   New Instance Wizard: este assistente cria uma nova Instância Oracle CDC. Para obter informações sobre o uso do New Instance Wizard, consulte [Use the New Instance Wizard](../../integration-services/change-data-capture/use-the-new-instance-wizard.md).  
+-   Assistente de Nova Instância: este assistente cria uma nova Instância Oracle CDC. Para obter informações sobre o uso do New Instance Wizard, consulte [Use the New Instance Wizard](../../integration-services/change-data-capture/use-the-new-instance-wizard.md).  
   
--   CDC Instance Properties Viewer: esta é uma exibição encaixada que mostra o status e a configuração da instância CDC selecionada. Para obter informações sobre o visualizador de propriedades, consulte [Como gerenciar uma instância CDC](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md).  
+-   Visualizador de Propriedades de Instância CDC: esta é uma exibição encaixada que mostra o status e a configuração da instância CDC selecionada. Para obter informações sobre o visualizador de propriedades, consulte [Como gerenciar uma instância CDC](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md).  
   
--   CDC Instance Properties Editor: esta caixa de diálogo é usada para editar qualquer instância de Serviço Oracle CDC existente. Para obter informações sobre as propriedades da instância CDC, consulte [Edit Instance Properties](../../integration-services/change-data-capture/edit-instance-properties.md).  
+-   Editor de Propriedades de Instância CDC: esta caixa de diálogo é usada para editar qualquer instância de Serviço Oracle CDC existente. Para obter informações sobre as propriedades da instância CDC, consulte [Edit Instance Properties](../../integration-services/change-data-capture/edit-instance-properties.md).  
   
  O Microsoft® Change Data Capture Designer e Service para Oracle da Attunity para o Microsoft SQL Server® 2016 são parte do SQL Server 2016 Feature Pack. Baixe componentes do Feature Pack da [página da Web do SQL Server 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=746297).  
   

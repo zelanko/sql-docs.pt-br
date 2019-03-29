@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f8e9090e92baba8f67ee7ad0303103f41c66ace9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0aa6dbd766f842b4c923d98702fd2780fc2652fb
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532166"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306224"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -186,7 +186,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
  A cláusula FROM não pode ser especificada em uma instrução DELETE que faça referência, direta ou indiretamente, a uma exibição com um gatilho INSTEAD OF definido. Para obter mais informações sobre gatilhos INSTEAD OF, confira [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
-## <a name="limitations-and-restrictions"></a>Limitações e restrições  
+## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
  Quando TOP é usado com DELETE, as linhas referenciadas não são organizadas em ordem alguma e a cláusula ORDER BY não pode ser especificada diretamente nessa instrução. Se você precisar usar TOP para excluir linhas em uma ordem cronológica significativa, será preciso usar TOP junto com uma cláusula ORDER BY em uma instrução de subseleção. Consulte a seção Exemplos a seguir neste tópico.  
   
  TOP não pode ser usado em uma DELETE instrução para exibições particionadas.  
@@ -240,7 +240,7 @@ GO
 ###  <a name="LimitRows"></a> Limitando as linhas excluídas  
  Exemplos nesta seção demonstram como limitar o número de linhas que serão excluídas.  
   
-#### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>B. Usando a cláusula WHERE para excluir um conjunto de linhas  
+#### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>b. Usando a cláusula WHERE para excluir um conjunto de linhas  
  O exemplo a seguir exclui todas as linhas de uma tabela `ProductCostHistory` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] na qual o valor da coluna `StandardCost` é maior que `1000.00`.  
   
 ```sql
@@ -458,7 +458,7 @@ OPTION ( LABEL = N'label1' );
 ```  
   
 ### <a name="n-using-a-label-and-a-query-hint-with-the-delete-statement"></a>N. Usando um rótulo e uma dica de consulta com a instrução DELETE  
- Essa consulta mostra a sintaxe básica para uso de uma dica de consulta de junção com a instrução DELETE. Para obter mais informações sobre dicas de junção e como usar a cláusula OPTION, consulte [OPTION (SQL Server PDW)](https://msdn.microsoft.com/72bbce98-305b-42fa-a19f-d89620621ecc).  
+ Essa consulta mostra a sintaxe básica para uso de uma dica de consulta de junção com a instrução DELETE. Para obter mais informações sobre dicas de junção e como usar a cláusula OPTION, confira [Cláusula OPTION (Transact-SQL&)](../queries/option-clause-transact-sql.md).
   
 ```sql
 -- Uses AdventureWorks  

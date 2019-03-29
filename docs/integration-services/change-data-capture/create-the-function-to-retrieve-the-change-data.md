@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],creating function
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fc5fb2da6ab1d276ac4a5397b8ea9832878b1c5a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 49c4e75641056db17faabcc937ee1ec76fd470d5
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418027"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280330"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Criar a função para recuperar os dados de alteração
   Após concluir o fluxo de controle de um pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que executa uma carga incremental de dados de alteração, a próxima tarefa é criar uma função com valor de tabela que recupera os dados de alteração. É preciso criar esta função apenas uma vez antes da primeira carga incremental.  
@@ -133,7 +133,7 @@ deallocate #hfunctions
   
 -   Todas as colunas solicitadas de dados de alteração.  
   
--   Uma coluna denominada __CDC_OPERATION que usa um campo de um ou dois caracteres para identificar a operação associada à linha. Os valores válidos para esse campo são os seguintes: 'I' de inserir, 'D' de excluir, 'UO' de atualizar valores antigos e 'UN' de atualizar valores novos.  
+-   Uma coluna denominada __CDC_OPERATION que usa um campo de um ou dois caracteres para identificar a operação associada à linha. Os valores válidos para esse campo são os seguintes: “I” de inserir, “D” de excluir, “UO” de atualizar valores antigos e “UN” de atualizar valores novos.  
   
 -   Os sinalizadores de atualização, quando você os solicita, aparecem como colunas de bit após o código da operação e na ordem especificada no parâmetro *@update_flag_list* . Essas colunas são denominadas com a anexação de '_uflag' ao nome de coluna associado.  
   
@@ -220,6 +220,6 @@ go
 ## <a name="next-step"></a>Próxima etapa  
  Após ter criado a função com valor de tabela que consulta a existência de dados de alteração, a próxima etapa será iniciar a criação do fluxo de dados no pacote.  
   
- **Próximo tópico:** [Recuperar e compreender os dados de alteração](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
+ **Próximo tópico:** [Recuperar e compreender os dados de alterações](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
   
   

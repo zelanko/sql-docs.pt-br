@@ -1,7 +1,7 @@
 ---
-title: Eventos Estendidos – SQL Server | Microsoft Docs
+title: Visão geral de eventos estendidos - SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 12/16/2018
+ms.date: 12/17/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,14 +15,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 441d0535e75663150d12e5ff6c05a7b1067f3e6d
-ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
+ms.openlocfilehash: 3f98df357ab7e7dabf48a6f0e5975e8513de99f1
+ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53531042"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58417198"
 ---
-# <a name="extended-events"></a>Eventos estendidos
+# <a name="extended-events-overview"></a>Visão geral de eventos estendidos
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Os Eventos Estendidos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] têm uma arquitetura altamente escalonável e configurável que permite aos usuários coletar o máximo ou o mínimo de informações, conforme necessário, para solucionar ou identificar um problema.  

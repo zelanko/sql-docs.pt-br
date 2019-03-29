@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - large data, SSIS transformations
 ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 42ed9609e1c2b9337e0c7f98b27c533144f8213d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 9a45b20ac413c04ca641674020e8d98ed39a01e8
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638923"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290552"
 ---
 # <a name="aggregate-transformation"></a>Transformação Agregação
   A transformação Agregação aplica funções de agregação, como Average, a valores de coluna e copia os resultados na saída da transformação. Além de funções de agregação, a transformação fornece a cláusula GROUP BY que você pode utilizar para especificar grupos a serem agregados.  
@@ -103,7 +103,7 @@ ms.locfileid: "51638923"
   
  A transformação Agregação é assíncrona. Isto significa que ela não consome e publica dados linha por linha. Em vez de consumir o conjunto de linhas inteiro, ela executa seus agrupamentos e agregações e, depois, publica os resultados.  
   
- Essa transformação não transpassa nenhuma coluna, mas cria colunas novas no fluxo de dados para os dados que publica. Somente as colunas de entrada às quais se aplicam funções de agregação ou as que a transformação usa para agrupamento são copiadas para a saída da transformação. Por exemplo, uma entrada da transformação Agregação pode ter três colunas: **CountryRegion**, **City**e **Population**. A transformação faz o agrupamento pela coluna **CountryRegion** e aplica a função Sum à coluna **Population** . Por isso, a saída não inclui a coluna **City** .  
+ Essa transformação não transpassa nenhuma coluna, mas cria colunas novas no fluxo de dados para os dados que publica. Somente as colunas de entrada às quais se aplicam funções de agregação ou as que a transformação usa para agrupamento são copiadas para a saída da transformação. Por exemplo, uma entrada da transformação Agregação pode ter três colunas: **CountryRegion**, **City** e **Population**. A transformação faz o agrupamento pela coluna **CountryRegion** e aplica a função Sum à coluna **Population** . Por isso, a saída não inclui a coluna **City** .  
   
  Você também pode adicionar várias saídas à transformação Agregação e direcionar cada agregação a uma saída diferente. Por exemplo, se a transformação Agregação aplicar as funções Sum e Average, cada agregação poderá ser direcionada para uma saída diferente.  
   

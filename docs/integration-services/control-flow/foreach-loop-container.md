@@ -28,15 +28,15 @@ helpviewer_keywords:
 - foreach enumerators [Integration Services]
 - containers [Integration Services], Foreach Loop
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 12f91e676983cea041d966a0306fb1faf636019b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 981d659d05517b1e1b54244cbea22d52ccf964f2
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505934"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271323"
 ---
 # <a name="foreach-loop-container"></a>Contêiner Loop Foreach
   O contêiner Loop Foreach define um fluxo de controle repetitivo em um pacote. A implementação de loop é semelhante à estrutura de loop **Foreach** em linguagens de programação. Em um pacote, o looping é habilitado por um enumerador Foreach.  O contêiner Loop Foreach repete o fluxo de controle para cada membro de um enumerador especificado.  
@@ -215,7 +215,7 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
  **Expressões**  
  Clique ou expanda **Expressões** para exibir a lista de expressões de propriedade existentes. Clique no botão de reticências **(...)** para adicionar uma expressão de propriedade para uma propriedade de enumerador ou edite e avalie uma expressão de propriedade existente.  
   
- **Tópicos relacionados:**[Expressões do Integration Services  40SSIS 41](../../integration-services/expressions/integration-services-ssis-expressions.md), [Editor de expressões de propriedade](../../integration-services/expressions/property-expressions-editor.md), [Construtor de Expressões](../../integration-services/expressions/expression-builder.md)  
+ **Tópicos relacionados:**  [Expressões do Integration Services 40SSIS 41](../../integration-services/expressions/integration-services-ssis-expressions.md), [Editor de expressões de propriedade](../../integration-services/expressions/property-expressions-editor.md), [Construtor de Expressões](../../integration-services/expressions/expression-builder.md)  
   
 ### <a name="enumerator-dynamic-options"></a>Opções dinâmicas do Enumerador  
   
@@ -312,7 +312,7 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
 > [!IMPORTANT]  
 >  O gerenciador de conexões ADO.NET deve usar um provedor .NET para OLE DB. Se você estiver se conectando com o SQL Server, o provedor indicado é o Cliente Nativo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , listado na seção **Provedores de .Net para OleDb** da caixa de diálogo **Gerenciador de conexões** .  
   
- **Tópicos relacionados:** [ADO Connection Manager](../../integration-services/connection-manager/ado-connection-manager.md), [Configure ADO.NET Connection Manager](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
+ **Tópicos relacionados:** [Gerenciador de conexões ADO](../../integration-services/connection-manager/ado-connection-manager.md), [Configurar Gerenciador de Conexões ADO.NET](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
   
  **Esquema**  
  Selecione o esquema a enumerar.  
@@ -320,7 +320,7 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
  **Definir Restrições**  
  Defina as restrições a serem aplicadas ao esquema especificado.  
   
- **Tópicos relacionados:** [Caixa de diálogo restrições de esquema](https://msdn.microsoft.com/library/92e5fd32-4944-4f7c-a448-b458df93d0d5)  
+ **Tópicos relacionados:** [Caixa de diálogo Restrições de Esquemas](https://msdn.microsoft.com/library/92e5fd32-4944-4f7c-a448-b458df93d0d5)  
   
 #### <a name="enumerator--foreach-from-variable-enumerator"></a>Enumerador = Enumerador Foreach de Variável  
  Você usa o Enumerador Foreach de Variável para enumerar os objetos enumeráveis na variável especificada. Por exemplo, se o Loop Foreach incluir uma tarefa Execute SQL que executa uma consulta e armazena o resultado em uma variável, você poderá usar o Enumerador Foreach de Variável para enumerar os resultados da consulta.  
@@ -351,7 +351,7 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
   
  Se **DocumentSourceType** for definido como **Conexão do arquivo**, selecione um Gerenciador de conexões do arquivo ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
   
- **Tópicos relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Tópicos relacionados:** [Gerenciador de conexões de arquivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor do Gerenciador de conexões de Arquivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
  Se **DocumentSourceType** for definido como **Variável**, selecione uma variável existente ou clique em \<**Nova variável...**> para criar uma nova variável.  
   
@@ -381,7 +381,7 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
   
  Se **OuterXPathStringSourceType** for definido como **Conexão do arquivo**, selecione um Gerenciador de conexões do arquivo ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
   
- **Tópicos relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Tópicos relacionados:** [Gerenciador de conexões de arquivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor do Gerenciador de conexões de Arquivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
  Se **OuterXPathStringSourceType** for definido como **Variável**, selecione uma variável existente ou clique em \<**Nova variável...**> para criar uma nova variável.  
   
@@ -404,7 +404,7 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
   
  Se **InnerXPathStringSourceType** for definido como **Conexão do arquivo**, selecione um Gerenciador de conexões do arquivo ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
   
- **Tópicos relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Tópicos relacionados:** [Gerenciador de conexões de arquivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor do Gerenciador de conexões de Arquivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
  Se **InnerXPathStringSourceType** for definido como **Variável**, selecione uma variável existente ou clique em \<**Nova variável...**> para criar uma nova variável.  
   
@@ -416,7 +416,7 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
  **Conexão**  
  Selecione um gerenciador de conexões ADO.NET existente ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
   
- Tópicos relacionados: [ADO.NET Connection Manager](../../integration-services/connection-manager/ado-net-connection-manager.md), [Configure ADO.NET Connection Manager](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
+ Tópicos relacionados: [Gerenciador de conexões ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md), [Configurar Gerenciador de conexões ADO.NET](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
   
  **Enumerar**  
  Especifique o objeto SMO a enumerar.  
@@ -424,7 +424,7 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
  **Procurar**  
  Selecione a enumeração SMO.  
   
- **Tópicos relacionados:** [Selecionar a caixa de diálogo de enumeração SMO](https://msdn.microsoft.com/library/64ada1fe-21a2-4675-98fc-d5c803aa32f0)  
+ **Tópicos relacionados:** [Caixa de diálogo Selecionar Enumeração SMO](https://msdn.microsoft.com/library/64ada1fe-21a2-4675-98fc-d5c803aa32f0)  
   
 ####  <a name="ForeachHDFSFile"></a> Enumerador = Enumerador de Arquivos HDFS Foreach  
  O **Enumerador de Arquivos Foreach HDFS** permite que um pacote do SSIS enumere arquivos HDFS no local de HDFS especificado. O nome de cada arquivo HDFS pode ser armazenado em uma variável e usado em tarefas dentro do Contêiner do Loop Foreach.  
@@ -458,7 +458,7 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
  **Gerenciador de conexões do Armazenamento do Azure**  
  Selecione um Gerenciador de Conexão de Armazenamento do Azure existente ou crie um novo que se refere a uma Conta de Armazenamento do Azure.  
   
- Tópicos Relacionados: [Azure Storage Connection Manager](../../integration-services/connection-manager/azure-storage-connection-manager.md).  
+ Tópicos relacionados: [Gerenciador de conexões do Armazenamento do Azure](../../integration-services/connection-manager/azure-storage-connection-manager.md).  
   
  **Nome do contêiner de Blob**  
  Especifique o nome do contêiner de blob que contém os arquivos de blob a serem enumerados.
@@ -522,7 +522,7 @@ Use a caixa de diálogo **Restrições de Esquemas** para definir as restriçõe
  **Variável**  
  Use uma variável para definir restrições. Selecione uma variável na lista ou clique em **Nova variável...** para criar uma nova variável.  
   
- **Tópicos relacionados**: [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **Texto**  
  Forneça o texto para definir restrições.  

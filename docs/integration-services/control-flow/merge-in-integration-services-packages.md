@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - MERGE statement [SQL Server]
 ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1e8a7300f2b3a006ade820831f682eb379e9e200
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 95a771a7eb5f8f77f7ee7e869c0a434b1b604d26
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393969"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282390"
 ---
 # <a name="merge-in-integration-services-packages"></a>MERGE em pacotes do Integration Services
   Na versão atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], a instrução SQL em uma tarefa Executar SQL pode conter uma instrução MERGE. A instrução MERGE permite realizar várias operações INSERT, UPDATE e DELETE em uma única instrução.  
@@ -51,7 +51,7 @@ ms.locfileid: "52393969"
  A tabela FactBuyingHabits no data warehouse rastreia a última data em que um cliente comprou um determinado produto. A tabela consiste nas colunas ProductID, CustomerID e PurchaseDate. Todas as semanas, o banco de dados transacional gera uma tabela PurchaseRecords que inclui as compras feitas durante aquela semana. O objetivo é usar uma única instrução MERGE para mesclar as informações da tabela PurchaseRecords na tabela FactBuyingHabits. Para os pares produto-cliente que não existem, a instrução MERGE insere linhas novas. Para os pares produto-cliente que existem, a instrução MERGE atualiza a data de compra mais recente.  
   
 ###### <a name="track-price-history"></a>Acompanhar o histórico de preços  
- A tabela DimBook representa a lista de livros do inventário de um vendedor de livros e identifica o histórico de preços de cada livro. Esta tabela tem estas colunas: ISBN, ProductID, Price, Shelf e IsCurrent. Esta tabela também tem uma linha para cada preço que o livro já teve. Uma dessas linhas contém o preço atual. Para indicar qual linha contém o preço atual, o valor da coluna IsCurrent para essa linha é definido como 1.  
+ A tabela DimBook representa a lista de livros do inventário de um vendedor de livros e identifica o histórico de preços de cada livro. Essa tabela tem as seguintes colunas: ISBN, ProductID, Price, Shelf e IsCurrent. Esta tabela também tem uma linha para cada preço que o livro já teve. Uma dessas linhas contém o preço atual. Para indicar qual linha contém o preço atual, o valor da coluna IsCurrent para essa linha é definido como 1.  
   
  Todas as semanas, o banco de dados gera uma tabela WeeklyChanges que contém as alterações de preço da semana e os novos livros que foram adicionados durante a semana. Usando uma única instrução MERGE, você pode aplicar as alterações da tabela WeeklyChanges na tabela DimBook. A instrução MERGE insere novas linhas para os livros adicionados recentemente e atualiza a coluna IsCurrent para 0 nas linhas dos livros existentes cujo preço foi alterado. A instrução MERGE também insere novas linhas para os livros cujo preço foi alterado e, para essas novas linhas, define o valor da coluna IsCurrent como 1.  
   

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation [Integration Services]
 ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b44eaab3266d75663458572af238f5a15bd35b5e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: c30fcacb779a9656b70edad79e976bde575537de
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642283"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290592"
 ---
 # <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>Transformação Pesquisa em Modo de Cache Cheio – gerenciador de conexões do cache
   Você pode configurar a transformação Pesquisa para usar o modo cache cheio e um gerenciador de conexões de cache. No modo cache cheio, o conjunto de dados de referência é carregado no cache antes que a transformação Pesquisa seja executada.  
@@ -60,9 +60,9 @@ ms.locfileid: "51642283"
   
 -   [Tarefa Executar Pacote](../../integration-services/control-flow/execute-package-task.md)  
   
--   [Contêiner Sequência](../../integration-services/control-flow/sequence-container.md)  
+-   [Contêiner da Sequência](../../integration-services/control-flow/sequence-container.md)  
   
- Para obter um vídeo que demonstre como implementar uma transformação Pesquisa no modo Cache Cheio usando o gerenciador de conexões de Cache, consulte [Como implementar a transformação Pesquisa no modo de Cache Cheio (vídeo do SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131031).  
+ Para obter um vídeo que demonstra como implementar uma transformação Pesquisar no modo Cache Cheio usando o Gerenciador de Conexões do Cache, confira [Como implementar uma transformação de pesquisa no modo de cache cheio (vídeo do SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131031).  
   
 ### <a name="to-implement-a-lookup-transformation-in-full-cache-mode-in-one-package-by-using-cache-connection-manager-and-a-data-source-in-the-data-flow"></a>Para implementar uma transformação Pesquisa em modo cache cheio em um pacote usando o gerenciador de conexões de cache e uma fonte de dados no fluxo de dados  
   

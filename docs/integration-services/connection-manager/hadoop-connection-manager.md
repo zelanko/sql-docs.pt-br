@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.hadoopconn.f1
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0d7544f30f065b9acbef3efc55ac7165b58da2e6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 2aa8b928d9bfc7c8c76672b4de5387cad96c6b19
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417908"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281430"
 ---
 # <a name="hadoop-connection-manager"></a>Gerenciador de conexões do Hadoop
   O Gerenciador de Conexões do Hadoop permite que um pacote do SSIS (SQL Server Integration Services) se conecte a um cluster Hadoop usando os valores especificados para as propriedades.  
@@ -172,7 +172,7 @@ No controlador de domínio:
 
     1. Vá para **Gerenciador do Servidor** > **Gerenciamento de Política de Grupo** > **Domínio**. A partir daí, vá para **Objetos de Política de Grupo** > **Política de Domínio Padrão ou Ativo** > **Editar**.
 
-    2. Na janela pop-up do **Editor de Gerenciamento de Política de Grupo**, vá para **Configuração do Computador** > **Políticas** > **Configurações do Windows**. A partir daí, vá para **Configurações de Segurança** > **Políticas Locais** > **Opções de Segurança**. Configure a **Segurança de rede: configure os tipos de Criptografia permitidos para o Kerberos**.
+    2. Na janela pop-up do **Editor de Gerenciamento de Política de Grupo**, vá para **Configuração do Computador** > **Políticas** > **Configurações do Windows**. A partir daí, vá para **Configurações de Segurança** > **Políticas Locais** > **Opções de Segurança**. Configurar a **Segurança de rede: configure os tipos de criptografia permitidos para o Kerberos**.
 
     3. Selecione o algoritmo de criptografia que deseja usar para se conectar ao KDC. Normalmente, você pode selecionar qualquer uma das opções.
 

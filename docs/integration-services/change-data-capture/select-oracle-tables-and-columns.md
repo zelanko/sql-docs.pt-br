@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - selTabCol
 ms.assetid: bf73f80e-a954-4c5f-874e-17fdd4082715
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 830118141e849c2bde507686c1339f8cc73c1e8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 33ac9a5d6804e98685a0c16b5572848d5a575b00
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727624"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279220"
 ---
 # <a name="select-oracle-tables-and-columns"></a>Selecionar tabelas e colunas Oracle
   Use a página Selecione tabelas e colunas Oracle para selecionar as tabelas do banco de dados de origem Oracle onde as alterações são capturadas. Esta página tem os seguintes elementos:  
@@ -27,15 +27,15 @@ ms.locfileid: "47727624"
  **Lista de tabelas**  
  A lista de tabelas tem três colunas:  
   
--   **Nome da tabela Oracle**: o nome da tabela, incluindo esquema de tabela.  
+-   **Nome da tabela Oracle**: o nome da tabela, incluindo o esquema de tabela.  
   
--   **Instância de Captura**: é o nome da instância de captura usada para nomear objetos do Change Data Capture específicos. A instância de captura não pode ser NULL.  
+-   **Instância de captura**: o nome da instância de captura usada para nomear objetos do Change Data Capture específicos. A instância de captura não pode ser NULL.  
   
      Se não for especificado, o nome será derivado do nome do esquema de origem mais o nome da tabela de origem, no formato `<schema-name>_<table-name>`. O nome da instância de captura não pode exceder 100 caracteres e deve ser exclusivo no banco de dados.  
   
      Você pode clicar em qualquer célula nesta coluna para editar manualmente **capture_instance**.  
   
--   **Security Role**: o nome da função de banco de dados de associação usada para controlar o acesso aos dados de alteração.  
+-   **Função de segurança**: o nome da função de banco de dados de associação usada para controlar o acesso aos dados de alteração.  
   
      Você pode clicar em qualquer célula nesta coluna para editar manualmente **security_role**.  
   

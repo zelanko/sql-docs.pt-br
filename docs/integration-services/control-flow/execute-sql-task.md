@@ -18,15 +18,15 @@ helpviewer_keywords:
 - batches [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 674dd31df5acbe93fd48ad9b0b3ab504cebbc98a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ff217e16fb9d153872d00074ff2f5d672be056d0
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504070"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273910"
 ---
 # <a name="execute-sql-task"></a>Tarefa Executar SQL
   A tarefa Executar SQL executa instruções SQL ou procedimentos armazenados a partir de um pacote. A tarefa pode conter uma única instrução SQL ou várias instruções SQL que são executadas em sequência. Você pode usar a tarefa Executar SQL para os seguintes propósitos:  
@@ -189,7 +189,7 @@ Para saber mais sobre a linguagem de consulta Transact-SQL, consulte [Referênci
  **FileConnection**  
  Selecione um gerenciador de conexões de arquivos existente ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
   
- **Tópicos relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Tópicos relacionados:** [Gerenciador de conexões de arquivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor do Gerenciador de conexões de Arquivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="sqlsourcetype--variable"></a>SQLSourceType = Variável  
  **SourceVariable**  
@@ -204,7 +204,7 @@ Use a página **Mapeamento de Parâmetros** da caixa de diálogo **Editor da Tar
  **Nome da Variável**  
  Depois de adicionar um mapeamento de parâmetros clicando em **Adicionar**, selecione uma variável de sistema ou definida pelo usuário na lista ou clique em \<**Nova variável...**> para adicionar uma nova variável usando a caixa de diálogo **Adicionar Variável**.  
   
- **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)  
+ **Tópicos relacionados:** [Variáveis do SSIS &#40;Integration Services&#41;](../../integration-services/integration-services-ssis-variables.md)  
   
  **Direção**  
  Selecione a direção do parâmetro. Mapeie cada variável para um parâmetro de entrada, parâmetro de saída ou um código de retorno.  
@@ -286,7 +286,7 @@ As instruções SQL e os procedimentos armazenados frequentemente usam parâmetr
 #### <a name="use-parameters-with-adonet-and-ado-connection-managers"></a>Usar parâmetros com os gerenciadores de conexões ADO.NET e ADO  
  Gerenciadores de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)] e ADO têm requisitos específicos para comandos SQL que usam parâmetros:  
   
--   Os gerenciadores de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)] requerem que o comando SQL use nomes como marcadores de parâmetro. Isso significa que as variáveis podem ser mapeadas diretamente para parâmetros. Por exemplo, a variável `@varName` é mapeada para o parâmetro denominado `@parName` e fornece um valor para o parâmetro `@parName`.  
+-   Gerenciadores de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)] requerem que o comando SQL use nomes de parâmetro como marcadores de parâmetro. Isso significa que as variáveis podem ser mapeadas diretamente para parâmetros. Por exemplo, a variável `@varName` é mapeada para o parâmetro denominado `@parName` e fornece um valor para o parâmetro `@parName`.  
   
 -   Os gerenciadores de conexões ADO requerem que o comando SQL use pontos de interrogação (?) como marcadores de parâmetro. No entanto, você pode usar qualquer nome definido pelo usuário, com exceção de valores de número inteiro, como nomes de parâmetro.  
   

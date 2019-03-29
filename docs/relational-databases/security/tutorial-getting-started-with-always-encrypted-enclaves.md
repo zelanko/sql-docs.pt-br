@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 14b086c18dab363ca1c9afe7816d802d5a5262f3
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: a24f7577a5ac01b3bc035bd68056de3a95fa156c
+ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58072310"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58417148"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Tutorial: Introdução ao Always Encrypted com enclaves seguros usando o SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -92,18 +92,19 @@ Nesta etapa, você configurará o computador do SQL Server como um host protegid
 >[!NOTE]
 >O atestado de chave host só é recomendado para uso em ambientes de teste. Você deve usar o atestado de TPM para ambientes de produção.
 
-1. Entre no computador do SQL Server como um administrador, abra um console do Windows PowerShell com privilégios elevados e instale o recurso de Host Protegido, o que também instalará o Hyper-V (se ainda não estiver instalado).
+1. Entre no computador do SQL Server como um administrador, abra um console do Windows PowerShell com privilégios elevados e recupere o nome do seu computador acessando a variável computername.
+
+   ```powershell
+   $env:computername 
+   ```
+
+2. Instale o recurso de Host protegido, que também instalará o Hyper-V (se ele não estiver instalado).
 
    ```powershell
    Enable-WindowsOptionalFeature -Online -FeatureName HostGuardian -All
    ```
 
-2. Reinicie o computador do SQL Server quando for solicitado que você conclua a instalação do Hyper-V.
-3. Recupere o valor da variável abaixo para determinar o nome do computador do SQL Server.
-
-   ```powershell
-   $env:computername 
-   ```
+3. Reinicie o computador do SQL Server quando for solicitado que você conclua a instalação do Hyper-V.
 
 4. Entre no computador do SQL Server como um administrador novamente, abra um console do Windows PowerShell com privilégios elevados, gere uma chave host exclusiva e exporte a chave pública resultante para um arquivo.
 
@@ -112,14 +113,15 @@ Nesta etapa, você configurará o computador do SQL Server como um host protegid
    Get-HgsClientHostKey -Path $HOME\Desktop\hostkey.cer
    ```
 
-5. Copie o arquivo de chave host gerado na etapa anterior para o computador do HGS. As instruções abaixo supõem que seu nome do arquivo é hostkey.cer que você o está copiando para sua área de trabalho no computador do HGS.
+5. Copie manualmente o arquivo de chave host gerado na etapa anterior para o computador do HGS. As instruções abaixo supõem que seu nome do arquivo é hostkey.cer que você o está copiando para sua área de trabalho no computador do HGS.
+
 6. No computador do HGS, abra um console do Windows PowerShell com privilégios elevados e registre a chave host do computador do SQL Server com o HGS:
 
    ```powershell
    Add-HgsAttestationHostKey -Name <your SQL Server computer name> -Path $HOME\Desktop\hostkey.cer
    ```
 
-7. No computador do SQL Server, execute o seguinte comando em um console do Windows PowerShell com privilégios elevados para indicar ao computador do SQL Server o local em que atestar. Verifique se você especificou o endereço IP ou o nome DNS do seu computador do HGS. 
+7. No computador do SQL Server, execute o seguinte comando em um console do Windows PowerShell com privilégios elevados para indicar ao computador do SQL Server o local em que atestar. Verifique se você especificou o endereço IP ou o nome DNS do seu computador do HGS nos dois locais. 
 
    ```powershell
    # use http, and not https
@@ -183,6 +185,9 @@ Nesta etapa você criará um banco de dados com alguns dados de exemplo, os quai
 3. Assegure-se de estar conectado ao banco de dados recém-criado. Crie uma nova tabela denominada Funcionários.
 
     ```sql
+    USE [ContosoHR];
+    GO
+    
     CREATE TABLE [dbo].[Employees]
     (
         [EmployeeID] [int] IDENTITY(1,1) NOT NULL,
@@ -305,6 +310,7 @@ Agora você pode executar consultas avançadas nas colunas criptografadas. Algum
     SELECT * FROM [dbo].[Employees]
     WHERE SSN LIKE @SSNPattern AND [Salary] >= @MinSalary;
     ```
+3. Tente fazer a mesma consulta novamente na janela de consulta que não tem o Always Encrypted habilitado e observe a falha que ocorre.
 
 ## <a name="next-steps"></a>Next Steps
 Ver [Configurar o Always Encrypted com enclaves seguros](encryption/configure-always-encrypted-enclaves.md) para ideias sobre outros casos de uso. Você também pode tentar fazer o seguinte:

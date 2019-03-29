@@ -1,22 +1,21 @@
 ---
 title: 'Etapa 6: Adicionar e configurar as transformações de Pesquisa | Microsoft Docs'
 ms.custom: ''
-ms.date: 01/03/2019
+ms.date: 03/19/2019
 ms.prod: sql
-ms.prod_service: integration-services
-ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 82db40d3b3fd61129823b3e745d097b47bd6973b
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.reviewer: ''
+ms.openlocfilehash: b64cddbe6c786e488c1ba9b9d289e9e48f786cf3
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143372"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58221950"
 ---
 # <a name="lesson-1-6-add-and-configure-the-lookup-transformations"></a>Lição 1-6: Adicionar e configurar as transformações de Pesquisa
 
@@ -98,7 +97,7 @@ Em ambos os casos, a transformação Pesquisa utilizará o gerenciador de conex�
   
 8.  Na página **Colunas** , faça as seguintes seleções:  
   
-    1.  No painel **Colunas de Entrada Disponíveis** , arraste **CurrencyDate** para o painel **Colunas de Pesquisa Disponíveis** e solte em **FullDateAlternateKey**.  
+    1.  No painel **Colunas de Entrada Disponíveis** , arraste **CurrencyDate** para o painel **Colunas de Pesquisa Disponíveis** e solte em **FullDateAlternateKey**.  Se você vir uma mensagem indicando tipos de dados incompatíveis, altere o tipo de dados de CurrencyDate para [DT_DBDATE].
   
     2.  Na lista **Colunas de Pesquisa Disponíveis** , marque a caixa de seleção à esquerda de **DateKey**.  
   
@@ -115,6 +114,3 @@ Em ambos os casos, a transformação Pesquisa utilizará o gerenciador de conex�
   
 ## <a name="see-also"></a>Confira também  
 [Transformação de Pesquisa](../integration-services/data-flow/transformations/lookup-transformation.md)  
-  
-  
-  

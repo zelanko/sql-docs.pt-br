@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Bulk Insert task
 - copying data [Integration Services]
 ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bd16052afcb3acf9b0d5a45f6f57ab896fcdc1c1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 42e26d257b915aad5ffa457605fbb68c1b66fab9
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531834"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290699"
 ---
 # <a name="bulk-insert-task"></a>Tarefa Inserção em Massa
   A tarefa Inserção em Massa fornece uma maneira eficiente de copiar grandes volumes de dados em uma tabela ou exibição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por exemplo, suponha que a empresa armazena sua lista de produtos em milhões de linhas em um sistema de mainframe, mas o sistema de comércio eletrônico da empresa usa o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para preencher páginas da Web. Você deve atualizar a tabela de produtos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] todas as noites com a lista principal de produtos do mainframe. Para atualizar a tabela, você salva a lista de produtos em um formato delimitado por guia e usa a tarefa de inserção em massa para copiar os dados diretamente na tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -124,7 +124,7 @@ ms.locfileid: "52531834"
  **Conexão**  
  Selecione um gerenciador de conexões do OLE DB na lista ou clique em \<**Nova conexão…**> para criar uma nova conexão.  
   
- **Tópicos relacionados:** [Gerenciador de Conexões OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)  
+ **Tópicos relacionados:** [Gerenciador de conexões OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
  **Tabela de Destino**  
  Digite o nome da tabela ou exibição de destino ou selecione uma tabela ou exibição na lista.  
@@ -144,7 +144,7 @@ ms.locfileid: "52531834"
   
  Se você acessa o arquivo de origem usando um gerenciador de conexões de Arquivo Simples, a tarefa de Inserção em Massa não usa o formato especificado no gerenciador de conexões de Arquivos Simples. Em vez disso, a tarefa de Inserção em massa usa o formato especificado em um arquivo de formato ou os valores das propriedades RowDelimiter e ColumnDelimiter da tarefa.  
   
- **Tópicos relacionados:** [Gerenciador de Conexões de Arquivo](../../integration-services/connection-manager/file-connection-manager.md), [Gerenciador de Conexões de Arquivo Simples](../../integration-services/connection-manager/flat-file-connection-manager.md) 
+ **Tópicos relacionados:** [Gerenciador de conexões de arquivos](../../integration-services/connection-manager/file-connection-manager.md), [Gerenciador de conexões de arquivos simples](../../integration-services/connection-manager/flat-file-connection-manager.md) 
   
  **Atualizar Tabelas**  
  Atualize a lista de tabelas e exibições.  

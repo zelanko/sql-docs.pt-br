@@ -11,12 +11,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b364a92732be8e12233faf51b03d92154c2a6d28
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 99edc393a8d831373fd3b7175af545f00655980c
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979492"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305904"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -67,7 +67,7 @@ EXPLAIN SQL_statement
 |\<sql>|Duplica a *SQL_statement*.|  
 |\<params>|Essa marcação não é usada no momento.|  
 |\<dsql_operations>|Resume e contém as etapas de consulta e inclui as informações de custo da consulta. Também contém todos os blocos de `<dsql_operation>`. Essa marcação contém as informações de contagem da consulta inteira:<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost* é o tempo total estimado para que a consulta seja executada, em ms.<br /><br /> *total_number_operations* é o número total de operações para a consulta. Uma operação que será colocada em paralelo e executada em vários nós é considerada uma única operação.|  
-|\<dsql_operation>|Descreve uma única operação no plano de consulta. A marcação \<dsql_operation> contém o tipo de operação como um atributo:<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* é um dos valores encontrados em [Consultando dados (SQL Server PDW)](https://msdn.microsoft.com/3f4f5643-012a-4c36-b5ec-691c4bbe668c).<br /><br /> O conteúdo no bloco `\<dsql_operation>` depende do tipo de operação.<br /><br /> Veja a tabela abaixo.|  
+|\<dsql_operation>|Descreve uma única operação no plano de consulta. A marcação \<dsql_operation> contém o tipo de operação como um atributo:<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* é um dos valores encontrados em [sys.dm_pdw_request_steps (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).<br /><br /> O conteúdo no bloco `\<dsql_operation>` depende do tipo de operação.<br /><br /> Veja a tabela abaixo.|  
   
 |Tipo de operação|Conteúdo|Exemplo|  
 |--------------------|-------------|-------------|  

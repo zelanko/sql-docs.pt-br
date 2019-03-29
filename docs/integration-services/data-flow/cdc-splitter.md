@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.cdcsplitter.f1
 ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7500d510e08aae85b89d7ad83f97a85ed51cd88a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a1111aa084ee4d5c9ee34b74dbc689195dee5ba
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619394"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273653"
 ---
 # <a name="cdc-splitter"></a>Separador de CDC
   O separador de CDC divide um único fluxo de linhas de alteração de um fluxo de dados de origem CDC em diferentes fluxos de dados para operações de Inserir, Atualizar e Excluir. O fluxo de dados é dividido com base na coluna necessária de `__$operation` e seus valores padrão em tabelas de alterações do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
@@ -41,11 +41,11 @@ ms.locfileid: "47619394"
   
  A saída de erro de componente inclui as colunas de saída seguintes:  
   
--   **Código de Erro**: definida como 1.  
+-   **Código do Erro**: defina como 1.  
   
 -   **Coluna de Erro**: a coluna de origem que causa o erro (para erros de conversão).  
   
--   **Colunas de Linha de erro**: as colunas de entrada da linha que causou o erro.  
+-   **Colunas de Linha de Erro**: as colunas de entrada da linha que causou o erro.  
   
 ## <a name="configuring-the-cdc-splitter"></a>Configurando o Separador de CDC  
  Não há nenhuma propriedade configurável para o separador de CDC.  

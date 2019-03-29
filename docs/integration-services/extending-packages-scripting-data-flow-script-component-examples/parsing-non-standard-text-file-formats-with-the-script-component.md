@@ -13,15 +13,15 @@ helpviewer_keywords:
 - transformations [Integration Services], components
 - Script component [Integration Services], examples
 ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 46b020f7ad63e38d283de993606109dadd3f6a5f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b97d6051c46ab7c898e953c78704c99b6370d57
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645844"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277805"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>Analisando formatos de arquivo de texto fora do padrão com o componente Script
   Quando seus dados de origem estiverem dispostos em um formato não padrão, talvez seja mais conveniente consolidar toda a sua lógica de análise em um único script do que reunir várias transformações [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para chegar ao mesmo resultado.  

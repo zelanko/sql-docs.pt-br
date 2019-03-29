@@ -17,15 +17,15 @@ helpviewer_keywords:
 - sequence execution options [Integration Services]
 - containers [Integration Services], precedence constraints
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 23753d15f1113b5a11a00e768c836f8860db96ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c6df83cd3a7609097a6e27bd92c59daf24458548
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733654"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58283050"
 ---
 # <a name="precedence-constraints"></a>Restrições de precedência
   As restrições de precedência vinculam executáveis, contêineres e tarefas em pacotes em um fluxo de controle e especificam condições que determinam a execução de executáveis. Um executável pode ser um contêiner Loop For, Loop Foreach ou Sequência; uma tarefa; ou um manipulador de eventos. Os manipuladores de eventos também usam restrições de precedência para vincular os seus executáveis a um fluxo de controle.  
@@ -111,10 +111,10 @@ Use a caixa de diálogo **Editor de Restrição de Precedência** para configura
   
 ### <a name="options"></a>Opções  
  **Operação de avaliação**  
- Especifica a operação de avaliação usada pela restrição de precedência. As operações são: **Constraint**, **Expression**, **Expression and Constraint**e **Expression or Constraint**.  
+ Especifica a operação de avaliação usada pela restrição de precedência. As operações são: **Constraint**, **Expression**, **Expression and Constraint** e **Expression or Constraint**.  
   
  **Value**  
- Especifique o valor de restrição: **Êxito**, **Falha**ou **Conclusão**.  
+ Especifique o valor de restrição: **Success**, **Failure** ou **Completion**.  
   
 > [!NOTE]  
 >  A linha de restrição de precedência é verde para **Sucesso**, realçado para **Falha**e azul para **Conclusão**.  
@@ -186,7 +186,7 @@ Use a caixa de diálogo **Editor de Restrição de Precedência** para configura
   
  ![Expressões em restrições de precedência](../../integration-services/control-flow/media/mw-dts-04.gif "Expressões em restrições de precedência")  
   
- Você pode adicionar ou modificar uma expressão usando o **Editor de Restrição de Precedência** no Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)], e a janela Propriedades que o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] fornece. Entretanto, a janela Propriedades não fornece verificação da sintaxe de expressão.  
+ Você pode adicionar ou modificar uma expressão usando o **Editor de Restrição de Precedência** no Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] , e a janela Propriedades que o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] fornece. Entretanto, a janela Propriedades não fornece verificação da sintaxe de expressão.  
   
  Se uma restrição de precedência incluir uma expressão, um ícone será exibido na superfície de design da guia **Fluxo de Controle** , próximo à restrição de precedência e a dica de ferramenta sobre o ícone exibirá a expressão.  
 
@@ -215,7 +215,7 @@ Use a caixa de diálogo **Editor de Restrição de Precedência** para configura
 |--------------------------|-----------------------------|-----------------------------|---------------------------------|  
 |Constraint|True|N/A|True|  
 |Constraint|Falso|N/A|Falso|  
-|Expression|N/A|True|Verdadeiro|  
+|Expression|N/A|True|True|  
 |Expression|N/A|Falso|Falso|  
 |Restrição e expressão|True|True|True|  
 |Restrição e expressão|True|Falso|Falso|  

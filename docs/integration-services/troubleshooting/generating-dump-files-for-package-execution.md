@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3b5d13647276da55fc81c7e6122b5cadf26b0b00
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2ed03eb751b0b048fee4737d312f381f655b72b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669354"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273238"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>Gerando arquivos de despejo para execução de pacote
   No [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], você pode criar arquivos de despejo de depuração que fornecem informações sobre a execução de um pacote. As informações contidas nestes arquivos podem ajudá-lo a solucionar problemas de execução de pacote.  
@@ -48,9 +48,9 @@ ms.locfileid: "47669354"
   
 |Tipo de informações|Descrição|Exemplo|  
 |-------------------------|-----------------|-------------|  
-|Ambiente|A versão do sistema operacional, os dados de uso da memória, a ID do processo e o nome da imagem do processo. As informações sobre o ambiente estão no começo do arquivo .tmp.|# Despejo Textual do SSIS realizado em 9/13/2007 1:50:34 PM<br /><br /> #PID 4120<br /><br /> #Nome da Imagem [C:\Arquivos de Programas\Microsoft SQL Server\110\DTS\Binn\DTExec.exe]<br /><br /> # OS major=6 minor=0 build=6000<br /><br /> # Em execução em 2 processadores amd64 em WOW64<br /><br /> # Memória: 58% em uso. Física: 845M/2044M  Paginação: 2404M/4095M (disp./total)|  
+|Ambiente|A versão do sistema operacional, os dados de uso da memória, a ID do processo e o nome da imagem do processo. As informações sobre o ambiente estão no começo do arquivo .tmp.|# Despejo Textual do SSIS realizado em 9/13/2007 1:50:34 PM<br /><br /> #PID 4120<br /><br /> #Nome da Imagem [C:\Arquivos de Programas\Microsoft SQL Server\110\DTS\Binn\DTExec.exe]<br /><br /> # OS major=6 minor=0 build=6000<br /><br /> # Em execução em 2 processadores amd64 em WOW64<br /><br /> # Memória: 58% em uso. Físico: Paginação 845M/2044M: 2404M/4095M (disp/total)|  
 |Caminho e versão da DLL (Dynamic-link library)|Caminho e versão de cada DLL que o sistema carrega durante o processamento de um pacote.|# Módulo carregado: c:\bb\Sql\DTS\src\bin\debug\i386\DTExec.exe (10.0.1069.5)<br /><br /> # Módulo carregado: C:\Windows\SysWOW64\ntdll.dll (6.0.6000.16386)<br /><br /> # Módulo carregado: C:\Windows\syswow64\kernel32.dll (6.0.6000.16386)|  
-|Mensagens recentes|Mensagens recentes emitidas pelo sistema. Inclui hora, tipo, descrição e ID de thread de cada mensagem.|[M:1]   Entrada de buffer de anel:              (*pRecord)<br /><br /> [D:2]      <<\<CRingBufferLogging::RingBufferLoggingRecord>>> ( \@ 0282F1A8 )<br /><br /> [E:3]         Carimbo de data/hora: 2007-09-13 13:50:32.786      (szTimeStamp)<br /><br /> [E:3]         ID de Thread: 2368           (ThreadID)<br /><br /> [E:3]         Nome do evento: OnError                        (EventName)<br /><br /> [E:3]         Nome da fonte:                (SourceName)<br /><br /> [E:3]         ID da fonte:                        (SourceID)<br /><br /> [E:3]         ID de execução:                 (ExecutionGUID)<br /><br /> [E:3]         Código de dados: -1073446879              (DataCode)<br /><br /> [E:3]         Descrição: o componente está ausente, não está registrado, não pode ser atualizado ou não tem as interfaces necessárias. As informações de contato desse componente são "".|  
+|Mensagens recentes|Mensagens recentes emitidas pelo sistema. Inclui hora, tipo, descrição e ID de thread de cada mensagem.|[M:1]   Entrada de buffer de anel:              (*pRecord)<br /><br /> [D:2]      <<\<CRingBufferLogging::RingBufferLoggingRecord>>> ( \@ 0282F1A8 )<br /><br /> [E:3]         Carimbo de data/hora: 2007-09-13 13:50:32.786      (szTimeStamp)<br /><br /> [E:3]         ID do thread: 2368           (ThreadID)<br /><br /> [E:3]         Nome do evento: OnError                        (EventName)<br /><br /> [E:3]         Nome de origem:                (SourceName)<br /><br /> [E:3]         ID de origem:                        (SourceID)<br /><br /> [E:3]         ID de execução:                 (ExecutionGUID)<br /><br /> [E:3]         Código de dados: -1073446879              (DataCode)<br /><br /> [E:3]         Descrição: O componente está faltando, não está registrado, não é atualizável ou não possui as interfaces necessárias. As informações de contato desse componente são "".|  
   
 ## <a name="related-information"></a>Informações relacionadas  
  [Caixa de diálogo Executar Pacote](../../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)  

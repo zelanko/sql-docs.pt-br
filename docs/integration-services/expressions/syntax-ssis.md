@@ -11,15 +11,15 @@ helpviewer_keywords:
 - expressions [Integration Services], syntax
 - syntax [Integration Services]
 ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: aff448a0d571ecd5d0eb3ce4ffa60e5a2c5440b5
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: b9d56775d0754676d22717a193ea6749ae70a11f
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638191"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279840"
 ---
 # <a name="syntax-ssis"></a>Sintaxe (SSIS)
   A sintaxe de expressão [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] é semelhante à sintaxe que as linguagens C e C# usam. Expressões incluem elementos como identificadores (colunas e variáveis), literais, operadores e funções. Este tópico resume os requisitos exclusivos da sintaxe do avaliador de expressão como eles se aplicam a diferentes elementos de expressão.  
@@ -27,7 +27,7 @@ ms.locfileid: "51638191"
 > [!NOTE]  
 >  Em versões anteriores do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], havia um limite de 4000 caracteres no resultado da avaliação de uma expressão quando o resultado incluía o tipo de dados DT_WSTR ou DT_STR do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Esse limite foi removido.  
   
- Para obter expressões de amostra que utilizam operadores e funções específicos, consulte o tópico sobre cada operador e função: [Operadores &#40;Expressão SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md) e [Funções &#40;Expressão SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md).  
+ Para obter expressões de amostra que utilizam operadores e funções específicos, confira o tópico sobre cada operador e função: [Operadores &#40;SSIS Expressão&#41;](../../integration-services/expressions/operators-ssis-expression.md) e [Funções &#40;SSIS Expressão&#41;](../../integration-services/expressions/functions-ssis-expression.md).  
   
  Para obter expressões de amostra que usam os vários operadores e funções como também identificadores e literais, consulte [Exemplos de expressões avançadas do Integration Services](../../integration-services/expressions/examples-of-advanced-integration-services-expressions.md).  
   

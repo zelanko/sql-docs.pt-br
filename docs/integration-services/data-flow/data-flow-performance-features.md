@@ -21,15 +21,15 @@ helpviewer_keywords:
 - sorting data [Integration Services]
 - aggregations [Integration Services]
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8b172eb0635c54bf6b9e0289ac220676eb08fd9c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b20f9d2d48452d95ff0c219f7c291a2a5b1cd887
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411983"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275498"
 ---
 # <a name="data-flow-performance-features"></a>Recursos de desempenho de fluxo de dados
   Este tópico fornece sugestões sobre como projetar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para evitar problemas comuns de desempenho. Este tópico também provê informações sobre recursos e ferramentas que podem ser usados para diagnosticar o desempenho de pacotes.  
@@ -77,7 +77,7 @@ ms.locfileid: "52411983"
  Não aumente o tamanho do buffer para o ponto em que a paginação para o disco começa a acontecer. A paginação para o disco impede mais o desempenho do que o tamanho do buffer não otimizado. Para determinar se a paginação está ocorrendo, monitore o contador de desempenho "Buffers em spool" no snap-in Desempenho do MMC (Console de Gerenciamento [!INCLUDE[msCoName](../../includes/msconame-md.md)] ).  
   
 ### <a name="configure-the-package-for-parallel-execution"></a>Configurar o pacote para execução paralela  
- A execução paralela melhora desempenho em computadores com vários processadores lógicos ou físicos. Para dar suporte à execução paralela de diferentes tarefas no pacote, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa duas propriedades: **MaxConcurrentExecutables** e **EngineThreads**.  
+ A execução paralela melhora desempenho em computadores com vários processadores lógicos ou físicos. Para oferecer suporte à execução paralela de diferentes tarefas no pacote, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa duas propriedades: **MaxConcurrentExecutables** e **EngineThreads**.  
   
 #### <a name="the-maxconcurrentexcecutables-property"></a>Propriedade MaxConcurrentExcecutables  
  A propriedade **MaxConcurrentExecutables** é uma propriedade do próprio pacote. Esta propriedade define quantas tarefas podem ser executadas simultaneamente. O valor padrão é -1, que significa o número de processadores físicos ou lógicos mais 2.  
@@ -148,7 +148,7 @@ ms.locfileid: "52411983"
   
  Normalmente, os componentes mais lentos na transformação Dimensão Alteração Lenta são as transformações Comando de OLE DB que executam UPDATEs (atualizações) em apenas uma linha por vez. Portanto, a forma mais eficaz de melhorar o desempenho da transformação Dimensão Alteração Lenta é substituir as transformações Comando de OLE DB. Essas transformações podem ser substituídas por componentes de destino que salvam todas as linhas que serão atualizadas para uma tabela de preparação. Por isso, é possível adicionar uma tarefa Executar SQL que desenvolva uma única instrução UPDATE Transact-SQL com base no conjunto em todas as linhas ao mesmo tempo.  
   
- Usuários avançados podem criar um fluxo de dados personalizado para alterar o processamento da dimensão que é otimizada lentamente em dimensões maiores. Para obter exemplos e informações a respeito desse procedimento, consulte a seção "Cenário de dimensão exclusiva" no white paper [Projeto REAL: Práticas recomendadas ETL de criação no Business Intelligence](https://go.microsoft.com/fwlink/?LinkId=96602).  
+ Usuários avançados podem criar um fluxo de dados personalizado para alterar o processamento da dimensão que é otimizada lentamente em dimensões maiores. Para ver uma discussão e um exemplo desta abordagem, confira a seção "Cenário de dimensão exclusivo", no white paper, [Projeto REAL: Práticas de design ETL de Business Intelligence](https://go.microsoft.com/fwlink/?LinkId=96602).  
   
 ### <a name="destinations"></a>Destinos  
  Para atingir um melhor desempenho com destinos, considere o uso de um destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e teste o desempenho do destino.  
@@ -171,9 +171,9 @@ ms.locfileid: "52411983"
 ## <a name="related-content"></a>Conteúdo relacionado  
  **Artigos e postagens de blog**  
   
--   Artigo técnico sobre [SQL Server 2005 Integration Services: uma estratégia para o desempenho](https://go.microsoft.com/fwlink/?LinkId=98899)no site technet.microsoft.com  
+-   Artigo técnico, [SQL Server 2005 Integration Services: A Strategy for Performance](https://go.microsoft.com/fwlink/?LinkId=98899), no technet.microsoft.com  
   
--   Artigo técnico, [Integration Services: técnicas de ajuste de desempenho](https://go.microsoft.com/fwlink/?LinkId=98900), em technet.microsoft.com  
+-   Artigo técnico, [Integration Services: Performance Tuning Techniques](https://go.microsoft.com/fwlink/?LinkId=98900), no technet.microsoft.com  
   
 -   Artigo técnico sobre como [aumentar o rendimento dos pipelines dividindo transformações síncronas em várias tarefas](https://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx), em sqlcat.com  
   

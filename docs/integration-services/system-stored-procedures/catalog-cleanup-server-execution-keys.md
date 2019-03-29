@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a79f1006-54e8-4cbf-96f8-5ed143ebb830
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ff408f0fd410e330f0ab5e3dfcdeee965a72a051
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 80177e1ba1a16d6f4cb88cf2ce972d8028540057
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545228"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277565"
 ---
 # <a name="catalogcleanupserverexecutionkeys"></a>catalog.cleanup_server_execution_keys
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ catalog.cleanup_server_execution_keys [ @cleanup_flag = ] cleanup_flag ,
   
      Você pode especificar o escopo ou o nível (execução versus projeto) e o número de chaves a serem excluídas. O tamanho de lote padrão para exclusão é 1000. Quando você define o nível para 2, as chaves e certificados serão excluídos somente se os projetos associados foram excluídos.  
   
- Para obter mais informações, veja o artigo da Base de Dados de Conhecimento a seguir. [CORREÇÃO: Problemas de desempenho ao usar o SSISDB como o repositório de implantação no SQL Server 2012](https://support.microsoft.com/kb/2972285)  
+ Para obter mais informações, veja o artigo da Base de Dados de Conhecimento a seguir. [CORREÇÃO: problemas de desempenho ao usar o SSISDB como o repositório de implantação no SQL Server 2012](https://support.microsoft.com/kb/2972285)  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir chama o procedimento armazenado cleanup_server_execution_keys.  

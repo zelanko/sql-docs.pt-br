@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: c923348d-c6c8-4807-9081-172048e6f5e3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 27a9dae6ed1a05f22c2182ea3eabebd5e489db74
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8c5cb28e7474a78c25d82b86f7ba3b81bed90d38
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832920"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276995"
 ---
 # <a name="how-to-manage-a-cdc-service-from-the-cdc-designer-console"></a>Como gerenciar um serviço CDC no CDC Designer Console
   Este procedimento descreve como usar o CDC Designer Console para gerenciar um serviço CDC.  
