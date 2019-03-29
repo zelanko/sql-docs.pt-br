@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 5189d997e0408ead627556f5dc3a2b8f0c975fa3
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 9aad778475649280e5472f80ad96973d09803375
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392714"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566375"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Como usar notebooks no estúdio de dados do Azure
 
@@ -45,7 +45,7 @@ Há várias maneiras de iniciar um novo bloco de anotações.
 
 ## <a name="supported-kernels-and-attach-to-context"></a>Suporte para kernels e anexe ao contexto
 
-A instalação do bloco de anotações no estúdio de dados do Azure dá suporte nativamente a Kernel de SQL. Se você for um desenvolvedor SQL e gostaria de usar blocos de anotações, isso seria escolhido Kernel. 
+A instalação do bloco de anotações no estúdio de dados do Azure dá suporte nativamente a Kernel de SQL. Se você for um desenvolvedor SQL e gostaria de usar blocos de anotações, então isso seria escolhido Kernel. 
 
 O Kernel de SQL também pode ser usado para se conectar a instâncias de servidor PostgreSQL. Se você for um desenvolvedor PostgreSQL e gostaria de se conectar ao servidor PostgreSQL, em seguida, baixe o [ **PostgreSQL extensão** ](postgres-extension.md) no marketplace de extensão do estúdio de dados do Azure.
 
@@ -116,7 +116,7 @@ Ao clicar fora da célula de texto, você verá o texto do markdown.
 
 Blocos de anotações aberto no Studio de dados do Azure são o padrão **confiáveis**.
 
-Se você abrir um bloco de anotações de alguma outra origem será aberto no **não confiáveis** modo e, em seguida, você pode torná-lo **confiáveis**.
+Se você abrir um bloco de anotações de alguma outra origem, ele será aberto no **não confiáveis** modo e, em seguida, você pode torná-lo **confiáveis**.
 
 ### <a name="save"></a>Salvar 
 
