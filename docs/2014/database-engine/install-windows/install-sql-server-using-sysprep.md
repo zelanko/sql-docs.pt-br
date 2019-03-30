@@ -10,12 +10,12 @@ ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8ba3763c9ccf28286c61e87f4105c3d3293351dd
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 6470cd60eb3b5491b8941685dcae00a49b4e967c
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371048"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658330"
 ---
 # <a name="install-sql-server-2014-using-sysprep"></a>Instalar o SQL Server 2014 usando SysPrep
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser acessadas por meio da Central de Instalação. A página **Avançado** da **Central de Instalação** tem duas opções: **Preparação de imagem de uma instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** e **Conclusão de imagem de uma instância autônoma preparada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. As seções [Preparar](#prepare) e [Concluir](#complete) descrevem o processo de instalação em detalhes. Para obter mais informações, consulte [Considerations for Installing SQL Server Using SysPrep](considerations-for-installing-sql-server-using-sysprep.md).  
@@ -48,9 +48,9 @@ ms.locfileid: "53371048"
   
 -   [Remover recursos de uma instância preparada do SQL Server](#RemoveFeatures)  
   
--   [Desinstalando uma instância preparada](install-sql-server-using-sysprep.md#uninstall)  
+-   [Desinstalando uma instância preparada](install-sql-server-using-sysprep.md#Uninstall)  
   
--   [Modificando ou desinstalando uma instância concluída do SQL Server.](install-sql-server-using-sysprep.md#bk_modifying_uninstalling)  
+-   [Modificando ou desinstalando uma instância concluída do SQL Server.](install-sql-server-using-sysprep.md#bk_Modifying_Uninstalling)  
   
 ##  <a name="sysprep"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep  
  A partir do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], o SysPrep dá suporte a instâncias clusterizadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em instalações de linha de comando. Para saber mais, consulte [O que é Sysprep?](https://msdn.microsoft.com/library/cc721940\(v=WS.10\).aspx).  
@@ -325,5 +325,3 @@ ms.locfileid: "53371048"
 ## <a name="see-also"></a>Consulte também  
  [O que é Windows SysPrep](https://go.microsoft.com/fwlink/?LinkId=143546)   
  [Como funciona o Windows SysPrepWork](https://go.microsoft.com/fwlink/?LinkId=143547)  
-  
-  

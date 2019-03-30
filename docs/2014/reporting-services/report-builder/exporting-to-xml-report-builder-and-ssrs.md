@@ -11,12 +11,12 @@ ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: a1e9e221816a4b720695a4031850f08fd17a71e1
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 0b32bf178677b564d31182a5d23d5abda1f024cf
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295884"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658030"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Exportando para XML (Construtor de Relatórios e SSRS)
   A extensão XML de renderização retorna um relatório no formato XML. O esquema para o XML do relatório é específico para este relatório e contém somente dados. As informações de layout não são renderizadas e a paginação não é mantida pela extensão XML de renderização. O XML gerado por esta extensão pode ser importado para um banco de dados, usado como uma mensagem de dados XML ou enviado para um aplicativo personalizado.  
@@ -54,8 +54,6 @@ ms.locfileid: "56295884"
   
 -   `Images, lines, and custom report items` são ignorados.  
   
- ![Ícone de seta usado com o link Voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  
-  
 ##  <a name="DataTypes"></a> Tipos de dados  
  Ao elemento ou atributo da caixa de texto é atribuído um tipo de dados XSD baseado nos valores que a caixa de texto exibe.  
   
@@ -70,8 +68,6 @@ ms.locfileid: "56295884"
 |`Boolean`|**xsd:boolean**|  
 |`String`, `Char`|**xsd:string**|  
 |Outro|**xsd:string**|  
-  
- ![Ícone de seta usado com o link Voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  
   
 ##  <a name="XMLSpecificRenderingRules"></a> Regras de renderização específicas de XML  
  As seções a seguir descrevem como as extensões de renderização XML interpretam os itens dentro do relatório.  
@@ -116,8 +112,6 @@ ms.locfileid: "56295884"
 ### <a name="lines"></a>Linhas  
  As linhas não são renderizadas.  
   
- ![Ícone de seta usado com o link Voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  
-  
 ### <a name="tables-matrices-and-lists"></a>Tabelas, matrizes e listas  
  Tabelas, matrizes e listas são renderizadas como um elemento. O nome do elemento é obtido da propriedade RDL DataElementName do Tablix.  
   
@@ -155,17 +149,11 @@ ms.locfileid: "56295884"
   
  Se o valor da propriedade DataElementOutput for igual à Saída, o cabeçalho de um item repetido será renderizado com um filho do elemento de detalhes.  
   
- ![Ícone de seta usado com o link Voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  
-  
 ##  <a name="CustomFormatsXSLTransformations"></a> Formatos personalizados e transformações XSL  
  Os arquivos XML produzidos pela extensão de renderização XML podem ser transformados em qualquer formato que utiliza as Transformações de XSL (XSLT). Esta funcionalidade pode ser usada para produzir dados em formatos que já não têm suporte pelas extensões de renderização existentes. Considere o uso da extensão de renderização XML e o XSLT antes de tentar criar sua própria extensão de renderização.  
   
- ![Ícone de seta usado com o link Voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  
-  
 ##  <a name="DuplicateName"></a> Nomes duplicados  
  Se houver nomes de elemento de dados duplicados dentro do mesmo escopo, o processador exibirá uma mensagem de erro.  
-  
- ![Ícone de seta usado com o link Voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  
   
 ##  <a name="XSLTTransformations"></a> Transformações XSLT  
  O processador XML pode aplicar uma transformação XSLT do lado de servidor para os dados de XML originais. Quando um XSLT é aplicado, o processador emite o conteúdo transformado ao invés dos dados XML originais. A transformação ocorre no servidor, não no cliente.  
@@ -173,8 +161,6 @@ ms.locfileid: "56295884"
  O XSLT a ser aplicado à saída é definido no arquivo de definição do relatório com a propriedade DataTransform do relatório ou com o parâmetro XSLT *DeviceInfo* . Se nenhum desses valores for definido, a transformação ocorre sempre que o processador XML é usado. Ao usar assinaturas, o XSLT deve ser definido na propriedade RDL DataTransform.  
   
  Se um arquivo XSLT for especificado, tanto pela propriedade de definição DataTransform como pela definição das informações do dispositivo, o XSLT especificado no DataTransform ocorrerá primeiro, seguido do XSLT definido pelas configurações das informações do dispositivo.  
-  
- ![Ícone de seta usado com o link Voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  
   
 ###  <a name="DeviceInfo"></a> Configurações de informações de dispositivo  
  Você pode alterar algumas configurações padrão para este processador alterando as configurações de informações de dispositivo, incluindo:  
@@ -195,13 +181,9 @@ ms.locfileid: "56295884"
   
  Para obter mais informações, consulte [XML Device Information Settings](../xml-device-information-settings.md).  
   
- ![Ícone de seta usado com o link Voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  
-  
 ## <a name="see-also"></a>Consulte também  
  [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;Construtor de Relatórios e SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Renderizando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
-  
-  

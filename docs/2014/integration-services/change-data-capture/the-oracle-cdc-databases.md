@@ -10,12 +10,12 @@ ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 716aea984073d557e45dc30c1972b2151173fd58
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 35f07d23facba97288881d7ee3c011c368d4736a
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377114"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658390"
 ---
 # <a name="the-oracle-cdc-databases"></a>Os bancos de dados Oracle CDC
   Uma Instância do Oracle CDC está associada a um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pelo mesmo nome na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino. Este banco de dados é chamado de banco de dados Oracle CDC (ou banco de dados CDC).  
@@ -73,7 +73,7 @@ ms.locfileid: "58377114"
   
 -   [cdc.xdbcdc_staged_transactions](the-oracle-cdc-databases.md#bkmk_cdcxdbcdc_staged_transactions)  
   
-###  <a name="BKMK_Change_Tables_CT"></a> Tabelas de alteração (_CT)  
+###  <a name="bkmk_change_tables_ct"></a> Tabelas de alteração (_CT)  
  As tabelas de alteração são criadas a partir das tabelas de espelho. Elas contêm os dados de alteração que são capturados do banco de dados Oracle. As tabelas são nomeadas de acordo com a convenção a seguir:  
   
  **[cdc].[\<instância-de-captura>_CT]**  
@@ -82,14 +82,14 @@ ms.locfileid: "58377114"
   
  As tabelas de captura são escritas pela Instância do Oracle CDC. Elas são lidas usando funções com valor de tabela especiais geradas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , quando a instância de captura é criada. Por exemplo, `fn_cdc_get_all_changes_HR_EMPLOYEES`. Para obter mais informações sobre essas funções CDC, consulte [Funções do Change Data Capture (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=231152).  
   
-###  <a name="BKMK_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
+###  <a name="bkmk_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
  A tabela **[cdc].[lsn_time_mapping]** é gerada pelo componente SQL Server CDC. Seu uso no caso do Oracle CDC é diferente que seu uso normal.  
   
  Para o Oracle CDC, os valores de LSN armazenados nesta tabela são baseados no valor SCN (Número de Alteração do Sistema) da Oracle associado com a alteração. Os 6 primeiros bytes do valor LSN são o número SCN original da Oracle.  
   
  Também ao usar o Oracle CDC, as colunas de hora (`tran_begin_time` e `tran_end_time`) armazenam a hora UTC da alteração em vez de a hora local como faz com o SQL Server CDC normal. Isto garante que as alterações do horário de verão não afetem os dados armazenados no lsn_time_mapping.  
   
-###  <a name="BKMK_cdcxdbcdc_config"></a> cdc.xdbcdc_config  
+###  <a name="bkmk_cdcxdbcdc_config"></a> cdc.xdbcdc_config  
  Essa tabela contém os dados de configuração para a Instância do Oracle CDC. Ela é atualizada utilizando o CDC Designer Console. Essa tabela tem somente uma linha.  
   
  A tabela a seguir descreve as colunas da tabela **cdc.xdbcdc_config** .  
@@ -98,7 +98,7 @@ ms.locfileid: "58377114"
 |----------|-----------------|  
 |version|Isto mantém o controle da versão da configuração de instância CDC. Ela é atualizada a cada hora que a tabela é atualizada e a cada hora que uma nova instância de captura é adicionada ou uma instância de captura existente é removida.|  
 |connect_string|Uma cadeia de conexão da Oracle. Um exemplo básico é:<br /><br /> `<server>:<port>/<instance>` (por exemplo, `erp.contoso.com:1521/orcl`).<br /><br /> A cadeia de conexão também pode especificar um descritor de conexão do Oracle Net, por exemplo, `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`.<br /><br /> Se estiver usando um servidor de diretório ou tnsnames, a cadeia de conexão pode ser o nome da conexão.<br /><br /> Para obter mais informações sobre cadeias de conexão de banco de dados da Oracle, veja [https://go.microsoft.com/fwlink/?LinkId=231153](https://go.microsoft.com/fwlink/?LinkId=231153) para o Oracle Instant Client que é usado pelo Serviço Oracle CDC.|  
-|use_windows_authentication|Um valor booliano que pode ser:<br /><br /> **0**: Um nome de usuário do Oracle e senha são fornecidos para autenticação (o padrão)<br /><br /> **1**: Autenticação do Windows é usada para se conectar ao banco de dados Oracle. Você só poderá usar esta opção se o banco de dados Oracle estiver configurado para funcionar com autenticação do Windows.|  
+|use_windows_authentication|Um valor booliano que pode ser:<br /><br /> **0**: um nome de usuário da Oracle e senha é fornecida para autenticação (o padrão)<br /><br /> **1**: a autenticação do Windows é usada para conectar ao banco de dados da Oracle. Você só poderá usar esta opção se o banco de dados Oracle estiver configurado para funcionar com autenticação do Windows.|  
 |username|O nome do usuário do banco de dados de mineração de logs da Oracle. Isso só será obrigatório se **use_windows_authentication = 0**.|  
 |password|A senha para o usuário do banco de dados de mineração de logs da Oracle. Isso só será obrigatório se **use_windows_authentication = 0**.|  
 |transaction_staging_timeout|O tempo, em segundos, que uma transação do Oracle não confirmada é mantida na memória antes de ser gravada na tabela **cdc.xdbcdc_staged_transactions** . O padrão é 120 segundos.|  
@@ -132,7 +132,7 @@ ms.locfileid: "58377114"
 |CDC_stop_on_breaking_schema_changes|Falso|-|-|Falso|Booliano. **True** indica parada quando a quebra de esquema é detectada.<br /><br /> **False** indica remoção da tabela de espelho e instância de captura.|  
 |source_oracle_home||-|-|Falso|Pode ser definido como um caminho específico do Oracle Home ou um Nome do Oracle Home que a instância CDC usará para conectar-se ao Oracle.|  
   
-###  <a name="BKMK_cdcxdbcdc_state"></a> cdc.xdbcdc_state  
+###  <a name="bkmk_cdcxdbcdc_state"></a> cdc.xdbcdc_state  
  Esta tabela contém informações sobre o estado persistido da Instância do Oracle CDC. O estado de captura é usado em cenários de recuperação e failover e para monitoramento de integridade.  
   
  A tabela a seguir descreve as colunas da tabela **cdc.xdbcdc_state** .  
@@ -141,8 +141,8 @@ ms.locfileid: "58377114"
 |----------|-----------------|  
 |status|O código do status atual para a Instância do Oracle CDC atual. O status descreve o estado atual para o CDC.|  
 |sub_status|Um segundo status de nível que fornece informações adicionais sobre o status atual.|  
-|active|Um valor booliano que pode ser:<br /><br /> **0**: O processo de instância Oracle CDC não está ativo.<br /><br /> **1**: O processo de instância Oracle CDC está ativo.|  
-|erro|Um valor booliano que pode ser:<br /><br /> **0**: O processo de instância Oracle CDC não está em um estado de erro.<br /><br /> **1**: A instância Oracle CDC está em um estado de erro.|  
+|active|Um valor booliano que pode ser:<br /><br /> **0**: o processo de Instância do Oracle CDC não está ativo.<br /><br /> **1**: o processo de Instância do Oracle CDC está ativo.|  
+|erro|Um valor booliano que pode ser:<br /><br /> **0**: o processo de Instância do Oracle CDC não está em um estado de erro.<br /><br /> **1**: a Instância do Oracle CDC está em um estado de erro.|  
 |status_message|Uma cadeia de caracteres que fornece uma descrição do erro ou status.|  
 |timestamp|O carimbo de data/hora com a hora (UTC) da última atualização do estado de captura.|  
 |active_capture_node|O nome do host (o host pode ser um nó em um cluster) que está executando o Serviço Oracle CDC no momento e a Instância do Oracle CDC (que está processando os logs de transação do Oracle).|  
@@ -157,7 +157,7 @@ ms.locfileid: "58377114"
 |read_changes|O número de registros de alteração lidos do log de transação do Oracle de origem.|  
 |staged_transactions|O número de transações ativas no momento que estão preparadas na tabela **cdc.xdbcdc_staged_transactions** .|  
   
-###  <a name="BKMK_cdcxdbcdc_trace"></a> cdc.xdbcdc_trace  
+###  <a name="bkmk_cdcxdbcdc_trace"></a> cdc.xdbcdc_trace  
  Essa tabela contém informações sobre a operação da instância CDC. As informações armazenadas nesta tabela incluem registros de erro, alterações de status notáveis e registros de rastreamento. As informações de erro também serão gravadas no log de eventos do Windows para garantir que as informações estejam disponíveis se a tabela **cdc.xcbcdc_trace** não estiver disponível.  
   
  A tabela a seguir descreve as colunas da tabela cdc.xdbcdc_trace.  
@@ -172,7 +172,7 @@ ms.locfileid: "58377114"
 |status_message|A mensagem de status que é usada pela tabela de estado.|  
 |data|Os dados adicionais para casos em que o erro ou registro de rastreamento contém uma carga (por exemplo, um registro de log corrompido).|  
   
-###  <a name="BKMK_cdcxdbcdc_staged_transactions"></a> cdc.xdbcdc_staged_transactions  
+###  <a name="bkmk_cdcxdbcdc_staged_transactions"></a> cdc.xdbcdc_staged_transactions  
  Esta tabela armazena registros de alteração para transações grandes ou longas até a confirmação de transação ou evento de reversão ser capturada. As ordens de Serviço Oracle CDC capturaram registros de log antes de hora de confirmação de transação e, em seguida, por ordem cronológica para cada transação. Os registros de log para a mesma transação são armazenados na memória até que a transação termine e, em seguida, seja gravada na tabela de alteração de destino ou descartada (no caso de uma reversão). Como há uma quantidade limitada de memória disponível, as transações grandes são gravadas na tabela **cdc.xdbcdc_staged_transactions** até que a transação esteja completa. As transações também são gravadas na tabela de preparação quando elas estiverem sendo executadas por muito tempo. Portanto, quando a Instância do Oracle CDC for reiniciada, as alterações antigas não precisarão ser relidas dos logs de transação do Oracle.  
   
  A tabela a seguir descreve as colunas da tabela **cdc.xdbcdc_staged_transactions** .  
@@ -187,5 +187,3 @@ ms.locfileid: "58377114"
   
 ## <a name="see-also"></a>Consulte também  
  [Change Data Capture Designer para Oracle da Attunity](change-data-capture-designer-for-oracle-by-attunity.md)  
-  
-  

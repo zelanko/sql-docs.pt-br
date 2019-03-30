@@ -1,7 +1,7 @@
 ---
 title: Como funcionam os procedimentos armazenados estendidos | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -13,14 +13,15 @@ ms.assetid: 6e946d8c-3268-4b59-8a1c-1637909cd701
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 118603088f1cad1ee612f7e4035dc69ba66bc860
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab0864e8eb320c63bd757d4c6edab384c6c821b8
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838314"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645458"
 ---
 # <a name="how-extended-stored-procedures-work"></a>Como funcionam os procedimentos armazenados estendidos
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
@@ -35,8 +36,3 @@ ms.locfileid: "47838314"
 3.  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chama o procedimento armazenado estendido solicitado (implementado como uma função dentro da DLL).  
   
 4.  O procedimento armazenado estendido passa conjuntos de resultados e parâmetros de retorno de volta ao servidor por meio da API de procedimento armazenado estendido.  
-  
-## <a name="see-also"></a>Consulte também  
- [Programação do procedimento armazenado estendido do Mecanismo de Banco de Dados](../../relational-databases/database-engine-extended-stored-procedure-programming.md)  
-  
-  

@@ -13,12 +13,12 @@ ms.assetid: 45ad2965-05ec-4fb1-a164-d8060b562ea5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e092962430895f5398560cdd8f758e24477c2388
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9226a15351e8c6fcc938543d04fc95b0237f702b
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511516"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657970"
 ---
 # <a name="directquery-mode-ssas-tabular"></a>Modo DirectQuery (SSAS tabular)
   O Analysis Services permite recuperar dados e criar relatórios de um modelo de tabela, recuperando dados e agregações diretamente de um sistema de banco de dados relacional, usando o *modo DirectQuery*. Este tópico apresenta as diferenças entre modelos de tabela padrão que só residem na memória e modelos de tabela que podem consultar uma fonte de dados relacional, e também explica como você pode criar e implantar um modelo para usar no modo DirectQuery.  
@@ -29,7 +29,7 @@ ms.locfileid: "52511516"
   
 -   [Criando modelos para uso com o modo DirectQuery](#bkmk_Design)  
   
-    -   [Fontes de dados para modelos DirectQuery](directquery-mode-ssas-tabular.md#bkmk_datasources)  
+    -   [Fontes de dados para modelos DirectQuery](directquery-mode-ssas-tabular.md#bkmk_DataSources)  
   
     -   [Validação e restrições de Design para o modo DirectQuery](#bkmk_Validation)  
   
@@ -71,7 +71,7 @@ ms.locfileid: "52511516"
   
  Quando você fizer isso, o designer de modelo configurará automaticamente o banco de dados de workspace para execução em um modo híbrido que permite continuar trabalhando com os dados armazenados em cache. O designer de modelo também o notificará sobre qualquer recurso em seu modelo que seja incompatível com o modo DirectQuery. A seguinte lista resume os requisitos principais a serem considerados:  
   
--   **Fontes de dados:** Os modelos do DirectQuery só podem usar dados de uma única fonte de dados do SQL Server. Quando o modo DirectQuery for ativado para um modelo, você não poderá usar outros tipos de dados no designer de modelo, inclusive tabelas adicionadas por operações de copiar-colar. Todas as outras opções de importação são desabilitadas. Qualquer tabela incluída em uma consulta deve fazer parte da fonte de dados do SQL Server. Consulte [Data Sources for DirectQuery Models](directquery-mode-ssas-tabular.md#bkmk_datasources)para obter mais informações.  
+-   **Fontes de dados:** Os modelos do DirectQuery só podem usar dados de uma única fonte de dados do SQL Server. Quando o modo DirectQuery for ativado para um modelo, você não poderá usar outros tipos de dados no designer de modelo, inclusive tabelas adicionadas por operações de copiar-colar. Todas as outras opções de importação são desabilitadas. Qualquer tabela incluída em uma consulta deve fazer parte da fonte de dados do SQL Server. Consulte [Data Sources for DirectQuery Models](directquery-mode-ssas-tabular.md#bkmk_DataSources)para obter mais informações.  
   
 -   **Suporte para colunas calculadas:** As colunas calculadas não têm suporte para modelos DirectQuery. Porém, você pode criar medidas e KPIs que operam em conjuntos de dados. Consulte a seção sobre [validação](#bkmk_Validation) para obter mais informações.  
   
@@ -182,5 +182,3 @@ ms.locfileid: "52511516"
  [Partições &#40;SSAS de Tabela&#41;](partitions-ssas-tabular.md)   
  [Projetos de modelo de tabela &#40;SSAS de Tabela&#41;](tabular-model-projects-ssas-tabular.md)   
  [Analisar no Excel &#40;SSAS de Tabela&#41;](analyze-in-excel-ssas-tabular.md)  
-  
-  

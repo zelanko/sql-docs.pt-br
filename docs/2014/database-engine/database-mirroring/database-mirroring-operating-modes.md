@@ -12,12 +12,12 @@ ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: debec2f4cf7e62552d82ee7a0f87a2a359f4aa34
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5975008849ec4ef8a4d50aa559bb69554b65132a
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542930"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658360"
 ---
 # <a name="database-mirroring-operating-modes"></a>Modos de operação de espelhamento de banco de dados
   Este tópico descreve os modos de operação síncronos e assíncronos de sessões de espelhamento de banco de dados.  
@@ -80,7 +80,7 @@ ms.locfileid: "52542930"
 -   Se o servidor principal for perdido, forçar o serviço para o servidor espelho exige que o servidor espelho esteja conectado à testemunha.  
   
 > [!NOTE]  
->  Para obter informações sobre os tipos de quoruns, consulte [Quorum: Como uma testemunha afeta a disponibilidade do banco de dados &#40;espelhamento de banco de dados&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+>  Para obter informações sobre os tipos de quoruns, consulte [Quorum: Como uma testemunha afeta a disponibilidade do banco de dados &#40;Espelhamento de Banco de Dados&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 ###  <a name="WhenPrincipalFails"></a> Respondendo à falha do principal  
  Quando o principal falhar, o proprietário do banco de dados tem várias escolhas, como se segue:  
@@ -146,7 +146,7 @@ ms.locfileid: "52542930"
   
  Ao contrário dos dois parceiros, a testemunha não atende ao banco de dados. A testemunha simplesmente oferece suporte a failover automático verificando se o servidor principal está funcionando. O servidor espelho apenas iniciará o failover automático se o espelho e a testemunha permanecerem conectados um ao outro depois de serem desconectados do servidor principal.  
   
- Quando uma testemunha é definida, a sessão exige *quorum* – uma relação entre pelo menos duas instâncias de servidor que permita disponibilizar o banco de dados. Para obter mais informações, consulte [testemunha de espelhamento de banco de dados](database-mirroring-witness.md) e [Quorum: Como uma testemunha afeta a disponibilidade do banco de dados &#40;espelhamento de banco de dados&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ Quando uma testemunha é definida, a sessão exige *quorum* – uma relação entre pelo menos duas instâncias de servidor que permita disponibilizar o banco de dados. Para obter mais informações, consulte [testemunha de espelhamento de banco de dados](database-mirroring-witness.md) e [Quorum: Como uma testemunha afeta a disponibilidade do banco de dados &#40;Espelhamento de Banco de Dados&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
  O failover automático exige as seguintes condições:  
   
@@ -193,7 +193,7 @@ ms.locfileid: "52542930"
   
 -   SAFETY OFF  
   
-     A desativação da segurança de transação faz a sessão operar de forma assíncrona, em modo de alto desempenho. Se a propriedade SAFETY for definida como OFF, a propriedade WITNESS também deve ser definida como OFF (o padrão). Para obter informações sobre o impacto da testemunha no modo de alto desempenho, veja [O estado da testemunha](#WitnessState), mais adiante neste tópico. Para obter mais informações sobre como executar com a segurança de transação desligada, veja [Espelhamento de banco de dados Assíncrono (Modo de alto desempenho)](#Async), anteriormente neste tópico.  
+     A desativação da segurança de transação faz a sessão operar de forma assíncrona, em modo de alto desempenho. Se a propriedade SAFETY for definida como OFF, a propriedade WITNESS também deve ser definida como OFF (o padrão). Para obter informações sobre o impacto da testemunha no modo de alto desempenho, veja [O estado da testemunha](#WitnessState), mais adiante neste tópico. Para obter mais informações sobre como executar com a segurança de transação desligada, veja [Espelhamento de banco de dados Assíncrono (Modo de alto desempenho)](#VisualElement), anteriormente neste tópico.  
   
  A configuração de segurança de transação do banco de dados é registrada em cada parceiro na exibição de catálogo **sys.database_mirroring** nas colunas **mirroring_safety_level** e **mirroring_safety_level_desc**. Para obter mais informações, veja [sys.database_mirroring &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql).  
   
@@ -208,7 +208,7 @@ ms.locfileid: "52542930"
   
 -   Quando a testemunha existe mas não está conectada a um parceiro, a testemunha está no estado UNKNOWN com relação àquele parceiro. Nesse caso, a testemunha não tem quorum com aquele parceiro e se os parceiros não estiverem conectados entre si, o banco de dados fica indisponível.  
   
- Para obter informações sobre quorum, consulte [Quorum: Como uma testemunha afeta a disponibilidade do banco de dados &#40;espelhamento de banco de dados&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ Para obter informações sobre quorum, consulte [Quorum: Como uma testemunha afeta a disponibilidade do banco de dados &#40;Espelhamento de Banco de Dados&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
  O estado de cada testemunha em uma instância do servidor é registrado na exibição de catálogo **sys.database_mirroring** nas colunas **mirroring_witness_state** e **mirroring_witness_state_desc**. Para obter mais informações, veja [sys.database_mirroring &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql).  
   
@@ -222,7 +222,7 @@ ms.locfileid: "52542930"
   
  <sup>1</sup> se a testemunha for desconectada, recomendamos que você configure WITNESS OFF até que a instância do servidor testemunha se torne disponível.  
   
- <sup>2</sup> se uma testemunha estiver presente no modo de alto desempenho, a testemunha não participará da sessão. Porém, para tornar o banco de dados disponível, pelo menos duas das instâncias do servidor devem permanecer conectadas. Portanto, recomendamos manter a propriedade WITNESS definida como OFF em sessões de modo de desempenho alto. Para obter mais informações, consulte [Quorum: Como uma testemunha afeta a disponibilidade do banco de dados &#40;espelhamento de banco de dados&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ <sup>2</sup> se uma testemunha estiver presente no modo de alto desempenho, a testemunha não participará da sessão. Porém, para tornar o banco de dados disponível, pelo menos duas das instâncias do servidor devem permanecer conectadas. Portanto, recomendamos manter a propriedade WITNESS definida como OFF em sessões de modo de desempenho alto. Para obter mais informações, confira [Quorum: Como uma testemunha afeta a disponibilidade do banco de dados &#40;Espelhamento de Banco de Dados&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 ###  <a name="ViewWitness"></a> Exibindo a configuração de segurança e estado da testemunha  
  Para exibir a configuração de segurança e o estado da testemunha para um banco de dados, use a exibição de catálogo **sys.database_mirroring** . As colunas relevantes são as seguintes:  
@@ -266,5 +266,3 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
 ## <a name="see-also"></a>Consulte também  
  [Monitorando o espelhamento de banco de dados &#40;SQL Server&#41;](monitoring-database-mirroring-sql-server.md)   
  [Testemunha de espelhamento de banco de dados](database-mirroring-witness.md)  
-  
-  

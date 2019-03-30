@@ -11,12 +11,12 @@ ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 98801ffe8ea0066bc425622a0f62e7306a217ff2
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 35ba90efe3233c34f710dda0e35b7108352df421
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305934"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658200"
 ---
 # <a name="reference-data-services-in-dqs"></a>Serviços de Dados de Referência no DQS
 
@@ -35,7 +35,7 @@ ms.locfileid: "58305934"
 -   Oferece suporte ao uso de dados de referência do Windows Azure Marketplace, bem como diretamente de provedores de dados de referência de terceiros.  
   
 ##  <a name="Marketplace"></a> Usando dados de referência do Windows Azure Marketplace  
- O DQS oferece suporte ao uso de dados de referência do Windows Azure Marketplace para permitir que os provedores de conteúdo forneçam serviços de dados de referência por meio do Marketplace. O Marketplace é um serviço da Microsoft que fornece um único canal de mercado e entrega para dados e aplicativos de alta qualidade como serviços em nuvem. Para obter mais informações sobre o Marketplace, consulte [Learn About Microsoft Azure Marketplace](https://go.microsoft.com/fwlink/?LinkId=211291) (Saiba mais sobre o Microsoft Azure Marketplace) (https://go.microsoft.com/fwlink/?LinkId=211291).  
+ O DQS oferece suporte ao uso de dados de referência do Windows Azure Marketplace para permitir que os provedores de conteúdo forneçam serviços de dados de referência por meio do Marketplace. O Marketplace é um serviço da Microsoft que fornece um único canal de mercado e entrega para dados e aplicativos de alta qualidade como serviços em nuvem. Para obter mais informações sobre o Marketplace, consulte [Saiba mais sobre o Microsoft Azure Marketplace](https://azuremarketplace.microsoft.com/about) (https://azuremarketplace.microsoft.com/about).
   
  A integração consistente entre o Marketplace e o DQS simplifica as etapas associadas à descoberta, exploração e aquisição de informações para projetos de qualidade de dados de dentro do DQS. Os dados são consumidos do DQS e ajudam os usuários do DQS na obtenção de alta qualidade de dados reunindo o DQS, o Marketplace e provedores de serviço de dados de referência de uma forma inovadora.  
   

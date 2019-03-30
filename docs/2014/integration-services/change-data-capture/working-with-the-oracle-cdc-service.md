@@ -10,12 +10,12 @@ ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 90659977d3183108b5d97fe0bc92894f5277bb85
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 2f8854dba3c1d998d572481c285ee75dc933e480
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394404"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658050"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Trabalhando com o Serviço Oracle CDC
   Esta seção descreve alguns conceitos importantes do Serviço Oracle CDC. Os conceitos incluídos nesta seção são:  
@@ -24,7 +24,7 @@ ms.locfileid: "58394404"
   
      Esta seção descreve as tabelas que estão incluídas neste banco de dados e como ele é importante para o CDC.  
   
--   [Os bancos de dados CDC](#BKMK_CDCdatabas)  
+-   [Os bancos de dados CDC](#BKMK_CDCdatabase)  
   
      Essa seção fornece uma descrição breve dos bancos de dados CDC. Estes bancos de dados são criados usando o Console de Designer do Oracle CDC. Consulte a documentação incluída com sua instalação do CDC Designer Console para obter mais informações sobre os bancos de dados CDC.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "58394404"
 |nome|O nome do banco de dados Oracle na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |config_version|O carimbo de data/hora (UTC) para a última alteração na tabela **xdbcdc_config** correspondente do banco de dados CDC ou o carimbo de data/hora (UTC) para a linha atual nesta tabela.<br /><br /> O gatilho UPDATE impõe um valor de GETUTCDATE() para este item. **config_version** deixa o serviço CDC identificar a instância CDC que precisa ser verificada para alteração de configuração ou para habilitar/desabilitar.|  
 |cdc_service_name|Este item determina qual Serviço Oracle CDC trata o banco de dados Oracle selecionado.|  
-|enabled|Indica se a instância do Oracle CDC está ativa (1) ou desabilitada (0). Quando o Serviço Oracle CDC inicia, somente as instâncias marcadas como habilitadas (1) são iniciadas.<br /><br /> **Observação**: Uma instância Oracle CDC pode ser desabilitada devido a um erro não reproduzível. Neste caso, a instância deverá ser reiniciada manualmente depois que o erro for resolvido.|  
+|enabled|Indica se a instância do Oracle CDC está ativa (1) ou desabilitada (0). Quando o Serviço Oracle CDC inicia, somente as instâncias marcadas como habilitadas (1) são iniciadas.<br /><br /> **Observação**: uma instância do Oracle CDC pode ser desabilitada devido a um erro não reproduzível. Neste caso, a instância deverá ser reiniciada manualmente depois que o erro for resolvido.|  
   
 ###  <a name="BKMK_dboxdbcdc_services"></a> dbo.xdbcdc_services  
  Esta tabela lista os serviços CDC associados com a instância de host do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esta tabela é usada pelo CDC Designer Console para determinar a lista de serviços CDC que são configurados para a instância local do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ela também é usada pelo serviço CDC para garantir que somente um serviço em execução do Windows trate um determinado nome de serviço do Oracle CDC.  
@@ -217,7 +217,7 @@ ms.locfileid: "58394404"
   
  **sql-username**, **sql-password** são as credenciais de autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que estão sendo atualizadas. Se sqlacct tiver um nome de usuário vazio e senha vazia, o Serviço Oracle CDC se conectará ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando a autenticação do Windows.  
   
- **Observação**: Qualquer parâmetro que contém espaços ou aspas duplas deve ser envolvido com aspas duplas ("). As marcas de aspas duplas inseridas devem ser dobradas (por exemplo, para usar **"A#B" D** como senha, insira **""A#B"" D"**).  
+ **Observação**: qualquer parâmetro que contém espaços ou aspas duplas deve ser envolvido com aspas duplas ("). As marcas de aspas duplas inseridas devem ser dobradas (por exemplo, para usar **"A#B" D** como senha, insira **""A#B"" D"**).  
   
 ###  <a name="BKMK_create"></a> Criar  
  Use `Create` para criar um Serviço Oracle CDC de um script. O comando deve ser executado por um administrador do computador. O item seguinte é um exemplo do comando `Create` :  
@@ -243,7 +243,7 @@ ms.locfileid: "58394404"
   
  **sql-username**, **sql-password** são o nome da conta e senha do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usados para conectar à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se esses dois parâmetros estiverem vazios, o Serviço CDC para Oracle se conectará ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando autenticação do Windows.  
   
- **Observação**: Qualquer parâmetro que contém espaços ou aspas duplas deve ser envolvido com aspas duplas ("). As marcas de aspas duplas inseridas devem ser dobradas (por exemplo, para usar **"A#B" D** como senha, insira **""A#B"" D"**).  
+ **Observação**: qualquer parâmetro que contém espaços ou aspas duplas deve ser envolvido com aspas duplas ("). As marcas de aspas duplas inseridas devem ser dobradas (por exemplo, para usar **"A#B" D** como senha, insira **""A#B"" D"**).  
   
 ###  <a name="BKMK_delete"></a> Delete (excluir)  
  Use `Delete` para excluir corretamente o Serviço Oracle CDC de um script. Este comando deve ser executado por um administrador do computador. O item seguinte é um exemplo do comando `Delete` :  
@@ -258,10 +258,8 @@ ms.locfileid: "58394404"
   
  **cdc-service-name** é o nome do serviço CDC a ser excluído.  
   
- **Observação**: Qualquer parâmetro que contém espaços ou aspas duplas deve ser envolvido com aspas duplas ("). As marcas de aspas duplas inseridas devem ser dobradas (por exemplo, para usar **"A#B" D** como senha, insira **""A#B"" D"**).  
+ **Observação**: qualquer parâmetro que contém espaços ou aspas duplas deve ser envolvido com aspas duplas ("). As marcas de aspas duplas inseridas devem ser dobradas (por exemplo, para usar **"A#B" D** como senha, insira **""A#B"" D"**).  
   
 ## <a name="see-also"></a>Consulte também  
  [Como usar a interface de linha de comando do Serviço CDC](how-to-use-the-cdc-service-command-line-interface.md)   
  [Como preparar o SQL Server para CDC](prepare-sql-server-for-cdc.md)  
-  
-  

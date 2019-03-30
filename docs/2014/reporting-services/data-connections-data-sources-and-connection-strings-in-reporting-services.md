@@ -20,12 +20,12 @@ ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: da5fb3c4c5dec240a9148772c95bb357f981db1e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3323683075b99ce2ab8cbcb456240bc24323762f
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291765"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658110"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-reporting-services"></a>Data Connections, Data Sources, and Connection Strings in Reporting Services
   Para incluir dados em um relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , primeiro você deve criar *fontes de dados* e *conjuntos de dados*. Este tópico explica o tipo de fontes de dados, como criar fontes de dados e informações importantes relacionadas às credenciais de fontes de dados. Uma fonte de dados inclui o tipo da fonte de dados, informações da conexão e o tipo de credenciais a serem usadas. Há dois tipos de fontes de dados: inserida ou compartilhada. Um fonte de dados inserida é definida no relatório e usada apenas por esse relatório. Uma fonte de dados compartilhada é definida independentemente de um relatório e pode ser usada por vários relatórios. Para obter mais informações, consulte [Conexões de dados ou fontes de dados inseridas e compartilhadas &#40;Construtor de Relatórios e SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) e [Conjuntos de dados inseridos e compartilhados &#40;Construtor de Relatórios e SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
@@ -86,7 +86,7 @@ ms.locfileid: "56291765"
   
 -   **Tipo da fonte de dados** O tipo de conexão, por exemplo, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Escolha esse valor na lista suspensa de tipos de conexão.  
   
--   **Informações de conexão** As informações de conexão incluem o nome e o local da fonte de dados e as propriedades de conexão específicas para cada provedor de dados. A *cadeia de conexão* é a representação de texto das informações de conexão. Por exemplo, se a fonte de dados for um banco de dados do SQL Server, você poderá especificar o nome do banco de dados. Para fontes de dados inseridas, também é possível gravar cadeias de conexão baseadas em expressão que são avaliadas em tempo de execução. Para obter mais informações, consulte [Cadeias de conexão baseadas em expressão](#Expressions) mais adiante neste tópico.  
+-   **Informações de conexão** As informações de conexão incluem o nome e o local da fonte de dados e as propriedades de conexão específicas para cada provedor de dados. A *cadeia de conexão* é a representação de texto das informações de conexão. Por exemplo, se a fonte de dados for um banco de dados do SQL Server, você poderá especificar o nome do banco de dados. Para fontes de dados inseridas, também é possível gravar cadeias de conexão baseadas em expressão que são avaliadas em tempo de execução. Para obter mais informações, consulte [Cadeias de conexão baseadas em expressão](#bkmk_Expressions_in_connection_strings) mais adiante neste tópico.  
   
 -   **Credenciais** Você fornece as credenciais necessárias para acessar os dados. O proprietário da fonte de dados deve ter concedido a você as permissões adequadas para acessar a fonte de dados e os dados específicos na fonte de dados. Por exemplo, para conectar-se ao banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] instalado em um servidor de rede, você deve ter permissão para conectar-se ao servidor e também permissão de leitura e gravação para acessar o banco de dados.  
   
@@ -185,5 +185,3 @@ ms.locfileid: "56291765"
  [Definir propriedades de implantação &#40;Reporting Services&#41;](tools/set-deployment-properties-reporting-services.md)   
  [Especificar informações de credenciais e de conexão para fontes de dados de relatório](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Adicionar e verificar uma Conexão de dados ou uma fonte de dados &#40;relatórios e SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
-  
-  

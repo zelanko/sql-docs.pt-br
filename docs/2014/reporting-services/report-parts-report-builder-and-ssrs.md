@@ -13,12 +13,12 @@ ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: fa0d4ebee67de0f6665196839b099c840bf310b1
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 771c43f8100dd5e9dc45172f6173e8fa32d2d74e
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286694"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657770"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Partes de relatório (Construtor de Relatórios e SSRS)
   Itens de relatório como tabelas, matrizes, gráficos e imagens podem ser publicados como *partes de relatório*. Partes de relatório são itens de relatório que foram publicados separadamente em um servidor de relatório e podem ser reutilizados em outros relatórios. As partes de relatório têm uma extensão de arquivo .rsc.  
@@ -45,9 +45,7 @@ ms.locfileid: "56286694"
 5.  A pessoa C tem permissões para substituir o gráfico no servidor e faz isso republicando-o no servidor. Isto atualiza a cópia publicada do gráfico no servidor. A pessoa C também não deseja compartilhar o conjunto de dados; portanto, ele permanece inserido no gráfico.  
   
 6.  A Pessoa B aceita o gráfico atualizado a partir do servidor. Isso substitui as alterações que a Pessoa B fez no gráfico no relatório da Pessoa B.  
-  
- ![Ícone de seta usado com o link Voltar ao início](../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  
-  
+
 ##  <a name="PublishingComponents"></a> Publicando partes de relatório  
  Quando você publicar uma parte de relatório, o Construtor de Relatórios atribui a ele uma identificação exclusiva que é distinta do nome da parte de relatório. O Construtor de Relatórios mantém aquela identificação, não importa o que mais você altere sobre a parte de relatório. A identificação vincula o item de relatório original em seu relatório à parte de relatório. Quando outros autores de relatório reutilizam a parte de relatório, a ID também vincula a parte de relatório em seu relatório à parte de relatório no servidor de relatórios.  
   
@@ -85,9 +83,7 @@ ms.locfileid: "56286694"
  Além disso, salve fontes de dados compartilhadas, conjuntos de dados compartilhados e as partes de relatório que dependem deles na mesma pasta.  
   
  Você também pode editar a descrição no painel Propriedades.  
-  
- ![Ícone de seta usado com o link Voltar ao início](../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  
-  
+
 ##  <a name="ReusingComponents"></a> Reutilizando partes de relatório  
  O modo mais fácil de criar um relatório é adicionar uma parte de relatório existente, como uma tabela ou gráfico, ao relatório a partir da Galeria de Partes de Relatório. Depois de adicioná-lo a seu relatório, você poderá modificá-lo o quanto precisar, ou aceitar as atualizações do servidor. Alterar o item de relatório em seu relatório não afetará a instância da parte de relatório publicada no site ou servidor, nem interromperá a relação entre a instância no relatório e no site ou servidor. Se você tiver permissões suficientes, poderá salvar a cópia atualizada no site ou servidor. Se outra pessoa modificar a cópia no site ou servidor, você poderá decidir manter sua cópia como está, ou poderá atualizá-la para ficar com a cópia no site ou servidor.  
   
@@ -108,9 +104,7 @@ ms.locfileid: "56286694"
  Você pode adicionar um número ilimitado de partes de relatório ao relatório. No entanto, você só poderá adicionar uma parte de relatório de cada vez. Você pode até mesmo adicionar várias instâncias de uma parte de relatório ao mesmo relatório. Todos eles terão nomes exclusivos, mas serão instâncias da mesma parte de relatório no servidor e terão a mesma identificação exclusiva.  
   
  Quando você adicionar outra parte de relatório que já usa um conjunto de dados idêntico a um conjunto de dados em seu relatório, o assistente não adicionará outra versão daquele conjunto de dados ao relatório; ele redirecionará as referências na parte de relatório para ir para o conjunto de dados existente. Para obter mais informações, consulte [Partes de relatório e conjuntos de dados no Construtor de Relatórios](report-data/report-parts-and-datasets-in-report-builder.md).  
-  
- ![Ícone de seta usado com o link Voltar ao início](../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  
-  
+
 ##  <a name="UpdatingComponents"></a> Atualizando partes de relatório com alterações a partir do servidor  
  Sempre que você abre um relatório, o Construtor de Relatórios verifica se as instâncias de servidor de partes de relatório nesse relatório foram atualizadas no servidor. Também procura alterações nos itens dependentes das partes de relatório, como o conjunto de dados e os parâmetros. Se as partes de relatório publicadas ou suas dependências foram atualizados no servidor, uma barra de informações no relatório exibe o número que foi atualizado. Você pode optar por exibir e aceitar ou rejeitar as atualizações ou descartar a barra de informações. Se você escolher exibir as atualizações, verá uma miniatura da parte de relatório que foi modificada por último e quando. Você poderá então aceitar um ou todos os itens atualizados.  
   
@@ -126,18 +120,14 @@ ms.locfileid: "56286694"
  Se você tiver alterado uma versão de uma parte de relatório em seu relatório e decidiu que deseja substituí-la pela versão que está no servidor, não poderá usar a caixa de diálogo **Atualizar** para fazer isso. Atualizar serve somente para partes de relatório que foram alteradas no servidor desde que você as baixou.  
   
  Para reverter para a versão no servidor, basta excluir a versão que você tem em seu relatório e adicioná-la novamente.  
-  
- ![Ícone de seta usado com o link Voltar ao início](../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  
-  
+
 ##  <a name="RepublishingComponents"></a> Atualizando partes de relatório que já estão no servidor  
  Você pode querer atualizar uma parte de relatório existente no servidor, ou publicá-la como uma nova parte de relatório sem substituir a existente. Quando você atualiza a parte de relatório no servidor, ela não modifica cópias da parte de relatório automaticamente em outros relatórios. Se outros autores de relatório adicionaram essa parte de relatório a um relatório, eles serão informados sobre a alteração na próxima vez que abrirem o relatório. Eles podem escolher aceitar ou não as alterações.  
   
  Se você desejar publicá-la como uma nova parte de relatório, o Construtor de Relatórios dará a ela uma nova identificação exclusiva e não mais a vinculará à parte de relatório original.  
   
  Se o conjunto de dados for inserido na parte de relatório, toda vez que você publicar a parte de relatório, o conjunto de dados será exibido na caixa de diálogo **Publicar Partes de Relatório** . Conjuntos de dados compartilhados não são exibidos na caixa de diálogo **Publicar Partes de Relatório** .  
-  
- ![Ícone de seta usado com o link Voltar ao início](../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  
-  
+
 ##  <a name="RptPartsRptDesigner"></a> Trabalhando com partes de relatório no Designer de Relatórios  
  O funcionamento de partes de relatório é um pouco diferente no Designer de Relatórios no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. No Designer de Relatórios, a publicação é unidirecional: você pode publicar uma parte de relatório no Designer de Relatórios, mas não pode reutilizar uma parte de relatório existente no Designer de Relatórios. Para obter mais informações, consulte [Partes de relatório no Designer de Relatórios &#40;SSRS&#41;](report-design/report-parts-in-report-designer-ssrs.md).  
   

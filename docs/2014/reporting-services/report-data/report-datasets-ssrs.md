@@ -11,12 +11,12 @@ ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: cb76a3dfff5ec980d94e3ecf27de6b588c98cf1a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 0f12d893aa1f37ffa3c35f5e295a991502ed9d85
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040507"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658210"
 ---
 # <a name="add-data-to-a-report-report-builder-and-ssrs"></a>Adicionar dados a um relatório (Construtor de Relatórios e SSRS)
   Para adicionar dados a um relatório, você cria conjuntos de dados. Cada conjunto de dados representa o conjunto de resultados gerado pela execução de um comando de consulta em uma fonte dados. As colunas do conjunto de resultados são a coleção de campos. As linhas do conjunto de resultados são os dados. O conjunto de resultados não contêm os dados reais. Um conjunto de dados contém as informações necessárias para recuperar um conjunto específico de dados de uma fonte de dados.  
@@ -39,7 +39,7 @@ ms.locfileid: "56040507"
   
  Você também pode adicionar conjuntos de dados a um relatório adicionando partes de relatório que incluem os conjuntos de dados dos quais elas dependem. [!INCLUDE[ssRBrptparts](../../../includes/ssrbrptparts-md.md)]  
   
- Para saber como criar um relatório que exibe dados de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados, consulte [Tutorial: Criando um relatório de tabela básica &#40;construtor de relatórios&#41;](../tutorial-creating-a-basic-table-report-report-builder.md). Para criar um relatório que inclui seus próprios dados, consulte [Tutorial: Criar um relatório de gráfico rápido Offline &#40;construtor de relatórios&#41;](../report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
+ Para saber como criar um relatório que exibe dados de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados, consulte [Tutorial: Ciar um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../tutorial-creating-a-basic-table-report-report-builder.md). Para criar um relatório que inclui seus próprios dados, consulte [Tutorial: Criar um relatório de gráfico rápido offline &#40;Construtor de Relatórios&#41;](../report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -77,9 +77,7 @@ ms.locfileid: "56040507"
 -   [Partes de relatório &#40;Construtor de Relatórios e SSRS&#41;](../report-parts-report-builder-and-ssrs.md)  
   
 -   [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
-  
- ![Ícone de seta usado com o link Voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  
-  
+
 ##  <a name="QuickStart"></a> Adicionando dados com partes de relatório  
  As partes de relatório contêm os conjuntos de dados dos quais elas dependem. Esses conjuntos de dados são criados em fontes de dados compartilhadas que estão disponíveis no servidor de relatório. No Construtor de Relatórios, quando você adiciona uma parte de relatório ao relatório, os conjuntos de dados dependentes são adicionados ao relatório, como se você os tivesse adicionado manualmente. Por exemplo, um gráfico predefinido contém um conjunto de dados. Para ver os dados, visualize o relatório.  
   
@@ -89,9 +87,7 @@ ms.locfileid: "56040507"
  Partes de relatório, fontes de dados compartilhadas e conjuntos de dados compartilhados são definidos antecipadamente e salvos em um servidor de relatório. Para acessá-los, você precisa abrir o Construtor de Relatórios no modo de servidor conectando-se ao servidor de relatório. Você pode usá-los para criar suas próprias versões se tiver permissões de gravação no servidor de relatório.  
   
 -   Para obter mais informações, consulte [Partes de relatório &#40;Construtor de Relatórios e SSRS&#41;](../report-parts-report-builder-and-ssrs.md) e [Partes de relatório no Designer de Relatórios &#40;SSRS&#41;](../report-design/report-parts-in-report-designer-ssrs.md).  
-  
- ![Ícone de seta usado com o link Voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  
-  
+
 ##  <a name="Queries"></a> Consultas e designers de consulta  
  Para especificar quais dados deseja em uma fonte de dados, crie um comando de consulta. Cada tipo de fonte de dados fornece um *designer de consulta* relacionado para ajudar você a criar a consulta. O designer de consulta pode ser gráfico ou baseado em texto. Em um designer de consulta gráfica, você exibe metadados que representam os dados na fonte de dados externa e criam interativamente uma consulta arrastando campos ou entidades para a superfície de design de consulta. Em um designer de consulta baseado em texto, você escreve ou importa consultas na sintaxe de consulta que tem suporte da fonte de dados externa.  
   
@@ -100,9 +96,7 @@ ms.locfileid: "56040507"
  Para executar uma consulta, é necessário ter credenciais de tempo de design. Para obter mais informações, consulte [especificar as credenciais no construtor de relatórios](../specify-credentials-in-report-builder.md) e [conexões de dados, fontes de dados e cadeias de caracteres de Conexão no Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
  A comunicação entre uma extensão de dados e a fonte de dados externa é gerenciada pelos provedores de dados. O suporte para sintaxe do comando de consulta, parâmetros de consulta e tipos de dados para obter valores no conjunto de resultados é determinado por cada provedor de dados. Para obter mais informações, consulte o tópico para o tipo específico de extensão de dados e [Designers de Consulta &#40;Construtor de Relatórios&#41;](../query-designers-report-builder.md).  
-  
- ![Ícone de seta usado com o link Voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  
-  
+
 ##  <a name="HowTo"></a> Tópicos de instruções  
  [Adicionar e verificar uma Conexão de dados ou uma fonte de dados &#40;relatórios e SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
@@ -121,9 +115,7 @@ ms.locfileid: "56040507"
  [Associar um parâmetro de consulta a um parâmetro de relatório &#40;Construtor de Relatórios e SSRS&#41;](associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md)  
   
  [Definir parâmetros no Designer de Consulta MDX do Analysis Services &#40;Construtor de Relatórios e SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)  
-  
- ![Ícone de seta usado com o link Voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  
-  
+
 ##  <a name="Section"></a> Nesta seção  
  [Partes de relatório e conjuntos de dados no Construtor de Relatórios](report-parts-and-datasets-in-report-builder.md)  
   
@@ -134,11 +126,7 @@ ms.locfileid: "56040507"
  [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
  [Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
-  
- ![Ícone de seta usado com o link Voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  
-  
+
 ## <a name="see-also"></a>Consulte também  
  [Modo de exibição de Design de relatório &#40;Construtor de Relatórios&#41;](../report-builder/report-design-view-report-builder.md)   
  [Conceitos de criação de relatórios &#40;Construtor de Relatórios e SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
-  
-  

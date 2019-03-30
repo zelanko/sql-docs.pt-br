@@ -3,17 +3,17 @@ title: Pontuação usando o procedimento sp_rxPredict armazenado - serviços do 
 description: Gere previsões usando sp_rxPredict, pontuação de entradas de dados em relação a um modelo previamente treinado escritos em R no SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a7e55ac47fdb28a18c8a41b3535e67fc8886cfea
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 22f6c48aec0c9434b17ceda0a2b729f6e63bf136
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509623"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645468"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>Pontuação com sp_rxPredict no aprendizado de máquina do SQL Server em tempo real
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,9 +32,6 @@ Pontuação em tempo real é um processo de várias etapa:
 2. Você carrega o modelo previamente treinado no formato binário.
 3. Você fornecer novos dados de entrada a serem pontuados, linhas de tabela ou únicas, como entrada para o modelo.
 4. Para gerar pontuações, chame o [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) procedimento armazenado.
-
-> [!TIP]
-> Para obter um exemplo de pontuação em tempo real em ação, consulte [End final empréstimo como Incobrável previsão criados usando Clusters do Azure HDInsight Spark e o serviço de R do SQL Server 2016](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/)
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -201,7 +198,5 @@ EXEC sp_rxPredict
 Para desabilitar a funcionalidade de pontuação em tempo real, abra um prompt de comando com privilégios elevados e execute o seguinte comando: `RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
 
 ## <a name="next-steps"></a>Próximas etapas
-
-Para obter um exemplo de como rxPredict pode ser usado para pontuação, consulte [final final empréstimo como Incobrável previsão criados usando Clusters do Azure HDInsight Spark e o serviço do SQL Server 2016 R](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/).
 
 Para obter mais informações sobre a pontuação no SQL Server, consulte [como gerar previsões no aprendizado de máquina do SQL Server](r/how-to-do-realtime-scoring.md).

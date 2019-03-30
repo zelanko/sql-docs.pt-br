@@ -2,17 +2,17 @@
 title: Aprendizado de máquina do ciclo de vida e o processo de equipe - serviços de aprendizado de máquina do SQL Server
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 4d19c103f2e90220bc7d80a1da65eb0352252ad6
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: c06155a433718a068bc914b071f0f738cd236613
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511283"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645428"
 ---
 # <a name="machine-learning-lifecycle-and-personas"></a>Personalidades e ciclo de vida de aprendizado de máquina
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -21,7 +21,7 @@ Projetos de aprendizado de máquina podem ser complexos, pois exigem as habilida
 
 > [!TIP]
 > 
-> Antes de você começar a usar em um projeto de aprendizado de máquina, é recomendável que você examine as ferramentas e práticas recomendadas fornecidas pelo [processo de ciência de dados de equipe do Microsoft](https://blogs.technet.microsoft.com/machinelearning/2017/10/09/the-microsoft-team-data-science-process-tdsp-recent-updates/), ou TDSP. Esse processo foi criado por consultores da Microsoft para consolidar as práticas recomendadas sobre planejamento e iterando em projetos de aprendizado de máquina de aprendizado de máquina. O TDSP tem suas raízes em padrões do setor como CRISP-DM, mas incorpora práticas recentes, como o DevOps e visualização.
+> Antes de você começar a usar em um projeto de aprendizado de máquina, é recomendável que você examine as ferramentas e práticas recomendadas fornecidas pelo [processo de ciência de dados de equipe do Microsoft](https://docs.microsoft.com/azure/machine-learning/team-data-science-process/overview), ou TDSP. Esse processo foi criado por consultores da Microsoft para consolidar as práticas recomendadas sobre planejamento e iterando em projetos de aprendizado de máquina de aprendizado de máquina. O TDSP tem suas raízes em padrões do setor como CRISP-DM, mas incorpora práticas recentes, como o DevOps e visualização.
 
 ## <a name="machine-learning-life-cycle"></a>Ciclo de vida de aprendizado de máquina
 

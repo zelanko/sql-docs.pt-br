@@ -19,14 +19,14 @@ ms.assetid: 5bab5914-b2ae-4795-8cf5-83e42d64bef2
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 62ef99767be3f228702a06d89ba52f5c3a9821fb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: acb05f10772ebdf77355b78e1f4ce998cc6c8056
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664815"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657010"
 ---
-# <a name="migration-wizard-accesstosql"></a>Assistente de migração (AccessToSQL)
+# <a name="migration-wizard-accesstosql"></a>Migration Wizard (AccessToSQL)
 O Migration Wizard orienta a migração de um ou mais bancos de dados do Access para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do SQL Azure. Usando o assistente, você cria um projeto, adicionar bancos de dados para o projeto, selecione objetos para migrar e se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do SQL Azure. Você também irá converter, carregar e migrar dados e esquemas de acesso. Opcionalmente, você pode vincular a tabelas do Access para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabelas ou do SQL Azure.  
   
 A maioria das páginas do Assistente de migração contém as mesmas opções de caixas de diálogo do SSMA existentes. Portanto, as páginas do assistente são descritas aqui e, em seguida, os links são fornecidos para que você pode aprender mais sobre as opções individuais. Se uma página contém opções exclusivas, eles estão documentados aqui.  
@@ -44,7 +44,7 @@ Por padrão, o SSMA iniciará o Assistente de migração quando você inicia o S
 A página Criar novo projeto é onde você pode inserir o arquivo nome, local e migração projeto tipo de projeto (a versão de destino usado para a migração do SQL Server). Para obter mais informações, consulte [novo projeto (SSMA)](https://msdn.microsoft.com/ca294f6d-eeb5-42ca-9306-156281a3f0f3)  
   
 ## <a name="add-access-databases-page"></a>Adicionar página de acesso a bancos de dados  
-A página Adicionar bancos de dados do Access é onde você adicionar um ou mais bancos de dados do Access para o projeto. Você pode adicionar bancos de dados individuais, clicando **adicionar bancos de dados**e, em seguida, selecionando os bancos de dados de **aberto** janela. Ou, você pode encontrar os bancos de dados usando o **localizar bancos de dados** botão. Para obter mais informações, consulte os tópicos a seguir:  
+A página Adicionar bancos de dados do Access é onde você adicionar um ou mais bancos de dados do Access para o projeto. Você pode adicionar bancos de dados individuais, clicando **adicionar bancos de dados**e, em seguida, selecionando os bancos de dados de **aberto** janela. Ou, você pode encontrar os bancos de dados usando o **localizar bancos de dados** botão. Para mais informações, consulte os seguintes tópicos:  
   
 -   [Adicionando e removendo arquivos de banco de dados do Access](adding-and-removing-access-database-files-accesstosql.md)  
   
@@ -76,7 +76,7 @@ Se você tiver muitos objetos, talvez você queira usar o **seleção de objeto 
 Para obter mais informações sobre filtragem, consulte a seção de opções de [objeto seleção avançada (SSMA comuns)](https://msdn.microsoft.com/f53b0c79-5473-410a-a0dc-d8f544f7a63c).  
   
 ## <a name="connect-to-sql-server-page"></a>Conectar-se à página do SQL Server  
-Em conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] página, você especificar as propriedades de conexão e, em seguida, conecte-se ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [conectar-se ao SQL Server](https://msdn.microsoft.com/00e0432e-ec26-4ab4-af64-c9ca760e3541)  
+Em conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] página, você especificar as propriedades de conexão e, em seguida, conecte-se ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [conectar-se ao SQL Server](connect-to-sql-server-accesstosql.md).
   
 > [!IMPORTANT]  
 > Assim que a conexão for bem-sucedida, você encontrará **vincular tabelas** página onde você tem a opção de vincular as tabelas. Clique em **próxima** e inicia a migração.  

@@ -10,19 +10,19 @@ ms.assetid: a8bad2f1-8fb0-4d14-a978-11a5720e62d6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 52a1bcb820d444e33ab034a09ee486592540e50c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9e1d315ca23b379238a19baf09ac2591d0085fad
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020137"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658080"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>Abrir projetos do Integration Services no cliente Data Quality
   O [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] permite a você executar um projeto de limpeza no modo de lote. No entanto, às vezes talvez você queira examinar os resultados da limpeza em um pacote do Integration Services semelhante ao modo como é possível examinar os resultados da limpeza na guia **Gerenciar e Exibir Resultados** de uma atividade de limpeza em um projeto de qualidade de dados no DQS. O DQS permite que você abra projetos do Integration Services no [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] da mesma forma que faria com qualquer outro projeto de qualidade de dados na tela **Abrir projeto** e proporciona uma experiência de limpeza interativa dos resultados da consulta em um projeto do Integration Services.  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="LimitationsRestrictions"></a> Limitações e Restrições  
+###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
   
 -   Somente projetos concluídos do Integration Services estão disponíveis na tela **Abrir projeto** no [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Os projetos que falharam ou que estão em execução não estão disponíveis na tela **Abrir projeto** .  
   
@@ -37,8 +37,6 @@ ms.locfileid: "56020137"
   
 ####  <a name="Permissions"></a> Permissões  
  Você deve ter a função dqs_kb_editor ou dqs_kb_operator no banco de dados DQS_MAIN para abrir um projeto do Integration Services.  
-  
- ![Ícone de seta usado com o link voltar ao início](../2014-toc/media/uparrow16x16.gif "ícone de seta usado com o link voltar ao início") [este tópico no](#Intro)  
   
 ##  <a name="Open"></a> Abrir um projeto do Integration Services  
   
@@ -60,10 +58,6 @@ ms.locfileid: "56020137"
   
 6.  Depois de exportar os dados, clique em **Concluir** para fechar o projeto do Integration Services.  
   
- ![Ícone de seta usado com o link voltar ao início](../2014-toc/media/uparrow16x16.gif "ícone de seta usado com o link voltar ao início") [este tópico no](#Intro)  
-  
 ## <a name="see-also"></a>Consulte também  
  [Transformação de Limpeza do DQS](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)   
  [Projetos do Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-projects-and-solutions.md)  
-  
-  

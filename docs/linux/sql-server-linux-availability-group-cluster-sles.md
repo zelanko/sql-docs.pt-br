@@ -11,12 +11,12 @@ ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: cab40f66976677fee78e79de2f2996653aee9446
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: 72ca07a14495261d61601c4acd503790697ce6a4
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160624"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658090"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configurar o Cluster SLES para o grupo de disponibilidade do SQL Server
 
@@ -221,7 +221,7 @@ Isolamento de nível de recurso principalmente garante que não há nenhum dano 
 
 Isolamento de nível de nó garante que um nó não é executado todos os recursos. Isso é feito redefinindo o nó e a implementação do Pacemaker dele é chamada de STONITH (o que significa "acertar o outro nó no cabeçalho"). Pacemaker dá suporte a uma grande variedade de dispositivos, como uma fonte de alimentação ininterrupta fornecimento ou gerenciamento de placas de interface para servidores de isolamento.
 
-Para obter mais informações, consulte [Clusters do Pacemaker do zero](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html), [isolamento e Stonith](https://clusterlabs.org/doc/crm_fencing.html) e [documentação HA do SUSE: Isolamento e STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html).
+Para obter mais informações, consulte [Clusters do Pacemaker do zero](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/), [isolamento e Stonith](https://clusterlabs.org/doc/crm_fencing.html) e [documentação HA do SUSE: Isolamento e STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html).
 
 No momento da inicialização de cluster, o STONITH será desabilitado se nenhuma configuração é detectada. Ele pode ser habilitado mais tarde executando o seguinte comando:
 

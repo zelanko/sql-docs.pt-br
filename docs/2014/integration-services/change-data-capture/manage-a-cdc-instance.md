@@ -12,12 +12,12 @@ ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3215f28615511f3c35fcc6cc3ea80209c7c44d41
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 7f29463784436918834fe94c3ac5e4a8c5420703
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378814"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657660"
 ---
 # <a name="manage-a-cdc-instance"></a>Gerenciar uma instância CDC
   Você pode usar o CDC Designer Console para exibir informações sobre as instâncias que você cria e gerenciar a operação das instâncias.  
@@ -65,42 +65,42 @@ ms.locfileid: "58378814"
  **Status**  
  Esta guia fornece informações e estatísticas sobre o status atual da instância CDC. Ele contém as informações a seguir.  
   
--   **Status**: Um ícone que indica o status atual para a instância CDC. A seguir veja a descrição dos status.  
+-   **Status**: um ícone que indica o status atual para a instância CDC. A seguir veja a descrição dos status.  
   
     |||  
     |-|-|  
-    |![Error](../media/error.gif "Error")|**Error**. A Instância Oracle CDC não está sendo executada devido a um erro não reproduzível. Os seguintes substatus estão disponíveis:<br /><br /> **Configurado incorretamente**: Ocorreu um erro de configuração que exige intervenção manual.<br /><br /> **Senha necessária**: Nenhuma senha foi definida para a instância Oracle CDC ou a senha não é válida.<br /><br /> **Unexpected**. Todos os outros erros não recuperáveis.|  
-    |![OK](../media/okay.gif "OK")|**Em execução**: A instância CDC está em execução e está processando registros de alteração. Os seguintes substatus estão disponíveis.<br /><br /> **Idle**: Todos os registros de alteração foram processados e armazenados nas tabelas de alteração de destino. Não há mais nenhuma transação ativa.<br /><br /> **Processamento**: Há registros de alteração sendo processados que ainda não estão gravados nas tabelas de alteração.|  
+    |![Error](../media/error.gif "Error")|**Error**. A Instância Oracle CDC não está sendo executada devido a um erro não reproduzível. Os seguintes substatus estão disponíveis:<br /><br /> **Misconfigured**: um erro de configuração ocorrido que exige intervenção manual.<br /><br /> **Password Required**: nenhuma senha foi definida para a Instância Oracle CDC ou a senha não é válida.<br /><br /> **Unexpected**. Todos os outros erros não recuperáveis.|  
+    |![OK](../media/okay.gif "OK")|**Em execução**: A Instância CDC está sendo executada e está processando registros de alteração. Os seguintes substatus estão disponíveis.<br /><br /> **Idle**: todos os registros de alteração foram processados e armazenados nas tabelas de alteração de destino. Não há mais nenhuma transação ativa.<br /><br /> **Processing**: há registros de alteração sendo processados que ainda não estão gravados nas tabelas de alteração.|  
     |![Parar](../media/stop.gif "Parar")|**Interrompido**: A instância CDC não está em execução. O status Stopped indica que a instância CDC foi parada de uma maneira normal.|  
-    |![Paused](../media/paused.gif "Paused")|**Em pausa**: A instância CDC está em execução, mas o processamento está suspenso devido a um erro reproduzível. Os seguintes substatus estão disponíveis:<br /><br /> **Desconectado**: Não é possível estabelecer a conexão à fonte de dados Oracle. O processamento será retomado quando a conexão for restaurada.<br /><br /> **Armazenamento**: O armazenamento está cheio. O processamento será retomado quando um armazenamento adicional estiver disponível.<br /><br /> **Agente de log**: O agente está conectado ao Oracle, mas não é possível ler os logs de transação do Oracle devido a um problema temporário, por exemplo, um log de transação necessário não está disponível.|  
+    |![Paused](../media/paused.gif "Paused")|**Paused**: a instância de CDC está sendo executada, mas o processamento está suspenso devido a um erro reproduzível. Os seguintes substatus estão disponíveis:<br /><br /> **Disconnected**: a conexão ao banco de dados Oracle de origem não pode ser estabelecida. O processamento será retomado quando a conexão for restaurada.<br /><br /> **Storage**: o armazenamento está completo. O processamento será retomado quando um armazenamento adicional estiver disponível.<br /><br /> **Logger**: o agente está conectado ao Oracle, mas não pode ler os logs de transação do Oracle devido a um problema temporário, por exemplo, um log de transação necessário não está disponível.|  
   
--   **Status detalhado**: O substatus atual.  
+-   **Detailed Status**: o substatus atual.  
   
--   **Mensagem de status**: Mais informações sobre o status atual.  
+-   **Status Message**: mais informações sobre o status atual.  
   
--   **Carimbo de hora**: A hora de UTC para quando o estado CDC foi lido pela última vez da tabela de estado.  
+-   **Timestamp**: a hora UTC para quando o estado CDC foi lido pela última vez na tabela de estado.  
   
--   **Atualmente, o processamento**: Você monitorar as informações a seguir nesta seção.  
+-   **Currently Processing**: você monitora as informações a seguir nesta seção.  
   
-    -   **Carimbo de hora do última transação**: A hora local da última transação gravada nas tabelas de alteração.  
+    -   **Last transaction timestamp**: a hora local da última transação que foi gravada nas tabelas de alteração.  
   
-    -   **Última alteração timestamp**: A hora local da alteração mais recente Vista pela instância Oracle CDC nos logs de transação de banco de dados Oracle de origem. Isto fornece informações sobre a latência atual da instância CDC ao ler o log de transação do Oracle.  
+    -   **Last change timestamp**: a hora local da alteração mais recente vista pela Instância Oracle CDC nos logs de transação do banco de dados Oracle de origem. Isto fornece informações sobre a latência atual da instância CDC ao ler o log de transação do Oracle.  
   
-    -   **CN de cabeçalho do log de transação**: O número mais recente alteração (CN) que foi lido do log de transação do Oracle.  
+    -   **Transaction log head CN**: o número de alteração mais recente (CN) foi lido do log de transação do Oracle.  
   
-    -   **Parte final do log de transação CN**: O número de alteração para recuperar ou reiniciar a instância CDC. A instância Oracle CDC vai ser reposicionada neste local no caso de uma reinicialização ou qualquer outro tipo de falha (inclusive failover de cluster).  
+    -   **Transaction log tail CN**: o número de alteração para recuperar ou reiniciar a instância CDC. A instância Oracle CDC vai ser reposicionada neste local no caso de uma reinicialização ou qualquer outro tipo de falha (inclusive failover de cluster).  
   
-    -   **CN atual**: O último número de alteração (SCN) visto do banco de dados do Oracle de origem (não o log de transações).  
+    -   **CN Atual**: o último número de alteração (SCN) visto no banco de dados Oracle de origem (não o log de transação).  
   
-    -   **Transações ativas**: O número atual de transações Oracle de origem que estão sendo processadas pela instância Oracle CDC e não foram decididas (confirmar/reverter).  
+    -   **Active transactions**: o número atual de transações do Oracle de origem que estão sendo processadas pela Instância Oracle CDC e que ainda não foram decididas (confirmar/reverter).  
   
-    -   **Transações preparadas**: As número atual fonte Oracle de transações preparadas para o [xdbcdc_staged_transactions](the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_staged_transactions) tabela.  
+    -   **Staged transactions**: o número atual de transações Oracle de origem preparadas para a tabela [cdc.xdbcdc_staged_transactions](the-oracle-cdc-databases.md#bkmk_cdcxdbcdc_staged_transactions).  
   
--   **Contadores de**: Você monitorar as informações a seguir nesta seção.  
+-   **Counters**: você monitora as informações a seguir nesta seção.  
   
-    -   **Transações concluídas**: O número de transações concluídas desde que a instância CDC foi reiniciada pela última vez. Isto não inclui transações que não contêm tabelas de interesse.  
+    -   **Completed transactions**: o número de transações concluídas desde que a instância CDC foi reiniciada pela última vez. Isto não inclui transações que não contêm tabelas de interesse.  
   
-    -   **Escrito alterações**: O número de alterações gravadas para o SQL Server nas tabelas de alteração.  
+    -   **Written changes**: o número de alterações gravadas nas tabelas de alteração do SQL Server.  
   
  **Oracle**  
  Exibe informações sobre a instância CDC e sua conexão com o banco de dados Oracle. Esta guia é somente leitura. Para editar essas propriedades, clique com o botão direito do mouse na instância do painel esquerdo e selecione **Propriedades** ou clique em **Propriedades** no painel direito para abrir a caixa de diálogo Propriedades de \<instância>.  
@@ -122,5 +122,3 @@ ms.locfileid: "58378814"
  [Como exibir as propriedades de instância CDC](how-to-view-the-cdc-instance-properties.md)   
  [Como editar as propriedades de instância CDC](how-to-edit-the-cdc-instance-properties.md)   
  [Usar o assistente para nova instância](use-the-new-instance-wizard.md)  
-  
-  
