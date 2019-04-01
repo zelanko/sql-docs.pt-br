@@ -2,7 +2,7 @@
 title: Compatibilidade de UTF-8 com OLE DB Driver para SQL Server| Microsoft Docs
 description: Suporte ao UTF-8 no OLE DB Driver para SQL Server
 ms.custom: ''
-ms.date: 02/11/2019
+ms.date: 03/27/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: v-kaywon
 ms.author: v-kaywon
-ms.openlocfilehash: f410ddf4e3843936da6f93f488f379feea863e59
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+ms.openlocfilehash: b7f138438d522c9da1b7ef74acbaf963e17d6144
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744782"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492598"
 ---
 # <a name="utf-8-support-in-ole-db-driver-for-sql-server"></a>Suporte ao UTF-8 no OLE DB Driver para SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "56744782"
 
 Microsoft Driver do OLE DB para SQL Server (versão 18.2.1) adiciona suporte para a codificação UTF-8 do servidor. Para obter informações sobre o suporte do SQL Server UTF-8, consulte:
 - [Suporte a ordenações e a Unicode](../../../relational-databases/collations/collation-and-unicode-support.md)
-- [Suporte a UTF-8 (CTP 2.2)](../../../sql-server/what-s-new-in-sql-server-ver15.md#utf-8-support-ctp-22)
+- [Suporte para UTF-8](../../../sql-server/what-s-new-in-sql-server-ver15.md#utf-8-support-ctp-23)
 
 ## <a name="data-insertion-into-a-utf-8-encoded-char-or-varchar-column"></a>Inserção de dados em uma UTF-8 codificados coluna CHAR ou VARCHAR
 Ao criar um buffer de parâmetro de entrada para inserção, o buffer é descrito usando uma matriz de [estruturas DBBINDING](https://go.microsoft.com/fwlink/?linkid=2071182). Cada estrutura DBBINDING associa um único parâmetro ao buffer do consumidor e contém informações como o comprimento e tipo do valor de dados. Para um buffer de parâmetro de entrada do tipo CHAR, o *wType* de DBBINDING estrutura deve ser definida como DBTYPE_STR. Para um buffer de parâmetro de entrada do tipo WCHAR, o *wType* de DBBINDING estrutura deve ser definida como DBTYPE_WSTR.

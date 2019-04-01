@@ -2,7 +2,7 @@
 title: Baixe e instale o sqlpackage | Microsoft Docs
 description: Baixe e instale o sqlpackage para Windows, macOS ou Linux
 ms.custom: tools|sos
-ms.date: 06/18/2018
+ms.date: 06/19/2018
 ms.prod: sql
 ms.reviewer: alayu; sstein
 ms.prod_service: sql-tools
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 7620050a28029010a4e0f0fd2e125a17a84721a0
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+ms.openlocfilehash: 5a45803f4ce2a91962a5bba824a468ca436f7839
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55737137"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527208"
 ---
 # <a name="download-and-install-sqlpackage"></a>Baixe e instale o sqlpackage
 
@@ -25,11 +25,11 @@ Baixe e instale a versão mais recente do .NET Framework e o macOS e Linux visua
 
 |Plataforma|Download|Data de liberação|Versão|Compilação
 |:---|:---|:---|:---|:---|
-|Windows|[Instalador MSI](https://go.microsoft.com/fwlink/?linkid=2069405)|1 de fevereiro de 2019|18.1|15.0.4316.1|
-|macOS .NET Core (visualização)|[arquivo zip](https://go.microsoft.com/fwlink/?linkid=2069126)|1 de fevereiro de 2019 | 18.1 |15.0.4316.1|
-|.NET Core (visualização) do Linux|[arquivo zip](https://go.microsoft.com/fwlink/?linkid=2069122)|1 de fevereiro de 2019 | 18.1 |15.0.4316.1|
+|Windows|[Instalador MSI](https://go.microsoft.com/fwlink/?linkid=2069405)|1º de fevereiro de 2019|18.1|15.0.4316.1|
+|macOS .NET Core (visualização)|[arquivo zip](https://go.microsoft.com/fwlink/?linkid=2069126)|1º de fevereiro de 2019 | 18.1 |15.0.4316.1|
+|.NET Core (visualização) do Linux|[arquivo zip](https://go.microsoft.com/fwlink/?linkid=2069122)|1º de fevereiro de 2019 | 18.1 |15.0.4316.1|
 
-Para obter detalhes sobre a versão mais recente, consulte o [notas de versão](sqlpackage-release-notes.md).
+Para obter detalhes sobre a versão mais recente, consulte o [notas de versão](release-notes-sqlpackage.md).
 
 ## <a name="get-sqlpackage-for-windows"></a>Obter sqlpackage para Windows
 

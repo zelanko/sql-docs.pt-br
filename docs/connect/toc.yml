@@ -2378,7 +2378,7 @@ items:
       href: ../connect/jdbc/release-notes-for-the-jdbc-driver.md
     - name: Requisitos de sistema para o JDBC Driver
       href: ../connect/jdbc/system-requirements-for-the-jdbc-driver.md
-    - name: Usando o JDBC Driver
+    - name: Usando JDBC Driver
       href: ../connect/jdbc/using-the-jdbc-driver.md
     - name: Entendendo suporte ao Java EE
       href: ../connect/jdbc/understanding-java-ee-support.md
@@ -2523,6 +2523,8 @@ items:
         href: ../connect/jdbc/using-parameter-metadata.md
       - name: Usando tipos de dados básicos
         href: ../connect/jdbc/using-basic-data-types.md
+      - name: Usando o Tipo de dados SQL_variant
+        href: ../connect/jdbc/using-sql-variant-datatype.md
       - name: Usando tipos de dados espaciais
         href: ../connect/jdbc/use-spatial-datatypes.md
       - name: Noções básicas sobre transações
@@ -2557,7 +2559,7 @@ items:
         href: ../connect/jdbc/using-connection-pooling.md
       - name: Referência da API do Always Encrypted para o JDBC Driver
         href: ../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md
-      - name: Usando a autenticação integrada do Kerberos para se conectar ao SQL Server
+      - name: Usando a autenticação integrada Kerberos para conectar-se ao SQL Server
         href: ../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md
       - name: Usando um procedimento armazenado com uma contagem de atualização
         href: ../connect/jdbc/using-a-stored-procedure-with-an-update-count.md
@@ -2617,10 +2619,13 @@ items:
         href: ../connect/jdbc/using-sql-escape-sequences.md
       - name: Usando instruções com procedimentos armazenados
         href: ../connect/jdbc/using-statements-with-stored-procedures.md
-      - name: Versão de amostra do Azure Key Vault 6.0.0
-        href: ../connect/jdbc/azure-key-vault-sample-version-6.0.0.md
-      - name: Versão de amostra do Azure Key Vault 6.2.2
-        href: ../connect/jdbc/azure-key-vault-sample-version-6.2.2.md
+      - name: Exemplos do Azure Key Vault para 7.0 e demais
+        href: ../connect/jdbc/azure-key-vault-sample-version-7.0.md
+        items:
+        - name: Versão de amostra do Azure Key Vault 6.2.2
+          href: ../connect/jdbc/azure-key-vault-sample-version-6.2.2.md
+        - name: Versão de amostra do Azure Key Vault 6.0.0
+          href: ../connect/jdbc/azure-key-vault-sample-version-6.0.0.md
 - name: Node.js
   items:
   - name: Driver Node.js para SQL Server
@@ -5340,7 +5345,7 @@ items:
     - name: Tutorial de instalação de drivers PHP de Linux e de Mac
       href: ../connect/php/installation-tutorial-linux-mac.md
     - name: Notas de Versão
-      href: ../connect/php/release-notes-for-the-php-sql-driver.md
+      href: ../connect/php/release-notes-php-sql-driver.md
     - name: Recursos de suporte
       href: ../connect/php/support-resources-for-the-php-sql-driver.md
     - name: Sobre exemplos de código
@@ -7644,9 +7649,9 @@ items:
     href: ../ado/reference/ado-programmer-s-reference.md
   - name: Glossário ADO
     href: ../ado/ado-glossary.md
-ms.openlocfilehash: 67cfc70b3bdd5744c91ace414dc04d4b9090f4d7
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: ac6634fdea120f7c047f7b4ef8f532865e9e59c4
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478301"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645598"

@@ -44,7 +44,7 @@ items:
 - name: Cluster de Big Data
   href: ../toc/redirectfrom-big-data-cluster.md
   items:
-  - name: Visão geral da cluster de big data
+  - name: Visão geral
     items:
     - name: O que são os clusters de Big Data do SQL Server?
       href: ../big-data-cluster/big-data-cluster-overview.md
@@ -52,6 +52,12 @@ items:
       href: ../big-data-cluster/release-notes-big-data-cluster.md
   - name: Instalar
     items:
+    - name: Introdução
+      items:
+      - name: Implantar um cluster de Big Data
+        href: ../big-data-cluster/deploy-get-started.md
+      - name: Carregar dados de exemplo
+        href: ../big-data-cluster/tutorial-load-sample-data.md
     - name: Instalar ferramentas
       items:
       - name: Instalar ferramentas de Big Data
@@ -72,20 +78,6 @@ items:
         href: ../big-data-cluster/deploy-with-kubeadm.md
       - name: Minikube
         href: ../big-data-cluster/deploy-on-minikube.md
-  - name: Tutoriais
-    items:
-    - name: 1_Carregar dados de exemplo
-      href: ../big-data-cluster/tutorial-load-sample-data.md
-    - name: 2_Consultar dados do HDFS
-      href: ../big-data-cluster/tutorial-query-hdfs-storage-pool.md
-    - name: 3_Consultar dados do Oracle
-      href: ../big-data-cluster/tutorial-query-oracle.md
-    - name: 4_Carregar pool de dados com o SQL
-      href: ../big-data-cluster/tutorial-data-pool-ingest-sql.md
-    - name: 5_Carregar pool de dados com o Spark
-      href: ../big-data-cluster/tutorial-data-pool-ingest-spark.md
-    - name: 6_Executar um notebook do Spark
-      href: ../big-data-cluster/tutorial-notebook-spark.md
   - name: Conceitos
     items:
     - name: Controlador
@@ -106,16 +98,28 @@ items:
     items:
     - name: Virtualização de dados
       items:
-      - name: Virtualizar dados relacionais
-        href: ../relational-databases/polybase/data-virtualization.md
-      - name: Virtualizar dados CSV
-        href: ../relational-databases/polybase/data-virtualization-csv.md
-      - name: Camadas do HDFS
-        href: ../big-data-cluster/hdfs-tiering.md
+      - name: Dados relacionais
+        items:
+        - name: Virtualizar dados relacionais
+          href: ../relational-databases/polybase/data-virtualization.md
+        - name: Consultar dados do Oracle
+          href: ../big-data-cluster/tutorial-query-oracle.md
+      - name: Dados do HDFS
+        items:
+        - name: Virtualizar dados CSV
+          href: ../relational-databases/polybase/data-virtualization-csv.md
+        - name: Consultar dados do HDFS
+          href: ../big-data-cluster/tutorial-query-hdfs-storage-pool.md
+        - name: Camadas do HDFS
+          href: ../big-data-cluster/hdfs-tiering.md
     - name: Ingestão de dados
       items:
       - name: Carregar dados com curl
         href: ../big-data-cluster/data-ingestion-curl.md
+      - name: Carregar dados com SQL
+        href: ../big-data-cluster/tutorial-data-pool-ingest-sql.md
+      - name: Carregar dados com o Spark
+        href: ../big-data-cluster/tutorial-data-pool-ingest-spark.md
       - name: Restaurar um banco de dados
         href: ../big-data-cluster/data-ingestion-restore-database.md
     - name: Implantar e consumir aplicativos
@@ -150,6 +154,8 @@ items:
       items:
       - name: Visão geral de notebooks
         href: ../big-data-cluster/notebooks-guidance.md
+      - name: Tutorial de notebooks
+        href: ../big-data-cluster/tutorial-notebook-spark.md
       - name: Gerenciar notebooks existentes
         href: ../big-data-cluster/notebooks-how-to-manage.md
     - name: Trabalhos do Spark
@@ -4264,7 +4270,7 @@ items:
         href: ../database-engine/configure-windows/replication-xps-server-configuration-option.md
       - name: Configurar exame para procs de inicialização
         href: ../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md
-      - name: Memórias do servidor
+      - name: Memória do Servidor
         href: ../database-engine/configure-windows/server-memory-server-configuration-options.md
       - name: server trigger recursion
         href: ../database-engine/configure-windows/server-trigger-recursion-server-configuration-option.md
@@ -6757,132 +6763,135 @@ items:
       - name: Salvar eventos de perfil de estatísticas XML do plano de execução separadamente
         href: ../relational-databases/performance/save-showplan-xml-statistics-profile-events-separately-sql-server-profiler.md
     - name: Monitor de desempenho
-      href: ../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md
       items:
-      - name: Executar o Monitor do Sistema
-        href: ../relational-databases/performance-monitor/run-system-monitor.md
-      - name: Monitorar o uso do disco
-        href: ../relational-databases/performance-monitor/monitor-disk-usage.md
-      - name: Monitorar o uso da CPU
-        href: ../relational-databases/performance-monitor/monitor-cpu-usage.md
-      - name: Monitorar o uso da memória
-        href: ../relational-databases/performance-monitor/monitor-memory-usage.md
-      - name: Criar um alerta de banco de dados do SQL Server
-        href: ../relational-databases/performance-monitor/create-a-sql-server-database-alert.md
-      - name: Criar gráficos, alertas, logs e relatórios
-        href: ../relational-databases/performance-monitor/create-charts-alerts-logs-and-reports.md
-      - name: Contadores de desempenho de XTP (OLTP na memória) do SQL Server
-        href: ../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md
+      - name: Visão geral
+        href: ../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md
+      - name: Conceitos
         items:
-        - name: Cursores
-          href: ../relational-databases/performance-monitor/sql-server-xtp-cursors.md
-        - name: Bancos de dados
-          href: ../relational-databases/performance-monitor/sql-server-xtp-databases.md
-        - name: Coleta de lixo
-          href: ../relational-databases/performance-monitor/sql-server-xtp-garbage-collection.md
-        - name: Administrador de ES
-          href: ../relational-databases/performance-monitor/sql-server-xtp-io-governor.md
-        - name: Processador fantasma
-          href: ../relational-databases/performance-monitor/sql-server-xtp-phantom-processor.md
-        - name: Armazenamento
-          href: ../relational-databases/performance-monitor/sql-server-xtp-storage.md
-        - name: Log de Transações
-          href: ../relational-databases/performance-monitor/sql-server-xtp-transaction-log.md
-        - name: Transactions
-          href: ../relational-databases/performance-monitor/sql-server-xtp-transactions.md
-      - name: Uso de objetos
-        href: ../relational-databases/performance-monitor/use-sql-server-objects.md
-        items:
-        - name: Objetos do SQL Server Agent
+        - name: Executar o Monitor do Sistema
+          href: ../relational-databases/performance-monitor/run-system-monitor.md
+        - name: Monitorar o uso do disco
+          href: ../relational-databases/performance-monitor/monitor-disk-usage.md
+        - name: Monitorar o uso da CPU
+          href: ../relational-databases/performance-monitor/monitor-cpu-usage.md
+        - name: Monitorar o uso da memória
+          href: ../relational-databases/performance-monitor/monitor-memory-usage.md
+        - name: Criar um alerta de banco de dados do SQL Server
+          href: ../relational-databases/performance-monitor/create-a-sql-server-database-alert.md
+        - name: Criar gráficos, alertas, logs e relatórios
+          href: ../relational-databases/performance-monitor/create-charts-alerts-logs-and-reports.md
+        - name: Contadores de desempenho de XTP (OLTP na memória) do SQL Server
+          href: ../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md
           items:
-          - name: Alertas
-            href: ../relational-databases/performance-monitor/sql-server-agent-alerts-object.md
-          - name: trabalhos
-            href: ../relational-databases/performance-monitor/sql-server-agent-jobs-object.md
-          - name: JobSteps
-            href: ../relational-databases/performance-monitor/sql-server-agent-jobsteps-object.md
-          - name: Estatísticas
-            href: ../relational-databases/performance-monitor/sql-server-agent-statistics-object.md
-        - name: Objetos do SQL Server
-          items:
-          - name: Acessar Métodos
-            href: ../relational-databases/performance-monitor/sql-server-access-methods-object.md
-          - name: Réplica de Disponibilidade
-            href: ../relational-databases/performance-monitor/sql-server-availability-replica.md
-          - name: Dispositivo de Backup
-            href: ../relational-databases/performance-monitor/sql-server-backup-device-object.md
-          - name: Estatísticas de resp de lote
-            href: ../relational-databases/performance-monitor/sql-server-batch-resp-statistics-object.md
-          - name: Ativação do Broker
-            href: ../relational-databases/performance-monitor/sql-server-broker-activation-object.md
-          - name: Estatísticas do Broker
-            href: ../relational-databases/performance-monitor/sql-server-broker-statistics-object.md
-          - name: Estatísticas de TO do Agente
-            href: ../relational-databases/performance-monitor/sql-server-broker-to-statistics-object.md
-          - name: Agente – Transporte DBM
-            href: ../relational-databases/performance-monitor/sql-server-broker-dbm-transport-object.md
-          - name: Gerenciador de Buffer
-            href: ../relational-databases/performance-monitor/sql-server-buffer-manager-object.md
-          - name: Nó do buffer
-            href: ../relational-databases/performance-monitor/sql-server-buffer-node.md
-          - name: Metadados de catálogo
-            href: ../relational-databases/performance-monitor/sql-server-catalog-metadata-object.md
-          - name: Objeto CLR
-            href: ../relational-databases/performance-monitor/sql-server-clr-object.md
-          - name: columnstore
-            href: ../relational-databases/performance-monitor/sql-server-columnstore-object.md
-          - name: Gerenciador de cursor por tipo
-            href: ../relational-databases/performance-monitor/sql-server-cursor-manager-by-type-object.md
-          - name: Gerenciador de cursor total
-            href: ../relational-databases/performance-monitor/sql-server-cursor-manager-total-object.md
-          - name: Espelhamento de banco de dados
-            href: ../relational-databases/performance-monitor/sql-server-database-mirroring-object.md
-          - name: Réplica de Banco de Dados
-            href: ../relational-databases/performance-monitor/sql-server-database-replica.md
+          - name: Cursores
+            href: ../relational-databases/performance-monitor/sql-server-xtp-cursors.md
           - name: Bancos de dados
-            href: ../relational-databases/performance-monitor/sql-server-databases-object.md
-          - name: Recursos preteridos
-            href: ../relational-databases/performance-monitor/sql-server-deprecated-features-object.md
-          - name: ExecStatistics
-            href: ../relational-databases/performance-monitor/sql-server-execstatistics-object.md
-          - name: Scripts externos
-            href: ../relational-databases/performance-monitor/sql-server-external-scripts-object.md
-          - name: FileTable
-            href: ../relational-databases/performance-monitor/sql-server-filetable-object.md
-          - name: Estatísticas gerais
-            href: ../relational-databases/performance-monitor/sql-server-general-statistics-object.md
-          - name: Armazenamento HTTP
-            href: ../relational-databases/performance-monitor/sql-server-http-storage-object.md
-          - name: Travas
-            href: ../relational-databases/performance-monitor/sql-server-latches-object.md
-          - name: Locks
-            href: ../relational-databases/performance-monitor/sql-server-locks-object.md
-          - name: LogPool FreePool
-            href: ../relational-databases/performance-monitor/sql-server-logpool-freepool-object.md
-          - name: Administradores do agente de memória
-            href: ../relational-databases/performance-monitor/sql-server-memory-broker-clerks-object.md
-          - name: Gerenciador de memória
-            href: ../relational-databases/performance-monitor/sql-server-memory-manager-object.md
-          - name: Nó de memória
-            href: ../relational-databases/performance-monitor/sql-server-memory-node.md
-          - name: Cache de Planos
-            href: ../relational-databases/performance-monitor/sql-server-plan-cache-object.md
-          - name: Repositório de Consultas
-            href: ../relational-databases/performance-monitor/sql-server-query-store-object.md
-          - name: Estatísticas do Pool de Recursos
-            href: ../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md
-          - name: Erros de SQL
-            href: ../relational-databases/performance-monitor/sql-server-sql-errors-object.md
-          - name: Estatísticas do SQL
-            href: ../relational-databases/performance-monitor/sql-server-sql-statistics-object.md
+            href: ../relational-databases/performance-monitor/sql-server-xtp-databases.md
+          - name: Coleta de lixo
+            href: ../relational-databases/performance-monitor/sql-server-xtp-garbage-collection.md
+          - name: Administrador de ES
+            href: ../relational-databases/performance-monitor/sql-server-xtp-io-governor.md
+          - name: Processador fantasma
+            href: ../relational-databases/performance-monitor/sql-server-xtp-phantom-processor.md
+          - name: Armazenamento
+            href: ../relational-databases/performance-monitor/sql-server-xtp-storage.md
+          - name: Log de Transações
+            href: ../relational-databases/performance-monitor/sql-server-xtp-transaction-log.md
           - name: Transactions
-            href: ../relational-databases/performance-monitor/sql-server-transactions-object.md
-          - name: Configurável pelo usuário
-            href: ../relational-databases/performance-monitor/sql-server-user-settable-object.md
-          - name: Estatísticas de espera
-            href: ../relational-databases/performance-monitor/sql-server-wait-statistics-object.md
-          - name: Estatísticas de grupo de carga de trabalho
-            href: ../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md
+            href: ../relational-databases/performance-monitor/sql-server-xtp-transactions.md
+        - name: Uso de objetos
+          href: ../relational-databases/performance-monitor/use-sql-server-objects.md
+          items:
+          - name: Objetos do SQL Server Agent
+            items:
+            - name: Alertas
+              href: ../relational-databases/performance-monitor/sql-server-agent-alerts-object.md
+            - name: trabalhos
+              href: ../relational-databases/performance-monitor/sql-server-agent-jobs-object.md
+            - name: JobSteps
+              href: ../relational-databases/performance-monitor/sql-server-agent-jobsteps-object.md
+            - name: Estatísticas
+              href: ../relational-databases/performance-monitor/sql-server-agent-statistics-object.md
+          - name: Objetos do SQL Server
+            items:
+            - name: Acessar Métodos
+              href: ../relational-databases/performance-monitor/sql-server-access-methods-object.md
+            - name: Réplica de Disponibilidade
+              href: ../relational-databases/performance-monitor/sql-server-availability-replica.md
+            - name: Dispositivo de Backup
+              href: ../relational-databases/performance-monitor/sql-server-backup-device-object.md
+            - name: Estatísticas de resp de lote
+              href: ../relational-databases/performance-monitor/sql-server-batch-resp-statistics-object.md
+            - name: Ativação do Broker
+              href: ../relational-databases/performance-monitor/sql-server-broker-activation-object.md
+            - name: Estatísticas do Broker
+              href: ../relational-databases/performance-monitor/sql-server-broker-statistics-object.md
+            - name: Estatísticas de TO do Agente
+              href: ../relational-databases/performance-monitor/sql-server-broker-to-statistics-object.md
+            - name: Agente – Transporte DBM
+              href: ../relational-databases/performance-monitor/sql-server-broker-dbm-transport-object.md
+            - name: Gerenciador de Buffer
+              href: ../relational-databases/performance-monitor/sql-server-buffer-manager-object.md
+            - name: Nó do buffer
+              href: ../relational-databases/performance-monitor/sql-server-buffer-node.md
+            - name: Metadados de catálogo
+              href: ../relational-databases/performance-monitor/sql-server-catalog-metadata-object.md
+            - name: Objeto CLR
+              href: ../relational-databases/performance-monitor/sql-server-clr-object.md
+            - name: columnstore
+              href: ../relational-databases/performance-monitor/sql-server-columnstore-object.md
+            - name: Gerenciador de cursor por tipo
+              href: ../relational-databases/performance-monitor/sql-server-cursor-manager-by-type-object.md
+            - name: Gerenciador de cursor total
+              href: ../relational-databases/performance-monitor/sql-server-cursor-manager-total-object.md
+            - name: Espelhamento de banco de dados
+              href: ../relational-databases/performance-monitor/sql-server-database-mirroring-object.md
+            - name: Réplica de Banco de Dados
+              href: ../relational-databases/performance-monitor/sql-server-database-replica.md
+            - name: Bancos de dados
+              href: ../relational-databases/performance-monitor/sql-server-databases-object.md
+            - name: Recursos preteridos
+              href: ../relational-databases/performance-monitor/sql-server-deprecated-features-object.md
+            - name: ExecStatistics
+              href: ../relational-databases/performance-monitor/sql-server-execstatistics-object.md
+            - name: Scripts externos
+              href: ../relational-databases/performance-monitor/sql-server-external-scripts-object.md
+            - name: FileTable
+              href: ../relational-databases/performance-monitor/sql-server-filetable-object.md
+            - name: Estatísticas gerais
+              href: ../relational-databases/performance-monitor/sql-server-general-statistics-object.md
+            - name: Armazenamento HTTP
+              href: ../relational-databases/performance-monitor/sql-server-http-storage-object.md
+            - name: Travas
+              href: ../relational-databases/performance-monitor/sql-server-latches-object.md
+            - name: Locks
+              href: ../relational-databases/performance-monitor/sql-server-locks-object.md
+            - name: LogPool FreePool
+              href: ../relational-databases/performance-monitor/sql-server-logpool-freepool-object.md
+            - name: Administradores do agente de memória
+              href: ../relational-databases/performance-monitor/sql-server-memory-broker-clerks-object.md
+            - name: Gerenciador de memória
+              href: ../relational-databases/performance-monitor/sql-server-memory-manager-object.md
+            - name: Nó de memória
+              href: ../relational-databases/performance-monitor/sql-server-memory-node.md
+            - name: Cache de Planos
+              href: ../relational-databases/performance-monitor/sql-server-plan-cache-object.md
+            - name: Repositório de Consultas
+              href: ../relational-databases/performance-monitor/sql-server-query-store-object.md
+            - name: Estatísticas do Pool de Recursos
+              href: ../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md
+            - name: Erros de SQL
+              href: ../relational-databases/performance-monitor/sql-server-sql-errors-object.md
+            - name: Estatísticas do SQL
+              href: ../relational-databases/performance-monitor/sql-server-sql-statistics-object.md
+            - name: Transactions
+              href: ../relational-databases/performance-monitor/sql-server-transactions-object.md
+            - name: Configurável pelo usuário
+              href: ../relational-databases/performance-monitor/sql-server-user-settable-object.md
+            - name: Estatísticas de espera
+              href: ../relational-databases/performance-monitor/sql-server-wait-statistics-object.md
+            - name: Estatísticas de grupo de carga de trabalho
+              href: ../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md
   - name: Ajustar
     items:
     - name: Ajuste Automático
@@ -7139,41 +7148,44 @@ items:
       - name: Validar guias de plano depois da atualização
         href: ../relational-databases/performance/validate-plan-guides-after-upgrade.md
     - name: Administrador de recursos
-      href: ../relational-databases/resource-governor/resource-governor.md
       items:
-      - name: Habilitar
-        href: ../relational-databases/resource-governor/enable-resource-governor.md
-      - name: Disable
-        href: ../relational-databases/resource-governor/disable-resource-governor.md
-      - name: Configurar o administrador de recursos usando um modelo
-        href: ../relational-databases/resource-governor/configure-resource-governor-using-a-template.md
-      - name: View Resource Governor Properties
-        href: ../relational-databases/resource-governor/view-resource-governor-properties.md
-      - name: Pool de recursos
-        href: ../relational-databases/resource-governor/resource-governor-resource-pool.md
+      - name: Visão geral
+        href: ../relational-databases/resource-governor/resource-governor.md
+      - name: Como fazer
         items:
-        - name: Criar
-          href: ../relational-databases/resource-governor/create-a-resource-pool.md
-        - name: Configurações de Alteração
-          href: ../relational-databases/resource-governor/change-resource-pool-settings.md
-        - name: DELETE
-          href: ../relational-databases/resource-governor/delete-a-resource-pool.md
-      - name: Grupo de Cargas de Trabalho
-        href: ../relational-databases/resource-governor/resource-governor-workload-group.md
-        items:
-        - name: Criar
-          href: ../relational-databases/resource-governor/create-a-workload-group.md
-        - name: Configurações de Alteração
-          href: ../relational-databases/resource-governor/change-workload-group-settings.md
-        - name: Mover
-          href: ../relational-databases/resource-governor/move-a-workload-group.md
-        - name: DELETE
-          href: ../relational-databases/resource-governor/delete-a-workload-group.md
-      - name: Função de Classificador
-        href: ../relational-databases/resource-governor/resource-governor-classifier-function.md
-        items:
-        - name: Criar e testar uma função de classificador definida pelo usuário
-          href: ../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md
+        - name: Habilitar
+          href: ../relational-databases/resource-governor/enable-resource-governor.md
+        - name: Disable
+          href: ../relational-databases/resource-governor/disable-resource-governor.md
+        - name: Configurar o administrador de recursos usando um modelo
+          href: ../relational-databases/resource-governor/configure-resource-governor-using-a-template.md
+        - name: View Resource Governor Properties
+          href: ../relational-databases/resource-governor/view-resource-governor-properties.md
+        - name: Pool de recursos
+          href: ../relational-databases/resource-governor/resource-governor-resource-pool.md
+          items:
+          - name: Criar
+            href: ../relational-databases/resource-governor/create-a-resource-pool.md
+          - name: Configurações de Alteração
+            href: ../relational-databases/resource-governor/change-resource-pool-settings.md
+          - name: DELETE
+            href: ../relational-databases/resource-governor/delete-a-resource-pool.md
+        - name: Grupo de Cargas de Trabalho
+          href: ../relational-databases/resource-governor/resource-governor-workload-group.md
+          items:
+          - name: Criar
+            href: ../relational-databases/resource-governor/create-a-workload-group.md
+          - name: Configurações de Alteração
+            href: ../relational-databases/resource-governor/change-workload-group-settings.md
+          - name: Mover
+            href: ../relational-databases/resource-governor/move-a-workload-group.md
+          - name: DELETE
+            href: ../relational-databases/resource-governor/delete-a-workload-group.md
+        - name: Função de Classificador
+          href: ../relational-databases/resource-governor/resource-governor-classifier-function.md
+          items:
+          - name: Criar e testar uma função de classificador definida pelo usuário
+            href: ../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md
     - name: Estatísticas
       href: ../relational-databases/statistics/statistics.md
       items:
@@ -12260,6 +12272,8 @@ items:
         href: ../relational-databases/system-dynamic-management-views/sys-dm-exec-query-parallel-workers-transact-sql.md
       - name: sys.dm_exec_query_plan
         href: ../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md
+      - name: sys.dm_exec_query_plan_stats
+        href: ../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md
       - name: sys.dm_exec_query_profiles
         href: ../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md
       - name: sys.dm_exec_query_resource_semaphores
@@ -12476,10 +12490,14 @@ items:
         href: ../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md
       - name: sys.dm_resource_governor_resource_pools
         href: ../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md
+      - name: sys.dm_resource_governor_pools_history_ex (Banco de Dados SQL do Azure)
+        href: ../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-history-ex-azure-sql-database.md
       - name: sys.dm_resource_governor_resource_pool_volumes
         href: ../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-volumes-transact-sql.md
       - name: sys.dm_resource_governor_workload_groups
         href: ../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md
+      - name: sys.dm_user_db_resource_governance (Banco de Dados SQL do Azure)
+        href: ../relational-databases/system-dynamic-management-views/sys-dm-user-db-resource-governor-azure-sql-database.md
     - name: Relacionados à segurança
       href: ../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md
       items:
@@ -17227,9 +17245,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: Manipulando namespaces em XQuery
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: 31c97681d909e7179c9376e187cabea94afe20d3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: a94ce2e407a2a01759189d0a1892847477961d94
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538678"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618323"
