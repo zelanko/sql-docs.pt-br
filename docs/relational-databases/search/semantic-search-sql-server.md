@@ -31,7 +31,7 @@ A Pesquisa Semântica Estatística fornece uma profunda compreensão de document
   
  Os exemplos a seguir demonstram os recursos da Pesquisa Semântica. Ao mesmo tempo, esses exemplos demonstram as três funções de conjunto de linhas do Transact-SQL usadas para consultar os índices de semânticos e recuperar os resultados como dados estruturados.  
   
-###  <a name="find1"></a> Find the key phrases in a document  
+###  <a name="find1"></a> Localizar as frases-chave em um documento  
  A consulta a seguir obtém as frases-chave que foram identificadas no documento de exemplo. Apresenta os resultados em ordem decrescente pela contagem que classifica a significância estatística de cada frase-chave.
  
  Essa consulta chama a função [semantickeyphrasetable](../../relational-databases/system-functions/semantickeyphrasetable-transact-sql.md).  
@@ -69,7 +69,7 @@ SELECT @Title AS SourceTitle, DocumentTitle AS MatchedTitle,
   
 ```  
   
-###  <a name="find3"></a> Find the key phrases that make documents similar or related  
+###  <a name="find3"></a> Localizar as frases-chave que tornam documentos semelhantes ou relacionados  
  A consulta a seguir obtém as frases-chave que tornam os dois documentos de exemplo semelhantes ou relacionados um ao outro. Apresenta os resultados em ordem decrescente pela contagem que classifica o peso de cada frase-chave.
  
  Essa consulta chama a função [semanticsimilaritydetailstable](../../relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql.md).  
