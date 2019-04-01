@@ -1,7 +1,7 @@
 ---
-title: Do Azure Key Vault 6.2.2 de versão de amostra | Microsoft Docs
+title: Exemplo de Cofre de chaves do Azure | Microsoft Docs
 ms.custom: ''
-ms.date: 08/01/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,20 +10,20 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 69231e7464f46903b3e50f6a0b7108b32b6cded2
+ms.openlocfilehash: 8fa94368a4242e7a02781a5283d5cbf15f25b2a2
 ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566485"
+ms.locfileid: "58567535"
 ---
-# <a name="azure-key-vault-sample-version-622"></a>Versão de amostra do Azure Key Vault 6.2.2
+# <a name="azure-key-vault-sample"></a>Exemplo Azure Key Vault
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 ## <a name="sample-application-using-azure-key-vault-feature"></a>Aplicativo de exemplo usando o recurso do Azure Key Vault
 
-Este aplicativo é executável usando o Driver JDBC 6.2.2 e 6.4.0 e Azure-Keyvault (versão 1.0.0), Adal4j (versão 1.4.0) e suas dependências.  As dependências subjacentes podem ser resolvidas adicionando essas bibliotecas para o arquivo pom do projeto, conforme descrito [aqui](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md):
+Este aplicativo é executável usando o JDBC Driver 7.0 e posterior e o Azure-Keyvault (versão 1.0.0), Adal4j (versão 1.6.0) e suas dependências.  As dependências subjacentes podem ser resolvidas adicionando essas bibliotecas para o arquivo pom do projeto, conforme descrito [aqui](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md):
 
 ```java
 import java.net.URISyntaxException;
@@ -35,12 +35,20 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+
+import com.microsoft.aad.adal4j.AuthenticationContext;
+import com.microsoft.aad.adal4j.AuthenticationResult;
+import com.microsoft.aad.adal4j.ClientCredential;
 import com.microsoft.sqlserver.jdbc.SQLServerColumnEncryptionAzureKeyVaultProvider;
 import com.microsoft.sqlserver.jdbc.SQLServerColumnEncryptionKeyStoreProvider;
 import com.microsoft.sqlserver.jdbc.SQLServerConnection;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
+import com.microsoft.sqlserver.jdbc.SQLServerKeyVaultAuthenticationCallback;
 
-public class AKV_6_2_2 {
+public class AKV {
 
     static String connectionUrl = "jdbc:sqlserver://localhost;integratedSecurity=true;database=test;columnEncryptionSetting=enabled";
     static String applicationClientID = "Your Client ID";
@@ -63,17 +71,68 @@ public class AKV_6_2_2 {
         try (Connection connection = DriverManager.getConnection(connectionUrl);
                 Statement statement = connection.createStatement()) {
             statement.execute("DBCC FREEPROCCACHE");
-            SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumnEncryptionAzureKeyVaultProvider(
+
+            System.out.println("Create SQLServerColumnEncryptionAzureKeyVaultProvider with 'authenticationCallback' and 'executorService(null)'");
+            /* Constructor added in 6.0.0 driver version and removed in 6.2.2 driver, now added back in 7.0.0 driver
+             * [Supports SQLServerKeyVaultAuthenticationCallback in 7.0 for backwards compatibility]
+             * This constructor is marked @deprecated since it no longer uses 'ExecutorService' parameter passed. */
+            @SuppressWarnings("deprecation")
+            SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider1 = new SQLServerColumnEncryptionAzureKeyVaultProvider(
+                    tryAuthenticationCallback(), null);
+            setupKeyStoreProviders(akvProvider1.getName(), akvProvider1);
+            testAKV(akvProvider1.getName(), akvProvider1, connection, statement);
+
+            statement.execute("DBCC FREEPROCCACHE");
+            System.out.println("Create SQLServerColumnEncryptionAzureKeyVaultProvider with 'authenticationCallback'");
+            /* Constructor added in 7.0.0 driver version [Supports SQLServerKeyVaultAuthenticationCallback in 7.0 for backwards compatibility]
+             * This constructor is recommended to replace the above deprecated constructor */
+            SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider2 = new SQLServerColumnEncryptionAzureKeyVaultProvider(
+                    tryAuthenticationCallback());
+            testAKV(akvProvider2.getName(), akvProvider2, connection, statement);
+
+            statement.execute("DBCC FREEPROCCACHE");
+            System.out.println("Create SQLServerColumnEncryptionAzureKeyVaultProvider with 'clientId' and 'clientKey'");
+            /* Constructor added in 6.2.2 driver version [Continued Support] */
+            SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider3 = new SQLServerColumnEncryptionAzureKeyVaultProvider(
                     applicationClientID, applicationKey);
-            setupKeyStoreProviders(akvProvider.getName(), akvProvider);
-            testAKV(akvProvider.getName(), akvProvider, connection, statement);
+            testAKV(akvProvider3.getName(), akvProvider3, connection, statement);
+            System.exit(0);
         }
+    }
+
+    private static SQLServerKeyVaultAuthenticationCallback tryAuthenticationCallback()
+            throws URISyntaxException, SQLServerException {
+        SQLServerKeyVaultAuthenticationCallback authenticationCallback = new SQLServerKeyVaultAuthenticationCallback() {
+
+            @Override
+            public String getAccessToken(String authority, String resource,
+                    String scope) {
+                AuthenticationResult result = null;
+                try {
+                    ExecutorService service = Executors.newFixedThreadPool(1);
+                    AuthenticationContext context = new AuthenticationContext(
+                            authority, false, service);
+                    ClientCredential cred = new ClientCredential(
+                            applicationClientID, applicationKey);
+                    Future<AuthenticationResult> future = context
+                            .acquireToken(resource, cred, null);
+                    result = future.get();
+                    service.shutdown();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                return result.getAccessToken();
+            }
+        };
+
+        return authenticationCallback;
+
     }
 
     private static void testAKV(String CUSTOM_AKV_PROVIDER_NAME,
             SQLServerColumnEncryptionKeyStoreProvider akvProvider,
             Connection connection, Statement statement)
-            throws SQLException, SQLServerException, InterruptedException {
+            throws SQLException, InterruptedException {
 
         dropTable(statement);
         dropKeys(statement);
@@ -157,32 +216,29 @@ public class AKV_6_2_2 {
             throws SQLException {
         String sql = "insert into " + akvTable + " values(?,?,?)";
         try (PreparedStatement pstmt = connection.prepareStatement(sql)) {
-            for (int i = 1; i <= 3; i++) {
-                pstmt.setNString(i, "hello world");
+            for (int i = 1; i <= 5; i++) { //Insert 5 rows
+                for (int j = 1; j <= 3; j++) {
+                    pstmt.setNString(j, "Row " + i + " Column " + j);
+                }
+                pstmt.execute();
             }
-            pstmt.execute();
         }
     }
 
+    /**
+     * Rerieves the table
+     *
+     * @throws SQLException
+     */
     private static void testChar(Statement statement) throws SQLException {
         try (ResultSet rs = statement
                 .executeQuery("select * from " + akvTable);) {
             int numberOfColumns = rs.getMetaData().getColumnCount();
             while (rs.next()) {
-                testGetString(rs, numberOfColumns);
+                for (int i = 1; i <= numberOfColumns; i++) {
+                    System.out.println(rs.getString(i));
+                }
             }
-        }
-    }
-
-    private static void testGetString(ResultSet rs, int numberOfColumns)
-            throws SQLException {
-        for (int i = 1; i <= numberOfColumns; i = i + 3) {
-            String stringValue1 = "" + rs.getString(i);
-            String stringValue2 = "" + rs.getString(i + 1);
-            String stringValue3 = "" + rs.getString(i + 2);
-            System.out.println(stringValue1);
-            System.out.println(stringValue2);
-            System.out.println(stringValue3);
         }
     }
 }
@@ -190,5 +246,5 @@ public class AKV_6_2_2 {
 
 ## <a name="see-also"></a>Consulte Também
 
-[Versão de amostra do Azure Key Vault 7.0.0](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)  
-[Versão de amostra do Azure Key Vault 6.0.0](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md)
+[Versão de amostra do Azure Key Vault 6.2.2](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)  
+[Versão de amostra do Azure Key Vault 6.0.0](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md)  

@@ -13,12 +13,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 78e818a535c31e60e1b73b4a48f301e8d90b7430
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 57d96068af7120ef4ccf4da8882093fa26908089
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579736"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493969"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Processamento inteligente de consultas em bancos de dados SQL
 
@@ -505,4 +505,4 @@ OPTION(RECOMPILE, USE HINT('DISALLOW_BATCH_MODE'));
 [Referência de operadores físicos e lógicos do plano de execução](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
 [Junções](../../relational-databases/performance/joins.md)    
 [Demonstrar o processamento de consulta adaptável](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)       
-[Demonstrar QP inteligente](https://github.com/joesackmsft/Conferences/blob/master/IQPDemos/IQP_Demo_ReadMe.md)   
+[Demonstrar QP inteligente](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing)   

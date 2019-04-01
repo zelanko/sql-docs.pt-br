@@ -1,6 +1,6 @@
 ---
 title: SRIDs (Identificadores de Referência Espacial) | Microsoft Docs
-ms.date: 03/14/2017
+ms.date: 03/29/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,23 +11,20 @@ helpviewer_keywords:
 - geodetic spatial data [SQL Server], identifiers
 - SRID
 ms.assetid: 0612658a-7d1b-4178-bdc2-42b914ea31a7
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 40a398a06cfc1e12a80b173186dab188425d23b9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 149175637ba01a3e03c4a1ddbba5da1af3205a03
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677755"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658060"
 ---
 # <a name="spatial-reference-identifiers-srids"></a>SRIDs (Spatial Reference Identifiers)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Cada instância espacial tem um SRID (spatial reference identifier). O SRID corresponde a um sistema de referência espacial baseado no elipsoide específico usado para mapeamento de terra plana ou de terra redonda.  
-  
-> [!IMPORTANT]  
->  Para obter uma descrição detalhada e exemplos de recursos espaciais introduzidos no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], incluindo um novo SRID, baixe o white paper [Novos recursos espaciais no SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
   
  Uma coluna espacial pode conter objetos com SRIDs diferentes. No entanto apenas instâncias espaciais com o mesmo SRID podem ser usadas ao executar operações com métodos de dados espaciais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em seus dados. O resultado de qualquer método espacial derivado de duas instâncias de dados espaciais será válido apenas se essas instâncias tiverem o mesmo SRID que é baseado na mesma unidade de medida, datum, e projeção usada para determinar as coordenadas das instâncias. As unidades mais comuns de medida de um SRID são metros ou metros quadrados.  
   

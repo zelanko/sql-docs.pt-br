@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 43cd64469ef5a1cf08b1c99e42ee5f6dd20ab85b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: c2daa3e5ab74a49e5d0e66bfd972cc4b4eff1663
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391719"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657790"
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>Lição 2: Definir uma conexão de dados e uma tabela de dados para o relatório pai
 Depois que você criar um novo projeto de site usando o modelo de site ASP.NET para o Visual C #, a próxima etapa será criar uma conexão de dados e uma tabela de dados para o relatório pai. Neste tutorial, a conexão de dados é estabelecida com o banco de dados AdventureWorks2014.  
@@ -26,7 +26,7 @@ Depois que você criar um novo projeto de site usando o modelo de site ASP.NET p
   
     Isso adicionará um novo arquivo XSD **DataSet1.xsd** ao projeto e abrirá o Designer de Conjunto de Dados.  
   
-3.  Na janela Caixa de Ferramentas, arraste um controle **[TableAdapter](https://msdn.microsoft.com/library/bz9tthwx.aspx)** até a superfície de design. Isso inicializará o Assistente de Configuração do **TableAdapter** .  
+3.  Na janela Caixa de Ferramentas, arraste um controle **[TableAdapter](/visualstudio/data-tools/fill-datasets-by-using-tableadapters)** até a superfície de design. Isso inicializará o Assistente de Configuração do **TableAdapter** .  
   
 4.  Na página **Escolher a Conexão de Dados** , clique em **Nova Conexão**.  
   

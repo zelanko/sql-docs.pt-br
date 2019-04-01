@@ -1,6 +1,6 @@
 ---
 title: ADICIONAR CLASSIFICAÇÃO DE CONFIDENCIALIDADE (Transact-SQL) | Microsoft Docs
-ms.date: 06/17/2018
+ms.date: 03/25/2019
 ms.reviewer: ''
 ms.prod: sql
 ms.technology: t-sql
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - information types
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 4296a2b56f5c347a26435a4c192c6dfac7f16538
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9e4fee7a2504255b0763cf9cfad708fd341d336d
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018278"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494058"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>ADICIONAR CLASSIFICAÇÃO DE CONFIDENCIALIDADE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
 Adiciona metadados sobre a classificação de confidencialidade a uma ou mais colunas do banco de dados. A classificação pode incluir um rótulo de confidencialidade e um tipo de informação.  
 
@@ -109,7 +109,7 @@ ADD SENSITIVITY CLASSIFICATION TO
     WITH ( LABEL='Highly Confidential', INFORMATION_TYPE='Financial' )
 ```  
 
-### <a name="b-classifying-only-a-label"></a>b. Classificação com apenas um rótulo
+### <a name="b-classifying-only-a-label"></a>B. Classificação com apenas um rótulo
 O exemplo a seguir classifica a coluna **dbo.customer.comments** com o rótulo **Confidencial** e a ID do rótulo **643f7acd-776a-438d-890c-79c3f2a520d6**. O tipo de informação não foi classificado para esta coluna.
 
 ```sql

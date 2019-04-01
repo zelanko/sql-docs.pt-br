@@ -14,12 +14,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 54bf8caa434079a2b562a1c65d4d7c9dc83375ae
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 5798c0048d10e074f0aa64c3d50ce14027865e4a
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973655"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657911"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Criar e gerenciar índices de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -75,8 +75,8 @@ Para obter mais informações, consulte [Popular índices de texto completo](../
   
     |Página|Descrição|  
     |----------|-----------------|  
-    |**Geral**|Exibe as propriedades básicas do índice de texto completo. Isso inclui várias propriedades modificáveis e uma série de propriedades inalteráveis, como o nome do banco de dados, o nome da tabela e o nome da coluna de chave de texto completo. As propriedades modificáveis são:<br /><br /> **Lista de palavras irrelevantes de índice de texto completo**<br /><br /> **Indexação de texto completo habilitada**<br /><br /> **Controle de alterações**<br /><br /> **Lista de propriedades de pesquisa**<br /><br />Para obter mais informações, consulte [Propriedades do Índice de Texto Completo &#40;página Geral&#41;](https://msdn.microsoft.com/library/f4dff61c-8c2f-4ff9-abe4-70a34421448f).|  
-    |**Colunas**|Exibe as colunas da tabela que estão disponíveis para indexação de texto completo. A(s) coluna(s) selecionada(s) tem(têm) índice de texto completo. Você pode selecionar tantas colunas disponíveis quantas desejar para incluí-las no índice de texto completo. Para obter mais informações, consulte [Propriedades do Índice de Texto Completo &#40;página Colunas&#41;](https://msdn.microsoft.com/library/75e52edb-0d07-4393-9345-8b5af4561e35).|  
+    |**Geral**|Exibe as propriedades básicas do índice de texto completo. Isso inclui várias propriedades modificáveis e uma série de propriedades inalteráveis, como o nome do banco de dados, o nome da tabela e o nome da coluna de chave de texto completo. As propriedades modificáveis são:<br /><br /> **Lista de palavras irrelevantes de índice de texto completo**<br /><br /> **Indexação de texto completo habilitada**<br /><br /> **Controle de alterações**<br /><br /> **Lista de propriedades de pesquisa**|  
+    |**Colunas**|Exibe as colunas da tabela que estão disponíveis para indexação de texto completo. A(s) coluna(s) selecionada(s) tem(têm) índice de texto completo. Você pode selecionar tantas colunas disponíveis quantas desejar para incluí-las no índice de texto completo. Para obter mais informações, consulte [Popular índices de texto completo](populate-full-text-indexes.md).|
     |**Agendas**|Use esta página para criar ou gerenciar agendas para executar um trabalho do SQL Server Agent que inicia uma população incremental de tabela para as populações de índice de texto completo. Para obter mais informações, consulte [Popular índices de texto completo](../../relational-databases/search/populate-full-text-indexes.md).<br /><br /> Observação: Depois que você sair da caixa de diálogo **Propriedades do Índice de Texto Completo**, qualquer agenda recém-criada será associada a um trabalho do SQL Server Agent (Iniciar População Incremental da Tabela em *nome_do_banco_de_dados*.*nome_da_tabela*).|  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] para salvar quaisquer alterações e sair da caixa de diálogo **Propriedades do índice de texto completo**.  

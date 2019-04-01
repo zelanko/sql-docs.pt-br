@@ -14,12 +14,12 @@ ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 02f99b295f653719231ff19d4dae0df0e82218b8
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.openlocfilehash: d4ab475b4829cf966777df9bb6524ac7167be091
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590481"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527234"
 ---
 # <a name="about-change-data-capture-sql-server"></a>Sobre o change data capture (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -119,7 +119,7 @@ Considere uma das seguintes abordagens para garantir que os dados capturados da 
 
 Por exemplo, se você tiver um banco de dados que usa uma ordenação SQL_Latin1_General_CP1_CI_AS, considere a seguinte tabela:
 
-```tsql
+```sql
 CREATE TABLE T1( 
      C1 INT PRIMARY KEY, 
      C2 VARCHAR(10) collate Chinese_PRC_CI_AI)
@@ -127,7 +127,7 @@ CREATE TABLE T1(
 
 A CDA poderá não capturar os dados binários para a coluna C2, porque sua ordenação é diferente (Chinese_PRC_CI_AI). Use NVARCHAR para evitar esse problema:
 
-```tsql
+```sql
 CREATE TABLE T1( 
      C1 INT PRIMARY KEY, 
      C2 NVARCHAR(10) collate Chinese_PRC_CI_AI --Unicode data type, CDC works well with this data type)

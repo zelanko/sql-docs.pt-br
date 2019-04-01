@@ -3,18 +3,19 @@ title: Virtualizar dados externos no SQL Server 2019 CTP 2.0 | Microsoft Docs
 description: Esta página fornece detalhes sobre as etapas para usar o assistente Criar tabela externa para Fontes de dados relacionais
 author: Abiola
 ms.author: aboke
+ms.reviewer: jroth
 manager: craigg
-ms.date: 12/11/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: a8f5f55dfa0a569ec88542f819e30d21889997e3
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 45cde8d0e42c2e85238bf3d42fc8835584083d27
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596667"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510973"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>Usar o Assistente de Tabela Externa com fontes de dados relacionais
 

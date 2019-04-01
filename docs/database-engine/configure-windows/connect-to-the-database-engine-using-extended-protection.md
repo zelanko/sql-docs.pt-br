@@ -18,12 +18,12 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3d911c26eee5893d6817fe98b7a982e2ce25316f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 185c03ef5c5ffdd35a1d32df6fecb29568d5ab82
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133206"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657800"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Conectar-se ao mecanismo de banco de dados usando proteção estendida
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "54133206"
   
 -   [Autenticação Integrada do Windows com Proteção Estendida](https://msdn.microsoft.com/library/dd639324.aspx)  
   
--   [Microsoft Security Advisory (973811), Proteção Estendida para Autenticação](https://www.microsoft.com/technet/security/advisory/973811.mspx)  
+-   [Microsoft Security Advisory (973811), Proteção Estendida para Autenticação](/security-updates/SecurityAdvisories/2009/973811)
   
 ## <a name="settings"></a>Configurações  
  Há três configurações de conexão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que afetam a associação de serviço e de canal. As configurações podem ser definidas com o uso do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager ou da WMI e podem ser exibidas usando-se a faceta **Configurações de Protocolo de Servidor** do Gerenciamento Baseado em Diretivas.  

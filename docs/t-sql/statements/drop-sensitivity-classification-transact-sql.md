@@ -1,6 +1,6 @@
 ---
 title: DESCARTAR CLASSIFICAÇÃO DE CONFIDENCIALIDADE (Transact-SQL) | Microsoft Docs
-ms.date: 06/17/2018
+ms.date: 03/25/2019
 ms.reviewer: ''
 ms.prod: sql
 ms.technology: t-sql
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - information types
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 82bd6847bd50d8ba43795f56deab4a6f08cc29cc
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 871822e57e9109455614e1391a28d87a6d9e6b90
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980102"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493088"
 ---
 # <a name="drop-sensitivity-classification-transact-sql"></a>DESCARTAR CLASSIFICAÇÃO DE CONFIDENCIALIDADE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
 Descarta metadados de classificação de confidencialidade de uma ou mais colunas do banco de dados.
 
@@ -79,7 +79,7 @@ DROP SENSITIVITY CLASSIFICATION FROM
     dbo.sales.price
 ```
 
-### <a name="b-dropping-classification-from-multiple-columns"></a>b. Descartar a classificação de várias colunas
+### <a name="b-dropping-classification-from-multiple-columns"></a>B. Descartar a classificação de várias colunas
 
 O exemplo a seguir remove a classificação das colunas `dbo.sales.price`, `dbo.sales.discount`, e `SalesLT.Customer.Phone`.  
 

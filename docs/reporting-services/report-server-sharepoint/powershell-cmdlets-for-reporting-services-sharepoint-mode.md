@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b9ae80895fa2cfd316e455e5084e5c1330365a62
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+ms.openlocfilehash: b584c7fc3ffee49bf2d63fd95c8a8e23f0b09013
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504295"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657680"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Cmdlets do PowerShell para o modo do SharePoint do Reporting Services
 
@@ -34,7 +34,7 @@ Quando você instala o modo do SharePoint do SQL Server 2016 Reporting Services,
 
 ## <a name="cmdlet-summary"></a>Resumo do cmdlet
 
- Para executar os cmdlets, é necessário abrir o Shell de Gerenciamento do SharePoint. Você também pode usar o editor de interface gráfica do usuário incluído no Microsoft Windows, o **Ambiente de Script Integrado do Windows PowerShell (ISE)**. Para obter mais informações, consulte [Starting Windows PowerShell on Windows Server (Iniciando o Windows PowerShell no Windows Server)](https://technet.microsoft.com/library/hh847814.aspx). Nos resumos de cmdlet a seguir, as referências a ‘bancos de dados’ do aplicativo de serviço referem-se a todos os bancos de dados criados e usados por um aplicativo de serviço do Reporting Services. Isso inclui a os bancos de dados de configuração, alerta e temp.  
+ Para executar os cmdlets, é necessário abrir o Shell de Gerenciamento do SharePoint. Você também pode usar o editor de interface gráfica do usuário incluído no Microsoft Windows, o **Ambiente de Script Integrado do Windows PowerShell (ISE)**. Para obter mais informações, consulte [Starting Windows PowerShell on Windows Server (Iniciando o Windows PowerShell no Windows Server)](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell). Nos resumos de cmdlet a seguir, as referências a ‘bancos de dados’ do aplicativo de serviço referem-se a todos os bancos de dados criados e usados por um aplicativo de serviço do Reporting Services. Isso inclui a os bancos de dados de configuração, alerta e temp.  
   
  Se uma mensagem de erro semelhante à seguinte for exibida quando você digitar os exemplos do PowerShell:  
   
@@ -94,7 +94,7 @@ Quando você instala o modo do SharePoint do SQL Server 2016 Reporting Services,
 |Mount-SPRSDatabase|Monta os bancos de dados de um aplicativo do serviço Reporting Services.|  
 |New-SPRSDatabase|Cria novos bancos de dados do aplicativo de serviço para o aplicativo do serviço Reporting Services especificado.|  
 |Get-SPRSDatabaseCreationScript|Gera o script de criação de banco de dados na tela de um aplicativo do serviço Reporting Services. Assim, você pode executar o script no SQL Server Management Studio.|  
-|Get-SPRSDatabase|Obtém um ou mais bancos de dados de aplicativo do serviço Reporting Services. Use o comando para obter a ID do banco de dados do aplicativo de serviço para que você possa usar o comdlet Set-SPRSDatabase para alterar as propriedades, por exemplo `querytimeout`. Veja o exemplo neste tópico, [Obter e definir propriedades do Banco de dados do aplicativo Reporting Services](#bkmk_example_db_properties).|  
+|Get-SPRSDatabase|Obtém um ou mais bancos de dados de aplicativo do serviço Reporting Services. Use o comando para obter a ID do banco de dados do aplicativo de serviço para que você possa usar o comdlet Set-SPRSDatabase para alterar as propriedades, por exemplo `querytimeout`. Veja o exemplo neste tópico, [Obter e definir propriedades do Banco de dados do aplicativo Reporting Services](#get-and-set-properties-of-the-reporting-service-application-database).|  
 |Get-SPRSDatabaseRightsScript|Gera o script de direitos de banco de dados na tela de um aplicativo do serviço Reporting Services. O usuário e o banco de dados desejados serão solicitados e o transact SQL que você pode executar para modificar permissões é retornado. Assim, você pode executar esse script no SQL Server Management Studio.|  
 |Get-SPRSDatabaseUpgradeScript|Gera um script de atualização de banco de dados na tela. O script atualizará os bancos de dados do aplicativo do serviço Reporting Services para a versão de banco de dados da instalação atual do Reporting Services.|  
   

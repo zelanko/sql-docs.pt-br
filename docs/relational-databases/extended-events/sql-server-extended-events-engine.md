@@ -14,14 +14,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 740eb671eddccc77de58013fac80273fcd2cdc4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ccd0d4878b7f83634babf7c9dc451a28e56dbc8
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627094"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478001"
 ---
 # <a name="sql-server-extended-events-engine"></a>Mecanismo de eventos estendidos do SQL Server
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   O mecanismo de Eventos Estendidos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é uma coleção de serviços e objetos que:  

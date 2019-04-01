@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: genemi
 ms.technology: xevents
-ms.topic: conceptual
+ms.topic: tutorial
 helpviewer_keywords:
 - extended events [SQL Server], system health session
 - extended events [SQL Server], system_health session
@@ -17,14 +17,15 @@ author: yualan
 ms.author: alayu
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 04c32636d566cca1c5dd280b20b59aba2614dc56
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 86060ab437019e19c5b6f47e41df96ddc206a582
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043077"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477961"
 ---
 # <a name="use-the-ssms-xevent-profiler"></a>Usar o XEvent Profiler do SSMS
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 O XEvent Profiler do SSMS é um recurso do SSMS (SQL Server Management Studio) que exibe uma janela do visualizador dinâmico de eventos estendidos. Esta visão geral descreve os motivos para usar esse criador de perfil, os principais recursos e as instruções para começar a exibir eventos estendidos.
 

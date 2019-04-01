@@ -15,14 +15,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 19d870d64816dfea011bc0a5c245b5a18a8f5aa3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: be4d5d7e57d967a660eb822542c6fe167e89f690
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675815"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478054"
 ---
 # <a name="sql-server-extended-events-packages"></a>Pacotes de Eventos Estendidos do SQL Server
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Um pacote é um contêiner para objetos de Eventos Estendidos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Há três tipos de pacotes de Eventos Estendidos que incluem o seguinte:  

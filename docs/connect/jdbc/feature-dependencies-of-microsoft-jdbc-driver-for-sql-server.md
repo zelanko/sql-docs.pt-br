@@ -1,7 +1,7 @@
 ---
 title: Dependências de recurso do Microsoft JDBC Driver para SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 02/06/2019
+ms.date: 02/07/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 26402f5b15fa7dd8e24b13f3adc41836ff275228
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: 820cc9f7faf3144852b761ac8b9ea3819935215f
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154681"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566405"
 ---
 # <a name="feature-dependencies-of-the-microsoft-jdbc-driver-for-sql-server"></a>Dependências de recurso do Microsoft JDBC Driver para SQL Server
 
@@ -99,8 +99,8 @@ Projetos específicos que exigem qualquer um dos recursos anteriores precisam de
 
 ### <a name="working-with-the-azure-key-vault-provider"></a>Trabalhando com o provedor do Azure Key Vault:
 
-- Driver JDBC versão 7.2.1 - versões de dependência: Azure-Keyvault (versão 1.2.0), o Azure-Keyvault-Webkey (versão 1.2.0), o Adal4j (versão 1.6.3), cliente-tempo de execução-para-AutoRest (1.6.5) e suas dependências ([doaplicativodeexemplo](../../connect/jdbc/azure-key-vault-sample.md))
-- Driver JDBC versão 7.0.0 - versões de dependência: Azure-Keyvault (versão 1.0.0), o Adal4j (versão 1.6.0) e suas dependências ([aplicativo de exemplo](../../connect/jdbc/azure-key-vault-sample.md))
+- Driver JDBC versão 7.2.1 - versões de dependência: Azure-Keyvault (versão 1.2.0), o Azure-Keyvault-Webkey (versão 1.2.0), o Adal4j (versão 1.6.3), cliente-tempo de execução-para-AutoRest (1.6.5) e suas dependências ([doaplicativodeexemplo](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
+- Driver JDBC versão 7.0.0 - versões de dependência: Azure-Keyvault (versão 1.0.0), o Adal4j (versão 1.6.0) e suas dependências ([aplicativo de exemplo](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
 - JDBC Driver versão 6.4.0 - versões de dependência: Azure-Keyvault (versão 1.0.0), o Adal4j (versão 1.4.0) e suas dependências ([aplicativo de exemplo](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
 - Driver JDBC versão 6.2.2 - versões de dependência: Azure-Keyvault (versão 1.0.0), o Adal4j (versão 1.4.0) e suas dependências ([aplicativo de exemplo](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
 - Driver JDBC versão 6.0.0 - versões de dependência: Azure-Keyvault (versão 0.9.7), o Adal4j (versão 1.3.0) e suas dependências ( [aplicativo de exemplo](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md))
@@ -127,4 +127,4 @@ Você pode obter um [aplicativo de exemplo](../../connect/jdbc/connecting-using-
 ## <a name="see-also"></a>Confira também
 
 [Repositório GitHub do Driver JDBC](https://github.com/microsoft/mssql-jdbc)  
- [Referência de API do JDBC Driver](../../connect/jdbc/reference/jdbc-driver-api-reference.md)
+[Referência de API do JDBC Driver](../../connect/jdbc/reference/jdbc-driver-api-reference.md)

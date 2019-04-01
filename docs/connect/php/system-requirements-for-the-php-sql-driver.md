@@ -13,12 +13,12 @@ ms.assetid: 5db4b75f-c605-4785-9560-399a533c0fc9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2347dc6f1d18afb4f26dc137a1158ceb53663050
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+ms.openlocfilehash: d53a3233d2e2af6aa9806cdea06b2a203e31bf89
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744506"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658402"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Requisitos do sistema para os Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,7 +45,7 @@ Para obter informações sobre como baixar e instalar os últimos binários est�
 
 -   Uma versão do arquivo do driver deve estar no seu diretório de extensões do PHP. Ver [versões de Driver](#driver-versions) para obter informações sobre os diferentes arquivos de driver.  Para baixar os drivers, confira [Baixar Microsoft Drivers for PHP for SQL Server](../../connect/php/download-drivers-php-sql-server.md). Para obter informações sobre como configurar o driver para o PHP, confira [Carregando os Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md).
 
--   Um servidor Web é necessário. O servidor Web deve ser configurado para executar o PHP. Para obter informações sobre como hospedar aplicativos PHP com o IIS, consulte a [tutorial no site de web do PHP](https://php.net/manual/fa/install.windows.iis.php).  
+-   Um servidor Web é necessário. O servidor Web deve ser configurado para executar o PHP. Para obter informações sobre como hospedar aplicativos PHP com o IIS, consulte a [tutorial no site de web do PHP](http://docs.php.net/manual/da/install.windows.iis7.php).
 
     O [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] foi testado usando o IIS 10 com FastCGI.  
 

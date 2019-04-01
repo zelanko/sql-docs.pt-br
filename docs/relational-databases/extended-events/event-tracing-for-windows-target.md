@@ -16,14 +16,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 450e93877ecabb524e5307a5ec940de32859ead6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d12e2afd2e2cf7e7558b832d97a986ad9c8ad943
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656946"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478111"
 ---
 # <a name="event-tracing-for-windows-target"></a>destino do rastreamento de eventos do Windows
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Antes de usar o Rastreamento de Eventos do Windows (ETW) como destino, é recomendável ter um conhecimento prático do ETW. O rastreamento ETW é usado junto com o recurso Eventos Estendidos ou como um consumidor de Eventos Estendidos. Os links externos a seguir fornecem um ponto de partida para a obtenção de informações gerais do ETW:  

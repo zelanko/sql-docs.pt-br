@@ -16,12 +16,12 @@ ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 9fcb107c5ae7a22fa2705fda0580e0284940f694
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 0f0dec8faf609eeef7d82e2d746a0f84aec6a6de
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380687"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658440"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, objeto Recursos Preteridos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -285,7 +285,7 @@ Esta tabela a seguir descreve o objeto de desempenho **Recursos Preteridos** do 
  [Classe de evento Deprecation Announcement](../../relational-databases/event-classes/deprecation-announcement-event-class.md)   
  [Classe de evento Deprecation Final Support](../../relational-databases/event-classes/deprecation-final-support-event-class.md)   
  [Funcionalidade do Mecanismo de Banco de Dados descontinuada no SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
- [Recursos de pesquisa de texto completo descontinuados no SQL Server 2016](https://msdn.microsoft.com/library/70587b3c-cc77-4681-924d-a1df7cdf1517)   
+ [Recursos de pesquisa de texto completo descontinuados no SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
  [Usar objetos do SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md)  
   
   

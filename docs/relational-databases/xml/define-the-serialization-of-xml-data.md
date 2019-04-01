@@ -16,15 +16,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], serialization
 - typed XML
 ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d6428b2715cbac122bec7cb284d171ee6304472f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 077490ef3af4e144dbe414fde02ab94b87c87511
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705844"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512613"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>Definir a serialização de dados XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))
 <Δ/>  
 ```  
   
- Se o tipo de destino SQL for VARCHAR ou NCHAR, o resultado será serializado na codificação correspondente à página de código de agrupamento do banco de dados sem uma marca de ordem de bytes ou declaração XML. Se o tipo de destino for muito pequeno ou se o valor não puder ser mapeado para a página de código de agrupamento de destino, será retornado um erro.  
+ Se o tipo de destino SQL for VARCHAR ou NCHAR, o resultado será serializado na codificação correspondente à página de código de ordenação do banco de dados sem uma marca de ordem de bytes ou declaração XML. Se o tipo de destino for muito pequeno ou se o valor não puder ser mapeado para a página de código de ordenação de destino, será retornado um erro.  
   
  Por exemplo:  
   
@@ -67,7 +67,7 @@ select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))
 select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))  
 ```  
   
- Isso pode resultar em um erro, se a página de código de agrupamento atual não puder representar o caractere Unicode Δ ou ela o representará na codificação especificada.  
+ Isso pode resultar em um erro, se a página de código de ordenação atual não puder representar o caractere Unicode Δ ou ela o representará na codificação especificada.  
   
  Ao retornar resultados XML para o lado do cliente, os dados serão enviados em codificação UTF-16. O provedor do lado do cliente exporá os dados de acordo com as regras de sua API.  
   

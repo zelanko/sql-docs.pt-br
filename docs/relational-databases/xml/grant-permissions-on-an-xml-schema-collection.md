@@ -11,15 +11,15 @@ helpviewer_keywords:
 - granting permissions [SQL Server], XML schema collections
 - ALTER permission
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5acba25c4a393723c4311cc0070b6dee165757c2
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 556c4cb0a5b51adcd87f4308e296459650eeadc1
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256651"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510423"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>Conceder permissões em uma coleção de esquemas XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -122,7 +122,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### <a name="b-granting-permission-to-use-an-existing-xml-schema-collection"></a>b. Concedendo permissão para usar uma coleção de esquema XML existente  
+### <a name="b-granting-permission-to-use-an-existing-xml-schema-collection"></a>B. Concedendo permissão para usar uma coleção de esquema XML existente  
  O exemplo seguinte mostra ainda mais o modelo de permissão para a coleção de esquema XML. Ele mostra como permissões diferentes são necessárias para criar e usar a coleção de esquema XML.  
   
  O exemplo cria um banco de dados de teste e um logon, `TestLogin1`. `TestLogin1` cria uma coleção de esquemas XML no banco de dados. Em seguida, o logon cria uma tabela e usa a coleção de esquemas XML para criar uma coluna do tipo xml. Em seguida, o usuário insere dados e os consulta. Todas essas etapas requerem as permissões de esquema necessárias conforme mostrado no código.  

@@ -16,14 +16,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 51124deb3e2c5d9acc6de2108b3345d50f062427
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: f0fad5ed2e912eea19ec8eb2cdac38ee949b7bad
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398819"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478201"
 ---
 # <a name="sql-server-extended-events-sessions"></a>Sessões de eventos estendidos do SQL Server
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Uma sessão de eventos estendidos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é criada no processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está hospedando o mecanismo de eventos estendidos. Os seguintes aspectos de uma sessão de eventos estendidos fornecem um contexto para entender a infraestrutura de eventos estendidos e o processamento geral que ocorre:  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - denying permissions [SQL Server], XML server collections
 ms.assetid: e2b300b0-e734-4c43-a4da-c78e6e5d4fba
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b615f54cc13f432500710a616e995cdffc0c85c8
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: baa1f607e9bdce0dfedc989125e5d29111d44f93
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256501"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511603"
 ---
 # <a name="deny-permissions-on-an-xml-schema-collection"></a>Recusar permissões em uma coleção de esquemas XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -111,7 +111,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### <a name="b-denying-permissions-on-an-xml-schema-collection"></a>b. Negando permissões em uma coleção de esquemas XML  
+### <a name="b-denying-permissions-on-an-xml-schema-collection"></a>B. Negando permissões em uma coleção de esquemas XML  
  O exemplo a seguir mostra como uma permissão específica em uma coleção de esquema XML pode ser negada para um logon. Neste exemplo, a permissão REFERENCES é negada a um logon de teste em uma coleção de esquema XML.  
   
  O exemplo cria um usuário, `TestLogin1`, e um banco de dados. Ele também cria um esquema relacional, além do esquema `dbo` , no banco de dados. Inicialmente, a permissão `CREATE XML SCHEMA` permite que o usuário crie uma coleção de esquema em qualquer lugar no banco de dados.  

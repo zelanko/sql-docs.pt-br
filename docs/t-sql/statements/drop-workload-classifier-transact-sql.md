@@ -21,12 +21,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 44ebb822a6596d4c1436f5c7bf36d032a987069c
-ms.sourcegitcommit: 05bb10710489bef16bb2c53b3803e9b8eea1429a
+ms.openlocfilehash: 915d689b90bf5103d276ee711e34102e05f49330
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57988782"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58513083"
 ---
 # <a name="drop-workload-classifier-transact-sql-preview"></a>DROP WORKLOAD CLASSIFIER (Transact-SQL) (Versão prévia)
 
@@ -38,7 +38,7 @@ Descarta um classificador de gerenciamento de carga de trabalho definido pelo us
   
 ## <a name="syntax"></a>Sintaxe  
 
-```sql
+```
 DROP WORKLOAD CLASSIFIER classifier_name;
 ```
 

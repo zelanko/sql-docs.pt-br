@@ -14,12 +14,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 04e14297fe4eb7cdad254bc888cf0657d4a80298
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 898125f2143f3470b340a565c3d72e021c19a721
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669222"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657221"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>Certificados e chaves assimétricas do SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,8 +71,8 @@ ms.locfileid: "51669222"
 |||  
 |-|-|  
 |Ferramenta|Finalidade|  
-|[makecert](https://msdn2.microsoft.com/library/bfsktky3\(VS.80\).aspx)|Cria certificados|  
-|[sn](https://msdn2.microsoft.com/library/k5b5tt23\(VS.80\).aspx)|Cria nomes seguros para chaves simétricas.|  
+|[makecert](/windows/desktop/SecCrypto/makecert)|Cria certificados|  
+|[sn](/dotnet/framework/tools/sn-exe-strong-name-tool)|Cria nomes seguros para chaves simétricas.|  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Escolher um algoritmo de criptografia](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  

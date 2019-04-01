@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 696d3bfc454e396f8cc590d3178f8ae54b89128a
-ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
+ms.openlocfilehash: 5007955504a0eb6501ee32600e9d4e86bc9e1feb
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54805712"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657640"
 ---
 # <a name="always-encrypted-wizard"></a>Assistente de Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ Use o **Assistente de Sempre Criptografado** para ajudar a proteger dados confid
  
    - **Armazenamento de uma chave mestra em AKV** Para saber mais, confira [Introdução ao Cofre de Chaves do Azure](https://azure.microsoft.com/documentation/articles/key-vault-get-started/).  
  
- - Para gerar uma chave mestra de coluna no Cofre de Chaves do Azure, o usuário deve ter as permissões **WrapKey**, **UnwrapKey**, **Verify**e **Sign** para o cofre de chaves. Os usuários também podem precisar das permissões **Get**, **List**, **Create**, **Delete**, **Update**, **Import**, **Backup**e **Restore** . Saiba mais em [O que é o Azure Key Vault?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/) e [Set-AzKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx).  
+ - Para gerar uma chave mestra de coluna no Cofre de Chaves do Azure, o usuário deve ter as permissões **WrapKey**, **UnwrapKey**, **Verify**e **Sign** para o cofre de chaves. Os usuários também podem precisar das permissões **Get**, **List**, **Create**, **Delete**, **Update**, **Import**, **Backup**e **Restore** . Saiba mais em [O que é o Azure Key Vault?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/) e [Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy).  
  
  - O assistente só oferecia suporte a duas opções. Os Módulos de Segurança de Hardware e os repositórios de cliente devem ser configurados com [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)].  
  

@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c25ae621c281e0bafd3c2c7e683a05cfc55746b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 15688c3767b691e8a59568143db390eb82dd3993
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128361"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658420"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -324,7 +324,7 @@ As opções SET na coluna Valor necessário são necessárias sempre que ocorrer
   
  Para obter mais informações sobre índices filtrados, consulte [Criar índices filtrados](../../relational-databases/indexes/create-filtered-indexes.md). 
   
-##  <a name="LimitRest"></a> Limitações e Restrições  
+##  <a name="LimitRest"></a> Limitações e restrições  
 
 **Cada coluna em um índice columnstore precisa ser de um dos seguintes tipos de dados de negócios comuns:** 
 -   datetimeoffset [ ( *n* ) ]  
@@ -425,7 +425,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci_Simple ON SimpleTable;
 GO  
 ```  
   
-### <a name="b-convert-a-clustered-index-to-a-clustered-columnstore-index-with-the-same-name"></a>b. Converta um índice clusterizado em um índice columnstore clusterizado com o mesmo nome.  
+### <a name="b-convert-a-clustered-index-to-a-clustered-columnstore-index-with-the-same-name"></a>B. Converta um índice clusterizado em um índice columnstore clusterizado com o mesmo nome.  
  Este exemplo cria uma tabela com um índice clusterizado e, em seguida, demonstra a sintaxe de conversão do índice clusterizado em índice columnstore clusterizado. Isso altera o armazenamento da tabela inteira, de rowstore a columnstore.  
   
 ```sql  
@@ -614,7 +614,7 @@ ON SimpleTable
 GO  
 ```  
   
-### <a name="b-create-a-simple-nonclustered-columnstore-index-using-all-options"></a>b. Criar um índice columnstore não clusterizado simples usando todas as opções  
+### <a name="b-create-a-simple-nonclustered-columnstore-index-using-all-options"></a>B. Criar um índice columnstore não clusterizado simples usando todas as opções  
  O exemplo a seguir demonstra a sintaxe de criação de um índice columnstore não clusterizado usando todas as opções.  
   
 ```sql  
@@ -694,7 +694,7 @@ ON xdimProduct
 WITH ( DROP_EXISTING = ON );  
 ```  
   
-### <a name="b-rebuild-a-clustered-columnstore-index"></a>b. Recompilar um índice columnstore clusterizado  
+### <a name="b-rebuild-a-clustered-columnstore-index"></a>B. Recompilar um índice columnstore clusterizado  
  Com base no exemplo anterior, este exemplo usa CREATE CLUSTERED COLUMNSTORE INDEX para recompilar o índice columnstore clusterizado existente chamado cci_xDimProduct.  
   
 ```sql  
@@ -735,7 +735,7 @@ WITH ( DROP_EXISTING = ON);
 ```  
   
 ### <a name="e-convert-a-columnstore-table-back-to-a-rowstore-heap"></a>E. Converter uma tabela columnstore novamente em um heap rowstore  
- Use [DROP INDEX (SQL Server PDW)](https://msdn.microsoft.com/f59cab43-9f40-41b4-bfdb-d90e80e9bf32) para remover o índice columnstore clusterizado e converter a tabela em um heap rowstore. Este exemplo converte a tabela cci_xDimProduct em um heap rowstore. A tabela continua a ser distribuída, mas é armazenada como um heap.  
+ Use [DROP INDEX (SQL Server PDW)](drop-index-transact-sql.md) para remover o índice columnstore clusterizado e converter a tabela em um heap rowstore. Este exemplo converte a tabela cci_xDimProduct em um heap rowstore. A tabela continua a ser distribuída, mas é armazenada como um heap.  
   
 ```sql  
 --Drop the clustered columnstore index. The table continues to be distributed, but changes to a heap.  

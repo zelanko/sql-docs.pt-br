@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 71e72818b9ab5269d898f00a4110936478da35af
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: e3a4da06849b245ba72d3ac87d5db04309f10823
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802362"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658380"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -437,7 +437,7 @@ INSERT INTO Production.UnitMeasure
 VALUES (N'FT', N'Feet', '20080414');  
 ```  
   
-#### <a name="b-inserting-multiple-rows-of-data"></a>b. Inserindo várias linhas de dados  
+#### <a name="b-inserting-multiple-rows-of-data"></a>B. Inserindo várias linhas de dados  
  O exemplo a seguir usa o [construtor de valor de tabela](../../t-sql/queries/table-value-constructor-transact-sql.md) para inserir três linhas na tabela `Production.UnitMeasure` do banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] em uma única instrução INSERT. Como os valores de todas as colunas são fornecidos e listados na mesma ordem que as colunas da tabela, os nomes das colunas não precisam ser especificados na lista de colunas.  
   
 ```sql
@@ -999,7 +999,7 @@ OPTION ( LABEL = N'label1' );
 ```  
   
 #### <a name="y-using-a-label-and-a-query-hint-with-the-insert-statement"></a>Y. Usando um rótulo e uma dica de consulta com a instrução INSERT  
- Esta consulta mostra a sintaxe básica de uso de um rótulo e uma dica de junção de consulta com a instrução INSERT. Depois que a consulta é enviada para o nó de Controle, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], em execução nos nós de Computação, aplicará a estratégia de junção hash ao gerar o plano de consulta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre dicas de junção e como usar a cláusula OPTION, consulte [OPTION (SQL Server PDW)](https://msdn.microsoft.com/72bbce98-305b-42fa-a19f-d89620621ecc).  
+ Esta consulta mostra a sintaxe básica de uso de um rótulo e uma dica de junção de consulta com a instrução INSERT. Depois que a consulta é enviada para o nó de Controle, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], em execução nos nós de Computação, aplicará a estratégia de junção hash ao gerar o plano de consulta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre dicas de junção e como usar a cláusula OPTION, consulte [OPTION (SQL Server PDW)](../../t-sql/queries/option-clause-transact-sql.md).  
   
 ```sql
 -- Uses AdventureWorks  

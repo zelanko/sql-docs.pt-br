@@ -4,17 +4,17 @@ description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 07/13/2017
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: d89d70b7aae73acd965f053a993432c62878351f
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 63a8812e4596233db2bd5b5675e29d340b3df120
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979642"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493570"
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>Configurar o SQL Server para enviar comentários à Microsoft
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

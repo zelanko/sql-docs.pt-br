@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: xevents
-ms.topic: conceptual
+ms.topic: tutorial
 helpviewer_keywords:
 - queries [SQL Server], extended events
 - queries [SQL Server], holding locks
@@ -18,14 +18,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7851223d0f6935f279fe20f59d021489be99c2f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61651a78f741cfddecd232cfde14b54842d0d4d6
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739914"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478011"
 ---
 # <a name="determine-which-queries-are-holding-locks"></a>Determinar quais consultas estão mantendo bloqueios
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Muitas vezes, os administradores de banco de dados precisam identificar a origem de bloqueios que estão obstruindo o desempenho do banco de dados.  
