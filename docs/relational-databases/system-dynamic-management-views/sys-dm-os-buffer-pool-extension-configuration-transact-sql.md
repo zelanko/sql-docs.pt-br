@@ -1,7 +1,7 @@
 ---
 title: sys.dm_os_buffer_pool_extension_configuration (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/08/2017
+ms.date: 09/09/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
@@ -19,28 +19,30 @@ ms.assetid: d52cc481-4d29-4f33-b63d-231ec35d092f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef0eea139b491c565b8635daf69cefff61492688
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6d647fc2a1a4d5f88a85ec5917125527004570c
+ms.sourcegitcommit: 00e0fa2c0b49a1ce94c17b74b4bd5210098f8367
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755834"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58788053"
 ---
 # <a name="sysdmosbufferpoolextensionconfiguration-transact-sql"></a>sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Retorna informações de configuração sobre a extensão do pool de buffers no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Retorna uma linha para cada arquivo de extensão do pool de buffers.  
   
 
   
-|Nome da coluna|Tipo de dados|Description|  
-|-----------------|---------------|-----------------|  
+| Nome da coluna | Tipo de dados | Descrição |
+| :---------- | :-------- | :---------- |
 |path|**nvarchar**(256)|O caminho e o nome de arquivo do cache de extensão do pool de buffers. Anulável.|  
 |file_id|**int**|ID do arquivo de extensão do pool de buffers. Não permite valor nulo.|  
 |state|**int**|O estado do recurso de extensão do pool de buffers. Não permite valor nulo.<br /><br /> 0 - Extensão do pool de buffers desabilitada<br /><br /> 1 - Extensão do pool de buffers desabilitando<br /><br /> 2 - reservado para uso futuro<br /><br /> 3 - Extensão do pool de buffers habilitando<br /><br /> 4 - Reservado para uso futuro<br /><br /> 5 - Extensão do pool de buffers habilitada|  
-|state_description|**nvarchar**(60)|Descreve o estado do recurso de extensão do pool de buffers. Permite valor nulo.<br /><br /> 0 = EXTENSÃO DO POOL DE BUFFERS DESABILITADA<br /><br /> 1 = EXTENSÃO DO POOL DE BUFFERS HABILITADA|  
-|current_size_in_kb|**bigint**|Tamanho atual do arquivo de extensão do pool de buffers. Não permite valor nulo.|  
-  
+|state_description|**nvarchar**(60)|Descreve o estado do recurso de extensão do pool de buffers. Permite valor nulo.<br /><br /> 0 = EXTENSÃO DO POOL DE BUFFERS DESABILITADA<br /><br /> 5 = EXTENSÃO DO POOL DE BUFFERS HABILITADA|
+|current_size_in_kb|**bigint**|Tamanho atual do arquivo de extensão do pool de buffers. Não permite valor nulo.|
+| &nbsp; | &nbsp; | &nbsp; |
+
 ## <a name="permissions"></a>Permissões  
  , é necessário ter permissão VIEW SERVER STATE no servidor.  
   
