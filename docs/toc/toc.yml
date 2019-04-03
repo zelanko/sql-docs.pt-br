@@ -80,6 +80,8 @@ items:
         href: ../big-data-cluster/deploy-on-minikube.md
   - name: Conceitos
     items:
+    - name: Implantação de aplicativo
+      href: ../big-data-cluster/concept-application-deployment.md
     - name: Controlador
       href: ../big-data-cluster/concept-controller.md
     - name: Instância principal
@@ -17271,9 +17273,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: Manipulando namespaces em XQuery
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: f2691a64da3ac891be319d82d427c7ed9b5db222
-ms.sourcegitcommit: 00e0fa2c0b49a1ce94c17b74b4bd5210098f8367
+ms.openlocfilehash: 7d3621712c6714eaeb2dbdb6a339088ac2fc7179
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58788153"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872346"

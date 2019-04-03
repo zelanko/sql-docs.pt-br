@@ -1,6 +1,6 @@
 ---
 title: Como implantar
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Aprenda a implantar clusters de big data de 2019 do SQL Server (versão prévia) no Kubernetes.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 5efefd5bc94aa8d1842ee244c947e48e90604834
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: c991181fc79627aee1f2c2e397ad7d9b1aaf953f
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493728"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860588"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Como implantar clusters de grandes dados do SQL Server no Kubernetes
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Cluster de big data do SQL Server pode ser implantado como contêineres do docker em um cluster Kubernetes. Isso é uma visão geral das etapas de instalação e configuração:
 
@@ -53,7 +55,7 @@ Você pode optar por implantar Kubernetes em qualquer uma das três maneiras:
 
 Antes de implantar o cluster de big data do SQL Server 2019, primeiramente [instalar as ferramentas de big data](deploy-big-data-tools.md):
 - **mssqlctl**
-- **kubectl**
+- **Kubectl**
 - **Azure Data Studio**
 - **Extensão do SQL Server de 2019**
 
@@ -66,7 +68,7 @@ Depois de configurar o cluster Kubernetes, você pode prosseguir com a implanta�
 
 Para implantar um cluster de big data no Azure com todas as configurações padrão para um ambiente de desenvolvimento/teste, siga as instruções neste artigo:
 
-[Guia de início rápido: Implantar um cluster de big data do SQL Server no Kubernetes](quickstart-big-data-cluster-deploy.md)
+[Início Rápido: Implantar um cluster de big data do SQL Server no Kubernetes](quickstart-big-data-cluster-deploy.md)
 
 Se você quiser personalizar sua implantação de cluster de big data de acordo com sua carga de trabalho necessidades de, siga as instruções no restante deste artigo.
 
@@ -336,9 +338,9 @@ Para monitorar ou solucionar problemas de uma implantação, use **kubectl** par
    | Serviço | Descrição |
    |---|---|
    | **endpoint-master-pool** | Fornece acesso para a instância mestre.<br/>(**EXTERNAL-IP, 31433** e o **SA** usuário) |
-   | **endpoint-controller** | Dá suporte a ferramentas e clientes que gerenciam o cluster. |
+   | **controlador de ponto de extremidade** | Dá suporte a ferramentas e clientes que gerenciam o cluster. |
    | **endpoint-service-proxy** | Fornece acesso para o [Portal de administração de Cluster](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**:30777/portal)|
-   | **endpoint-security** | Fornece acesso para o gateway HDFS/Spark.<br/>(**EXTERNAL-IP** e o **raiz** usuário) |
+   | **segurança de ponto de extremidade** | Fornece acesso para o gateway HDFS/Spark.<br/>(**EXTERNAL-IP** e o **raiz** usuário) |
 
 1. Use o [Portal de administração de Cluster](cluster-admin-portal.md) para monitorar a implantação na **implantação** guia. Você precisa esperar para o **ponto de extremidade de serviço de proxy** início antes de acessar esse portal, portanto, ele não estará disponível no início de uma implantação do serviço.
 

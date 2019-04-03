@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6f4758f443ebb5398ecc1e3b3d833d375b068c4a
-ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
+ms.openlocfilehash: 87488f36a4b4b01181cd973a75d6e5c7f2e233d7
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58080403"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860717"
 ---
 # <a name="sysdmexecqueryprofiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -34,64 +34,60 @@ ms.locfileid: "58080403"
 Monitora o progresso da consulta em tempo real, enquanto a consulta está em execução. Por exemplo, use este DMV para determinar que parte da consulta está executando lentamente. Adicione esse DMV com outros DMVs de sistema usando as colunas identificadas no campo de descrição. Ou, adicione esse DMV com outros contadores de desempenho (como o Monitor de Desempenho, xperf) usando colunas de carimbo de data/hora.  
   
 ## <a name="table-returned"></a>Tabela retornada  
- Os contadores retornados são por operador por thread. Os resultados são dinâmicos e não correspondem aos resultados das opções existentes, tal como SET STATISTICS XML ON, que só cria saída quando a consulta é concluída.  
+Os contadores retornados são por operador por thread. Os resultados são dinâmicos e não coincidem, como os resultados das opções existentes `SET STATISTICS XML ON` que só cria saída quando a consulta é concluída.  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|session_id|**smallint**|Identifica a sessão na qual esta consulta é executada. Referencia dm_exec_sessions.session_id.|  
-|request_id|**int**|Identifica a solicitação de destino. Referencia dm_exec_sessions.request_id.|  
+|session_id|**SMALLINT**|Identifica a sessão na qual esta consulta é executada. Referencia dm_exec_sessions.session_id.|  
+|request_id|**INT**|Identifica a solicitação de destino. Referencia dm_exec_sessions.request_id.|  
 |sql_handle|**varbinary(64)**|É um token que identifica exclusivamente o lote ou procedimento armazenado que a consulta faz parte. Referencia dm_exec_query_stats.sql_handle.|  
 |plan_handle|**varbinary(64)**|É um token que identifica exclusivamente um plano de execução de consulta para um lote que foi executado e seu plano reside no cache de plano ou em execução no momento. References dm_exec_query_stats.plan_handle.|  
 |physical_operator_name|**nvarchar(256)**|Nome do operador físico.|  
-|node_id|**int**|Identifica um nó do operador na árvore de consulta.|  
-|thread_id|**int**|Distingue os threads (para uma consulta paralela) que pertencem ao mesmo nó do operador de consulta.|  
+|node_id|**INT**|Identifica um nó do operador na árvore de consulta.|  
+|thread_id|**INT**|Distingue os threads (para uma consulta paralela) que pertencem ao mesmo nó do operador de consulta.|  
 |task_address|**varbinary(8)**|Identifica a tarefa do sistema operacional SQL que esse thread está usando. Referencia dm_os_tasks.task_address.|  
-|row_count|**bigint**|Número de linhas retornadas pelo operador até o momento.|  
-|rewind_count|**bigint**|Número de retrocessos até o momento.|  
-|rebind_count|**bigint**|Número de reassociações até o momento.|  
-|end_of_scan_count|**bigint**|Número de término de exames até o momento.|  
-|estimate_row_count|**bigint**|Número estimado de linhas. Pode ser útil comparar estimated_row_count com o row_count real.|  
-|first_active_time|**bigint**|A hora, em milissegundos, em que operador foi chamado primeiro.|  
-|last_active_time|**bigint**|A hora, em milissegundos, em que operador foi chamado por último.|  
-|open_time|**bigint**|Carimbo de data/hora quando aberto (em milissegundos).|  
-|first_row_time|**bigint**|Carimbo de data/hora quando a primeira linha foi aberta (em milissegundos).|  
-|last_row_time|**bigint**|Carimbo de data/hora quando a última linha foi aberta (em milissegundos).|  
-|close_time|**bigint**|Carimbo de data/hora quando fechado (em milissegundos).|  
-|elapsed_time_ms|**bigint**|Tempo total decorrido (em milissegundos) usado por operações do nó de destino até o momento.|  
-|cpu_time_ms|**bigint**|Total de uso de tempo (em milissegundos) de CPU por operações do nó de destino até o momento.|  
-|database_id|**smallint**|ID do banco de dados que contém o objeto no qual as leituras e gravações estão sendo realizadas.|  
-|object_id|**int**|O identificador do objeto no qual as leituras e gravações estão sendo realizadas. Referências sys.objects.object_id.|  
-|index_id|**int**|O índice (se houver) no qual o conjunto de linhas é aberto.|  
-|scan_count|**bigint**|Número de verificações de tabela/índice até o momento.|  
-|logical_read_count|**bigint**|Número de leituras lógicas até o momento.|  
-|physical_read_count|**bigint**|Número de leituras físicas até o momento.|  
-|read_ahead_count|**bigint**|Número de read-aheads até o momento.|  
-|write_page_count|**bigint**|Número de gravações de página até o momento devido ao derramamento.|  
-|lob_logical_read_count|**bigint**|Número de leituras lógicas LOB até o momento.|  
-|lob_physical_read_count|**bigint**|Número de leituras físicas LOB até o momento.|  
-|lob_read_ahead_count|**bigint**|Número de read-aheads LOB até o momento.|  
-|segment_read_count|**int**|Número de read-aheads de segmento até o momento.|  
-|segment_skip_count|**int**|Número de segmentos ignorados até o momento.| 
-|actual_read_row_count|**bigint**|Número de linhas lidas por um operador antes da aplicação de predicado residual.| 
-|estimated_read_row_count|**bigint**|**Aplica-se a:** Começando com [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Número estimado de linhas a serem lidos por um operador antes da aplicação de predicado residual.|  
+|row_count|**BIGINT**|Número de linhas retornadas pelo operador até o momento.|  
+|rewind_count|**BIGINT**|Número de retrocessos até o momento.|  
+|rebind_count|**BIGINT**|Número de reassociações até o momento.|  
+|end_of_scan_count|**BIGINT**|Número de término de exames até o momento.|  
+|estimate_row_count|**BIGINT**|Número estimado de linhas. Pode ser útil comparar estimated_row_count com o row_count real.|  
+|first_active_time|**BIGINT**|A hora, em milissegundos, em que operador foi chamado primeiro.|  
+|last_active_time|**BIGINT**|A hora, em milissegundos, em que operador foi chamado por último.|  
+|open_time|**BIGINT**|Carimbo de data/hora quando aberto (em milissegundos).|  
+|first_row_time|**BIGINT**|Carimbo de data/hora quando a primeira linha foi aberta (em milissegundos).|  
+|last_row_time|**BIGINT**|Carimbo de data/hora quando a última linha foi aberta (em milissegundos).|  
+|close_time|**BIGINT**|Carimbo de data/hora quando fechado (em milissegundos).|  
+|elapsed_time_ms|**BIGINT**|Tempo total decorrido (em milissegundos) usado por operações do nó de destino até o momento.|  
+|cpu_time_ms|**BIGINT**|Total de uso de tempo (em milissegundos) de CPU por operações do nó de destino até o momento.|  
+|database_id|**SMALLINT**|ID do banco de dados que contém o objeto no qual as leituras e gravações estão sendo realizadas.|  
+|object_id|**INT**|O identificador do objeto no qual as leituras e gravações estão sendo realizadas. Referências sys.objects.object_id.|  
+|index_id|**INT**|O índice (se houver) no qual o conjunto de linhas é aberto.|  
+|scan_count|**BIGINT**|Número de verificações de tabela/índice até o momento.|  
+|logical_read_count|**BIGINT**|Número de leituras lógicas até o momento.|  
+|physical_read_count|**BIGINT**|Número de leituras físicas até o momento.|  
+|read_ahead_count|**BIGINT**|Número de read-aheads até o momento.|  
+|write_page_count|**BIGINT**|Número de gravações de página até o momento devido ao derramamento.|  
+|lob_logical_read_count|**BIGINT**|Número de leituras lógicas LOB até o momento.|  
+|lob_physical_read_count|**BIGINT**|Número de leituras físicas LOB até o momento.|  
+|lob_read_ahead_count|**BIGINT**|Número de read-aheads LOB até o momento.|  
+|segment_read_count|**INT**|Número de read-aheads de segmento até o momento.|  
+|segment_skip_count|**INT**|Número de segmentos ignorados até o momento.| 
+|actual_read_row_count|**BIGINT**|Número de linhas lidas por um operador antes da aplicação de predicado residual.| 
+|estimated_read_row_count|**BIGINT**|**Aplica-se a:** Começando com [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Número estimado de linhas a serem lidos por um operador antes da aplicação de predicado residual.|  
   
 ## <a name="general-remarks"></a>Comentários gerais  
  Se o nó do plano de consulta não tiver nenhuma e/s, todos os I/O-related contadores são definidos como NULL.  
   
  Os contadores de I/O-related relatados por esta DMV são mais granulares do que aqueles relatados pelo `SET STATISTICS IO` duas maneiras a seguir:  
   
--   `SET STATISTICS IO` agrupa os contadores para todas as e/s para uma determinada tabela junto. Com este DMV, você terá contadores separados para cada nó no plano de consulta que realiza E/S para a tabela.  
+-   `SET STATISTICS IO` agrupa os contadores para todas as e/s para uma determinada tabela junto. Com essa DMV você terá contadores separados para cada nó no plano de consulta que realiza e/s na tabela.  
   
 -   Se houver uma varredura paralela, este DMV relata os contadores para cada um das threads paralelas que trabalham na varredura.
  
-Começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, as estatísticas de execução de consulta padrão infraestrutura de criação de perfil existe lado a lado com estatísticas de execução de consulta leve infraestrutura de criação de perfil. 
-
-`SET STATISTICS XML ON` e `SET STATISTICS PROFILE ON` sempre usar as estatísticas de execução de consulta padrão infraestrutura de criação de perfil.
-
-Para habilitar a saída em `sys.dm_exec_query_profiles` habilitar a infraestrutura de criação de perfil de consulta. Para obter mais informações, confira [Infraestrutura de Criação de Perfil de Consulta](../../relational-databases/performance/query-profiling-infrastructure.md).    
+Começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, o *infraestrutura de criação de perfil de estatísticas de execução de consulta padrão* existir lado a lado com uma *infraestrutura de criação de perfil de estatísticas de execução de consulta leve* . `SET STATISTICS XML ON` e `SET STATISTICS PROFILE ON` sempre usam o *infraestrutura de criação de perfil de estatísticas de execução de consulta padrão*. Para `sys.dm_exec_query_profiles` para ser preenchido, uma da consulta infra-estruturas de criação de perfil deve ser habilitada. Para obter mais informações, confira [Infraestrutura de Criação de Perfil de Consulta](../../relational-databases/performance/query-profiling-infrastructure.md).    
 
 >[!NOTE]
-> A consulta sob investigação deve iniciar depois que a infraestrutura de criação de perfil foi habilitada. Se a consulta já está em execução, iniciar uma sessão de evento estendido não produzirá resultados no DM exec_query_profiles.
+> A consulta sob investigação deve começar **após** a consulta a infraestrutura de criação de perfil foi habilitada, permitindo que ele depois que a consulta iniciada não produzirá os resultados em `sys.dm_exec_query_profiles`. Para obter mais informações sobre como habilitar a consulta infra-estruturas de criação de perfil, consulte [a infraestrutura de criação de perfil de consulta](../../relational-databases/performance/query-profiling-infrastructure.md).
 
 ## <a name="permissions"></a>Permissões  
 
@@ -132,6 +128,4 @@ ORDER BY node_id;
 ## <a name="see-also"></a>Consulte também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funções e exibições de gerenciamento dinâmico relacionadas à execução &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
-  
-  
-
+ 
