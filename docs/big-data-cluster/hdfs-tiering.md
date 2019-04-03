@@ -1,6 +1,6 @@
 ---
 title: Configurar a disposição em camadas do HDFS
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Este artigo explica como configurar o HDFS disposição em camadas para montar um sistema de arquivo externo do armazenamento do Azure Data Lake no HDFS em um cluster de big data do SQL Server 2019 (visualização).
 author: nelgson
 ms.author: negust
@@ -10,14 +10,16 @@ ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1199d8d522df83c626f04f30c8937b57a5359f5c
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 2542c7c05b222517ae9f4a4c05152f21a5ba293b
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493768"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58859638"
 ---
-# <a name="configure-hdfs-tiering-on-sql-server-2019-big-data-clusters"></a>Configurar camadas em clusters do SQL Server 2019 grandes dados do HDFS
+# <a name="configure-hdfs-tiering-on-sql-server-big-data-clusters"></a>Configurar o HDFS disposição em camadas em clusters de grandes dados do SQL Server
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Disposição em camadas HDFS fornece a capacidade de montar externa, sistema de arquivos compatível com HDFS no HDFS. Este artigo explica como configurar o HDFS disposição em camadas para clusters de big data de 2019 do SQL Server (versão prévia). Neste momento, o CTP 2.4 suporta apenas conectar-se ao Azure Data Lake armazenamento Gen2, que é o foco deste artigo.
 
@@ -35,7 +37,7 @@ As seções a seguir fornecem um exemplo de como configurar o HDFS disposição 
 - [Cluster de big data implantados](deployment-guidance.md)
 - [Ferramentas de big data](deploy-big-data-tools.md)
   - **mssqlctl**
-  - **kubectl**
+  - **Kubectl**
 
 ## <a id="load"></a> Carregar dados no armazenamento do Azure Data Lake
 

@@ -1,24 +1,26 @@
 ---
 title: Consumir aplicativos em clusters de big data
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Consuma um aplicativo implantado em um cluster de big data de 2019 do SQL Server usando um serviço web RESTful (visualização).
 author: jeroenterheerdt
 ms.author: jterh
+ms.reviewer: jroth
 manager: craigg
 ms.date: 03/18/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.reviewer: rothja
-ms.openlocfilehash: a9ef02cae7899a1deb5ce6d84b10dac2297b9d2f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 4d299f364b4d67e1f31ce7c0e70d6ba062933f37
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389954"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860537"
 ---
 # <a name="consume-an-app-deployed-on-sql-server-big-data-cluster-using-a-restful-web-service"></a>Consumir um aplicativo implantado no cluster de big data do SQL Server usando um serviço web RESTful
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Este artigo descreve como consumir um aplicativo implantado em um cluster de big data de 2019 do SQL Server usando um serviço web RESTful (visualização).
 

@@ -1,6 +1,6 @@
 ---
 title: Início rápido da implantação
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Passo a passo uma implantação de clusters de big data 2019 do SQL Server (versão prévia) no serviço de Kubernetes do Azure (AKS).
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 00810eb3f57fdaf8f87fc0db16744ab9e3334f70
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: 7b8abf65b5c2e7abf8823ce98aede22bba14caad
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618143"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860517"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Início Rápido: Implantar um cluster de big data do SQL Server no serviço de Kubernetes do Azure (AKS)
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Neste início rápido, você pode usar um exemplo de script de implantação para implantar o cluster de big data de 2019 do SQL Server (versão prévia) para o serviço de Kubernetes do Azure (AKS). 
 
@@ -33,7 +35,7 @@ A implantação de cluster de big data padrão usada aqui consiste em duas inst�
 - Uma assinatura do Azure.
 - [Ferramentas de big data](deploy-big-data-tools.md):
    - **mssqlctl**
-   - **kubectl**
+   - **Kubectl**
    - **Azure Data Studio**
    - **Extensão do SQL Server de 2019**
    - **CLI do Azure**

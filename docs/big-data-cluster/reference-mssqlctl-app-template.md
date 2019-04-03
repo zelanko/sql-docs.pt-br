@@ -1,6 +1,6 @@
 ---
 title: referência de modelo de aplicativo mssqlctl
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Artigo de referência para comandos de modelo de aplicativo mssqlctl.
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 16583ba970bfc13312864ea2e9d2571b04c20fcb
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.openlocfilehash: c67ed74750ac36d1a5c79503417414a9dd8ab6b5
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527219"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860097"
 ---
-# <a name="mssqlctl-app-template"></a>modelo de aplicativo mssqlctl
+# <a name="mssqlctl-app-template"></a>Modelo de aplicativo do mssqlctl
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 O artigo a seguir fornece referência para o **modelo de aplicativo** comandos na **mssqlctl** ferramenta. Para obter mais informações sobre outros **mssqlctl** comandos, consulte [mssqlctl referência](reference-mssqlctl.md).
 
@@ -24,7 +26,7 @@ O artigo a seguir fornece referência para o **modelo de aplicativo** comandos n
 
 |||
 |---|---|
-| [list](#list) | Modelos de Fetch com suporte. |
+| [Lista](#list) | Modelos de Fetch com suporte. |
 | [pull](#pull) | Baixe os modelos com suporte. |
 
 ## <a id="list"></a> lista de modelos de aplicativo mssqlctl
@@ -71,7 +73,7 @@ mssqlctl app template pull
 
 | Parâmetros | Descrição |
 |---|---|
-| **--destination -d** | Onde colocar o modelo de aplicativo de esqueleto.  Padrão:. / modelos. |
+| **– destino -d** | Onde colocar o modelo de aplicativo de esqueleto.  Padrão:. / modelos. |
 | **--name -n** | Nome do modelo. Para obter uma lista completa desativar nomes de modelo com suporte, execute `mssqlctl app template list`. |
 | **--url -u** | Especifique um local de repositório de modelo diferente. Padrão:
 https://github.com/Microsoft/sql-server-samples.git. |

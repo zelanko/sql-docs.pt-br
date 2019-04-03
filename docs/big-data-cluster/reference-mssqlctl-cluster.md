@@ -1,6 +1,6 @@
 ---
 title: referência de cluster mssqlctl
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Artigo de referência para os comandos de cluster mssqlctl.
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 130d3019d49deb7851696f6a1db2f77040734b31
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.openlocfilehash: e4e54ac3c7206ad8a6592c8cfe0b45d9ea4b8fd8
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527209"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860467"
 ---
-# <a name="mssqlctl-cluster"></a>cluster mssqlctl
+# <a name="mssqlctl-cluster"></a>Cluster do mssqlctl
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 O artigo a seguir fornece referência para o **cluster** comandos na **mssqlctl** ferramenta. Para obter mais informações sobre outros **mssqlctl** comandos, consulte [mssqlctl referência](reference-mssqlctl.md).
 
@@ -24,8 +26,8 @@ O artigo a seguir fornece referência para o **cluster** comandos na **mssqlctl*
 
 |||
 |---|---|
-| [create](#create) | Crie o cluster. |
-| [delete](#delete) | Exclua o cluster. |
+| [criar](#create) | Crie o cluster. |
+| [excluir](#delete) | Exclua o cluster. |
 | [config](reference-mssqlctl-cluster-config.md) | Comandos de configuração do cluster. |
 | [debug](reference-mssqlctl-cluster-debug.md) | Comandos de depuração. |
 
@@ -61,7 +63,7 @@ mssqlctl cluster delete
 | Parâmetros | Descrição |
 |---|---|
 | **--name -n** | Nome do cluster, usado para o namespace de kubernetes. Obrigatórios. |
-| **--force -f** | Cluster de exclusão de força. |
+| **-force -f** | Cluster de exclusão de força. |
 
 ## <a name="next-steps"></a>Próximas etapas
 

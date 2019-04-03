@@ -1,6 +1,6 @@
 ---
 title: referência de configuração de cluster mssqlctl
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Artigo de referência para os comandos de cluster mssqlctl.
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 26e93151a1150bbbbd1798b38486ca5b01aaab1d
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.openlocfilehash: 57b77e83994f8471e677ba2ba367acc48a66cddd
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527199"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860017"
 ---
-# <a name="mssqlctl-cluster-config"></a>configuração de cluster mssqlctl
+# <a name="mssqlctl-cluster-config"></a>Configuração de cluster do mssqlctl
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 O artigo a seguir fornece referência para o **configuração do cluster** comandos na **mssqlctl** ferramenta. Para obter mais informações sobre outros **mssqlctl** comandos, consulte [mssqlctl referência](reference-mssqlctl.md).
 
@@ -41,7 +43,7 @@ mssqlctl cluster config get
 | Parâmetros | Descrição |
 |---|---|
 | **--name -n** | Nome do cluster, usado para o namespace de kubernetes. Obrigatórios. |
-| **--output-file -f** | Arquivo de saída para armazenar o resultado no. Obrigatórios. |
+| **– arquivo de saída - f** | Arquivo de saída para armazenar o resultado no. Obrigatórios. |
 
 ## <a name="next-steps"></a>Próximas etapas
 

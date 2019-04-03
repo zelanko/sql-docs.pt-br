@@ -1,6 +1,6 @@
 ---
 title: Consultar dados externos no Oracle
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Este tutorial demonstra como consultar dados do Oracle de um cluster de big data do SQL Server 2019 (visualização). Você cria uma tabela externa sobre os dados no Oracle e, em seguida, executa uma consulta.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 27956603d3627f1d4a78e62fbf9c7aeaa1e55974
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 139c5dd5ade04c3d1a71412060f823d492843ecb
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241907"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58859977"
 ---
 # <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>Tutorial: Consulta Oracle em um cluster de big data do SQL Server
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Este tutorial demonstra como consultar dados do Oracle de um cluster de big data do SQL Server de 2019. Para executar este tutorial, você precisará ter acesso a um servidor Oracle. Se você não tiver acesso, este tutorial pode dar uma ideia de como funciona a virtualização de dados para fontes de dados externas no cluster de big data do SQL Server.
 

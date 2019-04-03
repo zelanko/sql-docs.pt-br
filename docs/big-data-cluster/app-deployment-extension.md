@@ -1,22 +1,25 @@
 ---
 title: Extensão de implantação do aplicativo
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Implante um script Python ou R como um aplicativo no cluster de big data do SQL Server 2019 (visualização).
-author: TheBharath
-ms.author: bharaths
+author: jeroenterheerdt
+ms.author: jterh
+ms.reviewer: jroth
 manager: craigg
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 761818cd83df5db38b3877184b03b7e5d634aa63
-ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
+ms.openlocfilehash: 10fcc71c69ecc138f78cd19c4661f917067ead7e
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58222020"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860407"
 ---
 # <a name="how-to-use-vs-code-to-deploy-applications-to-sql-server-big-data-clusters"></a>Como usar o VS Code para implantar aplicativos em clusters de grandes dados do SQL Server
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Este artigo descreve como implantar aplicativos em um cluster de big data do SQL Server usando o Visual Studio Code com a extensão de implantação do aplicativo. Essa funcionalidade foi introduzida no CTP 2.3. 
 
@@ -29,11 +32,11 @@ Este artigo descreve como implantar aplicativos em um cluster de big data do SQL
 
 Essa extensão oferece suporte as seguintes tarefas no Visual Studio Code:
 
-- Autenticar com o Cluster de Big Data do SQL Server.
+- Autenticar com o cluster de big data do SQL Server.
 - Recupere um modelo de aplicativo do repositório do GitHub para a implantação de tempos de execução com suporte.
 - Gerencie modelos de aplicativo atualmente aberto no espaço de trabalho do usuário.
 - Implante um aplicativo por meio de uma especificação de formato YAML.
-- Gerencie aplicativos implantados dentro do Cluster grande de dados do SQL Server.
+- Gerencie aplicativos implantados dentro do cluster de big data do SQL Server.
 - Exiba todos os aplicativos que você implantou na barra lateral com informações adicionais.
 - Gere uma especificação de execução para consumir o aplicativo ou excluir o aplicativo do cluster.
 - Consuma aplicativos implantados por meio de uma especificação de execução YAML.
@@ -90,7 +93,7 @@ O modelo é um simples `Hello World` aplicativo que está disposto da seguinte m
    - Informa o cluster como implantar seu aplicativo
 - **run-spec.yaml**
    - Informa o cluster como você deseja chamar seu aplicativo
-- **handler.py**
+- **Handler.py**
    - Isso é o seu arquivo de código fonte conforme especificado por `src` em `spec.yaml`
    - Ele tem uma função de chamada `handler` que é considerado o `entrypoint` do aplicativo, conforme mostrado no `spec.yaml`. Ele usa uma entrada de cadeia de caracteres denominada `msg` e retorna uma saída de cadeia de caracteres chamada `out`. Essas são especificadas nas `inputs` e `outputs` da `spec.yaml`.
 

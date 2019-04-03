@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 786e86fb6f0326e2f8ea568f4c069828ff1ff4c6
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: c00196468b846174bb73c8d82c691f482aa8b21e
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57974115"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872067"
 ---
 # <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>Analisar relatórios de avaliação consolidado criados pelo Assistente de migração de dados com o Power BI
 
@@ -34,23 +34,23 @@ Você pode baixar exemplos de relatórios do Power BI para avaliações consolid
 
 Os relatórios a seguir estão incluídos: 
 
-- [Dashboard](#dashboard--details)
+- [Painel](#dashboard-report)
 
   Inclui estatísticas de instantâneo e um relatório de detalhamento.
 
-- [Preparação de atualização no local](#on-premises-upgrade-readiness--details)
+- [Preparação de atualização no local](#on-premises-upgrade-readiness-report)
 
   A fonte de dados é o modo de exibição no banco de dados DMAReporting UpgradeSuccessRanking.  Este relatório mostra o sucesso de atualização de porcentagem para seus bancos de dados avaliados.
 
-- [Paridade de recursos locais](#on-premise-feature-parity--details)
+- [Paridade de recursos locais](#on-premises-feature-parity-report)
 
   Mostra as recomendações de recurso para a versão do SQL Server de destino.
 
-- [Preparação de atualização de banco de dados SQL do Azure](#azure-sql-db-upgrade-readiness--details)
+- [Preparação de atualização de banco de dados SQL do Azure](#azure-sql-db-upgrade-readiness-report)
 
   A fonte de dados é o modo de exibição no banco de dados DMAReporting UpgradeSuccessRanking.  Este relatório mostra o sucesso de atualização de porcentagem para bancos de dados avaliados para migrações de BD SQL do Azure.
 
-- [Recursos do banco de dados SQL sem suporte do Azure](#azure-sql-db-unsupported-features--details)
+- [Recursos do banco de dados SQL sem suporte do Azure](#azure-sql-db-unsupported-features-report)
 
   Mostra os recursos em seus bancos de dados existentes que não têm suporte no banco de dados do SQL do Azure (V12).
 

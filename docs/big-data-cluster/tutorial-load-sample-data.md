@@ -1,6 +1,6 @@
 ---
 title: Carregar dados de exemplo
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Este tutorial demonstra como carregar dados de exemplo em um cluster de big data do SQL Server. Os dados de exemplo incluem dados relacionais na instância mestre do SQL Server. Ele também inclui dados do HDFS no pool de armazenamento. Esses dados dá suporte a outros tutoriais nesta seção.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: f8e5cc5b3da7bf8c571a1f4b3febd9ef45e44d9e
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: faee29ed293c59752988760ea9ca27a4cf3e372a
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566515"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58859987"
 ---
-# <a name="tutorial-load-sample-data-into-a-sql-server-2019-big-data-cluster"></a>Tutorial: Carregar dados de exemplo em um cluster de big data do SQL Server de 2019
+# <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>Tutorial: Carregar dados de exemplo em um cluster de big data do SQL Server
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Este tutorial explica como usar um script para carregar dados de exemplo em um cluster de big data do SQL Server 2019 (visualização). Muitos dos tutoriais na documentação do usam esses dados de exemplo.
 
@@ -29,7 +31,7 @@ Este tutorial explica como usar um script para carregar dados de exemplo em um c
 - [Um cluster de big data implantados](deployment-guidance.md)
 - [Ferramentas de big data](deploy-big-data-tools.md)
    - **mssqlctl**
-   - **kubectl**
+   - **Kubectl**
    - **sqlcmd**
    - **curl**
 

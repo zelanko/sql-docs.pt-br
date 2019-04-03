@@ -1,6 +1,6 @@
 ---
 title: Gerenciar notebooks no estúdio de dados do Azure
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Saiba como gerenciar notebooks no estúdio de dados do Azure. Isso inclui a abertura de blocos de anotações, salvando-os e alterar sua conexão de cluster de big data.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 107a567da4727fa5786b0b913f1c75706a23a9b7
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: ab731e3f657a629dbb1b4058bd94b32677c2def0
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241917"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860507"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>Como gerenciar notebooks no estúdio de dados do Azure
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Este artigo mostra como abrir e salvar arquivos de notebook no estúdio de dados do Azure com a visualização do SQL Server de 2019. Ele também demonstra como alterar sua conexão para seu cluster de big data do SQL Server.
 

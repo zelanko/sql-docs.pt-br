@@ -1,6 +1,6 @@
 ---
 title: Introdução
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Aprenda as etapas e os recursos de implantação de clusters de big data de 2019 do SQL Server (visualização).
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 03/18/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 05ba81fd45bc44db9c23530fb594c5d2e291e05d
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: 69b5d9b69536243d371cb45c1c46620f5194657d
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58567642"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860427"
 ---
-# <a name="get-started-with-sql-server-2019-big-data-clusters"></a>Introdução aos clusters de grandes dados do SQL Server de 2019
+# <a name="get-started-with-sql-server-big-data-clusters"></a>Introdução aos clusters de grandes dados do SQL Server
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Este artigo fornece uma visão geral de como implantar um [cluster de big data (visualização) do SQL Server 2019](big-data-cluster-overview.md). Ele destina-se para orientar você aos conceitos e fornecer uma estrutura de Noções básicas sobre os outros artigos nesta seção implantação. As etapas de implantação específico variam com base em suas opções de plataforma para o cliente e servidor.
 
@@ -27,7 +29,7 @@ Os clusters de big data exigem um conjunto de ferramentas de cliente específico
 | Ferramenta | Descrição |
 |---|---|
 | **mssqlctl** | Implanta e gerencia clusters de big data. |
-| **kubectl** | Cria e gerencia o cluster Kubernetes subjacente. |
+| **Kubectl** | Cria e gerencia o cluster Kubernetes subjacente. |
 | **Azure Data Studio** | Interface gráfica para usar o cluster de big data. |
 | **Extensão do SQL Server de 2019** | Extensão de dados Studio do Azure que habilita os recursos de cluster de big data. |
 
@@ -49,7 +51,7 @@ Scripts de implantação podem ajudar a implantar Kubernetes e clusters de big d
 
 Você pode personalizar qualquer script de implantação ao criar sua própria versão que configura as variáveis de ambiente de cluster de big data de forma diferente.
 
-## <a name="deploy-a-big-data-cluster"></a>Implantar um cluster de big data
+## <a name="deploy-a-big-data-cluster"></a>Implantar um cluster de Big Data
 
 Para implantar Kubernetes e um cluster de big data no AKS com um único script, consulte o exemplo a seguir:
 

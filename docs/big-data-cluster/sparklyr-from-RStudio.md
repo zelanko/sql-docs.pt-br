@@ -1,7 +1,7 @@
 ---
 title: Use o sparklyr do RStudio
-titleSuffix: SQL Server 2019 big data clusters
-description: Conecte-se ao cluster de Big data usando o sparklyr do RStudio.
+titleSuffix: SQL Server big data clusters
+description: Conecte-se ao cluster de big data usando sparklyr do RStudio.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 83980f9d08a3894b0fbf7871cf899483e06702c4
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 30b8ddccd01c0e8d9a4eac34f2f504b0d8971af6
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018352"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860187"
 ---
-# <a name="use-sparklyr-in-sql-server-2019-big-data-cluster"></a>Usar Sparklyr no cluster de dados do SQL Server de 2019 grande
+# <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>Usar Sparklyr no cluster de big data do SQL Server
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Sparklyr fornece uma interface de R para Apache Spark. Sparklyr é a maneira preferencial para os desenvolvedores do R usar o Spark. Este artigo descreve como usar o sparklyr em um cluster de big data de 2019 do SQL Server (versão prévia) usando o RStudio.
 
@@ -27,7 +29,7 @@ Sparklyr fornece uma interface de R para Apache Spark. Sparklyr é a maneira pre
 
 ## <a name="connect-to-spark-in-ss19-big-data-cluster"></a>Conectar-se para o spark no cluster SS19 Big Data
 
-No RStudio, criar um RScript e conecte-se para o Spark da seguinte maneira. Cluster do Spark Big data se conecta por meio do Livy, que pode ser alcançado com o [gateway HDFS/Spark](connect-to-big-data-cluster.md#hdfs). Para autenticação, use o nome de usuário e a senha especificados durante a implantação.
+No RStudio, criar um RScript e conecte-se para o Spark da seguinte maneira. Cluster de big data do Spark conecta-se por meio do Livy, que pode ser alcançado com o [gateway HDFS/Spark](connect-to-big-data-cluster.md#hdfs). Para autenticação, use o nome de usuário e a senha especificados durante a implantação.
 
 ```r
 library(sparklyr)

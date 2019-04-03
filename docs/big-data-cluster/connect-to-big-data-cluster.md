@@ -1,6 +1,6 @@
 ---
 title: Conectar-se ao mestre e HDFS
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Saiba como se conectar a instância mestre do SQL Server e o gateway HDFS/Spark para um cluster de big data do SQL Server 2019 (visualização).
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cb205f387fb326b1717ec65512a911b2ae244495
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: ed563fe6d0bfd69ce5dfb7484d4213bc9a47dd54
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017702"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860167"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Conectar a um cluster de big data do SQL Server com o Studio de dados do Azure
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Este artigo descreve como se conectar a um cluster de big data de 2019 do SQL Server (versão prévia) no Studio de dados do Azure. Há dois pontos de extremidade principais são usados para interagir com um cluster de big data:
 
@@ -34,7 +36,7 @@ Este artigo descreve como se conectar a um cluster de big data de 2019 do SQL Se
 - [Ferramentas de big data do SQL Server 2019](deploy-big-data-tools.md):
    - **Azure Data Studio**
    - **Extensão do SQL Server de 2019**
-   - **kubectl**
+   - **Kubectl**
 
 ## <a id="master"></a> Conectar-se ao cluster
 
@@ -67,7 +69,7 @@ Com a versão de fevereiro de 2019 do estúdio de dados do Azure, conectar-se a 
 
 - O Pesquisador de objetos agora contém uma nova **serviços de dados** nó com o botão direito do mouse suporte para tarefas de cluster de big data, como criar novos notebooks ou envio de trabalhos do spark. 
 - O **serviços de dados** nó também contém uma **HDFS** pasta para executar as ações, como Create External Table ou analisar no bloco de anotações e exploração de HDFS.
-- O **painel do servidor** para a conexão também contém guias para **Cluster grande de dados do SQL Server** e **2019 do SQL Server (versão prévia)** quando a extensão está instalada.
+- O **painel do servidor** para a conexão também contém guias para **cluster de big data do SQL Server** e **2019 do SQL Server (versão prévia)** quando a extensão está instalada.
 
    ![Nó de serviços de dados do Azure Data Studio](./media/connect-to-big-data-cluster/connect-data-services-node.png)
 

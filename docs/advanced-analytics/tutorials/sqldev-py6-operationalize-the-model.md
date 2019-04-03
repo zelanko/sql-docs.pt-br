@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: de46594a5de2bee6e50786de25826c96da01ae53
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 77d08db22ca7ff1b4b66620d277280f0c1ac314e
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513063"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860577"
 ---
 # <a name="run-predictions-using-python-embedded-in-a-stored-procedure"></a>Execute previsões usando Python inserido em um procedimento armazenado
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -172,8 +172,8 @@ Ao passar esses argumentos para o procedimento armazenado, você pode selecionar
 
 Nesta seção, você aprenderá a criar previsões únicas chamando dois procedimentos armazenados:
 
-+ [PredictTipSingleModeSciKitPy](#PredictTipSingleModeSciKitPy) foi projetado para uma única linha de pontuação usando o scikit-aprender o modelo.
-+ [PredictTipSingleModeRxPy](#PredictTipSingleModeRxPy) foi projetado para uma única linha de pontuação usando o modelo revoscalepy.
++ [PredictTipSingleModeSciKitPy](#predicttipsinglemodescikitpy) foi projetado para uma única linha de pontuação usando o scikit-aprender o modelo.
++ [PredictTipSingleModeRxPy](#predicttipsinglemoderxpy) foi projetado para uma única linha de pontuação usando o modelo revoscalepy.
 + Se você ainda não tiver um modelo treinado ainda, retorne ao [etapa 5](sqldev-py5-train-and-save-a-model-using-t-sql.md)!
 
 Take ambos os modelos como entrada uma série de valores únicos, como contagem de passageiros, distância da corrida e assim por diante. Uma função com valor de tabela, `fnEngineerFeatures`, é usado para converter valores de latitude e longitude de entradas para um novo recurso, a distância direta. [Lição 4](sqldev-py4-create-data-features-using-t-sql.md) contém uma descrição dessa função com valor de tabela.

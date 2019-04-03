@@ -1,6 +1,6 @@
 ---
 title: Configurar o Kubernetes com kubeadm
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Saiba como configurar o Kubernetes no Ubuntu 16.04 várias ou 18.04 computadores (físicos ou virtuais) para implantações de cluster (versão prévia) do SQL Server 2019 big data.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 56eb95042199298be2728c475d26cb52bea993e2
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 0432f590af92befa845af819269b1111da28251c
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017982"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860607"
 ---
-# <a name="configure-kubernetes-on-multiple-machines-for-sql-server-2019-big-data-cluster-preview-deployments"></a>Configurar o Kubernetes em vários computadores para implantações de cluster (versão prévia) do SQL Server 2019 big data
+# <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>Configurar o Kubernetes em vários computadores para implantações de cluster de big data do SQL Server
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Este artigo fornece um exemplo de como usar **kubeadm** configurar Kubernetes em vários computadores para implantações de cluster (versão prévia) do SQL Server 2019 big data. Neste exemplo, vários Ubuntu 16.04 ou 18.04 máquinas LTS (físicas ou virtuais) são o destino. Se você estiver implantando em uma plataforma diferente do Linux, você deve alterar alguns dos comandos para corresponder ao seu sistema.  
 

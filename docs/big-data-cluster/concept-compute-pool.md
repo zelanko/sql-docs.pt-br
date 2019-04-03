@@ -1,6 +1,6 @@
 ---
 title: Quais são os pools de computação?
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Este artigo descreve o pool de computação em um cluster de big data do SQL Server 2019 (visualização).
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: d9189c6533563a44b597dddc99e263d78750aa6a
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: d7965ff1f29310f39fb5b8b5994b3967b928ecde
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477861"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860238"
 ---
-# <a name="what-are-compute-pools-in-a-sql-server-2019-big-data-cluster"></a>Quais são os pools de computação em um cluster de big data do SQL Server 2019?
+# <a name="what-are-compute-pools-in-a-sql-server-big-data-cluster"></a>Quais são os pools de computação em um cluster de big data do SQL Server?
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Este artigo descreve a função do *pools de computação do SQL Server* em um cluster de big data de visualização de 2019 do SQL Server. Pools de computação fornecem recursos computacionais de escalabilidade horizontal para um cluster de big data. As seções a seguir descrevem a arquitetura e a funcionalidade de um pool de computação.
 

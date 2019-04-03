@@ -1,6 +1,6 @@
 ---
 title: referência de aplicativo mssqlctl
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Artigo de referência de comandos do aplicativo mssqlctl.
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fa2b43c352fbab39cd00112b9646a87a2b752f5b
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.openlocfilehash: b418f1ded8d9911143b431ae9793c467c4e26eb4
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527249"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860647"
 ---
-# <a name="mssqlctl-app"></a>aplicativo mssqlctl
+# <a name="mssqlctl-app"></a>Aplicativo do mssqlctl
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 O artigo a seguir fornece referência para o **app** comandos na **mssqlctl** ferramenta. Para obter mais informações sobre outros **mssqlctl** comandos, consulte [mssqlctl referência](reference-mssqlctl.md).
 
@@ -24,14 +26,14 @@ O artigo a seguir fornece referência para o **app** comandos na **mssqlctl** fe
 
 |||
 |---|---|
-| [create](#create) | Crie aplicativo. |
-| [delete](#delete) | Exclua o aplicativo. |
+| [criar](#create) | Crie aplicativo. |
+| [excluir](#delete) | Exclua o aplicativo. |
 | [describe](#describe) | Descreva o aplicativo. |
-| [init](#init) | Início rápido novo esqueleto do aplicativo. |
-| [list](#list) | Lista de aplicativos. |
+| [Init](#init) | Início rápido novo esqueleto do aplicativo. |
+| [Lista](#list) | Lista de aplicativos. |
 | [run](#run) | Execute o aplicativo. |
 | [update](#update) | Atualize o aplicativo. |
-| [template](reference-mssqlctl-app-template.md) | Comandos de modelo. |
+| [modelo](reference-mssqlctl-app-template.md) | Comandos de modelo. |
 
 ## <a id="create"></a> Criar aplicativo mssqlctl
 
@@ -57,7 +59,7 @@ mssqlctl app create
 | Parâmetros | Descrição |
 |---|---|
 | **--assets -a** | Lista de ativos de arquivos de aplicativo adicionais a serem incluídos. |
-| **--code -c** | Caminho do arquivo de código R ou Python. |
+| **– código - c** | Caminho do arquivo de código R ou Python. |
 | **– Descrição -d** | Descrição do aplicativo. |
 | **--entrypoint** |  |
 | **– entradas** | Esquema de parâmetro de entrada. |
@@ -164,7 +166,7 @@ mssqlctl app init
 
 | Parâmetros | Descrição |
 |---|---|
-| **--destination -d** | Onde colocar o esqueleto do aplicativo. Padrão: diretório de trabalho atual. |
+| **– destino -d** | Onde colocar o esqueleto do aplicativo. Padrão: diretório de trabalho atual. |
 | **--name -n** | Nome do aplicativo. |
 | **--spec -s** | Gere apenas um spec.yaml do aplicativo. |
 | **-modelo -t** | Nome do modelo. Para obter uma lista completa desativar nomes de modelo com suporte, execute `mssqlctl app template list`. |

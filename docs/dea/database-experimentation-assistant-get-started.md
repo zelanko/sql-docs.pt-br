@@ -13,12 +13,12 @@ author: HJToland3
 ms.author: ajaykar
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: f0ea70ded49d37d553f5de188a4a0735f521ee66
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 7630aee7ab39f98f372af7c33f277e7272042f43
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "56987692"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872236"
 ---
 # <a name="get-started-with-database-experimentation-assistant"></a>Introdução ao Assistente de experimentação do banco de dados
 
@@ -81,7 +81,7 @@ Para reproduzir o arquivo de rastreamento:
 
    - **Nome de reprodução**: O nome do arquivo para o rastreamento de reprodução.
    - **O nome de computador do controlador**: O nome do computador do controlador de reprodução distribuída.
-   - **Caminho do arquivo de rastreamento de origem no controlador**: O caminho do arquivo para o arquivo de rastreamento do código-fonte da [capturar](#Capture).
+   - **Caminho do arquivo de rastreamento de origem no controlador**: O caminho do arquivo para o arquivo de rastreamento do código-fonte da [capturar](#capture).
    - **Nome da instância do SQL Server**: O nome da instância do SQL Server na qual deseja repetir o rastreamento de origem.
    - **Caminho para armazenar o arquivo de rastreamento de destino no computador SQL Server**: O caminho da pasta para o arquivo de rastreamento de repetição resultante.
 

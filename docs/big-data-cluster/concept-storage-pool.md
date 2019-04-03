@@ -1,6 +1,6 @@
 ---
 title: O que é o pool de armazenamento?
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Este artigo descreve o pool de armazenamento em um cluster de big data do SQL Server de 2019.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 7dfb89103bb83fc77c590e5c5b5984cbd96b197d
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: b0775ac479b45dcb0fc0df23460b0fda0b783545
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477921"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860567"
 ---
-# <a name="what-is-the-storage-pool-sql-server-2019-big-data-clusters"></a>O que é o pool de armazenamento (clusters de big data de 2019 do SQL Server)?
+# <a name="what-is-the-storage-pool-sql-server-big-data-clusters"></a>O que é o pool de armazenamento (clusters de grandes dados do SQL Server)?
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Este artigo descreve a função dos *pool de armazenamento do SQL Server* em um cluster de big data do SQL Server 2019 (visualização). As seções a seguir descrevem a arquitetura e a funcionalidade de um pool de armazenamento do SQL.
 

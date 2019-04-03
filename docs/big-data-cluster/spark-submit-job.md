@@ -1,6 +1,6 @@
 ---
 title: Executar trabalhos do Spark no estúdio de dados do Azure
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Envie trabalhos do Spark em clusters de grandes dados do SQL Server no estúdio de dados do Azure.
 author: jejiang
 ms.author: jejiang
@@ -9,14 +9,16 @@ ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c1d439c13b06b305c814813eeca7cb9bf8aa53c5
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: d5354927ff0c7e1c61bf358ad73312611c18f317
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578236"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860447"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Enviar trabalhos do Spark em clusters de grandes dados do SQL Server no estúdio de dados do Azure
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Um dos principais cenários para clusters de big data é a capacidade de enviar trabalhos do Spark para visualização do SQL Server de 2019. O recurso de envio de trabalho do Spark permite que você envie arquivos Jar ou Py locais com referências a cluster de big data do SQL Server de 2019. Ele também permite que você execute um arquivos Jar ou Py, que já estão localizados no sistema de arquivos HDFS. 
 
@@ -25,7 +27,7 @@ Um dos principais cenários para clusters de big data é a capacidade de enviar 
 - [Ferramentas de big data do SQL Server 2019](deploy-big-data-tools.md):
    - **Azure Data Studio**
    - **Extensão do SQL Server de 2019**
-   - **kubectl**
+   - **Kubectl**
 
 - [Conectar-se o Studio de dados do Azure para o gateway HDFS/Spark do seu cluster de big data](connect-to-big-data-cluster.md).
 

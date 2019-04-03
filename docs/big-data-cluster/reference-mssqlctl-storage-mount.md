@@ -1,6 +1,6 @@
 ---
 title: referência de montagem do armazenamento mssqlctl
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Artigo de referência para comandos de armazenamento mssqlctl.
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f8336c59ffc11ff1a2b7842c393f3387298b832a
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.openlocfilehash: 3ad8a97bac1f708dcf01612368c76d584fa39f5c
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527179"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860287"
 ---
-# <a name="mssqlctl-storage-mount"></a>montagem do armazenamento mssqlctl
+# <a name="mssqlctl-storage-mount"></a>Montagem do armazenamento do mssqlctl
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 O artigo a seguir fornece referência para o **montagem do armazenamento** comandos na **mssqlctl** ferramenta. Para obter mais informações sobre outros **mssqlctl** comandos, consulte [mssqlctl referência](reference-mssqlctl.md).
 
@@ -24,8 +26,8 @@ O artigo a seguir fornece referência para o **montagem do armazenamento** coman
 
 |||
 |---|---|
-| [create](#create) | Crie repositórios remotos de montagens no HDFS. |
-| [delete](#delete) | Exclua montagens de repositórios remotos em HDFS. |
+| [criar](#create) | Crie repositórios remotos de montagens no HDFS. |
+| [excluir](#delete) | Exclua montagens de repositórios remotos em HDFS. |
 | [status](#status) | Status do mount(s). |
 
 ## <a id="create"></a> montagem do armazenamento mssqlctl criar

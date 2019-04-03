@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 4d13d200bf331771b0f2f8735bf2c76c1f227979
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 705d3b5230faf69ca9eb9de2f7f0cc21b42a8955
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241647"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860077"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>Wrangling de dados usando o Acelerador de código PROSA
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Acelerador de código PROSA gera código legível do Python para suas tarefas de wrangling de dados. Você pode combinar o código gerado com o código escrito manualmente de uma maneira perfeita enquanto estiver trabalhando em um bloco de anotações no Studio de dados do Azure. Este artigo fornece uma visão geral de como você pode usar o Acelerador de código.
 
