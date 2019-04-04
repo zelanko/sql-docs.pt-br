@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 328772e1bad2a93bba60ecdd215567ba65dd8076
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3858371c92965db9c84ec70d7d86969b0d9311ba
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673184"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58513330"
 ---
 # <a name="selective-xml-indexes-sxi"></a>SXI (índices XML seletivos)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -121,7 +121,7 @@ FOR
   
 -   Indexação de nós com tipos XS binários: por exemplo, base64Binary e hexBinary.  
   
--   Especificação dos nós a serem indexados com expressões XPath que contêm o caractere curinga `*` ao final: por exemplo,  `/a/b/c/*`, `/a//b/*`ou `/a/b/*:c`.  
+-   Especificação dos nós a serem indexados com expressões XPath que contêm o caractere curinga `*` no final: Por exemplo, `/a/b/c/*`, `/a//b/*` ou `/a/b/*:c`.  
   
 -   Indexação de qualquer eixo que não seja o filho, o atributo ou o descendente. A ocorrência `//<step>` é permitida como um caso especial.  
   

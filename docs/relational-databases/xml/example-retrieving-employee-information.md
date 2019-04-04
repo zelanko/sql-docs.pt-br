@@ -1,5 +1,5 @@
 ---
-title: 'Exemplo: recuperando informações de funcionários | Microsoft Docs'
+title: 'Exemplo: Recuperando informações de funcionários | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - EXPLICIT mode
 ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dedcea064cf71695764e1892b1fb6b7dd96bed21
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1984c3c378f4408b8e1126f427a5e06560adef91
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699075"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510323"
 ---
 # <a name="example-retrieving-employee-information"></a>Exemplo: Recuperando informações de funcionários
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,41 +87,29 @@ FOR XML EXPLICIT;
   
  Este é o resultado parcial:  
   
- `<Employee EmpID="1">`  
-  
- `<Name FName="Ken" LName="Sánchez" />`  
-  
- `</Employee>`  
-  
- `<Employee EmpID="2">`  
-  
- `<Name FName="Terri" LName="Duffy" />`  
-  
- `</Employee>`  
-  
- `...`  
+```
+<Employee EmpID="1">
+  <Name FName="Ken" LName="Sánchez" />
+</Employee>
+<Employee EmpID="2">
+  <Name FName="Terri" LName="Duffy" />
+</Employee>
+...
+```
   
  O primeiro `SELECT` especifica nomes para as colunas no conjunto de linhas resultante. Esses nomes formam dois grupos de colunas. O grupo que tem o valor da `Tag` `1` no nome da coluna identifica `Employee` como um elemento e `EmpID` como o atributo. O outro grupo de colunas tem o valor da `Tag` `2` na coluna e identifica <`Name`> como o elemento e `FName` e `LName` como os atributos.  
   
  Esta tabela mostra o conjunto de linhas parcial gerado pela consulta:  
   
- `Tag Parent  Employee!1!EmpID Name!2!FName Name!2!LName`  
-  
- `--- ------  ---------------- ------------ ------------`  
-  
- `1   NULL    1                NULL         NULL`  
-  
- `2   1       1                Ken          Sánchez`  
-  
- `1   NULL    2                NULL         NULL`  
-  
- `2   1       2                Terri        Duffy`  
-  
- `1   NULL    3                NULL         NULL`  
-  
- `2   1       3                Roberto      Tamburello`  
-  
- `...`  
+Marca | Pai | Employee!1!EmpID | Name!2!FName | Name!2!LName
+-|-|-|-|-
+1 | NULL | 1 | NULL | NULL 
+2 | 1 | 1 | Ken | Monte 
+1 | NULL | 2 | NULL | NULL 
+2 | 1 | 2 | Terri | Barros 
+1 | NULL | 3 | NULL | NULL 
+2 | 1 | 3 | Carlos | Pereira 
+... | ... | ... | ... | ...
   
  É assim que as linhas na tabela universal são processadas para produzir a árvore XML resultante:  
   

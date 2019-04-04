@@ -11,25 +11,25 @@ ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bc8dc35b72a5544bc6b52934a4e2e517a047a621
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 4b311802506ac8d0517026a9258a340e927a10f9
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215362"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566555"
 ---
 # <a name="configure-a-distributed-always-on-availability-group"></a>Configurar um grupo de disponibilidade Always On distribuído  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Para criar um grupo de disponibilidade distribuído, você deve criar um grupo de disponibilidade e um ouvinte em cada WSFC (Cluster de Failover do Windows Server). Em seguida, você combina esses grupos de disponibilidade em um grupo de disponibilidade distribuída. As etapas a seguir fornecem um exemplo básico em Transact-SQL. Este exemplo não abrange todos os detalhes da criação de grupos de disponibilidade e ouvintes, focando apenas nos requisitos básicos. 
+Para criar um grupo de disponibilidade distribuído, você precisa criar dois grupos de disponibilidade, cada um com seu próprio ouvinte. Em seguida, você combina esses grupos de disponibilidade em um grupo de disponibilidade distribuída. As etapas a seguir fornecem um exemplo básico em Transact-SQL. Este exemplo não abrange todos os detalhes da criação de grupos de disponibilidade e ouvintes, focando apenas nos requisitos básicos.
 
-Para obter uma visão geral técnica dos grupos de disponibilidade distribuídos, consulte [Grupos de disponibilidade distribuídos](distributed-availability-groups.md).   
+Para obter uma visão geral técnica dos grupos de disponibilidade distribuídos, consulte [Grupos de disponibilidade distribuídos](distributed-availability-groups.md).
 
 ## <a name="prerequisites"></a>Prerequisites
 
 ### <a name="set-the-endpoint-listeners-to-listen-to-all-ip-addresses"></a>Definir os ouvintes do ponto de extremidade para escutar em todos os endereços IP
 
-Verifique se os pontos de extremidade podem se comunicar entre os diferentes grupos de disponibilidade no grupo de disponibilidade distribuído. Se um grupo de disponibilidade for definido como uma rede específica no ponto de extremidade, o grupo de disponibilidade distribuída não funcionará corretamente. Em cada servidor que hospeda uma réplica no grupo de disponibilidade distribuído, configure o ouvinte como `LISTENER_IP = ALL`. 
+Verifique se os pontos de extremidade podem se comunicar entre os diferentes grupos de disponibilidade no grupo de disponibilidade distribuído. Se um grupo de disponibilidade for definido como uma rede específica no ponto de extremidade, o grupo de disponibilidade distribuída não funcionará corretamente. Em cada servidor que hospeda uma réplica no grupo de disponibilidade distribuído, configure o ouvinte para ouvir em todos os endereços IP (`LISTENER_IP = ALL`).
 
 #### <a name="create-a-listener-to-listen-to-all-ip-addresses"></a>Criar um ouvinte para escutar em todos os endereços IP
 
@@ -60,7 +60,7 @@ GO
 ## <a name="create-first-availability-group"></a>Criar o primeiro grupo de disponibilidade
 
 ### <a name="create-the-primary-availability-group-on-the-first-cluster"></a>Criar o grupo de disponibilidade primário no primeiro cluster  
-Crie um grupo de disponibilidade primário no primeiro WSFC.   Neste exemplo, o grupo de disponibilidade é denominado `ag1` para o banco de dados `db1`. A réplica primária do grupo de disponibilidade primário é conhecida como a **primária global** em um grupo de disponibilidade distribuído. Neste exemplo, a primária global é o servidor1.        
+Crie um grupo de disponibilidade no primeiro WSFC (cluster de failover do Windows Server).   Neste exemplo, o grupo de disponibilidade é denominado `ag1` para o banco de dados `db1`. A réplica primária do grupo de disponibilidade primário é conhecida como a **primária global** em um grupo de disponibilidade distribuído. Neste exemplo, a primária global é o servidor1.        
   
 ```sql  
 CREATE AVAILABILITY GROUP [ag1]   
@@ -205,15 +205,23 @@ GO
 ```  
 
 ## <a name="failover"></a> Ingressar no banco de dados no secundário do segundo grupo de disponibilidade
-Depois que o banco de dados no secundário do segundo grupo de disponibilidade tiver entrado em um estado de repouso, será necessário uni-o manualmente ao grupo de disponibilidade.
+Depois que o banco de dados na réplica secundária do segundo grupo de disponibilidade tiver entrado em um estado de repouso, será necessário uni-o manualmente ao grupo de disponibilidade.
 
 ```sql  
 ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];   
-```  
+```
   
 ## <a name="failover"></a> Fazer failover em um grupo de disponibilidade secundário  
-No momento, apenas o failover manual é permitido. A seguinte instrução Transact-SQL faz failover de um grupo de disponibilidade distribuído denominado `distributedag`:  
 
+No momento, apenas o failover manual é permitido. Para fazer failover manual de um grupo de disponibilidade distribuído:
+
+1. Para garantir que nenhum dado seja perdido, defina o grupo de disponibilidade distribuído para confirmação síncrona.
+1. Aguarde até que o grupo de disponibilidade distribuído esteja sincronizado.
+1. Na réplica primária global, defina a função do grupo de disponibilidade distribuído como `SECONDARY`.
+1. Teste a prontidão de failover.
+1. Execute o failover do grupo de disponibilidade primário.
+
+Os exemplos de Transact-SQL a seguir demonstram as etapas detalhadas para fazer failover do grupo de disponibilidade distribuído denominado `distributedag`:
 
 1. Defina o grupo de disponibilidade distribuído como confirmação síncrona executando o seguinte código em *ambos*, na primária global e no encaminhador.   
     
@@ -242,8 +250,7 @@ No momento, apenas o failover manual é permitido. A seguinte instrução Transa
 
       ```  
    >[!NOTE]
-   >Da mesma forma que para grupos de disponibilidade normal, o status de sincronização entre duas partes de réplicas de grupos de um grupo de disponibilidade distribuída depende do modo de disponibilidade de ambas as réplicas. Por exemplo, para que a confirmação síncrona ocorra, tanto o grupo de disponibilidade primária quanto o grupo de disponibilidade secundária atuais devem ser configurados para o modo de disponibilidade de confirmação síncrona.  
-
+   >Em um grupo de disponibilidade distribuído, o status de sincronização entre os dois grupos de disponibilidade depende do modo de disponibilidade de ambas as réplicas. Para o modo de confirmação síncrona, tanto o grupo de disponibilidade primária quanto o grupo de disponibilidade secundária atuais precisam ter o modo de disponibilidade `SYNCHRONOUS_COMMIT`. Por esse motivo, você precisa executar o script acima, tanto na réplica primária global quanto no encaminhador.
 
 1. Aguarde até que o status do grupo de disponibilidade distribuído seja alterado para `SYNCHRONIZED`. Execute a consulta a seguir na primária global que é a réplica primária do grupo de disponibilidade primário. 
     

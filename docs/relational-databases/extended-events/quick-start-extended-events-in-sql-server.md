@@ -6,20 +6,21 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: xevents
-ms.topic: conceptual
+ms.topic: quickstart
 ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b7c3718d1402ebdc6ff82bddc55172f09ff8b61a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1e32610836ab856710de35dcf24104a3e4433877
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658345"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478231"
 ---
-# <a name="quick-start-extended-events-in-sql-server"></a>Início Rápido: Eventos estendidos no SQL Server
+# <a name="quickstart-extended-events-in-sql-server"></a>Início Rápido: Eventos estendidos no SQL Server
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
@@ -485,7 +486,7 @@ Outra opção de pesquisa é usar a interface do usuário do SSMS da caixa de di
 #### <a name="sql-trace-event-classes-with-extended-events"></a>Classes de evento de Rastreamento do SQL, com eventos estendidos
 
 
-Uma descrição do uso dos eventos estendidos com colunas e classes de evento do Rastreamento do SQL está disponível em: [Exibir os Eventos Estendidos equivalentes às classes do Rastreamento do SQL](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)
+Uma descrição de como usar eventos estendidos com colunas e classes de evento de Rastreamento do SQL está disponível em: [Exibir os Eventos Estendidos equivalentes às classes de rastreamento de eventos do SQL](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)
 
 
 
@@ -525,7 +526,7 @@ Você pode ver essas sessões de evento no SSMS **Pesquisador de Objetos** em **
 ### <a name="powershell-provider-for-extended-events"></a>Provedor do PowerShell para eventos estendidos
 
 
-Você pode gerenciar os eventos estendidos do SQL Server usando o provedor do PowerShell do SQL Server. Encontre detalhes em: [Usar o Provedor do PowerShell para Eventos Estendidos](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)
+Você pode gerenciar os eventos estendidos do SQL Server usando o provedor do PowerShell do SQL Server. Os detalhes estão em: [Usar o provedor do PowerShell para Eventos Estendidos](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)
 
 
 ### <a name="system-views-for-extended-events"></a>Exibições do sistema para eventos estendidos
@@ -649,7 +650,7 @@ Estes são os links para a documentação relacionada a essas instruções SELEC
 - [Permissões de servidor GRANT (Transact-SQL)](../../t-sql/statements/grant-server-permissions-transact-sql.md)
 - [sys.server_principals (Transact-SQL)](https://msdn.microsoft.com/library/ms188786.aspx)
 - Especialmente, para o Banco de Dados SQL do Azure [database_principals (Transact-SQL)](https://msdn.microsoft.com/library/ms187328.aspx)
-- Blog: [Effective Database Engine Permissions](https://social.technet.microsoft.com/wiki/contents/articles/15180.effective-database-engine-permissions.aspx)(permissões eficientes do Mecanismo de Banco de Dados)
+- Blog: [Effective Database Engine Permissions](https://social.technet.microsoft.com/wiki/contents/articles/15180.effective-database-engine-permissions.aspx) (Permissões eficientes do Mecanismo de Banco de Dados)
 - [Cartaz](https://aka.ms/sql-permissions-poster)que permite zoom, como um PDF, que exibe a hierarquia de todas as permissões do SQL Server.
 
 

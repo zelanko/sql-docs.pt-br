@@ -6,20 +6,21 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: xevents
-ms.topic: conceptual
+ms.topic: tutorial
 ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d9ce1619d4ad2d61a784ace4ea16dc4064569e09
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d80831a3a152d29d8a2f608527105c9feb23b126
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658875"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478161"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>Exibição avançada de dados de destino dos Eventos Estendidos no SQL Server
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
@@ -36,7 +37,7 @@ Este artigo ilustra como você pode usar os recursos avançados do SQL Server Ma
 
 O presente artigo pressupõe que você já saiba como criar e iniciar uma sessão de evento. Confira as instruções sobre como criar uma sessão de evento no início do seguinte artigo:
 
-[Início Rápido: Eventos Estendidos no SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
+[Início rápido: Eventos estendidos no SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
 
 
 Este artigo também pressupõe que você instalou uma versão mensal muito recente do SSMS. A ajuda da instalação está localizada em:
@@ -101,17 +102,17 @@ Há várias maneiras para inserir os dados de destino event_file na interface do
 
 O SSMS pode exibir dados de qualquer destino. Mas as exibições são diferentes para os vários destinos:
 
-- *event_file:* os dados de um destino event_file são exibidos muito bem, com recursos avançados disponíveis.
+- *event_file:* Os dados de um destino event_file são exibidos muito bem, com recursos avançados disponíveis.
 
 
-- *ring_buffer:* os dados de um destino de buffer de anéis são exibidos como um XML bruto.
+- *ring_buffer:* Os dados de um destino de buffer de anéis são exibidos como um XML bruto.
 
 
 - Para os outros destinos, a potência do monitor fica em algum ponto entre o de event_file e o de ring_buffer.
   - Outros destinos desse tipo incluem event_counter, histogram e pair_matching.
 
 
-- *etw_classic_sync_target:* o SSMS não pode exibir dados do tipo de destino etw_classic_sync_target.
+- *etw_classic_sync_target:* O SSMS não pode exibir dados do tipo de destino etw_classic_sync_target.
 
 
 
@@ -258,9 +259,9 @@ A caixa de diálogo **Escolher Colunas** tem uma seção dedicada à mesclagem d
 
 Na área de eventos estendidos, há dois tipos principais de filtros que podem ser especificados:
 
-- *Filtros de pré-destino:* filtros que reduzem a quantidade de dados enviados pelo mecanismo de eventos ao destino.
+- *Filtros de pré-destino:* Filtros que reduzem a quantidade de dados enviada pelo mecanismo de eventos ao destino.
 
-- *Filtros de pós-destino:* filtros que podem ser selecionados na interface do usuário do SSMS para excluir alguns registros de destino da exibição.
+- *Filtros de pós-destino:* Filtros que podem ser selecionados na interface do usuário do SSMS para excluir alguns registros de destino da exibição.
 
 
 Os filtros da exibição do SSMS são os seguintes:

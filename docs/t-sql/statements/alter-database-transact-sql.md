@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a9d870d766d7c2080b177270156cfa2428c21fc7
-ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
+ms.openlocfilehash: d0818f5ffbc75a296996e1cf3b5683dacbc0efa2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58417238"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538658"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -233,7 +233,7 @@ Modify Name = Northwind ;
 GO
 ```
 
-### <a name="b-changing-the-collation-of-a-database"></a>b. Alterando a ordenação de um banco de dados
+### <a name="b-changing-the-collation-of-a-database"></a>B. Alterando a ordenação de um banco de dados
 
 O exemplo a seguir cria um banco de dados denominado `testdb` com a ordenação `SQL_Latin1_General_CP1_CI_A`S e, em seguida, altera a ordenação do banco de dados `testdb` para `COLLATE French_CI_AI`.
 
@@ -592,7 +592,7 @@ SELECT Edition = DATABASEPROPERTYEX('db1', 'EDITION'),
 ALTER DATABASE [db1] MODIFY (EDITION = 'Premium', MAXSIZE = 1024 GB, SERVICE_OBJECTIVE = 'P15');
 ```
 
-### <a name="b-moving-a-database-to-a-different-elastic-pool"></a>b. Movendo um banco de dados para um pool elástico diferente
+### <a name="b-moving-a-database-to-a-different-elastic-pool"></a>B. Movendo um banco de dados para um pool elástico diferente
 Move um banco de dados existente para um pool chamado pool1:
 
 ```sql
@@ -624,7 +624,15 @@ Promove o banco de dados secundário db1 no servidor `secondaryserver` para torn
 ALTER DATABASE db1 FAILOVER
 ```
 
-### <a name="f-update-a-single-database-to-service-tier-s0-standard-edition-performance-level-0"></a>F. Atualizar um banco de dados individual para a camada de serviço S0 (Standard Edition, nível de desempenho 0)
+### <a name="e-force-failover-to-a-geo-replication-secondary-with-data-loss"></a>E. Forçar o failover para um secundário de replicação geográfica com perda de dados
+
+Força um banco de dados secundário db1 no servidor `secondaryserver` a se tornar o novo banco de dados primário quando executado no servidor `secondaryserver`, caso o servidor primário se torne não disponível. Essa opção pode gerar a perda de dados. 
+
+```sql
+ALTER DATABASE db1 FORCE_FAILOVER_ALLOW_DATA_LOSS
+```
+
+### <a name="g-update-a-single-database-to-service-tier-s0-standard-edition-performance-level-0"></a>G. Atualizar um banco de dados individual para a camada de serviço S0 (Standard Edition, nível de desempenho 0)
 Atualiza um banco de dados individual para a Standard Edition (camada de serviço) com um nível de desempenho do S0 e um tamanho máximo de 250 GB.
 
 ```sql
@@ -863,7 +871,7 @@ ALTER DATABASE AdventureWorks2012
 MODIFY NAME = Northwind;
 ```
 
-### <a name="b-change-max-size-for-the-database"></a>b. Alterar o tamanho máximo do banco de dados
+### <a name="b-change-max-size-for-the-database"></a>B. Alterar o tamanho máximo do banco de dados
 
 ```sql
 ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB );
@@ -1045,7 +1053,7 @@ ALTER DATABASE CustomerSales
     SET ( AUTOGROW = ON );
 ```
 
-### <a name="b-altering-the-maximum-storage-for-replicated-tables"></a>b. Alterando o armazenamento máximo para tabelas replicadas
+### <a name="b-altering-the-maximum-storage-for-replicated-tables"></a>B. Alterando o armazenamento máximo para tabelas replicadas
 
 O exemplo a seguir define o limite de armazenamento de tabela replicada em 1 GB para o banco de dados `CustomerSales`. Este é o limite de armazenamento por nó de computação.
 

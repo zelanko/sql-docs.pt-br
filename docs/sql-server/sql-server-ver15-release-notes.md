@@ -1,6 +1,6 @@
 ---
 title: Notas sobre a versão do SQL Server 2019 | Microsoft Docs
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 1afd1c7c1c3c142745e667662f51027218598e2f
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 6336e6ebc549d1be2787bb8a100efec1ea9b6836
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017722"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492848"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>Notas sobre a versão a versão prévia do SQL Server 2019
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -34,10 +34,10 @@ Este artigo descreve as limitações e os problemas conhecidos para as versões 
 - Instalar no Linux para [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md) e [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
 - [Executar no SQL Server 2019 no Docker](../linux/quickstart-install-connect-docker.md).
 
-## <a name="ctp-23"></a>CTP 2.3
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] O CTP 2.3 é a última versão pública do [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
+## <a name="ctp-24"></a>CTP 2.4
+O [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4 é a última versão pública do [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] O CTP 2.3 está disponível apenas como Evaluation Edition. Nenhuma outra edição está disponível. O suporte para o CTP 2.3 é descrito em `license_Eval.rtf` com a mídia de instalação.
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] O CTP 2.3 está disponível apenas como Evaluation Edition. Nenhuma outra edição está disponível. O suporte para versões CTP é descrito em `license_Eval.rtf` com a mídia de instalação.
 
 Suporte limitado pode ser encontrado em um dos seguintes locais:
 
@@ -49,15 +49,15 @@ Suporte limitado pode ser encontrado em um dos seguintes locais:
 
 - Ou envie um tweet para [@SQLServer](https://twitter.com/SQLServer) com [#sqlhelp](https://twitter.com/search?q=%23sqlhelp)
 
-### <a name="documentation-ctp-23"></a>Documentação (CTP 2.3)
+### <a name="documentation-ctp-24"></a>Documentação (CTP 2.4)
 
 - **Problema e impacto sobre o cliente**: A documentação para o SQL Server 2019 (15.x) é limitada e o conteúdo está incluído no conjunto de documentação [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. O conteúdo nesses artigos específico para o SQL Server 2019 (15.x) será indicado com **Aplica-se a**.
 
-- **Problema e impacto para o cliente**: a documentação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode ser filtrada por versão. Use o controle na parte superior esquerda de cada página de documentação para filtrar os requisitos. 
+- **Problema e impacto para o cliente**: a documentação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode ser filtrada por versão. Use o controle na parte superior esquerda de cada página de documentação para filtrar os requisitos.
 
 - **Problema e impacto sobre o cliente**: Nenhum conteúdo offline está disponível para o SQL Server 2019 (15.x).
 
-### <a name="hardware-and-software-requirements-ctp-23"></a>Requisitos de hardware e software (CTP 2.3)
+### <a name="hardware-and-software-requirements-ctp-24"></a>Requisitos de hardware e software (CTP 2.4)
 
 - **Problema e impacto sobre o cliente**: Os requisitos de hardware e software ainda estão sendo analisados e não são definitivos para a versão do produto.
 
@@ -75,7 +75,7 @@ Suporte limitado pode ser encontrado em um dos seguintes locais:
 
 - **Solução alternativa**: N/A
 
-- **Aplica-se ao**: SQL Server 2019 CTP 2.3, CTP 2.2, CTP 2.1
+- **Aplica-se ao**: SQL Server 2019 CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1
 
 ### <a name="utf-8-collations"></a>Agrupamentos UTF-8
 
@@ -84,13 +84,14 @@ Suporte limitado pode ser encontrado em um dos seguintes locais:
   - Servidor vinculado
   - OLTP in-memory
   - Tabela externa para PolyBase
+  - Always Encrypted
 
   > [!Note]
   > No momento, não há nenhuma interface do usuário compatível para escolher os agrupamentos UTF-8 habilitados no Azure Data Studio ou SSDT (SQL Server Data Tools). A versão mais recente do SSMS ([!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]) é compatível com a seleção de agrupamentos UTF-8 habilitados na interface do usuário.
  
 - **Solução alternativa**: Não há solução alternativa para CTPs do [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
 
-- **Aplica-se ao**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3, CTP 2.2, CTP 2.1, CTP 2.0.
+- **Aplica-se ao**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1, CTP 2.0.
 
 ### <a name="sql-graph"></a>SQL Graph
 
@@ -98,7 +99,7 @@ Suporte limitado pode ser encontrado em um dos seguintes locais:
 
 - **Solução alternativa**: Escrever scripts [!INCLUDE[tsql](../includes/tsql-md.md)] e execute-os no servidor usando [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ou SQLCMD funcionará. A exportação ou a importação de objetos de banco de dados que criam restrições do Microsoft Edge, têm nova sintaxe de DML de mesclagem ou criam exibições/tabelas derivadas em objetos de grafo não funcionarão. Os usuários precisarão criar manualmente esses objetos no seu banco de dados usando scripts [!INCLUDE[tsql](../includes/tsql-md.md)]. 
 
-- **Aplica-se ao**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3, CTP 2.2, CTP 2.1, 2.0.
+- **Aplica-se ao**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1, 2.0.
 
 ### <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted com enclaves seguros
 
@@ -106,23 +107,13 @@ Suporte limitado pode ser encontrado em um dos seguintes locais:
 
 - **Solução alternativa**: Para habilitar cálculos avançados, execute `DBCC traceon(127,-1)`. Para obter detalhes, consulte [Habilitar cálculos avançados](../relational-databases/security/encryption/configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
 
-- **Aplica-se ao**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3, 2.2, CTP 2.1, 2.0.
+- **Aplica-se ao**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4, CTP 2.3, 2.2, CTP 2.1, 2.0.
 
 ### <a name="system-dynamic-management-views"></a>Exibições de gerenciamento dinâmico do sistema
 
 - **Problema e impacto sobre o cliente**: A função com valor de tabela do sistema [DM db_objects_disabled_on_compatibility_level_change](../relational-databases/system-dynamic-management-views/spatial-data-sys-dm-db-objects-disabled-on-compatibility-level-change.md) retorna valores aleatórios na coluna `dependency`.
 
-- **Aplica-se ao**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3.
-
-### <a name="sql-server-analysis-services-ssas"></a>SSAS (SQL Server Analysis Services)
-
-- **Problema e impacto sobre o cliente**: Para modelos de tabela com segurança dinâmica, em algumas circunstâncias um usuário pode ver os dados de outro usuário que pertence à mesma função.
-
-  **Cenário**: Há pelo menos duas funções no modelo. Uma das funções não tem nenhuma expressão de segurança dinâmica contendo `USERNAME` ou `USERPRINCIPALNAME`. A segunda função com segurança dinâmica em nível de linha é definida para os usuários A e B por meio de expressões que contêm `USERNAME` ou `USERPRINCIPLENAME`. Os usuários A e B podem se conectar e consultar dados, no entanto, sob determinadas circunstâncias, o usuário B pode ver os dados protegidos apenas para o usuário A.
-
-- **Solução alternativa**: Adicione uma medida fictícia no modelo. Por exemplo, `[DummyMeasure] := UserName()`. Isso garante que as expressões dinâmicas sejam avaliadas para as expressões de segurança em nível de linha.
-
-- **Aplica-se ao**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3.
+- **Aplica-se ao**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4, CTP 2.3.
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

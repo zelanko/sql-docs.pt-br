@@ -10,12 +10,12 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 27e2a4939ebe376408aad64414503a8c9edd46ce
-ms.sourcegitcommit: 1510d9fce125e5b13e181f8e32d6f6fbe6e7c7fe
+ms.openlocfilehash: 6c7b3874277b1046233e4f728a19d3eee60aa851
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55771342"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535848"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Atualizar instâncias de réplica do Grupo de Disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,17 +80,23 @@ Observe as diretrizes a seguir ao realizar atualizações de servidor para minim
   
 1.  Remover o failover automático em todas as réplicas de confirmação síncrona  
   
-2.  Atualizar todas as instâncias de réplica secundária que executam réplicas secundárias de confirmação assíncrona  
+2.  Atualizar todas as instâncias de réplica secundária de confirmação assíncrona. 
   
-3.  Atualizar todas as instâncias de réplica secundária locais que não estão executando a réplica primária  
+3.  Atualizar todas as instâncias de réplica secundária remota de confirmação síncrona. 
+
+4.  Atualizar todas as instâncias de réplica secundária local de confirmação síncrona. 
   
-4.  Fazer o failover manual do AG em uma réplica secundária local de confirmação síncrona  
+4.  Fazer failover manual do AG em uma réplica secundária local de confirmação síncrona (recém-atualizadas).  
   
-5.  Atualizar a instância da réplica local que hospedava a réplica primária  
+5.  Atualizar a instância de réplica local que hospedava anteriormente a réplica primária.  
   
-6.  Configurar parceiros de failover automático conforme desejado  
+6.  Configurar parceiros de failover automático conforme desejado.
   
  Se necessário, você pode executar um failover manual extra para retornar o AG à sua configuração original.  
+ 
+   > [!NOTE]
+   > - A atualização de uma réplica de confirmação síncrona e sua colocação offline não atrasarão as transações na primária. Depois que a réplica secundária for desconectada, as transações serão confirmadas na primária sem aguardar a proteção dos logs na réplica secundária. 
+   > - Se `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` for definido como `1` ou `2`, a réplica primária poderá ficar indisponível para leituras/gravações quando um número correspondente de réplicas secundárias de sincronização não estiver disponível durante o processo de atualização. 
   
 ## <a name="ag-with-one-remote-secondary-replica"></a>AG com uma réplica secundária remota  
  Se você tiver implantado um AG somente para recuperação de desastre, talvez seja necessário fazer failover do AG para uma réplica secundária de confirmação assíncrona. Essa configuração é ilustrada na figura a seguir:  

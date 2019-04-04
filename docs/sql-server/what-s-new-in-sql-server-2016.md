@@ -17,12 +17,12 @@ ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 684df573eba24e9e0337f33f17b8507523b199e3
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 39be659b50c7cc068c3887a0c0139b312c46cf0b
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699425"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657980"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Novidades no SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -30,12 +30,12 @@ ms.locfileid: "51699425"
 
 Esta página fornece informações de resumo e links para informações mais detalhadas de novidades do SQL Server 2016 para cada componente do SQL Server. 
 
-![SQL Server 2016](../sql-server/media/sql-server-2016.png) 
+![SQL Server 2016](../sql-server/media/sql-server-2016.png)
 
  **Experimente o SQL Server hoje mesmo!** 
 - Baixe **gratuitamente** a [**edição do desenvolvedor do SQL Server 2016!**](https://www.microsoft.com/cloud-platform/sql-server-editions-developers).
 - Baixe a versão mais recente do [SSMS (SQL Server Management Studio)](../ssms/download-sql-server-management-studio-ssms.md). 
-- Tem uma conta do Azure? Ative uma [Máquina Virtual com o SQL Server 2016 já instalado](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/).
+- Tem uma conta do Azure? Ative uma [Máquina Virtual com o SQL Server 2016 já instalado](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016).
 
 ## <a name="sql-server-2016-database-engine"></a>Mecanismo de Banco de Dados do SQL Server 2016
 - Agora você pode configurar **vários arquivos de banco de dados tempDB** durante a instalação e configuração do SQL Server.
@@ -49,9 +49,9 @@ Esta página fornece informações de resumo e links para informações mais det
     - Dá suporte a tabelas de até 2 TB (acima de 256 GB). 
     - Tem aprimoramentos de índice de armazenamento de coluna para classificação e suporte ao Grupo de Disponibilidade AlwaysOn.
 - Novos recursos de segurança:
-    - **Always Encrypted:** quando esta opção está habilitada, somente o aplicativo que tem a chave de criptografia pode acessar os dados confidenciais criptografados no banco de dados SQL Server 2016. A chave nunca é passada para o SQL Server.
-    - **Máscara de Dados Dinâmicos:** se for especificada na definição da tabela, os dados mascarados ficarão ocultos da maioria dos usuários, e apenas os usuários com a permissão UNMASK poderão ver os dados concluídos.
-    - **Segurança em Nível de Linha:** o acesso aos dados pode ser restringido no nível do mecanismo de banco de dados, portanto, os usuários veem apenas o que é relevante para eles. 
+    - **Always Encrypted:** Quando habilitado, somente o aplicativo que tem a chave de criptografia pode acessar os dados confidenciais criptografados no banco de dados SQL Server 2016. A chave nunca é passada para o SQL Server.
+    - **Máscara de Dados Dinâmicos:** Se especificada na definição da tabela, os dados mascarados ficarão ocultos da maioria dos usuários e apenas os usuários com a permissão UNMASK poderão ver os dados concluídos.
+    - **Segurança em Nível de Linha:** O acesso a dados pode ser restringido no nível do mecanismo de banco de dados, portanto, os usuários veem apenas o que é relevante para eles. 
 
 Confira [Mecanismo de banco de dados](../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md).
 ## <a name="sql-server-2016-analysis-services-ssas"></a>SSAS (SQL Server 2016 Analysis Services)

@@ -11,12 +11,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: d4346f3c30020d49f49deab4988b754a31ec401f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: df99a74b9c26e13c9fc2037c9d540ee844bfebfb
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503491"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658270"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ O SQL Server 2014 SP2 contém rollups de hotfixes lançados para a Atualização
 |Suporte de DROP DDL para replicação|Permite que uma tabela incluída como um artigo na publicação de replicação transacional seja descartada do banco de dados e da publicação.|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)
 |Privilégio IFI para a conta de serviço do SQL|Determine se a IFI (Inicialização Instantânea de Arquivo) está em vigor na inicialização do serviço SQL Server.|[Inicialização de arquivo de bancos de dados](https://docs.microsoft.com/sql/relational-databases/databases/database-instant-file-initialization)
 |Concessões de memória – Tratando problemas|Você pode aproveitar as dicas de diagnóstico ao executar consultas limitando suas concessões de memória para evitar a contenção de memória.|[KB 3107401](https://support.microsoft.com/help/3107401/new-query-memory-grant-options-are-available-min-grant-percent-and-max)
-|Criação de perfil por operador leve para execução de consulta |Otimiza a coleta de estatísticas de execução de consulta por operador como o número real de linhas.|[Escolha dos desenvolvedores: consultar o andamento – a qualquer momento, em qualquer lugar](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)
+|Criação de perfil por operador leve para execução de consulta |Otimiza a coleta de estatísticas de execução de consulta por operador como o número real de linhas.|[Developers Choice: Query progress – anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (Escolha dos desenvolvedores: consultar o andamento – a qualquer momento, em qualquer lugar)
 |Consultar diagnóstico de execução|A leitura de linhas reais agora é relatada nos planos de execução de consulta para ajudar a melhorar a solução de problemas de desempenho de consulta.|[KB 3107397](https://support.microsoft.com/help/3107397/improved-diagnostics-for-query-execution-plans-that-involve-residual-p)
 |Consultar o diagnóstico de execução para despejo de tempdb|Aviso de hash e avisos de classificação agora tem colunas adicionais para rastrear as estatísticas de E/S físicas, a memória usada e as linhas afetadas. |[Melhorar o diagnóstico de despejo de temptdb](https://support.microsoft.com/help/3107172/improve-tempdb-spill-diagnostics-by-using-extended-events-in-sql-serve)
 |Suporte de tempdb |Use uma nova mensagem de log de erros para o número de arquivos tempdb, e as alterações de arquivo de dados tempdb, na inicialização do servidor.|[KB 2963384](https://support.microsoft.com/help/2963384/fix-sql-server-crashes-when-the-log-file-of-tempdb-database-is-full-in)
@@ -83,7 +83,7 @@ O SQL Server 2014 SP1 contém correções fornecidas no SQL Server 2014 Atualiza
 
 - [Baixar o Service Pack 1 para Microsoft SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=46694)
 - [O SQL Server 2014 Service Pack 1 foi lançado – atualizado](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2014-service-pack-1-has-released-updated/)
-- [Microsoft SQL Server 2014 SP1 Express](https://www.microsoft.com/download/details.aspx?id=46697)
+- [Microsoft SQL Server 2014 SP1 Express](https://www.microsoft.com/download/details.aspx?id=42299)
 - [Microsoft SQL Server 2014 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=46696)
 
 
@@ -95,7 +95,7 @@ O SQL Server 2014 SP1 contém correções fornecidas no SQL Server 2014 Atualiza
 2.  A instalação do SQL Server 2014 CTP 1 em conjunto com o SQL Server 2014 RTM NÃO é suportada.  
 3.  Os recursos de anexação ou restauração de um banco de dados do SQL Server 2014 CTP 1 ao SQL Server 2014 RTM não têm suporte.  
 
-**Solução alternativa:** não há.
+**Solução alternativa:** Nenhum.
 
 #### <a name="upgrading-from-sql-server-2014-ctp-2-to-sql-server-rtm"></a>Atualização do SQL Server 2014 CTP 2 para o SQL Server RTM
 A atualização tem suporte total. Em especial, você pode:
@@ -109,18 +109,18 @@ A atualização tem suporte total. Em especial, você pode:
 #### <a name="downgrading-from-sql-server-2014-rtm-to-sql-server-2014-ctp-2"></a>Fazer downgrade do SQL Server 2014 RTM para o SQL Server 2014 CTP 2  
 Não há suporte para essa ação.  
   
-**Solução:** Não há solução para a desatualização. Recomendamos que você faça backup do banco de dados antes de atualizar para o SQL Server 2014 RTM.  
+**Solução alternativa:** Não existe nenhuma solução alternativa para fazer downgrade. Recomendamos que você faça backup do banco de dados antes de atualizar para o SQL Server 2014 RTM.  
   
 #### <a name="incorrect-version-of-streaminsight-client-on-sql-server-2014-mediaisocab"></a>Versão incorreta do StreamInsight Client na mídia/ISO/CAB do SQL Server 2014  
 A versão incorreta do StreamInsight.msi e do StreamInsightClient.msi está localizada no seguinte caminho na mídia/ISO/CAB do SQL Server (StreamInsight\\\<Arquitetura\>\\\<ID de idioma\>).  
   
-**Solução alternativa:** baixe e instale a versão correta da página de download do [SQL Server 2014 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=306709).  
+**Solução alternativa:** Baixe e instale a versão correta na [página de download do SQL Server 2014 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=306709).  
   
 ### <a name="ProdDoc"></a>Documentação do Produto RTM
   
 O conteúdo do Construtor de Relatórios e do PowerPivit não está disponível em alguns idiomas. 
 
-**Problema:** o conteúdo do Construtor de Relatórios não está disponível nos idiomas a seguir:  
+**Problema:** O conteúdo do Construtor de Relatórios não está disponível nos seguintes idiomas:  
   
 -   Grego (el-GR)  
 -   Norueguês (Bokmal) (nb-NO)  
@@ -129,9 +129,9 @@ O conteúdo do Construtor de Relatórios e do PowerPivit não está disponível 
   
 No [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], esse conteúdo estava disponível em um arquivo CHM enviado com o produto e que estava disponível nesses idiomas. Os arquivos CHM não vêm mais com o produto e o conteúdo do Construtor de Relatórios só está disponível no MSDN. O MSDN não oferece suporte a esses idiomas. O Construtor de Relatórios também foi removido do TechNet e não está mais disponível nesses idiomas com suporte.  
   
-**Solução alternativa:** não há.  
+**Solução alternativa:** Nenhum.  
   
-**Problema:** o conteúdo do Power Pivot não está disponível nos idiomas a seguir:
+**Problema:** O conteúdo do Power Pivot não está disponível nos seguintes idiomas:
   
 -   Grego (el-GR)  
 -   Norueguês (Bokmal) (nb-NO)  
@@ -147,7 +147,7 @@ No [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], esse conteúdo estava dispon�
   
 No [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], este conteúdo estava disponível no TechNet e estava disponível nestes idiomas. Esse conteúdo foi removido do TechNet e não está mais disponível nesses idiomas com suporte.  
   
-**Solução alternativa:** não há.  
+**Solução alternativa:** Nenhum.  
   
 ### <a name="DBEngine"></a>Mecanismo de Banco de Dados (RTM)
   
@@ -158,9 +158,9 @@ O padrão do SQL Server 2014 tem as seguintes alterações:
 -   A memória máxima foi aumentada de 64 GB para 128 GB.  
  
 #### <a name="memory-optimization-advisor-flags-default-constraints-as-incompatible"></a>O Orientador de Otimização de Memória sinaliza restrições padrão como incompatíveis  
-**Problema:** O orientador de otimização de memória no SQL Server Management Studio sinaliza todas as restrições padrão como incompatíveis. Nem todas as restrições padrão têm suporte em uma tabela com otimização de memória; o orientador de otimização do não faz distinção entre tipos com e sem suporte de restrições padrão. As restrições padrão com suporte incluem todas as constantes, expressões e funções internas compatíveis com os procedimentos armazenados compilados de forma nativa. Para ver a lista de funções com suporte em procedimentos armazenados compilados de forma nativa, veja [Construções suportadas em procedimentos armazenados compilados de forma nativa](https://msdn.microsoft.com/library/dn452279(v=sql.120).aspx).  
+**Problema:** O Orientador de Otimização de Memória no SQL Server Management Studio sinaliza todas as restrições padrão como incompatíveis. Nem todas as restrições padrão têm suporte em uma tabela com otimização de memória; o orientador de otimização do não faz distinção entre tipos com e sem suporte de restrições padrão. As restrições padrão com suporte incluem todas as constantes, expressões e funções internas compatíveis com os procedimentos armazenados compilados de forma nativa. Para ver a lista de funções com suporte em procedimentos armazenados compilados de forma nativa, veja [Construções suportadas em procedimentos armazenados compilados de forma nativa](https://msdn.microsoft.com/library/dn452279(v=sql.120).aspx).  
   
-**Solução alternativa:** se você quiser usar o orientador para identificar bloqueadores, ignore as restrições padrão correspondentes. Para usar o orientador de otimização de memória para migrar as tabelas que têm restrições padrão correspondentes, mas nenhum outro bloqueador, siga estas etapas:  
+**Solução alternativa:** Se você quiser usar o assistente para identificar bloqueadores, ignore as restrições padrão correspondentes. Para usar o orientador de otimização de memória para migrar as tabelas que têm restrições padrão correspondentes, mas nenhum outro bloqueador, siga estas etapas:  
   
 1.  Remova as restrições padrão da definição de tabela.    
 2.  Use o orientador de otimização do gerar um script de migração na tabela.    
@@ -168,7 +168,7 @@ O padrão do SQL Server 2014 tem as seguintes alterações:
 4.  Execute o script de migração.  
   
 #### <a name="informational-message-file-access-denied-incorrectly-reported-as-an-error-in-the-sql-server-2014-error-log"></a>A mensagem informativa “acesso ao arquivo negado” é relatada incorretamente como um erro no log de erros do SQL Server 2014  
-**Problema:** ao reiniciar um servidor que possui bancos de dados que contêm tabelas com otimização de memória, você pode ver o seguinte tipo de mensagens de erro no log de erros do SQL Server 2014:  
+**Problema:** Quando você reinicia um servidor que possui bancos de dados que contêm tabelas otimizadas em memória, você pode ver o seguinte tipo de mensagens de erro no log de erros do SQL Server 2014:  
   
 ```  
 [ERROR]Unable to delete file C:\Program Files\Microsoft SQL   
@@ -177,22 +177,22 @@ memory-optimized table DLLs.
 ```  
 Esta mensagem é apenas informativa, e nenhuma ação do usuário é necessária.  
   
-**Solução alternativa:** não há. Essa é uma mensagem informativa.  
+**Solução alternativa:** Nenhum. Essa é uma mensagem informativa.  
   
 #### <a name="missing-index-details-incorrectly-report-included-columns-for-memory-optimized-table"></a>Os detalhes de índice ausentes relatam incorretamente as colunas incluídas para a tabela com otimização de memória  
-**Problema:** se o SQL Server 2014 detectar um índice ausente para uma consulta em uma tabela com otimização de memória, relatará um índice ausente em SHOWPLAN_XML, bem como nos DMVs do índice ausente, como sys.dm_db_missing_index_details. Em alguns casos, os detalhes de índice ausentes conterão as colunas incluídas. Uma vez que todas as colunas são incluídas implicitamente com todos os índices nas tabelas com otimização de memória, não é permitido especificar explicitamente as colunas incluídas com os índices otimizados por memória.  
+**Problema:** Quando o SQL Server 2014 detecta um índice ausente para uma consulta em uma tabela otimizada em memória, ele informa um índice ausente no SHOWPLAN_XML e também nas DMVs de índice ausente como sys.dm_db_missing_index_details. Em alguns casos, os detalhes de índice ausentes conterão as colunas incluídas. Uma vez que todas as colunas são incluídas implicitamente com todos os índices nas tabelas com otimização de memória, não é permitido especificar explicitamente as colunas incluídas com os índices otimizados por memória.  
   
-**Solução:** não especifique a cláusula INCLUDE com os índices das tabelas com otimização de memória.  
+**Solução alternativa:** Não especifique a cláusula INCLUDE com índices em tabelas otimizadas em memória.  
   
 #### <a name="missing-index-details-omit-missing-indexes-when-a-hash-index-exists-but-is-not-suitable-for-the-query"></a>Os detalhes de índice ausentes omitem os índices ausentes quando um índice de hash existe, mas não é apropriado para a consulta  
-**Problema:** se você tiver um índice de HASH nas colunas de uma tabela com otimização de memória referenciada em uma consulta, mas o índice não puder ser usado na consulta, SQL Server 2014 sem sempre relatará um índice ausente em SHOWPLAN_XML e no DMV sys.dm_db_missing_index_details.  
+**Problema:** Se você tem um índice HASH em colunas de uma tabela otimizada em memória mencionado em uma consulta, mas o índice não pode ser usado para a consulta, o SQL Server 2014 nem sempre relatará um índice ausente em SHOWPLAN_XML e na DMV sys.dm_db_missing_index_details.  
   
 Em particular, se uma consulta contiver os predicados de igualdade que envolvem um subconjunto de colunas de chave de índice ou se contiver os predicados de desigualdade que envolvem as colunas de chave de índice, o índice de HASH não pode ser usado como está, e um índice diferente será necessário para executar a consulta de forma eficaz.  
   
-**Solução:** Caso você esteja usando índices de hash, inspecione as consultas e os planos de consulta para determinar se as consultas podem se beneficiar das operações de busca de índice em um subconjunto de chave de índice, ou as operações de busca de índice em predicados de desigualdade. Se você precisar buscar em um subconjunto de chave de índice, use um índice não clusterizado, ou use um índice de HASH exatamente nas colunas em que você precisa buscar. Se você precisar buscar em um predicado de desigualdade, use um índice não clusterizado em vez de HASH.  
+**Solução alternativa:** Quando você usar índices hash, inspecione as consultas e planos de consulta para determinar se as consultas poderiam se beneficiar de operações de Busca de Índice em um subconjunto da chave de índice, ou operações de Busca de Índice em predicados de desigualdade. Se você precisar buscar em um subconjunto de chave de índice, use um índice não clusterizado, ou use um índice de HASH exatamente nas colunas em que você precisa buscar. Se você precisar buscar em um predicado de desigualdade, use um índice não clusterizado em vez de HASH.  
   
 #### <a name="failure-when-using-a-memory-optimized-table-and-memory-optimized-table-variable-in-the-same-query-if-the-database-option-readcommittedsnapshot-is-set-to-on"></a>Ocorrerá uma falha ao usar uma tabela com otimização de memória e uma variável de tabela com otimização de memória na mesma consulta, se a opção READ_COMMITTED_SNAPSHOT do banco de dados for definida como ON  
-**Problema:** se a opção READ_COMMITTED_SNAPSHOT do banco de dados for definida como ON, e você acessar uma tabela com otimização de memória e uma variável de tabela com otimização de memória na mesma instrução fora do contexto de uma transação de usuário, você poderá encontrar essa mensagem de erro:  
+**Problema:** Se a opção de banco de dados READ_COMMITTED_SNAPSHOT estiver definida como ON e você acessar uma tabela otimizada em memória e uma variável de tabela otimizada em memória na mesma instrução fora do contexto de uma transação de usuário, esta mensagem de erro poderá ser exibida:  
   
 ```  
 Msg 41359  
@@ -202,7 +202,7 @@ READ_COMMITTED_SNAPSHOT is set to ON. Provide a supported isolation level
 for the memory optimized table using a table hint, such as WITH (SNAPSHOT).  
 ```  
   
-**Solução:** utilize a dica de tabela WITH (SNAPSHOT) com a variável de tabela, ou defina a opção MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT do banco de dados para ON, usando a seguinte instrução:  
+**Solução alternativa:** Use a dica de tabela WITH (SNAPSHOT) com a variável de tabela ou defina a opção de banco de dados para MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT para ON, usando a seguinte instrução:  
   
 ```  
 ALTER DATABASE CURRENT   
@@ -210,12 +210,12 @@ SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON
 ```  
   
 #### <a name="procedure-and-query-execution-statistics-for-natively-compiled-stored-procedures-record-worker-time-in-multiples-of-1000"></a>Procedimento e estatísticas de execução de consulta para que os procedimentos armazenados compilados de forma nativa armazenem o tempo de trabalho em múltiplos de 1000  
-**Problema:** depois de habilitar a coleção de procedimento ou coleção de estatísticas de execução de consulta para procedimentos armazenados compilados de forma nativa usando sp_xtp_control_proc_exec_stats ou sp_xtp_control_query_exec_stats, você verá o *_worker_time relatado em múltiplos de 1000, nos DMVs sys.dm_exec_procedure_stats e sys.dm_exec_query_stats. As execuções de consulta com um período de trabalho inferior a 500 microssegundos serão relatadas como tendo um worker_time de 0.  
+**Problema:** Quando ativar a coleção de procedimento ou a coleção de estatísticas de execução da consulta para procedimentos armazenados nativamente compilados usando sp_xtp_control_proc_exec_stats ou sp_xtp_control_query_exec_stats, você verá o * _worker_time informado em múltiplos de 1.000, nas DMVs sys.dm_exec_procedure_stats e sys.dm_exec_query_stats. As execuções de consulta com um período de trabalho inferior a 500 microssegundos serão relatadas como tendo um worker_time de 0.  
   
-**Solução alternativa:** não há. Não confie no worker_time relatado nos DMVs das estatísticas de execução para consultas de curta duração em procedimentos armazenados compilados de forma nativa.  
+**Solução alternativa:** Nenhum. Não confie no worker_time relatado nos DMVs das estatísticas de execução para consultas de curta duração em procedimentos armazenados compilados de forma nativa.  
   
 #### <a name="error-with-showplanxml-for-natively-compiled-stored-procedures-that-contain-long-expressions"></a>Erro com SHOWPLAN_XML para os procedimentos armazenados compilados de forma nativa que contêm expressões longas  
-**Problema:** se um procedimento armazenado compilado de forma nativa contiver uma expressão longa, obter o SHOWPLAN_XML para o procedimento usando a opção SET SHOWPLAN_XML ON do T-SQL ou usando a opção "Exibir plano de execução estimado" no Management Studio, poderá resultar no seguinte erro:  
+**Problema:** Se um procedimento armazenado nativamente compilado contiver uma expressão longa, obtendo SHOWPLAN_XML para o procedimento, usando a opção T-SQL SET SHOWPLAN_XML ON ou "Exibir Plano de Execução Estimado" no Management Studio, o seguinte erro poderá ocorrer:  
   
 ```  
 Msg 41322. MAT/PIT export/import encountered a failure for memory  
@@ -224,7 +224,7 @@ optimized table or natively compiled stored procedure with object ID
 0xc00cee81.  
 ```  
   
-**Solução:** Duas soluções sugeridas:  
+**Solução alternativa:** Duas soluções alternativas sugeridas:  
   
 1.  Adicione parênteses à expressão, semelhante ao seguinte exemplo:  
   
@@ -253,9 +253,9 @@ optimized table or natively compiled stored procedure with object ID
     ```  
   
 #### <a name="using-a-string-parameter-or-variable-with-datepart-and-related-functions-in-a-natively-compiled-stored-procedure-results-in-an-error"></a>Usar um parâmetro ou uma variável de cadeia de caracteres com DATEPART e funções relacionadas em um procedimento armazenado compilado de forma nativa resultará em um erro  
-**Problema:** ao usar um procedimento armazenado compilado de forma nativa que usa o parâmetro ou variável de cadeia de caracteres com as funções internas DATEPART, DAY, MONTH e YEAR, uma mensagem de erro indica que o datetimeoffset do tipo de dados não é compatível com procedimentos armazenados compilados de forma nativa.  
+**Problema:** Ao usar um procedimento armazenado compilado de forma nativa que usa o parâmetro ou variável de cadeia de caracteres com as funções internas DATEPART, DAY, MONTH e YEAR, uma mensagem de erro indica que o datetimeoffset do tipo de dados não é compatível com procedimentos armazenados compilados de forma nativa.  
   
-**Solução:** Atribua o parâmetro ou variável de cadeia de caracteres a uma nova variável do tipo datetime2, e use essa variável na função DATEPART, DAY, MONTH ou YEAR. Por exemplo:  
+**Solução alternativa:** Atribua o parâmetro ou a variável de cadeia de caracteres para uma nova variável do tipo datetime2 e use essa variável na função DATEPART, DAY, MONTH ou YEAR. Por exemplo:  
   
 ```  
 DECLARE @d datetime2 = @string  
@@ -263,14 +263,14 @@ DATEPART(weekday, @d)
 ```  
   
 #### <a name="native-compilation-advisor-flags-delete-from-clauses-incorrectly"></a>O Native Compilation Advisor sinaliza as cláusulas DELETE FROM incorretamente  
-**Problema:** o Orientador de Compilação Nativa sinaliza as cláusulas DELETE FROM dentro de um procedimento armazenado incorretamente como incompatível.  
+**Problema:** O Orientador de Compilação Nativo sinaliza cláusulas DELETE FROM dentro de um procedimento armazenado incorretamente como incompatíveis.  
   
-**Solução alternativa:** não há.  
+**Solução alternativa:** Nenhum.  
   
 #### <a name="register-through-ssms-adds-dac-meta-data-with-mismatched-instance-ids"></a>O registro com o SSMS adiciona metadados do DAC com IDs de instância incompatíveis  
-**Problema:** ao registrar ou excluir um pacote de aplicativos da camada de dados (.dacpac) com o SQL Server Management Studio, as tabelas de sysdac* não são atualizadas corretamente para permitir que um usuário consulte o histórico do dacpac para o banco de dados.  O instance_id para o sysdac_history_internal e o sysdac_instances_internal não correspondem para permitir uma junção.  
+**Problema:** Ao registrar ou excluir um pacote de aplicativos da camada de dados (.dacpac) com o SQL Server Management Studio, as tabelas de sysdac* não são atualizadas corretamente para permitir que um usuário consulte o histórico do dacpac para o banco de dados.  O instance_id para o sysdac_history_internal e o sysdac_instances_internal não correspondem para permitir uma junção.  
   
-**Solução alternativa:** esse problema é corrigido com a redistribuição do feature pack da [Estrutura do aplicativo da camada de dados](https://www.microsoft.com/download/details.aspx?id=42295).  Depois que a atualização for aplicada, todas as novas entradas de histórico usarão o valor listado para instance_id na tabela sysdac_instances_internal.  
+**Solução alternativa:** Esse problema é corrigido com a redistribuição do feature pack da [Estrutura do aplicativo da camada de dados](https://www.microsoft.com/download/details.aspx?id=42295).  Depois que a atualização for aplicada, todas as novas entradas de histórico usarão o valor listado para instance_id na tabela sysdac_instances_internal.  
   
 Se você já tiver o problema com valores de instance_id incompatíveis, a única maneira de corrigir os valores incompatíveis é se conectar ao servidor como um usuário com privilégios para gravar no banco de dados MSDB e atualizar os valores de instance_id para correspondência.  Se há vários eventos de registro e cancelamento de registro do mesmo banco de dados, talvez seja necessário examinar a data/hora para ver quais registros correspondem ao valor atual de instance_id.  
   
@@ -292,9 +292,9 @@ Se você já tiver o problema com valores de instance_id incompatíveis, a únic
 ### <a name="SSRS"></a>Reporting Services (RTM)
   
 #### <a name="the-sql-server-2012-reporting-services-native-mode-report-server-cannot-run-side-by-side-with-sql-server-2014-reporting-services-sharepoint-components"></a>O servidor de relatório do Modo Nativo do SQL Server 2012 Reporting Services não pode ser executado lado a lado com componentes do SQL Server 2014 Reporting Services SharePoint  
-**Problema:** o ‘SQL Server Reporting Services’ do serviço Windows no modo Nativo do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (ReportingServicesService.exe) falha ao iniciar quando há componentes do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint instalados no mesmo servidor.  
+**Problema:** O "SQL Server Reporting Services" do serviço Windows no modo Nativo do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (ReportingServicesService.exe) falha ao iniciar quando há componentes do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint instalados no mesmo servidor.  
   
-**Solução alternativa:** Desinstalar os componentes do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint e reiniciar o serviço do Microsoft SQL Server 2012 Reporting Services do Windows.  
+**Solução alternativa:** Desinstale os componentes do SharePoint [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e reinicie o serviço do Microsoft SQL Server 2012 Reporting Services Windows.  
   
 **Mais Informações:**  
   
@@ -326,9 +326,9 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
 Para obter mais informações, consulte [Dicas, truques e soluções de problemas do SQL Server 2014 Reporting Services](https://go.microsoft.com/fwlink/?LinkID=391254).  
   
 #### <a name="required-upgrade-order-for-multi-node-sharepoint-farm-to-sql-server-2014-reporting-services"></a>A ordem de atualização necessária para vários nós do SharePoint Farm para o SQL Server 2014 Reporting Services  
-**Problema:** a renderização de relatório em uma farm de vários nós falha se as instâncias do Serviço Compartilhado do SharePoint [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] forem atualizadas antes de todas as instâncias do suplemento do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para os produtos do SharePoint.  
+**Problema:** A renderização de relatório em um farm de vários nós falhará se as instâncias do Serviço Compartilhado do SharePoint [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] forem atualizadas antes de todas as instâncias do suplemento [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para produtos do SharePoint.  
   
-**Solução:** em uma farm do SharePoint com vários nós:  
+**Solução alternativa:** Em um farm do SharePoint de vários nós:  
   
 1.  Atualize primeiro todas as instâncias do suplemento do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para os produtos do SharePoint.    
 2.  Em seguida, atualize todas as instâncias do serviço compartilhado do SharePoint [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
@@ -338,7 +338,7 @@ Para obter mais informações, consulte [Dicas, truques e soluções de problema
 ### <a name="AzureVM"></a>SQL Server 2014 RTM em máquinas virtuais do Microsoft Azure  
   
 #### <a name="the-add-azure-replica-wizard-returns-an-error-when-configuring-an-availability-group-listener-in-windows-azure"></a>O assistente para adicionar réplica do Azure retorna um erro ao configurar um ouvinte do grupo de disponibilidade no Microsoft Azure  
-**Problema:** Se um grupo de disponibilidade tiver um ouvinte, o assistente para adicionar réplica do Azure retornará um erro ao tentar configurar o ouvinte no Windows Azure.  
+**Problema:** Se um Grupo de Disponibilidade tiver um Ouvinte, o Assistente para Adicionar Réplica do Azure retornará um erro quando você tentar configurar o Ouvinte no Windows Azure.  
   
 Esse problema se deve ao fato dos ouvintes do grupo de disponibilidade exigirem a atribuição de um endereço IP em cada sub-rede que hospeda réplicas do grupo de disponibilidade, inclusive a sub-rede do Azure.  
   
@@ -404,17 +404,17 @@ Esse problema se deve ao fato dos ouvintes do grupo de disponibilidade exigirem 
   
 -   Master Data Services 2012 hospedado em um banco de dados do Mecanismo de Banco de Dados do SQL Server no SQL Server 2014 com o Data Quality Services 2014 instalado.  
   
-**Solução:** Use a mesma versão do Master Data Services que o banco de dados do mecanismo de banco de dados e o Data Quality Services.  
+**Solução alternativa:** Use a mesma versão do Master Data Services, como o banco de dados do Mecanismo de Banco de Dados e Data Quality Services.  
   
 ### <a name="UA"></a>Problemas do supervisor de atualização (RTM)
   
 #### <a name="sql-server-2014-upgrade-advisor-reports-irrelevant-upgrade-issues-for-sql-server-reporting-services"></a>O Supervisor de Atualização do SQL Server 2014 relata problemas de atualização irrelevantes do SQL Server Reporting Services  
-**Problema:** o supervisor de atualização do SQL Server (SSUA) fornecido com o SQL Server 2014 relata vários erros ao analisar o servidor do SQL Server Reporting Services.  
+**Problema:** O SSUA (SQL Server Upgrade Advisor) enviado com a mídia do SQL Server 2014 informa incorretamente vários erros ao analisar o servidor do SQL Server Reporting Services.  
   
-**Solução:** Esse problema é corrigido no supervisor de atualização do SQL Server fornecido no [SQL Server 2014 Feature Pack para SSUA](https://go.microsoft.com/fwlink/?LinkID=306709).  
+**Solução alternativa:** Esse problema foi corrigido no Supervisor de Atualização do SQL Server fornecido no [SQL Server 2014 Feature Pack para SSUA](https://go.microsoft.com/fwlink/?LinkID=306709).  
   
 #### <a name="sql-server-2014-upgrade-advisor-reports-an-error-when-analyzing-sql-server-integration-services-server"></a>O Supervisor de Atualização do SQL Server 2014 relata um erro ao analisar o servidor do SQL Server Integration Services  
-**Problema:** o Supervisor de Atualização do SQL Server (SSUA) fornecido com a mídia SQL Server 2014 relata um erro ao analisar o servidor do SQL Server Integration Services.  O erro que é exibido para o usuário é:  
+**Problema:** O SSUA (Supervisor de Atualização do SQL Server) fornecido com a mídia SQL Server 2014 relata um erro ao analisar o servidor do SQL Server Integration Services.  O erro que é exibido para o usuário é:  
   
 ```  
 The installed version of Integration Services does not support Upgrade Advisor.   
@@ -422,6 +422,6 @@ The assembly information is "Microsoft.SqlServer.ManagedDTS, Version=11.0.0.0,
 Culture=neutral, PublicKeyToken=89845dcd8080cc91  
 ```  
   
-**Solução:** Esse problema é corrigido no supervisor de atualização do SQL Server fornecido no [SQL Server 2014 Feature Pack para SSUA](https://go.microsoft.com/fwlink/?LinkID=306709).  
+**Solução alternativa:** Esse problema foi corrigido no Supervisor de Atualização do SQL Server fornecido no [SQL Server 2014 Feature Pack para SSUA](https://go.microsoft.com/fwlink/?LinkID=306709).  
   
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

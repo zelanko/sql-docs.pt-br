@@ -16,15 +16,15 @@ helpviewer_keywords:
 - RAW mode
 - XMLDATA option
 ms.assetid: 02c1bc0b-760c-4589-9ab1-6927c6d9c734
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 249bee21bdddacc369a99efe8c31be511e2d305a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 961f1e06cb7ba194612cf4e87f40d356096149bb
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837954"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510173"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>Usar modo RAW com FOR XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "47837954"
 ## <a name="in-this-section"></a>Nesta seção  
  Esta seção contém os seguintes exemplos:  
   
--   [Exemplo: Recuperando informações de modelo de produto como XML](../../relational-databases/xml/example-retrieving-product-model-information-as-xml.md)  
+-   [Exemplo: Recuperando informações de modelo do produto como XML](../../relational-databases/xml/example-retrieving-product-model-information-as-xml.md)  
   
--   [Exemplo: Especificando XSINIL com a política ELEMENTS](../../relational-databases/xml/example-specifying-xsinil-with-the-elements-directive.md)  
+-   [Exemplo: Especificando XSINIL com a diretiva ELEMENTS](../../relational-databases/xml/example-specifying-xsinil-with-the-elements-directive.md)  
   
 -   [Exemplo: Solicitando esquemas como resultados com as opções XMLDATA e XMLSCHEMA](../../relational-databases/xml/example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "47837954"
   
 -   [Exemplo: Especificando um elemento raiz para o XML gerado por FOR XML](../../relational-databases/xml/example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
   
--   [Exemplo: Consultando colunas de tipo XML](../../relational-databases/xml/example-querying-xmltype-columns.md)  
+-   [Exemplo: Consultando colunas XMLType](../../relational-databases/xml/example-querying-xmltype-columns.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Adicionar namespaces a consultas com WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   

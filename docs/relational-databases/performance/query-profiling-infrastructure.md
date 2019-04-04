@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 481a2fe18c99621b8331ab204a99e1d7efd37f24
-ms.sourcegitcommit: afc0c3e46a5fec6759fe3616e2d4ba10196c06d1
+ms.openlocfilehash: 221021641787564bb064f1f825da43cff4b27a32
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55889977"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645558"
 ---
 # <a name="query-profiling-infrastructure"></a>Infraestrutura de Criação de Perfil de Consulta
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -123,6 +123,27 @@ WITH (MAX_MEMORY=4096 KB,
 
 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] inclui uma versão revisada recentemente da criação de perfil leve coletando informações de contagem de linha de todas as execuções. A criação de perfil leve é habilitada por padrão em [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e o sinalizador de rastreamento 7412 não tem nenhum efeito.
 
+Um novo DMF [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) é introduzido para retornar o equivalente do último plano de execução real conhecido para a maioria das consultas. Um novo evento estendido *query_post_execution_plan_profile* coleta o equivalente a um plano de execução real com base em criação de perfil leve, ao contrário de *query_post_execution_showplan*, que usa a criação de perfil padrão. 
+
+Uma sessão de exemplo usando o evento estendido *query_post_execution_plan_profile* pode ser configurada como o exemplo a seguir:
+
+```sql
+CREATE EVENT SESSION [PerfStats_LWP_All_Plans] ON SERVER
+ADD EVENT sqlserver.query_post_execution_plan_profile(
+  ACTION(sqlos.scheduler_id,sqlserver.database_id,sqlserver.is_system,
+    sqlserver.plan_handle,sqlserver.query_hash_signed,sqlserver.query_plan_hash_signed,
+    sqlserver.server_instance_name,sqlserver.session_id,sqlserver.session_nt_username,
+    sqlserver.sql_text))
+ADD TARGET package0.ring_buffer(SET max_memory=(25600))
+WITH (MAX_MEMORY=4096 KB,
+  EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
+  MAX_DISPATCH_LATENCY=30 SECONDS,
+  MAX_EVENT_SIZE=0 KB,
+  MEMORY_PARTITION_MODE=NONE,
+  TRACK_CAUSALITY=OFF,
+  STARTUP_STATE=OFF);
+```
+
 ## <a name="remarks"></a>Remarks
 
 > [!IMPORTANT]
@@ -130,7 +151,10 @@ WITH (MAX_MEMORY=4096 KB,
 
 Começando com a criação de perfil leve v2 e a baixa sobrecarga, qualquer servidor que não esteja vinculado à CPU poderá executar a criação de perfil leve **continuamente** e permitir que os profissionais de banco de dados explorem qualquer execução a qualquer momento, por exemplo, usando o Monitor de Atividade ou consultando `sys.dm_exec_query_profiles` diretamente e obtenham o plano de consulta com estatísticas de tempo de execução.
 
-Para obter mais informações sobre a sobrecarga de desempenho da criação de perfil de consulta, confira a postagem no blog [Developers Choice: Query progress – anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (Escolha dos desenvolvedores: consultar o andamento – a qualquer momento, em qualquer lugar). 
+Para obter mais informações sobre a sobrecarga de desempenho da criação de perfil de consulta, confira a postagem no blog [Developers Choice: Query progress – anytime, anywhere](https://techcommunity.microsoft.com/t5/SQL-Server/Developers-Choice-Query-progress-anytime-anywhere/ba-p/385004) (Escolha dos desenvolvedores: consultar o andamento – a qualquer momento, em qualquer lugar). 
+
+> [!NOTE]
+> Eventos estendidos que aproveitam a criação de perfil leve usarão informações da criação de perfil padrão se a infraestrutura de criação de perfil padrão já estiver habilitada. Por exemplo, uma sessão de evento estendido usando `query_post_execution_showplan` está em execução e outra sessão usando `query_post_execution_plan_profile` é iniciada. A segunda sessão ainda usará informações de criação de perfil padrão.
 
 ## <a name="see-also"></a>Consulte Também  
  [Monitorar e ajustar o desempenho](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
@@ -145,4 +169,4 @@ Para obter mais informações sobre a sobrecarga de desempenho da criação de p
  [Referência de operadores físicos e lógicos de plano de execução](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
  [plano de execução real](../../relational-databases/performance/display-an-actual-execution-plan.md)    
  [Estatísticas de consulta dinâmica](../../relational-databases/performance/live-query-statistics.md)      
- [Developers Choice: Query progress – anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (Escolha dos desenvolvedores: consultar o andamento – a qualquer momento, em qualquer lugar)
+ [Developers Choice: Query progress – anytime, anywhere](https://techcommunity.microsoft.com/t5/SQL-Server/Developers-Choice-Query-progress-anytime-anywhere/ba-p/385004) (Escolha dos desenvolvedores: consultar o andamento – a qualquer momento, em qualquer lugar)
