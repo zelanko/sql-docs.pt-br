@@ -1,6 +1,6 @@
 ---
 title: Propriedades gerais do Analysis Services | Microsoft Docs
-ms.date: 06/07/2018
+ms.date: 04/04/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 883df6b2562e7fa3b80fac6a0063bd6483d1119d
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 0683a8eb03cb0d5d17072825cfc90f8c9ba2500e
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072383"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042385"
 ---
 # <a name="general-properties"></a>Propriedades gerais
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -34,6 +34,11 @@ ms.locfileid: "53072383"
   
  **BackupDir**  
  Uma propriedade de cadeia de caracteres que identifica o nome do diretório onde os arquivos de backup são armazenados por padrão, no caso de um caminho não for especificado como parte do comando Backup.  
+ 
+**ClientCacheRefreshPolicy** aplica-se apenas a serviços de análise do Azure. Substitui o **atualização do cache agendada** configuração para todos os conjuntos de dados do Power BI. Todos os relatórios do Live Connect irá observar a configuração de nível de servidor, independentemente da configuração de nível de conjunto de dados, ou qual espaço de trabalho que residem no.
+
+O valor padrão desta propriedade é -1, que permite que todo o cache de plano de fundo é atualizada conforme especificado em que a atualização do cache agendada configuração para o conjunto de dados. Para evitar o cache de plano de fundo de todas as atualizações, especifique zero (0).
+
   
  **CollationName**  
  Uma propriedade de cadeia de caracteres que identifica a ordenação do servidor. Para obter mais informações, consulte [Idiomas e ordenações &amp;#40;Analysis Services&amp;#41;](../../analysis-services/languages-and-collations-analysis-services.md).  
@@ -80,12 +85,12 @@ ms.locfileid: "53072383"
  Uma propriedade avançada que não deve ser alterada, exceto sob orientação do suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  **ExternalCommandTimeout**  
- Uma propriedade integer que define o tempo limite, em segundos, para comandos emitidos para servidores externos, incluindo fontes de dados relacionais e servidores externos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
+ Uma propriedade integer que define o tempo limite, em segundos, para comandos emitidos para servidores externos, incluindo fontes de dados relacionais e servidores externos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
  O valor padrão desta propriedade é 3600 (segundos).  
   
  **ExternalConnectionTimeout**  
- Uma propriedade de número inteiro que define o tempo limite, em segundos, para criar conexões a servidores externos, incluindo fontes de dados relacionais e servidores externos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Esta propriedade é ignorada quando o tempo limite de uma conexão é especificado na cadeia de conexão.  
+ Uma propriedade de número inteiro que define o tempo limite, em segundos, para criar conexões a servidores externos, incluindo fontes de dados relacionais e servidores externos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Esta propriedade é ignorada quando o tempo limite de uma conexão é especificado na cadeia de conexão.  
   
  O valor padrão desta propriedade é 60 (segundos).  
   
@@ -139,14 +144,14 @@ ms.locfileid: "53072383"
  Uma propriedade de cadeia de caracteres que especifica o local para armazenar arquivos temporários usados durante o processamento, a restauração e outras operações. O valor padrão desta propriedade é determinado por configuração. Se não especificado, o padrão será o diretório de Dados.  
   
 ## <a name="requestprioritization-category"></a>Categoria RequestPrioritization  
- **Enabled**  
+ **Habilitado**  
  Uma propriedade avançada que não deve ser alterada, exceto sob orientação do suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  **StatisticsStoreSize**  
  Uma propriedade avançada que não deve ser alterada, exceto sob orientação do suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 ## <a name="see-also"></a>Consulte também  
- [Propriedades do servidor no Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
+ [Propriedades do servidor do Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Determina o Modo de Servidor de uma instância do Analysis Services.](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

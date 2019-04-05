@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: e84fc2a6032e5886c4d82d630dc36a5bde338ed1
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: d3db11a8ace49a206ffaff106814e87b64948cce
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044502"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042355"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>Operar a instância de cluster de failover – SQL Server em Linux
 
@@ -31,8 +31,8 @@ Há vezes, que talvez você queira executar manualmente a FCI para outro nó. O 
 
 A forma de failover depende da distribuição do Linux. Siga as instruções para a sua distribuição do linux.
 
-- [Ubuntu ou RHEL](#rhelFailover)
-- [SLES](#slesFailover)
+- [Ubuntu ou RHEL](#-manual-failover-rhel-or-ubuntu)
+- [SLES](#-manual-failover-sles)
 
 ## <a name = "#rhelFailover"></a> Failover manual (Ubuntu ou RHEL)
 

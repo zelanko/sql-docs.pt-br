@@ -12,12 +12,12 @@ ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f4d346379cf0aeb945187b18f7eb1fd7a868b33e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 19eae2e3ace3859d61048536be9b70bf58ad66f5
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518098"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042425"
 ---
 # <a name="upgrade-log-shipping-to-sql-server-2014-transact-sql"></a>Atualizar o envio de logs para o SQL Server 2014 (Transact-SQL)
   É possível preservar as configurações de envio de logs ao atualizar do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Este tópico descreve cenários alternativos e práticas recomendadas para atualizar uma configuração de envio de logs.  
@@ -130,7 +130,7 @@ ms.locfileid: "52518098"
   
     5.  Cuidado para que o log de transações do banco de dados secundário não seja preenchido enquanto o banco de dados estiver online. Para impedir que o log de transações seja preenchido, talvez seja necessário fazer seu backup. Nesse caso, recomendamos que você faça seu backup em um local compartilhado, um *compartilhamento de backup*, para tornar os backups disponíveis para restauração em outra instância do servidor.  
   
-#####  <a name="Procedure2 "></a> Procedimento 2: Atualize a instância de servidor primário Original para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+#####  <a name="Procedure2"></a> Procedimento 2: Atualize a instância de servidor primário Original para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Depois de atualizar a instância do servidor primário original para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o banco de dados ainda estará offline e no formato.  
   
 #####  <a name="Procedure3"></a> Procedimento 3: Configurar o envio de logs no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
@@ -193,7 +193,7 @@ ms.locfileid: "52518098"
 > [!IMPORTANT]  
 >  Sempre atualize todas as instâncias do servidor secundário antes de atualizar o servidor primário.  
   
- **Para atualizar usando um failover e, em seguida, alternar de volta para o servidor primário original**  
+ **Para atualizar usando um failover e alternando de volta para o servidor primário original**  
   
 1.  Atualize todas as instâncias do servidor secundário (servidores B e C).  
   
@@ -224,6 +224,4 @@ ms.locfileid: "52518098"
 ## <a name="see-also"></a>Consulte também  
  [Backups de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [Aplicar backups de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [Tabelas de envio de log e procedimentos armazenados](log-shipping-tables-and-stored-procedures.md)  
-  
-  
+ [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  

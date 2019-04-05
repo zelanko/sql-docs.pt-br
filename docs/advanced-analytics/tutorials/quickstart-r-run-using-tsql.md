@@ -3,19 +3,19 @@ title: Guia de início rápido para uma execução de código "Hello World" bás
 description: Guia de início rápido para o script de R no SQL Server. Conheça os fundamentos de chamar o script de R usando o procedimento armazenado do sistema sp_execute_external_script um exercício de Olá, mundo.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/04/2019
+ms.date: 04/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 7517b9ab18c7448014e8c9113430b2c21047f972
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: 1ec9580a533e51b7e99ea0ac34c1d322a27da452
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046731"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042271"
 ---
-# <a name="quickstart-hello-world-r-script-in-sql-server"></a>Guia de início rápido: Script de R "Hello world" no SQL Server 
+# <a name="quickstart-hello-world-r-script-in-sql-server"></a>Início Rápido: Script de R "Hello world" no SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Neste início rápido, você aprenderá conceitos-chave, executando um "Hello World" R script inT-SQL, uma introdução para o **sp_execute_external_script** procedimento armazenado do sistema. 
@@ -43,7 +43,8 @@ O exercício a seguir destina-se no modelo de interação de primeira: como pass
     b <- 2
     c <- a/b
     d <- a*b
-    print(c, d)'
+    print(c(c, d))'
+    '
     ```
 
 2. Supondo que você tenha tudo o que configurar corretamente o resultado correto é calculado e o R `print` função retorna o resultado para o **mensagens** janela.
@@ -81,7 +82,7 @@ Entradas para esse procedimento armazenado incluem:
 
 **Resultados**
 
-| Olá, mundo |
+| Hello World |
 |-------------|
 | 1 |
 
@@ -90,4 +91,4 @@ Entradas para esse procedimento armazenado incluem:
 Agora que executar alguns scripts de R simples, dar uma olhada nas estruturação de entradas e saídas.
 
 > [!div class="nextstepaction"]
-> [Guia de início rápido: Lidar com entradas e saídas](quickstart-r-inputs-and-outputs.md)
+> [Início Rápido: Lidar com entradas e saídas](quickstart-r-inputs-and-outputs.md)

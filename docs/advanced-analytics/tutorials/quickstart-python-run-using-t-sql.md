@@ -3,19 +3,19 @@ title: Guia de início rápido para um Python básico de "Hello World" a execuç
 description: Guia de início rápido para o script Python no SQL Server. Conheça os fundamentos de chamar o script de Python usando o procedimento armazenado do sistema sp_execute_external_script em um exercício de Olá, mundo.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/11/2019
+ms.date: 04/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: fb05e3b04fe9d6f33389e249d189baa7cc093016
-ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
+ms.openlocfilehash: f5e93ce5261d79acf5bf5a7419992c81c872d680
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55513766"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042215"
 ---
-# <a name="quickstart-hello-world-python-script-in-sql-server"></a>Guia de início rápido: Script de Python de "Hello world" no SQL Server 
+# <a name="quickstart-hello-world-python-script-in-sql-server"></a>Início Rápido: Script de Python de "Hello world" no SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Neste início rápido, você aprenderá conceitos-chave, executando um Python "Hello World" script inT-SQL, uma introdução para o **sp_execute_external_script** procedimento armazenado do sistema. 
@@ -44,7 +44,7 @@ O exercício a seguir destina-se no modelo de interação de primeira: como pass
     b = 2
     c = a/b
     d = a*b
-    print(c, d)
+    print(c(c, d))
     '
     ```
 
@@ -98,4 +98,4 @@ Entradas para esse procedimento armazenado incluem:
 Agora que executar alguns scripts de Python simples, dar uma olhada nas estruturação de entradas e saídas.
 
 > [!div class="nextstepaction"]
-> [Guia de início rápido: Lidar com entradas e saídas](quickstart-python-inputs-and-outputs.md)
+> [Início Rápido: Lidar com entradas e saídas](quickstart-python-inputs-and-outputs.md)
