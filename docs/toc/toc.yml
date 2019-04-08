@@ -8663,9 +8663,9 @@ items:
     - name: Baixar o SSMS
       href: ../ssms/download-sql-server-management-studio-ssms.md
       items:
-      - name: Log de alterações do SSMS e versões anteriores
-        href: ../ssms/sql-server-management-studio-changelog-ssms.md
-      - name: Notas de Versão
+      - name: Notas sobre a Versão e Versões Anteriores do SSMS
+        href: ../ssms/release-notes-ssms.md
+      - name: Baixar as Notas sobre a Versão relacionadas
         href: ../ssms/download-sql-server-management-studio-ssms.md#release-notes
       - name: Instalar o SSMS não em inglês
         href: ../ssms/install-other-languages.md
@@ -17273,9 +17273,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: Manipulando namespaces em XQuery
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: 7d3621712c6714eaeb2dbdb6a339088ac2fc7179
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.openlocfilehash: bb8074720b48ca68679d43e12a04e868e6469ea6
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58872346"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042485"

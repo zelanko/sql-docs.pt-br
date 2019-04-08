@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: bac867f5f3532f931d2708c46979659e2851645f
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055607"
+---
 Este artigo fornece uma visão geral das soluções de continuidade de negócios para alta disponibilidade e recuperação de desastre no SQL Server. 
 
 Todos que implantam o SQL Server têm uma tarefa comum para levar em consideração, que é certificar-se de que todas as instâncias do SQL Server de missão crítica e os bancos de dados dentro delas estarão disponíveis quando os usuários finais e de negócios precisarem delas, independentemente de ser em horário comercial ou o tempo todo. A meta é manter os negócios em funcionamento com o mínimo ou sem qualquer interrupção. Esse conceito também é conhecido como continuidade de negócios.
@@ -128,9 +136,7 @@ A lista a seguir destaca algumas diferenças de FCIs no Windows Server e no Linu
 * O nome comum usado pelas FCIs no Linux é definido no DNS e deve ser o mesmo que o recurso criado para a FCI.
 
 #### <a name="log-shipping"></a>Envio de logs
-Se os objetivos do ponto de recuperação e do tempo de recuperação forem mais flexíveis ou os bancos de dados não forem considerados altamente de missão crítica, o envio de logs será outro recurso de disponibilidade comprovado no SQL Server. Com base nos backups nativos do SQL Server, o processo de envio de logs automaticamente gera os backups de log de transações, copia-os em uma ou mais instâncias conhecidas como uma espera passiva e aplica automaticamente os backups de log de transações a esse modo de espera. O envio de logs usa trabalhos do SQL Server Agent para automatizar o processo de backup, cópia e aplicação dos backups de log de transações. 
-> [!IMPORTANT] 
-> No Linux, os trabalhos do SQL Server Agent não são incluídos como parte da instalação do SQL Server em si. Ele está disponível no pacote mssql-server-Agent, que também deve ser instalados para usar o envio de log.
+Se os objetivos do ponto de recuperação e do tempo de recuperação forem mais flexíveis ou os bancos de dados não forem considerados altamente de missão crítica, o envio de logs será outro recurso de disponibilidade comprovado no SQL Server. Com base nos backups nativos do SQL Server, o processo de envio de logs automaticamente gera os backups de log de transações, copia-os em uma ou mais instâncias conhecidas como uma espera passiva e aplica automaticamente os backups de log de transações a esse modo de espera. O envio de logs usa trabalhos do SQL Server Agent para automatizar o processo de backup, cópia e aplicação dos backups de log de transações.
 
 ![Envio de logs](media/sql-server-ha-story/image5.png)
  

@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7854ddbe4795a347b0a824f607c7206c0bc6b78c
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: dc51c4376f38d62f63969aaf3bba39715a9871ba
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421363"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872286"
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transações com tabelas com otimização de memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ Este artigo descreve todos os aspectos de transações que são específicas de 
   
 Os níveis de isolamento de transação no SQL Server são aplicados de maneira diferente para tabelas com otimização de memória versus tabelas baseadas em disco rígido e os mecanismos subjacentes são diferentes. Uma compreensão das diferenças ajuda o programador a criar um sistema de alta taxa de transferência. O objetivo da integridade da transação é pertinente a todos os casos.  
 
-Para obter condições de erro específicas de transações em tabelas com otimização de memória, vá para a seção [Detecção de conflito e lógica de repetição](#confdetretry34ni).
+Para obter condições de erro específicas de transações em tabelas com otimização de memória, vá para a seção [Detecção de conflito e lógica de repetição](#conflict-detection-and-retry-logic).
   
 Para saber mais gerais, veja [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
@@ -97,7 +97,7 @@ As tabelas baseadas em disco indiretamente têm um sistema de controle de versã
   
 ## <a name="isolation-levels"></a>Níveis de isolamento 
   
-A tabela a seguir lista os possíveis níveis de isolamento da transação, na sequência de isolamento do menor para o maior. Para obter detalhes sobre os conflitos que podem ocorrer e a lógica de repetição para lidar com esses conflitos, veja [Detecção de conflito e lógica de repetição](#confdetretry34ni). 
+A tabela a seguir lista os possíveis níveis de isolamento da transação, na sequência de isolamento do menor para o maior. Para obter detalhes sobre os conflitos que podem ocorrer e a lógica de repetição para lidar com esses conflitos, veja [Detecção de conflito e lógica de repetição](#conflict-detection-and-retry-logic). 
   
 | Nível de Isolamento | Descrição |   
 | :-- | :-- |   
@@ -123,7 +123,7 @@ Seguem as descrições das fases.
 #### <a name="validation-phase-2-of-3"></a>Validação: Fase 2 (de 3)  
   
 - A fase de validação começa com a atribuição da hora de término, marcando a transação como logicamente completa. Essa conclusão torna todas as alterações da transação visíveis para outras transações, que obtêm uma dependência nessa transação. As transações dependentes não têm permissão para confirmar até que essa transação seja confirmada com êxito. Além disso, as transações que mantêm essas dependências não poderão retornar conjuntos de resultados para o cliente, a fim de garantir que o cliente veja apenas os dados que foram confirmados com êxito no banco de dados.  
-- Essa fase compreende as validações de leitura repetida e serializável. Para a validação de leitura repetida, ela verifica se qualquer uma das linhas lidas pela transação foi atualizada desde então. Para a validação serializável, ela verifica se nenhuma linha foi inserida em nenhum intervalo de dados verificado por essa transação. De acordo com a tabela em [Conflitos e níveis de isolamento](#confdegreeiso30ni), as validações de leitura repetida e serializável podem ocorrer ao usar o isolamento de instantâneo, para validar a consistência de restrições de chaves estrangeira e exclusiva.  
+- Essa fase compreende as validações de leitura repetida e serializável. Para a validação de leitura repetida, ela verifica se qualquer uma das linhas lidas pela transação foi atualizada desde então. Para a validação serializável, ela verifica se nenhuma linha foi inserida em nenhum intervalo de dados verificado por essa transação. De acordo com a tabela em [Conflitos e níveis de isolamento](#isolation-levels), as validações de leitura repetida e serializável podem ocorrer ao usar o isolamento de instantâneo, para validar a consistência de restrições de chaves estrangeira e exclusiva.  
   
 #### <a name="commit-processing-phase-3-of-3"></a>Processamento de confirmação: Fase 3 (de 3)  
   

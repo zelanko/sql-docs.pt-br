@@ -14,12 +14,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 047adc4654d4e0104aa0fab79ba2be7a002de738
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 3260abf50bf46a703a925f8ad0a7829d2d1c1315
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801040"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042345"
 ---
 # <a name="drop-external-table-transact-sql"></a>DROP EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ DROP EXTERNAL TABLE [ database_name . [schema_name ] . | schema_name . ] table_n
   
 
 ## <a name="arguments"></a>Argumentos  
- [ *database_name* . [*schema_name*] . | *schema_name*. ] *table_name*  
+ `[ database_name . [schema_name] . | schema_name . ] table_name`  
  O nome de uma a três partes da tabela externa a ser removida. O nome da tabela pode incluir, opcionalmente, o esquema, ou o banco de dados e o esquema.  
   
 ## <a name="permissions"></a>Permissões  
@@ -57,7 +57,7 @@ DROP EXTERNAL TABLE dbo.SalesPerson;
 DROP EXTERNAL TABLE EasternDivision.dbo.SalesPerson;  
 ```  
   
-### <a name="b-dropping-an-external-table-from-the-current-database"></a>b. Removendo uma tabela externa do banco de dados atual  
+### <a name="b-dropping-an-external-table-from-the-current-database"></a>B. Removendo uma tabela externa do banco de dados atual  
  O exemplo a seguir remove a tabela `ProductVendor1`, seus dados, índices e todas as exibições dependentes do banco de dados atual.  
   
 ```  

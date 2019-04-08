@@ -15,12 +15,12 @@ ms.assetid: 2a54eef8-9e8e-4e04-909c-6970112d55cc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2e31c26430433b26eb858b967f54df4e61b103b2
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: d22b59e761d499c566078e3867736d0b8b743df0
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214657"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860437"
 ---
 # <a name="add-a-database-to-an-always-on-availability-group"></a>Adicione um banco de dados a um grupo de disponibilidade Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "53214657"
   
 -   **Antes de começar:**  
   
-     [Pré-requisitos e restrições](#Prerequisites)    
+     [Pré-requisitos e restrições](#prerequisites-and-restrictions)    
      [Permissões](#Permissions)    
 -   **Para adicionar um banco de dados a um grupo de disponibilidade usando:**  
   
@@ -113,7 +113,7 @@ ms.locfileid: "53214657"
   
  **Para configurar e usar o provedor do SQL Server PowerShell**  
   
--   [Provedor do SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell Provider](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
  Para obter um exemplo completo, consulte [Exemplo (PowerShell)](#PSExample), abaixo.  
   
@@ -144,5 +144,3 @@ Add-SqlAvailabilityDatabase -Path $MyAgSecondaryPath -Database "MyDatabase"
  [Criação e configuração de grupos de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)   
  [Usar o Painel AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)   
  [Monitorar grupos de disponibilidade &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
-  
-  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3c08f8cb48e22ba5ca1546f9fcca63f77868b356
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 6783112203e5c63aae41749f942da6240265eea3
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208791"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872296"
 ---
 # <a name="install-polybase-on-windows"></a>Instalar o PolyBase no Windows
 
@@ -77,7 +77,7 @@ Depois de instalar o PolyBase autônomo ou em um grupo de escala horizontal, voc
    
    > [!IMPORTANT] 
    >
-   >Em um grupo de escala horizontal do PolyBase, o serviço de Movimentação de Dados e de Mecanismo de PolyBase em todos os nós devem ser executados na mesma conta de domínio. Confira [Grupos de escala horizontal do PolyBase](#Enable).
+   >Em um grupo de escala horizontal do PolyBase, o serviço de Movimentação de Dados e de Mecanismo de PolyBase em todos os nós devem ser executados na mesma conta de domínio. Confira [Grupos de escala horizontal do PolyBase](#enable).
    
 5. Na página Configuração do PolyBase, escolha uma das duas opções. Para obter mais informações, confira [grupos de escala horizontal do PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md).  
    
@@ -105,8 +105,8 @@ Use os valores nesta tabela para criar scripts de instalação. Os serviços de 
 
 |Componente do SQL Server|Parâmetro e valores|Descrição|  
 |--------------------------|--------------------------|-----------------|  
-|Controle de instalação do SQL Server|**Required**<br /><br /> /FEATURES=PolyBase|Seleciona o recurso PolyBase.|  
-|Mecanismo de PolyBase do SQL Server|**Opcional**<br /><br /> /PBENGSVCACCOUNT|Especifica a conta do serviço de mecanismo. O padrão é **NT Authority\NETWORK SERVICE**.|  
+|Controle de instalação do SQL Server|**Obrigatório**<br /><br /> /FEATURES=PolyBase|Seleciona o recurso PolyBase.|  
+|Mecanismo PolyBase do SQL Server|**Opcional**<br /><br /> /PBENGSVCACCOUNT|Especifica a conta do serviço de mecanismo. O padrão é **NT Authority\NETWORK SERVICE**.|  
 |Mecanismo PolyBase do SQL Server|**Opcional**<br /><br /> /PBENGSVCPASSWORD|Especifica a senha da conta de serviço de mecanismo.|  
 |Mecanismo PolyBase do SQL Server|**Opcional**<br /><br /> /PBENGSVCSTARTUPTYPE|Especifica o modo de inicialização para o Mecanismo PolyBase: Automático (padrão), Desabilitado e Manual.|  
 |Movimentação de Dados PolyBase do SQL Server |**Opcional**<br /><br /> /PBDMSSVCACCOUNT|Especifica a conta do serviço de movimentação de dados. O padrão é **NT Authority\NETWORK SERVICE**.|  
@@ -121,7 +121,7 @@ Use os valores nesta tabela para criar scripts de instalação. Os serviços de 
 
 |Componente do SQL Server|Parâmetro e valores|Descrição|  
 |--------------------------|--------------------------|-----------------|  
-|Controle de instalação do SQL Server|**Necessário**<br /><br /> /FEATURES=PolyBaseCore, PolyBaseJava, PolyBase | O PolyBaseCore instala o suporte para todos os recursos do PolyBase, exceto a conectividade do Hadoop. O PolyBaseJava habilita a conectividade do Hadoop. O PolyBase instala ambos. |  
+|Controle de instalação do SQL Server|**Obrigatório**<br /><br /> /FEATURES=PolyBaseCore, PolyBaseJava, PolyBase | O PolyBaseCore instala o suporte para todos os recursos do PolyBase, exceto a conectividade do Hadoop. O PolyBaseJava habilita a conectividade do Hadoop. O PolyBase instala ambos. |  
 |Mecanismo PolyBase do SQL Server|**Opcional**<br /><br /> /PBENGSVCACCOUNT|Especifica a conta do serviço de mecanismo. O padrão é **NT Authority\NETWORK SERVICE**.|  
 |Mecanismo PolyBase do SQL Server|**Opcional**<br /><br /> /PBENGSVCPASSWORD|Especifica a senha da conta de serviço de mecanismo.|  
 |Mecanismo PolyBase do SQL Server|**Opcional**<br /><br /> /PBENGSVCSTARTUPTYPE|Especifica o modo de inicialização para o Mecanismo PolyBase: Automático (padrão), Desabilitado e Manual.|  
