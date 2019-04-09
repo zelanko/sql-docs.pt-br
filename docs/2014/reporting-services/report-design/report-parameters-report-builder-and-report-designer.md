@@ -18,12 +18,12 @@ ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 14d0f9f445717ed7744f5da14eba3e99b16127db
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3115624895c45585101db4d5c02ea85509d68220
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286654"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241814"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Parâmetros de relatório (Construtor de Relatórios e Designer de Relatórios)
   Este tópico descreve os usos comuns dos parâmetros de relatório SSRS, as propriedades que você pode definir e muito mais sobre os parâmetros. Parâmetros de relatório o habilitam a controlar dados de relatório, conectar relatórios relacionados e variar a apresentação do relatório.  
@@ -156,7 +156,7 @@ ms.locfileid: "56286654"
   
  Para um relatório publicado, você pode usar o seguinte:  
   
--   **Propriedades de parâmetros de relatório.** Altere os valores de parâmetros de relatório diretamente no servidor de relatório, de modo independente da definição de relatório.  
+-   **Propriedades de parâmetros de relatório.** Altere os valores de parâmetro de relatório diretamente no servidor de relatório, de modo independente da definição de relatório.  
   
 -   **Relatórios armazenados em cache.** Para criar um plano de cache para um relatório, cada parâmetro deve ter um valor padrão. Para obter mais informações, consulte [Armazenando relatórios em cache &#40;SSRS&#41;](../report-server/caching-reports-ssrs.md).  
   
@@ -219,15 +219,15 @@ ms.locfileid: "56286654"
   
 -   [Adicionar um sub-relatório e parâmetros &#40;Construtor de Relatórios e SSRS&#41;](add-a-subreport-and-parameters-report-builder-and-ssrs.md)  
   
--   [Como usar parâmetros SSRS com procedimentos armazenados](https://go.microsoft.com/fwlink/p/?LinkId=396970)  
+-   [Relatório do SSRS para o procedimento armazenado com parâmetros](https://www.c-sharpcorner.com/UploadFile/7d3362/ssrs-report-for-parameterize-stored-procedure/)  
   
 ## <a name="did-this-article-help-you-were-listening"></a>Este artigo foi útil para você? Estamos atentos  
  Quais são as informações que você está procurando? Você as localizou? Estamos atentos aos seus comentários para melhorar o conteúdo. Envie seus comentários para [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Report%20Parameters%20page)  
   
 ##  <a name="bkmk_Related_Topics"></a> Conteúdo relacionado  
- [Configurando parâmetros de relatório SSRS (teste)](https://go.microsoft.com/fwlink/p/?LinkID=306443)  
+ [Configurando parâmetros de relatório SSRS (teste)](https://www.trenovision.com/quiz/sql-server-reporting-services-ssrs-quiz/)  
   
- [Tutorial: Adicionar um parâmetro ao relatório &#40;Construtor de Relatórios&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
+ [Tutorial: Adicionar um parâmetro ao relatório &#40;construtor de relatórios&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
  [Estourando os mistérios de InvalidReportParameterException no serviço de relatório](https://go.microsoft.com/fwlink/p/?LinkId=393118)  
   

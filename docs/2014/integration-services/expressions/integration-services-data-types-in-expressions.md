@@ -13,12 +13,12 @@ ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 99687b8168c16b0ad1ceef5f802b3345038524fe
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: f3b2c9137f34a76ec77f179eb329042d92be5cd1
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378264"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241026"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Tipos de dados do Integration Services em expressões
   O avaliador de expressão usa tipos de dados [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] . Quando dados são inseridos pela primeira vez em um fluxo de dados em um pacote [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , o mecanismo de fluxo de dados converte todos os dados de coluna para um tipo de dados do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , e os dados da coluna que uma expressão usa já têm um tipo de dados do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] . As expressões usadas nas transformações Divisão Condicional e Coluna Derivada podem fazer referência a colunas porque elas fazem parte de um fluxo de dados que inclui dados de coluna.  
@@ -51,11 +51,11 @@ ms.locfileid: "58378264"
 >   
 >  Para evitar erros ou resultados inesperados, você não deve gravar códigos que contem com valores numéricos específicos para `True` e `False`. Onde for possível, você deve restringir o uso de variáveis boolianas aos valores lógicos para os quais elas são projetados.  
   
- Para mais informações, consulte os seguintes tópicos:  
+ Para obter mais informações, consulte os tópicos a seguir:  
   
 -   [== &#40;Igual&#41; &#40;Expressão do SSIS&#41;](equal-ssis-expression.md)  
   
--   [\!= &#40;Diferente&#41; &#40;Expressão do SSIS&#41;](unequal-ssis-expression.md)  
+-   [!= &#40;Diferente&#41; &#40;Expressão do SSIS&#41;](unequal-ssis-expression.md)  
   
 -   [&#62; &#40;Maior que&#41; &#40;Expressão SSIS&#41;](greater-than-ssis-expression.md)  
   
@@ -92,7 +92,7 @@ ms.locfileid: "58378264"
   
 -   Argumentos passados para as funções matemáticas devem ser avaliados como um tipo de dados numérico. Dependendo da função ou operação, um tipo de dados numérico específico pode ser exigido. Por exemplo, a função HEX requer um inteiro assinado ou não assinado.  
   
--   Argumentos passados para funções de cadeia de caracteres devem ser avaliada como um tipo de dados de caractere: DT_STR ou DT_WSTR. Por exemplo, UPPER ("flor"). Algumas funções da cadeia de caracteres, como SUBSTRING, requerer argumentos inteiros adicionais para a posição inicial e o comprimento da cadeia de caracteres.  
+-   Argumentos passados para funções da cadeia de caracteres devem ser avaliados como a um tipo de dados de caractere: DT_STR ou DT_WSTR. Por exemplo, UPPER ("flor"). Algumas funções da cadeia de caracteres, como SUBSTRING, requerer argumentos inteiros adicionais para a posição inicial e o comprimento da cadeia de caracteres.  
   
 -   Argumentos passados para as funções de data e hora devem ser avaliados como uma data válida. Por exemplo, DAY(GETDATE()). Algumas funções, como DATEADD, exigem um argumento inteiro adicional para o número de dias que a função adiciona a uma data.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "58378264"
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
--   Artigo técnico, [SSIS Expression Cheat Sheet](https://go.microsoft.com/fwlink/?LinkId=217683), em pragmaticworks.com  
+-   Artigo técnico, [SSIS Expression Cheat Sheet](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet3), em pragmaticworks.com  
   
 -   Artigo técnico, [Exemplos de expressões SSIS](https://go.microsoft.com/fwlink/?LinkId=220761), em social.technet.microsoft.com  
   

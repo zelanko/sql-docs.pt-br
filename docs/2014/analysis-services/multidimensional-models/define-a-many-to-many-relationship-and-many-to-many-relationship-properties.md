@@ -13,12 +13,12 @@ ms.assetid: edb5f61a-a581-467a-a367-134b7f9b849f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 93f00a9544512c3c5efb63667d715c57bcf62de9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 86582634958ded57db85c0f9e732927bb639cd6a
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354008"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242474"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>Definir uma relação muitos-para-muitos e as propriedades da relação muitos-para-muitos
   Este tópico explica as dimensões muitos-para-muitos no Analysis Services, incluindo quando usá-las e como criá-las.  
@@ -180,7 +180,7 @@ ms.locfileid: "53354008"
 ##  <a name="bkmk_Learn"></a> Learn more  
  Use os links a seguir para obter informações adicionais que ajudam a dominar os conceitos.  
   
- [Como posso definir uma dimensão muitos-para-muitos no Analysis Services](https://go.microsoft.com/fwlink/?LinkId=324759)  
+ [Como posso definir uma dimensão muitos-para-muitos no Analysis Services](../lesson-5-3-defining-a-many-to-many-relationship.md)  
   
  [A revolução muitos-para-muitos 2.0](https://go.microsoft.com/fwlink/?LinkId=324760)  
   

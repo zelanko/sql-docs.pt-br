@@ -13,12 +13,12 @@ ms.assetid: 2c9a5814-17bf-4947-8fb3-6269e7caa416
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 542225a31879c47e58893f438e3af0309a6eca88
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 939a60c8c23ee59e77f6a2f3c3a2b71a98a426bf
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298314"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241714"
 ---
 # <a name="install-uninstall-and-report-builder-support"></a>Instalar, desinstalar e oferecer suporte ao Construtor de Relatórios
   O Construtor de Relatórios é uma ferramenta de criação de relatórios usada para criar, atualizar e compartilhar relatórios, partes de relatório e conjuntos de dados compartilhados. O Construtor de Relatórios está disponível em duas versões: autônoma e [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]. A versão autônoma é instalada no computador por você ou por um administrador. A versão [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] é instalada automaticamente com o [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] e baixada no computador a partir do Gerenciador de Relatórios ou de um site do SharePoint integrado ao [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -59,7 +59,7 @@ ms.locfileid: "56298314"
 ### <a name="installing-the-clickonce-version-of-report-builder-on-your-computer"></a>Instalando a versão ClickOnce do Construtor de Relatórios no seu computador  
  A versão [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] do Construtor de Relatórios é instalada com o [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Ela é instalada pelas instalações nativa e integrada do SharePoint do [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)].  
   
- [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] é uma tecnologia da Microsoft para implantar aplicativos do Windows. O [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] permite que os usuários instalem e executem um aplicativo Windows, como o Construtor de Relatórios, clicando em um link de uma página da Web. Para obter mais informações sobre como implantar aplicativos [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] , aplicar segurança de aplicativos [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] ou executar aplicativos [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] na zona de Internet, consulte os artigos "Implantação de ClickOnce para aplicativos Windows Forms", "Visão Geral da segurança em Windows Forms" ou "Visão geral da implantação de aplicativos confiáveis" no site [!INCLUDE[msCoName](../includes/msconame-md.md)] Developer Network em [www.microsoft.com/msdn](https://www.microsoft.com/msdn).  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] é uma tecnologia da Microsoft para implantar aplicativos do Windows. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] permite que os usuários instalem e executem um aplicativo Windows, como o Construtor de Relatórios, clicando em um link de uma página da Web. Para obter mais informações sobre como implantar [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplicativos, aplicando [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] segurança do aplicativo, ou execução [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplicativos na zona da Internet, consulte a "implantação de ClickOnce para Windows Forms aplicativos", "segurança no Visão geral dos Windows Forms"ou"Trusted Application Deployment Overview"artigos sobre o [!INCLUDE[msCoName](../includes/msconame-md.md)] site da Developer Network em [ https://developer.microsoft.com/ ](https://developer.microsoft.com/).  
   
  A versão [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] do Construtor de Relatórios está localizada no servidor de relatório e é instalada no computador quando você clica no botão **Construtor de Relatórios** no Gerenciador de Relatórios ou clica na opção **Relatório do Construtor de Relatórios** no menu **Novo Documento** em uma biblioteca do SharePoint.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "56298314"
 |1030|Danish|da-DK|  
 |1031|German|de-DE|  
 |1032|Greek|el-GR|  
-|1046|Inglês|en-US|  
+|1046|Inglês|pt-BR|  
 |1035|Finlandês|fi-FI|  
 |1036|Francês|fr-FR|  
 |1038|Húngaro|hu-HU|  

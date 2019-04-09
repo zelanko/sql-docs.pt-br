@@ -19,19 +19,19 @@ ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 812f9351e294b4af9fb6854937a1a6cd211e8147
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b78f9e6a5493d3c06dfade34833cd69ddd56b58a
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036637"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241554"
 ---
 # <a name="compare-roles-and-tasks-in-reporting-services-to-sharepoint-groups-and-permissions"></a>Comparar funções e tarefas no Reporting Services com grupos e permissões do SharePoint
   Este tópico compara recursos de autorização baseado em função e tarefas no modo nativo do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] com os recursos de segurança nos produtos do SharePoint. Este tópico compara a terminologia e as características de funções, tarefas, grupos do SharePoint, níveis de permissão e permissões.  
   
 ||  
 |-|  
-|[!INCLUDE[applies](../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Modo do SharePoint &#124; SharePoint 2010 e SharePoint 2013<br /><br /> [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Modo nativo|  
+|[!INCLUDE[applies](../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Modo do SharePoint &#124; SharePoint 2010 e SharePoint 2013<br /><br /> [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] nativo|  
   
  **Neste tópico:**  
   
@@ -48,20 +48,20 @@ ms.locfileid: "56036637"
   
  A tabela a seguir compara objetos e conceitos relacionados à permissão entre o modo nativo do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e o SharePoint.  
   
-|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Modo nativo|SharePoint|  
+|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] nativo|SharePoint|  
 |---------------------------------------------|----------------|  
 |**Função:** Por exemplo, "Gerenciador de Conteúdo".|**Grupo:** Por exemplo, o grupo padrão "Visualizadores".|  
 |---|**Grupo no nível de permissão:** Por exemplo, "Somente Exibição" para o grupo "Visualizadores".|  
 |**Tarefas:** por exemplo "Gerenciar Relatórios".|**Permissões:** Por exemplo, no grupo "Somente Exibição", há permissões relacionadas à lista para exibir itens, exibir versões e exibir páginas de aplicativo.|  
   
- Para obter mais informações sobre as permissões do SharePoint, consulte [Níveis de permissão e permissões](http://office.microsoft.com/windows-sharepoint-services-help/permission-levels-and-permissions-HA010100149.aspx) e [Determinar níveis de permissão e grupos no SharePoint 2013](https://technet.microsoft.com/library/cc262690.aspx).  
+ Para obter mais informações sobre as permissões do SharePoint, consulte [permissões de usuário e níveis de permissão no servidor do SharePoint](/sharepoint/sites/user-permissions-and-permission-levels) e [determinar níveis de permissão e grupos no SharePoint 2013](https://technet.microsoft.com/library/cc262690.aspx).  
   
 ##  <a name="bkmk_compare_roles_groups"></a> Comparar funções do modo nativo e grupos do SharePoint  
  A tabela a seguir compara as definições de função predefinidas no [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no modo nativo com os grupos padrão do SharePoint. Se os grupos do SharePoint não corresponderem à função específica desejada, crie um grupo personalizado e atribua níveis de permissão no SharePoint.  
   
  **Observação**: Os grupos do SharePoint padrão disponíveis dependem do modelo de site usado para criar o site do SharePoint.  
   
-|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Função|Grupos do SharePoint|  
+|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Role|Grupos do SharePoint|  
 |--------------------------------------|-----------------------|  
 |**Navegador**<br /><br /> Exibição|Use o grupo **Visitantes** para conceder permissões para exibir relatórios. O grupo **Visitantes** tem permissões no nível de leitura que permitem aos membros do grupo exibir páginas, itens de lista e documentos.|  
 |**Gerenciador de Conteúdo**<br /><br /> Permissões totais em todos os itens e operações do nível de item, inclusive permissões para definir segurança.|Use o grupo **Proprietários** para conceder controle total no gerenciamento de itens de servidor de relatório em um site do SharePoint. O grupo **Proprietários** tem permissões Controle Total, que permitem que os membros do grupo alterem o conteúdo, as páginas ou a funcionalidade do site. O acesso Controle Total deve ser limitado somente a administradores de site.|  

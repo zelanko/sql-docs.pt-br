@@ -11,12 +11,12 @@ ms.assetid: 6dc42752-1fcd-4ab9-8194-c3001ea342e7
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 026ed516989bde6f2c0b305d6af159f13a82f156
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 89344537c53c4caf066536804557451c965e4596
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358445"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241614"
 ---
 # <a name="introduction-to-sql-server-2014-hybrid-cloud"></a>Introdução à nuvem híbrida do SQL Server 2014
  A maioria dos aplicativos têm alguns desafios principais, como a alta eficiência, valor comercial, configurações de hardware complexas, picos maciços sob demanda, e a conformidade com a indústria e os regulamentos corporativos. Considerando que todos esses fatores e a criação de uma tecnologia a nível empresarial possam ser muito desafiadores. A estratégia de nuvem híbrida da Microsoft oferece suporte para a nuvem tradicional, nuvem particular, nuvem pública, e os ambientes de nuvem híbridos para superar esses desafios fundamentais. 
@@ -109,9 +109,9 @@ ms.locfileid: "53358445"
  Se você planeja mover as camadas de aplicativo (por exemplo, a camada de apresentação, a camada de negócios e a camada de banco de dados) para máquinas virtuais do Azure, é recomendável que você examine as recomendações fornecidas no [desenvolvimento e padrões de aplicativo Estratégias para o SQL Server em máquinas virtuais Azure](https://msdn.microsoft.com/library/dn574746.aspx) artigo. O objetivo deste artigo é fornecer uma base de desenvolvedores e arquitetos de soluções para o aplicativo boa arquitetura e design, que eles possam seguir ao migrar aplicativos existentes para o Azure, bem como desenvolver novos aplicativos no Azure. Para cada padrão do aplicativo, o artigo descreve um cenário local, sua respectiva solução de nuvem habilitada, e as técnicas e recomendações relacionadas. Além disso, o artigo discute estratégias de desenvolvimento específicas do Azure para que você possa criar seus aplicativos corretamente. 
  
 ## <a name="see-also"></a>Confira também 
- [Guia do produto do SQL Server 2014 CTP2](https://www.microsoft.com/download/details.aspx?id=39269)  
+ [Guia de produto do SQL Server 2014 CTP2](https://www.microsoft.com/download/details.aspx?id=39269)  
  [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)  
- [Série do Blog de nuvem do Microsoft SQL Server híbrido](https://blogs.msdn.com/b/azure/archive/2013/10/16/microsoft-sql-server-hybrid-cloud-blog-series.aspx)  
- [Migrando aplicativos centrados em dados para o Azure](https://msdn.microsoft.com/library/jj156154.aspx) 
+ [Série de blogs de nuvem híbridos do Microsoft SQL Server](https://azure.microsoft.com/blog/microsoft-sql-server-hybrid-cloud-blog-series/)  
+ [Migrando aplicativos centrados em dados para o Azure](https://azure.microsoft.com/blog/cloud-services-series-migrating-data-centric-applications-to-windows-azure/) 
  
  

@@ -10,12 +10,12 @@ ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 42fe996b3521316279caf3fcf7adb3e155a83dbd
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b1b79c0908f8639df869d01a8ff862afc5be77cb
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536688"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241954"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>Determinando o número de buckets correto para índices de hash não clusterizados
   Você deve especificar um valor para o parâmetro `BUCKET_COUNT` quando cria a tabela com otimização de memória. Este tópico faz recomendações para determinar o valor apropriado para o parâmetro `BUCKET_COUNT`. Se você não puder determinar o número de buckets correto, use um índice não clusterizado.  Um valor incorreto de `BUCKET_COUNT`, especialmente muito baixo, pode afetar significativamente o desempenho da carga de trabalho, bem como o tempo de recuperação do banco de dados. É melhor superestimar o número de buckets.  
@@ -26,7 +26,7 @@ ms.locfileid: "58536688"
   
  Uma tabela de hash é alocada para cada índice de hash em uma tabela com otimização de memória. O tamanho da tabela de hash alocada para um índice é especificado o `BUCKET_COUNT` parâmetro no [CREATE TABLE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-table-transact-sql) ou [CREATE TYPE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-type-transact-sql). O número de buckets será arredondado internamente até a próxima potência de dois. Por exemplo, especificar um número de buckets 300.000 resultará em um número real de buckets 524.288.  
   
- Para obter links para um artigo e vídeo sobre contas buckets, consulte [Como determinar a contagem de buckets correta para índices de hash (OLTP na memória)](https://go.microsoft.com/fwlink/p/?LinkId=525853).  
+ Para obter links para um artigo e vídeo sobre contas buckets, consulte [Como determinar a contagem de buckets correta para índices de hash (OLTP na memória)](https://www.mssqltips.com/sqlservertip/3104/determine-bucketcount-for-hash-indexes-for-sql-server-memory-optimized-tables/).  
   
 ## <a name="recommendations"></a>Recomendações  
  Na maioria dos casos, o número de buckets deve estar entre 1 e 2 vezes o número de valores distintos na chave de índice. Se a chave de índice contiver muitos valores duplicados (há, em média, mais de 10 linhas para cada valor de chave de índice), use um índice não clusterizado  

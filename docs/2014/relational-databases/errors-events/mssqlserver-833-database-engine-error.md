@@ -12,12 +12,12 @@ ms.assetid: 14129cc4-be80-4772-9e3f-0e5da4d0696b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 38405f6bfe2744445abe9884350a703cbb0374cd
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: db70d1757073a48ab09f31cfb3570570e54a48cd
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377518"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241644"
 ---
 # <a name="mssqlserver833"></a>MSSQLSERVER_833
     
@@ -43,17 +43,17 @@ ms.locfileid: "53377518"
   
  Use o Monitor de Desempenho para examinar os seguintes contadores:  
   
--   **Média de seg/transferência do disco**  
+-   **Transferência média do disco por segundo**  
   
--   **Média de comprimento da fila do disco**  
+-   **Comprimento médio da fila de disco**  
   
--   **Comprimento atual da fila do disco**  
+-   **Comprimento da fila atual de disco**  
   
  Por exemplo, o tempo da **Média de seg/transferência do disco** em um computador que está executando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], normalmente, é inferior a 15 milissegundos. Se o valor da **Média de seg/transferência do disco** aumentar, isso indicará que o subsistema de E/S não está acompanhando a demanda de E/S.  
   
 > [!NOTE]  
 >  O acesso ao disco pode ficar mais lento devido a um programa antivírus. Para aumentar a velocidade de acesso, exclua os arquivos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificados na mensagem de erro das verificações ativas de vírus.  
   
- Para obter mais informações sobre erros de E/S, consulte [Noções básicas de E/S do Microsoft SQL Server, Capítulo 2](https://go.microsoft.com/fwlink/?LinkId=69370) e o artigo da Base de Dados de Conhecimento em [https://support.microsoft.com/kb/897284/en-us](https://support.microsoft.com/kb/897284/en-us).  
+ Para obter mais informações sobre erros de E/S, consulte [Noções básicas de E/S do Microsoft SQL Server, Capítulo 2](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10)) e o artigo da Base de Dados de Conhecimento em [https://support.microsoft.com/kb/897284](https://support.microsoft.com/kb/897284).  
   
   

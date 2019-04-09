@@ -1,5 +1,5 @@
 ---
-title: 'Lição 6: Adicionando agrupamentos e totais (Reporting Services) | Microsoft Docs'
+title: 'Lição 6: Adicionar agrupamentos e totais (Reporting Services) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5409938a5e859d5df6a153cddf327129b2ca8878
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 945cde51f7529dc31fd7018f1194de600ea1acf5
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296894"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241734"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lição 6: Adicionando agrupamentos e totais (Reporting Services)
   Adicione agrupamento e totais ao relatório para organizar e resumir os dados.  
   
- Para mais informações sobre como adicionar totais em execução aos relatórios, consulte este artigo do curah.microsoft.com: [Adicionar totais aos relatórios do Reporting Services (SSRS)](https://go.microsoft.com/fwlink/p/?LinkId=403698).  
+ Para obter informações sobre como adicionar totais em execução aos relatórios, consulte: [Adicionar totais aos relatórios do Reporting Services (SSRS)](https://www.tutorialgateway.org/add-total-and-subtotal-to-ssrs-report/).  
   
  **Neste tópico:**  
   
@@ -33,7 +33,7 @@ ms.locfileid: "56296894"
   
 -   [Para adicionar um total geral a um relatório](#bkmk_addgrandtotal)  
   
--   [Para publicar o relatório ao servidor de relatório (opcional)](#bkmk_publishreport)  
+-   [Para publicar o relatório no Servidor de Relatório (opcional)](#bkmk_publishreport)  
   
 ##  <a name="bkmk_groupdata"></a> Para agrupar dados em um relatório  
   
@@ -79,7 +79,7 @@ ms.locfileid: "56296894"
   
 6.  No menu **Formatar** , clique em **Cor do Plano de Fundo**, clique em **Cinza Claro**e clique em **OK**.  
   
-     ![Modo de exibição de design: Tabela básica com total do pedido](../../2014/tutorials/media/rs-basictablesumlinetotaldesign.gif "exibição de Design: Tabela básica com total do pedido")  
+     ![Modo de exibição de Design: Tabela básica com total do pedido](../../2014/tutorials/media/rs-basictablesumlinetotaldesign.gif "Modo de exibição de Design: Tabela básica com total do pedido")  
   
 ##  <a name="bkmk_adddailytotal"></a> Para adicionar um total diário a um relatório  
   
@@ -107,13 +107,13 @@ ms.locfileid: "56296894"
   
 4.  No menu **Formatar** , clique em **Cor do Plano de Fundo**, clique em **Azul Claro**e clique em **OK**.  
   
-     ![Modo de exibição de design: Total geral em tabela básica](../../2014/tutorials/media/rs-basictablesumgrandtotaldesign.gif "exibição de Design: Total geral em tabela básica")  
+     ![Modo de exibição de Design: Total geral em tabela básica](../../2014/tutorials/media/rs-basictablesumgrandtotaldesign.gif "Modo de exibição de Design: Total geral em tabela básica")  
   
 5.  Clique em Visualizar.  
   
      A última página deve ter a seguinte aparência:  
   
-     ![Visualizar: Tabela básica com total geral](../../2014/tutorials/media/rs-basictablesumgrandtotalpreview.gif "visualização: Tabela básica com total geral")  
+     ![Visualização: Tabela básica com total geral](../../2014/tutorials/media/rs-basictablesumgrandtotalpreview.gif "Visualização: Tabela básica com total geral")  
   
 ##  <a name="bkmk_publishreport"></a> Para publicar o relatório ao servidor de relatório (opcional)  
   
@@ -129,7 +129,7 @@ ms.locfileid: "56296894"
   
      Se você vir uma mensagem semelhante à seguinte na janela de saída, ela indicará uma implantação com êxito.  
   
-    > ------ Compilação iniciada: Projeto: tutorial, configuração: Depurar ------Pulando 'Sales Orders.rdl'. O item está atualizado. Compilação concluída – 0 erros, 0 avisos------ Implantação iniciada: Projeto: tutorial, configuração: Depuração---implantação http://\<nome do servidor > / reportserverDeploying relatar '/ tutorial/Sales Orders'. Implantação concluída-- 0 erros, 0 avisos = = = compilar: 1 bem-sucedido ou atualizado, 0 falha, 0 ignorado ==================== Implantação: 1 bem-sucedido, 0 falha, 0 ignorado ==========  
+    > ------ Compilação iniciada: Projeto: tutorial, Configuração: Depurar ------Pulando 'Sales Orders.rdl'. O item está atualizado. Compilação concluída – 0 erros, 0 avisos------ Implantação iniciada: Projeto: tutorial, Configuração: Depuração---implantação http://\<nome do servidor > / reportserverDeploying relatar '/ tutorial/Sales Orders'. Implantação concluída-- 0 erros, 0 avisos = = = compilar: 1 bem-sucedido ou atualizado, 0 falha, 0 ignorado ==================== Implantação: 1 bem-sucedido, 0 falha, 0 ignorado ==========  
   
      Se você vir uma mensagem de erro semelhante à seguinte, verifique se você tem permissões no servidor de relatório e se iniciou o [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] com privilégios de administrador.  
   

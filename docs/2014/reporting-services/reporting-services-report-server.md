@@ -25,12 +25,12 @@ ms.assetid: 88ed5b97-1d28-4980-80e4-b36761f3c03a
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 0b745a3d9cfd88bb65b60720903768672fbe1e88
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a6c183fc402571ab359071160d515939257f773b
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019087"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241624"
 ---
 # <a name="reporting-services-report-server"></a>Servidor de Relatório do Reporting Services
   Este tópico é uma visão geral do servidor de relatório [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , o componente central da instalação de um [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Ele consiste em um par de mecanismos de processamento mais uma coleção de extensões de propósitos especiais que manipulam autenticação, processamento de dados, renderização e operações de entrega. Um servidor de relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] é executado em um destes dois modos de implantação: modo nativo ou modo do SharePoint. Consulte a seção [Comparação de recursos do SharePoint e do modo nativo](#bkmk_featuresupport) para obter uma comparação entre os recursos.  
@@ -49,23 +49,23 @@ ms.locfileid: "56019087"
   
 ##  <a name="bkmk_top"></a> Neste tópico  
   
--   [Visão geral dos modos de servidor de relatório](#bkmk_overview)  
+-   [Visão geral dos modos do servidor de relatório](#bkmk_overview)  
   
--   [Comparação de recursos do SharePoint e modo nativo](#bkmk_featuresupport)  
+-   [Feature Comparison of SharePoint and Native Mode](#bkmk_featuresupport)  
   
--   [Native Mode](#bkmk_nativemode)  
+-   [Modo nativo](#bkmk_nativemode)  
   
 -   [Modo nativo com Web Parts do SharePoint](#bkmk_nativewithwebparts)  
   
--   [Modo do SharePoint](#bkmk_sharepointmode)  
+-   [SharePoint Mode](#bkmk_sharepointmode)  
   
--   [Processo de relatório e o agendamento e o processo de entrega](#bkmk_reportprocessor)  
+-   [Processo de relatório e processo de agendamento e entrega](#bkmk_reportprocessor)  
   
--   [Banco de dados do Servidor de Relatório](#bkmk_reportdatabase)  
+-   [banco de dados do servidor de relatório](#bkmk_reportdatabase)  
   
--   [Autenticação, renderização, dados e extensões de entrega](#bkmk_authentication)  
+-   [Extensões de autenticação, renderização, dados e entrega](#bkmk_authentication)  
   
--   [Tarefas relacionadas](#bkmk_relatedtasks)  
+-   [Related Tasks](#bkmk_relatedtasks)  
   
 ##  <a name="bkmk_overview"></a> Visão geral dos modos de servidor de relatório  
  Mecanismos de processamento (processadores) são o núcleo do servidor de relatório. Os processadores oferecem suporte à integridade do sistema de geração de relatórios e não podem ser modificados ou estendidos. Extensões também são processadores, mas elas executam funções muito específicas. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] inclui uma ou mais extensões padrão para todo tipo de extensão com suporte. É possível adicionar extensões personalizadas a um servidor de relatório. Isso permite estender um servidor de relatório para que ofereça suporte a recursos que não vêm com suporte de fábrica; exemplos da funcionalidade personalizada podem incluir suporte a tecnologias de logon único, saída de relatório em formatos de aplicativo que não estão prontos para serem manipulados pelas extensões de renderização padrão e entrega de relatório para uma impressora ou aplicativo.  
@@ -84,7 +84,7 @@ ms.locfileid: "56019087"
   
 ##  <a name="bkmk_featuresupport"></a> Comparação de recursos do SharePoint e modo nativo  
   
-|Recurso ou componente|Modo nativo|SharePoint Mode|  
+|Recurso ou componente|Modo nativo|SharePoint|  
 |--------------------------|-----------------|---------------------|  
 |**Endereçamento de URL**|Sim|O endereçamento de URL é diferente no modo integrado do SharePoint. As URLs do SharePoint são usadas para relatórios de referência, modelos de relatório, fontes de dados compartilhadas e recursos. A hierarquia de pastas do servidor de relatório não é usada. Se você tiver aplicativos personalizados que dependem do acesso à URL com suporte em um servidor de relatório no modo nativo, essa funcionalidade deixará de funcionar quando o servidor de relatório for configurado para integração com o SharePoint.<br /><br /> Para obter mais informações sobre acesso à URL, consulte [Referência de parâmetro de acesso à URL](url-access-parameter-reference.md)|  
 |**Extensões de segurança personalizadas**|Sim|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] não podem ser implantadas nem usadas no servidor de relatório. O servidor de relatório inclui uma extensão de segurança para fins especiais que é usada sempre que você configura um servidor de relatório para ser executado no modo integrado do SharePoint. Essa extensão de segurança é um componente interno e é necessário para operações integradas.|  
@@ -169,7 +169,7 @@ ms.locfileid: "56019087"
 |Revisar os requisitos de hardware e software.|[Hardware and Software Requirements for Reporting Services in SharePoint Mode](../../2014/sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md).|  
 |Instalar o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no modo do SharePoint.|[Instalar o Reporting Services no modo do SharePoint para SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)|  
 |Se você for um desenvolvedor Web ou possuir conhecimento especializado na criação de folhas de estilo em cascata, poderá modificar os tamanhos padrão por seu próprio risco para alterar cores, fontes e layout da barra de ferramentas do Gerenciador de Relatórios. Nem as folhas de estilo padrão nem as instruções para modificar as folhas de estilo são documentadas nesta versão.|[Personalizar folhas de estilo para o Visualizador de HTML e o Gerenciador de Relatórios](../../2014/reporting-services/customize-style-sheets-for-html-viewer-and-report-manager.md)|  
-|Desenvolvedores Web familiares com estilos de HTML e CSS (Folhas de Estilo em Cascata) podem usar as informações neste tópico para determinar quais arquivos podem ser modificados para personalizar a aparência do Gerenciador de Relatórios.|[Configurar o Gerenciador de Relatórios para passar cookies de autenticação personalizados](security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)|  
+|Desenvolvedores Web familiares com estilos de HTML e CSS (Folhas de Estilo em Cascata) podem usar as informações neste tópico para determinar quais arquivos podem ser modificados para personalizar a aparência do Gerenciador de Relatórios.|[Configurar o Gerenciador de Relatórios para transmitir cookies de autenticação personalizados](security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)|  
 |Explica como ajustar as configurações de memória para o serviço Web Servidor de Relatórios e serviço Windows.|[Configurar memória disponível para aplicativos do Servidor de Relatórios](report-server/configure-available-memory-for-report-server-applications.md)|  
 |Explica as etapas recomendadas para configurar o servidor de relatório para administração remota.|[Configurar um servidor de relatório para administração remota](report-server/configure-a-report-server-for-remote-administration.md)|  
 |Fornece instruções sobre como configurar a disponibilidade de **Meus Relatórios** em uma instância nativa de servidor de relatório.|[Habilitar e desabilitar Meus Relatórios](report-server/enable-and-disable-my-reports.md)|  
@@ -183,6 +183,6 @@ ms.locfileid: "56019087"
  [Implementando uma extensão de segurança](extensions/security-extension/implementing-a-security-extension.md)   
  [Implementando uma extensão de processamento de dados](extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
- [Como administrar SSRS usando PowerShell (resposta da curadoria)](https://go.microsoft.com/fwlink/?LinkId=321992)  
+ [Como administrar SSRS usando o PowerShell](https://sqlbelle.wordpress.com/2015/08/17/automate-ssrs-report-generation-using-powershell/)  
   
   

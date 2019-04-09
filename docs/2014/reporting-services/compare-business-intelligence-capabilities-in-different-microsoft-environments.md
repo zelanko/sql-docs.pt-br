@@ -11,12 +11,12 @@ ms.assetid: 1fb759ee-8172-4c4c-9f7d-49af2c731006
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 4f4339b91573aad752460b71fb4cce2181c9b880
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e98dd10b670a3e6bb4f53f9b9d68f98411074ffc
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018158"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241684"
 ---
 # <a name="compare-business-intelligence-capabilities-in-different-microsoft-environments"></a>Comparar recursos de Business Intelligence em diferentes ambientes Microsoft
   O Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Business Intelligence pode ser implantado em vários ambientes diferentes incluindo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] com o SharePoint Server, SharePoint Online e Power BI para Office 365. Este tópico compara os componentes e recursos compatíveis em cada ambiente.  
@@ -25,13 +25,13 @@ ms.locfileid: "56018158"
   
 ## <a name="author-and-manage-bi-reports-and-dashboards"></a>Criar e gerenciar relatórios de BI e painéis  
   
-||SQL Server 2014 e SharePoint Server 2013|SharePoint Online plano 2|Power BI para Office 365|  
+||SQL Server 2014 & SharePoint Server 2013|SharePoint Online plano 2|Power BI para Office 365|  
 |-|----------------------------------------------|------------------------------|-----------------------------|  
 |Sites BI|[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Galeria|Não|Site do Power BI|  
 |Gerenciamento e compartilhamento de consulta e administração de dados|Não|Não|Sim **<sup>1</sup>**|  
 |Integração com o Master Data Services (MDS) e Data Quality Services (DQS)|Sim|Não|Não|  
 |Agendar atualização de dados|Sim, mas não aceita as pastas de trabalho que contêm dados Power Query|Não|Sim|  
-|Consulta de linguagem natural (Q&A)|Não|Não|Sim **<sup>2</sup>**|  
+|Consulta em idioma natural (Q & A)|Não|Não|Sim **<sup>2</sup>**|  
 |Previsão de previsão|Não|Não|Sim **<sup>3</sup>**|  
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] integração|Sim|Não|Não|  
 |[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] integração (Multidimensional e Tabular)|Sim|Não|Não|  
@@ -48,7 +48,7 @@ ms.locfileid: "56018158"
   
 ## <a name="view-and-browse-bi-data-reports-and-dashboards"></a>Exibir e procurar dados, relatórios e painéis de BI  
   
-||SQL Server 2014 e SharePoint Server 2013|SharePoint Online plano 2|Power BI para Office 365|  
+||SQL Server 2014 & SharePoint Server 2013|SharePoint Online plano 2|Power BI para Office 365|  
 |-|----------------------------------------------|------------------------------|-----------------------------|  
 |Exibir pastas de trabalho do Microsoft Excel em um navegador|Sim, se a pasta de trabalho tiver menos de 2 GB de tamanho|Sim, se a pasta de trabalho tiver menos de 10 MB de tamanho|Sim, se a pasta de trabalho tiver menos de 250 MB de tamanho|  
 |Exploração de dados no navegador em HTML5|Não|Não|Sim|  
@@ -64,9 +64,9 @@ ms.locfileid: "56018158"
   
 ## <a name="more-information"></a>Mais informações  
   
--   [Recursos de business intelligence no Excel, o SharePoint Online e o Power BI para Office 365](https://technet.microsoft.com/en-us/library/dn198235.aspx).  
+-   [Recursos BI no Excel e do Office 365](https://support.office.com/article/BI-capabilities-in-Excel-and-Office-365-26c0548e-124c-4fd3-aab3-5f64568cb743).  
   
--   Para obter informações sobre os requisitos para usar sinônimos, consulte [Adicionar sinônimos a um modelo de dados do Power Pivot Excel](https://support.office.com/Article/Add-synonyms-to-a-Power-Pivot-Excel-data-model-345f4f5b-5ec2-4998-bc46-a26bdc0810b6?ui=en-US&rs=en-US&ad=US).  
+-   Para obter informações sobre os requisitos para usar sinônimos, consulte [otimizando o Power BI Q & A com sinônimos e frases](https://blog.pragmaticworks.com/optimizing-power-bi-qa-with-synonyms-phrasing-using-cloud-modeling) em pragmaticworks.com.  
   
 -   [Office Online, escolha a sua rede social da empresa: Yammer ou Newsfeed? ](https://support.office.com/article/Pick-your-enterprise-social-network-Yammer-or-Newsfeed-21954c85-4384-47d4-96c2-dfa1c9d56e66?ui=en-US&rs=en-US&ad=US).  
   
@@ -76,7 +76,7 @@ ms.locfileid: "56018158"
   
 -   [Comparar um site Central de BI a sites Power BI para Office 365](https://technet.microsoft.com/library/dn394343\(v=office.15\).aspx).  
   
--   [Apresentando as ferramentas de análise e relatórios de BI da Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=617093)  
+-   [Análise e relatório com ferramentas de BI (business intelligence) da Microsoft](../reporting-services/choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting.md)  
   
 ## <a name="community-content"></a>Conteúdo da Comunidade  
  [BI de autoatendimento da Microsoft no local vs em nuvem](http://businessintelligist.com/2014/02/07/microsoft-self-service-bi-on-premise-vs-could/).  

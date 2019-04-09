@@ -12,12 +12,12 @@ ms.assetid: ff921952-b935-4bb0-b587-bba6cd15a090
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 30a14fbc60de7f06ead34e85140a903e4206544e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 9d349a21fdd522b5af299c3ad130cdce984f569c
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364398"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241974"
 ---
 # <a name="storage-system-input-output-time-out"></a>Tempo limite de entrada e saída dd sistema de armazenamento
   Esta regra verifica o log de eventos do sistema para o EventId 9. Esta mensagem indica que o tempo limite de E/S ocorreu no sistema de armazenamento.  
@@ -30,6 +30,6 @@ ms.locfileid: "53364398"
 -   [Artigo 154690 da Base de Dados de Conhecimento Microsoft](https://go.microsoft.com/fwlink/?LinkId=117747)  
   
 ## <a name="for-more-information"></a>Para obter mais informações  
- [Fundamentos de E/S do SQL Server, Capítulo 2](https://go.microsoft.com/fwlink/?LinkId=69370)  
+ [Fundamentos de E/S do SQL Server, Capítulo 2](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10))  
   
   

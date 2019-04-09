@@ -17,12 +17,12 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0df4e17291e03e23cb68e984c8473064b0208a9c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5b1317bc41be836cfad5159339a4e7c90fcfbc83
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366318"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241426"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Conectar-se ao mecanismo de banco de dados usando proteção estendida
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte para a **Proteção Estendida** desde o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. A**Proteção Estendida para Autenticação** é um recurso dos componentes de rede implementado pelo sistema operacional. Há suporte para a**Proteção Estendida** no Windows 7 e no Windows Server 2008 R2. **Proteção Estendida** é incluída em pacotes de serviço para sistemas operacionais [!INCLUDE[msCoName](../../includes/msconame-md.md)] mais antigos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é mais seguro quando as conexões são efetuadas usando a **Proteção Estendida**.  
@@ -55,7 +55,7 @@ ms.locfileid: "53366318"
   
 -   [Autenticação Integrada do Windows com Proteção Estendida](https://msdn.microsoft.com/library/dd639324.aspx)  
   
--   [Microsoft Security Advisory (973811), Proteção Estendida para Autenticação](https://www.microsoft.com/technet/security/advisory/973811.mspx)  
+-   [Microsoft Security Advisory (973811), Proteção Estendida para Autenticação](https://support.microsoft.com//help/973811/microsoft-security-advisory-extended-protection-for-authentication)  
   
 ## <a name="settings"></a>Configurações  
  Há três configurações de conexão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que afetam a associação de serviço e de canal. As configurações podem ser definidas com o uso do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager ou da WMI e podem ser exibidas usando-se a faceta **Configurações de Protocolo de Servidor** do Gerenciamento Baseado em Diretivas.  
@@ -64,7 +64,7 @@ ms.locfileid: "53366318"
   
      Os valores possíveis são **Ativa** e **Inativa**. Para usar a associação de canal, a opção **Forçar Criptografia** deve ser definida como **Ativa**e todos os clientes serão forçados a criptografar. Se for **Inativa**, somente a associação de serviço será garantida. A opção**Forçar Criptografia** está localizada em **Protocolos para Propriedades MSSQLSERVER (Guia Snoalizadores)** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  
   
--   **Proteção estendida**  
+-   **Proteção Estendida**  
   
      Os valores possíveis são **Ativa**, **Permitida**e **Obrigatória**. A variável de **Proteção Estendida** permite que os usuários configurem o nível de **Proteção Estendida** para cada instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A**Proteção Estendida** está localizada em **Protocolos para Propriedades MSSQLSERVER (Guia Avançado)** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  
   

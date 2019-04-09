@@ -12,12 +12,12 @@ ms.assetid: d1f66762-2d40-4f24-b635-a417d22ee79a
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 7fa2edb4437b2d97a5a78da609838c6fcaaadda3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: be73ed98700ef261ccee026469dddd22017998e0
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353579"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241445"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>Propriedades do Catálogo de Texto Completo (página Geral)
   Esta seção mostra as opções e funções disponíveis na página **Geral** da caixa de diálogo **Propriedades do Catálogo de Texto Completo** .  
@@ -28,10 +28,10 @@ ms.locfileid: "53353579"
 ## <a name="options"></a>Opções  
   
 ### <a name="properties"></a>Propriedades  
- **Catálogo padrão**  
+ **Catálogo Padrão**  
  Exibe se o catálogo é o catálogo padrão do banco de dados.  
   
- **Status de população**  
+ **Status de População**  
  Indica o status do catálogo. Os valores possíveis são:  
   
 -   **Idle**  
@@ -40,11 +40,11 @@ ms.locfileid: "53353579"
   
 -   **Em Pausa**  
   
--   **Limitado**  
+-   **Acelerado**  
   
--   **Recuperando**  
+-   **Recovering**  
   
--   **desligamento**  
+-   **Shutdown**  
   
 -   **População incremental em andamento**  
   
@@ -52,40 +52,40 @@ ms.locfileid: "53353579"
   
 -   **Disco está em pausa completo**  
   
--   **Change tracking**  
+-   **controle de alterações**  
   
- **Contagem de itens**  
+ **Contagem de Itens**  
  Exibe o número de itens de texto completo no catálogo.  
   
- **Tamanho do catálogo**  
+ **Tamanho do Catálogo**  
  Exibe o tamanho, em megabytes, do catálogo de texto completo.  
   
  **Nome**  
  Nome do catálogo de texto completo.  
   
- **Diferenciar acentos**  
+ **Diferenciar Acentos**  
  Exibe ou modifica se o catálogo diferencia ou não marcas diacríticas, como um til (**~**), um acento agudo (**'**) ou um trema (**¨**). Os valores válidos são:  
   
 -   **Não**  
   
 -   **Sim**  
   
--   Para obter mais informações sobre sinais diacríticos, consulte [Diacritical Mark](https://go.microsoft.com/fwlink/?LinkId=154091) (em inglês) na Enciclopédia Encarta MSN.  
+-   Para obter informações sobre sinais diacríticos, consulte [diacríticos](https://www.merriam-webster.com/dictionary/diacritic) no dicionário Webster Merriam.  
   
- **Data da última população**  
+ **Data da Última População**  
  Exibe a data em que o catálogo foi populado pela última vez.  
   
  **Proprietário**  
  Proprietário do catálogo de texto completo.  
   
- **Contagem de chaves exclusivas**  
+ **Contagem de Chaves Exclusivas**  
  Número de palavras exclusivas que formam o índice de texto completo para o catálogo.  
   
 ### <a name="catalog-action"></a>Ação do Catálogo  
   
 |||  
 |-|-|  
-|**Nenhum**|Não executa operações de **Otimizar catálogo**, **Recriar catálogo**nem **Repopular catálogo** .|  
+|**None**|Não executa operações de **Otimizar catálogo**, **Recriar catálogo**nem **Repopular catálogo** .|  
 |**Otimizar catálogo**|Otimiza a utilização de espaço do catálogo e melhora o desempenho de consultas. Também melhora a exatidão da classificação de relevância de resultados de pesquisa.<br /><br /> Esta ação executa ALTER FULLTEXT CATALOG *catalog_name* REORGANIZE.|  
 |**Recriar catálogo**|Exclui e recria o catálogo de texto completo. Esta operação deve ser executada se uma propriedade de catálogo fundamental for alterada, como distinção de acentos.<br /><br /> Para que a recriação seja bem-sucedida, o grupo de arquivos em que reside o catálogo de texto completo deve estar online ou poder ser lido-gravado. Após a recriação, o índice de texto completo será populado novamente.<br /><br /> Esta ação executa ALTER FULLTEXT CATALOG *catalog_name* REBUILD.|  
 |**Repopular catálogo**|Atualiza o catálogo com alterações recentes dos dados. Esta opção requer tempo para manutenção do catálogo.|  

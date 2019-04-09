@@ -17,12 +17,12 @@ ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f931b6c9edd917a12d3a84cc9cd65af862f0697e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 9b307c48da04e32691afa12ff1b05f6a4e8c33d8
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384744"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242184"
 ---
 # <a name="literals-ssis"></a>Literais (SSIS)
   Expressões podem incluir literais numérico, de cadeia de caracteres e boolianos. O avaliador de expressão aceita uma variedade de literais numéricos como inteiros, decimais e constantes de ponto flutuante. O avaliador de expressão também dá suporte a sufixos longos e flutuantes, que especificam como o avaliador de expressão trata os valores, e uma notação científica em literais numéricos.  
@@ -54,10 +54,10 @@ ms.locfileid: "58384744"
   
 |Expressão regular|Descrição|  
 |------------------------|-----------------|  
-|{D}+{IS}|Um literal numérico integral com pelo menos um dígito (D) e, opcionalmente, o sufixo longo e/ou não assinado (IS).  Exemplos: 457, 785u, 986l e 7945ul.|  
-|{D}+{E}{FS}|Um literal numérico não integral com pelo menos um dígito (D), notação científica, e o sufixo flutuante ou longo.  Exemplos: 4E8l, 13e-2f e 5e+l.|  
-|{D}*"."{D}+{E}?{FS}|Um literal numérico não integral com um lugar decimal, uma fração decimal com pelo menos um dígito (D), um expoente opcional (E) e um identificador flutuante ou longo (FS). Este literal numérico tem o tipo de dados DT_R4 ou DT_R8.  Exemplos: 6.45E3f,. 89E - 2L e 1.05E + 7F.|  
-|{D}+"."{D}*{E}?{FS}|Um literal numérico não integral com pelo menos um dígito significante (D), um lugar decimal, um expoente (E) e um identificador flutuante ou longo (FS). Este literal numérico tem o tipo de dados DT_R4 ou DT_R8.  Exemplos: 1.E-4f, 4.6E6L e 8.365E + 2f.|  
+|{D}+{IS}|Um literal numérico integral com pelo menos um dígito (D) e, opcionalmente, o sufixo longo e/ou não assinado (IS).  Exemplos: 457, 785u, 986L e 7945ul.|  
+|{D}+{E}{FS}|Um literal numérico não integral com pelo menos um dígito (D), notação científica, e o sufixo flutuante ou longo.  Exemplos: 4E8l, 13e-2f e 5E+L.|  
+|{D}*"."{D}+{E}?{FS}|Um literal numérico não integral com um lugar decimal, uma fração decimal com pelo menos um dígito (D), um expoente opcional (E) e um identificador flutuante ou longo (FS). Este literal numérico tem o tipo de dados DT_R4 ou DT_R8.  Exemplos: 6.45E3f, .89E-2l e 1.05E+7F.|  
+|{D}+"."{D}*{E}?{FS}|Um literal numérico não integral com pelo menos um dígito significante (D), um lugar decimal, um expoente (E) e um identificador flutuante ou longo (FS). Este literal numérico tem o tipo de dados DT_R4 ou DT_R8.  Exemplos: 1.E-4f, 4.6E6L e 8.365E+2f.|  
 |{D}*.{D}+|Um literal numérico não integral com precisão e escala. Tem um lugar decimal e uma fração decimal com pelo menos um dígito (D). Este literal numérico tem o tipo de dados DT_NUMERIC.  Exemplos: .9, 5.8 e 0.346.|  
 |{D}+.{D}*|Um literal numérico não integral com precisão e escala. Tem pelo menos um dígito significante (D) e um lugar decimal. Este literal numérico tem o tipo de dados DT_NUMERIC.  Exemplos: 6., 0.2 e 8.0.|  
 |#{D}+|Um identificador de linhagem. Consiste no caractere de libra (#) e em pelo menos um dígito (D). Exemplos: #123.|  
@@ -117,6 +117,6 @@ ms.locfileid: "58384744"
 >  Em uma expressão, um literal booliano deve ser delimitado por espaços.  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- Artigo técnico, [SSIS Expression Cheat Sheet](https://go.microsoft.com/fwlink/?LinkId=217683), em pragmaticworks.com  
+ Artigo técnico, [SSIS Expression Cheat Sheet](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet), em pragmaticworks.com  
   
   

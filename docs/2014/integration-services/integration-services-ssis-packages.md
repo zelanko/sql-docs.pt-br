@@ -20,12 +20,12 @@ ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 324ed64290b85c03401d3add09e773b69c841bdd
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: dccae9216609e80b0eb87582a78b94cd6e7b2f0c
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381374"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241654"
 ---
 # <a name="integration-services-ssis-packages"></a>Pacotes do SSIS (Integration Services)
   Um pacote é uma coleção organizada de conexões, elementos de fluxo de controle, elementos de fluxo de dados, manipuladores de eventos, variáveis, parâmetros e configurações que você agrupa usando as ferramentas de design gráfico fornecidas pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ou cria programaticamente.  Você salva o pacote concluído no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], no armazenamento de pacotes do [!INCLUDE[ssIS](../includes/ssis-md.md)] ou no sistema de arquivos, ou pode implantar o projeto ssISnoversion para o servidor do [!INCLUDE[ssIS](../includes/ssis-md.md)] . O pacote é a unidade de trabalho que é recuperada, executada e salva.  
@@ -109,14 +109,9 @@ ms.locfileid: "58381374"
   
 -   [Executar o Assistente de Importação e Exportação do SQL Server](import-export-data/start-the-sql-server-import-and-export-wizard.md)  
   
--   [Criar pacotes nas Ferramentas de Dados do SQL Server](create-packages-in-sql-server-data-tools.md)  
+-   [Copiar pacotes nas Ferramentas de Dados do SQL Server](create-packages-in-sql-server-data-tools.md)  
   
 -   Consulte a seção **Compilando pacotes programaticamente** no Guia do Desenvolvedor.  
-  
-## <a name="related-content"></a>Conteúdo relacionado  
-  
--   [Implementando o SQL Server Integration Services com o Microsoft Dynamics Mobile](https://msdn.microsoft.com/library/cc563950)  
-  
--   [Como: Configurar o pacote do SQL Server Integration Services para Microsoft Dynamics AX](https://msdn.microsoft.com/library/bb986852)  
+
   
   

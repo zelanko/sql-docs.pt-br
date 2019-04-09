@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a0cee9d01fb55ace4d7062f96b5d3ea16c026669
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3bfa37a34ae6c3010c36dfe7693bb6d569e6e63d
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023173"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241457"
 ---
 # <a name="create-calculated-members"></a>Criar membros calculados
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   É possível criar medidas ou membro de dimensão personalizados, chamados membros calculados, combinando dados de cubo, operadores aritméticos, números e funções. Por exemplo, você pode criar um membro calculado chamado Euros que converte dólares em euros multiplicando uma medida existente em dólar pela taxa de conversão. Euros pode então ser exibido aos usuários finais em uma linha ou coluna separada.  
   
- As definições dos membros calculados são armazenadas, mas seus valores existem apenas na memória. No exemplo anterior, os valores em marcos são exibidos para os usuários finais mas não são armazenados como dados do cubo.  
+ As definições dos membros calculados são armazenadas, mas seus valores existem apenas na memória. No exemplo anterior, valores em euros são exibidas aos usuários finais, mas não são armazenados como dados de cubo.  
   
  Os membros calculados são criados em cubos. Para criar um membro calculado, no Designer de Cubo, na guia **Cálculos** , clique no ícone **Novo Membro Calculado** na barra de ferramentas. Esse comando exibirá um formulário para você especificar as seguintes opções para o membro calculado:  
   
@@ -37,7 +37,7 @@ ms.locfileid: "34023173"
   
  Hierarquias são divididas em níveis que contêm membros. Cada membro produz um título. Ao procurar dados em um cubo, os usuários finais podem fazer uma busca detalhada a partir de um título selecionado até títulos subordinados que antes não eram exibidos. O título do membro calculado é adicionado ao nível diretamente abaixo do membro pai selecionado.  
   
- **Expressão**  
+ **Expression**  
  Especifique a expressão que produz os valores do membro calculado. Ela pode ser escrita em MDX. A expressão pode conter uma das seguintes opções:  
   
 -   Expressões de dados que representam componentes de cubo, como dimensões, níveis, medidas, etc.  

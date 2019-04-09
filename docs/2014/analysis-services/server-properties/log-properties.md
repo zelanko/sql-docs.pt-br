@@ -54,12 +54,12 @@ ms.assetid: 33fd90ee-cead-48f0-8ff9-9b458994c766
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: da1f12da9dc3ff3145e2fc1ea9f592e70cfe0c3c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: e5ade1c582956548a62f36d79f0e1b8fbd03525a
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374588"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240725"
 ---
 # <a name="log-properties"></a>Propriedades do log
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte às propriedades do servidor de log listadas nas tabelas a seguir. Para obter mais informações sobre as propriedades de servidor adicionais e como defini-las, consulte [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
@@ -108,11 +108,11 @@ ms.locfileid: "53374588"
  **ErrorLog\ LogErrorTypes\KeyNotFound**  
  Especifica a ação executada pelo servidor quando um erro `KeyNotFound` ocorre. As respostas válidas para esse erro incluem:  
   
--   `IgnoreError` informa ao servidor para continuar o processamento sem registrar em log o erros ou contá-lo até o limite de erros de chave. Ao ignorar o erro, você simplesmente permite que o processamento continue sem adicioná-lo à contagem de erros ou registrá-lo em log na tela ou no arquivo de log. O registro em questão tem um problema de integridade de dados e não pode ser adicionado ao banco de dados. O registro será descartado ou agregado ao Membro desconhecido, conforme determinado pela propriedade `KeyErrorAction`.  
+-   `IgnoreError` informa ao servidor para continuar processamento sem registrar em log o erros ou contá-lo até o limite de erros de chave. Ao ignorar o erro, você simplesmente permite que o processamento continue sem adicioná-lo à contagem de erros ou registrá-lo em log na tela ou no arquivo de log. O registro em questão tem um problema de integridade de dados e não pode ser adicionado ao banco de dados. O registro será descartado ou agregado ao Membro desconhecido, conforme determinado pela propriedade `KeyErrorAction`.  
   
--   `ReportAndContinue` informa ao servidor para registrar em log o erro, contá-lo até o limite de erros de chave e continuar o processamento. O registro que aciona o erro é descartado ou convertido no Membro Desconhecido.  
+-   `ReportAndContinue` informa ao servidor para registrar o erro, contá-lo até o limite de erros de chave e continuar o processamento. O registro que aciona o erro é descartado ou convertido no Membro Desconhecido.  
   
--   `ReportAndStop` informa ao servidor para registrar em log o erro e parar o processamento imediatamente, independentemente do limite de erros de chave. O registro que aciona o erro é descartado ou convertido no Membro Desconhecido.  
+-   `ReportAndStop` informa ao servidor para registrar o erro e parar o processamento imediatamente, independentemente do limite de erros de chave. O registro que aciona o erro é descartado ou convertido no Membro Desconhecido.  
   
  **ErrorLog\ LogErrorTypes\KeyDuplicate**  
  Especifica a ação executada pelo servidor quando uma chave duplicada é encontrada. Os valores válidos incluem `IgnoreError` para continuar o processamento como se o erro não tivesse ocorrido, `ReportAndContinue` para registrar em log o erro e continuar o processamento, e `ReportAndStop` para registrar em log o erro e parar o processamento imediatamente, mesmo se a contagem de erro estiver abaixo do limite de erros.  
@@ -199,7 +199,7 @@ ms.locfileid: "53374588"
  O valor padrão desta propriedade é falso, o que indica que o servidor não criará a tabela de log automaticamente e não registrará os eventos de consulta.  
   
 > [!NOTE]  
->  Para obter mais informações sobre como configurar o log de consultas, consulte [Configurar o log de consultas do Analysis Services](https://go.microsoft.com/fwlink/?LinkId=81890).  
+>  Para obter mais informações sobre como configurar o log de consultas, consulte [Log de operações no Analysis Services](../instances/log-operations-in-analysis-services.md).  
   
 ## <a name="trace"></a>Trace  
  **Trace\TraceBackgroundDistributionPeriod**  

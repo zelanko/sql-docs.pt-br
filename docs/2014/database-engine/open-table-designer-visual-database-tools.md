@@ -15,12 +15,12 @@ ms.assetid: 2a8c0a59-71c4-4280-824c-2dc17999532e
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3e0ceb2ef7e152829cbb6bd33cdcb3d0812a69bf
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 57eb424087ccef14f4b1ff1aea4216b5dd0a205b
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355650"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240714"
 ---
 # <a name="open-table-designer-visual-database-tools"></a>Abrir o Designer de Tabela (Visual Database Tools)
   O Designer de Tabela é uma ferramenta visual que permite projetar e visualizar tabelas do banco de dados ao qual você está conectado. Você pode usar o Designer de Tabela para criar, editar ou excluir tabelas, colunas, chaves, índices, relações e restrições.  
@@ -34,7 +34,7 @@ ms.locfileid: "53355650"
      O menu **Designer de Tabela** é adicionado ao menu principal e os painéis do designer são abertos.  
   
 > [!NOTE]  
->  Se você estiver conectado a um banco de dados SQL Azure, a nova opção de tabela iniciará um script de modelo de criação de tabela. Edite os parâmetros e execute o script para criar uma nova tabela. Para obter mais informações, consulte [SQL Azure Overview](https://go.microsoft.com/fwlink/?LinkId=163948)(em inglês).  
+>  Se você estiver conectado a um banco de dados SQL Azure, a nova opção de tabela iniciará um script de modelo de criação de tabela. Edite os parâmetros e execute o script para criar uma nova tabela. Para obter mais informações, consulte [SQL Azure Overview](/azure/sql-database/sql-database-technical-overview)(em inglês).  
   
 ### <a name="open-an-existing-table"></a>Abrir uma tabela existente  
   
@@ -43,7 +43,7 @@ ms.locfileid: "53355650"
      O menu **Designer de Tabela** é adicionado ao menu principal e a tabela é aberta nos painéis do designer.  
   
 ## <a name="see-also"></a>Consulte também  
- [Projetar tabelas &#40;Visual Database Tools&#41;](../ssms/visual-db-tools/visual-database-tools.md)   
+ [Criar tabelas &#40;Visual Database Tools&#41;](../ssms/visual-db-tools/visual-database-tools.md)   
  [Tabelas](../relational-databases/tables/tables.md)  
   
   

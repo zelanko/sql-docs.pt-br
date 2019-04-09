@@ -19,19 +19,19 @@ ms.assetid: 666cf8a7-223b-4be5-86c0-7fe2bcca0d09
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 878b3a349f033464da07104d55e472b44324e941
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a6300606195ea435a0290d828109b821d0d6702c
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372458"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241824"
 ---
 # <a name="languages-and-collations-analysis-services"></a>Idiomas e ordenações (Analysis Services)
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dá suporte a idiomas e ordenações fornecidos pelos sistemas operacionais Windows [!INCLUDE[msCoName](../includes/msconame-md.md)]. As propriedades `Language` e `Collation` são inicialmente definidas no nível da instância durante a instalação, mas podem ser alteradas posteriormente em diferentes níveis da hierarquia de objetos.  
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dá suporte a idiomas e ordenações fornecidos pelos [!INCLUDE[msCoName](../includes/msconame-md.md)] sistemas operacionais do Windows. `Language` e `Collation` propriedades são inicialmente definidas no nível da instância durante a instalação, mas podem ser alteradas posteriormente em diferentes níveis da hierarquia de objetos.  
   
  Um modelo multidimensional (somente), você pode definir essas propriedades em um banco de dados ou cubo – você também pode defini-las em traduções que você cria para objetos em um cubo.  
   
- Ao definir `Language` e `Collation`, você está especificando as configurações usadas pelo modelo de dados durante o processamento e a execução da consulta ou (somente para modelos multidimensionais) você está equipando um modelo com várias traduções para que os falantes do idioma estrangeiro possam trabalhar com o modelo em seu idioma nativo. A configuração explícita das propriedades `Language` e `Collation` em um objeto (banco de dados, modelo ou cubo) é para situações em que o servidor de produção e o ambiente de desenvolvimento são configurados para localidades diferentes, e você quer ter certeza de que o idioma e ordenação correspondem ao ambiente de destino pretendido.  
+ Ao definir `Language` e `Collation`, você está especificando configurações usadas pelo modelo de dados durante o processamento e a execução da consulta ou (para modelos multidimensionais somente) você está equipando um modelo com várias traduções para que os alto-falantes do idioma estrangeiro possam trabalhar com o modelo em seu idioma nativo. A configuração explícita das propriedades `Language` e `Collation` em um objeto (banco de dados, modelo ou cubo) é para situações em que o servidor de produção e o ambiente de desenvolvimento são configurados para localidades diferentes, e você quer ter certeza de que o idioma e ordenação correspondem ao ambiente de destino pretendido.  
   
  Este tópico inclui estas seções:  
   
@@ -62,7 +62,7 @@ ms.locfileid: "53372458"
   
 -   **Banco de dados**. Para interromper a herança, você pode definir explicitamente o idioma e a ordenação no nível de projeto que é usado por todos os cubos contidos no banco de dados. A menos que você indique o contrário, todos os cubos no banco de dados obterão o idioma e a ordenação que você especificar nesse nível. Se você rotineiramente codifica e implanta em localidades diferentes (por exemplo, desenvolve a solução em um computador chinês, mas o implanta em um servidor de uma subsidiária francesa), a definição de idioma e ordenação no banco de dados é a primeira e mais importante etapa para garantir que a solução funcione no ambiente de destino. O melhor local para definir essas propriedades é dentro do projeto (por meio do comando **Editar Banco de Dados** no projeto).  
   
--   **Dimensão do banco de dados**. Embora o designer exponha as propriedades `Language` e `Collation` em uma dimensão de banco de dados, não é útil configurar as propriedades nesse objeto. Dimensões de banco de dados não são usadas como objetos autônomos, portanto seria difícil, se não impossível, fazer uso das propriedades que você define. Quando em um cubo, uma dimensão sempre herda `Language` e `Collation` de seu cubo pai. Quaisquer valores que você possa ter definido no objeto de dimensão do banco de dados autônomo são ignorados.  
+-   **Dimensão do banco de dados**. Embora o designer exponha as propriedades `Language` e `Collation` em uma dimensão de banco de dados, definir as propriedades nesse objeto não é útil. Dimensões de banco de dados não são usadas como objetos autônomos, portanto seria difícil, se não impossível, fazer uso das propriedades que você define. Quando em um cubo, uma dimensão sempre herda `Language` e `Collation` de seu cubo pai. Quaisquer valores que você possa ter definido no objeto de dimensão do banco de dados autônomo são ignorados.  
   
 -   **Cubo**. Como a estrutura de consulta principal, você pode definir o idioma e ordenação no nível do cubo. Por exemplo, você talvez queira criar várias versões de idioma de um cubo, como versões em inglês e em chinês, dentro do mesmo projeto, onde cada cubo tem seu próprio idioma e ordenação.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "53372458"
   
  No nível de instância, a propriedade é definida durante a instalação e é baseada no idioma do sistema operacional do servidor Windows (um de 37 idiomas, supondo que um pacote de idiomas esteja instalado). Não é possível alterar o idioma de instalação.  
   
- Após a instalação, você pode substituir `Language` usando a página de propriedades de servidor no Management Studio ou no arquivo de configuração msmdsrv.ini. Você pode escolher entre vários outros idiomas, incluindo aqueles com suporte no cliente Windows. Quando definido no nível de instância, no servidor, `Language` determina a localidade de todos os bancos de dados implantados posteriormente. Por exemplo, se você definir `Language` para o alemão, todos os bancos de dados implantados na instância terão uma propriedade de Idioma 1031, o LCID para alemão.  
+ Após a instalação, você pode substituir `Language` usando a página de propriedades de servidor no Management Studio ou no arquivo de configuração msmdsrv.ini. Você pode escolher entre vários outros idiomas, incluindo aqueles com suporte no cliente Windows. Quando definido no nível de instância, no servidor, `Language` determina a localidade de todos os bancos de dados que são implantados posteriormente. Por exemplo, se você definir `Language` para o alemão, todos os bancos de dados implantados na instância terão uma propriedade de Idioma 1031, o LCID para alemão.  
   
 ###  <a name="bkmk_lcid"></a> O valor da propriedade de Idioma é um LCID (Identificador de Localidade)  
  Os valores válidos incluem qualquer LCID que aparece na lista suspensa. No Management Studio e SQL Server Data Tools, LCIDs são representados em equivalentes de cadeia de caracteres. Os mesmos idiomas aparecem sempre que a propriedade `Language` é exposta, independentemente da ferramenta. Ter uma lista idêntica de idiomas garante que você possa implementar e testar traduções de forma consistente em todo o modelo.  
@@ -94,13 +94,13 @@ ms.locfileid: "53372458"
   
 -   0x0416 ou 1046 para **Português (Brasil)**.  
   
- Para exibir uma lista mais longa, consulte [Locale IDs Assigned by Microsoft (IDs de localidade atribuídas pela Microsoft)](https://msdn.microsoft.com/goglobal/bb964664.aspx). Para obter mais informações, consulte [Encoding and Code Pages (Codificações e páginas de código)](https://msdn.microsoft.com/goglobal/bb688114.aspx).  
+ Para exibir uma lista mais longa, consulte [Locale IDs Assigned by Microsoft (IDs de localidade atribuídas pela Microsoft)](https://msdn.microsoft.com/goglobal/bb964664.aspx). Para obter mais informações, consulte [páginas de código](/windows/desktop/Intl/code-pages).  
   
 > [!NOTE]  
->  A propriedade `Language` não determina o idioma para o retorno das mensagens do sistema nem quais cadeias de caracteres são exibidas na interface do usuário. Erros, avisos e mensagens são localizados em todos os idiomas com suporte no Office e Office 365 e são usados automaticamente quando a conexão de cliente especifica uma das localidades com suporte.  
+>  A propriedade `Language` não determina o idioma para retornar mensagens de sistema ou quais cadeias de caracteres são exibidas na interface do usuário. Erros, avisos e mensagens são localizados em todos os idiomas com suporte no Office e Office 365 e são usados automaticamente quando a conexão de cliente especifica uma das localidades com suporte.  
   
 ##  <a name="bkmk_collations"></a> Suporte a ordenação no Analysis Services  
- O [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa exclusivamente ordenações primárias e do Windows. Ele não usa ordenações herdadas do SQL Server. Em um cubo, uma única ordenação é usada no todo, com exceção de traduções no nível de atributo. Para obter mais informações sobre como definir traduções de atributos, consulte [Traduções &#40;Analysis Services&#41;](translations-analysis-services.md).  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa exclusivamente ordenações primárias e do Windows. Ele não usa ordenações herdadas do SQL Server. Em um cubo, uma única ordenação é usada no todo, com exceção de traduções no nível de atributo. Para obter mais informações sobre como definir traduções de atributos, consulte [Traduções &#40;Analysis Services&#41;](translations-analysis-services.md).  
   
  As ordenações controlam a diferenciação de maiúsculas e minúsculas de todas as cadeias de caracteres em um script de idioma bicameral, com exceção dos identificadores de objeto. Se você usar caracteres em letras maiúsculas e minúsculas em um identificador de objeto, saiba que a diferenciação de maiúsculas e minúsculas de identificadores de objeto não é determinada pela ordenação, mas por [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Para identificadores de objeto compostos no script em inglês, eles sempre diferenciam maiúsculas de minúsculas, independentemente da ordenação. Cirílico e outras linguagens bicamerais fazem o oposto (sempre diferenciam maiúsculas de minúsculas). Para obter detalhes, consulte [Dicas de globalização e práticas recomendadas &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) .  
   
@@ -109,7 +109,7 @@ ms.locfileid: "53372458"
 ###  <a name="bkmk_collationtype"></a> Tipos de ordenação  
  O Analysis Services dá suporte a dois tipos de ordenação:  
   
--   **Agrupamentos do Windows**  
+-   **ordenações do Windows**  
   
      As ordenações do Windows classificam caracteres com base nas características linguísticas e culturais do idioma. No Windows, as ordenações ultrapassam o número de localidades (ou idiomas) usadas, porque muitos idiomas compartilham alfabetos comuns e regras para classificação e comparação de caracteres. Por exemplo, 33 localidades do Windows, incluindo todas as localidades portuguesas e inglesas do Windows, usam a página de código Latin1 (1252) e seguem um conjunto comum de regras para classificar e comparar caracteres.  
   
@@ -185,7 +185,7 @@ ms.locfileid: "53372458"
  GB18030 é um padrão separado usado na República Popular da China para codificar caracteres chineses. Em GB18030, caracteres podem ter 1, 2 ou 4 bytes em comprimento. No Analysis Services, não há conversão de dados durante o processamento de dados de fontes externas. Os dados são simplesmente armazenados como Unicode. No momento da consulta, uma conversão GB18030 é realizada por meio de bibliotecas do cliente Analysis Services (especificamente, o provedor OLE DB MSOLAP.dll) quando os dados de texto são retornados nos resultados da consulta, baseados nas configurações do sistema operacional cliente. O mecanismo de banco de dados também dá suporte a GB18030. Para obter detalhes, consulte [Suporte a ordenação e Unicode](../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Cenários de globalização para Analysis Services multidimensional](globalization-scenarios-for-analysis-services-multiidimensional.md)   
+ [Cenários de globalização para Analysis Services Multidimensional](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [Dicas de globalização e práticas recomendadas &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)   
  [Suporte a ordenações e a Unicode](../relational-databases/collations/collation-and-unicode-support.md)  
   

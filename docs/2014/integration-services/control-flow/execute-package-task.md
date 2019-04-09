@@ -16,12 +16,12 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d7d0273e166f715030da1ae2a984f4f744364ba4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 59b623076e86f3bacf5ae8c6e24b48774e33f670
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387134"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241244"
 ---
 # <a name="execute-package-task"></a>Tarefa Executar Pacote
   A tarefa Executar Pacote estende os recursos empresariais do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ao permitir que pacotes executem outros pacotes como parte de um fluxo de trabalho.  
@@ -75,7 +75,7 @@ ms.locfileid: "58387134"
   
  Você pode usar os métodos a seguir para transmitir valores a um pacote filho:  
   
--   **Configurações de pacote**  
+-   **Configurações do Pacote**  
   
      [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece um tipo de configuração, a configuração de Variável do Pacote Pai, para transmitir valores de pacotes pai para pacotes filho. A configuração é construída no pacote filho e usa uma variável no pacote pai. A configuração é mapeada para uma variável no pacote filho ou para a propriedade de um objeto no pacote filho. A variável também pode ser usada nos scripts usados pela tarefa Script ou pelo componente Script.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "58387134"
  Para obter mais informações, consulte [Usar os valores de variáveis e parâmetros em um pacote filho](../use-the-values-of-variables-and-parameters-in-a-child-package.md).  
   
 ### <a name="accessing-parent-package-variables"></a>Acessando variáveis de pacote pai  
- Os pacotes filho podem acessar variáveis de pacote pai usando a tarefa de Script. Ao inserir o nome da variável de pacote pai na página **Script** do **Editor da Tarefa de Script**, não inclua **Usuário:** no nome da variável. Caso contrário, o pacote filho não localizará a variável quando você executar o pacote pai. Para obter mais informações sobre como usar a tarefa Script para acessar variáveis de pacote pai, consulte essa entrada de blog [SSIS: Acessando variáveis em um pacote pai](https://go.microsoft.com/fwlink/?LinkId=257729), em consultingblogs.emc.com.  
+ Os pacotes filho podem acessar variáveis de pacote pai usando a tarefa de Script. Ao inserir o nome da variável de pacote pai na página **Script** do **Editor da Tarefa de Script**, não inclua **Usuário:** no nome da variável. Caso contrário, o pacote filho não localizará a variável quando você executar o pacote pai. Para obter mais informações sobre como usar a tarefa Script para acessar variáveis de pacote pai, consulte essa entrada de blog [SSIS: Acessando variáveis em um pacote pai](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/).  
   
 ## <a name="configuring-the-execute-package-task"></a>Configurando a tarefa Executar Pacote  
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente.  
@@ -110,7 +110,7 @@ ms.locfileid: "58387134"
   
  Para obter mais informações sobre como definir essas propriedades no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
--   [Definir as propriedades de uma tarefa ou contêiner](../set-the-properties-of-a-task-or-container.md)  
+-   [Definir as propriedades de uma tarefa ou de um contêiner](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -118,6 +118,6 @@ ms.locfileid: "58387134"
   
 -   Entrada de blog, [SSIS: Você deve executar pacotes filho em processo ou fora de processo? ](https://go.microsoft.com/fwlink/?LinkId=220819), em consultingblogs.emc.com.  
   
--   Entrada de blog, [SSIS: Acessando variáveis em um pacote pai](https://go.microsoft.com/fwlink/?LinkId=257729), em consultingblogs.emc.com.  
+-   Entrada de blog, [SSIS: Acessando variáveis em um pacote pai](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/), em andyleonard.blog. 
   
   

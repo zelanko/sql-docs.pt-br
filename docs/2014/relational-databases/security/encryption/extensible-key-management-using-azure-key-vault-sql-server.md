@@ -16,12 +16,12 @@ ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: c2a6acd93bc711e4722f3ca437b17cba603dfcad
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 852f65073a55cbe6e8d29b1dc17981cb5356d95f
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372758"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242195"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Gerenciamento extensível de chaves usando o Azure Key Vault (SQL Server)
   O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector para [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Cofre de chaves do Azure permite [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] criptografia Aproveite o serviço Azure Key Vault como um [gerenciamento extensível de chaves &#40;EKM&#41; ](extensible-key-management-ekm.md) provedor para proteger seu chaves de criptografia.  
@@ -30,17 +30,17 @@ ms.locfileid: "53372758"
   
 -   [Usos de EKM](#Uses)  
   
--   [Etapa 1: Como configurar o Key Vault para uso pelo SQL Server](#Step1)  
+-   [Etapa 1: Configuração do Key Vault para uso pelo SQL Server](#Step1)  
   
 -   [Etapa 2: Instalação do SQL Server Connector](#Step2)  
   
--   [Etapa 3: Configurar o SQL Server para usar um provedor EKM para o Cofre de chaves](#Step3)  
+-   [Etapa 3: Configurar o SQL Server para usar um provedor EKM para o Key Vault](#Step3)  
   
--   [Exemplo a: Transparent Data Encryption usando uma chave assimétrica do Cofre de chaves](#ExampleA)  
+-   [Exemplo A: Criptografia transparente de dados usando uma chave assimétrica do Key Vault](#ExampleA)  
   
--   [Exemplo b: Criptografia de Backups usando uma chave assimétrica do Cofre de chaves](#ExampleB)  
+-   [Exemplo B: Criptografia de backups usando uma chave assimétrica do Key Vault](#ExampleB)  
   
--   [Exemplo c: Criptografia de nível de coluna usando uma chave assimétrica do Cofre de chaves](#ExampleC)  
+-   [Exemplo C: Criptografia de nível de coluna usando uma chave assimétrica do Key Vault](#ExampleC)  
   
 ##  <a name="Uses"></a> Usos de EKM  
  Uma organização pode usar criptografia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para proteger dados confidenciais. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a criptografia inclui [Transparent Data Encryption &#40;TDE&#41;](transparent-data-encryption.md), [criptografia em nível de coluna](/sql/t-sql/functions/cryptographic-functions-transact-sql) (CLE) e [criptografia de Backup](../../backup-restore/backup-encryption.md). Em todos esses casos, os dados são criptografados usando uma chave de criptografia simétrica de dados. A chave de criptografia simétrica de dados é ainda mais protegida ao criptografar com uma hierarquia de chaves armazenadas em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Como alternativa, a arquitetura de provedor EKM permite que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proteja as chaves de criptografia de dados usando uma chave assimétrica armazenada fora do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em um provedor de criptografia externo. Usar a arquitetura de provedor EKM acrescenta uma camada adicional de segurança e permite que as organizações separem o gerenciamento de chaves e dados.  
@@ -52,7 +52,7 @@ ms.locfileid: "53372758"
  ![EKM do SQL Server usando o Azure Key Vault](../../../database-engine/media/ekm-using-azure-key-vault.png "EKM do SQL Server usando o Azure Key Vault")  
   
 ##  <a name="Step1"></a> Etapa 1: Configuração do Key Vault para uso pelo SQL Server  
- Use as seguintes etapas para configurar uma chave de cofre para uso com o [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] para proteção de chave de criptografia. Um cofre já pode estar em uso para a organização. Quando não houver um cofre, o Administrador do Azure de sua organização, designado para gerenciar chaves de criptografia, poderá criar um cofre, gerar uma chave assimétrica no cofre e, então, autorizar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para usar a chave. Familiarize-se com o serviço de cofre de chave consultando [Introdução ao Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402)e a referência de [Cmdlets do PowerShell do Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521403) .  
+ Use as seguintes etapas para configurar uma chave de cofre para uso com o [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] para proteção de chave de criptografia. Um cofre já pode estar em uso para a organização. Quando não houver um cofre, o Administrador do Azure de sua organização, designado para gerenciar chaves de criptografia, poderá criar um cofre, gerar uma chave assimétrica no cofre e, então, autorizar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para usar a chave. Familiarize-se com o serviço de cofre de chave consultando [Introdução ao Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402)e a referência de [Cmdlets do PowerShell do Azure Key Vault](/powershell/module/azurerm.keyvault/) .  
   
 > [!IMPORTANT]  
 >  Se tiver várias assinaturas do Azure, você deve usar a assinatura que contém o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

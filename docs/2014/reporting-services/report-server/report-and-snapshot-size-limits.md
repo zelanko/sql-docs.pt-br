@@ -18,12 +18,12 @@ ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 46b6a89d5ce643aa67f3f514052c19ea77e6e72e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b43ad109b3b64927f2e4b03ef26fc0bc648a1ec7
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035637"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240644"
 ---
 # <a name="report-and-snapshot-size-limits"></a>Limites de tamanho do relatório e do instantâneo
   Os administradores que gerenciam uma implantação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] podem usar as informações deste tópico para entender os limites de tamanho de relatório quando este é publicado em um servidor de relatório, renderizado em tempo de execução e salvo no sistema de arquivos. Este tópico também fornece uma orientação prática sobre como medir o tamanho de um banco de dados do servidor de relatório e descreve o efeito do tamanho do instantâneo no desempenho do servidor.  
@@ -53,7 +53,7 @@ ms.locfileid: "56035637"
  O único limite fixo do tamanho do relatório é determinado durante a renderização em formato Excel. As planilhas não podem ter mais de 65536 linhas ou 256 colunas. Outros formatos de renderização não têm esses limites, de modo que o tamanho é limitado somente pela quantidade de recursos do servidor. Para obter mais informações sobre os limites de arquivo do Excel, consulte [exportar um relatório como outro tipo de arquivo &#40;construtor de relatórios e SSRS&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  O processamento e a renderização do relatório ocorrem na memória. Se houver grandes relatórios ou um grande número de usuários, faça algum tipo de planejamento de capacidade para ter certeza de que a implantação do servidor de relatório seja executada em um nível satisfatório para os usuários. Para obter mais informações sobre ferramentas e diretrizes, consulte as seguintes publicações no MSDN: [Planejando escalabilidade e desempenho com o Reporting Services](https://go.microsoft.com/fwlink/?LinkID=70650) e [usando o Visual Studio 2005 para realizar testes de carga em um SQL Server 2005 Reporting Services Report Server](https://go.microsoft.com/fwlink/?LinkID=77519).  
+>  O processamento e a renderização do relatório ocorrem na memória. Se houver grandes relatórios ou um grande número de usuários, faça algum tipo de planejamento de capacidade para ter certeza de que a implantação do servidor de relatório seja executada em um nível satisfatório para os usuários. Para obter mais informações sobre ferramentas e diretrizes, consulte as seguintes publicações no MSDN: [Planejando escalabilidade e desempenho com o Reporting Services](http://spmarchitecture.com/ssrs-architecture/planning-for-scalability-and-performance-reporting-services-70744/) e [usando o Visual Studio 2005 para realizar testes de carga em um SQL Server 2005 Reporting Services Report Server](https://go.microsoft.com/fwlink/?LinkID=77519).  
   
 ## <a name="measuring-snapshot-storage"></a>Medindo o armazenamento de instantâneos  
  O tamanho de qualquer instantâneo é diretamente proporcional à quantidade de dados no relatório. Os instantâneos normalmente são muito maiores que outros itens armazenados em um servidor de relatório. O tamanho do instantâneo varia, em geral, de alguns megabytes a dezenas de megabytes. Se você tiver relatórios muito grandes, espere para ver instantâneos que são ainda muito maiores. Dependendo da frequência de uso dos instantâneos e da configuração do histórico de relatórios, a quantidade de espaço em disco necessária para o banco de dados do servidor de relatório pode aumentar rapidamente em um curto período de tempo.  
@@ -81,7 +81,7 @@ EXEC sp_spaceused
  A quantidade de instantâneos que são armazenados em um banco de dados do servidor de relatório não é, por si só, um fator de desempenho. Você pode armazenar um número grande de instantâneos sem afetar o desempenho do servidor. Os instantâneos podem ser mantidos indefinidamente. Porém, verifique se o histórico de relatórios pode ser configurado. Se o administrador de um servidor de relatório diminuir o limite do histórico, os relatórios do histórico que você pretende manter podem ser perdidos. Se você excluir o relatório, todo o histórico relacionado será excluído também.  
   
 ## <a name="see-also"></a>Consulte também  
- [Definir as propriedades do processamento de relatórios](set-report-processing-properties.md)   
+ [Definir propriedades de processamento de relatórios](set-report-processing-properties.md)   
  [Banco de dados do servidor de relatório &#40;modo nativo do SSRS&#41;](report-server-database-ssrs-native-mode.md)   
  [Processar relatórios grandes](process-large-reports.md)  
   

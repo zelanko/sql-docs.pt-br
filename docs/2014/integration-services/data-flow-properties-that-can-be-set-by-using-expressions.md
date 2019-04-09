@@ -20,12 +20,12 @@ ms.assetid: cd0e171a-08be-45d6-81dc-ed94f37698b8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2fd6b938d13e880f7ec8d48d3e4ca9665ee9cd65
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: fbb609a65c70cb44c8fda81feb75927060ed289b
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378594"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240414"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>Propriedades de fluxo de dados que podem ser definidas usando expressões
   Os valores de certas propriedades dos objetos de fluxo de dados podem ser especificados usando expressões de propriedades disponíveis no contêiner da tarefa de Fluxo de Dados.  
@@ -72,19 +72,19 @@ ms.locfileid: "58378594"
 |Destino do ADO NET|Propriedade TableOrViewName<br /><br /> Propriedade BatchSize<br /><br /> Propriedade CommandTimeout|  
 |Destino de arquivo simples|Propriedade Header|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Destino Compact|Propriedade TableName|  
-|Destino [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Propriedade BulkInsertTableName<br /><br /> Propriedade BulkInsertFirstRow<br /><br /> Propriedade BulkInsertLastRow<br /><br /> Propriedade BulkInsertOrder<br /><br /> Propriedade Timeout|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] destino|Propriedade BulkInsertTableName<br /><br /> Propriedade BulkInsertFirstRow<br /><br /> Propriedade BulkInsertLastRow<br /><br /> Propriedade BulkInsertOrder<br /><br /> Propriedade Timeout|  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 -   [Adicionar ou alterar uma expressão de propriedade](expressions/add-or-change-a-property-expression.md)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- Artigo técnico, [SSIS Expression Cheat Sheet](http://pragmaticworks.com/cheatsheet/), em pragmaticworks.com  
+ Artigo técnico, [SSIS Expression Cheat Sheet](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet), em pragmaticworks.com  
   
 ## <a name="see-also"></a>Consulte também  
  [Usar expressões de propriedade em pacotes](expressions/use-property-expressions-in-packages.md)   
  [Propriedades comuns](../../2014/integration-services/common-properties.md)   
- [Propriedades personalizadas da transformação](data-flow/transformations/transformation-custom-properties.md)   
+ [Propriedades Personalizadas de Transformação](data-flow/transformations/transformation-custom-properties.md)   
  [Propriedades do caminho](../../2014/integration-services/path-properties.md)  
   
   
