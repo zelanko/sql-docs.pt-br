@@ -10,12 +10,12 @@ ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 73d071b0fc5724c23074c0d827f1c12466f47bab
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: a11983c6fc9e1ca2e8917fd2efdaa5c90b4d3c30
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380714"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241724"
 ---
 # <a name="cdc-flow-components"></a>Componentes de fluxo CDC
   Os componentes Change Data Capture da Attunity para Microsoft [!INCLUDE[ssISCurrent](../../../includes/ssiscurrent-md.md)] Microsoft ajudam os desenvolvedores do SSIS a trabalharem com CDC e reduzir a complexidade de pacotes CDC.  
@@ -34,7 +34,7 @@ ms.locfileid: "58380714"
   
  [Origem CDC](cdc-source.md)  
   
- [Divisor de CDC](cdc-splitter.md)  
+ [Separador de CDC](cdc-splitter.md)  
   
 ## <a name="installation"></a>Instalação  
  Esta seção descreve os procedimentos de instalação para os Componentes CDC para o Microsoft [!INCLUDE[ssISCurrent](../../../includes/ssiscurrent-md.md)].  
@@ -109,7 +109,7 @@ ms.locfileid: "58380714"
   
  Para obter mais informações sobre o Separador de CDC, consulte:  
   
- [Divisor de CDC](cdc-splitter.md)  
+ [Separador de CDC](cdc-splitter.md)  
   
  Um dos problemas básicos que exigem atenção ao criar pacotes de CDC é como o processamento de alterações interage com o carregamento inicial (ou processamento inicial) dos dados.  
   
@@ -194,7 +194,7 @@ ms.locfileid: "58380714"
   
 -   [Origem CDC](cdc-source.md)  
   
--   [Divisor de CDC](cdc-splitter.md)  
+-   [Separador de CDC](cdc-splitter.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -204,7 +204,7 @@ ms.locfileid: "58380714"
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
--   Entrada de blog, [CDC no SSIS para SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242543)em mattmasson.com.  
+-   Entrada de blog, [CDC no SSIS para SQL Server 2012](https://www.mattmasson.com/2011/12/cdc-in-ssis-for-sql-server-2012-2/)em mattmasson.com.  
   
 -   Entrada de blog sobre como configurar o serviço de CDC, [CDC para Oracle no SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=247827)em blogs.msdn.com.  
   

@@ -11,12 +11,12 @@ ms.assetid: 34f03407-2ec4-4554-b16b-bc9a6c161815
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 250e6c0a6c7bf1f5ddeb0bb5978ca70ab3545f8a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 04c366bc668fe09d1ebf57d169587ec11476f707
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352712"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241934"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2013"></a>Atualização de dados PowerPivot com SharePoint 2013
   O design para atualização de modelos de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no SharePoint 2013 utiliza Serviços do Excel como o principal componente para carregar e atualizar modelos de dados em uma instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] executada no modo SharePoint. O servidor do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é executado externamente ao farm do SharePoint.  
@@ -27,17 +27,17 @@ ms.locfileid: "53352712"
   
  **Neste tópico:**  
   
--   [Interactive Data Refresh](#bkmk_interactive_refresh)  
+-   [atualização de dados interativa](#bkmk_interactive_refresh)  
   
 -   [Autenticação do Windows com conexões de dados da pasta de trabalho e atualização de dados interativa](#bkmk_windows_auth_interactive_data_refresh)  
   
--   [Scheduled Data Refresh](#bkmk_scheduled_refresh)  
+-   [atualização de dados agendada](#bkmk_scheduled_refresh)  
   
 -   [Arquitetura de atualização no SharePoint 2013](#bkmk_refresh_architecture)  
   
 -   [Considerações adicionais sobre autenticação](#datarefresh_additional_authentication)  
   
--   [Mais informações](#bkmk_moreinformation)  
+-   [Mais Informações](#bkmk_moreinformation)  
   
 ## <a name="background"></a>Plano de fundo  
  Os Serviços do Excel do SharePoint Server 2013 gerenciam a atualização de dados de pastas de trabalho do Excel 2013 e disparam o processamento de modelo de dados em um servidor do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que está executando no modo do SharePoint. No caso de pastas de trabalho do Excel 2010, os Serviços do Excel também gerenciam as ações de carregar e salvar pastas de trabalho e modelos de dados. No entanto, os Serviços do Excel se baseiam no Serviço do Sistema PowerPivot para enviar os comandos de processamento ao modelo de dados. A tabela a seguir resume os componentes que enviam comandos de processamento para atualização de dados, dependendo da versão da pasta de trabalho. Pressupõe-se que o ambiente seja um farm do SharePoint 2013 configurado para usar um [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis Server em execução no modo do SharePoint.  
@@ -127,7 +127,7 @@ ms.locfileid: "53352712"
   
  ![as_interactive_data_refresh2012SP1_windowsauth](../media/as-interactive-data-refresh2012sp1-windowsauth.gif "as_interactive_data_refresh2012SP1_windowsauth")  
   
- Para obter mais informações, consulte [atuar como parte do sistema operacional](https://technet.microsoft.com/library/cc784323\(WS.10\).aspx) (https://technet.microsoft.com/library/cc784323(WS.10).aspx).  
+ Para obter mais informações, consulte [atuar como parte do sistema operacional](https://technet.microsoft.com/library/cc784323\(WS.10\).aspx).  
   
 ##  <a name="bkmk_scheduled_refresh"></a> Scheduled Data Refresh  
  **Pontos de interesse principais da atualização de dados agendada:**  
@@ -233,7 +233,7 @@ ms.locfileid: "53352712"
 ##  <a name="bkmk_moreinformation"></a> Mais informações  
  [Solucionando problemas de atualização de dados do PowerPivot](https://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
   
- [Serviços do Excel no SharePoint 2013](https://msdn.microsoft.com/library/sharepoint/jj164076\(v=office.15\)) (<https://msdn.microsoft.com/library/sharepoint/jj164076(v=office.15>)).  
+ [Serviços do Excel no SharePoint 2013](https://www.enjoysharepoint.com/configure-excel-service-application-in-sharepoint-2013/). 
   
 ## <a name="see-also"></a>Consulte também  
  [Atualizar pastas de trabalho e atualização de dados agendada &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)   

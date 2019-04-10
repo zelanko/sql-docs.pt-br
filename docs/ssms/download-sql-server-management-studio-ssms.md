@@ -24,12 +24,12 @@ ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dnethi
 ms.author: dinethi
 manager: craigg
-ms.openlocfilehash: ff8380e286c40f479bbc9afaea48b12feeab1694
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: 9bc678f69df60ec07e1cca6eddbb337aab8ed8ff
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566535"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042023"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Baixar o SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,11 +44,11 @@ O SSMS é gratuito!
 
 ## <a name="ssms-1791-is-the-current-general-availability-ga-version-of-ssms"></a>O SSMS 17.9.1 é a atual versão de GA (disponibilidade geral) do SSMS
 
-[![baixar](../ssdt/media/download.png) Baixar o SQL Server Management Studio 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154)
+[![daixar](../ssdt/media/download.png) Baixar o SQL Server Management Studio 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154)
 
-[![baixar](../ssdt/media/download.png) Baixar o pacote de atualização do SQL Server Management Studio 17.9.1 (atualiza o 17.x para o 17.9.1)](https://go.microsoft.com/fwlink/?linkid=2043430)
+[![daixar](../ssdt/media/download.png) Baixar o pacote de atualização do SQL Server Management Studio 17.9.1 (atualiza o 17.x para o 17.9.1)](https://go.microsoft.com/fwlink/?linkid=2043430)
 
-**Informações da versão**
+**Informações sobre versão**
 
 - Número da versão: 17.9.1<br>
 - Número de build: 14.0.17289.0<br>
@@ -61,7 +61,7 @@ O SSMS é gratuito!
 
 [Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40a)
 
-Para obter mais detalhes sobre o SSMS 17.9.1, confira o [Log de alterações do SSMS 17.9.1](sql-server-management-studio-changelog-ssms.md#ssms-1791-latest-ga-release).
+Para obter mais detalhes sobre o SSMS 17.9.1, confira o [Log de alterações do SSMS 17.9.1](release-notes-ssms.md#1791-latest-ga-release).
 
 ## <a name="ssms-installation-tips-and-issues-ssms-1791"></a>Problemas e dicas de instalação do SSMS (SSMS 17.9.1)
 
@@ -78,11 +78,11 @@ Para obter mais detalhes sobre o SSMS 17.9.1, confira o [Log de alterações do 
 
 **O SSMS 18.0 RC1 (Release Candidate 1) já está disponível e é a última geração do *SQL Server Management Studio* que dá suporte ao [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]!**
 
-**[![baixar](../ssdt/media/download.png) Baixar o SQL Server Management Studio 18.0 (RC1)](https://go.microsoft.com/fwlink/?linkid=2085742)**
+**[![dowaixar](../ssdt/media/download.png) Baixar o SQL Server Management Studio (18.0 RC1)](https://go.microsoft.com/fwlink/?linkid=2085742)**
 
 O *RC1* é a mais recente versão prévia pública do SSMS 18.0. Se você tiver uma versão prévia anterior do SSMS 18.0 instalada, desinstale-a antes de instalar o SSMS 18.0 RC1.
 
-**Informações da versão**
+**Informações sobre versão**
 
 - Número da versão: 18.0 (RC1)<br>
 - Número de build: 15.0.18098.0<br>
@@ -111,7 +111,7 @@ Nenhuma opção de atualização está disponível neste momento. Se você tiver
 
 O SSMS 18.0 (RC1) é a versão mais recente do SQL Server Management Studio. A geração 18.x do SSMS dá suporte a quase todas as áreas de recursos do SQL Server 2008 por meio da versão prévia do SQL Server 2019.
 
-Para obter detalhes sobre as novidades nesta versão, confira o [log de alterações do SSMS](sql-server-management-studio-changelog-ssms.md).
+Para obter detalhes sobre as novidades desta versão, confira [notas sobre a versão do SSMS](release-notes-ssms.md).
 
 ## <a name="supported-sql-offerings-ssms-180-rc1"></a>Ofertas de SQL compatíveis (SSMS 18.0 RC1)
 
@@ -140,7 +140,7 @@ N/A
 
 ## <a name="previous-releases"></a>Versões anteriores
 
-[Versões anteriores do SQL Server Management Studio](../ssms/sql-server-management-studio-changelog-ssms.md#previous-ssms-releases)
+[Versões anteriores do SQL Server Management Studio](../ssms/release-notes-ssms.md#previous-ssms-releases)
 
 ## <a name="feedback"></a>Comentários
 
