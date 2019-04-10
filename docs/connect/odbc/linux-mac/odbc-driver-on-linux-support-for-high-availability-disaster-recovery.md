@@ -1,7 +1,7 @@
 ---
 title: Driver ODBC no Linux e no macOS – alta disponibilidade e recuperação de desastre | Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2018
+ms.date: 04/05/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,19 +11,19 @@ ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 952194b55ef14527e2f04d18edb5873e6098d2da
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a4f307efedd62a1fcc923a2e61da8636a89e40bb
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600096"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042375"
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Driver ODBC no Linux e no macOS – compatibilidade com alta disponibilidade e recuperação de desastre
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Os drivers ODBC para Linux e macOS suporte [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. Para saber mais sobre [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], consulte:  
+Os drivers ODBC para Linux e macOS são compatíveis com [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. Para saber mais sobre [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], consulte:  
   
--   [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo (SQL Server)](https://msdn.microsoft.com/library/hh213417.aspx)  
+-   [Ouvintes de grupo de disponibilidade, conectividade de cliente e failover de aplicativo (SQL Server)](https://msdn.microsoft.com/library/hh213417.aspx)  
   
 -   [Criação e configuração de grupos de disponibilidade (SQL Server)](https://msdn.microsoft.com/library/ff878265.aspx)  
   
@@ -33,16 +33,16 @@ Os drivers ODBC para Linux e macOS suporte [!INCLUDE[ssHADR](../../../includes/s
   
 Você pode especificar o ouvinte de um determinado grupo de disponibilidade na cadeia de conexão. Se um aplicativo do ODBC no Linux ou macOS estiver conectado a um banco de dados em um grupo de disponibilidade que executa failover, a conexão original será interrompida e o aplicativo deverá abrir uma nova conexão para continuar o trabalho após o failover.
 
-Os drivers ODBC no Linux e macOS sequencialmente iterar em todos os endereços IP associados com um nome de host DNS se você não estiver se conectando a um ouvinte de grupo de disponibilidade e vários endereços IP estão associados com o nome do host.
+Os drivers ODBC no Linux e no macOS iteram sequencialmente em todos os endereços IP associados com um nome de host DNS se você não está se conectando a um ouvinte de grupo de disponibilidade, e vários endereços IP são associados ao nome do host.
 
-Se o primeiro endereço IP retornado do servidor DNS não é conectável, essas iterações podem ser demoradas. Ao se conectar a um ouvinte do grupo de disponibilidade, o driver tenta estabelecer conexões com todos os endereços IP em paralelo. Se uma tentativa de conexão obtiver êxito, o driver descartará as tentativas de conexão pendentes.
+Se o primeiro endereço IP retornado do servidor DNS não for conectável, essas iterações poderão ser demoradas. Ao se conectar a um ouvinte do grupo de disponibilidade, o driver tenta estabelecer conexões com todos os endereços IP em paralelo. Se uma tentativa de conexão obtiver êxito, o driver descartará as tentativas de conexão pendentes.
 
 > [!NOTE]  
 > Como uma conexão pode falhar devido a um failover de grupo de disponibilidade, implemente a lógica de repetição de conexão; tente novamente uma conexão com falha até se reconectar. Aumentar o tempo limite de conexão e implementar a lógica de repetição de conexão aumentará a probabilidade de se conectar a um grupo de disponibilidade.
 
 ## <a name="connecting-with-multisubnetfailover"></a>Conectando-se ao MultiSubnetFailover
 
-Sempre especifique **MultiSubnetFailover=Yes** ao se conectar a um ouvinte do grupo de disponibilidade do [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] ou a uma instância de cluster de failover do [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. O **MultiSubnetFailover** permite failover mais rápido para todos os grupos de disponibilidade a instância de cluster de failover no [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. O **MultiSubnetFailover** também reduz significativamente o tempo de failover para topologias AlwaysOn únicas e com várias sub-redes. Durante um failover de várias sub-redes, o cliente tentará conexões em paralelo. Durante um failover de sub-rede, o driver repetirá agressivamente a conexão TCP.
+Sempre especifique **MultiSubnetFailover=Yes** ao se conectar a um ouvinte do grupo de disponibilidade do [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] ou a uma instância de cluster de failover do [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. O **MultiSubnetFailover** permite failover mais rápido para todos os grupos de disponibilidade a instância de cluster de failover no [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. O **MultiSubnetFailover** também reduz significativamente o tempo de failover para topologias AlwaysOn únicas e com várias sub-redes. Durante um failover de várias sub-redes, o cliente tentará conexões em paralelo. Durante um failover de sub-rede, o driver repete agressivamente a conexão TCP.
 
 A propriedade de conexão **MultiSubnetFailover** indica que o aplicativo está sendo implantado em um grupo de disponibilidade ou instância de cluster de failover. O driver tenta se conectar ao banco de dados na instância primária do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] experimentando todos os endereços IP. Ao se conectar com **MultiSubnetFailover=Yes**, o cliente repete as tentativas de conexão TCP mais rápido do que os intervalos de retransmissão TCP padrão do sistema operacional. **MultiSubnetFailover = Yes** permite uma reconexão mais rápida após o failover de um grupo de disponibilidade AlwaysOn ou uma instância de cluster de failover AlwaysOn. **MultiSubnetFailover=Yes** se aplica tanto a grupos de disponibilidade e instâncias de cluster de failover únicos quanto de várias sub-redes.  
 
@@ -50,13 +50,13 @@ Use **MultiSubnetFailover=Yes** ao se conectar a um ouvinte do grupo de disponib
 
 Lembre-se do seguinte ao se conectar com um servidor em um grupo de disponibilidade ou Instância de Cluster de Failover:
   
--   Especificar **MultiSubnetFailover = Yes** para melhorar o desempenho ao se conectar a uma sub-rede única ou de um grupo de disponibilidade de várias sub-redes.
+-   Especifique **MultiSubnetFailover=Yes** para melhorar o desempenho ao se conectar a uma sub-rede única ou a um Grupo de Disponibilidade de várias sub-redes.
 
--   Especifique o ouvinte do grupo de disponibilidade do grupo de disponibilidade como o servidor em sua cadeia de conexão.
+-   Especifique o ouvinte do grupo de disponibilidade como o servidor em sua cadeia de conexão.
   
 -   Não é permitido se conectar a uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] configurada com mais de 64 endereços IP.
 
--   Ambos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] autenticação ou autenticação Kerberos pode ser usada com **MultiSubnetFailover = Yes** sem afetar o comportamento do aplicativo.
+-   É possível usar tanto Autenticação [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quanto Autenticação Kerberos com **MultiSubnetFailover=Yes** sem afetar o comportamento do aplicativo.
 
 -   Você pode aumentar o valor de **loginTimeout** para acomodar o tempo de failover e reduzir as tentativas de repetição de conexão do aplicativo.
 
@@ -76,7 +76,7 @@ Uma conexão falhará se uma réplica primária estiver configurada para rejeita
 
 ## <a name="odbc-syntax"></a>Sintaxe do ODBC
 
-Duas palavras-chave da cadeia de conexão do ODBC são compatíveis com o [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]:  
+Duas palavras-chave da cadeia de conexão do ODBC fornecem suporte para os [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]:  
   
 -   **ApplicationIntent**  
   
@@ -105,4 +105,4 @@ Um aplicativo no driver ODBC que use os [!INCLUDE[ssHADR](../../../includes/ssha
 
 [Diretrizes de programação](../../../connect/odbc/linux-mac/programming-guidelines.md)
 
-[Notas de versão](../../../connect/odbc/linux-mac/release-notes.md)  
+[Notas de Versão](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)  

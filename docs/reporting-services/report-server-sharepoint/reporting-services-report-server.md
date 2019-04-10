@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 624d00d0c9cd27acbaa00fefa52f6880c7a69916
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: f5f5a449fc3bf87ce6999f424957466bae49ee38
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400579"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872226"
 ---
 # <a name="reporting-services-report-server"></a>Servidor de relatório do Reporting Services
 
@@ -25,7 +25,7 @@ Saiba mais sobre a parte central de uma instalação do [!INCLUDE[ssNoVersion](.
 > [!NOTE]
 > A integração do Reporting Services ao SharePoint não está mais disponível após o SQL Server 2016.
 
-Um servidor de relatório do Reporting Services é executado em um destes dois modos de implantação: modo nativo ou modo do SharePoint. Consulte a seção [Comparação de recursos do SharePoint e do modo nativo](#bkmk_featuresupport) para obter uma comparação entre os recursos.  
+Um servidor de relatório do Reporting Services é executado em um destes dois modos de implantação: modo nativo ou modo do SharePoint. Consulte a seção [Comparação de recursos do SharePoint e do modo nativo](#feature-comparison-of-sharepoint-and-native-mode) para obter uma comparação entre os recursos.  
   
  **Instalação:** para obter informações sobre a instalação do Reporting Services, consulte [Instalar o Reporting Services](../install-windows/install-reporting-services.md).
 
@@ -54,16 +54,16 @@ Um servidor de relatório do Reporting Services é executado em um destes dois m
 |**Configuration Manager**|Sim|**\*\* Importante \*\*** O Configuration Manager não pode ser usado para gerenciar servidor de relatório do modo do SharePoint. Em vez disso, use a administração central do SharePoint.|  
 |**Gerenciador de Relatórios**|Sim|O Gerenciador de Relatórios não pode ser usado para gerenciar o modo do SharePoint. Use as páginas do aplicativo do SharePoint. Para obter mais informações, consulte [Serviço SharePoint do Reporting Services e aplicativos de serviço](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).|  
 |**Relatórios vinculados**|Sim|Nenhum.|  
-|**Meus Relatórios**|Sim|não|  
-|**Minhas Assinaturas** e métodos de envio em lote.|Sim|não|  
-|**Alertas de dados**|não|Sim|  
-|**Power View**|não|Sim<br /><br /> Exige o Silverlight no navegador do cliente. Para obter mais informações sobre os requisitos de navegador, veja [Suporte ao navegador para Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
+|**Meus Relatórios**|Sim|Não|  
+|**Minhas Assinaturas** e métodos de envio em lote.|Sim|Não|  
+|**Alertas de dados**|Não|Sim|  
+|**Power View**|Não|Sim<br /><br /> Exige o Silverlight no navegador do cliente. Para obter mais informações sobre os requisitos de navegador, veja [Suporte ao navegador para Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
 |**Relatórios .RDL**|Sim|Sim<br /><br /> Os relatórios .RDL podem ser executados em servidores de relatório do Reporting Services no modo nativo ou no modo do SharePoint.|  
-|**Relatórios .RDLX**|não|Sim<br /><br /> Os relatórios .RDLX do Power View só podem ser executados em servidores de relatório do Reporting Services no modo do SharePoint.|  
-|**Credenciais do token do usuário do SharePoint para a extensão de lista do SharePoint**|não|Sim|  
-|**As zonas do AAM para implantações voltadas para a Internet**|não|Sim|  
-|**Backup e recuperação do SharePoint**|não|Sim|  
-|**Suporte de log ULS**|não|Sim|  
+|**Relatórios .RDLX**|Não|Sim<br /><br /> Os relatórios .RDLX do Power View só podem ser executados em servidores de relatório do Reporting Services no modo do SharePoint.|  
+|**Credenciais do token do usuário do SharePoint para a extensão de lista do SharePoint**|Não|Sim|  
+|**As zonas do AAM para implantações voltadas para a Internet**|Não|Sim|  
+|**Backup e recuperação do SharePoint**|Não|Sim|  
+|**Suporte de log ULS**|Não|Sim|  
   
 ## <a name="native-mode"></a>nativo
 

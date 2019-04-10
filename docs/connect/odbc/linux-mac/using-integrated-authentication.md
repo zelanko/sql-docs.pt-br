@@ -1,7 +1,7 @@
 ---
-title: Usando a autenticação integrada | Microsoft Docs
+title: Usando autenticação integrada | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/20/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2ffaf0e89e1fdbd0a1722ad038ad9e360decf237
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 834ec3118685da8059999b3986af3edb39dc3e58
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305884"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042245"
 ---
 # <a name="using-integrated-authentication"></a>Como usar a autenticação integrada
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -33,15 +33,15 @@ Você pode habilitar a autenticação integrada do Kerberos especificando **Trus
 Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes  
 ```
   
-Ao se conectar com um DSN, você também pode adicionar **Trusted_Connection = yes** para a entrada DSN em `odbc.ini`.
+Ao se conectar com um DSN, você também pode adicionar **Trusted_Connection=yes** à entrada DSN em `odbc.ini`.
   
-O `-E` opção de `sqlcmd` e o `-T` opção dos `bcp` também pode ser usado para especificar a autenticação integrada; consulte [conectando com **sqlcmd** ](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md) e [ Conectar-se com **bcp** ](../../../connect/odbc/linux-mac/connecting-with-bcp.md) para obter mais informações.
+A opção `-E` de `sqlcmd` e a opção `-T` de `bcp` também podem ser usadas para especificar a autenticação integrada; veja [Conectando-se com **sqlcmd**](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md) e [Conectando-se com **bcp** ](../../../connect/odbc/linux-mac/connecting-with-bcp.md) para obter mais informações.
 
 Verifique se a entidade de segurança do cliente que vai se conectar ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] já está autenticada com o KDC do Kerberos.
   
 Não há suporte para**ServerSPN** e **FailoverPartnerSPN** .  
   
-## <a name="deploying-a-linux-or-macos-odbc-driver-application-designed-to-run-as-a-service"></a>Implantando o Linux ou macOS ODBC Driver aplicativo desenvolvido para execução como um serviço
+## <a name="deploying-a-linux-or-macos-odbc-driver-application-designed-to-run-as-a-service"></a>Implantando um aplicativo de Driver ODBC do Linux ou do macOS desenvolvido para execução como serviço
 
 Um administrador do sistema pode implantar um aplicativo para ser executado como um serviço que usa a Autenticação Kerberos para se conectar ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -55,7 +55,7 @@ Verifique se está usando o `kinit` ou PAM (módulo de autenticação conectáve
   
 -   Verifique se o logon no sistema foi feito usando o PAM (módulo de autenticação conectável) do Kerberos.
 
-Quando um aplicativo é executado como um serviço, porque as credenciais do Kerberos expiram por padrão, renove as credenciais para garantir a disponibilidade contínua do serviço. O driver ODBC não renova as credenciais em si; Verifique se há um `cron` trabalho ou script executado periodicamente para renovar as credenciais antes da expiração. Para evitar a exigência de senha para cada renovação, você pode usar um arquivo keytab.  
+Quando um aplicativo é executado como um serviço, porque as credenciais do Kerberos expiram por padrão, renove as credenciais para garantir a disponibilidade contínua do serviço. O driver ODBC não renova as credenciais em si; verifique se há um trabalho ou script `cron` executado periodicamente para renovar as credenciais antes do término. Para evitar a exigência de senha para cada renovação, você pode usar um arquivo keytab.  
   
 Detalhes sobre formas de aplicar o Kerberos em serviços no Linux são fornecidos em[Kerberos Configuration and Use](https://commons.oreilly.com/wiki/index.php/Linux_in_a_Windows_World/Centralized_Authentication_Tools/Kerberos_Configuration_and_Use) .
   
@@ -73,7 +73,7 @@ Antes da reutilização, um aplicativo deve redefinir conexões em pool executan
 
 ## <a name="using-active-directory-to-manage-user-identities"></a>Usando o Active Directory para gerenciar identidades de usuário
 
-Um administrador de sistema do aplicativo não precisa gerenciar conjuntos separados de credenciais de logon para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. É possível configurar o Active Directory como um centro de distribuição de chaves (KDC) para Autenticação Integrada. Ver [Microsoft Kerberos](/windows/desktop/SecAuthN/microsoft-kerberos) para obter mais informações.
+Um administrador de sistema do aplicativo não precisa gerenciar conjuntos separados de credenciais de logon para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. É possível configurar o Active Directory como um centro de distribuição de chaves (KDC) para Autenticação Integrada. Veja [Microsoft Kerberos](/windows/desktop/SecAuthN/microsoft-kerberos) para obter mais informações.
 
 ## <a name="using-linked-server-and-distributed-queries"></a>Usando servidor vinculado e consultas distribuídas
 
@@ -83,17 +83,17 @@ Os desenvolvedores podem implantar um aplicativo que usa um servidor vinculado o
   
 -   O servidor de aplicativos é autenticado como um banco de dados diferente e se conecta ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] autentica-se como um usuário de banco de dados para outro banco de dados ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se autentica como um usuário de banco de dados para outro banco de dados ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 Depois que a autenticação integrada for configurada, as credenciais serão passadas para o servidor vinculado.  
   
 ## <a name="integrated-authentication-and-sqlcmd"></a>Autenticação integrada e sqlcmd
-Para acessar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando a autenticação integrada, use a opção `-E` de `sqlcmd`. Certifique-se de que a conta que executa `sqlcmd` é associado à entidade de cliente do Kerberos padrão.
+Para acessar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando a autenticação integrada, use a opção `-E` de `sqlcmd`. Verifique se a conta que executa `sqlcmd` está associada à entidade de segurança cliente do Kerberos padrão.
 
 ## <a name="integrated-authentication-and-bcp"></a>Autenticação Integrada e bcp
-Para acessar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando a autenticação integrada, use a opção `-T` de `bcp`. Certifique-se de que a conta que executa `bcp` é associado à entidade de cliente do Kerberos padrão. 
+Para acessar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando a autenticação integrada, use a opção `-T` de `bcp`. Verifique se a conta que executa `bcp` está associada à entidade de segurança cliente do Kerberos padrão. 
   
-É um erro usar `-T` com o `-U` ou `-P` opção.
+É um erro usar `-T` com a opção `-U` ou `-P`.
   
 ## <a name="supported-syntax-for-an-spn-registered-by-includessnoversionincludesssnoversion-mdmd"></a>Sintaxe com suporte para um SPN registrado pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
 
@@ -105,7 +105,7 @@ A sintaxe que os SPNs usam em cadeia de conexão ou atributos de conexão é a s
   
 ## <a name="authenticating-a-linux-or-macos-computer-with-active-directory"></a>Autenticando um computador Linux ou macOS com o Active Directory
 
-Para configurar o Kerberos, inserir dados o `krb5.conf` arquivo. `krb5.conf` está na `/etc/` , mas você pode fazer referência a outro arquivo usando a sintaxe, por exemplo, `export KRB5_CONFIG=/home/dbapp/etc/krb5.conf`. A seguir, é mostrado um arquivo `krb5.conf` de exemplo:  
+Para configurar o Kerberos, insira dados no arquivo `krb5.conf`. `krb5.conf` está em `/etc/`, mas você pode fazer referência a outro arquivo usando a sintaxe, por exemplo, `export KRB5_CONFIG=/home/dbapp/etc/krb5.conf`. A seguir, é mostrado um arquivo `krb5.conf` de exemplo:  
   
 ```  
 [libdefaults]  
@@ -120,17 +120,17 @@ forwardable = yes
 .zzzz.corp.contoso.com = ZZZZ.CORP.CONTOSO.COM  
 ```  
   
-Se o computador Linux ou macOS está configurado para usar a configuração de protocolo DHCP (Dynamic Host) com o servidor DHCP do Windows fornecendo os servidores DNS para usar, você pode usar **dns_lookup_kdc = true**. Agora, você pode usar o Kerberos para entrar no seu domínio emitindo o comando `kinit alias@YYYY.CORP.CONTOSO.COM`. Os parâmetros passados para `kinit` diferenciam maiusculas de minúsculas e o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] configurado para estar no domínio do computador deve ter esse usuário `alias@YYYY.CORP.CONTOSO.COM` adicionado para logon. Agora você pode usar conexões confiáveis (**Trusted_Connection=YES** em uma cadeia de conexão, **bcp -T** ou **sqlcmd -E**).  
+Se o computador Linux ou macOS está configurado para usar o protocolo DHCP com um servidor DHCP do Windows fornecendo os servidores DNS para usar, você pode usar **dns_lookup_kdc=true**. Agora você pode usar o Kerberos para entrar no seu domínio emitindo o comando `kinit alias@YYYY.CORP.CONTOSO.COM`. Os parâmetros passados para `kinit` diferenciam maiúsculas de minúsculas e o computador [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] configurado para estar no domínio deve ter esse usuário `alias@YYYY.CORP.CONTOSO.COM` adicionado para logon. Agora você pode usar conexões confiáveis (**Trusted_Connection=YES** em uma cadeia de conexão, **bcp -T** ou **sqlcmd -E**).  
   
-A hora no computador Linux ou macOS e a hora no Centro de distribuição de chaves para Kerberos (KDC) devem ser próximas. Verifique se a hora do seu sistema está definida corretamente, por exemplo, usando o protocolo NTP.  
+A hora no computador Linux ou macOS e a hora no KDC (Centro de Distribuição de Chaves para Kerberos) devem estar próximas. Verifique se a hora do seu sistema está definida corretamente, por exemplo, usando o protocolo NTP.  
 
 Se a autenticação Kerberos falhar, o driver ODBC do Linux ou macOS não usará autenticação NTLM.  
 
-Para obter mais informações sobre a autenticação de computadores Linux ou macOS com o Active Directory, consulte [autenticar clientes Linux com Active Directory](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048) e [as práticas recomendadas para integrar o OS X com o Active Directory](https://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). Para obter mais informações sobre como configurar o Kerberos, consulte o [MIT Kerberos documentação](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html).
+Para obter mais informações sobre a autenticação de computadores Linux ou macOS com o Active Directory, veja [Autenticar Clientes Linux com Active Directory](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048) e [Melhores práticas para integrar o OS X ao Active Directory](https://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). Para obter mais informações sobre como configurar o Kerberos, veja a [Documentação do MIT Kerberos](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html).
 
 ## <a name="see-also"></a>Consulte Também  
 [Diretrizes de programação](../../../connect/odbc/linux-mac/programming-guidelines.md)
 
-[Notas de versão](../../../connect/odbc/linux-mac/release-notes.md)
+[Notas de Versão](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
 
 [Como usar o Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md)
