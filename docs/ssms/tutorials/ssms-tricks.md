@@ -1,5 +1,5 @@
 ---
-Title: 'Tutorial: Additional tips and tricks for using SQL Server Management Studio'
+Title: 'Tutorial: Dicas e truques adicionais para usar o SQL Server Management Studio'
 description: 'Um tutorial que aborda mais algumas dicas e truques para usar o SSMS. '
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.openlocfilehash: 2b113d701bbcd5d385303e6a36fcc603d03c0cdf
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: ab394ef046d123b461dac813b2901dfcfd02b596
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56663102"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872216"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>Tutorial: Mais dicas e truques para usar o SSMS
 Este tutorial apresenta mais alguns truques para usar o SSMS (SQL Server Management Studio). Este artigo mostra como: 
@@ -216,7 +216,7 @@ O caminho para o log de erros do SQL Server pode variar dependendo das suas defi
 Você tem algumas opções para localizar o nome do SQL Server antes e depois de se conectar ao SQL Server.  
 
 ### <a name="before-you-connect-to-sql-server"></a>Antes de você se conectar ao SQL Server
-1. Siga as etapas para localizar o [Log de erros do SQL Server em disco](#finding-your-error-log-if-you-cannot-connect-to-sql). O caminho pode ser diferente do caminho na imagem abaixo.
+1. Siga as etapas para localizar o [Log de erros do SQL Server em disco](#find-the-error-log-location-if-you-cant-connect-to-sql-server). O caminho pode ser diferente do caminho na imagem abaixo.
 2. Abra o arquivo errorlog.log no Bloco de Notas.  
 3. Pesquise o texto *O nome do servidor é*.
     
@@ -253,5 +253,3 @@ Se você estiver conectado a um alias ou a um ouvinte do Grupo de Disponibilidad
 4. Veja os resultados da consulta para identificar o nome da instância do SQL Server à qual você está conectado: 
     
     ![Consulte o nome do SQL Server](media/ssms-tricks/queryservername.png)
-
-

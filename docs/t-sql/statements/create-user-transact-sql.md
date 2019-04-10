@@ -30,12 +30,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c43e8ae5b32753eccb42e1e706bbe13b9bf4f8d9
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: af33c0234ba1b8e6b92b5f1fee7f17f4d12dc667
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421213"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042166"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "55421213"
 -   Usuário baseado em um grupo do Windows que não tem logon. `CREATE USER [Contoso\Sales];`  
 -   Usuário em [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ou [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] com base em um usuário do Azure Active Directory. `CREATE USER [Contoso\Fritz] FROM EXTERNAL PROVIDER;`     
 
--   Usuário de banco de dados contido com senha. (Não disponível em [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].) `CREATE USER Mary WITH PASSWORD = '********';`   
+-   Usuário de banco de dados contido com senha. (Não disponível em [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]). `CREATE USER Mary WITH PASSWORD = '********';`   
   
 **Usuários baseados em entidades de segurança do Windows que se conectam por logons de grupo do Windows**  
   
@@ -192,15 +192,16 @@ CREATE USER user_name
   
  Especifica a entidade de segurança do Azure Active Directory para a qual o usuário de banco de dados está sendo criado. A *Azure_Active_Directory_principal* pode ser um usuário, um grupo ou um aplicativo do Azure Active Directory. (Os usuários do Azure Active Directory não podem ter logons de Autenticação do Windows em [!INCLUDE[ssSDS](../../includes/sssds-md.md)]; somente os usuários de banco de dados.) A cadeia de conexão deve especificar o banco de dados independente como catálogo inicial.
 
- Para usuários, você deve usar o alias completo da entidade de segurança do domínio.   
- 
--   `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER;`  
-  
--   `CREATE USER [alice@fabrikam.onmicrosoft.com] FROM EXTERNAL PROVIDER;`
+ Para entidades de segurança do Azure AD, a sintaxe de CREATE USER requer:
 
- Para grupos de segurança, você deve usar o *Nome de Exibição* do grupo de segurança. Para o grupo de segurança *Nurses*, você usaria:  
+- UserPrincipalName do objeto do Azure AD para usuários do Azure AD.
+
+  - `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER;`  
+  - `CREATE USER [alice@fabrikam.onmicrosoft.com] FROM EXTERNAL PROVIDER;`
+
+- DisplayName do objeto do Azure Active Directory para Grupos e Aplicativos do Azure AD. Se tivesse o grupo de segurança *Nurses*, você usaria:  
   
--   `CREATE USER [Nurses] FROM EXTERNAL PROVIDER;`  
+  - `CREATE USER [Nurses] FROM EXTERNAL PROVIDER;`  
   
  Para obter mais informações, veja [Conectar-se ao Banco de Dados SQL usando a Autenticação do Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication).  
   
@@ -292,7 +293,7 @@ Ao criar o usuário no banco de dados da instância gerenciada do Banco de Dados
 -   `CREATE USER SQLAUTHLOGIN FOR LOGIN SQLAUTHLOGIN`  
 -   `CREATE USER SQLAUTHLOGIN FROM LOGIN SQLAUTHLOGIN`  
   
-**Usuários que se autenticam no banco de dados**  
+**Usuários que se autenticam no banco de dados.**  
   
  A lista a seguir mostra a sintaxe possível para usuários que pode ser usada apenas em um banco de dados contido. Os usuários criados não serão relacionados a nenhum logon no banco de dados **mestre**. As opções de esquema e de idioma padrão não estão listadas.  
   
@@ -336,7 +337,7 @@ Ao criar o usuário no banco de dados da instância gerenciada do Banco de Dados
   
  Em um banco de dados contido, a criação de usuários ajuda a separar o banco de dados da instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)], de forma que o banco de dados possa ser movido facilmente para outra instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, veja [Usuários de bancos de dados independentes](../../relational-databases/databases/contained-databases.md) e [Usuários de bancos de dados independentes – Tornando seu banco de dados portátil](../../relational-databases/security/contained-database-users-making-your-database-portable.md). Para alterar um usuário de banco de dados de um usuário baseado em logon de autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para um usuário de banco de dados independente com senha, veja [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md).  
   
- Em um banco de dados independente, os usuários não precisam ter logons no banco de dados **mestre**. Os administradores do [!INCLUDE[ssDE](../../includes/ssde-md.md)] devem entender que o acesso a um banco de dados independente pode ser concedido no nível do banco de dados e não no nível do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Para obter mais informações, consulte [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
+ Em um banco de dados independente, os usuários não precisam ter logons no banco de dados **mestre**. [!INCLUDE[ssDE](../../includes/ssde-md.md)] os administradores devem entender que o acesso a um banco de dados independente pode ser concedido no nível do banco de dados e não no nível do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Para obter mais informações, consulte [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
  Ao usar os usuários do banco de dados independente em [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], configure o acesso usando uma regra de firewall no nível de banco de dados, em vez de uma regra de firewall de nível de servidor. Para obter mais informações, veja [sp_set_database_firewall_rule &#40;Banco de Dados SQL do Azure&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md).
  
@@ -361,7 +362,7 @@ CREATE USER AbolrousHazem FOR LOGIN AbolrousHazem;
 GO   
 ```  
   
-### <a name="b-creating-a-database-user-with-a-default-schema"></a>b. Criando um usuário de banco de dados com um esquema padrão  
+### <a name="b-creating-a-database-user-with-a-default-schema"></a>B. Criando um usuário de banco de dados com um esquema padrão  
  O exemplo a seguir cria primeiro um logon de servidor denominado `WanidaBenshoof` com uma senha e depois cria um usuário de banco de dados correspondente `Wanida`, com o esquema padrão `Marketing`.  
   
 ```  
@@ -468,7 +469,7 @@ WITH
 
  Para criar um usuário do Azure AD com base em um logon do Azure AD, use a sintaxe a seguir.
 
- Entre na instância gerenciada com um logon do Azure AD concedido com a função `sysadmin`. O exemplo a seguir cria um usuário do Azure AD, bob@contoso.com, com base no logon bob@contoso.com. Esse logon foi criado no exemplo [CREATE LOGIN](create-login-transact-sql.md#d-creating-a-login-for-a-federated-azure-ad-account).
+ Entre na instância gerenciada com um logon do Azure AD concedido com a função `sysadmin`. O exemplo a seguir cria um usuário do Azure AD, bob@contoso.com, com base no logon bob@contoso.com. Esse logon foi criado no exemplo [CREATE LOGIN](create-login-transact-sql.md#examples).
 
 ```sql
 CREATE USER [bob@contoso.com] FROM LOGIN [bob@contoso.com];
@@ -515,7 +516,3 @@ Você talvez também queira usar [GRANT para permissões de objeto](../../t-sql/
  [Bancos de dados independentes](../../relational-databases/databases/contained-databases.md)   
  [Conectar-se ao Banco de Dados SQL usando a autenticação do Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)   
  [Guia de Introdução às permissões do mecanismo de banco de dados](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)  
-  
-  
-
-

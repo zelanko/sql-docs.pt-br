@@ -34,12 +34,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: d43593a5c95a77ef6cbd692a07305a46c77e7e07
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: 69d8e217f4554a87348874621709f97309246446
+ms.sourcegitcommit: 00e0fa2c0b49a1ce94c17b74b4bd5210098f8367
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566495"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58788093"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Edições e recursos com suporte do SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ Para notas de versão mais recentes e informações sobre novidades, consulte o 
 |Desenvolvedor|A edição[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer permite que os desenvolvedores criem qualquer tipo de aplicativo com base no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Ele inclui todas as funcionalidades da edição Enterprise, mas é licenciado para ser usado como um sistema de teste e desenvolvimento, e não como um servidor de produção. O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer é uma opção ideal para pessoas que criam e testam aplicativos.|  
 |Edições Express|A edição Express é o banco de dados gratuito de nível de entrada, ideal para conhecer e criar aplicativos de área de trabalho e aplicativos controlados por dados de pequenos servidores. É a melhor escolha para fornecedores de software independente, desenvolvedores e interessados que criam aplicativos cliente. Se precisar de recursos mais avançados de banco de dados, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express pode ser perfeitamente atualizado para versões mais sofisticadas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express LocalDB é uma versão leve do Express que tem todos os seus recursos de programação, é executado no modo de usuário e tem uma instalação rápida e sem nenhuma configuração e uma lista curta de pré-requisitos.|  
 
-<sup>1</sup> A virtualização ilimitada está disponível na edição Enterprise para clientes empresariais com [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default). As implantações devem estar em conformidade com a [política de licenciamento](https://www.microsoft.com/sql-server/sql-server-2017-pricing).  
+<sup>1</sup> A virtualização ilimitada está disponível na edição Enterprise para clientes com [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default). As implantações devem atender o [guia de licenciamento](https://download.microsoft.com/download/7/8/C/78CDF005-97C1-4129-926B-CE4A6FE92CF5/SQL_Server_2017_Licensing_guide.pdf). Para saber mais, confira nossa [página de Preços e Licenciamento](https://www.microsoft.com/sql-server/sql-server-2017-pricing).
 
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-an-internet-server"></a>Usando o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] com um servidor de Internet  
  Em um servidor de Internet, como um servidor que executa o IIS (Serviços de Informações da Internet), você instalará normalmente as ferramentas cliente do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Essas ferramentas incluem os componentes cliente de conectividade usados por um aplicativo que se conecta a uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

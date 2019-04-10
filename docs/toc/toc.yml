@@ -1602,7 +1602,7 @@ items:
       items:
       - name: Usando tipo de dados hierarchyid
         href: ../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md
-      - name: 'Lição 1: Convertendo uma tabela em uma estrutura hierárquica'
+      - name: 'Lição 1: conversão de uma tabela em uma estrutura hierárquica'
         href: ../relational-databases/tables/lesson-1-converting-a-table-to-a-hierarchical-structure.md
       - name: 'Lição 2: Criando e gerenciando dados em uma tabela hierárquica'
         href: ../relational-databases/tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table.md
@@ -1847,7 +1847,7 @@ items:
           href: ../relational-databases/xml/use-the-binary-base64-option.md
         - name: Heurística de modo AUTO na formação do XML retornado
           href: ../relational-databases/xml/auto-mode-heuristics-in-shaping-returned-xml.md
-        - name: 'Exemplos: Usando o modo AUTO'
+        - name: 'Exemplos: uso do modo AUTO'
           href: ../relational-databases/xml/examples-using-auto-mode.md
       - name: Modo EXPLICIT
         href: ../relational-databases/xml/use-explicit-mode-with-for-xml.md
@@ -1889,7 +1889,7 @@ items:
           href: ../relational-databases/xml/columns-that-contain-a-null-value-by-default.md
         - name: Suporte a namespace em modo PATH
           href: ../relational-databases/xml/namespace-support-in-path-mode.md
-        - name: 'Exemplos: Usando o modo PATH'
+        - name: 'Exemplos: uso do modo PATH'
           href: ../relational-databases/xml/examples-using-path-mode.md
       - name: Consultas aninhadas
         href: ../relational-databases/xml/use-nested-for-xml-queries.md
@@ -1920,7 +1920,7 @@ items:
     - name: OPENXML
       href: ../relational-databases/xml/openxml-sql-server.md
       items:
-      - name: 'Exemplos: Usando OPENXML'
+      - name: 'Exemplos: uso do OPENXML'
         href: ../relational-databases/xml/examples-using-openxml.md
       - name: Especificar metapropriedades
         href: ../relational-databases/xml/specify-metaproperties-in-openxml.md
@@ -2802,7 +2802,7 @@ items:
           href: ../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-delete-a-data-source.md
         - name: Obter autenticação Kerberos mútua
           href: ../relational-databases/native-client-odbc-how-to/get-mutual-kerberos-authentication.md
-        - name: 'Como: Inserir linhas em coluna de geografia'
+        - name: 'Como fazer: Inserir linhas em coluna de geografia'
           href: ../relational-databases/native-client-odbc-how-to/how-to-insert-rows-into-geography-column-odbc.md
         - name: Gerenciando colunas de texto e imagem – Usar colunas de dados em execução
           href: ../relational-databases/native-client-odbc-how-to/managing-text-and-image-columns-use-data-at-execution-columns.md
@@ -3345,7 +3345,7 @@ items:
       items:
       - name: Lado do cliente e lado do servidor
         href: ../relational-databases/sqlxml/formatting/client-side-and-server-side-formatting-sqlxml-4-0.md
-      - name: XPath do lado do cliente e Lado do servidor
+      - name: Lado do cliente e Lado do servidor
         href: ../relational-databases/sqlxml/formatting/client-side-vs-server-side-xml-formatting-sqlxml-4-0.md
       - name: Lado do cliente
         href: ../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md
@@ -3982,12 +3982,6 @@ items:
       href: ../sql-server/maximum-capacity-specifications-for-sql-server.md
     - name: Computar limites de capacidade por edição
       href: ../sql-server/compute-capacity-limits-by-edition-of-sql-server.md
-    - name: Programa de Aperfeiçoamento da Experiência do Usuário (CEIP)
-      href: ../sql-server/customer-experience-improvement-program-for-sql-server-data-tools.md
-    - name: Suplemento de privacidade
-      href: ../sql-server/sql-server-privacy.md
-    - name: Configurar o SQL Server para enviar comentários à Microsoft
-      href: ../sql-server/sql-server-customer-feedback.md
   - name: Notas de versão
     items:
     - name: Compatibilidade com versões anteriores
@@ -4017,6 +4011,16 @@ items:
       href: ../sql-server/install/local-language-versions-in-sql-server.md
     - name: Locais de arquivo
       href: ../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md
+    - name: Coleta de dados de diagnóstico e de uso
+      items:
+      - name: Suplemento de privacidade
+        href: ../sql-server/sql-server-privacy.md
+      - name: Configuração de dados de uso e diagnóstico do SQL Server
+        href: ../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md
+      - name: Configuração de dados de uso e diagnóstico da ferramenta
+        href: ../sql-server/usage-and-diagnostic-data-configuration-for-sql-server-tools.md
+      - name: Auditoria local para o SQL Server
+        href: ../sql-server/usage-and-diagnostic-data-in-local-audit.md
   - name: Instalar o SQL Server
     href: ../database-engine/install-windows/installation-for-sql-server.md
     items:
@@ -4113,8 +4117,6 @@ items:
       href: ../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md
     - name: Computador multihomed
       href: ../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md
-    - name: Auditoria Local da coleta de comentários sobre o uso
-      href: ../database-engine/install-windows/local-audit-for-sql-server-usage-feedback-collection.md
     - name: Configurar instâncias do Mecanismo de Banco de Dados
       href: ../database-engine/configure-windows/configure-database-engine-instances-sql-server.md
     - name: Locais padrão para arquivos de dados
@@ -6493,7 +6495,7 @@ items:
           href: ../relational-databases/policy-based-management/use-database-mail-instead-of-sql-mail.md
         - name: Verificar a configuração máxima de threads de trabalho
           href: ../relational-databases/policy-based-management/verify-max-worker-threads-setting.md
-      - name: 'Tutorial: Administrando servidores com Gerenciamento Baseado em Políticas'
+      - name: 'Tutorial: administração de servidores com Gerenciamento Baseado em Políticas'
         href: ../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md
         items:
         - name: 'Lição 1: Criar e aplicar uma política desativada por padrão'
@@ -8261,9 +8263,9 @@ items:
         items:
         - name: 'Lição 1: Navegação básica no Orientador de Otimização do Mecanismo de Banco de Dados'
           href: ../tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor.md
-        - name: 'Lição 2: Usando o Orientador de Otimização do Mecanismo de Banco de Dados'
+        - name: 'Lição 2: uso do Orientador de Otimização do Mecanismo de Banco de Dados'
           href: ../tools/dta/lesson-2-using-database-engine-tuning-advisor.md
-        - name: 'Lição 3: Usando o utilitário de prompt de comando dta'
+        - name: 'Lição 3: uso do utilitário de prompt de comando dta'
           href: ../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md
   - name: Distributed Replay
     href: ../tools/distributed-replay/sql-server-distributed-replay.md
@@ -8496,29 +8498,29 @@ items:
         href: ../ssdt/check-for-updates-dialog-box.md
       - name: Configurações de projeto de banco de dados
         href: ../ssdt/database-project-settings.md
-      - name: 'Como: Procurar objetos em um projeto de banco de dados do SQL Server'
+      - name: 'Como fazer: Procurar objetos em um projeto de banco de dados do SQL Server'
         href: ../ssdt/how-to-browse-objects-in-a-sql-server-database-project.md
       - name: Janela Operações de Ferramentas de Dados
         href: ../ssdt/data-tools-operations-window.md
       - name: Opções do editor T-SQL
         href: ../ssdt/transact-sql-editor-options.md
-      - name: 'Como: Criar um projeto de banco de dados'
+      - name: 'Como fazer: Criar um projeto de banco de dados'
         href: ../ssdt/how-to-create-a-new-database-project.md
-      - name: 'Como: Usar comparação de esquema para comparar definições de banco de dados diferentes'
+      - name: 'Como fazer: Usar comparação de esquema para comparar definições de banco de dados diferentes'
         href: ../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md
-      - name: 'Como: Criar e implantar em um banco de dados local'
+      - name: 'Como fazer: Criar e implantar em um banco de dados local'
         href: ../ssdt/how-to-build-and-deploy-to-a-local-database.md
-      - name: 'Como: Usar objetos do Microsoft SQL Server 2012 no seu projeto'
+      - name: 'Como fazer: Usar objetos do Microsoft SQL Server 2012 no seu projeto'
         href: ../ssdt/how-to-use-microsoft-sql-server-2012-objects-in-your-project.md
-      - name: 'Como: Trabalhar com objetos de banco de dados CLR'
+      - name: 'Como fazer: Trabalhar com objetos de banco de dados CLR'
         href: ../ssdt/how-to-work-with-clr-database-objects.md
-      - name: 'Como: Criar um instantâneo de um projeto'
+      - name: 'Como fazer: Criar um instantâneo de um projeto'
         href: ../ssdt/how-to-create-a-snapshot-of-a-project.md
-      - name: 'Como: Alterar a plataforma de destino e publicar um projeto de banco de dados'
+      - name: 'Como fazer: Alterar a plataforma de destino e publicar um projeto de banco de dados'
         href: ../ssdt/how-to-change-target-platform-and-publish-a-database-project.md
-      - name: 'Como: Converter projetos de banco de dados do Visual Studio 2010 em projetos de banco de dados do SQL Server e redirecionar para uma plataforma diferente'
+      - name: 'Como fazer: Converter projetos de banco de dados do Visual Studio 2010 em projetos de banco de dados do SQL Server e redirecionar para uma plataforma diferente'
         href: ../ssdt/how-to-convert-visual-studio-2010-database-projects-to-ssql-server-projects.md
-      - name: 'Como: Especificar scripts de pré-implantação ou pós-implantação'
+      - name: 'Como fazer: Especificar scripts de pré-implantação ou pós-implantação'
         href: ../ssdt/how-to-specify-predeployment-or-postdeployment-scripts.md
       - name: Desenvolvimento de banco de dados orientado a projetos usando ferramentas de linha de comando
         href: ../ssdt/project-oriented-database-development-using-command-line-tools.md
@@ -8528,53 +8530,53 @@ items:
       - name: Desenvolvimento de banco de dados conectado
         href: ../ssdt/connected-database-development.md
         items:
-        - name: 'Como: Conectar-se a um Banco de Dados e Procure Objetos Existentes'
+        - name: 'Como fazer: Conectar-se a um Banco de Dados e Procure Objetos Existentes'
           href: ../ssdt/how-to-connect-to-a-database-and-browse-existing-objects.md
-        - name: 'Como: Criar objetos de banco de dados usando o Designer de Tabela'
+        - name: 'Como fazer: Criar objetos de banco de dados usando o Designer de Tabela'
           href: ../ssdt/how-to-create-database-objects-using-table-designer.md
-        - name: 'Como: Atualizar um banco de dados conectado com o Power Buffer'
+        - name: 'Como fazer: Atualizar um banco de dados conectado com o Power Buffer'
           href: ../ssdt/how-to-update-a-connected-database-with-power-buffer.md
         - name: Caixa de diálogo Filtrar e Classificar
           href: ../ssdt/filter-and-sort-dialog-box.md
-        - name: 'Como: Criar objetos de banco de dados usando consultas'
+        - name: 'Como fazer: Criar objetos de banco de dados usando consultas'
           href: ../ssdt/how-to-create-new-database-objects-using-queries.md
-        - name: 'Como: Editar uma tabela existente usando consultas'
+        - name: 'Como fazer: Editar uma tabela existente usando consultas'
           href: ../ssdt/how-to-edit-an-existing-table-using-queries.md
-        - name: 'Como: Exibir e editar dados em uma tabela'
+        - name: 'Como fazer: Exibir e editar dados em uma tabela'
           href: ../ssdt/how-to-view-and-edit-data-in-a-table.md
-        - name: 'Como: Excluir objetos e resolver dependências'
+        - name: 'Como fazer: Excluir objetos e resolver dependências'
           href: ../ssdt/how-to-delete-objects-and-resolve-dependencies.md
-        - name: 'Como: Clonar um banco de dados existente'
+        - name: 'Como fazer: Clonar um banco de dados existente'
           href: ../ssdt/how-to-clone-an-existing-database.md
         - name: Extrair, publicar e registrar arquivos .dacpac
           href: ../ssdt/extract-publish-and-register-dacpac-files.md
       - name: Comparar e sincronizar dados em uma ou mais tabelas contendo dados em um banco de dados de referência
         href: ../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md
         items:
-        - name: 'Como: Comparar e sincronizar os dados de dois bancos de dados'
+        - name: 'Como fazer: Comparar e sincronizar os dados de dois bancos de dados'
           href: ../ssdt/how-to-compare-and-synchronize-the-data-of-two-databases.md
-        - name: 'Como: Exibir diferenças de dados'
+        - name: 'Como fazer: Exibir diferenças de dados'
           href: ../ssdt/how-to-view-data-differences.md
         - name: Usar o editor T-SQL para editar e executar scripts
           href: ../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md
-        - name: 'Como: Definir a estrutura de tópicos e adicionar snippets a scripts T-SQL'
+        - name: 'Como fazer: Definir a estrutura de tópicos e adicionar snippets a scripts T-SQL'
           href: ../ssdt/how-to-outline-and-add-snippets-to-transact-sql-script.md
-        - name: 'Como: Navegar entre scripts'
+        - name: 'Como fazer: Navegar entre scripts'
           href: ../ssdt/how-to-navigate-between-scripts.md
-        - name: 'Como: Usar renomeação e refatoração para fazer alterações em seus objetos de banco de dados'
+        - name: 'Como fazer: Usar renomeação e refatoração para fazer alterações em seus objetos de banco de dados'
           href: ../ssdt/how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects.md
-        - name: 'Como: Executar uma consulta parcial'
+        - name: 'Como fazer: Executar uma consulta parcial'
           href: ../ssdt/how-to-execute-a-partial-query.md
-        - name: 'Como: Depurar Procedimentos Armazenados'
+        - name: 'Como fazer: Depurar Procedimentos Armazenados'
           href: ../ssdt/how-to-debug-stored-procedures.md
         - name: Analisar o desempenho do script
           href: ../ssdt/analyze-script-performance.md
       - name: Gerenciar tabelas, relações e consertar erros
         href: ../ssdt/manage-tables-relationships-and-fix-errors.md
         items:
-        - name: 'Como: Usar o Designer de Tabela para gerenciar tabelas e relacionamentos'
+        - name: 'Como fazer: Usar o Designer de Tabela para gerenciar tabelas e relacionamentos'
           href: ../ssdt/how-to-use-the-table-designer-to-manage-tables-and-relationships.md
-        - name: 'Como: Corrigir erros'
+        - name: 'Como fazer: Corrigir erros'
           href: ../ssdt/how-to-fix-errors.md
       - name: Verificando o código do banco de dados usando os testes de unidade do SQL Server
         href: ../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md
@@ -8592,19 +8594,19 @@ items:
             href: ../ssdt/using-test-conditions-in-sql-server-unit-tests.md
           - name: Usar declarações T-SQL nos testes de unidade do SQL Server
             href: ../ssdt/using-transact-sql-assertions-in-sql-server-unit-tests.md
-          - name: 'Como: Criar um projeto de teste para testes de unidade de banco de dados do SQL Server'
+          - name: 'Como fazer: Criar um projeto de teste para testes de unidade de banco de dados do SQL Server'
             href: ../ssdt/how-to-create-a-test-project-for-sql-server-database-unit-testing.md
-          - name: 'Como: Criar um teste de unidade do SQL Server vazio'
+          - name: 'Como fazer: Criar um teste de unidade do SQL Server vazio'
             href: ../ssdt/how-to-create-an-empty-sql-server-unit-test.md
-          - name: 'Como: Criar testes de unidade do SQL Server para funções, gatilhos e procedimentos armazenados'
+          - name: 'Como fazer: Criar testes de unidade do SQL Server para funções, gatilhos e procedimentos armazenados'
             href: ../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md
-          - name: 'Como: Adicionar condições de teste a testes de unidade do SQL Server'
+          - name: 'Como fazer: Adicionar condições de teste a testes de unidade do SQL Server'
             href: ../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md
-          - name: 'Como: Abrir um teste de unidade do SQL Server para edição'
+          - name: 'Como fazer: Abrir um teste de unidade do SQL Server para edição'
             href: ../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md
-          - name: 'Como: Gravar um teste de unidade do SQL Server executado no escopo de uma única transação'
+          - name: 'Como fazer: Gravar um teste de unidade do SQL Server executado no escopo de uma única transação'
             href: ../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md
-          - name: 'Como: Configurar a execução do teste de unidade do SQL Server'
+          - name: 'Como fazer: Configurar a execução do teste de unidade do SQL Server'
             href: ../ssdt/how-to-configure-sql-server-unit-test-execution.md
           - name: Visão geral das cadeias de conexão e permissões
             href: ../ssdt/overview-of-connection-strings-and-permissions.md
@@ -8613,11 +8615,11 @@ items:
         - name: Executando testes de unidade do SQL Server
           href: ../ssdt/running-sql-server-unit-tests.md
           items:
-          - name: 'Como: Depurar objetos de banco de dados'
+          - name: 'Como fazer: Depurar objetos de banco de dados'
             href: ../ssdt/how-to-debug-database-objects.md
-          - name: 'Como: executar testes de unidade do SQL Server no Team Foundation Build'
+          - name: 'Como fazer: executar testes de unidade do SQL Server no Team Foundation Build'
             href: ../ssdt/how-to-run-sql-server-unit-tests-from-team-foundation-build.md
-          - name: 'Como: Executar testes de unidade do SQL Server'
+          - name: 'Como fazer: Executar testes de unidade do SQL Server'
             href: ../ssdt/how-to-run-sql-server-unit-tests.md
           - name: Interpretando resultados do teste de unidade do SQL Server
             href: ../ssdt/interpreting-sql-server-unit-test-results.md
@@ -8626,11 +8628,11 @@ items:
         - name: Condições de teste personalizadas para testes de unidade do SQL Server
           href: ../ssdt/custom-test-conditions-for-sql-server-unit-tests.md
           items:
-          - name: 'Como: Criar condições de teste para o designer de teste de unidade do SQL Server'
+          - name: 'Como fazer: Criar condições de teste para o designer de teste de unidade do SQL Server'
             href: ../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md
           - name: 'Passo a passo: Usar uma condição de teste personalizada para verificar os resultados de um procedimento armazenado'
             href: ../ssdt/walkthrough-use-custom-test-condition-to-verify-stored-procedure-results.md
-          - name: 'Como: Atualizar uma condição de teste personalizada do Visual Studio 2010 de uma versão anterior do SQL Server Data Tools'
+          - name: 'Como fazer: Atualizar uma condição de teste personalizada do Visual Studio 2010 de uma versão anterior do SQL Server Data Tools'
             href: ../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md
         - name: Solucionando problemas de teste de unidade do banco de dados SQL Server
           href: ../ssdt/troubleshooting-sql-server-database-unit-testing-issues.md
@@ -8640,7 +8642,7 @@ items:
         - name: Personalizar a compilação e a implantação do banco de dados usando os colaboradores de compilação e implantação
           href: ../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md
           items:
-          - name: 'Passo a passo: Estenda a Compilação do Projeto de Banco de Dados para Gerar as Estatísticas do Modelo'
+          - name: 'Passo a passo: extensão da Compilação do Projeto de Banco de Dados para geração de estatísticas do modelo'
             href: ../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md
           - name: 'Passo a passo: Estender a implantação do projeto de banco de dados para analisar o plano de implantação'
             href: ../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md
@@ -8651,7 +8653,7 @@ items:
           items:
           - name: Passo a passo da criação de um assembly de regra de análise de código estático personalizado para o SQL Server
             href: ../ssdt/walkthrough-author-custom-static-code-analysis-rule-assembly.md
-        - name: 'Como: Instalar e gerenciar extensões de recurso'
+        - name: 'Como fazer: Instalar e gerenciar extensões de recurso'
           href: ../ssdt/how-to-install-and-manage-feature-extensions.md
       - name: Permissões necessárias para SQL Server Data Tools
         href: ../ssdt/required-permissions-for-sql-server-data-tools.md
@@ -9973,9 +9975,9 @@ items:
     - name: Introdução
       href: ../relational-databases/tutorial-getting-started-with-the-database-engine.md
       items:
-      - name: 'Lição 1: conectando-se ao mecanismo de banco de dados'
+      - name: 'Lição 1: conexão ao mecanismo de banco de dados'
         href: ../relational-databases/lesson-1-connecting-to-the-database-engine.md
-      - name: 'Lição 2: conectando de outro computador'
+      - name: 'Lição 2: conexão usando outro computador'
         href: ../relational-databases/lesson-2-connecting-from-another-computer.md
     - name: Backup e restauração do Serviço de Armazenamento de Blobs do Azure
       href: ../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md
@@ -10088,8 +10090,8 @@ items:
           href: ../linux/sql-server-linux-configure-msdtc-docker.md
       - name: Configurar a memória persistente PMEM
         href: ../linux/sql-server-linux-configure-pmem.md
-      - name: Comentários do cliente
-        href: ../linux/sql-server-linux-customer-feedback.md
+      - name: Configurar para enviar dados de uso e diagnóstico à Microsoft
+        href: ../linux/usage-and-diagnostic-data-configuration-for-sql-server-linux.md
     - name: Desenvolver
       href: ../linux/sql-server-linux-develop-overview.md
       items:
@@ -10198,10 +10200,10 @@ items:
         href: ../linux/sql-server-linux-security-get-started.md
       - name: Autenticação do Active Directory
         href: ../linux/sql-server-linux-active-directory-auth-overview.md
+      - name: Ingressar em um domínio do AD
+        href: ../linux/sql-server-linux-active-directory-join-domain.md
       - name: Criptografar conexões
         href: ../linux/sql-server-linux-encrypted-connections.md
-      - name: Autenticação do AD para terceiros
-        href: ../linux/sql-server-linux-active-directory-third-party-providers.md
     - name: Desempenho
       items:
       - name: Práticas recomendadas
@@ -16581,7 +16583,7 @@ items:
           href: ../t-sql/statements/restore-statements-labelonly-transact-sql.md
         - name: RESTORE MASTER KEY
           href: ../t-sql/statements/restore-master-key-transact-sql.md
-        - name: RESTORE SERVICE MASTER KEY
+        - name: RESTORE SERVICE MASTER KEY (RESTAURAR A CHAVE MESTRA DE SERVIÇO)
           href: ../t-sql/statements/restore-service-master-key-transact-sql.md
         - name: RESTORE REWINDONLY
           href: ../t-sql/statements/restore-statements-rewindonly-transact-sql.md
@@ -17273,9 +17275,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: Manipulando namespaces em XQuery
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: bb8074720b48ca68679d43e12a04e868e6469ea6
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.openlocfilehash: ee53aa861524c5bcf117fdaef3d857cf62a54fc7
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59042485"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242354"

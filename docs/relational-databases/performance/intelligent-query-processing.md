@@ -13,12 +13,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57d96068af7120ef4ccf4da8882093fa26908089
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: d3572af85861c2175638484e9e2097d43a65b63d
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493969"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042225"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Processamento inteligente de consultas em bancos de dados SQL
 
@@ -28,7 +28,7 @@ A família de recursos de QP (processamento de consulta) inteligente inclui recu
 
 ![Processamento de consulta inteligente](./media/3_iqpfeaturefamily.png)
 
-Você pode deixar as cargas de trabalho automaticamente qualificadas para o processamento de consulta inteligente habilitando o nível de compatibilidade do banco de dados aplicável.  Você pode definir isso usando o Transact-SQL. Por exemplo:  
+Você pode deixar as cargas de trabalho automaticamente qualificadas para o processamento de consulta inteligente habilitando o nível de compatibilidade do banco de dados aplicável. Você pode definir isso usando o Transact-SQL. Por exemplo:  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
@@ -43,15 +43,15 @@ A tabela a seguir detalha todos os recursos de processamento de consulta intelig
 | [Modo de Lote no Rowstore](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore) | Sim, no nível de compatibilidade 150, versão prévia pública| Sim, a partir do SQL Server 2019 CTP 2.0 no nível de compatibilidade 150, versão prévia pública|Forneça o modo de lote para cargas de trabalho de DW relacionais vinculados à CPU sem exigir índices columnstore.  | 
 | [Execução intercalada](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#interleaved-execution-for-mstvfs) | Sim, no nível de compatibilidade 140| Sim, a partir do SQL Server 2017 no nível de compatibilidade 140|Use a cardinalidade real da função com valor de tabela de várias instruções encontrada na primeira compilação em vez de uma estimativa fixa.|
 | [Comentários de concessão de memória (Modo de Lote)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-memory-grant-feedback) | Sim, no nível de compatibilidade 140| Sim, a partir do SQL Server 2017 no nível de compatibilidade 140|Se uma consulta de modo de lote tiver operações que são despejadas no disco, aumente a memória para execuções consecutivas. Se uma consulta desperdiçar mais de 50% da memória, reduza o lado de concessão de memória para execuções consecutivas.|
-| [Comentários de concessão de memória (Modo de Lote)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback) | Sim, no nível de compatibilidade 150, versão prévia pública| Sim, a partir do SQL Server 2019 CTP 2.0 no nível de compatibilidade 150, versão prévia pública|Se uma consulta de modo de linha tiver operações que são despejadas no disco, aumente a memória para execuções consecutivas. Se uma consulta desperdiçar mais de 50% da memória, reduza o lado de concessão de memória para execuções consecutivas.|
-| [Inlining de UDF escalar](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining) | Não | Sim, a partir do SQL Server 2019 CTP 2.1 no nível de compatibilidade 150, versão prévia pública|Os UDFs escalares são transformados em expressões relacionais equivalentes que são "embutidas" na consulta que fez a chamada, geralmente resultando em ganhos significativos de desempenho.|
+| [Comentários de concessão de memória (Modo de Registro)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback) | Sim, no nível de compatibilidade 150, versão prévia pública| Sim, a partir do SQL Server 2019 CTP 2.0 no nível de compatibilidade 150, versão prévia pública|Se uma consulta de modo de linha tiver operações que são despejadas no disco, aumente a memória para execuções consecutivas. Se uma consulta desperdiçar mais de 50% da memória, reduza o lado de concessão de memória para execuções consecutivas.|
+| [Embutimento de UDF escalar](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining) | Não | Sim, a partir do SQL Server 2019 CTP 2.1 no nível de compatibilidade 150, versão prévia pública|Os UDFs escalares são transformados em expressões relacionais equivalentes que são "embutidas" na consulta que fez a chamada, geralmente resultando em ganhos significativos de desempenho.|
 | [Compilação Adiada de Variável da Tabela](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation) | Sim, no nível de compatibilidade 150, versão prévia pública| Sim, a partir do SQL Server 2019 CTP 2.0 no nível de compatibilidade 150, versão prévia pública|Use a cardinalidade real da variável de tabela encontrada na primeira compilação em vez de uma estimativa fixa.|
 
 ## <a name="batch-mode-adaptive-joins"></a>Junções adaptáveis de modo de lote
 
 Com esse recurso, seu plano pode mudar dinamicamente para melhorar a estratégia de junção durante a execução ao usar um único plano armazenado em cache.
 
-O recurso de Junções Adaptáveis de modo de lote permite a escolha de um método de [Junção hash ou de Junção de loops aninhados](../../relational-databases/performance/joins.md) a ser adiado até **depois** que a primeira entrada for verificada. O operador de Junção Adaptável define um limite que é usado para decidir quando mudar para um plano de Loops aninhados. Seu plano, portanto, pode alternar dinamicamente para uma estratégia de junção melhor durante a execução.
+O recurso de Junções Adaptáveis de modo de lote permite a escolha de um método de [Junção hash ou de Junção de loops aninhados](../../relational-databases/performance/joins.md) a ser adiado até **depois** que a primeira entrada for verificada. O operador de Junção Adaptável define um limite que é usado para decidir quando mudar para um plano de Loops aninhados. Seu plano, portanto, pode alternar dinamicamente para uma estratégia de junção melhor durante a execução.
 Veja como funciona:
 -  Se a contagem de linhas da entrada de junção de build for pequena o suficiente para que uma junção de loops aninhados seja mais ideal do que uma Junção Hash, o plano será alternado para um algoritmo de Loops Aninhados.
 -  Se a entrada de junção de build exceder um limite de contagem de linhas específico, o plano não mudará e continuará com uma Junção Hash.
@@ -66,13 +66,13 @@ INNER JOIN [Dimension].[Stock Item] AS [si]
 WHERE [fo].[Quantity] = 360;
 ```
 
-A consulta retorna 336 linhas. Habilitando as [Estatísticas de consultas dinâmicas](../../relational-databases/performance/live-query-statistics.md), podemos ver o plano a seguir:
+A consulta retorna 336 linhas. Habilitando as [Estatísticas de consultas dinâmicas](../../relational-databases/performance/live-query-statistics.md), podemos ver o plano a seguir:
 
 ![Resultados da consulta: 336 linhas](./media/4_AQPStats336Rows.png)
 
 No plano, vemos o seguinte:
 1. Temos uma verificação de índice columnstore usado para fornecer linhas para a fase de build da junção hash.
-1. Temos o novo operador de Junção Adaptável. Este operador define um limite que é usado para decidir quando mudar para um plano de Loops Aninhados. Para o nosso exemplo, o limite é de 78 linhas. Tudo que for &gt;= 78 linhas usará uma Junção Hash. Quando estiver abaixo do limite, uma junção de Loops Aninhados será usada.
+1. Temos o novo operador de Junção Adaptável. Este operador define um limite que é usado para decidir quando mudar para um plano de Loops Aninhados. Para o nosso exemplo, o limite é de 78 linhas. Tudo que for &gt;= 78 linhas usará uma Junção Hash. Quando estiver abaixo do limite, uma junção de Loops Aninhados será usada.
 1. Como retornamos 336 linhas, estamos excedendo o limite e, portanto, a segunda branch representa a fase de investigação de uma operação de Junção de Hash padrão. Observe que as Estatísticas de consultas dinâmicas mostram as linhas que passam pelos operadores – nesse caso, "672 de 672".
 1. E a última branch é nossa Busca de índice clusterizado a ser usada pela junção de loops aninhados que não teve o limite excedido. Observe que podemos ver "0 de 336" linhas exibidas (o branch não é usado).
  Agora compare o plano com a mesma consulta, mas desta vez para um valor de *Quantidade* que só tem uma linha na tabela:
@@ -84,7 +84,7 @@ INNER JOIN [Dimension].[Stock Item] AS [si]
        ON [fo].[Stock Item Key] = [si].[Stock Item Key]
 WHERE [fo].[Quantity] = 361;
 ```
-A consulta retorna uma linha. Habilitando as Estatísticas de consultas dinâmicas, podemos ver o plano a seguir:
+A consulta retorna uma linha. Habilitando as Estatísticas de consultas dinâmicas, podemos ver o plano a seguir:
 
 ![Resultado da consulta: uma linha](./media/5_AQPStatsOneRow.png)
 
@@ -96,7 +96,7 @@ No plano, vemos o seguinte:
 As cargas de trabalho com oscilações frequentes entre verificações de entradas de junção pequenas e grandes terão mais benefícios com esse recurso.
 
 ### <a name="adaptive-join-overhead"></a>Sobrecarga da Junção Adaptável
-As junções adaptáveis apresentam um requisito de memória maior do que um plano equivalente de Junção de Loops Aninhados indexados. A memória adicional é solicitada como se os Loops Aninhados fossem uma Junção Hash. Também há sobrecarga para a fase de build como uma operação de “parar e ir” em vez de uma junção equivalente de fluxo de Loops Aninhados. Com esse custo adicional vem a flexibilidade para cenários em que as contagens de linhas podem flutuar na entrada de build.
+As junções adaptáveis apresentam um requisito de memória maior do que um plano equivalente de Junção de Loops Aninhados indexados. A memória adicional é solicitada como se os Loops Aninhados fossem uma Junção Hash. Também há sobrecarga para a fase de build como uma operação de “parar e ir” em vez de uma junção equivalente de fluxo de Loops Aninhados. Com esse custo adicional vem a flexibilidade para cenários em que as contagens de linhas podem flutuar na entrada de build.
 
 ### <a name="adaptive-join-caching-and-re-use"></a>Armazenamento em cache e reutilização de Junção Adaptável
 As Junções Adaptáveis de modo de lote funcionam para a execução inicial de uma instrução e, depois de serem compiladas, as próximas execuções permanecerão adaptáveis com base no limite de Junção Adaptável compilada e nas linhas de tempo de execução que passam pela fase de build da entrada externa.
@@ -162,8 +162,8 @@ OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS'));
 Uma dica de consulta USE HINT tem precedência sobre uma configuração de escopo do banco de dados ou uma configuração de sinalizador de rastreamento.
 
 ## <a name="batch-mode-memory-grant-feedback"></a>Comentários de concessão de memória de modo de lote
-Um plano de pós-execução da consulta no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclui a memória mínima necessária para execução e o tamanho da concessão de memória ideal para que todas as linhas caibam na memória. Desempenho é prejudicado quando os tamanhos de concessão de memória são dimensionados incorretamente. Concessões excessivas resultam em desperdício de memória e em redução de simultaneidade. Concessões de memória insuficientes causam despejos dispendiosos no disco. Lidando com cargas de trabalho repetitivas, os comentários de concessão de memória de modo de lote recalcula a memória real necessária para uma consulta e atualiza o valor de concessão do plano armazenado em cache.  Quando uma instrução de consulta idêntica for executada, a consulta usará o tamanho de concessão de memória revisado, reduzindo concessões de memória excessivas que afetam a simultaneidade e corrigindo concessões de memória subestimadas que causam despejos dispendiosos no disco.
-O gráfico a seguir mostra um exemplo de uso dos comentários de concessão de memória adaptável de modo de lote. Na primeira execução da consulta, a duração foi de **88 segundos** devido à grande quantidade de despejos:   
+Um plano de pós-execução da consulta no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclui a memória mínima necessária para execução e o tamanho da concessão de memória ideal para que todas as linhas caibam na memória. Desempenho é prejudicado quando os tamanhos de concessão de memória são dimensionados incorretamente. Concessões excessivas resultam em desperdício de memória e em redução de simultaneidade. Concessões de memória insuficientes causam despejos dispendiosos no disco. Lidando com cargas de trabalho repetitivas, os comentários de concessão de memória de modo de lote recalcula a memória real necessária para uma consulta e atualiza o valor de concessão do plano armazenado em cache. Quando uma instrução de consulta idêntica for executada, a consulta usará o tamanho de concessão de memória revisado, reduzindo concessões de memória excessivas que afetam a simultaneidade e corrigindo concessões de memória subestimadas que causam despejos dispendiosos no disco.
+O gráfico a seguir mostra um exemplo de uso dos comentários de concessão de memória adaptável de modo de lote. Na primeira execução da consulta, a duração foi de **88 segundos** devido à grande quantidade de despejos:   
 
 ```sql
 DECLARE @EndTime datetime = '2016-09-22 00:00:00.000';
@@ -177,7 +177,7 @@ ORDER BY MAX(max_elapsed_time_microsec) DESC;
 
 ![Grande quantidade de despejos](./media/2_AQPGraphHighSpills.png)
 
-Com os comentários de concessão de memória habilitados, na segunda execução, a duração é de **1 segundo** (reduzido dos 88 segundos), os despejos são totalmente removidos e a concessão é maior: 
+Com os comentários de concessão de memória habilitado, na segunda execução, a duração é de **1 segundo** (reduzido dos 88 segundos), os despejos são totalmente removidos e a concessão é maior: 
 
 ![Sem despejos](./media/3_AQPGraphNoSpills.png)
 
@@ -186,14 +186,14 @@ Para uma condição de concessão de memória excessiva, se a memória concedida
 Para uma condição de concessão de memória de tamanho insuficiente que resulta em um despejo no disco de operadores de modo de lote, os comentários de concessão de memória vão disparar o recálculo da concessão de memória. Os eventos de despejo são relatados para comentários de concessão de memória e podem ser apresentados por meio do XEvent *spilling_report_to_memory_grant_feedback*. Esse evento retorna a ID do nó do plano e o tamanho dos dados despejados desse nó.
 
 ### <a name="memory-grant-feedback-and-parameter-sensitive-scenarios"></a>Comentários de concessão de memória e cenários sensíveis a parâmetro
-Diferentes valores de parâmetros também podem exigir diferentes planos de consulta para continuarem sendo ideais. Esse tipo de consulta é definido como "sensível a parâmetro". Para planos sensíveis a parâmetro, os comentários de concessão de memória serão desabilitados em uma consulta se ela tiver requisitos de memória instáveis. O plano é desabilitado após várias execuções da consulta repetidas e isso pode ser observado pelo monitoramento do xEvent *memory_grant_feedback_loop_disabled*. Para obter mais informações sobre a detecção de parâmetro e a sensibilidade de parâmetro, veja o [Guia de arquitetura de processamento de consultas](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing).
+Diferentes valores de parâmetros também podem exigir diferentes planos de consulta para continuarem sendo ideais. Esse tipo de consulta é definido como "sensível a parâmetro". Para planos sensíveis a parâmetro, os comentários de concessão de memória serão desabilitados em uma consulta se ela tiver requisitos de memória instáveis. O plano é desabilitado após várias execuções da consulta repetidas e isso pode ser observado pelo monitoramento do xEvent *memory_grant_feedback_loop_disabled*. Para obter mais informações sobre a detecção de parâmetro e a sensibilidade de parâmetro, veja o [Guia de arquitetura de processamento de consultas](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing).
 
 ### <a name="memory-grant-feedback-caching"></a>Armazenamento em cache dos comentários de concessão de memória
-Os comentários podem ser armazenados no plano em cache para uma única execução. No entanto, são as execuções consecutivas dessa instrução que se beneficiam dos ajustes dos comentários de concessão de memória. Esse recurso aplica-se à execução repetida de instruções. Os comentários de concessão de memória vão alterar somente o plano armazenado em cache. No momento, as alterações não são capturadas no Repositório de Consultas.
-Os comentários não serão mantidos se o plano for removido do cache. Os comentários também serão perdidos se houver um failover. Uma instrução que usa `OPTION (RECOMPILE)` cria um plano e não o armazena em cache. Como ele não é armazenado em cache, nenhum comentário de concessão de memória é produzido e ele não é armazenado para essa compilação e execução.  No entanto, se uma instrução equivalente (ou seja, com o mesmo hash de consulta) que **não** usou `OPTION (RECOMPILE)` for armazenada em cache e, em seguida, executada novamente, a instrução consecutiva poderá se beneficiar dos comentários de concessão de memória.
+Os comentários podem ser armazenados no plano em cache para uma única execução. No entanto, são as execuções consecutivas dessa instrução que se beneficiam dos ajustes dos comentários de concessão de memória. Esse recurso aplica-se à execução repetida de instruções. Os comentários de concessão de memória vão alterar somente o plano armazenado em cache. No momento, as alterações não são capturadas no Repositório de Consultas.
+Os comentários não serão mantidos se o plano for removido do cache. Os comentários também serão perdidos se houver um failover. Uma instrução que usa `OPTION (RECOMPILE)` cria um plano e não o armazena em cache. Como ele não é armazenado em cache, nenhum comentário de concessão de memória é produzido e ele não é armazenado para essa compilação e execução. No entanto, se uma instrução equivalente (ou seja, com o mesmo hash de consulta) que **não** usou `OPTION (RECOMPILE)` for armazenada em cache e, em seguida, executada novamente, a instrução consecutiva poderá se beneficiar dos comentários de concessão de memória.
 
 ### <a name="tracking-memory-grant-feedback-activity"></a>Acompanhando a atividade de comentários de concessão de memória
-Você pode acompanhar os eventos de comentários de concessão de memória usando o xEvent *memory_grant_updated_by_feedback*. Este evento acompanha o histórico de contagem de execução atual, o número de vezes que o plano foi atualizado por comentários de concessão de memória, a concessão de memória adicional ideal antes da modificação e a concessão de memória adicional ideal depois que os comentários de concessão de memória modificaram o plano armazenado em cache.
+Você pode acompanhar os eventos de comentários de concessão de memória usando o xEvent *memory_grant_updated_by_feedback*. Este evento acompanha o histórico de contagem de execução atual, o número de vezes que o plano foi atualizado por comentários de concessão de memória, a concessão de memória adicional ideal antes da modificação e a concessão de memória adicional ideal depois que os comentários de concessão de memória modificaram o plano armazenado em cache.
 
 ### <a name="memory-grant-feedback-resource-governor-and-query-hints"></a>Comentários de concessão de memória, administrador de recursos e dicas de consulta
 A memória real concedida cumpre o limite de memória de consulta determinado pela dica de consulta ou pelo administrador de recursos.
@@ -500,9 +500,9 @@ OPTION(RECOMPILE, USE HINT('DISALLOW_BATCH_MODE'));
 
 ## <a name="see-also"></a>Confira também
 
-[Central de desempenho do Mecanismo de Banco de Dados do SQL Server e do Banco de Dados SQL do Azure](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
+[Central de desempenho do Mecanismo de Banco de Dados do SQL Server e Banco de Dados SQL do Azure](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
 [Guia de arquitetura de processamento de consultas](../../relational-databases/query-processing-architecture-guide.md)    
 [Referência de operadores físicos e lógicos do plano de execução](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
 [Junções](../../relational-databases/performance/joins.md)    
-[Demonstrar o processamento de consulta adaptável](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)       
-[Demonstrar QP inteligente](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing)   
+[Demonstração do processamento de consulta adaptável](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)       
+[Demonstração do QP inteligente](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing)   

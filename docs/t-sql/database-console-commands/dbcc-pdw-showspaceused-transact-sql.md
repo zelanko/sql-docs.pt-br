@@ -13,12 +13,12 @@ author: pmasl
 ms.author: umajay
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 2f7a8a738a101545a23d14f06961b53415c2b9b6
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: fc06dca68c6b6a4cedc730433401076ca07b126b
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685523"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042335"
 ---
 # <a name="dbcc-pdwshowspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ *database_name* . [ *schema_name* ]. | *schema_name*. ] *table_name*  
+ `[ database_name . [ schema_name ] . | schema_name . ] table_name`  
  O nome de uma, duas ou três partes da tabela a ser exibido. Para nomes de tabela de duas partes, o nome precisa ser colocado entre aspas duplas (""). O uso de aspas para um nome de tabela de uma única parte é opcional. Quando nenhum nome de tabela for especificado, as informações serão exibidas para o banco de dados atual.  
   
 ## <a name="permissions"></a>Permissões  
@@ -82,7 +82,7 @@ DBCC PDW_SHOWSPACEUSED ( "dbo.FactInternetSales" );
 DBCC PDW_SHOWSPACEUSED ( FactInternetSales );  
 ```  
   
-### <a name="b-show-the-disk-space-used-by-all-tables-in-the-current-database"></a>b. Mostrar o espaço em disco usado por todas as tabelas no banco de dados atual  
+### <a name="b-show-the-disk-space-used-by-all-tables-in-the-current-database"></a>B. Mostrar o espaço em disco usado por todas as tabelas no banco de dados atual  
  O exemplo a seguir mostra o espaço em disco reservado e usado por todas as tabelas de usuário e tabelas do sistema no banco de dados [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)].  
   
 ```sql

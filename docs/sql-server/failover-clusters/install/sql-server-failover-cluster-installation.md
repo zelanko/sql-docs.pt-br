@@ -10,12 +10,12 @@ ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: aa0b798027bbd5eb5d310e31d97378a7375d4d60
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b1227fdc2783207d9ab4ebfe7240884ab50f5ba1
+ms.sourcegitcommit: 403f07b335498ad577402fb432fefcdec700466e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632104"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58913301"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>Instalação do cluster de failover do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,10 +41,15 @@ ms.locfileid: "47632104"
     -   Todos os nós de um cluster de failover devem ser da mesma plataforma, de 32 ou de 64 bits, e devem executar a mesma edição e versão do sistema operacional. Além disso, as edições do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de 64 bits devem ser instaladas em hardware de 64 bits executando as versões de 64 bits de sistemas operacionais Windows. Não há suporte para WOW64 para clustering de failover nesta versão.  
   
 3.  Especificar vários endereços IP para cada instância do cluster de failover. Você pode especificar vários endereços IP para cada sub-rede. Se os vários endereços IP estiverem na mesma sub-rede, a Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] definirá a dependência como AND. Se você estiver clusterizando nós em várias sub-redes, a Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] definirá a dependência como OR.  
-  
+
+4.  A instância de cluster de failover (FCI) do SQL Server requer que os nós de cluster sejam ingressados no domínio. **Não há suporte** para as configurações a seguir:
+    - FCI do SQL em clusters de grupo de trabalho. 
+    - FCI do SQL no cluster de vários domínios.   
+    - FCI do SQL em clusters de Domínio + Grupo de trabalho. 
+
 ## <a name="includessnoversionincludesssnoversion-mdmd-failover-cluster-installation-options"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Opções de instalações de cluster de failover  
   
-##### <a name="option-1-integrated-installation-with-add-node"></a>Opção 1: Instalação integrada com Adicionar Nó  
+##### <a name="option-1-integrated-installation-with-add-node"></a>Opção 1: instalação integrada com Adicionar Nó  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consiste em duas etapas:  
   
 1.  Criar e configurar uma instância de cluster de failover de um único nó do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Ao concluir a configuração bem-sucedida de um nó, você tem uma instância de cluster de failover totalmente funcional. Neste momento ele não tem alta disponibilidade porque há apenas um nó no cluster de failover.  
@@ -67,7 +72,7 @@ ms.locfileid: "47632104"
 #### <a name="ip-address-configuration-during-setup"></a>Configuração de endereço IP durante a instalação  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite definir ou alterar as configurações de dependência de recursos IP durante as ações a seguir:  
   
--   Instalação integrada – [Criar um novo cluster de failover do SQL Server &#40;Instalação&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
+-   Instalação integrada – [Create a New SQL Server Failover Cluster &#40;Setup&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
   
 -   CompleteFailoverCluster (Instalação avançada) – [Criar um novo cluster de failover do SQL Server &#40;Instalação&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
   
@@ -83,7 +88,7 @@ ms.locfileid: "47632104"
 ## <a name="see-also"></a>Consulte Também  
  [Antes de instalar o cluster de failover](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)   
  [Criar um novo cluster de failover do SQL Server &#40;Instalação&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)   
- [Instalar o SQL Server 2016 do prompt de comando](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
+ [Instalar o SQL Server 2016 por meio do Prompt de Comando](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
  [Atualizar uma instância de cluster de failover do SQL Server](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)  
   
   

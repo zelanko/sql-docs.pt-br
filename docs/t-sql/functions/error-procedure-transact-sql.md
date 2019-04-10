@@ -25,12 +25,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: caae632e8e413001d57d125126bb3f8f979a8e82
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: bc0765e02958e6ec59a419933716e8485879add3
+ms.sourcegitcommit: fc1739be9b2735b2bb469979936e76ca2a3830f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617056"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58899722"
 ---
 # <a name="errorprocedure-transact-sql"></a>ERROR_PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +49,7 @@ ERROR_PROCEDURE ( )
 **nvarchar(128)**  
   
 ## <a name="return-value"></a>Valor retornado  
-Quando chamado em um bloco CATCH de procedimento armazenado em que um erro ocorre, `ERROR_PROCEDURE` retorna o nome desse procedimento armazenado.  
+Quando chamado em um bloco CATCH, `ERROR_PROCEDURE` retorna o nome do procedimento armazenado ou gatilho no qual o erro se originou.
   
 `ERROR_PROCEDURE` retorna NULL se o erro não ocorreu dentro de um procedimento armazenado ou gatilho.  
   
@@ -58,7 +58,7 @@ Quando chamado em um bloco CATCH de procedimento armazenado em que um erro ocorr
 ## <a name="remarks"></a>Remarks  
 `ERROR_PROCEDURE` dá suporte a chamadas em qualquer lugar dentro do escopo de um bloco CATCH.  
   
-`ERROR_PROCEDURE` retorna o nome do procedimento armazenado ou gatilho em que ocorre um erro, independentemente de quantas vezes ele é executado ou do local em que ele é executado dentro do escopo do bloco `CATCH`. É diferente de uma função como @@ERROR, que retorna apenas um número de erro na instrução imediatamente após àquela que causa um erro.  
+`ERROR_PROCEDURE` retorna o nome do procedimento armazenado ou gatilho em que ocorre um erro, independentemente de quantas vezes ou do local em que é executado dentro do escopo do bloco `CATCH`. É diferente de uma função como @@ERROR, que retorna apenas um número de erro na instrução imediatamente após àquela que causa um erro.  
    
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
   

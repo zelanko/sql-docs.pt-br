@@ -28,12 +28,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 410cd9444cec90f5d6357e2084bab47f5ab25d37
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 2440f1b61b1b97fab41bf22e1fd466cd30b8e4cf
+ms.sourcegitcommit: 258b4aa0d431537323c5ab1307f599615c29df53
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828366"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58797036"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -142,7 +142,7 @@ ASYMMETRIC KEY *asym_key_name* Especifica o nome de uma chave assimétrica a ser
 
 ## <a name="permissions"></a>Permissões
 
-- Apenas usuários com a permissão **ALTER ANY LOGIN** no servidor ou com associação na função de servidor fixa **securityadmin** podem criar logons. Para obter mais informações, consulte [Funções de nível de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) e [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles.
+- Apenas usuários com a permissão **ALTER ANY LOGIN** no servidor ou com associação na função de servidor fixa **securityadmin** podem criar logons. Para obter mais informações, confira [Funções de nível de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) e [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).
 - Se a opção **CREDENTIAL** for usada, também será necessária a permissão **ALTER ANY CREDENTIAL** no servidor.
 
 ## <a name="after-creating-a-login"></a>Após criar um logon
@@ -165,7 +165,7 @@ CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
 GO
 ```
 
-### <a name="b-creating-a-login-with-a-password-that-must-be-changed"></a>b. Criando um logon com uma senha que precisa ser alterada
+### <a name="b-creating-a-login-with-a-password-that-must-be-changed"></a>B. Criando um logon com uma senha que precisa ser alterada
 
 O exemplo a seguir cria um logon para um usuário específico e atribui uma senha. A opção `MUST_CHANGE` requer que os usuários alterem essa senha na primeira vez em que eles conectam ao servidor.
 
@@ -311,7 +311,7 @@ Para obter mais informações sobre logons do Banco de Dados SQL, consulte [Mana
 
 ## <a name="permissions"></a>Permissões
 
-Somente o logon da entidade de segurança no nível do servidor (criado pelo processo de provisionamento) ou membros da função de banco de dados `loginmanager` no banco de dados mestre podem criar novos logons. Para obter mais informações, consulte [Funções de nível de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) e [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).<https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles>.
+Somente o logon da entidade de segurança no nível do servidor (criado pelo processo de provisionamento) ou membros da função de banco de dados `loginmanager` no banco de dados mestre podem criar novos logons. Para obter mais informações, confira [Funções de nível de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) e [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).
 
 ## <a name="logins"></a>Logons
 
@@ -323,7 +323,7 @@ Somente o logon da entidade de segurança no nível do servidor (criado pelo pro
 Depois de criar um logon, ele poderá se conectar ao Banco de Dados SQL, mas terá as permissões concedidas apenas à função **pública**. Execute algumas das atividades a seguir.
 
 - Para conectar-se a um banco de dados, crie um usuário de banco de dados para o logon nesse banco de dados. Para obter mais informações, consulte [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
-- Para conceder permissões a um usuário em um banco de dados, use o **ALTER SERVER ROLE** ... Instrução **ADD MEMBER** para adicionar o usuário a uma das funções de banco de dados internas ou a uma função personalizada ou conceder permissões ao usuário diretamente usando a instrução [GRANT](../../t-sql/statements/grant-transact-sql.md). Para obter mais informações, confira e instruções de [Funções não de administrador](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles e [GRANT](grant-transact-sql.md).
+- Para conceder permissões a um usuário em um banco de dados, use o **ALTER SERVER ROLE** ... Instrução **ADD MEMBER** para adicionar o usuário a uma das funções de banco de dados internas ou a uma função personalizada ou conceder permissões ao usuário diretamente usando a instrução [GRANT](../../t-sql/statements/grant-transact-sql.md). Para saber mais, confira [Funções não de administrador](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [Funções administrativas adicionais de nível do servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) e instrução [GRANT](grant-transact-sql.md).
 - Para conceder permissões em todo o servidor, crie um usuário de banco de dados no banco de dados mestre e use **ALTER SERVER ROLE** ... Instrução **ADD MEMBER** para adicionar o usuário a uma das funções administrativas do servidor. Para obter mais informações, consulte [Funções de nível de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) e [Funções de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
 - Use a instrução **GRANT** para conceder permissões do nível de servidor para o novo logon ou para uma função que contém o logon. Para obter mais informações, consulte [GRANT](../../t-sql/statements/grant-transact-sql.md).
 
@@ -338,7 +338,7 @@ CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
 GO
 ```
 
-### <a name="b-creating-a-login-from-a-sid"></a>b. Criando um logon por meio de um SID
+### <a name="b-creating-a-login-from-a-sid"></a>B. Criando um logon por meio de um SID
 
 O exemplo a seguir cria primeiro um logon de autenticação do SQL Server e determina seu SID.
 
@@ -418,7 +418,9 @@ SID **=** *sid* Usado para recriar um logon. Aplica-se apenas a logons de autent
 - A nova sintaxe é introduzida para a criação de entidades de segurança no nível de servidor mapeadas para contas do Azure AD (**FROM EXTERNAL PROVIDER**)
 - Quando **FROM EXTERNAL PROVIDER** é especificado:
 
-  - O login_name deve representar uma conta existente do Azure AD (usuário, grupo ou aplicativo) acessível no Azure AD pela atual instância gerenciada do SQL.
+  - O login_name deve representar uma conta existente do Azure AD (usuário, grupo ou aplicativo) acessível no Azure AD pela atual instância gerenciada do SQL. Para entidades de segurança do Azure Active Directory, a sintaxe de CREATE LOGIN exige:
+    - UserPrincipalName do objeto do Azure Active Directory para usuários do Azure Active Directory.
+    - DisplayName do objeto do Azure Active Directory para Grupos e Aplicativos do Azure AD.
   - A opção **PASSWORD** não pode ser usada.
   - Atualmente, o primeiro logon do Azure AD deve ser criado pela conta do SQL Server (não Azure AD) padrão que é um `sysadmin` usando a sintaxe acima.
   - Ao criar um logon do Azure AD usando um administrador do Azure AD para a instância gerenciada do Banco de Dados SQL, ocorre o seguinte erro:</br>
@@ -448,7 +450,7 @@ Por padrão, a permissão padrão concedida para um logon do Azure AD recém-cri
 Depois de criar um logon, ele poderá se conectar a uma instância gerenciada do Banco de Dados SQL, mas terá as permissões concedidas apenas à função **pública**. Execute algumas das atividades a seguir.
 
 - Para criar um usuário do Azure AD de um logon do Azure AD, confira [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
-- Para conceder permissões a um usuário em um banco de dados, use o **ALTER SERVER ROLE** ... Instrução **ADD MEMBER** para adicionar o usuário a uma das funções de banco de dados internas ou a uma função personalizada ou conceder permissões ao usuário diretamente usando a instrução [GRANT](../../t-sql/statements/grant-transact-sql.md). Para obter mais informações, confira e instruções de [Funções não de administrador](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles e [GRANT](grant-transact-sql.md).
+- Para conceder permissões a um usuário em um banco de dados, use o **ALTER SERVER ROLE** ... Instrução **ADD MEMBER** para adicionar o usuário a uma das funções de banco de dados internas ou a uma função personalizada ou conceder permissões ao usuário diretamente usando a instrução [GRANT](../../t-sql/statements/grant-transact-sql.md). Para saber mais, confira [Funções não de administrador](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [Funções administrativas adicionais de nível do servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) e instrução [GRANT](grant-transact-sql.md).
 - Para conceder permissões em todo o servidor, crie um usuário de banco de dados no banco de dados mestre e use **ALTER SERVER ROLE** ... Instrução **ADD MEMBER** para adicionar o usuário a uma das funções administrativas do servidor. Para obter mais informações, consulte [Funções de nível de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) e [Funções de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
   - Use o comando a seguir para adicionar a função `sysadmin` a um logon do Azure AD: `ALTER SERVER ROLE sysadmin ADD MEMBER [AzureAD_Login_name]`
 - Use a instrução **GRANT** para conceder permissões do nível de servidor para o novo logon ou para uma função que contém o logon. Para obter mais informações, consulte [GRANT](../../t-sql/statements/grant-transact-sql.md).
@@ -472,7 +474,7 @@ O exemplo a seguir cria um logon para um usuário específico e atribui uma senh
  GO
  ```
 
-### <a name="b-creating-a-login-from-a-sid"></a>b. Criando um logon por meio de um SID
+### <a name="b-creating-a-login-from-a-sid"></a>B. Criando um logon por meio de um SID
 
  O exemplo a seguir cria primeiro um logon de autenticação do SQL Server e determina seu SID.
 
@@ -608,14 +610,14 @@ Para obter mais informações sobre logons do SQL Data Warehouse, consulte [Mana
 
 ## <a name="permissions"></a>Permissões
 
-Somente o logon da entidade de segurança no nível do servidor (criado pelo processo de provisionamento) ou membros da função de banco de dados `loginmanager` no banco de dados mestre podem criar novos logons. Para obter mais informações, consulte [Funções de nível de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) e [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).<https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles>.
+Somente o logon da entidade de segurança no nível do servidor (criado pelo processo de provisionamento) ou membros da função de banco de dados `loginmanager` no banco de dados mestre podem criar novos logons. Para obter mais informações, confira [Funções de nível de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) e [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).
 
 ## <a name="after-creating-a-login"></a>Após criar um logon
 
 Após criar um logon, ele poderá se conectar ao SQL Data Warehouse, mas terá as permissões concedidas apenas à função **pública**. Execute algumas das atividades a seguir.
 
 - Para conectar-se a um banco de dados, crie um usuário de banco de dados para o logon. Para obter mais informações, consulte [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
-- Para conceder permissões a um usuário em um banco de dados, use o **ALTER SERVER ROLE** ... Instrução **ADD MEMBER** para adicionar o usuário a uma das funções de banco de dados internas ou a uma função personalizada ou conceder permissões ao usuário diretamente usando a instrução [GRANT](grant-transact-sql.md). Para obter mais informações, confira e instruções de [Funções não de administrador](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles e [GRANT](grant-transact-sql.md).
+- Para conceder permissões a um usuário em um banco de dados, use o **ALTER SERVER ROLE** ... Instrução **ADD MEMBER** para adicionar o usuário a uma das funções de banco de dados internas ou a uma função personalizada ou conceder permissões ao usuário diretamente usando a instrução [GRANT](grant-transact-sql.md). Para saber mais, confira [Funções não de administrador](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [Funções administrativas adicionais de nível do servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) e instrução [GRANT](grant-transact-sql.md).
 - Para conceder permissões em todo o servidor, crie um usuário de banco de dados no banco de dados mestre e use **ALTER SERVER ROLE** ... Instrução **ADD MEMBER** para adicionar o usuário a uma das funções administrativas do servidor. Para obter mais informações, consulte [Funções de nível de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) e [Funções de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
 
 - Use a instrução **GRANT** para conceder permissões do nível de servidor para o novo logon ou para uma função que contém o logon. Para obter mais informações, consulte [GRANT](../../t-sql/statements/grant-transact-sql.md).
@@ -631,7 +633,7 @@ CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
 GO
 ```
 
-### <a name="b-creating-a-login-from-a-sid"></a>b. Criando um logon por meio de um SID
+### <a name="b-creating-a-login-from-a-sid"></a>B. Criando um logon por meio de um SID
 
  O exemplo a seguir cria primeiro um logon de autenticação do SQL Server e determina seu SID.
 
@@ -730,7 +732,7 @@ WINDOWS Especifica que o logon seja mapeado para um logon do Windows.
 
 ## <a name="permissions"></a>Permissões
 
-Apenas usuários com a permissão **ALTER ANY LOGIN** no servidor ou com associação na função de servidor fixa **securityadmin** podem criar logons. Para obter mais informações, consulte [Funções de nível de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) e [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).<https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles>.
+Apenas usuários com a permissão **ALTER ANY LOGIN** no servidor ou com associação na função de servidor fixa **securityadmin** podem criar logons. Para obter mais informações, confira [Funções de nível de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) e [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).
 
 ## <a name="after-creating-a-login"></a>Após criar um logon
 

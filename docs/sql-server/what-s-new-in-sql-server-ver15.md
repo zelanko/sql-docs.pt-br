@@ -9,22 +9,22 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cfb679bdec74536d62b3f332ff644d80435907c0
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: 0c36b85b210cf10a3d35e5708b123a30e85e3c39
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618263"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042415"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Novidades no [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-O [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] se baseia em versões anteriores para ampliar o SQL Server como uma plataforma que fornece opções de linguagens de desenvolvimento, tipos de dados, operações locais ou na nuvem e sistemas operacionais. Este artigo resume o que há de novo para o [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. A primeira seção identifica os recursos adicionados na versão prévia mais recente. As outras seções deste artigo fornecem detalhes sobre todos os recursos liberados até o momento para este [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] baseia-se em versões anteriores para ampliar o SQL Server como uma plataforma que fornece opções de linguagens de desenvolvimento, tipos de dados, operações locais ou na nuvem e sistemas operacionais. Este artigo resume o que há de novo para o [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. A primeira seção identifica os recursos adicionados na versão prévia mais recente. As outras seções deste artigo fornecem detalhes sobre todos os recursos liberados até o momento para este [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
 Para obter mais informações e ver os problemas conhecidos, consulte as [Notas sobre a versão do [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](sql-server-ver15-release-notes.md).
 
-**Experimente[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]!**
+**Experimente o [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]!**
 
 - [![Baixar do Centro de Avaliação](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [Baixar o [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] para instalação no Windows](https://go.microsoft.com/fwlink/?LinkID=862101).
 - Instalar no Linux para [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md) e [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
@@ -39,8 +39,8 @@ A versão prévia do CTP (Community Technology Preview) 2.4 é a última versão
 - [Cluster de Big Data](#bigdatacluster)
   - Diretrizes de suporte de GPU para execução de aprendizado profundo com o TensorFlow no Spark.
   - Atualização de tempo de execução do Spark para o Spark 2.4.
-  - Suporte a `INSERT INTO SELECT` para o pool de dados.
-  - Cláusula de opção `FORCE SCALEOUTEXECUTION` e `DISABLE SCALEOUTEXECUTION` para consultas de tabela externa.
+  - `INSERT INTO SELECT` suporte para o pool de dados.
+  - `FORCE SCALEOUTEXECUTION` e cláusula de opção `DISABLE SCALEOUTEXECUTION` para consultas de tabela externa.
 
 - [Mecanismo de banco de dados](#databaseengine)
   - A mensagem de erro de truncamento inclui por padrão nomes de tabela e coluna, bem como o valor truncado. Veja [Truncamento](#truncation).
@@ -55,12 +55,12 @@ As seções a seguir descrevem os novos recursos que foram introduzidos em vers�
 
 ## <a id="bigdatacluster"></a>Clusters de Big Data
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [Clusters de Big Data](../big-data-cluster/big-data-cluster-overview.md) permitem novos cenários, incluindo o seguinte:
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Os [Clusters de Big Data](../big-data-cluster/big-data-cluster-overview.md) permitem novos cenários, incluindo o seguinte:
 
 - [Suporte de GPU para execução de aprendizado profundo com o TensorFlow no Spark](../big-data-cluster/spark-gpu-tensorflow.md). (CTP 2.4)
 - Atualização de tempo de execução do Spark para o Spark 2.4. (CTP 2.4)
-- Suporte a `INSERT INTO SELECT` para o pool de dados.
-- Cláusula de opção `FORCE SCALEOUTEXECUTION` e `DISABLE SCALEOUTEXECUTION` para consultas de tabela externa.
+- `INSERT INTO SELECT` suporte para o pool de dados.
+- `FORCE SCALEOUTEXECUTION` e cláusula de opção `DISABLE SCALEOUTEXECUTION` para consultas de tabela externa.
 - [Enviar trabalhos do Spark em clusters de Big Data do [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] no IntelliJ](../big-data-cluster/spark-submit-job-intellij-tool-plugin.md). (CTP 2.3)
 - [Experiência de gerenciamento e implantação de aplicativo](../big-data-cluster/big-data-cluster-create-apps.md) para uma variedade de aplicativos, dados relacionados, incluindo operacionalizar modelos de aprendizado de máquina usando R e Python, executar trabalhos do SSIS (SQL Server Integration Services) e muito mais. (CTP 2.3)
 - [Usar o Sparklyr em [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] clusters de Big Data](../big-data-cluster/sparklyr-from-RStudio.md). (CTP 2.3)
@@ -77,7 +77,7 @@ As seções a seguir descrevem os novos recursos que foram introduzidos em vers�
 
 ## <a id="databaseengine"></a> Mecanismo de Banco de Dados
 
-O [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduz ou aprimora os recursos novos a seguir para o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduz ou aprimora os recursos novos a seguir para o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].
 
 ### <a name="new-querypostexecutionplanprofile-extended-event-ctp-24"></a>Novo evento estendido Query_post_execution_plan_profile (CTP 2.4)
 
@@ -171,13 +171,13 @@ O resultado final é uma redução de recompilações desnecessárias e sobrecar
 
 ### <a name="improved-indirect-checkpoint-scalability-ctp-23"></a>Escalabilidade de pontos de verificação indiretos aprimorada (CTP 2.3)
 
-Nas versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], os usuários podem enfrentar erros de agendador sem resposta quando há um banco de dados que gera um grande número de páginas sujas, assim como tempdb. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] apresenta melhor escalabilidade para o ponto de verificação indireto, que deve ajudar a evitar esses erros em bancos de dados que têm uma carga de trabalho de UPDATE/INSERT pesada.
+Nas versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], os usuários podem enfrentar erros de agendador sem resposta quando há um banco de dados que gera um grande número de páginas sujas, assim como tempdb. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] apresenta melhor escalabilidade para o Ponto de verificação indireto, que deve ajudar a evitar esses erros em bancos de dados que têm uma carga de trabalho de UPDATE/INSERT pesada.
 
 ### <a name="utf-8-support-ctp-23"></a>Suporte a UTF-8 (CTP 2.3)
 
 Suporte completo para a amplamente utilizada codificação de caracteres UTF-8 como codificação de importação ou exportação, ou como ordenação em nível de banco de dados ou nível de coluna para dados de texto. A UTF-8 é permitida nos tipos de dados `CHAR` e `VARCHAR` e é habilitada quando você cria ou altera a ordenação de um objeto para uma ordenação com o sufixo `UTF8`. 
 
-Por exemplo, `LATIN1_GENERAL_100_CI_AS_SC` para `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. A UTF-8 só está disponível para agrupamentos do Windows com suporte para caracteres suplementares, conforme introduzido no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. `NCHAR` e `NVARCHAR` permitem somente a codificação UTF-16 e permanecem inalterados.
+Por exemplo, `LATIN1_GENERAL_100_CI_AS_SC` para `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. A UTF-8 só está disponível para agrupamentos do Windows com suporte para caracteres suplementares, conforme introduzido no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. `NCHAR` e `NVARCHAR` permite a codificação somente UTF-16 e permanece inalterado.
 
 Esse recurso pode fornecer economia de armazenamento significativa dependendo do conjunto de caracteres utilizado. Por exemplo, a alteração de um tipo de dados de coluna existente com cadeias de caracteres ASCII (Latinas) de `NCHAR(10)` para `CHAR(10)` usando uma ordenação habilitada para UTF-8 resulta em 50% de redução nos requisitos de armazenamento. Essa redução ocorre porque `NCHAR(10)` exige 20 bytes para armazenamento, enquanto `CHAR(10)` requer 10 bytes para a mesma cadeia de caracteres Unicode.
 
@@ -197,7 +197,7 @@ Para saber mais, confira [Scalar UDF Inlining](../relational-databases/user-defi
 
 ### <a name="a-nametruncation-truncation-error-message-improved-to-include-table-and-column-names-and-truncated-value-ctp-21"></a><a name="truncation" />Mensagem de erro de truncamento aprimorada para incluir nomes de tabela e coluna e o valor truncado (CTP 2.1)
 
-A mensagem de erro com ID 8152 `String or binary data would be truncated` é familiar para muitos desenvolvedores e administradores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que desenvolvem ou mantêm cargas de trabalho de movimentação de dados. O erro é gerado durante transferências de dados entre uma origem e um destino com esquemas diferentes quando os dados de origem são muito grandes para caber no tipo de dados de destino. Essa mensagem de erro pode ter resolução demorada. O [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] apresenta uma mensagem de erro nova e mais específica (2628) para esse cenário:  
+A mensagem de erro com ID 8152 `String or binary data would be truncated` é familiar para muitos desenvolvedores e administradores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que desenvolvem ou mantêm cargas de trabalho de movimentação de dados. O erro é gerado durante transferências de dados entre uma origem e um destino com esquemas diferentes quando os dados de origem são muito grandes para caber no tipo de dados de destino. Essa mensagem de erro pode ter resolução demorada. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] apresenta uma mensagem de erro nova e mais específica (2628) para esse cenário:  
 
 `String or binary data would be truncated in table '%.*ls', column '%.*ls'. Truncated value: '%.*ls'.`
 
@@ -210,7 +210,7 @@ Para o nível de compatibilidade do banco de dados 140 ou inferior, a mensagem d
 
 ### <a name="improved-diagnostic-data-for-stats-blocking-ctp-21"></a>Dados de diagnóstico aprimorados para estatísticas de bloqueio (CTP 2.1)
 
-A [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] fornece dados de diagnóstico aprimorados para consultas de longa execução que esperam operações de atualização de estatísticas síncronas. O modo de exibição de gerenciamento dinâmico `sys.dm_exec_requests` de coluna `command` mostra `SELECT (STATMAN)` se um `SELECT` está aguardando até que uma operação de atualização de estatísticas síncronas seja concluída antes de continuar a execução da consulta. Além disso, o novo tipo de espera `WAIT_ON_SYNC_STATISTICS_REFRESH` será exposto no modo de exibição de gerenciamento dinâmico `sys.dm_os_wait_stats`. Ele mostra o tempo de nível de instância acumulado gasto em operações de atualização de estatísticas síncronas.
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] fornece dados de diagnóstico aprimorados para consultas de longa execução que esperam operações de atualização de estatísticas síncronas. O modo de exibição de gerenciamento dinâmico `sys.dm_exec_requests` de coluna `command` mostra `SELECT (STATMAN)` se um `SELECT` está aguardando até que uma operação de atualização de estatísticas síncronas seja concluída antes de continuar a execução da consulta. Além disso, o novo tipo de espera `WAIT_ON_SYNC_STATISTICS_REFRESH` será exposto no modo de exibição de gerenciamento dinâmico `sys.dm_os_wait_stats`. Ele mostra o tempo de nível de instância acumulado gasto em operações de atualização de estatísticas síncronas.
 
 ### <a name="hybrid-buffer-pool-ctp-21"></a>Pool de buffers híbrido (CTP 2.1)
 
@@ -330,9 +330,9 @@ Para usar recursos de processamento de consulta inteligente, defina o banco de d
 
 - Defina esses padrões usando as opções de configuração de escopo do banco de dados `ELEVATE_ONLINE` e `ELEVATE_RESUMABLE`. Ambas as opções farão com que o mecanismo eleve automaticamente as operações com suporte para execução online ou retomável. Você pode habilitar os seguintes comportamentos usando essas opções:
 
-  - a opção `FAIL_UNSUPPORTED` permite todas as operações de índice online ou operações de índice retomáveis e com falha que não têm suporte para a opção online ou retomável.
-  - a opção `WHEN_SUPPPORTED` permite operações com suporte online ou operações sem suporte de retomáveis e de execução de índice offline ou não retomáveis.
-  - a opção `OFF` permite o comportamento atual de executar todas as operações de índice offline e não retomáveis a menos que explicitamente especificado na instrução DDL.
+  - `FAIL_UNSUPPORTED` a opção permite todas as operações de índice online ou operações de índice retomáveis e com falha que não têm suporte para a opção online ou retomável.
+  - `WHEN_SUPPPORTED` a opção permite operações com suporte online ou operações sem suporte de retomáveis e de execução de índice offline ou não retomáveis.
+  - `OFF` a opção permite o comportamento atual de executar todas as operações de índice offline e não retomáveis a menos que explicitamente especificado na instrução DDL.
 
 Para substituir a configuração padrão, inclua a opção `ONLINE` ou `RESUMABLE` nos comandos de criação e recompilação do índice. 
 
@@ -368,7 +368,7 @@ A [auditoria](../relational-databases/security/auditing/sql-server-audit-databas
 
 ### <a name="expanded-support-for-persistent-memory-devices-ctp-20"></a>Suporte estendido para dispositivos de memória persistentes (CTP 2.0)
 
-Agora, qualquer arquivo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] colocado em um dispositivo de memória persistente pode funcionar no modo *capacitado*. O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] acessa o dispositivo diretamente, ignorando a pilha de armazenamento do sistema operacional usando operações de memória eficientes. Esse modo melhora o desempenho porque permite entrada/saída de baixa latência em relação a esses dispositivos.
+Agora, qualquer arquivo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] colocado em um dispositivo de memória persistente pode funcionar no modo *capacitado*. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] acessa o dispositivo diretamente, ignorando a pilha de armazenamento do sistema operacional usando operações de memória eficientes. Esse modo melhora o desempenho porque permite entrada/saída de baixa latência em relação a esses dispositivos.
     - Exemplos de arquivos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] incluem:
         - Arquivos de banco de dados
         - Arquivos de log de transações
@@ -377,15 +377,15 @@ Agora, qualquer arquivo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] c
     - Ocasionalmente, a memória persistente é chamada informalmente de *pmem* em alguns sites que não são da Microsoft.
 
 > [!NOTE]
-> Para esta versão prévia, a capacitação de arquivos em dispositivos de memória persistente só está disponível no Linux. O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no Windows dá suporte a dispositivos de memória persistente começando com o [!INCLUDE[ssSQL15](../includes/sssql15-md.md)].
+> Para esta versão prévia, a capacitação de arquivos em dispositivos de memória persistente só está disponível no Linux. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no Windows dá suporte a dispositivos de memória persistente começando com o [!INCLUDE[ssSQL15](../includes/sssql15-md.md)].
 
 ### <a name="support-for-columnstore-statistics-in-dbcc-clonedatabase-ctp-20"></a>Suporte para estatísticas de columnstore em DBCC CLONEDATABASE (CTP 2.0)
 
-O `DBCC CLONEDATABASE` cria uma cópia somente de esquema de um banco de dados que inclui todos os elementos necessários para solucionar problemas de desempenho de consulta sem copiar os dados. Em versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], o comando não copiava as estatísticas necessárias para solucionar problemas com precisão em consultas de índice de columnstore, e etapas manuais eram necessárias para capturar essas informações. Agora, no [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], o `DBCC CLONEDATABASE` captura automaticamente os blobs de estatísticas para índices columnstore, de modo que nenhuma etapa manual é necessária.
+`DBCC CLONEDATABASE` cria uma cópia somente de esquema de um banco de dados que inclui todos os elementos necessários para solucionar problemas de desempenho de consulta sem copiar os dados. Em versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], o comando não copiava as estatísticas necessárias para solucionar problemas com precisão em consultas de índice de columnstore, e etapas manuais eram necessárias para capturar essas informações. Agora, no [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], o `DBCC CLONEDATABASE` captura automaticamente os blobs de estatísticas para índices columnstore, de modo que nenhuma etapa manual é necessária.
 
 ### <a name="new-options-added-to-spestimatedatacompressionsavings-ctp-20"></a>Novas opções adicionadas a sp_estimate_data_compression_savings (CTP 2.0)
 
-`sp_estimate_data_compression_savings` retorna o tamanho atual do objeto solicitado e faz a estimativa do tamanho do objeto para o estado de compactação solicitado. Atualmente, esse procedimento dá suporte a três opções: `NONE`, `ROW` e `PAGE`. O [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduz duas novas opções: `COLUMNSTORE` e `COLUMNSTORE_ARCHIVE`. Essas novas opções permitirão que você estime a economia de espaço se um índice columnstore for criado na tabela usando a compactação de columnstore padrão ou de arquivos.
+`sp_estimate_data_compression_savings` retorna o tamanho atual do objeto solicitado e faz a estimativa do tamanho do objeto para o estado de compactação solicitado. Atualmente, esse procedimento dá suporte a três opções: `NONE`, `ROW` e `PAGE`. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduz duas novas opções: `COLUMNSTORE` e `COLUMNSTORE_ARCHIVE`. Essas novas opções permitirão que você estime a economia de espaço se um índice columnstore for criado na tabela usando a compactação de columnstore padrão ou de arquivos.
 
 ### <a id="ml"></a> Modelagem baseada em partição e clusters de failover dos Serviços do Machine Learning do SQL Server (CTP 2.0)
 
@@ -490,7 +490,7 @@ FROM sys.dm_exec_requests AS d
   - Suporte para Always Encrypted com enclaves seguros. (CTP 2.0)
   - Menor tamanho de download. (CTP 2.0)
   - Agora baseado no Shell Isolado do Visual Studio 2017. (CTP 2.0)
-  - Para obter uma lista completa, consulte o [Log de mudanças do SSMS](../ssms/sql-server-management-studio-changelog-ssms.md). (CTP 2.0)
+  - Para obter uma lista completa, consulte o [Log de mudanças do SSMS](../ssms/release-notes-ssms.md). (CTP 2.0)
 
 - [**Módulo do SQL Server PowerShell**](http://www.powershellgallery.com/packages/SqlServer/21.1.18080): O módulo do SQL Server PowerShell permite que os administradores, desenvolvedores do SQL Server e profissionais de BI automatizem a administração de servidores e a implantação de bancos de dados.
 
@@ -524,11 +524,11 @@ Grupos de cálculos resolvem um problema comum em modelos complexos nos quais po
 
 Um grupo de cálculos pode ter qualquer número de itens de cálculo. Cada item de cálculo é definido por uma expressão DAX. Três novas funções DAX foram introduzidas para trabalhar com grupos de cálculos: 
 
-- `SELECTEDMEASURE()` – retorna uma referência para a medida atualmente no contexto.  
+- `SELECTEDMEASURE()` – Retorna uma referência para a medida atualmente no contexto.  
 
-- `SELECTEDMEASURENAME()` – retorna uma cadeia de caracteres que contém o nome da medida atualmente no contexto.  
+- `SELECTEDMEASURENAME()` – Retorna uma cadeia de caracteres que contém o nome da medida atualmente no contexto.  
 
-- `ISSELECTEDMEASURE(M1, M2, …)` – retorna um valor booliano que indica se a medida atualmente no contexto é uma daquelas especificadas como um argumento.
+- `ISSELECTEDMEASURE(M1, M2, …)` – Retorna um valor booliano que indica se a medida atualmente no contexto é uma das especificadas como um argumento.
 
 Além das novas funções DAX, duas novas exibições de gerenciamento dinâmico foram introduzidas:
 
@@ -562,6 +562,6 @@ No CTP 2.4, o [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] não intro
 
 - [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]Notas sobre a versão](sql-server-ver15-release-notes.md).
 
-- [Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]: White paper técnico](http://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-white-paper-DBMod-Microsoft-SQL-Server-2019-Technical-white-paper.pdf)<br />Publicado em setembro de 2018. Aplica-se ao Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0 para contêineres do Windows, Linux e Docker.
+- [Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]: Artigo técnico](http://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-white-paper-DBMod-Microsoft-SQL-Server-2019-Technical-white-paper.pdf)<br />Publicado em setembro de 2018. Aplica-se ao Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0 para contêineres do Windows, Linux e Docker.
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

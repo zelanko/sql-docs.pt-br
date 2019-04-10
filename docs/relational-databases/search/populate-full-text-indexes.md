@@ -25,12 +25,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b3583a5a0a4f68304bdc4cc78eadbadf3fb14b20
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: b49e8a5802152eeee8d1a2cac28ac0098057f423
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973645"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042265"
 ---
 # <a name="populate-full-text-indexes"></a>Popular índices de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -103,7 +103,7 @@ Há dois tipos de controle de alterações:
   
     -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md)... SET CHANGE_TRACKING AUTO  
   
-    **Exemplo -– alterar um índice de texto completo para usar o controle de alterações automático**  
+    **Exemplo – alterar um índice de texto completo para usar o controle automático de alterações**  
     O exemplo a seguir altera o índice de texto completo da tabela `HumanResources.JobCandidate` do banco de dados de exemplo `AdventureWorks` para usar o controle de alterações com população automática.  
   
     ```sql  
@@ -123,7 +123,7 @@ Há dois tipos de controle de alterações:
   
     -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md)... SET CHANGE_TRACKING MANUAL  
   
-    **Exemplo – criar um índice de texto completo com controle de alterações manual**  
+    **Exemplo – criar um índice de texto completo com controle manual de alterações**  
     O exemplo a seguir cria um índice de texto completo que usará o controle de alterações com população manual na tabela `HumanResources.JobCandidate` do banco de dados de exemplo `AdventureWorks` .  
   
     ```sql
@@ -217,8 +217,8 @@ O arquivo de log de rastreamento segue o seguinte esquema de nomeação:
 `SQLFT<DatabaseID><FullTextCatalogID>.LOG[<n>]`
   
 As partes variáveis do nome do arquivo de log de rastreamento são as seguintes.
--   <**DatabaseID**> – a ID de um banco de dados. <**dbid**> é um número de cinco dígitos com zeros à esquerda.  
--   <**FullTextCatalogID**> – ID do catálogo de texto completo. <**catid**> é um número de cinco dígitos com zeros à esquerda.  
+-   <**DatabaseID**> – a ID de um banco de dados. \<**dbid**> é um número de cinco dígitos com zeros à esquerda.  
+-   <**FullTextCatalogID**> – ID do catálogo de texto completo. \<**catid**> é um número de cinco dígitos com zeros à esquerda.  
 -   <**n**> – É um inteiro que indica um ou mais logs de rastreamento que existem do mesmo catálogo de texto completo.  
   
  Por exemplo, `SQLFT0000500008.2` é o arquivo de log de rastreamento de um banco de dados com a ID de banco de dados = 5 e a ID de catálogo de texto completo = 8. O 2 no final do nome do arquivo indica que há dois arquivos de log de rastreamento para esse par de banco de dados/catálogo.  

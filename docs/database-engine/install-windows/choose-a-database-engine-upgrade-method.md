@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 79337a1eb89de27f5522b5432e77f43f62d4489c
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: f8a71f5e91fec924a73186211f3296bfc52add8a
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306244"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872256"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Escolher um método de upgrade do mecanismo de banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +34,7 @@ Há várias abordagens a serem consideradas quando você está planejando fazer 
 > [!NOTE]  
 >  Você também pode atualizar o banco de dados do SQL Azure ou virtualizar seu ambiente SQL Server como parte de seu plano de atualização. Estes artigos estão fora do escopo deste artigo, mas veja abaixo alguns links:
 >   - [Visão geral do SQL Server nas Máquinas Virtuais do Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)
->   - [Banco de Dados SQL do Azure](https://azure.microsoft.com/services/sql-database/) 
+>   - [Banco de dados SQL do Azure](https://azure.microsoft.com/services/sql-database/) 
 >   - [Selecionando uma opção do SQL Server no Azure](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/).  
   
 ## <a name="upgrade-in-place"></a>Atualização in-loco  
@@ -77,7 +77,7 @@ Há várias abordagens a serem consideradas quando você está planejando fazer 
  Depois de migrar os bancos de dados do usuário, direcione novos usuários para a nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando um entre vários métodos possíveis (por exemplo, renomear o servidor, usar uma entrada de DNS, modificar cadeias de conexão).  A nova abordagem de instalação reduz o risco e o tempo de inatividade em comparação com uma atualização in-loco e facilita as atualizações de hardware e sistema operacional em conjunto com a atualização para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Se você já tiver uma solução de HA (alta disponibilidade) em vigor ou outro ambiente com várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vá para [Atualização sem interrupção](#RollingUpgrade). Se você não tiver uma solução de alta disponibilidade, considere configurar o [Espelhamento de Banco de Dados](../database-mirroring/setting-up-database-mirroring-sql-server.md) temporariamente para minimizar o tempo de inatividade e facilitar a atualização ou aproveitar essa oportunidade para configurar um [Grupo de Disponibilidade AlwaysOn](https://msdn.microsoft.com/library/hh510260.aspx) como uma solução de HA permanente.  
+>  Se você já tiver uma solução de HA (alta disponibilidade) em vigor ou outro ambiente com várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vá para [Atualização sem interrupção](#rolling-upgrade). Se você não tiver uma solução de alta disponibilidade, considere configurar o [Espelhamento de Banco de Dados](../database-mirroring/setting-up-database-mirroring-sql-server.md) temporariamente para minimizar o tempo de inatividade e facilitar a atualização ou aproveitar essa oportunidade para configurar um [Grupo de Disponibilidade AlwaysOn](https://msdn.microsoft.com/library/hh510260.aspx) como uma solução de HA permanente.  
   
  Por exemplo, você pode usar essa abordagem para atualizar:  
   
@@ -109,7 +109,5 @@ As etapas necessárias para a atualização de uma nova instalação variam um p
 -   Um ambiente de expansão do SQL Server Reporting Services: Para obter etapas detalhadas para executar uma atualização sem interrupção nesse ambiente, confira [Atualizar e migrar o Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  
   
 ## <a name="next-steps"></a>Próximas etapas
- [Planejar e testar o plano de atualização do mecanismo de banco de dados](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   
+ [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   
  [Concluir a atualização do mecanismo de banco de dados](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)  
-  
-  

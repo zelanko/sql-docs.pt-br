@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 6336e6ebc549d1be2787bb8a100efec1ea9b6836
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 62c637f8432fd168a9b23a92b7d50c00ea6c1e14
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492848"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860057"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>Notas sobre a versão a versão prévia do SQL Server 2019
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -29,23 +29,23 @@ Este artigo descreve as limitações e os problemas conhecidos para as versões 
 > - Instalação lado a lado com outras versões do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 > - Atualizar uma instância existente do SQL Server de qualquer versão
 
-**Experimente[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]!**
+**Experimente o [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]!**
 - [![Baixar do Centro de Avaliação](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [Baixe o [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] para instalação no Windows](https://go.microsoft.com/fwlink/?LinkID=862101)
 - Instalar no Linux para [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md) e [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
 - [Executar no SQL Server 2019 no Docker](../linux/quickstart-install-connect-docker.md).
 
 ## <a name="ctp-24"></a>CTP 2.4
-O [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4 é a última versão pública do [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] O CTP 2.4 é a última versão pública do [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] O CTP 2.3 está disponível apenas como Evaluation Edition. Nenhuma outra edição está disponível. O suporte para versões CTP é descrito em `license_Eval.rtf` com a mídia de instalação.
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] O CTP 2.4 está disponível apenas como Edição de Avaliação. Nenhuma outra edição está disponível. O suporte para versões CTP é descrito em `license_Eval.rtf` com a mídia de instalação.
 
 Suporte limitado pode ser encontrado em um dos seguintes locais:
 
 - Fóruns
-  - [Comentários do SQL Server](https://aka.ms/sqlfeedback)
+  - [Comentários sobre o SQL Server](https://aka.ms/sqlfeedback)
   - [Introdução ao SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqlgetstarted)
   - [Transact-SQL](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=transactsql)
-  - [SQL Server, documentação](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqldocumentation)
+  - [Documentação do SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqldocumentation)
 
 - Ou envie um tweet para [@SQLServer](https://twitter.com/SQLServer) com [#sqlhelp](https://twitter.com/search?q=%23sqlhelp)
 

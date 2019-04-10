@@ -41,12 +41,12 @@ ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9957e69ae2cc285ecad5709a9169bd3ee01be464
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: b2474bc1f0d0111c4dedd2fa8ce3a9f885503d52
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801590"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042445"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -334,7 +334,7 @@ Se *type_schema_name* não for especificado, o [!INCLUDE[ssDE](../../includes/ss
   
  Em TVFs embutidas, o valor retornado TABLE é definido por meio de uma única instrução SELECT. As funções embutidas não têm variáveis de retorno associadas.  
   
- <a name="mstvf"></a> Em MSTVFs, @*return_variable* é uma variável TABLE usada para armazenar e acumular as linhas que devem ser retornadas como o valor da função. @ *return_variable* pode ser especificado somente para funções [!INCLUDE[tsql](../../includes/tsql-md.md)] e não para funções CLR.  
+ <a name="mstvf"></a> Em MSTVFs, \@*return_variable* é uma variável TABLE usada para armazenar e acumular as linhas que devem ser retornadas como o valor da função. \@ *return_variable* pode ser especificado somente para funções [!INCLUDE[tsql](../../includes/tsql-md.md)] e não para funções CLR.  
   
  *select_stmt*  
  É a única instrução SELECT que define o valor retornado de uma TVF (função com valor de tabela) embutida.  
@@ -471,7 +471,7 @@ Especifica se este UDF escalar deve ser embutido ou não. Essa cláusula só se 
  *seed*  
  É o valor inteiro que será atribuído à primeira linha da tabela.  
   
- *increment*  
+ *incremento*  
  É o valor inteiro a ser adicionado ao valor *seed* para linhas sucessivas na tabela.  
   
  **\< column_constraint >::= e \< table_constraint>::=** 
@@ -567,15 +567,15 @@ Se uma função definida pelo usuário não for criada com a cláusula `SCHEMABI
 
 -   Instruções de controle de fluxo, exceto instruções `TRY...CATCH`.  
 
--   Instruções `DECLARE` que definem variáveis de dados locais e cursores locais.  
+-   `DECLARE` instruções que definem variáveis de dados locais e cursores locais.  
 
--   Instruções `SELECT` que contêm listas de seleção com expressões que atribuem valores a variáveis locais.  
+-   `SELECT` instruções que contêm listas de seleção com expressões que atribuem valores a variáveis locais.  
 
 -   Operações de cursor que fazem referência a cursores locais que são declaradas, abertas, fechadas e desalocadas na função. Apenas instruções `FETCH` que atribuem valores a variáveis locais usando a cláusula `INTO` são permitidas. Instruções `FETCH` que retornam dados ao cliente não são permitidas.  
 
--   Instruções `INSERT`, `UPDATE` e `DELETE` que modificam variáveis de tabela local.  
+-   `INSERT`, instruções `UPDATE` e `DELETE` que modificam variáveis de tabela local.  
 
--   Instruções `EXECUTE` que chamam procedimentos armazenados estendidos.  
+-   `EXECUTE` instruções que chamam procedimentos armazenados estendidos.  
 
 Para obter mais informações, consulte [Criar funções definidas pelo usuário &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
   
@@ -645,11 +645,11 @@ Ao usar a cláusula `ORDER` em funções CLR com valor de tabela, siga estas dir
   
     -   Consultas de inserção em que a cláusula `ORDER` é compatível com um índice.  
   
-    -   Cláusulas `ORDER BY` compatíveis com a cláusula `ORDER`.  
+    -   `ORDER BY` cláusulas compatíveis com a cláusula `ORDER`.  
   
     -   Agregações, em que `GROUP BY` é compatível com a cláusula `ORDER`.  
   
-    -   Agregações `DISTINCT` em que as colunas distintas são compatíveis com a cláusula `ORDER`.  
+    -   `DISTINCT` agregações em que as colunas distintas são compatíveis com a cláusula `ORDER`.  
   
 A cláusula `ORDER` não garante resultados ordenados quando uma consulta SELECT é executada, a menos que `ORDER BY` também esteja especificado na consulta. Consulte [sys.function_order_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-function-order-columns-transact-sql.md) para obter informações sobre como consultar colunas incluídas na ordem de classificação nas funções com valor de tabela.  
   
@@ -710,7 +710,7 @@ ISO Week
 52  
 ```  
   
-### <a name="b-creating-an-inline-table-valued-function"></a>b. Criando uma função com valor de tabela embutida  
+### <a name="b-creating-an-inline-table-valued-function"></a>B. Criando uma função com valor de tabela embutida  
  O exemplo a seguir retorna uma função com valor de tabela embutida no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Ela retorna três colunas `ProductID`, `Name` e a agregação dos totais acumulados no ano por loja como `YTD Total` para cada produto vendido para a loja.  
   
 ```sql  

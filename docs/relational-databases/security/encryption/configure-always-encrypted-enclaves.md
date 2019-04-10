@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 866d71333297b609642707a793b27c735d29057d
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: e6e0f7bc107ae731e3eb2e7f6685e6c02914d41d
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327878"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872146"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>Configurar o Always Encrypted com enclaves seguros
 
@@ -144,7 +144,7 @@ A introdução de chaves habilitadas para enclave não altera fundamentalmente o
 - A propriedade **ENCLAVE_COMPUTATIONS** nos metadados da chave mestra da coluna no banco de dados é definida.
 - Os valores de propriedade da chave mestra da coluna (incluindo a configuração de **ENCLAVE_COMPUTATIONS**) são assinados digitalmente. A ferramenta adiciona a assinatura, que é produzida usando a chave mestra da coluna real, aos metadados. A finalidade da assinatura é impedir que administradores de computador e DBAs mal-intencionados adulterem a configuração de **ENCLAVE_COMPUTATIONS**. Os drivers do cliente SQL verificam as assinaturas antes de permitir o uso do enclave. Isso proporciona aos administradores da segurança o controle de quais dados da coluna podem ser calculados dentro de enclave.
 
-A propriedade **ENCLAVE_COMPUTATIONS** de uma chave mestra da coluna é imutável – você não pode alterá-la após a chave ter sido provisionada. No entanto, é possível substituir a chave mestra da coluna por uma nova chave com um valor diferente da propriedade **ENCLAVE_COMPUTATIONS** da chave original, por meio de um processo chamado [rotação da chave mestra da coluna](#initiate-the-rotation-from-the-current-column-master-key-to-the-new-column-master-key). Para obter mais informações sobre a propriedade **ENCLAVE_COMPUTATIONS**, consulte [CRIAR A CHAVE MESTRA DA COLUNA](../../../t-sql/statements/create-column-master-key-transact-sql.md).
+A propriedade **ENCLAVE_COMPUTATIONS** de uma chave mestra da coluna é imutável – você não pode alterá-la após a chave ter sido provisionada. No entanto, é possível substituir a chave mestra da coluna por uma nova chave com um valor diferente da propriedade **ENCLAVE_COMPUTATIONS** da chave original, por meio de um processo chamado [rotação da chave mestra da coluna](#make-columns-enclave-enabled-by-rotating-their-column-master-key). Para obter mais informações sobre a propriedade **ENCLAVE_COMPUTATIONS**, consulte [CRIAR A CHAVE MESTRA DA COLUNA](../../../t-sql/statements/create-column-master-key-transact-sql.md).
 
 Para provisionar uma chave de criptografia de coluna habilitada para enclave, você precisará garantir que a chave mestra da coluna que criptografa a chave de criptografia da coluna esteja habilitada para enclave.
 
@@ -152,7 +152,7 @@ Atualmente, as seguintes limitações se aplicam às chaves de enclave de provis
 
 - **Chaves mestras de coluna habilitadas para enclave precisam ser armazenadas no Repositório de certificados do Windows ou no Azure Key Vault**. Atualmente, não há suporte para armazenar chaves mestras de coluna habilitadas para enclave em outros tipos de repositórios de chaves (módulos de segurança de hardware ou repositórios de chave personalizados).
 
-### <a name="provision-enclave-enabled-keys-using-sql-server-management-studio-ssms"></a>**Provisionar chaves habilitadas para enclave usando o SSMS (SQL Server Management Studio)**
+### **<a name="provision-enclave-enabled-keys-using-sql-server-management-studio-ssms"></a>Provisionar chaves habilitadas para enclave usando o SSMS (SQL Server Management Studio)**
 
 As etapas a seguir criam chaves habilitadas para enclave (é necessário o SSMS 18.0 ou posterior):
 
@@ -177,7 +177,7 @@ As etapas a seguir criam chaves habilitadas para enclave (é necessário o SSMS 
     3. No menu suspenso **Chave mestra da coluna**, selecione a chave mestra da coluna criada nas etapas anteriores.
     4. Clique em **OK**.
 
-### <a name="provision-enclave-enabled-keys-using-powershell"></a>**Provisionar chaves habilitadas para enclave usando o PowerShell**
+### **<a name="provision-enclave-enabled-keys-using-powershell"></a>Provisionar chaves habilitadas para enclave usando o PowerShell**
 
 As seções a seguir fornecem exemplos de scripts do PowerShell para o provisionamento de chaves habilitadas para enclave. As etapas que são específicas (novas) do Always Encrypted com enclaves seguros estão realçadas. Para obter mais informações (não específicas do Always Encrypted com enclaves seguros) sobre o provisionamento de chaves usando o PowerShell, consulte [Configurar chaves do Always Encrypted usando o PowerShell](https://docs.microsoft.com/sql/relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell).
 
@@ -250,7 +250,7 @@ Set-AzKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination "Software"
 ```
 
-**Etapa 2: Criar metadados da chave mestra da coluna no banco de dados, criar uma chave de criptografia da coluna e criar metadados da chave de criptografia da coluna no banco de dados**
+**Etapa 2: criar metadados da chave mestra da coluna no banco de dados, criar uma chave de criptografia da coluna e criar metadados da chave de criptografia da coluna no banco de dados**
 
 
 ```powershell
@@ -441,7 +441,7 @@ Você pode criptografar uma coluna de texto sem formatação existente no local 
 
 Para criptografar uma coluna usando uma chave que não está habilitada para enclave, você precisará usar ferramentas do lado do cliente, como o assistente do Always Encrypted no SSMS ou o cmdlet Set-SqlColumnEncryption no módulo do SqlServer do PowerShell. Para obter detalhes, confira:
 
-- [Assistente do Always Encrypted](always-encrypted-wizard.md)
+- [Assistente de Always Encrypted](always-encrypted-wizard.md)
 - [Configurar a criptografia de coluna usando o PowerShell](configure-column-encryption-using-powershell.md)
 
 
@@ -536,9 +536,9 @@ Estas são as três abordagens para habilitar enclaves para colunas existentes:
   - todo o conteúdo da tabela que contém a coluna deve ser movido para fora do banco de dados para ser criptografado novamente e, portanto, é recomendável somente para tabelas pequenas. 
 
 Para obter mais informações, consulte as seguintes seções:
-  - [Habilitando colunas para enclave girando a chave mestra da coluna](#make-columns-enclave-enabled-by-rotating-their-column-master-key)
-  - [Recriptografando colunas no local](#re-encrypt-columns-in-place)
-  - [Recriptografando colunas no lado do cliente](#re-encrypt-columns-on-the-client-side)
+  - [Habilitação de colunas para enclave girando a chave mestra da coluna](#make-columns-enclave-enabled-by-rotating-their-column-master-key)
+  - [Criptografar novamente as colunas no local](#re-encrypt-columns-in-place)
+  - [Criptografar novamente as colunas no lado do cliente](#re-encrypt-columns-on-the-client-side)
 
 ### <a name="make-columns-enclave-enabled-by-rotating-their-column-master-key"></a>Habilitar colunas para enclave girando a chave mestra da coluna
 
@@ -742,7 +742,7 @@ GO
 
 A maneira mais rápida de testar consultas avançadas em suas colunas habilitadas para enclave é em uma janela de consulta do SSMS com a parametrização para Always Encrypted habilitada. Para obter detalhes sobre esse recurso útil no SSMS, consulte:
 
-- [Parametrização para Always Encrypted – usando o SSMS para inserir, atualizar e filtrar por colunas criptografadas](https://blogs.msdn.microsoft.com/sqlsecurity/2016/12/13/parameterization-for-always-encrypted-using-ssms-to-insert-into-update-and-filter-by-encrypted-columns/)
+- [Parametrização para Always Encrypted – uso do SSMS para inserir, atualizar e filtrar por colunas criptografadas](https://blogs.msdn.microsoft.com/sqlsecurity/2016/12/13/parameterization-for-always-encrypted-using-ssms-to-insert-into-update-and-filter-by-encrypted-columns/)
 - [Consultando colunas criptografadas](configure-always-encrypted-using-sql-server-management-studio.md#querying-encrypted-columns)
 
 

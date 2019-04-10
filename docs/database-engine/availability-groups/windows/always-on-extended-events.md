@@ -11,12 +11,12 @@ ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fa8c74ec8bb9c80350b537142ce27cb61354c52f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 2301a4709585f9243073f085703a3070c813b43e
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207565"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860627"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>Configurar eventos estendidos para Grupos de Disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,9 +81,9 @@ Para obter informações sobre alguns dos eventos cobertos pelo alwayson_health,
   
  [availability_replica_manager_state](#BKMK_availability_replica_manager_state)  
   
- [error_reported (1480): Alteração da função de réplica de banco de dados](#BKMK_error_reported_1480)  
+ [error_reported (1480): alteração da função de réplica de banco de dados](#BKMK_error_reported_1480)  
   
-###  <a name="BKMK_availability_replica_state_change "></a> availability_replica_state_change  
+###  <a name="BKMK_availability_replica_state_change"></a> availability_replica_state_change  
  Ocorre quando o estado de uma réplica de disponibilidade foi alterado. A criação de um grupo de disponibilidade ou a junção de uma réplica de disponibilidade pode disparar esse evento. É útil para o diagnóstico de failover automático com falha. Ele também pode ser usado para rastrear as etapas de failover.  
   
 #### <a name="event-information"></a>Informações de evento  
@@ -384,5 +384,3 @@ GO
   
 ## <a name="next-steps"></a>Próximas etapas  
  [Exibir dados de sessão de evento](https://msdn.microsoft.com/library/hh710068(v=sql.110).aspx)   
- 
-  

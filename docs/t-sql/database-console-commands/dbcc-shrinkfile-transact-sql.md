@@ -30,12 +30,12 @@ ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 author: pmasl
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 7e8d9952c99ed78e98be6664e091cc744445f5d5
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: eb1f7d9efbbf260395cff607d5f8aa3209c677c4
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685823"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872266"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ Essa opção não tem suporte em contêineres de grupo de arquivos FILESTREAM.
 Se for especificado, DBCC SHRINKFILE tentará reduzir o arquivo até *target_size*. As páginas usadas na área do arquivo a ser liberadas serão movidas para espaço livres nas áreas do arquivo que serão mantidas. Por exemplo, com um arquivo de dados de 10 MB, uma operação DBCC SHRINKFILE com 8 *target_size* move todas as páginas usadas nos últimos 2 MB do arquivo para qualquer página não alocada nos primeiros 8 MB do arquivo. A DBCC SHRINKFILE não reduzirá um arquivo além do tamanho necessário dos dados armazenados. Por exemplo, se 7 MB de um arquivo de dados de 10 MB forem usados, uma instrução DBCC SHRINKFILE com *target_size* igual a 6 reduzirá o arquivo somente para 7 MB, não para 6 MB.
   
 EMPTYFILE  
-Migra todos os dados do arquivo especificado para outros arquivos no **mesmo grupo de arquivos**. Em outras palavras, EMPTYFILE migrará os dados do arquivo especificado para outros arquivos no mesmo grupo de arquivos. ENPTYFILE garante que nenhum dado novo seja adicionado ao arquivo, apesar de ele não ser somente leitura. Você pode usar a instrução [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) para remover um arquivo. Se você usar a instrução [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) para alterar o tamanho do arquivo, o sinalizador somente leitura será redefinido e dados poderão ser adicionados.
+Migra todos os dados do arquivo especificado para outros arquivos no **mesmo grupo de arquivos**. Em outras palavras, EMPTYFILE migrará os dados do arquivo especificado para outros arquivos no mesmo grupo de arquivos. EMPTYFILE garante que nenhum dado novo seja adicionado ao arquivo, apesar de ele não ser somente leitura. Você pode usar a instrução [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) para remover um arquivo. Se você usar a instrução [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) para alterar o tamanho do arquivo, o sinalizador somente leitura será redefinido e dados poderão ser adicionados.
 
 Em contêineres de grupo de arquivos FILESTREAM, não é possível usar ALTER DATABASE para remover um arquivo até que o coletor de lixo FILESTREAM tenha sido executado e tenha excluído todos os arquivos do contêiner de grupo de arquivos desnecessários que EMPTYFILE copiou em outro contêiner. Para obter mais informações, consulte [sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)
   

@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a0ea80a51a578f99cdff6189acacfe991ab34c43
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 0e3d57094a6863bb5b6bebd96f05ed57a1fcc25f
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557833"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872016"
 ---
 # <a name="rename-a-database"></a>Renomear um banco de dados
 
@@ -31,7 +31,7 @@ ms.locfileid: "51557833"
   
 - Antes de começar:  
   
-     [Limitações e restrições](#limitations-and-restrictions)  
+     [Limitações e Restrições](#limitations-and-restrictions)  
   
      [Segurança](#security)  
   
@@ -41,14 +41,14 @@ ms.locfileid: "51557833"
   
      [Transact-SQL](#rename-a-database-using-transact-sql)  
   
-- **Follow Up:**  [After renaming a database](#FollowUp)  
+- **Acompanhamento:**  [Após renomear um banco de dados](#backup-after-renaming-a-database)  
 
 > [!NOTE]
 > Para renomear um banco de dados no SQL Data Warehouse do Azure ou Parallel Data Warehouse, use a instrução [RENAME (Transact-SQL)](../../t-sql/statements/rename-transact-sql.md).
   
 ## <a name="before-you-begin"></a>Antes de começar
   
-### <a name="limitations-and-restrictions"></a>Limitações e restrições  
+### <a name="limitations-and-restrictions"></a>Limitações e Restrições  
   
 - Os bancos de dados de sistema não podem ser renomeados.
 - O nome do banco de dados não pode ser alterado enquanto outros usuários estão acessando o banco de dados. 

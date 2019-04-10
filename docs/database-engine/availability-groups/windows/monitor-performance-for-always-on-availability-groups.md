@@ -11,12 +11,12 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 52a1bde0da61988793463aa725a5b0a4003b2e12
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 04ccb88fd3df348b21f61b0a01d4e49ce944c81c
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203345"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872316"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Monitorar o desempenho de Grupos de Disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,15 +24,15 @@ ms.locfileid: "53203345"
   
  Veja os tópicos que serão abordados:  
   
--   [Processo de sincronização de dados](#BKMK_DATA_SYNC_PROCESS)  
+-   [Processo de sincronização de dados](#data-synchronization-process)  
   
--   [Portões de controle de fluxo](#BKMK_FLOW_CONTROL_GATES)  
+-   [Portões de controle de fluxo](#flow-control-gates)  
   
--   [Estimando o tempo de failover (RTO)](#BKMK_RTO)  
+-   [Estimando o tempo de failover (RTO)](#estimating-failover-time-rto)  
   
--   [Estimando o potencial de perda de dados (RPO)](#BKMK_RPO)  
+-   [Estimando o potencial de perda de dados (RPO)](#estimating-potential-data-loss-rpo)  
   
--   [Monitoramento de RTO e RPO](#BKMK_Monitoring_for_RTO_and_RPO)  
+-   [Monitoramento de RTO e RPO](#monitoring-for-rto-and-rpo)  
   
 -   [Cenários de solução de problemas de desempenho](#BKMK_SCENARIOS)  
   
@@ -60,7 +60,7 @@ ms.locfileid: "53203345"
   
 |||||  
 |-|-|-|-|  
-|**Level**|**Número de portões**|**Número de mensagens**|**Métricas úteis**|  
+|**Nível**|**Número de portões**|**Número de mensagens**|**Métricas úteis**|  
 |Transporte|1 por réplica de disponibilidade|8192|Eventos estendidos **database_transport_flow_control_action**|  
 |banco de dados|1 por banco de dados de disponibilidade|11200 (x64)<br /><br /> 1600 (x86)|[DBMIRROR_SEND](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> Eventos estendidos **hadron_database_flow_control_action**|  
   
@@ -331,7 +331,7 @@ Para o banco de dados primário, o **last_commit_time** é a hora em que última
 ##  <a name="monitoring-for-rto-and-rpo"></a>Monitoramento de RTO e RPO  
  Esta seção demonstra como monitorar as métricas de RTO e RPO de seus grupos de disponibilidade. Esta demonstração é semelhante ao tutorial de GUI fornecido em [The Always On health model, part 2: Extending the health model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (O modelo de integridade do Always On, parte 2: estendendo o modelo de integridade).  
   
- Os elementos do tempo de failover e os cálculos da possível perda de dados em [Estimando o tempo de failover (RTO)](#BKMK_RTO) e [Estimando o potencial de perda de dados (RPO)](#BKMK_RPO) são fornecidos convenientemente como métricas de desempenho na faceta de gerenciamento de política, **Estado da réplica de banco de dados** (veja [Exibir as facetas do gerenciamento baseado em políticas em um objeto do SQL Server](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)). Você pode monitorar essas duas métricas de acordo com um agendamento e ser alertado quando as métricas excederem o RTO e RPO, respectivamente.  
+ Os elementos do tempo de failover e os cálculos da possível perda de dados em [Estimando o tempo de failover (RTO)](#estimating-failover-time-rto) e [Estimando o potencial de perda de dados (RPO)](#estimating-potential-data-loss-rpo) são fornecidos convenientemente como métricas de desempenho na faceta de gerenciamento de política, **Estado da réplica de banco de dados** (veja [Exibir as facetas do gerenciamento baseado em políticas em um objeto do SQL Server](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)). Você pode monitorar essas duas métricas de acordo com um agendamento e ser alertado quando as métricas excederem o RTO e RPO, respectivamente.  
   
  Os scripts demonstrados criam duas políticas de sistema que são executadas de acordo com os respectivos agendamentos, com as seguintes características:  
   
@@ -474,5 +474,3 @@ Para criar as políticas, siga as instruções abaixo em todas as instâncias de
 |hadr_dump_primary_progress|`alwayson`|Depurador|Primária|  
 |hadr_dump_log_progress|`alwayson`|Depurador|Primária|  
 |hadr_undo_of_redo_log_scan|`alwayson`|Analítico|Secundário|  
-  
-  

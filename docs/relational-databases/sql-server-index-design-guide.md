@@ -23,12 +23,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4214bcf8d2dcd3c8b00d51580ea71eae0e40e96e
-ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
+ms.openlocfilehash: c5913b6b5bfc6d06038c1debfc36a0c203e3b54f
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54880539"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872326"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Guia de arquitetura e design de índices do SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -277,7 +277,7 @@ Se o índice clusterizado não for criado com a propriedade `UNIQUE`, o [!INCLUD
     Por exemplo, uma ID de funcionário identifica os funcionários de maneira exclusiva. Um índice clusterizado ou uma restrição [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md) na coluna `EmployeeID` melhorará o desempenho de consultas que pesquisam informações de funcionário com base no número de ID do funcionário. Como alternativa, um índice clusterizado poderia ser criado em `LastName`, `FirstName`, `MiddleName` porque os registros dos funcionários são agrupados e consultados frequentemente dessa maneira e a combinação dessas colunas ainda ofereceria um grau alto de diferença. 
 
     > [!TIP]
-    > Se não for especificado de forma diferente, ao criar uma restrição [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md), [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] criará um [índice clusterizado](#clustered_index) para dar suporte a essa restrição.
+    > Se não for especificado de forma diferente, ao criar uma restrição [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md), [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] criará um [índice clusterizado](#Clustered) para dar suporte a essa restrição.
     > Embora um *[uniqueidentifier](../t-sql/data-types/uniqueidentifier-transact-sql.md)* possa ser usado para impor exclusividade como uma PRIMARY KEY, ele não é uma chave de clustering eficiente.
     > Se estiver usando um *uniqueidentifier* como a PRIMARY KEY, a recomendação é criá-lo como um índice não clusterizado e usar outra coluna, como um `IDENTITY` para criar o índice clusterizado.   
   
@@ -747,7 +747,7 @@ O número de buckets deve ser especificado no momento da definição do índice:
 A função de hash é aplicada às colunas de chave do índice e o resultado da função determina em qual bucket a chave se enquadra. Cada bucket tem um ponteiro para linhas cujos valores de chave de hash são mapeados para o bucket.
 
 A função de hash usada para índices de hash tem as seguintes características:
-- O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tem uma função de hash que é usada para todos os índices de hash.
+- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tem uma função de hash que é usada para todos os índices de hash.
 - A função de hash é determinística. O mesmo valor de chave de entrada sempre é mapeado para o mesmo bucket no índice de hash.
 - Várias chaves de índice podem ser mapeadas para o mesmo bucket de hash.
 - A função de hash é equilibrada, o que significa que a distribuição de valores de chave do índice em buckets de hash geralmente segue uma distribuição de Poisson ou curva de sino, não uma distribuição linear simples.
@@ -890,13 +890,13 @@ O desempenho de um índice não clusterizado é melhor do que o de índices de h
 [ALTER INDEX &#40;Transact-SQL&#41;](../t-sql/statements/alter-index-transact-sql.md)   
 [CREATE XML INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-xml-index-transact-sql.md)  
 [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-spatial-index-transact-sql.md)     
-[Reorganizar e recompilar índices](../relational-databases/indexes/reorganize-and-rebuild-indexes.md)         
+[Reorganizar e recriar índices](../relational-databases/indexes/reorganize-and-rebuild-indexes.md)         
 [Melhorando o desempenho com exibições indexadas do SQL Server 2008](https://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
-[Tabelas e índices particionados](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
+[Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
 [Criar uma chave primária](../relational-databases/tables/create-primary-keys.md)    
 [Índices para tabelas com otimização de memória](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)  
 [Visão geral de Índices columnstore](../relational-databases/indexes/columnstore-indexes-overview.md)  
-[Solução de problemas de índices de hash para tabelas com otimização de memória](../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)    
+[Solução de problemas dos índices de hash para tabelas com otimização de memória](../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)    
 [Exibições de gerenciamento dinâmico de tabela com otimização de memória &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)   
 [Exibições e funções de gerenciamento dinâmico relacionadas ao índice &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)       
 [Índices em colunas computadas](../relational-databases/indexes/indexes-on-computed-columns.md)   

@@ -18,12 +18,12 @@ ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b5c910872b342d8d1bd9dc15ed2796eea76edfc8
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 7031a7d2a3a260d9ffb29f8651d04d874cf84f76
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305524"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860417"
 ---
 # <a name="configure-read-only-routing-for-an-always-on-availability-group"></a>Configurar o roteamento somente leitura para um grupo de disponibilidade Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ O roteamento somente leitura está disponível no [!INCLUDE[sssql15](../../../in
   
 -   **Antes de começar:**  
   
-     [Pré-requisitos](#Prerequisites)  
+     [Prerequisites](#Prerequisites)  
   
      [Quais as propriedades de réplica você precisa configurar para dar suporte a roteamento somente leitura?](#RORReplicaProperties)  
   
@@ -53,9 +53,7 @@ O roteamento somente leitura está disponível no [!INCLUDE[sssql15](../../../in
   
 -   **Acompanhamento:**  [Após a configuração do roteamento somente leitura](#FollowUp)  
   
--   [Tarefas relacionadas](#RelatedTasks)  
-  
--   [Conteúdo relacionado](#RelatedContent)  
+-   [Related Tasks](#RelatedTasks)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -92,7 +90,7 @@ O roteamento somente leitura está disponível no [!INCLUDE[sssql15](../../../in
 |Para configurar réplicas ao criar um grupo de disponibilidade|Requer a associação na função de servidor fixa **sysadmin** e a permissão de servidor CREATE AVAILABILITY GROUP, a permissão ALTER ANY AVAILABILITY GROUP ou a permissão CONTROL SERVER.|  
 |Para modificar uma réplica de disponibilidade|Requer a permissão ALTER AVAILABILITY GROUP no grupo de disponibilidade, a permissão CONTROL AVAILABILITY GROUP, a permissão ALTER ANY AVAILABILITY GROUP ou a permissão CONTROL SERVER.|  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 ### <a name="configure-a-read-only-routing-list"></a>Configurar uma lista de roteamento somente leitura  
  Use as etapas a seguir para configurar o roteamento somente leitura usando o Transact-SQL. Para obter um exemplo de código, veja [Exemplo (Transact-SQL)](#TsqlExample), mais adiante nesta seção.  
@@ -111,7 +109,7 @@ O roteamento somente leitura está disponível no [!INCLUDE[sssql15](../../../in
          É uma cadeia de caracteres, como um nome de sistema, um nome de domínio totalmente qualificado ou um endereço IP, que identifica de forma exclusiva o sistema do computador de destino.  
   
          *port*  
-         É um número de porta que é usado pelo mecanismo de banco de dados da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+         É um número de porta que é usado pelo mecanismo de banco de dados da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
          Por exemplo:   `SECONDARY_ROLE (READ_ONLY_ROUTING_URL = N'TCP://COMPUTER01.contoso.com:1433')`  
   
@@ -207,7 +205,7 @@ GO
   
 ### <a name="set-up-and-use-the-sql-server-powershell-provider"></a>Configurar e usar o provedor do SQL Server PowerShell  
   
--   [Provedor do SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell Provider](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
 -   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
   
@@ -263,7 +261,7 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
   
 **Para configurar o acesso de conexão de cliente**  
   
--   [Criar ou configurar um ouvinte do grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [Criar ou configurar um ouvinte de grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   
 -   [Configurar o acesso somente leitura em uma réplica de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
@@ -275,7 +273,7 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
   
 **Blogs:**  
   
--    [Calculando read_only_routing_url de AlwaysOn](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)  
+-    [Calculando read_only_routing_url do AlwaysOn](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)  
   
 -    [Blogs da equipe do Always On do SQL Server: o blog oficial da equipe do Always On do SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
@@ -291,10 +289,8 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
 
 - [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
 
-- [Secundárias ativas: réplicas secundárias legíveis &#40;Grupos de Disponibilidade Always On&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+- [Secundárias ativas: Réplicas Secundárias de leitura &#40;Grupos de Disponibilidade Always On&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
 
-- [Sobre o acesso de conexão de cliente a réplicas de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
+- [Sobre Acesso de conexão de cliente a réplicas de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
  
 - [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
-  
-  

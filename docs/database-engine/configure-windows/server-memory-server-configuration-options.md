@@ -22,12 +22,12 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4eb114e5309b1733e90b417517c885e23ec09a42
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: e3d3a6524d0f7e791628ec664bc9b5df17a0e529
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58072200"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042185"
 ---
 # <a name="server-memory-server-configuration-options"></a>Opções Server Memory de configuração do servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ A quantidade mínima de memória permitida para a **memória máxima do servidor
 > [!IMPORTANT]  
 > Configurar o valor de **max server memory** como muito alto pode fazer com que uma única instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenha que competir por memória com outras instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hospedadas no mesmo host. No entanto, configurar este valor como muito baixo pode ocasionar uma pressão de memória significativa e problemas de desempenho. Configurar a opção **max server memory** com o valor mínimo pode até mesmo impedir que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seja iniciado. Se você não puder iniciar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] após alterar essa opção, inicie-o usando a opção de inicialização **_-f_** e redefina a **memória máxima do servidor** para seu valor anterior. Para obter mais informações, consulte [Opções de inicialização do serviço Mecanismo de Banco de Dados](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
     
-O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode usar a memória de modo dinâmico. No entanto, você pode definir as opções de memória manualmente e restringir a quantidade de memória que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode acessar. Antes de definir a quantidade de memória para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], determine a configuração de memória apropriada ao subtrair, da memória física total, a memória necessária para o sistema operacional, as alocações de memória não controladas pela configuração max_server_memory e quaisquer outras instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (e outros usos do sistema, caso o computador não esteja totalmente dedicado ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Essa diferença é a quantidade máxima de memória que você pode atribuir à instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atual.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode usar a memória de modo dinâmico. No entanto, é possível definir as opções de memória manualmente e restringir a quantidade de memória que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode acessar. Antes de definir a quantidade de memória para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], determine a configuração de memória apropriada ao subtrair, da memória física total, a memória necessária para o sistema operacional, as alocações de memória não controladas pela configuração max_server_memory e quaisquer outras instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (e outros usos do sistema, caso o computador não esteja totalmente dedicado ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Essa diferença é a quantidade máxima de memória que você pode atribuir à instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atual.  
  
 ## <a name="setting-the-memory-options-manually"></a>Configurando as opções de memória manualmente  
 As opções **min server memory** e **max server memory** do servidor podem ser definidas para abrangerem um intervalo de valores de memória. Esse método é útil para os administradores de banco de dados ou de sistemas configurarem uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em conjunto com os requisitos de memória de outros aplicativos ou de outras instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executadas no mesmo host.
@@ -52,7 +52,7 @@ As opções **min server memory** e **max server memory** do servidor podem ser 
 <a name="min_server_memory"></a> Use **min_server_memory** para garantir uma quantidade mínima de memória disponível para o Gerenciador de Memória do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não alocará imediatamente a quantidade de memória especificada em **memória mínima do servidor** na inicialização. Porém, depois que o uso de memória atingir esse valor devido à carga do cliente, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não poderá liberar memória livre a menos que o valor de **memória mínima do servidor** seja reduzido. Por exemplo, quando várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puderem existir simultaneamente no mesmo host, defina o parâmetro min_server_memory em vez do max_server_memory com a finalidade de reservar memória para uma instância. Além disso, a configuração de um valor de min_server_memory é essencial em um ambiente virtualizado para garantir que a pressão de memória do host subjacente não tente desalocar a memória do pool de buffers em uma VM (máquina virtual) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convidada além do que for necessário para se obter um desempenho aceitável.
  
 > [!NOTE]  
-> Não há nenhuma garantia de que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aloque a quantidade de memória especificada em **min server memory**. Se a carga do servidor nunca exigir a alocação da quantidade de memória especificada em **memória mínima do servidor**, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será executado com menos memória.  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aloque a quantidade de memória especificada em **memória mínima do servidor**. Se a carga do servidor nunca exigir a alocação da quantidade de memória especificada em **memória mínima do servidor**, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será executado com menos memória.  
   
 <a name="max_server_memory"></a> Utilize **max_server_memory** para garantir que o sistema operacional não experimente uma pressão de memória prejudicial. Para definir a configuração max server memory, monitore o consumo geral do processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para determinar os requisitos de memória. Para ser mais preciso com esses cálculos para uma única instância:
  -  Da memória total do SO, reserve de 1 GB a 4 GB para o sistema operacional em si.
@@ -86,7 +86,8 @@ Para desabilitar a opção **Bloquear Páginas na Memória** do [!INCLUDE[ssNoVe
 A configuração dessa opção não afeta o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [gerenciamento de memória dinâmica](../../relational-databases/memory-management-architecture-guide.md#dynamic-memory-management), permitindo que você expanda ou reduza mediante a solicitação de outros administradores de memória. Ao usar o direito de usuário *Bloquear Páginas na Memória*, é recomendável definir um limite superior para a opção **max server memory**, conforme [detalhado acima](#max_server_memory).
 
 > [!IMPORTANT]
-> Essa opção só deverá ser configurada quando necessário, ou seja, se houver sinais de que o processo sqlservr está sendo paginado. Neste caso, o erro 17890 será reportado no log de erros, que se assemelha ao exemplo abaixo: `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`
+> Essa opção só deverá ser configurada quando necessário, ou seja, se houver sinais de que o processo sqlservr está sendo paginado. Neste caso, o erro 17890 será reportado no log de erros, que se assemelha ao exemplo abaixo:
+> `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`
 > A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], o [sinalizador de rastreamento 845](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) não é necessário para que a Standard Edition use páginas bloqueadas. 
   
 ### <a name="to-enable-lock-pages-in-memory"></a>Habilitar a opção Bloquear Páginas na Memória  
@@ -120,7 +121,7 @@ Para habilitar a opção Bloquear Páginas na Memória:
  É possível alterar essas configurações sem reinicializar as instâncias, para que você possa testar facilmente para encontrar as melhores configurações para seu padrão de uso.  
   
 ## <a name="providing-the-maximum-amount-of-memory-to-sql-server"></a>Fornecendo a quantidade máxima de memória para o SQL Server  
-A memória pode ser configurada até o limite de espaço do endereço virtual do processo em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Limites de memória para as versões do Windows e do Windows Server](/windows/desktop/Memory/memory-limits-for-windows-releases#physical_memory_limits_windows_server_2016).
+A memória pode ser configurada até o limite de espaço do endereço virtual do processo em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Limites de memória para as versões do Windows e do Windows Server](/windows/desktop/Memory/memory-limits-for-windows-releases#physical-memory-limits-windows-server-2016).
 
 ## <a name="examples"></a>Exemplos
 
@@ -168,7 +169,7 @@ FROM sys.configurations c WHERE c.[name] = 'max server memory (MB)'
 ```
   
 ## <a name="see-also"></a>Consulte Também  
- [Guia de arquitetura de gerenciamento de memória](../../relational-databases/memory-management-architecture-guide.md)   
+ [guia de arquitetura de gerenciamento de memória](../../relational-databases/memory-management-architecture-guide.md)   
  [Monitorar e ajustar o desempenho](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
@@ -178,4 +179,3 @@ FROM sys.configurations c WHERE c.[name] = 'max server memory (MB)'
  [Edições e recursos com suporte do SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits)   
  [Edições e recursos compatíveis do SQL Server 2017 no Linux](../../linux/sql-server-linux-editions-and-components-2017.md#Cross-BoxScaleLimits)   
  [Limites de memória para as versões do Windows e do Windows Server](/windows/desktop/Memory/memory-limits-for-windows-releases)
- 
