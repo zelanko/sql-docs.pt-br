@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: efd71653e723344e9175d9ab1529fafd610901df
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 4c1b433ae2023f544073e285cca9594c980dd83f
+ms.sourcegitcommit: 57f7e5f25161dbb4cc446e751ea74b1ac5f86165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685424"
+ms.lasthandoff: 04/10/2019
+ms.locfileid: "59476712"
 ---
 # <a name="analyze-in-excel"></a>Analisar no Excel
 
@@ -33,7 +33,7 @@ Este artigo faz parte de um tutorial de modelagem de tabela, que deve ser conclu
   
 ## <a name="browse-using-the-default-and-internet-sales-perspectives"></a>Procurar usando as perspectivas Padrão e Vendas pela Internet  
 
-Nestas primeiras tarefas, procure seu modelo usando a perspectiva padrão, que inclui todos os objetos de modelo, e também usando a perspectiva de vendas pela Internet você viu anteriormente. A perspectiva Vendas pela Internet exclui o objeto de tabela Cliente.  
+Nestas primeiras tarefas, procure seu modelo usando a perspectiva padrão, que inclui todos os objetos de modelo, e também usando a perspectiva de vendas pela Internet criado anteriormente. A perspectiva Vendas pela Internet exclui o objeto de tabela Cliente.  
   
 #### <a name="to-browse-by-using-the-default-perspective"></a>Para navegar usando a perspectiva Padrão  
   
