@@ -2,7 +2,6 @@ items:
 - name: Bem-vindo
   href: ../sql-server/sql-server-technical-documentation.md?toc=..%2ftoc%2ftoc.json
 - name: Visão geral
-  href: ../toc/redirectfrom-overview-10.md
   items:
   - name: Novo no SQL Server
     items:
@@ -42,7 +41,6 @@ items:
     - name: SQL Server 2008 R2 SP2
       href: ../sql-server/sql-server-2008-r2-sp2-release-notes.md
 - name: Cluster de Big Data
-  href: ../toc/redirectfrom-big-data-cluster.md
   items:
   - name: Visão geral
     items:
@@ -195,12 +193,10 @@ items:
         - name: Montagem do armazenamento do mssqlctl
           href: ../big-data-cluster/reference-mssqlctl-storage-mount.md
 - name: Continuidade de negócios
-  href: redirectfrom-business-continuity-10.md
   items:
   - name: Visão geral
     href: ../database-engine/sql-server-business-continuity-dr.md
   - name: Backup e restauração
-    href: ../toc/redirectfrom-backup-restore-10.md
     items:
     - name: Visão geral
       items:
@@ -1008,7 +1004,6 @@ items:
         - name: Configurar limites de aviso
           href: ../database-engine/database-mirroring/set-warning-thresholds.md
   - name: Envio de logs
-    href: ../toc/redirectfrom-log-shipping.md
     items:
     - name: Visão geral
       href: ../database-engine/log-shipping/about-log-shipping-sql-server.md
@@ -1047,7 +1042,6 @@ items:
       - name: Configurações do monitor de envio de logs
         href: ../relational-databases/databases/log-shipping-monitor-settings.md
 - name: Design do banco de dados
-  href: ../toc/redirectfrom-database-design.md
   items:
   - name: Dados hierárquicos
     href: ../relational-databases/hierarchical-data-sql-server.md
@@ -1067,7 +1061,6 @@ items:
     - name: Definir um idioma de sessão
       href: ../relational-databases/collations/set-a-session-language.md
   - name: Bancos de dados
-    href: ../toc/redirectfrom-databases.md
     items:
     - name: Visão geral
       href: ../relational-databases/databases/databases.md
@@ -1929,7 +1922,6 @@ items:
       - name: Usar os métodos value() e nodes() com OPENXML
         href: ../relational-databases/xml/use-the-value-and-nodes-methods-with-openxml.md
 - name: Desenvolvimento
-  href: redirectfrom-development-10.md
   items:
   - name: Interação de programação ++
     displayName: Connectivity, Connect, Connection
@@ -3972,7 +3964,6 @@ items:
   - name: Arquitetura de gerenciamento de memória
     href: ../relational-databases/memory-management-architecture-guide.md
 - name: Instalação
-  href: redirectfrom-installation-10.md
   items:
   - name: Visão geral
     items:
@@ -4417,7 +4408,6 @@ items:
       - name: Página Avançada
         href: ../database-engine/configure-windows/server-properties-advanced-page.md
 - name: Migrar e carregar dados
-  href: ../toc/sectionfor-migrate-load-data-overall-sql-server.md
   items:
   - name: SSIS (SQL Server Integration Services) ++
     href: ../integration-services/index.md
@@ -4585,7 +4575,6 @@ items:
     - name: Segurança do DQS
       href: ../data-quality-services/dqs-security.md
   - name: Replicação
-    href: ../toc/redirectfrom-replication.md
     items:
     - name: Visão geral
       href: ../relational-databases/replication/sql-server-replication.md
@@ -7236,7 +7225,6 @@ items:
   - name: Subconsultas
     href: ../relational-databases/performance/subqueries.md
   - name: Virtualização de dados (Polybase)
-    href: ../toc/redirectfrom-polybase.md
     items:
     - name: Visão geral
       items:
@@ -10304,7 +10292,6 @@ items:
   - name: Conteúdo local com o Visualizador da Ajuda
     href: ../sql-server/sql-server-help-installation.md
 - name: Referência
-  href: ../toc/redirectfrom-reference-10.md
   items:
   - name: O SQL Docs inclui arquivos
     href: ../sql-server/applies-to-includes.md
@@ -10312,7 +10299,6 @@ items:
     displayName: 2005, 2008, 2008 r2, 2012
     href: https://docs.microsoft.com/previous-versions/sql/
   - name: Exemplos de banco de dados
-    href: ../toc/redirectfrom-database-samples.md
     items:
     - name: Visão geral dos exemplos
       href: ../samples/sql-samples-where-are.md
@@ -10323,12 +10309,10 @@ items:
       - name: Instalar e configurar
         href: ../samples/adventureworks-install-configure.md
     - name: Wide World Importers
-      href: ../toc/redirectfrom-wide-world-importers.md
       items:
       - name: Visão geral
         href: ../samples/wide-world-importers-what-is.md
       - name: OLTP
-        href: ../toc/redirectfrom-oltp-10.md
         items:
         - name: Catálogo do banco de dados
           href: ../samples/wide-world-importers-oltp-database-catalog.md
@@ -10337,7 +10321,6 @@ items:
         - name: recursos do SQL Server
           href: ../samples/wide-world-importers-oltp-use-of-sql-server-features.md
       - name: data warehouse
-        href: ../toc/redirectfrom-data-warehouse-10.md
         items:
         - name: Catálogo do banco de dados
           href: ../samples/wide-world-importers-dw-database-catalog.md
@@ -17277,9 +17260,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: Manipulando namespaces em XQuery
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: cae1885d4cadd788449b3f14bbd626ce06d9745d
-ms.sourcegitcommit: bf23b81af45eddaa3c8bb87135c5ad0e1b42fbc2
+ms.openlocfilehash: bcc3ca478ec16c7a7fc1ff0213b67e29c8a28e78
+ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59367254"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506573"
