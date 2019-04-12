@@ -1,5 +1,5 @@
 ---
-title: sys. user_token (Transact-SQL) | Microsoft Docs
+title: sys.user_token (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,28 +24,28 @@ ms.assetid: be018103-5e57-43a4-9160-9bf420892aa7
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 806675392484e7d9d23d9432b336f6367d04bd1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a120fe3802235ff0d5548693d9bf7f4638ef5e42
+ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770134"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506483"
 ---
 # <a name="sysusertoken-transact-sql"></a>sys.user_token (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retorna uma linha para todo principal de banco de dados que faz parte do token de usuário no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**principal_id**|**int**|ID do principal. O valor é exclusivo no banco de dados.|  
+|**principal_id**|**INT**|ID do principal. O valor é exclusivo no banco de dados.|  
 |**sid**|**varbinary(85)**|Identificador de segurança do principal se o principal for definido fora do banco de dados. Por exemplo, pode ser um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], logon do Windows, logon de grupo do Windows ou um logon mapeado para um certificado, caso contrário, esse valor será NULL.|  
-|**name**|**nvarchar (128)**|Nome do principal. O valor é exclusivo no banco de dados.|  
-|**type**|**nvarchar (128)**|Descrição do tipo de principal. Todos os tipos são mapeados para **sid**. O valor pode ser um dos seguintes:<br /><br /> SQL USER<br /><br /> WINDOWS LOGIN<br /><br /> WINDOWS GROUP<br /><br /> ROLE<br /><br /> APPLICATION ROLE<br /><br /> DATABASE ROLE<br /><br /> USER MAPPED TO CERTIFICATE<br /><br /> USER MAPPED TO ASYMMETRIC KEY<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC KEY|  
-|**Uso**|**nvarchar (128)**|Indica que o principal participa da avaliação de permissões GRANT ou DENY ou serve como um autenticador.<br /><br /> Este valor pode ser um dos seguintes:<br /><br /> GRANT OR DENY<br /><br /> DENY ONLY<br /><br /> AUTHENTICATOR|  
+|**nome**|**nvarchar (128)**|Nome do principal. O valor é exclusivo no banco de dados.|  
+|**Tipo**|**nvarchar (128)**|Descrição do tipo de principal. Todos os tipos são mapeados para **sid**. O valor pode ser um dos seguintes:<br /><br /> SQL USER<br /><br /> WINDOWS LOGIN<br /><br /> WINDOWS GROUP<br /><br /> ROLE<br /><br /> APPLICATION ROLE<br /><br /> DATABASE ROLE<br /><br /> USER MAPPED TO CERTIFICATE<br /><br /> USER MAPPED TO ASYMMETRIC KEY<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC KEY|  
+|**usage**|**nvarchar (128)**|Indica que o principal participa da avaliação de permissões GRANT ou DENY ou serve como um autenticador.<br /><br /> Este valor pode ser um dos seguintes:<br /><br /> GRANT OR DENY<br /><br /> DENY ONLY<br /><br /> AUTHENTICATOR|  
   
 ## <a name="see-also"></a>Consulte também  
- [sys. login_token &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-login-token-transact-sql.md)   
+ [sys.login_token &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-login-token-transact-sql.md)   
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
