@@ -18,12 +18,12 @@ ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 51bc927dc252eb700825dac6e865e8932586cd07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c34d7f326c10ceebb3ee3b97c72b583e13a78ff5
+ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838104"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59542186"
 ---
 # <a name="spaddlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,30 +35,29 @@ ms.locfileid: "47838104"
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'   
-     [ , [ @useself = ] 'TRUE' | 'FALSE' | NULL ]   
+     [ , [ @useself = ] { 'TRUE' | 'FALSE' | NULL } ]   
      [ , [ @locallogin = ] 'locallogin' ]   
      [ , [ @rmtuser = ] 'rmtuser' ]   
      [ , [ @rmtpassword = ] 'rmtpassword' ]   
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @rmtsrvname **=** ] **'***rmtsrvname***'**  
+ `[ @rmtsrvname = ] 'rmtsrvname'`  
  É o nome do servidor vinculado ao qual o mapeamento de logon se aplica. *rmtsrvname* está **sysname**, sem padrão.  
   
- [ @useself **=** ] **'** TRUE **'** | 'FALSE' | 'NULL'  
+ `[ @useself = ] { 'TRUE' | 'FALSE' | NULL }'`  
  Determina se é necessário se conectar ao *rmtsrvname* pela representação de logons locais ou envio explícito de um logon e senha. O tipo de dados é **varchar (** 8 **)**, com um padrão de TRUE.  
   
  Um valor TRUE Especifica que os logons usam suas próprias credenciais para se conectar ao *rmtsrvname*, com o *rmtuser* e *rmtpassword* argumentos que está sendo ignorados. FALSE Especifica que o *rmtuser* e *rmtpassword* argumentos são usados para se conectar ao *rmtsrvname* especificado *locallogin* . Se *rmtuser* e *rmtpassword* também estiver definido como NULL, nenhum logon ou a senha será usada para se conectar ao servidor vinculado.  
   
- [ @locallogin **=** ] **'***locallogin***'**  
+ `[ @locallogin = ] 'locallogin'`  
  É um logon no servidor local. *locallogin* está **sysname**, com um padrão NULL. NULL Especifica que esta entrada se aplica a todos os logons locais que se conectam ao *rmtsrvname*. Se não for NULL, *locallogin* pode ser um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon ou um logon do Windows. O logon do Windows deve ter acesso ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diretamente ou por meio de sua associação em um grupo do Windows com acesso.  
   
- [ @rmtuser **=** ] **'***rmtuser***'**  
+ `[ @rmtuser = ] 'rmtuser'`  
  É o logon remoto usado para se conectar ao *rmtsrvname* quando @useself é FALSE. Quando o servidor remoto é uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usa a autenticação do Windows, *rmtuser* é um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon. *rmtuser* está **sysname**, com um padrão NULL.  
   
- [ @rmtpassword **=** ] **'***rmtpassword***'**  
+ `[ @rmtpassword = ] 'rmtpassword'`  
  É a senha associada *rmtuser*. *rmtpassword* está **sysname**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

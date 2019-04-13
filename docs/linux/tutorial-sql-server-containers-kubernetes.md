@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.custom: sql-linux,mvc
 ms.technology: linux
-ms.openlocfilehash: 669d02d32642ba4723892a98a1f4d0f3bc6e51f6
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.openlocfilehash: 13bd39a2d5334c2d343fdbc6c77a697a5d6a8403
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626316"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516602"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Implantar um contêiner do SQL Server em Kubernetes com serviços de Kubernetes do Azure (AKS)
 
@@ -155,7 +155,7 @@ Configurar uma [volume persistente](https://kubernetes.io/docs/concepts/storage/
 
 Neste exemplo, o contêiner que hospeda a instância do SQL Server é descrito como um objeto de implantação do Kubernetes. A implantação cria um conjunto de réplicas. O conjunto de réplicas cria o pod. 
 
-Nesta etapa, crie um manifesto para descrever o contêiner com base no SQL Server [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) imagem do Docker. As referências do manifestas a `mssql-server` declaração de volume persistente e o `mssql` segredo que já foram aplicados ao cluster Kubernetes. O manifesto também descreve uma [serviço](https://kubernetes.io/docs/concepts/services-networking/service/). Esse serviço é um balanceador de carga. O balanceador de carga garante que o endereço IP persista após a instância do SQL Server é recuperada. 
+Nesta etapa, crie um manifesto para descrever o contêiner com base no SQL Server [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server) imagem do Docker. As referências do manifestas a `mssql-server` declaração de volume persistente e o `mssql` segredo que já foram aplicados ao cluster Kubernetes. O manifesto também descreve uma [serviço](https://kubernetes.io/docs/concepts/services-networking/service/). Esse serviço é um balanceador de carga. O balanceador de carga garante que o endereço IP persista após a instância do SQL Server é recuperada. 
 
 1. Crie um manifesto (um arquivo YAML) para descrever a implantação. O exemplo a seguir descreve uma implantação, incluindo um contêiner com base na imagem de contêiner do SQL Server.
 
@@ -253,7 +253,7 @@ Nesta etapa, crie um manifesto para descrever o contêiner com base no SQL Serve
    Na imagem anterior, o pod tem um status de `Running`. Este status indica que o contêiner está pronto. Isso pode levar vários minutos.
 
    >[!NOTE]
-   >Depois que a implantação é criada, ele pode levar alguns minutos antes do pod está visível. O atraso é porque o cluster efetua pull de [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) imagem do Docker hub. Depois que a imagem é colocada na primeira vez, as implantações subsequentes podem ser mais rápidas se a implantação for para um nó que já tem a imagem em cache ali. 
+   >Depois que a implantação é criada, ele pode levar alguns minutos antes do pod está visível. O atraso é porque o cluster efetua pull de [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server) imagem do Docker hub. Depois que a imagem é colocada na primeira vez, as implantações subsequentes podem ser mais rápidas se a implantação for para um nó que já tem a imagem em cache ali. 
 
 1. Verifique se que os serviços estão em execução. Execute o seguinte comando:
 

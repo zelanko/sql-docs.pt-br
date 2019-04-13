@@ -19,12 +19,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: eb8ee3482868f64765e7bf90e962c9756eadbdbc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d5f16e1a1b3b3fdfd0a12083ea8e86e034f50330
+ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015097"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59542106"
 ---
 # <a name="spdeletedatabasefirewallrule-azure-sql-database"></a>sp_delete_database_firewall_rule (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -34,14 +34,13 @@ ms.locfileid: "56015097"
  
 ## <a name="syntax"></a>Sintaxe  
   
-```  
-  
+```    
 sp_delete_database_firewall_rule [@name =] [N]'name'
 [ ; ]  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [**@name =**] **'**_name_**'**  
+ `[@name =] [N]'name'`  
  O nome da configuração de firewall de nível de banco de dados que será removida. *nome da* está **nvarchar (128)** sem nenhum valor padrão. O identificador de Unicode `N` é opcional para [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. 
   
 ## <a name="permissions"></a>Permissões  

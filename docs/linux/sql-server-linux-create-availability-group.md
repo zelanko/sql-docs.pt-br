@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: e951e87abf7e88502597b6a3caf6f7ca4e34e60b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 9a9a3d18f1850b563882a2303db8dd28b2916ac4
+ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205745"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59542226"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Criar e configurar um grupo de disponibilidade para o SQL Server no Linux
 
@@ -178,7 +178,7 @@ Este exemplo criará certificados para uma configuração de três nós. Os nome
     
     Para este exemplo:
     
-    - Copiar LinAGN1_Cert.cer LinAGN2 e LinAGN3
+    - Copy LinAGN1_Cert.cer to LinAGN2 and LinAGN3
     - Copie LinAGN2_Cert.cer LinAGN1 e LinAGN3.
     - Copie LinAGN3_Cert.cer LinAGN1 e LinAGN2.
     
@@ -243,7 +243,7 @@ Este exemplo criará certificados para uma configuração de três nós. Os nome
     GO
     ```
     
-10.  Restaure LinAGN1_Cert e LinAGN3_Cert em LinAGN2. 
+10. Restaure LinAGN1_Cert e LinAGN3_Cert em LinAGN2.
     
     ```SQL
     CREATE CERTIFICATE LinAGN1_Cert
@@ -257,8 +257,9 @@ Este exemplo criará certificados para uma configuração de três nós. Os nome
     FROM FILE = '/var/opt/mssql/data/LinAGN3_Cert.cer';
     
     GO
+    ```
     
-11.  Grant the logins associated with LinAG1 and LinAGN3 permission to connect to the endpoint on LinAGN2.
+11. Conceda os logons associados à permissão LinAG1 e LinAGN3 para se conectar ao ponto de extremidade em LinAGN2.
     
     ```SQL
     GRANT CONNECT ON ENDPOINT::AGEP TO LinAGN1_Login;
@@ -270,7 +271,7 @@ Este exemplo criará certificados para uma configuração de três nós. Os nome
     GO
     ```
     
-12.  Crie logons de nível de instância e usuários associados LinAGN1 e LinAGN2 em LinAGN3.
+12. Crie logons de nível de instância e usuários associados LinAGN1 e LinAGN2 em LinAGN3.
     
     ```SQL
     CREATE LOGIN LinAGN1_Login WITH PASSWORD = '<StrongPassword>';
@@ -284,7 +285,7 @@ Este exemplo criará certificados para uma configuração de três nós. Os nome
     GO
     ```
     
-13.  Restaure LinAGN1_Cert e LinAGN2_Cert em LinAGN3. 
+13. Restaure LinAGN1_Cert e LinAGN2_Cert em LinAGN3. 
     
     ```SQL
     CREATE CERTIFICATE LinAGN1_Cert
@@ -298,8 +299,9 @@ Este exemplo criará certificados para uma configuração de três nós. Os nome
     FROM FILE = '/var/opt/mssql/data/LinAGN2_Cert.cer';
     
     GO
+    ```
     
-14.  Grant the logins associated with LinAG1 and LinAGN2 permission to connect to the endpoint on LinAGN3.
+14. Conceda os logons associados à permissão LinAG1 e LinAGN2 para se conectar ao ponto de extremidade em LinAGN3.
     
     ```SQL
     GRANT CONNECT ON ENDPOINT::AGEP TO LinAGN1_Login;
@@ -416,7 +418,7 @@ Este exemplo mostra como criar um grupo de disponibilidade de duas réplicas que
     GO
     ```
     
-3.  Em uma janela de consulta conectada à réplica somente configuração, associe-o para o grupo de disponibilidade.
+3. Em uma janela de consulta conectada à réplica somente configuração, associe-o para o grupo de disponibilidade.
     
    ```SQL
     ALTER AVAILABILITY GROUP [<AGName>] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
@@ -539,7 +541,7 @@ Um cluster de alta disponibilidade Pacemaker subjacente [!INCLUDE[ssnoversion-md
 1.  Em uma janela de consulta conectada à primeira réplica, execute o seguinte:
 
     ```SQL
-    CREATE LOGIN PMLogin WITH PASSWORD '<StrongPassword>';
+    CREATE LOGIN PMLogin WITH PASSWORD ='<StrongPassword>';
     
     GO
     

@@ -19,12 +19,12 @@ ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e95110bdbbfbe0f5ca6ff453045cc4f759163036
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: c8f202dd4f383d1ed2186e589b275afc0049fb50
+ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57973675"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59542206"
 ---
 # <a name="spfilestreamforcegarbagecollection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,19 +37,20 @@ ms.locfileid: "57973675"
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-sp_filestream_force_garbage_collection  
-    [ @dbname = ]  'database_name',  
-    [ @filename = ] 'logical_file_name' ]  
+sp_filestream_force_garbage_collection
+    [ @dbname = ]  'database_name'
+    [ , [ @filename = ] 'logical_file_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- **@dbname** = *Database_Name* significa o nome do banco de dados para executar o coletor de lixo em.  
+ `[ @dbname = ]  'database_name'`  
+ Significa o nome do banco de dados no qual o coletor de lixo será executado.  
   
 > [!NOTE]  
->  *DBName* está **sysname**. Se não for especificado, o atual banco de dados será assumido.  
+> `@dbname` está **sysname**. Se não for especificado, o atual banco de dados será assumido.  
   
- **@filename** = *logical_file_name*  
- Especifica o nome lógico do contêiner FILESTREAM no qual o coletor de lixo será executado. **@filename** é opcional. Se nenhum nome de arquivo lógico for especificado, o coletor de lixo limpa todos os contêineres FILESTREAM no banco de dados especificado.  
+ `[ @filename = ] 'logical_file_name'`  
+ Especifica o nome lógico do contêiner FILESTREAM no qual o coletor de lixo será executado. `@filename` é opcional. Se nenhum nome de arquivo lógico for especificado, o coletor de lixo limpa todos os contêineres FILESTREAM no banco de dados especificado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
   
@@ -96,7 +97,7 @@ GO
 EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB';  
 ```  
   
-### <a name="b-specifying-a-container"></a>b. Especificando um contêiner  
+### <a name="b-specifying-a-container"></a>B. Especificando um contêiner  
   
 ```sql  
 USE FSDB;  

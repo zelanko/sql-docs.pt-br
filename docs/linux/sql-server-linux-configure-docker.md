@@ -11,18 +11,18 @@ ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: f45f667dc85ff3069d55fa3badb7c5c7f82f5929
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: 8b7f256aec6fc01500f5c98709086a69815fd6ef
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566625"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516512"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Configurar imagens de contêiner do SQL Server no Docker
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Este artigo explica como configurar e usar o [imagem de contêiner mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) com o Docker. Esta imagem consiste no SQL Server em execução no Linux, com base no Ubuntu 16.04. Ela pode ser usada com o Docker Engine 1.8 ou superior no Linux ou no Docker para Mac/Windows.
+Este artigo explica como configurar e usar o [imagem de contêiner mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server) com o Docker. Esta imagem consiste no SQL Server em execução no Linux, com base no Ubuntu 16.04. Ela pode ser usada com o Docker Engine 1.8 ou superior no Linux ou no Docker para Mac/Windows.
 
 > [!NOTE]
 > Este artigo enfoca especificamente usando a imagem mssql-server-linux. A imagem do Windows não é abordada, mas você pode aprender mais sobre ele na [página de Hub do Docker mssql-server-windows](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
@@ -411,7 +411,7 @@ sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" 
 
 Há cenários em que você não poderá usar a imagem de contêiner mais recente do SQL Server. Para executar uma imagem de contêiner do SQL Server específica, use as seguintes etapas:
 
-1. Identificar o Docker **marca** para a versão que você deseja usar. Para exibir as marcas disponíveis, consulte [a página de hub do Docker mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/).
+1. Identificar o Docker **marca** para a versão que você deseja usar. Para exibir as marcas disponíveis, consulte [a página de hub do Docker mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server).
 
 2. Extraia a imagem de contêiner do SQL Server com a marca. Por exemplo, para efetuar pull da imagem do RC1, substitua `<image_tag>` no comando a seguir com `rc1`.
 
@@ -537,7 +537,7 @@ No Windows, verifique se que você estiver iniciando o PowerShell ou o prompt de
 
 Se o contêiner do SQL Server falhar na execução, tente os seguintes testes:
 
-- Se você receber um erro, como **' Falha ao criar o ponto de extremidade CONTAINER_NAME ponte de rede. Erro ao iniciar o proxy: bind do escuta tcp 0.0.0.0:1433: endereço já está em uso.'** , em seguida, você está tentando mapear a porta 1433 do contêiner para uma porta que já está em uso. Isso pode acontecer se você estiver executando o SQL Server localmente no computador host. Isso também pode acontecer se você iniciar dois contêineres do SQL Server e tente mapear ambos na mesma porta de host. Se isso acontecer, use o `-p` parâmetro para mapear a porta 1433 do contêiner para uma porta de host diferente. Por exemplo: 
+- Se você receber um erro, como **' Falha ao criar o ponto de extremidade CONTAINER_NAME ponte de rede. Erro ao iniciar o proxy: bind do escuta tcp 0.0.0.0:1433: endereço já está em uso.'** , em seguida, você está tentando mapear a porta 1433 do contêiner para uma porta que já está em uso. Isso pode acontecer se você estiver executando o SQL Server localmente no computador host. Isso também pode acontecer se você iniciar dois contêineres do SQL Server e tente mapear ambos na mesma porta de host. Se isso acontecer, use o `-p` parâmetro para mapear a porta 1433 do contêiner para uma porta de host diferente. Por exemplo:  
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
