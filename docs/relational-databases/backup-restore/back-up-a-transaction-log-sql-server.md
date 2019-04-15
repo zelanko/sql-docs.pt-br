@@ -1,7 +1,7 @@
 ---
 title: Fazer backup de um log de transações (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/01/2017
+ms.date: 02/02/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b110483faa6fd1f051cc35849858bd20b9fc1b04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d36963c5107a1a25ce25201ac38883e5c0925315
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756854"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241704"
 ---
 # <a name="back-up-a-transaction-log-sql-server"></a>Fazer backup de um log de transações (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +41,12 @@ ms.locfileid: "47756854"
 ##  <a name="Permissions"></a> Permissões  
 **Verifique as permissões corretas antes de começar!** 
 
-As permissões BACKUP DATABASE e BACKUP LOG necessárias são concedidas por padrão aos membros da função de servidor fixa **sysadmin** e às funções de banco de dados fixas **db_owner** e **db_backupoperator** .  
+As permissões BACKUP DATABASE e BACKUP LOG necessárias são concedidas por padrão aos membros da função de servidor fixa **sysadmin** e às funções de banco de dados fixas **db_owner** e **db_backupoperator**.  
   
  Os problemas de propriedade e permissão no arquivo físico do dispositivo de backup podem interferir em uma operação de backup. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser capaz de ler e gravar no dispositivo; a conta sob a qual o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa deve ter permissões de gravação. No entanto, [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), que adiciona uma entrada para um dispositivo de backup nas tabelas do sistema, não verifica permissões de acesso a arquivos. Problemas de permissões no arquivo físico do dispositivo de backup poderão não ser tão claros até que você tente acessar o [recurso físico](backup-devices-sql-server.md) quando tentar fazer backup ou uma restauração. Novamente, verifique as permissões antes de começar!
-  
-  
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="back-up-using-ssms"></a>Fazer backup usando SSMS  
   
 1.  Depois de conectar-se à instância adequada do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], no Pesquisador de Objeto, clique no nome do servidor para expandir a árvore do servidor.  
@@ -114,7 +115,7 @@ As permissões BACKUP DATABASE e BACKUP LOG necessárias são concedidas por pad
   
 16. Se o backup estiver sendo feito em uma unidade de fita (conforme especificado na seção **Destino** da página **Geral** ), a opção **Descarregar a fita após o backup** estará ativa. Clicar nessa opção ativa a opção **Rebobinar a fita antes de descarregar** .  
   
-17. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] e posteriores dão suporte para [compactação de backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Por padrão, a compactação de um backup depende do valor da opção de configuração de servidor **padrão de compactação de backup**. Porém, independentemente do padrão atual do nível do servidor, é possível compactar um backup, marcando a opção **Compactar backup**e evitar a compactação marcando **Não compactar o backup**.  
+17. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] e posteriores dão suporte para [compactação de backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Por padrão, a compactação de um backup depende do valor da opção de configuração de servidor **padrão de compactação de backup** . Porém, independentemente do padrão atual do nível do servidor, é possível compactar um backup, marcando a opção **Compactar backup**e evitar a compactação marcando **Não compactar o backup**.  
   
      **Para exibir o padrão de compactação de backup atual**  
   
@@ -143,7 +144,7 @@ As permissões BACKUP DATABASE e BACKUP LOG necessárias são concedidas por pad
   
 ###  <a name="TsqlExample"></a> Exemplo (Transact-SQL)  
   
-> **IMPORTANTE!** Este exemplo usa o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , que usa o modelo de recuperação simples. Para permitir backups de log, antes de fazer um backup de banco de dados completo, o banco de dados foi definido para usar o modelo de recuperação completa. Para obter mais informações, veja [Exibir ou alterar o modelo de recuperação de um banco de dados &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md).  
+> **IMPORTANTE!** Este exemplo usa o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], que usa o modelo de recuperação simples. Para permitir backups de log, antes de fazer um backup de banco de dados completo, o banco de dados foi definido para usar o modelo de recuperação completa. Para obter mais informações, veja [Exibir ou alterar o modelo de recuperação de um banco de dados &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md).  
   
  Este exemplo cria um backup de log de transações do banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] para o dispositivo de backup criado anteriormente e denominado `MyAdvWorks_FullRM_log1`.  
   
@@ -166,9 +167,9 @@ GO
   
  **Para configurar e usar o provedor do SQL Server PowerShell**  
   
--   [Provedor do SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell Provider](../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="RelatedTasks"></a> Related tasks  
   
 -   [Restaurar um backup de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   

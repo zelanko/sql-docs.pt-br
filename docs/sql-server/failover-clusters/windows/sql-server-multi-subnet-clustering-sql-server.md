@@ -16,12 +16,12 @@ ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 39030ba95129160680782eeb88e3b4c99da622e7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: faa34ef2e1b38fe13f487574ba95d0ad015b08a4
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407853"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516582"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>Clustering de várias sub-redes do SQL Server (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "52407853"
 ##  <a name="VisualElement"></a> Cluster de Failover de Várias Sub-redes do SQL Server (Dois Nós, Duas Sub-redes)  
  A ilustração a seguir representa um FCI (instância de cluster de failover) com dois nós e duas sub-redes no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
- ![Arquitetura de várias sub-redes com MultiSubnetFailover](../../../sql-server/failover-clusters/windows/media/multi-subnet-architecture-withmultisubnetfailoverparam.gif "Arquitetura de várias sub-redes com MultiSubnetFailover")  
+ ![Arquitetura de várias sub-redes com MultiSubnetFailover](../../../sql-server/failover-clusters/windows/media/multi-subnet-architecture-withmultisubnetfailoverparam.png "Arquitetura de várias sub-redes com MultiSubnetFailover")  
   
   
 ##  <a name="Configurations"></a> Configurações da instância do cluster de failover de várias sub-redes  
@@ -45,12 +45,12 @@ ms.locfileid: "52407853"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQLCLUST1 inclui Node1 e Node2. Node1 é conectado a Subnet1 e Subnet2. Node2 também é conectado a Subnet1 e Subnet2. A dependência de recurso de endereço IP é definida como **AND** pela Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-    > **OBSERVAÇÃO:** essa configuração não é considerada uma configuração de cluster de failover de várias sub-redes, porque os nós clusterizados estão no mesmo conjunto de sub-redes.  
+    > **OBSERVAÇÃO:** Essa configuração não é considerada uma configuração de cluster de failover de várias sub-redes porque os nós clusterizados estão no mesmo conjunto de sub-redes.  
   
 ##  <a name="ComponentsAndConcepts"></a> Considerações sobre o recurso de endereço IP  
  Em uma configuração de cluster de failover de várias sub-redes, os endereços IP não pertencem a todos os nós no cluster de failover, e podem não estar todos online durante inicialização do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . A partir do [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], é possível definir a dependência de recurso de endereço IP como **OR**. Isso habilita o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para ficar online quando há pelo menos um endereço IP válido ao qual ele possa se associar.  
   
-> **OBSERVAÇÕES:** nas versões do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores ao [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], uma tecnologia V-LAN expansível foi usada em configurações de cluster multissite para expor um único endereço IP para failover em sites. Com o novo recurso do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para nós de cluster em diferentes sub-redes, você pode configurar clusters de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em vários sites sem implementar a tecnologia V-LAN expansível.  
+> **OBSERVAÇÃO:** Nas versões do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores ao [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], uma tecnologia V-LAN expansível foi usada em configurações de cluster multissite para expor um único endereço IP para failover em sites. Com o novo recurso do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para nós de cluster em diferentes sub-redes, você pode configurar clusters de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em vários sites sem implementar a tecnologia V-LAN expansível.  
   
 ### <a name="ip-address-resource-or-dependency-considerations"></a>Considerações sobre a dependência de recurso de endereço IP OR  
  Você poderá considerar o seguinte comportamento de failover se definir a dependência de recurso de endereço IP como **OR**:  

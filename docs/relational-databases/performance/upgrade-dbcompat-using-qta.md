@@ -18,15 +18,15 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: ba3e358e897b35aadf68ce198c0a43ec8f24adef
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 4af50c6df7ef8ea451f38a038d19e39491604308
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295654"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516552"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Atualizando bancos de dados usando o Assistente de Ajuste de Consulta
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Ao migrar de versões mais antigas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ou mais recente e [atualizar o nível de compatibilidade do banco de dados](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) para o mais recente disponível, uma carga de trabalho poderá ser exposta ao risco de regressão de desempenho. Isso também é possível em um grau menor ao atualizar entre o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e qualquer versão mais recente.
 

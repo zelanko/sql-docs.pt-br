@@ -16,12 +16,12 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 729464b51af6c9450f9166bd9a3c51d35541810f
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 21f9be84c86e2991a600dc340347c4ca89f519e9
+ms.sourcegitcommit: ae333686549dda5993fa9273ddf7603adbbaf452
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801911"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59533334"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Criar um backup completo de banco de dados (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "56801911"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar. 
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   A instrução BACKUP não é permitida em uma transação explícita ou implícita.  
   
@@ -211,19 +211,19 @@ Uma política de acesso armazenado foi criada com direitos de leitura, gravaçã
 *
     5.  Selecione `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` do **contêiner de armazenamento do Azure:** caixa de texto
 
-    6.  Na caixa de texto **Arquivo de Backup:** , digite `Sales_stripe1of2_20160601.bak`.
+   6.  Na caixa de texto **Arquivo de Backup:** , digite `Sales_stripe1of2_20160601.bak`.
 
-    7.  Clique em **OK**.
+   7.  Clique em **OK**.
 
-    8.  Repita as etapas de **4** e **5**.
+   8.  Repita as etapas de **4** e **5**.
 
-    9.  Na caixa de texto **Arquivo de Backup:** , digite `Sales_stripe2of2_20160601.bak`.
+   9.  Na caixa de texto **Arquivo de Backup:** , digite `Sales_stripe2of2_20160601.bak`.
 
-    10.  Clique em **OK**.
+   10.  Clique em **OK**.
 
-    11.   Clique em **OK**.
+   11.   Clique em **OK**.
 
-    **D2.  Existe uma assinatura de acesso compartilhado e não existe uma credencial do SQL Server**
+   **D2.  Existe uma assinatura de acesso compartilhado e não existe uma credencial do SQL Server**
   5.    Digite `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` na caixa de texto **Contêiner de armazenamento do Azure:**
   
   6.    Insira a assinatura de acesso compartilhado na caixa de texto **Política de Acesso Compartilhado:** .
@@ -242,7 +242,7 @@ Uma política de acesso armazenado foi criada com direitos de leitura, gravaçã
   8.    Clique em **OK**.
 
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 ### <a name="create-a-full-database-backup"></a>Criar um backup de banco de dados completo  
   

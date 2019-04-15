@@ -1,7 +1,7 @@
 ---
 title: Fazer backup do log de transações quando o banco de dados estiver danificado (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: 9b8873cc-df54-4336-ab9b-8f525132c2b0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bbeb8a002a0b269a70039757338ecf7be82895ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be62f7dfe7cce25d6b4cd63767bdea211dacd1a5
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699844"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242174"
 ---
 # <a name="back-up-the-transaction-log-when-the-database-is-damaged-sql-server"></a>Fazer backup do log de transações quando o banco de dados está danificado (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47699844"
   
 -   **Antes de começar:**  
   
-     [Limitações e restrições](#Restrictions)  
+     [Limitações e Restrições](#Restrictions)  
   
      [Recomendações](#Recommendations)  
   
@@ -62,7 +62,9 @@ ms.locfileid: "47699844"
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-back-up-the-tail-of-the-transaction-log"></a>Para fazer backup do final do log de transações  
-  
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 1.  Depois de se conectar à instância apropriada do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], no Pesquisador de Objetos, clique no nome do servidor para expandir a árvore do servidor.  
   
 2.  Expanda **Bancos de Dados**e, dependendo do banco de dados, selecione um banco de dados de usuário ou expanda **Bancos de Dados do Sistema** e selecione um banco de dados do sistema.  
@@ -132,7 +134,7 @@ ms.locfileid: "47699844"
   
 15. Se o backup estiver sendo feito em uma unidade de fita (conforme especificado na seção **Destino** da página **Geral** ), a opção **Descarregar a fita após o backup** estará ativa. Clicar nessa opção ativa a opção **Rebobinar a fita antes de descarregar** .  
   
-16. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] e posteriores dão suporte para [compactação de backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Por padrão, a compactação de um backup depende do valor da opção de configuração de servidor **padrão de compactação de backup**. Porém, independentemente do padrão atual do nível do servidor, é possível compactar um backup, marcando a opção **Compactar backup**e evitar a compactação marcando **Não compactar o backup**.  
+16. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] e posteriores dão suporte para [compactação de backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Por padrão, a compactação de um backup depende do valor da opção de configuração de servidor **padrão de compactação de backup** . Porém, independentemente do padrão atual do nível do servidor, é possível compactar um backup, marcando a opção **Compactar backup**e evitar a compactação marcando **Não compactar o backup**.  
   
      **Para exibir o padrão de compactação de backup atual**  
   

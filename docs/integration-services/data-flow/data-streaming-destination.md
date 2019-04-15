@@ -13,12 +13,12 @@ ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a58fe80fe0d71cfb7d645df29d2fb06624ad66a8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f84f4e0e0e5b0529f3b79cd64cd9bb605737adf5
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278960"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242494"
 ---
 # <a name="data-streaming-destination"></a>Destino do Fluxo de Dados
   O **Destino do Fluxo de Dados** é um componente de destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS), que permite que o **Provedor OLE DB para SSIS** consuma a saída de um pacote SSIS como um conjunto de resultados de tabelas. Você pode criar um servidor vinculado que use o Provedor OLE DB para SSIS e então execute uma consulta SQL no servidor vinculado para exibir os dados retornados pelo pacote SSIS.  
@@ -48,18 +48,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
   
 > [!IMPORTANT]  
 >  Para obter etapas detalhadas, veja [Passo a passo: publicar um pacote do SSIS como uma exibição SQL](../../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md).  
-  
-## <a name="expose-output-data-from-an-ssis-package-as-an-odata-feed-by-using-the-power-bi-admin-center"></a>Expor dados de saída de um pacote do SSIS como um feed OData usando o Centro de Administração do Power BI  
- Ao usar o Centro de Administração do Power BI, os administradores de TI podem expor dados de fontes de dados locais como feeds OData para usuários. O Centro de Administração do Power BI, por padrão, permite que você registre apenas as fontes de dados do SQL Server. No entanto, você pode registrar os pacotes do SSIS como fontes de dados com o portal usando o **Destino do Fluxo de Dados** e o **Provedor Microsoft OLE DB para SQL Server Integration Services (SSISOLEDB)** e expor os dados resultantes do pacote do SSIS como um feed OData para o usuário.  
-  
- O Centro de Administração permite que você publique exibições em um banco de dados do SQL Server. Dessa forma, você pode usar o Assistente de Publicação de Pacote do SSIS para publicar um pacote do SSIS como uma exibição do SQL. Em seguida, você pode selecionar a exibição a ser incluída no feed OData no Centro de Administração do Power BI. Um administrador de dados pode consumir o feed do pacote do SSIS usando o suplemento Power Query para Excel.  
-  
- Para obter instruções detalhadas, veja [Publicar pacotes do SSIS como fontes de feed OData](https://go.microsoft.com/fwlink/?LinkID=317367).  
-  
-## <a name="in-this-section"></a>Nesta seção  
-  
--   [Passo a passo: publicar um pacote do SSIS como uma exibição SQL](../../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md)  
-  
+
 ## <a name="configure-data-streaming-destination"></a>Configurar destino do fluxo de dados
   Configure o destino de fluxo de dados usando a caixa de diálogo **Editor Avançado para o Destino do Fluxo de Dados** . Abra essa caixa de diálogo clicando duas vezes no componente ou clicando com o botão direito do mouse no componente, no designer de fluxo de dados, e clicando em **Editar**.  
   
@@ -78,9 +67,4 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
  No painel superior dessa guia, você deve ver todas as colunas de entrada disponíveis. Selecione as colunas que você deseja incluir na saída deste componente. As colunas selecionadas são exibidas em uma lista no painel inferior. Você pode alterar o nome da coluna de saída, digitando o novo nome no campo **Alias de Saída** na lista.  
   
 ## <a name="input-output-properties-tab"></a>Guia Propriedades de Entrada e Saída  
- Semelhante à guia Colunas de Entrada, você pode alterar os nomes das colunas de saída nesta guia. No modo de exibição de árvore à esquerda, expanda **Entrada de Destino do Streaming de Dados** e expanda **Colunas de Entrada**. Clique no nome da coluna de entrada e altere o nome do nome da coluna de saída no painel à direita.  
-  
-## <a name="see-also"></a>Consulte Também  
- [Publicar pacotes do SSIS como fontes de feed OData](https://go.microsoft.com/fwlink/?LinkID=317367)  
-  
-  
+ Semelhante à guia Colunas de Entrada, você pode alterar os nomes das colunas de saída nesta guia. No modo de exibição de árvore à esquerda, expanda **Entrada de Destino do Streaming de Dados** e expanda **Colunas de Entrada**. Clique no nome da coluna de entrada e altere o nome do nome da coluna de saída no painel à direita.

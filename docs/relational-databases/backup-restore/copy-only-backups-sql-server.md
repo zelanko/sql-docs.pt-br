@@ -1,7 +1,7 @@
 ---
 title: Backups somente cópia (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 09/08/2018
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 860d6d2d5f84f41d006cb10972b63ec6b93210f3
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 6649909f4d3a4bf6b95b657ef45f55c34f042f3a
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658190"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240684"
 ---
 # <a name="copy-only-backups-sql-server"></a>Backups somente cópia (SQL Server)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -49,6 +49,8 @@ ms.locfileid: "58658190"
 ### <a name="examples"></a>Exemplos  
 ###  <a name="SSMSProcedure"></a> A.  Usando o SQL Server Management Studio  
 Neste exemplo, será feito backup somente cópia do banco de dados `Sales` em disco no local de backup padrão.
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do Mecanismo de Banco de Dados do SQL Server e expanda-a.
 
@@ -95,7 +97,7 @@ Backup-SqlDatabase -ServerInstance 'SalesServer' -Database 'Sales' -BackupFile '
   
  **Para configurar e usar o provedor do SQL Server PowerShell**  
   
--   [Provedor do SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell Provider](../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
   
 ## <a name="see-also"></a>Consulte Também  

@@ -1,7 +1,7 @@
 ---
 title: Criar um backup diferencial do banco de dados (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: 70f49794-b217-4519-9f2a-76ed61fa9f99
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7272df471f734d0813258897bb1e1a187efdfe6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 279047e483720f5d089325f9d9ed17467ea96804
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849884"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241405"
 ---
 # <a name="create-a-differential-database-backup-sql-server"></a>Criar um backup diferencial de banco de dados (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "47849884"
   
 -   **Antes de começar:**  
   
-     [Limitações e restrições](#Restrictions)  
+     [Limitações e Restrições](#Restrictions)  
   
-     [Pré-requisitos](#Prerequisites)  
+     [Prerequisites](#Prerequisites)  
   
      [Recomendações](#Recommendations)  
   
@@ -69,7 +69,9 @@ ms.locfileid: "47849884"
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio  
   
 #### <a name="create-a-differential-database-backup"></a>Criar um backup diferencial de banco de dados  
-  
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 1.  Depois de se conectar à instância apropriada do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], no Pesquisador de Objetos, clique no nome do servidor para expandir a árvore do servidor.  
   
 2.  Expanda **Bancos de Dados**e, dependendo do banco de dados, selecione um banco de usuário ou expanda **Bancos de Dados do Sistema** e selecione um banco do sistema.  
@@ -128,7 +130,7 @@ ms.locfileid: "47849884"
     > [!NOTE]  
     >  As opções na seção **Log de transações** estarão inativos exceto se o backup estiver sendo feito em um log de transações (como especificado na seção **Tipo de backup** da página **Geral** ).  
   
-15. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] e posteriores dão suporte para [compactação de backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Por padrão, a compactação de um backup depende do valor da opção de configuração de servidor **padrão de compactação de backup**. Porém, independentemente do padrão atual do nível do servidor, é possível compactar um backup, marcando a opção **Compactar backup**e evitar a compactação marcando **Não compactar o backup**.  
+15. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] e posteriores dão suporte para [compactação de backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Por padrão, a compactação de um backup depende do valor da opção de configuração de servidor **padrão de compactação de backup** . Porém, independentemente do padrão atual do nível do servidor, é possível compactar um backup, marcando a opção **Compactar backup**e evitar a compactação marcando **Não compactar o backup**.  
   
      **Para exibir o padrão de compactação de backup atual**  
   

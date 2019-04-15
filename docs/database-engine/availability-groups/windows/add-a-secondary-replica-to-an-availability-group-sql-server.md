@@ -2,7 +2,7 @@
 title: Adicionar uma réplica secundária a um grupo de disponibilidade
 description: Saiba como adicionar uma réplica secundária a um grupo de disponibilidade Always On usando o T-SQL (Transact-SQL), o PowerShell ou o Assistente de grupo de disponibilidade no SSMS (SQL Server Management Studio).
 ms.custom: seodec18
-ms.date: 05/17/2016
+ms.date: 05/18/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -14,12 +14,12 @@ ms.assetid: 6669dcce-85f9-495f-aadf-7f62cff4a9da
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ffebb3bc39d15f52aeda8e2deed54c49e011df4e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 423d9370285d3b5e7df89ee8cecb6d539b16eb47
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213005"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241854"
 ---
 # <a name="add-a-secondary-replica-to-an-always-on-availability-group"></a>Adicionar uma réplica secundária a um Grupo de Disponibilidade Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,12 +31,14 @@ ms.locfileid: "53213005"
 -   Você deve estar conectado à instância do servidor que hospeda a réplica primária.  
   
  Para obter mais informações, veja [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
-  
+
 ##  <a name="Security"></a> Segurança  
   
 ###  <a name="Permissions"></a> Permissões  
  Requer a permissão ALTER AVAILABILITY GROUP no grupo de disponibilidade, a permissão CONTROL AVAILABILITY GROUP, a permissão ALTER ANY AVAILABILITY GROUP ou a permissão CONTROL SERVER.  
-  
+
+[!INCLUDE[Freshness](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  **Para adicionar uma réplica**  
   
@@ -56,7 +58,7 @@ ms.locfileid: "53213005"
   
          Para adicionar mais uma réplica, repita as etapas acima. Ao concluir a especificação das réplicas, clique em **OK** para concluir a operação.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para adicionar uma réplica**  
   
 1.  Conecte-se à instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda a réplica primária.  
@@ -103,7 +105,7 @@ ms.locfileid: "53213005"
   
  **Para configurar e usar o provedor do SQL Server PowerShell**  
   
--   [Provedor do SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell Provider](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
 ##  <a name="FollowUp"></a> Acompanhamento: Depois de adicionar uma réplica secundária  
  Para adicionar uma réplica para um grupo de disponibilidade existente, você deve executar as seguintes etapas:  

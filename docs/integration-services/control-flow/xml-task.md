@@ -17,12 +17,12 @@ ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a399ee84e84f0c85e057b8eaf6294548e18f75ee
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 84711a5bdef0ce13f640b26b3973860b9b5a6f48
+ms.sourcegitcommit: 2e7686443a61b1a2cf4ca47d9ab1010b9e9b5188
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290562"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59291546"
 ---
 # <a name="xml-task"></a>XML Task
   A tarefa XML é usada para se trabalhar com dados XML. Usando essa tarefa, um pacote pode recuperar documentos XML, aplicar operações aos documentos usando folhas de estilos XSLT e expressões XPath, mesclar vários documentos ou validar, comparar e salvar os documentos atualizados em arquivos e variáveis.  
@@ -121,13 +121,13 @@ ms.locfileid: "58290562"
   
  Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos seguintes tópicos:  
   
--   [Validar XML com a Tarefa XML](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)  
+-   [Validate XML with the XML Task](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)  
   
 -   [Página Expressões](../../integration-services/expressions/expressions-page.md)  
   
  Para obter mais informações sobre como definir propriedades no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
--   [Definir as propriedades de uma tarefa ou contêiner](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Definir as propriedades de uma tarefa ou de um contêiner](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="programmatic-configuration-of-the-xml-task"></a>Configuração programática da tarefa XML  
  Para obter mais informações sobre como definir essas propriedades programaticamente, clique no tópico a seguir:  
@@ -135,7 +135,7 @@ ms.locfileid: "58290562"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.XMLTask.XMLTask>  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Definir as propriedades de uma tarefa ou contêiner](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+ [Definir as propriedades de uma tarefa ou de um contêiner](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="xml-task-editor-general-page"></a>XML Task Editor (General Page)
   Use o **nó Geral** da caixa de diálogo **Editor da Tarefa XML** para especificar o tipo de operação e configurar a operação.  
@@ -530,9 +530,7 @@ ms.locfileid: "58290562"
  **Tópicos relacionados**: [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
-  
--   Entrada de blog, [XML Destination Script Component](https://agilebi.com/jwelch/2007/06/02/xml-destination-script-component/), em agilebi.com  
-  
+
 -   Exemplo do CodePlex, [Process XML Data Package Sample](https://msftisprodsamples.codeplex.com/wikipage?title=SS2008!Process%20XML%20Data%20Package%20Sample&version=10&ProjectName=msftisprodsamples), em www.codeplex.com  
   
   
