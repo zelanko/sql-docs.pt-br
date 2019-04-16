@@ -4,18 +4,18 @@ description: Saiba como instalar os serviços SQL Server Machine Learning (R, Py
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f1ca66c5e376704737a092f21fd25401d20bbdbb
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 85700f287b3725895fc3ca170fd182353a259737
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493868"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583019"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-java-on-linux"></a>Instalar o SQL Server de 2019 serviços de Machine Learning (R, Python, Java) no Linux
 

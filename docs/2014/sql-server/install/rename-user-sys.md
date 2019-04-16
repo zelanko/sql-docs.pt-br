@@ -13,12 +13,12 @@ ms.assetid: d622d646-83e4-4b6f-9a21-77b301af04b5
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ddcadb1fe32c61fbab45bbdcfbc18d60d1072d23
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8e227e4d382dac627626b977427aae05d0295744
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078192"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582329"
 ---
 # <a name="rename-user-sys"></a>Renomear usuário sys
   O Supervisor de Atualização detectou o nome de usuário **sys** em um banco de dados. Esse nome é reservado. Renomeie o usuário antes de atualizar. Se isso não for feito, o banco de dados ficará em estado suspeito após o processo de atualização e não estará disponível até que banco de dados fique online novamente.  
@@ -26,7 +26,7 @@ ms.locfileid: "48078192"
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrição  
  O usuário **sys** é reservado.  
   
 ## <a name="corrective-action"></a>Ação corretiva  
@@ -64,6 +64,6 @@ ms.locfileid: "48078192"
   
 ## <a name="see-also"></a>Consulte também  
  [Problemas de atualização de mecanismo de banco de dados](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Supervisor de atualização do SQL Server 2014 &#91;novo&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Supervisor de atualização do SQL Server 2014 &#91;novo&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

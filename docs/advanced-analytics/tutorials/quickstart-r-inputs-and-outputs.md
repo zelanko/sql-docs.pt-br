@@ -8,14 +8,14 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 56d2eb65ca95dd4f153f3c7a6ebb00e926465687
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: 4df9e266e16e2cc37ce527c19ba7be483e43d50a
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046721"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582679"
 ---
-# <a name="quickstart-handle-inputs-and-outputs-using-r-in-sql-server"></a>Guia de início rápido: Lidar com entradas e saídas usando o R no SQL Server
+# <a name="quickstart-handle-inputs-and-outputs-using-r-in-sql-server"></a>Início Rápido: Lidar com entradas e saídas usando o R no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Neste início rápido mostra como lidar com entradas e saídas ao usar R em serviços do SQL Server Machine Learning ou R Services.
@@ -87,8 +87,6 @@ Vamos dar uma olhada no padrão variáveis de entrada e saídas de sp_execute_ex
     ```
 
     Observe que o R diferencia maiusculas de minúsculas, portanto, o caso das variáveis de entrada e saídas no `@input_data_1_name` e `@output_data_1_name` precisa coincidir com aqueles no código R em `@script`. 
-
-    Além disso, a ordem dos parâmetros é importante. Você deve especificar os parâmetros necessários *@input_data_1* e *@output_data_1* primeiro para usar os parâmetros opcionais *@input_data_1_name* e *@output_data_1_name*.
 
     Apenas um conjunto de dados de entrada pode ser passado como um parâmetro e é possível retornar apenas um conjunto de dados. No entanto, você pode chamar outros conjuntos de dados no código do R e retornar saídas de outros tipos, além do conjunto de dados. Você também pode adicionar a palavra-chave OUTPUT a qualquer parâmetro para que ele seja retornado com os resultados. 
 

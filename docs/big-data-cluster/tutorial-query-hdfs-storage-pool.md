@@ -5,17 +5,17 @@ description: Este tutorial demonstra como consultar dados do HDFS em um cluster 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 57605d74e81a6c1c37263fc4088cb70fa3431dec
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: c1c2ccf548b5df91420821a1865120c27edd2c02
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860038"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59581259"
 ---
 # <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>Tutorial: Consulta HDFS em um cluster de big data do SQL Server
 
@@ -35,7 +35,7 @@ Neste tutorial, você aprenderá como:
 ## <a id="prereqs"></a> Pré-requisitos
 
 - [Ferramentas de big data](deploy-big-data-tools.md)
-   - **Kubectl**
+   - **kubectl**
    - **Azure Data Studio**
    - **Extensão do SQL Server de 2019**
 - [Carregar dados de exemplo no seu cluster de big data](tutorial-load-sample-data.md)

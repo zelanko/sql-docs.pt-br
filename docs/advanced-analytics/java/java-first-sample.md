@@ -3,18 +3,18 @@ title: Exemplo de Java e um tutorial para SQL Server 2019 - serviços do SQL Ser
 description: Execute o código de exemplo do Java no SQL Server de 2019 para saber as etapas para usar a extensão da linguagem Java com dados do SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a2fd078d0b9c61678a83cc1b3b5da70adbd69779
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 25deba880827cc7396082dac9a2c86cc4dd66cd8
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493421"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582569"
 ---
 # <a name="sql-server-java-sample-walkthrough"></a>Instruções passo a passo de exemplo do Java do SQL Server
 

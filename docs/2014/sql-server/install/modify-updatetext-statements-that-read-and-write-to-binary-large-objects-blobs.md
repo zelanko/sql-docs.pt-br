@@ -14,12 +14,12 @@ ms.assetid: b85da6a7-42f6-4707-a25e-3ded8958b94f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cdfc74dddb01a064505e65e7d0aa67dd5b068739
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7bcf5b59aa79e471ef0fc7949990b9782550ec32
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070396"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59581996"
 ---
 # <a name="modify-updatetext-statements-that-read-and-write-to-binary-large-objects-blobs"></a>Modificar instruções UPDATETEXT que leem e gravam em BLOBs (objetos grandes binários)
   O Supervisor de Atualização detectou instruções UPDATETEXT que leem e gravam no mesmo BLOB (objeto binário grande) usando o mesmo ponteiro de texto. O [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] não oferece suporte para o uso de ponteiros de texto dessa forma.  
@@ -32,6 +32,6 @@ ms.locfileid: "48070396"
   
 ## <a name="see-also"></a>Consulte também  
  [Problemas de atualização de mecanismo de banco de dados](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Supervisor de atualização do SQL Server 2014 &#91;novo&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Supervisor de atualização do SQL Server 2014 &#91;novo&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

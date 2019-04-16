@@ -13,19 +13,19 @@ ms.assetid: ff87c368-4c00-4e48-809d-ea752839551e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9cf8109d1faa9bcd75a6150aea3959f37b79f1cf
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 22460851ce3136301beaf5d94e7b0a3b39f8217c
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136342"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582689"
 ---
 # <a name="specify-merge-replication-properties"></a>Especifique as propriedades de replicação de mesclagem
-Este tópico explica como especificar várias propriedades para a replicação de mesclagem. 
+Este tópico explica como especificar várias propriedades para sua replicação de mesclagem. 
 
 
 ## <a name="download-only"></a>Somente para download
-  Esta seção descreve como especificar que um artigo de tabela de mesclagem é somente para download [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] por meio [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Artigos de somente download são projetados para aplicativos com dados que não são atualizados nos Assinantes. Para obter mais informações, consulte [Optimize Merge Replication Performance with Download-Only Articles](../merge/optimize-merge-replication-performance-with-download-only-articles.md) (Otimizar o desempenho da replicação de mesclagem com artigos somente para download).  
+  Esta seção descreve como especificar que um artigo de tabela de mesclagem é somente para download [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] por meio [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Artigos de somente download são projetados para aplicativos com dados que não são atualizados nos Assinantes. Para obter mais informações, consulte [Otimizar o desempenho da replicação de mesclagem com artigos somente para download](../merge/optimize-merge-replication-performance-with-download-only-articles.md).  
  
   
 ###  <a name="limitations-and-restrictions"></a>Limitações e Restrições  
@@ -72,7 +72,7 @@ Este tópico explica como especificar várias propriedades para a replicação d
         > [!NOTE]  
         >  Se a tabela de origem para um artigo já estiver publicada em outra publicação, o comportamento de somente download deve ser o mesmo para os dois artigos.  
  
-## <a name="interactive-conflict-resolution"></a>Resolução interativa de conflitos
+## <a name="interactive-conflict-resolution">Resolução interativa de conflitos</a>
 A replicação do[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornece um Resolvedor Interativo, que permite a resolução de conflitos de forma manual durante a sincronização sob demanda no Gerenciador de Sincronização do Windows da [!INCLUDE[msCoName](../../../includes/msconame-md.md)] . Depois que a resolução interativa estiver habilitada, resolva os conflitos interativamente durante a sincronização, usando o Resolvedor Interativo. O Resolvedor Interativo está disponível pelo Gerenciador de Sincronização do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Para obter mais informações, consulte [Como sincronizar uma assinatura usando o Gerenciador de Sincronização do Windows &#40;Gerenciador de Sincronização do Windows&#41;](../synchronize-a-subscription-using-windows-synchronization-manager.md).  
   
     
@@ -93,13 +93,13 @@ A replicação do[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUD
   
 #### <a name="to-specify-that-a-subscription-should-use-interactive-conflict-resolution"></a>Para especificar que uma assinatura deve usar a resolução interativa de conflito  
   
-1.  No **propriedades da assinatura – \<assinante >: \<SubscriptionDatabase >** caixa de diálogo, especifique um valor de **verdadeira** para o **resolver conflitos interativamente** opção. Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [View and Modify Push Subscription Properties](../view-and-modify-push-subscription-properties.md) e [View and Modify Pull Subscription Properties](../view-and-modify-pull-subscription-properties.md). 
+1.  Na caixa de diálogo **Propriedades da Assinatura – \<Assinante>: \<SubscriptionDatabase>**, especifique o valor **Verdadeiro** para a opção **Resolver conflitos interativamente**. Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [View and Modify Push Subscription Properties](../view-and-modify-push-subscription-properties.md) e [View and Modify Pull Subscription Properties](../view-and-modify-pull-subscription-properties.md). 
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="using-transact-sql"></a>Usando Transact-SQL  
  É possível especificar de forma programada se um Assinante usará essa interface gráfica para resolver conflitos de artigos quando uma assinatura pull para uma publicação de mesclagem é criada. Só conflitos em artigos que têm suporte para esta opção serão exibidos no Resolvedor Interativo.  
   
-#### <a name="create-a-merge-pull-subscription-that-uses-the-interactive-resolver"></a>Criar uma assinatura pull de mesclagem que usa o resolvedor interativo  
+#### <a name="create-a-merge-pull-subscription-that-uses-the-interactive-resolver"></a>Criar uma assinatura pull de mesclagem que usa o Resolvedor Interativo  
   
 1.  No Publicador do banco de dados de publicação, execute [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql), especificando **@publication**. Anote o valor de **allow_interactive_resolver** para cada artigo no conjunto de resultados para o qual o Resolvedor Interativo será usado.    
     -   Se este valor for **1**, o Resolver Interativo será usado.    
@@ -113,7 +113,7 @@ A replicação do[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUD
     -   As informações da conta de segurança requerida pelo Merge Agent. Para obter mais informações, confira [Create a Pull Subscription](../create-a-pull-subscription.md).    
 4.  No Publicador, no banco de dados da publicação, execute [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql).  
   
-#### <a name="define-an-article-that-supports-the-interactive-resolver"></a>Definir um artigo que suporta o resolvedor interativo  
+#### <a name="define-an-article-that-supports-the-interactive-resolver"></a>Definir um artigo que tem suporte para o Resolvedor Interativo  
   
 No Publicador do banco de dados de publicação, execute o [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Especifique o nome da publicação à qual o artigo pertence, para **@publication**; um nome para o artigo para **@article**, um objeto de banco de dados sendo publicado para **@source_object**, e um valor de **true** para **@allow_interactive_resolver**. Para obter mais informações, consulte [Define an Article](define-an-article.md).  
 
@@ -122,7 +122,7 @@ Quando uma assinatura em uma publicação de mesclagem é sincronizada, a replic
   
 
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   Se você alterar o nível de controle depois de inicializadas as assinaturas, essas assinaturas deverão ser reinicializadas. Para obter mais informações sobre os efeitos das alterações de propriedades, consulte [Alterar propriedades da publicação e do artigo](../publish/change-publication-and-article-properties.md).    
 -   Com controle em nível de linha e de coluna, a resolução de conflito é sempre feita em nível de linha: a linha vencedora substitui a perdedora. A replicação de mesclagem também permite especificar que os conflitos sejam rastreados e resolvidos em nível de registro lógico, mas essas opções não estão disponíveis no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Para obter informações sobre como definir estas opções de procedimentos armazenados de replicação, consulte [Define a Logical Record Relationship Between Merge Table Articles](../publish/define-a-logical-record-relationship-between-merge-table-articles.md).  
@@ -130,11 +130,11 @@ Quando uma assinatura em uma publicação de mesclagem é sincronizada, a replic
 ###  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  Especifique o nível de linha ou coluna de rastreamento para mesclar artigos na guia **Propriedades** da caixa de diálogo **Propriedades do artigo**, que está disponível no Assistente para Nova Publicação e a caixa de diálogo **Propriedades da Publicação – \<Publicação>**. Para obter mais informações sobre como usar o assistente e acessar a caixa de diálogo, consulte [Criar uma publicação](create-a-publication.md) e [Exibir e modificar as propriedades da publicação](../publish/view-and-modify-publication-properties.md).  
   
-#### <a name="specify-row--or-column-level-tracking"></a>Especificar linha ou coluna-nível de rastreamento  
+#### <a name="specify-row--or-column-level-tracking"></a>Especificar acompanhamento em nível de linha ou de coluna  
   
 1.  Na página **Artigos** do Assistente para Nova Publicação ou na caixa de diálogo **Propriedades de Publicação – \<Publicação>**, selecione uma tabela.    
 2.  Clique em **Propriedades de Artigos**e então clique em **Definir Propriedades do Artigo Realçado da Tabela** ou **Definir Propriedades de Todos os Artigos da Tabela**.   
-3.  Sobre o **propriedades** guia da **propriedades do artigo \<artigo >** caixa de diálogo, selecione um dos seguintes valores para o **nível de rastreamento** propriedade: **Rastreamento de nível de linha** ou **nível de coluna**.    
+3.  Na guia **Propriedades** da caixa de diálogo **Propriedade do Artigo \<Artigo>**, selecione um dos seguintes valores para a propriedade **Nível de acompanhamento**: **Acompanhamento de nível de linha** ou **Acompanhamento em nível de coluna**.    
 4.  Se você estiver na caixa de diálogo **Propriedades da Publicação – \<Publicação>**, clique em **OK** para salvar e fechar a caixa de diálogo.  
   
 ###  <a name="using-transact-sql"></a>Usando Transact-SQL  
@@ -146,7 +146,7 @@ Quando uma assinatura em uma publicação de mesclagem é sincronizada, a replic
     -   **true** - Use controle no nível da coluna para o artigo.    
     -   **false** - Use controle no nível da linha, que é o padrão.  
   
-#### <a name="change-conflict-tracking-options-for-a-merge-article"></a>Alterar opções de controle para um artigo de mesclagem de conflitos  
+#### <a name="change-conflict-tracking-options-for-a-merge-article"></a>Alterar as opções de acompanhamento de conflito para um novo artigo de mesclagem  
   
 1.  Para determinar as opções de rastreamento de conflito para um artigo de mesclagem, execute [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql). Observe o valor da opção **column_tracking** no conjunto de resultados do artigo. Um valor de **1** significa que o controle no nível da coluna está em uso, e o valor de **0** significa que o controle no nível da linha está em uso.    
 2.  No Publicador do banco de dados de publicação, execute [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Especifique um valor de **column_tracking** para **@property** e um dos valores a seguir para **@value**:
@@ -181,7 +181,7 @@ Quando uma assinatura em uma publicação de mesclagem é sincronizada, a replic
     >  Se a tabela de fonte de um artigo já estiver publicada em outra publicação, o valor de **delete_tracking** deverá ser o mesmo de ambos os artigos.  
   
 ## <a name="processing-order"></a>Ordem de processamento
-  A replicação de mesclagem permite que você especifique a ordem em que artigos são processados pelo Agente de Mesclagem durante o processo de sincronização. Você pode atribuir uma ordem a cada artigo programaticamente ao criar um artigo usando procedimentos armazenados de replicação. Os artigos são processados em ordem crescente de valores. Se dois artigos tiverem o mesmo valor, serão processados simultaneamente. Para obter mais informações, consulte [propriedades de replicação de mesclagem especificar](../publish/specify-merge-replication-properties.md).  
+  A replicação de mesclagem permite que você especifique a ordem em que artigos são processados pelo Agente de Mesclagem durante o processo de sincronização. Você pode atribuir uma ordem a cada artigo programaticamente ao criar um artigo usando procedimentos armazenados de replicação. Os artigos são processados em ordem crescente de valores. Se dois artigos tiverem o mesmo valor, serão processados simultaneamente. Para obter mais informações, confira [propriedades de Especificar Replicação de Mesclagem](../publish/specify-merge-replication-properties.md).  
 
   A partir do [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], é possível substituir a ordem padrão do processamento de artigos para publicações de mesclagem. Isso é útil, por exemplo, se você definir a integridade referencial por meio de gatilhos e esses gatilhos precisarem ser acionados em uma determinada ordem. 
 

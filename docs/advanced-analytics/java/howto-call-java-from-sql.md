@@ -3,18 +3,18 @@ title: Como chamar Java de SQL - serviços do SQL Server Machine Learning
 description: Saiba como chamar classes Java de procedimentos armazenados do SQL Server usando a extensão no SQL Server 2019 da linguagem de programação Java.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 36a949f4d046d4071ffd7d52d34233e993ee700f
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 8913f471b127663f9f1be179d791a4f72a0ed6aa
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492998"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59581571"
 ---
 # <a name="how-to-call-java-from-sql-server-2019-preview"></a>Como chamar Java da visualização do SQL Server de 2019
 
@@ -93,7 +93,7 @@ Assim como você criou uma variável de sistema para os executáveis do JDK, voc
 
 ## <a name="external-library"></a>Biblioteca externa
 
-No SQL Server de 2019 CTP 2.4, você pode usar bibliotecas externas para o idioma de Java no Windows e Linux. A mesma funcionalidade estará disponível no Linux em um CTP futuro. Você pode compilar suas classes em um arquivo. jar e carregue o arquivo. jar e outras dependências no banco de dados usando o [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) DDL.
+No SQL Server de 2019 CTP 2.4, você pode usar bibliotecas externas para o idioma de Java no Windows e Linux. Você pode compilar suas classes em um arquivo. jar e carregue o arquivo. jar e outras dependências no banco de dados usando o [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) DDL.
 
 Exemplo de como carregar um arquivo. jar com biblioteca externa:
 

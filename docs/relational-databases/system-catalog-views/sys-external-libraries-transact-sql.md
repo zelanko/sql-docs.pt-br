@@ -1,7 +1,7 @@
 ---
 title: sys.external_libraries (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
@@ -19,12 +19,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0c24f7a95a7146f4d67d655ec0ed5ec58a53ace
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: d56d0c69b9e3bae87dda9b55d241a1c040210ca9
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492360"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583049"
 ---
 # <a name="sysexternallibraries-transact-sql"></a>sys.external_libraries (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "58492360"
 Dá suporte ao gerenciamento de bibliotecas de pacotes relacionados a tempos de execução externos, como R, Python e Java.
 
 > [!NOTE]
-> No SQL Server 2017, há compatibilidade apenas com a linguagem R e a plataforma Windows. R, Python e Java nas plataformas Windows e Linux têm suporte no SQL Server de 2019 CTP 2.4.
+> No SQL Server 2017, há compatibilidade apenas com a linguagem R e a plataforma Windows. Há suporte para R, Python e Java nas plataformas Windows e Linux no SQL Server 2019 CTP 2.4.
 
 ## <a name="sysexternallibraries"></a>sys.external_libraries
 

@@ -14,12 +14,12 @@ ms.assetid: 487d24fc-41d5-495e-843c-0ac974ec472f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bc0dbcc5296ad9ef0e8df6e94b1978fe10792c4e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5f87cb9160925ccc813ee62737662f85f430f28b
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183347"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582859"
 ---
 # <a name="remove-references-to-deprecated-system-stored-procedures"></a>Remover referências a procedimentos armazenados do sistema obsoletos
   O Supervisor de Atualização detectou instruções que fazem referência a procedimentos armazenados do sistema não documentados e a procedimentos armazenados estendidos que não estão mais disponíveis no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. As instruções que fizerem referência a esses objetos falharão. Não use objetos ou APIs do sistema não documentados, pois a funcionalidade pode ser alterada ou removida sem notificação em uma versão futura.  
@@ -27,7 +27,7 @@ ms.locfileid: "48183347"
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrição  
   
 ### <a name="documented-system-stored-procedures"></a>Procedimentos armazenados do sistema documentados  
  Os seguintes procedimentos armazenados do sistema documentados foram removidos:  
@@ -104,6 +104,6 @@ ms.locfileid: "48183347"
   
 ## <a name="see-also"></a>Consulte também  
  [Problemas de atualização de mecanismo de banco de dados](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Supervisor de atualização do SQL Server 2014 &#91;novo&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Supervisor de atualização do SQL Server 2014 &#91;novo&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

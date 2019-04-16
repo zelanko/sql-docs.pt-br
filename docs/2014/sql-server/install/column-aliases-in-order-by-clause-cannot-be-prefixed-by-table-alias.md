@@ -13,12 +13,12 @@ ms.assetid: fee7328f-6e8d-4005-930b-56fb6f17e0b2
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dc1b7dc07b959a3ce1ff9ae4c1e82ece0c900431
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 815e4105ca65b6bcdaa36de0554b9f6e0d3b478a
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175616"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583259"
 ---
 # <a name="column-aliases-in-order-by-clause-cannot-be-prefixed-by-table-alias"></a>Aliases de coluna na cláusula ORDER BY não podem ter como prefixo o alias da tabela
   No [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e em versões posteriores, aliases de coluna na cláusula ORDER BY não podem ter como prefixo o alias da tabela.  
@@ -26,7 +26,7 @@ ms.locfileid: "48175616"
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrição  
  Por exemplo, a consulta a seguir executa no [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], mas retorna uma erro no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]:  
   
 ```  
@@ -73,6 +73,6 @@ ORDER BY p.LastName
   
 ## <a name="see-also"></a>Consulte também  
  [Problemas de atualização de mecanismo de banco de dados](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Supervisor de atualização do SQL Server 2014 &#91;novo&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Supervisor de atualização do SQL Server 2014 &#91;novo&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

@@ -1,9 +1,6 @@
 ---
 title: Atualizar e migrar o Reporting Services | Microsoft Docs
-ms.custom: ''
-ms.date: 06/13/2017
 ms.prod: sql-server-2014
-ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
@@ -12,19 +9,22 @@ helpviewer_keywords:
 - Reporting Services, upgrades
 - SQL Server Reporting Services, upgrading
 - upgrading Reporting Services
-ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5028e1034a7f94cc877d6164b15f6f7b925a661e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 06/13/2017
+ms.openlocfilehash: 77bc8ae2bb029218d79025cb97d9fb1ed281fe6c
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017177"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583069"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
-  Este tópico é uma visão geral das opções de atualização e migração para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Há duas abordagens gerais para se atualizar uma implantação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
+
+Este tópico é uma visão geral das opções de atualização e migração para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Há duas abordagens gerais para se atualizar uma implantação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
   
 -   **Atualização:** Você atualiza os componentes do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos servidores e instâncias onde elas estão instalados atualmente. Isto é geralmente chamado de atualização “no local”. A atualização in-loco não tem suporte de um modo de servidor do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para outro. Por exemplo, você não pode atualizar um servidor de relatório de modo nativo para um servidor de relatório no modo do SharePoint. Você pode migrar seus itens de relatório de um modo para outro. Para obter mais informações, consulte a seção 'Migração de nativo para SharePoint' mais adiante neste documento e o tópico relacionado [rs.exe Sample Reporting Services Script to Migrate Content between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
@@ -155,7 +155,7 @@ ms.locfileid: "56017177"
   
     3.  Outras ferramentas de cliente como [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e Manuais Online não são atualizadas. Para obter versões novas das ferramentas, você pode adicioná-las quando executar a instalação. As versões anteriores coexistirão com versões do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Se você tiver instalado exemplos, a versão anterior permanecerá. A Instalação não oferece suporte à atualização dos exemplos do SQL Server.  
   
-    4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] é um download separado. Para obter mais informações, consulte [Microsoft SQL Server 2014 Data Tools - Business Intelligence para Microsoft Visual Studio 2012](https://go.microsoft.com/fwlink/?LinkID=325512).  
+    4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] é um download separado. Para obter mais informações, consulte [Microsoft SQL Server 2014 Data Tools - Business Intelligence para Microsoft Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843).  
   
 6.  A instalação reutiliza a entrada do serviço Servidor de Relatório do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no Gerenciador de Controle de Serviços. Essa entrada de serviço inclui a conta de serviço Servidor de Relatório do Windows.  
   

@@ -11,12 +11,12 @@ ms.assetid: 500ee6b3-2154-45d2-a3cf-8760166d9413
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d9ee14c39f7fee577065de934f839f9d6c88e630
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 08b853d57068121fccb4db2341754eea0af7f734
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413763"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583129"
 ---
 # <a name="warning-about-client-side-usage-of-geometry-geography-and-hierarchyid"></a>Aviso sobre uso no lado do cliente de GEOMETRY, GEOGRAPHY e HIERARCHYID
   O assembly **Types**, que contém os tipos de dados espaciais foi atualizado da versão 10.0 para a versão 11.0. Aplicativos personalizados que referenciam esse assembly poderão falhar quando certas condições forem verdadeiras.  
@@ -27,7 +27,7 @@ ms.locfileid: "52413763"
 ## <a name="description"></a>Descrição  
  O assembly **Types**, que contém os tipos de dados espaciais foi atualizado da versão 10.0 para a versão 11.0. Aplicativos personalizados que referenciam esse assembly poderão falhar quando as condições a seguir forem verdadeiras.  
   
--   Quando você move um aplicativo personalizado de um computador no qual [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] tiver sido instalado em um computador no qual apenas [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] é instalado, o aplicativo falhará porque a versão referenciada 10.0 do **SqlTypes** assembly não está presente. Você verá esta mensagem de erro: `"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`  
+-   Quando você move um aplicativo personalizado de um computador no qual [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] tiver sido instalado em um computador no qual apenas [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] é instalado, o aplicativo falhará porque a versão referenciada 10.0 do **SqlTypes** assembly não está presente. Talvez você receba esta mensagem de erro: `"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`  
   
 -   Quando você faz referência a **SqlTypes** assembly versão 11.0 e a versão 10.0 também estiver instalada, você poderá ver esta mensagem de erro: `"System.InvalidCastException: Unable to cast object of type 'Microsoft.SqlServer.Types.SqlGeometry' to type 'Microsoft.SqlServer.Types.SqlGeometry'."`  
   
@@ -85,6 +85,7 @@ ms.locfileid: "52413763"
   
 ## <a name="see-also"></a>Consulte também  
  [Problemas de atualização de mecanismo de banco de dados](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Supervisor de atualização do SQL Server 2014 &#91;novo&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Supervisor de atualização do SQL Server 2014 &#91;novo&#93;](sql-server-2014-upgrade-advisor.md
+)  
   
   

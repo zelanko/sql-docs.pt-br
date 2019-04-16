@@ -10,12 +10,12 @@ ms.assetid: 41ac0e62-860a-4905-a318-68d6f814fb59
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 31cf50a29e9dfcc0952df7132dcbed1690aeb831
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 571f0bbd06c141173e7717e304722eb7d4bcd346
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353601"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582780"
 ---
 # <a name="integration-management-functional-area-master-data-manager"></a>Área funcional Gerenciamento de Integração (Master Data Manager)
   Na área funcional Gerenciamento de Integração, os administradores podem importar dados de tabelas de preparo e criar exibições de assinatura a serem usadas para sistemas de assinatura. Para obter mais informações sobre administradores, consulte [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
@@ -23,7 +23,7 @@ ms.locfileid: "53353601"
 ## <a name="import-data"></a>Importar dados  
  [Importação de dados &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
- [Carregar ou atualizar membros no Master Data Services por meio do processo de preparo](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)  
+ [Carregar ou atualizar membros no Master Data Services por meio do processo de preparo](add-update-and-delete-data-master-data-services.md)  
   
  [Mover membros de hierarquia explícita por meio do processo de preparo &#40;Master Data Services&#41;](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)  
   

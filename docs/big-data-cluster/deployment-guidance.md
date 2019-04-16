@@ -5,17 +5,17 @@ description: Aprenda a implantar clusters de big data de 2019 do SQL Server (ver
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: c991181fc79627aee1f2c2e397ad7d9b1aaf953f
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: 7a863259a3eb04aef648d98f1d8c4ac22e4a3f38
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860588"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582409"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Como implantar clusters de grandes dados do SQL Server no Kubernetes
 
@@ -55,7 +55,7 @@ Você pode optar por implantar Kubernetes em qualquer uma das três maneiras:
 
 Antes de implantar o cluster de big data do SQL Server 2019, primeiramente [instalar as ferramentas de big data](deploy-big-data-tools.md):
 - **mssqlctl**
-- **Kubectl**
+- **kubectl**
 - **Azure Data Studio**
 - **Extensão do SQL Server de 2019**
 
@@ -68,7 +68,7 @@ Depois de configurar o cluster Kubernetes, você pode prosseguir com a implanta�
 
 Para implantar um cluster de big data no Azure com todas as configurações padrão para um ambiente de desenvolvimento/teste, siga as instruções neste artigo:
 
-[Início Rápido: Implantar um cluster de big data do SQL Server no Kubernetes](quickstart-big-data-cluster-deploy.md)
+[Guia de início rápido: Implantar um cluster de big data do SQL Server no Kubernetes](quickstart-big-data-cluster-deploy.md)
 
 Se você quiser personalizar sua implantação de cluster de big data de acordo com sua carga de trabalho necessidades de, siga as instruções no restante deste artigo.
 
@@ -338,9 +338,9 @@ Para monitorar ou solucionar problemas de uma implantação, use **kubectl** par
    | Serviço | Descrição |
    |---|---|
    | **endpoint-master-pool** | Fornece acesso para a instância mestre.<br/>(**EXTERNAL-IP, 31433** e o **SA** usuário) |
-   | **controlador de ponto de extremidade** | Dá suporte a ferramentas e clientes que gerenciam o cluster. |
+   | **endpoint-controller** | Dá suporte a ferramentas e clientes que gerenciam o cluster. |
    | **endpoint-service-proxy** | Fornece acesso para o [Portal de administração de Cluster](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**:30777/portal)|
-   | **segurança de ponto de extremidade** | Fornece acesso para o gateway HDFS/Spark.<br/>(**EXTERNAL-IP** e o **raiz** usuário) |
+   | **endpoint-security** | Fornece acesso para o gateway HDFS/Spark.<br/>(**EXTERNAL-IP** e o **raiz** usuário) |
 
 1. Use o [Portal de administração de Cluster](cluster-admin-portal.md) para monitorar a implantação na **implantação** guia. Você precisa esperar para o **ponto de extremidade de serviço de proxy** início antes de acessar esse portal, portanto, ele não estará disponível no início de uma implantação do serviço.
 

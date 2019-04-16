@@ -36,12 +36,12 @@ ms.assetid: 4a3cb94a-a7ac-4cec-94c7-db26fcf6d161
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0d8ec04baf292807120ed5a26360878ac7e20442
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eb2537af2539854f0f66e3f6c39c3b6e5315ec6f
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070896"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59581921"
 ---
 # <a name="using-reports"></a>Usando relatórios
   Um relatório único é gerado para cada componente e, se necessário, para cada instância analisada pelo Assistente para Análise do Supervisor de Atualização em um servidor. O relatório fornece detalhes sobre problemas conhecidos que podem afetar uma atualização. Ele também fornece links para informações e ações sugeridas para solucionar os problemas identificados.  
@@ -83,10 +83,10 @@ ms.locfileid: "48070896"
  Se você quiser compartilhar a informações com outras pessoas, poderá enviar-lhes o relatório XML. Se preferir usar outro aplicativo, basta exportar o relatório para um arquivo CSV que pode ser usado para criar uma planilha, um arquivo de texto ou uma mensagem de email.  
   
 ## <a name="see-also"></a>Consulte também  
- [Como: exibir um relatório do Supervisor de atualização](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)   
- [Como: exportar relatórios](../../../2014/sql-server/install/how-to-export-reports.md)   
+ [Como: Exibir um relatório do Supervisor de atualização](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)   
+ [Como: Exportar relatórios](../../../2014/sql-server/install/how-to-export-reports.md)   
  [Como: Filtrar relatórios](../../../2014/sql-server/install/how-to-filter-reports.md)   
  [Solucionando problemas de atualização](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
- [Supervisor de atualização do SQL Server 2014 &#91;novo&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Supervisor de atualização do SQL Server 2014 &#91;novo&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

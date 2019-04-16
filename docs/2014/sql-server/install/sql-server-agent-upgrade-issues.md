@@ -14,12 +14,12 @@ ms.assetid: 77e303ff-febd-4103-ae5d-6e5b85bc8009
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ba8f9ce8d5783ae2d16703d3057727caf0f06ddd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4c58e0cb5b53d2866ff39a5c1352c7884383a0cf
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078187"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59581933"
 ---
 # <a name="sql-server-agent-upgrade-issues"></a>Problemas de atualização do SQL Server Agent
   Os tópicos a seguir descrevem os problemas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que podem afetar a atualização. Esses tópicos indicam ações que você pode fazer para ajudar reduzir os efeitos destas alterações em seu ambiente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -43,7 +43,7 @@ ms.locfileid: "48078187"
 -   [Atualização mudará a Conta Proxy do Usuário do SQL Server Agent para o UpgradedProxyAccount temporário](../../../2014/sql-server/install/upgrading-changes-sql-server-agent-user-proxy-account-to-temporary-account.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Supervisor de atualização do SQL Server 2014 &#91;novo&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)   
+ [Supervisor de atualização do SQL Server 2014 &#91;novo&#93;](sql-server-2014-upgrade-advisor.md)   
  [Solucionando problemas de atualização](../../../2014/sql-server/install/resolving-upgrade-issues.md)  
   
   

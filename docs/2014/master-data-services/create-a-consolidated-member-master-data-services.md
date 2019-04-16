@@ -14,12 +14,12 @@ ms.assetid: 431ab2d2-5517-4372-9980-142b05427c08
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8bef17d900fe9a823439a88b8e94eb78810e6627
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: cf154f3437ed22be932fa37470f59049aea09850
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766938"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582578"
 ---
 # <a name="create-a-consolidated-member-master-data-services"></a>Criar um membro consolidado (Master Data Services)
   No [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], crie um membro consolidado quando você desejar um nó pai para uma hierarquia explícita. Os membros consolidados podem ter seus próprios atributos. Eles são usados para agrupamento. Conforme mostrado no exemplo a seguir, os membros consolidados podem ser usados para grupos de contas que têm contas neles.  
@@ -60,7 +60,7 @@ ms.locfileid: "52766938"
 ## <a name="see-also"></a>Consulte também  
  [Criar uma hierarquia explícita &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
  [Criar um membro folha &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-leaf-member-master-data-services.md)   
- [Carregar ou atualizar membros no Master Data Services por meio do processo de preparo](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)   
+ [Carregar ou atualizar membros no Master Data Services por meio do processo de preparo](add-update-and-delete-data-master-data-services.md)   
  [Membros &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   
  [Hierarquias explícitas &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
   

@@ -17,12 +17,12 @@ ms.assetid: 6e309fa0-5fb9-45a1-9739-f13fae525bfe
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a12a0972ee754c8f9070122902a64c3e92eb05f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6c6b49beeea2039bc30081cc7cf054c3d269847a
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185276"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582589"
 ---
 # <a name="large-constants-are-typed-as-large-value-types-in-90-or-later-compatibility-modes"></a>Constantes grandes são digitadas como tipos de valor grande no modo de compatibilidade 90 ou posterior
   O Supervisor de Atualização detectou a presença de constantes grandes. Constantes de cadeias de caracteres e constantes binárias maiores que 8.000 bytes são tratadas como tipos de dados de objeto grande no [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. No [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou em versões posteriores, caracteres grandes, Unicode e constantes binárias são digitadas como tipos do valor grande.  
@@ -30,7 +30,7 @@ ms.locfileid: "48185276"
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrição  
  Quando funções de cadeia de caracteres, como CHARINDEX e PATINDEX, são usadas com constantes de cadeia de caracteres ou constantes binárias que excedem 8.000 bytes, o [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] retorna o erro 8116, e o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou versões posteriores retorna o erro 8152.  
   
  No [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], as funções de cadeia de caracteres retornam o erro 8116 quando são usadas com tipos de dados `text`, `ntext` e `image`.  
@@ -41,6 +41,6 @@ ms.locfileid: "48185276"
   
 ## <a name="see-also"></a>Consulte também  
  [Problemas de atualização de mecanismo de banco de dados](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Supervisor de atualização do SQL Server 2014 &#91;novo&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Supervisor de atualização do SQL Server 2014 &#91;novo&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

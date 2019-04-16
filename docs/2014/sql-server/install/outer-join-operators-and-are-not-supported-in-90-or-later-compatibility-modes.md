@@ -16,12 +16,12 @@ ms.assetid: ca4aa11f-1048-411f-9c6c-3d0a8e319f2f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6d5d9ff66bb078be30fcd6e7d4b43b5e94069be0
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 01584c368f9af43a8e63ec04d3eaf4f9228d9c96
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591610"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582192"
 ---
 # <a name="outer-join-operators--and--are-not-supported-in-90-or-later-compatibility-modes"></a>Os operadores de junção externa \*= e =\* não são compatíveis com o modo de compatibilidade 90 ou posterior
   O Supervisor de atualização detectou o uso de operadores de junção externa \*= e =\*. Esses operadores não são aceitos no modo de compatibilidade 90 ou posterior. Quando você faz a atualização, os bancos de dados de usuários mantêm seus modos de compatibilidade. As instruções que usam esses operadores falhará.  
@@ -54,6 +54,6 @@ ORDER BY employee.job_id
   
 ## <a name="see-also"></a>Consulte também  
  [Problemas de atualização de mecanismo de banco de dados](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Supervisor de atualização do SQL Server 2014 &#91;novo&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Supervisor de atualização do SQL Server 2014 &#91;novo&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

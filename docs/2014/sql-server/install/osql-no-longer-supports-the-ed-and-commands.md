@@ -15,12 +15,12 @@ ms.assetid: 7cc2852f-94e8-4292-9326-c3f1a1acd281
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a94c7dd28353a94da0b595183a75d239fa4c1aa2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fd6c1da0c11c8fa71570dbb7034c885877e22b7a
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112646"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59581529"
 ---
 # <a name="osql-no-longer-supports-the-ed-and--commands"></a>osql não oferece suporte a comandos ED e !! comandos
   O **osql** utilitário não oferece suporte a **ED** e **!!** comandos.  
@@ -32,6 +32,6 @@ ms.locfileid: "48112646"
   
 ## <a name="see-also"></a>Consulte também  
  [Problemas de atualização de mecanismo de banco de dados](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Supervisor de atualização do SQL Server 2014 &#91;novo&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Supervisor de atualização do SQL Server 2014 &#91;novo&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

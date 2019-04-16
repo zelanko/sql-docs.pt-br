@@ -6,16 +6,16 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2542c7c05b222517ae9f4a4c05152f21a5ba293b
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: 32648829c64143b4f31a5d27479bbc3d28076fa2
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58859638"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582419"
 ---
 # <a name="configure-hdfs-tiering-on-sql-server-big-data-clusters"></a>Configurar o HDFS disposição em camadas em clusters de grandes dados do SQL Server
 
@@ -37,7 +37,7 @@ As seções a seguir fornecem um exemplo de como configurar o HDFS disposição 
 - [Cluster de big data implantados](deployment-guidance.md)
 - [Ferramentas de big data](deploy-big-data-tools.md)
   - **mssqlctl**
-  - **Kubectl**
+  - **kubectl**
 
 ## <a id="load"></a> Carregar dados no armazenamento do Azure Data Lake
 

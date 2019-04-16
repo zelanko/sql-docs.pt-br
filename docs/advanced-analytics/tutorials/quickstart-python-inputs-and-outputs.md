@@ -8,14 +8,14 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a410a6f732baf79d419405e38e7e84aed86b38dd
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: a778c4a65b9e3f4cbf4ed77cff46e9061d4b6a8a
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046728"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583219"
 ---
-# <a name="quickstart-handle-inputs-and-outputs-using-python-in-sql-server"></a>Guia de início rápido: Lidar com entradas e saídas usando o Python no SQL Server
+# <a name="quickstart-handle-inputs-and-outputs-using-python-in-sql-server"></a>Início Rápido: Lidar com entradas e saídas usando o Python no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Neste início rápido mostra como lidar com entradas e saídas ao usar o Python em serviços do SQL Server Machine Learning.
@@ -87,8 +87,6 @@ Vamos dar uma olhada no padrão variáveis de entrada e saídas de sp_execute_ex
     ```
 
     No caso das variáveis de entrada e saídas no `@input_data_1_name` e `@output_data_1_name` precisa corresponder ao caso das, em que o código do Python no `@script`, como Python diferencia maiusculas de minúsculas.
-
-    Além disso, a ordem dos parâmetros é importante. Você deve especificar os parâmetros necessários *@input_data_1* e *@output_data_1* primeiro para usar os parâmetros opcionais *@input_data_1_name* e *@output_data_1_name*.
 
     Apenas um conjunto de dados de entrada pode ser passado como um parâmetro e é possível retornar apenas um conjunto de dados. No entanto, você pode chamar outros conjuntos de dados dentro de seu código Python e é possível retornar saídas de outros tipos, além do conjunto de dados. Você também pode adicionar a palavra-chave OUTPUT a qualquer parâmetro para que ele seja retornado com os resultados. 
 
