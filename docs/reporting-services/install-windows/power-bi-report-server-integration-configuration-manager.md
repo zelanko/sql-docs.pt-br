@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
-ms.openlocfilehash: 1543846ec5353f5419b12bb5747b1ced53d2b4f0
-ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
+ms.openlocfilehash: 61f72b2676e2c3c92dd82febc70d2e00d3363baf
+ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57556238"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506553"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Integração de servidor de relatório do Power BI (Configuration Manager)
 
@@ -34,15 +34,15 @@ Além de uma conexão de Internet ativa para que você possa navegar até o serv
 
 - Os relatórios dos quais você deseja fixar devem usar credenciais armazenadas. Isso não é um requisito da própria integração do [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] , mas do processo de atualização para os itens fixados.  A ação de fixar um item de relatório cria uma assinatura do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para gerenciar o agendamento de atualização dos blocos no [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] exigem credenciais armazenadas. Se um relatório não usar credenciais armazenadas, um usuário poderá ainda assim fixar itens de relatório, mas quando a assinatura associada tentar atualizar os dados para o [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)], você verá uma mensagem de erro semelhante à seguinte na página **Minhas Assinaturas** .
 
-        PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credential.
+    PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: A ação atual não pode ser concluída. As credenciais da fonte de dados do usuário não atendem aos requisitos para executar esse relatório ou conjunto de dados compartilhado. A credencial da fonte de dados do usuário.
 
 Para obter mais informações sobre como armazenar credenciais, consulte a seção “Configurar as credenciais armazenadas para uma fonte de dados específica ao relatório” em [Armazenar as credenciais em uma fonte de dados do Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md).
 
 Um administrador pode examinar os arquivos de log do  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para saber mais.  Ele verá mensagens semelhantes à seguinte. Uma ótima maneira de examinar e monitorar arquivos de log do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é usar o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Power Query nos arquivos.  Para saber mais e para assistir a um vídeo curto, veja [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).
 
-    subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified.
+- subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Erro de Entrega do PowerBI: painel: Amostra de Análise de Gastos de TI, visual: Gráfico2, erro: A ação atual não pode ser concluída. As credenciais da fonte de dados do usuário não atendem aos requisitos para executar esse relatório ou conjunto de dados compartilhado. Ou as credenciais de fonte de dados do usuário não estão armazenadas no banco de dados de servidor de relatório ou a fonte de dados do usuário está configurada para não exigir credenciais, mas a conta de execução autônoma não foi especificada.
 
-    notification!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Error occurred processing subscription fcdb8581-d763-4b3b-ba3e-8572360df4f9: PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared data set. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified.
+- notification!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Erro de processamento da assinatura fcdb8581-d763-4b3b-ba3e-8572360df4f9: Erro de Entrega do PowerBI: painel: Amostra de Análise de Gastos de TI, visual: Gráfico2, erro: A Ação atual não pode ser concluída. As credenciais da fonte de dados do usuário não atendem aos requisitos para executar esse relatório ou conjunto de dados compartilhado. Ou as credenciais de fonte de dados do usuário não estão armazenadas no banco de dados de servidor de relatório ou a fonte de dados do usuário está configurada para não exigir credenciais, mas a conta de execução autônoma não foi especificada.
 
 ## <a name="bkmk_steps2integrate"></a> Para integrar e registrar o Servidor de Relatório
 
@@ -149,12 +149,12 @@ Na segunda vez que um usuário fixar um item, as etapas de 1 a 4 são ignoradas 
 
 ## <a name="considerations-and-limitations"></a>Considerações e limitações
 
-* Não há suporte para locatários virais e governamental.
+* Locatários virais e governamentais não têm suporte.
 
 ## <a name="next-steps"></a>Próximas etapas
 
 [Minhas Configurações para integração do Power BI](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
-[Fixar itens do Reporting Services nos dashboards do Power BI](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)
-[painéis no Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
+[Fixar itens do Reporting Services nos painéis do Power BI](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)
+[Painéis no Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 
 Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
