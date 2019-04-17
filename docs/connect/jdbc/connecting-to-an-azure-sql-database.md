@@ -81,7 +81,7 @@ Antes da versão 4.0 do [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md
 
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>Uso de criptografia requer a configuração de hostNameInCertificate
 
-Antes da versão 7.2 do [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], ao se conectar a um [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], você deve especificar **hostNameInCertificate** se você especificar **criptografar = true** (se o nome do servidor em que a conexão cadeia de caracteres é *shortName*. *domainName*, defina a **hostNameInCertificate** propriedade \*. *domainName*.). Essa propriedade é opcional a partir da versão 7.2 do driver.
+Antes da versão 7.2 do [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], ao se conectar a um [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], você deve especificar **hostNameInCertificate** se você especificar **encrypt=true** (se o nome do servidor em que a conexão cadeia de caracteres é *shortName*. *domainName*, defina a **hostNameInCertificate** propriedade \*. *domainName*.). Essa propriedade é opcional a partir da versão 7.2 do driver.
 
 Por exemplo:
 
