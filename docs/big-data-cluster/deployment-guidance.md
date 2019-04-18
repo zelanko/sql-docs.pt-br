@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 7a863259a3eb04aef648d98f1d8c4ac22e4a3f38
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: b7ca08d7ab73cc90e90717b23d2e5b293022bb1c
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582409"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671372"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Como implantar clusters de grandes dados do SQL Server no Kubernetes
 
@@ -120,6 +120,29 @@ A configuração do cluster pode ser personalizada usando um conjunto de variáv
 >1. Certifique-se de que encapsular as senhas entre aspas duplas se ele contiver caracteres especiais. Você pode definir o MSSQL_SA_PASSWORD para que você quiser, mas certifique-se de que eles são suficientemente complexos e não usam o `!`, `&` ou `'` caracteres. Observe que os delimitadores de aspas duplas funcionam somente em comandos de bash.
 >1. O nome do cluster deve ser caracteres alfa-numéricos do apenas letras minúsculas, sem espaços. Todos os artefatos de Kubernetes (contêineres, pods, conjuntos com estado, serviços) para o cluster serão criados em um namespace com o mesmo nome que o cluster do nome especificado.
 >1. O **SA** conta é um administrador do sistema na instância do SQL Server Master que é criada durante a instalação. Após a criação de seu contêiner do SQL Server, a variável de ambiente MSSQL_SA_PASSWORD especificada é detectável executando echo MSSQL_SA_PASSWORD $ no contêiner. Para fins de segurança, altere sua senha de SA, de acordo com práticas recomendadas documentadas [aqui](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
+
+A seção a seguir detalha nas opções de configurações YARN. Observação: Essas são configurações de nível de especialistas. O usuário não é necessário especificar qualquer um desses valores, e nesse caso, os padrões em vigor. Yarn é o Resource Manager para o Spark. Spark é executado em compartimentos de armazenamento e que pode ser controlado por meio de CLUSTER_STORAGE_POOL_REPLICAS.
+
+| Variável de ambiente do yarn | Obrigatório | Valor padrão | Descrição |
+|---|---|---|---|
+| **HADOOP_HEAPSIZE** | Não | 2048  | Tamanho do heap para processos de nó de nome e os dados do HDFS |
+| **YARN_HEAPSIZE**   | Não | 2048  | Tamanho do heap para processos de RM do Yarn e NM |
+| **YARN_NODEMANAGER_RESOURCE_MEMORY** | Não | 18432  | Memória total máxima do Yarn pode usar por contêiner K8  |
+| **YARN_NODEMANAGER_RESOURCE_VCORES** | Não | 6  | Núcleos virtuais de max Yarn pode usar em um nó  |
+| **YARN_SCHEDULER_MAX_MEMORY** | Não | 18432  | Memória máxima em um contêiner do Yarn pode usar em um nó  |
+| **YARN_SCHEDULER_MAX_VCORES** | Não | 6  | Memória máxima um contêiner do Yarn pode usar em um aceno  |
+| **YARN_SCHEDULER_CAPACITY_MAX_AM_PERCENT** | Não | 0.3  | Taxa de memória total que pode usar o aplicativo mestre   |
+
+Esta seção detalha em configurações do Spark opções. Observação: Essas são configurações de nível de especialistas. O usuário não é necessário especificar qualquer um desses valores, e nesse caso, os padrões em vigor. Em tempo de execução o usuário pode configurar por aplicativo por meio % % configure nos notebooks spark.
+
+| Variável de ambiente do Spark | Obrigatório | Valor padrão | Descrição |
+|---|---|---|---|
+| **SPARK_DRIVER_MEMORY** | Não | 2048  | Driver do Spark a memória usada  |
+| **SPARK_DRIVER_CORES** | Não | 1  | Número de núcleos usados pelo driver do Spark  |
+| **SPARK_EXECUTOR_INSTANCES** | Não | 3  | Driver do Spark a memória usada  |
+| **SPARK_EXECUTOR_MEMORY** | Não | 1536  | Memória usada executor Spark |
+| **SPARK_EXECUTOR_CORES** | Não | 1  | Número de núcleos usados pelos executores Spark  |
+
 
 Definir variáveis de ambiente necessárias para implantar um cluster de big data é diferente dependendo se você estiver usando o cliente Windows ou Linux.  Escolha as etapas a seguir dependendo de qual sistema operacional você está usando.
 

@@ -21,12 +21,12 @@ ms.assetid: 9997ffed-a4c1-428f-8bac-3b9e4b16d7cf
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b69bfb4da1bf20a8d74f5adcda44e55954bbdf65
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: f45c634b2a5ab057fd9c2ae878e544a6b7d84f7f
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409633"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671342"
 ---
 # <a name="sysdmtcplistenerstates-transact-sql"></a>sys.dm_tcp_listener_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "52409633"
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**listener_id**|**int**|ID interna de. um ouvinte Não permite valor nulo.<br /><br /> Chave primária.|  
-|**ip_address**|**nvarchar48**|O endereço IP do ouvinte que está online e está sendo escutando no momento. IPv4 ou IPv6 é permitido. Se um ouvinte possuir os dois tipos de endereços, eles serão listados separadamente. Um curinga de IPv4, é exibido como "0.0.0.0". Um curinga de IPv6, é exibido como "::".<br /><br /> Não permite valor nulo.|  
+|**ip_address**|**nvarchar(48)**|O endereço IP do ouvinte que está online e está sendo escutando no momento. IPv4 ou IPv6 é permitido. Se um ouvinte possuir os dois tipos de endereços, eles serão listados separadamente. Um curinga de IPv4, é exibido como "0.0.0.0". Um curinga de IPv6, é exibido como "::".<br /><br /> Não permite valor nulo.|  
 |**is_ipv4**|**bit**|Tipo de endereço IP<br /><br /> 1 = IPv4<br /><br /> 0 = IPv6|  
 |**port**|**int**|O número da porta na qual o ouvinte está escutando. Não permite valor nulo.|  
 |**type**|**tinyint**|Tipo de ouvinte, um dos seguintes:<br /><br /> 0 = [!INCLUDE[tsql](../../includes/tsql-md.md)]<br /><br /> 1 = Service Broker<br /><br /> 2 = Espelhamento do banco de dados<br /><br /> Não permite valor nulo.|  

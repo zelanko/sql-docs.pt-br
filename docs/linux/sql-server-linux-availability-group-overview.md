@@ -4,18 +4,18 @@ description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 11/27/2017
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: 1273d445d52c00db01cac884b171e8feedceb49a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: cec05fbb83bf3b86babfa26df619ebc8f9a2a34d
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206615"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671282"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Sempre em grupos de disponibilidade no Linux
 
@@ -57,7 +57,7 @@ A combinação de `required_synchronized_secondaries_to_commit` e o novo número
 
 Há três valores que podem ser definidas para `required_synchronized_secondaries_to_commit`: 0, 1 ou 2. Eles controlam o comportamento do que acontece quando uma réplica se tornar indisponível. Os números correspondem ao número de réplicas secundárias que devem ser sincronizados com o primário. O comportamento é o seguinte no Linux:
 
--   0 - nenhum failover automático é possível, pois nenhuma réplica secundária é necessária a serem sincronizados. O banco de dados primário está disponível em todos os momentos.
+-   0 - réplicas secundárias não precisará estar no estado sincronizado com o primário. No entanto se os secundários não estiverem sincronizados, haverá sem failover automático. 
 -   1 - uma réplica secundária deve ser em um estado sincronizado com o primário; failover automático será possível. O banco de dados primário não está disponível até que uma réplica síncrona secundária está disponível.
 -   2 - ambas as réplicas secundárias em uma configuração de AG três ou mais nós devem ser sincronizadas com o primário; failover automático será possível.
 
@@ -95,7 +95,7 @@ Se essas condições forem atendidas e o servidor que hospeda a réplica primár
 
 Também nesta nova [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] a partir da atualização cumulativa 1 para é uma réplica somente de configuração. Como o Pacemaker é diferente de um WSFC, especialmente quando se trata de quorum e exigindo o STONITH, ter apenas uma configuração de dois nós não funcionará quando se trata de um grupo de disponibilidade. Para uma FCI, os mecanismos de quorum fornecidos pelo Pacemaker podem ser muito bem, porque todos os arbitragem de failover FCI ocorre na camada do cluster. Para um grupo de disponibilidade, arbitragem no Linux acontece em [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], onde todos os metadados são armazenados. Isso é que a réplica somente configuração entra em cena.
 
-Sem qualquer outra coisa, um terceiro nó e pelo menos uma réplica sincronizada seria necessárias. Isso não funcionaria para [!INCLUDE[ssstandard-md](../includes/ssstandard-md.md)], já que ele só pode ter duas réplicas que participam de um grupo de disponibilidade. A réplica somente configuração armazena a configuração do grupo de disponibilidade no banco de dados mestre, mesmo que outras réplicas na configuração do grupo de disponibilidade. A réplica somente configuração não tem os bancos de dados de usuário participam do AG. Os dados de configuração são enviados de forma síncrona do primário. Esses dados de configuração, em seguida, são usados durante failovers, independentemente de estarem automática ou manual.
+Sem qualquer outra coisa, um terceiro nó e pelo menos uma réplica sincronizada seria necessárias. A réplica somente configuração armazena a configuração do grupo de disponibilidade no banco de dados mestre, mesmo que outras réplicas na configuração do grupo de disponibilidade. A réplica somente configuração não tem os bancos de dados de usuário participam do AG. Os dados de configuração são enviados de forma síncrona do primário. Esses dados de configuração, em seguida, são usados durante failovers, independentemente de estarem automática ou manual.
 
 Para um grupo de disponibilidade manter o quorum e habilitar failovers automáticos com um tipo de cluster externo, ele o deverá:
 

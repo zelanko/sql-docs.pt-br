@@ -1,7 +1,7 @@
 ---
 title: SQL Server Always On padrões de implantação de grupo de disponibilidade | Microsoft Docs
 ms.custom: sql-linux
-ms.date: 10/16/2017
+ms.date: 04/17/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: linux
@@ -10,12 +10,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a9d09f9f769d195600c8af97b347831340837d91
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: b0b7e735b2897f8bc942f1d4e6c151f27f588e8c
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044929"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671172"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Alta disponibilidade e proteção de dados para as configurações de grupo de disponibilidade
 
@@ -62,7 +62,7 @@ Um grupo de disponibilidade com três réplicas síncronas pode fornecer proteç
 | |escala de leitura|Alta disponibilidade & </br> proteção de dados | proteção de dados|
 |:---|---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>\*</sup>|2|
-|Interrupção principal | Failover manual. Pode ocorrer perda de dados. A nova primária é R / w. |Failover automático. A nova primária é R / w. |Failover automático. Novo primário não está disponível para transações de usuário até que o antigo primário se recupere e ingresse o grupo de disponibilidade como secundária. |
+|Interrupção principal |Failover automático. A nova primária é R / w. |Failover automático. A nova primária é R / w. |Failover automático. Novo primário não está disponível para transações de usuário até que o antigo primário se recupere e ingresse o grupo de disponibilidade como secundária. |
 |Interrupção de uma réplica secundária  | Primária é R / w. Nenhum failover automático se o principal falhar. |Primária é R / w. Nenhum failover automático se a primária falha também. | Primário não está disponível para transações de usuário. |
 
 <sup>\*</sup> Padrão
@@ -71,7 +71,7 @@ Um grupo de disponibilidade com três réplicas síncronas pode fornecer proteç
 
 ## <a name="two-synchronous-replicas"></a>Duas réplicas síncronas
 
-Essa configuração permite que a proteção de dados. Como as outras configurações de grupo de disponibilidade, ele pode habilitar a escala de leitura. A configuração de duas réplicas síncronas não oferece alta disponibilidade automático. 
+Essa configuração permite que a proteção de dados. Como as outras configurações de grupo de disponibilidade, ele pode habilitar a escala de leitura. A configuração de duas réplicas síncronas não oferece alta disponibilidade automático. Uma configuração de duas réplicas só é aplicável ao SQL Server 2017 RTM e não é mais compatível com superior (CU1 e além) versões do SQL Server 2017...
 
 ![Duas réplicas síncronas][1]
 
@@ -84,9 +84,6 @@ Um grupo de disponibilidade com duas réplicas síncronas fornece proteção de 
 |Interrupção de uma réplica secundária  |Primária é R/W, executar exposto à perda de dados. |Primário não está disponível para transações de usuário até que a secundária se recuperar.|
 
 <sup>\*</sup> Padrão
-
-> [!NOTE]
-> O cenário anterior é o comportamento antes da Atualização Cumulativa 1 do SQL Server 2017 
 
 <a name = "configOnly"></a>
 
