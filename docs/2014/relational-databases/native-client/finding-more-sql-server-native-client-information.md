@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 639796b9abcf95c9f701d3ed88fbb5e71078eb8f
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241286"
 ---
 # <a name="finding-more-sql-server-native-client-information"></a>Localizando mais informações sobre o SQL Server Native Client
   Para obter mais informações sobre o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client e outros tipos de programação de acesso a dados, consulte os seguintes recursos online:  
   
- [Data Access e Storage Developer Center](https://go.microsoft.com/fwlink?linkid=4173)  
+ [Central de Desenvolvedores de Armazenamento e Acesso a Dados](https://go.microsoft.com/fwlink?linkid=4173)  
  Este site fornece artigos técnicos, código de exemplo e outros recursos para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client e outras tecnologias de acesso a dados.  
   
- [Data Access Blog](https://go.microsoft.com/fwlink/?LinkId=48617)  
+ [Blog de Acesso a Dados](https://go.microsoft.com/fwlink/?LinkId=48617)  
  Este site de blog fornece informações sobre tecnologias de acesso a dados e permite que você interaja diretamente com membros da equipe de produto.  
   
  [Windows Data Access Components](https://go.microsoft.com/fwlink/?LinkId=107907)  

@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ms.openlocfilehash: 1a56eec4c2b36aba75664a34e96166b60841f89e
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241364"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>Análise e relatório com ferramentas de BI (business intelligence) da Microsoft
@@ -30,10 +30,10 @@ ms.locfileid: "59241364"
 |**BI de autoatendimento**|Analista/usuário final||||||  
 |Descubra facilmente, e acesse dados públicos e corporativos||[Power Query](https://go.microsoft.com/fwlink/p/?LinkId=391845)||[Catálogo de Dados do Azure](https://azure.microsoft.com/services/data-catalog/)<br /><br />||  
 |Crie modelos de dados avançados||[Power Pivot](https://support.office.com/article/power-pivot-overview-and-learning-f9001958-7901-4caa-ad80-028a6d2432ed?ui=en-US&rs=en-US&ad=US)|||[Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-get-the-desktop/)||  
-|Execute análise de previsão de autoatendimento||||||[Suplementos de Mineração de Dados para Excel](../analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins.md)|  
+|Execute análise de previsão de autoatendimento||||||[Data Mining Add-Ins para Excel](../analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins.md)|  
 |Visualize e explore dados||[Power View](https://go.microsoft.com/fwlink/p/?LinkId=391847)<br /><br /> [Power Map](https://go.microsoft.com/fwlink/p/?LinkId=391848)|||||  
 |Faça perguntas usando a consulta de linguagem natural|||||[P & R](https://docs.microsoft.com/power-bi/consumer/end-user-q-and-a)||  
-|Acesse relatórios usando dispositivos móveis||||[HTML 5 (dá suporte à visualização < arquivos de 10 MB)](https://go.microsoft.com/fwlink/p/?LinkId=391853)|[HTML 5 (dá suporte à visualização < 250 MB)](https://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [Aplicativo móvel do Power BI em dispositivos iOS](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Aplicativo móvel do Power BI em dispositivos Android](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br />[Aplicativo móvel do Power BI para Windows 10](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)||  
+|Acesse relatórios usando dispositivos móveis||||[HTML 5 (dá suporte à visualização de arquivos <10 MB)](https://go.microsoft.com/fwlink/p/?LinkId=391853)|[HTML 5 (dá suporte à visualização de <250 MB)](https://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [Aplicativo móvel do Power BI em dispositivos iOS](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Aplicativo móvel do Power BI em dispositivos Android](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br />[Aplicativo móvel do Power BI para Windows 10](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)||  
 |Colabore e compartilhe|||[Sites do SharePoint](https://go.microsoft.com/fwlink/p/?LinkId=391849)|[Sites da equipe do SharePoint](https://go.microsoft.com/fwlink/p/?LinkId=391850)|[Sites do Power BI](https://docs.microsoft.com/power-bi/service-how-to-collaborate-distribute-dashboards-reports)||  
 |**BI corporativo**|Profissional de TI||||||  
 |Crie modelos corporativos multidimensionais e tabulares||||||[Analysis Services](../analysis-services/analysis-services.md)|  
@@ -42,7 +42,7 @@ ms.locfileid: "59241364"
 |Crie relatórios operacionais||||||<sup>1</sup> [reporting Services](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
 |Crie relatórios personalizados e inseridos||||||<sup>1</sup> [reporting Services](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
 |**Análise avançada**|Cientista de dados||||||  
-|Execute análise de previsão de autoatendimento||||||[Suplementos de Mineração de Dados para Excel](https://msdn.microsoft.com/library/dn282385\(v=sql.120\).aspx)|  
+|Execute análise de previsão de autoatendimento||||||[Data Mining Add-Ins para Excel](https://msdn.microsoft.com/library/dn282385\(v=sql.120\).aspx)|  
 |Use os algoritmos de mineração de dados||||||[Mineração de dados no Analysis Services](https://technet.microsoft.com/library/bb510516\(v=sql.120\).aspx)|  
   
  <sup>1</sup> reporting Services tem vários recursos que dão suporte a entrega de relatórios operacionais e relatórios personalizados, como assinaturas e alertas de dados.

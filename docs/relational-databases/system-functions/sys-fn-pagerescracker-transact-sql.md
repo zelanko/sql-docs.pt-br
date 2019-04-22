@@ -26,10 +26,10 @@ author: bluefooted
 ms.author: pamela
 manager: amitban
 ms.openlocfilehash: 2fc7136b60dba47813b9942316ee6fdfbc64f307
-ms.sourcegitcommit: fc1739be9b2735b2bb469979936e76ca2a3830f8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58899702"
 ---
 # <a name="sysfnpagerescracker-transact-sql"></a>sys.fn_PageResCracker (Transact-SQL)
@@ -52,9 +52,9 @@ sys.fn_PageResCracker ( page_resource )
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|db_id|**INT**|ID do banco de dados|  
-|file_id|**INT**|ID do Arquivo|  
-|page_id|**INT**|ID da página|  
+|db_id|**int**|ID do banco de dados|  
+|file_id|**int**|ID do Arquivo|  
+|page_id|**int**|ID da página|  
   
 ## <a name="remarks"></a>Comentários  
 `sys.fn_PageResCracker` é usado para converter a representação hexadecimal de 8 bytes de uma página de banco de dados em um conjunto de linhas que contém a ID de banco de dados, o arquivo de ID e a ID de página da página.   

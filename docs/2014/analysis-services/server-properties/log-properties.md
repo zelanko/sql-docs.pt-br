@@ -55,10 +55,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e5ade1c582956548a62f36d79f0e1b8fbd03525a
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240725"
 ---
 # <a name="log-properties"></a>Propriedades do log
@@ -108,11 +108,11 @@ ms.locfileid: "59240725"
  **ErrorLog\ LogErrorTypes\KeyNotFound**  
  Especifica a ação executada pelo servidor quando um erro `KeyNotFound` ocorre. As respostas válidas para esse erro incluem:  
   
--   `IgnoreError` informa ao servidor para continuar processamento sem registrar em log o erros ou contá-lo até o limite de erros de chave. Ao ignorar o erro, você simplesmente permite que o processamento continue sem adicioná-lo à contagem de erros ou registrá-lo em log na tela ou no arquivo de log. O registro em questão tem um problema de integridade de dados e não pode ser adicionado ao banco de dados. O registro será descartado ou agregado ao Membro desconhecido, conforme determinado pela propriedade `KeyErrorAction`.  
+-   `IgnoreError` informa ao servidor para continuar o processamento sem registrar em log o erros ou contá-lo até o limite de erros de chave. Ao ignorar o erro, você simplesmente permite que o processamento continue sem adicioná-lo à contagem de erros ou registrá-lo em log na tela ou no arquivo de log. O registro em questão tem um problema de integridade de dados e não pode ser adicionado ao banco de dados. O registro será descartado ou agregado ao Membro desconhecido, conforme determinado pela propriedade `KeyErrorAction`.  
   
--   `ReportAndContinue` informa ao servidor para registrar o erro, contá-lo até o limite de erros de chave e continuar o processamento. O registro que aciona o erro é descartado ou convertido no Membro Desconhecido.  
+-   `ReportAndContinue` informa ao servidor para registrar em log o erro, contá-lo até o limite de erros de chave e continuar o processamento. O registro que aciona o erro é descartado ou convertido no Membro Desconhecido.  
   
--   `ReportAndStop` informa ao servidor para registrar o erro e parar o processamento imediatamente, independentemente do limite de erros de chave. O registro que aciona o erro é descartado ou convertido no Membro Desconhecido.  
+-   `ReportAndStop` informa ao servidor para registrar em log o erro e parar o processamento imediatamente, independentemente do limite de erros de chave. O registro que aciona o erro é descartado ou convertido no Membro Desconhecido.  
   
  **ErrorLog\ LogErrorTypes\KeyDuplicate**  
  Especifica a ação executada pelo servidor quando uma chave duplicada é encontrada. Os valores válidos incluem `IgnoreError` para continuar o processamento como se o erro não tivesse ocorrido, `ReportAndContinue` para registrar em log o erro e continuar o processamento, e `ReportAndStop` para registrar em log o erro e parar o processamento imediatamente, mesmo se a contagem de erro estiver abaixo do limite de erros.  
@@ -172,7 +172,7 @@ ms.locfileid: "59240725"
  O valor padrão desta propriedade é em branco, que por sua vez, assume FlightRecorderTraceDef.xml como padrão.  
   
 ## <a name="query-log"></a>Log de consultas  
- **Aplica-se a:** Somente o modo de servidor multidimensional  
+ **Aplica-se a:** Somente modo de servidor multidimensional  
   
  **QueryLog\QueryLogFileName**  
  Uma propriedade de cadeia de caracteres que especifica o nome do arquivo de log de consultas. Esta propriedade só se aplicará quando um arquivo de disco for usado para log, em vez de uma tabela de banco de dados (o comportamento padrão).  

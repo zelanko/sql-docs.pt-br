@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5225b335cc028397f63cb930b07e8781ce0d8454
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: ed70ca65089991b2b557179beda3c7bd6c58b9ac
+ms.sourcegitcommit: 5f38c1806d7577f69d2c49e66f06055cc1b315f1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213705"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59429352"
 ---
 # <a name="server-level-roles"></a>Funções de nível de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "53213705"
   
  As funções de servidor fixas são fornecidas para conveniência e compatibilidade com versões anteriores. Atribua mais permissões específicas sempre que possível.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornece nove funções de servidor fixas. A permissões que são concedidas às funções de servidor fixas (exceto **público**) não podem ser alteradas. A partir do [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], você pode criar funções de servidor definidas pelo usuário e adicionar permissões do nível de servidor às funções de servidor definidas pelo usuário.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornece nove funções de servidor fixas. As permissões concedidas às funções de servidor fixas (exceto **públicas**) não podem ser alteradas. A partir do [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], você pode criar funções de servidor definidas pelo usuário e adicionar permissões do nível de servidor às funções de servidor definidas pelo usuário.  
   
  Você pode adicionar entidades de segurança no nível do servidor (logons do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], contas do Windows e grupos do Windows) em funções no nível do servidor. Cada membro de uma função de servidor fixa pode adicionar outros logons a essa mesma função. Os membros de funções de servidor definidas pelo usuário não podem acrescentar outras entidades de segurança de servidor à função.  
 > [!NOTE]
@@ -64,7 +64,7 @@ ms.locfileid: "53213705"
 ![fixed_server_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-server-roles.png)   
   
 > [!IMPORTANT]  
->  A permissão **CONTROL SERVER** é semelhante, mas não idêntica à função de servidor fixa do **sysadmin** . As permissões não implicam associações de função e as associações de função não concedem permissões. (Por ex.: **CONTROL SERVER** não implica a associação à função de servidor fixa **sysadmin**.) No entanto, às vezes é possível representar entre funções e permissões equivalentes. A maioria dos comandos **DBCC** e muitos procedimentos do sistema requerem associação na função de servidor fixa **sysadmin** . Para obter uma lista dos 171 procedimentos armazenados do sistema que exigem associação ao **sysadmin** , veja a seguinte postagem de blog de Andreas Wolter [CONTROL SERVER vs. sysadmin/sa: permissions, system procedures, DBCC, automatic schema creation and privilege escalation – caveats](https://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats).  
+>  A permissão **CONTROL SERVER** é semelhante, mas não idêntica à função de servidor fixa do **sysadmin** . As permissões não implicam associações de função e as associações de função não concedem permissões. (Por ex.: **CONTROL SERVER** não implica a associação à função de servidor fixa **sysadmin**.) No entanto, às vezes é possível representar entre funções e permissões equivalentes. A maioria dos comandos **DBCC** e muitos procedimentos do sistema requerem associação na função de servidor fixa **sysadmin** . Para obter uma lista dos 171 procedimentos armazenados do sistema que exigem associação ao **sysadmin** , veja a seguinte postagem de blog de Andreas Wolter [CONTROL SERVER vs. sysadmin/sa: permissions, system procedures, DBCC, automatic schema creation and privilege escalation – caveats](http://andreas-wolter.com/en/control-server-vs-sysadmin-sa/).  
   
 ## <a name="server-level-permissions"></a>Permissão em nível de servidor  
  Somente podem ser acrescentadas permissões do nível de servidor a funções de servidor definidas pelo usuário. Para listar as permissões em nível de servidor, execute a instrução a seguir. As permissões em nível de servidor são:  
@@ -94,7 +94,7 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
   
 ## <a name="see-also"></a>Consulte Também  
  [Funções de nível de banco de dados](../../../relational-databases/security/authentication-access/database-level-roles.md)   
- [Exibições de catálogo de segurança &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [Exibições do Catálogo de Segurança &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Funções de segurança &#40;Transact-SQL&#41;](../../../t-sql/functions/security-functions-transact-sql.md)   
  [Protegendo o SQL Server](../../../relational-databases/security/securing-sql-server.md)   
  [Permissões GRANT de entidade do servidor &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-server-principal-permissions-transact-sql.md)   

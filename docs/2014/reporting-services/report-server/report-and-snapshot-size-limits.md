@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: b43ad109b3b64927f2e4b03ef26fc0bc648a1ec7
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240644"
 ---
 # <a name="report-and-snapshot-size-limits"></a>Limites de tamanho do relatório e do instantâneo
@@ -81,7 +81,7 @@ EXEC sp_spaceused
  A quantidade de instantâneos que são armazenados em um banco de dados do servidor de relatório não é, por si só, um fator de desempenho. Você pode armazenar um número grande de instantâneos sem afetar o desempenho do servidor. Os instantâneos podem ser mantidos indefinidamente. Porém, verifique se o histórico de relatórios pode ser configurado. Se o administrador de um servidor de relatório diminuir o limite do histórico, os relatórios do histórico que você pretende manter podem ser perdidos. Se você excluir o relatório, todo o histórico relacionado será excluído também.  
   
 ## <a name="see-also"></a>Consulte também  
- [Definir propriedades de processamento de relatórios](set-report-processing-properties.md)   
+ [Definir as propriedades do processamento de relatórios](set-report-processing-properties.md)   
  [Banco de dados do servidor de relatório &#40;modo nativo do SSRS&#41;](report-server-database-ssrs-native-mode.md)   
  [Processar relatórios grandes](process-large-reports.md)  
   

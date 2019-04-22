@@ -21,10 +21,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 88c22eebf7a070628e72515fafc83591a8e34c64
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241147"
 ---
 # <a name="report-definition-language-ssrs"></a>Linguagem RDL (SSRS)
@@ -82,7 +82,7 @@ ms.locfileid: "59241147"
 |**Tipo(s) CLR**|**Tipo de dados correspondente**|  
 |-----------------------|---------------------------------|  
 |Booliano|Booliano|  
-|DateTime, DateTimeOffset|DateTime|  
+|DateTime, DateTimeOffset|Datetime|  
 |Int16, Int32, UInt16, Byte, SByte|Integer|  
 |Single, Double|Float|  
 |String, Char, GUID, Timespan|Cadeia de caracteres|  

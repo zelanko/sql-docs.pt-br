@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e9e05ab2dd5eeb0511838cd0c1540b2c1ba964d4
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860737"
 ---
 # <a name="distributed-availability-groups"></a>Grupos de disponibilidade distribuídos
@@ -97,8 +97,8 @@ Com um grupo de disponibilidade distribuído, as réplicas primárias de cada gr
 Estes são os três principais cenários de uso de um grupo de disponibilidade distribuído: 
 
 * [Recuperação de desastre e configurações multissite mais fáceis](#disaster-recovery-and-multi-site-scenarios)
-* [Migração para o novo hardware ou para as novas configurações, que pode incluir o uso do novo hardware ou a alteração dos sistemas operacionais subjacentes](#migrate-by-using-a-distributed-availability-group)
-* [Aumentar o número de réplicas de leitura além de oito em um único grupo de disponibilidade, abrangendo vários grupos de disponibilidade](#scale-out-readable-replicas-with-distributed-availability-groups)
+* [Migração para o novo hardware ou para as novas configurações, que podem incluir o uso do novo hardware ou a alteração dos sistemas operacionais subjacentes](#migrate-by-using-a-distributed-availability-group)
+* [Aumentar o número de réplicas legíveis além de oito em um único grupo de disponibilidade, abrangendo vários grupos de disponibilidade](#scale-out-readable-replicas-with-distributed-availability-groups)
 
 ### <a name="disaster-recovery-and-multi-site-scenarios"></a>Cenários de recuperação de desastre e multissite
 
@@ -407,8 +407,8 @@ A consulta abaixo exibe informações sobre o estado atual da propagação. Isso
 
 ### <a name="next-steps"></a>Próximas etapas 
 
-* [Usar o assistente de grupo de disponibilidade (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)
+* [Usar a caixa de diálogo Assistente de Grupo de Disponibilidade (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)
 
-* [Usar a caixa de diálogo novo grupo de disponibilidade (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
+* [Usar a caixa de diálogo Novo Grupo de Disponibilidade (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
 * [Criar um grupo de disponibilidade com o Transact-SQL](create-an-availability-group-transact-sql.md)

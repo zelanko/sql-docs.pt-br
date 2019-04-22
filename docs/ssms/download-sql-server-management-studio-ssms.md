@@ -25,10 +25,10 @@ author: dnethi
 ms.author: dinethi
 manager: craigg
 ms.openlocfilehash: 9bc678f69df60ec07e1cca6eddbb337aab8ed8ff
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042023"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Baixar o SQL Server Management Studio (SSMS)
@@ -44,11 +44,11 @@ O SSMS é gratuito!
 
 ## <a name="ssms-1791-is-the-current-general-availability-ga-version-of-ssms"></a>O SSMS 17.9.1 é a atual versão de GA (disponibilidade geral) do SSMS
 
-[![daixar](../ssdt/media/download.png) Baixar o SQL Server Management Studio 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154)
+[![baixar](../ssdt/media/download.png) Baixar o SQL Server Management Studio 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154)
 
-[![daixar](../ssdt/media/download.png) Baixar o pacote de atualização do SQL Server Management Studio 17.9.1 (atualiza o 17.x para o 17.9.1)](https://go.microsoft.com/fwlink/?linkid=2043430)
+[![baixar](../ssdt/media/download.png) Baixar o pacote de atualização do SQL Server Management Studio 17.9.1 (atualiza o 17.x para o 17.9.1)](https://go.microsoft.com/fwlink/?linkid=2043430)
 
-**Informações sobre versão**
+**Informações da versão**
 
 - Número da versão: 17.9.1<br>
 - Número de build: 14.0.17289.0<br>
@@ -78,11 +78,11 @@ Para obter mais detalhes sobre o SSMS 17.9.1, confira o [Log de alterações do 
 
 **O SSMS 18.0 RC1 (Release Candidate 1) já está disponível e é a última geração do *SQL Server Management Studio* que dá suporte ao [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]!**
 
-**[![dowaixar](../ssdt/media/download.png) Baixar o SQL Server Management Studio (18.0 RC1)](https://go.microsoft.com/fwlink/?linkid=2085742)**
+**[![baixar](../ssdt/media/download.png) Baixar o SQL Server Management Studio 18.0 (RC1)](https://go.microsoft.com/fwlink/?linkid=2085742)**
 
 O *RC1* é a mais recente versão prévia pública do SSMS 18.0. Se você tiver uma versão prévia anterior do SSMS 18.0 instalada, desinstale-a antes de instalar o SSMS 18.0 RC1.
 
-**Informações sobre versão**
+**Informações da versão**
 
 - Número da versão: 18.0 (RC1)<br>
 - Número de build: 15.0.18098.0<br>

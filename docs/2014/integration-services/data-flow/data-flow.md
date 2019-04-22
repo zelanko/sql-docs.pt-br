@@ -18,14 +18,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76c4f0d89e26e620b8c557383bd130bc8940b168
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241354"
 ---
 # <a name="data-flow"></a>Fluxo de Dados
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] provides three different types of data flow components: sources, fornece três tipos diferentes de componentes de fluxo de dados: fontes, transformações e destinos.nAs fontes extraem dados de armazenamentos de dados, como tabelas e exibições em bancos de dados relacionais, arquivos e bancos de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .lAs transformações modificam, resumem e limpam dados.sOs destinos carregam dados em repositórios de dados ou criam conjuntos de dados na memória.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornece três tipos diferentes de componentes de fluxo de dados: fontes, transformações e destinos. As fontes extraem dados de armazenamentos de dados, como tabelas e exibições em bancos de dados relacionais, arquivos e bancos de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . As transformações modificam, resumem e limpam dados. Os destinos carregam dados em repositórios de dados ou criam conjuntos de dados na memória.  
   
 > [!NOTE]  
 >  Quando você usa provedores personalizados, precisa atualizar o arquivo ProviderDescriptors.xml com os valores de coluna de metadados.  
@@ -97,7 +97,7 @@ ms.locfileid: "59241354"
 ### <a name="sources-available-for-download"></a>Fontes disponíveis para download  
  A tabela a seguir lista mais tipos de fontes que podem ser baixadas do site da [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .  
   
-|Origem|Descrição|  
+|Source|Descrição|  
 |------------|-----------------|  
 |Fonte Oracle|A fonte Oracle é o componente de fonte do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para Oracle da Attunity. O [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para Oracle da Attunity também inclui um gerenciador de conexões e um destino. Para obter mais informações, consulte a página de download de [Microsoft Connectors para Oracle e Teradata da Attunity](https://go.microsoft.com/fwlink/?LinkId=254963).|  
 |Fonte SAP BI|A fonte SAP BI é o componente de fonte do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para SAP BI. O [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para SAP BI também inclui um gerenciador de conexões e um destino. Para obter mais informações, consulte a página de download [Microsoft SQL Server 2008 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978).|  
@@ -118,21 +118,21 @@ ms.locfileid: "59241354"
   
 -   [Transformação Coluna Derivada](transformations/derived-column-transformation.md)  
   
--   [transformação Agrupamento Difuso](transformations/fuzzy-grouping-transformation.md)  
+-   [Transformação Agrupamento Difuso](transformations/fuzzy-grouping-transformation.md)  
   
--   [transformação Pesquisa Difusa](transformations/lookup-transformation.md)  
+-   [Transformação Pesquisa Difusa](transformations/lookup-transformation.md)  
   
--   [transformação Comando OLE DB](transformations/ole-db-command-transformation.md)  
+-   [Transformação Comando OLE DB](transformations/ole-db-command-transformation.md)  
   
--   [transformação Amostragem Percentual](transformations/percentage-sampling-transformation.md)  
+-   [Transformação Amostragem Percentual](transformations/percentage-sampling-transformation.md)  
   
--   [transformação Dinâmica](transformations/pivot-transformation.md)  
+-   [Transformação Dinâmica](transformations/pivot-transformation.md)  
   
 -   [Transformação Amostragem de Linhas](transformations/row-sampling-transformation.md)  
   
 -   [Transformação Classificação](transformations/sort-transformation.md)  
   
--   [Transformação Não Dinâmica](transformations/unpivot-transformation.md)  
+-   [Transformação não dinâmica](transformations/unpivot-transformation.md)  
   
  Para obter mais informações, consulte [Integration Services Transformations](transformations/integration-services-transformations.md).  
   
@@ -158,7 +158,7 @@ ms.locfileid: "59241354"
 ### <a name="destinations-available-for-download"></a>Destinos disponíveis para download  
  A tabela a seguir lista mais tipos de destinos que podem ser baixados do site da [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .  
   
-|Origem|Descrição|  
+|Source|Descrição|  
 |------------|-----------------|  
 |Destino Oracle|O destino Oracle é o componente de destino do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para Oracle da Attunity. O [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para Oracle da Attunity também inclui um gerenciador de conexões e uma fonte. Para obter mais informações, consulte a página de download de [Microsoft Connectors para Oracle e Teradata da Attunity](https://go.microsoft.com/fwlink/?LinkId=254963).|  
 |Destino SAP BI|O destino SAP BI é o componente de destino do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para SAP BI. O [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para SAP BI também inclui um gerenciador de conexões e uma fonte. Para obter mais informações, consulte a página de download [Microsoft SQL Server 2008 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=110393).|  
@@ -189,7 +189,7 @@ ms.locfileid: "59241354"
  Para obter mais informações, consulte [Tratamento de erros em dados](error-handling-in-data.md).  
   
 ### <a name="columns"></a>Colunas  
- Entradas, saídas e saídas de erro são coleções de colunas. Cada coluna é configurável e, dependendo do tipo de coluna, como entrada, saída ou externa, o [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornece propriedades diferentes para cada uma. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornece três maneiras diferentes de definir propriedades de coluna: programaticamente, por meio das caixas de diálogo específicas aos componentes ou por meio da caixa de diálogo **Editor Avançado** .  
+ Entradas, saídas e saídas de erro são coleções de colunas. Cada coluna é configurável e, dependendo do tipo de coluna, como entrada, saída ou externa, o [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornece propriedades diferentes para cada uma. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornece três maneiras diferentes de definir propriedades de coluna: programaticamente, por meio das caixas de diálogo específicas aos componentes ou por meio da caixa de diálogo **Editor Avançado**.  
   
 ## <a name="paths"></a>Caminhos  
  Os caminhos conectam os componentes de fluxo de dados. No Designer [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , você pode exibir e modificar as propriedades de caminho, exibir os metadados de saída do ponto inicial do caminho e anexar visualizadores de dados a um caminho.  

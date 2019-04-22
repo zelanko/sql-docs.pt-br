@@ -17,15 +17,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6d3e667f743b153b965e788d9d7485b311aec5bc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: dd0d134e723a8ca45729933cbbf5b0d75bbde7e6
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034538"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774581"
 ---
 # <a name="active-geo-replication---spwaitfordatabasecopysync"></a>Replicação geográfica ativa - sp_wait_for_database_copy_sync
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Este procedimento tem como escopo uma relação do [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] entre um banco de dados primário e um banco de dados secundário. Chamar o **sp_wait_for_database_copy_sync** faz com que o aplicativo espere até que todas as transações confirmadas sejam replicadas e reconhecidas pelo banco de dados secundário ativo. Execute **sp_wait_for_database_copy_sync** somente banco de dados primário.  
   

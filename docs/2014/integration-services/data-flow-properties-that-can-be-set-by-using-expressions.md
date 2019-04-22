@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fbb609a65c70cb44c8fda81feb75927060ed289b
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240414"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>Propriedades de fluxo de dados que podem ser definidas usando expressões
@@ -72,7 +72,7 @@ ms.locfileid: "59240414"
 |Destino do ADO NET|Propriedade TableOrViewName<br /><br /> Propriedade BatchSize<br /><br /> Propriedade CommandTimeout|  
 |Destino de arquivo simples|Propriedade Header|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Destino Compact|Propriedade TableName|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] destino|Propriedade BulkInsertTableName<br /><br /> Propriedade BulkInsertFirstRow<br /><br /> Propriedade BulkInsertLastRow<br /><br /> Propriedade BulkInsertOrder<br /><br /> Propriedade Timeout|  
+|Destino [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Propriedade BulkInsertTableName<br /><br /> Propriedade BulkInsertFirstRow<br /><br /> Propriedade BulkInsertLastRow<br /><br /> Propriedade BulkInsertOrder<br /><br /> Propriedade Timeout|  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -84,7 +84,7 @@ ms.locfileid: "59240414"
 ## <a name="see-also"></a>Consulte também  
  [Usar expressões de propriedade em pacotes](expressions/use-property-expressions-in-packages.md)   
  [Propriedades comuns](../../2014/integration-services/common-properties.md)   
- [Propriedades Personalizadas de Transformação](data-flow/transformations/transformation-custom-properties.md)   
+ [Propriedades personalizadas da transformação](data-flow/transformations/transformation-custom-properties.md)   
  [Propriedades do caminho](../../2014/integration-services/path-properties.md)  
   
   

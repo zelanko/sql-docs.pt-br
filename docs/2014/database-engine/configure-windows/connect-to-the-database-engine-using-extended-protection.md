@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5b1317bc41be836cfad5159339a4e7c90fcfbc83
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241426"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Conectar-se ao mecanismo de banco de dados usando proteção estendida
@@ -64,7 +64,7 @@ ms.locfileid: "59241426"
   
      Os valores possíveis são **Ativa** e **Inativa**. Para usar a associação de canal, a opção **Forçar Criptografia** deve ser definida como **Ativa**e todos os clientes serão forçados a criptografar. Se for **Inativa**, somente a associação de serviço será garantida. A opção**Forçar Criptografia** está localizada em **Protocolos para Propriedades MSSQLSERVER (Guia Snoalizadores)** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  
   
--   **Proteção Estendida**  
+-   **Proteção estendida**  
   
      Os valores possíveis são **Ativa**, **Permitida**e **Obrigatória**. A variável de **Proteção Estendida** permite que os usuários configurem o nível de **Proteção Estendida** para cada instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A**Proteção Estendida** está localizada em **Protocolos para Propriedades MSSQLSERVER (Guia Avançado)** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  
   

@@ -1,7 +1,7 @@
 ---
 title: Restaurações completas de banco de dados (modelo de recuperação completa) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 5b4c471c-b972-498e-aba9-92cf7a0ea881
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 38c3fd7407955d1c05e7c3bf7550531a4bce2978
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 838a6f840f6576d502fa1908c0f4b876b4cf62b7
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241977"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242194"
 ---
 # <a name="complete-database-restores-full-recovery-model"></a>Restaurações completas de banco de dados (modelo de recuperação completa)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,21 +34,18 @@ ms.locfileid: "54241977"
   
  Ao restaurar um banco de dados, particularmente com o modelo de recuperação completa ou o modelo de recuperação bulk-logged, você deve usar uma única sequência de restauração. Uma *sequência de restauração* consiste em uma ou mais operações de restauração que movem dados por uma ou mais etapas da restauração.  
   
-> [!IMPORTANT]  
->  Não é recomendável anexar ou restaurar bancos de dados de origem desconhecida ou não confiável. Esses bancos de dados podem conter códigos mal-intencionados que podem executar códigos [!INCLUDE[tsql](../../includes/tsql-md.md)] inesperados ou causar erros que modifiquem o esquema ou a estrutura física do banco de dados. Antes de usar um banco de dados de origem desconhecida ou não confiável, execute [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) no banco de dados, em um servidor que não seja de produção. Além disso, examine o código, como procedimentos armazenados ou outro código definido pelo usuário, no banco de dados.  
-  
- **Neste tópico:**  
-  
--   [Restaurando um banco de dados até o ponto de falha](#PointOfFailure)  
-  
--   [Restaurando um banco de dados em um ponto em um backup de log](#PointWithinBackup)  
-  
--   [Tarefas relacionadas](#RelatedTasks)  
-  
-> [!NOTE]  
->  Para obter informações sobre suporte para backups de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja a seção “Suporte de compatibilidade” de [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
+### <a name="untrusted-sources"></a>Fontes não confiáveis
+
+_Não_ é recomendável anexar ou restaurar bancos de dados de origem desconhecida ou não confiável. Esses bancos de dados podem conter códigos mal-intencionados que podem executar códigos [!INCLUDE[tsql](../../includes/tsql-md.md)] inesperados ou causar erros que modifiquem o esquema ou a estrutura física do banco de dados. Antes de usar um banco de dados de uma origem desconhecida ou não confiável, execute o [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) no banco de dados em um servidor que não seja de produção. Examine também o código escrito pelo usuário no banco de dados, como procedimentos armazenados ou outro código definido pelo usuário.
+
+### <a name="backups-from-earlier-versions"></a>Backups de versões anteriores
+
+Para obter informações sobre suporte para backups de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja a seção “Suporte de compatibilidade” de [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).
   
 ##  <a name="PointOfFailure"></a> Restaurando um banco de dados até o ponto de falha  
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Normalmente, a recuperação de um banco de dados até o ponto da falha envolve as seguintes etapas básicas:  
   
 1.  Faça um backup do log de transações ativas (conhecido como a parte final do log). Isso cria um backup do final do log. Se o log de transações ativas não estiver disponível, todas as transações naquela parte do log serão perdidas.  

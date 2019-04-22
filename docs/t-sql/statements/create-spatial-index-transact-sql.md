@@ -1,7 +1,7 @@
 ---
 title: CREATE SPATIAL INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/11/2017
+ms.date: 04/10/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2c9e95ee5fd9b337c9efddf6a3708373ef061f32
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: d8cfcce92fc2eea73aa872720e8c758a7c26c097
+ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980492"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59542216"
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,24 +39,22 @@ ms.locfileid: "53980492"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
--- SQL Server Syntax  
-  
-CREATE SPATIAL INDEX index_name   
+```sql
+CREATE SPATIAL INDEX index_name
   ON <object> ( spatial_column_name )  
     {  
        <geometry_tessellation> | <geography_tessellation>  
-    }   
+    }
   [ ON { filegroup_name | "default" } ]  
-[;]   
+[;]
   
 <object> ::=  
     [ database_name. [ schema_name ] . | schema_name. ]  table_name  
   
 <geometry_tessellation> ::=  
-{   
-  <geometry_automatic_grid_tessellation>   
-| <geometry_manual_grid_tessellation>   
+{
+  <geometry_automatic_grid_tessellation>
+| <geometry_manual_grid_tessellation>
 }  
   
 <geometry_automatic_grid_tessellation> ::=  
@@ -78,7 +76,7 @@ CREATE SPATIAL INDEX index_name
                         [ [,]<tessellation_cells_per_object> [ ,...n] ]  
                         [ [,]<spatial_index_option> [ ,...n] ]  
    )  
-}   
+}
   
 <geography_tessellation> ::=  
 {  
@@ -107,29 +105,29 @@ CREATE SPATIAL INDEX index_name
 <bounding_box> ::=  
 {  
       BOUNDING_BOX = ( {  
-       xmin, ymin, xmax, ymax   
-       | <named_bb_coordinate>, <named_bb_coordinate>, <named_bb_coordinate>, <named_bb_coordinate>   
+       xmin, ymin, xmax, ymax
+       | <named_bb_coordinate>, <named_bb_coordinate>, <named_bb_coordinate>, <named_bb_coordinate>
   } )  
 }  
   
 <named_bb_coordinate> ::= { XMIN = xmin | YMIN = ymin | XMAX = xmax | YMAX=ymax }  
   
 <tessellation_grid> ::=  
-{   
-    GRIDS = ( { <grid_level> [ ,...n ] | <grid_size>, <grid_size>, <grid_size>, <grid_size>  }   
+{
+    GRIDS = ( { <grid_level> [ ,...n ] | <grid_size>, <grid_size>, <grid_size>, <grid_size>  }
         )  
 }  
 <tessellation_cells_per_object> ::=  
-{   
-   CELLS_PER_OBJECT = n   
+{
+   CELLS_PER_OBJECT = n
 }  
   
 <grid_level> ::=  
 {  
-     LEVEL_1 = <grid_size>   
-  |  LEVEL_2 = <grid_size>   
-  |  LEVEL_3 = <grid_size>   
-  |  LEVEL_4 = <grid_size>   
+     LEVEL_1 = <grid_size>
+  |  LEVEL_2 = <grid_size>
+  |  LEVEL_3 = <grid_size>
+  |  LEVEL_4 = <grid_size>
 }  
   
 <grid_size> ::= { LOW | MEDIUM | HIGH }  
@@ -151,70 +149,8 @@ CREATE SPATIAL INDEX index_name
   
 ```  
   
-```  
--- Windows Azure SQL Database Syntax   
-  
-CREATE SPATIAL INDEX index_name   
-    ON <object> ( spatial_column_name )   
-    {   
-      [ USING <geometry_grid_tessellation> ]   
-          WITH ( <bounding_box>   
-                [ [,] <tesselation_parameters> [,... n ] ]   
-                [ [,] <spatial_index_option> [,... n ] ] )   
-     | [ USING <geography_grid_tessellation> ]   
-          [ WITH ( [ <tesselation_parameters> [,... n ] ]   
-                   [ [,] <spatial_index_option> [,... n ] ] ) ]   
-    }  
-  
-[ ; ]  
-  
-<object> ::=  
-{  
-    [database_name. [schema_name ] . | schema_name. ]   
-                table_name   
-}  
-  
-<geometry_grid_tessellation> ::=   
-{ GEOMETRY_GRID }  
-  
-<bounding_box> ::=   
-BOUNDING_BOX = ( {  
-        xmin, ymin, xmax, ymax   
-   | <named_bb_coordinate>, <named_bb_coordinate>, <named_bb_coordinate>, <named_bb_coordinate>   
-  } )  
-  
-<named_bb_coordinate> ::= { XMIN = xmin | YMIN = ymin | XMAX = xmax | YMAX=ymax }  
-  
-<tesselation_parameters> ::=   
-{   
-    GRIDS = ( { <grid_density> [ ,... n ] | <density>, <density>, <density>, <density>  } )   
-  | CELLS_PER_OBJECT = n   
-}  
-  
-<grid_density> ::=   
-{  
-     LEVEL_1 = <density>   
-  |  LEVEL_2 = <density>   
-  |  LEVEL_3 = <density>   
-  |  LEVEL_4 = <density>   
-}  
-  
-<density> ::= { LOW | MEDIUM | HIGH }  
-  
-<geography_grid_tessellation> ::=   
-{ GEOGRAPHY_GRID }  
-  
-<spatial_index_option> ::=   
-{  
-    IGNORE_DUP_KEY = OFF  
-  | STATISTICS_NORECOMPUTE = { ON | OFF }  
-  | DROP_EXISTING = { ON | OFF }  
-  | ONLINE = OFF   
-}  
-  
-```  
-  
 ## <a name="arguments"></a>Argumentos  
+
  *index_name*  
  É o nome do índice. Os nomes de índice devem ser exclusivos em uma tabela, mas não precisam ser exclusivos em um banco de dados. Os nomes de índice precisam seguir as regras para [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
@@ -230,10 +166,10 @@ BOUNDING_BOX = ( {
 |-------------------------|-------------------------|  
 |**geometria**|GEOMETRY_GRID|  
 |**geometria**|GEOMETRY_AUTO_GRID|  
-|**geografia**|GEOGRAPY_GRID|  
+|**geografia**|GEOGRAPHY_GRID|  
 |**geografia**|GEOGRAPHY_AUTO_GRID|  
   
- Um índice espacial pode ser criado apenas em uma coluna do tipo **geometria** ou **geografia**. Caso contrário, será gerado um erro. Além disso, se um parâmetro inválido de determinado tipo for transmitido, um erro será gerado.  
+ Um índice espacial pode ser criado apenas em uma coluna do tipo **geometria** ou **geografia**, caso contrário, um erro será gerado. Se um parâmetro inválido de determinado tipo for transmitido, um erro será gerado.  
   
  Para obter informações sobre como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementa o mosaico, veja [Visão geral de índices espaciais](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
@@ -249,7 +185,7 @@ BOUNDING_BOX = ( {
   
  Nesse contexto, default não é uma palavra-chave. É um identificador para o grupo de arquivos padrão e deve ser delimitado, como em ON "default" ou ON [default]. Se "padrão" for especificado, a opção QUOTED_IDENTIFIER deverá ser definida como ON para a sessão atual. Essa é a configuração padrão. Para obter mais informações, veja [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
- **\<object>::=**  
+ **\<object>::=**
   
  É o objeto totalmente qualificado ou não totalmente qualificado a ser indexado.  
   
@@ -264,7 +200,8 @@ BOUNDING_BOX = ( {
   
  O Banco de Dados SQL do Windows Azure oferece suporte ao formato de nome de três partes database_name.[schema_name].object_name quando o database_name é o banco de dados atual ou o database_name é tempdb e o object_name começa com #.  
   
-### <a name="using-options"></a>Opções USING  
+### <a name="using-options"></a>Opções USING
+
  GEOMETRY_GRID  
  Especifica o esquema de mosaico da grade **geometry** que está sendo usado. GEOMETRY_GRID só pode ser especificado em uma coluna do tipo de dados **geometria**.  GEOMETRY_GRID permite o ajuste manual do esquema de mosaico.  
   
@@ -281,7 +218,8 @@ BOUNDING_BOX = ( {
   
  Só pode ser especificado em uma coluna do tipo de dados geography.  Este é o padrão desse tipo de dados e não precisa ser especificado.  
   
-### <a name="with-options"></a>Opções WITH  
+### <a name="with-options"></a>Opções WITH
+
 BOUNDING_BOX  
 Especifica quatro tuplas numéricas que definem as quatro coordenadas da caixa delimitadora: as coordenadas x mínima e y mínima do canto inferior esquerdo e as coordenadas x máxima e y máxima do canto superior direito.  
   
@@ -313,16 +251,16 @@ Especifica quatro tuplas numéricas que definem as quatro coordenadas da caixa d
  > As coordenadas da caixa delimitadora só se aplicam em uma cláusula USING GEOMETRY_GRID.  
  >
  > *xMax* deve ser maior que *xmin* e *ymax* deve ser maior que *ymin*. É possível especificar qualquer representação válida do valor [float](../../t-sql/data-types/float-and-real-transact-sql.md) supondo que: *xmax* > *xmin* e *ymax* > *ymin*. Caso contrário, os erros apropriados serão gerados.  
- > 
+ >
  > Não há valores padrão.  
  >
  > Os nomes de propriedades da caixa delimitadora não diferenciam maiúsculas de minúsculas, independentemente da ordenação de banco de dados.  
   
  Cada nome de propriedade deve ser especificado somente uma única vez. Você pode especificá-los em qualquer ordem. Por exemplo, as seguintes cláusulas são equivalentes:  
   
--   BOUNDING_BOX =( XMIN =*xmin*, YMIN =*ymin*, XMAX =*xmax*, YMAX =*ymax* )  
+- BOUNDING_BOX =( XMIN =*xmin*, YMIN =*ymin*, XMAX =*xmax*, YMAX =*ymax* )  
   
--   BOUNDING_BOX =( XMIN =*xmin*, XMAX =*xmax*, YMIN =*ymin*, YMAX =*ymax*)  
+- BOUNDING_BOX =( XMIN =*xmin*, XMAX =*xmax*, YMIN =*ymin*, YMAX =*ymax*)  
   
 GRIDS  
 Define a densidade da grade em cada nível de um esquema de mosaico. Quando GEOMETRY_AUTO_GRID e GEOGRAPHY_AUTO_GRID são selecionados, esta opção é desabilitada.  
@@ -352,10 +290,10 @@ Define a densidade da grade em cada nível de um esquema de mosaico. Quando GEOM
  HIGH  
  Especifica a densidade mais alta possível para a grade em um determinado nível. HIGH é igual a 256 células (uma grade 16x16).  
   
-> [!NOTE] 
+> [!NOTE]
 > O uso de nomes de nível permite especificar os níveis em qualquer ordem e omitir níveis. Se você utilizar o nome para qualquer nível, deverá usar o nome de qualquer outro nível especificado. Se um nível for omitido, o padrão da sua densidade será MEDIUM.  
-  
-> [!WARNING] 
+
+> [!WARNING]
 > Se uma densidade inválida for especificada, um erro será gerado.  
   
 CELLS_PER_OBJECT =*n*  
@@ -393,7 +331,7 @@ FILLFACTOR =*fillfactor*
  Especifica uma porcentagem que indica quanto o [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve preencher o nível folha de cada página de índice durante a criação ou recriação do índice. *fillfactor* deve ser um valor inteiro de 1 a 100. O padrão é 0. Se *fillfactor* for 100 ou 0, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] criará índices com páginas folha preenchidas até a capacidade máxima.  
   
 > [!NOTE]  
->  Os valores de fator de preenchimento 0 e 100 são iguais em todos os aspectos.  
+> Os valores de fator de preenchimento 0 e 100 são iguais em todos os aspectos.
   
  A configuração FILLFACTOR se aplica somente quando o índice é criado ou recriado. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] não mantém dinamicamente a porcentagem especificada de espaço vazio nas páginas. Para exibir a configuração do fator de preenchimento, use a exibição do catálogo [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
   
@@ -513,7 +451,8 @@ DATA_COMPRESSION = {NONE | ROW | PAGE}
  PAGE  
  Compactação de dados de página usada pelo índice  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Remarks
+
  Todas as opções só podem ser especificadas uma única vez por instrução CREATE SPATIAL INDEX. A especificação de uma duplicata de qualquer opção gera um erro.  
   
  Você pode criar até 249 índices espaciais em cada coluna espacial em uma tabela. A criação de mais de um índice espacial na coluna espacial especificada pode ser útil, por exemplo, para indexar diferentes parâmetros de mosaico em uma única coluna.  
@@ -523,22 +462,26 @@ DATA_COMPRESSION = {NONE | ROW | PAGE}
   
  Uma criação de índice não pode usar o paralelismo de processo disponível.  
   
-## <a name="methods-supported-on-spatial-indexes"></a>Métodos com suporte em índices espaciais  
+## <a name="methods-supported-on-spatial-indexes"></a>Métodos com suporte em índices espaciais
+
  Em algumas condições, os índices espaciais dão suporte a alguns métodos de geometria orientados a conjuntos. Para obter mais informações, veja [Visão geral de índices espaciais](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
-## <a name="spatial-indexes-and-partitioning"></a>Índices espaciais e particionamento  
+## <a name="spatial-indexes-and-partitioning"></a>Índices espaciais e particionamento
+
  Por padrão, se um índice espacial for criado em uma tabela particionada, ele será particionado de acordo com o esquema de partição da tabela. Isso garante que os dados do índice e a linha relacionada sejam armazenados na mesma partição.  
   
  Nesse caso, para alterar o esquema de partição da tabela base, é necessário remover o índice espacial antes de particionar a tabela base novamente. Para evitar essa restrição, ao criar um índice espacial, você pode especificar a opção "ON filegroup". Para obter mais informações, consulte “Índices espaciais e grupos de arquivos”, mais adiante neste tópico.  
   
-## <a name="spatial-indexes-and-filegroups"></a>Índices espaciais e grupos de arquivos  
+## <a name="spatial-indexes-and-filegroups"></a>Índices espaciais e grupos de arquivos
+
  Por padrão, os índices espaciais são particionados nos mesmos grupos de arquivos que a tabela na qual o índice é especificado. Isso pode ser substituído usando a especificação de grupo de arquivos:  
   
  [ ON { *filegroup_name* | "default" } ]  
   
  Se um grupo de arquivos for especificado para um índice espacial, o índice será colocado nesse grupo de arquivos, independentemente do esquema de particionamento da tabela.  
   
-## <a name="catalog-views-for-spatial-indexes"></a>Exibições do catálogo para índices espaciais  
+## <a name="catalog-views-for-spatial-indexes"></a>Exibições do catálogo para índices espaciais
+
  As exibições do catálogo a seguir são específicas a índices espaciais:  
   
  [sys.spatial_indexes](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)  
@@ -547,25 +490,29 @@ DATA_COMPRESSION = {NONE | ROW | PAGE}
  [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md)  
  Representa as informações sobre o esquema de mosaico e os parâmetros de cada um dos índices espaciais.  
   
-## <a name="additional-remarks-about-creating-indexes"></a>Comentários adicionais sobre a criação de índices  
+## <a name="additional-remarks-about-creating-indexes"></a>Comentários adicionais sobre a criação de índices
+
  Para obter mais informações sobre a criação de índices, veja a seção “Comentários” em [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
-## <a name="permissions"></a>Permissões  
+## <a name="permissions"></a>Permissões
+
  O usuário deve ter a permissão ALTER na exibição de tabela ou indexada, ou ser membro da função de servidor fixa sysadmin ou das funções de banco de dados fixas db_ddladmin e db_owner.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-creating-a-spatial-index-on-a-geometry-column"></a>A. Criando um índice espacial em uma coluna de geometria  
+### <a name="a-creating-a-spatial-index-on-a-geometry-column"></a>A. Criando um índice espacial em uma coluna de geometria
+
  O exemplo a seguir cria uma tabela nomeada `SpatialTable` que contém uma coluna do tipo **geometry**, `geometry_col`. Em seguida, o exemplo cria um índice espacial, `SIndx_SpatialTable_geometry_col1`, em `geometry_col`. O exemplo usa o esquema de mosaico padrão e especifica a caixa delimitadora.  
   
 ```sql  
 CREATE TABLE SpatialTable(id int primary key, geometry_col geometry);  
-CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col1   
+CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col1
    ON SpatialTable(geometry_col)  
    WITH ( BOUNDING_BOX = ( 0, 0, 500, 200 ) );  
 ```  
   
-### <a name="b-creating-a-spatial-index-on-a-geometry-column"></a>b. Criando um índice espacial em uma coluna de geometria  
+### <a name="b-creating-a-spatial-index-on-a-geometry-column"></a>B. Criando um índice espacial em uma coluna de geometria
+
  O exemplo a seguir cria um segundo índice espacial, `SIndx_SpatialTable_geometry_col2`, em `geometry_col` na tabela `SpatialTable`. O exemplo especifica `GEOMETRY_GRID` como o esquema de mosaico. O exemplo também especifica a caixa delimitadora, diferentes densidades em diferentes níveis de grade e 64 células por objeto. O exemplo também define o preenchimento de índice como `ON`.  
   
 ```sql  
@@ -579,7 +526,8 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col2
     PAD_INDEX  = ON );  
 ```  
   
-### <a name="c-creating-a-spatial-index-on-a-geometry-column"></a>C. Criando um índice espacial em uma coluna de geometria  
+### <a name="c-creating-a-spatial-index-on-a-geometry-column"></a>C. Criando um índice espacial em uma coluna de geometria
+
  O exemplo a seguir cria um terceiro índice espacial, `SIndx_SpatialTable_geometry_col3`, em `geometry_col` na tabela `SpatialTable`. O exemplo usa o esquema de mosaico padrão. O exemplo especifica a caixa delimitadora e usa diferentes densidades de célula no terceiro e no quarto níveis, usando o número padrão de células por objeto.  
   
 ```sql  
@@ -590,7 +538,8 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col3
     GRIDS = ( LEVEL_4 = HIGH, LEVEL_3 = MEDIUM ) );  
 ```  
   
-### <a name="d-changing-an-option-that-is-specific-to-spatial-indexes"></a>D. Alterando uma opção que é específica a índices espaciais  
+### <a name="d-changing-an-option-that-is-specific-to-spatial-indexes"></a>D. Alterando uma opção que é específica a índices espaciais
+
  O exemplo a seguir recria o índice espacial criado no exemplo anterior, `SIndx_SpatialTable_geography_col3`, especificando uma nova densidade `LEVEL_3` com DROP_EXISTING = ON.  
   
 ```sql  
@@ -601,19 +550,21 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3
         DROP_EXISTING = ON );  
 ```  
   
-### <a name="e-creating-a-spatial-index-on-a-geography-column"></a>E. Criando um índice espacial em uma coluna de geografia  
+### <a name="e-creating-a-spatial-index-on-a-geography-column"></a>E. Criando um índice espacial em uma coluna de geografia
+
  O exemplo a seguir cria uma tabela nomeada `SpatialTable2` que contém uma coluna do tipo **geography**, `geography_col`. Em seguida, o exemplo cria um índice espacial, `SIndx_SpatialTable_geography_col1`, em `geography_col`. O exemplo usa os valores de parâmetros padrão do esquema de mosaico GEOGRAPHY_AUTO_GRID.  
   
 ```sql  
 CREATE TABLE SpatialTable2(id int primary key, object GEOGRAPHY);  
-CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col1   
+CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col1
    ON SpatialTable2(object);  
 ```  
   
 > [!NOTE]  
->  Para índices de grade geográfica, não é possível especificar uma caixa delimitadora.  
+> Para índices de grade geográfica, não é possível especificar uma caixa delimitadora.
   
-### <a name="f-creating-a-spatial-index-on-a-geography-column"></a>F. Criando um índice espacial em uma coluna de geografia  
+### <a name="f-creating-a-spatial-index-on-a-geography-column"></a>F. Criando um índice espacial em uma coluna de geografia
+
  O exemplo a seguir cria um segundo índice espacial, `SIndx_SpatialTable_geography_col2`, em `geography_col` na tabela `SpatialTable2`. O exemplo especifica `GEOGRAPHY_GRID` como o esquema de mosaico. O exemplo também especifica diferentes densidades de grade em diferentes níveis e 64 células por objeto. O exemplo também define o preenchimento de índice como `ON`.  
   
 ```sql  
@@ -626,7 +577,8 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col2
     PAD_INDEX  = ON );  
 ```  
   
-### <a name="g-creating-a-spatial-index-on-a-geography-column"></a>G. Criando um índice espacial em uma coluna de geografia  
+### <a name="g-creating-a-spatial-index-on-a-geography-column"></a>G. Criando um índice espacial em uma coluna de geografia
+
  O exemplo a seguir cria um terceiro índice espacial, `SIndx_SpatialTable_geography_col3`, em `geography_col` na tabela `SpatialTable2`. O exemplo usa o esquema de mosaico padrão, GEOGRAPHY_GRID e o valor padrão de CELLS_PER_OBJECT (16).  
   
 ```sql  
@@ -635,21 +587,20 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3
    WITH ( GRIDS = ( LEVEL_3 = HIGH, LEVEL_2 = HIGH ) );  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
- [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
- [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)   
- [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
- [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)   
- [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
- [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
- [sys.spatial_index_tessellations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md)   
- [sys.spatial_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)   
- [Visão geral de índices espaciais](../../relational-databases/spatial/spatial-indexes-overview.md)  
-  
-  
+## <a name="see-also"></a>Confira também
+
+- [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)
+- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)
+- [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)
+- [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)
+- [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)
+- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)
+- [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
+- [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)
+- [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)
+- [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)
+- [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)
+- [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)
+- [sys.spatial_index_tessellations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md)
+- [sys.spatial_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)
+- [Visão geral de índices espaciais](../../relational-databases/spatial/spatial-indexes-overview.md)  

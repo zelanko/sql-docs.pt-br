@@ -1,27 +1,27 @@
 ---
 title: Máscara de Dados Estáticos | Microsoft Docs
-ms.date: 11/05/2018
+ms.date: 04/10/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: security
 ms.topic: conceptual
 ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
-author: egranet
+author: aliceku
 ms.author: aliceku
 manager: ajayj
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cec6c79fadb5ef2a63145fff3efe0df3c8cd0f9d
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 91b0fde06d400b2c519e9e6c86854197a2aecd13
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980452"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516462"
 ---
 # <a name="static-data-masking"></a>Máscara de Dados Estáticos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-A Máscara de Dados Estáticos é um componente do [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) 18.0 versão prévia 5 e superior. A versão prévia mais recente do SQL Server Management Studio pode ser baixada [aqui](../../ssms/download-sql-server-management-studio-ssms.md). 
+A Máscara de Dados Estáticos liberada é um componente do [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) 18.0 versão prévia 5 e superior. Decidimos que nosso protótipo atual não atende a expectativas do nosso cliente. Portanto, não levaremos essa funcionalidade adiante. Atualizaremos a todos sobre nossos planos se tivermos um candidato de substituição.
 
 ![Mascaramento de dados estáticos](../../relational-databases/security/media/sql-static-data-masking/static_data_masking_intro_image.PNG)
 

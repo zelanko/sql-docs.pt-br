@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: d5354927ff0c7e1c61bf358ad73312611c18f317
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860447"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Enviar trabalhos do Spark em clusters de grandes dados do SQL Server no estúdio de dados do Azure
@@ -27,7 +27,7 @@ Um dos principais cenários para clusters de big data é a capacidade de enviar 
 - [Ferramentas de big data do SQL Server 2019](deploy-big-data-tools.md):
    - **Azure Data Studio**
    - **Extensão do SQL Server de 2019**
-   - **Kubectl**
+   - **kubectl**
 
 - [Conectar-se o Studio de dados do Azure para o gateway HDFS/Spark do seu cluster de big data](connect-to-big-data-cluster.md).
 

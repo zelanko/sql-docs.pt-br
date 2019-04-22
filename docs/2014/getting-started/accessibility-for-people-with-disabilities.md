@@ -22,14 +22,14 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3df8c5c308502e3e3e50e79c174f1ed96bbeacf9
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59242444"
 ---
 # <a name="accessibility-for-people-with-disabilities"></a>Acessibilidade para pessoas com deficiências
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] tem o compromisso de tornar seus produtos e serviços mais fáceis para o uso de todos. Este tópico fornece informações sobre os seguintes recursos, produtos e serviços que tornam os produtos da família [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Server mais acessíveis a pessoas com deficiências.  
+  A [!INCLUDE[msCoName](../includes/msconame-md.md)] é uma empresa que tem o compromisso de tornar seus produtos e serviços mais fáceis para o uso de todos. Este tópico fornece informações sobre os seguintes recursos, produtos e serviços que tornam os produtos da família [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Server mais acessíveis a pessoas com deficiências.  
   
 > [!NOTE]  
 >  As informações desta seção só se aplicam a usuários que licenciaram os produtos [!INCLUDE[msCoName](../includes/msconame-md.md)] nos Estados Unidos. Se você adquiriu esse produto fora dos Estados Unidos, seu pacote conterá um cartão subsidiário de informações listando números de telefone e endereços de serviços de suporte da [!INCLUDE[msCoName](../includes/msconame-md.md)] . Contate a subsidiária para determinar se o tipo de produto e serviço descrito nesta seção está disponível em sua área. Para obter mais informações, disponíveis em inglês, francês, espanhol, chinês, japonês e italiano, consulte [Site de Acessibilidade da Microsoft](https://go.microsoft.com/fwlink/?LinkID=8287).  
@@ -48,12 +48,12 @@ ms.locfileid: "59242444"
   
 ### <a name="free-step-by-step-tutorials"></a>Tutoriais passo a passo gratuitos  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] oferece uma série de tutoriais passo a passo para ajudá-lo a aprender como ajustar as opções e configurações de acessibilidade em seu computador. O tutorial fornece procedimentos detalhados sobre como ajustar opções, recursos e configurações para atender às necessidades das pessoas com deficiências e necessidades de acessibilidade. Essas informações são apresentadas em um formato lado a lado para que você possa ver em um relance como usar o mouse, o teclado ou uma combinação de ambos. Tutoriais passo a passo para os vários produtos estão disponíveis no [Site de Acessibilidade da Microsoft](https://go.microsoft.com/fwlink/?LinkID=67163).  
+-   A [!INCLUDE[msCoName](../includes/msconame-md.md)] oferece uma série de tutoriais passo a passo para ajudá-lo a aprender como ajustar as opções e configurações de acessibilidade em seu computador. O tutorial fornece procedimentos detalhados sobre como ajustar opções, recursos e configurações para atender às necessidades das pessoas com deficiências e necessidades de acessibilidade. Essas informações são apresentadas em um formato lado a lado para que você possa ver em um relance como usar o mouse, o teclado ou uma combinação de ambos. Tutoriais passo a passo para os vários produtos estão disponíveis no [Site de Acessibilidade da Microsoft](https://go.microsoft.com/fwlink/?LinkID=67163).  
   
 ## <a name="assistive-technology-products-for-windows"></a>Produtos de tecnologia assistencial para Windows  
  Uma variedade de produtos de tecnologia assistencial está disponível para facilitar o uso do computador a pessoas com deficiências.  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] fornece um catálogo de pesquisa para produtos de tecnologia assistencial executados em sistemas operacionais Windows no [Site de Acessibilidade da Microsoft](https://go.microsoft.com/fwlink/?LinkID=67166).  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] Fornece um catálogo de produtos de tecnologia assistencial que são executados em sistemas operacionais Windows a [Microsoft Accessibility Web Site](https://go.microsoft.com/fwlink/?LinkID=67166).  
   
  Os seguintes tipos de produtos estão disponíveis:  
   
@@ -73,7 +73,7 @@ ms.locfileid: "59242444"
  Se você usa um produto de tecnologia assistencial, entre em contato com um fornecedor para verificar a compatibilidade com os produtos do seu computador antes de fazer a atualização. O fornecedor da tecnologia assistencial também pode ajudá-lo a ajustar suas configurações para otimizar a compatibilidade com sua versão do Windows ou outros produtos da [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
   
 ## <a name="includemsconameincludesmsconame-mdmd-documentation-in-alternative-formats"></a>Documentação da [!INCLUDE[msCoName](../includes/msconame-md.md)] em formatos alternativos  
- [!INCLUDE[msCoName](../includes/msconame-md.md)] documentação do produto está disponível em formatos alternativos para ajudar nossos clientes com necessidades de acessibilidade.  
+ A documentação de produto da [!INCLUDE[msCoName](../includes/msconame-md.md)] está disponível em formatos alternativos para ajudar nossos clientes com necessidades de acessibilidade.  
   
 ### <a name="obtaining-documentation-for-includessnoversionincludesssnoversion-mdmd"></a>Obtendo a documentação para o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
  A documentação para o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está disponível online. Para obter mais informações, consulte [documentação de produto de uso do SQL Server](../2014-toc/books-online-for-sql-server-2014.md).  
@@ -82,7 +82,7 @@ ms.locfileid: "59242444"
  Você pode obter documentação acessível para [!INCLUDE[msCoName](../includes/msconame-md.md)] produtos da [Microsoft Accessibility Web Site](https://go.microsoft.com/fwlink/?LinkID=67164).  
   
 ### <a name="recording-for-the-blind--dyslexic-inc"></a>Recording for the Blind & Dyslexic, Inc.  
- Você pode obter publicações adicionais da [!INCLUDE[msCoName](../includes/msconame-md.md)] em Recording for the Blind & Dyslexic, Inc. Esses documentos são distribuídos a membros registrados e elegíveis do serviço de distribuição em audiocassettes ou disquetes. A coleção contém mais de 80 mil títulos, incluindo documentação de produtos da [!INCLUDE[msCoName](../includes/msconame-md.md)] e livros da [!INCLUDE[msCoName](../includes/msconame-md.md)] Press. Para obter informações sobre qualificação e disponibilidade de documentação de produtos da [!INCLUDE[msCoName](../includes/msconame-md.md)] e livros da [!INCLUDE[msCoName](../includes/msconame-md.md)] Press, entre em contato com:  
+ Você pode obter adicionais [!INCLUDE[msCoName](../includes/msconame-md.md)] publicações de gravação para a Blind & Dyslexic, Inc. Esses documentos são distribuídos para membros registrados e qualificados do serviço de distribuição em audiocassettes ou disquetes. A coleção contém mais de 80 mil títulos, incluindo documentação de produtos da [!INCLUDE[msCoName](../includes/msconame-md.md)] e livros da [!INCLUDE[msCoName](../includes/msconame-md.md)] Press. Para obter informações sobre qualificação e disponibilidade de documentação de produtos da [!INCLUDE[msCoName](../includes/msconame-md.md)] e livros da [!INCLUDE[msCoName](../includes/msconame-md.md)] Press, entre em contato com:  
   
  Recording for the Blind & Dyslexic, Inc. 20 Roszel Road Princeton, NJ 08540  
   
@@ -101,7 +101,7 @@ ms.locfileid: "59242444"
  Você pode contatar o [!INCLUDE[msCoName](../includes/msconame-md.md)] Sales Information Center em um telefone de texto por discagem (800) 892-5234 entre 6h30 e 17h30. Hora do Pacífico, de segunda-feira a sexta-feira, exceto feriados.  
   
 ### <a name="technical-help"></a>Suporte técnico  
- Para obter suporte técnico nos Estados Unidos, entre em contato com o [!INCLUDE[msCoName](../includes/msconame-md.md)] Product Support Services em um telefone de texto, no número (800) 892-5234 entre 6h e 18h. Hora do Pacífico, de segunda-feira a sexta-feira, exceto feriados. No Canadá, disque (905) 568-9641 entre 8h e 18h. Hora do Leste dos EUA, de segunda a sexta-feira, exceto feriados. [!INCLUDE[msCoName](../includes/msconame-md.md)] Os serviços de suporte estão sujeitos a preços, prazos e condições em vigor no momento em que o serviço é usado.  
+ Para obter suporte técnico nos Estados Unidos, entre em contato com o [!INCLUDE[msCoName](../includes/msconame-md.md)] Product Support Services em um telefone de texto, no número (800) 892-5234 entre 6h e 18h. Hora do Pacífico, de segunda-feira a sexta-feira, exceto feriados. No Canadá, disque (905) 568-9641 entre 8h e 18h. Hora do Leste dos EUA, de segunda a sexta-feira, exceto feriados. Os serviços de suporte da [!INCLUDE[msCoName](../includes/msconame-md.md)] estão sujeitos a preços, prazos e condições em vigor no momento em que o serviço é usado.  
   
 ## <a name="getting-more-accessibility-information"></a>Obtendo mais informações de acessibilidade  
  Informações sobre tecnologia assistencial para melhoria da vida das pessoas com deficiências são fornecidas no [Site de Acessibilidade da Microsoft](https://go.microsoft.com/fwlink/?LinkID=8287).  
@@ -111,7 +111,7 @@ ms.locfileid: "59242444"
  Um boletim eletrônico mensal gratuito é disponibilizado para ajudá-lo a se manter atualizado sobre os tópicos de acessibilidade dos produtos da [!INCLUDE[msCoName](../includes/msconame-md.md)] . Para assinar, consulte o [Site de Acessibilidade da Microsoft](https://go.microsoft.com/fwlink/?LinkID=8287).  
   
 ## <a name="see-also"></a>Consulte também  
- [Introdução à documentação do produto do SQL Server](../2014-toc/books-online-for-sql-server-2014.md)   
+ [Introdução a documentação do produto do SQL Server](../2014-toc/books-online-for-sql-server-2014.md)   
  [Obtendo assistência do SQL Server](getting-sql-server-assistance.md)  
   
   

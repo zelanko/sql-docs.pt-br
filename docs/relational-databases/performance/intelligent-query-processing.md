@@ -13,20 +13,20 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d3572af85861c2175638484e9e2097d43a65b63d
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.openlocfilehash: 230a3cb352dca689ee891eca6c6bfd6f516b6ebc
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59042225"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774571"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Processamento inteligente de consultas em bancos de dados SQL
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-A família de recursos de QP (processamento de consulta) inteligente inclui recursos de amplo impacto que melhoram o desempenho de cargas de trabalho existentes com esforço mínimo de implementação. 
+A família de recursos de QP (processamento de consulta) inteligente inclui recursos de amplo impacto que melhoram o desempenho de cargas de trabalho existentes com esforço mínimo de implementação na adoção. 
 
-![Processamento de consulta inteligente](./media/3_iqpfeaturefamily.png)
+![Processamento de consulta inteligente](./media/iqp-feature-family.png)
 
 Você pode deixar as cargas de trabalho automaticamente qualificadas para o processamento de consulta inteligente habilitando o nível de compatibilidade do banco de dados aplicável. Você pode definir isso usando o Transact-SQL. Por exemplo:  
 
@@ -42,9 +42,9 @@ A tabela a seguir detalha todos os recursos de processamento de consulta intelig
 | [Distinção de contagem aproximada](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#approximate-query-processing) | Sim, versão prévia pública| Sim, a partir do SQL Server de 2019 CTP 2.0, versão prévia pública|Forneça o COUNT DISTINCT aproximado para cenários de big data com o benefício de alto desempenho e baixo volume de memória. |
 | [Modo de Lote no Rowstore](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore) | Sim, no nível de compatibilidade 150, versão prévia pública| Sim, a partir do SQL Server 2019 CTP 2.0 no nível de compatibilidade 150, versão prévia pública|Forneça o modo de lote para cargas de trabalho de DW relacionais vinculados à CPU sem exigir índices columnstore.  | 
 | [Execução intercalada](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#interleaved-execution-for-mstvfs) | Sim, no nível de compatibilidade 140| Sim, a partir do SQL Server 2017 no nível de compatibilidade 140|Use a cardinalidade real da função com valor de tabela de várias instruções encontrada na primeira compilação em vez de uma estimativa fixa.|
-| [Comentários de concessão de memória (Modo de Lote)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-memory-grant-feedback) | Sim, no nível de compatibilidade 140| Sim, a partir do SQL Server 2017 no nível de compatibilidade 140|Se uma consulta de modo de lote tiver operações que são despejadas no disco, aumente a memória para execuções consecutivas. Se uma consulta desperdiçar mais de 50% da memória, reduza o lado de concessão de memória para execuções consecutivas.|
-| [Comentários de concessão de memória (Modo de Registro)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback) | Sim, no nível de compatibilidade 150, versão prévia pública| Sim, a partir do SQL Server 2019 CTP 2.0 no nível de compatibilidade 150, versão prévia pública|Se uma consulta de modo de linha tiver operações que são despejadas no disco, aumente a memória para execuções consecutivas. Se uma consulta desperdiçar mais de 50% da memória, reduza o lado de concessão de memória para execuções consecutivas.|
-| [Embutimento de UDF escalar](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining) | Não | Sim, a partir do SQL Server 2019 CTP 2.1 no nível de compatibilidade 150, versão prévia pública|Os UDFs escalares são transformados em expressões relacionais equivalentes que são "embutidas" na consulta que fez a chamada, geralmente resultando em ganhos significativos de desempenho.|
+| [Comentários de concessão de memória (Modo de Lote)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-memory-grant-feedback) | Sim, no nível de compatibilidade 140| Sim, a partir do SQL Server 2017 no nível de compatibilidade 140|Se uma consulta de modo de lote tiver operações que são despejadas no disco, aumente a memória para execuções consecutivas. Se uma consulta desperdiçar mais de 50% da memória alocada para ela, reduza o lado de concessão de memória para execuções consecutivas.|
+| [Comentários de concessão de memória (Modo de Lote)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback) | Sim, no nível de compatibilidade 150, versão prévia pública| Sim, a partir do SQL Server 2019 CTP 2.0 no nível de compatibilidade 150, versão prévia pública|Se uma consulta de modo de linha tiver operações que são despejadas no disco, aumente a memória para execuções consecutivas. Se uma consulta desperdiçar mais de 50% da memória alocada para ela, reduza o lado de concessão de memória para execuções consecutivas.|
+| [Inlining de UDF escalar](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining) | Não | Sim, a partir do SQL Server 2019 CTP 2.1 no nível de compatibilidade 150, versão prévia pública|Os UDFs escalares são transformados em expressões relacionais equivalentes que são "embutidas" na consulta que fez a chamada, geralmente resultando em ganhos significativos de desempenho.|
 | [Compilação Adiada de Variável da Tabela](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation) | Sim, no nível de compatibilidade 150, versão prévia pública| Sim, a partir do SQL Server 2019 CTP 2.0 no nível de compatibilidade 150, versão prévia pública|Use a cardinalidade real da variável de tabela encontrada na primeira compilação em vez de uma estimativa fixa.|
 
 ## <a name="batch-mode-adaptive-joins"></a>Junções adaptáveis de modo de lote
@@ -245,7 +245,7 @@ Começando com comentários de concessão de memória no modo de linha, serão e
 | Não: Concessão precisa | Se não houver despejo no disco, e a instrução usar pelo menos 50% da memória concedida, os comentários de concessão de memória não serão acionados. |
 | Não: Comentários desabilitados | Se os comentários de concessão de memória forem acionados continuamente e flutuarem entre as operações de aumento de memória e redução de memória, desabilitaremos os comentários de concessão de memória para a instrução. |
 | Sim: Ajuste | Os comentários de concessão de memória foram aplicados e podem ser ainda mais ajustados para a próxima execução. |
-| Sim: Stable | Os comentários de concessão de memória foram aplicados e a memória concedida está estável, ou seja, o que foi concedido para a execução anterior é o mesmo que foi concedido para a execução atual. |
+| Sim: Estável | Os comentários de concessão de memória foram aplicados e a memória concedida está estável, ou seja, o que foi concedido para a execução anterior é o mesmo que foi concedido para a execução atual. |
 
 > [!NOTE]
 > Os atributos do plano de comentários de concessão de memória do modo de linha da versão prévia pública estão visíveis nos planos de execução de consulta gráfica do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] nas versões 17.9 e superiores. 
@@ -500,9 +500,9 @@ OPTION(RECOMPILE, USE HINT('DISALLOW_BATCH_MODE'));
 
 ## <a name="see-also"></a>Confira também
 
-[Central de desempenho do Mecanismo de Banco de Dados do SQL Server e Banco de Dados SQL do Azure](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
+[Central de desempenho do Mecanismo de Banco de Dados do SQL Server e do Banco de Dados SQL do Azure](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
 [Guia de arquitetura de processamento de consultas](../../relational-databases/query-processing-architecture-guide.md)    
 [Referência de operadores físicos e lógicos do plano de execução](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
 [Junções](../../relational-databases/performance/joins.md)    
-[Demonstração do processamento de consulta adaptável](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)       
-[Demonstração do QP inteligente](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing)   
+[Demonstrar o processamento de consulta adaptável](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)       
+[Demonstrar QP inteligente](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing)   

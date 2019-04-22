@@ -26,10 +26,10 @@ ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b49e8a5802152eeee8d1a2cac28ac0098057f423
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042265"
 ---
 # <a name="populate-full-text-indexes"></a>Popular índices de texto completo
@@ -103,7 +103,7 @@ Há dois tipos de controle de alterações:
   
     -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md)... SET CHANGE_TRACKING AUTO  
   
-    **Exemplo – alterar um índice de texto completo para usar o controle automático de alterações**  
+    **Exemplo -– alterar um índice de texto completo para usar o controle de alterações automático**  
     O exemplo a seguir altera o índice de texto completo da tabela `HumanResources.JobCandidate` do banco de dados de exemplo `AdventureWorks` para usar o controle de alterações com população automática.  
   
     ```sql  
@@ -123,7 +123,7 @@ Há dois tipos de controle de alterações:
   
     -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md)... SET CHANGE_TRACKING MANUAL  
   
-    **Exemplo – criar um índice de texto completo com controle manual de alterações**  
+    **Exemplo – criar um índice de texto completo com controle de alterações manual**  
     O exemplo a seguir cria um índice de texto completo que usará o controle de alterações com população manual na tabela `HumanResources.JobCandidate` do banco de dados de exemplo `AdventureWorks` .  
   
     ```sql

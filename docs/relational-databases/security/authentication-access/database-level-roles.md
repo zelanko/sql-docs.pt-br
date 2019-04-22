@@ -39,12 +39,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d8d205e184f31e628cf9629b702e21e43c200e38
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: a035182b6436f723abfb2a53a034ddac30fe2165
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420091"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516492"
 ---
 # <a name="database-level-roles"></a>Funções de nível de banco de dados
 
@@ -58,7 +58,7 @@ Para adicionar e remover usuários de uma função de banco de dados, use as op�
   
  As funções de banco de dados fixas são definidas no nível de banco de dados e existem em cada banco de dados. Os membros da função de banco de dados **db_owner** podem gerenciar a associação a funções de banco de dados fixas. Também há algumas funções de banco de dados com finalidade especial no banco de dados msdb.  
   
- Você pode adicionar qualquer conta de banco de dados e outras funções do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nas funções de nível de banco de dados. Cada membro de uma função de banco de dados fixa pode adicionar outros usuários a essa mesma função.  
+ Você pode adicionar qualquer conta de banco de dados e outras funções do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nas funções de nível de banco de dados.
   
 > [!TIP]  
 >  Não adicione funções de banco de dados definidas pelo usuário como membros de funções fixas. Isso poderia habilitar o escalonamento não intencional de privilégios.  
@@ -74,7 +74,7 @@ Para obter uma lista de todas as permissões, consulte o cartaz [Permissões do 
 |Nome da função de banco de dados fixa|Descrição|  
 |-------------------------------|-----------------|  
 |**db_owner**|Os membros da função de banco de dados fixa **db_owner** podem executar todas as atividades de configuração e manutenção no banco de dados, bem como remover o banco de dados no [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]. (No [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)], algumas atividades de manutenção exigem permissões em nível de servidor e não podem ser executadas por **db_owners**.)|  
-|**db_securityadmin**|Os membros da função de banco de dados fixa **db_securityadmin** podem modificar a associação de funções e gerenciar permissões. A adição de entidades nesta função pode habilitar o escalonamento não intencional de privilégios.|  
+|**db_securityadmin**|Os membros da função de banco de dados fixa **db_securityadmin** podem modificar a associação de função somente para funções personalizadas, criar usuários sem logins e gerenciar permissões. A adição de entidades nesta função pode habilitar o escalonamento não intencional de privilégios.|  
 |**db_accessadmin**|Os membros da função de banco de dados fixa **db_accessadmin** podem adicionar ou remover o acesso ao banco de dados para logons do Windows, grupos do Windows e logons do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
 |**db_backupoperator**|Os membros da função de banco de dados fixa **db_backupoperator** podem fazer backup do banco de dados.|  
 |**db_ddladmin**|Os membros da função de banco de dados fixa **db_ddladmin** podem executar qualquer comando Data Definition Language (DDL) em um banco de dados.|  

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a11983c6fc9e1ca2e8917fd2efdaa5c90b4d3c30
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241724"
 ---
 # <a name="cdc-flow-components"></a>Componentes de fluxo CDC
@@ -34,7 +34,7 @@ ms.locfileid: "59241724"
   
  [Origem CDC](cdc-source.md)  
   
- [Separador de CDC](cdc-splitter.md)  
+ [Divisor de CDC](cdc-splitter.md)  
   
 ## <a name="installation"></a>Instalação  
  Esta seção descreve os procedimentos de instalação para os Componentes CDC para o Microsoft [!INCLUDE[ssISCurrent](../../../includes/ssiscurrent-md.md)].  
@@ -109,7 +109,7 @@ ms.locfileid: "59241724"
   
  Para obter mais informações sobre o Separador de CDC, consulte:  
   
- [Separador de CDC](cdc-splitter.md)  
+ [Divisor de CDC](cdc-splitter.md)  
   
  Um dos problemas básicos que exigem atenção ao criar pacotes de CDC é como o processamento de alterações interage com o carregamento inicial (ou processamento inicial) dos dados.  
   
@@ -194,7 +194,7 @@ ms.locfileid: "59241724"
   
 -   [Origem CDC](cdc-source.md)  
   
--   [Separador de CDC](cdc-splitter.md)  
+-   [Divisor de CDC](cdc-splitter.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2301a4709585f9243073f085703a3070c813b43e
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860627"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>Configurar eventos estendidos para Grupos de Disponibilidade AlwaysOn
@@ -81,7 +81,7 @@ Para obter informações sobre alguns dos eventos cobertos pelo alwayson_health,
   
  [availability_replica_manager_state](#BKMK_availability_replica_manager_state)  
   
- [error_reported (1480): alteração da função de réplica de banco de dados](#BKMK_error_reported_1480)  
+ [error_reported (1480): Alteração da função de réplica de banco de dados](#BKMK_error_reported_1480)  
   
 ###  <a name="BKMK_availability_replica_state_change"></a> availability_replica_state_change  
  Ocorre quando o estado de uma réplica de disponibilidade foi alterado. A criação de um grupo de disponibilidade ou a junção de uma réplica de disponibilidade pode disparar esse evento. É útil para o diagnóstico de failover automático com falha. Ele também pode ser usado para rastrear as etapas de failover.  

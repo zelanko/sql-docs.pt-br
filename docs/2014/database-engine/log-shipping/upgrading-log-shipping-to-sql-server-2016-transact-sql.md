@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 19eae2e3ace3859d61048536be9b70bf58ad66f5
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042425"
 ---
 # <a name="upgrade-log-shipping-to-sql-server-2014-transact-sql"></a>Atualizar o envio de logs para o SQL Server 2014 (Transact-SQL)
@@ -193,7 +193,7 @@ ms.locfileid: "59042425"
 > [!IMPORTANT]  
 >  Sempre atualize todas as instâncias do servidor secundário antes de atualizar o servidor primário.  
   
- **Para atualizar usando um failover e alternando de volta para o servidor primário original**  
+ **Para atualizar usando um failover e, em seguida, alternar de volta para o servidor primário original**  
   
 1.  Atualize todas as instâncias do servidor secundário (servidores B e C).  
   
@@ -224,4 +224,4 @@ ms.locfileid: "59042425"
 ## <a name="see-also"></a>Consulte também  
  [Backups de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [Aplicar backups de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  
+ [Tabelas de envio de log e procedimentos armazenados](log-shipping-tables-and-stored-procedures.md)  

@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 3115624895c45585101db4d5c02ea85509d68220
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241814"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Parâmetros de relatório (Construtor de Relatórios e Designer de Relatórios)
@@ -156,7 +156,7 @@ ms.locfileid: "59241814"
   
  Para um relatório publicado, você pode usar o seguinte:  
   
--   **Propriedades de parâmetros de relatório.** Altere os valores de parâmetro de relatório diretamente no servidor de relatório, de modo independente da definição de relatório.  
+-   **Propriedades de parâmetros de relatório.** Altere os valores de parâmetros de relatório diretamente no servidor de relatório, de modo independente da definição de relatório.  
   
 -   **Relatórios armazenados em cache.** Para criar um plano de cache para um relatório, cada parâmetro deve ter um valor padrão. Para obter mais informações, consulte [Armazenando relatórios em cache &#40;SSRS&#41;](../report-server/caching-reports-ssrs.md).  
   
@@ -227,7 +227,7 @@ ms.locfileid: "59241814"
 ##  <a name="bkmk_Related_Topics"></a> Conteúdo relacionado  
  [Configurando parâmetros de relatório SSRS (teste)](https://www.trenovision.com/quiz/sql-server-reporting-services-ssrs-quiz/)  
   
- [Tutorial: Adicionar um parâmetro ao relatório &#40;construtor de relatórios&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
+ [Tutorial: Adicionar um parâmetro ao relatório &#40;Construtor de Relatórios&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
  [Estourando os mistérios de InvalidReportParameterException no serviço de relatório](https://go.microsoft.com/fwlink/p/?LinkId=393118)  
   

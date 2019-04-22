@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 652cf44f70e890b3203ed27890d06f98d70b7f1d
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241794"
 ---
 # <a name="lesson-1-creating-the-project-and-basic-package"></a>Lição 1: Criando o projeto e pacote básico
@@ -74,7 +74,7 @@ ms.locfileid: "59241794"
 |----------------------|----------------|-----------------|---------------|  
 |0|FactCurrency|AverageRate|float|  
 |1|DimCurrency|CurrencyAlternateKey|nchar (3)|  
-|2|DimDate|FullDateAlternateKey|Data|  
+|2|DimDate|FullDateAlternateKey|date|  
 |3|FactCurrency|EndOfDayRate|FLOAT|  
   
 ## <a name="lesson-tasks"></a>Tarefas da lição  
@@ -84,19 +84,19 @@ ms.locfileid: "59241794"
   
 -   [Etapa 2: Adicionando e configurando um gerenciador de conexões de arquivo simples](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
--   [Etapa 3: Adicionando e configurando um gerenciador de conexões OLE DB](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
+-   [Etapa 3: Adicionando e configurando um Gerenciador de Conexão do OLE DB](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
 -   [Etapa 4: Adicionando uma tarefa de fluxo de dados ao pacote](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
 -   [Etapa 5: Adicionando e configurando a fonte de arquivo simples](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
--   [Etapa 6: Adicionando e configurando a transformação Pesquisa](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
+-   [Etapa 6: Adicionando e configurando a transformação pesquisa](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
 -   [Etapa 7: Adicionando e configurando o destino OLE DB](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
--   [Etapa 8: Tornando o pacote da Lição 1 mais fácil de compreender](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+-   [Etapa 8: Tornando o pacote da lição 1 mais fácil de entender](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
--   [Etapa 9: Testando o pacote de tutorial da Lição 1](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+-   [Etapa 9: Testando o pacote de Tutorial da lição 1](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Iniciar a lição  
  [Etapa 1: Criando um novo projeto do Integration Services](lesson-1-1-creating-a-new-integration-services-project.md)  

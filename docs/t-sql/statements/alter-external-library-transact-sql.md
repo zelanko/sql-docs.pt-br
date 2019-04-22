@@ -1,7 +1,7 @@
 ---
 title: ALTER EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/28/2019
+ms.date: 03/27/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -17,12 +17,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cc590bb618f9a95a0fbe7b0a9c173a64698cdf1e
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 33270c8ccc490a400db45b6525d8c6002d974f3a
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017962"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583169"
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -31,7 +31,7 @@ ms.locfileid: "57017962"
 Modifica o conteúdo de uma biblioteca de pacotes externa existente.
 
 > [!NOTE]
-> No SQL Server 2017, há compatibilidade apenas com a linguagem R e a plataforma Windows. R, Python e Java na plataforma do Windows são compatíveis com o SQL Server 2019 CTP 2.3. O suporte a Python e Linux está previsto para uma versão posterior.
+> No SQL Server 2017, há compatibilidade apenas com a linguagem R e a plataforma Windows. Há suporte para R, Python e Java nas plataformas Windows e Linux no SQL Server 2019 CTP 2.4. 
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## <a name="syntax-for-sql-server-2019"></a>Sintaxe do SQL Server 2019
@@ -46,7 +46,7 @@ WITH ( LANGUAGE = <language> )
 <file_spec> ::=
 {
     (CONTENT = { <client_library_specifier> | <library_bits> | NONE}
-    [, PLATFORM = WINDOWS )
+    [, PLATFORM = <platform> )
 }
 
 <client_library_specifier> :: =
@@ -60,6 +60,12 @@ WITH ( LANGUAGE = <language> )
 { 
       varbinary_literal 
     | varbinary_expression 
+}
+
+<platform> :: = 
+{
+      WINDOWS
+    | LINUX
 }
 
 <language> :: = 
@@ -129,11 +135,17 @@ Essa opção será útil se você tiver a permissão necessária para alterar um
 
 Nesse caso, você pode passar o conteúdo do pacote como uma variável em formato binário.
 
+::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
 **PLATFORM = WINDOWS**
 
-Especifica a plataforma para o conteúdo da biblioteca. Esse valor é necessário ao modificar uma biblioteca existente para adicionar uma plataforma diferente. O Windows é a única plataforma com suporte.
+Especifica a plataforma para o conteúdo da biblioteca. Esse valor é necessário ao modificar uma biblioteca existente para adicionar uma plataforma diferente. No SQL Server 2017, o Windows é a única plataforma compatível.
 
+::: moniker-end
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+**PLATAFORMA**
+
+Especifica a plataforma para o conteúdo da biblioteca. Esse valor é necessário ao modificar uma biblioteca existente para adicionar uma plataforma diferente. No SQL Server 2019, o Windows e o Linux são as plataformas compatíveis.
+
 **language**
 
 Especifica a linguagem do pacote. O valor pode ser **R**, **Python** ou **Java**.
@@ -141,9 +153,13 @@ Especifica a linguagem do pacote. O valor pode ser **R**, **Python** ou **Java**
 
 ## <a name="remarks"></a>Remarks
 
-Para a linguagem R, os pacotes precisam ser preparados no formato de arquivos compactados com a extensão .ZIP para Windows. Atualmente, há compatibilidade apenas com a plataforma Windows.  
+::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+Para a linguagem R, os pacotes precisam ser preparados no formato de arquivos compactados com a extensão .ZIP para Windows. No SQL Server 2017, apenas a plataforma Windows é compatível.  
+::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+Para a linguagem R, ao usar um arquivo, os pacotes precisam ser preparados no formato de arquivos mortos compactados com a extensão .zip. 
+
 Para a linguagem Python, o pacote em um arquivo .whl ou .zip deve estar preparado na forma de um arquivo morto compactado. Se o pacote já for um arquivo .zip, ele deverá ser incluído em um novo arquivo .zip. Carregar um pacote diretamente como arquivo .whl ou .zip não é uma ação compatível atualmente.
 ::: moniker-end
 
@@ -180,7 +196,7 @@ EXEC sp_execute_external_script
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Para a linguagem Python no SQL Server 2019, o exemplo também funciona, substituindo `'R'` com `'Python'`.
 ::: moniker-end
-### <a name="b-alter-an-existing-library-using-a-byte-stream"></a>b. Alterar uma biblioteca existente usando um fluxo de bytes
+### <a name="b-alter-an-existing-library-using-a-byte-stream"></a>B. Alterar uma biblioteca existente usando um fluxo de bytes
 
 O exemplo a seguir altera a biblioteca existente, passando os novos bits como um literal hexadecimal.
 

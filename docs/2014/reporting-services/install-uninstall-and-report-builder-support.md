@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 939a60c8c23ee59e77f6a2f3c3a2b71a98a426bf
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241714"
 ---
 # <a name="install-uninstall-and-report-builder-support"></a>Instalar, desinstalar e oferecer suporte ao Construtor de Relatórios
@@ -59,7 +59,7 @@ ms.locfileid: "59241714"
 ### <a name="installing-the-clickonce-version-of-report-builder-on-your-computer"></a>Instalando a versão ClickOnce do Construtor de Relatórios no seu computador  
  A versão [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] do Construtor de Relatórios é instalada com o [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Ela é instalada pelas instalações nativa e integrada do SharePoint do [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)].  
   
- [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] é uma tecnologia da Microsoft para implantar aplicativos do Windows. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] permite que os usuários instalem e executem um aplicativo Windows, como o Construtor de Relatórios, clicando em um link de uma página da Web. Para obter mais informações sobre como implantar [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplicativos, aplicando [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] segurança do aplicativo, ou execução [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplicativos na zona da Internet, consulte a "implantação de ClickOnce para Windows Forms aplicativos", "segurança no Visão geral dos Windows Forms"ou"Trusted Application Deployment Overview"artigos sobre o [!INCLUDE[msCoName](../includes/msconame-md.md)] site da Developer Network em [ https://developer.microsoft.com/ ](https://developer.microsoft.com/).  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] é uma tecnologia da Microsoft para implantar aplicativos do Windows. O [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] permite que os usuários instalem e executem um aplicativo Windows, como o Construtor de Relatórios, clicando em um link de uma página da Web. Para obter mais informações sobre como implantar [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplicativos, aplicando [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] segurança do aplicativo, ou execução [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplicativos na zona da Internet, consulte a "implantação de ClickOnce para Windows Forms aplicativos", "segurança no Visão geral dos Windows Forms"ou"Trusted Application Deployment Overview"artigos sobre o [!INCLUDE[msCoName](../includes/msconame-md.md)] site da Developer Network em [ https://developer.microsoft.com/ ](https://developer.microsoft.com/).  
   
  A versão [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] do Construtor de Relatórios está localizada no servidor de relatório e é instalada no computador quando você clica no botão **Construtor de Relatórios** no Gerenciador de Relatórios ou clica na opção **Relatório do Construtor de Relatórios** no menu **Novo Documento** em uma biblioteca do SharePoint.  
   

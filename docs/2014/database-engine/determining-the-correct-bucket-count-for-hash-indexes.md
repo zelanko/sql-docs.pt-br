@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b1b79c0908f8639df869d01a8ff862afc5be77cb
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241954"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>Determinando o número de buckets correto para índices de hash não clusterizados
@@ -139,7 +139,7 @@ GO
   
 -   IX_Status: 50 por cento dos buckets estão vazios, o que é bom. Porém, o comprimento médio da cadeia é muito alto (65.536). Isso indica um grande número de valores duplicados. Portanto, usar um índice de hash não clusterizado não é apropriado nesse caso. Deve-se utilizar índice não clusterizado.  
   
--   IX_OrderSequence: 0 por cento dos buckets estão vazios, um valor muito baixo. Além disso, o comprimento médio de cadeia é 8. Como os valores nesse índice são exclusivos, isso significa que, em média, 8 valores são mapeados para cada bucket. O número de buckets deve ser aumentado. Como a chave de índice tem 262.144 valores exclusivos, o número de buckets deve ser pelo menos 262.144. Se é esperado um futuro crescimento, o número deve ser mais alto.  
+-   IX_OrderSequence: 0 por cento dos buckets estão vazios, o que é muito baixa. Além disso, o comprimento médio de cadeia é 8. Como os valores nesse índice são exclusivos, isso significa que, em média, 8 valores são mapeados para cada bucket. O número de buckets deve ser aumentado. Como a chave de índice tem 262.144 valores exclusivos, o número de buckets deve ser pelo menos 262.144. Se é esperado um futuro crescimento, o número deve ser mais alto.  
   
 -   Índice de chave primária (... PK uma de SalesOrder): 36 por cento dos buckets estão vazios, o que é bom. Além disso, o comprimento médio da cadeia é 1, o que também é bom. Nenhuma alteração necessária.  
   

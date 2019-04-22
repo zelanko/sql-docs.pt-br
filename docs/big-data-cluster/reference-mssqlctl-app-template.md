@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: c67ed74750ac36d1a5c79503417414a9dd8ab6b5
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860097"
 ---
 # <a name="mssqlctl-app-template"></a>Modelo de aplicativo do mssqlctl
@@ -26,7 +26,7 @@ O artigo a seguir fornece referência para o **modelo de aplicativo** comandos n
 
 |||
 |---|---|
-| [Lista](#list) | Modelos de Fetch com suporte. |
+| [list](#list) | Modelos de Fetch com suporte. |
 | [pull](#pull) | Baixe os modelos com suporte. |
 
 ## <a id="list"></a> lista de modelos de aplicativo mssqlctl
@@ -73,7 +73,7 @@ mssqlctl app template pull
 
 | Parâmetros | Descrição |
 |---|---|
-| **– destino -d** | Onde colocar o modelo de aplicativo de esqueleto.  Padrão:. / modelos. |
+| **--destination -d** | Onde colocar o modelo de aplicativo de esqueleto.  Padrão:. / modelos. |
 | **--name -n** | Nome do modelo. Para obter uma lista completa desativar nomes de modelo com suporte, execute `mssqlctl app template list`. |
 | **--url -u** | Especifique um local de repositório de modelo diferente. Padrão:
 https://github.com/Microsoft/sql-server-samples.git. |

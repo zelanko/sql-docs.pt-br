@@ -1,7 +1,7 @@
 ---
 title: Monitor de Atividade | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 04/07/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -13,21 +13,21 @@ ms.assetid: 1e6c430d-3a2a-468e-a3d5-ef5459c36c15
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 540774d3b6e41bdadc4f7e9cb06a8302f29f7ff5
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 6d6f215127e584b73e28ee30339189ef49fa10d0
+ms.sourcegitcommit: bf23b81af45eddaa3c8bb87135c5ad0e1b42fbc2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380377"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59367204"
 ---
 # <a name="activity-monitor"></a>Monitor de Atividade
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  O Monitor de Atividade exibe informações sobre os processos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e como esses processos afetam a instância atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+O Monitor de Atividade exibe informações sobre os processos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e como esses processos afetam a instância atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- O Monitor de Atividade é uma janela do documento com guias com os seguintes painéis expansíveis e recolhíveis: **Visão Geral**, **Tarefas do Usuário Ativo**, **Esperas de Recurso**, **E/S do Arquivo de Dados** e **Consultas Dispendiosas Recentes**. Quando qualquer painel é expandido, o Monitor de Atividade consulta a instância para obter informações. Quando um painel é recolhido, todas as atividades de consulta são interrompidas para esse painel. Você pode expandir um ou mais painéis ao mesmo tempo para exibir diferentes tipos de atividades na instância.  
+O Monitor de Atividade é uma janela do documento com guias com os seguintes painéis expansíveis e recolhíveis: **Visão geral**, **Processos**, **Esperas Recentes**, **E/S do Arquivo de Dados**, **Consultas Caras Recentes** e **Consultas Caras Ativas**. Quando qualquer painel é expandido, o Monitor de Atividade consulta a instância para obter informações. Quando um painel é recolhido, todas as atividades de consulta são interrompidas para esse painel. Você pode expandir um ou mais painéis ao mesmo tempo para exibir diferentes tipos de atividades na instância.  
  
- ## <a name="customize-columns"></a>Personalizar colunas 
- Para as colunas incluídas nos painéis **Tarefas do Usuário Ativo**, **Esperas Recentes**, **E/S de Arquivo de Dados**e **Consultas Caras Recentes** , você pode personalizar a exibição das seguintes maneiras:  
+## <a name="customize-columns"></a>Personalizar colunas 
+Nas colunas incluídas nos painéis **Processos**, **Esperas Recentes**, **E/S de Arquivo de Dados**, **Consultas Caras Recentes** e **Consultas Caras Ativas**, é possível personalizar a exibição das seguintes maneiras:  
   
 1.  Para reorganizar a ordem das colunas, clique no título de coluna e arraste-o para outro local na faixa de opções de título.  
   

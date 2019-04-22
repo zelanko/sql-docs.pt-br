@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 732b1c979f0dbf3a346ad85fc11bb8e0c5097c4f
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240394"
 ---
 # <a name="usage-based-optimization-wizard-f1-help"></a>Ajuda F1 do Assistente de Otimização com Base no Uso
@@ -39,7 +39,7 @@ ms.locfileid: "59240394"
   
 -   Salvar e opcionalmente processar a partição, grupo de medidas ou cubo para gerar as agregações definidas.  
   
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornece o Assistente de Design de Agregação para criação de agregações com base em análise estatística da estrutura da partição para fornecer um design de agregação que pode ser limitado pelo tamanho do armazenamento ou ganho estimado de desempenho. É possível usar o Assistente de Design de Agregação para melhorar o desempenho geral de uma partição, mas o design de agregação não se destina a necessidades específicas de seus usuários empresariais. O Assistente de Otimização com Base no Uso pode fornecer um design de agregação destinado a essas necessidades específicas, mas o assistente poderá fazer isso apenas se o log de consultas da instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] contiver informações suficientes para construir essas consultas.  
+ O [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornece o Assistente de Design de Agregação para criação de agregações com base em análise estatística da estrutura da partição para fornecer um design de agregação que pode ser limitado pelo tamanho do armazenamento ou ganho estimado de desempenho. É possível usar o Assistente de Design de Agregação para melhorar o desempenho geral de uma partição, mas o design de agregação não se destina a necessidades específicas de seus usuários empresariais. O Assistente de Otimização com Base no Uso pode fornecer um design de agregação destinado a essas necessidades específicas, mas o assistente poderá fazer isso apenas se o log de consultas da instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] contiver informações suficientes para construir essas consultas.  
   
  Normalmente, os dois assistentes são usados em conjunto para melhorar o desempenho na implantação e com o passar do tempo. O Assistente de Design de Agregação deve ser usado primeiro quando a partição (ou o cubo ou o grupo de medidas que contém a partição) é implantado inicialmente para fornecer um benefício geral de desempenho. Após um período de tempo de registro de consultas de usuários empresariais da partição no log de consultas, você poderá usar o Assistente de Otimização com Base no Uso para focalizar ainda mais o design de agregação para atender melhor aos requisitos de desempenho e de consultas dos usuários empresariais.  
   
@@ -48,24 +48,24 @@ ms.locfileid: "59240394"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
--   [Selecionar Partições a Modificar &#40;Assistente de Otimização com Base no Uso&#41;](select-partitions-to-modify-usage-based-optimization-wizard.md)  
+-   [Selecionar partições a modificar &#40;Assistente de otimização com base no uso&#41;](select-partitions-to-modify-usage-based-optimization-wizard.md)  
   
--   [Especificar Critérios de Consulta &#40;Assistente de Otimização com Base no Uso&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
+-   [Especificar critérios de consulta &#40;Assistente de otimização com base no uso&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
   
--   [Revisar as consultas que serão otimizadas &#40;Assistente de Otimização com Base no Uso&#41;](review-the-queries-that-will-be-optimized-usage-based-optimization-wizard.md)  
+-   [Revisar as consultas que serão otimizadas &#40;Assistente de otimização baseada em uso&#41;](review-the-queries-that-will-be-optimized-usage-based-optimization-wizard.md)  
   
--   [Examinar uso de agregação &#40;Assistente de Otimização com Base no Uso&#41;](review-aggregation-usage-usage-based-optimiation-wizard.md)  
+-   [Revisar uso de agregação &#40;Assistente de otimização baseada em uso&#41;](review-aggregation-usage-usage-based-optimiation-wizard.md)  
   
--   [Especificar Contagens de Objetos &#40;Assistente de Otimização com Base no Uso&#41;](specify-object-counts-usage-based-optimization-wizard.md)  
+-   [Especificar contagens de objetos &#40;Assistente de otimização com base no uso&#41;](specify-object-counts-usage-based-optimization-wizard.md)  
   
--   [Definir Opções de Agregação &#40;Assistente de Otimização com Base no Uso&#41;](set-aggregation-options-usage-based-optimization-wizard.md)  
+-   [Definir opções de agregação &#40;Assistente de otimização com base no uso&#41;](set-aggregation-options-usage-based-optimization-wizard.md)  
   
--   [Concluindo o Assistente &#40;Assistente de Otimização com Base no Uso&#41;](completing-the-wizard-usage-based-optimization-wizard.md)  
+-   [Concluindo o Assistente de &#40;Assistente de otimização com base no uso&#41;](completing-the-wizard-usage-based-optimization-wizard.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Agregações e designs de agregação](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
+ [As agregações e Designs de agregação](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
  [Cubos em modelos multidimensionais](multidimensional-models/cubes-in-multidimensional-models.md)   
- [Ajuda F1 do Assistente de Design de Agregação](aggregation-design-wizard-f1-help.md)   
- [Assistentes do Analysis Services &#40;Dados multidimensionais&#41;](analysis-services-wizards-multidimensional-data.md)  
+ [Ajuda de F1 do Assistente de Design de agregação](aggregation-design-wizard-f1-help.md)   
+ [Assistentes do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

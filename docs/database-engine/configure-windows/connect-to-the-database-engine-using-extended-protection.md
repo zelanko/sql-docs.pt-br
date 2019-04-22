@@ -15,22 +15,22 @@ helpviewer_keywords:
 - channel binding
 - Extended Protection
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 185c03ef5c5ffdd35a1d32df6fecb29568d5ab82
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: d04f5e640f7622b5eab6106da29366f164fb6878
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657800"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774541"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Conectar-se ao mecanismo de banco de dados usando proteção estendida
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte para a **Proteção Estendida** desde o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. A**Proteção Estendida para Autenticação** é um recurso dos componentes de rede implementado pelo sistema operacional. Há suporte para a**Proteção Estendida** no Windows 7 e no Windows Server 2008 R2. **Proteção Estendida** é incluída em pacotes de serviço para sistemas operacionais [!INCLUDE[msCoName](../../includes/msconame-md.md)] mais antigos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é mais seguro quando as conexões são efetuadas usando a **Proteção Estendida**.  
   
 > [!IMPORTANT]  
->  O Windows não habilita a **Proteção Estendida** por padrão. Para obter informações sobre como habilitar a **Proteção Estendida** no Windows, consulte [Proteção Estendida para Autenticação](https://support.microsoft.com/kb/968389).  
+> O Windows não habilita a **Proteção Estendida** por padrão. Para obter informações sobre como habilitar a **Proteção Estendida** no Windows, consulte [Proteção Estendida para Autenticação](/dotnet/framework/wcf/feature-details/extended-protection-for-authentication-overview).
   
 ## <a name="description-of-extended-protection"></a>Descrição da Proteção Estendida  
  A**Proteção Estendida** usa a associação de serviço e de canal para ajudar a evitar ataques de retransmissão de autenticação. Em um ataque de retransmissão de autenticação, um cliente que pode executar autenticação NTLM (por exemplo, Windows Explorer, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Outlook, um aplicativo .NET SqlClient, etc.), se conecta a um invasor (por exemplo, um servidor de arquivos CIFS mal-intencionado). O invasor usa as credenciais do cliente para se passar pelo cliente e se autenticar em um serviço (por exemplo, uma instância do serviço [!INCLUDE[ssDE](../../includes/ssde-md.md)] ).  

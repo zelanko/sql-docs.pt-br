@@ -2147,7 +2147,7 @@ items:
             href: ../mdx/comment-mdx.md
           - name: // (Comment)
             href: ../mdx/comment-mdx-double-slash.md
-          - name: ': : (Range)'
+          - name: ': (Range)'
             href: ../mdx/range-mdx.md
           - name: + (Somar)
             href: ../mdx/add-mdx.md
@@ -2487,8 +2487,8 @@ items:
   - name: Funções VBA no MDX e no DAX
     href: ../mdx/vba-functions-in-mdx-and-dax.md
 ms.openlocfilehash: a651b3240dcf27f61b4acfc9b6e68fc3a77d4c9c
-ms.sourcegitcommit: 00e0fa2c0b49a1ce94c17b74b4bd5210098f8367
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58788113"

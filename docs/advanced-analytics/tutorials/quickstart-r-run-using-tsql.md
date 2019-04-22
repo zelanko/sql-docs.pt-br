@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 1c3ee703bca46bf46dba8225e1d28da3174dc932
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240164"
 ---
 # <a name="quickstart-hello-world-r-script-in-sql-server"></a>Início Rápido: Script de R "Hello world" no SQL Server 
@@ -91,4 +91,4 @@ Entradas para esse procedimento armazenado incluem:
 Agora que executar alguns scripts de R simples, dar uma olhada nas estruturação de entradas e saídas.
 
 > [!div class="nextstepaction"]
-> [Início Rápido: Lidar com entradas e saídas](quickstart-r-inputs-and-outputs.md)
+> [Guia de início rápido: Lidar com entradas e saídas](quickstart-r-inputs-and-outputs.md)

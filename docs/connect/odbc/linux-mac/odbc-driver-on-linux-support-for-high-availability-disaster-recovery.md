@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a4f307efedd62a1fcc923a2e61da8636a89e40bb
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042375"
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Driver ODBC no Linux e no macOS – compatibilidade com alta disponibilidade e recuperação de desastre
@@ -23,7 +23,7 @@ ms.locfileid: "59042375"
 
 Os drivers ODBC para Linux e macOS são compatíveis com [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. Para saber mais sobre [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], consulte:  
   
--   [Ouvintes de grupo de disponibilidade, conectividade de cliente e failover de aplicativo (SQL Server)](https://msdn.microsoft.com/library/hh213417.aspx)  
+-   [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo (SQL Server)](https://msdn.microsoft.com/library/hh213417.aspx)  
   
 -   [Criação e configuração de grupos de disponibilidade (SQL Server)](https://msdn.microsoft.com/library/ff878265.aspx)  
   
@@ -76,7 +76,7 @@ Uma conexão falhará se uma réplica primária estiver configurada para rejeita
 
 ## <a name="odbc-syntax"></a>Sintaxe do ODBC
 
-Duas palavras-chave da cadeia de conexão do ODBC fornecem suporte para os [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]:  
+Duas palavras-chave da cadeia de conexão do ODBC são compatíveis com o [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]:  
   
 -   **ApplicationIntent**  
   
@@ -105,4 +105,4 @@ Um aplicativo no driver ODBC que use os [!INCLUDE[ssHADR](../../../includes/ssha
 
 [Diretrizes de programação](../../../connect/odbc/linux-mac/programming-guidelines.md)
 
-[Notas de Versão](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)  
+[Notas de versão](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)  

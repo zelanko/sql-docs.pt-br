@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f3b2c9137f34a76ec77f179eb329042d92be5cd1
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241026"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Tipos de dados do Integration Services em expressões
@@ -51,11 +51,11 @@ ms.locfileid: "59241026"
 >   
 >  Para evitar erros ou resultados inesperados, você não deve gravar códigos que contem com valores numéricos específicos para `True` e `False`. Onde for possível, você deve restringir o uso de variáveis boolianas aos valores lógicos para os quais elas são projetados.  
   
- Para obter mais informações, consulte os tópicos a seguir:  
+ Para mais informações, consulte os seguintes tópicos:  
   
 -   [== &#40;Igual&#41; &#40;Expressão do SSIS&#41;](equal-ssis-expression.md)  
   
--   [!= &#40;Diferente&#41; &#40;Expressão do SSIS&#41;](unequal-ssis-expression.md)  
+-   [\!= &#40;Diferente&#41; &#40;Expressão do SSIS&#41;](unequal-ssis-expression.md)  
   
 -   [&#62; &#40;Maior que&#41; &#40;Expressão SSIS&#41;](greater-than-ssis-expression.md)  
   

@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c08545341e3ecfe8c82ab01723d96167412e1b03
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241334"
 ---
 # <a name="comparing-the-script-task-and-the-script-component"></a>Comparando a tarefa Script e o componente Script
@@ -31,7 +31,7 @@ ms.locfileid: "59241334"
 |Recurso|Descrição|  
 |-------------|-----------------|  
 |Dois modos de design-tempo|Na tarefa e no componente, você começa especificando propriedades no editor e, depois, alterna para o ambiente de desenvolvimento para escrever código.|  
-|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA)|A tarefa e o componente usam o mesmo VSTA IDE e dão suporte ao código escrito em [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic ou [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.|  
+|VSTA ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications)|A tarefa e o componente usam o mesmo VSTA IDE e dão suporte ao código escrito em [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic ou [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.|  
 |Scripts pré-compilados|A partir do [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)], todos os scripts são pré-compilados. Em versões anteriores, você podia especificar se os scripts foram pré-compilados.<br /><br /> O script é pré-compilado em código binário, permitindo maior rapidez na execução, mas isso resulta no aumento do tamanho do pacote.|  
 |Depuração|A tarefa e o componente dão suporte a pontos de interrupção e passa pelo código durante a depuração no ambiente de design. Para obter mais informações, consulte [codificando e depurando a tarefa Script](../control-flow/script-task.md) e [codificando e depurando o componente Script] (... / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md.|  
   
@@ -52,8 +52,8 @@ ms.locfileid: "59241334"
 |Retornando resultados|A tarefa Script usa o <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.TaskResult%2A> propriedade e opcional <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.ExecutionValue%2A> propriedade do `Dts` objeto notificar o tempo de execução de seus resultados.|O componente Script é executado como parte da tarefa Fluxo de Dados e não relata resultados através de uma dessas propriedades.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Estendendo o pacote com a tarefa Script](task/extending-the-package-with-the-script-task.md)   
- [Extending the Data Flow with the Script Component](data-flow-script-component/extending-the-data-flow-with-the-script-component.md)   
+ [Estender o pacote com a tarefa Script](task/extending-the-package-with-the-script-task.md)   
+ [Estender o fluxo de dados com o componente Script](data-flow-script-component/extending-the-data-flow-with-the-script-component.md)   
  [Usando uma tarefa Script no SQL Server Integration Services SSIS para se conectar a um serviço Web](https://www.mssqltips.com/sqlservertip/4288/using-a-script-task-in-sql-server-integration-services-ssis-to-connect-to-a-web-service/)  
   
   

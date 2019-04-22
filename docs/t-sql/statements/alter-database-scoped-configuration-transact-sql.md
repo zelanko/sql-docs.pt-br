@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 85e4ceb8c70d6aa11ac37a8b3e8fd28c997c03dc
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: fddb5027da7d1b8e33ebcbc53ba403b866eadb8c
+ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493770"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506543"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -59,7 +59,7 @@ ALTER DATABASE SCOPED CONFIGURATION
 {
      {  [ FOR SECONDARY] SET <set_options>}
 }
-| CLEAR PROCEDURE_CACHE
+| CLEAR PROCEDURE_CACHE  [plan_handle]
 | SET < set_options >
 [;]
 
@@ -94,9 +94,14 @@ FOR SECONDARY
 
 Especifica as definições para bancos de dados secundários (todos os bancos de dados secundários precisam ter valores idênticos).
 
-CLEAR PROCEDURE_CACHE    
+CLEAR PROCEDURE_CACHE [plan_handle]
 
 Limpa o cache do procedimento (plano) para o banco de dados e pode ser executado tanto no primário quanto no secundário.  
+
+Especifique um identificador de plano de consulta para limpar um único plano de consulta do cache do plano.
+
+> [!NOTE]
+> Especificar um identificador de plano de consulta está disponível no Banco de Dados SQL do Azure e no SQL Server 2019 ou superior.
 
 MAXDOP **=** {\<value> | PRIMARY } **\<value>**
 
@@ -298,7 +303,7 @@ VERBOSE_TRUNCATION_WARNINGS **=** { **ON** | OFF}
 
 **Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
 
-Permite habilitar ou desabilitar a nova mensagem de erro `String or binary data would be truncated`. O [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] apresenta uma mensagem de erro nova e mais específica (2628) para esse cenário:  
+Permite habilitar ou desabilitar a nova mensagem de erro `String or binary data would be truncated`. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] apresenta uma mensagem de erro nova e mais específica (2628) para esse cenário:  
 
 `String or binary data would be truncated in table '%.*ls', column '%.*ls'. Truncated value: '%.*ls'.`
 
@@ -406,7 +411,7 @@ Este exemplo define PARAMETER_SNIFFING como OFF para um banco de dados primário
 ALTER DATABASE SCOPED CONFIGURATION SET PARAMETER_SNIFFING = OFF ;
 ```
 
-Este exemplo define PARAMETER_SNIFFING como OFF para um banco de dados primário em um cenário de replicação geográfica.
+Este exemplo define PARAMETER_SNIFFING como OFF para um banco de dados secundário em um cenário de replicação geográfica.
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING = OFF ;
@@ -468,12 +473,19 @@ Este exemplo define ELEVATE_RESUMABLE como WHEN_SUPPORTED.
 ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = WHEN_SUPPORTED ;
 ```
 
+### <a name="k-clear-a-query-plan-from-the-plan-cache"></a>K. Apagar um plano de consulta do cache do plano
+Este exemplo limpa um plano específico do cache de procedimento 
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE 0x06000500F443610F003B7CD12C02000001000000000000000000000000000000000000000000000000000000;
+```
+
 ## <a name="additional-resources"></a>Recursos adicionais
 
 ### <a name="maxdop-resources"></a>Recursos de MAXDOP
 
 - [Grau de paralelismo](../../relational-databases/query-processing-architecture-guide.md#DOP)
-- [Recomendações e diretrizes para a opção de configuração “max degree of parallelism” no SQL Server](https://support.microsoft.com/kb/2806535)
+- [Recomendações e diretrizes para a opção de configuração "max degree of parallelism" do SQL Server](https://support.microsoft.com/kb/2806535)
 
 ### <a name="legacycardinalityestimation-resources"></a>Recursos de LEGACY_CARDINALITY_ESTIMATION
 
@@ -483,7 +495,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = WHEN_SUPPORTED ;
 ### <a name="parametersniffing-resources"></a>Recursos de PARAMETER_SNIFFING
 
 - [Detecção de parâmetros](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)
-- ["I smell a parameter!"](https://blogs.msdn.microsoft.com/queryoptteam/2006/03/31/i-smell-a-parameter/) (Sinto cheiro de parâmetro!)
+- ["I smell a parameter!" (Sinto cheiro de parâmetro!)](https://blogs.msdn.microsoft.com/queryoptteam/2006/03/31/i-smell-a-parameter/)
 
 ### <a name="queryoptimizerhotfixes-resources"></a>Recursos de QUERY_OPTIMIZER_HOTFIXES
 

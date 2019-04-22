@@ -18,17 +18,17 @@ ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: = azuresqldb-current||>= sql-server-2016||=azure-sqldw-latest||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: c265582eb3cad857201fdde5f3671e46e370b00a
-ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
+monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
+ms.openlocfilehash: 87750e264f87b8244cb74b9d68276c85d92e5761
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58342948"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59670925"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
 Retorna um valor formatado com o formato e a cultura opcional especificados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Use a função FORMAT para formatação com reconhecimento de localidade de valores de data/hora e número como cadeias de caracteres. Para conversões de tipos de dados gerais, use CAST ou CONVERT.  
   
@@ -36,11 +36,12 @@ Retorna um valor formatado com o formato e a cultura opcional especificados no [
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```sql
 FORMAT ( value, format [, culture ] )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+## <a name="arguments"></a>Argumentos
+
  *value*  
  Expressão de um tipo de dados com suporte para formatação. Para obter uma lista de tipos válidos, consulte a tabela na seção Comentários.  
   
@@ -54,15 +55,17 @@ FORMAT ( value, format [, culture ] )
   
  Se o argumento *culture* não for fornecido, o idioma da sessão atual será usado. Esse idioma é definido implícita ou explicitamente com o uso da instrução SET LANGUAGE. *culture* aceita qualquer cultura compatível com .NET Framework como um argumento. Ela não é limitada aos idiomas explicitamente compatíveis com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se o argumento *culture* não for válido, FORMAT gerará um erro.  
   
-## <a name="return-types"></a>Tipos de retorno  
+## <a name="return-types"></a>Tipos de retorno
+
  **nvarchar** ou nulo  
   
  A extensão do valor retornado é determinada pelo *format*.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Remarks
+
  FORMAT retorna NULL para erros que não uma *cultura* que não é *valid*. Por exemplo, NULL será retornado se o valor especificado em *format* não for válido.  
- 
- A função FORMAT é não determinística.   
+
+ A função FORMAT é não determinística.
   
  FORMAT conta com a presença do CLR (Common Language Runtime) do .NET Framework.  
   
@@ -93,7 +96,8 @@ FORMAT ( value, format [, culture ] )
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-simple-format-example"></a>A. Exemplo de FORMAT simples  
+### <a name="a-simple-format-example"></a>A. Exemplo de FORMAT simples
+
  O exemplo a seguir retorna uma data simples formatada para culturas diferentes.  
   
 ```sql  
@@ -101,7 +105,7 @@ DECLARE @d DATETIME = '10/01/2011';
 SELECT FORMAT ( @d, 'd', 'en-US' ) AS 'US English Result'  
       ,FORMAT ( @d, 'd', 'en-gb' ) AS 'Great Britain English Result'  
       ,FORMAT ( @d, 'd', 'de-de' ) AS 'German Result'  
-      ,FORMAT ( @d, 'd', 'zh-cn' ) AS 'Simplified Chinese (PRC) Result';   
+      ,FORMAT ( @d, 'd', 'zh-cn' ) AS 'Simplified Chinese (PRC) Result';
   
 SELECT FORMAT ( @d, 'D', 'en-US' ) AS 'US English Result'  
       ,FORMAT ( @d, 'D', 'en-gb' ) AS 'Great Britain English Result'  
@@ -111,7 +115,7 @@ SELECT FORMAT ( @d, 'D', 'en-US' ) AS 'US English Result'
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
+```
 US English Result Great Britain English Result  German Result Simplified Chinese (PRC) Result  
 ----------------  ----------------------------- ------------- -------------------------------------  
 10/1/2011         01/10/2011                    01.10.2011    2011/10/1  
@@ -125,7 +129,8 @@ Saturday, October 01, 2011   01 October 2011               Samstag, 1. Oktober 2
 (1 row(s) affected)  
 ```  
   
-### <a name="b-format-with-custom-formatting-strings"></a>b. FORMAT com cadeias de caracteres de formatação personalizadas  
+### <a name="b-format-with-custom-formatting-strings"></a>B. FORMAT com cadeias de caracteres de formatação personalizadas
+
  O exemplo a seguir mostra os valores numéricos da formatação especificando um formato personalizado. O exemplo supõe que a data atual é 27 de setembro de 2012. Para obter mais informações sobre esses e outros formatos personalizados, veja [Cadeias de caracteres de formato numérico personalizado](https://msdn.microsoft.com/library/0c899ak8.aspx).  
   
 ```sql  
@@ -136,7 +141,7 @@ SELECT FORMAT( @d, 'dd/MM/yyyy', 'en-US' ) AS 'DateTime Result'
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
+```
 DateTime Result  Custom Number Result  
 --------------   --------------------  
 27/09/2012       123-45-6789  
@@ -144,7 +149,8 @@ DateTime Result  Custom Number Result
 (1 row(s) affected)  
 ```  
   
-### <a name="c-format-with-numeric-types"></a>C. FORMAT com tipos numéricos  
+### <a name="c-format-with-numeric-types"></a>C. FORMAT com tipos numéricos
+
  O exemplo a seguir retorna 5 linhas da tabela **Sales.CurrencyRate** no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. A coluna **EndOfDateRate** é armazenada como o tipo **money** na tabela. Neste exemplo, a coluna é retornada sem formatação e formatada com a especificação do formato de número .NET, o formato Geral e os tipos de formato de Moeda. Para obter mais informações sobre esses e outros formatos numéricos, veja [Cadeias de caracteres de formato numérico padrão](https://msdn.microsoft.com/library/dwhawy9k.aspx).  
   
 ```sql  
@@ -182,7 +188,7 @@ FROM Sales.CurrencyRate
 ORDER BY CurrencyRateID;  
 ```  
   
-```  
+```
 CurrencyRateID EndOfDayRate  Numeric Format  General Format  Currency Format  
 -------------- ------------  --------------  --------------  ---------------  
 1              1.0002        1,00            1,0002          1,00 €  
@@ -194,7 +200,8 @@ CurrencyRateID EndOfDayRate  Numeric Format  General Format  Currency Format
  (5 row(s) affected)  
 ```  
   
-###  <a name="ExampleD"></a> D. FORMAT com tipos de dados de tempo  
+### <a name="ExampleD"></a> D. FORMAT com tipos de dados de tempo
+
  FORMAT retorna NULL nesses casos, porque `.` e `:` não são ignorados.  
   
 ```sql  
@@ -209,9 +216,8 @@ SELECT FORMAT(cast('07:35' as time), N'hh\.mm');  --> returns 07.35
 SELECT FORMAT(cast('07:35' as time), N'hh\:mm');  --> returns 07:35  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte Também
+
  [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
  [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)  
- [Funções de cadeia de caracteres &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
-  
-  
+ [Funções de cadeia de caracteres &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)

@@ -1,7 +1,7 @@
 ---
 title: Aplicar backups do log de transações (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/13/2016
+ms.date: 08/14/2016
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -17,16 +17,16 @@ ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b1e4927c1eb0dba333091f231a624db3c8cb7e45
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 777b83d5021a61ea42610680d52345ad4ca001b5
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242167"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240586"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>Aplicar backups de log de transações (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-   O tópico só é relevante para o modelo de recuperação completa ou modelo de recuperação bulk-logged.  
+  O tópico só é relevante para o modelo de recuperação completa ou modelo de recuperação bulk-logged.  
   
  Este tópico descreve a aplicação de backups de log de transações como parte da restauração de um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
  
@@ -61,10 +61,12 @@ ms.locfileid: "54242167"
 |20:00h|Backup de log de transações.|  
 |21h45|Ocorre falha.|  
   
-> **OBSERVAÇÃO:** Para obter uma explicação dessa sequência de exemplo de backups, veja [Backups de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
+> Para obter uma explicação dessa sequência de exemplo de backups, veja [Backups de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
   
  Para restaurar o banco de dados a seu estado às 21h45 (o ponto de falha), um dos seguintes procedimentos alternativos pode ser usado.  
-  
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  **Alternativa 1: restaurar o banco de dados usando o backup de banco de dados completo mais recente**  
   
 1.  Crie um backup do final do log de transações atualmente ativo a partir do ponto de falha.  
@@ -73,7 +75,7 @@ ms.locfileid: "54242167"
   
  **Alternativa 2: restaurar o banco de dados usando o backup de banco de dados completo mais antigo**  
   
-> **OBSERVAÇÃO:** Esse processo alternativo será útil se um problema impedir o uso do backup de banco de dados completo 18h. Esse processo leva mais muito tempo do que restaurar o backup de banco de dados completo das 18h.  
+> Esse processo alternativo será útil se um problema impedir o uso do backup de banco de dados completo 18h. Esse processo leva mais muito tempo do que restaurar o backup de banco de dados completo das 18h.  
   
 1.  Crie um backup do final do log de transações atualmente ativo a partir do ponto de falha.  
   
@@ -81,7 +83,7 @@ ms.locfileid: "54242167"
   
      Essa alternativa mostra a segurança redundante oferecida pela manutenção de uma cadeia de backups de log de transações em uma série de backups de banco de dados completos.  
   
-> **OBSERVAÇÃO:** Em alguns casos, você pode usar também logs de transações para restaurar um banco de dados até um point-in-time específico. Para obter mais informações, veja [Restaurar um banco de dados do SQL Server em um ponto específico &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
+> Em alguns casos, você pode usar também logs de transações para restaurar um banco de dados até um point-in-time específico. Para obter mais informações, veja [Restaurar um banco de dados do SQL Server em um ponto específico &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
 ##  <a name="RelatedTasks"></a> Related tasks  
  **Para aplicar um backup de log de transações**  

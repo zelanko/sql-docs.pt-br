@@ -15,10 +15,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ad8f8aca9577023d3170fc0c1b6e7e4099129a90
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872306"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Novidades no mecanismo de banco de dados – SQL Server 2016
@@ -41,7 +41,7 @@ Para examinar quais são as novidades em outros componentes do SQL Server, veja 
 > Para obter as notas de versão atuais, confira [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md).
   
 ## <a name="sql-server-2016-service-pack-1-sp1"></a>SQL Server 2016 Service Pack 1 (SP1)  
--  `CREATE OR ALTER <object>` já tem uma sintaxe disponível para [procedimentos](../t-sql/statements/create-procedure-transact-sql.md), [exibições](../t-sql/statements/create-view-transact-sql.md), [funções](../t-sql/statements/create-function-transact-sql.md) e [gatilhos](../t-sql/statements/create-trigger-transact-sql.md).
+-  `CREATE OR ALTER <object>` sintaxe agora está disponível para [procedimentos](../t-sql/statements/create-procedure-transact-sql.md), [exibições](../t-sql/statements/create-view-transact-sql.md)e [funções](../t-sql/statements/create-function-transact-sql.md)e [gatilhos](../t-sql/statements/create-trigger-transact-sql.md).
 -   Foi adicionado suporte a um modelo mais genérico de dicas de consulta: `OPTION (USE HINT('<hint1>', '<hint2>'))`. Para obter mais informações, veja [Dicas de consulta (Transact-SQL)](../t-sql/queries/hints-transact-sql-query.md).  
 - A DMV [sys.dm_exec_valid_use_hints](../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) foi adicionada às dicas de lista.  
 - A DMV [sys.dm_exec_query_statistics_xml](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) foi adicionada para retornar estatísticas transitórias de plano de execução XML.  
@@ -59,25 +59,25 @@ Esta seção contém as seguintes subseções:
 -   [Índices columnstore](#columnstore-indexes)
 -   [Configurações no Escopo do Banco de Dados](#database-scoped-configurations)
 -   [OLTP na memória](#in-memory-oltp)
--   [Otimizador de consultas](#query-optimizer)
--   [Estatísticas de Consulta ao Vivo](#live-query-statistics)
+-   [Otimizador de consulta](#query-optimizer)
+-   [Estatísticas de consulta dinâmica](#live-query-statistics)
 -   [Repositório de Consultas](#query-store)
 -   [Tabelas temporais](#temporal-tables)
 -   [Backups distribuídos para o Armazenamento de Blobs do Microsoft Azure](#striped-backups-to-microsoft-azure-blob-storage)
 -   [Backups de instantâneos de arquivos para o Armazenamento de Blobs do Microsoft Azure](#file-snapshot-backups-to-microsoft-azure-blob-storage)
 -   [Backup Gerenciado](#managed-backup)
 -   [Banco de dados TempDB](#tempdb-database)
--   [Suporte a JSON interno](#built-in-json-support)
+-   [Suporte interno a JSON](#built-in-json-support)
 -   [PolyBase](#polybase)
 -   [Stretch Database](#stretch-database)
 -   [Suporte a UTF-8](#support-for-utf-8)
--   [Novos Valores Padrão de Tamanho do Banco de Dados e de Aumento Automático](#new-default-database-size-and-autogrow-values)
--   [Aprimoramentos do Transact-SQL](#transact-sql-enhancements)
--   [Aprimoramentos da exibição do sistema](#system-view-enhancements)
+-   [Novos valores padrão de tamanho do banco de dados e de aumento automático](#new-default-database-size-and-autogrow-values)
+-   [Aprimoramentos de Transact-SQL](#transact-sql-enhancements)
+-   [Aprimoramentos do Modo de Exibição do Sistema](#system-view-enhancements)
 -   [Aprimoramentos de segurança](#security-enhancements)
--   [Aprimoramentos de Alta Disponibilidade](#high-availability-enhancements)
+-   [Aprimoramentos de Alta disponibilidade](#high-availability-enhancements)
 -   [Aprimoramentos de Replicação](#replication-enhancements)
--   [Aprimoramentos de Ferramentas](#tools-enhancements)
+-   [Aprimoramentos de ferramentas](#tools-enhancements)
 
 ## <a name="columnstore-indexes"></a>Índices columnstore
 
@@ -93,9 +93,9 @@ Para obter mais detalhes, confira estes tópicos na seção [Guia de índices co
 
 - [Resumo do recurso com versão dos índices columnstore](~/relational-databases/indexes/columnstore-indexes-what-s-new.md) – inclui as novidades.
 
-- [Carregamento de dados dos Índices columnstore](../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)
+- [Carregamento de dados dos índices columnstore](../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)
 
-- [Desempenho de consultas de índices ColumnStore](~/relational-databases/indexes/columnstore-indexes-query-performance.md)
+- [Desempenho de consultas de índices columnstore](~/relational-databases/indexes/columnstore-indexes-query-performance.md)
 
 - [Introdução ao Columnstore para análise operacional em tempo real](../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)
 
@@ -120,7 +120,7 @@ A nova instrução está disponível no [!INCLUDE[ssSQL15](../includes/sssql15-m
 
 O formato de armazenamento para tabelas com otimização de memória foi alterado entre o SQL Server 2014 e o 2016. Para atualização e anexação/restauração do SQL Server 2014, o novo formato de armazenamento é serializado e o banco de dados é reiniciado uma vez durante a recuperação de banco de dados.
 
-- [Upgrade to SQL Server 2016](../database-engine/install-windows/upgrade-sql-server.md)
+- [Atualizar para o SQL Server 2016](../database-engine/install-windows/upgrade-sql-server.md)
 
 
 ### <a name="alter-table-is-log-optimized-and-runs-in-parallel"></a>ALTER TABLE é otimizado para log e executado em paralelo
@@ -228,7 +228,7 @@ A atualização automática de estatísticas agora é mais agressiva em tabelas 
 O Insert em uma instrução Insert-select tem vários threads ou pode ter um plano paralelo (no nível de compatibilidade 130). Para obter um plano paralelo, INSERT... A instrução SELECT deve usar a dica TABLOCK. Para obter mais informações, consulte [Selecionar inserção paralela](https://blogs.msdn.microsoft.com/sqlcat/2016/07/06/sqlsweet16-episode-3-parallel-insert-select/)
 
 ## <a name="live-query-statistics"></a>Estatísticas de consulta dinâmica
- [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] fornece a capacidade de exibir o plano de execução de uma consulta ativa. Esse plano de consulta ao vivo fornece visões em tempo real sobre o processo de execução da consulta, conforme os controles são transmitidos de um operador de plano de consulta para outro. Para obter mais informações, consulte [Live Query Statistics](../relational-databases/performance/live-query-statistics.md).
+ [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] fornece a capacidade de exibir o plano de execução ao vivo de uma consulta ativa. Esse plano de consulta ao vivo fornece visões em tempo real sobre o processo de execução da consulta, conforme os controles são transmitidos de um operador de plano de consulta para outro. Para obter mais informações, consulte [Live Query Statistics](../relational-databases/performance/live-query-statistics.md).
 
 ## <a name="query-store"></a>Repositório de Consultas
 O repositório de consultas é um novo recurso que fornece aos DBAs informações sobre escolha e desempenho do plano de consulta. Ele simplifica a solução de problemas, permitindo que você localize rapidamente diferenças de desempenho causadas por alterações nos planos de consulta. O recurso captura automaticamente um histórico de consultas, planos e estatísticas de tempo de execução e os mantém para sua análise. Ele separa os dados por janelas de tempo, permitindo que você veja os padrões de uso do banco de dados e entenda quando as alterações aos planos de consulta ocorreram no servidor. O repositório de consultas apresenta informações usando uma caixa de diálogo [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] , e permite que você force a consulta para um dos planos de consulta selecionados. Para saber mais, consulte [Monitoring Performance By Using the Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).
@@ -361,7 +361,7 @@ Há alguns elementos do Transact-SQL que não tinham suporte em módulos compila
 Para obter informações gerais, veja:
 
 - [Recursos com suporte para módulos T-SQL compilados nativamente](../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)
-- [Altering Natively Compiled T-SQL Modules](../relational-databases/in-memory-oltp/altering-natively-compiled-t-sql-modules.md)
+- [Alterar módulos T-SQL compilados nativamente](../relational-databases/in-memory-oltp/altering-natively-compiled-t-sql-modules.md)
 
 ## <a name="system-view-enhancements"></a>Aprimoramentos do Modo de Exibição do Sistema
 - Duas novas exibições dão suporte à segurança em nível de linha. Para obter mais informações, veja [sys.security_predicates &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md) e [sys.security_policies &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-security-policies-transact-sql.md).
@@ -449,6 +449,6 @@ O Supervisor de Atualização do SQL Server 2016 Preview é uma ferramenta autô
 ## <a name="see-also"></a>Consulte Também
 [Novidades no SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
  
-[Notas de Versão do SQL Server 2016.](../sql-server/sql-server-2016-release-notes.md) 
+[Notas de Versão do SQL Server 2016](../sql-server/sql-server-2016-release-notes.md) 
  
-[Instalação das Ferramentas de Gerenciamento do SQL Server com SSMS](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)
+[Instalar as Ferramentas de Gerenciamento do SQL Server com SSMS](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)

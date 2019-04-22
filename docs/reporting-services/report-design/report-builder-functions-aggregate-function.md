@@ -9,10 +9,10 @@ ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: a24554d0317c17edf9c532611c588ea7c38d1926
-ms.sourcegitcommit: bf23b81af45eddaa3c8bb87135c5ad0e1b42fbc2
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59367224"
 ---
 # <a name="report-builder-functions---aggregate-function"></a>Funções do Construtor de Relatórios – Função de Agregação

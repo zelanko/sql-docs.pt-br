@@ -20,14 +20,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a6300606195ea435a0290d828109b821d0d6702c
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241824"
 ---
 # <a name="languages-and-collations-analysis-services"></a>Idiomas e ordenações (Analysis Services)
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dá suporte a idiomas e ordenações fornecidos pelos [!INCLUDE[msCoName](../includes/msconame-md.md)] sistemas operacionais do Windows. `Language` e `Collation` propriedades são inicialmente definidas no nível da instância durante a instalação, mas podem ser alteradas posteriormente em diferentes níveis da hierarquia de objetos.  
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dá suporte a idiomas e ordenações fornecidos pelos sistemas operacionais Windows [!INCLUDE[msCoName](../includes/msconame-md.md)]. As propriedades `Language` e `Collation` são inicialmente definidas no nível da instância durante a instalação, mas podem ser alteradas posteriormente em diferentes níveis da hierarquia de objetos.  
   
  Um modelo multidimensional (somente), você pode definir essas propriedades em um banco de dados ou cubo – você também pode defini-las em traduções que você cria para objetos em um cubo.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "59241824"
 >  A propriedade `Language` não determina o idioma para retornar mensagens de sistema ou quais cadeias de caracteres são exibidas na interface do usuário. Erros, avisos e mensagens são localizados em todos os idiomas com suporte no Office e Office 365 e são usados automaticamente quando a conexão de cliente especifica uma das localidades com suporte.  
   
 ##  <a name="bkmk_collations"></a> Suporte a ordenação no Analysis Services  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa exclusivamente ordenações primárias e do Windows. Ele não usa ordenações herdadas do SQL Server. Em um cubo, uma única ordenação é usada no todo, com exceção de traduções no nível de atributo. Para obter mais informações sobre como definir traduções de atributos, consulte [Traduções &#40;Analysis Services&#41;](translations-analysis-services.md).  
+ O [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa exclusivamente ordenações primárias e do Windows. Ele não usa ordenações herdadas do SQL Server. Em um cubo, uma única ordenação é usada no todo, com exceção de traduções no nível de atributo. Para obter mais informações sobre como definir traduções de atributos, consulte [Traduções &#40;Analysis Services&#41;](translations-analysis-services.md).  
   
  As ordenações controlam a diferenciação de maiúsculas e minúsculas de todas as cadeias de caracteres em um script de idioma bicameral, com exceção dos identificadores de objeto. Se você usar caracteres em letras maiúsculas e minúsculas em um identificador de objeto, saiba que a diferenciação de maiúsculas e minúsculas de identificadores de objeto não é determinada pela ordenação, mas por [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Para identificadores de objeto compostos no script em inglês, eles sempre diferenciam maiúsculas de minúsculas, independentemente da ordenação. Cirílico e outras linguagens bicamerais fazem o oposto (sempre diferenciam maiúsculas de minúsculas). Para obter detalhes, consulte [Dicas de globalização e práticas recomendadas &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) .  
   
@@ -109,7 +109,7 @@ ms.locfileid: "59241824"
 ###  <a name="bkmk_collationtype"></a> Tipos de ordenação  
  O Analysis Services dá suporte a dois tipos de ordenação:  
   
--   **ordenações do Windows**  
+-   **Agrupamentos do Windows**  
   
      As ordenações do Windows classificam caracteres com base nas características linguísticas e culturais do idioma. No Windows, as ordenações ultrapassam o número de localidades (ou idiomas) usadas, porque muitos idiomas compartilham alfabetos comuns e regras para classificação e comparação de caracteres. Por exemplo, 33 localidades do Windows, incluindo todas as localidades portuguesas e inglesas do Windows, usam a página de código Latin1 (1252) e seguem um conjunto comum de regras para classificar e comparar caracteres.  
   
@@ -185,7 +185,7 @@ ms.locfileid: "59241824"
  GB18030 é um padrão separado usado na República Popular da China para codificar caracteres chineses. Em GB18030, caracteres podem ter 1, 2 ou 4 bytes em comprimento. No Analysis Services, não há conversão de dados durante o processamento de dados de fontes externas. Os dados são simplesmente armazenados como Unicode. No momento da consulta, uma conversão GB18030 é realizada por meio de bibliotecas do cliente Analysis Services (especificamente, o provedor OLE DB MSOLAP.dll) quando os dados de texto são retornados nos resultados da consulta, baseados nas configurações do sistema operacional cliente. O mecanismo de banco de dados também dá suporte a GB18030. Para obter detalhes, consulte [Suporte a ordenação e Unicode](../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Cenários de globalização para Analysis Services Multidimensional](globalization-scenarios-for-analysis-services-multiidimensional.md)   
+ [Cenários de globalização para Analysis Services multidimensional](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [Dicas de globalização e práticas recomendadas &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)   
  [Suporte a ordenações e a Unicode](../relational-databases/collations/collation-and-unicode-support.md)  
   

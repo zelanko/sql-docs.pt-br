@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 3ad8a97bac1f708dcf01612368c76d584fa39f5c
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860287"
 ---
 # <a name="mssqlctl-storage-mount"></a>Montagem do armazenamento do mssqlctl
@@ -26,8 +26,8 @@ O artigo a seguir fornece referência para o **montagem do armazenamento** coman
 
 |||
 |---|---|
-| [criar](#create) | Crie repositórios remotos de montagens no HDFS. |
-| [excluir](#delete) | Exclua montagens de repositórios remotos em HDFS. |
+| [create](#create) | Crie repositórios remotos de montagens no HDFS. |
+| [delete](#delete) | Exclua montagens de repositórios remotos em HDFS. |
 | [status](#status) | Status do mount(s). |
 
 ## <a id="create"></a> montagem do armazenamento mssqlctl criar

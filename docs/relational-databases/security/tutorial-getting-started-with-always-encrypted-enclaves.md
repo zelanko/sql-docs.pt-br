@@ -1,7 +1,7 @@
 ---
 title: 'Tutorial: Introdução ao Always Encrypted com enclaves seguros usando o SSMS | Microsoft Docs'
 ms.custom: ''
-ms.date: 10/04/2018
+ms.date: 04/05/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b25824b52a09afd7111cacc3a1ec05969766863e
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.openlocfilehash: 051123efd5c58048635bb83e43eaff73218c463e
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59042125"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241534"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Tutorial: Introdução ao Always Encrypted com enclaves seguros usando o SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -46,6 +46,7 @@ Para começar com o Always Encrypted com enclaves seguros, você precisa de pelo
    - No Hyper-V 2016 ou posterior, [habilite as extensões de virtualização aninhadas](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization) no processador da VM.
    - No Azure, verifique se está executando um tamanho de VM que dá suporte a virtualização aninhada, como as VMs da série Dv3 e Ev3. Confira [Criar uma VM do Azure compatível com aninhamento](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
    - No VMWare vSphere 6.7 ou posterior, habilite o suporte de segurança baseada em virtualização para a VM conforme descrito na [documentação do VMware](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
+   - Outros hipervisores e nuvens públicas podem suportar o uso do Always Encrypted com enclaves seguros em uma VM, desde que as extensões de virtualização (às vezes chamadas de virtualização aninhada) estejam expostas à VM. Verifique a documentação da solução de virtualização para obter as instruções de configuração e compatibilidade.
 - [SSMS (SQL Server Management Studio) 18.0 ou posterior](../../ssms/download-sql-server-management-studio-ssms.md).
 
 Como alternativa, é possível instalar o SSMS em outro computador.

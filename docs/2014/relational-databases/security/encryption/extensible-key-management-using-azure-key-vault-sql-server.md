@@ -17,10 +17,10 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 852f65073a55cbe6e8d29b1dc17981cb5356d95f
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59242195"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Gerenciamento extensível de chaves usando o Azure Key Vault (SQL Server)
@@ -30,17 +30,17 @@ ms.locfileid: "59242195"
   
 -   [Usos de EKM](#Uses)  
   
--   [Etapa 1: Configuração do Key Vault para uso pelo SQL Server](#Step1)  
+-   [Etapa 1: Como configurar o Key Vault para uso pelo SQL Server](#Step1)  
   
 -   [Etapa 2: Instalação do SQL Server Connector](#Step2)  
   
--   [Etapa 3: Configurar o SQL Server para usar um provedor EKM para o Key Vault](#Step3)  
+-   [Etapa 3: Configurar o SQL Server para usar um provedor EKM para o Cofre de chaves](#Step3)  
   
--   [Exemplo A: Criptografia transparente de dados usando uma chave assimétrica do Key Vault](#ExampleA)  
+-   [Exemplo a: Transparent Data Encryption usando uma chave assimétrica do Cofre de chaves](#ExampleA)  
   
--   [Exemplo B: Criptografia de backups usando uma chave assimétrica do Key Vault](#ExampleB)  
+-   [Exemplo b: Criptografia de Backups usando uma chave assimétrica do Cofre de chaves](#ExampleB)  
   
--   [Exemplo C: Criptografia de nível de coluna usando uma chave assimétrica do Key Vault](#ExampleC)  
+-   [Exemplo c: Criptografia de nível de coluna usando uma chave assimétrica do Cofre de chaves](#ExampleC)  
   
 ##  <a name="Uses"></a> Usos de EKM  
  Uma organização pode usar criptografia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para proteger dados confidenciais. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a criptografia inclui [Transparent Data Encryption &#40;TDE&#41;](transparent-data-encryption.md), [criptografia em nível de coluna](/sql/t-sql/functions/cryptographic-functions-transact-sql) (CLE) e [criptografia de Backup](../../backup-restore/backup-encryption.md). Em todos esses casos, os dados são criptografados usando uma chave de criptografia simétrica de dados. A chave de criptografia simétrica de dados é ainda mais protegida ao criptografar com uma hierarquia de chaves armazenadas em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Como alternativa, a arquitetura de provedor EKM permite que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proteja as chaves de criptografia de dados usando uma chave assimétrica armazenada fora do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em um provedor de criptografia externo. Usar a arquitetura de provedor EKM acrescenta uma camada adicional de segurança e permite que as organizações separem o gerenciamento de chaves e dados.  
@@ -51,7 +51,7 @@ ms.locfileid: "59242195"
   
  ![EKM do SQL Server usando o Azure Key Vault](../../../database-engine/media/ekm-using-azure-key-vault.png "EKM do SQL Server usando o Azure Key Vault")  
   
-##  <a name="Step1"></a> Etapa 1: Configuração do Key Vault para uso pelo SQL Server  
+##  <a name="Step1"></a> Etapa 1: Configurar o Key Vault para uso pelo SQL Server  
  Use as seguintes etapas para configurar uma chave de cofre para uso com o [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] para proteção de chave de criptografia. Um cofre já pode estar em uso para a organização. Quando não houver um cofre, o Administrador do Azure de sua organização, designado para gerenciar chaves de criptografia, poderá criar um cofre, gerar uma chave assimétrica no cofre e, então, autorizar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para usar a chave. Familiarize-se com o serviço de cofre de chave consultando [Introdução ao Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402)e a referência de [Cmdlets do PowerShell do Azure Key Vault](/powershell/module/azurerm.keyvault/) .  
   
 > [!IMPORTANT]  
@@ -73,7 +73,7 @@ ms.locfileid: "59242195"
   
      Para obter mais informações sobre como importar uma chave no cofre de chave ou criar uma chave no cofre de chave (não recomendado para um ambiente de produção), consulte a seção **Adicionar uma chave ou um segredo no cofre chave** em [Introdução ao Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402).  
   
-3.  **Obtenha o Azure Active Directory as entidades de serviço a ser usado para o SQL Server:** Quando a empresa se inscreve para um serviço de nuvem da Microsoft, ela recebe um Active Directory do Azure. Crie **Entidades de serviço** no Active Directory do Azure para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para uso (para autenticar-se com o Active Directory do Azure) ao acessar o cofre de chave.  
+3.  **Obtenha o Azure Active Directory as entidades de serviço a ser usado para o SQL Server:** Quando a empresa se inscreve para um serviço de nuvem da Microsoft, ele recebe um Azure Active Directory. Crie **Entidades de serviço** no Active Directory do Azure para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para uso (para autenticar-se com o Active Directory do Azure) ao acessar o cofre de chave.  
   
     -   Uma **Entidade de serviço** será necessária para que o administrador [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] acesse o cofre durante a configuração de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para usar a criptografia.  
   
@@ -100,20 +100,20 @@ ms.locfileid: "59242195"
   
     -   Referência dos [Cmdlets do Cofre de Chaves do Azure](https://go.microsoft.com/fwlink/?LinkId=521403) do PowerShell  
   
-##  <a name="Step2"></a> Etapa 2: Instalação do SQL Server Connector  
+##  <a name="Step2"></a> Etapa 2: Instalar o conector do SQL Server  
  O Connector [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é baixado e instalado pelo administrador do computador [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . O Connector [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está disponível para download no [Centro de Download da Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=521700).  Procure **SQL Server Connector para Microsoft Azure Key Vault**, examine os detalhes, requisitos de sistema e instruções de instalação e escolha baixar o conector e iniciar a instalação usando **Executar**. Examine e aceite a licença e continue.  
   
  Por padrão, o conector é instalado em **C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault**. Esse local pode ser alterado durante a instalação. (Se alterado, ajuste os scripts a seguir).  
   
  Ao concluir a instalação, os seguintes itens são instalados no computador:  
   
--   **Microsoft.AzureKeyVaultService.EKM.dll**: Esse é o DLL de provedor EKM criptográfico que precisa ser registrado com [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando a instrução CREATE CRYPTOGRAPHIC PROVIDER.  
+-   **Microsoft.AzureKeyVaultService.EKM.dll**: Isso é o provedor EKM criptográfico DLL que precisa ser registrado com [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando a instrução CREATE CRYPTOGRAPHIC PROVIDER.  
   
--   **Conector do SQL Server do Azure Key Vault**: Isso é um serviço Windows que permite que o provedor EKM criptográfico se comunique com o cofre de chave.  
+-   **Conector do SQL Server do Azure Key Vault**: Isso é um serviço do Windows que permite que o provedor EKM criptográfico para se comunicar com o Cofre de chaves.  
   
  A instalação do Connector [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] também permite que você baixe opcionalmente os scripts de exemplo para criptografia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-##  <a name="Step3"></a> Etapa 3: Configurar o SQL Server para usar um provedor EKM para o Key Vault  
+##  <a name="Step3"></a> Etapa 3: Configurar o SQL Server para usar um provedor EKM para o Cofre de chaves  
   
 ###  <a name="Permissions"></a> Permissões  
  Para concluir esse processo todo é necessária a permissão CONTROL SERVER ou associação na função de servidor fixa **sysadmin** . Ações específicas requerem as seguintes permissões:  

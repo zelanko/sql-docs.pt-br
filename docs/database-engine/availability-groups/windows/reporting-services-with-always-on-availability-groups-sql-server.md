@@ -13,12 +13,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 81d9914bee2661bfc3b679898c26a0f2ec3ed112
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 7adcc36bfaf41240ae5c1da0d8934ffdda67bada
+ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212125"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506513"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services com grupos de disponibilidade AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "53212125"
  Para obter informações sobre outros requisitos do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], veja [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 > [!NOTE]  
->  Não há suporte para arquivos de configuração do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] como **RSreportserver.config**, como parte da funcionalidade do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Se você fizer alterações manualmente em um arquivo de configuração em um dos servidores de relatórios, precisará atualizar as réplicas manualmente.  
+>  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] como **RSreportserver.config** não têm suporte como parte da funcionalidade do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Se você fizer alterações manualmente em um arquivo de configuração em um dos servidores de relatórios, precisará atualizar as réplicas manualmente.  
   
 ##  <a name="bkmk_reportdatasources"></a> Fontes de dados de relatório e grupos de disponibilidade  
  O comportamento de fontes de dados do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] com base no [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] pode variar, dependendo de como o administrador configurou o ambiente do AG.  
@@ -145,7 +145,7 @@ ms.locfileid: "53212125"
  O modo nativo não dá suporte nem usa os bancos de dados de alertas e recursos relacionados. Configure os servidores de relatório de modo nativo no Configuration Manager do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Para o modo do SharePoint, configure o nome do banco de dados de aplicativo de serviço para ser o nome do "ponto de acesso para cliente" que você criou como parte da configuração do SharePoint. Para obter mais informações sobre como configurar o SharePoint com o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consulte [Configurar e gerenciar grupos de disponibilidade do SQL Server para o SharePoint Server (https://go.microsoft.com/fwlink/?LinkId=245165)](https://go.microsoft.com/fwlink/?LinkId=245165)).  
   
 > [!NOTE]
->  Os servidores de relatórios do modo do SharePoint usam um processo de sincronização entre os bancos de dados de aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e os bancos de dados de conteúdo do SharePoint. É importante manter os bancos de dados do servidor de relatório e os bancos de dados de conteúdo juntos. Configure-os nos mesmos grupos de disponibilidade para que eles realizem failover e recuperação como um conjunto. Considere o cenário a seguir:  
+>  Os servidores de relatórios do modo do SharePoint usam um processo de sincronização entre os bancos de dados de aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e os bancos de dados de conteúdo do SharePoint. É importante manter os bancos de dados do servidor de relatório e os bancos de dados de conteúdo juntos. Configure-os nos mesmos grupos de disponibilidade para que eles realizem failover e recuperação como um conjunto. Considere o cenário a seguir.  
 > 
 >  -   Você restaura ou realiza failover para uma cópia do banco de dados de conteúdo que não tenha recebido as mesmas atualizações recentes que o banco de dados do servidor de relatório recebeu.  
 > -   O processo de sincronização do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] detectará diferenças entre a lista de itens no banco de dados de conteúdo e os bancos de dados do servidor de relatório.  
@@ -160,7 +160,7 @@ ms.locfileid: "53212125"
   
 -   **Réplicas secundárias:** crie uma ou mais réplicas secundárias. A abordagem comum para copiar os bancos de dados da réplica primária para a réplica secundária é restaurar os bancos de dados para cada réplica secundária usando 'RESTORE WITH NORECOVERY'. Para obter mais informações sobre como criar réplicas secundárias e verificar se a sincronização de dados está funcionando, veja [Iniciar movimentação de dados em um banco de dados secundário &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
--   **Credenciais do servidor de relatório:** você precisa criar as credenciais de servidor de relatório apropriadas nas réplicas secundárias, tal qual você criou na réplica primária. As etapas exatas dependem de que tipo de autenticação você está usando em seu ambiente do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]; conta de serviço do Windows [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], conta de usuário do Windows ou autenticação do SQL Server. Para obter mais informações, veja [Configurar uma conexão de banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
+-   **Credenciais do servidor de relatório:** você precisa criar as credenciais de servidor de relatório apropriadas nas réplicas secundárias, tal qual você criou na réplica primária. As etapas exatas dependem de que tipo de autenticação você está usando em seu ambiente do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]; conta de serviço do Windows [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], conta de usuário do Windows ou autenticação do SQL Server. Para obter mais informações, veja [Configurar uma conexão de banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 -   Atualize a conexão de banco de dados para usar o Nome DNS do Ouvinte. para os servidores de relatórios do modo de nativo, altere o **Nome do Banco de Dados do Servidor de Relatório** no gerenciador de configuração do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Para o modo do SharePoint, altere o **Nome do servidor de banco de dados** para o aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .  
   
@@ -196,7 +196,7 @@ ms.locfileid: "53212125"
  [Introdução aos Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md)   
  [Usando palavras-chave da cadeia de conexão com o SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)   
  [Suporte do SQL Server Native Client à alta disponibilidade e recuperação de desastre](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)   
- [Sobre o acesso de conexão de cliente a réplicas de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)  
+ [Sobre Acesso de conexão de cliente a réplicas de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)  
   
   
 

@@ -20,10 +20,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: b78f9e6a5493d3c06dfade34833cd69ddd56b58a
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241554"
 ---
 # <a name="compare-roles-and-tasks-in-reporting-services-to-sharepoint-groups-and-permissions"></a>Comparar funções e tarefas no Reporting Services com grupos e permissões do SharePoint
@@ -31,7 +31,7 @@ ms.locfileid: "59241554"
   
 ||  
 |-|  
-|[!INCLUDE[applies](../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Modo do SharePoint &#124; SharePoint 2010 e SharePoint 2013<br /><br /> [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] nativo|  
+|[!INCLUDE[applies](../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Modo do SharePoint &#124; SharePoint 2010 e SharePoint 2013<br /><br /> [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Modo nativo|  
   
  **Neste tópico:**  
   
@@ -42,13 +42,13 @@ ms.locfileid: "59241554"
 -   [Comparando tarefas do modo nativo e permissões do SharePoint](#bkmk_compare_tasks_permissions)  
   
 ##  <a name="bkmk_compare_tools_terms"></a> Comparar ferramentas de permissão e terminologia  
- **Modo Nativo:** Os objetos de permissão do modo nativo do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (funções e tarefas) são criados no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e configurados para usuários individuais no Gerenciador de Relatórios.  
+ **Modo Nativo:** O [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] objetos de permissão do modo nativo (funções e tarefas) são criados no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e configurados para usuários individuais no Gerenciador de relatórios.  
   
  **Modo SharePoint:** O modo do SharePoint do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] utiliza os recursos de permissão do SharePoint. Os grupos e as permissões do SharePoint são gerenciados da página **Configurações de Site** a seguir.  
   
  A tabela a seguir compara objetos e conceitos relacionados à permissão entre o modo nativo do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e o SharePoint.  
   
-|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] nativo|SharePoint|  
+|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Modo nativo|SharePoint|  
 |---------------------------------------------|----------------|  
 |**Função:** Por exemplo, "Gerenciador de Conteúdo".|**Grupo:** Por exemplo, o grupo padrão "Visualizadores".|  
 |---|**Grupo no nível de permissão:** Por exemplo, "Somente Exibição" para o grupo "Visualizadores".|  
@@ -61,7 +61,7 @@ ms.locfileid: "59241554"
   
  **Observação**: Os grupos do SharePoint padrão disponíveis dependem do modelo de site usado para criar o site do SharePoint.  
   
-|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Role|Grupos do SharePoint|  
+|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Função|Grupos do SharePoint|  
 |--------------------------------------|-----------------------|  
 |**Navegador**<br /><br /> Exibição|Use o grupo **Visitantes** para conceder permissões para exibir relatórios. O grupo **Visitantes** tem permissões no nível de leitura que permitem aos membros do grupo exibir páginas, itens de lista e documentos.|  
 |**Gerenciador de Conteúdo**<br /><br /> Permissões totais em todos os itens e operações do nível de item, inclusive permissões para definir segurança.|Use o grupo **Proprietários** para conceder controle total no gerenciamento de itens de servidor de relatório em um site do SharePoint. O grupo **Proprietários** tem permissões Controle Total, que permitem que os membros do grupo alterem o conteúdo, as páginas ou a funcionalidade do site. O acesso Controle Total deve ser limitado somente a administradores de site.|  

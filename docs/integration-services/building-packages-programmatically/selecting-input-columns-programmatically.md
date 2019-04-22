@@ -19,15 +19,15 @@ helpviewer_keywords:
 - data flow [Integration Services], column mapping
 - data flow [Integration Services], components
 ms.assetid: b53b110a-dcf4-4464-ae98-81e892ab74c3
-author: douglaslMS
+author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d16caca028889b5b9fa6f122c3590208b5c5a793
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6f7ec94a084105f4f9d1fc455814fd46a7ecab46
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282880"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671232"
 ---
 # <a name="selecting-input-columns-programmatically"></a>Selecionando colunas de entrada programaticamente
   Depois de ter conectado componentes programaticamente, selecione as colunas dos componentes upstream que você transformará ou passará para os componentes downstream. Se você não selecionar colunas de entrada para seu componente, o componente não receberá nenhuma linha da tarefa de fluxo de dados.  

@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: 139c5dd5ade04c3d1a71412060f823d492843ecb
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58859977"
 ---
 # <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>Tutorial: Consulta Oracle em um cluster de big data do SQL Server
@@ -35,7 +35,7 @@ Neste tutorial, você aprenderá como:
 ## <a id="prereqs"></a> Pré-requisitos
 
 - [Ferramentas de big data](deploy-big-data-tools.md)
-   - **Kubectl**
+   - **kubectl**
    - **Azure Data Studio**
    - **Extensão do SQL Server de 2019**
 - [Carregar dados de exemplo no seu cluster de big data](tutorial-load-sample-data.md)

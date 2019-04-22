@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 540f600d5005e8288aafe19ef59d4b7e894a99b0
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241874"
 ---
 # <a name="dtexec-utility"></a>Utilitário dtexec
@@ -88,7 +88,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
 2.  Fase de carga do pacote: O pacote especificado pela `/SQL`, **/File**, ou `/DTS` opção é carregada.  
   
-3.  Fase de configuração: As opções são processadas nesta ordem:  
+3.  Na fase de configuração: As opções são processadas nesta ordem:  
   
     -   Opções que definem sinalizadores, variáveis e propriedades do pacote.  
   
@@ -126,7 +126,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 ##  <a name="cmdshell"></a> Usando dtexec a partir do xp_cmdshell  
  **Usando dtexec a partir do xp_cmdshell**  
   
- Você pode executar o dtexec no prompt do **xp_cmdshell**. O exemplo a seguir mostra como executar um pacote chamado UpsertData.dtsx e ignorar o código de retorno:  
+ Você pode executar o dtexec no prompt do **xp_cmdshell** . O exemplo a seguir mostra como executar um pacote chamado UpsertData.dtsx e ignorar o código de retorno:  
   
 ```  
 EXEC xp_cmdshell 'dtexec /f "C:\UpsertData.dtsx"'  
@@ -140,7 +140,7 @@ EXEC @returncode = xp_cmdshell 'dtexec /f "C:\UpsertData.dtsx"'
 ```  
   
 > [!IMPORTANT]  
->  No [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a opção **xp_cmdshell** é desabilitada por padrão nas novas instalações. A opção pode ser habilitada com a execução do procedimento armazenado de sistema **sp_configure**. Para obter mais informações, veja [Opção de configuração de servidor xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
+>  No [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a opção **xp_cmdshell** é desabilitada por padrão nas novas instalações. A opção pode ser habilitada com a execução do procedimento armazenado de sistema **sp_configure** . Para obter mais informações, veja [Opção de configuração de servidor xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
   
 ##  <a name="syntax"></a> Sintaxe  
   
@@ -516,7 +516,7 @@ dtexec /option [value] [/option [value]]...
 ##  <a name="example"></a> Exemplos  
  Os exemplos a seguir demonstram como usar o `dtexec` utilitário de prompt de comando para configurar e executar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pacotes.  
   
- **Executando pacotes**  
+ **Pacotes em Execução**  
   
  Para executar um pacote [!INCLUDE[ssIS](../../includes/ssis-md.md)] salvo no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando Autenticação do Windows, use o seguinte código:  
   
@@ -629,7 +629,7 @@ dtexec /f "c:\pkgOne.dtsx" /conf "c:\pkgOneConfig.cfg"
   
  **Opção SET**  
   
- O seguinte mostra como usar a opção **/SET**, que lhe permite alterar o valor de qualquer propriedade de pacote ou variável ao iniciar o pacote a por meio da linha de comando.  
+ O seguinte mostra como usar a opção **/SET** , que lhe permite alterar o valor de qualquer propriedade de pacote ou variável ao iniciar o pacote a por meio da linha de comando.  
   
 ```  
 /SET \package\DataFlowTask.Variables[User::MyVariable].Value;newValue  
@@ -666,7 +666,7 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
 ```  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Executar um pacote no SQL Server Data Tools](../run-a-package-in-sql-server-data-tools.md)  
+ [Executar um pacote nas Ferramentas de Dados do SQL Server](../run-a-package-in-sql-server-data-tools.md)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
  Entrada de blog [Códigos de saída, DTEXEC e catálogo do SSIS](https://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/)no www.mattmasson.com.  

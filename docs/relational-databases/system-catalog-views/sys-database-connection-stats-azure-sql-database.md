@@ -21,10 +21,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 225e80855c0042085b35670efc0666f133806d04
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59242324"
 ---
 # <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats (Banco de Dados SQL do Azure)
@@ -38,11 +38,11 @@ ms.locfileid: "59242324"
 |**database_name**|**sysname**|Nome do banco de dados.|  
 |**start_time**|**datetime2**|Data e hora UTC do início do intervalo de agregação. A hora é sempre um múltiplo de 5 minutos. Por exemplo:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|Data e hora UTC do término do intervalo de agregação. **End_time** é sempre exatamente 5 minutos mais tarde do que o correspondente **start_time** na mesma linha.|  
-|**success_count**|**INT**|Número de conexões bem-sucedidas.|  
-|**total_failure_count**|**INT**|Número total de conexões com falha. Essa é a soma das **connection_failure_count**, **terminated_connection_count**, e **throttled_connection_count**e não inclui eventos de deadlock.|  
-|**connection_failure_count**|**INT**|Número de falhas de logon.|  
-|**terminated_connection_count**|**INT**|**_Aplicável somente para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Número de conexões encerradas.|  
-|**throttled_connection_count**|**INT**|**_Aplicável somente para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Número de conexões aceleradas.|  
+|**success_count**|**int**|Número de conexões bem-sucedidas.|  
+|**total_failure_count**|**int**|Número total de conexões com falha. Essa é a soma das **connection_failure_count**, **terminated_connection_count**, e **throttled_connection_count**e não inclui eventos de deadlock.|  
+|**connection_failure_count**|**int**|Número de falhas de logon.|  
+|**terminated_connection_count**|**int**|**_Aplicável somente para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Número de conexões encerradas.|  
+|**throttled_connection_count**|**int**|**_Aplicável somente para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Número de conexões aceleradas.|  
   
 ## <a name="remarks"></a>Comentários  
   

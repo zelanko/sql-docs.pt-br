@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4baa8b1fa57acde99439584483381f84f7a8d5c4
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042255"
 ---
 # <a name="write-enabled-dimensions"></a>Dimensões habilitadas para gravação
@@ -24,7 +24,7 @@ ms.locfileid: "59042255"
   
  Os dados em uma dimensão são, geralmente, somente leitura. No entanto, em determinados cenários, talvez você queira habilitar uma dimensão para gravação. Na [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], habilitar gravação de uma dimensão permite que os usuários empresariais modifiquem o conteúdo da dimensão e vejam o efeito imediato das alterações nas hierarquias da dimensão. Todas as dimensões com base em uma única tabela podem ser habilitadas para gravação. Em uma dimensão habilitada para gravação, os usuários empresariais e administrados podem alterar, mover, adicionar e excluir membros de atributo dentro da dimensão. Essas atualizações são referidas coletivamente como *write-back da dimensão*.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte a write-back da dimensão em todos os atributos de dimensão e todos os membros de uma dimensão podem ser modificados. Para um cubo ou partição habilitada para gravação, as atualizações são armazenadas em uma tabela de write-back separada das tabelas de origem do cubo. No entanto, para uma dimensão habilitada para gravação, as atualizações são gravadas diretamente em uma tabela de dimensão. Além disso, se uma dimensão habilitada para gravação for incluída em um cubo com várias partições onde algumas ou todas as suas fontes de dados possuírem cópias da tabela da dimensão, apenas a tabela de dimensão original será atualizada durante o processo write-back.  
+ O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte a write-back da dimensão em todos os atributos de dimensão e todos os membros de uma dimensão podem ser modificados. Para um cubo ou partição habilitada para gravação, as atualizações são armazenadas em uma tabela de write-back separada das tabelas de origem do cubo. No entanto, para uma dimensão habilitada para gravação, as atualizações são gravadas diretamente em uma tabela de dimensão. Além disso, se uma dimensão habilitada para gravação for incluída em um cubo com várias partições onde algumas ou todas as suas fontes de dados possuírem cópias da tabela da dimensão, apenas a tabela de dimensão original será atualizada durante o processo write-back.  
   
  Dimensões e cubos habilitados para gravação têm recursos diferentes, mas complementares. Uma dimensão habilitada para gravação permite que os usuários atualizem membros, enquanto que um cubo habilitado para gravação permite que eles atualizem valores de célula. Embora esses dois recursos sejam complementares, não é necessário usar ambos os recursos combinados. Uma dimensão não precisa ser incluída em um cubo para que o write-back da dimensão possa ocorrer. Uma dimensão habilitada para gravação também pode ser incluída em um cubo que não é habilitado para gravação. Você usa procedimentos diferentes a habilitar dimensões e cubos para gravação e para manter sua segurança.  
   

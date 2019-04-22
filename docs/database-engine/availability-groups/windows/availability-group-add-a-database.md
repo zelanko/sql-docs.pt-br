@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d22b59e761d499c566078e3867736d0b8b743df0
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860437"
 ---
 # <a name="add-a-database-to-an-always-on-availability-group"></a>Adicione um banco de dados a um grupo de disponibilidade Always On
@@ -113,7 +113,7 @@ ms.locfileid: "58860437"
   
  **Para configurar e usar o provedor do SQL Server PowerShell**  
   
--   [SQL Server PowerShell Provider](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [Provedor do SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
  Para obter um exemplo completo, consulte [Exemplo (PowerShell)](#PSExample), abaixo.  
   

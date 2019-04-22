@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f3c92067adfc0469802c81d78a7267af2cd28cc
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: 986a658c315241e14efd6fd10b170aaf9fb17da0
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421193"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516522"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -325,6 +325,10 @@ Para garantir o sucesso das consultas do PolyBase no caso de failover do NameNod
  Todas as fontes de dados definidas no mesmo local do cluster do Hadoop precisam usar a mesma configuração de RESOURCE_MANAGER_LOCATION ou JOB_TRACKER_LOCATION. Se houver inconsistência, ocorrerá um erro de tempo de execução.  
   
  Se o cluster do Hadoop for configurado com um nome e a fonte de dados externa usar o endereço IP do local do cluster, o PolyBase ainda precisará ser capaz de resolver o nome do cluster quando a fonte de dados for usada. Para resolver o nome, você precisa habilitar um encaminhador de DNS.  
+ 
+No momento não há suporte para um token SAS com o tipo `hadoop`, e ele só é compatível com uma Chave de acesso da conta de armazenamento. Tentar criar uma fonte de dados externa com o tipo `hadoop` e usar uma credencial SAS pode falhar com o erro:
+
+`Msg 105019, Level 16, State 1 - EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect. Java exception message: Parameters provided to connect to the Azure storage account are not valid.: Error [Parameters provided to connect to the Azure storage account are not valid.] occurred while accessing external file.'`
   
 ## <a name="locking"></a>Bloqueio  
  Coloca um bloqueio compartilhado no objeto EXTERNAL DATA SOURCE.  
@@ -343,7 +347,7 @@ WITH (
 
 ```  
   
-### <a name="b-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>b. Criar uma fonte de dados externa para referenciar o Hadoop com pushdown habilitado  
+### <a name="b-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>B. Criar uma fonte de dados externa para referenciar o Hadoop com pushdown habilitado  
 Especifique a opção RESOURCE_MANAGER_LOCATION para habilitar o pushdown de computação para o Hadoop em consultas do PolyBase. Quando essa opção estiver habilitada, o PolyBase usará uma decisão baseada em custo para determinar se a computação da consulta deve ser enviada por push para o Hadoop ou se todos os dados devem ser movidos para processar a consulta no SQL Server.
   
 ```sql  

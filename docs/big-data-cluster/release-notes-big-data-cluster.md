@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: 3c999d82df4e8b73e290456ad5d3601712747ef9
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860518"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Notas de versão para clusters de grandes dados no SQL Server
@@ -33,12 +33,12 @@ As seções a seguir descrevem os novos recursos e problemas conhecidos para clu
 
 | Novo recurso ou atualização | Detalhes |
 |:---|:---|
-| Suporte para orientação na GPU para executar com o TensorFlow no Spark de aprendizagem profunda. | [Implantar um cluster de big data com suporte GPU e executar o TensorFlow](spark-gpu-tensorflow.md). |
+| Diretrizes de suporte de GPU para execução de aprendizado profundo com o TensorFlow no Spark. | [Implantar um cluster de big data com suporte GPU e executar o TensorFlow](spark-gpu-tensorflow.md). |
 | **SqlDataPool** e **SqlStoragePool** fontes de dados não são mais criadas por padrão. | Criá-los manualmente, se necessário. Consulte a [problemas conhecidos](#externaltablesctp24). |
-| `INSERT INTO SELECT` suporte para o pool de dados. | Por exemplo, consulte [Tutorial: Ingestão de dados para um pool de dados do SQL Server com o Transact-SQL](tutorial-data-pool-ingest-sql.md). |
+| Suporte a `INSERT INTO SELECT` para o pool de dados. | Por exemplo, consulte [Tutorial: Ingestão de dados para um pool de dados do SQL Server com o Transact-SQL](tutorial-data-pool-ingest-sql.md). |
 | `FORCE SCALEOUTEXECUTION` e `DISABLE SCALEOUTEXECUTION` opção. | Força ou desabilita o uso da computação do pool para consultas em tabelas externas. Por exemplo, `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)`. |
 | Recomendações atualizadas de implantação do AKS. | Ao avaliar a clusters de big data no AKS, agora recomendamos usar um único nó de tamanho **Standard_L8s**. |
-| Atualização de tempo de execução do Spark para Spark 2.4. | |
+| Atualização de tempo de execução do Spark para o Spark 2.4. | |
 
 ### <a name="known-issues"></a>Problemas conhecidos
 
@@ -176,7 +176,7 @@ As seções a seguir descrevem os novos recursos e problemas conhecidos para clu
 | Extensão de código do VS para implantar aplicativos em um cluster de big data. | [Como usar o VS Code para implantar aplicativos em clusters de grandes dados do SQL Server](app-deployment-extension.md) |
 | Altera para o **mssqlctl** uso do comando de ferramentas. | Para obter mais detalhes, consulte o [problemas conhecidos de mssqlctl](#mssqlctlctp23). |
 | Usar Sparklyr no cluster de big data | [Usar Sparklyr no cluster de big data do SQL Server de 2019](sparklyr-from-RStudio.md) |
-| Montar o armazenamento externo de compatível com HDFS no cluster de big data com **HDFS camadas**. | Ver [HDFS camadas](hdfs-tiering.md). |
+| Montar armazenamento compatível com HDFS externo no cluster de Big Data com a disposição em **camadas do HDFS**. | Ver [HDFS camadas](hdfs-tiering.md). |
 | Nova experiência de conexão unificado para a instância mestre do SQL Server e o Gateway HDFS/Spark. | Ver [instância mestre do SQL Server e o Gateway HDFS/Spark](connect-to-big-data-cluster.md). |
 | Excluir um cluster com **mssqlctl cluster delete** agora exclui somente os objetos no namespace que faziam parte do cluster de big data. | O namespace não é excluído. No entanto, em versões anteriores, esse comando exclui todo o namespace. |
 | _Segurança_ nomes de ponto de extremidade foram alterados e consolidados. | **serviço de segurança de lb** e **serviço de segurança de nodeport** foram consolidados no **segurança de ponto de extremidade** ponto de extremidade. |

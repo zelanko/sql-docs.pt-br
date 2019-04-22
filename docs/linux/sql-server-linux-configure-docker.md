@@ -12,10 +12,10 @@ ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 ms.openlocfilehash: 8b7f256aec6fc01500f5c98709086a69815fd6ef
-ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59516512"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Configurar imagens de contêiner do SQL Server no Docker
@@ -537,7 +537,7 @@ No Windows, verifique se que você estiver iniciando o PowerShell ou o prompt de
 
 Se o contêiner do SQL Server falhar na execução, tente os seguintes testes:
 
-- Se você receber um erro, como **' Falha ao criar o ponto de extremidade CONTAINER_NAME ponte de rede. Erro ao iniciar o proxy: bind do escuta tcp 0.0.0.0:1433: endereço já está em uso.'** , em seguida, você está tentando mapear a porta 1433 do contêiner para uma porta que já está em uso. Isso pode acontecer se você estiver executando o SQL Server localmente no computador host. Isso também pode acontecer se você iniciar dois contêineres do SQL Server e tente mapear ambos na mesma porta de host. Se isso acontecer, use o `-p` parâmetro para mapear a porta 1433 do contêiner para uma porta de host diferente. Por exemplo:  
+- Se você receber um erro, como **' Falha ao criar o ponto de extremidade CONTAINER_NAME ponte de rede. Erro ao iniciar o proxy: bind do escuta tcp 0.0.0.0:1433: endereço já está em uso.'** , em seguida, você está tentando mapear a porta 1433 do contêiner para uma porta que já está em uso. Isso pode acontecer se você estiver executando o SQL Server localmente no computador host. Isso também pode acontecer se você iniciar dois contêineres do SQL Server e tente mapear ambos na mesma porta de host. Se isso acontecer, use o `-p` parâmetro para mapear a porta 1433 do contêiner para uma porta de host diferente. Por exemplo: 
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"

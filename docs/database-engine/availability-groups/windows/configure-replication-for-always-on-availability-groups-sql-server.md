@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: be1de83c0b3fccab722933ef1c080d018c5b74c0
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: bbbc8122105df6a9911357734a00c7c633e63687
+ms.sourcegitcommit: bf23b81af45eddaa3c8bb87135c5ad0e1b42fbc2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044313"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59367234"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>Configurar a replicação com Grupos de Disponibilidade AlwaysOn
 
@@ -47,7 +47,7 @@ ms.locfileid: "55044313"
 ##  <a name="step1"></a> 1. Configurar as publicações de banco de dados e assinaturas  
  **Configurar o distribuidor**  
   
- O banco de dados de distribuição não pode ser colocado em um grupo de disponibilidade.  
+ O banco de dados de distribuição não pode ser colocado em um grupo de disponibilidade com o SQL Server 2012 e o SQL Server 2014. O SQL 2016 e superiores oferece suporte à colocação do banco de dados de distribuição em um grupo de disponibilidade. Para obter mais informações, confira [Configurar o banco de dados de distribuição em um grupo de disponibilidade](../../../relational-databases/replication/configure-distribution-availability-group.md).
   
 1.  Configurar a distribuição no distribuidor. Se procedimentos armazenados estiverem sendo usados para a configuração, execute **sp_adddistributor**. Use o parâmetro *@password* para identificar a senha que será usada quando um publicador remoto se conectar ao distribuidor. A senha também será necessária em cada publicador remoto quando o distribuidor remoto for instalado.  
   
@@ -128,7 +128,7 @@ ALTER AVAILABILITY GROUP 'MyAG'
  Para obter mais informações, consulte [Criação e configuração de Grupos de Disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md).  
 
   
-##  <a name="step3"></a> 3. Verifique se todos os hosts de réplica secundária estão configurados para replicação.  
+##  <a name="step3"></a> 3. Verifique se todos os hosts de réplica secundária estão configurados para replicação  
  Em cada host de réplica secundária, verifique se o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] foi configurado para oferecer suporte à replicação. A seguinte consulta pode ser executada em cada host de réplica secundária para determinar se a replicação é instalada:  
   
 ```  
@@ -238,12 +238,12 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [Unir um banco de dados secundário a um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
--   [Criar ou configurar um ouvinte do grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [Criar ou configurar um ouvinte de grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
+ [Pré-requisitos e restrições e recomendações para Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Grupos de Disponibilidade Always On: interoperabilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
+ [Grupos de Disponibilidade AlwaysOn: interoperabilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
  [Replicação do SQL Server](../../../relational-databases/replication/sql-server-replication.md)  
   
   

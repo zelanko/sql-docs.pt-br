@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f21a5f938b2dcd7b90fa71ab946d2986b0633987
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240805"
 ---
 # <a name="web-service-task"></a>Tarefa Serviços Web
@@ -66,15 +66,15 @@ ms.locfileid: "59240805"
   
 -   [Editor da Tarefa Serviço da Web &#40;Página Geral&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor da Tarefa Serviço da Web &#40;Página Entrada&#41;](../web-service-task-editor-input-page.md)  
+-   [Editor da Tarefa Serviço Web &#40;Página Entrada&#41;](../web-service-task-editor-input-page.md)  
   
--   [Editor da Tarefa Serviço da Web &#40;Página Saída&#41;](../web-service-task-editor-output-page.md)  
+-   [Editor da Tarefa Serviço Web &#40;Página Saída&#41;](../web-service-task-editor-output-page.md)  
   
 -   [Página Expressões](../expressions/expressions-page.md)  
   
  Para obter mais informações sobre como definir essas propriedades no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
--   [Definir as propriedades de uma tarefa ou de um contêiner](../set-the-properties-of-a-task-or-container.md)  
+-   [Definir as propriedades de uma tarefa ou contêiner](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="programmatic-configuration-of-the-web-service-task"></a>Configuração programática da tarefa Serviço Web  
  Para obter mais informações sobre como definir essas propriedades programaticamente, clique em um dos tópicos a seguir:  

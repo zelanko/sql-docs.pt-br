@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 945cde51f7529dc31fd7018f1194de600ea1acf5
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241734"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lição 6: Adicionando agrupamentos e totais (Reporting Services)
@@ -33,7 +33,7 @@ ms.locfileid: "59241734"
   
 -   [Para adicionar um total geral a um relatório](#bkmk_addgrandtotal)  
   
--   [Para publicar o relatório no Servidor de Relatório (opcional)](#bkmk_publishreport)  
+-   [Para publicar o relatório ao servidor de relatório (opcional)](#bkmk_publishreport)  
   
 ##  <a name="bkmk_groupdata"></a> Para agrupar dados em um relatório  
   
@@ -129,7 +129,7 @@ ms.locfileid: "59241734"
   
      Se você vir uma mensagem semelhante à seguinte na janela de saída, ela indicará uma implantação com êxito.  
   
-    > ------ Compilação iniciada: Projeto: tutorial, Configuração: Depurar ------Pulando 'Sales Orders.rdl'. O item está atualizado. Compilação concluída – 0 erros, 0 avisos------ Implantação iniciada: Projeto: tutorial, Configuração: Depuração---implantação http://\<nome do servidor > / reportserverDeploying relatar '/ tutorial/Sales Orders'. Implantação concluída-- 0 erros, 0 avisos = = = compilar: 1 bem-sucedido ou atualizado, 0 falha, 0 ignorado ==================== Implantação: 1 bem-sucedido, 0 falha, 0 ignorado ==========  
+    > ---Compilação iniciada: Projeto: tutorial, Configuração: Depure---ignorando ' Sales orders'. Item está atualizado. Build concluído-- 0 erros, 0 avisos---implantação iniciada: Projeto: tutorial, Configuração: Depuração---implantação http://\<nome do servidor > / reportserverDeploying relatar '/ tutorial/Sales Orders'. Implantação concluída-- 0 erros, 0 avisos = = = compilar: 1 bem-sucedido ou atualizado, 0 falhou, 0 ignorado = = = implantar: 1 com êxito, 0 falhou, 0 ignorado = = =  
   
      Se você vir uma mensagem de erro semelhante à seguinte, verifique se você tem permissões no servidor de relatório e se iniciou o [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] com privilégios de administrador.  
   

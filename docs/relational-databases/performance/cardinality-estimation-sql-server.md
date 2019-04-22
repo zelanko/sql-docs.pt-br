@@ -16,14 +16,15 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca1168e0e101f8d8d8c5ae75636f2923faf7e2a1
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 2b95caa318df620d91e6508d3ca0811942063fcd
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828016"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516452"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Estimativa de cardinalidade (SQL Server)
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 O Otimizador de Consulta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é baseado em custo. Isso significa que ele seleciona planos de consulta com o custo de processamento estimado mais baixo para ser executado. O Otimizador de Consulta determina o custo de execução de um plano de consulta com base em dois fatores principais:
@@ -53,9 +54,10 @@ Provavelmente, seu sistema de aplicativos poderia ter uma consulta importante cu
 - Uma consulta OLTP (processamento de transações online) executada com tanta frequência que várias instâncias dessa geralmente são executadas ao mesmo tempo.  
 - SELECT com agregação significativa que é executado durante o horário comercial do OLTP.  
   
-Você tem técnicas para identificar uma consulta que tem um desempenho mais lento com a nova CE. Além disso, você tem opções para resolver o problema de desempenho.     
+Você tem técnicas para identificar uma consulta que tem um desempenho mais lento com a nova CE. Além disso, você tem opções para resolver o problema de desempenho.
   
-## <a name="versions-of-the-ce"></a>Versões da CE  
+## <a name="versions-of-the-ce"></a>Versões da CE
+
 Em 1998, uma importante atualização da CE fez parte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, para o qual o nível de compatibilidade era 70. Essa versão do modelo da CE é definida em quatro suposições básicas:
 
 -  **Independência:** as distribuições de dados em diferentes colunas são consideradas independentes entre si, a menos que haja informações de correlação disponíveis e elas sejam utilizáveis.
@@ -106,7 +108,7 @@ Ou a partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, o [Dica de
  ```sql  
 SELECT CustomerId, OrderAddedDate  
 FROM OrderTable  
-WHERE OrderAddedDate >= '2016-05-01'; 
+WHERE OrderAddedDate >= '2016-05-01'
 OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
@@ -293,5 +295,6 @@ WHERE s.ticket = r.ticket AND
  [Otimizar os planos de consulta com o avaliador de cardinalidade do SQL Server 2014](https://msdn.microsoft.com/library/dn673537.aspx)  
  [Dicas de consulta](../../t-sql/queries/hints-transact-sql-query.md)     
  [Dicas de consulta USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint)       
+ [Atualizando bancos de dados usando o Assistente de Ajuste de Consulta](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           
  [Monitorando o desempenho com o repositório de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    
  [Guia de arquitetura de processamento de consultas](../../relational-databases/query-processing-architecture-guide.md)   

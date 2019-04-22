@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: e4e54ac3c7206ad8a6592c8cfe0b45d9ea4b8fd8
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860467"
 ---
 # <a name="mssqlctl-cluster"></a>Cluster do mssqlctl
@@ -26,8 +26,8 @@ O artigo a seguir fornece referência para o **cluster** comandos na **mssqlctl*
 
 |||
 |---|---|
-| [criar](#create) | Crie o cluster. |
-| [excluir](#delete) | Exclua o cluster. |
+| [create](#create) | Crie o cluster. |
+| [delete](#delete) | Exclua o cluster. |
 | [config](reference-mssqlctl-cluster-config.md) | Comandos de configuração do cluster. |
 | [debug](reference-mssqlctl-cluster-debug.md) | Comandos de depuração. |
 
@@ -63,7 +63,7 @@ mssqlctl cluster delete
 | Parâmetros | Descrição |
 |---|---|
 | **--name -n** | Nome do cluster, usado para o namespace de kubernetes. Obrigatórios. |
-| **-force -f** | Cluster de exclusão de força. |
+| **--force -f** | Cluster de exclusão de força. |
 
 ## <a name="next-steps"></a>Próximas etapas
 

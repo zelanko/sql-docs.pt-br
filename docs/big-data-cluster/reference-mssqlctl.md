@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: b050638ee0ca600c5df0ecdbe5616b801f41e7a8
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860348"
 ---
 # <a name="mssqlctl"></a>mssqlctl
@@ -26,11 +26,11 @@ O artigo a seguir fornece referência para o **mssqlctl** ferramenta para [clust
 
 |||
 |---|---|
-| [Aplicativo](reference-mssqlctl-app.md) | Criar, excluir, executar e gerenciar aplicativos. |
-| [Cluster](reference-mssqlctl-cluster.md) | Selecionar, gerenciar e operar clusters. |
+| [app](reference-mssqlctl-app.md) | Criar, excluir, executar e gerenciar aplicativos. |
+| [cluster](reference-mssqlctl-cluster.md) | Selecionar, gerenciar e operar clusters. |
 | [login](#login) | Faça logon no cluster. |
-| [logoff](#logout) | Faça logoff do cluster. |
-| [armazenamento](reference-mssqlctl-storage.md) | Gerencie o armazenamento de cluster. |
+| [logout](#logout) | Faça logoff do cluster. |
+| [storage](reference-mssqlctl-storage.md) | Gerencie o armazenamento de cluster. |
 
 ## <a id="login"></a> logon de mssqlctl
 
@@ -49,7 +49,7 @@ mssqlctl login
 |---|---|
 |**--endpoint -e**| Cluster de host e a porta (ex) `http://host:port"`. |
 |**-senha -p**| Credenciais de senha. |
-|**-- username -u**| Conta do usuário. |
+|**--username -u**| Conta do usuário. |
 
 ### <a name="examples"></a>Exemplos
 
@@ -84,7 +84,7 @@ mssqlctl logout
 
 | Parâmetros | Descrição |
 |---|---|
-| **-- username -u** | Usuário da conta, se estiverem ausentes, a conta do Active Directory atual de logout. |
+| **--username -u** | Usuário da conta, se estiverem ausentes, a conta do Active Directory atual de logout. |
 
 ### <a name="examples"></a>Exemplos
 

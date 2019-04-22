@@ -12,10 +12,10 @@ ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
 ms.openlocfilehash: f8a71f5e91fec924a73186211f3296bfc52add8a
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872256"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Escolher um método de upgrade do mecanismo de banco de dados
@@ -34,7 +34,7 @@ Há várias abordagens a serem consideradas quando você está planejando fazer 
 > [!NOTE]  
 >  Você também pode atualizar o banco de dados do SQL Azure ou virtualizar seu ambiente SQL Server como parte de seu plano de atualização. Estes artigos estão fora do escopo deste artigo, mas veja abaixo alguns links:
 >   - [Visão geral do SQL Server nas Máquinas Virtuais do Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)
->   - [Banco de dados SQL do Azure](https://azure.microsoft.com/services/sql-database/) 
+>   - [Banco de Dados SQL do Azure](https://azure.microsoft.com/services/sql-database/) 
 >   - [Selecionando uma opção do SQL Server no Azure](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/).  
   
 ## <a name="upgrade-in-place"></a>Atualização in-loco  
@@ -109,5 +109,5 @@ As etapas necessárias para a atualização de uma nova instalação variam um p
 -   Um ambiente de expansão do SQL Server Reporting Services: Para obter etapas detalhadas para executar uma atualização sem interrupção nesse ambiente, confira [Atualizar e migrar o Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  
   
 ## <a name="next-steps"></a>Próximas etapas
- [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   
+ [Planejar e testar o plano de atualização do mecanismo de banco de dados](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   
  [Concluir a atualização do mecanismo de banco de dados](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)  

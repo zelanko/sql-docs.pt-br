@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 59b623076e86f3bacf5ae8c6e24b48774e33f670
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241244"
 ---
 # <a name="execute-package-task"></a>Tarefa Executar Pacote
@@ -75,7 +75,7 @@ ms.locfileid: "59241244"
   
  Você pode usar os métodos a seguir para transmitir valores a um pacote filho:  
   
--   **Configurações do Pacote**  
+-   **Configurações de pacote**  
   
      [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece um tipo de configuração, a configuração de Variável do Pacote Pai, para transmitir valores de pacotes pai para pacotes filho. A configuração é construída no pacote filho e usa uma variável no pacote pai. A configuração é mapeada para uma variável no pacote filho ou para a propriedade de um objeto no pacote filho. A variável também pode ser usada nos scripts usados pela tarefa Script ou pelo componente Script.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "59241244"
   
  Para obter mais informações sobre como definir essas propriedades no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
--   [Definir as propriedades de uma tarefa ou de um contêiner](../set-the-properties-of-a-task-or-container.md)  
+-   [Definir as propriedades de uma tarefa ou contêiner](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

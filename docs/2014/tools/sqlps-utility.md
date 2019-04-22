@@ -14,17 +14,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b25921a7b48ecd818527dd95ebc2d8714cb6871d
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241506"
 ---
 # <a name="sqlps-utility"></a>Utilitário sqlps
   O utilitário `sqlps` inicia uma sessão do Windows PowerShell 2.0 com os cmdlets e o provedor do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell carregados e registrados. Você pode inserir comandos ou scripts do PowerShell que usam os componentes do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell para trabalhar com instâncias do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e seus objetos.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] Use o `sqlps` módulo do PowerShell em vez disso. Para obter mais informações sobre o `sqlps` módulo, consulte [importar o módulo SQLPS](../database-engine/import-the-sqlps-module.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] Use o módulo `sqlps` do PowerShell. Para obter mais informações sobre o `sqlps` módulo, consulte [importar o módulo SQLPS](../database-engine/import-the-sqlps-module.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -112,7 +112,7 @@ sqlps -NoLogo
 sqlps -Command "&{.\MyFolder.MyScript.ps1}"  
 ```  
   
- **C. Executar um script do SQL Server PowerShell a partir do prompt de comando, e manter a execução após a conclusão do script**  
+ **C. Executar um script do SQL Server PowerShell usando o prompt de comando e manter a execução após a conclusão do script**  
   
 ```  
 sqlps -NoExit -Command "&{.\MyFolder.MyScript.ps1}"  
