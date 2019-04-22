@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fddb5027da7d1b8e33ebcbc53ba403b866eadb8c
-ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
+ms.openlocfilehash: ccc25df3c3567907b50e37164d9090ca63fc58b6
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59506543"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582949"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -303,7 +303,7 @@ VERBOSE_TRUNCATION_WARNINGS **=** { **ON** | OFF}
 
 **Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
 
-Permite habilitar ou desabilitar a nova mensagem de erro `String or binary data would be truncated`. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] apresenta uma mensagem de erro nova e mais específica (2628) para esse cenário:  
+Permite habilitar ou desabilitar a nova mensagem de erro `String or binary data would be truncated`. O [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] apresenta uma mensagem de erro nova e mais específica (2628) para esse cenário:  
 
 `String or binary data would be truncated in table '%.*ls', column '%.*ls'. Truncated value: '%.*ls'.`
 
@@ -485,7 +485,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE 0x06000500F443610F003B
 ### <a name="maxdop-resources"></a>Recursos de MAXDOP
 
 - [Grau de paralelismo](../../relational-databases/query-processing-architecture-guide.md#DOP)
-- [Recomendações e diretrizes para a opção de configuração "max degree of parallelism" do SQL Server](https://support.microsoft.com/kb/2806535)
+- [Recomendações e diretrizes para a opção de configuração “max degree of parallelism” no SQL Server](https://support.microsoft.com/kb/2806535)
 
 ### <a name="legacycardinalityestimation-resources"></a>Recursos de LEGACY_CARDINALITY_ESTIMATION
 
@@ -495,7 +495,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE 0x06000500F443610F003B
 ### <a name="parametersniffing-resources"></a>Recursos de PARAMETER_SNIFFING
 
 - [Detecção de parâmetros](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)
-- ["I smell a parameter!" (Sinto cheiro de parâmetro!)](https://blogs.msdn.microsoft.com/queryoptteam/2006/03/31/i-smell-a-parameter/)
+- ["I smell a parameter!"](https://blogs.msdn.microsoft.com/queryoptteam/2006/03/31/i-smell-a-parameter/) (Sinto cheiro de parâmetro!)
 
 ### <a name="queryoptimizerhotfixes-resources"></a>Recursos de QUERY_OPTIMIZER_HOTFIXES
 
