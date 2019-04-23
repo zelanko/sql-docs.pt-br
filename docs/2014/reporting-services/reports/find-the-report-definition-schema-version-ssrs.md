@@ -12,20 +12,20 @@ helpviewer_keywords:
 - Report Definition Language, XML schema
 - schemas [Reporting Services]
 ms.assetid: 67954419-1b61-4481-a3b9-23b4ba7a5624
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d68eab56f2ce55c1e562795a9e48c099a27a8fd2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3306160d1badb4abb1f173071f07bde514f5fc1b
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031247"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59957952"
 ---
 # <a name="find-the-report-definition-schema-version-ssrs"></a>Localizar a versão do esquema de definição de relatório (SSRS)
   Um arquivo de definição de relatório especifica o namespace do RDL para a versão do esquema de definição de relatório usado para validar o arquivo .rdl. Ao abrir um arquivo .rdl no ambiente de criação de relatório como o Designer de Relatórios do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou Construtor de Relatórios, se o relatório tiver sido criado para um namespace anterior, um arquivo de backup será criado automaticamente e o relatório será atualizado para o namespace atual. Se você salvar a definição de relatório atualizada, terá salvo o arquivo .rdl convertido. Esse é o único modo para atualizar uma definição de relatório. A própria definição de relatório não é atualizada em um servidor de relatório. O relatório compilado é atualizado em um servidor de relatório. Para obter mais informações, consulte [Upgrade Reports](../install-windows/upgrade-reports.md).  
   
-### <a name="how-to-identify-the-rdl-schema-version-of-a-report"></a>Como: Identificar a versão do esquema RDL de um relatório  
+### <a name="how-to-identify-the-rdl-schema-version-of-a-report"></a>Como fazer: Identificar a versão do esquema RDL de um relatório  
   
 1.  Abra o arquivo de relatório .rdl em um aplicativo como o Bloco de Notas ou Bloco de Notas XML 2007, que permite visualizar o xml.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "56031247"
   
      O namespace de definição de relatório é especificado pela seguinte URL: `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`.  
   
-### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>Como: Identificar a versão do esquema RDL de um Designer de Relatórios  
+### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>Como fazer: Identificar a versão do esquema RDL de um Designer de Relatórios  
   
 1.  Abrir um novo projeto. A versão do projeto que você escolhe determina a versão do esquema RDL. No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], há suporte para mais de uma versão de esquema. Para obter mais informações, veja [Implantação e suporte de versão no SQL Server Data Tools &#40;SSRS&#41;](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
@@ -61,7 +61,7 @@ ms.locfileid: "56031247"
   
      O namespace de definição de relatório é especificado pela seguinte URL: `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
   
-### <a name="how-to-identify-the-rdl-schema-version-on-the-report-server"></a>Como: Identificar a versão do esquema RDL no Servidor de Relatórios  
+### <a name="how-to-identify-the-rdl-schema-version-on-the-report-server"></a>Como fazer: Identificar a versão do esquema RDL no Servidor de Relatórios  
   
 -   No Gerenciador de Relatórios, digite a URL para o servidor de relatório: Por exemplo, a URL a seguir especifica um servidor de relatório no computador local:  
   

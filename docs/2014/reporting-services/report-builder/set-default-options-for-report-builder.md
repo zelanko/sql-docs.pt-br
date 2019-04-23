@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10427"
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 692cb15e699a7c4403e2590bb119350cac74e5e2
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: d4540cdd9d0d8c196e9f304508fd60edd99f2174
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289514"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59932852"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>Caixa de diálogo Opções do Construtor de Relatórios, Configurações (Construtor de Relatórios)
   Clique o **construtor de relatórios** botão e, em seguida, clique em **opções** para definir opções para mostrar arquivos e conexões recentes. Também é possível alterar o servidor de relatório padrão ou adicionar um se você não tiver um padrão.  

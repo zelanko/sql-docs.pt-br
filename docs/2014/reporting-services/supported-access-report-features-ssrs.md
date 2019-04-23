@@ -16,15 +16,15 @@ helpviewer_keywords:
 - importing reports
 - modules [Reporting Services]
 ms.assetid: 7ffec331-6365-4c13-8e58-b77a48cffb44
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2f50d98eaa44d3e323fb72097bc78e9969a30bad
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: ae982257f0be29103803a7d036142f58a50f1a04
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294264"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59933098"
 ---
 # <a name="supported-access-report-features-ssrs"></a>Recursos de relatórios do Access com suporte (SSRS)
   Quando você importa um relatório no Designer de Relatórios, o processo de importação converte o relatório do [!INCLUDE[msCoName](../includes/msconame-md.md)] Access em um arquivo de Linguagem RDL do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. O [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dá suporte a vários recursos do Access. No entanto, devido às diferenças entre o Access e o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], alguns itens são ligeiramente modificados ou não têm suporte. Este tópico descreve como os recursos de relatórios do Access são convertidos em RDL.  
@@ -263,7 +263,7 @@ ms.locfileid: "56294264"
   
 |||||  
 |-|-|-|-|  
-|Avg|Contagem|Max|Mín|  
+|Avg|Count|Max|Mín|  
 |StDev|StDevP|Sum|Var|  
 |VarP||||  
   

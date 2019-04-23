@@ -11,15 +11,15 @@ helpviewer_keywords:
 - shared data sources [Reporting Services]
 - data sources [Reporting Services], shared
 ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 68de06ba5b7c281238a8729776367c3d5b611395
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 83edc5eb7d0a79e6af7bb88253cc501cc30d0f60
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020667"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59957782"
 ---
 # <a name="bind-a-report-or-model-to-a-shared-data-source-ssrs"></a>Associar um relatório ou modelo a uma fonte de dados compartilhada (SSRS)
   Em algumas situações, por exemplo, quando você move um relatório ou modelo de um servidor de teste para um servidor de produção, talvez seja necessário salvar o arquivo no computador local e carregá-lo em um servidor de relatório diferente. Ao carregar o relatório ou modelo no novo servidor, você precisa associá-lo novamente a uma fonte de dados compartilhados que está armazenada no novo servidor de relatório. Se o relatório ou modelo não for associado novamente, ele não funcionará corretamente quando for acessado a partir do novo servidor de relatório.  

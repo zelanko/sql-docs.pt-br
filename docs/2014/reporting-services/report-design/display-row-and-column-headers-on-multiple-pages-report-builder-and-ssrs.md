@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 2422b1e2-822f-4379-9d7f-9afebb350e3f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cda91c882af3cead946a764ddd826e1291c5e18b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 40c66dfbb4ed728df49e3756af7baea17197b502
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294945"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59949312"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>Exibir cabeçalhos de linhas e colunas em várias páginas (Construtor de Relatórios e SSRS)
   Você pode controlar se é preciso repetir cabeçalhos de linha e coluna em todas as páginas de uma região de dados tablix com várias páginas. Uma região de dados tablix pode ser uma tabela, uma matriz ou uma lista.  

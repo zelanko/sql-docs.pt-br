@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.designtable.f1
 ms.assetid: c64c659b-2926-4773-8cbb-0d8d22b640f3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: afde237bf423d5b59af2d94e27ada9d641557fb9
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 44b5a7950517990f7e2b1ef2afb2d17b5c4340dc
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295964"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948872"
 ---
 # <a name="design-the-table-report-wizard"></a>Projetar a tabela (Assistente de Relatório)
   Use esta página do Assistente de Relatório para selecionar campos para colocar no relatório.  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - files [Reporting Services], restoring
 - files [Reporting Services], backing up
 ms.assetid: 157bc376-ab72-4c99-8bde-7b12db70843a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: aa16c9f5520bd135e7ea2fc3ef13809c04eb05c2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a11b10ae1403911c7593e9f6cccd21d1fdb8fd16
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030137"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59934342"
 ---
 # <a name="backup-and-restore-operations-for-reporting-services"></a>Operações de backup e restauração para o Reporting Services
   Este tópico fornece uma visão geral de todos os arquivos de dados usados em uma instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e descreve quando e como você deve fazer backup dos arquivos. O desenvolvimento de um plano de backup e restauração para os arquivos do banco de dados do servidor de relatório é a parte mais importante de uma estratégia de recuperação. No entanto, uma estratégia de recuperação mais abrangente inclui backups de chaves de criptografia, assemblies ou extensões personalizados, arquivos de configuração e arquivos de origem para relatórios e modelos.  

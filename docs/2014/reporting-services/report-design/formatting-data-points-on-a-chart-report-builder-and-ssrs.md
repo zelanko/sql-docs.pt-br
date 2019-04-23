@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.serieslabelproperties.general.f1
 - "10248"
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c23a01244e75abe7df4bedc62ec3a19246474b45
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: c85c464c6ebf32d81c08c319999aa2c6d8b1514c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296874"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59940702"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Formatando pontos de dados em um gráfico (Construtor de Relatórios e SSRS)
   Ponto de dados é a menor entidade individual no gráfico. Em gráficos sem-forma, os pontos de dados são representados de acordo com seu tipo de gráfico. Por exemplo, uma série de linhas consiste em um ou mais pontos de dados conectados. Em gráficos com forma, os pontos de dados são representados por fatias individuais ou segmentos acrescidos a todo o gráfico. Por exemplo, em um gráfico de pizza, cada pedaço é um ponto de dados. Para obter mais informações, consulte [Tipos de gráficos &#40;Construtor de Relatórios e SSRS&#41;](chart-types-report-builder-and-ssrs.md).  
@@ -44,7 +44,7 @@ ms.locfileid: "56296874"
 ## <a name="positioning-data-point-labels-on-a-chart"></a>Posicionando rótulos de ponto de dados em um gráfico  
  Em todos os tipos de gráfico, é possível mostrar rótulos de ponto de dados quando você clica com o botão direito do mouse no gráfico e seleciona **Mostrar Rótulos de Dados**. A posição dos rótulos de ponto de dados é especificada de acordo com o tipo de gráfico:  
   
--   Em um gráfico de barras, é possível reposicionar o rótulo de ponto de dados usando o atributo personalizado **BarLabelStyle** . Há quatro posições possíveis: Externo, esquerda, centro e direita. Quando o estilo do rótulo da barra for definido como Externo, os rótulos serão posicionados fora da barra, desde que caibam na área do gráfico. Caso não possa ser posicionado fora da barra e dentro da área do gráfico, o rótulo é posicionado dentro da barra.  
+-   Em um gráfico de barras, é possível reposicionar o rótulo de ponto de dados usando o atributo personalizado **BarLabelStyle** . Há quatro posições possíveis: Externo, Esquerda, Centro e Direita. Quando o estilo do rótulo da barra for definido como Externo, os rótulos serão posicionados fora da barra, desde que caibam na área do gráfico. Caso não possa ser posicionado fora da barra e dentro da área do gráfico, o rótulo é posicionado dentro da barra.  
   
 -   Em um gráfico de pizza, é possível reposicionar o rótulo de ponto de dados usando o atributo personalizado **PieLabelStyle** . Há muitas considerações a serem feitas durante o posicionamento dos rótulos de ponto de dados próximos a um gráfico de pizza, inclusive o tipo do gráfico, o espaço disponível entre ele e a legenda correspondente e o tamanho dos rótulos. Para obter mais informações, consulte [Exibir rótulos de pontos de dados fora de um gráfico de pizza &#40;Construtor de Relatórios e SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md).  
   
@@ -101,7 +101,7 @@ ms.locfileid: "56296874"
  [Formatando rótulos dos eixos de um gráfico &#40;Construtor de Relatórios e SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Formatar rótulos de eixo como datas ou moedas &#40;Construtor de Relatórios e SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Tutorial: Adicionar um gráfico de pizza ao relatório &#40;construtor de relatórios&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [Tutorial: Adicionar um gráfico de pizza ao relatório &#40;Construtor de Relatórios&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)  
   

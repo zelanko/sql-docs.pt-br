@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Criando um relatório de tabela básico (construtor de relatórios) | Microsoft Docs'
+title: 'Tutorial: Criar um relatório de tabela básico (Construtor de Relatórios) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f6d835c7f600264f91303046cb35d52424978861
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: fa3c6f3f6d1a0870fca88871ad3effe642f547e6
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295364"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59959542"
 ---
-# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Tutorial: Criando um relatório de tabela básico (construtor de relatórios)
+# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Tutorial: Criar um relatório de tabela básico (Construtor de Relatórios)
   Este tutorial ensina a criar um relatório de tabela básico com base em dados de vendas de exemplo. A ilustração a seguir mostra o relatório que você criará.  
   
  ![rs_CreateBasicReportTutorial](../../2014/tutorials/media/rs-createbasicreporttutorial.gif "rs_CreateBasicReportTutorial")  
@@ -55,7 +55,7 @@ ms.locfileid: "56295364"
 ## <a name="requirements"></a>Requisitos  
  Para obter mais informações sobre os requisitos, consulte [Pré-requisitos para tutoriais &#40;Construtor de Relatórios&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="CreateTable"></a> 1. Criar um Novo Relatório em Introdução  
+##  <a name="CreateTable"></a> 1. Criar um novo relatório em Introdução  
  Criar um relatório de tabela do **guia de Introdução** caixa de diálogo. Há dois modos: design de relatório e design de conjunto de dados compartilhado. No modo design de relatório, especifique dados no painel de Dados do Relatório e o layout do relatório na superfície de design. No modo design de conjunto de dados compartilhado, crie consultas de conjunto de dados para compartilhar com outras pessoas. Neste tutorial, você usará o modo design de relatório.  
   
 #### <a name="to-create-a-new-report"></a>Para criar um novo relatório  
@@ -229,7 +229,7 @@ ms.locfileid: "56295364"
   
 3.  Clique em **Concluir**.  
   
- A tabela é adicionada à superfície de design. A tabela tem 5 colunas e 5 linhas. O painel de grupos de linhas mostra três grupos de linhas: SalesDate, Subcategory e Details. Os dados detalhados são todos os dados recuperados pela consulta do conjunto de dados.  
+ A tabela é adicionada à superfície de design. A tabela tem 5 colunas e 5 linhas. O painel Grupos de Linhas mostra três grupos de linhas: SalesDate, Subcategory e Details. Os dados detalhados são todos os dados recuperados pela consulta do conjunto de dados.  
   
 ##  <a name="FormatCurrency"></a> 2. Formatar dados como moeda  
  Por padrão, os dados resumidos do campo Sales exibe um número geral. Formate-o para exibir o número como moeda. Ative/desative **Estilos de Espaço Reservado** para exibir caixas de texto formatadas e texto de espaço reservado como valores de exemplo.  

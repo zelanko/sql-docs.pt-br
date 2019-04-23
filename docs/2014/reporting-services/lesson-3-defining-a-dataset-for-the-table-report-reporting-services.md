@@ -1,5 +1,5 @@
 ---
-title: 'Lição 3: Definindo um conjunto de dados para o relatório de tabela (Reporting Services) | Microsoft Docs'
+title: 'Lição 3: Definir um conjunto de dados para o relatório de tabela (Reporting Services) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3ffc81b9f0d3ffe91e36e9a06711ce62443ab89c
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3f57ec59753e7539107c652d60f7a00959f95cbb
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294334"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59932482"
 ---
-# <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>Lição 3: Definindo um conjunto de dados para o relatório de tabela (Reporting Services)
+# <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>Lição 3: Definir um conjunto de dados para o relatório de tabela (Reporting Services)
   Depois de definir a fonte de dados, é necessário definir um conjunto de dados. No [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], os dados usados em relatórios são contidos em um *conjunto de dados*. Um conjunto de dados inclui um ponteiro para uma fonte de dados e uma consulta a ser usada pelo relatório, bem como variáveis e campos calculados.  
   
  Você pode usar o designer de consulta em Designer de Relatórios para criar a consulta. Para este tutorial, você criará uma consulta que recupera informações de pedido de vendas a [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] **2008** banco de dados.  
@@ -69,7 +69,7 @@ ms.locfileid: "56294334"
      O conjunto de dados **AdventureWorksDataset** e os campos são exibidos no painel Dados do Relatório.  
   
 ## <a name="next-task"></a>Próxima tarefa  
- Você especificou uma consulta que recupera dados para o relatório com êxito. A seguir, você criará o layout de relatório. Consulte [lição 4: Adicionando uma tabela ao relatório &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md).  
+ Você especificou uma consulta que recupera dados para o relatório com êxito. A seguir, você criará o layout de relatório. Confira [Lição 4: Adicionar uma tabela ao relatório &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Ferramentas de Design no Designer do SQL Server Data Tools de relatório de consulta &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   

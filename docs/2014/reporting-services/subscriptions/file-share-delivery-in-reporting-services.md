@@ -11,15 +11,15 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], file share delivery
 - file share delivery [Reporting Services]
 ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 72c49b9bb1b7d018f6650b8042e306234fd74caf
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: cdc9821d9e1d8b3013b146cba4b509cb744ef9e4
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036887"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59967682"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Entrega de compartilhamento de arquivos no Reporting Services
   O SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclui uma extensão de entrega de compartilhamento de arquivos que possibilita entregar um relatório a uma pasta. A extensão de entrega de compartilhamento de arquivos está disponível por padrão e não requer configuração adicional. Para que a entrega do arquivo seja bem-sucedida, você deve definir permissões de acesso de gravação na pasta compartilhada. Além disso, os usuários que precisam acessar os relatórios devem ter permissões de leitura na pasta compartilhada.  

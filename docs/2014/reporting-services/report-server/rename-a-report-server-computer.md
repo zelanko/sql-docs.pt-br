@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - renaming report servers
 ms.assetid: 82fc4ba2-291a-4939-a025-271b8d687c54
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4e145eb63a357c628d46ce4c57218cbac1dfc149
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: cf90ca4a6a7842ea5fae12d279c6e97ebabffffe
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029138"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59970702"
 ---
 # <a name="rename-a-report-server-computer"></a>Renomear um computador de servidor de relatório
   A renomeação de um computador provoca uma alteração de nome correspondente para o servidor Web e a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (se estiver no mesmo computador). Em alguns casos, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] talvez não possa ser acessado após uma alteração de nome do computador. Use as etapas fornecidas neste tópico para reconfigurar um servidor de relatório depois de uma alteração de nome do computador.  

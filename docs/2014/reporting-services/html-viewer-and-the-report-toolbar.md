@@ -11,15 +11,15 @@ helpviewer_keywords:
 - HTML Viewer [Reporting Services]
 - report toolbar [Reporting Services]
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8d3abef04fd707681499d13246f050bc75eeda98
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 86ac5b6da861477bfd5b8e92feac97068ca5adc9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015972"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59934052"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>Visualizador de HTML e a barra de ferramentas de relatório
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece um Visualizador de HTML que é usado para exibir relatórios sob demanda à medida que são solicitados no servidor de relatório. O Visualizador de HTML fornece uma estrutura para exibir relatórios em HTML. Ele inclui uma barra de ferramentas de relatório, uma seção de parâmetros, uma seção de credenciais e um mapa do documento. A barra de ferramentas de relatório no Visualizador de HTML inclui recursos que você pode usar para trabalhar com seu relatório, incluindo opções de exportação para que seja possível exibir seu relatório em formatos diferentes de HTML. A seção de parâmetros e o mapa do documento aparecem somente quando você abre relatórios configurados para usar parâmetros e um controle do mapa do documento.  

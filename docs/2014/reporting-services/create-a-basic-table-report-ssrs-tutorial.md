@@ -12,15 +12,15 @@ helpviewer_keywords:
 - tutorials [Reporting Services]
 - reports [Reporting Services], creating
 ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 83046be3fc713768d4dffd8dc2ef22f37496858e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 1f8dcab2a07aca7971ea8c799660b075fe0bcfd2
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286674"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59944902"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>Criando um relatório de tabela básico (Tutorial do SSRS)
   Este tutorial é projetado para ajudá-lo a criar um relatório de tabela básico com base no [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] usando o Designer de relatórios do banco de dados. Você também pode usar o Construtor de Relatórios ou o Assistente de Relatório para criar relatórios. Neste tutorial, você irá criar um projeto de relatório, configurar informações de conexão, definir uma consulta, adicionar uma região de dados de Tabela, agrupar e totalizar alguns campos e visualizar o relatório.  

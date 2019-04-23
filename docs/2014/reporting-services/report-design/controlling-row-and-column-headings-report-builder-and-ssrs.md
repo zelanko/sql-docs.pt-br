@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4be6e836-158e-4bc9-8870-7f394d7c7e11
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5d6a7193d17e569d9fc0b797e61855afb6dc0dd8
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: f844db8f44e501ef373de73d0b0676730877db62
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295885"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936752"
 ---
 # <a name="controlling-row-and-column-headings-report-builder-and-ssrs"></a>Controlando títulos de linha e coluna (Construtor de Relatórios e SSRS)
   Uma tabela, matriz ou região de dados de lista pode conter várias páginas no sentido horizontal ou vertical. Você pode especificar se deseja repetir cabeçalhos de linha ou coluna em cada página. Em um renderizador interativo, como o Gerenciador de Relatórios ou visualização de relatório, você pode especificar também se deseja congelar cabeçalhos de linha ou coluna para mantê-los na exibição quando você percorre um relatório. Em uma tabela ou matriz, a primeira linha contém normalmente cabeçalhos de coluna que rotulam dados em cada coluna; a primeira coluna normalmente contém cabeçalhos de linha que rotulam os dados em cada linha. Para grupos aninhados, talvez você queira repetir o conjunto inicial de cabeçalhos de linha e coluna que contêm rótulos de grupo. Por padrão, uma região de dados de lista não inclui cabeçalhos.  
@@ -113,7 +113,7 @@ ms.locfileid: "56295885"
   
  ![Grupos de linhas, modo avançado com membros estáticos](../media/rs-tableheaderdynamicwithgroupheadercelladvanced.gif "Grupos de linhas, modo avançado com membros estáticos")  
   
- Para membros do tablix são listados: **Estática**, (**estáticos**), categoria, e (**detalhes**). Um membro tablix que inclui parênteses () indica que não há nenhum cabeçalho de grupo correspondente. Para repetir ou congelar cabeçalhos de coluna, selecione o membro tablix Estático superior e defina as propriedades no painel Propriedades.  
+ Para membros tablix são listados: **Estático**, (**Estático**), Categoria e (**Detalhes**). Um membro tablix que inclui parênteses () indica que não há nenhum cabeçalho de grupo correspondente. Para repetir ou congelar cabeçalhos de coluna, selecione o membro tablix Estático superior e defina as propriedades no painel Propriedades.  
   
  [Voltar ao início](#Top)  
   
@@ -140,7 +140,7 @@ ms.locfileid: "56295885"
   
  ![Grupo de linhas, Avançado, nenhum cabeçalho de grupo.](../media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "Grupos de linhas, Avançado, nenhum cabeçalho de grupo.")  
   
- No painel Grupos de Linhas, os seguintes membros do tablix são listados: (**Estáticos**), (categoria), (**estático**), e (**detalhes**). Para repetir ou congelar cabeçalhos de coluna, selecione o membro tablix (**Estático**) superior e defina as propriedades no painel Propriedades.  
+ No painel de grupos de linhas, os membros tablix seguintes são listados: (**Estático**), (Categoria), (**Estático**) e (**Detalhes**). Para repetir ou congelar cabeçalhos de coluna, selecione o membro tablix (**Estático**) superior e defina as propriedades no painel Propriedades.  
   
  [Voltar ao início](#Top)  
   

@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: eaf7f68cb2658b50bf21ea188324f5208acd488a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 9e1246a32f890c5842a1d1a9c8ad0202c160a171
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286796"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59951242"
 ---
-# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Tutorial: Criando um Relatório de Formato Livre (Construtor de Relatórios)
+# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Tutorial: Criando um relatório de formato livre (construtor de relatórios)
   Este tutorial ensina a criar um relatório de formulário livre do SSRS que se parece com uma carta de formulários. Você pode organizar itens de relatório para criar um formulário com caixas de texto, imagens e outras regiões de dados.  
   
  O relatório criado por você neste tutorial se baseia em dados de vendas de exemplo que estão incluídos no tutorial. O relatório agrupa informações por território e exibe o nome do gerente de vendas do território, bem como informações detalhadas e resumidas sobre as vendas. Você irá usar a região de dados da lista como a base do relatório de formato livre e, em seguida, adicionar um painel decorativo com uma imagem, um texto estático com dados inseridos, uma tabela para mostrar informações detalhadas e, opcionalmente, gráficos de pizza e de colunas para exibir informações resumidas.  
@@ -54,7 +54,7 @@ ms.locfileid: "56286796"
 ##  <a name="BlankReport"></a> 1. Criar um relatório em branco, uma fonte de dados e um conjunto de dados  
   
 > [!NOTE]  
->  Neste tutorial, como a consulta contém os valores de dados, o relatório não precisa de uma fonte de dados externa. O uso desse tipo de dados internos é ótimo para fins de aprendizado, mas a abordagem torna a consulta longa. para obter informações sobre a ferramenta de configuração e recursos adicionais.  
+>  Neste tutorial, como a consulta contém os valores de dados, o relatório não precisa de uma fonte de dados externa. O uso desse tipo de dados internos é ótimo para fins de aprendizado, mas a abordagem torna a consulta longa. .  
   
 #### <a name="to-create-a-blank-report"></a>Para criar um relatório em branco  
   
@@ -224,7 +224,7 @@ ms.locfileid: "56286796"
   
 2.  Na guia **Inserir** da faixa de opções, clique em **Caixa de Texto**e, em seguida, arraste uma caixa de texto para o canto superior esquerdo da lista, mas dentro do retângulo adicionado por você anteriormente. Crie a caixa de texto com 7,62 centímetros de altura e 12,7 centímetros de largura.  
   
-3.  Posicione o cursor na parte superior da caixa de texto e digite: **Boletim informativo para** .  
+3.  Coloque o cursor na parte superior da caixa de texto e, em seguida, digite: **Boletim informativo para** .  
   
      ![Adicionar texto do cabeçalho do boletim informativo](../../2014/tutorials/media/tutorial-newsletterfor.png "Adicionar texto do cabeçalho do boletim informativo")  
   
@@ -245,7 +245,7 @@ ms.locfileid: "56286796"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-9. Posicione o cursor abaixo do texto que você digitou na etapa 3 e digite: **Olá,** .  
+9. Coloque o cursor abaixo do texto que você digitou na etapa 3 e digite: **Olá,** .  
   
     > [!NOTE]  
     >  Inclua o espaço extra após a palavra "Olá". O espaço separa o texto e o campo que você adicionará na próxima etapa.  
@@ -279,7 +279,7 @@ ms.locfileid: "56286796"
   
      ![Adicione o texto do boletim informativo](../../2014/tutorials/media/tutorial-newslettertext.png "adicionar texto do boletim informativo")  
   
-20. Posicione o cursor abaixo do texto que você colou na etapa 15 e digite: **Parabéns pelo total de vendas de** .  
+20. Coloque o cursor abaixo do texto que você colou na etapa 15 e, em seguida, digite: **Parabéns pelo total de vendas de** .  
   
     > [!NOTE]  
     >  Inclua o espaço extra após a palavra "de". O espaço separa o texto e o campo que você adicionará na próxima etapa.  
@@ -431,7 +431,7 @@ ms.locfileid: "56286796"
   
      ![Adicionar linha ao relatório](../../2014/tutorials/media/tutorial-reportwithline.png "Adicionar linha ao relatório")  
   
-##  <a name="Visualization"></a> 9. (Opcional) Adicionar visualização de dados resumidos  
+##  <a name="Visualization"></a> 9. (Opcional) Adicionar visualização de dados de resumo  
  Os retângulos ajudam a controlar a renderização do relatório. Posicione um gráfico de pizza e de colunas dentro de um retângulo para garantir que o relatório seja renderizado da maneira desejada.  
   
 #### <a name="to-add-a-rectangle"></a>Para adicionar um retângulo  

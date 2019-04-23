@@ -16,15 +16,15 @@ topic_type:
 helpviewer_keywords:
 - WMI provider [Reporting Services], library
 ms.assetid: 17ba711d-7eff-4423-9168-63dc425a3428
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 302e7f1b58fdb2a63af9f2a1b4e9dad3127c6d57
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c46a83909a5d8526cfaa8cfc8c530007091e7cba
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034507"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59944122"
 ---
 # <a name="reporting-services-wmi-provider-library-reference-ssrs"></a>Referência da Biblioteca do provedor WMI do Reporting Services (SSRS)
   O provedor WMI (Instrumentação de Gerenciamento do Windows) do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dá suporte às operações do WMI que permitem gravar scripts e código para modificar as configurações do servidor de relatório e do Gerenciador de Relatórios.  

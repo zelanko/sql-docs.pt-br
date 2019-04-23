@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - MICROSOFT.REPORTDESIGNER.MAPPOINT.POINTTEMPLATE
 ms.assetid: 7d36faae-5bcc-446a-9eba-f42349cafacb
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 589db0293927ed528db8c56e52bb3a576096041a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: e5961a4d4984a4da5abd788903a05789de862db7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298504"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950862"
 ---
 # <a name="add-custom-locations-to-a-map-report-builder-and-ssrs"></a>Adicionar locais personalizados a um mapa (Construtor de Relatórios e SSRS)
   Depois que adicionar um mapa a um relatório, você poderá adicionar seus próprios locais de ponto.  

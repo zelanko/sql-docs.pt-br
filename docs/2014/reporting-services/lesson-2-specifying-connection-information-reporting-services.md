@@ -1,5 +1,5 @@
 ---
-title: 'Lição 2: Especificar informações de Conexão (Reporting Services) | Microsoft Docs'
+title: 'Lição 2: Especificar informações de conexão (Reporting Services) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 67336ec0829c810a087ddfdcf79628408c045a76
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: cd0c7e3bc9ece2a6eafa9de1623bfa2b641e5e64
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290174"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59955572"
 ---
-# <a name="lesson-2-specifying-connection-information-reporting-services"></a>Lição 2: Especificar informações de Conexão (Reporting Services)
+# <a name="lesson-2-specifying-connection-information-reporting-services"></a>Lição 2: Especificar informações de conexão (Reporting Services)
   Depois de adicionar um relatório ao projeto Tutorial, é necessário definir uma *fonte de dados*, que são informações de conexão usadas pelo relatório para acessar dados de um banco de dados relacional, banco de dados multidimensional ou outro recurso.  
   
  Nesta lição, você usará o banco de dados de exemplo do [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] como a fonte de dados. Este tutorial assume que esse banco de dados está localizado em uma instância padrão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] instalada no computador local.  
@@ -56,7 +56,7 @@ ms.locfileid: "56290174"
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)] fonte de dados [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] é adicionado para o **dados de relatório** painel.  
   
 ## <a name="next-task"></a>Próxima tarefa  
- Você definiu uma conexão com o banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] com êxito. Em seguida, você criará o relatório. Consulte [lição 3: Definindo um conjunto de dados para o relatório de tabela &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md).  
+ Você definiu uma conexão com o banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] com êxito. Em seguida, você criará o relatório. Confira [Lição 3: Definir um conjunto de dados para o relatório de tabela &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Conexões de dados, fontes de dados e cadeias de conexão no Reporting Services](data-connections-data-sources-and-connection-strings-in-reporting-services.md)  

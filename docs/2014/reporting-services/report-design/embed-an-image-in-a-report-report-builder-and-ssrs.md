@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.embeddedimages.f1
 - "10060"
 ms.assetid: aed77345-5eeb-41f0-96c9-db6b4a11ec6f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ca23d1dfb1b35d165959d2a249130ddf9afc7678
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: b1541073379aa27c932fcadf7558de7d34c57e8d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288954"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59938862"
 ---
 # <a name="embed-an-image-in-a-report-report-builder-and-ssrs"></a>Inserir uma imagem em um relatório (Construtor de Relatórios e SSRS)
   Um relatório pode conter uma imagem inserida. Inserir uma imagem garante que ela estará sempre disponível para um relatório, mas também afeta o tamanho da definição de relatório, o arquivo que define o relatório. As imagens inseridas em um relatório estão listadas no painel de dados do relatório.  

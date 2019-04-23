@@ -13,15 +13,15 @@ f1_keywords:
 - "10120"
 - sql12.rtp.rptdesigner.textboxproperties.general.f1
 ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5136dd8086295135f72ee91dc50921adf1331c73
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 66dadc7a6163b8da7024818a9ecee16d5b3df696
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296204"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59949512"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>Caixas de texto (Construtor de Relatórios e SSRS)
   Quando você pensa em uma caixa de texto, provavelmente imagina uma caixa autônoma que contém texto em uma superfície como o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office PowerPoint. No Construtor de Relatórios, algumas caixas de texto são assim, e podem exibir texto literal para títulos, descrições e rótulos ou texto dinâmico baseado em expressões. Mas todas as células de uma tabela ou matriz (uma região de dados tablix) também contêm uma caixa de texto, que pode ser formatada da mesma maneira que caixas de texto autônomas do seu relatório.  

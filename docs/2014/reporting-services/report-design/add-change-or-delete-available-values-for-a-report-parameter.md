@@ -12,15 +12,15 @@ f1_keywords:
 - "10455"
 - "10071"
 ms.assetid: 0e03264c-523f-4c59-b71b-ceef600f75f6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 804673fd5b2fa9f8ed6b08b4f7609adbb5fdf157
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: e0807838468e00ea9d6a323ac5ab1542ac1e06d6
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296224"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59938772"
 ---
 # <a name="add-change-or-delete-available-values-for-a-report-parameter-report-builder-and-ssrs"></a>Adicionar, alterar ou excluir valores disponíveis para um parâmetro de relatório (Construtor de Relatórios e SSRS)
   Depois de criar um parâmetro de relatório, você poderá especificar uma lista de valores disponíveis a ser exibida para o usuário. Uma lista de valores disponíveis limita as escolhas do usuário aos valores válidos para o parâmetro.  
@@ -82,7 +82,7 @@ ms.locfileid: "56296224"
  [Adicionar parâmetros em cascata a um relatório &#40;Construtor de Relatórios e SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
  [Adicionar, alterar ou excluir valores padrão para um parâmetro de relatório &#40;Construtor de Relatórios e SSRS&#41;](add-change-or-delete-default-values-for-a-report-parameter.md)   
  [Referências de coleção de parâmetros &#40;Construtor de Relatórios e SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md)   
- [Tutorial: Adicionar um parâmetro ao relatório &#40;construtor de relatórios&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Tutorial: Adicionar um parâmetro ao relatório &#40;Construtor de Relatórios&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)  
   
   

@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.runtimecredentials.f1
 - "10128"
 ms.assetid: 70258400-0c6b-49fe-a507-344427255223
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 02fbe6cab9c47f1ea9e246aaf19ba641c098d529
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 33b2d2f33cf0ed85524dba50c936f4a2ea774d29
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293824"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948152"
 ---
 # <a name="enter-data-source-credentials-dialog-box"></a>Caixa de diálogo Inserir Credenciais da Fonte de Dados
   Use a caixa de diálogo **Inserir Credenciais da Fonte de Dados** para fornecer suas credenciais do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para que você possa recuperar dados da fonte de dados.  

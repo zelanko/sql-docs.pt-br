@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4fe513da-f3c5-479c-9fec-8662b91a0d6d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 590b8f44e1d3ba064176bf8944c4011fbf52ab53
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 552ca2c2d53ae073ab50c8db64c185a5d0bd1675
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297964"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59937694"
 ---
 # <a name="specifying-paths-to-external-items-report-builder-and-ssrs"></a>Especificando caminhos para itens externos (Construtor de Relatórios e SSRS)
   Você especifica caminhos nas propriedades de item de relatório para referenciar itens, como relatórios detalhados, sub-relatórios e arquivos de imagem, que são externos ao arquivo de definição de relatório e armazenados em um servidor de relatório.  
@@ -40,9 +40,9 @@ ms.locfileid: "56297964"
   
 -   **Um caminho completo para o item.**  
   
-    -   **Em um servidor de relatório:** O caminho começa com **/**, a pasta base. Por exemplo, ../Reports/AllSubreports/Subreport1.  
+    -   **Em um servidor de relatórios:** o caminho inicia em **/**, a pasta inicial. Por exemplo, ../Reports/AllSubreports/Subreport1.  
   
-    -   **Em um site do SharePoint:** Você deve especificar o nome do relatório em uma expressão, com a URL completa do item e a extensão de arquivo. RDL. Por exemplo, `="http://server/site/library/folder/Report1.rdl"`.  
+    -   **Em um site do SharePoint:** você deve especificar o nome do relatório em uma expressão, com a URL completa do item e a extensão de arquivo .rdl. Por exemplo, `="http://server/site/library/folder/Report1.rdl"`.  
   
 ## <a name="see-also"></a>Consulte também  
  [Adicionar uma imagem externa &#40;Construtor de Relatórios e SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)   

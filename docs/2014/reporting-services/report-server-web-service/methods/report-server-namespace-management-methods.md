@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - reports [Reporting Services], managing
@@ -14,15 +12,15 @@ helpviewer_keywords:
 - methods [Reporting Services], about methods
 - methods [Reporting Services]
 ms.assetid: 2aa43ce9-f51e-408a-8ce0-b40d3dd62561
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: debcba90ebdbf051997325a36da425329731db21
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 64827063e6e406f91307e7db1b33d6b42a196168
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027487"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158992"
 ---
 # <a name="report-server-namespace-management-methods"></a>Métodos de gerenciamento de namespace do Servidor de Relatório
   O serviço Web de Gerenciamento do Servidor de Relatório contém métodos que podem ser usados para gerenciar relatórios, pastas e recursos no banco de dados do servidor de relatório.  

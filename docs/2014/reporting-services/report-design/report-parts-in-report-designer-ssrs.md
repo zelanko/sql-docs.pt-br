@@ -10,22 +10,22 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.components.f1
 ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9c8646e1fda1b36408276ec61272240b78bea74f
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 70a4cdef25a096f4ff0514f169839df482e9f4b3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286324"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59938072"
 ---
 # <a name="report-parts-in-report-designer-ssrs"></a>Partes de relatório no Designer de Relatórios (SSRS)
   No Designer de Relatórios, depois de criar tabelas, gráficos e outros itens de relatório em um projeto, você pode publicá-los como *partes de relatório* em um servidor de relatório ou site do SharePoint integrado com um servidor de relatório de forma que você e outros usuários possam reutilizá-las em outros relatórios.  
   
  Em geral, as partes do relatório funcionam da mesma maneira no Designer de Relatórios e no Construtor de Relatórios. Para ler sobre a funcionalidade básica, consulte [partes de relatório &#40;construtor de relatórios e SSRS&#41; ](../report-parts-report-builder-and-ssrs.md) no [documentação do construtor de relatórios](https://go.microsoft.com/fwlink/?LinkId=154494) em msdn.microsoft.com.  
   
- Há diferenças fundamentais na maneira como as partes do relatório funcionam no Designer de Relatórios. Uma diferença principal é o fluxo de trabalho. Construtor de relatórios permite criação colaboradora: Eu crio uma parte de relatório e publicá-lo. Você pode reutilizar, modificar e republicá-la. No Designer de relatórios, a publicação é unidirecional: Eu posso publicar uma parte de relatório do Designer de relatórios, e você pode reutilizá-lo. Mas eu não posso reutilizar uma parte de relatório existente em um relatório em Designer de Relatórios. Este tópico aborda essas diferenças, depois de uma visão geral rápida das partes de relatório.  
+ Há diferenças fundamentais na maneira como as partes do relatório funcionam no Designer de Relatórios. Uma diferença principal é o fluxo de trabalho. O Construtor de Relatórios permite criação colaborativa: eu crio uma parte do relatório e a publico. Você pode reutilizar, modificar e republicá-la. No Designer de Relatórios, a publicação é unidirecional: eu posso publicar uma parte do relatório no Designer de Relatórios e você pode reutilizá-la. Mas eu não posso reutilizar uma parte de relatório existente em um relatório em Designer de Relatórios. Este tópico aborda essas diferenças, depois de uma visão geral rápida das partes de relatório.  
   
 ##  <a name="ComponentWorkflow"></a> Ciclo de vida da publicação de partes de relatório  
  ![rs_ComponentCreation](../media/rs-componentcreation.gif "rs_ComponentCreation")  

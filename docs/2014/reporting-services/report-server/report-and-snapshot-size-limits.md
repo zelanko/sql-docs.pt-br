@@ -15,15 +15,15 @@ helpviewer_keywords:
 - reports [Reporting Services], size
 - denial of service attacks [Reporting Services]
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b43ad109b3b64927f2e4b03ef26fc0bc648a1ec7
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 9ef488e088a9101e46b3c203ef6f3ca519dc3aec
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59240644"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946452"
 ---
 # <a name="report-and-snapshot-size-limits"></a>Limites de tamanho do relatório e do instantâneo
   Os administradores que gerenciam uma implantação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] podem usar as informações deste tópico para entender os limites de tamanho de relatório quando este é publicado em um servidor de relatório, renderizado em tempo de execução e salvo no sistema de arquivos. Este tópico também fornece uma orientação prática sobre como medir o tamanho de um banco de dados do servidor de relatório e descreve o efeito do tamanho do instantâneo no desempenho do servidor.  

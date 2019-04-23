@@ -11,15 +11,15 @@ helpviewer_keywords:
 - report server configuration
 - report servers [Reporting Services], configuring
 ms.assetid: ef84ce9d-9156-48e9-8073-7e0535476932
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2097ea745bd9ddb359347ddbbaa41976e636ed4e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 12695fbbaf796097f7273134dbc5db4e294ce508
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010917"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59944382"
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>Configurar um servidor de relatórios (modo nativo do Reporting Services)
   Dependendo das opções selecionadas durante a instalação, o Servidor de Relatórios possivelmente exigir uma configuração adicional para que você possa usá-lo. A configuração de um servidor de relatório é formada no mínimo por estes itens:  
@@ -30,7 +30,7 @@ ms.locfileid: "56010917"
   
 -   Um banco de dados de servidor de relatório que armazena dados de aplicativo, relatórios e outros itens.  
   
- A instalação define as configurações mínimas se você selecionar uma das seguintes opções de instalação: configuração padrão no modo nativo ou configuração padrão no modo integrado do SharePoint. Se você tiver instalado o servidor de relatório no modo somente arquivos (a opção **Instalar, mas não configurar** do assistente de Instalação), será configurada apenas a conta de serviço. A URL do serviço Web e o banco de dados do servidor de relatório devem ser configurados após o término da instalação.  
+ A instalação define as configurações mínimas, se você selecionar qualquer uma das seguintes opções de instalação: Configuração padrão do modo nativo ou configuração de padrão de modo integrado do SharePoint. Se você tiver instalado o servidor de relatório no modo somente arquivos (a opção **Instalar, mas não configurar** do assistente de Instalação), será configurada apenas a conta de serviço. A URL do serviço Web e o banco de dados do servidor de relatório devem ser configurados após o término da instalação.  
   
  O Gerenciador de Relatórios é um recurso opcional para um servidor de relatório no modo nativo, mas é recomendável configurá-lo de forma que você possa conceder acesso ao servidor de relatório ao usuário e gerenciar o conteúdo do servidor de relatório. Se você implantar um servidor de relatório no modo integrado do SharePoint, use o front-end da Web de um servidor SharePoint para conceder acesso.  
   

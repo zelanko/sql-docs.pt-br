@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: b577568b-ecbd-44c3-be88-31dab6fc38a2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 009cce23aff5d3b3755b4eb8086bd1560a5be487
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: a26b183d3024333f5792203e180df395c0301892
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289087"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948902"
 ---
 # <a name="export-a-report-as-another-file-type-report-builder-and-ssrs"></a>Exportar um relatório como outro tipo de arquivo (Construtor de Relatórios e SSRS)
   Você pode renderizar um relatório para outro formato de arquivo, como CSV, Imagem, PDF, [!INCLUDE[ofprword](../includes/ofprword-md.md)]ou [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)], enquanto visualiza seu relatório no Construtor de Relatórios ou no Designer de Relatórios, ou pode renderizar o relatório enquanto visualiza-o no servidor de relatórios. A renderização do relatório em um formato específico será útil se você desejar salvá-lo imediatamente como outro tipo de arquivo, sem publicar o relatório no servidor de relatório, ou se quiser ver como o design do relatórios será exibido quando ele for entregue aos leitores de relatórios em um formato específico. A renderização do relatório no servidor de relatórios é útil quando você configura assinaturas ou fornece seus relatórios por email, ou quando deseja salvar um relatório disponível no servidor de relatórios. Para obter mais informações, consulte [Assinaturas e entrega &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md).  

@@ -14,15 +14,15 @@ helpviewer_keywords:
 - command prompt utilities [Reporting Services]
 - rskeymgmt utility
 ms.assetid: 68f2f9f4-f894-40ff-a71c-f9756bf4b68c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 108eea6b0633f0dc17c29ad9d8fb8e5603e1facd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8f0f03f15e75d71378c2cccca13b8fe50dbbc473
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020248"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59970822"
 ---
 # <a name="report-server-command-prompt-utilities-ssrs"></a>Utilitários de prompt de comando do servidor de relatório (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclui vários utilitários de linha de comando que podem ser usados para administrar um servidor de relatório. Esses utilitários são instalados automaticamente ao instalar um servidor de relatórios.  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - execution context [Analysis Services]
@@ -17,17 +15,17 @@ ms.assetid: bdc7dad8-2f22-4265-aba4-a3a451527840
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f6c5a22a6bc3768e324ca45805ff510b1a86668c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 93624a612126e9103144b8b53272122e66202b8a
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142208"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156762"
 ---
 # <a name="accessing-query-context-in-stored-procedures"></a>Acessando o contexto de consulta nos procedimentos armazenados
   O contexto de execução de um procedimento armazenado está disponível no código do procedimento armazenado como um objeto do `Context` do modelo de objeto de servidor do ADOMD.NET. Trata-se de um contexto somente leitura e que não pode ser modificado pelo procedimento armazenado. As propriedades a seguir estão disponíveis nesse objeto.  
   
-|Propriedade|Tipo|Description|  
+|Propriedade|Tipo|Descrição|  
 |--------------|----------|-----------------|  
 |**CurrentCube**|Cube|O cubo do contexto de consulta atual.|  
 |**CurrentDatabaseName**|Cadeia de caracteres|O identificador do banco de dados atual.|  

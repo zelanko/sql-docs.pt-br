@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Adicionar um minigráfico ao relatório (construtor de relatórios) | Microsoft Docs'
+title: 'Tutorial: Adicionar um minigráfico ao relatório (Construtor de Relatórios) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1fddfc39b7f6e5764dbe11bf6b069136fba8420d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 72a8778ce3edc2370c08d971703b5db09cd7f38d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294724"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59951232"
 ---
-# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Tutorial: Adicionar um minigráfico ao relatório (Construtor de Relatórios)
+# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Tutorial: Adicionar um minigráfico ao relatório (construtor de relatórios)
   Neste tutorial, você cria um relatório de tabela básico com base em dados de vendas de exemplo e, em seguida, adiciona um minigráfico a uma célula da tabela.  
   
  Uma versão aprimorada do relatório criado por você neste tutorial está disponível como um relatório de exemplo do Construtor de Relatórios da [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Para obter mais informações sobre como baixar esse relatório de exemplo e outros, consulte [relatórios de exemplo do construtor de relatórios](https://go.microsoft.com/fwlink/?LinkId=184851). A ilustração a seguir mostra o relatório de exemplo semelhante ao que você criará.  
@@ -183,7 +183,7 @@ ms.locfileid: "56294724"
   
 14. A tabela é adicionada à superfície de design. A tabela tem três colunas e três linhas.  
   
-     Pesquisar o painel Agrupamento. Se você não conseguir ver o painel Agrupamento, no menu **Exibir** , clique em **Agrupamento**. O painel Grupos de Linhas mostra um grupo de linhas: **Produto**. O painel Grupos de Colunas mostra um grupo de colunas: **SalesDate**. Os dados detalhados são todos os dados recuperados pela consulta do conjunto de dados.  
+     Pesquisar o painel Agrupamento. Se você não conseguir ver o painel Agrupamento, no menu **Exibir** , clique em **Agrupamento**. O painel de grupos de linhas mostra um grupo de linhas: **Product**. O painel de grupos de colunas mostra um grupo de colunas: **SalesDate**. Os dados detalhados são todos os dados recuperados pela consulta do conjunto de dados.  
   
 15. Clique em **Executar** para visualizar o relatório.  
   

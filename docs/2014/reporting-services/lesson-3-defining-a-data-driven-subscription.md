@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 54fd143d2b3af2596ff44a313b2d35b29fc1604a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: eda13c16caf3f123887da00e2c7896d36b8bf7ed
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015528"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59945442"
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lição 3: Definindo uma assinatura controlada por dados
   Nesta lição, você vai usar as páginas da assinatura controlada por dados para se conectar a uma fonte de dados de assinatura, criar uma consulta que recupera dados de assinatura e mapear o conjunto de resultados para opções de relatório e entrega.  

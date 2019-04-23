@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bdc0ea771c0767638a4ebd774023c1cab09a230b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 29ea08478089982f9652154fa0a167d122b2cd34
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020697"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59949272"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Coleção de campos de conjuntos de dados (Construtor de Relatórios e SSRS)
   Os campos de um conjunto de dados representam os dados de uma conexão de dados. Um campo pode representar dados numéricos ou não numéricos. Os exemplos incluem valores de vendas, vendas totais, nomes de clientes, identificadores de banco de dados, URLs, imagens, dados espaciais e endereços de email. Na superfície de design, os campos aparecem como expressões em itens de relatório, como caixas de texto, tabelas e gráficos.  

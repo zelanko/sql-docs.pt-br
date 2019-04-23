@@ -13,15 +13,15 @@ helpviewer_keywords:
 - security [Reporting Services], role definitions
 - role-based security [Reporting Services], role definitions
 ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 47a2cc499c9361b8d68be107cd874bebdfe74861
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ac879ad519b08ae272c8ac30dd37021123570cca
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038107"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950842"
 ---
 # <a name="role-definitions"></a>Definições de função
   No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], uma *definição de**função* é uma coleção nomeada de tarefas que definem as operações disponíveis em um servidor de relatório. As definições de função fornecem as regras usadas pelo servidor de relatório para impor a segurança. Quando um usuário tenta executar uma tarefa, como publicar um relatório, o servidor de relatório verifica a atribuição de função de relatório do usuário para determinar se a tarefa está incluída em sua definição de função. Se a tarefa estiver incluída na definição de função, a solicitação será enviada.  

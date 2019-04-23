@@ -4,24 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - item properties [Reporting Services]
 - ItemNamespaceHeader SOAP header
 - GetProperties method
 ms.assetid: b0a08639-3101-40a2-abe2-3a41753826d1
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 51bb27870d2455e9d7c79cd15a4a26ed790cde56
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5636ac5193c13b58ec263b8aae3e17466d968fb7
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027557"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157182"
 ---
 # <a name="setting-the-item-namespace-for-the-getproperties-method"></a>Definindo o namespace Item para o método GetProperties
   Você pode usar o cabeçalho SOAP <xref:ReportService2010.ItemNamespaceHeader> no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para recuperar propriedades de item baseadas em dois identificadores de item diferentes: o caminho completo do item ou a ID do item.  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - data processing extensions [Reporting Services], data readers
@@ -14,15 +12,15 @@ helpviewer_keywords:
 - DataReader class
 - read-only data
 ms.assetid: 23e286e7-6074-4fbe-be29-203420d6c3d0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a475131009950bc6e99a473a0636f9be9aa5d6b1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7c9e55741c72d624b7149435ced90550135d8b4a
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56021437"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156962"
 ---
 # <a name="implementing-a-datareader-class-for-a-data-processing-extension"></a>Implementando uma classe DataReader para uma extensão de processamento de dados
   O objeto **DataReader** permite que um cliente recupere um fluxo de dados somente leitura, somente encaminhamento de uma fonte de dados. Os resultados são retornados à medida que a consulta é executada e são armazenados no buffer de rede no cliente até que você solicite-os usando o método **Read** da classe **DataReader**. Para criar uma classe **DataReader**, implemente <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> e, opcionalmente, implemente <xref:Microsoft.ReportingServices.DataProcessing.IDataReaderExtension>. O uso de um objeto **DataReader** aumenta o desempenho do aplicativo recuperando dados assim que eles estão disponíveis, em vez de aguardar que todos os resultados da consulta sejam retornados e (por padrão) armazenando somente uma linha por vez na memória, reduzindo a sobrecarga do sistema.  

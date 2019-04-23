@@ -11,15 +11,15 @@ helpviewer_keywords:
 - formats [Reporting Services], URL rendering
 - URL access [Reporting Services], rendering formats
 ms.assetid: 6a3b7fc3-3d91-4d12-8371-42ea12e74517
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 589f1d42936d243bff9aa77740cefce14ab8856e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 80238e8edb5b84bc353eca63d63491a8ee74c8ad
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014597"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936872"
 ---
 # <a name="export-a-report-using-url-access"></a>Exportar um relatório com acesso à URL
   Opcionalmente, você pode especificar o formato no qual renderizar um relatório usando o *rs: Format* parâmetro. Por exemplo, para obter uma cópia em PDF de um relatório diretamente de um servidor de relatório de modo nativo:  

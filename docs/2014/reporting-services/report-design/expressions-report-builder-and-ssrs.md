@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 327932f82ddee445c7e15f53f02edd39ba0b28bf
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 9e3bae5d7a41d87cf07fab455b434b935636375f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288609"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59957582"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Expressões (Construtor de Relatórios e SSRS)
   As expressões são amplamente usadas em um relatório inteiro para recuperar, calcular, exibir, agrupar, classificar, filtrar, parametrizar e formatar dados. Várias propriedades de item de relatório podem ser definidas para uma expressão. Expressões ajudam a controlar o conteúdo, o design e a interatividade do seu relatório. As expressões são escritas em [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], salvas na definição de relatório e avaliadas pelo processador de relatórios quando você executa o relatório.  

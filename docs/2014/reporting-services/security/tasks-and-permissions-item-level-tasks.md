@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - item-level tasks [Reporting Services]
 ms.assetid: fdeb7bc3-167a-4342-84e3-32e3faa1fa39
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a22c255712aa3e5e6c93cd04a37f5c66d25ac140
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 62009c07a7b643a3a9d0a202588f64bded967acb
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018108"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59934252"
 ---
 # <a name="item-level-tasks"></a>Tarefas em nível de item
   Uma tarefa em nível de item é uma coleção de permissões relacionadas a um relatório, pasta, modelo de relatório, recurso ou fonte de dados compartilhada. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] também inclui tarefas em nível do sistema que se aplicam ao site do servidor de relatório como um todo. Para obter mais informações, consulte [Tarefas de nível de sistema](tasks-and-permissions-system-level-tasks.md). Para obter mais informações sobre tarefas e permissões em geral, consulte [Tasks and Permissions](tasks-and-permissions.md).  

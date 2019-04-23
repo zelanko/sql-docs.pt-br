@@ -4,23 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - ReportViewer controls
 - integrating reports [Reporting Services]
 ms.assetid: 3ba47fb4-73a9-4059-89fd-329adebe94a8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cf09c6f06cbdb4e24949ad1f078312869c81444d
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: cbaa41c75297d62e84cfc808463214d19c4ff8fa
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241634"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157022"
 ---
 # <a name="integrating-reporting-services-using-the-reportviewer-controls"></a>Integrando o Reporting Services usando os controles ReportViewer
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] fornece dois controles ReportViewer para integração da funcionalidade em seus aplicativos de exibição de relatório. Existe uma versão para aplicativos baseados em Windows Forms e um para aplicativos Web Forms. Cada controle oferece funcionalidade semelhante mas cada é foi criado para ter como destino seus ambientes individuais. Ambos os controles podem processar relatórios implantados em um servidor de relatório (modo de processamento remoto) ou foram copiados para um computador onde o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ainda não foi instalado (modo de processamento local).  

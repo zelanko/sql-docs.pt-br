@@ -8,15 +8,15 @@ ms.technology:
 - database-engine
 ms.topic: conceptual
 ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 03928e651b742061e726b9c92683d9d4e9aebd08
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: bb1e5555930b625a16468a34fae6e6413dc0da92
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014827"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59960062"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>Adicionar um servidor de relatório a um farm (expansão SSRS)
   Adicionar um segundo ou mais servidores de relatório de modo do SharePoint ao seu farm do SharePoint pode melhorar o desempenho e o tempo de resposta do processamento do servidor de relatório. Se você perceber que o desempenho está mais lento à medida que você adiciona mais usuários, relatórios e outros aplicativos ao servidor de relatório, então a adição de servidores de relatório pode melhorar o desempenho. Isto também é recomendado para adicionar um segundo servidor de relatório para aumentar a disponibilidade de servidores de relatório quando houver problemas com hardware ou você estiver realizando manutenção geral em servidores individuais em seu ambiente. A partir da versão do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , as etapas para expansão de um ambiente do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em modo do SharePoint seguem a implantação padrão de farm do SharePoint e aproveita os recursos de balanceamento de carga do SharePoint.  

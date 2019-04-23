@@ -15,15 +15,15 @@ f1_keywords:
 - "10070"
 - sql12.rtp.rptdesigner.reportparameters.advanced.f1
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3115624895c45585101db4d5c02ea85509d68220
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: c62b34985ccd967ec21e88e01c146851b9c18df9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241814"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59932612"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Parâmetros de relatório (Construtor de Relatórios e Designer de Relatórios)
   Este tópico descreve os usos comuns dos parâmetros de relatório SSRS, as propriedades que você pode definir e muito mais sobre os parâmetros. Parâmetros de relatório o habilitam a controlar dados de relatório, conectar relatórios relacionados e variar a apresentação do relatório.  

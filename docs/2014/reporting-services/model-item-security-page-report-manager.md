@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.modelitemsecurity.f1
 ms.assetid: 8c5b29ae-1f17-41f2-ab59-97899b8fb4fc
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a89e2e627b297d5d6dc9795217b727aeb20d7c74
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 10aa1c7132126dd705986a55d5dc02d78a5263ef
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025787"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59955542"
 ---
 # <a name="model-item-security-page-report-manager"></a>Página segurança de item de modelo (Gerenciador de Relatórios)
   Use essa página para proteger partes de um modelo concedendo ou revogando permissões somente leitura em itens específicos. A segurança de item de modelo afeta a exploração de dados ad hoc em tempo de execução e a capacidade de usar partes de um modelo publicado ao criar relatórios no Construtor de Relatórios. Para usar esse recurso, você deve ter permissões de Gerenciador de Conteúdo.  

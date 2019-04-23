@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 03cd909df14920fffb7cb1c9e283946df0be7dd9
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: d3e5c894c75002f95ed67c8383c5497db998dfa9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294584"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948952"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections-report-builder-and-ssrs"></a>Escopo das expressões para totais, agregações e coleções internas (Construtor de Relatórios e SSRS)
   Quando você escrever expressões, descobrirá que o termo *escopo* é usado em vários contextos. O escopo pode especificar os dados a serem usados para avaliar uma expressão, o conjunto de caixas de texto em uma página renderizada, o conjunto de itens de relatório que podem ser mostrados ou ocultados com base em uma alternância. Você verá o termo *escopo* em tópicos relacionados a avaliações de expressão, sintaxe de função de agregação, visibilidade condicional e também em mensagens de erro relacionadas a estas áreas. Use as descrições a seguir para diferenciar qual significado de *escopo* se aplica:  

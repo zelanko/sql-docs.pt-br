@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 41235402-bb9e-4cb7-b91e-431e77db19cf
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a0eab4c54be4f849a735b7da4de54a9b85cb78f3
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: a16e59709f3372a2460fa8847cdcc5c2c248bb2c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285304"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59967462"
 ---
 # <a name="level-function-report-builder-and-ssrs"></a>Função Level (Construtor de Relatórios e SSRS)
   Retorna o nível atual de profundidade em uma hierarquia recursiva.  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - tutorials [Reporting Services]
 ms.assetid: e90cc448-563b-4dbb-9776-defb8640ec66
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d9642f5231cd6d0dc95b1ac489fcac527ca5a612
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 048f9ca3d17a2fdc716786afb6fe2c48d3f83fa6
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289204"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59940712"
 ---
 # <a name="reporting-services-tutorials-ssrs"></a>Tutoriais de Reporting Services (SSRS)
   Esta seção contém tutoriais para [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  

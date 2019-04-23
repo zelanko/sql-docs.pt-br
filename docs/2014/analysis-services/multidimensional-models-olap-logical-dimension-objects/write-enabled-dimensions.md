@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - write-enabled dimensions [Analysis Services]
@@ -18,12 +16,12 @@ ms.assetid: 0bac050d-cd3b-427b-884a-65a91be89500
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bf87518328e036b69dfc8596ec239b4770c1edab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f76ba993508807e57e73d5e53ea25a4cbe382529
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225126"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156943"
 ---
 # <a name="write-enabled-dimensions"></a>Dimensões habilitadas para gravação
     
@@ -62,8 +60,8 @@ ms.locfileid: "48225126"
  Usuários e grupos incluídos em uma função de Administrador podem atualizar os membros de atributo de uma dimensão habilitada para gravação, mesmo se a dimensão não estiver incluída em um cubo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Propriedades de dimensão de banco de dados](database-dimension-properties.md)   
+ [Propriedades de dimensão do banco de dados](database-dimension-properties.md)   
  [Partições habilitadas para gravação](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [Dimensões &#40;Analysis Services - dados multidimensionais&#41;](dimensions-analysis-services-multidimensional-data.md)  
+ [Dimensões &#40;Analysis Services – Dados Multidimensionais&#41;](dimensions-analysis-services-multidimensional-data.md)  
   
   

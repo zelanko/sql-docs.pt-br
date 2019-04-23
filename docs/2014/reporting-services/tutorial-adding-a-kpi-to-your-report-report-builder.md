@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Adicionando um KPI ao relatório (construtor de relatórios) | Microsoft Docs'
+title: 'Tutorial: Adicionar um KPI ao relatório (Construtor de Relatórios) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5e00afd4954a328e767ccb2d991338d9dffb1dff
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 5362e72fefa36102737e362a1b4ec8b11b96c77f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296444"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946012"
 ---
-# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Tutorial: Adicionando um KPI ao relatório (construtor de relatórios)
+# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Tutorial: Adicionar um KPI ao relatório (Construtor de Relatórios)
   O KPI (indicador chave de desempenho) é um valor mensurável que tem importância comercial. Este tutorial ensina a incluir um KPI em um relatório. Nesse cenário, o resumo das vendas por subcategorias de produto é o KPI. O estado atual do KPI é mostrado usando-se cores e indicadores.  
   
  A ilustração a seguir mostra o relatório que você criará.  
@@ -45,7 +45,7 @@ ms.locfileid: "56296444"
 7.  [Salvar o relatório](#Save)  
   
 > [!NOTE]  
->  Neste tutorial, as etapas do assistente são consolidadas em dois procedimentos: um para criar o conjunto de dados e um para criar uma tabela. Para obter instruções passo a passo sobre como navegar até um servidor de relatório, escolher uma fonte de dados, criar um conjunto de dados e executar o assistente, consulte o primeiro tutorial nesta série: [Tutorial: Criando um relatório de tabela básica &#40;construtor de relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  Neste tutorial, as etapas do assistente são consolidadas em dois procedimentos: um para criar o conjunto de dados e um para criar uma tabela. Para obter instruções passo a passo sobre como navegar até um servidor de relatório, escolher uma fonte de dados, criar um conjunto de dados e executar o assistente, confira o primeiro tutorial desta série: [Tutorial: Ciar um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
  Tempo estimado para concluir este tutorial: 15 minutos.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "56296444"
   
 5.  Clique em **Avançar**.  
   
-6.  Na página **Escolher uma conexão com uma fonte de dados** , selecione uma fonte de dados existente ou procure o servidor de relatório e selecione uma fonte de dados. Se não houver nenhuma fonte de dados disponível ou se você não tiver acesso a um servidor de relatório, será possível usar uma fonte de dados inserida. Para obter mais informações, consulte [Tutorial: Criando um relatório de tabela básica &#40;construtor de relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  Na página **Escolher uma conexão com uma fonte de dados** , selecione uma fonte de dados existente ou procure o servidor de relatório e selecione uma fonte de dados. Se não houver nenhuma fonte de dados disponível ou se você não tiver acesso a um servidor de relatório, será possível usar uma fonte de dados inserida. Para saber mais, confira [Tutorial: Ciar um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Clique em **Avançar**.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "56296444"
   
 10. Clique em **Avançar**.  
   
-##  <a name="CompleteWizard"></a> 2. Organizar dados, escolher layout e estilo no Assistente de Tabela ou Matriz  
+##  <a name="CompleteWizard"></a> 2. Organizar dados, escolher Layout e estilo de Assistente de tabela ou matriz  
  Use o assistente para fornecer um design inicial no qual exibir dados. O painel de visualização no assistente ajuda a visualizar o resultado do agrupamento de dados antes de concluir o design da tabela ou da matriz.  
   
 #### <a name="to-organize-data-into-groups-choose-a-layout-and-a-style"></a>Para organizar dados em grupos, escolha um layout e um estilo  
@@ -159,7 +159,7 @@ ms.locfileid: "56296444"
   
 12. Clique em **Concluir**.  
   
-     A tabela é adicionada à superfície de design. A tabela tem cinco colunas e cinco linhas. O painel de grupos de linhas mostra três grupos de linhas: SalesDate, Subcategory e Details. Os dados detalhados são todos os dados recuperados pela consulta do conjunto de dados.  
+     A tabela é adicionada à superfície de design. A tabela tem cinco colunas e cinco linhas. O painel Grupos de Linhas mostra três grupos de linhas: SalesDate, Subcategory e Details. Os dados detalhados são todos os dados recuperados pela consulta do conjunto de dados.  
   
 13. Clique em **Executar** para visualizar o relatório.  
   
@@ -172,7 +172,7 @@ ms.locfileid: "56296444"
   
 1.  Na tabela, clique com botão direito duas células para baixo do `[Sum(Sales)]` célula (linha de subtotal que exibe as vendas de uma subcategoria) e depois clique em **propriedades da caixa de texto**.  
   
-2.  No **preencher**, clique no **fx** lado de **cor de preenchimento** opção e digite a seguinte expressão no **definir expressão para: BackgroundColor** campo:  
+2.  No **preencher**, clique no **fx** lado de **cor de preenchimento** opção e digite a seguinte expressão no **definir expressão para: BackgroundColor**:  
   
  `=IIF(Sum(Fields!Sales.Value) >= 5000 ,"Lime", IIF(Sum(Fields!Sales.Value) < 2500, "Red","Yellow"))`  
   

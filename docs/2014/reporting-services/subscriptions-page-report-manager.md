@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: cf3a6bd0-e0b2-4875-a532-63ef34cfa860
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8ae3948d019467590b885c706e6b2c8d1c186da2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: efa4c0758ed85008ccb04b30a8dcd8e24ed54208
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031537"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948892"
 ---
 # <a name="subscriptions-page-report-manager"></a>Página Assinaturas (Gerenciador de Relatórios)
   Use a página Assinaturas para listar todas as assinaturas para o relatório atual ou fonte de dados compartilhada. Se você tiver permissão adequada (como a contida na tarefa "Gerenciar todas as assinaturas"), você poderá exibir as assinaturas de todos os usuários. Caso contrário, essa página só mostrará as assinaturas que você possui.  

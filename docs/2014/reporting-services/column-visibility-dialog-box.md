@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.columnvisibility.f1
 - "10127"
 ms.assetid: ca59d1cd-d782-4298-aa61-4f312c32eb50
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 056cc6b6385b2f57c52dbaaceedf75d342254c89
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9045ef92af27409ffa2fba0fe07564e3be037e6b
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036127"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59941822"
 ---
 # <a name="column-visibility-dialog-box"></a>Caixa de diálogo Visibilidade da Coluna
   Use a caixa de diálogo **Visibilidade da Coluna** para mostrar ou ocultar a coluna selecionada quando o relatório for executado pela primeira vez ou para usar outro item de relatório para alternar a visibilidade da coluna.  

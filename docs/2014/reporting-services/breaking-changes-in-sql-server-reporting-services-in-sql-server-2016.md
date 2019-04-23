@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Reporting Services, backward compatibility
 - breaking changes [Reporting Services]
 ms.assetid: 39c7aafd-dcb9-4317-b8f7-d15828eb4f9a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 00b787d9fbeebd04b81ec608bf23745ddd733a0a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e779a88940db2883846168535e7823c1723f4b4e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040167"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947652"
 ---
 # <a name="breaking-changes-in-sql-server-reporting-services-in-sql-server-2014"></a>Alterações recentes no SQL Server Reporting Services do SQL Server 2014
   Este tópico descreve as alterações recentes no [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Essas alterações podem danificar aplicativos, scripts ou funcionalidades baseados em versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Você pode encontrar esses problemas durante a atualização ou em scripts ou relatórios personalizados. Para obter mais informações, consulte [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
@@ -39,7 +39,7 @@ ms.locfileid: "56040167"
 ##  <a name="bkmk_rc0"></a> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Alterações significativas de Reporting Services  
   
 ### <a name="sharepoint-mode-server-references-require-the-sharepoint-site"></a>Referências de servidor de modo do SharePoint exigem o site do SharePoint  
- Você não pode navegar nem referenciar diretamente para o Servidor de relatório usando o nome do diretório virtual no caminho da URL. Por exemplo:  
+ Você não pode navegar nem referenciar diretamente para o Servidor de relatório usando o nome do diretório virtual no caminho da URL. Por exemplo:   
   
  `http://<Server name>/ReportServer`  
   
@@ -63,7 +63,7 @@ ms.locfileid: "56040167"
   
 -   O [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuration Manager, rskeymgmt.exe e rsconfig.exe. Em vez de usar esses utilitários para configuração de modo do SharePoint [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , use a Administração Central do SharePoint e o PowerShell.  
   
--   SQL Server Management Studio:  Clientes não podem referenciar um servidor com sintaxe semelhante a <nome_do_computador>/<nome_da_instância>. A partir da versão [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] , o método recomendado era usar uma URL do site do SharePoint. Por exemplo, **http://<SHAREPOINT_SERVER>/<sharePoint_site&gt**. A partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], uma URL do site do SharePoint é a única sintaxe com suporte.  
+-   SQL Server Management Studio: Os clientes não podem fazer referência a um servidor com sintaxe semelhante a < machine_name > / < nome_da_instância >. A partir da versão [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] , o método recomendado era usar uma URL do site do SharePoint. Por exemplo, **http://<SHAREPOINT_SERVER>/<sharePoint_site&gt**. A partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], uma URL do site do SharePoint é a única sintaxe com suporte.  
   
 ### <a name="report-model-designer-is-not-available-in-sql-server-data-tools"></a>O Designer de Modelo de Relatório não está disponível no SQL Server Data Tools  
  O [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] não dá mais suporte a projetos de modelo de relatório. O designer do Modelo de Relatório não está disponível no [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Não é possível criar novos projetos de modelo de relatório nem abrir projetos existentes no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] e não é possível criar nem atualizar modelos de relatório. Para atualizar modelos de relatório, você pode usar o [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ou ferramentas anteriores. Você pode continuar a usar modelos de relatório como fontes de dados em relatórios criados em ferramentas do [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] , como o Construtor de Relatórios e o Designer de Relatórios. O designer de consulta que você usa para criar consultas para extrair dados de relatório de modelos de relatório continua disponível no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  

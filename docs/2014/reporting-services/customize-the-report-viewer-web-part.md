@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Web Parts [Reporting Services]
 - Report Viewer Web Part [Reporting Services]
 ms.assetid: 086d6546-7299-41bc-bca9-083a15a53679
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 46873ce2a5a8ad006fafb2c0311e895c6305cd6a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b9bbccd4abf5636cb777d69b64268ffea6632e65
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017958"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947752"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Personalizar a Web Part do Visualizador de Relatórios
   Você pode usar a Web Part do Visualizador de Relatórios para exibir relatórios executados em um servidor de relatório configurado para integração do SharePoint. Os relatórios que você pode exibir incluem arquivos de definição de relatório (.rdl) e relatórios do Construtor de Relatórios. Os relatórios são abertos na Web Part do Visualizador de Relatórios em uma nova página automaticamente, mas você também pode adicionar uma Web Part do Visualizador de Relatórios a uma página ou site existente se quiser que um determinado relatório sempre esteja visível nessa página.  

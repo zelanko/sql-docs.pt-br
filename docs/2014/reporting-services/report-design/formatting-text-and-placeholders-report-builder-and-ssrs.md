@@ -15,15 +15,15 @@ f1_keywords:
 - "10132"
 - sql11.rtp.rptdesigner.textproperties.font.f1
 ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 70eb61bf1b479bb8021c09058628f25b1594b977
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 12daff3490a0ca11fefa5c120952b30499118a4d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287384"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59933202"
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>Formatando texto e espaços reservados (Construtor de Relatórios e SSRS)
   Uma caixa de texto pode ser um item de relatório ou uma célula individual dentro de uma região de dados que contém texto, um campo calculado, um ponteiro para um campo em um banco de dados ou uma combinação dos três itens. Você pode misturar fontes e cores, adicionar estilos em negrito e itálico e usar estilos de parágrafo, como alinhamento e recuos deslocados. Você pode formatar uma caixa de texto inteira ou formatar texto, números, expressões ou campos específicos dentro da caixa de texto.  

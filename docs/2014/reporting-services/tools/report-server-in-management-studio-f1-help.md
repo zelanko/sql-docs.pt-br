@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Object Explorer, help
 ms.assetid: 982e8c03-7341-4895-8a95-a12d52c564ea
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6f9143c2a93bc5a5c6ffbc116745511de58755d0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c9876003e57a69b8a1eacddaa3e41b681c806e7f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023997"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953792"
 ---
 # <a name="report-server-in-management-studio-f1-help"></a>Servidor de Relatório na ajuda F1 do Management Studio 
   Esta seção inclui tópicos sobre as caixas de diálogo no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] que podem ser usadas para gerenciar servidores de relatório.  

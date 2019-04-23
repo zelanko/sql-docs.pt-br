@@ -12,15 +12,15 @@ helpviewer_keywords:
 - reports [Reporting Services], properties
 - reports [Reporting Services], execution options
 ms.assetid: 73cc8dcc-ef80-40d7-9739-d33bba0eb28a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9d4052b6e330bab1c32650b7cdeae7ecb5c7b21f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: dd821c70f9c3c60451a5e1fe5c73b38a7b64b301
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031077"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59960072"
 ---
 # <a name="configure-execution-properties-for-a-report--report-manager"></a>Configurar propriedades de execução de um relatório (Gerenciador de Relatórios)
   Você pode definir opções de processamento de relatório para especificar quando os dados são recuperados para um relatório. É útil agendar o processamento de dados de um relatório se a fonte de dados externa for atualizada em horários específicos (por exemplo, um data warehouse que é atualizado diária ou semanalmente) e você desejar evitar a sobrecarga da recuperação dos mesmos dados sempre que um relatório for solicitado. O agendamento do processamento de dados também é útil se você desejar controlar a carga de processamento no servidor de banco de dados externo ou quando você quiser fornecer resultados consistentes para vários usuários que devem trabalhar com conjuntos de dados idênticos. Com dados voláteis, um relatório sob demanda pode produzir resultados diferentes de um minuto para o outro. Por outro lado, um instantâneo de relatório permite fazer comparações válidas com outros relatórios ou ferramentas analíticas que contêm dados do mesmo momento.  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - rsAccessDenied error
 ms.assetid: 2f76b1bf-96a2-4755-b76b-84e933220efc
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2904623aa84a6bc6b50cf1a01458bbc52649feaf
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3928d77d79a59dbda6b203c59e626f157d670803
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042357"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59937532"
 ---
 # <a name="rsaccesseddenied---reporting-services-error"></a>rsAccessedDenied - Erro do Reporting Services
   O erro do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **rsAccessedDenied** ocorre quando um usuário não tem permissão para realizar uma ação. Por exemplo, o usuário não tem uma atribuição de função que o permita abrir um relatório ou ele não abriu seu navegador com as permissões necessárias.  

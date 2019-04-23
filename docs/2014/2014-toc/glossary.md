@@ -4,17 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
-- analysis-services/multidimensional-tabular
-- data-quality-services
-- database-engine
-- integration-services
-- master-data-services
-- replication
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: sql
 ms.topic: conceptual
 helpviewer_keywords:
 - definitions [SQL Server]
@@ -24,16 +14,32 @@ ms.assetid: 0e8a7967-b407-4e01-b8c4-3eabe2820df5
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 9b565fb16621760a69e2462680444db5f0ea3916
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 334735c2ec9fc0573ed08bcc76b214a093394b6c
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519480"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157094"
 ---
 # <a name="glossary"></a>Glossário
-  
-  
+
+<!--
+Metadata 'ms.technology:' is restricted to a maximum of one value.
+So I am erasing all the values shown below.  (GeneMi , 2019/04/19)
+
+ms.technology:
+  - "analysis-services"
+  - "analysis-services/data-mining"
+  - "analysis-services/multidimensional-tabular"
+  - "data-quality-services"
+  - "database-engine"
+  - "integration-services"
+  - "master-data-services"
+  - "replication"
+  - "reporting-services-native"
+  - "reporting-services-sharepoint"
+-->
+
 ## <a name="terms"></a>Termos  
   
 |Termo|Definição|  
@@ -469,7 +475,7 @@ ms.locfileid: "52519480"
 |diacrítico|Uma marca colocada sobre, sob, ou através de um caractere, geralmente para indicar uma alteração no valor fonético do estado sem marca.|  
 |marca diacrítica|Uma marca colocada sobre, sob, ou através de um caractere, geralmente para indicar uma alteração no valor fonético do estado sem marca.|  
 |dialeto|As regras gerais e de sintaxe usadas para analisar uma cadeia de caracteres ou uma instrução de consulta.|  
-|relação em forma de losango|Uma cadeia de relações de atributo que se divide e volta a se reunir, mas sem conter nenhuma relação redundante. Por exemplo, Dia->Mês->Ano e Dia->Trimestre->Ano têm os mesmos pontos iniciais e de extremidade, mas não têm nenhuma relação comum.|  
+|relação em forma de losango|Uma cadeia de relações de atributo que se divide e volta a se reunir, mas sem conter nenhuma relação redundante. Por exemplo, o dia -> mês -> ano e dia -> trimestre -> ano têm os mesmos pontos inicial e final, mas não tem nenhuma relação comum.|  
 |diferenciador|Uma interface para uma ferramenta que cria um objeto DifferencingService.|  
 |backup diferencial|Um backup que contém somente alterações feitas no banco de dados desde o backup de dados anterior no qual o backup diferencial é baseado.|  
 |base diferencial|O backup completo mais recente de todos os dados em um banco de dados ou em um subconjunto dos arquivos ou grupos de arquivos de um banco de dados.|  
@@ -543,7 +549,7 @@ ms.locfileid: "52519480"
 |dump|Uma duplicata de um programa, disco ou dados, criada para fins de arquivamento ou para salvaguardar arquivos.|  
 |dispositivo de despejo|Uma unidade de fita ou de disco que contém uma mídia de backup.|  
 |cursor dinâmico|Um cursor que pode refletir modificações de dados feitas nos dados subjacentes enquanto o cursor está aberto.|  
-|filtro dinâmico|Um filtro de linha disponível com replicação de mesclagem que permite restringir os dados replicados a um Assinante com base em uma função do sistema ou em uma função definida pelo usuário (por exemplo: SUSER_SNAME()).|  
+|filtro dinâmico|Um filtro de linha disponível com replicação de mesclagem que permite restringir os dados replicados a um assinante com base em uma função do sistema ou função definida pelo usuário (por exemplo: SUSER_SNAME()).|  
 |bloqueio dinâmico|O processo usado pelo SQL Server para determinar os bloqueios mais econômicos a serem usados a qualquer momento.|  
 |função de gerenciamento dinâmico|Um dos conjuntos de funções internas que retorna informações de estado de servidor sobre valores, objetos e configurações no SQL Server.|  
 |exibição de gerenciamento dinâmico|Um conjunto exibições internas que retornam informações de estado de servidor sobre valores, objetos e configurações no SQL Server.|  
@@ -737,7 +743,7 @@ ms.locfileid: "52519480"
 |caixa estreita alta|O valor mais alto que não é um valor discrepante em um gráfico de caixa.|  
 |Dica de|Uma opção ou estratégia especificada para aplicação pelo processador de consultas do SQL Server em instruções SELECT, INSERT, UPDATE ou DELETE. A dica substitui qualquer plano de execução que o otimizador de consulta possa selecionar para uma consulta.|  
 |histórico|Uma lista das ações do usuário dentro de um programa, como comandos inseridos em um shell do sistema operacional, menus passados usando Gopher ou links seguidos usando um navegador da Web.|  
-|colocação em espera|Refere-se à possibilidade de deixar conjuntos de resultados abertos ("em espera") que tenham sido processados e são fechados normalmente depois disto. Por exemplo:  "O SQL Server dá suporte à suspensão somente no nível de conexão".|  
+|colocação em espera|Refere-se à possibilidade de deixar conjuntos de resultados abertos ("em espera") que tenham sido processados e são fechados normalmente depois disto. Por exemplo:  "O SQL Server dá suporte a colocação em espera no nível de conexão somente."|  
 |controle|Uma porcentagem de dados de treinamento que são reservados para uso na medição da exatidão da estrutura do modelo de mineração de dados.|  
 |dados de validação|Uma porcentagem de dados de treinamento que são reservados para uso na medição da exatidão da estrutura do modelo de mineração de dados.|  
 |repositório de controle|A estrutura de mineração de dados que é usada para armazenar em cache os dados de controle. Ele contém referências aos dados de controle.|  
@@ -831,10 +837,10 @@ ms.locfileid: "52519480"
 |caminho de junção|Uma série de junções que indicam como duas tabelas estão relacionadas.|  
 |tabela de junção|Uma tabela que estabelece uma relação entre outras tabelas.|  
 |gráfico Kagi|Um gráfico, na maioria das vezes independente de tempo, usado para acompanhar movimentos de preço e decisões relacionadas a compra de estoque.|  
-|chave|Uma cadeia de caracteres que identifica um objeto no cache. Essa cadeia de caracteres deve ser exclusiva dentro de uma região. Os objetos são associados a uma chave quando são adicionados e, em seguida, recuperados com a mesma chave.|  
-|chave|Em criptografia, autenticação e assinaturas digitais, um valor usado em combinação com um algoritmo para criptografar ou descriptografar informações.|  
-|chave|Em uma matriz, o campo pelo qual os dados armazenados são organizados e acessados.|  
-|chave|Uma coluna ou um grupo de colunas que identifica exclusivamente uma linha (chave primária), define a relação entre duas tabelas (chave estrangeira) ou é usada para criar um índice.|  
+|key|Uma cadeia de caracteres que identifica um objeto no cache. Essa cadeia de caracteres deve ser exclusiva dentro de uma região. Os objetos são associados a uma chave quando são adicionados e, em seguida, recuperados com a mesma chave.|  
+|key|Em criptografia, autenticação e assinaturas digitais, um valor usado em combinação com um algoritmo para criptografar ou descriptografar informações.|  
+|key|Em uma matriz, o campo pelo qual os dados armazenados são organizados e acessados.|  
+|key|Uma coluna ou um grupo de colunas que identifica exclusivamente uma linha (chave primária), define a relação entre duas tabelas (chave estrangeira) ou é usada para criar um índice.|  
 |atributo de chave|O atributo de uma dimensão que vincula os atributos não chave na dimensão para medidas relacionadas.|  
 |coluna de chave|Uma coluna cujo conteúdo identifica exclusivamente cada linha em uma tabela.|  
 |gerador de chave|Um componente de hardware ou software que é usado para gerar material de chave de criptografia.|  
@@ -969,7 +975,7 @@ ms.locfileid: "52519480"
 |Microsoft SQL Server|Uma família de sistemas de gerenciamento e análise de banco de dados relacional da Microsoft para soluções de comércio eletrônico, linha de negócios e data warehouse.|  
 |Microsoft SQL Server 2008 Express|Uma versão lightweight e inserível do Microsoft SQL Server 2008.|  
 |Microsoft SQL Server 2008 Express com Advanced Services|Um sistema de gerenciamento e criação de banco de dados relacional da Microsoft para soluções de comércio eletrônico, linha de negócios e data warehouse.|  
-|Microsoft SQL Server 2008 Express with Tools|Uma versão gratuita e fácil de usar da plataforma de dados do SQL Server Express que inclui a ferramenta de gerenciamento gráfico:  SQL Server Management Studio (SMSS) Express.|  
+|Microsoft SQL Server 2008 Express with Tools|Uma versão gratuita e fácil de usar do que a plataforma de dados SQL Server Express que inclui a ferramenta de gerenciamento gráfico: SQL Server Management Studio (SMSS) Express.|  
 |Manuais Online do Microsoft SQL Server|Uma coleção de documentação eletrônica que inclui a documentação completa fornecida com o Microsoft SQL Server.|  
 |Business Intelligence do Microsoft SQL Server|A plataforma de infraestrutura de dados e BI baseada no Microsoft SQL Server que consiste no Microsoft SQL Server Integration Services, Relational Engine, Master Data Services, Reporting Services e no Analysis Services.|  
 |Microsoft SQL Server Compact|Um sistema de gerenciamento e análise de banco de dados relacional da Microsoft para soluções de comércio eletrônico, linha de negócios e data warehouse.|  
@@ -1091,7 +1097,7 @@ ms.locfileid: "52519480"
 |processamento paralelo|Um método de processamento que só pode ser executado em um computador que contém dois ou mais processadores executados simultaneamente. O processamento paralelo difere do multiprocessamento quanto ao modo em que uma tarefa é distribuída nos processadores disponíveis. No multiprocessamento, um processo pode ser dividido em blocos sequenciais, com um processador que gerencia o acesso a um banco de dados, outro que analisa os dados e um terceiro que trata da saída gráfica para a tela. Programadores que trabalham com sistemas que executam o processamento paralelo devem encontrar formas de dividir uma tarefa para que ela seja distribuída uniformemente entre os processadores disponíveis.|  
 |consulta parametrizada|Uma consulta que aceita valores de entrada por meio de parâmetros.|  
 |relatório com parâmetros|Um relatório publicado que aceita valores de entrada por meio de parâmetros.|  
-|filtro de linha com parâmetros|Um filtro de linha disponível com replicação de mesclagem que permite restringir os dados replicados a um Assinante com base em uma função do sistema ou em uma função definida pelo usuário (por exemplo: SUSER_SNAME()).|  
+|filtro de linha com parâmetros|Um filtro de linha disponível com replicação de mesclagem que permite restringir os dados replicados a um assinante com base em uma função do sistema ou função definida pelo usuário (por exemplo: SUSER_SNAME()).|  
 |backup parcial|Um backup de todos os dados no grupo de arquivos primário, de todos os grupos de arquivos de leitura-gravação e de todos os arquivos especificados opcionalmente. Um backup parcial de um banco de dados somente leitura contém apenas o grupo de arquivos primário.|  
 |restauração parcial de banco de dados|Uma restauração de apenas uma parte de um banco de dados que consiste em seu grupo de arquivos primário e um ou mais grupos de arquivos secundários. Os outros grupos de arquivos permanecem permanentemente offline, mas podem ser restaurados posteriormente.|  
 |backup diferencial parcial|Um backup parcial que é diferencial em relação a um backup parcial anterior único (o backup de base). Para um banco de dados somente leitura, o backup diferencial parcial contém apenas o grupo de arquivos primário.|  
@@ -1785,7 +1791,7 @@ ms.locfileid: "52519480"
 |eixo x|A linha de referência horizontal em uma grade, tabela ou gráfico que tem dimensões horizontais e verticais.|  
 |XML for Analysis|Uma especificação que descreve um padrão aberto que dá suporte a fontes de dados que residem na World Wide Web.|  
 |XMLA|Uma especificação que descreve um padrão aberto que dá suporte a fontes de dados que residem na World Wide Web.|  
-|XQuery|Linguagem de consulta funcional que é amplamente aplicável a uma variedade de tipos de dados XML derivados de Quilt, XPath e XQL. Ipedo e Software AG implementam as próprias versões da especificação proposta do W3C para a linguagem XQuery. Também chamada: XML Query, XQL.|  
+|XQuery|Linguagem de consulta funcional que é amplamente aplicável a uma variedade de tipos de dados XML derivados de Quilt, XPath e XQL. Ipedo e Software AG implementam as próprias versões da especificação proposta do W3C para a linguagem XQuery. Também chamado de: Consulta XML, XQL.|  
 |XSL|Um vocabulário XML que é usado para transformar dados XML em outro formato, como HTML, por meio de uma folha de estilo que define as regras de apresentação.|  
 |XSL Transformation|Linguagem declarativa baseada em XML usada para apresentar ou transformar dados XML.|  
 |XSLT|Linguagem declarativa baseada em XML usada para apresentar ou transformar dados XML.|  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], properties
 ms.assetid: 1ed0f84b-b12a-4e49-b65c-a11a99f9093f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e75931e56b62f80716d07fbdf2a7ad73ff10452d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 418266e22ef497c8eb36208e2a766080a156498a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037697"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59940003"
 ---
 # <a name="set-report-server-properties-management-studio"></a>Definir propriedades do servidor de relatório (Management Studio)
   Você pode definir as propriedades do sistema do servidor de relatório no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para habilitar recursos ou definir padrões de servidor.  

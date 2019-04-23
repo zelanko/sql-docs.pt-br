@@ -19,15 +19,15 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], about subscriptions
 - subscriptions [Reporting Services]
 ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 189605c6de3115d873ce6411d3d64da605126e7e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 371cedc8217cbce4eef4c476fd93605d8582f7dc
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037967"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936912"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Assinaturas e entrega (Reporting Services)
   Uma assinatura do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] é uma configuração que fornece um relatório em um momento específico ou em resposta a um evento, em um formato de arquivo que você especificar. Por exemplo, toda quarta-feira, salvar o relatório MonthlySales.rdl como um documento do Microsoft Word em um compartilhamento de arquivo. As assinaturas podem ser usadas para agendar e automatizar a entrega de um relatório e com um conjunto específico de valores de parâmetros do relatório.  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SetVirtualDirectory method
 ms.assetid: 1a25cb1d-38d5-401a-970b-87b642a780e4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f20db632f41024cc3246eeaff93a41ff2cb713ed
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5be09f364a0cfcf881cdbedd1db8f1f099819d0d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016067"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59970972"
 ---
 # <a name="setvirtualdirectory-method-wmi-msreportserverconfigurationsetting"></a>Método SetVirtualDirectory (WMI MSReportServer_ConfigurationSetting)
   Define o nome do diretório virtual de um dado aplicativo.  

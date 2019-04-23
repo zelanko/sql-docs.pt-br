@@ -16,15 +16,15 @@ helpviewer_keywords:
 - report processing [Reporting Services], verifying execution
 - checking report execution
 ms.assetid: 18a98f2f-6b40-454e-9b37-568ed1a96458
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5a61ae676a0fb863d289532a4ce3e28c9751c8fa
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 75ba075478f76dad10a6743bccbfc8424dda5e25
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041357"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59932552"
 ---
 # <a name="verifying-a-report-run"></a>Verificando uma execução de relatório
   Para visualizar informações sobre o status de processamento do relatório, você pode usar os arquivos de log ou consultar as informações sobre status exibidas com o relatório no Gerenciador de Relatórios.  

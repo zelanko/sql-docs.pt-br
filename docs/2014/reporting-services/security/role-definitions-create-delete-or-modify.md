@@ -16,15 +16,15 @@ helpviewer_keywords:
 - roles [Reporting Services], deleting
 - roles [Reporting Services], modifying
 ms.assetid: 3d1d56e6-a283-44a7-8417-36cb4d2c74d1
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e56037bbabff784ed59f8b579f3b3402d63ccfdb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 703615793c1c9ced7252a03e7597b701c977fbdd
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032857"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59945448"
 ---
 # <a name="create-delete-or-modify-a-role-management-studio"></a>Criar, excluir ou modificar uma função (Management Studio)
   O Reporting Services fornece funções predefinidas que definem um nível de acesso a um servidor de relatório. Cada usuário ou grupo que requer acesso ao servidor de relatório faz isso através de uma função que descreve as tarefas que podem ser executadas. As funções são definidas para o servidor de relatório como um todo. Não é possível variar uma definição de função para partes específicas do servidor de relatório nem especificar que uma função seja usada de modo diferente dependendo das circunstâncias.  

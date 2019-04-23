@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], publishing to a library
 - publishing reports [Reporting Services], to a SharePoint library
 ms.assetid: 3f6dfc28-50d8-4231-bd25-871b5f77cce6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fbc55765d8955c47f677c70968b33b35dfa641a1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 24888d53a8e18ba861df2aa0df0261c64445494f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037447"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936812"
 ---
 # <a name="publish-a-report-to-a-sharepoint-library"></a>Publicar um relatório em uma biblioteca do SharePoint
   Para publicar um relatório em um site do SharePoint configurado para integração do SharePoint, você deve definir as propriedades do projeto no Designer de Relatórios. Nas propriedades do projeto, todas as referências a servidores, relatórios e fontes de dados compartilhadas devem ser URLs totalmente qualificadas. Na definição de relatórios, todas as referências a sub-relatórios, relatórios detalhados e recursos como imagens com base na Web devem ser URLs totalmente qualificadas.  

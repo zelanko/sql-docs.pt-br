@@ -19,15 +19,15 @@ helpviewer_keywords:
 - rskeymgmt utility
 - scale-out deployments [Reporting Services]
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cdd2e2bd7d668ca276cdc62d988f7334a6709e6b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4135236979beb320c201f635ad353cbe83a261bd
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038257"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59941192"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>Utilitário rskeymgmt (SSRS)
   Extrai, restaura, cria e exclui a chave simétrica usada para proteger dados confidenciais de servidor de relatório contra acesso não autorizado. Esse utilitário também é usado para unir instâncias de servidor de relatório em uma implantação de expansão. Uma *implantação em expansão de servidor de relatório* se refere a várias instâncias do servidor de relatório que compartilham um único banco de dados do servidor de relatório.  
@@ -148,9 +148,9 @@ rskeymgmt -j -m <remotecomputer> -n <namedreportserverinstance> -u <administrato
 >  Uma implantação em expansão de servidor de relatório se refere a um modelo de implantação onde várias instâncias do servidor de relatório compartilham o mesmo banco de dados do servidor de relatório. Um banco de dados do servidor de relatório pode ser usado por qualquer instância que armazena suas chaves simétricas no banco de dados. Por exemplo, se um banco de dados do servidor de relatório contiver informações de chave para três instâncias do servidor de relatório, todas as três instâncias serão consideradas membros da mesma implantação em expansão.  
   
 #### <a name="joining-report-server-instances-on-the-same-computer"></a>Unindo instâncias do servidor de relatório no mesmo computador  
- Você pode criar uma implantação em expansão para várias de instâncias do servidor de relatório instaladas no mesmo computador. Não defina os argumentos `-u` e `-v` se você estiver unindo instâncias do servidor de relatório instaladas localmente. Os argumentos `-u` e `-v` só são usados quando você estiver unindo uma instância de um computador remoto. Se especificar os argumentos, você obterá o seguinte erro: "As credenciais do usuário não podem ser usadas para conexões locais".  
+ Você pode criar uma implantação em expansão para várias de instâncias do servidor de relatório instaladas no mesmo computador. Não defina os argumentos `-u` e `-v` se você estiver unindo instâncias do servidor de relatório instaladas localmente. Os argumentos `-u` e `-v` só são usados quando você estiver unindo uma instância de um computador remoto. Se você especificar os argumentos, você receberá o seguinte erro: "As credenciais do usuário não podem ser usadas para conexões locais".  
   
- O exemplo a seguir ilustra a sintaxe para criar uma implantação em expansão que usa várias instâncias locais. Neste exemplo, <`initializedinstance`> é o nome de uma instância já iniciada para usar o banco de dados do servidor de relatório e <`newinstance`> é o nome da instância que você quer adicionar à implantação:  
+ O exemplo a seguir ilustra a sintaxe para criar uma implantação em expansão que usa várias instâncias locais. Neste exemplo, <`initializedinstance`> é o nome de uma instância que já esteja inicializado para usar o banco de dados de servidor de relatório e <`newinstance`> é o nome da instância que você deseja adicionar à implantação:  
   
 ```  
 rskeymgmt -j -i <initializedinstance> -m <computer name> -n <newinstance>  

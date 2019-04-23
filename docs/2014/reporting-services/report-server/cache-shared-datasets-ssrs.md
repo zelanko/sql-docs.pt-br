@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4e7f3faff05a318c302f12ded3a6ec4c864b7054
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ad73f9ac85bcc770b9337b5f84282fc7fc3018a3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012367"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59959582"
 ---
 # <a name="cache-shared-datasets-ssrs"></a>Conjuntos de dados compartilhado em cache (SSRS)
   Os resultados de consultas de um conjunto de dados compartilhado podem ser copiados para um cache para fornecer dados consistentes para vários relatórios e melhorar o tempo de resposta da consulta do conjunto de dados. Como relatórios, você pode configurar um conjunto de dados compartilhado para ser armazenado em cache no primeiro uso ou especificando uma agenda.  

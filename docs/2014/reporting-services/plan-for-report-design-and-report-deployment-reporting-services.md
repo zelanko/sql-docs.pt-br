@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 59b1574f7c302a5cf3adc3bee04881eefd176080
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4347854a56e0d6cb021a3958203d94c28cb96d22
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032007"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936822"
 ---
 # <a name="plan-for-report-design-and-report-deployment-reporting-services-2014"></a>Planejar a criação e a implantação de relatórios (Reporting Services 2014)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece várias abordagens para criar e implantar relatórios. Use este tópico para aprender a planejar um ambiente de criação de relatórios e servidor de relatório que funcionam em conjunto. Este tópico apresenta uma visão geral do suporte para definição de relatório pelos componentes do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Uma definição de relatório é um arquivo XML escrito em RDL ou RDLC. Cada definição de relatório segue uma versão específica de esquema listado no início do arquivo.  
@@ -56,15 +56,15 @@ ms.locfileid: "56032007"
 ##  <a name="bkmk_report_server_rdl_schema_support"></a> Suporte para servidor de relatório e esquema RDL  
  Um arquivo de definição de relatório pode ser implantado em um servidor de relatório do [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] das seguintes maneiras:  
   
--   **Designer de relatórios:** Implanta um relatório do Designer de Relatórios em [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)].  
+-   **Designer de relatórios:** Implantar um relatório no Designer de relatórios no [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)].  
   
--   **Construtor de relatórios:** salve um relatório no servidor de relatório do Construtor de Relatórios.  
+-   **Construtor de relatórios:** Salve um relatório para o servidor de relatório do construtor de relatórios.  
   
--   **Gerenciador de relatórios:** carregue um relatório para um servidor de relatório de modo nativo do Gerenciador de Relatórios.  
+-   **Gerenciador de relatórios:** Carregue um relatório em um servidor de relatório do modo nativo do Gerenciador de relatórios.  
   
--   **SharePoint:** carregue um relatório em um site do SharePoint configurado com um servidor de relatório do modo do SharePoint.  
+-   **SharePoint:** Carregue um relatório em um site do SharePoint que está configurado com um servidor de relatório do modo do SharePoint.  
   
--   **Programaticamente:** publique programaticamente um relatório usando as interfaces API SOAP em um servidor de relatório. Para obter mais informações, consulte [Report Server Web Service](report-server-web-service/report-server-web-service.md).  
+-   **Programaticamente:** Publique programaticamente um relatório usando as interfaces API SOAP para um servidor de relatório. Para obter mais informações, consulte [Report Server Web Service](report-server-web-service/report-server-web-service.md).  
   
  A tabela a seguir lista a versão de esquema com suporte da versão do servidor de relatório.  
   

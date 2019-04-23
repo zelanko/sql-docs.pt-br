@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Adicionar um gráfico de barras ao relatório (construtor de relatórios) | Microsoft Docs'
+title: 'Tutorial: Adicionar um gráfico de barras ao relatório (Construtor de Relatórios) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6bd2d801c4f6aae8d87764bdefbe153f3d9743f8
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 0b21826cb926dbd5f8b0315f490b20850c6ccd23
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295984"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59938152"
 ---
-# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Tutorial: Adicionar um gráfico de barras ao relatório (construtor de relatórios)
+# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Tutorial: Adicionar um gráfico de barras ao relatório (Construtor de Relatórios)
   Um gráfico de barras exibe os dados de categoria horizontalmente. Ele pode ajudar a:  
   
 -   Melhorar a legibilidade de nomes de categorias longos.  
@@ -55,7 +55,7 @@ ms.locfileid: "56295984"
 10. [Salvar o relatório](#Save)  
   
 > [!NOTE]  
->  Neste tutorial, as etapas do assistente são consolidadas em um procedimento. Para obter instruções passo a passo sobre como navegar até um servidor de relatório, criar um conjunto de dados e escolha uma fonte de dados, consulte o primeiro tutorial nesta série: [Tutorial: Criando um relatório de tabela básica &#40;construtor de relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  Neste tutorial, as etapas do assistente são consolidadas em um procedimento. Confira instruções passo a passo sobre como navegar até um servidor de relatório, como criar um conjunto de dados e escolher uma fonte de dados no primeiro tutorial desta série: [Tutorial: Ciar um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
  Tempo estimado para concluir este tutorial: 15 minutos.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "56295984"
   
 2.  Clique em **Barra**e em **Avançar**.  
   
-     Sobre o **organizar campos de gráfico** página, há quatro campos na **campos disponíveis** painel: FirstName, LastName, SalesYear2009 e SalesYear2008.  
+     Na página **Organizar campos de gráfico**, há quatro campos no painel **Campos disponíveis**: FirstName, LastName, SalesYear2009 e SalesYear2008.  
   
 3.  Arraste LastName para o painel Categorias.  
   
@@ -146,7 +146,7 @@ ms.locfileid: "56295984"
   
  O relatório exibe o gráfico de barras para as vendas de cada vendedor nos anos de 2008 e 2009. O comprimento da barra corresponde ao total de vendas.  
   
-##  <a name="AllValues"></a> 3. Modificar a exibição de nomes no eixo vertical  
+##  <a name="AllValues"></a> 3. Modificar a exibição de nomes no eixo Vertical  
  Por padrão, apenas alguns valores no eixo vertical são exibidos. É possível alterar o gráfico para exibir todas as categorias.  
   
 #### <a name="to-display-all-sales-persons-along-the-category-axis-of-a-bar-chart"></a>Para exibir todas as pessoas de vendas junto com o eixo da categoria de um gráfico de barras  
@@ -194,7 +194,7 @@ ms.locfileid: "56295984"
 > [!NOTE]  
 >  Se você não conseguir ler os nomes dos vendedores no eixo vertical, poderá aumentar o tamanho do gráfico ou alterar as opções de formatação dos rótulos do eixo.  
   
-##  <a name="Sort"></a> 4. Alterar a ordem de classificação de nomes no eixo vertical  
+##  <a name="Sort"></a> 4. Alterar a ordem de classificação para nomes no eixo Vertical  
  Quando você classifica dados em um gráfico, está alterando a ordem de valores no eixo de categoria.  
   
 #### <a name="to-sort-the-names-in-alphabetical-order-on-the-bar-chart"></a>Para classificar os nomes em ordem alfabética no gráfico de barras  

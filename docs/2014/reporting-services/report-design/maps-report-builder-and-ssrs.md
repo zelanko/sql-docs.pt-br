@@ -15,15 +15,15 @@ f1_keywords:
 - MICROSOFT.REPORTDESIGNER.MAPPOLYGON.CENTERPOINTTEMPLATE
 - "10500"
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ef5cc5ba452ddd29bd961cfd693a89b2b7f3e56c
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 90a8f755b49e0b4f931325de25abea3654cc7d1f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291244"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59970892"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Mapas (Construtor de Relatórios e SSRS)
   Para visualizar dados comerciais em um plano de fundo geográfico, você pode acrescentar um mapa a seu relatório. O tipo de mapa selecionado depende de qual informação você deseja comunicar no seu relatório. Você pode adicionar um mapa que só exibe locais ou um mapa de bolhas que varia o tamanho da bolha com base no número de residências em uma área, ou um mapa de marcador que varia o estilo de marcador com base no produto mais lucrativo para cada loja, ou um mapa de linha que exibe rotas entre lojas.  
@@ -32,7 +32,7 @@ ms.locfileid: "56291244"
   
  ![rs_MapElements](../media/rs-mapelements.gif "rs_MapElements")  
   
- Para começar a usar um mapa imediatamente, consulte [Tutorial: Relatório de mapa &#40;construtor de relatórios&#41; ](../tutorial-map-report-report-builder.md) ou [(construtor de relatórios e SSRS) de exemplos de relatórios](https://go.microsoft.com/fwlink/?LinkId=198283).  
+ Para começar a usar um mapa imediatamente, confira [Tutorial: Relatório de mapa &#40;Construtor de Relatórios&#41; ](../tutorial-map-report-report-builder.md) ou [Exemplos de relatório (Construtor de Relatórios e SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  Você pode salvar mapas separadamente de um relatório como partes de relatório.  [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -81,9 +81,9 @@ ms.locfileid: "56291244"
 -   **Relatórios da galeria de mapas.** Os dados espaciais são inseridos em relatórios localizados na galeria de mapas. Por padrão, a Galeria de Mapas está instalada em *\<drive>*:\Program Files\Microsoft SQL Server\Report Builder \MapGallery.  
   
     > [!NOTE]  
-    >  Esse recurso de mapeamento do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa dados de arquivos de forma TIGER/Line fornecidos pela Agência de Recenseamento norte-americana ([http://www.census.gov/](http://www.census.gov/)). Os arquivos de forma TIGER/Line são um extrato das informações geográficas e cartográficas selecionadas do banco de dados Census MAF/TIGER. Esses arquivos de forma podem ser obtidos sem encargos com a Agência de Recenseamento norte-americana. Para saber mais sobre os arquivos de forma TIGER/Line, visite [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). As informações de limites nos arquivos de forma Tiger/Line destinam-se apenas a fins de coleta de dados estatísticos e tabulação; a representação e a designação dessas informações para propósitos estatísticos não constituem uma determinação de autoridade de jurisdição ou direitos de propriedade ou qualificação e elas não são descrições de terra legais. Census TIGER e TIGER/Line são marcas registradas da Agência de Recenseamento norte-americana.  
+    >  Esse recurso de mapeamento do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa dados de arquivos de forma TIGER/Line fornecidos pela Agência de Recenseamento norte-americana ([http://www.census.gov/](http://www.census.gov/)). Os arquivos de forma TIGER/Line são um extrato das informações geográficas e cartográficas selecionadas do banco de dados Census MAF/TIGER. Arquivos de forma TIGER/Line estão disponíveis sem custos adicionais dos Estados Unidos Agência de Recenseamento norte-americana. Para saber mais sobre os arquivos de forma TIGER/Line, visite [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). As informações de limites nos arquivos de forma Tiger/Line destinam-se apenas a fins de coleta de dados estatísticos e tabulação; a representação e a designação dessas informações para propósitos estatísticos não constituem uma determinação de autoridade de jurisdição ou direitos de propriedade ou qualificação e elas não são descrições de terra legais. Census TIGER e TIGER/Line são marcas registradas dos EUA Agência de Recenseamento norte-americana.  
   
--   **Arquivos de forma ESRI.** Os arquivos de forma ESRI contêm dados compatíveis com o Environmental Systems Research Institute, Inc. ESRI (Environmental Systems Research Institute, Inc.). Os arquivos de forma ESRI referem-se a um conjunto de arquivos. Dados no arquivo .shp especificam as formas geográficas ou geométricas. Os dados no arquivo .dbf fornecem atributos para as formas. Para exibir um mapa em modo design ou executar um mapa do servidor de relatório, ambos os arquivos devem estar na mesma pasta. Quando você adicionar dados espaciais de um arquivo .shp em seu sistema de arquivos local, os dados espaciais serão incorporados em seu relatório. Para recuperar dados espaciais dinamicamente em tempo de execução, carregue os arquivos de forma no servidor de relatório e especifique-os como a fonte de dados espaciais. Para obter mais informações, consulte [Localizando arquivos de forma ESRI para um mapa](https://go.microsoft.com/fwlink/?linkid=178814).  
+-   **Arquivos de forma ESRI.** Os arquivos de forma ESRI contêm dados compatíveis com o Environmental Systems Research Institute, Inc. (ESRI) Formato de dados espaciais de arquivo de forma. Os arquivos de forma ESRI referem-se a um conjunto de arquivos. Dados no arquivo .shp especificam as formas geográficas ou geométricas. Os dados no arquivo .dbf fornecem atributos para as formas. Para exibir um mapa em modo design ou executar um mapa do servidor de relatório, ambos os arquivos devem estar na mesma pasta. Quando você adicionar dados espaciais de um arquivo .shp em seu sistema de arquivos local, os dados espaciais serão incorporados em seu relatório. Para recuperar dados espaciais dinamicamente em tempo de execução, carregue os arquivos de forma no servidor de relatório e especifique-os como a fonte de dados espaciais. Para obter mais informações, consulte [Localizando arquivos de forma ESRI para um mapa](https://go.microsoft.com/fwlink/?linkid=178814).  
   
 -   **Dados espaciais do SQL Server armazenados em um banco de dados.** É possível usar uma consulta que especifique tipos de dados `SQLGeometry` ou `SQLGeography` de um banco de dados relacional [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Visão geral dos tipos de dados espaciais](../../relational-databases/spatial/spatial-data-types-overview.md) nos [Manuais Online do SQL Server](https://go.microsoft.com/fwlink/?linkid=98335).  
   
@@ -244,7 +244,7 @@ ms.locfileid: "56291244"
   
  Se você não visualizar o resultado desejado quando quiser exibir um relatório de mapa, as causas-raiz poderão vir vários problemas. Para ajudá-lo a isolar e entender cada problema, é útil trabalhar com uma camada de cada vez. Use o painel de Mapa para selecionar uma camada e alternar sua visibilidade facilmente.  
   
- Para obter mais informações sobre problemas de relatório de mapa, consulte [solucionar problemas de relatórios: Mapear relatórios &#40;relatórios e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ Saiba mais sobre problemas com relatório de mapa em [Solucionar problemas de relatórios: Mapear relatórios &#40;Construtor de Relatórios e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
 
   
@@ -274,6 +274,6 @@ ms.locfileid: "56291244"
   
  [Adicionar locais personalizados a um mapa &#40;Construtor de Relatórios e SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
- [Solucionar problemas de relatórios: Mapear relatórios &#40;relatórios e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Solucionar problemas de relatórios: Mapear relatórios &#40;Construtor de Relatórios e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

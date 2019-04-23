@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - multiple projects
@@ -21,12 +19,12 @@ ms.assetid: 731c70e5-ed51-46de-bb69-cbf5aea18dda
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bca0c74ab978b6f47e68221987777f1818a95b7b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2bd661506dbb792eb55194c61d7284d619e63a5f
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542581"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156802"
 ---
 # <a name="performing-batch-operations-xmla"></a>Executando operações em lote (XMLA)
   Você pode usar o [lote](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/batch-element-xmla) comando XML for Analysis (XMLA) para executar vários comandos XMLA usando um único XMLA [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) método. Você pode executar vários comandos contidos no comando `Batch` como uma única transação ou em transações individuais para cada comando, em série ou em paralelo. Você também pode especificar associações fora de linha e outras propriedades na `Batch` comando para processar vários [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objetos.  
@@ -39,7 +37,7 @@ ms.locfileid: "52542581"
   
  Se algum comando falhar em um lote transacional, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] reverterá qualquer comando de `Batch` comando executado antes do comando que falhou e o `Batch` comando terminará imediatamente. Qualquer comando de `Batch` que ainda não tiver sido executado não o será. Após o término do comando `Batch`, `Batch` informará qualquer erro ocorrido no comando que falhou.  
   
- **Não transacional**  
+ **Nontransactional**  
  Se o `Transaction` atributo é definido como false, o `Batch` comando executa cada comando contido pelo `Batch` comando em um separado de uma transação *não transacionais* em lotes. Se qualquer comando falhar em um lote não transacional, `Batch` comando continuará a executar comandos após o que falhou. Depois que o comando `Batch` tenta executar todos os comandos que contidos por `Batch`, o comando `Batch` informará qualquer erro ocorrido.  
   
  Todos os resultados retornados por comandos contidos em um comando `Batch` são retornados na mesma ordem em que os comandos estão contidos em `Batch`. Os resultados retornados por um comando `Batch` variam caso `Batch` seja transacional ou não transacional.  

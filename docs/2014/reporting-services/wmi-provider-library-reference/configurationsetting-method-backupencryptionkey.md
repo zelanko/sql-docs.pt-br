@@ -16,15 +16,15 @@ topic_type:
 helpviewer_keywords:
 - BackupEncryptionKey method
 ms.assetid: da1d5dae-2517-448e-96fb-5379c93222ea
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 268d57207280689bb1c9b2df25013d6eca435f4a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b4d05dd66aa795579172aba5472a0f38c5f320bc
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016117"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59932932"
 ---
 # <a name="backupencryptionkey-method-wmi-msreportserverconfigurationsetting"></a>Método BackupEncryptionKey (WMI MSReportServer_ConfigurationSetting)
   Efetua backup da chave de criptografia da instância do servidor de relatório especificada. A chave de criptografia é armazenada criptografada com uma senha.  

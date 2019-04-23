@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e949a8610c7320830b33d21674f0fda79d281073
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 0053228f5d52f2a1dad8e41e2406d34fdaf9b2b2
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292575"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59940402"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>Exibição do design de conjunto de dados compartilhados (Construtor de Relatórios)
   A janela Design do Conjunto de Dados Compartilhado ajuda a criar uma consulta de conjunto de dados que você pode compartilhar com os outros. A janela permite selecionar uma fonte de dados compartilhada, especificar propriedades para o conjunto de dados compartilhado e criar uma consulta no designer de consulta.  
@@ -26,7 +26,7 @@ ms.locfileid: "56292575"
  Para obter mais informações sobre como trabalhar com dados em um relatório, consulte [adicionar dados a um relatório &#40;construtor de relatórios e SSRS&#41;](../report-data/report-datasets-ssrs.md).  
   
 ##  <a name="Ribbon"></a> A Faixa de Opções  
- A Faixa de Opções o ajuda a localizar os comandos de que você precisa para executar uma tarefa. Os comandos são organizados nos seguintes grupos lógicos: Conexão, Conjunto de dados e Designer de consultas.  
+ A Faixa de Opções o ajuda a localizar os comandos de que você precisa para executar uma tarefa. Os comandos são organizados nos seguintes grupos lógicos: Conexão, conjunto de dados e Designer de consulta.  
   
 ### <a name="connection"></a>Conexão  
  Use o botão **Selecionar** no grupo Conexão para selecionar uma fonte de dados compartilhada no relatório ou navegar até uma fonte de dados compartilhada no servidor de relatório.  

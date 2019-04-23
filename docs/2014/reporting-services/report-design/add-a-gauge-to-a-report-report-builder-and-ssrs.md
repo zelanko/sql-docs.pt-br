@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 45da4fef-2b02-40e1-977c-f8f80d87155e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f779bd7cbec18583dcd0c9f30ea8b90750f506ff
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: cc9b19a2693f28ccbfd3811ba81f8fb7b90de61b
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287924"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59932339"
 ---
 # <a name="add-a-gauge-to-a-report-report-builder-and-ssrs"></a>Adicionar um medidor a um relatório (Construtor de Relatórios e SSRS)
   Para resumir dados em um formato visual, use uma região de dados do medidor. Depois de adicionar uma região de dados do medidor à superfície de design, você pode arrastar campos do conjunto de dados do relatório para um painel de dados no medidor.  

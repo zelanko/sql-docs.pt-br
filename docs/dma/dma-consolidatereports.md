@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: fac9636b336c2571e159c72c79d482768bf2fbe6
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: 15513348d4a747b0335bca8dd6345070e2c84ef0
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618173"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60159002"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Avaliar uma empresa e consolidar relatórios de avaliação com o DMA
 
@@ -71,18 +71,22 @@ Esse inventário pode estar em uma das duas formas:
 - Tabela do SQL Server
 
 ### <a name="if-using-a-csv-file"></a>Se usando um arquivo CSV
+
 > [!IMPORTANT]
->
 > Certifique-se de que o arquivo de inventário é salvo como arquivo separados por vírgulas (CSV).
 >
 > Para instâncias padrão, defina o nome da instância MSSQLSERVER.
->
+
 
 Ao usar um arquivo csv para importar os dados, verifique se há apenas duas colunas de dados - **nome da instância** e **nome do banco de dados**, e que as colunas não tem linhas de cabeçalho.
  
  ![conteúdo do arquivo CSV](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
 
-### <a name="if-using-sql-server-table"></a>Se usando a tabela do SQL Server
+### <a name="if-using-a-sql-server-table"></a>Se usar uma tabela do SQL Server
+
+> [!IMPORTANT]
+> Para instâncias padrão, defina o nome da instância MSSQLSERVER.
+
 Criar um banco de dados chamado **EstateInventory** e uma tabela chamada **DatabaseInventory**. A tabela que contém esses dados de inventário pode ter qualquer número de colunas, contanto que existam quatro colunas seguintes:
 - ServerName
 - InstanceName
@@ -161,8 +165,8 @@ Você também pode usar o script LoadWarehouse para fornecer as instruções TSQ
 
 1. Abra o modelo de DMA relatórios Power BI no Power BI Desktop.
 2. Insira os detalhes do servidor que apontam para seus **DMAWarehouse** do banco de dados e, em seguida, selecione **carga**.
-   
-      ![Modelo do Power BI DMA relatórios carregados](../dma/media//dma-consolidatereports/dma-reports-powerbi-template-loaded.png)
+
+   ![Modelo do Power BI DMA relatórios carregados](../dma/media//dma-consolidatereports/dma-reports-powerbi-template-loaded.png)
 
    Depois que o relatório tiver atualizado os dados a partir de **DMAWarehouse** banco de dados, você verá um relatório semelhante ao seguinte.
 

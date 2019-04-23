@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 95ce70bf8535db07eef8d45faa1d61eab2a43697
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: efed574d2fc68fc88d5352b6bb6db09e6cab4076
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292434"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59963302"
 ---
 # <a name="lookup-function-report-builder-and-ssrs"></a>Função Lookup (Construtor de Relatórios e SSRS)
   Retorna o primeiro valor correspondente para o nome especificado de um conjunto de dados que contém pares de nome/valor.  

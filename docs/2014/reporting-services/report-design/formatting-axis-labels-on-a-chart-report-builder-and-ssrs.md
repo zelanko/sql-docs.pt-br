@@ -25,15 +25,15 @@ f1_keywords:
 helpviewer_keywords:
 - "10140"
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6d0ec435926a3b7604aa0d6397b72ef6886da21a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 80cc037b98e527815f1b0b2e7010c1411da03c16
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292614"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59970982"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Formatando rótulos dos eixos de um gráfico (Construtor de Relatórios e SSRS)
   Os tipos de gráficos baseados em coordenadas (colunas, barras, áreas, pontos, linhas e intervalo) possuem dois eixos usados para categorizar e exibir relações de dados. Diferentes tipos de formatação são aplicados a cada eixo.  

@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Adicionar um gráfico de colunas ao relatório (construtor de relatórios) | Microsoft Docs'
+title: 'Tutorial: Adicionar um gráfico de colunas ao relatório (Construtor de Relatórios) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: feff14049b3fa7a00d3d73bbe493aaded3748d2a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 24c8e48ef26d3db2bc7662a36d40725c84b1bbc7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287084"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936852"
 ---
-# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Tutorial: Adicionar um gráfico de colunas ao relatório (construtor de relatórios)
+# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Tutorial: Adicionar um gráfico de colunas ao relatório (Construtor de Relatórios)
   Um gráfico de coluna exibe uma série como um conjunto de barras verticais agrupadas por categoria. Um gráfico de coluna pode ser útil para:  
   
 -   Mostrar alterações de dados em um período de tempo.  
@@ -53,7 +53,7 @@ ms.locfileid: "56287084"
 9. [Salvar o relatório](#Save)  
   
 > [!NOTE]  
->  Neste tutorial, as etapas do assistente são consolidadas em um procedimento. Para obter instruções passo a passo sobre como navegar até um servidor de relatório, escolha uma fonte de dados e criar um conjunto de dados, consulte o primeiro tutorial nesta série: [Tutorial: Criando um relatório de tabela básica &#40;construtor de relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  Neste tutorial, as etapas do assistente são consolidadas em um procedimento. Confira instruções passo a passo sobre como navegar até um servidor de relatório, como escolher uma fonte de dados e como criar um conjunto de dados no primeiro tutorial desta série: [Tutorial: Ciar um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
  Tempo estimado para concluir este tutorial: 15 minutos.  
   

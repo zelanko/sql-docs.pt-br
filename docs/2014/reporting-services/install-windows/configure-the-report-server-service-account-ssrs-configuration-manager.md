@@ -1,7 +1,7 @@
 ---
 title: Configurar a conta de serviço do servidor de relatório (Gerenciador de Configurações do SSRS) | Microsoft Docs
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.prod: sql-server-2014
@@ -9,12 +9,12 @@ ms.technology: ''
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/10/2018
-ms.openlocfilehash: 19eca52c1686f218b2c59449b139d684700822b5
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: cb867bfdfc8d9ecb686d3ecc52c48c80bc60d9cd
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328956"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59970142"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>Configurar a conta de serviço do servidor de relatório (Gerenciador de configurações SSRS)
 
@@ -66,7 +66,7 @@ ms.locfileid: "53328956"
   
 - [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) nos Manuais Online do SQL Server.  
   
-- [Os serviços e Service Accounts Security Planning Guide](http://usergroup.doubletake.com/file_cabinet/download/0x000021733).  
+- [The Services and Service Accounts Security Planning Guide](http://usergroup.doubletake.com/file_cabinet/download/0x000021733) (O guia de planejamento de segurança de serviços e de contas de serviço).  
   
 ## <a name="updating-an-expired-password"></a>Atualizando uma senha expirada
 

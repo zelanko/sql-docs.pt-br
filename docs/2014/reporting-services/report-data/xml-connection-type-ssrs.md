@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1be357ab864a0d7249a2f9d4529591813b4a01ed
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e7442847c4c96148635320335956a02cec2bad87
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028007"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59945392"
 ---
 # <a name="xml-connection-type-ssrs"></a>Tipo de conexão XML (SSRS)
   Para incluir dados em uma fonte de dados XML em seu relatório, é necessário ter um conjunto de dados baseado na fonte de dados do relatório do tipo XML. Esse tipo interno de fonte de dados é baseado na extensão de dados XML. Use esse tipo de fonte de dados para se conectar e recuperar dados de documentos XML, serviços Web ou XML inseridos na consulta.  
@@ -115,7 +115,7 @@ ms.locfileid: "56028007"
 ### <a name="requirements-for-retrieving-xml-web-service-data"></a>Requisitos para recuperar os dados do serviço Web XML  
  A extensão de processamento de dados XML não detecta o esquema para você. Portanto, você deve ter alguma maneira de descobrir quais métodos SOAP recuperarão os dados desejados. Você também deve entender o namespace ou esquema de endereçamento que o serviço Web usa para seus dados.  
   
- Para um serviço Web, você pode fornecer um elemento <`Query`> que especifica um método a ser chamado ou uma ação SOAP. Você pode deixar a consulta em branco e usar a consulta padrão se os dados XML tiverem uma estrutura hierárquica que gera os dados que você deseja usar em seu relatório. Os atributos e valores de nó do elemento XML recuperados quando a consulta é executada são mapeados para os campos do conjunto de dados usados no seu relatório.  
+ Para um serviço Web, você pode fornecer um <`Query`> elemento que especifica um método a ser chamado ou uma ação de SOAP. Você pode deixar a consulta em branco e usar a consulta padrão se os dados XML tiverem uma estrutura hierárquica que gera os dados que você deseja usar em seu relatório. Os atributos e valores de nó do elemento XML recuperados quando a consulta é executada são mapeados para os campos do conjunto de dados usados no seu relatório.  
   
 ### <a name="requirements-for-retrieving-xml-document-data"></a>Requisitos para recuperar os dados de documento XML  
  Usando o protocolo http, o servidor deve retornar dados XML ou os dados XML devem ser inseridos no elemento XML `Query`. Se você se referir a um documento XML diretamente usando o protocolo http, a extensão deverá ser .xml.  

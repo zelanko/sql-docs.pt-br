@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: ef19d96e-9f00-4434-950e-152dda9c1ced
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3dc1cfa85fde084327567e36fea728d9c76ef3f6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3c232740598e1c9d1f8911c5fa5662d4ef82d5b2
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028247"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948792"
 ---
 # <a name="schedules-page-report-manager"></a>Página Agendas (Gerenciador de Relatórios)
   Use a página Agendas para criar, modificar, excluir, pausar ou reiniciar agendas compartilhadas. Uma agenda compartilhada é uma agenda nomeada que você pode criar e gerenciar separadamente de relatórios, assinaturas e outros processos que consomem informações de agenda. Os usuários podem selecionar agendas compartilhadas que você fornece.  

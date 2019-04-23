@@ -14,15 +14,15 @@ helpviewer_keywords:
 - modifying role assignments
 - deleting role assignments
 ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 88c864b3e3243ab7cb380b4af5b092757585115d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2f22a5af8401a0cf16c508f805dbb38ee9970780
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023727"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59932793"
 ---
 # <a name="create-and-manage-role-assignments"></a>Criar e gerenciar atribuições de função
   Uma *atribuição de função* é uma política de segurança que determina se um usuário ou grupo pode acessar um item de servidor de relatório específico ou executar uma operação. Uma atribuição de função consiste em um único nome de conta de usuário ou grupo e em uma ou mais definições de função.  

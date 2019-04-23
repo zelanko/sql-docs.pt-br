@@ -14,15 +14,15 @@ helpviewer_keywords:
 - modifying role assignments
 - deleting role assignments
 ms.assetid: 523bdd32-92cb-4b48-a3a9-d58b2385bde7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 19f87ffa52dcc8cc1434afa7e6519e93bd580cb5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f8810a4df8c04703667e1b817931ada65fda0e5f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026887"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59945422"
 ---
 # <a name="modify-or-delete-a-role-assignment-report-manager"></a>Modificar ou excluir uma atribuição de função (Gerenciador de Relatórios)
   Uma atribuição de função mapeia uma conta de grupo ou usuário para uma definição de função predefinida que inclui as tarefas que podem ser executadas. Ela determina os tipos de operações que um usuário pode executar com relação a uma pasta, relatório, modelo ou outro tipo de conteúdo. Para criar, modificar ou excluir atribuições de função, use o Gerenciador de Relatórios. Após criar uma atribuição de função para um determinado usuário ou grupo, você pode modificá-la posteriormente selecionando uma função diferente. Para revogar permissões em um servidor de relatório, exclua uma atribuição de função desse servidor.  

@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Adicionar um gráfico de pizza ao relatório (construtor de relatórios) | Microsoft Docs'
+title: 'Tutorial: Adicionar um gráfico de pizza ao relatório (Construtor de Relatórios) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 65a0db21f0334c6782c7888e7484f91058424cd1
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 30966fc1ccc592539e543869aef03f555ca59b2d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290444"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59959502"
 ---
-# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Tutorial: Adicionar um gráfico de pizza ao relatório (construtor de relatórios)
+# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Tutorial: Adicionar um gráfico de pizza ao relatório (Construtor de Relatórios)
   Gráficos de pizza e gráficos de rosca exibem dados como uma proporção do todo. Os gráficos de pizza são os mais usados para fazer comparações entre grupos. Gráficos de pizza e de rosca, além dos gráficos de pirâmide e funil, constituem um grupo de gráficos conhecidos como gráficos de forma. Os gráficos de forma não têm nenhum eixo. Quando um campo numérico é solto em um gráfico de forma, o gráfico calcula a porcentagem de cada valor com relação ao total.  
   
  Se houver muitos pontos de dados em um gráfico de pizza, os rótulos dos pontos de dados podem ficar muito cheios para serem lidos. Nesse caso, use um gráfico de linha. Use gráficos de pizza somente depois de ter agregado seus dados em alguns pontos de dados.  
@@ -45,7 +45,7 @@ ms.locfileid: "56290444"
 7.  [Salvar o relatório](#Save)  
   
 > [!NOTE]  
->  Neste tutorial, as etapas do assistente são consolidadas em dois procedimentos. Para obter instruções passo a passo sobre como navegar até um servidor de relatório, adicionar uma fonte de dados e adicionar um conjunto de dados, consulte o primeiro tutorial nesta série: [Tutorial: Criando um relatório de tabela básica &#40;construtor de relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  Neste tutorial, as etapas do assistente são consolidadas em dois procedimentos. Confira instruções passo a passo sobre como navegar até um servidor de relatório, como adicionar uma fonte de dados e um conjunto de dados no primeiro tutorial desta série: [Tutorial: Ciar um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
  Tempo estimado para concluir este tutorial: 10 minutos  
   

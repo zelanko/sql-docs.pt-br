@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Report Builder 1.0, configuring access
 - configuring servers [Reporting Services]
 ms.assetid: a79003d0-c905-4d4c-9560-93a7cc1e1dd4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 421c499b5135bc6022eafbc8d7fa6bf4456ca19a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ce13c158cbc6d359a319a816aee9a01decabdc0b
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020198"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59938342"
 ---
 # <a name="configure-report-builder-access"></a>Configurar o acesso ao Construtor de Relatórios
   O Construtor de Relatórios é uma ferramenta de criação de relatórios ad hoc instalada com um servidor de relatório do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configurado para o modo nativo ou o modo de integração no SharePoint.  

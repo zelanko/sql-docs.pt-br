@@ -11,11 +11,11 @@ author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4c1b433ae2023f544073e285cca9594c980dd83f
-ms.sourcegitcommit: 57f7e5f25161dbb4cc446e751ea74b1ac5f86165
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2019
-ms.locfileid: "59476712"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59945372"
 ---
 # <a name="analyze-in-excel"></a>Analisar no Excel
 

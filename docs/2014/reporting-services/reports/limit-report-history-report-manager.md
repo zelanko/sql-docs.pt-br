@@ -14,15 +14,15 @@ helpviewer_keywords:
 - historical data [Reporting Services]
 - displaying report history
 ms.assetid: 8e255792-d9ef-496f-a26c-9e969c1209a0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e7f600e646e4690ed735b908861bd61516337cfd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: fe038f264a1bf748414715b0f51a32c5f14531bf
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042857"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59938114"
 ---
 # <a name="limit-report-history-report-manager"></a>Limitar o histórico de relatório (Gerenciador de Relatórios)
   O histórico de relatórios é uma coleção de instantâneos de relatórios que você cria. Você pode criar um histórico de relatórios sob demanda ou agendar com que frequência um instantâneo é criado e adicionado ao histórico de relatórios.  

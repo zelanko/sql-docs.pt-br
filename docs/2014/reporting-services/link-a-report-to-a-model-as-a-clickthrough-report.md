@@ -12,15 +12,15 @@ helpviewer_keywords:
 - clickthrough reports, customizing
 - clickthrough reports, templates
 ms.assetid: 3af42de3-67ef-41c2-bc8a-7045baec6f63
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7d0ec49168e4a23a019eb91fc708e286bf0e1ac4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 90b21c6fa21322afe1d9351e73460fce1a4592f8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037037"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59944152"
 ---
 # <a name="link-a-report-to-a-model-as-a-clickthrough-report"></a>Vincular um relatório a um modelo como um relatório de clickthrough
   Em vez de usar os modelos de relatório de clickthrough padrão, você pode criar um relatório Construtor de Relatórios e vinculá-lo a uma entidade específica no modelo de relatório. Quando a pessoa que está exibindo o relatório clica nos dados interativos do relatório principal, esse relatório é exibido como relatório de clickthrough. Para vincular um relatório a uma entidade, use o Gerenciador de Relatórios [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  

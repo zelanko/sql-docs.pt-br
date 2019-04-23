@@ -8,22 +8,22 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 493e63b9-ecd0-4054-97ec-92d84e9b8182
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 89fd4a6500484ca1a07ca781233675683d2a5750
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 1cf085763acdde040abd8e91760ac954d3a4fb8e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295754"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59967302"
 ---
 # <a name="matrices-report-builder-and-ssrs"></a>Matrizes (Construtor de Relatórios e SSRS)
   Use uma matriz para exibir dados agrupados e informações de resumo. É possível agrupar dados por vários campos ou expressões em grupos de linhas e de colunas. As matrizes oferecem funcionalidade semelhante às tabelas de referência cruzada e dinâmicas. Em tempo de execução, conforme os dados e as regiões de dados do relatório são combinados, uma matriz cresce horizontalmente e verticalmente na página. Os valores das células da matriz exibem valores de agregação com escopo para a interseção dos grupos de linhas e de colunas aos quais a célula pertence. É possível formatar as linhas e as colunas para realçar os dados que você deseja enfatizar. Também é possível incluir alternâncias detalhadas que inicialmente ocultam dados de detalhes. Em seguida, o usuário pode clicar nas alternâncias para exibir mais ou menos detalhes, conforme o necessário.  
   
  Após o design inicial, é possível continuar a desenvolver uma matriz para melhorar a experiência de exibição para o usuário. Para obter mais informações, consulte [Controlando a exibição da região de dados Tablix em uma página do relatório &#40;Construtor de Relatórios e SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md).  
   
- Para começar rapidamente com matrizes, consulte [Tutorial: Criando um relatório de matriz &#40;construtor de relatórios&#41;](../tutorial-creating-a-matrix-report-report-builder.md).  
+ Confira uma introdução rápida a matrizes no [Tutorial: Criar um relatório de matriz &#40;Construtor de Relatórios&#41;](../tutorial-creating-a-matrix-report-report-builder.md).  
   
  Os relatórios de exemplo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluem vários relatórios que usam matrizes. Para saber mais sobre matrizes, explore a definição de relatório de um relatório de exemplo no Construtor de Relatórios ou no Designer de Relatórios, ou visualize o relatório renderizado no Construtor de Relatórios ou no Designer de Relatórios. Para obter mais informações sobre o download de relatórios de exemplo, consulte os [exemplos do Reporting Services (SSRS)](https://go.microsoft.com/fwlink/?LinkID=198283).  
   

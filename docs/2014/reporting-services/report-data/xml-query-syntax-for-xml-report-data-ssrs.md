@@ -13,15 +13,15 @@ helpviewer_keywords:
 - xmldp [Reporting Services]
 - XML [Reporting Services], data retrieval
 ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ac63791bd33d9f6f774cd1d56601a28d3683b249
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 717852ad4cb5f63ee4ac84820f1af00cfa5f2d22
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037137"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59970992"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>Sintaxe de consulta XML para dados de relatório XML (SSRS)
   No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], é possível criar conjuntos de dados para fontes de dados XML. Após definir uma fonte de dados, crie uma consulta para o conjunto de dados. Dependendo do tipo de dados XML apontado pela fonte de dados, a consulta do conjunto de dados é criada incluindo uma `Query` XML ou um caminho de elemento. Um XML `Query` começa com um  **\<consulta >** de marca e inclui namespaces e elementos XML que variam de acordo com a fonte de dados. Um caminho de elemento não depende do namespace e especifica quais nós e atributos de nós devem ser usados nos dados XML subjacentes com uma sintaxe do tipo XPath. Para obter mais informações sobre os caminhos de elemento, consulte [Sintaxe do caminho de elemento para dados de relatório XML &#40;SSRS&#41;](report-data-ssrs.md).  

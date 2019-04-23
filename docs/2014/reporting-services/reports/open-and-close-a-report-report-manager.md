@@ -12,15 +12,15 @@ helpviewer_keywords:
 - closing reports
 - reports [Reporting Services], opening
 ms.assetid: a9db1caf-1e7d-41ee-9aed-e09fd0712f9b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 41d67805a939cd6b5826dd227cc02e348e48dc32
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 11f2aa43220ef419325f64c368f80ea7691b3b65
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034388"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947872"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>Abrir e fechar um relatório (Gerenciador de Relatórios)
   Você pode usar o Gerenciador de Relatórios para exibir relatórios publicados em um servidor de relatório. Por padrão, todos os relatórios são abertos em HTML. Depois de abrir um relatório, é possível exportá-lo para exibi-lo em outros formatos de aplicativo. Se o relatório possuir recursos interativos ou se for um relatório do Construtor de Relatórios que contiver dados interativos, clique nos links para exibir relatórios ou dados adicionais.  

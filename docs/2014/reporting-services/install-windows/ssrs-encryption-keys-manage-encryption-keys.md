@@ -15,15 +15,15 @@ helpviewer_keywords:
 - encryption [Reporting Services]
 - public keys [Reporting Services]
 ms.assetid: 58e61636-88a2-4338-ae5f-3dd210aee887
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5ad01c88f549346a598a54cc0addae92d222b271
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1d02724e251bc885bc87293a81a94997f35cd079
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010938"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961552"
 ---
 # <a name="configure-and-manage-encryption-keys-ssrs-configuration-manager"></a>Configurar e gerenciar chaves de criptografia (Gerenciador de configurações do SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa chaves de criptografia para proteger credenciais e informações de conexão que estão armazenadas em um banco de dados de servidor de relatório. No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], o suporte à criptografia é dado por meio de uma combinação de chaves públicas, privadas e simétricas, usadas para proteger dados confidenciais. A chave simétrica é criada durante a inicialização do servidor de relatório quando você instala ou configura o servidor de relatório, sendo usada pelo servidor de relatório para criptografar dados confidenciais que estão armazenados no servidor de relatório. As chaves públicas e privadas são criadas pelo sistema operacional e são usadas para proteger a chave simétrica. Um par de chaves pública e privada é criado para cada instância do servidor de relatório, que armazena dados confidenciais em um banco de dados de servidor de relatório.  

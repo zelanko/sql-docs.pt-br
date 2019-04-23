@@ -18,15 +18,15 @@ f1_keywords:
 - "10251"
 - "10172"
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 84a4d723a545ebe6fb849d3b5b78f2f2e8e99908
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 447ca38b75b21bdb2015a29ea6ff357eba6f24db
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295384"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59932452"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>Gráficos (Construtor de Relatórios e SSRS)
   Para resumir dados em um formato visual, use a região de dados do gráfico. Os gráficos permitem apresentar grandes volumes de informações agregadas em um relance. É importante preparar e entender cuidadosamente os dados antes de criar um gráfico, pois isso ajuda a projetar os gráficos de maneira rápida e eficiente. Para obter mais informações, consulte [Adicionar um gráfico a um relatório &#40;Construtor de Relatórios e SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md). Para começar a usar logo um gráfico, consulte a barra, coluna, Minigráfico e tutoriais de gráfico de pizza [tutoriais &#40;construtor de relatórios&#41; ](../report-builder-tutorials.md) ou a barra e os tutoriais de gráfico de pizza na [tutoriais do Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  
@@ -152,8 +152,8 @@ ms.locfileid: "56295384"
  [Imagens, caixas de texto, retângulos e linhas &#40;Construtor de Relatórios e SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
  [Classificação interativa, mapas de documentos e links &#40;Construtor de Relatórios e SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Regiões de dados aninhadas &#40;Construtor de Relatórios e SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
- [Tutorial: Adicionar um gráfico de colunas ao relatório &#40;construtor de relatórios&#41;](../tutorial-add-a-column-chart-to-your-report-report-builder.md)   
- [Tutorial: Adicionar um gráfico de pizza ao relatório &#40;construtor de relatórios&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [Tutorial: Adicionar um gráfico de barras ao relatório &#40;construtor de relatórios&#41;](../tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
+ [Tutorial: Adicionar um gráfico de colunas ao relatório &#40;Construtor de Relatórios&#41;](../tutorial-add-a-column-chart-to-your-report-report-builder.md)   
+ [Tutorial: Adicionar um gráfico de pizza ao relatório &#40;Construtor de Relatórios&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [Tutorial: Adicionar um gráfico de barras ao relatório &#40;Construtor de Relatórios&#41;](../tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
   
   

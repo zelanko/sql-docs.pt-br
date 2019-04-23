@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RemoveURL method
 ms.assetid: 3d98bd97-e152-48ce-ab1c-bd2c4f8b7fe9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0e28087ca40cbbf911652a4cac8f7ef121f7eab7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 07c02b92ecd22140253c2f893ed974024a0c681f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022057"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953852"
 ---
 # <a name="removeurl-method-wmi-msreportserverconfigurationsetting"></a>Método RemoveURL (WMI MSReportServer_ConfigurationSetting)
   Remove uma URL reservada para o servidor de relatório. Se houver várias URLs a serem removidas, isso deverá ser feito individualmente chamando-se esta API.  

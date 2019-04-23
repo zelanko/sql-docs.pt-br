@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 6819720c-d848-4b90-9b51-89501b4f4645
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e71c7e2c933afc0da1a09adbb26cc5e08bc9747f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 809f893a38af6f269899e8e9d5913116b32864cc
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035627"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59941512"
 ---
 # <a name="data-alert-messages"></a>Mensagens de alertas de dados
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] alertas de dados entregam dois tipos de dados de mensagens de alerta por email: Mensagens com resultados de alertas de dados e mensagens com descrições de erro. As mensagens com resultados mantêm todos os destinatários informados sobre alterações nos dados de relatório que são de interesse comum e importantes para decisões comerciais. Se, por alguma razão, ocorrer um erro e os resultados não estiverem disponíveis, a mensagem de erro será enviada.  

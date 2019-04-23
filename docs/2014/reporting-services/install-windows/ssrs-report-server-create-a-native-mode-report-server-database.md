@@ -11,15 +11,15 @@ helpviewer_keywords:
 - report servers [Reporting Services], databases
 - databases [Reporting Services], creating
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: aace9882e358bcd5e5626cc625ed3dbbe4495cce
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: aae7a7ed873a86096f1f203cc20b2bfecd379db6
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017037"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946572"
 ---
 # <a name="create-a-native-mode-report-server-database--ssrs-configuration-manager"></a>Criar um banco de dados de servidor de relatório no modo nativo (Gerenciador de configurações do SSRS)
   O Modo Nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para armazenamento interno. O banco de dados é necessário e é usado para armazenar relatórios publicados, modelos, fontes de dados compartilhadas, dados de sessão, recursos e metadados do servidor.  

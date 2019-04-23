@@ -12,15 +12,15 @@ f1_keywords:
 - "10542"
 - MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f005ac1a727b375d7c0796a9f30bfed388dccfbd
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: aa0ccc9d3b2ca01e1b2279f71ef2815c81e060e3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290754"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59962982"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Assistente de Mapa e Assistente de Camada do Mapa (Construtor de Relatórios e SSRS)
   O Assistente de Mapa e o Assistente de Camada do Mapa automatizam a tarefa de criar um mapa, adicionar uma camada a um mapa ou alterar as opções de camada do mapa em uma camada existente.  
@@ -53,7 +53,7 @@ ms.locfileid: "56290754"
   
  Clique no título da página do assistente para obter o respectivo conteúdo de ajuda. As páginas exibidas variarão de acordo com as suas escolhas de tipo de mapa, a fonte de dados espaciais e a fonte de dados analíticos.  
   
-1.  [Escolha uma fonte de dados espaciais](#SpatialDataSource). Os dados espaciais podem vir da galeria de mapas, de um Arquivo de Forma ESRI ou de dados espaciais em um banco de dados relacional do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+1.  [Escolha uma fonte de dados espaciais](#SpatialDataSource). Dados espaciais podem vir da Galeria de mapas, uma Environmental Systems Research Institute, Inc. ou de dados espaciais em um banco de dados relacional do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
     -   [O que são dados espaciais?](#SpatialData)  
   
@@ -107,7 +107,7 @@ ms.locfileid: "56290754"
   
  Depois que adicionar um mapa ou camada do mapa e visualizar o relatório, você poderá alterar as opções do mapa e da camada do mapa que definir nos assistentes. Para obter mais informações, consulte [Personalizar os dados e a exibição de um mapa ou de uma camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
- Para obter mais informações sobre mapas, consulte [Mapas &#40;Construtor de Relatórios e SSRS&#41;](maps-report-builder-and-ssrs.md). Para obter instruções passo a passo adicionar um mapa a um relatório, consulte [Tutorial: Relatório de mapa &#40;construtor de relatórios&#41;](../tutorial-map-report-report-builder.md).  
+ Para obter mais informações sobre mapas, consulte [Mapas &#40;Construtor de Relatórios e SSRS&#41;](maps-report-builder-and-ssrs.md). Confira instruções passo a passo sobre como adicionar um mapa a um relatório no [Tutorial: Relatório de Mapa &#40;Construtor de Relatórios&#41;](../tutorial-map-report-report-builder.md).  
   
  ![Ícone de seta usado com o link Voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  
   
@@ -125,7 +125,7 @@ ms.locfileid: "56290754"
  A galeria de mapas contém mapas de relatórios localizados na pasta da galeria de mapas do ambiente de criação de relatórios. Os mapas da galeria o ajudam a começar rapidamente a adicionar mapas a seu relatório. Os mapas predefinidos na galeria são fornecidos por um provedor de mapa.  
   
 > [!NOTE]  
->  Esse recurso de mapeamento do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa dados de arquivos de forma TIGER/Line fornecidos pela Agência de Recenseamento norte-americana ([http://www.census.gov/](http://www.census.gov/)). Os arquivos de forma TIGER/Line são um extrato das informações geográficas e cartográficas selecionadas do banco de dados Census MAF/TIGER. Esses arquivos de forma podem ser obtidos sem encargos com a Agência de Recenseamento norte-americana. Para saber mais sobre os arquivos de forma TIGER/Line, visite [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). As informações de limites nos arquivos de forma Tiger/Line destinam-se apenas a fins de coleta de dados estatísticos e tabulação; a representação e a designação dessas informações para propósitos estatísticos não constituem uma determinação de autoridade de jurisdição ou direitos de propriedade ou qualificação e elas não são descrições de terra legais. Census TIGER e TIGER/Line são marcas registradas da Agência de Recenseamento norte-americana.  
+>  Esse recurso de mapeamento do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa dados de arquivos de forma TIGER/Line fornecidos pela Agência de Recenseamento norte-americana ([http://www.census.gov/](http://www.census.gov/)). Os arquivos de forma TIGER/Line são um extrato das informações geográficas e cartográficas selecionadas do banco de dados Census MAF/TIGER. Arquivos de forma TIGER/Line estão disponíveis sem custos adicionais dos Estados Unidos Agência de Recenseamento norte-americana. Para saber mais sobre os arquivos de forma TIGER/Line, visite [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). As informações de limites nos arquivos de forma Tiger/Line destinam-se apenas a fins de coleta de dados estatísticos e tabulação; a representação e a designação dessas informações para propósitos estatísticos não constituem uma determinação de autoridade de jurisdição ou direitos de propriedade ou qualificação e elas não são descrições de terra legais. Census TIGER e TIGER/Line são marcas registradas dos EUA Agência de Recenseamento norte-americana.  
   
  Para estender a galeria de mapas, você pode adicionar ou remover relatórios do diretório dessa galeria e adicionar pastas para organizar os mapas. Para obter mais informações, consulte [Mapas &#40;Construtor de Relatórios e SSRS&#41;](maps-report-builder-and-ssrs.md).  
   
@@ -198,7 +198,7 @@ ms.locfileid: "56290754"
   
  Para obter mais informações sobre peças, consulte [Sistema de Peças do Bing Maps](https://go.microsoft.com/fwlink/?LinkId=147315). Para obter mais informações sobre o uso de peças de mapa do Bing no seu relatório, consulte [termos de uso adicionais](https://go.microsoft.com/fwlink/?LinkId=151371) e a [Política de Privacidade](https://go.microsoft.com/fwlink/?LinkId=151372).  
   
- Para visualizar um plano de fundo de peça no modo Design, você deve ter acesso à Internet. Para visualizar o plano de fundo de peça na visualização de um relatório em um servidor de relatório, esse servidor deve ser configurado para dar suporte a peças de mapa do Bing. Para obter mais informações, consulte [solucionar problemas de relatórios: Mapear relatórios &#40;construtor de relatórios e SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md) e "Planning for Maps" no [documentação do Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) nos Manuais Online do SQL Server.  
+ Para visualizar um plano de fundo de peça no modo Design, você deve ter acesso à Internet. Para visualizar o plano de fundo de peça na visualização de um relatório em um servidor de relatório, esse servidor deve ser configurado para dar suporte a peças de mapa do Bing. Confira mais informações em [Solucionar problemas de relatórios: Mapear relatórios &#40;construtor de relatórios e SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md) e "Planning for Maps" no [documentação do Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) nos Manuais Online do SQL Server.  
   
  Para obter mais informações sobre outras maneiras de personalizar uma camada lado a lado, consulte [Adicionar, alterar ou excluir um mapa ou uma camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   

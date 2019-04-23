@@ -3,7 +3,7 @@ title: Notas de versão
 titleSuffix: Azure Data Studio
 description: Notas de versão Data Studio do Azure
 ms.custom: seodec18
-ms.date: 03/22/2019
+ms.date: 04/19/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,16 +11,30 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 359723a1e2d75b7cbbd3a88c9a0ba7ee89fdf420
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 5497a2d70c32763d765888235f694b89dd0bb340
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381584"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59963775"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notas de versão do estúdio de dados do Azure
 
 **[Baixe e instale a versão mais recente!](download.md)**
+
+## <a name="april-2019"></a>Abril de 2019
+
+18 de abril de 2019 &nbsp;  /  &nbsp; versão: 1.6.0 
+
+&nbsp;
+
+| Alterar | Detalhes |
+| :----- | :------ |
+| Renomeado **servidores** pressionar tab até **conexões** | |
+| Movido o Gerenciador de recursos do Azure como um viewlet do Azure em conexões | Os usuários agora podem exibir suas instâncias de SQL do Azure por meio do Azure viewlet na exibição de conexões e expanda para exibir objetos em cada servidor ou banco de dados.|
+| Aprimoramentos de bloco de anotações do SQL | &bull; &nbsp; Adição de botão na barra de ferramentas para limpar a saída para todas as células <br/>&bull; &nbsp; Adição de botão na barra de ferramentas para executar todas as células <br/>&bull; &nbsp; Nome de conexão fixo em vez do nome do servidor (se definido) na anexar ao menu suspenso <br/>&bull; &nbsp; Correção para imagens em markdown não renderizar ao usar caminhos relativos de imagem <br/>&bull; &nbsp; Funcionalidade aprimorada em grades de bloco de anotações, adicionando duas vezes o tamanho da coluna de redimensionamento automático e melhoraram o suporte de mousewheel <br/>&bull; &nbsp; Melhorias para tratamento de erros e python instalem resiliência ao instalar o python por meio de blocos de anotações <br/>&bull; &nbsp; Aprimoramentos à funcionalidade "Selecionar tudo" ao selecionar células do bloco de anotações <br/>&bull; &nbsp; Melhorias para conexões de bloco de anotações para impedir que um bloco de anotações de fechamento e afetando uma conexão do Gerenciador de objeto <br/>&bull; &nbsp; Experiência de notebook aprimorado para exibir uma mensagem ao usuário quando desconectado de bloco de anotações e precisa de uma conexão para executar células<br/>&bull; &nbsp; Suporte aprimorado para blocos de anotações não salvos ao reidratar em anúncios quando anúncios for iniciado novamente |
+| Bugs resolvidos e problemas. | Ver [Bugs e problemas no GitHub](https://github.com/Microsoft/azuredatastudio/milestone/26?closed=1). |
+| &nbsp; | &nbsp; |
 
 ## <a name="march-2019-hotfix"></a>Março de 2019 (Hotfix)
 

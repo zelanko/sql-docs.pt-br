@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 15c2bc9b-428a-47ac-9630-8dde925d0595
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7511a4b6a441d00ca51eb29daed29cef616e6473
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 1b35399504c840d81573366401ea8f4978f47f58
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297404"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59938832"
 ---
 # <a name="nested-data-regions-report-builder-and-ssrs"></a>Regiões de dados aninhadas (Construtor de Relatórios e SSRS)
   É possível aninhar uma região de dados, como um gráfico, em outra, como uma matriz, normalmente para exibir resumos de dados de maneira concisa ou para fornecer uma exibição visual, bem como uma exibição de tabela ou de matriz.  
@@ -90,7 +90,7 @@ ms.locfileid: "56297404"
  [Medidores &#40;Construtor de Relatórios e SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Formatando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](formatting-report-items-report-builder-and-ssrs.md)   
- [Tutorial: Adicionando um KPI ao relatório &#40;construtor de relatórios&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)   
+ [Tutorial: Adicionar um KPI ao relatório &#40;Construtor de Relatórios&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)   
  [Formatando escalas em um medidor &#40;Construtor de Relatórios e SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   
   

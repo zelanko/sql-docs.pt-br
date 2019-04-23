@@ -15,15 +15,15 @@ helpviewer_keywords:
 - reportservertempdb
 - reportserver database
 ms.assetid: 0fc5c033-3fe1-4cea-86c7-66ea5e424d65
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6e0a2d0a723629ae1e9b7e7277ff646c63a86aec
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 64e8ae49b9912579d6b3b483b7cb63bcfcb8662e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043257"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59940072"
 ---
 # <a name="report-server-database-ssrs-native-mode"></a>Banco de dados do servidor relatório (modo nativo do SSRS)
   Um servidor de relatório é um servidor sem estado que usa o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] para armazenar definições de objeto e metadados. Uma instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no modo nativo usa dois bancos de dados para separar os requisitos de armazenamento de dados persistente do armazenamento de dados temporário. Os bancos de dados são criados juntamente e associados por nome. Por padrão, os nomes do banco de dados são **reportserver** e **reportservertempdb**, respectivamente.  

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - cache [Reporting Services]
 - preloading cache
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ff32fcd498d7998f79b480369d90a07f974f6dc6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7813470269697b0df65715c6f114b5df635888c1
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035077"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59949102"
 ---
 # <a name="preload-the-cache-report-manager"></a>Pré-carregar o cache (Gerenciador de Relatórios)
   Você pode pré-carregar o cache para um conjunto de dados compartilhado criando um plano de atualização do cache para o conjunto de dados compartilhado.  
@@ -87,7 +87,7 @@ ms.locfileid: "56035077"
   
 8.  Clique em **Avançar**.  
   
-9. Especifique a consulta ou o comando que recupera dados de assinante. Opcionalmente, aumente o período de tempo limite para as consultas que levam muito tempo para serem processadas. Por exemplo:  
+9. Especifique a consulta ou o comando que recupera dados de assinante. Opcionalmente, aumente o período de tempo limite para as consultas que levam muito tempo para serem processadas. Por exemplo:   
   
     ```  
     Select * from UserInfo  
@@ -114,7 +114,7 @@ ms.locfileid: "56035077"
   
 17. Escolha um das duas opções de cache a seguir e configure a validade do seguinte modo:  
   
-    -   Para fazer com que uma cópia armazenada em cache expire depois de um período de tempo específico, clique em **Armazenar uma cópia temporária do relatório em cache. Expirar cópia de relatório após alguns minutos.** Digite o número de minutos para a validade do relatório.  
+    -   Para fazer a cópia armazenada em cache expiram após um período de tempo específico, clique em **armazenar uma cópia temporária do relatório. Expirar cópia de relatório após alguns minutos.** Digite o número de minutos para a validade do relatório.  
   
     -   Para fazer com que a cópia armazenada em cache expire de acordo com um agendamento, clique em **Armazenar uma cópia temporária do relatório em cache. Expirar cópia de relatório no próximo agendamento.** Clique em **Configurar**ou selecione um agendamento compartilhado para definir um agendamento para a expiração do relatório.  
   
