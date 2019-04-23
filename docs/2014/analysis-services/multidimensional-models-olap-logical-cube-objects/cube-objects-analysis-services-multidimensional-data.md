@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - cubes [Analysis Services], objects
@@ -14,12 +12,12 @@ ms.assetid: 5cee362e-3f95-4467-bc6c-29b1518ecbf3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 47befc9fb80f84318cd090bb673b6b6906da6508
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc9b813f5310acad9d6dfa2b844adae6168fc1f9
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48047599"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158422"
 ---
 # <a name="cube-objects-analysis-services---multidimensional-data"></a>Objetos cubo (Analysis Services – Dados Multidimensionais)
     
@@ -35,7 +33,7 @@ ms.locfileid: "48047599"
 |||  
 |-|-|  
 |Tópico||  
-|[Ações &#40;Analysis Services - dados multidimensionais&#41;](../multidimensional-models/actions-analysis-services-multidimensional-data.md)||  
+|[Ações &#40;Analysis Services – Dados Multidimensionais&#41;](../multidimensional-models/actions-analysis-services-multidimensional-data.md)||  
 |[Agregações e designs de agregação](aggregations-and-aggregation-designs.md)||  
 |[Cálculos](calculations.md)||  
 |[Células de cubo &#40;Analysis Services - dados multidimensionais&#41;](cube-cells-analysis-services-multidimensional-data.md)||  
@@ -43,9 +41,9 @@ ms.locfileid: "48047599"
 |[Armazenamento de cubo &#40;Analysis Services - dados multidimensionais&#41;](cube-storage-analysis-services-multidimensional-data.md)||  
 |[Conversões de cubo](cube-translations.md)||  
 |[Relações de dimensão](dimension-relationships.md)||  
-|[Indicadores chave de desempenho &#40;KPIs&#41; em modelos multidimensionais](../multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)||  
+|[Indicadores Chave de Desempenho &#40;KPIs&#41; em Modelos Multidimensionais](../multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)||  
 |[Medidas e grupos de medidas](../multidimensional-models/measures-and-measure-groups.md)||  
-|[Partições &#40;Analysis Services - dados multidimensionais&#41;](partitions-analysis-services-multidimensional-data.md)||  
+|[Partições &#40;Analysis Services – Dados Multidimensionais&#41;](partitions-analysis-services-multidimensional-data.md)||  
 |[Perspectivas](perspectives.md)||  
   
   

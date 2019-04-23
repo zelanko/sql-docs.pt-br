@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - dimensions [Analysis Services], proactive caching
@@ -15,12 +13,12 @@ ms.assetid: 7d57fe93-6e5f-4a50-844f-dd2bbdbb94a5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 042214fa6f900921c7d66cb5824a68b0134ccbd2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f5e6bab81e982adbf8ee443bd84a5e806b960db
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067837"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158612"
 ---
 # <a name="proactive-caching-dimensions"></a>Cache pró-ativo (dimensões)
   O cache pró-ativo fornece criação automática de cache MOLAP e gerenciamento de objetos OLAP. Os cubos incorporam imediatamente as alterações feitas nos dados no banco de dados, com base em modificações recebidas do banco de dados. O objetivo do cache pró-ativo é oferecer o desempenho do MOLAP tradicional, além de manter a instantaneidade e facilidade de gerenciamento oferecida pelo ROLAP.  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - storage [Analysis Services], partitions
@@ -22,12 +20,12 @@ ms.assetid: 63f5d9f5-c6b6-4ceb-94fe-7b6c396d10bb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 09231b03e784c142ab8b99ed31c2c4c88f6e72d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d092c33c8c350dc19b749fd3b31ccf1b8c73eac6
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051906"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154712"
 ---
 # <a name="remote-partitions"></a>Partições remotas
   Os dados de uma partição remota são armazenados em uma instância diferente da Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que a instância que contém as definições (metadados) da partição e seu cubo pai. Uma partição remota é gerenciada na mesma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] onde a partição e seu cubo pai são definidos.  
@@ -45,7 +43,7 @@ ms.locfileid: "48051906"
   
 |||  
 |-|-|  
-|Tipo de armazenamento|data|  
+|Tipo de armazenamento|Dados|  
 |MOLAP|As agregações da partição e uma cópia dos dados de origem da partição|  
 |HOLAP|As agregações das partições|  
 |ROLAP|Nenhum dado da partição|  

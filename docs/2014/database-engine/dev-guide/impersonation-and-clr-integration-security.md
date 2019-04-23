@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 helpviewer_keywords:
 - impersonation [CLR integration]
@@ -18,12 +16,12 @@ ms.assetid: 1495a7af-2248-4cee-afdb-9269fb3a7774
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2695445caee79ee2248a6855bb36349b6ff5f644
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2c32691a065c2bfc43868d6b4105fbf1395a63ed
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088056"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158692"
 ---
 # <a name="impersonation-and-clr-integration-security"></a>Representação e segurança de integração CLR
   Quando código gerenciado acessa recursos externos, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não representa automaticamente o contexto de execução atual no qual a rotina está em execução. O código nos assemblies `EXTERNAL_ACCESS` e `UNSAFE` pode representar explicitamente o contexto de execução atual.  

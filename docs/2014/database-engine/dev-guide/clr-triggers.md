@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -27,12 +25,12 @@ ms.assetid: 302a4e4a-3172-42b6-9cc0-4a971ab49c1c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c755b605b834d5c31a7017358fb6e714cfde7964
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 87d822e97a75bbd08375980fe6a6f0341d8f9c60
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522890"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158532"
 ---
 # <a name="clr-triggers"></a>Gatilhos CLR
   Por causa da integração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com CLR (Common Language Runtime) do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], você pode usar qualquer linguagem do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para criar gatilhos CLR. Esta seção contém informações específicas para gatilhos implementados com a integração CLR. Para obter uma discussão completa sobre gatilhos, consulte [gatilhos DDL](../../relational-databases/triggers/ddl-triggers.md).  
@@ -76,7 +74,7 @@ ms.locfileid: "52522890"
 ### <a name="using-the-inserted-and-deleted-tables"></a>Usando as tabelas Inserted e Deleted  
  Duas tabelas especiais são usadas nas instruções de gatilho DML: a **inserido** tabela e o **excluído** tabela. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria e gerencia automaticamente essas tabelas. Você pode usar essas tabelas temporárias para testar os efeitos de determinadas modificações de dados e definir condições para ações de gatilho DML; no entanto, você não pode alterar os dados diretamente nas tabelas.  
   
- Gatilhos CLR podem acessar o **inserido** e **excluído** tabelas por meio do provedor CLR em processo. Isso é feito obtendo-se um objeto `SqlCommand` do objeto SqlContext. Por exemplo:  
+ Gatilhos CLR podem acessar o **inserido** e **excluído** tabelas por meio do provedor CLR em processo. Isso é feito obtendo-se um objeto `SqlCommand` do objeto SqlContext. Por exemplo:   
   
  C#  
   

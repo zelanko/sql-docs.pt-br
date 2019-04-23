@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: b09161af-6ac1-406c-9d62-e40be3b4cf8d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1f39555217bf847b6b8f29b8c4de0b5c349ee5e4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 13d23977aeeb6f7643fc039c23b02267d47c106f
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361368"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154682"
 ---
 # <a name="clr-transactions-sample"></a>Exemplo de transações CLR
   Este exemplo demonstra como controlar transações usando as APIs gerenciadas localizadas no namespace `System.Transactions` . Especificamente, a classe `System.Transactions.TransactionScope` é usada para estabelecer um limite para a transação a fim de garantir que os números de estoque não sejam ajustados, a menos que haja estoque suficiente para atender à solicitação e, se houver estoque suficiente, que a transferência do estoque de um local para outro ocorra de forma atômica. O registro automático em uma transação distribuída é demonstrado pelo log de alterações no estoque em um banco de dados de auditoria armazenado em uma instância separada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: 9dba8c68-4bef-4c2b-815c-c286f1a1939b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b5a80b6bd9ef469d6711f7d6d019935fbfa1a581
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 83e46e9b62359623093415ca456ecadd72f847cd
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218015"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155212"
 ---
 # <a name="imdembedded-interface"></a>Interface IMDEmbedded
   A interface IMDEmbedded é uma interface pública usada para gerenciar um banco de dados do PowerPivot inserido ou um banco de dados modelo de tabela. A interface herda da interface `IPersistStream`. A interface permite as seguintes operações:  
@@ -32,13 +30,13 @@ ms.locfileid: "48218015"
   
 -   Cancelar a operação inserida atual.  
   
--   Obter o tamanho estimado (em bytes) do fluxo para salvar o objeto inserido. Herdado de `IPersistStream`.  
+-   Obter o tamanho estimado (em bytes) do fluxo para salvar o objeto inserido. Herdada de `IPersistStream`.  
   
--   Verificar se o banco de dados inserido foi alterado após ser salvo pela última vez. Herdado de `IPersistStream`.  
+-   Verificar se o banco de dados inserido foi alterado após ser salvo pela última vez. Herdada de `IPersistStream`.  
   
--   Carregar o banco de dados inserido para o mecanismo local ou em processo. Herdado de `IPersistStream`.  
+-   Carregar o banco de dados inserido para o mecanismo local ou em processo. Herdada de `IPersistStream`.  
   
--   Salvar o banco de dados local ou em processo para o fluxo inserido no documento contêiner. Herdado de `IPersistStream`.  
+-   Salvar o banco de dados local ou em processo para o fluxo inserido no documento contêiner. Herdada de `IPersistStream`.  
   
 ## <a name="reference"></a>Referência  
  A seguinte referência documenta as `IMDEmbedded` interface conforme apresentado na **msmd** arquivo de cabeçalho.  
@@ -83,7 +81,7 @@ HRESULT GetStreamIdentifier (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>Descrição  
  Obtém o identificador usado pelo aplicativo de host para o fluxo inserido no documento contêiner.  
   
 #### <a name="parameters"></a>Parâmetros  
@@ -111,7 +109,7 @@ HRESULT GetStreamIdentifier (
 |DBPROPVAL_EMBED_EMBEDDED|0x01|O aplicativo atual contém o banco de dados inserido|  
 |DBPROPVAL_EMBED_LINKED|0x02|O banco de dados inserido está hospedado em um aplicativo remoto (p. ex., SharePoint Server)|  
   
-#### <a name="source"></a>Origem  
+#### <a name="source"></a>Source  
   
 ```  
 [id(1), helpstring("Get identifier used to look up embedded stream in container document")]   
@@ -127,7 +125,7 @@ HRESULT SetContainerURL (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>Descrição  
  Define a URL para o arquivo que contém o fluxo inserido.  
   
 #### <a name="parameters"></a>Parâmetros  
@@ -141,7 +139,7 @@ HRESULT SetContainerURL (
  `E_FAIL`  
  Erro ao definir a URL do contêiner.  
   
-#### <a name="source"></a>Origem  
+#### <a name="source"></a>Source  
   
 ```  
 [id(2), helpstring("Set the URL for the document containing the embedded stream")]   
@@ -157,7 +155,7 @@ HRESULT SetHosted (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>Descrição  
  Definir um sinalizador para indicar se o aplicativo inserido está em um ambiente hospedado.  
   
 #### <a name="parameters"></a>Parâmetros  
@@ -171,7 +169,7 @@ HRESULT SetHosted (
  `E_FAIL`  
  Erro ao definir o sinalizador.  
   
-#### <a name="source"></a>Origem  
+#### <a name="source"></a>Source  
   
 ```  
 [id(5), helpstring("Set flag indicating if the application is in a hosted environment")]   
@@ -187,7 +185,7 @@ HRESULT SetTempDirPath (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>Descrição  
  Definir o caminho para os arquivos temporários usados pelo aplicativo inserido.  
   
 #### <a name="parameters"></a>Parâmetros  
@@ -201,7 +199,7 @@ HRESULT SetTempDirPath (
  `E_FAIL`  
  Erro ao definir o caminho.  
   
-#### <a name="source"></a>Origem  
+#### <a name="source"></a>Source  
   
 ```  
 [id(4), helpstring("Set the path used by the host application for temporary files")]   
@@ -215,7 +213,7 @@ HRESULT SetTempDirPath (
 HRESULT Cancel ( void )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>Descrição  
  Cancela a operação de banco de dados inserida atual.  
   
 #### <a name="parameters"></a>Parâmetros  
@@ -231,7 +229,7 @@ HRESULT Cancel ( void )
  `E_FAIL`  
  Erro ao cancelar a operação inserida.  
   
-#### <a name="source"></a>Origem  
+#### <a name="source"></a>Source  
   
 ```  
 [id(5), helpstring("Cancel the current operation")]   
@@ -246,8 +244,8 @@ HRESULT GetSizeMax (
     )  
 ```  
   
-#### <a name="description"></a>Description  
- Obtém o tamanho estimado (em bytes) do fluxo para salvar o objeto inserido. Herdado de `IPersistStream`.  
+#### <a name="description"></a>Descrição  
+ Obtém o tamanho estimado (em bytes) do fluxo para salvar o objeto inserido. Herdada de `IPersistStream`.  
   
 #### <a name="parameters"></a>Parâmetros  
  *in_bstrPath*  
@@ -266,8 +264,8 @@ HRESULT GetSizeMax (
 HRESULT IsDirty ( void )  
 ```  
   
-#### <a name="description"></a>Description  
- Verifica se o banco de dados inserido foi alterado após ser salvo pela última vez. Herdado de `IPersistStream`.  
+#### <a name="description"></a>Descrição  
+ Verifica se o banco de dados inserido foi alterado após ser salvo pela última vez. Herdada de `IPersistStream`.  
   
 #### <a name="parameters"></a>Parâmetros  
  none  
@@ -290,8 +288,8 @@ HRESULT Load (
     )  
 ```  
   
-#### <a name="description"></a>Description  
- Carrega o banco de dados inserido para o mecanismo local ou em processo. Herdado de `IPersistStream`.  
+#### <a name="description"></a>Descrição  
+ Carrega o banco de dados inserido para o mecanismo local ou em processo. Herdada de `IPersistStream`.  
   
 #### <a name="parameters"></a>Parâmetros  
  *in_pStm*  
@@ -316,8 +314,8 @@ HRESULT Save (
     )  
 ```  
   
-#### <a name="description"></a>Description  
- Salva o banco de dados local ou em processo para o fluxo inserido no documento contêiner. Herdado de `IPersistStream`.  
+#### <a name="description"></a>Descrição  
+ Salva o banco de dados local ou em processo para o fluxo inserido no documento contêiner. Herdada de `IPersistStream`.  
   
 #### <a name="parameters"></a>Parâmetros  
  *in_pStm*  

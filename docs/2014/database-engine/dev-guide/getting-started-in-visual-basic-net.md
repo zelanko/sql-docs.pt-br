@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 dev_langs:
 - VB
@@ -16,12 +14,12 @@ ms.assetid: 1cbb9f35-13d8-40a1-9685-72cb1b589947
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d8737579fc495f36c59b13d67100854822145ebf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bfaf73d82eaa61753d958941cb1b633f8098e975
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226756"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154512"
 ---
 # <a name="getting-started-in-visual-basic-net"></a>Guia de Introdução ao Visual Basic .NET
   O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET é uma das linguagens de programação gerenciadas que recebem suporte da biblioteca comum em tempo de execução no [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET. Muitos dos exemplos dessa documentação são escritos em [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET. Você pode usar o [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] e o [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] para desenvolver aplicativos SMO.  

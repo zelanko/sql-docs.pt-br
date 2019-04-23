@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - objects [Analysis Services], maximum number
@@ -15,12 +13,12 @@ ms.assetid: 49fe1673-b908-4c7a-88ff-415efd294d27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ed648821a41006842911eede9ee5740cdddeabde
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 561cbbb64734c117b295ca6d97420b6980fa5428
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190466"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155162"
 ---
 # <a name="maximum-capacity-specifications-analysis-services"></a>Especificações de capacidade máxima (Analysis Services)
   As tabelas a seguir especificam os tamanhos e números máximos de vários objetos definidos nos componentes do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] em diferentes modos de implantação de servidor.  
@@ -69,14 +67,14 @@ ms.locfileid: "48190466"
 |------------|----------------------------|  
 |Bancos de dados em uma instância|2^31-1 = 2,147,483,647|  
 |Tabelas em um banco de dados|2^31-1 = 2,147,483,647|  
-|Colunas em uma tabela|2 ^ 31-1 = 2.147.483.647 **Aviso:** Número Total de colunas em uma tabela depende do número total de medidas e colunas calculadas associadas à mesma tabela. O número máximo de 'Colunas + Medidas + Colunas Calculadas' para uma tabela é 2^31-1 = 2.147.483.647|  
-|Linhas em uma tabela|Ilimitado **Aviso:** com a restrição de que nenhuma coluna única pode conter mais de 1.999.999.997 valores distintos.|  
+|Colunas em uma tabela|2 ^ 31-1 = 2.147.483.647 **Aviso:**  Número total de colunas em uma tabela depende do número total de medidas e colunas calculadas associadas à mesma tabela. O número máximo de 'Colunas + Medidas + Colunas Calculadas' para uma tabela é 2^31-1 = 2.147.483.647|  
+|Linhas em uma tabela|Ilimitado **Aviso:**  Com a restrição de que nenhuma coluna única pode conter mais de 1.999.999.997 valores distintos.|  
 |Hierarquias em uma tabela|2^31-1 = 2,147,483,647|  
 |Níveis em uma hierarquia|2^31-1 = 2,147,483,647|  
 |Relações|2^31-1 = 2,147,483,647|  
 |Colunas de chave em uma tabela|2^31-1 = 2,147,483,647|  
-|Medidas em uma tabela|2 ^ 31-1 = 2.147.483.647 **Aviso:** Número Total de medidas em uma tabela depende do número total de colunas e colunas calculadas associadas à mesma tabela. O número máximo de 'Colunas + Medidas + Colunas Calculadas' para uma tabela é 2^31-1 = 2.147.483.647|  
-|Colunas calculadas em uma tabela|2 ^ 31-1 = 2.147.483.647 **Aviso:** Número Total de colunas calculadas em uma tabela depende do número total de colunas e medidas associados à mesma tabela. O número máximo de 'Colunas + Medidas + Colunas Calculadas' para uma tabela é 2^31-1 = 2.147.483.647|  
+|Medidas em uma tabela|2 ^ 31-1 = 2.147.483.647 **Aviso:**  Número total de medidas em uma tabela depende do número total de colunas e colunas calculadas associadas à mesma tabela. O número máximo de 'Colunas + Medidas + Colunas Calculadas' para uma tabela é 2^31-1 = 2.147.483.647|  
+|Colunas calculadas em uma tabela|2 ^ 31-1 = 2.147.483.647 **Aviso:**  Número total de colunas calculadas em uma tabela depende do número total de colunas e medidas associadas à mesma tabela. O número máximo de 'Colunas + Medidas + Colunas Calculadas' para uma tabela é 2^31-1 = 2.147.483.647|  
 |Células retornadas por uma consulta|2^31-1 = 2,147,483,647|  
 |Tamanho do registro da consulta de origem|64K|  
 |Comprimento de nomes de objeto|100 caracteres|  
@@ -87,20 +85,20 @@ ms.locfileid: "48190466"
 |------------|----------------------------|  
 |Bancos de dados em uma instância|2^31-1 = 2,147,483,647|  
 |Tabelas em um banco de dados|2^31-1 = 2,147,483,647|  
-|Colunas em uma tabela|2 ^ 31-1 = 2.147.483.647 **Aviso:** Número Total de colunas em uma tabela depende do número total de medidas e colunas calculadas associadas à mesma tabela. O número máximo de 'Colunas + Medidas + Colunas Calculadas' para uma tabela é 2^31-1 = 2.147.483.647|  
-|Linhas em uma tabela|Ilimitado **Aviso:** com a restrição de que nenhuma coluna única na tabela pode ter mais de 1.999.999.997 valores distintos.|  
+|Colunas em uma tabela|2 ^ 31-1 = 2.147.483.647 **Aviso:**  Número total de colunas em uma tabela depende do número total de medidas e colunas calculadas associadas à mesma tabela. O número máximo de 'Colunas + Medidas + Colunas Calculadas' para uma tabela é 2^31-1 = 2.147.483.647|  
+|Linhas em uma tabela|Ilimitado **Aviso:**  Com a restrição de que nenhuma coluna única na tabela pode ter mais de 1.999.999.997 valores distintos.|  
 |Hierarquias em uma tabela|2^31-1 = 2,147,483,647|  
 |Níveis em uma hierarquia|2^31-1 = 2,147,483,647|  
 |Relações|2^31-1 = 2,147,483,647|  
 |Colunas de chave em uma tabela|2^31-1 = 2,147,483,647|  
-|Medidas em uma tabela|2 ^ 31-1 = 2.147.483.647 **Aviso:** Número Total de medidas em uma tabela depende do número total de colunas e colunas calculadas associadas à mesma tabela. O número máximo de 'Colunas + Medidas + Colunas Calculadas' para uma tabela é 2^31-1 = 2.147.483.647|  
-|Colunas calculadas em uma tabela|2 ^ 31-1 = 2.147.483.647 **Aviso:** Número Total de colunas calculadas em uma tabela depende do número total de colunas e medidas associados à mesma tabela. O número máximo de 'Colunas + Medidas + Colunas Calculadas' para uma tabela é 2^31-1 = 2.147.483.647|  
+|Medidas em uma tabela|2 ^ 31-1 = 2.147.483.647 **Aviso:**  Número total de medidas em uma tabela depende do número total de colunas e colunas calculadas associadas à mesma tabela. O número máximo de 'Colunas + Medidas + Colunas Calculadas' para uma tabela é 2^31-1 = 2.147.483.647|  
+|Colunas calculadas em uma tabela|2 ^ 31-1 = 2.147.483.647 **Aviso:**  Número total de colunas calculadas em uma tabela depende do número total de colunas e medidas associadas à mesma tabela. O número máximo de 'Colunas + Medidas + Colunas Calculadas' para uma tabela é 2^31-1 = 2.147.483.647|  
 |Células retornadas por uma consulta|2^31-1 = 2,147,483,647|  
 |Tamanho do registro da consulta de origem|64K|  
 |Comprimento de nomes de objeto|100 caracteres|  
   
 ## <a name="see-also"></a>Consulte também  
- [Determinar o modo de servidor de uma instância do Analysis Services](../../instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
+ [Determina o Modo de Servidor de uma instância do Analysis Services.](../../instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
  [Propriedades gerais](../../server-properties/general-properties.md)  
   
   

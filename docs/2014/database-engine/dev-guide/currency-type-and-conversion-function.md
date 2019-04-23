@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: df516567-8689-45c2-b418-16473f8d43e4
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0119d51332dde13ae77a67fb82f293495a4fefdf
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a3a6a9c08672e489bd5b4939bd0899f2ebe46d5e
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375138"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155152"
 ---
 # <a name="currency-type-and-conversion-function"></a>Função de conversão e tipo de moeda
   Esse exemplo apresenta um tipo de dados de moeda definido pelo usuário usando C#. Esse tipo de dados definido pelo usuário encapsula um valor e uma cultura que ajudam a determinar o modo correto de renderizar o valor como um valor de moeda nessa cultura. Esse exemplo também fornece uma função de conversão de moeda que retorna uma instância do tipo de dados de moeda definido pelo usuário. Se o banco de dados AdventureWorks tiver uma taxa de conversão de USD (dólares americanos) para a moeda associada à cultura especificada, a função de conversão retornará um tipo de dados de moeda definido pelo usuário com a taxa convertida e a cultura correspondente à cultura solicitada. Caso contrário, um tipo de dados de moeda definido pelo usuário será retornado com o valor original, que deve ser em USD, e com a cultura `en-us`. O exemplo também demonstra como cancelar o registro e registrar métodos e assemblies CLR (Common Language Runtime) usando Transact-SQL.  

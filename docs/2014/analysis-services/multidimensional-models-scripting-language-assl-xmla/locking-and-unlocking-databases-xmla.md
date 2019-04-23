@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - locking [XML for Analysis]
@@ -17,12 +15,12 @@ ms.assetid: 451afa58-ce03-4ecc-8dd3-9e7e8559b5f1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e1f518f846a6e0bb87f858d7a5798eb9a7e9c8d0
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 290f1e5fe7efb876ab6c24004c7465cf109de0d0
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146271"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154222"
 ---
 # <a name="locking-and-unlocking-databases-xmla"></a>Bloqueando e desbloqueando bancos de dados (XMLA)
   Você pode bloquear e desbloquear bancos de dados usando, respectivamente, o [bloqueio](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/lock-element-xmla) e [Unlock](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/lock-element-xmla) comandos no XML for Analysis (XMLA). Normalmente, outros comandos do XMLA bloqueiam e desbloqueiam objetos automaticamente quando necessário para concluir o comando durante a execução. Explicitamente, você pode bloquear ou desbloquear um banco de dados para executar vários comandos em uma única transação, como um [lote](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/batch-element-xmla) comando, evitando que outros aplicativos confirmem uma transação de gravação ao banco de dados.  

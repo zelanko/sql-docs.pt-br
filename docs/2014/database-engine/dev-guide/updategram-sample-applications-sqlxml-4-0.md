@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 helpviewer_keywords:
 - sample applications [SQLXML]
@@ -17,12 +15,12 @@ ms.assetid: d2287e10-4007-4ba4-ad84-4e2b6adfede5
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a6eaf2e0143b3f9ddcdc0c33757647b24d53b70a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0805ef503f7206ffeb1f7ccaf85fd09e808ac554
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135816"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154692"
 ---
 # <a name="updategram-sample-applications-sqlxml-40"></a>Aplicativos de exemplo de diagramas de atualização (SQLXML 4.0)
   Esta seção fornece exemplos de uso de diagramas de atualização.  

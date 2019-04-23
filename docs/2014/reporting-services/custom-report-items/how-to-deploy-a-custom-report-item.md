@@ -1,32 +1,30 @@
 ---
-title: 'Como: Implantar um Item de relatório personalizado | Microsoft Docs'
+title: 'Como fazer: Implantar um Item de relatório personalizado | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - custom report items, deploying
 ms.assetid: 80e97b0d-e355-4240-aebd-08cbc84089ed
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 891cafeac3901376793383cdd5cd499c549d45f6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2b41519ee6a6d31be33d92c8fbdf2ab503c93ec1
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033207"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158512"
 ---
-# <a name="how-to-deploy-a-custom-report-item"></a>Como: Implantar um Item de relatório personalizado
+# <a name="how-to-deploy-a-custom-report-item"></a>Como fazer: Implantar um item de relatório personalizado
   Para implantar um item de relatório personalizado no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], modifique os arquivos de configuração do servidor de relatório e copie os assemblies de componente em tempo de design e em tempo de execução nas pastas de aplicativo apropriadas para o Designer de Relatórios e o servidor de relatório.  
   
 ### <a name="to-deploy-a-custom-report-item"></a>Para implantar um item de relatório personalizado  
   
-1.  Edite o arquivo Rsreportdesigner.config para configurar os componentes de item de relatório personalizado em tempo de execução e tempo de design para uso no designer. Observe que a entrada `ReportItemName` deve corresponder ao atributo `CustomReportItemAttribute` usado em sua classe `CustomReportItemDesigner`. Por exemplo:  
+1.  Edite o arquivo Rsreportdesigner.config para configurar os componentes de item de relatório personalizado em tempo de execução e tempo de design para uso no designer. Observe que a entrada `ReportItemName` deve corresponder ao atributo `CustomReportItemAttribute` usado em sua classe `CustomReportItemDesigner`. Por exemplo:   
   
     ```  
     <ReportItems>  
