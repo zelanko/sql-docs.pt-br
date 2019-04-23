@@ -13,15 +13,15 @@ helpviewer_keywords:
 - overview of Report Builder
 - getting started
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: eb8120b9ba413ce6f1a59667c136b1580eb5b675
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: a0c9605bfafac3611b9a24f25bb7e46c194ed22c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290434"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948262"
 ---
 # <a name="report-builder-in-sql-server-2014"></a>Construtor de Relatórios no SQL Server 2014
   O Construtor de Relatórios é um ambiente de criação de relatório para usuários comerciais que preferem trabalhar no ambiente do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office. Quando você cria um relatório, especifica onde obter os dados, que dados obter e como exibir os dados. Ao executar o relatório, o processador de relatório obtém todas as informações especificadas, recupera os dados e os combina ao layout de relatório para gerar o relatório. Você pode visualizar os relatórios no Construtor de Relatórios ou publicá-los em um servidor de relatório ou em um servidor de relatório no modo integrado do SharePoint, onde outras pessoas poderão executá-lo.  
@@ -38,7 +38,7 @@ ms.locfileid: "56290434"
   
 -   **Inicie com o assistente de Tabela, Matriz ou Gráfico**. Escolha uma conexão de fonte de dados, arraste e solte campos para criar uma consulta de conjunto de dados, selecione um layout e um estilo e personalize seu relatório.  
   
--   **Inicie com o assistente de Mapa** para criar relatórios que exibam dados agregados em um plano de fundo geográfico ou geométrico. Os dados de mapa podem ser dados espaciais de uma consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] ou um arquivo de forma ESRI (Environmental Systems Research Institute, Inc.). Também é possível adicionar um plano de fundo de peça de mapa do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Bing.  
+-   **Inicie com o assistente de Mapa** para criar relatórios que exibam dados agregados em um plano de fundo geográfico ou geométrico. Dados de mapa podem ser dados espaciais de um [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta ou um Environmental Systems Research Institute, Inc. Arquivo de forma (ESRI). Também é possível adicionar um plano de fundo de peça de mapa do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Bing.  
   
 
   
@@ -79,7 +79,7 @@ ms.locfileid: "56290434"
  [Novidades no Construtor de Relatórios para SQL Server 2014](../what-s-new-in-report-builder-for-sql-server-2014.md)  
  Descreve os novos recursos nesta versão do Construtor de Relatórios, inclusive mapas.  
   
- [Tutorial: Criando um relatório de gráfico rápido Offline](tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+ [Tutorial: Criar um relatório de gráficos rápido offline](tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  Apresenta o Construtor de Relatórios e os assistentes disponíveis para ajudá-lo a criar relatórios. O tutorial fornece um conjunto de dados com o qual trabalhar, de modo que você não precise se conectar a uma fonte de dados para começar.  
   
  [Planejando um relatório &#40;Construtor de Relatórios&#41;](../report-design/planning-a-report-report-builder.md)  

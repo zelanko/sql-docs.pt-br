@@ -156,15 +156,15 @@ f1_keywords:
 - "10190"
 - "10232"
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c27f8438d0576f06fb071b4073035a5885a2606e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 6da8262cd94a4e685f2baf5f1adb1692cfb3df25
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297384"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954252"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Medidores (Construtor de Relatórios e SSRS)
   A região de dados do medidor é uma região de dados unidimensional que exibe um único valor em seu conjunto de dados. Um medidor individual é sempre posicionado dentro de um painel de medidores, onde é possível adicionar medidores filho ou adjacentes. Você pode usar o painel de medidores para criar em um mesmo painel de medidores vários medidores que compartilham funções comuns, como filtragem, agrupamento ou classificação.  
@@ -181,7 +181,7 @@ ms.locfileid: "56297384"
   
  ![Diagrama de elementos de medidor](../media/gauge-elements-diagram.gif "Diagrama de elementos de medidor")  
   
- Para obter mais informações sobre como usar medidores como KPIs, consulte [Tutorial: Adicionando um KPI ao relatório &#40;construtor de relatórios&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md).  
+ Saiba mais sobre como usar medidores como KPIs no [Tutorial: Adicionar um KPI ao relatório &#40;Construtor de Relatórios&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md).  
   
 > [!NOTE]  
 >  É possível publicar medidores separadamente de um relatório como partes do relatório. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -204,13 +204,13 @@ ms.locfileid: "56297384"
   
  ![rs_RadialGauge](../media/rs-radialgauge.gif "rs_RadialGauge")  
   
- Opções de medidor radial: Radial, Radial com Mini-indicador, duas escalas, 90 graus nordeste, 90 graus Noroeste, 90 graus Sudoeste, 90 graus Sudeste, 180 graus Norte, 180 graus Sul, 180 graus West180 graus Leste e medidor.  
+ Opções de medidor radial: Radial, Radial com Minimedidor, Duas Escalas, 90 Graus Nordeste, 90 Graus Noroeste, 90 Graus Sudoeste, 90 Graus Sudeste, 180 Graus Norte, 180 Graus Sul, 180 Graus Oeste, 180 Graus Leste e Medidor.  
   
  **Medidor linear**  
   
  ![rs_LinearGauge](../media/rs-lineargauge.gif "rs_LinearGauge")  
   
- Opções de medidor linear: Horizontal, Vertical, barra de vários ponteiros, duas escalas, intervalo de três cores, logarítmico, termômetro, termômetro Fahrenheit/Celsius e gráfico de marcador.  
+ Opções de medidor linear: Horizontal, Vertical, Vários Ponteiros de Barra, Duas Escalas, Intervalo de Três Cores, Logarítmico, Termômetro, Termômetro Fahrenheit/Celsius e Gráfico com Marcadores.  
   
   
 ##  <a name="AddingData"></a> Adicionando dados a um medidor  

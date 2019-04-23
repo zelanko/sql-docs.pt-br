@@ -12,15 +12,15 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], deleting
 - subscriptions [Reporting Services], managing
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e53af8ff7de611f00af6e38553f21885597e7232
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4d28613857573b2793937a20b94d637d4f36b084
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040637"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950732"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>Criar e gerenciar assinaturas de servidores de relatório no modo SharePoint
   Você pode criar assinaturas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para entregar relatórios de um aplicativo Web do SharePoint que esteja integrado com um servidor de relatório no modo do SharePoint. As assinaturas podem entregar relatórios a uma biblioteca de documentos, pasta de arquivo ou como email. Este tópico resume os requisitos e as etapas para criar uma assinatura do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -35,7 +35,7 @@ ms.locfileid: "56040637"
   
 -   **Pasta de arquivos:** Você pode entregar um documento baseado no relatório original para uma pasta compartilhada no sistema de arquivos. Você deve selecionar uma pasta existente que possa ser acessada por uma conexão de rede.  
   
--   **E-mail:** Se o servidor de relatório estiver configurado para usar a extensão de entrega Email do servidor de relatório, você poderá criar uma assinatura que envie um relatório ou um arquivo de relatório exportado (salvo em um formato de saída) para sua caixa de entrada. Para receber apenas a notificação sem o relatório ou a URL do mesmo, desmarque as caixas de seleção **Incluir um link no relatório** e **Mostrar relatório dentro da mensagem** .  
+-   **E-mail:** Se o servidor de relatório estiver configurado para usar a extensão de entrega de email do servidor de relatório, você pode criar uma assinatura que envia um relatório ou um arquivo de relatório exportado (salvo em um formato de saída) para sua caixa de entrada. Para receber apenas a notificação sem o relatório ou a URL do mesmo, desmarque as caixas de seleção **Incluir um link no relatório** e **Mostrar relatório dentro da mensagem** .  
   
  **Neste tópico:**  
   

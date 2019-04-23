@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10025"
 ms.assetid: 933a6f44-4eb7-4e73-9c40-ac0fd17b23d3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bee92a370bd24c28aeea9d38e66f38389aac9500
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: e72adbe0fe4ee33c6354db975cd917050d6ff392
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292404"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59944992"
 ---
 # <a name="dataset-properties-dialog-box-filters-report-builder"></a>Caixa de diálogo Propriedades do Conjunto de Dados, Filtros (Construtor de Relatórios)
   Selecione **Filtros** na caixa de diálogo **Propriedades do Conjunto de Dados** para criar filtros para o conjunto de dados.  

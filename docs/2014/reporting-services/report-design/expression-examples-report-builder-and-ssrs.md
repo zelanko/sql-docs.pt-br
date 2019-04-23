@@ -23,15 +23,15 @@ helpviewer_keywords:
 - dates [Reporting Services], expressions
 - expressions [Reporting Services], examples
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: aacc2369857783043f2c114b9c0382895a118acb
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3d3f42053a7bfe4c0a0d01b93a371b56321b1f7d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286615"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59943082"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Exemplos de expressões (Construtor de Relatórios e SSRS)
   Expressões costumam ser usadas em relatórios para controlar o conteúdo e a aparência do relatório. As expressões são escritas no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]e podem usar funções internas, código personalizado, variáveis de relatório/grupo e variáveis definidas pelo usuário. As expressões começam com um sinal de igual (=). Para obter mais informações sobre o editor de expressões e os tipos de referências que podem ser incluídos, consulte [Uso de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md) e [Adicionar uma expressão &#40;Construtor de Relatórios e SSRS&#41;](add-an-expression-report-builder-and-ssrs.md).  
@@ -65,7 +65,7 @@ ms.locfileid: "56286615"
   
  Para obter mais informações sobre expressões simples e complexas, em que você pode usar expressões e os tipos de referências que pode incluir em uma expressão, consulte tópicos em [Expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md). Para obter mais informações sobre o contexto em que as expressões são avaliadas para calcular agregações, consulte [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
- Para saber como escrever expressões que usam muitas das funções e operadores também empregados por exemplos de expressões neste tópico, mas no contexto de gravação de um relatório, consulte [Tutorial: Apresentação de expressões](../tutorial-introducing-expressions.md).  
+ Saiba como gravar expressões que usam muitas das funções e dos operadores também empregados por exemplos de expressões neste tópico, mas no contexto da gravação de um relatório, no [Tutorial: Introdução às expressões](../tutorial-introducing-expressions.md).  
   
  O editor de expressão inclui uma exibição hierárquica de funções internas. Quando você seleciona a função, um exemplo de código aparece no painel Valores. Para obter mais informações, consulte o [caixa de diálogo expressão](../expression-dialog-box.md) ou [caixa de diálogo expressão &#40;relatórios&#41;](../expression-dialog-box-report-builder.md).  
   

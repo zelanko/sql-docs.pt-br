@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 11e1f02ebe6c1d8965d7f42b76dc6057824c59c5
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: a7d077ffdddaf88a004e5b1fc7e35c08fb3e2562
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291554"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59957192"
 ---
 # <a name="tutorials-report-builder"></a>Tutoriais (Construtor de Relatórios)
   Use os seguintes tutoriais do Construtor de Relatórios para obter informações sobre como criar relatórios básicos.  
@@ -29,40 +29,40 @@ ms.locfileid: "56291554"
  [Formas alternativas de obter uma conexão de dados &#40;Construtor de Relatórios&#41;](alternative-ways-to-get-a-data-connection-report-builder.md)  
  A maioria destes tutoriais usa fontes de dados inseridas. Se você tiver acesso a fontes de dados compartilhadas, será possível usá-las em seu lugar. Este tópico fornece as etapas para usar fontes de dados compartilhadas.  
   
- [Tutorial: Criando um relatório de tabela básica &#40;construtor de relatórios&#41;](tutorial-creating-a-basic-table-report-report-builder.md)  
+ [Tutorial: Criar um relatório de tabela básico &#40;Construtor de Relatórios&#41;](tutorial-creating-a-basic-table-report-report-builder.md)  
  Siga as etapas deste tutorial para aprender a criar seu primeiro relatório. Este tutorial mostra como trabalhar com o Construtor de Relatórios para criar uma conexão de fonte de dados, definir uma consulta simples, criar um layout para conter os dados, formatar o relatório e adicionar agrupamentos e totais.  
   
- [Tutorial: Criando um relatório de matriz &#40;construtor de relatórios&#41;](tutorial-creating-a-matrix-report-report-builder.md)  
+ [Tutorial: Criar um relatório de matriz &#40;Construtor de Relatórios&#41;](tutorial-creating-a-matrix-report-report-builder.md)  
  Siga as etapas deste tutorial para aprender a adicionar e configurar uma matriz. Você irá usar o Assistente de Tabela ou Matriz para criar a fonte de dados de relatório, o conjunto de dados e o layout e, em seguida, aprimorar a matriz dentro da exibição **Design** do Construtor de Relatórios.  
   
- [Tutorial: Criando um relatório de forma livre &#40;construtor de relatórios&#41;](tutorial-creating-a-free-form-report-report-builder.md)  
+ [Tutorial: Criar um relatório de forma livre &#40;Construtor de Relatórios&#41;](tutorial-creating-a-free-form-report-report-builder.md)  
  Siga as etapas deste tutorial para aprender a criar um relatório de formato livre do zero. Esse relatório é semelhante a um boletim informativo.  
   
- [Tutorial: Formatar o texto &#40;construtor de relatórios&#41;](tutorial-format-text-report-builder.md)  
+ [Tutorial: Formatar texto &#40;Construtor de Relatórios&#41;](tutorial-format-text-report-builder.md)  
  Siga as etapas deste tutorial para saber algumas das muitas formas que é possível formatar texto nos relatórios.  
   
- [Tutorial: Adicionar um gráfico de colunas ao relatório &#40;construtor de relatórios&#41;](tutorial-add-a-column-chart-to-your-report-report-builder.md)  
+ [Tutorial: Adicionar um gráfico de colunas ao relatório &#40;Construtor de Relatórios&#41;](tutorial-add-a-column-chart-to-your-report-report-builder.md)  
  Siga as etapas deste tutorial para saber como adicionar um gráfico de coluna com uma média móvel a um relatório.  
   
- [Tutorial: Adicionar um gráfico de pizza ao relatório &#40;construtor de relatórios&#41;](tutorial-add-a-pie-chart-to-your-report-report-builder.md)  
+ [Tutorial: Adicionar um gráfico de pizza ao relatório &#40;Construtor de Relatórios&#41;](tutorial-add-a-pie-chart-to-your-report-report-builder.md)  
  Siga as etapas deste tutorial para aprender a adicionar um gráfico de pizza a um relatório.  
   
- [Tutorial: Adicionar um gráfico de barras ao relatório &#40;construtor de relatórios&#41;](tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
+ [Tutorial: Adicionar um gráfico de barras ao relatório &#40;Construtor de Relatórios&#41;](tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
  Siga as etapas deste tutorial para aprender a adicionar um gráfico de barras a um relatório.  
   
- [Tutorial: Adicionar um minigráfico ao relatório &#40;construtor de relatórios&#41;](tutorial-add-a-sparkline-to-your-report-report-builder.md)  
+ [Tutorial: Adicionar um minigráfico ao relatório &#40;Construtor de Relatórios&#41;](tutorial-add-a-sparkline-to-your-report-report-builder.md)  
  Siga as etapas deste tutorial para aprender a criar uma matriz e, em seguida, adicionar um conjunto de minigráficos a ela.  
   
- [Tutorial: Adicionando um KPI ao relatório &#40;construtor de relatórios&#41;](tutorial-adding-a-kpi-to-your-report-report-builder.md)  
+ [Tutorial: Adicionar um KPI ao relatório &#40;Construtor de Relatórios&#41;](tutorial-adding-a-kpi-to-your-report-report-builder.md)  
  Siga as etapas deste tutorial para aprender a adicionar um indicador chave de desempenho (KPI) a um relatório.  
   
- [Tutorial: Relatório de mapa &#40;construtor de relatórios&#41;](tutorial-map-report-report-builder.md)  
+ [Tutorial: Relatório de Mapa &#40;Construtor de Relatórios&#41;](tutorial-map-report-report-builder.md)  
  Siga as etapas deste tutorial para aprender a adicionar um mapa a um relatório.  
   
  [Tutorial: Adicionar um parâmetro ao relatório &#40;Construtor de Relatórios&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)  
  Siga as etapas deste tutorial para aprender a personalizar a aparência e o conteúdo de um relatório usando parâmetros.  
   
- [Tutorial: Criando relatórios principais e detalhamento &#40;construtor de relatórios&#41;](tutorial-creating-drillthrough-and-main-reports-report-builder.md)  
+ [Tutorial: Criar relatórios principal e de detalhamento &#40;Construtor de Relatórios&#41;](tutorial-creating-drillthrough-and-main-reports-report-builder.md)  
  Siga as etapas deste tutorial para aprender como criar relatórios para um cenário de detalhamento baseado em um cubo do Analysis Services. Você criará o relatório principal e o habilitará para detalhamento e o relatório que o destino da ação de detalhamento.  
   
  [Tutorial: Apresentando expressões](tutorial-introducing-expressions.md)  

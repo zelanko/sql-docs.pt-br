@@ -17,15 +17,15 @@ f1_keywords:
 - "10292"
 - "10412"
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e82dbeda2c76e77eb9d35fed39a679c57e09f24d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 4733ba204671ec3ed691e77626fb08861b7e6763
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290874"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59969542"
 ---
 # <a name="report-and-group-variables-collections-references-report-builder-and-ssrs"></a>Referências de coleções de variáveis de grupo e de relatório (Construtor de Relatórios e SSRS)
   Quando há um cálculo complexo usado mais de uma vez em expressões em um relatório, convém criar uma variável. É possível criar uma variável do relatório ou uma variável do grupo. Os nomes de variável devem ser exclusivos em um relatório.  

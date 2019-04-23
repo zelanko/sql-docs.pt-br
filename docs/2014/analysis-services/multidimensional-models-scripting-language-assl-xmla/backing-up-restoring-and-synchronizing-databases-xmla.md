@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - restoring databases [XML for Analysis]
@@ -18,12 +16,12 @@ ms.assetid: 6c021b2e-6ad0-444e-b23f-4b5f72ce084b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f3b9c0ce529927e088e9f2153fadc3470dc36b7
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 6163a538c4e8872016f7ec572e4c177cfe92de94
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146081"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158802"
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>Fazendo backup, restaurando e sincronizando bancos de dados (XMLA)
   No XML for Analysis, existem três comandos que fazem backup de bancos de dados, que os restauram e que os sincronizam:  
@@ -61,9 +59,9 @@ ms.locfileid: "50146081"
   
  O valor da propriedade `Security` está limitado a uma das cadeias de caracteres listadas na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|*skipMembership*|Inclua definições de segurança, mas exclua informações de associação, no arquivo de backup.|  
+|*SkipMembership*|Inclua definições de segurança, mas exclua informações de associação, no arquivo de backup.|  
 |*CopyAll*|Inclua definições de segurança e informações de associação no arquivo de backup.|  
 |*IgnoreSecurity*|Exclua definições de segurança do arquivo de backup.|  
   
@@ -91,9 +89,9 @@ ms.locfileid: "50146081"
   
  O valor desse elemento é limitado a uma das cadeias de caracteres listadas na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|*skipMembership*|Inclua definições de segurança, mas exclua informações de associação, no banco de dados.|  
+|*SkipMembership*|Inclua definições de segurança, mas exclua informações de associação, no banco de dados.|  
 |*CopyAll*|Inclua definições de segurança e informações de associação no banco de dados.|  
 |*IgnoreSecurity*|Exclua definições de segurança do banco de dados.|  
   
@@ -129,9 +127,9 @@ ms.locfileid: "50146081"
   
  O valor desse elemento é limitado a uma das cadeias de caracteres listadas na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|*skipMembership*|Inclua definições de segurança, mas exclua informações de associação, no banco de dados de destino.|  
+|*SkipMembership*|Inclua definições de segurança, mas exclua informações de associação, no banco de dados de destino.|  
 |*CopyAll*|Inclua definições de segurança e informações de associação no banco de dados de destino.|  
 |*IgnoreSecurity*|Exclua definições de segurança do banco de dados de destino.|  
   
@@ -145,7 +143,7 @@ ms.locfileid: "50146081"
 ### <a name="synchronizing-rolap-objects"></a>Sincronizando objetos ROLAP  
  O comando `Synchronize` não pode sincronizar agregações ou dados para objetos que usam o armazenamento ROLAP porque essas informações estão armazenadas em tabelas em uma fonte de dados relacional subjacente. No entanto, os metadados para objetos ROLAP podem ser sincronizados. Para sincronizar os metadados, o comando `Synchronize` recria a estrutura de tabela em uma fonte de dados relacional.  
   
- Você pode usar o elemento `Location` de um comando Synchronize para sincronizar objetos ROLAP. Para cada `Location` elemento usado para realocar uma fonte de dados, o `DataSourceType` propriedade deve ser explicitamente definida como *Local*. para obter informações sobre a ferramenta de configuração e recursos adicionais. Você também precisa definir a propriedade `ConnectionString` do elemento `Location` para a cadeia de conexão do novo local. Durante a sincronização, o comando `Synchronize` substituirá a cadeia de conexão para a fonte de dados identificada pela propriedade `DataSourceID` do elemento `Location` pelo valor da propriedade `ConnectionString` do elemento `Location`.  
+ Você pode usar o elemento `Location` de um comando Synchronize para sincronizar objetos ROLAP. Para cada `Location` elemento usado para realocar uma fonte de dados, o `DataSourceType` propriedade deve ser explicitamente definida como *Local*. . Você também precisa definir a propriedade `ConnectionString` do elemento `Location` para a cadeia de conexão do novo local. Durante a sincronização, o comando `Synchronize` substituirá a cadeia de conexão para a fonte de dados identificada pela propriedade `DataSourceID` do elemento `Location` pelo valor da propriedade `ConnectionString` do elemento `Location`.  
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento Backup &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/backup-element-xmla)   

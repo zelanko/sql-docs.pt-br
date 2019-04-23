@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - local mining models [Analysis Services]
@@ -19,12 +17,12 @@ ms.assetid: 03a8eb6b-159f-4a0a-afbe-06a2424b6090
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a2fd3e4bb2804595db0bd219af0d116fee9192f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a372b5c0b89088a7054606e76138906f83598e5d
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093666"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158872"
 ---
 # <a name="client-architecture-requirements-for-analysis-services-development"></a>Requisitos de arquitetura do cliente para o desenvolvimento do Analysis Services
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] dá suporte a uma arquitetura de cliente fino. O [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] mecanismo de cálculo é totalmente baseado em servidor, portanto, todas as consultas são resolvidas no servidor. Como resultado, apenas uma viagem de ida e volta entre o cliente e o servidor é necessária para cada consulta, resultando em um desempenho evolutivo à medida que as consultas aumentam em complexidade.  
@@ -53,7 +51,7 @@ ms.locfileid: "48093666"
  Ambos os aplicativos cliente e de camada intermediária podem se comunicar diretamente com o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] sem usar um provedor. Aplicativos cliente e de camada intermediária podem enviar XML for Analysis em pacotes SOAP sobre TCP/IP, HTTP ou HTTPS. O cliente pode ser codificado usando qualquer linguagem com suporte SOAP. Nesse caso, a comunicação é facilmente gerenciada pelo IIS (Serviços de Informações de Internet) usando HTTP, embora uma conexão direta com o servidor usando TCP/IP também possa ser codificada. Essa é a solução para o cliente mais fino possível no [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ## <a name="analysis-services-in-tabular-or-sharepoint-mode"></a>Analysis Services no modo Tabular ou do SharePoint  
- Na [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], o servidor pode ser iniciado no modo de (VertiPaq) do mecanismo de análise na memória xVelocity para bancos de dados tabulares em [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pastas de trabalho que foram publicadas em um site do SharePoint.  
+ No [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], o servidor pode ser iniciado no modo do mecanismo analítico na memória xVelocity (VertiPaq) para bancos de dados tabulares e para pastas de trabalho do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] que foram publicadas em um site do SharePoint.  
   
  O [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] e o [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] são os únicos ambientes de cliente com suporte para a criação e a consulta de bancos de dados na memória que usam o modo Tabular ou do SharePoint, respectivamente O banco de dados inserido do PowerPivot que você cria usando o Excel e [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ferramentas está contido na pasta de trabalho do Excel e é salvo como parte do arquivo. xlsx do Excel.  
   
@@ -63,7 +61,7 @@ ms.locfileid: "48093666"
 >  Quando você usa um cubo como uma fonte de dados para uma pasta de trabalho [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)], os dados obtidos no cubo são definidos como uma consulta MDX; porém, os dados são importados como um instantâneo bidimensional. Não é possível trabalhar interativamente com os dados nem atualizar os dados do cubo.  
   
 ### <a name="interfaces-for-powerpivot-client"></a>Interfaces para cliente do PowerPivot  
- [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] interage com o mecanismo de armazenamento do mecanismo (VertiPaq) de análise na memória xVelocity dentro da pasta de trabalho usando as interfaces e estabelecidas idiomas para o Analysis Services: AMO e ADOMD.NET e MDX e XMLA. Dentro do suplemento, as medidas são definidas por meio de uma linguagem de fórmula semelhante à do Excel, o DAX (Expressões de Análise de Dados). As expressões DAX são inseridas nas mensagens de XMLA que são enviadas ao servidor no processo.  
+ [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] interage com o mecanismo analítico na memória xVelocity (VertiPaq) o mecanismo de armazenamento dentro da pasta de trabalho usando as interfaces e estabelecidas idiomas para o Analysis Services: AMO e ADOMD.NET e MDX e XMLA. Dentro do suplemento, as medidas são definidas por meio de uma linguagem de fórmula semelhante à do Excel, o DAX (Expressões de Análise de Dados). As expressões DAX são inseridas nas mensagens de XMLA que são enviadas ao servidor no processo.  
   
 ### <a name="providers"></a>Provedores  
  As comunicações entre [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] e o Excel usam o provedor OLEDB do MSOLAP (versão 11.0). No provedor do MSOLAP, há quatro módulos diferentes, ou transportes, que podem ser usados para enviar mensagens entre o cliente e o servidor.  

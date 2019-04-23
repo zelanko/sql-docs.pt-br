@@ -1,5 +1,5 @@
 ---
-title: 'Lição 5: Formatando um relatório (Reporting Services) | Microsoft Docs'
+title: 'Lição 5: como formatar um relatório (Reporting Services) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0d97e0b74455e9ff7788d96303f7499001f7f3f7
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 37e5ff9cd40dd8c79efcde8c7cb072493a2ff95a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292564"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59958102"
 ---
-# <a name="lesson-5-formatting-a-report-reporting-services"></a>Lição 5: Formatando um relatório (Reporting Services)
+# <a name="lesson-5-formatting-a-report-reporting-services"></a>Lição 5: como formatar um relatório (Reporting Services)
   Agora que já adicionou uma região de dados e alguns campos ao relatório de ordens de venda, você pode formatar os campos de data e moeda, além dos cabeçalhos da coluna.  
   
  Neste tópico:  
@@ -93,7 +93,7 @@ ms.locfileid: "56292564"
 5.  No menu **Arquivo** , clique em **Salvar Tudo** para salvar o relatório.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- Você formatou cabeçalhos de coluna e valores de data e moeda com êxito. Agora você adicionará agrupamento e totais ao relatório. Consulte [lição 6: Adicionando agrupamentos e totais &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
+ Você formatou cabeçalhos de coluna e valores de data e moeda com êxito. Agora você adicionará agrupamento e totais ao relatório. Confira a [Lição 6: como adicionar agrupamentos e totais &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Formatando números e datas &#40;Construtor de Relatórios e SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   

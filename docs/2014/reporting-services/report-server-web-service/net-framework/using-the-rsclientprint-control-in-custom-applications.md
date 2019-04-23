@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - RSPrintClient control
@@ -14,15 +12,15 @@ helpviewer_keywords:
 - custom printing [Reporting Services]
 - client-side printing
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0cddac844ac9603da32a4fabc47fa71a8ddcd226
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 28f4cdf562db1b3008db239a08b76097dc5d7e46
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036597"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157703"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>Usando o controle RSClientPrint em aplicativos personalizados
   O controle ActiveX [!INCLUDE[msCoName](../../../includes/msconame-md.md)], **RSPrintClient**, fornece impressão do lado do cliente para relatórios exibidos no Visualizador de HTML. Ele fornece uma caixa de diálogo **Imprimir** para que um usuário possa iniciar um trabalho de impressão, visualizar um relatório, especificar páginas a serem impressas e alterar as margens. Durante uma operação de impressão do lado cliente, o servidor de relatório renderiza o relatório na extensão de renderização Image (EMF) e usa os recursos de impressão do sistema operacional para criar o trabalho de impressão e para enviá-lo para uma impressora.  
@@ -107,7 +105,7 @@ ms.locfileid: "56036597"
 |Argumento|E/S|Tipo|Descrição|  
 |--------------|----------|----------|-----------------|  
 |ServerPath|Entrada|Cadeia de caracteres|Especifica o diretório virtual do servidor de relatório (por exemplo, https://adventure-works/reportserver).|  
-|ReportPathParameters|Entrada|Cadeia de caracteres|Especifica o nome completo para o relatório no namespace da pasta do servidor de relatório, incluindo os parâmetros. Os relatórios são recuperados por meio do acesso à URL. Por exemplo: "/AdventureWorks Sample Reports/Resumo de Vendas do Funcionário&EmpID=1234"|  
+|ReportPathParameters|Entrada|Cadeia de caracteres|Especifica o nome completo para o relatório no namespace da pasta do servidor de relatório, incluindo os parâmetros. Os relatórios são recuperados por meio do acesso à URL. Por exemplo: "/ vendas do funcionário/relatórios de exemplo AdventureWorks Resumo & EmpID = 1234"|  
 |ReportName|Entrada|Cadeia de caracteres|O nome curto do relatório (no exemplo anterior, o nome curto é Resumo de Vendas do Funcionário). Ele será exibido na caixa de diálogo Imprimir e na fila de impressão.|  
   
 ### <a name="example"></a>Exemplo  

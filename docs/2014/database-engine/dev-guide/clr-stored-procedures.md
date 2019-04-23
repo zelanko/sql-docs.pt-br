@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -23,12 +21,12 @@ ms.assetid: bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 99fd0d558fccab09f0c73ddd47ef5b4b22d303c3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9f509b2a2544c67c9113bc700b7d98bfd4a24024
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511504"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157902"
 ---
 # <a name="clr-stored-procedures"></a>Procedimentos armazenados CLR
   Os procedimentos armazenados são rotinas que não podem ser usadas em expressões escalares. Diferentemente das funções escalares, eles podem retornar resultados tabulares e mensagens para o cliente, invocar instruções DDL (linguagem de definição de dados) e DML (linguagem de manipulação de dados) e retornar parâmetros de saída. Para obter informações sobre as vantagens da integração CLR e escolhendo entre o código gerenciado e [!INCLUDE[tsql](../../includes/tsql-md.md)], consulte [visão geral da integração CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
@@ -150,7 +148,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
  Use `SqlPipe.Send(string)` para enviar mensagens para o aplicativo cliente. O texto da mensagem é limitado a 8000 caracteres. Se a mensagem ultrapassar os 8000 caracteres, ela será truncada.  
   
 ###### <a name="returning-tabular-results"></a>Retornando resultados tabulares  
- Para enviar os resultados de uma consulta diretamente para o cliente, use uma das sobrecargas do método `Execute` no objeto `SqlPipe`. Essa é a maneira mais eficiente de retornar os resultados para o cliente, porque os dados são transferidos para os buffers de rede sem ser copiados para a memória gerenciada. Por exemplo:  
+ Para enviar os resultados de uma consulta diretamente para o cliente, use uma das sobrecargas do método `Execute` no objeto `SqlPipe`. Essa é a maneira mais eficiente de retornar os resultados para o cliente, porque os dados são transferidos para os buffers de rede sem ser copiados para a memória gerenciada. Por exemplo:   
   
  [C#]  
   

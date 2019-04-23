@@ -3,7 +3,7 @@ title: Extensão do SQL Server 2019 (visualização)
 titleSuffix: Azure Data Studio
 description: Extensão de 2019 Preview do SQL Server para o Studio de dados do Azure
 ms.custom: seodec18
-ms.date: 03/18/2019
+ms.date: 04/19/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: dfa49b1611c7fd9b196e57ea08575388aa90329b
-ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
+ms.openlocfilehash: 11dee99f7d0648a4c7fc701234796e6d552d47a9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161544"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59934122"
 ---
 # <a name="sql-server-2019-extension-preview"></a>Extensão do SQL Server 2019 (visualização)
 
@@ -30,9 +30,9 @@ Para instalar a extensão de 2019 do SQL Server (versão prévia), baixe e insta
 
    |Plataforma|Download|Data de liberação|Versão
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083220)|18 de março de 2019 |0.11.0
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083219)|18 de março de 2019 |0.11.0
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083218)|18 de março de 2019 |0.11.0
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087443)|18 de abril de 2019 |0.12.0
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087442)|18 de abril de 2019 |0.12.0
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087441)|18 de abril de 2019 |0.12.0
 
 1. No estúdio de dados do Azure, escolha **instalar a extensão do pacote VSIX** da **arquivo** menu e selecione o arquivo. VSIX baixado.
 
@@ -44,12 +44,27 @@ Para instalar a extensão de 2019 do SQL Server (versão prévia), baixe e insta
 
 1. Após as dependências de concluir a instalação, feche e reabra o estúdio de dados do Azure. O **cluster de big data do SQL Server** tipo de conexão não está disponível até que você reinicie o estúdio de dados do Azure.
 
+## <a name="changes-in-release-012"></a>Alterações de versão 0.12
+
+* O **cluster de big data do SQL Server** tipo de conexão foi removido nesta versão. Todas as funcionalidades disponíveis anteriormente a conexão de cluster de big data do SQL Server agora está disponível na conexão do SQL Server.
+* HDFS navegação pode ser encontrado sob o **serviços de dados** pasta
+* Para blocos de anotações a outros kernels de grandes dados e o PySpark funcionam quando conectado a instância mestre do SQL Server no seu cluster de big data do SQL Server.
+* Crie Assistente de tabela externa:
+  * Suporte para a criação de tabela externa usando a fonte de dados externa existente.
+  * Melhorias de desempenho entre o assistente.
+  * Melhoria no tratamento de nomes de objeto com caracteres especiais. Em alguns casos, esses causou o falha do Assistente
+  * Melhorias de confiabilidade para a página mapeamento de objeto.
+  * Sistema removidos bancos de dados - ': DWConfiguration', 'DWDiagnostics', 'DWQueue' - na lista suspensa de bancos de dados.
+  * Suporte para definir o nome do objeto de formato de arquivo externo na **criar tabela externa de arquivos CSV** assistente.
+  * Adicionado um botão de atualização para a primeira página do **criar tabela externa de arquivos CSV** assistente.
+
 ## <a name="release-notes-v0110"></a>Notas de versão (v0.11.0)
-  * Suporte de Jupyter Notebook, oferecem suporte especificamente para os kernels Spark e Python3, foi movido no estúdio de dados do Azure. Esta extensão não é mais necessária para usar os blocos de anotações.
-  * Várias correções de bugs nos assistentes de dados externos:
-    * Mapeamentos de tipo Oracle foram atualizados para corresponder as alterações enviadas no SQL Server de 2019 CTP 2.3.
-    * Corrigido um problema em que novos esquemas digitadas no controle de mapeamento de tabela foram perdidas.
-    * Corrigido um problema em que a verificação de um nó de banco de dados nos mapeamentos de tabela não resultou em todas as tabelas e modos de exibição que está sendo verificados.
+
+* Suporte de Jupyter Notebook, oferecem suporte especificamente para os kernels Spark e Python3, foi movido no estúdio de dados do Azure. Esta extensão não é mais necessária para usar os blocos de anotações.
+* Várias correções de bugs nos assistentes de dados externos:
+  * Mapeamentos de tipo Oracle foram atualizados para corresponder as alterações enviadas no SQL Server de 2019 CTP 2.3.
+  * Corrigido um problema em que novos esquemas digitadas no controle de mapeamento de tabela foram perdidas.
+  * Corrigido um problema em que a verificação de um nó de banco de dados nos mapeamentos de tabela não resultou em todas as tabelas e modos de exibição que está sendo verificados.
 
 
 ## <a name="release-notes-v0102"></a>Notas de versão (v0.10.2)

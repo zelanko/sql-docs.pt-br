@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 37dfbbec68d525667d415cca852aded4aba8b747
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 84a55d4f18b52d103997fdafee2fc2c84d9495f6
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288184"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950772"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>Planejar um relatório de mapa (Construtor de Relatórios e SSRS)
   Bons relatórios apresentam informações que levam a ações ou ideias. Para apresentar dados analíticos como totais de vendas ou dados demográficos em relação a um plano de fundo geográfico, você pode adicionar um mapa a seu relatório. Um mapa pode conter várias camadas, onde cada uma exibe elementos de mapas que são definidos por um tipo específico de dados espaciais: pontos que representam locais, linhas que representam rotas ou polígonos que representam áreas. Você pode associar seus dados analíticos a elementos de mapas em cada camada.  
@@ -112,14 +112,14 @@ ms.locfileid: "56288184"
   
 |Ícone de assistente|Estilo de camada|Tipo de camada|Descrição e opções|  
 |-----------------|-----------------|----------------|-----------------------------|  
-|![rs_MapType_Polygon_Basic](../media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|Mapa Básico|Polygon|Um mapa que exibe apenas áreas, por exemplo, territórios de vendas.<br /><br /> Opções: varie a cor pela paleta ou use uma única cor. Uma paleta é um conjunto predefinido de cores. Quando todas as cores em uma paleta tiverem sido atribuídas, tons de cores serão atribuídos.|  
+|![rs_MapType_Polygon_Basic](../media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|Mapa Básico|Polygon|Um mapa que exibe apenas áreas, por exemplo, territórios de vendas.<br /><br /> Opções: Varie a cor pela paleta ou use uma única cor. Uma paleta é um conjunto predefinido de cores. Quando todas as cores em uma paleta tiverem sido atribuídas, tons de cores serão atribuídos.|  
 |![rs_MapType_Polygon_ColorAnalytical](../media/rs-maptype-polygon-coloranalytical.gif "rs_MapType_Polygon_ColorAnalytical")|Mapa Analítico de Cores|Polygon|Um mapa que exibe dados analíticos por cor variável, por exemplo, dados de vendas por área.|  
-|![rs_MapType_Polygon_Bubble](../media/rs-maptype-polygon-bubble.gif "rs_MapType_Polygon_Bubble")|Mapa de Bolha|Polygon|Um mapa que exibe dados analíticos por tamanho de bolha variável centralizado nas áreas, por exemplo, dados de vendas por área.<br /><br /> Opções: Opções: varie as cores da área com base em um segundo campo analítico e especifique regras de cores.|  
-|![rs_MapType_Line_Basic](../media/rs-maptype-line-basic.gif "rs_MapType_Line_Basic")|Mapa de Linha Básico|Linha|Um mapa que exibe apenas linhas, por exemplo, rotas de entrega.<br /><br /> Opções: varie a cor pela paleta ou use uma única cor.|  
-|![rs_MapType_Line_Analytical](../media/rs-maptype-line-analytical.gif "rs_MapType_Line_Analytical")|Mapa de Linha Analítico|Linha|Um mapa que varia a cor e a largura da linha, por exemplo, número de pacotes entregues e métrica pontual por rota.<br /><br /> Opções: varie a largura da linha por um campo analítico, varie a cor da linha por um segundo campo analítico e especifique regras de cores.|  
-|![rs_MapType_Marker_Basic](../media/rs-maptype-marker-basic.gif "rs_MapType_Marker_Basic")|Mapa de Marcador Básico|Ponto|Um mapa que exibe um marcador em cada local, por exemplo, cidades.<br /><br /> Opções: varie a cor pela paleta ou use uma única cor e altere o estilo do marcador.|  
-|![rs_MapType_Marker_Bubble](../media/rs-maptype-marker-bubble.gif "rs_MapType_Marker_Bubble")|Mapa de Marcador de Bolha|Ponto|Um mapa que exibe uma bolha para cada local e varia o tamanho da bolha por um campo de dados analítico, por exemplo, dados de vendas por cidade.<br /><br /> Opções: varie a cor da bolha por um segundo campo analítico e especifique regras de cores.|  
-|![rs_MapType_Marker_Analytical](../media/rs-maptype-marker-analytical.gif "rs_MapType_Marker_Analytical")|Mapa de Marcador Analítico|Ponto|Um mapa que exibe um marcador em cada local e varia a cor do marcador, o tamanho e o tipo com base nos dados analíticos, por exemplo, produtos mais vendidos, faixa de lucro e estratégia de desconto.<br /><br /> Opções: varie o tipo de marcador por um campo analítico, varie o tamanho do marcador por um segundo campo analítico, varie a cor do marcador por um terceiro campo analítico e especifique as regras de cores.|  
+|![rs_MapType_Polygon_Bubble](../media/rs-maptype-polygon-bubble.gif "rs_MapType_Polygon_Bubble")|Mapa de Bolha|Polygon|Um mapa que exibe dados analíticos por tamanho de bolha variável centralizado nas áreas, por exemplo, dados de vendas por área.<br /><br /> Opções: Variar as cores da área com base em um segundo campo analítico e especifique regras de cores.|  
+|![rs_MapType_Line_Basic](../media/rs-maptype-line-basic.gif "rs_MapType_Line_Basic")|Mapa de Linha Básico|Linha|Um mapa que exibe apenas linhas, por exemplo, rotas de entrega.<br /><br /> Opções: Varie a cor pela paleta ou use uma única cor.|  
+|![rs_MapType_Line_Analytical](../media/rs-maptype-line-analytical.gif "rs_MapType_Line_Analytical")|Mapa de Linha Analítico|Linha|Um mapa que varia a cor e a largura da linha, por exemplo, número de pacotes entregues e métrica pontual por rota.<br /><br /> Opções: Varie a largura da linha por um campo analítico, varie a cor de linha por um segundo campo analítico e especifique regras de cores.|  
+|![rs_MapType_Marker_Basic](../media/rs-maptype-marker-basic.gif "rs_MapType_Marker_Basic")|Mapa de Marcador Básico|Ponto|Um mapa que exibe um marcador em cada local, por exemplo, cidades.<br /><br /> Opções: Varie a cor pela paleta ou use uma única cor e alterar o estilo do marcador.|  
+|![rs_MapType_Marker_Bubble](../media/rs-maptype-marker-bubble.gif "rs_MapType_Marker_Bubble")|Mapa de Marcador de Bolha|Ponto|Um mapa que exibe uma bolha para cada local e varia o tamanho da bolha por um campo de dados analítico, por exemplo, dados de vendas por cidade.<br /><br /> Opções: Varie a cor da bolha por um segundo campo analítico e especifique regras de cores.|  
+|![rs_MapType_Marker_Analytical](../media/rs-maptype-marker-analytical.gif "rs_MapType_Marker_Analytical")|Mapa de Marcador Analítico|Ponto|Um mapa que exibe um marcador em cada local e varia a cor do marcador, o tamanho e o tipo com base nos dados analíticos, por exemplo, produtos mais vendidos, faixa de lucro e estratégia de desconto.<br /><br /> Opções: Varie o tipo de marcador por um campo analítico, varie o tamanho do marcador por um segundo campo analítico, varie a cor do marcador por um terceiro campo analítico e especifique regras de cores.|  
   
  Depois que você adicionar um mapa com o assistente de Mapa, poderá criar camadas adicionais ou alterar as opções para uma camada usando o assistente de Camada. Para obter mais informações sobre os assistentes, consulte [Assistente de Mapa e Assistente de Camada do Mapa &#40;Construtor de Relatórios e SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
   
@@ -163,8 +163,8 @@ ms.locfileid: "56288184"
   
 ## <a name="see-also"></a>Consulte também  
  [Personalizar os dados e a exibição de um mapa ou de uma camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [Tutorial: Relatório de mapa &#40;construtor de relatórios&#41;](../tutorial-map-report-report-builder.md)   
+ [Tutorial: Relatório de Mapa &#40;Construtor de Relatórios&#41;](../tutorial-map-report-report-builder.md)   
  [Mapas &#40;Construtor de Relatórios e SSRS&#41;](maps-report-builder-and-ssrs.md)   
- [Solucionar problemas de relatórios: Mapear relatórios &#40;relatórios e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Solucionar problemas de relatórios: Mapear relatórios &#40;Construtor de Relatórios e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

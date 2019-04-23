@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3b532758e9a8631adeacd00a4fce8d9029cfcd1b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 67f243e3ab09809c263a3aff6554aaf5364271e6
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015597"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59958432"
 ---
 # <a name="rsreportserver-configuration-file"></a>RSReportServer Configuration File
   O arquivo **RsReportServer.config** armazena configurações que são usadas pelo Gerenciador de Relatórios, pelo serviço Web Servidor de Relatórios e pelo processamento em segundo plano. Todos os aplicativos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] são executados dentro de um único processo que lê as configurações armazenadas no arquivo RSReportServer.config. Os servidores de relatório nos modos nativo e SharePoint usam o RSReportServer.config, porém os dois modos não usam todas as mesmas configurações do arquivo de configuração. A versão do modo do SharePoint do arquivo é menor, pois muitas das configurações do modo do SharePoint são armazenadas nos bancos de dados de configuração do SharePoint, em vez de no arquivo. Este tópico descreve o arquivo de configuração padrão instalado para o modo Nativo e o modo do SharePoint e algumas das configurações e comportamentos importantes controlados pelo arquivo de configuração.  
@@ -176,7 +176,7 @@ ms.locfileid: "56015597"
 |`RSWindowsKerberos`|O servidor aceita tokens de segurança Kerberos.<br /><br /> Use essa configuração ou RSWindowsNegotiate ao usar autenticação Kerberos em um esquema de autenticação de delegação restrita.|N|  
 |`RSWindowsBasic`|O servidor aceita credenciais Básicas e emite um desafio/resposta quando uma conexão é feita sem credenciais.<br /><br /> A autenticação Básica transmite credenciais nas solicitações HTTP em texto não criptografado. Se você usar autenticação Básica, use o SSL para criptografar tráfego de rede para o servidor de relatório e vice-versa. Para exibir a sintaxe de configuração de exemplo para a autenticação básica do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte [Autenticação com o servidor de relatório](../security/authentication-with-the-report-server.md).|N|  
 |`Custom`|Especifique este valor se você tiver implantado uma extensão de segurança personalizada no computador do servidor de relatório. Para obter mais informações, consulte [Implementing a Security Extension](../extensions/security-extension/implementing-a-security-extension.md).|N|  
-|**LogonMethod**|Esse valor Especifica o tipo de logon para `RSWindowsBasic`. Se você especificar `RSWindowsBasic`, esse valor é obrigatório. Os valores válidos são 2 ou 3, onde cada valor representa o seguinte:<br /><br /> `2` = Logon de rede de servidores de alto desempenho para autenticar senhas de texto não criptografado<br /><br /> `3` = Logon de texto não criptografado, que preserva as credenciais de logon no pacote de autenticação enviado com cada solicitação HTTP, permitindo que o servidor represente o usuário durante a conexão com outros servidores da rede.<br /><br /> Observação: Valores 0 (para logon interativo) e 1 (para logon em lotes) não têm suporte no [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].|N|  
+|**LogonMethod**|Esse valor Especifica o tipo de logon para `RSWindowsBasic`. Se você especificar `RSWindowsBasic`, esse valor é obrigatório. Os valores válidos são 2 ou 3, onde cada valor representa o seguinte:<br /><br /> `2` = Logon de rede de servidores de alto desempenho para autenticar senhas de texto não criptografado<br /><br /> `3` = Logon de texto não criptografado, que preserva as credenciais de logon no pacote de autenticação enviado com cada solicitação HTTP, permitindo que o servidor represente o usuário durante a conexão com outros servidores da rede.<br /><br /> Observação: Os valores 0 (para logon interativo) e 1 (para logon em lotes) não têm suporte no [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].|N|  
 |**Realm**|Esse valor é usado para `RSWindowsBasic`. Especifica uma partição de recurso que inclui recursos de autorização e autenticação usados para controlar o acesso a recursos protegidos em sua organização.|N|  
 |**DefaultDomain**|Esse valor é usado para `RSWindowsBasic`. É usado para determinar o domínio usado pelo servidor para autenticar o usuário. Este valor é opcional, mas, caso seja omitido, o servidor de relatório usará o nome do computador como domínio. Se você instalou o servidor de relatório em um controlador de domínio, o domínio usado será o que é controlado pelo computador.|N|  
 |**RSWindowsExtendedProtectionLevel**|O valor padrão é **off**. Para obter mais informações, consulte [Extended Protection for Authentication with Reporting Services](../security/extended-protection-for-authentication-with-reporting-services.md).|N|  

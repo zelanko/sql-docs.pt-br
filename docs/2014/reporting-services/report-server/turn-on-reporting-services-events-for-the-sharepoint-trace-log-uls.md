@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e062d516b929f436c6a255a9dfb28e69568133e5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: df69bfef4b82aa9451fb47f6169f5966090f633a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025137"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954963"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Turn on Reporting Services events for the SharePoint trace log (ULS)
   A partir do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], os servidores do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] no modo do SharePoint podem gravar eventos do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] no log de rastreamento do ULS (Serviço de Log Unificado do SharePoint). [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] estão disponíveis na página Monitoramento da Administração Central do SharePoint.  
@@ -40,7 +40,7 @@ ms.locfileid: "56025137"
 ##  <a name="bkmk_general"></a> Recomendações gerais de log ULS  
  A tabela a seguir lista categorias e níveis de eventos recomendados para monitorar um ambiente do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Quando um evento é registrado em log, cada entrada inclui a hora do registro, o nome do processo e a ID do thread.  
   
-|Categoria|Nível|Descrição|  
+|Category|Nível|Descrição|  
 |--------------|-----------|-----------------|  
 |banco de dados|Detalhado|Registra eventos que envolvem acesso ao banco de dados.|  
 |Geral|Detalhado|Registra eventos que envolvem acesso aos seguintes itens:<br /><br /> [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Páginas da Web<br /><br /> Manipulador de HTTP do Visualizador de Relatórios<br /><br /> Acesso a relatório (arquivos .rdl)<br /><br /> Fontes de dados (arquivos .rsds)<br /><br /> URLs no site do SharePoint (arquivos .smdl)|  

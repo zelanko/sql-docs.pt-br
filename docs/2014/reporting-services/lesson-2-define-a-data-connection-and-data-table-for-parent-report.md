@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0a19f5fd51cf4e1b24e898ef3016c46edc152920
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c6b7e6e38ca10cf23179872ddc3ff4476bc3657d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022868"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59939852"
 ---
-# <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>Lição 2: definir uma conexão de dados e uma tabela de dados para o relatório pai
+# <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>Lição 2: Definir uma Conexão de dados e uma tabela de dados para o relatório pai
   Depois que você criar um novo projeto de site usando o modelo de site ASP.NET para o Visual C #, a próxima etapa será criar uma conexão de dados e uma tabela de dados para o relatório pai. Neste tutorial, a conexão de dados é com o banco de dados AdventureWorks2008. Você também tem a opção de se conectar ao banco de dados AdventureWorks2012.  
   
 ### <a name="to-define-a-data-connection-and-data-table-by-adding-a-dataset-for-parent-report"></a>Para definir uma conexão de dados e uma DataTable adicionando um DataSet (para o relatório pai)  

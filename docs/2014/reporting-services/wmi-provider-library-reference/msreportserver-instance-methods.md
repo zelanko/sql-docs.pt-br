@@ -16,15 +16,15 @@ topic_type:
 helpviewer_keywords:
 - MSReportServer_Instance class
 ms.assetid: ed079327-0bb0-4245-adb5-e46a90cf3586
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8b2c40220cceb6c0edb92ed0649c2337bd0850b0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d9a5fbc3725a5c25e257216e74a88f0b54d471bb
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036857"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953172"
 ---
 # <a name="msreportserverinstance-methods"></a>Métodos MSReportServer_Instance
   A classe MSReportServer_Instance fornece informações básicas necessárias para um cliente se conectar a um servidor de relatório instalado.  

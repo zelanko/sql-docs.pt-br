@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9b06b7e74a444e1d2dd29e7f86da852f0a5c0de2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b391c7e76ab5feeeb6e355924349a578c446c882
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030447"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59942992"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>Tipo de conexão PowerPivot (SSRS)
   É possível usar a extensão de processamento de dados do SQL Server Analysis Services para recuperar dados de uma pasta de trabalho PowerPivot publicada em uma Galeria PowerPivot do SharePoint.  

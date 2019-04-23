@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RSExecRole
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 13131359ddf4df667e18a674533954f95d8a6665
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a190d82a18f88d38b7e41642a1dd598ebd91215c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023487"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956072"
 ---
 # <a name="create-the-rsexecrole"></a>Criar o RSExecRole
   O [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa uma função de banco de dados predefinida chamada `RSExecRole` para conceder permissões de servidor de relatório ao banco de dados de servidor de relatório. O `RSExecRole` função é criada automaticamente com o banco de dados do servidor de relatório. Como regra geral, você nunca deve modificá-la ou atribuir outros usuários à função. No entanto, ao mover um banco de dados de servidor de relatório para um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)]novo ou diferente, recrie a função nos bancos de dados Mestre e MSDB do sistema.  

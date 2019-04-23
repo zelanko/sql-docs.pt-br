@@ -8,20 +8,20 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: b96936c9-c387-41a9-8c19-6eb325769ffd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5938bb79f24601fa9f83ffea9f181955f6893a85
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 312fdd9defc0cbc0f19c312e32e0eb8038cbc918
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290364"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59971872"
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>Imprimir um relatório (Construtor de Relatórios e SSRS)
   Depois de salvar um relatório em um servidor de relatório, você pode exibir e imprimir o relatório de um navegador, do Gerenciador de Relatórios ou qualquer aplicativo usado para exibir um relatório exportado. Antes de salvar um relatório, você pode imprimi-lo quando o visualiza.  
   
- Quando você imprime um relatório, pode especificar o tamanho do papel a ser usado. O tamanho do papel determina o número de páginas em um relatório e quais dados do relatório se ajustam em cada página. Tamanho do papel afeta somente os relatórios que são processados com renderizadores de quebra de página: PDF, imagem e impressão. A definição do tamanho do papel não tem efeito sobre outros processadores. Para obter mais informações, consulte [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md).  
+ Quando você imprime um relatório, pode especificar o tamanho do papel a ser usado. O tamanho do papel determina o número de páginas em um relatório e quais dados do relatório se ajustam em cada página. O tamanho do papel afeta somente relatórios renderizados com processadores de quebra de página não flexíveis: PDF, Imagem e Impressão. A definição do tamanho do papel não tem efeito sobre outros processadores. Para obter mais informações, consulte [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md).  
   
  Na barra de ferramentas do visualizador de relatórios no Gerenciador de Relatórios ou na visualização no Construtor de Relatórios, você pode exportar um relatório para um renderizador de quebra de página não flexível ou clicar no botão Imprimir para imprimir uma cópia do relatório. Talvez você precise definir o tamanho do papel ou outras propriedades de configuração de página. Use a caixa de diálogo **Propriedades do Relatório** para alterar as propriedades de configuração de página, inclusive o tamanho do papel.  
   

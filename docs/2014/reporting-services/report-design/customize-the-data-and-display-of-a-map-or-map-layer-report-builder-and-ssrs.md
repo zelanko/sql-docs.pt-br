@@ -21,15 +21,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.mapgroupproperties.general.f1
 - "10507"
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2b2290b738a7433fa1cc67bfd08079790f3029d3
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: d3bd3ef7205591d0353d7e8ee75e2d0ec49a221d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289544"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954982"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>Personalizar os dados e a exibição de um mapa ou de uma camada do mapa (Construtor de Relatórios e SSRS)
   Depois de adicionar um mapa ou uma camada do mapa a um relatório usando um assistente, você poderá alterar a aparência do mapa no relatório. Você pode fazer melhorias considerando as seguintes ideias:  
@@ -130,7 +130,7 @@ ms.locfileid: "56289544"
   
  A expressão de grupo especifica o modo como os dados analíticos que têm uma relação com dados espaciais são agregados para cada elemento do mapa na camada. Por padrão, a expressão de grupo é o conjunto de campos de correspondência especificado para a relação entre os dados espaciais e os dados analíticos. Por exemplo, para um mapa de bolhas que exibe locais de cidade e o tamanho da população de um país ou região, os campos de correspondência incluem o nome da cidade [Cidade] e o nome da região [Região], porque pode haver várias cidades com o mesmo nome. A expressão de grupo correspondente inclui dois campos: [Cidade] e [Região].  
   
- Para obter mais informações, consulte [dicas de mapa: Como importar arquivos de forma para o SQL Server e agregar dados espaciais](https://go.microsoft.com/fwlink/?LinkID=214991).  
+ Para saber mais, confira [Dicas de mapa: como importar shapefiles no SQL Server e agregar dados espaciais](https://go.microsoft.com/fwlink/?LinkID=214991).  
   
  
   

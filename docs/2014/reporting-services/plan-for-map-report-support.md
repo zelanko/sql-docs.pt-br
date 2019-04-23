@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5ddc97a7-7ee5-475d-bc49-3b814dce7e19
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 44b196d9c8ff508e6a878d51000bea95d8011907
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 2236103c76c6af8f81b0d4004962c23adedc2eaa
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293914"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946892"
 ---
 # <a name="plan-for-map-report-support"></a>Planejar para suporte ao relatório de mapa
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] dá suporte a relatórios de mapa que usam fontes de dados espaciais. Os dados espaciais podem vir de bancos de dados do SQL Server, de arquivos de formas ESRI ou da Galeria de Mapas instalada com o Reporting Services ou o Construtor de Relatórios. Um mapa também pode exibir um plano de fundo de peças de mapas do Bing. Um autor de relatório pode criar um relatório que especifica dados espaciais ou peças de mapa do Bing como dinâmicos e recuperados em tempo de execução ou como estáticos e inseridos na definição de relatório.  
@@ -51,6 +51,6 @@ ms.locfileid: "56293914"
  Para obter mais informações, [Maps &#40;construtor de relatórios e SSRS&#41;](report-design/maps-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Solucionar problemas de relatórios: Mapear relatórios &#40;relatórios e SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Solucionar problemas de relatórios: Mapear relatórios &#40;Construtor de Relatórios e SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

@@ -16,15 +16,15 @@ topic_type:
 helpviewer_keywords:
 - DatabaseLogonAccount property
 ms.assetid: 55f2863f-1ac1-4519-b512-e7f11c0ea5ea
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c9192e0845a5a6df9c7b848a3f91368dd15cfc60
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e98447aff31df0f95bc333fc643ab90a5b3f82ba
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025057"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950782"
 ---
 # <a name="databaselogonaccount-property-wmi-msreportserverconfigurationsetting"></a>Propriedade DatabaseLogonAccount (WMI MSReportServer_ConfigurationSetting)
   Especifica a conta de logon que o servidor de relatório usa para se conectar ao banco de dados do servidor de relatório. Somente leitura.  

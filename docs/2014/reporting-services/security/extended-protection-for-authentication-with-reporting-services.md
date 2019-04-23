@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d071000fa25a732465deb9c1020ed6365a9fc58e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 48e798aeb8309060a6f56a8a2ffcdbe0e0166fb9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017919"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59958472"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Proteção Estendida para Autenticação com o Reporting Services
   A Proteção Estendida é um conjunto de melhorias das versões recentes do sistema operacional Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] . A Proteção Estendida aprimora a maneira como as credenciais e a autenticação podem ser protegidas através de aplicativos. O recurso em si não oferece proteção diretamente contra ataques específicos, tais como encaminhamento de credenciais, mas oferece uma infraestrutura para aplicativos tais como [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para fiscalizar a Proteção Estendida para Autenticação.  
@@ -44,7 +44,7 @@ ms.locfileid: "56017919"
 > 
 >  A documentação de uma tecnologia de acesso a dados deve ter informações sobre suporte para proteção estendida.  
   
-### <a name="upgrade"></a>UPGRADE  
+### <a name="upgrade"></a>Atualizar  
   
 -   Atualizar um servidor do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para o [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] adiciona parâmetros de configuração com valores padrão ao arquivo `rsreportserver.config`. Se as configurações já estavam presentes, o [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] instalação preservará no `rsreportserver.config` arquivo.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "56017919"
 |Configuração|Descrição|  
 |-------------|-----------------|  
 |`RSWindowsExtendedProtectionLevel`|Especifica o grau de imposição da proteção estendida. Os valores válidos são `Off`, `Allow` e `Require`.<br /><br /> O valor padrão é `Off`.<br /><br /> O valor `Off` especifica que não há nenhuma verificação de associação de canal nem de associação de serviço.<br /><br /> O valor `Allow` suporta a proteção estendida mas não a exige. O valor Permitir especifica.<br /><br /> A proteção estendida será imposta para aplicativos clientes executados em sistemas operacionais que suportam a proteção estendida. A maneira como a proteção é imposta é determinada pelo parâmetro `RsWindowsExtendedProtectionScenario`.<br /><br /> A autenticação será permitida para aplicativos executados em sistemas operacionais que não suportam a proteção estendida.<br /><br /> O valor `Require` especifica:<br /><br /> A proteção estendida será imposta para aplicativos clientes executados em sistemas operacionais que suportam a proteção estendida.<br /><br /> A autenticação **não** será permitida para aplicativos executados em sistemas operacionais que não suportam a proteção estendida.|  
-|`RsWindowsExtendedProtectionScenario`|Especifica que formas de proteção estendida serão validadas: associação de canal, associação de serviço ou ambas. Os valores válidos são `Any`, `Proxy` e `Direct`.<br /><br /> O valor padrão é `Proxy`.<br /><br /> O valor `Any` especifica:<br /><br /> - A autenticação Windows NTLM, Kerberos e Negotiate e uma associação de canal não são obrigatórias.<br /><br /> -A Associação de Serviço é imposta.<br /><br /> O valor `Proxy` especifica:<br /><br /> - A autenticação Windows NTLM, Kerberos e Negotiate quando um token de associação de canal estiver presente.<br /><br /> -A Associação de Serviço é imposta.<br /><br /> O valor `Direct` especifica:<br /><br /> - A autenticação Windows NTLM, Kerberos e Negotiate quando um CBT estiver presente, uma conexão SSL com o serviço atual estiver presente e quando o CBT da conexão SSL corresponder ao CBT do token NTLM, Kerberos ou Negotiate.<br /><br /> - A Associação de Serviço não é imposta.<br /><br /> <br /><br /> Observação: Esta configuração será ignorada se `RsWindowsExtendedProtectionLevel` for definido como `OFF`.|  
+|`RsWindowsExtendedProtectionScenario`|Especifica que formas de proteção estendida serão validadas: Associação de canal, associação de serviço ou ambos. Os valores válidos são `Any`, `Proxy` e `Direct`.<br /><br /> O valor padrão é `Proxy`.<br /><br /> O valor `Any` especifica:<br /><br /> - A autenticação Windows NTLM, Kerberos e Negotiate e uma associação de canal não são obrigatórias.<br /><br /> -A Associação de Serviço é imposta.<br /><br /> O valor `Proxy` especifica:<br /><br /> - A autenticação Windows NTLM, Kerberos e Negotiate quando um token de associação de canal estiver presente.<br /><br /> -A Associação de Serviço é imposta.<br /><br /> O valor `Direct` especifica:<br /><br /> - A autenticação Windows NTLM, Kerberos e Negotiate quando um CBT estiver presente, uma conexão SSL com o serviço atual estiver presente e quando o CBT da conexão SSL corresponder ao CBT do token NTLM, Kerberos ou Negotiate.<br /><br /> - A Associação de Serviço não é imposta.<br /><br /> <br /><br /> Observação: Essa configuração será ignorada se `RsWindowsExtendedProtectionLevel` é definido como `OFF`.|  
   
  Entradas de exemplo no arquivo de configuração `rsreportserver.config`:  
   

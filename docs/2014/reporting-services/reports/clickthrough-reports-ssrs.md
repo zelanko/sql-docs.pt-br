@@ -12,15 +12,15 @@ helpviewer_keywords:
 - customizing clickthrough reports
 - clickthrough reports, customizing
 ms.assetid: cf2c396e-b0c6-41f9-8c45-ddc8406f7e85
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: caf23eb7e7d0e06a9e79dbaa6b9a0120725a4b10
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6b86bcb059d2186254a001f59f074a40eef659fd
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031047"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59934502"
 ---
 # <a name="clickthrough-reports-ssrs"></a>Relatórios de clickthrough (SSRS)
   Um relatório de clickthrough fornece informações detalhadas sobre os dados contidos no relatório principal. Um relatório de clickthrough é exibido quando o usuário clica nos dados interativos que aparecem no relatório principal. Esses relatórios são gerados automaticamente pelo servidor de relatórios. Você, como designer de modelo, determina o que é exibido em relatórios de clickthrough, definindo as propriedades `DefaultDetailAttribute` e `DefaultAggregateAttribute` que você atribui a uma entidade no modelo de relatório.  

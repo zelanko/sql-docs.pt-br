@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: efcf8685dcee6b85572747f01fd939831047a64e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: a3abfb7cbecbf496c7c2083d5d75b1833069d12c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294664"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59935692"
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>Dicas de design de relatórios (Construtor de Relatórios e SSRS)
   Use as dicas a seguir para ajudá-lo na criação de seus relatórios.  

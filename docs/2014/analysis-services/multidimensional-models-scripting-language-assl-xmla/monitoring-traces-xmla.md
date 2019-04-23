@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - XML for Analysis, traces
@@ -17,12 +15,12 @@ ms.assetid: cdbfb984-18bd-4c4e-8fb7-d64ce298ed35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 24af6f2ff33235321ef49732721042ab2227ca5f
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 678c6d2312261475f4b970b1535ce1faa1f00930
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146461"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156404"
 ---
 # <a name="monitoring-traces-xmla"></a>Monitorando rastreamentos (XMLA)
   Você pode usar o [Subscribe](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla) comando XML for Analysis (XMLA) para monitorar um rastreamento existente definido em uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. O comando `Subscribe` retorna os resultados de um rastreamento como um conjunto de linhas.  
@@ -35,13 +33,13 @@ ms.locfileid: "50146461"
   
  O conjunto de linhas contém as colunas listadas na tabela a seguir.  
   
-|coluna|Data type|Description|  
+|coluna|Data type|Descrição|  
 |------------|---------------|-----------------|  
 |EventClass|Integer|A classe de evento do evento recebido pelo rastreamento.|  
 |EventSubclass|Long integer|A subclasse do evento recebido pelo rastreamento.|  
-|CurrentTime|DATETIME|O horário no qual o evento foi iniciado, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|StartTime|DATETIME|O horário no qual o evento foi iniciado, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|EndTime|DATETIME|O horário de término evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.<br /><br /> Esta coluna não é preenchida para classes de evento que descrevem o início de um processo ou de uma ação.|  
+|CurrentTime|Datetime|O horário no qual o evento foi iniciado, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
+|StartTime|Datetime|O horário no qual o evento foi iniciado, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
+|EndTime|Datetime|O horário de término evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.<br /><br /> Esta coluna não é preenchida para classes de evento que descrevem o início de um processo ou de uma ação.|  
 |Duração|Long integer|O tempo total (em milissegundos) decorrido no evento.|  
 |CPUTime|Long integer|O tempo de processador (em milissegundos) decorrido no evento.|  
 |JobID|Long integer|O identificador de trabalho para o processo.|  
@@ -56,7 +54,7 @@ ms.locfileid: "50146461"
 |ObjectReference|Cadeia de caracteres|A representação XML da referência de objeto para o objeto especificado em ObjectName.|  
 |NestLevel|Integer|O nível da transação para a qual o evento ocorreu.|  
 |NumSegments|Long integer|O número de segmentos de dados afetados ou acessados pelo comando para o qual o evento ocorreu.|  
-|Severity|Integer|O nível de severidade de uma exceção para o evento. A coluna pode conter um dos seguintes valores:<br /><br /> Valor: 0 = êxito<br /><br /> Valor: 1 = informações<br /><br /> Valor: 2 = aviso<br /><br /> Valor: 3 = Erro|  
+|Severity|Integer|O nível de severidade de uma exceção para o evento. A coluna pode conter um dos seguintes valores:<br /><br /> Valor: 0 = Êxito<br /><br /> Valor: 1 = informações<br /><br /> Valor: 2 = Aviso<br /><br /> Valor: 3 = Erro|  
 |Êxito|Booliano|Indica se um comando teve êxito ou se falhou.|  
 |Erro|Long integer|O número do erro do evento, se aplicável.|  
 |ConnectionID|Cadeia de caracteres|O identificador da conexão para a qual o evento ocorreu.|  

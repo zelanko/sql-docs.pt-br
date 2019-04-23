@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Delete Group dialog box
 ms.assetid: bc1c0f27-41cb-49ad-8bef-634a4c23586f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f8f319a2bbca4a274800d72b9ef027f4852fb4a5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8532661c57901cd720e10b5d42047aa8f1071414
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030107"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59949599"
 ---
 # <a name="delete-group-dialog-box"></a>Caixa de diálogo Excluir Grupo
   Use a caixa de diálogo **Excluir Grupo** para excluir um grupo de uma tabela, matriz ou região de dados de lista. Caso haja linhas ou colunas associadas ao grupo, você também pode excluir essas estruturas.  

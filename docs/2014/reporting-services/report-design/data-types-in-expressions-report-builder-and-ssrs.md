@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 694afd46c2b04a09bffc951cba82af91edf9b6a5
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 5b0af16c21cb9fdf2c8ab41a931f955b46c29352
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290724"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956102"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Tipos de dados em expressões (Construtor de Relatórios e SSRS)
   Os tipos de dados representam tipos diferentes de dados de forma que eles possam ser armazenados e processados com eficiência. Tipos de dados comuns incluem texto (também conhecido como cadeias de caracteres) com e sem casas decimais, datas e horas e imagens. Os valores em um relatório devem ser um tipo de dados RDL. Você pode formatar um valor de acordo com sua preferência ao exibi-lo em um relatório. Por exemplo, um campo que representa moeda pode ser armazenado na definição de relatório como um número de ponto flutuante, mas pode ser exibido em uma variedade de formatos, dependendo da propriedade de formato escolhida.  
@@ -34,7 +34,7 @@ ms.locfileid: "56290724"
 |Cadeia de caracteres|Padrão: Cadeia de caracteres<br /><br /> Chart, GUID, Timespan|  
 |Booliano|Padrão: Booliano|  
 |Integer|Padrão: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
-|DateTime|Padrão: DateTime<br /><br /> DateTimeOffset|  
+|Datetime|Padrão: Datetime<br /><br /> DateTimeOffset|  
 |float|Padrão: Double<br /><br /> Single, Decimal|  
 |Binary|Padrão: Byte[]|  
 |Variante|Qualquer um dos itens acima, exceto Byte[]|  
@@ -69,7 +69,7 @@ ms.locfileid: "56290724"
 -   Verifique se a extensão de processamento de dados que você está usando inclui metadados para recuperar dados pré-formatados. Por exemplo, uma consulta MDX [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclui a propriedade estendida FORMATTED_VALUE para valores de cubo que já foram formatados ao processar o cubo. Para obter mais informações, consulte [Propriedades de campos estendidos para um banco de dados do Analysis Services &#40;SSRS&#41;](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
 ## <a name="understanding-parameter-data-types"></a>Entendendo os tipos de dados de parâmetro  
- Parâmetros de relatório devem ser um dos cinco tipos de dados: Valor booliano, DateTime, inteiro, Float ou Text (também conhecido como cadeia de caracteres). Quando sua consulta de conjunto de dados inclui parâmetros de consulta, os parâmetros de relatório são criados automaticamente e vinculados a parâmetros de consulta. O tipo de dados padrão para um parâmetro de relatório é String. Para alterar o tipo de dados padrão de um parâmetro de relatório, selecione o valor correto da lista suspensa **Tipo de dados** na página **Geral** da caixa de diálogo **Propriedades do Parâmetro de Relatórios** .  
+ Os parâmetros de relatório devem ser um dos cinco tipos de dados: Booliano, DateTime, Inteiro, Float ou Texto (também chamado de Cadeia de caracteres). Quando sua consulta de conjunto de dados inclui parâmetros de consulta, os parâmetros de relatório são criados automaticamente e vinculados a parâmetros de consulta. O tipo de dados padrão para um parâmetro de relatório é String. Para alterar o tipo de dados padrão de um parâmetro de relatório, selecione o valor correto da lista suspensa **Tipo de dados** na página **Geral** da caixa de diálogo **Propriedades do Parâmetro de Relatórios** .  
   
 > [!NOTE]  
 >  Os parâmetros de relatório que são tipos de dados DateTime não oferecem suporte a milissegundos. Embora você possa criar um parâmetro com base em valores que incluem milissegundos, você não pode selecionar um valor a partir de uma lista suspensa de valores disponíveis que inclui valores de Data e Hora que incluem milissegundos.  
@@ -117,7 +117,7 @@ ms.locfileid: "56290724"
   
     -   A expressão a seguir converte a cadeia em um valor de data e hora: `=DateTime.Parse(Fields!MyDateTime.Value)`  
   
-         Se a cadeia `MyDateTime.Value` tiver um deslocamento UTC, a função `DateTime.Parse` primeiro se ajustará para o deslocamento UTC (7 AM - [`+08:00`] para a hora UTC de 11 PM. da noite anterior). A função `DateTime.Parse` então aplicará o deslocamento UTC do servidor de relatórios local e, se necessário, ajustará a hora novamente para o Horário de Verão. Por exemplo, em Redmond, Washington, o deslocamento de horário local ajustado para o Horário de Verão é `[-07:00]`ou 7 horas antes de 11 PM. O resultado é o seguinte `DateTime` valor: `2007-07-06 04:07:07 PM` (6 de julho de 2007 às 4:07 PM).  
+         Se a cadeia `MyDateTime.Value` tiver um deslocamento UTC, a função `DateTime.Parse` primeiro se ajustará para o deslocamento UTC (7 AM - [`+08:00`] para a hora UTC de 11 PM. da noite anterior). A função `DateTime.Parse` então aplicará o deslocamento UTC do servidor de relatórios local e, se necessário, ajustará a hora novamente para o Horário de Verão. Por exemplo, em Redmond, Washington, o deslocamento de horário local ajustado para o Horário de Verão é `[-07:00]`ou 7 horas antes de 11 PM. O resultado é o seguinte `DateTime` valor: `2007-07-06 04:07:07 PM` (6 de julho de 2007 às 16:07).  
   
  Para obter mais informações sobre como converter cadeias de caracteres `DateTime` tipos de dados, consulte [Analisando cadeias de data e hora](https://go.microsoft.com/fwlink/?LinkId=89703), [formatando data e hora para uma cultura específica](https://go.microsoft.com/fwlink/?LinkId=89704), e [escolhendo Entre DateTime, DateTimeOffset e TimeZoneInfo](https://go.microsoft.com/fwlink/?linkid=110652) no MSDN.  
   

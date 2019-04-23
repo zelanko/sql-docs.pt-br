@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 81ac2f4972cadfcab6fa48a96e9780507faf2137
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 30401dfbc8d9ea9e4c77dad1516b9301d6dae833
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294884"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936173"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exporting to Microsoft Word (Report Builder and SSRS)
   A extensão de renderização do Word renderiza relatórios para o formato nativo de [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. O formato é o Office Open XML.  

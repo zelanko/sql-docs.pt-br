@@ -33,15 +33,15 @@ f1_keywords:
 - "10043"
 - sql12.rtp.rptdesigner.tablix.filter.f1
 ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6625e159d7992a8bb8a3f6b28c9f4e5dd0ac567b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 24b1fbcacee78de2448100d9b46f79b412140a66
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287124"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948632"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>Tabelas, matrizes e listas (Construtor de Relatórios e SSRS)
   Tabelas, matrizes e listas são regiões de dados que exibem dados de relatório em células organizadas em linhas e colunas. As células geralmente contêm dados de texto como texto, datas e números, mas também podem conter medidores, gráficos ou itens de relatório como imagens. Coletivamente, tabelas, matrizes e listas são geralmente chamadas de regiões de dados do tablix.  
@@ -56,7 +56,7 @@ ms.locfileid: "56287124"
   
  ![RS_TableMatrixList](../media/rs-tablematrixlist.gif "RS_TableMatrixList")  
   
- Para começar rapidamente com tabelas, matrizes e listas, consulte [Tutorial: Criando um relatório de tabela básica &#40;construtor de relatórios&#41;](../tutorial-creating-a-basic-table-report-report-builder.md), [Tutorial: Criando um relatório de matriz &#40;construtor de relatórios&#41;](../tutorial-creating-a-matrix-report-report-builder.md), e [Tutorial: Criando um relatório de forma livre &#40;construtor de relatórios&#41;](../tutorial-creating-a-free-form-report-report-builder.md).  
+ Confira uma introdução rápida a tabelas, matrizes e listas no [Tutorial: Criar um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../tutorial-creating-a-basic-table-report-report-builder.md), [Tutorial: Criar um relatório de matriz &#40;Construtor de Relatórios&#41;](../tutorial-creating-a-matrix-report-report-builder.md) e [Tutorial: Criar um relatório de forma livre &#40;Construtor de Relatórios&#41;](../tutorial-creating-a-free-form-report-report-builder.md).  
   
 > [!NOTE]  
 >  É possível publicar tabelas, matrizes e listas separadamente de um relatório como partes do relatório. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -82,7 +82,7 @@ ms.locfileid: "56287124"
   
  ![Nova Matriz adicionada por meio da Caixa de Ferramentas, selecionada](../media/rs-matrixtemplatenewselected.gif "Nova Matriz adicionada por meio da Caixa de Ferramentas, selecionada")  
   
- É possível agrupar dados por vários campos ou expressões em grupos de linhas e de colunas. Em tempo de execução, quando são combinados os dados de relatório e as regiões de dados, uma matriz cresce horizontalmente e verticalmente na página à medida que são adicionadas colunas para grupos de colunas e linhas para grupos de linhas. As células da matriz exibem valores de agregação com escopo para a interseção dos grupos de linhas e de colunas aos quais a célula pertence. Por exemplo, se sua matriz tiver um grupo de linhas (Categoria) e dois grupos de colunas (Território e Ano) que exibem a soma de vendas, o relatório exibirá duas células com somas de vendas para cada valor no grupo Categorias. O escopo das células são as duas interseções: Categoria e território e ano e categoria. A matriz pode incluir grupos aninhados e grupos adjacentes. Os grupos aninhados possuem uma relação pai-filho e os grupos adjacentes possuem uma relação de mesmo nível. Você pode adicionar subtotais para todos os níveis de linha aninhada e grupos de colunas dentro da matriz.  
+ É possível agrupar dados por vários campos ou expressões em grupos de linhas e de colunas. Em tempo de execução, quando são combinados os dados de relatório e as regiões de dados, uma matriz cresce horizontalmente e verticalmente na página à medida que são adicionadas colunas para grupos de colunas e linhas para grupos de linhas. As células da matriz exibem valores de agregação com escopo para a interseção dos grupos de linhas e de colunas aos quais a célula pertence. Por exemplo, se sua matriz tiver um grupo de linhas (Categoria) e dois grupos de colunas (Território e Ano) que exibem a soma de vendas, o relatório exibirá duas células com somas de vendas para cada valor no grupo Categorias. O escopo das células são as duas interseções: Categoria e Território, e Categoria e Ano. A matriz pode incluir grupos aninhados e grupos adjacentes. Os grupos aninhados possuem uma relação pai-filho e os grupos adjacentes possuem uma relação de mesmo nível. Você pode adicionar subtotais para todos os níveis de linha aninhada e grupos de colunas dentro da matriz.  
   
  Para tornar os dados da matriz mais fáceis de ler e realçar os dados que você deseja enfatizar, você pode mesclar células ou dividir horizontalmente e verticalmente, e aplicar formatação a dados e títulos de grupos.  
   

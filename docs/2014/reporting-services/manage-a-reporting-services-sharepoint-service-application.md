@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: bfda2e04-2d82-4534-bb50-90925f7386ae
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 472582e7a365a3e9bb9e94e4cb26a1b923519544
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d82bf60225c2559866ee100127058e5b58a2bdd9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016257"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948503"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Manage a Reporting Services SharePoint Service Application
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] são gerenciados na Administração Central do SharePoint. As páginas Gerenciamento e Propriedades permitem atualizar a configuração do aplicativo de serviço, bem como as tarefas de administração comuns.  
@@ -91,7 +91,7 @@ ms.locfileid: "56016257"
   
 |Configuração|Comentários|  
 |-------------|--------------|  
-|Habilitar Log de Execução|O padrão é TRUE.<br /><br /> Especifique se o servidor de relatórios gerará logs de rastreamento e por quantos dias os logs serão mantidos. para obter informações sobre a ferramenta de configuração e recursos adicionais. Os logs são armazenados no computador do servidor de relatório, na pasta \Microsoft SQL Server\MSSQL.n\ReportServer\Log. Um novo arquivo de log é iniciado cada vez que o serviço é reiniciado. Para obter mais informações sobre arquivos de log, consulte [Report Server Service Trace Log](report-server/report-server-service-trace-log.md)|  
+|Habilitar Log de Execução|O padrão é TRUE.<br /><br /> Especifique se o servidor de relatórios gerará logs de rastreamento e por quantos dias os logs serão mantidos. . Os logs são armazenados no computador do servidor de relatório, na pasta \Microsoft SQL Server\MSSQL.n\ReportServer\Log. Um novo arquivo de log é iniciado cada vez que o serviço é reiniciado. Para obter mais informações sobre arquivos de log, consulte [Report Server Service Trace Log](report-server/report-server-service-trace-log.md)|  
 |Dias em Que o Log de Execução Será Mantido|O padrão é 60 dias.|  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] oferece suporte para o log ULS do SharePoint.  Para obter mais informações, consulte [Ativar eventos do Reporting Services para o log de rastreamento do SharePoint &#40;ULS&#41;](report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  

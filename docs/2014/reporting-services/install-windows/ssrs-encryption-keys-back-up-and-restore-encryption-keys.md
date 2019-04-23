@@ -13,15 +13,15 @@ helpviewer_keywords:
 - encryption keys [Reporting Services]
 - symmetric keys [Reporting Services]
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 558c27c978ec6343b6185fab3792906c6d21ad52
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 43e705bf75e70b12c8201fb583462e2ee36c31c7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036587"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59943192"
 ---
 # <a name="back-up-and-restore-reporting-services-encryption-keys"></a>Fazer backup e restaurar as chave de criptografia do Reporting Services
   Um parte importante da configuração do servidor de relatório é a criação de uma cópia de backup da chave simétrica usada para criptografar informações confidenciais. Uma cópia de backup da chave é necessária para várias operações rotineiras, possibilitando que você reutilize um banco de dados de servidor de relatório existente em uma nova instalação.  
@@ -49,7 +49,7 @@ ms.locfileid: "56036587"
   
  **Modo Nativo:** O Reporting Services Configuration Manager ou o **rskeymgmt** utilitário.  
   
- **Modo SharePoint:** PowerShell ou páginas da Administração Central do SharePoint.  
+ **Modo SharePoint:** Páginas de Administração Central do SharePoint ou PowerShell.  
   
 ####  <a name="bkmk_backup_sharepoint"></a> Fazer backup dos servidores de relatório do modo SharePoint  
  Para servidores de relatório do modo do SharePoint, você pode usar os comandos do PowerShell ou as páginas de gerenciamento para o aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter mais informações, confira a seção “Gerenciamento de chaves” de [Gerenciar um aplicativo de serviço SharePoint do Reporting Services](../manage-a-reporting-services-sharepoint-service-application.md)  

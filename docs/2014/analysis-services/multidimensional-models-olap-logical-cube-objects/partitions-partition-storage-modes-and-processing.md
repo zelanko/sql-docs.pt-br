@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - storage [Analysis Services], partitions
@@ -23,12 +21,12 @@ ms.assetid: 86d17547-a0b6-47ac-876c-d7a5b15ac327
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ffb6331f3e02c0974320d8d9c71df9aff7602874
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 74f53ddb6e7e3fc6b9d14ddcc726c2766a598860
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507787"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157593"
 ---
 # <a name="partition-storage-modes-and-processing"></a>Modos e processamento de armazenamento de partição
   O modo de armazenamento de uma partição afeta o desempenho de consulta e processamento, requisitos de armazenamento e locais de armazenamento da partição e seu grupo de medidas e cubo pai. A escolha do modo de armazenamento também afeta escolhas de processamento.  
@@ -76,7 +74,7 @@ ms.locfileid: "52507787"
   
 -   O tamanho total da chave de índice no [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] não pode exceder 900 bytes. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] declarará essa condição com base nas colunas de chave de comprimento fixo quando a instrução CREATE INDEX for processada. No entanto, se houver colunas de comprimento variável na chave de índice, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] também declarará essa condição para todas as atualizações para as tabelas base. Como agregações diferentes possuem definições de exibição diferentes, o processamento ROLAP, usando exibições indexadas pode ser bem-sucedido ou falhar dependendo do projeto da agregação.  
   
--   A sessão que cria a exibição indexada deve ter a seguinte opções definidas como ON: ARITHABORT, CONCAT_NULL_YEILDS_NULL, QUOTED_IDENTIFIER, ANSI_NULLS, ANSI_PADDING e ANSI_WARNING. Essa configuração pode ser feita no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+-   A sessão que cria a exibição indexada deve ter as seguintes opções definidas como ON: ARITHABORT, CONCAT_NULL_YEILDS_NULL, QUOTED_IDENTIFIER, ANSI_NULLS, ANSI_PADDING e ANSI_WARNING. Essa configuração pode ser feita no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 -   A sessão que cria a exibição indexada deve ter a seguinte opção definida como OFF: NUMERIC_ROUNDABORT. Essa configuração pode ser feita no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

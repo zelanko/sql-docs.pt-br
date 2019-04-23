@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - reference exceptions [Analysis Services Scripting Language]
@@ -21,18 +19,18 @@ ms.assetid: 6e5c28b5-c0bc-4ccd-82e5-e174bbb71386
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d83728b33a4cbf0ce76eea3c577302c7d7ffaf25
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aee5e7b94aaaca2b35e34f8c4d49c2834189f114
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082846"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157742"
 ---
 # <a name="assl-objects-and-object-characteristics"></a>Objetos e características de objeto ASSL
   Os objetos da ASSL (Analysis Services Scripting Language) seguem diretrizes específicas a respeito de grupos de objetos, herança, nomenclatura, expansão e processamento.  
   
 ## <a name="object-groups"></a>Grupos de objetos  
- Todos os [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objetos têm uma representação XML. Os objetos estão divididos em dois grupos:  
+ Todos os objetos do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] possuem uma representação XML. Os objetos estão divididos em dois grupos:  
   
  **Objetos principais**  
  Os objetos principais podem ser criados, alterados e excluídos de forma independente. Entre eles, estão incluídos:  
@@ -88,7 +86,7 @@ ms.locfileid: "48082846"
 ## <a name="object-expansion"></a>Expansão de objetos  
  A restrição `ObjectExpansion` pode ser usada para controlar o grau de expansão do XML ASSL retornado pelo servidor. As opções dessa restrição estão relacionadas na tabela a seguir.  
   
-|Valor de enumeração|Permitido para \<Alter >|Description|  
+|Valor de enumeração|Permitido para \<Alter >|Descrição|  
 |-----------------------|---------------------------|-----------------|  
 |*ReferenceOnly*|não|Retorna somente o nome, a ID e o carimbo de data/hora do objeto solicitado e de todos os objetos principais contidos de forma recursiva.|  
 |*ObjectProperties*|sim|Expande o objeto solicitado e os objetos secundários contidos, mas não retorna objetos principais contidos.|  

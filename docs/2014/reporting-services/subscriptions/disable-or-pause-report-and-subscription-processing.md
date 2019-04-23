@@ -19,15 +19,15 @@ helpviewer_keywords:
 - roles [Reporting Services], modifying
 - shared schedules [Reporting Services], pausing
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 68d6284f7b7b832b37806d2fb39e506689a3b031
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 41b44df5fd990927c7b5a2e2a71698086a2bce61
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040677"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953882"
 ---
 # <a name="pause-report-and-subscription-processing"></a>Pausar o processamento de relatório e assinatura
   Você não pode pausar um relatório ou assinatura diretamente. No entanto, é possível interromper o processamento de relatório e assinatura antes do início do processamento ou quando uma conexão de fonte de dados for feita. Você também pode impedir o processamento de um relatório ou assinatura deixando-o inacessível para os usuários.  

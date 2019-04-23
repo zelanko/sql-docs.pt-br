@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: dfb4ed77-90e5-4273-b690-89a945508ed2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ee23e7f2382ca84ad609b3c150f77b4f9530725b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 0613234749c2bf419f3013226b3935782833e65e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033827"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59971892"
 ---
 # <a name="backup-and-restore-reporting-services-sharepoint-service-applications"></a>Aplicativos de serviço Sharepoint de backup e restauração do Reporting Services
   Este tópico descreve como fazer backup de um aplicativo de serviços [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e restaurá-lo usando a Administração Central do SharePoint ou o PowerShell. O tópico contém:  
@@ -84,7 +84,7 @@ ms.locfileid: "56033827"
   
 4.  Se uma conta de execução for configurada, você precisará saber as credenciais quando chegar a hora de restaurar o backup do aplicativo de serviço. Não continue com o procedimento de backup e restauração até que saiba as credenciais corretas.  
   
- **Autenticação de banco de dados:** Para verificar se o aplicativo de serviço está usando a Autenticação do Windows para a autenticação do banco de dados:  
+ **Autenticação de banco de dados:** Para verificar se o seu aplicativo de serviço está usando a autenticação do Windows para a autenticação de banco de dados:  
   
 1.  Na Administração Central do SharePoint, clique em **Gerenciar Aplicativos de Serviço** no grupo **Gerenciamento de Aplicativos** .  
   
@@ -129,7 +129,7 @@ ms.locfileid: "56033827"
  Para obter informações sobre como restaurar chaves de criptografia do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], confira a seção "Chaves de criptografia" de [Gerenciar um aplicativo do serviço SharePoint do Reporting Services](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md).  
   
 ### <a name="configure-the-execution-account-and-database-authentication"></a>Configurar a conta de execução e a autenticação do banco de dados  
- **Conta de execução:** Se seu aplicativo de serviço estiver usando uma conta de execução, execute as seguintes etapas para configurá-lo:  
+ **Conta de execução:** Se seu aplicativo de serviço estava usando uma conta de execução execute as seguintes etapas para configurá-lo:  
   
 1.  Na Administração Central do SharePoint, clique em **Gerenciar Aplicativos de Serviço** no grupo **Gerenciamento de Aplicativos** .  
   
@@ -141,7 +141,7 @@ ms.locfileid: "56033827"
   
 5.  Clique em **OK**.  
   
- **Autenticação de banco de dados:** Se o aplicativo de serviço estiver usando a Autenticação do Windows para autenticação do banco de dados, execute as seguintes etapas:  
+ **Autenticação de banco de dados:** Se seu aplicativo de serviço estiver usando autenticação do Windows para autenticação do banco de dados, execute as seguintes etapas:  
   
 1.  Na Administração Central do SharePoint, clique em **Gerenciar Aplicativos de Serviço** no grupo **Gerenciamento de Aplicativos** .  
   

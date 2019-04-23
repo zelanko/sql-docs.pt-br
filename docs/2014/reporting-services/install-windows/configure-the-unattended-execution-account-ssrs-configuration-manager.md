@@ -16,15 +16,15 @@ helpviewer_keywords:
 - accounts [Reporting Services]
 - reports [Reporting Services], processing
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 22810ae8acf19782997245a3746c70f95628fd1b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2d79a28204600adbe247864df68853b24bf8cf51
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012067"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946922"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Configurar a conta de execução autônoma (Gerenciador de configurações do SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece uma conta especial que é usada para o processamento autônomo de relatórios e para enviar solicitações de conexão pela rede. A conta é usada das seguintes maneiras:  
@@ -36,7 +36,7 @@ ms.locfileid: "56012067"
  O termo processamento autônomo de relatórios se refere a qualquer processo de execução de relatório que seja disparado por um evento (um evento controlado por agenda ou um evento de atualização de dados) e não a uma solicitação de usuário. O servidor de relatório usa a conta de processamento autônomo de relatórios para fazer logon no computador que hospeda a fonte de dados externa. Essa conta é necessária porque as credenciais da conta de serviço do Servidor de Relatório nunca são usadas para conectar a outros computadores.  
   
 > [!IMPORTANT]  
->  A configuração da conta é opcional. Entretanto, se não for configurada, suas opções de conexão a algumas fontes de dados ficarão limitadas e talvez você não possa recuperar arquivos de imagem a partir de computadores remotos. Se você configurar a conta, deverá mantê-la atualizada. Especificamente, se você permitir que uma senha expire ou se as informações da conta forem alteradas no Active Directory, será exibido o seguinte erro na próxima vez que um relatório for processado: "Falha de logon (rsLogonFailed) Falha de logon: nome de usuário desconhecido ou senha incorreta". A manutenção apropriada da conta de processamento autônomo de relatórios é essencial, mesmo se você nunca recuperar imagens externas ou enviar solicitações de conexão para computadores externos. Se você configurar a conta, mas depois descobrir que não a está usando, poderá excluí-la para evitar tarefas rotineiras de manutenção de conta.  
+>  A configuração da conta é opcional. Entretanto, se não for configurada, suas opções de conexão a algumas fontes de dados ficarão limitadas e talvez você não possa recuperar arquivos de imagem a partir de computadores remotos. Se você configurar a conta, deverá mantê-la atualizada. Especificamente, se você permitir que uma senha expire ou as informações de conta forem alteradas no Active Directory, você encontrará o seguinte erro na próxima vez que um relatório é processado: "Falha de logon (rsLogonFailed) Falha de Logon: nome de usuário desconhecido ou senha incorreta." A manutenção apropriada da conta de processamento autônomo de relatórios é essencial, mesmo se você nunca recuperar imagens externas ou enviar solicitações de conexão para computadores externos. Se você configurar a conta, mas depois descobrir que não a está usando, poderá excluí-la para evitar tarefas rotineiras de manutenção de conta.  
   
 ## <a name="how-to-configure-the-account"></a>Como configurar a conta  
  Você deve usar uma conta de usuário de domínio. Para que sirva à sua finalidade pretendida, essa conta deve ser diferente daquela usada para executar o serviço Servidor de Relatório. Certifique-se de usar uma conta que tenha permissões mínimas (acesso somente leitura com permissões de conexão de rede é suficiente) e acesso limitado apenas aos computadores que forneçam fontes de dados e recursos ao servidor de relatório. Para obter mais informações, consulte [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md).  

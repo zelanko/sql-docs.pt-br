@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: f1276c4c-bb44-44c0-a1bf-386a0c340003
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 562ba01ff109d78552e3e8bcdd049967847e39b9
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 13275d0a3a2070c7fd57d65a67d083af06c00af3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286584"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59957232"
 ---
 # <a name="avg-function-report-builder-and-ssrs"></a>Função Avg (Construtor de Relatórios e SSRS)
   Retorna a média de todos os valores numéricos não nulos especificados pela expressão, avaliados no escopo fornecido.  

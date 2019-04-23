@@ -19,15 +19,15 @@ helpviewer_keywords:
 - user interface
 - overview of Report Builder
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d1a9e3264ce3580ec5b1c6d110ce745236accff1
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 714fe10abac63da9abdb7c1415e8f6abbfba11b0
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287014"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953292"
 ---
 # <a name="report-design-view-report-builder"></a>Exibição do design de relatório (Construtor de Relatórios)
   A janela do Construtor de Relatórios foi criada para ajudá-lo a organizar facilmente seus recursos de relatório e criar rapidamente os relatórios de que você precisa. A superfície de design fica no centro da janela, com a Faixa de Opções acima e os painéis Dados do Relatório, Agrupamento e Propriedades, além da Galeria de Partes de Relatório, à esquerda, abaixo e à direita. A superfície de design é o local em que você adiciona e organiza seus itens de relatório. A Faixa de Opções organiza itens de menu tradicionais em categorias que você pode localizar e usar facilmente. Os painéis ajudam a adicionar, selecionar e organizar os recursos de relatório e alteram as propriedades de item de relatório.  
@@ -42,7 +42,7 @@ ms.locfileid: "56287014"
  No modo de execução, a faixa de opções tem apenas uma guia, **executar**.  
   
 ### <a name="home-tab"></a>Guia Página Inicial  
- A guia Página Inicial é uma coleção de comandos geralmente usados que enfatiza a aparência dos itens dentro de seu relatório. Na guia Início, você pode acessar os comandos de execução, fonte, parágrafo, borda, número e layout. Quando você clicar em um item na guia, o item selecionado na superfície de design será alterado. Quando você clica em **executar**, o relatório é renderizado em HTML para que você possa ver como o conteúdo do relatório aparecerão quando publicados e você vir a guia execução, em vez da guia página inicial. A guia Início é a guia padrão exibida quando você cria um relatório pela primeira vez.  
+ A guia Página Inicial é uma coleção de comandos geralmente usados que enfatiza a aparência dos itens dentro de seu relatório. Na guia Início, você pode acessar os comandos de execução, fonte, parágrafo, borda, número e layout. Quando você clicar em um item na guia, o item selecionado na superfície de design será alterado. Quando você clica em **executar**, o relatório é renderizado em HTML para que você possa ver como o conteúdo do relatório aparecerão quando publicados e você vir a guia execução, em vez da guia página inicial. A guia de início é a guia padrão exibida quando você cria um relatório.  
   
 ### <a name="insert-tab"></a>Guia Inserir  
  A guia Inserir é uma coleção de comandos geralmente usados para adicionar itens de relatório ao relatório. Na guia Inserir, você pode usar assistentes para adicionar uma tabela, matriz gráfico ou mapa. Também é possível adicionar esses itens sem usar um assistente e adicionar outros itens de relatório como minigráficos, indicadores, caixas de texto, imagens, linhas, retângulos, sub-relatórios e cabeçalhos e rodapés do relatório.  
@@ -146,17 +146,17 @@ ms.locfileid: "56287014"
 ### <a name="changing-the-properties-pane-view"></a>Alterando a exibição do painel Propriedades  
  Por padrão, as propriedades exibidas no painel Propriedades são organizadas em grandes categorias, como Ação, Borda, Preenchimento, Fonte e Geral. Cada categoria tem um conjunto de propriedades padrão associado a ela. Por exemplo, as propriedades a seguir são listadas na categoria fonte: Color, FontFamily, FontSize, FontStyle, FontWeight, LineHeight e TextDecoration. Se preferir, você poderá ordenar todas as propriedades por nome no painel. Isso removerá as categorias e listará todas as propriedades em ordem alfabética, independentemente da categoria.  
   
- O painel de propriedades tem três botões na parte superior do painel: Categoria, classificar em ordem alfabética e páginas de propriedade. Clique nos botões Categoria e Ordem Alfabética para alternar entre as exibições do painel Propriedades. Clique no botão **Páginas de Propriedades** para abrir a caixa de diálogo de propriedades do item de relatório selecionado.  
+ O painel Propriedades tem três botões na parte superior: Categoria, Classificar em ordem alfabética e Páginas de propriedades. Clique nos botões Categoria e Ordem Alfabética para alternar entre as exibições do painel Propriedades. Clique no botão **Páginas de Propriedades** para abrir a caixa de diálogo de propriedades do item de relatório selecionado.  
   
   
 ##  <a name="GroupPane"></a> O painel Agrupamento (Construtor de Relatórios)  
- Os grupos são usados para organizar seus dados de relatório em uma hierarquia visual e para calcular totais. Você pode exibir grupos de linhas e colunas de uma região de dados na superfície de design e no painel Agrupamento. O painel agrupamento possui dois painéis: Grupos de linhas e grupos de colunas. Quando você seleciona uma região de dados, o painel agrupamento exibe todos os grupos dentro dessa região de dados como uma lista hierárquica: Grupos filho aparecem recuados abaixo dos grupos pai.  
+ Os grupos são usados para organizar seus dados de relatório em uma hierarquia visual e para calcular totais. Você pode exibir grupos de linhas e colunas de uma região de dados na superfície de design e no painel Agrupamento. O painel de Agrupamento tem dois painéis: Grupos de linhas e grupos de colunas. Quando você seleciona uma região de dados, o painel Agrupamento exibe todos os grupos dentro dessa região como uma lista hierárquica: os grupos filho aparecem recuados abaixo dos grupos pai.  
   
  ![Painel Agrupamento para grupos de linhas e colunas aninhadas](../media/rs-basictablixdesigngroupingpanedefaultview.gif "Painel Agrupamento para grupos de linhas e colunas aninhadas")  
   
  É possível criar grupos arrastando campos do painel de dados do relatório e os soltando na superfície de design ou no painel Agrupamento. No painel Agrupamento, você pode adicionar grupos pai, adjacente e filho, alterar as propriedades de grupos e excluir grupos.  
   
- O painel Agrupamento é exibido por padrão, mas você pode fechá-lo desmarcando a caixa Painel Agrupamento na guia Exibir. O painel Agrupamento não está disponível para as regiões de dados Gráfico e Medidor.  
+ O painel agrupamento é exibido por padrão, mas você pode fechar o painel desmarcando a caixa de seleção do painel de agrupamento na guia Exibir. O painel Agrupamento não está disponível para as regiões de dados Gráfico e Medidor.  
   
  Para obter mais informações, consulte [Painel Agrupamento &#40;Construtor de Relatórios e SSRS&#41;](../report-design/grouping-pane-report-builder.md) e [Noções básicas sobre grupos &#40;Construtor de Relatórios e SSRS&#41;](../report-design/understanding-groups-report-builder-and-ssrs.md).  
   

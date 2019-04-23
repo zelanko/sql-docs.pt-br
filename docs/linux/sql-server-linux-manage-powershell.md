@@ -10,22 +10,22 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
-ms.openlocfilehash: 18b0fec36a572893cb5150ef75973df674cf875d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 903d2d89ca0d551cbb78cfb69dd305f852f62313
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685824"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158762"
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Usar o PowerShell no Windows para gerenciar o SQL Server no Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Este artigo apresenta [SQL Server PowerShell](https://msdn.microsoft.com/library/mt740629.aspx) e orienta você por meio de alguns exemplos sobre como usá-lo com o SQL Server no Linux. Suporte do PowerShell para SQL Server está disponível atualmente no Windows, portanto, você pode usá-lo quando você tiver um computador Windows que pode se conectar a uma instância remota do SQL Server no Linux.
+Este artigo apresenta [SQL Server PowerShell](../powershell/sql-server-powershell.md) e orienta você por meio de alguns exemplos sobre como usá-lo com o SQL Server no Linux. Suporte do PowerShell para SQL Server está disponível atualmente no Windows, portanto, você pode usá-lo quando você tiver um computador Windows que pode se conectar a uma instância remota do SQL Server no Linux.
 
 ## <a name="install-the-newest-version-of-sql-powershell-on-windows"></a>Instalar a versão mais recente do PowerShell do SQL no Windows
 
-[PowerShell do SQL](https://msdn.microsoft.com/library/mt740629.aspx) no Windows está incluído no [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md). Ao trabalhar com o SQL Server, você deve usar sempre a versão mais recente do SSMS e do PowerShell do SQL. A versão mais recente do SSMS é continuamente atualizada e otimizada e atualmente trabalha com o SQL Server no Linux. Para baixar e instalar a versão mais recente, consulte [baixar o SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Para se manter atualizado, a versão mais recente do SSMS avisará quando há uma nova versão disponível para download.
+[SQL PowerShell](../powershell/download-sql-server-ps-module.md) no Windows é mantida na Galeria do PowerShell. Ao trabalhar com o SQL Server, você deve usar sempre a versão mais recente do módulo do SqlServer PowerShell.
 
 ## <a name="before-you-begin"></a>Antes de começar
 
@@ -58,8 +58,7 @@ O PowerShell deve exibir informações semelhantes à seguinte saída:
 ```
 ModuleType Version    Name          ExportedCommands
 ---------- -------    ----          ----------------
-Script     0.0        SqlServer
-Manifest   20.0       SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailabilityGroupList...
+Script     21.1.18102 SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailabilityGroupList...
 ```
 
 ## <a name="connect-to-sql-server-and-get-server-information"></a>Conecte-se ao SQL Server e obter informações do servidor
@@ -68,7 +67,6 @@ Vamos usar o PowerShell no Windows para se conectar à instância do SQL Server 
 
 Copie e cole os seguintes comandos no prompt do PowerShell. Quando você executa esses comandos, PowerShell será:
 - Exibição de *solicitação de credencial do Windows PowerShell* caixa de diálogo que solicitará as credenciais (*nome de usuário do SQL* e *senha SQL*) para se conectar ao SQL Server instância no Linux
-- Carregar o assembly do SQL Server Management Objects (SMO)
 - Criar uma instância das [Server](https://msdn.microsoft.com/library/microsoft.sqlserver.management.smo.server.aspx) objeto
 - Conectar-se para o **Server** e exibir algumas propriedades
 
@@ -79,26 +77,17 @@ Lembre-se de substituir **\<your_server_instance\>** com o endereço IP ou o nom
 $serverInstance = "<your_server_instance>"
 $credential = Get-Credential
 
-# Load the SMO assembly and create a Server object
-[System.Reflection.Assembly]::LoadWithPartialName('Microsoft.SqlServer.SMO') | out-null
-$server = New-Object ('Microsoft.SqlServer.Management.Smo.Server') $serverInstance
-
-# Set credentials
-$server.ConnectionContext.LoginSecure=$false
-$server.ConnectionContext.set_Login($credential.UserName)
-$server.ConnectionContext.set_SecurePassword($credential.Password)
-
 # Connect to the Server and get a few properties
-$server.Information | Select-Object Edition, HostPlatform, HostDistribution | Format-List
+Get-SqlInstance -ServerInstance $serverInstance -Credential $credential
 # done
 ```
 
 O PowerShell deve exibir informações semelhantes à seguinte saída:
 
 ```
-Edition          : Developer Edition (64-bit)
-HostPlatform     : Linux
-HostDistribution : Ubuntu
+Instance Name                   Version    ProductLevel UpdateLevel  HostPlatform HostDistribution                
+-------------                   -------    ------------ -----------  ------------ ----------------                
+your_server_instance            14.0.3048  RTM          CU13         Linux        Ubuntu 
 ```
 > [!NOTE]
 > Se nada for exibido para esses valores, a conexão à instância do SQL Server de destino mais provável falha. Certifique-se de que você pode usar as mesmas informações de conexão para conectar-se do SQL Server Management Studio. Em seguida, examine as [recomendações de solução de problemas de conexão](sql-server-linux-troubleshooting-guide.md#connection).

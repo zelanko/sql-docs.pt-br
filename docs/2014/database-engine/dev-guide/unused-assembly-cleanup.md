@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: e03c2b6f-8f39-4382-9cf3-7f766a1bd929
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f91f65dbe060eb11c3eeb049d069c665949dd350
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 490c8d5d3dc7c9b3dc083b61a904103092134636
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351031"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155880"
 ---
 # <a name="unused-assembly-cleanup"></a>Limpeza de assembly não usado
   O exemplo `AssemblyCleanup` contém um procedimento armazenado .NET que limpa os assemblies não usados do banco de dados atual consultando os catálogos de metadados. Seu único parâmetro, `visible_assemblies`, é usado para especificar se os assemblies visíveis não usados devem ser descartados. Um valor ''false'' significa, por padrão, que somente os assemblies invisíveis não usados serão descartados, caso contrário, todos os assemblies não usados serão descartados. O conjunto de assemblies não usados são aqueles que não têm pontos de entrada definidos (rotinas/tipos e agregações) e não há assemblies usados referenciando-os direta ou indiretamente.  

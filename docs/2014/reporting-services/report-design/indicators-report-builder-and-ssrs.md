@@ -15,15 +15,15 @@ f1_keywords:
 - "10546"
 - sql12.rtp.rptdesigner.indicatorproperties.validateandstates.f1
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 301ed0986cdb9971e2b03bd1af76ab3d2a71d86f
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 042a81dc4850c592542ca0764842b45a7756468d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293875"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948582"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>Indicadores (Construtor de Relatórios e SSRS)
   Os indicadores são medidores mínimos que transmitem o estado de um único valor de dados em um relance. Os ícones que representam indicadores e os respectivos estados são simples e visualmente efetivos mesmo quando usados em tamanhos pequenos.  
@@ -44,7 +44,7 @@ ms.locfileid: "56293875"
   
  O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece conjuntos de indicadores internos e ícones de indicador a serem usados no estado em que se encontram, mas você também pode personalizar ícones de indicador e conjuntos de indicadores individuais para atender às suas necessidades.  
   
- Para obter mais informações sobre como usar indicadores como KPIs, consulte [Tutorial: Adicionando um KPI ao relatório &#40;construtor de relatórios&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md).  
+ Saiba mais sobre como usar indicadores como KPIs no [Tutorial: Adicionar um KPI ao relatório &#40;Construtor de Relatórios&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md).  
   
 > [!NOTE]  
 >  É possível publicar indicadores separadamente de um relatório como partes do relatório. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  

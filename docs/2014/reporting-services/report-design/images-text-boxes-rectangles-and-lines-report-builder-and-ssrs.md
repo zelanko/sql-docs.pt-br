@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: aa7ad08f-dd49-401e-9619-522e27055bb9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3a52ab0ae1f602af8a5a517bd7946a39a1bf954a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: ded5827fa476d6d71839d77fd00f56d69e7cd710
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294034"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59957162"
 ---
 # <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>Imagens, caixas de texto, retângulos e linhas (Construtor de Relatórios e SSRS)
   Além das regiões de dados, como tabelas, matrizes e gráficos, os relatórios usam outros itens de relatório, como imagens, caixas de texto e retângulos, para adicionar interesse visual, realçar informações importantes ou fornecer informações relacionadas. É possível alterar a formatação de um item de relatório. Por exemplo, você pode adicionar uma borda ou um preenchimento, alterar a visibilidade inicial ou a direção ou especificar um tamanho e local exatos para o item.  

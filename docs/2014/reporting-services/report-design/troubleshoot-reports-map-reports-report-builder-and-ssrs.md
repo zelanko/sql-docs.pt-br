@@ -1,5 +1,5 @@
 ---
-title: 'Solucionar problemas de relatórios: Mapear relatórios (construtor de relatórios e SSRS) | Microsoft Docs'
+title: 'Solucionar problemas de relatórios: Mapear relatórios (Construtor de Relatórios e SSRS) | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0660eb1e4e9ae682e1a7c64005a767280c441445
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 87904dc6e53bdf25739bd49267ddb1dc402186f8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296234"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950212"
 ---
-# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Solucionar problemas de relatórios: Relatórios de mapa (Construtor de Relatórios e SSRS)
+# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Solucionar problemas de relatórios: Relatórios de mapa (construtor de relatórios e SSRS)
   Os problemas com mapas em um relatório podem ocorrer quando você adiciona um mapa ou camada do mapa ao relatório, quando você personaliza um mapa existente ou camada do mapa em seu relatório, quando visualiza um mapa em um relatório ou quando publica um relatório com um mapa. Use este tópico para ajudar a solucionar esses problemas.  
   
 > [!NOTE]  

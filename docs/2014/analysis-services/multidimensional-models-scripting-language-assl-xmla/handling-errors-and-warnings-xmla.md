@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - errors [XML for Analysis]
@@ -22,12 +20,12 @@ ms.assetid: ab895282-098d-468e-9460-032598961f45
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5a41e9cedf8a2a19aea0cf8a374bc71f520ff52f
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 856886a5edfa5dcae604b44f5c2dca356ba0addb
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147741"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156383"
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>Manipulando erros e avisos (XMLA)
   Tratamento de erros é necessário quando um XML for Analysis (XMLA) [Discover](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover) ou [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) chamada de método não é executado, é executado com êxito, mas gera erros ou avisos, ou seja executado com êxito, mas retorna resultados que contêm erros.  
@@ -52,9 +50,9 @@ ms.locfileid: "50147741"
 ### <a name="fault-code-information"></a>Informações de código de falha  
  A tabela a seguir mostra as informações de código de falha XMLA contidas na sessão de detalhe da resposta SOAP. As colunas são os atributos de um erro na seção de detalhe de uma falha SOAP.  
   
-|Nome da coluna|Tipo|Description|Nulo permitido<sup>1</sup>|  
+|Nome da coluna|Tipo|Descrição|Nulo permitido<sup>1</sup>|  
 |-----------------|----------|-----------------|------------------------------|  
-|`ErrorCode`|`UnsignedInt`|Código de retorno que indica o êxito ou a falha do método. O valor hexadecimal deve ser convertido para um valor `UnsignedInt`.|não|  
+|`ErrorCode`|`UnsignedInt`|Código de retorno que indica o êxito ou a falha do método. O valor hexadecimal deve ser convertido para um valor `UnsignedInt`.|Não|  
 |`WarningCode`|`UnsignedInt`|Código de retorno que indica uma condição de aviso. O valor hexadecimal deve ser convertido para um valor `UnsignedInt`.|Sim|  
 |`Description`|`String`|Texto e descrição de erro ou de aviso retornadas pelo componente que gerou o erro.|Sim|  
 |`Source`|`String`|Nome do componente que gerou o erro ou o aviso.|Sim|  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7a2a6d21b49d22a5017eecb0b559be19a2844a8a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 17f63e9c4f6d1e560e6945a1ae6f01100d59703a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292253"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956582"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>Gerando feeds de dados de relatórios (Construtor de Relatórios e SSRS)
   A extensão de renderização do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Atom gera um documento de serviço Atom que lista os feeds de dados disponíveis em um relatório e os feeds de dados das regiões de dados em um relatório. Use essa extensão para gerar feeds de dados compatíveis com Atom legíveis e intercambiáveis com aplicativos que podem consumir feeds de dados gerados de relatórios. Por exemplo, você pode usar a extensão de renderização Atom para feeds de dados gerados a serem usados no cliente [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
@@ -80,13 +80,13 @@ ms.locfileid: "56292253"
  `<updated>2009-05-08T23:09:58Z</updated>`  
   
 ### <a name="data-section"></a>Seção de dados  
- A seção de dados dos feeds de dados contém um elemento <`entry`> para cada linha no conjunto de linhas mescladas gerado pela extensão de renderização Atom.  
+ A seção de dados dos feeds de dados contém um <`entry`> elemento para cada linha no conjunto de linhas mesclada gerado pela extensão de renderização Atom.  
   
  O diagrama a seguir mostra um relatório que usa grupos e totais.  
   
  ![RS_Atom_ProductSalesSummaryCircledValues](../media/rs-atom-productsalessummarycircledvalues.gif "RS_Atom_ProductSalesSummaryCircledValues")  
   
- O XML a seguir mostra um elemento <`entry`> desse relatório em um feed de dados. Observe que o elemento <`entry`> inclui os totais das vendas e pedidos para o grupo e os totais de vendas e pedidos para todos os grupos. O elemento <`entry`> inclui todos os valores no relatório.  
+ O XML a seguir mostra um <`entry`> elemento desse relatório em um feed de dados. Observe que o <`entry`> elemento inclui os totais de vendas e pedidos para o grupo e os totais de vendas e pedidos para todos os grupos. O <`entry`> elemento inclui todos os valores no relatório.  
   
  `<entry><id>uuid:1795992c-a6f3-40ec-9243-fbfd0b1a5be3;id=166322</id><title type="text"></title><updated>2009-05-08T23:09:58Z</updated><author /><content type="application/xml"><m:properties>`  
   
@@ -109,7 +109,7 @@ ms.locfileid: "56292253"
  `</entry>`  
   
 ### <a name="working-with-data-feeds"></a>Trabalhando com feeds de dados  
- Todos os feeds de dados gerados pelo relatório incluem os itens de relatório que estão no escopo do pai da região de dados que gera os feeds de dados. para obter informações sobre a ferramenta de configuração e recursos adicionais. Imagine um relatório que tenha várias tabelas e um gráfico. As caixas de texto no corpo do relatório fornecem texto descritivo de cada região de dados. Toda entrada em cada feed de dados que o relatório gera inclui o valor da caixa de texto. Por exemplo, se o texto for "O gráfico exibe as médias de vendas mensais por região de vendas", todos os três feeds de dados iincluirão esse texto em cada linha.  
+ Todos os feeds de dados gerados pelo relatório incluem os itens de relatório que estão no escopo do pai da região de dados que gera os feeds de dados. . Imagine um relatório que tenha várias tabelas e um gráfico. As caixas de texto no corpo do relatório fornecem texto descritivo de cada região de dados. Toda entrada em cada feed de dados que o relatório gera inclui o valor da caixa de texto. Por exemplo, se o texto for "O gráfico exibe as médias de vendas mensais por região de vendas", todos os três feeds de dados iincluirão esse texto em cada linha.  
   
  Se o layout do relatório incluir relações de dados hierárquicas, como regiões de dados aninhadas, essas relações serão incluídas no conjunto de linhas mescladas de dados de relatório.  
   

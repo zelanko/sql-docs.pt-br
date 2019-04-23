@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: a67dc03e-f838-4ec2-9ef6-f04895bab3c7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4a02db047e17c7bacf7183a10a0db93d8ac905e9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: bbb2e4e671bf00016071bfe53a7b3e5f53acac2f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031377"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954262"
 ---
 # <a name="shared-dataset-selection-page-report-manager"></a>Página Seleção de Conjunto de Dados Compartilhado (Gerenciador de Relatórios)
   Use a página Seleção de Conjunto de Dados Compartilhado para revisar e modificar os conjuntos de dados compartilhados que estão associados a um relatório.  

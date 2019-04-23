@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1262f283-9fc2-4bc1-9c79-457f7642abc7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 183309b2ce9f002c83628168079be597535dbbb8
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: c446593803d54a3829c024f590eaf95250d7cfe6
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298274"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956552"
 ---
 # <a name="display-the-same-data-on-a-matrix-and-a-chart-report-builder"></a>Exibir os mesmos dados em uma matriz e um gráfico (Construtor de Relatórios)
   Quando quiser mostrar os mesmos dados em uma matriz e em um gráfico, defina propriedades em ambas as regiões de dados para especificar o mesmo conjunto de dados, além das mesmas expressões para filtros, grupos, classificações e dados.  

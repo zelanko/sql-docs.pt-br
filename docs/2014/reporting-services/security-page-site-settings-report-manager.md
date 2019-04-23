@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: acc9a905-90f8-4544-aec6-b2ab3a1b0015
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9a2f664e4d8611cb50eda3ffdbb911d72eea6b39
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6ee97841337cff96d636ed90754274623064e2f0
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040647"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59939712"
 ---
 # <a name="security-page-site-settings-report-manager"></a>Página Segurança (Configurações de Site - Gerenciador de Relatórios)
   Use a página Segurança para exibir as atribuições de função do sistema que controlam acesso ao site do servidor de relatório. As atribuições de função do sistema existem fora do escopo do namespace de servidor de relatórios ou da hierarquia de pastas. As atribuições de função do sistema são globais e não variam para itens específicos. Operações que têm suporte nas atribuições de função do sistema incluem a criação e o uso de agendas compartilhadas, o uso do Construtor de Relatórios e configuração de valores padrão para alguns recursos de servidor.  

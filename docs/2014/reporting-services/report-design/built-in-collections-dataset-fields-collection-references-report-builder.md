@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d4717b1f8a905576d2f59657fd8ae8ad00396e3b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 906cda310ff4478854d2b308332571fa6dbdd155
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297424"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950132"
 ---
 # <a name="dataset-fields-collection-references-report-builder-and-ssrs"></a>Referências de coleções de campos de conjuntos de dados (Construtor de Relatórios e SSRS)
   Cada conjunto de dados de um relatório contém uma coleção Fields. A coleção Fields é o conjunto de campos especificado pela consulta do conjunto de dados, além de qualquer campo calculado adicional que você criar. Assim que você criar um conjunto de dados, a coleção de campos aparecerá no painel **Dados do Relatório** .  
@@ -41,7 +41,7 @@ ms.locfileid: "56297424"
  `=IIF(IsNothing(Fields!MiddleName.Value),"No Middle Name",Fields!MiddleName.Value)`  
   
 ### <a name="detecting-missing-fields-for-dynamic-queries-at-run-time"></a>Detectando campos ausentes em consultas dinâmicas em tempo de execução  
- Por padrão, os itens na coleção Fields têm duas propriedades: Value e IsMissing. A propriedade IsMissing indica se um campo que foi definido para um conjunto de dados em tempo de design estará contido em um dos campos recuperados em tempo de execução. Por exemplo, a consulta pode chamar um procedimento armazenado cujo conjunto de resultados varia de acordo com um parâmetro de entrada ou a consulta pode ser `SELECT * FROM` *\<table>*, em que a definição da tabela foi alterada.  
+ Por padrão, os itens da coleção Fields têm duas propriedades: Value e IsMissing. A propriedade IsMissing indica se um campo que foi definido para um conjunto de dados em tempo de design estará contido em um dos campos recuperados em tempo de execução. Por exemplo, a consulta pode chamar um procedimento armazenado cujo conjunto de resultados varia de acordo com um parâmetro de entrada ou a consulta pode ser `SELECT * FROM` *\<table>*, em que a definição da tabela foi alterada.  
   
 > [!NOTE]  
 >  IsMissing detecta alterações no esquema do conjunto de dados entre o tempo de design e o tempo de execução de qualquer tipo de fonte de dados. IsMissing não pode ser usado para detectar membros vazios em um cubo multidimensional e não está relacionado aos conceitos da linguagem MDX consulta de `EMPTY` e `NON EMPTY`.  

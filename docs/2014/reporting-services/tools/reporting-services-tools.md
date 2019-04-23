@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SQL Server Reporting Services, tools
 - architecture [Reporting Services]
 ms.assetid: 23d616e3-eb90-43fb-9b7a-869bd7e22e7b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 144cce158e6b4f8814392a996699ddbe214ca628
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8cbe5a25ef6ca87c2ffa5fd83c8ff1ca0796fdae
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016027"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59939842"
 ---
 # <a name="reporting-services-tools"></a>Ferramentas do Reporting Services
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] contém um conjunto de ferramentas gráficas e de script que dão suporte ao desenvolvimento e ao uso de relatórios em um ambiente gerenciado. O conjunto de ferramentas inclui ferramentas de desenvolvimento, de configuração e de administração, além de ferramentas de visualização de relatórios. Este tópico dá uma visão geral breve de cada ferramenta do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e como ela pode ser acessada.  
@@ -39,7 +39,7 @@ ms.locfileid: "56016027"
   
 |Ferramenta|Descrição|Como acessar|  
 |----------|-----------------|-------------------|  
-|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]|Uma exploração de dados interativa e uma experiência de apresentação visual criadas para permitir que você crie e interaja com relatórios com base em modelos tabulares do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .<br /><br /> Observação: Exige o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em modo do SharePoint.|Navegador dom Silverlight.|  
+|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]|Uma exploração de dados interativa e uma experiência de apresentação visual criadas para permitir que você crie e interaja com relatórios com base em modelos tabulares do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .<br /><br /> Observação: Requer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no modo do SharePoint.|Navegador dom Silverlight.|  
 |Designer de Relatórios|Use essa ferramenta para criar relatórios e implantar em um servidor de relatório em modo nativo ou em modo do SharePoint.<br /><br /> Hospedada no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]<br /><br /> Painel de Dados do Relatório para organizar dados usados em seu relatório.<br /><br /> Exibições com guias para design e visualização do design de relatório interativo<br /><br /> Designers de consultas para ajudar a especificar os dados a serem recuperados das fontes de dados e que estão associados aos tipos de fontes de dados do [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md)<br /><br /> Editor de expressão com IntelliSense para criar expressões [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] que personalizam o conteúdo e a aparência dos relatórios<br /><br /> Dá suporte a itens de relatório personalizados e designers de consultas personalizados<br /><br /> <br /><br /> Para obter mais informações, consulte [Reporting Services no SQL Server Data Tools &#40;SSDT&#41;](reporting-services-in-sql-server-data-tools-ssdt.md).|[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|  
 |Construtor de Relatórios|Use essa ferramenta para criar relatórios e implantar em um servidor de relatório em modo nativo ou em modo do SharePoint.<br /><br /> O ambiente de criação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office<br /><br /> Capacidade de salvar itens de relatório como partes de relatório<br /><br /> Um assistente para criar mapas<br /><br /> Agregações de agregações<br /><br /> Suporte aprimorado para expressões<br /><br /> Designers de consultas para ajudar a especificar os dados a serem recuperados de uma seleção de tipos de fontes de dados internas<br /><br /> <br /><br /> Para obter mais informações, consulte [construtor de relatórios &#40;SSRS&#41;](report-builder-authoring-environment-ssrs.md).|Baixe o MSI ou abra no Gerenciador de Relatórios/SharePoint|  
   

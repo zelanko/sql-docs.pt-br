@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: c33231a5-b3a8-42e4-95bc-d05bdf2222f5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c436b578bc1e277dbcb196e25a1a391fb74f5efc
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 9e9d03ee424f9e192a7218f289bfe133456789d7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290384"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950454"
 ---
 # <a name="lists-report-builder-and-ssrs"></a>Listas (Construtor de Relatórios e SSRS)
   Uma região de dados de lista se repete a cada grupo ou linha no conjunto de dados de relatório. Uma lista pode ser usada para criar relatórios ou formulários de forma livre, como faturas, ou em conjunto com outras regiões de dados. É possível definir listas que contenham qualquer número de itens de relatório. Uma lista pode ser aninhada em outra lista para fornecer vários grupos de dados.  
@@ -24,7 +24,7 @@ ms.locfileid: "56290384"
 > [!NOTE]  
 >  É possível publicar listas separadamente de um relatório como partes do relatório. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- Para começar rapidamente com listas, consulte [Tutorial: Criando um relatório de forma livre &#40;construtor de relatórios&#41;](../tutorial-creating-a-free-form-report-report-builder.md).  
+ Como introdução rápida a listas, confira o [Tutorial: Criar um relatório de forma livre &#40;Construtor de Relatórios&#41;](../tutorial-creating-a-free-form-report-report-builder.md).  
   
  Os relatórios de exemplo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluem um relatório que usa uma lista. Para saber mais sobre listas, explore a definição de relatório do relatório de exemplo no Construtor de Relatórios ou no Designer de Relatórios, ou visualize o relatório renderizado no Construtor de Relatórios ou no Designer de Relatórios. Para obter mais informações sobre o download de relatórios de exemplo, consulte os [exemplos do Reporting Services (SSRS)](https://go.microsoft.com/fwlink/?LinkID=198283).  
   
@@ -47,7 +47,7 @@ ms.locfileid: "56290384"
 ##  <a name="DisplayingLayout"></a> Exibindo dados em um layout de forma livre  
  Para organizar dados de relatório em um layout de forma livre, e não em uma grade, é possível adicionar uma lista à superfície de design. Arraste campos do painel de dados do relatório para a célula. Por padrão, a célula contém um retângulo que funciona como um contêiner. Mova todos os campos do contêiner até obter o design desejado. Use as linhas de ajuste exibidas quando você arrasta caixas de texto no contêiner de retângulo para ajudar você a alinhar as bordas vertical e horizontalmente. Remova o espaço em branco indesejado, ajustando o tamanho da célula. Para obter mais informações, consulte [Alterar a altura da linha ou a largura da coluna &#40;Construtor de Relatórios e SSRS&#41;](change-row-height-or-column-width-report-builder-and-ssrs.md).  
   
- A figura a seguir mostra uma lista que exibe informações sobre um pedido, incluindo estes campos: Data, ordem, Qty, produto, LineTotal e uma imagem.  
+ A figura a seguir mostra uma lista que exibe informações sobre um pedido, incluindo estes campos: Data, Ordem, Quantidade, Produto, LineTotal e uma Imagem.  
   
  ![Lista no modo de exibição de Design, quatro campos e uma imagem](../media/rs-basiclistformdesign.gif "Lista no modo de exibição de Design, quatro campos e uma imagem")  
   

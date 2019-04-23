@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: f87ce79b-00d7-4458-a17e-e253a20f720d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8edecad910dc28a3fdd777e68723d4d63917bef7
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 6bd9094c0b8e14bfc71440b72fb02bd69fd47cfb
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293494"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948722"
 ---
 # <a name="hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs"></a>Ocultar um cabeçalho ou rodapé de página na primeira ou na última página (Construtor de Relatórios e SSRS)
   Um relatório pode conter um cabeçalho e um rodapé de página nas partes superior e inferior de cada página, respectivamente. Depois de adicionar um cabeçalho ou rodapé, você pode ocultá-lo, de maneira seletiva, na primeira e última páginas de um relatório.  

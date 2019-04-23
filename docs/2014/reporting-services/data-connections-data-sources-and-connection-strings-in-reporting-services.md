@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Reporting Services, data sources
 - logins [Reporting Services]
 ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3323683075b99ce2ab8cbcb456240bc24323762f
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: f2b49a645866f310a7a0ff006b47cce2ff32f3c3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658110"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954152"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-reporting-services"></a>Data Connections, Data Sources, and Connection Strings in Reporting Services
   Para incluir dados em um relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , primeiro você deve criar *fontes de dados* e *conjuntos de dados*. Este tópico explica o tipo de fontes de dados, como criar fontes de dados e informações importantes relacionadas às credenciais de fontes de dados. Uma fonte de dados inclui o tipo da fonte de dados, informações da conexão e o tipo de credenciais a serem usadas. Há dois tipos de fontes de dados: inserida ou compartilhada. Um fonte de dados inserida é definida no relatório e usada apenas por esse relatório. Uma fonte de dados compartilhada é definida independentemente de um relatório e pode ser usada por vários relatórios. Para obter mais informações, consulte [Conexões de dados ou fontes de dados inseridas e compartilhadas &#40;Construtor de Relatórios e SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) e [Conjuntos de dados inseridos e compartilhados &#40;Construtor de Relatórios e SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
@@ -77,7 +77,7 @@ ms.locfileid: "58658110"
   
 -   ODBC  
   
--   Modelo Semântico de BI da Microsoft para Power View: Em um site do SharePoint que foi configurado para uma galeria PowerPivot e o [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], este tipo de fonte de dados está disponível. Esse tipo de fonte de dados é usado somente para apresentações do [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] . Para mais informações, consulte [Criando modelos semânticos de tabelas perfeitos de BI para Power View](https://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx).  
+-   Modelo semântico de BI da Microsoft para Power View: Em um site do SharePoint que tenha sido configurado para uma Galeria PowerPivot e [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], esse tipo de fonte de dados está disponível. Esse tipo de fonte de dados é usado somente para apresentações do [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] . Para mais informações, consulte [Criando modelos semânticos de tabelas perfeitos de BI para Power View](https://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx).  
   
  Para obter uma lista completa de fontes de dados e versões aos quais o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dá suporte, consulte [Fontes de dados com suporte no Reporting Services e &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
