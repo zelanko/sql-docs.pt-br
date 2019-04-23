@@ -1,7 +1,7 @@
 ---
 title: sqlsrv_prepare | Microsoft Docs
 ms.custom: ''
-ms.date: 02/11/2019
+ms.date: 04/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bae6521aa7348bcafca86a5efa54c605fc887a28
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+ms.openlocfilehash: 8716f57c208eeb38992cf6122509a36b29b858aa
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676144"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582889"
 ---
 # <a name="sqlsrvprepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -66,15 +66,15 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
     |*$phpType*[OPCIONAL]|Uma constante **SQLSRV_PHPTYPE _\*** que especifica o tipo de dados do PHP do valor retornado.|  
     |*$sqlType*[OPCIONAL]|Uma constante **SQLSRV_SQLTYPE_\*** que especifica o tipo de dados do SQL Server do valor de entrada.|  
   
-*$options* [OPCIONAL]: uma matriz associativa que define as propriedades da consulta. A tabela a seguir lista as chaves compatíveis e os valores correspondentes:  
-  
+*$options* [OPCIONAL]: uma matriz associativa que define as <a name="properties">propriedades da consulta</a>. A tabela a seguir lista as chaves compatíveis e os valores correspondentes:
+
 |Chave|Valores com suporte|Descrição|  
 |-------|--------------------|---------------|  
-|ClientBufferMaxKBSize|Um número inteiro positivo|Configura o tamanho do buffer que contém o conjunto de resultados de um cursor do lado do cliente.<br /><br />O padrão é 10240 KB. Para obter mais informações, leia [especificando um tipo de Cursor e selecionando linhas](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|
-|DecimalPlaces|Um número inteiro entre 0 e 4 (inclusivo)|Especifica as casas decimais ao formatar buscadas valores monetários.<br /><br />Qualquer inteiro negativo ou um valor maior que 4 será ignorado.<br /><br />Essa opção funciona somente quando for FormatDecimals **verdadeira**.|
-|FormatDecimals|**true** ou **false**<br /><br />O valor padrão é **false**.|Especifica se deve adicionar líderes zeros para cadeias de caracteres decimais quando apropriado e permite que o `DecimalPlaces` opção para formatação de tipos de dinheiro.<br /><br />Para obter mais informações, consulte [formatação de cadeias de caracteres decimais e valores monetários (Driver SQLSRV)](../../connect/php/formatting-decimals-sqlsrv-driver.md).|
+|ClientBufferMaxKBSize|Um número inteiro positivo|Configura o tamanho do buffer que contém o conjunto de resultados de um cursor do lado do cliente.<br /><br />O padrão é 10240 KB. Para saber mais, veja como [especificar um tipo de cursor e selecionar linhas](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|
+|DecimalPlaces|Um inteiro entre 0 e 4 (inclusive)|Especifica as casas decimais ao formatar valores monetários buscados.<br /><br />Qualquer inteiro negativo ou um valor maior que 4 será ignorado.<br /><br />Esta opção funcionará somente quando o FormatDecimals for **true**.|
+|FormatDecimals|**true** ou **false**<br /><br />O valor padrão é **false**.|Especifica quando é apropriado adicionar zeros iniciais em cadeias de caracteres decimais e habilita a opção `DecimalPlaces` para a formatação de tipos monetários.<br /><br />Para saber mais, confira [Formatação de cadeias de caracteres decimais e valores monetários (driver SQLSRV)](../../connect/php/formatting-decimals-sqlsrv-driver.md).|
 |QueryTimeout|Um número inteiro positivo|Define o tempo limite da consulta em segundos. Por padrão, o driver aguarda resultados indefinidamente.|  
-|ReturnDatesAsStrings|**true** ou **false**<br /><br />O valor padrão é **false**.|Configura a instrução para recuperar tipos de data e hora como cadeias de caracteres (**verdadeira**). Para saber mais, leia [Como recuperar um tipo de data e hora como cadeias de caracteres usando o driver SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md).
+|ReturnDatesAsStrings|**true** ou **false**<br /><br />O valor padrão é **false**.|Configura a instrução para recuperar os tipos de data e hora como cadeia de caracteres (**true**). Para saber mais, leia [Como recuperar um tipo de data e hora como cadeias de caracteres usando o driver SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md).
 |Rolável|SQLSRV_CURSOR_FORWARD<br /><br />SQLSRV_CURSOR_STATIC<br /><br />SQLSRV_CURSOR_DYNAMIC<br /><br />SQLSRV_CURSOR_KEYSET<br /><br />SQLSRV_CURSOR_CLIENT_BUFFERED|Para obter mais informações sobre esses valores, consulte [Especificando um tipo de cursor e selecionando linhas](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|  
 |SendStreamParamsAtExec|**true** ou **false**<br /><br />O valor padrão é **true**.|Configura o driver para enviar todos os dados de fluxo na execução **true** ou para enviar dados de fluxo em partes (**false**). Por padrão, o valor é definido como **true**. Para obter mais informações, consulte [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md).|  
   
@@ -223,7 +223,7 @@ sqlsrv_close($conn);
 ```  
   
 > [!NOTE]
-> É recomendável usar cadeias de caracteres como entradas ao associar os valores para um [coluna decimal ou numérica](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) para garantir a precisão e a precisão, como PHP limitou a precisão para [números de ponto flutuante](https://php.net/manual/en/language.types.float.php). O mesmo se aplica a colunas bigint, especialmente quando os valores estão fora do intervalo de um [inteiro](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
+> É recomendável usar cadeias de caracteres como entradas ao associar valores a uma [coluna decimal ou numérica](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) a fim de garantir a precisão e a exatidão, pois o PHP tem uma precisão limitada para [números de ponto flutuante](https://php.net/manual/en/language.types.float.php). O mesmo se aplica a colunas bigint, principalmente quando os valores estão fora do intervalo de um [inteiro](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
 
 ## <a name="example"></a>Exemplo  
 Este exemplo de código mostra como associar um valor decimal como um parâmetro de entrada.  

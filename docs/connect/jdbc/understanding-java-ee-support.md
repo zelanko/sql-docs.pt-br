@@ -1,7 +1,7 @@
 ---
 title: Noções básicas sobre o suporte ao Java EE | Microsoft Docs
 ms.custom: ''
-ms.date: 02/06/2019
+ms.date: 04/16/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ae55a5bc677c70d2a1f998e235031ac9bafd5aba
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: 7d7d1867c8c6d9311736124cf74e30b748a9de68
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154611"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671222"
 ---
 # <a name="understanding-java-ee-support"></a>Entendendo suporte ao Java EE
 
@@ -32,21 +32,21 @@ O nome de classe do driver é **com.microsoft.sqlserver.jdbc.SQLServerDriver**. 
 
 Para o JDBC Driver 6.2, o driver está contido no **mssql-jdbc-6.2.2.jre7.jar** ou **mssql-jdbc-6.2.2.jre8.jar**.
 
-Para o JDBC Driver 6.4, o driver está contido no **mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar**, ou **mssql-jdbc-6.4.0.jre9.jar**.
+Para o JDBC Driver 6.4, o driver está contido no **mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar** ou **mssql-jdbc-6.4.0.jre9.jar**.
 
-Para o 7.0 do Driver JDBC, o driver está contido no **mssql-jdbc-7.0.0.jre8.jar**, ou **mssql-jdbc-7.0.0.jre10.jar**.
+Para o JDBC Driver 7.0, o driver está contido no **mssql-jdbc-7.0.0.jre8.jar** ou **mssql-jdbc-7.0.0.jre10.jar**.
 
-Para a versão 7.2 do Driver JDBC, o driver está contido no **mssql-jdbc-7.2.1.jre8.jar**, ou **mssql-jdbc-7.2.1.jre11.jar**.
+Para o JDBC Driver 7.2, o driver está contido no **mssql-jdbc-7.2.2.jre8.jar** ou **mssql-jdbc-7.2.2.jre11.jar**.
   
 O nome de classe é usado sempre que você carrega o driver com a classe DriverManager do JDBC. Também é usado sempre que você precisa especificar o nome de classe do driver em uma configuração de driver. Por exemplo, a configuração de uma fonte de dados em um servidor de aplicativos do Java EE pode exigir que você insira o nome de classe do driver.  
   
 ## <a name="data-sources"></a>Fontes de dados
 
-O JDBC driver dá suporte a fontes de dados para Java EE/JDBC 3.0. O driver JDBC [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) classe é implementada pelo `com.microsoft.sqlserver.jdbc.SQLServerXADataSource`.  
+O JDBC driver dá suporte a fontes de dados para Java EE/JDBC 3.0. A classe [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) do JDBC Driver é implementada por `com.microsoft.sqlserver.jdbc.SQLServerXADataSource`.  
   
 ### <a name="datasource-names"></a>Nomes da fonte de dados
 
-Você pode fazer conexões de banco de dados usando fontes de dados. As fontes de dados disponíveis com o JDBC driver são descritas na tabela a seguir:  
+Você pode fazer conexões de banco de dados usando fontes de dados. As fontes de dados disponíveis com o driver JDBC são descritas na tabela a seguir:  
   
 |Tipo de fonte de dados|Nome de classe e descrição|  
 |---------------|--------------------------|  
@@ -73,7 +73,7 @@ DataSource ds = (DataSource) ctx.lookup("MyDataSource");
 Connection c = ds.getConnection("user", "pwd");  
 ```
 
-Para obter mais informações sobre as propriedades de fonte de dados, consulte [definindo propriedades de fonte de dados](../../connect/jdbc/setting-the-data-source-properties.md).  
+Para saber mais sobre as propriedades de fonte de dados, confira como [definir as propriedades de fonte de dados](../../connect/jdbc/setting-the-data-source-properties.md).  
   
 ## <a name="see-also"></a>Consulte Também
 

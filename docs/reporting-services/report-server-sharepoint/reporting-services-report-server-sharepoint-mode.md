@@ -7,13 +7,14 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
+manager: kfile
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 51ef41f83e7122d0ab6fc1bc1149fd2eb257215e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 05964630691537411c54bcd74b040a5d27301134
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529736"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583349"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Servidor de relatório do Reporting Services (modo do SharePoint)
 
@@ -114,11 +115,11 @@ ms.locfileid: "52529736"
   
  Ao configurar um servidor de relatório para ser executado em uma implantação de produto do SharePoint, é possível encontrar uma combinação de idiomas. A interface do usuário, a documentação e as mensagens aparecerão nos seguintes idiomas:  
   
--   Todas as páginas de aplicativo, ferramentas, erros, avisos e mensagens originadas do Reporting Services serão exibidas no idioma usado pela instância do Reporting Services em um dos idiomas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+- Todas as páginas de aplicativo, ferramentas, erros, avisos e mensagens originadas do Reporting Services serão exibidas no idioma usado pela instância do Reporting Services em um dos idiomas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   As páginas de aplicativo abertas em um site do SharePoint, a web part do Visualizador de Relatórios e o Construtor de Relatórios serão exibidas em um dos idiomas com suporte no Suplemento Reporting Services. Para exibir a lista de idiomas com suporte, acesse [Downloads do SQL Server](https://msdn.microsoft.com/sql/downloads/) e localize a página de download do Suplemento SQL Server 2016 Reporting Services.  
+- As páginas de aplicativo abertas em um site do SharePoint, a web part do Visualizador de Relatórios e o Construtor de Relatórios serão exibidas em um dos idiomas com suporte no Suplemento Reporting Services. Para exibir a lista de idiomas com suporte, acesse [Downloads do SQL Server](https://msdn.microsoft.com/sql/downloads/) e localize a página de download do Suplemento SQL Server 2016 Reporting Services.  
   
--   Sites do SharePoint, Administração Central do SharePoint, ajuda online e mensagens estão disponíveis nos idiomas que possuem suporte nos produtos do Office Server.  
+- Sites do SharePoint, Administração Central do SharePoint, ajuda online e mensagens estão disponíveis nos idiomas que possuem suporte nos produtos do Office Server.  
   
  Se o idioma do produto ou da tecnologia do SharePoint for diferente do idioma do servidor de relatório, o Reporting Services tentará usar um idioma da mesma família de idiomas que forneça a correspondência mais aproximada. Se não houver um substituto aproximado, o servidor de relatório usará o inglês.  
   
@@ -136,8 +137,7 @@ ms.locfileid: "52529736"
 
 ## <a name="next-steps"></a>Próximas etapas
 
-[Instalar ou desinstalar o suplemento Reporting Services para SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
-[Web part do Visualizador de Relatórios em um site do SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
-[Teste: Configurando o SSRS 2012 para integração com o SharePoint](https://go.microsoft.com/fwlink/?LinkId=306443)  
+[Instalar ou desinstalar o suplemento Reporting Services para SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)
+[Web part do Visualizador de Relatórios em um site do SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)
 
 Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

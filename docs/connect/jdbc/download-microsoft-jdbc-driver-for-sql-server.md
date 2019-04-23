@@ -1,7 +1,7 @@
 ---
 title: Baixar o Driver do Microsoft JDBC para SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 02/06/2019
+ms.date: 04/16/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,24 +11,24 @@ ms.assetid: 451181b8-11e6-4d01-b547-9ac5aada8238
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 27ff741558f45b775a517fbab960163dfe20bbf8
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: ea9eade200b31b532d3970b19a21477ee7d66d65
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802472"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59670984"
 ---
 # <a name="download-microsoft-jdbc-driver-for-sql-server"></a>Baixe o Microsoft JDBC Driver para SQL Server
 
 
-## <a name="using-the-jdbc-driver-with-maven-central"></a>Usando o Driver JDBC com o Maven Central
-O Driver JDBC pode ser adicionado a um projeto Maven adicionando-o como uma dependência no arquivo POM. XML com o código a seguir:
+## <a name="using-the-jdbc-driver-with-maven-central"></a>Como usar o JDBC Driver com o Maven Central
+O JDBC Driver pode ser incluído em um projeto Maven sendo adicionado como uma dependência no arquivo POM.XML com o código a seguir:
 
 ```xml
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>7.2.1.jre11</version>
+    <version>7.2.2.jre11</version>
 </dependency>
 ```  
 

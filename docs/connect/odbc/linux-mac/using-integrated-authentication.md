@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 834ec3118685da8059999b3986af3edb39dc3e58
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042245"
 ---
 # <a name="using-integrated-authentication"></a>Como usar a autenticação integrada
@@ -83,7 +83,7 @@ Os desenvolvedores podem implantar um aplicativo que usa um servidor vinculado o
   
 -   O servidor de aplicativos é autenticado como um banco de dados diferente e se conecta ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se autentica como um usuário de banco de dados para outro banco de dados ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] autentica-se como um usuário de banco de dados para outro banco de dados ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 Depois que a autenticação integrada for configurada, as credenciais serão passadas para o servidor vinculado.  
   
@@ -131,6 +131,6 @@ Para obter mais informações sobre a autenticação de computadores Linux ou ma
 ## <a name="see-also"></a>Consulte Também  
 [Diretrizes de programação](../../../connect/odbc/linux-mac/programming-guidelines.md)
 
-[Notas de Versão](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
+[Notas de versão](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
 
 [Como usar o Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md)

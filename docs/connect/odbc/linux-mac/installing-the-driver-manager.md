@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 63668ecb4ece28c27948ec3cca7991039090ec26
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041915"
 ---
 # <a name="installing-the-driver-manager"></a>Instalando o Gerenciador de Driver
@@ -35,7 +35,7 @@ A dependência de Gerenciador de driver será resolvida automaticamente pelo sis
 
 (Apenas para o Red Hat Linux e SUSE.)
 
-**Usando o script de instalação**  
+**Uso do script de instalação**  
   
 > [!IMPORTANT]  
 > Estas instruções referem-se ao `msodbcsql-11.0.2270.0.tar.gz`, que é o arquivo de instalação para o Red Hat Linux. Se estiver instalando a Versão Prévia para SUSE Linux, o nome do arquivo será `msodbcsql-11.0.2260.0.tar.gz`.  
@@ -85,8 +85,8 @@ Se não for possível concluir o script de instalação, configure e compile o g
 Agora você pode instalar o driver. Para obter mais informações, consulte [instalando o Microsoft ODBC Driver for SQL Server no Linux e macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).  
   
 ## <a name="see-also"></a>Consulte Também
-[Instalando o Microsoft ODBC Driver for SQL Server no Linux e no macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+[Instalando o Microsoft ODBC Driver for SQL Server em Linux e macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
 
 [Problemas conhecidos nesta versão do driver](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
 
-[Notas de Versão](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
+[Notas de versão](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
