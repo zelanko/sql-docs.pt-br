@@ -1,24 +1,21 @@
 ---
-title: 'Tarefa 8: Criar uma regra de domínio composto | Microsoft Docs'
+title: 'Tarefa 8: Criando uma regra de domínio composto | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: cff3b662-7876-4445-9bdd-96be35b3ca0c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 19b4922446f564435970fbb7f0422a3c98de48df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c17508b14ba8352e8dd17e2e0c1322c0c1856ed6
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151956"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156192"
 ---
 # <a name="task-8-creating-a-composite-domain-rule"></a>Tarefa 8: Criando uma regra de domínio composto
   Nesta tarefa, você pode criar uma regra para o **Address Validation** domínio composto. Defina uma regra de domínio cruzado: se **Cidade** é **Los Angeles**, **estado** deve ser **CA** onde **Cidade** e **estado** são dois domínios.  

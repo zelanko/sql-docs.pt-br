@@ -4,23 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: 590f5396-98d5-485e-9b41-728c6ed7cb9d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 31c9372674ab439c3435515c13f1d76518771328
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2a6273032f88807291bfc7024f1abcdbd1440073
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219266"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158412"
 ---
 # <a name="sql-dmo-mapping-to-smo"></a>Mapeamento de SQL-DMO para SMO
-  O SQL-DMO (SQL Distributed Management Objects) não faz mais parte do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]; os aplicativos do SQL-DMO devem ser convertidos para usar o SMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects). O modelo de objeto do SMO é semelhante ao do SQL-DMO, assim a maioria dos objetos do SQL-DMO é mapeada para um objeto com o mesmo nome no SMO. No entanto, alguns objetos do SQL-DMO foram alterados ou inseridos na transição para o SMO. Esta tabela lista a ação recomendada para usar os objetos do SQL-DMO que não foram convertidos diretamente em SMO.  
+  O SQL-DMO (SQL Distributed Management Objects) não faz mais parte do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]; os aplicativos do SQL-DMO devem ser convertidos para usar o SMO ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects). O modelo de objeto do SMO é semelhante ao do SQL-DMO, assim a maioria dos objetos do SQL-DMO é mapeada para um objeto com o mesmo nome no SMO. No entanto, alguns objetos do SQL-DMO foram alterados ou inseridos na transição para o SMO. Esta tabela lista a ação recomendada para usar os objetos do SQL-DMO que não foram convertidos diretamente em SMO.  
   
 |Objeto do SQL-DMO|Ação no SMO|  
 |---------------------|-------------------|  
@@ -31,7 +29,7 @@ ms.locfileid: "48219266"
 |Objeto BackupDevice|Objetos <xref:Microsoft.SqlServer.Management.Smo.BackupDevice>|  
 |Objeto BulkCopy e Objeto BulkCopy2|Removido e substituído pelo objeto <xref:Microsoft.SqlServer.Management.Smo.Transfer>.|  
 |Objeto Category|Movido para o namespace <xref:Microsoft.SqlServer.Management.Smo.Agent>. Substituir pelos objetos <xref:Microsoft.SqlServer.Management.Smo.Agent.AlertCategory>, <xref:Microsoft.SqlServer.Management.Smo.Agent.OperatorCategory> e <xref:Microsoft.SqlServer.Management.Smo.Agent.JobCategory>.|  
-|Objeto Check|<xref:Microsoft.SqlServer.Management.Smo.Check> objeto|  
+|Objeto Check|Objeto <xref:Microsoft.SqlServer.Management.Smo.Check>|  
 |Objeto Column e Objeto Column2|<xref:Microsoft.SqlServer.Management.Smo.Column> objeto.|  
 |Objeto Configuration|Objetos <xref:Microsoft.SqlServer.Management.Smo.Configuration> e <xref:Microsoft.SqlServer.Management.Smo.ConfigurationBase>.|  
 |Objeto ConfigValue|<xref:Microsoft.SqlServer.Management.Smo.ConfigProperty> objeto.|  
@@ -48,7 +46,7 @@ ms.locfileid: "48219266"
 |Objeto DRIDefault|Movido para <xref:Microsoft.SqlServer.Management.Smo.ScriptingOptions> objeto.|  
 |Objeto FileGroup e Objeto FileGroup2|<xref:Microsoft.SqlServer.Management.Smo.FileGroup> objeto.|  
 |Objeto FullTextCatalog e Objeto FullTextCatalog2|Objetos <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> e <xref:Microsoft.SqlServer.Management.Smo.FullTextIndex>.|  
-|Objeto Index e Objeto Index2|<xref:Microsoft.SqlServer.Management.Smo.Index> objeto|  
+|Objeto Index e Objeto Index2|Objeto <xref:Microsoft.SqlServer.Management.Smo.Index>|  
 |Objeto IntegratedSecurity|Funcionalidade movida para o objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> no namespace <xref:Microsoft.SqlServer.Management.Common>.|  
 |Objeto Job|<xref:Microsoft.SqlServer.Management.Smo.Agent.Job> objeto. Movido para <xref:Microsoft.SqlServer.Management.Smo.Agent> namespace.|  
 |Objeto JobFilter|<xref:Microsoft.SqlServer.Management.Smo.Agent.JobFilter> objeto. Movido para <xref:Microsoft.SqlServer.Management.Smo.Agent> namespace.|  
@@ -84,11 +82,11 @@ ms.locfileid: "48219266"
 |Objeto ReplicationStoredProcedure e Objeto ReplicationStoredProcedure2|<xref:Microsoft.SqlServer.Replication.ReplicationStoredProcedure> objeto. Movido para <xref:Microsoft.SqlServer.Replication> namespace.|  
 |Objeto ReplicationTable e Objeto ReplicationTable2|<xref:Microsoft.SqlServer.Replication.ReplicationTable> objeto. Movido para <xref:Microsoft.SqlServer.Replication> namespace.|  
 |Objeto Restore e Objeto Restore2|Objetos <xref:Microsoft.SqlServer.Management.Smo.Restore> e <xref:Microsoft.SqlServer.Management.Smo.BackupRestoreBase>.|  
-|Objeto Rule e Objeto Rule2|<xref:Microsoft.SqlServer.Management.Smo.Rule> objeto|  
+|Objeto Rule e Objeto Rule2|Objeto <xref:Microsoft.SqlServer.Management.Smo.Rule>|  
 |Objeto Schedule|Movido para <xref:Microsoft.SqlServer.Replication> namespace.|  
 |Objeto ServerGroup|Removido.|  
 |Objeto ServerRole|<xref:Microsoft.SqlServer.Management.Smo.ServerRole> objeto.|  
-|Objeto SQLObjectList|<xref:Microsoft.SqlServer.Management.Smo.SqlSmoObject> matriz.|  
+|Objeto SQLObjectList|Matriz <xref:Microsoft.SqlServer.Management.Smo.SqlSmoObject>.|  
 |Objeto SQLServer e Objeto SQLServer2|<xref:Microsoft.SqlServer.Management.Smo.Server> objeto.|  
 |Objeto StoredProcedure e Objeto StoredProcedure2|<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> e <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> objetos|  
 |Objeto Subscriber e Objeto Subscriber2|Movido para <xref:Microsoft.SqlServer.Replication> namespace.|  

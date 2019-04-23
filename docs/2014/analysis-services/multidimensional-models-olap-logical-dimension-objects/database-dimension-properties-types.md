@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - time dimensions [Analysis Services]
@@ -29,12 +27,12 @@ ms.assetid: bd3195da-e762-4c98-b643-34c76e842343
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 61792f88c028ce1c011b91fb9a5ecbec97b50396
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cbe1c8932c082ce537cd5dc3f2b12d98c05c3811
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212506"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157992"
 ---
 # <a name="dimension-types"></a>Tipos de dimensão
   A configuração da propriedade `Type` fornece informações sobre os conteúdos de uma dimensão para servidor e aplicativos cliente. Em alguns casos, a configuração `Type` fornece somente orientação para aplicativos cliente e é opcional. Em outros casos, como as dimensões `Accounts` ou `Time`, as configurações de propriedade `Type` da dimensão e seus atributos determinam comportamentos específicos baseados em servidor e podem ser necessários para implantar determinados comportamentos no cubo. Por exemplo, a propriedade `Type` de uma dimensão pode ser configurada como `Accounts` para indicar a aplicativos cliente que a dimensão padrão contém atributos de conta. Para obter mais informações sobre o tempo, conta e dimensões de moeda, consulte [criar uma dimensão de tipo de data](../multidimensional-models/database-dimensions-create-a-date-type-dimension.md), [criar uma conta de Finanças de dimensão de tipo de pai-filho](../multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md), e [criar uma moeda tipo de dimensão](../multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).  
@@ -44,7 +42,7 @@ ms.locfileid: "48212506"
 ## <a name="available-dimension-types"></a>Tipos de dimensão disponíveis  
  A tabela a seguir descreve os tipos de dimensão disponíveis no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
-|Tipo de dimensão|Description|  
+|Tipo de dimensão|Descrição|  
 |--------------------|-----------------|  
 |Regular|Uma dimensão cujo tipo não foi definido como um tipo de dimensão especial.|  
 |Hora|Uma dimensão cujos atributos representam períodos, como anos, semestres, trimestres, meses e dias.|  
@@ -64,6 +62,6 @@ ms.locfileid: "48212506"
   
 ## <a name="see-also"></a>Consulte também  
  [Criar uma dimensão usando uma tabela existente](../multidimensional-models/create-a-dimension-by-using-an-existing-table.md)   
- [Dimensões &#40;Analysis Services - dados multidimensionais&#41;](dimensions-analysis-services-multidimensional-data.md)  
+ [Dimensões &#40;Analysis Services – Dados Multidimensionais&#41;](dimensions-analysis-services-multidimensional-data.md)  
   
   

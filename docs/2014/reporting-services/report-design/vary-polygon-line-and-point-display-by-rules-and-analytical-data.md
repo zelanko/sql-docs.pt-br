@@ -18,15 +18,15 @@ f1_keywords:
 - "10531"
 - "10536"
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 41187abb5ca3cfaf030497c787da470ebfe4dea6
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: fc596a1075a2795f9db622bc2cdecc1e7885c0da
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294534"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59969283"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data-report-builder-and-ssrs"></a>Variar a exibição de polígono, linha e ponto por regras e dados analíticos (Construtor de Relatórios e SSRS)
   As opções de exibição para polígonos, linhas e pontos em uma camada do mapa são controladas pela definição de opções para a camada, estabelecendo regras para os elementos do mapa na camada ou substituindo opções para elementos de mapas inseridos específicos em uma camada.  
@@ -101,7 +101,7 @@ ms.locfileid: "56294534"
 ##  <a name="Distribution"></a> Compreendendo opções de distribuição  
  Para criar uma distribuição de valores, você pode dividir os dados em intervalos. Especifique o tipo de distribuição, o número de subintervalos e os valores de intervalo mínimo e máximo.  
   
- Na lista a seguir, vamos supor que você tenha três elementos de mapa e seis valores analíticos relacionados que variam de 1 a 9999 com os valores seguintes: 1, 10, 200, 2000, 4777, 8999.  
+ Na lista a seguir, suponha que você tenha três elementos de mapa e seis valores analíticos relacionados que variam de 1 a 9999 com os seguintes valores: 1, 10, 200, 2000, 4777, 8999.  
   
 -   **EqualInterval** . Crie intervalos que dividam os dados em intervalos iguais. Para o exemplo, os três intervalos seriam 0-2999, 3000-5999, 6000-8999. Subintervalo 1: 1, 10, 200, 500. Subintervalo 2: 4777. Subintervalo 3: 8999. Esse método não considera o modo como os dados são distribuídos. Valores muito grandes ou muito pequenos podem afetar os resultados da distribuição.  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - XML Web service [Reporting Services], delivery extension settings
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - mail [Reporting Services]
 - Web service [Reporting Services], delivery extension settings
 ms.assetid: 68c31a85-261c-4ec4-b8df-1f9842b46f8a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0bd8ee198a2627d9caaba340c4357bb0de0f30aa
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d356bc1cb981479de8a4b1baa3bdaaf45b6145ca
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014797"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157883"
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Configurações da extensão de entrega do Reporting Services
   O [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclui uma extensão de entrega de email e uma extensão de entrega de compartilhamento de arquivos. A entrega de email oferece um modo de enviar um relatório a usuários individuais ou a grupos por email. A entrega de compartilhamento de arquivo permite que você envie automaticamente relatórios renderizados para um compartilhamento em sua rede. Você pode usar qualquer uma das duas extensões de entrega suportadas com assinaturas padrão ou assinaturas controladas por dados. Você passa as configurações de entrega específicas ao tipo de extensão de entrega sempre que chama os métodos <xref:ReportService2010.ReportingService2010.CreateSubscription%2A>, <xref:ReportService2010.ReportingService2010.CreateDataDrivenSubscription%2A>, <xref:ReportService2010.ReportingService2010.SetSubscriptionProperties%2A> e <xref:ReportService2010.ReportingService2010.SetDataDrivenSubscriptionProperties%2A>. Para recuperar uma lista de configurações de entrega programaticamente, use o método <xref:ReportService2010.ReportingService2010.GetExtensionSettings%2A>.  

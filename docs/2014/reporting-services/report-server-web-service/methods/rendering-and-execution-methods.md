@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - rendered reports [Reporting Services]
@@ -14,15 +12,15 @@ helpviewer_keywords:
 - methods [Reporting Services], execution options
 - methods [Reporting Services], rendering
 ms.assetid: 12626aad-f0be-4653-87d0-60eb3a3fff78
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e70d3e48df832eb8fc3a6661ed9d4b549922a095
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d0bc793e9a18e993989563fd3526ff12272f775c
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040245"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156174"
 ---
 # <a name="rendering-and-execution-methods"></a>Métodos de renderização e execução
   Você pode usar estes métodos para gerenciar a execução e o cache de itens e a renderização de relatórios.  
