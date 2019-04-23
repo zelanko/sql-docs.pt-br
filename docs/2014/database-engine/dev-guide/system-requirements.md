@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 helpviewer_keywords:
 - system requirements [SMO]
@@ -17,12 +15,12 @@ ms.assetid: 5fd1dbcd-b3bb-4da0-8582-db2e5eeac9a3
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5ed548f52fbb81a4a5a7b973af9bd58cb5a3a452
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: e92668088ce0f30f680d4198ad0c3348a21fbff6
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374668"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156852"
 ---
 # <a name="system-requirements"></a>Requisitos do sistema
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) usa o [!INCLUDE[msCoName](../../includes/msconame-md.md)] `System.Data.SqlClient` driver do objeto para conectar e se comunicar com instâncias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 helpviewer_keywords:
 - exception message box [SQL Server]
@@ -15,15 +13,15 @@ ms.assetid: c771985b-149c-459a-b3cb-7b15fde01150
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8cf02e2759c36ae6408beed0d72b677e130e105a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 316afc6d5f3a87ff7431240681066ac5ee66ede6
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164106"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157932"
 ---
 # <a name="program-exception-message-box"></a>Programar caixa de mensagem de exceção
-  Você pode usar a caixa de mensagem de exceção em seus aplicativos para fornecer significativamente mais controle sobre a experiência de mensagens que é fornecido pelo <xref:System.Windows.Forms.MessageBox> classe. Para obter mais informações, consulte [caixa de mensagem de exceção programação](../../../2014/database-engine/dev-guide/exception-message-box-programming.md). Para obter informações sobre como obter e implantar a caixa de mensagem de exceção. dll, consulte [Implantando um aplicativo de caixa de mensagem de exceção](../../../2014/database-engine/dev-guide/deploying-an-exception-message-box-application.md).  
+  Você pode usar a caixa de mensagem de exceção nos aplicativos para proporcionar um controle mais significativo da experiência em mensagens do que a oferecida pela classe <xref:System.Windows.Forms.MessageBox>. Para obter mais informações, consulte [caixa de mensagem de exceção programação](../../../2014/database-engine/dev-guide/exception-message-box-programming.md). Consulte mais informações sobre como obter e implantar o .dll da caixa de mensagem de exceção em [Deploying an Exception Message Box Application](../../../2014/database-engine/dev-guide/deploying-an-exception-message-box-application.md).  
   
 ## <a name="procedure"></a>Procedimento  
   
@@ -35,9 +33,9 @@ ms.locfileid: "48164106"
   
 3.  Crie um bloco try-catch para tratar da exceção antecipada.  
   
-4.  Dentro de `catch` bloquear, crie uma instância da <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> classe. Passe o <xref:System.Exception> objeto tratado pelos `try` - `catch` bloco.  
+4.  Dentro do bloco `catch`, crie uma instância da classe <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox>. Passe o <xref:System.Exception> objeto tratado pelos `try` - `catch` bloco.  
   
-5.  (Opcional) Defina uma ou mais das seguintes propriedades em <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox>:  
+5.  (Opcional) Defina uma ou mais das propriedades de segurança a seguir em <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox>:  
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Buttons%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons> enumeração que especifica os botões a serem exibidos na caixa de mensagem de exceção.  
   
@@ -47,7 +45,7 @@ ms.locfileid: "48164106"
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Symbol%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxSymbol> enumeração que especifica o símbolo a ser exibido na caixa de mensagem de exceção.  
   
-6.  Chame o método <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A> . Passe a janela pai à qual pertence a caixa de mensagem de exceção.  
+6.  Chame o método <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A>. Passe a janela pai à qual pertence a caixa de mensagem de exceção.  
   
 7.  (Opcional) Observe o valor retornado <xref:System.Windows.Forms.DialogResult> enumeração se você precisar determinar em qual botão o usuário clicou.  
   
@@ -57,9 +55,9 @@ ms.locfileid: "48164106"
   
 2.  (Opcional) Adicionar um `using` (c#) ou `Imports` diretiva (Visual Basic .NET) para usar o <xref:Microsoft.SqlServer.MessageBox> namespace.  
   
-3.  Crie uma instância da classe <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> . Passar o texto da mensagem como um <xref:System.String> valor.  
+3.  Crie uma instância da classe <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> . Passe o texto da mensagem como um valor <xref:System.String>.  
   
-4.  (Opcional) Defina uma ou mais das seguintes propriedades em <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox>:  
+4.  (Opcional) Defina uma ou mais das propriedades de segurança a seguir em <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox>:  
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Buttons%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons> enumeração que especifica os botões a serem exibidos na caixa de mensagem de exceção.  
   
@@ -71,9 +69,9 @@ ms.locfileid: "48164106"
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Symbol%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxSymbol> enumeração que especifica o símbolo a ser exibido na caixa de mensagem de exceção.  
   
-5.  Chame o método <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A> . Passe a janela pai à qual pertence a caixa de mensagem de exceção.  
+5.  Chame o método <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A>. Passe a janela pai à qual pertence a caixa de mensagem de exceção.  
   
-6.  (Opcional) Observe o valor retornado <xref:System.Windows.Forms.DialogResult> enumeração se você precisar determinar em qual botão o usuário clicou.  
+6.  (Opcional) Observe o valor da enumeração <xref:System.Windows.Forms.DialogResult> retornada se precisar determinar em qual botão o usuário clicou.  
   
 #### <a name="to-display-the-exception-message-box-with-customized-buttons"></a>Para exibir a caixa de mensagem de exceção com botões personalizados  
   
@@ -85,13 +83,13 @@ ms.locfileid: "48164106"
   
     -   Passe o <xref:System.Exception> objeto tratado por um `try` - `catch` bloco.  
   
-    -   Passar o texto da mensagem como um <xref:System.String> valor.  
+    -   Passe o texto da mensagem como um valor <xref:System.String>.  
   
-4.  Defina um dos seguintes valores para <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Buttons%2A>:  
+4.  Defina um dos valores a seguir para <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Buttons%2A>:  
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.AbortRetryIgnore> -Exibe a **anular**, **Repita**, e **ignorar** botões.  
   
-    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.Custom> -Exibe botões personalizados.  
+    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.Custom>- exibe botões personalizados.  
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.OK> -Exibe a **Okey** botão.  
   
@@ -103,11 +101,11 @@ ms.locfileid: "48164106"
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.YesNoCancel> -Exibe **Yes**, **nenhuma**, e **Cancelar** botões.  
   
-5.  (Opcional) Se você usar botões personalizados, chame uma das sobrecargas do <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.SetButtonText%2A> método para especificar o texto para até cinco botões personalizados.  
+5.  (Opcional) Se você usar botões personalizados, chame uma das sobrecargas do método <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.SetButtonText%2A> para especificar o texto para até cinco botões personalizados.  
   
-6.  Chame o método <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A> . Passe a janela pai à qual pertence a caixa de mensagem de exceção.  
+6.  Chame o método <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A>. Passe a janela pai à qual pertence a caixa de mensagem de exceção.  
   
-7.  (Opcional) Observe o valor retornado <xref:System.Windows.Forms.DialogResult> enumeração se você precisar determinar em qual botão o usuário clicou. Se você usar botões personalizados, observe o valor de <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDialogResult> para o <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CustomDialogResult%2A> propriedade para determinar qual dos personalizado botões que o usuário clicou.  
+7.  (Opcional) Observe o valor da enumeração <xref:System.Windows.Forms.DialogResult> retornada se precisar determinar em qual botão o usuário clicou. Se você usar botões personalizados, observe o valor de <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDialogResult> para a propriedade <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CustomDialogResult%2A> para determinar em qual dos botões personalizados o usuário clicou.  
   
 #### <a name="to-allow-users-to-decide-whether-to-show-the-exception-message-box"></a>Para permitir que os usuários decidam se mostrarão a caixa de mensagem de exceção  
   
@@ -119,23 +117,23 @@ ms.locfileid: "48164106"
   
     -   Passe o <xref:System.Exception> objeto tratado por um `try` - `catch` bloco.  
   
-    -   Passar o texto da mensagem como um <xref:System.String> valor.  
+    -   Passe o texto da mensagem como um valor <xref:System.String>.  
   
-4.  Defina as <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.ShowCheckbox%2A> propriedade para `true`.  
+4.  Defina a propriedade <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.ShowCheckbox%2A> como `true`.  
   
-5.  (Opcional) Especifique o texto que pede ao usuário para decidir se mostrará a caixa de mensagem de exceção novamente para <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxText%2A>. O texto padrão é "Não exibir esta mensagem novamente".  
+5.  (Opcional) Especifique o texto que pede ao usuário decidir se mostrará a caixa de mensagem de exceção novamente para <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxText%2A>. O texto padrão é "Não exibir esta mensagem novamente".  
   
-6.  Se você precisar manter a decisão do usuário apenas para a duração da execução do aplicativo, defina o valor de <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.IsCheckboxChecked%2A> para um global <xref:System.Boolean> variável. Avalie esse valor antes de criar uma instância da caixa de mensagem de exceção.  
+6.  Se precisar manter a decisão do usuário somente durante a execução do aplicativo, defina o valor de <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.IsCheckboxChecked%2A> como uma variável <xref:System.Boolean> global. Avalie esse valor antes de criar uma instância da caixa de mensagem de exceção.  
   
 7.  Se você precisar armazenar a decisão de um usuário permanentemente, siga este procedimento:  
   
-    1.  Chame o método CreateSubKey para abrir uma chave do registro personalizada usada pelo aplicativo e defina <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxRegistryKey%2A> para o objeto RegistryKey retornado.  
+    1.  Chame o método CreateSubKey para abrir uma chave do Registro personalizada usada pelo seu aplicativo e defina <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxRegistryKey%2A> como o objeto RegistryKey retornado.  
   
     2.  Defina <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxRegistryValue%2A> como o nome do valor do Registro que é usado.  
   
-    3.  Definir <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxRegistryMeansDoNotShowDialog%2A> para `true`.  
+    3.  Defina <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxRegistryMeansDoNotShowDialog%2A> como `true`.  
   
-    4.  Chame o método <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A> . A chave do Registro especificada é avaliada, e a caixa de mensagem de exceção só será exibida se os dados armazenados na chave do Registro forem 0. Se a caixa de diálogo for exibida e o usuário marcar a caixa de seleção antes de clicar em um botão, os dados da chave do Registro serão definidos como 1.  
+    4.  Chame o método <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A>. A chave do Registro especificada é avaliada, e a caixa de mensagem de exceção só será exibida se os dados armazenados na chave do Registro forem 0. Se a caixa de diálogo for exibida e o usuário marcar a caixa de seleção antes de clicar em um botão, os dados da chave do Registro serão definidos como 1.  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo usa a caixa de mensagem de exceção apenas com o botão **OK** para exibir as informações de uma exceção de aplicativo que inclui a exceção tratada juntamente com outras informações específicas de aplicativo.  

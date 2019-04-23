@@ -4,25 +4,18 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- data-quality-services
-- database-engine
-- integration-services
-- master-data-services
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 5da61ff5-12b9-48e6-b3c8-0dacca1751c4
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0652a2545f0b1e9d591777f0bcabe6395cf4feaa
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: f23c3ff4d5bf55609e1dab2462b19a5fa273986f
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802650"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158002"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>Recursos compatíveis com as edições do SQL Server 2014
 
@@ -31,7 +24,7 @@ ms.locfileid: "56802650"
 
  > **Observação:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está disponível em uma edição de avaliação por um período de avaliação de 180 dias. Para obter mais informações, consulte o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Trial Software Web Site](https://go.microsoft.com/fwlink/?LinkId=190955).  
 > 
-> **OBSERVAÇÃO:** Para saber quais recursos têm suporte pelas edições Evaluation e Developer, consulte o conjunto de recursos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise.  
+> **OBSERVAÇÃO:** Para recursos com suporte pelas edições Evaluation e Developer, consulte o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] conjunto de recursos da empresa.  
   
  Para navegar até a tabela de uma tecnologia do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , clique no respectivo link:  
   
@@ -105,7 +98,7 @@ ms.locfileid: "56802650"
 |Espelhamento de banco de dados|Sim|Sim (somente segurança completa)|Sim (somente segurança completa)|Somente testemunha|Somente testemunha|Somente testemunha|Somente testemunha|  
 |Compactação de backup|Sim|Sim|Sim|||||  
 |Instantâneo do banco de dados|Sim|||||||  
-|Instâncias de cluster de failover AlwaysOn|Sim (Suporte a nó: Máximo do sistema operacional|Sim (Suporte a nó: 2)|Sim (Suporte a nó: 2)|||||  
+|Instâncias de cluster de failover AlwaysOn|Sim (suporte a nó: Máximo do sistema operacional|Sim (suporte a nó: 2)|Sim (suporte a nó: 2)|||||  
 |Grupos de Disponibilidade AlwaysOn|Sim (até oito réplicas secundárias, incluindo duas réplicas secundárias síncronas)|||||||  
 |Diretor de Conexão|Sim|||||||  
 |Restauração de arquivo e página online|Sim|||||||  
@@ -381,13 +374,13 @@ ms.locfileid: "56802650"
 |Ferramentas de mineração de dados (assistentes, editores, construtores de consulta)|Sim|Sim|Sim|||||  
 |Validação cruzada|Sim|Sim||||||  
 |Modelos em subconjuntos filtrados de dados da estrutura de mineração|Sim|Sim||||||  
-|Série temporal: combinação personalizada entre métodos ARTXP e ARIMA|Sim|Sim||||||  
-|Série temporal: previsão com novos dados|Sim|Sim||||||  
+|Série temporal: Combinação personalizada entre métodos ARTXP e ARIMA|Sim|Sim||||||  
+|Série temporal: Previsão com novos dados|Sim|Sim||||||  
 |Consultas de mineração de dados simultâneas ilimitadas|Sim|Sim||||||  
-|Configuração avançada e & opções de ajuste para algoritmos de mineração de dados|Sim|Sim||||||  
+|Configuração avançada e ajuste as opções para algoritmos de mineração de dados|Sim|Sim||||||  
 |Suporte para algoritmos de plug-in|Sim|Sim||||||  
 |Processamento paralelo de modelo|Sim|Sim||||||  
-|Série temporal: previsão de séries cruzadas|Sim|Sim||||||  
+|Série temporal: Previsão de séries cruzadas|Sim|Sim||||||  
 |Atributos ilimitados para regras de associação|Sim|Sim||||||  
 |Previsão de sequências|Sim|Sim||||||  
 |Destinos de várias previsões para Naïve Bayes, rede neural e regressão logística|Sim|Sim||||||  
