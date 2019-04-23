@@ -11,15 +11,15 @@ helpviewer_keywords:
 - logs [Reporting Services], execution
 - execution logs [Reporting Services]
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6e11a7d35550c881157ab4be6aa78048346653c8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e8e2f2a714aad9d1824f2ad922b63cd94f2a96d8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011248"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59962542"
 ---
 # <a name="report-server-execution-log-and-the-executionlog3-view"></a>Log de execução do servidor de relatório e a exibição ExecutionLog3
   O log de execução do servidor de relatório contém informações sobre os relatórios executados no servidor ou em vários servidores em uma implantação em expansão no modo nativo ou no farm do SharePoint. É possível usar o log de execução de relatório para descobrir a frequência na qual um relatório é solicitado, quais são os formatos de saída mais usados e qual é o tempo de processamento em milissegundos em cada fase do processamento. O log contém informações sobre o período de tempo gasto na execução da consulta do conjunto de dados de um relatório e a hora gasta no processamento dos dados. Se você for um administrador de servidor de relatório, poderá revisar as informações de log, identificar tarefas demoradas e dar sugestões aos autores de relatório sobre as áreas do relatório (conjunto de dados ou processamento) que eles podem melhorar.  
@@ -124,7 +124,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |TimeDataRetrieval|Número de milissegundos gastos na recuperação dos dados.|  
 |TimeProcessing|Número de milissegundos gastos no processamento do relatório.|  
 |TimeRendering|Número de milissegundos gastos na renderização do relatório.|  
-|Origem|Fonte da execução de relatório. Valores possíveis:<br /><br /> **Live**<br /><br /> **Cache**: Indica uma execução em cache, por exemplo, conjunto de dados de consultas não são executadas ao vivo.<br /><br /> **Instantâneo**<br /><br /> **Histórico**<br /><br /> **AdHoc** : indica um modelo de relatório gerado dinamicamente com base no relatório detalhado ou um relatório do Construtor de Relatórios que é visualizado em um cliente utilizando o servidor de relatório para processamento e renderização.<br /><br /> **Sessão**: indica uma solicitação de acompanhamento em uma sessão já estabelecida.  Por exemplo, a solicitação inicial é exibir página 1 e a solicitação de acompanhamento é exportar para o Excel com o estado de sessão atual.<br /><br /> **RDCE**:  Indica uma extensão de personalização de definição de relatório. Uma extensão personalizada RDCE pode personalizar uma definição de relatório dinamicamente antes de ela ser passada ao mecanismo de processamento mediante a execução do relatório.|  
+|Source|Fonte da execução de relatório. Valores possíveis:<br /><br /> **Live**<br /><br /> **Cache**: Indica uma execução em cache, por exemplo, conjunto de dados de consultas não são executadas ao vivo.<br /><br /> **Instantâneo**<br /><br /> **Histórico**<br /><br /> **AdHoc** : Indica um relatório gerado dinamicamente modelo com base em relatório detalhado ou um construtor de relatórios que é visualizado em um cliente utilizando o servidor de relatório para processamento e renderização.<br /><br /> **Sessão**: Indica uma solicitação de acompanhamento em uma sessão já estabelecida.  Por exemplo, a solicitação inicial é exibir página 1 e a solicitação de acompanhamento é exportar para o Excel com o estado de sessão atual.<br /><br /> **RDCE**:  Indica uma extensão de personalização de definição de relatório. Uma extensão personalizada RDCE pode personalizar uma definição de relatório dinamicamente antes de ela ser passada ao mecanismo de processamento mediante a execução do relatório.|  
 |Status|Status (rsSuccess ou um código de erro; se vários erros ocorrerem, só o primeiro erro será registrado).|  
 |ByteCount|Tamanho de relatórios renderizados em bytes.|  
 |RowCount|Número de linhas retornadas pelas consultas.|  
@@ -323,7 +323,7 @@ select * from ExecutionLog2 order by TimeStart DESC
 |TimeDataRetrieval|Número de milissegundos gastos na recuperação dos dados, no processamento do relatório e na renderização do relatório.|  
 |TimeProcessing||  
 |TimeRendering||  
-|Origem|Fonte da execução de relatório (1=Ativo, 2=Cache, 3=Instantâneo, 4=Histórico).|  
+|Source|Fonte da execução de relatório (1=Ativo, 2=Cache, 3=Instantâneo, 4=Histórico).|  
 |Status|Status (rsSuccess ou um código de erro; se vários erros ocorrerem, só o primeiro erro será registrado).|  
 |ByteCount|Tamanho de relatórios renderizados em bytes.|  
 |RowCount|Número de linhas retornadas pelas consultas.|  
@@ -353,7 +353,7 @@ select * from ExecutionLog order by TimeStart DESC
 |TimeDataRetrieval|Número de milissegundos gastos na recuperação dos dados, no processamento do relatório e na renderização do relatório.|  
 |TimeProcessing||  
 |TimeRendering||  
-|Origem|Fonte da execução de relatório. Valores possíveis: (1=Ativo, 2=Cache, 3=Instantâneo, 4=Histórico, 5=Adhoc, 6=Sessão, 7=RDCE).|  
+|Source|Fonte da execução de relatório. Valores possíveis: (1=Live, 2=Cache, 3=Snapshot, 4=History, 5=Adhoc, 6=Session, 7=RDCE).|  
 |Status|Valores possíveis: rsSuccess, rsProcessingAborted ou um código de erro. Se vários erros ocorrerem, só o primeiro erro será registrado.|  
 |ByteCount|Tamanho de relatórios renderizados em bytes.|  
 |RowCount|Número de linhas retornadas pelas consultas.|  

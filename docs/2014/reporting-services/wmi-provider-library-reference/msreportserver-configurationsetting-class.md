@@ -17,15 +17,15 @@ helpviewer_keywords:
 - WMI provider [Reporting Services], MSReportServer_ConfigurationSetting class
 - MSReportServer_ConfigurationSetting class
 ms.assetid: 874be718-54b9-49e8-a3d6-b83a0ba13dc3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3fb36315de4a9d2f83e4a6c11f129f5603147e25
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 272362f4483dfd167063242b2920fc2153f9b9e9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024657"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59966244"
 ---
 # <a name="msreportserverconfigurationsetting-class"></a>Classe MSReportServer_ConfigurationSetting
   Representa os parâmetros de instalação e de tempo de execução de uma instância de servidor de relatório. Esses parâmetros são armazenados no arquivo de configuração para o servidor de relatório.  

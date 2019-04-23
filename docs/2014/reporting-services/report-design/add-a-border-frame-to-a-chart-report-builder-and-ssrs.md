@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: ca0c5040-40bb-4cb7-bc2b-5bcbe73858bb
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: aa5b18503831fea7c2ea0e9836e8a76cfa940c2e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: a15dbae1d2192c31165e04fb21ada9d0807d591e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294304"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59968167"
 ---
 # <a name="add-a-border-frame-to-a-chart-report-builder-and-ssrs"></a>Adicionar uma moldura de borda a um gráfico (Construtor de Relatórios e SSRS)
   Para aumentar o impacto visual de um gráfico, considere a possibilidade de usar uma moldura de borda em volta da parte exterior do gráfico. Para selecionar um quadro de borda, use a caixa de diálogo **Propriedades do Gráfico** ou o painel Propriedades. As molduras de borda de gráficos não podem ser aplicadas a nenhuma outra região de dados.  

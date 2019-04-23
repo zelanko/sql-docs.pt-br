@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 0fa6cb36-68fc-4fb8-b1dc-ae4f12bf6ff0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ccd079eeda467e77c8fb8daa1d95533a5e8532b2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 53fc7b585edf852d04256c9e85fa0bd96aa7eced
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029467"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59960892"
 ---
 # <a name="use-powershell-to-change-and-list-reporting-services-subscription-owners-and-run-a-subscription"></a>Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription
   A partir do [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , você pode transferir de forma programática a propriedade de uma assinatura do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] de um usuário para outro. Este tópico fornece vários scripts do Windows PowerShell que você pode usar para mudar ou simplesmente listar a propriedade das assinaturas. Cada amostra inclui a sintaxe de amostra do modo Nativo e do modo SharePoint. Após mudar o proprietário da assinatura, está será executada no contexto de segurança do novo proprietário, e o campo User!UserID no relatório exibirá o valor do novo proprietário. Para obter mais informações sobre o modelo de objeto que as amostras do PowerShell chamam, consulte <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
@@ -58,23 +58,23 @@ ms.locfileid: "56029467"
   
  **Modo Nativo:**  
   
--   Listar Assinaturas: (HYPERLINK "https://technet.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx" ReadSubscription no relatório e o usuário é o proprietário da assinatura) ou ReadAnySubscription  
+-   Listar assinaturas: (HYPERLINK "https://technet.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx" ReadSubscription no relatório e o usuário é o proprietário da assinatura) ou ReadAnySubscription  
   
--   Alterar Assinaturas: O usuário deve ser membro do grupo BUILTIN\Administrators  
+-   Alterar assinaturas: O usuário deve ser um membro do grupo BUILTIN\Administrators  
   
--   Listar Filhos: ReadProperties no item  
+-   Listar filhos: ReadProperties no Item  
   
--   Acionar Evento: GenerateEvents (Sistema)  
+-   Acionar evento: GenerateEvents (System)  
   
  **Modo SharePoint:**  
   
--   Listar Assinaturas: ManageAlerts ou (HYPERLINK "https://technet.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx" CreateAlerts no relatório e o usuário é o proprietário da assinatura e a assinatura é cronometrada).  
+-   Listar assinaturas: ManageAlerts ou (HYPERLINK "https://technet.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx" CreateAlerts no relatório e o usuário é o proprietário da assinatura e a assinatura é cronometrada).  
   
--   Alterar Assinaturas: ManageWeb  
+-   Alterar assinaturas: ManageWeb  
   
--   Listar Filhos: ViewListItems  
+-   Listar filhos: ViewListItems  
   
--   Acionar Evento: ManageWeb  
+-   Acionar evento: ManageWeb  
   
  Para obter mais informações, consulte [Comparar funções e tarefas no Reporting Services com grupos e permissões do SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md).  
   
@@ -136,7 +136,7 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 > [!TIP]  
 >  Para verificar URLs de sites no modo do SharePoint, use o cmdlet **Get-SPSite**do SharePoint. Para obter mais informações, consulte [Get-SPSite](https://technet.microsoft.com/library/ff607950\(v=office.15\).aspx).  
   
-##  <a name="bkmk_list_all_one_user"></a> Script: Listar todas as assinaturas de propriedade de um usuário específico  
+##  <a name="bkmk_list_all_one_user"></a> Script: Listar todas as assinaturas pertencentes a um usuário específico  
  Esse script lista todas as assinaturas de propriedade de um usuário específico. Você pode usar esse script para testar sua conexão ou para verificar o caminho do relatório e a identificação de assinatura para uso em outros scripts. Esse script é útil quando alguém sai da organização e você deseja verificar quais assinaturas essa pessoa possuía para alterar o proprietário ou excluir a assinatura.  
   
  **Sintaxe do modo Nativo:**  
@@ -173,7 +173,7 @@ Write-Host "----- $currentOwner's Subscriptions: "
 $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastexecuted,Status | where {$_.owner -eq $currentOwner}  
 ```  
   
-##  <a name="bkmk_change_all"></a> Script: Alterar a propriedade de todas as assinaturas de propriedade de um usuário específico  
+##  <a name="bkmk_change_all"></a> Script: Alterar a propriedade de todas as assinaturas pertencentes a um usuário específico  
  Esse script muda a propriedade de todas as assinaturas de um usuário específico para o parâmetro do novo proprietário.  
   
  **Sintaxe do modo Nativo:**  
@@ -243,7 +243,7 @@ ForEach ($item in $items)
 }  
 ```  
   
-##  <a name="bkmk_list_for_1_report"></a> Script: Listar todas as assinaturas associadas a um relatório específico  
+##  <a name="bkmk_list_for_1_report"></a> Script: Lista todas as assinaturas associadas a um relatório específico  
  Esse script lista todas as assinaturas associadas a um relatório específico. A sintaxe do caminho do relatório é um modo SharePoint diferente que exige uma URL completa. Nos exemplos de sintaxe, o nome do relatório usado é "somente título", que contém um espaço e, portanto, requer aspas simples em torno do nome do relatório.  
   
  **Sintaxe do modo Nativo:**  

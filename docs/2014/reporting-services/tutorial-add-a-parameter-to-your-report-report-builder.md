@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6545812b60732d07881a17dba57cc36066d2f8b5
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: cf5f7a4bee10b58f644d98fe03ada0a9e8d0faa3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298654"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59966512"
 ---
-# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Tutorial: Adicionar um parâmetro ao relatório (Construtor de Relatórios)
+# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Tutorial: Adicionar um parâmetro ao relatório (construtor de relatórios)
   Adicione um parâmetro ao relatório para permitir que os usuários filtrem dados do relatório na fonte de dados ou no relatório. Os parâmetros de relatório são criados automaticamente para cada parâmetro de consulta incluído em uma consulta de conjunto de dados. O tipo de dados do parâmetro determina como ele aparece na barra de ferramentas de exibição de relatório.  
   
  ![rs_tut_Parameter](../../2014/tutorials/media/rs-tut-parameter.gif "rs_tut_Parameter")  
@@ -55,14 +55,14 @@ ms.locfileid: "56298654"
 10. [Salvar o relatório](#Save)  
   
 > [!NOTE]  
->  Neste tutorial, as etapas do assistente são consolidadas em um procedimento. Para obter instruções passo a passo sobre como navegar até um servidor de relatório, escolha uma fonte de dados e criar um conjunto de dados, consulte o primeiro tutorial nesta série: [Tutorial: Criando um relatório de tabela básica &#40;construtor de relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  Neste tutorial, as etapas do assistente são consolidadas em um procedimento. Confira instruções passo a passo sobre como navegar até um servidor de relatório, como escolher uma fonte de dados e como criar um conjunto de dados no primeiro tutorial desta série: [Tutorial: Ciar um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
  Tempo estimado para concluir este tutorial: 25 minutos.  
   
 ## <a name="requirements"></a>Requisitos  
  Para obter informações sobre os requisitos, consulte [Pré-requisitos para tutoriais &#40;Construtor de Relatórios&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="Setup"></a> 1. Criar um relatório de matriz e um conjunto de dados no Assistente de Tabela ou Matriz  
+##  <a name="Setup"></a> 1. Criar um relatório de matriz e um conjunto de dados do Assistente de tabela ou matriz  
  Criar um relatório de matriz, uma fonte de dados e um conjunto de dados.  
   
 > [!NOTE]  
@@ -123,7 +123,7 @@ ms.locfileid: "56298654"
   
 12. Clique em **Avançar**.  
   
-##  <a name="CompleteWizard"></a> 2. Organizar dados, escolher layout e estilo no Assistente de Tabela ou Matriz  
+##  <a name="CompleteWizard"></a> 2. Organizar dados, escolher Layout e estilo de Assistente de tabela ou matriz  
  Use o assistente para fornecer um design inicial no qual exibir dados. O painel de visualização no assistente ajuda a visualizar o resultado do agrupamento de dados antes de concluir o design da tabela ou da matriz.  
   
 #### <a name="to-organize-data-into-groups"></a>Para organizar dados em grupos  
@@ -327,7 +327,7 @@ ms.locfileid: "56298654"
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     O cabeçalho de coluna de repositórios contém o texto exibido para uma expressão complexa: **<\<Expr>>**.  
+     O cabeçalho da coluna de repositórios contém o texto de exibição de uma expressão complexa: **<\<Expr>>**.  
   
 8.  Visualize o relatório.  
   
@@ -422,7 +422,7 @@ ms.locfileid: "56298654"
   
 14. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-15. Clique na caixa de texto em frente à expressão que você acaba de criar e digite o seguinte: Valores de Parâmetros Selecionados:.  
+15. Clique na caixa de texto em frente à expressão que você acaba de criar e digite o seguinte: Valores de parâmetros selecionados:.  
   
 16. Visualize o relatório.  
   

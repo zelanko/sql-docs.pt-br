@@ -1,40 +1,39 @@
 ---
 title: Ativar o recurso de sincronização de arquivos de servidor de relatório na Administração Central do SharePoint | Microsoft Docs
+ms.prod: reporting-services-2014
+ms.technology: reporting-services-native
+ms.topic: conceptual
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- reporting-services-native
-ms.topic: conceptual
-ms.assetid: 32d1988d-07e7-41c2-b636-e65ecfae4677
-author: markingmyname
-ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 69d059807b7d48fe71cffb120c73fa9aa004a8bb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b56960b23370de3803f475c02aaee3b98ae491e4
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017998"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59963942"
 ---
 # <a name="activate-the-report-server-file-sync-feature-in-sharepoint-central-administration"></a>Ativar o recurso de sincronização de relatório do Servidor de Relatório na Administração Central do SharePoint
-  O recurso Sincronização de arquivos do Servidor de Relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] utiliza manipuladores de eventos do SharePoint para sincronizar o catálogo do servidor de relatório com itens em bibliotecas de documentos. Esse recurso é benéfico quando os usuários carregam com frequência itens de relatórios publicados diretamente nas bibliotecas de documentos do SharePoint. Se o recurso de Sincronização de arquivo não estiver ativado, o conteúdo ainda será sincronizado, mas não tão frequentemente.  
+
+O recurso Sincronização de arquivos do Servidor de Relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] utiliza manipuladores de eventos do SharePoint para sincronizar o catálogo do servidor de relatório com itens em bibliotecas de documentos. Esse recurso é benéfico quando os usuários carregam com frequência itens de relatórios publicados diretamente nas bibliotecas de documentos do SharePoint. Se o recurso de sincronização de arquivos não estiver ativado, conteúdo ainda será sincronizado, mas não com tanta frequência.  
   
- O recurso Sincronização de Arquivos pode ser ativado na Administração de Site do SharePoint depois que você instala o Suplemento [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] para produtos do SharePoint.  
+O recurso Sincronização de Arquivos pode ser ativado na Administração de Site do SharePoint depois que você instala o Suplemento [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] para produtos do SharePoint.  
   
- Esse recurso pode ser ativado e desativado manualmente por site, mas não no nível de conjunto de sites.  
+Esse recurso pode ser ativado e desativado manualmente por site, mas não no nível de conjunto de sites.  
   
 ## <a name="prerequisites"></a>Prerequisites  
- O Suplemento [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para o SharePoint deve ser instalado. Se o suplemento não estiver instalado, o recurso de sincronização de arquivos não estará visível na lista de recursos do site.  
+ O Suplemento [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para o SharePoint deve ser instalado. Se o suplemento não estiver instalado, o recurso de sincronização de arquivos não ficarão visível na lista de recursos do site.  
   
  Para verificar a instalação, exiba a lista de aplicativos instalados no [!INCLUDE[msCoName](../includes/msconame-md.md)] Painel de Controle **do**Windows. Se o Suplemento [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] estiver instalado, siga as instruções deste tópico para ativar o recurso Sincronização de arquivos do servidor de relatório.  
   
 ### <a name="to-activate-or-deactivate-the-reporting-services-file-sync-feature-on-a-site"></a>Para ativar ou desativar o recurso Sincronização de arquivos do Reporting Services em um site  
   
-1.  Na página principal do site, clique no menu **Ações do Site** e clique em **Configurações do Site**.  
+1.  Na página principal do seu site, clique o **ações do Site** menu e clique em **configurações de Site**.  
   
-2.  Em **Ações de Site** , clique em **Gerenciar Recursos de Site**.  
+2.  No **ações do Site**, clique em **gerenciar recursos de Site**.  
   
 3.  Localize **Sincronização de arquivos do Servidor de Relatório** na lista.  
   

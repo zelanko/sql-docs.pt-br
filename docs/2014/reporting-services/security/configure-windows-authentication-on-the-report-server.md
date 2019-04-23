@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Windows authentication [Reporting Services]
 - Reporting Services, configuration
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f24a625c3bd523907ba51662f80c2cd26bec5704
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c57046a5dc5b92cfd3b4b349dc86d004d477169f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042997"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59966102"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Configurar a Autenticação do Windows no servidor de relatório
   Por padrão, o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aceita solicitações que especificam a autenticação Negotiate ou NTLM. Se sua implantação incluir aplicativos cliente e navegadores que usam esses provedores de segurança, use os valores padrão sem nenhuma configuração adicional. Se desejar usar um provedor de segurança diferente para a segurança integrada do Windows (por exemplo, se desejar usar Kerberos diretamente) ou se tiver modificado os valores padrão e desejar restaurar as configurações originais, use as informações deste tópico para especificar configurações de autenticação no servidor de relatório.  
@@ -52,7 +52,7 @@ ms.locfileid: "56042997"
   
 1.  Abra o RSReportServer.config em um editor de texto.  
   
-2.  Localize <`Authentication`>.  
+2.  Localizar <`Authentication`>.  
   
 3.  Copie uma das estruturas XML a seguir que seja mais adequada para as suas necessidades. Você pode especificar `RSWindowsNegotiate`, `RSWindowsNTLM` e `RSWindowsKerberos` em qualquer ordem. Você deve habilitar a persistência de autenticação se desejar autenticar a conexão em vez de cada solicitação individual. Com a persistência de autenticação, todas as solicitações que precisam de autenticação serão permitidas durante a conexão.  
   

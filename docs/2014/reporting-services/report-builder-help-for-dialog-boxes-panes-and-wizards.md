@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Help, dialog boxes
 - user interface, dialog boxes
 ms.assetid: 2da24891-0b6d-4d3c-8b18-81b98752642f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e01b814bad72c5ff8a481fd361b2409b9adbda99
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 77b6eb7d3e82e2741c87612265ca69a75e369204
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293424"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964402"
 ---
 # <a name="report-builder-help-for-dialog-boxes-panes-and-wizards"></a>Ajuda do Construtor de Relatórios para caixas de diálogo, painéis e assistentes
   Esta seção contém Ajuda para muitos dos assistentes, exibições, painéis e caixas de diálogo do Construtor de Relatórios. De modo alternativo, você pode abrir a Ajuda pressionando F1 ou clicando no botão Ajuda exibido na caixa de diálogo.  

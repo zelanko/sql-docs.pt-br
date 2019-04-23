@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: d9fe1932-46e7-421b-a8a9-4c54d9576e94
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 58de4bd8c12bf4ac9551260ac3ba27b5888dce90
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3e677d9923315acc27c2b2d96d5d4eddf2ba8b51
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288514"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59960432"
 ---
 # <a name="troubleshoot-report-parts-report-builder-and-ssrs"></a>Solução de problemas de partes de relatório (Construtor de Relatórios e SSRS)
   Estas dicas podem ajudar a trabalhar com partes de relatório.  

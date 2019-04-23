@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Development Studio, Reporting Services in
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: dab79e4efec442a24eb9bb5d944cb52e5c9b5640
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: af8fd934206361e0abb43a84a9a036772e90fc52
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658331"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59965992"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services no SQL Server Data Tools (SSDT)
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] é um [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ambiente com aprimoramentos específicos para soluções de business intelligence. O [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] é incluído com o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -45,7 +45,7 @@ ms.locfileid: "58658331"
  ![Novos modelos de Projeto no SSDT](../../analysis-services/media/ssdt-biprojects.png "Novos modelos de Projeto no SSDT")  
 
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> Janelas e painéis do Designer de Relatórios  
- O Designer de relatórios dá suporte a dois modos de exibição: **Design** para definir os dados e layout do relatório e **Visualização** para mostrar uma exibição renderizada do relatório. Em cada exibição, você pode exibir várias janelas úteis para design ou exibição de um relatório renderizado.  
+ Designer de relatórios dá suporte a dois modos de exibição: **Design** para definir os dados e layout do relatório e **Visualização** para mostrar uma exibição renderizada do relatório. Em cada exibição, você pode exibir várias janelas úteis para design ou exibição de um relatório renderizado.  
   
 ###  <a name="bkmk_ReportDataPane"></a> Painel de Dados do Relatório  
  O painel de Dados do Relatório exibe campos internos, fontes de dados, conjuntos de dados, coleções de campos, parâmetros do relatório e imagens.  

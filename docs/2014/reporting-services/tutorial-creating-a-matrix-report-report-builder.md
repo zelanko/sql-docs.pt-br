@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Criando um relatório de matriz (construtor de relatórios) | Microsoft Docs'
+title: 'Tutorial: Criar um relatório de matriz (Construtor de Relatórios) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1b1f3226d196354dbbe6a959822534342a92f818
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 86bffd9c3cf98732da253e511287a9c9e722f4a7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288404"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59965692"
 ---
-# <a name="tutorial-creating-a-matrix-report-report-builder"></a>Tutorial: Criando um relatório de matriz (construtor de relatórios)
+# <a name="tutorial-creating-a-matrix-report-report-builder"></a>Tutorial: Criar um relatório de matriz (Construtor de Relatórios)
   Este tutorial ensina a criar um relatório de matriz básico com base em dados de vendas de exemplo. A matriz tem grupos de linhas e de colunas aninhados e um grupo de colunas adjacente. Você também aprenderá a formatar colunas e a girar texto. A ilustração a seguir mostra um relatório semelhante ao que você criará.  
   
  ![rs_CreateMatixReportTutorial](../../2014/tutorials/media/rs-creatematixreporttutorial.gif "rs_CreateMatixReportTutorial")  
@@ -74,7 +74,7 @@ ms.locfileid: "56288404"
   
 5.  Clique em **Avançar**.  
   
-6.  Sobre o **escolher uma conexão a uma fonte de dados** página, selecione uma fonte de dados existente ou navegue até o servidor de relatório e, em seguida, selecione uma fonte de dados. Se não houver nenhuma fonte de dados disponível ou você não tiver acesso a um servidor de relatório, em vez disso, será possível usar uma fonte de dados inserida. Para obter mais informações sobre como criar uma fonte de dados inserida, consulte [Tutorial: Criando um relatório de tabela básica &#40;construtor de relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  Sobre o **escolher uma conexão a uma fonte de dados** página, selecione uma fonte de dados existente ou navegue até o servidor de relatório e, em seguida, selecione uma fonte de dados. Se não houver nenhuma fonte de dados disponível ou você não tiver acesso a um servidor de relatório, em vez disso, será possível usar uma fonte de dados inserida. Para obter mais informações sobre como criar uma fonte de dados inserida, consulte [Tutorial: Ciar um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Clique em **Avançar**.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "56288404"
   
 10. Clique em **Avançar**.  
   
-##  <a name="Groups"></a> 2. Organizar dados e escolher layout e estilo no Assistente de Nova Tabela ou Matriz  
+##  <a name="Groups"></a> 2. Organizar dados e escolha o Layout e estilo no novo Assistente de tabela ou matriz  
  Use o assistente para fornecer um design inicial no qual exibir dados. O painel de visualização no assistente ajuda a visualizar o resultado dos dados de agrupamento antes de concluir o design da matriz.  
   
 #### <a name="to-organize-data-into-groups-and-choose-a-layout-and-style"></a>Para organizar dados em grupos e escolher um layout e um estilo  
@@ -160,7 +160,7 @@ ms.locfileid: "56288404"
   
 13. Clique em **Concluir**.  
   
-     A matriz é adicionada à superfície de design. O painel de grupos de linhas mostra dois grupos de linhas: Territory e SalesDate. O painel de grupos de colunas mostra dois grupos de colunas: Subcategoria e produto. Os dados detalhados são todos os dados recuperados pela consulta do conjunto de dados.  
+     A matriz é adicionada à superfície de design. O painel Grupos de Linhas mostra dois grupos de linhas: Território e SalesDate. O painel Grupos de Colunas mostra dois grupos de colunas: Subcategoria e Produto. Os dados detalhados são todos os dados recuperados pela consulta do conjunto de dados.  
   
 14. Clique em **Executar** para visualizar o relatório.  
   

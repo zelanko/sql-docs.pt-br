@@ -15,15 +15,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.chartproperties.filters.f1
 - "10165"
 ms.assetid: fab97b2f-d53f-42f2-900c-c159653d89ed
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fbc8f19763baa473bbe62d6f02c46cad8ed4d51a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3cf8757eb1c2bdf7e1642aa16d24b7adae40680a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285186"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964598"
 ---
 # <a name="filters-page-chart-dialog-boxes-report-builder-and-ssrs"></a>Página Filtros, caixas de diálogo de Gráficos (Construtor de Relatórios e SSRS)
   Clique em **filtros** na:  

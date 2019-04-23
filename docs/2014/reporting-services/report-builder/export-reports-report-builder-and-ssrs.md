@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10437"
 ms.assetid: a2bab8c1-505d-4da3-b1db-ea0ae13b2336
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8ef4cfaec1b66c9840d0dcf08d788b66b7107190
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 91d702b8b5b3402783fb47819bdd18d552682931
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291869"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961822"
 ---
 # <a name="exporting-reports-report-builder-and-ssrs"></a>Exportando relatórios (Construtor de Relatórios e SSRS)
   Depois que você executar um relatório, poderá exportá-lo para outro formato, como Excel ou PDF, ou exportá-lo gerando um documento do serviço Atom, listando os feeds de dados em conformidade com o Atom disponíveis no relatório.  
@@ -47,15 +47,15 @@ ms.locfileid: "56291869"
   
 -   **Extensões dos processadores de dados** As extensões de renderização de dados eliminam todas as informações de formatação e layout do relatório e exibem apenas os dados. O arquivo resultante pode ser usado para importar os dados brutos do relatório em outro tipo de arquivo, como o Excel, outro banco de dados, uma mensagem de dados XML, ou um aplicativo personalizado. Processadores de dados não oferecem suporte a quebras de páginas.  
   
-     As seguintes extensões de renderização de dados são suportadas: CSV, XML e Atom.  
+     Há suporte para as seguintes extensões de renderização de dados: CSV, XML e Atom.  
   
 -   **Extensões do renderizador de quebra suave de página** As extensões de renderização de quebra suave de página mantêm o layout e a formatação do relatório. O arquivo resultante é otimizado para exibição com base em tela e entrega, como em uma página da Web ou nos controles do **ReportViewer** .  
   
-     As seguintes extensões de renderização de quebra de página flexível são suportadas: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word e Web archive (MHTML).  
+     Há suporte para as seguintes extensões de renderização de quebra de página flexível: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word e Web archive (MHTML).  
   
 -   **Extensões de renderização de quebra de página impressa** As extensões do renderizador de quebra de página impressa mantêm o layout e a formatação do relatório. O arquivo resultante é otimizado para uma experiência consistente de impressão, ou para exibir o relatório online em formato de um livro.  
   
-     As seguintes extensões de renderização de quebra de página não flexível são suportadas: TIFF e PDF.  
+     Há suporte para as seguintes extensões de renderização de quebra de página: TIFF e PDF.  
   
 ##  <a name="ExportFormats"></a> Formatos de exportação  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece extensões de renderização que renderizam relatórios em formatos diferentes. Se você planeja usar este recurso, otimize o design de relatório para seu formato de arquivo escolhido. O tópico sobre cada extensão de renderização fornece informações detalhadas sobre como o relatório é renderizado para aquele formato.  
@@ -69,7 +69,7 @@ ms.locfileid: "56291869"
 |Word|Quebra de página flexível|A extensão de renderização do Word renderiza um relatório como um documento do Word compatível com [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010, bem como com [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 com o Pacote de Compatibilidade do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office para Word, Excel e PowerPoint instalado. Depois que o relatório é exportado para um documento do Word, você pode alterar seu conteúdo e criar relatórios com estilo de documento, como etiquetas de endereçamento, ordens de compra ou cartas modelo. A extensão de nome de arquivo dos arquivos gerados por este processador é .docx.<br /><br /> Para obter mais informações, consulte [Exportar para Microsoft Word &#40;Construtor de Relatórios e SSRS&#41;](exporting-to-microsoft-word-report-builder-and-ssrs.md).<br /><br /> Observação: A extensão de renderização do Word 2003 que renderiza para o formato nativo do [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 está disponível em alguns cenários de relatórios.|  
 |Arquivo da Web|Quebra de página flexível|A extensão de renderização HTML renderiza um relatório no formato HTML. A extensão de renderização também pode produzir páginas HTML totalmente formadas ou fragmentos de HTML a serem inseridos em outras páginas HTML. Todo o HTML é gerado com a codificação UTF-8.<br /><br /> A extensão de renderização HTML é a extensão de renderização padrão para relatórios que são exibidos no Construtor de Relatórios e em um navegador, incluindo quando executados no Gerenciador de Relatórios.<br /><br /> Para obter mais informações, consulte [Renderizando para HTML &#40;Construtor de Relatórios e SSRS&#41;](rendering-to-html-report-builder-and-ssrs.md).|  
 |Arquivo do Acrobat (PDF)|Quebra de página não flexível|A extensão de renderização PDF renderiza um relatório para os arquivos que podem ser abertos no Adobe Acrobat e em outros visualizadores em PDF de terceiros que dão suporte ao PDF 1.3. Embora o PDF 1.3 seja compatível com o Adobe Acrobat 4.0 e posterior, o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dá suporte ao para o Adobe Acrobat 6 ou posterior. A extensão de renderização não requer que o software Adobe renderize o relatório. Porém, os visualizadores de PDF, como o Adobe Acrobat, são necessários para exibir ou imprimir um relatório em formato PDF.<br /><br /> Para obter mais informações, consulte [Exportar para um arquivo PDF &#40;Construtor de Relatórios e SSRS&#41;](exporting-to-a-pdf-file-report-builder-and-ssrs.md).|  
-|Arquivo TIFF|Quebra de página não flexível|A extensão de renderização da Imagem renderiza um relatório para um bitmap ou metarquivo. Por padrão, a extensão de renderização da Imagem produz um arquivo TIFF do relatório, que pode ser exibido em várias páginas. Quando o cliente receber a imagem, ela pode ser exibida em um visualizador de imagem e impressa.<br /><br /> A extensão de renderização de imagem pode gerar arquivos em qualquer um dos formatos suportados por [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]: BMP, EMF, EMFPlus, GIF, JPEG, PNG e TIFF.<br /><br /> Para obter mais informações, consulte [Exportando para um arquivo de imagem &#40;Construtor de Relatórios e SSRS&#41;](exporting-to-an-image-file-report-builder-and-ssrs.md).|  
+|Arquivo TIFF|Quebra de página não flexível|A extensão de renderização da Imagem renderiza um relatório para um bitmap ou metarquivo. Por padrão, a extensão de renderização da Imagem produz um arquivo TIFF do relatório, que pode ser exibido em várias páginas. Quando o cliente receber a imagem, ela pode ser exibida em um visualizador de imagem e impressa.<br /><br /> A extensão de renderização de imagem pode gerar arquivos em qualquer um dos formatos com suporte pelo [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]: BMP, EMF, EMFPlus, GIF, JPEG, PNG e TIFF.<br /><br /> Para obter mais informações, consulte [Exportando para um arquivo de imagem &#40;Construtor de Relatórios e SSRS&#41;](exporting-to-an-image-file-report-builder-and-ssrs.md).|  
 |XML|Dados|A extensão XML de renderização retorna um relatório no formato XML. O esquema para o XML do relatório é específico para este relatório e contém somente dados. As informações de layout não são renderizadas e a paginação não é mantida pela extensão XML de renderização. O XML gerado por esta extensão pode ser importado para um banco de dados, usado como uma mensagem de dados XML ou enviado para um aplicativo personalizado.<br /><br /> Para obter mais informações, consulte [Exportação para um XML &#40;Construtor de Relatórios e SSRS&#41;](exporting-to-xml-report-builder-and-ssrs.md).|  
 |Atom|Dados|A extensão de renderização do Atom gera feeds de dados compatíveis com o Atom a partir de relatórios. Os feeds de dados são legíveis e intercambiáveis com aplicativos como o cliente [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que pode consumir feeds de dados compatíveis com Atom.<br /><br /> A saída é documento de serviço Atom que lista os feeds de dados disponíveis a partir de um relatório. É criado pelo menos um feed de dados para cada região no relatório. Dependendo do tipo de região de dados e dos dados que a região de dados exibe, vários feeds de dados poderão ser gerados.<br /><br /> Para obter mais informações, consulte [Gerando feeds de dados de relatórios &#40;Construtor de Relatórios e SSRS&#41;](generating-data-feeds-from-reports-report-builder-and-ssrs.md).|  
   

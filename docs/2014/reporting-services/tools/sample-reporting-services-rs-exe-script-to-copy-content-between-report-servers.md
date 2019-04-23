@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a4afc42162754c63d5280e7962960800e47b7059
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: bbb093ae1fdb2534f3de0f627d8041ecee1bb18f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012048"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59962112"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-migrate-content-between-report-servers"></a>Script rs.exe do Reporting Services de exemplo para migrar conteúdo entre servidores de relatório
   Este tópico inclui e descreve um exemplo de script [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] RSS que copia itens de conteúdo e configurações de um servidor de relatório do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para outro servidor de relatório, usando o utilitário **RS.exe** . O RS.exe é instalado com [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], tanto em modo nativo quanto no SharePoint. O script a copia itens de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , por exemplo, relatórios e assinaturas de servidor para outro servidor. O script oferece suporte a servidores de relatório do modo do SharePoint e de modo nativo.  
@@ -104,7 +104,7 @@ ms.locfileid: "56012048"
 |Assinaturas|Sim|Sim||  
 |Configurações de histórico|Sim|Sim|As configurações de histórico são migradas, mas os detalhes do histórico NÃO.|  
 |opções de processamento|Sim|Sim||  
-|opções de atualização de cache|Sim|Sim|As configurações dependentes são migradas como parte de um item de catálogo. O exemplo a seguir está fora do script, pois migra um relatório (.rdl) e as configurações relacionadas como opções de atualização de cache:<br /><br /> Migrating parameters for report TitleOnly.rdl 0 items found.<br /><br /> Migrating subscriptions for report TitleOnly.rdl: 1 item encontrado.<br /><br /> Migrando assinaturas salvar em \\\server\public\savedreports como TitleOnly... SUCCESS<br /><br /> Migrating history settings for report TitleOnly.rdl ... SUCCESS<br /><br /> Migrating processing options for report TitleOnly.rdl ... 0 items found.<br /><br /> Migrating cache refresh options for report TitleOnly.rdl ... SUCCESS<br /><br /> Migrating cache refresh plans for report TitleOnly.rdl: 1 item encontrado.<br /><br /> Migrating cache refresh plan titleonly_refresh735amM2F ... SUCCESS|  
+|opções de atualização de cache|Sim|Sim|As configurações dependentes são migradas como parte de um item de catálogo. O exemplo a seguir está fora do script, pois migra um relatório (.rdl) e as configurações relacionadas como opções de atualização de cache:<br /><br /> Migrating parameters for report TitleOnly.rdl 0 items found.<br /><br /> Migrando assinaturas para o relatório Titleonly: 1 item encontrado.<br /><br /> Migrando assinaturas salvar em \\\server\public\savedreports como TitleOnly... SUCCESS<br /><br /> Migrando configurações de histórico para o relatório Titleonly... SUCCESS<br /><br /> Migrando opções de processamento para o relatório Titleonly... 0 itens encontrados.<br /><br /> Migrando opções de atualização de cache para o relatório Titleonly... SUCCESS<br /><br /> Migrando planos de atualização de cache para o relatório Titleonly: 1 item encontrado.<br /><br /> Migrando titleonly_refresh735amM2F de plano de atualização de cache... SUCCESS|  
 |Planos de atualização de cache|Sim|Sim||  
 |Imagens|Sim|Sim||  
 |Partes de relatório|Sim|Sim||  
@@ -112,11 +112,11 @@ ms.locfileid: "56012048"
 ##  <a name="bkmk_required_permissions"></a> Permissões necessárias  
  As permissões necessárias para ler ou gravar itens e recursos não são as mesmas para todos os métodos usados no script. A tabela a seguir resume os métodos usados para cada item ou recurso e vincula ao conteúdo relacionado. Navegue até o tópico individual para ver as permissões necessárias. Por exemplo, o tópico do método de ListChildren indica as permissões necessárias de:  
   
--   **As permissões necessárias de modo nativo:** ReadProperties no item  
+-   **As permissões necessárias de modo nativo:** ReadProperties no Item  
   
 -   **Permissões necessárias do modo do SharePoint:** ViewListItems  
   
-|Item ou recurso|Origem|Destino|  
+|Item ou recurso|Source|Destino|  
 |----------------------|------------|------------|  
 |Itens de catálogo|<xref:ReportService2010.ReportingService2010.ListChildren%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetProperties%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetItemDataSources%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetItemReferences%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetDataSourceContents%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetItemLink%2A>|<xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A><br /><br /> <xref:ReportService2010.ReportingService2010.SetItemDataSources%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetItemReferences%2A><br /><br /> <xref:ReportService2010.ReportingService2010.CreateDataSource%2A><br /><br /> <xref:ReportService2010.ReportingService2010.CreateLinkedItem%2A><br /><br /> <xref:ReportService2010.ReportingService2010.CreateFolder%2A>|  
 |Role|<xref:ReportService2010.ReportingService2010.ListRoles%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetRoleProperties%2A>|<xref:ReportService2010.ReportingService2010.CreateRole%2A>|  
@@ -356,7 +356,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserv
   
  Execute o script novamente com o **-t** sinalizador, para ver uma mensagem semelhante à seguinte:  
   
--   System.Exception: Não foi possível conectar ao servidor: http://\<servername > /ReportServer/ReportService2010.asmx---> System.NET. WebException: **A solicitação falhou com status 401 HTTP: Não autorizado**.   no System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse (SoapClientMessage mensagem, resposta WebResponse, fluxo responseStream, Boolean asyncCall) em System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke (cadeia de caracteres methodName, parâmetros de objeto de []) no Microsoft.SqlServer.ReportingServices2010.ReportingService2010.IsSSLRequired() em Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService (url de cadeia de caracteres, cadeia de caracteres de nome de usuário, senha de cadeia de caracteres Domínio de cadeia de caracteres, o tempo limite de Int32) em Microsoft.ReportingServices.ScriptHost.ScriptHost.DetermineServerUrlSecurity()---fim do rastreamento de pilha de exceção interna--  
+-   System.Exception: Não foi possível conectar ao servidor: http://\<servername > /ReportServer/ReportService2010.asmx---> System.NET. WebException: **A solicitação falhou com status HTTP 401: Não autorizado**.   no System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse (SoapClientMessage mensagem, resposta WebResponse, fluxo responseStream, Boolean asyncCall) em System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke (cadeia de caracteres methodName, parâmetros de objeto de []) no Microsoft.SqlServer.ReportingServices2010.ReportingService2010.IsSSLRequired() em Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService (url de cadeia de caracteres, cadeia de caracteres de nome de usuário, senha de cadeia de caracteres Domínio de cadeia de caracteres, o tempo limite de Int32) em Microsoft.ReportingServices.ScriptHost.ScriptHost.DetermineServerUrlSecurity()---fim do rastreamento de pilha de exceção interna--  
   
 ## <a name="see-also"></a>Consulte também  
  [Utilitário RS.exe &#40;SSRS&#41;](rs-exe-utility-ssrs.md)   

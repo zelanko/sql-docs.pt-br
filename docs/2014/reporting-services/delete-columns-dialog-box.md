@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Delete Columns dialog box
 ms.assetid: 44587147-1013-4937-a26c-4fd023eea578
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6207c9a80ca2a18e182d57127da1fc1133086144
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7a198ad51c424b42aff71afbeb3a82952aa57a52
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026487"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964072"
 ---
 # <a name="delete-columns-dialog-box"></a>Caixa de diálogo Excluir Colunas
   Use a caixa de diálogo **Excluir Colunas** para excluir colunas de uma tabela, matriz ou região de dados de lista. Para colunas associadas a grupos, também é possível excluir a definição do grupo.  

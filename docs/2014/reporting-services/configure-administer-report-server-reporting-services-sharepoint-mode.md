@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 846e86d0-fbbb-426c-97f9-f179cd42b390
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ca5f2b01894818680b6b760a1f2b8a342d43d8ce
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 24e41082fa274c08176a8a9cf9cbe2a53d90d4f8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022883"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964652"
 ---
 # <a name="configuration-and-administration-of-a-report-server-reporting-services-sharepoint-mode"></a>Configuração e administração de um servidor de relatórios (modo do SharePoint do Reporting Services)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] é uma plataforma de relatório com base em servidor que fornece uma ampla gama de ferramentas e serviços prontos para uso, para ajudá-lo a criar, implantar e gerenciar relatórios para a sua organização, além de recursos de programação que lhe permitem estender e personalizar suas funções de relatório. Você pode integrar seu ambiente de relatório com um produto do SharePoint para experimentar os benefícios de usar o ambiente de colaboração fornecidos por sites do SharePoint.  

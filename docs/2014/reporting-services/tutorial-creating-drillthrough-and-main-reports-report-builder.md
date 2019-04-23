@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Criando relatórios principais (construtor de relatórios) e detalhamento | Microsoft Docs'
+title: 'Tutorial: Criar relatórios principais e de detalhamento (Construtor de Relatórios) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b150ff5fd1e69a9c6ac8ea7e2f2ef2b60d32ffb8
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 1177dfb7260959940eb89a31dde740e290ab73f8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289864"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961232"
 ---
-# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: Criando relatórios principais e de detalhamento (Construtor de Relatórios)
+# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: Criando relatórios principais (construtor de relatórios) e detalhamento
   Este tutorial ensina como criar dois tipos de relatório: um relatório detalhado e um relatório principal. Os dados de vendas de exemplo usados nestes relatórios são recuperados de um cubo do Analysis Services. A ilustração a seguir mostra os relatórios que você criará.  
   
  ![rs_DrillthroughCubeTutorial](../../2014/tutorials/media/rs-drillthroughcubetutorial.gif "rs_DrillthroughCubeTutorial")  
@@ -168,7 +168,7 @@ ms.locfileid: "56289864"
   
 5.  Na lista de expressões de filtro, expanda **Todo o Canal**, clique em **Online**, em **Revendedor**e em **OK**.  
   
-     A consulta agora inclui um filtro para incluir apenas esses canais: Online e Revendedor.  
+     A consulta agora inclui um filtro para incluir apenas estes canais: Online e revendedor.  
   
 6.  Expanda a dimensão Região de Vendas e arraste Grupo da Região de Vendas até a coluna **Hierarquia** (abaixo de **Nome do Canal**).  
   
@@ -390,7 +390,7 @@ ms.locfileid: "56289864"
   
 7.  Clique em **Salvar**.  
   
-##  <a name="MMatrixAndDataset"></a> 1. Criar um novo relatório no Assistente de Tabela ou Matriz  
+##  <a name="MMatrixAndDataset"></a> 1. Criar um novo relatório do Assistente de tabela ou matriz  
  Na caixa de diálogo **Introdução** , crie um relatório de matriz por meio do **Assistente de Tabela ou Matriz**.  
   
 #### <a name="to-create-a-new-report"></a>Para criar um novo relatório  
@@ -462,7 +462,7 @@ ms.locfileid: "56289864"
   
 5.  Na lista de expressões de filtro, expanda **Todo o Canal**, clique em **Online** , em **Revendedor**e em **OK**.  
   
-     A consulta agora inclui um filtro para incluir apenas esses canais: Online e Revendedor.  
+     A consulta agora inclui um filtro para incluir apenas estes canais: Online e revendedor.  
   
 6.  Expanda a dimensão Região de Vendas e arraste Grupo da Região de Vendas até a coluna **Hierarquia** , abaixo de **Nome do Canal**.  
   
@@ -562,7 +562,7 @@ ms.locfileid: "56289864"
   
 1.  Na página **Escolher o layout** , em **Opções**, verifique se a opção **Mostrar subtotais e totais gerais** está selecionada.  
   
-     O painel Visualizar do assistente exibe uma matriz com quatro linhas.  Ao executar o relatório, cada linha será exibida da seguinte forma: A primeira linha é o grupo de colunas, a segunda linha contém os títulos das colunas, a terceira linha contém os dados de categorias de produto (`[Sum(Net_ QTY)]` e `[Sum(Net_Sales)]`) e a quarta linha contém os totais.  
+     O painel Visualizar do assistente exibe uma matriz com quatro linhas.  Ao executar o relatório, cada linha será exibida da seguinte forma: A primeira linha é o grupo de colunas, a segunda linha contém os cabeçalhos de coluna, a terceira linha contém os dados de categoria do produto (`[Sum(Net_ QTY)]` e `[Sum(Net_Sales)]`, e a quarta linha contém os totais.  
   
 2.  Clique em **Avançar**.  
   
@@ -685,7 +685,7 @@ ms.locfileid: "56289864"
   
 1.  Na superfície de design, clique em **Clique para adicionar título**.  
   
-2.  Tipo **vendas de categoria de produtos de 2009: Online e revendedor categoria:**.  
+2.  Digite **Vendas de 2009 na Categoria de Produto: Categoria Online e Revendedor:**.  
   
 3.  Selecione o texto que você digitou.  
   

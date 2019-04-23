@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], help
 ms.assetid: e0137273-85b8-45f0-83e5-38a50481768f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ca003e937f5e9547fa1bda0243967a8ff1d8331a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f1437ee34eded7b9bec88ed9f8e8f64184f5a8d9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019317"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59967952"
 ---
 # <a name="report-manager-f1-help"></a>Ajuda F1 do Gerenciador de Relatórios
   Os tópicos a seguir oferecem ajuda no nível de página para o Gerenciador de Relatórios do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Há um tópico para cada página no aplicativo. Nem todas as páginas podem estar disponíveis. As configurações de segurança determinam as páginas que você pode acessar. Para acessar esses tópicos do Gerenciador de Relatórios, clique em **Ajuda** na barra de ferramentas principal.  

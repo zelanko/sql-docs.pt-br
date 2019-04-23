@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Formatar texto (construtor de relatórios) | Microsoft Docs'
+title: 'Tutorial: Formatar texto (Construtor de Relatórios) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c4b9edce95b37417c031c8af06887f0933528038
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 9e509fb84ffd35085e7930925fd71499a6c96c87
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297275"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961332"
 ---
-# <a name="tutorial-format-text-report-builder"></a>Tutorial: Formatar texto (construtor de relatórios)
+# <a name="tutorial-format-text-report-builder"></a>Tutorial: Formatar texto (Construtor de Relatórios)
   Neste tutorial, você pode praticar a formatação de texto de várias maneiras. Depois de configurar o relatório em branco com a fonte de dados e o conjunto de dados, é possível escolher e selecionar as etapas que você deseja explorar.  
   
  A ilustração a seguir mostra um relatório semelhante ao que você criará.  

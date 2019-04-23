@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: adabb736dd34b35ee98f4ed46b84fd9205d504b5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f2dd3739d481162e7685b7021a120dd5d48e844a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012126"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59963972"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Criar um Alerta de Dados no Designer de Alertas de Dados
   Você cria definições de alerta de dados no Designer de Alertas de Dados. Depois de salvar as definições de alertas, é possível abri-la novamente, editá-la e salvá-la novamente no Designer de Alertas de Dados. Para obter informações sobre como editar definições de alertas, consulte [Gerenciar meus alertas de dados no Gerenciador de Alertas de Dados](manage-my-data-alerts-in-data-alert-manager.md) e [Editar um alerta de dados no Designer de Alertas](edit-a-data-alert-in-alert-designer.md).  
@@ -65,7 +65,7 @@ ms.locfileid: "56012126"
   
      Dependendo do tipo dos dados da coluna selecionada, diferentes operadores de comparação serão listados. Se a coluna tiver um tipo de dados de data, um ícone de calendário será exibido ao lado do valor de limite da regra. É possível inserir dados com um clique em uma data no calendário ou por meio de digitação da data.  
   
-     Designer de alertas de dados fornece dois modos de comparação: **Modo de entrada de valor** e **modo de seleção de campo**. O padrão é **Modo de Entrada de Valor**. Você só pode adicionar cláusulas OR quando está no **Modo de Entrada de Valor** e está usando a comparação **is** .  
+     O Designer de Alerta de Dados fornece dois modos de comparação: **Modo de Entrada de Valor** e **Modo de Seleção de Campo**. O padrão é **Modo de Entrada de Valor**. Você só pode adicionar cláusulas OR quando está no **Modo de Entrada de Valor** e está usando a comparação **is** .  
   
 9. Para adicionar uma cláusula OR, clique na seta para baixo e clique em **Modo de Entrada de Valor**.  
   

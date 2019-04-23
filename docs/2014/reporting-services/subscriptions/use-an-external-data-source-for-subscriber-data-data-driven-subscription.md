@@ -15,15 +15,15 @@ helpviewer_keywords:
 - data-driven subscriptions
 - data sources [Reporting Services], subscriptions
 ms.assetid: 1cade8ec-729c-4df8-a428-e75c9ad86369
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5b80a150bb44690bb4fbc836ba12f41fa8f82c28
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8314a1d0bdf16a7a320c8a5a7e06558a2bec62c4
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043057"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59968994"
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>Usar uma fonte de dados externa para obter dados de assinante (assinatura controlada por dados)
   Em uma assinatura controlada por dados, os dados de assinatura dinâmicos são fornecidos por uma consulta ou um comando que recupera dados de uma fonte de dados externa. Os dados de assinatura podem ser recuperados de qualquer fonte de dados com suporte que satisfaça os requisitos para o processamento de assinaturas controladas por dados. A sintaxe da consulta ou do comando deve ser válida para uma extensão de processamento de dados instalada com seu servidor de relatório.  

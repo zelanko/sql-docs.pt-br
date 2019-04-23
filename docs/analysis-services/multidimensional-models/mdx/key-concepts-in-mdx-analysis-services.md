@@ -1,6 +1,6 @@
 ---
 title: Principais conceitos em MDX (Analysis Services) | Microsoft Docs
-ms.date: 05/02/2018
+ms.date: 04/19/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bb527f78b886154372092c128e2c2a33e1eac75c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b00478a739796d27b44899aa72099583b1d9a113
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527820"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59962162"
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>Principais conceitos em MDX (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -57,11 +57,11 @@ ms.locfileid: "52527820"
   
  ![Tabela dinâmica com todos os membros destacados](../../../analysis-services/multidimensional-models/mdx/media/ssas-keyconcepts-pivot2-allmember.png "tabela dinâmica com todos os membros destacados")  
   
- Expanda a hierarquia e eventualmente você chegará ao nível mais baixo. Ele é chamado de **membro folha**. Um membro folha é um membro de uma hierarquia que não tem filho. Neste exemplo, a Austrália é o membro folha.  
+ Expanda a hierarquia e eventualmente você chegará ao nível mais baixo. Ele é chamado de **membro folha**. Um membro folha é um membro de uma hierarquia que não tem filho. Neste exemplo, Sudoeste é o membro folha.  
   
  ![Tabela dinâmica com membro folha destacado](../../../analysis-services/multidimensional-models/mdx/media/ssas-keyconcepts-pivot3-leafparent.PNG "tabela dinâmica com membro folha destacado")  
   
- Tudo acima é chamado de **membro pai**. Pacífico é o pai da Austrália.  
+ Tudo acima é chamado de **membro pai**. Estados Unidos é o pai do Sudoeste.  
   
  **Componentes de uma hierarquia de atributos.**  
   
@@ -96,7 +96,7 @@ ms.locfileid: "52527820"
 ## <a name="key-attributes"></a>Atributos de chave  
  Os modelos são uma colação de objetos relacionados que contam com chaves e índices para fazer associações. O mesmo vale para os modelos do Analysis Services. Para cada dimensão (lembre-se que é equivalente a uma tabela em um modelo relacional) há um atributo de chave. O **atributo de chave** é usado em relações de chave estrangeira com a tabela de fatos (grupo de medidas). Todos os atributos que não são de chave na dimensão são vinculados (direta ou indiretamente) ao atributo de chave.  
   
- Em geral, mas não sempre, o atributo de chave também é o **Atributo de Granularidade**. A granularidade refere-se ao nível de detalhes ou precisão dos dados. Novamente, um exemplo comum é o jeito mais rápido de entender. Considere os valores de data: Para vendas diárias, você precisa dos valores de data específicos do dia em questão; para cotas, pode ser suficiente especificar o trimestre, mas se seus dados analíticos são os resultados de corridas de um evento esportivo, a granulação poderá ser milissegundos. O nível de precisão dos valores dos dados é a granulação.  
+ Em geral, mas não sempre, o atributo de chave também é o **Atributo de Granularidade**. A granularidade refere-se ao nível de detalhes ou precisão dos dados. Novamente, um exemplo comum é o jeito mais rápido de entender. Considere os valores de data: Para vendas diárias, você precisa dos valores de data especificados para o dia; para cotas, trimestralmente pode ser suficiente, mas se seus dados analíticos os resultados de corridas de um evento esportivo, a granulação muito bem talvez precise ser milissegundos. O nível de precisão dos valores dos dados é a granulação.  
   
  Moeda é outro exemplo: um aplicativo financeiro pode acompanhar valores monetários até vários decimais, enquanto o bairro da sua escola local pode precisar apenas de valores para a unidade. É importante entender a granulação para evitar armazenar dados desnecessários. Retirar os milissegundos da marcação de hora ou centavos do valor de vendas pode economizar espaço de armazenamento e tempo de processamento quando este nível de detalhe não for relevante para sua análise.  
   

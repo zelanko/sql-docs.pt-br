@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Version property
 ms.assetid: 10266c94-d4da-4f4a-8cdd-5a64f57ada5e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 69035945199fa1b07c2d778ffd581f83827cfb0b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8646edde7c9d076ee62d8bd1109d21135c1f964b
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040797"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59962932"
 ---
 # <a name="version-property--wmi-msreportserverconfigurationsetting"></a>Propriedade Version (WMI MSReportServer_ConfigurationSetting)
   Retorna a versão do servidor de relatório no formato Major.Minor.Build.Revision. Somente leitura.  

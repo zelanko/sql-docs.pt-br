@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SQL Server Reporting Services, backward compatibility
 - backward compatibility [Reporting Services]
 ms.assetid: 675b0e0e-cfee-4790-9675-80fc3ea6d30f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b36b196f28bf029d68729c6c8e88116646829705
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b2a9e7d7600af11cbf9ab0cbb61f7049064b79e8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010537"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59968114"
 ---
 # <a name="reporting-services-backward-compatibility"></a>Compatibilidade com versões anteriores do Reporting Services
   Esta seção descreve as alterações no comportamento entre versões do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Ela abrange recursos que não estão mais disponíveis ou que estão agendados para serem removidos em uma versão posterior. Também descreve as principais alterações no produto que sabidamente interrompem um aplicativo personalizado que inclua a funcionalidade do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  

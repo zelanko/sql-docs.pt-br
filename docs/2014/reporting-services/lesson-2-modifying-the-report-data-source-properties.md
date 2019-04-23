@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7f7f1df9e5b5ee885af3e7a0fe462faeafd2d6b7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 41746f2938afd17e59dc4a9f2278179e4ccc1695
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026417"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964792"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lição 2: Modificando as propriedades de fonte de dados de relatório
   Nesta lição, você usará o Gerenciador de Relatórios para selecionar um relatório que será entregue a destinatários. A assinatura controlada por dados que será definida distribuirá o relatório **Pedidos de Vendas** criado no tutorial [Criar um relatório de tabela básico &#40;Tutorial do SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md). Nas etapas a seguir, você modificará as informações da conexão de fonte de dados usadas pelo relatório para obter dados. Somente relatórios que usam **credenciais armazenadas** para acessar uma fonte de dados de relatório podem ser distribuídos por uma assinatura controlada por dados. Credenciais armazenadas são necessárias para o processamento de relatório autônomo.  
@@ -114,16 +114,16 @@ ms.locfileid: "56026417"
   
          ![Visualizador de relatórios com área de parâmetro visível](../../2014/tutorials/media/ssrs-tutorial-datadriven-reportviewer-parameter.gif "Visualizador de relatórios com área de parâmetro visível")  
   
-8.  Reimplantar o relatório para que a configuração de assinatura na próxima lição possa utilizar as alterações que você fez nesta lição. Para obter mais informações sobre as propriedades de projeto usadas no tutorial de tabela, consulte a seção ' Para publicar o relatório no servidor de relatório (opcional)' de [lição 6: Adicionando agrupamentos e totais &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
+8.  Reimplantar o relatório para que a configuração de assinatura na próxima lição possa utilizar as alterações que você fez nesta lição. Para obter mais informações sobre as propriedades de projeto usadas no tutorial de tabela, consulte a seção ' Para publicar o relatório no servidor de relatório (opcional)' de [lição 6: como adicionar agrupamentos e totais &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   
 ##  <a name="bkmk_redeploy"></a> Para implantar o relatório novamente  
   
-1.  Reimplantar o relatório para que a configuração de assinatura na próxima lição possa utilizar as alterações que você fez nesta lição. Para obter mais informações sobre as propriedades de projeto usadas no tutorial de tabela, consulte a seção ' Para publicar o relatório no servidor de relatório (opcional)' de [lição 6: Adicionando agrupamentos e totais &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
+1.  Reimplantar o relatório para que a configuração de assinatura na próxima lição possa utilizar as alterações que você fez nesta lição. Para obter mais informações sobre as propriedades de projeto usadas no tutorial de tabela, consulte a seção ' Para publicar o relatório no servidor de relatório (opcional)' de [lição 6: como adicionar agrupamentos e totais &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   
 2.  Na barra de ferramentas, clique em **Compilar** e, em seguida, em **Implantar tutorial**.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- Você configurou o relatório com êxito para obter dados usando credenciais armazenadas. Depois, especifique a assinatura usando as páginas de Assinatura Controlada por Dados no Gerenciador de Relatórios. Consulte [lição 3: Definindo uma assinatura controlada por dados](../reporting-services/lesson-3-defining-a-data-driven-subscription.md).  
+ Você configurou o relatório com êxito para obter dados usando credenciais armazenadas. Depois, especifique a assinatura usando as páginas de Assinatura Controlada por Dados no Gerenciador de Relatórios. Confira [Lição 3: Definindo uma assinatura controlada por dados](../reporting-services/lesson-3-defining-a-data-driven-subscription.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Gerenciar fontes de dados de relatório](report-data/manage-report-data-sources.md)   

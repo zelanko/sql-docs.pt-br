@@ -12,15 +12,15 @@ helpviewer_keywords:
 - data sources [Reporting Services], shared
 - security [Reporting Services], data sources
 ms.assetid: 7299e498-0a1a-4821-a22a-5199bb773ce0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6b159467fc511292ecb1ae3832a04c73dabdd251
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f96e9f1a52e7c64ce1efb99b70e73c0dedada292
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56009638"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59962674"
 ---
 # <a name="secure-shared-data-source-items"></a>Proteger itens de fontes de dados compartilhadas
   Você pode definir a segurança em um item fonte de dados compartilhada para habilitar ou desabilitar o acesso a ele.  

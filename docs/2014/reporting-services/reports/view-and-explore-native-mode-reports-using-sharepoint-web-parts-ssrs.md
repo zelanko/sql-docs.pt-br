@@ -8,22 +8,22 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 17706542014f3835cb0a100d7dbf3e579b47aa65
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 77a18098a80686fcb12aca64f5b7d1452fbff452
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010647"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964952"
 ---
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>View and Explore Native Mode Reports Using SharePoint Web Parts (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oferece várias Web Parts que funcionam com versões específicas de um servidor de relatório e em modos de implantação específicos.  
   
--   **Modo Nativo:** para acessar o conteúdo do servidor de relatório em um site do SharePoint em um servidor de relatório em modo nativo, use as Web Parts do Navegador de Relatórios e Visualizador de Relatórios do SharePoint 2.0 que estão incluídas no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. As instruções para instalação e uso de Web Parts 2.0 são fornecidas neste tópico.  
+-   **Modo Nativo:** Se você quiser acessar o conteúdo do servidor de relatório em um site do SharePoint de um servidor de relatório do modo nativo, use o SharePoint 2.0 Web Parts do navegador de relatórios e Visualizador de relatórios que estão incluídos com [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. As instruções para instalação e uso de Web Parts 2.0 são fornecidas neste tópico.  
   
--   **Modo SharePoint:** se você quiser acessar um servidor de relatório que é executado em modo do SharePoint, use as Web Parts que são instaladas pelo Suplemento do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para produtos do SharePoint. Para obter mais informações sobre o suplemento, veja [Onde encontrar o suplemento Reporting Services para produtos do SharePoint](../install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
+-   **Modo SharePoint:** Se você quiser acessar um servidor de relatório que é executado no modo do SharePoint, use as web parts que são instaladas pela [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] suplemento para produtos do SharePoint. Para obter mais informações sobre o suplemento, veja [Onde encontrar o suplemento Reporting Services para produtos do SharePoint](../install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
 -   > [!NOTE]  
     >  A Web Part do visualizador de relatórios para modo nativo (SPViewer.dwp) é uma Web Part diferente de um (ReportViewer.dwp) instalado pelo Suplemento do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para produtos do SharePoint. As Web Parts têm esquemas e implementações diferentes, mas ambos podem ser instalados no mesmo farm do SharePoint. Visualmente, você pode distinguir as duas Web Parts pela seguinte característica: a Web Part do Visualizador de Relatórios que é instalada por meio do suplemento tem um menu **Ações** na barra de ferramentas.  
