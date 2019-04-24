@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b1227fdc2783207d9ab4ebfe7240884ab50f5ba1
-ms.sourcegitcommit: 403f07b335498ad577402fb432fefcdec700466e
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58913301"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>Instalação do cluster de failover do SQL Server
@@ -72,7 +72,7 @@ ms.locfileid: "58913301"
 #### <a name="ip-address-configuration-during-setup"></a>Configuração de endereço IP durante a instalação  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite definir ou alterar as configurações de dependência de recursos IP durante as ações a seguir:  
   
--   Instalação integrada – [Create a New SQL Server Failover Cluster &#40;Setup&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
+-   Instalação integrada – [Criar um novo cluster de failover do SQL Server &#40;Instalação&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
   
 -   CompleteFailoverCluster (Instalação avançada) – [Criar um novo cluster de failover do SQL Server &#40;Instalação&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
   
@@ -88,7 +88,7 @@ ms.locfileid: "58913301"
 ## <a name="see-also"></a>Consulte Também  
  [Antes de instalar o cluster de failover](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)   
  [Criar um novo cluster de failover do SQL Server &#40;Instalação&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)   
- [Instalar o SQL Server 2016 por meio do Prompt de Comando](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
+ [Instalar o SQL Server 2016 do prompt de comando](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
  [Atualizar uma instância de cluster de failover do SQL Server](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)  
   
   

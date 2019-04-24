@@ -19,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1816363425276ec532e5cc04433630e8e6b9bcac
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 089c6d25d7c899db03d67a6f7d1b8c9d495c94e6
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974345"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671382"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Nome de ordenação do Windows (Transact-SQL)
 
@@ -37,7 +37,6 @@ Especifica o nome de ordenação do Windows na cláusula COLLATE em [!INCLUDE[ss
 ## <a name="syntax"></a>Sintaxe
 
 ```
-
 <Windows_collation_name> :: =
 CollationDesignator_<ComparisonStyle>
 
@@ -50,7 +49,8 @@ CollationDesignator_<ComparisonStyle>
 
 ## <a name="arguments"></a>Argumentos
 
-*CollationDesignator* Especifica as regras de ordenação básicas usadas pela ordenação do Windows. As regras de ordenação básicas abrangem o seguinte:
+*CollationDesignator*   
+Especifica as regras de agrupamento básicas usadas pelo agrupamento do Windows. As regras de ordenação básicas abrangem o seguinte:
 
 - As regras de classificação e comparação aplicadas quando a classificação do dicionário é especificada. As regras de classificação são baseadas no alfabeto ou no idioma.
 - A página de código usada para armazenar dados **varchar**.
@@ -67,20 +67,20 @@ Alguns exemplos são:
 **AI** especifica que não diferencia acentos, **AS** especifica que diferencia acento.
 
 *KanatypeSensitive*  
-**Omitido** especifica que não diferencia caracteres kana, **KS** especifica que faz distinção de caracteres kana.
+A omissão dessa opção especifica que não diferencia caracteres kana, **KS** especifica que faz distinção de caracteres kana.
 
 *WidthSensitivity*  
-**Omitido** especifica que não diferencia largura, **WS** especifica que distingue largura.
+A omissão dessa opção especifica que não diferencia a largura, **WS** especifica que faz distinção de caracteres de largura.
 
 *VariationSelectorSensitivity*  
-**Aplica-se ao**: A partir do [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
+- **Aplica-se ao**: A partir do [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
 
-**Omitted** especifica que não diferencia seletor de variação, **VSS** especifica que diferencia seletor de variação.
+- A omissão dessa opção especifica que não diferencia seletor de variação, **VSS** especifica que diferencia seletor de variação.
 
 **UTF8**  
-**Aplica-se ao**: A partir do [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
+- **Aplica-se ao**: A partir do [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
 
-Especifica a codificação UTF-8 a ser usada para tipos de dados qualificados. Para obter mais informações, consulte [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md).
+- Especifica a codificação UTF-8 a ser usada para tipos de dados qualificados. Para obter mais informações, consulte [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md).
 
 **BIN**  
 Especifica a ordem de classificação binária compatível com versões anteriores que será usada.

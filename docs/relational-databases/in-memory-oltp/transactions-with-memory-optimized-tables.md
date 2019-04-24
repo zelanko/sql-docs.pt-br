@@ -13,10 +13,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: dc51c4376f38d62f63969aaf3bba39715a9871ba
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872286"
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transações com tabelas com otimização de memória

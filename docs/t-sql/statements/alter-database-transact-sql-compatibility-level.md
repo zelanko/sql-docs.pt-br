@@ -1,7 +1,7 @@
 ---
 title: Nível de compatibilidade de ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 04/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dbc27afcf47429d0c6a74b43244ba9a4f6f483a7
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: d535d50bde7c05629d23be85c2c64083dd455965
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828076"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583369"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Nível de compatibilidade de ALTER DATABASE (Transact-SQL)
 
@@ -176,6 +176,14 @@ Esta seção descreve os novos comportamentos introduzidos com o nível de compa
 
 No momento, o nível 150 de compatibilidade do banco de dados está em Visualização Pública para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. Esse nível de compatibilidade do banco de dados será associado à próxima geração de aprimoramentos de processamento de consulta, além do que foi introduzido no nível de compatibilidade 140 do banco de dados.
 
+|Configuração no nível de compatibilidade 140 ou inferior|Configuração no nível de compatibilidade 150|
+|--------------------------------------------------|-----------------------------------------|
+|O armazenamento de dados relacional e as cargas de trabalho analíticas podem não aproveitar os índices columnstore devido à sobrecarga de OLTP, falta de suporte do fornecedor ou outras limitações.  Sem índices columnstore, essas cargas de trabalho não podem se beneficiar do modo de execução de lote.|O modo de execução de lote já está disponível para cargas de trabalho analíticas sem a necessidade de índices columnstore. Para saber mais, confira [modo de lote em rowstore](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore).|
+|As consultas do modo de linha que solicitam tamanhos insuficientes de concessão de memória que resultam em despejos em disco podem continuar apresentando problemas em execuções consecutivas.|Consultas do modo de linha que solicitam tamanhos insuficientes de concessão de memória que resultam em despejos em disco podem ter um melhor desempenho em execuções consecutivas. Para saber mais, confira [comentários de concessão de memória do modo de linha](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback).|
+|Consultas do modo de linha que solicitam um tamanho excessivo de concessão de memória que resulta em problemas de simultaneidade podem continuar apresentando problemas em execuções consecutivas.|Consultas de modo de linha que solicitam um tamanho excessivo de concessão de memória que resulta em problemas de simultaneidade podem ter uma melhor simultaneidade em execuções consecutivas. Para saber mais, confira [comentários de concessão de memória do modo de linha](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback).|
+|Consultas que fazem referência a UDFs escalares do T-SQL usarão a invocação iterativa, que não apresenta o cálculo de custos e força a execução serial. |Os UDFs escalares do T-SQL são transformados em expressões relacionais equivalentes que são "embutidas" na consulta que fez a chamada, geralmente resultando em ganhos significativos de desempenho. Para saber mais, confira [Inlining de UDF escalar do T-SQL](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining).|
+|As variáveis de tabela usam um palpite fixo para a estimativa de cardinalidade.  Se o número real de linhas for muito superior ao valor do palpite, o desempenho das operações de downstream poderá ser afetado. |Os novos planos usarão a cardinalidade real da variável de tabela encontrada na primeira compilação em vez de uma estimativa fixa. Para saber mais, confira [compilação adiada de variável da tabela.](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation)|
+
 Confira mais informações sobre os recursos de processamento de consulta habilitados no nível 150 de compatibilidade do banco de dados em [Novidades no SQL Server 2019](../../sql-server/what-s-new-in-sql-server-ver15.md) e em [Processamento inteligente de consultas em bancos de dados SQL](https://docs.microsoft.com/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017).
 
 ## <a name="differences-between-compatibility-level-130-and-level-140"></a>Diferenças entre os níveis de compatibilidade 130 e 140
@@ -315,7 +323,7 @@ FROM sys.databases
 WHERE name = db_name();
 ```
 
-### <a name="b-ignoring-the-set-language-statement-except-under-compatibility-level-120"></a>b. Ignorando a instrução SET LANGUAGE, exceto no nível de compatibilidade 120
+### <a name="b-ignoring-the-set-language-statement-except-under-compatibility-level-120"></a>B. Ignorando a instrução SET LANGUAGE, exceto no nível de compatibilidade 120
 
 A consulta a seguir ignora a instrução SET LANGUAGE, exceto no nível de compatibilidade 120.
 

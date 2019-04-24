@@ -21,14 +21,17 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 915d689b90bf5103d276ee711e34102e05f49330
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: a9ef53323d77f1439df5daf0fedc669fe380cb3f
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513083"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59581510"
 ---
 # <a name="drop-workload-classifier-transact-sql-preview"></a>DROP WORKLOAD CLASSIFIER (Transact-SQL) (Versão prévia)
+
+> [!Note]
+> A classificação da carga de trabalho está disponível em versão prévia no SQL Data Warehouse Gen2. A versão prévia da Classificação e Importância do Gerenciamento de Carga de Trabalho destina-se a builds com datas de lançamento de 9 de abril de 2019 ou posterior.  Os usuários devem evitar usar builds anteriores a essa data no teste de gerenciamento de carga de trabalho.  Para determinar se o build é capaz de gerenciar a carga de trabalho, execute select @@version quando estiver conectado à instância do SQL Data Warehouse.
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
@@ -71,4 +74,4 @@ DROP WORKLOAD CLASSIFIER wgcELTRole;
 ## <a name="see-also"></a>Consulte Também
 
 [CREATE WORKLOAD CLASSIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-classifier-transact-sql.md)</br>
-[Classificação de carga de trabalho do SQL Data Warehouse](/azure/sql-data-warehouse/classification)
+[Classificação de carga de trabalho do SQL Data Warehouse](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)

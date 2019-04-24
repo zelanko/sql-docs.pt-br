@@ -31,10 +31,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: af33c0234ba1b8e6b92b5f1fee7f17f4d12dc667
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042166"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
@@ -55,7 +55,7 @@ ms.locfileid: "59042166"
 -   Usuário baseado em um grupo do Windows que não tem logon. `CREATE USER [Contoso\Sales];`  
 -   Usuário em [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ou [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] com base em um usuário do Azure Active Directory. `CREATE USER [Contoso\Fritz] FROM EXTERNAL PROVIDER;`     
 
--   Usuário de banco de dados contido com senha. (Não disponível em [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]). `CREATE USER Mary WITH PASSWORD = '********';`   
+-   Usuário de banco de dados contido com senha. (Não disponível em [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].) `CREATE USER Mary WITH PASSWORD = '********';`   
   
 **Usuários baseados em entidades de segurança do Windows que se conectam por logons de grupo do Windows**  
   
@@ -249,7 +249,7 @@ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]
   
  O esquema padrão será o primeiro esquema que será pesquisado pelo servidor ao resolver os nomes dos objetos para esse usuário de banco de dados. A não ser quando especificado de outra forma, o esquema padrão será o proprietário dos objetos criados pelo usuário de banco de dados.  
   
- Se o usuário tiver um esquema padrão, esse esquema padrão será usado. Se o usuário não tiver um esquema padrão, mas for um membro de um grupo que tenha um esquema padrão, o esquema padrão do grupo será usado. Se o usuário não tiver um esquema padrão e for membro de mais de um grupo, o esquema padrão do usuário será o do grupo do Windows com o menor principal_id e um esquema padrão definido explicitamente. Não é possível selecionar explicitamente um dos esquemas padrão disponíveis como o esquema preferencial. Se nenhum esquema padrão puder ser determinado para um usuário, o esquema **dbo** será usado.  
+ Se o usuário tiver um esquema padrão, esse esquema padrão será usado. Se o usuário não tiver um esquema padrão, mas for um membro de um grupo que tenha um esquema padrão, o esquema padrão do grupo será usado. Se o usuário não tiver um esquema padrão e for membro de mais de um grupo, o esquema padrão do usuário será o do grupo do Windows com o menor principal_id e um esquema padrão definido explicitamente. (Não é possível escolher explicitamente um dos esquemas padrão disponíveis como o esquema preferencial.) Se nenhum esquema padrão puder ser determinado para um usuário, o esquema **dbo** será usado.  
   
  DEFAULT_SCHEMA pode ser definido antes de o esquema para o qual ele aponta ser criado.  
   
@@ -293,7 +293,7 @@ Ao criar o usuário no banco de dados da instância gerenciada do Banco de Dados
 -   `CREATE USER SQLAUTHLOGIN FOR LOGIN SQLAUTHLOGIN`  
 -   `CREATE USER SQLAUTHLOGIN FROM LOGIN SQLAUTHLOGIN`  
   
-**Usuários que se autenticam no banco de dados.**  
+**Usuários que se autenticam no banco de dados**  
   
  A lista a seguir mostra a sintaxe possível para usuários que pode ser usada apenas em um banco de dados contido. Os usuários criados não serão relacionados a nenhum logon no banco de dados **mestre**. As opções de esquema e de idioma padrão não estão listadas.  
   
@@ -337,7 +337,7 @@ Ao criar o usuário no banco de dados da instância gerenciada do Banco de Dados
   
  Em um banco de dados contido, a criação de usuários ajuda a separar o banco de dados da instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)], de forma que o banco de dados possa ser movido facilmente para outra instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, veja [Usuários de bancos de dados independentes](../../relational-databases/databases/contained-databases.md) e [Usuários de bancos de dados independentes – Tornando seu banco de dados portátil](../../relational-databases/security/contained-database-users-making-your-database-portable.md). Para alterar um usuário de banco de dados de um usuário baseado em logon de autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para um usuário de banco de dados independente com senha, veja [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md).  
   
- Em um banco de dados independente, os usuários não precisam ter logons no banco de dados **mestre**. [!INCLUDE[ssDE](../../includes/ssde-md.md)] os administradores devem entender que o acesso a um banco de dados independente pode ser concedido no nível do banco de dados e não no nível do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Para obter mais informações, consulte [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
+ Em um banco de dados independente, os usuários não precisam ter logons no banco de dados **mestre**. Os administradores do [!INCLUDE[ssDE](../../includes/ssde-md.md)] devem entender que o acesso a um banco de dados independente pode ser concedido no nível do banco de dados e não no nível do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Para obter mais informações, consulte [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
  Ao usar os usuários do banco de dados independente em [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], configure o acesso usando uma regra de firewall no nível de banco de dados, em vez de uma regra de firewall de nível de servidor. Para obter mais informações, veja [sp_set_database_firewall_rule &#40;Banco de Dados SQL do Azure&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md).
  

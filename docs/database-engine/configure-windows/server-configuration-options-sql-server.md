@@ -30,12 +30,12 @@ ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7388c5c768c9ffe6865a46f4513090cc1716c59e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dde0a65630c5c8c543cd2f6fe9edfa0063d8dc04
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837430"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671392"
 ---
 # <a name="server-configuration-options-sql-server"></a>Opções de configuração do servidor (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ As opções de autoconfiguração são aquelas que o [!INCLUDE[ssNoVersion](../.
     |[default trace enabled](../../database-engine/configure-windows/default-trace-enabled-server-configuration-option.md) (A)|0|1|1|  
     |[disallow results from triggers](../../database-engine/configure-windows/disallow-results-from-triggers-server-configuration-option.md) (A)|0|1|0|  
     |[EKM provider enabled](../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)|0|1|0|  
-    |[external scripts enabled](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md) (RR)<br /><br /> **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).|0|1|0|  
+    |[external scripts enabled](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md) (SC)<br /><br /> **Requer reinicialização para **: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).|0|1|0|  
     |[filestream_access_level](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md)|0|2|0|  
     |[fill factor](../../database-engine/configure-windows/configure-the-fill-factor-server-configuration-option.md) (A, RR)|0|100|0|  
     |ft crawl bandwidth (max), veja [ft crawl bandwidth](../../database-engine/configure-windows/ft-crawl-bandwidth-server-configuration-option.md)(A)|0|32767|100|  

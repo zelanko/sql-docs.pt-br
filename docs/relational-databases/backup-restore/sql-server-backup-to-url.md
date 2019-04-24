@@ -11,12 +11,12 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ef47b518c5c2d1595458d652b1fcde7065400b79
-ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
+ms.openlocfilehash: 4992e50f3daeb7d131e8cfb98be3700366550f3f
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58434507"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582829"
 ---
 # <a name="sql-server-backup-to-url"></a>Backup do SQL Server para URL
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -323,15 +323,15 @@ New-AzStorageAccount -Name $storageAccountName -ResourceGroupName $resourceGroup
 $accountKeys = Get-AzStorageAccountKey -ResourceGroupName $resourceGroupName -Name $storageAccountName  
 
 # Create a new storage account context using an ARM storage account  
-$storageContext = New-AzureStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].value 
+$storageContext = New-AzStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].value 
 
 # Creates a new container in blob storage  
-$container = New-AzureStorageContainer -Context $storageContext -Name $containerName  
+$container = New-AzStorageContainer -Context $storageContext -Name $containerName  
 $cbc = $container.CloudBlobContainer  
 
 # Sets up a Stored Access Policy and a Shared Access Signature for the new container  
-$policy = New-AzureStorageContainerStoredAccessPolicy -Container $containerName -Policy $policyName -Context $storageContext -ExpiryTime $(Get-Date).ToUniversalTime().AddYears(10) -Permission "rwld"
-$sas = New-AzureStorageContainerSASToken -Policy $policyName -Context $storageContext -Container $containerName
+$policy = New-AzStorageContainerStoredAccessPolicy -Container $containerName -Policy $policyName -Context $storageContext -ExpiryTime $(Get-Date).ToUniversalTime().AddYears(10) -Permission "rwld"
+$sas = New-AzStorageContainerSASToken -Policy $policyName -Context $storageContext -Container $containerName
 
 
 # Gets the Shared Access Signature for the policy  

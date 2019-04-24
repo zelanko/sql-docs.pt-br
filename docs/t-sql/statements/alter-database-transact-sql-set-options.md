@@ -2,7 +2,7 @@
 title: Opções ALTER DATABASE SET (Transact-SQL) | Microsoft Docs
 description: Saiba mais sobre como definir opções de banco de dados, como criptografia e ajuste automáticos, repositório de consultas em um Banco de Dados SQL do Azure ou SQL Server
 ms.custom: ''
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 37f2dc54498e98fc6d940a014dd8db4927b38027
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 832db366e3596b4e4b4f2ab1e930178986147923
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494428"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583379"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opções ALTER DATABASE SET (Transact-SQL)
 
@@ -476,7 +476,7 @@ ONLINE O banco de dados está aberto e disponível para uso.
 EMERGENCY O banco de dados está marcado como READ_ONLY, o log está desabilitado e o acesso é limitado aos membros da função de servidor fixa sysadmin. EMERGENCY é usado principalmente para a solução de problemas. Por exemplo, um banco de dados marcado como suspeito devido a um arquivo de log corrompido pode ser definido com o estado EMERGENCY. Essa configuração permite habilitar o acesso somente leitura do administrador do sistema ao banco de dados. Apenas membros da função de servidor fixa sysadmin podem definir um banco de dados com o estado EMERGENCY.
 
 > [!NOTE]
-> **Permissões:** A permissão ALTER DATABASE para o banco de dados de assunto é necessária para alterar um banco de dados para o estado offline ou emergência. A permissão ALTER ANY DATABASE no nível do servidor é necessária para mover um banco de dados de offline para online.
+> **Permissões:** A permissão ALTER DATABASE para o banco de dados de assunto é necessária para alterar um banco de dados para o estado offline ou de emergência. A permissão ALTER ANY DATABASE no nível do servidor é necessária para mover um banco de dados de offline para online.
 
 Você pode determinar o status dessa opção examinando as colunas state e state_desc na exibição de catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). Você também pode determinar o status examinando a propriedade Status da função [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md). Para obter mais informações, consulte [Database States](../../relational-databases/databases/database-states.md).
 
@@ -508,7 +508,7 @@ Especifica que somente um usuário por vez pode acessar o banco de dados. Se voc
 
 O banco de dados permanecerá no modo SINGLE_USER, mesmo que o usuário que definiu a opção saia do serviço. Nesse momento, um usuário diferente, mas somente um, poderá se conectar ao banco de dados.
 
-Antes de definir o banco de dados como SINGLE_USER, verifique se a opção AUTO_UPDATE_STATISTICS_ASYNC está definida como OFF. Quando definida como ON, o thread em segundo plano usado para a atualização de estatísticas estabelece uma conexão com o banco de dados e não é possível acessar o banco de dados em modo de usuário único. Para exibir o status dessa opção, consulte a coluna is_auto_update_stats_async_on na exibição do catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). Se a opção estiver definida como ON, execute as tarefas a seguir:
+Antes de definir o banco de dados como SINGLE_USER, verifique se a opção AUTO_UPDATE_STATISTICS_ASYNC está definida como OFF. Quando definido como ON, o thread em segundo plano usado para a atualização de estatísticas estabelece uma conexão com o banco de dados e não é possível acessar o banco de dados em modo de usuário único. Para exibir o status dessa opção, consulte a coluna is_auto_update_stats_async_on na exibição do catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). Se a opção estiver definida como ON, execute as tarefas a seguir:
 
 1. Defina AUTO_UPDATE_STATISTICS_ASYNC como OFF.
 

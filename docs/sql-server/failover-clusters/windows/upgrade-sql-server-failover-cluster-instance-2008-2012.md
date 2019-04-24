@@ -12,15 +12,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a73eda4fbb3898846894a4cf35de4253cffedbc3
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872246"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Fazer upgrade das instâncias do SQL Server em execução em clusters do Windows Server 2008/2008 R2/2012
 
-[!INCLUDE[nextref-longhorn-md](../../../includes/nextref-longhorn-md.md)], [!INCLUDE[winserver2008r2-md](../../../includes/winserver2008r2-md.md)] e [!INCLUDE[win8srv-md](../../../includes/win8srv-md.md)] impedem que os clusters de failover do Windows Server executem atualizações do sistema operacional in-loco, limitando a versão permitida do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de um cluster. Depois que o cluster é atualizado para, no mínimo, o [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)], ele pode permanecer atualizado.
+O [!INCLUDE[nextref-longhorn-md](../../../includes/nextref-longhorn-md.md)], [!INCLUDE[winserver2008r2-md](../../../includes/winserver2008r2-md.md)] e [!INCLUDE[win8srv-md](../../../includes/win8srv-md.md)] impedem que os clusters de failover do Windows Server executem upgrades do sistema operacional in-loco, limitando a versão permitida do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de um cluster. Depois que o cluster é atualizado para, no mínimo, o [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)], ele pode permanecer atualizado.
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -123,7 +123,7 @@ Se você tiver um ambiente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-
 
 ## <a name="scenario-3-windows-cluster-has-both-sql-fcis-and-sql-server-availability-groups"></a>Cenário 3: o Cluster do Windows tem FCIs do SQL e Grupos de Disponibilidade do SQL Server
 
-Se você tiver uma instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que não usa nenhuma instância autônoma do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], apenas FCIs do SQL, que estão contidas em, pelo menos, um Grupo de Disponibilidade, poderá migrar isso para um novo cluster usando métodos semelhantes ao cenário "nenhum Grupo de Disponibilidade, nenhuma instância autônoma". Antes de copiar as tabelas do sistema para os discos compartilhados da FCI de destino, você deverá remover todos os Grupos de Disponibilidade do ambiente original. Depois que todos os bancos de dados forem migrados para os computadores de destino, você recriará os Grupos de Disponibilidade com os mesmos nomes de esquema e de ouvinte. Ao fazer isso, os recursos de cluster de failover do Windows Server serão formados corretamente e gerenciados no cluster de destino. **O Always On deve estar habilitado no Configuration Manager [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em cada computador no ambiente de destino antes da migração.**
+Se você tiver uma instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que não usa nenhuma instância autônoma do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], apenas FCIs do SQL, que estão contidas em, pelo menos, um Grupo de Disponibilidade, poderá migrar isso para um novo cluster usando métodos semelhantes ao cenário "nenhum Grupo de Disponibilidade, nenhuma instância autônoma". Antes de copiar as tabelas do sistema para os discos compartilhados da FCI de destino, você deverá remover todos os Grupos de Disponibilidade do ambiente original. Depois que todos os bancos de dados forem migrados para os computadores de destino, você recriará os Grupos de Disponibilidade com os mesmos nomes de esquema e de ouvinte. Ao fazer isso, os recursos de cluster de failover do Windows Server serão formados corretamente e gerenciados no cluster de destino. **O Always On deve estar habilitado no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager em cada computador no ambiente de destino antes da migração.**
 
 ### <a name="to-perform-the-upgrade"></a>Para fazer o upgrade
 
@@ -285,7 +285,7 @@ A migração de um cluster que usa Grupos de Disponibilidade com réplicas autô
 
 ### <a name="includessnoversionincludesssnoversion-mdmd-agent"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent
 
--   **trabalhos**
+-   **Trabalhos**
 
     Os trabalhos serão migrados corretamente junto com os bancos de dados do sistema. Qualquer usuário que executa um trabalho do SQL Agent ou o próprio SQL Agent terá as mesmas permissões no computador de destino, conforme especificado nos pré-requisitos.
 
@@ -309,7 +309,7 @@ A migração de um cluster que usa Grupos de Disponibilidade com réplicas autô
 
 ### <a name="integration-services"></a>Integration Services
 
--   **projetos SSIS**
+-   **Projetos do SSIS**
 
     Os projetos do SSIS são migrados junto com o banco de dados do SSIS. Depois que o banco de dados do SSIS é movido, os pacotes são executáveis imediatamente antes da movimentação das tabelas do sistema.
 
