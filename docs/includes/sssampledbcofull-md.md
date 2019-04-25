@@ -1,1 +1,9 @@
- Ciclos da Adventure Works 
+---
+ms.openlocfilehash: d215338a01056b0686e85b7007b2cd38d309b791
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63767749"
+---
+Ciclos da Adventure Works

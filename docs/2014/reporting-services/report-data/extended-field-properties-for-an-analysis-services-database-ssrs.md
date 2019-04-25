@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a8600fd0e9da41644e99950a7d3df1d7d4764b99
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: MT
+ms.openlocfilehash: eec122493d7af91bc5aa5483fbdb1de842705c90
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038447"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59960102"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Propriedades de campos estendidos para um banco de dados do Analysis Services (SSRS)
   A extensão de processamento de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dá suporte às propriedades de campo estendidas. As propriedades de campo estendidas são propriedades adicionais às propriedades de campo `Value` e `IsMissing` que estão disponíveis na fonte de dados e são suportadas pela extensão de processamento de dados. As propriedades estendidas não são exibidas no painel Dados do Relatório como parte da coleção de campos de um conjunto de dados do relatório. Você pode incluir valores de propriedade de campo estendidas em seu relatório escrevendo expressões que especificá-los por nome usando o interno `Fields` coleção.  
@@ -47,7 +47,7 @@ ms.locfileid: "56038447"
 |------------------|--------------|---------------------------------------|  
 |`Value`|`Object`|Especifica o valor de dados do campo.|  
 |`IsMissing`|`Boolean`|Indica se o campo foi encontrado no conjunto de dados resultante.|  
-|`UniqueName`|`String`|Retorna o nome totalmente qualificado de um nível. Por exemplo, o `UniqueName` valor de um funcionário pode ser *[funcionário]. [ Employee Department]. [Department]. & [Sales]. & [gerente de vendas na América do Norte. Manager].&[272]*.|  
+|`UniqueName`|`String`|Retorna o nome totalmente qualificado de um nível. Por exemplo, o `UniqueName` valor de um funcionário pode ser *[funcionário]. [ Employee Department]. [Department]. & [Sales]. & [gerente de vendas na América do Norte]. Manager].&[272]*.|  
 |`BackgroundColor`|`String`|Retorna a cor do segundo plano definida no banco de dados para o campo.|  
 |`Color`|`String`|Retorna a cor do primeiro plano definida no banco de dados para o item.|  
 |`FontFamily`|`String`|Retorna o nome da fonte definido no banco de dados para o item.|  
