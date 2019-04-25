@@ -21,21 +21,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 631e022e9c424344053153647fcf292c1c3f90db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62465321"
 ---
 # <a name="sqlparamoptions-function"></a>Função SQLParamOptions
 **Conformidade com**  
- Versão introduziu: Conformidade de padrões 1.0 ODBC: Deprecated  
+ Versão introduzida: Conformidade com padrões 1.0 ODBC: Preterido  
   
  **Resumo**  
  A função ODBC 2.0 **SQLParamOptions** foi substituído no ODBC 3. *x* por chamadas para [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md).  
   
 > [!NOTE]  
->  Para obter mais informações sobre o que o Gerenciador de Driver mapeia essa função quando um ODBC 2. *x* aplicativo está funcionando com um ODBC 3. *x* driver, consulte [mapeamento de funções preteridas](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) no Apêndice g: Driver diretrizes para compatibilidade com versões anteriores.  
+>  Para obter mais informações sobre o que o Gerenciador de Driver mapeia essa função quando um ODBC 2. *x* aplicativo está funcionando com um ODBC 3. *x* driver, consulte [mapeamento de funções preteridas](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) no Apêndice g: Diretrizes de driver para compatibilidade com versões anteriores.  
   
 ## <a name="remarks"></a>Comentários  
  Ver [informações de ODBC 64-Bit](../../../odbc/reference/odbc-64-bit-information.md), se o aplicativo será executado em um sistema operacional de 64 bits.  

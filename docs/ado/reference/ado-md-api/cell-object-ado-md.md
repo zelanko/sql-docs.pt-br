@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: df7b93e00ddff15c320152e3fa2bc1f104caa3a4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469481"
 ---
 # <a name="cell-object-ado-md"></a>Objeto Cell (ADO MD)
 Representa os dados na interseção de coordenadas do eixo contidos em um conjunto de células.  
@@ -43,7 +43,7 @@ Representa os dados na interseção de coordenadas do eixo contidos em um conjun
   
  O **propriedades** coleção contém propriedades fornecidos pelo provedor. A tabela a seguir lista as propriedades que podem estar disponíveis. A lista de propriedades reais pode diferir dependendo após a implementação do provedor. Consulte a documentação do seu provedor para obter uma lista completa de propriedades disponíveis.  
   
-|Nome|Description|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |BackColor|Cor de plano de fundo usada ao exibir a célula.|  
 |FontFlags|Bitmask que detalha os efeitos da fonte.|  

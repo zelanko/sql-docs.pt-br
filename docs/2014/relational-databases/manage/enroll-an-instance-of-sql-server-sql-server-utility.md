@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 98350d5d68990fdf31d42bacff2fc2ebb77c116b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468260"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Inscrever uma instância do SQL Server (Utilitário do SQL Server)
   Inscreva uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existente para monitorar o desempenho e a configuração como uma instância gerenciada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O UCP (ponto de controle de utilitário) coleta informações de configuração e de desempenho de instâncias gerenciadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cada 15 minutos. Estas informações são armazenadas no UMDW (data warehouse de gerenciamento do utilitário) no UCP; o nome de arquivo UMDW é sysutility_mdw. Dados de desempenho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são comparados a políticas para ajudar a identificar gargalos no uso de recursos e oportunidades de consolidação.  
@@ -145,9 +145,9 @@ ms.locfileid: "52762478"
   
  Configurações de instâncias gerenciadas:  
   
--   Nome da instância do SQL Server: NomeDoComputador \ NomedaInstância  
+-   Nome da instância do SQL Server: ComputerName\InstanceName  
   
--   Conta do conjunto de coleta do utilitário: NomeDeDomínio \ nomedeusuário  
+-   Conta do conjunto de coleta do utilitário: DomainName\UserName  
   
  Para continuar, clique em **Avançar**.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "52762478"
 >   
 >  Ocorreu uma exceção ao executar uma instrução ou um lote Transact-SQL. (Microsoft.SqlServer.ConnectionInfo)  
 >   
->  Informações adicionais:  Não foi possível obter informações sobre o grupo/usuário do Windows NT '\<nome_do_domínio \ nome_da_conta >', código de erro 0x5. (Microsoft SQL Server, Erro: 10060) 15404)  
+>  Informações adicionais:  Não foi possível obter informações sobre o grupo/usuário do Windows NT '\<nome_do_domínio \ nome_da_conta >', código de erro 0x5. (Microsoft SQL Server, Error: 15404)  
 >   
 >  Para obter mais informações sobre como solucionar essa falha, veja [Solucionar problemas do Utilitário do SQL Server](../../database-engine/troubleshoot-the-sql-server-utility.md).  
   

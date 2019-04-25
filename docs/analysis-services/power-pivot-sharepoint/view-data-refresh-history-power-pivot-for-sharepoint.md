@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 355ade7f4c90b595356efc5d39c2fa7cf587b11b
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509928"
 ---
 # <a name="view-data-refresh-history-power-pivot-for-sharepoint"></a>Exibir o Histórico de Atualização de Dados (Power Pivot para SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "50099677"
 ##  <a name="pageelements"></a> Usar informações do histórico  
  A página de histórico da atualização de dados fornece informações detalhadas sobre cada operação de atualização. Você pode usar as informações dessa página para confirmar se a atualização ocorreu ou por que falhou.  
   
-|Item|Description|  
+|Item|Descrição|  
 |----------|-----------------|  
 |Nome|Especifica o nome de arquivo da pasta de trabalho do Excel que contém os dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
 |Status atual|Os valores incluem **Agendado**, **Atualizando**, **Êxito**ou **Falha**.<br /><br /> **Agendado** é exibido quando a agenda é criada pela primeira vez. Depois que a atualização de dados ocorre pela primeira vez, essa mensagem de status não é mais exibida.<br /><br /> **Atualizando** indica que a atualização de dados está em andamento. Uma solicitação está na fila de processamento ou está sendo executada ativamente no servidor.<br /><br /> **Êxito** indica que a última operação de atualização de dados foi concluída e a pasta de trabalho atualizada está verificada na biblioteca do SharePoint.<br /><br /> **Falha** indica que a última operação de atualização de dados não obteve êxito. Os dados atualizados não foram salvos. A pasta de trabalho contém os mesmos dados que tinha antes do início da atualização de dados.|  

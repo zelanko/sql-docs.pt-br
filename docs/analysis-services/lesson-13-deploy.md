@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6b2ed8149cef9e9886398feebf43329f962b9537
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42792277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467603"
 ---
-# <a name="lesson-13-deploy"></a>Lição 13: implantar
+# <a name="lesson-13-deploy"></a>Lição 13: Implantar
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 Nesta lição, você irá configurar as propriedades de implantação especificando um local ou instância de servidor do Azure e um nome para o modelo. Em seguida, você implantará o modelo a essa instância. Depois que o modelo é implantado, os usuários podem se conectar a ele por meio de um aplicativo cliente de relatório. Para saber mais sobre a implantação, consulte [implantação de solução de modelo Tabular](../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md) e [implantar no Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-deploy).  
@@ -24,7 +24,7 @@ Nesta lição, você irá configurar as propriedades de implantação especifica
 Tempo estimado para concluir esta lição: **5 minutos**  
   
 ## <a name="prerequisites"></a>Prerequisites  
-Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [lição 12: analisar no Excel](../analysis-services/lesson-12-analyze-in-excel.md).  
+Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [Lição 12: Analisar no Excel](../analysis-services/lesson-12-analyze-in-excel.md).  
   
 ## <a name="deploy-the-model"></a>Implantar o modelo  
   
@@ -62,7 +62,7 @@ Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluí
 ## <a name="conclusion"></a>Conclusão  
 Parabéns! Você terminou a criar e implantar seu primeiro modelo de tabela do Analysis Services. Este tutorial ajudou você a concluir as tarefas mais comuns da criação de um modelo de tabela. Agora que o Modelo de Vendas pela Internet do Adventure Works está implantado, você pode usar o SQL Server Management Studio para gerenciar o modelo; crie scripts de processo e um plano de backup. Os usuários agora também podem se conectar ao modelo usando um aplicativo cliente de relatório, como o Microsoft Excel ou Power BI.  
 
-![como-tabela-lesson13-ssms](../analysis-services/media/as-tabular-lesson13-ssms.png)
+![as-tabular-lesson13-ssms](../analysis-services/media/as-tabular-lesson13-ssms.png)
   
   
 ## <a name="see-also"></a>Confira também  

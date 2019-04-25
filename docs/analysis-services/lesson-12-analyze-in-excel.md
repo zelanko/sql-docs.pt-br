@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c42a45ec20edbde61a2f1b7c5b026f3467cd2371
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42795645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468418"
 ---
-# <a name="lesson-12-analyze-in-excel"></a>Lição 12: analisar no Excel
+# <a name="lesson-12-analyze-in-excel"></a>Lição 12: Analisar no Excel
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 Nesta lição, você usará o analisar no recurso do Excel no SSDT para abrir o Microsoft Excel, criar automaticamente uma conexão de fonte de dados no espaço de trabalho do modelo e adicionar automaticamente uma tabela dinâmica à planilha. O recurso Analisar no Excel foi criado para fornecer um modo rápido e fácil de testar a eficácia do design de modelos antes da sua implantação. Você não executará análises de dados nesta lição. Esta lição visa familiarizar você, o autor modelo, com as ferramentas a serem usadas para testar seu design modelo. Ao contrário de usar o analisar no recurso do Excel, o que é destinado para autores de modelos, os usuários finais usarão aplicativos cliente de relatório como Excel ou Power BI para conectar e procurar dados de modelo de implantados.  
@@ -26,7 +26,7 @@ Para concluir esta lição, o Excel deve ser instalado no mesmo computador que o
 Tempo estimado para concluir esta lição: **20 minutos**  
   
 ## <a name="prerequisites"></a>Prerequisites  
-Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [lição 11: criar funções](../analysis-services/lesson-11-create-roles.md).  
+Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [Lição 11: Criar funções](../analysis-services/lesson-11-create-roles.md).  
   
 ## <a name="browse-using-the-default-and-internet-sales-perspectives"></a>Procurar usando as perspectivas Padrão e Vendas pela Internet  
 Nestas primeiras tarefas, você procurará seu modelo usando a perspectiva padrão, que inclui todos os objetos de modelo, e também usando a perspectiva de vendas pela Internet você viu anteriormente. A perspectiva Vendas pela Internet exclui o objeto de tabela Cliente.  
@@ -49,11 +49,11 @@ Nestas primeiras tarefas, você procurará seu modelo usando a perspectiva padr�
   
 2.  Na caixa de diálogo **Analisar no Excel** , deixe marcada a opção **Usuário do Windows Atual** e, na caixa de listagem suspensa **Perspectiva** , selecione **Vendas pela Internet**e clique em **OK**. 
     
-    ![como-tabela-lesson12-perspectiva](../analysis-services/media/as-tabular-lesson12-perspective.png)
+    ![as-tabular-lesson12-perspective](../analysis-services/media/as-tabular-lesson12-perspective.png)
     
 3.  No Excel, na **PivotTable Fields**, observe que a tabela DimCustomer é excluída da lista de campos.  
     
-    ![como tabular-lesson12-campos](../analysis-services/media/as-tabular-lesson12-fields.png)
+    ![as-tabular-lesson12-fields](../analysis-services/media/as-tabular-lesson12-fields.png)
     
 4.  Feche o Excel sem salvar a pasta de trabalho.  
   
@@ -71,7 +71,7 @@ Funções são parte integrante de qualquer modelo de tabela. Pelo menos uma fun
 3.  Feche o Excel sem salvar a pasta de trabalho.  
   
 ## <a name="whats-next"></a>O que vem a seguir?
-Vá para a próxima lição: [lição 13: implantar](../analysis-services/lesson-13-deploy.md).
+Vá para a próxima lição: [Lição 13: Implantar](../analysis-services/lesson-13-deploy.md).
 
   
   

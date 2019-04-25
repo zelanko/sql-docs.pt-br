@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3f948b50fae0995e16024ac41d8dd891630d1dbe
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62447535"
 ---
 # <a name="c-data-types"></a>Tipos de dados do C
 Tipos de dados ODBC C indicam o tipo de dados de buffers de C usada para armazenar dados no aplicativo.  
@@ -36,19 +36,19 @@ Tipos de dados ODBC C indicam o tipo de dados de buffers de C usada para armazen
 |-----------------------|--------------------|------------|  
 |SQL_C_CHAR|SQLCHAR *|unsigned char *|  
 |SQL_C_WCHAR|SQLWCHAR *|wchar_t *|  
-|SQL_C_SSHORT [j]|SQLSMALLINT|short int|  
-|SQL_C_USHORT [j]|SQLUSMALLINT|int curto não assinado|  
-|SQL_C_SLONG [j]|SQLINTEGER|Long int|  
-|SQL_C_ULONG [j]|SQLUINTEGER|inteiro longo|  
+|SQL_C_SSHORT[j]|SQLSMALLINT|short int|  
+|SQL_C_USHORT[j]|SQLUSMALLINT|int curto não assinado|  
+|SQL_C_SLONG[j]|SQLINTEGER|Long int|  
+|SQL_C_ULONG[j]|SQLUINTEGER|inteiro longo|  
 |SQL_C_FLOAT|SQLREAL|FLOAT|  
 |SQL_C_DOUBLE|SQLDOUBLE, SQLFLOAT|double|  
 |SQL_C_BIT|SQLCHAR|char não assinada|  
-|SQL_C_STINYINT [j]|SQLSCHAR|char assinada|  
-|SQL_C_UTINYINT [j]|SQLCHAR|char não assinada|  
-|SQL_C_SBIGINT|SQLBIGINT|_int64 [h]|  
-|SQL_C_UBIGINT|SQLUBIGINT|_int64 não assinados [h]|  
+|SQL_C_STINYINT[j]|SQLSCHAR|char assinada|  
+|SQL_C_UTINYINT[j]|SQLCHAR|char não assinada|  
+|SQL_C_SBIGINT|SQLBIGINT|_int64[h]|  
+|SQL_C_UBIGINT|SQLUBIGINT|unsigned _int64[h]|  
 |SQL_C_BINARY|SQLCHAR *|unsigned char *|  
-|SQL_C_BOOKMARK [i]|INDICADOR|inteiro longo não [d]|  
+|SQL_C_BOOKMARK[i]|INDICADOR|inteiro longo não [d]|  
 |SQL_C_VARBOOKMARK|SQLCHAR *|unsigned char *|  
 |Todos os tipos de dados de intervalo de C|SQL_INTERVAL_STRUCT|Consulte a [estrutura de intervalo de C](../../../odbc/reference/appendixes/c-interval-structure.md) seção mais adiante neste apêndice.|  
   

@@ -21,18 +21,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7bad6fbd9229547318a060f08eeb102b21cda9bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470884"
 ---
 # <a name="dbosysalerts-transact-sql"></a>dbo.sysalerts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contém uma linha para cada alerta. Um alerta é uma mensagem enviada em resposta a um evento. Um alerta pode encaminhar mensagens além do ambiente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], e um alerta pode ser uma mensagem de email ou de pager. Um alerta também pode gerar uma tarefa.  Essa tabela é armazenada na **msdb** banco de dados.
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|ID do alerta.|  
 |**name**|**sysname**|Nome do alerta.|  
@@ -41,7 +41,7 @@ ms.locfileid: "47855034"
 |**event_id**|**int**|Reservado para uso futuro.|  
 |**message_id**|**int**|Definido pelo usuário ID da mensagem ou uma referência a **sysmessages** mensagem que dispara esse alerta.|  
 |**severity**|**int**|Severidade que dispara esse alerta.|  
-|**habilitado**|**tinyint**|Status do alerta:<br /><br /> **0** = desabilitado.<br /><br /> **1** = habilitado.|  
+|**enabled**|**tinyint**|Status do alerta:<br /><br /> **0** = desabilitado.<br /><br /> **1** = habilitado.|  
 |**delay_between_responses**|**int**|Período de espera, em segundos, entre as notificações para esse alerta.|  
 |**last_occurrence_date**|**int**|Última ocorrência (data) do alerta.|  
 |**last_occurrence_time**|**int**|Última ocorrência (hora do dia) do alerta.|  
@@ -64,7 +64,7 @@ ms.locfileid: "47855034"
 
 A tabela a seguir mostra os valores para o bitmask include_event_description. O valor decimal é retornado por dbo.sysalerts. 
 
-|Decimal | BINARY | Significado |
+|Decimal | binary | Significado |
 |------|------|------|
 |0 |0000 |Nenhuma mensagem |
 |1 |0001 |Email |

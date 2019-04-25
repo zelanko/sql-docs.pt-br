@@ -1,5 +1,5 @@
 ---
-title: Criar e gerenciar partições de modelo de tabela | Microsoft Docs
+title: Criar e gerenciar partições de modelo Tabular | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7067449c0de9958e98a7a9dc5cc09c7f89f33fa9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472288"
 ---
 # <a name="create-and-manage-tabular-model-partitions"></a>Criar e gerenciar partições de modelo de tabela
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34039880"
   As partições dividem uma tabela em partes lógicas. Cada partição pode ser processada (Atualizada) independentemente de outras partições. As partições definidas para um modelo durante a criação de modelo são duplicadas em um modelo implantado. Uma vez implantado, você pode gerenciar essas partições usando a caixa de diálogo **Partições** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou usando um script. As tarefas fornecidas neste tópico descrevem como criar e gerenciar partições para um modelo implantado.  
   
   > [!NOTE]  
->  Partições em modelos de tabela criados no nível de compatibilidade de 1400 são definidas usando uma instrução de consulta M. Para obter mais informações, consulte [M referência](https://msdn.microsoft.com/library/mt211003.aspx). 
+>  Partições em modelos de tabela criados no nível de compatibilidade 1400 são definidas usando uma instrução de consulta M. Para obter mais informações, consulte [M referência](https://msdn.microsoft.com/library/mt211003.aspx). 
 >
   
 ## <a name="tasks"></a>Tarefas  
@@ -34,7 +34,7 @@ ms.locfileid: "34039880"
   
 2.  Em **Nome da Partição**, digite um nome para a partição. Por padrão, o nome da partição padrão será numerado incrementalmente para cada nova partição.  
   
-3.  Em **instrução de consulta**, digite ou cole uma instrução de consulta SQL ou M que define as colunas e as cláusulas que você deseja incluir na partição na janela de consulta.  
+3.  Na **instrução de consulta**, digite ou cole uma instrução de consulta SQL ou M que define as colunas e as cláusulas que você deseja incluir na partição na janela de consulta.  
   
 4.  Para validar a instrução, clique em **Verificar Sintaxe**.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "34039880"
   
 2.  Em **Nome da Partição**, digite um novo nome para a partição.  
   
-3.  Em **instrução de consulta**, edite a instrução de consulta.  
+3.  Na **instrução de consulta**, edite a instrução de consulta.  
   
 ###  <a name="bkmk_merge"></a> Para mesclar duas ou mais partições  
   
@@ -57,8 +57,8 @@ ms.locfileid: "34039880"
   
 -   Na caixa de diálogo **Partições** , na lista **Partições** , selecione a partição que você deseja excluir e clique em **Excluir** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
  [Partições de modelo de tabela](../../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)   
- [Partições de modelo de tabela de processo](../../analysis-services/tabular-models/process-tabular-model-partitions-ssas-tabular.md)  
+ [Partições de modelo tabular de processo](../../analysis-services/tabular-models/process-tabular-model-partitions-ssas-tabular.md)  
   
   

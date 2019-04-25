@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 38185df9928286acf184fbad21fd75839856d017
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467920"
 ---
-# <a name="lesson-2-1---defining-a-dimension"></a>Lição 2-1-definir uma dimensão
+# <a name="lesson-2-1---defining-a-dimension"></a>Lição 2-1: definindo uma dimensão
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Na tarefa a seguir, você usará o Assistente para Dimensões para criar uma dimensão Data.  

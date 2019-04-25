@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 867c341443b7ce1c459806eaac5427a06a8bbebe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62473227"
 ---
 # <a name="logon-triggers"></a>Gatilhos de logon
   Os gatilhos de logon acionam procedimentos armazenados em resposta a um evento LOGON. Esse evento ocorre quando é estabelecida uma sessão de usuário com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os gatilhos de logon são acionados após o término da fase de autenticação, mas antes da sessão de usuário ser realmente estabelecida. Logo, todas as mensagens originadas no gatilho que chegariam, normalmente, ao usuário, como mensagens de erro e mensagens da instrução PRINT, são desviadas para o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Os gatilhos de logon não são acionados quando a autenticação falha.  
@@ -50,7 +50,7 @@ ms.locfileid: "48075986"
 -   Um erro com severidade maior que 20 é emitido dentro do corpo do gatilho.  
   
 ## <a name="disabling-a-logon-trigger"></a>Desabilitando um gatilho de logon  
- Um gatilho de logon pode, efetivamente, impedir conexões com o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] para todos os usuários, incluindo membros da função de servidor fixa `sysadmin`. Quando um gatilho de logon está impedindo conexões, os membros da função de servidor fixa `sysadmin` podem se conectar usando a conexão de administrador dedicada ou iniciando o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] no modo de configuração mínima (-f). Para obter mais informações, consulte [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
+ Um gatilho de logon pode, efetivamente, impedir conexões com o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] para todos os usuários, incluindo membros da função de servidor fixa `sysadmin`. Quando um gatilho de logon está impedindo conexões, os membros da função de servidor fixa `sysadmin` podem se conectar usando a conexão de administrador dedicada ou iniciando o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] no modo de configuração mínima (-f). Para obter mais informações, consulte [Opções de inicialização do serviço Mecanismo de Banco de Dados](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

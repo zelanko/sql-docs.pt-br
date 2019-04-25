@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 66811d2364db546c3bddd787c1e0794f936f97c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62445948"
 ---
 # <a name="setting-parameter-values"></a>Configurar valores de parâmetro
 Para definir o valor de um parâmetro, o aplicativo simplesmente define o valor da variável associada ao parâmetro. Não é importante quando esse valor é definido, desde que ele é definido antes da instrução é executada. O aplicativo pode definir o valor antes ou depois da associação da variável, e ele pode alterar o valor tantas vezes quanto desejar. Quando a instrução é executada, o driver simplesmente recupera o valor atual da variável. Isso é particularmente útil quando uma instrução preparada é executada mais de uma vez. o aplicativo define novos valores para algumas ou todas as variáveis de cada vez que a instrução é executada. Para obter um exemplo disso, consulte [execução preparada](../../../odbc/reference/develop-app/prepared-execution-odbc.md), anteriormente nesta seção.  
@@ -37,11 +37,11 @@ Para definir o valor de um parâmetro, o aplicativo simplesmente define o valor 
   
 |Parâmetro<br /><br /> value|Parâmetro<br /><br /> (SQL)<br /><br /> tipo de dados|Variable (C)<br /><br /> tipo de dados|Valor em<br /><br /> associado<br /><br /> variável|Valor em<br /><br /> comprimento/indicador<br /><br /> buffer [d]|  
 |-------------------------|-----------------------------------------|----------------------------------|-------------------------------------|----------------------------------------------------|  
-|"ABC"|SQL_CHAR|SQL_C_CHAR|ABC\0 [a]|SQL_NTS ou 3|  
+|"ABC"|SQL_CHAR|SQL_C_CHAR|ABC\0[a]|SQL_NTS or 3|  
 |10|SQL_INTEGER|SQL_C_SLONG|10|--|  
-|10|SQL_INTEGER|SQL_C_CHAR|10\0 [a]|SQL_NTS ou 2|  
-|13.|SQL_TYPE_TIME|SQL_C_TYPE_TIME|13,0,0 [b]|--|  
-|13.|SQL_TYPE_TIME|SQL_C_CHAR|{t ' 13: 00:00'} \0 [a], [c]|SQL_NTS ou 14|  
+|10|SQL_INTEGER|SQL_C_CHAR|10\0[a]|SQL_NTS or 2|  
+|1 P.M.|SQL_TYPE_TIME|SQL_C_TYPE_TIME|13,0,0[b]|--|  
+|1 P.M.|SQL_TYPE_TIME|SQL_C_CHAR|{t '13:00:00'}\0[a], [c]|SQL_NTS or 14|  
 |NULL|SQL_SMALLINT|SQL_C_SSHORT|--|SQL_NULL_DATA|  
   
  [a] "\0" representa um caractere de finalização null. O caractere nulo de terminação é necessário somente se o valor no buffer de comprimento/indicador é SQL_NTS.  

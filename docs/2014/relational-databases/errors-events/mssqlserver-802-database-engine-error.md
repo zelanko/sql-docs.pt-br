@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c1caf78bedc85f7de7a55b67daee4c227d2a8dd2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762358"
 ---
 # <a name="mssqlserver802"></a>MSSQLSERVER_802
     
@@ -40,7 +40,7 @@ ms.locfileid: "48125286"
   
 1.  Verifique se outros aplicativos ou serviços estão consumindo memória neste servidor. Reconfigure os aplicativos ou serviços menos críticos de maneira que eles consumam menos memória.  
   
-2.  Comece a coletar contadores do monitor de desempenho para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: gerenciador de buffer**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: gerenciador de memória**.  
+2.  Iniciar a coleta de contadores de desempenho para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Gerenciador de buffer**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Gerenciador de memória**.  
   
 3.  Verifique os seguintes parâmetros de configuração da memória do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6d98d40ae24c68f90a304edb0293febfe76fac2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62445888"
 ---
 # <a name="simulating-positioned-update-and-delete-statements"></a>Simular instruções de exclusão e atualização posicionadas
 Se a fonte de dados não dão suporte à atualização posicionada e instruções delete, o driver pode simular a eles. Por exemplo, a biblioteca de cursores ODBC simula atualização posicionadas e instruções delete. A estratégia geral para simular as instruções de exclusão e atualização posicionadas é converter as instruções posicionadas para aqueles pesquisada. Isso é feito substituindo o **WHERE CURRENT OF** cláusula com um pesquisada **onde** cláusula que identifica a linha atual.  

@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4b204fe10d94cc875f1967aa50d8531826cd53f4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765429"
 ---
 # <a name="developer39s-guide-master-data-services"></a>Desenvolvedor&#39;guia (Master Data Services)
   Localize informações sobre como gravar código para personalizar o modo como você e seus usuários interagem com o [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Saiba como:  

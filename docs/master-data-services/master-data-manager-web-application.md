@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6fff6e1ab9f6394c34c60356fdd4f5eb76ab89c6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62465657"
 ---
 # <a name="master-data-manager-web-application"></a>Aplicativo Web Master Data Manager
 

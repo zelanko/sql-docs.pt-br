@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2b5dac8ae14f01dd464aab42eaed42480f1e715c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62446797"
 ---
 # <a name="inserting-rows-with-sqlbulkoperations"></a>Inserir linhas com SQLBulkOperations
 Inserindo dados com **SQLBulkOperations** é semelhante à atualização de dados com **SQLBulkOperations** porque ele usa dados dos buffers de associadas de aplicativo.  

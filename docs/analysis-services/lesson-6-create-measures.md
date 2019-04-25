@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 05855af1bf6809c6977b22bfdb3915e4e6dbbe03
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42795615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469795"
 ---
 # <a name="lesson-6-create-measures"></a>Lição 6: Criar medidas
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -30,7 +30,7 @@ Nesta lição, você criará medidas inserindo uma fórmula DAX na barra de fór
 Tempo estimado para concluir esta lição: **30 minutos**  
   
 ## <a name="prerequisites"></a>Prerequisites  
-Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [lição 5: criar colunas calculadas](../analysis-services/lesson-5-create-calculated-columns.md).  
+Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [Lição 5: Criar colunas calculadas](../analysis-services/lesson-5-create-calculated-columns.md).  
   
 ## <a name="create-measures"></a>Criar medidas  
   
@@ -48,7 +48,7 @@ Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluí
   
     Observe que a célula superior esquerda agora contém um nome de medida **DaysCurrentQuarterToDate**, seguido do resultado **92**.
     
-      ![como-tabela-lesson6-novamedida](../analysis-services/media/as-tabular-lesson6-newmeasure.png) 
+      ![as-tabular-lesson6-newmeasure](../analysis-services/media/as-tabular-lesson6-newmeasure.png) 
     
     Ao contrário de colunas calculadas, com fórmulas de medida, você pode digitar o nome da medida, seguido por uma vírgula, seguida pela expressão da fórmula.
 
@@ -75,7 +75,7 @@ Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluí
   
     O recurso AutoSoma cria automaticamente uma medida para a coluna selecionada por meio da fórmula de agregação padrão DistinctCount.  
     
-       ![como-tabela-lesson6-newmeasure2](../analysis-services/media/as-tabular-lesson6-newmeasure2.png)
+       ![as-tabular-lesson6-newmeasure2](../analysis-services/media/as-tabular-lesson6-newmeasure2.png)
   
 4.  Na grade de medida, clique na nova medida e, em seguida, nos **propriedades** janela, na **nome da medida**, renomeie a medida para **InternetDistinctCountSalesOrder**. 
  
@@ -87,13 +87,13 @@ Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluí
     |Nome da Medida|coluna|AutoSoma (∑)|Fórmula|  
     |----------------|----------|-----------------|-----------|  
     |InternetOrderLinesCount|SalesOrderLineNumber|Count|=COUNTA([SalesOrderLineNumber])|  
-    |InternetTotalUnits|OrderQuantity|SUM|=SUM([OrderQuantity])|  
-    |InternetTotalDiscountAmount|DiscountAmount|SUM|=SUM([DiscountAmount])|  
-    |InternetTotalProductCost|TotalProductCost|SUM|=SUM([TotalProductCost])|  
-    |InternetTotalSales|SalesAmount|SUM|=SUM([SalesAmount])|  
-    |InternetTotalMargin|Margem|SUM|=SUM([Margem])|  
-    |InternetTotalTaxAmt|TaxAmt|SUM|=SUM([TaxAmt])|  
-    |InternetTotalFreight|Freight|SUM|=SUM([Frete])|  
+    |InternetTotalUnits|OrderQuantity|Sum|=SUM([OrderQuantity])|  
+    |InternetTotalDiscountAmount|DiscountAmount|Sum|=SUM([DiscountAmount])|  
+    |InternetTotalProductCost|TotalProductCost|Sum|=SUM([TotalProductCost])|  
+    |InternetTotalSales|SalesAmount|Sum|=SUM([SalesAmount])|  
+    |InternetTotalMargin|Margem|Sum|=SUM([Margem])|  
+    |InternetTotalTaxAmt|TaxAmt|Sum|=SUM([TaxAmt])|  
+    |InternetTotalFreight|Freight|Sum|=SUM([Frete])|  
   
 2.  Ao clicar em uma célula vazia na grade de medida e usando a barra de fórmulas, crie e nomeie as seguintes medidas na ordem:  
   
@@ -124,6 +124,6 @@ Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluí
 As medidas criadas para a tabela FactInternetSales podem ser usadas para analisar dados financeiros essenciais, como vendas, custos e margem de lucro para itens definidos pelo filtro selecionado de usuário.  
   
 ## <a name="whats-next"></a>O que vem a seguir?
-Vá para a próxima lição: [lição 7: criar indicadores chave de desempenho](../analysis-services/lesson-7-create-key-performance-indicators.md).  
+Vá para a próxima lição: [Lição 7: Criar indicadores chave de desempenho](../analysis-services/lesson-7-create-key-performance-indicators.md).  
 
   

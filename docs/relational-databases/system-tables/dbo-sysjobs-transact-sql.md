@@ -21,24 +21,24 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e7735873fcad0447099c97171a940d570354552d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471085"
 ---
 # <a name="dbosysjobs-transact-sql"></a>dbo.sysjobs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Armazena as informações de cada trabalho agendado para ser executado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Essa tabela é armazenada na **msdb** banco de dados.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|A ID exclusiva do trabalho.|  
 |**originating_server_id**|**int**|ID do servidor do qual o trabalho originou.|  
 |**name**|**sysname**|Nome do trabalho.|  
-|**habilitado**|**tinyint**|Indica se o trabalho está habilitado para ser executado.|  
-|**Descrição**|**nvarchar(512)**|Descrição do trabalho.|  
+|**enabled**|**tinyint**|Indica se o trabalho está habilitado para ser executado.|  
+|**description**|**nvarchar(512)**|Descrição do trabalho.|  
 |**start_step_id**|**int**|ID da etapa do trabalho em que a execução deve começar.|  
 |**category_id**|**int**|ID da categoria de trabalho.|  
 |**owner_sid**|**varbinary(85)**|SID (número de identificação de segurança) do proprietário do trabalho.|  

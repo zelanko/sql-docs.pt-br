@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c25cd688b5d74e4514e1af645f7917059ce4d445
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472826"
 ---
 # <a name="batch-mode"></a>Modo de lote
 Modo de lote está em vigor quando o **LockType** estiver definida como **adLockBatchOptimistic** e atualização em lote é suportado pelo provedor. Determinadas configurações de tipo de bloqueio não estão disponíveis dependendo do local do cursor. Por exemplo, um tipo de bloqueio pessimista não está disponível quando o **CursorLocation** é definido como **adUseClient**. Por outro lado, um provedor não oferece suporte a um bloqueio otimista de lote de quando o local do cursor está no servidor. Você deve usar o lote de atualização com um conjunto de chaves ou apenas o cursor estático.  
@@ -29,7 +29,7 @@ Modo de lote está em vigor quando o **LockType** estiver definida como **adLock
   
  Esta seção contém os seguintes tópicos:  
   
--   [Enviando as atualizações: método UpdateBatch](../../../ado/guide/data/sending-the-updates-updatebatch-method.md)  
+-   [Enviar as atualizações: Método UpdateBatch](../../../ado/guide/data/sending-the-updates-updatebatch-method.md)  
   
 -   [Filtrando os registros atualizados](../../../ado/guide/data/filtering-for-updated-records.md)  
   
@@ -39,4 +39,4 @@ Modo de lote está em vigor quando o **LockType** estiver definida como **adLock
   
 -   [Desconectando e reconectando o conjunto de registros](../../../ado/guide/data/disconnecting-and-reconnecting-the-recordset.md)  
   
--   [Atualizando resultados JOINed: tabela única](../../../ado/guide/data/updating-joined-results-unique-table.md)
+-   [Atualizando resultados JOINed: Tabela exclusiva](../../../ado/guide/data/updating-joined-results-unique-table.md)

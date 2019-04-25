@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7c1e0b9298857a07e3f85f77595c62a4213a52ae
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467372"
 ---
 # <a name="lesson-10-defining-administrative-roles"></a>Lição 10: Definindo funções administrativas
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -26,12 +26,12 @@ Nesta lição, você aprenderá a definir funções de segurança para tarefas a
   
 Esta lição contém a seguinte tarefa:  
   
-[Concedendo permissões de banco de dados de processo](../analysis-services/lesson-10-granting-process-database-permissions.md)  
+[Concedendo permissões ao banco de dados do processo](../analysis-services/lesson-10-granting-process-database-permissions.md)  
 Nesta tarefa, você definirá uma função de segurança que possui permissões para processar o banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e, em seguida, testará essa função.  
   
 ## <a name="see-also"></a>Consulte também  
 [Cenário do tutorial de Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)  
-[Modelagem multidimensional & #40; Tutorial do Adventure Works & #41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Modelagem multidimensional &#40;Tutorial do Adventure Works&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
   
   
   

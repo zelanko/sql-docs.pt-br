@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 884c798e14964fbcaaf3ca9ba6656f4d62738fe8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62445970"
 ---
 # <a name="scrolling-and-fetching-rows-odbc"></a>Rolar e buscar linhas (ODBC)
 Ao usar um cursor rolável, aplicativos chamam **SQLFetchScroll** para posicionar as linhas de cursor e fetch. **SQLFetchScroll** oferece suporte à rolagem relativa (próximo, anterior e relativo *n* linhas), a rolagem absoluto (, sobrenome e de linha *n*) e o posicionamento do indicador. O *FetchOrientation* e *FetchOffset* argumentos **SQLFetchScroll** especificar qual conjunto de linhas para buscar, conforme mostrado nos diagramas a seguir.  
@@ -41,4 +41,4 @@ Ao usar um cursor rolável, aplicativos chamam **SQLFetchScroll** para posiciona
  Depois que o conjunto de linhas tiver sido recuperado, o aplicativo pode chamar **SQLSetPos** para posicionar a uma linha específica no conjunto de linhas ou atualizar linhas no conjunto de linhas. Para obter mais informações sobre como usar **SQLSetPos**, consulte [atualizando dados com SQLSetPos](../../../odbc/reference/develop-app/updating-data-with-sqlsetpos.md).  
   
 > [!NOTE]  
->  Rolagem é compatível com ODBC 2. *x* drivers por **SQLExtendedFetch**. Para obter mais informações, consulte [cursores em bloco, cursores roláveis e compatibilidade com versões anteriores](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)no Apêndice g: Driver diretrizes para compatibilidade com versões anteriores.
+>  Rolagem é compatível com ODBC 2. *x* drivers por **SQLExtendedFetch**. Para obter mais informações, consulte [cursores em bloco, cursores roláveis e compatibilidade com versões anteriores](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)no Apêndice g: Diretrizes de driver para compatibilidade com versões anteriores.

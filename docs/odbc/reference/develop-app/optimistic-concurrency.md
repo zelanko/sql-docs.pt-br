@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fa80ff3359e3bbbed9e28044cce7514006c40f10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62446208"
 ---
 # <a name="optimistic-concurrency"></a>Simultaneidade otimista
 *A simultaneidade otimista* deriva seu nome a suposição otimista que raramente ocorrerão conflitos entre transações; uma colisão deve ter ocorrido quando outra transação atualiza ou exclui uma linha de dados entre a hora em que ele é lido a transação atual e o tempo seja atualizado ou excluído. Ele é o oposto da *simultaneidade pessimista,* ou bloqueio, em que o desenvolvedor do aplicativo acredita que tal colisões são comuns.  

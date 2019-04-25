@@ -19,24 +19,24 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1e30db7b31a0a29a5e78e7fc5876f43764d66a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471108"
 ---
 # <a name="data-tier-application-tables---sysdacinstancesinternal"></a>Tabelas de aplicativo da camada de dados – sysdac_instances_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Exibe uma linha para cada instância do DAC (Aplicativo da Camada de Dados) implantada a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Essa tabela é armazenada no esquema dbo no banco de dados msdb.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |instance_id|**uniqueidentifier**|Identificador da instância do DAC.|  
 |instance_name|**sysname**|Nome da instância do DAC especificada quando a instância foi implantada.|  
 |type_name|**sysname**|Nome do DAC especificado quando o pacote do DAC foi criado.|  
 |type_version|**nvarchar(64)**|Versão do DAC especificado quando o pacote do DAC foi criado.|  
-|descrição|**nvarchar(4000)**|Uma descrição do DAC escrita quando o pacote do DAC foi criado.|  
+|description|**nvarchar(4000)**|Uma descrição do DAC escrita quando o pacote do DAC foi criado.|  
 |type_stream|**varbinary(max)**|Um fluxo de bits que contém a representação codificada dos objetos lógicos, como tabelas e exibições, contidos no DAC.|  
 |date_created|**datetime**|Data e hora em que a instância do DAC foi criada.|  
 |created_by|**sysname**|Logon que criou a instância do DAC|  

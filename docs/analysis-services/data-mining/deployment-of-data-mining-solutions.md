@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b42d01b097483d9088bd76257cd30ac37158f889
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467402"
 ---
 # <a name="deployment-of-data-mining-solutions"></a>Implantação de soluções de mineração de dados
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34015213"
 ## <a name="in-this-section"></a>Nesta seção  
  [Implantar uma solução de mineração de dados em versões anteriores do SQL Server](../../analysis-services/data-mining/deploy-a-data-mining-solution-to-previous-versions-of-sql-server.md)  
   
- [Exportar e importar objetos de mineração de dados](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
+ [Exportar e importar objetos de Mineração de dados](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
   
 ##  <a name="bkmk_Reqs"></a> Requisitos para a implantação de soluções de mineração de dados  
  A instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para o qual você implanta a solução deve estar sendo executada em um modo que dá suporte a objetos multidimensionais e objetos de mineração de dados; ou seja, você não pode implantar objetos de mineração de dados em uma instância que hospeda modelos de tabela ou dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
@@ -63,7 +63,7 @@ ms.locfileid: "34015213"
  Normalmente os objetos de mineração de dados também usam as mesmas fontes de dados e exibições da fonte de dados que são usadas para o cubo. No entanto, você pode adicionar fontes de dados e exibições da fonte de dados que são destinadas especificamente para mineração de dados. Por exemplo, normalmente um cubo não conteria dados sobre clientes em potencial ou dados externos que não são usados nos objetos multidimensionais.  
   
 ##  <a name="bkmk_Resources"></a> Recursos relacionados  
- [Movendo objetos de mineração de dados](../../analysis-services/data-mining/moving-data-mining-objects.md)  
+ [Movendo objetos de Mineração de dados](../../analysis-services/data-mining/moving-data-mining-objects.md)  
   
  Se seu modelo for baseado somente em dados relacionais, exportar e importar objetos usando DMX é o modo mais fácil de mover modelos.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "34015213"
   
 ## <a name="see-also"></a>Consulte também  
  [Processando um modelo multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Ferramentas de Consulta de Mineração de Dados](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [Processamento de requisitos e considerações sobre & #40; mineração de dados & #41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Ferramentas de Consulta de Data Mining](../../analysis-services/data-mining/data-mining-query-tools.md)   
+ [Requisitos e considerações de processamento &#40;Mineração de dados&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

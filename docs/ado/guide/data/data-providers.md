@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3c3b8a4ac0da80303a63bd62f7b4d6f51faab1fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472563"
 ---
 # <a name="data-providers"></a>Provedores de Dados
 Provedores de dados representam as diversas fontes de dados, como bancos de dados SQL, arquivos indexados sequenciais, planilhas, repositórios de documentos e arquivos de email. Provedores de expõem dados uniformemente usando uma abstração comum chamada conjunto de linhas.  

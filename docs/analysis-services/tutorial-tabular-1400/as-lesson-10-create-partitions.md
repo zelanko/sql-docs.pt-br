@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile"
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 705705410a69c4fa0eff507c97747f55b72b1250
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 91b0fb17ae785098e54358132daa91c04c7f3e5d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62466209"
 ---
 # <a name="create-partitions"></a>Criar partições
 

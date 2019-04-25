@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1a099b033422e7c10214371772edd090f0cc15fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718164"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472378"
 ---
 # <a name="deleting-records-using-the-delete-method"></a>Excluir registros usando o método Delete
 Usando o **exclua** método marca o registro atual ou um grupo de registros em uma **Recordset** objeto para exclusão. Se o **Recordset** objeto não permite exclusão de registros, ocorrerá um erro. Se você estiver no modo de atualização imediata, exclusões ocorrem no banco de dados imediatamente. Se um registro não pode ser excluído com êxito (devido a violações de integridade de banco de dados, por exemplo), o registro permanecerá no modo de edição após a chamada para **atualização.** Isso significa que você deve cancelar a atualização usando [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) antes de passar fora do registro atual (por exemplo, usando [Close](../../../ado/reference/ado-api/close-method-ado.md), [mover](../../../ado/reference/ado-api/move-method-ado.md), ou [ NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)).  

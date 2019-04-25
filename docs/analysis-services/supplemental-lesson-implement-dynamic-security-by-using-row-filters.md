@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 715d3b06ed3017a00852f58c618e2ea0b0de24d8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467910"
 ---
 # <a name="supplemental-lesson---implement-dynamic-security-by-using-row-filters"></a>Lição suplementar – implementar a segurança dinâmica usando filtros de linha
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]

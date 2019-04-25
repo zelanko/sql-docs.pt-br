@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ef0f55049e5ae9c96eed10fb1f39d7f3d95a19f9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62506768"
 ---
 # <a name="report-server-properties-service-tab"></a>Propriedades do servidor de relatório (guia Serviço)
   Este é o serviço Servidor de Relatório do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Os valores de propriedade em cinza claro não podem ser alterados com o uso deste aplicativo.  
@@ -45,11 +45,11 @@ ms.locfileid: "52803418"
  **Modo Inicial**  
  Defina este serviço com as seguintes opções:  
   
--   Manual: Esse serviço não é iniciado automaticamente na inicialização do computador. Você deve iniciá-lo usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager ou outra ferramenta.  
+-   Manual: Esse serviço não iniciar automaticamente quando o computador é iniciado. Você deve iniciá-lo usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager ou outra ferramenta.  
   
--   Automático: Este serviço tenta ser iniciado na inicialização do computador.  
+-   Automático: Este serviço tenta ser iniciado quando o computador é iniciado.  
   
--   Desabilitado: Esse serviço não pode ser iniciado.  
+-   Desabilitado: Este serviço não pode ser iniciado.  
   
  **Estado**  
  Indica se este serviço está sendo executado, se está parado ou desabilitado.  

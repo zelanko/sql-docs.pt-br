@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f22fc952f0394f9e59ca8d67c76d0b00594b0759
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62465980"
 ---
 # <a name="sqlmanagedatasources"></a>SQLManageDataSources
 **Conformidade com**  
@@ -43,7 +43,7 @@ BOOL SQLManageDataSources(
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *HWND*  
+ *hwnd*  
  [Entrada] Identificador de janela pai.  
   
 ## <a name="returns"></a>Retorna  
@@ -94,7 +94,7 @@ BOOL SQLManageDataSources(
   
  Um DSN de sistema está registrado na entrada HKEY_LOCAL_MACHINE nas informações do sistema, em vez de na entrada de HKEY_CURRENT_USER. Ele não está ligado a um usuário que fizer logon com o determinado nome de usuário e senha, mas pode ser usado por qualquer usuário dessa máquina ou por um serviço automático em todo o sistema. O DSN do sistema é, no entanto, vinculado a uma máquina. Ele não oferece suporte a capacidade de usar DSNs remotas entre computadores. DSNs de sistema são registrados desta forma nas informações do sistema:  
   
- HKEY_LOCAL_MACHINE SOFTWARE ODBC ini  
+ HKEY_LOCAL_MACHINE    SOFTWARE       ODBC          Odbc.ini  
   
 ## <a name="file-dsns"></a>DSNs de arquivos  
  Uma fonte de dados de arquivo não tem um nome de fonte de dados, como faz uma fonte de dados de máquina e não está registrado para qualquer um usuário ou computador. As informações de conexão para essa fonte de dados estão contidas em um arquivo. DSN que pode ser copiado para qualquer máquina. Uma fonte de dados de arquivo pode ser compartilhável, caso em que o arquivo. DSN reside em uma rede e pode ser usada simultaneamente por vários usuários na rede desde que o usuário tem o driver apropriado instalado. Uma fonte de dados de arquivo também pode ser não compartilhável, caso em que ele pode ser usado apenas em um único computador.  

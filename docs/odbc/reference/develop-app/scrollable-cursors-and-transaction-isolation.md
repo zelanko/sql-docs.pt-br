@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e5510eb58315f70195eb40390edec1766c350fb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662344"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468584"
 ---
 # <a name="scrollable-cursors-and-transaction-isolation"></a>Cursores roláveis e isolamento da transação
 A tabela a seguir lista os fatores que governam a visibilidade das alterações.  
@@ -38,20 +38,20 @@ A tabela a seguir lista os fatores que governam a visibilidade das alterações.
   
  A tabela a seguir resume a capacidade de detectar as alterações feitas por si só, por outras operações em sua própria transação e por outras transações de cada tipo de cursor. A visibilidade das alterações de última depende o tipo de cursor e o nível de isolamento da transação que contém o cursor.  
   
-|Cursor type\action|Self|O proprietário<br /><br /> Trans.|Outra<br /><br /> Trans.<br /><br /> (RU[a])|Outra<br /><br /> Trans.<br /><br /> (RC[a])|Outra<br /><br /> Trans.<br /><br /> (RR[a])|Outra<br /><br /> Trans.<br /><br /> (S[a])|  
+|Cursor type\action|Self|O proprietário<br /><br /> Txn|Outra<br /><br /> Txn<br /><br /> (RU[a])|Outra<br /><br /> Txn<br /><br /> (RC[a])|Outra<br /><br /> Txn<br /><br /> (RR[a])|Outra<br /><br /> Txn<br /><br /> (S[a])|  
 |-------------------------|----------|-----------------|----------------------------------|----------------------------------|----------------------------------|---------------------------------|  
 |Estático|||||||  
-|Insert|Talvez [b]|não|não|não|não|não|  
-|Update|Talvez [b]|não|não|não|não|não|  
-|DELETE|Talvez [b]|não|não|não|não|não|  
+|Insert|Maybe[b]|Não|Não|Não|Não|Não|  
+|Update|Maybe[b]|Não|Não|Não|Não|Não|  
+|DELETE|Maybe[b]|Não|Não|Não|Não|Não|  
 |Controlado por conjunto de chaves|||||||  
-|Insert|Talvez [b]|não|não|não|não|não|  
-|Update|Sim|Sim|Sim|Sim|não|não|  
-|DELETE|Talvez [b]|Sim|Sim|Sim|não|não|  
-|Dinâmicos|||||||  
-|Insert|Sim|Sim|Sim|Sim|Sim|não|  
-|Update|Sim|Sim|Sim|Sim|não|não|  
-|DELETE|Sim|Sim|Sim|Sim|não|não|  
+|Insert|Maybe[b]|Não|Não|Não|Não|Não|  
+|Update|Sim|Sim|Sim|Sim|Não|Não|  
+|DELETE|Maybe[b]|Sim|Sim|Sim|Não|Não|  
+|Dinâmico|||||||  
+|Insert|Sim|Sim|Sim|Sim|Sim|Não|  
+|Update|Sim|Sim|Sim|Sim|Não|Não|  
+|DELETE|Sim|Sim|Sim|Sim|Não|Não|  
   
  [a] as letras entre parênteses indicam o nível de isolamento da transação que contém o cursor; o nível de isolamento da transação (no qual a alteração foi feita) é irrelevante.  
   
@@ -61,6 +61,6 @@ A tabela a seguir lista os fatores que governam a visibilidade das alterações.
   
  RR: Leitura repetida  
   
- S: serializável  
+ S:  Serializável  
   
  [b] depende de como o cursor é implementado. Se o cursor pode detectar essas alterações é relatada com a opção SQL_STATIC_SENSITIVITY **SQLGetInfo**.

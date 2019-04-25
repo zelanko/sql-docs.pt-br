@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 64b54acb2334aa09c5d4c2fde421f1dca9f8f3c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472388"
 ---
 # <a name="data-shaping-overview"></a>Visão geral de data shaping
 *Formatação de dados* significa criar relações hierárquicas entre dois ou mais entidades lógicas em uma consulta. A hierarquia pode ser vista em relações pai-filho entre um registro de um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)e um ou mais registros (também conhecido como um capítulo) de outro **conjunto de registros**. Em uma relação pai-filho, o pai **conjunto de registros** contém o filho **conjunto de registros**. Um exemplo de tal relação hierárquica é customers e orders. Para cada cliente em um banco de dados, pode ser zero ou mais pedidos. A relação hierárquica pode ser recursivo, o que significa que os registros de neto podem ser aninhados em um registro filho. Em princípio, um registro hierárquico pode ser aninhado em qualquer profundidade. Na prática, o ADO limita a recursão para um máximo de 512 **Recordset**s.  

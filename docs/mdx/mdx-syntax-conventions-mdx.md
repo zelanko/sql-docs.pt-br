@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ec9918497b28951f85f3214a6c69302a87b47ecd
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62507872"
 ---
 # <a name="mdx-syntax-conventions-mdx"></a>Convenções de sintaxe de MDX (MDX)
 
@@ -30,7 +30,7 @@ ms.locfileid: "34742085"
 |\<label> ::=|Indica o nome de um bloco de sintaxe. Essa convenção é usada para agrupar e rotular partes de sintaxe extensa ou uma unidade de sintaxe que pode ser usada em mais de um local dentro de uma instrução. Cada local no qual o bloco de sintaxe pode ser usado é indicado com o rótulo entre colchetes angulares: \<rótulo >.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de linguagem MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
+ [Referência da linguagem MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
   
   
 

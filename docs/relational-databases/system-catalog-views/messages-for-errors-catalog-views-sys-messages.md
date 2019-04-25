@@ -1,5 +1,5 @@
 ---
-title: sys. messages (Transact-SQL) | Microsoft Docs
+title: sys.messages (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,18 +23,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 215ff84696cfc3d7590777ab1a2ad0f17c48d2a6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62501797"
 ---
 # <a name="messages-for-errors-catalog-views---sysmessages"></a>Exibições do catálogo de mensagens (para erros) – sys. messages
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contém uma linha para cada **message_id** ou **language_id** das mensagens de erro no sistema, para mensagens tanto definida pelo sistema e definidas pelo usuário. Para obter mais informações, veja [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md).  
    
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**message_id**|**int**|A identificação da mensagem. É exclusiva no servidor. As identificações de mensagem menores que 50000 são mensagens do sistema.|  
 |**language_id**|**smallint**|ID de idioma para o qual o texto no **texto** for usado, conforme definido na **syslanguages**. Isso é exclusivo para determinado **message_id**.|  

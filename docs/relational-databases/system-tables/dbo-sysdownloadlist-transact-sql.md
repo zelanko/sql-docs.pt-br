@@ -21,22 +21,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d0568403cb7f5bdf48d9be33e1b40f0be3fc1c33
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470824"
 ---
 # <a name="dbosysdownloadlist-transact-sql"></a>dbo.sysdownloadlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Mantém a fila de instruções de download para todos os servidores de destino.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|Coluna de identidade que fornece a sequência de inserção natural de linhas.|  
 |**source_server**|**sysname**|Nome do servidor de origem.|  
-|**operation_code**|**tinyint**|Código de operação para o trabalho:<br /><br /> **1** = INS (INSERT)<br /><br /> **2** = UPD (ATUALIZAÇÃO)<br /><br /> **3** = DEL (DELETE)<br /><br /> **4** = START<br /><br /> **5** = PARAR|  
+|**operation_code**|**tinyint**|Código de operação para o trabalho:<br /><br /> **1** = INS (INSERT)<br /><br /> **2** = UPD (ATUALIZAÇÃO)<br /><br /> **3** = DEL (DELETE)<br /><br /> **4** = START<br /><br /> **5** = STOP|  
 |**object_type**|**tinyint**|Código de tipo de objeto.|  
 |**object_id** <sup>1</sup>|**uniqueidentifier**|Número de identificação do objeto.|  
 |**target_server**|**sysname**|Nome do servidor de destino.|  

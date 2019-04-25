@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d81180c9cbadec8816c401bc6b8c8d200e76e28b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470176"
 ---
 # <a name="uninstall-sql-server-2014"></a>Desinstalar o SQL Server 2014
   Siga os tópicos abaixo para desinstalar totalmente uma instância existente do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e preparar o sistema de forma que possa reinstalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 203eae4b3660aaf5d1f2ed3a92ba844e88a518ff
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467777"
 ---
 # <a name="imdembeddeddata-interface"></a>IMDEmbeddedData Interface
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  O IMDEmbeddedData é uma interface pública usada para gerenciar inserida [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] banco de dados ou um modelo de tabela. A interface herda o **IPersistStream** interface. A interface permite as seguintes operações:  
+  A interface IMDEmbeddedData é uma interface pública usada para gerenciar um embedded [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] banco de dados ou um banco de dados do modelo de tabela. A interface herda de **IPersistStream** interface. A interface permite as seguintes operações:  
   
 -   Obter um identificador do fluxo inserido no documento contêiner.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "34044380"
 -   Salvar o banco de dados local ou em processo para o fluxo inserido no documento contêiner. Herdado de **IPersistStream**.  
   
 ## <a name="reference"></a>Referência  
- A referência a seguir documentos a **IMDEmbeddedData** interface como apresentado em **msmd. h** arquivo de cabeçalho.  
+ A seguinte referência documenta as **IMDEmbeddedData** interface conforme apresentado na **msmd** arquivo de cabeçalho.  
   
 ### <a name="source-file-pxoembeddeddataidl"></a>Arquivo de origem: PXOEmbeddedData.idl  
   
@@ -81,14 +81,14 @@ HRESULT GetStreamIdentifier (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>Descrição  
  Obtém o identificador usado pelo aplicativo de host para o fluxo inserido no documento contêiner.  
   
 #### <a name="parameters"></a>Parâmetros  
  *out_pbstrStreamId*  
  Especifica o local do identificador de fluxo.  
   
-#### <a name="return-value"></a>Valor de retorno  
+#### <a name="return-value"></a>Valor retornado  
  **S_OK**  
  O identificador de fluxo foi retornado com êxito.  
   
@@ -103,13 +103,13 @@ HRESULT GetStreamIdentifier (
   
  Os valores possíveis para DBPROP_MSMD_EMBEDDED_DATA são:  
   
-|Nome|Value|Definição|  
+|Nome|Valor|Definição|  
 |----------|-----------|----------------|  
 |DBPROPVAL_EMBED_NONE|0x00|Nenhum banco de dados inserido disponível|  
 |DBPROPVAL_EMBED_EMBEDDED|0x01|O aplicativo atual contém o banco de dados inserido|  
 |DBPROPVAL_EMBED_LINKED|0x02|O banco de dados inserido está hospedado em um aplicativo remoto (p. ex., SharePoint Server)|  
   
-#### <a name="source"></a>Origem  
+#### <a name="source"></a>Source  
   
 ```  
 [id(1), helpstring("Get identifier used to look up embedded stream in container document")]   
@@ -125,21 +125,21 @@ HRESULT SetContainerURL (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>Descrição  
  Define a URL para o arquivo que contém o fluxo inserido.  
   
 #### <a name="parameters"></a>Parâmetros  
  *in_bstrURL*  
  Especifica a URL para o documento contêiner.  
   
-#### <a name="return-value"></a>Valor de retorno  
+#### <a name="return-value"></a>Valor retornado  
  **S_OK**  
  A URL do contêiner foi definida com êxito.  
   
  **E_FAIL**  
  Erro ao definir a URL do contêiner.  
   
-#### <a name="source"></a>Origem  
+#### <a name="source"></a>Source  
   
 ```  
 [id(2), helpstring("Set the URL for the document containing the embedded stream")]   
@@ -155,21 +155,21 @@ HRESULT SetHosted (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>Descrição  
  Definir um sinalizador para indicar se o aplicativo inserido está em um ambiente hospedado.  
   
 #### <a name="parameters"></a>Parâmetros  
  *in_ftHosted*  
  TRUE se o chamador estiver hospedado em um aplicativo de serviço (como o IIS).  
   
-#### <a name="return-value"></a>Valor de retorno  
+#### <a name="return-value"></a>Valor retornado  
  **S_OK**  
  O sinalizador foi definido com êxito.  
   
  **E_FAIL**  
  Erro ao definir o sinalizador.  
   
-#### <a name="source"></a>Origem  
+#### <a name="source"></a>Source  
   
 ```  
 [id(5), helpstring("Set flag indicating if the application is in a hosted environment")]   
@@ -185,21 +185,21 @@ HRESULT SetTempDirPath (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>Descrição  
  Definir o caminho para os arquivos temporários usados pelo aplicativo inserido.  
   
 #### <a name="parameters"></a>Parâmetros  
  *in_bstrPath*  
  O caminho usado pelo aplicativo de host para arquivos temporários.  
   
-#### <a name="return-value"></a>Valor de retorno  
+#### <a name="return-value"></a>Valor retornado  
  **S_OK**  
  O diretório de arquivos temporários foi definido com êxito.  
   
  **E_FAIL**  
  Erro ao definir o caminho.  
   
-#### <a name="source"></a>Origem  
+#### <a name="source"></a>Source  
   
 ```  
 [id(4), helpstring("Set the path used by the host application for temporary files")]   
@@ -213,13 +213,13 @@ HRESULT SetTempDirPath (
 HRESULT Cancel ( void )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>Descrição  
  Cancela a operação de banco de dados inserida atual.  
   
 #### <a name="parameters"></a>Parâmetros  
  Nenhum.  
   
-#### <a name="return-value"></a>Valor de retorno  
+#### <a name="return-value"></a>Valor retornado  
  **S_OK**  
  A operação foi cancelada com êxito.  
   
@@ -229,7 +229,7 @@ HRESULT Cancel ( void )
  **E_FAIL**  
  Erro ao cancelar a operação inserida.  
   
-#### <a name="source"></a>Origem  
+#### <a name="source"></a>Source  
   
 ```  
 [id(5), helpstring("Cancel the current operation")]   
@@ -244,14 +244,14 @@ HRESULT GetSizeMax (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>Descrição  
  Obtém o tamanho estimado (em bytes) do fluxo para salvar o objeto inserido. Herdado de **IPersistStream**.  
   
 #### <a name="parameters"></a>Parâmetros  
  *in_bstrPath*  
  O tamanho estimado (em bytes) da imagem de banco de dados inserida.  
   
-#### <a name="return-value"></a>Valor de retorno  
+#### <a name="return-value"></a>Valor retornado  
  **S_OK**  
  O tamanho foi obtido com êxito.  
   
@@ -264,7 +264,7 @@ HRESULT GetSizeMax (
 HRESULT IsDirty ( void )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>Descrição  
  Verifica se o banco de dados inserido foi alterado após ser salvo pela última vez. Herdado de **IPersistStream**.  
   
 #### <a name="parameters"></a>Parâmetros  
@@ -288,7 +288,7 @@ HRESULT Load (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>Descrição  
  Carrega o banco de dados inserido para o mecanismo local ou em processo. Herdado de **IPersistStream**.  
   
 #### <a name="parameters"></a>Parâmetros  
@@ -303,7 +303,7 @@ HRESULT Load (
  Memória insuficiente para carregar o banco de dados.  
   
  **E_FAIL**  
- Ocorreu um erro ao carregar o banco de dados diferente de **E_OUTOFMEMORY**.  
+ Ocorreu um erro ao carregar o banco de dados diferente **E_OUTOFMEMORY**.  
   
 ### <a name="imdembeddeddatasave-ipersiststreamsave"></a>IMDEmbeddedData::Save (IPersistStream::Save)  
   
@@ -314,7 +314,7 @@ HRESULT Save (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>Descrição  
  Salva o banco de dados local ou em processo para o fluxo inserido no documento contêiner. Herdado de **IPersistStream**.  
   
 #### <a name="parameters"></a>Parâmetros  
@@ -329,7 +329,7 @@ HRESULT Save (
  O banco de dados foi salvo com êxito.  
   
  **STG_E_CANTSAVE**  
- Ocorreu um erro ao salvar o banco de dados, diferente de **STG_E_MEDIUMFULL**.  
+ Ocorreu um erro ao salvar o banco de dados diferente **STG_E_MEDIUMFULL**.  
   
  **STG_E_MEDIUMFULL**  
  Não foi possível salvar o banco de dados porque não há espaço remanescente no dispositivo de armazenamento.  

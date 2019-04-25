@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 76a9133a013087d96f9acc102232b2340212d19f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62763827"
 ---
 # <a name="exporting-data-master-data-services"></a>Exportando dados (Master Data Services)
   Você pode exportar dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] para sistemas de assinatura por meio da criação de exibições de assinaturas. Qualquer sistema assinante pode exibir os dados publicados no banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Para obter mais informações sobre exibições, consulte [exibições](../relational-databases/views/views.md).  

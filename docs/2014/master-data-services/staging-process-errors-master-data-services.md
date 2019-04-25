@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d8b32a8e9b6b61c2d108d3a9b8e63242854d0a63
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62763267"
 ---
 # <a name="staging-process-errors-master-data-services"></a>Erros de processo de preparo (Master Data Services)
   Quando o processo de preparo é concluído, todos os registros processados nas tabelas de preparo têm um valor na coluna ErrorCode. Esses valores são listados na tabela a seguir.  
@@ -33,7 +33,7 @@ ms.locfileid: "52822350"
 |210041|"ROOT" não é um código de membro válido.|O valor de **MemberCode** contém a palavra "ROOT".|Folha<br /><br /> Consolidado<br /><br /> Relação|  
 |210042|"MDMUNUSED" não é um código de membro válido.|O valor de **MemberCode** contém a palavra "MDMUNUSED".|Folha<br /><br /> Consolidado<br /><br /> Relação|  
 |210052|O MemberCode não pode ser desativado porque é usado como um valor de atributo baseado em domínio.|Quando **ImportType** = **3** ou **4**, o preparo falhará se o membro for usado como um valor de atributo para outros membros. Use **ImportType5** ou **6** para definir o valor como NULL ou altere os valores antes de executar o processo de preparo.|Folha<br /><br /> Consolidado|  
-|300002|O código de membro não é válido.|Relações: Código do membro pai ou filho não existe.<br /><br /> Folha ou consolidado: **ImportType** = **3** ou **4** e o código de membro não existe.|Folha<br /><br /> Consolidado<br /><br /> Relação|  
+|300002|O código de membro não é válido.|Relações: O código de membro pai ou filho não existe.<br /><br /> Folha ou Consolidado: **ImportType** = **3** ou **4** e o código de membro não existe.|Folha<br /><br /> Consolidado<br /><br /> Relação|  
 |300004|O código de membro já existe.|**ImportType** = **1** e você usou um código de membro que já existe na entidade.|Folha<br /><br /> Consolidado|  
 |210011|Quando **RelationshipType** é **1**, o **ParentCode** não pode ser um membro folha.|Verifique se o valor de **ParentCode** é um código de membro consolidado.|Relação|  
 |210015|O código de membro existe várias vezes na tabela de preparo para uma hierarquia e um lote.|Para uma hierarquia explícita, você especificou o local do mesmo membro várias vezes no mesmo lote.|Relação|  

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6bd85b72fc786d4aa807d73e57a69193b515067d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762794"
 ---
 # <a name="mssqlserver847"></a>MSSQLSERVER_847
     
@@ -29,7 +29,7 @@ ms.locfileid: "48135916"
 |ID do evento|847|  
 |Origem do evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
-|Nome simbólico|N/A|  
+|Nome simbólico|N/D|  
 |Texto da mensagem|Tempo limite esgotado ao aguardar a trava: classe '%ls', id %p, tipo %d, Tarefa 0x%p : %d, tempo de espera %d, sinalizadores 0x%I64x, tarefa proprietária 0x%p. Continuando espera.|  
   
 ## <a name="explanation"></a>Explicação  

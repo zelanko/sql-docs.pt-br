@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 156dfaf5c6a6a4ec06a0c96b5f726383cba32ba6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62447545"
 ---
 # <a name="identifier-arguments"></a>Argumentos do identificador
 Se uma cadeia de caracteres em um argumento de identificador está entre aspas, o driver remove à direita e espaços em branco e literalmente trata a cadeia de caracteres entre aspas. Se a cadeia de caracteres não está entre aspas, o driver remove dobras e espaços em branco à direita a cadeia de caracteres em maiusculas. A configuração de um argumento de identificador como um ponteiro nulo retorna SQL_ERROR e SQLSTATE HY009 (uso inválido de ponteiro nulo), a menos que o argumento é um nome de catálogo e não há suporte para catálogos.  
   
- Esses argumentos são tratados como argumentos de identificador se o atributo da instrução SQL_ATTR_METADATA_ID for definido como SQL_TRUE. Nesse caso, o sublinhado (_) e o sinal de porcentagem (%) será tratado como o caractere real, não como um caractere de padrão de pesquisa. Esses argumentos são tratados como um argumento comum ou um argumento padrão, dependendo do argumento, se esse atributo for definido como SQL_FALSE.  
+ Esses argumentos são tratados como argumentos de identificador se o atributo da instrução SQL_ATTR_METADATA_ID for definido como SQL_TRUE. Nesse caso, o sublinhado (_) e o percentual sinal (%) será tratado como o caractere real, não como um caractere de padrão de pesquisa. Esses argumentos são tratados como um argumento comum ou um argumento padrão, dependendo do argumento, se esse atributo for definido como SQL_FALSE.  
   
  Embora os identificadores que contêm caracteres especiais devem estar entre aspas em instruções SQL, eles devem não ser colocado entre aspas quando passados como argumentos de função de catálogo, porque os caracteres de aspas passados para funções de catálogo são interpretados literalmente. Por exemplo, suponha que o identificador de caractere de aspas (que é específico do driver e retornado por meio **SQLGetInfo**) é uma marca de aspas duplas ("). A primeira chamada para **SQLTables** retorna um conjunto de resultados contendo informações sobre a tabela de contas a pagar, enquanto a segunda chamada retorna informações sobre a tabela "Contas a pagar", que é provavelmente não é o pretendido.  
   

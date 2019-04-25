@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8942067b8a549ecc9d1da63a094645ea9609ab63
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060796"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762446"
 ---
 # <a name="mssqlserver8630"></a>MSSQLSERVER_8630
     
@@ -30,7 +30,7 @@ ms.locfileid: "48060796"
 |Origem do evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|EXECUTION_ERR|  
-|Texto da mensagem|Erro interno do processador de consultas: o processador de consultas encontrou um erro inesperado durante a execução.|  
+|Texto da mensagem|Erro do Processador de Consulta Interna: O processador de consultas encontrou um erro inesperado durante a execução.|  
   
 ## <a name="explanation"></a>Explicação  
  Erro interno de processamento de consultas.  

@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3f577f7798da2ba7b7ee4259ecc98994f713cfc5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762341"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>Criar um instantâneo do banco de dados (Transact-SQL)
   A única maneira de criar um instantâneo do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é usando o [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] não dá suporte à criação de instantâneos de banco de dados.  
@@ -28,7 +28,7 @@ ms.locfileid: "52768328"
   
      [Segurança](#Security)  
   
-     [Prática recomendada: Nomeando instantâneos de banco de dados](#Naming)  
+     [Melhor prática: Nomeando instantâneos do banco de dados](#Naming)  
   
 -   **Para criar um banco de dados de instantâneo, usando:**  [Transact-SQL](#TsqlProcedure)  
   
@@ -51,13 +51,13 @@ ms.locfileid: "52768328"
 ###  <a name="Recommendations"></a> Recomendações  
  Esta seção aborda as seguintes práticas recomendadas:  
   
--   [Prática recomendada: Nomeando instantâneos de banco de dados](#Naming)  
+-   [Melhor prática: Nomeando instantâneos do banco de dados](#Naming)  
   
--   [Prática recomendada: Limitando o número de instantâneos de banco de dados](#Limiting_Number)  
+-   [Melhor prática: Limitando o número de instantâneos do banco de dados](#Limiting_Number)  
   
--   [Prática recomendada: Conexões de cliente para um instantâneo de banco de dados](#Client_Connections)  
+-   [Melhor prática: Conexões de cliente com um instantâneo do banco de dados](#Client_Connections)  
   
-####  <a name="Naming"></a> Prática recomendada: Nomeando instantâneos de banco de dados  
+####  <a name="Naming"></a> Melhor prática: Nomeando instantâneos de banco de dados  
  Antes de criar instantâneos, é importante considerar como serão nomeados. Cada instantâneo de banco de dados requer um nome exclusivo de banco de dados. Para facilidade administrativa, o nome de um instantâneo pode inserir informações que identifiquem o banco de dados, como:  
   
 -   O nome do banco de dados de origem.  
@@ -82,13 +82,13 @@ AdventureWorks_snapshot_noon
 AdventureWorks_snapshot_evening  
 ```  
   
-####  <a name="Limiting_Number"></a> Prática recomendada: Limitando o número de instantâneos de banco de dados  
+####  <a name="Limiting_Number"></a> Melhor prática: Limitando o número de instantâneos de banco de dados  
  Criar uma série de instantâneos do longo do tempo captura instantâneos sequenciais do banco de dados de origem. Cada instantâneo persiste até que seja explicitamente descartado. Como cada instantâneo continuará crescendo à medida que as páginas originais forem atualizadas, você pode preferir conservar espaço de disco excluindo um instantâneo mais antigo depois de criar um instantâneo novo.  
   
 > [!NOTE]  
 >  Se você quiser reverter a um instantâneo de banco de dados, precisará excluir qualquer outro instantâneo desse banco de dados.  
   
-####  <a name="Client_Connections"></a> Prática recomendada: Conexões do cliente a um instantâneo de banco de dados  
+####  <a name="Client_Connections"></a> Melhor prática: Conexões de cliente para um instantâneo de banco de dados  
  Para usar um instantâneo de banco de dados, os clientes precisam saber onde encontrá-lo. Os usuários podem ler de um instantâneo de banco de dados enquanto outro está sendo criado ou excluído. Porém, quando você substituir um instantâneo novo por um já existente, será necessário redirecionar os clientes ao novo instantâneo. Os usuários podem se conectar manualmente a um instantâneo de banco de dados por meio do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. No entanto, para dar suporte a um ambiente de produção, você deverá criar uma solução programática que direcione de maneira transparente os clientes de gravação de relatório ao último instantâneo de banco de dados do banco de dados.  
   
 ###  <a name="Security"></a> Segurança  
@@ -136,7 +136,7 @@ AdventureWorks_snapshot_evening
   
 -   A. [Criando um instantâneo no banco de dados AdventureWorks](#Creating_on_AW)  
   
--   b. [Criando um instantâneo no banco de dados Vendas](#Creating_on_Sales)  
+-   B. [Criando um instantâneo no banco de dados Vendas](#Creating_on_Sales)  
   
 ####  <a name="Creating_on_AW"></a> A. Criando um instantâneo no banco de dados AdventureWorks  
  Este exemplo cria um instantâneo de banco de dados no banco de dados `AdventureWorks` . O nome do instantâneo, `AdventureWorks_dbss_1800`e o nome do arquivo de seu respectivo arquivo esparso, `AdventureWorks_data_1800.ss`, indicam a hora da criação, 18h00.  

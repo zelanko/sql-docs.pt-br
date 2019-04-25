@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d2ba2ef38d52ff1f8152145ce8c1c3290b426209
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468826"
 ---
 # <a name="odbc-driver-for-oracle-user39s-guide"></a>O Driver ODBC para Oracle usuário&#39;guia
 > [!IMPORTANT]  

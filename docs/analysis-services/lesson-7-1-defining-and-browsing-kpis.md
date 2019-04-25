@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 51df180342f48ea9d8f620bb1abe61edb4dfa6a4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469659"
 ---
-# <a name="lesson-7-1---defining-and-browsing-kpis"></a>Lição 1-7: definindo e procurando KPIs
+# <a name="lesson-7-1---defining-and-browsing-kpis"></a>Lição 7-1: definindo e procurando KPIs
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Para definir KPIs (indicadores chave de desempenho), você deve definir primeiramente um nome de KPI e o grupo de medidas ao qual o KPI será associado. Um KPI pode ser associado a todos ou apenas a um único grupo de medidas. Depois disso, você define os seguintes elementos do KPI:  

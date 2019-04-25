@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: bc4da6702716e845121d2081a166254d4be9449f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468322"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>Fazendo backup de um banco de dados com tabelas com otimização de memória
   As tabelas com otimização de memória são incluídas no backup como parte de backups regulares de banco de dados. Quanto às tabelas baseadas em disco, o CHECKSUM de dados e os pares de arquivos delta são validados como parte do backup de banco de dados para detectar corrupção do armazenamento.  

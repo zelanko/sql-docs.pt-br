@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc7a140d7de8548f02fde6ab309823bbe1c9c656
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62465915"
 ---
 # <a name="sending-long-data"></a>Enviar dados Long
 Definem DBMSs *dados long* como qualquer caractere ou dados binários ao longo de um determinado tamanho, como 254 caracteres. Pode não ser possível armazenar todo o item de dados longos em memória, como quando o item representa um documento de texto longo ou um bitmap. Como esses dados não podem ser armazenados em um único buffer, a fonte de dados envia para o driver em partes com **SQLPutData** quando a instrução é executada. Os parâmetros para o qual os dados são enviados em tempo de execução são conhecidos como *parâmetros de dados em execução*.  
@@ -43,6 +43,6 @@ Definem DBMSs *dados long* como qualquer caractere ou dados binários ao longo d
   
 7.  Chamadas **SQLParamData** novamente para indicar que ele enviou todos os dados para o parâmetro. Se houver quaisquer parâmetros de dados em execução para o qual os dados não foram enviados, o driver retorna SQL_NEED_DATA e o valor que identifica o próximo parâmetro; o aplicativo retorna para a etapa 6. Se os dados foram enviados para todos os parâmetros de dados em execução, a instrução é executada. **SQLParamData** retorna SQL_SUCCESS ou SQL_SUCCESS_WITH_INFO e pode retorna qualquer valor de retorno ou diagnóstico que **SQLExecute** ou **SQLExecDirect** pode retornar.  
   
- Após **SQLExecute** ou **SQLExecDirect** retornará SQL_NEED_DATA e antes de dados seja completamente enviados para o último parâmetro de dados em execução, a instrução está em um estado de dados necessário. Enquanto uma instrução está em um estado de dados necessário, o aplicativo pode chamar apenas **SQLPutData**, **SQLParamData**, **SQLCancel**, **SQLGetDiagField**, ou **SQLGetDiagRec**; todas as outras funções retornam SQLSTATE HY010 (erro de sequência de função). Chamando **SQLCancel** cancela a execução da instrução e o retorna ao estado anterior. Para obter mais informações, consulte [apêndice b: tabelas de transição de estado de ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
+ Após **SQLExecute** ou **SQLExecDirect** retornará SQL_NEED_DATA e antes de dados seja completamente enviados para o último parâmetro de dados em execução, a instrução está em um estado de dados necessário. Enquanto uma instrução está em um estado de dados necessário, o aplicativo pode chamar apenas **SQLPutData**, **SQLParamData**, **SQLCancel**, **SQLGetDiagField**, ou **SQLGetDiagRec**; todas as outras funções retornam SQLSTATE HY010 (erro de sequência de função). Chamando **SQLCancel** cancela a execução da instrução e o retorna ao estado anterior. Para obter mais informações, consulte [apêndice b: Tabelas de transição de estado ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
  Para obter um exemplo de envio de dados em tempo de execução, consulte o [SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md) descrição da função.

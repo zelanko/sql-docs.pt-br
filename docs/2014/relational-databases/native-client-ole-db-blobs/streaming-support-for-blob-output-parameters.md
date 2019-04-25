@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f1258594b9f80dcbae84a3df8f711eb594108cb1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468173"
 ---
 # <a name="streaming-support-for-blob-output-parameters"></a>Suporte de transmissão a parâmetros de saída BLOB
   Este tópico contém um exemplo que mostra o suporte de transmissão a parâmetros de saída BLOB, que associa parâmetros de saída BLOB como ISequentialStreams.  

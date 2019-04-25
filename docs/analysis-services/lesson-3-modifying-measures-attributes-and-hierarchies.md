@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1a75fc19b3e6fca6520a1257cc979bf8f194cfa9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469463"
 ---
 # <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>Lição 3: Modificando medidas, atributos e hierarquias
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -29,13 +29,13 @@ Esta lição contém as seguintes tarefas:
 [Modificando medidas](../analysis-services/lesson-3-1-modifying-measures.md)  
 Nesta tarefa, você especificará propriedades de formatação para as medidas moeda e porcentagem do cubo do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
-[Modificando a dimensão cliente](../analysis-services/lesson-3-2-modifying-the-customer-dimension.md)  
+[Modificando a dimensão Cliente](../analysis-services/lesson-3-2-modifying-the-customer-dimension.md)  
 Nesta tarefa, você definirá uma hierarquia de usuário, criará cálculos nomeados, modificará atributos que serão usados em cálculos nomeados e agrupará atributos e hierarquias de usuário em pastas de exibição.  
   
-[Modificando a dimensão produto](../analysis-services/lesson-3-3-modifying-the-product-dimension.md)  
+[Modificando a dimensão Produto](../analysis-services/lesson-3-3-modifying-the-product-dimension.md)  
 Nesta tarefa, você definirá uma hierarquia do usuário, criará cálculos nomeados, definirá o nome do membro Todos e definirá as pastas de exibição.  
   
-[Modificando a dimensão de data](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)  
+[Modificando a dimensão Data](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)  
 Nesta tarefa, você definirá uma hierarquia de usuário, modificará nomes de membros do atributo e usará chaves compostas para especificar membros de atributos exclusivos.  
   
 [Navegando no cubo implantado](../analysis-services/lesson-3-5-browsing-the-deployed-cube.md)  
@@ -43,7 +43,7 @@ Nesta tarefa, você navegará pelos dados do cubo usando o navegador no Designer
   
 ## <a name="see-also"></a>Consulte também  
 [Cenário do tutorial de Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)  
-[Modelagem multidimensional & #40; Tutorial do Adventure Works & #41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Modelagem multidimensional &#40;Tutorial do Adventure Works&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
   
   
   

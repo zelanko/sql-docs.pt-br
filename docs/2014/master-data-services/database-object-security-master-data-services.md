@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f5d485aec6d3056022ea55f1cb2bc8ee29a4e314
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765759"
 ---
 # <a name="database-object-security-master-data-services"></a>Segurança de objeto de banco de dados (Master Data Services)
   No banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , os dados são armazenados em várias tabelas de banco de dados e estão visíveis em exibições. As informações que você pode ter protegido no aplicativo Web do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] são visíveis aos usuários com acesso ao banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
@@ -46,11 +46,11 @@ ms.locfileid: "52822230"
   
 |Ação|Protegíveis|Permissões|  
 |------------|----------------|-----------------|  
-|Carregue membros folha e seus atributos na tabela de preparo.|stg.name_Leaf|Necessário: INSERT<br /><br /> Opcional: Selecionar e atualizar|  
+|Carregue membros folha e seus atributos na tabela de preparo.|stg.name_Leaf|Obrigatório: INSERT<br /><br /> Opcional: SELECT e UPDATE|  
 |Carregar os dados da tabela de preparo de Folha nas tabelas adequadas do banco de dados do MDS.|stg.udp_name_Leaf|Execute|  
-|Carregar membros consolidados e seus atributos na tabela de preparo.|stg.name_Consolidated|Necessário: INSERT<br /><br /> Opcional: Selecionar e atualizar|  
+|Carregar membros consolidados e seus atributos na tabela de preparo.|stg.name_Consolidated|Obrigatório: INSERT<br /><br /> Opcional: SELECT e UPDATE|  
 |Carregar os dados da tabela de preparo de Consolidados nas tabelas adequadas do banco de dados do MDS.|stg.udp_name_Consolidated|Execute|  
-|Carregar folha e relações membros consolidados entre si em uma hierarquia explícita na tabela de preparo.|stg.name_Relationship|Necessário: INSERT<br /><br /> Opcional: Selecionar e atualizar|  
+|Carregar folha e relações membros consolidados entre si em uma hierarquia explícita na tabela de preparo.|stg.name_Relationship|Obrigatório: INSERT<br /><br /> Opcional: SELECT e UPDATE|  
 |Carregar os dados da tabela de preparo Relação nas tabelas adequadas do banco de dados do MDS.|stg.udp_name_Relationship|Execute|  
 |Exibir erros ocorridos quando os dados das tabelas de preparo estavam sendo inseridos nas tabelas do banco de dados do MDS.|stg.udp_name_Relationship|SELECT|  
   

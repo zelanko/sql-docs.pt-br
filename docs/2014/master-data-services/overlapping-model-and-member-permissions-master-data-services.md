@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e70b6dab6399026606382396bded3a467a9b639c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62764218"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>Sobrepondo permissões de modelo e membro (Serviços de Dados Mestre)
   A permissão atribuída a um membro pode sobrepor a permissão atribuída a um objeto de modelo. Quando ocorrem sobreposições, a permissão mais restritiva tem efeito.  
@@ -41,7 +41,7 @@ ms.locfileid: "52814558"
   
  Na guia **Membros da Hierarquia** , o nó da subcategoria Mountain Bikes em uma hierarquia derivada tem a permissão **Atualizar** atribuída.  
   
- Resultado: Na **Explorer**, o usuário tem **atualização** permissão a todos os valores de atributo para todos os membros no nó Mountain Bikes. Todos os outros membros e atributos estão ocultados.  
+ Resultado: No **Explorer**, o usuário tem a permissão **Atualizar** em todos os valores de atributo para todos os membros do nó Mountain Bikes. Todos os outros membros e atributos estão ocultados.  
   
  ![mds_conc_overlap_model_example_1](../../2014/master-data-services/media/mds-conc-overlap-model-example-1.gif "mds_conc_overlap_model_example_1")  
   

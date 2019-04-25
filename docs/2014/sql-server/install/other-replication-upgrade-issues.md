@@ -19,11 +19,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e5ffde063d94f0e08ea0e82e6b5998a6d23cfaac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62473177"
 ---
 # <a name="other-replication-upgrade-issues"></a>Outros problemas de atualização da replicação
   Este tópico aborda uma série de problemas de atualização que não são relatados pelo Supervisor de Atualização.  
@@ -50,7 +50,7 @@ ms.locfileid: "48200726"
   
 -   Todos os controles ActiveX são marcados como inseguros para gerar script e para inicialização.  
   
--   O controle ActiveX de Instantâneo foi descartado. Você pode criar e gerenciar instantâneos usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou programaticamente usando procedimentos armazenados de replicação. Para obter mais informações, consulte os tópicos "Como criar e aplicar o instantâneo inicial ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])" e "Como criar o instantâneo inicial (Programação Transact-SQL de replicação)" nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   O controle ActiveX de Instantâneo foi descartado. Você pode criar e gerenciar instantâneos usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou programaticamente usando procedimentos armazenados de replicação. Para obter mais informações, consulte os tópicos "como: Criar e aplicar o instantâneo inicial ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) "e" como: Criar o instantâneo inicial (programação Transact-SQL de replicação) "em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manuais Online.  
   
 -   O controle ActiveX de Distribuição e o controle ActiveX de Mesclagem foram preteridos. Uma funcionalidade semelhante é fornecida por aplicativos de código gerenciado que usam RMO (Replication Management Objects). Para obter mais informações, consulte "Sincronizando assinaturas (Programação RMO)" nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

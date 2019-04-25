@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a2f507e9f22e4d090407b0b0849f69a8e7914e8d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469121"
 ---
 # <a name="lesson-11-create-roles"></a>Lição 11: Criar Funções
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -51,7 +51,7 @@ Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluí
   
 4.  Na coluna **Permissões** , clique na lista suspensa e selecione a permissão **Leitura** . 
 
-    ![como tabular-lesson11-novo-função](../analysis-services/media/as-tabular-lesson11-new-role.png) 
+    ![as-tabular-lesson11-new-role](../analysis-services/media/as-tabular-lesson11-new-role.png) 
   
 5.  Opcional: Clique o **membros** guia e, em seguida, clique em **Add**. Na caixa de diálogo **Selecionar Usuários ou Grupos** , insira os usuários ou grupos do Windows de sua organização a serem incluídos na função.  
   
@@ -70,7 +70,7 @@ Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluí
     ```
     
     Uma fórmula de Filtro de Linha deve resolver para um valor Booliano (TRUE/FALSE). Com esta fórmula, você está especificando que somente as linhas com o valor de código do país região "US" fique visível para o usuário.  
-    ![como tabular-lesson11-função-filtro](../analysis-services/media/as-tabular-lesson11-role-filter.png) 
+    ![as-tabular-lesson11-role-filter](../analysis-services/media/as-tabular-lesson11-role-filter.png) 
   
 6.  Opcional: Clique na guia **Membros** e em **Adicionar**. Na caixa de diálogo **Selecionar Usuários ou Grupos** , insira os usuários ou grupos do Windows de sua organização a serem incluídos na função.  
   

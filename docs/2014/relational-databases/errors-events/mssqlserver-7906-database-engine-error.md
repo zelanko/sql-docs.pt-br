@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e336031d37ab09c3a2258be3aa3f5d570bf87a6e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762329"
 ---
 # <a name="mssqlserver7906"></a>MSSQLSERVER_7906
     
@@ -30,7 +30,7 @@ ms.locfileid: "48101696"
 |Origem do evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC2_FS_INVALID_TOP_LEVEL_FILE|  
-|Texto da mensagem|Erro de banco de dados: o arquivo 'FILE' não é um arquivo válido de Filestream.|  
+|Texto da mensagem|Erro de banco de dados: O arquivo 'FILE' não é um arquivo Filestream válido.|  
   
 ## <a name="explanation"></a>Explicação  
  Exceto para alguns arquivos especiais, como 'filestream.hdr', nenhum arquivo deve ser encontrado diretamente no espaço de dados Filestream.  

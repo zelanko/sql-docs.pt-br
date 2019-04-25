@@ -1,5 +1,5 @@
 ---
-title: É (MDX) | Microsoft Docs
+title: IS (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 29d251c05639d928f3ea5a9925a4cc21935e0529
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62630882"
 ---
 # <a name="is-mdx"></a>IS (MDX)
 
@@ -36,10 +36,10 @@ Expression1 IS ( Expression2 | NULL )
  Uma expressão MDX válida que retorna uma referência de objeto MDX.  
   
 ## <a name="return-value"></a>Valor retornado  
- Um valor booliano que retorna **true** se ambos os argumentos se referem ao mesmo objeto; caso contrário, **false**. Se o **nulo** palavra-chave for especificado, o operador retornará **true** se *Expression1* é **nulo**; caso contrário, **false**.  
+ Um valor booliano que retorna **verdadeira** se ambos os argumentos se referirem ao mesmo objeto; caso contrário, **falso**. Se o **nulo** palavra-chave for especificado, o operador retorna **verdadeiro** se *Expression1* é **nulo**; caso contrário, **false** .  
   
-## <a name="remarks"></a>Remarks  
- O **IS** operador geralmente é usado para determinar se tuplas e membros são idempotentes, o que significa que eles são precisamente equivalentes.  
+## <a name="remarks"></a>Comentários  
+ O **IS** é frequentemente usado para determinar se tuplas e membros são idempotentes, que significa que eles são exatamente equivalentes.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir mostra como usar o **IS** operador para verificar se o membro atual em um eixo é um membro específico:  
