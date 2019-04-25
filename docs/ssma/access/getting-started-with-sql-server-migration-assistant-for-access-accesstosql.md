@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 1168609d35a266f2ac5fe6641aee7ca131bc9d89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759910"
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>Introdução ao SQL Server Migration Assistant for Access (AccessToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) para acesso permite que você converta rapidamente os objetos de banco de dados de acesso à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou objetos de BD SQL do Azure, carregue os objetos resultantes em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o Azure SQL DB, e migrar dados do Access para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou BD SQL do Azure. Se necessário, você também pode vincular tabelas do Access para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou em tabelas de BD SQL do Azure para que você possa continuar a usar seus aplicativos front-end do Access existentes com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou BD SQL do Azure.  
@@ -88,7 +88,7 @@ Você pode usar o SQL Server ou o Gerenciador de metadados de banco de dados de 
 Para obter mais informações, consulte [Carregando objetos de banco de dados convertidos no SQL Server](loading-converted-database-objects-into-sql-server-accesstosql.md).  
   
 ### <a name="metadata"></a>Metadados  
-À direita de cada Gerenciador de metadados são guias que descrevem o objeto selecionado. Por exemplo, se você selecionar uma tabela no Gerenciador de metadados de acesso, quatro guias aparecem: **tabela**, **mapeamento de tipo**, **propriedades**, e **dados** . Se você selecionar uma tabela no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gerenciador de metadados, três guias são exibidas: **tabela**, **SQL**, e **dados**.  
+À direita de cada Gerenciador de metadados são guias que descrevem o objeto selecionado. Por exemplo, se você selecionar uma tabela no Gerenciador de metadados de acesso, aparecem quatro guias: **Tabela**, **mapeamento de tipo**, **as propriedades**, e **dados**. Se você selecionar uma tabela no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gerenciador de metadados, três guias são exibidas: **Tabela**, **SQL**, e **dados**.  
   
 A maioria das configurações de metadados são somente leitura. No entanto, você pode alterar os metadados a seguir:  
   
@@ -116,7 +116,7 @@ A barra de ferramentas de migração contém os seguintes comandos:
 ### <a name="menus"></a>Menus  
 O SSMA contém os seguintes menus:  
   
-|Menu|Description|  
+|Menu|Descrição|  
 |--------|---------------|  
 |**File**|Contém comandos para o Assistente de migração, trabalhando com projetos, adicionar e remover arquivos de banco de dados do Access e conectar-se ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou BD SQL do Azure.|  
 |**Editar**|Contém comandos para localizar e trabalhar com texto nas páginas de detalhes, como copiar [!INCLUDE[tsql](../../includes/tsql-md.md)] do painel de detalhes do SQL. Para abrir o **gerenciar indicadores** caixa de diálogo, no menu Editar, clique em Gerenciar indicadores. Na caixa de diálogo, você verá uma lista de indicadores atuais. Você pode usar os botões no lado direito da caixa de diálogo para gerenciar os indicadores.|  
