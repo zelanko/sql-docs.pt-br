@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 36d9be6a759e2684602a20ed0c493818d5fe4cc4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62761643"
 ---
 # <a name="audit-add-db-user-event-class"></a>Classe de evento Audit Add DB User
   A classe de evento **Audit Add DB User** ocorre sempre que um logon é adicionado ou removido como um usuário de banco de dados para um banco de dados. Essa classe de evento é usada para os procedimentos armazenados **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser**e **sp_dropuser** .  

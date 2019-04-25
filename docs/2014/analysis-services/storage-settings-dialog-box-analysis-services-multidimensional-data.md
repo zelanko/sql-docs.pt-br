@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8e93c341a73d55094624f3930934076f10674bce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62758486"
 ---
 # <a name="storage-settings-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Configurações de Armazenamento (Analysis Services - Dados Multidimensionais)
   Use a caixa de diálogo **Configurações de Armazenamento** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para definir configurações de cache pró-ativo, armazenamento e notificação para uma dimensão, cubo, grupo de medidas ou partição. É possível exibir a caixa de diálogo **Configurações de Armazenamento** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] da seguinte maneira:  

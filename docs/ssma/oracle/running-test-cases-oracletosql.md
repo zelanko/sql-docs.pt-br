@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 537865967d0e43b7dd9501f9fbb7b9605f5b9367
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62625784"
 ---
 # <a name="running-test-cases-oracletosql"></a>Executar casos de teste (OracleToSQL)
 Quando o SSMA testador executa um caso de teste, ele executa os objetos selecionados para teste e cria um relatório sobre os resultados da verificação. Se os resultados são idênticos em ambas as plataformas, o teste foi bem-sucedido. A correspondência de objetos entre Oracle e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é determinado de acordo com as configurações de mapeamento de esquema para o projeto atual do SSMA.  
@@ -43,33 +43,33 @@ Suponha que a tabela verificada é denominada USER_TABLE. Para essa tabela, os s
   
 ||||  
 |-|-|-|  
-|Nome|Tipo|Description|  
-|USER_TABLE$ Trg|gatilho|Gatilho de auditoria de alterações na tabela verificada.|  
-|USER_TABLE$ AUD|table|Tabela onde as linhas excluídas e substituídas são salvos.|  
-|USER_TABLE$ AUDID|table|Tabela onde as linhas novas e alteradas são salvos.|  
+|Nome|Tipo|Descrição|  
+|USER_TABLE$Trg|gatilho|Gatilho de auditoria de alterações na tabela verificada.|  
+|USER_TABLE$AUD|table|Tabela onde as linhas excluídas e substituídas são salvos.|  
+|USER_TABLE$AUDID|table|Tabela onde as linhas novas e alteradas são salvos.|  
 |USER_TABLE|exibição|Representação simplificada de modificações de tabela.|  
-|USER_TABLE$ NOVO|exibição|Representação simplificada de linhas inseridas e substituídas.|  
-|USER_TABLE$ NEW_ID|exibição|Identificação de linhas inseridas e alteradas.|  
-|USER_TABLE$ ANTIGO|exibição|Representação simplificada de linhas excluídas e substituídas.|  
+|USER_TABLE$NEW|exibição|Representação simplificada de linhas inseridas e substituídas.|  
+|USER_TABLE$NEW_ID|exibição|Identificação de linhas inseridas e alteradas.|  
+|USER_TABLE$OLD|exibição|Representação simplificada de linhas excluídas e substituídas.|  
   
 O seguinte objeto é criado no esquema da tabela verificado na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ||||  
 |-|-|-|  
-|Nome|Tipo|Description|  
-|USER_TABLE$ Trg|gatilho|Gatilho de auditoria de alterações na tabela verificada.|  
+|Nome|Tipo|Descrição|  
+|USER_TABLE$Trg|gatilho|Gatilho de auditoria de alterações na tabela verificada.|  
   
 E os seguintes objetos são criados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]no banco de dados ssmatesterdb.  
   
 ||||  
 |-|-|-|  
-|Nome|Tipo|Description|  
-|USER_TABLE$ Aud|table|Tabela onde as linhas excluídas e substituídas são salvos.|  
-|USER_TABLE$ AudID|table|Tabela onde as linhas novas e alteradas são salvos.|  
+|Nome|Tipo|Descrição|  
+|USER_TABLE$Aud|table|Tabela onde as linhas excluídas e substituídas são salvos.|  
+|USER_TABLE$AudID|table|Tabela onde as linhas novas e alteradas são salvos.|  
 |USER_TABLE|exibição|Representação simplificada de modificações de tabela.|  
-|USER_TABLE$ novo|exibição|Representação simplificada de linhas inseridas e substituídas.|  
-|USER_TABLE$ new_id|exibição|Identificação de linhas inseridas e alteradas.|  
-|USER_TABLE$ antigo|exibição|Representação simplificada de linhas excluídas e substituídas.|  
+|USER_TABLE$new|exibição|Representação simplificada de linhas inseridas e substituídas.|  
+|USER_TABLE$new_id|exibição|Identificação de linhas inseridas e alteradas.|  
+|USER_TABLE$old|exibição|Representação simplificada de linhas excluídas e substituídas.|  
   
 ### <a name="test-object-calls"></a>Chamadas de objeto de teste  
 Nesta etapa, o SSMA testador invoca cada objeto selecionado para o teste, compara os resultados e mostra o relatório.  

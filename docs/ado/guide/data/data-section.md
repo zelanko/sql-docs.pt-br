@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c6a06b2291d07378b63907b4a195fa3902930078
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472543"
 ---
 # <a name="data-section"></a>Seção de dados
 A seção de dados define os dados do conjunto de linhas, juntamente com qualquer pendente atualizações, inserções ou exclusões. A seção de dados pode conter zero ou mais linhas. Ele pode conter apenas dados de um conjunto de linhas em que a linha é definida pelo esquema. Além disso, conforme observado anteriormente, as colunas, sem nenhum dado podem ser omitidas. Se um atributo ou o subelemento for usado na seção de dados e essa construção não foi definida na seção de esquema, ele será ignorado silenciosamente.  
@@ -35,7 +35,7 @@ A seção de dados define os dados do conjunto de linhas, juntamente com qualque
 ## <a name="binary"></a>Binary  
  Dados binários são codificados hex (ou seja, os mapas de um byte em dois caracteres, um caractere por nibble).  
   
-## <a name="datetime"></a>DateTime  
+## <a name="datetime"></a>Datetime  
  O formato VT_DATE variant não é diretamente suportado pelos tipos de dados XML-Data. O formato correto para datas com o componente de uma data e a hora é aaaa-mm-ddTHH.  
   
  Para obter mais informações sobre formatos de data especificada por XML, consulte a [especificação W3C XML-Data](https://go.microsoft.com/fwlink/?LinkId=5692).  

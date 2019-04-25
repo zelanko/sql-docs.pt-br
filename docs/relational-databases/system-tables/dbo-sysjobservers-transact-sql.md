@@ -21,22 +21,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 635c71efaeed6d41a9b9e62ef3e8c79b4e9aae95
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470781"
 ---
 # <a name="dbosysjobservers-transact-sql"></a>dbo.sysjobservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Armazena a associação ou relação de um trabalho específico com um ou mais servidores de destino. Esta tabela está armazenada no banco de dados msdb.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |job_id|**uniqueidentifier**|Número de identificação do trabalho.|  
 |server_id|**int**|Número de identificação do servidor.|  
-|last_run_outcome|**tinyint**|Resultado da última execução do trabalho:<br /><br /> **0** = falha<br /><br /> **1** = êxito<br /><br /> **3** = Cancelar|  
+|last_run_outcome|**tinyint**|Resultado da última execução do trabalho:<br /><br /> **0** = Fail<br /><br /> **1** = êxito<br /><br /> **3** = Cancelar|  
 |mensagem last_outcome_|**nvarchar(1024)**|Mensagem associada, se houver, à coluna last_run_outcome.|  
 |last_run_date|**int**|Data em que o trabalho foi executado pela última vez.|  
 |last_run_time|**int**|Hora em que o trabalho foi executado pela última vez.|  

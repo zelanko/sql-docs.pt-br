@@ -12,14 +12,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f445b32e0c580cde10f38a22b3d26270d927c5a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757318"
 ---
 # <a name="partitions-and-directquery-mode-ssas-tabular"></a>Partições e modo DirectQuery (SSAS tabular)
-  Esta seção explica como as partições são usadas em modelos DirectQuery. Para obter mais informações gerais sobre partições em modelos de tabela, consulte [Partitions &#40;SSAS Tabular&#41;](partitions-ssas-tabular.md).  
+  Esta seção explica como as partições são usadas em modelos DirectQuery. Para obter mais informações gerais sobre partições em modelos de tabela, consulte [Partições &#40;SSAS de Tabela&#41;](partitions-ssas-tabular.md).  
   
  Para obter instruções sobre como alterar a partição que é usada, ou exibir informações sobre a partição, consulte [alterar a partição DirectQuery &#40;SSAS de tabela&#41;](../change-the-directquery-partition-ssas-tabular.md).  
   
@@ -49,6 +49,6 @@ ms.locfileid: "48054037"
 |InMemory com DirectQuery|Permitir que a partição seja processada|Se o modelo estiver usando o modo híbrido, você deve usar a mesma partição para consultas na memória e consultas na fonte de dados DirectQuery.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Partições &#40;Tabular do SSAS&#41;](partitions-ssas-tabular.md)  
+ [Partições &#40;SSAS de Tabela&#41;](partitions-ssas-tabular.md)  
   
   

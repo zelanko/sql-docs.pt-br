@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 86e9d39e6dd56cb5762933dc5ed37b5740a34ea5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759585"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>Localizar o Assistente de bancos de dados (selecione os locais) (AccessToSQL)
 Na página Selecionar locais do assistente localizar bancos de dados, você pode inserir os parâmetros de pesquisa para localizar bancos de dados do Access.  

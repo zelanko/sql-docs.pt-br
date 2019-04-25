@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6b3373566d002d75856c13b725150f9202aef5dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468783"
 ---
 # <a name="odbc-driver-for-oracle-programmer39s-reference"></a>O Driver ODBC para Oracle programador&#39;referência de s
 > [!IMPORTANT]  

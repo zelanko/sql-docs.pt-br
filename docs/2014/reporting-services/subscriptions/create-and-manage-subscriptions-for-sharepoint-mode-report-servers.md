@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4d28613857573b2793937a20b94d637d4f36b084
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59950732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62510806"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>Criar e gerenciar assinaturas de servidores de relatório no modo SharePoint
   Você pode criar assinaturas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para entregar relatórios de um aplicativo Web do SharePoint que esteja integrado com um servidor de relatório no modo do SharePoint. As assinaturas podem entregar relatórios a uma biblioteca de documentos, pasta de arquivo ou como email. Este tópico resume os requisitos e as etapas para criar uma assinatura do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  

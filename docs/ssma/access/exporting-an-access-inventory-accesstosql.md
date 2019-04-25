@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: f35ae03cb6588bc7828349dd4a4beafcc5a7b2f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746444"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760826"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Exportando um inventário do Access (AccessToSQL)
 Se você tiver vários bancos de dados do Access e não tiver certeza quais para migrar para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você pode exportar um inventário de todos os bancos de dados do Access em um projeto. Você pode revisar e consultar os metadados de inventário para determinar quais bancos de dados e objetos dentro desses bancos de dados para migrar. Esse inventário permite que você realize rapidamente encontrar respostas para perguntas, como o seguinte:  
@@ -107,7 +107,7 @@ Para obter mais informações sobre como adicionar bancos de dados para projetos
   
     -   Se você estiver se conectando à instância padrão em outro computador, digite o nome do computador.  
   
-    -   Se você estiver se conectando a uma instância nomeada, digite o nome do computador, uma barra invertida e o nome da instância. Por exemplo: MyServer\MyInstance.  
+    -   Se você estiver se conectando a uma instância nomeada, digite o nome do computador, uma barra invertida e o nome da instância. Por exemplo:  MyServer\MyInstance.  
   
 3.  No **banco de dados** , digite o nome do banco de dados de destino para os metadados exportados.  
   

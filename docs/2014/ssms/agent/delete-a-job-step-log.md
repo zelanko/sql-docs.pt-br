@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 945c403a44f2b0c2cf2d691a1bcfda6cc96d422b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62523729"
 ---
 # <a name="delete-a-job-step-log"></a>Delete a Job Step Log
   Este tópico descreve como excluir um log de etapa de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
@@ -41,7 +41,7 @@ ms.locfileid: "53377548"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
  Quando etapas de trabalho são excluídas seu log de saída é excluído automaticamente.  
   
 ###  <a name="Security"></a> Segurança  
@@ -59,7 +59,7 @@ ms.locfileid: "53377548"
   
 3.  Na caixa de diálogo **Propriedades do Trabalho** , exclua a etapa de trabalho selecionada.  
   
-##  <a name="TSQL"></a> Usando Transact-SQL  
+##  <a name="TSQL"></a> Usando o Transact-SQL  
   
 #### <a name="to-delete-a-sql-server-agent-job-step-log"></a>Para excluir um log de etapas de trabalho do SQL Server Agent  
   

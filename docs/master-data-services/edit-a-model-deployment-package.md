@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 03c098ab0d7d087d86415cb0d0967873704b9a1d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62518068"
 ---
 # <a name="edit-a-model-deployment-package"></a>Editar um pacote de implantação de modelo
 
@@ -51,7 +51,7 @@ ms.locfileid: "52751748"
   
 7.  Clique em **Concluir**.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Próximas etapas  
   
 -   [Implantar um pacote de implantação de modelo usando o Assistente](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
   

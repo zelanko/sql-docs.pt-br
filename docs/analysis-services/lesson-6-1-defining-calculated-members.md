@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e3b91737e62a4a4f0d55bfded58631d36327a567
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62523694"
 ---
-# <a name="lesson-6-1---defining-calculated-members"></a>Lição 6-1-definição de membros calculados
+# <a name="lesson-6-1---defining-calculated-members"></a>Lição 6-1 – definição de membros calculados
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Membros calculados são membros de uma dimensão ou um grupo de medidas definidos com base em uma combinação de dados de cubo, operadores aritméticos, números e funções. Por exemplo, você pode criar um membro calculado que possa calcular a soma de duas medidas físicas no cubo. As definições de um membro calculado são armazenadas em cubos, mas seus valores são calculados no momento da consulta.  
@@ -273,7 +273,7 @@ Nas tarefas deste tópico, você definirá as medidas calculadas para permitir q
   
     Observe que a margem de lucro bruto das vendas do revendedor é significativamente mais baixa que as vendas pela Internet, conforme mostrado na imagem a seguir.  
   
-    ![Painel dados mostrando as vendas de revendedor](../analysis-services/media/l6-calculatedmembers-7b.gif "painel dados mostrando as vendas do revendedor")  
+    ![Painel dados mostrando as vendas do revendedor](../analysis-services/media/l6-calculatedmembers-7b.gif "painel dados mostrando as vendas do revendedor")  
   
 9. Adicione as medidas **Taxa de Vendas Total para Todos os Produtos**, **Taxa de Vendas pela Internet para Todos os Produtos**e **Taxa de Vendas do Revendedor para Todos os Produtos** à área de Valores.  
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f2b76018c66b1aa72aada859be2901e356c4ae34
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509852"
 ---
 # <a name="mining-structure-tasks-and-how-tos"></a>Tarefas e instruções da estrutura de mineração
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "34015783"
   
 -   [Alterar as propriedades de uma estrutura de mineração](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)  
   
--   [Editar exibição da fonte de dados usada para a estrutura de mineração](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
+-   [Editar a exibição da fonte de dados usada para a estrutura de mineração](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
   
 -   [Processar uma estrutura de mineração](../../analysis-services/data-mining/process-a-mining-structure.md)  
   

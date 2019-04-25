@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7bf73822e8872397499bdfbc04bab6747035fbec
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757945"
 ---
 # <a name="csdlbi-concepts"></a>Conceitos da CSDLBI
   A CSDLBI (Linguagem de Definição de Esquema Conceitual com anotações de BI) baseia-se na Estrutura de Dados de Entidade, que é uma abstração para representar dados de modo a permitir que conjuntos de dados discrepantes sejam acessados, consultados ou exportados de modo programático. A CSDLBI é usada para representar modelos de dados criados com o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], pois ele oferece suporte a aplicativos e relatórios avançados orientados a dados.  

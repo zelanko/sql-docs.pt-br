@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b909160a11dbcced44a0c81d92fd28ce02a50906
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62761595"
 ---
 # <a name="create-tables-database-engine"></a>Criar tabelas (Mecanismo de Banco de Dados)
   Você pode criar uma nova tabela, nomeá-la e adicioná-la a um banco de dados existente no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  

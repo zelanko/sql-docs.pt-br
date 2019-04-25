@@ -21,24 +21,24 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a37300ad1bf16ac76fbcbd0c6e77870077f7f631
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470595"
 ---
 # <a name="dbosysproxies-transact-sql"></a>dbo.sysproxies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Define atributos de uma conta proxy do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Essa tabela é armazenada na **msdb** banco de dados.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|ID da conta proxy.|  
 |**name**|**sysname**|Nome da conta proxy.|  
 |**credential_id**|**int**|ID da credencial que a conta proxy usa.|  
-|**habilitado**|**tinyint**|Status da conta proxy:<br /><br /> **0** = desabilitado. **1** = habilitado.|  
-|**Descrição**|**nvarchar(512)**|Descrição que o usuário inseriu quando a conta proxy foi criada.|  
+|**enabled**|**tinyint**|Status da conta proxy:<br /><br /> **0** = desabilitado. **1** = habilitado.|  
+|**description**|**nvarchar(512)**|Descrição que o usuário inseriu quando a conta proxy foi criada.|  
 |**user_sid**|**varbinary(85)**|Microsoft Windows *security_identifier* do usuário ou grupo associado com a credencial de proxy.|  
 |**credential_date_created**|**datetime**|Data e hora em que a credencial foi criada.|  
   

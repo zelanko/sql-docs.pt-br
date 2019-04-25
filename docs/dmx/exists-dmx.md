@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 99f6db275fcddaff3e739311ed588fb0ec776aaf
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62506097"
 ---
 # <a name="exists-dmx"></a>Exists (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -57,7 +57,7 @@ WHERE [[Model] = 'Patch kit'
  Outra maneira de exibir os mesmos dados que são retornados por essa consulta é abrir o modelo no Visualizador de associação, o conjunto de itens com o botão direito **kit de consertos = existente**, selecione o **Detalhar** opção e, em seguida, Selecione **somente casos de modelo**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Funções &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Functions &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Sintaxe de filtro e exemplos de modelo &#40;Analysis Services - mineração de dados&#41;](../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)  
   
   

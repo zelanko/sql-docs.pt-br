@@ -34,11 +34,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7004f2cae60ab69c6c4bf94ceee47d270579570b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631367"
 ---
 # <a name="xml-indexes-sql-server"></a>Índices XML (SQL Server)
   Índices XML podem ser criados em colunas de tipo de dados `xml`. Eles indexam todas as marcas, valores e caminhos através das instâncias XML na coluna e se beneficiam do desempenho das consultas. Seu aplicativo pode se beneficiar de um índice XML nas seguintes situações:  
@@ -53,7 +53,7 @@ ms.locfileid: "58533968"
   
 -   Índice XML secundário  
   
- O primeiro índice na coluna de tipo `xml` deve ser o índice XML primário. Usando o índice XML primário, os seguintes tipos de índices secundários têm suporte: CAMINHO, valor e propriedade. Dependendo do tipo de consulta, esses índices secundários podem ajudar a melhorar o desempenho de consultas.  
+ O primeiro índice na coluna de tipo `xml` deve ser o índice XML primário. Usando o índice XML primário, os seguintes tipos de índices secundários são compatíveis: PATH, VALUE e PROPERTY. Dependendo do tipo de consulta, esses índices secundários podem ajudar a melhorar o desempenho de consultas.  
   
 > [!NOTE]  
 >  Não é possível criar ou modificar um índice XML a menos que as opções do banco de dados estejam definidas corretamente para trabalhar com o tipo de dados `xml`. Para obter mais informações, veja [Usar a pesquisa de texto completo com colunas XML](use-full-text-search-with-xml-columns.md).  
@@ -93,7 +93,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   Chave primária da tabela base. A chave primária da tabela base é duplicada no índice XML primário para uma junção retroativa com a tabela base, e o número máximo de colunas na chave primária da tabela base é limitado a 15.  
   
- Essas informações de nó são usadas para avaliar e construir resultados XML para uma consulta especificada. Para fins de otimização, as informações de nome da marca e de tipo de nó são codificadas como valores inteiros e a coluna Path usa a mesma codificação. Além disso, caminhos são armazenados em ordem inversa para permitir correspondência de caminhos quando apenas o sufixo do caminho é conhecido. Por exemplo:  
+ Essas informações de nó são usadas para avaliar e construir resultados XML para uma consulta especificada. Para fins de otimização, as informações de nome da marca e de tipo de nó são codificadas como valores inteiros e a coluna Path usa a mesma codificação. Além disso, caminhos são armazenados em ordem inversa para permitir correspondência de caminhos quando apenas o sufixo do caminho é conhecido. Por exemplo:   
   
 -   `//ContactRecord/PhoneNumber` em que apenas as duas últimas etapas são conhecidas  
   

@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 28e28e6b2e7d65d5b66d95d626fbbbde2cbb94a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757446"
 ---
 # <a name="create-a-relationship-between-two-tables-ssas-tabular"></a>Criar uma relação entre duas tabelas (SSAS tabular)
   Se as tabelas da fonte de dados não tiverem relações existentes ou se você adicionar novas tabelas, será possível usar as ferramentas no designer de modelo para criar novas relações. Para obter informações sobre como as relações são usadas em modelos tabulares, consulte [Relationships &#40;SSAS Tabular&#41;](relationships-ssas-tabular.md).  
@@ -71,7 +71,7 @@ ms.locfileid: "48087736"
 6.  Clique em **Criar**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Excluir relações de &#40;Tabular do SSAS&#41;](delete-relationships-ssas-tabular.md)   
- [Relações de &#40;Tabular do SSAS&#41;](relationships-ssas-tabular.md)  
+ [Excluir relações &#40;SSAS de Tabela&#41;](delete-relationships-ssas-tabular.md)   
+ [Relações &#40;SSAS de Tabela&#41;](relationships-ssas-tabular.md)  
   
   

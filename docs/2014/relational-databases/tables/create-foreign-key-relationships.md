@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8b5789a277eac84d9753a180b418c05c5fd71d09
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62761611"
 ---
 # <a name="create-foreign-key-relationships"></a>Criar relações de chaves estrangeiras
   Este tópico descreve como criar relações de chaves estrangeiras no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Você cria uma relação entre duas tabelas quando deseja associar linhas de uma tabela com linhas de outra.  
@@ -38,7 +38,7 @@ ms.locfileid: "52794768"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   Uma restrição de chave estrangeira não precisa estar vinculada apenas a uma restrição de chave primária em outra tabela; ela também pode ser definida para referenciar as colunas de uma restrição UNIQUE em outra tabela.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "52794768"
   
 8.  Escolha **OK** para criar a relação.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-create-a-foreign-key-in-a-new-table"></a>Para criar uma chave estrangeira em uma nova tabela  
   

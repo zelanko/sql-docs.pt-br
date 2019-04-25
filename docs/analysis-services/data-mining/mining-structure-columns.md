@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1cbdcd14127cdf45eb35dd7a24652be4f7c4d613
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509968"
 ---
 # <a name="mining-structure-columns"></a>Colunas da estrutura de mineração
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,13 +27,13 @@ ms.locfileid: "34015153"
   
  A definição de uma coluna de estrutura de mineração deve conter as seguintes informações:  
   
--   **ID**: O nome exclusivo da coluna, que costuma ser igual ao nome. Isso não pode ser alterado após a criação da estrutura de mineração, mas o nome pode ser alterado.  
+-   **ID**: O nome exclusivo da coluna, geralmente o mesmo que o nome. Isso não pode ser alterado após a criação da estrutura de mineração, mas o nome pode ser alterado.  
   
--   **Nome**: Um nome ou alias para a coluna.  
+-   **Nome**: Um nome ou alias da coluna.  
   
 -   **Conteúdo**: Uma enumeração que descreve se os dados são discretos ou contínuos.  
   
--   **Tipo**: Uma enumeração que indica o tipo de dados geral.  
+-   **Digitar**: Uma enumeração que indica o tipo de dados geral.  
   
 -   **Distribuição**: Uma enumeração que descreve a distribuição esperada de valores. A distribuição será incluída se a coluna for contínua.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "34015153"
 |Saiba como adicionar e modificar colunas de estrutura de mineração.|[Tarefas e instruções da estrutura de mineração](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)|  
   
 ## <a name="see-also"></a>Consulte também  
- [Estruturas de mineração & #40; Analysis Services – mineração de dados & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Estruturas de Mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [Colunas do modelo de mineração](../../analysis-services/data-mining/mining-model-columns.md)  
   
   

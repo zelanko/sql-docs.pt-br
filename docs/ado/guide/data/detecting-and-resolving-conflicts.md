@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a27a8ff70a995ab24dcf762d0ada731e0de6fa92
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472278"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>Detectando e solucionando conflitos
 Se você estiver lidando com seu conjunto de registros no modo imediato, há muito menos chance de problemas de simultaneidade ocorram. Por outro lado, se seu aplicativo usa a atualização do modo em lote, pode haver uma boa chance de que um usuário será alterado de um registro antes de salvar alterações que foram feitas por outro usuário editar o mesmo registro. Nesse caso, você desejará que seu aplicativo para tratar normalmente o conflito. Pode ser seu desejo que a última pessoa a enviar uma atualização para o servidor "vence". Ou talvez você queira permitir que o usuário mais recente para decidir qual atualização deve ter precedência, fornecendo-lhe uma opção entre os dois valores conflitantes.  

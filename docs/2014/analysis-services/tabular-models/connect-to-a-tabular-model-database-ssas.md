@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a0f278f5d0d036bac02e53263acc023dcae7d808
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757623"
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>Conectar a um banco de dados de modelo de tabela (SSAS)
   Após criar um modelo de tabela e implantá-lo em um servidor de modo de tabela do Analysis Services, você precisará definir permissões que o disponibilizem para aplicativos cliente. Este tópico explica como conceder permissões e como conectar-se a um banco de dados de aplicativos cliente.  
@@ -102,7 +102,7 @@ ms.locfileid: "52538130"
   
  Na importação de dados, este erro do Microsoft Excel ocorre quando você tenta usar o Assistente para se conectar a um banco de dados de modelo de tabela em um servidor remoto do Analysis Services, e você não tem permissões suficientes. Para resolver este erro, você deve ter direitos de acesso de usuário no banco de dados. Consulte as instruções apresentadas antes neste tópico para conceder acesso do usuário aos dados.  
   
- **Erro ao tentar estabelecer uma conexão com a fonte de dados externa. As seguintes conexões não foram atualizadas: \<nome do modelo > área restrita**  
+ **Ocorreu um erro durante uma tentativa de estabelecer uma conexão à fonte de dados externa. As seguintes conexões não foram atualizadas: \<nome do modelo > área restrita**  
   
  No SharePoint, este erro do Microsoft Excel ocorre quando você tenta a interação de dados, como a filtragem de dados, em uma Tabela Dinâmica que usa dados modelo. O erro ocorre porque você não tem permissões suficientes no servidor remoto do Analysis Services. Para resolver este erro, você deve ter direitos de acesso de usuário no banco de dados. Consulte as instruções apresentadas antes neste tópico para conceder acesso do usuário aos dados.  
   

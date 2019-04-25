@@ -21,18 +21,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 827c9feb6343b7af947b9dfb7232ba3718eaaec6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760275"
 ---
 # <a name="sysxmlschemawildcards-transact-sql"></a>sys.xml_schema_wildcards (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna uma linha por componente de esquema XML que é um curinga de atributo (**tipo** dos **V**) ou curinga de elemento (**tipo** de **W**), ambos com **symbol_space** dos **N**.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**\<herdado colunas >**||Herda colunas de [xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md).|  
 |**process_content**|**char(1)**|Indica como os conteúdos são processados.<br /><br /> S = Validação Rígida (deve validar)<br /><br /> L = Validação incerta (valide se possível)<br /><br /> P = Ignorar validação|  

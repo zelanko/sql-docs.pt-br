@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f73e3e55045dd4ea9d4c2476540d2f7223d16eb0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38037344"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62502070"
 ---
 # <a name="-multiply-dmx"></a>* (Multiplicação) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,12 +35,12 @@ Numeric_Expression * Numeric_Expression
 ## <a name="return-value"></a>Valor retornado  
  Valor que possui o tipo de dados do parâmetro que tem prioridade alta.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  As duas expressões devem ser do mesmo tipo de dados ou uma expressão deve poder ser convertida implicitamente no tipo de dados da outra expressão. Se uma expressão for avaliada como um valor nulo, o operador retornará um valor nulo.  
   
 ## <a name="see-also"></a>Consulte também  
  [Operadores aritméticos &#40;DMX&#41;](../dmx/operators-arithmetic.md)   
  [Extensões de mineração de dados &#40;DMX&#41; referência de operador](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Operadores &#40;DMX&#41;](../dmx/operators-dmx.md)  
+ [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

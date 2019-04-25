@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4ea890e0e2d49781f06f38f606a6c92582dc44d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472185"
 ---
 # <a name="transaction-processing"></a>Processamento de transações
 Um *transação* delimita o início e o final de uma série de operações de acesso de dados executado em uma conexão. Sujeita aos recursos transacionais de sua fonte de dados, o **Conexão** objeto também permite que você criar e gerenciar transações. Por exemplo, usando o Microsoft OLE DB Provider para SQL Server para acessar um banco de dados no Microsoft SQL Server, você pode criar várias transações aninhadas para os comandos que você execute.  
@@ -41,7 +41,7 @@ Um *transação* delimita o início e o final de uma série de operações de ac
   
  Dependendo os **Conexão** do objeto [atributos](../../../ado/reference/ado-api/attributes-property-ado.md) propriedade, chamar o **CommitTrans** ou **RollbackTrans** método pode Inicie automaticamente uma nova transação. Se o **atributos** estiver definida como **adXactCommitRetaining**, o provedor inicia automaticamente uma nova transação após uma **CommitTrans** chamar. Se o **atributos** estiver definida como **adXactAbortRetaining**, o provedor inicia automaticamente uma nova transação após uma **RollbackTrans** chamar.  
   
-## <a name="transaction-isolation-level"></a>Nível de isolamento da transação  
+## <a name="transaction-isolation-level"></a>Nível de Isolamento de Transação  
  Use o **IsolationLevel** propriedade para definir o nível de isolamento de uma transação em um **Conexão** objeto. A configuração não terá efeito até a próxima vez que você chamar o [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) método. Se o nível de isolamento que é solicitar estiver indisponível, o provedor pode retornar o próximo nível maior de isolamento. Consulte a **IsolationLevel** propriedade na referência do programador do ADO para obter mais detalhes sobre os valores válidos.  
   
 ## <a name="nested-transactions"></a>Transações aninhadas  

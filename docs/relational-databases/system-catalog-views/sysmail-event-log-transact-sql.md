@@ -19,23 +19,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8ac38c2e54fde2beb02e009e00b9f587e9265a43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759953"
 ---
 # <a name="sysmaileventlog-transact-sql"></a>sysmail_event_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contém uma linha para cada mensagem do Windows ou do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornada pelo sistema Database Mail. (Mensagem neste contexto se refere a uma mensagem, como uma mensagem de erro, não uma mensagem de e-mail.) Configurar o **nível de log** parâmetro usando o **configurar parâmetros do sistema** caixa de diálogo do Assistente de configuração de email de banco de dados ou o [sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)procedimento armazenado, para determinar quais mensagens são retornadas.  
+  Contém uma linha para cada mensagem do Windows ou do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornada pelo sistema Database Mail. (Mensagem neste contexto refere-se a uma mensagem, como uma mensagem de erro, não uma mensagem de email.) Configurar o **nível de log** parâmetro usando o **configurar parâmetros do sistema** caixa de diálogo do Assistente de configuração de email de banco de dados ou o [sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)procedimento armazenado, para determinar quais mensagens são retornadas.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**Log_id**|**int**|Identificador de itens no log.|  
 |**event_type**|**varchar(11)**|O tipo de aviso inserido no log. Os valores possíveis são erros, avisos, mensagens informativas, mensagens de êxito e mensagens internas adicionais.|  
 |**log_date**|**datetime**|A data e a hora em que a entrada de log foi feita.|  
-|**Descrição**|**nvarchar(max)**|O texto da mensagem que está sendo registrada.|  
+|**description**|**nvarchar(max)**|O texto da mensagem que está sendo registrada.|  
 |**process_id**|**int**|O ID de processo do programa externo Database Mail. Isso normalmente é alterado toda vez que o programa externo Database Mail é iniciado.|  
 |**mailitem_id**|**int**|Identificador do item de email na fila de email. NULL se a mensagem não estiver relacionada a um item de email específico.|  
 |**account_id**|**int**|O **account_id** da conta relacionada ao evento. NULL se a mensagem não estiver relacionada a uma conta específica.|  

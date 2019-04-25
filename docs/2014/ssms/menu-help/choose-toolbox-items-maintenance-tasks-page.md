@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 24dfd1f587db8d652390be27fa2307a8500c3145
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470043"
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>Escolher itens da caixa de ferramenta (página Tarefas de Manutenção)
   Esta guia da caixa de diálogo **Personalizar Caixa de Ferramentas** exibe uma lista de todos os componentes de tarefas de manutenção registrados em seu computador e permite alterar os que são exibidos na caixa de ferramentas. Você pode abrir a caixa de diálogo **Personalizar Caixa de Ferramentas** no menu **Ferramentas** . Para ordenar a lista de componentes, selecione qualquer título de coluna.  

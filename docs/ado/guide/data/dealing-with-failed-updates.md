@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9930e76c902080cb7df22bf2a28afc1ae18b3cfd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472368"
 ---
 # <a name="dealing-with-failed-updates"></a>Lidar com atualizações de falha
 Quando uma atualização é concluído com erros, como você resolver os erros depende da natureza e gravidade dos erros e a lógica do seu aplicativo. No entanto, se o banco de dados for compartilhado com outros usuários, um erro comum é que alguém modifica o campo antes de fazer. Esse tipo de erro é chamado um conflito. ADO detectará essa situação e relata um erro.  

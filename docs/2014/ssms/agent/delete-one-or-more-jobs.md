@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e777fc76a49e7d4ec645133808787e25a702348f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62523520"
 ---
 # <a name="delete-one-or-more-jobs"></a>Excluir um ou mais trabalhos
   Este tópico descreve como excluir trabalhos [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou o SQL Server Management Objects.  
@@ -59,7 +59,7 @@ ms.locfileid: "53367108"
   
 
   
-##  <a name="TSQL"></a> Usando Transact-SQL  
+##  <a name="TSQL"></a> Usando o Transact-SQL  
   
 #### <a name="to-delete-a-job"></a>Para excluir um trabalho  
   

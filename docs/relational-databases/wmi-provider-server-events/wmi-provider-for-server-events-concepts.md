@@ -18,11 +18,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: c466a2e928afb5239c738463a39e6fee8a1991fa
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51215024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62514556"
 ---
 # <a name="wmi-provider-for-server-events-concepts"></a>Provedor WMI para conceitos de eventos de servidor
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "51215024"
  [Usando o WQL com o Provedor WMI para eventos de servidor](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)  
  Explica a sintaxe da linguagem WQL (WMI Query Language) e como usá-la ao programar no provedor.  
   
- [Exemplo: Criação de um alerta do SQL Server Agent usando o provedor WMI para eventos do servidor](../../relational-databases/wmi-provider-server-events/sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)  
+ [Exemplo: Criar um alerta do SQL Server Agent usando o provedor WMI para eventos de servidor](../../relational-databases/wmi-provider-server-events/sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)  
  Fornece um exemplo de como usar o Provedor WMI para retornar informações de eventos de rastreamento com os quais deve ser criado um alerta do SQL Server Agent.  
   
  [Exemplo: Usar o provedor de eventos WMI com o .NET Framework](../../relational-databases/wmi-provider-server-events/sample-using-the-wmi-event-provider-with-the-net-framework.md)  

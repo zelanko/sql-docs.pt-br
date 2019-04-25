@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 560761383a06bf9e3b319546011d58c7c1bdecb4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62473602"
 ---
 # <a name="full-text-search"></a>Pesquisa de Texto Completo
   A Pesquisa de Texto Completo no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] permite que usuários e aplicativos executem consultas de texto completo em dados baseados em caracteres nas tabelas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para que você possa executar consultas de texto completo em uma tabela, o administrador de banco de dados deve criar um índice de texto completo na tabela. O índice de texto completo inclui uma ou mais colunas baseadas em caractere da tabela. Essas colunas podem ter qualquer um destes tipos de dados: `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml` ou `varbinary(max)` e FILESTREAM. Cada índice de texto completo indexa uma ou mais colunas da tabela base, e cada coluna pode usar um idioma específico.  
@@ -49,7 +49,7 @@ ms.locfileid: "52788638"
   
  As consultas de texto completo não diferenciam maiúsculas de minúsculas. Por exemplo, a pesquisa de "Alumínio" ou "alumínio" retorna os mesmos resultados.  
   
- As consultas de texto completo usam um pequeno conjunto de predicados [!INCLUDE[tsql](../../../includes/tsql-md.md)] (CONTAINS e FREETEXT) e funções (CONTAINSTABLE e FREETEXTTABLE). Entretanto, as metas de pesquisa de um determinado cenário comercial influenciam a estrutura das consultas de texto completo. Por exemplo:  
+ As consultas de texto completo usam um pequeno conjunto de predicados [!INCLUDE[tsql](../../../includes/tsql-md.md)] (CONTAINS e FREETEXT) e funções (CONTAINSTABLE e FREETEXTTABLE). Entretanto, as metas de pesquisa de um determinado cenário comercial influenciam a estrutura das consultas de texto completo. Por exemplo:   
   
 -   Comércio eletrônico – procurando por um produto em um site:  
   
@@ -94,7 +94,7 @@ ms.locfileid: "52788638"
   
  [Neste tópico](#top)  
   
-###  <a name="sqlprocess"></a> Processo do SQL Server  
+###  <a name="sqlprocess"></a> SQL Server Process  
  O processo do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa os seguintes componentes na pesquisa de texto completo:  
   
 -   **Tabelas de usuário.** Essas tabelas contêm os dados para serem indexados com texto completo.  

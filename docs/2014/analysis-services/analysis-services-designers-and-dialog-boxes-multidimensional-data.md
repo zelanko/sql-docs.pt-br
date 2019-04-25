@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7f03bd0dbde0070b9c4e4666ca3cceab9ab2af2a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62473545"
 ---
 # <a name="analysis-services-designers-and-dialog-boxes-multidimensional-data"></a>Designers e caixas de diálogo do Analysis Services (Dados multidimensionais)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] oferece designers e caixas de diálogo para uso em [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  

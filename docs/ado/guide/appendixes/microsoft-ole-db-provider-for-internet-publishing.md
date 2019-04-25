@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 939cc21d8f89d93dca9249efcad82a85874a00c4
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509898"
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Provedor Microsoft OLE DB para visão geral de publicação na Internet
 O Microsoft OLE DB Provider para publicação na Internet permite que o ADO para acessar recursos atendidos pelo Microsoft FrontPage ou o Microsoft Internet Information Server. Os recursos incluem arquivos de origem da web, como arquivos HTML ou pastas do Windows 2000 da web.
@@ -49,7 +49,7 @@ MSDAIPP.DSO
 
  A cadeia de caracteres consiste nessas palavras-chave:
 
-|Palavra-chave|Description|
+|Palavra-chave|Descrição|
 |-------------|-----------------|
 |**Provedor**|Especifica o provedor OLE DB para publicação na Internet.|
 |**Fonte de dados** - ou - **URL**|Especifica a URL de um arquivo ou diretório publicado em uma pasta da Web.|

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7a23407b546bcde2dd1fde81654da4fe861e0719
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62501832"
 ---
 # <a name="predictassociation-dmx"></a>PredictAssociation (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -36,7 +36,7 @@ PredictAssociation(<table column reference>, option1, option2, n ...)
 ## <a name="return-type"></a>Tipo de retorno  
  \<expressão de tabela >  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  As opções para o **PredictAssociation** função incluem EXCLUDE_NULL, INCLUDE_NULL, INCLUSIVE, EXCLUSIVE (padrão), INPUT_ONLY, INCLUDE_STATISTICS e INCLUDE_NODE_ID.  
   
 > [!NOTE]  
@@ -79,7 +79,7 @@ SHAPE {
   
 ## <a name="see-also"></a>Consulte também  
  [Extensões de mineração de dados &#40;DMX&#41; referência de função](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Funções &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Functions &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Funções de previsão gerais &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

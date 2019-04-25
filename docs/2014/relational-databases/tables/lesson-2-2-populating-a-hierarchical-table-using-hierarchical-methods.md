@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c0c77323f6ae37e3543cf070817a9fee05943f3f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760857"
 ---
 # <a name="populating-a-hierarchical-table-using-hierarchical-methods"></a>Preenchendo uma tabela hierárquica utilizando métodos hierárquicos
   [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] tem oito funcionários que trabalham no departamento de Marketing. A hierarquia dos funcionários é assim:  

@@ -1,5 +1,5 @@
 ---
-title: DM os_buffer_descriptors (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_buffer_descriptors (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/14/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 29449905da888d0f7c85b66d3731eed381dc582c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62506053"
 ---
 # <a name="sysdmosbufferdescriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,23 +35,23 @@ ms.locfileid: "47704704"
   
  Quando uma página de dados é lida a partir do disco, a página é copiada para o pool de buffer do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e armazenada em cache para reutilização. Cada página de dados tem um descritor de buffer. Descritores de buffer que identificam exclusivamente cada página de dados armazenada em cache no momento em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. sys.dm_os_buffer_descriptors retorna páginas armazenadas em cache para todos os usuários e bancos de dados do sistema. Isso inclui páginas que estão associadas ao banco de dados de Recursos.  
   
-> **Observação:** chamá-lo partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o nome **sys.dm_pdw_nodes_os_buffer_descriptors**.  
+> **OBSERVAÇÃO:** Chamá-lo partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o nome **sys.dm_pdw_nodes_os_buffer_descriptors**.  
 
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|Identificação do banco de dados associada à página no pool de buffer. Permite valor nulo.|  
 |file_id|**int**|Identificação do arquivo que armazena a imagem persistida da página. Permite valor nulo.|  
 |page_id|**int**|Identificação da página no arquivo. Permite valor nulo.|  
 |page_level|**int**|Nível de índice da página. Permite valor nulo.|  
 |allocation_unit_id|**bigint**|ID da unidade de alocação da página. Esse valor pode ser usado para unir sys.allocation_units. Permite valor nulo.|  
-|page_type|**nvarchar(60)**|Tipo da página, como: página de Dados ou página de Índice. Permite valor nulo.|  
+|page_type|**nvarchar(60)**|Tipo da página, como: Página de dados ou página de índice. Permite valor nulo.|  
 |row_count|**int**|Número de linhas na página. Permite valor nulo.|  
 |free_space_in_bytes|**int**|Quantidade de espaço livre disponível, em bytes, na página. Permite valor nulo.|  
 |is_modified|**bit**|1 = A página foi modificada depois de lida no disco. Permite valor nulo.|  
 |numa_node|**int**|Nó de acesso à memória não uniforme do buffer. Permite valor nulo.|  
-|read_microsec|**bigint**|A hora real (em microssegundos) necessária para ler a página no buffer. Este número é redefinido quando o buffer é reutilizado. Permite valor nulo.|  
-|is_in_bpool_extension|**bit**|1 = página está na extensão do pool de buffers. Permite valor nulo.|  
-|pdw_node_id|**int**|**Aplica-se ao**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
+|read_microsec|**bigint**|A hora real (em microssegundos) necessária para ler a página no buffer. Este número é redefinido quando o buffer é reutilizado. Permite valor nulo.|  
+|is_in_bpool_extension|**bit**|1 = página está na extensão do pool de buffers. Permite valor nulo.|  
+|pdw_node_id|**int**|**Aplica-se ao**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
   
 ## <a name="permissions"></a>Permissões  
 

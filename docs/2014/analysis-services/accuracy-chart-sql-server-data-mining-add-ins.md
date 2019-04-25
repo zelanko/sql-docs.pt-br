@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 328ce6c6474beb68d14edd26779d868142a29fd0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62520243"
 ---
 # <a name="accuracy-chart-sql-server-data-mining-add-ins"></a>Gráfico de Precisão (Suplementos de Mineração de Dados do SQL Server)
   ![Botão na faixa de opções mineração de dados do gráfico de precisão](media/dmc-accchart.gif "botão gráfico de precisão na faixa de opções mineração de dados")  
@@ -73,7 +73,7 @@ ms.locfileid: "48136786"
      O assistente cria um relatório que contém o gráfico de comparação de precisão e os dados subjacentes.  
   
 ### <a name="requirements"></a>Requisitos  
- Se você estiver prevendo um valor discreto, selecione o valor de destino que deseja prever. Por exemplo, se os dados estiverem categorizados com uma resposta "Sim: Comprar" como 1 e a resposta "Não: Não Comprar" como 2, você deve especificar 1 ou 2 como valores de previsão. No entanto, se você quiser prever um intervalo de valores, compare apenas dois valores de cada vez. Por exemplo, para prever uma pontuação acima de 5, talvez seja necessário rotular novamente os dados de origem e criar um novo modelo que separa os resultados em dois conjuntos: aqueles maiores do que 5 e os menores do que 5. Você pode comparar a precisão desses dois grupos.  
+ Se você estiver prevendo um valor discreto, selecione o valor de destino que deseja prever. Por exemplo, se os dados estiverem categorizados com uma resposta "Sim: Comprar"como 1 e a resposta" não: Não comprar"como 2, você deve especificar 1 ou 2 como valores de previsão. No entanto, se você quiser prever um intervalo de valores, compare apenas dois valores de cada vez. Por exemplo, para prever uma pontuação acima de 5, talvez seja necessário rotular novamente os dados de origem e criar um novo modelo que separa os resultados em dois conjuntos: aqueles maiores do que 5 e os menores do que 5. Você pode comparar a precisão desses dois grupos.  
   
 ## <a name="understanding-accuracy"></a>Entendendo a precisão  
  É possível criar dois tipos de gráficos: um no qual você especifica um estado da coluna previsível e outro no qual não especifica o estado.  

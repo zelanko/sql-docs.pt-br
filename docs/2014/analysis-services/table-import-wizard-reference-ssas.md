@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 51f247adeee3e7c46faf5aca64f2668d736bb167
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757790"
 ---
 # <a name="table-import-wizard-reference-ssas"></a>Referência do Assistente de Importação de Tabela (SSAS)
   Esta seção fornece Ajuda sobre o **Assistente de Importação de Tabela**. Ele permite importar dados de várias fontes. Para acessar o assistente do designer de modelo, no menu **Modelo** , clique em **Importar de Fonte de Dados**.  
   
-## <a name="pages"></a>Páginas  
+## <a name="pages"></a>Pages (Páginas)  
   
 -   [Configurações avançadas &#40;SSAS&#41;](advanced-settings-ssas.md)  
   
@@ -86,6 +86,6 @@ ms.locfileid: "48218172"
 -   [Especifique uma consulta SQL ou MDX &#40;SSAS&#41;](specify-a-sql-or-mdx-query-ssas.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Importar dados &#40;Tabular do SSAS&#41;](import-data-ssas-tabular.md)  
+ [Importar dados &#40;SSAS de Tabela&#41;](import-data-ssas-tabular.md)  
   
   

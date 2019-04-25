@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: bee5ca4ded1b2fd5cbda0712cb766c825b9d0318
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472841"
 ---
 # <a name="predicting-associations-intermediate-data-mining-tutorial"></a>Prevendo associações (Tutorial de mineração de dados intermediário)
   Depois que os modelos forem processados, você pode usar as informações sobre associações armazenadas no modelo para criar previsões. Na tarefa final desta lição, você aprenderá a criar consultas de previsão em modelos de associação criados por você. Esta lição supõe que você já saiba usar o Construtor de Consultas de Previsão e que deseja aprender a criar consultas de previsão em modelos de associação. Para saber como usar o construtor de consultas de previsão, consulte [Interfaces de consulta de mineração de dados](../../2014/analysis-services/data-mining/data-mining-query-tools.md).  

@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ed2a51a39f1fa1fd465c6a57fb51552fcb7cabfb
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472325"
 ---
-# <a name="attribute-properties---bind-an-attribute-to-a-key-column"></a>Propriedades de atributo - associar um atributo a uma coluna de chave
+# <a name="attribute-properties---bind-an-attribute-to-a-key-column"></a>Propriedades do atributo – Associar um atributo a uma coluna de chave
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Este procedimento descreve como alterar a configuração da propriedade **Name** de um atributo de uma dimensão.  
   

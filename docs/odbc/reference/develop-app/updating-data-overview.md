@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3edbd41bc5361d864abcc7d631a90521af98ef01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632661"
 ---
 # <a name="updating-data-overview"></a>Atualizar a visão geral de dados
 Aplicativos podem atualizar os dados executando instruções SQL ou chamando **SQLSetPos** ou **SQLBulkOperations**. **ATUALIZAÇÃO**, **exclua**, e **inserir** instruções atuar diretamente na fonte de dados e geralmente têm suporte pelos drivers. Pesquisado update e delete instruções contém uma especificação das linhas para alterar. Posicionado atualização e instruções delete e **SQLSetPos** atuar na fonte de dados por meio de um cursor e são menos amplamente suportadas.  

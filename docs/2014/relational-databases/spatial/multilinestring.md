@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: c755752aaa2e4cac795b277c0cdba070d7b2f6d5
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51019051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524173"
 ---
 # <a name="multilinestring"></a>MultiLineString
   Um `MultiLineString` é uma coleção de zero ou mais `geometry` ou **geographyLineString** instâncias.  

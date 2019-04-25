@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a57719becab0c7dda9d684e4de3218e29418b6a3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62504974"
 ---
 # <a name="sysdmoschildinstances-transact-sql"></a>sys.dm_os_child_instances (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "53203445"
   
  As informações retornadas **sys.dm_os_child_instances** pode ser usado para determinar o estado de cada instância de usuário (heart_beat) e obter o nome do pipe (instance_pipe_name) que pode ser usado para criar uma conexão para o usuário Instância usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou SQLCmd. Será possível conectar-se a uma Instância de Usuário somente depois que ela for iniciada por um processo externo, como um aplicativo cliente. As ferramentas de gerenciamento SQL não podem iniciar uma Instância de Usuário.  
   
-> **OBSERVAÇÃO:** As Instâncias de Usuário são um recurso somente do [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)].  
+> **OBSERVAÇÃO:** Instâncias de usuário são um recurso do [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)] apenas.  
 > 
 > **Observação** chamá-lo partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o nome **sys.dm_pdw_nodes_os_child_instances**.  
   

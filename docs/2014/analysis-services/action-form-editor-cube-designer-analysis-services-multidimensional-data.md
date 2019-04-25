@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 32d1389fcb780fab6a370e6a9043600461baec4b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62626092"
 ---
 # <a name="action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor de Formulário de Ação (guia Ações, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel Editor de Formulário de Ação na guia **Ações** do Designer de Cubo para criar e modificar ações padrão.  
@@ -37,7 +37,7 @@ ms.locfileid: "48225546"
 |-----------|---------------------|  
 |Membros de atributo|Um membro é selecionado de um nível baseado no atributo em **Objeto de destino**.|  
 |Células|O conjunto nomeado em **Objeto de destino** é selecionado. Selecione **Todas as células** para selecionar todas as células no cubo.|  
-|Cube|O cubo em **Objeto de destino** é selecionado. Selecione CURRENTCUBE para usar o cubo atual.<br /><br /> Observação: o uso de CURRENTCUBE fornece portabilidade adicional em casos nos quais o cubo possa ser renomeado ou a ação copiada para outros cubos. É recomendável usar CURRENTCUBE para representar o cubo atual.|  
+|Cube|O cubo em **Objeto de destino** é selecionado. Selecione CURRENTCUBE para usar o cubo atual.<br /><br /> Observação: Uso de CURRENTCUBE fornece portabilidade adicional em casos em que o cubo pode ser renomeado ou a ação copiada para outros cubos. É recomendável usar CURRENTCUBE para representar o cubo atual.|  
 |Membros de dimensão|Um membro da dimensão em **Objeto de destino** é selecionado.|  
 |Hierarquia|A hierarquia do **Objeto de destino** é selecionada.|  
 |Membros de hierarquia|Um membro dentro da hierarquia do **Objeto de destino** é selecionado.|  
@@ -58,7 +58,7 @@ ms.locfileid: "48225546"
  **Tipo**  
  Selecione o tipo de ação a ser tomada quando a ação for executada. Os seguintes tipos de ação estão disponíveis:  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |Dataset|Retorna uma instrução MDX representando um conjunto de dados multidimensional a ser executado e exibido pelo aplicativo cliente.|  
 |Proprietário|Retorna uma cadeia de caracteres proprietária que pode ser interpretada por aplicativos cliente associados à configuração **Aplicativo** para esta ação.|  
@@ -82,7 +82,7 @@ ms.locfileid: "48225546"
   
  A tabela a seguir descreve as configurações disponíveis.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |Lote|A ação deve ser executada como parte de uma operação em lote ou de uma tarefa do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .|  
 |Interativo|A ação é executada quando o usuário a invoca.|  

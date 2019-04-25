@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 919a0c9eb96021ccd7495579cda9756bcdde3194
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62761443"
 ---
 # <a name="delete-foreign-key-relationships"></a>Excluir relações de chaves estrangeiras
   Você pode excluir uma restrição de chave estrangeira no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Excluir uma restrição de chave estrangeira remove o requisito para forçar uma integridade referencial.  
@@ -53,7 +53,7 @@ ms.locfileid: "52803108"
   
 3.  Na caixa de diálogo **Excluir Objeto** , clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-delete-a-foreign-key-constraint"></a>Para excluir uma restrição de chave estrangeira  
   

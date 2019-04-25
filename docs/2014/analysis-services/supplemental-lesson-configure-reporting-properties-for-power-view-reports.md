@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 011ca5ed5066113a467082e0fe05c6d0f831f25b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757973"
 ---
 # <a name="configure-reporting-properties-for-power-view-reports"></a>Configurar propriedades de relatório para relatórios do Power View
   Nesta lição suplementar, você definirá as propriedades de relatório para o projeto Modelo de Vendas pela Internet do Adventure Works. As propriedades de relatório facilitam para os usuários finais o trabalho de selecionar e exibir dados de modelo no Power View. Você também definirá as propriedades para ocultarem determinadas colunas e tabelas, e criará novos dados para usar em gráficos.  
@@ -161,7 +161,7 @@ ms.locfileid: "53363458"
      **Data**  
   
     > [!NOTE]  
-    >  Como a tabela Date foi selecionada como a tabela de datas do modelo usando a configuração Marcar como Tabela de Data, na Lição 7: Marcar como Tabela de Data, e a coluna Date na tabela Date como a coluna a ser usada como o identificador exclusivo, a propriedade Identificador de Linha para a coluna Date será automaticamente definida como True e não poderá ser alterada. Ao usar as funções de inteligência de tempo em fórmulas DAX, você deverá especificar uma tabela de data. Neste modelo, você criou várias medidas usando funções de inteligência de tempo para calcular dados de vendas para vários períodos como trimestres anterior e atual, e também para usar em KPIs. Para obter mais informações sobre como especificar uma tabela de data, consulte [Especificar Marcar como Tabela de Data para uso com a inteligência de dados temporais &#40;SSAS Tabular&#41;](tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) nos Manuais Online do SQL Server.  
+    >  Porque a tabela Date foi selecionada como os modelos de tabela de datas usando a marca como configuração da tabela de data, na lição 7: Marcar como tabela de data e a coluna de data na tabela de data como a coluna a ser usado como o identificador exclusivo, a propriedade do identificador de linha para a coluna Date serão automaticamente definido como True e não podem ser alterado. Ao usar as funções de inteligência de tempo em fórmulas DAX, você deverá especificar uma tabela de data. Neste modelo, você criou várias medidas usando funções de inteligência de tempo para calcular dados de vendas para vários períodos como trimestres anterior e atual, e também para usar em KPIs. Para obter mais informações sobre como especificar uma tabela de data, consulte [Especificar Marcar como Tabela de Data para uso com a inteligência de dados temporais &#40;SSAS Tabular&#41;](tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) nos Manuais Online do SQL Server.  
   
     |coluna|Propriedade|Valor|  
     |------------|--------------|-----------|  

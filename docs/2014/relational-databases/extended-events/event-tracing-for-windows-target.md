@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e855b9de09727a4437cad99a2534aee9d960298b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62519300"
 ---
 # <a name="event-tracing-for-windows-target"></a>destino do rastreamento de eventos do Windows
   Antes de usar o Rastreamento de Eventos do Windows (ETW) como destino, é recomendável ter um conhecimento prático do ETW. O rastreamento ETW é usado junto com o recurso Eventos Estendidos ou como um consumidor de Eventos Estendidos. Os links externos a seguir fornecem um ponto de partida para a obtenção de informações gerais do ETW:  

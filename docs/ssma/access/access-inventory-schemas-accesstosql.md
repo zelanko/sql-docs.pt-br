@@ -38,19 +38,19 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 71a52a619ba2a3c16c372021181b90bae72ccfe7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759701"
 ---
-# <a name="access-inventory-schemas-accesstosql"></a>Esquemas de inventário do Access (AccessToSQL)
+# <a name="access-inventory-schemas-accesstosql"></a>Access Inventory Schemas (AccessToSQL)
 As seções a seguir descrevem as tabelas que são criadas por SSMA quando você exporta os esquemas de acesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="databases"></a>Bancos de dados  
 Metadados de banco de dados são exportados para o **SSMA_Access_InventoryDatabases** tabela. Esta tabela contém as seguintes colunas:  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de Dados|Descrição|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Um GUID que identifica exclusivamente cada banco de dados. Essa coluna também é a chave primária da tabela.|  
 |**DatabaseName**|**nvarchar(4000)**|O nome do banco de dados do Access.|  
@@ -67,7 +67,7 @@ Metadados de banco de dados são exportados para o **SSMA_Access_InventoryDataba
 |**ReportsCount**|**int**|O número de relatórios no banco de dados do Access.|  
 |**MacrosCount**|**int**|O número de macros no banco de dados do Access.|  
 |**AccessVersion**|**nvarchar(4000)**|A versão do banco de dados do Access.|  
-|**Agrupamento**|**nvarchar(4000)**|O agrupamento do banco de dados do Access. Agrupamentos determinam como um banco de dados classifica e compara cadeias de caracteres.|  
+|**Ordenação**|**nvarchar(4000)**|O agrupamento do banco de dados do Access. Agrupamentos determinam como um banco de dados classifica e compara cadeias de caracteres.|  
 |**JetVersion**|**nvarchar(4000)**|A versão do mecanismo de banco de dados Jet. Acessar bancos de dados usam o mecanismo de banco de dados Jet subjacente.|  
 |**IsUpdatable**|**bit**|Indica se o banco de dados pode ser atualizado. Se o valor for 1, o banco de dados é atualizável. Se o valor for 0, o banco de dados é somente leitura.|  
 |**QueryTimeout**|**int**|O ODBC consulta tempo limite valor configurado para o banco de dados, em segundos. O padrão é 60 segundos.|  
@@ -75,7 +75,7 @@ Metadados de banco de dados são exportados para o **SSMA_Access_InventoryDataba
 ## <a name="tables"></a>Tabelas  
 Metadados de tabela é exportado para o **SSMA_Access_InventoryTables** tabela. Esta tabela contém as seguintes colunas:  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de Dados|Descrição|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica o banco de dados que contém esta tabela.|  
 |**TableId**|**uniqueidentifier**|Um GUID que identifica exclusivamente a tabela. Essa coluna também é a chave primária da tabela.|  
@@ -88,7 +88,7 @@ Metadados de tabela é exportado para o **SSMA_Access_InventoryTables** tabela. 
 ## <a name="columns"></a>Colunas  
 Metadados da coluna é exportado para o **SSMA_Access_InventoryColumns** tabela. Esta tabela contém as seguintes colunas:  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de Dados|Descrição|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica o banco de dados que contém esta coluna.|  
 |**TableId**|**uniqueidentifier**|Identifica a tabela que contém esta coluna.|  
@@ -104,7 +104,7 @@ Metadados da coluna é exportado para o **SSMA_Access_InventoryColumns** tabela.
 ## <a name="indexes"></a>Índices  
 Os metadados do índice é exportado para o **SSMA_Access_InventoryIndexes** tabela. Esta tabela contém as seguintes colunas:  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de Dados|Descrição|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica o banco de dados que contém esse índice.|  
 |**TableId**|**uniqueidentifier**|Identifica a tabela que contém esse índice.|  
@@ -118,7 +118,7 @@ Os metadados do índice é exportado para o **SSMA_Access_InventoryIndexes** tab
 ## <a name="foreign-keys"></a>Chaves estrangeiras  
 Metadados de chave estrangeira é exportado para o **SSMA_Access_InventoryForeignKeys** tabela. Esta tabela contém as seguintes colunas:  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de Dados|Descrição|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica o banco de dados que contém esse foreign key.|  
 |**TableId**|**uniqueidentifier**|Identifica a tabela que contém esse foreign key.|  
@@ -134,7 +134,7 @@ Metadados de chave estrangeira é exportado para o **SSMA_Access_InventoryForeig
 ## <a name="queries"></a>Consultas  
 Metadados de consulta é exportado para o **SSMA_Access_InventoryQueries** tabela. Esta tabela contém as seguintes colunas:  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de Dados|Descrição|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica o banco de dados que contém esta consulta.|  
 |**QueryId**|**int**|Um inteiro incrementado que identifica a consulta. Esta coluna é a chave primária da tabela.|  
@@ -147,16 +147,16 @@ Metadados de consulta é exportado para o **SSMA_Access_InventoryQueries** tabel
 ## <a name="forms"></a>Formulários  
 Metadados do formulário é exportado para o **SSMA_Access_InventoryForms** tabela. Esta tabela contém as seguintes colunas:  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de Dados|Descrição|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica o banco de dados que contém esse formulário.|  
 |**FormId**|**int**|Um inteiro incrementado que identifica o formulário. Esta coluna é a chave primária da tabela.|  
-|**Nome do formulário**|**nvarchar(4000)**|O nome do formulário.|  
+|**FormName**|**nvarchar(4000)**|O nome do formulário.|  
   
 ## <a name="macros"></a>Macros  
 Metadados de macro é exportado para o **SSMA_Access_InventoryMacros** tabela. Esta tabela contém as seguintes colunas:  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de Dados|Descrição|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica o banco de dados que contém a macro.|  
 |**MacroId**|**int**|Um inteiro incrementado que identifica a macro. Esta coluna é a chave primária da tabela.|  
@@ -165,7 +165,7 @@ Metadados de macro é exportado para o **SSMA_Access_InventoryMacros** tabela. E
 ## <a name="reports"></a>Relatórios  
 Os metadados do relatório é exportado para o **SSMA_Access_InventoryReports** tabela. Esta tabela contém as seguintes colunas:  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de Dados|Descrição|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica o banco de dados que contém o relatório.|  
 |**ReportId**|**int**|Um inteiro incrementado que identifica o relatório. Esta coluna é a chave primária da tabela.|  
@@ -174,7 +174,7 @@ Os metadados do relatório é exportado para o **SSMA_Access_InventoryReports** 
 ## <a name="modules"></a>Módulos  
 Metadados do módulo são exportados para o **SSMA_Access_InventoryModules** tabela. Esta tabela contém as seguintes colunas:  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de Dados|Descrição|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica o banco de dados que contém o módulo.|  
 |**ModuleId**|**int**|Um inteiro incrementado que identifica o módulo. Esta coluna é a chave primária da tabela.|  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 390ff54485e92e28736424048e5aaedbbee31181
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62758072"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Algoritmo MTS
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -92,10 +92,10 @@ ms.locfileid: "34018533"
 ### <a name="example-1-time-series-data-set-with-series-represented-as-column-values"></a>Exemplo 1: Conjunto de dados de série temporal com série representada como valores de coluna  
  Este exemplo usa a seguinte tabela de casos de entrada:  
   
-|TimeID|Product|Sales|Volume|  
+|TimeID|Produto|Sales|Volume|  
 |------------|-------------|-----------|------------|  
-|1/2001|A|1.000|600|  
-|2/2001|A|1100|500|  
+|1/2001|Um|1.000|600|  
+|2/2001|Um|1100|500|  
 |1/2001|B|500|900|  
 |2/2001|B|300|890|  
   
@@ -105,7 +105,7 @@ ms.locfileid: "34018533"
   
  A coluna Sales descreve os lucros brutos do produto especificado relativos a um dia e a coluna Volume descreve a quantidade residual do produto especificado contida no armazém. Essas duas colunas contêm os dados que são usados para treinar o modelo. Tanto Sales quanto Volume podem ser atributos previsíveis para cada série na coluna Product.  
   
-### <a name="example-2-time-series-data-set-with-each-series-in-separate-column"></a>Exemplo 2: Conjunto de dados de série temporal com cada série em uma coluna separada  
+### <a name="example-2-time-series-data-set-with-each-series-in-separate-column"></a>Exemplo 2: Conjunto de dados de série temporal com cada série na coluna separada  
  Embora este exemplo use basicamente os mesmos dados de entrada, que o primeiro exemplo, esses dados são estruturados de modo diferente, conforme mostrado na tabela seguinte:  
   
 |TimeID|A_Sales|A_Volume|B_Sales|B_Volume|  
@@ -113,7 +113,7 @@ ms.locfileid: "34018533"
 |1/2001|1.000|600|500|900|  
 |2/2001|1100|500|300|890|  
   
- Nessa tabela, a coluna TimeID ainda contém a série temporal do modelo da série temporal, no qual você designa como a coluna key time. Entretanto, as colunas anteriores de Sales e Volume agora estão divididas em duas colunas e cada uma delas é precedida pelo nome do produto. Como resultado, existe somente uma única entrada para cada dia na coluna TimeID. Isto cria um modelo de série temporal que contém quatro colunas previsíveis: A_Sales, A_Volume, B_Sales e B_Volume.  
+ Nessa tabela, a coluna TimeID ainda contém a série temporal do modelo da série temporal, no qual você designa como a coluna key time. Entretanto, as colunas anteriores de Sales e Volume agora estão divididas em duas colunas e cada uma delas é precedida pelo nome do produto. Como resultado, existe somente uma única entrada para cada dia na coluna TimeID. Isso cria um modelo de série temporal que contém quatro colunas previsíveis: A_Sales, A_Volume, B_Sales e B_Volume.  
   
  Além disso, como você separou os produtos em colunas diferentes, não é necessário especificar uma coluna de chave de série adicional. Todas as colunas no modelo são uma coluna de série de casos ou uma coluna previsível.  
   
@@ -144,10 +144,10 @@ ms.locfileid: "34018533"
 -   Dá suporte ao detalhamento.  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados e &#40; Analysis Services – Data Mining e &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Procurar um modelo usando o visualizador MTS](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)   
- [Referência técnica do algoritmo Microsoft Time Series](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
+ [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Procurar um modelo usando o Visualizador MTS](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)   
+ [Referência técnica do algoritmo MTS](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
  [Exemplos de consulta de modelo de série temporal](../../analysis-services/data-mining/time-series-model-query-examples.md)   
- [Conteúdo do modelo de mineração para modelos de série temporal & #40; Analysis Services – mineração de dados & #41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Conteúdo do modelo de mineração para modelos de série temporal &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

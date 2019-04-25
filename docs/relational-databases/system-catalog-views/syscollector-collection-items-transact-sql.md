@@ -20,18 +20,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 53f978bf7914776e8596a89b0ee9b62770cd6866
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760214"
 ---
 # <a name="syscollectorcollectionitems-transact-sql"></a>syscollector_collection_items (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna informações sobre um item em um conjunto de coleta.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**collection_set_id**|**int**|Identifica o conjunto de coleta. Não permite valor nulo.|  
 |**collection_item_id**|**int**|Identifica um item no conjunto de coleta. Não permite valor nulo.|  

@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 596bc66152f36c25169e4a089644042d25f8c13b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757899"
 ---
 # <a name="table-analysis-tools-for-excel"></a>Ferramentas de Análise de Tabela para Excel
   As ferramentas de mineração de dados das **analisar** barra de ferramentas são a maneira mais fácil para começar com a mineração de dados. Cada ferramenta analisa automaticamente a distribuição e o tipo de dados, e define os parâmetros para garantir que os resultados sejam válidos. Não é necessário selecionar um algoritmo ou configurar parâmetros complexos.  

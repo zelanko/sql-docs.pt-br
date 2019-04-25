@@ -20,18 +20,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dcc027ad80d4bbe1142a9e17add52f8a42d7d404
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760194"
 ---
 # <a name="syscollectorcollectionsets-transact-sql"></a>syscollector_collection_sets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Fornece informações sobre um conjunto de coleta, inclusive agendamento, modo de coleta e seu estado.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |collection_set_id|**int**|É o identificador local do conjunto de coleções. Não permite valor nulo.|  
 |collection_set_uid|**uniqueidentifier**|O identificador global exclusivo do conjunto de coleta. Não permite valor nulo.|  
@@ -46,7 +46,7 @@ ms.locfileid: "47842504"
 |upload_job_id|**uniqueidentifier**|Identifica o trabalho de carregamento de coleta. Permite valor nulo.|  
 |logging_level|**smallint**|Especifica o nível de log (0, 1 ou 2). Não permite valor nulo.|  
 |days_until_expiration|**smallint**|O número de dias durante os quais os dados coletados são salvos no data warehouse de gerenciamento. Não permite valor nulo.|  
-|descrição|**nvarchar(4000)**|Descreve o conjunto de coleta. Permite valor nulo.|  
+|description|**nvarchar(4000)**|Descreve o conjunto de coleta. Permite valor nulo.|  
 |dump_on_any_error|**bit**|Ativado (1) ou desativado (0) para indicar se deseja criar um [!INCLUDE[ssIS](../../includes/ssis-md.md)] arquivo de despejo de qualquer erro. Não permite valor nulo.|  
 |dump_on_codes|**nvarchar(max)**|Contém a lista de [!INCLUDE[ssIS](../../includes/ssis-md.md)] códigos de erro que são usados para disparar o arquivo de despejo. Permite valor nulo.|  
   

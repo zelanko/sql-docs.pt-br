@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ea95066a8fecbf96c8f6b14b42486d4d62264ae2
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757722"
 ---
 # <a name="hierarchy-representation-tabular"></a>Representação de hierarquia (tabela)
   Em modelos de tabela, uma hierarquia é o caminho de navegação de um atributo para outro com base em valores selecionados pelo usuário.  

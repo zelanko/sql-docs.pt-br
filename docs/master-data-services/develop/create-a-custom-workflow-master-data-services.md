@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ffee06e8a6372f146996673c425a89000eda0a1d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62518627"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Criar um fluxo de trabalho personalizado (Master Data Services)
 
@@ -38,7 +38,7 @@ ms.locfileid: "52420657"
 5.  O Serviço de Integração de Fluxo de Trabalho MDS do SQL Server encaminha os dados para seu assembly de manipulador de fluxo de trabalho.  
   
 > [!NOTE]  
->  Observação: o Serviço de Integração de Fluxo de Trabalho do MDS do SQL Server deve disparar processos simples. Se seu código personalizado exigir processamento complexo, conclua seu processamento em um thread separado ou fora do processo de fluxo de trabalho.  
+>  Observação: Serviço de integração de fluxo de trabalho MDS do SQL Server deve disparar processos simples. Se seu código personalizado exigir processamento complexo, conclua seu processamento em um thread separado ou fora do processo de fluxo de trabalho.  
   
 ## <a name="configure-master-data-services-for-custom-workflows"></a>Configurar Master Data Services para fluxos de trabalho personalizados  
  A criação de um fluxo de trabalho personalizado requer gravação de um código personalizado e configuração do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] para transmitir dados de fluxo de trabalho a seu manipulador de fluxo de trabalho. Siga estas etapas para habilitar o processamento de fluxo de trabalho personalizado:  
@@ -64,7 +64,7 @@ ms.locfileid: "52420657"
   
 3.  Adicione 'using Microsoft.MasterDataServices.Core.Workflow;' ao seu arquivo de código C#.  
   
-4.  Herde de <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> em sua declaração de classe. A declaração de classe deve ser semelhante a: 'public class WorkflowTester : IWorkflowTypeExtender'.  
+4.  Herde de <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> em sua declaração de classe. A declaração de classe deve ser semelhante a: ' public class WorkflowTester: IWorkflowTypeExtender'.  
   
 5.  Implemente a interface <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>. O método <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> é chamado pelo Serviço de Integração de Fluxo de Trabalho MDS SQL Server para iniciar o fluxo de trabalho.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "52420657"
     </setting>  
     ```  
   
-3.  Sob a configuração "ConnectionString" adicione uma configuração "WorkflowTypeExtenders" para associar um nome de tag a seu assembly de manipulador de fluxo de trabalho. Por exemplo:  
+3.  Sob a configuração "ConnectionString" adicione uma configuração "WorkflowTypeExtenders" para associar um nome de tag a seu assembly de manipulador de fluxo de trabalho. Por exemplo:   
   
     ```xml  
     <setting name="WorkflowTypeExtenders" serializeAs="String">  
@@ -145,14 +145,14 @@ ms.locfileid: "52420657"
   
 1.  Use o snap-in Serviços para parar o serviço.  
   
-2.  Abra um prompt de comando, navegue para local do serviço e execute o serviço no modo de console inserindo: Microsoft.MasterDataServices.Workflow.exe - console.  
+2.  Abra um prompt de comando, navegue até o local do serviço e execute o serviço no modo de console inserindo: Microsoft.MasterDataServices.Workflow.exe-console.  
   
 3.  No [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], atualize seu membro e aplique regras de negócios novamente. Logs detalhados são exibidos na janela do console.  
   
 ### <a name="view-the-service-broker-queue"></a>Exibir a fila do Service Broker  
  A fila do Service Broker que contém os dados mestre transmitidos como parte do fluxo de trabalho é: mdm.microsoft/mdm/queue/externalaction. As filas podem ser localizadas no **Pesquisador de Objetos** do SQL Management Studio sob o nó do Service Broker do banco de dados do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Esteja ciente de que, se o serviço limpou a fila corretamente, ela fila estará vazia.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Exemplo de fluxo de trabalho personalizado &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md)   
  [Descrição XML do fluxo de trabalho personalizado &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-xml-description.md)  
   

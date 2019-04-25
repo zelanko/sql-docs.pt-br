@@ -23,11 +23,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 41b44df5fd990927c7b5a2e2a71698086a2bce61
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62510623"
 ---
 # <a name="pause-report-and-subscription-processing"></a>Pausar o processamento de relatório e assinatura
   Você não pode pausar um relatório ou assinatura diretamente. No entanto, é possível interromper o processamento de relatório e assinatura antes do início do processamento ou quando uma conexão de fonte de dados for feita. Você também pode impedir o processamento de um relatório ou assinatura deixando-o inacessível para os usuários.  

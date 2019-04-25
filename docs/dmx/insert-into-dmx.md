@@ -1,5 +1,5 @@
 ---
-title: INSERIR (DMX) | Microsoft Docs
+title: INSERT INTO (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 16732c1d889f7125d71d01bd0804b4202daceb7e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37992435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62505161"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +44,7 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
  *consulta de fonte de dados*  
  Consulta da fonte no formato definido pelo provedor.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se você não especificar **modelo de MINERAÇÃO** ou **estrutura de MINERAÇÃO**, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] procura o tipo de objeto com base no nome e processa o objeto correto. Se o servidor contiver uma estrutura de mineração e um modelo de mineração com nomes idênticos, um erro será retornado.  
   
  Usando a segunda forma de sintaxe, INSERT INTO*\<objeto >*. COLUMN_VALUES, você pode inserir dados diretamente nas colunas de modelo, sem treinar o modelo. Esse método fornece dados de coluna para o modelo de forma concisa, ordenada, que é útil quando se trabalha com conjuntos de dados contendo hierarquias ou colunas ordenadas.  

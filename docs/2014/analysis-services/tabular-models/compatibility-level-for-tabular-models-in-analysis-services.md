@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4587dda82f8e6e3d02581ebcd5a13bf0005b14ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757628"
 ---
 # <a name="compatibility-level-ssas-tabular-sp1"></a>Nível de compatibilidade (SP1 de tabela SSAS)
   Você pode especificar *nível de compatibilidade* ao criar novos projetos de modelo de tabela, ao atualizar projetos existentes do modelo de tabela, ao atualizar implantados existentes bancos de dados de modelo de tabela, ou ao importar pastas de trabalho PowerPivot.  
@@ -40,7 +40,7 @@ ms.locfileid: "48054057"
  Você também pode especificar um nível de compatibilidade padrão selecionando a opção **Não mostrar esta mensagem novamente** . Todos os projetos subsequentes usarão o nível de compatibilidade especificado. É possível alterar o nível de compatibilidade padrão no SSDT em Opções.  
   
 ### <a name="upgrade-an-existing-tabular-model-project-to-1103-compatibility-level"></a>Atualizar um projeto de modelo de tabela existente para o nível de compatibilidade 1103  
- Você pode atualizar um projeto de modelo de tabela criado no SSDT antes de instalar [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] ou posterior para a versão 1103 do banco de dados compatível usando o **nível de compatibilidade** propriedade no modelo **propriedades**janela. Para atualizar um projeto de modelo de tabela, o computador em que o SSDT está instalado deve ter o [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] ou posterior instalado e a instância do Analysis Services na qual o banco de dados de espaço de trabalho reside também deve ter o [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] instalado. Não é possível fazer downgrade para uma versão anterior.  
+ Você pode atualizar um projeto de modelo de tabela criado no SSDT antes de instalar [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] ou posterior para a versão 1103 do banco de dados compatível usando o **nível de compatibilidade** propriedade no modelo **propriedades**janela. Para atualizar um projeto de modelo de tabela, o computador em que o SSDT está instalado deve ter o [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] ou posterior instalado e a instância do Analysis Services na qual o banco de dados de workspace reside também deve ter o [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] instalado. Não é possível fazer downgrade para uma versão anterior.  
   
 ### <a name="upgrade-a-deployed-tabular-model-database-to-1103-compatibility-level"></a>Atualizar um banco de dados modelo de tabela implantado para o nível de compatibilidade 1103  
  Você pode atualizar uma versão de banco de dados ao banco de dados de modelo de tabela implantado existente 1103 compatíveis no SQL Server Management Studio (SSMS) usando o **nível de compatibilidade** propriedade em **propriedades de banco de dados**. Para atualizar, o computador no qual a instância do SQL Server Analysis Services está instalada deve ter o [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] ou posterior instalado. Não é possível fazer downgrade de um banco de dados modelo de tabela implantado para uma versão anterior.  

@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1d3791cc5250442555dd9b090dda549fe2b9feec
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524382"
 ---
 # <a name="delete-an-operator"></a>Delete an Operator
   Este tópico descreve como remover um operadou para que ele deixe de receber notificações de alerta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -44,7 +44,7 @@ ms.locfileid: "52763968"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
  Quando um operador é removido, todas as notificações associadas a ele também são eliminadas.  
   
 ###  <a name="Security"></a> Segurança  
@@ -66,7 +66,7 @@ ms.locfileid: "52763968"
   
 5.  Na caixa de diálogo **Excluir Objeto** , verifique se o operador correto está selecionado e clique em **OK**. Se desejar que outro operador receba os alertas e trabalhos enviados ao operador excluído, marque **Reatribuir a** e selecione um operador na lista.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-delete-an-operator"></a>Para excluir um operador  
   

@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
 ms.openlocfilehash: 8793e1ddd29d5327a02a2a4077daf4c643a8c316
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62625760"
 ---
 # <a name="save-metadata--oracletosql"></a>Salvar metadados (OracleToSQL)
 O **salvar metadados** caixa de diálogo solicita que você carregar metadados em seu projeto do SSMA antes de salvá-lo. Isso permite que você tiver um arquivo de projeto completo que você pode usar offline e enviar a outras pessoas, como a equipe de suporte técnico.  

@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c7f93c1aeb0cfd4de81f95d728d0bc075e9de751
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52749328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62517092"
 ---
 # <a name="exclude-a-business-rule-master-data-services"></a>Apagar uma regra de negócio (Master Data Services)
 
@@ -55,7 +55,7 @@ ms.locfileid: "52749328"
   
 10. Na caixa de diálogo de confirmação, clique em **OK**. O valor na coluna **Status da Regra de Negócio** é **Excluído** e a coluna **Excluído** é **Sim**.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Excluir uma regra de negócio &#40;Master Data Services&#41;](../master-data-services/delete-a-business-rule-master-data-services.md)   
  [Criar e publicar uma regra de negócio &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
  [Regras de negócio &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  

@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 65c96ade0964146e1d8ff9cfa52f99938d290712
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759858"
 ---
 # <a name="sysmailallitems-transact-sql"></a>sysmail_allitems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,15 +32,15 @@ ms.locfileid: "47824844"
   
  Para ver somente mensagens com o status de falha, use [sysmail_faileditems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md). Para ver apenas as mensagens não enviadas, use [sysmail_unsentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md). Para ver apenas as mensagens que foram enviadas, use [sysmail_sentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md).  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**int**|Identificador do item de email na fila de email.|  
 |**profile_id**|**int**|O identificador do perfil usado para enviar a mensagem.|  
-|**destinatários**|**varchar(max)**|Os endereços de email dos destinatários da mensagem.|  
+|**recipients**|**varchar(max)**|Os endereços de email dos destinatários da mensagem.|  
 |**copy_recipients**|**varchar(max)**|Os endereços de email daqueles que recebem cópias da mensagem.|  
 |**blind_copy_recipients**|**varchar(max)**|Os endereços de email daqueles que recebem cópias da mensagem, mas cujos nomes não aparecem no cabeçalho.|  
 |**subject**|**nvarchar(510)**|A linha de assunto da mensagem.|  
-|**Corpo**|**varchar(max)**|O corpo da mensagem.|  
+|**body**|**varchar(max)**|O corpo da mensagem.|  
 |**body_format**|**varchar(20)**|O formato do corpo da mensagem. Os valores possíveis são TEXT e HTML.|  
 |**importance**|**varchar(6)**|O **importância** parâmetro da mensagem.|  
 |**Sensibilidade**|**varchar(12)**|O **sensibilidade** parâmetro da mensagem.|  

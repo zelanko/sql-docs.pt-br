@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 44e773248cd2d61e211f6de98d5a0f81acc78bd1
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471171"
 ---
 # <a name="insert---sql-command"></a>INSERT – comando SQL
 Acrescenta um registro ao final de uma tabela que contém os valores de campo especificado.  
@@ -41,10 +41,10 @@ INSERT INTO dbf_name [(fname1 [, fname2, ...])]
   
  Se a tabela que você especificar for aberta, INSERT acrescenta o novo registro na tabela. Se a tabela é aberta em uma área de trabalho, além de área de trabalho atual, ele não é selecionado depois que o registro for acrescentado; a área de trabalho atual permanece selecionada.  
   
- [( *fname1*[, *fname2*[,...]])]  
+ [( *fname1*[, *fname2*[, ...]])]  
  Especifica no novo registro, os nomes dos campos em que os valores são inseridos.  
   
- VALORES ( *eExpression1*[, *eExpression2*[,...]])  
+ VALUES ( *eExpression1*[, *eExpression2*[, ...]])  
  Especifica os valores de campo inseridos no novo registro. Se você omitir os nomes de campo, você deve especificar os valores de campo na ordem definida pela estrutura de tabela.  
   
 ## <a name="remarks"></a>Comentários  

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d7101cf4775e5280c22cc27ecae009410d231d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62511681"
 ---
 # <a name="using-sql-server-default-result-sets"></a>Usando conjuntos de resultados padrão do SQL Server
   Os atributos padrão de cursor do ODBC são:  
