@@ -33,7 +33,7 @@
       href: assemblies-getting-information.md
     - name: Propriedades de Assembly (Página Geral)
       href: assemblies-properties.md
-- name: Criando objetos de banco de dados com a integração Common Language Runtime (CLR)
+- name: Criando objetos de banco de dados com integração CLR (Common Language Runtime)
   href: database-objects/building-database-objects-with-common-language-runtime-clr-integration.md
   items:
     - name: Bibliotecas do .NET Framework compatíveis
@@ -45,7 +45,7 @@
       items:
         - name: Comparações de lógica de três valores e nulidade
           href: ../clr-integration-database-objects-types-net-framework/nullability-and-three-value-logic-comparisons.md
-        - name: Tipos de dados de integração CLR e agrupamento
+        - name: Tipos de dados de integração CLR e ordenação
           href: ../clr-integration-database-objects-types-net-framework/collation-and-clr-integration-data-types.md
         - name: Manipulando parâmetros de LOB (objeto grande) no CLR
           href: ../clr-integration-database-objects-types-net-framework/handling-large-object-lob-parameters-in-the-clr.md

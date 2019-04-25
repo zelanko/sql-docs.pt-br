@@ -91,7 +91,7 @@
       href: set-the-auto-close-database-option-to-off.md
     - name: Definir a opção do banco de dados AUTO_SHRINK como OFF
       href: set-the-auto-shrink-database-option-to-off.md
-    - name: Definir o agrupamento de bancos de dados definidos pelo usuário para corresponder aos dos bancos de dados mestre e modelo
+    - name: Definir a ordenação de bancos de dados definidos pelo usuário para corresponder aos dos bancos de dados mestre e modelo
       href: dbengine-set-collation-user-defined-databases.md
     - name: Definir o grau máximo da opção de paralelismo para obtenção do desempenho ideal
       href: set-the-max-degree-of-parallelism-option-for-optimal-performance.md

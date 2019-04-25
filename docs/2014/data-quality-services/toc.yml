@@ -51,7 +51,7 @@
       items:
         - name: Criar um domínio
           href: create-a-domain.md
-        - name: 'Gerenciamento de domínio: lista de domínios'
+        - name: 'Gerenciamento de Domínio: Lista de domínios'
           href: domain-management-domain-list.md
         - name: Definir propriedades do domínio
           href: set-domain-properties.md

@@ -1,13 +1,13 @@
-- name: Collation and Unicode Support
+- name: Suporte a ordenações e a Unicode
   href: collation-and-unicode-support.md
   items:
-    - name: Definir ou alterar o agrupamento do servidor
+    - name: Definir ou alterar a ordenação do servidor
       href: set-or-change-the-server-collation.md
-    - name: Definir ou alterar o agrupamento de banco de dados
+    - name: Definir ou alterar a ordenação de banco de dados
       href: set-or-change-the-database-collation.md
-    - name: Definir ou alterar o agrupamento de coluna
+    - name: Definir ou alterar a ordenação de coluna
       href: set-or-change-the-column-collation.md
-    - name: Exiba informações de agrupamento
+    - name: Exibir informações de ordenação
       href: view-collation-information.md
     - name: Gravar instruções Transact-SQL internacionais
       href: write-international-transact-sql-statements.md

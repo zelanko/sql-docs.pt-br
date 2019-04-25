@@ -35,7 +35,7 @@
       href: configure-and-manage-word-breakers-and-stemmers-for-search.md
     - name: Exibir ou alterar filtros registrados e separadores de palavras
       href: view-or-change-registered-filters-and-word-breakers.md
-    - name: Change the Word Breaker Used for US English and UK English
+    - name: Alterar o separador de palavras usado para inglês (EUA) e inglês (Reino Unido)
       href: change-the-word-breaker-used-for-us-english-and-uk-english.md
     - name: Reverter os separadores de palavras usados por pesquisa à versão anterior
       href: revert-the-word-breakers-used-by-search-to-the-previous-version.md

@@ -40,7 +40,7 @@
       href: application-pattern-for-partitioning-memory-optimized-tables.md
     - name: Estatísticas para tabelas com otimização de memória
       href: statistics-for-memory-optimized-tables.md
-    - name: Páginas de código de agrupamentos
+    - name: Páginas de código de ordenações
       href: ../../database-engine/collations-and-code-pages.md
     - name: Tamanho da tabela e da linha em tabelas com otimização de memória
       href: table-and-row-size-in-memory-optimized-tables.md

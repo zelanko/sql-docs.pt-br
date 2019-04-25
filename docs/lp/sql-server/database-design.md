@@ -12,11 +12,11 @@ ms.date: 12/15/2018
 featureFlags:
 - clicktale
 ms.openlocfilehash: 5c70902f23c4f149e42a1ee04dd515aa32aa9d2e
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265602"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -343,7 +343,7 @@ ms.locfileid: "56319077"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>exibições</h3>
+                                                    <h3>Exibições</h3>
                                                     <p>Uma exibição é uma tabela virtual cujos conteúdos são definidos por uma consulta.</p>
                                                 </div>
                                             </div>

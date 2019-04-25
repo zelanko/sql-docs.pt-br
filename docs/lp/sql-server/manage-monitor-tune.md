@@ -12,11 +12,11 @@ ms.date: 12/15/2018
 featureFlags:
 - clicktale
 ms.openlocfilehash: 5beff15b746c26520c8d95048a9849fe2f710aca
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265731"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -318,7 +318,7 @@ ms.locfileid: "56319287"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Database Tuning Advisor</h3>
+                                                    <h3>Assistente de Ajuste do Banco de Dados</h3>
                                                     <p>Ajuda a analisar as cargas de trabalho e fornece recomendações de melhoria de desempenho.</p>
                                                 </div>
                                             </div>

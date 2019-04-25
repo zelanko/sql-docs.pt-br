@@ -1,163 +1,156 @@
-items:
 - name: Mecanismo de Banco de Dados
   href: sql-server-database-engine-overview.md
   items:
-  - name: Novidades (Mecanismo de Banco de Dados)
-    href: whats-new-in-sql-server-2016.md
-  - name: Compatibilidade com versões anteriores do Mecanismo de Banco de Dados do SQL Server
-    href: sql-server-database-engine-backward-compatibility.md
-    items:
-    - name: Recursos do Mecanismo de Banco de Dados preteridos no SQL Server 2014
-      href: deprecated-database-engine-features-in-sql-server-2016.md
-    - name: Funcionalidade do Mecanismo de Banco de Dados descontinuada no SQL Server 2014
-      href: discontinued-database-engine-functionality-in-sql-server-2016.md
-    - name: Alterações em recursos do Mecanismo de Banco de Dados que causam interrupção no SQL Server 2014
-      href: breaking-changes-to-database-engine-features-in-sql-server-2016.md
-    - name: Alterações no comportamento de recursos do Mecanismo de Banco de Dados no SQL Server 2014
-      href: behavior-changes-to-database-engine-features-in-sql-server-2014.md
-    - name: Compatibilidade com versões anteriores da pesquisa de texto completo
-      href: full-text-search-backward-compatibility.md
+    - name: Novidades (Mecanismo de Banco de Dados)
+      href: whats-new-in-sql-server-2016.md
+    - name: Compatibilidade com versões anteriores do Mecanismo de Banco de Dados do SQL Server
+      href: sql-server-database-engine-backward-compatibility.md
       items:
-      - name: Recursos de pesquisa de texto completo descontinuados no SQL Server 2014
-        href: discontinued-full-text-search-features-in-sql-server-2014.md
-      - name: Alterações recentes na pesquisa de texto completo
-        href: breaking-changes-to-full-text-search.md
-      - name: Alterações de comportamento na pesquisa de texto completo
-        href: behavior-changes-to-full-text-search.md
-  - name: Compatibilidade com versões anteriores das Ferramentas de Gerenciamento do SQL Server
-    href: sql-server-management-tools-backward-compatibility.md
-    items:
-    - name: Recursos das Ferramentas de Gerenciamento obsoletos no SQL Server 2014
-      href: deprecated-management-tools-features-in-sql-server-2014.md
-    - name: Recursos das Ferramentas de Gerenciamento descontinuados no SQL Server 2014
-      href: discontinued-management-tools-features-in-sql-server-2014.md
-    - name: Alterações de quebra feitas em recursos das Ferramentas de Gerenciamento do SQL Server 2014
-      href: breaking-changes-to-management-tools-features-in-sql-server-2014.md
-    - name: Alterações de comportamento feitas em recursos das Ferramentas de Gerenciamento do SQL Server 2014
-      href: behavior-changes-to-management-tools-features-in-sql-server-2014.md
+        - name: Recursos do Mecanismo de Banco de Dados preteridos no SQL Server 2014
+          href: deprecated-database-engine-features-in-sql-server-2016.md
+        - name: Funcionalidade do Mecanismo de Banco de Dados descontinuada no SQL Server 2014
+          href: discontinued-database-engine-functionality-in-sql-server-2016.md
+        - name: Alterações em recursos do Mecanismo de Banco de Dados que causam interrupção no SQL Server 2014
+          href: breaking-changes-to-database-engine-features-in-sql-server-2016.md
+        - name: Alterações no comportamento de recursos do Mecanismo de Banco de Dados no SQL Server 2014
+          href: behavior-changes-to-database-engine-features-in-sql-server-2014.md
+        - name: Compatibilidade com versões anteriores da pesquisa de texto completo
+          href: full-text-search-backward-compatibility.md
+          items:
+            - name: Recursos de pesquisa de texto completo descontinuados no SQL Server 2014
+              href: discontinued-full-text-search-features-in-sql-server-2014.md
+            - name: Alterações recentes na pesquisa de texto completo
+              href: breaking-changes-to-full-text-search.md
+            - name: Alterações de comportamento na pesquisa de texto completo
+              href: behavior-changes-to-full-text-search.md
+    - name: Compatibilidade com versões anteriores das Ferramentas de Gerenciamento do SQL Server
+      href: sql-server-management-tools-backward-compatibility.md
+      items:
+        - name: Recursos das Ferramentas de Gerenciamento obsoletos no SQL Server 2014
+          href: deprecated-management-tools-features-in-sql-server-2014.md
+        - name: Recursos das Ferramentas de Gerenciamento descontinuados no SQL Server 2014
+          href: discontinued-management-tools-features-in-sql-server-2014.md
+        - name: Alterações de quebra feitas em recursos das Ferramentas de Gerenciamento do SQL Server 2014
+          href: breaking-changes-to-management-tools-features-in-sql-server-2014.md
+        - name: Alterações de comportamento feitas em recursos das Ferramentas de Gerenciamento do SQL Server 2014
+          href: behavior-changes-to-management-tools-features-in-sql-server-2014.md
 - name: Continuidade de negócios
   href: ../sql-server/failover-clusters/high-availability-solutions-sql-server.md
   items:
-  - name: Grupos de Disponibilidade AlwaysOn
-    href: availability-groups/windows/toc.yml
-  - name: Instância de Cluster de Failover
-    href: ../sql-server/failover-clusters/toc.yml
-  - name: Espelhamento de banco de dados
-    href: database-mirroring/toc.yml
-  - name: Envio de logs
-    href: log-shipping/toc.yml
+    - name: Grupos de Disponibilidade AlwaysOn
+      href: availability-groups/windows/toc.yml
+    - name: Instância de Cluster de Failover
+      href: ../sql-server/failover-clusters/toc.yml
+    - name: Espelhamento de banco de dados
+      href: database-mirroring/toc.yml
+    - name: Envio de logs
+      href: log-shipping/toc.yml
 - name: Recursos e tarefas do Mecanismo de Banco de Dados
   href: database-engine-features-and-tasks.md
 - name: Instâncias do mecanismo de banco de dados (SQL Server)
   href: configure-windows/database-engine-instances-sql-server.md
   items:
-  - name: Configurar instâncias do Mecanismo de Banco de Dados +
-    href: configure-windows/toc.yml
-  - name: Suporte a ordenações e a Unicode +
-    href: ../relational-databases/collations/collation-and-unicode-support.md
-  - name: Servidores vinculados (Mecanismo de Banco de Dados)
-    href: ../relational-databases/linked-servers/linked-servers-database-engine.md
-    items:
-    - name: Criar servidores vinculados (Mecanismo de Banco de Dados do SQL Server)
-      href: ../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md
-  - name: Gatilhos de logon
-    href: ../relational-databases/triggers/logon-triggers.md
-    items:
-    - name: Capturar dados de eventos do gatilho de logon
-      href: ../relational-databases/triggers/capture-logon-trigger-event-data.md
-  - name: Gerenciar os serviços do Mecanismo de Banco de Dados +
-    href: configure-windows/manage-the-database-engine-services.md
-  - name: Configuração de rede do servidor +
-    href: configure-windows/server-network-configuration.md
-  - name: Configuração de rede de cliente +
-    href: configure-windows/client-network-configuration.md
-  - name: Geração de scripts do mecanismo de banco de dados +
-    href: ../relational-databases/scripting/database-engine-scripting.md
-  - name: Planos de manutenção +
-    href: ../relational-databases/maintenance-plans/maintenance-plans.md
-  - name: Resource Governor +
-    href: ../relational-databases/resource-governor/resource-governor.md
-  - name: Database Mail +
-    href: ../relational-databases/database-mail/database-mail.md
-  - name: Eventos estendidos +
-    href: ../relational-databases/extended-events/extended-events.md
-  - name: Rastreamento do SQL +
-    href: ../relational-databases/sql-trace/sql-trace.md
-  - name: SQL Server Profiler +
-    href: ../tools/sql-server-profiler/sql-server-profiler.md
-  - name: Controlar alterações de dados +
-    href: ../relational-databases/track-changes/track-data-changes-sql-server.md
-  - name: Visualizador do Arquivo de Log +
-    href: ../relational-databases/logs/log-file-viewer.md
-  - name: Orientador de Otimização do Mecanismo de Banco de Dados +
-    href: ../relational-databases/performance/database-engine-tuning-advisor.md
-  - name: Conexão de diagnóstico para administradores de banco de dados
-    href: configure-windows/diagnostic-connection-for-database-administrators.md
-  - name: Adaptador de nuvem para SQL Server
-    href: cloud-adapter-for-sql-server.md
-  - name: SQL Server 2014 Express LocalDB
-    href: configure-windows/sql-server-2016-express-localdb.md
-  - name: Servidores remotos
-    href: configure-windows/remote-servers.md
-  - name: Visão geral do SQL Server Monitor
-    href: configure-windows/sql-server-monitor-overview.md
-  - name: Service Broker
-    href: configure-windows/sql-server-service-broker.md
-  - name: Buffer Pool Extension
-    href: configure-windows/buffer-pool-extension.md
+    - name: Configurar instâncias do Mecanismo de Banco de Dados +
+      href: configure-windows/toc.yml
+    - name: Suporte a ordenações e a Unicode +
+      href: ../relational-databases/collations/collation-and-unicode-support.md
+    - name: Servidores vinculados (Mecanismo de Banco de Dados)
+      href: ../relational-databases/linked-servers/linked-servers-database-engine.md
+      items:
+        - name: Criar servidores vinculados (Mecanismo de Banco de Dados do SQL Server)
+          href: ../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md
+    - name: Gatilhos de logon
+      href: ../relational-databases/triggers/logon-triggers.md
+      items:
+        - name: Capturar dados de eventos do gatilho de logon
+          href: ../relational-databases/triggers/capture-logon-trigger-event-data.md
+    - name: Gerenciar os serviços do Mecanismo de Banco de Dados +
+      href: configure-windows/manage-the-database-engine-services.md
+    - name: Configuração de rede do servidor +
+      href: configure-windows/server-network-configuration.md
+    - name: Configuração de rede de cliente +
+      href: configure-windows/client-network-configuration.md
+    - name: Geração de scripts do mecanismo de banco de dados +
+      href: ../relational-databases/scripting/database-engine-scripting.md
+    - name: Planos de manutenção +
+      href: ../relational-databases/maintenance-plans/maintenance-plans.md
+    - name: Resource Governor +
+      href: ../relational-databases/resource-governor/resource-governor.md
+    - name: Database Mail +
+      href: ../relational-databases/database-mail/database-mail.md
+    - name: Eventos estendidos +
+      href: ../relational-databases/extended-events/extended-events.md
+    - name: Rastreamento do SQL +
+      href: ../relational-databases/sql-trace/sql-trace.md
+    - name: SQL Server Profiler +
+      href: ../tools/sql-server-profiler/sql-server-profiler.md
+    - name: Controlar alterações de dados +
+      href: ../relational-databases/track-changes/track-data-changes-sql-server.md
+    - name: Visualizador do Arquivo de Log +
+      href: ../relational-databases/logs/log-file-viewer.md
+    - name: Orientador de Otimização do Mecanismo de Banco de Dados +
+      href: ../relational-databases/performance/database-engine-tuning-advisor.md
+    - name: Conexão de diagnóstico para administradores de banco de dados
+      href: configure-windows/diagnostic-connection-for-database-administrators.md
+    - name: Adaptador de nuvem para SQL Server
+      href: cloud-adapter-for-sql-server.md
+    - name: SQL Server 2014 Express LocalDB
+      href: configure-windows/sql-server-2016-express-localdb.md
+    - name: Servidores remotos
+      href: configure-windows/remote-servers.md
+    - name: Visão geral do SQL Server Monitor
+      href: configure-windows/sql-server-monitor-overview.md
+    - name: Service Broker
+      href: configure-windows/sql-server-service-broker.md
+    - name: Buffer Pool Extension
+      href: configure-windows/buffer-pool-extension.md
 - name: Recursos de banco de dados +
   href: ../relational-databases/database-features.md
 - name: Recursos entre instâncias do Mecanismo de Banco de Dados
   href: database-engine-cross-instance-features.md
   items:
-  - name: SQL Server Management Studio +
-    href: ../ssms/sql-server-management-studio-ssms.md
-  - name: Gerenciamento de ciclo de vida do banco de dados
-    href: ../relational-databases/database-lifecycle-management.md
-  - name: Recursos e tarefas do Utilitário do SQL Server +
-    href: ../relational-databases/manage/sql-server-utility-features-and-tasks.md
-  - name: Administrar servidores com Gerenciamento Baseado em Políticas +
-    href: ../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md
-  - name: Servidores registrados +
-    href: ../ssms/register-servers/register-servers.md
-  - name: SQL Server Distributed Replay +
-    href: ../tools/distributed-replay/sql-server-distributed-replay.md
-  - name: Coleção de Dados +
-    href: ../relational-databases/data-collection/data-collection.md
-  - name: Monitorar o uso de recursos (Monitor do Sistema) +
-    href: ../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md
-  - name: Administrar vários servidores usando os Servidores Centrais de Gerenciamento
-    href: ../relational-databases/administer-multiple-servers-using-central-management-servers.md
-  - name: SQL Server Configuration Manager
-    href: ../relational-databases/sql-server-configuration-manager.md
-  - name: Monitor de Atividade
-    href: ../relational-databases/performance-monitor/activity-monitor.md
-    items:
-    - name: Abrir o Monitor de Atividade (SQL Server Management Studio)
-      href: ../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md
+    - name: SQL Server Management Studio +
+      href: ../ssms/sql-server-management-studio-ssms.md
+    - name: Gerenciamento de ciclo de vida do banco de dados
+      href: ../relational-databases/database-lifecycle-management.md
+    - name: Recursos e tarefas do Utilitário do SQL Server +
+      href: ../relational-databases/manage/sql-server-utility-features-and-tasks.md
+    - name: Administrar servidores com Gerenciamento Baseado em Políticas +
+      href: ../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md
+    - name: Servidores registrados +
+      href: ../ssms/register-servers/register-servers.md
+    - name: SQL Server Distributed Replay +
+      href: ../tools/distributed-replay/sql-server-distributed-replay.md
+    - name: Coleção de Dados +
+      href: ../relational-databases/data-collection/data-collection.md
+    - name: Monitorar o uso de recursos (Monitor do Sistema) +
+      href: ../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md
+    - name: Administrar vários servidores usando os Servidores Centrais de Gerenciamento
+      href: ../relational-databases/administer-multiple-servers-using-central-management-servers.md
+    - name: SQL Server Configuration Manager
+      href: ../relational-databases/sql-server-configuration-manager.md
+    - name: Monitor de Atividade
+      href: ../relational-databases/performance-monitor/activity-monitor.md
+      items:
+        - name: Abrir o Monitor de Atividade (SQL Server Management Studio)
+          href: ../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md
 - name: Central de segurança do Mecanismo de Banco de Dados do SQL Server e Banco de Dados SQL do Azure +
   href: ../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md
 - name: Referência técnica
   href: technical-reference-database-engine.md
   items:
-  - name: Referência de recurso
-    href: feature-reference-database-engine.md
-  - name: Referência de utilitários de prompt de comando (Mecanismo de Banco de Dados) +
-    href: ../tools/command-prompt-utility-reference-database-engine.md
-  - name: Referência do Mecanismo de Banco de Dados com o PowerShell
-    href: database-engine-powershell-reference.md
-    items:
-    - name: cmdlet Invoke-PolicyEvaluation
-      href: invoke-policyevaluation-cmdlet.md
-    - name: cmdlet Invoke-Sqlcmd
-      href: invoke-sqlcmd-cmdlet.md
-    - name: Expressões de consultas e nomes de recursos uniformes
-      href: ../powershell/query-expressions-and-uniform-resource-names.md
+    - name: Referência de recurso
+      href: feature-reference-database-engine.md
+    - name: Referência de utilitários de prompt de comando (Mecanismo de Banco de Dados) +
+      href: ../tools/command-prompt-utility-reference-database-engine.md
+    - name: Referência do Mecanismo de Banco de Dados com o PowerShell
+      href: database-engine-powershell-reference.md
+      items:
+        - name: cmdlet Invoke-PolicyEvaluation
+          href: invoke-policyevaluation-cmdlet.md
+        - name: cmdlet Invoke-Sqlcmd
+          href: invoke-sqlcmd-cmdlet.md
+        - name: Expressões de consultas e nomes de recursos uniformes
+          href: ../powershell/query-expressions-and-uniform-resource-names.md
 - name: Referência de Erros e Eventos +
   href: ../relational-databases/errors-events/errors-and-events-reference-database-engine.md
-ms.openlocfilehash: e9d7654eeed121b5d545547305b0a1a6500b8ca5
-ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55513846"

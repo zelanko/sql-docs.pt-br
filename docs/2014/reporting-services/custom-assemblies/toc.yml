@@ -13,5 +13,5 @@
       href: accessing-custom-assemblies-through-expressions.md
     - name: Inicializando objetos assembly personalizados
       href: initializing-custom-assembly-objects.md
-    - name: Como depurar assemblies personalizados
+    - name: 'Como fazer: Depurar assemblies personalizados'
       href: how-to-debug-custom-assemblies.md

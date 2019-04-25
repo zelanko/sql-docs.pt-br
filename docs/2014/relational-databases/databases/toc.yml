@@ -20,7 +20,7 @@
   items:
     - name: Recursos modificados (banco de dados independente)
       href: modified-features-contained-database.md
-    - name: Agrupamentos de banco de dados contidos
+    - name: Ordenações de banco de dados independentes
       href: contained-database-collations.md
     - name: Security Best Practices with Contained Databases
       href: security-best-practices-with-contained-databases.md

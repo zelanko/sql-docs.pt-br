@@ -188,7 +188,7 @@
 - name: Categoria de evento Progress Report
   href: progress-report-event-category.md
   items:
-    - name: 'Classe de evento Progress Report: Online Index Operation'
+    - name: 'Relatório de andamento: Classe de evento Operação de Índice Online'
       href: progress-report-online-index-operation-event-class.md
 - name: Categoria de eventos Query Notifications
   href: query-notifications-event-category.md
@@ -349,27 +349,27 @@
   items:
     - name: classe de evento DTCTransaction
       href: dtctransaction-event-class.md
-    - name: Classe de evento SQLTransaction
+    - name: classe de evento SQLTransaction
       href: sqltransaction-event-class.md
-    - name: 'classe de evento TM: Begin Tran Completed'
+    - name: 'TM: Classe de evento Begin Tran Completed'
       href: tm-begin-tran-completed-event-class.md
-    - name: 'classe de evento TM: Begin Tran Starting'
+    - name: 'TM: Classe de evento Begin Tran Starting'
       href: tm-begin-tran-starting-event-class.md
-    - name: 'classe de evento TM: Commit Tran Completed'
+    - name: 'TM: Classe de evento Commit Tran Completed'
       href: tm-commit-tran-completed-event-class.md
-    - name: 'Classe de evento TM: Commit Tran Starting'
+    - name: 'TM: Classe de evento Commit Tran Starting'
       href: tm-commit-tran-starting-event-class.md
-    - name: 'classe de evento TM: Promote Tran Completed'
+    - name: 'TM: Classe de evento Promote Tran Completed'
       href: tm-promote-tran-completed-event-class.md
-    - name: 'classe de evento TM: Promote Tran Starting'
+    - name: 'TM: Classe de evento Promote Tran Starting'
       href: tm-promote-tran-starting-event-class.md
-    - name: 'classe de evento TM: Rollback Tran Completed'
+    - name: 'TM: Classe de evento Rollback Tran Completed'
       href: tm-rollback-tran-completed-event-class.md
-    - name: 'classe de evento TM: Rollback Tran Starting'
+    - name: 'TM: Classe de evento Rollback Tran Starting'
       href: tm-rollback-tran-starting-event-class.md
-    - name: 'Classe de evento TM: Save Tran Completed'
+    - name: 'TM: Classe de evento Save Tran Completed'
       href: tm-save-tran-completed-event-class.md
-    - name: 'Classe de evento TM: Save Tran Starting'
+    - name: 'TM: Classe de evento Save Tran Starting'
       href: tm-save-tran-starting-event-class.md
     - name: classe de evento TransactionLog
       href: transactionlog-event-class.md
