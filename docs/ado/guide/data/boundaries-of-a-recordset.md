@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c9e05a45b5f035a500e210c991a33216be318ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633444"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472820"
 ---
 # <a name="boundaries-of-a-recordset"></a>Limites de um conjunto de registros
 **Conjunto de registros** oferece suporte a **BOF** e **EOF** propriedades para delimitar o início e no final, respectivamente, do conjunto de dados. Você pode pensar **BOF** e **EOF** como "fantasmas" registros que são posicionados no início e no final do **conjunto de registros**. Contando **BOF** e **EOF**, em nosso exemplo **Recordset** agora ficaria assim:  
@@ -32,7 +32,7 @@ ms.locfileid: "47633444"
 |14|Bananas|23.2500|  
 |28|Rssle chucrute|45.6000|  
 |51|Maçãs Secas Manjimup|53.0000|  
-|74|Longlife Bananas|10.0000|  
+|74|Longlife Tofu|10.0000|  
 |EOF|||  
   
  Quando um cursor se move além do último registro, **EOF** é definido como **verdadeiro**; caso contrário, seu valor é **False**. Da mesma forma, quando o cursor é movido antes do primeiro registro, **BOF** é definido como **verdadeiro**; caso contrário, seu valor é **False**. Essas propriedades são comumente usadas ao enumerar os registros no conjunto de dados, conforme ilustrado no seguinte fragmento de código JScript.  

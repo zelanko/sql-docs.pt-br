@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fabd9efd5e6dcfcabd318584364d8f1d70752ad9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760774"
 ---
 # <a name="modifying-a-visual-foxpro-data-source"></a>Modificar uma fonte de dados do Visual FoxPro
 ### <a name="to-modify-a-visual-foxpro-data-source"></a>Para modificar uma fonte de dados do Visual FoxPro  

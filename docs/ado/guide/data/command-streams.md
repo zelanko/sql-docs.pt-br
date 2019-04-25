@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e6a5e9581a2a236eab869e74825ee97e7e289d44
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472692"
 ---
 # <a name="command-streams"></a>Fluxos de comando
 ADO sempre tem suporte para entrada de comando no formato de cadeia de caracteres especificado pelo **CommandText** propriedade. Como alternativa, com o ADO 2.7 ou posterior, você também pode usar um fluxo de informações para a entrada de comando, atribuindo o fluxo para o **CommandStream** propriedade. Você pode atribuir ADO **Stream** ou qualquer objeto que dá suporte a COM **IStream** interface.  

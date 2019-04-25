@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 68ad3e3663527d6a3074d5196a9f418e092edb9d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62763651"
 ---
 # <a name="technical-reference-master-data-services"></a>Referência técnica (Master Data Services)
   Localize informações de referência técnica sobre os componentes do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  

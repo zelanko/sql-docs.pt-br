@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 59eedf95c9e8e8bd9ff4a44c88e2574efe0048e3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34042990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467860"
 ---
 # <a name="relationship-representation-tabular"></a>Representação de relação (de tabela)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "34042990"
 ### <a name="relationship-in-amo"></a>Relação no AMO  
  Em termos de objetos AMO, todas as relações inativas têm uma representação de uma relação de mapeamento um para um com o <xref:Microsoft.AnalysisServices.Relationship> e nenhum outro objeto AMO principal é exigido; para a relação ativa outros requisitos existem e um mapeamento para o <xref:Microsoft.AnalysisServices.ReferenceMeasureGroupDimension> também é exigido.  
   
- Os trechos de códigos a seguir mostram como criar uma relação em modelos de tabela, como ativar uma relação e como definir uma chave primária em uma tabela (além de "RowNumber"). Para criar uma relação ativa, uma chave primária precisa ser definida na tabela de chave primária - PKTableName - da relação (o lado um da relação). O exemplo mostrado aqui cria a chave primária no PKColumnName se nenhuma chave primária tiver sido definida nesta coluna. Podem ser criadas relações inativas sem a necessidade de ter uma chave primária na coluna de chave primária.  
+ Os snippets de códigos a seguir mostram como criar uma relação em modelos de tabela, como ativar uma relação e como definir uma chave primária em uma tabela (além de "RowNumber"). Para criar uma relação ativa, uma chave primária precisa ser definida na tabela de chave primária - PKTableName - da relação (o lado um da relação). O exemplo mostrado aqui cria a chave primária no PKColumnName se nenhuma chave primária tiver sido definida nesta coluna. Podem ser criadas relações inativas sem a necessidade de ter uma chave primária na coluna de chave primária.  
   
 ```  
   

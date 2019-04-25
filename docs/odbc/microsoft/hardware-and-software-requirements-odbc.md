@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b3f40621645aad2d1e52cb0a89baa8ff29b01446
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471317"
 ---
 # <a name="hardware-and-software-requirements-odbc"></a>Requisitos de hardware e de software (ODBC)
 Este tópico lista os requisitos para usar os Drivers de banco de dados de área de trabalho do ODBC.  

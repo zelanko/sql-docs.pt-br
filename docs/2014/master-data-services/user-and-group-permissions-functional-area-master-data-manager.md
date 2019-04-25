@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bb4422ea0b2ac93ec928bc8ae755f715cb4def44
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62763352"
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>Área funcional Permissões de Usuário e de Grupo (Master Data Manager)
   Na área funcional Permissões de Usuário e de Grupo, os administradores podem conceder permissão a áreas funcionais, a atributos (na guia Modelos) e a membros (na guia Membros da Hierarquia). Permissões sobrepostas são resolvidas para determinar uma permissão de usuário para cada valor de atributo individual.  

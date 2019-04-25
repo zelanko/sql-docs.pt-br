@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b15f077132fcc50c89dd93a38525316bf112f0a7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62465439"
 ---
 # <a name="browser-cube-designer-analysis-services---multidimensional-data"></a>Navegador (Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use a guia **Navegador** do Designer de Cubo para explorar dimensões, medidas e KPIs em um cubo. No [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], o Navegador do Cubo do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] foi integrado com o Designer de Consulta MDX e fornece interfaces gráficas do usuário para ajudar a criar consultas MDX, filtrar e fatiar cubos, além de fazer buscas detalhadas em hierarquias.  
   
- A guia **Navegador** em dois modos: o **Modo de Design** e o **Modo de Consulta**. Em qualquer modo, você pode usar os objetos do painel **Metadados** para explorar o cubo ou pode arrastar membros do painel **Metadados** para a área de consulta a fim de criar uma consulta MDX que recupere os dados que você deseja usar.  
+ O **navegador** guia tem dois modos: **Modo de design** e **modo de consulta**. Em qualquer modo, você pode usar os objetos do painel **Metadados** para explorar o cubo ou pode arrastar membros do painel **Metadados** para a área de consulta a fim de criar uma consulta MDX que recupere os dados que você deseja usar.  
   
  **Procurar e consultar usando o modo de Design gráfico**  
   

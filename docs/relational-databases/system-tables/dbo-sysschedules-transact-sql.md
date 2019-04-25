@@ -1,5 +1,5 @@
 ---
-title: dbo. sysschedules (Transact-SQL) | Microsoft Docs
+title: dbo.sysschedules (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a1922fd8b9cdfb327186afe453fc1904d698579
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470708"
 ---
 # <a name="dbosysschedules-transact-sql"></a>dbo.sysschedules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,17 +33,17 @@ ms.locfileid: "47674366"
   Contém informações sobre agendas de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Essa tabela é armazenada na **msdb** banco de dados.  
   
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|ID da agenda de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|  
 |**schedule_uid**|**uniqueidentifier**|Identificador exclusivo da agenda do trabalho. Este valor é usado para identificar uma agenda para trabalhos distribuídos.|  
 |**originating_server_id**|**int**|ID do servidor mestre do qual a agenda de trabalho foi originada.|  
 |**name**|**sysname (nvarchar(128))**|Nome definido pelo usuário para a agenda de trabalho. Este nome deve ser exclusivo em um trabalho.|  
 |**owner_sid**|**varbinary(85)**|Microsoft Windows *security_identifier* do usuário ou grupo que possui a agenda de trabalho.|  
-|**habilitado**|**int**|O status da agenda de trabalho:<br /><br /> **0** = não habilitado.<br /><br /> **1** = habilitado.<br /><br /> Se o agendamento não estiver habilitado, nenhum trabalho será executado nele.|  
+|**enabled**|**int**|O status da agenda de trabalho:<br /><br /> **0** = não habilitado.<br /><br /> **1** = habilitado.<br /><br /> Se o agendamento não estiver habilitado, nenhum trabalho será executado nele.|  
 |**freq_type**|**int**|A frequência com que um trabalho é executado para esta agenda.<br /><br /> **1** = apenas uma vez<br /><br /> **4** = diariamente<br /><br /> **8** = semanalmente<br /><br /> **16** = mensalmente<br /><br /> **32** = mensalmente, relativo ao **freq_interval**<br /><br /> **64** = executado quando o serviço do SQL Server Agent é iniciado<br /><br /> **128** = executado quando o computador estiver ocioso|  
 |**freq_interval**|**int**|Dias em que o trabalho é executado. Depende do valor de **freq_type**. O valor padrão é **0**, que indica que **freq_interval** não é usado. Consulte a tabela abaixo para os valores possíveis e seus efeitos.|  
-|**freq_subday_type**|**int**|Unidades para o **freq_subday_interval**. A seguir estão os valores possíveis e suas descrições.<br /><br /> <br /><br /> **1** : no momento especificado<br /><br /> **2** : segundos<br /><br /> **4** : minutos<br /><br /> **8** : horas|  
+|**freq_subday_type**|**int**|Unidades para o **freq_subday_interval**. A seguir estão os valores possíveis e suas descrições.<br /><br /> <br /><br /> **1** : Na hora especificada<br /><br /> **2** : Seconds (segundos)<br /><br /> **4** : Minutes (minutos)<br /><br /> **8** : Hours (horas)|  
 |**freq_subday_interval**|**int**|Número de **freq_subday_type** períodos ocorrer entre cada execução do trabalho.|  
 |**freq_relative_interval**|**int**|Quando **freq_interval** ocorre em cada mês, se **freq_interval** está **32** (mensal relativo). Pode ser um dos seguintes valores:<br /><br /> **0** = **freq_relative_interval** não é usado<br /><br /> **1** = primeiro<br /><br /> **2** = segundo<br /><br /> **4** = terceiro<br /><br /> **8** = quarto<br /><br /> **16** = último|  
 |**freq_recurrence_**<br /><br /> **factor**|**int**|Número de semanas ou meses entre execuções agendadas de um trabalho. **freq_recurrence_factor** é usado somente se **freq_type** é **8**, **16**, ou **32**. Se essa coluna contiver **0**, **freq_recurrence_factor** não é usado.|  
@@ -66,6 +66,6 @@ ms.locfileid: "47674366"
 |**128** (executado quando o computador estiver ocioso)|**freq_interval** não é usado (**0**)|  
   
 ## <a name="see-also"></a>Confira também  
- [dbo. sysjobschedules &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
+ [dbo.sysjobschedules &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
   
   

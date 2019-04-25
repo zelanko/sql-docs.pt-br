@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 45d9203a08b9c70809e81fb3d9cf84a521017068
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628591"
 ---
 # <a name="file-based-drivers"></a>Drivers baseados em arquivo
-Drivers baseados em arquivo são usadas com fontes de dados como dBASE que não fornecem um mecanismo de banco de dados autônomo para o driver a ser usado. Esses drivers acessam os dados físicos diretamente e devem implementar um mecanismo de banco de dados para as instruções SQL de processo. Como uma prática padrão, os mecanismos de banco de dados nos drivers baseados em arquivo implementam o subconjunto de ODBC SQL definido pelo nível de conformidade SQL mínimo; Para obter uma lista das instruções SQL nesse nível de compatibilidade, consulte [apêndice c: SQL gramática](../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
+Drivers baseados em arquivo são usadas com fontes de dados como dBASE que não fornecem um mecanismo de banco de dados autônomo para o driver a ser usado. Esses drivers acessam os dados físicos diretamente e devem implementar um mecanismo de banco de dados para as instruções SQL de processo. Como uma prática padrão, os mecanismos de banco de dados nos drivers baseados em arquivo implementam o subconjunto de ODBC SQL definido pelo nível de conformidade SQL mínimo; Para obter uma lista das instruções SQL nesse nível de compatibilidade, consulte [apêndice c: Gramática SQL](../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
   
  Nos drivers baseados em DBMS e arquivo de comparação, drivers baseados em arquivo são menos avançados e mais difícil de escrever por causa do componente de mecanismo de banco de dados, menos complicado configurar porque não há nenhum partes da rede, porque algumas pessoas tenham o tempo de gravação de banco de dados mecanismos de tão poderosos quanto aqueles gerados por empresas de banco de dados.  
   

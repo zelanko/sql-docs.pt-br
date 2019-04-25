@@ -14,13 +14,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc38ad1ed2ab29660ea7caade8a56c7fec042540
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760874"
 ---
-# <a name="summary-converting-a-table-to-a-hierarchical-structure"></a>Resumo: convertendo uma tabela para uma estrutura hierárquica
+# <a name="summary-converting-a-table-to-a-hierarchical-structure"></a>Resumo: conversão de uma tabela em uma estrutura hierárquica
   O tipo de dados `hierarchyid` pode armazenar uma relação hierárquica em um formato simples, compacto. Os índices adequados podem retornar dados de maneira eficaz pelo nível da hierarquia, por subárvores da hierarquia, ou através de pesquisas singleton tradicionais.  
   
  Nesta lição, você usou dois dos métodos hierárquicos. A próxima lição demonstrará como usar mais destes métodos para consultar e manipular os dados hierárquicos.  

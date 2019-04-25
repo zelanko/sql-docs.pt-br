@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9228eb879ed1417b31c95d53783d32acf53bcdb4
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509691"
 ---
 # <a name="powershell-reference-for-power-pivot-for-sharepoint"></a>Referência do PowerShell para PowerPivot para SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

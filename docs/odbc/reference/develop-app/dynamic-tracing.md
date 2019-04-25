@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 63dbfda01d96cad53e5830e598b5812ed79d8f04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468773"
 ---
 # <a name="dynamic-tracing"></a>Rastreamento dinâmico
 O rastreamento pode ser habilitado ou desabilitado em qualquer ponto em um aplicativo execute. Isso permite que um aplicativo rastrear qualquer número de chamadas de função.  

@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8ddb2ae5f0298a2f7d182bb5e1ef7057827617fe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62518210"
 ---
 # <a name="master-data-services-developer-documentation"></a>Documentação do desenvolvedor do Master Data Services
 
@@ -24,16 +24,16 @@ ms.locfileid: "47812234"
 
   Localize informações sobre como gravar código para personalizar o modo como você e seus usuários interagem com o [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Saiba como:  
   
--   Escreva um programa que acesse o serviço Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. O serviço Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] é um serviço WCF (Windows Communication Foundation) que os desenvolvedores usam para controlar recursos do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] por meio de código.  
+-   Escreva um programa que acesse o serviço Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] . O serviço Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] é um serviço WCF (Windows Communication Foundation) que os desenvolvedores usam para controlar recursos do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] por meio de código.  
   
 -   Incorpore recursos do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] nos aplicativos existentes.  
   
--   Escreva código para executar ações repetitivas ou complexas que são difíceis ou impossíveis de realizar com a interface de usuário do [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].  
+-   Escreva código para executar ações repetitivas ou complexas que são difíceis ou impossíveis de realizar com a interface de usuário do [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] .  
   
 -   Crie um fluxo de trabalho personalizado que seja executado em resposta a uma regra de negócio especificada por você. Um fluxo de trabalho personalizado chama o código que você escreve, que pode executar qualquer em ação necessária para processar o fluxo de trabalho.  
   
 ## <a name="master-data-manager-web-service"></a>Serviço Web Master Data Manager  
- O serviço Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] permite a você fazer uso programático dos recursos do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] de qualquer computador que possa acessar seu site do [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. Antes de começar a gravar código para acessar o serviço Web, você deve gerar classes proxy, que estão contidas em um namespace que você especifica. Esta documentação usa <xref:Microsoft.MasterDataServices> como o namespace de proxy. A classe proxy principal que você usa para executar operações de serviço Web é a classe <xref:Microsoft.MasterDataServices.ServiceClient>, que implementa a interface <xref:Microsoft.MasterDataServices.IService>. De seu código, chame métodos da classe <xref:Microsoft.MasterDataServices.ServiceClient> para acessar o serviço Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. O restante das classes no namespace é usado pelas operações de serviço Web.  
+ O serviço Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] permite a você fazer uso programático dos recursos do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] de qualquer computador que possa acessar seu site do [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] . Antes de começar a gravar código para acessar o serviço Web, você deve gerar classes proxy, que estão contidas em um namespace que você especifica. Esta documentação usa <xref:Microsoft.MasterDataServices> como o namespace de proxy. A classe proxy principal que você usa para executar operações de serviço Web é a classe <xref:Microsoft.MasterDataServices.ServiceClient>, que implementa a interface <xref:Microsoft.MasterDataServices.IService>. De seu código, chame métodos da classe <xref:Microsoft.MasterDataServices.ServiceClient> para acessar o serviço Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. O restante das classes no namespace é usado pelas operações de serviço Web.  
   
 ### <a name="web-service-content"></a>Conteúdo do serviço Web  
  [Criar classes proxy do serviço Web do Master Data Manager](../../master-data-services/develop/create-master-data-manager-web-service-proxy-classes.md)  
@@ -54,10 +54,10 @@ ms.locfileid: "47812234"
   
 |Namespace|Descrição|  
 |---------------|-----------------|  
-|<xref:Microsoft.MasterDataServices.Deployment>|Contém classes que podem ser usadas para criar um pacote de implantação de um modelo e para implantar um pacote em um banco de dados do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].|  
-|<xref:Microsoft.MasterDataServices.Services>|Contém uma classe que recebe e processa operações de serviço Web feitas no computador do servidor Web por meio do aplicativo Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].|  
+|<xref:Microsoft.MasterDataServices.Deployment>|Contém classes que podem ser usadas para criar um pacote de implantação de um modelo e para implantar um pacote em um banco de dados do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .|  
+|<xref:Microsoft.MasterDataServices.Services>|Contém uma classe que recebe e processa operações de serviço Web feitas no computador do servidor Web por meio do aplicativo Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] .|  
 |<xref:Microsoft.MasterDataServices.Services.DataContracts>|Contém classes que definem como os dados são transmitidos do computador cliente por meio do aplicativo Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] para o computador do servidor Web.|  
 |<xref:Microsoft.MasterDataServices.Services.MessageContracts>|Contém classes que definem como as solicitações e as respostas são transmitidas do computador cliente por meio do aplicativo Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] para o computador do servidor Web.|  
-|<xref:Microsoft.MasterDataServices.Services.ServiceContracts>|Contém a interface que define as operações que podem ser chamadas por meio do serviço Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].|  
+|<xref:Microsoft.MasterDataServices.Services.ServiceContracts>|Contém a interface que define as operações que podem ser chamadas por meio do serviço Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] .|  
   
   

@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aef22dfdc18304591b8d556fd323ba6b851778eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757818"
 ---
 # <a name="suggest-related-columns-data-mining-wizard"></a>Sugerir colunas relacionadas (Assistente de Mineração de Dados)
   Use a página **Sugerir Colunas Relacionadas** para exibir as recomendações do recurso **Sugerir** , que você selecionou na página anterior do assistente. Colunas de entrada serão pré-selecionadas com base em sua associação à coluna **Previsível** selecionada. Se você aceitar as alterações nesta caixa de diálogo, elas se refletirão na página **Especificar os Dados de Treinamento** .  
   
- **Para obter mais informações:** [Assistente de Mineração de Dados &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Criar uma estrutura de mineração relacional](data-mining/create-a-relational-mining-structure.md)  
+ **Para obter mais informações:** [Assistente de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [criar uma estrutura de mineração relacional](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Opções  
  **Nome da coluna**  

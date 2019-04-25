@@ -1,5 +1,5 @@
 ---
-title: Conflict _&lt;esquema&gt;_&lt;tabela&gt; (Transact-SQL) | Microsoft Docs
+title: conflict_&lt;schema&gt;_&lt;table&gt; (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/15/2016
 ms.prod: sql
@@ -19,13 +19,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dd226aef62c2d05eead5e2b5f72b2f358422025a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471075"
 ---
-# <a name="conflictltschemagtlttablegt-transact-sql"></a>Conflict _&lt;esquema&gt;_&lt;tabela&gt; (Transact-SQL)
+# <a name="conflictltschemagtlttablegt-transact-sql"></a>conflict_&lt;schema&gt;_&lt;table&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   O Conflict _\<esquema > _\<tabela > tabela contém informações sobre linhas conflitantes na replicação ponto a ponto. Existe uma tabela de conflitos para cada tabela replicada na publicação, onde o nome da tabela de conflitos é anexada ao nome da publicação e do esquema. Estas tabelas de conflitos específicas do artigo existem em cada banco de dados de publicação.  
@@ -42,10 +42,10 @@ ms.locfileid: "52808898"
 |__$pre_version|**varbinary (32)**|Versão do banco de dados no qual originou-se a alteração conflitante.|  
 |__$reason_code|**int**|Código de resolução para o conflito. Pode ser um dos seguintes valores:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> Para obter mais informações, consulte **_ $reason_text**.|  
 |__$reason_text|**nvarchar (720)**|Resolução para o conflito. Pode ser um dos seguintes valores:<br /><br /> Resolvido (1)<br /><br /> Não resolvido (2)<br /><br /> Desconhecido (0)|  
-|__$update_bitmap|**varbinary (** *n* **)**. Tamanho varia de acordo com o conteúdo.|Bitmap que indica quais colunas foram atualizadas na ocorrência de um conflito atualização- atualização.|  
+|__$update_bitmap|**varbinary(** *n* **)**. Tamanho varia de acordo com o conteúdo.|Bitmap que indica quais colunas foram atualizadas na ocorrência de um conflito atualização- atualização.|  
 |__$inserted_date|**datetime**|Dada e hora em que a linha conflitante foi inserida nesta tabela.|  
 |__$row_id|**timestamp**|Versão da linha associada à linha que causou o conflito.|  
-|__$change_id|**binário (8)**|No caso de uma linha local, este valor é igual a __$row_id da linha de entrada que gerou o conflito com a linha local. Esse valor é NULL para uma linha de entrada.|  
+|__$change_id|**binary (8)**|No caso de uma linha local, este valor é igual a __$row_id da linha de entrada que gerou o conflito com a linha local. Esse valor é NULL para uma linha de entrada.|  
 |\<nomes de coluna da tabela de base >|\<tipos de coluna de tabela base >|A tabela de conflito contém uma coluna para cada coluna na tabela base.|  
   
 ## <a name="see-also"></a>Consulte também  

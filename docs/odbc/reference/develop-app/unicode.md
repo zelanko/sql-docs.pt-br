@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1e6201b83b909573476b043cdb1a10543f894def
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632543"
 ---
 # <a name="unicode"></a>Unicode
 O Unicode define a codificação de caracteres em várias linguagens.  

@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: decc6e25cc8480dfaf041a79baa0972bdd78e569
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62625856"
 ---
 # <a name="refresh-from-database-oracletosql"></a>Atualização do banco de dados (OracleToSQL)
 O **Refresh do banco de dados** caixa de diálogo permite que você selecione quais objetos de atualização do banco de dados Oracle. Linhas na caixa de diálogo são codificadas por cores com base no estado de metadados:  

@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8e33c6aefcb1286e8550e539e1d403953aa6fa6b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62518626"
 ---
 # <a name="business-rule-examples-master-data-services"></a>Ações de regras de negócio (Master Data Services)
 
@@ -61,7 +61,7 @@ Else
   
 Modelo de exemplo  |Entidade  |Nome da regra de negócio| Descrição    
 ---------|---------|---------|-----------  
-Product     |  Product       | DaysToManufacture |Especifica o intervalo de dias até a fabricação interna.          
+Produto     |  Produto       | DaysToManufacture |Especifica o intervalo de dias até a fabricação interna.          
 Na regra de negócio a seguir, se o valor do atributo InHouseManufacture atender à `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), then the `must be between` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the DaysToManufacture attribute. Caso contrário, nenhuma ação será tomada.  
 ```  
 If  
@@ -77,7 +77,7 @@ Else
   
 Modelo de exemplo  |Entidade  |Nome da regra de negócio|Descrição    
 ---------|---------|---------|-------------  
-Product     |Product         |Campos obrigatórios| Especifica os atributos necessários para os membros da entidade de produto.           
+Produto     |Product         |Campos obrigatórios| Especifica os atributos necessários para os membros da entidade de produto.           
 Na regra de negócio a seguir, em todas as condições, a `is required` [validation action](../master-data-services/business-rule-actions-master-data-services.md) is taken for the specified attributes. Os valores de atributo não podem ser Nulo nem vazio.  
 ```  
 If  
@@ -102,7 +102,7 @@ Else
   
 Modelo de exemplo  |Entidade  |Nome da regra de negócio|Descrição    
 ---------|---------|---------|-----------  
-Product     | Product        |  Custo padrão| Exige que o custo padrão seja maior que 0.        
+Produto     | Produto        |  Custo padrão| Exige que o custo padrão seja maior que 0.        
 Na regra de negócio a seguir, em todas as condições, a `must be greater than` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the StandardCost attribute of products.  
 ```  
 If  
@@ -118,7 +118,7 @@ Else
   
 Modelo de exemplo  |Entidade  |Nome da regra de negócio|Descrição    
 ---------|---------|---------|------------  
-Product     | Product        | FG MSRP Custo|Especifica que, se o produto for uma mercadoria concluída, o MSRP (preço de varejo sugerido pelo fabricante) e os custos do revendedor deverão ser maiores que 0.           
+Produto     | Produto        | FG MSRP Custo|Especifica que, se o produto for uma mercadoria concluída, o MSRP (preço de varejo sugerido pelo fabricante) e os custos do revendedor deverão ser maiores que 0.           
   
 Na regra de negócio a seguir, se o valor do atributo FinishedGoodIndicator atender à `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), the `must be greater than` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the MSRP and DealerCost attributes.  
 ```  
@@ -136,7 +136,7 @@ Else
   
 Modelo de exemplo  |Entidade  |Nome da regra de negócio|Descrição    
 ---------|---------|---------|------------  
-Product     | Product        |  Nome padrão| Especifica o nome do produto padrão com base nos valores dos atributos Color e Class. Quando o valor do atributo Color não for YLO e o atributo Class não for NA, o nome padrão será Yellow NA.         
+Produto     | Produto        |  Nome padrão| Especifica o nome do produto padrão com base nos valores dos atributos Color e Class. Quando o valor do atributo Color não for YLO e o atributo Class não for NA, o nome padrão será Yellow NA.         
 Na regra de negócio a seguir, se os atributos Color e Class não atenderem à condição de regra `is equal` , a `defaults to` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the Name attribute.  
 ```  
 If  

@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 1e391bc85bc74ac9bd7394161298b190426926ad
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62473415"
 ---
 # <a name="install-sql-server-bi-features-with-sharepoint-powerpivot-and-reporting-services"></a>Instalar recursos do SQL Server BI para o SharePoint (PowerPivot e Reporting Services)
   O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] podem ser integrados a um farm do Microsoft SharePoint para habilitar recursos de BI (Business Intelligence) no SharePoint. Os recursos incluem [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] é usado para [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] acesso a dados em um farm do SharePoint. O [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] é o mecanismo de dados para pastas de trabalho criadas no [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel e acessadas de uma biblioteca do SharePoint. Ao salvar uma pasta de trabalho [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no SharePoint, você poderá usá-la como uma fonte de dados para relatórios do [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] .  

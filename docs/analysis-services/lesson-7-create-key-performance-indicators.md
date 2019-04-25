@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ecfedbbc4b7e606f1589f2b5415c5355bb0d95e1
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42790097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62523367"
 ---
-# <a name="lesson-7-create-key-performance-indicators"></a>Lição 7: criar indicadores chave de desempenho
+# <a name="lesson-7-create-key-performance-indicators"></a>Lição 7: Criar indicadores chave de desempenho
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 Nesta lição, você criará KPIs (indicadores chave de desempenho). Os KPIs são usados para medir o desempenho de um valor, definido por uma medida *Base* , em relação a um valor de *Destino* , também definido por uma medida ou um valor absoluto. Nos aplicativos cliente de relatório, os KPIs podem proporcionar aos profissionais comerciais um modo rápido e fácil de entender um resumo de êxito comercial ou identificar tendências. Para obter mais informações, consulte [KPIs](../analysis-services/tabular-models/kpis-ssas-tabular.md).  
@@ -24,7 +24,7 @@ Nesta lição, você criará KPIs (indicadores chave de desempenho). Os KPIs sã
 Tempo estimado para concluir esta lição: **15 minutos**  
   
 ## <a name="prerequisites"></a>Prerequisites  
-Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [lição 6: criar medidas](../analysis-services/lesson-6-create-measures.md).   
+Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [Lição 6: Criar medidas](../analysis-services/lesson-6-create-measures.md).   
   
 ## <a name="create-key-performance-indicators"></a>Criar indicadores chave de desempenho  
   
@@ -50,7 +50,7 @@ Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluí
   
 8.  Em **Selecionar Estilo de Ícone**, selecione o tipo de ícone losango (vermelho), triângulo (amarelo) e círculo (verde).
   
-    ![como-tabela-lesson7-kpi](../analysis-services/media/as-tabular-lesson7-kpi.png)
+    ![as-tabular-lesson7-kpi](../analysis-services/media/as-tabular-lesson7-kpi.png)
     
     > [!TIP]  
     > Observe o expansível **descrições** rótulo abaixo dos estilos de ícone disponíveis. Use isso para inserir as descrições para os vários elementos KPI para torná-los mais identificáveis nos aplicativos cliente.  
@@ -78,6 +78,6 @@ Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluí
 6.  Em **Selecionar Estilo de Ícone**, selecione o tipo de ícone losango (vermelho), triângulo (amarelo) e círculo (verde) e clique em **OK**.  
   
 ## <a name="whats-next"></a>O que vem a seguir?
-Vá para a próxima lição: [lição 8: criar perspectivas](../analysis-services/lesson-8-create-perspectives.md).
+Vá para a próxima lição: [Lição 8: Criar perspectivas](../analysis-services/lesson-8-create-perspectives.md).
   
   

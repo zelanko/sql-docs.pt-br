@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 020d9dbadc323aa751a90a0b0cbd886ba503d637
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62505961"
 ---
 # <a name="feature-selection-uninstall"></a>Seleção de recursos (desinstalação)
   Use a seleção de recursos - desinstala a página para selecionar recursos a serem removidos da instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

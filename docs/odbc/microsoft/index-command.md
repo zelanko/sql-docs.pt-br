@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 864f6fa78ab1ef23b7db3a0be4c85738b95ea72d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471254"
 ---
 # <a name="index-command"></a>Comando INDEX
 Cria um arquivo de índice para exibir e acessar os registros da tabela em uma ordem lógica.  
@@ -46,10 +46,10 @@ INDEX ON eExpression TO IDXFileName | TAG TagName [OF CDXFileName]
   
  É possível criar uma chave de índice com comprimento zero. Por exemplo, uma chave de índice zero comprimento é criada quando a expressão de índice é uma subcadeia de caracteres de um campo vazio de memorando. Uma chave de índice zero comprimento gera uma mensagem de erro. Quando o Visual FoxPro cria um índice, ele avalia a campos no primeiro registro na tabela. Se um campo está vazio, pode ser necessário inserir alguns dados temporários no campo no primeiro registro para impedir que uma chave de índice de comprimento 0.  
   
- PARA *IDXFileName*  
+ TO *IDXFileName*  
  Cria um arquivo de índice. idx. O arquivo de índice é dada a extensão de padrão. idx.  
   
- MARCA *TagName*[OF *CDXFileName*]  
+ TAG *TagName*[OF *CDXFileName*]  
  Cria um arquivo de índice composto. Um arquivo de índice composto é um arquivo de índice único que consiste em qualquer número de marcas separadas (entradas de índice). Cada marca é identificada por seu nome de marca exclusivo. Nomes de marca devem começar com uma letra ou um sublinhado e podem conter qualquer combinação de letras, dígitos ou sublinhados até 10. O número de marcas em um arquivo de índice composto é limitado apenas pela memória disponível e espaço em disco.  
   
  Arquivos de índice composto de múltiplas entradas são sempre compactos. Não é necessário incluir COMPACT ao criar um arquivo de índice composto. Nomes de arquivos de índice composto recebem uma extensão. cdx.  

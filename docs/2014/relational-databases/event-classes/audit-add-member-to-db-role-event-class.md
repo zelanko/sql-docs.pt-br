@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 673fa5941785f332893af3ea8f3630579d8a5741
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62761991"
 ---
 # <a name="audit-add-member-to-db-role-event-class"></a>Classe de evento Audit Add Member to DB Role
   A classe de evento **Audit Add Member to DB Role** ocorre sempre que um logon é adicionado ou removido de uma função de banco de dados. Essa classe de evento é usada com os procedimentos armazenados **sp_addrolemember**, **sp_changegroup**e **sp_droprolemember** .  

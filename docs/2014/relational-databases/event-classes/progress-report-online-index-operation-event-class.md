@@ -1,5 +1,5 @@
 ---
-title: 'Relatório de progresso: Classe de evento de operação de índice online | Microsoft Docs'
+title: 'Relatório de andamento: Classe de evento de operação de índice online | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a09b4c8f6f6c600ac7b14faf35966a82c0b6905
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62520404"
 ---
-# <a name="progress-report-online-index-operation-event-class"></a>Relatório de progresso: Classe de evento Operação de Índice Online
+# <a name="progress-report-online-index-operation-event-class"></a>Relatório de andamento: Classe de evento Operação de Índice Online
   O relatório de progresso: Classe de evento de operação de índice online indica o progresso de uma operação de criação de índice online enquanto o processo de compilação está em execução.  
   
-## <a name="progress-report-online-index-operation-event-class-data-columns"></a>Relatório de progresso: Colunas de dados de classe de evento de operação de índice online  
+## <a name="progress-report-online-index-operation-event-class-data-columns"></a>Relatório de andamento: Colunas de dados de classe de evento de operação de índice online  
   
 |Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  

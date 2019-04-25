@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: erikre
 ms.openlocfilehash: e6411a69ba754cfc06f651224391ed41cf96fe07
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62517780"
 ---
 # <a name="discontinued-master-data-services-features"></a>Recursos do Master Data Services descontinuados
 
@@ -29,7 +29,7 @@ ms.locfileid: "52759878"
   
  O modelo de metadados não está mais disponível. Você não pode mais exibir os metadados na área funcional do Gerenciador.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Recursos preteridos do Master Data Services](../master-data-services/deprecated-master-data-services-features.md)  
   
   

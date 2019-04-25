@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3c51a9b1364131630daddabec316c01992ffedfd
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62521383"
 ---
 # <a name="analysis-services-language-reference"></a>Referência de Linguagem do Analysis Services
 

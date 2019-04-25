@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4f4bfab3bc18958a51bb05c68e90c17a1359d046
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629091"
 ---
 # <a name="instr-mdx"></a>Instr (MDX)
 
@@ -38,10 +38,10 @@ InStr([start, ]searched_string, search_string[, compare])
  A expressão da cadeia de caracteres na qual pesquisar.  
   
  *Comparar*  
- (opcional) Um valor inteiro. Esse argumento é sempre ignorado. Ele é definido para compatibilidade com outros **Instr** funções em outros idiomas.  
+ (opcional) Um valor inteiro. Esse argumento é sempre ignorado. Ele é definido para compatibilidade com outras **Instr** funções em outros idiomas.  
   
 ## <a name="return-value"></a>Valor retornado  
- Um valor inteiro com a posição inicial de *String2* na *String1*.  
+ Um valor inteiro com a posição inicial da *String2* na *String1*.  
   
  Além disso, **InStr** função retorna os valores listados na tabela a seguir, dependendo da condição:  
   
@@ -54,13 +54,13 @@ InStr([start, ]searched_string, search_string[, compare])
 |String2 não foi localizada|zero (0)|  
 |start é maior que Len (String2)|zero (0)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 > [!WARNING]  
 >  **InStr** sempre executa uma comparação que diferencia maiusculas de minúsculas.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra o uso de **Instr** função e mostra diferentes cenários de resultados.  
+ O exemplo a seguir mostra o uso do **Instr** função e mostra diferentes cenários de resultados.  
   
 ```  
 with   

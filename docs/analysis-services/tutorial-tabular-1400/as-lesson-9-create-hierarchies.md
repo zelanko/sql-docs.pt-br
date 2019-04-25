@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfiles"
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: cdb9f571e7bc1630ce12c0d0a4b7f57df8961907
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 92f83e1e2b3553f85301574e98f95ed7e22c1184
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469774"
 ---
 # <a name="create-hierarchies"></a>Criar hierarquias
 

@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6ce92fb9c6bead52848ad5de1b70092b8168f292
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62466315"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Instalação e configuração do Master Data Services
 
@@ -282,7 +282,7 @@ Se você estiver interessado em fazer alterações na instalação do [!INCLUDE[
   
  Para obter uma visão geral de como você pode usar um modelo e entidades para criar uma estrutura para seus dados no [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], consulte [Visão geral do MDS &#40;Master Data Services &#41;](../master-data-services/master-data-services-overview-mds.md)  
     
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Banco de dados dos Master Data Services](../master-data-services/master-data-services-database.md)   
  [Aplicativo Web Master Data Manager](../master-data-services/master-data-manager-web-application.md)   
  [Página Configuração do Banco de Dados &#40;Gerenciador de Configuração do Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   

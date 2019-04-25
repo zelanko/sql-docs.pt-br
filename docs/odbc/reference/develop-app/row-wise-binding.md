@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c596f4924e9859b3ac61d38f68bacbc3ecd54a2e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468684"
 ---
 # <a name="row-wise-binding"></a>Associação de linha
 Ao usar a associação, um aplicativo define uma estrutura que contém um ou dois, ou em alguns casos, três elementos para cada coluna para a qual data será retornado. O primeiro elemento contém o valor de dados, e o segundo elemento contém o buffer de comprimento/indicador. Indicadores e os valores de comprimento podem ser armazenados em buffers separadas ao definir os campos de descritor SQL_DESC_INDICATOR_PTR e SQL_DESC_OCTET_LENGTH_PTR como valores diferentes; Se isso for feito, a estrutura contém um terceiro elemento. O aplicativo, em seguida, aloca uma matriz dessas estruturas, que contém elementos tantas quantas forem as linhas no conjunto de linhas.  

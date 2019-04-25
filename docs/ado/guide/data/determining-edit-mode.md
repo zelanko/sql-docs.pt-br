@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e638cda03d7dc0f0bd580c3ca29c126568d1595a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472337"
 ---
 # <a name="determining-edit-mode"></a>Determinar o modo de edição
 ADO mantém um buffer de edição associado ao registro atual. O **EditMode** propriedade indica se foram feitas alterações a esse buffer ou se um novo registro tiver sido criado. Use **EditMode** para determinar o status de edição do registro atual. Você pode testar as alterações pendentes se um processo de edição foi interrompido e determinar se é necessário usar o **atualização** ou **CancelUpdate** método.  
   
  **EditMode** retorna um dos **EditModeEnum** constantes, que são listadas na tabela a seguir.  
   
-|Constante|Description|  
+|Constante|Descrição|  
 |--------------|-----------------|  
 |**adEditNone**|Indica que nenhuma operação de edição está em andamento.|  
 |**adEditInProgress**|Indica que os dados no registro atual foram modificados mas não salvos.|  

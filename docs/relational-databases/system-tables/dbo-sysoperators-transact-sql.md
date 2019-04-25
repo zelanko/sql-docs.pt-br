@@ -21,22 +21,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3796714cbdfb55900447bf23904136ac5abefa9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470649"
 ---
 # <a name="dbosysoperators-transact-sql"></a>dbo.sysoperators (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contém uma linha para cada operador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Identificador de operador.|  
 |**name**|**sysname**|Nome do operador.|  
-|**habilitado**|**tinyint**|Estado de notificações alertas (Booliano). Se **1**, esse operador pode receber notificações quando ocorre um alerta.|  
+|**enabled**|**tinyint**|Estado de notificações alertas (Booliano). Se **1**, esse operador pode receber notificações quando ocorre um alerta.|  
 |**email_address**|**nvarchar(100)**|Endereço de email deste operador.|  
 |**last_email_date**|**int**|Data em que este operador recebeu a última notificação de alerta por e-mail.|  
 |**last_email_time**|**int**|Hora do dia em que este operador recebeu a última notificação de alerta por e-mail.|  

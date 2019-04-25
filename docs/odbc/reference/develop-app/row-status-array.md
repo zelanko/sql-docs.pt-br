@@ -19,16 +19,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d2a04f5052a0b686d3669c976ec7c4bee09e52b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468623"
 ---
 # <a name="row-status-array"></a>Matriz de status da linha
 Além dos dados, **SQLFetch** e **SQLFetchScroll** pode retornar uma matriz que fornece o status de cada linha no conjunto de linhas. Essa matriz é especificado por meio do atributo de instrução SQL_ATTR_ROW_STATUS_PTR. Essa matriz é alocada pelo aplicativo e deve ter tantos elementos que sejam especificadas pelo atributo de instrução SQL_ATTR_ROW_ARRAY_SIZE. Os valores na matriz são definidos pelo **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**, e **SQLSetPos.** Os valores descrevem o status da linha e se o status foi alterado desde que foi buscada pela última vez.  
   
-|Valor de matriz de status de linha|Description|  
+|Valor de matriz de status de linha|Descrição|  
 |----------------------------|-----------------|  
 |SQL_ROW_SUCCESS|A linha foi obtida com êxito e não foi alterado desde que foi buscada pela última vez.|  
 |SQL_ROW_SUCCESS_WITH_INFO|A linha foi obtida com êxito e não foi alterado desde que foi buscada pela última vez. No entanto, um aviso sobre a linha foi retornado.|  

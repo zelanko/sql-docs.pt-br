@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a031466e35fef90104ab81fec17010725f8f5c0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62761738"
 ---
 # <a name="optimizing-the-neworg-table"></a>Otimizando a tabela NewOrg
   O **NewOrd** que você criou na tabela a [populando uma tabela com dados hierárquicos existentes](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) tarefa contém todas as informações de funcionários e representa a estrutura hierárquica usando um `hierarchyid`tipo de dados. Essa tarefa adiciona índices novos para oferecer suporte às pesquisas na coluna `hierarchyid`.  
@@ -72,7 +72,7 @@ ms.locfileid: "48146976"
   
      [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-     Índice de profundidade primária: os registros de funcionário são armazenados adjacentes aos de seu gerente.  
+     Índice de profundidade: Registros de funcionários são armazenados adjacentes de seu gerente.  
   
      `LogicalNode OrgNode    H_Level EmployeeID LoginID`  
   
@@ -96,7 +96,7 @@ ms.locfileid: "48146976"
   
      `/2/2/       0x6B40       2         8      norint`  
   
-     Índice de **EmployeeID** primário: as linhas são armazenadas na sequência de **EmployeeID**.  
+     **EmployeeID**-índice: Linhas são armazenadas em **EmployeeID** sequência.  
   
      `LogicalNode OrgNode    H_Level EmployeeID LoginID`  
   
@@ -160,6 +160,6 @@ ms.locfileid: "48146976"
     ```  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Resumo: convertendo uma tabela para uma estrutura hierárquica](lesson-1-4-summary-converting-a-table-to-a-hierarchical-structure.md)  
+ [Resumo: Convertendo uma tabela em uma estrutura hierárquica](lesson-1-4-summary-converting-a-table-to-a-hierarchical-structure.md)  
   
   
