@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 725be263e30687a3f2ded90990e952e1cd97a185
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629394"
 ---
 # <a name="subscribers"></a>Publicadores
   Especifique os Assinantes [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que receberão uma assinatura para a publicação selecionada.  
@@ -50,7 +50,7 @@ ms.locfileid: "52806198"
   
 -   O Editor da publicação selecionada é o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou posterior.  
   
- Clicando em **adicionar assinante** mostra um menu com duas opções: **Adicionar assinante SQL Server** e **adicionar assinante não SQL Server**. Clique em **Adicionar Assinante não SQL Server** para adicionar um Assinante Oracle ou IBM DB2.  
+ Ao clicar em **Adicionar Assinante**, será mostrado um menu com duas opções: **Adicionar Assinante do SQL Server** e **Adicionar Assinante não SQL Server**. Clique em **Adicionar Assinante não SQL Server** para adicionar um Assinante Oracle ou IBM DB2.  
   
  **Adicionar Assinante SQL Server**  
  Adicione um servidor à lista de servidores que podem ser habilitados como Assinantes. Esse botão é exibido quando uma ou mais das condições seguintes são verdadeiras:  
@@ -68,7 +68,7 @@ ms.locfileid: "52806198"
     -   A publicação permite assinaturas anônimas.  
   
 ## <a name="see-also"></a>Consulte também  
- [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [Criar uma assinatura pull](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
  [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)   
  [Assinar publicações](subscribe-to-publications.md)  
