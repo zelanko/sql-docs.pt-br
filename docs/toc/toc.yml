@@ -1,5 +1,5 @@
 - name: Bem-vindo
-  href: ../sql-server/sql-server-technical-documentation.md?toc=..%2ftoc%2ftoc.json
+  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
 - name: Visão geral
   items:
     - name: Novo no SQL Server
@@ -28,7 +28,7 @@
         - name: SQL Server 2019
           href: ../sql-server/sql-server-ver15-release-notes.md
         - name: SQL Server 2017
-          href: ../sql-server/sql-server-2017-release-notes.md?toc=..%2ftoc%2ftoc.json
+          href: ../sql-server/sql-server-2017-release-notes.md?toc=../toc/toc.json
         - name: SQL Server 2016
           href: ../sql-server/sql-server-2016-release-notes.md
         - name: SQL Server 2014
@@ -61,20 +61,30 @@
               href: ../big-data-cluster/deploy-big-data-tools.md
             - name: Instalar mssqlctl
               href: ../big-data-cluster/deploy-install-mssqlctl.md
-        - name: Scripts de implantação
-          items:
-            - name: Serviço de Kubernetes do Azure
-              href: ../big-data-cluster/quickstart-big-data-cluster-deploy.md
-        - name: Diretrizes de implantação
+        - name: Implantar
           items:
             - name: Diretrizes de implantação
               href: ../big-data-cluster/deployment-guidance.md
-            - name: Serviço de Kubernetes do Azure
-              href: ../big-data-cluster/deploy-on-aks.md
-            - name: Kubeadm
-              href: ../big-data-cluster/deploy-with-kubeadm.md
-            - name: Minikube
-              href: ../big-data-cluster/deploy-on-minikube.md
+            - name: Atualizar para uma nova versão
+              href: ../big-data-cluster/deployment-upgrade.md
+            - name: Personalizar implantações
+              href: ../big-data-cluster/deployment-custom-configuration.md
+            - name: Configurar o armazenamento
+              href: ../big-data-cluster/concept-data-persistence.md
+            - name: Implantações offline
+              href: ../big-data-cluster/deploy-offline.md
+            - name: Destino de implantação
+              items:
+                - name: Serviço de Kubernetes do Azure
+                  href: ../big-data-cluster/deploy-on-aks.md
+                - name: Kubeadm
+                  href: ../big-data-cluster/deploy-with-kubeadm.md
+                - name: Minikube
+                  href: ../big-data-cluster/deploy-on-minikube.md
+            - name: Scripts de implantação
+              items:
+                - name: Serviço de Kubernetes do Azure
+                  href: ../big-data-cluster/quickstart-big-data-cluster-deploy.md
     - name: Conceitos
       items:
         - name: Implantação de aplicativo
@@ -89,8 +99,6 @@
           href: ../big-data-cluster/concept-storage-pool.md
         - name: Pool de computação
           href: ../big-data-cluster/concept-compute-pool.md
-        - name: Persistência de dados
-          href: ../big-data-cluster/concept-data-persistence.md
         - name: Segurança
           href: ../big-data-cluster/concept-security.md
     - name: Guias de instruções
@@ -111,6 +119,10 @@
                   href: ../big-data-cluster/tutorial-query-hdfs-storage-pool.md
                 - name: Camadas do HDFS
                   href: ../big-data-cluster/hdfs-tiering.md
+                - name: Montagem ADLS Gen2 para camadas do HDFS
+                  href: ../big-data-cluster/hdfs-tiering-mount-adlsgen2.md
+                - name: Montagem S3 para camadas do HDFS
+                  href: ../big-data-cluster/hdfs-tiering-mount-s3.md
         - name: Ingestão de dados
           items:
             - name: Carregar dados com curl
@@ -141,6 +153,8 @@
               href: ../big-data-cluster/sparklyr-from-RStudio.md
             - name: Suporte de GPU e TensorFlow
               href: ../big-data-cluster/spark-gpu-tensorflow.md
+            - name: Integrar o Spark com o SQL Server
+              href: ../big-data-cluster/spark-mssql-connector.md
         - name: Gerenciar o cluster de Big Data do SQL Server
           items:
             - name: Conectar-se a um cluster de Big Data
@@ -167,6 +181,10 @@
               href: ../big-data-cluster/spark-history-server.md
     - name: Referência
       items:
+        - name: Referência de implantação
+          items:
+            - name: Arquivo de configuração de implantação
+              href: ../big-data-cluster/reference-deployment-config.md
         - name: Referência do mssqlctl
           items:
             - name: mssqlctl
@@ -183,6 +201,8 @@
                   href: ../big-data-cluster/reference-mssqlctl-cluster.md
                 - name: Configuração de cluster do mssqlctl
                   href: ../big-data-cluster/reference-mssqlctl-cluster-config.md
+                - name: seção de configuração de cluster do mssqlctl
+                  href: ../big-data-cluster/reference-mssqlctl-cluster-config-section.md
                 - name: Depuração de cluster do mssqlctl
                   href: ../big-data-cluster/reference-mssqlctl-cluster-debug.md
             - name: Armazenamento
@@ -7247,6 +7267,8 @@
               items:
                 - name: Instalar no Windows
                   href: ../relational-databases/polybase/polybase-installation.md
+                - name: Instalar no Linux
+                  href: ../relational-databases/polybase/polybase-linux-setup.md
                 - name: Recursos e limitações
                   href: ../relational-databases/polybase/polybase-versioned-feature-summary.md
             - name: Configurar fontes de dados externas
@@ -7291,6 +7313,8 @@
           items:
             - name: Referência T-SQL
               href: ../relational-databases/polybase/polybase-t-sql-objects.md
+            - name: Mapeamento de tipo
+              href: ../relational-databases/polybase/polybase-type-mapping.md
         - name: Recursos
           items:
             - name: DBA Stack Exchange +

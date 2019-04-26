@@ -18,7 +18,7 @@
   items:
     - name: Configurando o Backup Gerenciado do SQL Server para Windows Azure
       href: enable-sql-server-managed-backup-to-microsoft-azure.md
-    - name: 'Backup Gerenciado do SQL Server para o Windows Azure: Interoperabilidade e coexistência'
+    - name: 'Backup Gerenciado do SQL Server para Microsoft Azure: Interoperabilidade e coexistência'
       href: ../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md
     - name: Backup gerenciado do SQL Server no Windows Azure - Configurações de retenção e armazenamento
       href: ../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md
@@ -202,7 +202,7 @@
       href: deferred-transactions-sql-server.md
     - name: Remover grupos de arquivos expirados (SQL Server)
       href: remove-defunct-filegroups-sql-server.md
-    - name: 'Exemplo: restauração online de um arquivo de leitura/gravação (modelo de recuperação completa)'
+    - name: 'Exemplo: Restauração online de um arquivo de leitura/gravação (modelo de recuperação completa)'
       href: example-online-restore-of-a-read-write-file-full-recovery-model.md
     - name: 'Exemplo: Restauração online de um arquivo somente leitura (modelo de recuperação completa)'
       href: example-online-restore-of-a-read-only-file-full-recovery-model.md
@@ -220,7 +220,7 @@
   items:
     - name: 'Exemplo: Restauração de banco de dados por etapas (modelo de recuperação completa)'
       href: example-piecemeal-restore-of-database-full-recovery-model.md
-    - name: 'Exemplo: Restauração por etapas de banco de dados (modelo de recuperação simples)'
+    - name: 'Exemplo: Restauração de banco de dados por etapas (modelo de recuperação simples)'
       href: example-piecemeal-restore-of-database-simple-recovery-model.md
     - name: 'Exemplo: Restauração por etapas de apenas alguns grupos de arquivos (modelo de recuperação completa)'
       href: example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md
@@ -233,5 +233,5 @@
   items:
     - name: Restaurar o banco de dados mestre (Transact-SQL)
       href: restore-the-master-database-transact-sql.md
-- name: 'Backup e restauração: interoperabilidade e coexistência'
+- name: 'Backup e restauração: Interoperabilidade e coexistência'
   href: backup-and-restore-interoperability-and-coexistence-sql-server.md

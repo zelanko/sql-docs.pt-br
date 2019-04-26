@@ -62,7 +62,7 @@
           href: ../../database-engine/options-text-editor-xml-formatting-page.md
         - name: Opções (página Editor de texto – XML – Diversos)
           href: ../../database-engine/options-text-editor-xml-miscellaneous-page.md
-        - name: 'Opções (Editor de Texto: página Guia Editor e Barra de Status)'
+        - name: 'Opções (página Editor de Texto: Guia Editor e Barra de Status)'
           href: ../../database-engine/options-text-editor-editor-tab-and-status-bar-page.md
         - name: Opções (página Execução da consulta/SQL Server/Geral)
           href: ../../database-engine/options-query-execution-sql-server-general-page.md
@@ -146,16 +146,16 @@
       href: troubleshooting-intellisense.md
     - name: Sintaxe Transact-SQL com suporte do IntelliSense
       href: transact-sql-syntax-supported-by-intellisense.md
-- name: Trechos de código Transact-SQL
+- name: Snippets de código Transact-SQL
   href: transact-sql-code-snippets.md
   items:
-    - name: Inserir trechos Transact-SQL
+    - name: Inserir snippets Transact-SQL
       href: insert-transact-sql-snippets.md
-    - name: Inserir trechos Transact-SQL com Surround
+    - name: Inserir snippets Transact-SQL com Surround
       href: insert-surround-with-transact-sql-snippets.md
-    - name: Concluir trechos de código Transact-SQL
+    - name: Concluir snippets Transact-SQL
       href: complete-transact-sql-snippets.md
-    - name: Adicionar trechos de Transact-SQL
+    - name: Adicionar snippets de Transact-SQL
       href: add-transact-sql-snippets.md
 - name: Depurador do Transact-SQL
   href: transact-sql-debugger.md

@@ -1,7 +1,7 @@
-- name: 'Tutorial: Gravando instruções Transact-SQL'
+- name: 'Tutorial: Como escrever instruções Transact-SQL'
   href: tutorial-writing-transact-sql-statements.md
   items:
-    - name: 'Lição 1: Criando objetos de banco de dados'
+    - name: 'Lição 1: Criar objetos de bancos de dados'
       href: lesson-1-creating-database-objects.md
       items:
         - name: Criando um banco de dados (tutorial)
@@ -12,9 +12,9 @@
           href: lesson-1-3-inserting-and-updating-data-in-a-table.md
         - name: Lendo os dados em uma tabela (tutorial)
           href: lesson-1-4-reading-the-data-in-a-table.md
-        - name: 'Resumo: Criando objetos de banco de dados'
+        - name: 'Resumo: Criar objetos de bancos de dados'
           href: lesson-1-5-summary-creating-database-objects.md
-    - name: 'Lição 2: Configurando permissões em objetos de banco de dados'
+    - name: 'Lição 2: Como configurar permissões em objetos de banco de dados'
       href: lesson-2-configuring-permissions-on-database-objects.md
       items:
         - name: criando um logon
@@ -25,9 +25,9 @@
           href: lesson-2-3-creating-views-and-stored-procedures.md
         - name: concedendo acesso a um objeto de banco de dados
           href: lesson-2-4-granting-access-to-a-database-object.md
-        - name: 'resumo: configurando permissões em objetos de banco de dados'
+        - name: 'Resumo: Como configurar permissões em objetos de banco de dados'
           href: lesson-2-5-summary-configuring-permissions-on-database-objects.md
-    - name: 'Lição 3: Excluindo objetos de banco de dados'
+    - name: 'Lição 3: Excluindo objetos de bancos de dados'
       href: lesson-3-1-deleting-database-objects.md
       items:
         - name: Excluindo objetos de bancos de dados

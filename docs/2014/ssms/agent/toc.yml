@@ -215,7 +215,7 @@
           href: change-steps-of-a-sql-server-agent-master-job.md
         - name: Remove Steps from a SQL Server Agent Master Job
           href: remove-steps-from-a-sql-server-agent-master-job.md
-        - name: Modify the Target Server(s) Associated with a SQL Server Agent Master Job
+        - name: Modificar o servidor de destino associado a um trabalho mestre do SQL Server Agent
           href: modify-the-target-server-s-associated-with-a-sql-server-agent-master-job.md
         - name: Escolher a conta de serviço do SQL Server Agent certa para ambientes multisservidor
           href: choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md
@@ -257,25 +257,25 @@
       href: job-properties-new-job-general-page.md
     - name: 'Propriedades do trabalho: novo trabalho (página Etapas)'
       href: job-properties-new-job-steps-page.md
-    - name: 'Propriedades do trabalho: novo trabalho (página Agendas)'
+    - name: 'Propriedades do Trabalho: Novo Trabalho (página Agendamentos)'
       href: job-properties-new-job-schedules-page.md
-    - name: 'Propriedades do trabalho: novo trabalho (página Alertas)'
+    - name: 'Propriedades do Trabalho: Novo Trabalho (página Alertas)'
       href: job-properties-new-job-alerts-page.md
-    - name: 'Propriedades do trabalho: novo trabalho (página Notificações)'
+    - name: 'Propriedades do Trabalho: Novo Trabalho (página Notificações)'
       href: job-properties-new-job-notifications-page.md
-    - name: 'Propriedades do trabalho: novo trabalho (página Destinos)'
+    - name: 'Propriedades do Trabalho: Novo Trabalho (página Destinos)'
       href: job-properties-new-job-targets-page.md
     - name: Propriedades de categorias de trabalho e nova categoria de trabalho
       href: job-categories-properties-new-job-category.md
-    - name: 'Categorias de trabalho: gerenciar categorias de trabalho'
+    - name: 'Categorias de trabalho: Gerenciar categorias de trabalho'
       href: job-categories-manage-job-categories.md
-    - name: 'Propriedades da etapa de trabalho: nova etapa de trabalho (página Geral)'
+    - name: 'Propriedades da Etapa de Trabalho: Nova Etapa de Trabalho (página Geral)'
       href: job-step-properties-new-job-step-general-page.md
-    - name: 'Propriedades da etapa de trabalho: nova etapa de trabalho (página Avançado)'
+    - name: 'Propriedades da Etapa de Trabalho: Nova Etapa de Trabalho (página Avançado)'
       href: job-step-properties-new-job-step-advanced-page.md
     - name: Selecionar agenda para um trabalho
       href: pick-schedule-for-job.md
-    - name: 'Nova agenda de trabalho: propriedades da agenda de trabalho'
+    - name: 'Novo Agendamento de Trabalho: Propriedades do Agendamento de Trabalho'
       href: new-job-schedule-job-schedule-properties.md
     - name: Gerenciar Agendas
       href: manage-schedules.md
@@ -289,7 +289,7 @@
       href: alert-properties-new-alert-general-page.md
     - name: Propriedades do Alerta/Novo Alerta (página Resposta)
       href: alert-properties-new-alert-response-page.md
-    - name: 'Propriedades do alerta: novo alerta (página Opções)'
+    - name: 'Propriedades do Alerta: Novo Alerta (página Opções)'
       href: alert-properties-new-alert-options-page.md
     - name: Propriedades do alerta (página Histórico)
       href: alert-properties-history-page.md
@@ -307,7 +307,7 @@
       href: operators-node-sql-server-agent-f1-help.md
     - name: Propriedades do operador e novo operador (página Geral)
       href: operator-properties-new-operator-general-page.md
-    - name: 'Propriedades do operador: novo operador (página Notificações)'
+    - name: 'Propriedades do Operador: Novo operador (página Notificações)'
       href: operator-properties-new-operator-notifications-page.md
     - name: Propriedades do operador (página Histórico)
       href: operator-properties-history-page.md

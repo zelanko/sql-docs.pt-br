@@ -27,17 +27,17 @@
 - name: Tópicos de informações práticas do Supervisor de Atualização
   href: upgrade-advisor-how-to-topics.md
   items:
-    - name: Como instalar o Supervisor de Atualização
+    - name: 'Como fazer: Para instalar o Supervisor de Atualização'
       href: how-to-install-upgrade-advisor.md
-    - name: Como iniciar o Supervisor de Atualização
+    - name: 'Como fazer: Para iniciar o Supervisor de Atualização'
       href: how-to-launch-upgrade-advisor.md
-    - name: Como executar o Assistente para Análise do Supervisor de Atualização
+    - name: 'Como fazer: Para executar o Assistente para Análise do Supervisor de Atualização'
       href: how-to-run-the-upgrade-advisor-analysis-wizard.md
-    - name: Como exibir um relatório do Supervisor de Atualização
+    - name: 'Como fazer: Para exibir um relatório do Supervisor de Atualização'
       href: how-to-view-an-upgrade-advisor-report.md
-    - name: Como filtrar relatórios
+    - name: 'Como fazer: Para filtrar relatórios'
       href: how-to-filter-reports.md
-    - name: Como exportar relatórios
+    - name: 'Como fazer: Exportar relatórios'
       href: how-to-export-reports.md
 - name: Referência da Interface do Usuário
   href: upgrade-advisor-user-interface-reference.md
@@ -250,7 +250,7 @@
           href: microsoft-sharepoint-2007-is-installed-upgrade-advisor.md
         - name: O serviço compartilhado do SharePoint do Microsoft SQL Server Reporting Services está instalado lado a lado (Supervisor de Atualização)
           href: sql-server-reporting-services-sharepoint-shared-service-side-by-side-upgrade-advisor.md
-        - name: Agrupamento do servidor de mecanismo de banco de dados incompatível (Supervisor de Atualização)
+        - name: Ordenação do servidor de mecanismo de banco de dados incompatível (Supervisor de Atualização)
           href: incompatible-database-engine-server-collation-upgrade-advisor.md
         - name: Outros problemas de atualização do Reporting Services
           href: other-reporting-services-upgrade-issues.md
@@ -395,7 +395,7 @@
       href: reporting-services-sharepoint-mode-authentication.md
     - name: Selecionar uma instância preparada
       href: select-a-prepared-instance.md
-    - name: Configuração do SQL Server - Agrupamento
+    - name: Configuração do SQL Server – ordenação
       href: server-configuration-collation.md
     - name: Configuração do servidor - Contas de serviço
       href: server-configuration-service-accounts.md
@@ -424,7 +424,7 @@
   items:
     - name: Instalando atualizações no prompt de comando
       href: ../../database-engine/install-windows/installing-updates-from-the-command-prompt.md
-    - name: Como validar a instalação bem-sucedida de uma atualização do SQL Server
+    - name: 'Como fazer: Para validar a instalação bem-sucedida de uma atualização do SQL Server'
       href: how-to-validate-successful-installation-of-a-sql-server-update.md
     - name: Visão geral da instalação de manutenção do SQL Server
       href: overview-of-sql-server-servicing-installation.md
