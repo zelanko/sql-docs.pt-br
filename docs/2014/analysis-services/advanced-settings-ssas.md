@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84bb1214991c26880a75409783cf40157fce2449
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635229"
 ---
 # <a name="advanced-settings-ssas"></a>Configurações avançadas (SSAS)
   Esta caixa de diálogo do **Assistente de Importação de Tabela** permite especificar a codificação e a localidade do arquivo simples ao qual você está se conectando. Para acessar o assistente do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], no menu **Modelo** , clique em **Importar de Fonte de Dados**.  
@@ -28,7 +28,7 @@ ms.locfileid: "48054860"
 |||  
 |-|-|  
 |Termo|Definição|  
-|**Codificação**|Especifique o tipo de codificação a ser usado: ANSI ou Unicode.<br /><br /> O valor **Unicode** corresponde à codificação UTF-16.|  
+|**Codificação**|Especifique o tipo de codificação a ser usada: ANSI ou Unicode.<br /><br /> O valor **Unicode** corresponde à codificação UTF-16.|  
 |**Localidade**|Especifique a localidade para fornecer informações de idioma específicas para solicitações e formatos de data e hora.|  
   
   

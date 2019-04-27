@@ -21,11 +21,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: b6f6538aa13b2236c7dca52189b37addad85ae53
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62507265"
 ---
 # <a name="sysdmdbobjectsimpactedonversionchange-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -68,6 +68,6 @@ class  class_desc        major_id    minor_id    dependency
 |Order|Objeto afetado|Ação corretiva|  
 |-----------|---------------------|-----------------------|  
 |1|**Índices**|Recriar índices identificados por **sys.dm_db_objects_impacted_on_version_change** por exemplo:  `ALTER INDEX ALL ON <table> REBUILD`<br />ou em<br />`ALTER TABLE <table> REBUILD`|  
-|2|**Objeto**|Todas as restrições identificadas por **sys.dm_db_objects_impacted_on_version_change** deverá ser revalidado depois que os dados de geometria e Geografia na tabela subjacente serão recalculados. Para restrições, revalide usando ALTER TABLE. <br />Por exemplo: <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />ou em<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
+|2|**Objeto**|Todas as restrições identificadas por **sys.dm_db_objects_impacted_on_version_change** deverá ser revalidado depois que os dados de geometria e Geografia na tabela subjacente serão recalculados. Para restrições, revalide usando ALTER TABLE. <br />Por exemplo:  <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />ou em<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
   
   

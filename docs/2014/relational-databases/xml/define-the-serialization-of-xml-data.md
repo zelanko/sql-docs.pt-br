@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 759c0200c644913e21262c914957cfa1dcbada5c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637574"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>Definir a serialização de dados XML
   Ao converter tipos de dados xml explícita ou implicitamente em uma cadeia de caracteres SQL ou tipo binário, o conteúdo do tipo de dados xml será serializado de acordo com as regras descritas neste tópico.  
@@ -31,7 +31,7 @@ ms.locfileid: "58538588"
 ## <a name="serialization-encoding"></a>Codificação de serialização  
  Se o tipo de destino SQL for VARBINARY, o resultado será serializado em UTF-16 com uma marca de ordem de 16 bytes UTF na frente, mas sem uma declaração XML. Se o tipo de destino for muito pequeno, será retornado um erro.  
   
- Por exemplo:  
+ Por exemplo:   
   
 ```  
 select CAST(CAST(N'<??/>' as XML) as VARBINARY(MAX))  
@@ -45,7 +45,7 @@ select CAST(CAST(N'<??/>' as XML) as VARBINARY(MAX))
   
  Se o tipo de destino SQL for NVARCHAR ou NCHAR, o resultado será serializado em UTF-16 sem a marca de ordem de bytes na frente e sem uma declaração XML. Se o tipo de destino for muito pequeno, será retornado um erro.  
   
- Por exemplo:  
+ Por exemplo:   
   
 ```  
 select CAST(CAST(N'<??/>' as XML) as NVARCHAR(MAX))  

@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 9428a6462efac8643fcbb5343cb5cb3c8343aff9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629882"
 ---
 # <a name="validation-statuses-master-data-services"></a>Status da validação (Master Data Services)
 
@@ -32,7 +32,7 @@ ms.locfileid: "52769748"
 |Falha na validação|Membros que não passaram na validação da regra de negócio.|  
 |Aguardando a revalidação do membro dependente|Membros consolidados atualizados que estão esperando para serem validados junto com membros filho.|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Validar uma versão em relação a regras de negócio &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
  [Versões &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   

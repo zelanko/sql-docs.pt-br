@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d6a440b76ee639c345d24c1c1e60a2038fca75de
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629775"
 ---
 # <a name="mdx-data-definition-statements-mdx"></a>Instruções de definição de dados MDX (MDX)
 
@@ -23,7 +23,7 @@ ms.locfileid: "34741585"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Instrução ALTER CUBE &#40;MDX&#41;](../mdx/mdx-data-definition-alter-cube.md)|Altera a estrutura de um cubo especificado.|  
 |[Instrução CREATE ACTION &#40;MDX&#41;](../mdx/mdx-data-definition-create-action.md)|Cria uma ação que pode ser associada a um cubo, uma dimensão, uma hierarquia ou um objeto subordinado.|  
@@ -36,13 +36,13 @@ ms.locfileid: "34741585"
 |[Instrução de ação DROP &#40;MDX&#41;](../mdx/mdx-data-definition-drop-action.md)|Exclui uma ação especificada de um cubo especificado.|  
 |[Instrução de CÁLCULO de CÉLULA DROP &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md)|Remove o cálculo de célula especificado.|  
 |[Instrução de membro DROP &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md)|Remove um membro calculado.|  
-|[Instrução SET de SOLTAR &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md)|Remove um conjunto nomeado.|  
+|[Instrução SET no menu &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md)|Remove um conjunto nomeado.|  
 |[Instrução de SUBCUBO DROP &#40;MDX&#41;](../mdx/mdx-data-definition-drop-subcube.md)|Descarta um subcubo especificado, revertendo para o cubo previamente definido ou para a definição de subcubo com o nome especificado.|  
-|[ATUALIZAÇÃO de cubo instrução &#40;MDX&#41;](../mdx/mdx-data-definition-refresh-cube.md)|Atualiza o cache de cliente para um cubo.|  
+|[Instrução do cubo de atualização &#40;MDX&#41;](../mdx/mdx-data-definition-refresh-cube.md)|Atualiza o cache de cliente para um cubo.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de instrução MDX &#40;MDX&#41;](../mdx/mdx-statement-reference-mdx.md)   
- [Instruções de manipulação de dados MDX &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
+ [Instruções MDX de manipulação de dados &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
  [Instruções de script MDX &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

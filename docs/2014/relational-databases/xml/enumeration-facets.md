@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2687acdf1c4d9b3decc8fe83f7c967173cdba3a9
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637889"
 ---
 # <a name="enumeration-facets"></a>facetas de enumeração
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejeita esquemas XML com tipos que têm facetas padrão ou enumerações que violam essas facetas.  

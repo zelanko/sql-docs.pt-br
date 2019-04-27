@@ -9,11 +9,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 6d68d7f36ea6539142bab0ea0e4b50ef6dca8444
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62641091"
 ---
 # <a name="sql-server-machine-learning-tutorials-in-r-and-python"></a>Tutoriais do SQL Server Machine Learning em R e Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

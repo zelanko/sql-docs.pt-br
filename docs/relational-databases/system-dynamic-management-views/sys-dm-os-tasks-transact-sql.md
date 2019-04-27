@@ -1,5 +1,5 @@
 ---
-title: os_tasks (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_tasks (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6737242e5cf6cf39e846dba5e3d4b61168d8c694
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62627905"
 ---
 # <a name="sysdmostasks-transact-sql"></a>sys.dm_os_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "47785334"
 > [!NOTE]  
 >  Chamá-lo partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o nome **sys.dm_pdw_nodes_os_tasks**.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**task_address**|**varbinary(8)**|Endereço de memória do objeto.|  
-|**task_state**|**nvarchar(60)**|O estado da tarefa. Pode ser um dos seguintes:<br /><br /> PENDING: Esperando por um thread de trabalho.<br /><br /> RUNNABLE: Executável, mas esperando receber um quantum.<br /><br /> RUNNING: Atualmente em execução no agendador.<br /><br /> SUSPENDED: Tem um trabalhador, mas está esperando por um evento.<br /><br /> DONE: Concluído.<br /><br /> SPINLOOP: Preso em um spinlock.|  
+|**task_state**|**nvarchar(60)**|O estado da tarefa. Pode ser um dos seguintes:<br /><br /> PENDENTE: Esperando por um thread de trabalho.<br /><br /> EXECUTÁVEL: Executável, mas esperando receber um quantum.<br /><br /> EXECUTANDO: Atualmente em execução no agendador.<br /><br /> SUSPENSO: Tem um trabalhador, mas está aguardando um evento.<br /><br /> FEITO: Concluído.<br /><br /> SPINLOOP: Preso em um spinlock.|  
 |**context_switches_count**|**int**|Número de alternâncias de contexto de agendador que esta tarefa completou.|  
 |**pending_io_count**|**int**|Número de E/Ss físicas executadas por esta tarefa.|  
 |**pending_io_byte_count**|**bigint**|Contagem total de bytes de E/Ss que são executadas por esta tarefa.|  
