@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: cb1e99b2959b41528152efc92daccfb793b2e280
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740556"
 ---
 # <a name="sqlxmlparameter-object-sqlxml-managed-classes"></a>Objeto SqlXmlParameter (classes gerenciadas do SQLXML)
   O objeto SqlXmlParameter dá suporte a essas propriedades:  

@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 32c17834b6250a8f0f560570565d7f5d17b9c2a4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59950832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646292"
 ---
 # <a name="databaselogontimeout-property-wmi-msreportserverconfigurationsetting"></a>Propriedade DatabaseLogonTimeout (WMI MSReportServer_ConfigurationSetting)
   Especifica o número de segundos de espera antes de uma tentativa de logon no banco de dados do servidor de relatório falhar. O valor **0** indica um tempo de espera infinito. Somente leitura.  

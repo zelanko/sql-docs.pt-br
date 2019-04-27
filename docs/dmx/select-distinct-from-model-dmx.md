@@ -1,5 +1,5 @@
 ---
-title: SELECT DISTINCT FROM &lt;modelo &gt; (DMX) | Microsoft Docs
+title: SELECT DISTINCT FROM &lt;model &gt; (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 95a8a1d40792c2993d44624a321bccf99030e181
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658888"
 ---
-# <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM &lt;modelo &gt; (DMX)
+# <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM &lt;model &gt; (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Retorna todos os possíveis estados para a coluna selecionada no modelo. Os valores retornados variam dependendo se a coluna especificada contém valores discretos, valores numéricos diferenciados ou valores numéricos contínuos.  
@@ -48,7 +48,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 ## <a name="remarks"></a>Comentários  
  O **SELECT DISTINCT FROM** instrução só funciona com uma única coluna ou com um conjunto de colunas relacionadas. Essa cláusula não funciona com um conjunto de colunas não relacionadas.  
   
- O **SELECT DISTINCT FROM** instrução permite que você faça referência diretamente a uma coluna dentro de uma tabela aninhada. Por exemplo:  
+ O **SELECT DISTINCT FROM** instrução permite que você faça referência diretamente a uma coluna dentro de uma tabela aninhada. Por exemplo:   
   
 ```  
 <model>.<table column reference>.<column reference>  
@@ -129,13 +129,13 @@ FROM [TM Decision Tree]
   
  Por exemplo, se você procurar o modelo usando o visualizador de Árvore de Decisão e clicar em um nó que contenha os clientes agrupados por renda, as propriedades de nó a seguir serão exibidas na Dica de Ferramenta:  
   
- Idade >=69 AND renda Anual < 39221.41  
+ Idade > = gt;=69 AND Renda anual < 39221.41  
   
 > [!NOTE]  
 >  O valor mínimo do bucket mínimo e o valor máximo do bucket máximo são apenas os valores mais alto e mais baixo observados. Os valores dentro desse intervalo observado são considerados como pertencentes aos buckets mínimo e máximo.  
   
 ## <a name="see-also"></a>Consulte também  
- [SELECIONE &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
  [Extensões de mineração de dados &#40;DMX&#41; instruções de manipulação de dados](../dmx/dmx-statements-data-manipulation.md)   
  [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   

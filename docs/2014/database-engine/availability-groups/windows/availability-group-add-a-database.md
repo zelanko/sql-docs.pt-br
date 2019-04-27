@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 69d148f9ef780e28300a6d3e233f2b680f0d37d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62791937"
 ---
 # <a name="add-a-database-to-an-availability-group-sql-server"></a>Adicionar um banco de dados a um grupo de disponibilidade (SQL Server)
   Este tópico descreve como adicionar um banco de dados a um grupo de disponibilidade AlwaysOn usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -99,7 +99,7 @@ ms.locfileid: "48157846"
   
 1.  Altere o diretório (`cd`) para a instância do servidor que hospeda a réplica primária.  
   
-2.  Use o `Add-SqlAvailabilityDatabase` cmdlet.  
+2.  Use o cmdlet `Add-SqlAvailabilityDatabase`.  
   
      Por exemplo, o comando a seguir adiciona o banco de dados secundário `MyDd` ao grupo de disponibilidade `MyAG` , cuja réplica primária é hospedada por `PrimaryServer\InstanceName`.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "48157846"
     ```  
   
     > [!NOTE]  
-    >  Para exibir a sintaxe de um cmdlet, use o `Get-Help` cmdlet no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ambiente do PowerShell. Para obter mais informações, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Para exibir a sintaxe de um cmdlet, use o cmdlet `Get-Help` no ambiente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para obter mais informações, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
 3.  Depois que você adicionar um banco de dados a um grupo de disponibilidade, configure o banco de dados secundário correspondente em cada instância de servidor que hospeda uma réplica secundária. Para obter mais informações, consulte [Iniciar movimentação de dados em um banco de dados secundário AlwaysOn &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   

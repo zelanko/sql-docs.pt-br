@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d70903f580d55d674b099312c04a24632ac1d701
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113196"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743573"
 ---
 # <a name="partition-properties-dialog-box-ssms"></a>Caixa de diálogo Propriedades da Partição (SSMS)
   Use a caixa de diálogo **Propriedades da Partição** no SQL Server Management Studio para definir as propriedades de uma partição para um cubo em um banco de dados do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -27,9 +27,9 @@ ms.locfileid: "48113196"
   
  A caixa de diálogo **Propriedades da Partição** contém as seguintes páginas:  
   
-## <a name="pages"></a>Páginas  
+## <a name="pages"></a>Pages (Páginas)  
   
-|Página|Description|  
+|Página|Descrição|  
 |----------|-----------------|  
 |**Seleção**|Use a página **Seleção** para selecionar a partição no grupo de medidas da qual você deseja exibir ou modificar propriedades. Para obter mais informações sobre essa página, consulte [Seleção &#40;Caixa de diálogo de propriedades de partição&#41; &#40;SSMS&#41;](selection-partition-properties-dialog-box-ssms.md).|  
 |**Geral**|Use a página **Geral** para exibir e modificar as propriedades gerais da partição selecionada na página **Seleção** . Para obter mais informações sobre essa página, consulte [Geral &#40;Caixa de diálogo de propriedades de partição&#41; &#40;SSMS&#41;](general-partition-properties-dialog-box-ssms.md).|  
@@ -37,7 +37,7 @@ ms.locfileid: "48113196"
 |**Configuração de erro**|Use a página **Configuração de Erro** para exibir e modificar as definições de configuração de erros de processamento da partição selecionada na página **Seleção** . Para obter informações sobre essa página, consulte [Configuração de erros para processamento de cubo, partição e dimensão &#40;SSAS – Multidimensional&#41;](multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md).|  
   
 ## <a name="see-also"></a>Consulte também  
- [Partições &#40;Analysis Services - dados multidimensionais&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Partições &#40;Analysis Services – Dados Multidimensionais&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [Partições remotas](multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
  [Designers e caixas de diálogo do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   

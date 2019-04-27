@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 67f9d89897ef36d297dbeabfffcc02906677cb29
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62663951"
 ---
 # <a name="locktimeout-event-class"></a>Classe de evento Lock:Timeout
   A classe de evento Lock:Timeout indica que uma solicitação para um bloqueio em um recurso, como uma página, expirou porque outra transação está segurando uma fechadura de bloqueio no recurso exigido. O tempo limite é determinado pela função de sistema @@LOCK_TIMEOUT e pode ser definido com a instrução SET LOCK_TIMEOUT.  

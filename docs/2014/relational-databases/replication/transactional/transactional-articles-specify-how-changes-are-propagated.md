@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: de28a4353c5d690e30cd2cefc20f50e4911c6ff1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62655671"
 ---
 # <a name="specify-how-changes-are-propagated-for-transactional-articles"></a>Especificar como as alterações são propagadas para artigos transacionais
   A replicação transacional permite que você especifique como as alterações de dados são propagadas do Publicador aos Assinantes. Para cada tabela publicada, você pode especificar uma das quatro maneiras em que cada operação (INSERT, UPDATE ou DELETE) deverá ser propagada ao Assinante:  
@@ -60,7 +60,7 @@ ms.locfileid: "52754158"
   
 -   Se você fizer alterações de esquema a uma tabela publicada, os procedimentos personalizados devem ser regenerados. Para obter mais informações, consulte [Regenerar os procedimentos transacionais personalizados para refletir alterações de esquema](transactional-articles-regenerate-to-reflect-schema-changes.md).  
   
--   Se você usar um valor maior do que 1 para o parâmetro **-SubscriptionStreams** do Agente de Distribuição, você deverá se assegurar de que as atualizações nas colunas de chave primária tiveram êxito. Por exemplo:  
+-   Se você usar um valor maior do que 1 para o parâmetro **-SubscriptionStreams** do Agente de Distribuição, você deverá se assegurar de que as atualizações nas colunas de chave primária tiveram êxito. Por exemplo:   
   
     ```  
     update ... set pk = 2 where pk = 1 -- update 1  

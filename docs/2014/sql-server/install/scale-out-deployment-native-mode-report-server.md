@@ -14,14 +14,14 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: c091c115f9e03fbc0f1243e1c2fcf3a075f3586f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753298"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>Implantação de expansão (modo nativo do Servidor de Relatório)
-  Use o **implantação escalável** página no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] do Configuration Manager para exibir o status de inicialização para uma implantação de expansão ou para unir um servidor de relatório a uma implantação de expansão. Uma *implantação de expansão* se refere a duas ou mais instâncias do servidor de relatório que compartilham um único banco de dados do servidor de relatório.  
+  Use a página **Implantação de Expansão** no Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para exibir o status de inicialização de uma implantação de expansão ou para unir um servidor de relatório a uma implantação de expansão. Uma *implantação de expansão* se refere a duas ou mais instâncias do servidor de relatório que compartilham um único banco de dados do servidor de relatório.  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
@@ -35,11 +35,11 @@ ms.locfileid: "48099933"
   
  Para configurar uma implantação de expansão, inicie com duas ou mais instâncias do servidor de relatório que estejam conectadas ao mesmo banco de dados do servidor de relatório. Depois que todas as instâncias estiverem instaladas, conecte-se ao primeiro servidor de relatório e use a página Implantação de Expansão para associar cada instância adicional. Apenas um servidor de relatório que já esteja inicializado para usar um banco de dados pode inicializar nós adicionais.  
   
- Para abrir essa página, inicie o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager e selecione **implantação de expansão** no painel de navegação. Para obter mais informações, consulte [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Para abrir essa página, inicie o Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e selecione **Implantação de Expansão** no painel de navegação. Para obter mais informações, consulte [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Opções  
- **Nome do SQL Server**  
- Especifique o nome da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] instância que hospeda o banco de dados do servidor de relatório.  
+ **SQL Server Name**  
+ Especifique o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] que hospeda o banco de dados do servidor de relatório.  
   
  **Database Name**  
  Especifica o nome do banco de dados ao qual a instância do servidor de relatório está atualmente conectada.  
@@ -51,7 +51,7 @@ ms.locfileid: "48099933"
  Mostra o nome do servidor de relatório. Na maioria dos casos, esse é o nome do computador no qual o servidor de relatório está instalado.  
   
  **Instância**  
- Mostra o nome da instância do servidor de relatório. As instâncias do servidor de relatório têm como base as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Mostra o nome da instância do servidor de relatório. As instâncias do servidor de relatório têm como base as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Status**  
  Indica se o servidor de relatório está inicializado ou aguardando para associar-se a uma implantação de expansão:  

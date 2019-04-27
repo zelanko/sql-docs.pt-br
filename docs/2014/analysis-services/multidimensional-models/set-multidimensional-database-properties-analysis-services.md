@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 338eb4766573cf99d3070fe91cdd276721df79b8
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62741251"
 ---
 # <a name="set-multidimensional-database-properties-analysis-services"></a>Definir propriedades de banco de dados multidimensional (Analysis Services)
   Há várias propriedades de banco de dados [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que você pode configurar no designer de banco de dados [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
@@ -36,13 +36,13 @@ ms.locfileid: "50147971"
 ## <a name="database-properties"></a>Propriedades de banco de dados  
  Além das propriedades acima, há várias propriedades de banco de dados que você pode configurar na janela Propriedades.  
   
-|Propriedade|Description|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |Prefixo de agregação|O prefixo comum que pode ser usado para nomes de agregação para todas as partições em um banco de dados. Para obter mais informações, consulte [Elemento AggregationPrefix &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/aggregationprefix-element-assl).|  
 |Ordenação|Quando o projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é implantando em uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], o banco de dados herda a propriedade do servidor de ordenação a menos que um valor diferente seja fornecido aqui.|  
 |Informações de representação da fonte de dados|Especifica o modo de representação padrão para todos os objetos da fonte de dados no banco de dados. Esse é o modo que o serviço [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa ao processar objetos, sincronizar servidores e executar as instruções de mineração de dados OpenQuery e SystemOpenSchema.|  
 |Tamanho Estimado|Fornece um tamanho estimado dos arquivos de banco de dados no disco. Se os dados forem armazenados em vários locais, esta estimativa será limitada a apenas os arquivos de dados armazenados na pasta do banco de dados.<br /><br /> `EstimatedSize` também pode ser usado como base para estimar memória. Geralmente, os requisitos de memória serão maiores que o tamanho dos dados em disco devido a estruturas de dados adicionais que são criadas quando o banco de dados é carregado na memória.<br /><br /> Para ampliar os requisitos de memória de estimativa, você também pode usar o Gerenciador de Tarefa para observar a memória do processo do Analysis Services antes e depois de processar o banco de dados e observar a memória utilizada como um método para entender os requisitos de memória do banco de dados.|  
-|Linguagem|Quando o projeto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é implantando em uma instância [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , o banco de dados herda a propriedade do servidor de idioma a menos que um valor diferente seja fornecido aqui.|  
+|Idioma|Quando o projeto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é implantando em uma instância [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , o banco de dados herda a propriedade do servidor de idioma a menos que um valor diferente seja fornecido aqui.|  
 |ID do MasterDataSource|Usada com partições remotas. Para obter mais informações, consulte [Partições Remotas](../multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md).|  
   
 ## <a name="see-also"></a>Consulte também  

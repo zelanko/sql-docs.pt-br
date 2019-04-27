@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 17f87d063fd23ecc9ead9bfe097f21e74e011953
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748298"
 ---
 # <a name="replace-table-with-other-table-dialog-box"></a>Caixa de diálogo Substituir Tabela por Outra
   Use a caixa de diálogo **Substituir Tabela por Outra** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para substituir uma tabela existente em uma exibição de fonte de dados por uma tabela na fonte de dados subjacente que ainda não esteja incluída na exibição de fonte de dados. É possível exibir a caixa de diálogo **Substituir Tabela por Outra** clicando com o botão direito do mouse no nome de uma tabela no painel **Diagrama** ou no painel **Tabelas** do **Designer de Exibição da Fonte de Dados** e selecionando **Por Outra Tabela** em **Substituir Tabela**.  
@@ -40,6 +40,6 @@ ms.locfileid: "48173756"
   
 ## <a name="see-also"></a>Consulte também  
  [Designers e caixas de diálogo do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Designer de exibição da fonte de dados &#40;Analysis Services - dados multidimensionais&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Designer de Exibição da Fonte de Dados &#40;Analysis Services – Dados multidimensionais&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

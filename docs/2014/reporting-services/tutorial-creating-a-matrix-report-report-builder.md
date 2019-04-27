@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86bffd9c3cf98732da253e511287a9c9e722f4a7
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59965692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62647499"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Tutorial: Criar um relatório de matriz (Construtor de Relatórios)
   Este tutorial ensina a criar um relatório de matriz básico com base em dados de vendas de exemplo. A matriz tem grupos de linhas e de colunas aninhados e um grupo de colunas adjacente. Você também aprenderá a formatar colunas e a girar texto. A ilustração a seguir mostra um relatório semelhante ao que você criará.  

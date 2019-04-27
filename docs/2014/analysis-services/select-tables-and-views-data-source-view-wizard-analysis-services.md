@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f18e9c5817de5e98ae21726b235d60d8d31e7d66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747118"
 ---
 # <a name="select-tables-and-views-data-source-view-wizard-analysis-services"></a>Selecionar Tabelas e Exibições (Assistente de Exibição da Fonte de Dados) (Analysis Services)
   Use a página **Selecionar Tabelas e Exibições** para selecionar as tabelas ou exibições da fonte de dados que você deseja incluir na exibição da fonte de dados.  

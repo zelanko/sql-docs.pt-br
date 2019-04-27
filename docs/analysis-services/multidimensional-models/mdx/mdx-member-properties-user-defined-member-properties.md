@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 77ae7cf92c9384b2be79048c860ef6a8b0476535
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740217"
 ---
-# <a name="mdx-member-properties---user-defined-member-properties"></a>Propriedades de membro MDX - propriedades do membro definidas pelo usuário
+# <a name="mdx-member-properties---user-defined-member-properties"></a>Propriedades de membro MDX – propriedades do membro definidas pelo usuário
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   É possível adicionar propriedades do membro definidas pelo usuário a um nível nomeado específico de uma dimensão como relações de atributo. Não é possível adicionar propriedades do membro definidas pelo usuário ao nível **(Tudo)** de uma hierarquia ou à própria hierarquia.  
   
@@ -65,7 +65,7 @@ FROM [Adventure Works]
  Para obter mais informações sobre como criar membros calculados, consulte [Criando membros calculados em MDX &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-building-calculated-members.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Usando propriedades do membro & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
- [Propriedades & #40; MDX & #41;](../../../mdx/properties-mdx.md)  
+ [Usando propriedades do membro &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
+ [Properties &#40;MDX&#41;](../../../mdx/properties-mdx.md)  
   
   

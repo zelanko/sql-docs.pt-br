@@ -15,11 +15,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be016421136f10f7f78bdebffd8c524e4bee72e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779736"
 ---
 # <a name="feature-reference-database-engine"></a>Referência de recursos (Mecanismo de Banco de Dados)
   O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] inclui várias ferramentas e aplicativos que podem ser usados para criar, gerenciar e exibir objetos e dados de bancos de dados. Além disso, há ferramentas para monitorar e solucionar problemas de desempenho do servidor e do banco de dados e habilitar e desabilitar recursos, serviços e protocolos de rede. Esta seção fornece tópicos específicos que descrevem as caixas de diálogo dessas ferramentas e aplicativos.  

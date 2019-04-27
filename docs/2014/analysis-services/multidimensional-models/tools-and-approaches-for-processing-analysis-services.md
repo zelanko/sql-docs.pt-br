@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c4d37cd9a4ef101f9243fbf5dafdc7df43dfa62c
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62741912"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>Ferramentas e abordagens para processamento (Analysis Services)
   O processamento é uma operação em que o Analysis Services consulta uma fonte de dados relacional e popula objetos do Analysis Services usando esses dados.  

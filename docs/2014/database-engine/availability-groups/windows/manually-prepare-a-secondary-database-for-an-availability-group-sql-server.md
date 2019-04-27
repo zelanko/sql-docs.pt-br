@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f2fd8058518d59e5eb3fcf8a8514425c69339dfb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792076"
 ---
 # <a name="manually-prepare-a-secondary-database-for-an-availability-group-sql-server"></a>Preparar um banco de dados secundário manualmente para um grupo de disponibilidade (SQL Server)
   Este tópico descreve como preparar um banco de dados secundário para um grupo de disponibilidade AlwaysOn no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o PowerShell. Preparar um banco de dados secundário exige duas etapas: (1) restaurar um backup recente do banco de dados do banco de dados primário e backups de log subsequentes em cada instância de servidor que hospeda a réplica secundária, usando RESTORE WITH NORECOVERY e (2) unir o banco de dados restaurado para o grupo de disponibilidade.  
@@ -124,7 +124,7 @@ ms.locfileid: "52525754"
   
 -   [Restaurar um banco de dados em um novo local &#40;SQL Server&#41;](../../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para preparar um banco de dados secundário**  
   
 > [!NOTE]  
@@ -277,7 +277,7 @@ Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -R
   
 ```  
   
-##  <a name="FollowUp"></a> Acompanhar: Depois de preparar um banco de dados secundário  
+##  <a name="FollowUp"></a> Acompanhamento: Depois de preparar um banco de dados secundário  
  Para concluir a configuração do banco de dados secundário, una o banco de dados recém-restaurado ao grupo de disponibilidade. Para obter mais informações, consulte [Unir um banco de dados secundário a um grupo de disponibilidade &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
 ## <a name="see-also"></a>Consulte também  

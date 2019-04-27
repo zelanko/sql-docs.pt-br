@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d57d3a1b50b88bfd2ec27641cca4f7058f9639f1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59955882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62652391"
 ---
 # <a name="url-access-parameter-reference"></a>Referência de parâmetro de acesso de URL
   Você pode usar os parâmetros a seguir como parte de uma URL para configurar a aparência de seus relatórios. Os parâmetros mais comuns estão listados nesta seção. Os parâmetros não diferenciam maiúsculas de minúsculas e começam com o prefixo de parâmetro *rs:* quando direcionados ao servidor de relatório e com *rc:* quando direcionados a um Visualizador de HTML. Você também pode especificar parâmetros que são específicos de dispositivos ou extensões de renderização. Para obter mais informações sobre parâmetros específicos do dispositivo, consulte [Especificar as configurações de informações sobre o dispositivo em uma URL](specify-device-information-settings-in-a-url.md).  

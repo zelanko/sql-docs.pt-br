@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d49e80d01a83f2ffad43178fa987010cd4f76b01
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679744"
 ---
 # <a name="cross-validation-tab-mining-accuracy-chart-view"></a>Guia da validação cruzada (Exibição do gráfico de precisão de mineração)
-  A validação cruzada permite dividir uma estrutura de mineração em seções cruzadas e interativamente treinar e testar modelos com cada seção cruzada. Você especifica um número de partições para dividir e colocar os dados; cada partição, por sua vez, é usada como dados de teste, enquanto os dados restantes são usados para treinar o novo modelo. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] em seguida, gera um conjunto de métricas de precisão padrão para cada modelo. Comparando as métricas dos modelos geradas para cada seção cruzada, é possível obter uma boa noção da confiabilidade do modelo em relação a todo conjunto de dados.  
+  A validação cruzada permite dividir uma estrutura de mineração em seções cruzadas e interativamente treinar e testar modelos com cada seção cruzada. Você especifica um número de partições para dividir e colocar os dados; cada partição, por sua vez, é usada como dados de teste, enquanto os dados restantes são usados para treinar o novo modelo. O [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] gera um conjunto de métricas de precisão padrão para cada modelo. Comparando as métricas dos modelos geradas para cada seção cruzada, é possível obter uma boa noção da confiabilidade do modelo em relação a todo conjunto de dados.  
   
  Para obter mais informações, consulte [Cross-Validation &#40;Analysis Services - Data Mining&#41;](data-mining/cross-validation-analysis-services-data-mining.md).  
   
@@ -100,9 +100,9 @@ ms.locfileid: "48188198"
  Quando **alvo** **limite** está definido como `null`, que é o valor padrão, a previsão mais provável para cada caso é contada como correta. No exemplo a pouco citado, 0,05, 0,15 e 0,8 são as probabilidades para previsões em três casos diferentes. Embora as probabilidades sejam muito diferentes, cada previsão será contada como correta, porque cada caso gera somente uma previsão e essas são as melhores previsões para esses casos.  
   
 ## <a name="see-also"></a>Consulte também  
- [Teste e validação &#40;mineração de dados&#41;](data-mining/testing-and-validation-data-mining.md)   
- [A validação cruzada &#40;Analysis Services - mineração de dados&#41;](data-mining/cross-validation-analysis-services-data-mining.md)   
+ [Teste e validação &#40;Mineração de dados&#41;](data-mining/testing-and-validation-data-mining.md)   
+ [Validação cruzada &#40;Analysis Services – Data Mining&#41;](data-mining/cross-validation-analysis-services-data-mining.md)   
  [Medidas no relatório de validação cruzada](data-mining/measures-in-the-cross-validation-report.md)   
- [Procedimentos armazenados da mineração de dados &#40;Analysis Services - mineração de dados&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
+ [Procedimentos armazenados da mineração de dados &#40;Analysis Services – Mineração de dados&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
   

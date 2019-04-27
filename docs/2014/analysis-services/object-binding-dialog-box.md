@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ab14c0aad6701311e4ae9bc59679daca566bcdde
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743686"
 ---
 # <a name="object-binding-dialog-box"></a>Caixa de diálogo Associação de Objetos
   Use a caixa de diálogo **Associação de Objetos** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para definir associações entre a propriedade de um objeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e uma tabela ou coluna em uma exibição da fonte de dados. É possível exibir a caixa de diálogo **Associação de Objetos** selecionando **(nova)** na lista suspensa para obter o valor das seguintes propriedades de um objeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] na janela **Propriedades** do [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]:  

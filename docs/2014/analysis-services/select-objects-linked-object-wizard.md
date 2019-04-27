@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3d1f7e83ebe2d1273cc2efaa5c341bfd970856fa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747228"
 ---
 # <a name="select-objects-linked-object-wizard"></a>Selecionar Objetos (Assistente para Objetos Vinculados)
   Use a página **Selecionar Objetos** para selecionar os objetos que serão vinculados ou importados.  

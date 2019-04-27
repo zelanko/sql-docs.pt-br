@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7776ed3550d5bfa8caec4c017c46946e31845af
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755922"
 ---
 # <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>O que&#39;s incluídos na mineração de dados suplementos para Office
   Quando você instalar os Suplementos de Mineração de Dados para Office 2013, e selecionar todas as opções de instalação, as seguintes barras de ferramentas e modelos serão adicionados:  
@@ -47,7 +47,7 @@ ms.locfileid: "52519095"
   
      Saber que dados usar, e como prepará-los, é essencial para a análise de dados. Este tópico fornece dicas sobre como preparar os dados para criar o melhor modelo possível.  
   
-     Se você é novato na mineração de dados e deseja apenas experimentar as ferramentas, é recomendável usar a pasta de trabalho de dados de exemplo que foi instalada junto com os suplementos. Ao examinar esses dados, você também pode encontrar exemplos de como preparar dados para modelos de série temporal ou modelos de associação.  
+     Se você estiver familiarizado com mineração de dados e quiser apenas experimentar com as ferramentas, é recomendável que você use a pasta de trabalho de dados de exemplo que são instalados junto com os suplementos. Ao examinar esses dados, você também pode ver exemplos de como preparar dados para modelos de série temporal ou modelos de associação.  
   
      **Dados de exemplo**  
   
@@ -59,7 +59,7 @@ ms.locfileid: "52519095"
   
     -   \<unidade >: \Program Files\Microsoft suplementos do SQL Server 2014 DM  
   
-    -   \<unidade >: \Program Files (x86) \Microsoft suplementos do SQL Server 2014 DM  
+    -   \<drive>:\Program Files(x86)\Microsoft SQL Server 2014 DM add-ins  
   
 ## <a name="see-also"></a>Consulte também  
  [Introdução à mineração de dados &#40;Data Mining Add-ins para Excel&#41;](getting-started-with-data-mining-data-mining-add-ins-for-excel.md)  

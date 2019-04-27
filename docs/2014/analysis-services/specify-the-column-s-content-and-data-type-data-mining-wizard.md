@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc0fa58c45a49c6a2f09ca3e42df395cbaf20660
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745826"
 ---
 # <a name="specify-the-column39s-content-and-data-type-data-mining-wizard"></a>Especifique a coluna&#39;s conteúdo e tipo de dados (Assistente de mineração de dados)
   Use a página **Especificar o Tipo de Conteúdo e de Dados da Coluna** para modificar a coluna e os tipos de conteúdo que já foram definidos pelo assistente. O assistente usa os tipos de dados das colunas de origem e os recursos do algoritmo selecionado para determinar os tipos de dados e de conteúdo padrão de cada coluna.  
   
- **Para obter mais informações:** [Assistente de Mineração de Dados &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Criar uma estrutura de mineração relacional](data-mining/create-a-relational-mining-structure.md)  
+ **Para obter mais informações:** [Assistente de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [criar uma estrutura de mineração relacional](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Opções  
  **Colunas**  
@@ -35,7 +35,7 @@ ms.locfileid: "48118976"
  **Tipo de Dados**  
  Os tipos de dados que são atribuídos a cada coluna. Clique dentro de uma célula para alterar o tipo de dados. Para obter mais informações sobre tipos de conteúdo, consulte [Tipos de dados &#40;Mineração de dados&#41;](data-mining/data-types-data-mining.md).  
   
- **detectar**  
+ **Detect**  
  Clique para detectar automaticamente os tipos de conteúdo contínuo e distinto para a coluna numérica. Isso não se aplica a estruturas de mineração baseadas em fontes de dados OLAP. Para estruturas de mineração OLAP, o assistente detecta tipos de conteúdo automaticamente e escolhe um tipo compatível com o algoritmo selecionado.  
   
 ## <a name="see-also"></a>Consulte também  

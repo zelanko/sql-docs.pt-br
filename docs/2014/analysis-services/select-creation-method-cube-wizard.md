@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 48a6ef3849e91f606cb94ae7fa1f7c67817bfff7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152796"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747878"
 ---
 # <a name="select-creation-method-cube-wizard"></a>Selecionar Método de Criação (Assistente para Cubos)
   Use a página **Selecionar Método de Criação** para especificar como criar o cubo.  

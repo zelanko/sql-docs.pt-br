@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2f8854dba3c1d998d572481c285ee75dc933e480
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771162"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Trabalhando com o Serviço Oracle CDC
   Esta seção descreve alguns conceitos importantes do Serviço Oracle CDC. Os conceitos incluídos nesta seção são:  

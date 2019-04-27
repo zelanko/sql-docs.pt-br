@@ -14,17 +14,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f3238267021c0fd4054fb9757ea8d00cae6114dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62741141"
 ---
 # <a name="translations-in-multidimensional-models"></a>Traduções em modelos multidimensionais
   Suporte a vários idiomas no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é realizada por meio de traduções. Uma tradução contém um identificador de idioma e associações de propriedades de objetos [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que podem ser apresentados em vários idiomas. Por exemplo, você pode definir uma tradução de um banco de dados [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para apresentar a legenda e a descrição desse banco de dados no idioma especificado. Para obter mais informações sobre traduções, consulte [traduções de cubo](../multidimensional-models-olap-logical-cube-objects/cube-translations.md).  
   
 ## <a name="defining-translations"></a>Definindo traduções  
- Você pode definir traduções no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usando o designer apropriado para o objeto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que será traduzido. Definir uma tradução cria um `Translation` objeto associado com os devidos [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objeto que tem valores literais explícitos especificados, no idioma especificado, para as propriedades do associado [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objeto.  
+ Você pode definir traduções no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usando o designer apropriado para o objeto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que será traduzido. Definir uma tradução cria um objeto `Translation` associado ao objeto apropriado [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que tenha os valores literais explícitos especificados, no idioma especificado, para as propriedades do objeto associado [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
  Os seguintes objetos e propriedades no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] podem ter traduções associadas a eles:  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48218936"
 |Conjunto nomeado|`Caption`|[Traduções &#40;Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
 |membro calculado|`Caption`|[Traduções &#40;Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
 |Dimensão do banco de dados|`Caption`, `AttributeAllMember`|[Traduções &#40;Designer de dimensão&#41; &#40;Analysis Services - dados multidimensionais&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
-|attribute|`Caption`, `CaptionColumn` <sup>1</sup>, `AttributeHierarchyDisplayFolder`, `NamingTemplate`, `MembersWithDataCaption`|[Traduções &#40;Designer de dimensão&#41; &#40;Analysis Services - dados multidimensionais&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
+|attribute|`Caption`, `CaptionColumn`<sup>1</sup>, `AttributeHierarchyDisplayFolder`, `NamingTemplate`, `MembersWithDataCaption`|[Traduções &#40;Designer de dimensão&#41; &#40;Analysis Services - dados multidimensionais&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
 |Hierarquia|`Caption`, `AllMemberName`|[Traduções &#40;Designer de dimensão&#41; &#40;Analysis Services - dados multidimensionais&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
 |Nível|`Caption`|[Traduções &#40;Designer de dimensão&#41; &#40;Analysis Services - dados multidimensionais&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48218936"
   
 -   Uma associação de coluna, em vez de um valor de literal explícito, pode ser associada à propriedade `CaptionColumn` para que os nomes dos membros desse atributo possam ser traduzidos.  
   
--   Um agrupamento do Windows diferente do especificado para a instância pode ser usado para que os membros em um atributo possam ser classificados apropriadamente para o idioma especificado na tradução.  
+-   Uma ordenação do Windows diferente da especificada para a instância pode ser usada para que os membros em um atributo possam ser classificados apropriadamente para o idioma especificado na tradução.  
   
  Você pode usar o **conversão de dados do atributo** da caixa de diálogo [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para definir traduções para atributos em dimensões de banco de dados. Para obter mais informações sobre o **conversão de dados do atributo** caixa de diálogo, consulte [caixa de diálogo de tradução de dados do atributo &#40;Analysis Services - dados multidimensionais&#41;](../attribute-data-translation-dialog-box-analysis-services-multidimensional-data.md).  
   
@@ -79,6 +79,6 @@ ms.locfileid: "48218936"
   
 ## <a name="see-also"></a>Consulte também  
  [Cenários de globalização para Analysis Services multidimensional](../globalization-scenarios-for-analysis-services-multiidimensional.md)   
- [Idiomas e agrupamentos &#40;Analysis Services&#41;](../languages-and-collations-analysis-services.md)  
+ [Idiomas e ordenações &amp;#40;Analysis Services&amp;#41;](../languages-and-collations-analysis-services.md)  
   
   

@@ -16,11 +16,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: aa900fc136729eace74af6ceaf8d6f26b7900f99
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755797"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>Limpar dados usando o conhecimento do DQS (interno)
   Este tópico descreve como limpar seus dados usando um projeto de qualidade de dados no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). A limpeza de dados é executada na fonte de dados com o uso de uma base de dados de conhecimento que foi criada no DQS a partir de um conjunto de dados de alta qualidade. Para obter mais informações, consulte [Criando uma base de dados de conhecimento](../../2014/data-quality-services/building-a-knowledge-base.md).  
@@ -56,11 +56,11 @@ ms.locfileid: "56038327"
 ##  <a name="Mapping"></a> Estágio de mapeamento  
  No estágio de mapeamento, especifique a conexão com os dados de origem a serem limpos e para mapear as colunas nos dados de origem com os domínios apropriados na base de dados de conhecimento selecionada.  
   
-1.  Sobre o **mapa** página do Assistente de qualidade de dados limpeza, selecione sua fonte de dados a serem limpos: **SQL Server** ou **arquivo do Excel**:  
+1.  Na página **Mapa** do assistente de qualidade de dados de limpeza, selecione os dados de origem a serem limpos: **SQL Server** ou **Arquivo do Excel**:  
   
-    1.  **SQL Server**: Selecione **DQS_STAGING_DATA** como a fonte de banco de dados se você tiver copiado sua fonte de dados para esse banco de dados, e, em seguida, selecione tabela ou exibição apropriada que contém os dados de origem. Caso contrário, selecione seu banco de dados de origem e a tabela/exibição apropriada. O banco de dados de origem deve estar presente na mesma instância do SQL Server que o [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] para que esteja disponível na lista suspensa **Banco de dados** .  
+    1.  **SQL Server**: Selecione **DQS_STAGING_DATA** como o banco de dados de origem se você tiver copiado sua fonte de dados nesse banco de dados e depois selecione a tabela/exibição apropriada que contém os dados de origem. Caso contrário, selecione seu banco de dados de origem e a tabela/exibição apropriada. O banco de dados de origem deve estar presente na mesma instância do SQL Server que o [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] para que esteja disponível na lista suspensa **Banco de dados** .  
   
-    2.  **Arquivo do Excel**: Clique em **procurar**e selecione o arquivo do Excel que contém os dados a serem limpos. O Microsoft Excel deverá ser instalado no computador [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] para selecionar um arquivo do Excel. Caso contrário, o botão **Procurar** não estará disponível e você será notificado sob esta caixa de texto de que o Microsoft Excel não está instalado. Além disso, deixe a caixa de seleção **Usar primeira linha como cabeçalho** marcada se a primeira linha do arquivo do Excel contiver dados de cabeçalho.  
+    2.  **Arquivo do Excel**: Clique em **Procurar** e selecione o arquivo do Excel que contém os dados a serem limpos. O Microsoft Excel deverá ser instalado no computador [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] para selecionar um arquivo do Excel. Caso contrário, o botão **Procurar** não estará disponível e você será notificado sob esta caixa de texto de que o Microsoft Excel não está instalado. Além disso, deixe a caixa de seleção **Usar primeira linha como cabeçalho** marcada se a primeira linha do arquivo do Excel contiver dados de cabeçalho.  
   
 2.  Em **Mapeamentos**, mapeie as colunas de dados na sua fonte de dados com os domínios apropriados na base de dados de conhecimento selecionando uma coluna de origem na lista suspensa na **Coluna de Origem** e selecionando um domínio na lista suspensa na coluna **Domínio** na mesma linha. Repita essa etapa para mapear todas as colunas nos dados de origem com os domínios apropriados na base de dados de conhecimento. Se necessário, você pode clicar no ícone **Adicionar um mapeamento de coluna** para adicionar linhas à tabela de mapeamento.  
   
@@ -95,11 +95,11 @@ ms.locfileid: "56038327"
 ##  <a name="Interactive"></a> Estágio de limpeza interativa  
  No estágio de limpeza interativa, você pode visualizar as alterações que o DQS propôs e decidir se deseja implementá-las ou não, aprovando ou rejeitando as alterações. No painel esquerdo da página **Gerenciar e exibir resultados** , o DQS exibe uma lista de todos os domínios mapeados anteriormente no estágio de mapeamento junto com o número de valores nos dados de origem analisados em relação a cada domínio durante o estágio de limpeza auxiliada por computador. No painel direito da página **Gerenciar e exibir resultados** , com base na conformidade com as regras de domínio, regras de erro de sintaxe e algoritmos avançados, o DQS categoriza os dados em cinco guias usando o *nível de confiança*. O nível de confiança indica a extensão da certeza do DQS para a correção ou sugestão e se baseia nos seguintes valores de limite:  
   
--   **Limite de correção automática**: Qualquer valor que tenha um nível de confiança acima desse limite será corrigido automaticamente pelo DQS. No entanto, o administrador de dados pode substituir a alteração durante a limpeza interativa. Você pode especificar o valor de limite de correção automática na guia **Configurações Gerais** na tela **Configuração** . Para obter mais informações, consulte [Configurar valores de limite para limpeza e correspondência](../../2014/data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
+-   **Limite de Correção Automática**: Qualquer valor que tenha um nível de confiança acima desse limite será corrigido automaticamente pelo DQS. No entanto, o administrador de dados pode substituir a alteração durante a limpeza interativa. Você pode especificar o valor de limite de correção automática na guia **Configurações Gerais** na tela **Configuração** . Para obter mais informações, consulte [Configurar valores de limite para limpeza e correspondência](../../2014/data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
--   **Limite de sugestão automático**:  Qualquer valor que tenha um nível de confiança acima deste limite, mas abaixo do limite de correção automática, será sugerido como um valor de substituição. O DQS só fará a alteração se o administrador de dados aprová-la. Você pode especificar o valor de limite de sugestão automática na guia **Configurações Gerais** na tela **Configuração** . Para obter mais informações, consulte [Configurar valores de limite para limpeza e correspondência](../../2014/data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
+-   **Limite de Sugestão Automática**:  Qualquer valor que tenha um nível de confiança acima deste limite, mas abaixo do limite de correção automático, será sugerido como um valor de substituição. O DQS só fará a alteração se o administrador de dados aprová-la. Você pode especificar o valor de limite de sugestão automática na guia **Configurações Gerais** na tela **Configuração** . Para obter mais informações, consulte [Configurar valores de limite para limpeza e correspondência](../../2014/data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
--   **Outros**:  Qualquer valor abaixo que do valor de limite de sugestão automática é mantido sem alteração pelo DQS.  
+-   **Outro**:  Qualquer valor abaixo do valor de limite de sugestão automática é mantido sem alteração pelo DQS.  
   
  Com base no nível de confiança, os valores são exibidos nas cinco guias a seguir:  
   
@@ -138,24 +138,24 @@ ms.locfileid: "56038327"
 ##  <a name="Export"></a> Estágio de exportação  
  No estágio de exportação, você especifica os parâmetros para exportação dos dados limpos: o que e para onde exportar.  
   
-1.  Sobre o **exportar** página de limpeza dados qualidade assistente, selecione o tipo de destino para exportação dos dados limpos: **SQL Server**, **arquivo CSV**, ou **arquivo do Excel**.  
+1.  Na página **Exportar** do assistente de qualidade de dados de limpeza, selecione o tipo de destino para exportação dos dados limpos: **SQL Server**, **Arquivo CSV** ou **Arquivo do Excel**.  
   
     > [!IMPORTANT]  
     >  Se você estiver usando uma versão de 64 bits do Excel, não poderá exportar os seus dados limpos para um arquivo do Excel; você só poderá exportar para um banco de dados do SQL Server ou para um arquivo .csv.  
   
-    1.  **SQL Server**: Selecione **DQS_STAGING_DATA** como o destino de banco de dados se você quiser exportar seus dados aqui e, em seguida, especifique um nome da tabela que será criado para armazenar os dados exportados. Caso contrário, selecione outro banco de dados se você quiser exportar dados para um banco de dados diferente e depois especifique um nome da tabela que será criada para armazenar os dados exportados. O banco de dados de destino deve estar presente na mesma instância do SQL Server que o [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] para que esteja disponível na lista suspensa **Banco de dados** .  
+    1.  **SQL Server**: Selecione **DQS_STAGING_DATA** como o banco de dados de destino se você quiser exportar seus dados aqui e depois especifique um nome da tabela que será criada para armazenar os dados exportados. Caso contrário, selecione outro banco de dados se você quiser exportar dados para um banco de dados diferente e depois especifique um nome da tabela que será criada para armazenar os dados exportados. O banco de dados de destino deve estar presente na mesma instância do SQL Server que o [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] para que esteja disponível na lista suspensa **Banco de dados** .  
   
-    2.  **Arquivo CSV**: Clique em **procurar**e especifique o nome e o local do arquivo. csv no qual você deseja exportar os dados limpos. Também é possível digitar o nome do arquivo .csv junto com o caminho completo para o qual você deseja exportar os dados limpos. Por exemplo, "c:\ExportedData.csv". O arquivo é salvo no computador em que o [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] está instalado.  
+    2.  **Arquivo CSV**: Clique em **Procurar** e especifique o nome e o local do arquivo .csv para o qual você deseja exportar os dados limpos. Também é possível digitar o nome do arquivo .csv junto com o caminho completo para o qual você deseja exportar os dados limpos. Por exemplo, "c:\ExportedData.csv". O arquivo é salvo no computador em que o [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] está instalado.  
   
-    3.  **Arquivo do Excel**: Clique em **procurar**e especifique o nome e local do arquivo do Excel em que você deseja exportar os dados limpos. Também é possível digitar o nome do arquivo do Excel junto com o caminho completo para o qual você deseja exportar os dados limpos. Por exemplo, "c:\ExportedData.xlsx". O arquivo é salvo no computador em que o [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] está instalado.  
+    3.  **Arquivo do Excel**: Clique em **Procurar** e especifique o nome e o local do arquivo do Excel para o qual você deseja exportar os dados limpos. Também é possível digitar o nome do arquivo do Excel junto com o caminho completo para o qual você deseja exportar os dados limpos. Por exemplo, "c:\ExportedData.xlsx". O arquivo é salvo no computador em que o [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] está instalado.  
   
 2.  Marque a caixa de seleção **Padronizar Saída** para padronizar a saída com base no formato de saída selecionado para o domínio. Por exemplo, altere o valor da cadeia de caracteres para maiúsculas ou coloque a primeira letra da palavra em maiúscula. Para obter informações sobre como especificar o formato de saída de um domínio, consulte a lista **Saída de Formato para** em [Definir propriedades do domínio](../../2014/data-quality-services/set-domain-properties.md).  
   
 3.  Em seguida, selecione a saída de dados: exporte apenas os dados limpos ou exporte os dados limpos junto com as informações limpas.  
   
-    -   **Somente dados**: Clique no botão de opção para exportar apenas os dados limpos.  
+    -   **Somente Dados**: Clique no botão de opção para exportar apenas os dados limpos.  
   
-    -   **Os dados e informações de limpeza**: Clique no botão de rádio para exportar os dados a seguir para cada domínio:  
+    -   **Dados e Informações de Limpeza**: Clique no botão de opção para exportar os seguintes dados para cada domínio:  
   
         -   **\<Domain>_Source**: O valor original no domínio.  
   
@@ -167,7 +167,7 @@ ms.locfileid: "56038327"
   
         -   **\<Domain>_Status**: O status do valor de domínio após a limpeza de dados. Por exemplo, **Sugerido**, **Novo**, **Inválido**, **Corrigido**ou **Correto**.  
   
-        -   **Status do registro**: Além de ter um campo de status para cada domínio mapeado **(\<DomainName > _Status**), o **Status do registro** campo exibe o status de um registro. Se algum status de domínio no registro for *Novo* ou *Correto*, o **Status do Registro** será definido como *Correto*. Se algum status de domínio no registro for *Sugerido*, *Inválido* ou *Corrigido*, o **Status do Registro** será definido com o respectivo valor. Por exemplo, se algum status de domínio no registro for *Sugerido*, o **Status do Registro** será definido como *Sugerido*.  
+        -   **Status do Registro**: Além de ter um campo de status para cada domínio mapeado, **(\<DomainName>_Status**), o campo **Status do Registro** exibe o status de um registro. Se algum status de domínio no registro for *Novo* ou *Correto*, o **Status do Registro** será definido como *Correto*. Se algum status de domínio no registro for *Sugerido*, *Inválido* ou *Corrigido*, o **Status do Registro** será definido com o respectivo valor. Por exemplo, se algum status de domínio no registro for *Sugerido*, o **Status do Registro** será definido como *Sugerido*.  
   
             > [!NOTE]  
             >  Se você usar o serviço de dados de referência para a operação de limpeza, alguns dados adicionais sobre o valor de domínio também estarão disponíveis para exportação. Para obter mais informações, consulte [Limpar dados usando o conhecimento &#40;externo&#41; dos dados de referência](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  
@@ -187,29 +187,29 @@ ms.locfileid: "56038327"
   
  A guia **Criador de Perfil** fornece as seguintes estatísticas para os dados de origem, por campo e domínio:  
   
--   **Registros**: O número de registros na amostra de dados foram analisado para a atividade de limpeza de dados  
+-   **Registros**: Quantos registros na amostra de dados foram analisados para a atividade de limpeza de dados  
   
--   **Corrigir registros**: Quantos registros foram considerado corretos  
+-   **Registros Corretos**: Quantos registros foram considerados corretos  
   
--   **Registros corrigidos**: Quantos registros foram corrigidos  
+-   **Registros Corrigidos**: Quantos registros foram corrigidos  
   
--   **Registros sugeridos**: Quantos registros foram sugerido  
+-   **Registros Sugeridos**: Quantos registros foram sugeridos  
   
--   **Registros inválidos**: Quantos registros estavam inválidos  
+-   **Registros Inválidos**: Quantos registros eram inválidos  
   
  As estatísticas de campo incluem o seguinte:  
   
--   **Campo**: Nome do campo na fonte de dados  
+-   **Campo**: o nome do campo nos dados de origem  
   
--   **Domínio**: Nome do domínio que é mapeado para o campo  
+-   **Domínio**: nome do domínio que mapeia para o campo  
   
--   **Valores corrigidos**: O número de valores de domínio que foram corrigidos  
+-   **Valores Corrigidos**: O número de valores de domínio que foram corrigidos  
   
--   **Valores sugeridos**: O número de valores de domínio que foram sugeridos  
+-   **Valores Sugeridos**: O número de valores de domínio que foram sugeridos  
   
--   **Integridade**: A integridade de cada campo de origem que é mapeado para a atividade de limpeza  
+-   **Integridade**: A integridade de cada campo de origem mapeado para a atividade de limpeza  
   
--   **Precisão**: A precisão de cada campo de origem que é mapeado para a atividade de limpeza  
+-   **Exatidão**: A exatidão de cada campo de origem mapeado para a atividade de limpeza  
   
  A criação de perfil do DQS fornece duas dimensões de qualidade de dados: *integridade* (a extensão até a qual os dados estão presentes) e *exatidão* (a extensão até a qual os dados podem ser utilizados para seu uso pretendido). Se a criação de perfil estiver informando que um campo está relativamente incompleto, talvez você queira removê-lo da base de dados de conhecimento de um projeto de qualidade de dados. A criação de perfil talvez não forneça estatísticas confiáveis de integridade para domínios compostos. Se você precisar de estatísticas de integridade, use domínios únicos, em vez de domínios compostos. Para utilizar domínios compostos, talvez você queira criar uma base de dados de conhecimento com domínios únicos para a criação de perfil, a fim de determinar a integridade e criar outro domínio com um domínio composto para o processo de limpeza. Por exemplo, a criação de perfil pode mostrar 95% de integridade para registros de endereço usando um domínio composto, mas pode haver um nível muito mais alto de não integridade para uma das colunas, por exemplo, uma coluna de CEP. Neste exemplo, talvez você queira medir a integridade da coluna de CEP com um domínio único. A criação de perfil provavelmente fornecerá estatísticas de exatidão confiáveis para domínios compostos, pois é possível medir a exatidão para várias colunas juntas. O valor desses dados está na agregação composta, de modo que talvez você queira medir a exatidão com um domínio composto.  
   

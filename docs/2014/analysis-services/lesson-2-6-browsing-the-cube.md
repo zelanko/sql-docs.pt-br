@@ -12,18 +12,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11369983a3fd977db2f7ba09e4a4c69fd09abc0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729322"
 ---
 # <a name="browsing-the-cube"></a>Navegando pelo cubo
   Depois de implantar um cubo, os dados do cubo poderão ser vistos na guia **Navegador** no Designer de Cubo e os dados de dimensão poderão ser vistos na guia **Navegador** no Designer de Dimensão. Navegar dados de cubo e de dimensão é uma maneira de verificar seu trabalho incrementalmente. Você pode verificar se as pequenas alterações em propriedades, relações e outros objetos têm o efeito desejado quando o objeto é processado. Embora a guia Navegador seja usada para exibir os dados de cubo e de dimensão, a guia fornece recursos diferentes com base no objeto que você está procurando.  
   
  Para dimensões, a guia Navegador fornece um modo de exibir os membros ou navegar em uma hierarquia até o nó folha. Você pode procurar dados de dimensão em idiomas diferentes, supondo que tenha adicionado as traduções a seu modelo.  
   
- Para cubos, a guia Navegador fornece duas abordagens para explorar dados. Você pode usar o Designer de Consulta MDX interno para criar consultas que retornam um conjunto de linhas bidimensional de um banco de dados multidimensional. Como alternativa, você pode usar um atalho de Excel. Quando você iniciar o Excel de dentro do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], o Excel já abre com uma Tabela Dinâmica na planilha e uma conexão predefinida para o banco de dados de espaço de trabalho do modelo.  
+ Para cubos, a guia Navegador fornece duas abordagens para explorar dados. Você pode usar o Designer de Consulta MDX interno para criar consultas que retornam um conjunto de linhas bidimensional de um banco de dados multidimensional. Como alternativa, você pode usar um atalho de Excel. Quando você iniciar o Excel de dentro do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], o Excel já abre com uma Tabela Dinâmica na planilha e uma conexão predefinida para o banco de dados de workspace do modelo.  
   
  O Excel geralmente oferece uma experiência de navegação melhor porque você pode explorar dados de cubo interativamente, usando eixos horizontais e verticais para analisar as relações em seus dados. Por outro lado, o Designer de Consulta MDX é limitado a um único eixo. Além disso, como o conjunto de linhas é bidimensional, você não obtém a busca detalhada fornecida por uma Tabela Dinâmica do Excel. À medida que você adiciona mais dimensões e hierarquias a seu cubo, que você fará em lições subsequentes, o Excel será a solução preferida para procurar dados.  
   

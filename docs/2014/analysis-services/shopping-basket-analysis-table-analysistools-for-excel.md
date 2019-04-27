@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8d5545d6a6d0deca345207ec73a039e7abe841ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746499"
 ---
 # <a name="shopping-basket-analysis-table-analysistools-for-excel"></a>Análise da Cesta de Compras (Ferramentas de Análise de Tabela para Excel)
   ![Ferramenta cesta de compras](media/tat-shopbskt.gif "ferramenta cesta de compras")  
@@ -78,7 +78,7 @@ ms.locfileid: "48049746"
   
  **Como um valor absoluto:** Insira um número que representa a contagem de transações que contêm os itens de destino. Por exemplo, se você inserir 10, qualquer conjunto de itens que apareça em pelo menos 10 cestas de compras será incluído nos resultados.  
   
- **Como uma porcentagem:** Insira um número que representa um percentual de toda a coleção de conjuntos de itens. Por exemplo, se você especificar 10, todos os conjuntos de itens serão contados e o conjunto de itens de destino deve parecer constituir pelo menos 10% do número total de conjuntos de itens. Se houver um conjunto de dados muito grande, o uso de porcentagens, em vez de uma contagem pode ajudá-lo a enfatizar os agrupamentos de itens mais importantes.  
+ **Como uma porcentagem:** Insira um número que representa uma porcentagem de toda a coleção de conjuntos de itens. Por exemplo, se você especificar 10, todos os conjuntos de itens serão contados e o conjunto de itens de destino deve parecer constituir pelo menos 10% do número total de conjuntos de itens. Se houver um conjunto de dados muito grande, o uso de porcentagens, em vez de uma contagem pode ajudá-lo a enfatizar os agrupamentos de itens mais importantes.  
   
 > [!NOTE]  
 >  Lembre-se: o número de conjuntos de itens é diferente do número de transações nos dados. Cada transação pode conter vários conjuntos de itens; no entanto, a maioria dos conjuntos de itens se repete várias vezes no conjunto de dados.  

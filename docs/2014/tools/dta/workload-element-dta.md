@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e81ea0aac9cfe7676abba18bc7dffb2e1561597b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678714"
 ---
 # <a name="workload-element-dta"></a>Elemento de carga de trabalho (DTA)
   Especifica a carga de trabalho a ser usada em uma sessão de ajuste.  

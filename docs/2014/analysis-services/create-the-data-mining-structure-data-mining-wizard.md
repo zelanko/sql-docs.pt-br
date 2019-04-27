@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 06aa74bed451075f0b6749870fa25275703c3181
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679671"
 ---
 # <a name="create-the-data-mining-structure-data-mining-wizard"></a>Criar a estrutura de mineração de dados (Assistente de Mineração de Dados)
   Use a página **Criar a Estrutura de Data Mining** para criar uma estrutura de mineração de dados e, opcionalmente, um modelo de mineração associado.  
   
  Se optar por criar um modelo de mineração, você deverá especificar também o algoritmo de mineração de dados que deseja usar. Se você criar só a estrutura agora, poderá adicionar um modelo de mineração à estrutura depois.  
   
- **Para obter mais informações:** [Algoritmos de Data Mining &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md), [Assistente de Data Mining &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md) e [Criar uma estrutura de mineração relacional](data-mining/create-a-relational-mining-structure.md)  
+ **Para obter mais informações:** [Algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md), [Assistente de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [criar uma estrutura de mineração relacional](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Opções  
  **Criar estrutura de mineração com um modelo de mineração**  

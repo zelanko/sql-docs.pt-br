@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fa14cea178d732332ab4729b1c653ef6d19cfab9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731763"
 ---
 # <a name="dimension-designer-analysis-services---multidimensional-data"></a>Designer de Dimensão (Analysis Services - Dados multidimensionais)
   Use o Designer de Dimensão no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para procurar os dados que a dimensão contém e modificar várias propriedades de uma dimensão existente: atributos, hierarquias, níveis, relações de atributo e conversões.  

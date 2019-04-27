@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a50c241bc70d48577b558827a278d5423ee8344b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748248"
 ---
 # <a name="review-aggregation-usage-usage-based-optimiation-wizard"></a>Verificar Uso de Agregação (Assistente de Otimização com Base no Uso)
   Use a página **Revisar Uso de Agregação** para efetuar configurações do uso de agregação.  
@@ -30,10 +30,10 @@ ms.locfileid: "48164046"
  **Full (cheio)**  
  Selecione para definir a configuração do uso de agregação do atributo como Completo. Quando essa configuração é utilizada, cada agregação para o cubo deve incluir esse atributo ou um atributo relacionado inferior na cadeia de atributos. A configuração do uso de agregação Completo deverá ser evitada quando um atributo contiver muitos membros. Se for especificada para vários atributos ou atributos que têm muitos membros, essa configuração poderá impedir a criação de agregações por causa do seu tamanho excessivo.  
   
- **Nenhuma**  
+ **Nenhum**  
  Selecione para definir a configuração do uso de agregação do atributo como Nenhum. Quando essa configuração é utilizada, nenhuma agregação para o cubo pode incluir esse atributo.  
   
- **Sem restrições**  
+ **Unrestricted**  
  Selecione para definir a configuração do uso de agregação do atributo como Irrestrito. Quando essa configuração é utilizada, nenhuma restrição é colocada no designer de agregação. O atributo, porém, ainda deverá ser avaliado para determinar se é um candidato de agregação valioso.  
   
  **Definir tudo como padrão**  

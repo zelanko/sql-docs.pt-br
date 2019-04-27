@@ -1,5 +1,5 @@
 ---
-title: Conteúdo do modelo de mineração para modelos de Clustering (Analysis Services – mineração de dados) | Microsoft Docs
+title: Conteúdo do modelo de mineração para modelos de Clustering (Analysis Services - mineração de dados) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3344fbcd8a1a31f0bb98a8a1702f1535eb831b3d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736226"
 ---
 # <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>Conteúdo do modelo de mineração para modelos de clustering (Analysis Services – Mineração de Dados)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "34019163"
   
  O nó pai contém estatísticas úteis que descrevem a distribuição real de todos os casos em treinamento. Essas estatísticas são encontradas na coluna da tabela aninhada, NODE_DISTRIBUTION. Por exemplo, a tabela a seguir mostra várias linhas da tabela NODE_DISTRIBUTION que descrevem a distribuição dos dados demográficos dos clientes do modelo de clustering `TM_Clustering`que você cria no [Tutorial Básico de Data Mining](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c):  
   
-|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|Support|PROBABILITY|VARIANCE|VALUE_TYPE|  
+|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|variance|VALUE_TYPE|  
 |---------------------|---------------------|-------------|-----------------|--------------|-----------------|  
 |Idade|Ausente|0|0|0|1 (Ausente)|  
 |Idade|44.9016152716593|12939|1|125.663453102554|3 (Contínuo)|  
@@ -45,7 +45,7 @@ ms.locfileid: "34019163"
 > [!NOTE]  
 >  A variância representa a variação total do cluster. Quando esse valor é pequeno, indica que a maioria dos valores da coluna estão bem próximos da média. Para obter o desvio padrão, calcule a raiz quadrada da variância.  
   
- Observe que para cada atributo existe um tipo de valor **Missing** que indica quantos casos não tinham dados para esse atributo. Dados ausentes podem ser importantes e afetar os cálculos de várias formas, dependendo do tipo de dados. Para obter mais informações, consulte [Valores ausentes&#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).  
+ Observe que para cada atributo existe um tipo de valor **Missing** que indica quantos casos não tinham dados para esse atributo. Dados ausentes podem ser importantes e afetar os cálculos de várias formas, dependendo do tipo de dados. Para obter mais informações, consulte [Valores ausentes &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).  
   
 ## <a name="model-content-for-a-clustering-model"></a>Conteúdo do modelo para um modelo de clustering  
  Esta seção fornece detalhes e exemplos somente para as colunas de conteúdo do modelo de mineração que são relevantes para os modelos de clustering.  
@@ -70,7 +70,7 @@ ms.locfileid: "34019163"
  NODE_TYPE  
  Um modelo de clustering gera os seguintes tipos de nó:  
   
-|ID e nome do nó|Description|  
+|ID e nome do nó|Descrição|  
 |----------------------|-----------------|  
 |1 (Modelo)|Nó raiz do modelo.|  
 |5 (Cluster)|Contém a contagem de casos do cluster, as características dos casos do cluster e estatísticas que descrevem os valores do cluster.|  
@@ -143,20 +143,20 @@ ms.locfileid: "34019163"
  MSOLAP_NODE_SHORT_CAPTION  
  Um rótulo usado para exibição. Não é possível alterar essa legenda.  
   
- **Nó pai** O tipo de modelo: modelo de clustering  
+ **Nó pai** o tipo de modelo: Modelo de cluster  
   
  **Nós de cluster** O nome do cluster. Exemplo: Cluster 1.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece vários métodos para a criação de um modelo de clustering. Se você não souber qual método foi usado para criar o modelo com que você está trabalhando, pode recuperar os metadados do modelo programaticamente, usando um cliente ADOMD ou AMO ou consultando o conjunto de linhas do esquema de mineração de dados. Para obter mais informações, consulte [Como consultar os parâmetros usados para criar um modelo de mineração](../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md).  
   
 > [!NOTE]  
 >  A estrutura e o conteúdo do modelo permanecem inalterados, independentemente do método ou dos parâmetros de clustering usados.  
   
 ## <a name="see-also"></a>Consulte também  
- [Conteúdo do modelo de mineração & #40; Analysis Services – mineração de dados & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [Visualizadores do modelo de mineração de dados](../../analysis-services/data-mining/data-mining-model-viewers.md)   
- [Algoritmo de Clustering da Microsoft](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)   
+ [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Visualizadores do Modelo de Mineração de Dados](../../analysis-services/data-mining/data-mining-model-viewers.md)   
+ [Algoritmo Microsoft Clustering](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)   
  [Consultas de mineração de dados](../../analysis-services/data-mining/data-mining-queries.md)  
   
   

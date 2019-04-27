@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9895875caf7e05080dc46bea43a02b0e6cc6b57c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62665550"
 ---
 # <a name="sqlcolumns-visual-foxpro-odbc-driver"></a>SQLColumns (Driver ODBC do Visual FoxPro)
 > [!NOTE]  
 >  Este tópico contém informações específicas de Driver ODBC do Visual FoxPro. Para obter informações gerais sobre essa função, consulte o tópico apropriado sob [referência da API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Suporte: completo  
+ Suporte a: Completo  
   
- Conformidade com a API ODBC: 1 de nível  
+ Conformidade com a API ODBC: Nível 1  
   
  Para uma tabela, cria um conjunto de resultados que é a lista de coluna para a tabela ou tabelas especificadas.  
   

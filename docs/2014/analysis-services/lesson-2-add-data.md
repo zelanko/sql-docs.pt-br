@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 696b4e9402e58da6308e6746cadbc25d43396d8f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729312"
 ---
 # <a name="lesson-2-add-data"></a>Lição 2: Adicionar dados
   Nesta lição, você usará o Assistente de Importação de Tabela do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] para se conectar ao banco de dados SQL AdventureWorksDW, selecionar, visualizar e filtrar os dados, e importá-los para o workspace do modelo.  

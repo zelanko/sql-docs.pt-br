@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 183dba1f69634ea6931dc14cc6aa3fb6d6eca6ee
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755345"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Conectar clientes a uma sessão de espelhamento de banco de dados (SQL Server)
   Para se conectar a uma sessão de espelhamento de banco de dados, um cliente pode usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ou o .NET Framework Data Provider para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando configurados para um banco de dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , esses provedores de acesso de dados dão suporte completo ao espelhamento de banco de dados. Para obter informações sobre as considerações de programação para usar um banco de dados espelho, consulte [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md). Além disso, a instância de servidor principal atual deve estar disponível e o logon do cliente deve ter sido criado na instância de servidor. Para obter mais informações, consulte [Solução de problemas de usuários órfãos &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). As conexões de cliente com uma sessão de espelhamento de banco de dados não envolvem a instância de servidor testemunha, se essa existir.  
@@ -166,7 +166,7 @@ Server=123.34.45.56,4724;
   
  O tempo de retentar é calculado usando a seguinte fórmula:  
   
- _RetryTime_ **=** _PreviousRetryTime_ **+ (** 0,08 **&#42;**  _LoginTimeout_**)**  
+ _RetryTime_ **=** _PreviousRetryTime_ **+(** 0.08 **&#42;**_LoginTimeout_**)**  
   
  Onde *PreviousRetryTime* é inicialmente 0.  
   
@@ -174,10 +174,10 @@ Server=123.34.45.56,4724;
   
 |Arredondamento|Cálculo de*RetryTime* |Tempo de nova tentativa por tentativa|  
 |-----------|-----------------------------|----------------------------|  
-|1|0 **+ (** 0,08 **&#42;** 15 **)**|1,2 segundos|  
-|2|1.2 **+ (** 0,08 **&#42;** 15 **)**|2,4 segundos|  
-|3|2.4 **+ (** 0,08 **&#42;** 15 **)**|3,6 segundos|  
-|4|3.6 **+ (** 0,08 **&#42;** 15 **)**|4,8 segundos|   
+|1|0 **+(** 0,08 **&#42;** 15 **)**|1,2 segundos|  
+|2|1,2 **+(** 0,08 **&#42;** 15 **)**|2,4 segundos|  
+|3|2,4 **+(** 0,08 **&#42;** 15 **)**|3,6 segundos|  
+|4|3,6 **+(** 0,08 **&#42;** 15 **)**|4,8 segundos|   
   
  A figura a seguir ilustra esses tempos de nova tentativa em tentativas de conexão sucessivas, todas elas com tempos limite esgotados.  
   

@@ -21,16 +21,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a382b37b9b7e25c8cb42e42bf873a0ce7f2a4920
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746698"
 ---
 # <a name="security-properties"></a>Propriedades de segurança
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte às propriedades do servidor de segurança listadas na tabela a seguir. Para obter mais informações sobre as propriedades de servidor adicionais e como defini-las, consulte [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
- **Aplica-se a:** modo de servidor multidimensional e tabular  
+ **Aplica-se a:** Modo de servidor multidimensional e Tabular  
   
 ## <a name="properties"></a>Propriedades  
  `RequireClientAuthentication`  
@@ -60,7 +60,7 @@ ms.locfileid: "48054956"
  `DataProtection\ RequiredProtectionLevel`  
  Uma propriedade de inteiro de 32 bits assinada que define o nível de proteção exigido para todas as requisições do cliente. Essa propriedade tem um dos valores listados na tabela a seguir:  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |*0*|Nenhum, texto não criptografado permitido.|  
 |*1*|(Padrão) Criptografia necessária, sem log de texto não criptografado.|  
@@ -71,6 +71,6 @@ ms.locfileid: "48054956"
   
 ## <a name="see-also"></a>Consulte também  
  [Configurar propriedades de servidor no Analysis Services](server-properties-in-analysis-services.md)   
- [Determina o Modo de Servidor de uma instância do Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Determina o Modo de Servidor de uma instância do Analysis Services.](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

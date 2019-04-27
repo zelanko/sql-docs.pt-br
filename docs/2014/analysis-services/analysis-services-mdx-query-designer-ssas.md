@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b0f76c8df695dcb4e49c707409243b6f1aa1d28e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643620"
 ---
 # <a name="analysis-services-mdx-query-designer-ssas"></a>Designer de consulta MDX do Analysis Services (SSAS)
   O designer de consulta MDX (Multidimensional Expression) do Analysis Services fornece uma interface do usuário gráfica para ajudar a criar consultas MDX para uma fonte de dados do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. O designer de consultas gráficas MDX tem dois modos: Design e Consulta. Cada modo contém um painel Metadados, do qual é possível arrastar membros dos cubos selecionados para criar uma consulta MDX que recupere os dados que você deseja usar.  

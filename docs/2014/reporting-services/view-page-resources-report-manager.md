@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 64040ce6a938f2456d3d655aad6dfbcd4abf3e29
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62647039"
 ---
 # <a name="view-page-resources-report-manager"></a>Página Exibir, Recursos (Gerenciador de Relatórios)
   Use a página Exibir para exibir um recurso. Um recurso é um item armazenado e gerenciado em um servidor de relatórios, mas não processado em um servidor de relatórios (um servidor de relatórios processa relatórios e modelos). Você pode usar recursos quando quiser armazenar documentos arbitrários, imagens ou outros arquivos que não são processados pelo servidor. A maioria dos arquivos de imagem (como arquivos JPG, GIF e PNG) pode ser exibido na página Exibir do Gerenciador de Relatórios. Outros recursos são abertos em outra janela do aplicativo.  

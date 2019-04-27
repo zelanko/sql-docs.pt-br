@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8c3f6654480635966c2e77beb73ad6adc24add6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62671034"
 ---
 # <a name="calculation-properties-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Propriedades de Cálculo (Analysis Services - Dados Multidimensionais)
   Use a caixa de diálogo **Propriedades de Cálculo** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para exibir ou editar a pasta de exibição e as propriedades do grupo de medidas associadas de cálculos definidos na guia **Cálculos** do Designer de Cubo para o cubo selecionado. É possível exibir a caixa de diálogo **Propriedades de Cálculo** clicando em **Propriedades de Cálculo** no painel **Barra de Ferramentas** na guia **Cálculos** do Designer de Cubo.  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2aaef74d9e94446022b8c0585749a4eb0bf05cd2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732112"
 ---
 # <a name="define-dimension-intelligence-business-intelligence-wizard"></a>Definir Inteligência de Dimensão (Assistente de Business Intelligence)
   Use a página **Definir Inteligência de Dimensão** para mapear atributos de dimensão existentes para tipos de atributos para o tipo de dimensão especificado.  
@@ -40,7 +40,7 @@ ms.locfileid: "48194234"
  Selecione o atributo de dimensão existente para o qual o tipo de atributo correspondente será mapeado.  
   
 ## <a name="see-also"></a>Consulte também  
- [Ajuda de F1 do Assistente do Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [Ajuda F1 do Assistente de Business Intelligence](business-intelligence-wizard-f1-help.md)   
  [Designer de cubo &#40;Analysis Services - dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Designer de dimensão &#40;Analysis Services - dados multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

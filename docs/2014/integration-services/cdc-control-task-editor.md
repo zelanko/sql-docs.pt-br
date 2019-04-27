@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2309dd332a66ae724133c4b1d21cbe0dc8684630
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771662"
 ---
 # <a name="cdc-control-task-editor"></a>CDC Control Task Editor
   Use a caixa de diálogo **Editor da tarefa Controle CDC** para configurar a tarefa Controle CDC. A configuração da tarefa Controle CDC inclui definir uma conexão para o banco de dados CDC, a operação de tarefa CDC e as informações de gerenciamento de estado.  
@@ -38,25 +38,25 @@ ms.locfileid: "58389404"
  **Operação de Controle CDC**  
  Selecione a operação a ser executada para esta tarefa. Todas as operações usam a variável de estado que está armazenada em uma variável de pacote SSIS que armazena o estado e passa isto entre os diferentes componentes no pacote.  
   
--   **Marcar início da carga inicial**: Esta operação é usada ao executar uma carga inicial de um banco de dados ativo sem um instantâneo. Ela é invocada no começo de um pacote da carga inicial para registrar o LSN atual no banco de dados de origem antes de o pacote da carga inicial começar a ler as tabelas de origem. Isto exige uma conexão com o banco de dados de origem.  
+-   **Marcar início da carga inicial**: esta operação é usada ao executar uma carga inicial de um banco de dados ativo sem um instantâneo. Ela é invocada no começo de um pacote da carga inicial para registrar o LSN atual no banco de dados de origem antes de o pacote da carga inicial começar a ler as tabelas de origem. Isto exige uma conexão com o banco de dados de origem.  
   
      Se você selecionar **Marcar início da carga inicial** ao trabalhar no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] CDC (ou seja, não Oracle), o usuário especificado no gerenciador de conexões deverá ser  **db_owner** ou **sysadmin**.  
   
--   **Marcar fim da carga inicial**: Esta operação é usada ao executar uma carga inicial de um banco de dados ativo sem um instantâneo. Ela é invocada no início de um pacote da carga inicial para registrar o LSN atual no banco de dados de origem depois de o pacote da carga inicial terminar de ler as tabelas de origem. Este LSN é determinado pela gravação da hora atual quando esta operação ocorreu e, em seguida, consultando a tabela de mapeamento `cdc.lsn_time_`no banco de dados CDC, procurando uma alteração que ocorreu depois daquele momento  
+-   **Marcar fim da carga inicial**: esta operação é usada ao executar uma carga inicial de um banco de dados ativo sem um instantâneo. Ela é invocada no início de um pacote da carga inicial para registrar o LSN atual no banco de dados de origem depois de o pacote da carga inicial terminar de ler as tabelas de origem. Este LSN é determinado pela gravação da hora atual quando esta operação ocorreu e, em seguida, consultando a tabela de mapeamento `cdc.lsn_time_`no banco de dados CDC, procurando uma alteração que ocorreu depois daquele momento  
   
      Se você selecionar **Marcar fim da carga inicial** ao trabalhar no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] CDC (ou seja, não Oracle), o usuário especificado no gerenciador de conexões deverá ser  **db_owner** ou **sysadmin**.  
   
--   **Marcar início do CDC**: Esta operação é usada quando a carga inicial é feita de um banco de dados de instantâneo ou de um banco de dados novo. Ele é invocado em qualquer ponto dentro do pacote de carga inicial. A operação aceita um parâmetro que pode ser um LSN instantâneo, um nome de um banco de dados de instantâneo (do qual o LSN instantâneo será derivado automaticamente) ou pode ser deixado vazio e, nesse caso, o LSN do banco de dados atual será usado como o LSN inicial para o pacote de processamento de alteração.  
+-   **Marcar início do CDC**: esta operação é usada quando a carga inicial é feita de um banco de dados de instantâneo ou de um banco de dados fechado para novas sessões. Ele é invocado em qualquer ponto dentro do pacote de carga inicial. A operação aceita um parâmetro que pode ser um LSN instantâneo, um nome de um banco de dados de instantâneo (do qual o LSN instantâneo será derivado automaticamente) ou pode ser deixado vazio e, nesse caso, o LSN do banco de dados atual será usado como o LSN inicial para o pacote de processamento de alteração.  
   
      Esta operação é usada em vez das operações Marcar início/fim da carga inicial.  
   
      Se você selecionar **Marcar início de CDC** ao trabalhar no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] CDC (ou seja, não Oracle), o usuário especificado no gerenciador de conexões deverá ser  **db_owner** ou **sysadmin**.  
   
--   **Obter intervalo de processamento**: Esta operação é usada em um pacote de processamento de alteração antes de invocar o fluxo de dados que usa o fluxo de dados de origem CDC. Ele estabelece um intervalo de LSNs que o fluxo de dados de origem de CDC lê quando é invocado. O intervalo é armazenado em uma variável de pacote SSIS que é usada pela Origem de CDC durante o processamento de fluxo de dados.  
+-   **Obter intervalo de processamento**: esta operação é usada em um pacote de processamento de alteração antes de invocar o fluxo de dados que usa o fluxo de dados de Origem de CDC. Ele estabelece um intervalo de LSNs que o fluxo de dados de origem de CDC lê quando é invocado. O intervalo é armazenado em uma variável de pacote SSIS que é usada pela Origem de CDC durante o processamento de fluxo de dados.  
   
      Para obter mais informações sobre os possíveis estados de CDC que estão armazenados, consulte [Definir uma variável de estado](data-flow/define-a-state-variable.md).  
   
--   **Marcar o intervalo processado**: Esta operação é usada em um pacote de processamento de alteração no final de uma execução de CDC (depois que o fluxo de dados CDC é concluído com êxito) para registrar o último LSN que foi processado completamente na execução de CDC. Da próxima vez que o `GetProcessingRange` é executado, esta posição determina o início do próximo intervalo de processamento.  
+-   **Marcar o intervalo processado**: esta operação é usada em um pacote de processamento de alteração no fim de uma execução de CDC (depois que o fluxo de dados de CDC é concluído com êxito) para registrar o último LSN que foi processado completamente na execução de CDC. Da próxima vez que o `GetProcessingRange` é executado, esta posição determina o início do próximo intervalo de processamento.  
   
 -   **Redefinir estado de CDC**: Esta operação é usada para reiniciar o estado de CDC persistente associado ao contexto de CDC atual. Depois que esta operação é executada, o LSN máximo atual da tabela `sys.fn_cdc_get_max_lsn` do carimbo de data/hora de LSN torna-se o início do intervalo para o próximo intervalo de processamento. Esta operação exige uma conexão com o banco de dados de origem.  
   

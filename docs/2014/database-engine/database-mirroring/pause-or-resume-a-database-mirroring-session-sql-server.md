@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 52781de1cd4b6309f3ebeb9a2c59ae85b0b32dbd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093996"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754591"
 ---
 # <a name="pause-or-resume-a-database-mirroring-session-sql-server"></a>Pausar ou retomar uma sessão de espelhamento de banco de dados (SQL Server)
   Este tópico descreve como pausar ou retomar o espelhamento de banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -38,7 +38,7 @@ ms.locfileid: "48093996"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Acompanhamento:**  [depois de pausar ou retomar o espelhamento do banco de dados](#FollowUp)  
+-   **Acompanhamento:**  [Depois de pausar ou retomar o espelhamento de banco de dados](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
  A qualquer momento, você pode suspender uma sessão de espelhamento de banco de dados, o que pode melhorar o desempenho durante gargalos, e pode retomar uma sessão suspensa.  
@@ -108,7 +108,7 @@ ms.locfileid: "48093996"
     ALTER DATABASE AdventureWorks2012 SET PARTNER RESUME;  
     ```  
   
-##  <a name="FollowUp"></a> Acompanhamento: depois de pausar ou retomar o espelhamento do banco de dados  
+##  <a name="FollowUp"></a> Acompanhamento: Depois de pausar ou retomar o espelhamento de banco de dados  
   
 -   **Depois de pausar o espelhamento de banco de dados**  
   

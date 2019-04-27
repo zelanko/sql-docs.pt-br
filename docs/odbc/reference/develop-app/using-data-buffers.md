@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: edddcb07702a33e6c2ce5f11feaf1716fc59573b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62751169"
 ---
 # <a name="using-data-buffers"></a>Usar buffers de dados
 Buffers de dados são descritos por três partes de informações: seu comprimento em bytes, o endereço e o tipo. Sempre que uma função precisa de uma dessas partes de informações e não soubê-lo, ele tem um argumento com o qual o aplicativo passa a ele.  

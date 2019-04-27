@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 641a08567e990134d49d32ae7ebecaf7d2b8de5a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740202"
 ---
 # <a name="item-property-ado-md-cellset"></a>Propriedade Item (conjunto de células do ADO MD)
 Recupera uma célula de uma [conjunto de células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) usando suas coordenadas.  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 522bffc53240a7456ee77911b4f3044ffe0f231c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650790"
 ---
 # <a name="attributes-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Atributos (guia Estrutura da Dimensão, Designer de Dimensão) (Analysis Services - Dados multidimensionais)
   Use este painel para gerenciar os atributos associados com a dimensão selecionada. Podem ser arrastados atributos deste painel para o painel **Hierarquias** para criar hierarquias e níveis. Para obter mais informações, consulte [Hierarchies &#40;Dimension Structure Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md).  
@@ -56,7 +56,7 @@ ms.locfileid: "48229806"
  **Usage**  
  Define o uso do atributo selecionado. Clique na seta para baixo para selecionar entre as seguintes possibilidades:  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |Regular|Identifica um atributo regular.|  
 |Chave|Identifica o atributo de chave para a dimensão. Isto corresponde aos membros folha da dimensão. Pode haver somente um atributo de chave por dimensão. Para modificar, clique no botão de reticências (**...**) próximo à propriedade **KeyColumns** no painel **Propriedades** .|  

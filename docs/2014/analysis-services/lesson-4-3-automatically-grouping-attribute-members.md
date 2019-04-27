@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 029d4bdb21adfccbae5ad692669ab5d42964bfc4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191346"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729109"
 ---
 # <a name="automatically-grouping-attribute-members"></a>Agrupando membros de atributo automaticamente
   Ao navegar em um cubo, você normalmente dimensiona os membros de uma hierarquia de atributo pelos membros de outra hierarquia de atributo. Por exemplo, você pode agrupar as vendas de cliente por cidade, produto comprado ou sexo. Porém, com determinados tipos de atributo, é útil usar o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para criar automaticamente agrupamentos de membros de atributo com base na distribuição dos membros dentro de uma hierarquia de atributo. Por exemplo, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pode criar grupos de valores de renda anual para clientes. Ao fazer isso, os usuários que navegarem pela hierarquia de atributo verão o nome e os valores dos grupos em vez dos próprios membros. Isso limita o número de níveis que são apresentados aos usuários, o que pode ser mais útil para a análise.  
@@ -127,6 +127,6 @@ ms.locfileid: "48191346"
  [Ocultando e desabilitando as hierarquias de atributo](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Agrupar membros de atributo &#40;diferenciação&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)  
+ [Agrupar membros de atributo &#40;Discretização&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)  
   
   

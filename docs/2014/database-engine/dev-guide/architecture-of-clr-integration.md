@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: febf7ccdc4a57f92a14048e3ddeea2d00bd9b32d
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753858"
 ---
 # <a name="architecture-of-clr-integration"></a>Arquitetura da integração CLR
   A integração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com o CLR (Common Language Runtime) do .NET Framework permite aos programadores usar linguagens como, por exemplo, Visual C#, Visual Basic .NET e Visual C++. Funções, procedimentos armazenados, gatilhos, tipos de dados e agregações estão entre os tipos de lógica corporativa que os programadores podem escrever usando essas linguagens.  

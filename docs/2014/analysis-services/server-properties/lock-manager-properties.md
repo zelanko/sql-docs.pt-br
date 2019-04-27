@@ -17,16 +17,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f773eb7fb512b9b1ae14b14a13717ecc8f42599f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747238"
 ---
 # <a name="lock-manager-properties"></a>Propriedades do gerenciador de bloqueio
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte às propriedades do servidor do gerenciador de bloqueio, listadas na tabela a seguir. Para obter mais informações sobre as propriedades de servidor adicionais e como defini-las, consulte [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
- **Aplica-se a:** modo de servidor multidimensional e tabular  
+ **Aplica-se a:** Modo de servidor multidimensional e Tabular  
   
 ## <a name="properties"></a>Propriedades  
  `DefaultLockTimeoutMS`  
@@ -42,6 +42,6 @@ ms.locfileid: "48198756"
   
 ## <a name="see-also"></a>Consulte também  
  [Configurar propriedades de servidor no Analysis Services](server-properties-in-analysis-services.md)   
- [Determina o Modo de Servidor de uma instância do Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Determina o Modo de Servidor de uma instância do Analysis Services.](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

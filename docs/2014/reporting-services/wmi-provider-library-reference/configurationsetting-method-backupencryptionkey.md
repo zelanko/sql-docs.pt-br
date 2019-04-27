@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b4d05dd66aa795579172aba5472a0f38c5f320bc
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62647049"
 ---
 # <a name="backupencryptionkey-method-wmi-msreportserverconfigurationsetting"></a>Método BackupEncryptionKey (WMI MSReportServer_ConfigurationSetting)
   Efetua backup da chave de criptografia da instância do servidor de relatório especificada. A chave de criptografia é armazenada criptografada com uma senha.  

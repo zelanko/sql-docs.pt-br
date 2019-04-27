@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 67e4d316b122f44e207037603354f696446aed3f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747658"
 ---
 # <a name="select-calendars-dimension-wizard"></a>Selecionar Calendários (Assistente para Dimensões)
   Use a página **Selecionar Calendários** para criar hierarquias adicionais representando calendários fiscais, de relatório, de fabricação ou ISO 8601 para a dimensão de tempo.  
@@ -59,7 +59,7 @@ ms.locfileid: "48139436"
   
  A tabela a seguir lista as opções disponíveis para a semana por padrão mensal.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Semana 445**|O primeiro mês do trimestre tem 4 semanas, o segundo mês do trimestre tem 4 semanas e o terceiro mês do trimestre tem 5 semanas.|  
 |**Semana 454**|O primeiro mês do trimestre tem 4 semanas, o segundo mês do trimestre tem 5 semanas e o terceiro mês do trimestre tem 4 semanas.|  

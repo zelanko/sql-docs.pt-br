@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6470cd60eb3b5491b8941685dcae00a49b4e967c
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775299"
 ---
 # <a name="install-sql-server-2014-using-sysprep"></a>Instalar o SQL Server 2014 usando SysPrep
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser acessadas por meio da Central de Instalação. A página **Avançado** da **Central de Instalação** tem duas opções: **Preparação de imagem de uma instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** e **Conclusão de imagem de uma instância autônoma preparada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. As seções [Preparar](#prepare) e [Concluir](#complete) descrevem o processo de instalação em detalhes. Para obter mais informações, consulte [Considerations for Installing SQL Server Using SysPrep](considerations-for-installing-sql-server-using-sysprep.md).  
@@ -69,7 +69,7 @@ ms.locfileid: "58658330"
   
 3.  Criar o cluster de failover do Windows.  
   
-4.  Execute setup.exe com todos os nós do `/ACTION=PrepareFailoverCluster`. Por exemplo:  
+4.  Execute setup.exe com todos os nós do `/ACTION=PrepareFailoverCluster`. Por exemplo:   
   
     ```  
     setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName=<InstanceName> /Features=SQLEngine  /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx"  /IACCEPTSQLSERVERLICENSETERMS  
@@ -171,7 +171,7 @@ ms.locfileid: "58658330"
   
 7.  Na página **Selecione uma Instância Preparada** , selecione a instância preparada que você deseja concluir na caixa suspensa. Selecione a instância não configurada na lista **ID da Instância** .  
   
-     **Instâncias instaladas:** Esta grade exibe todas as instâncias que incluem qualquer instância preparada neste computador.  
+     **Instâncias instaladas:** Esta grade exibe todas as instâncias que incluem qualquer instância preparada nesta máquina.  
   
 8.  Na página **Revisão de Recurso** , você verá os recursos selecionados e os componentes incluídos na instalação durante a etapa de preparação. Se você desejar acrescentar mais recursos a sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não incluído na instância preparada, você deverá concluir esta etapa primeiro para concluir a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e, em seguida, adicione os recursos em **Adicionar Recursos** na **Central de Instalação**.  
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84946cd0dadd467e7998106f89868a5e9d401f13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746338"
 ---
 # <a name="specify-table-types-data-mining-wizard"></a>Especificar tipos de tabelas (Assistente de Mineração de Dados)
   Use a página **Especificar Tipos de Tabelas** para identificar as tabelas a serem usadas para definir a estrutura de mineração. Se uma tabela não for selecionada, ela não será usada para definir a estrutura de mineração.  
@@ -26,7 +26,7 @@ ms.locfileid: "48202636"
 > [!NOTE]  
 >  Você pode adicionar tabelas mais tarde na guia **Estrutura de Mineração** do **Designer de Data Mining**.  
   
- **Para obter mais informações:** [Tabelas Aninhadas &#40;Analysis Services – Data mining&#41;](data-mining/nested-tables-analysis-services-data-mining.md), [Assistente de Data Mining &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md) e [Criar uma estrutura de mineração relacional](data-mining/create-a-relational-mining-structure.md)  
+ **Para obter mais informações:** [Tabelas aninhadas &#40;Analysis Services - mineração de dados&#41;](data-mining/nested-tables-analysis-services-data-mining.md), [Assistente de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [criar uma estrutura de mineração relacional](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Opções  
  **Tabelas**  

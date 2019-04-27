@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0f0e0244df7adae2d0fd89e0c83f9b660a0ef0dd
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740313"
 ---
 # <a name="source-property-example-vc"></a>Exemplo da propriedade Source (VC++)
 Este exemplo demonstra a [fonte](../../../ado/reference/ado-api/source-property-ado-recordset.md) propriedade abrindo três [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objetos com base em diferentes fontes de dados.  

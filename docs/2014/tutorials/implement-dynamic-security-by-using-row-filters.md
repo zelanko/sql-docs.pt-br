@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 5a26f9c950dd09b8e47c83089415bd2b3d47458f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740376"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>Implementar a segurança dinâmica usando filtros de linha
   Nesta lição suplementar, você criará uma função adicional que implementa a segurança dinâmica. A segurança dinâmica oferece segurança em nível de linha com base no nome de usuário ou na id de logon do usuário conectado no momento. Para obter mais informações, consulte [Funções &#40;SSAS Tabular&#41;](../analysis-services/tabular-models/roles-ssas-tabular.md).  

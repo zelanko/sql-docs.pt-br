@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 38d807fae60099022e847e4799196305ccfbadf8
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743282"
 ---
 # <a name="lesson-9-restore-a-database-from-windows-azure-storage"></a>Lição 9: Restaurar um banco de dados a partir do Armazenamento do Windows Azure
   Nesta lição, você aprenderá a restaurar um arquivo de backup de banco de dados do Armazenamento do Windows Azure para um banco de dados, que reside no local ou em uma máquina virtual do Windows Azure. Para acompanhar esta lição, você não precisará concluir as lições 4, 5, 6, 7 e 8.  
@@ -43,7 +43,7 @@ ms.locfileid: "58534438"
   
 3.  Copie e cole o script completo a seguir na janela de consulta. Modifique o script conforme necessário.  
   
-     **Observação:** execute a instrução `RESTORE` para restaurar o backup de banco de dados (.bak) no Armazenamento do Microsoft Azure para uma instância do banco de dados em outro computador.  
+     **Observação:** Executar o `RESTORE` instrução para restaurar o backup do banco de dados (. bak) no armazenamento do Windows Azure para uma instância de banco de dados em outro computador.  
   
     ```sql  
   

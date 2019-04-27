@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 672b68a1fda1013fc3ed46f9da1175ec038a8ffe
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643298"
 ---
 # <a name="analyze-key-influencers-table-analysis-tools-for-excel"></a>Analisar os Influenciadores Principais (Ferramentas de Análise de Tabela para Excel)
   ![Botão do analisar os influenciadores principais na faixa de opções](media/tat-aki.gif "botão analisar os influenciadores principais na faixa de opções")  

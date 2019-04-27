@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1969a3e30b31a21c380559a3e8898f87eb8848b1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62786731"
 ---
 # <a name="collations-and-code-pages"></a>Páginas de código de ordenações
   O [!INCLUDE[hek_2](../includes/hek-2-md.md)] tem restrições nas páginas de código com suporte para colunas (var)char em tabelas com otimização de memória e ordenações com suporte usados em índices e em procedimentos armazenados compilados nativamente.  

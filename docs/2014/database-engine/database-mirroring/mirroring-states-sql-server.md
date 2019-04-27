@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9e3e3756f65baa7e1b62e3a84ff709a60b9c887b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754548"
 ---
 # <a name="mirroring-states-sql-server"></a>Estados de espelhamento (SQL Server)
   Durante uma sessão de espelhamento de banco de dados, o banco de dados espelho está sempre em um estado específico (o *estado de espelhamento*). O estado do banco de dados reflete o status de comunicação, o fluxo de dados e a diferença nos dados entre os parceiros. A sessão de espelhamento de banco de dados adota o mesmo estado que o banco de dados principal.  
@@ -33,7 +33,7 @@ ms.locfileid: "48225896"
   
  Os estados possíveis de espelhamento de banco de dados são:  
   
-|estado de espelhamento|Description|  
+|estado de espelhamento|Descrição|  
 |---------------------|-----------------|  
 |SYNCHRONIZING|O conteúdo do banco de dados espelho está ficando atrás do conteúdo do banco de dados principal. O servidor principal está enviando registros de log para o servidor espelho, que está aplicando as alterações ao banco de dados espelho para rolá-lo adiante.<br /><br /> No início de uma sessão de espelhamento de banco de dados, o banco de dados está no estado SYNCHRONIZING. O servidor principal está servindo o banco de dados e o espelho está tentando manter-se atualizado.|  
 |SYNCHRONIZED|Quando o servidor espelho torna-se suficientemente atualizado com relação ao servidor principal, o estado de espelhamento muda para SYNCHRONIZED. O banco de dados permanece nesse estado enquanto o servidor principal continua enviando alterações para o servidor espelho e o servidor espelho continua aplicando as alterações ao banco de dados espelho.<br /><br /> Se a segurança da transação for definida como FULL, suporte ao failover automático e ao failover manual no estado SYNCHRONIZED, não haverá perda de dados após um failover.<br /><br /> Se a segurança da transação for off, sempre será possível alguma perda de dados, mesmo no estado SYNCHRONIZED.|  

@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 22fd00314105f4ef43a734697bdae86badc145a2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754156"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2014"></a>Recursos do Mecanismo de Banco de Dados preteridos no SQL Server 2014
   Este tópico descreve os recursos substituídos do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] que ainda estão disponíveis no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Esses recursos estão programados para serem removidos em uma versão futura do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Recursos preteridos não devem ser usados em aplicativos novos.  
@@ -29,7 +29,7 @@ ms.locfileid: "53369108"
 ## <a name="features-not-supported-in-the-next-version-of-sql-server"></a>Recursos sem suporte na próxima versão do SQL Server  
  Os recursos do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] a seguir não terão suporte na próxima versão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Não use esses recursos em novo trabalho de desenvolvimento e, assim que possível, modifique os aplicativos que os utilizam atualmente. O valor **Nome do recurso** aparece em eventos de rastreamento como o ObjectName, e em contadores de desempenho e sys.dm_os_performance_counters como o nome de instância. O valor **ID do Recurso** aparece em eventos de rastreamento como o ObjectId.  
   
-|Categoria|Recurso substituído|Substituição|Nome do recurso|ID do Recurso|  
+|Category|Recurso substituído|Substituição|Nome do recurso|ID do Recurso|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |Backup e restauração|RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD continua sendo uma opção preterida. As opções BACKUP { DATABASE &#124; LOG } WITH PASSWORD e BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD serão descontinuadas.|Nenhum.|BACKUP DATABASE ou LOG WITH PASSWORD<br /><br /> BACKUP DATABASE ou LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
 |Níveis de compatibilidade|Atualização da versão 90 ([!INCLUDE[ssDEversion2005](../includes/ssdeversion2005-md.md)]).|Os níveis de compatibilidade só estão disponíveis para as duas versões mais recentes. Para obter mais informações sobre níveis de compatibilidade, veja [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).<br /><br /> No [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], você pode atualizar um banco de dados do SQL Server 2005, mas o nível de compatibilidade é atualizado de 90 para 100 durante a operação de atualização.|Nível de compatibilidade 90 do banco de dados|107|  
@@ -45,7 +45,7 @@ ms.locfileid: "53369108"
 ## <a name="features-not-supported-in-a-future-version-of-sql-server"></a>Recursos sem suporte em uma versão futura do SQL Server  
  Os recursos do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] a seguir terão suporte na próxima versão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], mas serão removidos em uma versão posterior. A versão específica do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não foi determinada.  
   
-|Categoria|Recurso substituído|Substituição|Nome do recurso|ID do Recurso|  
+|Category|Recurso substituído|Substituição|Nome do recurso|ID do Recurso|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |Níveis de compatibilidade|sp_dbcmptlevel|ALTER DATABASE ... SET COMPATIBILITY_LEVEL. Para obter mais informações, veja [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).|sp_dbcmptlevel|80|  
 |Níveis de compatibilidade|Nível de compatibilidade do banco de dados 100|Planeje atualizar o banco de dados e o aplicativo para uma versão futura.|Nível de compatibilidade do banco de dados 100|108|  
@@ -146,8 +146,8 @@ ms.locfileid: "53369108"
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|O aplicativo indireto de dicas de tabela para uma invocação de uma função com valor de tabela (TVF) de várias instruções por meio de uma exibição.|Nenhum.|Dicas TVF indiretas|7|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Sintaxe ALTER DATABASE:<br /><br /> MODIFY FILEGROUP READONLY<br /><br /> MODIFY FILEGROUP READWRITE|MODIFY FILEGROUP READ_ONLY<br /><br /> MODIFY FILEGROUP READ_WRITE|MODIFY FILEGROUP READONLY<br /><br /> MODIFY FILEGROUP READWRITE|195<br /><br /> 196|  
 |Outro|DB-Library<br /><br /> Embedded SQL para C|Embora ainda ofereça suporte a conexões de aplicativos existentes que usam as APIS de DB-Library e Embedded SQL, o [!INCLUDE[ssDE](../includes/ssde-md.md)] não inclui a documentação ou os arquivos necessários para fazer o trabalho de programação em aplicativos que usam essas APIs. Uma versão futura do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] descartará suporte para conexões do DB-Library ou aplicativos do Embedded SQL. Não use DB-Library ou Embedded SQL para desenvolver novos aplicativos. Remova qualquer dependência do DB-Library ou do Embedded SQL ao modificar aplicativos existentes. Em vez destas APIs, use o namespace SQLClient ou uma API como ODBC. O[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] não inclui a DLL DB-Library necessária para executar estes aplicativos. Para executar aplicativos DB-Library ou Embedded SQL, a DLL DB-Library do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] versão 6.5, do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 7.0 ou do [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]deve estar disponível.|None|None|  
-|Ferramentas|SQL Server Profiler para captura de rastreamento|Use o Extended Events Profiler inserido no SQL Server Management Studio.<br /><br /> Observação: Continue usando o SQL Server Profiler para Captura de Rastreamento de cargas de trabalho do Analysis Services.|SQL Server Profiler|None|  
-|Ferramentas|SQL Server Profiler para reprodução de rastreamento|[SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)<br /><br /> Observação: Continue usando o SQL Server Profiler para Reprodução de Rastreamento de cargas de trabalho do Analysis Services.|SQL Server Profiler|None|  
+|Ferramentas|SQL Server Profiler para captura de rastreamento|Use o Extended Events Profiler inserido no SQL Server Management Studio.<br /><br /> Observação: Continue usando o SQL Server Profiler para captura de rastreamento para cargas de trabalho do Analysis Services.|SQL Server Profiler|None|  
+|Ferramentas|SQL Server Profiler para reprodução de rastreamento|[SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)<br /><br /> Observação: Continue a usar o SQL Server Profiler para reprodução de rastreamento para cargas de trabalho do Analysis Services.|SQL Server Profiler|None|  
 |Trace Management Objects|Namespace Microsoft.SqlServer.Management.Trace (contém as APIs para Rastreamento do SQL Server e objetos de reprodução)|Configuração de Rastreamento: <xref:Microsoft.SqlServer.Management.XEvent><br /><br /> Leitura de Rastreamento: <xref:Microsoft.SqlServer.XEvent.Linq><br /><br /> Reprodução de rastreamento: None|||  
 |Procedimentos armazenados, funções e exibições de catálogo do Rastreamento do SQL|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|[Eventos estendidos](../relational-databases/extended-events/extended-events.md)|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|258<br /><br /> 260<br /><br /> 261<br /><br /> 259<br /><br /> 256<br /><br /> 257|  
   

@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8ca6b4b0c4449880a407e27df9becf340c84a2eb
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643065"
 ---
 # <a name="ipaddressname-property-servernetworkprotocolipaddress-class"></a>Propriedade IpAddressName (Classe ServerNetworkProtocolIPAddress)
   Obtém o nome do endereço IP.  

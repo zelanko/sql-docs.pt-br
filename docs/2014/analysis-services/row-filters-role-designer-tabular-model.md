@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f67f8d818b38387aef5723b5c6d15dc1958e145c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748178"
 ---
 # <a name="row-filters-role-designertabular-model"></a>Filtros de linha (designer de função) (modelo de tabela)
   Use a página **Filtros de Linha** do Designer de Função para definir os filtros de nível de linha para a função associada. Os filtros de linha podem ser definidos somente para funções com permissões de Leitura e Leitura e Processo.  
@@ -38,6 +38,6 @@ ms.locfileid: "48061216"
   
 ## <a name="see-also"></a>Consulte também  
  [Funções de modelo de tabela &#40;Tabular do SSAS&#41;](tabular-models/roles-ssas-tabular.md)   
- [Gerenciar funções usando SSMS &#40;tabela do SSAS&#41;](tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)  
+ [Gerenciar funções usando o SSMS &#40;SSAS de Tabela&#41;](tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)  
   
   

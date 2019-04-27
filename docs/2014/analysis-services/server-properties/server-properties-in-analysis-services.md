@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a2f99dc4ba728fb97eac0ced00624fc8c8831e6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746858"
 ---
 # <a name="configure-server-properties-in-analysis-services"></a>Configurar propriedades de servidor no Analysis Services
   Um administrador do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pode modificar as propriedades padrão de configuração do servidor para uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Cada instância tem suas próprias propriedades de configuração que podem ser definidas independentemente de outras instâncias no mesmo servidor.  

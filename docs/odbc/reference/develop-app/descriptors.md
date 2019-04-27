@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d50ce0c2023e187d63d08aa862398d18dc188fd1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62744234"
 ---
 # <a name="descriptors"></a>Descritores
 Um identificador do descritor se refere a uma estrutura de dados que contém informações sobre colunas ou parâmetros dinâmicos.  

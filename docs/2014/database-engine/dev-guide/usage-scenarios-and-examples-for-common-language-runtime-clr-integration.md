@@ -18,11 +18,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3718a084211e7c3b2b7a14973e195a4b1c3b6b1a
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780706"
 ---
 # <a name="usage-scenarios-and-examples-for-common-language-runtime-clr-integration"></a>Cenários de uso e exemplos para a integração de CLR (Common Language Runtime)
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclui aplicativos de exemplo, exemplos de pacote e vários exemplos de codificação que você pode usar para conhecer os recursos de programação da integração CLR (common language runtime).  

@@ -14,11 +14,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a10f892c8fd635892d76061e9f33649340e69593
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62655449"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>Usuários de bancos de dados independentes - Tornando seu banco de dados portátil
   Use usuários de banco de dados independentes para autenticar conexões [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)] no nível do banco de dados. Um banco de dados independente é um banco de dados isolado de outros bancos de dados e da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../includes/sssds-md.md)] (e o banco de dados mestre) que hospeda o banco de dados. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a usuários de bancos de dados independentes para autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Windows. Ao usar [!INCLUDE[ssSDS](../../includes/sssds-md.md)], combine usuários do banco de dados com regras de firewall de nível de banco de dados. Este tópico revisa as diferenças e os benefícios de usar o modelo de banco de dados independente em comparação com o modelo de logon/usuário tradicional e Windows ou as regras de firewall em nível de servidor. Cenários específicos, lógica de negócios do aplicativo ou a capacidade de gerenciamento ainda podem exigir o uso do modelo tradicional de logon/usuário e regras de firewall em nível de servidor.  
@@ -51,7 +51,7 @@ ms.locfileid: "53351551"
   
 -   [Firewall de banco de dados SQL do Azure](https://msdn.microsoft.com/library/azure/ee621782.aspx)  
   
--   [Como: Definir configurações de Firewall (banco de dados SQL do Azure)](https://msdn.microsoft.com/library/azure/jj553530.aspx)  
+-   [Como definir as configurações do firewall (Banco de Dados SQL do Azure)](https://msdn.microsoft.com/library/azure/jj553530.aspx)  
   
 -   [sp_set_firewall_rule &#40;Banco de Dados SQL do Azure&#41;](/sql/relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database)  
   

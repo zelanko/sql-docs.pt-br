@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c18c22cf4db3f442050c739aaf68e159fd1cc230
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754648"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>O ponto de extremidade de espelhamento de banco de dados (SQL Server)
   Para participar do espelhamento de banco de dados ou [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] , uma instância de servidor requer seu *ponto de extremidade de espelhamento de banco de dados*próprio, dedicado. Esse ponto de extremidade é um ponto de extremidade com finalidade especial usado exclusivamente para receber conexões de outras instâncias de servidor. Em uma determinada instância de servidor, toda conexão de espelhamento do [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ou de banco de dados com qualquer outra instância de servidor usa um único ponto de extremidade de espelhamento de banco de dados.  
@@ -67,7 +67,7 @@ ms.locfileid: "48170366"
   
 -   Se alguma instância de servidor estiver em execução em uma conta interna, como Sistema Local, Serviço Local ou Serviço de Rede, ou em uma conta que não pertença a um domínio, você deverá usar certificados para autenticação de ponto de extremidade. Se você estiver usando certificados para pontos de extremidade de espelhamento de banco de dados, o administrador do sistema deverá configurar cada instância de servidor para usar certificados nas conexões de saída e de entrada.  
   
-     Não há nenhum método automatizado para configurar a segurança do espelhamento de banco de dados usando certificados. Você precisará usar qualquer um dos CREATE ENDPOINT [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou o `New-SqlHadrEndpoint` cmdlet do PowerShell. Para obter mais informações, veja [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql). Para obter informações sobre como habilitar a autenticação de certificado em uma instância de servidor, consulte [usar certificados para um ponto de extremidade de espelhamento de banco de dados &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
+     Não há nenhum método automatizado para configurar a segurança do espelhamento de banco de dados usando certificados. Você precisará usar a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ENDPOINT ou o cmdlet `New-SqlHadrEndpoint` do PowerShell. Para obter mais informações, veja [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql). Para obter informações sobre como habilitar a autenticação de certificado em uma instância de servidor, consulte [usar certificados para um ponto de extremidade de espelhamento de banco de dados &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  

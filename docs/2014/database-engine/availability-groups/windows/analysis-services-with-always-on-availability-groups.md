@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 813740a542f06417156c746574dd0995e59aabd6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62791871"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services com grupos de disponibilidade AlwaysOn
   Um grupo de disponibilidade AlwaysOn é uma coleção predefinida de bancos de dados relacionais do SQL Server que faz failover junto quando condições disparam um failover em qualquer um dos bancos de dados, redirecionando solicitações para um banco de dados espelhado em outra instância no mesmo grupo de disponibilidade. Se você estiver usando grupos de disponibilidade como sua solução de alta disponibilidade, poderá usar um banco de dados nesse grupo como uma fonte de dados em uma solução de tabela do Analysis Services ou multidimensional. Todas as operações do Analysis Services a seguir funcionam como esperado ao usar um banco de dados de disponibilidade: processando ou importando dados, consultando dados relacionais diretamente (usando o armazenamento de ROLAP ou o modo DirectQuery), e writeback.  
@@ -30,7 +30,7 @@ ms.locfileid: "52414083"
   
  **(Para cargas de trabalho somente leitura)**. A função de réplica secundária deve ser configurada para conexões somente leitura; o grupo de disponibilidade deve ter uma lista de roteamento e a conexão na fonte de dados do Analysis Services deve especificar o ouvinte de grupo de disponibilidade. As instruções são fornecidas neste tópico.  
   
-##  <a name="bkmk_UseSecondary"></a> Lista de verificação: Use uma réplica secundária para operações somente leitura  
+##  <a name="bkmk_UseSecondary"></a> Lista de verificação: usar uma réplica secundária para operações somente leitura  
  A menos que a solução Analysis Services inclua writeback, você pode configurar uma conexão da fonte de dados para usar uma réplica secundária legível. Se você tiver uma conexão de rede rápida, a réplica secundária terá latência de dados muito baixa, fornecendo dados quase idênticos aos da réplica primária. Usando a réplica secundária em operações do Analysis Services, você pode reduzir a contenção de leitura/gravação na réplica primária e obter uma melhor utilização de réplicas secundárias em seu grupo de disponibilidade.  
   
  Por padrão, tanto o acesso de leitura-gravação quanto o acesso de intenção de leitura são permitidos para a réplica primária e nenhuma conexão é permitida para as réplicas secundárias. Uma configuração adicional é exigida para definir uma conexão de cliente somente leitura com uma réplica secundária. A configuração requer a definição de propriedades na réplica secundária e a execução de um script T-SQL que define uma lista de roteamento somente leitura. Use os procedimentos a seguir para garantir que você executou ambas as etapas.  
@@ -151,7 +151,7 @@ ms.locfileid: "52414083"
 ##  <a name="bkmk_test"></a> Testar a configuração  
  Depois que você configurar a réplica secundária e criar uma conexão da fonte de dados no Analysis Services, poderá confirmar esse processamento e comandos de consulta serão redirecionados para a réplica secundária. Você também pode executar um failover manual planejado para verificar seu plano de recuperação para este cenário.  
   
-#### <a name="step-1-confirm-the-data-source-connection-is-redirected-to-the-secondary-replica"></a>Etapa 1: Confirme se que a conexão de fonte de dados é redirecionada para a réplica secundária  
+#### <a name="step-1-confirm-the-data-source-connection-is-redirected-to-the-secondary-replica"></a>Etapa 1: Confirmar se a conexão da fonte de dados é redirecionada para a réplica secundária  
   
 1.  Inicie o SQL Server Profiler e conecte à instância do SQL Server que hospeda a réplica secundária.  
   
@@ -201,7 +201,7 @@ ms.locfileid: "52414083"
 ##  <a name="bkmk_whathappens"></a> O que acontece depois que um failover ocorre  
  Durante um failover, uma réplica secundária faz a transição para a função primária e a réplica primária antiga faz a transição para a réplica secundária. Todas as conexões de cliente são finalizadas, a propriedade do ouvinte de grupo de disponibilidade é movida com a função de réplica primária para uma nova instância do SQL Server e o ponto de extremidade do ouvinte é associado aos endereços IP virtuais da nova instância e a portas TCP. Para obter mais informações, consulte [Sobre Acesso de conexão de cliente a réplicas de disponibilidade &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md).  
   
- Se ocorrer um failover durante o processamento, o seguinte erro ocorrerá no Analysis Services na janela de saída ou de arquivo de log: "Erro de OLE DB: Erro de OLE DB ou ODBC: Falha de link de comunicação; 08S01; Provedor TPC: Uma conexão existente foi fechada forçadamente pelo host remoto. ; 08S01."  
+ Se ocorrer um failover durante o processamento, o seguinte erro ocorrerá no Analysis Services na janela de Saída ou no arquivo de log: "Erro de OLE DB: Erro de OLE DB ou ODBC: falha no link de comunicação; 08S01; provedor TPC: uma conexão existente foi fechada forçadamente pelo host remoto. ; 08S01."  
   
  Este erro deverá ser resolvido se você aguardar um minuto e tentar novamente. Se o grupo de disponibilidade for configurado corretamente para a réplica secundária legível, o processando será retomado na nova réplica secundária quando você tentar novamente processar.  
   

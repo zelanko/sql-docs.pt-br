@@ -12,13 +12,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7904e42d9ffd82d2c8a5ec7f5c9226d01c5059ef
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749120"
 ---
-# <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook-try-again-or-contact-your-system-administrator-the-following-connections-failed-to-refresh-powerpivot-data"></a>Não é possível atualizar dados de uma conexão de dados na pasta de trabalho. Tente outra vez ou entre em contato com o administrador do sistema. As conexões a seguir não foram atualizadas: Dados do PowerPivot
+# <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook-try-again-or-contact-your-system-administrator-the-following-connections-failed-to-refresh-powerpivot-data"></a>Não é possível atualizar dados de uma conexão de dados na pasta de trabalho. Tente outra vez ou entre em contato com o administrador do sistema. As conexões a seguir não foram atualizadas: Dados PowerPivot
   Para pastas de trabalho do Excel contendo dados PowerPivot, os Serviços do Excel retornam este erro quando submetem uma solicitação de conexão a um servidor do PowerPivot e a solicitação falha.  
   
 ## <a name="details"></a>Detalhes  
@@ -28,7 +28,7 @@ ms.locfileid: "53370998"
 |Aplica-se a:|Instalação do PowerPivot para SharePoint|  
 |Versão do Produto|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |Causa|Veja abaixo.|  
-|Texto da mensagem|Não é possível atualizar dados de uma conexão de dados na pasta de trabalho. Tente outra vez ou entre em contato com o administrador do sistema. As conexões a seguir não foram atualizadas: Dados do PowerPivot|  
+|Texto da mensagem|Não é possível atualizar dados de uma conexão de dados na pasta de trabalho. Tente outra vez ou entre em contato com o administrador do sistema. As conexões a seguir não foram atualizadas: Dados PowerPivot|  
   
 ## <a name="explanation-and-resolution"></a>Explicação e resolução  
  Os Serviços do Excel não podem se conectar a nem carregar dados PowerPivot. As condições que causam esse erro incluem:  

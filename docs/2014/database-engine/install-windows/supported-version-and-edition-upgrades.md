@@ -16,14 +16,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4a245aab71292e1482bd5a17bd32a27bded640ab
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775212"
 ---
 # <a name="supported-version-and-edition-upgrades"></a>Atualizações de versão e edição com suporte
-  Você pode atualizar do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] e [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Este tópico lista os caminhos de atualização com suporte dessas versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e as atualizações de edição com suporte para o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
+  Você pode atualizar do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]e [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]e [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Este tópico lista os caminhos de atualização com suporte dessas versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e as atualizações de edição com suporte para o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
 ## <a name="pre-upgrade-checklist"></a>Lista de verificação anterior à atualização  
   
@@ -59,7 +59,7 @@ ms.locfileid: "51018581"
 -   As versões de 64 bits do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser atualizadas para o servidor de 64 bits do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] somente.  
   
 > [!NOTE]  
->  Quando você atualizar para o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] de uma versão anterior da edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise, escolha entre Enterprise Edition: Licenciamento baseado em núcleo e Enterprise Edition. Estas edições Enterprise só diferem com relação aos modos de licenciamento e o número máximo de núcleos com suporte. Para saber mais, confira [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
+>  Quando você atualiza [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition, escolha entre Enterprise Edition: Licenciamento baseado em núcleo e Enterprise Edition. Estas edições Enterprise só diferem com relação aos modos de licenciamento e o número máximo de núcleos com suporte. Para saber mais, confira [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
  O [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] dá suporte à atualização das seguintes versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
@@ -121,7 +121,7 @@ ms.locfileid: "51018581"
   
 -   Conecte-se ao [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 2014.  
   
- Quando um banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] é atualizado para [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], o nível de compatibilidade do banco de dados é alterado de 90 para 100. ( No [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], os valores válidos do nível de compatibilidade do banco de dados são 100, 110 e 120.) [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) aborda como a alteração do nível de compatibilidade pode afetar os aplicativos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Quando um banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] é atualizado para [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], o nível de compatibilidade do banco de dados é alterado de 90 para 100. (No [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], os valores válidos para o nível de compatibilidade do banco de dados são 100, 110 e 120.) [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) aborda como a alteração do nível de compatibilidade pode afetar os aplicativos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Os cenários não especificados na lista anterior não são suportados, incluindo, mas sem estar limitado, os seguintes:  
   

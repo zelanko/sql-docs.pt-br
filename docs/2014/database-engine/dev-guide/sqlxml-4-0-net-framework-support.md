@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99973fe28d18dc28a0d6690567eb3923e74eb812
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158104"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780509"
 ---
 # <a name="sqlxml-40-net-framework-support"></a>Suporte ao .NET Framework do SQLXML 4.0
   O [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 suporta recursos que permitem escrever aplicativos para acessar dados XML de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], importar esses dados para o ambiente do [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, processá-los e enviar as atualizações de volta ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta seção documenta os recursos de suporte ao .NET Framework e fornece exemplos de uso.  

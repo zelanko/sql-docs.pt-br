@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cf132a6cd6e15002b36ba7ecdced512e3686e433
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748907"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>Painel de Gerenciamento PowerPivot e dados de uso
   O Painel de Gerenciamento PowerPivot é uma coleção de web parts e relatórios predefinidos na Administração Central do SharePoint que ajuda a administrar uma implantação do SQL Server PowerPivot para SharePoint. O Painel de Gerenciamento fornece informações sobre a integridade do servidor, a atividade da pasta de trabalho e a atualização de dados. O painel usa dados da coleta de dados de uso do SharePoint.  
@@ -82,7 +82,7 @@ ms.locfileid: "55087707"
   
 -   [Configurar a coleta de dados de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
- Para capturar dados sobre o sistema de servidor do PowerPivot, verifique se as mensagens de eventos, o histórico de atualização de dados e outro histórico de uso estão habilitados para cada aplicativo de serviço PowerPivot. Os dados de servidor e de uso coletados durante as operações normais do servidor são os dados de origem resultantes no modelo de dados interno. **Observação:** Se você desativar o histórico de eventos ou de uso, os relatórios compostos serão incompletos ou incorretos.  
+ Para capturar dados sobre o sistema de servidor do PowerPivot, verifique se as mensagens de eventos, o histórico de atualização de dados e outro histórico de uso estão habilitados para cada aplicativo de serviço PowerPivot. Os dados de servidor e de uso coletados durante as operações normais do servidor são os dados de origem resultantes no modelo de dados interno. **Observação:** Se você desativar eventos ou o histórico de uso, os relatórios compostos serão ser incompletos ou incorretos.  
   
 ##  <a name="edit"></a> Editar o painel do PowerPivot  
  Se você tiver experiência em desenvolvimento ou personalização de painéis, poderá editar o painel para incluir novas Web parts. Você também poderá editar as propriedades das Web parts incluídas no painel.  
@@ -93,7 +93,7 @@ ms.locfileid: "55087707"
  Para começar a usar o recurso de relatórios personalizados, o Painel de Gerenciamento PowerPivot fornece um arquivo Office Data Connection (.odc) para estabelecer a conexão com a pasta de trabalho de origem. Por exemplo, você pode usar o arquivo .odc no Excel para criar relatórios adicionais.  
   
 > [!NOTE]  
->  Edite o arquivo para evitar o seguinte erro ao tentar usar o arquivo .odc no Excel: "Falha na inicialização da fonte de dados". O arquivo .odc gerado automaticamente inclui um parâmetro que não é suportado pelo provedor OLE DB do MSOLAP. As instruções a seguir apresentam a solução de contorno para excluir os parâmetros.  
+>  Edite o arquivo para evitar o seguinte erro ao tentar usar o arquivo. odc no Excel: "Falha na inicialização da fonte de dados". O arquivo .odc gerado automaticamente inclui um parâmetro que não é suportado pelo provedor OLE DB do MSOLAP. As instruções a seguir apresentam a solução de contorno para excluir os parâmetros.  
   
  Você deve ser um administrador de farm ou de serviço para criar relatórios com base na pasta de trabalho PowerPivot na Administração Central.  
   

@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 49ee4726c0270f69122b50d61a2066ec0c165e60
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740776"
 ---
 # <a name="view-attributes-in-a-tree-list-or-grid-in-dimension-designer"></a>Exibir atributos em uma árvore, lista ou grade no Designer de Dimensão
   Esse procedimento descreve como alterar o modo como os atributos são exibidos no Designer de Dimensão.  

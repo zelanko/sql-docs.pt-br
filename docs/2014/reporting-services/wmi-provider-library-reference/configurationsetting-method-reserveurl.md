@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aaae1838f9af2040105e85bd0dd7fdc82ac442d7
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59939282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646442"
 ---
 # <a name="reserveurl-method-wmi-msreportserverconfigurationsetting"></a>Método ReserveURL (WMI MSReportServer_ConfigurationSetting)
   Adiciona uma reserva de URL para um determinado aplicativo.  

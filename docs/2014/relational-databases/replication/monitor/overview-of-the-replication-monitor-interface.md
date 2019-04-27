@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 48299e2cf318071624c8a7649c52dd9b2f932a77
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62668982"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>Visão geral da interface do Replication Monitor
   O[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor apresenta uma exibição voltada para o Publicador ou para o Distribuidor de todas as atividades de replicação em um formato de dois painéis. Você adiciona um Publicador ao monitor no painel esquerdo e, no painel direito, o monitor exibe informações sobre o Publicador, suas publicações, as assinaturas para essas publicações e os diversos agentes de replicação. Além de apresentar informações sobre a topologia de replicação, o Replication Monitor permite que você execute várias tarefas, como iniciar e interromper agentes e validar dados.  
@@ -104,7 +104,7 @@ ms.locfileid: "54134576"
   
      Essa guia exibe informações detalhadas sobre os agentes e trabalhos usados por todos os tipos de replicação. A guia também permite que você inicie e interrompa cada agente e trabalho.  
   
- Para obter mais informações, consulte [exibir informações e executar tarefas usando o Replication Monitor](view-information-and-perform-tasks-replication-monitor.md).  
+ Para obter mais informações, confira [Exibir informações e executar tarefas usando o Replication Monitor](view-information-and-perform-tasks-replication-monitor.md).  
   
  O Replication Monitor também fornece um menu de contexto para o nó Publicador. Clique com o botão direito do mouse em um Publicador no painel esquerdo para:  
   
@@ -177,7 +177,7 @@ ms.locfileid: "54134576"
   
          As mensagens de erro disponíveis fornecem informações detalhadas sobre o motivo de o agente não estar em execução e fornece o ponto inicial para solução de problemas com agentes associados a uma publicação.  
   
- Para obter mais informações, consulte [exibir informações e executar tarefas usando o Replication Monitor](view-information-and-perform-tasks-replication-monitor.md).  
+ Para obter mais informações, confira [Exibir informações e executar tarefas usando o Replication Monitor](view-information-and-perform-tasks-replication-monitor.md).  
   
  O Replication Monitor também fornece um menu de contexto para o nó de publicações. Clique com o botão direito do mouse em uma publicação no painel esquerdo para:  
   
@@ -216,7 +216,7 @@ ms.locfileid: "54134576"
   
          Essa guia fornece estatísticas detalhadas para cada artigo processado durante a sincronização, inclusive o tempo gasto em cada fase de processamento (carregar alterações, baixar alterações e assim por diante). Ela pode ajudar a definir tabelas específicas que estão provocando lentidão e é o melhor local para a solução de problemas de desempenho com assinaturas de mesclagem.  
   
- Para obter mais informações, consulte [exibir informações e executar tarefas usando o Replication Monitor](view-information-and-perform-tasks-replication-monitor.md).
+ Para obter mais informações, confira [Exibir informações e executar tarefas usando o Replication Monitor](view-information-and-perform-tasks-replication-monitor.md).
   
 ## <a name="viewing-information-and-performing-tasks-related-to-agent-profiles"></a>Exibindo informações e executando tarefas relacionadas a perfis de agente  
  O Replication Monitor inclui várias caixas de diálogo para gerenciar os perfis de agente. Os perfis de agente são conjuntos de parâmetros para um agente que determinam seu comportamento. Para obter mais informações, consulte [Replication Agent Profiles](../agents/replication-agent-profiles.md). As caixas de diálogo são:  

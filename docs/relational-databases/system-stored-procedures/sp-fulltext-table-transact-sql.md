@@ -20,11 +20,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 340d50725a13da4993ade63d890f2300ba38763b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743961"
 ---
 # <a name="spfulltexttable-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -84,7 +84,7 @@ sp_fulltext_table
   
  Se a tabela é reativada e o índice não é populado novamente, o antigo índice permanece disponível para consultas em qualquer coluna restante habilitada para texto completo que não seja nova. É feita a correspondência de dados de colunas excluídas nas consultas que especificam uma pesquisa de todas as colunas de texto completo.  
   
- Depois que uma tabela é definida para indexação de texto completo, a alternância da coluna de chave exclusiva de texto completo de um tipo de dados para outro, seja alterando o tipo de dados dessa coluna ou a chave exclusiva de texto completo de uma coluna para outra, sem uma nova população completa, pode fazer com que ocorra uma falha durante uma consulta subsequente e seja retornada a mensagem de erro: "Conversão no tipo *data_type* falhou para o valor de chave de pesquisa de texto completo *key_value*." Para evitar isso, descarte a definição de texto completo para essa tabela usando o **drop** ação de **sp_fulltext_table** e redefine-a usando **sp_fulltext_table** e **sp_fulltext_column**.  
+ Depois que uma tabela tiver sido definida para indexação de texto completo, alternando a texto completo coluna de chave exclusiva de um tipo de dados para outro, seja alterando o tipo de dados dessa coluna ou alterar a chave exclusiva de texto completo de uma coluna para outra, sem uma nova população completa pode causar uma falha ocorrer durante uma consulta subsequente e retornar a mensagem de erro: "Conversão no tipo *data_type* falhou para o valor de chave de pesquisa de texto completo *key_value*." Para evitar isso, descarte a definição de texto completo para essa tabela usando o **drop** ação de **sp_fulltext_table** e redefine-a usando **sp_fulltext_table** e **sp_fulltext_column**.  
   
  A coluna de chave de texto completo deve ser definida para ter 900 bytes ou menos. É recomendável que o tamanho da coluna de chave seja o menor possível por motivos de desempenho.  
   

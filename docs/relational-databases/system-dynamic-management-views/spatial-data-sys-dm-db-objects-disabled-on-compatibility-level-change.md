@@ -1,5 +1,5 @@
 ---
-title: DM db_objects_disabled_on_compatibility_level_change (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_objects_disabled_on_compatibility_level_change (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fece91698147ef11496855985f27ea81f84f62a5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62669444"
 ---
 # <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>Dados espaciais - DM db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 |**class_desc**|**nvarchar(60)**|OBJECT ou COLUMN para restrições<br /><br /> INDEX para índices e heaps|  
 |**major_id**|**int**|OBJECT ID de restrições<br /><br /> OBJECT ID da tabela que contém índices e heaps|  
 |**minor_id**|**int**|NULL para restrições<br /><br /> Index_id para índices e heaps|  
-|**dependência**|**nvarchar(60)**|Descrição da dependência que está causando a desabilitação da restrição ou do índice. Os mesmos valores também são usados nos avisos que são lançados durante atualização. Os exemplos incluem o seguinte:<br /><br /> "space" para um intrínseco<br /><br /> "geometry" para um sistema UDT<br /><br /> "geography::Parse" para um método de um sistema UDT|  
+|**dependency**|**nvarchar(60)**|Descrição da dependência que está causando a desabilitação da restrição ou do índice. Os mesmos valores também são usados nos avisos que são lançados durante atualização. Os exemplos incluem o seguinte:<br /><br /> "space" para um intrínseco<br /><br /> "geometry" para um sistema UDT<br /><br /> "geography::Parse" para um método de um sistema UDT|  
   
 ## <a name="general-remarks"></a>Comentários gerais  
  Colunas computadas persistentes que usam algumas funções intrínsecas são desabilitadas quando o nível de compatibilidade é alterado. Além disso, colunas computadas persistentes que usam qualquer método de geometria ou geografia são desabilitadas quando um banco de dados é atualizado.  
@@ -114,7 +114,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 ### <a name="behavior-of-the-disabled-objects"></a>Comportamento dos objetos desabilitados  
  **Índices**  
   
- Se o índice clusterizado estiver desabilitado ou se um índice não agrupado for forçado, será gerado o erro a seguir: "O processador de consultas não consegue produzir um plano porque o índice ' %. \*ls' na tabela ou exibição ' %. \*ls' está desabilitado. " Para habilitar novamente esses objetos, reconstrua os índices após a atualização chamando **ALTER INDEX ON... REBUILD**.  
+ Se o índice clusterizado está desabilitado ou se um índice não agrupado for forçado, será gerado o erro a seguir: "O processador de consultas não consegue produzir um plano porque o índice ' %. \*ls' na tabela ou exibição ' %. \*ls' está desabilitado. " Para habilitar novamente esses objetos, reconstrua os índices após a atualização chamando **ALTER INDEX ON... REBUILD**.  
   
  **Heaps**  
   
@@ -135,7 +135,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
  **Restrições de verificação e as chaves estrangeiras**  
   
- Restrições de verificação desabilitadas e chave estrangeiras não lançam um erro. Porém, as restrições não são impostas quando linhas são modificadas. Para habilitar novamente esses objetos, as restrições de verificação depois de atualizar chamando **ALTER TABLE... RESTRIÇÃO DE VERIFICAÇÃO**.  
+ Restrições de verificação desabilitadas e chave estrangeiras não lançam um erro. Porém, as restrições não são impostas quando linhas são modificadas. Para habilitar novamente esses objetos, as restrições de verificação depois de atualizar chamando **ALTER TABLE... CHECK CONSTRAINT**.  
   
  **Colunas computadas persistentes**  
   

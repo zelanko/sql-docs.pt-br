@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f0778a104383f54cf2798c0d6f51f082926b1fd4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658944"
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM &lt;modelo&gt; PREDICTION JOIN (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -57,7 +57,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  *Expressão*  
  Opcional. Uma expressão que retorna um valor escalar.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A cláusula ON define o mapeamento entre as colunas da consulta de fonte e as colunas do modelo de mineração. Esse mapeamento é usado para direcionar colunas de uma consulta de fonte para colunas no modelo de mineração, de modo que as colunas possam ser usadas como entradas para criar as previsões. Colunas na \< *lista de mapeamento de junção*> são relacionados por meio de um sinal de igual (=), conforme mostrado no exemplo a seguir:  
   
 ```  
@@ -187,7 +187,7 @@ NATURAL PREDICTION JOIN
  Como a coluna que contém o atributo previsível `[v Assoc Seq Line Items]` é uma coluna de tabela, a consulta retorna uma única coluna que contém uma tabela aninhada. Por padrão a coluna de tabela aninhada é denominada `Expression`. Se seu provedor não oferece suporte a conjuntos de linhas hierárquicos, você pode usar o **FLATTENED** palavra-chave, conforme mostrado neste exemplo, para facilitar os resultados exibir.  
   
 ## <a name="see-also"></a>Consulte também  
- [SELECIONE &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
  [Extensões de mineração de dados &#40;DMX&#41; instruções de definição de dados](../dmx/dmx-statements-data-definition.md)   
  [Extensões de mineração de dados &#40;DMX&#41; instruções de manipulação de dados](../dmx/dmx-statements-data-manipulation.md)   
  [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../dmx/data-mining-extensions-dmx-statements.md)  

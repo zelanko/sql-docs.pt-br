@@ -20,22 +20,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0f8d69e97aa542d89291d81d60177e520e6a007b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732172"
 ---
 # <a name="dependency-network-diagram-walkthrough-data-mining-add-ins"></a>Passo a passo do diagrama de rede de dependências (Suplementos de Mineração de Dados)
   Vários tipos diferentes de modelos de mineração de dados usam um gráfico de rede como uma maneira de explorar relações nos dados. Você pode importar esses modelos no Visio usando a **rede de dependências** forma e, em seguida, continuar a personalizar e aprimorar o layout. O **formas de mineração de dados para Visio** incluem os seguintes controles personalizados para trabalhar com diagramas de rede de dependência:  
   
 -   Controles de renderização para o gráfico da rede  
   
-     Essas opções fazem parte do assistente que é iniciado quando você solta uma forma no espaço de trabalho do Visio.  
+     Essas opções fazem parte do assistente que é iniciado quando você solta uma forma no workspace do Visio.  
   
 -   **Layout de mineração de dados** barra de ferramentas  
   
-     Essas opções são adicionadas ao espaço de trabalho do Visio para ajudá-lo a interagir com o gráfico de rede de dependências.  
+     Essas opções são adicionadas ao workspace do Visio para ajudá-lo a interagir com o gráfico de rede de dependências.  
   
 ## <a name="build-a-dependency-network-graph"></a>Criar um gráfico de rede de dependências  
  Você solta uma forma na página do Visio para iniciar o **Assistente de forma do Visio Net dependência** e defina as opções do diagrama.  
@@ -44,7 +44,7 @@ ms.locfileid: "48197926"
   
 1.  Se você não vir **formas de mineração de dados do Microsoft** na **formas** , clique em **mais formas**, selecione **Abrir estêncil**e abra o modelo do local de instalação padrão.  
   
-     \<unidade >: \Program files (x85) \Microsoft SQL Server 2012 DM Add-Ins  
+     \<drive>:\Program files (x85)\Microsoft SQL Server 2012 DM Add-Ins  
   
 2.  Arraste o **rede de dependências** forma até a página para iniciar o assistente. Clique em **Avançar**.  
   
@@ -103,10 +103,10 @@ ms.locfileid: "48197926"
      **Redimensionar página**  
      Altera o tamanho da página para que todos os nós fiquem visíveis.  
   
-     **Intensidade da borda**  
+     **Edge Strength**  
      Alterna a exibição da intensidade da borda para todo o gráfico. Uma borda é uma conexão entre dois nós. Você pode usar o controle deslizante para filtrar as conexões que não são intensas.  
   
-     **Controle deslizante**  
+     **Slider**  
      O **controle deslizante** ajuda a controlar a intensidade das relações que são exibidos no diagrama de rede de dependência.  
   
      Cada nó exibido no gráfico representa um estado. Uma seta representa uma transição entre dois estados e a probabilidade associada a ela. Para reduzir o número de nós no gráfico, mova a barra de controle deslizante para cima.  

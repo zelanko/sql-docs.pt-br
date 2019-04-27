@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 888bbde0a0230c51c2ca0871e4a370c678899e7c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59938713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62647246"
 ---
 # <a name="generatedatabasecreationscript-method-wmi-msreportserverconfigurationsetting"></a>Método GenerateDatabaseCreationScript (WMI MSReportServer_ConfigurationSetting)
   Gera um SQL Script que pode ser usado para criar um banco de dados do servidor de relatório.  

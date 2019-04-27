@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f33492191deac22f416aa2f823ea501d72765b36
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62741006"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Noções básicas sobre o Power View para modelos multidimensionais
   Este artigo descreve o recurso Power View para Modelos Multidimensionais no Microsoft SQL Server 2014 e oferece informações importantes para profissionais de BI e administradores que pretendem implementar o Power View para Modelos Multidimensionais na respectiva organização.  
@@ -98,7 +98,7 @@ ms.locfileid: "53362978"
  Os modelos tabulares oferece aos usuários a capacidade de criar medidas *implícitas* como contagem, soma ou média em campos. Para os modelos multidimensionais, como os dados de atributo de dimensão são armazenados de forma diferente, a consulta de medidas implícitas poderá demorar mais. Por causa disso, as medidas implícitas não estão disponíveis no Power View.  
   
 ## <a name="dimensions-attributes-and-hierarchies"></a>Dimensões, atributos e hierarquias  
- As dimensões de cubo são expostas como tabelas em metadados tabulares. Na Lista de Campos do Power View, os atributos de dimensão são mostrados como colunas nas pastas de exibição.  Os atributos de dimensão que têm a propriedade AttributeHierarchyEnabled definida como false. Por exemplo: Atributo de data de nascimento na dimensão cliente ou a propriedade AttributeHierarchyVisible definida como false não aparecerão na lista de campos do Power View. Hierarquias de vários níveis ou hierarquias de usuário; por exemplo, Geografia do Cliente na dimensão Cliente, são expostas como hierarquias na Lista de Campos do Power View. UnknownMembers ocultos de um atributo de dimensão são expostos em Consultas DAX e no Power View.  
+ As dimensões de cubo são expostas como tabelas em metadados tabulares. Na Lista de Campos do Power View, os atributos de dimensão são mostrados como colunas nas pastas de exibição.  Os atributos de dimensão que têm a propriedade AttributeHierarchyEnabled definida como false; Por exemplo: Atributo de data de nascimento na dimensão cliente ou a propriedade AttributeHierarchyVisible definida como false não aparecerão na lista de campo do Power View. Hierarquias de vários níveis ou hierarquias de usuário; por exemplo, Geografia do Cliente na dimensão Cliente, são expostas como hierarquias na Lista de Campos do Power View. UnknownMembers ocultos de um atributo de dimensão são expostos em Consultas DAX e no Power View.  
   
  **Dimensão, atributos e hierarquias no SQL Server Data Tools (SSDT) e na Lista de Campos do Power View**  
   
@@ -137,7 +137,7 @@ ms.locfileid: "53362978"
  Dimensão de suporte a modelos multidimensionais e segurança no nível da célula por meio de funções. Um usuário que estiver se conectando a um cubo usando o Power View é autenticado e avaliado para obtenção das permissões adequadas. Quando a segurança de dimensão for aplicada, os respectivos membros da dimensão não serão vistos pelo usuário no Power View; entretanto, se um usuário tiver uma permissão de segurança de célula definida onde determinadas células estiverem restritas, então esse usuário não poderá se conectar ao cubo usando o Power View. Em alguns casos, os usuários poderão agregar dados quando partes desses dados forem calculados a partir dos dados protegidos.  
   
 ### <a name="non-aggregatable-attributeshierarchies"></a>Atributos/hierarquias não agregáveis  
- Em um modelo multidimensional, atributos de uma dimensão podem ter a propriedade IsAggregatable definida como falsa. Isso significa que o autor do modelo especificou que aplicativos cliente não devem agregar os dados entre hierarquias (no nível do atributos ou em vários níveis) quando consultarem os dados. No Power View, esse atributo de dimensão é exposto como uma coluna para a qual subtotais não estão disponíveis. Na imagem abaixo, você pode ver um exemplo de uma hierarquia não agregável: contas. O nível superior da hierarquia pai-filho de Contas é não agregável, enquanto os outros níveis são agregáveis. em uma visualização em matriz da hierarquia de Contas (os dois primeiros níveis), você verá subtotais para o Nível de Conta 02, mas não para o nível superior, Nível de Conta 01.  
+ Em um modelo multidimensional, atributos de uma dimensão podem ter a propriedade IsAggregatable definida como falsa. Isso significa que o autor do modelo especificou que aplicativos cliente não devem agregar os dados entre hierarquias (no nível do atributos ou em vários níveis) quando consultarem os dados. No Power View, esse atributo de dimensão é exposto como uma coluna para a qual subtotais não estão disponíveis. Na imagem abaixo, você pode ver um exemplo de uma hierarquia não agregável: Contas. O nível superior da hierarquia pai-filho de Contas é não agregável, enquanto os outros níveis são agregáveis. em uma visualização em matriz da hierarquia de Contas (os dois primeiros níveis), você verá subtotais para o Nível de Conta 02, mas não para o nível superior, Nível de Conta 01.  
   
  **Hierarquia não agregável no Power View**  
   

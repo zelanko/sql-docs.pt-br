@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fb2c032fc95738550aa92cc8905ebee7279dcc2f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740840"
 ---
 # <a name="understanding-incremental-generation"></a>Entendendo a geração com incremento
   Após a geração de esquema inicial, você pode alterar as definições do cubo e das dimensões usando o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]e, em seguida, executar novamente o Assistente de Geração de Esquema. O assistente atualiza o esquema do banco de dados da área de assunto e da exibição da fonte de dados associada para refletir as mudanças, mantendo, na medida do possível, os dados que já existem nas tabelas que serão geradas novamente. Se você alterou as tabelas depois da geração inicial, o Assistente de Geração de Esquema preservará essas alterações sempre que possível usando as seguintes regras:  
@@ -85,7 +85,7 @@ ms.locfileid: "48049286"
  Por outro lado, se você alterar a cadeia de conexão da fonte de dados para um banco de dados diferente daquele usado na geração anterior, nenhum erro será gerado. O novo banco de dados será usado e nenhuma alteração será feita no banco de dados anterior.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gerenciar alterações em exibições da fonte de dados e fontes de dados](manage-changes-to-data-source-views-and-data-sources.md)   
- [Assistente de geração de esquema &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
+ [Gerenciar alterações em exibições da fonte de dados e em fontes de dados](manage-changes-to-data-source-views-and-data-sources.md)   
+ [Assistente de Geração de Esquema &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
   
   

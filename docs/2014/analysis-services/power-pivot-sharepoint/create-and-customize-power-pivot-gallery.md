@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1f753856fbec3fe521cf23e6506c3b43e5dec481
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749597"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>Criar e personalizar uma galeria do PowerPivot
   A Galeria PowerPivot é um tipo especial de biblioteca de documentos do SharePoint que fornece visualização avançada e gerenciamento de documentos das pastas de trabalho do Excel publicadas e relatórios dos Reporting Services que contêm dados PowerPivot.  
@@ -43,7 +43,7 @@ ms.locfileid: "53358898"
     >  A Galeria do PowerPivot requer o Microsoft Silverlight.  O navegador Microsoft Edge não dá suporte ao Silverlight.   
     > Para exibir o conteúdo da biblioteca no Microsoft Edge, clique na guia **Biblioteca** , na galeria do PowerPivot e, em seguida, altere a exibição da biblioteca de documentos para **Todos os documentos**.    
     > Para alterar a exibição padrão, clique na guia **Biblioteca** e depois clique em Modificar exibição. Clique em "Fazer desta a exibição padrão" e, em seguida, clique em OK para salvar a exibição padrão.  
-    >  Para obter mais informações sobre quais o Microsoft Edge dá suporte, consulte o blog do Windows, [uma ruptura com o passado, parte 2: Adeus ao ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+    >  Para obter mais informações sobre quais Edge dá suporte, consulte o blog do Windows, [uma ruptura com o passado, parte 2: Adeus ao ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
 -   Você deve ser proprietário do site para criar uma biblioteca.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "53358898"
 |----------|-----------------|  
 |Exibição de Galeria (padrão)|Galeria é a exibição padrão para uma Galeria [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . A visualização é exibida à esquerda. As miniaturas menores de cada planilha são exibidas ao lado dela em uma ordem sequencial da esquerda para a direita.|  
 |Todos os documentos|Esse é o layout padrão para bibliotecas de documentos. É possível escolher essa exibição para gerenciar documentos individuais ou exibir o conteúdo da biblioteca em um formato de lista.<br /><br /> Use essa exibição para editar propriedades, excluir ou mover documentos individuais.<br /><br /> Se habilitou o controle de versão, você deverá usar essa exibição para fazer check-in ou check-out de documentos da biblioteca.|  
-|Exibição de Teatro e Exibição de Carrossel|Essas serão exibições especializados que funcionarão melhor se você estiver mostrando um número pequeno de documentos relacionados. A rotação total de miniaturas inclui todas as páginas em todos os documentos na biblioteca. Se você tiver um número grande de documentos, essas exibições poderão não ser práticas para usuários que desejam localizar ou abrir uma pasta de trabalho específica do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Exibição de teatro: A área de visualização é centralizada. Miniaturas menores de cada planilha são exibidas na parte mais inferior da página, em qualquer lado.<br /><br /> Exibição do carrossel: A área de visualização é centralizada. As miniaturas pouco antes e depois da miniatura atual estão próximas à área de visualização.|  
+|Exibição de Teatro e Exibição de Carrossel|Essas serão exibições especializados que funcionarão melhor se você estiver mostrando um número pequeno de documentos relacionados. A rotação total de miniaturas inclui todas as páginas em todos os documentos na biblioteca. Se você tiver um número grande de documentos, essas exibições poderão não ser práticas para usuários que desejam localizar ou abrir uma pasta de trabalho específica do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Exibição de teatro: A área de visualização é centralizada. Miniaturas menores de cada planilha são exibidas na parte mais inferior da página, em qualquer lado.<br /><br /> Exibição de carrossel: A área de visualização é centralizada. As miniaturas pouco antes e depois da miniatura atual estão próximas à área de visualização.|  
   
 ### <a name="switch-to-a-different-view"></a>Alternar para uma exibição diferente  
   

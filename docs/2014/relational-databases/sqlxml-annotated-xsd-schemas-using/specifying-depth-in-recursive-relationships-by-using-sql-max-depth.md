@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 569bbbdec39a37ef7427a195529f26efc9d9b2a3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745477"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>Especificando a profundidade em relações recursivas usando sql:max-depth
   Em bancos de dados relacionais, quando uma tabela está envolvida em uma relação com si mesma, a relação é chamada de relação recursiva. Por exemplo, em uma relação supervisor-supervisionado, uma tabela que armazena os registros dos funcionários está envolvida em uma relação com si mesma. Nesse caso, a tabela de funcionários desempenha a função de supervisor em um lado da relação e a mesma tabela desempenha a função de supervisionado no outro lado.  
@@ -96,7 +96,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  Como a relação é recursiva, você precisa de algum modo de especificar a profundidade de recursão no esquema. Caso contrário, o resultado será uma recursão infinita (funcionário subordinado a funcionário subordinado a funcionário e assim por diante). A anotação `sql:max-depth` permite especificar o nível de profundidade da recursão. Nesse exemplo específico, para especificar um valor para `sql:max-depth`, você precisa saber o nível de profundidade da hierarquia de gerenciamento na empresa.  
   
 > [!NOTE]  
->  O esquema especifica a anotação `sql:limit-field`, mas não especifica a anotação `sql:limit-value`. Isso limita o nó superior da hierarquia resultante apenas aos funcionários que não estão subordinados a ninguém. (ReportsTo é NULL.) Especificar `sql:limit-field` e não especificar a anotação `sql:limit-value` (que usa o valor padrão NULL) realiza isso. Se você desejar que o XML resultante inclua todas as árvores de subordinação (a árvore de subordinação de cada funcionário da tabela), remova a anotação `sql:limit-field` do esquema.  
+>  O esquema especifica a anotação `sql:limit-field`, mas não especifica a anotação `sql:limit-value`. Isso limita o nó superior da hierarquia resultante apenas aos funcionários que não estão subordinados a ninguém. (ReportsTo é NULL.) Especificando `sql:limit-field` e não especificar `sql:limit-value` (cujo padrão é NULL) anotação realiza isso. Se você desejar que o XML resultante inclua todas as árvores de subordinação (a árvore de subordinação de cada funcionário da tabela), remova a anotação `sql:limit-field` do esquema.  
   
 > [!NOTE]  
 >  O procedimento a seguir usa o banco de dados tempdb.  
@@ -232,7 +232,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  Use a anotação `sql:max-depth` no esquema para especificar a profundidade de recursão em uma relação recursiva que é descrita no esquema. O valor da `sql:max-depth` anotação é um inteiro positivo (1 a 50) que indica o número de recursões:  Um valor de 1 para a recursão no elemento para o qual o `sql:max-depth` anotação é especificada; um valor de 2 para a recursão no nível de elemento no qual `sql:max-depth` for especificado; e assim por diante.  
   
 > [!NOTE]  
->  Na implementação subjacente, uma consulta XPath que é especificada em um esquema de mapeamento é convertida em uma consulta SELECT ... FOR XML EXPLICIT. Essa consulta requer que você especifique uma profundidade finita de recursão. Quanto mais alto for o valor especificado para `sql:max-depth`, maior será a consulta FOR XML EXPLICIT que será gerada. Isso poderá pode tornar mais lenta a recuperação.  
+>  Na implementação subjacente, uma consulta XPath que é especificada em um esquema de mapeamento é convertida em um SELECT... PARA uma consulta XML explícita. Essa consulta requer que você especifique uma profundidade finita de recursão. Quanto mais alto for o valor especificado para `sql:max-depth`, maior será a consulta FOR XML EXPLICIT que será gerada. Isso poderá pode tornar mais lenta a recuperação.  
   
 > [!NOTE]  
 >  Updategrams e o Carregamento em Massa de XML ignoram a anotação max-depth. Isso significa que atualizações ou inserções recursivas acontecerão, independentemente do valor especificado para max-depth.  

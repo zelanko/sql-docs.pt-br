@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: df7311aad9c356376fffafc8a4882af8e29e746b
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659235"
 ---
 # <a name="install-sample-data-and-multidimensional-projects"></a>Instalar dados de exemplo e projetos multidimensionais 
 [!INCLUDE[ssas-appliesto-sqlas-all](../includes/ssas-appliesto-sqlas-all.md)]
@@ -26,7 +26,7 @@ As lições neste tutorial presumem que você tenha o seguinte software instalad
   
 -   Mecanismo de Banco de Dados do SQL Server  
   
--   SQL Server Analysis Services (SSAS) 
+-   SQL Server Analysis Services  (SSAS) 
   
     Analysis Services está disponível apenas nestas edições: Evaluation, Enterprise, Business Intelligence, Standard. Não há suporte para modelos multidimensionais no Azure Analysis Services.
   

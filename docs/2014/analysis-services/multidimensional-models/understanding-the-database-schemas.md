@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 554f226c3b6ca1fa3a753947b08a3fea3d6946c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740748"
 ---
 # <a name="understanding-the-database-schemas"></a>Entendendo os esquemas de banco de dados
   O Assistente de Geração de Esquema gera um esquema relacional não normalizado para o banco de dados da área de assunto com base nas dimensões e nos grupos de medidas do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. O assistente gera uma tabela relacional para cada dimensão para armazenar dados da dimensão, chamada tabela de dimensões, e uma tabela relacional para cada grupo de medidas para armazenar dados de fatos, chamada tabela de fatos. O assistente ignora dimensões vinculadas, grupos de medidas vinculados e dimensões de tempo de servidor ao gerar essas tabelas relacionais.  
@@ -45,7 +45,7 @@ ms.locfileid: "48133418"
  Para cada dimensão, o Assistente de Geração de Esquema gera uma tabela de dimensões que será incluída no banco de dados da área de assunto. A estrutura da tabela de dimensões varia de acordo com as escolhas feitas durante a criação da dimensão na qual ela se baseia.  
   
  Colunas  
- O assistente gera uma coluna para ligações associadas a cada atributo na dimensão na qual a tabela de dimensões baseia-se, como as ligações para o `KeyColumns`, `NameColumn`, `ValueColumn`, `CustomRollupColumn`, `CustomRollupPropertiesColumn`e `UnaryOperatorColumn`propriedades de cada atributo.  
+ O assistente gera uma coluna para ligações associadas a cada atributo da dimensão na qual a tabela de dimensões baseia-se, como as ligações para as propriedades `KeyColumns`, `NameColumn`, `ValueColumn`, `CustomRollupColumn`, `CustomRollupPropertiesColumn` e `UnaryOperatorColumn` de cada atributo.  
   
  Relações  
  O assistente gera uma relação entre a coluna de cada atributo e a chave primária da tabela de dimensões.  
@@ -65,7 +65,7 @@ ms.locfileid: "48133418"
  Para cada grupo de medidas de um cubo, o Assistente de Geração de Esquema gera uma tabela de fatos que será incluída no banco de dados de área de assunto. A estrutura da tabela de fatos varia de acordo com as escolhas feitas durante a criação do grupo de medidas no qual ela se baseia e as relações estabelecidas entre o grupo de medidas e as dimensões incluídas.  
   
  Colunas  
- O assistente gera uma coluna para cada medida, exceto para medidas que usam o `Count` função de agregação. Essas medidas não requerem uma coluna correspondente na tabela de fatos.  
+ O assistente gera uma coluna para cada medida, exceto para medidas que usam a função de agregação `Count`. Essas medidas não requerem uma coluna correspondente na tabela de fatos.  
   
  O assistente gera também uma coluna para cada coluna de atributo de granularidade de cada relação de dimensão regular do grupo de medidas e uma ou mais colunas para as ligações associadas a cada atributo de uma dimensão que contém uma relação de dimensão de fatos com o grupo de medidas que serve de base para a tabela, se aplicável.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48133418"
  O assistente gera uma tabela separada para manter os valores traduzidos para qualquer propriedade do grupo de medidas que precise de uma coluna de tradução. O assistente cria também uma coluna separada para cada um dos idiomas necessários.  
   
 ## <a name="data-type-conversion-and-default-lengths"></a>Conversão do tipo de dados e comprimentos padrão  
- Assistente de geração de esquema sempre ignora os tipos de dados em todos os casos, exceto nas colunas que usam o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar` tipo de dados. O `wchar` tamanho de dados se traduz diretamente para o `nvarchar` tipo de dados. No entanto, se o comprimento especificado de uma coluna que usa o tamanho `wchar` for superior a 4000 bytes, o Assistente de Geração de Esquema produzirá um erro.  
+ Assistente de geração de esquema sempre ignora os tipos de dados em todos os casos, exceto nas colunas que usam o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar` tipo de dados. O tamanho de dados `wchar` converte-se diretamente no tipo de dados `nvarchar`. No entanto, se o comprimento especificado de uma coluna que usa o tamanho `wchar` for superior a 4000 bytes, o Assistente de Geração de Esquema produzirá um erro.  
   
  Se um item de dados, como uma ligação para um atributo, não tiver um comprimento especificado, o comprimento padrão listado na tabela a seguir será usado na coluna.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "48133418"
 |UnaryOperatorColumn|1|  
   
 ## <a name="see-also"></a>Consulte também  
- [Noções básicas sobre geração Incremental](understanding-incremental-generation.md)   
+ [Entendendo a geração com incremento](understanding-incremental-generation.md)   
  [Gerenciar alterações em exibições da fonte de dados e em fontes de dados](manage-changes-to-data-source-views-and-data-sources.md)  
   
   

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc8252d0049953f0958ea331015aae51fd737709
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62663479"
 ---
 # <a name="cpu-threshold-exceeded-event-class"></a>Classe de evento CPU Threshold Exceeded
   A classe de evento CPU Threshold Exceeded indica que o Administrador de Recursos detecta uma consulta que excede o limite da CPU especificado para REQUEST_MAX_CPU_TIME_SEC.  
@@ -36,7 +36,7 @@ ms.locfileid: "52770448"
 |EventSubClass|`int`|Violação de limite da CPU.|21|Sim|  
 |GroupID|`int`|ID do grupo onde a violação ocorreu.|66|Sim|  
 |OwnerID|`int`|SPID do processo que causou a violação.|58|Sim|  
-|SPID|`int`|ID do processo de servidor que dispara este evento.<br /><br /> Observação: Poderá ser diferente do verdadeiro SPID do usuário se um thread de sistema validar o uso da CPU como uma tarefa em segundo plano.|12|Sim|  
+|SPID|`int`|ID do processo de servidor que dispara este evento.<br /><br /> Observação: Isso pode ser diferente do verdadeiro SPID do usuário se um thread de sistema validar o uso de CPU como uma tarefa em segundo plano.|12|Sim|  
 |StartTime|`datetime`|A hora em que esse evento foi disparado.|14|Sim|  
   
 ## <a name="see-also"></a>Consulte também  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5d8562661e313aea59dfb233dbc5b2194b582c2d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659128"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +46,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
  *n* não pode ser 0. A função retornará um erro se você não fizer pelo menos uma previsão.  
   
- *início de n, n-end*  
+ *n-start, n-end*  
  Especifica um intervalo de etapas de série temporal.  
   
  *n-início* deve ser um inteiro e não pode ser 0.  
@@ -85,12 +85,12 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
 -   O terceiro exemplo mostra como usar o parâmetro EXTEND_MODEL_CASES para atualizar um modelo de mineração com dados novos.  
   
- Para saber mais sobre como trabalhar com modelos de série temporal, consulte o tutorial de mineração de dados, [lição 2: Criando um cenário de previsão de &#40;Tutorial intermediário de mineração de dados&#41; ](https://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2) e [DMX de previsão de série de tempo Tutorial](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
+ Para saber mais sobre como trabalhar com modelos de série temporal, consulte o tutorial de mineração de dados, [lição 2: Criando um cenário de previsão &#40;Tutorial de mineração de dados intermediário&#41; ](https://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2) e [Tutorial DMX de previsão de série de tempo](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
   
 > [!NOTE]  
 >  Você pode obter diferentes resultados do seu modelo. Os resultados dos exemplos a seguir são fornecidos somente para ilustrar o formato do resultado.  
   
-### <a name="example-1-predicting-a-number-of-time-slices"></a>Exemplo 1: Prevendo um número de frações de tempo  
+### <a name="example-1-predicting-a-number-of-time-slices"></a>Exemplo 1: Prevendo um número de intervalos de tempo  
  O exemplo a seguir usa o **PredictTimeSeries** função para retornar uma previsão para as próximas três próximas etapas e restringe os resultados para a série M200 nas regiões da Europa e Pacífico. Neste modelo específico, o atributo previsível é Quantity, portanto, você deve usar `[Quantity]` como o primeiro argumento para a função PredictTimeSeries.  
   
 ```  
@@ -194,7 +194,7 @@ WHERE ([Model Region] = 'M200 Europe'
   
 -   Retorna novas previsões para as três frações de tempo restantes com base no modelo recém-expandido.  
   
- A seguinte tabela lista os resultados da consulta do Exemplo 2. Observe que os dois primeiros valores retornados para M200 Europa são exatamente os mesmos dos novos valores fornecidos. Esse comportamento ocorre por design. Se você desejar iniciar as previsões após o final dos novos dados, deverá especificar um período de início e de término. Para obter um exemplo de como fazer isso, consulte [lição 5: estendendo o modelo de série temporal](https://msdn.microsoft.com/library/7aad4946-c903-4e25-88b9-b087c20cb67d).  
+ A seguinte tabela lista os resultados da consulta do Exemplo 2. Observe que os dois primeiros valores retornados para M200 Europa são exatamente os mesmos dos novos valores fornecidos. Esse comportamento ocorre por design. Se você desejar iniciar as previsões após o final dos novos dados, deverá especificar um período de início e de término. Para obter um exemplo de como fazer isso, consulte [lição 5: Estendendo a série temporal de modelo](https://msdn.microsoft.com/library/7aad4946-c903-4e25-88b9-b087c20cb67d).  
   
  Além disso, observe que você não forneceu novos dados para a região do Pacífico. Portanto, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] retorna novas previsões para todas as cinco frações de tempo.  
   
@@ -208,7 +208,7 @@ WHERE ([Model Region] = 'M200 Europe'
 |10/25/2008 0:00|69|  
 |11/25/2008 0:00|68|  
   
- Quantidade: M200 Pacífico. EXTEND_MODEL_CASES:  
+ Quantidade:  M200 Pacific. EXTEND_MODEL_CASES:  
   
 |$TIME|Quantidade|  
 |-----------|--------------|  

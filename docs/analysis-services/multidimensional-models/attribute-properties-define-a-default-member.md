@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 10b5776a4d4be5f31522740c28a6142a7e213576
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746628"
 ---
 # <a name="attribute-properties---define-a-default-member"></a>Propriedades do atributo – Definir um membro padrão
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

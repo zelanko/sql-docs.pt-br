@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 33d2f83b1b003e6be2fc5c47b8a0e12b440f537c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749422"
 ---
 # <a name="connect-a-powerpivot-service-application-to-a-sharepoint-web-application-in-central-administration"></a>Conectar um aplicativo de serviço PowerPivot a um aplicativo Web do SharePoint na Administração Central
   Um aplicativo de serviço PowerPivot pode ser usado por qualquer número de aplicativos Web do SharePoint no farm. Para disponibilizar um aplicativo de serviço PowerPivot, adicione-o a uma lista de associações de serviço.  

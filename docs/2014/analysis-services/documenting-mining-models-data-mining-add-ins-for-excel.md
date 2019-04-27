@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 34cae1b1fa4c63f0de28ad4389c1b2d304fc2d88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731724"
 ---
 # <a name="documenting-mining-models-data-mining-add-ins-for-excel"></a>Documentando modelos de mineração (Suplementos de Mineração de Dados para Excel)
   ![Botão de modelo de documento, faixa de opções mineração de dados](media/dmc-docmodel.gif "botão de modelo de documento, faixa de opções mineração de dados")  
@@ -36,7 +36,7 @@ ms.locfileid: "48118056"
   
 3.  No **Selecionar modelo** caixa de diálogo, selecione o modelo no qual a relatório e, em seguida, clique em **próxima**. Você deve executar o **modelo de documento** separadamente para cada modelo que você deseja documentar.  
   
-4.  No **selecionar detalhes da documentação** diálogo caixa, escolha uma das duas opções: **preencha informações** ou **informações de resumo**.  
+4.  No **selecionar detalhes da documentação** caixa de diálogo, escolha uma das duas opções: **Preencha informações** ou **informações de resumo**.  
   
 5.  Clique em **Concluir**.  
   

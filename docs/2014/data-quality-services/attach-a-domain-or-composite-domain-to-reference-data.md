@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 254e1209a8198a6021222edc0b9b8abc72210884
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024257"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755894"
 ---
 # <a name="attach-a-domain-or-composite-domain-to-reference-data"></a>Anexar domínio ou domínio de composição a dados de referência
   Este tópico descreve como anexar domínios/domínios compostos em uma base de dados de conhecimento de qualidade de dados para um serviço de dados de referência, no Windows Azure Marketplace, a fim de compilar o conhecimento com base nos dados de referência de alta qualidade. Cada serviço de dados de referência contém um esquema (colunas de dados). Após anexar um domínio ou um domínio composto a um serviço de dados de referência, mapeie o domínio anexado ou os domínios individuais no domínio composto anexado para as colunas apropriadas em um esquema de serviço de dados de referência. Ao anexar um domínio composto a um serviço de dados de referência, você pode anexar apenas um domínio a um serviço de dados de referência e, em seguida, mapear os domínios individuais no domínio composto para as colunas apropriadas no esquema de serviço de dados de referência.  
@@ -28,7 +28,7 @@ ms.locfileid: "56024257"
   
  Um esquema de serviço de dados de referência pode ter uma coluna obrigatória que deverá ser mapeada com o domínio apropriado se você optar por usar o serviço de dados de referência. A coluna obrigatória em um esquema de dados de referência é identificada com "(M)" no nome da coluna. Por exemplo, **AddressLine** é a coluna de esquema obrigatória em **Melissa Data – Dados de Endereço** e **CompanyName** é a coluna de esquema obrigatória em **Digital Trowel Inc. – Dados de empresas norte-americanas e de profissionais para usuários do SQL**.  
   
- Neste tópico, criaremos quatro domínios: **Linha de endereço**, **City**, **estado**, e **Zip**, em um domínio composto, **verificação de endereço**, anexar o um domínio composto para o **Melissa Data – Address Check** serviço de dados de referência e, em seguida, mapear os domínios individuais no domínio composto para as colunas apropriadas no esquema de serviço de dados de referência.  
+ Neste tópico, criaremos quatro domínios: **Linha de endereço**, **Cidade**, **Estado** e **CEP**, em um domínio composto, **Verificação de Endereço**, anexaremos o domínio composto para o serviço de dados de referência de **Melissa Data – Dados de Endereço** e mapearemos os domínios individuais no domínio composto para as colunas no esquema de serviço de dados de referência.  
   
 ## <a name="before-you-begin"></a>Antes de começar  
   
@@ -48,7 +48,7 @@ ms.locfileid: "56024257"
   
 3.  Na tela **Nova base de dados de conhecimento** , digite um nome para a nova base de dados de conhecimento, clique na atividade **Gerenciamento de Domínio** e clique em **Criar**.  
   
-4.  Na tela **Gerenciamento de Domínio** , clique no ícone **Criar um domínio** para criar um domínio. Crie os quatro domínios a seguir: **Linha de endereço**, **City**, **estado**, e **Zip**.  
+4.  Na tela **Gerenciamento de Domínio** , clique no ícone **Criar um domínio** para criar um domínio. Crie os quatro arquivos a seguir: **Linha de endereço**, **Cidade**, **Estado** e **CEP**.  
   
 5.  Clique no ícone **Criar um domínio composto** para criar um domínio composto. Na caixa de diálogo **Criar um domínio composto** , digite **Verificação de Endereço** na caixa **Nome de Domínio Composto** e inclua todos os domínios criados na etapa 3 no domínio composto. Clique em **OK**.  
   
@@ -71,11 +71,11 @@ ms.locfileid: "56024257"
   
 9. Você retornará à guia **Dados de Referência** . Na área **Configurações de Provedor**, altere os valores das seguintes caixas, se necessário:  
   
-    -   **Limite de correção automática**: Correções do serviço de dados de referência com nível de confiança acima desses valores de limite serão feitas automaticamente. Insira um valor na notação decimal do valor percentual correspondente. Por exemplo, insira 0,9 para 90%.  
+    -   **Limite de Correção Automática**: As correções do serviço de dados de referência com nível de confiança acima desses valores de limite serão feitas automaticamente. Insira um valor na notação decimal do valor percentual correspondente. Por exemplo, insira 0,9 para 90%.  
   
-    -   **Candidatos sugeridos**: Número de candidatos sugeridos para exibir o dados do serviço de referência.  
+    -   **Candidatos Sugeridos**: O número de candidatos sugeridos a serem exibidos pelo serviço de dados de referência.  
   
-    -   **Confiança mínima**: Sugestões do serviço de dados de referência com nível de confiança inferior a esse valor serão ignorados. Insira um valor na notação decimal do valor percentual correspondente. Por exemplo, insira 0,6 para 60%.  
+    -   **Confiança Mínima**: As sugestões do serviço de dados de referência com nível de confiança inferior a esse valor serão ignoradas. Insira um valor na notação decimal do valor percentual correspondente. Por exemplo, insira 0,6 para 60%.  
   
 10. Clique em **Concluir** para publicar a base de dados de conhecimento. Uma mensagem de confirmação aparece depois que a base de dados de conhecimento é publicada com êxito.  
   

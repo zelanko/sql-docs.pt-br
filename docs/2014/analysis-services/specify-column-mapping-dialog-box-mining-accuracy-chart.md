@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e0d0cfd668ae945cd54df11fe6110ce59d088980
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746209"
 ---
 # <a name="specify-column-mapping-dialog-box-mining-accuracy-chart"></a>Caixa de diálogo Especificar Mapeamento de Coluna (gráfico de precisão de mineração)
   Use a guia **Especificar Mapeamento de Coluna** para selecionar tabelas de uma fonte de dados externa e mapear as colunas para um modelo de mineração de dados. É possível usar os dados externos para testar a precisão de um modelo de mineração e mostrar os resultados no gráfico de precisão.  
   
- **Para obter mais informações:**  [Teste e validação &#40;Mineração de dados&#41;](data-mining/testing-and-validation-data-mining.md)  
+ **Para obter mais informações, consulte:** [Teste e validação &#40;Mineração de dados&#41;](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>Opções  
  **Estrutura de mineração**  

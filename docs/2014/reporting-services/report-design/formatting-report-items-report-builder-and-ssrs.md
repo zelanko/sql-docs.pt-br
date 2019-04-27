@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2762e1057e7d6343310ff5ae98257e4e4e331913
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62656390"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>Formatando itens de relatório (Construtor de Relatórios e SSRS)
   A formatação dos itens do relatório torna-o mais atraente e legível. Você pode formatar as caixas de texto e itens específicos das caixas de texto, as imagens, as expressões e os dados no modo de design de relatório.  

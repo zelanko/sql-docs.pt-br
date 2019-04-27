@@ -18,11 +18,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 821fd05e94ac820dff50bd08c70c75e7e9cc653d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779590"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>Instalar um service pack em um sistema com tempo de inatividade mínimo para bancos de dados espelhados
   Este tópico descreve como minimizar o tempo de inatividade para bancos de dados espelhados ao instalar service packs e hotfixes. Esse processo envolve atualizar sequencialmente as instâncias do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] que estão participando do espelhamento de banco de dados. Essa forma de atualização, o que é conhecida como um *atualização sem interrupção*, reduz o tempo de inatividade para um único failover. Observe que para sessões em modo de alto desempenho em que o servidor espelho está geograficamente distante do servidor principal, uma atualização sem interrupção pode ser inadequada.  
@@ -34,7 +34,7 @@ ms.locfileid: "52520379"
 -   Se a sessão incluir uma testemunha, recomendamos a remoção da testemunha. Caso contrário, quando a instância do servidor espelho estiver sendo atualizada, a disponibilidade do banco de dados dependerá da testemunha que permanece conectada à instância do servidor principal. Depois que você remover uma testemunha, poderá atualizá-la a qualquer momento durante o processo de atualização sem interrupção sem arriscar o tempo de inatividade do banco de dados.  
   
     > [!NOTE]  
-    >  Para obter mais informações, consulte [Quorum: Como uma testemunha afeta a disponibilidade do banco de dados &#40;espelhamento de banco de dados&#41;](database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+    >  Para obter mais informações, confira [Quorum: Como uma testemunha afeta a disponibilidade do banco de dados &#40;Espelhamento de Banco de Dados&#41;](database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 -   Se uma sessão estiver sendo executada em modo de alto desempenho, altere o modo operacional para o modo de segurança alta.  
   

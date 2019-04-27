@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7e1e411b8a4bb6b8b6d70bbacd783933958c70e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747820"
 ---
 # <a name="script-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor de Scripts (guia Cálculos, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel **Editor de Scripts** na guia **Cálculos** do Designer de Cubo para modificar a expressão de um comando de script (na exibição de formulário) ou para modificar todo o script do cubo (na exibição de script).  
@@ -30,7 +30,7 @@ ms.locfileid: "48197778"
 |**Expression**|Digite as expressões e instruções MDX para o comando de script selecionado no painel **Metadados** (na exibição de formulário) ou todo o script de cubo (na exibição de script).<br /><br /> Arraste elementos selecionados do painel **Ferramentas de Cálculo** para esta opção para incluir a sintaxe MDX para o elemento selecionado.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Expressões multidimensionais &#40;MDX&#41; referência](/sql/mdx/multidimensional-expressions-mdx-reference)   
+ [Referência de expressões multidimensionais &#40;MDX&#41;](/sql/mdx/multidimensional-expressions-mdx-reference)   
  [Designer de cubo &#40;Analysis Services - dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Barra de ferramentas &#40;guia cálculos, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Organizador de script &#40;guia cálculos, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md)   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 056e29133faf174cadc790f71d999417e1eb4d84
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748808"
 ---
 # <a name="process-progress-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Progresso do Processo (Analysis Services - Dados Multidimensionais)
   Use a caixa de diálogo **Progresso do Processo** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] e no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para monitorar o processamento no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. A caixa de diálogo **Progresso do Processo** é exibida quando o processamento começa em um objeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  

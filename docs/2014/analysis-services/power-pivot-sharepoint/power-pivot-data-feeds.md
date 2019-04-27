@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7a3d1c457d44edac0fbc4c09060eb6c33a0353f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749244"
 ---
 # <a name="powerpivot-data-feeds"></a>Feeds de dados PowerPivot
-  Um feed de dados fornece um fluxo de dados sob demanda de uma fonte de dados online para um aplicativo cliente. No [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você pode usar feeds de dados para adicionar dados de um aplicativo a uma fonte de dados do PowerPivot em uma pasta de trabalho do Excel ou o serviço Web de reconhecimento do Atom.  
+  Um feed de dados fornece um fluxo de dados sob demanda de uma fonte de dados online para um aplicativo cliente. No [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você pode usar feeds de dados para adicionar dados de um serviço Web ou aplicativo com reconhecimento do Atom a uma fonte de dados PowerPivot em uma pasta de trabalho do Excel.  
   
  Esta seção fornece informações para ajudar a fazer o melhor uso de feeds de dados para obter dados corporativo ou de grupo de trabalho existentes em pastas de trabalho PowerPivot. Também fornece informações sobre como compartilhar feeds de dados com outros em sua organização e sobre como os feeds de dados são construídos e usados no caso de você precisar solucionar qualquer problema ocorrido.  
   

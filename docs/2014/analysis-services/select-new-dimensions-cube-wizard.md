@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac4ccf95fb193f029fadc8e7d937bae8b85ffaeb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747168"
 ---
 # <a name="select-new-dimensions-cube-wizard"></a>Selecionar Novas Dimensões (Assistente para Cubos)
   Use a página **Selecionar Novas Dimensões** para selecionar as novas dimensões que serão criadas.  

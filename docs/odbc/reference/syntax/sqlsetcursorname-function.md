@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2606f7ec05df6422135220605087b81ac7ec4f50
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62742242"
 ---
 # <a name="sqlsetcursorname-function"></a>Função SQLSetCursorName
 **Conformidade com**  
@@ -48,7 +48,7 @@ SQLRETURN SQLSetCursorName(
  *StatementHandle*  
  [Entrada] Identificador de instrução.  
   
- *cursorName*  
+ *CursorName*  
  [Entrada] Nome de cursor. Para o processamento eficiente, o nome de cursor não deve incluir espaços à esquerda ou à direita no nome do cursor e, se o nome do cursor inclui um identificador delimitado, o delimitador deve ser posicionado como o primeiro caractere no nome do cursor.  
   
  *NameLength*  

@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 994b0f94448b7fb7901734b2ae737e26be23900f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678624"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Ativar ou desativar o dispositivo de energia para o Analytics Platform System
 Este tópico descreve como a liga / desliga sua Systemappliance de plataforma de análise que está executando o Parallel Data Warehouse. Use este tópico quando um dispositivo do Analytics Platform System é movido, ou a potência em um dispositivo após uma falha catastrófica de energia.  

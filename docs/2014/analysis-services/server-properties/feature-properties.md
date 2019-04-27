@@ -21,18 +21,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7c9047bc6bae67b005d8ed93e4831557a0dac9b5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746898"
 ---
 # <a name="feature-properties"></a>Propriedades de recurso
   As propriedades do recurso pertencem aos recursos do produto, a maioria delas avançadas, incluindo propriedades que controlam vínculos entre instâncias do servidor.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte às propriedades de servidor listadas na tabela a seguir. Para obter mais informações sobre as propriedades de servidor adicionais e como defini-las, consulte [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
- **Aplica-se a:** Somente o modo de servidor multidimensional  
+ **Aplica-se a:** Somente modo de servidor multidimensional  
   
 ## <a name="properties"></a>Propriedades  
   

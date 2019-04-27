@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 42f35641d8a346b5f4574953e4c5786618407620
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62647612"
 ---
 # <a name="url-access-ssrs"></a>Acesso à URL (SSRS)
   O acesso à URL do servidor de relatório do SQL Server Reporting Services (SSRS) permite enviar comandos a um servidor de relatório por meio de uma solicitação de URL. Por exemplo, você pode personalizar a renderização de um relatório em um servidor de relatório em modo nativo ou em uma biblioteca do SharePoint. Você pode exibir o relatório usando um conjunto específico de valores de parâmetros de relatório ou exibir uma página específica de interesse do relatório. Você pode encapsular essas informações na URL usando parâmetros de acesso à URL predefinidos. Você pode personalizar ainda mais como o servidor de relatório processa o relatório inserindo parâmetros de renderização de formatos ou de aparência do visualizador de relatórios. Você pode colar essa URL diretamente em um email ou página da Web para permitir que outros acessem seu relatório da mesma maneira no navegador.  
@@ -59,14 +59,14 @@ reportpath
   
 ### <a name="syntax-description"></a>Descrição da sintaxe  
  *rswebserviceurl*  
- A URL do serviço Web do servidor de relatório. No modo nativo, é a URL do serviço Web da instância do servidor de relatório configurada no Gerenciador de Configurações do Reporting Services (consulte [Configurar as URLs do Servidor de Relatório &#40; 	Gerenciador de Configurações do SSRS&#41;](install-windows/configure-report-server-urls-ssrs-configuration-manager.md)). Por exemplo:  
+ A URL do serviço Web do servidor de relatório. No modo nativo, é a URL do serviço Web da instância do servidor de relatório configurada no Gerenciador de Configurações do Reporting Services (consulte [Configurar as URLs do Servidor de Relatório &#40; 	Gerenciador de Configurações do SSRS&#41;](install-windows/configure-report-server-urls-ssrs-configuration-manager.md)). Por exemplo:   
   
 ```  
 http://myrshost/reportserver  
 https://machine.adventure-works.com/reportserver_MYNAMEDINSTANCE  
 ```  
   
- No modo integrado do SharePoint, é a URL do proxy do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] em um site do SharePoint integrado ao [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Por exemplo:  
+ No modo integrado do SharePoint, é a URL do proxy do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] em um site do SharePoint integrado ao [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Por exemplo:   
   
 ```  
 http://myspsite/subsite/_vti_bin/reportserver  
@@ -78,7 +78,7 @@ http://myspsite/subsite/_vti_bin/reportserver
  *pathinfo*  
  O nome do caminho relativo do item no banco de dados do servidor de relatório no modo nativo ou a URL totalmente qualificada do item em um catálogo do SharePoint.  
   
- O caminho do item de catálogo. No modo nativo, é o caminho relativo do item no banco de dados do servidor de relatório, que começa com uma barra (`/`). Por exemplo:  
+ O caminho do item de catálogo. No modo nativo, é o caminho relativo do item no banco de dados do servidor de relatório, que começa com uma barra (`/`). Por exemplo:   
   
 ```  
 /AdventureWorks 2008R2/Employee_Sales_Summary_2008R2  
