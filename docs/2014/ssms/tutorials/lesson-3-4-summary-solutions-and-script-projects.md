@@ -1,5 +1,5 @@
 ---
-title: 'Resumo: soluções e projetos de script | Microsoft Docs'
+title: 'Resumo: Soluções e projetos de Script | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4438dc445a9e1fc72fdb48b0863b75f041e2253f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150796"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753023"
 ---
 # <a name="summary-solutions-and-script-projects"></a>Resumo: Soluções e Projetos de Script
   Com o aproveitamento dos amplos recursos de desenvolvedor do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio, o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oferece a funcionalidade que os desenvolvedores necessitam para o gerenciamento de código de nível empresarial. Você pode criar modelos personalizados para oferecer suporte às tarefas repetitivas, salvar e gerenciar projetos de script complexos em um ambiente centralizado e coordenado.  

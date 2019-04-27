@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8e7be9da1b7405aa522dc29057764e7351924b41
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745657"
 ---
-# <a name="attribute-properties---configure-attribute-types"></a>Propriedades de atributo - configurar tipos de atributo
+# <a name="attribute-properties---configure-attribute-types"></a>Propriedades do atributo – Configurar tipos de atributo
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], os tipos de atributo ajudam a classificar um atributo em termos de funcionalidade empresarial. Existem muitos tipos de atributo, sendo que a maioria é usada por aplicativos cliente para exibir ou oferecer suporte a um atributo. No entanto, alguns tipos de atributo também têm significado específico para o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Por exemplo, alguns tipos de atributo identificam atributos que representam períodos de tempo em vários calendários de dimensões de tempo.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "34025563"
   
 ###  <a name="general_attribute_types"></a> General Attribute Types  
   
-|Valor do tipo de atributo|Description|  
+|Valor do tipo de atributo|Descrição|  
 |--------------------------|-----------------|  
 |**Endereço**|Representa um endereço.|  
 |**AddressBuilding**|Representa o identificador da construção do endereço.|  
@@ -86,7 +86,7 @@ ms.locfileid: "34025563"
 |**GeoCentroidY**|Representa um centroide do eixo Y para uma região geográfica.|  
 |**GeoCentroidZ**|Representa um centroide do eixo Z para uma região geográfica.|  
 |**ID**|Representa um identificador (ID) ou chave.|  
-|**Imagem**|Representa uma imagem em um formato gráfico indefinido.|  
+|**Image**|Representa uma imagem em um formato gráfico indefinido.|  
 |**ImageBmp**|Representa uma imagem em um formato gráfico de bitmap.|  
 |**ImageGif**|Representa uma imagem em formato gráfico GIF (Graphics Interchange Format).|  
 |**ImageJpg**|Representa uma imagem em formato gráfico JPEG (Joint Photographic Experts Group).|  
@@ -147,7 +147,7 @@ ms.locfileid: "34025563"
   
 ###  <a name="account_dimension_attribute_types"></a> Account Dimension Attribute Types  
   
-|Valor do tipo de atributo|Description|  
+|Valor do tipo de atributo|Descrição|  
 |--------------------------|-----------------|  
 |**Conta**|Representa o pai de uma conta. Normalmente, esse tipo de atributo é aplicado ao atributo pai de uma dimensão de contas.|  
 |**AccountName**|Representa o nome de uma conta. Normalmente, esse tipo de atributo é aplicado aos atributos de chave de uma dimensão de contas.|  
@@ -156,7 +156,7 @@ ms.locfileid: "34025563"
   
 ###  <a name="currency_dimension_attribute_types"></a> Tipo de atributo de dimensão de moedas  
   
-|Valor do tipo de atributo|Description|  
+|Valor do tipo de atributo|Descrição|  
 |--------------------------|-----------------|  
 |**CurrencyDestination**|Representa a moeda de destino de um câmbio monetário. Normalmente, esse tipo de atributo é aplicado ao atributo de chave de uma dimensão de relatório, para uso em conversão de moeda. Para obter mais informações sobre como a conversões de moeda, consulte [Conversões de moeda &#40;Analysis Services&#41;](../../analysis-services/currency-conversions-analysis-services.md).|  
 |**CurrencyIsoCode**|Representa o código da moeda da Organização de Padronização Internacional (ISO). Para obter mais informações sobre como a conversões de moeda, consulte [Conversões de moeda &#40;Analysis Services&#41;](../../analysis-services/currency-conversions-analysis-services.md).|  
@@ -165,7 +165,7 @@ ms.locfileid: "34025563"
   
 ###  <a name="slowly_changing_dimension_attribute_types"></a> Tipos de atributos de dimensão de alteração lenta  
   
-|Valor do tipo de atributo|Description|  
+|Valor do tipo de atributo|Descrição|  
 |--------------------------|-----------------|  
 |**ScdEndDate**|Representa a data de término efetiva para um membro de uma dimensão de alteração lenta.|  
 |**ScdOriginalID**|Representa o identificador original de um membro em uma dimensão de alteração lenta.|  
@@ -174,7 +174,7 @@ ms.locfileid: "34025563"
   
 ###  <a name="time_dimension_attribute_types"></a> Tipos de atributo de dimensão de tempo  
   
-|Valor do tipo de atributo|Description|  
+|Valor do tipo de atributo|Descrição|  
 |--------------------------|-----------------|  
 |**Data**|Representa uma data. Normalmente, esse tipo de atributo é aplicado ao atributo de chave de uma dimensão de tempo ou dimensão de tempo de servidor.|  
 |**DayOfHalfYear**|Representa o ordinal de dia de um semestre.|  
@@ -299,7 +299,7 @@ ms.locfileid: "34025563"
 |**Years**|Representa anos.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Atributos e hierarquias de atributo](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
+ [Atributos e hierarquias de atributos](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
  [Referência de propriedades de atributo de dimensão](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

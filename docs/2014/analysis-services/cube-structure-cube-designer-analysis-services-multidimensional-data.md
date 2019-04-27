@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8ef8764f2fa5e0cf135c6e3b4156964e6f904f8c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679681"
 ---
 # <a name="cube-structure-cube-designer-analysis-services---multidimensional-data"></a>Estrutura do Cubo (Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use a guia **Estrutura do Cubo** no **Designer de Cubo** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para criar e modificar medidas e grupos de medidas, adicionar dimensões de cubos e exibir os objetos incluídos no cubo a partir da exibição da fonte de dados associada.  
@@ -39,7 +39,7 @@ ms.locfileid: "48160846"
  [Cubos em modelos multidimensionais](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Configurar propriedades de medida](multidimensional-models/configure-measure-properties.md)   
  [Dimensões &#40;Analysis Services - dados multidimensionais&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
- [Exibições da fonte de dados em modelos multidimensionais](multidimensional-models/data-source-views-in-multidimensional-models.md)   
+ [Exibições de fontes de dados em modelos multidimensionais](multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [Designer de cubo &#40;Analysis Services - dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)  
   
   

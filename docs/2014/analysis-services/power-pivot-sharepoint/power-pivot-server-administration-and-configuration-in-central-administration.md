@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5ec3264095ebdb34730f8112389b50aa6839836f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749023"
 ---
 # <a name="powerpivot-server-administration-and-configuration-in-central-administration"></a>Administração e configuração de servidor do PowerPivot na Administração Central
   A administração de servidor e a configuração do PowerPivot são realizadas por administradores de aplicativo de serviço do SharePoint, usando a Administração Central do SharePoint.  

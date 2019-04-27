@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 462dd89e60ef2e997ad35ec07fad4a5b767f5944
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749013"
 ---
 # <a name="view-data-refresh-history-powerpivot-for-sharepoint"></a>Exibir histórico de atualização de dados (PowerPivot para SharePoint)
   O histórico de atualização de dados é um registro de todas as atividades de atualização de dados PowerPivot em uma pasta de trabalho do Excel. As operações da atualização de dados são executadas em uma instância de servidor do Analysis Services em um farm do SharePoint em uma agenda fornecida por você. Por padrão, o histórico de atualização de dados é mantido durante um ano. No entanto, um administrador de farm pode especificar uma política de retenção diferente para o histórico de uso e de eventos que determine por quanto tempo os registros de atualização de dados são mantidos.  
@@ -61,7 +61,7 @@ ms.locfileid: "48118966"
 ##  <a name="pageelements"></a> Usar informações do histórico  
  A página de histórico da atualização de dados fornece informações detalhadas sobre cada operação de atualização. Você pode usar as informações dessa página para confirmar se a atualização ocorreu ou por que falhou.  
   
-|Item|Description|  
+|Item|Descrição|  
 |----------|-----------------|  
 |Nome|Especifica o nome do arquivo da pasta de trabalho do Excel que contém dados PowerPivot.|  
 |Status atual|Os valores incluem **Agendado**, **Atualizando**, **Êxito**ou **Falha**.<br /><br /> **Agendado** é exibido quando a agenda é criada pela primeira vez. Depois que a atualização de dados ocorre pela primeira vez, essa mensagem de status não é mais exibida.<br /><br /> **Atualizando** indica que a atualização de dados está em andamento. Uma solicitação está na fila de processamento ou está sendo executada ativamente no servidor.<br /><br /> **Êxito** indica que a última operação de atualização de dados foi concluída e a pasta de trabalho atualizada está verificada na biblioteca do SharePoint.<br /><br /> **Falha** indica que a última operação de atualização de dados não obteve êxito. Os dados atualizados não foram salvos. A pasta de trabalho contém os mesmos dados que tinha antes do início da atualização de dados.|  

@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 68d5d29a4aed7380bd7a53c65d140aac24912392
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745537"
 ---
 # <a name="using-drillthrough-on-structure-data-basic-data-mining-tutorial"></a>Usando o detalhamento em dados de estrutura (Tutorial de mineração de dados básico)
   Como parte da sua campanha de propaganda, [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] está enviando uma mala direta aos clientes potenciais em 34 a 40 anos demográficas. O departamento de marketing decidiu que também gostaria de enviar a mala direta aos clientes que compraram bicicletas da [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] há mais de cinco anos. Nesta lição, você identificará clientes com bicicletas mais antigas e irá recuperar suas informações de contato. Essas informações não estão incluídas no modelo, mas na estrutura. Para recuperar as informações de contato, primeiro você terá de garantir que o detalhamento esteja habilitado para a estrutura para depois usá-lo para revelar os nomes e os endereços dos clientes-alvo.  

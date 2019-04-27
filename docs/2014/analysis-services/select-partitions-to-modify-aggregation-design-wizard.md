@@ -14,17 +14,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f23574c99ba05cd5e53d18cde799b2e415daaf0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747119"
 ---
 # <a name="select-partitions-to-modify-aggregation-design-wizard"></a>Selecionar partições a modificar (Assistente de Design de Agregação)
   Use a página **Selecionar Partições a Serem Modificadas** para selecionar as partições para as quais você deseja criar agregações.  
   
 ## <a name="options"></a>Opções  
- **(Selecionar)**  
+ **(Select)**  
  Marque a caixa de seleção no título de coluna para criar agregações para todas as partições no grupo de medidas.  
   
  Marque a caixa de seleção para uma partição criar agregações apenas para a partição selecionada.  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c5e697003246ec00121c203a6b77fe68fed378fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748678"
 ---
 # <a name="prediction-query-builder-data-mining"></a>Construtor de consulta de previsão (Mineração de Dados)
   Utilize a exibição **Previsão do Modelo de Mineração** para criar previsões baseadas em modelos de mineração que uma estrutura de mineração contém.  
@@ -25,7 +25,7 @@ ms.locfileid: "48095046"
   
 -   [Tutorial de mineração de dados básico](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
--   [Criando e consultando modelos de mineração de dados com DMX: tutoriais &#40;Analysis Services - mineração de dados&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+-   [Criando e consultando modelos de mineração de dados com DMX: Tutoriais do &#40;Analysis Services - mineração de dados&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
 -   [Consultas de mineração de dados](data-mining/data-mining-queries.md)  
   

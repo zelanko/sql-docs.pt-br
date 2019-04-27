@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 330e302d1832f8ec5c3e76f961e4e68cf16726af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748868"
 ---
 # <a name="prediction-calculator-table-analysis-tools-for-excel"></a>Cálculo de Previsão (Ferramentas de Análise de Tabela para Excel)
   ![Ferramenta cálculo de previsão](media/tat-predcal.gif "ferramenta cálculo de previsão")  

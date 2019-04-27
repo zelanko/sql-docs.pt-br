@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 3e4142a3492b37df8e161b965639bf8900570c23
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62741241"
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>Localizar o Assistente de bancos de dados (selecione os arquivos) (AccessToSQL)
 A página Selecionar arquivos do assistente localizar bancos de dados de lista os arquivos que foram encontrados durante a pesquisa. Para selecionar um arquivo para adicionar a SSMA e selecione a linha que contém o nome do arquivo. Quando você terminar de selecionar os arquivos, clique em **próxima** para exibir a página de seleção verificar.  

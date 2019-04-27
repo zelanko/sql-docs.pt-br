@@ -14,23 +14,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: caa9e0f98df874ec7da9525fd361b67bf5331b41
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748168"
 ---
 # <a name="review-the-queries-that-will-be-optimized-usage-based-optimization-wizard"></a>Revisar as consultas que serão otimizadas (Assistente de Otimização com Base no Uso)
   Use a página **Examinar as Consultas que Serão Otimizadas** para exibir e selecionar as consultas, recuperadas do log de consultas, que serão usadas pelo Assistente de Otimização com Base no Uso para criar agregações para as partições selecionadas.  
   
 ## <a name="options"></a>Opções  
- **(Selecionar)**  
+ **(Select)**  
  Marque a caixa de seleção da consulta para a qual você deseja criar agregações.  
   
  **Solicitação do cliente**  
  Exibe os membros aos quais a consulta exibida faz referência.  
   
- **Ocorrências**  
+ **Occurrences**  
  Exibe o número de ocorrências da consulta exibida no log de consultas.  
   
  **Duração média**  

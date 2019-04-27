@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3fcd41e9fafe72e0d7d87378f7cc8746a51ad28f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740726"
 ---
 # <a name="use-aggregate-functions"></a>Usar funções de agregação
   Quando uma dimensão é usada para fatiar uma medida, a medida é resumida juntamente com hierarquias contidas nessa dimensão. O comportamento da soma depende da função de agregação especificada para a medida. Para mais medidas contendo dados numéricos, a função de agregação é `Sum`. O valor da medida totalizará valores diferentes, dependendo de qual nível da hierarquia está ativo.  
@@ -51,7 +51,7 @@ ms.locfileid: "48199508"
 |`Max`|Semiaditiva|Recupera o valor mais alto de todos os membros filho.|  
 |`DistinctCount`|Não aditiva|Recupera a contagem de todos os membros filho exclusivos. Para obter mais detalhes, consulte [Sobre medidas de contagem distintas](use-aggregate-functions.md#bkmk_distinct) na próxima seção.|  
 |`None`|Não aditiva|Nenhuma agregação é executada e todos os valores de membros folha e não folha de uma dimensão são fornecidos diretamente da tabela de fatos para o grupo de medidas que contém a medida. Se não for possível ler um valor da tabela de fatos para um membro, o valor desse membro será definido como nulo.|  
-|`ByAccount`|Semiaditiva|Calcula a agregação de acordo com a função de agregação atribuída ao tipo de conta de um membro em uma dimensão de conta. Se nenhuma dimensão do tipo de conta existe no grupo de medidas, tratado como o `None` função de agregação.<br /><br /> Para obter mais informações sobre dimensões de conta, consulte [Criar uma Conta de Finanças de dimensão de tipo pai-filho](database-dimensions-finance-account-of-parent-child-type.md).|  
+|`ByAccount`|Semiaditiva|Calcula a agregação de acordo com a função de agregação atribuída ao tipo de conta de um membro em uma dimensão de conta. Se não existir uma dimensão de tipo de conta no grupo de medidas, é tratada como a função de agregação `None`.<br /><br /> Para obter mais informações sobre dimensões de conta, consulte [Criar uma Conta de Finanças de dimensão de tipo pai-filho](database-dimensions-finance-account-of-parent-child-type.md).|  
 |`AverageOfChildren`|Semiaditiva|Calcula a média de valores de todos os membros filho não vazios.|  
 |`FirstChild`|Semiaditiva|Recupera o valor do primeiro membro filho.|  
 |`LastChild`|Semiaditiva|Recupera o valor do último membro filho.|  
@@ -68,8 +68,8 @@ ms.locfileid: "48199508"
  Uma medida de contagem distinta que conta membros baseia-se m uma coluna de chave estrangeira da tabela de fatos. (Ou seja, a propriedade **Source Column** da medida identifica essa coluna.) Essa coluna une a coluna da tabela de dimensões que identifica os membros contados pela medida de contagem distinta.  
   
 ## <a name="see-also"></a>Consulte também  
- [Medidas e grupos de medidas](measures-and-measure-groups.md)   
- [Referência da função MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
- [Definir um comportamento semiaditivo](define-semiadditive-behavior.md)  
+ [Medidas e Grupos de Medidas](measures-and-measure-groups.md)   
+ [Referência da Função MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
+ [Definir comportamento semiaditivo](define-semiadditive-behavior.md)  
   
   

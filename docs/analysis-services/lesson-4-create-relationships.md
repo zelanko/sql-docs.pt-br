@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2cfa28b4fa5575fbdda06ed64f8f52994b596186
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753078"
 ---
 # <a name="lesson-4-create-relationships"></a>Lição 4: Criar Relações
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -35,7 +35,7 @@ Quando você importar dados usando o Assistente de importação de tabela, você
 
     Agora, o designer de modelos aparece em Exibição de Diagrama, um formato gráfico que exibe todas as tabelas que você importou com linhas entre elas. As linhas entre tabelas indicam as relações que foram criadas automaticamente quando você importar os dados.
     
-    ![como-tabela-lesson4-diagrama](../analysis-services/media/as-tabular-lesson4-diagram.png)
+    ![as-tabular-lesson4-diagram](../analysis-services/media/as-tabular-lesson4-diagram.png)
   
     Use os controles de minimapa no canto inferior direito do designer de modelos para ajustar a exibição para que ela inclua o máximo de tabelas possível. Você pode também clique e arrastar tabelas para locais diferentes, reunindo o mais próximo de tabelas ou colocá-las em uma ordem específica. A movimentação de tabelas não afeta as relações já existentes entre elas. Para exibir todas as colunas em uma tabela específica, clique e arraste uma borda de tabela para expandir ou diminuí-lo.  
   
@@ -61,11 +61,11 @@ Quando você importar dados usando o Assistente de importação de tabela, você
 ### <a name="take-a-closer-look"></a>Uma visão mais detalhada
 Na exibição de diagrama, você observará uma seta, um asterisco e um número de linhas que mostram a relação entre tabelas.
 
-![como tabular-lesson4-linha](../analysis-services/media/as-tabular-lesson4-line.png)
+![as-tabular-lesson4-line](../analysis-services/media/as-tabular-lesson4-line.png)
 
 A seta mostra a direção do filtro, que o asterisco mostra essa tabela é o lado muitos na cardinalidade da relação, e o 1 mostra que essa tabela é o um lado da relação. Se você precisar editar uma relação; Por exemplo, alterar a direção da relação do filtro ou cardinalidade, clique duas vezes na linha da relação na exibição de diagrama para abrir a caixa de diálogo Editar relação.
 
-![como tabular-lesson4-edição](../analysis-services/media/as-tabular-lesson4-edit.png)
+![as-tabular-lesson4-edit](../analysis-services/media/as-tabular-lesson4-edit.png)
 
 Provavelmente, você nunca precisará editar uma relação. Esses recursos são destinados a modelagem de dados avançada e estão fora do escopo deste tutorial. Para obter mais informações, consulte [bidirecional entre os filtros para modelos de tabela no SQL Server 2016 Analysis Services](../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md).
 
@@ -77,7 +77,7 @@ Em alguns casos, talvez seja necessário criar relações adicionais entre tabel
 
     Uma linha sólida aparece, indicando que você criou uma relação ativa entre a **OrderDate** coluna o **vendas pela Internet** tabela e o **data** coluna em que o **Data** tabela. 
   
-      ![como tabular-lesson4-novo](../analysis-services/media/as-tabular-lesson4-new.png) 
+      ![as-tabular-lesson4-new](../analysis-services/media/as-tabular-lesson4-new.png) 
   
     > [!NOTE]  
     > Ao criar relações, a direção de cardinalidade e de filtragem entre a tabela primária e a tabela de pesquisa relacionada é selecionada automaticamente.  
@@ -88,7 +88,7 @@ Em alguns casos, talvez seja necessário criar relações adicionais entre tabel
   
 3.  Por fim, crie mais uma relação; no **FactInternetSales** de tabela, clique e segure na **ShipDate** coluna, em seguida, arraste o cursor para o **data** coluna no **DimDate**da tabela e, em seguida, solte.  
     
-     ![como-tabela-lesson4-newinactive](../analysis-services/media/as-tabular-lesson4-newinactive.png)
+     ![as-tabular-lesson4-newinactive](../analysis-services/media/as-tabular-lesson4-newinactive.png)
   
 ## <a name="whats-next"></a>O que vem a seguir?
 Vá para a próxima lição: [Lição 5: Criar colunas calculadas](../analysis-services/lesson-5-create-calculated-columns.md).

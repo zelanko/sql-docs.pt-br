@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7b86baa47a755b52e99025a4a2fecc0922c80a08
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740527"
 ---
 # <a name="source-property-example-vb"></a>Exemplo da propriedade Source (VB)
 Este exemplo demonstra a [fonte](../../../ado/reference/ado-api/source-property-ado-recordset.md) propriedade abrindo três [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objetos com base em diferentes fontes de dados.  

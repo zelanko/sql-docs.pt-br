@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74bb2b88a152d812a29dc399c887d78ed264532f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747718"
 ---
 # <a name="select-case-level-columns-data-mining-wizard"></a>Selecionar colunas de nível de caso (Assistente de Mineração de Dados)
   Use a página **Selecionar Colunas de Nível de Caso** para selecionar os atributos e medidas da dimensão do cubo de origem adjacente que serão as colunas de nível de caso da estrutura de mineração.  
@@ -26,7 +26,7 @@ ms.locfileid: "48129756"
 > [!NOTE]  
 >  Essa página será exibida apenas se você tiver selecionado **De cubo existente** na página **Selecionar o Método de Definição** do assistente.  
   
- **Para obter mais informações:** [Assistente de Mineração de Dados &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Criar uma estrutura de mineração relacional](data-mining/create-a-relational-mining-structure.md)  
+ **Para obter mais informações:** [Assistente de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [criar uma estrutura de mineração relacional](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Opções  
  **Atributos e medidas relacionados**  

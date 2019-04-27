@@ -18,11 +18,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 49e14c0a68ad901e8d22388c7edd993744c9afc7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62737532"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>Especificando operadores relacionais em consultas XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "56030637"
 </ROOT>  
 ```  
   
-### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>b. Especifique o operador relacional na consulta XPath e use a função Booliano para comparar o resultado  
+### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>B. Especifique o operador relacional na consulta XPath e use a função Booliano para comparar o resultado  
  Esta consulta retorna todos os  **\<ordem >** filhos do elemento do nó de contexto que tenham um **SalesPersonID** valor inferior a 270 do atributo:  
   
 ```  
@@ -95,7 +95,7 @@ ms.locfileid: "56030637"
 ```  
   
 > [!NOTE]  
->  Quando essa consulta é especificada em um modelo, o caractere < deve ter a entidade codificada porque o caractere < tem um significado especial em um documento XML. Em um modelo, use `<` para especificar o caractere <.  
+>  Quando essa consulta é especificada em um modelo, o < caractere deve ser a entidade codificada porque o < caractere tem um significado especial em um documento XML. Em um modelo, use `<` para especificar o < caractere.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para testar a consulta XPath com relação ao esquema de mapeamento  
   

@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d86c15a57b296572d42ef4ac6122e69d271e7e2f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643717"
 ---
 # <a name="analysis-services-wizards-multidimensional-data"></a>Assistentes do Analysis Services (dados multidimensionais)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornece assistentes para uso em [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. A tabela a seguir descreve os assistentes disponíveis.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Ajuda F1 do Assistente de Design de Agregação](aggregation-design-wizard-f1-help.md)|Use o Assistente de Design de Agregação para definir agregações para um design de agregação usado para criar instâncias de agregação para partições em um grupo de medidas.|  
 |[Ajuda F1 do Assistente de Business Intelligence](business-intelligence-wizard-f1-help.md)|Use o Assistente de Business Intelligence para adicionar recursos avançados de business intelligence, como inteligência de conta e conversão de moedas, a um cubo ou dimensão.|  
@@ -38,7 +38,7 @@ ms.locfileid: "48189746"
 |[Ajuda F1 do Assistente para Objetos Vinculados](linked-object-wizard-f1-help.md)|Use o Assistente para Objetos Vinculados para definir uma dimensão ou grupo de medidas vinculado e, opcionalmente, importar objetos relacionados.|  
 |[Ajuda F1 do Assistente de partição &#40;Analysis Services - dados multidimensionais&#41;](partition-wizard-f1-help-analysis-services-multidimensional-data.md)|Use o Assistente para Partições para definir uma partição ou partição remota.|  
 |[Ajuda F1 do Assistente de geração de esquema &#40;Analysis Services - dados multidimensionais&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)|Use o Assistente de Geração de Esquema para definir uma exibição da fonte de dados e, opcionalmente, criar o script do esquema relacional da exibição da fonte de dados para uma fonte de dados, a partir de um objeto existente do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
-|[Ajuda F1 do Assistente de Otimização com Base no Uso](usage-based-optimization-wizard-f1-help.md)|Use o Assistente de Otimização com Base no Uso para definir agregações para um design de agregação baseado em consultas armazenadas no log de consultas para um banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
+|[Ajuda F1 do Assistente de Otimização com Base no Uso](usage-based-optimization-wizard-f1-help.md)|Use o Assistente de Otimização com Base no Uso para definir agregações para um design de agregação baseado em consultas armazenadas no log de consultas para um banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
   
 ## <a name="see-also"></a>Consulte também  
  [Designers e caixas de diálogo do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   

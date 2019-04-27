@@ -1,5 +1,5 @@
 ---
-title: 'Lição 3: trabalhando com modelos, soluções e projetos de script | Microsoft Docs'
+title: 'Lição 3: Trabalhando com modelos, soluções e projetos de Script | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a8a1825f00676618b9bcc98c774e7facd6f0e078
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753013"
 ---
-# <a name="lesson-3-working-with-templates-solutions-and-script-projects"></a>Lição 3: Trabalhando com modelos, soluções e projetos de script
+# <a name="lesson-3-working-with-templates-solutions-and-script-projects"></a>Lição 3: Como trabalhar com modelos, soluções e projetos de script
   Com o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], você pode criar modelos personalizados, projetos de script e soluções.  
   
  Eis os tópicos desta lição:  

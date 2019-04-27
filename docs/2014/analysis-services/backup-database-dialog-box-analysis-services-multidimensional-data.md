@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 741f3b761e4c6645cee7c43c3e8f593dbad13219
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650453"
 ---
 # <a name="backup-database-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Banco de Dados de Backup (Analysis Services - Dados multidimensionais)
   Use a caixa de diálogo **Banco de Dados de Backup** no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para fazer backup de um banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] em um arquivo de backup usando o formato Analysis Services Backup File (.abf) do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -88,7 +88,7 @@ ms.locfileid: "48067316"
  **Local de backup da partição remota**  
  Exibe o local das partições remotas associadas com o banco de dados selecionado, como também o arquivo de backup remoto usado para fazer backup de dados e metadados para as partições remotas. As seguintes colunas estão disponíveis:  
   
-|coluna|Description|  
+|coluna|Descrição|  
 |------------|-----------------|  
 |**Servidor**|Exibe a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que administra as partições remotas.|  
 |**Backup de banco de dados**|Exibe o banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que contém as partições remotas.|  

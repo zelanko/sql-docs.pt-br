@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 95b7d538c2ace45b42c947b56ca5a5bd5f981ec5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62744270"
 ---
 # <a name="data-truncation-detection-enabled-using-extendedansisql"></a>Detecção de truncamento de dados habilitada usando ExtendedAnsiSQL
 Quando o sinalizador ExtendedAnsiSQL é ativado e o aplicativo é inserindo dados em um char ou uma coluna binária e os dados são truncados, o truncamento será detectado. Quando o sinalizador ExtendedAnsiSQL for desativado, os dados são truncados sem aviso, como era nas versões anteriores dos Drivers de banco de dados de área de trabalho do ODBC.

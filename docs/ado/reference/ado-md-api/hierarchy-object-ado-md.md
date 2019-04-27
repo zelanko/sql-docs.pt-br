@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d4f1ccb441da92c19b15a7e84b0fc0e451844d0a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740276"
 ---
 # <a name="hierarchy-object-ado-md"></a>Objeto Hierarchy (ADO MD)
 Representa uma forma em que os membros de um [dimensão](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) podem ser agregados ou "acumulados". Uma dimensão pode ser agregada a uma ou mais hierarquias.  
@@ -39,13 +39,13 @@ Representa uma forma em que os membros de um [dimensão](../../../ado/reference/
   
  O **propriedades** coleção contém propriedades fornecidos pelo provedor. A tabela a seguir lista as propriedades que podem estar disponíveis. A lista de propriedades reais pode diferir dependendo após a implementação do provedor. Consulte a documentação do seu provedor para obter uma lista completa de propriedades disponíveis.  
   
-|Nome|Description|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |AllMember|O membro no nível mais alto na hierarquia do pacote cumulativo de atualizações.|  
 |CatalogName|O nome do catálogo ao qual pertence este cubo.|  
 |CubeName|O nome do cubo.|  
 |DefaultMember|O nome exclusivo do membro padrão para essa hierarquia.|  
-|Description|Uma descrição significativa da hierarquia.|  
+|Descrição|Uma descrição significativa da hierarquia.|  
 |DimensionType|O tipo de dimensão à qual pertence essa hierarquia.|  
 |DimensionUniqueName|O nome não ambíguo da dimensão.|  
 |HierarchyCaption|Um rótulo ou legenda associada à hierarquia.|  

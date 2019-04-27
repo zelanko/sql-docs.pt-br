@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a0cbf9d1e9a26c6a9c64cf93974ae9198a13cbf6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746269"
 ---
 # <a name="specify-naming-conventions-schema-generation-wizard-analysis-services---multidimensional-data"></a>Especificar Convenções de Nomenclatura (Assistente de Geração de Esquema) (Analysis Services - Dados Multidimensionais)
   Use a página **Especificar Convenções de Nomenclatura** para definir as convenções de nomenclatura que o Assistente de Geração de Esquema usará ao criar objetos de esquema.  
@@ -27,7 +27,7 @@ ms.locfileid: "48226246"
  **Opção**  
  Especifique as convenções de nomenclatura para uso do assistente. A tabela a seguir descreve as opções que podem ser especificadas.  
   
-|Opção|Description|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |**Separador**|Especifica o caractere que separa palavras em um nome de objeto. Na coluna **Valor** , selecione **Sublinhado**, **Espaço**ou **Nenhum**. O padrão é **Sublinhado**.|  
 |**Prefixo de coluna de chave primária**|Especifica a cadeia de caracteres a ser usada como prefixo do nome de cada coluna de chave primária. O padrão é **PK**.|  

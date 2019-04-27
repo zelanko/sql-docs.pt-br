@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 28774dc49ba3052ee01d197570f3de87f7363cf2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732122"
 ---
 # <a name="design-pane-mining-model-prediction-view"></a>Painel Design (Exibição da Previsão do Modelo de Mineração)
   O painel **Design** contém o Construtor de Consulta de Previsão, que você pode utilizar para criar previsões de mineração de dados. É possível projetar consultas de previsão que usam tabelas de dados de entrada de uma exibição da fonte de dados, gerar previsões em massa ou criar consultas de previsão singleton, que permitem fornecer valores individuais.  
@@ -30,7 +30,7 @@ ms.locfileid: "48189756"
 > [!NOTE]  
 >  Se você fizer alguma alteração manual na consulta, suas alterações serão perdidas ao voltar para a exibição Design. Se desejar salvar a consulta DMX, copie-a na área de transferência do Windows e cole-a em um arquivo de texto.  
   
- **Para obter mais informações:** [Consulta de mineração de dados](data-mining/data-mining-queries.md)  
+ **Para obter mais informações:** [Consultas de mineração de dados](data-mining/data-mining-queries.md)  
   
 ## <a name="options"></a>Opções  
  **Alterne para a exibição de resultado de consulta**  
@@ -69,7 +69,7 @@ ms.locfileid: "48189756"
  **Entrada de consulta singleton**  
  Habilitado quando você seleciona o botão **Consulta Singleton** . Contém as seguintes colunas:  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Coluna do modelo de mineração**|Lista as colunas de modelo de mineração contidas no modelo de mineração que for selecionado na tabela **Modelo de Mineração** .|  
 |**Value**|Selecione um valor da lista que contém cada estado possível da coluna de modelos de mineração selecionada.<br /><br /> Se a coluna for uma coluna de tabela aninhada, clicar na célula de valor abrirá a caixa de diálogo **Entrada de Tabela Aninhada** .|  

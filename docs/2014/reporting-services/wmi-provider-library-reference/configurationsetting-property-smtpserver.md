@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 43252bcc1600a0d257ac2448a716a1fbab596bfa
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59959142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646193"
 ---
 # <a name="smtpserver-property-wmi-msreportserverconfigurationsetting"></a>Propriedade SMTPServer (WMI MSReportServer_ConfigurationSetting)
   Obtém a propriedade do servidor SMTP do arquivo de configuração do servidor de relatório. Somente leitura.  

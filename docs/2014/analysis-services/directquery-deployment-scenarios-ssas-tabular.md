@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 679658c7ffdc00a90cb485bb9f1892ddffde7775
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731662"
 ---
 # <a name="directquery-deployment-scenarios-ssas-tabular"></a>Cenários de implantação do DirectQuery (SSAS tabular)
   Este tópico fornece um passo a passo do processo de design e implantação para modelos DirectQuery. Você pode configurar o DirectQuery para usar somente dados relacionais (somente DirectQuery) ou pode configurar o modelo para alternar entre usar somente dados armazenados em cache ou somente dados relacionais (modo híbrido). Este tópico explica o processo de implementação para ambos os modos e descreve possíveis diferenças em resultados da consulta dependendo do modo e da configuração de segurança.  
@@ -44,7 +44,7 @@ ms.locfileid: "48135176"
   
  Você pode ativar a qualquer momento o DirectQuery; porém, verifique se você não criou colunas ou fórmulas que são incompatíveis com o modo DirectQuery, é recomendável habilitar o modo DirectQuery desde o início.  
   
- Inicialmente, mesmo os modelos DirectQuery são sempre criados na memória. O modo de consulta padrão para o banco de dados do espaço de trabalho também é definido como **DirectQuery com Na Memória**. Este modo de funcionamento híbrido permite usar o cache de dados importados para desempenho aprimorado durante o processo de design de modelo, enquanto valida o modelo para requisitos de DirectQuery.  
+ Inicialmente, mesmo os modelos DirectQuery são sempre criados na memória. O modo de consulta padrão para o banco de dados do workspace também é definido como **DirectQuery com Na Memória**. Este modo de funcionamento híbrido permite usar o cache de dados importados para desempenho aprimorado durante o processo de design de modelo, enquanto valida o modelo para requisitos de DirectQuery.  
   
  **Etapa 3. Resolver erros de validação**  
   
@@ -78,7 +78,7 @@ ms.locfileid: "48135176"
   
 |||  
 |-|-|  
-|**Somente DirectQuery**|Para a propriedade  **Configurações de Representação** , especifique a conta que será usada na conexão à fonte de dados do SQL Server.<br /><br /> Se você usar o valor **ImpersonateCurrentUser**, a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que hospeda o modelo passará as credenciais do usuário atual do modelo no banco de dados do SQL Server.|  
+|**Somente DirectQuery**|Para a propriedade  **Configurações de Representação** , especifique a conta que será usada na conexão à fonte de dados do SQL Server.<br /><br /> Se você usar o valor, **ImpersonateCurrentUser**, a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que hospeda o modelo passará as credenciais do usuário atual do modelo para o banco de dados do SQL Server.|  
 |**Modo híbrido**|Para a propriedade **Configurações de Representação** , especifique a conta que será usada para acessar os dados na fonte de dados do SQL Server.<br /><br /> Esta configuração não afeta as credenciais que são usadas para processar o cache usado pelo modelo.|  
   
  **Etapa 7. Implantar o modelo**  
@@ -89,7 +89,7 @@ ms.locfileid: "48135176"
   
 |||  
 |-|-|  
-|**Somente DirectQuery**|**DirectQueryOnly**<br /><br /> Como você só especificou Consulta Direta, os metadados do modelo serão implantados no servidor, mas o modelo não será processado.<br /><br /> Observe que o cache que foi usado pelo banco de dados de espaço de trabalho não será excluído automaticamente. Se você desejar garantir que os usuários não possam consultar os dados armazenados em cache, talvez convenha desmarcar o cache de tempo de design. Para obter mais informações, consulte [limpar os Caches do Analysis Services](instances/clear-the-analysis-services-caches.md).|  
+|**Somente DirectQuery**|**DirectQueryOnly**<br /><br /> Como você só especificou Consulta Direta, os metadados do modelo serão implantados no servidor, mas o modelo não será processado.<br /><br /> Observe que o cache que foi usado pelo banco de dados de workspace não será excluído automaticamente. Se você desejar garantir que os usuários não possam consultar os dados armazenados em cache, talvez convenha desmarcar o cache de tempo de design. Para obter mais informações, consulte [limpar os Caches do Analysis Services](instances/clear-the-analysis-services-caches.md).|  
 |**Modo híbrido**|**DirectQuery com na memória**<br /><br /> **Na memória com DirectQuery**<br /><br /> Ambos os valores lhe permitem usar o cache ou a fonte de dados relacional, conforme necessário. A ordem define qual fonte de dados é usada por padrão ao responder consultas no modelo.<br /><br /> Em um modo híbrido, o cache deve ser processado ao mesmo tempo que os metadados modelo são implantados no servidor.<br /><br /> Você pode alterar esta configuração depois da implantação.|  
   
  **Etapa 8. Verifique se o modelo implantado**  
@@ -106,7 +106,7 @@ ms.locfileid: "48135176"
  **Somente DirectQuery**  
  Esta opção é preferida quando você deseja garantir uma única origem de dados, ou quando seus dados são muito grandes para caber na memória. Se você estiver trabalhando com uma fonte de dados relacional muito grande, durante o tempo de design, pode criar o modelo usando um subconjunto dos dados. Quando você implanta o modelo no modo somente DirectQuery, pode editar a definição de fonte de dados para incluir todos os dados necessários.  
   
- Esta opção também será preferida se você desejar usar a segurança fornecida pela fonte de dados relacional para controlar acesso aos dados de usuário. Com modelos de tabela em cache, você também pode usar [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] funções para controlar o acesso de dados, mas os dados armazenados em cache também devem ser protegidas. Você sempre deveria usar esta opção se seu contexto de segurança requerer aqueles dados nunca deveriam ser armazenados em cache.  
+ Esta opção também será preferida se você desejar usar a segurança fornecida pela fonte de dados relacional para controlar acesso aos dados de usuário. Com modelos de tabela armazenados em cache, você pode usar também funções [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a acesso de dados de controle, mas os dados armazenados no cache também deve ser protegido. Você sempre deveria usar esta opção se seu contexto de segurança requerer aqueles dados nunca deveriam ser armazenados em cache.  
   
  A tabela a seguir descreve os possíveis resultados de implantação para o modo somente DirectQuery:  
   

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f2562f3931f98c040bb3dc475e3863bb6396dbbf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62664342"
 ---
 # <a name="brokeractivation-event-class"></a>classe de evento Broker:Activation
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gera um evento **Broker:Activation** quando um monitor de fila inicia um procedimento armazenado de ativação, envia uma notificação QUEUE_ACTIVATION ou quando um procedimento armazenado de ativação iniciado por um monitor de fila é encerrado.  
@@ -32,7 +32,7 @@ ms.locfileid: "52752868"
 |**DatabaseID**|`int`|A ID do banco de dados especificada pela instrução de *banco de dados* USE ou a ID do banco de dados padrão se nenhuma instrução de *banco de dados*USE tiver sido emitida para determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados **ServerName** for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |**EventClass**|`int`|O tipo de classe de evento capturado. Sempre **163** para **Broker:Activation**.|27|Não|  
 |**EventSequence**|`int`|Número de sequência para esse evento.|51|Não|  
-|**EventSubClass**|`nvarchar`|A ação específica que este evento informa. Um dos valores seguintes:<br /><br /> **Iniciar**: <br />                O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] iniciou um procedimento armazenado de ativação.<br /><br /> **finalizada**: O procedimento armazenado de ativação foi encerrado normalmente.<br /><br /> **anulado**: O procedimento armazenado de ativação foi encerrado com um erro.|21|Não|  
+|**EventSubClass**|`nvarchar`|A ação específica que este evento informa. Um dos valores seguintes:<br /><br /> **start**: <br />                O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] iniciou um procedimento armazenado de ativação.<br /><br /> **finalizada**: A ativação de procedimento armazenado foi encerrado normalmente.<br /><br /> **anulado**: A ativação de procedimento armazenado foi encerrado com um erro.|21|Não|  
 |**HostName**|`nvarchar`|O nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o nome do host for fornecido pelo cliente. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |**IntegerData**|`int`|O número de tarefas ativas nesta fila.|25|Não|  
 |**IsSystem**|`int`|Indica se o evento ocorreu em um processo do sistema ou do usuário. 1 = sistema, 0 = usuário.|60|Não|  

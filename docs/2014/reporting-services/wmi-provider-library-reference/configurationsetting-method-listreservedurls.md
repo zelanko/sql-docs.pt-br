@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2cf4ea295f450db5536751fc4d9d58ec4bd0febc
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59961553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646920"
 ---
 # <a name="listreservedurls-method-wmi-msreportserverconfigurationsetting"></a>Método ListReservedURLs (WMI MSReportServer_ConfigurationSetting)
   Lista as URLs reservadas para todos os aplicativos no servidor de relatório.  

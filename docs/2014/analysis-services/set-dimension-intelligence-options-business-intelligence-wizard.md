@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 465b056b457279911cc9e728ff088325e658cf7a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746838"
 ---
 # <a name="set-dimension-intelligence-options-business-intelligence-wizard"></a>Definir Opções de Inteligência de Dimensão (Assistente de Business Intelligence)
   Use a página **Definir Opções de Inteligência de Dimensão** para selecionar a dimensão à qual o Assistente de Business Intelligence aplicará inteligência de dimensão. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dá suporte a vários tipos de negócios padrão para dimensões e atributos, como dimensões de produtos ou dimensões de conta. Aplicativos cliente podem usar esses tipos de negócios para fornecer suporte à análise adicional para soluções de business intelligence. Para obter mais informações sobre os tipos de dimensão e de atributo disponíveis, consulte [Tipos de dimensão](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md) e [Atributos e hierarquias de atributo](multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  
@@ -28,7 +28,7 @@ ms.locfileid: "48099486"
  Selecione a dimensão à qual o assistente aplicará inteligência de dimensão.  
   
 ## <a name="see-also"></a>Consulte também  
- [Ajuda de F1 do Assistente do Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [Ajuda F1 do Assistente de Business Intelligence](business-intelligence-wizard-f1-help.md)   
  [Designer de cubo &#40;Analysis Services - dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Designer de dimensão &#40;Analysis Services - dados multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

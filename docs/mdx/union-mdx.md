@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e51749416c0668ccc4760132bb860121ebae6e3d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653456"
 ---
 # <a name="union--mdx"></a>Union (MDX)
 
@@ -42,11 +42,11 @@ Alternate syntax 2
  *Expressão de conjunto 2*  
  Uma expressão MDX (Multidimensional Expressions) válida que retorna um conjunto.  
   
-## <a name="remarks"></a>Remarks  
- Esta função retorna a união de dois ou mais conjuntos especificados *.* Com a sintaxe padrão e com a sintaxe alternativa 1, as duplicatas são eliminadas por padrão. Com a sintaxe padrão, usando o **todos os** sinalizador mantém as duplicatas no conjunto Unido. As duplicatas são excluídas do final do conjunto. Com a sintaxe alternativa 2, as duplicatas são sempre retidas.  
+## <a name="remarks"></a>Comentários  
+ Essa função retorna a união de dois ou mais conjuntos especificados *.* Com a sintaxe padrão e com a sintaxe alternativa 1, as duplicatas são eliminadas por padrão. Com a sintaxe padrão, usando o **todos os** sinalizador mantém as duplicatas no conjunto Unido. As duplicatas são excluídas do final do conjunto. Com a sintaxe alternativa 2, as duplicatas são sempre retidas.  
   
 ## <a name="examples"></a>Exemplos  
- Os exemplos a seguir demonstram o comportamento do **união** usando cada sintaxe de função.  
+ Os exemplos a seguir demonstram o comportamento do **união** usa cada sintaxe de função.  
   
 ### <a name="standard-syntax-duplicates-eliminated"></a>Sintaxe padrão, duplicatas eliminadas  
   
@@ -96,7 +96,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [+ &#40;União&#41; &#40;MDX&#41;](../mdx/union-mdx-operator-reference.md)   
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [+ &#40;Union&#41; &#40;MDX&#41;](../mdx/union-mdx-operator-reference.md)   
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

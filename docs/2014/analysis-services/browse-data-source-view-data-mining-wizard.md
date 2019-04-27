@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f42b418a2cc40b3e805e0129dc3414c3db5bbdc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650346"
 ---
 # <a name="browse-data-source-view-data-mining-wizard"></a>Procurar na exibição da fonte de dados (Assistente de Mineração de Dados)
   Use a caixa de diálogo **Procurar na Exibição da Fonte de Dados** para abrir a exibição da fonte de dados selecionada na página **Selecionar Exibição da Fonte de Dados** do assistente.  
@@ -26,7 +26,7 @@ ms.locfileid: "48187269"
 > [!NOTE]  
 >  Essa página só será exibida se você tiver selecionado a opção **De banco de dados relacional ou data warehouse existente** na página **Selecionar o Método de Definição** do assistente.  
   
- **Para obter mais informações:** [Exibições de Fonte de Dados nos Modelos Multidimensionais](multidimensional-models/data-source-views-in-multidimensional-models.md), [Assistente de Data Mining &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md) e [Criar uma estrutura de mineração relacional](data-mining/create-a-relational-mining-structure.md)  
+ **Para obter mais informações:** [Fonte de dados de modos de exibição em modelos multidimensionais](multidimensional-models/data-source-views-in-multidimensional-models.md), [Assistente de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [criar uma estrutura de mineração relacional](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Opções  
  **Zoom**  

@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bcd76bb3ff07cc9091fe37440f38a6138d1ab4a4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59938572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646603"
 ---
 # <a name="setdatabasequerytimeout-method-wmi-msreportserverconfigurationsetting"></a>Método SetDatabaseQueryTimeout (WMI MSReportServer_ConfigurationSetting)
   Especifica o valor de tempo limite padrão para consultas no banco de dados do servidor de relatório.  

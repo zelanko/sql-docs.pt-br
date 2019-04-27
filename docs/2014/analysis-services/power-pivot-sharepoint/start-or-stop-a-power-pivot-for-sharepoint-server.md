@@ -12,14 +12,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b75d3a772bfdb9b0d938691cd5bc92e3292a1e79
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749000"
 ---
 # <a name="start-or-stop-a-powerpivot-for-sharepoint-server"></a>Iniciar ou parar um PowerPivot para SharePoint Server
-  Serviço de sistema PowerPivot e uma [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] instância funcionam em conjunto no mesmo servidor de aplicativos local para dar suporte à solicitação coordenada e ao processamento de dados em um farm do SharePoint.  
+  O Serviço de Sistema do PowerPivot e uma instância do [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] funcionam em conjunto no mesmo servidor de aplicativo local para dar suporte à solicitação coordenada e ao processamento de dados em um farm do SharePoint.  
   
  Este tópico contém as seguintes seções:  
   
@@ -54,7 +54,7 @@ ms.locfileid: "48096597"
 ##  <a name="effects"></a> Efeitos da interrupção de um servidor do PowerPivot  
  A tabela a seguir descreve os efeitos de parar o Serviço de Sistema do PowerPivot e o serviço Analysis Services em um servidor do SharePoint.  
   
-|Efeito em|Description|  
+|Efeito em|Descrição|  
 |---------------|-----------------|  
 |Consultas existentes|As consultas que estão em andamento em um servidor do Analysis Services pararão imediatamente. O usuário receberá o erro de dados não localizados ou conexão da fonte de dados não localizada.|  
 |Trabalhos de atualização de dados existentes em processamento no momento|Os trabalhos que estão em andamento em um servidor do Analysis Services atual pararão imediatamente. A atualização de dados falhará e um erro será registrado no histórico da atualização de dados.<br /><br /> É possível exibir o status de trabalhos atuais antes de parar o serviço, usando-se a página Verificar status do trabalho na Administração Central do SharePoint.<br /><br /> Embora seja impossível saber quais trabalhos estão em processamento no momento, não há como exibir a própria fila para verificar se outros trabalhos estão prestes a começar.|  

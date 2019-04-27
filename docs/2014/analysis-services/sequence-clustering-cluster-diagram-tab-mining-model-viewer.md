@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 95763dca9e5a617e3fdc1c4d1d69b45e6679a392
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174196"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746778"
 ---
 # <a name="sequence-clustering-cluster-diagram-tab-mining-model-viewer"></a>Guia Diagrama de Cluster do clustering de sequências (Visualizador do Modelo de Mineração)
   A guia **Diagrama de Cluster** no **Visualizador MSC** fornece uma exibição gráfica de todos os clusters que o modelo de cluster de sequências contém.  
   
  Use esta exibição de um modelo de clustering de sequência para analisar em cada cluster para os casos de apoio, se o detalhamento foi habilitado. Você também pode atribuir nomes descritivos aos clusters e alterar a variável de sombreamento para avaliar a distribuição de valores à primeira vista  
   
- **Para obter mais informações:** [Algoritmo MSC](data-mining/microsoft-sequence-clustering-algorithm.md), [Procurar um modelo usando o Visualizador de Cluster de Sequência da Microsoft](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **Para obter mais informações:** [Algoritmo msc](data-mining/microsoft-sequence-clustering-algorithm.md), [procurar um modelo usando o Visualizador de Cluster de sequência da Microsoft](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>Opções  
  **Atualizar conteúdo do Visualizador**  
@@ -77,7 +77,7 @@ ms.locfileid: "48174196"
  As linhas no diagrama indicam associações entre clusters de sequência. É possível selecionar o número de links exibido no visualizador, ajustando-se o controle deslizante à direita dos clusters. Diminuindo o controle deslizante, somente os links mais fortes serão exibidos.  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visualizadores do modelo de mineração &#40; Designer do modelo de mineração de dados &#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizadores do modelo de Mineração de dados](data-mining/data-mining-model-viewers.md)  
   

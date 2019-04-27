@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a66e94a9cdafc327737c71cd710847033011dcfa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746531"
 ---
 # <a name="specify-reporting-currencies-business-intelligence-wizard"></a>Especificar Moedas de Relatório (Assistente de Business Intelligence)
   Use a página **Definir Moedas de Relatório** para definir as moedas de relatório para a funcionalidade de conversão de moedas que abrange o tipo de conversão muitos-para-muitos ou um para muitos especificado na página **Selecionar Tipo de Conversão**. (Uma moeda de relatório é a moeda na qual os valores de medidas selecionadas na página **Selecionar Medidas** são convertidos.) Os membros selecionados na dimensão de moedas definem uma dimensão de moedas de relatório para a conversão de moedas gerada pelo Assistente de Business Intelligence.  
@@ -33,7 +33,7 @@ ms.locfileid: "48156516"
  Selecione um membro específico para incluir o membro na dimensão de moedas de relatório. Desmarque um membro específico para excluí-lo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Ajuda de F1 do Assistente do Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [Ajuda F1 do Assistente de Business Intelligence](business-intelligence-wizard-f1-help.md)   
  [Designer de cubo &#40;Analysis Services - dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Designer de dimensão &#40;Analysis Services - dados multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

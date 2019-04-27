@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f3e5023741793547a087f78e8591ce6063df445
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747308"
 ---
 # <a name="select-language-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Selecionar Idioma (Analysis Services - Dados Multidimensionais)
   Use a caixa de diálogo **Selecionar Idioma** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para selecionar um idioma para uma nova tradução. Você pode exibir a caixa de diálogo **Selecionar Idioma** das seguintes maneiras:  

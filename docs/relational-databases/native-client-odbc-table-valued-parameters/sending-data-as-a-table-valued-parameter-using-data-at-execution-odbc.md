@@ -15,11 +15,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e208fbfe1205c09b51796628610f2def8798fea1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740476"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>Enviando dados como um parâmetro com valor de tabela usando dados em execução (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -188,7 +188,7 @@ from @Items
   
 ## <a name="example"></a>Exemplo  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descrição  
  Este exemplo mostra que você pode usar o fluxo de linhas, uma linha por chamada para o SQLPutData com ODBC TVP, da mesma forma como você pode usar BCP.exe para carregar dados em um banco de dados.  
   
  Antes de compilar o exemplo, altere o nome do servidor na cadeia de conexão.  
@@ -376,7 +376,7 @@ EXIT:
   
 ## <a name="example"></a>Exemplo  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descrição  
  Este exemplo mostra que você pode usar o fluxo de linhas, várias linhas por chamada para o SQLPutData com ODBC TVP, da mesma forma como você pode usar BCP.exe para carregar dados em um banco de dados.  
   
  Antes de compilar o exemplo, altere o nome do servidor na cadeia de conexão.  

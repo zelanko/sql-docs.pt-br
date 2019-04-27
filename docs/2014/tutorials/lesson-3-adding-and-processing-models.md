@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2596ed7eb2d714ff0790daa013a5e47ecd134b38
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653694"
 ---
-# <a name="lesson-3-adding-and-processing-models"></a>Lição 3: Adicionando e processando modelos
+# <a name="lesson-3-adding-and-processing-models"></a>Lição 3: Como adicionar e processar modelos
   A estrutura de mineração inicial que você criou na lição anterior contém um único modelo de mineração que se baseia no algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../includes/msconame-md.md)]. Você pode usar esse modelo para identificar clientes para a campanha de mala direta. Porém, para assegurar que sua análise seja completa, é uma prática comum criar modelos relacionados usando algoritmos diferentes e comparar seus resultados. Assim, você também pode obter diferentes visões. Portanto, você criará dois modelos adicionais e, depois, processará e implantará os modelos.  
   
  Nesta lição, você criará um conjunto de modelos de mineração com sugestões dos clientes mais prováveis a partir de uma lista de clientes potenciais.  
