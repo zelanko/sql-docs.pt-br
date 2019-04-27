@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ad9c944af33da86e0d4f85769288f4ab7b6c369f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62665338"
 ---
 # <a name="sqlconfigdatasource-paradox-driver"></a>SQLConfigDataSource (Driver do Paradox)
 > [!NOTE]  
@@ -27,14 +27,14 @@ ms.locfileid: "47694584"
   
  O **SQLConfigDataSource** função que é usada para adicionar, modificar ou excluir uma fonte de dados usa as seguintes palavras-chave dinamicamente.  
   
-|Palavra-chave|Description|  
+|Palavra-chave|Descrição|  
 |-------------|-----------------|  
 |COLLATINGSEQUENCE|A sequência na qual os campos são classificados.<br /><br /> Quando o driver do Paradox é usado, a sequência pode ser ASCII (padrão), internacionais, finlandês-sueco ou dinamarquês-norueguês.<br /><br /> Isso define a mesma opção como **sequência de agrupamento** na caixa de diálogo de instalação.|  
 |DBQ|O nome do arquivo de banco de dados.<br /><br /> Isso define a mesma opção como **banco de dados** na caixa de diálogo de instalação.|  
 |DEFAULTDIR|A especificação de caminho para o diretório.|  
 |DESCRIPTION|Uma descrição dos dados na fonte de dados.<br /><br /> Isso define a mesma opção como **descrição** na caixa de diálogo de instalação.|  
 |DRIVER|A especificação de caminho para a DLL do driver.|  
-|DRIVERID|Uma ID de inteiro para o driver.<br /><br /> 26 (paradox 3. x)<br /><br /> 282 (paradox 4. x)<br /><br /> 538 (paradox 5. x)|  
+|DRIVERID|Uma ID de inteiro para o driver.<br /><br /> 26 (paradox 3. x)<br /><br /> 282 (Paradox 4.x)<br /><br /> 538 (Paradox 5.x)|  
 |EXCLUSIVO|Determina se o banco de dados será aberto no modo exclusivo (acessado somente por um usuário por vez) ou (acessado por mais de um usuário por vez) de modo compartilhado. Pode ser verdadeiro (modo exclusivo) ou falso (modo compartilhado).<br /><br /> Isso define a mesma opção como **exclusivo** na caixa de diálogo de instalação.|  
 |FIL|Tipo Paradox arquivo 3. x, Paradox 4. x ou Paradox 5. x|  
 |TIPO DE ARQUIVO|Tipo de arquivo para o driver de texto (texto).|  

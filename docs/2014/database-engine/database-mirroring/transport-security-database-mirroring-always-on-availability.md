@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 18b52163cb1e8c6be0cf7fdea37861662d6e4830
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754293"
 ---
 # <a name="transport-security-for-database-mirroring-and-alwayson-availability-groups-sql-server"></a>Segurança de transporte para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn (SQL Server)
   A segurança de transporte envolve autenticação e, como opção, criptografia de mensagens trocadas entre os bancos de dados. Para o espelhamento de banco de dados e [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], a autenticação e a criptografia são configuradas no ponto de extremidade do espelhamento de banco de dados. Para obter uma introdução aos pontos de extremidade de espelhamento de banco de dados, consulte [O ponto de extremidade de espelhamento de banco de dados &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md).  
@@ -34,7 +34,7 @@ ms.locfileid: "48075856"
 ##  <a name="Authentication"></a> Autenticação  
  Autenticação é o processo de verificar se um usuário é quem o usuário diz ser. Conexões entre pontos de extremidade espelhamento de banco de dados requerem autenticação. Exigências de conexão de um parceiro ou testemunha, se existir, devem ser autenticadas.  
   
- O tipo de autenticação usado por uma instância do servidor para o espelhamento de banco de dados ou [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] é uma propriedade do ponto de extremidade do espelhamento de banco de dados. Dois tipos de segurança de transporte estão disponíveis para pontos de extremidade do espelhamento de banco de dados: Autenticação do Windows (SSPI) e autenticação baseada em certificado.  
+ O tipo de autenticação usado por uma instância do servidor para o espelhamento de banco de dados ou [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] é uma propriedade do ponto de extremidade do espelhamento de banco de dados. Dois tipos de segurança do transporte estão disponíveis para os ponto de extremidade de espelhamento de banco de dados: A Autenticação do Windows (a interface SSPI) e autenticação baseada em certificado.  
   
 ### <a name="windows-authentication"></a>Autenticação do Windows  
  Sob autenticação do Windows, cada instância de servidor faz o logon para o outro lado usando as credenciais da conta de usuário do Windows sob o qual o processo está sendo executado. A Autenticação do Windows pode exigir configuração manual de contas de logon, como segue:  
@@ -46,12 +46,12 @@ ms.locfileid: "48075856"
 -   Se as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] forem executadas como a conta de Serviço de Rede, o logon da conta de cada computador host (*DomainName***\\***ComputerName$*) deverá ser criado no **mestre** em cada um dos outros servidores e esse logon deverá receber permissões CONNECT no ponto de extremidade. Isso é porque uma instância de servidor em execução sob a conta de serviço de rede é autenticada usando a conta de domínio do computador host.  
   
 > [!NOTE]  
->  Para obter um exemplo de como configurar a sessão de espelhamento de banco de dados usando a Autenticação do Windows, consulte [Exemplo: Configurando o espelhamento de banco de dados usando a Autenticação do Windows &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md).  
+>  Para obter um exemplo da configuração de uma sessão de espelhamento de banco de dados usando Autenticação do Windows, veja [. Exemplo: Configurando o espelhamento de banco de dados usando a Autenticação do Windows &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md).  
   
 ### <a name="certificates"></a>Certificados  
  Em algumas situações, como quando as instâncias de servidor não estão em domínios confiáveis ou quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver executando como um serviço local, a Autenticação do Windows é indisponível. Em tais casos, em vez de credenciais de usuário, são exigidos certificados para autenticar solicitações de conexão. O ponto de extremidade do espelhamento de cada instância de servidor deve ser configurado com seu próprio certificado localmente criado.  
   
- O método de criptografia é estabelecido quando o certificado é criado. Para obter mais informações, consulte [Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de saída &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md). Administre cuidadosamente os certificados que você usa.  
+ O método de criptografia é estabelecido quando o certificado é criado. Para obter mais informações, consulte [Allow a Database Mirroring Endpoint to Use Certificates for Outbound Connections &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md). Administre cuidadosamente os certificados que você usa.  
   
  Uma instância de servidor usa a chave privada de seu próprio certificado para estabelecer sua identidade ao configurar uma conexão. A instância de servidor que recebe a solicitação de conexão usa a chave pública do certificado do remetente para autenticar a identidade do remetente. Por exemplo, considere duas instâncias de servidor, Server_A e Server_B. Server_A usa sua chave privada para criptografar o cabeçalho da conexão antes de enviar uma solicitação de conexão a Server_B. Server_B usa a chave pública do certificado de Server_A para descriptografar o cabeçalho da conexão. Se o cabeçalho descriptografado estiver correto, Server_B saberá que o cabeçalho foi criptografado por Server_A, e a conexão é autenticada. Se o cabeçalho descriptografado estiver incorreto, Server_B saberá que a solicitação de conexão não é autêntica e recusará a conexão.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48075856"
   
  Opcionalmente, você pode controlar os algoritmos de criptografia que podem ser usados por um ponto de extremidade, especificando um dos seguintes valores para a opção de ALGORITHM em uma instrução CREATE ENDPOINT ou instrução ALTER ENDPOINT:  
   
-|Valor de ALGORITHM|Description|  
+|Valor de ALGORITHM|Descrição|  
 |---------------------|-----------------|  
 |RC4|Especifica que o ponto de extremidade deve usar o algoritmo RC4. Esse é o padrão.<br /><br /> Observação: O algoritmo RC4 é preterido. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Recomendamos usar AES.|  
 |AES|Especifica que o ponto de extremidade deve usar o algoritmo AES.|  

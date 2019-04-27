@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 70da82ab5d9ecb37ca08f3cf79801f209f25d86e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774739"
 ---
 # <a name="password-expired"></a>Senha Expirada
   Aparece quando você se conecta a um servidor com o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] usando autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e a senha fornecida está correta, mas já expirou. Também aparece quando você se conecta a um servidor com uma nova conta que foi criada usando a opção **O usuário deve alterar a senha no próximo logon** . Use a caixa de diálogo **Senha Expirada** para alterar a senha para esse logon de autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  

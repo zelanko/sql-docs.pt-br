@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 867d476c0132bedf39f709497e035b8264f2b022
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757222"
 ---
 # <a name="import-from-powerpivot-ssas-tabular"></a>Importar do PowerPivot (SSAS tabular)
   Este tópico descreve como você pode criar um novo projeto de modelo de tabela importando os metadados e dados de uma pasta de trabalho PowerPivot usando o modelo de projeto Importar do PowerPivot no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  

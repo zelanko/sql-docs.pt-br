@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 379cb1ab2ed12ad8d5d835068bb68008fd6ca9af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773818"
 ---
 # <a name="sql-server-profiler---replay-configuration-basic-replay-options"></a>SQL Server Profiler – Configuração de repetição (Opções de repetição básicas)
   Na caixa de diálogo **Configuração de Repetição** , use a página **Opções de Repetição Básicas** para especificar como repetir um arquivo ou tabela de rastreamento.  
@@ -35,10 +35,10 @@ ms.locfileid: "48088296"
  Inicia a caixa de diálogo **Conectar ao Servidor** para conectar a outro servidor.  
   
  **Salvar no arquivo**  
- Salva os resultados da repetição para um arquivo. [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] Exibe a caixa de diálogo de arquivo padrão, onde você pode especificar o local para salvar o arquivo.  
+ Salva os resultados da repetição para um arquivo. [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] exibe o diálogo de arquivo padrão, permitindo que se especifique o local para salvar o arquivo.  
   
  **Salvar na tabela**  
- Salva os resultados da repetição em uma tabela. O [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] exibe a caixa de diálogo de seleção da tabela, permitindo que se especifique o local para salvar a tabela.  
+ Salva os resultados da repetição em uma tabela. [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] exibe a caixa de diálogo de seleção da tabela, permitindo que se especifique o local para salvar a tabela.  
   
  **Número de threads de repetição**  
  Especifica o número de threads de repetição a usar simultaneamente. Um número maior consome mais recursos durante a repetição, porém esta será mais rápida e simultânea.  
@@ -53,7 +53,7 @@ ms.locfileid: "48088296"
  Exibe os resultados da repetição no [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)].  
   
 ## <a name="see-also"></a>Consulte também  
- [Repetir uma tabela de rastreamento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
+ [Reproduzir uma tabela de rastreamento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
  [Reproduzir um arquivo de rastreamento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
  [Reproduzir rastreamentos](../tools/sql-server-profiler/replay-traces.md)  
   

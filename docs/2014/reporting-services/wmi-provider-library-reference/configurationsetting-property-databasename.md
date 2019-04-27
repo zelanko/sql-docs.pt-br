@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 03ff8dfddd844a766172ff0f459a1fff5d984574
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59965502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646383"
 ---
 # <a name="databasename-property-wmi-msreportserverconfigurationsetting"></a>Propriedade DatabaseName (WMI MSReportServer_ConfigurationSetting)
   Especifica o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda o banco de dados do servidor de relatório. Somente leitura.  

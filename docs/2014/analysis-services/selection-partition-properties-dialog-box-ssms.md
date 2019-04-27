@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2b09e8e689f090feb2d823a13ac9329bee9bc3f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149346"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747088"
 ---
 # <a name="selection-partition-properties-dialog-box-ssms"></a>Seleção (caixa de diálogo Propriedades da Partição) (SSMS)
   Use a página **Seleção** da caixa de diálogo **Propriedades da Partição** no SQL Server Management Studio para selecionar uma partição de um grupo de medidas da qual exibir ou modificar propriedades no painel **Geral**, **Cache Pró-ativo**ou **Configuração de Erro** .  
@@ -31,7 +31,7 @@ ms.locfileid: "48149346"
   
  A grade contém as seguintes colunas:  
   
-|coluna|Description|  
+|coluna|Descrição|  
 |------------|-----------------|  
 |**Nome**|Exibe o nome da partição.|  
 |**Origem**|Exibe a tabela ou consulta usada para fornecer dados de origem para a partição.|  

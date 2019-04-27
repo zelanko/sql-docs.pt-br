@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 09f9cc460368109e3e1a7fd7464602182bf188e1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754134"
 ---
 # <a name="set-warning-thresholds"></a>Configurar limites de aviso
   Use essa caixa de diálogo para habilitar e configurar um ou mais limites de aviso para o banco de dados selecionado na árvore de navegação da caixa de diálogo **Monitor de Espelhamento de Banco de Dados** .  
@@ -65,7 +65,7 @@ ms.locfileid: "48195466"
  **Warnings**  
  Relaciona os avisos que têm suporte:  
   
-|Aviso|Description|  
+|Aviso|Descrição|  
 |-------------|-----------------|  
 |**Avisar se o log não enviado exceder o limite**|O limite indica o número de quilobytes (KB) do log não enviado na fila principal de envios de log.|  
 |**Avisar se o log não restaurado exceder o limite**|O limite indica o número de KBs da fila de restauração na instância de servidor espelho.|  

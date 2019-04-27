@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 836e2fd015cf723bc970cb2ae18705928704b261
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747218"
 ---
 # <a name="select-related-tables-dimension-wizard"></a>Selecionar Tabelas Relacionadas (Assistente para Dimensões)
   Use a página **Selecionar Tabelas Relacionadas** para incluir tabelas relacionadas (tabelas com as quais as tabelas de dimensão principais estão relacionadas na exibição da fonte de dados) na dimensão.  

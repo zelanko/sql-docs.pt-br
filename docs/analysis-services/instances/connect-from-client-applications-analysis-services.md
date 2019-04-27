@@ -1,5 +1,5 @@
 ---
-title: Conecte-se de aplicativos de cliente (Analysis Services) | Microsoft Docs
+title: Conectar-se de aplicativos de cliente (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d71320fad55b9a0d052ad1bb9c9fd25ab861246c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748638"
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>Conectar-se de aplicativos cliente (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "34019583"
   
 -   [Configurar o Firewall do Windows para permitir o acesso ao Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
--   [Autorizar acesso a objetos e operações & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [Autorizando o acesso a objetos e operações &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_SSMS"></a> Conectar usando o SQL Server Management Studio (SSMS)  
  Conecte-se ao Analysis Services no SSMS para gerenciar interativamente instâncias de servidor e bancos de dados. Você também pode executar consultas XMLA ou MDX para executar tarefas administrativas ou recuperar dados. Diferente de outras ferramentas e aplicativos que somente carregam bancos de dados quando uma consulta é enviada, o SSMS carrega todos os bancos de dados quando você se conecta ao servidor, supondo que você tem permissão para exibir o banco de dados. Isso significa que, se você tiver vários bancos de dados de tabela no servidor, todos serão carregados na memória do sistema quando você se conectar usando o SSMS.  
@@ -131,6 +131,6 @@ ms.locfileid: "34019583"
  [Conectar ao Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Metodologias de autenticação com suporte no Analysis Services](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
  [Representação](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
- [Criar uma fonte de dados & #40; SSAS Multidimensional & #41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
+ [Criar uma fonte de dados &#40;SSAS multidimensional&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

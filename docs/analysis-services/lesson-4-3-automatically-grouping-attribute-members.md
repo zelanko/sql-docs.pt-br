@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b36977f4f55049c5e2c34f2f43f405194bac790e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62737716"
 ---
-# <a name="lesson-4-3---automatically-grouping-attribute-members"></a>Lição 4-3 - agrupando membros de atributo automaticamente
+# <a name="lesson-4-3---automatically-grouping-attribute-members"></a>Lição 4-3: Agrupando membros de atributo automaticamente
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Ao navegar em um cubo, você normalmente dimensiona os membros de uma hierarquia de atributo pelos membros de outra hierarquia de atributo. Por exemplo, você pode agrupar as vendas de cliente por cidade, produto comprado ou sexo. Porém, com determinados tipos de atributo, é útil usar o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para criar automaticamente agrupamentos de membros de atributo com base na distribuição dos membros dentro de uma hierarquia de atributo. Por exemplo, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pode criar grupos de valores de renda anual para clientes. Ao fazer isso, os usuários que navegarem pela hierarquia de atributo verão o nome e os valores dos grupos em vez dos próprios membros. Isso limita o número de níveis que são apresentados aos usuários, o que pode ser mais útil para a análise.  
@@ -24,10 +24,10 @@ Ao navegar em um cubo, você normalmente dimensiona os membros de uma hierarquia
 A propriedade **DiscretizationMethod** determina se [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cria agrupamentos e determina o tipo de agrupamento feito. Por padrão, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] não faz nenhum agrupamento. Ao habilitar agrupamentos automáticos, você pode permitir que o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] determine automaticamente o melhor método de agrupamento com base na estrutura do atributo ou ainda escolher um dos algoritmos de agrupamento da lista a seguir para especificar o método de agrupamento:  
   
 **EqualAreas**  
-O [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cria intervalos de grupo de forma que a população total de membros da dimensão seja distribuída igualmente pelos grupos.  
+[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cria intervalos de grupo de forma que a população total de membros da dimensão seja distribuída igualmente pelos grupos.  
   
 **Clusters**  
-O [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cria grupos executando clustering unidimensional nos valores de entrada usando o método de clustering K-means com distribuições gaussianas. Essa opção só é válida para colunas numéricas.  
+[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cria grupos executando clustering unidimensional nos valores de entrada usando o método de clustering K-means com distribuições gaussianas. Essa opção só é válida para colunas numéricas.  
   
 Depois de especificar um método de agrupamento, você deve especificar o número de grupos usando a propriedade **DiscretizationBucketCount** . Para obter mais informações, consulte [Agrupar membros de atributo &#40;Discretização&#41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
   
@@ -49,7 +49,7 @@ Nas tarefas deste tópico, você habilitará tipos diferentes de agrupamentos pa
   
     A imagem a seguir mostra as propriedades modificadas para **Renda Anual**.  
   
-    ![Propriedades modificadas para Renda anual](../analysis-services/media/l4-discretizationmethod-1.gif "propriedades modificadas para Renda anual")  
+    ![Modificou as propriedades para Renda anual](../analysis-services/media/l4-discretizationmethod-1.gif "modificou as propriedades para Renda anual")  
   
 ## <a name="grouping-attribute-hierarchy-members-in-the-employee-dimension"></a>Agrupando membros da hierarquia de atributo na dimensão Funcionário  
   
@@ -95,7 +95,7 @@ Nas tarefas deste tópico, você habilitará tipos diferentes de agrupamentos pa
   
     A imagem a seguir mostra as vendas dimensionadas pelas horas de dispensa médica dos funcionários:  
   
-    ![Horas de licença de vendas dimensionadas pelas médica dos funcionários](../analysis-services/media/l4-discretizationmethod-2.gif "vendas dimensionadas pelas médica dos funcionários de horas de licença")  
+    ![Vendas dimensionadas pelas dispensa funcionário deixar horas](../analysis-services/media/l4-discretizationmethod-2.gif "vendas dimensionadas pelas dispensa funcionário deixar horas")  
   
 10. Remova a hierarquia **Horas de Dispensa Médica** da área de coluna do painel **Dados** .  
   
@@ -127,7 +127,7 @@ Nas tarefas deste tópico, você habilitará tipos diferentes de agrupamentos pa
 [Ocultando e desabilitando as hierarquias de atributo](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
   
 ## <a name="see-also"></a>Consulte também  
-[Membros do grupo de atributo & #40; diferenciação & #41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
+[Agrupar membros de atributo &#40;Discretização&#41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
   
   
   

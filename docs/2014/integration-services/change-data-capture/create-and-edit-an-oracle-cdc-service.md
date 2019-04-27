@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1b59ebbf4bb56d23009351f4a8fb7f193a59fa66
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771442"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Criar e editar um Serviço Oracle CDC
   Você cria e edita um novo Serviço do Windows do Oracle CDC a partir do Console de Configuração do Serviço CDC.  
@@ -56,14 +56,14 @@ ms.locfileid: "58379365"
   
      Você pode usar uma conta do Windows local ou de domínio para a conta de serviço. Neste caso, você deve inserir a **Senha** para essa conta. Esta conta pode ser para o host local ou uma conta de domínio. Atualize a senha quando ela for alterada usando os Serviços Locais no Painel de Controle do Windows.  
   
- **Nome do servidor**: Selecione o destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância para se conectar ao (por exemplo,  **\\ \\< nome_do_computador >\\< instance_name >**). Por padrão, é exibida a instância de servidor usada na última conexão.  
+ **Nome do servidor**: selecione a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino para se conectar (por exemplo, **\\\\<nome_do_computador>\\<nome_da_instância>**). Por padrão, é exibida a instância de servidor usada na última conexão.  
   
  **Autenticação**  
  Selecione uma destas opções:  
   
--   **Autenticação do Windows**: Se você selecionar essa opção, o serviço Oracle CDC se conecta ao destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando a identidade da conta de serviço da instância. Se a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver sendo executada em um computador diferente, a Autenticação do Windows deverá ser usada com contas de domínio.  
+-   **Autenticação do Windows**: se você selecionar esta opção, o serviço Oracle CDC se conectará à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino usando a identidade da conta de serviço. Se a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver sendo executada em um computador diferente, a Autenticação do Windows deverá ser usada com contas de domínio.  
   
--   **Autenticação do SQL Server**: Se você selecionar essa opção, você deve digitar o **nome de usuário** e **senha** para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon você deseja usar. O serviço Oracle CDC usa estas credenciais ao conectar-se à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino.  
+-   **Autenticação do SQL Server**: se você selecionar esta opção, deverá digitar o **Nome de usuário** e **Senha** para o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que deseja usar. O serviço Oracle CDC usa estas credenciais ao conectar-se à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino.  
   
  O logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usado pelo Serviço Oracle CDC somente precisa ser um membro da função pública de servidor fixa, nenhum outro privilégio será necessário. Quando novas Instâncias Oracle CDC são adicionadas, esse logon ganhará acesso **db_owner** aos bancos de dados CDC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] associados.  
   
@@ -74,13 +74,13 @@ ms.locfileid: "58379365"
  **Opções**  
  Clique na seta para exibir opções disponíveis a serem configuradas. Você pode escolher deixar estas opções com o valor padrão. As opções disponíveis são:  
   
--   **Tempo limite de Conexão**: Digite o tempo (em segundos) que o Serviço CDC para Oracle espera por uma conexão com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antes de exceder o tempo limite. O valor padrão é **15**.  
+-   **Tempo limite da conexão**: Digite o tempo (em segundos) que o Serviço CDC para Oracle espera por uma conexão com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antes de exceder o tempo limite. O valor padrão é **15**.  
   
 -   **Tempo limite de execução**: Digite o tempo (em segundos) que o Serviço do Windows do Oracle CDC espera que um comando seja executado antes de exceder o tempo limite. O valor padrão é **30**.  
   
--   **Criptografar Conexão**: Selecione **criptografar Conexão** para a comunicação entre o serviço Oracle CDC e o destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância usando uma conexão criptografada.  
+-   **Criptografar conexão**: selecione **Criptografar Conexão** para a comunicação entre o Serviço Oracle CDC e a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino usando uma conexão criptografada.  
   
--   **Avançado**: Digite as propriedades de conexão adicionais, se necessário.  
+-   **Avançado**: digite as propriedades de conexão adicionais, se necessário.  
   
  **Senha mestra**  
  Insira uma senha a ser usada pelo Serviço do Windows do Oracle CDC para proteger as credenciais da mineração de logs do Oracle.  

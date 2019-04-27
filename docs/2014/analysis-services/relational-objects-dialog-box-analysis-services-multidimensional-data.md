@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fbb162851b1906ffaf42d5fdda943fea4fc6133f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748358"
 ---
 # <a name="relational-objects-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Objetos Relacionais (Analysis Services - Dados Multidimensionais)
   Use a caixa de diálogo **Objetos Relacionais** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para selecionar tabelas, exibições ou outros objetos de uma fonte de dados na qual você queira definir cache pró-ativo. É possível exibir esta caixa de diálogo no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] clicando no botão de reticências (**...**) em qualquer uma das opções de **Especificar tabelas de acompanhamento** na guia **Notificações** da caixa de diálogo **Opções de Armazenamento** .  

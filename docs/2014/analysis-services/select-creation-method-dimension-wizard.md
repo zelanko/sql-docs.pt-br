@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1450762e09481d4b8bfa5883c5c752d01216f29e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748108"
 ---
 # <a name="select-creation-method-dimension-wizard"></a>Selecionar Método de Criação (Assistente para Dimensões)
   Use a página **Selecionar Método de Criação** para selecionar como criar a dimensão.  

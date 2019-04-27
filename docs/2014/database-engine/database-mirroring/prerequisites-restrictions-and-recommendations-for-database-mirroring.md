@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9763385093db6e649e60ab7a6be74f8f28466e1d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754607"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>Pré-requisitos, restrições e recomendações para espelhamento de banco de dados
     
@@ -93,7 +93,7 @@ ms.locfileid: "48164786"
     > [!IMPORTANT]  
     >  Se você mover os arquivos de banco de dados quando estiver criando o banco de dados espelho, é possível que não consiga adicionar arquivos ao banco de dados posteriormente, sem suspender o espelhamento.  
   
--   Todas as instâncias de servidor em uma sessão de espelhamento devem usar a mesma página de código mestre e agrupamento. Diferenças podem causar um problema durante a sessão de espelhamento.  
+-   Todas as instâncias de servidor em uma sessão de espelhamento devem usar a mesma página de código mestre e ordenação. Diferenças podem causar um problema durante a sessão de espelhamento.  
   
 -   Opcionalmente, calcule a hora de parar um banco de dados, para garantir que a configuração do sistema fornecerá o desempenho solicitado. Para obter mais informações, veja [Estime a interrupção do serviço durante troca de função &#40;Espelhamento de Banco de Dados&#41;](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).  
   

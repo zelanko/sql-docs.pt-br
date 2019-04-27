@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 43be2214ce811b8b0a0855221823fa6f1bdf5984
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740786"
 ---
 # <a name="use-a-template-to-create-an-action"></a>Usar um modelo para criar uma ação
   A exibição **Ações** no Designer de Cubo contém vários modelos que você pode usar para criar ações comuns. O Designer de Cubo pode ser acessado pelo [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -33,6 +33,6 @@ ms.locfileid: "48154472"
 -   Preencha as informações necessárias para concluir a criação da ação com base no modelo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Ações &#40;Analysis Services - dados multidimensionais&#41;](actions-analysis-services-multidimensional-data.md)  
+ [Ações &#40;Analysis Services – Dados Multidimensionais&#41;](actions-analysis-services-multidimensional-data.md)  
   
   

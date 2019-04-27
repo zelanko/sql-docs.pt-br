@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a19c67f19c6b1b73947ef752a09516449eeec1a8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62655349"
 ---
 # <a name="smo-syntax-conventions"></a>Convenções de sintaxe de SMO
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Convenções tipográficas do Management Objects (SMO) são baseadas nas usadas em [!INCLUDE[msCoName](../../includes/msconame-md.md)] materiais de referência do Visual Studio .NET.  
@@ -28,7 +28,7 @@ ms.locfileid: "52815068"
 |Convenção|Usado para|  
 |----------------|--------------|  
 |UPPERCASE|Instruções [!INCLUDE[tsql](../../includes/tsql-md.md)], nomes de macro e termos usados no nível do sistema operacional; nomes de arquivo em texto.|  
-|com espaçamento uniforme|Exemplos de linhas de comando e código de programa.|  
+|monospace|Exemplos de linhas de comando e código de programa.|  
 |*italic*|Variáveis, fórmulas ou termos definidos em texto. Em sintaxe, letras em itálico indicam espaços reservados para obter informações fornecidas.|  
 |**bold**|Objetos, eventos, métodos ou propriedades SMO; termos de programação em texto.|  
   

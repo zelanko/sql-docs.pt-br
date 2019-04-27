@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: SQL Server Management Studio'
+title: 'Tutorial: SQL Server Management Studio | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -23,11 +23,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b6cd02b0679990e7781faf2195b17444cadb53e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753428"
 ---
 # <a name="tutorial-sql-server-management-studio"></a>Tutorial: SQL Server Management Studio
   O tutorial do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] apresenta o ambiente integrado para gerenciar a infraestrutura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] apresenta uma interface gráfica para configurar, monitorar e administrar as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ele também permite que você implante, monitore e atualize os componentes de camada de dados usados pelos aplicativos, como bancos de dados e data warehouses. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] também fornece editores da linguagem [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX e XML para editar e depurar scripts.  
@@ -45,7 +45,7 @@ ms.locfileid: "48167306"
  [Lição 2: Gravando Transact-SQL](lesson-2-writing-transact-sql.md)  
  Nesta lição, você aprenderá a abrir o Editor de Consultas, gerenciar código e usar os outros recursos novos do Editor de Consultas.  
   
- [Lição 3: Trabalhando com modelos, soluções e projetos de script](lesson-3-working-with-templates-solutions-and-script-projects.md)  
+ [Lição 3: Trabalhando com modelos, soluções e projetos de Script](lesson-3-working-with-templates-solutions-and-script-projects.md)  
  Nesta lição, você aprenderá a usar modelos e organizar scripts em soluções e projetos.  
   
 ## <a name="requirements"></a>Requisitos  

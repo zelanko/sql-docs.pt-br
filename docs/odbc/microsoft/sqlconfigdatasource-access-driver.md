@@ -1,5 +1,5 @@
 ---
-title: SQLConfigDataSource (Driver do Access) | Microsoft Docs
+title: SQLConfigDataSource (Access Driver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dd626d476bf1c4ac8b4f83f397584c367299904f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62665401"
 ---
 # <a name="sqlconfigdatasource-access-driver"></a>SQLConfigDataSource (Driver do Access)
 > [!NOTE]  
@@ -27,13 +27,13 @@ ms.locfileid: "47637934"
   
  O **SQLConfigDataSource** função que é usada para adicionar, modificar ou excluir uma fonte de dados usa as seguintes palavras-chave dinamicamente.  
   
-|Palavra-chave|Description|  
+|Palavra-chave|Descrição|  
 |-------------|-----------------|  
 |COLLATINGSEQUENCE|A sequência na qual os campos são classificados.<br /><br /> Isso define a mesma opção como **sequência de agrupamento** na caixa de diálogo de instalação.|  
 |COMPACT_DB|Executa a compactação de dados em um arquivo de banco de dados. Tem o seguinte formato: COMPACT_DB = < path_name >< optionaL_sort_order >\<palavra-chave de criptografia opcional >.<br /><br /> Ao usar a palavra-chave COMPACT_DB na mesma instrução com uma palavra-chave DSN, este driver ignora a palavra-chave DSN. Portanto, a compactação de um banco de dados e especificando um DSN são um processo em duas etapas.|  
-|CREATE_DB|Cria um arquivo de banco de dados. Tem o seguinte formato: CREATE_DB = < path_name >\<optional_sort ordem >< optional_ENCRYPT palavra-chave >, onde o nome do caminho é o caminho completo para um banco de dados do Microsoft Access. Um erro será retornado se o nome do caminho Especifica um banco de dados existente. A ordem de classificação será ser conforme definido na caixa de diálogo novo banco de dados exibida quando o botão Criar é pressionado na caixa de diálogo de instalação do Microsoft Access. Se nenhuma ordem de classificação for especificada, geral é usado.<br /><br /> Ao usar a palavra-chave CREATE_DB na mesma instrução com uma palavra-chave DSN, este driver ignora a palavra-chave DSN. Portanto, criando um banco de dados e especificando um DSN são um processo em duas etapas. Ao usar a palavra-chave CREATE_DB, se o nome do caminho do banco de dados Microsoft Access a ser criado contém um ou mais espaços, em seguida, o nome do caminho inteiro deve estar entre aspas duplas, conforme mostrado nos exemplos a seguir:<br /><br /> "C:\PROGRAM FILES\COMMON MyAccess.mdb de programas \"<br /><br /> "C:\PROGRAM FILES\Access2.mdb"<br /><br /> CREATE_DB=C:\TEMP\test.mdb (sem aspas necessárias)|  
+|CREATE_DB|Cria um arquivo de banco de dados. Tem o seguinte formato: CREATE_DB = < path_name >\<optional_sort ordem >< optional_ENCRYPT palavra-chave >, onde o nome do caminho é o caminho completo para um banco de dados do Microsoft Access. Um erro será retornado se o nome do caminho Especifica um banco de dados existente. A ordem de classificação será ser conforme definido na caixa de diálogo novo banco de dados exibida quando o botão Criar é pressionado na caixa de diálogo de instalação do Microsoft Access. Se nenhuma ordem de classificação for especificada, geral é usado.<br /><br /> Ao usar a palavra-chave CREATE_DB na mesma instrução com uma palavra-chave DSN, este driver ignora a palavra-chave DSN. Portanto, criando um banco de dados e especificando um DSN são um processo em duas etapas. Ao usar a palavra-chave CREATE_DB, se o nome do caminho do banco de dados Microsoft Access a ser criado contém um ou mais espaços, em seguida, o nome do caminho inteiro deve estar entre aspas duplas, conforme mostrado nos exemplos a seguir:<br /><br /> "C:\PROGRAM FILES\COMMON FILES\ MyAccess.mdb"<br /><br /> "C:\PROGRAM FILES\Access2.mdb"<br /><br /> CREATE_DB=C:\TEMP\test.mdb (sem aspas necessárias)|  
 |CREATE_SYSDB|Cria um arquivo de banco de dados do sistema. Tem o seguinte formato: CREATE_SYSDB =\<caminho-name >\<opcional ordem de classificação >, onde o nome do caminho é o caminho completo para um banco de dados do Microsoft Access. Um erro será retornado se o nome do caminho Especifica um banco de dados existente. A ordem de classificação será ser conforme definido na **novo banco de dados** caixa de diálogo exibida quando o **Create** botão é clicado no **configuração de acesso do Microsoft ODBC** caixa de diálogo. Se nenhuma ordem de classificação for especificada, geral é usado.|  
-|CREATE_V2DB|Cria um arquivo de banco de dados que é compatível com o Microsoft Access 2.0. Tem o seguinte formato: CREATE_V2DB =\<caminho-name >\<opcional ordem de classificação >, onde o nome do caminho é o caminho completo para um banco de dados do Microsoft Access. Um erro será retornado se o nome do caminho Especifica um banco de dados existente. A ordem de classificação será ser conforme definido na caixa de diálogo novo banco de dados exibida quando o botão Criar é pressionado na caixa de diálogo de instalação do Microsoft Access. Se nenhuma ordem de classificação for especificada, geral é usado.<br /><br /> Ao usar a palavra-chave CREATE_V2DB na mesma instrução com uma palavra-chave DSN, este driver ignora a palavra-chave DSN. Portanto, criando um banco de dados e especificando um DSN são um processo em duas etapas.<br /><br /> Ao usar a palavra-chave CREATE_V2DB, se o nome do caminho do banco de dados Microsoft Access a ser criado contém um ou mais espaços, em seguida, o nome do caminho inteiro deve estar entre aspas duplas, conforme mostrado nos exemplos a seguir:<br /><br /> "C:\PROGRAM FILES\COMMON MyAccess.mdb de programas \"<br /><br /> "C:\PROGRAM FILES\Access2.mdb"<br /><br /> CREATE_V2DB=C:\TEMP\test.mdb (sem aspas necessárias)|  
+|CREATE_V2DB|Cria um arquivo de banco de dados que é compatível com o Microsoft Access 2.0. Tem o seguinte formato: CREATE_V2DB =\<caminho-name >\<opcional ordem de classificação >, onde o nome do caminho é o caminho completo para um banco de dados do Microsoft Access. Um erro será retornado se o nome do caminho Especifica um banco de dados existente. A ordem de classificação será ser conforme definido na caixa de diálogo novo banco de dados exibida quando o botão Criar é pressionado na caixa de diálogo de instalação do Microsoft Access. Se nenhuma ordem de classificação for especificada, geral é usado.<br /><br /> Ao usar a palavra-chave CREATE_V2DB na mesma instrução com uma palavra-chave DSN, este driver ignora a palavra-chave DSN. Portanto, criando um banco de dados e especificando um DSN são um processo em duas etapas.<br /><br /> Ao usar a palavra-chave CREATE_V2DB, se o nome do caminho do banco de dados Microsoft Access a ser criado contém um ou mais espaços, em seguida, o nome do caminho inteiro deve estar entre aspas duplas, conforme mostrado nos exemplos a seguir:<br /><br /> "C:\PROGRAM FILES\COMMON FILES\ MyAccess.mdb"<br /><br /> "C:\PROGRAM FILES\Access2.mdb"<br /><br /> CREATE_V2DB=C:\TEMP\test.mdb (sem aspas necessárias)|  
 |DBQ|O nome do arquivo de banco de dados.<br /><br /> Isso define a mesma opção como **banco de dados** na caixa de diálogo de instalação.|  
 |DEFAULTDIR|A especificação de caminho para o arquivo de banco de dados.|  
 |DESCRIPTION|Uma descrição dos dados na fonte de dados.<br /><br /> Isso define a mesma opção como **descrição** na caixa de diálogo de instalação.|  

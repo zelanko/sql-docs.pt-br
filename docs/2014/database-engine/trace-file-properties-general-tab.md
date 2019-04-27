@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d2c9c57a69f4ee16d614add0e9bfb92129ce429a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773482"
 ---
 # <a name="trace-file-properties-general-tab"></a>Propriedades do Arquivo de Rastreamento (guia Geral)
   Use a guia **Geral** da caixa de diálogo **Propriedades do Arquivo de Rastreamento** para exibir as propriedades de um arquivo de rastreamento.  

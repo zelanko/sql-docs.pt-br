@@ -11,11 +11,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: b571739fc268547e944dfe26672735a2520ff943
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62772372"
 ---
 # <a name="getting-started-sql-server-2014"></a>Guia de Introdução (SQL Server 2014)
   Localize fontes de informações, requisitos de sistema, instruções de instalação e muito mais sobre o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .  

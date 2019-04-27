@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a8c41479b46a2020f0c460313ffc427eabded53e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59962962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62645875"
 ---
 # <a name="isinitialized-property-wmi-msreportserverconfigurationsetting"></a>Propriedade IsInitialized (WMI MSReportServer_ConfigurationSetting)
   Indica se a instância do servidor de relatório foi inicializada. Somente leitura.  

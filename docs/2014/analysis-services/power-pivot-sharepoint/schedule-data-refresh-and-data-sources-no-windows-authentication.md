@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cf954178516cef633dbe34c1b8b01579c8f3e4ea
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749077"
 ---
 # <a name="schedule-data-refresh-and-data-sources-that-do-not-support-windows-authentication-powerpivot-for-sharepoint"></a>Atualização de dados de agendamento e fontes de dados que não oferecem suporte à Autenticação do Windows (PowerPivot para SharePoint)
   Este tópico descreve um fluxo de trabalho de atualização de dados de agendamento do PowerPivot para SharePoint que pode usar fontes de dados que **NÃO** oferecem suporte à Autenticação do Windows. Por exemplo, fontes de dados Oracle ou IDM DB2. As ilustrações e as etapas neste tópico fazem referência a fontes de dados Oracle, mas o mesmo fluxo de trabalho aplica-se a outras fontes de dados.  
@@ -25,13 +25,13 @@ ms.locfileid: "53374858"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2010 &#124; SharePoint 2013.|  
   
- **Visão geral:** Crie dois aplicativos de destino de repositório seguro. Configure o primeiro aplicativo de destino (PowerPivotDataRefresh) para usar as credenciais do Windows. Configure o segundo aplicativo de destino com as credenciais de uma fonte de dados que não ofereça suporte à autenticação do Windows; por exemplo, um banco de dados Oracle. O segundo aplicativo de destino também usa o primeiro aplicativo de destino para a conta autônoma de atualização de dados.  
+ **Visão geral:** Crie dois proteger aplicativos de destino de Store. Configure o primeiro aplicativo de destino (PowerPivotDataRefresh) para usar as credenciais do Windows. Configure o segundo aplicativo de destino com as credenciais de uma fonte de dados que não ofereça suporte à autenticação do Windows; por exemplo, um banco de dados Oracle. O segundo aplicativo de destino também usa o primeiro aplicativo de destino para a conta autônoma de atualização de dados.  
   
  ![as_powerpivot_refresh_no_windows_auth](../media/as-powerpivot-refresh-no-windows-auth.gif "as_powerpivot_refresh_no_windows_auth")  
   
--   **(1) PowerPivotDatarefresh:** uma ID de aplicativo de destino de repositório seguro definida com a autenticação do Windows.  
+-   **(1) PowerPivotDatarefresh:** Um Store destino ID de aplicativo seguro definida com a autenticação do windows.  
   
--   **(2) OracleAuthentication:** uma ID de aplicativo de destino de repositório seguro definida com as credenciais do Oracle.  
+-   **(2) OracleAuthentication:** Um Store destino ID de aplicativo seguro definida com as credenciais do Oracle.  
   
 -   **(3)**  o aplicativo de serviço PowerPivot é configurado para usar o aplicativo de destino "PowerPivotDataRefresh" para o **conta autônoma de atualização de dados**.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "53374858"
   
     -   **Email de Contato:** ?  
   
-    -   **Tipo de aplicativo de destino:** Grupo.  
+    -   **Tipo de aplicativo de destino:** grupo.  
   
     -   **URL de página de aplicativo de destino:** Nenhum.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "53374858"
   
     -   **Email de Contato:** ?  
   
-    -   **Tipo de aplicativo de destino:** Grupo.  
+    -   **Tipo de aplicativo de destino:** grupo.  
   
     -   **URL de página de aplicativo de destino:** Nenhum.  
   

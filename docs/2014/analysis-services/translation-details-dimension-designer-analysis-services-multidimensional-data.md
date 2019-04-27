@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbeaebfc7eab6041bb547f18dacfc01aef3d5117
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756327"
 ---
 # <a name="translation-details-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>Detalhes de conversão (guia Conversões, Designer de Dimensão) (Analysis Services - Dados multidimensionais)
   Use o painel **Detalhes da conversão** na guia **Conversões** do Designer de Dimensão para definir e gerenciar conversões da dimensão atualmente selecionada.  
@@ -38,31 +38,31 @@ ms.locfileid: "48179016"
   
 -   Dimensão  
   
-     `Caption` e `AttributeAllMember` propriedades  
+     Propriedades `Caption` e `AttributeAllMember`  
   
 -   attribute  
   
-     `Caption`, `AttributeHierarchyDisplayFolder`, e `NamingTemplate` propriedades  
+     Propriedades `Caption`, `AttributeHierarchyDisplayFolder` e `NamingTemplate`  
   
     > [!NOTE]  
     >  A propriedade `NamingTemplate` só está disponível para atributos pai.  
   
 -   Hierarquia  
   
-     `Caption` e `AllMemberName` propriedades  
+     Propriedades `Caption` e `AllMemberName`  
   
 -   Nível  
   
-     `Caption` Propriedade  
+     Propriedade `Caption`  
   
- **\<Idioma >**  
+ **\<Language>**  
  Digite ou selecione o valor de propriedade do objeto de dimensão na linguagem selecionada. Clicar no botão de reticências (**...**) abre caixas de diálogo adicionais, dependendo da propriedade que está sendo editada:  
   
--   `NamingTemplate` Propriedade  
+-   Propriedade `NamingTemplate`  
   
      Exibe a [Caixa de diálogo Modelo de Nomeação de Nível &#40;Analysis Services - Dados Multidimensionais&#41;](level-naming-template-dialog-box-analysis-services-multidimensional-data.md).  
   
--   `Caption` propriedade (para atributos)  
+-   Propriedade `Caption` (para atributos)  
   
      Exibe a [Caixa de diálogo Tradução de Dados de Atributo &#40;Analysis Services - Dados Multidimensionais&#41;](attribute-data-translation-dialog-box-analysis-services-multidimensional-data.md).  
   

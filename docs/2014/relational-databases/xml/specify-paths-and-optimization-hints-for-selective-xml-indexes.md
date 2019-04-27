@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd0d493f71bd0a6ac0e2d81d1427027ccdb6496c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679794"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>Especificar caminhos e dicas de otimização para índices XML seletivos
   Este tópico descreve como especificar caminhos de nós a serem indexados e dicas de otimização de indexação ao criar ou alterar índices XML seletivos.  
@@ -29,7 +29,7 @@ ms.locfileid: "58528798"
  Para obter mais informações sobre índices XML seletivos, veja [Índices XML Seletivos &#40;SXI&#41;](../xml/selective-xml-indexes-sxi.md).  
   
 ##  <a name="untyped"></a> Noções básicas sobre tipos XQuery e tipos do SQL Server em XML não tipado  
- Os índices XML seletivos dão suporte a dois sistemas de tipos: Tipos XQuery e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos. O caminho indexado pode ser usado para corresponder a uma expressão XQuery ou para corresponder ao tipo de retorno do método value() do tipo de dados XML.  
+ Os índices XML seletivos dão suporte a dois sistemas de tipos: Tipos XQuery e tipos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O caminho indexado pode ser usado para corresponder a uma expressão XQuery ou para corresponder ao tipo de retorno do método value() do tipo de dados XML.  
   
 -   Quando um caminho a ser indexado não é anotado, ou é anotado com a palavra-chave XQUERY, o caminho corresponde a uma expressão XQuery. Há duas variações para caminhos de nós anotados de XQUERY:  
   
@@ -110,7 +110,7 @@ pathY = '/a/b/d' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] os tipos correspondem ao valor retornado do método value().  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos dão suporte a esta dica de otimização: SINGLETON.  
+-   Os tipos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dão suporte a esta dica de otimização: SINGLETON.  
   
  É obrigatório especificar um tipo para caminhos que retornam tipos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Use o mesmo tipo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que você usaria no método value().  
   
@@ -234,7 +234,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
     -   Nó `b`, porque um predicado é aplicado ao nó`b` na expressão XQuery.  
   
-2.  **Princípio 2**: Para obter melhor desempenho, indexe todos os nós que são necessários para avaliar determinada expressão XQuery. Se você indexar apenas alguns dos nós, o índice XML seletivo melhorará somente a avaliação de subexpressões que incluam nós indexados.  
+2.  **Princípio 2**: Para obter o melhor desempenho, indexe todos os nós necessários para avaliar determinada expressão XQuery. Se você indexar apenas alguns dos nós, o índice XML seletivo melhorará somente a avaliação de subexpressões que incluam nós indexados.  
   
  Para melhorar o desempenho da instrução SELECT mostrada acima, é possível criar o seguinte índice XML seletivo:  
   
@@ -392,7 +392,7 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
  Se uma consulta exigir o valor de um nó que tenha sido indexado com a dica node(), o índice XML seletivo não poderá ser usado.  
   
 ### <a name="singleton-optimization-hint"></a>Dica de otimização SINGLETON  
- Aplica-se a: XQuery ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados  
+ Aplica-se a: XQuery ou tipos de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
  A dica de otimização SINGLETON especifica a cardinalidade de um nó. Essa dica melhora o desempenho da consulta, pois sabe-se antecipadamente que um nó é exibido no máximo uma vez em seu pai ou ancestral.  
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8d966c4602a870a51c64dc7cf86e5363b99a4e76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747918"
 ---
 # <a name="select-a-data-source-linked-object-wizard"></a>Selecionar uma Fonte de Dados (Assistente para Objetos Vinculados)
   Use a página **Selecionar uma Fonte de Dados** para selecionar a fonte de dados do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que contém os objetos dos quais vincular ou importar.  

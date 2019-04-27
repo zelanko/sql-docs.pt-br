@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5dfe30711f9504d1206b172adece266d7de573cb
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59960192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62649292"
 ---
 # <a name="what39s-new-in-report-builder-for-sql-server-2014"></a>O que&#39;novo no construtor de relatórios para SQL Server 2014
   O [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] apresenta vários recursos do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  

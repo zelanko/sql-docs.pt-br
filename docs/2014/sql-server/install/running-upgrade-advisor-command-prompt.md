@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 34f36ea3b27100510857a05cd5edffa68c5be74a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753278"
 ---
 # <a name="running-upgrade-advisor-command-prompt"></a>Executando o Supervisor de Atualização (Prompt de Comando)
   Use o **UpgradeAdvisorWizardCmd** utilitário para executar o Supervisor de atualização do prompt de comando. Você pode escolher receber os resultados no formato XML ou em um arquivo CSV (valores separados por vírgula).  
@@ -43,30 +43,30 @@ where <server_info> is any combination of the following:
  **-?**  
  Exibe a sintaxe do comando.  
   
- **-ConfigFile** _nome de arquivo_  
+ **-ConfigFile** _filename_  
  É o nome de caminho e o nome do arquivo de um arquivo XML que contém as configurações a serem usadas quando você executa o **UpgradeAdvisorWizardCmd** utilitário.  
   
- *< server_info >*  
+ *<server_info>*  
  Especifica qual computador e instância serão analisadas. Use essas opções se você não estiver usando um arquivo de configuração.  
   
  *< server_info >* pode ser qualquer combinação dos quatro argumentos a seguir:  
   
- **-Servidor** _nome_do_servidor_  
+ **-Server** _server_name_  
  Especifica o nome do computador que será analisado. Esse computador pode ser o computador local, que é o valor padrão, ou um computador remoto.  
   
- **-Instância** _instance_name_  
+ **-Instance** _instance_name_  
  Especifica o nome da instância que será analisada. Não há valor padrão. Se você não especificar esse parâmetro, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] não será verificado. O valor para uma instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é MSSQLSERVER. Para uma instância nomeada, use o nome da instância.  
   
- **-ASInstance**_AS_instance_name_   
+ **-ASInstance**  _AS_instance_name_  
  Especifica o nome da instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que será analisada. Não há valor padrão. Se você não especificar esse valor, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] não será verificado. O valor para uma instância padrão do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é MSSQLServerOLAPService. Para uma instância nomeada, use o nome da instância.  
   
- **-RSInstance**_RS_instance_name_   
+ **-RSInstance**  _RS_instance_name_  
  Especifica o nome da instância do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que será analisada. Não há valor padrão. Se você não especificar esse valor, o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não será verificado. O valor para uma instância padrão do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é ReportServer. Para uma instância nomeada, use o nome da instância.  
   
  **-SqlUser** _login_id_  
  Se você estiver usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esse valor será o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que o Supervisor de Atualização usará para conectar-se na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se você não especificar um logon, a Autenticação do Windows será usada para conectar-se na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- **-SqlPassword** _senha_  
+ **-SqlPassword** _password_  
  Se você usar o **- SqlUser** argumento, use esse argumento para especificar a senha para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon.  
   
  **-CSV**  
@@ -154,7 +154,7 @@ where <server_info> is any combination of the following:
 UpgradeAdvisorWizardCmd -ConfigFile "C:\My Documents\UpgradeConfig1.xml"  
 ```  
   
-### <a name="b-run-upgrade-advisor-using-default-configuration-settings"></a>b. Executar o Supervisor de Autenticação usando definições de configuração padrão  
+### <a name="b-run-upgrade-advisor-using-default-configuration-settings"></a>B. Executar o Supervisor de Autenticação usando definições de configuração padrão  
  O exemplo a seguir mostra como executar o Supervisor de Atualização a partir do prompt de comando usando definições de configuração padrão e a Autenticação do Windows.  
   
 ```  

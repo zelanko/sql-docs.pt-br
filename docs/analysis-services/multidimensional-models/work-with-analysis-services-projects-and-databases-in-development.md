@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 018f937ed07c202aad17d5e7758f41a3082c4870
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743112"
 ---
 # <a name="work-with-analysis-services-projects-and-databases-in-development"></a>Trabalhar com projetos e bancos de dados no desenvolvimento do Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

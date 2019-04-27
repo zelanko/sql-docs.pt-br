@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8ca50d2c29bcc1a4394561b4b5106e4da65afa93
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746818"
 ---
 # <a name="set-currency-conversion-options-business-intelligence-wizard"></a>Definir Opções de Conversão de Moeda (Assistente de Business Intelligence)
   Use a página **Definir Opções de Conversão de Moeda** para definir cálculos de conversão de moeda para um grupo de medidas que contém taxas de câmbio.  
@@ -43,7 +43,7 @@ ms.locfileid: "48205726"
  Selecione para indicar que as taxas de câmbio no grupo de medidas de taxa representam um multiplicador para a moeda de exemplo especificada.  
   
 ## <a name="see-also"></a>Consulte também  
- [Ajuda de F1 do Assistente do Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [Ajuda F1 do Assistente de Business Intelligence](business-intelligence-wizard-f1-help.md)   
  [Designer de cubo &#40;Analysis Services - dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Designer de dimensão &#40;Analysis Services - dados multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

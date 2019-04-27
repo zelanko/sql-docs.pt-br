@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c4c8938944401ad03e2bcbf1188b21c67bdf7654
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756496"
 ---
 # <a name="toolbar-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra de Ferramentas (guia KPIs, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel **Barra de Ferramentas** para executar ações comuns na guia **KPIs** do Designer de Cubo.  
@@ -28,7 +28,7 @@ ms.locfileid: "48198766"
  **Processar**  
  Clique para exibir a caixa de diálogo **Processar** e processar o cubo.  
   
- **Reconectar-se**  
+ **Reconnect**  
  Clique para reconectar a guia **KPIs** com a instância e o banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que contém o cubo, se a sessão da guia **KPIs** for desconectada devido a perda ou tempo limite da conexão.  
   
  **Novo KPI**  

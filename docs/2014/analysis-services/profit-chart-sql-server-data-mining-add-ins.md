@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ddeafaafd816e226edff764c8e273cde6df4eaad
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748450"
 ---
 # <a name="profit-chart-sql-server-data-mining-add-ins"></a>Gráfico de Ganho (Suplementos de Mineração de Dados do SQL Server)
   ![Botão gráfico de ganho na faixa de opções mineração de dados](media/dmc-profitchart.gif "botão gráfico de ganho na faixa de opções mineração de dados")  

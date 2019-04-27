@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 913d830772403f1a7e9abd622611663a0a0e141f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747830"
 ---
 # <a name="schema-generation-wizard-f1-help-analysis-services---multidimensional-data"></a>Ajuda F1 do Assistente de Geração de Esquema (Analysis Services – Dados Multidimensionais)
   Use o Assistente de Geração de Esquema para gerar automaticamente o esquema relacional para uma área de assunto baseada em cubos e dimensões existentes. Além disso, é possível popular tabelas geradas pelo assistente para dimensões de tempo e gerenciar a convenção de nomenclatura e opções do banco de dados da área de assunto.  

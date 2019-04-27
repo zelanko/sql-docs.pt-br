@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 06ca087cdb1e2009faa19ff8fb86f9ab4982fddd
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752963"
 ---
 # <a name="fetching-blob-data-using-irow"></a>Buscando dados BLOB usando IRow
   Uma coluna BLOB em um objeto de linha pode ser recuperada por meio **IRow:: Getcolumns**, ou **IRow:: Open** e **ISequentialStream**.  

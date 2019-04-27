@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: acecdb460ee61e16a82609b658eb20a2b38f323d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746308"
 ---
 # <a name="specify-attribute-ordering-business-intelligence-wizard"></a>Especificar a Ordenação de Atributos (Assistente de Business Intelligence)
   Use a página **Especificar a ordenação de atributos** para especificar a ordenação de atributos e de critérios de ordenação de atributos na dimensão selecionada.  
@@ -35,13 +35,13 @@ ms.locfileid: "48197956"
  **Critérios**  
  Especifique os critérios do **Atributo de Ordenação** a serem usados para ordenar os membros no **Atributo**correspondente. A tabela a seguir lista os critérios disponíveis.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Nome**|Ordenar o **Atributo** pelos nomes dos membros do atributo em **Atributo de Ordenação**.|  
 |**Chave**|Ordenar o **Atributo** pelas chaves dos membros do atributo em **Atributo de Ordenação**.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Ajuda de F1 do Assistente do Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [Ajuda F1 do Assistente de Business Intelligence](business-intelligence-wizard-f1-help.md)   
  [Designer de cubo &#40;Analysis Services - dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Designer de dimensão &#40;Analysis Services - dados multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

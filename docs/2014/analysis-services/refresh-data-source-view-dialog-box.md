@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 722c2ae62376d30076b5cf5cf582ff80be311e50
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748480"
 ---
 # <a name="refresh-data-source-view-dialog-box"></a>Caixa de diálogo Atualizar Exibição da Fonte de Dados
   Use a caixa de diálogo **Atualizar Exibição da Fonte de Dados** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para aceitar ou cancelar as alterações que ocorrerão como resultado da atualização da exibição da fonte de dados. A caixa de diálogo mostra as alterações que serão feitas à exibição da fonte de dados como resultado de alterações feitas à fonte de dados subjacente. Clique em **OK** para aceitar as alterações e atualizar a exibição da fonte de dados ou em **Cancelar** para ignorar as alterações e deixar a exibição da fonte de dados inalterada. É possível exibir a caixa de diálogo **Atualizar Exibição da Fonte de Dados** das seguintes maneiras:  
@@ -38,6 +38,6 @@ ms.locfileid: "48119616"
   
 ## <a name="see-also"></a>Consulte também  
  [Designers e caixas de diálogo do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Designer de exibição da fonte de dados &#40;Analysis Services - dados multidimensionais&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Designer de Exibição da Fonte de Dados &#40;Analysis Services – Dados multidimensionais&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

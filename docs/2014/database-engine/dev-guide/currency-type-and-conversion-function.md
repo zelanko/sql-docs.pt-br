@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a3a6a9c08672e489bd5b4939bd0899f2ebe46d5e
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155152"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753234"
 ---
 # <a name="currency-type-and-conversion-function"></a>Função de conversão e tipo de moeda
   Esse exemplo apresenta um tipo de dados de moeda definido pelo usuário usando C#. Esse tipo de dados definido pelo usuário encapsula um valor e uma cultura que ajudam a determinar o modo correto de renderizar o valor como um valor de moeda nessa cultura. Esse exemplo também fornece uma função de conversão de moeda que retorna uma instância do tipo de dados de moeda definido pelo usuário. Se o banco de dados AdventureWorks tiver uma taxa de conversão de USD (dólares americanos) para a moeda associada à cultura especificada, a função de conversão retornará um tipo de dados de moeda definido pelo usuário com a taxa convertida e a cultura correspondente à cultura solicitada. Caso contrário, um tipo de dados de moeda definido pelo usuário será retornado com o valor original, que deve ser em USD, e com a cultura `en-us`. O exemplo também demonstra como cancelar o registro e registrar métodos e assemblies CLR (Common Language Runtime) usando Transact-SQL.  

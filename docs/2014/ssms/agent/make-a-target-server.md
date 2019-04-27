@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a001509cba1ef02182963fd8d8f8946f95321ef
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659834"
 ---
 # <a name="make-a-target-server"></a>Criar um servidor de destino
   Este tópico descreve como criar um servidor de destino no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], ou SQL Server Management Objects (SMO).  
@@ -86,7 +86,7 @@ ms.locfileid: "52823660"
      **Criar um novo logon, se necessário, e atribuir-lhe direitos ao MSX**  
      Cria um novo logon no servidor de destino se o logon especificado ainda não existir.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-make-a-target-server"></a>Para criar um servidor de destino  
   

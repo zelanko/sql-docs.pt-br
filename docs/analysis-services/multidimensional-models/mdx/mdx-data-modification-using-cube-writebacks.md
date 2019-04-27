@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dc950c69a25ff976b8cdf1cd7cb4252c2584e0af
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740116"
 ---
-# <a name="mdx-data-modification---using-cube-writebacks"></a>Modificação de dados MDX - usando Cube Writebacks
+# <a name="mdx-data-modification---using-cube-writebacks"></a>Modificação de dados MDX – Usar write-backs de cubo
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  Você atualiza um cubo usando a instrução [UPDATE CUBE](../../../mdx/mdx-data-manipulation-update-cube.md). Essa instrução permite que você atualize uma tupla com um valor específico. Para usar a instrução UPDATE CUBE de forma eficiente para atualizar um cubo, você precisa entender a sintaxe da instrução, as condições de erro que podem acontecer, e como as atualizações podem afetar um cubo.  
+  Você atualiza um cubo usando a instrução [UPDATE CUBE](../../../mdx/mdx-data-manipulation-update-cube.md) . Essa instrução permite que você atualize uma tupla com um valor específico. Para usar a instrução UPDATE CUBE de forma eficiente para atualizar um cubo, você precisa entender a sintaxe da instrução, as condições de erro que podem acontecer, e como as atualizações podem afetar um cubo.  
   
 ## <a name="update-cube-statement-syntax"></a>Sintaxe da instrução UPDATE CUBE  
  A seguinte sintaxe descreve a instrução UPDATE CUBE:  
@@ -111,6 +111,6 @@ USE_EQUAL_ALLOCATION
 -   Alterando a granularidade da dimensão da dimensão incluída no write-back.  
   
 ## <a name="see-also"></a>Consulte também  
- [Modificando dados & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md)  
+ [Modificando dados &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md)  
   
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97ab8896d13bfb19790148fb6f01bb8e054ab270
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748078"
 ---
 # <a name="select-conversion-type-business-intelligence-wizard"></a>Selecionar Tipo de Conversão (Assistente de Business Intelligence)
   Use a página **Selecionar Tipo de Conversão** para definir a relação entre as moedas locais e as moedas de relatório para transações armazenadas em várias moedas. Uma moeda local é a moeda na qual as transações de medidas selecionadas na página **Selecionar Medidas** estão armazenadas. Uma moeda de relatório é a moeda na qual as transações selecionadas na página **Selecionar Medidas** são convertidas.  
@@ -49,7 +49,7 @@ ms.locfileid: "48092290"
  Por exemplo, a moeda corrente pode estar definida como USD (dólares dos EUA) e a tabela de fatos armazenar transações em USD. A seleção dessa opção converte essas transações da moeda corrente nas moedas de relatório especificadas. O resultado é que essas transações podem ser armazenadas na moeda corrente especificada e exibidas na moeda corrente especificada ou em qualquer uma das moedas de relatório especificadas na página **Especificar Moedas de Relatório** .  
   
 ## <a name="see-also"></a>Consulte também  
- [Ajuda de F1 do Assistente do Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [Ajuda F1 do Assistente de Business Intelligence](business-intelligence-wizard-f1-help.md)   
  [Designer de cubo &#40;Analysis Services - dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Designer de dimensão &#40;Analysis Services - dados multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 72579d679b0ced1fd3c260098bc68237f2980a3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748038"
 ---
 # <a name="sample-data-sql-server-data-mining-add-ins"></a>Dados de Amostra (Suplementos de Mineração de Dados do SQL Server)
   ![Assistente de partição de dados na faixa de opções mineração de dados](media/dmc-partition.gif "Assistente particionar os dados na faixa de opções mineração de dados")  
@@ -33,7 +33,7 @@ ms.locfileid: "48209886"
  Criar o tipo certo de dados para treinar e testar seus modelos é uma parte importante da mineração de dados, mas também é uma parte que pode ser tediosa sem as ferramentas corretas. O assistente executa a amostragem estratificada para garantir que os conjuntos de treinamento e teste são bem equilibrados.  
   
 ## <a name="random-sampling-and-oversampling"></a>Amostragem e sobreamostragem aleatórias  
- para obter informações sobre a ferramenta de configuração e recursos adicionais. A amostragem aleatória é a melhor maneira de assegurar que os dados usados para testar um modelo representem razoavelmente os dados usados para criar o modelo. Você pode criar aleatoriamente dados de exemplo armazenados no Excel ou em uma fonte de dados externa.  
+ . A amostragem aleatória é a melhor maneira de assegurar que os dados usados para testar um modelo representem razoavelmente os dados usados para criar o modelo. Você pode criar aleatoriamente dados de exemplo armazenados no Excel ou em uma fonte de dados externa.  
   
  Se você usar a opção de amostragem aleatória, o **dados de exemplo** assistente automaticamente cria conjuntos de dados de treinamento e teste e incluirá em planilhas separadas do Excel para referência posterior.  
   

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cec716534e6cffa7cc44aafb96ec0541e49d6e48
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643534"
 ---
 # <a name="analysis-services-powershell"></a>Analysis Services PowerShell
   O [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] contém um provedor SQLAS (Analysis Services PowerShell) e cmdlets para que você possa usar o Windows PowerShell para navegar em, administrar e consultar objetos do Analysis Services.  
@@ -62,8 +62,8 @@ Para obter mais informações sobre sintaxe e exemplos, consulte [Analysis Servi
 |Instâncias e bancos de dados tabulares|Com suporte para administração local e remota.<br /><br /> Para obter mais informações, consulte um blog de agosto de 2011 [gerenciar Tabular Models Using PowerShell](https://go.microsoft.com/fwlink/?linkID=227685).|  
 |Instâncias e bancos de dados PowerPivot para SharePoint|Suporte limitado. É possível usar conexões HTTP e o provedor SQLAS para visualizar informações da instância e do banco de dados.<br /><br /> Porém, não há suporte para usar os cmdlets. Você não deve usar o Analysis Services PowerShell para fazer backup e restauração de banco de dados PowerPivot na memória, nem deve adicionar ou remover funções, processar os dados ou executar script XMLA arbitrário.<br /><br /> Para fins de configuração, o PowerPivot para SharePoint tem suporte interno ao PowerShell que é fornecido separadamente. Para obter mais informações, consulte [referência do PowerShell para PowerPivot para SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint).|  
 |Conexões nativas a cubos locais<br /><br /> "Dados Source=c:\backup\test.cub"|Sem suporte.|  
-|Conexões HTTP a arquivos de conexão do modelo semântico BI (.bism) no SharePoint<br /><br /> "Fonte de dados =http://server/shared_docs/name.bism"|Sem suporte.|  
-|Conexões inseridas em bancos de dados PowerPivot<br /><br /> "Data Source = $Embedded$"|Sem suporte.|  
+|Conexões HTTP a arquivos de conexão do modelo semântico BI (.bism) no SharePoint<br /><br /> "Data Source=http://server/shared_docs/name.bism"|Sem suporte.|  
+|Conexões inseridas em bancos de dados PowerPivot<br /><br /> "Data Source=$Embedded$"|Sem suporte.|  
 |Contexto de servidor local em procedimentos armazenados do Analysis Services<br /><br /> "Fonte de dados = *"|Sem suporte.|  
   
 ##  <a name="bkmk_auth"></a> Requisitos de autenticação e considerações de segurança  
@@ -147,7 +147,7 @@ PS SQLSERVER:\SQLAS\Localhost\default> Remove-Variable -Name pwd
     ```  
   
 ###  <a name="bkmk_remote"></a> Habilitar a administração remota  
- Antes de poder usar o Analysis Services PowerShell com uma instância remota do Analysis Services, é necessário primeiramente habilitar a administração remota e o compartilhamento de arquivos. O erro a seguir indica um problema de configuração de firewall: “O servidor RPC não está disponível. (Exceção de HRESULT: 0x800706BA) ".  
+ Antes de poder usar o Analysis Services PowerShell com uma instância remota do Analysis Services, é necessário primeiramente habilitar a administração remota e o compartilhamento de arquivos. O erro a seguir indica um problema de configuração de firewall: “O servidor RPC não está disponível. (Exceção de HRESULT: 0x800706BA)".  
   
 1.  Verifique se ambos os computadores local e remoto possuem as versões [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] das ferramentas de cliente e servidor.  
   

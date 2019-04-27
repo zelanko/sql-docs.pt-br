@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3711c21f6d69a7b5fd93456811e4bd3874116774
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746170"
 ---
 # <a name="specify-object-counts-aggregation-design-wizard"></a>Especificar Contagens de Objetos (Assistente de Design de Agregação)
   Use a página **Especificar Contagens de Objetos** para calcular a contagem de objetos no cubo automaticamente ou para inserir contagens estimadas manualmente. O Assistente de Design de Agregação usa a contagem de objetos para estimar requisitos de armazenamento.  
@@ -33,7 +33,7 @@ ms.locfileid: "48160876"
  **Contagem de partições**  
  (Opcional) Digite o número estimado de linhas no grupo de medidas e digite as contagens de membros de atributo estimadas nas partições.  
   
- **Contagem**  
+ **Count**  
  Calcula e popula novamente os valores na coluna **Contagem estimada** para todos os campos vazios. Os campos que já exibem uma contagem não são atualizados.  
   
 ## <a name="see-also"></a>Consulte também  

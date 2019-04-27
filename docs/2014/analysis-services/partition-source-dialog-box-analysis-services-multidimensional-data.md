@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f88f307f9cbace833a83603e0f24382b7e82e62f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743562"
 ---
 # <a name="partition-source-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Origem da Partição (Analysis Services - Dados Multidimensionais)
   Use a caixa de diálogo **Origem da Partição** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para especificar a origem dos dados da tabela de fatos para uma partição. É possível exibir a caixa de diálogo **Origem da Partição** das seguintes maneiras:  
@@ -31,7 +31,7 @@ ms.locfileid: "48203176"
   
 |Opção|Definição|  
 |------------|----------------|  
-|**Tipo de associação**|Selecione o tipo de associação a ser usado para a origem da partição especificada. As seguintes opções estão disponíveis:<br /><br /> **Associação de tabela**: Selecione para exibir o **detalhes de associação de tabela** painel e indicar que a partição está associada ao conteúdo de uma tabela em uma exibição de fonte de dados ou fonte de dados. Para obter mais informações sobre o painel **Detalhes de Associação de Tabela**, consulte [Detalhes de Associação de Tabela &#40;Caixa de diálogo Fonte da Partição&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](table-binding-partition-source-dialog-analysis-services-multidimensional-data.md).<br /><br /> **Detalhe**: Selecione para exibir o **detalhes de associação de consulta** painel e indicar que a partição está associada ao conteúdo de uma consulta executada em uma fonte de dados. Para obter mais informações sobre o painel **Detalhes de Associação de Consulta**, consulte [Detalhes de Associação de Consulta &#40;Caixa de diálogo Fonte da Partição&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](query-binding-partition-source-dialog-analysis-services-multidimensional-data.md).|  
+|**Tipo de associação**|Selecione o tipo de associação a ser usado para a origem da partição especificada. As seguintes opções estão disponíveis:<br /><br /> **Associação de tabela**: Selecione para exibir o painel **Detalhes de Associação de Tabela** e indicar que a partição está associada ao conteúdo de uma tabela em uma fonte de dados ou exibição da fonte de dados. Para obter mais informações sobre o painel **Detalhes de Associação de Tabela**, consulte [Detalhes de Associação de Tabela &#40;Caixa de diálogo Fonte da Partição&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](table-binding-partition-source-dialog-analysis-services-multidimensional-data.md).<br /><br /> **Detalhe**: Selecione para exibir o painel **Detalhes de Associação de Consulta** e indicar que a partição está associada ao conteúdo de uma consulta executada em uma fonte de dados. Para obter mais informações sobre o painel **Detalhes de Associação de Consulta**, consulte [Detalhes de Associação de Consulta &#40;Caixa de diálogo Fonte da Partição&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](query-binding-partition-source-dialog-analysis-services-multidimensional-data.md).|  
 |**Detail**|Exibe a caixa de diálogo **Detalhes de Associação de Tabela** ou **Detalhes de Associação de Consulta** , dependendo do valor da opção **Tipo de Associação** .|  
   
 ## <a name="see-also"></a>Consulte também  

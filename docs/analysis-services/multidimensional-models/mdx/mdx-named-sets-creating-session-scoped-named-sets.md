@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fdf177cedcd73069e73c1ec7b4c7db5cfb497969
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62739986"
 ---
-# <a name="mdx-named-sets---creating-session-scoped-named-sets"></a>Conjuntos nomeados de MDX denominado conjuntos - criando no escopo da sessão
+# <a name="mdx-named-sets---creating-session-scoped-named-sets"></a>Conjuntos nomeados MDX conjuntos nomeado – criando no escopo da sessão
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  Para criar um conjunto nomeado que esteja disponível por meio de uma sessão da linguagem MDX, use a instrução [CREATE SET](../../../mdx/mdx-data-definition-create-set.md). Um conjunto nomeado criado com a instrução CREATE SET não será removido até que a sessão MDX seja encerrada.  
+  Para criar um conjunto nomeado que esteja disponível por meio de uma sessão da linguagem MDX, use a instrução [CREATE SET](../../../mdx/mdx-data-definition-create-set.md) . Um conjunto nomeado criado com a instrução CREATE SET não será removido até que a sessão MDX seja encerrada.  
   
  Como discutido neste tópico, a sintaxe da palavra-chave WITH é direta e fácil usar.  
   
@@ -50,6 +50,6 @@ select SetCities_2_3 on 0 from [Store]
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Criar no escopo da consulta nomeada conjuntos & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md)  
+ [Criando conjuntos nomeados no escopo da consulta &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md)  
   
   

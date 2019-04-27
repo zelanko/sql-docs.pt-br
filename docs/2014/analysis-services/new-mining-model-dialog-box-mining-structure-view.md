@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b02eab5b0b2d6f6010df51151929c71188290b9c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059338"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743602"
 ---
 # <a name="new-mining-model-dialog-box-mining-structure-view"></a>Caixa de diálogo novo modelo de mineração (exibição de modelo de mineração)
   Use a caixa de diálogo **Novo Modelo de Mineração** para adicionar um novo modelo de mineração para a estrutura de mineração.  

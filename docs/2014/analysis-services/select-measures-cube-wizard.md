@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4e37d532bd669474e4e91cfcdb0942b691ba3234
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747289"
 ---
 # <a name="select-measures-cube-wizard"></a>Selecionar Medidas (Assistente para Cubos)
   Use a página **Selecionar Medidas** para selecionar os grupos de medidas e medidas a serem criados.  

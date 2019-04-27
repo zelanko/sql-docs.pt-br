@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2494ab96cc3b4964c26a1ce17593e9b5aece2e7e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774920"
 ---
 # <a name="migrating-check-and-foreign-key-constraints"></a>Verificação de migração e restrições Chave Estrangeira
   Não há suporte para verificação e restrições de chave estrangeira na [!INCLUDE[hek_2](../includes/hek-2-md.md)] em [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Essas construções são geralmente usadas para impor a integridade de dados lógicos no esquema e podem ser importantes para manter a exatidão funcional de aplicativos.  

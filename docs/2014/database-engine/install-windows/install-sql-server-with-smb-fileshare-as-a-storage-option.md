@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3242f463e24322921b16a513c1b3a6905965b390
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775318"
 ---
 # <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>Instalar o SQL Server com o compartilhamento de arquivos SMB como uma opção de armazenamento
   Iniciando [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], bancos de dados do sistema (mestre, modelo, MSDB e TempDB) e [!INCLUDE[ssDE](../../includes/ssde-md.md)] bancos de dados de usuário podem ser instalados com o servidor de arquivos do bloco de mensagens de servidor (SMB) como uma opção de armazenamento. Isso se aplica a instalações autônomas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a FCI (instalações de cluster de failover) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -113,8 +113,8 @@ ms.locfileid: "54136046"
 -   Ao desanexar um banco de dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que reside no armazenamento anexado por rede, você poderá ter um problema de permissão de banco de dados ao tentar reanexar o banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O problema é definido [neste artigo da base de dados](https://go.microsoft.com/fwlink/?LinkId=237321) (https://go.microsoft.com/fwlink/?LinkId=237321)). Para resolver este problema, consulte a seção **Mais Informações** no artigo da Base de Dados de Conhecimento.  
   
 -   Alguns terceiros, como o dispositivo NetApp, não dão suporte a todas as chamadas de API do SQL Server. Com isso, você poderá receber:   
-    2015-06-04 13:14:19.97 spid9s erro: 17053, severidade: 16, estado: 1.  
-    2015-06-04 13:14:19.97 spid9s Dodevioctlout GetOverlappedResult(): Erro de sistema operacional 1 (incorreto função.) encontrado.  
+    2015-06-04 13:14:19.97 spid9s erro: 17053, Gravidade: 16, Estado: 1.  
+    2015-06-04 13:14:19.97 spid9s      DoDevIoCtlOut() GetOverlappedResult() : Erro de sistema operacional 1 (incorreto função.) encontrado.  
   
      Para NTFS, o erro é inofensivo.  No entanto, para ReFS, o erro pode causar uma degradação significativa no desempenho.  
   

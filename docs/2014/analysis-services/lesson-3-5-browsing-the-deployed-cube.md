@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5418cadc533b5253e15f8677753dd0213319ef0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729330"
 ---
 # <a name="browsing-the-deployed-cube"></a>Navegando no cubo implantado
   Na tarefa a seguir, você navegará no cubo do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Como nossa análise compara medidas em várias dimensões, você usará uma Tabela Dinâmica do Excel para procurar seus dados. Usar uma Tabela Dinâmica permite colocar informações de cliente, data e produto em eixos diferentes, de forma que você possa ver como as Vendas pela Internet são alteradas quando exibidas por períodos de tempo específicos, demografia de cliente e linhas de produto.  
@@ -27,7 +27,7 @@ ms.locfileid: "48077787"
   
 2.  Abra a guia **Navegador** e clique no botão **Reconectar** da barra de ferramentas do designer.  
   
-3.  Clique no ícone de Excel para iniciar o Excel usando o banco de dados de espaço de trabalho como a fonte de dados. Quando for solicitado para habilitar conexões, clique em **Habilitar**.  
+3.  Clique no ícone de Excel para iniciar o Excel usando o banco de dados de workspace como a fonte de dados. Quando for solicitado para habilitar conexões, clique em **Habilitar**.  
   
 4.  Na Lista de Campos da Tabela Dinâmica, expanda **Internet Sales**e depois arraste a medida **Sales Amount** para a área de **Valores** .  
   
@@ -46,6 +46,6 @@ ms.locfileid: "48077787"
      ![Vendas pela Internet por região e linha de produtos](../../2014/tutorials/media/l3-cube-browser-finish.gif "vendas pela Internet por região e linha de produto")  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 4: definindo propriedades de dimensão e atributo avançadas](../analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
+ [Lição 4: Definindo propriedades de dimensão e atributo avançadas](../analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
   
   

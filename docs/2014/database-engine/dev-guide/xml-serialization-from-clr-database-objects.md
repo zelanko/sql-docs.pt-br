@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 646d15dc3091323e6e7db2af757640122fb2f0fd
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779774"
 ---
 # <a name="xml-serialization-from-clr-database-objects"></a>Serialização XML de objetos de banco de dados CLR
   A serialização XML é necessária em dois cenários:  

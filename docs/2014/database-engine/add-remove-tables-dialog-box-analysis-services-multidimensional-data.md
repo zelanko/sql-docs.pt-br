@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f903e6c783f71add561cafb1e1d5087b85c8d314
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792123"
 ---
 # <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Adicionar ou remover tabelas (Analysis Services - dados multidimensionais)
   Use a caixa de diálogo **Adicionar/Remover Tabelas** no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para adicionar tabelas em uma fonte de dados a uma exibição da fonte de dados ou removê-la dessa exibição. Você pode exibir a caixa de diálogo **Adicionar/Remover Tabelas** das seguintes maneiras:  
@@ -54,6 +54,6 @@ ms.locfileid: "48200416"
   
 ## <a name="see-also"></a>Consulte também  
  [Designers e caixas de diálogo do Analysis Services &#40;dados multidimensionais&#41;](../analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Designer de exibição da fonte de dados &#40;Analysis Services - dados multidimensionais&#41;](../analysis-services/data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Designer de Exibição da Fonte de Dados &#40;Analysis Services – Dados multidimensionais&#41;](../analysis-services/data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

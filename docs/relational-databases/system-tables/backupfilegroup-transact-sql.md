@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b1d7cc485899a7f8173552788471ef6ec45ce49c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62645183"
 ---
 # <a name="backupfilegroup-transact-sql"></a>backupfilegroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47832974"
 > [!NOTE]  
 >  O **backupfilegroup** tabela mostra a configuração do grupo de arquivos do banco de dados, e não do conjunto de backup. Para identificar se um arquivo está incluído no conjunto de backup, use o **is_present** coluna o [backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md) tabela.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**backup_set_id**|**int**|Conjunto de backup que contém este grupo de arquivos.|  
 |**name**|**sysname**|Nome do grupo de arquivos.|  

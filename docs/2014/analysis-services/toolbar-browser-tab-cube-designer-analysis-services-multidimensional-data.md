@@ -12,28 +12,28 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 050be457b1b7915e4354e8a0edf2fe79fabf8d67
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756815"
 ---
 # <a name="toolbar-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra de Ferramentas (guia Navegador, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use os recursos na **Barra de Ferramentas** no Designer de Cubo para executar operações comuns ao criar ou procurar um cubo ou seu objeto, ou ao criar uma consulta MDX. As operações comuns ao tempo de design e exibição de consulta incluem a definição de o contexto do usuário, o processamento dos objetos e a definição do idioma padrão.  
   
  A tabela a seguir lista os botões da **Barra de Ferramentas** e suas funções.  
   
-|Botão|Description|  
+|Botão|Descrição|  
 |------------|-----------------|  
 |**Editar como Texto**|Não habilitado para esse tipo de fonte de dados.|  
 |**Importar**|Importa uma consulta existente de um arquivo de definição de relatório (.rdl) no sistema de arquivos.|  
 |![Alterar para a exibição de consulta MDX](media/rsqdicon-commandtypemdx.gif "Alterar para a exibição de consulta MDX")|Alternar para Tipo de Comando MDX.|  
 |![Atualizar dados de resultados](media/rsqdicon-refresh.gif "Atualizar dados de resultados")|Atualiza metadados na fonte de dados.|  
-|![Adicionar membro calculado](media/rsqdicon-addcalculatedmember.gif "Adicionar membro calculado")|Exibe a caixa de diálogo **Construtor de Membro Calculado** .|  
+|![Add calculated member](media/rsqdicon-addcalculatedmember.gif "Add calculated member")|Exibe a caixa de diálogo **Construtor de Membro Calculado** .|  
 |![Alternar para mostrar células vazias](media/rsqdicon-showemptycells.gif "Alternar para mostrar células vazias")|Alterna entre mostrar ou ocultar células vazias no painel Dados. (Equivale a usar a cláusula NON EMPTY em MDX).|  
 |![Executar a consulta automaticamente](media/rsqdicon-autoexecute.gif "Executar a consulta automaticamente")|Executa automaticamente a consulta e mostra o resultado sempre que é feita uma alteração. Os resultados são mostrados no painel Dados.|  
 |![Botão Mostrar Agregações](media/rsqdicon-showaggregations.gif "Botão Mostrar Agregações")|Mostra agregações no painel Dados.|  
-|![Exclua](media/rsqdicon-delete.gif "excluir")|Exclui da consulta a coluna selecionada no painel Dados.|  
+|![Excluir](media/rsqdicon-delete.gif "Excluir")|Exclui da consulta a coluna selecionada no painel Dados.|  
 |![Ícone da caixa de diálogo Parâmetros de Consulta](media/iconqueryparameter.gif "Ícone da caixa de diálogo Parâmetros de Consulta")|Exiba a caixa de diálogo **Parâmetros de Consulta** . Quando você especifica os valores para um parâmetro de consulta, um parâmetro com o mesmo nome é automaticamente criado.|  
 |![Botão Preparar Consulta](media/rsqdicon-preparequery.gif "Botão Preparar Consulta")|Prepara a consulta.|  
 |![Executar a consulta](media/rsqdicon-run.gif "Executar a consulta")|Executa a consulta e exibe os resultados no painel Dados.|  
@@ -44,7 +44,7 @@ ms.locfileid: "48126466"
   
 -   **Editar como Texto**  
   
--   **Adicionar membro calculado** (![Adicionar membro calculado](media/rsqdicon-addcalculatedmember.gif "Adicionar membro calculado"))  
+-   **Adicionar Membro Calculado** (![Add calculated member](media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
   
 -   **Mostrar Células Vazias** (![Alternar para mostrar células vazias](media/rsqdicon-showemptycells.gif "Alternar para mostrar células vazias"))  
   
@@ -54,14 +54,14 @@ ms.locfileid: "48126466"
   
 ## <a name="options"></a>Opções  
   
-|Opção|Description|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |**Processar**|Clique para exibir a caixa de diálogo **Processar** e processar o cubo. Para obter mais informações sobre a caixa de diálogo **Processar**, consulte [Caixa de diálogo Processar &#40;Analysis Services – Dados Multidimensionais&#41;](process-dialog-box-analysis-services-multidimensional-data.md).|  
 |**Alterar usuário**|Clique para exibir a caixa de diálogo **Contexto de Segurança** e alterar o usuário e a função usados na guia **Navegador**. Para obter mais informações sobre a caixa de diálogo **Contexto de Segurança**, consulte [Caixa de diálogo Contexto de Segurança &#40;Analysis Services – Dados Multidimensionais&#41;](security-context-dialog-box-analysis-services-multidimensional-data.md).|  
-|**Reconectar-se**|Clique para reconectar a guia **Cálculos** com a instância e o banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que contém o cubo, se a sessão da guia **Navegador** for desconectada devido a perda ou tempo limite da conexão.|  
+|**Reconnect**|Clique para reconectar a guia **Cálculos** com a instância e o banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que contém o cubo, se a sessão da guia **Navegador** for desconectada devido a perda ou tempo limite da conexão.|  
 |**Atualizar**|Clique para atualizar os painéis de **Metadados** e de **Relatórios** .|  
 |**Classificar em Ordem Crescente**|Clique para classificar as irmãs da linha selecionada no painel de **Relatório** em ordem crescente no idioma especificado em **Idioma**.<br /><br /> **Observação** esta opção será habilitada apenas se uma célula no painel **Relatórios** for selecionada.|  
-|**Classificar em Ordem Decrescente**|Clique para classificar as irmãs da linha selecionada no painel de **Relatório** em ordem decrescente no idioma especificado em **Idioma**.<br /><br /> Observação: esta opção será habilitada apenas se uma célula no painel **Relatórios** for selecionada.|  
+|**Classificar em Ordem Decrescente**|Clique para classificar as irmãs da linha selecionada no painel de **Relatório** em ordem decrescente no idioma especificado em **Idioma**.<br /><br /> Observação: Essa opção é habilitada somente se uma célula na **relatórios** painel é selecionado.|  
 |**Filtro automático**|Clique para filtrar os resultados automaticamente no painel **Resultado** .|  
 |**Mostrar apenas de cima para baixo**|Selecione um valor ou percentual para mostrar apenas o número superior ou inferior ou o percentual de células no painel **Relatório** com base na medida selecionada.<br /><br /> Para obter mais informações sobre essa opção, consulte [TopCount &#40;MDX&#41;](/sql/mdx/topcount-mdx), [TopPercent &#40;MDX&#41;](/sql/mdx/toppercent-mdx), [BottomCount &#40;MDX&#41;](/sql/mdx/bottomcount-mdx) e [BottomPercent &#40;MDX&#41;](/sql/mdx/bottompercent-mdx).|  
 |**Subtotal**|Clique para exibir subtotais.|  

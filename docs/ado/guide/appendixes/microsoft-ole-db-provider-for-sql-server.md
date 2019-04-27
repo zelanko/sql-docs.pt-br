@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f8b5759c0ede8ea6579da11563849df191ad84b1
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350470"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678664"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Provedor Microsoft OLE DB para visão geral do SQL Server
 O Microsoft OLE DB Provider para SQL Server, SQLOLEDB, permite que o ADO para acessar o Microsoft SQL Server.
 
-**Observação:** , não é recomendável usar esse driver para novo desenvolvimento. O novo provedor de OLE DB é chamado a [Microsoft Driver do OLE DB para SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) que será atualizado com os mais recentes recursos de servidor no futuro.
+**OBSERVAÇÃO:**  Não é recomendável usar esse driver para novo desenvolvimento. O novo provedor de OLE DB é chamado a [Microsoft Driver do OLE DB para SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) que será atualizado com os mais recentes recursos de servidor no futuro.
 
 ## <a name="connection-string-parameters"></a>Parâmetros de cadeia de caracteres de Conexão
  Para se conectar ao provedor, defina as *provedor* argumento para o [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) propriedade para:
@@ -47,7 +47,7 @@ User ID=MyUserID;Password=MyPassword;"
 
  A cadeia de caracteres consiste nessas palavras-chave:
 
-|Palavra-chave|Description|
+|Palavra-chave|Descrição|
 |-------------|-----------------|
 |**Provedor**|Especifica o provedor OLE DB para SQL Server.|
 |**Fonte de dados** ou **Server**|Especifica o nome de um servidor.|
@@ -61,7 +61,7 @@ User ID=MyUserID;Password=MyPassword;"
 ## <a name="provider-specific-connection-parameters"></a>Parâmetros de Conexão específicas do provedor
  O provedor oferece suporte a vários parâmetros de conexão específica do provedor além daqueles definidos pelo ADO. Como com as propriedades de conexão ADO, essas propriedades específicas do provedor podem ser definidas por meio de [propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) coleção de um [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) ou pode ser definido como parte do **ConnectionString**.
 
-|Parâmetro|Description|
+|Parâmetro|Descrição|
 |---------------|-----------------|
 |Trusted_Connection|Indica o modo de autenticação do usuário. Isso pode ser definido como **Yes** ou **não**. O valor padrão é **não**. Se essa propriedade é definida como **Yes**, SQLOLEDB usa o modo de autenticação do Microsoft Windows NT para autorizar o acesso de usuário no banco de dados do SQL Server especificado pela **local** e [fonte de dados ](../../../ado/reference/ado-api/datasource-property-ado.md) valores de propriedade. Se essa propriedade é definida como **não**, SQLOLEDB usa modo misto para autorizar o acesso de usuário no banco de dados do SQL Server. O logon do SQL Server e a senha são especificadas na **Id de usuário** e **senha** propriedades.|
 |Idioma Atual|Indica um nome de idioma do SQL Server. Identifica o idioma usado para seleção de mensagem de sistema e formatação. O idioma deve ser instalado no SQL Server, caso contrário, abertura a conexão falhará.|
@@ -121,7 +121,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 
 -   Várias coerções de tipo de dados resultará em tipos que não correspondem. Por exemplo, a coerção uma **sql_variant** com um subtipo do **GUID** para um **DBTYPE_VARIANT** resultará em um subtipo do **safearray**(bytes) . Conversão desse tipo de volta para um **sql_variant** resultará em um novo subtipo **matriz**(bytes).
 
--   **Conjunto de registros** campos que contêm **sql_variant** dados podem ser remotos (empacotado) ou persistente somente se o **sql_variant** contiver subtipos específicos. A tentativa de remoto ou manter os dados com o seguinte sem suporte subtipos causará um erro de tempo de execução (não há suporte para conversão) do provedor de persistência (MSPersist) Microsoft: **VT_VARIANT**, **VT_RECORD**, **VT_ILLEGAL**, **VT_UNKNOWN**, **VT_BSTR**, e **VT_DISPATCH.**
+-   **Conjunto de registros** campos que contêm **sql_variant** dados podem ser remotos (empacotado) ou persistente somente se o **sql_variant** contiver subtipos específicos. A tentativa de remoto ou manter os dados com o seguinte sem suporte subtipos causará um erro de tempo de execução (não há suporte para conversão) do provedor de persistência de Microsoft (MSPersist): **VT_VARIANT**, **VT_RECORD**, **VT_ILLEGAL**, **VT_UNKNOWN**, **VT_BSTR**, and **VT_DISPATCH.**
 
 -   O provedor OLE DB para SQL Server no MDAC 2.7, MDAC 2.8 e 6.0 do Windows DAC tem uma propriedade dinâmica chamada **permitir variantes nativas** que, como o nome sugere, permite que os desenvolvedores acessem os **sql_variant** em seu formulário nativo em vez de um **DBTYPE_VARIANT**. Se essa propriedade for definida e um **conjunto de registros** é aberta com o mecanismo de Cursor do cliente (**adUseClient**), o **Recordset.Open** chamada falhará. Se essa propriedade é definida e uma **conjunto de registros** é aberto com cursores de servidor (**adUseServer**), o **Recordset.Open** chamada terá êxito, mas acessando as colunas do tipo **sql_variant** produzirá um erro.
 
@@ -135,7 +135,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 ## <a name="dynamic-properties"></a>Propriedades Dinâmicas
  O Microsoft OLE DB Provider para SQL Server insere várias propriedades dinâmicas para o **propriedades** coleção da não abertos [Conexão](../../../ado/reference/ado-api/connection-object-ado.md), [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)e [ Comando](../../../ado/reference/ado-api/command-object-ado.md) objetos.
 
- As tabelas a seguir são um cross-index dos nomes de ADO e OLE DB para cada propriedade dinâmica. O referência do programador DB OLE se refere a um nome de propriedade ADO usando o termo "Descrição". Você pode encontrar mais informações sobre essas propriedades na referência do OLE DB do programador. Pesquise o nome de propriedade do OLE DB no índice ou veja [apêndice c: OLE DB Properties](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292).
+ As tabelas a seguir são um cross-index dos nomes de ADO e OLE DB para cada propriedade dinâmica. O referência do programador DB OLE se refere a um nome de propriedade ADO usando o termo "Descrição". Você pode encontrar mais informações sobre essas propriedades na referência do OLE DB do programador. Pesquise o nome da propriedade do OLE DB no índice ou consulte [apêndice c: Propriedades OLE DB](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292).
 
 ## <a name="connection-dynamic-properties"></a>Propriedades dinâmicas da Conexão
  As propriedades a seguir são adicionadas para o **propriedades** coleção da **Conexão** objeto.
@@ -352,7 +352,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |Identidade de linha forte|DBPROP_STRONGIDENTITY|
 |Capacidade de atualização|DBPROP_UPDATABILITY|
 |Usar indicadores|DBPROP_BOOKMARKS|
-|Raiz XML|SSPROP_STREAM_XMLROOT|
+|XML Root|SSPROP_STREAM_XMLROOT|
 |XSL|SSPROP_STREAM_XSL|
 
  Para detalhes específicos de implementação e funcionais informações sobre o Microsoft SQL Server OLE DB Provider, consulte a [provedor do SQL Server](https://msdn.microsoft.com/adf1d6c4-5930-444a-9248-ff1979729635).

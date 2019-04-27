@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4398085227952f30e4df7d54ac78c1aef1355173
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803948"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62664045"
 ---
 # <a name="brokermessage-classify-event-class"></a>classe de evento Broker:Message Classify
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gera um evento **Broker:Message Classify** quando o Broker Service determina o roteamento de uma mensagem.  
@@ -33,7 +33,7 @@ ms.locfileid: "52803948"
 |**DatabaseID**|**int**|A ID do banco de dados especificada pela instrução USE *database* ou a ID do banco de dados padrão se nenhuma instrução USE *database* tiver sido emitida para uma determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados **ServerName** for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |**EventClass**|**int**|O tipo de classe de evento capturado. Sempre **141** para **Broker:Message Classify**.|27|Não|  
 |**EventSequence**|**int**|Número de sequência para esse evento.|51|Não|  
-|**EventSubClass**|**nvarchar**|O tipo de subclasse de evento, fornecendo mais informações sobre cada classe de evento. Essa coluna pode conter os seguintes valores:<br /><br /> **Local**: A rota escolhida tem o endereço LOCAL.<br /><br /> **Remoto**: A rota escolhida tem um endereço diferente de LOCAL.<br /><br /> **Atrasado**: A mensagem está atrasada, porque o encaminhamento está desabilitado ou porque não existe rota correspondente.|21|Sim|  
+|**EventSubClass**|**nvarchar**|O tipo de subclasse de evento, fornecendo mais informações sobre cada classe de evento. Essa coluna pode conter os seguintes valores:<br /><br /> **Local**: A rota escolhida tem o endereço LOCAL.<br /><br /> **Remoto**: A rota escolhida tem um endereço diferente de LOCAL.<br /><br /> **Atrasado**: A mensagem está atrasada porque o encaminhamento está desabilitado ou porque não há nenhuma rota correspondente.|21|Sim|  
 |**FileName**|**nvarchar**|O nome do serviço para o qual se destina a mensagem.|36|Não|  
 |**GUID**|**uniqueidentifier**|A ID de conversa da caixa de diálogo. Esse identificador é transmitido como parte da mensagem e é compartilhado por ambos os lados da conversa.|54|Não|  
 |**HostName**|**nvarchar**|O nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o nome do host for fornecido pelo cliente. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  

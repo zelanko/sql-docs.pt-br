@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 36e74f875b8306a8678e0197d95f1fe18c5ea7f6
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746728"
 ---
 # <a name="specify-dimension-type-dimension-wizard"></a>Especificar Tipo de Dimensão (Assistente para Dimensões)
   Use a página **Especificar Tipo de Dimensão** para definir o tipo de dimensão e adicionar tipos especiais de atributo associados com o tipo de dimensão selecionado para a dimensão.  
@@ -30,7 +30,7 @@ ms.locfileid: "50145581"
  **Tipo de dimensão**  
  Selecione o tipo de dimensão para a dimensão. A tabela a seguir lista os tipos de dimensão disponíveis.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Contas**|As dimensões de conta contêm dados e metadados que representam uma lista de contas.<br /><br /> Para obter mais informações sobre dimensões de conta, consulte [Criar uma Conta de Finanças de dimensão de tipo pai-filho](multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md).|  
 |**BillOfMaterials**|Dimensões de lista de materiais (ou dimensões BOM) são dimensões regulares nas quais os dados e metadados representam inventário ou informações de produção, como listas de peças para produtos.<br /><br /> Para obter mais informações sobre dimensões regulares, consulte [Tipos de dimensão](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  

@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b100c23c1600a9c5fe4af9a39e16f8bd861656f
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781930"
 ---
 # <a name="smo-how-to-topics"></a>Tópicos de instruções sobre SMO
   Os tópicos de instruções sobre SMO fornecem informações sobre como configurar o ambiente de programação do [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET para criar programas no [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] ou no C#.  

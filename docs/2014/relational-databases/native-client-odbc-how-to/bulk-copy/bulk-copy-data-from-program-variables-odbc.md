@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3489e7a925ec09f84397ea27e5a749180999a9fc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753638"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>Copiar dados em massa de variáveis de programa (ODBC)
   Este exemplo mostra como usar funções de cópia em massa para copiar dados em massa de variáveis de programa para o SQL Server por meio de `bcp_bind` e `bcp_sendrow`. (O código de verificação de erro foi removido para simplificar o exemplo.)  

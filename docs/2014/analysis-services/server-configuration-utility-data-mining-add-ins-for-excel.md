@@ -12,18 +12,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8e7a40b0cbcab787b6aa29abaa828aedcce8f5c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746798"
 ---
 # <a name="server-configuration-utility-data-mining-add-ins-for-excel"></a>Utilitário de Configuração de Servidor (Suplementos de Mineração de Dados para Excel)
-  Quando você instala os Suplementos de Mineração de Dados para Excel, um Utilitário de Configuração de Servidor também é instalado e será executado na primeira vez em que os suplementos forem abertos. Este tópico descreve como usar o utilitário para se conectar a uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e configurar um banco de dados para o trabalho com modelos de mineração de dados.  
+  Quando você instala os suplementos de mineração de dados para Excel, um utilitário de configuração do servidor também é instalado e será executado na primeira vez que você abra os suplementos. Este tópico descreve como usar o utilitário para se conectar a uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e configurar um banco de dados para trabalhar com modelos de mineração de dados.  
   
 
   
-##  <a name="bkmk_step1"></a> Etapa 1: Conectar-se ao Analysis Services  
+##  <a name="bkmk_step1"></a> Etapa 1: Conectar ao Analysis Services  
  Escolha o servidor do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que fornece os algoritmos de mineração de dados e armazena os modelos de mineração de dados.  
   
  Quando você cria uma conexão para permitir a mineração de dados, é necessário escolher um servidor onde seja possível fazer experiências com modelos de mineração de dados. Recomendamos que você crie um novo banco de dados do servidor e dedique o novo banco de dados da mineração de dados ou peça ao administrador para preparar um servidor de mineração de dados. Dessa forma, você pode criar modelos sem afetar o desempenho de outros serviços.  
@@ -45,7 +45,7 @@ ms.locfileid: "48069626"
   
  O assistente detecta primeiro as configurações no servidor que você especificou. Se o servidor já permita modelos de mineração temporários, você poderá clicar **próxima** para continuar. O assistente também fornece instruções sobre como habilitar modelos de mineração temporários no servidor especificado do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ou como fazer uma solicitação ao administrador do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
-##  <a name="bkmk_step3"></a> Etapa 3: Criar o banco de dados para usuários de suplemento  
+##  <a name="bkmk_step3"></a> Etapa 3: Criar banco de dados para usuários de suplemento  
  Nesta página do assistente de instalação e configuração, você pode criar um novo banco de dados dedicado à mineração de dados ou selecionar um banco de dados [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] existente.  
   
 > [!WARNING]  

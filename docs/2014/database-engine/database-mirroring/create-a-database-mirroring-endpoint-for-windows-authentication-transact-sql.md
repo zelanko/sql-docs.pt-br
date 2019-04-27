@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ae13b028a740469a2acc4957038d7c2a2f5a6fc6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755289"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows (Transact-SQL)
   Este tópico descreve como criar um ponto de extremidade de espelhamento de banco de dados que usa a Autenticação do Windows no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para oferecer suporte ao espelhamento de banco de dados ou ao [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] , cada instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exige um ponto de extremidade de espelhamento de banco de dados. Uma instância do servidor só pode ter em um ponto de extremidade do espelhamento de banco de dados, que tem uma porta única. Um ponto de extremidade do espelhamento de banco de dados poderá usar qualquer porta que estiver disponível no sistema local quando o ponto de extremidade for criado. Todas as sessões de espelhamento de banco de dados em uma instância do servidor escutam aquela porta e todas as conexões que chegam para o espelhamento de banco de dados usam aquela porta.  
@@ -33,7 +33,7 @@ ms.locfileid: "48213886"
   
 -   **Antes de começar:**  [Segurança](#Security)  
   
--   **Para criar um ponto de extremidade do espelhamento de banco de dados, usando:**  [Transact-SQL](#TsqlProcedure)  
+-   **Para criar um ponto de extremidade de espelhamento de banco de dados usando:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48213886"
         > [!IMPORTANT]  
         >  Cada instância do servidor requer uma e apenas uma porta do ouvinte exclusiva.  
   
-    -   Para a Autenticação do Windows, a opção AUTHENTICATION é opcional, a menos que você deseje que o ponto de extremidade use apenas NTLM ou Kerberos para autenticar conexões. *\<authorizationMethod>* especifica o método usado para autenticar conexões como um dos seguintes: NTLM, KERBEROS ou NEGOTIATE. O padrão, NEGOTIATE, faz o ponto de extremidade usar o protocolo de negociação Windows para escolher NTLM ou Kerberos. A negociação habilita conexões com ou sem autenticação, dependendo do nível de autenticação do ponto de extremidade oposto.  
+    -   Para a Autenticação do Windows, a opção AUTHENTICATION é opcional, a menos que você deseje que o ponto de extremidade use apenas NTLM ou Kerberos para autenticar conexões. *\<authorizationMethod >* Especifica o método usado para autenticar conexões como um dos seguintes: NTLM, KERBEROS ou NEGOTIATE. O padrão, NEGOTIATE, faz o ponto de extremidade usar o protocolo de negociação Windows para escolher NTLM ou Kerberos. A negociação habilita conexões com ou sem autenticação, dependendo do nível de autenticação do ponto de extremidade oposto.  
   
     -   ENCRYPTION é definido como REQUIRED por padrão. Isso especifica que todas as conexões para esse ponto de extremidade devem usar criptografia. Porém, você pode desabilitar a criptografia ou deixá-la opcional em um ponto de extremidade. As alternativas são como segue:  
   
@@ -118,7 +118,7 @@ ms.locfileid: "48213886"
   
          Se um ponto de extremidade requisitar criptografia, o outro ponto de extremidade deve ter ENCRYPTION definido como SUPPORTED ou REQUIRED.  
   
-    -   *\<algorithm>* fornece a opção de especificar os padrões de criptografia para o ponto de extremidade. O valor de *\<algorithm>* pode ser um dos seguintes algoritmos ou combinações de algoritmos: RC4, AES, AES RC4 ou RC4 AES.  
+    -   *\<algorithm>* fornece a opção de especificar os padrões de criptografia para o ponto de extremidade. O valor de  *\<algoritmo >* pode ser um dos seguintes algoritmos ou combinações de algoritmos: RC4, AES, AES RC4 ou RC4 AES.  
   
          AES RC4 especifica que esse ponto de extremidade negociará um algoritmo de criptografia, dando preferência ao algoritmo AES. RC4 AES especifica que esse ponto de extremidade negociará um algoritmo de criptografia, dando preferência ao algoritmo RC4. Se ambos os ponto de extremidade especificarem ambos os algoritmos, mas em ordens diferentes, vence o ponto de extremidade que aceita a conexão.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "48213886"
     > [!NOTE]  
     >  Para alterar um ponto de extremidade existente, use [ALTER ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql).  
   
-###  <a name="TsqlExample"></a> Exemplo: criando pontos de extremidade que oferecem suporte ao espelhamento de banco de dados (Transact-SQL)  
+###  <a name="TsqlExample"></a> Exemplo: Criando pontos de extremidade para dar suporte para o banco de dados de espelhamento (Transact-SQL)  
  O seguinte exemplo cria pontos de extremidade do espelhamento de banco de dados para as instâncias de servidor padrão em três sistemas de computador separados:  
   
 |Função da instância de servidor|Nome do computador host|  
@@ -201,7 +201,7 @@ GO
  [Escolher um algoritmo de criptografia](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)   
  [Especificar um endereço de rede do servidor &#40;espelhamento de banco de dados&#41;](specify-a-server-network-address-database-mirroring.md)   
- [Exemplo: configurando o espelhamento de banco de dados usando a Autenticação do Windows &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)   
+ [Exemplo: Configuração usando a autenticação do Windows de espelhamento de banco de dados &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)   
  [O ponto de extremidade de espelhamento de banco de dados &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)  
   
   

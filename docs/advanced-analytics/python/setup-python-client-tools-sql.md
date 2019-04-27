@@ -9,11 +9,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: c0ca592d98f9bb69586c537006fd14d4230b661b
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642805"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>Configurar um cliente de ciência de dados para o desenvolvimento de Python em serviços do SQL Server Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,7 +56,7 @@ Um script de instalação adiciona três bibliotecas específicas da Microsoft p
 
 2. Abra uma janela do PowerShell com permissões de administrador com privilégios elevados (clique com botão direito **executar como administrador**).
 
-3. Vá para a pasta na qual você baixou o instalador e execute o script. Adicionar o `-InstallFolder` argumento de linha de comando para especificar um local de pasta para as bibliotecas. Por exemplo: 
+3. Vá para a pasta na qual você baixou o instalador e execute o script. Adicionar o `-InstallFolder` argumento de linha de comando para especificar um local de pasta para as bibliotecas. Por exemplo:  
 
    ```python
    cd {{download-directory}}

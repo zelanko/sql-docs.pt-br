@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cfeee065f99a9071f7175d8344f7e6eae84a7bc6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666578"
 ---
-# <a name="attribute-properties---define-custom-member-formulas"></a>Propriedades de atributo - definir fórmulas de membro personalizado
+# <a name="attribute-properties---define-custom-member-formulas"></a>Propriedades do atributo – Definir fórmulas de membro personalizadas
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   É possível definir uma expressão multidimensional (MDX), chamada fórmula de membro personalizado, para fornecer os valores aos membros de um atributo especificado. Uma coluna em uma tabela da exibição da fonte de dados fornece, para cada membro de um atributo, a expressão usada para fornecer o valor para esse membro.  
   
@@ -33,9 +33,9 @@ ms.locfileid: "34021663"
   
 -   2003: 2100  
   
-    -   Trimestre 1: 700  
+    -   1º trimestre: 700  
   
-    -   Trimestre 2: 500  
+    -   2º trimestre: 500  
   
     -   Trimestre 3: 100  
   
@@ -43,9 +43,9 @@ ms.locfileid: "34021663"
   
 -   2004: 1500  
   
-    -   Trimestre 1: 600  
+    -   1º trimestre: 600  
   
-    -   Trimestre 2: 200  
+    -   2º trimestre: 200  
   
     -   Trimestre 3: 300  
   
@@ -67,7 +67,7 @@ Time.[Quarter 3] * 1.5
  Se você usar membros calculados e fórmulas de acúmulo personalizado para os membros de um atributo, não deixe de ordenar a avaliação. Membros calculados são resolvidos antes das fórmulas de acúmulo personalizado.  
   
 ## <a name="see-also"></a>Consulte também  
- [Atributos e hierarquias de atributo](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
- [Definir fórmulas de membro personalizado para os atributos em uma dimensão](../../analysis-services/multidimensional-models/bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md)  
+ [Atributos e hierarquias de atributos](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
+ [Definir fórmulas de membro personalizado para os atributos de uma dimensão](../../analysis-services/multidimensional-models/bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md)  
   
   

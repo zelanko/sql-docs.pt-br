@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7c2c7059c5c6ff6a770c1658d260da04f2a042ab
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779941"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>Extensões do AdventureWorks para demonstrar OLTP na memória
     
@@ -404,7 +404,7 @@ ms.locfileid: "53363778"
   
  No Windows Server 2012 [R2] e no Windows 8 e 8.1, abra o menu iniciar clicando na tecla Windows e digite "rml". Clique em "RML Cmd Prompt", que estará na lista de resultados da pesquisa.  
   
- Verifique se o prompt de comando está localizado na pasta de instalação Utilitários de RML. Por exemplo:  
+ Verifique se o prompt de comando está localizado na pasta de instalação Utilitários de RML. Por exemplo:   
   
  ![](../../2014/database-engine/media/SQLServer2014RTMIn-MemoryOLTP01.jpg)  
   
@@ -539,13 +539,13 @@ ostress.exe -S. -E -dAdventureWorks2014 -Q"EXEC Demo.usp_DemoReset"
 ###  <a name="Troubleshootingslow-runningtests"></a> Solução de problemas em testes com execução lenta  
  Os resultados de testes variam de acordo com o hardware, e também com o nível de simultaneidade usado na execução do teste. Alguns itens a serem pesquisados se os resultados não forem os esperados:  
   
--   Número de transações simultâneas: Ao executar a carga de trabalho em um único thread, o ganho de desempenho com [!INCLUDE[hek_2](../includes/hek-2-md.md)] provavelmente será menor que 2X. A contenção de trava se torna um grande problema apenas se há um nível alto de simultaneidade.  
+-   Número de transações simultâneas: Ao executar a carga de trabalho em um único thread, o ganho de desempenho com [!INCLUDE[hek_2](../includes/hek-2-md.md)] provavelmente será menor que 2x. A contenção de trava se torna um grande problema apenas se há um nível alto de simultaneidade.  
   
--   Baixo número de núcleos disponíveis para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]: Isso significa que haverá um nível baixo de simultaneidade no sistema, pois a quantidade de transações executadas simultaneamente equivale ao número de núcleos disponíveis para o SQL.  
+-   Baixo número de núcleos disponíveis para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]: Isso significa que haverá um nível baixo de simultaneidade no sistema, como só podem haver tantos transações executadas simultaneamente quanto há núcleos disponíveis para o SQL.  
   
     -   Sintoma: se há alta utilização da CPU ao executar a carga de trabalho em tabelas baseadas em disco, isso significa não há muita contenção, apontando para uma falta de simultaneidade.  
   
--   Velocidade da unidade de log: Se a unidade de log não consegue acompanhar o nível de transferência de transações no sistema, a carga de trabalho se torna um gargalo na E/S de log. Embora o log seja mais eficiente com [!INCLUDE[hek_2](../includes/hek-2-md.md)], se a E/S de log é um gargalo, o ganho de desempenho potencial é limitado.  
+-   Velocidade da unidade de log: Se a unidade de log não é possível acompanhar o nível de taxa de transferência da transação no sistema, a carga de trabalho se torna um gargalo na e/s de log. Embora o log seja mais eficiente com [!INCLUDE[hek_2](../includes/hek-2-md.md)], se a E/S de log é um gargalo, o ganho de desempenho potencial é limitado.  
   
     -   Sintoma: caso quase 100% da CPU seja utilizada ou apresentar um pico de uso ao executar a carga de trabalho em tabelas com otimização de memória, talvez exista um gargalo de E/S de log. Isso pode ser confirmado abrindo o Monitor de Recursos e examinando o comprimento da fila para a unidade de log.  
   
@@ -601,7 +601,7 @@ WHERE t.type='U'
 |SalesOrderHeader_inmem|7168|147456|  
 |Product_inmem|124|12352|  
   
- Como você pode ver, as tabelas são pequenas: o SalesOrderHeader_inmem possui cerca de 7 MB e o SalesOrderDetail_inmem possui cerca de 15 MB.  
+ Como você pode ver as tabelas são pequenas: SalesOrderHeader_inmem tem cerca de 7MB e SalesOrderDetail_inmem possui cerca de 15MB.  
   
  O que chama a atenção aqui é o tamanho da memória alocada para índices, comparado ao tamanho dos dados da tabela. Isso ocorre porque os índices de hash no exemplo são dimensionados previamente para um tamanho maior de dados. Observe que os índices de hash têm um tamanho fixo e, assim, seu tamanho não aumentará conforme o tamanho dos dados na tabela.  
   
@@ -845,7 +845,7 @@ ORDER BY state, file_type
   
  Após uma segunda execução da carga de trabalho de demonstração, inserindo 10 milhões de pedidos de vendas após a redefinição de demonstração, você verá que os arquivos criados durante a primeira execução da carga de trabalho foram limpos. Se você executar a consulta anterior várias vezes enquanto a carga de trabalho estiver em execução, verá que os arquivos de ponto de verificação passarão por várias fases.  
   
- Após a segunda execução da carga de trabalho inserir 10 milhões de pedidos de vendas, você notará que a utilização de disco é bem semelhante, embora não necessariamente igual, à da primeira execução, pois o sistema é dinâmico por natureza. Por exemplo:  
+ Após a segunda execução da carga de trabalho inserir 10 milhões de pedidos de vendas, você notará que a utilização de disco é bem semelhante, embora não necessariamente igual, à da primeira execução, pois o sistema é dinâmico por natureza. Por exemplo:   
   
 ```  
 SELECT state_desc  

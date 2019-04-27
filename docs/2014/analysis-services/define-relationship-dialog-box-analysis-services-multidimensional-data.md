@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2bc1ab86373fc7c3b4b32cdfdbc87f5d5dd4acf8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732082"
 ---
 # <a name="define-relationship-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Definir Relação (Analysis Services - Dados Multidimensionais)
   Use a caixa de diálogo **Definir Relação** para definir uma relação entre uma dimensão de cubo e um grupo de medidas no Designer de Cubo. É possível exibir a caixa de diálogo **Definir Relação** clicando em **...** em uma célula no painel **Grade** na guia **Uso da Dimensão** no Designer de Cubo.  
@@ -37,26 +37,26 @@ ms.locfileid: "48196296"
 ## <a name="detail-pane-options"></a>Opções do painel Detalhes  
  As seguintes opções são exibidas no painel **Detalhes** , dependendo do tipo de relacionamento selecionado em **Selecionar tipo de relação**:  
   
-|Tipo de relação|Description|Opção|  
+|Tipo de relação|Descrição|Opção|  
 |-----------------------|-----------------|------------|  
 |**Nenhuma relação**|Nenhuma relação está definida e nenhuma opção é exibida no painel **Detalhes** .||  
 |**Regular**|Especifica uma relação de dimensão normal. As seguintes opções são exibidas no painel **Detalhes** :|**Atributo de granularidade**: <br />                      Selecione o atributo que define a granularidade do grupo de medidas com relação à dimensão. Esse atributo normalmente é o atributo de chave da dimensão.|  
-|||**Tabela de dimensões**: exibe a tabela principal da dimensão.|  
-|||**Tabela de grupo de medidas**: exibe a tabela de fatos do grupo de medidas.|  
-|||**Relação**: exibe uma grade de colunas de dimensão e colunas de grupos de medidas nas quais a relação é baseada. A grade contém as seguintes colunas:<br /><br /> **Colunas de dimensão**: exibe as colunas associadas ao atributo de granularidade selecionado. Observação: se a dimensão ainda não foi gerada, essa opção será definida como **Gerar**.<br />**Colunas de Grupos de Medidas** :<br />                              Selecione as colunas no grupo de medidas que estão relacionadas às colunas de dimensão.|  
+|||**Tabela de dimensão** : Seleciona a tabela principal da dimensão.|  
+|||**Tabela de grupos de medidas** : Exibe a tabela de fatos do grupo de medidas.|  
+|||**Relação**: Exibe uma grade de colunas de dimensão e colunas do grupo de medidas no qual a relação é baseada. A grade contém as seguintes colunas:<br /><br /> **Colunas de dimensão**: Exibe as colunas associadas ao atributo de granularidade selecionado. Observação: Se a dimensão ainda não foi gerada, essa opção é definida como **gerar**.<br />**Colunas de Grupos de Medidas** :<br />                              Selecione as colunas no grupo de medidas que estão relacionadas às colunas de dimensão.|  
 |||**Avançado**:<br />                      Clique para exibir a caixa de diálogo **Associações de Grupos de Medidas** e edite as propriedades avançadas, como processamento nulo, em relações entre atributos e colunas de grupos de medidas. Para obter mais informações sobre a caixa de diálogo **Associações de Grupos de Medidas**, consulte [Caixa de diálogo Associações de Grupos de Medidas &#40;Analysis Services – Dados Multidimensionais&#41;](measure-group-bindings-dialog-box-analysis-services-multidimensional-data.md).|  
-|**Fato**|Especifica uma relação de dimensão de fato. As seguintes opções são exibidas no painel **Detalhes** :|**Atributo de granularidade**: selecione o atributo que define a granularidade do grupo de medidas com relação à dimensão. Esse atributo normalmente é o atributo de chave da dimensão.|  
-|||**Tabela de dimensões**: exibe a tabela primária de dimensões.|  
+|**Fact**|Especifica uma relação de dimensão de fato. As seguintes opções são exibidas no painel **Detalhes** :|**Atributo de granularidade**: Selecione o atributo que define a granularidade do grupo de medidas com relação à dimensão. Esse atributo normalmente é o atributo de chave da dimensão.|  
+|||**Tabela de dimensões**: Exibe a tabela primária de dimensões.|  
 |||**Tabela de grupos de medidas**: <br />                      Exibe a tabela na qual o grupo de medidas é baseado.|  
 |**Referenciado**|Especifica uma relação de dimensão referenciada. As seguintes opções são exibidas no painel **Detalhes** :|**Dimensão de referência**: <br />                      Exibe a dimensão selecionada.|  
 |||**Dimensão intermediária**: <br />                      Selecione a dimensão intermediária.|  
 |||**Atributo de dimensão de referência**: <br />                      Selecione o atributo na dimensão de referência que está relacionado ao atributo da dimensão intermediária especificado em **Atributo de dimensão intermediária**.|  
 |||**Atributo de dimensão intermediária**: <br />                      Selecione o atributo na dimensão intermediária que está relacionado ao atributo na dimensão de referência especificado em **Dimensão de referência**.|  
 |||**Materializar**: <br />                      Selecione o armazenamento do membro do atributo na dimensão intermediária que vincula o atributo na dimensão de referência à tabela de fatos na estrutura MOLAP. A materialização da relação é o comportamento padrão para maximizar o desempenho das consultas, mas à custa de um aumento no tempo de processamento e do espaço de armazenamento.|  
-|**Muitos-para-muitos**|Especifica uma relação de muitos para muitos da dimensão. As seguintes opções são exibidas no painel **Detalhes** :|**Dimensão** : exibe o tipo de dimensão selecionado.|  
-|||**Grupo de medidas intermediário** : <br />                      Seleciona o grupo de medidas intermediário associado.<br /><br /> Observação: o grupo de medidas intermediário deve ter pelo menos uma dimensão em comum com o grupo de medidas selecionado. Além disso, a granularidade da relação entre o grupo de medidas intermediário e a dimensão comum deve ser maior ou igual à granularidade entre a dimensão comum e o grupo de medidas selecionado.|  
-|**Mineração de Dados**|Especifica uma relação de mineração de dados da dimensão. As seguintes opções são exibidas no painel **Detalhes** :|**Dimensão de destino**: exibe a dimensão de mineração de dados selecionada.<br /><br /> Observação: você deve selecionar uma dimensão de mineração de dados para criar uma relação de dimensão de mineração de dados.|  
-|||**Dimensão de origem**: selecione a dimensão na qual a dimensão de mineração de dados fornece análise de previsão.|  
+|**Many-to-Many**|Especifica uma relação de muitos para muitos da dimensão. As seguintes opções são exibidas no painel **Detalhes** :|**Dimensão** : Exibe a dimensão selecionada.|  
+|||**Grupo de medidas intermediário** : <br />                      Seleciona o grupo de medidas intermediário associado.<br /><br /> Observação: O grupo de medidas intermediário deve ter pelo menos uma dimensão em comum com o grupo de medidas selecionado. Além disso, a granularidade da relação entre o grupo de medidas intermediário e a dimensão comum deve ser maior ou igual à granularidade entre a dimensão comum e o grupo de medidas selecionado.|  
+|**Mineração de Dados**|Especifica uma relação de mineração de dados da dimensão. As seguintes opções são exibidas no painel **Detalhes** :|**Dimensão de destino**: Exibe a dimensão de mineração de dados selecionada.<br /><br /> Observação: Você deve selecionar uma dimensão de mineração de dados para criar uma relação de dimensão de mineração de dados.|  
+|||**Dimensão de origem**: Selecione a dimensão na qual a dimensão de mineração de dados fornece análise de previsão.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Relações de dimensão](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   

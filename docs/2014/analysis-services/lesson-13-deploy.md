@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ea979963906af46a1d032614ad6b398f70ef3483
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729452"
 ---
 # <a name="lesson-14-deploy"></a>Lição 14: Implantar
   Nesta lição, você configurará propriedades de implantação; especificando uma instância de servidor de implantação do Analysis Services executada no modo de Tabela e um nome para o modelo que você está implantando. Você implantará o modelo nessa instância. Depois de implantado, os usuários podem se conectar ao modelo usando um aplicativo cliente de relatório. Para saber mais, consulte [Implantação de uma solução de modelo de tabela &#40;SSAS Tabular&#41;](tabular-models/tabular-model-solution-deployment-ssas-tabular.md).  
@@ -24,7 +24,7 @@ ms.locfileid: "48196222"
  Tempo estimado para concluir esta lição: **5 minutos**  
   
 ## <a name="prerequisites"></a>Prerequisites  
- Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas desta lição, você deverá ter concluído a lição anterior: [Lição 13: Analisar no Excel](lesson-12-analyze-in-excel.md).  
+ Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [Lição 13: Analisar no Excel](lesson-12-analyze-in-excel.md).  
   
 ## <a name="deploy-the-model"></a>Implantar o modelo  
   
@@ -62,7 +62,7 @@ ms.locfileid: "48196222"
   
 ## <a name="see-also"></a>Consulte também  
  [Modo DirectQuery &#40;SSAS de tabela&#41;](tabular-models/directquery-mode-ssas-tabular.md)   
- [Configurar as propriedades de implantação e modelagem de dados padrão &#40;Tabular do SSAS&#41;](tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
- [Bancos de dados de modelo de tabela &#40;Tabular do SSAS&#41;](tabular-models/tabular-model-databases-ssas-tabular.md)  
+ [Configurar propriedades padrão de implantação e modelagem de dados &#40;SSAS de Tabela&#41;](tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
+ [Bancos de dados de modelo de tabela &#40;SSAS de Tabela&#41;](tabular-models/tabular-model-databases-ssas-tabular.md)  
   
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5fe10a98910f54e4317d0191753d40b9b6b0b94f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736045"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Mining Model Content (Analysis Services - Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -214,7 +214,7 @@ ms.locfileid: "52508538"
 |9|Estatísticas|Indica um valor numérico que representa uma estatística para um regressor.|  
 |10|Nome exclusivo do nó|Indica que o valor não deve ser tratado como numérico ou cadeia de caracteres, mas como o identificador exclusivo de outro nó de conteúdo em um modelo.<br /><br /> Por exemplo, em um modelo de rede neural, as IDs fornecem ponteiros de nós na camada de saída aos nós na camada oculta e ponteiros de nós na camada oculta aos nós na camada de entrada.|  
 |11|Interceptação|Indica um valor numérico que representa a interceptação em uma fórmula de regressão.|  
-|12|Periodicidade|Indica que o valor denota uma estrutura periódica em um modelo.<br /><br /> Aplica-se somente a modelos de série temporal que contêm um modelo ARIMA.<br /><br /> Observação: O algoritmo MTS detecta estruturas periódicas automaticamente com base nos dados de treinamento. Devido a isso, as periodicidades no modelo final podem incluir valores de periodicidade que não foram fornecidos como parâmetros durante a criação do modelo.|  
+|12|Periodicidade|Indica que o valor denota uma estrutura periódica em um modelo.<br /><br /> Aplica-se somente a modelos de série temporal que contêm um modelo ARIMA.<br /><br /> Observação: O algoritmo MTS detecta automaticamente as estruturas periódicas com base nos dados de treinamento. Devido a isso, as periodicidades no modelo final podem incluir valores de periodicidade que não foram fornecidos como parâmetros durante a criação do modelo.|  
 |13|Ordem regressiva automática|Indica que o valor representa o número de séries regressivas automáticas.<br /><br /> Aplica-se a modelos de série temporal que usam o algoritmo ARIMA.|  
 |14|Ordem de média de movimentação|Representa um valor que representa o número de médias de movimentação em uma série.<br /><br /> Aplica-se a modelos de série temporal que usam o algoritmo ARIMA.|  
 |15|Ordem de diferença|Indica que o valor representa um valor que indica quantas vezes a série é diferenciada.<br /><br /> Aplica-se a modelos de série temporal que usam o algoritmo ARIMA.|  

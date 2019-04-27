@@ -12,14 +12,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0b16eb8fdfaf18bac628bf902427fed0edb1962c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773502"
 ---
 # <a name="sqlcmd-how-to-topics"></a>Tópicos de informações práticas sobre sqlcmd
-  O utilitário [sqlcmd](../tools/sqlcmd-utility.md) permite digitar instruções [!INCLUDE[tsql](../includes/tsql-md.md)] , procedimentos do sistema e arquivos de script no prompt de comando, no Editor de Consultas em modo SQLCMD, em um arquivo de script do Windows ou em uma etapa de trabalho do sistema operacional (Cmd.exe) de um trabalho do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent.  
+  O utilitário [sqlcmd](../tools/sqlcmd-utility.md) permite digitar instruções [!INCLUDE[tsql](../includes/tsql-md.md)], procedimentos do sistema e arquivos de script no prompt de comando, no Editor de Consultas em modo SQLCMD, em um arquivo de script do Windows ou em uma etapa de trabalho do sistema operacional (Cmd.exe) de um trabalho do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent.  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Os tópicos a seguir descrevem como usar o [sqlcmd Utility](../tools/sqlcmd-utility.md):  

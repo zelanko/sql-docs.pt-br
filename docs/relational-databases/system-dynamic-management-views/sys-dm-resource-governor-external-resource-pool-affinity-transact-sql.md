@@ -1,5 +1,5 @@
 ---
-title: DM resource_governor_external_resource_pool_affinity (Transact-SQL) | Microsoft Docs
+title: sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/13/2017
 ms.prod: sql
@@ -21,19 +21,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4439cddb4af80a5d76a5b4e3600fd5e5ede6b900
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62744046"
 ---
-# <a name="sysdmresourcegovernorexternalresourcepoolaffinity-transact-sql"></a>DM resource_governor_external_resource_pool_affinity (Transact-SQL)
+# <a name="sysdmresourcegovernorexternalresourcepoolaffinity-transact-sql"></a>sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 **Aplica-se a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] e [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 Retorna informações de afinidade de CPU sobre a configuração atual do pool de recursos externos.
   
-|Nome da coluna|Tipo de dados|Description|
+|Nome da coluna|Tipo de dados|Descrição|
 |----------------|---------------|-----------------|
 |pool_id|**int**|A ID do pool de recursos externos. Não permite valor nulo.|
 |processor_group|**smallint**|A ID do grupo de processadores lógicos do Windows. Não permite valor nulo.|

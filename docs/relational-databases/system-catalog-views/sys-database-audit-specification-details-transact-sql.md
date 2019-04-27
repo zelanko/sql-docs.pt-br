@@ -1,5 +1,5 @@
 ---
-title: database_audit_specification_details (Transact-SQL) | Microsoft Docs
+title: sys.database_audit_specification_details (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -21,28 +21,28 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 865fb25a08bdf549c09a9bb4e4e23cff929f12ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62652474"
 ---
 # <a name="sysdatabaseauditspecificationdetails-transact-sql"></a>sys.database_audit_specification_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contém informações sobre as especificações de auditoria de banco de dados em uma auditoria do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instância de servidor para todos os bancos de dados. Para obter mais informações, veja [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md). Para obter uma lista de todos os audit_action_id e seus nomes, consultar [DM audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md).  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**database_specification_id**|**int**|ID da especificação de auditoria.|  
 |**audit_action_id**|**int**|ID da ação de auditoria.|  
 |**audit_action_name**|**sysname**|Nome de ação de auditoria ou do grupo de ações de auditoria|  
 |**Classe**|**int**|Identifica a classe de objeto que está sendo auditado.|  
-|**desc class_**|**nvarchar(60)**|Descrição da classe de objeto que está sendo auditado:<br /><br /> - SCHEMA<br /><br /> - TABLE|  
+|**class_ desc**|**Nvarchar(60)**|Descrição da classe de objeto que está sendo auditado:<br /><br /> - SCHEMA<br /><br /> - TABLE|  
 |**major_id**|**int**|ID principal do objeto que está sendo auditado, como uma ID de tabela de uma ação de Auditoria de Tabela.|  
 |**minor_id**|**Int**|ID secundária do objeto que está sendo auditado, interpretada de acordo com a classe, como a ID de coluna de uma ação de Auditoria de Tabela.|  
 |**audited_principal_id**|**int**|Entidade que está sendo examinada.|  
-|**audited_result**|**nvarchar(60)**|Resultados da ação de auditoria:<br /><br /> - SUCCESS AND FAILURE - SUCCESS<br /><br /> - FAILURE|  
+|**audited_result**|**Nvarchar(60)**|Resultados da ação de auditoria:<br /><br /> - SUCCESS AND FAILURE - SUCCESS<br /><br /> - FAILURE|  
 |**is_group**|**Bit**|Mostra se o objeto é um grupo:<br /><br /> 0 – Não é um grupo<br /><br /> 1 – Grupo|  
   
 ## <a name="permissions"></a>Permissões  

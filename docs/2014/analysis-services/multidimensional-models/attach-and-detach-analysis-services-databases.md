@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c73417ea9d74588c55177527abdbb42a33c4496e
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727071"
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>Anexar e desanexar Bancos de Dados do Analysis Services
   Existem situações frequentes em que um DBA (administrador de banco de dados) do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] deseja colocar o banco de dados offline em determinado período e colocá-lo online novamente na mesma instância do servidor ou em uma instância diferente. Essas situações frequentemente são conduzidas pelas necessidades comerciais, como a movimentação do banco de dados para um disco diferente em busca de um melhor desempenho, a obtenção de espaço para o crescimento do banco de dados ou para a atualização de um produto. Para todos esses casos e muito mais, o `Attach` e `Detach` comandos permitem o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba para colocar o banco de dados offline e colocá-lo online novamente com pouco esforço.  
@@ -47,7 +47,7 @@ ms.locfileid: "50144911"
   
 |Desanexar um banco de dados de leitura/gravação|Desanexar um banco de dados somente leitura|  
 |--------------------------------------|-------------------------------------|  
-|1) O servidor emite uma solicitação para um Bloqueio de CommitExclusive no banco de dados<br />2) O servidor espera até que todas as transações contínuas sejam confirmadas ou revertidas<br />3) O servidor cria todos os metadados necessários para desanexar o banco de dados<br />4) O banco de dados é marcado como excluído<br />5) O servidor confirma a transação|1) O banco de dados é marcado como excluído<br />2) O servidor confirma a transação<br /><br /> <br /><br /> Observação: a senha para desanexar não pode ser alterada para um banco de dados somente leitura. Ocorrerá um erro caso o parâmetro de senha seja fornecido a um banco de dados anexado que já tenha uma senha.|  
+|1) O servidor emite uma solicitação para um Bloqueio de CommitExclusive no banco de dados<br />2) O servidor espera até que todas as transações contínuas sejam confirmadas ou revertidas<br />3) O servidor cria todos os metadados necessários para desanexar o banco de dados<br />4) O banco de dados é marcado como excluído<br />5) O servidor confirma a transação|1) O banco de dados é marcado como excluído<br />2) O servidor confirma a transação<br /><br /> <br /><br /> Observação: A senha para desanexar não pode ser alterada para um banco de dados somente leitura. Ocorrerá um erro caso o parâmetro de senha seja fornecido a um banco de dados anexado que já tenha uma senha.|  
   
  Os comandos `Attach` e `Detach` devem ser executados como operações únicas. Eles não podem ser combinados com outras operações na mesma transação. Além disso, o `Attach` e `Detach` comandos são comandos transacionais atômicos. Isso significa que a operação poderá ser bem-sucedida ou não. Nenhum banco de dados ficará incompleto.  
   

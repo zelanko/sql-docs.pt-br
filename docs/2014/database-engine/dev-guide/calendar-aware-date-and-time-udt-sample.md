@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 41115e764099540a5b4548986c7c4c912d562f5b
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753778"
 ---
 # <a name="calendar-aware-date-and-time-udt-sample"></a>Exemplo de UDT de reconhecimento de calendário data e hora
   Armazenar datas como cadeias de caracteres pode ser confuso, pois as datas não fazem sentido quando não se entende qual sistema de calendário está sendo usado. O exemplo `CADatetime` define dois tipos de dados definidos pelo usuário, `CADatetime` e `CADate`, que fornecem manipulação de datas e horas com base no calendário.  

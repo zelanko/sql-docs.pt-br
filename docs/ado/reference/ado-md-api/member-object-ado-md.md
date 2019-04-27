@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4b1f11919ab6dcc89da188601867f8a49a1aa48f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740076"
 ---
 # <a name="member-object-ado-md"></a>Objeto Member (ADO MD)
 Representa um membro de um nível em um cubo, os filhos de um membro de um nível ou membro de uma posição ao longo do eixo de um conjunto de células.  
@@ -29,7 +29,7 @@ Representa um membro de um nível em um cubo, os filhos de um membro de um níve
 ## <a name="remarks"></a>Comentários  
  As propriedades de um **membro** diferem, dependendo do contexto no qual ele é usado. Um **membro** de uma [nível](../../../ado/reference/ado-md-api/level-object-ado-md.md) em um [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) tem uma [filhos](../../../ado/reference/ado-md-api/children-property-ado-md.md) propriedade que retorna o **membros** em o próximo nível inferior na hierarquia do atual **membro**. Para um **membro** de uma [posição](../../../ado/reference/ado-md-api/position-object-ado-md.md), o **filhos** coleção sempre está vazia. Além disso, o [tipo](../../../ado/reference/ado-md-api/type-property-ado-md.md) propriedade se aplica somente ao **membros** de um **nível**.  
   
- Um **membro** dos **posição** tem duas propriedades que são úteis ao exibir o [conjunto de células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md): [DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md) e [ ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md). Ocorrerá um erro se essas propriedades são acessadas em uma **membro** de uma **nível**.  
+ Um **membro** dos **posição** tem duas propriedades que são úteis ao exibir o [conjunto de células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md): [DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md) e [ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md). Ocorrerá um erro se essas propriedades são acessadas em uma **membro** de uma **nível**.  
   
  Com as coleções e propriedades de um **membro** objeto de uma **nível**, você pode fazer o seguinte:  
   
@@ -69,12 +69,12 @@ Representa um membro de um nível em um cubo, os filhos de um membro de um níve
   
  O **propriedades** coleção contém propriedades fornecidos pelo provedor. A tabela a seguir lista as propriedades que podem estar disponíveis. A lista de propriedades reais pode diferir dependendo após a implementação do provedor. Consulte a documentação do seu provedor para obter uma lista completa de propriedades disponíveis.  
   
-|Nome|Description|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |CatalogName|O nome do catálogo ao qual pertence este cubo.|  
 |ChildrenCardinality|O número de filhos de um membro.|  
 |CubeName|O nome do cubo.|  
-|Description|Uma descrição significativa do membro.|  
+|Descrição|Uma descrição significativa do membro.|  
 |DimensionUniqueName|O nome ambíguo do [dimensão](../../../ado/reference/ado-md-api/dimension-object-ado-md.md).|  
 |HierarchyUniqueName|O nome não ambíguo da hierarquia.|  
 |LevelNumber|A distância entre o nível e a raiz da hierarquia.|  

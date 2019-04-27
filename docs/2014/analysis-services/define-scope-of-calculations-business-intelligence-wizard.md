@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8eb592c5921f2edc57fa1f77af4aea7e3793d896
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732092"
 ---
 # <a name="define-scope-of-calculations-business-intelligence-wizard"></a>Definir Escopo de Cálculos (Assistente de Business Intelligence)
   Use a página **Definir Escopo de Cálculos** para associar os novos cálculos de tempo a medidas individuais.  
@@ -34,7 +34,7 @@ ms.locfileid: "48224226"
  Desmarca todas as medidas listadas em **Medidas disponíveis**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Ajuda de F1 do Assistente do Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [Ajuda F1 do Assistente de Business Intelligence](business-intelligence-wizard-f1-help.md)   
  [Designer de cubo &#40;Analysis Services - dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Designer de dimensão &#40;Analysis Services - dados multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

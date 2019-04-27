@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 93ca134e0e06e5197c680830d67e8220e5c9bf5d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747810"
 ---
 # <a name="script-organizer-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Organizador de Script (guia Cálculos, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel **Organizador de Script** na guia **Cálculos** do Designer de Cubo para acessar e reordenar os membros calculados, conjuntos nomeados e comandos de script contidos no script do cubo especificado.  
@@ -48,8 +48,8 @@ ms.locfileid: "48069177"
 |**Novo membro calculado**|Selecione para exibir o **Editor de Formulário de Membro Calculado** e criar um novo membro calculado. Para obter mais informações sobre o **Editor de Formulário de Membro Calculado**, consulte [Editor de Formulário de Membro Calculado &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Novo conjunto nomeado**|Selecione para exibir o painel **Editor de Formulário de Conjunto Nomeado** e criar um novo conjunto nomeado. Para obter mais informações sobre o **Editor de Formulário de Conjunto Nomeado**, consulte [Editor de Formulário de Conjunto Nomeado &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Novo comando de Script**|Selecione para exibir o **Editor de Scripts** e criar um novo comando de script. Para obter mais informações sobre o **Editor de Scripts**, consulte [Editor de Scripts &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md).|  
-|**Mover para Cima**|Selecione para mover o cálculo selecionado uma posição acima.<br /><br /> Observação: esta opção será desabilitada se o cálculo selecionado não puder mais ser movido.|  
-|**Mover para Baixo**|Selecione para mover o cálculo selecionado uma posição abaixo.<br /><br /> Observação: esta opção será desabilitada se o cálculo selecionado não puder mais ser movido.|  
+|**Mover para Cima**|Selecione para mover o cálculo selecionado uma posição acima.<br /><br /> Observação: Essa opção é desabilitada se o cálculo selecionado não pode ser movido ainda mais.|  
+|**Mover para Baixo**|Selecione para mover o cálculo selecionado uma posição abaixo.<br /><br /> Observação: Essa opção é desabilitada se o cálculo selecionado não pode ser movido ainda mais.|  
 |**Delete (excluir)**|Selecione para excluir o cálculo selecionado.|  
   
 ## <a name="see-also"></a>Consulte também  

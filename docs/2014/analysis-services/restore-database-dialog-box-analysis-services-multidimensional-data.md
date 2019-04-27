@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9231189bb3bf127c7413a0b5d55ae286a32f42cc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748408"
 ---
 # <a name="restore-database-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Restaurar Banco de Dados (Analysis Services - Dados multidimensionais)
   Use a caixa de diálogo **Restaurar Banco de Dados** no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para restaurar um banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de um arquivo de backup utilizando o formato [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Backup File (.abf).  
@@ -35,7 +35,7 @@ ms.locfileid: "48091026"
   
  A caixa de diálogo **Restaurar Banco de Dados** contém as páginas a seguir.  
   
-## <a name="pages"></a>Páginas  
+## <a name="pages"></a>Pages (Páginas)  
  **Geral**  
  Use esta página para selecionar o banco de dados a restaurar, o arquivo de backup do qual restaurar o banco de dados e também as opções gerais e senha a utilizar ao restaurar o banco de dados. Para obter mais informações sobre essa página, consulte [Geral &#40;caixa de diálogo Restaurar Banco de Dados&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](general-restore-database-dialog-box-analysis-services-multidimensional-data.md).  
   

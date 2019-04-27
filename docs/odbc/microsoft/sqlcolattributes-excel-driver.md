@@ -1,5 +1,5 @@
 ---
-title: SQLColAttributes (Driver do Excel) | Microsoft Docs
+title: SQLColAttributes (Excel Driver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 67ba6df9955a1b138ebb919d410ef7817e1fb48e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666268"
 ---
 # <a name="sqlcolattributes-excel-driver"></a>SQLColAttributes (Driver do Excel)
 > [!NOTE]  

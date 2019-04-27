@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6d9cc15f79235e225dc6589a16b48c373479e639
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187996"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792086"
 ---
 # <a name="add-solutions-and-projects-to-source-control"></a>Adicionar soluções e projetos ao controle do código-fonte
   Ao adicionar uma solução a um controle do código-fonte, ela se torna parte de um arquivo morto de controle de versão dinâmico criado e mantido pelo provedor de controle de código-fonte. Sempre que alguém fizer o check-in de uma nova versão da solução, essa versão se tornará parte do arquivo morto e estará disponível para outros usuários do controle de código-fonte.  
@@ -29,7 +29,7 @@ ms.locfileid: "48187996"
   
  A tabela a seguir descreve os tópicos dessa seção.  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Adicionar soluções ao controle do código-fonte](../../2014/database-engine/add-solutions-to-source-control.md)|Descreve os tipos de projeto que você pode adicionar e fornece instruções sobre como adicionar uma solução a um controle do código-fonte.|  
 |[Adicionar projetos ao controle do código-fonte](../../2014/database-engine/add-projects-to-source-control.md)|Fornece instruções sobre como adicionar um projeto a uma solução.|  

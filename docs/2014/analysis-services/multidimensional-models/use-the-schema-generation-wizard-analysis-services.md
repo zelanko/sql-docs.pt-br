@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: da833d9c71b93405369a1fee1d7947784d2a09e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740736"
 ---
 # <a name="use-the-schema-generation-wizard-analysis-services"></a>Use o assistente de geração de esquema (Analysis Services)
   O Assistente de Geração de Esquema requer uma quantidade limitada de informações durante a fase de geração. A maioria das informações que o Assistente de Geração de Esquema requer para gerar esquemas relacionais é extraída dos cubos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e dimensões que você já criou no projeto. Além disso, você pode personalizar como o esquema de banco de dados de área de assunto é gerado e como são nomeados objetos no esquema.  
@@ -41,7 +41,7 @@ ms.locfileid: "48210166"
 > [!NOTE]  
 >  Para desassociar dimensões e cubos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dos objetos gerados anteriormente, exclua a exibição da fonte de dados à qual as dimensões e os cubos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] foram associados e, em seguida, defina uma nova exibição da fonte de dados para eles usando o Assistente de Geração de Esquema.  
   
-## <a name="step-3-specify-schema-options-for-the-subject-area-database"></a>Etapa 3: Especificar opções de esquema para o banco de dados da área de assunto  
+## <a name="step-3-specify-schema-options-for-the-subject-area-database"></a>Etapa 3: Especificar opções de esquema para o banco de dados de área de assunto  
  O Assistente de Geração de Esquema oferece inúmeras opções para definição do esquema que é gerado para o banco de dados da área de assunto. Você pode especificar essas opções na página **Opções de Esquema de Banco de Dados da Área de Assunto** do assistente.  
   
 ### <a name="specifying-the-schema-owner"></a>Especificando o proprietário do esquema  

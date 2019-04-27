@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f425112a324cbef3bc18ea6ddabf671d5bcd20c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747738"
 ---
 # <a name="select-how-to-define-the-connection-data-source-wizard-analysis-services"></a>Selecione como definir a conexão (Assistente para Fonte de Dados) (Analysis Services)
   Use a página **Selecione como definir a conexão** para criar ou selecionar a conexão de dados para uma fonte de dados.  

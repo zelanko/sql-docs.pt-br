@@ -1,5 +1,5 @@
 ---
-title: Use as funções de agregação | Microsoft Docs
+title: Usar funções de agregação | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d4e30b5670e7a9a02fdfa9f3bbfad6889e83b562
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743082"
 ---
 # <a name="use-aggregate-functions"></a>Usar funções de agregação
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "34026033"
 |**Mín**|Semiaditiva|Recupera o valor mais baixo de todos os membros filho.|  
 |**Máx**|Semiaditiva|Recupera o valor mais alto de todos os membros filho.|  
 |**DistinctCount**|Não aditiva|Recupera a contagem de todos os membros filho exclusivos. Para obter mais detalhes, consulte [Sobre medidas de contagem distintas](../../analysis-services/multidimensional-models/use-aggregate-functions.md#bkmk_distinct) na próxima seção.|  
-|**Nenhuma**|Não aditiva|Nenhuma agregação é executada e todos os valores de membros folha e não folha de uma dimensão são fornecidos diretamente da tabela de fatos para o grupo de medidas que contém a medida. Se não for possível ler um valor da tabela de fatos para um membro, o valor desse membro será definido como nulo.|  
+|**Nenhum**|Não aditiva|Nenhuma agregação é executada e todos os valores de membros folha e não folha de uma dimensão são fornecidos diretamente da tabela de fatos para o grupo de medidas que contém a medida. Se não for possível ler um valor da tabela de fatos para um membro, o valor desse membro será definido como nulo.|  
 |**ByAccount**|Semiaditiva|Calcula a agregação de acordo com a função de agregação atribuída ao tipo de conta de um membro em uma dimensão de conta. Se não existir uma dimensão de tipo de conta no grupo de medidas, será tratada como a função de agregação **None** .<br /><br /> Para obter mais informações sobre dimensões de conta, consulte [Criar uma Conta de Finanças de dimensão de tipo pai-filho](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md).|  
 |**AverageOfChildren**|Semiaditiva|Calcula a média de valores de todos os membros filho não vazios.|  
 |**FirstChild**|Semiaditiva|Recupera o valor do primeiro membro filho.|  
@@ -65,8 +65,8 @@ ms.locfileid: "34026033"
  Uma medida de contagem distinta que conta membros baseia-se m uma coluna de chave estrangeira da tabela de fatos. (Ou seja, a propriedade **Source Column** da medida identifica essa coluna.) Essa coluna une a coluna da tabela de dimensões que identifica os membros contados pela medida de contagem distinta.  
   
 ## <a name="see-also"></a>Consulte também  
- [Medidas e grupos de medidas](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)   
- [Referência de função MDX & #40; MDX & #41;](../../mdx/mdx-function-reference-mdx.md)   
- [Definir comportamento Semiaditivo](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)  
+ [Medidas e Grupos de Medidas](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)   
+ [Referência da Função MDX &#40;MDX&#41;](../../mdx/mdx-function-reference-mdx.md)   
+ [Definir comportamento semiaditivo](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)  
   
   
