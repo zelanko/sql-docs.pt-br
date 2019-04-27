@@ -20,11 +20,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f282a74d81d7f7b45cc2b3b94228cee4e18e41ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62639501"
 ---
 # <a name="sql-server-data-types-in-the-net-framework"></a>Tipos de dados do SQL Server no .NET Framework
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,8 +35,8 @@ ms.locfileid: "47642244"
  [Comparações de lógica de três valores e nulidade](../../relational-databases/clr-integration-database-objects-types-net-framework/nullability-and-three-value-logic-comparisons.md)  
  Discute como são tratados os valores NULL com tipos de dados de integração CLR (Common Language Runtime).  
   
- [Tipos de dados de integração CLR e agrupamento](../../relational-databases/clr-integration-database-objects-types-net-framework/collation-and-clr-integration-data-types.md)  
- Descreve como são tratados os agrupamentos com integração CLR.  
+ [Tipos de dados de integração CLR e ordenação](../../relational-databases/clr-integration-database-objects-types-net-framework/collation-and-clr-integration-data-types.md)  
+ Descreve como são tratadas as ordenações com integração CLR.  
   
  [Manipulando objetos grandes &#40;LOB&#41; parâmetros no CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/handling-large-object-lob-parameters-in-the-clr.md)  
  Descreve como passar tipos LOB entre o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o CLR.  

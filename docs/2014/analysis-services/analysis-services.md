@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b18efaacb7ab891402e84b851735870c4c47e883
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62638813"
 ---
 # <a name="analysis-services"></a>Analysis Services
   O [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] é um mecanismo de dados analíticos online usado em soluções de apoio à decisão e business intelligence (BI), que fornece os dados analíticos para relatórios de negócios e aplicativos cliente, tais como Excel, relatórios do Reporting Services e outras ferramentas de BI de terceiros. Um fluxo de trabalho típico do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] inclui criar um modelo de dados OLAP ou de tabela, implantar o modelo como um banco de dados em uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], processar o banco de dados para carregá-lo com dados e, em seguida, atribuir permissões para permitir o acesso aos dados. Quando ele estiver pronto, esse modelo de dados com vários fins poderá ser acessado por qualquer aplicativo cliente que suporte o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] como uma fonte de dados.  

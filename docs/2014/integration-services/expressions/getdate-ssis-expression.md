@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 83d8d4126ff7dbcd6e0d5b114626cd8acb1b8d20
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769022"
 ---
 # <a name="getdate-ssis-expression"></a>GETDATE (Expressão SSIS)
   Retorna a data atual do sistema em um formato DT_DBTIMESTAMP. A função GETDATE não usa nenhum argumento.  

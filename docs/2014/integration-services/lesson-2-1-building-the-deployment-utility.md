@@ -1,5 +1,5 @@
 ---
-title: 'Etapa 1: Compilando o utilitário de implantação | Microsoft Docs'
+title: 'Etapa 1: compilar o utilitário de implantação | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b788f82fc28ee39e7d65ae484da49313eea7c610
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767578"
 ---
-# <a name="step-1-building-the-deployment-utility"></a>Etapa 1: Compilando o utilitário de implantação
+# <a name="step-1-building-the-deployment-utility"></a>Etapa 1: Compilar o utilitário de implantação
   Nesta tarefa, você configurará e compilará um utilitário de implantação para o projeto do Tutorial de Implantação.  
   
  Antes de compilar o utilitário de implantação, você deve modificar as propriedades do projeto do Tutorial de Implantação. Você usará a caixa de diálogo **Páginas de Propriedades do Tutorial de Implantação** para configurar essas propriedades. Nesta caixa de diálogo, você deve habilitar o recurso para atualizar configurações durante a implantação e especificar que o processo de compilação gera um utilitário de implantação. Depois que você definir as propriedades, o projeto será compilado.  
@@ -48,7 +48,7 @@ ms.locfileid: "58381194"
   
 4.  Na janela Saída, verifique as seguintes informações:  
   
-     Compilação iniciada: Projeto do Integration Services do SQL: Incremental...  
+     Compilação iniciada: Projeto do Integration Services do SQL: Incremental ...  
   
      Criando utilitário de implantação...  
   
@@ -56,12 +56,12 @@ ms.locfileid: "58381194"
   
      Compilação concluída – 0 erros, 0 avisos  
   
-     ========== Compilação: 0 bem-sucedido, 0 com falha, 1 atualizado, 0 ignorado = = =  
+     ========== Compilação: 0 bem-sucedido, 0 com falha, 1 atualizado, 0 ignorado ==========  
   
 5.  No menu **Arquivo** , clique em **Sair**. Se for solicitado que você salve as alterações dos itens do Tutorial de Implantação, clique em **Sim**.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Etapa 2: Verificando o pacote de implantação](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
+ [Etapa 2: verificar o pacote de implantação](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
 ![Ícone do Integration Services (pequeno)](media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   

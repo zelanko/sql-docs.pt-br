@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 288e4aedc6112640aa511712ad90912b1d41b2fa
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769363"
 ---
 # <a name="-concatenate-ssis-expression"></a>+ (Concatenar) (Expressão SSIS)
   Concatena duas expressões em uma expressão.  
@@ -48,7 +48,7 @@ character_expression1 + character_expression2
   
  Ambas as expressões devem ser do mesmo tipo de dados ou uma expressão deve ser convertida implicitamente para o tipo de dados da outra expressão. Por exemplo, se a cadeia "Order date is " e a coluna **OrderDate** forem concatenadas, os valores em **OrderDate** serão implicitamente convertidos em um tipo de dados de cadeia de caracteres. Para concatenar dois valores numéricos, ambos os valores numéricos devem ser lançados explicitamente a um tipo de dados de cadeia de caracteres.  
   
- Uma concatenação pode usar apenas um tipo de dados BLOB: DT_TEXT, DT_NTEXT ou DT_IMAGE.  
+ Uma concatenação pode usar só um tipo de dados BLOB: DT_TEXT, DT_NTEXT ou DT_IMAGE.  
   
  Se qualquer elemento for nulo, o resultado será nulo.  
   

@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 89818f172ee9af09a44654dffc800bf6adc35de4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62630375"
 ---
 # <a name="subscription-expiration-and-deactivation"></a>Validade e desativação de assinatura
   As assinaturas podem ser desativadas ou podem expirar se não forem sincronizadas dentro de um *período de retenção*especificado. A ação que ocorre depende do tipo de replicação e do período de retenção excedido.  
@@ -42,7 +42,7 @@ ms.locfileid: "52804328"
      Se uma assinatura push expirar, ela é completamente removida, mas não as assinaturas pull. Você deve limpar as assinaturas pull no Assinante. Para obter mais informações, consulte [Delete a Pull Subscription](delete-a-pull-subscription.md).  
   
 ## <a name="merge-replication"></a>Replicação de mesclagem  
- A replicação de mesclagem usa o período de retenção da publicação (os parâmetros **@retention** e **@retention_period_unit** do [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)). Quando uma assinatura expira, ela deverá ser reiniciada, pois os metadados da assinatura serão removidos. As assinaturas que não forem reinicializadas serão descartadas pelo trabalho de **Limpeza de assinaturas expiradas** executado no Publicador. Por padrão, este trabalho é executado diariamente, ele remove todas as assinaturas push que não sincronizaram por um período duas vezes maior do período de retenção da publicação. Por exemplo:  
+ A replicação de mesclagem usa o período de retenção da publicação (os parâmetros **@retention** e **@retention_period_unit** do [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)). Quando uma assinatura expira, ela deverá ser reiniciada, pois os metadados da assinatura serão removidos. As assinaturas que não forem reinicializadas serão descartadas pelo trabalho de **Limpeza de assinaturas expiradas** executado no Publicador. Por padrão, este trabalho é executado diariamente, ele remove todas as assinaturas push que não sincronizaram por um período duas vezes maior do período de retenção da publicação. Por exemplo:   
   
 -   Se a publicação tiver um período de retenção de 14 dias, uma assinatura poderá expirar se não sincronizar dentro de 14 dias.  
   

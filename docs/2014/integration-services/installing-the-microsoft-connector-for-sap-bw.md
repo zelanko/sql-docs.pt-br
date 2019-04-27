@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0e43a45f9b21e631638dec43a8a126b4f007429d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394344"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767748"
 ---
 # <a name="installing-the-microsoft-connector-for-11-sap-bw"></a>Instalando o Microsoft Connector para 1.1 SAP BW
   Para instalar o [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW e sua documentação, baixe e execute o pacote do Windows installer da página da Web de pacote de recurso SQL Server.  

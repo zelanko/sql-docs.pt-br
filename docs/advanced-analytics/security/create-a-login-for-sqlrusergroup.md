@@ -9,13 +9,13 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 62dd1ddf61c3cc2e1340619566ad9f4dcce062b7
-ms.sourcegitcommit: 32a55df1275ad169bb1457243dc8caa8b48b206f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55147034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642109"
 ---
-# <a name="create-a-login-for-sqlrusergroup"></a>Crie um logon para SQLRUserGroup
+# <a name="create-a-login-for-sqlrusergroup"></a>Criar um logon para SQLRUserGroup
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Criar uma [logon no SQL Server](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login) para [SQLRUserGroup](../concepts/security.md#sqlrusergroup) quando uma [loop conexão back-](../../advanced-analytics/concepts/security.md#implied-authentication) em seu script especifica um *confiáveis conexão*, e a identidade usada para executar um objeto que contém o código é uma conta de usuário do Windows.

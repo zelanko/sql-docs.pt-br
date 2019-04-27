@@ -11,11 +11,11 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.openlocfilehash: 2967277ca109b9ee55221a7b12f5af891a5e45a2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635582"
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Operar o cluster de disco compartilhado do Red Hat Enterprise Linux para SQL Server
 
@@ -144,7 +144,7 @@ Exibir os logs de agente de recursos no `/var/log/cluster/corosync.log`
    > [!NOTE]
    > Se você estiver usando outro firewall que não tem uma configuração de alta disponibilidade interna, as seguintes portas precisam ser abertas para o Pacemaker seja capaz de se comunicar com outros nós no cluster
    >
-   > * TCP: Portas 2224, 3121, 21064
+   > * TCP: Ports 2224, 3121, 21064
    > * UDP: Porta 5405
 
 1. Instale os pacotes do Pacemaker no novo nó.
@@ -261,7 +261,7 @@ Verifique os itens a seguir, quando um nó está offline.
 
     As seguintes portas precisam ser abertas em todos os nós para Pacemaker seja capaz de se comunicar.
     
-    - * * TCP: 2224, 3121, 21064
+    - **TCP: 2224, 3121, 21064
 
 - **Pacemaker ou Corosync serviços em execução**
 

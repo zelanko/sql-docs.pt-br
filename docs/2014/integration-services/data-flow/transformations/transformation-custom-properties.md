@@ -42,11 +42,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1a3e999975f13654a5f3c2f34a2325324c5a36ac
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770662"
 ---
 # <a name="transformation-custom-properties"></a>Propriedades personalizadas da transformação
   Além das propriedades comuns à maioria dos objetos Data Flow no modelo de objeto do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , muitos objetos Data Flow têm propriedades personalizadas específicas. Essas propriedades personalizadas estão disponíveis somente em tempo de execução e não constam da Documentação de Referência de Programação Gerenciada do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
@@ -70,7 +70,7 @@ ms.locfileid: "58387644"
 |[Coluna Derivada](#derived)|[Dinâmico](#pivot)||  
   
 ### <a name="transformations-without-custom-properties"></a>Transformações sem propriedades personalizadas  
- As transformações a seguir não têm nenhuma propriedade personalizada no componente, entrada ou saída níveis: [Transformação mesclar](merge-transformation.md), [transformação Multicast](multicast-transformation.md), e [Union All Transformation](union-all-transformation.md). Somente as propriedades comuns a todos os componentes de fluxo de dados são usadas.  
+ As transformações a seguir não têm nenhuma propriedade personalizada nos níveis do componente, da entrada ou da saída: [Transformação Mesclar](merge-transformation.md), [Transformação Difusão Seletiva](multicast-transformation.md), e [Transformação Unir Tudo](union-all-transformation.md). Somente as propriedades comuns a todos os componentes de fluxo de dados são usadas.  
   
 ##  <a name="aggregate"></a> Propriedades personalizadas da transformação Agregação  
  A transformação Agregação tem as propriedades personalizadas e as propriedades comuns a todos os componentes de fluxo de dados.  
@@ -183,7 +183,7 @@ ms.locfileid: "58387644"
   
 |Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
-|FastParse|Booliano|Um valor que indica se as colunas usam as rotinas de análise mais rápidas, mas que não fazem distinção entre localidades, que o [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornece ou as rotinas de análise padrão que fazem distinção entre localidades. O valor padrão dessa propriedade é `False`. Para obter mais informações, consulte [Fast Parse](../../fast-parse.md) e [Standard Parse](../../standard-parse.md). para obter informações sobre a ferramenta de configuração e recursos adicionais.<br /><br /> Observação: Essa propriedade não está disponível na **Editor de transformação de conversão de dados**, mas pode ser definida usando o **Editor Avançado**.|  
+|FastParse|Booliano|Um valor que indica se as colunas usam as rotinas de análise mais rápidas, mas que não fazem distinção entre localidades, que o [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornece ou as rotinas de análise padrão que fazem distinção entre localidades. O valor padrão dessa propriedade é `False`. Para obter mais informações, consulte [Fast Parse](../../fast-parse.md) e [Standard Parse](../../standard-parse.md). .<br /><br /> Observação: Esta propriedade não está disponível no **Editor de transformação Conversão de Dados**, mas pode ser definida por meio do **Editor Avançado**.|  
 |SourceInputColumnLineageId|Integer|O `LineageID` da coluna de entrada que é fonte da coluna de saída.|  
   
  A entrada, as colunas de entrada e a saída da transformação Conversão de Dados não têm nenhuma propriedade personalizada.  
@@ -261,8 +261,8 @@ ms.locfileid: "58387644"
 |Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
 |Delimitadores|Cadeia de caracteres|Os delimitadores de token usados pela transformação. Os delimitadores padrão incluem os seguintes caracteres: espaço ( ), vírgula (,), ponto final (.), ponto-e-vírgula (;), dois-pontos (:), hífen (-), aspas ("), apóstrofo ('), E comercial (&), barra (/), barra invertida (\\), arroba (@), ponto de exclamação (!), ponto de interrogação (?), parêntese de abertura ((), parêntese de fechamento ()), menor que (\<), maior que (>), colchete de abertura ([), colchete de fechamento (]), chave de abertura ({), chave de fechamento (}), barra vertical ou pipe (&#124;), número (#), asterisco (*), circunflexo (^) e porcentagem (%).|  
-|Exhaustive|Booliano|Um valor que especifica se cada registro de entrada é comparado a todos os outros registros de entrada. O valor de `True` destina-se especialmente a propósitos de depuração. O valor padrão dessa propriedade é `False`.<br /><br /> Observação: Essa propriedade não está disponível na **Editor de transformação agrupamento difuso**, mas pode ser definida usando o **Editor Avançado**.|  
-|MaxMemoryUsage|Integer|A quantidade máxima de memória para uso pela transformação. O valor padrão dessa propriedade é **0**, que ativa o uso de memória dinâmica.<br /><br /> O valor dessa propriedade pode ser especificado com uma expressão de propriedades.<br /><br /> Observação: Essa propriedade não está disponível na **Editor de transformação agrupamento difuso**, mas pode ser definida usando o **Editor Avançado**.|  
+|Exhaustive|Booliano|Um valor que especifica se cada registro de entrada é comparado a todos os outros registros de entrada. O valor de `True` destina-se especialmente a propósitos de depuração. O valor padrão dessa propriedade é `False`.<br /><br /> Observação: Esta propriedade não está disponível no **Editor de Transformação Agrupamento Difuso**, mas pode ser definida por meio do **Editor Avançado**.|  
+|MaxMemoryUsage|Integer|A quantidade máxima de memória para uso pela transformação. O valor padrão dessa propriedade é **0**, que ativa o uso de memória dinâmica.<br /><br /> O valor dessa propriedade pode ser especificado com uma expressão de propriedades.<br /><br /> Observação: Esta propriedade não está disponível no **Editor de Transformação Agrupamento Difuso**, mas pode ser definida por meio do **Editor Avançado**.|  
 |MinSimilarity|Double|O limite de semelhança usado pela transformação para identificar duplicatas, expresso como um valor entre 0 e 1.  O valor padrão dessa propriedade é 0.8.|  
   
  A tabela a seguir descreve as propriedades personalizadas das colunas de entrada da transformação Agrupamento Difuso. Todas as propriedades são de leitura/gravação.  
@@ -296,10 +296,10 @@ ms.locfileid: "58387644"
 |CopyReferenceTable|Booliano|Especifica se uma cópia da tabela de referência deve ser feita para a criação do índice de pesquisa difusa e pesquisas subsequentes. O valor padrão dessa propriedade é `True`.|  
 |Delimitadores|Cadeia de caracteres|Os delimitadores usados pela transformação para criar tokens de valores de coluna. Os delimitadores padrão incluem os seguintes caracteres: espaço ( ), vírgula (,), ponto final (.), ponto e vírgula (;), dois pontos (:), hífen (-), aspas ("), apóstrofo ('), E comercial (&), barra (/), barra invertida (\\), arroba (@), ponto de exclamação (!), ponto de interrogação (?), parêntese de abertura ((), parêntese de fechamento ()), menor que (\<), maior que (>), colchete de abertura ([), colchete de fechamento (]), chave de abertura ({), chave de fechamento (}), pipe (&#124;). sinal de número (#), asterisco (*), acento circunflexo (^) e porcentagem (%).|  
 |DropExistingMatchIndex|Booliano|Um valor que especifica se o índice de correspondência especificado em MatchIndexName é excluído quando MatchIndexOptions não é definido como ReuseExistingIndex. O valor padrão para essa propriedade é `True`.|  
-|Exhaustive|Booliano|Um valor que especifica se cada registro de entrada é comparado a todos os outros registros de entrada. O valor de `True` destina-se especialmente a propósitos de depuração. O valor padrão dessa propriedade é `False`.<br /><br /> Observação: Essa propriedade não está disponível na **Editor de transformação pesquisa difusa**, mas pode ser definida usando o **Editor Avançado**.|  
+|Exhaustive|Booliano|Um valor que especifica se cada registro de entrada é comparado a todos os outros registros de entrada. O valor de `True` destina-se especialmente a propósitos de depuração. O valor padrão dessa propriedade é `False`.<br /><br /> Observação: Esta propriedade não está disponível no **Editor de Transformação Pesquisa Difusa**, mas pode ser definida por meio do **Editor Avançado**.|  
 |MatchIndexName|Cadeia de caracteres|O nome do índice de correspondência. O índice de correspondência é a tabela na qual a transformação cria e salva o índice usado. Se o índice de correspondência for reutilizado, MatchIndexName especificará o índice a ser reutilizado. MatchIndexName deve ser um nome de identificador válido do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Por exemplo, se o nome contiver espaços, deverá ser colocado entre colchetes.|  
 |MatchIndexOptions|Inteiro (enumeração)|Um valor que especifica como a transformação gerencia o índice de correspondência. Essa propriedade pode ter um dos seguintes valores:<br /><br /> `ReuseExistingIndex` (0)<br /><br /> **GenerateNewIndex** (1)<br /><br /> **GenerateAndPersistNewIndex** (2)<br /><br /> **GenerateAndMaintainNewIndex** (3)|  
-|MaxMemoryUsage|Integer|O tamanho máximo do cache para a tabela de pesquisa. O valor padrão desta propriedade é **0**, o que significa que não há limite para o tamanho do cache.<br /><br /> O valor dessa propriedade pode ser especificado com uma expressão de propriedades.<br /><br /> Observação: Essa propriedade não está disponível na **Editor de transformação pesquisa difusa**, mas pode ser definida usando o **Editor Avançado**.|  
+|MaxMemoryUsage|Integer|O tamanho máximo do cache para a tabela de pesquisa. O valor padrão desta propriedade é **0**, o que significa que não há limite para o tamanho do cache.<br /><br /> O valor dessa propriedade pode ser especificado com uma expressão de propriedades.<br /><br /> Observação: Esta propriedade não está disponível no **Editor de Transformação Pesquisa Difusa**, mas pode ser definida por meio do **Editor Avançado**.|  
 |MaxOutputMatchesPerInput|Integer|O número máximo de correspondências que a transformação pode retornar para cada linha de entrada. O valor padrão desta propriedade é **1**.<br /><br /> Observação: Valores superiores a 100 só podem ser especificados usando o **Editor Avançado**.|  
 |MinSimilarity|Integer|O limite de similaridade usado pela transformação no nível do componente, especificado como um valor entre 0 e 1. Somente linhas superiores ao limite são classificadas como correspondências.|  
 |ReferenceMetadataXML|Cadeia de caracteres|[!INCLUDE[ssInternalOnly](../../../includes/ssinternalonly-md.md)]|  
@@ -523,7 +523,7 @@ ms.locfileid: "58387644"
   
 |Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
-|ColumnType|Inteiro (enumeração)|O tipo de atualização da coluna. Os valores são: **Atributo de alteração** (2), **atributo fixo** (4), **atributo histórico** (3), **chave** (1), e **outros** (0).|  
+|ColumnType|Inteiro (enumeração)|O tipo de atualização da coluna. Os valores são: **Atributo de Alteração** (2), **Atributo Fixo** (4), **Atributo Histórico** (3), **Chave** (1) e **Outro** (0).|  
   
  A entrada, as saídas e as colunas de saída da transformação Dimensão de Alteração Lenta não têm nenhuma propriedade personalizada.  
   
@@ -569,7 +569,7 @@ ms.locfileid: "58387644"
 |NeedRefenceData|Booliano|Um valor que especifica se a transformação usa uma lista de termos de exclusão armazenada em uma tabela de referência. O valor padrão dessa propriedade é `False`.|  
 |OutTermColumn|Cadeia de caracteres|O nome da coluna que contém os termos de exclusão.|  
 |OutTermTable|Cadeia de caracteres|O nome da tabela que contém a coluna com termos de exclusão.|  
-|ScoreType|Integer|Um valor que especifica o tipo de pontuação a ser associado ao termo. Os valores válidos são 0 (frequência) e 1 (pontuação TFIDF). A pontuação TFIDF é o produto da frequência do termo e a frequência de documento inversa, definido como: TFIDF de um termo T = (frequência de T) \* log ((#rows na entrada) / (#rows com T)). O valor padrão dessa propriedade é **0**.|  
+|ScoreType|Integer|Um valor que especifica o tipo de pontuação a ser associado ao termo. Os valores válidos são 0 (frequência) e 1 (pontuação TFIDF). A contagem de TFIDF é o produto da Frequência de Termo e da Frequência de Documento Inversa, definido como: TFIDF de um termo T = (frequência de T) \* log ((nºs de linhas na Entrada) / (nº de linhas com T)). O valor padrão dessa propriedade é **0**.|  
 |WordOrPhrase|Integer|Um valor que especifica o tipo de termo. Os valores válidos são 0 (somente palavras), 1 (somente frases nominais) e 2 (palavras e frases nominais). O valor padrão dessa propriedade é **0**.|  
   
  A entrada, as colunas de entrada, a saída e as colunas de saída da transformação Contagem de Linhas não têm nenhuma propriedade personalizada.  

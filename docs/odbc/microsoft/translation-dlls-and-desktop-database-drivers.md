@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: df8bad9224a07b54b668b3c3fd40c9db71fe3db0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635134"
 ---
 # <a name="translation-dlls-and-desktop-database-drivers"></a>DLLs de conversão e drivers de banco de dados de área de trabalho
 Sem suporte.

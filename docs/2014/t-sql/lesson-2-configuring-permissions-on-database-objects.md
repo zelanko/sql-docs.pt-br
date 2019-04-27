@@ -13,13 +13,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 940b33cda3158e98c9fee519ea12f1193e615bca
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52746919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642583"
 ---
-# <a name="lesson-2-configuring-permissions-on-database-objects"></a>Lição 2: Configurando permissões em objetos de banco de dados
+# <a name="lesson-2-configuring-permissions-on-database-objects"></a>Lição 2: Como configurar permissões em objetos de banco de dados
   Conceder um acesso de usuário a um banco de dados envolve três etapas. Primeiro, crie um logon. O logon permite que o usuário se conecte ao [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. Em seguida, configure o logon como um usuário no banco de dados especificado. E, finalmente, conceda essa permissão de usuário a objetos de banco de dados. Esta lição mostra essas três etapas e demonstra como criar uma exibição e um procedimento armazenado como o objeto.  
   
  Eis os tópicos desta lição:  

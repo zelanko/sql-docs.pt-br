@@ -26,11 +26,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 98cbaa59ea78e0033e9a534915987576347db604
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637614"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Comparar XML digitado com XML não digitado
   É possível criar variáveis, parâmetros e colunas do tipo `xml`. Opcionalmente, é possível associar uma coleção de esquemas XML com uma variável, parâmetro ou coluna de tipo `xml`. Nesse caso, o `xml` instância de tipo de dados é chamada *digitado*. Caso contrário, a instância XML é chamada *sem-tipo*.  
@@ -67,14 +67,14 @@ ms.locfileid: "58538429"
   
  Nos exemplos a seguir, uma convenção de nomenclatura de duas partes é usada para especificar o nome da coleção de esquema XML. A primeira parte é o nome do esquema e a segunda parte é o nome da coleção de esquema XML.  
   
-### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Exemplo: Associando uma coleção de esquema uma variável de tipo xml  
+### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Exemplo: Associando uma coleção de esquemas com uma variável do tipo xml  
  O exemplo a seguir cria um`xml` variável de tipo e associa uma coleção de esquema ela. A coleção de esquema especificada no exemplo já está importada no banco de dados **AdventureWorks** .  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   
 ```  
   
-### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>Exemplo: Especificando um esquema para uma coluna de tipo xml  
+### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>Exemplo: Especificando um esquema para uma coluna do tipo xml  
  O exemplo a seguir cria uma tabela com uma coluna de tipo `xml` e especifica um esquema para a coluna:  
   
 ```  
@@ -105,7 +105,7 @@ AS
   
  Na hierarquia de tipo de dados, o tipo de dados `xml` aparece abaixo dos tipos de dados `sql_variant` e definidos pelo usuário, mas acima de qualquer tipo interno.  
   
-### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>Exemplo: Especificando facetas para restringir uma coluna de xml com tipo  
+### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>Exemplo: Especificando facetas para restringir uma coluna xml tipada  
  Para colunas `xml` com tipo, é possível restringir a coluna para permitir que apenas elementos únicos de nível superior de cada instância sejam armazenados nela. Isso é feito especificando a faceta opcional `DOCUMENT` ao criar uma tabela, conforme mostrado no exemplo a seguir:  
   
 ```  

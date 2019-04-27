@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a7f08879e314ac17e47d4bc3eb096a559ff654d2
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767058"
 ---
 # <a name="ole-db-destination-editor-mappings-page"></a>Editor de Destino de OLE DB (página Mapeamentos)
   Use a página **Mapeamentos** da caixa de diálogo **Editor de Destino de OLE DB** para mapear colunas de entrada para colunas de destino.  

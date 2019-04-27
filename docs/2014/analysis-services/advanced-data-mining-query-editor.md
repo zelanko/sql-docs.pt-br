@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80b2705920b7793f7f89b323a16fa2f3618e4d1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072796"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635628"
 ---
 # <a name="advanced-data-mining-query-editor"></a>Editor de Consulta Avançada de Mineração de Dados
   O **Data Mining Editor de consulta avançada** é uma ferramenta para ajudar você a criar modelos e consultas personalizadas.  
@@ -37,7 +37,7 @@ ms.locfileid: "48072796"
  Use esse botão para alternar o editor entre um editor de texto, onde você pode escrever instruções DMX diretamente; e o **construtor de consultas**, que ajuda a você cria uma instrução DMX.  
   
 > [!NOTE]  
->  **Aviso:** se você alternar exibições antes da execução de consulta, será exibida uma mensagem informando que você pode perder algumas alterações. Se a instrução DMX for válida, em muitos casos as **construtor de consultas** pode converter com êxito essas alterações. No entanto, se criar uma instrução DMX particularmente complexa, você deverá salvar seu trabalho antes de alternar exibições.  
+>  **Aviso:** Se você alternar exibições antes da execução de consulta, será exibida uma mensagem informando que você pode perder algumas alterações. Se a instrução DMX for válida, em muitos casos as **construtor de consultas** pode converter com êxito essas alterações. No entanto, se criar uma instrução DMX particularmente complexa, você deverá salvar seu trabalho antes de alternar exibições.  
   
  **Modelos DMX**  
  Clique e selecione em uma lista de modelos que contenha exemplos de DMX. Os modelos oferecem todo tipo de modelo ou consulta de previsão que você possa precisar, inclusive consultas que usam tabelas aninhadas e instruções DMX para gerenciar modelos. Mesmo que você tenha algum conhecimento de DMX, os modelos poderão economizar tempo ao usar a sintaxe correta.  

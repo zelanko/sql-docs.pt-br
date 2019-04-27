@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 536aeb35d871fa2dd13e343cc589649dda45e984
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767208"
 ---
 # <a name="move-ssis-toolbox-items"></a>Mover itens da caixa de ferramentas do SSIS
   A nova Caixa de Ferramentas do SSIS inclui novas categorias e a capacidade de organizar itens de acordo com suas preferências. Uma janela de informações na parte inferior da caixa de ferramentas fornece uma descrição de um item da caixa de ferramentas selecionado e um link para o tópico Manuais Online.  

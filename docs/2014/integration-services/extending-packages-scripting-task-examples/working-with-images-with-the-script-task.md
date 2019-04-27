@@ -24,23 +24,23 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b27b5bbc77d1d48e3697893e2e21dcf7d8a6c570
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389853"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768442"
 ---
 # <a name="working-with-images-with-the-script-task"></a>Trabalhando com imagens com a tarefa Script
   Um banco de dados de produtos ou usuários costuma incluir imagens além de texto e dados numéricos. O namespace `System.Drawing` no Microsoft .NET Framework fornece classes para manipular imagens.  
   
- [Exemplo 1: Converter imagens em formato JPEG](#example1)  
+ [Exemplo 1: converter imagens para o formato JPEG](#example1)  
   
- [Exemplo 2: Criar e salvar imagens em miniatura](#example2)  
+ [Exemplo 2: criar e salvar imagens em miniatura](#example2)  
   
 > [!NOTE]  
 >  Se desejar criar uma tarefa mais fácil de ser reutilizada em vários pacotes, procure utilizar o código desse exemplo de tarefa Script como o ponto inicial de uma tarefa personalizada. Para obter mais informações, consulte [Desenvolvendo uma tarefa personalizada](../extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-##  <a name="example1"></a> Descrição do exemplo 1: Converter imagens em formato JPEG  
+##  <a name="example1"></a> Descrição do exemplo 1: converter imagens para o formato JPEG  
  O exemplo a seguir abre um arquivo de imagem especificado por uma variável e salva-o como um arquivo JPEG compactado usando um codificador. O código para recuperar informações de codificador é encapsulado em uma função particular.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>Para configurar esse exemplo de tarefa Script para uso com um único arquivo de imagem  
@@ -149,7 +149,7 @@ End Function
   
 ```  
   
-##  <a name="example2"></a> Descrição do exemplo 2: Criar e salvar imagens em miniatura  
+##  <a name="example2"></a> Descrição do exemplo 2: criar e salvar imagens em miniatura  
  O exemplo a seguir abre um arquivo de imagem especificado por uma variável, cria uma miniatura da imagem, mantendo uma taxa de proporção constante e salva a miniatura com um nome de arquivo modificado. O código que calcula a altura e largura da miniatura, mantendo uma taxa de proporção constante, é encapsulado em uma sub-rotina particular.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>Para configurar esse exemplo de tarefa Script para uso com um único arquivo de imagem  

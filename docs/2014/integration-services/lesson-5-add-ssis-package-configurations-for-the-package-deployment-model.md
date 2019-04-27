@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 25922725e202bc7b38e2c6141a097df1af119ed2
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767403"
 ---
-# <a name="lesson-5-adding-package-configurations-for-the-package-deployment-model"></a>Lição 5: Adicionando configurações de pacote para o modelo de implantação de pacote
+# <a name="lesson-5-adding-package-configurations-for-the-package-deployment-model"></a>Lição 5: Como adicionar configurações de pacote para o modelo de implantação de pacote
   As configurações de pacote deixam você definir propriedades de tempo de execução e variáveis de fora do ambiente de desenvolvimento. As configurações permitem que você desenvolva pacotes que flexíveis e fáceis de implantar e distribuir. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] oferece os seguintes tipos de configuração:  
   
 -   Arquivo de configuração XML  

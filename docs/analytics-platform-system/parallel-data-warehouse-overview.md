@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: aaf90124cc7877b633a997a2c4f170057b965028
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62639888"
 ---
 # <a name="parallel-data-warehouse-components---analytics-platform-system"></a>Componentes do Data Warehouse - Analytics Platform System em paralelo
 Este artigo explica o software de dispositivo e os componentes de software não seja de dispositivo do Analytics Platform System.  

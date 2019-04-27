@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4913009226232f1359fbba25d50bcaf0d095da17
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642485"
 ---
 # <a name="rds-methods"></a>Métodos RDS
 > [!IMPORTANT]
@@ -27,7 +27,7 @@ ms.locfileid: "51604307"
   
 |||  
 |-|-|  
-|[Cancelar (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)|Cancela a execução de uma chamada de método assíncrono pendente.|  
+|[Cancel (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)|Cancela a execução de uma chamada de método assíncrono pendente.|  
 |[CancelUpdate (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)|Cancela qualquer alteração feita na linha atual ou nova de um **Recordset** objeto.|  
 |[ConvertToString (RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)|Converte um **Recordset** para uma cadeia de caracteres MIME que representa os dados do conjunto de registros.|  
 |[CreateObject (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)|Cria o proxy para o objeto de negócios de destino e retorna um ponteiro para ele.|  
@@ -35,10 +35,10 @@ ms.locfileid: "51604307"
 |[Método Execute (RDS)](../../../ado/reference/rds-api/execute-method-rds.md)|Executar a solicitação e criar um conjunto de linhas de dados avançados (para uso com o ADO 2.5 e posterior).|  
 |[Método Execute21 (RDS)](../../../ado/reference/rds-api/execute21-method-rds.md)|Executar a solicitação e criar um conjunto de linhas de dados avançados (para uso com o ADO 2.1).|  
 |[InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md)|Retorna um ponteiro para a interface solicitada em uma versão mais robustos do objeto.|  
-|[MoveFirst, MoveLast, MoveNext e MovePrevious (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)|Move para a primeira, última, registro anterior ou seguinte em um especificado **Recordset** objeto.|  
+|[MoveFirst, MoveLast, MoveNext, MovePrevious (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)|Move para a primeira, última, registro anterior ou seguinte em um especificado **Recordset** objeto.|  
 |[Consulta (RDS)](../../../ado/reference/rds-api/query-method-rds.md)|Usa uma cadeia de caracteres de consulta SQL válida para retornar um **conjunto de registros**.|  
 |[Atualização (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)|Repete a consulta a fonte de dados especificada na **Connect** propriedade e atualizações, os resultados da consulta.|  
-|[Redefinir (RDS)](../../../ado/reference/rds-api/reset-method-rds.md)|Executa a classificação ou filtragem em um lado do cliente **Recordset**, com base nas propriedades de classificação e filtro especificadas.|  
+|[Reset (RDS)](../../../ado/reference/rds-api/reset-method-rds.md)|Executa a classificação ou filtragem em um lado do cliente **Recordset**, com base nas propriedades de classificação e filtro especificadas.|  
 |[SubmitChanges (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)|Envia as alterações de localmente em cache e atualizáveis pendentes **conjunto de registros** à fonte de dados especificado na **Connect** propriedade.|  
 |[Método Synchronize (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md)|Sincronize o determinado conjunto de registros com o banco de dados especificado pela cadeia de conexão (para uso com o ADO 2.5 e posterior).|  
 |[Método Synchronize21 (RDS)](../../../ado/reference/rds-api/synchronize21-method-rds.md)|Sincronize o determinado conjunto de registros com o banco de dados especificado pela cadeia de conexão (para uso com o ADO 2.1).|
