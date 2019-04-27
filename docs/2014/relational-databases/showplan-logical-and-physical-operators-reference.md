@@ -136,11 +136,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e4e45de57f4ea1ea88b72df7190e5ec8c3a1f768
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62627088"
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>Referência de operadores físicos e lógicos de plano de execução
   Os operadores descrevem como o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] executa uma consulta ou uma instrução DML (Linguagem de Manipulação de Dados). O otimizador de consultas usa os operadores para criar um plano de consulta a fim de criar o resultado especificado na consulta ou para executar a operação especificada na instrução DML. O plano de consulta é uma árvore que consiste em operadores físicos. Você pode exibir o plano de consulta usando as instruções SET SHOWPLAN, as opções de plano de execução gráfica no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]ou as classes de evento do Plano de Execução do SQL Server Profiler.  
@@ -155,11 +155,11 @@ ms.locfileid: "53361478"
   
  Os operadores físicos iniciam, coletam dados e fecham. Especificamente, o operador físico pode responder às três chamadas de método abaixo:  
   
--   **Init ()**: O **init ()** método faz com que um operador físico se inicialize e define quaisquer estruturas de dados necessários. O operador físico pode receber muitas chamadas **Init()** ; entretanto, um operador físico costuma receber somente uma.  
+-   **Init()**: o método **Init()** faz com que um operador físico se inicialize e define quaisquer estruturas de dados necessárias. O operador físico pode receber muitas chamadas **Init()** ; entretanto, um operador físico costuma receber somente uma.  
   
--   **GetNext ()**: O **GetNext ()** método faz com que um operador físico obter a primeira linha ou a subsequente de dados. O operador físico pode receber zero ou muitas chamadas **GetNext()** .  
+-   **GetNext()**: o método **GetNext()** faz um operador físico obter a primeira linha de dados ou a subsequente. O operador físico pode receber zero ou muitas chamadas **GetNext()** .  
   
--   **Close ()**: O **Close ()** método faz com que um operador físico executar algumas operações de limpeza e se desligar. Um operador físico só recebe uma chamada **Close()** .  
+-   **Close()**: o método **Close()** faz um operador físico executar algumas operações de limpeza total e se desligar. Um operador físico só recebe uma chamada **Close()** .  
   
  O método **GetNext()** retorna uma linha de dados e o número de vezes em que é chamado aparece como **ActualRows** na saída do Plano de Execução que é produzida usando as opções SET STATISTICS PROFILE ON ou SET STATISTICS XML ON. Para obter mais informações sobre essas opções SET, veja [SET STATISTICS PROFILE &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-statistics-profile-transact-sql) e [SET STATISTICS XML &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-statistics-xml-transact-sql).  
   

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 979e379637f39bdcfb37c5b944ce6af45503f62a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756761"
 ---
 # <a name="relationships-ssas-tabular"></a>Relações (SSAS tabular)
   Em modelos tabulares, uma relação é uma conexão entre duas tabelas de dados. A relação estabelece como os dados nas duas tabelas devem ser correlacionados. Por exemplo, podem ser relacionadas às tabelas Customers e Orders para mostrar o nome do cliente associado a cada ordem.  
@@ -47,7 +47,7 @@ ms.locfileid: "48191736"
 ##  <a name="what"></a> Benefícios  
  Relação é uma conexão entre duas tabelas de dados, baseada em uma ou mais colunas em cada tabela. Para saber por que as relações são úteis, imagine que você acompanhe dados para pedidos de clientes na empresa. Você poderia acompanhar todos os dados em uma única tabela com uma estrutura semelhante à seguinte:  
   
-|CustomerID|Nome|EMail|DiscountRate|OrderID|OrderDate|Product|Quantidade|  
+|CustomerID|Nome|EMail|DiscountRate|OrderID|OrderDate|Produto|Quantidade|  
 |----------------|----------|-----------|------------------|-------------|---------------|-------------|--------------|  
 |1|Ashton|chris.ashton@contoso.com|0,05|256|2010-01-07|Compact Digital|11|  
 |1|Ashton|chris.ashton@contoso.com|0,05|255|2010-01-03|SLR Camera|15|  
@@ -71,7 +71,7 @@ ms.locfileid: "48191736"
   
 ### <a name="orders"></a>Orders  
   
-|[CustomerID]|OrderID|OrderDate|Product|Quantidade|  
+|[CustomerID]|OrderID|OrderDate|Produto|Quantidade|  
 |--------------------|-------------|---------------|-------------|--------------|  
 |1|256|2010-01-07|Compact Digital|11|  
 |1|255|2010-01-03|SLR Camera|15|  
@@ -113,7 +113,7 @@ ms.locfileid: "48191736"
 ### <a name="single-active-relationship-between-tables"></a>Relação ativa única entre tabelas  
  Várias relações podem resultar em dependências ambíguas entre as tabelas. Para criar cálculos exatos, você precisa de um único caminho de uma tabela para a próxima. Por isso, pode haver apenas uma relação ativa entre cada par de tabelas. Por exemplo, no AdventureWorks DW 2012, a tabela, DimDate, contém uma coluna, DateKey, que está relacionada a três colunas diferentes da tabela FactInternetSales: OrderDate, DueDate e ShipDate. Se você tentar importar essas tabelas, a primeira relação será criada com êxito, mas você receberá o seguinte erro em relações sucessivas que envolvam a mesma coluna:  
   
- \* Relação: table [column 1] -> table [column 2] - Status: error - motivo: não é possível criar uma relação entre tabelas \<tabela 1 > e \<a tabela 2 >. Só pode existir uma relação direta ou indireta entre duas tabelas.  
+ \* Relação: table [column 1] -> table [column 2] - Status: error - motivo: Não é possível criar uma relação entre tabelas \<tabela 1 > e \<a tabela 2 >. Só pode existir uma relação direta ou indireta entre duas tabelas.  
   
  Se tiver duas tabelas e várias relações entre elas, você precisará importar várias cópias da tabela que contém a coluna de pesquisa e criar uma relação entre cada par de tabelas.  
   
@@ -173,7 +173,7 @@ ms.locfileid: "48191736"
   
  Se seu modelo contiver dados de várias origens, provavelmente você precisará criar relações manualmente. Por exemplo, você pode importar as tabelas Customers, CustomerDiscounts e Orders de uma fonte de dados relacional. As relações existentes entre essas tabelas na origem são criadas automaticamente no modelo. Você pode adicionar outra tabela de uma origem diferente; por exemplo, você importa dados de região de uma tabela Geography em uma pasta de trabalho do Microsoft Excel. Você pode criar manualmente uma relação entre uma coluna na tabela Customers e uma coluna na tabela Geography.  
   
- Para criar manualmente relações em um modelo de tabela, você pode usar o designer de modelos na Exibição de Diagrama ou usar a caixa de diálogo Gerenciar Relações. A exibição de diagrama exibe tabelas, com relações entre elas, em um formato gráfico. Você pode clicar em uma coluna em uma tabela e arrastar o cursor até outra tabela para criar facilmente uma relação, na ordem correta, entre as tabelas. A caixa de diálogo Gerenciar Relações exibe relações entre tabelas em um formato de tabela simples. Para saber como criar relações manualmente, consulte [Create a Relationship Between Two Tables &#40;SSAS Tabular&#41;](create-a-relationship-between-two-tables-ssas-tabular.md).  
+ Para criar manualmente relações em um modelo de tabela, você pode usar o designer de modelos na Exibição de Diagrama ou usar a caixa de diálogo Gerenciar Relações. A exibição de diagrama exibe tabelas, com relações entre elas, em um formato gráfico. Você pode clicar em uma coluna em uma tabela e arrastar o cursor até outra tabela para criar facilmente uma relação, na ordem correta, entre as tabelas. A caixa de diálogo Gerenciar Relações exibe relações entre tabelas em um formato de tabela simples. Para saber como criar relações manualmente, consulte [Criar uma relação entre duas tabelas &#40;SSAS de Tabela&#41;](create-a-relationship-between-two-tables-ssas-tabular.md).  
   
 ##  <a name="bkmk_dupl_errors"></a> Valores duplicados e outros erros  
  Se você escolher uma coluna que não possa ser usada na relação, um X vermelho aparecerá ao lado da coluna. Você pode pausar o cursor sobre o ícone de erro para visualizar uma mensagem que fornece mais informações sobre o problema. Os problemas que podem tornar impossível a criação de uma relação entre as colunas selecionadas incluem os seguintes:  
@@ -185,13 +185,13 @@ ms.locfileid: "48191736"
   
 ##  <a name="bkmk_related_tasks"></a> Tarefas relacionadas  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
-|[Criar uma relação entre duas tabelas &#40;Tabular do SSAS&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)|Descreve como criar uma relação manualmente entre duas tabelas.|  
-|[Excluir relações de &#40;Tabular do SSAS&#41;](relationships-ssas-tabular.md)|Descreve como excluir uma relação e as ramificações de excluir relações.|  
+|[Criar uma relação entre duas tabelas &#40;SSAS de Tabela&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)|Descreve como criar uma relação manualmente entre duas tabelas.|  
+|[Excluir relações &#40;SSAS de Tabela&#41;](relationships-ssas-tabular.md)|Descreve como excluir uma relação e as ramificações de excluir relações.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Tabelas e colunas &#40;Tabular do SSAS&#41;](tables-and-columns-ssas-tabular.md)   
- [Importar dados &#40;Tabular do SSAS&#41;](../import-data-ssas-tabular.md)  
+ [Tabelas e colunas &#40;SSAS de Tabela&#41;](tables-and-columns-ssas-tabular.md)   
+ [Importar dados &#40;SSAS de Tabela&#41;](../import-data-ssas-tabular.md)  
   
   

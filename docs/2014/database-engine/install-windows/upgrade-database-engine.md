@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 84f032e89730aa9828dada1208c6d794db97260b
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774964"
 ---
 # <a name="upgrade-database-engine"></a>Atualizar o Mecanismo de Banco de Dados
   Este tópico fornece as informações necessárias para preparar e entender o processo de atualização; ele abrange:  
@@ -43,7 +43,7 @@ ms.locfileid: "51018561"
 >  Antes de atualizar de uma edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para outra, verifique se há suporte à funcionalidade usada atualmente na edição para a qual está atualizando.  
   
 > [!NOTE]  
->  Quando você atualizar para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de uma versão anterior da edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise, escolha entre Enterprise Edition: Licenciamento baseado em núcleo e Enterprise Edition. Estas edições Enterprise só diferem com relação aos modos de licenciamento. Para saber mais, confira [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
+>  Quando você atualiza [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition, escolha entre Enterprise Edition: Licenciamento baseado em núcleo e Enterprise Edition. Estas edições Enterprise só diferem com relação aos modos de licenciamento. Para saber mais, confira [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
 ## <a name="pre-upgrade-checklist"></a>Lista de verificação anterior à atualização  
  O programa de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte à atualização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a partir de uma versão anterior. Também é possível migrar bancos de dados de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A migração pode ser feita de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para outra no mesmo computador ou de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em outro computador. As opções de migração incluem o uso do Assistente para Copiar Banco de Dados, a funcionalidade de backup e restauração, o uso do Assistente para Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e de métodos de importação/exportação em massa.  
@@ -124,7 +124,7 @@ ms.locfileid: "51018561"
   
 -   Preencha novamente catálogos de texto completo para garantir a consistência semântica em resultados da consulta.  
   
-     O [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala novos separadores de palavras para uso pela Pesquisa de texto completo e semântico. Os separadores de palavras são usados na indexação e na consulta. Se você não recriar os catálogos de texto completo, seus resultados da pesquisa poderão ser inconsistentes. Se você emitir uma consulta de texto completo que procura uma frase que é interrompida diferentemente pelo separador de palavras em uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o separador de palavras atual, um documento ou linha contendo a frase talvez não seja recuperada. Isso ocorre porque as frases indexadas foram quebradas usando uma lógica diferente da usada pela consulta. A solução é preencher novamente (recompilar) os catálogos de texto completo com os novos separadores de palavras de forma que os comportamentos de tempo de indexação e de consulta sejam idênticos.  
+     [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala novos separadores de palavras para uso pela Pesquisa semântica e de texto completo. Os separadores de palavras são usados na indexação e na consulta. Se você não recriar os catálogos de texto completo, seus resultados da pesquisa poderão ser inconsistentes. Se você emitir uma consulta de texto completo que procura uma frase que é interrompida diferentemente pelo separador de palavras em uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o separador de palavras atual, um documento ou linha contendo a frase talvez não seja recuperada. Isso ocorre porque as frases indexadas foram quebradas usando uma lógica diferente da usada pela consulta. A solução é preencher novamente (recompilar) os catálogos de texto completo com os novos separadores de palavras de forma que os comportamentos de tempo de indexação e de consulta sejam idênticos.  
   
      Para obter mais informações, consulte [sp_fulltext_catalog &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-catalog-transact-sql).  
   

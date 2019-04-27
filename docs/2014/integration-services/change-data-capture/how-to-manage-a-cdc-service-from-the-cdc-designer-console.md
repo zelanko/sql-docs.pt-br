@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cbd284d3657a94e9c002ec252812e010e7014cd4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771236"
 ---
 # <a name="how-to-manage-a-cdc-service-from-the-cdc-designer-console"></a>Como gerenciar um serviço CDC no CDC Designer Console
   Este procedimento descreve como usar o CDC Designer Console para gerenciar um serviço CDC.  
@@ -28,7 +28,7 @@ ms.locfileid: "58381494"
   
 3.  Selecione o serviço que você quer gerenciar.  
   
-     **Observação**: Se não houver nenhum serviço listado no CDC Designer Console, você deve criar novas instâncias usando o Console de configuração do serviço CDC. Para obter informações sobre como criar um novo serviço, consulte a ajuda online incluída com o console de configuração.  
+     **Observação**: se não houver nenhum serviço listado no CDC Designer Console, você deverá criar novas instâncias usando o Console de Configuração do Serviço CDC. Para obter informações sobre como criar um novo serviço, consulte a ajuda online incluída com o console de configuração.  
   
 4.  Você pode realizar as seguintes tarefas para um serviço CDC:  
   

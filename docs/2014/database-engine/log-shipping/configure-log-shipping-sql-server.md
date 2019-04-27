@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7533eb253ba32dd8ef2d57c3182096b36a6e47b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774580"
 ---
 # <a name="configure-log-shipping-sql-server"></a>Configurar o envio de logs (SQL Server)
   Este tópico descreve como configurar o envio de logs no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -78,7 +78,7 @@ ms.locfileid: "48049236"
   
 8.  Observe a agenda de backup listada na caixa **Agenda** em **Trabalho de backup**. Se quiser personalizar a agenda para sua instalação, clique em **Agenda** e, em seguida, ajuste a Agenda do agente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , conforme necessário.  
   
-9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dá suporte à [compactação de backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Ao criar a configuração de envio de logs, é possível controlar o comportamento da compactação de backup de logs escolhendo uma das seguintes opções: **Usar a configuração padrão do servidor**, **Compactar o backup**ou **Não compactar o backup**. Para obter mais informações, consulte [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
+9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dá suporte à [compactação de backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Ao criar uma configuração de envio de log, você pode controlar o comportamento de compactação de backup de backups de log, escolhendo uma das seguintes opções: **Use a configuração de servidor padrão**, **compactar backup**, ou **não compactar o backup**. Para obter mais informações, consulte [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
   
 10. Clique em **OK**.  
   

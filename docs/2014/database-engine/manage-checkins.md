@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 767e89a777fc530d4622a32f31c984d0e48004ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774288"
 ---
 # <a name="manage-checkins"></a>Gerenciar check-ins
   Para fazer alterações em um arquivo controlado por código-fonte disponível para outros usuários, você deve fazer check-in do arquivo. Quando você faz o check-in de um arquivo, a versão criada é copiada no provedor de controle do código-fonte e passa a ser a versão mais recente do arquivo. Em geral, ela fica disponível para os usuários que têm as permissões apropriadas.  
@@ -28,7 +28,7 @@ ms.locfileid: "48069866"
   
  A tabela a seguir descreve os tópicos dessa seção.  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Fazer check-in de arquivos](../../2014/database-engine/check-in-files.md)|Fornece instruções sobre como fazer check-in em um arquivo modificado.|  
 |[Exibir uma lista de arquivos modificados](../../2014/database-engine/view-a-list-of-modified-files.md)|Explica como exibir uma lista de arquivos modificados em que você pode fazer check-in em conjunto quando terminar o trabalho.|  

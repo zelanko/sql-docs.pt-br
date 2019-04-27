@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 72785cffa01da7bf00248d442b1d3ce4103c45a8
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771362"
 ---
 # <a name="create-the-sql-server-change-database"></a>Criar o banco de dados de alteração do SQL Server
   Quando você inicia o assistente Nova Instância, a página Criar Banco de Dados CDC é aberta. Use a página Criar Banco de Dados CDC para fornecer informações sobre a nova instância CDC e criar um novo banco de dados de alteração.  
@@ -35,16 +35,16 @@ ms.locfileid: "58391174"
  **Instância Oracle CDC**  
  Digite as seguintes informações sobre a instância CDC que você está criando.  
   
--   **Nome**: Digite um nome para o novo serviço. Este também será o nome do novo banco de dados de alteração.  
+-   **Nome**: digite um nome para o novo serviço. Este também será o nome do novo banco de dados de alteração.  
   
--   **Descrição**: Digite uma descrição para a nova instância ajudar a identificá-lo. Isso é opcional.  
+-   **Descrição**: digite uma descrição para a nova instância para ajudar a identificá-la. Isso é opcional.  
   
  **Banco de Dados de alteração do SQL Server**  
  Esta seção é usada para criar o banco de dados.  
   
-1.  **Alterar banco de dados**: O nome do novo banco de dados de alteração. O nome do banco de dados é o mesmo que o nome que você deu à instância. Este campo somente leitura exibe o caminho completo para o banco de dados.  
+1.  **Alterar banco de dados**: o nome do novo banco de dados de alteração. O nome do banco de dados é o mesmo que o nome que você deu à instância. Este campo somente leitura exibe o caminho completo para o banco de dados.  
   
-2.  **Criar banco de dados**: Clique em **Create Database** para criar o banco de dados.  
+2.  **Criar Banco de Dados**: clique em **Criar Banco de Dados** para criar o banco de dados.  
   
      Para criar o banco de dados, o logon deve ter a função de servidor `sysasmin` . Consulte a observação de segurança acima para obter mais informações.  
   

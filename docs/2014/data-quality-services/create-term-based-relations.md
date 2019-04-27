@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1b276f913c70619933d5f317f322fc840cc4d672
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756436"
 ---
 # <a name="create-term-based-relations"></a>Criar relações baseadas em termos
   Este tópico descreve como criar relações baseadas em termos para um domínio no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Uma relação baseada em termos permite que você faça uma correção em um termo que faz parte de um valor em um domínio. Elas permitem que diversos valores idênticos, exceto pela ortografia de uma parte comum deles, sejam considerados como sinônimos idênticos. Por exemplo, você pode configurar uma relação baseada em termos que altere o termo "Inc." para "Incorporated". O termo "Inc." será alterado toda vez que ocorrer no domínio. As instâncias de "Contoso, Inc." serão alteradas para "Contoso, Incorporated" e os dois valores serão considerados sinônimos exatos.  
@@ -90,7 +90,7 @@ ms.locfileid: "56016767"
   
     6.  Localize um valor na tabela Relações inserindo um ou mais dígitos na caixa de texto **Localizar** . Correspondências para a cadeia de caracteres serão realçadas. Use as setas para cima e para baixo para se mover para instâncias diferentes da cadeia de caracteres na tabela.  
   
-    7.  **O verificador ortográfico**: Se o valor na **valor** ou **corrigir para** coluna tiver um sublinhado vermelho ondulado, o verificador ortográfico está sugerindo uma correção para o valor. Clique com o botão direito do mouse no valor com sublinhado e selecione um dos valores propostos pelo Verificador Ortográfico. Como alternativa, você pode clicar em **Adicionar** no menu de atalho para continuar com o valor original. Para obter mais informações, consulte [Usar o verificador ortográfico DQS](../../2014/data-quality-services/use-the-dqs-speller.md) e [Definir propriedades de domínio](../../2014/data-quality-services/set-domain-properties.md).  
+    7.  **Verificador ortográfico**: se um valor na coluna **Valor** ou **Corrigir para** tiver um sublinhado vermelho ondulado, o Verificador ortográfico sugerirá uma correção para o valor. Clique com o botão direito do mouse no valor com sublinhado e selecione um dos valores propostos pelo Verificador Ortográfico. Como alternativa, você pode clicar em **Adicionar** no menu de atalho para continuar com o valor original. Para obter mais informações, consulte [Usar o verificador ortográfico DQS](../../2014/data-quality-services/use-the-dqs-speller.md) e [Definir propriedades de domínio](../../2014/data-quality-services/set-domain-properties.md).  
   
         > [!NOTE]  
         >  Para usar o Verificador Ortográfico, você pode habilitá-lo na página **Propriedades de Domínio** ou, se ele estiver desabilitado na página **Propriedades de Domínio** , você poderá clicar no ícone **Habilitar/Desabilitar o Verificador Ortográfico** na página **Relações Baseadas em Termos** para habilitá-lo nessa página.  
@@ -99,7 +99,7 @@ ms.locfileid: "56016767"
   
 7.  Clique em **Concluir** para concluir a atividade de gerenciamento de domínio, conforme descrito em [Terminar a atividade Gerenciamento de Domínio](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
-##  <a name="FollowUp"></a> Acompanhamento: Depois de criar relações baseadas em termos  
+##  <a name="FollowUp"></a> Acompanhamento: após criar relações baseadas em termos  
  Depois de criar relações baseadas em termos, você poderá executar outras tarefas de gerenciamento de domínio, executar a descoberta da base de dados de conhecimento para adicionar conhecimento ao domínio ou adicionar uma política de correspondência ao domínio. Para obter mais informações, consulte [Executar a descoberta de conhecimento](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../../2014/data-quality-services/managing-a-domain.md) ou [Criar uma política de conciliação](../../2014/data-quality-services/create-a-matching-policy.md).  
   
   

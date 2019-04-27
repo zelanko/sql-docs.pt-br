@@ -11,16 +11,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e97aed3a5a4f5b49e482479b58928d2092a314f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773779"
 ---
 # <a name="using-nonclustered-columnstore-indexes"></a>Usando índices columnstore não clusterizados
-  Descreve as tarefas principais para usar um índice columnstore não clusterizado em uma tabela do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+  Descreve as tarefas principais para usar um índice columnstore não clusterizado em uma tabela do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- Para obter uma visão geral de índices columnstore, consulte [índices Columnstore descritos](../relational-databases/indexes/columnstore-indexes-described.md).  
+ Para obter uma visão geral de índices columnstore, consulte [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md).  
   
  Para obter informações sobre índices columnstore clusterizados, consulte [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md).  
   
@@ -38,7 +38,7 @@ ms.locfileid: "48182484"
 ##  <a name="change"></a> Alterar os dados em um índice Columnstore não clusterizado  
  Quando você cria um índice columnstore não clusterizado em uma tabela, não pode modificar diretamente os dados nessa tabela. Uma consulta com INSERT, UPDATE, DELETE ou MERGE falhará e retornará uma mensagem de erro. Para adicionar ou modificar os dados na tabela, siga um destes procedimentos:  
   
--   Desabilite o índice columnstore. Depois, você pode atualizar os dados na tabela. Se você desabilitar o índice columnstore, poderá recriar o índice columnstore quando concluir a atualização dos dados. Por exemplo:  
+-   Desabilite o índice columnstore. Depois, você pode atualizar os dados na tabela. Se você desabilitar o índice columnstore, poderá recriar o índice columnstore quando concluir a atualização dos dados. Por exemplo:   
   
     ```  
     ALTER INDEX mycolumnstoreindex ON mytable DISABLE;  

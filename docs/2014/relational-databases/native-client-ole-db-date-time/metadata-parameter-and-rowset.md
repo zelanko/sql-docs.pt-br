@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2b96876a050f9ba46363792eec22d76640ee6fc2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62655622"
 ---
 # <a name="parameter-and-rowset-metadata"></a>Parâmetro e metadados de conjunto de linhas
   Este tópico fornece informações sobre o tipo e os membros de tipo a seguir, relacionados aos aprimoramentos de data e hora de OLE DB.  
@@ -37,10 +37,10 @@ ms.locfileid: "52818025"
   
 |Tipo de parâmetro|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
-|Data|DBTYPE_DBDATE|6|10|0|Liberada|  
+|date|DBTYPE_DBDATE|6|10|0|Liberada|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Defina|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Liberada|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Liberada|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|Liberada|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19,21..27|0..7|Defina|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26,28..34|0..7|Defina|  
   
@@ -54,11 +54,11 @@ ms.locfileid: "52818025"
 |*pwszDataSourceType*<br /><br /> (específico do provedor)|*pwszDataSourceType*<br /><br /> (OLE DB genérico)|*ulParamSize*|*bScale*|  
 |----------------------------------------------------|-------------------------------------------------|-------------------|--------------|  
 ||DBTYPE_DATE|6|Ignored|  
-|Data|DBTYPE_DBDATE|6|Ignored|  
+|date|DBTYPE_DBDATE|6|Ignored|  
 ||DBTYPE_DBTIME|10|Ignored|  
 |time|DBTYPE_DBTIME2|10|0..7|  
 |smalldatetime||16|Ignored|  
-|DATETIME||16|Ignored|  
+|datetime||16|Ignored|  
 |datetime2 ou DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|16|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|0..7|  
   
@@ -71,7 +71,7 @@ ms.locfileid: "52818025"
 |Tipo de associação|*pwszDataSourceType*<br /><br /> (específico do provedor)|  
 |------------------|----------------------------------------------------|  
 |DBTYPE_DATE|datetime2(0)|  
-|DBTYPE_DBDATE|Data|  
+|DBTYPE_DBDATE|date|  
 |DBTYPE_DBTIME|time(0)|  
 |DBTYPE_DBTIME2|time(7)|  
 |DBTYPE_DBTIMESTAMP|datetime2(7)|  
@@ -82,10 +82,10 @@ ms.locfileid: "52818025"
   
 |Tipo de coluna|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE, DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS, DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  
-|Data|DBTYPE_DBDATE|6|10|0|Liberada|  
+|date|DBTYPE_DBDATE|6|10|0|Liberada|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Defina|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Liberada|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Liberada|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|Liberada|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Defina|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Defina|  
   
@@ -116,10 +116,10 @@ ms.locfileid: "52818025"
   
 |Tipo de parâmetro|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------------------|  
-|Data|DBTYPE_DBDATE|6|10|0|Liberada|  
+|date|DBTYPE_DBDATE|6|10|0|Liberada|  
 |time(1..7)|DBTYPE_DBTIME2|10|8, 10..16|0..7|Defina|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Liberada|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Liberada|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|Liberada|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Defina|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Defina|  
   

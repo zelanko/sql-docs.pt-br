@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3ca0ef50d40b1c4d4f481bef4de89b43ff4a275c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650409"
 ---
 # <a name="qntemplate-event-class"></a>Classe de evento QN:Template
   O evento QN:Template fornece informações sobre o uso interno de modelos de consulta. Os modelos de consulta são o mecanismo que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] usa para compartilhar definições de uma consulta para notificação. Esses modelos são criados junto com tabelas de parâmetros. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] cria um evento desse tipo quando um modelo de consulta é criado, usado ou destruído.  
@@ -34,7 +34,7 @@ ms.locfileid: "53349508"
 |DatabaseName|`nvarchar`|O nome do banco de dados no qual a instrução do usuário está sendo executada.|35|Sim|  
 |EventClass|`int`|Tipo de evento = 201.|27|Não|  
 |EventSequence|`int`|Número de sequência para esse evento.|51|Não|  
-|EventSubClass|`nvarchar`|O tipo de subclasse de evento, fornecendo mais informações sobre cada classe de evento. Essa coluna pode conter os seguintes valores:<br /><br /> Modelo criado: Indica que um modelo de notificação de consulta foi criado no banco de dados.<br /><br /> Modelo encontrado: Indica quando um modelo de notificação de consulta é reutilizado.<br /><br /> Modelo descartado: Indica quando um modelo de notificação de consulta for afastado do banco de dados.|21|Sim|  
+|EventSubClass|`nvarchar`|O tipo de subclasse de evento, fornecendo mais informações sobre cada classe de evento. Essa coluna pode conter os seguintes valores:<br /><br /> Modelo criado: Indica que um modelo de notificação de consulta foi criado no banco de dados.<br /><br /> Modelo encontrado: Indica quando um modelo de notificação de consulta é reutilizado.<br /><br /> Modelo descartado: Indica quando um modelo de notificação de consulta é removido do banco de dados.|21|Sim|  
 |GroupID|`int`|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  
 |HostName|`nvarchar`|O nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o nome do host for fornecido pelo cliente. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |IsSystem|`int`|Indica se o evento ocorreu em um processo do sistema ou do usuário.<br /><br /> 0 = usuário<br /><br /> 1 = sistema|60|Não|  

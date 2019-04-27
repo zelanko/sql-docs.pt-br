@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 169b7b266ab8230c2cc669353b6e02f66b9f1c65
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62660164"
 ---
 # <a name="browsing-a-neural-network-model"></a>Procurando um modelo de rede neural
   Quando você abre uma rede neural ou modelo de regressão logística usando **Procurar**, o modelo é exibido em um visualizador interativo, semelhante ao visualizador de modelo da rede neural no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. O visualizador ajuda a explorar correlações e obter informações sobre os padrões no modelo e os dados subjacentes.  
@@ -30,7 +30,7 @@ ms.locfileid: "48218576"
 ##  <a name="BKMK_Tabs"></a> Explorar o modelo  
  Os modelos que são baseados na Rede Neural ou os algoritmos de Regressão Logística da [!INCLUDE[msCoName](../includes/msconame-md.md)] são semelhantes porque analisam dados como um conjunto de conexões entre entradas e saídas conhecidas. O visualizador **Procurar** ajuda a explorar essas conexões, usando os seguintes controles:  
   
--   [Variables](#BKMK_Variables)  
+-   [Variáveis](#BKMK_Variables)  
   
 -   [Entradas](#BKMK_Inputs)  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48218576"
   
     -   A **comparação de precisão** informa a utilidade desse par atributo-valor específico para promover um resultado ou outro.  
   
-     Observação: a dica de ferramenta contém as mesmas informações independentemente de você posicionar o mouse sobre uma coluna ou sobre a outra.  
+     Observação: A dica de ferramenta contém as mesmas informações independentemente de você posicionar o mouse sobre uma coluna ou a outra.  
   
  [Voltar ao início](#BKMK_Tabs)  
   
@@ -128,7 +128,7 @@ ms.locfileid: "48218576"
  [Voltar ao início](#BKMK_Tabs)  
   
 ## <a name="more-about-neural-network-models"></a>Mais sobre modelos de redes neurais  
- As informações no visualizador são recuperadas do servidor usando um procedimento armazenado específico para esse tipo de modelo: System.Microsoft.AnalysisServices.System.DataMining.NeuralNet.GetAttributeScores  
+ As informações no visualizador são recuperadas do servidor usando um procedimento armazenado específico para esse tipo de modelo: System.Microsoft.AnalysisServices.System.DataMining.NeuralNet.GetAttributeScores.  
   
  Se você quiser criar um modelo com vários atributos previsíveis usando os suplementos, use as opções de modelagem **Avançadas**.  
   

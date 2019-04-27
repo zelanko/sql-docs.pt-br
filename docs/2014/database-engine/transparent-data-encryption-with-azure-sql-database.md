@@ -15,27 +15,27 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3551cf4db3ab1b84f04ba13dea414943fbb2ef44
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773861"
 ---
 # <a name="transparent-data-encryption-with-azure-sql-database"></a>Transparent Data Encryption com o Banco de Dados SQL do Azure
-  [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] Transparent data encryption (visualização) ajuda a proteger contra a ameaça de atividades mal-intencionadas executando criptografia e descriptografia do banco de dados, backups associados e arquivos de log de transações em repouso sem exigir alterações no aplicativo.  
+  A Transparent Data Encryption do [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] (visualização) ajuda a proteger contra a ameaça de atividade mal-intencionada executando criptografia e descriptografia em tempo real do banco de dados, backups associados e arquivos de log de transações em repouso sem exigir alterações no aplicativo.  
   
  Ela criptografa o armazenamento de um banco de dados inteiro usando uma chave simétrica chamada de chave de criptografia de banco de dados. No [!INCLUDE[ssSDS](../includes/sssds-md.md)] , a chave de criptografia do banco de dados é protegida por um certificado do servidor interno. O certificado do servidor interno é exclusivo para cada servidor [!INCLUDE[ssSDS](../includes/sssds-md.md)] . Se um banco de dados está em uma relação de GeoDR, ele é protegido por uma chave diferente em cada servidor. Se dois bancos de dados estão conectados ao mesmo servidor, eles compartilham o mesmo certificado interno. [!INCLUDE[msCoName](../includes/msconame-md.md)] gira automaticamente esses certificados pelo menos a cada 90 dias. Para obter uma descrição geral do TDE, consulte [TDE &#40;Transparent Data Encryption&#41;](../relational-databases/security/encryption/transparent-data-encryption.md).  
   
- [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] não dá suporte à integração do Cofre da Chave do Azure com TDE. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em execução em uma máquina virtual do Azure pode usar uma chave assimétrica do Cofre da Chave. Para obter mais informações, consulte [exemplo a: Transparent Data Encryption usando uma chave assimétrica do Key Vault](../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md#ExampleA).  
+ [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] não dá suporte à integração do Cofre da Chave do Azure com TDE. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em execução em uma máquina virtual do Azure pode usar uma chave assimétrica do Cofre da Chave. Para obter mais informações, consulte [r de exemplo: Transparent Data Encryption usando uma chave assimétrica do Key Vault](../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md#ExampleA).  
   
 ||  
 |-|  
-|**Aplica-se ao**: [!INCLUDE[sqldbesa](../includes/sqldbesa-md.md)] ([visualização em algumas regiões](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
+|**Aplica-se ao**: [!INCLUDE[sqldbesa](../includes/sqldbesa-md.md)] ([Visualização em algumas regiões](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
   
 > [!IMPORTANT]  
->  Este é um recurso de visualização. Eu reconheço e Concordo que a implementação de [!INCLUDE[ssSDS](../includes/sssds-md.md)] transparent data encryption no meu banco de dados está sujeito aos termos de visualização no meu contrato de licença (por exemplo, o Enterprise Agreement, contrato do Microsoft Azure ou assinatura Online da Microsoft Contrato), bem como quaisquer aplicáveis [termos complementares de uso para visualização do Microsoft Azure](http://azure.microsoft.com/support/legal/preview-supplemental-terms/).  
+>  Este é um recurso de visualização. Eu reconheço e concordo que a implementação da Transparent Data Encryption do [!INCLUDE[ssSDS](../includes/sssds-md.md)] no meu banco de dados está sujeita aos termos de visualização do contrato de licença (por exemplo, o Enterprise Agreement, Contrato do Microsoft Azure ou o Contrato de Assinatura do Microsoft Online), bem como quaisquer [Termos de Uso Suplementares da Visualização do Microsoft Azure](http://azure.microsoft.com/support/legal/preview-supplemental-terms/)aplicáveis.  
   
- A visualização do status da TDE aplica-se até mesmo ao subconjunto de regiões geográficas em que versão da família V12 de [!INCLUDE[ssSDS](../includes/sssds-md.md)] é anunciada como apresentando agora status de disponibilidade geral. A TDE para [!INCLUDE[ssSDS](../includes/sssds-md.md)] não se destina para uso em bancos de dados de produção até o [!INCLUDE[msCoName](../includes/msconame-md.md)] anunciar a promoção da TDE, de visualização para GA. Para obter mais informações sobre [!INCLUDE[ssSDS](../includes/sssds-md.md)] V12, consulte [Novidades no Banco de Dados SQL do Azure](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/).  
+ A visualização do status de TDE aplica-se até mesmo ao subconjunto de regiões geográficas em que versão da família V12 de [!INCLUDE[ssSDS](../includes/sssds-md.md)] é anunciada como apresentando agora status de disponibilidade geral. A TDE para [!INCLUDE[ssSDS](../includes/sssds-md.md)] não se destina para uso em bancos de dados de produção até o [!INCLUDE[msCoName](../includes/msconame-md.md)] anunciar a promoção da TDE, de visualização para GA. Para obter mais informações sobre [!INCLUDE[ssSDS](../includes/sssds-md.md)] V12, consulte [Novidades no Banco de Dados SQL do Azure](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/).  
   
 ##  <a name="Permissions"></a> Permissões  
  Para inscrever-se para a visualizar e configurar TDE por meio do portal do Azure, usando a API REST ou usando o PowerShell, você deve estar conectado como o proprietário do Azure, Colaborador ou Gerenciador de segurança do SQL.  
@@ -44,7 +44,7 @@ ms.locfileid: "48049776"
   
 -   Você já deve estar inscrito para a visualização da TDE.  
   
--   Para criar a chave de criptografia de banco de dados que você deve ser um [!INCLUDE[ssSDS](../includes/sssds-md.md)] administrador ou você deve ser um membro do **dbmanager** função no mestre de banco de dados e ter o **controle** permissão no banco de dados.  
+-   Para criar uma chave de criptografia você deve ser um administrador do [!INCLUDE[ssSDS](../includes/sssds-md.md)] ou um membro da função **dbmanager** no banco de dados mestre e ter a permissão **CONTROL** no banco de dados.  
   
 -   Para executar a instrução ALTER DATABASE com a opção SET só requer a associação na função **dbmanager** .  
   
@@ -162,7 +162,7 @@ ms.locfileid: "48049776"
 -   Criar uma Cópia do Banco de Dados  
   
 ##  <a name="Moving"></a> Movendo um banco de dados protegido por TDE uso. Arquivos Bacpac  
- Quando exportar um protegido por TDE usando a função Exportar banco de dados do banco de dados do [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] Portal ou o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Import and Export Wizard, o conteúdo do banco de dados não são criptografados. O conteúdo é armazenado em arquivos. bacpac que não estão criptografados.  Certifique-se de proteger os arquivos. bacpac adequadamente e habilitar a TDE após a conclusão da importação do novo banco de dados.  
+ Quando exportar um banco de dados protegido por TDE usando a função Exportar banco de dados no Portal do [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] ou no Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], o conteúdo do banco de dados não está criptografado. O conteúdo é armazenado em arquivos. bacpac que não estão criptografados.  Certifique-se de proteger os arquivos. bacpac adequadamente e habilitar a TDE após a conclusão da importação do novo banco de dados.  
   
 ## <a name="related-sql-server-topic"></a>Tópico do SQL Server relacionado  
  [Habilitar a TDE usando EKM](../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)  

@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fbb896569a75b3fb2e7fee079efb1e56dfb3c65f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59945362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62647177"
 ---
 # <a name="connectionpoolsize-property-wmi-msreportserverconfigurationsetting"></a>Propriedade ConnectionPoolSize (WMI MSReportServer_ConfigurationSetting)
   O tamanho do pool de conexão usado pelo servidor de relatório para se comunicar com a instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda o banco de dados do servidor de relatório. Somente leitura.  

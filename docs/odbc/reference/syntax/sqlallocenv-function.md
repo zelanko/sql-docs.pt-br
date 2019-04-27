@@ -21,21 +21,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f744abc1bca3077ca4ba191782f7ccdcfafdb0a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62652787"
 ---
 # <a name="sqlallocenv-function"></a>Função SQLAllocEnv
 **Conformidade com**  
- Versão introduziu: Conformidade de padrões 1.0 ODBC: Deprecated  
+ Versão introduzida: Conformidade com padrões 1.0 ODBC: Preterido  
   
  **Resumo**  
  Em ODBC 3. *x*, o ODBC 2. *x* função **SQLAllocEnv** foi substituído por **SQLAllocHandle**. Para obter mais informações, consulte [função SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md).  
   
 > [!NOTE]  
->  Para obter mais informações sobre o que o Gerenciador de Driver mapeia essa função quando um ODBC 2. *x* aplicativo está funcionando com um ODBC 3. *x* driver, consulte [mapeamento de funções preteridas](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) no Apêndice g: Driver diretrizes para compatibilidade com versões anteriores.  
+>  Para obter mais informações sobre o que o Gerenciador de Driver mapeia essa função quando um ODBC 2. *x* aplicativo está funcionando com um ODBC 3. *x* driver, consulte [mapeamento de funções preteridas](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) no Apêndice g: Diretrizes de driver para compatibilidade com versões anteriores.  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência da API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   

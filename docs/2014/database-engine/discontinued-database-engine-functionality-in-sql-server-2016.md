@@ -34,11 +34,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fc6b593694feda96032cb0af45d9b3bdb4cc2a8a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779854"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>Funcionalidade do Mecanismo de Banco de Dados descontinuada no SQL Server 2014
   Este tópico descreve os recursos do [!INCLUDE[ssDE](../includes/ssde-md.md)] que não estão mais disponíveis no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -46,14 +46,14 @@ ms.locfileid: "54132607"
 ## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a>Recursos descontinuados no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  A tabela a seguir lista os recursos que foram removidos do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
-|Categoria|Recurso descontinuado|Substituição|  
+|Category|Recurso descontinuado|Substituição|  
 |--------------|--------------------------|-----------------|  
 |Nível de Compatibilidade|Nível de compatibilidade 90|Os bancos de dados devem ser definidos com o nível de compatibilidade de pelo menos 100. Quando um banco com um nível de compatibilidade de menos de 100 é atualizado para o [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], o nível de compatibilidade do banco de dados é definido como 100 durante a operação de atualização.|  
   
 ## <a name="discontinued-features-in-includesssql11includessssql11-mdmd"></a>Recursos descontinuados no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  A tabela a seguir lista os recursos que foram removidos do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
-|Categoria|Recurso descontinuado|Substituição|  
+|Category|Recurso descontinuado|Substituição|  
 |--------------|--------------------------|-----------------|  
 |Backup e restauração|**BACKUP {banco de dados &#124; LOG} WITH PASSWORD** e **BACKUP {banco de dados &#124; LOG} WITH MEDIAPASSWORD** são descontinuados. **RESTAURAR {banco de dados &#124; LOG} com [MEDIA] PASSWORD**continua sendo preterido.|None|  
 |Backup e restauração|**RESTAURAR {BANCO DE DADOS &AMP;#124; LOG}... WITH DBO_ONLY**|**RESTAURAR {BANCO DE DADOS &AMP;#124; LOG}...... COM RESTRICTED_USER**|  

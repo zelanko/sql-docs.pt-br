@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 14ae3f58a8cfdef4dfde4d30e969e4386bd1dbc0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679603"
 ---
 # <a name="currency-conversions-analysis-services"></a>Conversões de moeda (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  Somente multidimensional  
@@ -55,7 +55,7 @@ ms.locfileid: "48190835"
  Dimensão de moeda  
  Uma dimensão de banco de dados definida com as seguintes configurações:  
   
--   O `Type` propriedade da dimensão é definida como moeda.  
+-   A propriedade `Type` da dimensão é definida como Moeda.  
   
 -   A propriedade `Type` de um atributo para a dimensão é definida como CurrencyName.  
   
@@ -69,18 +69,18 @@ ms.locfileid: "48190835"
   
 -   Existe uma relação de dimensão regular entre uma dimensão tempo e o grupo de medidas de taxa.  
   
--   Além disso, a propriedade `Type` é definida como ExchangeRate. Enquanto o Assistente de Business Intelligence usa as relações com as dimensões de tempo e moeda para identificar grupos de medidas de taxa de probabilidade, definindo o `Type` propriedade para ExchangeRate permite que aplicativos cliente identifiquem mais facilmente a medida de taxa grupos.  
+-   Além disso, a propriedade `Type` é definida como ExchangeRate. Enquanto o Assistente de Business Intelligence usa as relações com as dimensões de moeda e temporal para identificar grupos de moedas, configurar a propriedade `Type` para ExchangeRate, permite que aplicativos cliente identifiquem mais facilmente os grupos de medidas de taxa.  
   
 -   Uma ou mais medidas, representando as taxas de câmbio contidas pelo grupo de medidas de taxa.  
   
  Dimensão de moeda de relatório  
  A dimensão, definida pelo Assistente de Business Intelligence depois que uma conversão de moeda é definida e que contém as moedas de relatório para essa conversão de moedas. A dimensão de moeda de relatório baseia-se em uma consulta nomeada e definida na exibição da fonte de dados, na qual a dimensão de moeda associada ao grupo de medidas de taxa tem base, a partir da tabela de dimensões principal da dimensão de moeda. A dimensão está definida com as seguintes configurações:  
   
--   O `Type` propriedade da dimensão é definida como moeda.  
+-   A propriedade `Type` da dimensão é definida como Moeda.  
   
--   O `Type` propriedade do atributo de chave para a dimensão é definida como CurrencyName.  
+-   A propriedade `Type` de um atributo de chave para a dimensão é definida como CurrencyName.  
   
--   O `Type` propriedade de um atributo na dimensão é definida como CurrencyDestination e a coluna vinculada ao atributo contém os identificadores de moeda que representam as moedas de relatório para a conversão de moeda.  
+-   A propriedade `Type` de um atributo na dimensão é definida como CurrencyDestination e a coluna vinculada ao atributo contém os identificadores de moeda que representam as moedas de relatório para a conversão de moeda.  
   
 ## <a name="defining-currency-conversions"></a>Definindo conversões de moeda  
  Você pode usar o Assistente de Business Intelligence para definir a funcionalidade de conversão de moeda de um cubo ou pode definir manualmente as conversões de moeda usando scripts MDX.  

@@ -12,11 +12,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: e5cac4a24abcca8c6ae17b598ed3eba5ec9c1f4e
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774749"
 ---
 # <a name="options-text-editor---plain-text---general-page"></a>Options (Text Editor - Plain Text - General Page)
   Use essa caixa de diálogo para alterar o comportamento de edição geral do Editor de Texto, que é usado para editar um documento não associado a um idioma de desenvolvimento específico. Para exibir essas configurações, clique em **Opções** , no menu **Ferramentas** , expanda **Editor de Texto**, expanda **Texto Sem-Formatação** e clique em **Geral**.  

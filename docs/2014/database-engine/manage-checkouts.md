@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9de9a1f8ceca0fbb05ab2b6680c5fcc34c951109
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774530"
 ---
 # <a name="manage-checkouts"></a>Gerenciar check-outs
   Depois que um arquivo é adicionado ao controle do código-fonte, faça check-out do arquivo antes de você fazer modificações nele. Ao fazer o check-out de um arquivo com controle do código-fonte, o provedor de controle do código-fonte cria uma cópia da versão mais recente em seu disco local e remove o atributo somente leitura do arquivo. Em algumas circunstâncias, você pode precisar editar um arquivo sem fazer check-out do mesmo. Para obter mais informações sobre como editar um arquivo sem fazer check-out do arquivo, consulte [editar arquivos de Checked-In](../../2014/database-engine/edit-checked-in-files.md).  
@@ -30,7 +30,7 @@ ms.locfileid: "48183776"
   
  A tabela a seguir descreve os tópicos dessa seção.  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Fazer check-out de arquivos](../../2014/database-engine/check-out-files.md)|Fornece instruções sobre como fazer check-out de um arquivo para que você possa modificá-lo.|  
 |[Desfazer check-outs](../../2014/database-engine/undo-checkouts.md)|Explica como cancelar um check-out existente.|  

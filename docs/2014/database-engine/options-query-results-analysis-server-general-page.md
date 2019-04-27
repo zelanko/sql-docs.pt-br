@@ -14,11 +14,11 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: 80291e4dc4f53fd4818801f05d99ba655a1ff73c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199196"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774769"
 ---
 # <a name="options-query-results-analysis-server-general-page"></a>Opções (página geral do Server os resultados da análise da consulta)
   Use esta página para determinar o comportamento padrão da janela de resultado de consultas para as consultas do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Para exibir essas configurações, selecione **Opções** no menu **Ferramentas** . Dentro da pasta **Resultados da Consulta** expanda a subpasta **Analysis Server** e, depois, escolha **Geral**.  

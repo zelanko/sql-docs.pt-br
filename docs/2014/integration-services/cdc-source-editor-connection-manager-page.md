@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0e421d6ba1aaf69c04a450d8d93ff1ddf385935
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771772"
 ---
 # <a name="cdc-source-editor-connection-manager-page"></a>Editor de Origem CDC (página Gerenciador de Conexões)
   Use a página **Gerenciador de Conexões** da caixa de diálogo **Editor de Origem CDC** para selecionar o gerenciador de conexões do ADO.NET para o banco de dados do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] do qual a origem CDC lê as linhas de alteração (o banco de dados CDC). Quando o banco de dados CDC é selecionado, você precisa selecionar uma tabela capturada no banco de dados.  
@@ -52,15 +52,15 @@ ms.locfileid: "58391484"
  **Modo de processamento CDC**  
  Selecione o modo de processamento que melhor trata suas necessidades de processamento. As opções possíveis são:  
   
--   **todos os**: Retorna as alterações no intervalo CDC atual sem os **antes da atualização** valores.  
+-   **Tudo**: retorna as alterações no intervalo CDC atual sem os valores **Antes da Atualização**.  
   
--   **Tudo com valores antigos**: Retorna as alterações no intervalo de processamento de CDC atual incluindo os valores antigos (**antes da atualização**). Para cada operação de atualização, haverá duas linhas, uma com os valores antes da atualização e outra com o valor depois da atualização.  
+-   **Todos com valores antigos**: retorna as alterações no intervalo de processamento CDC atual, incluindo os valores antigos (**Antes da Atualização**). Para cada operação de atualização, haverá duas linhas, uma com os valores antes da atualização e outra com o valor depois da atualização.  
   
--   **Net**: Retorna apenas uma alteração de linha por linha de origem modificada no intervalo de processamento CDC atual. Se uma linha de origem tiver sido atualizada várias vezes, a alteração combinada será gerada (por exemplo, insert+update é gerado como uma única atualização e update+delete é gerado como uma única exclusão). Ao trabalhar em modo de processamento de alteração Líquido, é possível dividir as alterações para saídas Excluir, Inserir e Atualizar, e tratá-las em paralelo porque a única linha de origem aparece em mais de uma saída.  
+-   **Líquido**: retorna somente uma linha de alteração por linha de origem modificada no intervalo de processamento CDC atual. Se uma linha de origem tiver sido atualizada várias vezes, a alteração combinada será gerada (por exemplo, insert+update é gerado como uma única atualização e update+delete é gerado como uma única exclusão). Ao trabalhar em modo de processamento de alteração Líquido, é possível dividir as alterações para saídas Excluir, Inserir e Atualizar, e tratá-las em paralelo porque a única linha de origem aparece em mais de uma saída.  
   
--   **Líquido com máscara atualizada**: Esse modo é semelhante ao modo líquido normal, mas também adiciona colunas Boolianas com o nome padrão **_ $\<nome da coluna >\_Changed** que indica a linha de alteração de colunas alteradas na atual.  
+-   **Líquido com máscara atualizada**: este modo é semelhante ao modo Líquido normal, mas também adiciona colunas boolianas com o nome padrão **__$\<nome-da-coluna>\__Changed**, que indica as colunas alteradas na linha de alteração atual.  
   
--   **Líquido com mesclagem**: Esse modo é semelhante ao normal modo líquido, mas com operações de inserção e atualização mescladas em uma única operação de mesclagem (UPSERT).  
+-   **Líquido com mesclagem**: este modo é semelhante ao modo Líquido normal, mas com operações de inserção e atualização mescladas em uma única operação de mesclagem (UPSERT).  
   
 > [!NOTE]  
 >  Para todas as opções de alteração Net, a tabela de origem deve ter uma chave primária ou índice exclusivo. Para tabelas sem uma chave primária ou um índice exclusivo, você deve use a opção **Tudo** .  

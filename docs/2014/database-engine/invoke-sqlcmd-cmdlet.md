@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c7a76646d1f80e388737f520d497db4d6697a543
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774590"
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>cmdlet Invoke-Sqlcmd
   **Invoke-Sqlcmd** é um cmdlet do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que executa scripts que contêm instruções de linguagem ([!INCLUDE[tsql](../includes/tsql-md.md)] e XQuery) e de comandos que têm suporte do utilitário **sqlcmd**.  
@@ -104,7 +104,7 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
   
  Nem todos os parâmetros **sqlcmd** são necessários em um ambiente do PowerShell. Por exemplo, o Windows PowerShell formata todas as saídas dos cmdlets, de modo que as opções de formatação de especificação de parâmetros **sqlcmd** não sejam implementadas no **Invoke-Sqlcmd**. A tabela a seguir mostra o relacionamento entre os parâmetros **Invoke-Sqlcmd** e as opções **sqlcmd** :  
   
-|Description|Opção sqlcmd|Parâmetro Invoke-Sqlcmd|  
+|Descrição|Opção sqlcmd|Parâmetro Invoke-Sqlcmd|  
 |-----------------|-------------------|------------------------------|  
 |Nome do servidor e da instância.|-S|-ServerInstance|  
 |O banco de dados inicial a ser usado.|-d|-Database|  
@@ -118,7 +118,7 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |Desabilitar comandos interativos, script de inicialização e variáveis de ambiente.|-X|-DisableCommands|  
 |Desabilitar substituição de variável.|-X|-DisableVariables|  
 |Nível de severidade mínimo a ser informado.|-v|-SeverityLevel|  
-|Nível de erro mínimo a ser informado.|-m|-ErrorLevel|  
+|Nível de erro mínimo a ser informado.|-M|-ErrorLevel|  
 |Intervalo de tempo limite de logon.|-l|-ConnectionTimeout|  
 |Hostname.|-H|-HostName|  
 |Alterar senha e sair.|-Z|-NewPassword|  
@@ -132,8 +132,8 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |Executar a consulta especificada e continuar executando.|-Q|Sem parâmetros|  
 |Página de código a ser usada para obter dados de saída.|-f|Sem parâmetros|  
 |Alterar uma senha e continuar executando.|-Z|Sem parâmetros|  
-|Tamanho do pacote|-a|Sem parâmetros|  
-|Separador de coluna|-s|Sem parâmetros|  
+|Tamanho do pacote|-A|Sem parâmetros|  
+|Separador de coluna|-S|Sem parâmetros|  
 |Cabeçalhos de saída de controle|-H|Sem parâmetros|  
 |Especificar caracteres de controle|-k|Sem parâmetros|  
 |Largura da exibição de comprimento fixo|-Y|Sem parâmetros|  
@@ -142,8 +142,8 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |Habilitar identificadores entres aspas|-i|Sem parâmetros|  
 |Remover espaços à direita|-w|Sem parâmetros|  
 |Listar instâncias|-l|Sem parâmetros|  
-|Formatar saída como Unicode|-U|Sem parâmetros|  
-|Imprimir estatísticas|-p|Sem parâmetros|  
+|Formatar saída como Unicode|-u|Sem parâmetros|  
+|Imprimir estatísticas|-P|Sem parâmetros|  
 |Término de comando|-c|Sem parâmetros|  
 |Conectar usando a Autenticação do Windows|-E|Sem parâmetros|  
   

@@ -1,5 +1,5 @@
 ---
-title: XP_LOGINCONFIG (Transact-SQL) | Microsoft Docs
+title: xp_loginconfig (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,11 +19,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8590a33f870dc14ac34118ce5e655acc6e67f257
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62645105"
 ---
 # <a name="xploginconfig-transact-sql"></a>xp_loginconfig (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,14 +46,14 @@ xp_loginconfig ['config_name']
  **'** *config_name* **'**  
  É o valor de configuração a ser exibido. Se *config_name* não é especificado, todos os valores de configuração são relatados. *config_name* está **sysname**, com um padrão de NULL, e pode ser um destes valores.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**modo de logon**|Modo de segurança de logon. Os valores possíveis são **Mixed** e **autenticação do Windows**.<br /><br /> Substituído por:<br /><br /> `SELECT SERVERPROPERTY('IsIntegratedSecurityOnly'); GO`|  
 |**logon padrão**|Nome da ID de logon padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para usuários autorizados de conexões confiáveis (para usuários sem um nome de logon correspondente). O logon padrão é **convidado**. Esse valor é fornecido para a compatibilidade com versões anteriores.|  
 |**Domínio padrão**|Nome do domínio padrão do Windows para usuários de rede de conexões confiáveis. O domínio padrão é o domínio do computador que executa o Windows e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse valor é fornecido para a compatibilidade com versões anteriores.|  
 |**nível de auditoria**|Nível de auditoria. Os valores possíveis são **none**, **sucesso**, **falha**, e **todos os**. As auditorias são gravadas no log de erros e no recurso Visualizador de Eventos do Windows.|  
 |**nome do host do conjunto**|Indica se o nome do host do registro de logon do cliente é substituído pelo nome de usuário de rede do Windows. Os valores possíveis são **verdadeira** ou **falso**. Se isso estiver definido, o nome de usuário de rede aparecerá na saída de **sp_who**.|  
-|**mapa _**|Relata quais caracteres especiais do Windows são mapeados para o caractere de sublinhado (_) válido do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os valores possíveis são **separador de domínio** (padrão), **espaço**, **nulo**, ou qualquer caractere único. Esse valor é fornecido para a compatibilidade com versões anteriores.|  
+|**map _**|Relata quais caracteres especiais do Windows são mapeados para o caractere de sublinhado (_) válido do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os valores possíveis são **separador de domínio** (padrão), **espaço**, **nulo**, ou qualquer caractere único. Esse valor é fornecido para a compatibilidade com versões anteriores.|  
 |**mapear $**|Relata quais caracteres especiais do Windows são mapeados para o caractere de cifrão ($) válido do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os valores possíveis são **separador de domínio**, **espaço**, **nulo**, ou qualquer caractere único. O padrão é **espaço**. Esse valor é fornecido para a compatibilidade com versões anteriores.|  
 |**n º do mapa**|Relata quais caracteres especiais do Windows são mapeados para o caractere de sinal numérico (#) válido do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os valores possíveis são **separador de domínio**, **espaço**, **nulo**, ou qualquer caractere único. Hífen é o padrão. Esse valor é fornecido para a compatibilidade com versões anteriores.|  
   
@@ -62,10 +62,10 @@ xp_loginconfig ['config_name']
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Valor de configuração|  
-|**valor de configuração**|**sysname**|Definição de valor de configuração|  
+|**config value**|**sysname**|Definição de valor de configuração|  
   
 ## <a name="remarks"></a>Comentários  
  **XP_LOGINCONFIG** não pode ser usado para definir valores de configuração.  

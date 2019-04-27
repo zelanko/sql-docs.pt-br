@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a356a6bad7b0756f148b43ed0cbf35e8d2ce9cc9
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775310"
 ---
 # <a name="upgrade-replicated-databases"></a>Atualizar bancos de dados replicados
   O [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] suporta a atualização de bancos de dados replicados de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; não é necessário interromper a atividade de outros nós durante a atualização de um nó. Verifique se você está em conformidade com as regras que dizem respeito às versões suportadas em uma topologia:  
@@ -89,7 +89,7 @@ ms.locfileid: "54132396"
  Para assegurar que as configurações de replicação sejam mantidas na restauração do backup de um banco de dados replicado de uma versão anterior, restaure para um servidor e um banco de dados que tenham os mesmos nomes que o servidor e o banco de dados dos quais foi obtido o backup.  
   
 ## <a name="see-also"></a>Consulte também  
- [Perguntas frequentes sobre administração de replicação](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
+ [Perguntas Frequentes sobre Administração de Replicação](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [Compatibilidade com versões anteriores de replicação](../../../2014/relational-databases/replication/replication-backward-compatibility.md)   
  [Atualizações de versão e edição com suporte](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Atualizar para o SQL Server 2014](upgrade-sql-server.md)  

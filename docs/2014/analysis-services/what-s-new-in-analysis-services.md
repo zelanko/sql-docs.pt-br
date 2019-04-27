@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 33296b1b3d1935f0f716a6e411c23481ee0e2789
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755947"
 ---
 # <a name="what39s-new-in-analysis-services-and-business-intelligence"></a>O que&#39;novo no Analysis Services e Business Intelligence
   Com exceção da funcionalidade adicionada de suporte a Relatórios do Power View sobre Modelos Multidimensionais, o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] não teve alterações em relação à versão anterior.  

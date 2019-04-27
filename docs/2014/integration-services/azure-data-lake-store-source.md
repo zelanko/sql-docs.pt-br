@@ -15,11 +15,11 @@ author: yualan
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c1a8f60cbdf2653a3d582544a487e71e62168929
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771840"
 ---
 # <a name="azure-data-lake-store-source"></a>Fonte do Azure Data Lake Store
   O componente de **Fonte do Azure Data Lake Store** permite que um pacote SSIS leia dados de um Azure Data Lake Store. Os formatos de arquivo compatíveis são: Texto e Avro.

@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cb7b02715e48398c9d12a2c4939a2214426a2036
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653918"
 ---
 # <a name="complete---prepare-image"></a>Concluir - Preparar Imagem
   Use a página **Concluída** para verificar se a preparação da imagem está concluída.  

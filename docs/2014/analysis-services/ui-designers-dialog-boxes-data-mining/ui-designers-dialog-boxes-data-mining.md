@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 37fe27fe7f4ffb6455312e848aa196da804f7008
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196796"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756229"
 ---
 # <a name="ui-designers-and-dialogs-for-data-mining-analysis"></a>Designers de interface do usuário e caixas de diálogo de análise de mineração de dados
 

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2f16095d7473d098745f16943a60f50c104c94cc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757110"
 ---
 # <a name="hide-or-freeze-columns-ssas-tabular"></a>Ocultar ou congelar colunas (SSAS tabular)
   No designer de modelo, se houver colunas que você não deseja exibir na tabela, será possível ocultá-las temporariamente. Ocultar uma coluna libera mais espaço na tela para adicionar novas colunas ou trabalhar somente com as colunas de dados relevantes. Você pode ocultar e reexibir colunas do menu **Coluna** no designer de modelo, e do menu de atalho disponível de cada cabeçalho de coluna. Para manter a área de um modelo visível enquanto você rola para outra área do modelo, bloqueie colunas específicas em uma área congelando-as.  
@@ -59,8 +59,8 @@ ms.locfileid: "48055136"
     >  Quando uma coluna é congelada, ela é movida para a esquerda (ou frente) da tabela no designer. Descongelar a coluna não a move para seu local original.  
   
 ## <a name="see-also"></a>Consulte também  
- [Tabelas e colunas &#40;Tabular do SSAS&#41;](tables-and-columns-ssas-tabular.md)   
- [Perspectivas &#40;Tabular do SSAS&#41;](perspectives-ssas-tabular.md)   
- [As funções &#40;Tabular do SSAS&#41;](roles-ssas-tabular.md)  
+ [Tabelas e colunas &#40;SSAS de Tabela&#41;](tables-and-columns-ssas-tabular.md)   
+ [Perspectivas &#40;SSAS de Tabela&#41;](perspectives-ssas-tabular.md)   
+ [Funções &#40;SSAS de Tabela&#41;](roles-ssas-tabular.md)  
   
   

@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 860d2f03018abae2b27367a1f41f87268affb328
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779830"
 ---
 # <a name="user-defined-type"></a>Tipo definido pelo usuário
   O exemplo Tipo de dados definidos pelo usuário mostra a criação e o uso de um tipo de dados simples definido pelo usuário, tanto do Transact-SQL quanto de um aplicativo cliente usando `System.Data.SqlClient`.  

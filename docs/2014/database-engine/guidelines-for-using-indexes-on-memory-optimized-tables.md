@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 71d26e3f46034019d51bd69b86686f40eb9ce63e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527948"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779220"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>Diretrizes para usar índices em tabelas com otimização de memória
   Os índices são usados para acessar dados com eficiência nas tabelas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Especificar os índices certos pode melhorar significativamente o desempenho da consulta. Considere, por exemplo, a consulta:  
@@ -28,7 +28,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
  Se não houver nenhum índice na coluna c1, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] precisará verificar a tabela t inteira e filtrar por linhas que atendam à condição c1=1. No entanto, se t tiver um índice na coluna c1, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] poderá buscar diretamente o valor 1 e recuperar as linhas.  
   
- Ao procurar por registros com um valor específico, ou intervalo de valores, para uma ou mais colunas na tabela, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode usar um índice nessas colunas para localizar rapidamente os registros correspondentes. As tabelas com base em disco e com otimização de memória se beneficiam dos índices. No entanto, há determinadas diferenças entre as estruturas de índice que precisam ser consideradas durante o uso de tabelas com otimização de memória. (Os índices em tabelas com otimização de memória são denominados índices com otimização de memória.) Algumas das principais diferenças são:  
+ Ao procurar por registros com um valor específico, ou intervalo de valores, para uma ou mais colunas na tabela, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode usar um índice nessas colunas para localizar rapidamente os registros correspondentes. As tabelas com base em disco e com otimização de memória se beneficiam dos índices. No entanto, há determinadas diferenças entre as estruturas de índice que precisam ser consideradas durante o uso de tabelas com otimização de memória. (Índices em tabelas com otimização de memória são denominados índices com otimização de memória.) Algumas das principais diferenças são:  
   
 -   Índices com otimização de memória devem ser criados com [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql). Os índices baseados em disco podem ser criados com `CREATE TABLE` e `CREATE INDEX`.  
   
@@ -90,7 +90,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
      A coleta de lixo funciona melhor se todos os índices na tabela forem usados frequentemente. Os índices usados raramente podem fazer com que o sistema de coleta de lixo não seja bem executado em versões de linha antigas.  
   
-## <a name="creating-a-memory-optimized-index-code-samples"></a>Criando uma tabela com otimização de memória: Exemplos de código  
+## <a name="creating-a-memory-optimized-index-code-samples"></a>Criando um índice com otimização de memória: Exemplos de código  
  Índice de hash em nível de coluna:  
   
 ```sql  

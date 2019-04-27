@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d33148543677c58a353253a86bbdf99f1c892326
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757205"
 ---
 # <a name="filter-data-in-a-table-ssas-tabular"></a>Filtrar dados em uma tabela (SSAS tabular)
   Ao importar dados, é possível aplicar filtros para controlar as linhas que são carregadas em uma tabela. Depois de importar os dados, não é possível excluir linhas individuais. No entanto, você pode aplicar filtros personalizados para controlar a exibição das linhas. As linhas que não atenderem aos critérios de filtragem serão ocultadas. Você pode basear um filtro em uma ou mais colunas. Os filtros são aditivos, ou seja, cada filtro adicional se baseia no filtro atual e reduz ainda mais o subconjunto de dados.  
@@ -53,8 +53,8 @@ ms.locfileid: "48079692"
 2.  Clique no menu **Coluna** e, em seguida, clique em **Limpar Todos os Filtros**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Filtrar e classificar dados &#40;Tabular do SSAS&#41;](../filter-and-sort-data-ssas-tabular.md)   
- [Perspectivas &#40;Tabular do SSAS&#41;](perspectives-ssas-tabular.md)   
- [As funções &#40;Tabular do SSAS&#41;](roles-ssas-tabular.md)  
+ [Filtrar e classificar dados &#40;SSAS de Tabela&#41;](../filter-and-sort-data-ssas-tabular.md)   
+ [Perspectivas &#40;SSAS de Tabela&#41;](perspectives-ssas-tabular.md)   
+ [Funções &#40;SSAS de Tabela&#41;](roles-ssas-tabular.md)  
   
   

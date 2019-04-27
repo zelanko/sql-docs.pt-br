@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 818e1176cb5a4f81205a36dc7be6fd9fded286ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773664"
 ---
 # <a name="search-property-list-editor"></a>Editor da Lista de Propriedades de Pesquisa
   Use esta caixa de diálogo para adicionar ou excluir propriedades em uma lista de propriedades de pesquisa.  
@@ -29,7 +29,7 @@ ms.locfileid: "48148936"
  **Nome da propriedade**  
  Especifique o nome a ser usado para identificar a propriedade em consultas de texto completo. Um nome de propriedade pode conter espaços internos. O tamanho máximo do **Nome da Propriedade** é de 256 caracteres. Esse nome pode ser um nome amigável, como "Autor" ou "Endereço Residencial" ou pode ser o nome canônico do Windows da propriedade, como `System.Author` ou `System.Contact.HomeAddress`. O**Nome da Propriedade** deve identificar a propriedade exclusivamente dentro do conjunto de propriedades.  
   
- Os desenvolvedores usam o nome da propriedade para identificar a propriedade na [CONTAINS](/sql/t-sql/queries/contains-transact-sql) predicado. Portanto, ao adicionar uma propriedade, é importante especificar um valor que represente significativamente a propriedade.  
+ Os desenvolvedores usam o nome da propriedade para identificar a propriedade no predicado [CONTAINS](/sql/t-sql/queries/contains-transact-sql) . Portanto, ao adicionar uma propriedade, é importante especificar um valor que represente significativamente a propriedade.  
   
  **GUID do conjunto de propriedade**  
  Especifique o identificador do conjunto de propriedades ao qual a propriedade pertence. Esse é um GUID (identificador global exclusivo). Um conjunto de propriedades é um grupo de propriedades logicamente relacionadas. Para obter informações sobre como obter esse valor, consulte “Comentários”, posteriormente neste tópico.  
@@ -53,7 +53,7 @@ ms.locfileid: "48148936"
 -   [Pesquisar propriedades de documento com listas de propriedades de pesquisa](../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   
 ## <a name="permissions"></a>Permissões  
- Ver [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql).  
+ See [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql).  
   
 ## <a name="see-also"></a>Consulte também  
  [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql)   

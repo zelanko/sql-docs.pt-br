@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ac74d361758cda8ec0b345b93e542d96c709e586
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773452"
 ---
 # <a name="trace-template-properties-events-selection-tab"></a>Propriedades do Modelo de Rastreamento (guia Seleção de Eventos)
   Use a guia **Seleção de Eventos** da caixa de diálogo **Propriedades do Modelo de Rastreamento** para exibir, editar ou especificar classes de evento e colunas de dados para incluir um modelo de rastreamento do [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] .  
@@ -29,7 +29,7 @@ ms.locfileid: "48227778"
  Coluna**Eventos**   
  Especifique os eventos que devem ser rastreados selecionando ou desmarcando a caixa de seleção na coluna Eventos. Os eventos são organizados por categoria de evento.  
   
- Se você selecionou **Basear novo modelo no existente** na guia **Geral** , os eventos serão selecionados automaticamente de acordo com o modelo especificado. Para obter mais informações sobre classes de evento, consulte [SQL Server Event Class Reference](../relational-databases/event-classes/sql-server-event-class-reference.md).  
+ Se você selecionou **Basear novo modelo no existente** na guia **Geral** , os eventos serão selecionados automaticamente de acordo com o modelo especificado. Para obter mais informações sobre classes de evento, consulte [Referência de classe de evento do SQL Server](../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
  Colunas de dados  
  Especifique as colunas de dados que devem ser rastreadas marcando a caixa que corresponde ao evento e a coluna de dados que você precisa. Todas as colunas de evento pertinentes serão selecionadas por padrão para cada evento incluído no rastreamento, se a caixa de seleção correspondente ao evento estiver marcada. Se você selecionou **Basear novo modelo no existente** na guia **Geral** , as colunas de dados e os filtros serão selecionados automaticamente de acordo com o modelo especificado.  

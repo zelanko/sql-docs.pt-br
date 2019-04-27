@@ -27,18 +27,18 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f112bc1a9928185fa5ecf15b953df8c982ff36f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774425"
 ---
 # <a name="backward-compatibility"></a>Backward Compatibility
   As seções a seguir contêm informações sobre compatibilidade com versões anteriores para componentes do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Este conteúdo inclui informações sobre recursos descontinuados (substituídos), recursos suspensos, alterações que causam interrupções e alterações de comportamento.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Compatibilidade com versões anteriores do SQL Server](../../2014/getting-started/sql-server-backward-compatibility.md)|Contém tópicos que descrevem alterações no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que podem exigir que você efetue alterações em seus aplicativos. Recursos que são incluídos nesta área de tópico incluem programabilidade de dados, ferramentas de configuração de área da superfície, Instalação, serviços [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e outras alterações amplas de funcionalidade.|  
 |[Compatibilidade com versões anteriores do Mecanismo de Banco de Dados do SQL Server](../database-engine/sql-server-database-engine-backward-compatibility.md)|Contém tópicos que descrevem alterações do [!INCLUDE[ssDE](../includes/ssde-md.md)] no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que podem exigir que você faça alterações em seus aplicativos.|  

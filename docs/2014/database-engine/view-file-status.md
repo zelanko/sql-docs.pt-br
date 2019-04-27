@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3034ec95573d2f3c43ab28f2ad31e5ba41661cfc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773362"
 ---
 # <a name="view-file-status"></a>Exibir status de arquivos
   O controle do código-fonte mantém informações detalhadas sobre todos os itens com controle do código-fonte. Você pode usar essas informações para identificar o status atual do arquivo e criar um relatório de status do item.  

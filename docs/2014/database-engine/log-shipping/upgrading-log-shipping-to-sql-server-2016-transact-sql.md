@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 19eae2e3ace3859d61048536be9b70bf58ad66f5
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775383"
 ---
 # <a name="upgrade-log-shipping-to-sql-server-2014-transact-sql"></a>Atualizar o envio de logs para o SQL Server 2014 (Transact-SQL)
   É possível preservar as configurações de envio de logs ao atualizar do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Este tópico descreve cenários alternativos e práticas recomendadas para atualizar uma configuração de envio de logs.  

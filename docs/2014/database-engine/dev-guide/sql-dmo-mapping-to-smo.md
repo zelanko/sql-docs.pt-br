@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2a6273032f88807291bfc7024f1abcdbd1440073
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780676"
 ---
 # <a name="sql-dmo-mapping-to-smo"></a>Mapeamento de SQL-DMO para SMO
   O SQL-DMO (SQL Distributed Management Objects) não faz mais parte do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]; os aplicativos do SQL-DMO devem ser convertidos para usar o SMO ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects). O modelo de objeto do SMO é semelhante ao do SQL-DMO, assim a maioria dos objetos do SQL-DMO é mapeada para um objeto com o mesmo nome no SMO. No entanto, alguns objetos do SQL-DMO foram alterados ou inseridos na transição para o SMO. Esta tabela lista a ação recomendada para usar os objetos do SQL-DMO que não foram convertidos diretamente em SMO.  

@@ -22,11 +22,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d7c1592058776246ad3df657c3340303a60df296
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771742"
 ---
 # <a name="selecting-input-columns-programmatically"></a>Selecionando colunas de entrada programaticamente
   Depois de ter conectado componentes programaticamente, selecione as colunas dos componentes upstream que você transformará ou passará para os componentes downstream. Se você não selecionar colunas de entrada para seu componente, o componente não receberá nenhuma linha da tarefa de fluxo de dados.  

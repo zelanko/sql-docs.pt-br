@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8a57f978f4be3a8e4ec163b7bb5bcef2bb300aa6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773322"
 ---
 # <a name="view-the-events-for-registered-packages"></a>Exibir os eventos de pacotes registrados
   Antes de criar uma sessão Eventos Estendidos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , é útil descobrir quais eventos estão disponíveis nos pacotes registrados. Para obter mais informações, consulte [SQL Server Extended Events Packages](../relational-databases/extended-events/sql-server-extended-events-packages.md).  

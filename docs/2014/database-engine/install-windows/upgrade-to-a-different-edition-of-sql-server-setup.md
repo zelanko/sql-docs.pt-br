@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6b0b77ad5bb11b659e9f68eb7ff219b7844ad252
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51019041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774570"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-2014-setup"></a>Atualizar para outra edição do SQL Server 2014 (instalação)
   A instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte à atualização de edição entre várias edições do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter informações sobre os caminhos de atualização de edição com suporte, consulte [Atualizações de versão e edição com suporte](supported-version-and-edition-upgrades.md). Antes de você iniciar a atualização de edição de uma instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], revise os tópicos seguintes:  
@@ -29,7 +29,7 @@ ms.locfileid: "51019041"
 -   [Requisitos de hardware e software para a instalação do SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 > [!NOTE]  
->  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um ambiente clusterizado:** executar a atualização da edição em um dos nós do cluster do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é o suficiente. Esse nó pode ser ativo ou passivo, e o mecanismo não aciona os recursos offline durante a atualização da edição. Após a atualização da edição, será necessário reiniciar a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou executar o failover em um nó diferente.  
+>  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um ambiente clusterizado:** Executar a atualização de edição em um de nós do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cluster é suficiente. Esse nó pode ser ativo ou passivo, e o mecanismo não aciona os recursos offline durante a atualização da edição. Após a atualização da edição, será necessário reiniciar a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou executar o failover em um nó diferente.  
   
 ## <a name="prerequisites"></a>Prerequisites  
  Para instalações locais, você deve executar a Instalação como um administrador. Se você instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um compartilhamento remoto, deverá usar uma conta de domínio que tenha permissões de leitura no compartilhamento remoto.  

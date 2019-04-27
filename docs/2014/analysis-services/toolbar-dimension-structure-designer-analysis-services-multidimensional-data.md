@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a51f3daa31b65901f916bf61a3a734c66390b12c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756403"
 ---
 # <a name="toolbar-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Barra de Ferramentas (guia Estrutura da Dimensão, Designer de Dimensão) (Analysis Services - Dados Multidimensionais)
   Use a barra de ferramentas para executar operações comuns na página **Estrutura da Dimensão** do **Designer de Dimensão**.  

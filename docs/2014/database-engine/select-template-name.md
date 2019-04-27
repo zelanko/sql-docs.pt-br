@@ -16,14 +16,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a55b53cac59b387a2e52f5b1e5dc641471b1b28b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773763"
 ---
 # <a name="select-template-name"></a>Selecionar Nome do Modelo
-  Use a caixa de diálogo **Selecionar Nome do Modelo** para selecionar um modelo de rastreamento [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] existente para exportar para um arquivo no sistema operacional. Você também pode usar essa caixa de diálogo para selecionar ou digitar um nome diferente a fim de salvar um modelo de rastreamento ao editar um modelo de rastreamento existente. Para acessar essa caixa de diálogo ao exportar um modelo, no menu **Arquivo** do [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)], aponte para **Modelos** e clique em **Exportar Modelo**. Para acessar essa caixa de diálogo ao mudar o nome de um modelo, no menu **Arquivo**, aponte para **Modelos**, aponte para **Editar Modelo** e, então, clique em **Salvar Como**.  
+  Use a caixa de diálogo **Selecionar Nome do Modelo** para selecionar um modelo de rastreamento [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] existente para exportar para um arquivo no sistema operacional. Você também pode usar essa caixa de diálogo para selecionar ou digitar um nome diferente a fim de salvar um modelo de rastreamento ao editar um modelo de rastreamento existente. Para acessar essa caixa de diálogo ao exportar um modelo, no menu [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **Arquivo** aponte para **Modelos**e clique em **Exportar Modelo**. Para acessar essa caixa de diálogo ao mudar o nome de um modelo, no menu **Arquivo**, aponte para **Modelos**, aponte para **Editar Modelo** e, então, clique em **Salvar Como**.  
   
 ## <a name="options"></a>Opções  
  **Tipo de servidor**  

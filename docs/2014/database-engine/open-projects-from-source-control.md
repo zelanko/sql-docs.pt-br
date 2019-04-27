@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ec14f86b283fa8ccbc037feec4a8a54983126403
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774950"
 ---
 # <a name="open-projects-from-source-control"></a>Abrir projetos no controle do código-fonte
   Você pode usar o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para abrir projetos diretamente do controle doe código-fonte. Quando você fizer isso, o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] recuperará a versão mais recente do projeto e a copiará em seu disco local. O ambiente do [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] também cria automaticamente uma solução para o projeto.  

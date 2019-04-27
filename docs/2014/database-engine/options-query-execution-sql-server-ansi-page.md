@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a3d8f15f159ea41590c67677c2d020f0a5dbc79a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774960"
 ---
 # <a name="options-query-execution-sql-server-ansi-page"></a>Opções (página servidor ANSI SQL de execução da consulta)
   Juntas, essas opções SET padrão ANSI (ISO) definem o ambiente de processamento de consulta enquanto durar a consulta do usuário, a execução de um gatilho, ou um procedimento armazenado. Porém, essas opções SET não incluem todas as opções exigidas pelo padrão ISO. Use essa página para especificar que o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] irá executar as consultas usando todas ou uma parte das configurações especificadas no padrão ISO. As alterações feitas nessas opções são aplicadas apenas a novas consultas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para alterar as opções para as consultas atuais, clique em **Opções de Consulta** no menu **Consulta** ou clique com o botão direito do mouse na janela Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e selecione **Opções de Consulta**. Na caixa de diálogo **Opções de Consulta** , em **Execução**, clique em **ANSI**.  

@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 688357b2357cba8fa868eca18b5c100cfff1722d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756464"
 ---
 # <a name="trace-data-mining-client-for-excel"></a>Rastrear (Cliente de Mineração de Dados para Excel)
   ![Botão de rastreamento](media/misc-trace.gif "botão de rastreamento")  
   
- O **rastreadoras** caixa de diálogo ajuda a monitorar as instruções que são enviadas à instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que você está usando para mineração de dados. Depois de criar uma conexão a uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], todas as interações entre o cliente e o servidor estiverem conectadas a **rastreamento** painel, incluindo instruções que criam estruturas, adicionam modelos de mineração e fazem previsões, bem como algumas mensagens retornadas do servidor.  
+ A caixa de diálogo **Rastreamento** ajuda a monitorar as instruções enviadas à instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que você está usando para mineração de dados. Depois que você criar uma conexão com uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], todas as interações entre o cliente e o servidor serão registradas no painel **Rastreamento** , incluindo instruções que criam estruturas, adicionam modelos de mineração e fazem previsões, além de algumas mensagens retornadas do servidor.  
   
  Dependendo da ação solicitada, a instrução talvez seja uma consulta de definição de dados DMX ou uma consulta de manipulação de dados, um pacote ASSL do Analysis Services ou uma chamada a um procedimento armazenado do Analysis Services. No entanto, os resultados numéricos e os valores de dados reais não são mostrados.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48161296"
  Para preservar seu trabalho ao usar uma das Ferramentas de Análise de Tabela, desmarque a opção **Usar modelos de sessão**, para fazer com que os modelos sejam salvos permanentemente no servidor. Também é possível copiar as instruções no painel **Rastreamento** em um arquivo, para que você possa recriar seu trabalho depois.  
   
 ## <a name="understanding-sessions"></a>Entendendo sessões  
- Quando você se conecta a uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], o suplemento de mineração de dados inicia uma sessão. Cada sessão recebe um identificador que identifica uma sessão existente na instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. No entanto, um identificador de sessão não garante que uma sessão permaneça válida. A sessão poderá expirar se seu tempo limite for alcançado ou se a conexão associada a ela for interrompida. Se a sessão expirar e não for mais válida, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] finalizará a sessão e reverterá as transações que estiverem sendo processadas. Se uma mensagem for enviada com um identificador de sessão que não for mais válido, ocorrerá falha na mensagem com um erro indicando que não é possível encontrar a sessão especificada.  
+ Quando você se conecta a uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], o suplemento de mineração de dados inicia uma sessão. Cada sessão recebe um identificador que identifica uma sessão existente na instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . No entanto, um identificador de sessão não garante que uma sessão permaneça válida. A sessão poderá expirar se seu tempo limite for alcançado ou se a conexão associada a ela for interrompida. Se a sessão expirar e não for mais válida, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] finalizará a sessão e reverterá as transações que estiverem sendo processadas. Se uma mensagem for enviada com um identificador de sessão que não for mais válido, ocorrerá falha na mensagem com um erro indicando que não é possível encontrar a sessão especificada.  
   
  Embora alguns modelos de mineração de dados sejam armazenados explicitamente no servidor, isso não acontece com os modelos e as estruturas de mineração de sessão; além disso, nenhum registro persiste da atividade de mineração de dados de sessão. Como as estruturas e os modelos temporários de mineração são excluídos assim que você encerra a sessão, evite fechar a pasta de trabalho do Excel antes de salvar qualquer trabalho que você queira manter.  
   
@@ -64,14 +64,14 @@ ms.locfileid: "48161296"
 ## <a name="understanding-statements-in-the-tracer"></a>Compreendendo as instruções no rastreamento  
  DMX é uma linguagem que você pode usar para criar e trabalhar com modelos de mineração de dados no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. É possível usar DMX para criar a estrutura de novos modelos de mineração de dados, treinar esses modelos e pesquisar, gerenciar e fazer previsões sobre eles. A extensão DMX é composta de instruções DLL (linguagem de definição de dados), instruções DML (linguagem de manipulação de dados), funções e operadores.  
   
- Uma análise completa das instruções DMX e sua sintaxe está além do escopo deste tópico. No entanto, você pode usar as informações no painel **Rastreamento** para obter detalhes sobre o comportamento de uma instrução DMX. Os Suplementos de Mineração de Dados para Excel também podem ajudá-lo a criar instruções DMX complexas e a interagir com um servidor [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Para obter mais informações, consulte [consulta &#40;SQL Server Data Mining Add-ins&#41;](query-sql-server-data-mining-add-ins.md).  
+ Uma análise completa das instruções DMX e sua sintaxe está além do escopo deste tópico. No entanto, você pode usar as informações no painel **Rastreamento** para obter detalhes sobre o comportamento de uma instrução DMX. Os Suplementos de Mineração de Dados para Excel também podem ajudá-lo a criar instruções DMX complexas e a interagir com um servidor [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Para obter mais informações, consulte [consulta &#40;SQL Server Data Mining Add-ins&#41;](query-sql-server-data-mining-add-ins.md).  
   
 > [!NOTE]  
 >  Muitas instruções DMX são parametrizadas. Para tipos simples, os valores dos parâmetros são listados na instrução. Entretanto, para tipos complexos, apenas o tipo do parâmetro é listado.  
   
  O SQL Server Analysis Services também usa o protocolo XMLA (XML for Analysis) para manipular todas as comunicações entre aplicativos cliente, inclusive o Cliente de Mineração de Dados para Excel e uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
- Para obter mais informações sobre a sintaxe DMX e os comandos e elementos no XMLA, consulte os Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Para obter mais informações sobre a sintaxe DMX e os comandos e elementos no XMLA, consulte os Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  Algumas das instruções enviadas ao servidor podem incluir consultas que chamam procedimentos armazenados do sistema do Analysis Services. Para obter mais informações, consulte os Manuais Online do SQL Server.  
   

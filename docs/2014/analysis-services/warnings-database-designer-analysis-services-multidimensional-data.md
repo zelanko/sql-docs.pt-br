@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d83620c0c6463bd6e752f65a97b2fb14e1d1c03f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756008"
 ---
 # <a name="warnings-database-designer-analysis-services---multidimensional-data"></a>Avisos (Designer de Banco de Dados) (Analysis Services - Dados multidimensionais)
-  Use a guia **Avisos** para exibir e ignorar regras globalmente e para exibir e reabilitar instâncias específicas de avisos ignorados. A guia **Avisos** exibe duas grades: **Regras de Aviso de Design** e **Avisos Ignorados**.  
+  Use a guia **Avisos** para exibir e ignorar regras globalmente e para exibir e reabilitar instâncias específicas de avisos ignorados. O **avisos** guia exibe duas grades: **Regras de aviso de design** e **avisos ignorados**.  
   
  **Para exibir a guia avisos**  
   

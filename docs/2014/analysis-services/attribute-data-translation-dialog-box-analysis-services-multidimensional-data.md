@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 32832a354342b822ac0e6b2853c18c11ed3eb004
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650657"
 ---
 # <a name="attribute-data-translation-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Tradução de Dados de Atributo (Analysis Services - Dados Multidimensionais)
-  Use a caixa de diálogo **Tradução de Dados de Atributo** para definir a coluna que contém os dados de legenda de tradução, assim como o agrupamento e a ordem de classificação a serem usados com os dados traduzidos. É possível exibir a caixa de diálogo **Tradução de Dados de Atributo** das seguintes maneiras:  
+  Use a caixa de diálogo **Tradução de Dados de Atributo** para definir a coluna que contém os dados de legenda de tradução, assim como a ordenação e a ordem de classificação a serem usados com os dados traduzidos. É possível exibir a caixa de diálogo **Tradução de Dados de Atributo** das seguintes maneiras:  
   
 -   Clicando em **Nova coluna de legendas** ou em **Editar coluna de legendas** no painel **Barra de ferramentas** da guia **Traduções** do **Designer de Dimensão**.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48117350"
  Define a coluna onde os dados de legendas da tradução são armazenados. Apenas uma coluna pode ser selecionada. Todas as tabelas relacionadas que são referidas pela tabela de dimensões primária são exibidas.  
   
  **Designador de agrupamento**  
- Define o designador de agrupamento do atributo selecionado. Por padrão, o agrupamento atual do Windows é selecionado. Clique na seta para baixo para selecionar entre os agrupamentos disponíveis.  
+ Define o designador de ordenação do atributo selecionado. Por padrão, a ordenação atual do Windows é selecionada. Clique na seta para baixo para selecionar entre as ordenações disponíveis.  
   
  **Binary**  
  Selecione esta opção para classificar e comparar dados baseados nos padrões de bit definidos para cada caractere. A ordem de classificação binária diferencia maiúsculas e minúsculas, isto é, minúscula precede maiúscula, e diferencia acento. Essa é a ordem de classificação mais rápida.  
@@ -64,7 +64,7 @@ ms.locfileid: "48117350"
  Se esta opção não estiver selecionada, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considerará que as versões acentuadas e não acentuadas de letras são iguais.  
   
  **Diferenciar Katakana**  
- Selecione esta opção para classificar e comparar dados com base nas regras do dicionário fornecido para o idioma ou alfabeto associado e para distinguir entre os dois tipos de caracteres katakana japoneses: Hiragana e Katakana.  
+ Selecione esta opção para classificar e comparar dados com base nas regras do dicionário fornecidas para o idioma ou alfabeto associado e para distinguir entre os dois tipos de caracteres kana japoneses: Hiragana e Katakana.  
   
  Se essa opção não estiver selecionada, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considerará que caracteres Hiragana e Katakana são iguais.  
   

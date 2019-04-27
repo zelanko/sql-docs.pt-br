@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 12de97bf147ccb61cde5f82e2fa31782404071e4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771107"
 ---
 # <a name="oracle-credentials-for-running-script"></a>Credenciais Oracle para executar script
   Para executar o script de log suplementar do console do Oracle CDC Designer, o programa solicita as credenciais do usuário Oracle que está executando o script. Para executar este script, o usuário Oracle deve ter permissão ALTER TABLE para todas as tabelas a serem capturadas e permissão SELECT na exibição DBA_LOG_GROUPS.  
@@ -29,7 +29,7 @@ ms.locfileid: "58388804"
   
 -   **Autenticação do Windows**: Selecione essa opção para usar as credenciais de domínio atuais do Windows. Você só poderá usar esta opção se o banco de dados Oracle estiver configurado para funcionar com autenticação do Windows.  
   
--   **Autenticação do Oracle**: Se você selecionar essa opção, você deve digitar o **nome de usuário** e **senha** para o usuário no banco de dados Oracle de origem, você está se conectando.  
+-   **Autenticação do Oracle**: Se você selecionar essa opção, precisará digitar o **Nome de Usuário** e a **Senha** no banco de dados de origem do Oracle ao qual você está se conectando.  
   
 ## <a name="see-also"></a>Consulte também  
  [Como gerenciar uma instância CDC](manage-a-cdc-instance.md)   

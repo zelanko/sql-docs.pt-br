@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e11eea40558a8e44232eed22f08d9a60bcd7742b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771082"
 ---
 # <a name="user-roles-for-change-data-capture-service-for-oracle-by-attunity"></a>Funções do usuário para o serviço Change Data Capture para Oracle da Attunity
   Esta seção descreve as funções de usuário para o Serviço Change Data Capture para Oracle da Attunity. As funções descritas são funções de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , funções do Windows ou funções de banco de dados Oracle.  

@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6f9f9db58c48e74a91ec85972befb206ed3fb07f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773531"
 ---
 # <a name="sql-server-managed-backup-to-windows-azure---retention-and-storage-settings"></a>Backup gerenciado do SQL Server no Windows Azure - Configurações de retenção e armazenamento
   Este tópico descreve as etapas básicas para configurar o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] de um banco de dados e para definir as configurações padrão da instância. O tópico também descreve as etapas necessárias para pausar e retomar os serviços de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para a instância.  
@@ -26,7 +26,7 @@ ms.locfileid: "52534479"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   Não habilite o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] em bancos de dados que estejam usando planos de manutenção ou envio de logs. Para obter mais informações sobre a interoperabilidade e coexistência com outros recursos do SQL Server, consulte [SQL Server Managed Backup to Windows Azure: Interoperabilidade e coexistência](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "52534479"
 #### <a name="enabling-includesssmartbackupincludesss-smartbackup-mdmd-at-the-database-level"></a>Habilitando o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] no nível do banco de dados  
  Se um banco de dados tiver requisitos específicos para backup e período de retenção (SLA de recuperação) que sejam diferentes dos requisitos de outros bancos de dados na instância, configure o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] no nível do banco de dados para esse banco de dados. As configurações no nível do banco de dados substituem os parâmetros de configuração no nível da instância. No entanto, ambas as opções podem ser usadas juntas na mesma instância. A seguir, é apresentada uma lista das vantagens e considerações ao habilitar o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] no nível do banco de dados.  
   
--   Mais granular: Configurações separadas para cada banco de dados. Pode oferecer suporte a diferentes períodos de retenção para bancos de dados individuais.  
+-   Mais granular: Definições de configuração separado para cada banco de dados. Pode oferecer suporte a diferentes períodos de retenção para bancos de dados individuais.  
   
 -   Substitui as configurações no nível da instância para o banco de dados.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "52534479"
 #### <a name="enabling-includesssmartbackupincludesss-smartbackup-mdmd-at-the-instance-level-with-default-settings"></a>Habilitando o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] no nível da instância com configurações padrão  
  Use essa configuração se a maioria dos bancos de dados da instância tiver os mesmos requisitos para políticas de backup e de retenção ou se você quiser que novas instâncias do banco de dados sejam incluídas automaticamente no backup durante a criação. Alguns bancos de dados que são exceção à política ainda podem ser configurados individualmente. A seguir é apresentada uma lista de vantagens e de considerações ao habilitar o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] no nível da instância.  
   
--   Automação no nível de instância: Configurações comuns aplicadas automaticamente para novos bancos de dados adicionados posteriormente.  
+-   Automação no nível da instância: Configurações comuns aplicadas automaticamente para novos bancos de dados adicionados depois.  
   
 -   Os novos bancos de dados terão seu backup feito automaticamente logo depois de criados nas instâncias  
   
@@ -133,7 +133,7 @@ ms.locfileid: "52534479"
     ```  
   
 ##  <a name="InstanceConfigure"></a> Habilitar e configurar o padrão [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] as configurações da instância  
- Você pode habilitar e configurar as definições padrão [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] no nível da instância de duas maneiras:  Usando o sistema de procedimento armazenado `smart_backup.set_instance_backup` ou **SQL Server Management Studio**. Os dois métodos são explicados abaixo:  
+ Você pode habilitar e configurar o padrão [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] configurações no nível da instância de duas maneiras:  Usando o sistema de procedimento armazenado `smart_backup.set_instance_backup` ou **SQL Server Management Studio**. Os dois métodos são explicados abaixo:  
   
  **smart_backup.set_instance_backup:**. Especificando o valor **1** para *@enable_backup* parâmetro, você pode habilitar o backup e definir as configurações padrão. Após a aplicação no nível de instância, essas configurações padrão serão aplicadas a qualquer novo banco de dados adicionado a essa instância.  Quando o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] for habilitado pela primeira vez, as informações a seguir deverão ser fornecidas, além da habilitação de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] na instância:  
   

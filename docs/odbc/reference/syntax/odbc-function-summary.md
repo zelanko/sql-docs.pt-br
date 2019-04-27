@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a6829f4f5197fca28944e5bc9d2f636f6624c9d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653328"
 ---
 # <a name="odbc-function-summary"></a>Resumo de funções do ODBC
 A tabela a seguir lista as funções ODBC, agrupadas por tipo de tarefa e inclui a designação de conformidade e uma breve descrição da finalidade de cada função. Para obter mais informações sobre as designações de conformidade, consulte [ODBC e a CLI padrão](../../../odbc/reference/odbc-and-the-standard-cli.md). Para obter mais informações sobre a sintaxe e semântica para cada função, consulte [referência da API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md).  
@@ -27,7 +27,7 @@ A tabela a seguir lista as funções ODBC, agrupadas por tipo de tarefa e inclui
   
 |Tarefa|Nome da função|Conformidade com|Finalidade|  
 |----------|-------------------|-----------------|-------------|  
-|Conectando-se a uma fonte de dados|[Falha de SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)|ISO 92|Obtém um identificador de ambiente, conexão, instrução ou descritor.|  
+|Conectando-se a uma fonte de dados|[SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)|ISO 92|Obtém um identificador de ambiente, conexão, instrução ou descritor.|  
 ||[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|ISO 92|Se conecta a um driver específico pelo nome da fonte de dados, ID de usuário e senha.|  
 ||[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|ODBC|Se conecta a um driver específico pela cadeia de caracteres de conexão ou as solicitações que o Gerenciador de Driver e o driver exibem caixas de diálogo de conexão para o usuário.|  
 ||[SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|ODBC|Retorna os níveis de sucessivos de atributos de conexão e valores de atributo válido. Quando um valor foi especificado para cada atributo de conexão, conecta-se à fonte de dados.|  

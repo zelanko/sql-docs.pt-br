@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1dd5cec5623cfca499fcd4d1eb1ce93faec1dd36
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62782139"
 ---
 # <a name="result-set-sample"></a>Exemplo de conjunto de resultados
   Às vezes, é útil poder executar comandos e, ao mesmo tempo, ler os resultados de uma consulta sem abrir uma nova conexão e sem ler todos os resultados na memória. O recurso MARS (Multiple Active Result Set) no ADO.NET 2.0 é uma tecnologia que pode ajudar a conseguir isso. Atualmente, MARS não é implementado para o provedor em processo usado para programação de servidor. Para solucionar essa limitação, você pode usar cursores de servidor. Este exemplo demonstra como usar cursores de servidor para solucionar a falta de suporte a MARS para programação de servidor.  

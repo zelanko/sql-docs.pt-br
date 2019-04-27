@@ -12,11 +12,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 89344537c53c4caf066536804557451c965e4596
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62772322"
 ---
 # <a name="introduction-to-sql-server-2014-hybrid-cloud"></a>Introdução à nuvem híbrida do SQL Server 2014
  A maioria dos aplicativos têm alguns desafios principais, como a alta eficiência, valor comercial, configurações de hardware complexas, picos maciços sob demanda, e a conformidade com a indústria e os regulamentos corporativos. Considerando que todos esses fatores e a criação de uma tecnologia a nível empresarial possam ser muito desafiadores. A estratégia de nuvem híbrida da Microsoft oferece suporte para a nuvem tradicional, nuvem particular, nuvem pública, e os ambientes de nuvem híbridos para superar esses desafios fundamentais. 

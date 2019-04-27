@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d033401c87b2cd4e9fe7047ab7a19f474a3ae156
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62772153"
 ---
 # <a name="ado-net-source-editor-error-output-page"></a>Editor de Origem ADO NET (Página Saída de Erro)
   Use a página **Saída de Erro** da caixa de diálogo **Editor de Origem ADO NET** para selecionar as opções de manipulação de erros e definir as propriedades nas colunas de saída de erros.  

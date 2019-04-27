@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bd38514159ca668a82f98582a9c5fde1d2aa98ab
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650177"
 ---
 # <a name="proxies-node-sql-server-agent-f1-help"></a>Nó de proxies (Ajuda de F1 do SQL Server Agent)
   Esta seção contém a ajuda de F1 para o nó **Proxies** do Pesquisador de Objetos em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

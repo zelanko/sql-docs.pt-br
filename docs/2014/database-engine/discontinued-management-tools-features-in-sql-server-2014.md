@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7c966c3e4388588810438d7e91a9ae0356ef60c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780345"
 ---
 # <a name="discontinued-management-tools-features-in-sql-server-2014"></a>Recursos das Ferramentas de Gerenciamento descontinuados no SQL Server 2014
   Este tópico descreve os recursos das Ferramentas de Gerenciamento do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que não estão mais disponíveis no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d1b59b0e279d016d2fcaee9b0fcae6742c4ff87b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756904"
 ---
 # <a name="roles-ssas-tabular"></a>Funções (SSAS tabular)
   Funções, em modelos tabulares, definem permissões de membro para um modelo. Cada função contém membros, por nome de usuário do Windows ou grupo do Windows, e permissões (leitura, processo, administrador). Membros da função podem executar ações no modelo conforme definido pela permissão de função. As funções definidas com permissões de leitura também podem fornecer segurança adicional no nível de linha usando filtros no nível de linha.  
@@ -82,7 +82,7 @@ ms.locfileid: "52419847"
   
 |Table|Expressão DAX|  
 |-----------|--------------------|  
-|Região|= Região [País] = "USA"|  
+|Região|=Region[Country]="USA"|  
 |ProductCategory|= ProductCategory [Name] = "Bicicletas"|  
 |Transações|=Transactions[Year]=2008|  
   

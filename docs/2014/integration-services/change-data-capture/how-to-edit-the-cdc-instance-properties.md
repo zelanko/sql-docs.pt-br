@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 96604a09811626a304502dc05ef4f7e9edcd0359
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771224"
 ---
 # <a name="how-to-edit-the-cdc-instance-properties"></a>Como editar as propriedades de instância CDC
   Este procedimento descreve como usar o CDC Designer Console para editar as propriedades de configuração para uma instância CDC.  
@@ -34,7 +34,7 @@ ms.locfileid: "58390843"
   
 5.  No editor de Properties, edite as propriedades nas guias a seguir:  
   
-    -   **Oracle**: Use o **Oracle** guia no editor de propriedades para fazer as alterações na descrição fornecida na página Create CDC database no Assistente de nova instância e fazer alterações a mineração de logs do Oracle informações de conexão de banco de dados.  
+    -   **Oracle**: Use a guia **Oracle** no editor de Propriedades para fazer alterações na descrição fornecida na página Create CDC database no assistente de Nova Instância e fazer alterações nas informações de conexão de banco de dados de mineração de logs do Oracle.  
   
          Para obter mais informações sobre o que você pode editar nessa guia, consulte [Edit the Oracle Database Properties](edit-the-oracle-database-properties.md).  
   
@@ -42,7 +42,7 @@ ms.locfileid: "58390843"
   
          Para obter mais informações sobre o que você pode editar nessa guia, consulte Edit [Edit Tables](edit-tables.md).  
   
-    -   **Scripts**: Use o **Scripts** guia para executar ou executar novamente um script em que o banco de dados de origem Oracle que configura o registro em log suplementar.  
+    -   **Scripts**: use a guia **Scripts** para executar ou executar novamente um script no banco de dados de origem Oracle que configura o registro em log suplementar.  
   
          Para obter mais informações sobre o que você pode fazer nessa guia, consulte [Review and Generate Supplemental Logging Scripts](review-and-generate-supplemental-logging-scripts.md).  
   

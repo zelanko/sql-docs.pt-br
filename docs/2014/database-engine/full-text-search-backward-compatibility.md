@@ -15,11 +15,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 5a749bb4da4511f30a231f6ab2dd05a35ebdb11d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779256"
 ---
 # <a name="full-text-search-backward-compatibility"></a>Compatibilidade com versões anteriores da pesquisa de texto completo
   Os tópicos da seção de compatibilidade com versões anteriores descrevem alterações no comportamento de pesquisa de texto completo entre versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  

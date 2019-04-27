@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c657fc64bcc844d7c17153f83489a35594027ffc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756537"
 ---
 # <a name="technical-reference-data-mining-add-ins-for-excel"></a>Referência técnica (Suplementos de Mineração de Dados para Excel)
   Os Suplementos de Mineração de Dados para Office têm recursos úteis para os programadores e os mineradores de dados avançados.  
@@ -35,7 +35,7 @@ ms.locfileid: "48157556"
   
  **Ajuda do Assistente de configuração**  
   
- O assistente de configuração é executado na primeira vez que você abre os suplementos, para ajudá-lo a se conectar a um servidor do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Se você tiver dificuldade em alguma etapa, consulte este tópico para obter ajuda adicional.  
+ O assistente de configuração é executado na primeira vez que você abre os suplementos, para ajudá-lo a se conectar a um servidor do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Se você tiver dificuldade em alguma etapa, consulte este tópico para obter ajuda adicional.  
   
 -   [Utilitário de configuração do servidor &#40;Data Mining Add-ins para Excel&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
   

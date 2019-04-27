@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b704f24379a0d56f738b28f9553cf03d214b9e3c
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780581"
 ---
 # <a name="string-utility-functions-sample"></a>Exemplo Funções de utilitário de cadeia de caracteres
   O exemplo Utilitários de Cadeia de Caracteres contém uma função de streaming com valor de tabela gravada em Visual C# e Visual Basic, que divide uma cadeia de caracteres separada por vírgula em uma tabela com uma coluna. Ele também contém uma função de agregação que converte uma coluna de cadeia de caracteres em uma cadeia de caracteres separada por vírgula.  Além disso, estão implementadas uma função escalar e uma função com valor de tabela, que fornece a funcionalidade de substituição de expressão regular e pesquisa de expressão regular.  

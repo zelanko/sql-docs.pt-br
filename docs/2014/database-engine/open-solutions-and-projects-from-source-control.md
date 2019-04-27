@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dc6e728ff40d61f2139115c642e0841a3685207f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774771"
 ---
 # <a name="open-solutions-and-projects-from-source-control"></a>Abrir soluções e projetos no controle do código-fonte
   Você pode usar [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para abrir uma solução ou projeto diretamente do controle do código-fonte. Quando você abre uma solução de controle de código-fonte, o ambiente do [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] recupera a última versão da solução e a copia automaticamente no local especificado.  
@@ -27,7 +27,7 @@ ms.locfileid: "48061256"
   
  A tabela a seguir descreve os tópicos dessa seção.  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Abrir soluções no controle do código-fonte](../../2014/database-engine/open-solutions-from-source-control.md)|Explica como usar o ambiente do [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] para abrir soluções diretamente do controle de código-fonte.|  
 |[Abrir projetos no controle do código-fonte](../../2014/database-engine/open-projects-from-source-control.md)|Explica como abrir um projeto do controle de código-fonte para ser possível fazer check-out e modificar os arquivos de projeto.|  

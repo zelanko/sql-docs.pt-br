@@ -23,11 +23,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 10466721f50dd8b090b5d6b1a06b5bffd6e5289d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62772272"
 ---
 # <a name="providing-feedback-for-sql-server-2014"></a>Fornecendo comentários sobre o SQL Server 2014
   A [!INCLUDE[msCoName](../includes/msconame-md.md)] agradece sua contribuição para nos ajudar a melhorar nossos produtos e documentação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Você pode fornecer sugestões e relatórios de erros sobre os recursos e a interface do usuário do produto, enviar comentários sobre a documentação e optar por enviar relatórios de erros e dados de uso automaticamente para a [!INCLUDE[msCoName](../includes/msconame-md.md)] para análise. Cada uma dessas três opções de comentários é descrita aqui.  

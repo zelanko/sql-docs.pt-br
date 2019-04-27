@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1060520a9c1fc6b5db20d1cca5e8c2d19cbd429a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773292"
 ---
 # <a name="view-file-history"></a>Exibir o histórico de arquivos
   Você pode usar o **histórico** comando para exibir um histórico de versão para arquivos de controle do código-fonte. Esse histórico inclui a data e hora de quando o arquivo foi adicionado ou foi feito check-in no controle do código-fonte.  

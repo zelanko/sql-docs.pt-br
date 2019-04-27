@@ -1,24 +1,25 @@
 ---
 title: Caixa de diálogo Validar | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: sql-server-2014
+ms.date: 03/01/2017
+ms.prod: sql
+ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
-- sql12.ssis.ssms.ispackagevalidate.f1
-- sql12.ssis.ssms.isprojectvalidate.f1
+- sql13.ssis.ssms.isprojectvalidate.f1
+- sql13.ssis.ssms.ispackagevalidate.f1
 ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
 author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8380b3ff1502088e0131b182149e90e31d2be42c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771643"
 ---
 # <a name="validate-dialog-box"></a>Caixa de diálogo Validar
   Use a caixa de diálogo **Validar** para verificar os problemas comuns de um projeto ou pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  

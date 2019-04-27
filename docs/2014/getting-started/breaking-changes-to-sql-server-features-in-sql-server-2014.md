@@ -11,11 +11,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d871fb9ce1c163ba3a099f70050447537a03909e
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774070"
 ---
 # <a name="breaking-changes-to-sql-server-features-in-sql-server-2014"></a>Alterações recentes em recursos do SQL Server no SQL Server 2014
   Este tópico descreve as alterações recentes no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Possivelmente, você encontrará essas alterações durante a atualização, e elas podem danificar aplicativos, scripts ou funcionalidades baseados em versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Use Upgrade Advisor to Prepare for Upgrades](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  

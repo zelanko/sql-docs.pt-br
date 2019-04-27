@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 72ac6ac92da531d0f653e0fc03d88d170b7706e5
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743212"
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>Alterar o tempo de recuperação de destino de um banco de dados (SQL Server)
   Este tópico descreve como definir o tempo de recuperação de destino de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Por padrão, o tempo de recuperação de destino é 0, e o banco de dados usa *pontos de verificação automáticos* (que são controlados pela opção de servidor **intervalo de recuperação** ). Definir o tempo de recuperação de destino como maior que 0 faz com que o banco de dados use os *pontos de verificação indiretos* e estabelece um limite superior no tempo de recuperação para este banco de dados.  
@@ -23,9 +23,9 @@ ms.locfileid: "54131446"
 > [!NOTE]  
 >  O limite superior especificado para um determinado banco de dados pela sua configuração de tempo de recuperação de destino poderá ser excedido se uma transação de longa execução provocar tempos excessivos de UNDO.  
   
--   **Antes de começar:**  [Limitações e restrições](#Restrictions), [segurança](#Security)  
+-   **Antes de começar:**  [Limitações e Restrições](#Restrictions), [Segurança](#Security)  
   
--   **Para alterar a recuperação de destino de tempo, usando:**  [SQL Server Management Studio](#SSMSProcedure) ou [Transact-SQL](#TsqlProcedure)  
+-   **Para alterar o tempo de recuperação de destino usando:**  [SQL Server Management Studio](#SSMSProcedure) ou [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -50,7 +50,7 @@ ms.locfileid: "54131446"
   
 4.  No painel **Recuperação** , no campo **Tempo de Recuperação de Destino (Segundos)** , especifique o número de segundos desejado como o limite superior do tempo de recuperação deste banco de dados.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para alterar o tempo de recuperação de destino**  
   
 1.  Conecte-se à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] onde o banco de dados reside.  

@@ -1,8 +1,9 @@
 ---
 title: Como usar a interface de linha de comando do serviço CDC | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 03/01/2017
+ms.prod: sql
+ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
@@ -11,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 68c45be7cc124b0cadcd8f769e2471799d5b502a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771143"
 ---
 # <a name="how-to-use-the-cdc-service-command-line-interface"></a>Como usar a interface de linha de comando do Serviço CDC
   O programa do serviço Oracle CDC, xdbcdcsvc.exe, normalmente executa o serviço do Windows do Oracle CDC, mas pode ser invocado diretamente da linha de comando para criar ou excluir um serviço do Windows do Oracle CDC.  

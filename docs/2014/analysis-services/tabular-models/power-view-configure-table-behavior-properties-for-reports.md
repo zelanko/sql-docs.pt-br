@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84060846dc19862e057e55e4096df7e97fa4d825
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757139"
 ---
 # <a name="configure-table-behavior-properties-for-power-view-reports-ssas-tabular"></a>Configurar propriedades de comportamento de tabela para relatórios de Power View (SSAS tabular)
   Se você estiver usando um modelo de tabela como um modelo de dados para o [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], poderá definir propriedades de comportamento de tabela que exponham linhas de detalhes em um mais nível granular. Definir as propriedades do comportamento da tabela altera o comportamento do agrupamento das linhas de detalhes e produz uma melhor colocação padrão de identificação de informações (como nomes, IDs de fotografia ou imagens de logotipo) em layouts de peça, cartão e gráfico.  

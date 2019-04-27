@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eb0d8dc1c8a60a3546c24e6d7bcd0faa600769bc
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58383109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771062"
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>Carregar dados por meio do destino ODBC
   Este procedimento mostra como carregar dados usando o destino ODBC. Para adicionar e configurar um destino ODBC, o pacote já deve incluir pelo menos uma tarefa de Fluxo de Dados e uma fonte.  
@@ -34,9 +34,9 @@ ms.locfileid: "58383109"
   
 6.  Selecione o método de acesso de dados.  
   
-    -   **Nome da tabela - lote**: Selecione esta opção para configurar o destino ODBC para trabalhar no modo de lote. Quando você selecionar essa opção, poderá definir o **Tamanho do lote**.  
+    -   **Nome da Tabela – Lote**: Selecione esta opção para configurar o destino ODBC para trabalhar no modo de lote. Quando você selecionar essa opção, poderá definir o **Tamanho do lote**.  
   
-    -   **Nome da tabela – linha por linha**: Selecione esta opção para configurar o destino ODBC para inserir cada uma das linhas na tabela de destino, uma de cada vez. Quando você selecionar essa opção, os dados serão carregados na tabela uma linha de cada vez.  
+    -   **Nome da Tabela – Linha a Linha**: Selecione esta opção para configurar o destino ODBC para inserir cada uma das linhas na tabela de destino, uma de cada vez. Quando você selecionar essa opção, os dados serão carregados na tabela uma linha de cada vez.  
   
 7.  No campo **Nome da tabela ou exibição** , selecione uma tabela ou exibição disponível do banco de dados na lista ou digite uma expressão regular para identificar a tabela. Essa lista contém apenas as primeiras 1.000 tabelas. Se o banco de dados contiver mais de 1.000 tabelas, você poderá digitar o início do nome de uma tabela ou usar o curinga (*) para inserir qualquer parte do nome para exibir a tabela ou tabelas desejadas.  
   

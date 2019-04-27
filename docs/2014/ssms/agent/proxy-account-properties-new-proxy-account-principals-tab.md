@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f97e8fec31f6011b7a2769753bed35e4ab62b47b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650217"
 ---
 # <a name="proxy-account-properties-and-new-proxy-account-principals-tab"></a>Propriedades da conta proxy e nova conta proxy (guia Entidades)
   Use essa página para exibir ou alterar os principais que podem usar uma conta proxy do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent em etapas de trabalho.  

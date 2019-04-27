@@ -12,22 +12,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: deae929c1e01939d6caeb4d9fa49b3c7fe73fd0d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756476"
 ---
 # <a name="toolbar-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra de Ferramentas (guia Cálculo, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel da **Barra de Ferramentas** para executar operações comuns na guia **Cálculos** do Designer de Cubo.  
   
 ## <a name="options"></a>Opções  
   
-|Opção|Description|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |**Adicionar Business Intelligence**|Clique para exibir o **Assistente de Business Intelligence** e adicionar recursos de Business Intelligence ao cubo.|  
 |**Processar**|Clique para exibir a caixa de diálogo **Processar** e processar o cubo.|  
-|**Reconectar-se**|Clique para reconectar a guia **Cálculos** com a instância e o banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que contém o cubo, se a sessão da guia **Cálculos** for desconectada devido a perda ou tempo limite da conexão.|  
+|**Reconnect**|Clique para reconectar a guia **Cálculos** com a instância e o banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que contém o cubo, se a sessão da guia **Cálculos** for desconectada devido a perda ou tempo limite da conexão.|  
 |**Novo membro calculado**|Clique para exibir o **Editor de Formulário de Membro Calculado** e criar um novo membro calculado. Esta opção é habilitada apenas na exibição de formulário.|  
 |**Novo conjunto nomeado**|Clique para exibir o painel **Editor de Formulário de Conjunto Nomeado** e criar um novo conjunto nomeado. Esta opção é habilitada apenas na exibição de formulário.|  
 |**Novo comando de Script**|Clique para exibir o **Editor de Scripts** e criar um novo comando de script. Esta opção é habilitada apenas na exibição de formulário.|  

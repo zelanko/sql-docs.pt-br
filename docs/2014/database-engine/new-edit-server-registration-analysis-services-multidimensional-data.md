@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9d3d13ac64edbdbec4f131a09949e5724ab2932b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774910"
 ---
 # <a name="new-or-edit-server-registration-general-tab-analysis-services---multidimensional-data"></a>Novo registro ou editar registro de servidor (guia Geral) (Analysis Services - Dados multidimensionais)
   Use essa guia para especificar opções ao registrar uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e07f6674df80b16abad45a6fece9aad582ec585d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756274"
 ---
 # <a name="troubleshoot-process-data-ssas-tabular"></a>Solucionar problemas de dados de processo (SSAS tabular)
   Este tópico fornece informações sobre como processar (atualizar) dados de modelo ao criar um modelo usando o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Este tópico não fornece informações sobre como processar dados em modelos que foram implantados em uma instância de servidor do Analysis Services. Para obter mais informações sobre processamento de dados em um modelo implantado, consulte [Script de tarefas administrativas no Analysis Services](script-administrative-tasks-in-analysis-services.md).  
@@ -106,7 +106,7 @@ ms.locfileid: "48174696"
 -   Não é possível selecionar várias colunas em tabelas diferentes e alterar as propriedades das colunas. Você pode trabalhar somente com uma tabela ou exibição de cada vez.  
   
 ## <a name="see-also"></a>Consulte também  
- [Processar manualmente dados de &#40;Tabular do SSAS&#41;](manually-process-data-ssas-tabular.md)   
- [Editar uma Conexão de fonte de dados existente &#40;Tabular do SSAS&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)  
+ [Processando os dados manualmente &#40;SSAS Tabular&#41;](manually-process-data-ssas-tabular.md)   
+ [Editar uma conexão de fonte de dados existente &#40;SSAS Tabular&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)  
   
   
