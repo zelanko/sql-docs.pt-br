@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 36e9d82a85c651044decbd951d49a0234568d5bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62639225"
 ---
 # <a name="sphelplogshippingmonitor-transact-sql"></a>sp_help_log_shipping_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_help_log_shipping_monitor
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**status**|**bit**|Status coletivo de agentes para banco de dados de envio de logs:<br /><br /> **0** = íntegras e não-agent falhas.<br /><br /> **1** = outros.|  
 |**is_primary**|**bit**|Indica se essa linha é para um banco de dados primário:<br /><br /> **1** = a linha é para um banco de dados primário.<br /><br /> **0** = a linha é para um banco de dados secundário.|  

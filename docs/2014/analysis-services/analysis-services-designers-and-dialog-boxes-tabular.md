@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bed90099c42383ea45ba6ad17459c7e0f6048b8a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62638461"
 ---
 # <a name="analysis-services-designers-and-dialog-boxes-tabular"></a>Designers e caixas de diálogo do Analysis Services (Tabela)
   O ambiente de criação de projeto de tabela no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] e as ferramentas de gerenciamento do modelo de tabela no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] incluem várias caixas de diálogo, páginas de propriedades e páginas de assistente. Você pode clicar no botão Ajuda ou pressionar F1 para saber mais.  

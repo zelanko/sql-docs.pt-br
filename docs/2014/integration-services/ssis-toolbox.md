@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ed3b13619fa8206e9b4fa2054294c520f05ed890
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766339"
 ---
 # <a name="ssis-toolbox"></a>Caixa de Ferramentas do SSIS
   Todos os componentes que estão instalados no computador local, inclusive componentes de terceiros criados para o SQL Server 2008 e 2008 R2, aparecem agora automaticamente na nova **Caixa de Ferramentas do SSIS**. Quando você instalar componentes adicionais, clique com o botão direito do mouse dentro da caixa de ferramentas e clique em **Atualizar Caixa de Ferramentas** para adicionar os componentes.  

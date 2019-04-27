@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e009c9e498c28ee0b7f0efbd4571d9e50cb061a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62640212"
 ---
 # <a name="analysis-services-features-and-tasks"></a>Recursos e tarefas do Analysis Services
   A documentação básica do Analysis Services é organizada por modelagem e modo de servidor de forma que você possa se concentrar apenas nas ferramentas, nas tarefas e nos recursos que estão disponíveis no modo instalado. As tarefas de administração de servidor que abrangem vários modos podem ser localizadas nas instâncias de servidor.  
@@ -32,7 +32,7 @@ ms.locfileid: "48172826"
   
  [Modelagem multidimensional &#40;SSAS&#41;](multidimensional-models/multidimensional-models-ssas.md)  
   
- [Mineração de dados &#40;SSAS&#41;](data-mining/data-mining-ssas.md)  
+ [Mineração de Dados &#40;SSAS&#41;](data-mining/data-mining-ssas.md)  
   
  [O PowerPivot para SharePoint &#40;SSAS&#41;](power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
   

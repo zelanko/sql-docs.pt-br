@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 85ac46b918918f7e9dac715e11909ffeb9c46a29
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767138"
 ---
 # <a name="odata-source-editor-connection-page"></a>Editor de Origem do OData (página Conexão)
   Use a página **Conexão** da caixa de diálogo **Editor de Origem do OData** para selecionar o gerenciador de conexões do OData para a origem do OData. Essa página também permite que você especifique uma coleção ou um caminho de recurso e qualquer opção de consulta para indicar quais dados precisam ser recuperados da origem do OData. Para obter mais informações sobre origem do OData, consulte [OData Source](data-flow/odata-source.md).  
@@ -55,7 +55,7 @@ ms.locfileid: "58390455"
   
 ### <a name="use-collection-or-resource-path--resource-path"></a>Use o caminho da coleção ou do recurso = Caminho do recurso  
  **Resource path**  
- Digite um caminho de recurso. Por exemplo: Employees  
+ Digite um caminho de recurso. Por exemplo: Funcionários  
   
 ## <a name="see-also"></a>Consulte também  
  [Editor de Fonte OData &#40;Página Colunas&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   

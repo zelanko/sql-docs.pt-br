@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f9b60c47fd7cf05202a5203c1b908c9240cb5a22
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765969"
 ---
 # <a name="add-a-user-master-data-services"></a>Adicionar um usuário (Master Data Services)
   Adicione um usuário à lista **Usuários** do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] para iniciar o processo de atribuição de permissão ao aplicativo Web. Antes de um usuário da lista poder acessar o [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], é preciso atribuir a permissão de usuário a uma ou mais áreas funcionais e objetos de modelo.  

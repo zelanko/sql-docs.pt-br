@@ -1,5 +1,5 @@
 ---
-title: sys. remote_service_bindings (Transact-SQL) | Microsoft Docs
+title: sys.remote_service_bindings (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,18 +21,18 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2a0b326eef888ebf36fded7ae4ab95fe9f1b6bc0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62639126"
 ---
 # <a name="sysremoteservicebindings-transact-sql"></a>sys.remote_service_bindings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Esta exibição do catálogo contém uma linha para cada associação de serviço remoto. 
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome desta associação de serviço remoto. Não é NULLABLE.|  
 |**remote_service_binding_id**|**int**|ID desta associação de serviço remoto. Não é NULLABLE.|  

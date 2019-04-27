@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 3c43734dbd7ef1a766f3f1258f97565ab82e175d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62639863"
 ---
 # <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>Monitorar com o System Center Operations Manager - Analytics Platform System
 Use o System Center Operations Manager (SCOM) para monitorar o dispositivo do Analytics Platform System (APS).
@@ -59,7 +59,7 @@ A página de diagrama de dispositivos é onde você pode obter a integridade do 
 ### <a name="nodes"></a>Nós  
 Por fim, o modo de exibição de nós permite que você veja a integridade do seu dispositivo por meio de cada nó:  
   
-![Nós](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM4.png "SCOM_SCOM4")  
+![Nodes](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM4.png "SCOM_SCOM4")  
   
 ## <a name="see-also"></a>Consulte também  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

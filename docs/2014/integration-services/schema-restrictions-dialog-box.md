@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1cb955fe2779681f33cb1c4a7fc365b5249b5f39
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58383265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766662"
 ---
 # <a name="schema-restrictions-dialog-box"></a>Caixa de diálogo Restrições de Esquemas
   Use a caixa de diálogo **Restrições de Esquemas** para definir as restrições de esquema a aplicar ao Enumerador de Conjunto de Linhas de Esquemas ADO.NET Foreach.  
@@ -32,7 +32,7 @@ ms.locfileid: "58383265"
  **Variável**  
  Use uma variável para definir restrições. Selecione uma variável na lista ou clique em **Nova variável...** para criar uma nova variável.  
   
- **Tópicos relacionados:** [Serviços de integração &#40;SSIS&#41; variáveis](integration-services-ssis-variables.md) , [Adicionar variável](../../2014/integration-services/add-variable.md)  
+ **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md)  
   
  **Texto**  
  Forneça o texto para definir restrições.  

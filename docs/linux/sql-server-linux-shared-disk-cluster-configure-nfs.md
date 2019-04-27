@@ -10,11 +10,11 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.openlocfilehash: 672e6142ee7196115ba10309e6ac5ef7aa7d151f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62634710"
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>Configurar a instância de cluster de failover - NFS – SQL Server no Linux
 
@@ -36,7 +36,7 @@ Ao configurar as pastas para ser compartilhada no servidor de NFS, verifique se 
 
 Certifique-se de que seus padrões de segurança são aplicados para acessar. Ao configurar a pasta, certifique-se de que somente os servidores que participam na FCI deverá ver a pasta NFS. Um exemplo de um /etc/exports modificado em uma solução baseada em Linux NFS é mostrado abaixo em que a pasta é restrita a FCIN1 e FCIN2.
 
-![nfsacl 05][1]
+![05-nfsacl][1]
 
 ## <a name="instructions"></a>Instruções
 

@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: ed6bf859b4e16ecd26b333fb042f4ea1d98ffac9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637716"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>Especificando eixos em consultas XPath (SQLXML 4.0)
   Os seguintes exemplos mostram como os eixos são especificados em consultas XPath.  
@@ -83,7 +83,7 @@ ms.locfileid: "52753438"
 </ROOT>  
 ```  
   
-### <a name="b-retrieve-grandchildren-of-the-context-node"></a>b. Recuperar os netos do nó de contexto  
+### <a name="b-retrieve-grandchildren-of-the-context-node"></a>B. Recuperar os netos do nó de contexto  
  A seguinte consulta XPath seleciona todos os as  **\<ordem >** filhos do elemento a  **\<cliente >** elementos filhos do nó de contexto:  
   
 ```  

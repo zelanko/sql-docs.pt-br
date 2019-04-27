@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a26192eb47faddfb8776fb873e9c19253969d1e8
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767768"
 ---
 # <a name="welcome-to-sql-server-import-and-export-wizard"></a>Bem-vindo ao Assistente de Importação e Exportação do SQL Server
   Use o **Assistente de Importação e Exportação do SQL Server** para copiar e transformar dados entre fontes de dados com suporte e destinos.  

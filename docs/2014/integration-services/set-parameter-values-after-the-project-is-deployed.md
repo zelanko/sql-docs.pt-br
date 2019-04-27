@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f5e7248868a368ee0ea956b46b63c9c8d024393b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766509"
 ---
 # <a name="set-parameter-values-after-the-project-is-deployed"></a>Definir valores de parâmetros depois que o projeto foi implantado
   O Assistente de Implantação permite definir valores de parâmetros padrão de servidor ao implantar seu projeto no catálogo. Depois que seu projeto estiver no catálogo, você pode usar o Pesquisador de Objetos do SQL Server Management Studio (SSMS) ou o Transact-SQL para definir valores padrão de servidor.  
@@ -29,7 +29,7 @@ ms.locfileid: "58379924"
   
 3.  Abra a página de parâmetros com um clique em **Parâmetros** sob **Selecionar uma página**.  
   
-4.  Selecione o parâmetro desejado na lista **Parâmetros**. Observação: O **contêiner** coluna ajuda a distinguir os parâmetros de projeto dos parâmetros de pacote.  
+4.  Selecione o parâmetro desejado na lista **Parâmetros**. Observação: a coluna **Contêiner** ajuda a diferenciar os parâmetros de projeto dos parâmetros de pacote.  
   
 5.  Na coluna **Valor**, especifique o valor do parâmetro padrão de servidor desejado.  
   

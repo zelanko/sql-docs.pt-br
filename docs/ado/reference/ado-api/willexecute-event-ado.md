@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 234a0eeba57958063a6f2eedb8510486df8a53a0
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642513"
 ---
 # <a name="willexecute-event-ado"></a>Evento WillExecute (ADO)
 O **WillExecute** evento é chamado antes de um comando pendente é executado em uma conexão.  

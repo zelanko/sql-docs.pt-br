@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47040adf2ce7be17d0540755f7fa972d7a76266f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642469"
 ---
 # <a name="willmove-and-movecomplete-events-ado"></a>Eventos WillMove e MoveComplete (ADO)
 O **eventos WillMove** evento é chamado antes de uma operação pendente altera a posição atual na [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md). O **MoveComplete** eventos é chamado após a posição atual na **Recordset** alterações.  
@@ -60,7 +60,7 @@ MoveComplete adReason, pError, adStatus, pRecordset
  Um [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto. O **Recordset** para que esse evento ocorreu.  
   
 ## <a name="remarks"></a>Comentários  
- Um **eventos WillMove** ou **MoveComplete** evento pode ocorrer devido ao seguinte **conjunto de registros** operações: [abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md), [mover](../../../ado/reference/ado-api/move-method-ado.md), [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md), e [Requery](../../../ado/reference/ado-api/requery-method.md). Esses eventos podem ocorrer devido às seguintes propriedades: [filtro](../../../ado/reference/ado-api/filter-property.md), [índice](../../../ado/reference/ado-api/index-property.md), [indicador](../../../ado/reference/ado-api/bookmark-property-ado.md), [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)e [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md). Esses eventos também ocorrem se alguma criança **conjunto de registros** tem **conjunto de registros** eventos conectados e o pai **Recordset** é movido.  
+ Um **eventos WillMove** ou **MoveComplete** evento pode ocorrer devido ao seguinte **Recordset** operações: [Abra](../../../ado/reference/ado-api/open-method-ado-recordset.md), [mover](../../../ado/reference/ado-api/move-method-ado.md), [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md), e [Requery](../../../ado/reference/ado-api/requery-method.md). Esses eventos podem ocorrer devido às seguintes propriedades: [Filtro](../../../ado/reference/ado-api/filter-property.md), [índice](../../../ado/reference/ado-api/index-property.md), [indicador](../../../ado/reference/ado-api/bookmark-property-ado.md), [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md), e [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md). Esses eventos também ocorrem se alguma criança **conjunto de registros** tem **conjunto de registros** eventos conectados e o pai **Recordset** é movido.  
   
  Você deve definir a *adStatus* parâmetro **adStatusUnwantedEvent** para cada possível *adReason* valor para interromper completamente a notificação de eventos para qualquer evento que inclui um *adReason* parâmetro.  
   

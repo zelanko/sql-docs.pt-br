@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5a5105e162441375ab011510acb2b7fc6d25bbb4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58383373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766209"
 ---
 # <a name="transfer-sql-server-objects-task-editor-objects-page"></a>Editor da Tarefa Transferir Objetos do SQL Server (página Objetos)
   Use a página **Objetos** da caixa de diálogo **Editor da Tarefa Transferir Objetos do SQL Server** para especificar propriedades para copiar um ou mais objetos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para outra. Tabelas, exibições, procedimentos armazenados e funções definidas pelo usuário são alguns exemplos de objetos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que você pode copiar. Para obter mais informações sobre essa tarefa, consulte [Transfer SQL Server Objects Task](control-flow/transfer-sql-server-objects-task.md).  

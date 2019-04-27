@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b681d06ab2ebb7c26d57fcef3bc34b070d30269e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62639705"
 ---
 # <a name="purge-version-members-master-data-services"></a>Limpar Membros de Versão (Master Data Services)
 

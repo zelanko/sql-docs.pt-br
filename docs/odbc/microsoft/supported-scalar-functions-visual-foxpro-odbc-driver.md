@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d82fa90f5dca5d9aee85ef3630b9d3a66d3c14e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633191"
 ---
 # <a name="supported-scalar-functions-visual-foxpro-odbc-driver"></a>Funções escalares compatíveis (Driver ODBC do Visual FoxPro)
 O Driver de ODBC do Visual FoxPro dá suporte a três tipos de funções escalares conforme definido na gramática SQL ODBC: cadeia de caracteres, numéricos e funções de data e hora.  

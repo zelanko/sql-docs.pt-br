@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ea8b678731a10b483c233cdb17b394a22f647060
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768048"
 ---
 # <a name="convert-types-without-conversion-checking-sql-server-import-and-export-wizard"></a>Converter tipos sem verificação de conversão (Assistente de Importação e Exportação do SQL Server)
   Use o **converter tipos sem verificar a conversão** página para examinar os mapeamentos que o assistente executa quando o assistente não pode localizar um ou mais do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] arquivos de mapeamento e conversão de tipo de dados. Esta página inclui informações que ajudam a identificar o(s) arquivo(s) perdido(s).  

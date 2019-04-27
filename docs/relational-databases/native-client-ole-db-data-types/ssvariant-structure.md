@@ -17,11 +17,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ecce9ecca3d0b234be9aec5c00718cc7c3f69272
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632497"
 ---
 # <a name="ssvariant-structure"></a>Estrutura SSVARIANT
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
   
 |Membro|Indicador de tipo OLE DB|Tipo de dados OLE DB C|valor vt|Comentários|  
 |------------|---------------------------|------------------------|--------------|--------------|  
-|VT|SSVARTYPE|||Especifica o tipo de valor contido no struct **SSVARIANT**.|  
+|vt|SSVARTYPE|||Especifica o tipo de valor contido no struct **SSVARIANT**.|  
 |bTinyIntVal|DBTYPE_UI1|**BYTE**|**VT_SS_UI1**|Dá suporte a **tinyint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados.|  
 |sShortIntVal|DBTYPE_I2|**SHORT**|**VT_SS_I2**|Dá suporte a **smallint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados.|  
 |lIntVal|DBTYPE_I4|**LONG**|**VT_SS_I4**|Dá suporte a **int** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados.|  

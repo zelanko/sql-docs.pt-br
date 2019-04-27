@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8a9ae08fe6e13238e86b38e19c6df959b4840e3b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62636745"
 ---
 # <a name="sqlnumparams-visual-foxpro-odbc-driver"></a>SQLNumParams (Driver ODBC do Visual FoxPro)
 > [!NOTE]  
 >  Este tópico contém informações específicas de Driver ODBC do Visual FoxPro. Para obter informações gerais sobre essa função, consulte o tópico apropriado sob [referência da API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Suporte: completo  
+ Suporte a: Completo  
   
- Conformidade com a API ODBC: 2 de nível  
+ Conformidade com a API ODBC: Nível 2  
   
  Retorna o número de parâmetros em uma instrução SQL. O número de parâmetros deve igual ao número de pontos de interrogação na instrução SQL passada para [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md).  
   

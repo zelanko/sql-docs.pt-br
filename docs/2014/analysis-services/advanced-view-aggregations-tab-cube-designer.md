@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 12fcc899eb4cb60b6616949c51c44419cc5a20ff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635438"
 ---
 # <a name="advanced-view-aggregations-tab-cube-designer"></a>Exibição avançada (guia Agregações, Designer de Cubo)
   Use a **Exibição Avançada** do designer de agregação para criar e modificar manualmente designs de agregação e agregações individuais. Essa exibição só deverá ser usada por usuários avançados.  
@@ -27,7 +27,7 @@ ms.locfileid: "48104693"
   
 ## <a name="options"></a>Opções  
   
-|Opção|Description|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |**Nova agregação**|Clique para criar uma agregação nova.|  
 |**Delete (excluir)**|Clique para excluir uma agregação selecionada ou um design de agregação selecionado.|  

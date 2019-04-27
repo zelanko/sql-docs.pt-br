@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 308a74501b0b4bf7b071feae2088c1ab1b7f030c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58373936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768762"
 ---
 # <a name="sqrt-ssis-expression"></a>SQRT (Expressão SSIS)
   Retorna a raiz quadrada de uma expressão numérica.  

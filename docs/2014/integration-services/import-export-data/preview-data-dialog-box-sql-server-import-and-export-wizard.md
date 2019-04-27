@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 55102e5b91b9b544a38338dbbbbcd882bc66f84a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767978"
 ---
 # <a name="preview-data-dialog-box-sql-server-import-and-export-wizard"></a>Caixa de diálogo Visualizar Dados (Assistente de Importação e Exportação do SQL Server)
   Use o **visualizar dados** caixa de diálogo para ver a consulta que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard serão enviada para a fonte de dados. Você também pode usar esta caixa de diálogo para visualizar até 200 linhas de dados de exemplo.  

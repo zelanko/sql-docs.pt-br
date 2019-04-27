@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 23416cb067507d821701e57255fdc6f81ee607c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632999"
 ---
 # <a name="text-file-data-types"></a>Tipos de dados de Arquivo de texto
 A tabela a seguir mostra como os tipos de dados de texto são mapeados para tipos de dados SQL ODBC. Observe que nem todos os tipos de dados ODBC SQL têm suporte pelo driver ODBC de texto.  
@@ -40,7 +40,7 @@ A tabela a seguir mostra como os tipos de dados de texto são mapeados para tipo
   
  A tabela a seguir mostra as limitações nos tipos de dados de texto.  
   
-|Tipo de dados|Description|  
+|Tipo de dados|Descrição|  
 |---------------|-----------------|  
 |CHAR|Criação de uma coluna CHAR igual a zero ou comprimento não especificado, na verdade, retorna uma coluna de bits de 255.<br /><br /> Em arquivos delimitados, uma coluna CHAR pode ou não ter delimitadores de aspas duplas no início e no final; em arquivos de comprimento fixo, aspas duplas não são usadas como delimitadores.|  
 |DATETIME|MM-DD-AA (por exemplo, 01-17-92)<br /><br /> DD-MMM-AA (por exemplo, Jan-17-92)<br /><br /> DD-MMM-AA (por exemplo, 17 de janeiro de 92)<br /><br /> AAAA-MM-DD (por exemplo, 1992-01-17)<br /><br /> DD-MMM-AAAA (por exemplo, 1992-Jan-17)<br /><br /> Separadores de data misto não são permitidas dentro de uma tabela.<br /><br /> O texto ISAM formata um campo de data e hora no formato dos Estados Unidos ou na Europa, dependendo da configuração internacional no painel de controle do Windows.|  

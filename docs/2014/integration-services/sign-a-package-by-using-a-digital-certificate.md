@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c6da9652c18bd6e8093a38d337b61171bc448341
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766598"
 ---
 # <a name="sign-a-package-by-using-a-digital-certificate"></a>Assinar um pacote por meio de um certificado digital
   Este tópico descreve como assinar um pacote do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] com um certificado digital. Você pode usar uma assinatura digital, junto com outras configurações, para evitar o carregamento e a execução de um pacote inválido.  

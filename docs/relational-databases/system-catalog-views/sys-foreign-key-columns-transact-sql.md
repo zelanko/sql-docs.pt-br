@@ -1,5 +1,5 @@
 ---
-title: sys. foreign_key_columns (Transact-SQL) | Microsoft Docs
+title: sys.foreign_key_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,18 +22,18 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f45b4be7f62b58bd69f427e37da2243ad4665264
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640344"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631784"
 ---
 # <a name="sysforeignkeycolumns-transact-sql"></a>sys.foreign_key_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Contém uma linha para cada coluna, ou conjunto de colunas, que inclui uma chave estrangeira.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**constraint_object_id**|**int**|ID da restrição FOREIGN KEY.|  
 |**constraint_column_id**|**int**|ID da coluna ou conjunto de colunas, que compõem a chave estrangeira (*1..n* onde n = número de colunas).|  

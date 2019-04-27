@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 943cb761e9c456b0c9da24be3ef14e22a2310dde
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52755248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765859"
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>Criar um atributo de link (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], crie um atributo de link quando desejar que os usuários insiram um hiperlink como um valor de atributo, como http://www.contoso.com.  

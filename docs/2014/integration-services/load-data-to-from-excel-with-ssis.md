@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e2092ef7f755b9980ee29ee3d7080774d78a0094
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767308"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Importar dados do Excel ou exportar dados para o Excel com o SSIS (SQL Server Integration Services)
 
@@ -49,7 +49,7 @@ Verifique se você baixou o *Redistribuível* de 2016 do Mecanismo de Banco de D
 
 Se o computador já tiver uma versão de 32 bits do Office, então será necessário instalar a versão de 32 bits dos componentes. Também é necessário executar o pacote do SSIS no modo de 32 bits ou executar a versão de 32 bits do Assistente de importação e de exportação.
 
-Se você tiver uma assinatura do Office 365, talvez você veja uma mensagem de erro quando você executar o instalador. O erro indica que não é possível instalar o download lado a lado com os componentes do tipo clicar para executar do Office. Para ignorar essa mensagem de erro, execute a instalação no modo silencioso abrindo uma janela de Prompt de Comando e executando o arquivo .EXE baixado com a opção `/quiet`. Por exemplo:
+Se você tiver uma assinatura do Office 365, talvez você veja uma mensagem de erro quando você executar o instalador. O erro indica que não é possível instalar o download lado a lado com os componentes do tipo clicar para executar do Office. Para ignorar essa mensagem de erro, execute a instalação no modo silencioso abrindo uma janela de Prompt de Comando e executando o arquivo .EXE baixado com a opção `/quiet`. Por exemplo: 
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 

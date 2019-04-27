@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b82e56dd7998ca19ce9e401369cd8d2f52b58573
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62636214"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>Desenvolvimento um reconhecimento de pool de conexão em um driver ODBC
 Este tópico discute os detalhes do desenvolvimento de um driver ODBC que contém informações sobre como o driver deve fornecer os serviços de pooling de conexão.  
@@ -44,7 +44,7 @@ Este tópico discute os detalhes do desenvolvimento de um driver ODBC que conté
   
 |Função|Funcionalidade adicionada|  
 |--------------|-------------------------|  
-|[Falha de SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)<br /><br /> [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)<br /><br /> [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)<br /><br /> [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|Suporte para o novo tipo de identificador: SQL_HANDLE_DBC_INFO_TOKEN (consulte a descrição abaixo).|  
+|[SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)<br /><br /> [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)<br /><br /> [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)<br /><br /> [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|Suporte para o novo tipo de identificador: SQL_HANDLE_DBC_INFO_TOKEN (consulte a descrição abaixo).|  
 |[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|Suporte para o novo atributo de conexão somente conjunto: SQL_ATTR_DBC_INFO_TOKEN para redefinir a conexão (consulte a descrição abaixo).|  
   
 > [!NOTE]  
@@ -82,7 +82,7 @@ Este tópico discute os detalhes do desenvolvimento de um driver ODBC que conté
   
  Uma pontuação entre 0 e 100 é possível, onde 0 significa não reutilize e 100 significa que perfeitamente adequados. [SQLRateConnection](../../../odbc/reference/syntax/sqlrateconnection-function.md) é a função de classificação de uma conexão.  
   
-## <a name="new-odbc-handle---sqlhandledbcinfotoken"></a>Novo identificador ODBC - SQL_HANDLE_DBC_INFO_TOKEN  
+## <a name="new-odbc-handle---sqlhandledbcinfotoken"></a>New ODBC Handle - SQL_HANDLE_DBC_INFO_TOKEN  
  Para dar suporte a pool de conexão reconhecimento de driver, o driver precisa de informações de conexão para calcular a ID do Pool. O driver também precisa de informações de conexão a ser comparado a novas solicitações de conexão com conexões no pool.  Sempre que pode ser reutilizada sem conexão no pool, o driver deve estabelecer uma nova conexão, exigindo, portanto, as informações de conexão.  
   
  Como as informações de conexão podem vir de várias fontes (cadeia de caracteres de conexão, os atributos de conexão e DSN), o driver seja necessário analisar a cadeia de caracteres de conexão e resolver o conflito entre essas fontes em cada chamada de função acima.  
@@ -97,7 +97,7 @@ Este tópico discute os detalhes do desenvolvimento de um driver ODBC que conté
   
  O driver deve modificar as seguintes funções para aceitar o novo tipo de identificador SQL_HANDLE_DBC_INFO_TOKEN:  
   
-1.  [Falha de SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)  
+1.  [SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)  
   
 2.  [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)  
   

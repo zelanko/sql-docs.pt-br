@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: df4932604a6de27c2205ad0f619939587d02b916
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767048"
 ---
 # <a name="ole-db-source-editor-error-output-page"></a>Editor de Origem de OLE DB (página Saída de Erro)
   Use a página **Saída de Erro** da caixa de diálogo do **Editor de Origem OLE DB** para selecionar opções de tratamento de erro e definir propriedades em colunas de saída de erros.  

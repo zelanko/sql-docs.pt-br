@@ -11,11 +11,11 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.openlocfilehash: c9d18e948a415a1d549c21a7c78e0117c6ab819c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62634134"
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Instalar o SQL Server Integration Services (SSIS) no Linux
 
@@ -133,7 +133,7 @@ sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup
 
 ### <a name="environment-variables-for-unattended-installation"></a>Variáveis de ambiente para uma instalação autônoma
 
-| Variável de ambiente | Description |
+| Variável de ambiente | Descrição |
 |---|---|
 | **ACCEPT_EULA** | Aceita o contrato de licença do SQL Server quando definido como qualquer valor (por exemplo, `Y`).|
 | **SSIS_PID** | Define a chave de produto ou edição do SQL Server. Aqui estão os valores possíveis:<br/>Evaluation<br/>Desenvolvedor<br/>Express <br/>Web <br/>Standard<br/>Enterprise <br/>Uma chave do produto<br/><br/>Se você especificar uma chave do produto, a chave do produto deve estar no formato `#####-#####-#####-#####-#####`, onde `#` for uma letra ou um número.  |

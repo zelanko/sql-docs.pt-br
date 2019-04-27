@@ -17,21 +17,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3f548e1496ce45d9fdb4677fd9659de349e5c5cc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62636101"
 ---
 # <a name="writing-odbc-3x-drivers"></a>Gravar drivers 3.x ODBC
 A tabela a seguir mostra o suporte de função em um ODBC 3. *x* driver e um aplicativo ODBC e o mapeamento realizada pelo Gerenciador de Driver quando as funções são chamadas em relação a um ODBC 3. *x* driver.  
   
-|Função|Tem suporte<br /><br /> por um<br /><br /> ODBC 3. *x*<br /><br /> driver?|Tem suporte<br /><br /> por um<br /><br /> ODBC 3. *x*<br /><br /> aplicativo?|Mapeado/com suporte<br /><br /> Por que o ODBC 3. *x*<br /><br /> Gerenciador de driver para<br /><br /> um ODBC 3. *x* driver?|  
+|Função|Tem suporte<br /><br /> por um<br /><br /> ODBC 3.*x*<br /><br /> driver?|Tem suporte<br /><br /> por um<br /><br /> ODBC 3.*x*<br /><br /> aplicativo?|Mapeado/com suporte<br /><br /> Por que o ODBC 3. *x*<br /><br /> Gerenciador de driver para<br /><br /> um ODBC 3. *x* driver?|  
 |--------------|----------------------------------------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------|  
-|**SQLAllocConnect**|Não|Nenhum [1]|Sim|  
-|**SQLAllocEnv**|Não|Nenhum [1]|Sim|  
-|**Falha de SQLAllocHandle**|Sim|Sim|Não|  
-|**SQLAllocStmt**|Não|Nenhum [1]|Sim|  
+|**SQLAllocConnect**|Não|No[1]|Sim|  
+|**SQLAllocEnv**|Não|No[1]|Sim|  
+|**SQLAllocHandle**|Sim|Sim|Não|  
+|**SQLAllocStmt**|Não|No[1]|Sim|  
 |**SQLBindCol**|Sim|Sim|Não|  
 |**SQLBindParam**|Não|Sim [2]|Sim|  
 |**SQLBindParameter**|Sim|Sim|Não|  
@@ -52,7 +52,7 @@ A tabela a seguir mostra o suporte de função em um ODBC 3. *x* driver e um apl
 |**SQLDriverConnect**|Sim|Sim|Não|  
 |**SQLDrivers**|Não|Sim|Sim|  
 |**SQLEndTran**|Sim|Sim|Não|  
-|**SQLError**|Não|Nenhum [1]|Sim|  
+|**SQLError**|Não|No[1]|Sim|  
 |**SQLExecDirect**|Sim|Sim|Não|  
 |**SQLExecute**|Sim|Sim|Não|  
 |**SQLExtendedFetch**|Sim|Não|Não|  
@@ -64,7 +64,7 @@ A tabela a seguir mostra o suporte de função em um ODBC 3. *x* driver e um apl
 |**SQLFreeHandle**|Sim|Sim|Não|  
 |**SQLFreeStmt**|Sim|Sim|Não|  
 |**SQLGetConnectAttr**|Sim|Sim|Não|  
-|**SQLGetConnectOption**|Nenhum [5]|Nenhum [1]|Sim|  
+|**SQLGetConnectOption**|Nenhum [5]|No[1]|Sim|  
 |**SQLGetCursorName**|Sim|Sim|Não|  
 |**SQLGetData**|Sim|Sim|Não|  
 |**SQLGetDescField**|Sim|Sim|Não|  
@@ -75,7 +75,7 @@ A tabela a seguir mostra o suporte de função em um ODBC 3. *x* driver e um apl
 |**SQLGetFunctions**|Nenhum [6]|Sim|Sim|  
 |**SQLGetInfo**|Sim|Sim|Não|  
 |**SQLGetStmtAttr**|Sim|Sim|Não|  
-|**SQLGetStmtOption**|Nenhum [5]|Nenhum [1]|Sim|  
+|**SQLGetStmtOption**|Nenhum [5]|No[1]|Sim|  
 |**SQLGetTypeInfo**|Sim|Sim|Não|  
 |**SQLMoreResults**|Sim|Sim|Não|  
 |**SQLNativeSql**|Sim|Sim|Não|  
@@ -90,7 +90,7 @@ A tabela a seguir mostra o suporte de função em um ODBC 3. *x* driver e um apl
 |**SQLPutData**|Sim|Sim|Não|  
 |**SQLRowCount**|Sim|Sim|Não|  
 |**SQLSetConnectAttr**|Sim|Sim|Não|  
-|**SQLSetConnectOption**|Nenhum [5]|Nenhum [1]|Sim|  
+|**SQLSetConnectOption**|Nenhum [5]|No[1]|Sim|  
 |**SQLSetCursorName**|Sim|Sim|Não|  
 |**SQLSetDescField**|Sim|Sim|Não|  
 |**SQLSetDescRec**|Sim|Sim|Não|  
@@ -99,12 +99,12 @@ A tabela a seguir mostra o suporte de função em um ODBC 3. *x* driver e um apl
 |**SQLSetParam**|Não|Não|Sim|  
 |**SQLSetScrollOption**|Sim|Sim|Não|  
 |**SQLSetStmtAttr**|Sim|Sim|Não|  
-|**SQLSetStmtOption**|Nenhum [5]|Nenhum [1]|Sim|  
+|**SQLSetStmtOption**|Nenhum [5]|No[1]|Sim|  
 |**SQLSpecialColumns**|Sim|Sim|Não|  
 |**SQLStatistics**|Sim|Sim|Não|  
 |**SQLTablePrivileges**|Sim|Sim|Não|  
 |**SQLTables**|Sim|Sim|Não|  
-|**SQLTransact**|Não|Nenhum [1]|Sim|  
+|**SQLTransact**|Não|No[1]|Sim|  
   
  [1] essa função foi preterida em ODBC 3. *x*. ODBC 3. *x* aplicativos não devem usar essa função. No entanto, um aplicativo compatível com ISO CLI ou o Open Group pode chamar essa função.  
   

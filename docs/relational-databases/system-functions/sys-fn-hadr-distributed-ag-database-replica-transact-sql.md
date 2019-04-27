@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ff99c2b63ad3f104b5bae4f6378af2e4fe0575bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62640320"
 ---
 # <a name="sysfnhadrdistributedagdatabasereplica-transact-sql"></a>sys.fn_hadr_distributed_ag_database_replica (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -51,13 +51,13 @@ sys.fn_hadr_distributed_ag_database_replica( lag_Id, database_id )
 ## <a name="tables-returned"></a>Tabelas retornadas  
  Retorna as informações a seguir.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**group_database_id**|**uniqueidentifier**|ID do banco de dados no grupo de disponibilidade local.|  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="using-sysfnhadrdistributedagdatabasereplica"></a>Usando sys.fn_hadr_distributed_ag_database_replica  
+### <a name="using-sysfnhadrdistributedagdatabasereplica"></a>Using sys.fn_hadr_distributed_ag_database_replica  
  O exemplo a seguir passa a ID de banco de dados em um grupo de disponibilidade distribuído. Ele retorna uma tabela com a ID de banco de dados associada ao grupo de disponibilidade local.  
   
 ```  

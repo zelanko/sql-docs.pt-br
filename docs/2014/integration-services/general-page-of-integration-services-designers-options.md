@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f27ec0c9fe8078bb11a48114a3d456793271853d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768282"
 ---
 # <a name="general-page"></a>Página Geral
   Use a página **Geral** da página **Designers do Integration Services** na caixa de diálogo **Opções** para especificar as opções de carregamento, exibição e atualização de pacotes.  

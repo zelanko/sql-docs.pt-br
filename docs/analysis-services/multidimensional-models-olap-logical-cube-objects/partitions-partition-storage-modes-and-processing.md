@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 57c73e3ae9661058277a377b7d17b6a4af393ba0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62640463"
 ---
 # <a name="partitions---partition-storage-modes-and-processing"></a>Partições – Modos e processamento de armazenamento de partições
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "52545649"
   
 -   O tamanho total da chave de índice no [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] não pode exceder 900 bytes. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] declarará essa condição com base nas colunas de chave de comprimento fixo quando a instrução CREATE INDEX for processada. No entanto, se houver colunas de comprimento variável na chave de índice, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] também declarará essa condição para todas as atualizações para as tabelas base. Como agregações diferentes possuem definições de exibição diferentes, o processamento ROLAP, usando exibições indexadas pode ser bem-sucedido ou falhar dependendo do projeto da agregação.  
   
--   A sessão que cria a exibição indexada deve ter a seguinte opções definidas como ON: ARITHABORT, CONCAT_NULL_YEILDS_NULL, QUOTED_IDENTIFIER, ANSI_NULLS, ANSI_PADDING e ANSI_WARNING. Essa configuração pode ser feita no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+-   A sessão que cria a exibição indexada deve ter as seguintes opções definidas como ON: ARITHABORT, CONCAT_NULL_YEILDS_NULL, QUOTED_IDENTIFIER, ANSI_NULLS, ANSI_PADDING e ANSI_WARNING. Essa configuração pode ser feita no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 -   A sessão que cria a exibição indexada deve ter a seguinte opção definida como OFF: NUMERIC_ROUNDABORT. Essa configuração pode ser feita no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

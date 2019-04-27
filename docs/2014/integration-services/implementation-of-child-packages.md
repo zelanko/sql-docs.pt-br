@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 04ad145d23cfcd158cf68ac941606e1c3bd0114a
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59242164"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768162"
 ---
 # <a name="implementation-of-child-packages"></a>Implementação de pacotes filho
   Quando você implementa balanceamento de carga usando o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], os pacotes filho são instalados em outros servidores para aproveitar a CPU disponível ou o tempo do servidor. Para criar e executar os pacotes filho são necessárias as seguintes etapas:  

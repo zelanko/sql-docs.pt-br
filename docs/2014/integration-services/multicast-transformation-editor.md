@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c6d104be53fa742494a3f7dca759df4105e32874
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767190"
 ---
 # <a name="multicast-transformation-editor"></a>Editor de Transformação Difusão Seletiva
   Use a caixa de diálogo **Editor de Transformação Difusão Seletiva** para exibir e definir as propriedades de cada saída de transformação.  

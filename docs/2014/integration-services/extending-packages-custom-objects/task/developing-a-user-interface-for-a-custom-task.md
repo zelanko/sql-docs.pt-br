@@ -22,11 +22,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6268fe16c31c931dc71ad1a62bd72e08b1ecb537
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768892"
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>Desenvolvendo uma interface do usuário para uma tarefa personalizada
   O modelo de objeto do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] permite que desenvolvedores de tarefas personalizadas criem facilmente uma interface de usuário personalizada para uma tarefa que pode ser integrada e exibida no [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. A interface de usuário pode fornecer informações úteis para o usuário no Designer [!INCLUDE[ssIS](../../../includes/ssis-md.md)], e orientar usuários na configuração correta das propriedades e definições da tarefa personalizada.  

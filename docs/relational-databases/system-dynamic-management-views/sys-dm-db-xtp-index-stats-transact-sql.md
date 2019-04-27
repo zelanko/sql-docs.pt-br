@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b80ba01b73dff6810ee9fcfdc08a904ff6ad4697
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62640423"
 ---
 # <a name="sysdmdbxtpindexstats-transact-sql"></a>sys.dm_db_xtp_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "51674265"
  Para obter mais informações, consulte [OLTP in-memory &#40;otimização na memória&#41; ](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md) e [Guidelines for Using Indexes em tabelas com otimização de memória](https://msdn.microsoft.com/library/16ef63a4-367a-46ac-917d-9eebc81ab29b).  
 
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |object_id|**bigint**|ID do objeto ao qual este índice pertence.|  
-|xtp_object_id|**bigint**|ID interna correspondente para a versão atual do objeto.<br /><br /> Observação: Se aplica a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|  
+|xtp_object_id|**bigint**|ID interna correspondente para a versão atual do objeto.<br /><br /> Observação: Aplica-se a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|  
 |index_id|**bigint**|ID do índice. O index_id só é exclusivo dentro do objeto.|  
 |scans_started|**bigint**|Número de verificações de índice OLTP na memória executadas. Cada seleção, inserção, atualização ou exclusão exige uma verificação de índice.|  
 |scans_retries|**bigint**|Número de verificações de índice que precisavam ser tentadas novamente,|  

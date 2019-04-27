@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 390fb10287ff88ec5f7a0220dea6dd677e8e36cd
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767588"
 ---
-# <a name="step-8-making-the-lesson-1-package-easier-to-understand"></a>Etapa 8: Tornando o pacote da Lição 1 mais fácil de compreender
+# <a name="step-8-making-the-lesson-1-package-easier-to-understand"></a>Etapa 8: Tornar o pacote da Lição 1 mais fácil de compreender
   Agora que você concluiu a configuração do pacote da Lição 1, é uma boa ideia verificar o layout do pacote. Se as formas dos layouts de controle e dos fluxos de dados são de tamanhos aleatórias ou se as formas não estão alinhadas ou agrupadas, a funcionalidade de pacote pode ser mais difícil de ser entendida.  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornecem recursos que facilitam e agilizam a formatação do layout do pacote. Os recursos de formatação incluem a capacidade de criar formas do mesmo tamanho, alinhar formas e manipular o espaçamento horizontal e vertical entre os espaçamentos.  

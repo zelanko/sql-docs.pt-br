@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3b7288952ce9b57b0825f20d1a93fcbcd20d3c37
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766319"
 ---
 # <a name="ssis-package-format"></a>Formato do pacote SSIS
   Na versão atual do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], alterações significativas foram feitas no formato do pacote (arquivo .dtsx) para facilitar a leitura do formato e a comparação dos pacotes. Você também pode mesclar com mais confiança pacotes que não contêm alterações conflitantes ou alterações armazenadas em formato binário.  

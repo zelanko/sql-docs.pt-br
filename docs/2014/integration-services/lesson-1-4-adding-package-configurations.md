@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c1d98187fbe76e726dadfe163d75a27c51fd60e9
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767638"
 ---
-# <a name="step-4-adding-package-configurations"></a>Etapa 4: Adicionando configurações de pacote
+# <a name="step-4-adding-package-configurations"></a>Etapa 4: Adicionar configurações de pacote
   Nessa tarefa, você adicionará uma configuração a cada pacote. As configurações atualizam os valores das propriedades e dos objetos do pacote em tempo de execução.  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece uma variedade de tipos de configuração. Você pode armazenar configurações em variáveis de ambiente, entradas de Registro, variáveis definidas pelo usuário, tabelas [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e arquivos XML. Para fornecer flexibilidade adicional, o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] oferece suporte ao uso de configurações indiretas. Isso significa que você usa uma variável de ambiente para especificar o local da configuração, que por sua vez especifica os valores reais. Os pacotes no projeto Tutorial de Implantação usam uma combinação de arquivos de configuração XML e configurações indiretas. Um arquivo de configuração XML pode incluir configurações para várias propriedades e, quando apropriado, pode ser mencionado por vários pacotes. Neste tutorial, você usará um arquivo de configuração separado para cada pacote.  

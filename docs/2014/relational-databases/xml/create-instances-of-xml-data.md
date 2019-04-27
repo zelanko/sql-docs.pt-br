@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ae842748d2d510c5c00f329f5e28cd49a0c86ef3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637604"
 ---
 # <a name="create-instances-of-xml-data"></a>Criar instâncias de dados XML
   Este tópico descreve como gerar instâncias XML.  
@@ -71,7 +71,7 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
   
 -   O atributo `xml:space` em efeito em um elemento ou em um de seus elementos ancestrais tem o valor de padrão.  
   
- Por exemplo:  
+ Por exemplo:   
   
 ```  
 declare @x xml  
@@ -93,7 +93,7 @@ SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)
   
  Se o parâmetro *style* não for usado ou seu valor estiver definido como 0, espaço em branco insignificante não será preservado para a conversão da instância DT xml. Para obter mais informações sobre como usar o operador CONVERT e seu parâmetro *style* ao converter dados de cadeia de caracteres em instâncias DT xml, consulte [CAST and CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql).  
   
-### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>Exemplo: Converter um valor de cadeia de caracteres em xml com tipo e atribuí-lo a uma coluna  
+### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>Exemplo: Converter um valor de cadeia de caracteres em xml tipado e atribuí-lo a uma coluna  
  O exemplo a seguir converte uma variável de cadeia de caracteres que contém um fragmento XML para o `xml` tipo de dados e, em seguida, armazena-o no `xml` coluna de tipo:  
   
 ```  
@@ -183,7 +183,7 @@ go
 >  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna instâncias de tipo de dados `xml`ao cliente como um resultado das diferentes construções do servidor como consultas FOR XML que usam a diretiva TYPE ou onde o tipo de dados `xml` é usado para retornar XML de colunas, variáveis e parâmetros de saída SQL. No código do aplicativo cliente, o provedor ADO.NET solicita que essas informações de tipo de dados `xml` sejam enviadas em uma codificação binária do servidor. Porém, se você estiver usando FOR XML sem a diretiva TYPE, os dados XML retornarão como um tipo de cadeia de caracteres. De qualquer forma, o provedor cliente sempre poderá controlar qualquer formulário de XML.  
   
 ## <a name="using-constant-assignments"></a>Usando atribuições de constantes  
- Uma constante de cadeia de caracteres pode ser usada onde uma instância das `xml` tipo de dados é esperado. Isso é o mesmo que uma CAST implícita de cadeia de caracteres em XML. Por exemplo:  
+ Uma constante de cadeia de caracteres pode ser usada onde uma instância das `xml` tipo de dados é esperado. Isso é o mesmo que uma CAST implícita de cadeia de caracteres em XML. Por exemplo:   
   
 ```  
 DECLARE @xmlDoc xml  

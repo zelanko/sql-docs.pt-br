@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5d6853a1384aca7c799ca22639ce3f9a90f22a86
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766608"
 ---
 # <a name="script-task-editor-general-page"></a>Editor da Tarefa Script (página Geral)
   Use a página **Geral** da caixa de diálogo **Editor da Tarefa Script** para nomear e descrever a tarefa Script.  
