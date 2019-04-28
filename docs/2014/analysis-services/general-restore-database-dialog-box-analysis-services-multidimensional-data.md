@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b63beac3d5034d041488b44202c4173b759a1884
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730403"
 ---
 # <a name="general-restore-database-dialog-box-analysis-services---multidimensional-data"></a>Geral (caixa de diálogo Restaurar Banco de Dados) (Analysis Services - Dados multidimensionais)
   Use a página **Geral** da caixa de diálogo **Restaurar Banco de Dados** no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para especificar o arquivo de backup e configurações gerais para usar ao restaurar um banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -66,7 +66,7 @@ ms.locfileid: "48099306"
   
  Se esta opção for selecionada, você poderá escolher a quantidade de informações de segurança na lista suspensa habilitada ao selecionar esta opção. As seguintes opções estão disponíveis:  
   
-|Opção|Description|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |**Copiar tudo**|Restaura as funções de banco de dados contidas no arquivo de backup, assim como as contas de usuário associadas às funções.|  
 |**Ignorar associação**|Restaura as funções de banco de dados contidas no arquivo de backup, mas não restaura as contas de usuário associadas às funções.|  
@@ -75,7 +75,7 @@ ms.locfileid: "48099306"
  Se o arquivo de backup estiver criptografado, digite a senha usada para criptografar o arquivo de backup.  
   
 ## <a name="see-also"></a>Consulte também  
- [Restaurar a caixa de diálogo banco de dados &#40;Analysis Services - dados multidimensionais&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [Caixa de diálogo Restaurar Banco de Dados &#40;Analysis Services – Dados Multidimensionais&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Partições &#40;restaurar a caixa de diálogo banco de dados&#41; &#40;Analysis Services - dados multidimensionais&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Backup e restauração de bancos de dados do Analysis Services](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   

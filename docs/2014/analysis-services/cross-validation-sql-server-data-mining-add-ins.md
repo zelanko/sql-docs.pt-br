@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 95d0a5e0f7d3d108543d6741dea84efde4280387
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679828"
 ---
 # <a name="cross-validation-sql-server-data-mining-add-ins"></a>Validação cruzada (Suplementos de Mineração de Dados do SQL Server)
   ![Botão de validação cruzada, faixa de opções mineração de dados](media/dmc-xvalid.gif "botão validação cruzada, faixa de opções mineração de dados")  
@@ -96,15 +96,15 @@ ms.locfileid: "48171746"
   
 -   Média do desvio da média para uma medida específica, através de todas as partições em um modelo.  
   
-#### <a name="classification-passfail"></a>Classificação: Aprovado/reprovado  
+#### <a name="classification-passfail"></a>Classificação: Aprovação/reprovação  
  Essa medida é usada em modelos de classificação quando você não especifica um valor de destino para o atributo previsível. Por exemplo, se você criar um modelo que preveja várias possibilidades, essa medida informará quão bem o modelo se saiu na previsão de todos os valores possíveis.  
   
  Aprovado/reprovado é calculado pela contagem de casos que atendem as condições a seguir: **passar** se o estado previsto com a mais alta probabilidade é o mesmo que o estado de entrada e a probabilidade é maior que o valor especificado para o **Limiar de estado**; caso contrário, **falhar**.  
   
-#### <a name="classification-true-or-false-positives-and-negatives"></a>Classificação: verdadeiro ou falsos positivos e negativos  
+#### <a name="classification-true-or-false-positives-and-negatives"></a>Classificação: VERDADEIRO ou falsos positivos e negativos  
  Este teste é usado para todos os modelos de classificação que têm um destino especificado. A medida indica como cada caso é classificado em resposta a essas questões: o que o modelo prevê e qual foi o resultado real.  
   
-|Measure|Description|  
+|Measure|Descrição|  
 |-------------|-----------------|  
 |Verdadeiro positivo|Contagem de casos que atendem estas condições:<br /><br /> Casos que contém o valor de destino.<br /><br /> O modelo previu que o caso contém o valor de destino.|  
 |Falso positivo|Contagem de casos que atendem estas condições:<br /><br /> O valor atual é igual ao valor de destino.<br /><br /> O modelo previu que o caso contém o valor de destino.|  

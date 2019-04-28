@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1027310bdf012f00e7b70981521088d69d08598
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729889"
 ---
 # <a name="input-selection-tab-mining-accuracy-chart-view"></a>Guia de seleção de entrada (exibição de gráfico de precisão de mineração)
   Use a guia **Seleção de Entrada** do designer **Gráfico de Precisão de Mineração** para especificar a fonte dos dados que são usados para testar o modelo e criar o gráfico de precisão.  
   
- **Para obter mais informações:**  [Teste e validação &#40;Mineração de dados&#41;](data-mining/testing-and-validation-data-mining.md)  
+ **Para obter mais informações, consulte:** [Teste e validação &#40;Mineração de dados&#41;](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>Opções  
  **Sincronizar Colunas**  **e Valores de Previsão**  
@@ -34,9 +34,9 @@ ms.locfileid: "48120866"
  **Selecione as colunas do modelo de mineração previsíveis para mostrar no gráfico de comparação**  
  Uma grade que contém colunas para controlar que modelos são incluídos no gráfico de comparação de precisão e como eles são usados neste gráfico.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|**Mostrar**|Selecione no modelo de mineração a caixa próxima ao nome de cada coluna previsível que você deseja exibir no gráfico.<br /><br /> Se o gráfico é muito complexo para ser visualizado facilmente, desmarque a caixa próxima de uma ou mais colunas para simplificar o gráfico.<br /><br /> Observação: você não pode criar um gráfico de exatidão sem que pelo menos uma coluna seja selecionada.|  
+|**Mostrar**|Selecione no modelo de mineração a caixa próxima ao nome de cada coluna previsível que você deseja exibir no gráfico.<br /><br /> Se o gráfico é muito complexo para ser visualizado facilmente, desmarque a caixa próxima de uma ou mais colunas para simplificar o gráfico.<br /><br /> Observação: Você não pode criar um gráfico de precisão, a menos que pelo menos uma coluna está selecionada.|  
 |**Modelo de mineração**|Lista os modelos de mineração que estão contidos na estrutura de mineração.|  
 |**Nome da coluna previsível**|Selecione uma coluna previsível que esteja contida nos modelos de mineração que são usados para criar o gráfico de comparação de precisão.|  
 |**Prever valor**|Selecione um valor para a coluna previsível. Se você deixar em branco, o gráfico de comparação de precisão prevê o melhor desempenho do modelo para todos os estados da coluna previsível.|  
@@ -44,7 +44,7 @@ ms.locfileid: "48120866"
  **Selecione o conjunto de dados a ser usado para gráfico de precisão**  
  Um grupo de opção que contém três opções para especificar dados de teste de exatidão.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Usar casos de teste do modelo de mineração**|Use o conjunto de teste que estava criado quando você dividiu a estrutura de mineração e aplique o filtro que esta definido no modelo. Para obter informações sobre filtros de modelo, consulte [Filters for Mining Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-models-analysis-services-data-mining.md)|  
 |**Usar casos de teste da estrutura de mineração**|Use o conjunto de teste que foi criado quando você dividiu a estrutura de mineração.|  
@@ -72,6 +72,6 @@ ms.locfileid: "48120866"
  [Teste e validação de tarefas e instruções &#40;mineração de dados&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
  [Designer do gráfico de precisão de mineração &#40;mineração de dados&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [Aplicar um filtro a um modelo de mineração](data-mining/apply-a-filter-to-a-mining-model.md)   
- [Filtros para modelos de mineração &#40;Analysis Services - mineração de dados&#41;](data-mining/mining-models-analysis-services-data-mining.md)  
+ [Filtros para modelos de mineração &#40;Analysis Services – Mineração de dados&#41;](data-mining/mining-models-analysis-services-data-mining.md)  
   
   

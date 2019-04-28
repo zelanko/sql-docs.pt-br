@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a6300606195ea435a0290d828109b821d0d6702c
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730227"
 ---
 # <a name="languages-and-collations-analysis-services"></a>Idiomas e ordenações (Analysis Services)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dá suporte a idiomas e ordenações fornecidos pelos sistemas operacionais Windows [!INCLUDE[msCoName](../includes/msconame-md.md)]. As propriedades `Language` e `Collation` são inicialmente definidas no nível da instância durante a instalação, mas podem ser alteradas posteriormente em diferentes níveis da hierarquia de objetos.  

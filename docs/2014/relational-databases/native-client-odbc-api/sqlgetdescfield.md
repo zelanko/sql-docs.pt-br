@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6a92b3a9491b8424fb9015fc4d30875fedb38758
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657771"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
   O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client expõe campos de descritor específicos de driver apenas para o IRD (descritor de linhas de implementação). No IRD, a referência aos campos de descritor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é feita com atributos de coluna específicos de driver. Para obter uma lista completa dos campos de descritor específicos de driver disponíveis, consulte [SQLColAttribute](sqlcolattribute.md).  

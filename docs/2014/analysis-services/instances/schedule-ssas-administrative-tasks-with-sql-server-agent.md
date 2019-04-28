@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cea836d49b46bd7931d7230d3d22824af9506961
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729782"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>Agendar tarefas administrativas do SSAS com o SQL Server Agent
   Usando o serviço SQL Server Agent, você pode agendar tarefas administrativas do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para executar na ordem e nos horários em que você precisa. As tarefas agendadas ajudam a automatizar os processos que são executados em ciclos regulares ou previsíveis. Você pode agendar a execução de tarefas administrativas, como o processamento de cubos, nas horas de menor atividade comercial. Pode também estabelecer a ordem em que essas tarefas devem ser executadas criando etapas em um trabalho do SQL Server Agent. Por exemplo, é possível processar um cubo e, em seguida, fazer o backup do cubo.  

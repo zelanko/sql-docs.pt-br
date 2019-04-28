@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 116a9c05069d59e3ae458e232f7451be04411794
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679890"
 ---
 # <a name="create-a-custom-member-formula-business-intelligence-wizard"></a>Criar uma Fórmula de Membro Personalizado (Assistente de Business Intelligence)
   Use o **criar uma fórmula de membro personalizado** página para associar atributos na dimensão especificada a fórmula colunas-colunas de membro personalizado que contêm instruções MDX (Multidimensional Expressions) que definem valores de membros Esse atributo.  

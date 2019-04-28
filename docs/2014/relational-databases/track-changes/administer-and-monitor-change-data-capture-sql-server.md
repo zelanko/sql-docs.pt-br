@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c3843fafac0616ffed52e82a307b1f3bfa801cc2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62672141"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Administrar e monitorar a captura de dados de alteração (SQL Server)
   Este tópico descreve como administrar e monitorar a captura de dados de alterações.  
@@ -75,7 +75,7 @@ ms.locfileid: "52788898"
  Quando uma limpeza é executada, a marca d'água baixa para todas as instâncias de captura é atualizada inicialmente em uma única transação. Ela tenta remover entradas obsoletas das tabelas de alterações e da tabela cdc.lsn_time_mapping. O valor limite configurável restringe a quantidade de entradas excluídas em qualquer instrução única. A não execução da exclusão de qualquer tabela individual não impedirá a tentativa de operação nas tabelas restantes.  
   
 ### <a name="cleanup-job-customization"></a>Personalização do trabalho de limpeza  
- Para o trabalho de limpeza, a possibilidade personalização está na estratégia usada para determinar quais entradas da tabela de alterações devem ser descartadas. A única estratégia com suporte no trabalho de limpeza entregue baseia-se na hora. Nessa situação, a nova marca d'água baixa é calculada pela subtração do período de retenção permitido da hora de confirmação da última transação processada. Como os procedimentos de limpeza subjacentes se baseiam em `lsn` em vez do tempo, qualquer número de estratégias pode ser usado para determinar o menor `lsn` manter nas tabelas de alteração. Somente alguns deles são estritamente baseados na hora. O conhecimento sobre os clientes, por exemplo, pode ser usado para fornecer um mecanismo seguro se não for possível executar os processos de downstream que requerem acesso às tabelas de alterações. Além disso, embora a estratégia padrão seja aplicável ao mesmo `lsn` para limpar as tabelas de alteração de todas as do banco de dados, o procedimento de limpeza subjacente também pode ser chamado para limpar no nível de instância de captura.  
+ Para o trabalho de limpeza, a possibilidade personalização está na estratégia usada para determinar quais entradas da tabela de alterações devem ser descartadas. A única estratégia com suporte no trabalho de limpeza entregue baseia-se na hora. Nessa situação, a nova marca d'água baixa é calculada pela subtração do período de retenção permitido da hora de confirmação da última transação processada. Como os procedimentos de limpeza subjacentes se baseiam no `lsn`, em vez da hora, qualquer número de estratégias pode ser usado para determinar o menor `lsn` a ser mantido nas tabelas de alterações. Somente alguns deles são estritamente baseados na hora. O conhecimento sobre os clientes, por exemplo, pode ser usado para fornecer um mecanismo seguro se não for possível executar os processos de downstream que requerem acesso às tabelas de alterações. Além disso, embora a estratégia padrão seja aplicável ao mesmo `lsn` para limpar todas as tabelas de alterações do banco de dados, o procedimento de limpeza subjacente também pode ser chamado para limpar no nível de captura da instância.  
   
 ##  <a name="Monitor"></a> Monitorar o processo de captura de dados de alterações  
  O monitoramento do processo de captura de dados de alteração permite determinar se as alterações estão sendo gravadas corretamente e com latência razoável nas tabelas de alteração. O monitoramento também pode ajudar a identificar os erros que podem ocorrer. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contém duas exibições de gerenciamento dinâmico para ajudar a monitorar a captura de dados de alterações: [sys.dm_cdc_log_scan_sessions](../native-client-ole-db-data-source-objects/sessions.md) e [sys.dm_cdc_errors](../native-client-ole-db-errors/errors.md).  

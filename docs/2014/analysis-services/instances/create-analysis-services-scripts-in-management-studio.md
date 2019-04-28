@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d419a09c34998165f13fbc9e43c9b561602b69aa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730207"
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>Criar scripts do Analysis Services no Management Studio
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] inclui recursos de geração de script, modelos e editores que você pode usar para gerar scripts de objetos e tarefas do Analysis Services.  
@@ -36,7 +36,7 @@ ms.locfileid: "48067177"
   
 2.  Clique com o botão direito do mouse em um banco de dados e clique em **Backup**. Essa ação abre a caixa de diálogo Banco de Dados de Backup. Especifique um nome de arquivo de backup e escolha as opções que você deseja para esse backup.  
   
-3.  Clique em **Script** na parte superior da caixa de diálogo. O recurso Script faz parte de todas as caixas de diálogo baseadas em tarefas no Management Studio. Ele tem as seguintes opções: **Ação do Script para a Nova Janela de Consulta** para abrir a janela do editor de consultas, **Ação de Script no Arquivo** para salvar o script XMLA em um arquivo ou **Ação de Script na Área de Transferência** para salvar o script XMLA na Área de Transferência.  
+3.  Clique em **Script** na parte superior da caixa de diálogo. O recurso Script faz parte de todas as caixas de diálogo baseadas em tarefas no Management Studio. Ele tem as seguintes opções: **Ação para a nova janela de consulta de script** para abrir a janela de editor de consultas **ação de Script no arquivo** para salvar o script XMLA em um arquivo, ou **ação de Script para área de transferência** para salvar o script XMLA para o Área de transferência.  
   
      Observe que a opção **Ação de Script no Trabalho** listada como opção de script no Management Studio não tem suporte nos scripts do Analysis Services.  
   
@@ -60,13 +60,13 @@ ms.locfileid: "48067177"
   
 2.  Localize o objeto para o qual você deseja criar um script que cria, altera ou exclui objetos.  
   
-3.  Clique com o botão direito do mouse no objeto, aponte para **Script de Cubo como**, aponte para **CRIAR para**, **ALTERAR para**ou **Excluir para**e, então, clique em uma destas opções: **Nova Janela do Editor de Consulta** para abrir a janela do editor de consultas, **Arquivo** para salvar o script do XMLA em um arquivo ou **Área de Transferência** para salvar o script do XMLA nessa área.  
+3.  O objeto com o botão direito, aponte para **Script de cubo como**, aponte para **CREATE To**, **alterar para**, ou **Delete To**e, em seguida, clique em um do seguintes opções: **Nova janela do Editor de consultas** para abrir a janela de editor de consultas **arquivo** para salvar o script XMLA em um arquivo, ou **na área de transferência** para salvar o script XMLA na área de transferência.  
   
     > [!NOTE]  
     >  Normalmente, você selecionaria **Arquivo** se quisesse criar várias versões diferentes do arquivo.  
   
 ## <a name="see-also"></a>Consulte também  
  [Script de tarefas administrativas no Analysis Services](../script-administrative-tasks-in-analysis-services.md)   
- [Editor de consultas XMLA &#40;Analysis Services - dados multidimensionais&#41;](../xmla-query-editor-analysis-services-multidimensional-data.md)  
+ [Editor de Consultas XMLA &#40;Analysis Services – Dados Multidimensionais&#41;](../xmla-query-editor-analysis-services-multidimensional-data.md)  
   
   

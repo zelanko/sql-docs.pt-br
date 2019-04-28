@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0b0287d9b8533cc551f31c4c054db9bf87c5415a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59958482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657397"
 ---
 # <a name="troubleshoot-report-builder"></a>Solução de problemas do Construtor de Relatórios
   O Construtor de Relatórios é uma ferramenta de criação de relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que pode ser usada para criar relatórios a partir de muitos tipos diferentes de fontes de dados e para publicar os relatórios em um servidor de relatório ou site do SharePoint. Os relatórios criados por você podem ser exibidos no construtor de relatórios em um navegador da Web ou como parte de um [!INCLUDE[msCoName](../includes/msconame-md.md)] aplicativo do Windows ou site do SharePoint.  

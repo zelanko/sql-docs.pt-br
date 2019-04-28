@@ -15,18 +15,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 61ad84ce632de0431a584d6ca53b2673d37207c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676421"
 ---
 # <a name="overview-of-upgrade-advisor"></a>Visão geral do Assistente de Atualização
   Esta seção fornece uma visão geral do processo de atualização e informações para ajudá-lo a compreender e usar o Assistente para Análise do Supervisor de Atualização e o Visualizador de Relatórios do Supervisor de Atualização.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Visão geral do processo de atualização](../../../2014/sql-server/install/upgrade-process-overview.md)|Descreve o processo recomendado para a atualização para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |[Visão geral do Supervisor de Atualização](../../../2014/sql-server/install/upgrade-advisor-overview.md)|Fornece uma visão geral da nova ferramenta Supervisor de Atualização do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  

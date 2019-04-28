@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 60c5dc93ea10042ff87b48bdb8ca4c8d6de1108b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730218"
 ---
 # <a name="itemsets-tab-mining-model-viewer"></a>Guia Conjuntos de Itens (Visualizador do Modelo de Mineração)
   Use o painel **Conjunto de Itens** para exibir os conjuntos de itens frequentes presentes em um modelo de mineração de regras por associação. Como um modelo de associação pode conter muitos conjuntos de itens, os controles são fornecidos no visualizador para ajudá-lo a filtrar os conjuntos de itens exibidos no visualizador.  
   
- **Para obter mais informações:** [Algoritmo de associação da Microsoft](data-mining/microsoft-association-algorithm.md), [Procurar um modelo usando o Visualizador de regras da Microsoft](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+ **Para obter mais informações:** [Algoritmo associação da Microsoft](data-mining/microsoft-association-algorithm.md), [procurar um modelo usando o Visualizador de regras de associação da Microsoft](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
 ## <a name="options"></a>Opções  
  **Atualizar conteúdo do Visualizador**  
@@ -75,11 +75,11 @@ ms.locfileid: "48060332"
  **Tamanho**  
  Exibe o número de itens que há em cada conjunto de itens.  
   
- **Conjunto de itens**  
+ **Itemset**  
  Exibe a descrição da dimensão de cada conjunto de itens. Por padrão, os conjuntos de itens são apresentados como uma lista delimitada por vírgulas de atributos e os respectivos valores. Você pode alterar o modo como eles são exibidos usando a opção **Mostrar** .  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visualizadores do modelo de mineração &#40; Designer do modelo de mineração de dados &#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizadores do modelo de Mineração de dados](data-mining/data-mining-model-viewers.md)  
   

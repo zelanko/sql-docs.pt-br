@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3cfaca7dcd5e72eb5ca540debac6c6723246354d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59963757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657443"
 ---
 # <a name="query-designers-report-builder"></a>Designers de Consulta (Construtor de Relatórios)
   O Construtor de Relatórios fornece designers de consulta baseados em texto e gráficos para ajudá-lo a criar consultas para seu relatório. Cada tipo de fonte de dados tem um designer de consulta associado. Alguns designers gráficos de suporte a fontes de dados ajudam a criar uma consulta de maneira interativa. Outras fontes de dados usam um designer de consulta baseado em texto. Uma fonte de dados do SQL Server oferece suporte a designers de consulta baseado em texto e gráficos.  

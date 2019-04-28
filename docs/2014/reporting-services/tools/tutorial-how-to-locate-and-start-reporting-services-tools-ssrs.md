@@ -23,11 +23,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 03fb1d70046fe784fecafd8d9b3092ce21962498
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59958452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657954"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Tutorial: Como localizar e iniciar as Ferramentas do SSRS (Reporting Services)
   Este tutorial apresenta as ferramentas usadas para configurar um servidor de relatório, gerenciar o conteúdo e as operações do servidor de relatório e criar e publicar relatórios. O propósito deste tutorial é ajudar os novos usuários a entender como localizar e abrir cada ferramenta. Se você já está familiarizado com as ferramentas, pode passar para outros tutoriais que possam ajudá-lo a aprender importantes habilidades para usar o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Para obter mais informações sobre outros tutoriais, consulte [tutoriais do Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  

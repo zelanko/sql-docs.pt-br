@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: abb84377c48778d0c7244c13620fe192b5421ad6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666754"
 ---
 # <a name="schedule-a-job"></a>Schedule a Job
   Este tópico descreve como agendar um trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
@@ -81,7 +81,7 @@ ms.locfileid: "53369328"
   
 7.  Na caixa de diálogo **Propriedades do Trabalho** , clique em **OK**.  
   
-##  <a name="TSQL"></a> Usando Transact-SQL  
+##  <a name="TSQL"></a> Usando o Transact-SQL  
   
 #### <a name="to-schedule-a-job"></a>Para agendar um trabalho  
   

@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a6a6e123e525512a72d70bcc8ca2eba549d1347e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676263"
 ---
-# <a name="lesson-1-creating-the-market-basket-mining-structure"></a>Lição 1: Criando a estrutura de mineração da cesta de compras
+# <a name="lesson-1-creating-the-market-basket-mining-structure"></a>Lição 1: Como criar a estrutura de mineração do Market Basket
   Nesta lição, você criará uma estrutura de mineração que permite prever quais produtos [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] um cliente tende a adquirir ao mesmo tempo. Se você estiver familiarizado com estruturas de mineração e seus papéis na mineração de dados, consulte [estruturas de mineração &#40;Analysis Services - mineração de dados&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
   
  A estrutura de mineração de associação que você criará nesta lição oferece suporte à adição de modelos de mineração com base nas [algoritmo associação da Microsoft](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md). Em lições posteriores, você usará os modelos de mineração para prever o tipo de produtos que um cliente tente a comprar ao mesmo tempo, que é chamado de análise de cesta básica. Por exemplo, você pode achar que os clientes tendem a comprar mountain bikes, pneus de bicicleta e capacetes ao mesmo tempo.  

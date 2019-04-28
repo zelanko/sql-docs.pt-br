@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 94a830bba0339262148a0a7f826f3bcb89371274
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680237"
 ---
 # <a name="connect-to-an-azure-sql-database-ssas"></a>Conectar a um Banco de Dados SQL do Azure (SSAS)
   Esta página do **Assistente de Importação de Tabela** permite que você se conecte a um [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]. Para acessar o assistente do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], no menu **Modelo** , clique em **Importar de Fonte de Dados**.  

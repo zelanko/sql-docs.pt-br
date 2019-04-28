@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 728643793aa43eb76e5a94a5d35e5e06acec5c6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680639"
 ---
 # <a name="completing-the-wizard-data-source-view-wizard-analysis-services"></a>Concluindo o Assistente (Assistente de Exibição da Fonte de Dados) (Analysis Services)
   Use a página **Concluindo o Assistente** para fornecer um nome para a exibição da fonte de dados e examinar as tabelas e exibições incluídas na exibição. Após clicar em **Concluir**, é possível usar o Designer de Exibição da Fonte de Dados para alterar as propriedades da exibição no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Para obter mais informações sobre o Designer de Exibição da Fonte de Dados, consulte [Designer de Exibição da Fonte de Dados &#40;Analysis Services – Dados Multidimensionais&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  

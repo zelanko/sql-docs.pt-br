@@ -11,18 +11,18 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 728d69dcf44e0cab436c73396d833f754891a3f5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792609"
 ---
 # <a name="install-data-quality-services"></a>Instalar o Data Quality Services
   [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS) contém os dois componentes a seguir: **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** e **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]**.  
   
 |Componente DQS|Descrição|  
 |-------------------|-----------------|  
-|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] é instalado sobre o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mecanismo de banco de dados e inclui três bancos de dados: DQS_MAIN, DQS_PROJECTS e DQS_STAGING_DATA. O DQS_MAIN contém procedimentos armazenados do DQS, o mecanismo DQS e bases de dados de conhecimento publicadas. O DQS_PROJECTS contém as informações sobre o projeto de qualidade de dados. DQS_STAGING_DATA é a área de preparo onde você pode copiar seus dados de origem para executar operações de DQS e, depois, exportar os dados processados.|  
+|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] é instalado sobre o Mecanismo de Banco de Dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e inclui três bancos de dados: DQS_MAIN, DQS_PROJECTS e DQS_STAGING_DATA. O DQS_MAIN contém procedimentos armazenados do DQS, o mecanismo DQS e bases de dados de conhecimento publicadas. O DQS_PROJECTS contém as informações sobre o projeto de qualidade de dados. DQS_STAGING_DATA é a área de preparo onde você pode copiar seus dados de origem para executar operações de DQS e, depois, exportar os dados processados.|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] é um aplicativo autônomo que o habilita a se conectar ao [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]. Ele fornece uma interface gráfica do usuário altamente intuitiva para executar operações de qualidade de dados e outras tarefas administrativas relacionadas ao DQS.|  
   
 > [!IMPORTANT]
@@ -33,11 +33,11 @@ ms.locfileid: "56019628"
   
  A instalação do DQS é um processo de três partes:  
   
--   [Tarefas de pré-instalação](#PreInstallationTasks): Verifique os requisitos de sistema antes de instalar o DQS.  
+-   [Tarefas pré-instalação](#PreInstallationTasks): verifique os requisitos do sistema antes da instalação do DQS.  
   
--   [Tarefas de instalação do data Quality Services](#DQSInstallation): Instale o DQS usando a instalação do SQL Server.  
+-   [Tarefas de instalação do Data Quality Services](#DQSInstallation): instale o DQS usando a instalação do SQL Server.  
   
--   [Tarefas pós-instalação](#PostInstallationTasks): Execute essas tarefas depois de concluir a instalação do SQL Server para concluir a instalação do DQS.  
+-   [Tarefas pós-instalação](#PostInstallationTasks): execute essas tarefas depois de concluir a instalação do SQL Server para concluir a instalação do DQS.  
   
 > [!NOTE]  
 >  Este tópico não inclui instruções para a execução da Instalação pela linha de comando. Para obter informações sobre opções de linha de comando para instalar [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] e o cliente, consulte [parâmetros de recursos](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Feature) na [instalar o SQL Server 2014 do Prompt de comando](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  

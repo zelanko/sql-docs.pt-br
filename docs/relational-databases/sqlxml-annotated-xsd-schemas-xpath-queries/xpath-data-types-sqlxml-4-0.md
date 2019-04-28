@@ -30,11 +30,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0c5cb588e96bcabad464339b7227ada3aef86221
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678057"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>Tipos de dados XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -91,11 +91,11 @@ ms.locfileid: "56039917"
 |Tipo de dados XDR|Equivalente<br /><br /> tipos de dados XPath|Conversão do SQL Server usada|  
 |-------------------|------------------------------------|--------------------------------|  
 |Nonebin.base64bin.hex|N/D|NoneEmployeeID|  
-|booleano|booleano|CONVERT(bit, EmployeeID)|  
+|boolean|boolean|CONVERT(bit, EmployeeID)|  
 |number, int, float,i1, i2, i4, i8,r4, r8ui1, ui2, ui4, ui8|number|CONVERT(float(53), EmployeeID)|  
 |id, idref, idrefsentity, entities, enumerationnotation, nmtoken, nmtokens, chardate, Timedate, Time.tz, string, uri, uuid|cadeia de caracteres|CONVERT(nvarchar(4000), EmployeeID, 126)|  
 |fixed14.4|N/D (não há nenhum tipo de dados no XPath equivalente ao tipo de dados XDR fixed14.4)|CONVERT(money, EmployeeID)|  
-|Data|cadeia de caracteres|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
+|date|cadeia de caracteres|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
 |time<br /><br /> time.tz|cadeia de caracteres|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
   
  As conversões de data e hora são projetadas para funcionar independentemente do valor é armazenado no banco de dados usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** tipo de dados ou uma **cadeia de caracteres**. Observe que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** tipo de dados não usa **fuso horário** e tem uma precisão menor que o XML **tempo** tipo de dados. Para incluir a **fuso horário** tipo de dados ou precisão adicional, armazene os dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando um **cadeia de caracteres** tipo.  
@@ -131,7 +131,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
 ||X é a incógnita|X é **cadeia de caracteres**|X é **número**|X é **booliano**|  
 |string(X)|CONVERT (nvarchar(4000), X, 126)|-|CONVERT (nvarchar(4000), X, 126)|CASE WHEN X THEN N'true' ELSE N'false' END|  
 |number(X)|CONVERT (float(53), X)|CONVERT (float(53), X)|-|CASE WHEN X THEN 1 ELSE 0 END|  
-|boolean(X)|-|LEN(X) > 0|X != 0|-|  
+|boolean(X)|-|LEN (X) &GT; 0|X != 0|-|  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -150,7 +150,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
   
  O prefixo "E -" é adicionado à cadeia de caracteres, e o resultado é comparado com `N'E-1'`.  
   
-### <a name="b-perform-several-data-type-conversions-in-an-xpath-query"></a>b. Executar várias conversões de tipo de dados em uma consulta do XPath  
+### <a name="b-perform-several-data-type-conversions-in-an-xpath-query"></a>B. Executar várias conversões de tipo de dados em uma consulta do XPath  
  Considere esta consulta do XPath especificada com base em um esquema XSD anotado: `OrderDetail[@UnitPrice * @OrderQty > 98]`  
   
  Essa consulta XPath retorna todos os  **\<OrderDetail >** elementos que satisfazem o predicado `@UnitPrice * @OrderQty > 98`. Se o **UnitPrice** é anotado com um **fixed14.4** de tipo de dados no esquema anotado, esse predicado é equivalente à expressão SQL:  

@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f2833f1f342aa212b73611d257b8e29606a14cce
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662977"
 ---
 # <a name="deprecation-final-support-event-class"></a>Classe de evento Deprecation Final Support
   A classe de evento **Deprecation Final Support** ocorre quando é usado um recurso que será removido da próxima versão principal do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para que seus aplicativos tenham tempo de vida mais longo, não use recursos que provoquem a classe de evento **Deprecation Final Support** ou **Deprecation Announcement** . Modifique os aplicativos que usam recursos de substituição final o mais rápido possível.  
@@ -42,7 +42,7 @@ ms.locfileid: "52785928"
 |LoginSid|`image`|Número SID (identificação de segurança) do usuário que fez logon. Você pode encontrar essas informações na exibição de catálogo **sys.server_principals** . Cada SID é exclusivo para cada logon no servidor.|41|Sim|  
 |NTDomainName|`nvarchar`|O domínio do Windows ao qual o usuário pertence.|7|Sim|  
 |NTUserName|`nvarchar`|Nome do usuário do Windows.|6|Sim|  
-|Deslocamento|`int`|O deslocamento inicial da instrução no lote ou procedimento armazenado.|61|Sim|  
+|Offset|`int`|O deslocamento inicial da instrução no lote ou procedimento armazenado.|61|Sim|  
 |ObjectID|`int`|Número de identificação do recurso substituído.|22|Sim|  
 |ObjectName|`nvarchar`|Nome do recurso preterido.|34|Sim|  
 |RequestID|`int`|ID da solicitação que contém a instrução.|49|Sim|  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 414f817adbbafd0e85cf5503336965ed86567caf
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59959282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657350"
 ---
 # <a name="glossary-report-builder"></a>Glossário (Construtor de Relatórios)
   
@@ -185,7 +185,7 @@ ms.locfileid: "59959282"
 |atribuição de função em nível de item|Uma política de segurança que se aplica a um item na pasta do servidor de relatório.|  
 |definição de função em nível de item|um modelo de segurança que define uma função usada para controlar o acesso ou a interação com um item no namespace da pasta do servidor de relatório.|  
 |indicador chave de desempenho|(KPI) Uma métrica quantificável e padronizada que reflete uma variável comercial crítica (por exemplo, fatia de mercado), medida com o decorrer do tempo.|  
-|palavra-chave|Uma palavra reservada no SQL Server que executa uma função específica, como definir, manipular ou acessar objetos de banco de dados. Por exemplo:  SELECT, FROM e AND.|  
+|palavra-chave|Uma palavra reservada no SQL Server que executa uma função específica, como definir, manipular ou acessar objetos de banco de dados. Por exemplo: SELECT, FROM e AND.|  
 |KPI|Consulte outro termo: indicador chave de desempenho|  
 |campo de rótulo|Um campo de conjunto de dados de relatório que identifica um rótulo para um campo de chave correspondente. Os parâmetros e as regiões de dados podem exibir o rótulo de um campo de chave, em vez do valor.|  
 |latência|Um período de tempo decorrido quando uma alteração de dados é concluída em um servidor e quando essa alteração aparece em outro servidor.|  

@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d6384910858d87a80aa3c8f897bc88e45f4504fb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678496"
 ---
-# <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>Lição 1: Criando a estrutura de mineração de comprador de bicicleta
+# <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>Lição 1: Como criar a estrutura de mineração de Comprador de Bicicleta
   Nesta lição, você criará uma estrutura de mineração que permite prever se um cliente potencial da [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] irá adquirir uma bicicleta. Se você estiver familiarizado com estruturas de mineração e seus papéis na mineração de dados, consulte [estruturas de mineração &#40;Analysis Services - mineração de dados&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
   
  A estrutura de mineração de comprador de bicicleta que você criará nesta lição oferece suporte à adição de modelos de mineração com base nas [algoritmo Microsoft Clustering](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)[algoritmo de árvores de decisão Microsoft](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md). Em lições posteriores, você usará os modelos de mineração de clustering para explorar as várias maneiras nas quais os clientes podem ser agrupados e usará os modelos de mineração da árvore de decisão para prever se um cliente potencial comprará ou não uma bicicleta.  

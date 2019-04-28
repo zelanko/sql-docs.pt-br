@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b97d62e7dede1cbbe4229f824407946f2fe43ba
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789815"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>Monitorar grupos de disponibilidade (Transact-SQL)
   Para monitorar os grupos de disponibilidade e as réplicas e os bancos de dados associados usando o [!INCLUDE[tsql](../../../includes/tsql-md.md)], o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] fornece um conjunto de exibições do catálogo e de gerenciamento dinâmico e propriedades de servidor. Usando as instruções SELECT [!INCLUDE[tsql](../../../includes/tsql-md.md)] , é possível usar as exibições para monitorar grupos de disponibilidade e suas réplicas e bancos de dados. As informações retornadas a um determinado grupo de disponibilidade dependem de se você está conectado à instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que está hospedando a réplica primária ou uma réplica secundária.  
@@ -41,7 +41,7 @@ ms.locfileid: "49460962"
  função[SERVERPROPERTY](/sql/t-sql/functions/serverproperty-transact-sql)  
  Retorna informações de propriedade de servidor sobre se o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] está habilitado e, nesse caso, se ele está iniciado na instância de servidor.  
   
- **Nomes de colunas:** IsHadrEnabled, HadrManagerStatus  
+ **Nomes de coluna:** IsHadrEnabled, HadrManagerStatus  
   
 ##  <a name="WSFC"></a> Monitorando grupos de disponibilidade no cluster do WSFC  
  Para monitorar o WSFC (Windows Server Failover Clustering) que hospeda uma instância do servidor local habilitada para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], use as exibições a seguir:  
@@ -169,7 +169,7 @@ ms.locfileid: "49460962"
 >  O local da réplica primária é a origem autoritativa de um grupo de disponibilidade.  
   
 > [!NOTE]  
->  Para obter informações sobre contadores de desempenho do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] para réplicas de disponibilidade (o objeto de desempenho **SQLServer:Réplica de Banco de Dados** ), veja [SQL Server, Réplica de Banco de Dados](../../../relational-databases/performance-monitor/sql-server-database-replica.md). Além disso, para monitorar a atividade do log de transações em bancos de dados de disponibilidade, use os seguintes contadores do objeto de desempenho **SQLServer:Bancos de Dados** : **Tempo de Gravação de Liberação de Log (ms)**, **Liberações de Log/s**, **Erros de Cache do Pool de Logs/s**, **Leituras de Disco do Pool de Logs/s**e **Solicitações do Pool de Logs/s**. Para obter mais informações, consulte [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md).  
+>  Para obter informações sobre contadores de desempenho do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] para réplicas de disponibilidade (o objeto de desempenho **SQLServer:Réplica de Banco de Dados** ), veja [SQL Server, Réplica de Banco de Dados](../../../relational-databases/performance-monitor/sql-server-database-replica.md). Além disso, para monitorar a atividade de log de transações em bancos de dados de disponibilidade, use os seguintes contadores do objeto de desempenho **SQLServer:Databases**: **Tempo de Gravação de Liberação de Log (ms)**, **Liberações de Log/s**, **Perdas no Cache do Pool de Logs/s**, **Leituras de Disco do Pool de Logs/s** e **Solicitações do Pool de Logs/s**. Para obter mais informações, consulte [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md).  
   
 ##  <a name="AGlisteners"></a> Monitorando ouvintes de grupo de disponibilidade  
  Para monitorar os ouvintes de grupo de disponibilidade em sub-redes do cluster do WSFC, use as seguintes exibições:  

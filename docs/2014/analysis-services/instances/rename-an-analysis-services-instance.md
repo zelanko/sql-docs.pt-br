@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 88a87802574290dee1cf0faaea2474e9fce408ce
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729805"
 ---
 # <a name="rename-an-analysis-services-instance"></a>Renomear uma instância do Analysis Services
   Você pode renomear uma instância existente do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando o **renomear instância** caixa de diálogo.  
@@ -68,7 +68,7 @@ ms.locfileid: "52401441"
   
      Agora suponha que você renomeie a instância como "TAB2". Como resultado da alteração de nome, sua configuração teria a seguinte aparência agora:  
   
-    1.  Nome da instância = \<server > \TAB2  
+    1.  Instance name = \<server>\TAB2  
   
     2.  Nome de serviço = MSOLAP$TAB2  
   

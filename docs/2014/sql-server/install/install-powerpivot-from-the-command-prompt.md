@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: e84b6e148774fc9b48b6174fa8be87579290fec4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657320"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>Instalar o PowerPivot pelo prompt de comando
   É possível executar a Instalação na linha de comando para instalar o SQL Server PowerPivot para SharePoint. Você deve incluir o parâmetro `/ROLE` no comando e excluir o parâmetro `/FEATURES`.  

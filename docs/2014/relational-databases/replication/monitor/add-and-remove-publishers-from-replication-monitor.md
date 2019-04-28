@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 484aafea03bb1b053239e9948ac498403b5ac25d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667414"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>Adicionar e remover Publicadores do Replication Monitor
   O servidor no qual você inicia o Replication Monitor será adicionado automaticamente ao monitor se for um Publicador. Publicadores adicionais podem ser adicionados na caixa de diálogo **Adicionar Publicador** . Depois de adicionar um Publicador, será exibido em um grupo no painel esquerdo do monitor. O grupo **Meus Publicadores** é incluído por padrão, mas você pode criar novos grupos para gerenciar uma ou mais topologias de replicação. Para obter informações sobre como iniciar o Replication Monitor, consulte [Start the Replication Monitor](start-the-replication-monitor.md) (Iniciar o Replication Monitor).  

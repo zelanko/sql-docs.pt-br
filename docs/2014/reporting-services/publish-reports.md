@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c37897df36297323d164e382b6af081f2985eaf1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59942672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657553"
 ---
 # <a name="publish-reports"></a>Publicar Relatórios
   No[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], é possível publicar todos os relatórios e fontes de dados compartilhadas em um projeto do Servidor de Relatório implantando um projeto ou publicar um único relatório. Antes de publicar um relatório, você deve especificar a URL do servidor de relatório de destino. Para obter mais informações, consulte [Definir propriedades de implantação &#40;Reporting Services&#41;](tools/set-deployment-properties-reporting-services.md).  

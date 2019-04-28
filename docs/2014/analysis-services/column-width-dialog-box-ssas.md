@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 097b29ca68b03d6711265c9194c318397fd03381
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680599"
 ---
 # <a name="column-width-dialog-box-ssas"></a>Caixa de diálogo Largura da Coluna (SSAS)
   A caixa de diálogo **Largura da Coluna** permite que você especifique a largura de uma coluna no designer de modelo. Para acessar essa caixa de diálogo, clique com o botão direito do mouse em uma coluna e clique em **Largura da Coluna**. Para que a coluna se ajuste automaticamente ao tamanho do conteúdo da coluna, clique duas vezes na linha de grade na borda direita da coluna.  

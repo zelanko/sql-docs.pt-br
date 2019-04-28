@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 603a2b5be4ca75495f094aa838d0373a9689a523
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657770"
 ---
 # <a name="sqlgetcursorname"></a>SQLGetCursorName
   Se o aplicativo não especificar um nome de cursor, o driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client irá gerar um nome durante a criação do cursor. O aplicativo pode usar **SQLGetCursorName** para recuperar o nome de cursor definido pelo driver para as instruções UPDATE e DELETE posicionadas. O aplicativo não precisa chamar **SQLSetCursorName** para aproveitar as instruções de manipulação de dados posicionadas.  

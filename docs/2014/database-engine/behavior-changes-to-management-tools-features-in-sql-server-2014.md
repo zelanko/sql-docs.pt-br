@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6319d9b1c5e091297e371c03949daf73e9551bd7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62787942"
 ---
 # <a name="behavior-changes-to-management-tools-features-in-sql-server-2014"></a>Alterações de comportamento feitas em recursos das Ferramentas de Gerenciamento do SQL Server 2014
   Este tópico descreve alterações de comportamento feitas em recursos das Ferramentas de Gerenciamento do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Essas alterações afetam a maneira como os recursos funcionam ou interagem no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] em comparação com as versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

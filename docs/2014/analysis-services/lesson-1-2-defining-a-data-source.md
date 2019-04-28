@@ -12,14 +12,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7b070366c278576dc976c32305ab542aa92d7708
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729670"
 ---
 # <a name="defining-a-data-source"></a>Definindo uma fonte de dados
-  Depois de criar um projeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], normalmente, você começa a trabalhar com esse projeto definindo uma ou mais fontes de dados que serão usadas pelo projeto. Ao definir uma fonte de dados, você está definindo as informações da cadeia de conexão que será usada para conectar-se à fonte de dados. Para obter mais informações, veja [Criar uma fonte de dados &#40;SSAS – Multidimensional&#41;](multidimensional-models/create-a-data-source-ssas-multidimensional.md).  
+  Depois de criar um projeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], normalmente, você começa a trabalhar com esse projeto definindo uma ou mais fontes de dados que serão usadas pelo projeto. Ao definir uma fonte de dados, você está definindo as informações da cadeia de conexão que será usada para conectar-se à fonte de dados. Para obter mais informações, veja [Criar uma fonte de dados &#40;SSAS multidimensional&#41;](multidimensional-models/create-a-data-source-ssas-multidimensional.md).  
   
  Na tarefa a seguir, você definirá o banco de dados de exemplo do AdventureWorksDWSQLServer2012 como a fonte de dados do projeto do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Apesar de esse banco de dados estar hospedado no seu computador local por causa deste tutorial, os bancos de dados de origem são frequentemente hospedados em um ou mais computadores remotos.  
   
@@ -56,6 +56,6 @@ ms.locfileid: "48195886"
  [Definindo uma exibição da fonte de dados](lesson-1-3-defining-a-data-source-view.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Criar uma fonte de dados &#40;Multidimensional do SSAS&#41;](multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
+ [Criar uma fonte de dados &#40;SSAS multidimensional&#41;](multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

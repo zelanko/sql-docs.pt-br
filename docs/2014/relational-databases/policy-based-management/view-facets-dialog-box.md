@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f2b84ce093c25faa284033065c329bb14f254a8f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676860"
 ---
 # <a name="view-facets-dialog-box"></a>Caixa de diálogo Exibir Facetas
   Use esta caixa de diálogo para exibir as propriedades de uma faceta de Gerenciamento Baseado em Políticas. As propriedades de uma faceta são definidas quando ela é criada e não podem ser alteradas com o uso desta caixa de diálogo.  

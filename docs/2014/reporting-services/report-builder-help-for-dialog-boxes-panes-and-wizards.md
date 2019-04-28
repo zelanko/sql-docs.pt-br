@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 77b6eb7d3e82e2741c87612265ca69a75e369204
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657360"
 ---
 # <a name="report-builder-help-for-dialog-boxes-panes-and-wizards"></a>Ajuda do Construtor de Relatórios para caixas de diálogo, painéis e assistentes
   Esta seção contém Ajuda para muitos dos assistentes, exibições, painéis e caixas de diálogo do Construtor de Relatórios. De modo alternativo, você pode abrir a Ajuda pressionando F1 ou clicando no botão Ajuda exibido na caixa de diálogo.  

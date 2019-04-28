@@ -12,14 +12,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f24a5ca8ea44f3e05bc11d0148ab30d6f83e993
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730781"
 ---
 # <a name="grant-permissions-on-stored-procedures-analysis-services"></a>Conceder permissões nos procedimentos armazenados (Analysis Services)
-  Procedimentos armazenados ou assemblies, na [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] são rotinas externas, escritas em uma [!INCLUDE[msCoName](../includes/msconame-md.md)] linguagem de programação .NET, que estendem os recursos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Os assemblies permitem que o desenvolvedor aproveite a integração em qualquer idioma, a manipulação de exceções, o suporte ao controle de versões, o suporte à implantação e o suporte à depuração.  
+  Os procedimentos armazenados, ou assemblies, no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] são rotinas externas, escritas em uma linguagem de programação [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET, que estende os recursos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Os assemblies permitem que o desenvolvedor aproveite a integração em qualquer idioma, a manipulação de exceções, o suporte ao controle de versões, o suporte à implantação e o suporte à depuração.  
   
  Você deve ser um Administrador do Servidor para registrar um assembly. Ver [conceder permissões de administrador do servidor &#40;Analysis Services&#41;](instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
@@ -37,6 +37,6 @@ ms.locfileid: "48148546"
 -   **Unrestricted** conjunto de permissões com o irrestrito, um procedimento armazenado pode acessar recursos externos por meio de qualquer código. Com esse conjunto de permissões, não há garantias de segurança ou confiabilidade para procedimentos armazenados.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gerenciamento de Assemblies de modelo multidimensional](multidimensional-models/multidimensional-model-assemblies-management.md)  
+ [Gerenciamento de assemblies de modelo multidimensional](multidimensional-models/multidimensional-model-assemblies-management.md)  
   
   

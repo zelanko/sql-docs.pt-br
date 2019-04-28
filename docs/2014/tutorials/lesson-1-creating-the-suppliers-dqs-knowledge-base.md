@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7aa0e4755de7f358596c7ce477367d84646fd176
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010948"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676042"
 ---
-# <a name="lesson-1-creating-the-suppliers-dqs-knowledge-base"></a>Lição 1: Criando a base de dados de conhecimento do DQS Fornecedores
+# <a name="lesson-1-creating-the-suppliers-dqs-knowledge-base"></a>Lição 1: Como criar a base de dados de conhecimento do DQS Fornecedores
   Nesta lição, você criará uma base de dados de conhecimento do DQS denominada **fornecedores** com o conhecimento (metadados) sobre dados do fornecedor. Use a base de dados de conhecimento para executar as atividades de limpeza e correspondência nos dados do fornecedor de entrada. A atividade de limpeza identifica dados incorretos ou inválidos, corrige os dados incorretos, propõe correções/sugestões, padroniza os dados e enriquece os dados com mais informações. A atividade de correspondência compara dados e identifica registros semelhantes (mas um pouco diferentes) nos dados que o ajudam a remover duplicatas nos dados.  
   
  É possível usar tanto processos interativos quanto processos auxiliados pelo computador para criar, compilar e gerenciar uma base de dados de conhecimento. O conhecimento em uma base de dados de conhecimento é mantido em domínios, cada qual específico para um campo de dados nos dados que você deseja limpar e/ou corresponder.  

@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a76c87b38dc333f55745c61620398f086a3db5d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789007"
 ---
 # <a name="results-page-alwayson-availability-group-wizards"></a>Página Resultados (Assistentes de Grupo de Disponibilidade AlwaysOn)
   Este tópico da ajuda descreve as opções da página **Resultados** . Este tópico aplica-se ao [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], ao [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]e ao [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Use esta página para exibir os resultados do assistente.  
@@ -34,7 +34,7 @@ ms.locfileid: "48104946"
  **Resultado**  
  Para cada etapa concluída, exibe um dos seguintes textos de hiperlink.  
   
-|Resultado|Description|  
+|Resultado|Descrição|  
 |------------|-----------------|  
 |**Erro**|Indica se houve falha na etapa de validação. Clique no link para exibir a mensagem de erro.|  
 |**Êxito**|Indica que a etapa de validação foi concluída com êxito.|  

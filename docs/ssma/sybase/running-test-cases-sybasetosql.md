@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 664c2d3d4e1a1cea78bd93c748d9c17d2f1fe670
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667716"
 ---
 # <a name="running-test-cases-sybasetosql"></a>Executar casos de teste (SybaseToSQL)
 Quando o SSMA testador executa um caso de teste, ele executa os objetos selecionados para teste e cria um relatório sobre os resultados da verificação. Se os resultados são idênticos em ambas as plataformas, o teste foi bem-sucedido. A correspondência de objetos entre Sybase e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é determinado de acordo com as configurações de mapeamento de esquema para o projeto atual do SSMA.  
@@ -45,21 +45,21 @@ Suponha que a tabela verificada é denominada USER_TABLE. Para essa tabela, os s
   
 Os seguintes objetos são criados no Sybase no banco de dados SSMATESTER2005db ou SSMATESTER2008db e em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no banco de dados ssmatesterdb_syb.  
   
-|Nome|Tipo|Description|  
+|Nome|Tipo|Descrição|  
 |--------|--------|---------------|  
-|USER_TABLE$ Trg|Gatilho|Gatilho de auditoria de alterações na tabela verificada.|  
-|USER_TABLE$ Aud|Table|Tabela onde as linhas excluídas e substituídas são salvos.|  
-|USER_TABLE$ AudID|Table|Tabela onde as linhas novas e alteradas são salvos.|  
+|USER_TABLE$Trg|Gatilho|Gatilho de auditoria de alterações na tabela verificada.|  
+|USER_TABLE$Aud|Table|Tabela onde as linhas excluídas e substituídas são salvos.|  
+|USER_TABLE$AudID|Table|Tabela onde as linhas novas e alteradas são salvos.|  
 |USER_TABLE|Exibição|Representação simplificada de modificações de tabela.|  
-|USER_TABLE$ novo|Exibição|Representação simplificada de linhas inseridas e substituídas.|  
-|USER_TABLE$ new_id|Exibição|Identificação de linhas inseridas e alteradas.|  
-|USER_TABLE$ antigo|Exibição|Representação simplificada de linhas excluídas e substituídas.|  
+|USER_TABLE$new|Exibição|Representação simplificada de linhas inseridas e substituídas.|  
+|USER_TABLE$new_id|Exibição|Identificação de linhas inseridas e alteradas.|  
+|USER_TABLE$old|Exibição|Representação simplificada de linhas excluídas e substituídas.|  
   
 O seguinte objeto é criado no banco de dados da tabela verificado no Sybase e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Nome|Tipo|Description|  
+|Nome|Tipo|Descrição|  
 |--------|--------|---------------|  
-|USER_TABLE$ Trg|Gatilho|Gatilho de auditoria de alterações na tabela verificada.|  
+|USER_TABLE$Trg|Gatilho|Gatilho de auditoria de alterações na tabela verificada.|  
   
 ### <a name="test-object-calls"></a>Chamadas de objeto de teste  
 Nesta etapa, o SSMA testador invoca cada objeto selecionado para o teste, compara os resultados e mostra o relatório.  

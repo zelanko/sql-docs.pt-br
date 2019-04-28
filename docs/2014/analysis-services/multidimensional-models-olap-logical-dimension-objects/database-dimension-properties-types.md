@@ -28,11 +28,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbe1c8932c082ce537cd5dc3f2b12d98c05c3811
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728552"
 ---
 # <a name="dimension-types"></a>Tipos de dimensão
   A configuração da propriedade `Type` fornece informações sobre os conteúdos de uma dimensão para servidor e aplicativos cliente. Em alguns casos, a configuração `Type` fornece somente orientação para aplicativos cliente e é opcional. Em outros casos, como as dimensões `Accounts` ou `Time`, as configurações de propriedade `Type` da dimensão e seus atributos determinam comportamentos específicos baseados em servidor e podem ser necessários para implantar determinados comportamentos no cubo. Por exemplo, a propriedade `Type` de uma dimensão pode ser configurada como `Accounts` para indicar a aplicativos cliente que a dimensão padrão contém atributos de conta. Para obter mais informações sobre o tempo, conta e dimensões de moeda, consulte [criar uma dimensão de tipo de data](../multidimensional-models/database-dimensions-create-a-date-type-dimension.md), [criar uma conta de Finanças de dimensão de tipo de pai-filho](../multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md), e [criar uma moeda tipo de dimensão](../multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).  

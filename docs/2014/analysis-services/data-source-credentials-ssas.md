@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 320ce5a2e09904abe0b2217f257ce008955b8607
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732622"
 ---
 # <a name="data-source-credentials-ssas"></a>Credenciais de fonte de dados (SSAS)
   Esta página do **Assistente de Importação de Tabela** o habilita a inserir o nome do usuário e a senha da conexão da fonte de dados existente selecionada. Para acessar o assistente do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], no menu **Modelo** , clique em **Importar de Fonte de Dados**.  

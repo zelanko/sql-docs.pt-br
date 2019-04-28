@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 03395f35d42ee8ec3d4a69345d509432fbcdd485
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729654"
 ---
 # <a name="kpi-organizer-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Organizador de KPIs (guia KPIs, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel **Organizador de KPIs** na guia **KPIs** do Designer de Cubo para acessar e reordenar os KPIs (indicadores chave de desempenho) contidos no cubo especificado.  
@@ -38,8 +38,8 @@ ms.locfileid: "48136787"
 |Opção|Definição|  
 |------------|----------------|  
 |**Novo KPI**|Selecione para exibir o **Editor de Formulário KPI** e criar um novo KPI. Para obter mais informações sobre o **Editor de Formulário KPI**, consulte [Editor de Formulário KPI &#40;KPIs Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md).|  
-|**Mover para Cima**|Selecione para mover o KPI selecionado uma posição para cima no **Organizador de KPIs** e determinar a ordem na qual os KPIs são exibidos no **Navegador KPI**.<br /><br /> Observação: essa opção estará desabilitada se o KPI selecionado não puder mais ser movido.|  
-|**Mover para Baixo**|Selecione para mover o KPI selecionado uma posição para baixo no **Organizador de KPIs** e determinar a ordem na qual os KPIs são exibidos no **Navegador KPI**.<br /><br /> Observação: essa opção estará desabilitada se o KPI selecionado não puder mais ser movido.|  
+|**Mover para Cima**|Selecione para mover o KPI selecionado uma posição para cima no **Organizador de KPIs** e determinar a ordem na qual os KPIs são exibidos no **Navegador KPI**.<br /><br /> Observação: Esta opção é desabilitada se o KPI selecionado não puder ser movido ainda mais.|  
+|**Mover para Baixo**|Selecione para mover o KPI selecionado uma posição para baixo no **Organizador de KPIs** e determinar a ordem na qual os KPIs são exibidos no **Navegador KPI**.<br /><br /> Observação: Esta opção é desabilitada se o KPI selecionado não puder ser movido ainda mais.|  
 |**Delete (excluir)**|Selecione para excluir o KPI selecionado.|  
   
 ## <a name="see-also"></a>Consulte também  

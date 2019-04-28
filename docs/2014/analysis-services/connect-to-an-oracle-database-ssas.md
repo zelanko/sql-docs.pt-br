@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 79808c965828844a467fc232a5432d1207b25c34
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680187"
 ---
 # <a name="connect-to-an-oracle-database-ssas"></a>Conectar a um banco de dados Oracle (SSAS)
   Esta página do **Assistente de Importação de Tabela** o habilita a especificar as configurações de conexão para um banco de dados Oracle. Para acessar o assistente do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], no menu **Modelo** , clique em **Importar de Fonte de Dados**.  

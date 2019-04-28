@@ -14,17 +14,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8367869193670fcc6573738521852ab62aced714
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680539"
 ---
 # <a name="completing-the-wizard-import-analysis-services-database-wizard"></a>Concluindo o Assistente (Assistente de Importação do Banco de Dados do Analysis Services)
   Use a página **Concluindo o Assistente** para exibir o progresso do assistente conforme os dados e metadados do banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] selecionado são importados no projeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 ## <a name="options"></a>Opções  
- **(Progresso)**  
+ **(Progress)**  
  Exibe o progresso do assistente conforme cada objeto no banco de dados é importado no projeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Consulte também  

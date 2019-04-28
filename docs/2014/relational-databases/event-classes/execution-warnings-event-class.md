@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 947866923053c025d125d36bda5eb514ae6c2005
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662409"
 ---
 # <a name="execution-warnings-event-class"></a>classe de evento Execution Warnings
   A classe de evento Execution Warnings indica que ocorreram avisos de concessão de memória durante a execução de uma instrução ou um procedimento armazenado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Essa classe de evento pode ser monitorada para determinar se as consultas tiveram que esperar por memória por um segundo ou mais antes de continuar ou se a tentativa inicial de obter memória falhou. As informações sobre períodos de espera de consulta podem ajudar a revelar problemas de contenção no sistema que podem afetar o desempenho.  

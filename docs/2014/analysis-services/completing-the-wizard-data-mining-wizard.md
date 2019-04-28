@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 99cc8b42d30bd19e878283d0641d23c894d1abb8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680609"
 ---
 # <a name="completing-the-wizard-data-mining-wizard"></a>Concluindo o assistente (Assistente de Mineração de Dados)
   Use a página **Concluindo o Assistente** para revisar a estrutura de mineração que será criada quando o assistente for concluído. Você também pode definir o nome da estrutura de mineração.  
@@ -28,7 +28,7 @@ ms.locfileid: "48202566"
 > [!NOTE]  
 >  Essa página é alterada de acordo com a seleção da opção **De banco de dados relacional ou data warehouse existente** ou **De cubo existente** na página **Selecionar o Método de Definição** do assistente.  
   
- **Para obter mais informações:** [Assistente de Mineração de Dados &#40;Analysis Services – Mineração de dados&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Designer de Mineração de Dados](data-mining/data-mining-designer.md), [Criar uma estrutura de mineração relacional](data-mining/create-a-relational-mining-structure.md)  
+ **Para obter mais informações:** [Assistente de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Designer de mineração de dados](data-mining/data-mining-designer.md), [criar uma estrutura de mineração relacional](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Opções  
  **Nome da estrutura de mineração**  

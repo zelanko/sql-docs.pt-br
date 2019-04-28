@@ -14,18 +14,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a136e3b2064e42e6bae7cfb39f059dbaa41a8410
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667331"
 ---
 # <a name="linkedservers-rowset-ole-db"></a>Conjunto de linhas LINKEDSERVERS (OLE DB)
   O conjunto de linhas **LINKEDSERVERS** enumera fontes de dados da organização que podem participar de consultas distribuídas do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  O conjunto de linhas **LINKEDSERVERS** contém as seguintes colunas.  
   
-|Nome da coluna|Indicador de tipo|Description|  
+|Nome da coluna|Indicador de tipo|Descrição|  
 |-----------------|--------------------|-----------------|  
 |SVR_NAME|DBTYPE_WSTR|Nome de um servidor vinculado.|  
 |SVR_PRODUCT|DBTYPE_WSTR|Fabricante ou outro nome que identifique o tipo de repositório de dados representado pelo nome do servidor vinculado.|  

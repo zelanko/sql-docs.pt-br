@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3322b71162b93204591dbb1c0bffb6bac4856454
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679943"
 ---
 # <a name="connection-properties-dialog-box-ssas---tabular"></a>Caixa de diálogo Propriedades da Conexão (SSAS – Tabular)
   Use esta página para exibir ou modificar no SQL Server Management Studio as propriedades de conexão de uma fonte de dados usada por um banco de dados modelo de tabela.  

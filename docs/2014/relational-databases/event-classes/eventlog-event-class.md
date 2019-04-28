@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 88e254954c126684eca606f318170c82d3699fab
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52765498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662539"
 ---
 # <a name="eventlog-event-class"></a>classe de evento EventLog
   A classe de evento EventLogevent indica que foram registrados eventos no log de eventos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  

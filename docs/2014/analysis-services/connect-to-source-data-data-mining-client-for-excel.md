@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 78c60832ea6111b0682e8a6d2b5ab3540a19cfb1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680247"
 ---
 # <a name="connect-to-source-data-data-mining-client-for-excel"></a>Conectar a dados de origem (Cliente de Mineração de Dados para Excel)
   Este tópico descreve como criar e usar as conexões usadas para armazenar modelos de mineração de dados e para acessar os dados externos armazenados no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -29,7 +29,7 @@ ms.locfileid: "48159736"
   
  **Conexões com fontes de dados externas.** Você também pode criar conexões com dados externos quando estiver criando modelos ou salvando os resultados. Por exemplo, você pode criar um modelo de mineração de dados em um servidor e, em seguida, executar uma consulta de previsão em relação ao modelo de mineração de dados usando dados armazenados em outra instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], em uma tabela de dados do Excel ou em uma fonte de dados externa, como o [!INCLUDE[msCoName](../includes/msconame-md.md)] Access. Cada vez que você acessar uma nova fonte de dados, receberá uma solicitação para criar uma conexão usando uma caixa de diálogo.  
   
-##  <a name="bkmk_prereq2"></a> Prerequisites  
+##  <a name="bkmk_prereq2"></a> Pré-requisitos  
  Esta versão dos suplementos requer que sua instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] seja SQL Server 2012. Uma versão separada dos suplementos estará disponível se você quiser se conectar a uma versão anterior do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Há versões dos suplementos que oferecem suporte ao SQL Server 2005, ao SQL Server 2008 e ao SQL Server 2008 R2.  
   
  Para se conectar a um banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], você deve ter permissões para acessar o servidor do banco de dados. Além disso, as sessões de mineração de dados devem ser habilitadas e você deve ter permissões de leitura ou leitura/gravação nos objetos de banco de dados armazenados no servidor.  
@@ -161,7 +161,7 @@ ms.locfileid: "48159736"
   
 -   ntext  
   
--   BINARY  
+-   binary  
   
 ## <a name="see-also"></a>Consulte também  
  [Rastreamento &#40;cliente de mineração de dados para Excel&#41;](trace-data-mining-client-for-excel.md)  

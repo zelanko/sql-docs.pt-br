@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 89149645524adedf01b8d9fb7c116cf0ab0f26c5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667811"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Medir a latência e validar as conexões para a replicação transacional
   Este tópico descreve como medir a latência e validar conexões para replicação transacional no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o Replication Monitor, [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou RMO (Replication Management Objects). A replicação transacional fornece o recurso do token de rastreamento, que proporciona um meio adequado para medir a latência em topologias de replicação transacional e validar as conexões entre o Publicador, o Distribuidor e os Assinantes. Um token (uma quantidade pequena de dados) é gravado no log de transações do banco de dados de publicação, marcado como se fosse uma transação replicada comum e enviado pelo sistema, permitindo um cálculo de:  
@@ -52,7 +52,7 @@ ms.locfileid: "52813898"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
  Os tokens de rastreamento também são úteis para confirmar um sistema, o que implica em parar todas as atividades e verificar que todos os nós tenham recebido todas as alterações pendentes. Para obter mais informações, consulte [Como confirmar uma topologia de replicação &#40;Programação Transact-SQL de replicação&#41;](../administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).  
   
  Para usar os tokens de rastreamento, você deve utilizar versões específicas do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
@@ -88,7 +88,7 @@ ms.locfileid: "52813898"
   
 3.  Clique em **Inserir Rastreador**.  
   
-4.  Exibição de tempo decorrido para o token de rastreamento nas seguintes colunas: **Publicador para distribuidor**, **distribuidor para assinante**, **latência Total**. Um valor de **Pendente** indica que o token não alcançou um determinado ponto.  
+4.  Exibição de tempo decorrido para o token de rastreamento nas seguintes colunas: **Editor para Distribuidor**, **Distribuidor para Editor**, **Latência Total**. Um valor de **Pendente** indica que o token não alcançou um determinado ponto.  
   
 #### <a name="to-view-information-on-a-tracer-token-inserted-previously"></a>Para exibir informações sobre um token de rastreamento previamente inserido  
   
@@ -98,12 +98,12 @@ ms.locfileid: "52813898"
   
 3.  Selecione uma opção de tempo na lista suspensa **Tempo inserido** .  
   
-4.  Exibição de tempo decorrido para o token de rastreamento nas seguintes colunas: **Publicador para distribuidor**, **distribuidor para assinante**, **latência Total**. Um valor de **Pendente** indica que o token não alcançou um determinado ponto.  
+4.  Exibição de tempo decorrido para o token de rastreamento nas seguintes colunas: **Editor para Distribuidor**, **Distribuidor para Editor**, **Latência Total**. Um valor de **Pendente** indica que o token não alcançou um determinado ponto.  
   
     > [!NOTE]  
     >  Informações de token de rastreamento são retidas para o mesmo período de tempo que outros dados históricos, os quais são governados pelo período de retenção de histórico do banco de dados de distribuição. Para obter informações sobre como alterar as propriedades do banco de dados de distribuição, consulte [Exibir e modificar as propriedades do Distribuidor e do Publicador](../view-and-modify-distributor-and-publisher-properties.md).  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-post-a-tracer-token-to-a-transactional-publication"></a>Para publicar um token de rastreamento em uma publicação transacional  
   

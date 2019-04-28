@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a942bb85a2af9b933c8091004fa9bb15529e86d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731518"
 ---
 # <a name="enable-dimension-writeback-dimension-business-intelligence-wizard"></a>Habilitar o Write-back de Dimensão (Dimensão) (Assistente de Business Intelligence)
   Use a página **Habilitar o Write-back de Dimensão** para selecionar uma dimensão para a qual o Assistente de Business Intelligence habilitará o write-back.  
@@ -31,7 +31,7 @@ ms.locfileid: "48129026"
  Selecione a dimensão para a qual o assistente habilitará o write-back.  
   
 ## <a name="see-also"></a>Consulte também  
- [Ajuda de F1 do Assistente do Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [Ajuda F1 do Assistente de Business Intelligence](business-intelligence-wizard-f1-help.md)   
  [Designer de cubo &#40;Analysis Services - dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Designer de dimensão &#40;Analysis Services - dados multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
  [Habilitar o write-back de dimensão](multidimensional-models/bi-wizard-enable-dimension-writeback.md)  

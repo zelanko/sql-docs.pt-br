@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1368d29801a414de866003b86c63fb4823c4a7b8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62790655"
 ---
 # <a name="always-on-client-connectivity-sql-server"></a>Conectividade de cliente AlwaysOn (SQL Server)
   Este tópico descreve considerações sobre conectividade de clientes para Grupos de Disponibilidade AlwaysOn, inclusive pré-requisitos, restrições e recomendações para configurações e parâmetros de clientes.  
@@ -33,7 +33,7 @@ ms.locfileid: "53355760"
   
  A tabela a seguir resume o suporte ao driver para o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]:  
   
-|Driver|Failover de várias sub-redes|Tentativa de aplicativo|Roteamento somente leitura|Failover de várias sub-redes: Failover mais rápido de ponto de extremidade de sub-rede simples|Failover de várias sub-redes: Resolução de instância nomeada para instâncias clusterizadas de SQL|  
+|Driver|Failover de várias sub-redes|Tentativa de aplicativo|Roteamento somente leitura|Failover de várias sub-redes: Failover de ponto de extremidade de sub-rede única mais rápido|Failover de várias sub-redes: Instâncias clusterizadas de resolução de instância nomeada do SQL|  
 |------------|----------------------------|------------------------|------------------------|--------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|Sim|Sim|Sim|Sim|Sim|  
 |SQL Native Client 11.0 OLEDB|Não|Sim|Sim|Não|Não|  

@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 749aaffe61033564649f9cd70871f2cb01340757
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789551"
 ---
 # <a name="overview-of-alwayson-availability-groups-sql-server"></a>Visão geral de grupos de disponibilidade AlwaysOn (SQL Server)
   Este tópico apresenta os conceitos do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] que são centrais para configurar e gerenciar um ou mais grupos de disponibilidade no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Para obter um resumo dos benefícios oferecidos pelos grupos de disponibilidade e uma visão geral da terminologia do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consulte [Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](always-on-availability-groups-sql-server.md).  
@@ -29,7 +29,7 @@ ms.locfileid: "53363588"
  Um *grupo de disponibilidade* dá suporte a um ambiente de failover para um conjunto discreto de bancos de dados de usuário, conhecidos como *bancos de dados de disponibilidade*, que fazem failover juntos. Um grupo de disponibilidade dá suporte a um conjunto de bancos de dados primários e a um dos oito conjuntos de bancos de dados secundários correspondentes. Os bancos de dados secundários *não* são backups. Continue para fazer backup dos bancos de dados e de seus logs de transações regularmente.  
   
 > [!TIP]  
->  Você pode criar qualquer tipo de backup de um banco de dados primário. Como alternativa, você pode criar backups de log e backups completos somente cópia dos bancos de dados secundários. Para obter mais informações, consulte [secundárias ativas: Backup em réplicas secundárias &#40;grupos de disponibilidade AlwaysOn&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+>  Você pode criar qualquer tipo de backup de um banco de dados primário. Como alternativa, você pode criar backups de log e backups completos somente cópia dos bancos de dados secundários. Para obter mais informações, confira [Secundárias ativas: Backup em réplicas secundárias &#40;grupos de disponibilidade AlwaysOn&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
  Cada conjunto de bancos de dados de disponibilidade é hospedado por uma *réplica de disponibilidade*. Existem dois tipos de réplicas de disponibilidade: uma *réplica primária*única. que hospeda os bancos de dados primários, e de uma a oito *réplicas secundárias*, cada uma hospedando um conjunto de bancos de dados secundários e atuando como destinos de failover em potencial para o grupo de disponibilidade. Um grupo de disponibilidade faz failover no nível de uma réplica de disponibilidade. Uma réplica de disponibilidade fornece redundância apenas no nível do banco de dados para o conjunto de bancos de dados em um grupo de disponibilidade. Os failovers não são provocados por problemas de banco de dados, como um banco de dados que se torna suspeito devido à perda de um arquivo de dados ou à corrupção de um log de transações.  
   
@@ -118,11 +118,11 @@ ms.locfileid: "53363588"
   
 -   **Executando operações de backup em réplicas secundárias**  
   
-     As réplicas secundárias dão suporte à execução de backups de log e [somente cópia](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) de um banco de dados completo, arquivo ou grupo de arquivos. Você pode configurar o grupo de disponibilidade para especificar a preferência de onde os backups devem ser executados. É importante compreender que a preferência não é imposta pelo SQL Server e, portanto, não tem nenhum impacto em backups ad hoc. A interpretação dessa preferência depende da lógica, se houver, que você usa para o script de seus trabalhos de backup para cada um dos bancos de dados em um determinado grupo de disponibilidade. Para uma réplica de disponibilidade individual, você pode especificar suas prioridades para executar backups nesta réplica em relação às outras réplicas no mesmo grupo de disponibilidade. Para obter mais informações, consulte [secundárias ativas: Backup em réplicas secundárias &#40;grupos de disponibilidade AlwaysOn&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+     As réplicas secundárias dão suporte à execução de backups de log e [somente cópia](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) de um banco de dados completo, arquivo ou grupo de arquivos. Você pode configurar o grupo de disponibilidade para especificar a preferência de onde os backups devem ser executados. É importante compreender que a preferência não é imposta pelo SQL Server e, portanto, não tem nenhum impacto em backups ad hoc. A interpretação dessa preferência depende da lógica, se houver, que você usa para o script de seus trabalhos de backup para cada um dos bancos de dados em um determinado grupo de disponibilidade. Para uma réplica de disponibilidade individual, você pode especificar suas prioridades para executar backups nesta réplica em relação às outras réplicas no mesmo grupo de disponibilidade. Para obter mais informações, confira [Secundárias ativas: Backup em réplicas secundárias &#40;grupos de disponibilidade AlwaysOn&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
 -   **O acesso somente leitura a uma ou mais réplicas secundárias (réplicas secundárias legíveis)**  
   
-     Todas as réplicas de disponibilidade podem ser configuradas para permitir acesso somente leitura a seus bancos de dados locais ao executar a função secundária embora algumas operações não tenham suporte completo. Além disso, se você quiser impedir que cargas de trabalho somente leitura sejam executadas na réplica primária, poderá configurar as réplicas para permitir acesso somente de leitura/gravação ao serem executados sob a função primária. Para obter mais informações, consulte [secundárias ativas: Réplicas secundárias legíveis &#40;grupos de disponibilidade AlwaysOn&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+     Todas as réplicas de disponibilidade podem ser configuradas para permitir acesso somente leitura a seus bancos de dados locais ao executar a função secundária embora algumas operações não tenham suporte completo. Além disso, se você quiser impedir que cargas de trabalho somente leitura sejam executadas na réplica primária, poderá configurar as réplicas para permitir acesso somente de leitura/gravação ao serem executados sob a função primária. Para obter mais informações, confira [Secundárias ativas: Réplicas secundárias legíveis &#40;grupos de disponibilidade AlwaysOn&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
      Se um grupo de disponibilidade tiver um ouvinte de grupo de disponibilidade e uma ou mais réplicas secundárias legíveis no momento, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] poderá rotear solicitações de conexão da intenção de leitura para um deles (*roteamento somente leitura*). Para obter mais informações, consulte [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md).  
   
@@ -149,7 +149,7 @@ ms.locfileid: "53363588"
   
 -   **Blogs:**  
   
-     [AlwaysON - HADRON Learning Series: Bancos de dados habilitados do uso do Pool de trabalho para HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [AlwaysON - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (Always On – série de aprendizagem do HADRON: uso do pool de trabalho para bancos de dados habilitados para HADRON)  
   
      [Blogs da equipe do AlwaysOn do SQL Server: O Team Blog oficial do SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
@@ -157,7 +157,7 @@ ms.locfileid: "53363588"
   
 -   **Vídeos:**  
   
-     [Microsoft SQL Server codinome "Denali" série AlwaysOn, parte 1: Introduzindo a próxima geração de solução de alta disponibilidade](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server codinome "Denali" série AlwaysOn, parte 1: Introducing the Next Generation High Availability Solution](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302) (Série do Always On, codinome "Denali" do Microsoft SQL Server, parte 1: apresentando a próxima geração de solução de alta disponibilidade)  
   
      [Microsoft SQL Server codinome "Denali" série AlwaysOn, parte 2: Criando uma solução de alta disponibilidade de missão crítica usando AlwaysOn](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   

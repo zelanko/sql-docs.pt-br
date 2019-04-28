@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 56a87741b104a49f98a3cba05dc65d911774774d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662894"
 ---
 # <a name="degree-of-parallelism-70-insert-event-class"></a>Classe de evento Degree of Parallelism (7.0 Insert)
   A classe de evento **Degree of Parallelism (7.0 Insert)** ocorre sempre que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa uma instrução SELECT, INSERT, UPDATE ou DELETE.  
@@ -31,7 +31,7 @@ ms.locfileid: "52786798"
 |Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
-|**BinaryData**|**image**|Número de CPUs usadas para completar o processo com base nos seguintes valores:<br /><br /> 0x00000000: Indica um plano serial em execução em série.<br /><br /> 0x01000000 indica um plano paralelo sendo executado em série.<br /><br /> > = 0x02000000: Indica um plano paralelo sendo executado em paralelo.|2|Não|  
+|**BinaryData**|**image**|Número de CPUs usadas para completar o processo com base nos seguintes valores:<br /><br /> 0x00000000: Indica um plano serial em execução em série.<br /><br /> 0x01000000 indica um plano paralelo sendo executado em série.<br /><br /> >= 0x02000000: Indica um plano paralelo sendo executado em paralelo.|2|Não|  
 |**ClientProcessID**|**int**|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se a ID do processo do cliente for fornecida pelo cliente.|9|Sim|  
 |**DatabaseID**|**int**|ID do banco de dados especificado pela instrução de banco de dados USE ou o banco de dados padrão se nenhuma instrução de banco de dados USE tiver sido emitida para uma determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados **ServerName** for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |**DatabaseName**|**nvarchar**|Nome do banco de dados no qual a instrução do usuário está sendo executada.|35|Sim|  

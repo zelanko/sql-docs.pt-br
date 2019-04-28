@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: c24c5f07d18bc8d63ff0d113c762f776dccf9a41
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657935"
 ---
 # <a name="install-the-analysis-services-ole-db-provider-on-sharepoint-servers"></a>Instalar o provedor OLE DB do Analysis Services em SharePoint Servers
   O Provedor OLE DB da Microsoft para Analysis Services (MSOLAP) é uma interface que os aplicativos cliente usam para interagir com dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Em um ambiente do SharePoint que inclui o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], o provedor administra solicitações de conexões para dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
@@ -136,7 +136,7 @@ ms.locfileid: "53376638"
   
 4.  Se você houver outros servidores no farm que executam apenas os Serviços do Excel, sem o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] no mesmo servidor, repetir as etapas anteriores para instalar a versão 2008 R2 do provedor no computador com Serviços do Excel.  
   
-#### <a name="step-2-register-the-microsoftanalysisserviceschanneltransportdll-file"></a>Etapa 2: Registrar o arquivo Microsoft.AnalysisServices.ChannelTransport.dll  
+#### <a name="step-2-register-the-microsoftanalysisserviceschanneltransportdll-file"></a>Etapa 2: Registrar o arquivo channeltransport  
   
 1.  Use o utilitário regasm.exe para registrar o arquivo. Se você não executou regasm.exe antes, adicione sua pasta pai, c:\windows\microsoft.net\framework64\v4.0.30319>Aspnet_regiis.exe\\, para a variável de caminho do sistema.  
   

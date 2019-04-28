@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: aa992d78e8075459115fb4a298b8c8dba02a8157
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676056"
 ---
-# <a name="lesson-1-creating-the-web-service-client-project"></a>Lição 1: Criando o projeto de cliente de serviço Web
+# <a name="lesson-1-creating-the-web-service-client-project"></a>Lição 1: Como criar o serviço Web Projeto de Cliente
   Para este passo a passo, você criará um aplicativo de console simples que acessa o serviço Web Servidor de Relatórios. Este passo a passo pressupõe que você está desenvolvendo no [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
   
 ### <a name="to-create-a-console-application"></a>Para criar um aplicativo de console  

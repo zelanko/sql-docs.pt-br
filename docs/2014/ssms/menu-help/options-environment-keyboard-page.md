@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4b65f5a5d337877010c4704b6ac067ced655e99f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662057"
 ---
 # <a name="options-environment-keyboard-page"></a>Options (Environment-Keyboard Page)
   A caixa de diálogo **Opções** lhe permite personalizar o esquema de teclado no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Use essa opção para escolher um esquema de teclado. Para acessar essa página, clique em **Opções** no menu **Ferramentas** , selecione a pasta **Ambiente** e, então, clique em **Teclado**.  

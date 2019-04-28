@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c2ba3dd43475f656be7268349e0760cd48cbaa32
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62677077"
 ---
 # <a name="calculation-tools-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Ferramentas de Cálculo (guia Ações, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel **Ferramentas de Cálculo** da guia **Ações** no Designer de Cubo para explorar metadados, funções e modelos disponíveis para uso em ações, ações de extração de detalhes e ações de relatório.  
@@ -49,10 +49,10 @@ ms.locfileid: "48133506"
 |------------|----------------|  
 |**Copiar**|Selecione para copiar o elemento selecionado em **Metadados** ou **Funções** na Área de Transferência.<br /><br /> Observe que essa opção não será exibida se **modelos** está selecionado. Observe também que essa opção será desabilitada se não puder do membro selecionado ser copiado, como o **conjuntos** pasta de uma dimensão exibida em **metadados** ou a pasta do grupo de funções de uma função exibida em  **Funções**.|  
 |**Filtrar membros**|Clique para exibir a caixa de diálogo **Filtrar Membros** e filtrar os membros exibidos para o elemento selecionado em **Metadados**. Para obter mais informações sobre a caixa de diálogo **Filtrar Membros**, consulte [Caixa de diálogo Filtrar Membros &#40;Analysis Services – Dados Multidimensionais&#41;](filter-members-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Observe que essa opção é exibida somente se **metadados** está selecionado. Observe também que essa opção é habilitada somente se um nível de um atributo é selecionado na **metadados**.|  
-|**Adicionar modelo**|Selecione para adicionar uma nova ação, ação de extração de detalhes ou ação de relatório com base no modelo selecionado ao cubo e exibir, respectivamente, o **Editor de Formulário de Ação**, **Editor de Formulário de Ação de Extração de Detalhes**ou **Editor de Formulário de Ação de Relatório**.<br /><br /> Observação: Essa opção é exibida somente se **metadados** está selecionado.|  
+|**Adicionar modelo**|Selecione para adicionar uma nova ação, ação de extração de detalhes ou ação de relatório com base no modelo selecionado ao cubo e exibir, respectivamente, o **Editor de Formulário de Ação**, **Editor de Formulário de Ação de Extração de Detalhes**ou **Editor de Formulário de Ação de Relatório**.<br /><br /> Observação: Esta opção será exibida apenas se a opção **Metadados** estiver selecionada.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Conceitos básicos de script MDX &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [Conceitos básicos do script MDX &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [Ações &#40;Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
  [Barra de ferramentas &#40;guia Ações, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Organizador de ações &#40;guia Ações, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 717e6ee640099b99e9ff4ec2484fdcc2a947ba1f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680569"
 ---
 # <a name="completing-the-wizard-cube-wizard"></a>Concluindo o Assistente (Assistente para Cubos)
   Use a página **Concluindo o Assistente** para nomear e visualizar o cubo que será criado quando o assistente for concluído.  

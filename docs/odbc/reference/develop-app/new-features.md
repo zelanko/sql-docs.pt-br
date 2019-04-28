@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4d425a6896a64f06bf1610ed8f6be87dd60af25d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658179"
 ---
 # <a name="new-features"></a>Novos recursos
 A seguinte nova funcionalidade foi introduzida em ODBC 3. *x*. ODBC 3. *x* aplicativo trabalhar com um ODBC 2 *. x* driver não poderão usar essa funcionalidade. O ODBC 3. *x* Gerenciador de Driver não mapeia esses recursos quando estiver trabalhando com um ODBC 2 *. x* driver.  
   
--   Funções que usam um descritor de lidar com como um argumento: **SQLSetDescField**, **SQLGetDescField**, **SQLSetDescRec**, **SQLGetDescRec**, e **SQLCopyDesc**.  
+-   Funções que usam um descritor de lidar com como um argumento: **SQLSetDescField**, **SQLGetDescField**, **SQLSetDescRec**, **SQLGetDescRec**, and **SQLCopyDesc**.  
   
 -   As funções **SQLSetEnvAttr** e **SQLGetEnvAttr**.  
   

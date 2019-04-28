@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0d9411ab88d259718aaa62873e615a62efdd82e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728906"
 ---
 # <a name="defining-calculated-members"></a>Definindo membros calculados
   Membros calculados são membros de uma dimensão ou um grupo de medidas definidos com base em uma combinação de dados de cubo, operadores aritméticos, números e funções. Por exemplo, você pode criar um membro calculado que possa calcular a soma de duas medidas físicas no cubo. As definições de um membro calculado são armazenadas em cubos, mas seus valores são calculados no momento da consulta.  

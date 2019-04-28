@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11e2dbc6cdd0911361aff76f252e9a772104789b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731488"
 ---
 # <a name="edit-table-properties-dialog-box-ssas"></a>Caixa de diálogo Editar Propriedades da Tabela (SSAS)
   A caixa de diálogo **Editar Propriedades da Tabela** o habilita a exibir e modificar as propriedades de tabelas que são importadas para o designer de modelo usando o Assistente de Importação de Tabela. Para acessar essa caixa de diálogo, no designer de modelo, selecione uma tabela de dados que foi importada, clique no menu **Tabela** e em **Propriedades da Tabela**.  
@@ -100,6 +100,6 @@ ms.locfileid: "48229276"
  Clique para aplicar todas as alterações feitas, incluindo a substituição de colunas.  
   
 ## <a name="see-also"></a>Consulte também  
- [Tabelas e colunas &#40;Tabular do SSAS&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
+ [Tabelas e colunas &#40;SSAS de Tabela&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
   
   

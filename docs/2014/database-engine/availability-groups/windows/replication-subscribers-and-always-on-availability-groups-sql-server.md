@@ -15,14 +15,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: eac9f39478b66df98de0483f8dc68d3e671ce045
-ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54372681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789142"
 ---
 # <a name="replication-subscribers-and-alwayson-availability-groups-sql-server"></a>Assinantes de replicação e grupos de disponibilidade AlwaysOn (SQL Server)
-  Quando um grupo de disponibilidade AlwaysOn contendo um banco de dados que é um assinante de replicação executar failover, a assinatura de replicação poderá falhar. Para assinantes de envio por push de replicação transacional, o agente de distribuição continuará a replicar automaticamente após um failover, se a assinatura foi criada usando o nome do ouvinte do grupo de disponibilidade. Para assinantes de pull de replicação transacional, o agente de distribuição continuará a replicar automaticamente após um failover, se a assinatura foi criada usando o nome do ouvinte do grupo de disponibilidade e o servidor de assinante original está ativo e em execução. Isso ocorre porque os trabalhos de agente de distribuição criados somente no assinante original (réplica primária do AG). Para mesclar assinantes, um administrador de replicação deve reconfigurar o assinante manualmente, recriando a assinatura.  
+  Quando um grupo de disponibilidade AlwaysOn contendo um banco de dados que é um assinante de replicação executar failover, a assinatura de replicação poderá falhar. Para assinantes por push de replicação transacional, o agente de distribuição continuará a replicar automaticamente após um failover se a assinatura tiver sido criada usando o nome do ouvinte do grupo de disponibilidade. Para assinantes por pull de replicação transacional, o agente de distribuição continuará a replicar automaticamente após um failover se a assinatura tiver sido criada usando o nome do ouvinte do grupo de disponibilidade e o servidor original do assinante estiver em execução. Isso ocorre porque os trabalhos de agente de distribuição são criados somente no assinante original (réplica primária do grupo de disponibilidade). Para mesclar assinantes, um administrador de replicação deve reconfigurar o assinante manualmente, recriando a assinatura.  
   
 ## <a name="what-is-supported"></a>O que tem suporte  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferece suporte ao failover automático do publicador, ao failover automático dos assinantes transacionais e ao failover manual dos assinantes de mesclagem. Não há suporte para o failover de um distribuidor em um banco de dados de disponibilidade. AlwaysOn não pode ser combinado com cenários Websync e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Compact.  

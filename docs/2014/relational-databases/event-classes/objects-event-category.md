@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 56a76c3675ceb3cf84c7812b4f9d95d61f9f830a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62661947"
 ---
 # <a name="objects-event-category"></a>Categoria de evento Objects
   A categoria de evento **Objects** contém eventos gerais de objetos.  

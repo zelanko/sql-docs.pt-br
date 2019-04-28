@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 340423e23037ae401b1e5749fbed38b1822cfb41
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62677016"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-condition"></a>Exibir ou modificar as propriedades de uma condição de gerenciamento baseado em políticas
   Este tópico descreve como exibir ou modificar as propriedades de uma condição de gerenciamento baseado em políticas no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -54,11 +54,11 @@ ms.locfileid: "54100571"
   
 4.  Clique no sinal de adição para expandir a pasta **Condições** .  
   
-5.  Clique com o botão direito do mouse na condição que você deseja exibir ou editar e selecione **Propriedades**. Para obter mais informações sobre as opções disponíveis a **abrir condição -**_condition_name_ caixa de diálogo, consulte [criar nova condição ou a caixa de diálogo Abrir condição, página geral](../../integration-services/general-page-of-integration-services-designers-options.md), [Abrir a caixa de diálogo de condição, página políticas dependentes](open-condition-dialog-box-dependent-policies-page.md), [criar nova condição ou a caixa de diálogo Abrir condição, página descrição](create-new-condition-or-open-condition-dialog-box-description-page.md), e [avançado editar &#40; Condição&#41; caixa de diálogo](advanced-edit-condition-dialog-box.md).  
+5.  Clique com o botão direito do mouse na condição que você deseja exibir ou editar e selecione **Propriedades**. Para obter mais informações sobre as opções disponíveis na caixa de diálogo **Abrir Condição -**_nome_da_condição_, confira [Caixa de diálogo Criar Condição ou Abrir Condição, página Geral](../../integration-services/general-page-of-integration-services-designers-options.md), [Caixa de diálogo Abrir Condição, página Políticas Dependentes](open-condition-dialog-box-dependent-policies-page.md), [Caixa de diálogo Criar Condição ou Abrir Condição, página Descrição](create-new-condition-or-open-condition-dialog-box-description-page.md) e [Caixa de diálogo Edição Avançada &#40;Condição&#41;](advanced-edit-condition-dialog-box.md).  
   
 6.  Quando terminar, clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-view-a-conditions-properties"></a>Para exibir as propriedades de uma condição  
   

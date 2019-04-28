@@ -20,11 +20,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e69b1d6ca838334c36ff94037473e5fda45cce43
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667212"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>Monitorar o desempenho com o Replication Monitor
   O[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor permite monitorar o desempenho da replicação transacional e replicação de mesclagem das seguintes formas:  
@@ -85,16 +85,16 @@ ms.locfileid: "54126416"
     |---------------|----------|----------|----------|  
     |151+%|76 – 150%|26 – 75%|0 – 25%|  
   
- Para obter mais informações sobre como exibir informações de assinatura, consulte [exibir informações e executar tarefas usando o Replication Monitor](view-information-and-perform-tasks-replication-monitor.md).  
+ Para obter mais informações sobre como exibir informações de assinatura, confira [Exibir informações e executar tarefas usando o Replication Monitor](view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="determine-latency-with-tracer-tokens"></a>Determinar a latência com os tokens de rastreamento  
  A replicação transacional permite medir a latência em um sistema inserindo um token (uma pequena quantidade de dados) no log de transações do banco de dados de publicação e registrando o tempo necessário para chegar até o Distribuidor e os Assinantes. O token permitirá também a identificação de dados que não chegam até o Distribuidor ou Assinante. Para obter mais informações, consulte [Medir a latência e validar as conexões para a replicação transacional](measure-latency-and-validate-connections-for-transactional-replication.md).  
   
 ## <a name="view-detailed-synchronization-performance-for-merge-replication"></a>Exibir o desempenho de sincronização detalhado para replicação de mesclagem  
- Para a replicação de mesclagem, o Replication Monitor exibe as estatísticas detalhadas para cada artigo processado durante a sincronização, incluindo o tempo gasto em cada fase do processamento (carregar alterações, baixar alterações e assim por diante). Ajuda a definir tabelas específicas que estão causando lentidão e é o melhor local para a solução de problemas de desempenho com assinaturas de mesclagem. Para obter mais informações sobre como exibir estatísticas detalhadas, consulte [exibir informações e executar tarefas usando o Replication Monitor](view-information-and-perform-tasks-replication-monitor.md).  
+ Para a replicação de mesclagem, o Replication Monitor exibe as estatísticas detalhadas para cada artigo processado durante a sincronização, incluindo o tempo gasto em cada fase do processamento (carregar alterações, baixar alterações e assim por diante). Ajuda a definir tabelas específicas que estão causando lentidão e é o melhor local para a solução de problemas de desempenho com assinaturas de mesclagem. Para obter mais informações sobre como exibir estatísticas detalhadas, confira [Exibir informações e executar tarefas usando o Replication Monitor](view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="view-transactions-and-delivery-time-for-transactional-replication"></a>Exibir as transações e a hora de entrega para replicação transacional  
- Para replicação transacional, o Replication Monitor exibe informações sobre o número de transações no banco de dados de distribuição que ainda não foi distribuído ao Assinante e o tempo estimado para distribuir essas transações. Para obter mais informações, consulte [exibir informações e executar tarefas usando o Replication Monitor](view-information-and-perform-tasks-replication-monitor.md).  
+ Para replicação transacional, o Replication Monitor exibe informações sobre o número de transações no banco de dados de distribuição que ainda não foi distribuído ao Assinante e o tempo estimado para distribuir essas transações. Para obter mais informações, confira [Exibir informações e executar tarefas usando o Replication Monitor](view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Monitorando a Replicação](../monitoring-replication.md)   

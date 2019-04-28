@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3bb2f1dcabe17bb2c3e7258653602ac43615c706
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678477"
 ---
 # <a name="lesson-1-creating-the-intermediate-data-mining-solution-intermediate-data-mining-tutorial"></a>Lição 1: Criando a solução de mineração de dados intermediário (Tutorial de mineração de dados intermediário)
   No tutorial Mineração de dados básica, você criou um projeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que contém uma solução simples de mineração de dados baseada no novo banco de dados [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] .  
@@ -33,7 +33,7 @@ ms.locfileid: "56035797"
  [Lição 2: Criando um cenário de previsão &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   
 ## <a name="all-lessons"></a>Todas as lições  
- Lição 1: Criando a solução de mineração de dados intermediários  
+ Lição 1: Como criar a solução intermediária de mineração de dados  
   
  [Lição 2: Criando um cenário de previsão &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   

@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bde4d7fa738bdc952abc936ea13caa7225887ad6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62786741"
 ---
 # <a name="check-out-files"></a>Fazer check-out de arquivos
   A menos que você tenha configurado o ambiente do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para permitir a edição de arquivos que tenham feito check-in, faça o check-out de um arquivo antes de modificá-lo. Quando você faz o check-out de um arquivo, uma cópia da versão de arquivo é copiada no disco local e o atributo somente leitura é removido.  
@@ -39,7 +39,7 @@ ms.locfileid: "48051216"
   
 3.  Se a caixa de diálogo **Check-Out para Edição** for exibida, selecione os itens que você deseja e clique em **Check-Out**. Se você tiver configurado o ambiente do [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] para não exibir a caixa de diálogo **Check-out** , os itens selecionados no Gerenciador de Soluções e quaisquer objetos filho que eles possam ter terão check-out imediatamente.  
   
-     **Fazer Check-out**  
+     **Check Out**  
      Faça check-out de todos os itens selecionados.  
   
      **Colunas**  

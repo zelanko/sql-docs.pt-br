@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2513bc3837dd224f6561eb0015ced538ea3add8c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678446"
 ---
-# <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>Lição 1: Criando um modelo de mineração e a estrutura de mineração de série temporal
+# <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>Lição 1: Como criar um modelo de mineração de série temporal e uma estrutura de mineração
   Nesta lição, você criará um modelo de mineração que permite prever valores com o passar do tempo, com base em dados históricos. Quando você criar o modelo, a estrutura subjacente será gerada automaticamente e poderá ser usada como a base para outros modelos de mineração.  
   
  Esta lição supõe que você já conhece modelos de previsão e os requisitos do algoritmo MTS. Para obter mais informações, consulte [Algoritmo MTS](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md).  

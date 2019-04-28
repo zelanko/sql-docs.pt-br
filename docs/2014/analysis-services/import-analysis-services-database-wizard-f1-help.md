@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9916d7e99275ca30d43e03782d84d29550aab479
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730849"
 ---
 # <a name="import-analysis-services-database-wizard-f1-help"></a>Ajuda F1 do Assistente para Importação de Bancos de Dados do Analysis Services
   Use o Assistente para Importação de Bancos de Dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 9.0 no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para gerar um projeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a partir de um banco de dados existente do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  

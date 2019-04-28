@@ -11,13 +11,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8a1f8cef9f29c856ab0bc02480221e583a0078f3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676191"
 ---
-# <a name="lesson-1-create-windows-azure-storage-account-and-container"></a>Lição 1: criar conta e contêiner de Armazenamento do Microsoft Azure
+# <a name="lesson-1-create-windows-azure-storage-account-and-container"></a>Lição 1: Criar conta e contêiner de Armazenamento do Microsoft Azure
   Para que possa iniciar o armazenamento de arquivos de dados do SQL Server no Armazenamento do Windows Azure, você deve primeiro criar uma conta de Armazenamento do Windows Azure e um contêiner de blob e uma assinatura de acesso compartilhado. A lição 1 conduzirá você pelas etapas do registro em log no Portal de Gerenciamento do Windows Azure, criando uma conta de armazenamento, um contêiner de blob e uma assinatura de acesso compartilhado.  
   
  Por padrão, somente o proprietário da conta de armazenamento pode acessar blobs, tabelas e filas nessa conta. Para acessar esses recursos usando esse novo aprimoramento do SQL Server sem compartilhar a chave de acesso da conta de armazenamento, será necessário fazer o seguinte:  

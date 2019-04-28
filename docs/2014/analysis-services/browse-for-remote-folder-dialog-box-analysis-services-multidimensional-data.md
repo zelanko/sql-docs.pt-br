@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 691214181386bb5ec82394dfb6aadc1b0b76bf1f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658061"
 ---
 # <a name="browse-for-remote-folder-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Procurar Pasta Remota (Analysis Services - Dados Multidimensionais)
   A caixa de diálogo **Procurar Pasta Remota** exibe uma lista de pastas de dados e de log disponíveis definidas para uma instância do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. É possível selecionar uma pasta listada ou especificar uma pasta diferente, se necessário. A caixa de diálogo **Procurar Pasta Remota** é exibida executando um das seguintes etapas:  

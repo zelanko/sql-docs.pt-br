@@ -11,11 +11,11 @@ author: Minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: de63ecc80b175385846845f5901fde5eb37ec97c
-ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58434497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775638"
 ---
 # <a name="upgrade-powerpivot-for-sharepoint"></a>Atualizar o PowerPivot para SharePoint
   Este tópico resume as etapas necessárias para atualizar uma implantação do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] para o [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]. As etapas específicas dependem da versão do SharePoint que seu ambiente estiver executando e inclui o suplemento PowerPivot para SharePoint (**spPowerPivot.msi**).  
@@ -160,7 +160,7 @@ ms.locfileid: "58434497"
   
     3.  Clique em **Atualizar Recursos, Serviços, Aplicativos e Soluções**e clique em **OK** para continuar.  
   
-    4.  O seguinte aviso é exibido: "As pastas de trabalho no painel de gerenciamento PowerPivot estão prestes a ser atualizado para a versão mais recente. Quaisquer atualizações feitas nas pastas de trabalho existentes serão perdidas. Deseja continuar?"  
+    4.  O seguinte aviso será exibida: "As pastas de trabalho no painel de gerenciamento PowerPivot estão prestes a ser atualizado para a versão mais recente. Quaisquer atualizações feitas nas pastas de trabalho existentes serão perdidas. Deseja continuar?"  
   
          Esse aviso refere-se às pastas de trabalho no Painel de Gerenciamento PowerPivot que relatam a atividade de atualização de dados. Se você tiver personalizado essas pastas de trabalho, quaisquer alterações feitas nessas pastas de trabalho serão perdidas quando os arquivos existentes forem substituídos por versões mais recentes.  
   
@@ -187,7 +187,7 @@ ms.locfileid: "58434497"
   
     10. A atualização de soluções e recursos no farm pode levar vários minutos para ser concluída. Durante esse tempo, as solicitações de conexão de dados PowerPivot apresentarão falha com erros como "Não é possível atualizar os dados" ou "Erro ao tentar executar a ação solicitada. Tente novamente.” Depois que a atualização for concluída, o servidor ficará disponível e esses erros não ocorrerão mais.  
   
-8.  **Repita o processo** para cada serviço do SQL Server Analysis Services (PowerPivot) no farm: 1) Executar a configuração do SQL Server 2) Executar a ferramenta de configuração do PowerPivot.  
+8.  **Repita o processo** para cada serviço do SQL Server Analysis Services (PowerPivot) no farm: Instalação de 1) executar o SQL Server 2) executar a ferramenta de configuração do PowerPivot.  
   
 9. Verifique se a atualização teve êxito executando as etapas pós-atualização e verificando a versão dos servidores PowerPivot no farm. Para obter mais informações, consulte [Post-upgrade verification tasks](#verify) neste tópico e a seção a seguir.  
   
@@ -203,7 +203,7 @@ ms.locfileid: "58434497"
         Stsadm -o enumdeployments  
         ```  
   
-    2.  Reveja as implantações existentes em busca das seguintes informações: **Tipo** é Retração ou Implantação; **Arquivo** é powerpivotwebapp.wsp ou powerpivotfarm.wsp.  
+    2.  Examine as implantações existentes para as seguintes informações: **Tipo** é Retração ou Implantação; **Arquivo** é powerpivotwebapp.wsp ou powerpivotfarm.wsp.  
   
     3.  Para implantações ou retrações relacionadas a soluções PowerPivot, copie o valor GUID **JobId** e, em seguida, cole o seguinte comando (use os comandos marcar, copiar e colar no menu Editar do Shell para copiar o GUID):  
   

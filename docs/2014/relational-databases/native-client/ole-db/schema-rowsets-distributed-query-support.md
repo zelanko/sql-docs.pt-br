@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 24411ceb757414f1a70f0f10bdf5b2c7660e2cd8
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667592"
 ---
 # <a name="distributed-query-support-in-schema-rowsets"></a>Suporte à consulta distribuída no conjunto de linhas do esquema
   Para dar suporte à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consultas distribuídas, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider **IDBSchemaRowset** interface retorna metadados em servidores vinculados.  

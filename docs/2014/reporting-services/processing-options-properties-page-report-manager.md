@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 524fcaea873128ea4bde6ccdc213a29ec31cc77d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59939152"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657666"
 ---
 # <a name="processing-options-properties-page-report-manager"></a>Página de propriedades Opções de Processamento (Gerenciador de Relatórios)
   Use a página de propriedades Opções de Processamento para definir as propriedades de execução do relatório selecionado. Essas opções determinam quando ocorre processamento de dados para o relatório. Você pode definir essas opções para recuperar dados de relatório nos horários de pouca atividade. Se você tiver um relatório que é acessado frequentemente, pode armazenar temporariamente cópias de cache nele para eliminar tempo de espera, se vários usuários estiverem acessando o mesmo relatório com diferença de minutos.  

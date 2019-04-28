@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2c05e45f5641c2d325c5e7d05472e3881ee7c807
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531164"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728744"
 ---
 # <a name="defining-a-many-to-many-relationship"></a>Definindo uma relação muitos para muitos
   Ao definir uma dimensão, cada fato normalmente se une a somente um membro de dimensão, apesar de um único membro de dimensão poder ser associado a vários fatos diferentes. Por exemplo, cada cliente pode ter muitos pedidos, mas cada pedido pertence a somente um cliente. Na terminologia de banco de dados relacional, isso é chamado de *relação um-para-muitos*. Porém, algumas vezes, um único fato pode se unir a vários membros de dimensão. Na terminologia de banco de dados relacional, isso é chamado de *relação muitos-para-muitos*. Por exemplo, um cliente tem vários motivos para efetuar uma compra, e um motivo de compra pode ser associado a várias compras. Uma tabela de junção é usada para definir os motivos de vendas relacionados a cada compra. Uma dimensão Motivo de Vendas formada por tais relações pode ter, então, vários membros relacionados a uma única transação de vendas. As dimensões muitos para muitos expandem o modelo dimensional além do esquema em estrela clássico e oferecem suporte a análises complexas quando as dimensões não estão relacionadas diretamente a uma tabela de fatos.  

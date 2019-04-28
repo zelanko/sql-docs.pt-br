@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 73ee3f7f86203f4fa0ac2e4da86fecee0e2b4cf5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680441"
 ---
 # <a name="configure-stored-credentials-for-powerpivot-data-refresh-powerpivot-for-sharepoint"></a>Configurar credenciais armazenadas para a atualização de dados PowerPivot (PowerPivot para SharePoint)
   Os trabalhos de atualização de dados PowerPivot podem ser executados em qualquer conta de usuário do Windows, desde que você crie um aplicativo de destino no Serviço de Repositório Seguro para armazenar as credenciais que deseja usar. Da mesma forma, se você desejar fornecer um logon de banco de dados que varie do um usado para importar os dados originalmente no PowerPivot para Excel, poderá mapear essas credenciais para um aplicativo de destino do Serviço de Repositório Seguro e, depois, especificar esse aplicativo de destino em uma agenda de atualização de dados.  

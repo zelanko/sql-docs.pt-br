@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 944385d23b39938a6cb4a28afa16c3d2d67dca23
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658134"
 ---
 # <a name="breaking-changes-to-analysis-services-features-in-sql-server-2014"></a>Alterações recentes em recursos do Analysis Services no SQL Server 2014
   Este tópico descreve as alterações recentes no [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)]. Essas alterações podem interromper aplicativos, scripts ou funcionalidades baseados em versões anteriores do SQL Server.  

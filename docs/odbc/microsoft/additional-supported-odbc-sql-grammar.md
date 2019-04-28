@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b34584a32d5a0adbf95a76415d1141a464b3fe8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658248"
 ---
 # <a name="additional-supported-odbc-sql-grammar"></a>Gramática SQL adicional do ODBC com suporte
 Os drivers ODBC oferecem suporte total a gramática mínima ODBC 2.5 e as seguintes cláusulas na gramática do núcleo e estendidos ODBC 2.5. Informações adicionais podem ser exibidas indo diretamente para o [ALTER tabela instrução](../../odbc/microsoft/alter-table-statement.md), [nomes de correlação](../../odbc/microsoft/correlation-names.md), e [invocação de procedimento](../../odbc/microsoft/procedure-invocation.md) tópicos.  
@@ -40,7 +40,7 @@ Os drivers ODBC oferecem suporte total a gramática mínima ODBC 2.5 e as seguin
   
 -   [Aritmética de data](../../odbc/microsoft/date-arithmetic.md)  
   
--   [Jet: data, hora e literais de carimbo de data/hora](../../odbc/microsoft/jet-date-time-and-timestamp-literals.md)  
+-   [Jet: Data, hora e literais de carimbo de hora](../../odbc/microsoft/jet-date-time-and-timestamp-literals.md)  
   
 -   [Instrução DROP INDEX](../../odbc/microsoft/drop-index-statement.md)  
   
@@ -60,7 +60,7 @@ Os drivers ODBC oferecem suporte total a gramática mínima ODBC 2.5 e as seguin
   
 -   Instrução SELECT (estendido) (incluindo GROUP BY, HAVING e cláusulas UNION)  
   
--   Subconsultas (subseleções) (núcleos)  
+-   Subqueries (SUBSELECTs) (Core)  
   
 -   [Funções escalares](../../odbc/microsoft/scalar-functions.md)  
   

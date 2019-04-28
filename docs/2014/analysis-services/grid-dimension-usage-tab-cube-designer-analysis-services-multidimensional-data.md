@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 04ba5a515c83bc17b858d463cd6718db47b07a24
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730779"
 ---
 # <a name="grid-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>Grade (guia Uso da Dimensão, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel **Grade** da guia **Uso da Dimensão** do Designer de Cubo para exibir e editar relações entre dimensões e grupos de medidas do cubo. Cada relação de dimensão é representada como uma célula em uma grade na qual grupos de medidas são exibidos como colunas e dimensões são exibidas como linhas.  
@@ -27,7 +27,7 @@ ms.locfileid: "48180016"
 |------------|----------------|  
 |**Grupos de medidas**|Selecione os grupos de medidas a serem exibidos como colunas no painel **Grade** . A seleção de **(Mostrar Tudo)** exibe todos os grupos de medidas disponíveis.<br /><br /> Clique em um cabeçalho de coluna de um grupo de medidas selecionado para renomear o grupo de medidas.|  
 |**Dimensions**|Selecione as dimensões de cubo a serem exibidas como linhas no painel **Grade** . A seleção de **(Mostrar Tudo)** exibe todas as dimensões de cubo disponíveis.<br /><br /> Clique em um cabeçalho de linha de uma dimensão selecionada para renomear a dimensão de cubo.|  
-|**(Célula)**|Selecione uma célula e clique no botão de reticências (**...**) para exibir a caixa de diálogo **Definir Relação** e definir uma relação de dimensão entre uma dimensão de cubo e um grupo de medidas. Para obter mais informações sobre a caixa de diálogo **Definir Relações**, consulte [Caixa de diálogo Definir Relações &#40;Analysis Services – Dados Multidimensionais&#41;](define-relationship-dialog-box-analysis-services-multidimensional-data.md).|  
+|**(Cell)**|Selecione uma célula e clique no botão de reticências (**...**) para exibir a caixa de diálogo **Definir Relação** e definir uma relação de dimensão entre uma dimensão de cubo e um grupo de medidas. Para obter mais informações sobre a caixa de diálogo **Definir Relações**, consulte [Caixa de diálogo Definir Relações &#40;Analysis Services – Dados Multidimensionais&#41;](define-relationship-dialog-box-analysis-services-multidimensional-data.md).|  
   
 ## <a name="context-menu"></a>Menu de contexto  
  As seguintes opções estão disponíveis no menu de contexto exibido ao clicar com o botão direito do mouse no painel **Grade** :  
@@ -36,9 +36,9 @@ ms.locfileid: "48180016"
 |------------|----------------|  
 |**Adicionar dimensão do cubo**|Selecione para exibir a caixa de diálogo **Adicionar Dimensão do Cubo** e adicionar referências a dimensões novas ou existentes do banco de dados ao cubo. Para obter mais informações sobre a caixa de diálogo **Adicionar Dimensão do Cubo**, consulte [Caixa de diálogo Adicionar Dimensão do Cubo &#40;Analysis Services – Dados Multidimensionais&#41;](add-cube-dimension-dialog-box-analysis-services-multidimensional-data.md).|  
 |**Novo objeto vinculado**|Selecione para exibir o **Assistente para Objetos Vinculados** e vincular grupos de medidas e dimensões de outros cubos, e para importar ações, KPIs e cálculos ao cubo selecionado. Para obter mais informações sobre o **Assistente para Objetos Vinculados**, consulte [Ajuda F1 do Assistente para Objetos Vinculados](linked-object-wizard-f1-help.md).|  
-|**Recortar**|Observação: Essa opção estará desabilitada.|  
-|**Copiar**|Observação: Essa opção estará desabilitada.|  
-|**Colar**|Observação: Essa opção estará desabilitada.|  
+|**Cut**|Observação: Esta opção está desabilitada.|  
+|**Copiar**|Observação: Esta opção está desabilitada.|  
+|**Colar**|Observação: Esta opção está desabilitada.|  
 |**Delete (excluir)**|Selecione para excluir a dimensão de cubo, grupo de medidas ou relação de dimensão selecionada do cubo.|  
 |**Renomear**|Selecione para renomear a dimensão de cubo, grupo de medidas ou relação de dimensão selecionada.|  
 |**Propriedades**|Selecione para exibir a janela **Propriedades** do [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para a dimensão de cubo, grupo de medidas ou relação de dimensão selecionada.|  

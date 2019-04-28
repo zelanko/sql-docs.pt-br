@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cb2a08d874dd022fdad3646ea263d34dd65b9739
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62677023"
 ---
 # <a name="view-the-policy-based-management-facets-on-a-sql-server-object"></a>Exibir as facetas de Gerenciamento Baseado em Políticas em um objeto do SQL Server
   Este tópico descreve como exibir todas as facetas do Gerenciamento Baseado em Políticas aplicadas a um objeto do SQL Server específico no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -45,7 +45,7 @@ ms.locfileid: "54100821"
   
 1.  No Pesquisador de Objetos, clique com o botão direito do mouse em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um objeto de instância, banco de dados ou objeto de banco de dados e clique em **Facetas**.  
   
-2.  No **exibir facetas -**_object_name_ na caixa de **faceta** , selecione uma faceta para exibir suas propriedades. Para obter mais informações sobre as opções disponíveis nesta caixa de diálogo, consulte [View Facets Dialog Box](view-facets-dialog-box.md).  
+2.  Na caixa de diálogo **Exibir Facetas -**_nome_do_objeto_, na lista **Faceta**, selecione uma faceta para exibir suas propriedades. Para obter mais informações sobre as opções disponíveis nesta caixa de diálogo, consulte [View Facets Dialog Box](view-facets-dialog-box.md).  
   
 3.  Quando terminar, clique em **OK**.  
   

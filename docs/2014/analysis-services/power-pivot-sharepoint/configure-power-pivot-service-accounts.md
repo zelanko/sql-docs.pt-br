@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2883427b45cb408323db91935ebbccee0792825f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526656"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749832"
 ---
 # <a name="configure-powerpivot-service-accounts"></a>Configurar contas de serviço PowerPivot
   Uma instalação do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] inclui dois serviços que oferecem suporte a operações de servidor. O **SQL Server Analysis Services (PowerPivot)** é um serviço do Windows que fornece processamento de dados PowerPivot e suporte a consultas em um servidor de aplicativos. A conta de logon desse serviço sempre é especificada durante a Instalação do SQL Server, quando você instala o Analysis Services no modo integrado do SharePoint.  
@@ -151,7 +151,7 @@ ms.locfileid: "52526656"
   
 11. Digite o nome da conta que é usada para o pool de aplicativos do serviço PowerPivot e clique em **OK**.  
   
-##  <a name="expired"></a> Solução de problemas: resolver erros HTTP 503 devido a senhas expiradas para Administração Central ou serviço do aplicativo Web do Microsoft SharePoint Foundation  
+##  <a name="expired"></a> Solução de problemas: Resolver HTTP serviço do aplicativo Web de 503 erros devido a senhas expiradas para Administração Central ou o SharePoint Foundation  
  Se o serviço da Administração Central ou o serviço do aplicativo Web do Microsoft SharePoint Foundation deixar de funcionar devido a uma redefinição de conta ou expiração de senha, você receberá a mensagem de erro HTTP 503 "Serviço não disponível" ao tentar abrir a Administração Central do SharePoint ou um site do SharePoint. Siga estas etapas para colocar o servidor online novamente. Quando a Administração Central estiver disponível, você poderá continuar atualizando informações de conta expiradas.  
   
 1.  Em Ferramentas administrativas, clique em **Gerenciador dos Serviços de Informações da Internet**.  

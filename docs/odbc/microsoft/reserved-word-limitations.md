@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 531a100fed389264d9af6a1733636792a3dc7920
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62660938"
 ---
 # <a name="reserved-keyword-limitations"></a>Limitações da palavra-chave reservada
 
@@ -31,5 +31,5 @@ Uma lista de palavras-chave reservada de ODBC está disponível em:
 
 - [Palavras-chave reservadas de ODBC](https://docs.microsoft.com/sql/odbc/reference/appendixes/reserved-keywords).
 
-- No *guia de referência do programador de ODBC*, consulte [gramática de SQL do apêndice c:](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-c-sql-grammar).
+- No *guia de referência do programador de ODBC*, consulte [apêndice c: Gramática SQL](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-c-sql-grammar).
 

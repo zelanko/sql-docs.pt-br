@@ -14,25 +14,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 764884f73cb554794edfb998f2c8d7b8f8d7d1fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680410"
 ---
 # <a name="connect-to-a-data-source-ssas"></a>Conectar com uma fonte de dados (SSAS)
   Esta página do **Assistente de Importação de Tabela** o habilita a criar uma nova conexão com várias fontes de dados, como bancos de dados relacionais, feeds de dados e arquivos. Para acessar o assistente do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], no menu **Modelo** , clique em **Importar de Fonte de Dados**.  
   
- Para conectar uma fonte de dados, você deve ter o provedor apropriado instalado no computador. Você também deve ter o provedor apropriado instalado no servidor de banco de dados de espaço de trabalho. Para servidores de 32 bits (x86), provedores de 32 bits devem ser instalados. Para servidores de 64 bits (x64), provedores de 64 bits devem ser instalados.  
+ Para conectar uma fonte de dados, você deve ter o provedor apropriado instalado no computador. Você também deve ter o provedor apropriado instalado no servidor de banco de dados de workspace. Para servidores de 32 bits (x86), provedores de 32 bits devem ser instalados. Para servidores de 64 bits (x64), provedores de 64 bits devem ser instalados.  
   
- [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] sempre é executado em um processo de 32 bits, independentemente da arquitetura. Ao executar [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] em um computador de 64 bits, você deve estar consciente do seguinte ao instalar provedores de dados:  
+ [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] é sempre executado em um processo de 32 bits, independentemente da arquitetura. Ao executar [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] em um computador de 64 bits, você deve estar consciente do seguinte ao instalar provedores de dados:  
   
 -   Para provedores que dão suporte à instalação lado a lado de provedores de 32 bits e de 64 bits, você deve instalar ambos os provedores.  
   
--   Para o provedor ACE, você deve instalar a versão de 64 bits do provedor. Como o Office instala o provedor de ACE automaticamente, você não deve executar uma versão de 32 bits do Microsoft Office em um computador de 64 bits que hospeda o servidor de banco de dados de espaço de trabalho.  
+-   Para o provedor ACE, você deve instalar a versão de 64 bits do provedor. Como o Office instala o provedor de ACE automaticamente, você não deve executar uma versão de 32 bits do Microsoft Office em um computador de 64 bits que hospeda o servidor de banco de dados de workspace.  
   
-     O provedor ACE é usado para importar de arquivos de Texto, do Excel e do Access. Se o suporte a essas fontes de dados não for necessário, você poderá executar uma versão de 32 bits do Microsoft Office em um computador que executa um servidor de banco de dados de espaço de trabalho de 64 bits.  
+     O provedor ACE é usado para importar de arquivos de Texto, do Excel e do Access. Se o suporte a essas fontes de dados não for necessário, você poderá executar uma versão de 32 bits do Microsoft Office em um computador que executa um servidor de banco de dados de workspace de 64 bits.  
   
--   Para outros provedores que não dão suporte à instalação lado a lado de provedores de 32 bits e de 64 bits, instale o provedor de 32 bits. Se apenas computadores de 64 bits estiverem disponíveis, use um computador remoto com um provedor de 64 bits instalado como o servidor de banco de dados de espaço de trabalho.  
+-   Para outros provedores que não dão suporte à instalação lado a lado de provedores de 32 bits e de 64 bits, instale o provedor de 32 bits. Se apenas computadores de 64 bits estiverem disponíveis, use um computador remoto com um provedor de 64 bits instalado como o servidor de banco de dados de workspace.  
   
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 24d35372e81b131ce9053649bc964edd9251efa4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680121"
 ---
 # <a name="copy-and-paste-data-ssas-tabular"></a>Copiar e colar dados (SSAS tabular)
   É possível copiar dados de tabelas de aplicativos externos e colá-los em uma nova tabela ou uma existente no designer de modelo. Os dados colados da Área de Transferência devem estar em formato HTML, por exemplo, dados que são copiados de Excel ou Word. O designer de modelo detectará e aplicará automaticamente os tipos de dados aos dados colados. Você também pode modificar manualmente o tipo de dados ou a formatação de exibição de uma coluna.  
@@ -87,8 +87,8 @@ ms.locfileid: "48129296"
  Mostra um exemplo do conteúdo da Área de Transferência. Os dados existentes na tabela de destino serão excluídos e as novas linhas serão inseridas na tabela.  
   
 ## <a name="see-also"></a>Consulte também  
- [Importar dados &#40;Tabular do SSAS&#41;](import-data-ssas-tabular.md)   
- [Fontes de dados com suporte no &#40;Tabular do SSAS&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
- [Defina o tipo de dados de uma coluna &#40;Tabular do SSAS&#41;](tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)  
+ [Importar dados &#40;SSAS de Tabela&#41;](import-data-ssas-tabular.md)   
+ [Fontes de dados com suporte &#40;SSAS de Tabela&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
+ [Definir o tipo de dados de uma coluna &#40;SSAS de Tabela&#41;](tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)  
   
   

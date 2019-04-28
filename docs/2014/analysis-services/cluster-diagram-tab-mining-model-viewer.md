@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bd66205c6f7a03d1bba0783aabbed3936b25e691
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681024"
 ---
 # <a name="cluster-diagram-tab-mining-model-viewer"></a>Guia Diagrama de Cluster (Visualizador do Modelo de Mineração)
   A guia **Diagrama de Cluster** fornece uma exibição gráfica de todos os clusters que o modelo de clustering contém.  
   
- **Para obter mais informações:** [Algoritmo MSC](data-mining/microsoft-clustering-algorithm.md), [Procurar um modelo usando o Visualizador de Cluster da Microsoft](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **Para obter mais informações:** [Algoritmo Microsoft Clustering](data-mining/microsoft-clustering-algorithm.md), [procurar um modelo usando o Visualizador de Cluster da Microsoft](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## <a name="options"></a>Opções  
  **Atualizar conteúdo do Visualizador**  
@@ -71,7 +71,7 @@ ms.locfileid: "48184188"
  Ajuste quantos links são mostrados entre clusters, movendo o controle deslizante para cima ou para baixo. Abaixar o controle deslizante deixa somente as associações mais fortes entre clusters.  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visualizadores do modelo de mineração &#40; Designer do modelo de mineração de dados &#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizadores do modelo de Mineração de dados](data-mining/data-mining-model-viewers.md)  
   

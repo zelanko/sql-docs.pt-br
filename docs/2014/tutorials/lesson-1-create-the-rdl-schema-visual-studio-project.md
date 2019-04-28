@@ -11,17 +11,17 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: c34062acefc2dfd847790a39cea35b03727f49ff
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678514"
 ---
 # <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>Lição 1: Criar o projeto do Visual Studio de esquema RDL
   Para este tutorial, você criará um aplicativo de console simples. Este tutorial presume que você está desenvolvendo em [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)].  
   
 > [!NOTE]  
->  Ao acessar o serviço Web Servidor de Relatório que está em execução no [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] com Advanced Services, é preciso incluir "_SQLExpress" no caminho do "ReportServer". Por exemplo:  
+>  Ao acessar o serviço Web Servidor de Relatório que está em execução no [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] com Advanced Services, é preciso incluir "_SQLExpress" no caminho do "ReportServer". Por exemplo:   
 >   
 >  `http://myserver/reportserver_sqlexpress/reportservice2010.asmx"`  
   
@@ -197,7 +197,7 @@ ms.locfileid: "56018907"
     ```  
   
 ## <a name="next-lesson"></a>Próxima lição  
- Na próxima lição, você usará a Ferramenta de Definição de Esquema XML (Xsd.exe) para gerar classes com base no esquema RDL e incluí-las no seu projeto. Consulte [lição 2: Gerar Classes de esquema RDL usando a ferramenta xsd](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md).  
+ Na próxima lição, você usará a Ferramenta de Definição de Esquema XML (Xsd.exe) para gerar classes com base no esquema RDL e incluí-las no seu projeto. Veja a [Lição 2: Gerar Classes de esquema RDL usando a ferramenta xsd](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Atualizando relatórios por meio de Classes geradas a partir do esquema RDL &#40;Tutorial do SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

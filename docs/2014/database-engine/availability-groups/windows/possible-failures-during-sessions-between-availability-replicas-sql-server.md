@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9583ae760a53e3d3ab68f69b21317b370df726b7
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789173"
 ---
 # <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>Possíveis falhas durante sessões entre réplicas de disponibilidade (SQL Server)
   Problemas físicos, do sistema operacional ou do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] podem provocar uma falha em uma sessão entre duas réplicas de disponibilidade. Uma réplica de disponibilidade não verifica regularmente os componentes dos quais o Sqlservr.exe depende para verificar se estão funcionando corretamente ou se houve falha. Porém, para alguns tipos de falhas, o componente afetado informa um erro ao Sqlservr.exe. Um erro informado por outro componente é chamado um *erro de hardware*. Para detectar outras falhas, que de outra forma passariam despercebidas, o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] implementa seu próprio mecanismo de tempo limite de sessão. Especifica o tempo limite da sessão, em segundos. Esse tempo limite é o tempo máximo que uma instância de servidor espera para receber uma mensagem PING de outra instância antes de considerá-la desconectada. Quando um tempo limite de sessão ocorre entre duas réplicas de disponibilidade, as réplicas de disponibilidade pressupõem que ocorreu uma falha e declaram um *erro de software*.  

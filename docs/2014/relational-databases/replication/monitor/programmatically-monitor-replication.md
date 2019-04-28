@@ -29,11 +29,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 949c8585b3886d0d3f422e76d031b390d248e9a4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667242"
 ---
 # <a name="programmatically-monitor-replication"></a>Monitore programaticamente a replicação
   O Replication Monitor é uma ferramenta gráfica que permite monitorar uma topologia de replicação. É possível acessar os mesmos dados de monitoração programaticamente usando o RMO (Replication Management Objects) ou procedimentos armazenados de replicação do [!INCLUDE[tsql](../../../includes/tsql-md.md)] . Esses objetos permitem programar as seguintes tarefas:  

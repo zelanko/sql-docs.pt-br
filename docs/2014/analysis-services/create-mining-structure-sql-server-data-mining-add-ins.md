@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2788c663553d8b01e6a047be70f101dc364d6042
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679900"
 ---
 # <a name="create-mining-structure-sql-server-data-mining-add-ins"></a>Criar estrutura de mineração (Suplementos de Mineração de Dados do SQL Server)
   ![O botão Criar estrutura de mineração, faixa de opções mineração de dados](media/dmc-createstruct.gif "botão Criar estrutura de mineração, faixa de opções mineração de dados")  
@@ -110,7 +110,7 @@ ms.locfileid: "52542974"
   
      Caso não tenha certeza se precisará usar a coluna, você sempre poderá incluí-la na estrutura de mineração e depois criar um modelo de mineração que não utilize a coluna. Por exemplo, é possível incluir uma coluna de número de telefone nos dados para referência posterior, mas criar um modelo de clustering que ignore números de telefone. Após a criação dos clusters, você pode criar uma consulta que retorne os números de telefone das pessoas que pertençam a um cluster específico.  
   
--   Todos os algoritmos requerem uma **chave** coluna. Os valores na coluna Key devem ser exclusivos. Um **Key Time** coluna é necessária apenas para previsão ou de série temporal de modelos. para obter informações sobre a ferramenta de configuração e recursos adicionais.  
+-   Todos os algoritmos requerem uma **chave** coluna. Os valores na coluna Key devem ser exclusivos. Um **Key Time** coluna é necessária apenas para previsão ou de série temporal de modelos. .  
   
 ### <a name="requirements"></a>Requisitos  
  Para criar uma estrutura de mineração de dados, você deve ter uma conexão com uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Uma conexão será necessária mesmo que você esteja trabalhando com estruturas temporárias. Para obter mais informações sobre como criar ou alterar uma conexão, consulte [conectar-se a fonte de dados &#40;cliente de mineração de dados para Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  

@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 85c701c583705a2d2c0e7438832a5074e60c337a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666773"
 ---
 # <a name="use-sqlcmd-with-scripting-variables"></a>Usar sqlcmd com variáveis de script
   As variáveis usadas em scripts normalmente são chamadas de variáveis de script. As variáveis de script habilitam um script ser usado em vários cenários. Por exemplo, se você desejar executar um script em vários servidores, em vez de modificar o script para cada servidor, pode usar uma variável de script para o nome do servidor. Alterando o nome do servidor fornecido para a variável de script, o mesmo script pode ser executado em diferentes servidores.  
@@ -111,9 +111,9 @@ ms.locfileid: "48113776"
 |SQLCMDWORKSTATION|-H|R|"ComputerName"|  
 |SQLCMDDBNAME|-d|R|""|  
 |SQLCMDLOGINTIMEOUT|-l|R/W|"8" (segundos)|  
-|SQLCMDSTATTIMEOUT|-t|R/W|"0" = espere indefinidamente|  
+|SQLCMDSTATTIMEOUT|-T|R/W|"0" = espere indefinidamente|  
 |SQLCMDHEADERS|-H|R/W|"0"|  
-|SQLCMDCOLSEP|-S|R/W|" ."|  
+|SQLCMDCOLSEP|-S|R/W|" "|  
 |SQLCMDCOLWIDTH|-w|R/W|"0"|  
 |SQLCMDPACKETSIZE|-A|R|"4096"|  
 |SQLCMDERRORLEVEL|-M|R/W|"0"|  

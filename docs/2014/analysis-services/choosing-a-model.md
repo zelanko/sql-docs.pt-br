@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d91e282ebfe0299fd6015530e8af1b6d10e6547
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681093"
 ---
 # <a name="choosing-a-model"></a>Escolhendo um modelo
   **Algoritmo de mineração:** O data mining *algoritmo* é o mecanismo que cria padrões a partir de dados. Esse algoritmo define o modo como os dados são contados, como as relações são derivadas e como os padrões são armazenados. A seleção de um algoritmo depende parcialmente do tipo de dados que você deseja analisar. Por exemplo, alguns algoritmos só podem funcionar com números contínuos, enquanto que outros funcionam melhor com um número limitado de valores distintos.  

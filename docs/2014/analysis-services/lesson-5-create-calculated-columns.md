@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: adc7b7bf3335c8c9c7530d18f4d553492cfe9e1b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134032"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728629"
 ---
 # <a name="lesson-6-create-calculated-columns"></a>Lição 6: Criar colunas calculadas
   Nesta lição, você criará novos dados no modelo adicionando colunas calculadas. Uma coluna calculada se baseia nos dados que já existem no modelo. Para saber mais, consulte [Colunas calculadas &#40;SSAS Tabular&#41;](tabular-models/ssas-calculated-columns.md).  
@@ -26,7 +26,7 @@ ms.locfileid: "48134032"
  Tempo estimado para concluir esta lição: **15 minutos**  
   
 ## <a name="prerequisites"></a>Prerequisites  
- Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de realizar as tarefas desta lição, você deverá ter concluído a lição anterior: [Lição 5: Criar relações](lesson-4-create-relationships.md).  
+ Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [Lição 5: Criar relações](lesson-4-create-relationships.md).  
   
 ## <a name="create-calculated-columns"></a>Criar colunas calculadas  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48134032"
      Os valores são preenchidos em todas as linhas da coluna calculada. Se você rolar para baixo na tabela, verá que as linhas podem ter valores diferentes para essa coluna baseados nos dados que estão em cada linha.  
   
     > [!NOTE]  
-    >  Se você receber um erro, verifique se os nomes de coluna na fórmula correspondem aos nomes de coluna alterados na [Lição 3: Renomear colunas](rename-columns.md).  
+    >  Se você receber um erro, verifique se os nomes de coluna na fórmula correspondem aos nomes de coluna alterados em [lição 3: Renomear colunas](rename-columns.md).  
   
 5.  Renomeie esta coluna como `Month Calendar`.  
   

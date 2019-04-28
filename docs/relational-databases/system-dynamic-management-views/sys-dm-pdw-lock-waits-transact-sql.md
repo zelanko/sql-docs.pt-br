@@ -14,11 +14,11 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: a376ac534182f5ebdae8a3af5e32f9c4a536f8aa
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62668203"
 ---
 # <a name="sysdmpdwlockwaits-transact-sql"></a>sys.dm_pdw_lock_waits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "56014117"
 |-----------------|---------------|-----------------|-----------|  
 |wait_id|**bigint**|Posição da solicitação na lista de espera.|ordinal com base em 0. Ele não é exclusivo em todas as entradas de espera.|  
 |session_id|**nvarchar(32)**|ID da sessão na qual ocorreu o estado de espera.|Consulte session_id [DM pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
-|Tipo|**nvarchar(255)**|Tipo de espera que essa entrada representa.|Valores possíveis:<br /><br /> Compartilhado<br /><br /> SharedUpdate<br /><br /> ExclusiveUpdate<br /><br /> Exclusive|  
+|type|**nvarchar(255)**|Tipo de espera que essa entrada representa.|Valores possíveis:<br /><br /> Compartilhado<br /><br /> SharedUpdate<br /><br /> ExclusiveUpdate<br /><br /> Exclusive|  
 |object_type|**nvarchar(255)**|Tipo de objeto que é afetado pelo tempo de espera.|Valores possíveis:<br /><br /> OBJECT<br /><br /> DATABASE<br /><br /> SYSTEM<br /><br /> SCHEMA<br /><br /> APPLICATION|  
 |object_name|**nvarchar(386)**|Nome ou GUID do objeto especificado que foi afetado por tempo de espera.|Tabelas e exibições são exibidas com nomes de três partes.<br /><br /> Índices e estatísticas são exibidas com nomes de quatro partes.<br /><br /> Nomes de entidades de segurança e bancos de dados são nomes de cadeia de caracteres.|  
 |request_id|**nvarchar(32)**|ID da solicitação em que ocorreu o estado de espera.|ID da solicitação.<br /><br /> Este é um GUID para solicitações de carga.|  

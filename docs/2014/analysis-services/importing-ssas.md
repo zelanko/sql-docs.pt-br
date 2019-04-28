@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 59caffb94baf8ae4a991bf793a3b77386bd1075f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730166"
 ---
 # <a name="importing-ssas"></a>Importando (SSAS)
   Esta página do **Assistente de Importação de Tabela** permite exibir o progresso da operação de importação. Para acessar o assistente do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], no menu **Modelo** , clique em **Importar de Fonte de Dados**.  
@@ -27,7 +27,7 @@ ms.locfileid: "48224809"
  **Detalhes**  
  Exibe as informações a seguir de cada operação de importação de dados.  
   
-|coluna|Description|  
+|coluna|Descrição|  
 |------------|-----------------|  
 |**Item de trabalho**|Exibe o nome da tabela ou exibição que está sendo importada.|  
 |**Status**|Indica se a tabela ou exibição foi importada com êxito e o número de linhas que foram importadas.|  

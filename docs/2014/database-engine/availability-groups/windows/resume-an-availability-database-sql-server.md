@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2b85a2b6e7d574c1752eba84d1bfc2bce8dbafc6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788713"
 ---
 # <a name="resume-an-availability-database-sql-server"></a>Retomar um banco de dados de disponibilidade (SQL Server)
   Você pode retomar um banco de dados de disponibilidade suspenso no [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. A retomada de um banco de dados suspenso coloca o banco de dados no estado SYNCHRONIZING. A retomada do banco de dados primário também retoma todos os bancos de dados secundários que foram suspensos devido à suspensão do banco de dados primário. Se um banco de dados secundário foi suspenso localmente, na instância de servidor que hospeda a réplica secundária, o banco de dados secundário deverá ser retomado localmente. Quando um determinado banco de dados secundário e o banco de dados primário correspondente estiverem no estado SYNCHRONIZING, a sincronização de dados é retomada no banco de dados secundário.  
@@ -96,7 +96,7 @@ ms.locfileid: "48051046"
 ##  <a name="PowerShellProcedure"></a> Usando o PowerShell  
  **Para retomar um banco de dados secundário**  
   
-1.  Altere o diretório (`cd`) para a instância do servidor que hospeda a réplica cujo banco de dados que você deseja retomar. Para obter mais informações, consulte [Pré-requisitos](#Prerequisites)anteriormente neste tópico.  
+1.  Altere o diretório (`cd`) para a instância do servidor que hospeda a réplica cujo banco de dados você deseja retomar. Para obter mais informações, consulte [Pré-requisitos](#Prerequisites)anteriormente neste tópico.  
   
 2.  Use o cmdlet **Resume-SqlAvailabilityDatabase** para retomar o grupo de disponibilidade.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "48051046"
     ```  
   
     > [!NOTE]  
-    >  Para exibir a sintaxe de um cmdlet, use o `Get-Help` cmdlet no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ambiente do PowerShell. Para obter mais informações, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Para exibir a sintaxe de um cmdlet, use o cmdlet `Get-Help` no ambiente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para obter mais informações, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Para configurar e usar o provedor do SQL Server PowerShell**  
   

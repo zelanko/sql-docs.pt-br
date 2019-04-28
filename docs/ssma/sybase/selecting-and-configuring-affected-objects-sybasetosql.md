@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 48d5305854d214e61036e00ca23a94b85313138a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667503"
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>Selecionar e configurar os objetos afetados (SybaseToSQL)
 Nessa página, você pode selecionar tabelas e chaves estrangeiras, as alterações no qual devem ser comparadas ao SSMA verifica os resultados da execução para os objetos escolhidos na etapa anterior. Além disso, você pode personalizar os parâmetros de verificação.  

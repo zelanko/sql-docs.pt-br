@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 663b12f2e83de016d3f1799536b8a3ed674ef544
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680859"
 ---
 # <a name="cluster-profiles-tab-mining-model-viewer"></a>Guia Perfis de Cluster (Visualizador do Modelo de Mineração)
   Use a guia **Perfis de Cluster** para obter uma exibição global dos clusters que o algoritmo descobriu dentro de um modelo de clustering. A guia exibe cada atributo, junto com a distribuição do atributo em cada cluster.  
   
- **Para obter mais informações:** [Algoritmo MSC](data-mining/microsoft-clustering-algorithm.md), [Procurar um modelo usando o Visualizador de Cluster da Microsoft](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **Para obter mais informações:** [Algoritmo Microsoft Clustering](data-mining/microsoft-clustering-algorithm.md), [procurar um modelo usando o Visualizador de Cluster da Microsoft](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## <a name="options"></a>Opções  
  **Atualizar conteúdo do Visualizador**  
@@ -51,7 +51,7 @@ ms.locfileid: "48196063"
  Esta seção contém uma coluna para cada cluster no modelo. Para cada atributo, o histograma mostra a distribuição dos valores no atributo somente para esse cluster. O gráfico também tem uma coluna para **População**, que também usa histogramas para exibir a distribuição de valores para cada atributo, mas para todos os casos no modelo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visualizadores do modelo de mineração &#40; Designer do modelo de mineração de dados &#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizadores do modelo de Mineração de dados](data-mining/data-mining-model-viewers.md)  
   

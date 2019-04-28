@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7f96156bc22f730a8e550ef6007bb45401284f60
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666682"
 ---
 # <a name="create-a-new-database-diagram-visual-database-tools"></a>Criar um novo diagrama de banco de dados (Visual Database Tools)
   Você pode utilizar o Pesquisador de Objetos para criar novos diagramas de banco de dados. Os diagramas de banco de dados exibem graficamente a estrutura do banco de dados. Com os diagramas de banco de dados você pode criar e alterar tabelas, colunas, relações e chaves. Além disso, pode alterar índices e restrições.  
