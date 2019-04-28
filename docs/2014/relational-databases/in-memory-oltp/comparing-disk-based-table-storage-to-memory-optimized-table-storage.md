@@ -11,16 +11,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: be224cdd8c3221f1e7796e15c9c0132aeb99bcd7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62990668"
 ---
 # <a name="comparing-disk-based-table-storage-to-memory-optimized-table-storage"></a>Comparando o armazenamento da tabela baseada em disco com o armazenamento da tabela com otimização de memória
   
   
-|Categorias|Tabela com base em disco|Tabela durável com otimização de memória|  
+|Categories|Tabela com base em disco|Tabela durável com otimização de memória|  
 |----------------|-----------------------|-------------------------------------|  
 |DDL|As informações de metadados são armazenadas em tabelas do sistema no grupo de arquivos primário do banco de dados e podem sem acessadas por meio de exibições de catálogo.|As informações de metadados são armazenadas em tabelas do sistema no grupo de arquivos primário do banco de dados e podem sem acessadas por meio de exibições de catálogo.|  
 |Estrutura|As linhas são armazenadas em 8 mil páginas. Uma página armazena apenas linhas da mesma tabela.|As linhas são armazenadas como linhas individuais. Não há nenhuma estrutura de página. Duas linhas consecutivas em um arquivo de dados podem pertencer a diferentes tabelas com otimização de memória.|  

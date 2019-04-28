@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f21e65fab4cdedb37b2971e037f9b24c3b29fcd1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62957131"
 ---
 # <a name="splinkedservers-transact-sql"></a>sp_linkedservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,14 +44,14 @@ sp_linkedservers
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**SRV_NAME**|**sysname**|Nome do servidor vinculado.|  
 |**SRV_PROVIDERNAME**|**nvarchar(** 128 **)**|Nome amigável do provedor de OLE DB que gerencia o acesso ao servidor vinculado especificado.|  
 |**SRV_PRODUCT**|**nvarchar(** 128 **)**|Nome de produto do servidor vinculado.|  
-|**SRV_DATASOURCE**|**nvarchar (** 4000 **)**|Propriedade da fonte de dados OLE DB que corresponde ao servidor vinculado especificado.|  
-|**SRV_PROVIDERSTRING**|**nvarchar (** 4000 **)**|Propriedade de cadeia de caracteres do provedor OLE DB que corresponde ao servidor vinculado.|  
-|**SRV_LOCATION**|**nvarchar (** 4000 **)**|Propriedade de local OLE DB que corresponde ao servidor vinculado especificado.|  
+|**SRV_DATASOURCE**|**nvarchar(** 4000 **)**|Propriedade da fonte de dados OLE DB que corresponde ao servidor vinculado especificado.|  
+|**SRV_PROVIDERSTRING**|**nvarchar(** 4000 **)**|Propriedade de cadeia de caracteres do provedor OLE DB que corresponde ao servidor vinculado.|  
+|**SRV_LOCATION**|**nvarchar(** 4000 **)**|Propriedade de local OLE DB que corresponde ao servidor vinculado especificado.|  
 |**SRV_CAT**|**sysname**|Propriedade de catálogo OLE DB que corresponde ao servidor vinculado especificado.|  
   
 ## <a name="permissions"></a>Permissões  

@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc1a800ff61bde8e4d446462143bf0d333a16fe7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62817122"
 ---
 # <a name="iharticles-transact-sql"></a>IHarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +41,14 @@ ms.locfileid: "52802608"
 |**publisher_id**|**smallint**|A ID do publicador não SQL Server.|  
 |**creation_script**|**nvarchar(255)**|O script de esquema para o artigo.|  
 |**del_cmd**|**nvarchar(255)**|O tipo de comando de replicação usado ao replicar exclusões com artigos de tabela. Para obter mais informações, consulte [Especificar como as alterações são propagadas para artigos transacionais](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
-|**filtro**|**int**|Esta coluna não é usada e só é incluída para tornar a [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) modo de exibição da **IHarticles** tabela compatível com o [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) exibição usada para SQL Server (de artigos [sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)).|  
+|**filter**|**int**|Esta coluna não é usada e só é incluída para tornar a [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) modo de exibição da **IHarticles** tabela compatível com o [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) exibição usada para SQL Server (de artigos [sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)).|  
 |**filter_clause**|**ntext**|A cláusula WHERE do artigo, usada para filtragem horizontal e gravação de um Transact-SQL padrão que pode ser interpretado por um Editor não SQL.|  
 |**ins_cmd**|**nvarchar(255)**|O tipo de comando de replicação usado ao replicar inserções com artigos de tabela. Para obter mais informações, consulte [Especificar como as alterações são propagadas para artigos transacionais](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
 |**pre_creation_cmd**|**tinyint**|O comando a ser executado antes que o instantâneo inicial seja aplicado quando um objeto com o mesmo nome já existir no Assinante.<br /><br /> **0** = nenhum - um comando não é executado.<br /><br /> **1** = DROP - descartar a tabela de destino.<br /><br /> **2** = DELETE - excluir dados da tabela de destino.<br /><br /> **3** = TRUNCATE - truncar a tabela de destino.|  
 |**status**|**tinyint**|O bitmask de opções e status do artigo, que pode ser o resultado OR lógico bit a bit de um ou mais destes valores:<br /><br /> **0** = sem propriedades adicionais.<br /><br /> **1** = ativo.<br /><br /> **8** = incluir o nome da coluna em instruções INSERT.<br /><br /> **16** = usar instruções com parâmetros.<br /><br /> Por exemplo, um artigo ativo que usa instruções com parâmetros teria um valor 17 nessa coluna. Um valor 0 significa que o artigo está inativo e nenhuma propriedade adicional está definida.|  
 |**type**|**tinyint**|O tipo de artigo:<br /><br /> **1** = artigo com base em log.|  
 |**upd_cmd**|**nvarchar(255)**|O tipo de comando de replicação usado ao replicar atualizações com artigos de tabela. Para obter mais informações, consulte [Especificar como as alterações são propagadas para artigos transacionais](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
-|**schema_option**|**binary(8)**|O bitmap da opção schema generation para o artigo determinado, que pode ser o resultado OR lógico bit a bit de um ou mais desses valores:<br /><br /> **0x00** = desabilitar geração de script pelo Snapshot Agent e usar o CreationScript fornecido.<br /><br /> **0x01** = gerar a criação do objeto (CREATE TABLE, CREATE PROCEDURE e assim por diante).<br /><br /> **0x10** = gerar um índice clusterizado correspondente.<br /><br /> **0x40** = gerar os índices não clusterizados correspondentes.<br /><br /> **0x80** = incluir integridade referencial declarada nas chaves primárias.<br /><br /> **0x1000** = replica agrupamento em nível de coluna. Observação: Essa opção é definida por padrão para Publicadores Oracle para habilitar comparações entre maiúsculas e minúsculas.<br /><br /> **0x4000** = replicar chaves exclusivas definidas em um artigo de tabela.<br /><br /> **0x8000** = replicar uma chave primária e chaves exclusivas em uma tabela do artigo como restrições usando instruções ALTER TABLE.|  
+|**schema_option**|**binary(8)**|O bitmap da opção schema generation para o artigo determinado, que pode ser o resultado OR lógico bit a bit de um ou mais desses valores:<br /><br /> **0x00** = desabilitar geração de script pelo Snapshot Agent e usar o CreationScript fornecido.<br /><br /> **0x01** = gerar a criação do objeto (CREATE TABLE, CREATE PROCEDURE e assim por diante).<br /><br /> **0x10** = gerar um índice clusterizado correspondente.<br /><br /> **0x40** = gerar os índices não clusterizados correspondentes.<br /><br /> **0x80** = incluir integridade referencial declarada nas chaves primárias.<br /><br /> **0x1000** = replica agrupamento em nível de coluna. Observação: Essa opção é definida por padrão para Publicadores Oracle para habilitar comparações diferenciam maiusculas de minúsculas.<br /><br /> **0x4000** = replicar chaves exclusivas definidas em um artigo de tabela.<br /><br /> **0x8000** = replicar uma chave primária e chaves exclusivas em uma tabela do artigo como restrições usando instruções ALTER TABLE.|  
 |**dest_owner**|**sysname**|O proprietário da tabela no banco de dados de destino.|  
 |**dest_table**|**sysname**|O nome da tabela de destino.|  
 |**tablespace_name**|**nvarchar(255)**|Identifica o espaço de tabela usado pela tabela de log para o artigo.|  
@@ -71,6 +71,6 @@ ms.locfileid: "52802608"
  [Tabelas de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Exibições de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [SP_CHANGEARTICLE &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)  
+ [sp_changearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)  
   
   

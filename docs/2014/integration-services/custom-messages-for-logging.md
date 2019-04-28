@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c479c8e7026e549c33b838c39017c9063894b607
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828773"
 ---
 # <a name="custom-messages-for-logging"></a>Mensagens personalizadas para log
   O [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece um rico conjunto de eventos personalizados para gravação de entradas de log para pacotes e diversas tarefas. Você pode usar essas entradas para salvar informações detalhadas sobre progresso de execução, resultados e problemas registrando eventos predefinidos ou mensagens definidas pelo usuário para análise posterior. Por exemplo, você pode registrar quando uma inserção em massa é iniciada ou finalizada para identificar problemas de desempenho na execução do pacote.  
@@ -116,7 +116,7 @@ ms.locfileid: "58389494"
 |Entrada de log|Descrição|  
 |---------------|-----------------|  
 |`ExecuteDTS80PackageTaskBegin`|Indica que a tarefa começou a ser executada em um pacote DTS 2000.|  
-|`ExecuteDTS80PackageTaskEnd`|Indica que a tarefa foi concluída.<br /><br /> Observação: O pacote DTS 2000 pode continuar sendo executado após a conclusão da tarefa.|  
+|`ExecuteDTS80PackageTaskEnd`|Indica que a tarefa foi concluída.<br /><br /> Observação: O pacote DTS 2000 pode continuar a executar após a conclusão da tarefa.|  
 |`ExecuteDTS80PackageTaskTaskInfo`|Fornece informações descritivas sobre a tarefa.|  
 |`ExecuteDTS80PackageTaskTaskResult`|Informa o resultado de execução do pacote DTS 2000 executado pela tarefa.|  
   

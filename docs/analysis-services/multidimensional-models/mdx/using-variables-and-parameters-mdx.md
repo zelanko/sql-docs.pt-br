@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: deb1f7b4e641dd2347e8629e1e13ad3f4da7788c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62989366"
 ---
 # <a name="using-variables-and-parameters-mdx"></a>Usando variáveis e parâmetros (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34027003"
   
  A linguagem MDX oferece suporte apenas a valores literais ou escalares. Para criar um parâmetro que faça referência a um membro, conjunto ou tupla, use uma função como [StrToMember](../../../mdx/strtomember-mdx.md) ou [StrToSet](../../../mdx/strtoset-mdx.md).  
   
- No seguinte XML de exemplo de análise (XMLA), o @CountryName parâmetro conterá o país em que o cliente para os dados são recuperados:  
+ No XML a seguir, por exemplo Analysis (XMLA), o @CountryName parâmetro conterá o país em que o cliente para os dados são recuperados:  
   
 ```  
 <Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">  
@@ -54,6 +54,6 @@ from [Adventure Works]
  Para usar essa funcionalidade com OLE DB, use a interface **ICommandWithParameters** . Para usar essa funcionalidade com ADOMD.Net, use a interface **AdomdCommand.Parameters** .  
   
 ## <a name="see-also"></a>Consulte também  
- [Conceitos básicos de script MDX & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
+ [Conceitos básicos do script MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
   
   
