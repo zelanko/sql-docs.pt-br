@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 408f92b86cdfdd148ea11ca49b6ba540b0f4cf86
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727400"
 ---
 # <a name="add-a-standard-action"></a>Adicionar uma ação padrão
   Você adiciona uma ação a um banco de dados usando a exibição Ações no Designer de Cubo. Essa exibição pode ser acessada pelo [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Depois de você criar uma ação, ela ficará disponível a usuários depois que você reprocessar o cubo pertinente. Para obter mais informações, consulte [Processing Analysis Services Objects](processing-analysis-services-objects.md).  
@@ -48,7 +48,7 @@ ms.locfileid: "48161086"
   
     -   Na lista suspensa **Tipo** , selecione o tipo de ação que você quer criar. A tabela a seguir lista os tipos de ações disponíveis.  
   
-        |Tipo|Description|  
+        |Tipo|Descrição|  
         |----------|-----------------|  
         |Dataset|Recupera um conjunto de dados.|  
         |Proprietário|Executa uma operação usando uma interface diferente das listadas nesta tabela.|  
@@ -62,7 +62,7 @@ ms.locfileid: "48161086"
   
     -   Na lista suspensa **Invocação**, especifique como a ação é invocada. A tabela seguinte descreve as opções disponíveis para invocar uma ação.  
   
-        |Opção|Description|  
+        |Opção|Descrição|  
         |------------|-----------------|  
         |Interativo|A ação é disparada pela interação do usuário.|  
         |Lote|A ação é executada como uma operação de lote.|  

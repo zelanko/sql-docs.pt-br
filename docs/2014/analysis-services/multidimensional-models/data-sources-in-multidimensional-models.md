@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 930137c05cdf7465ba6f68aa3396d092fa6a926f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726761"
 ---
 # <a name="data-sources-in-multidimensional-models"></a>Fontes de dados em modelos multidimensionais
   Todos os dados que você importa ou carrega em um modelo multidimensional são originados de uma fonte de dados externa. Normalmente, os dados de origem são de um data warehouse criado para fins de geração de relatórios, mas poderiam vir de qualquer banco de dados relacional que seja acessado diretamente ou indiretamente por um intermediário, como um pacote do [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
@@ -53,18 +53,18 @@ ms.locfileid: "48113296"
   
 ## <a name="related-topics-and-tasks"></a>Tópicos relacionados e tarefas  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Fontes de dados com suporte no &#40;Multidimensional do SSAS&#41;](supported-data-sources-ssas-multidimensional.md)|Descreve os tipos de fonte de dados que podem ser usados em um modelo multidimensional.|  
-|[Criar uma fonte de dados &#40;Multidimensional do SSAS&#41;](create-a-data-source-ssas-multidimensional.md)|Explica como adicionar um objeto de fonte de dados a um modelo multidimensional.|  
-|[Excluir uma fonte de dados no Gerenciador de soluções &#40;Multidimensional do SSAS&#41;](delete-a-data-source-in-solution-explorer-ssas-multidimensional.md)|Use este procedimento para excluir um objeto de fonte de dados de um modelo multidimensional.|  
-|[Definir propriedades de fonte de dados &#40;Multidimensional do SSAS&#41;](set-data-source-properties-ssas-multidimensional.md)|Descreve cada propriedade e explica como definir cada uma.|  
-|[Definir opções de representação &#40;SSAS - Multidimensional&#41;](set-impersonation-options-ssas-multidimensional.md)|Explica como configurar as opções na caixa de diálogo de Informações sobre Representação.|  
+|[Criar uma fonte de dados &#40;SSAS multidimensional&#41;](create-a-data-source-ssas-multidimensional.md)|Explica como adicionar um objeto de fonte de dados a um modelo multidimensional.|  
+|[Excluir uma exibição da fonte de dados no gerenciador de soluções &#40;SSAS multidimensional&#41;](delete-a-data-source-in-solution-explorer-ssas-multidimensional.md)|Use este procedimento para excluir um objeto de fonte de dados de um modelo multidimensional.|  
+|[Definir propriedades da fonte de dados &#40;SSAS multidimensional&#41;](set-data-source-properties-ssas-multidimensional.md)|Descreve cada propriedade e explica como definir cada uma.|  
+|[Definir opções de representação &#40;SSAS – Multidimensional&#41;](set-impersonation-options-ssas-multidimensional.md)|Explica como configurar as opções na caixa de diálogo de Informações sobre Representação.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Objetos de banco de dados &#40; Analysis Services - dados multidimensionais &#41;](olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [Arquitetura lógica &#40; Analysis Services - dados multidimensionais &#41;](olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [Exibições da fonte de dados em modelos multidimensionais](data-source-views-in-multidimensional-models.md)   
- [Fontes de dados e associações &#40;Multidimensional do SSAS&#41;](data-sources-and-bindings-ssas-multidimensional.md)  
+ [Arquitetura lógica &#40;Analysis Services – Dados Multidimensionais&#41;](olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [Exibições de fontes de dados em modelos multidimensionais](data-source-views-in-multidimensional-models.md)   
+ [Fontes de dados e associações &#40;SSAS multidimensional&#41;](data-sources-and-bindings-ssas-multidimensional.md)  
   
   

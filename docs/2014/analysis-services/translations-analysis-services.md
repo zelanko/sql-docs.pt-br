@@ -19,26 +19,26 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e85f6ca82f11b9f19c14a020d879afb65a6d1775
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794477"
 ---
 # <a name="translations-analysis-services"></a>Traduções (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  Somente multidimensional  
   
- Em um modelo de dados multidimensionais [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , você pode inserir várias traduções de uma legenda para fornecer sequências de caracteres específicas da localidade com base no LCID. As traduções podem ser adicionadas ao nome do banco de dados, objetos de cubo e objetos de dimensão do banco de dados.  
+ Em um modelo de dados multidimensionais [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , você pode inserir várias traduções de uma legenda para fornecer sequências de caracteres específicas da localidade com base no LCID. As traduções podem ser adicionadas para o nome do banco de dados, objetos de cubo e objetos de dimensão do banco de dados.  
   
  A definição de uma tradução cria os metadados e a legenda traduzida dentro do modelo, mas para renderizar cadeias de caracteres localizadas em um aplicativo cliente, você deve definir a propriedade `Language` no objeto ou passar um parâmetro `Locale Identifier` na cadeia de conexão (por exemplo, definindo `LocaleIdentifier=1036` para retornar cadeias de caracteres em francês). Planeje o uso de `Locale Identifier` para dar suporte a várias traduções simultâneas do mesmo objeto em idiomas diferentes. Definir a propriedade `Language` funciona, mas isso também afeta o processamento e as consultas, o que pode ter consequências indesejadas. Definir `Locale Identifier` é a melhor opção porque ele é usado somente para retornar cadeias de caracteres traduzidas.  
   
- Uma tradução consiste em um LCID (Identificador de Localidade), uma legenda traduzida para o objeto (por exemplo, dimensão ou nome do atributo), e, opcionalmente, uma associação a uma coluna que fornece valores de dados no idioma de destino. Você pode ter várias traduções, mas só pode usar uma para determinada conexão. Não há nenhum limite teórico no número de traduções que você pode inserir no modelo, mas cada tradução adiciona complexidade ao teste e todas as traduções devem compartilhar a mesma ordenação, portanto, ao criar a solução, lembre-se dessas restrições naturais.  
+ Uma tradução consiste em um identificador de localidade (LCID), uma legenda traduzida para o objeto (por exemplo, a dimensão ou o nome do atributo) e, opcionalmente, uma associação a uma coluna que fornece valores de dados no idioma de destino. Você pode ter várias traduções, mas só pode usar uma para determinada conexão. Não há nenhum limite teórico no número de traduções que você pode inserir no modelo, mas cada tradução adiciona complexidade ao teste e todas as traduções devem compartilhar a mesma ordenação, portanto, ao criar a solução, lembre-se dessas restrições naturais.  
   
 > [!TIP]  
 >  Você pode usar os aplicativos cliente, como o Excel, o Management Studio e o [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] para retornar cadeias de caracteres traduzidas. Para obter detalhes, consulte [Globalization Tips and Best Practices &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) .  
   
 ## <a name="setting-up-a-model-to-support-translated-members"></a>Configuração de um modelo para dar suporte a membros traduzidos  
- Um modelo de dados usado em uma solução em vários idiomas precisa de mais do que rótulos (nomes de campo e descrições) traduzidos. Ele também precisa fornecer valores de dados que são articulados em vários scripts de idioma. Para obter uma solução em vários idiomas, é necessário que você tenha atributos individuais associados a colunas em um banco de dados externo que retorna os dados.  
+ Um modelo de dados usado em uma solução em vários idiomas precisa de mais do que rótulos (nomes de campo e descrições) traduzidos. Ele também precisa fornecer valores de dados que são articulados em vários scripts de idioma. Para obter uma solução em vários idiomas é necessário que você tenha atributos individuais, associado a colunas em um banco de dados externo que retorna os dados.  
   
  Os bancos de dados de exemplo da Adventure Works (multidimensional, bem como o data warehouse relacional) demonstram o recurso de tradução. O modelo de exemplo inclui descrições e legendas traduzidas. O data warehouse relacional de exemplo contém colunas de valores traduzidos que fornecem membros de atributo traduzidos no modelo.  
   
@@ -52,9 +52,9 @@ ms.locfileid: "50145951"
   
 4.  Clique com o botão direito do mouse em qualquer campo e selecione **Explorar dados**. Você verá as traduções em francês, espanhol e inglês de cada membro.  
   
- Formatos de data, hora e moeda não são implementados por meio de conversões. Para fornecer dinamicamente formatos culturalmente específicos com base na localidade do cliente, use o Assistente de Conversão de Moeda e a propriedade `FormatString`. Consulte [Conversões de moeda e &#40;Analysis Services&#41;](currency-conversions-analysis-services.md) e [Elemento FormatString &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl) para obter detalhes.  
+ Formatos de data, hora e moeda não são implementados por meio de traduções. Para fornecer dinamicamente formatos culturalmente específicos com base na localidade do cliente, use o Assistente de Conversão de Moeda e a propriedade `FormatString`. Consulte [Conversões de moeda e &#40;Analysis Services&#41;](currency-conversions-analysis-services.md) e [Elemento FormatString &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl) para obter detalhes.  
   
- [Lesson 9: Defining Perspectives and Translations](lesson-9-defining-perspectives-and-translations.md) no Tutorial do Analysis Services orientará você pelas etapas de criação e teste de traduções.  
+ [Lição 9: Definindo perspectivas e traduções](lesson-9-defining-perspectives-and-translations.md) no Tutorial do Analysis Services orientará você pelas etapas para criar e testar traduções.  
   
 ## <a name="defining-translations"></a>Definindo traduções  
  A definição de uma tradução cria um objeto `Translation` como um filho de banco de dados, dimensão ou cubo do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Use [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] para abrir a solução e definir traduções.  
@@ -104,11 +104,11 @@ ms.locfileid: "50145951"
 5.  Conecte-se ao banco de dados usando um aplicativo cliente, como o Excel, modificando a cadeia de conexão para usar o identificador de localidade. Consulte [Dicas de globalização e práticas recomendadas &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) para obter detalhes.  
   
 ### <a name="add-a-translation-of-the-database-name"></a>Adicionar uma tradução do nome do banco de dados  
- No nível do banco de dados, você pode adicionar traduções para o nome do banco de dados e descrição. O nome do banco de dados traduzido pode estar visível nas conexões de cliente que especificam o LCID do idioma, mas que depende da ferramenta. Por exemplo, a exibição do banco de dados no Management Studio não mostrará o nome traduzido, mesmo que você especifique o identificador de localidade na conexão. A API usada pelo Management Studio para se conectar ao Analysis Services não lê a propriedade `Language`.  
+ No nível do banco de dados, você pode adicionar traduções para o nome do banco de dados e descrição. O nome do banco de dados traduzido pode estar visível nas conexões de cliente que especificam o LCID do idioma, mas que depende da ferramenta. Por exemplo, exibir o banco de dados no Management Studio não mostrará o nome traduzido, mesmo que você especifique o identificador de localidade na conexão. A API usada pelo Management Studio para se conectar ao Analysis Services não lê a propriedade `Language`.  
   
 1.  No Gerenciador de Soluções, clique com o botão direito do mouse no nome do projeto | **Editar banco de dados** para abrir o designer de banco de dados.  
   
-2.  Em Traduções, especifique o idioma de destino (resolve para um LCID), legenda traduzida e descrição traduzida. A lista de idiomas é consistente em todo o Analysis Services, quer você esteja definindo o idioma do servidor no Management Studio ou adicionando uma substituição de tradução em um único atributo.  
+2.  Em Traduções, especifique o idioma de destino (resolve para um LCID), legenda traduzida e descrição traduzida. A lista de idiomas é consistente em todo o Analysis Services, se você estiver definindo o idioma do servidor no Management Studio ou adicionando uma substituição de tradução em um único atributo.  
   
 3.  Na página Propriedades do banco de dados, defina `Language` com o mesmo LCID especificado para a tradução. Opcionalmente, defina `Collation` também se o padrão não fizer mais sentido.  
   

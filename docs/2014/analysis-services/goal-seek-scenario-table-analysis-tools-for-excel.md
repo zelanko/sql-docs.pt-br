@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85f0c099aba12fe9a4049fe787e248cfe580ff3b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731992"
 ---
 # <a name="goal-seek-scenario-table-analysis-tools-for-excel"></a>Cenário de Metas a Atingir (Ferramentas de Análise de Tabela para Excel)
   ![Botão meta a atingir em ferramentas de análise de tabela](media/tat-goalseek.gif "botão meta a atingir em ferramentas de análise de tabela")  

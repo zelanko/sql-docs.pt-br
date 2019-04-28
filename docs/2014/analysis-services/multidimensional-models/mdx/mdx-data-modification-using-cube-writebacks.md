@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f471800a72bdbec154fe7bedb89d9b5a10593132
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699752"
 ---
 # <a name="using-cube-writebacks-mdx"></a>Usando Cube Writebacks (MDX)
   Você atualiza um cubo usando a instrução [UPDATE CUBE](/sql/mdx/mdx-data-manipulation-update-cube). Essa instrução permite que você atualize uma tupla com um valor específico. Para usar a instrução UPDATE CUBE de forma eficiente para atualizar um cubo, você precisa entender a sintaxe da instrução, as condições de erro que podem acontecer, e como as atualizações podem afetar um cubo.  
@@ -118,6 +118,6 @@ USE_EQUAL_ALLOCATION
 -   Alterando a granularidade da dimensão da dimensão incluída no write-back.  
   
 ## <a name="see-also"></a>Consulte também  
- [Modificação de dados &#40;MDX&#41;](mdx-data-modification-modifying-data.md)  
+ [Modificando dados &#40;MDX&#41;](mdx-data-modification-modifying-data.md)  
   
   

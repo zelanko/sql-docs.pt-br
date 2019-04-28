@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac7a8f813aa884cc4267c73fbcedc88eecfb0a36
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705950"
 ---
 # <a name="choose-and-map-model-testing-data"></a>Escolher e mapear dados de testes modelo
   Para criar um gráfico de precisão no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], escolha os dados que serão usados para testar o modelo e mapeie os dados para o modelo.  

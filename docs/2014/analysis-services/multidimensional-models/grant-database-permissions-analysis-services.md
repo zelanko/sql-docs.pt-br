@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6bac9958c7b906a52b5b0d9d28a37c31d280b836
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726044"
 ---
 # <a name="grant-database-permissions-analysis-services"></a>Conceder permissões de banco de dados (Analysis Services)
   Se você estiver acessando a administração de banco de dados do Analysis Services com experiência em bancos de dados relacionais, a primeira coisa que você precisa entender é que, em termos de acesso a dados, o banco de dados não é o principal objeto protegível no Analysis Services.  
   
- A estrutura de consulta primária no Analysis Services é um cubo (ou um modelo de tabela), com permissões de usuário definidas nesses objetos particulares. Contrastado com o mecanismo de banco de dados relacional ─ banco de dados em que logons e permissões de usuário (geralmente `db_datareader`) são definidos no banco de dados em si ─ um banco de dados do Analysis Services é basicamente um contêiner para os objetos de consulta principal em um modelo de dados. Se o objetivo imediato é permitir o acesso a dados para um modelo de cubo ou de tabela, você pode ignorar as permissões de banco de dados agora e ir direto para este tópico: [Conceder permissões de cubo ou modelo &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md).  
+ A estrutura de consulta primária no Analysis Services é um cubo (ou um modelo de tabela), com permissões de usuário definidas nesses objetos particulares. Contrastado com o mecanismo de banco de dados relacional ─ banco de dados em que logons e permissões de usuário (geralmente `db_datareader`) são definidos no banco de dados em si ─ um banco de dados do Analysis Services é basicamente um contêiner para os objetos de consulta principal em um modelo de dados. Se seu objetivo imediato é permitir o acesso a dados para um cubo ou modelo de tabela, você pode ignorar as permissões de banco de dados de dados agora e ir direto para este tópico: [Conceder permissões de cubo ou modelo de &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md).  
   
  As permissões de banco de dados no Analysis Services habilitam funções administrativas. Em um contexto mais amplo, como é o caso da permissão Controle Total do banco de dados ou de natureza mais granular se você estiver delegando operações de processamento. Os níveis de permissão para um banco de dados do Analysis Services são especificados no painel **Geral** da caixa de diálogo **Criar Função** , exibidos na ilustração a seguir e descritos abaixo.  
   
@@ -39,9 +39,9 @@ ms.locfileid: "48149006"
 > [!NOTE]  
 >  Os administradores do servidor (membros da função de Administrador do Servidor) também têm Controle Total implícito sobre cada banco de dados no servidor.  
   
- `Process Database` ─ Essa permissão é usada para delegar o processamento no nível do banco de dados. Como administrador, você pode descarregar essa tarefa criando uma função que permita que outra pessoa ou serviço invoque as operações para qualquer objeto no banco de dados. Como alternativa, você também pode criar funções que permitam o processamento de objetos específicos. Consulte [Grant process permissions &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md) para obter mais informações.  
+ `Process Database` ─ Essa permissão é usada para delegar o processamento no nível do banco de dados. Como administrador, você pode descarregar essa tarefa criando uma função que permita que outra pessoa ou serviço invoque as operações para qualquer objeto no banco de dados. Como alternativa, você também pode criar funções que permitam o processamento de objetos específicos. Consulte [Conceder permissões de processo &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md) para obter mais informações.  
   
- `Read Definition` ─ Essa permissão concede a capacidade de ler os metadados de objeto, menos a capacidade de exibir dados associados. Normalmente, essa permissão é usada em funções criados para processamento dedicado, adicionando a capacidade de usar ferramentas como [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ou [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] para processar um banco de dados de forma interativa. Sem `Read Definition`, a permissão `Process Database` só é eficaz em cenários de script. Se você pretende automatizar o processamento, talvez por meio do SSIS ou outro Agendador, você provavelmente desejará criar uma função que tenha `Process Database` sem `Read Definition`. Caso contrário, considere a combinação das duas propriedades na mesma função para dar suporte tanto para processamento autônomo quanto interativo com as ferramentas do SQL Server que visualizam o modelo de dados em uma interface de usuário.  
+ `Read Definition` ─ Essa permissão concede a capacidade de ler os metadados de objeto, menos a capacidade de exibir dados associados. Normalmente, essa permissão é usada em funções criados para processamento dedicado, adicionando a capacidade de usar ferramentas como [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ou [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] para processar um banco de dados de forma interativa. Sem `Read Definition`, a permissão `Process Database` só é eficaz em cenários de script. Se você pretende automatizar o processamento, talvez por meio do SSIS ou outro agendador, provavelmente vai querer criar uma função que tenha `Process Database` sem `Read Definition`. Caso contrário, considere a combinação das duas propriedades na mesma função para dar suporte tanto para processamento autônomo quanto interativo com as ferramentas do SQL Server que visualizam o modelo de dados em uma interface de usuário.  
   
 ## <a name="full-control-administrator-permissions"></a>Permissões de Controle Total (Administrador)  
  Em [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], um administrador de banco de dados consiste em qualquer identidade de usuário do Windows atribuída a uma função que inclua permissões de Controle Total (Administrador). Um administrador de banco de dados pode executar qualquer tarefa dentro do banco de dados, incluindo:  

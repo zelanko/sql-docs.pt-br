@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b26f246b85f708976fd792247996cfb2084af5e7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62692096"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>Aplicar um filtro a um modelo de mineração
   Se a sua estrutura de mineração tiver uma tabela aninhada, você poderá aplicar um filtro à tabela de casos, à tabela aninhada ou a ambas.  
@@ -67,7 +67,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 8.  Clique na caixa de texto **Valor** e digite um valor na caixa.  
   
-     Por exemplo, selecione `Income` como a coluna, selecione o operador maior que (>) e digite `30000`.  
+     Por exemplo, selecione `Income` como a coluna, selecione a maior que (>) do operador e digite `30000`.  
   
 9. Na grade, clique na linha seguinte.  
   
@@ -79,7 +79,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 11. Selecione um operador e digite um valor conforme descrito nas etapas 7 e 8.  
   
-     Por exemplo, selecione novamente `Income` como a coluna, selecione o operador menor que (<) e digite `40000`.  
+     Por exemplo, selecione `Income` como a coluna novamente, selecione o operador menor que (<) e, em seguida, digite `40000`.  
   
 12. Na grade, clique na linha seguinte.  
   

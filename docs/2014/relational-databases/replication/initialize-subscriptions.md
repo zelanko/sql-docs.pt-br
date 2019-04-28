@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f781dd3c1a9a98857c8e2e72e82792632fdb17c2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721141"
 ---
 # <a name="initialize-subscriptions"></a>Inicializar Assinaturas
   Os Assinantes devem ser inicializados antes que possam começar a receber dados replicados. Um conjunto de dados inicial não é requerido, mas o Assinante deve ter pelo menos o esquema para cada objeto replicado e todas as tabelas de metadados e procedimentos requeridos pela replicação.  
@@ -32,7 +32,7 @@ ms.locfileid: "52794468"
 >  O assistente pode solicitar uma conexão com o Distribuidor para iniciar o trabalho apropriado para o Agente de Distribuição ou Agente de Mesclagem.  
   
 ## <a name="see-also"></a>Consulte também  
- [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [Criar uma assinatura pull](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
  [Inicializar uma assinatura](initialize-a-subscription.md)   
  [Assinar publicações](subscribe-to-publications.md)  

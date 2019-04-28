@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 46f48aa117c18bcc7af28cdf7c676cf195b553f6
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719747"
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Microsoft Data Shaping Service para visão geral do OLE DB
 > [!IMPORTANT]
@@ -37,7 +37,7 @@ ms.locfileid: "51350056"
 ## <a name="dynamic-properties"></a>Propriedades Dinâmicas
  Quando esse provedor de serviço é chamado, as seguintes propriedades dinâmicas são adicionadas para o [propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) coleção da[Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto.
 
-|Nome da propriedade dinâmica|Description|
+|Nome da propriedade dinâmica|Descrição|
 |---------------------------|-----------------|
 |**Nomes de alterar de forma exclusiva**|Indica se **conjunto de registros** objetos com valores duplicados para seus **remodelar nome** propriedades são permitidas. Se essa propriedade dinâmica é **True** e um novo **conjunto de registros** é criado com o mesmo nome especificado pelo usuário a reformatação de uma existente **conjunto de registros**, em seguida, o novo  **Conjunto de registros** remodelagem nome de objeto é modificado para torná-lo exclusivo. Se essa propriedade for **falsos** e uma nova **conjunto de registros** é criado com o mesmo nome especificado pelo usuário a reformatação existente **conjunto de registros**, ambas as **conjunto de registros**  objetos terão o mesmo nome de reformatação. Portanto, nenhum dos dois **Recordset** pode ser reformatado desde que ambos os conjuntos de registros existem.<br /><br /> O valor padrão da propriedade é **falsos**.|
 |**Provedor de dados**|Indica o nome do provedor que será fornecem linhas a ser formatada. Esse valor pode ser nenhum se um provedor não será usado para fornecer linhas.|
@@ -62,4 +62,4 @@ cn.Properties("Data Provider") = "MSDASQL"
  Para obter mais informações sobre formatação de dados, consulte [Data Shaping](../../../ado/guide/data/data-shaping-overview.md).
 
 ## <a name="see-also"></a>Consulte também
- [Apêndice A: Provedores](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Apêndice a: provedores](../../../ado/guide/appendixes/appendix-a-providers.md)

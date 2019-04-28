@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 31981669d5d08e63a853b8daa530b886f9b7dfbe
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690761"
 ---
 # <a name="drillupmember-mdx"></a>DrillupMember (MDX)
 
@@ -35,8 +35,8 @@ DrillupMember(Set_Expression1, Set_Expression2)
  *Set_Expression2*  
  Uma expressão MDX (Multidimensional Expressions) válida que retorna um conjunto.  
   
-## <a name="remarks"></a>Remarks  
- O **DrillupMember** retorna um conjunto de membros com base nos membros especificados no primeiro conjunto de descendentes de membros no segundo conjunto. O primeiro conjunto pode ter qualquer dimensionalidade, mas o segundo deve conter um conjunto unidimensional. A ordem é preservada entre os membros originais no primeiro conjunto. A função constrói o conjunto incluindo apenas aqueles membros do primeiro conjunto que sejam descendentes imediatos de membros do segundo conjunto. Se o ancestral imediato de um membro no primeiro conjunto não estiver presente no segundo conjunto, o membro no primeiro conjunto será incluído no conjunto retornado por essa função.  Descendentes no primeiro conjunto que precedem um membro ancestral no segundo conjunto também são incluídos.  
+## <a name="remarks"></a>Comentários  
+ O **DrillupMember** função retorna um conjunto de membros com base nos membros especificados no primeiro conjunto que são descendentes de membros no segundo conjunto. O primeiro conjunto pode ter qualquer dimensionalidade, mas o segundo deve conter um conjunto unidimensional. A ordem é preservada entre os membros originais no primeiro conjunto. A função constrói o conjunto incluindo apenas aqueles membros do primeiro conjunto que sejam descendentes imediatos de membros do segundo conjunto. Se o ancestral imediato de um membro no primeiro conjunto não estiver presente no segundo conjunto, o membro no primeiro conjunto será incluído no conjunto retornado por essa função.  Descendentes no primeiro conjunto que precedem um membro ancestral no segundo conjunto também são incluídos.  
   
  O primeiro conjunto pode conter tuplas em vez de membros. Busca detalhada de tupla é uma extensão de OLE DB e retorna um conjunto de tuplas em vez de membros.  
   
@@ -59,7 +59,7 @@ SELECT DrillUpMember (
 FROM [Adventure Works]  
 ```  
   
- O exemplo dois mostra a importância de ordem do membro. Como **DrillupMember** faz drill up somente nos membros seguidos imediatamente por descendentes no primeiro conjunto, ele não fará drill up do membro Canadá. Canadá é separado de seus descendentes pelos Estados Unidos e pelo Colorado. Se você reordenar os membros para que o Canadá fique diretamente acima de Alberta, então Alberta e Brunswick serão excluídas do conjunto de linhas.  
+ O exemplo dois mostra a importância de ordem do membro. Uma vez que **DrillupMember** faz drill up somente nos membros seguidos imediatamente por descendentes no primeiro conjunto, ele não fará drill up do membro Canadá. Canadá é separado de seus descendentes pelos Estados Unidos e pelo Colorado. Se você reordenar os membros para que o Canadá fique diretamente acima de Alberta, então Alberta e Brunswick serão excluídas do conjunto de linhas.  
   
 ```  
 SELECT DrillUpMember (   
@@ -95,6 +95,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

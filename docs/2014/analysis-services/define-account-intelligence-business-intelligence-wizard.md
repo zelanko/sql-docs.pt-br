@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0afc9be649d3d9eb23a9c0e4b1b601b772cd16fc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732561"
 ---
 # <a name="define-account-intelligence-business-intelligence-wizard"></a>Definir Inteligência de Conta (Assistente de Business Intelligence)
   Use a página **Definir Inteligência de Conta** para mapear tipos de conta definidos na instância do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] como tipos de conta definidos por uma tabela de origem na fonte de dados que fornece os dados para a dimensão de conta.  
@@ -35,7 +35,7 @@ ms.locfileid: "48209396"
   
  A tabela a seguir lista os tipos de conta que estão definidos em uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Ativo**|Valor de itens possuídos em um momento específico.|  
 |**Saldo**|Contagem de algo em um momento específico.|  
@@ -46,7 +46,7 @@ ms.locfileid: "48209396"
 |**Estatística**|Taxa calculada de algo ou contagem de algo que não agrega.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Ajuda de F1 do Assistente do Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [Ajuda F1 do Assistente de Business Intelligence](business-intelligence-wizard-f1-help.md)   
  [Designer de cubo &#40;Analysis Services - dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Designer de dimensão &#40;Analysis Services - dados multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

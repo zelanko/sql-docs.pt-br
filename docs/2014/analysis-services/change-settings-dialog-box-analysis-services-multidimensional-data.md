@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e549e9b4121d116adc627c34dad017b85099a825
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681163"
 ---
 # <a name="change-settings-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Alterar Configurações (Analysis Services - Dados Multidimensionais)
   Use a caixa de diálogo **Alterar Configurações** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] e no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para alterar as configurações que governam o processamento de objetos listados na caixa de diálogo **Processo** . É possível exibir a caixa de diálogo **Alterar Configurações** clicando em **Alterar Configurações** na caixa de diálogo **Processar** .  

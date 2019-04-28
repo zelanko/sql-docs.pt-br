@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44159dccd8fd912e0ebee75c5ab7d1a72c946e75
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725960"
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>Conceder permissões de cubo ou modelo (Analysis Services)
   Um cubo ou modelo de tabela é o objeto de consulta principal em um modelo de dados do Analysis Services. Ao se conectarem a dados multidimensionais ou de tabela do Excel para exploração de dados ad hoc, normalmente os usuários começam ao selecionar um cubo ou modelo de tabela específico como a estrutura de dados por trás do objeto de relatório dinâmico. Este tópico explica como conceder as permissões necessárias para acesso de dados de cubo ou de tabela.  
@@ -55,9 +55,9 @@ ms.locfileid: "48149706"
   
 2.  Vá para a próxima etapa para definir as permissões do cubo.  
   
-     Observe que estamos pulando o painel de Fonte de Dados. A maioria dos usuários regulares de dados do Analysis Services não precisa de permissões no objeto da fonte de dados. Consulte [Grant permissions on a data source object &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md) para obter detalhes sobre quando você pode definir essa permissão.  
+     Observe que estamos pulando o painel de Fonte de Dados. A maioria dos usuários regulares de dados do Analysis Services não precisa de permissões no objeto da fonte de dados. Consulte [Conceder permissões em um objeto de fonte de dados &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md) para obter detalhes sobre quando você pode definir essa permissão.  
   
-#### <a name="step-3-set-cube-permissions"></a>Etapa 3: Definir as permissões do cubo  
+#### <a name="step-3-set-cube-permissions"></a>Etapa 3: Definir permissões de cubo  
   
 1.  No **cubos** painel, selecione um cubo e, em seguida, clique em `Read` ou **leitura/gravação** acesso.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48149706"
   
      Finalmente, este painel permite que você conceda direitos para **Processar banco de dados** no cubo, para permitir que todos os membros dessa função processem dados para o cubo. Como o processamento é normalmente uma operação restrita, recomendamos deixar essa tarefa para os administradores ou definir funções separadas, especialmente para essa tarefa. Consulte [Conceder permissões de processo &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md) para obter mais informações sobre as práticas recomendadas de permissão de processamento.  
   
-#### <a name="step-4-test"></a>Etapa 4: Testar  
+#### <a name="step-4-test"></a>Etapa 4: Teste  
   
 1.  Use o Excel para testar as permissões de acesso ao cubo. Você também pode usar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de acordo com técnica descrita a seguir, para executar o aplicativo como usuário não administrador.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48149706"
   
      Se ocorrer erros durante a conexão, verifique a configuração de porta do Analysis Services e confirme se o servidor aceita conexões remotas. Consulte [Configurar o Firewall do Windows para permitir o acesso ao Analysis Services](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) para configuração de porta.  
   
-#### <a name="step-5-script-role-definition-and-assignments"></a>Etapa 5: Definição e atribuições de função de script  
+#### <a name="step-5-script-role-definition-and-assignments"></a>Etapa 5: Atribuições e definição de função de script  
   
 1.  Como etapa final, gere um script que capture a definição da função que você acabou de criar.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "48149706"
   
 ## <a name="see-also"></a>Consulte também  
  [Metodologias de autenticação com suporte no Analysis Services](../instances/authentication-methodologies-supported-by-analysis-services.md)   
- [Conceder permissões em estruturas de mineração de dados e modelos de &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [Conceder permissões em estruturas e modelos de mineração de dados &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
  [Conceder permissões em um objeto de fonte de dados &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

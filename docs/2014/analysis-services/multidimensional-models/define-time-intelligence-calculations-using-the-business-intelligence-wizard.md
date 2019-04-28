@@ -25,11 +25,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a67270205e6c6977e01c274f0f864dc77ce8b13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726420"
 ---
 # <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>Definir cálculos de inteligência de tempo com o Assistente de Business Intelligence
   O aprimoramento de inteligência de tempo é um aprimoramento de cubo que adiciona cálculos de tempo (ou exibições de tempo) a uma hierarquia selecionada. Esse aprimoramento oferece suporte às seguintes categorias de cálculos:  
@@ -42,14 +42,14 @@ ms.locfileid: "48059505"
   
 -   Comparações de período paralelas.  
   
- Você aplica a inteligência de tempo a cubos que têm uma dimensão de tempo. (Uma dimensão de tempo é uma dimensão cuja propriedade `Type` está definida como `Time`.) Além disso, os atributos de tempo da dimensão também devem ter a configuração apropriada (como Anos ou Meses) para a propriedade `Type`. O `Type` propriedade da dimensão e seus atributos será configurada corretamente se você usar o Assistente para dimensões para criar a dimensão de tempo.  
+ Você aplica a inteligência de tempo a cubos que têm uma dimensão de tempo. (Uma dimensão de tempo é uma dimensão cuja propriedade `Type` está definida como `Time`.) Além disso, os atributos de tempo da dimensão também devem ter a configuração apropriada (como Anos ou Meses) para a propriedade `Type`. A propriedade `Type` de ambas as dimensões e seus atributos será configurada corretamente se você usar o Assistente para Dimensões para criar a dimensão de tempo.  
   
  Para adicionar inteligência de tempo a um cubo, use o Assistente de Business Intelligence e selecione a opção **Definir inteligência de tempo** na página **Escolher Aprimoramento** . Esse assistente orientará você durante as etapas para selecionar a hierarquia à qual você deseja adicionar a inteligência de tempo e especificar quais membros da hierarquia terão a inteligência de tempo aplicada a eles. Na última página do assistente, você verá as alterações que serão feitas ao banco de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para adicionar a inteligência de tempo selecionada.  
   
 ## <a name="selecting-a-time-hierarchy"></a>Selecionando uma hierarquia de tempo  
  Na página **Escolher Cálculos e Hierarquia de Destino** , selecione a hierarquia de tempo à qual será aplicado o aprimoramento de tempo. Você pode aplicar o aprimoramento de tempo somente a uma hierarquia sempre que executar o Assistente de Business Intelligence. Para aplicar o aprimoramento a mais de uma hierarquia de tempo, execute o assistente novamente.  
   
- Depois de selecionar uma hierarquia de tempo, na lista **Cálculos de tempo disponíveis** , selecione os cálculos que se aplicam à hierarquia. Os cálculos listados dependem dos níveis na hierarquia e o `Type` configuração de propriedade para o atributo para cada nível. Por exemplo, uma hierarquia Anos aceita Desde o Início do Ano e Crescimento Ano a Ano, mas não a hierarquia Trimestres.  
+ Depois de selecionar uma hierarquia de tempo, na lista **Cálculos de tempo disponíveis** , selecione os cálculos que se aplicam à hierarquia. Os cálculos listados dependem dos níveis da hierarquia e da configuração da propriedade `Type` de cada nível. Por exemplo, uma hierarquia Anos aceita Desde o Início do Ano e Crescimento Ano a Ano, mas não a hierarquia Trimestres.  
   
 > [!NOTE]  
 >  O arquivo de modelo Timeintelligence.xml define os cálculos de tempo listados em **Cálculos de tempo disponíveis**. Se os cálculos listados não satisfizerem suas necessidades, você pode alterar os cálculos existentes ou adicionar novos cálculos ao arquivo Timeintelligence.xml.  

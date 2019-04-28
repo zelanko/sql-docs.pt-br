@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8e6d0806a7c3eabd1c6f4cd1836308eba99a6d5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724361"
 ---
 # <a name="header-files"></a>Arquivos de cabeçalho
 O arquivo de cabeçalho do SQL contém protótipos para as funções e recursos no nível de conformidade de Interface do núcleo ODBC. O arquivo de cabeçalho sqlext. h contém protótipos para as funções e recursos no nível 1 e níveis de conformidade de nível 2 API. O arquivo de cabeçalho SqlTypes contém definições de tipo e indicadores para os tipos de dados SQL.  

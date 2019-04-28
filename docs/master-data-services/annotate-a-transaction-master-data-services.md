@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bdc60f20e33a63da3819d9f920eea51fef8f1d6c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678657"
 ---
 # <a name="annotate-a-transaction-master-data-services"></a>Anotar uma transação (Master Data Services)
 
@@ -67,7 +67,7 @@ ms.locfileid: "52754588"
   
 5.  Clique em **OK**.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Anotações &#40;Master Data Services&#41;](../master-data-services/annotations-master-data-services.md)   
  [Transações &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)  
   

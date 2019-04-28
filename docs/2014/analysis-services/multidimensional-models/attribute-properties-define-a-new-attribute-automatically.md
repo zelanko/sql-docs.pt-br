@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 10c0a014cb83b8384fd7d742073140eb0e018237
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727110"
 ---
 # <a name="define-a-new-attribute-automatically"></a>Definir um novo atributo automaticamente
   Você pode criar um novo atributo em uma dimensão usando o recurso de edição arrastar-e-soltar no Designer de Dimensão.  

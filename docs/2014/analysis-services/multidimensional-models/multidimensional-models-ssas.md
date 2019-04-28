@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 47efdd38b14a22f28026f98d2289c1c67fc65b9a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699022"
 ---
 # <a name="multidimensional-modeling-ssas"></a>Modelagem multidimensional (SSAS)
   Uma solução multidimensional do Analysis Services usa estruturas de cubo para analisar dados comerciais em várias dimensões. O modo multidimensional é o modo de servidor padrão do Analysis Services. Ele inclui um mecanismo de consulta e de cálculo para dados OLAP, com modos de armazenamento MOLAP, ROLAP e HOLAP para equilibrar o desempenho com requisitos de dados escalonáveis. O mecanismo OLAP do Analysis Services é um servidor OLAP líder da indústria que funciona bem com um intervalo amplo de ferramentas de BI. A maioria das implantações do Analysis Services são instaladas como servidores OLAP clássicos.  
@@ -29,14 +29,14 @@ ms.locfileid: "48117556"
 ## <a name="in-this-section"></a>Nesta seção  
  [Soluções de modelo multidimensional &#40;SSAS&#41;](multidimensional-model-solutions-ssas.md)  
   
- [Bancos de dados modelo multidimensionais &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
+ [Bancos de dados de modelo multidimensional &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
   
  [Processamento de objetos de modelo multidimensional](processing-a-multidimensional-model-analysis-services.md)  
   
  [Funções e permissões &#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)  
   
- [Power View para modelos multidimensionais](power-view-for-multidimensional-models.md)  
+ [Power View para Modelos Multidimensionais](power-view-for-multidimensional-models.md)  
   
- [Gerenciamento de Assemblies de modelo multidimensional](multidimensional-model-assemblies-management.md)  
+ [Gerenciamento de assemblies de modelo multidimensional](multidimensional-model-assemblies-management.md)  
   
   

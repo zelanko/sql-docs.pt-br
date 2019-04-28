@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81a5b8439de7ac3af004846448767d5ca5cfe9ac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703191"
 ---
 # <a name="modify-mapping-dialog-box-mining-accuracy-chart"></a>Caixa de diálogo modificar mapeamento (Gráfico de precisão de mineração)
   Use a caixa de diálogo **Modificar Mapeamento** para alterar como as colunas de entrada são unidas às colunas no modelo de mineração. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] mapeará as colunas automaticamente com base no tipo de dados e o nome de coluna, mas você pode usar essa caixa de diálogo para alterar os mapeamentos de coluna. Ao fazer modificações, certifique-se de que as colunas da fonte de dados externos tem tipos de dados e tipos de conteúdo que correspondam com as colunas no modelo de mineração que você está testando.  
@@ -33,6 +33,6 @@ ms.locfileid: "48106476"
 ## <a name="see-also"></a>Consulte também  
  [Designer do gráfico de precisão de mineração &#40;mineração de dados&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [Teste e validação de tarefas e instruções &#40;mineração de dados&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Teste e validação &#40;mineração de dados&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [Teste e validação &#40;Mineração de dados&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e3277e64e4c4e04e270298d3532ebc0c2b1f93c5
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724201"
 ---
 # <a name="spcursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,9 +59,9 @@ sp_cursor  cursor, optype, rownum, table
 |0X0008|REFRESH|É usado para preencher novamente o buffer a partir de tabelas subjacentes e pode ser usado para atualizar a linha se uma atualização ou exclusão falhar devido a controle de simultaneidade otimista, ou após UPDATE.|  
 |0X10|LOCK|Faz com que um SQL Server U bloqueio seja adquirido na página que contém a linha especificada. Esse bloqueio é compatível com Bloqueios S, mas não com Bloqueios X ou outros Bloqueios U. Pode ser usado para implementar bloqueio a curto prazo.|  
 |0X20|SETPOSITION|É usado somente quando o programa for emitir um subsequentes do SQL Server posicionado instrução DELETE ou UPDATE.|  
-|0X40|ABSOLUTE|Pode ser usado apenas junto com UPDATE ou DELETE.  ABSOLUTE é usado apenas com cursores KEYSET (é ignorado para cursores DYNAMIC e cursores STATIC não podem ser atualizados).<br /><br /> Observação: Se ABSOLUTE for especificado em uma linha no conjunto de chaves que não foi buscado, a operação poderá causar falha na verificação de simultaneidade e o resultado de retorno não poderá ser garantido.|  
+|0X40|ABSOLUTE|Pode ser usado apenas junto com UPDATE ou DELETE.  ABSOLUTE é usado apenas com cursores KEYSET (é ignorado para cursores DYNAMIC e cursores STATIC não podem ser atualizados).<br /><br /> Observação: Se ABSOLUTE for especificado em uma linha no conjunto de chaves que não foi buscado, a operação poderá falhar a verificação de simultaneidade e o resultado de retorno não pode ser garantido.|  
   
- *rowNum*  
+ *rownum*  
  Especifica qual das linhas no buffer de busca o cursor irá afetar, atualizar ou excluir.  
   
 > [!NOTE]  

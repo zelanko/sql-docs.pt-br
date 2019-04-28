@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 64e7e0fe7a8f68ce9248c02e3a59f34e1b7f65bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722648"
 ---
 # <a name="data-mining-architecture"></a>Arquitetura de mineração de dados
   Esta seção descreve a arquitetura de soluções de mineração de dados que são hospedadas em uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Os tópicos desta seção descrevem a arquitetura lógica e física de uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que oferece suporte à mineração de dados, e também fornecem informações sobre os clientes, provedores e protocolos que podem ser usados na comunicação com servidores de mineração de dados e para trabalhar local ou remotamente com objetos de mineração de dados.  
@@ -34,15 +34,15 @@ ms.locfileid: "48121046"
  Para obter mais informações sobre como você pode implementar a mineração de dados em sua solução de business intelligence, consulte a seção Guias de Solução da Biblioteca MSDN.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Arquitetura lógica &#40;Analysis Services - mineração de dados&#41;](logical-architecture-analysis-services-data-mining.md)  
+ [Arquitetura lógica &#40;Analysis Services – Mineração de dados&#41;](logical-architecture-analysis-services-data-mining.md)  
   
- [Arquitetura física &#40;Analysis Services - mineração de dados&#41;](physical-architecture-analysis-services-data-mining.md)  
+ [Arquitetura física &#40;Analysis Services – Data Mining&#41;](physical-architecture-analysis-services-data-mining.md)  
   
- [Serviços de Mineração de dados e fontes de dados](data-mining-services-and-data-sources.md)  
+ [Serviços de mineração de dados e fontes de dados](data-mining-services-and-data-sources.md)  
   
  [Gerenciamento de soluções de Mineração de dados e objetos](management-of-data-mining-solutions-and-objects.md)  
   
- [Visão geral de segurança &#40;mineração de dados&#41;](security-overview-data-mining.md)  
+ [Visão geral de segurança &#40;Mineração de dados&#41;](security-overview-data-mining.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Programação de modelo multidimensional](../multidimensional-models/multidimensional-model-programming.md)   

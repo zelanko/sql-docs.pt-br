@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 177972c5ca9841d0d206e9c20fd1450568fdcb8c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722270"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>Gráfico de comparação de precisão (Analysis Services - Mineração de Dados)
   Um **gráfico de ganho** representa graficamente a melhoria que um modelo de mineração fornece quando comparado contra uma suposição aleatória, e mede a alteração em termos de um *comparação de precisão* pontuação. Comparando as pontuações de comparação de precisão para as várias partes de seu conjunto de dados em modelos diferentes, você pode determinar qual modelo é melhor, e qual porcentagem dos casos no conjunto de dados seria beneficiado de aplicar as previsões do modelo.  

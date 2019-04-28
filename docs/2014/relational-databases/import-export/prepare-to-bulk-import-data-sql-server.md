@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 0e6d619a4922b58a99bc8cb45c952123bbae44d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62712733"
 ---
 # <a name="prepare-to-bulk-import-data-sql-server"></a>Preparar para importar dados em massa (SQL Server)
   Você pode usar o comando **bcp** , a instrução BULK INSERT ou a função OPENROWSET(BULK) para a importação de dados em massa somente de um arquivo de dados.  

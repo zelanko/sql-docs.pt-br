@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 572c331cb5f9a88ee78cb26544772b126405c02c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732209"
 ---
 # <a name="detect-categories-table-analysis-tools-for-excel"></a>Detectar Categorias (Ferramentas de Análise de Tabela para Excel)
   ![Botão de categorias de detectar na faixa de opções](media/tat-detectcat.gif "botão detectar categorias na faixa de opções")  

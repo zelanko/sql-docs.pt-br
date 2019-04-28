@@ -24,11 +24,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 341066defb122e33e82cfde87a561bc9df1ed762
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721648"
 ---
 # <a name="configure-web-synchronization"></a>Configurar Sincronização da Web
   A opção de sincronização da Web da Replicação de Mesclagem do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] habilita a replicação de dados usando o protocolo HTTP pela Internet. Para usar a sincronização da Web, primeiro você precisa executar as ações de configuração a seguir:  

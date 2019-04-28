@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 70669026a7953ba1c2818ebc35b3d8fa7cb55427
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722878"
 ---
 # <a name="data-mining-tools"></a>Ferramentas de mineração de dados
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece as seguintes ferramentas que podem ser usadas para criar soluções de mineração de dados:  
@@ -43,7 +43,7 @@ ms.locfileid: "48171546"
 ## <a name="data-mining-wizard"></a>Assistente de Mineração de Dados  
  Use o Assistente de Mineração de Dados para começar a criar soluções de mineração de dados. O assistente é fácil e rápido, e foi criado para guiá-lo no processo de criação de uma estrutura de mineração de dados e um modelo de mineração inicial relacionado; além disso, inclui as tarefas de seleção de um tipo de algoritmo e uma fonte de dados, bem como de definição dos dados de caso usados para a análise.  
   
- **Para obter mais informações:** [Assistente de Mineração de Dados &#40;Analysis Services – Mineração de dados&#41;](data-mining-wizard-analysis-services-data-mining.md)  
+ **Para obter mais informações:** [Assistente de mineração de dados &#40;Analysis Services – Data Mining&#41;](data-mining-wizard-analysis-services-data-mining.md)  
   
 ## <a name="data-mining-designer"></a>Data Mining Designer  
  Após ter criado uma estrutura de mineração e um modelo de mineração usando o Assistente de Mineração de Dados, você pode utilizar o Designer de Mineração de Dados do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para trabalhar com modelos e estruturas existentes.  
@@ -62,7 +62,7 @@ ms.locfileid: "48171546"
   
 -   Crie previsões e consultas de conteúdo em modelos de mineração existentes. Crie consultas únicas ou configure consultas para gerar previsões para tabelas inteiras de dados externos.  
   
- **Para obter mais informações:** [Designer de Mineração de Dados](data-mining-designer.md)  
+ **Para obter mais informações:** [Designer de Mineração de dados](data-mining-designer.md)  
   
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  Depois que você criar e implantar modelos de mineração em um servidor, pode usar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para gerenciar o banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que hospeda os objetos de mineração de dados. Você também pode continuar executando tarefas que usam o modelo, como explorar os modelos, processar novos dados e criar previsões.  
@@ -88,12 +88,12 @@ ms.locfileid: "48171546"
   
 -   Usando regressão logística para segmentar clientes de entrada por risco.  
   
- **Para obter mais informações:** [Projetos relacionados a soluções de mineração de dados](data-mining-solutions.md)  
+ **Para obter mais informações:** [Projetos relacionados a soluções de Mineração de dados](data-mining-solutions.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Extensões de mineração de dados &#40;DMX&#41; referência](/sql/dmx/data-mining-extensions-dmx-reference)   
- [Tarefas e tarefas do modelo de mineração](mining-model-tasks-and-how-tos.md)   
- [Tarefas do Visualizador do modelo e instruções de mineração](mining-model-viewer-tasks-and-how-tos.md)   
+ [Referência de DMX &#40;extensões DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference)   
+ [Tarefas e instruções do modelo de mineração](mining-model-tasks-and-how-tos.md)   
+ [Tarefas e instruções do visualizador do modelo de mineração](mining-model-viewer-tasks-and-how-tos.md)   
  [Soluções de mineração de dados](data-mining-solutions.md)  
   
   

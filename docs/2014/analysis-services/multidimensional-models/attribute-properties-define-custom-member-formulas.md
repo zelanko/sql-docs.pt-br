@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 83c864fc3af588b2dbf78346af1ddf1cd8430a01
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701680"
 ---
 # <a name="define-custom-member-formulas"></a>Definir fórmulas de membro personalizado
   É possível definir uma expressão multidimensional (MDX), chamada fórmula de membro personalizado, para fornecer os valores aos membros de um atributo especificado. Uma coluna em uma tabela da exibição da fonte de dados fornece, para cada membro de um atributo, a expressão usada para fornecer o valor para esse membro.  
@@ -39,9 +39,9 @@ ms.locfileid: "48186016"
   
 -   2003: 2100  
   
-    -   Trimestre 1: 700  
+    -   1º trimestre: 700  
   
-    -   Trimestre 2: 500  
+    -   2º trimestre: 500  
   
     -   Trimestre 3: 100  
   
@@ -49,9 +49,9 @@ ms.locfileid: "48186016"
   
 -   2004: 1500  
   
-    -   Trimestre 1: 600  
+    -   1º trimestre: 600  
   
-    -   Trimestre 2: 200  
+    -   2º trimestre: 200  
   
     -   Trimestre 3: 300  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48186016"
 Time.[Quarter 3] * 1.5  
 ```  
   
- As fórmulas de membro personalizado são armazenadas em uma coluna da tabela de dimensões. Habilite fórmulas de acúmulo personalizado definindo o `CustomRollupColumn` propriedade em um atributo.  
+ As fórmulas de membro personalizado são armazenadas em uma coluna da tabela de dimensões. Habilite fórmulas de acúmulo personalizado configurando a propriedade `CustomRollupColumn` de um atributo.  
   
  Para aplicar a mesma expressão MDX a todos os membros de um atributo, crie um cálculo nomeado na tabela de dimensões que retorne uma expressão MDX como cadeia de caracteres literal. Em seguida, especifique o cálculo nomeado configurando a propriedade `CustomRollupColumn` no atributo que você quer configurar. Um cálculo nomeado é uma coluna da tabela de exibição da fonte de dados que retorna os valores de linha definidos por uma expressão SQL. Para obter mais informações sobre como construir cálculos nomeados, consulte [Definir cálculos nomeados em uma exibição da fonte de dados &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
@@ -73,7 +73,7 @@ Time.[Quarter 3] * 1.5
  Se você usar membros calculados e fórmulas de acúmulo personalizado para os membros de um atributo, não deixe de ordenar a avaliação. Membros calculados são resolvidos antes das fórmulas de acúmulo personalizado.  
   
 ## <a name="see-also"></a>Consulte também  
- [Atributos e hierarquias de atributo](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
+ [Atributos e hierarquias de atributos](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
  [Definir fórmulas de membro personalizado para os atributos de uma dimensão](bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md)  
   
   

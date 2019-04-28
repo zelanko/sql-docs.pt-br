@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b0fc58cf501cf758c6b76a7445d0abfde3e227ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732642"
 ---
 # <a name="data-source-view-designer-analysis-services---multidimensional-data"></a>Designer de Exibição da Fonte de Dados (Analysis Services – Dados Multidimensionais)
   Uma exibição da fonte de dados (DSV) é uma exibição lógica de uma fonte de dados relacional externa usada para criar cubos e dimensões em um modelo multidimensional.  
@@ -50,10 +50,10 @@ ms.locfileid: "48075306"
 |Adicionar manualmente relacionamentos de tabela|[Definir relações lógicas em uma exibição da fonte de dados &#40;Analysis Services&#41;](multidimensional-models/define-logical-relationships-in-a-data-source-view-analysis-services.md)|  
 |Crie uma consulta nomeada para definir um novo objeto com base em uma consulta T-SQL genérica.|[Definir consultas nomeadas em uma exibição da fonte de dados &#40;Analysis Services&#41;](multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)|  
 |Explore os dados subjacentes para exibir os valores de dados reais representados por objetos de modelo.<br /><br /> A exploração de dados permite a você inspecionar visualmente e copiar dados retornados da tabela dimensional ou consulta dimensional subjacente. Por padrão, a exploração de dados usa a metodologia de amostragem de contagem superior, com uma contagem de exemplo de 5000, mas você pode revisar essas configurações.|[Explorar dados em uma exibição da fonte de dados &#40;Analysis Services&#41;](multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)|  
-|Diagrame todas ou parte das tabelas e relacionamentos em um DSV|[Trabalhar com diagramas em Designer de exibição de fonte de dados &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)|  
+|Diagrame todas ou parte das tabelas e relacionamentos em um DSV|[Trabalhar com diagramas em um Designer de exibição da fonte de dados &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)|  
   
 ## <a name="see-also"></a>Consulte também  
- [Exibições da fonte de dados em modelos multidimensionais](multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Adicionando ou removendo tabelas ou exibições em dados de uma exibição da fonte &#40;Analysis Services&#41;](multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
+ [Exibições de fontes de dados em modelos multidimensionais](multidimensional-models/data-source-views-in-multidimensional-models.md)   
+ [Como adicionar ou remover tabelas ou exibições em uma exibição da fonte de dados &#40;Analysis Services&#41;](multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
   
   

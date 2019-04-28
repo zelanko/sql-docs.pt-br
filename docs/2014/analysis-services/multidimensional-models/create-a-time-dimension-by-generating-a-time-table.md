@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 35aa267c22d5320ab7f7d912d091e72d00e9e48c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726850"
 ---
 # <a name="create-a-time-dimension-by-generating-a-time-table"></a>Criar uma dimensão de tempo ao gerar uma tabela de tempo
   No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], é possível usar o Assistente de Dimensão no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para criar uma dimensão de tempo quando não houver nenhuma tabela de tempo disponível no banco de dados de origem. Você faz isso selecionando uma das opções a seguir na página **Selecionar Método de Criação** :  
@@ -36,13 +36,13 @@ ms.locfileid: "48131586"
  Ao criar uma dimensão de tempo, você especifica os períodos de tempo e também as datas de início e término para as dimensões. O assistente usa os períodos de tempo especificados para criar os atributos de tempo. Ao processar a dimensão, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gera e armazena os dados necessários para suportar as datas e períodos especificados. O assistente usa os atributos criados para uma dimensão de tempo para recomendar hierarquias para a dimensão. As hierarquias refletem as relações entre períodos de tempo diferentes e considera os diferentes calendários. Por exemplo, em uma hierarquia de calendário padrão, o nível Semanas aparece abaixo do nível Anos, mas não abaixo do nível Meses, porque as semanas se dividem uniformemente no ano, mas não em meses. Por outro lado, na hierarquia de calendário de fabricação ou relatório, as semanas se dividem uniformemente em meses, então o nível Semanas aparece abaixo do nível Meses.  
   
 ## <a name="define-time-periods"></a>Definir períodos de tempo  
- Você utilizará a página **Definir Períodos de Tempo** do assistente para especificar o intervalo de datas que deseja incluir na dimensão. Você pode, por exemplo, selecionar um intervalo que inicie em 1 de janeiro do ano mais recente nos seus dados e que termine um ou dois anos após o ano atual (para permitir transações futuras). As transações que estão fora do intervalo não aparecem ou aparecem como membros desconhecidos na dimensão, dependendo do `UnknownMemberVisible` configuração de propriedade para a dimensão. Também é possível alterar o primeiro dia da semana usado por seus dados (o padrão é domingo).  
+ Você utilizará a página **Definir Períodos de Tempo** do assistente para especificar o intervalo de datas que deseja incluir na dimensão. Você pode, por exemplo, selecionar um intervalo que inicie em 1 de janeiro do ano mais recente nos seus dados e que termine um ou dois anos após o ano atual (para permitir transações futuras). As transações que estão fora do intervalo não aparecem ou aparecem como membros desconhecidos na dimensão, dependendo da configuração da propriedade `UnknownMemberVisible` da dimensão. Também é possível alterar o primeiro dia da semana usado por seus dados (o padrão é domingo).  
   
  Selecione os períodos de tempo para utilizar quando o assistente criar as hierarquias aplicadas aos seus dados, tais como Anos, Semestres, Trimestres, Meses, Dez Dias, Semanas ou Data. Você sempre deve selecionar pelo menos o período de tempo Data. O atributo Data é o principal atributo para a dimensão, que não pode funcionar sem ele.  
   
  Em seguida, em **Idioma dos nomes de membro de tempo**, selecione o idioma a ser usado para identificar os membros da dimensão.  
   
- Depois de criar uma dimensão de tempo com base em um intervalo de datas, você pode utilizar o Designer de Dimensão para adicionar ou remover atributos de tempo. Como o atributo Data é o principal atributo para a dimensão, você não pode removê-lo da dimensão. Para ocultar o atributo data dos usuários, você pode alterar o `AttributeHierarchyVisible` propriedade no atributo para `False`.  
+ Depois de criar uma dimensão de tempo com base em um intervalo de datas, você pode utilizar o Designer de Dimensão para adicionar ou remover atributos de tempo. Como o atributo Data é o principal atributo para a dimensão, você não pode removê-lo da dimensão. Para ocultar o atributo Data dos usuários, você pode alterar a propriedade `AttributeHierarchyVisible` no atributo para `False`.  
   
 ## <a name="select-calendars"></a>Selecione os calendários  
  O calendário padrão (Gregoriano) de 12 meses, começando em 1 de janeiro e terminando em 31 de dezembro, é sempre incluído quando você cria uma dimensão de tempo. Na página **Selecionar Calendários** do assistente, você pode especificar calendários adicionais nos quais as hierarquias na dimensão se baseiam. Para obter descrições dos tipos de calendário, consulte [Criar uma dimensão de tipo de data](database-dimensions-create-a-date-type-dimension.md).  
@@ -55,9 +55,9 @@ ms.locfileid: "48131586"
  Na página **Concluindo o Assistente** , verifique os atributos e hierarquias criados pelo assistente e, em seguida, nomeie a dimensão de tempo. Clique em **Concluir** para concluir o assistente e criar a dimensão. Após a conclusão da dimensão, você pode alterá-la usando o Designer de Dimensão.  
   
 ## <a name="see-also"></a>Consulte também  
- [Exibições da fonte de dados em modelos multidimensionais](data-source-views-in-multidimensional-models.md)   
+ [Exibições de fontes de dados em modelos multidimensionais](data-source-views-in-multidimensional-models.md)   
  [Criar uma dimensão de tipo de data](database-dimensions-create-a-date-type-dimension.md)   
- [Propriedades de dimensão de banco de dados](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)   
+ [Propriedades de dimensão do banco de dados](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)   
  [Relações de dimensão](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Criar uma dimensão usando uma tabela existente](create-a-dimension-by-using-an-existing-table.md)   
  [Criar uma dimensão ao gerar uma tabela que não seja de tempo na fonte de dados](create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  

@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ebbb4e6510f8896b9c931d6a582eaf6b3e2b0c24
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703125"
 ---
 # <a name="multidimensional-modeling-adventure-works-tutorial"></a>Modelagem multidimensional (Tutorial do Adventure Works)
   Bem-vindo ao Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Este tutorial descreve como usar o [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] para desenvolver e implantar um projeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usando a empresa fictícia [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] em todos os exemplos.  
@@ -51,21 +51,21 @@ ms.locfileid: "48049417"
   
 |Lição|Tempo estimado para concluir|  
 |------------|--------------------------------|  
-|[Lição 1: definindo uma exibição da fonte de dados em um projeto do Analysis Services](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)|15 minutos|  
-|[Lição 2: definindo e implantando um cubo](lesson-2-defining-and-deploying-a-cube.md)|30 minutos|  
+|[Lição 1: Definindo uma exibição da fonte de dados dentro de uma análise de projeto de serviços](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)|15 minutos|  
+|[Lição 2: Definindo e implantando um cubo](lesson-2-defining-and-deploying-a-cube.md)|30 minutos|  
 |[Lição 3: Modificando medidas, atributos e hierarquias](lesson-3-modifying-measures-attributes-and-hierarchies.md)|45 minutos|  
-|[Lição 4: definindo propriedades de dimensão e atributo avançadas](lesson-4-defining-advanced-attribute-and-dimension-properties.md)|120 minutos|  
-|[Lição 5: definindo relações entre grupos de medidas e dimensões](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)|45 minutos|  
-|[Lição 6: definindo cálculos](lesson-6-defining-calculations.md)|45 minutos|  
+|[Lição 4: Definindo propriedades de dimensão e atributo avançadas](lesson-4-defining-advanced-attribute-and-dimension-properties.md)|120 minutos|  
+|[Lição 5: Definindo relações entre dimensões e grupos de medidas](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)|45 minutos|  
+|[Lição 6: Definindo cálculos](lesson-6-defining-calculations.md)|45 minutos|  
 |[Lição 7: Definindo indicadores chave de desempenho &#40;KPIs&#41;](lesson-7-defining-key-performance-indicators-kpis.md)|30 minutos|  
-|[Lição 8: definindo ações](lesson-8-defining-actions.md)|30 minutos|  
-|[Lição 9: definindo perspectivas e traduções](lesson-9-defining-perspectives-and-translations.md)|30 minutos|  
-|[Lição 10: definindo funções administrativas](lesson-10-defining-administrative-roles.md)|15 minutos|  
+|[Lição 8: Definindo ações](lesson-8-defining-actions.md)|30 minutos|  
+|[Lição 9: Definindo perspectivas e traduções](lesson-9-defining-perspectives-and-translations.md)|30 minutos|  
+|[Lição 10: Definindo funções administrativas](lesson-10-defining-administrative-roles.md)|15 minutos|  
   
 > [!NOTE]  
 >  O banco de dados de cubo que você criará neste tutorial é uma versão simplificada do projeto de modelo multidimensional do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que faz parte dos bancos de dados de exemplo da Adventure Works disponível para download no site do codeplex. A versão de tutorial do banco de dados multidimensional do Adventure Works é simplificada para trazer maior foco às habilidades específicas que você desejará dominar imediatamente. Depois que você concluir o tutorial, explore o projeto de modelo multidimensional por conta própria para avançar sua compreensão da modelagem multidimensional do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 ## <a name="next-step"></a>Próxima etapa  
- Para começar o tutorial, vá para a primeira lição: [Lição 1: Definindo uma exibição da fonte de dados em um Projeto do Analysis Services](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md).  
+ Para começar o tutorial, vá para a primeira lição: [Lição 1: Definindo uma exibição da fonte de dados dentro de uma análise de projeto de serviços](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md).  
   
   

@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2823f88c31fe69c6d39713580ee176d1e3190093
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726740"
 ---
 # <a name="browse-dimension-data-in-dimension-designer"></a>Procurar dados de dimensão no Designer de Dimensão
   Você pode procurar dados em uma dimensão usando a exibição **Navegador** do Designer de Dimensão, acessado pelo [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -38,7 +38,7 @@ ms.locfileid: "48114176"
     >  Deve existir uma tradução definida na dimensão para o idioma selecionado.  
   
 ## <a name="see-also"></a>Consulte também  
- [Noções básicas sobre dimensões &#40;Analysis Services - dados multidimensionais&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [Introdução a Dimensões &#40;Analysis Services – Dados Multidimensionais&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensões em modelos multidimensionais](dimensions-in-multidimensional-models.md)  
   
   

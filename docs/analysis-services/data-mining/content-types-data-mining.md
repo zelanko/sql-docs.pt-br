@@ -1,5 +1,5 @@
 ---
-title: Tipos (mineração de dados) de conteúdo | Microsoft Docs
+title: (Mineração de dados) de tipos de conteúdo | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0dcc5840467f039e78c0c4d4b75862bbf78a6a42
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725180"
 ---
 # <a name="content-types-data-mining"></a>Tipos de conteúdo (mineração de dados)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "34015733"
   
  Quando uma coluna contém dados numéricos contínuos, e você sabe como os dados devem ser distribuídos, é possível melhorar a precisão da análise especificando a distribuição esperada de valores. Especifique a distribuição de coluna no nível da estrutura de mineração. Assim, a configuração se aplica a todos os modelos que se baseiam na estrutura. Para obter mais informações, consulte [Distribuições de coluna &#40;Mineração de dados&#41;](../../analysis-services/data-mining/column-distributions-data-mining.md).  
   
- O tipo de conteúdo **Continuous** é suportado pelos seguintes tipos de dados: **Date**, **Double**e **Long**.  
+ O **contínuo** tipo de conteúdo é suportado pelos seguintes tipos de dados: **Data**, **duplo**, e **longo**.  
   
 ## <a name="discretized"></a>Discretizado  
  *Discretização* é o processo que coloca valores de um conjunto contínuo de dados em buckets de modo a ter um número limitado de valores possíveis. É possível discretizar apenas dados numéricos.  
@@ -49,7 +49,7 @@ ms.locfileid: "34015733"
   
  Você pode discretizar os dados manualmente para garantir que terá os recipientes desejados ou pode usar os métodos de discretização fornecidos pelo SQL Server Analysis Services. Alguns algoritmos executam a discretização automaticamente. Para obter mais informações, consulte [Alterar a discretização de uma coluna em um modelo de mineração](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md).  
   
- O tipo de conteúdo **Discretized** é suportado pelos seguintes tipos de dados: **Date**, **Double**, **Long**e **Text**.  
+ O **Discretized** tipo de conteúdo é suportado pelos seguintes tipos de dados: **Data**, **duplo**, **longo**, e **texto**.  
   
 ## <a name="key"></a>Chave  
  O tipo de conteúdo *key* significa que a coluna identifica uma linha exclusivamente. Normalmente, em uma tabela de casos, a coluna de chave é um identificador numérico ou de texto. Defina o tipo de conteúdo como **key** para indicar que a coluna não deve ser usada para análise, somente para registros de monitoramento.  
@@ -61,17 +61,17 @@ ms.locfileid: "34015733"
 > [!NOTE]  
 >  Tabelas aninhadas estarão disponíveis somente se você usar dados de uma fonte de dados externa que foi definida como uma exibição da fonte de dados do Analysis Services.  
   
- Esse tipo de conteúdo tem suporte dos seguintes tipos de dados: **Date**, **Double**, **Long**e **Text**.  
+ Esse tipo de conteúdo é suportado pelos seguintes tipos de dados: **Data**, **duplo**, **longo**, e **texto**.  
   
 ## <a name="key-sequence"></a>Key Sequence  
  O tipo de conteúdo *key sequence* somente pode ser usado em modelos de clustering de sequência. Quando você define o tipo de conteúdo como **key sequence**, ele indica que a coluna contém valores que representam uma sequência de eventos. Os valores são ordenados, mas a distância entre eles não precisa ser igual.  
   
- Esse tipo de conteúdo tem suporte dos seguintes tipos de dados: **Double**, **Long**, **Text**e **Date**.  
+ Esse tipo de conteúdo é suportado pelos seguintes tipos de dados: **Duplo**, **longo**, **texto**, e **data**.  
   
 ## <a name="key-time"></a>Key Time  
  O tipo de conteúdo *key time* somente pode ser usado em modelos de série temporal. Quando você define o tipo de conteúdo como **key time**, isso indica que os valores são ordenados e representam uma escala de tempo.  
   
- Esse tipo de conteúdo é suportado pelos seguintes tipos de dados: **Double**, **Long**e **Date**.  
+ Esse tipo de conteúdo é suportado pelos seguintes tipos de dados: **Duplo**, **longo**, e **data**.  
   
 ## <a name="table"></a>Table  
  O tipo de conteúdo *table* indica que a coluna contém outra tabela de dados, com uma ou mais colunas e uma ou mais linhas. Para uma linha específica da tabela de casos, essa coluna pode conter diversos valores, todos relacionados ao registro de casos pai. Por exemplo, se a tabela de casos principal contiver uma lista de clientes, você poderá ter várias colunas contendo tabelas aninhadas, como uma coluna **ProductsPurchased** , onde a tabela aninhada lista os produtos comprados por esse cliente no passado, e a coluna **Hobbies** que lista os interesses do cliente.  
@@ -96,10 +96,10 @@ ms.locfileid: "34015733"
  Além dos tipos de conteúdo anteriores, usados normalmente com todos os modelos, você pode usar colunas classificadas para definir os tipos de conteúdo para alguns tipos de dados. Para obter mais informações sobre as colunas classificadas, consulte [Colunas classificadas &#40;Mineração de dados&#41;](../../analysis-services/data-mining/classified-columns-data-mining.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Conteúdo tipos & #40; DMX & #41;](../../dmx/content-types-dmx.md)   
- [Tipos de dados & #40; mineração de dados & #41;](../../analysis-services/data-mining/data-types-data-mining.md)   
- [Tipos de dados & #40; DMX & #41;](../../dmx/data-types-dmx.md)   
+ [Tipos de conteúdo &#40;DMX&#41;](../../dmx/content-types-dmx.md)   
+ [Tipos de dados &#40;Mineração de dados&#41;](../../analysis-services/data-mining/data-types-data-mining.md)   
+ [Tipos de dados &#40;DMX&#41;](../../dmx/data-types-dmx.md)   
  [Alterar as propriedades de uma estrutura de mineração](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)   
- [Colunas de estrutura de mineração](../../analysis-services/data-mining/mining-structure-columns.md)  
+ [Colunas da estrutura de mineração](../../analysis-services/data-mining/mining-structure-columns.md)  
   
   

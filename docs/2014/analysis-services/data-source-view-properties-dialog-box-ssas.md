@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 45543781aad4ea3997b0d62b238ddf348a3c8230
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732635"
 ---
 # <a name="data-source-view-properties-dialog-box-ssas"></a>Caixa de diálogo Propriedades da Exibição da Fonte de Dados (SSAS)
   Use a caixa de diálogo **Propriedades da Exibição da Fonte de Dados** no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para definir as propriedades de uma exibição de fonte de dados em um banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . É possível exibir a caixa de diálogo **Propriedades da Exibição da Fonte de Dados** clicando com o botão direito do mouse em uma fonte de dados no **Explorador de Objetos** e selecionando **Propriedades**.  

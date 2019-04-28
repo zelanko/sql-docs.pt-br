@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f1205c87f1251543521deddd7d1118b602ac7e05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62709737"
 ---
 # <a name="primarykey-property-adox"></a>Propriedade PrimaryKey (ADOX)
 Indica se o índice representa a chave primária na tabela.  

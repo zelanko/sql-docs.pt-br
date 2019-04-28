@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 775f3788946767b0a46ab4efd490cf2670d7ff76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62695375"
 ---
 # <a name="multi-lingual-and-global-deployments-master-data-services"></a>Implantações multilíngues e globais (Master Data Services)
 
@@ -33,7 +33,7 @@ ms.locfileid: "47612304"
 |[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]|Quando você executa a Instalação em inglês, o aplicativo Web do [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] está disponível e tem suporte em todos os idiomas do aplicativo. [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] pode ser exibido em qualquer idioma de aplicativo e aceita entradas de localidades específicas com base nas preferências de idioma do navegador da Web do cliente. Se as preferências de idioma forem configuradas para um idioma de aplicativo sem suporte, o [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] padronizará para o inglês.<br /><br /> Quando você executar a Instalação em um idioma diferente do inglês, recursos serão incluídos para todos os demais idiomas do aplicativo, mas esse não é um cenário com suporte para que os clientes usem o [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] em um idioma diferente do idioma de Instalação selecionado. Se você tentar acessar o [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] em um idioma diferente do idioma de Instalação, talvez tenha problemas com a exibição e a entrada de dados no aplicativo.|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] banco de dados|As informações no banco de dados do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] não são específicas para nenhuma localidade. Isso permite que o [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] determine como exibir informações, como datas e números, no formato determinado pelas preferências de idioma do navegador da Web do cliente.|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Instalar o Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   
   

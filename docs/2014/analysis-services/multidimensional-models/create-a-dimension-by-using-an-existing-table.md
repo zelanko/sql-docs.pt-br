@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e71f45689554a8f45f492eb974815935d112e0e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702143"
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>Criar uma dimensão usando uma tabela existente
   No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você pode usar o Assistente para Dimensões no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para criar uma dimensão por meio de uma tabela existente. Isso é feito selecionando a opção **Usar uma tabela existente** na página **Selecionar Método de Criação** do assistente. Se você selecionar essa opção, o assistente fornecerá a base da estrutura de dimensão nas tabelas de dimensão, suas colunas e qualquer relação entre essas colunas em uma exibição da fonte de dados existente. O assistente dá exemplos de dados na tabela de origem e nas tabelas relacionadas. Ele usa esses dados para definir as colunas de atributo baseadas nas colunas das tabelas de dimensão, e para definir hierarquias de atributos (chamadas hierarquias *definidas pelo usuário* ). Depois que você usar o Assistente para Dimensões para criar sua dimensão, é possível usar o Designer de Dimensão para adicionar, remover e configurar atributos e hierarquias na dimensão.  
@@ -59,7 +59,7 @@ ms.locfileid: "48226616"
 > [!NOTE]  
 >  Se o tipo de dimensão e os tipos de atributo padrão não forem definidos quando você criar a dimensão, use o Assistente de Business Intelligence para definir estes valores depois que criar a dimensão. Para obter mais informações, consulte [Adicionar inteligência de dimensão a uma dimensão](bi-wizard-add-dimension-intelligence-to-a-dimension.md) ou (para uma dimensão do tipo Contas) [Adicionar inteligência de conta a uma dimensão](bi-wizard-add-account-intelligence-to-a-dimension.md).  
   
- O assistente define o tipo de dimensão automaticamente com base nos tipos de atributo especificados. Os tipos de atributo especificados no assistente definem a `Type` propriedade para os atributos. As configurações de propriedade `Type` para a dimensão e seus atributos fornecem informações sobre o conteúdo de uma dimensão para aplicativos cliente e servidor. Em alguns casos, eles `Type` as configurações de propriedade somente fornecem orientação para aplicativos cliente e são opcionais. Em outros casos, como para contas, tempo ou moeda dimensões, eles `Type` configurações de propriedade determinam um comportamento específico baseado em servidor e podem ser necessárias para implementar alguns comportamentos de cubo.  
+ O assistente define o tipo de dimensão automaticamente com base nos tipos de atributo especificados. Os tipos de atributo especificados no assistente definem a propriedade `Type` dos atributos. As configurações de propriedade `Type` para a dimensão e seus atributos fornecem informações sobre o conteúdo de uma dimensão para aplicativos cliente e servidor. Em alguns casos, essas configurações de propriedade `Type` somente fornecem orientação para aplicativos cliente e são opcionais. Em outros casos, como para dimensões de Contas, Tempo ou Moeda, essas configurações de propriedade `Type` determinam um comportamento específico baseado em servidor e são necessárias para implementar alguns comportamentos de cubo.  
   
  Para obter mais informações sobre tipos de dimensões e atributos, consulte [Tipos de dimensão](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)e [Configurar tipos de atributo](attribute-properties-configure-attribute-types.md).  
   

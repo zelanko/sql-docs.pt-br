@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6266dd29c3486b6ae4163b15cffbc455eee31c5a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780948"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705129"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>Caixa de diálogo Avaliar Políticas, página Seleção de Políticas
   Use esta caixa de diálogo para avaliar políticas do Gerenciamento Baseado em Políticas. Ao selecionar a página **Resultados da Avaliação** , você pode aplicar políticas aos itens em um conjunto de destino que não esteja em conformidade com as políticas.  
@@ -38,7 +38,7 @@ ms.locfileid: "52780948"
  **Políticas: categoria**  
  A categoria da política. Essa caixa é somente leitura.  
   
- **Políticas: Faceta**  
+ **Políticas: Facet**  
  A faceta implementada pela política. Essa caixa é somente leitura.  
   
  **Avaliar**  

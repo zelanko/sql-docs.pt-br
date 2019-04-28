@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 31c14a039d22238450023c4a7f9b7b099e9a2a53
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727942"
 ---
 # <a name="metadata-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Metadados (guia Navegador, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel **Metadados** na guia **Navegador** no Designer de Cubo para navegar na estrutura do cubo, para visualizar medidas relacionadas e exibir e criar dimensões. Você executar uma busca detalhada em hierarquias, exibir uma lista de medidas disponíveis e KPIs e copiar os nomes totalmente qualificados de objetos.  
@@ -39,16 +39,16 @@ ms.locfileid: "48171146"
   
  Ao trabalhar com um modelo de tabela, a lista de funções inclui funções MDX e DAX. Caso contrário, a lista incluirá apenas MDX. Um modelo multidimensional não pode usar funções DAX diretamente, embora uma expressão DAX possa ser incluída como parte de uma definição de objeto.  
   
- Dica: as pastas que contêm funções DAX são listadas em letras maiúsculas. Todas as outras pastas contêm MDX funções. Por exemplo, há duas pastas para funções estatísticas: **STATISTICAL** contém as funções relacionadas DAX.  
+ Dica: As pastas que contêm funções DAX são listadas todas as letras maiusculas. Todas as outras pastas contêm MDX funções. Por exemplo, há duas pastas para funções estatísticas: **ESTATÍSTICA** contém as funções relacionadas DAX.  
   
 ## <a name="context-menu"></a>Menu de contexto  
  As seguintes opções estão disponíveis no menu de contexto exibido ao clicar com o botão direito do mouse em um elemento exibido no painel **Metadados** :  
   
-|Opção|Description|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |**Adicionar à consulta**|Clique para adicionar o objeto selecionado ao painel inferior da área de compilação da consulta.|  
-|**Adicionar ao filtro**|Clique para adicionar a dimensão, atributo, hierarquia ou nível selecionado à área do **Navegador**.<br /><br /> Observação: esta opção será habilitada somente se uma dimensão, atributo, hierarquia ou nível for selecionado.|  
-|**Copiar**|Clique para adicionar o item selecionado à Área de Transferência.<br /><br /> Observação: essa opção copia o nome totalmente qualificado do objeto.|  
+|**Adicionar ao filtro**|Clique para adicionar a dimensão, atributo, hierarquia ou nível selecionado à área do **Navegador**.<br /><br /> Observação: Essa opção estará habilitada apenas se uma dimensão, atributo, hierarquia ou nível estiver selecionado.|  
+|**Copiar**|Clique para adicionar o item selecionado à Área de Transferência.<br /><br /> Observação: Esta opção copia o nome totalmente qualificado do objeto.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Barra de ferramentas &#40;guia do navegador, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   

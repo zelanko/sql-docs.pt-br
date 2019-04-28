@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d4788e421015effe2b3ee6abf0ffeca2cbbdd386
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794441"
 ---
 # <a name="toolbar-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>Barra de Ferramentas (guia Navegador, Designer de Dimensão) (Analysis Services - Dados Multidimensionais)
   Use o painel **Barra de Ferramentas** para executar operações comuns na guia **Navegador** do **Designer de Dimensão**.  
@@ -25,7 +25,7 @@ ms.locfileid: "48091246"
  **Processar**  
  Clique para abrir a caixa de diálogo **Processo** e processar a dimensão selecionada.  
   
- **Reconectar-se**  
+ **Reconnect**  
  Clique para reconectar a guia **Navegador** com a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e com o banco de dados que contém a dimensão se a sessão da guia **Navegador** for desconectada devido a perda ou tempo limite de conexão.  
   
  **Atualizar**  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 614674d3ac7a14ec3a6143381ef249a215850bc0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703555"
 ---
 # <a name="powerpivot-for-sharepoint-2013-installation"></a>Instalação do PowerPivot para SharePoint 2013
   Os procedimentos neste tópico conduzem você pela instalação de servidor único de um servidor [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] no modo de implantação do SharePoint. As etapas incluem a execução do assistente de instalação do SQL Server, bem como as tarefas de configuração que usam a Administração Central do SharePoint 2013.  
@@ -46,9 +46,9 @@ ms.locfileid: "53373968"
   
 -   **Serviços de back-end:** Se você usar o PowerPivot para Excel para criar pastas de trabalho que contêm dados analíticos, você deve ter o PowerPivot para SharePoint para acessar esses dados em um ambiente de servidor. Você pode executar a Instalação do SQL Server em um computador que tenha o SharePoint Server 2013 instalado, ou em um computador diferente que não tenha o SharePoint. O Analysis Services não tem nenhuma dependência no SharePoint.  
   
-     **Observação:** Este tópico descreve a instalação do servidor do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e dos serviços de back-end.  
+     **Observação:** Este tópico descreve a instalação do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server e os serviços de back-end.  
   
--   **Camada intermediária:** Aprimoramentos às experiências do PowerPivot no SharePoint incluindo Galeria PowerPivot, atualização de dados agendada, painel de gerenciamento e provedores de dados. Para obter mais informações sobre como instalar e configurar a camada intermediária, consulte o seguinte:  
+-   **Camada intermediária:** Aprimoramentos para as experiências do PowerPivot no SharePoint incluindo Galeria PowerPivot, atualização de dados agendada, painel de gerenciamento e provedores de dados. Para obter mais informações sobre como instalar e configurar a camada intermediária, consulte o seguinte:  
   
     -   [Instalar ou desinstalar o PowerPivot para SharePoint Add-in &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)  
   
@@ -75,7 +75,7 @@ ms.locfileid: "53373968"
   
  [Notas de versão do Microsoft SQL Server 2012 (https://go.microsoft.com/fwlink/?LinkId=236893)](https://go.microsoft.com/fwlink/?LinkId=236893).  
   
-##  <a name="InstallSQL"></a> Etapa 1: Instale o PowerPivot para SharePoint  
+##  <a name="InstallSQL"></a> Etapa 1: Instalar o PowerPivot para SharePoint  
  Nesta etapa, você executa a Instalação do SQL Server para instalar um servidor do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] no modo do SharePoint. Em uma etapa subsequente, configure os Serviços do Excel para usar esse servidor para modelos de dados da pasta de trabalho.  
   
 1.  Execute o Assistente de Instalação do SQL Server (Setup.exe).  
@@ -96,7 +96,7 @@ ms.locfileid: "53373968"
   
 9. Se outras **Regras de Suporte à Instalação**forem exibidas, revise os avisos e clique em **Avançar**.  
   
-     **Observação:** Como o Firewall do Windows está habilitado, será exibido um aviso solicitando a abertura das portas que habilitam o acesso remoto.  
+     **Observação:** Porque o Firewall do Windows estiver habilitado, você verá um aviso para abrir as portas para habilitar o acesso remoto.  
   
 10. Na página **Função de Instalação** , selecione **SQL Server PowerPivot para SharePoint**. Essa opção instala o Analysis Services no modo do SharePoint.  
   
@@ -206,7 +206,7 @@ ms.locfileid: "53373968"
 ##  <a name="bkmk_verify"></a> Etapa 3: Verifique a integração  
  As etapas a seguir conduzem você pela criação e pelo carregamento de uma nova pasta de trabalho para verificar a integração do Analysis Services. Você precisará de um banco de dados do SQL Server para concluir as etapas.  
   
-1.  **Observação:** Se você já tiver uma pasta de trabalho avançada com segmentações de dados ou filtros, poderá carregá-la para a biblioteca de documentos do SharePoint e verificar se consegue interagir com as segmentações de dados e os filtros na exibição da biblioteca de documentos.  
+1.  **Observação:** Se você já tiver uma pasta de trabalho avançada com segmentações de dados ou filtros, você pode carregá-lo à biblioteca de documentos do SharePoint e verificar se consegue interagir com os filtros e segmentações de dados do modo de exibição de biblioteca de documentos.  
   
 2.  Inicie a nova pasta de trabalho no Excel.  
   
@@ -260,7 +260,7 @@ ms.locfileid: "53373968"
   
 -   [Configurar o PowerPivot e implantar soluções de &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md)  
   
- **Redundância e carga do servidor:** Instalando um segundo servidor ou mais servidores [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] no modo SharePoint fornecerá redundância da funcionalidade do servidor [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Os servidores adicionais também distribuirão a carga entre os servidores. Para obter mais informações, consulte o seguinte:  
+ **Redundância e carga do servidor:** Instalar um segundo ou mais [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] servidores no modo do SharePoint fornecerá redundância do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] funcionalidade do servidor. Os servidores adicionais também distribuirão a carga entre os servidores. Para obter mais informações, consulte o seguinte:  
   
 -   [Configurar o Analysis Services para processar modelos de dados nos serviços do Excel](https://technet.microsoft.com/library/jj614437\(v=office.15\)) (https://technet.microsoft.com/library/jj614437(v=office.15)).  
   

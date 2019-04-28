@@ -26,26 +26,26 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4bbc1e991787c9e2d98595ba61d4334dccf35f00
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722927"
 ---
 # <a name="data-mining-concepts"></a>Conceitos de mineração de dados
   A mineração de dados é o processo de descoberta de informações acionáveis em grandes conjuntos de dados. A mineração de dados usa análise matemática para derivar padrões e tendências que existem nos dados. Normalmente, esses padrões não podem ser descobertos com a exploração de dados tradicional pelo fato de as relações serem muito complexas ou por haver muitos dados.  
   
  Esses padrões e tendências podem ser coletados e definidos como um *modelo de mineração de dados*. Os modelos de mineração podem ser se aplicados a cenários específicos, como:  
   
--   **Previsão**: Estimando vendas, prevendo cargas de servidor ou tempo de inatividade de servidor  
+-   **Previsão**: Estimando vendas, prevendo cargas de servidor ou tempo de inatividade do servidor  
   
--   **Risco e probabilidade**: escolhendo os melhores clientes para malas diretas, determinando o ponto equilibrado provável para cenários de risco, atribuindo probabilidades a diagnósticos ou outros resultados  
+-   **Risco e probabilidade**: Escolhendo os melhores clientes para malas diretas, determinando o ponto equilibrado provável para cenários de risco, atribuindo probabilidades a diagnósticos ou outros resultados  
   
 -   **Recomendações**: Determinando quais produtos são mais prováveis de serem vendidos juntos, gerando recomendações  
   
 -   **Localizando sequências**: Analisando seleções de cliente em um carrinho de compras, prevendo os próximos eventos prováveis  
   
--   **Agrupamento**: Separando clientes ou eventos em cluster de itens relacionados, analisando e prevendo afinidades  
+-   **Agrupando**: Separando clientes ou eventos em cluster de itens relacionados, analisando e prevendo afinidades  
   
  A criação de um modelo de mineração representa apenas uma parte de um processo maior que inclui desde perguntas sobre dados e criação de um modelo até respostas para as perguntas feitas e implantação do modelo em um ambiente de trabalho. Esse processo pode ser definido usando as seis etapas básicas a seguir:  
   

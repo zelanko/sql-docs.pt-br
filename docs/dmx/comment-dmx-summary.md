@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: be2fc3e82e1da18a12af4bc4756811225e85a280
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38031444"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62707263"
 ---
 # <a name="---comment-dmx-summary"></a>– Resumo (comentário) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "38031444"
  *Comment_Text*  
  Cadeia de caracteres que contém o texto do comentário.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Use esse operador para comentários de linha única ou aninhados. Os comentários inseridos com o uso de -- são delimitados pelo caractere de nova linha.  
   
  Não há comprimento máximo para comentários.  
@@ -43,6 +43,6 @@ ms.locfileid: "38031444"
  [Barra estrela &#40;comentário&#41; &#40;DMX&#41;](../dmx/slash-star-comment-dmx.md)   
  [Barra dupla &#40;comentário&#41; &#40;DMX&#41;](../dmx/double-slash-comment-dmx.md)   
  [Extensões de mineração de dados &#40;DMX&#41; referência de operador](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Operadores &#40;DMX&#41;](../dmx/operators-dmx.md)  
+ [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

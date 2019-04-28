@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4697af2463587fcca244a291be0c8dace2907cc8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732837"
 ---
 # <a name="testing-and-validation-tasks-and-how-tos-data-mining"></a>Tarefas de teste e validação e guias práticos (mineração de dados)
   Você pode usar a guia **Gráfico de Precisão de Mineração** do Designer de Mineração de Dados no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para comparar a precisão previsível dos modelos de mineração em sua estrutura de mineração.  
@@ -46,7 +46,7 @@ ms.locfileid: "48143286"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
--   [Criar um gráfico de comparação de precisão, gráfico de ganho ou matriz de classificação](create-a-lift-chart-profit-chart-or-classification-matrix.md)  
+-   [Criar um gráfico de comparação de precisão, gráfico de lucro ou matriz de classificação](create-a-lift-chart-profit-chart-or-classification-matrix.md)  
   
 -   [Criar um relatório de validação cruzada](create-a-cross-validation-report.md)  
   

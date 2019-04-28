@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4e58f43c7004f94aeff81d9ac43a9c9c2804b184
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721998"
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Referência técnica do algoritmo Árvores de Decisão da Microsoft
   O algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é um híbrido que incorpora métodos diferentes para a criação de uma árvore e dá suporte a várias tarefas analíticas, incluindo regressão, classificação e associação. O algoritmo Árvores de Decisão da Microsoft é dá suporte à modelagem de atributos discretos e contínuos.  
@@ -61,7 +61,7 @@ ms.locfileid: "53365398"
  Para obter uma explicação mais detalhada sobre como o [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo árvores de decisão funciona com colunas previsíveis distintas, consulte [Learning Bayesian Networks: A combinação de dados de conhecimento e estatísticos](https://go.microsoft.com/fwlink/?LinkId=45963). Para obter mais informações sobre como o algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] funciona com uma coluna previsível contínua, consulte o apêndice de [Modelos de árvore de regressão automática para análise de série temporal](https://go.microsoft.com/fwlink/?LinkId=45966).  
   
 ### <a name="scoring-methods-and-feature-selection"></a>Métodos de pontuação e seleção de recursos  
- O algoritmo Árvores de Decisão da Microsoft oferece três fórmulas para pontuar o ganho de informação: entropia de Shannon, rede bayesiana com antecedente K2 e rede bayesiana com uma distribuição Dirichlet uniforme de antecedentes. Todos os três métodos são bem-estabelecidos no campo de mineração de dados. É recomendável fazer experiências com parâmetros e métodos de pontuação diferentes para determinar aqueles que fornecem os melhores resultados. Para obter mais informações sobre esses métodos de pontuação, consulte [Feature Selection](../../sql-server/install/feature-selection.md).  
+ O algoritmo árvores de decisão da Microsoft oferece três fórmulas para pontuar o ganho de informações: Shannon entropia, rede Bayesiana com K2 a priori e rede Bayesiana com uma distribuição Dirichlet uniforme de antecedentes. Todos os três métodos são bem-estabelecidos no campo de mineração de dados. É recomendável fazer experiências com parâmetros e métodos de pontuação diferentes para determinar aqueles que fornecem os melhores resultados. Para obter mais informações sobre esses métodos de pontuação, consulte [Feature Selection](../../sql-server/install/feature-selection.md).  
   
  Todos os algoritmos de mineração de dados [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usam seleção de recursos automaticamente para melhorar a análise e reduzir a carga de processamento. O método usado para seleção de recursos depende do algoritmo utilizado para criar o modelo. Os parâmetros de algoritmo que controlam seleção de recursos para um modelo de árvores de decisão são MAXIMUM_INPUT_ATTRIBUTES e MAXIMUM_OUTPUT.  
   

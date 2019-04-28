@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6f87cda5fb38fad586e5272d7d7c3ea255a478b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728332"
 ---
 # <a name="manually-process-data-ssas-tabular"></a>Processando os dados manualmente (SSAS tabular)
-  Este tópico descreve como processar manualmente dados de espaço de trabalho no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+  Este tópico descreve como processar manualmente dados de workspace no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
  Ao criar um modelo de tabela que usa dados externos, é possível atualizar os dados manualmente usando o comando Processar. Você pode processar uma única tabela, todas as tabelas no modelo ou uma ou mais partições. Sempre que os dados são processados, também pode ser necessário recalculá-los.  Processar os dados significa obter os dados mais recentes de fontes externas. Recalcular significa atualizar o resultado de qualquer fórmula que usa os dados.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48189757"
   
 2.  Na caixa de diálogo **Processar Partições** , em **Modo**, selecione um dos modos de processo a seguir:  
   
-    |Modo|Description|  
+    |Modo|Descrição|  
     |----------|-----------------|  
     |**Processar Padrão**|Detecta o estado de processamento de um objeto de partição e realiza o processamento necessário para passar os objetos de partição não processados ou parcialmente processados para um estado completamente processado. Os dados para tabelas vazias e partições são carregados; hierarquias, colunas calculadas e relações são criadas ou recriadas.|  
     |**Processar Completo**|Processa um objeto de partição e todos os objetos que ele contém. Quando o comando Processar Completo for executado para um objeto que já foi processado, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] removerá todos os dados do objeto e processará o objeto. Esse tipo de processamento é necessário quando uma alteração estrutural é feita em um objeto.|  
@@ -74,7 +74,7 @@ ms.locfileid: "48189757"
  Clique para interromper a operação de processo. Essa opção será útil se a operação estiver demorando muito ou se houver muitos erros.  
   
 ## <a name="see-also"></a>Consulte também  
- [Processar dados de &#40;Tabular do SSAS&#41;](process-data-ssas-tabular.md)   
- [Solucionar problemas de dados de processo &#40;Tabular do SSAS&#41;](troubleshoot-process-data-ssas-tabular.md)  
+ [Processar dados &#40;SSAS de Tabela&#41;](process-data-ssas-tabular.md)   
+ [Solucionar problemas de dados de processo &#40;SSAS tabular&#41;](troubleshoot-process-data-ssas-tabular.md)  
   
   

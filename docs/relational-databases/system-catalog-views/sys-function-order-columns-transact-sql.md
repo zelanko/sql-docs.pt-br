@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 43ce8d82bc286e7005d57d5a829e09814ffdd240
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63004729"
 ---
 # <a name="sysfunctionordercolumns-transact-sql"></a>sys.function_order_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47643514"
   Retorna uma linha por coluna que faz parte de um **ordem** expressão de uma função com valor de tabela do Common language runtime (CLR).  
 
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID do objeto (função CLR com valor de tabela) no qual a ordem é definida.|  
 |**order_column_id**|**int**|ID da coluna de pedido. **order_column_id** só é exclusivo dentro **object_id**.<br /><br /> **order_column_id** representa a posição dessa coluna na ordenação.|  

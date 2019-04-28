@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbf5ac9c4bbb313ee6e7c608a64409273ef11c0d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725370"
 ---
 # <a name="creating-query-scoped-named-sets-mdx"></a>Criando conjuntos nomeados no escopo da consulta (MDX)
   Se um conjunto nomeado for necessário para uma única consulta MDX, é possível defini-lo usando a palavra-chave WITH. O conjunto nomeado criado com a palavra-chave WITH deixará de existir ao fim da execução da consulta.  
@@ -95,6 +95,6 @@ FROM Sales
   
 ## <a name="see-also"></a>Consulte também  
  [Instrução SELECT &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
- [No escopo da sessão de criação de conjuntos nomeados &#40;MDX&#41;](mdx-named-sets-creating-session-scoped-named-sets.md)  
+ [Criando conjuntos nomeados no escopo da sessão &#40;MDX&#41;](mdx-named-sets-creating-session-scoped-named-sets.md)  
   
   

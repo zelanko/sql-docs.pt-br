@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f5109e604c65d8a525e5c65127ca287c8e3b049
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172106"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725240"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>Gerenciamento de assemblies de modelo multidimensional
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece muitas funções intrínsecas para uso com as linguagens MDX e extensões DMX (extensões DMX) projetadas para obter tudo desde cálculos estatísticos padrão até passar membros em uma hierarquia. Mas, como em qualquer outro produto complexo, há sempre a necessidade de estender a funcionalidade para o produto.  
@@ -41,7 +41,7 @@ ms.locfileid: "48172106"
   
  Um assembly com novos procedimentos e funções pode ser adicionado ao servidor. É possível usar assemblies para aprimorar ou adicionar funcionalidade personalizada que não foi fornecida pelo servidor. Usando os assemblies, você pode adicionar novas funções para o MDX, extensões DMX ou procedimentos armazenados. Os assemblies são carregados do local onde o aplicativo personalizado é executado e uma cópia do arquivo binário do assembly é salva com os dados do banco de dados no servidor. Quando um assembly é removido, o assembly copiado também é removido do servidor.  
   
- Os assemblies podem ser de dois tipos diferentes: COM e CLR. Os assemblies CLR são desenvolvidos em linguagens de programação .NET Framework, como C#, Visual Basic .NET, C++ gerenciado. Os assemblies COM são bibliotecas COM que devem ser registradas no servidor.  
+ Assemblies podem ser de dois tipos diferentes: COM e CLR. Os assemblies CLR são desenvolvidos em linguagens de programação .NET Framework, como C#, Visual Basic .NET, C++ gerenciado. Os assemblies COM são bibliotecas COM que devem ser registradas no servidor.  
   
  Assemblies podem ser adicionados a objetos <xref:Microsoft.AnalysisServices.Server> ou <xref:Microsoft.AnalysisServices.Database> . Os assemblies de servidor podem ser chamados por qualquer usuário conectado ao servidor ou qualquer objeto no servidor. Os assemblies de banco de dados só podem ser chamados por objetos <xref:Microsoft.AnalysisServices.Database> ou usuários conectados ao banco de dados.  
   
@@ -89,10 +89,10 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  A política de nível host do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é uma combinação de política fixa do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para assemblies de sistema e política específica de usuário para assemblies de usuário. A parte especificada pelo usuário da política host do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] baseia-se no proprietário do assembly especificando um de três recipientes de permissão para cada assembly.  
   
-|Configuração de permissões|Description|  
+|Configuração de permissões|Descrição|  
 |------------------------|-----------------|  
 |`Safe`|Fornece a permissão de computação interna. Esse recipiente de permissão não atribui permissões para acessar qualquer um dos recursos protegidos em .NET Framework. Este será o recipiente de permissão padrão de um assembly se não houver outro especificado com a propriedade `PermissionSet`.|  
-|`ExternalAccess`|Fornece o mesmo acesso que o `Safe` definir, com a habilidade adicional para acessar recursos externos do sistema. Esse recipiente de permissão não oferece garantias de segurança (embora seja possível para proteger esse cenário), mas oferece garantias de confiabilidade.|  
+|`ExternalAccess`|Fornece o mesmo acesso que a configuração `Safe`, com a habilidade adicional de acessar recursos externos do sistema. Esse recipiente de permissão não oferece garantias de segurança (embora seja possível para proteger esse cenário), mas oferece garantias de confiabilidade.|  
 |`Unsafe`|Não fornece restrições. Nenhuma garantia de segurança ou confiabilidade pode ser criada para o código gerenciado executado sob essa permissão definida. Qualquer permissão, mesmo uma permissão personalizada incluída pelo administrador, é concedida ao código executado nesse nível de confiança.|  
   
  Quando o CLR é hospedado pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], a permissão com base em fila verifica interrupções no limite com o código nativo do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Qualquer código gerenciado em assemblies [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sempre entra em uma das três categorias de permissão listadas anteriormente.  
@@ -100,13 +100,13 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
  As rotinas de assembly COM (ou não gerenciadas) não oferecem suporte ao modelo de segurança CLR.  
   
 ### <a name="impersonation"></a>Representação  
- Sempre que o código gerenciado acessa qualquer recurso fora do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] segue as regras associadas à configuração da propriedade `ImpersonationMode` do assembly para certificar-se de que o acesso ocorre em um contexto de segurança apropriado do Windows. Porque assemblies usando o `Safe` configuração de permissão não pode acessar recursos fora [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], essas regras são aplicáveis apenas aos assemblies usando o `ExternalAccess` e `Unsafe` as configurações de permissão.  
+ Sempre que o código gerenciado acessa qualquer recurso fora do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] segue as regras associadas à configuração da propriedade `ImpersonationMode` do assembly para certificar-se de que o acesso ocorre em um contexto de segurança apropriado do Windows. Como os assemblies que usam a configuração de permissão `Safe` não podem acessar recursos fora do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], essas regras são aplicáveis apenas aos assemblies, usando as configurações de permissão `ExternalAccess` e `Unsafe`.  
   
 -   Se o contexto de execução atual corresponder ao logon autenticado do Windows e for o mesmo que o contexto do chamador original (ou seja, sem EXECUTE AS no meio), o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] representará o logon autenticado do Windows antes de acessar o recurso.  
   
 -   Se houver um EXECUTE AS intermediário que altere o contexto do chamador original, a tentativa de acessar o recurso externo falhará.  
   
- O `ImpersonationMode` propriedade pode ser definida como `ImpersonateCurrentUser` ou `ImpersonateAnonymous`. A configuração padrão, `ImpersonateCurrentUser`, executa um assembly na conta de logon de rede do usuário atual. Se o `ImpersonateAnonymous` for usada, o contexto de execução será correspondente à conta de usuário de logon do Windows IUSER _*servername* no servidor. Esta é a conta-convidado da Internet que limitou os privilégios no servidor. Um assembly executado nesse contexto só pode acessar recursos limitados no servidor local.  
+ A propriedade `ImpersonationMode` pode ser definida como `ImpersonateCurrentUser` ou `ImpersonateAnonymous`. A configuração padrão, `ImpersonateCurrentUser`, executa um assembly na conta de login de rede do usuário atual. Se o `ImpersonateAnonymous` for usada, o contexto de execução será correspondente à conta de usuário de logon do Windows IUSER _*servername* no servidor. Esta é a conta-convidado da Internet que limitou os privilégios no servidor. Um assembly executado nesse contexto só pode acessar recursos limitados no servidor local.  
   
 ### <a name="application-domains"></a>Domínios de aplicativo  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] não expõe os domínios de aplicativo diretamente. Devido a um conjunto de assemblies executado no mesmo domínio de aplicativo, os domínios de aplicativo podem descobrir um ao outro no momento de execução usando o namespace `System.Reflection` no .NET Framework, ou de alguma outra maneira, e podem chamá-los no modo associado mais recente. Essa chamadas estarão sujeitas às verificações de permissão usadas pela segurança com base na autorização do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -114,7 +114,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
  Você não deve confiar na localização dos assemblies no mesmo domínio do aplicativo, pois o limite do domínio de aplicativo e dos assemblies que vão para cada domínio são definidos pela implementação.  
   
 ## <a name="see-also"></a>Consulte também  
- [Configuração de segurança para procedimentos armazenados](../multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md)   
+ [Definindo a segurança para procedimentos armazenados](../multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md)   
  [Definindo procedimentos armazenados](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
   

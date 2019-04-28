@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bc90c76792ae6eaaa21ba3e32bea66e4942c354f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733686"
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Microsoft Sequence Clustering Algorithm
   O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering é um algoritmo de análise de sequência fornecido pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Você pode usar esse algoritmo para explorar os dados que contêm eventos que podem ser vinculados de acordo com caminhos ou *sequências*. O algoritmo localiza as sequências mais comuns por agrupamento, ou clustering, das sequências que são idênticas. A seguir veja alguns exemplos de dados que contêm sequências que podem ser usadas para mineração de dados, para fornecer ideias sobre problemas comuns ou cenários comerciais:  
@@ -78,9 +78,9 @@ ms.locfileid: "48190776"
 -   Dá suporte ao uso de modelos de mineração OLAP e à criação de dimensões de mineração de dados.  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Referência técnica do algoritmo de Clustering de sequência da Microsoft](microsoft-sequence-clustering-algorithm-technical-reference.md)   
- [Exemplos de consulta de modelo de Clustering de sequência](clustering-model-query-examples.md)   
+ [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Referência técnica do Algoritmo MSC](microsoft-sequence-clustering-algorithm-technical-reference.md)   
+ [Exemplos de consulta de modelo de sequence clustering](clustering-model-query-examples.md)   
  [Procurar um modelo usando o Visualizador de Cluster de Sequência da Microsoft](browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
   

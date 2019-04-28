@@ -14,17 +14,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9a737b79944635af1a45dd4fc51a9ef2e2967a31
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728152"
 ---
 # <a name="level-and-members-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>Nível e Membros (guia Navegador, Designer de Dimensão) (Analysis Services - Dados Multidimensionais)
   Use este painel para procurar os membros da hierarquia e linguagem atualmente selecionadas. Para selecionar uma hierarquia ou linguagem para navegar, use as opções **Hierarquia** e **Linguagem** no painel **Barra de Ferramentas** . Para obter mais informações sobre o painel Barra de Ferramentas, consulte [Toolbar &#40;Browser Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md).  
   
 ## <a name="writeback-mode"></a>Modo Write-back  
- A funcionalidade deste painel alterará se o modo write-back estiver habilitado. A dimensão selecionada deverá ser habilitada para gravação (em outras palavras, o `WriteEnabled` propriedade da dimensão deve ser definida como true) e a dimensão deve ser implantada em um [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instância para habilitar o modo de write-back.  
+ A funcionalidade deste painel alterará se o modo write-back estiver habilitado. A dimensão selecionada deverá ser habilitada para gravação (isto é, a propriedade `WriteEnabled` da dimensão deverá ser definida como verdadeira) e a dimensão deverá ser implantada em uma instância de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para habilitar o modo write-back.  
   
  Para habilitar o modo write-back, você poderá selecionar **Write-back** no painel **Barra de Ferramentas** ou clicar com o botão direito do mouse no painel **Nível e Membros** e selecionar **Write-back** no menu de contexto.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48209696"
 > [!NOTE]  
 >  Esta opção será exibida somente se o modo write-back for habilitado.  
   
- **Recortar**  
+ **Cut**  
  Copia os membros selecionados à área de transferência e os remove da hierarquia.  
   
 > [!NOTE]  

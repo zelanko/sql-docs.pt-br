@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c0f3d10776e661eaa15ed39a141fe06608d8dbde
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722628"
 ---
 # <a name="cross-validation-formulas"></a>Fórmulas de validação cruzada
   Quando você gera um relatório de validação cruzada, ele contém medidas de exatidão para cada modelo, dependendo do tipo de modelo de mineração (ou seja, o algoritmo que foi usado para criar o modelo), o tipo de dados do atributo previsível, e o valor do atributo previsível, se qualquer.  
@@ -28,7 +28,7 @@ ms.locfileid: "48223176"
 ## <a name="formulas-used-for-cross-validation-measures"></a>Fórmulas usadas para medidas de validação cruzada  
   
 > [!NOTE]  
->  **Importante:** estas medidas de precisão são computadas para cada atributo de destino. Para cada atributo, você pode especificar ou omitir um valor de destino. Se um caso no conjunto de dados não tiver nenhum valor para o atributo de destino, o caso será tratado como tendo um valor especial chamado de *valor ausente*. Não são consideradas as linhas com valores ausentes durante a computação da medida de exatidão para um atributo de destino específico. Observe que, como as pontuações são computadas individualmente para cada atributo, se valores estiverem presentes para o atributo de destino, mas ausentes para outros atributos, isso não afetará a pontuação do atributo de destino.  
+>  **Importante:** Estas medidas de precisão são computadas para cada atributo de destino. Para cada atributo, você pode especificar ou omitir um valor de destino. Se um caso no conjunto de dados não tiver nenhum valor para o atributo de destino, o caso será tratado como tendo um valor especial chamado de *valor ausente*. Não são consideradas as linhas com valores ausentes durante a computação da medida de exatidão para um atributo de destino específico. Observe que, como as pontuações são computadas individualmente para cada atributo, se valores estiverem presentes para o atributo de destino, mas ausentes para outros atributos, isso não afetará a pontuação do atributo de destino.  
   
 |Measure|Aplica-se a|Implementação|  
 |-------------|----------------|--------------------|  
@@ -46,7 +46,7 @@ ms.locfileid: "48223176"
 |**Erro de quadrado da média de raiz**|Atributo diferenciado, nenhum destino especificado.|Raiz quadrada da média dos quadrados de complemento da pontuação de probabilidade, dividida pelo número de casos na partição, excluindo os casos com valores ausentes para o atributo de destino.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Teste e validação &#40;mineração de dados&#41;](testing-and-validation-data-mining.md)   
- [A validação cruzada &#40;Analysis Services - mineração de dados&#41;](cross-validation-analysis-services-data-mining.md)  
+ [Teste e validação &#40;Mineração de dados&#41;](testing-and-validation-data-mining.md)   
+ [Validação cruzada &#40;Analysis Services – Data Mining&#41;](cross-validation-analysis-services-data-mining.md)  
   
   

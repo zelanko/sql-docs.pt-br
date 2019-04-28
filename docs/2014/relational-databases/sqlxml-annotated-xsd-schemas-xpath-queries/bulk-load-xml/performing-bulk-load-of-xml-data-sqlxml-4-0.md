@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 27b24a6e7686c136cf79fa882136a362c7560e42
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717413"
 ---
 # <a name="performing-bulk-load-of-xml-data-sqlxml-40"></a>Executando o carregamento em massa de dados XML (SQLXML 4.0)
   XML Bulk Load é um objeto COM autônomo que lhe permite carregar dados XML semiestruturados em tabelas do Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

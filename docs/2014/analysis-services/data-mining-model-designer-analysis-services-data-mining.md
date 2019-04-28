@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d132d007b54e1677b2300ad3cc285c038b982209
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689579"
 ---
 # <a name="data-mining-model-designer-analysis-services---data-mining"></a>Designer do Modelo de Mineração de Dados (Analysis Services – Mineração de Dados)
   Esta seção contém os tópicos de Ajuda F1 para o Designer do Modelo de Mineração de Dados no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Você utilizará este espaço de design para criar, gerenciar e trabalhar com modelos de mineração de dados.  
@@ -29,9 +29,9 @@ ms.locfileid: "48224160"
   
 -   [Tutorial de mineração de dados básico](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
--   [Criando e consultando modelos de mineração de dados com DMX: tutoriais &#40;Analysis Services - mineração de dados&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+-   [Criando e consultando modelos de mineração de dados com DMX: Tutoriais do &#40;Analysis Services - mineração de dados&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
--   [Assistente de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)  
+-   [Assistente de mineração de dados &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
 -   [Conceitos de mineração de dados](data-mining/data-mining-concepts.md)  
   

@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6aaf41bcc3759fe52cc1d15abb980227055f2de5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864633"
 ---
 # <a name="lineseparatorsenum"></a>LineSeparatorsEnum
 Especifica o caractere usado como um separador de linha no texto [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objetos.  
   
-|Constante|Valor|Description|  
+|Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
 |**adCR**|13|Indica um retorno de carro.|  
 |**adCRLF**|-1|Padrão. Indica a alimentação de linha de retorno de carro.|  

@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0e68a857a928cbc737a647d0b497366c1148d948
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722132"
 ---
 # <a name="microsoft-decision-trees-algorithm"></a>Algoritmo Árvores de Decisão da Microsoft
   O [!INCLUDE[msCoName](../../includes/msconame-md.md)] árvores de decisão é um algoritmo de classificação e regressão fornecido pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para uso em modelagens de previsão de atributos discretos e contínuos.  
@@ -44,7 +44,7 @@ ms.locfileid: "48198176"
 ## <a name="how-the-algorithm-works"></a>Como o algoritmo funciona  
  O algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] gera um modelo de mineração de dados criando uma série de divisões na árvore. Essas divisões são representadas como *nós*. O algoritmo adiciona um nó ao modelo toda vez que uma coluna de entrada é considerada significativamente correlacionada a uma coluna previsível. A forma que o algoritmo determina uma divisão depende do fato de ele estar prevendo uma coluna contínua ou discreta.  
   
- O algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] usa a *seleção de recurso* para guiar a seleção dos atributos mais úteis. Seleção de recursos é usada por todos os [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] algoritmos de mineração de dados para melhorar o desempenho e a qualidade da análise. A seleção de recurso é importante para impedir que atributos sem-importância usem tempo do processador. Se você usar muitas entradas ou atributos previsíveis ao criar um modelo de mineração de dados, o modelo poderá demorar muito tempo para processar ou ainda esgotar a memória. Os métodos usados para determinar a divisão da árvore incluem medidas padrão da indústria para *entropia* e redes Bayesianas *.* Para obter mais informações sobre os métodos usados para selecionar atributos significativos e depois classificá-los, consulte [Seleção de recursos &#40;Mineração de dados&#41;](feature-selection-data-mining.md).  
+ O algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] usa a *seleção de recurso* para guiar a seleção dos atributos mais úteis. A seleção de recurso é usada por todos os algoritmos de mineração de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para melhorar o desempenho e a qualidade da análise. A seleção de recurso é importante para impedir que atributos sem-importância usem tempo do processador. Se você usar muitas entradas ou atributos previsíveis ao criar um modelo de mineração de dados, o modelo poderá demorar muito tempo para processar ou ainda esgotar a memória. Os métodos usados para determinar a divisão da árvore incluem medidas padrão da indústria para *entropia* e redes Bayesianas *.* Para obter mais informações sobre os métodos usados para selecionar atributos significativos e depois classificá-los, consulte [Seleção de recursos &#40;Mineração de dados&#41;](feature-selection-data-mining.md).  
   
  Um problema comum em modelos de mineração de dados é que eles se tornam muito sensíveis a pequenas diferenças nos dados de treinamento, nesse caso, ele deve ser *referimos* ou *muito treinados*. Um modelo sobrecarregado não pode ser generalizado para outros conjuntos de dados. Para evitar a superajuste de um determinado conjunto de dados, o algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] usa técnicas para controlar o crescimento da árvore. Para obter uma explicação mais detalhada de como funciona o algoritmo de Árvores de Decisão [!INCLUDE[msCoName](../../includes/msconame-md.md)] , consulte [Referência técnica do algoritmo Árvores de Decisão da Microsoft](microsoft-decision-trees-algorithm-technical-reference.md).  
   
@@ -84,7 +84,7 @@ ms.locfileid: "48198176"
 ## <a name="viewing-a-decision-trees-model"></a>Exibindo um modelo de árvore de decisão  
  Para explorar o modelo, você pode usar o **Visualizador de Árvores da Microsoft**. Caso seu modelo gere várias árvores, é possível selecionar uma árvore e o visualizador mostrará uma divisão de como os casos são categorizados para cada atributo previsível. Você também pode exibir a interação das árvores usando o visualizador de rede de dependência. Para obter mais informações, consulte [Procurar um modelo usando o Visualizador de Árvores da Microsoft](browse-a-model-using-the-microsoft-tree-viewer.md).  
   
- Se quiser obter mais detalhes sobre qualquer ramificação ou nó da árvore, você também pode explorar o modelo usando o [Visualizador de Árvore de Conteúdo Genérica da Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md). O conteúdo armazenado para o modelo inclui a distribuição de todos os valores em cada nó, as probabilidades em cada nível da árvore e as fórmulas de regressão dos atributos contínuos. Para obter mais informações, consulte [Mining Model Content for Decision Tree Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).  
+ Se quiser obter mais detalhes sobre qualquer ramificação ou nó da árvore, você também pode explorar o modelo usando o [Visualizador de Árvore de Conteúdo Genérica da Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md). O conteúdo armazenado para o modelo inclui a distribuição de todos os valores em cada nó, as probabilidades em cada nível da árvore e as fórmulas de regressão dos atributos contínuos. Para obter mais informações, consulte [Conteúdo do modelo de mineração para modelos de árvore de decisão &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).  
   
 ## <a name="creating-predictions"></a>Criando previsões  
  Depois que o modelo foi processado, os resultados são armazenados como um conjunto de padrões e estatísticas. Esse conjunto pode ser usado para explorar relações e fazer previsões.  
@@ -102,9 +102,9 @@ ms.locfileid: "48198176"
 -   Dá suporte ao uso de modelos de mineração OLAP e à criação de dimensões de mineração de dados.  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Referência técnica do algoritmo de árvores de decisão da Microsoft](microsoft-decision-trees-algorithm-technical-reference.md)   
+ [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Referência técnica do algoritmo Árvores de Decisão da Microsoft](microsoft-decision-trees-algorithm-technical-reference.md)   
  [Exemplos de consulta de modelo de árvores de decisão](decision-trees-model-query-examples.md)   
- [Mining Model Content para modelos de árvore de decisão &#40;Analysis Services - mineração de dados&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [Conteúdo do modelo de mineração para modelos de árvore de decisão &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

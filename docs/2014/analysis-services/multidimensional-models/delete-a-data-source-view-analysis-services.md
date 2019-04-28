@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3869a18e8b19062a0bc6eabfcf45b53d4220dab0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726301"
 ---
 # <a name="delete-a-data-source-view-analysis-services"></a>Excluir uma exibição da fonte de dados (Analysis Services)
   Se você não estiver mais usando uma DSV (exibição da fonte de dados) em um projeto OLAP, poderá excluí-la do projeto no [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
@@ -34,7 +34,7 @@ ms.locfileid: "48197579"
  ![Excluir a caixa de diálogo de objetos](../media/ssas-olapdsv-deleteobjects.gif "caixa de diálogo Excluir objetos")  
   
 ## <a name="see-also"></a>Consulte também  
- [Exibições da fonte de dados em modelos multidimensionais](data-source-views-in-multidimensional-models.md)   
+ [Exibições de fontes de dados em modelos multidimensionais](data-source-views-in-multidimensional-models.md)   
  [Alterar propriedades em uma exibição da fonte de dados &#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
   
   

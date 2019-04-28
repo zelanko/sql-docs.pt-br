@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: da3a03fa8b7762705295870714f8128dfa9cd339
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727070"
 ---
 # <a name="bind-an-attribute-to-a-key-column"></a>Associar um atributo a uma coluna de chave
   Este procedimento descreve como alterar a configuração da propriedade `Name` de um atributo de uma dimensão.  

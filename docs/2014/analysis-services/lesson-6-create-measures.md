@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7fdd611d1757712baa13e58ba31d78a2081f3d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728102"
 ---
 # <a name="lesson-7-create-measures"></a>Lição 7: Criar medidas
   Nesta lição, você criará medidas a serem incluída no modelo. Semelhante às colunas calculadas que você criou na lição anterior, uma medida é essencialmente um cálculo criado por meio de uma fórmula DAX. No entanto, diferente das colunas calculadas, são avaliadas medidas com base em um *filtro*selecionado pelo usuário; por exemplo, uma coluna ou uma segmentação de dados adicionada ao campo Rótulos de Linha em um Tabela Dinâmica.   Um valor para cada célula no filtro é calculado pela medida aplicada. As medidas são cálculos avançados e flexíveis que você incluirá em quase todos os modelos de tabela, a fim de executar cálculos dinâmicos em dados numéricos. Para saber mais, consulte [Medidas &#40;SSAS Tabular&#41;](tabular-models/measures-ssas-tabular.md).  
@@ -30,7 +30,7 @@ ms.locfileid: "48213236"
  Tempo estimado para concluir esta lição: **30 minutos**  
   
 ## <a name="prerequisites"></a>Prerequisites  
- Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas desta lição, você deverá ter concluído a lição anterior: [Lição 6: Criar colunas calculadas](lesson-5-create-calculated-columns.md).  
+ Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [Lição 6: Criar colunas calculadas](lesson-5-create-calculated-columns.md).  
   
 ## <a name="create-measures"></a>Criar medidas  
   
@@ -92,13 +92,13 @@ ms.locfileid: "48213236"
     |Nome da Medida|coluna|AutoSoma (∑)|Fórmula|  
     |------------------|------------|-------------------|-------------|  
     |Contagem das Linhas de Pedido pela Internet|Número da Linha do Pedido de Vendas|Count|=COUNT([Número da Linha do Pedido de Vendas])|  
-    |Unidades Totais da Internet|Quantidade do Pedido|SUM|=SUM([Quantidade do Pedido])|  
-    |Valor do Desconto Total pela Internet|Valor do desconto|SUM|=SUM([Valor do Desconto])|  
-    |Custo Total do Produto da Internet|Custo Total do Produto|SUM|=SUM([Custo Total do Produto])|  
-    |Vendas Totais pela Internet|Valor das Vendas|SUM|=SUM([Valor das Vendas])|  
-    |Margem Total da Internet|Margem|SUM|=SUM([Margem])|  
-    |Valor Total dos Imp. da Internet|Valor dos Imp.|SUM|=SUM([Valor dos Imp.])|  
-    |Frete Total da Internet|Frete|SUM|=SUM([Frete])|  
+    |Unidades Totais da Internet|Quantidade do Pedido|Sum|=SUM([Quantidade do Pedido])|  
+    |Valor do Desconto Total pela Internet|Valor do desconto|Sum|=SUM([Valor do Desconto])|  
+    |Custo Total do Produto da Internet|Custo Total do Produto|Sum|=SUM([Custo Total do Produto])|  
+    |Vendas Totais pela Internet|Valor das Vendas|Sum|=SUM([Valor das Vendas])|  
+    |Margem Total da Internet|Margem|Sum|=SUM([Margem])|  
+    |Valor Total dos Imp. da Internet|Valor dos Imp.|Sum|=SUM([Valor dos Imp.])|  
+    |Frete Total da Internet|Frete|Sum|=SUM([Frete])|  
   
 2.  Clicando em uma célula vazia na grade de medida e usando a fórmula DAX, crie e nomeie as seguintes medidas:  
   

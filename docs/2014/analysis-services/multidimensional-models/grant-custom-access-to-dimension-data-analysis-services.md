@@ -25,11 +25,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 51e180d39df78a90869c2d6cdfc366e0cc13ba02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726593"
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>Conceder acesso personalizado a dados da dimensão (Analysis Services)
   Após habilitar o acesso de leitura a um cubo, você pode definir permissões adicionais que permitem ou negam explicitamente o acesso a membros de dimensão (incluindo as medidas contidas na dimensão de medidas que contém todas as medidas usadas em um cubo). Por exemplo, considerando várias categorias de revendedores, você pode querer definir as permissões para excluir dados de um tipo de negócio específico. A ilustração a seguir mostra o antes e o depois da negação de acesso ao tipo de negócio Depósito na dimensão do Revendedor.  
@@ -51,7 +51,7 @@ ms.locfileid: "48091726"
   
 2.  Procure `DefaultMeasure`. Encontre um para o cubo e um para cada perspectiva. Ao definir a segurança de dimensão, evite restringir o acesso a medidas padrão.  
   
-3.  Em seguida, procure `MeasureExpression`. A expressão de medida é baseada em um cálculo que inclui frequentemente outras medidas. Verifique se a medida que deseja restringir não foi usada em uma expressão. Como alternativa, restrinja o acesso, apenas certifique-se de também excluir qualquer referência a essa medida no cubo.  
+3.  Em seguida, procure a `MeasureExpression`. A expressão de medida é baseada em um cálculo que inclui frequentemente outras medidas. Verifique se a medida que deseja restringir não foi usada em uma expressão. Como alternativa, restrinja o acesso, apenas certifique-se de também excluir qualquer referência a essa medida no cubo.  
   
 4.  Por fim, procure o `DefaultMember`. Anote todos os atributos que servem como membro padrão de um atributo. Evite colocar restrições sobre esses atributos ao configurar a segurança de dimensão.  
   
@@ -127,9 +127,9 @@ ms.locfileid: "48091726"
  Clique para testar a sintaxe MDX definida nesta página.  
   
 ## <a name="see-also"></a>Consulte também  
- [Conceder permissões de cubo ou modelo de &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
- [Conceder acesso personalizado a dados da célula &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)   
- [Conceder permissões em estruturas de mineração de dados e modelos de &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [Conceder permissões de cubo ou modelo &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
+ [Conceder acesso personalizado a dados de célula &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)   
+ [Conceder permissões em estruturas e modelos de mineração de dados &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
  [Conceder permissões em um objeto de fonte de dados &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

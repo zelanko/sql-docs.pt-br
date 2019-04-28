@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7b555d929bb343de1d651b158335673bd2e0573f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733373"
 ---
 # <a name="mining-model-tasks-and-how-tos"></a>Tarefas e instruções do modelo de mineração
   Use a guia **Modelos de Mineração** do Designer de Mineração de Dados no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para gerenciar e processar modelos de mineração em uma estrutura de mineração.  
@@ -36,7 +36,7 @@ ms.locfileid: "48196056"
   
 -   [Alterar a diferenciação de uma coluna em um modelo de mineração](change-the-discretization-of-a-column-in-a-mining-model.md)  
   
--   [Exibir ou alterar sinalizadores de modelagem &#40;mineração de dados&#41;](modeling-flags-data-mining.md)  
+-   [Exibir ou alterar sinalizadores de modelagem &#40;Mineração de dados&#41;](modeling-flags-data-mining.md)  
   
 -   [Especificar uma coluna para usar como regressor em um modelo](specify-a-column-to-use-as-regressor-in-a-model.md)  
   
@@ -57,8 +57,8 @@ ms.locfileid: "48196056"
 -   [Criar uma dimensão de mineração de dados](create-a-data-mining-dimension.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Tarefas de estrutura de mineração e instruções](mining-structure-tasks-and-how-tos.md)   
- [Modelos de mineração &#40;Analysis Services - mineração de dados&#41;](mining-models-analysis-services-data-mining.md)   
+ [Tarefas e instruções da estrutura de mineração](mining-structure-tasks-and-how-tos.md)   
+ [Modelos de mineração &#40;Analysis Services – Data Mining&#41;](mining-models-analysis-services-data-mining.md)   
  [Conceitos de mineração de dados](data-mining-concepts.md)  
   
   

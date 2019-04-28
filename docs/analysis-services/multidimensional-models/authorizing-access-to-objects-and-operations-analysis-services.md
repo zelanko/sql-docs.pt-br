@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 88290b9598ffdbbcfc90a738654a9485107da464
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717573"
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>Autorizando o acesso a objetos e operações (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "34024033"
   
  Na sequência, depois que o administrador cria uma solução de tabela ou multidimensional, ele a implanta no servidor como um banco de dados. Um administrador do servidor pode delegar tarefas de administração de banco de dados por definir uma função que tenha permissões de controle total para o banco de dados em questão. Os membros dessa função podem processar ou consultar objetos no banco de dados, bem como criar funções adicionais para acessar cubos, dimensões e outros objetos dentro do próprio banco de dados. Consulte [Conceder permissões de banco de dados &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md) para obter mais informações.  
   
- **Etapa 3: Habilitar acesso do cubo ou modelo para consulta e processamento de cargas de trabalho**  
+ **Etapa 3: Habilitar o acesso de cubo ou modelo para consulta e processamento de cargas de trabalho**  
   
  Por padrão, somente servidores e administradores de banco de dados têm acesso a modelos de cubos e de tabela. Tornar essas estruturas de dados disponíveis para outras pessoas na sua organização exige atribuições de funções adicionais, que mapeiam contas de usuários e de grupos do Windows para cubos ou modelos, juntamente com as permissões que especificam privilégios de **Read** . Consulte [Conceder permissões de cubo ou modelo &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md) para ver os detalhes.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "34024033"
 > [!NOTE]  
 >  Os usuários não precisam de nenhuma permissão nas tabelas relacionais do banco de dados relacionais subjacentes por meio do qual o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] carrega os dados e não precisam de nenhuma permissão no nível do arquivo no computador em que a instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] está em execução.  
   
- **Etapa 4 (opcional): Permitir ou negar acesso a objetos de cubo internos**  
+ **Etapa 4 (opcional): Permitir ou negar o acesso a objetos de cubo internos**  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece configurações de segurança para definir permissões para objetos individuais, incluindo membros e células da dimensão dentro de um modelo de dados. Para ver os detalhes, consulte [Conceder acesso personalizado a dados da dimensão &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md) e [Conceder acesso personalizado a dados de célula &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md).  
   

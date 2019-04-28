@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 636fe00c73e508363eaab385f6acd9909374166c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704719"
 ---
 # <a name="view-or-change-the-properties-of-a-connection-in-a-project"></a>Exibir ou alterar as propriedades de uma conexão em um projeto
   As propriedades de uma conexão salvas em um projeto podem ser exibidas e algumas podem ser modificadas.  

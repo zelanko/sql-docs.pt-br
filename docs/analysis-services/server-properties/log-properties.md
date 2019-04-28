@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: db79a57c3e63cf09f36cd1b9af2d529811b67ea0
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53071923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714643"
 ---
 # <a name="log-properties"></a>Propriedades do log
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -132,7 +132,7 @@ ms.locfileid: "53071923"
  O valor padrão desta propriedade é em branco, que por sua vez, assume FlightRecorderTraceDef.xml como padrão.  
   
 ## <a name="query-log"></a>Log de consultas  
- **Aplica-se a:** Somente o modo de servidor multidimensional  
+ **Aplica-se a:** Somente modo de servidor multidimensional  
   
  **QueryLog\QueryLogFileName**  
  Uma propriedade de cadeia de caracteres que especifica o nome do arquivo de log de consultas. Esta propriedade só se aplicará quando um arquivo de disco for usado para log, em vez de uma tabela de banco de dados (o comportamento padrão).  

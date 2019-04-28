@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97f7a61772b93c78173f3eca8ad38fca1ade671a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699742"
 ---
 # <a name="user-defined-member-properties-mdx"></a>Propriedades do membro definidas pelo usuário (MDX)
-  É possível adicionar propriedades do membro definidas pelo usuário a um nível nomeado específico de uma dimensão como relações de atributo. Propriedades do membro definidas pelo usuário não podem ser adicionadas para o `(All)` nível de uma hierarquia ou à própria hierarquia.  
+  É possível adicionar propriedades do membro definidas pelo usuário a um nível nomeado específico de uma dimensão como relações de atributo. Não é possível adicionar propriedades do membro definidas pelo usuário ao nível `(All)` de uma hierarquia ou à própria hierarquia.  
   
 ## <a name="creating-user-defined-member-properties"></a>Criando propriedades do membro definidas pelo usuário  
  Propriedades do membro definidas pelo usuário podem ser adicionadas a dimensões ou cubos com base em servidor pela interface de usuário ou programaticamente:  
@@ -38,7 +38,7 @@ ms.locfileid: "48114306"
   
  `DIMENSION PROPERTIES [Dimension.]Level.<Custom_Member_Property>`  
   
- O `PROPERTIES` palavra-chave aparece depois da expressão de conjunto da especificação de eixo. Por exemplo, a consulta MDX a seguir a `PROPERTIES` palavra-chave recupera a `List Price` e `Dealer Price` propriedades do membro definidas pelo usuário e é exibida depois que a expressão de conjunto que identifica os produtos vendidos em janeiro:  
+ A palavra-chave `PROPERTIES` aparece depois da expressão de conjunto da especificação de eixo. Por exemplo, na consulta MDX a seguir, a palavra-chave `PROPERTIES` recupera as propriedades do membro definidas pelo usuário `List Price` e `Dealer Price` e aparece depois da expressão de conjunto que identifica os produtos vendidos em janeiro:  
   
 ```  
 SELECT   
@@ -53,7 +53,7 @@ WHERE ([Date].[Month of Year].[January])
 ```  
   
 ### <a name="using-the-properties-function-to-retrieve-user-defined-member-properties"></a>Usando a função Properties para recuperar propriedades do membro definidas pelo usuário  
- Como alternativa, você pode acessar as propriedades do membro personalizadas com a função `Properties`. Por exemplo, a consulta MDX a seguir usa o `WITH` palavra-chave para criar um membro calculado que consiste o `List Price` propriedade de membro:  
+ Como alternativa, você pode acessar as propriedades do membro personalizadas com a função `Properties`. Por exemplo, a consulta MDX a seguir usa a palavra-chave `WITH` para criar um membro calculado formado pela propriedade do membro `List Price`:  
   
 ```  
 WITH   
@@ -69,6 +69,6 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>Consulte também  
  [Usando propriedades do membro &#40;MDX&#41;](mdx-member-properties.md)   
- [Propriedades &#40;MDX&#41;](/sql/mdx/properties-mdx)  
+ [Properties &#40;MDX&#41;](/sql/mdx/properties-mdx)  
   
   

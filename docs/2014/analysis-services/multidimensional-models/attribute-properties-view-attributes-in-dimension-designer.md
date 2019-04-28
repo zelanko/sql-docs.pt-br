@@ -16,18 +16,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3e7e5ea7af394905d9f5efcb27dce4d102fb5d3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727502"
 ---
 # <a name="view-attributes-in-dimension-designer"></a>Exibir atributos no Designer de Dimensão
   São criados atributos nos objetos de dimensão. Você pode exibir e configurar atributos usando o Designer de Dimensão no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. O painel **Atributos** da guia **Estrutura da Dimensão** do Designer de Dimensão lista os atributos que estão em uma dimensão. Use esse painel para adicionar, remover ou configurar atributos. Também é possível selecionar atributos para usar como um nível em uma nova hierarquia ou para adicionar a um nível de uma hierarquia existente.  
   
  Para exibir os atributos de uma dimensão, abra o Designer de Dimensão para a dimensão. O painel **Atributos** da guia **Estrutura da Dimensão**  do designer mostra os atributos que estão na dimensão. Você pode alternar entre uma exibição de lista, árvore ou grade, basta apontar para **Mostrar atributos em** sobre o **dimensão** menu de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e, em seguida, clicando em um dos comandos mostrados na tabela a seguir.  
   
-|Mostrar Atributos em|Description|  
+|Mostrar Atributos em|Descrição|  
 |------------------------|-----------------|  
 |**Lista**|Exibe os atributos no formato de lista.<br /><br /> Clique com o botão direito do mouse no atributo para excluí-lo da lista, renomeá-lo ou alterar seu uso.<br /><br /> Use esse modo de exibição para construir hierarquias. As informações do atributo e as propriedades do membro não são visíveis.|  
 |**Árvore**|Exibe os atributos no formato de árvore, com a dimensão como o nó de nível superior na árvore. Use esse modo de exibição para exibir e criar propriedades do membro. Você também pode usá-lo para construir hierarquias. Expanda o atributo para exibir suas relações ou criar uma nova relação de atributo, executando um destes procedimentos:<br /><br /> Clique na dimensão, no atributo ou na propriedade do membro para exibir suas propriedades na janela **Propriedades** .<br /><br /> Clique com o botão direito do mouse no atributo ou na propriedade do membro para excluí-lo(a) da lista, renomeá-lo(a) ou alterar seu uso.|  

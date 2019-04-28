@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 41d6248743ceadf23a3a351a6599497dd8e5172b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62735786"
 ---
-# <a name="task-1-creating-a-data-quality-project"></a>Tarefa 1: Criando um Projeto de Qualidade de Dados
+# <a name="task-1-creating-a-data-quality-project"></a>Tarefa 1: Criar um Projeto de Qualidade de Dados
   Nesta tarefa, você criará um Projeto de Qualidade de Dados para limpar os dados do fornecedor em um arquivo do Excel de acordo com a base de dados de conhecimento Fornecedores criada anteriormente neste tutorial.  
   
 1.  No **projeto de qualidade de dados** painel na página principal, clique em **novo projeto de qualidade de dados**.  

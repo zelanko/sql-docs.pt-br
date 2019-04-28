@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7cf775406905a920861236dafa8d740c9074101
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722718"
 ---
 # <a name="discretization-methods-data-mining"></a>Métodos de discretização (mineração de dados)
   Alguns algoritmos usados para criar modelos de mineração de dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] precisam de tipos de conteúdo específicos para que funcionem corretamente. Por exemplo, o algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes não pode usar colunas contínuas como entrada nem prever valores contínuos. Além disso, algumas colunas podem conter tantos valores que o algoritmo não pode identificar facilmente os padrões interessantes nos dados dos quais criar um modelo.  
@@ -43,7 +43,7 @@ ms.locfileid: "48187046"
   
  A tabela a seguir descreve os métodos que podem ser usados para discretizar os dados no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
-|Método de discretização|Description|  
+|Método de discretização|Descrição|  
 |---------------------------|-----------------|  
 |`AUTOMATIC`|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] determina o método de discretização a ser usado.|  
 |`CLUSTERS`|O algoritmo divide os dados em grupos por meio de amostragem dos dados de treinamento, inicializando um número aleatório de pontos e em seguida executando várias interações do algoritmo Microsoft Clustering usando o método de clustering Expectation Maximization (EM). O método `CLUSTERS` é útil pois trabalha em qualquer curva de distribuição. Porém, requer mais tempo de processamento que os demais métodos de discretização.<br /><br /> Esse método pode ser usado apenas com colunas numéricas.|  
@@ -51,19 +51,19 @@ ms.locfileid: "48187046"
   
 ## <a name="remarks"></a>Comentários  
   
--   Você pode usar o `EQUAL_AREAS` método discretizar cadeias de caracteres.  
+-   Você pode usar o método `EQUAL_AREAS` para discretizar as cadeias de caracteres.  
   
--   O `CLUSTERS` método usa uma amostra aleatória de 1000 registros para discretizar os dados. Use o método `EQUAL_AREAS` se não quiser que o algoritmo realize a amostragem dos dados.  
+-   O método `CLUSTERS` usa um exemplo aleatório de 1000 registros para discretizar os dados. Use o método `EQUAL_AREAS` se não quiser que o algoritmo realize a amostragem dos dados.  
   
--   O tutorial de modelo de mineração de rede neural fornece um exemplo de como a discretização pode ser personalizada. Para obter mais informações, consulte [lição 5: criando rede Neural e modelos de regressão logística &#40;Tutorial intermediário de mineração de dados&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md).  
+-   O tutorial de modelo de mineração de rede neural fornece um exemplo de como a discretização pode ser personalizada. Para obter mais informações, consulte [lição 5: Criação de rede Neural e modelos de regressão logística &#40;Tutorial de mineração de dados intermediário&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Tipos de conteúdo &#40;mineração de dados&#41;](content-types-data-mining.md)   
+ [Tipos de conteúdo &#40;Data Mining&#41;](content-types-data-mining.md)   
  [Tipos de conteúdo &#40;DMX&#41;](/sql/dmx/content-types-dmx)   
- [Algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Estruturas de mineração &#40;Analysis Services - mineração de dados&#41;](mining-structures-analysis-services-data-mining.md)   
- [Tipos de dados &#40;mineração de dados&#41;](data-types-data-mining.md)   
- [Colunas de estrutura de mineração](mining-structure-columns.md)   
- [Distribuições de colunas &#40;mineração de dados&#41;](column-distributions-data-mining.md)  
+ [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Estruturas de Mineração &#40;Analysis Services – Data Mining&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Tipos de dados &#40;Mineração de dados&#41;](data-types-data-mining.md)   
+ [Colunas da estrutura de mineração](mining-structure-columns.md)   
+ [Distribuições de colunas &#40;Mineração de dados&#41;](column-distributions-data-mining.md)  
   
   

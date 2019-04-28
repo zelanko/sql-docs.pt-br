@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 383a81aea121882b334bbfdab806408ac0513893
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724211"
 ---
 # <a name="hard-coded-sql-statements"></a>Instruções SQL embutidas em código
 Aplicativos que executam uma tarefa fixa geralmente contêm instruções de SQL embutido em código. Por exemplo, um sistema de entrada de pedidos pode usar a seguinte chamada para ordens de venda lista:  
@@ -29,7 +29,7 @@ Aplicativos que executam uma tarefa fixa geralmente contêm instruções de SQL 
 SQLExecDirect(hstmt, "SELECT OrderID FROM Orders WHERE Status = 'OPEN'", SQL_NTS);  
 ```  
   
- Há várias vantagens para instruções de SQL embutido: eles podem ser testados quando o aplicativo é escrito; eles são mais simples de implementar do que instruções construídas em tempo de execução; e eles simplificam o aplicativo.  
+ Há diversas vantagens em instruções de SQL embutido em código: Eles podem ser testados quando o aplicativo é escrito; eles são mais simples de implementar do que instruções construídas em tempo de execução; e eles simplificam o aplicativo.  
   
  Usando parâmetros de instrução e preparação de instruções fornecem ainda melhores maneiras de usar instruções de SQL embutido em código. Por exemplo, suponha que a tabela de peças contém as colunas de PartID, descrição e preço. Uma maneira de inserir uma nova linha nessa tabela seria construir e executar uma **inserir** instrução:  
   

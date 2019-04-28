@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db8b433652829b16890552a70bd1e0d08d1c1bc4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689084"
 ---
 # <a name="bcpgetcolfmt"></a>bcp_getcolfmt
   Usado para localizar o valor da propriedade de formato da coluna.  
@@ -54,7 +54,7 @@ pcbLen
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *HDBC*  
+ *hdbc*  
  É o identificador de conexão ODBC habilitado para cópia em massa.  
   
  *field*  
@@ -76,9 +76,9 @@ pcbLen
  SUCCEED ou FAIL.  
   
 ## <a name="remarks"></a>Comentários  
- Valores de propriedade de formato de coluna são listados na [bcp_setcolfmt](bcp-setcolfmt.md) tópico. Os valores de propriedade da coluna são definidos chamando a função **bcp_setcolfmt** e a função **bcp_getcolfmt** é usada para localizar o valor da propriedade de formato da coluna.  
+ Valores da propriedade de formato da coluna são listados no tópico [bcp_setcolfmt](bcp-setcolfmt.md) . Os valores de propriedade da coluna são definidos chamando a função **bcp_setcolfmt** e a função **bcp_getcolfmt** é usada para localizar o valor da propriedade de formato da coluna.  
   
- Podem ser observadas alterações de comportamento, ao se conectar a um [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (ou posterior) computador do servidor, em comparação comparada anteriormente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versões. Para obter mais informações, veja [Descoberta de metadados](../native-client/features/metadata-discovery.md).  
+ Podem ser observadas alterações de comportamento ao conectar a um computador de servidor [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (ou posterior), na comparação com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, veja [Descoberta de metadados](../native-client/features/metadata-discovery.md).  
   
 ## <a name="bcpgetcolfmt-support-for-enhanced-date-and-time-features"></a>Suporte de bcp_getcolfmt a recursos aprimorados de data e hora  
  Os tipos usados com o `BCP_FMT_TYPE` são de propriedade para tipos de data/hora conforme especificado no [alterações de cópia em massa para tipos de tempo e aprimorados de data &#40;OLE DB e ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  

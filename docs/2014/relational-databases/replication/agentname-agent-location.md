@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8d6ee17a176c77bf29eb308d2af1bae364f37098
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721868"
 ---
 # <a name="ltagentnamegt-agent-location"></a>Local do Agente &lt;AgentName&gt;
   O Agente de Mesclagem (para assinaturas de mesclagem) e o Agente de Distribuição (para assinatura transacional e de instantâneo) é executado no Distribuidor ou no Assinante. Se o agente for executado no Distribuidor, a assinatura será referida como assinatura push; se o agente for executado no Assinante, ela será referida como assinatura pull. Para obter mais informações sobre assinaturas push e pull, consulte [Assinar Publicações](subscribe-to-publications.md). Todas as assinaturas criadas pelo assistente serão do tipo selecionado. Para criar assinatura para ambos os tipos, você deve executar o assistente duas vezes.  
@@ -26,7 +26,7 @@ ms.locfileid: "52813788"
 >  O tipo da assinatura não pode ser alterado depois que ela é criada.  
   
 ## <a name="see-also"></a>Consulte também  
- [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [Criar uma assinatura pull](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
  [Visão geral dos agentes de replicação](agents/replication-agents-overview.md)  
   
