@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 827dd531eda338f4fd297a4420ed144d46a613ff
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62998932"
 ---
 # <a name="outer-joins"></a>Junções externas
 ODBC dá suporte a SQL-92 deixada, sintaxe de junção externa completa e à direita. É a sequência de escape de junções externas  
   
- **{oj** _junção externa_**}**  
+ **{oj** _outer-join_**}**  
   
  em que *junção externa* é  
   

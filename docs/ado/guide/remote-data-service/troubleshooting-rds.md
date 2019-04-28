@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1f80f07576caebe8f4612958edae2afa42fdf0d3
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62955875"
 ---
 # <a name="troubleshooting-rds"></a>Solução de problemas do RDS
 > [!IMPORTANT]
@@ -28,7 +28,7 @@ ms.locfileid: "51560393"
   
 -   [Configurando o RDS no Windows 2000](../../../ado/guide/remote-data-service/configuring-rds-on-windows-2000.md)  
   
--   ["Erro de servidor de Internet: acesso negado"](../../../ado/guide/remote-data-service/internet-server-error-access-denied.md)  
+-   ["Erro de servidor de Internet: Acesso negado"](../../../ado/guide/remote-data-service/internet-server-error-access-denied.md)  
   
 -   [O RDS retorna o erro “Fluxo não lido”](../../../ado/guide/remote-data-service/rds-returns-stream-not-read-error.md)  
   

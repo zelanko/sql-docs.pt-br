@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c5c4226b9ee4f45d7e732044379962489ecacd0f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62837470"
 ---
 # <a name="backup-restore-and-move-the-ssis-catalog"></a>Fazer backup, restaurar e mover o catálogo do SSIS
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] inclui o banco de dados SSISDB. Você consulta exibições no banco de dados SSISDB para inspecionar objetos, configurações e dados operacionais que são armazenados no catálogo do **SSISDB** . Este tópico fornece instruções para fazer backup do banco de dados e restaurá-lo.  

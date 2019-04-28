@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ee7ba55e48f4704c912e92a4d8352e7c891c06b6
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62989682"
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Usando arquivos de política de segurança do Reporting Services
   O [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] armazena informações de política de segurança de componentes em três arquivos de configuração que são copiados no sistema de arquivos durante a instalação. Estes arquivos de configuração podem conter uma combinação de políticas de segurança de uso interno e definidas pelo usuário assemblies de código no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Três arquivos de configuração correspondem aos três componentes de segurança do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]: O servidor de relatório e o serviço Windows, o aplicativo Web do Gerenciador de relatórios e o Designer de relatórios a janela de visualização.  

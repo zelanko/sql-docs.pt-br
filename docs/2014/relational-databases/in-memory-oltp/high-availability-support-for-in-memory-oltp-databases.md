@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 37c719beb625a533c2d8f279a8500365c4786c05
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62990579"
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>Suporte de alta disponibilidade para bancos de dados OLTP na memória
   Os bancos de dados que contêm tabelas com otimização de memória, com ou sem procedimentos armazenados compilados nativos, são totalmente compatíveis com Grupos de Disponibilidade AlwaysOn.  Não nenhuma diferença na configuração e no suporte para bancos de dados que contenham objetos do [!INCLUDE[hek_2](../../includes/hek-2-md.md)] em comparação com aqueles sem,  
@@ -30,7 +30,7 @@ ms.locfileid: "48100776"
     As réplicas secundárias mantêm o estado na memória das tabelas duráveis com otimização de memória. No caso de failover automático ou forçado, o tempo de failover para o novo primário é comparável a tabelas de bases de disco, já que nenhuma recuperação é necessária. As tabelas com otimização de memória criadas como SCHEMA_ONLY têm suporte nesta configuração. No entanto, as alterações para essas tabelas não são registradas e, portanto, nenhum dado existirá nessas tabelas na réplica secundária.  
   
 -   **Secundária Legível**   
-    Você pode acessar e consultar tabelas com otimização de memória na réplica secundária se ela tiver sido configurada para acesso de leitura. Para obter mais informações, consulte [Secundárias ativas: réplicas secundárias legíveis (Grupos de Disponibilidade AlwaysOn)](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+    Você pode acessar e consultar tabelas com otimização de memória na réplica secundária se ela tiver sido configurada para acesso de leitura. Para obter mais informações, consulte [secundárias ativas: Réplicas secundárias legíveis (grupos de disponibilidade AlwaysOn)](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
 ## <a name="failover-clustering-instance-fci-and-in-memory-oltp-databases"></a>Instância de Clustering de Failover (FCI) e bancos de dados OLTP na memória  
  Para obter alta disponibilidade em uma configuração de armazenamento compartilhado, você pode configurar o clustering de failover nas instâncias com um ou mais bancos de dados com tabelas com otimização de memória. Você precisa considerar os seguintes fatores como parte da configuração de uma FCI.  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 890a61f8532d34b24676fae842676ff613d09c70
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62991254"
 ---
 # <a name="audit-login-change-property-event-class"></a>Classe de evento Audit Login Change Property
   A classe de evento **Audit Login Change Property** ocorre quando você usa o procedimento armazenado **sp_defaultdb** , o procedimento armazenado **sp_defaultlanguage** ou a instrução ALTER LOGIN para modificar uma propriedade de um logon.  

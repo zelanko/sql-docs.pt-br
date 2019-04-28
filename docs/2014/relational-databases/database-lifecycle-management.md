@@ -31,11 +31,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 07710fbf649037843479de94057f2efcf2a8f558
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872166"
 ---
 # <a name="database-lifecycle-management"></a>Gerenciamento de ciclo de vida do banco de dados
   O gerenciamento de ciclo de vida de banco de dados (DLM) é uma abordagem baseado em política que gerenciar ativos de dados e bancos de dados. O DLM não é um produto, mas uma abordagem abrangente para gerenciar o esquema de banco de dados, os dados e os metadados de um aplicativo de banco de dados. Uma abordagem ponderada e pró-ativa do DLM permite que uma organização gerencie recursos de dados de acordo com os níveis apropriadas de desempenho, proteção, disponibilidade e custo.  

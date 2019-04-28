@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cd2aeedcfcb9c4888e730f94c73aabe2cdd6607d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62999302"
 ---
 # <a name="options-sql-server-object-explorer-commands"></a>Opções (SQL Server Pesquisador de objetos – comandos)
   Quando você clica com o botão direito do mouse em uma tabela ou exibição no Pesquisador de Objetos, existem as seguintes duas opções para exibição de linhas na tabela:  

@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e1eb288a7bb99f5f24f05e4369836d21031f7e68
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63001393"
 ---
 # <a name="spsyscollectorupdatecollectionitem-transact-sql"></a>sp_syscollector_update_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,13 +47,13 @@ sp_syscollector_update_collection_item
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @collection_item_id =] *collection_item_id*  
+ [ @collection_item_id = ] *collection_item_id*  
  É o identificador exclusivo que identifica o item de coleta. *collection_item_id* está **int** com um valor padrão de NULL. *collection_item_id* deve ter um valor se *nome* é NULL.  
   
- [ @name =] '*nome*'  
+ [ @name = ] '*name*'  
  É o nome do item de coleta. *nome da* está **sysname** com um valor padrão de NULL. *nome da* deve ter um valor se *collection_item_id* é NULL.  
   
- [ @new_name =] '*new_name*'  
+ [ @new_name = ] '*new_name*'  
  É o novo nome do item da coleta. *new_name* está **sysname**, e se usado, não pode ser uma cadeia de caracteres vazia.  
   
  *new_name* deve ser exclusivo. Para obter uma lista dos nomes dos itens de coleta atuais, consulte a exibição de sistema syscollector_collection_items.  
@@ -61,7 +61,7 @@ sp_syscollector_update_collection_item
  [ @frequency =] *frequência*  
  É a frequência (em segundos) com que os dados são coletados por esse item de coleta. *frequência* está **int**, com um padrão de 5, o valor mínimo que pode ser especificado.  
   
- [ @parameters =] '*parâmetros*'  
+ [ @parameters = ] '*parameters*'  
  Os parâmetros de entrada para o item da coleta. *parâmetros* está **xml** com um padrão NULL. O *parâmetros* esquema deve corresponder ao esquema de parâmetros do tipo de coletor.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

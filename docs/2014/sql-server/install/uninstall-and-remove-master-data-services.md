@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e9bac4dba698af6e7f3dc57904da66a7fb15a08b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62989045"
 ---
 # <a name="uninstall-and-remove-master-data-services"></a>Desinstalar e remover o Master Data Services
   Para desinstalar o recurso [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], siga as etapas em [Desinstalar uma instância existente do SQL Server &#40;Instalação&#41;](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md) e especifique [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] como um recurso a ser removido na página **Selecionar Recursos**. O processo de desinstalação remove as pastas e arquivos do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] e desinstala o [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] do computador local.  

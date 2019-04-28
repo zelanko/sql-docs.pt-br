@@ -21,18 +21,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 81a7a5cd518096582ba07e4400982308b9c1c2aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856639"
 ---
 # <a name="sysservicemessagetypes-transact-sql"></a>sys.service_message_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Esta exibição do catálogo contém uma linha por tipo de mensagem registrado no agente de serviços.
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome de tipo de mensagem, exclusivo no banco de dados. Não é NULLABLE.|  
 |**message_type_id**|**int**|Identificador do tipo de mensagem, exclusivo no banco de dados. Não é NULLABLE.|  

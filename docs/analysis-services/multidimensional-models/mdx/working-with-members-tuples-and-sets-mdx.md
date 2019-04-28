@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 295a094505fdc2b532f337aaa87dc93ae0923dd2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62988610"
 ---
 # <a name="working-with-members-tuples-and-sets-mdx"></a>Trabalhando com membros, tuplas e conjuntos (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -59,10 +59,10 @@ ON COLUMNS
 FROM [Adventure Works]  
 ```  
   
- Para obter mais informações sobre as funções de tupla, consulte [MDX Function Reference &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
+ Para obter mais informações sobre as funções de tupla, consulte [Referência da Função MDX &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
   
 ## <a name="set-functions"></a>Funções do conjunto  
- A linguagem MDX fornece várias funções que retornam conjuntos. Digitar explicitamente tuplas e colocá-las entre chaves não é a única maneira de recuperar um conjunto. Para obter mais informações sobre a função de membros para retornar um conjunto, consulte [Key Concepts in MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md). Há várias funções de conjunto adicionais.  
+ A linguagem MDX fornece várias funções que retornam conjuntos. Digitar explicitamente tuplas e colocá-las entre chaves não é a única maneira de recuperar um conjunto. Para obter mais informações sobre a função de membros para retornar um conjunto, consulte [Principais conceitos em MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md). Há várias funções de conjunto adicionais.  
   
  O operador dois pontos permite o uso da ordem natural dos membros para criar um conjunto. Por exemplo, o conjunto mostrado no exemplo a seguir contém tuplas do primeiro ao quarto trimestre do ano calendário 2002.  
   
@@ -88,16 +88,16 @@ FROM [Adventure Works]
   
  O operador dois pontos é uma função inclusiva. Os membros em ambos os lados do operador dois pontos são incluídos no conjunto resultante.  
   
- Para obter mais informações sobre as funções de conjunto, consulte [MDX Function Reference &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
+ Para obter mais informações sobre as funções de conjunto, consulte [Referência da Função MDX &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
   
 ## <a name="array-functions"></a>Funções de matriz  
- Uma função de matriz age em um conjunto e retorna uma matriz. Para obter mais informações sobre as funções de matriz, consulte [MDX Function Reference &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
+ Uma função de matriz age em um conjunto e retorna uma matriz. Para obter mais informações sobre as funções de matriz, consulte [Referência da Função MDX &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
   
 ## <a name="hierarchy-functions"></a>Funções de hierarquia  
- Uma função de hierarquia retorna uma hierarquia ao agir em um membro, um nível, uma hierarquia ou uma cadeia de caracteres. Para obter mais informações sobre as funções de hierarquia, consulte [MDX Function Reference &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
+ Uma função de hierarquia retorna uma hierarquia ao agir em um membro, um nível, uma hierarquia ou uma cadeia de caracteres. Para obter mais informações sobre as funções de hierarquia, consulte [Referência da Função MDX &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
   
 ## <a name="level-functions"></a>Funções de nível  
- Uma função nivelada retorna um nível ao agir em um membro, um nível ou uma cadeia de caracteres. Para obter mais informações sobre as funções de nível, consulte [MDX Function Reference &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
+ Uma função nivelada retorna um nível ao agir em um membro, um nível ou uma cadeia de caracteres. Para obter mais informações sobre as funções de nível, consulte [Referência da Função MDX &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
   
 ## <a name="logical-functions"></a>Funções lógicas  
  Uma função lógica age em uma expressão MDX para retornar informações sobre tuplas, membros ou conjuntos da expressão. Por exemplo, a função [IsEmpty &#40;MDX&#41;](../../../mdx/isempty-mdx.md) avalia se uma expressão retornou um valor de célula vazio. Para obter mais informações sobre as funções lógicas, consulte [Referência de Função MDX &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
@@ -109,8 +109,8 @@ FROM [Adventure Works]
  A função de cadeia de caracteres age em uma expressão MDX para retornar uma cadeia de caracteres. Por exemplo, a função [UniqueName &#40;MDX&#41;](../../../mdx/uniquename-mdx.md) retorna um valor de cadeia de caracteres que contém o nome exclusivo de uma dimensão, uma hierarquia, um nível ou um membro. Para obter mais informações sobre as funções de cadeia de caracteres, consulte [Referência de Função MDX &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Principais conceitos em MDX & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [Conceitos básicos de consulta MDX & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
- [Referência de função MDX & #40; MDX & #41;](../../../mdx/mdx-function-reference-mdx.md)  
+ [Principais conceitos em MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [Conceitos básicos de consulta MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [Referência da Função MDX &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md)  
   
   

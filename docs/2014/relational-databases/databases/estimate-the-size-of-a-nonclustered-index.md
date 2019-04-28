@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d1ce0c45a46842791890257593ff2b839fc50289
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871405"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>Estimar o tamanho de um índice não clusterizado
   Siga estas etapas para estimar a quantidade de espaço necessária para armazenar um índice não clusterizado:  
@@ -118,7 +118,7 @@ ms.locfileid: "48146736"
     >  Você pode ampliar um índice não clusterizado incluindo colunas não chave, além das colunas de chave de índice. Essas colunas adicionais só são armazenadas no nível folha do índice não clusterizado. Para obter mais informações, consulte [Create Indexes with Included Columns](../indexes/create-indexes-with-included-columns.md).  
   
     > [!NOTE]  
-    >  Você pode combinar `varchar`, `nvarchar`, `varbinary`, ou `sql_variant` colunas que fazem com que a largura total definida da tabela exceda 8.060 bytes. O comprimento de cada uma dessas colunas ainda deve ficar dentro do limite de 8.000 bytes para uma coluna `varchar`, `varbinary` ou `sql_variant` e de 4.000 bytes para colunas `nvarchar`. Entretanto, as larguras combinadas podem exceder o limite de 8.060 bytes em uma tabela. Isso também se aplica a linhas de folha de índice não clusterizado que têm colunas incluídas.  
+    >  Você pode combinar as colunas `varchar`, `nvarchar`, `varbinary` ou `sql_variant` que fazem com que a largura total definida da tabela exceda 8.060 bytes. O comprimento de cada uma dessas colunas ainda deve ficar dentro do limite de 8.000 bytes para uma coluna `varchar`, `varbinary` ou `sql_variant` e de 4.000 bytes para colunas `nvarchar`. Entretanto, as larguras combinadas podem exceder o limite de 8.060 bytes em uma tabela. Isso também se aplica a linhas de folha de índice não clusterizado que têm colunas incluídas.  
   
      Se o índice não clusterizado não tiver nenhuma coluna incluída, use os valores da Etapa 1, incluindo qualquer modificação determinada na etapa 1.3:  
   
@@ -221,7 +221,7 @@ ms.locfileid: "48146736"
   
      Arredonde cada soma até o número inteiro mais próximo. Como um exemplo simples, considere um índice em que ***Num_Leaf_Pages*** = 1000 e ***Index_Rows_Per_Page*** = 25. O primeiro nível de índice acima do nível folha armazena 1.000 linhas de índice que representa uma linha de índice por página de folha, e 25 linhas de índice podem ser ajustadas por página. Isso significa que são necessárias 40 páginas para armazenar essas 1.000 linhas de índice. O próximo nível do índice precisa armazenar 40 linhas. Isso significa que são necessárias 2 páginas. O nível final do índice precisa armazenar 2 linhas. Isso significa que é necessária 1 página. Isso resulta em 43 páginas de índice não folha. Quando esses números são usados nas fórmulas anteriores, o resultado é o seguinte:  
   
-     ***Non-leaf Levels*** = 1 + log25 (1000 / 25) = 3  
+     ***Non-leaf_Levels***  = 1 + log25 (1000 / 25) = 3  
   
      ***Num_Index_Pages*** = 1000 /(25<sup>3</sup>) + 1000 / (25<sup>2</sup>) + 1000 / (25<sup>1</sup>) = 1 + 2 + 40 = 43, que é o número de páginas descrito no exemplo.  
   
@@ -246,7 +246,7 @@ ms.locfileid: "48146736"
   
 -   Valores de LOB (Objeto Grande)  
   
-     O algoritmo para determinar exatamente quanto espaço será usado para armazenar os tipos de dados LOB `varchar(max)`, `varbinary(max)`, `nvarchar(max)`, `text`, `ntext`, `xml`, e `image` valores é complexo. É suficiente adicionar o tamanho médio dos valores LOB esperados, multiplicá-lo por ***Num_Rows***e adicioná-lo ao tamanho total de índice não clusterizado.  
+     O algoritmo para determinar exatamente quanto espaço será usado armazenar os valores `varchar(max)`, `varbinary(max)`, `nvarchar(max)`, `text`, `ntext`, `xml` e `image` dos tipos de dados LOB é complexo. É suficiente adicionar o tamanho médio dos valores LOB esperados, multiplicá-lo por ***Num_Rows***e adicioná-lo ao tamanho total de índice não clusterizado.  
   
 -   Compactação  
   

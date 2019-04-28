@@ -1,5 +1,5 @@
 ---
-title: sys. sql_expression_dependencies (Transact-SQL) | Microsoft Docs
+title: sys.sql_expression_dependencies (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e4ef878879fb5c2896c45aedbf2a86f83557804c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856100"
 ---
 # <a name="syssqlexpressiondependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47826176"
   
 -   A DDL no nível de servidor é disparada quando está no contexto do banco de dados mestre.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |referencing_id|**int**|ID da entidade de referência. Não permite valor nulo.|  
 |referencing_minor_id|**int**|ID da coluna quando a entidade de referência for uma coluna; caso contrário, 0. Não permite valor nulo.|  
@@ -72,22 +72,22 @@ ms.locfileid: "47826176"
 |-----------------|------------------------|-----------------------|  
 |Table|Sim*|Sim|  
 |Exibição|Sim|Sim|  
-|Índice filtrado|Sim**|não|  
-|Estatísticas filtradas|Sim**|não|  
+|Índice filtrado|Sim**|Não|  
+|Estatísticas filtradas|Sim**|Não|  
 |Procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)]***|Sim|Sim|  
-|procedimento armazenado CLR|não|Sim|  
+|procedimento armazenado CLR|Não|Sim|  
 |Função [!INCLUDE[tsql](../../includes/tsql-md.md)] definida pelo usuário|Sim|Sim|  
-|Função CLR definida pelo usuário|não|Sim|  
-|Gatilho CLR (DML e DDL)|não|não|  
-|Gatilho DML [!INCLUDE[tsql](../../includes/tsql-md.md)] |Sim|não|  
-|Gatilho DDL no nível do banco de dados [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|não|  
-|Gatilho DDL no nível do servidor [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|não|  
-|Procedimentos armazenados estendidos|não|Sim|  
-|Fila|não|Sim|  
-|Sinônimo|não|Sim|  
-|Tipo (tipo de alias e tipo de dados CLR definido pelo usuário)|não|Sim|  
-|Coleção de esquemas XML|não|Sim|  
-|Função de partição|não|Sim|  
+|Função CLR definida pelo usuário|Não|Sim|  
+|Gatilho CLR (DML e DDL)|Não|Não|  
+|Gatilho DML [!INCLUDE[tsql](../../includes/tsql-md.md)] |Sim|Não|  
+|Gatilho DDL no nível do banco de dados [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|Não|  
+|Gatilho DDL no nível do servidor [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|Não|  
+|Procedimentos armazenados estendidos|Não|Sim|  
+|Fila|Não|Sim|  
+|Sinônimo|Não|Sim|  
+|Tipo (tipo de alias e tipo de dados CLR definido pelo usuário)|Não|Sim|  
+|Coleção de esquemas XML|Não|Sim|  
+|Função de partição|Não|Sim|  
   
  \* Uma tabela é controlada como entidade de referência somente quando ela faz referência a um [!INCLUDE[tsql](../../includes/tsql-md.md)] módulo, tipo definido pelo usuário ou coleção de esquemas XML na definição de uma coluna computada, restrição CHECK ou restrição padrão.  
   

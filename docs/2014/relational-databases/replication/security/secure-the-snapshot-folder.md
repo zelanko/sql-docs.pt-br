@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f3612a8b2006978a8098a406a6557d6c9f0f1f7f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127796"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62960470"
 ---
 # <a name="secure-the-snapshot-folder"></a>Proteger uma pasta de instantâneo
   A pasta de instantâneo é um diretório que armazena arquivos de instantâneos, recomendamos que você dedique o diretório para o armazenamento de instantâneos. Conceda permissão de gravação ao Agente de Instantâneo para a pasta e assegure que a permissão de leitura seja fornecida somente para a conta do Windows usada pelo Agente de Distribuição ou Agente de Mesclagem para acessar a pasta. A conta do Windows associada com o agente deve ser uma conta de domínio para acessar uma pasta de instantâneo que está localiza em um computador remoto.  
@@ -25,7 +25,7 @@ ms.locfileid: "54127796"
 > [!NOTE]  
 >  O UAC (Controle de Conta de Usuário) ajuda os administradores a gerenciar o uso de direitos do usuário elevados (algumas vezes chamados de *privilégios*). Ao ser executado em sistemas operacionais com UAC habilitado, os administradores não usam seus direitos administrativos. Em vez disso, eles executam a maioria das ações como usuários padrão (não administrativos), assumindo temporariamente seus direitos administrativos somente quando necessário. O UAC pode impedir o acesso administrativo ao compartilhamento de instantâneos. Portanto, você deve conceder permissões de compartilhamento de instantâneos explicitamente às contas do Windows usadas pelo Agente de Instantâneo, pelo Agente de Distribuição, e pelo Agente de Mesclagem. Faça isso, mesmo se as contas do Windows forem membros do grupo de Administradores.  
   
- Ao configurar um distribuidor por meio do Assistente para configurar distribuição ou o Assistente para nova publicação, a pasta de instantâneo padrão é um caminho local: X:\Program Files\Microsoft SQL Server\\*\<instância >* \mssql\repldata. Se estiver usando um Distribuidor remoto ou assinaturas pull, você deverá especificar um compartilhamento de rede UNC (como \\\\<*computername>* \snapshot) em vez de um caminho local.  
+ Ao configurar um Distribuidor por meio do Assistente para Configurar Distribuição ou do Assistente para Nova Publicação, a pasta de instantâneo usa por padrão um caminho local: X:\Arquivos de Programas\Microsoft SQL Server\\*\<instância>* \MSSQL\ReplData. Se estiver usando um Distribuidor remoto ou assinaturas pull, você deverá especificar um compartilhamento de rede UNC (como \\\\<*computername>* \snapshot) em vez de um caminho local.  
   
  Ao fornecer permissões de acesso para a pasta de instantâneos, você deve fornecê-las de acordo com o modo como a pasta é acessada. As guias de caixa de diálogo abaixo são usadas no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 2003:  
   

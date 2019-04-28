@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 96b8703f18f7867ed57101f33e2ec1c4d31b35c7
-ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52984017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62956766"
 ---
 # <a name="power-pivot-availability-and-disaster-recovery"></a>Recuperação de desastre e disponibilidade do Power Pivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

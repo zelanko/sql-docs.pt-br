@@ -1,5 +1,5 @@
 ---
-title: openkeys (Transact-SQL) | Microsoft Docs
+title: sys.openkeys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,18 +22,18 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7959611a7d8db134b58898debab9bd231d9d9553
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62997969"
 ---
 # <a name="sysopenkeys-transact-sql"></a>sys.openkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Esta exibição do catálogo retorna informações sobre as chaves de criptografia que estão abertas na sessão atual.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|ID do banco de dados que contém a chave.|  
 |**database_name**|**sysname**|Nome do banco de dados que contém a chave.|  

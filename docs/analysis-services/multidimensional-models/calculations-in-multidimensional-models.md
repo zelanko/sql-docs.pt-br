@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c72d43c95013074051356c690ac2d7abf0a575e0
-ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52983987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62990507"
 ---
 # <a name="calculations-in-multidimensional-models"></a>Cálculos em modelos multidimensionais
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4eb84aad1f334d6fc564f07847eb5590201e2077
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63002603"
 ---
 # <a name="connections-mds-add-in-for-excel"></a>Conexões (suplemento MDS para Excel)
 
@@ -30,7 +30,7 @@ ms.locfileid: "51696254"
   
  Você pode criar várias conexões. A conexão acessada mais recentemente será considerada como padrão.  
   
- Vários usuários podem ser conectados ao mesmo tempo. No entanto, conflitos podem ocorrer quando vários usuários tentarem publicar os mesmos dados. Para obter mais informações, consulte [Visão geral: Importando dados do Excel &#40;Suplemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md).  
+ Vários usuários podem ser conectados ao mesmo tempo. No entanto, conflitos podem ocorrer quando vários usuários tentarem publicar os mesmos dados. Para obter mais informações, confira [Visão geral: importando dados do Excel &#40;Suplemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md).  
   
 ## <a name="connect-automatically-and-load-frequently-used-data"></a>Conectar-se automaticamente e carregar dados usados frequentemente  
  Se você desejar conectar-se sempre ao mesmo servidor e carregar o mesmo conjunto de dados, poderá criar arquivos de consulta de atalho que contenham informações de conexão e de filtro. Para obter mais informações sobre arquivos de consulta, consulte [Arquivos de consulta de atalho &#40;Suplemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md).  
@@ -48,7 +48,7 @@ ms.locfileid: "51696254"
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
--   [Visão geral: Exportando dados para o Excel &#40;Suplemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
+-   [Visão geral: exportando dados para o Excel &#40;Suplemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
 -   [Arquivos de consulta de atalho &#40;Suplemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)  
   

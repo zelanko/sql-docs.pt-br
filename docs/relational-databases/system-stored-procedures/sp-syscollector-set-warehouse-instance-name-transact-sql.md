@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 11c704413f9668a5da99ded7d269d05b8e3f2c25
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63001569"
 ---
 # <a name="spsyscollectorsetwarehouseinstancename-transact-sql"></a>sp_syscollector_set_warehouse_instance_name (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sp_syscollector_set_warehouse_instance_name [ @instance_name = ] 'instance_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @instance_name =] '*instance_name*'  
+ [ @instance_name = ] '*instance_name*'  
  É o nome de instância. *nome_da_instância* está **sysname** e padrões para a instância local se for NULL.  
   
 > **Observação:**_nome_instância_ deve ser o nome totalmente qualificado da instância, que consiste o nome do computador e o nome da instância no formato *nome_do_computador* \\ *instanceName*.    

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9274157d5a57e04b03e1a9c71d29c7f46e0a1dec
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52809458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62999548"
 ---
 # <a name="name-not-found-dialog-box"></a>Caixa de diálogo Nome Não Encontrado
   Um ou mais nomes de objeto não pôde ser encontrado na caixa de diálogo. Selecione uma opção para continuar.  

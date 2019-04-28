@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5199fb82cbc6b2a9da644554db12dc525cc0be40
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62998899"
 ---
 # <a name="retrieving-results-advanced"></a>Recuperar resultados (avançado)
 Um aplicativo pode especificar que um deslocamento é adicionado ao associados a endereços de buffer de dados e o comprimento/indicador correspondente buffer endereços quando **SQLBulkOperations**, **SQLFetch**,  **SQLFetchScroll**, ou **SQLSetPos** é chamado. Os resultados dessas adições determinam os endereços usados nessas operações.  

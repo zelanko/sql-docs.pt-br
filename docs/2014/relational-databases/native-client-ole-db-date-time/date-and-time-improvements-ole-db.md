@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1dec9e1281d2ff61dcab9312cdf5a7ad1ecb8da3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866828"
 ---
 # <a name="date-and-time-improvements-ole-db"></a>Melhorias de data e hora (OLE DB)
   O [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] apresenta novos tipos de dados de data e hora. Esta seção descreve como esses novos tipos são expostos como extensões no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Para obter uma visão geral do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suporte ao cliente nativo para a nova data e tipos de dados de hora, consulte [aprimoramentos de data e hora](../native-client/features/date-and-time-improvements.md). Para obter um exemplo, consulte [aprimorados de data de uso e recursos de tempo &#40;OLE DB&#41;](../native-client-ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md).  
@@ -30,7 +30,7 @@ ms.locfileid: "52817995"
  Fornece informações sobre o OLE DB ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client) tipos que oferecem suporte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados de data e hora.  
   
  [Metadados &#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
- Contém informações sobre a estrutura DBBINDING, `ICommandWithParameters::GetParameterInfo`, `ICommandWithParameters::SetParameterInfo`, `IColumnsRowset::GetColumnsRowset` e I`ColumnsInfo::GetColumnInfo`. Também fornece informações sobre atualizações de conjuntos de linhas de esquemas OLE DB.  
+ Contém informações sobre a estrutura DBBINDING `ICommandWithParameters::GetParameterInfo`, `ICommandWithParameters::SetParameterInfo`, `IColumnsRowset::GetColumnsRowset`e eu`ColumnsInfo::GetColumnInfo`. Também fornece informações sobre atualizações de conjuntos de linhas de esquemas OLE DB.  
   
  [Associações e conversões &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/conversions-ole-db.md)  
  Descreve as regras para conversão entre servidor e cliente de tipos de data novos e existentes.  

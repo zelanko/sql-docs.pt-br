@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 446705799f117c23786799789657e9fa89f9fa39
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62956022"
 ---
 # <a name="remove-a-server-group-sql-server-management-studio"></a>Remover um grupo de servidores (SQL Server Management Studio)
   Este tópico descreve como remover um grupo de servidores de Servidores Registrados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Você pode excluir um grupo do servidor a qualquer hora. Se o grupo de servidores não estiver vazio, também serão excluídos quaisquer servidores ou grupos de servidores contidos no grupo excluído. Antes de excluir um grupo de servidores, mova para um grupo de servidores novo quaisquer servidores ou grupos de servidores que você queira reter.  

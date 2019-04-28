@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6a0064787eee6c3ac267b3ababcd9881e794ff2e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62998304"
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,13 +76,13 @@ sp_addsubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @publication=] '*publicação*'  
+ [ @publication=] '*publication*'  
  É o nome da publicação. *publicação* está **sysname**, sem padrão.  
   
- [ @article=] '*artigo*'  
+ [ @article=] '*article*'  
  É o artigo no qual a publicação é assinada. *artigo* está **sysname**, com um padrão de all. Se for todos, uma assinatura será adicionada a todos os artigos naquela publicação. Somente valores de todos ou NULL têm suporte para Publicadores Oracle.  
   
- [ @subscriber=] '*assinante*'  
+ [ @subscriber=] '*subscriber*'  
  É o nome do Assinante. *assinante* está **sysname**, com um padrão NULL.  
   
  [ @destination_db=] '*destination_db*'  
@@ -199,37 +199,37 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @optional_command_line=] '*optional_command_line*'  
  É o prompt de comando opcional a ser executado. *optional_command_line* está **nvarchar (4000)**, com um padrão NULL.  
   
- [ @reserved=] '*reservado*'  
+ [ @reserved=] '*reserved*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @enabled_for_syncmgr=] '*enabled_for_syncmgr*'  
  Se a assinatura pode ser sincronizada pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Gerenciador de sincronização do Windows. *enabled_for_syncmgr* está **nvarchar (5)**, com um padrão de FALSE. Se for falso, a assinatura não será registrada com o Gerenciador de Sincronização do Windows. Se for verdadeiro, a assinatura será registrada com o Gerenciador de Sincronização do Windows e será sincronizada sem iniciar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Sem suporte para Publicadores Oracle.  
   
- [ @offloadagent=] '*remote_agent_activation*'  
+ [ @offloadagent= ] '*remote_agent_activation*'  
  Especifica que o agente pode ser ativado remotamente. *remote_agent_activation* está **bit** com um padrão de 0.  
   
 > [!NOTE]  
 >  Esse parâmetro foi preterido e só é mantido para compatibilidade com versões anteriores.  
   
- [ @offloadserver=] '*remote_agent_server_name*'  
+ [ @offloadserver= ] '*remote_agent_server_name*'  
  Especifica o nome da rede de servidor a ser usada para ativação remota. *remote_agent_server_name*está **sysname**, com um padrão NULL.  
   
- [ @dts_package_name=] '*dts_package_name*'  
+ [ @dts_package_name= ] '*dts_package_name*'  
  Especifica o nome do pacote DTS (Data Transformation Services). *dts_package_name* é um **sysname** com um padrão NULL. Por exemplo, para especificar um nome de pacote DTSPub_Package, o parâmetro seria `@dts_package_name = N'DTSPub_Package'`. Esse parâmetro está disponível para assinaturas push. Para adicionar informações de pacote DTS a uma assinatura pull, use sp_addpullsubscription_agent.  
   
- [ @dts_package_password=] '*dts_package_password*'  
+ [ @dts_package_password= ] '*dts_package_password*'  
  Especifica a senha no pacote, se houver um. *dts_package_password* está **sysname** com um padrão NULL.  
   
 > [!NOTE]  
 >  Você deve especificar uma senha se *dts_package_name* for especificado.  
   
- [ @dts_package_location=] '*dts_package_location*'  
+ [ @dts_package_location= ] '*dts_package_location*'  
  Especifica o local do pacote. *dts_package_location* é um **nvarchar(12**, com um padrão de DISTRIBUIDOR. O local do pacote pode ser distribuidor ou assinante.  
   
- [ @distribution_job_name=] '*distribution_job_name*'  
+ [ @distribution_job_name= ] '*distribution_job_name*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ @publisher=] '*publisher*'  
+ [ @publisher= ] '*publisher*'  
  Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
@@ -258,10 +258,10 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @password=] '*senha*'  
  Especifica uma senha para o backup se uma senha já tiver sido definida quando o backup foi criado. *senha*está **sysname**, com um valor padrão de NULL.  
   
- [ @fileidhint=] *fileidhint*  
+ [ @fileidhint= ] *fileidhint*  
  Identifica um valor ordinal do conjunto de backup a ser restaurado. *fileidhint* está **int**, com um valor padrão de NULL.  
   
- [ @unload=] *descarregar*  
+ [ @unload= ] *unload*  
  Especifica se um dispositivo de backup em fita deve ser descarregado quando a inicialização do backup for concluída. *Descarregar* está **bit**, com um valor padrão de 1. 1 Especifica que a fita deve ser descarregada. *Descarregar* é usado apenas quando *backupdevicetype* é fita.  
   
  [ @subscriptionlsn=] *subscriptionlsn*  
@@ -319,7 +319,7 @@ sp_addsubscription [ @publication = ] 'publication'
 ## <a name="see-also"></a>Consulte também  
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Criar uma assinatura para um assinante não SQL Server](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Assinar publicações](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
  [sp_changesubstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
  [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   

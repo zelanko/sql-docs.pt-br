@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ea04b08f98385755f006c1a67125a87dc71e41f1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62854336"
 ---
 # <a name="create-mining-structure-dmx"></a>CRIAR UMA ESTRUTURA DE MINERAÇÃO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -41,10 +41,10 @@ CREATE [SESSION] MINING STRUCTURE <structure>
  *lista de definições de coluna*  
  Uma lista de definições de coluna separadas por vírgulas.  
   
- *controle maxpercent*  
+ *holdout-maxpercent*  
  Um número inteiro entre 1 e 100 que indica a porcentagem de dados separados para teste.  
   
- *controle maxcases*  
+ *holdout-maxcases*  
  Um número inteiro que indica o número de máximo de casos usados para teste.  
   
  Se o valor especificado para o máximo de casos for maior que o número de casos de entrada, todos os casos de entrada serão usados para teste e um aviso será emitido.  
@@ -60,9 +60,9 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 > [!NOTE]  
 >  Você deve especificar uma semente se precisar garantir que uma partição pode ser reproduzida.  
   
- Padrão: REPETÍVEL(0)  
+ Padrão: REPEATABLE(0)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Uma estrutura de mineração é definida especificando uma lista de colunas, especificando, opcionalmente, as relações de hierarquia entre as colunas e particionamento, opcionalmente, a estrutura de mineração em conjuntos de dados de treinamento e de teste.  
   
  A palavra-chave opcional SESSION indica que a estrutura é temporária e você pode usá-la somente durante a sessão atual. Quando a sessão terminar, a estrutura e os modelos baseados nela serão excluídos. Para criar modelos e estruturas de mineração temporários, você deve primeiro definir a propriedade de banco de dados, AllowSessionMiningModels. Para obter mais informações, consulte [Propriedades de Data Mining](../analysis-services/server-properties/data-mining-properties.md).  
@@ -96,13 +96,13 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  Para obter uma lista dos tipos de dados, dos tipos de conteúdo, de distribuições de coluna e de sinalizadores de modelagem que podem ser usados para definir uma coluna de estrutura, consulte os seguintes tópicos:  
   
--   [Tipos de dados &#40;mineração de dados&#41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [Tipos de dados &#40;Mineração de dados&#41;](../analysis-services/data-mining/data-types-data-mining.md)  
   
--   [Tipos de conteúdo &#40;mineração de dados&#41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [Tipos de conteúdo &#40;Data Mining&#41;](../analysis-services/data-mining/content-types-data-mining.md)  
   
--   [Distribuições de colunas &#40;mineração de dados&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
+-   [Distribuições de colunas &#40;Mineração de dados&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
--   [Sinalizadores de modelagem &#40;mineração de dados&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [Sinalizadores de modelagem &#40;Mineração de dados&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
  Você pode definir vários valores para uma coluna de sinalizadores de modelagem. No entanto, é possível ter apenas um tipo de conteúdo e um tipo de dados para uma coluna.  
   
@@ -150,7 +150,7 @@ CREATE MINING STRUCTURE [New Mailing]
 )  
 ```  
   
-### <a name="example-2-specifying-holdout-percentage-and-seed"></a>Exemplo 2: Especificando a porcentagem e semente de validação  
+### <a name="example-2-specifying-holdout-percentage-and-seed"></a>Exemplo 2: Especificando a porcentagem de validação e a propagação  
  A cláusula a seguir pode ser adicionada após a lista de definições de coluna para definir um conjunto de dados que pode ser usado para testar todos os modelos de mineração associados à estrutura de mineração. A instrução criará um conjunto de teste com 25% do total de casos de entrada, sem um limite no número máximo de casos. 5000 é usado como a semente para criação da partição. Quando você especifica uma semente, os mesmos casos são escolhidos para o conjunto de teste cada vez que a estrutura de mineração é processada, desde que os dados subjacentes não sejam alterados.  
   
 ```  
@@ -164,7 +164,7 @@ CREATE MINING STRUCTURE [New Mailing]
 WITH HOLDOUT(25 PERCENT) REPEATABLE(5000)  
 ```  
   
-### <a name="example-3-specifying-holdout-percentage-and-max-cases"></a>Exemplo 3: Especificando a porcentagem e máximo de casos de validação  
+### <a name="example-3-specifying-holdout-percentage-and-max-cases"></a>Exemplo 3: Especificando a porcentagem de validação e máx. de casos  
  A seguinte cláusula criará um conjunto de testes que contém 25 por cento dos casos de entrada totais ou 2000 casos, qualquer que seja o menor. Como 0 é especificado como a semente, o nome da estrutura de mineração é usada para criar a semente que é usada para começar o exemplo de casos de entrada.  
   
 ```  

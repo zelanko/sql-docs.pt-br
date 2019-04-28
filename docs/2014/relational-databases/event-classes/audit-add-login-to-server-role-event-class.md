@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f957283f2d667a9e75c30fae9d9b45401f06c499
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62867633"
 ---
 # <a name="audit-add-login-to-server-role-event-class"></a>Classe de evento Audit Add Login to Server Role
   A classe de evento **Audit Add Login to Server Role** ocorre sempre que um logon é adicionado ou removido de uma função de servidor fixa. Esta classe de evento é usada para os procedimentos armazenados **sp_addsrvrolemember** e **sp_dropsrvrolemember** .  

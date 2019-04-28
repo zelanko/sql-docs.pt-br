@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 76af35f994413ad1e02bcafaaa8499e42fe232c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62990150"
 ---
 # <a name="upgrading-will-modify-queued-updating-subscriptions-that-use-message-queuing"></a>A atualização modificará assinaturas de atualização enfileiradas que usam o serviço de enfileiramento de mensagens
   O Supervisor de Atualização detectou que podem haver uma ou mais assinaturas de atualização na fila que usam o serviço de enfileiramento de mensagens da [!INCLUDE[msCoName](../../includes/msconame-md.md)] (também conhecido como MSMQ). A replicação não oferece mais suporte para o serviço de enfileiramento de mensagens. Portanto, as assinaturas serão modificadas para usar uma fila do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

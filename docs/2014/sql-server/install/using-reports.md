@@ -37,11 +37,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: eb2537af2539854f0f66e3f6c39c3b6e5315ec6f
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59581921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62989766"
 ---
 # <a name="using-reports"></a>Usando relatórios
   Um relatório único é gerado para cada componente e, se necessário, para cada instância analisada pelo Assistente para Análise do Supervisor de Atualização em um servidor. O relatório fornece detalhes sobre problemas conhecidos que podem afetar uma atualização. Ele também fornece links para informações e ações sugeridas para solucionar os problemas identificados.  

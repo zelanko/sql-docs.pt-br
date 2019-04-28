@@ -18,12 +18,12 @@ ms.assetid: 3ebcf2f1-980f-4543-a84b-fbaeea54eeac
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c36dfe992dc5abafa2eea78c72d1336bb33f7dc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 136771c5bf691155b4547963fa2b6bd035f3f039
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62994219"
 ---
 # <a name="spchangelogshippingsecondarydatabase-transact-sql"></a>sp_change_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,14 +52,11 @@ sp_change_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@restore_delay =** ] '*restore_delay*'  
- A quantidade de tempo, em minutos, que o servidor secundário espera antes de restaurar um determinado arquivo de backup. *restore_delay* está **int** e não pode ser NULL. O valor padrão é 0.  
+`[ @restore_delay = ] 'restore_delay'` A quantidade de tempo, em minutos, em que o servidor secundário espera antes de restaurar um determinado arquivo de backup. *restore_delay* está **int** e não pode ser NULL. O valor padrão é 0.  
   
- [  **@restore_all =** ] '*restore_all*'  
- Se definido como 1, o servidor secundário restaura todos os backups de log de transações disponíveis quando o trabalho de restauração é executado. Caso contrário, ele será interrompido depois de um arquivo foi restaurado. *restore_all* está **bit** e não pode ser NULL.  
+`[ @restore_all = ] 'restore_all'` Se definido como 1, o servidor secundário restaura todos os backups de log de transações disponíveis quando o trabalho de restauração é executada. Caso contrário, ele será interrompido depois de um arquivo foi restaurado. *restore_all* está **bit** e não pode ser NULL.  
   
- [  **@restore_mode =** ] '*restore_mode*'  
- O modo de restauração do banco de dados secundário.  
+`[ @restore_mode = ] 'restore_mode'` O modo de restauração de banco de dados secundário.  
   
  0 = restaure o log NORECOVERY.  
   
@@ -67,29 +64,21 @@ sp_change_log_shipping_secondary_database
   
  *Restaure* está **bit** e não pode ser NULL.  
   
- [  **@disconnect_users =** ] '*disconnect_users*'  
- Se definido em 1, os usuários são desconectados de um banco de dados secundários quando a operação de restauração é executada. Padrão = 0. *disconnect_users* está **bit** e não pode ser NULL.  
+`[ @disconnect_users = ] 'disconnect_users'` Se definido como 1, os usuários estiver desconectado do banco de dados secundário quando uma operação de restauração é executada. Padrão = 0. *disconnect_users* está **bit** e não pode ser NULL.  
   
- [  **@block_size =** ] '*block_size*'  
- Tamanho, em bytes, usado como tamanho de bloco para o dispositivo de backup. *block_size* está **int** com um valor padrão de -1.  
+`[ @block_size = ] 'block_size'` O tamanho, em bytes, que é usado como o tamanho do bloco para o dispositivo de backup. *block_size* está **int** com um valor padrão de -1.  
   
- [  **@buffer_count =** ] '*buffer_count*'  
- Número total de buffers usado pela operação de backup ou restauração. *buffer_count* está **int** com um valor padrão de -1.  
+`[ @buffer_count = ] 'buffer_count'` O número total de buffers usados pela operação de backup ou restauração. *buffer_count* está **int** com um valor padrão de -1.  
   
- [  **@max_transfer_size =** ] '*max_transfer_size*'  
- O tamanho, em bytes, da solicitação máxima de entrada ou de saída emitida por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o dispositivo de backup. *max_transfersize* está **int** e pode ser NULL.  
+`[ @max_transfer_size = ] 'max_transfer_size'` O tamanho, em bytes, da entrada máximo ou solicitação de saída que é emitida por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o dispositivo de backup. *max_transfersize* está **int** e pode ser NULL.  
   
- [  **@restore_threshold =** ] '*restore_threshold*'  
- Número de minutos permitidos a decorrer entre operações de restauração antes que um alerta seja gerado. *restore_threshold* está **int** e não pode ser NULL.  
+`[ @restore_threshold = ] 'restore_threshold'` O número de minutos permitidos a decorrer entre operações de restauração antes que um alerta seja gerado. *restore_threshold* está **int** e não pode ser NULL.  
   
- [  **@threshold_alert =** ] '*threshold_alert*'  
- É o alerta a ser gerado quando o limite da restauração é excedido. *alerta de limite* está **int**, com um padrão de 14.420.  
+`[ @threshold_alert = ] 'threshold_alert'` É o alerta a ser emitido quando o limite de restauração é excedido. *alerta de limite* está **int**, com um padrão de 14.420.  
   
- [  **@threshold_alert_enabled =** ] '*threshold_alert_enabled*'  
- Especifica se um alerta será gerado quando *restore_threshold*for excedido. 1 = habilitado; 0 = desabilitado. *threshold_alert_enabled* está **bit** e não pode ser NULL.  
+`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` Especifica se um alerta será gerado quando *restore_threshold*for excedido. 1 = habilitado; 0 = desabilitado. *threshold_alert_enabled* está **bit** e não pode ser NULL.  
   
- [  **@history_retention_period =** ] '*history_retention_period*'  
- É a duração de tempo em minutos na qual o histórico será retido. *history_retention_period* está **int**. Um valor de 1440 será usado se nenhum for especificado.  
+`[ @history_retention_period = ] 'history_retention_period'` É o período de tempo em minutos no qual o histórico será retido. *history_retention_period* está **int**. Um valor de 1440 será usado se nenhum for especificado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

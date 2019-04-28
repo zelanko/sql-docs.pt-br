@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9d22bbe58ac04786186a4b8cca7e51a61ea5b66e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62837285"
 ---
 # <a name="add-a-log-for-data-flow-performance-counters"></a>Adicionar um log para contadores de desempenho de fluxo de dados
   Este procedimento descreve como adicionar um log para os contadores de desempenho fornecidos pelo mecanismo de fluxo de dados.  

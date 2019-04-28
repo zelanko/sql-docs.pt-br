@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 171bb649f5e4f91df947ed2a0a3113786755efe4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828646"
 ---
 # <a name="data-flow-taps"></a>Toques de Fluxo de Dados
   O [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] introduz um novo recurso que permite adicionar um toque de dados em um caminho de fluxo de dados de um pacote em tempo de execução e direcionar a saída do toque de dados para um arquivo externo. Para usar esse recurso, você deverá implantar seu projeto SSIS usando o modelo de implantação de projeto em um servidor SSIS. Depois que você implantar o pacote no servidor, precisará executar scripts T-SQL no banco de dados SSISDB para adicionar toques de dados antes de executar o pacote. Aqui está um cenário de exemplo:  
@@ -68,7 +68,7 @@ EXEC [SSISDB].[catalog].remove_data_tap @tap_id
 ```  
   
 ## <a name="listing-all-data-taps"></a>Listando todos os toques de dados  
- Você também pode listar todos os toques de dados usando a exibição de catalog.execution_data_taps. O exemplo a seguir extrai toques de dados para uma instância de execução de especificação (ID: 54).  
+ Você também pode listar todos os toques de dados usando a exibição de catalog.execution_data_taps. O exemplo a seguir extrai toques de dados para uma instância de execução da especificação (ID: 54).  
   
 ```  
 select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid  

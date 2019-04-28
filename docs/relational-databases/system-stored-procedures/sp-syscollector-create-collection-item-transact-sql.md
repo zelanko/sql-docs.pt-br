@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1e155fb51bd5f78a3c4a639e9233746131ddf6f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63004150"
 ---
 # <a name="spsyscollectorcreatecollectionitem-transact-sql"></a>sp_syscollector_create_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ sp_syscollector_create_collection_item
  [ @collection_set_id = ] *collection_set_id*  
  É o identificador local exclusivo do conjunto de coleta. *collection_set_id* está **int**.  
   
- [ @collector_type_uid =] '*collector_type_uid*'  
+ [ @collector_type_uid = ] '*collector_type_uid*'  
  É o GUID que identifica o tipo de coletor a ser usado para este item *collector_type_uid* é **uniqueidentifier** sem nenhum valor padrão... Para obter uma lista dos tipos de coletores, consulte a exibição de sistema syscollector_collector_types.  
   
- [ @name =] '*nome*'  
+ [ @name = ] '*name*'  
  É o nome do item de coleta. *nome da* está **sysname** e não pode ser uma cadeia de caracteres vazia ou nula.  
   
  *nome* deve ser exclusivo. Para obter uma lista dos nomes dos itens de coleta atuais, consulte a exibição de sistema syscollector_collection_items.  
@@ -63,10 +63,10 @@ sp_syscollector_create_collection_item
   
  Se o conjunto de coleta estiver definido para o modo não armazenado em cache, a frequência será ignorada, pois esse modo faz com que a coleta e o carregamento dos dados ocorram conforme a agenda especificada para o conjunto de coleta. Para exibir o modo de coleta do conjunto de coleta, consulte o [syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md) exibição do sistema.  
   
- [ @parameters =] '*parâmetros*'  
+ [ @parameters = ] '*parameters*'  
  Os parâmetros de entrada do tipo de coletor. *parâmetros* está **xml** com um padrão NULL. O *parâmetros* esquema deve corresponder ao esquema de parâmetros do tipo de coletor.  
   
- [ @collection_item_id =] *collection_item_id*  
+ [ @collection_item_id = ] *collection_item_id*  
  É o identificador exclusivo que identifica o item do conjunto de coleta. *collection_item_id* está **int** e tem OUTPUT.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

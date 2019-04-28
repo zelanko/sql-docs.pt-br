@@ -19,11 +19,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 1a38be84e5f1980b680d674e1c04c2ba95d1a537
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62994235"
 ---
 # <a name="spchangedbowner-transact-sql"></a>sp_changedbowner (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +44,10 @@ sp_changedbowner [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @loginame=] '*login*'  
+ [ @loginame= ] '*login*'  
  É a ID de logon do novo proprietário do banco de dados atual. *login* está **sysname**, sem padrão. *login* deve ser um já existente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon ou usuário do Windows. *logon* se não é possível tornar o proprietário do banco de dados atual se já tiver acesso ao banco de dados por meio de uma conta de segurança do usuário existente no banco de dados. Para evitar isso, descarte primeiro o usuário do banco de dados atual.  
   
- [ @map=] *remap_alias_flag*  
+ [ @map= ] *remap_alias_flag*  
  O *remap_alias_flag* parâmetro é preterido porque foram removidos aliases de logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Usando o *remap_alias_flag* parâmetro não causa um erro, mas não tem nenhum efeito.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

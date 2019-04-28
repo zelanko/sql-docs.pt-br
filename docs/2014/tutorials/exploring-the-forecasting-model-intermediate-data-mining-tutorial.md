@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 607f300fbf2138796bb02c66c62386fcc93e6a45
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62992262"
 ---
 # <a name="exploring-the-forecasting-model-intermediate-data-mining-tutorial"></a>Explorando o modelo de previsão (tutorial de mineração de dados intermediário)
   Agora que você criou o modelo de mineração de previsão, você pode explorar os resultados usando o **Visualizador do modelo de mineração** guia do Designer de mineração de dados. O [!INCLUDE[msCoName](../includes/msconame-md.md)] visualizador Time Series contém duas guias: **Gráficos** e **modelo**.  

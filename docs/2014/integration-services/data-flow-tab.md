@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fed53298272e4fddb33175c06a8b4b40452e3365
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828712"
 ---
 # <a name="data-flow-tab"></a>Guia Fluxo de Dados
   Use a guia **Fluxo de Dados** do Designer [!INCLUDE[ssIS](../includes/ssis-md.md)] para criar fluxos de dados em um pacote [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  

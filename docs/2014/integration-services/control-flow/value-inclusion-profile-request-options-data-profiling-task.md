@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0a2037297db3f8a303ffd08fb31241e51505aeff
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62829469"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>Opções da solicitação do perfil Inclusão de Valor (tarefa Criação de Perfil de Dados)
   Use o painel **Propriedades da Solicitação** da página **Solicitações de Perfil** para definir as opções da **Solicitação do Perfil de Inclusão de Valor** selecionada no painel de solicitações. Um perfil de Inclusão de Valor computa a sobreposição nos valores entre duas colunas ou conjuntos de colunas. Portanto, esse perfil também pode determinar se uma coluna ou conjunto de colunas é apropriado para servir como uma chave estrangeira entre as tabelas selecionadas. Esse perfil também pode ajudá-lo a identificar problemas em seus dados, como valores inválidos. Por exemplo, você usa um perfil de inclusão de valor para criar um perfil para a coluna ProductID de uma tabela de vendas. O perfil descobre que a coluna contém valores que não são encontrados na coluna ProductID da tabela Produtos.  

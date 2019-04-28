@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 40e4b4bdab9772f5af95de8f23053b4b060ffdcc
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62837388"
 ---
 # <a name="add-a-data-viewer-to-a-data-flow"></a>Adicionar um visualizador de dados a um fluxo de dados
   Este tópico descreve como adicionar e configurar um visualizador de dados em um fluxo de dados. Um visualizador de dados exibe dados que estão se movendo entre dois componentes de fluxo de dados. Por exemplo, um visualizador de dados pode exibir os dados extraídos de uma fonte antes de uma transformação no fluxo de dados modificar os dados.  

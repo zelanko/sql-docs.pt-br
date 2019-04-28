@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b0a81237eddd4836394cc9797a79690ba4b49a35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62861632"
 ---
 # <a name="quoted-identifiers"></a>Identificadores entre aspas
 Em uma instrução SQL, os identificadores que contêm caracteres especiais ou palavras-chave de correspondência devem ser colocados entre *caracteres de aspas do identificador*; identificadores entre esses caracteres são conhecidos como *dentificadores*(também conhecido como *identificadores delimitados* em SQL-92). Por exemplo, o identificador de contas a pagar é citado no seguinte **selecionar** instrução:  

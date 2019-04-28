@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 58df84bf96306a2cfbc0567a3d5f6cb13514a06e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62861885"
 ---
 # <a name="prompting-the-user-for-connection-information"></a>Solicitar o usuário para informações de conexão
 Se o aplicativo usa **SQLConnect** e precisa solicitar ao usuário as informações de conexão, como um nome de usuário e senha, deverá fazê-lo em si. Enquanto isso permite que o aplicativo controlar seu "aparência", isso poderá forçar o aplicativo contenha código específico do driver. Isso ocorre quando o aplicativo precisa solicitar ao usuário informações de conexão específicas do driver. Isso apresenta uma situação impossível para aplicativos genéricos, que são projetados para funcionar com todos os drivers, incluindo drivers que não existem quando o aplicativo é escrito.  

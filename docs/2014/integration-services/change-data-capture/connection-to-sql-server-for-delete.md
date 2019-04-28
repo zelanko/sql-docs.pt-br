@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: acb755f8cc1e425e38714013511948f7b5b4c580
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62836856"
 ---
 # <a name="connection-to-sql-server-for-delete"></a>Conexão para o SQL Server para exclusão
   Quando um logon sem uma função de banco de dados que inclui permissão de gravação (por exemplo a função **db_owner**) ao banco de dados MSXDBCDC tenta excluir uma instância Oracle CDC, a caixa de diálogo Conectar-se ao SQL Server é exibida.  
@@ -32,16 +32,16 @@ ms.locfileid: "58392934"
   
 -   **Autenticação do Windows**  
   
--   **Autenticação do SQL Server**: Se você selecionar essa opção, você deve digitar o **Login** e **senha** para o usuário no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] você está se conectando.  
+-   **Autenticação do SQL Server**: se você selecionar esta opção, deverá digitar o **Logon** e a **Senha** para o usuário no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao qual você está se conectando.  
   
  **Opções**  
  Clique na seta para exibir opções disponíveis a serem configuradas. Você pode escolher deixar estas opções com o valor padrão. As opções disponíveis são:  
   
--   **Tempo limite de Conexão**: Digite o tempo (em segundos) o programa aguarda o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conexão seja estabelecida antes de produzir um erro de tempo limite. O valor padrão é **15**.  
+-   **Tempo limite da conexão**: digite o tempo (em segundos) que o programa aguarda até que uma conexão com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seja estabelecida antes de gerar um erro de tempo limite. O valor padrão é **15**.  
   
--   **Tempo limite de execução**: Digite o tempo (em segundos) que o programa aguarda a execução do comando SQL terminar antes produzir um erro de tempo limite. O valor padrão é **30**.  
+-   **Tempo limite de execução**: digite o tempo (em segundos) que o programa aguarda até que uma execução de comando do SQL seja concluída antes de gerar um erro de tempo limite. O valor padrão é **30**.  
   
--   **Criptografar Conexão**: Selecione **criptografar Conexão** para garantir que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conexão que está sendo estabelecida está criptografada para garantir a privacidade.  
+-   **Criptografar conexão**: selecione **Criptografar Conexão** para verificar se a conexão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo estabelecida está criptografada para garantir a privacidade.  
   
 -   **Avançado**: Clique em **Avançado** e digite as propriedades de conexão adicionais na caixa de diálogo Propriedades Avançadas de Conexão, se necessário.  
   

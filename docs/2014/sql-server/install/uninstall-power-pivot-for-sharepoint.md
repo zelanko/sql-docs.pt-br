@@ -11,11 +11,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 9397dd268d767fd8c4bad9056455c21b9be65398
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62989864"
 ---
 # <a name="uninstall-powerpivot-for-sharepoint"></a>Desinstalar o PowerPivot para SharePoint
   Desinstalar uma instalação do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] é uma operação de várias etapas que inclui a preparação para desinstalação, a remoção de recursos e soluções do farm e a remoção de arquivos de programas e configurações de registro.  
@@ -98,7 +98,7 @@ ms.locfileid: "52769768"
   
 6.  Clique em **Validar** para verificar se cada ação é válida. Se **Validar** não estiver disponível, isso indicará que todas as ações são válidas para o sistema.  
   
-7.  Clique em **Executar** para executar todas as ações válidas para esta tarefa. **Executar** estará disponível apenas depois que a verificação da validação tiver sido aprovada. Quando você clica em **executar**, o seguinte aviso é exibido, lembrando a você que as ações são processadas em modo de lote: "Todas as definições de configuração são sinalizadas como válidos na ferramenta serão aplicadas ao farm do SharePoint. Deseja continuar?"  
+7.  Clique em **Executar** para executar todas as ações válidas para esta tarefa. **Executar** estará disponível apenas depois que a verificação da validação tiver sido aprovada. Quando você clica em **Executar**, o seguinte aviso é exibido, lembrando a você que as ações são processadas em modo de lote: "Todas as definições de configuração sinalizadas como válidas na ferramenta serão aplicadas ao farm do SharePoint. Deseja continuar?"  
   
 8.  Clique em **Sim** para continuar.  
   
@@ -120,7 +120,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
     Stsadm -o enumdeployments  
     ```  
   
-3.  Reveja as implantações existentes em busca das seguintes informações: **Tipo de** é retração ou implantação, **arquivo** é powerpivotwebapp. wsp ou powerpivotfarm. wsp.  
+3.  Examine as implantações existentes para as seguintes informações: **Tipo** é Retração ou Implantação; **Arquivo** é powerpivotwebapp.wsp ou powerpivotfarm.wsp.  
   
 4.  Para implantações ou retrações relacionadas a soluções PowerPivot, copie o valor GUID **JobId** e, em seguida, cole o seguinte comando (use os comandos marcar, copiar e colar no menu Editar do Shell para copiar o GUID):  
   

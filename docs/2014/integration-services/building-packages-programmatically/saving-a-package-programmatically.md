@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0304d4ba3388874fbd2c19001b12094f1df4d351
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62836692"
 ---
 # <a name="saving-a-package-programmatically"></a>Salvando um pacote programaticamente
   Depois de criar um pacote novo programaticamente, ou modificar um existente, em geral você deseja salvar as alterações.  

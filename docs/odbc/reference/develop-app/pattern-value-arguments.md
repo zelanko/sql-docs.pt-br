@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8f4a32d9ab637de5b52466cfcb628a57ff6c044b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62861714"
 ---
 # <a name="pattern-value-arguments"></a>Argumentos de valor de padrão
 Alguns argumentos no catálogo de funções, como o *TableName* argumento **SQLTables**, aceite os padrões de pesquisa. Esses argumentos aceitam os padrões de pesquisa se o atributo da instrução SQL_ATTR_METADATA_ID for definido como SQL_FALSE; são argumentos de identificador que não aceitam um padrão de pesquisa se esse atributo é definido como SQL_TRUE.  
@@ -37,8 +37,8 @@ Alguns argumentos no catálogo de funções, como o *TableName* argumento **SQLT
   
 |Padrão de pesquisa|Descrição|  
 |--------------------|-----------------|  
-|%A %|Todos os identificadores que contém a letra A|  
-|ABC _|Todos os identificadores de quatro caracteres, começando com o ABC|  
+|%A%|Todos os identificadores que contém a letra A|  
+|ABC_|Todos os identificadores de quatro caracteres, começando com o ABC|  
 |ABC\\_|O identificador de ABC _, supondo que o caractere de escape é uma barra invertida (\\)|  
 |\\\\%|Todos os identificadores, começando com uma barra invertida (\\), supondo que o caractere de escape é uma barra invertida|  
   

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 986c1bf7f604f531180a14a4456325ce01702b94
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855497"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Provedor Microsoft OLE DB para visão geral do Microsoft Jet
 O provedor OLE DB para Microsoft Jet permite que o ADO para acessar bancos de dados Microsoft Jet.
@@ -43,7 +43,7 @@ Microsoft.Jet.OLEDB.4.0
 
  A cadeia de caracteres consiste nessas palavras-chave:
 
-|Palavra-chave|Description|
+|Palavra-chave|Descrição|
 |-------------|-----------------|
 |**Provedor**|Especifica o provedor OLE DB para Microsoft Jet.|
 |**Fonte de dados**|Especifica o nome de arquivo e caminho do banco de dados (por exemplo, `c:\Northwind.mdb`).|
@@ -58,15 +58,15 @@ Microsoft.Jet.OLEDB.4.0
 
  A tabela a seguir lista essas propriedades junto com o nome de propriedade do OLE DB correspondente entre parênteses.
 
-|Parâmetro|Description|
+|Parâmetro|Descrição|
 |---------------|-----------------|
 |Quantidade de espaço recuperado do Jet OLEDB:Compact (DBPROP_JETOLEDB_COMPACTFREESPACESIZE)|Indica uma estimativa da quantidade de espaço, em bytes, que pode ser recuperado pela compactação de banco de dados. Esse valor só é válido após o estabelecimento de uma conexão de banco de dados.|
 |Controle de OLEDB:Connection Jet (DBPROP_JETOLEDB_CONNECTIONCONTROL)|Indica se os usuários podem se conectar ao banco de dados.|
-|Jet OLEDB: criar o banco de dados do sistema (DBPROP_JETOLEDB_CREATESYSTEMDATABASE)|Indica se um banco de dados do sistema deve ser criado durante a criação de uma nova fonte de dados.|
+|Jet OLEDB:Create System Database (DBPROP_JETOLEDB_CREATESYSTEMDATABASE)|Indica se um banco de dados do sistema deve ser criado durante a criação de uma nova fonte de dados.|
 |Modo de bloqueio do Jet OLEDB (DBPROP_JETOLEDB_DATABASELOCKMODE)|Indica o modo de bloqueio para esse banco de dados. O primeiro usuário para abrir o banco de dados determina o modo usado enquanto o banco de dados é aberto.|
-|Jet OLEDB: senha (DBPROP_JETOLEDB_DATABASEPASSWORD)|Indica a senha do banco de dados.|
+|Jet OLEDB:Database Password (DBPROP_JETOLEDB_DATABASEPASSWORD)|Indica a senha do banco de dados.|
 |Jet OLEDB: não copie localidade no CD (DBPROP_JETOLEDB_COMPACT_DONTCOPYLOCALE)|Indica se o Jet deve copiar as informações de localidade ao compactar um banco de dados.|
-|Jet OLEDB: criptografar o banco de dados (DBPROP_JETOLEDB_ENCRYPTDATABASE)|Indica se um banco de dados compactado deve ser criptografado. Se essa propriedade não for definida, o banco de dados compactado será criptografado se o banco de dados original também foi criptografado.|
+|Jet OLEDB:Encrypt Database (DBPROP_JETOLEDB_ENCRYPTDATABASE)|Indica se um banco de dados compactado deve ser criptografado. Se essa propriedade não for definida, o banco de dados compactado será criptografado se o banco de dados original também foi criptografado.|
 |Tipo de OLEDB:Engine Jet (DBPROP_JETOLEDB_ENGINE)|Indica que o mecanismo de armazenamento usado para acessar o armazenamento de dados atual.|
 |Jet OLEDB: intervalo assíncrono (DBPROP_JETOLEDB_EXCLUSIVEASYNCDELAY)|Indica o comprimento máximo de tempo, em milissegundos, que pode atrasar o Jet gravações assíncronas em disco quando o banco de dados fica aberto exclusivamente.<br /><br /> Essa propriedade será ignorada, a menos que **tempo limite de transação do Jet OLEDB** é definido como 0.|
 |Tempo limite da transação Jet OLEDB (DBPROP_JETOLEDB_FLUSHTRANSACTIONTIMEOUT)|Indica a quantidade de tempo de espera antes que os dados armazenados em um cache de gravação assíncrona, na verdade, são gravados no disco. Essa configuração substitui os valores para **Jet OLEDB: atraso de Async compartilhados** e **Jet OLEDB: intervalo assíncrono**.|
@@ -77,14 +77,14 @@ Microsoft.Jet.OLEDB.4.0
 |Jet OLEDB: repetição (DBPROP_JETOLEDB_LOCKRETRY)|Indica quantas vezes uma tentativa de acessar uma página bloqueada é repetida.|
 |Tamanho do Buffer do Jet OLEDB (DBPROP_JETOLEDB_MAXBUFFERSIZE)|Indica a quantidade máxima de memória, em quilobytes, Jet pode usar antes de começar a liberar alterações para o disco.|
 |Jet OLEDB: proteção por arquivo (DBPROP_JETOLEDB_MAXLOCKSPERFILE)|Indica o número máximo de bloqueios que Jet pode colocar em um banco de dados. O valor padrão é 9500.|
-|Jet OLEDB: nova senha de banco de dados (DBPROP_JETOLEDB_NEWDATABASEPASSWORD)|Indica a nova senha a ser definido para esse banco de dados. A senha antiga é armazenada no **Jet OLEDB: senha**.|
+|Jet OLEDB:New Database Password (DBPROP_JETOLEDB_NEWDATABASEPASSWORD)|Indica a nova senha a ser definido para esse banco de dados. A senha antiga é armazenada no **Jet OLEDB: senha**.|
 |Jet OLEDB:ODBC comando atingir o tempo limite (DBPROP_JETOLEDB_ODBCCOMMANDTIMEOUT)|Indica que o número de milissegundos antes que uma consulta remota de ODBC do Jet atingirá o tempo limite.|
 |Jet OLEDB bloqueios para bloqueio de tabela (DBPROP_JETOLEDB_PAGELOCKSTOTABLELOCK)|Indica quantas páginas devem ser bloqueadas em uma transação antes de Jet tenta promover o bloqueio em um bloqueio de tabela. Se esse valor for 0, o bloqueio é promovido nunca.|
 |Tempo limite do Jet OLEDB (DBPROP_JETOLEDB_PAGETIMEOUT)|Indica o número de milissegundos que Jet aguardará antes de verificar se o seu cache está desatualizado, com o arquivo de banco de dados.|
 |Jet OLEDB: reciclar com valor Long páginas (DBPROP_JETOLEDB_RECYCLELONGVALUEPAGES)|Indica se Jet agressivamente deve tentar recuperar as páginas BLOB quando eles são liberados.|
 |Caminho de OLEDB:Registry Jet (DBPROP_JETOLEDB_REGPATH)|Indica a chave de registro do Windows que contém valores para o mecanismo de banco de dados Jet.|
 |Jet OLEDB:Reset ISAM Stats (DBPROP_JETOLEDB_RESETISAMSTATS)|Indica se o esquema **Recordset** DBSCHEMA_JETOLEDB_ISAMSTATS deve redefinir seus contadores de desempenho depois que ele retorna informações sobre o desempenho.|
-|Jet OLEDB: intervalo assíncrono (DBPROP_JETOLEDB_SHAREDASYNCDELAY) compartilhado|Indica a quantidade máxima de tempo, em milissegundos, o Jet pode atrasar gravações assíncronas em disco quando o banco de dados é aberto no modo de multiusuário.|
+|Jet OLEDB:Shared Async Delay (DBPROP_JETOLEDB_SHAREDASYNCDELAY)|Indica a quantidade máxima de tempo, em milissegundos, o Jet pode atrasar gravações assíncronas em disco quando o banco de dados é aberto no modo de multiusuário.|
 |Banco de dados do Jet OLEDB (DBPROP_JETOLEDB_SYSDBPATH)|Indica o nome de arquivo e caminho para o arquivo de informações do grupo de trabalho (banco de dados do sistema).|
 |Modo de confirmação do Jet OLEDB:Transaction (DBPROP_JETOLEDB_TXNCOMMITMODE)|Indica se o Jet grava dados no disco de forma síncrona ou assíncrona quando uma transação é confirmada.|
 |Sincronização de confirmação do Jet OLEDB (DBPROP_JETOLEDB_USERCOMMITSYNC)|Indica se as alterações que foram feitas em transações são gravadas no modo síncrono ou assíncrono.|
@@ -92,12 +92,12 @@ Microsoft.Jet.OLEDB.4.0
 ## <a name="provider-specific-recordset-and-command-properties"></a>Conjunto de registros específicos do provedor e propriedades de comando
  O provedor Jet também dá suporte a vários específico do provedor **conjunto de registros** e **comando** propriedades. Essas propriedades são acessadas e definidas por meio de **propriedades** coleção da **conjunto de registros** ou **comando** objeto. A tabela lista o nome da propriedade ADO e o nome de propriedade do OLE DB correspondente entre parênteses.
 
-|Nome da propriedade|Description|
+|Nome da propriedade|Descrição|
 |-------------------|-----------------|
 |Jet OLEDB:Bulk transações (DBPROP_JETOLEDB_BULKNOTRANSACTIONS)|Indica se as operações em massa SQL são transacionadas. Grandes operações em massa podem falhar quando transacionado, devido a atrasos de recurso.|
 |Cursores do Jet OLEDB:Enable Fat (DBPROP_JETOLEDB_ENABLEFATCURSOR)|Indica se Jet deve armazenar em cache várias linhas ao preencher um conjunto de registros para fontes de linha remota.|
 |Tamanho do Cache de Cursor OLEDB:Fat Jet (DBPROP_JETOLEDB_FATCURSORMAXROWS)|Indica o número de linhas em cache ao usar o cache de linha de repositório de dados remotos. Esse valor é ignorado, a menos que **Jet OLEDB:Enable Fat cursores** é True.|
-|Jet OLEDB: inconsistente (DBPROP_JETOLEDB_INCONSISTENT)|Indica se os resultados da consulta permitem atualizações inconsistentes.|
+|Jet OLEDB:Inconsistent (DBPROP_JETOLEDB_INCONSISTENT)|Indica se os resultados da consulta permitem atualizações inconsistentes.|
 |Jet OLEDB: bloqueio de granularidade (DBPROP_JETOLEDB_LOCKGRANULARITY)|Indica se uma tabela é aberta usando o bloqueio em nível de linha.|
 |Instrução de passagem do Jet OLEDB:ODBC (DBPROP_JETOLEDB_ODBCPASSTHROUGH)|Indica que o Jet deve passar o texto SQL em uma **comando** objeto para o back-end inalterado.|
 |Operações em massa de OLEDB:Partial Jet (DBPROP_JETOLEDB_BULKPARTIAL)|Indica o comportamento do Jet quando operações DML SQL falhar.|

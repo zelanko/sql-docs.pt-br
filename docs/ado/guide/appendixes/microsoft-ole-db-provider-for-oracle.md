@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 596d67527807782ee89043e0b198f0923552db7b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62853416"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Provedor Microsoft OLE DB para visão geral do Oracle
 > [!IMPORTANT]

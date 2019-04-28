@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2250847ee35210c63a4ac9ed5e1e41bab33a08ab
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62956316"
 ---
 # <a name="oledb-call-event-class"></a>classe de evento OLEDB Call
   A classe de evento **OLEDB Call** ocorre quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chama um provedor OLE DB para consultas distribuídas e procedimentos armazenados remotamente.  

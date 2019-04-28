@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 58d94afea9c6801d75a67f6f9136441d536eb696
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62956141"
 ---
 # <a name="add-existing-items-to-a-project"></a>Adicionar itens existentes a um projeto
-  Adicione novos itens a um projeto para estender a funcionalidade do aplicativo. Um item existente pode ser uma consulta ou um arquivo diverso. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] tem dois tipos de projeto: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Projeto de script e o projeto de Script do Analysis Services. O tipo de projeto determina os arquivos de consulta que você pode adicionar ao projeto. Por exemplo, você pode adicionar uma consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] (um arquivo com uma extensão .sql) a um projeto de script do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , mas não pode adicioná-lo a um Projeto de Script do Analysis Services. Para associar extensões de arquivo adicionais a um tipo de projeto, consulte [associar extensões de arquivo para um Editor de código](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md).  
+  Adicione novos itens a um projeto para estender a funcionalidade do aplicativo. Um item existente pode ser uma consulta ou um arquivo diverso. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] tem dois tipos de projeto: Projeto de Script do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Projeto de Script do Analysis Services. O tipo de projeto determina os arquivos de consulta que você pode adicionar ao projeto. Por exemplo, você pode adicionar uma consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] (um arquivo com uma extensão .sql) a um projeto de script do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , mas não pode adicioná-lo a um Projeto de Script do Analysis Services. Para associar extensões de arquivo adicionais a um tipo de projeto, consulte [associar extensões de arquivo para um Editor de código](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md).  
   
 ### <a name="to-add-an-existing-query-or-a-miscellaneous-file-to-a-project"></a>Para adicionar uma consulta existente ou um arquivo diverso a um projeto  
   

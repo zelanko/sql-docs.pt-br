@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 123258c5eceebe14a8b920b7917941cd83dc7b42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675344"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62860820"
 ---
 # <a name="sysselectivexmlindexpaths-transact-sql"></a>sys.selective_xml_index_paths (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
  Haverá duas novas linhas em sys.selective_xml_index_paths correspondente ao índice sxi1.  
 
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID da tabela com coluna XML.|  
 |**index_id**|**int**|ID exclusiva do índice xml seletivo.|  
@@ -62,9 +62,9 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
 |**system_type_id**|**tinyint**|ID do tipo de sistema da coluna.|  
 |**user_type_id**|**tinyint**|ID do tipo de usuário da coluna.|  
 |**max_length**|**smallint**|Comprimento máximo (em bytes) do tipo.<br /><br /> -1 = O tipo de dados de coluna é varchar(max), nvarchar(max), varbinary(max) ou xml.|  
-|**Precisão**|**tinyint**|Precisão máxima do tipo se for numérico. Caso contrário, 0.|  
+|**precisão**|**tinyint**|Precisão máxima do tipo se for numérico. Caso contrário, 0.|  
 |**scale**|**tinyint**|Escala máxima do tipo se for numérico. Caso contrário, será 0.|  
-|**collation_name**|**sysname**|Nome do agrupamento do tipo se baseado em caractere. Caso contrário, NULL.|  
+|**collation_name**|**sysname**|Nome da ordenação do tipo se baseado em caractere. Caso contrário, NULL.|  
 |**is_singleton**|**bit**|0 = dica SINGLETON ausente.<br /><br /> 1 = dica de otimização SINGLETON aplicada.|  
   
 ## <a name="permissions"></a>Permissões  

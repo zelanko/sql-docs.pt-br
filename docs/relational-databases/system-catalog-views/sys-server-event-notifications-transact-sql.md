@@ -1,5 +1,5 @@
 ---
-title: server_event_notifications (Transact-SQL) | Microsoft Docs
+title: sys.server_event_notifications (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,18 +21,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b985d915d3d7bb6b3130ccb63a400f314fa05a38
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62860903"
 ---
 # <a name="sysservereventnotifications-transact-sql"></a>sys.server_event_notifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna uma linha para cada objeto de notificação de eventos no nível do servidor.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome da notificação de eventos do servidor. É exclusivo em todas as notificações de eventos no nível do servidor.|  
 |**object_id**|**int**|Número de identificação do objeto. É exclusivo dentro de **mestre** banco de dados.|  

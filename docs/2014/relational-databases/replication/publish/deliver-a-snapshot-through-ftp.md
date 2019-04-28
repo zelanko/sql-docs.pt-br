@@ -15,16 +15,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d1a8989492c9efb670b00bda00dbfa757c549fca
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62960060"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>Entregar um instantâneo pelo FTP
   Este tópico descreve como entregar um instantâneo pelo FTP no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
-##  <a name="Restrictions"></a> Limitações e Restrições  
+##  <a name="Restrictions"></a> Limitações e restrições  
   
 -   O Snapshot Agent deve ter permissões de gravação para o diretório que você especificar, e o Distribution Agent ou Merge Agent devem ter permissões de leitura. Se forem usadas assinaturas pull, será necessário especificar um diretório compartilhado como um caminho UNC, como \\\ftpserver\home\snapshots. Para obter mais informações, consulte [Proteger a pasta de instantâneos](../security/secure-the-snapshot-folder.md).  
   
@@ -56,7 +56,7 @@ ms.locfileid: "54130266"
          Insira o caminho na caixa de texto **Colocar os arquivos nesta pasta** na página Instantâneo da caixa de diálogo **Propriedades da Publicação – \<Publicação>**.   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  A opção para tornar os arquivos de instantâneo disponíveis em um servidor FTP podem ser definidas, e essas configurações FTP podem ser modificadas programaticamente usando procedimentos de armazenamento. O procedimento usado depende do tipo de publicação. A entrega de instantâneo FTP é usada apenas com assinaturas pull.  
   
 #### <a name="to-enable-ftp-snapshot-delivery-for-a-snapshot-or-transactional-publication"></a>Par habilitar a entrega de instantâneo FTP para um instantâneo ou publicação transacional  

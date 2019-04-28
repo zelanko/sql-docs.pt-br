@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 733161f1ec2bf80830316b285e7d488983eaf446
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62990125"
 ---
 # <a name="use-the-distributed-replay-utility-to-prepare-for-upgrades"></a>Usar o Distributed Replay Utility para preparar para atualizações
   O [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Utility pode usar vários computadores para reproduzir dados de rastreamento, simulando uma carga de trabalho de missão crítica. Ao executar uma reprodução em um servidor de teste antes e depois de uma atualização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você pode medir diferenças de desempenho e procurar alguma incompatibilidade que seu aplicativo possa ter com a atualização. Para obter mais informações, consulte [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md).  

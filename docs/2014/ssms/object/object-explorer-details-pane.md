@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 76362bedfd982fe0fb513873c6822fdcf56af6de
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62999934"
 ---
 # <a name="object-explorer-details-pane"></a>Painel Detalhes do Pesquisador de Objetos
   Detalhes do Pesquisador de Objetos, um componente do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], fornece uma exibição tabular de todos os objetos no servidor e apresenta uma interface de usuário para gerenciá-los. Os recursos do Pesquisador de Objetos variam ligeiramente, dependendo do tipo de servidor, mas normalmente incluem recursos de desenvolvimento de bancos de dados e recursos de gerenciamento para todos os tipos de servidor.  

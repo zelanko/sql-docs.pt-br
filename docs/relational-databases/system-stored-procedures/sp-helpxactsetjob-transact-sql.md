@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7402fcc825e6f537703268c1fd3fead9c88b1f5e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62959606"
 ---
 # <a name="sphelpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,20 +38,20 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [**@publisher** =] **'***publisher***'**  
+ [**@publisher** = ] **'***publisher***'**  
  É o nome do não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador ao qual o trabalho pertence. *Publisher* está **sysname**, sem padrão.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**número_do_trabalho**|**int**|Número do trabalho Oracle.|  
+|**jobnumber**|**int**|Número do trabalho Oracle.|  
 |**lastdate**|**varchar(22)**|Última data de execução do trabalho.|  
 |**thisdate**|**varchar(22)**|Hora da alteração|  
 |**nextdate**|**varchar(22)**|Próxima data de execução do trabalho.|  
-|**dividido**|**varchar(1)**|Sinalizador que indica se o trabalho foi interrompido.|  
-|**intervalo**|**varchar(200)**|Intervalo para o trabalho.|  
-|**falhas**|**int**|Número de falhas para o trabalho.|  
+|**broken**|**varchar(1)**|Sinalizador que indica se o trabalho foi interrompido.|  
+|**interval**|**varchar(200)**|Intervalo para o trabalho.|  
+|**failures**|**int**|Número de falhas para o trabalho.|  
 |**xactsetjobwhat**|**varchar(200)**|Nome do procedimento executado pelo trabalho.|  
 |**xactsetjob**|**varchar(1)**|Status do trabalho, que pode ser um dos seguintes:<br /><br /> **1** -o trabalho está habilitado.<br /><br /> **0** -o trabalho está desabilitado.|  
 |**xactsetlonginterval**|**int**|Intervalo longo para o trabalho.|  

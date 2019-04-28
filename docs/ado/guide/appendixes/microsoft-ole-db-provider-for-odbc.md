@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e75b79934022743ba806722427dd37ab733bc2f2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62853327"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Provedor Microsoft OLE DB para visão geral do ODBC
 Para um programador do ADO ou RDS, um mundo ideal seria um no qual todos os dados fonte expõe uma interface OLE DB, para que o ADO pode chamar diretamente na fonte de dados. Embora cada vez mais fornecedores de banco de dados estiver implementando interfaces OLE DB, algumas fontes de dados não são ainda expostos dessa maneira. No entanto, a maioria dos sistemas DBMS em uso atualmente podem ser acessados por meio de ODBC.
@@ -101,7 +101,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Nome do driver (KAGPROP_DRIVERNAME)|Indica o nome do arquivo do driver ODBC.|
 |Versão do ODBC driver (KAGPROP_DRIVERODBCVER)|Indica a versão do ODBC que dá suporte a este driver.|
 |Uso de arquivos (KAGPROP_FILEUSAGE)|Indica como o driver trata um arquivo em uma fonte de dados; como uma tabela ou como um catálogo.|
-|Como a cláusula de Escape (KAGPROP_LIKEESCAPECLAUSE)|Indica se o driver oferece suporte a definição e o uso de um caractere de escape para o percentual de caracteres (%) e caractere de sublinhado (_) no predicado LIKE de uma cláusula WHERE.|
+|Like Escape Clause (KAGPROP_LIKEESCAPECLAUSE)|Indica se o driver dá suporte a definição e o uso de um caractere de escape para o caractere de porcentagem (%) e sublinhado (_) de caractere no predicado LIKE de uma cláusula WHERE.|
 |Máximo de colunas em Group By (KAGPROP_MAXCOLUMNSINGROUPBY)|Indica o número máximo de colunas que podem ser listadas na cláusula GROUP BY de uma instrução SELECT.|
 |Máximo de colunas no índice (KAGPROP_MAXCOLUMNSININDEX)|Indica o número máximo de colunas que podem ser incluídos em um índice.|
 |Máximo de colunas em Order By (KAGPROP_MAXCOLUMNSINORDERBY)|Indica o número máximo de colunas que podem ser listadas na cláusula ORDER BY de uma instrução SELECT.|
@@ -217,7 +217,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|Sim|Sim|Sim|Sim|
 |[Abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Sim|Sim|Sim|Sim|
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Sim|Sim|Sim|Sim|
-|[Ressincronização](../../../ado/reference/ado-api/resync-method.md)|Não|Não|Sim|Sim|
+|[Resync](../../../ado/reference/ado-api/resync-method.md)|Não|Não|Sim|Sim|
 |[Suporta](../../../ado/reference/ado-api/supports-method.md)|Sim|Sim|Sim|Sim|
 |[Update (atualizar)](../../../ado/reference/ado-api/update-method.md)|Sim|Sim|Sim|Sim|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Sim|Sim|Sim|Sim|
@@ -256,7 +256,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Níveis de isolamento|DBPROP_SUPPORTEDTXNISOLEVELS|
 |Retenção de isolamento|DBPROP_SUPPORTEDTXNISORETAIN|
 |Identificador de Localidade|DBPROP_INIT_LCID|
-|Local padrão|DBPROP_INIT_LOCATION|
+|Location|DBPROP_INIT_LOCATION|
 |Tamanho máximo de índice|DBPROP_MAXINDEXSIZE|
 |Tamanho máximo da linha|DBPROP_MAXROWSIZE|
 |Tamanho máximo de linha inclui BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|

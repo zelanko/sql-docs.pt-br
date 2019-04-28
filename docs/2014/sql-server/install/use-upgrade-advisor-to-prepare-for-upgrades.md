@@ -18,11 +18,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8b12b22af124250fe05baab5d08a6585de061b56
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62992376"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>Usar o Supervisor de Atualização para preparar para atualizações
   O Supervisor de Atualização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ajuda você a se preparar para atualizações do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. O Supervisor de Atualização analisa os componentes instalados de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e gera um relatório que identifica os problemas a serem corrigidos antes ou depois da atualização.  

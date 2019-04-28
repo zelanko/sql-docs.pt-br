@@ -21,18 +21,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4a34d69fe4d8d8de6668e804bc574c18196f0aa8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856174"
 ---
 # <a name="sysservicecontractusages-transact-sql"></a>sys.service_contract_usages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Esta exibição do catálogo contém uma linha por par (serviço, contrato).  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**service_id**|**int**|Identificador do serviço que usa o contrato. Não é NULLABLE.|  
 |**service_contract_id**|**int**|Identificador do contrato usado pelo serviço. Não é NULLABLE.|  

@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4466ebd24647520c7cbba2bf0baa93a0f60a72bf
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62833804"
 ---
 # <a name="flat-file-connection-manager"></a>Gerenciador de conexões de arquivos simples
   Um gerenciador de conexões de Arquivos Simples permite que um pacote acesse dados em um arquivo simples. Por exemplo, a origem e o destino dos Arquivos Simples podem usar gerenciadores de conexões de Arquivos Simples para extrair e carregar dados.  

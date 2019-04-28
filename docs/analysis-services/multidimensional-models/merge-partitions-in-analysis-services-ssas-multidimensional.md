@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b488997ae97a54a2755847ad9112047015fb0eb5
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62988625"
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>Mesclar partições no Analysis Services (SSAS - Multidimensional)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -91,13 +91,13 @@ ms.locfileid: "34025393"
   
  Pela mesma razão, as partições que obtêm dados segmentados de consultas nomeadas também exigem atualização. A partição combinada agora deve ter uma consulta nomeada que retorna o conjunto de resultados combinados que foi obtido anteriormente em consultas nomeadas separadas.  
   
-## <a name="partition-storage-considerations-molap"></a>Considerações de armazenamento de partição: MOLAP  
+## <a name="partition-storage-considerations-molap"></a>Considerações sobre armazenamento de partição: MOLAP  
  Quando partições MOLAP são mescladas, os fatos armazenados nas estruturas multidimensionais das partições também são mesclados. Isso resulta em uma partição internamente completa e consistente. No entanto, os fatos armazenados em partições MOLAP são cópias de fatos da tabela. Quando a partição é processada posteriormente, os fatos da estrutura multidimensional são excluídos (somente para atualização) e os dados são copiados da tabela de fatos conforme especificado pela fonte de dados e pelo filtro da partição. Se a partição de origem usar uma tabela de fatos diferentes da partição de destino, a tabela da partição de origem deve ser mesclada manualmente com a tabela de fatos da partição de destino para garantir que um conjunto completo de dados esteja disponível para o processamento da partição resultante. Isto também se aplica se duas partições forem baseadas em consultas nomeadas diferentes.  
   
 > [!IMPORTANT]  
 >  Uma partição MOLAP mesclada com uma tabela de fatos incompleta contém uma cópia mesclada internamente dos dados da tabela de dados e é operada corretamente até ser processada.  
   
-## <a name="partition-storage-considerations-holap-and-rolap-partitions"></a>Considerações de armazenamento de partição: partições HOLAP e ROLAP  
+## <a name="partition-storage-considerations-holap-and-rolap-partitions"></a>Considerações sobre armazenamento de partição: Partições HOLAP e ROLAP  
  Quando as partições HOLAP ou OLAP com tabelas de fatos diferentes são mescladas, essas tabelas não são mescladas automaticamente. A não ser que sejam mescladas manualmente, somente a tabela de fatos associada à partição de destino estará disponível na partição resultante. Os fatos associados à partição de origem não estão disponíveis para extração de detalhes na partição resultante e, quando a partição é processada, as agregações não resumem os dados da tabela não disponível.  
   
 > [!IMPORTANT]  
@@ -114,7 +114,7 @@ ms.locfileid: "34025393"
   
 1.  No Pesquisador de Objetos, expanda o nó **Grupos de Medidas** do cubo que contém as partições que você deseja mesclar, expanda **Partições**, clique com o botão direito do mouse na partição que é o destino da operação de mesclagem. Por exemplo, se você estiver movendo dados de fatos trimestrais para uma partição que armazena dados de fatos anuais, selecione a partição que contém os dados de fatos anuais.  
   
-2.  Clique em **mesclar partições** para abrir o **Mesclar partição \<nome da partição >** caixa de diálogo.  
+2.  Clique em **partições de mesclagem** para abrir o **Mesclar partição \<nome da partição >** caixa de diálogo.  
   
 3.  Em **Partições de Origem**, marque a caixa de seleção ao lado de cada partição de origem a ser mesclada com a partição de destino e clique em **OK**.  
   
@@ -129,12 +129,12 @@ ms.locfileid: "34025393"
  Consulte este tópico para obter informações, [Mesclando partições &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Processamento do Analysis Services objetos](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)   
- [Partições & #40; Analysis Services - dados multidimensionais & #41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [Criar e gerenciar uma partição Local & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
- [Criar e gerenciar uma partição remota & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
- [Definir o write-back de partição](../../analysis-services/multidimensional-models/set-partition-writeback.md)   
+ [Processando objetos do Analysis Services](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)   
+ [Partições &#40;Analysis Services – Dados Multidimensionais&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Criar e gerenciar uma partição local &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
+ [Criar e gerenciar uma partição remota &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
+ [Definir o write-back de partições](../../analysis-services/multidimensional-models/set-partition-writeback.md)   
  [Partições habilitadas para gravação](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [Configurar o armazenamento de cadeia de caracteres para dimensões e partições.](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)  
+ [Configurar o armazenamento de cadeia de caracteres para dimensões e partições](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)  
   
   

@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dd5c396db88a8377a46bd965b664bc2a667d51de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63001527"
 ---
 # <a name="spsyscollectorstopcollectionset-transact-sql"></a>sp_syscollector_stop_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_syscollector_stop_collection_set
  [ @collection_set_id = ] *collection_set_id*  
  É o identificador local exclusivo do conjunto de coleta. *collection_set_id* está **int** com um valor padrão de NULL. *collection_set_id* deve ter um valor se *nome* é NULL.  
   
- [ @name =] '*nome*'  
+ [ @name = ] '*name*'  
  É o nome do conjunto de coleta. *nome da* está **sysname** com um valor padrão de NULL. *nome da* deve ter um valor se *collection_set_id* é NULL.  
   
  [ @stop_collection_job = ] *stop_collection_job*  

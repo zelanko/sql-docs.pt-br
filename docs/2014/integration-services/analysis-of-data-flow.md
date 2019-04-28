@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 154778d2c3a4056e1b16743ff629e4c4a5dae0a5
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62836564"
 ---
 # <a name="analysis-of-data-flow"></a>Análise do Fluxo de Dados
   Você pode usar o [execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB` para analisar o fluxo de dados de pacotes do banco de dados. Esta exibição exibe uma linha a cada vez que um componente de fluxo de dados envia dados a um componente downstream. As informações podem ser usadas para obter um entendimento mais profundo das linhas que são enviadas para cada componente.  

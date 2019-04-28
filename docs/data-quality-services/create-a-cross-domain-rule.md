@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 226998dccce432a2203782d667c35285860fa926
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62862357"
 ---
 # <a name="create-a-cross-domain-rule"></a>Criar uma regra de domínio cruzado
 

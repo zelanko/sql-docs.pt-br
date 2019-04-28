@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9865425573ae3d9c8f2e16af0da283c5ea684150
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62990199"
 ---
 # <a name="column-properties-visual-database-tools"></a>Propriedades de Coluna (Visual Database Tools)
   Existem dois conjuntos de propriedades para colunas: um conjunto completo que pode ser visualizado na guia **Propriedades da Coluna** no Designer de Tabela (disponível somente para bancos de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) e um subconjunto que pode ser visualizado na janela Propriedades usando o Gerenciador de Servidores.  

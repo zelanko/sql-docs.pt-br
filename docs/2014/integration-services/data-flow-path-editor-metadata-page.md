@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9c58b3bffe2873cd412be0639ae9006252a4443e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828441"
 ---
 # <a name="data-flow-path-editor-metadata-page"></a>Editor de Caminho do Fluxo de Dados (página Metadados)
   Use a página **Metadados** da caixa de diálogo **Editor do Caminho de Fluxo de Dados** para exibir o metadados das colunas de caminho.  

@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2d53959ae55e0a82a137410d88fcfc22a1964a34
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62836728"
 ---
 # <a name="breaking-changes-to-integration-services-features-in-sql-server-2014"></a>Alterações de rompimento em recursos do Integration Services no SQL Server 2014
   Este tópico descreve as alterações recentes no [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Essas alterações podem danificar aplicativos, scripts ou funcionalidades baseados em versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Talvez você tenha esses problemas ao atualizar. Para obter mais informações, consulte [Use Upgrade Advisor to Prepare for Upgrades](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
