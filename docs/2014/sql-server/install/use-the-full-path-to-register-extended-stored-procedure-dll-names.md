@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2ecdf37d4c7c97e8c474f5e7f08e3e6fef040723
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689787"
 ---
 # <a name="use-the-full-path-to-register-extended-stored-procedure-dll-names"></a>Usar caminho completo para registrar nomes de DLL de procedimentos armazenados estendidos
   Procedimentos armazenados estendidos que foram registrados anteriormente sem um caminho completo para o nome de DLL podem não funcionar no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

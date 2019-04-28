@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c57b2bfad47baba01e54d7b60030ceba0351f678
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59952152"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711187"
 ---
 # <a name="document-outline"></a>Estrutura de Tópicos do Documento
   Use a janela Estrutura de Tópicos do Documento para exibir a hierarquia de itens em um relatório. As regiões de dados Tablix exibem todas as caixas de texto e outros itens de relatório que são contidos em células Tablix. Quando você seleciona um item de relatório na superfície de design, o item de relatório correspondente é selecionado na janela Estrutura de Tópicos do Documento. Use essa exibição para localizar itens de relatório na superfície de design. Por exemplo, quando você visualiza um relatório com erros de expressão, a janela Saída exibe uma mensagem para cada erro. A mensagem inclui o nome da caixa de texto que contém a expressão com o erro. Você poderá clicar no nome da caixa de texto na janela Estrutura de Tópicos do Documento, vê-la selecionada na superfície de design e exibir a expressão que continha o erro.  

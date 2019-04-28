@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 61573352407d883df91327a1d27f3968ad1d1708
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732962"
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>Propriedades para estruturas de mineração e colunas de estrutura
   Você pode definir ou alterar as propriedades de uma estrutura de mineração e das colunas associadas e tabelas aninhadas usando a guia **Estrutura de Mineração** do Designer de Data Mining. As propriedades que você estabelece nesta guia se propagam para todo o modelo de mineração associado à estrutura.  
@@ -38,10 +38,10 @@ ms.locfileid: "48190006"
   
 ### <a name="properties-of-the-mining-structure"></a>Propriedades da Estrutura de Mineração  
   
-|Propriedade|Description|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |**CacheMode**|Especifica se os casos usados no treinamento devem ser colocados em cachê ou descartados após a conclusão do treinamento.<br /><br /> Observação: Essa propriedade deve ser definida como `KeepTrainingCases` para habilitar o detalhamento e validação.|  
-|**Agrupamento**|Especifica o agrupamento padrão para a coluna. Se um agrupamento não for especificado, o agrupamento do servidor será usado.|  
+|**Ordenação**|Especifica a ordenação padrão para a coluna. Se uma ordenação não for especificada, a ordenação do servidor será usada.|  
 |**Descrição**|Descreve a estrutura de mineração. Como uma prática recomendada, a descrição deve declarar o propósito e a composição dos dados na estrutura.|  
 |**ErrorConfiguration (padrão)**|Especifica opções para manipulação especial de erros, se houver.|  
 |**HoldoutMaxCases**|Especifica o número de máximo de casos de estrutura que podem ser reservados como uns conjunto de dados de testes.  Se forem especificados valores para **HoldoutMaxCases** e **HoldoutPercent**, as condições serão combinadas.<br /><br /> Observação: Para definir essa propriedade, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> deve ser definida como `KeepTrainingCases`.|  
@@ -54,13 +54,13 @@ ms.locfileid: "48190006"
   
 ### <a name="properties-of-the-mining-structure-columns"></a>Propriedades das colunas da estrutura de mineração  
   
-|Propriedade|Description|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |**ClassifiedColumns**|Identifica a coluna descrita por uma coluna classificada.|  
 |**Conteúdo**|O tipo de conteúdo da coluna.|  
 |**Descrição**|Descreve a coluna. Como uma prática recomendada, a descrição da coluna deve fornecer informações sobre como os dados da coluna foram derivados ou alterados para mineração de dados.|  
-|**DiscretizationBucketCount**|Exibe o número de recipientes na coluna de dados discretos.<br /><br /> Habilitado somente se o tipo de conteúdo for definido como `Discretized`.<br /><br /> Esta propriedade é somente leitura.|  
-|**DiscretizationMethod**|Exibe o método usado para diferenciar a coluna.<br /><br /> Habilitado somente se o tipo de conteúdo for definido como `Discretized`.<br /><br /> Esta propriedade é somente leitura.|  
+|**DiscretizationBucketCount**|Exibe o número de recipientes na coluna de dados discretos.<br /><br /> Ativada apenas se o tipo de conteúdo for definido como `Discretized`.<br /><br /> Esta propriedade é somente leitura.|  
+|**DiscretizationMethod**|Exibe o método usado para diferenciar a coluna.<br /><br /> Ativada apenas se o tipo de conteúdo for definido como `Discretized`.<br /><br /> Esta propriedade é somente leitura.|  
 |**Distribuição**|Especifica a distribuição de conteúdo na coluna.|  
 |**ID**|Exibe o identificador da coluna.<br /><br /> Se você alterar o valor da propriedade Name da coluna, o valor da propriedade ID não será afetado.|  
 |**IsKey**|Indica se a coluna é uma coluna de chave.|  

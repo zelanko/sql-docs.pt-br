@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4a9c7a8152896aa3bd9f75cf483aaf29429a5638
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681183"
 ---
 # <a name="choosing-data-for-data-mining"></a>Escolhendo os dados para a mineração de dados
   Conforme você começa a mineração de dados, talvez você pergunte: "quantos dados precisarei?" ou "Há algum requisito especial que eu deva saber ao apagar ou formatar meus dados?"  
@@ -73,7 +73,7 @@ ms.locfileid: "53355810"
   
  Se você tiver um conjunto de dados de um tamanho razoável, concentre-se mais na qualidade dos dados em vez de adicionar cada vez mais dados. Após um determinado ponto, todos os padrões estatisticamente válidos terão sido encontrados, e adicionar mais dados não melhora sua validade. Por outro lado, à medida que adiciona mais dados, você às vezes pode introduzir correlações acidentais.  
   
-### <a name="discrete-vs-continuous-numbers"></a>Números Números contínuos  
+### <a name="discrete-vs-continuous-numbers"></a>Vs discretos. Números contínuos  
  Uma coluna *discreta* contém um número finito de valores. Por exemplo, textos sempre são tratados como valores discretos.  
   
  Há alguns atributos importantes para valores discretos. Por exemplo, se você tratar os números como sendo discretos, nenhuma ordem será implícita entre eles, e você não poderá especificar a média ou somar os números. Os códigos de área de telefone são um bom exemplo de dados numéricos discretos que você nunca usaria para executar operações matemáticas.  

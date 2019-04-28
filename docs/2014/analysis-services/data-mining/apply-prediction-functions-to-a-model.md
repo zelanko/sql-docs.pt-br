@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 04b1afa7f9902d0e1510aaab5f84f96b4b01eacc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691900"
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>Aplicar funções de previsão a um modelo
   Para criar uma consulta de previsão, você primeiro deve selecionar o modelo de mineração no qual a consulta será baseada. Você pode selecionar qualquer modelo de mineração existente no projeto atual.  

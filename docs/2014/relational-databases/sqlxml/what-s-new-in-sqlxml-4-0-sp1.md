@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 8804132c280642ab4d79ee05417395c7ef9b5a76
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62718023"
 ---
 # <a name="what39s-new-in-sqlxml-40-sp1"></a>O que&#39;novo no SQLXML 4.0 SP1
   O [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 SP1 inclui várias atualizações e aprimoramentos. Este tópico resume as atualizações e fornece links a informações mais detalhadas. O SQLXML 4.0 SP1 tem aprimoramentos adicionais para dar suporte aos novos tipos de dados apresentados no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Este tópico abrange os seguintes assuntos:  
@@ -144,7 +144,7 @@ ms.locfileid: "53371228"
   
      Essa chave é introduzida para que você possa escolher manter os caracteres com espaço em branco nos dados. Se você adicionar essa chave de registro e definir seu valor como 0, os caracteres com espaço em branco (LF, CR e tab) no XML serão retornados codificados em caso de valores de atributo. No caso de valores de elemento, somente CR é retornado codificado.  
   
-     Por exemplo:  
+     Por exemplo:   
   
     ```  
     CREATE TABLE T( Col1 int, Col2 nvarchar(100));  

@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d6b48d02ff1ed38f2c2e49d509ef6c483af4cc44
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842737"
 ---
 # <a name="sql-server-profiler---destination-table"></a>SQL Server Profiler - tabela de destino
   Use a caixa de diálogo **Tabela de Destino** para especificar uma tabela em que você deseja armazenar o rastreamento.  

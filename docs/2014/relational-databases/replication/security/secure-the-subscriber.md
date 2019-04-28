@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c8f75360bb3eb4b304c2a56a150218e8f8c8eff
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62960805"
 ---
 # <a name="secure-the-subscriber"></a>Proteger o Assinante
   Agentes de mesclagem e agentes de distribuição que conectam ao assinante. Essas conexões podem ser feitas no contexto de um logon do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou de um logon do Windows. É importante fornecer um logon adequado para cada um desses agentes e seguir o princípio de conceder o mínimo possível de direitos, e, também proteger o armazenamento de todas as senhas. Para obter informações sobre as permissões exigidas para cada agente, consulte [Replication Agent Security Model](replication-agent-security-model.md).  
@@ -71,7 +71,7 @@ ms.locfileid: "54125418"
     > [!IMPORTANT]  
     >  Use a Autenticação [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para conexões com os Assinantes e especifique uma conta diferente para a conexão com cada Assinante. Se usar uma assinatura pull, a replicação sempre define a conexão a ser usada com a Autenticação do Windows (em assinaturas pull, a replicação não pode acessar metadados no Assinante com a Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ). Nesse caso, altere a conexão para usar a Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] depois que a assinatura for configurada.  
   
-     Para obter mais informações, consulte como: Criar uma assinatura de atualização para uma publicação transacional (SQL Server Management Studio) e [exibir e modificar as configurações de segurança de replicação](view-and-modify-replication-security-settings.md).  
+     Para obter mais informações, confira Como criar uma assinatura de atualização a uma publicação transacional (SQL Server Management Studio) e [Exibir e modificar as configurações de segurança de replicação](view-and-modify-replication-security-settings.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Habilitar conexões criptografadas no Mecanismo de Banco de Dados &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   

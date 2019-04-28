@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6665d039587a09bb373179ac6f9675791b45f53b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62815530"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>Criar ou configurar um ouvinte de grupo de disponibilidade (SQL Server)
   Este tópico descreve como criar ou configurar um único *ouvinte de grupo de disponibilidade* para um Grupo de Disponibilidade AlwaysOn usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -39,7 +39,7 @@ ms.locfileid: "53360038"
 > [!NOTE]  
 >  Se já houver um ouvinte e você desejar criar um ouvinte adicional, consulte [Para criar um ouvinte adicional para um grupo de disponibilidade (opcional)](#CreateAdditionalListener)posteriormente neste tópico.  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   Só é possível criar um ouvinte por grupo de disponibilidade via [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Geralmente, cada grupo de disponibilidade exige somente um ouvinte. No entanto, alguns cenários de cliente exigem vários ouvintes para um grupo de disponibilidade.   Depois de criar um ouvinte pelo SQL Server, você pode usar o Windows PowerShell para clusters de failover ou o Gerenciador de Cluster de Failover do WSFC para criar ouvintes adicionais. Para obter mais informações, consulte [Para criar um ouvinte adicional para um grupo de disponibilidade (opcional)](#CreateAdditionalListener), posteriormente neste tópico.  
   
@@ -67,8 +67,8 @@ ms.locfileid: "53360038"
   
 |Permissões|Link|  
 |-----------------|----------|  
-|O CNO (nome do objeto de cluster) do cluster WSFC que está hospedando o grupo de disponibilidade deve ter a permissão **Criar Objetos de computador** .<br /><br /> No Active Directory, por padrão, um CNO não tem a permissão **Criar Objetos de computador** explicitamente e pode criar dez VCOs (objetos de computador virtual). Depois que os dez VCOs forem criados, a criação de VCOs adicionais apresentará falha. É possível impedir isso concedendo a permissão explicitamente ao CNO do cluster WSFC. Observe que o VCOs para grupos de disponibilidade que você excluiu não serão excluídos automaticamente no Active Directory e serão incluídos na contagem do limite padrão de dez VCOs, a menos que sejam excluídos manualmente.<br /><br /> Observação: Em algumas organizações, a política de segurança proíbe a concessão **criar objetos de computador** permissão a contas de usuário individuais.|*Etapas para configurar a conta para a pessoa que instala o cluster* em [guia do passo a passo de Cluster de Failover: Configurando contas no Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_installer)<br /><br /> *Etapas para pré-configurar o cluster de nome de conta* em [guia do passo a passo de Cluster de Failover: Configurando contas no Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating)|  
-|Se sua organização exigir que você pré-configure a conta de computador para um nome de rede virtual de ouvinte, você precisará de associação no grupo **Operador de Conta** ou da assistência de seu administrador de domínio.<br /><br /> Dica: Geralmente, é mais simples não pré-preparar a conta de computador para um nome de rede virtual de ouvinte. Se possível, deixe a conta ser criada e configurada automaticamente ao executar o Assistente de Alta Disponibilidade do WSFC.|*Etapas para pré-preparar uma conta para um aplicativo ou serviço clusterizado* em [guia do passo a passo de Cluster de Failover: Configurando contas no Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2).|  
+|O CNO (nome do objeto de cluster) do cluster WSFC que está hospedando o grupo de disponibilidade deve ter a permissão **Criar Objetos de computador** .<br /><br /> No Active Directory, por padrão, um CNO não tem a permissão **Criar Objetos de computador** explicitamente e pode criar dez VCOs (objetos de computador virtual). Depois que os dez VCOs forem criados, a criação de VCOs adicionais apresentará falha. É possível impedir isso concedendo a permissão explicitamente ao CNO do cluster WSFC. Observe que o VCOs para grupos de disponibilidade que você excluiu não serão excluídos automaticamente no Active Directory e serão incluídos na contagem do limite padrão de dez VCOs, a menos que sejam excluídos manualmente.<br /><br /> Observação: em algumas organizações, a política de segurança proíbe a concessão da permissão **Criar objetos de computador** a contas de usuário individuais.|*Etapas para configurar a conta para a pessoa que instala o cluster* em [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_installer) (Guia passo a passo do cluster de failover: configurando contas no Active Directory)<br /><br /> *Etapas para pré-configurar a conta de nome do cluster* no [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating) (Guia passo a passo do cluster de failover: configurando contas no Active Directory)|  
+|Se sua organização exigir que você pré-configure a conta de computador para um nome de rede virtual de ouvinte, você precisará de associação no grupo **Operador de Conta** ou da assistência de seu administrador de domínio.<br /><br /> Dica: Geralmente, é mais simples não pré-preparar a conta de computador para um nome de rede virtual de ouvinte. Se possível, deixe a conta ser criada e configurada automaticamente ao executar o Assistente de Alta Disponibilidade do WSFC.|*Etapas para pré-configurar uma conta para um aplicativo ou serviço clusterizado* no [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2) (Guia passo a passo do cluster de failover: configurando contas no Active Directory).|  
   
 ###  <a name="SqlPermissions"></a> Permissões do SQL Server  
   
@@ -134,7 +134,7 @@ ms.locfileid: "53360038"
  **OK**  
  Clique para criar o ouvinte do grupo de disponibilidade especificado.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para criar ou configurar um ouvinte de grupo de disponibilidade**  
   
 1.  Conecte-se à instância de servidor que hospeda a réplica primária.  
@@ -224,13 +224,13 @@ ms.locfileid: "53360038"
   
  **Não há suporte para MultiSubnetFailover=True pelo .NET Framework 3.5 ou OLEDB**  
   
- **Problema:** Se seu Grupo de Disponibilidade ou Instância de Cluster de Failover tiver um nome de ouvinte (conhecido como o nome de rede ou o Ponto de Acesso para Cliente no Gerenciador de Cluster WSFC), dependendo dos diversos endereços IP de diferentes sub-redes, e você estiver usando o ADO.NET com .NET Framework 3.5 SP1 ou o SQL Native Client 11.0 OLEDB, possivelmente 50% das suas solicitações de conexão de cliente para o ouvinte de grupo de disponibilidade atingirão um tempo limite de conexão.  
+ **Problema:** Se seu grupo de disponibilidade ou instância de Cluster de Failover tem um nome de ouvinte (conhecido como o nome da rede ou ponto de acesso para cliente no Gerenciador de Cluster WSFC) dependendo de vários endereços IP de diferentes sub-redes, e você estiver usando o ADO.NET com .NET Framework 3.5SP1 ou SQL Native Client 11.0 OLEDB, possivelmente 50% das suas solicitações de conexão de cliente para o ouvinte do grupo de disponibilidade atingirão um tempo limite de conexão.  
   
- **Soluções alternativas:** É recomendável que você execute uma das tarefas a seguir.  
+ **Soluções alternativas:** É recomendável que você execute uma das seguintes tarefas.  
   
 -   Se você não tiver a permissão para manipular recursos de cluster, altere o tempo limite da conexão para 30 segundos (esse valor resulta em um período de tempo limite TCP de 20 segundos mais um buffer de 10 segundos).  
   
-     **Os profissionais de**: Se ocorrer um failover de sub-rede cruzado, o tempo de recuperação do cliente será rápido.  
+     **Prós**: Se ocorrer um failover de sub-rede cruzado, o tempo de recuperação do cliente será rápido.  
   
      **Contras**: Metade das conexões de cliente demorarão mais de 20 segundos  
   
@@ -238,14 +238,14 @@ ms.locfileid: "53360038"
   
      **Prós:** Você não precisa aumentar o valor de tempo limite de conexão de cliente.  
   
-     **Contras:** Se ocorrer um failover entre sub-redes, o tempo de recuperação do cliente poderá ser de 15 minutos ou mais, dependendo da configuração `HostRecordTTL` e da configuração da agenda de replicação de DNS/AD entre sites.  
+     **Contras:** Se ocorrer um failover de sub-rede cruzado, o tempo de recuperação do cliente poderá ser de 15 minutos ou mais, dependendo da sua `HostRecordTTL` e da configuração de sua agenda de replicação DNS/AD entre sites.  
   
 ###  <a name="RegisterAllProvidersIP"></a> Configuração RegisterAllProvidersIP  
  Quando você usa o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou o PowerShell para criar um ouvinte de grupo de disponibilidade, o Ponto de Acesso para Cliente é criado no WSFC com a propriedade `RegisterAllProvidersIP` definida como 1 (true). O efeito de esse valor de propriedade depende da cadeia de conexão do cliente, da seguinte maneira:  
   
 -   Cadeias de conexão que definem `MultiSubnetFailover` como true  
   
-     [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] define a propriedade `RegisterAllProvidersIP` como 1 para reduzir o tempo de reconexão após um failover para clientes cujas cadeias de conexão de cliente especificam `MultiSubnetFailover = True`, como recomendado. Observe que para aproveitar as vantagens do recurso de várias sub-redes do ouvinte, seus clientes podem exigir um provedor de dados que dê suporte à palavra-chave `MultiSubnetFailover`. Para obter mais informações sobre suporte a driver para failover de várias sub-redes, consulte [Conectividade do Cliente AlwaysOn &#40;SQL Server&#41;](always-on-client-connectivity-sql-server.md).  
+     [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] Define o `RegisterAllProvidersIP` propriedade para 1 para reduzir o tempo de reconexão após um failover para clientes cujas cadeias de conexão de cliente especificam `MultiSubnetFailover = True`, como recomendado. Observe que para aproveitar as vantagens do recurso de várias sub-redes do ouvinte, seus clientes podem exigir um provedor de dados que dê suporte à palavra-chave `MultiSubnetFailover`. Para obter mais informações sobre suporte a driver para failover de várias sub-redes, consulte [Conectividade do Cliente AlwaysOn &#40;SQL Server&#41;](always-on-client-connectivity-sql-server.md).  
   
      Para obter informações sobre clustering de várias sub-redes, consulte [Clustering de várias sub-redes do SQL Server &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md).  
   
@@ -301,7 +301,7 @@ Start-ClusterResource yourAGResource
   
         3.  Adicione uma dependência para o recurso do grupo de disponibilidade do WSFC.  
   
-         Para obter informações sobre as caixas de diálogo e guias do Gerenciador de Cluster de Failover, consulte [Interface do usuário: O Snap-In Gerenciador de Cluster de Failover](https://technet.microsoft.com/library/cc772502.aspx).  
+         Para obter informações sobre as caixas de diálogo e as guias do Gerenciador de Cluster de Failover, confira [User Interface: The Failover Cluster Manager Snap-In](https://technet.microsoft.com/library/cc772502.aspx) (Interface do usuário: o snap-in Gerenciador de Cluster de Failover).  
   
     -   **Usando o Windows PowerShell para clusters de failover:**  
   

@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6b1a14d1cf8c9eac0ace93e3aac6e16219fd60eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62961908"
 ---
 # <a name="spindexes-transact-sql"></a>sp_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,25 +45,25 @@ sp_indexes [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @table_server=] '*table_server*'  
+ [ @table_server= ] '*table_server*'  
  É o nome de um servidor vinculado que executa o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o qual as informações da tabela estão sendo solicitadas. *table_server* está **sysname**, sem padrão.  
   
- [ @table_name=] '*table_name*'  
+ [ @table_name= ] '*table_name*'  
  É o nome da tabela remota para a qual as informações de índice devem ser fornecidas. *table_name* está **sysname**, com um padrão NULL. Se NULL, todas as tabelas no banco de dados especificado serão retornadas.  
   
- [ @table_schema=] '*table_schema*'  
+ [ @table_schema= ] '*table_schema*'  
  Especifica o esquema de tabela. No ambiente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], isso corresponde ao proprietário de tabela. *table_schema* está **sysname**, com um padrão NULL.  
   
- [ @table_catalog=] '*table_db*'  
+ [ @table_catalog= ] '*table_db*'  
  É o nome do banco de dados no qual *table_name* reside. *table_db* está **sysname**, com um padrão NULL. Se for NULL, *table_db* assume como padrão **mestre**.  
   
- [ @index_name=] '*index_name*'  
+ [ @index_name= ] '*index_name*'  
  É o nome do índice para o qual as informações estão sendo solicitadas. *índice* está **sysname**, com um padrão NULL.  
   
- [ @is_unique=] '*is_unique*'  
+ [ @is_unique= ] '*is_unique*'  
  É o tipo de índice para o qual as informações devem ser retornadas. *is_unique* está **bit**, com um padrão de NULL, e pode ser um dos valores a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |1|Retorna informações sobre índices exclusivos.|  
 |0|Retorna informações sobre índices que não são exclusivos.|  
@@ -71,7 +71,7 @@ sp_indexes [ @table_server = ] 'table_server'
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |TABLE_CAT|**sysname**|Nome do banco de dados onde a tabela especificada reside.|  
 |TABLE_SCHEM|**sysname**|Esquema da tabela.|  
@@ -82,10 +82,10 @@ sp_indexes [ @table_server = ] 'table_server'
 |TYPE|**smallint**|Tipo de índice:<br /><br /> 0 = Estatísticas de uma tabela<br /><br /> 1 = Clusterizado<br /><br /> 2 = Com hash<br /><br /> 3 = outros|  
 |ORDINAL_POSITION|**int**|Posição ordinal da coluna no índice. A primeira coluna no índice é 1. Esta coluna sempre retorna um valor.|  
 |COLUMN_NAME|**sysname**|É o nome correspondente da coluna para cada coluna do TABLE_NAME retornado.|  
-|ASC_OR_DESC|**varchar**|É a ordem usada no agrupamento:<br /><br /> A = Crescente<br /><br /> D = Decrescente<br /><br /> NULL = Não aplicável<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sempre retorna A.|  
+|ASC_OR_DESC|**varchar**|É a ordem usada na ordenação:<br /><br /> A = Crescente<br /><br /> D = Decrescente<br /><br /> NULL = Não aplicável<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sempre retorna A.|  
 |CARDINALITY|**int**|É o número de linhas na tabela ou valores exclusivos no índice.|  
 |PAGES|**int**|É o número de páginas para armazenar o índice ou a tabela.|  
-|FILTER_CONDITION|**nvarchar (** 4000 **)**|O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não retorna um valor.|  
+|FILTER_CONDITION|**nvarchar(** 4000 **)**|O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não retorna um valor.|  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão SELECT no esquema.  

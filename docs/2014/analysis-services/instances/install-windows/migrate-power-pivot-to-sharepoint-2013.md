@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 64f3d3474ac812f07645cd3064c270ba10ad76c3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729923"
 ---
 # <a name="migrate-powerpivot-to-sharepoint-2013"></a>Migrar o PowerPivot para o SharePoint 2013
   
@@ -107,7 +107,7 @@ ms.locfileid: "53368368"
 ### <a name="troubleshoot-issues-when-you-attempt-to-mount-databases"></a>Solucionar problemas ao tentar montar bancos de dados  
  Esta seção resume os possíveis problemas encontrados ao montar o banco de dados.  
   
-1.  **Erros de autenticação:** se você encontrar erros relacionados à autenticação, examine qual modo de autenticação os aplicativos Web de origem estão usando. O erro pode ser causado por uma incompatibilidade na autenticação entre o aplicativo Web do SharePoint 2013 e o aplicativo Web do SharePoint 2010. Consulte [1) Preparar o farm do SharePoint 2013](#bkmk_prepare_sharepoint2013) para obter mais informações.  
+1.  **Erros de autenticação:** Se você encontrar erros relacionados à autenticação, revise qual modo de autenticação os aplicativos da web de origem estão usando. O erro pode ser causado por uma incompatibilidade na autenticação entre o aplicativo Web do SharePoint 2013 e o aplicativo Web do SharePoint 2010. Consulte [1) Preparar o farm do SharePoint 2013](#bkmk_prepare_sharepoint2013) para obter mais informações.  
   
 2.  **Files ausentes:** Se você encontrar erros relacionados à falta de DLLs do PowerPivot, o **sppowerpivot. msi** não foi instalado ou o [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ferramenta de configuração não foi usada para configurar o PowerPivot.  
   

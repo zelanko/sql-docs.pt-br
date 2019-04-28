@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b9a094303b62bf134d750ed1b94c9cd0126e188d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732915"
 ---
 # <a name="profit-chart-analysis-services---data-mining"></a>Gráfico de ganho (Analysis Services - Mineração de dados)
   Um gráfico de ganho exibe a rentabilidade estimada associada ao uso de um modelo de mineração. Por exemplo, vamos supor que seu modelo prevê quais clientes a empresa devem contatar em um cenário de negócios. Nesse caso, você adicionaria às informações de gráfico de ganho sobre o custo da condução de uma campanha de mala direta. Em seguida, no gráfico completo, você pode consultar o ganho estimado se os clientes são destinados corretamente, em relação a clientes contatados aleatoriamente.  

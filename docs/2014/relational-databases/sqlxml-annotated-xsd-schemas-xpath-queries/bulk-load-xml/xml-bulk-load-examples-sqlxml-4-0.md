@@ -32,11 +32,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 16692ea8cac91960bd7f940f59c018d663f418dd
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807084"
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>Exemplos do XML Bulk Load (SQLXML 4.0)
   Os exemplos a seguir ilustram a funcionalidade do XML Bulk Load no Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Cada exemplo fornece um esquema XSD e seu esquema XDR equivalente.  
@@ -198,7 +198,7 @@ End Function
 </Schema>  
 ```  
   
-## <a name="b-bulk-loading-xml-data-in-multiple-tables"></a>b. Carregando dados XML em massa em várias tabelas  
+## <a name="b-bulk-loading-xml-data-in-multiple-tables"></a>B. Carregando dados XML em massa em várias tabelas  
  Neste exemplo, o documento XML consiste as  **\<cliente >** e  **\<Order >** elementos.  
   
 ```  

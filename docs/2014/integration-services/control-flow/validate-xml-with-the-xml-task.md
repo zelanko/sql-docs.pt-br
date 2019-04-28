@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76d84c3ea8da6d564db01fba3d02ac15a72fffc3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62829590"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
   Valide documentos XML e obtenha saída de erros completa habilitando a propriedade `ValidationDetails` da tarefa XML.  

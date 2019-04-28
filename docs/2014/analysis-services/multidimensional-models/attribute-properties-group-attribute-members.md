@@ -24,18 +24,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8f7ff454dd4464fab5173c4d0022bd94543c1dad
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701746"
 ---
 # <a name="group-attribute-members-discretization"></a>Agrupar membros de atributo (diferenciação)
   Um grupo de membros é uma coleção gerada pelo sistema de membros da dimensão consecutivos. No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], é possível agrupar os membros de um atributo em diversos grupos de membros por meio de um processo chamado diferenciação. Um nível em uma hierarquia contém grupos de membro ou membros, mas não ambos. Quando os usuários da empresa procuram um nível que contém grupos de membros, eles veem nomes e valores de célula dos grupos de membros. Os membros gerados pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para oferecer suporte aos grupos de membros são chamados membros do agrupamento e são similares aos membros comuns.  
   
  A propriedade `DiscretizationMethod` de um atributo controla como os membros são agrupados.  
   
-|Configuração `DiscretizationMethod`|Description|  
+|Configuração `DiscretizationMethod`|Descrição|  
 |--------------------------------------|-----------------|  
 |`None`|Exibe os membros.|  
 |`Automatic`|Seleciona o método que melhor representa os dados: o método `EqualAreas` ou o método `Clusters`.|  
@@ -71,7 +71,7 @@ ms.locfileid: "51814039"
   
  O parâmetro `<Bucket name>` é uma expressão de cadeia de caracteres que pode incorporar um conjunto de variáveis para representar informações de membros ou grupos de membros como parte do nome do grupo de membros:  
   
-|Variável|Description|  
+|Variável|Descrição|  
 |--------------|-----------------|  
 |% {Primeiro membro do bloco}|O nome do primeiro membro que será incluído no grupo de membros atual.|  
 |% {Último membro do bloco}|O nome do último membro que será incluído no grupo de membros atual.|  

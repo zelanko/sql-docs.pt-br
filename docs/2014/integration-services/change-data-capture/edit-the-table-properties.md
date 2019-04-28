@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 618a155390d8719e639d0e12d241b2f824e5375d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835980"
 ---
 # <a name="edit-the-table-properties"></a>Editar as propriedades da tabela
   Use esta caixa de diálogo para editar as colunas específicas da tabela selecionada onde as alterações estão sendo capturadas. Você também pode editar as informações de **Função de Segurança** e **Instância de Captura** .  
@@ -40,13 +40,13 @@ ms.locfileid: "58390925"
   
 2.  Salve a instância de captura como um dos seguintes:  
   
-    -   **Nova instância de captura**: Nesse caso, uma nova instância de captura é salva e a instância de captura antiga não é excluída.  
+    -   **Nova Instância de Captura**: neste caso, uma nova instância de captura é salva e a instância de captura antiga não é excluída.  
   
-         **Observação**: Você pode ter não mais de duas instâncias de captura por tabela. Se já houver duas instâncias de captura, esta opção não estará disponível.  
+         **Observação**: você não pode ter mais que duas instâncias de captura por tabela. Se já houver duas instâncias de captura, esta opção não estará disponível.  
   
-    -   **Substitua**: Nesse caso, a instância de captura atual é excluída e substituída pela instância de captura que você criou. Se houver duas instâncias de captura definidas para esta tabela, você deverá selecionar uma para substituir.  
+    -   **Substituir Existente**: neste caso, a instância de captura atual é excluída e é substituída pela instância de captura criada. Se houver duas instâncias de captura definidas para esta tabela, você deverá selecionar uma para substituir.  
   
- **Observação**: Você pode remover uma instância de captura da lista de tabelas na **tabela** guia.  
+ **Observação**: você pode remover uma instância de captura da lista de tabelas na guia **Tabela**.  
   
  Depois de terminar de inserir as informações nesta caixa de diálogo, clique em **OK** para aceitar as alterações.  
   

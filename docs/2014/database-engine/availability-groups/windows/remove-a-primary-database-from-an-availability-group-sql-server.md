@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 593c065e9567c6b298e45d6130f944816325fbbb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62813960"
 ---
 # <a name="remove-a-primary-database-from-an-availability-group-sql-server"></a>Remover um banco de dados primário de um grupo de disponibilidade (SQL Server)
   Este tópico descreve como remover o banco de dados primário e os bancos de dados secundários correspondentes de um grupo de disponibilidade AlwaysOn usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou o PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -41,7 +41,7 @@ ms.locfileid: "48098006"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **Acompanhamento:**  [depois de remover um banco de dados de disponibilidade de um grupo de disponibilidade](#FollowUp)  
+-   **Acompanhamento:**  [Após a remoção de um banco de dados de disponibilidade de um grupo de disponibilidade](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -105,13 +105,13 @@ ms.locfileid: "48098006"
     ```  
   
     > [!NOTE]  
-    >  Para exibir a sintaxe de um cmdlet, use o `Get-Help` cmdlet no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ambiente do PowerShell. Para obter mais informações, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Para exibir a sintaxe de um cmdlet, use o cmdlet `Get-Help` no ambiente do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell. Para obter mais informações, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Para configurar e usar o provedor do SQL Server PowerShell**  
   
 -   [Provedor do SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Acompanhamento: depois de remover um banco de dados de disponibilidade de um grupo de disponibilidade  
+##  <a name="FollowUp"></a> Acompanhamento: Após a remoção de um banco de dados de disponibilidade de um grupo de disponibilidade  
  A remoção de um banco de dados de disponibilidade do grupo de disponibilidade termina a sincronização de dados entre o banco de dados primário antigo e os bancos de dados secundários correspondentes. O banco de dados primário antigo permanece online. Todos os bancos de dados secundários correspondentes são colocados no estado RESTORING.  
   
  Neste ponto, há maneiras alternativas de lidar com um banco de dados secundário removido:  

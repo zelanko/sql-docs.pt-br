@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cfa592fa02d966002bf94d02e81ecc02b691c3c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62863508"
 ---
 # <a name="move-method-example-vb"></a>Exemplo do método Move (VB)
 Este exemplo usa o [mover](../../../ado/reference/ado-api/move-method-ado.md) método para posicionar o ponteiro de registro com base na entrada do usuário.  

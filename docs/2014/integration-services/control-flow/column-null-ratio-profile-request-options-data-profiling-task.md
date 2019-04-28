@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 72b426c504532f9c112eaaa1222b0349f3e5d814
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832587"
 ---
 # <a name="column-null-ratio-profile-request-options-data-profiling-task"></a>Opções da solicitação do perfil Razão Nula de Coluna (tarefa Criação de Perfil de Dados)
   Use o painel **Propriedades da Solicitação** da página **Solicitações de Perfil** para definir as opções da **Solicitação de Razão Nula de Coluna** selecionada no painel de solicitações. O perfil Razão Nula de Coluna informa a porcentagem de valores nulos na coluna selecionada. Este perfil pode ajudar a identificar problemas em seus dados, como uma inesperada razão alta de valores nulos em uma coluna. Por exemplo, um perfil Razão Nula de Coluna pode criar um perfil de uma coluna Código Postal/CEP e descobrir uma porcentagem excessivamente elevada de códigos postais ausentes.  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ed7e1770323a9691c2fe63c0df88df77198153ab
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690174"
 ---
 # <a name="functions-mdx-syntax"></a>Funções (sintaxe de MDX)
 
@@ -22,9 +22,9 @@ ms.locfileid: "34740725"
   A linguagem MDX tem várias categorias de funções intrínsecas para executar determinadas operações. A tabela a seguir lista as categorias de função disponíveis em MDX.  
   
 > [!NOTE]  
->  Para obter mais informações sobre funções individuais, consulte [referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md).  
+>  Para obter mais informações sobre funções individuais, consulte [referência da função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md).  
   
-|Categoria da função|Description|  
+|Categoria de função|Descrição|  
 |-----------------------|-----------------|  
 |Funções de matriz|Fornecem matrizes para serem usadas em procedimentos armazenados.<br /><br /> Para obter mais informações, consulte [usando procedimentos armazenados &#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md).|  
 |Funções de dimensão|Retornam uma referência a uma dimensão a partir de uma hierarquia, nível ou membro.<br /><br /> Para obter mais informações, consulte [usando dimensão, hierarquia e funções de nível](../mdx/using-dimension-hierarchy-and-level-functions.md).|  
@@ -33,8 +33,8 @@ ms.locfileid: "34740725"
 |Funções lógicas|Executam operações lógicas e comparações em objetos e expressões.<br /><br /> Para obter mais informações, consulte [usando funções lógicas](../mdx/using-logical-functions.md).|  
 |Funções de membro|Retornam uma referência a um membro a partir de outros objetos ou de uma expressão de cadeia de caracteres.<br /><br /> Para obter mais informações, consulte [usando funções de membro](../mdx/using-member-functions.md).|  
 |Funções numéricas|Executam funções matemáticas e estatísticas em objetos e expressões.<br /><br /> Para obter mais informações, consulte [usando funções matemáticas](../mdx/using-mathematical-functions.md).|  
-|Funções de conjunto|Retornam uma referência a um conjunto a partir de outros objetos ou de uma expressão de cadeia de caracteres.<br /><br /> Para obter mais informações, consulte [usando funções de conjunto](../mdx/using-set-functions.md).|  
-|Funções da cadeia de caracteres|Retornam valores da cadeia de caracteres a partir de outros objetos ou do servidor.<br /><br /> Para obter mais informações, consulte [usando funções de cadeia de caracteres](../mdx/using-string-functions.md).|  
+|Funções de conjunto|Retornam uma referência a um conjunto a partir de outros objetos ou de uma expressão de cadeia de caracteres.<br /><br /> Para obter mais informações, consulte [usando as funções de conjunto](../mdx/using-set-functions.md).|  
+|Funções de cadeia de caracteres|Retornam valores da cadeia de caracteres a partir de outros objetos ou do servidor.<br /><br /> Para obter mais informações, consulte [usando funções de cadeia de caracteres](../mdx/using-string-functions.md).|  
 |Funções de tupla|Retornam uma referência a uma tupla a partir de um conjunto ou de uma expressão de cadeia de caracteres.<br /><br /> Para obter mais informações, consulte Usando funções de tupla.|  
   
 ## <a name="uses-of-functions"></a>Usos das funções  

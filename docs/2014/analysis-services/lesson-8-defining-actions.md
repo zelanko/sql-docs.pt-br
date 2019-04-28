@@ -12,13 +12,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 92abf8eb92301af8dd3bf32d5ac5f6a38b1b5481
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728164"
 ---
-# <a name="lesson-8-defining-actions"></a>Lição 8: Definindo ações
+# <a name="lesson-8-defining-actions"></a>Lição 8: Como definir ações
   Nesta lição, você aprenderá a definir ações em seu projeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Uma ação é como uma instrução MDX que é armazenada no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e que pode ser incorporada em aplicativos cliente e iniciada por um usuário.  
   
 > [!NOTE]  

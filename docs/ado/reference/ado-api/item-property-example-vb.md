@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 941c6a8cf6c7ed57e0a28d5cb288d92ab8e231c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864494"
 ---
 # <a name="item-property-example-vb"></a>Exemplo da propriedade Item (VB)
 Este exemplo demonstra como o [Item](../../../ado/reference/ado-api/item-property-ado.md) propriedade acessa os membros de uma coleção. O exemplo abre o ***autores*** tabela da ***Pubs*** banco de dados com um comando com parâmetros.  

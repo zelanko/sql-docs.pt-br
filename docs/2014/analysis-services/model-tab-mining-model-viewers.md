@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 173dd379ac2857cef0faafda27aa74d7026b791a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727832"
 ---
 # <a name="model-tab-mining-model-viewers"></a>Guia Modelos (Visualizadores do Modelo de Mineração)
   A guia **Modelo** no Visualizador MTS exibe uma representação de uma série temporal como um nó em um gráfico, semelhante aos usados em modelos de árvore de decisão.  
   
  Use esta exibição de um modelo de série temporal para extrair informações úteis sobre a análise de série temporal, inclusive a equação para o gráfico, as condições de ARIMA e os coeficientes.  
   
- **Para obter mais informações:** [algoritmo MTS](data-mining/microsoft-time-series-algorithm.md), [Procurar um modelo usando o visualizador MTS](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), [algoritmo MTS](data-mining/microsoft-time-series-algorithm.md)  
+ **Para obter mais informações:** [Algoritmo MTS](data-mining/microsoft-time-series-algorithm.md), [procurar um modelo usando o visualizador MTS](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), [algoritmo MTS](data-mining/microsoft-time-series-algorithm.md)  
   
 ## <a name="options"></a>Opções  
  **Atualizar conteúdo do Visualizador**  
@@ -71,7 +71,7 @@ ms.locfileid: "48164166"
  Altere o número de níveis mostrados na árvore.  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visualizadores do modelo de mineração &#40; Designer do modelo de mineração de dados &#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizadores do modelo de Mineração de dados](data-mining/data-mining-model-viewers.md)  
   

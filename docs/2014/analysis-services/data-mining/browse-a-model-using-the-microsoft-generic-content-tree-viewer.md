@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6e0d945e1fe95fe95d8ed655a0bd6b94e132f3c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689383"
 ---
 # <a name="browse-a-model-using-the-microsoft-generic-content-tree-viewer"></a>Procurar um modelo usando o Visualizador de Árvore de Conteúdo Genérica da Microsoft
   O Visualizador de Conteúdo do Modelo de Mineração Genérico da [!INCLUDE[msCoName](../../includes/msconame-md.md)] fornece informações detalhadas sobre os padrões encontrados pelo algoritmos de mineração e também fornece acesso a várias estatísticas geradas durante o processo de análise. A quantidade e o tipo de informação dependem do algoritmo usado, mas podem incluir as seguintes categorias:  
@@ -50,7 +50,7 @@ SELECT * FROM [<mining model name>].CONTENT
  Para obter mais informações, consulte [Consultas de mineração de dados](data-mining-queries.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Visualizador de árvore de conteúdo genérica da Microsoft &#40;mineração de dados&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)   
- [Algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
+ [Visualizador de árvore de conteúdo genérica da Microsoft &#40;Mineração de dados&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)   
+ [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
   

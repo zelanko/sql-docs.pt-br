@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05555f9f3b90cbf0eaae410a2b97dc31a0ed17d2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699547"
 ---
 # <a name="specifying-the-contents-of-a-query-axis-mdx"></a>Especificando o conteúdo de um eixo de consulta (MDX)
   Eixos de consulta especificam as extremidades de um conjunto de células retornadas por uma instrução MDX SELECT. Especificar as extremidades de um conjunto de células permitir restringir os dados retornados que ficam visíveis ao cliente.  

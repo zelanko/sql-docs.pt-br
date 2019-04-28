@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d36bf95a0f0758b9e33a6c695a5a060ba54706b8
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807510"
 ---
-# <a name="lesson-9-defining-perspectives-and-translations"></a>Lição 9: Definindo perspectivas e traduções
+# <a name="lesson-9-defining-perspectives-and-translations"></a>Lição 9: Como definir perspectivas e traduções
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Nesta lição, você aprenderá a definir perspectivas e traduções. Você pode definir perspectivas para reduzir a complexidade aparente de um cubo e definir traduções que permitam que os usuários exibam os metadados do cubo no idioma que preferirem.  
@@ -37,7 +37,7 @@ Nesta tarefa, você definirá e navegará por traduções de metadados específi
   
 ## <a name="see-also"></a>Consulte também  
 [Cenário do tutorial de Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)  
-[Modelagem multidimensional & #40; Tutorial do Adventure Works & #41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Modelagem multidimensional &#40;Tutorial do Adventure Works&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [Perspectivas](../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md)  
 [Perspectivas em modelos multidimensionais](../analysis-services/multidimensional-models/perspectives-in-multidimensional-models.md)  
 [Tradução de dimensões](../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2540c52a1b85a1c89c1d149116d91705ebee9869
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62686990"
 ---
 # <a name="sqlstate"></a>SQLSTATE
 Para erros que ocorrem na fonte de dados, o driver ODBC mapeia o erro nativo retornado para o SQLSTATE apropriado. Para erros que são detectados pelo driver ou o Gerenciador de Driver, o driver ODBC ou o Gerenciador de Driver gera o SQLSTATE apropriado.

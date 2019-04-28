@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d5359d5e40737a9989925e952ce674fe6d14114c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699840"
 ---
 # <a name="intrinsic-member-properties-mdx"></a>Propriedades intrínsecas do membro (MDX)
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] expõe propriedades intrínsecas em membros de dimensão que você pode incluir em uma consulta para retornar dados ou metadados adicionais para uso em um aplicativo personalizado ou para ajudar na investigação ou na construção do modelo. Se você estiver usando as ferramentas de cliente do SQL Server, poderá exibir propriedades intrínsecas no SQL Server Management Studio (SSMS).  
@@ -102,7 +102,7 @@ ms.locfileid: "53370458"
 |`IS_DATAMEMBER`|Um booliano que indica se o membro é ou não um membro de dados.|  
 |`IS_PLACEHOLDERMEMBER`|Um booliano que indica se o membro é ou não um espaço reservado.|  
 |`KEYx`|A chave para o membro, onde x é o valor ordinal com base em zero da chave. KEY0 está disponível para chaves compostas e não compostas.<br /><br /> Se a chave for não composta, KEY0 será equivalente a `Key`.<br /><br /> Para chaves compostas, KEY0, KEY1, KEY2 e assim por diante, formam coletivamente a chave composta. Você pode fazer referência a cada uma independentemente em uma consulta para retornar essa parte da chave composta. Por exemplo, especificar KEY0 retorna a primeira parte da chave composta, especificar KEY1 retorna a parte seguinte da chave composta e assim por diante.<br /><br /> Observe que `KEYx` pode ser usado no contexto assim como sem contexto. Por esse motivo, ela é exibida em ambas as listas.<br /><br /> Para obter um exemplo de como usar essa propriedade de membro, consulte [uma notícia simples do MDX: Key0, Key1, Key2](https://go.microsoft.com/fwlink/?LinkId=317364).|  
-|`LCID` *X*|A conversão da legenda do membro no valor hexadecimal da identificação de localidade, em que *x* é o valor decimal da identificação de localidade (por exemplo, LCID1009 como Inglês – Canadá). Isso somente estará disponível se a conversão tiver a coluna da legenda associada à fonte de dados.|  
+|`LCID` *x*|A conversão da legenda do membro no valor hexadecimal da identificação de localidade, em que *x* é o valor decimal da identificação de localidade (por exemplo, LCID1009 como Inglês – Canadá). Isso somente estará disponível se a conversão tiver a coluna da legenda associada à fonte de dados.|  
 |`LEVEL_NUMBER`|A distância do membro para a raiz da hierarquia. O nível raiz é zero.|  
 |`LEVEL_UNIQUE_NAME`|O nome exclusivo do nível ao qual o membro pertence. Para provedores que geram nomes exclusivos por qualificação, cada componente desse nome é delimitado.|  
 |`MEMBER_CAPTION`|Um rótulo ou legenda associado ao membro. A legenda serve basicamente para fins de exibição. Se uma legenda não existir, a consulta retorna `MEMBER_NAME`.|  

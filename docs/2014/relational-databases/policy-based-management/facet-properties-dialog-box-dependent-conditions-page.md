@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d2e5dcfe771e1f2ff00dbdb1fb1efd5cd4f8b984
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705271"
 ---
 # <a name="facet-properties-dialog-box-dependent-conditions-page"></a>Caixa de diálogo Propriedades da Faceta, página Condições Dependentes
   Use esta caixa de diálogo para exibir uma lista de condições que atualmente referenciam essa faceta do Gerenciamento Baseado em Políticas.  

@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ef0dfbb1c0e62bbe5301f769ee0f3e4d585b06b6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808348"
 ---
 # <a name="create-an-extended-events-session-using-query-editor"></a>Criar uma sessão de Eventos Estendidos usando o Editor de Consultas
   Você pode criar uma sessão de Eventos Estendidos usando o Editor de Consulta ou pode criar uma sessão no Pesquisador de Objetos. No Pesquisador de objetos, eventos estendidos fornecem duas interfaces de usuário, que você pode usar para criar, modificar e exibir dados de sessão de evento: um assistente que orienta você durante o processo de criação de sessão de evento e uma interface de usuário nova sessão que fornece opções mais avançadas de configuração. Você pode criar sessões de Eventos Estendidos para diagnosticar rastreamento de SQL Server que permite resolver problemas como os seguintes:  
@@ -93,7 +93,7 @@ ms.locfileid: "52521262"
     ADD EVENT package_name.event_name  
     ```  
   
-     Por exemplo:  
+     Por exemplo:   
   
     ```  
     ADD EVENT sqlserver.file_read_completed,  

@@ -28,11 +28,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2ee6c08cf0b9c2cba8e8931e0949734f2afa66e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62723128"
 ---
 # <a name="content-types-data-mining"></a>Tipos de conteúdo (mineração de dados)
   No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você pode definir o tipo de dados físico para uma coluna em uma estrutura de mineração e um tipo de conteúdo lógico para a coluna quando usada em um modelo.  
@@ -50,14 +50,14 @@ ms.locfileid: "48190082"
   
  Os valores em uma coluna de atributo discreto não podem envolver ordenação, mesmo que os valores sejam numéricos. Além disso, mesmo que os valores usados na coluna discreta sejam numéricos, não será possível calcular valores fracionários. Os códigos de área de telefone são um bom exemplo de dados numéricos discretos.  
   
- O `Discrete` tipo de conteúdo é suportado por todos os tipos de dados de mineração de dados.  
+ O tipo de conteúdo `Discrete` é suportado por todos os tipos de dados de mineração de dados.  
   
 ## <a name="continuous"></a>Contínuo  
  *Contínuo* significa que a coluna contém valores que representam dados numéricos em uma escala que permite valores provisórios. Diferente da coluna discreta, que representa dados contáveis finitos, uma coluna contínua representa medições escaláveis e é possível que os dados contenham um número infinito de valores fracionários. Uma coluna de temperaturas é um exemplo de uma coluna do atributo contínuo.  
   
  Quando uma coluna contém dados numéricos contínuos, e você sabe como os dados devem ser distribuídos, é possível melhorar a precisão da análise especificando a distribuição esperada de valores. Especifique a distribuição de coluna no nível da estrutura de mineração. Assim, a configuração se aplica a todos os modelos que se baseiam na estrutura. Para obter mais informações, consulte [Distribuições de coluna &#40;Mineração de dados&#41;](column-distributions-data-mining.md).  
   
- O `Continuous` tipo de conteúdo é suportado pelos seguintes tipos de dados: `Date`, `Double`, e `Long`.  
+ O tipo de conteúdo `Continuous` é suportado pelos seguintes tipos de dados: `Date`, `Double` e `Long`.  
   
 ## <a name="discretized"></a>Discretizado  
  *Discretização* é o processo que coloca valores de um conjunto contínuo de dados em buckets de modo a ter um número limitado de valores possíveis. É possível discretizar apenas dados numéricos.  
@@ -69,21 +69,21 @@ ms.locfileid: "48190082"
  O tipo de conteúdo `Discretized` é suportado pelos seguintes tipos de dados: `Date`, `Double`, `Long` e `Text`.  
   
 ## <a name="key"></a>Chave  
- O tipo de conteúdo *key* significa que a coluna identifica uma linha exclusivamente. Normalmente, em uma tabela de casos, a coluna de chave é um identificador numérico ou de texto. Defina o tipo de conteúdo `key` para indicar que a coluna não deve ser usada para análise, somente para registros de acompanhamento.  
+ O tipo de conteúdo *key* significa que a coluna identifica uma linha exclusivamente. Normalmente, em uma tabela de casos, a coluna de chave é um identificador numérico ou de texto. Defina o tipo de conteúdo como `key` para indicar que a coluna não deve ser usada para análise, somente para registros de monitoramento.  
   
- Tabelas aninhadas também têm chaves, mas o uso da chave de tabela aninhada é um pouco diferente. Defina o tipo de conteúdo `key` em uma tabela aninhada se a coluna é o atributo que você deseja analisar. Os valores da chave da tabela aninhada devem ser exclusivos para cada caso, mas podem ser duplicados em todo um conjunto de casos.  
+ Tabelas aninhadas também têm chaves, mas o uso da chave de tabela aninhada é um pouco diferente. Defina o tipo de conteúdo como `key` na tabela aninha se a coluna for o atributo que você deseja analisar. Os valores da chave da tabela aninhada devem ser exclusivos para cada caso, mas podem ser duplicados em todo um conjunto de casos.  
   
  Por exemplo, se você estiver analisando os produtos que os clientes compraram, poderia definir o tipo de conteúdo como chave na coluna **CustomerID** da tabela de casos e o tipo de conteúdo novamente como chave na coluna **PurchasedProducts** da tabela aninhada.  
   
 > [!NOTE]  
 >  Tabelas aninhadas estarão disponíveis somente se você usar dados de uma fonte de dados externa que foi definida como uma exibição da fonte de dados do Analysis Services.  
   
- Esse tipo de conteúdo é suportado pelos seguintes tipos de dados: `Date`, `Double`, `Long`, e `Text`.  
+ Esse tipo de conteúdo tem suporte dos seguintes tipos de dados: `Date`, `Double`, `Long` e `Text`.  
   
 ## <a name="key-sequence"></a>Key Sequence  
  O tipo de conteúdo *key sequence* somente pode ser usado em modelos de clustering de sequência. Quando você define o tipo de conteúdo como `key sequence`, ele indica que a coluna contém valores que representam uma sequência de eventos. Os valores são ordenados, mas a distância entre eles não precisa ser igual.  
   
- Esse tipo de conteúdo é suportado pelos seguintes tipos de dados: `Double`, `Long`, `Text`, e `Date`.  
+ Esse tipo de conteúdo tem suporte dos seguintes tipos de dados: `Double`, `Long`, `Text` e `Date`.  
   
 ## <a name="key-time"></a>Key Time  
  O tipo de conteúdo *key time* somente pode ser usado em modelos de série temporal. Quando você define o tipo de conteúdo como `key time`, isso indica que os valores são ordenados e representam uma escala de tempo.  
@@ -114,7 +114,7 @@ ms.locfileid: "48190082"
   
 ## <a name="see-also"></a>Consulte também  
  [Tipos de conteúdo &#40;DMX&#41;](/sql/dmx/content-types-dmx)   
- [Tipos de dados &#40;mineração de dados&#41;](data-types-data-mining.md)   
+ [Tipos de dados &#40;Mineração de dados&#41;](data-types-data-mining.md)   
  [Tipos de dados &#40;DMX&#41;](/sql/dmx/data-types-dmx)   
  [Alterar as propriedades de uma estrutura de mineração](change-the-properties-of-a-mining-structure.md)   
  [Colunas da estrutura de mineração](mining-structure-columns.md)  

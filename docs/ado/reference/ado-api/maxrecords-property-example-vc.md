@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6d4c9d8f6f39abf50238866dae9decfb6f04651f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62863693"
 ---
 # <a name="maxrecords-property-example-vc"></a>Exemplo da propriedade MaxRecords (VC++)
 Este exemplo usa o [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) para abrir um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) que contém os títulos mais caros 10 no ***títulos*** tabela.  
@@ -168,8 +168,8 @@ void PrintComError(_com_error &e) {
   
  **Títulos de dez principais por preço:**  
 **Mas é amigável de usuário? ---22.95**  
-**Indivíduos Phobic e não com aversão ao computador: Variações de comportamento---21,59**  
-**Onions, Leeks e Garlic: cozinhar segredos de Mediterrâneo---20,95**  
+**Indivíduos Phobic e não com aversão ao computador: Comportamento variações---21,59**  
+**Onions, Leeks e Garlic: Culinária segredos de Mediterrâneo---20,95**  
 **Segredos do vale do silício---20,00**  
 **Guia do banco de dados de um executivo ocupado---19,99**  
 **Reta falar sobre computadores---19,99**  

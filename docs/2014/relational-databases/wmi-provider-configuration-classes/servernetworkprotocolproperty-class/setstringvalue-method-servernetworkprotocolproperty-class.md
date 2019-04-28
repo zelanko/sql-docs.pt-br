@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 5736b6e4e88d103c29d0d027327a9f3f46d0cfdf
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736246"
 ---
 # <a name="setstringvalue-method-servernetworkprotocolproperty-class"></a>Método SetStringValue (classe ServerNetworkProtocolProperty)
   Define o valor da cadeia de caracteres da propriedade referenciada.  
@@ -47,7 +47,7 @@ StrValue
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|*strValue*|Um valor da cadeia de caracteres que especifica o novo valor da propriedade atual.|  
+|*StrValue*|Um valor da cadeia de caracteres que especifica o novo valor da propriedade atual.|  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor `uint32`, que é 0 se o serviço tiver sido modificado com êxito, 1 se a solicitação não tiver suporte e qualquer outro número para indicar um erro.  

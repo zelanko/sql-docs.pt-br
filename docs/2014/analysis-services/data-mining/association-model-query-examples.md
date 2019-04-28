@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 268685c489d03f7e9055042ab613223146f89600
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689560"
 ---
 # <a name="association-model-query-examples"></a>Exemplos de consulta de um modelo de associação
   Ao criar uma consulta em um modelo de mineração de dados, você pode criar uma consulta de conteúdo, que fornece detalhes sobre as regras e os conjuntos de itens descobertos durante a análise ou criar uma consulta de previsão, que usa as associações descobertas nos dados para fazer previsões. Para um modelo de associação, normalmente, as previsões baseiam-se em regras e pode ser usadas para fazer recomendações, enquanto as consultas em conteúdo geralmente exploram a relação entre os conjuntos de itens. Você também pode recuperar metadados sobre o modelo.  

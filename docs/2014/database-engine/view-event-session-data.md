@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: befef498ab4cda12ce38a34678b78a2b5dcd278c
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842880"
 ---
 # <a name="view-event-session-data"></a>Exibir dados de sessão de evento
   Este tópico descreve o uso da interface do usuário de exibição para ver e analisar dados de evento estendidos:  
@@ -28,7 +28,7 @@ ms.locfileid: "49120293"
 ## <a name="view-target-data"></a>Exibir Dados de Destino  
  Você pode exibir os dados coletados no destino especificado dentro do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
-### <a name="view-target-data"></a>Exibir dados de destino  
+### <a name="view-target-data"></a>Exibir Dados de Destino  
  Para exibir dados de destino:  
   
 1.  No Pesquisador de Objetos, expanda **Gerenciamento**, **Eventos Estendidos**, **Sessões**e, em seguida, uma sessão.  
@@ -45,7 +45,7 @@ ms.locfileid: "49120293"
   
 -   Para um destino de event_file, exiba os dados de destino de arquivo (arquivo .XEL) usando um dos métodos a seguir:  
   
-    -   Use Arquivo -> Abrir no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+    -   Use o arquivo -> Abrir no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
     -   Arraste e solte o arquivo no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 17a132ea3a775104420640cab5f60cfdd0028fba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725400"
 ---
 # <a name="creating-session-scoped-calculated-cells"></a>Criando células calculadas no escopo da sessão
     
@@ -76,7 +76,7 @@ FOR String_Expression AS 'MDX_Expression'
   
  O valor `String_Expression` contém uma lista de expressões de conjunto MDX ortogonais e unidimensionais, sendo que cada uma deve resolver uma das categorias de conjuntos listadas na tabela a seguir.  
   
-|Categoria|Description|  
+|Category|Descrição|  
 |--------------|-----------------|  
 |Conjunto vazio|Uma expressão de conjunto MDX resolvida em um conjunto vazio. Nesse caso, o escopo da célula calculada é o cubo inteiro.|  
 |Conjunto de membro único|Uma expressão de conjunto MDX resolvida em um único membro.|  

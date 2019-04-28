@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1656ac98555d4377ec70c37a43b70217b9be759c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62800030"
 ---
 # <a name="managing-scope-and-context-mdx"></a>Gerenciando escopo e contexto (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -107,8 +107,8 @@ END SCOPE;
  Para obter mais informações sobre a sintaxe da instrução SCOPE, consulte [Instrução SCOPE &#40;MDX&#41;](../../../mdx/mdx-scripting-scope.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de linguagem MDX & #40; MDX & #41;](../../../mdx/mdx-language-reference-mdx.md)   
- [O Script básico de MDX & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
- [Conceitos básicos de consulta MDX & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Referência da linguagem MDX &#40;MDX&#41;](../../../mdx/mdx-language-reference-mdx.md)   
+ [O script básico de MDX &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
+ [Conceitos básicos de consulta MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

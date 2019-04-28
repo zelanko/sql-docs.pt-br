@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9bafb97065c86a4d227f79b62c3d388d45c1445f
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62845919"
 ---
 # <a name="modify-the-trace-results-view"></a>Modificar a exibição dos resultados de rastreamento
   Este tópico descreve como modificar a exibição dos resultados do rastreamento de uma sessão de Eventos Estendidos no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] executando as tarefas a seguir.  
@@ -149,13 +149,13 @@ ms.locfileid: "49120374"
 ##  <a name="AggregateResults"></a> Agregar resultados  
  Eventos Estendidos dão suporte a cinco funções de agregação:  
   
--   SUM  
+-   Sum  
   
 -   Mín  
   
 -   Max  
   
--   Médio  
+-   Média  
   
 -   Count  
   

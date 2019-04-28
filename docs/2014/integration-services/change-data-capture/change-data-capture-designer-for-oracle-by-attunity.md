@@ -13,20 +13,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 768a9c821c2c8f663bf65c58ed495993795b2eb9
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835942"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Change Data Capture Designer para Oracle da Attunity
   O CDC Designer Console é usado para desenvolver e manter Instâncias Oracle CDC. O CDC Designer Console é um snap-in do Console de Gerenciamento Microsoft que contém os seguintes elementos:  
   
--   New Instance Wizard: Este assistente cria uma nova instância Oracle CDC. Para obter informações sobre o uso do New Instance Wizard, consulte [Use the New Instance Wizard](use-the-new-instance-wizard.md).  
+-   Assistente de Nova Instância: este assistente cria uma nova Instância Oracle CDC. Para obter informações sobre o uso do New Instance Wizard, consulte [Use the New Instance Wizard](use-the-new-instance-wizard.md).  
   
--   CDC Instance Properties Viewer: Isso é uma exibição encaixada que mostra o status e a configuração da instância CDC selecionada. Para obter informações sobre o visualizador de propriedades, consulte [Como gerenciar uma instância CDC](manage-a-cdc-instance.md).  
+-   Visualizador de Propriedades de Instância CDC: esta é uma exibição encaixada que mostra o status e a configuração da instância CDC selecionada. Para obter informações sobre o visualizador de propriedades, consulte [Como gerenciar uma instância CDC](manage-a-cdc-instance.md).  
   
--   CDC Instance Properties Editor: Essa caixa de diálogo é usada para editar qualquer instância de serviço Oracle CDC existente. Para obter informações sobre as propriedades da instância CDC, consulte [Edit Instance Properties](edit-instance-properties.md).  
+-   Editor de Propriedades de Instância CDC: esta caixa de diálogo é usada para editar qualquer instância de Serviço Oracle CDC existente. Para obter informações sobre as propriedades da instância CDC, consulte [Edit Instance Properties](edit-instance-properties.md).  
   
 ## <a name="in-this-documentation"></a>Nesta documentação  
   

@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fcbca7ac7ae5d218d99623d1b98dd64e19dcda77
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689435"
 ---
 # <a name="browse-a-model-using-the-microsoft-neural-network-viewer"></a>Procurar um modelo usando o Visualizador de Rede Neural da Microsoft
   O Visualizador de Rede Neural da [!INCLUDE[msCoName](../../includes/msconame-md.md)] no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exibe modelos de mineração criados com o algoritmo Rede Neural da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . O algoritmo de Rede Neural da [!INCLUDE[msCoName](../../includes/msconame-md.md)] cria modelos de mineração para classificação e regressão que podem analisar várias entradas e saídas, e é muito útil para análises abertas e exploração. Para obter mais informações sobre esse algoritmo, consulte [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md).  
@@ -70,16 +70,16 @@ ms.locfileid: "48117856"
  [Voltar ao Início](#BKMK_ViewerTabs)  
   
 ###  <a name="BKMK_Characteristics"></a> Variáveis  
- A grade na guia **Variáveis** contém as seguintes colunas: **Atributo**, **Valor**, **Preferências [valor 1]** e **Preferências [valor 2]**. Por padrão, as colunas são classificadas pela força de **Preferências [valor 1]**. Clicar no cabeçalho de uma coluna altera a ordem de classificação para a coluna selecionada.  
+ A grade na **variáveis** guia contém as seguintes colunas: **Atributo**, **valor**, **preferências [valor 1]**, e **preferências [valor 2]**. Por padrão, as colunas são classificadas pela força de **Preferências [valor 1]**. Clicar no cabeçalho de uma coluna altera a ordem de classificação para a coluna selecionada.  
   
  Uma barra à direita do atributo mostra qual estado do atributo de saída o estado atributo de entrada especificado prefere. O tamanho da barra mostra como o estado de saída favorece significativamente o estado de entrada.  
   
  [Voltar ao Início](#BKMK_ViewerTabs)  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmo rede Neural da Microsoft](microsoft-neural-network-algorithm.md)   
- [Tarefas do Visualizador do modelo e instruções de mineração](mining-model-viewer-tasks-and-how-tos.md)   
- [Tarefas do Visualizador do modelo e instruções de mineração](mining-model-viewer-tasks-and-how-tos.md)   
+ [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)   
+ [Tarefas e instruções do visualizador do modelo de mineração](mining-model-viewer-tasks-and-how-tos.md)   
+ [Tarefas e instruções do visualizador do modelo de mineração](mining-model-viewer-tasks-and-how-tos.md)   
  [Ferramentas de mineração de dados](data-mining-tools.md)   
  [Visualizadores do modelo de Mineração de dados](data-mining-model-viewers.md)  
   

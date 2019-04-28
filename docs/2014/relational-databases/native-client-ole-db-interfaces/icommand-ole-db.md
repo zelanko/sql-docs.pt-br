@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d4e583b08cf0ba55268c4acb9e19722d3a693d50
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62987318"
 ---
 # <a name="icommand-ole-db"></a>ICommand (OLE DB)
   Este tópico aborda o comportamento OLE DB que é específico do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  

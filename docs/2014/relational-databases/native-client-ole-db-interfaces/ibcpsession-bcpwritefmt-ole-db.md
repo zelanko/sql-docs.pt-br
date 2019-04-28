@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1b4022f14c1f39984b1feaa0a45adef2154c1d0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62826838"
 ---
 # <a name="ibcpsessionbcpwritefmt-ole-db"></a>IBCPSession::BCPWriteFmt (OLE DB)
   Grava informações de formato relativas a cada coluna no arquivo de formato.  
@@ -35,11 +35,11 @@ const wchar_t *pwszFormatFile);
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O arquivo de formato especifica o formato de dados de um arquivo de dados criado por cópia em massa. As chamadas aos métodos [IBCPSession::BCPColumns](ibcpsession-bcpcolumns-ole-db.md) e [IBCPSession::BCPColFmt](ibcpsession-bcpcolfmt-ole-db.md) definem o formato do arquivo de dados. O método **BCPWriteFmt** salva essa definição no arquivo referenciado pelo argumento pwszFormatFile.  
+ O arquivo de formato especifica o formato de dados de um arquivo de dados criado por cópia em massa. Chamadas para os métodos [IBCPSession::BCPColumns](ibcpsession-bcpcolumns-ole-db.md) e [IBCPSession::BCPColFmt](ibcpsession-bcpcolfmt-ole-db.md) definem o formato do arquivo de dados. O método **BCPWriteFmt** salva essa definição no arquivo referenciado pelo argumento pwszFormatFile.  
   
- O método **BCPWriteFmt** pode salvar os arquivos de formato em xml ou formato de texto. Isso precisa ser indicado usando a opção de controle BCP_OPTION_XML com o método [IBCPSession::BCPControl](ibcpsession-bcpcontrol-ole-db.md).  
+ O método **BCPWriteFmt** pode salvar os arquivos de formato em xml ou formato de texto. Isso deve ser indicado usando a opção de controle BCP_OPTION_XML com o método [IBCPSession::BCPControl](ibcpsession-bcpcontrol-ole-db.md) .  
   
- Para carregar um arquivo de formato salvo, use o método [IBCPSession::BCPReadFmt](ibcpsession-bcpreadfmt-ole-db.md).  
+ Para carregar um arquivo de formato salvo, use o método [IBCPSession::BCPReadFmt](ibcpsession-bcpreadfmt-ole-db.md) .  
   
 ## <a name="arguments"></a>Argumentos  
  *pwszFormatFile*[in]  

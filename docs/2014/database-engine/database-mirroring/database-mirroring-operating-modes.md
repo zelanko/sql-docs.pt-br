@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5975008849ec4ef8a4d50aa559bb69554b65132a
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807643"
 ---
 # <a name="database-mirroring-operating-modes"></a>Modos de operação de espelhamento de banco de dados
   Este tópico descreve os modos de operação síncronos e assíncronos de sessões de espelhamento de banco de dados.  

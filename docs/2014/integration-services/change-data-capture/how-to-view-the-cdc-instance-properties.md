@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c3f320b5e1d3801426dfc4843f2929be6284d87e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835562"
 ---
 # <a name="how-to-view-the-cdc-instance-properties"></a>Como exibir as propriedades de instância CDC
   Este procedimento descreve como usar o CDC Designer Console para exibir informações sobre as instâncias que você cria para ajudar a gerenciar a operação das instâncias.  

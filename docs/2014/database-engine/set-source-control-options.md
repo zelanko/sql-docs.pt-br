@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0a654932689785d96aaff049551faf19494c311a
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843699"
 ---
 # <a name="set-source-control-options"></a>Definir opções de controle do código-fonte
   Antes de poder se beneficiar dos recursos internos de controle do código-fonte do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], é necessário configurar as opções de controle do código-fonte dos vários ambientes em que você trabalha.  
@@ -86,7 +86,7 @@ ms.locfileid: "53589890"
      Especifica que ao fazer o check-in de itens para atualizar o armazenamento de controle do código fonte, os itens devem permanecer com o check-out aplicado para você. Se você deseja alterar esta opção para um check-in específico, clique no **opções** seta na **Check-in** caixa de diálogo e desmarque o **mantenha check-out** caixa de seleção.  
   
      **Itens com check-in**  
-     Exibe uma lista de opções que especificam como o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] deve se comportar quando se tentar editar um item cujo check out não tenha sido feito.  As tabelas a seguir descrevem as opções disponíveis.  
+     Exibe uma lista de opções que especificam como [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] deve se comportar quando você tentar editar um item que não foi extraído. As tabelas a seguir descrevem as opções disponíveis.  
   
      **Salvando**  
   

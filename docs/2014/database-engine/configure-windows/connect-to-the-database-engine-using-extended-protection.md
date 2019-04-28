@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5b1317bc41be836cfad5159339a4e7c90fcfbc83
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62811247"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Conectar-se ao mecanismo de banco de dados usando proteção estendida
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte para a **Proteção Estendida** desde o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. A**Proteção Estendida para Autenticação** é um recurso dos componentes de rede implementado pelo sistema operacional. Há suporte para a**Proteção Estendida** no Windows 7 e no Windows Server 2008 R2. **Proteção Estendida** é incluída em pacotes de serviço para sistemas operacionais [!INCLUDE[msCoName](../../includes/msconame-md.md)] mais antigos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é mais seguro quando as conexões são efetuadas usando a **Proteção Estendida**.  

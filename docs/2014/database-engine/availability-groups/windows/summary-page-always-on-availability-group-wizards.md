@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b0bdeebb2d064bd647c19ea143474ef7738a4ab5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62814062"
 ---
 # <a name="summary-page-alwayson-availability-group-wizards"></a>Página de Resumo (Assistentes de Grupo de Disponibilidade AlwaysOn)
   Este tópico da ajuda descreve as opções mostradas na página **Resumo** . Este tópico aplica-se ao [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], ao [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] e ao [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Use a grade desta página para rever suas escolhas para o novo grupo de disponibilidade. Para fazer uma ou mais alterações, clique em **Anterior** para retornar às páginas relevantes. Quando estiver pronto, clique em **Avançar** para retornar à página **Resumo** . Quando estiver satisfeito com as opções, clique em **Concluir**.  

@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1c411a3eec25fb0a5d25d2be67b08f4a77376c31
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832572"
 ---
 # <a name="data-profiling-task-and-viewer"></a>Tarefa e visualizador da tarefa Criação de Perfil de Dados
   A tarefa Criação de Perfil de Dados fornece a funcionalidade de criação de perfil de dados dentro do processo de extração, transformação e carga de dados. Usando a tarefa Criação de Perfil de Dados, você pode alcançar os seguintes benefícios:  
@@ -55,12 +55,12 @@ ms.locfileid: "58379224"
 ## <a name="integration-services-and-data-profiling"></a>Integration Services e criação de perfil de dados  
  Em [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], o processo de criação de perfil de dados consiste nas seguintes etapas:  
   
- **Etapa 1: Configurando a tarefa de criação de perfil de dados**  
+ **Etapa 1: configurar a tarefa de criação de perfil de dados**  
  A tarefa Criação de Perfil de Dados é uma tarefa que você usa para configurar os perfis que deseja calcular. Você executa o pacote que contém a tarefa de Criação de Perfil de Dados para computar os perfis. A tarefa salva o perfil produzido em formato de XML em um arquivo ou uma variável de pacote.  
   
  **Para obter mais informações, consulte:** [Configuração da tarefa Criação de Perfil de Dados](data-profiling-task.md)  
   
- **Etapa 2: Revisando os perfis que a tarefa criação de perfil de dados computa**  
+ **Etapa 2: revisar os perfis que a tarefa Criação de Perfis de Dados computa**  
  Para exibir os perfis de dados que a tarefa Criação de Perfil de Dados computa, envie a saída para um arquivo e utilize o Visualizador de Perfil de dados Esse visualizador é um utilitário autônomo que mostra a saída do perfil em formato resumido e detalhado com uma capacidade opcional de busca.  
   
  **Para obter mais informações, consulte:** [Visualizador de Perfil de Dados](data-profile-viewer.md)  

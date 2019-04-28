@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 323ea04d32501f04156ffa81452fad5e5cf86664
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689526"
 ---
 # <a name="bcpcontrol"></a>bcp_control
   Altera as configurações padrão de vários parâmetros de controle para uma cópia em massa entre um arquivo e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -46,7 +46,7 @@ iValue
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *HDBC*  
+ *hdbc*  
  É o identificador de conexão ODBC habilitado para cópia em massa.  
   
  *eOption*  
@@ -120,7 +120,7 @@ iValue
  BCPODBC  
  Quando for verdadeiro, especifica que **datetime** e **smalldatetime** valores salvos no formato de caractere usará o prefixo de sequência de escape de carimbo de hora ODBC e o sufixo. A opção BCPODBC só se aplica a BCP_OUT.  
   
- Quando for falso, uma **datetime** valor que representa 1 de janeiro de 1997 é convertido para a cadeia de caracteres: 00:00:00.000 1997-01-01. Quando TRUE, o mesmo **datetime** valor é representado como: {ts ' 00:00:00.000 1997-01-01'}.  
+ Quando for falso, uma **datetime** valor que representa 1 de janeiro de 1997 é convertido para a cadeia de caracteres: 1997-01-01 00:00:00.000. Quando TRUE, o mesmo **datetime** valor é representado como: {ts ' 00:00:00.000 1997-01-01'}.  
   
  BCPROWCOUNT  
  Retorna o número de linhas afetadas pela operação BCP atual (ou última).  

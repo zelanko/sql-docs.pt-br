@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2903eef63152af9b2e9af1434ba12ea91b4058fc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721778"
 ---
 # <a name="article-properties---ltarticlegt"></a>Propriedades do Artigo – &lt;Artigo&gt;
   A caixa de diálogo **Propriedades do Artigo** está disponível no Assistente para Nova Publicação e na caixa de diálogo **Propriedades de Publicação** . Ela permite exibir e definir propriedades para todos os tipos de artigos. Algumas propriedades só podem ser definidas quando a publicação é criada, e outras só podem ser definidas se a publicação não tiver assinaturas ativas. Propriedades que não podem ser definidas são exibidas como somente leitura.  
@@ -88,7 +88,7 @@ ms.locfileid: "54124986"
  Essa opção só se aplica a procedimentos armazenados. Determina se a definição do procedimento armazenado (a instrução CREATE PROCEDURE) ou sua execução devem ser replicadas ou não. Se você replicar a execução do procedimento, a definição do procedimento será replicada para o Assinante quando a assinatura for inicializada; quando o procedimento armazenado for executado no Publicador, a replicação executará o procedimento correspondente no Assinante. Isso pode fornecer um desempenho significativamente melhor em casos onde são executadas grandes operações em lote. Para obter mais informações, consulte [Publicando execução de procedimento armazenado em replicação transacional](transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
 ## <a name="options-for-merge-publications"></a>Opções para publicações de mesclagem  
- O **propriedades do artigo** caixa de diálogo para publicações de mesclagem tem duas guias: **As propriedades** e **resolvedor**.  
+ A caixa de diálogo **Propriedades do Artigo** para publicações de mesclagem tem duas guias: **Propriedades** e **Resolver**.  
   
 ### <a name="properties-tab"></a>Guia Propriedades  
  **Direção de sincronização**  
@@ -100,7 +100,7 @@ ms.locfileid: "54124986"
   
 -   **Download somente para Assinante, permitir alterações do Assinante**: as alterações podem ser baixadas no Assinante, mas não podem ser carregadas no Publicador.  
   
- Para obter mais informações, consulte [Optimize Merge Replication Performance with Download-Only Articles](merge/optimize-merge-replication-performance-with-download-only-articles.md) (Otimizar o desempenho da replicação de mesclagem com artigos somente para download).  
+ Para obter mais informações, consulte [Otimizar o desempenho da replicação de mesclagem com artigos somente para download](merge/optimize-merge-replication-performance-with-download-only-articles.md).  
   
  **Opções de partição**  
  Especifica o tipo de partição criado por um filtro com parâmetros. Para obter mais informações, consulte a seção "Configurando opções de partição" em [Filtros de linha com parâmetros](merge/parameterized-filters-parameterized-row-filters.md).  
@@ -135,7 +135,7 @@ ms.locfileid: "54124986"
  Todos os resolvedores com base em COM fornecidos pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] são assinados. Selecione essa opção para verificar se o resolvedor é válido na sincronização.  
   
 ## <a name="options-for-oracle-publications"></a>Opções para publicações Oracle  
- O **propriedades do artigo** caixa de diálogo para publicações Oracle tem duas guias: **As propriedades** e **mapeamento de dados**. Publicações Oracle não oferecem suporte a todas as propriedades que as publicações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferecem. Para obter mais informações, consulte [Considerações de design e limitações para Publicadores Oracle](non-sql/design-considerations-and-limitations-for-oracle-publishers.md)  
+ A caixa de diálogo **Propriedades do Artigo** para publicações Oracle tem duas guias: **Propriedades** e **Mapeamento de Dados**. Publicações Oracle não oferecem suporte a todas as propriedades que as publicações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferecem. Para obter mais informações, consulte [Considerações de design e limitações para Publicadores Oracle](non-sql/design-considerations-and-limitations-for-oracle-publishers.md)  
   
 ### <a name="properties-tab"></a>Guia Propriedades  
  **Copiar procedimentos armazenados INSERT, UPDATE e DELETE**  

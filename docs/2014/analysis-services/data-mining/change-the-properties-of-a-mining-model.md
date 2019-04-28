@@ -15,20 +15,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2533de57dd2baee8297cd0f277c4538d16fbc16a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689050"
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>Alterar as propriedades de um modelo de mineração
-  Algumas propriedades de modelo de mineração se aplicam ao modelo como um todo, enquanto outras propriedades de modelo se aplicam a colunas individuais. Exemplos de propriedades que se aplicam ao modelo inteiro seriam a `Drillthrough` propriedade, que especifica se os dados de caso devem estar disponíveis para consulta, e o `Description` propriedade. Propriedades que se aplicam à coluna incluem `Usage` e `ModelingFlags`, que controlam como os dados na coluna são usados no modelo.  
+  Algumas propriedades de modelo de mineração se aplicam ao modelo como um todo, enquanto outras propriedades de modelo se aplicam a colunas individuais. Exemplos de propriedades que se aplicam ao modelo inteiro seriam a propriedade `Drillthrough`, que especifica se os dados de caso devem estar disponíveis para consulta, e a propriedade `Description`. Propriedades que se aplicam à coluna incluem `Usage` e `ModelingFlags`, que controlam como os dados na coluna são usados no modelo.  
   
  As propriedades modelo a seguir têm editores avançados que você pode usar para criar expressões ou configurar propriedades de modelo complexas. Estas propriedades oferecem:  
   
--   `Filter` propriedade: abre a [Data Set filtro or Model filtro Dialog Box](../data-set-filter-or-model-filter-dialog-box.md).  
+-   `Filter` Propriedade: Abre o [Data Set filtro or Model filtro Dialog Box](../data-set-filter-or-model-filter-dialog-box.md).  
   
--   `AlgorithmParameters` propriedade: abre a [caixa de diálogo de parâmetros de algoritmo &#40;exibição de modelos de mineração&#41;](../algorithm-parameters-dialog-box-mining-models-view.md).  
+-   `AlgorithmParameters` Propriedade: Abre o [caixa de diálogo de parâmetros de algoritmo &#40;modo de exibição de modelos de mineração&#41;](../algorithm-parameters-dialog-box-mining-models-view.md).  
   
  Para obter informações sobre como definir as propriedades em um modelo de mineração, consulte [Colunas do modelo de mineração](mining-model-columns.md).  
   

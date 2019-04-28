@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e557807f2371b933896a7855c92ef0241ef3af37
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725360"
 ---
 # <a name="the-basic-mdx-script-mdx"></a>O script básico de MDX (MDX)
   Um script MDX define o processo de cálculo para um cubo no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Existem dois tipos de scripts MDX:  
@@ -53,18 +53,18 @@ ms.locfileid: "48164368"
  Todas as instruções de script MDX  
  Em scripts MDX, as instruções de script MDX controlam o contexto e o escopo dos cálculos e gerenciam o comportamento de outras instruções do script MDX. Essa categoria inclui as seguintes instruções:  
   
--   [CALCULAR](/sql/mdx/mdx-scripting-calculate)  
+-   [CALCULATE](/sql/mdx/mdx-scripting-calculate)  
   
--   [CONGELAMENTO](/sql/mdx/mdx-scripting-freeze)  
+-   [FREEZE](/sql/mdx/mdx-scripting-freeze)  
   
--   [ESCOPO](/sql/mdx/mdx-scripting-scope)  
+-   [SCOPE](/sql/mdx/mdx-scripting-scope)  
   
  Para obter mais informações sobre instruções de scripts MDX, consulte [Instruções de script MDX &#40;MDX&#41;](/sql/mdx/mdx-scripting-statements-mdx).  
   
- [CRIAR MEMBRO](/sql/mdx/mdx-data-definition-create-member)  
+ [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member)  
  Uma instrução CREATE MEMBER cria membros calculados. Para obter mais informações sobre como criar membros calculados, consulte [Criando membros calculados em MDX &#40;MDX&#41;](mdx-calculated-members-building-calculated-members.md).  
   
- [CRIAR CONJUNTO](/sql/mdx/mdx-data-definition-create-set)  
+ [CREATE SET](/sql/mdx/mdx-data-definition-create-set)  
  A instrução CREATE SET cria conjuntos nomeados. Para obter mais informações sobre como criar conjuntos de nomes, consulte [Criando conjuntos nomeados em MDX &#40;MDX&#41;](mdx-named-sets-building-named-sets.md).  
   
  Instruções condicionais  
@@ -92,6 +92,6 @@ ms.locfileid: "48164368"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência da linguagem MDX &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
- [Conceitos básicos de script MDX &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
+ [Conceitos básicos do script MDX &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
   
   

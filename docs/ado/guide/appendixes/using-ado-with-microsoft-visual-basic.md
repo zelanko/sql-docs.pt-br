@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d409f874e9fcec059c01ddef91d83d8a70fdeb47
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864512"
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>Usando o ADO com o Microsoft Visual Basic e Visual Basic for Applications
 Configurando um projeto do ADO e escrever código em ADO são semelhante se você usar o Visual Basic ou Visual Basic for Applications. Este tópico aborda usando o ADO com o Visual Basic e Visual Basic for Applications e observa as diferenças.
@@ -99,7 +99,7 @@ Dim conn1
 Set conn1 = CreateObject("ADODB.Connection") As Object
 ```
 
- Com os objetos instanciados **CreateObject** são com associação tardia, que significa que eles não são fortemente tipados e preenchimento de linha de comando está desabilitado. No entanto, permitir que você ignore a referência à biblioteca do ADO do seu projeto e permite que você crie uma instância versões específicas de objetos. Por exemplo:
+ Com os objetos instanciados **CreateObject** são com associação tardia, que significa que eles não são fortemente tipados e preenchimento de linha de comando está desabilitado. No entanto, permitir que você ignore a referência à biblioteca do ADO do seu projeto e permite que você crie uma instância versões específicas de objetos. Por exemplo: 
 
 ```
 Set conn1 = CreateObject("ADODB.Connection.2.0") As Object

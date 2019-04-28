@@ -24,11 +24,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 47a7b4c2b11a6d17a52af20aef71ee13863ea29c
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702614"
 ---
 # <a name="partitions-analysis-services---multidimensional-data"></a>Partições (Analysis Services – Dados Multidimensional)
   Uma partição é um contêiner de uma parte dos dados de grupo de medidas. As partições não são vistas a partir das consultas MDX; todas as consultas refletem o conteúdo completo do grupo de medidas, independentemente de quantas partições são definidas para o grupo de medidas. O conteúdo de dados de uma partição é definido pelas associações de consulta da partição e pela divisão da expressão.  

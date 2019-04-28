@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e1ddc919b4658395c6a4268f03131bc92291f1b0
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832878"
 ---
 # <a name="cdc-control-task"></a>Tarefa Controle de CDC
   A tarefa Controle de CDC é usada para controlar o ciclo de vida de pacotes de captura de dados de alterações (CDC). Ela trata a sincronização de pacotes CDC com o pacote de carga inicial e o gerenciamento de intervalos de LSN (número de sequência de log) processados na execução de um pacote CDC. Além disso, a tarefa Controle de CDC lida com cenários de erro e recuperação.  
@@ -40,16 +40,16 @@ ms.locfileid: "58392804"
 |Operação|Descrição|  
 |---------------|-----------------|  
 |GetProcessingRange|Esta operação é usada antes da chamada ao fluxo de dados que usa o fluxo de dados de Origem CDC. Ele estabelece um intervalo de LSNs que o fluxo de dados de origem de CDC lê quando é invocado. O intervalo é armazenado em uma variável de pacote SSIS que é usada pela Origem de CDC durante o processamento de fluxo de dados.<br /><br /> Para obter mais informações sobre os armazenados, consulte [Definir uma variável de estado](../data-flow/define-a-state-variable.md).|  
-|MarkProcessedRange|: Esta operação é executada após cada execução de CDC (depois que o fluxo de dados CDC é concluído com êxito) para registrar o último LSN que foi processado completamente na execução de CDC. Da próxima vez que o GetProcessingRange for executado, essa posição será o início do intervalo de processamento.|  
+|MarkProcessedRange|: esta operação é executada depois de cada execução de CDC (depois que o fluxo de dados de CDC é concluído com êxito) para registrar o último LSN que foi processado completamente na execução de CDC. Da próxima vez que o GetProcessingRange for executado, essa posição será o início do intervalo de processamento.|  
   
 ## <a name="handling-cdc-state-persistency"></a>Lidando com a persistência de estado CDC  
  A tarefa Controle de CDC mantém um estado persistente entre ativações. As informações armazenadas no estado CDC são usadas para determinar e manter o intervalo de processamento do pacote CDC e para detectar condições de erro. O estado persistente é armazenado como uma cadeia de caracteres. Para obter mais informações, consulte [Definir uma variável de estado](../data-flow/define-a-state-variable.md).  
   
  A tarefa Controle de CDC oferece suporte a dois tipos de persistência de estado  
   
--   Persistência de estado manual: Nesse caso, a tarefa controle CDC gerencia o estado armazenado em uma variável de pacote, mas o desenvolvedor do pacote deve ler a variável de um repositório persistente antes de chamar o controle de CDC e, em seguida, chamado de gravação-o novamente nesse repositório persistente após o controle de CDC é último e execução de CDC é concluído.  
+-   Persistência de Estado Manual: neste caso, a tarefa Controle de CDC gerencia o estado armazenado em uma variável de pacote, mas o desenvolvedor do pacote deve ler a variável de um repositório persistente antes de chamar o Controle de CDC e depois gravá-lo nesse repositório persistente após o Controle de CDC ser chamado pela última vez e a execução do CDC for concluída.  
   
--   Persistência de estado automática: O estado de CDC é armazenado em uma tabela em um banco de dados. O estado é armazenado com um nome fornecido na propriedade **StateName** em uma tabela nomeada na propriedade **Tabela a Ser Usada para Armazenar o Estado** , localizada em um gerenciador de conexões selecionado para armazenar o estado. O padrão é o gerenciador de conexões de origem, mas a prática comum é usar o gerenciador de conexões de destino. A tarefa Controle de CDC atualiza o valor do estado na tabela de estado e isso é confirmado como parte da transação de ambiente.  
+-   Persistência de Estado Automática: o estado CDC é armazenado em uma tabela em um banco de dados. O estado é armazenado com um nome fornecido na propriedade **StateName** em uma tabela nomeada na propriedade **Tabela a Ser Usada para Armazenar o Estado** , localizada em um gerenciador de conexões selecionado para armazenar o estado. O padrão é o gerenciador de conexões de origem, mas a prática comum é usar o gerenciador de conexões de destino. A tarefa Controle de CDC atualiza o valor do estado na tabela de estado e isso é confirmado como parte da transação de ambiente.  
   
 ## <a name="error-handling"></a>Tratamento de erros  
  A tarefa Controle de CDC pode relatar um erro quando:  

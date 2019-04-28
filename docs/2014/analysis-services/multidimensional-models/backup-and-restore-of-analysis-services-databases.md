@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a74de18847236ca36677678da130aca87c128262
-ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58434467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701785"
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Backup e restauração de bancos de dados do Analysis Services
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclui backup e restauração de forma que você possa recuperar um banco de dados e seus objetos de um ponto específico no tempo. Backup e restauração também é uma técnica válida por migrar bancos de dados para servidores atualizados, mover bancos de dados entre servidores ou implantar um banco de dados para um servidor de produção. Para fins de recuperação de dados, se você ainda não tem um plano de backup e seus dados são valiosos, deve criar e implementar um plano o mais breve possível.  

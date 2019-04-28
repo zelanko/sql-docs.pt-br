@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f985745f450b402781685ded5c0a655e3f4e497c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704836"
 ---
 # <a name="example-specifying-the-id-and-idref-directives"></a>Exemplo: Especificando as diretivas ID e IDREF
   Este exemplo é quase igual ao exemplo [Especificando a diretiva ELEMENTXSINIL](example-specifying-the-elementxsinil-directive.md) . A única diferença é que a consulta especifica as diretivas **ID** e **IDREF**. Essas diretivas substituem os tipos do atributo **SalesPersonID** nos elementos <`OrderHeader`> e <`OrderDetail`>. Isso forma vínculos intradocumento. Você precisa do esquema para ver os tipos substituídos. Portanto, a consulta especifica a opção **XMLDATA** na cláusula FOR XML para recuperar o esquema.  

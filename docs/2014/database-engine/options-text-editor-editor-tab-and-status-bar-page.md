@@ -1,5 +1,5 @@
 ---
-title: 'Opções (Editor de texto: página guia Editor e barra de Status) | Microsoft Docs'
+title: 'Opções (página Editor de Texto: Guia Editor e barra de Status de página) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 241a74861a7f634389324276daf9b03a8590e64d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844266"
 ---
-# <a name="options-text-editor-editor-tab-and-status-bar-page"></a>Opções (Editor de Texto: página Guia Editor e Barra de Status)
+# <a name="options-text-editor-editor-tab-and-status-bar-page"></a>Opções (página Editor de Texto: Guia Editor e Barra de Status)
   A **página Guia Editor e Barra de Status** permite que você personalize as informações exibidas pelos Editores de Consultas do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . Você pode especificar o nível de informações exibido na guia e na barra de status da janela Editor de Consulta e se a barra de status será exibida na parte superior ou parte inferior da janela do editor.  
   
 ## <a name="option-settings-by-editor"></a>Configurações de opção por editor  
@@ -35,10 +35,10 @@ ms.locfileid: "48055446"
  **Exibir tempo de execução**  
  Inclui a hora de execução do script. As configurações são as seguintes:  
   
- **Nenhuma**  
+ **Nenhum**  
  A barra de status não exibe nenhuma informação de hora.  
   
- **final**  
+ **End**  
  A barra de status exibe a hora atual enquanto o script está em execução. Quando o script é concluído, o vídeo exibe a hora em que o script foi concluído.  
   
  **Decorrido**  

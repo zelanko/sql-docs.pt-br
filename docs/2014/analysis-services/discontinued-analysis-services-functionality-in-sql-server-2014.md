@@ -18,18 +18,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8dbeb94f9d6b4fea97a99544ed4a0bf358851acf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731614"
 ---
 # <a name="discontinued-analysis-services-functionality-in-sql-server-2014"></a>Funcionalidade descontinuada do Analysis Services no SQL Server 2014
   Este tópico descreve os recursos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que não estão mais disponíveis no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
 ## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a>Recursos descontinuados no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
   
-|Categoria|Recurso substituído|Substituição|  
+|Category|Recurso substituído|Substituição|  
 |--------------|------------------------|-----------------|  
 |Cubos locais|Propriedade da cadeia de conexão InsertInto|A sintaxe da cadeia de conexão original para popular cubos locais foi substituída pela instrução Criar Cubo Global. Para obter mais informações, consulte [instrução CREATE GLOBAL CUBE &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-global-cube).|  
 |Cubos locais|Propriedade da cadeia de conexão CreateCube|A sintaxe da cadeia de conexão original para popular cubos locais foi substituída pela instrução Criar Cubo Global. Para obter mais informações, consulte [instrução CREATE GLOBAL CUBE &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-global-cube).|  
@@ -42,6 +42,6 @@ ms.locfileid: "48117966"
  A biblioteca DSO (Decision Support Objects) que fornecia compatibilidade com os bancos de dados do SQL Server 2000 Analysis Services também será descontinuada e não faz mais parte do SQL Server.  
   
 ## <a name="see-also"></a>Consulte também  
- [Compatibilidade com versões anteriores do Analysis Services](analysis-services-backward-compatibility.md)  
+ [Analysis Services Backward Compatibility](analysis-services-backward-compatibility.md)  
   
   

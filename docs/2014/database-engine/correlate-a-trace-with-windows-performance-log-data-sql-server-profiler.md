@@ -14,14 +14,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 75af6924104764f372eefd0731799ec3566d0a0f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808358"
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data-sql-server-profiler"></a>Correlacionar um rastreamento com dados do log de desempenho do Windows (SQL Server Profiler)
-  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] pode correlacionar os contadores do Monitor do sistema do Microsoft Windows [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] eventos. O Monitor do Sistema do Windows registra a atividade do sistema em logs de desempenho para os contadores especificados.  
+  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] pode correlacionar os contadores do Monitor do Sistema do Microsoft Windows e os eventos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . O Monitor do Sistema do Windows registra a atividade do sistema em logs de desempenho para os contadores especificados.  
   
 > [!NOTE]  
 >  Para obter informações sobre como compartilhar logs entre versões diferentes do Windows, consulte o procedimento ao final desse tópico.  

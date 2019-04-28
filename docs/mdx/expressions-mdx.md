@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 77ef7250c7af3918509e38c9aa1f5350f3ac5610
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690842"
 ---
 # <a name="expressions-mdx"></a>Expressões (MDX)
 
@@ -38,7 +38,7 @@ ms.locfileid: "34740835"
  Uma expressão complexa também pode ser criada a partir das combinações dessas entidades unidas por operadores.  
   
 ## <a name="expression-results"></a>Resultados da expressão  
- Em uma expressão simples criada de uma simples constante, variável, função de valor escalar ou nome de coluna simples, o tipo de dados, o agrupamento, a precisão, a escala e o valor da expressão é o tipo de dados, agrupamento, precisão, escala e valor do elemento consultado. Como o MDX oferece suporte direto apenas ao tipo de dados OLE VARIANT, a coerção não deveria ocorrer ao trabalhar com expressões simples.  
+ Em uma expressão simples criada de uma simples constante, variável, função de valor escalar ou nome de coluna simples, o tipo de dados, a ordenação, a precisão, a escala e o valor da expressão é o tipo de dados, ordenação, precisão, escala e valor do elemento consultado. Como o MDX oferece suporte direto apenas ao tipo de dados OLE VARIANT, a coerção não deveria ocorrer ao trabalhar com expressões simples.  
   
  Em uma expressão complexa, a coerção pode ocorrer ao usar duas ou mais expressões simples com tipos de dados diferentes.  
   
@@ -74,7 +74,7 @@ WHERE [Product].[Category].[Bikes]
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Usando expressões de cubo e subcubo](../mdx/using-cube-and-subcube-expressions.md)|Define as expressões de cubo e subcubo.|  
 |[Usando expressões de dimensão](../mdx/using-dimension-expressions.md)|Define as expressões de dimensão.|  
@@ -85,7 +85,7 @@ WHERE [Product].[Category].[Bikes]
 |[Trabalhando com valores vazios](../mdx/working-with-empty-values.md)|Descreve o que é um valor vazio e como tais valores são controlados.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de linguagem MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
- [Conceitos básicos de consulta MDX &#40;do Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Referência da linguagem MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
+ [Conceitos básicos de consulta MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

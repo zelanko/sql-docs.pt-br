@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 551e5bfdba63ca09388db5260adb5accafe2a78a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828236"
 ---
 # <a name="cdc-splitter"></a>Separador de CDC
   O separador de CDC divide um único fluxo de linhas de alteração de um fluxo de dados de origem CDC em diferentes fluxos de dados para operações de Inserir, Atualizar e Excluir. O fluxo de dados é dividido com base na coluna necessária de `__$operation` e seus valores padrão em tabelas de alterações do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
@@ -40,11 +40,11 @@ ms.locfileid: "58387736"
   
  A saída de erro de componente inclui as colunas de saída seguintes:  
   
--   **Código de erro**: Definido como 1.  
+-   **Código do Erro**: defina como 1.  
   
--   **Coluna de erro**: A coluna de origem que está causando o erro (para erros de conversão).  
+-   **Coluna de Erro**: a coluna de origem que causa o erro (para erros de conversão).  
   
--   **Colunas de linha de erro**: As colunas de entrada da linha que causou o erro.  
+-   **Colunas de Linha de Erro**: as colunas de entrada da linha que causou o erro.  
   
 ## <a name="configuring-the-cdc-splitter"></a>Configurando o Separador de CDC  
  Não há nenhuma propriedade configurável para o separador de CDC.  

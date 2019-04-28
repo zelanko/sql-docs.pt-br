@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 648b9d561ae340b67ed5e2d1aa878969e5a3bc47
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62822769"
 ---
 # <a name="adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial"></a>Adicionando uma exibição da fonte de dados com tabelas aninhadas (Tutorial de mineração de dados intermediário)
   Para criar um modelo de cesta de compras, você deve usar uma exibição da fonte de dados que dá suporte a dados associativos. Essa fonte de dados também será usada para o cenário de clustering de sequências.  
@@ -33,7 +33,7 @@ ms.locfileid: "56016747"
 -   Você especifica a relação muitos para um entre as tabelas de casos e aninhada.  
   
     > [!NOTE]  
-    >  para obter informações sobre a ferramenta de configuração e recursos adicionais. É importante seguir o procedimento descrito com exatidão para especificar corretamente a relação entre a tabela de casos e a tabela aninhada e evitar erros durante o processamento do modelo.  
+    >  . É importante seguir o procedimento descrito com exatidão para especificar corretamente a relação entre a tabela de casos e a tabela aninhada e evitar erros durante o processamento do modelo.  
   
 -   Você define como as colunas de dados são usadas no modelo.  
   

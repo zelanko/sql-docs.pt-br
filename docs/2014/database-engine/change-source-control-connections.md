@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d57f5938cb888a955645f5a9e0b01eeacfc1142b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812785"
 ---
 # <a name="change-source-control-connections"></a>Alterar conexões de controle do código-fonte
   A primeira vez que você adiciona ou abre uma solução de controle do código-fonte, seu provedor cria uma associação entre a pasta raiz do diretório da solução local e a pasta do servidor correspondente.  

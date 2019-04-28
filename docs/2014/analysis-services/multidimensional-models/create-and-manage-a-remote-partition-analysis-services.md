@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b5f451a9948315a32710bdb1755bb95a5b8d3b98
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700571"
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>Criar e gerenciar uma partição remota (Analysis Services)
   Ao particionar um grupo de medidas, você pode configurar um banco de dados secundário em uma instância remota do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] como um armazenamento da partição.  
@@ -111,7 +111,7 @@ ms.locfileid: "53356645"
   
 #### <a name="set-up-the-remote-partition-in-ssdt"></a>Configurar a partição remota (no SSDT)  
   
-1.  No servidor mestre: Abra o cubo no Designer de cubo e clique em **partições** guia. Expanda o grupo de medidas. Clique em **Nova Partição** se o grupo de medidas já estiver configurado para várias partições ou clique no botão Procurar. para obter informações sobre a ferramenta de configuração e recursos adicionais. ) na coluna de origem para editar a partição existente.  
+1.  No servidor mestre: Abra o cubo no Designer de cubo e clique em **partições** guia. Expanda o grupo de medidas. Clique em **Nova Partição** se o grupo de medidas já estiver configurado para várias partições ou clique no botão Procurar. . ) na coluna de origem para editar a partição existente.  
   
 2.  No Assistente para Partições, em **Especificar Informações sobre a Origem**, selecione a Exibição da Fonte de Dados original e a tabela de fatos.  
   

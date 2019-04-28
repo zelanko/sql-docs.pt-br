@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 04ed80887a2a81a2179dcec423b9e22b3f9d43ef
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866484"
 ---
-# <a name="task-8-adding-a-new-value-for-state-entity-in-excel"></a>Tarefa 8: Adicionando um novo valor à entidade State do Excel
+# <a name="task-8-adding-a-new-value-for-state-entity-in-excel"></a>Tarefa 8: Adicionar um novo valor à entidade State do Excel
   Nesta tarefa, você adicionará um valor para a entidade State no Excel e publicará a alteração no servidor MDS.  
   
 1.  Adicionar um **folha de trabalho** no Excel clicando na nova guia na parte inferior.  
@@ -26,11 +26,11 @@ ms.locfileid: "56032027"
   
 2.  Na **Excel**, clique no **dados mestres** guia no menu e, em seguida, clique em **Mostrar Gerenciador** na faixa de opções.  
   
-3.  No **Master Data Explorer**, selecione **fornecedores** para **modelo**. Você deverá visualizar duas entidades: **Supplier** e **estado** na lista de entidades.  
+3.  No **Master Data Explorer**, selecione **fornecedores** para **modelo**. Você deverá ver duas entidades: **Supplier** e **estado** na lista de entidades.  
   
 4.  Clique duas vezes em **estado** na lista. Todos os membros de **estado** entidade do MDS deve ser exibida na planilha.  
   
-5.  Agora, adicione uma linha ao final com os seguintes valores: **Carolina do Norte** para **nome** e **NC** para **código**. A codificação por cores diferencia qualquer registro novo/atualizado dos outros registros.  
+5.  Agora, adicione uma linha no final com os seguintes valores: **Carolina do Norte** para **nome** e **NC** para **código**. A codificação por cores diferencia qualquer registro novo/atualizado dos outros registros.  
   
      ![Excel - adicionar Carolina do Norte a estados](../../2014/tutorials/media/et-addinganewvalueforstateentityinexcel-02.jpg "Excel - adicionar Carolina do Norte a estados")  
   

@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8e9be78ff13d39b4cdcaf60516ac20b9a85648d6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812920"
 ---
 # <a name="upgrade-and-update-of-availability-group-servers-with-minimal-downtime-and-data-loss"></a>Fazer upgrade e atualização dos servidores de grupo de disponibilidade com tempo de inatividade e perda de dados mínimos
   Ao atualizar ou fazer upgrade de instâncias de servidor do SQL Server 2012 para um service pack ou uma versão mais recente, você pode reduzir o tempo de inatividade de um grupo de disponibilidade para apenas um único failover manual executando uma atualização ou um upgrade sequencial. Para fazer upgrade de versões do SQL Server, essa ação é conhecida como upgrade sem interrupção; para atualizar a versão atual do SQL Server com hotfixes ou service packs, essa ação é conhecida como atualização sem interrupção.  

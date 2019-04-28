@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 135541d4474ab68fc8bdbc294663c8d9bcbc7c14
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715007"
 ---
 # <a name="spatial-data-types-overview"></a>Visão geral de tipos de dados espaciais
   Há dois tipos de dados espaciais. O tipo de dados `geometry` oferece suporte a dados planares ou a dados euclidianos (planisfério). O tipo de dados `geometry` (planar) está de acordo com os Recursos Simples do Open Geospatial Consortium (OGC) para o SQL Specification versão 1.1.0 e compatível com o SQL MM (padrão ISO).  
@@ -192,7 +192,7 @@ SELECT @g.ToString(), @g.STLength();
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 3 6.3246, 3 6.3246, 0 7, -3 6.3246, 0 0, 0 0)');  
 ```  
   
- As instâncias `CompoundCurve` permitem componentes `LineString` e `CircularString`, de forma que somente dois pontos para os segmentos de linha da fatia de pizza precisam ser conhecidos.  Este exemplo de código mostra como usar uma `CompoundCurve` para armazenar a mesma figura:  
+ `CompoundCurve` instâncias permitem `LineString` e `CircularString` componentes para que somente dois pontos para os segmentos de linha da fatia de pizza precisam ser conhecidos.  Este exemplo de código mostra como usar uma `CompoundCurve` para armazenar a mesma figura:  
   
 ```sql  
 DECLARE @g geometry;  

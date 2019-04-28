@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 809a6706ccf75a66ec7b6bf7eefed969221b9624
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62802884"
 ---
 # <a name="visual-c-extensions-example"></a>Exemplo de extensões do Visual C++
 Esse programa mostra como os valores são recuperados de campos e convertidos em variáveis de C/C++.  
@@ -51,7 +51,7 @@ _COM_SMARTPTR_TYPEDEF(IADORecordBinding, __uuidof(IADORecordBinding));
 IADORecordBindingPtr picRs(pRs);  
 ```  
   
- Porque as extensões do Visual C++ são implementadas pelo **conjunto de registros** object, o construtor para o ponteiro inteligente, `picRs`, leva a _`RecordsetPtr` ponteiro, `pRs`. O construtor chamará `QueryInterface` usando `pRs` para localizar o `IADORecordBinding` interface.  
+ Porque o Visual C++ extensões são implementadas pelo **conjunto de registros** object, o construtor para o ponteiro inteligente, `picRs`, leva o _`RecordsetPtr` ponteiro `pRs`. O construtor chamará `QueryInterface` usando `pRs` para localizar o `IADORecordBinding` interface.  
   
 ```cpp
 // Visual_Cpp_Extensions_Example.cpp  

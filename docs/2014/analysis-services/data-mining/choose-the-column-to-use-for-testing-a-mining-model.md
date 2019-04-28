@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 340080271318073983b29abebeab85122993b489
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715213"
 ---
 # <a name="choose-the-column-to-use-for-testing-a-mining-model"></a>Escolha a coluna para usar para teste em um modelo de mineração
   Antes de poder medir a exatidão de um modelo de mineração, você deverá decidir qual resultado deseja avaliar. A maioria dos modelos de mineração de dados exige que você escolha pelo menos uma coluna para usar como o atributo previsível ao criar o modelo. Portanto, quando você testar a exatidão do modelo, geralmente terá que selecionar esse atributo para testar.  

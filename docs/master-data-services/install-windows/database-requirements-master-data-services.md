@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2d9d62078c4c3f2e4b72abed1bc7275fbf616b5c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62695786"
 ---
 # <a name="database-requirements-master-data-services"></a>Requisitos do banco de dados (Master Data Services)
 
@@ -71,7 +71,7 @@ ms.locfileid: "52504609"
 ### <a name="database-backup"></a>Backup do banco de dados  
  Como prática recomendada, faça backup do banco de dados completo diariamente em um período de baixa atividade e faça backup dos logs de transações mais frequentemente, dependendo das necessidades do seu ambiente. Para obter mais informações sobre backups de banco de dados, confira [Visão geral de Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Instalar o Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)   
  [Criar um banco de dados do Master Data Services](../../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [Banco de dados do Master Data Services](../../master-data-services/master-data-services-database.md)   

@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 4025a4812b7bb284d5fdf0540491d1506f05cdea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844282"
 ---
 # <a name="options-text-editor---plain-text---tabs-page"></a>Options (Text Editor - Plain Text - Tabs Page)
   Use essa caixa de diálogo para alterar o comportamento de tabulação do Editor de Texto, que é usado para editar um documento não associado a um idioma de desenvolvimento específico. Para exibir essas configurações, clique em **Opções** no menu **Ferramentas** , expanda a pasta **Editor de Texto**, expanda **Texto Sem-formatação**e, então, clique em **Tabulações**.  
@@ -27,13 +27,13 @@ ms.locfileid: "48074757"
  As opções do Editor de Texto sem Formatação também podem ser definidas na caixa de diálogo **Todos os Idiomas - Geral** . Ao usar as caixas de diálogo **Todos os Idiomas** para definir diferentes opções para os outros editores do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , como o DMX ou MDX, você deverá redefinir as opções do Editor de Texto sem Formatação usando essa caixa de diálogo.  
   
 ## <a name="indenting"></a>Recuo  
- **Nenhuma**  
+ **Nenhum**  
  Não recue a nova linha criada ao pressionar ENTER. O cursor é colocado na primeira coluna da nova linha.  
   
  **Bloco**  
  Recue a nova linha criada ao pressionar ENTER com a mesma distância de recuo que a da linha anterior.  
   
- **Inteligente**  
+ **Smart**  
  O editor de texto sem-formatação não oferece suporte para esse tipo de formatação.  
   
 ## <a name="tabs"></a>Tabulações  

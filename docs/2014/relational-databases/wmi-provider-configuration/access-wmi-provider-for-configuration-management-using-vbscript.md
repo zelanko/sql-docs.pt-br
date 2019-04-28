@@ -17,11 +17,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: f3a380f80b4ecc7540e29605543722edd55e226d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705061"
 ---
 # <a name="modify-sql-server-service-advanced-properties-using-vbscript"></a>Modificar as propriedades avançadas do serviço do SQL Server usando o VBScript
   Esta seção descreve como criar um programa de VBScript que liste a versão das instâncias instaladas do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que estiver executando em um computador.  

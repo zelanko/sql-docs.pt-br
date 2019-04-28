@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8462f85dc6c804020f12b9bc989d683c5a4ad0ba
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385344"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832209"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>Editor da tarefa Criação de Perfil de Dados (página Geral)
   Use a página **Geral** do **Editor da Tarefa Criação de Perfil de Dados** para configurar as seguintes opções:  
@@ -52,8 +52,8 @@ ms.locfileid: "58385344"
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**FileConnection**|Salve o perfil produzido em um arquivo no local especificado em um gerenciador de conexões do Arquivo.<br /><br /> Observação: Especifique qual Gerenciador de conexão de arquivo para usar o **destino** opção.|  
-|**Variável**|Salve a saída do perfil em uma variável de pacote.<br /><br /> Observação: Especifique qual variável de pacote para usar o **destino** opção.|  
+|**FileConnection**|Salve o perfil produzido em um arquivo no local especificado em um gerenciador de conexões do Arquivo.<br /><br /> Observação: Especifique qual gerenciador de conexões do Arquivo deve ser usado na opção **Destino**.|  
+|**Variável**|Salve a saída do perfil em uma variável de pacote.<br /><br /> Observação: Especifique qual variável de pacote deve ser usada na opção **Destino**.|  
   
  **Destino**  
  Especifique qual gerenciador de conexões do Arquivo ou variável de pacote contém a saída do perfil de dados:  

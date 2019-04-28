@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b500821dff03210d63007ef4831f93327b5e6bdb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715183"
 ---
 # <a name="content-queries-data-mining"></a>Consultas de conteúdo (mineração de dados)
   Uma consulta de conteúdo é um modo de extrair informações sobre as estatísticas internas e a estrutura do modelo de mineração propriamente dito. Às vezes uma consulta de conteúdo pode fornecer detalhes que não estão prontamente disponível no visualizador. Você também pode usar os resultados de uma consulta de conteúdo para extrair informações programaticamente por outros usos.  

@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d807b4b62eed46e99fdeaf0225fadb59b26042a8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62817010"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "52748419"
 |**retention**|**int**|O período de retenção para o conjunto de publicação inteira, onde a unidade é indicada pelo valor de **retention_period_unit** coluna.|  
 |**publication_type**|**tinyint**|Indica se a publicação é filtrada:<br /><br /> **0** = não filtrada.<br /><br /> **1** = filtrada.|  
 |**pubid**|**uniqueidentifier**|O número de identificação exclusivo desta publicação. Isso é gerado quando a publicação é adicionada.|  
-|**DesignMasterID**|**uniqueidentifier**|Reservado para uso futuro.|  
+|**designmasterid**|**uniqueidentifier**|Reservado para uso futuro.|  
 |**parentid**|**uniqueidentifier**|Indica a publicação pai da qual a publicação ponto a ponto ou de subconjunto atual foi criada (usado para topologias de publicação hierárquicas).|  
 |**sync_mode**|**tinyint**|O modo de sincronização desta publicação:<br /><br /> **0** = nativo.<br /><br /> **1** = caractere.|  
 |**allow_push**|**int**|Indica se a publicação permite assinaturas push.<br /><br /> **0** = assinaturas push não permitidas.<br /><br /> **1** = assinaturas push são permitidas.|  
@@ -77,7 +77,7 @@ ms.locfileid: "52748419"
 |**allow_subscriber_initiated_snapshot**|**bit**|Indica que os Assinantes podem iniciar o processo que gera o instantâneo para uma publicação usando filtros com parâmetros. **1** indica que os assinantes podem iniciar o processo de instantâneo.|  
 |**dynamic_snapshot_queue_timeout**|**int**|Especifica quantos minutos um Assinante precisa esperar na fila para que o processo de geração de instantâneo comece, ao usar filtros com parâmetros.|  
 |**dynamic_snapshot_ready_timeout**|**int**|Especifica quantos minutos um Assinante espera para que o processo de geração de instantâneo seja concluído, ao usar filtros com parâmetros.|  
-|**distribuidor**|**sysname**|O nome do Distribuidor para a publicação.|  
+|**distributor**|**sysname**|O nome do Distribuidor para a publicação.|  
 |**snapshot_jobid**|**binary(16)**|Identifica o trabalho de agente que gera o instantâneo quando o Assinante pode iniciar o processo de geração de instantâneo.|  
 |**allow_web_synchronization**|**bit**|Especifica se a publicação está habilitada para sincronização da Web, onde **1** significa que a sincronização da Web está habilitada para a publicação.|  
 |**web_synchronization_url**|**nvarchar(500)**|Especifica o valor padrão da URL da Internet usado para sincronização da Web.|  

@@ -29,11 +29,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 570d812400a35a45d59f97901b9be698abc21863
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699132"
 ---
 # <a name="working-with-members-tuples-and-sets-mdx"></a>Trabalhando com membros, tuplas e conjuntos (MDX)
   A linguagem MDX fornece inúmeras funções que retornam um ou mais membros, tuplas ou conjuntos ou que agem como tais.  
@@ -49,7 +49,7 @@ FROM [Adventure Works]
   
 ```  
   
- Você também pode usar o `FirstChild` função para retornar o mesmo membro, como no exemplo a seguir.  
+ Também é possível usar a função `FirstChild` para retornar o mesmo membro, como no exemplo a seguir.  
   
 ```  
 SELECT [Date].[Calendar Year].FirstChild on 0  
@@ -57,7 +57,7 @@ FROM [Adventure Works]
   
 ```  
   
- Para obter mais informações sobre as funções de membro MDX, consulte [MDX Function Reference &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx).  
+ Para obter mais informações sobre as funções de membro MDX, consulte [Referência da Função MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx).  
   
 ## <a name="tuple-functions"></a>funções de tupla  
  A linguagem MDX fornece várias funções que retornam tuplas e que podem ser usadas em qualquer lugar onde uma tupla é aceitada. Por exemplo, a função [Item &#40;Tupla&#41; &#40;MDX&#41;](/sql/mdx/item-tuple-mdx) pode ser usada para extrair a primeira tupla do conjunto, o que é muito útil quando você sabe que um conjunto é composto por uma única tupla e quer fornecer essa tupla a uma função que requer uma tupla.  
@@ -129,6 +129,6 @@ FROM [Adventure Works]
 ## <a name="see-also"></a>Consulte também  
  [Principais conceitos em MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [Conceitos básicos de consulta MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
- [Referência da função MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
+ [Referência da Função MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
   
   

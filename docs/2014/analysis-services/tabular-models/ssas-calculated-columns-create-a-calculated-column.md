@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 40e802ac33c7aa9b97267a725b20eb0d2f00dbb1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794201"
 ---
 # <a name="create-a-calculated-column-ssas-tabular"></a>Criar uma coluna calculada (SSAS tabular)
   Colunas calculadas permitem adicionar novos dados a seu modelo. Em vez de colar ou importar valores na coluna, você deve criar uma fórmula DAX que define os valores de nível de linha da coluna. Os valores em cada linha de uma coluna calculada são calculados e preenchidos quando você cria uma fórmula válida e, em seguida, clica em ENTER. A coluna calculada pode ser então adicionada a um relatório ou aplicativo de análise da mesma maneira que qualquer outra coluna de dados. Este tópico descreve como criar uma nova coluna calculada usando a barra de fórmulas DAX no designer modelo.  

@@ -20,18 +20,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e4e0b1069977c14216952e537d4bd12b28190529
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62684008"
 ---
 # <a name="sysdmserverregistry-transact-sql"></a>sys.dm_server_registry (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna informações de configuração e instalação que estão armazenadas no registro do Windows para a instância atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Retorna uma linha por chave de registro. Use essa exibição de gerenciamento dinâmico para retornar informações como os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que estão disponíveis nos computadores host ou valores de configuração de rede para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |registry_key|**nvarchar(256)**|Nome da chave do Registro. Permite valor nulo.|  
 |value_name|**nvarchar(256)**|Nome do valor da chave. Este é o item mostrado na **nome** coluna do Editor do registro. Permite valor nulo.|  

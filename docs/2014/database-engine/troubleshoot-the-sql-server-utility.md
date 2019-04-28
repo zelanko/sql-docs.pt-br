@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ed71e0fb889b0cff71937e78245bef1453e13a10
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842522"
 ---
 # <a name="troubleshoot-the-sql-server-utility"></a>Solucionar problemas do Utilitário do SQL Server
   A solução de problemas do Utilitário do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode incluir a resolução de uma operação malsucedida de inscrição de uma instância do SQL Server com um UCP, a solução de problemas de falha na coleta de dados que resultam em ícones cinzas na exibição da lista de instâncias gerenciadas em um UCP, a redução de gargalos de desempenho ou a resolução de problemas de integridade de recursos. Para obter mais informações sobre como eliminar problemas de integridade de recursos identificados por um [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] UCP, consulte [solucionar problemas de integridade de recursos do SQL Server &#40;utilitário do SQL Server&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md).  
@@ -25,7 +25,7 @@ ms.locfileid: "53371058"
   
  Ocorreu uma exceção ao executar uma instrução ou um lote Transact-SQL. (Microsoft.SqlServer.ConnectionInfo)  
   
- Informações adicionais:  Não foi possível obter informações sobre o grupo/usuário do Windows NT '\<nome_do_domínio \ nome_da_conta >', código de erro 0x5. (Microsoft SQL Server, Erro: 10060) 15404)  
+ Informações adicionais:  Não foi possível obter informações sobre o grupo/usuário do Windows NT '\<nome_do_domínio \ nome_da_conta >', código de erro 0x5. (Microsoft SQL Server, Error: 15404)  
   
  Esse problema pode ocorrer no seguinte exemplo de cenário:  
   
@@ -48,9 +48,9 @@ ms.locfileid: "53371058"
   
  As mensagens de erro simplificadas são:  
   
- A execução do comando parou porque a variável de shell "ErrorActionPreference" está definida para Parar: Acesso negado.  
+ Execução do comando parou porque a variável de shell "ErrorActionPreference" está definida para parar: Acesso negado.  
   
- ERRO: \<Data e hora (MM/DD/AAAA HH: mm ss) >: exceção capturada durante a coleta de propriedades da CPU.  Uma consulta de WMI pode ter falhado.  AVISO.  
+ ERRO: \<Data e hora (MM/DD/AAAA HH: mm ss) >: Exceção capturada durante a coleta de propriedades de cpu.  Uma consulta de WMI pode ter falhado.  AVISO.  
   
  Para resolver esse problema, verifique os seguintes parâmetros de configuração:  
   

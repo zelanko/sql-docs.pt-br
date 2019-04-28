@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aa9537784b4e7118567ddc262aecac3e722432ee
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59946632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711253"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>Encaixar o painel de dados do relatório no Designer de Relatórios (SSRS)
   No Designer de Relatórios, no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], o painel de dados do relatório apresenta uma exibição hierárquica de objetos de dados que você pode usar em um relatório, incluindo fontes de dados, conjuntos de dados, campos, parâmetros e imagens. As fontes de dados dessa exibição podem ser inseridas em fontes de dados compartilhadas exibidas no Gerenciador de Soluções ou referenciadas por elas.  

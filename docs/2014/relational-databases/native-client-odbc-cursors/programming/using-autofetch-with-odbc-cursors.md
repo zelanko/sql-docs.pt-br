@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 343975c2c6ad39c67dcd10c0d55886d21e69f3f5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711554"
 ---
 # <a name="using-autofetch-with-odbc-cursors"></a>Usando a opção Autofetch com cursores ODBC
   Quando conectado a uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client dá suporte a uma opção de autofetch ao usar qualquer tipo de cursor de servidor. Com a opção de autofetch, a **SQLExecute** ou **SQLExecDirect** função que abre o cursor também tem implícito [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md)função (SQL_FIRST). As linhas que formam o primeiro conjunto de linhas são retornadas para as variáveis associadas de aplicativo como parte da execução da instrução, evitando outra viagem de ida e volta pela rede até o servidor. [SQLGetData](../../native-client-odbc-api/sqlgetdata.md) não é suportado quando a opção autofetch está habilitada; as colunas do conjunto de resultados devem ser associadas a variáveis de programa.  

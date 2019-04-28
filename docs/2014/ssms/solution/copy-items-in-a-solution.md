@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eaa81c35dc13c60a06196d1c61ab4dce9106f9b9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711116"
 ---
 # <a name="copy-items-in-a-solution"></a>Copiar itens em uma solução
   Você pode copiar itens que usam o Gerenciador de Soluções ou o Windows Explorer.  

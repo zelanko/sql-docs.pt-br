@@ -17,18 +17,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8c3616e40ff54c67d27902ddf9454084fb62e282
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62813651"
 ---
 # <a name="cross-database-transactions-not-supported-for-database-mirroring-or-alwayson-availability-groups-sql-server"></a>Transações envolvendo todos os bancos de dados sem suporte para espelhamento de banco de dados ou Grupos de Disponibilidade AlwaysOn (SQL Server)
   Os [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ou o espelhamento de banco de dados não oferecem suporte a transações entre bancos de dados ou transações distribuídas. Isso é porque a atomicidade/integridade da transação não pode ser garantida pelos seguintes motivos:  
   
--   Para transações envolvendo todos os bancos de dados: cada banco de dados é confirmado de forma independente. Portanto, mesmo para bancos de dados em um único grupo de disponibilidade, um failover pode ocorrer depois que um banco de dados confirma uma transação, mas antes de o outro banco de dados confirmar. No espelhamento de banco de dados, esse problema é complexo, pois, após o failover, o banco de dados espelhado fica normalmente em uma instância de servidor diferente do outro banco de dados, e mesmo se ambos os bancos de dados forem espelhados entre os mesmos dois parceiros, não haverá garantia de que ambos os bancos de dados receberão failover ao mesmo tempo.  
+-   Para transações entre bancos de dados: Cada banco de dados confirma de forma independente. Portanto, mesmo para bancos de dados em um único grupo de disponibilidade, um failover pode ocorrer depois que um banco de dados confirma uma transação, mas antes de o outro banco de dados confirmar. No espelhamento de banco de dados, esse problema é complexo, pois, após o failover, o banco de dados espelhado fica normalmente em uma instância de servidor diferente do outro banco de dados, e mesmo se ambos os bancos de dados forem espelhados entre os mesmos dois parceiros, não haverá garantia de que ambos os bancos de dados receberão failover ao mesmo tempo.  
   
--   Para transações distribuídas: após um failover, o novo servidor principal/réplica primária não poderá se conectar ao coordenador de transações distribuídas no servidor principal/réplica primária anterior. Portanto, o novo servidor principal/réplica primária não pode obter o status da transação.  
+-   Para transações distribuídas: Após um failover, a novo servidor principal/réplica primária não consegue se conectar ao coordenador de transações distribuídas da réplica do servidor principal/primário anterior. Portanto, o novo servidor principal/réplica primária não pode obter o status da transação.  
   
  O exemplo de espelhamento de banco de dados a seguir ilustra como uma inconsistência lógica pode ocorrer. Neste exemplo, um aplicativo usa uma transação de banco de dados cruzado para inserir duas linhas de dados: uma linha é inserida em uma tabela em um banco de dados espelho, A, e a outra linha é inserida em uma tabela em outro banco de dados, B. O banco de dados A está sendo espelhado em modo de alta segurança com failover automático. Enquanto a transação está sendo confirmada, o banco de dados A torna-se indisponível e ocorre failover automático na sessão de espelhamento para o espelho do banco de dados A.  
   

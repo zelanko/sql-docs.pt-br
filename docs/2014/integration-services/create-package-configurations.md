@@ -20,11 +20,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c4bf8041fbac675653bb620d3aca7b1abba21a0a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62831971"
 ---
 # <a name="create-package-configurations"></a>Criar configurações de pacote
   Você cria as configurações do pacote por meio da caixa de diálogo **Organizador de Configurações do Pacote** e do Assistente de Configuração de Pacote. Para acessar essas ferramentas, clique em **Configurações do Pacote** no menu de **SSIS** em [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  

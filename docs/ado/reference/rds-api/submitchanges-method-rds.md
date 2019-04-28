@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a0655a76463f7a0a1507fa2767eade3cb37c48a8
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62710195"
 ---
 # <a name="submitchanges-method-rds"></a>Método SubmitChanges (RDS)
 Envia as alterações de localmente em cache e atualizáveis pendentes [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) à fonte de dados especificado na [Connect](../../../ado/reference/rds-api/connect-property-rds.md) propriedade ou o [URL](../../../ado/reference/rds-api/url-property-rds.md) propriedade.  

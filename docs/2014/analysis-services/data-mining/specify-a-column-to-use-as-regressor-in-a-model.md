@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c35eeb8905a5f4753572ae89adce0c8fdfbec691
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732864"
 ---
 # <a name="specify-a-column-to-use-as-regressor-in-a-model"></a>Especificar uma coluna para usar como regressor em um modelo
   Um modelo de regressão linear representa o valor do atributo previsível como resultado de uma fórmula, que combina as entradas de forma que os dados são ajustados o mais próximo possível a uma linha de regressão estimada. O algoritmo aceita somente valores numéricos como entradas e detecta automaticamente as entradas que oferecem o melhor ajuste.  
@@ -63,7 +63,7 @@ ms.locfileid: "48179917"
 ## <a name="see-also"></a>Consulte também  
  [Algoritmo Regressão Linear da Microsoft](microsoft-linear-regression-algorithm.md)   
  [Consultas de mineração de dados](data-mining-queries.md)   
- [Referência técnica do algoritmo de regressão Linear de Microsoft](microsoft-linear-regression-algorithm-technical-reference.md)   
- [Mining Model Content para modelos de regressão Linear &#40;Analysis Services - mineração de dados&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Referência Técnica do Algoritmo de Regressão Linear da Microsoft](microsoft-linear-regression-algorithm-technical-reference.md)   
+ [Conteúdo do modelo de mineração para modelos de regressão linear &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

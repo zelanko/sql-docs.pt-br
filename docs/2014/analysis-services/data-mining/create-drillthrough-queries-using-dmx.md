@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2ff75840ba60d8ab93a3adeeeef949263e607b35
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722684"
 ---
 # <a name="create-drillthrough-queries-using-dmx"></a>Criar consultas de detalhamento usando DMX
   Em todos os modelos com suporte ao detalhamento, você pode recuperar dados de caso e dados de estrutura criando uma consulta DMX no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou qualquer outro cliente que ofereça suporte a DMX.  
@@ -45,7 +45,7 @@ WHERE [Model Region] = 'M200 Pacific'
  Note que, neste exemplo, um alias foi usado para renomear a coluna de estrutura. Se você não atribuir um alias à coluna de estrutura, a coluna será retornada com o nome 'Expression'. Este é o comportamento padrão para todas as colunas sem nome.  
   
 ## <a name="see-also"></a>Consulte também  
- [Consultas de detalhamento &#40;mineração de dados&#41;](drillthrough-queries-data-mining.md)   
+ [Consultas de detalhamento &#40;Mineração de dados&#41;](drillthrough-queries-data-mining.md)   
  [Detalhamento em estruturas de mineração](drillthrough-on-mining-structures.md)  
   
   

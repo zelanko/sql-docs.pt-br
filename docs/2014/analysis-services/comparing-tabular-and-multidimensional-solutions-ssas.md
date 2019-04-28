@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 498cba5d7ccb4e97de13d9cb46e58351547d9b75
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680816"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions-ssas"></a>Comparando soluções tabulares e multidimensionais (SSAS)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornece dois métodos distintos para modelagem de dados: tabela e multidimensionais. Embora haja sobreposição significativa entre eles, também há diferenças importantes que informarão a sua decisão sobre como seguir em frente. Neste tópico, podemos oferecer comparações de recurso e explicar como cada abordagem trata os requisitos comuns de projeto. Por exemplo, se o suporte de uma fonte de dados específica é uma consideração importante, a seção sobre fontes de dados pode ajudar a orientar sua decisão sobre qual abordagem de modelagem utilizar.  

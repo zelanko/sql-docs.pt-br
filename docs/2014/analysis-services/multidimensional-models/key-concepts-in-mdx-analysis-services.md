@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: acd35ed9c39dc11b0ea60017b082d407f6c1b47d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512796"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700645"
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>Principais conceitos em MDX (Analysis Services)
   Antes de usar MDX (Multidimensional Expressions) para consultar dados multidimensionais ou criar expressões MDX em um cubo, é importante entender os conceitos e a terminologia multidimensional.  
@@ -103,7 +103,7 @@ ms.locfileid: "52512796"
 ## <a name="key-attributes"></a>Atributos de chave  
  Os modelos são uma colação de objetos relacionados que contam com chaves e índices para fazer associações. O mesmo vale para os modelos do Analysis Services. Para cada dimensão (lembre-se que é equivalente a uma tabela em um modelo relacional) há um atributo de chave. O **atributo de chave** é usado em relações de chave estrangeira com a tabela de fatos (grupo de medidas). Todos os atributos que não são de chave na dimensão são vinculados (direta ou indiretamente) ao atributo de chave.  
   
- Em geral, mas não sempre, o atributo de chave também é o **Atributo de Granularidade**. A granularidade refere-se ao nível de detalhes ou precisão dos dados. Novamente, um exemplo comum é o jeito mais rápido de entender. Considere os valores de data: Para vendas diárias, você precisa dos valores de data específicos do dia em questão; para cotas, pode ser suficiente especificar o trimestre, mas se seus dados analíticos são os resultados de corridas de um evento esportivo, a granulação poderá ser milissegundos. O nível de precisão dos valores dos dados é a granulação.  
+ Em geral, mas não sempre, o atributo de chave também é o **Atributo de Granularidade**. A granularidade refere-se ao nível de detalhes ou precisão dos dados. Novamente, um exemplo comum é o jeito mais rápido de entender. Considere os valores de data: Para vendas diárias, você precisa dos valores de data especificados para o dia; para cotas, trimestralmente pode ser suficiente, mas se seus dados analíticos os resultados de corridas de um evento esportivo, a granulação muito bem talvez precise ser milissegundos. O nível de precisão dos valores dos dados é a granulação.  
   
  Moeda é outro exemplo: um aplicativo financeiro pode acompanhar valores monetários até vários decimais, enquanto o bairro da sua escola local pode precisar apenas de valores para a unidade. É importante entender a granulação para evitar armazenar dados desnecessários. Retirar os milissegundos da marcação de hora ou centavos do valor de vendas pode economizar espaço de armazenamento e tempo de processamento quando este nível de detalhe não for relevante para sua análise.  
   

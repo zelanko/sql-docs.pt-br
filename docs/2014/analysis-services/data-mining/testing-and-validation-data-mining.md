@@ -30,11 +30,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d6b41901176a57ca65f72efe90cb1644a272e5b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732904"
 ---
 # <a name="testing-and-validation-data-mining"></a>Teste e validação (mineração de dados)
   A validação é o processo de avaliar como seus modelos de mineração são executados nos dados reais. É importante validar seus modelos de mineração entendendo suas qualidades e características antes de implantá-los em um ambiente de produção.  
@@ -87,13 +87,13 @@ ms.locfileid: "48077746"
 |Tópicos|Links|  
 |------------|-----------|  
 |Saiba configurar um conjunto de dados de testes usando um assistente ou comandos DMX|[Conjuntos de dados de teste e treinamento](training-and-testing-data-sets.md)|  
-|Saiba testar a distribuição e a representatividade dos dados em uma estrutura de mineração|[A validação cruzada &#40;Analysis Services - mineração de dados&#41;](cross-validation-analysis-services-data-mining.md)|  
-|Saiba sobre os tipos de gráfico de exatidão fornecidos no [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)].|[Lift Chart &#40;Analysis Services - mineração de dados&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Gráfico de ganho &#40;Analysis Services - mineração de dados&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [Gráfico de dispersão &#40;Analysis Services - mineração de dados&#41;](scatter-plot-analysis-services-data-mining.md)|  
-|Saiba criar uma matriz de classificação, às vezes chamada de matriz de confusão, para avaliar o número de verdadeiros e falsos positivos e negativos.|[Matriz de classificação &#40;Analysis Services - mineração de dados&#41;](classification-matrix-analysis-services-data-mining.md)|  
+|Saiba testar a distribuição e a representatividade dos dados em uma estrutura de mineração|[Validação cruzada &#40;Analysis Services – Data Mining&#41;](cross-validation-analysis-services-data-mining.md)|  
+|Saiba sobre os tipos de gráfico de exatidão fornecidos no [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)].|[Gráfico de comparação de precisão &#40;Analysis Services – Mineração de dados&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Gráfico de ganho &#40;Analysis Services – Mineração de dados&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [Dispersão &#40;Analysis Services – Mineração de dados&#41;](scatter-plot-analysis-services-data-mining.md)|  
+|Saiba criar uma matriz de classificação, às vezes chamada de matriz de confusão, para avaliar o número de verdadeiros e falsos positivos e negativos.|[Matriz de classificação &#40;Analysis Services – Mineração de dados&#41;](classification-matrix-analysis-services-data-mining.md)|  
   
 ## <a name="see-also"></a>Consulte também  
  [Ferramentas de mineração de dados](data-mining-tools.md)   
  [Soluções de mineração de dados](data-mining-solutions.md)   
- [Teste e validação de tarefas e instruções &#40;mineração de dados&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [Tarefas de teste e validação e instruções &#40;Mineração de dados&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

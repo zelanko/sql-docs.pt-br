@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 150007626cab59ab7905d369e8e50d7f1b001982
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681441"
 ---
 # <a name="completing-the-wizard-partition-wizard"></a>Concluindo o Assistente (Assistente para Partições)
   Use a página **Concluindo o Assistente** para nomear a partição, definir o design de agregação da partição e, opcionalmente, implantar e processar a partição após concluir o Assistente para Partições.  
@@ -32,16 +32,16 @@ ms.locfileid: "48102216"
   
  A tabela a seguir lista as opções de agregação disponíveis.  
   
-|Opção|Description|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |**Criar agregações para a partição agora**|Cria agregações para a nova partição depois que o Assistente para Partições cria a nova partição. A seleção dessa opção inicia o Assistente de Design de Agregação depois que você clica **em Concluir** no Assistente para Partições. Para obter mais informações sobre o Assistente de Design de Agregação, consulte a [Ajuda de F1 do Assistente de Design de Agregação](aggregation-design-wizard-f1-help.md).|  
 |**Criar as agregações mais tarde**|Cria a partição sem criar agregações neste momento.|  
 |**Copiar o design de agregação de uma partição existente**|Copia o design de agregação de uma partição existente no grupo de medidas para a nova partição. Um clique nesta opção disponibiliza a opção **Copiar de** . Use a opção **Copiar de** para selecionar a partição da qual copiar o design de agregação.<br /><br /> Observe que as partições que podem ser mescladas no futuro devem ter o mesmo design de agregação e a estrutura de tabela. Se você mesclar a nova partição com uma partição existente no grupo de medidas, deverá copiar o design de agregação da partição existente na nova partição.|  
   
  **Implantar e processar agora**  
- Implanta e processa a partição para a instância do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] especificada na página **Locais de Processamento e Armazenamento**. O assistente implanta e processa a partição depois que você clica em **Concluir** nessa página.  
+ Implanta e processa a partição para a instância do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] especificada na página **Locais de Processamento e Armazenamento** . O assistente implanta e processa a partição depois que você clica em **Concluir** nessa página.  
   
 ## <a name="see-also"></a>Consulte também  
- [Partições &#40;Analysis Services - dados multidimensionais&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [Partições &#40;Analysis Services – Dados Multidimensionais&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

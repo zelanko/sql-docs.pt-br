@@ -11,16 +11,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0bb00b699d08d29b79c16d0aa940a381723b5acf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720025"
 ---
 # <a name="summary-writing-transact-sql"></a>Resumo: Gravando Transact-SQL
   Editor de consultas é um passo significativo em direção um ambiente de criação mais sofisticado no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] desenvolvimento. Você poderá alternar facilmente o Editor de Consultas para o modo de tela inteira para exibir o código ou alternar rapidamente a conexão para outro servidor. Um bom lugar para procurar recursos adicionais está na **opções** caixa de diálogo, disponível na **ferramentas** menu.  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 3: Trabalhando com modelos, soluções e projetos de script](../ssms/tutorials/lesson-3-working-with-templates-solutions-and-script-projects.md)  
+ [Lição 3: Trabalhando com modelos, soluções e projetos de Script](../ssms/tutorials/lesson-3-working-with-templates-solutions-and-script-projects.md)  
   
   

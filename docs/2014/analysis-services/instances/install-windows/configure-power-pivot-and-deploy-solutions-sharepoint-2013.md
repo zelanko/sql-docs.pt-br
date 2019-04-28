@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 96b7798dcacc69b1de233b330b053b2d9a2bd776
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703545"
 ---
 # <a name="configure-powerpivot-and-deploy-solutions-sharepoint-2013"></a>Configurar o PowerPivot e implantar soluções (SharePoint 2013)
   Estes tópicos descrevem a implantação e a configuração de aprimoramentos de camada intermediária aos recursos do PowerPivot no [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)], incluindo a Galeria PowerPivot, a atualização de dados agendada, o Painel de Gerenciamento e os provedores de dados. Execute a ferramenta de **Configuração do PowerPivot para SharePoint 2013** para concluir o seguinte:  
@@ -63,7 +63,7 @@ ms.locfileid: "53370078"
   
     2.  **Servidor de banco de dados**: Você pode usar o mecanismo de banco de dados do SQL Server com suporte para o farm do SharePoint.  
   
-    3.  **Frase secreta**: Insira um frase secreta. Se você estiver criando um novo farm do SharePoint, a frase secreta será usada sempre que você adicionar um servidor ou aplicativo ao farm do SharePoint. Se o farm já existir, insira a frase secreta que permite adicionar um aplicativo de servidor ao farm.  
+    3.  **Frase secreta**: Insira uma senha. Se você estiver criando um novo farm do SharePoint, a frase secreta será usada sempre que você adicionar um servidor ou aplicativo ao farm do SharePoint. Se o farm já existir, insira a frase secreta que permite adicionar um aplicativo de servidor ao farm.  
   
     4.  **Servidor do PowerPivot para Excel Services**: Digite o nome de um [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] servidor modo do SharePoint. Em uma implantação de servidor único, ele será o servidor de banco de dados. `[ServerName]\powerpivot`  
   

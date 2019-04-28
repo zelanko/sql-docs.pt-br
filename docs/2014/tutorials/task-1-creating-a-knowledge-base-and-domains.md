@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: eeaebadd43fe1969ae1c728f8e2f8284ddf7f7ac
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62822139"
 ---
-# <a name="task-1-creating-a-knowledge-base-and-domains"></a>Tarefa 1: Criando a base de dados de conhecimento e domínios
+# <a name="task-1-creating-a-knowledge-base-and-domains"></a>Tarefa 1: Criar a base de dados de conhecimento e domínios
   Nesta tarefa, você cria o **fornecedores** da Base de dados de conhecimento e criar domínios que é usado para dados de limpeza e correspondência de dados para remover duplicatas.  
   
 1.  Inicie **cliente Data Quality**. Clique em **inicie**, aponte para **todos os programas**, clique em **Microsoft SQL Server 2012**, clique em **Data Quality Services**e, em seguida, clique em  **Cliente data Quality**.  
@@ -46,7 +46,7 @@ ms.locfileid: "56011097"
   
      ![Criar caixa de diálogo do domínio](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-05.jpg "criar caixa de diálogo do domínio")  
   
-9. Repita a etapa anterior para criar os domínios a seguir com todas as configurações padrão. Para simplificar o tutorial, você deve definir a **tipo de dados** de todos os domínios como **cadeia de caracteres**. Os outros tipos de dados permitidos são: Integer, Decimal e Date. Quando o **usar valores principais** opção estiver marcada (padrão), todos os sinônimos são substituídos pelo valor principal do grupo de sinônimos na saída. Definindo **cadeia de caracteres normalizar** opção (padrão) remove caracteres especiais nos valores de domínio. O **formato de saída para** opção permite que você selecione a formatação é aplicada quando forem gerados os valores de dados no domínio. Selecione **habilitar verificador ortográfico** (padrão) para executar o verificador ortográfico em todos os valores de cadeia de caracteres ao popular o domínio. O **linguagem** configuração especifica qual versão do idioma a **verificador ortográfico** você deseja aplicar. Selecione **desabilitar algoritmos de erro de sintaxe** para popular o domínio sem verificar os valores de cadeia de caracteres para erros de sintaxe. Ver [criar um domínio](https://msdn.microsoft.com/library/hh510401.aspx) tópico na biblioteca MSDN para obter mais detalhes.  
+9. Repita a etapa anterior para criar os domínios a seguir com todas as configurações padrão. Para simplificar o tutorial, você deve definir a **tipo de dados** de todos os domínios como **cadeia de caracteres**. Os outros tipos de dados permitidos são: Número inteiro, Decimal e data. Quando o **usar valores principais** opção estiver marcada (padrão), todos os sinônimos são substituídos pelo valor principal do grupo de sinônimos na saída. Definindo **cadeia de caracteres normalizar** opção (padrão) remove caracteres especiais nos valores de domínio. O **formato de saída para** opção permite que você selecione a formatação é aplicada quando forem gerados os valores de dados no domínio. Selecione **habilitar verificador ortográfico** (padrão) para executar o verificador ortográfico em todos os valores de cadeia de caracteres ao popular o domínio. O **linguagem** configuração especifica qual versão do idioma a **verificador ortográfico** você deseja aplicar. Selecione **desabilitar algoritmos de erro de sintaxe** para popular o domínio sem verificar os valores de cadeia de caracteres para erros de sintaxe. Ver [criar um domínio](https://msdn.microsoft.com/library/hh510401.aspx) tópico na biblioteca MSDN para obter mais detalhes.  
   
     -   Supplier Name  
   

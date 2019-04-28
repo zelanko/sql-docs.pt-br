@@ -12,11 +12,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a49db54b71f3b7daf0a7a10cc1b4073f1b651fc5
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030133"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844187"
 ---
 # <a name="options-text-editor---all-languages--tabs-page"></a>Opções (página Editor de Texto – Todos os idiomas – Guias)
   Use esta caixa de diálogo para definir o comportamento de tabulação nos cinco editores no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Para exibir essas opções, clique em **Opções** no menu **Ferramentas** . Selecione a pasta **Editor de Texto** , expanda a pasta **Todos os Idiomas** e clique em **Tabulações**.  
@@ -30,13 +30,13 @@ ms.locfileid: "51030133"
  A mensagem "As configurações de recuo (ou guia) para formatos de texto individuais estão em conflito entre si" é exibida quando configurações diferentes são selecionadas para editores específicos. Por exemplo, esse lembrete é exibido se a opção **Recuo do bloco** estiver selecionada para **Texto Sem-Formatação**, mas **Nenhum** estiver selecionada para **XML**.  
   
 ## <a name="indenting"></a>Recuo  
- **Nenhuma**  
+ **Nenhum**  
  Quando essa opção estiver selecionada, a nova linha criada ao se pressionar ENTER não ficará recuada. O cursor é colocado na primeira coluna da nova linha.  
   
  **Bloco**  
  Quando essa opção é selecionada, a nova linha criada ao se pressionar ENTER é recuada automaticamente com a mesma distância em que a linha anterior foi recuada.  
   
- **Inteligente**  
+ **Smart**  
  Quando essa opção é selecionada, a nova linha criada ao se pressionar ENTER é posicionada de acordo com o contexto.  
   
 ## <a name="tabs"></a>Tabulações  

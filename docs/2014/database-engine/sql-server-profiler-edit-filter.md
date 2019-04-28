@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f21abbe6ce79db149104b13399b819a811558c43
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844355"
 ---
 # <a name="sql-server-profiler---edit-filter"></a>SQL Server Profiler - Editar Filtro
   Use a caixa de diálogo **Editar Filtro** para criar e modificar filtros da coluna de dados em um rastreamento. Clique em um nome de coluna na lista para exibir os critérios de filtro disponíveis para essa coluna de dados no painel adjacente. Insira os critérios de filtro e clique em **OK** para aplicá-los à coluna de dados selecionada. Se aparecer um ícone de filtro à esquerda do nome da coluna de dados, isso significa que essa coluna já tem um filtro configurado.  

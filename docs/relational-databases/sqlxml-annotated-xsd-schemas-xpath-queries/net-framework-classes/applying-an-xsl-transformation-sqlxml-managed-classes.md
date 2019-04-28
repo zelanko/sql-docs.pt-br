@@ -1,9 +1,8 @@
 ---
 title: Aplicando uma transformação XSL (Classes gerenciadas SQLXML) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
@@ -13,19 +12,17 @@ helpviewer_keywords:
 - SQLXML Managed Classes, applying XSL transformations
 - XSL Transformations [SQLXML]
 ms.assetid: 8562043b-3e9f-41a3-bb41-92b9f14363c4
-author: MightyPen
-ms.author: genemi
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ff7b05cf91351973fc7c7f0efbc9af0dfa901dea
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720701"
 ---
 # <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>Aplicando uma transformação XSL (classes gerenciadas SQLXML)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Neste exemplo, uma consulta SQL é executada no banco de dados AdventureWorks. A transformação XSL é aplicada ao resultado da consulta para gerar uma tabela de duas colunas com os nomes e sobrenomes dos funcionários.  
   
  A propriedade XslPath do objeto SqlXmlCommand é usada para especificar o arquivo XSL e seu caminho de diretório.  

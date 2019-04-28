@@ -19,11 +19,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: bd5e23d47eaeeab77dce95dbed43e1adb541b396
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62997080"
 ---
 # <a name="spchangeuserslogin-transact-sql"></a>sp_change_users_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,16 +48,16 @@ sp_change_users_login [ @Action = ] 'action'
  [ @Action=] '*ação*'  
  Descreve a ação a ser executada pelo procedimento. *ação* está **varchar(10)**. *ação* pode ter um dos valores a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Auto_Fix**|Vincula uma entrada de usuário na exibição do catálogo de sistema sys.database_principals no banco de dados atual a um logon de nome igual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se ainda não existir um logon com o mesmo nome, ele será criado. Examine o resultado dos **Auto_Fix** instrução para confirmar o vínculo correto foi realmente estabelecido. Evite usar **Auto_Fix** em situações confidenciais de segurança.<br /><br /> Quando você usa **Auto_Fix**, você deve especificar *usuário* e *senha* se o logon ainda não existir, caso contrário, você deve especificar *usuário*, mas *senha* será ignorado. *logon* deve ser NULL. *usuário* deve ser um usuário válido no banco de dados atual. Não pode haver outro usuário mapeado para o logon.|  
 |**Relatório**|Lista os usuários e o SID (identificador de segurança) correspondentes no banco de dados atual que não estão vinculados a nenhum logon. *usuário*, *login*, e *senha* deve ser NULL ou não especificado.<br /><br /> Para substituir a opção de relatório com uma consulta usando as tabelas do sistema, comparar as entradas no **server_prinicpals** com as entradas na **sys. database_principals**.|  
 |**Update_One**|Vincula especificado *usuário* no banco de dados atual a um existente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *logon*. *usuário* e *login* deve ser especificado. *senha* deve ser NULL ou não especificado.|  
   
- [ @UserNamePattern=] '*usuário*'  
+ [ @UserNamePattern= ] '*user*'  
  É o nome de um usuário no banco de dados atual. *usuário* está **sysname**, com um padrão NULL.  
   
- [ @LoginName=] '*login*'  
+ [ @LoginName= ] '*login*'  
  E o nome de um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *login* é **sysname**, com um padrão de NULL.  
   
  [ @Password=] '*senha*'  
@@ -70,7 +70,7 @@ sp_change_users_login [ @Action = ] 'action'
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |UserName|**sysname**|Nome do usuário do banco de dados.|  
 |UserSID|**varbinary(85)**|O identificador de segurança do usuário.|  

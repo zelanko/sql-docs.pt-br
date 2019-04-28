@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f457c901c4226b9a0ead23de57c2455c619f406e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714754"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Computar limites de capacidade por edição do SQL Server
   Esse tópico discute os limites de capacidade de computação para edições diferentes do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] e como elas podem diferir em ambientes físicos e virtualizados com processadores hyper-threaded.  

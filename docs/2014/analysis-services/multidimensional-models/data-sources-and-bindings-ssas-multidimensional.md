@@ -35,11 +35,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 60b3e29ae94c4dcf5d136bcc01bf291a9a6118fe
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700070"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>Fontes de dados e associações (SSAS multidimensional)
   Podem ser acoplados cubos, dimensões e outros objetos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a uma fonte de dados. Uma fonte de dados pode ser um dos seguintes objetos:  
@@ -67,7 +67,7 @@ ms.locfileid: "52510542"
 |Integer|Um inteiro de 32 bytes com sinal. Esse tipo de dados é mapeado para o tipo de dados Int32 no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e o tipo de dados DBTYPE_I4 no OLE DB.|  
 |Single|Um número de ponto flutuante de precisão única dentro do intervalo de -3,40E +38 a 3,40E +38. Esse tipo de dados é mapeado para o tipo de dados Single no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e o tipo de dados DBTYPE_R4 no OLE DB.|  
 |SmallInt|Um inteiro com sinal de 16 bits. Esse tipo de dados é mapeado para o tipo de dados Int16 no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e o tipo de dados DBTYPE_I2 no OLE DB.|  
-|TinyInt|Um inteiro com sinal de 8 bits. Esse tipo de dados é mapeado para o tipo de dados SByte no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e o tipo de dados DBTYPE_I1 no OLE DB.<br /><br /> Observação: Se uma fonte de dados contiver campos do tipo de dados tinyint e a propriedade AutoIncrement for definida como True, eles serão convertidos em inteiros na exibição da fonte de dados.|  
+|TinyInt|Um inteiro com sinal de 8 bits. Esse tipo de dados é mapeado para o tipo de dados SByte no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e o tipo de dados DBTYPE_I1 no OLE DB.<br /><br /> Observação: Se uma fonte de dados contiver campos que são do tipo de dados tinyint e a propriedade AutoIncrement for definida como True, eles serão convertidos em inteiros na exibição da fonte de dados.|  
 |UnsignedBigInt|Um inteiro não assinado de 64 bits. Esse tipo de dados é mapeado para o tipo de dados UInt64 no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e o tipo de dados DBTYPE_UI8 no OLE DB.|  
 |UnsignedInt|Um inteiro não assinado de 32 bits. Esse tipo de dados é mapeado para o tipo de dados UInt32 no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e o tipo de dados DBTYPE_UI4 no OLE DB.|  
 |UnsignedSmallInt|Um inteiro sem sinal de 16 bits. Esse tipo de dados é mapeado para o tipo de dados UInt16 no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e o tipo de dados DBTYPE_UI2 no OLE DB.|  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f6ce753ceaa0cc0ee16b395918390a4402cf5f39
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62827374"
 ---
 # <a name="plan-guide-unsuccessful-event-class"></a>classe de evento Plan Guide Unsuccessful
   A classe de evento Plan Guide Unsuccessful indica que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pôde produzir um plano de execução para uma consulta ou lote que continha uma guia de plano. Em vez disso, o plano foi compilado sem usar a guia de plano. O evento dispara quando as seguintes condições forem verdadeiras:  

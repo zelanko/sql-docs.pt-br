@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 449cf64468f7dcb3925b09af08fd0661f23b1cd1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62695743"
 ---
 # <a name="create-a-master-data-services-database"></a>Criar um banco de dados do Master Data Services
 
@@ -30,7 +30,7 @@ ms.locfileid: "47818584"
   
 ### <a name="to-create-a-master-data-services-database"></a>Para criar um banco de dados do Master Data Services  
   
-1.  Abra o [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
+1.  Abra [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
 2.  No painel esquerdo, clique em **Configuração do Banco de Dados**.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "47818584"
   
 4.  Conclua o assistente **Criar Banco de Dados** para criar e configurar o banco de dados. Para obter informações sobre as opções da interface do usuário no assistente, veja [Assistente para Criar Banco de Dados &#40;Master Data Services Configuration Manager&#41;](../../master-data-services/create-database-wizard-master-data-services-configuration-manager.md).  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Próximas etapas  
   
 -   Defina as configurações do sistema para o banco de dados e o aplicativo Web. Para obter mais informações, veja [Configurações do sistema &#40;Master Data Services&#41;](../../master-data-services/system-settings-master-data-services.md).  
   
@@ -46,7 +46,7 @@ ms.locfileid: "47818584"
   
 -   Configure um plano de manutenção para fazer backup dos logs de banco de dados e de transação. Para obter mais informações, veja [Requisitos do banco de dados &#40;Master Data Services&#41;](../../master-data-services/install-windows/database-requirements-master-data-services.md).  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Instalar o Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   
   

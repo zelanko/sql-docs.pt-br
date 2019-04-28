@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fc6d8cfe6d77bd773317d2eae2ac98a9e200c70a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834620"
 ---
 # <a name="configure-the-integration-services-service-as-a-cluster-resource"></a>Configurar o serviço Integration Services como um recurso de cluster
   Para os clientes que chegaram à conclusão de que as vantagens dessa configuração do serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] como um recurso de cluster sobrepõem-se às desvantagens, esta seção contém as instruções de configuração necessárias. Entretanto, o [!INCLUDE[msCoName](../includes/msconame-md.md)] não recomenda que o serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] seja configurado como um recurso de cluster.  

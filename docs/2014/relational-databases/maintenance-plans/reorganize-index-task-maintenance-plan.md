@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a0f354280da857be236049a564a77716e93cd351
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807053"
 ---
 # <a name="reorganize-index-task-maintenance-plan"></a>Tarefa de Reorganização de Índice (Plano de Manutenção)
   Use a caixa de diálogo **Tarefa de Reorganização de Índice** para mover as páginas de índice em uma ordem de pesquisa mais eficiente. Esta tarefa usa a instrução `ALTER INDEX REORGANIZE` com bancos de dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  

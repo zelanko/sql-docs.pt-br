@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b014f82376b15d9d29834103d8827bf31231ef90
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724821"
 ---
 # <a name="classified-columns-data-mining"></a>Colunas classificadas [mineração de dados]
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -49,8 +49,8 @@ ms.locfileid: "34019943"
  O valor na coluna é o peso ou o fator de replicação do caso do valor associado.  
   
 ## <a name="see-also"></a>Consulte também  
- [Conteúdo tipos & #40; mineração de dados & #41;](../../analysis-services/data-mining/content-types-data-mining.md)   
- [Estruturas de mineração & #40; Analysis Services – mineração de dados & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Tipos de dados & #40; mineração de dados & #41;](../../analysis-services/data-mining/data-types-data-mining.md)  
+ [Tipos de conteúdo &#40;Data Mining&#41;](../../analysis-services/data-mining/content-types-data-mining.md)   
+ [Estruturas de Mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Tipos de dados &#40;Mineração de dados&#41;](../../analysis-services/data-mining/data-types-data-mining.md)  
   
   

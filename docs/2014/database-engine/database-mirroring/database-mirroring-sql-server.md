@@ -24,11 +24,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d97a3132099a6007f99f6a0119fc3df63a58b9b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807873"
 ---
 # <a name="database-mirroring-sql-server"></a>Espelhamento de banco de dados (SQL Server)
     
@@ -111,7 +111,7 @@ ms.locfileid: "48154936"
  Depois que uma sessão de espelhamento é iniciada ou retomada, o processo no qual os registros do log do banco de dados principal acumulados no servidor principal são enviados ao servidor espelho, que grava esses registros de log o mais rapidamente possível para ficar em dia com o servidor principal.  
   
  Segurança de transação  
- Uma propriedade de banco de dados específica de espelhamento que determina se uma sessão de espelhamento de banco de dados opera de forma síncrona ou assíncrona. Há dois níveis de segurança: FULL e OFF.  
+ Uma propriedade de banco de dados específica de espelhamento que determina se uma sessão de espelhamento de banco de dados opera de forma síncrona ou assíncrona. Há dois níveis de segurança: COMPLETO e desativado.  
   
  Witness (testemunha)  
  Para uso apenas com o modo de alta segurança, uma instância opcional do SQL Server que permite ao servidor espelho reconhecer quando iniciar um failover automático. Ao contrário dos dois parceiros de failover, a testemunha não atende ao banco de dados. O suporte ao failover automático é a única função da testemunha.  
@@ -329,7 +329,7 @@ ms.locfileid: "48154936"
  [O ponto de extremidade de espelhamento de banco de dados &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
  [Reparo automático de página &#40;para grupos de disponibilidade e espelhamento de banco de dados&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
  [Solução de problemas de configuração de espelhamento de banco de dados &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
- [Espelhamento de banco de dados: interoperabilidade e coexistência &#40;SQL Server&#41;](database-mirroring-interoperability-and-coexistence-sql-server.md)   
+ [Espelhamento de banco de dados: Interoperabilidade e Coexistência &#40;SQL Server&#41;](database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [Pré-requisitos, restrições e recomendações para espelhamento de banco de dados](prerequisites-restrictions-and-recommendations-for-database-mirroring.md)   
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Sobre o envio de logs &#40;SQL Server&#41;](../log-shipping/about-log-shipping-sql-server.md)  

@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3d52fb28dd1093b81d8a46ec6a8d2dd3cce49807
-ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55428653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62684303"
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -227,7 +227,7 @@ GO
     
 ```    
     
-### <a name="b-returning-information-for-all-tables-and-indexes"></a>b. Retornando informações para todas as tabelas e índices    
+### <a name="b-returning-information-for-all-tables-and-indexes"></a>B. Retornando informações para todas as tabelas e índices    
  O exemplo a seguir retorna informações para todos os índices e tabelas na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A execução desta consulta requer a permissão VIEW SERVER STATE.    
     
 ```    

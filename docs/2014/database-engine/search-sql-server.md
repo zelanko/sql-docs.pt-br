@@ -11,11 +11,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 441fbef735366b63ad56fc6652f79c977378ba2c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843712"
 ---
 # <a name="search-sql-server"></a>Pesquisar (SQL Server)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornece recursos de pesquisa para textos e documentos que vão além da funcionalidade do [!INCLUDE[tsql](../includes/tsql-md.md)] `LIKE` palavra-chave.  

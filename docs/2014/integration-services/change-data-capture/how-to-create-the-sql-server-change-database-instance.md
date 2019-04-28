@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f189bacee19f7377ae36a15f6b62f05de94fa5a0
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835393"
 ---
 # <a name="how-to-create-the-sql-server-change-database-instance"></a>Como criar a instância de banco de dados de alteração do SQL Server
   Este procedimento descreve como usar o CDC Designer Console para criar instâncias CDC.  

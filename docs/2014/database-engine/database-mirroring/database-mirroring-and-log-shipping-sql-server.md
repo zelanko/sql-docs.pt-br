@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ca584a81b8ba70073ee833d8033cd5f664747741
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807444"
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>Espelhamento de banco de dados e envio de logs (SQL Server)
   Um determinado banco de dados pode ser espelhado ou ter o log enviado; ou ter os dois processos realizados simultaneamente. Para escolher o método a ser usado, considere o seguinte:  
@@ -65,7 +65,7 @@ ms.locfileid: "48112090"
   
  ![Envio de logs e espelhamento de banco de dados](../media/logshipping-and-dbm-automatic-failover.gif "Log shipping and database mirroring")  
   
- Depois de um failover de espelhamento, o nome do servidor primário definido no servidor secundário permanece inalterado. para obter informações sobre a ferramenta de configuração e recursos adicionais.  
+ Depois de um failover de espelhamento, o nome do servidor primário definido no servidor secundário permanece inalterado. .  
   
 ## <a name="the-impact-of-database-mirroring-on-a-remote-monitoring-instance"></a>O impacto do espelhamento de banco de dados em uma instância de monitoramento remoto  
  Quando o envio de logs é usado com uma instância de monitoramento remoto, a combinação da sessão de envio de logs e de espelhamento de banco de dados afeta as informações nas tabelas de monitor. As informações sobre o primário formam uma combinação de um configurado no principal/primário e o monitor configurado em cada secundário.  

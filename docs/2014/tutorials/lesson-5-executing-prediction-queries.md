@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a5f4d6dd79f62541e207df688349f694680e2421
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62822295"
 ---
-# <a name="lesson-5-executing-prediction-queries"></a>Lição 5: Executar consultas de previsão
+# <a name="lesson-5-executing-prediction-queries"></a>Lição 5: Como executar consultas de previsão
   Nesta lição, você aprenderá a usar o [SELECT FROM \<modelo > PREDICTION JOIN (DMX)](/sql/dmx/select-from-model-cases-dmx) formulário da instrução SELECT para criar dois tipos diferentes de previsões com base na árvore de decisão do modelo criado por você na [ Lição 2: Adicionando modelos de mineração à estrutura de mineração de associação](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Esses tipos de prognóstico estão definidos abaixo.  
   
  Consulta singleton  

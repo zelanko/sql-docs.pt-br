@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 948ebbc696048915662caaa24b791e6258c459be
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62827624"
 ---
 # <a name="datareader-destination-custom-properties"></a>Propriedades personalizadas do destino DataReader
   O destino DataReader tem propriedades personalizadas e propriedades comuns a todos os componentes de fluxo de dados.  

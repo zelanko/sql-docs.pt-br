@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 19d311a07eb11f1c5119a3c20d7536b5a2986b49
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719893"
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>Fazendo backup, restaurando e sincronizando bancos de dados (XMLA)
   No XML for Analysis, existem três comandos que fazem backup de bancos de dados, que os restauram e que os sincronizam:  
@@ -52,9 +52,9 @@ ms.locfileid: "50145931"
   
  O valor de **segurança** propriedade é limitada a uma das cadeias de caracteres listadas na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|*skipMembership*|Inclua definições de segurança, mas exclua informações de associação, no arquivo de backup.|  
+|*SkipMembership*|Inclua definições de segurança, mas exclua informações de associação, no arquivo de backup.|  
 |*CopyAll*|Inclua definições de segurança e informações de associação no arquivo de backup.|  
 |*IgnoreSecurity*|Exclua definições de segurança do arquivo de backup.|  
   
@@ -82,9 +82,9 @@ ms.locfileid: "50145931"
   
  O valor desse elemento é limitado a uma das cadeias de caracteres listadas na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|*skipMembership*|Inclua definições de segurança, mas exclua informações de associação, no banco de dados.|  
+|*SkipMembership*|Inclua definições de segurança, mas exclua informações de associação, no banco de dados.|  
 |*CopyAll*|Inclua definições de segurança e informações de associação no banco de dados.|  
 |*IgnoreSecurity*|Exclua definições de segurança do banco de dados.|  
   
@@ -120,9 +120,9 @@ ms.locfileid: "50145931"
   
  O valor desse elemento é limitado a uma das cadeias de caracteres listadas na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|*skipMembership*|Inclua definições de segurança, mas exclua informações de associação, no banco de dados de destino.|  
+|*SkipMembership*|Inclua definições de segurança, mas exclua informações de associação, no banco de dados de destino.|  
 |*CopyAll*|Inclua definições de segurança e informações de associação no banco de dados de destino.|  
 |*IgnoreSecurity*|Exclua definições de segurança do banco de dados de destino.|  
   
@@ -136,7 +136,7 @@ ms.locfileid: "50145931"
 ### <a name="synchronizing-rolap-objects"></a>Sincronizando objetos ROLAP  
  O **Synchronize** comando não é possível sincronizar agregações ou dados para objetos que usam o armazenamento ROLAP porque essas informações estão armazenadas em tabelas em uma fonte de dados relacional subjacente. No entanto, os metadados para objetos ROLAP podem ser sincronizados. Para sincronizar os metadados, o **Synchronize** comando recria a estrutura da tabela em uma fonte de dados relacionais.  
   
- Você pode usar o **local** elemento em um comando Synchronize para sincronizar objetos ROLAP. Para cada **local** elemento usado para realocar uma fonte de dados, o **DataSourceType** propriedade deve ser explicitamente definida como *Local*. para obter informações sobre a ferramenta de configuração e recursos adicionais. Você também deve definir a **ConnectionString** propriedade da **local** elemento na cadeia de caracteres de conexão do novo local. Durante a sincronização, o **Synchronize** comando substituirá a cadeia de conexão da fonte de dados identificada pelo **DataSourceID** propriedade do **local** elemento com o valor da **ConnectionString** propriedade da **local** elemento.  
+ Você pode usar o **local** elemento em um comando Synchronize para sincronizar objetos ROLAP. Para cada **local** elemento usado para realocar uma fonte de dados, o **DataSourceType** propriedade deve ser explicitamente definida como *Local*. . Você também deve definir a **ConnectionString** propriedade da **local** elemento na cadeia de caracteres de conexão do novo local. Durante a sincronização, o **Synchronize** comando substituirá a cadeia de conexão da fonte de dados identificada pelo **DataSourceID** propriedade do **local** elemento com o valor da **ConnectionString** propriedade da **local** elemento.  
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento Backup &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/backup-element-xmla)   

@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bd2040199aa2f24f0ae794bda9d13255a4e1d583
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807500"
 ---
 # <a name="create-history-and-status-reports"></a>Criar histórico e relatórios de status
   Você pode criar um relatório no histórico ou status atual de arquivos na solução carregada no momento. Também é possível visualizar o relatório e depois enviá-lo para uma impressora, um arquivo ou para a Área de Transferência. Estes relatórios não são gerados pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Em vez disso, o [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe gera o relatório.  

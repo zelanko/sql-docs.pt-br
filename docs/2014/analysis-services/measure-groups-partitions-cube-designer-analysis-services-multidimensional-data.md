@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7ffd5b3ff4eb98c96e1832e353e64f1953bd62e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084796"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727982"
 ---
 # <a name="measure-groups-partitions-tab-cube-designer-analysis-services---multidimensional-data"></a>Grupos de Medidas (guia Partições, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel **Grupos de Medidas** na guia **Partições** do Designer de Cubo para gerenciar as partições associadas a cada grupo de medidas do cubo.  
@@ -66,11 +66,11 @@ ms.locfileid: "48084796"
 |**Adicionar Business Intelligence**|Clique para exibir o **Assistente de Business Intelligence** e adicionar recursos de Business Intelligence ao cubo. Para obter mais informações sobre o **Assistente de Business Intelligence**, consulte [Ajuda F1 do Assistente de Business Intelligence](business-intelligence-wizard-f1-help.md).|  
 |**Nova partição**|Clique para exibir o **Assistente para Partições** e criar uma nova partição no grupo de medidas selecionado.|  
 |**Renomear partição**|Selecione para renomear a partição selecionada.|  
-|**Delete (excluir)**|Clique para exibir a caixa de diálogo **Excluir Objetos** e excluir a ação selecionada.<br /><br /> Observação: esta opção será desabilitada se uma partição de write-back for selecionada.|  
-|**Agregações de design**|Clique para exibir o **Assistente de Design de Agregação** e criar um design de agregação para a partição selecionada.<br /><br /> Observação: esta opção será desabilitada se uma partição de write-back for selecionada.|  
+|**Delete (excluir)**|Clique para exibir a caixa de diálogo **Excluir Objetos** e excluir a ação selecionada.<br /><br /> Observação: Esta opção será desabilitada se uma partição de write-back for selecionada.|  
+|**Agregações de design**|Clique para exibir o **Assistente de Design de Agregação** e criar um design de agregação para a partição selecionada.<br /><br /> Observação: Esta opção será desabilitada se uma partição de write-back for selecionada.|  
 |**Configurações de armazenamento**|Clique para exibir a caixa de diálogo **Configurações de Armazenamento** e especificar o modo de armazenamento, o cache pró-ativo e configurações de notificação para a partição selecionada.|  
 |**Configurações de write-back**|Clique para exibir a caixa de diálogo **Habilitar/Desabilitar Write-back** e especificar configurações de write-back para o grupo de medidas que contém a partição selecionada.|  
-|**Otimização baseada no uso**|Clique para exibir o **Assistente de Otimização com Base no Uso** e criar um design de agregação baseado em padrões de uso existentes para a partição selecionada.<br /><br /> Observação: esta opção será desabilitada se uma partição de write-back for selecionada.|  
+|**Otimização baseada no uso**|Clique para exibir o **Assistente de Otimização com Base no Uso** e criar um design de agregação baseado em padrões de uso existentes para a partição selecionada.<br /><br /> Observação: Esta opção será desabilitada se uma partição de write-back for selecionada.|  
 |**Processar**|Clique para exibir a caixa de diálogo **Processar** e processar a partição selecionada.|  
 |**Copiar**|Esta opção está desabilitada.|  
 |**Colar**|Esta opção está desabilitada.|  

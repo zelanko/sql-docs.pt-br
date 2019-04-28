@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 30d358dab4ab983109d354238b35b64a3d7976da
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864420"
 ---
 # <a name="visual-c-extensions"></a>Extensões do Visual C++
 ## <a name="the-iadorecordbinding-interface"></a>A Interface IADORecordBinding
@@ -90,14 +90,14 @@ Update(CADORecordBinding *binding)
  **BEGIN_ADO_BINDING**(*Class*)
 
 ### <a name="fixed-length-data"></a>Dados de comprimento fixo
- **ADO_FIXED_LENGTH_ENTRY**(*Ordinal, o tipo de dados, o Buffer, o Status, modificar*)
+ **ADO_FIXED_LENGTH_ENTRY**(*Ordinal, DataType, Buffer, Status, Modify*)
 
  **ADO_FIXED_LENGTH_ENTRY2**(*Ordinal, DataType, Buffer, Modify*)
 
 ### <a name="numeric-data"></a>Dados numéricos
- **ADO_NUMERIC_ENTRY**(*Ordinal, tipo de dados, Buffer, precisão, escala, Status, modificar*)
+ **ADO_NUMERIC_ENTRY**(*Ordinal, DataType, Buffer, Precision, Scale, Status, Modify*)
 
- **ADO_NUMERIC_ENTRY2**(*Ordinal, tipo de dados, Buffer, precisão, escala, modificar*)
+ **ADO_NUMERIC_ENTRY2**(*Ordinal, DataType, Buffer, Precision, Scale, Modify*)
 
 ### <a name="variable-length-data"></a>Dados de comprimento variável
  **ADO_VARIABLE_LENGTH_ENTRY**(*Ordinal, DataType, Buffer, Size, Status, Length, Modify*)

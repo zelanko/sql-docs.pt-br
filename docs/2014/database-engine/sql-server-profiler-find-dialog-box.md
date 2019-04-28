@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 23bbfd748bcb649e5f7d103683d20413764a62a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842492"
 ---
 # <a name="sql-server-profiler---find-dialog-box"></a>SQL Server Profiler - Caixa de diálogo Localizar
   Use a caixa de diálogo **Localizar** para pesquisar um rastreamento para caracteres ou palavras específicos. Para cancelar uma pesquisa em andamento, pressione ESC.  

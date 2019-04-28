@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0b065c878217f52f2cffaff05b4e6a9f28312dd4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759128"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62817647"
 ---
 # <a name="approve-or-reject-a-changeset-master-data-services"></a>Aprovar ou rejeitar um conjunto de alterações (Master Data Services)
 
@@ -50,7 +50,7 @@ ms.locfileid: "52759128"
   
 6.  Clique em **Aprovar** para aprovar o conjunto de alterações. O conjunto de alterações é confirmado automaticamente.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Criar um conjunto de alterações &#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)   
  [Aplicar e atualizar um conjunto de alterações &#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)   
  [Confirmar ou enviar um conjunto de alterações &#40;Master Data Services&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  

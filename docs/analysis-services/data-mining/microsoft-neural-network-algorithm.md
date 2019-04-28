@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 54896093b887985fc658e823f7d277347a70f0ea
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724967"
 ---
-# <a name="microsoft-neural-network-algorithm"></a>Algoritmo Rede Neural da Microsoft
+# <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   O algoritmo de Rede Neural do [!INCLUDE[msCoName](../../includes/msconame-md.md)] é uma implementação da popular e adaptável arquitetura de rede neural para aprendizado de máquina.  O algoritmo funciona testando cada estado possível do atributo de entrada com cada estado possível do atributo previsível e calculando probabilidades para cada combinação com base nos dados de treinamento. Essas probabilidades podem ser usadas para tarefas de classificação ou regressão e também para a previsão de um resultado com base em alguns atributos de entrada. Uma rede neural também pode ser usada para análise de associação.  
   
@@ -40,11 +40,11 @@ ms.locfileid: "34015531"
 ## <a name="how-the-algorithm-works"></a>Como o algoritmo funciona  
  O algoritmo Rede Neural da [!INCLUDE[msCoName](../../includes/msconame-md.md)] cria uma rede que é composta por até três camadas de nós (às vezes, chamadas de *neurônios*). Essas camadas são a *camada de entrada*, a *camada oculta*e a *camada de saída*.  
   
- **Camada de entrada:** os nós de entrada definem todos os valores de atributo de entrada do modelo de mineração de dados e suas probabilidades.  
+ **Camada de entrada:** Nós de entrada definem todos os valores de atributo de entrada para o modelo de mineração de dados e suas probabilidades.  
   
- **Camada oculta:** os nós ocultos recebem entradas de nós de entrada e fornecem resultados para os nós de saída. A camada oculta é onde as várias probabilidades de entradas são ponderadas. Uma ponderação descreve a relevância ou importância de uma entrada específica para o nó oculto. Quanto maior a ponderação atribuída a uma entrada, mais importante será o valor daquela entrada. As ponderações podem ser negativas, o que significa que a entrada pode inibir, em vez de favorecer, um resultado específico.  
+ **Camada oculta:** Nós ocultos recebem entradas de nós de entrada e fornecem resultados para nós de saída. A camada oculta é onde as várias probabilidades de entradas são ponderadas. Uma ponderação descreve a relevância ou importância de uma entrada específica para o nó oculto. Quanto maior a ponderação atribuída a uma entrada, mais importante será o valor daquela entrada. As ponderações podem ser negativas, o que significa que a entrada pode inibir, em vez de favorecer, um resultado específico.  
   
- **Camada de saída:** os nós de saída representam valores de atributos previsíveis para o modelo de mineração de dados.  
+ **Camada de saída:** Nós de saída representam valores de atributos previsíveis para o modelo de mineração de dados.  
   
  Para obter uma explicação detalhada de como as camadas de entrada, oculta e de saída são criadas e pontuadas, consulte [Referência técnica do algoritmo Rede Neural da Microsoft](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md).  
   
@@ -76,9 +76,9 @@ ms.locfileid: "34015531"
 -   Não suporta a criação de dimensões de mineração de dados.  
   
 ## <a name="see-also"></a>Consulte também  
- [Microsoft Neural Network Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
- [Conteúdo do modelo de mineração para modelos de rede Neural & #40; Analysis Services – mineração de dados & #41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Referência técnica do algoritmo Rede Neural da Microsoft](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
+ [Conteúdo do modelo de mineração para modelos de rede neural &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Exemplos de consulta de modelo de rede neural](../../analysis-services/data-mining/neural-network-model-query-examples.md)   
- [Algoritmo de regressão logística da Microsoft](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)  
+ [Algoritmo Regressão Logística da Microsoft](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)  
   
   

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 58169ffcc696c87addee0417700ba131a71e12f0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703283"
 ---
 # <a name="log-operations-in-analysis-services"></a>Operações de log no Analysis Services
   Uma instância do Analysis Services registrará notificações do servidor, erros e avisos no arquivo msmdsrv exe-um para cada instância instalada. Os administradores consultam esse log para compreender eventos de rotina e extraordinários. Nas versões mais recentes, o registro em log foi aprimorado para incluir mais informações. Registros de log agora incluem informações de versão e edição do produto, bem como processador, memória, conectividade e eventos de bloqueio. Você pode revisar a lista inteira de alterações em [Aprimoramentos de log](https://support.microsoft.com/kb/2965035).  
@@ -38,7 +38,7 @@ ms.locfileid: "53363748"
 -   [Dicas e práticas recomendadas](#bkmk_tips)  
   
 > [!NOTE]  
->  Se você estiver procurando informações sobre o registro em log, talvez também esteja interessado no rastreamento de operações que mostram o processamento e caminhos de execução de consulta. Objetos de rastreamento para rastreamento ad hoc e persistente (como a auditoria de acesso de cubo), bem como recomendações sobre como usar melhor o Flight Recorder, SQL Server Profiler e xEvents, podem ser encontrados usando os links nesta página: [Monitorar uma instância do Analysis Services](monitor-an-analysis-services-instance.md).  
+>  Se você estiver procurando informações sobre o registro em log, talvez também esteja interessado no rastreamento de operações que mostram o processamento e caminhos de execução de consulta. Objetos de rastreamento para rastreamento ad hoc e persistente (como a auditoria de acesso de cubo), bem como recomendações sobre como usar melhor Flight Recorder, SQL Server Profiler e xEvents, pode ser encontrado usando os links nesta página: [Monitorar uma instância do Analysis Services](monitor-an-analysis-services-instance.md).  
   
 ##  <a name="bkmk_location"></a> Local e tipos de logs  
  O Analysis Services fornece os logs descritos abaixo.  
@@ -49,7 +49,7 @@ ms.locfileid: "53363748"
 |Tabela OlapQueryLog em um banco de dados relacional|Log de consultas|Coletar entradas para o Assistente de Otimização do Uso|Não|  
 |Arquivos SQLDmp\<guid > mdmp|Falhas e exceções|Solução de problemas detalhada|Não|  
   
- O link a seguir é altamente recomendável para recursos de informações adicionais que não são abordados neste tópico: [Inicial dicas para coleta de dados do Microsoft Support](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx).  
+ É altamente recomendável o seguinte link para recursos de informações adicionais que não são abordados neste tópico: [Inicial dicas para coleta de dados do Microsoft Support](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx).  
   
 ##  <a name="bkmk_general"></a> Informações gerais sobre definições de configuração do arquivo de log  
  Você pode encontrar as seções para cada log no arquivo de configuração do servidor msmdsrv.ini, localizado na pasta \Arquivos de Programas\Microsoft SQL Server\MSAS12.MSSQLSERVER\OLAP\Config. Consulte [Configure Server Properties in Analysis Services](../server-properties/server-properties-in-analysis-services.md) para obter instruções sobre como editar o arquivo.  
@@ -149,7 +149,7 @@ ms.locfileid: "53363748"
   
  **Configurar relatórios de falha**  
   
- Salvo orientação em contrário pelo Suporte da Microsoft, a maioria dos administradores usam as configurações padrão. Neste artigo KB mais antigo ainda é usado para fornecer instruções sobre como configurar arquivos de despejo: [Como configurar o Analysis Services para gerar arquivos de despejo de memória](https://support.microsoft.com/kb/919711).  
+ Salvo orientação em contrário pelo Suporte da Microsoft, a maioria dos administradores usam as configurações padrão. Este artigo KB mais antigo ainda é usado para fornecer instruções sobre como configurar arquivos de despejo: [Como configurar o Analysis Services para gerar arquivos de despejo de memória](https://support.microsoft.com/kb/919711).  
   
  A definição de configuração tem mais probabilidade de ser modificada é a `CreateAndSendCrashReports` usada para determinar se um arquivo de despejo de memória será gerado.  
   
@@ -176,7 +176,7 @@ ms.locfileid: "53363748"
   
 -   Configure o arquivo msmdsrv.log para controlar o tamanho e o número de arquivos de log msmdsrv. As configurações não estão habilitadas por padrão, portanto certifique-se de adicioná-las como uma etapa pós-instalação. Consulte [Arquivo de log do serviço MSMDSRV](#bkmk_msmdsrv) neste tópico.  
   
--   Examine esta postagem de blog do Atendimento ao Cliente da Microsoft para saber quais recursos eles usam para obter informações sobre as operações do servidor: [Coleta de dados inicial](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)  
+-   Examine esta postagem de blog do atendimento ao cliente Microsoft para saber quais recursos eles usam para obter informações sobre operações de servidor: [Coleta de dados inicial](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)  
   
 -   Use ASTrace2012 em vez de um log de consulta para descobrir o que está consultando cubos. O log de consultas normalmente é usado para fornecer sugestões para o Assistente de Otimização com Base no Uso e os dados capturados não são fácil de ler ou interpretar. O ASTrace2012 é uma ferramenta de comunidade, amplamente utilizada, que captura as operações de consulta. Consulte [exemplos da comunidade do Microsoft SQL Server: Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/).  
   

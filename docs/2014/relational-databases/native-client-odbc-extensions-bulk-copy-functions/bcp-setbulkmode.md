@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9671447a2fba1cd57b021266f29de7af741f0de6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62688791"
 ---
 # <a name="bcpsetbulkmode"></a>bcp_setbulkmode
   bcp_setbulkmode permite especificar o formato de coluna em uma operação de cópia em massa, definindo todos os atributos de coluna em uma única chamada de função.  
@@ -49,7 +49,7 @@ cbRow
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *HDBC*  
+ *hdbc*  
  O identificador de conexão ODBC habilitado para cópia em massa.  
   
  *property*  

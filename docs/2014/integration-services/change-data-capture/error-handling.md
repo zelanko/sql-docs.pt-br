@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e0924c4ac6d2ddd4e14b35794b9c03ac7fb2e136
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835640"
 ---
 # <a name="error-handling"></a>Tratamento de erros
   Uma Instância do Oracle CDC mina as alterações de um único banco de dados de origem do Oracle (um cluster do Oracle RAC é considerado um banco de dados único) e grava as alterações confirmadas em tabelas de alteração em um banco de dados do CDC na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino.  

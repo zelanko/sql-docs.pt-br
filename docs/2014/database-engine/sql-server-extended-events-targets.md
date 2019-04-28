@@ -15,14 +15,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 97dbdfcdbc1ddf2a8aba10845f1bc5e3c785a9ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842511"
 ---
 # <a name="sql-server-extended-events-targets"></a>SQL Server Extended Events Targets
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Destinos de eventos estendidos são consumidores de evento. Os destinos podem gravar em um arquivo, armazenar dados de evento em um buffer de memória ou agregar dados de evento. Os destinos podem processar dados de forma síncrona ou assíncrona.  
+  Os destinos de Eventos Estendidos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] são consumidores de evento. Os destinos podem gravar em um arquivo, armazenar dados de evento em um buffer de memória ou agregar dados de evento. Os destinos podem processar dados de forma síncrona ou assíncrona.  
   
  O design de Eventos Estendidos assegura que os destinos tenham a garantia de receber eventos somente uma vez por sessão.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48163666"
   
      Use para correlacionar eventos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] com o sistema operacional Windows ou dados de eventos de aplicativos. Este é um destino síncrono.  
   
--   [Histograma](../../2014/database-engine/histogram-target.md)  
+-   [Histogram](../../2014/database-engine/histogram-target.md)  
   
      Use para contar o número de vezes que um evento especificado ocorre com base em uma coluna de eventos ou uma ação específica. Este é um destino assíncrono.  
   

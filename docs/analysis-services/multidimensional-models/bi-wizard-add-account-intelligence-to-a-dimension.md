@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5021d10832028f46d1d0b1a8f33dc01a75df5985
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717533"
 ---
-# <a name="bi-wizard---add-account-intelligence-to-a-dimension"></a>Assistente de BI - adicionar inteligência de conta a uma dimensão
+# <a name="bi-wizard---add-account-intelligence-to-a-dimension"></a>Assistente de BI – Adicionar inteligência de conta a uma dimensão
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Adicione o aprimoramento da inteligência de conta a um cubo ou a uma dimensão para atribuir classificações de conta padrão, como receita e despesa, a membros de um atributo de conta. Esse aprimoramento também identifica os tipos de conta (como Ativo e Passivo) e atribui a agregação apropriada a cada tipo de conta. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pode usar as classificações para agregar contas ao longo do tempo.  
+  Adicione o aprimoramento da inteligência de conta a um cubo ou a uma dimensão para atribuir classificações de conta padrão, como receita e despesa, a membros de um atributo de conta. Esse aprimoramento também identifica os tipos de conta (como Ativo e Passivo) e atribui a agregação apropriada a cada tipo de conta. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pode usar as classificações para agregar contas ao longo do tempo.  
   
 > [!NOTE]  
 >  A inteligência de conta está disponível somente para dimensões baseadas nas fontes de dados existentes. Para dimensões que foram criadas sem usar uma fonte de dados, execute o Assistente de Geração de Esquema para criar uma exibição da fonte de dados antes de adicionar a inteligência de conta.  
@@ -40,9 +40,9 @@ ms.locfileid: "34023463"
   
 -   A coluna **Tipos de Conta de Servidor** identifica o tipo de conta correspondente que o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] reconhece. A tabela a seguir lista os tipos de conta que o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] reconhece e a agregação padrão para cada um deles. As seleções serão feitas automaticamente se a tabela de dimensões usar o mesmo nome de tipo de conta que o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
-    |Tipo de conta de servidor|Agregação|Description|  
+    |Tipo de conta de servidor|Agregação|Descrição|  
     |-------------------------|-----------------|-----------------|  
-    |**Estatística**|**Nenhuma**|Uma taxa calculada de algo ou a contagem de algo que não é agregada no decorrer do tempo. Esse tipo de conta não é convertido em outras moedas pelas regras de conversão.|  
+    |**Estatística**|**Nenhum**|Uma taxa calculada de algo ou a contagem de algo que não é agregada no decorrer do tempo. Esse tipo de conta não é convertido em outras moedas pelas regras de conversão.|  
     |**Dívida**|**LastNonEmpty**|O dinheiro ou valor de coisas devidos em um momento específico. Esse tipo de conta não é acumulado com o passar do tempo e, portanto, não é agregado naturalmente no decorrer do tempo. Por exemplo, a quantia de Ano é o valor do último mês com dados. Esse tipo de conta é convertido em outras moedas com a taxa Fim do Período.|  
     |**Ativo**|**LastNonEmpty**|O dinheiro ou valor de coisas de propriedade em um momento específico. Esse tipo de conta não é acumulado com o passar do tempo e, portanto, não é agregado naturalmente com o decorrer do tempo. Por exemplo, a quantia de Ano é o valor do último mês com dados. Esse tipo de conta é convertido em outras moedas com a taxa Fim do Período.|  
     |**Saldo**|**LastNonEmpty**|A contagem de algo em um momento especificado. Esse tipo de conta é acumulado, mas não agregado naturalmente com o passar do tempo. Por exemplo, a quantia de Ano é o valor do último mês com dados.|  

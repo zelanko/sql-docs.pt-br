@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 069611d1466f2810b958a7ad825f5abb0895f63f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701372"
 ---
 # <a name="add-account-intelligence-to-a-dimension"></a>Adicionar inteligência de conta a uma dimensão
   Adicione o aprimoramento da inteligência de conta a um cubo ou a uma dimensão para atribuir classificações de conta padrão, como receita e despesa, a membros de um atributo de conta. Esse aprimoramento também identifica os tipos de conta (como Ativo e Passivo) e atribui a agregação apropriada a cada tipo de conta. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pode usar as classificações para agregar contas ao longo do tempo.  
@@ -45,13 +45,13 @@ ms.locfileid: "48183418"
   
 -   A coluna **Tipos de Conta de Servidor** identifica o tipo de conta correspondente que o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] reconhece. A tabela a seguir lista os tipos de conta que o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] reconhece e a agregação padrão para cada um deles. As seleções serão feitas automaticamente se a tabela de dimensões usar o mesmo nome de tipo de conta que o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
-    |Tipo de conta de servidor|Agregação|Description|  
+    |Tipo de conta de servidor|Agregação|Descrição|  
     |-------------------------|-----------------|-----------------|  
     |**Estatística**|`None`|Uma taxa calculada de algo ou a contagem de algo que não é agregada no decorrer do tempo. Esse tipo de conta não é convertido em outras moedas pelas regras de conversão.|  
     |**Dívida**|`LastNonEmpty`|O dinheiro ou valor de coisas devidos em um momento específico. Esse tipo de conta não é acumulado com o passar do tempo e, portanto, não é agregado naturalmente no decorrer do tempo. Por exemplo, a quantia de Ano é o valor do último mês com dados. Esse tipo de conta é convertido em outras moedas com a taxa Fim do Período.|  
     |**Ativo**|`LastNonEmpty`|O dinheiro ou valor de coisas de propriedade em um momento específico. Esse tipo de conta não é acumulado com o passar do tempo e, portanto, não é agregado naturalmente com o decorrer do tempo. Por exemplo, a quantia de Ano é o valor do último mês com dados. Esse tipo de conta é convertido em outras moedas com a taxa Fim do Período.|  
     |**Saldo**|`LastNonEmpty`|A contagem de algo em um momento especificado. Esse tipo de conta é acumulado, mas não agregado naturalmente com o passar do tempo. Por exemplo, a quantia de Ano é o valor do último mês com dados.|  
-    |**Fluxo**|`Sum`|Uma conta com incremento de algo. Esse tipo de conta é agregado como um `Sum` ao longo do tempo, mas não é convertido pelas regras de conversão de moeda.|  
+    |**Fluxo**|`Sum`|Uma conta com incremento de algo. Esse tipo de conta é agregado com o passar do tempo como uma `Sum` mas não é convertido pelas regras de conversão de moeda.|  
     |**Despesa**|`Sum`|O dinheiro ou valor de coisas gasto. Esse tipo de conta é agregado com o passar do tempo como uma `Sum` e é convertido em outras moedas pela taxa média.|  
     |**Receita**|`Sum`|O dinheiro ou valor de coisas recebido. Esse tipo de conta é agregado com o passar do tempo como uma `Sum` e é convertido em outras moedas pela taxa média.|  
   

@@ -29,11 +29,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 1ae1037a8b04ad1a16b8d42485105927015359a1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717903"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Especificando relações usando sql:relationship (SQLXML 4.0)
   Os elementos em um documento XML podem ser relacionados. Eles podem ser aninhados hierarquicamente e as relações ID, IDREF ou IDREFS entre os elementos podem ser especificadas.  
@@ -59,7 +59,7 @@ ms.locfileid: "52814868"
  **parent-key**  
  Especifica a chave pai do pai. Se a chave pai for composta por várias colunas, os valores serão especificados com um espaço entre eles. Há um mapeamento posicional entre os valores que são especificados para a chave de várias colunas e para a chave filha correspondente.  
   
- **filho**  
+ **Child**  
  Especifica a relação de filho (tabela).  
   
  **child-key**  
@@ -184,7 +184,7 @@ ms.locfileid: "52814868"
 </ROOT>  
 ```  
   
-### <a name="b-specifying-a-relationship-chain"></a>b. Especificando uma cadeia de relações  
+### <a name="b-specifying-a-relationship-chain"></a>B. Especificando uma cadeia de relações  
  Para obter este exemplo, pressuponha que você deseja o seguinte documento XML que use dados obtidos do banco de dados AdventureWorks:  
   
 ```  

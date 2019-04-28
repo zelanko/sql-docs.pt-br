@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 79b4ecc40d69e8f40a5a1612985477d8ee6f166a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62709731"
 ---
 # <a name="performance-counters-ssas"></a>Contadores de desempenho (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "34019233"
   
 ## <a name="counters-by-groups"></a>Contadores por grupos  
   
-|Agrupar|Description|  
+|Grupo|Descrição|  
 |-----------|-----------------|  
 |[Cache](#bkmk_Cache)|Estatísticas relacionadas ao cache de agregação do Analysis Services.|  
 |[Conexão](#bkmk_Connection)|Estatísticas relacionadas às conexões do Microsoft Analysis Services|  
@@ -49,7 +49,7 @@ ms.locfileid: "34019233"
 ###  <a name="bkmk_Cache"></a> Cache  
  Estatísticas relacionadas ao cache de agregação do Analysis Services.  
   
-|Contador|Description|  
+|Contador|Descrição|  
 |-------------|-----------------|  
 |KB Atual|Memória atual usada pelo cache de agregação, em KB.|  
 |KB adicionado/s|Taxa de memória acrescentada ao cache, KB/segundo.|  
@@ -71,7 +71,7 @@ ms.locfileid: "34019233"
 ###  <a name="bkmk_Connection"></a> Conexão  
  Estatísticas relacionadas às conexões do Microsoft Analysis Services  
   
-|Contador|Description|  
+|Contador|Descrição|  
 |-------------|-----------------|  
 |Conexões atuais|Número atual de conexões estabelecidas com o cliente.|  
 |Solicitações/s|Taxa de solicitações de conexão.  Estas são chegadas.|  
@@ -85,7 +85,7 @@ ms.locfileid: "34019233"
 ###  <a name="bkmk_DataMiningModelProcessing"></a> Processamento do Modelo de Mineração de Dados  
  Estatísticas relativas ao processamento do modelo de Mineração de Dados do Microsoft Analysis Services.  
   
-|Contador|Description|  
+|Contador|Descrição|  
 |-------------|-----------------|  
 |Casos/s|Taxa de processamento dos casos.|  
 |Processamento atual de modelos|Número atual de modelos sendo processados.|  
@@ -93,7 +93,7 @@ ms.locfileid: "34019233"
 ###  <a name="bkmk_DataMiningPrediction"></a> Previsão de Mineração de Dados  
  Estatística relativa à previsão de Mineração de Dados do Microsoft Analysis Services.  
   
-|Contador|Description|  
+|Contador|Descrição|  
 |-------------|-----------------|  
 |Consultas simultâneas do DM|Número atual de consultas de mineração de dados sendo trabalhadas ativamente.|  
 |Previsões/s|Número de previsões geradas em consultas de mineração de dados|  
@@ -106,7 +106,7 @@ ms.locfileid: "34019233"
 ###  <a name="bkmk_Locks"></a> Locks  
  Estatísticas relativas a bloqueios do servidor interno do Microsoft Analysis Services.  
   
-|Contador|Description|  
+|Contador|Descrição|  
 |-------------|-----------------|  
 |Esperas de trava atuais|Número atual de threads aguardando uma trava.  Estas solicitações de trava que podem ter concessões imediatas e se encontram em estado de espera.|  
 |Esperas de trava/s|Taxa de solicitações de trava que não podem ser concedidas imediatamente e precisaram aguardar antes de serem concedidas.|  
@@ -122,7 +122,7 @@ ms.locfileid: "34019233"
 ###  <a name="bkmk_MDX"></a> MDX  
  Estatísticas relacionadas a cálculos MDX do Microsoft Analysis Services.  
   
-|Contador|Description|  
+|Contador|Descrição|  
 |-------------|-----------------|  
 |Número de coberturas de cálculo|Número total de nós de avaliação criados por planos de execução MDX, incluindo ativo e em cache.|  
 |Número atual de nós de avaliação|Número atual (aproximado) de nós de avaliação criados por planos de execução MDX, incluindo ativo e em cache.|  
@@ -155,7 +155,7 @@ ms.locfileid: "34019233"
 ###  <a name="bkmk_Memory"></a> Memória  
  Estatísticas relacionadas à memória do servidor interno do Microsoft Analysis Services.  
   
-|Contador|Description|  
+|Contador|Descrição|  
 |-------------|-----------------|  
 |KB Alocado do Pool da Página 64|Memória emprestada do sistema, em KB.  Esta memória é oferecida a outras partes do servidor.|  
 |KB à Parte do Pool da Página 64|Memória atual em lista à parte de 64 KB, em KB.  (Páginas de memória prontas para serem usadas.)|  
@@ -232,7 +232,7 @@ ms.locfileid: "34019233"
 ###  <a name="bkmk_ProactiveCaching"></a> Cache pró-ativo  
  Estatísticas relacionadas ao cache pró-ativo do Microsoft Analysis Services.  
   
-|Contador|Description|  
+|Contador|Descrição|  
 |-------------|-----------------|  
 |Notificações/s|Taxa de notificações de banco de dados relacional.|  
 |Cancelamentos de processamento/s|Taxa de cancelamentos de processamento causada por notificações.|  
@@ -242,7 +242,7 @@ ms.locfileid: "34019233"
 ###  <a name="bkmk_ProcAggregations"></a> Processamento de agregações  
  Estatísticas relacionadas ao processamento de agregações do Microsoft Analysis Services em arquivos de dados MOLAP.  
   
-|Contador|Description|  
+|Contador|Descrição|  
 |-------------|-----------------|  
 |Partições atuais|Número atual de partições sendo processadas.|  
 |Total de partições|Número total de partições processadas (com êxito ou não).|  
@@ -256,7 +256,7 @@ ms.locfileid: "34019233"
 ###  <a name="bkmk_ProcIndexes"></a> Processamento de índices  
  Estatísticas relacionadas ao processamento de índices do Microsoft Analysis Services para arquivos de dados MOLAP.  
   
-|Contador|Description|  
+|Contador|Descrição|  
 |-------------|-----------------|  
 |Partições atuais|Número atual de partições sendo processadas.|  
 |Total de partições|Número total de partições processadas (com êxito ou não).|  
@@ -266,7 +266,7 @@ ms.locfileid: "34019233"
 ###  <a name="bkmk_Processing"></a> Processamento  
  Estatísticas relacionadas ao processamento de dados do Microsoft Analysis Services.  
   
-|Contador|Description|  
+|Contador|Descrição|  
 |-------------|-----------------|  
 |Linhas lidas/s|Taxa de leitura de linhas de todos os bancos de dados relacionais.|  
 |Total de linhas lidas|Contagem de linhas lidas de todos os bancos de dados relacionais.|  
@@ -278,7 +278,7 @@ ms.locfileid: "34019233"
 ###  <a name="bkmk_StorageEngineQuery"></a> Consulta do mecanismo de armazenamento  
  Estatísticas relacionadas a consultas do mecanismo de armazenamento do Microsoft Analysis Services.  
   
-|Contador|Description|  
+|Contador|Descrição|  
 |-------------|-----------------|  
 |Consultas de grupo de medidas atuais|Número atual de consultas de grupo de medidas que estão em operação ativa.|  
 |Consultas do grupo de medidas/s|Taxa de consultas do grupo de medidas|  
@@ -321,7 +321,7 @@ ms.locfileid: "34019233"
 ###  <a name="bkmk_Threads"></a> Threads  
  Estatísticas relacionadas a threads do Microsoft Analysis Services.  
   
-|Contador|Description|  
+|Contador|Descrição|  
 |-------------|-----------------|  
 |Threads ociosos da análise resumida|Número de threads ociosos no pool de threads da análise resumida.|  
 |Threads ocupados da análise resumida|Número de threads ocupados no pool de threads da análise resumida.|  

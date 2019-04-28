@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3da6ce80cc9e7bff25614e8589b4bf85dfc68e81
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832689"
 ---
 # <a name="azure-hdinsight-pig-task"></a>Tarefa de Pig de HDInsight do Azure
 Use a **Tarefa de Pig do Azure HDInsight** para executar o script do Pig em um cluster Azure HDInsight.
@@ -37,8 +37,8 @@ Para adicionar uma **Tarefa do Pig do Azure HDInsight**, arraste e solte-a no De
   
 5.  Há duas maneiras de especificar o script do Pig a ser executado:
   
-    1.  **Script em linha**: Especifique o **Script** campo digitando o script seja executado em embutido o **Inserir Script** caixa de diálogo.
+    1.  **Script embutido**: especifique o campo **Script**, digitando em linha o script a ser executado na caixa de diálogo **Inserir Script**.
   
-    2.  **Arquivo de script**: Carregue o arquivo de script para o armazenamento de BLOBs do Azure e especifique o **BlobName** campo. Se o blob não estiver na conta de armazenamento padrão ou no contêiner associado ao cluster HDInsight, os campos **ExternalStorageAccountName** e **ExternalBlobContainer** deverão ser especificados. Para um blob externo, verifique se ele está configurado como acessível ao público.  
+    2.  **Arquivo de script**: carregue o arquivo de script para o Armazenamento de Blobs do Azure e especifique o campo **BlobName**. Se o blob não estiver na conta de armazenamento padrão ou no contêiner associado ao cluster HDInsight, os campos **ExternalStorageAccountName** e **ExternalBlobContainer** deverão ser especificados. Para um blob externo, verifique se ele está configurado como acessível ao público.  
   
      Se ambos estiverem especificados, o arquivo de script será usado e o script embutido será ignorado.

@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
 ms.openlocfilehash: 293b599c8927115c8b82a75d783c222cbf53e8ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62865085"
 ---
 # <a name="global-settings-output-window--oracletosql"></a>Configurações globais (Janela de Saída) (OracleToSQL)
 Use o **configurações globais** caixa de diálogo para especificar configurações para o SSMA.  

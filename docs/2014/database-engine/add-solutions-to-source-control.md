@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7dc540b21000766cd6e33ecb1811536993857f00
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62815698"
 ---
 # <a name="add-solutions-to-source-control"></a>Adicionar soluções ao controle do código-fonte
   Ao adicionar uma solução ao controle do código-fonte, você normalmente deseja adicionar toda a solução e todos os projetos que ela contém. Você pode usar o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para adicionar uma solução ao controle do código-fonte.  

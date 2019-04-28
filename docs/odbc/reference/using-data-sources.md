@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c898cb5cd8c9998d9126ec468a2b43587e2e279a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728104"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714114"
 ---
 # <a name="using-data-sources"></a>Usar fontes de dados
 Fontes de dados geralmente são criadas pelo usuário final ou um técnico com um programa de chamada a *administrador de ODBC*. O administrador de ODBC solicita ao usuário para o driver para usar e, em seguida, chama esse driver. O driver exibe uma caixa de diálogo que solicita as informações necessárias para se conectar à fonte de dados. Depois que o usuário insere as informações, o driver armazena no sistema.  

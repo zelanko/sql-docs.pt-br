@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 325d932a0c14cf4ca6b4ecf9e2349fb8064c45bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699759"
 ---
 # <a name="working-with-the-rollupchildren-function-mdx"></a>Trabalhando com a função RollupChildren (MDX)
   O MDX (Multidimensional Expressions) [RollupChildren](/sql/mdx/rollupchildren-mdx) função [Script de pesquisa e substituição] acumula os filhos de um membro, aplicando um operador unário diferente a cada filho e retorna o valor desse Rollup como um número. O operador unário pode ser fornecido por uma propriedade do membro associada ao membro filho ou pode ser uma expressão de cadeia de caracteres fornecida diretamente para a função.  
@@ -74,6 +74,6 @@ RollupChildren([Net Sales], IIf([Net Sales].CurrentMember.Properties("UNARY_OPER
  A instrução MDX analisa o operador unário do membro filho. Se ele for usado em uma subtração (como no caso dos membros de lucros interno e de exportação), a função `IIf` substituirá o operador unário til (~). Caso contrário, a função `IIf` utilizará o operador unário do membro filho. Por fim, o total acumulado retornado é então multiplicado por 1,1 para apresentar o valor estimado de vendas brutas internas e exportações.  
   
 ## <a name="see-also"></a>Consulte também  
- [Manipulação de dados &#40;MDX&#41;](mdx-data-manipulation-manipulating-data.md)  
+ [Manipulando dados &#40;MDX&#41;](mdx-data-manipulation-manipulating-data.md)  
   
   

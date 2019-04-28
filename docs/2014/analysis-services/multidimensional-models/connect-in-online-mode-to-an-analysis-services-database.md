@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3d87e8919f7a6173614f0da6a874d83e5da7a874
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702097"
 ---
 # <a name="connect-in-online-mode-to-an-analysis-services-database"></a>Conectar em Modo Online a um Banco de Dados do Analysis Services
   Você pode se conectar diretamente a um banco de dados existente do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e modificar seus objetos. Quando você se conecta diretamente a um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , as alterações feitas nos objetos ocorrem de imediato e nenhum projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é criado no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -40,7 +40,7 @@ ms.locfileid: "48056668"
      Agora, você pode editar diretamente qualquer objeto do banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Consulte também  
- [Trabalhar com o Analysis Services projetos e bancos de dados durante a fase de desenvolvimento](work-with-analysis-services-projects-and-databases-in-development.md)   
- [Criar Multidimensional modelos usando o SQL Server Data Tools &#40;SSDT&#41;](creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
+ [Trabalhando com projetos e bancos de dados do Analysis Services durante a fase de desenvolvimento](work-with-analysis-services-projects-and-databases-in-development.md)   
+ [Criação de modelos multidimensionais usando o SSDT &#40;SQL Server Data Tools&#41;](creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
   
   

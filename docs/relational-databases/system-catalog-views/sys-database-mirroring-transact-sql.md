@@ -1,5 +1,5 @@
 ---
-title: sys. database_mirroring (Transact-SQL) | Microsoft Docs
+title: sys.database_mirroring (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bea7712fd4efa1934117937a5168843d727d0dc6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62693908"
 ---
 # <a name="sysdatabasemirroring-transact-sql"></a>sys.database_mirroring (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47796574"
 > [!NOTE]  
 >  Se um banco de dados não participar no espelhamento, todas as colunas prefixadas com "mirroring_" serão NULL.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|ID do banco de dados. É exclusiva em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**mirroring_guid**|**uniqueidentifier**|ID da parceria de espelhamento.<br /><br /> NULL = banco de dados está inacessível ou não está espelhado.<br /><br /> Observação: Se o banco de dados não participar no espelhamento, todas as colunas prefixadas com "Mirroring _" serão NULL.|  

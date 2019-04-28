@@ -14,11 +14,11 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: d02a1d50e9c7a5f906e78fa6753d594edced341f
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691045"
 ---
 # <a name="sysdmpdwdmsexternalwork-transact-sql"></a>sys.dm_pdw_dms_external_work (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "58658111"
 |step_index|**int**|Etapa de consulta que está invocando este trabalhador DMS.<br /><br /> request_id, step_index e dms_step_index formam a chave para esta exibição.|Mesmo que step_index na [DM pdw_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
 |dms_step_index|**int**|Etapa atual no plano de DMS.<br /><br /> request_id, step_index e dms_step_index formam a chave para esta exibição.|Mesmo que dms___step_index na [DM pdw_dms_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-workers-transact-sql.md).|  
 |pdw_node_id|**int**|Nó que está executando o trabalho do DMS.|Mesmo que node_id na [sys.dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
-|Tipo|**nvarchar(60)**|Tipo de operação externa que este nó está em execução.<br /><br /> Dividir arquivo é uma operação em um arquivo do Hadoop externo que foi dividido em vários cai menores.|'DIVISÃO DE ARQUIVO'|  
+|type|**nvarchar(60)**|Tipo de operação externa que este nó está em execução.<br /><br /> Dividir arquivo é uma operação em um arquivo do Hadoop externo que foi dividido em vários cai menores.|'DIVISÃO DE ARQUIVO'|  
 |work_id|**int**|O arquivo dividido ID.|Maior que ou igual a 0.<br /><br /> Exclusivo por nó de computação.|  
 |input_name|**nvarchar(60)**|Nome para a entrada que está sendo lida de cadeia de caracteres.|Para um arquivo do Hadoop, esse é o nome de arquivo do Hadoop.|  
 |read_location|**bigint**|Deslocamento do local de leitura.||  

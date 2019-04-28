@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9dada733f7729d534b66777f747560cd45530727
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62865014"
 ---
 # <a name="preparing-commands"></a>Preparando comandos
   O provedor de dados OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client oferece suporte à preparação de comando tendo em vista várias execuções de um único comando. No entanto, ela gera sobrecarga, e um cliente não precisa preparar um comando para ser executado mais de uma vez. Em geral, um comando deverá ser preparado se for executado mais de três vezes.  

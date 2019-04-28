@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0d5b823481d47f6e986815673aa3ab65d44f07c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733482"
 ---
 # <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Mining Model Content for Neural Network Models (Analysis Services - Data Mining)
   Este tópico descreve o conteúdo do modelo de mineração que é específico para modelos que usam o algoritmo Rede Neural da Microsoft. Para obter uma explicação de como interpretar as estatísticas e a estrutura compartilhada por todos os tipos de modelos, e definições gerais dos termos relacionados ao conteúdo do modelo de mineração, consulte [Conteúdo do Modelo de Mineração &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -73,7 +73,7 @@ ms.locfileid: "48218696"
 |Estatísticas marginais|Em branco|  
 |Camada de entrada|Em branco|  
 |Nó de entrada|Nome do atributo de entrada|  
-|Camada oculta|Em branco|  
+|hidden layer|Em branco|  
 |Nó oculto|Em branco|  
 |Camada de saída|Em branco|  
 |Nó de saída|Nome do atributo de saída|  
@@ -89,7 +89,7 @@ ms.locfileid: "48218696"
  NODE_TYPE  
  Um modelo de rede neural produz apenas os seguintes tipos de nó:  
   
-|ID do tipo de nó|Description|  
+|ID do tipo de nó|Descrição|  
 |------------------|-----------------|  
 |1|Modelo.|  
 |17|Nó do organizador para a sub-rede.|  
@@ -132,7 +132,7 @@ ms.locfileid: "48218696"
 |Estatísticas marginais|Em branco|  
 |Camada de entrada|Em branco|  
 |Nó de entrada|Nome do atributo de entrada|  
-|Camada oculta|Em branco|  
+|hidden layer|Em branco|  
 |Nó oculto|Número inteiro que indica a sequência do nó oculto na lista de nós ocultos.|  
 |Camada de saída|Em branco|  
 |Nó de saída|Se o atributo de saída for contínuo, conterá o nome do atributo de saída.<br /><br /> Se o atributo de saída for discreto ou diferenciado, contém o nome do atributo e o valor.|  
@@ -219,7 +219,7 @@ ms.locfileid: "48218696"
   
  **Atributo discreto:** O nó de entrada armazena apenas o nome do atributo e seu valor nas colunas ATTRIBUTE_NAME e ATTRIBUTE_VALUE. Por exemplo, se [Turno de Trabalho] for a coluna, um nó separado será criado para cada valor dessa coluna que foi usado no modelo, como AM e PM. A tabela NODE_DISTRIBUTION para cada nó lista apenas o valor atual do atributo.  
   
- **Atributo numérico discreto:** O nó de entrada armazena o nome do atributo e o valor, que pode ser um intervalo ou valor específico. Todos os valores são representados por expressões, como '77.4 - 87.4' ou ' < 64.0' para o valor de [Tempo por Emissão]. A tabela NODE_DISTRIBUTION para cada nó lista apenas o valor atual do atributo.  
+ **Atributo numérico discreto:** O nó de entrada armazena o nome do atributo e o valor, que pode ser um intervalo ou um valor específico. Todos os valores são representados por expressões, como '77.4 - 87.4' ou ' < 64.0' para o valor de [Tempo por Emissão]. A tabela NODE_DISTRIBUTION para cada nó lista apenas o valor atual do atributo.  
   
  **Atributo contínuo:** O nó de entrada armazena o valor médio do atributo. A tabela NODE_DISTRIBUTION para cada nó lista apenas o valor atual do atributo.  
   
@@ -231,15 +231,15 @@ ms.locfileid: "48218696"
   
  A tabela NODE_DISTRIBUTION tem as seguintes informações adicionais, dependendo do tipo de atributo:  
   
- **Atributo discreto:** As duas linhas finais da tabela NODE_DISTRIBUTION contêm um coeficiente para os nós como um todo, e o valor atual do atributo.  
+ **Atributo discreto:** As duas linhas finais da tabela NODE_DISTRIBUTION contêm um coeficiente do nó como um todo e o valor atual do atributo.  
   
- **Atributo numérico discreto:** Idêntico aos atributos discretos, exceto pelo fato de o valor do atributo ser um intervalo de valores.  
+ **Atributo numérico discreto:** Idêntico aos atributos discretos, exceto que o valor do atributo é um intervalo de valores.  
   
  **Atributo contínuo:** As duas linhas finais da tabela NODE_DISTRIBUTION contêm a média do atributo, o coeficiente do nó como um todo e a variação do coeficiente.  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmo rede Neural da Microsoft](microsoft-neural-network-algorithm.md)   
+ [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)   
  [Microsoft Neural Network Algorithm Technical Reference](microsoft-neural-network-algorithm-technical-reference.md)   
- [Exemplos de consulta de modelos de rede neural](neural-network-model-query-examples.md)  
+ [Neural Network Model Query Examples](neural-network-model-query-examples.md)  
   
   

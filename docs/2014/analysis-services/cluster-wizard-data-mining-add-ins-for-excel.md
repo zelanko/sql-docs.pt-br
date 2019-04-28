@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7803b5a5a2fccd3381b827eb15a19e036ffa017e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680748"
 ---
 # <a name="cluster-wizard-data-mining-add-ins-for-excel"></a>Assistente de Cluster (Suplementos de Mineração de Dados para Excel)
   ![Assistente de cluster na faixa de opções mineração de dados](media/dmc-cluster.gif "Assistente de Cluster na faixa de opções mineração de dados")  

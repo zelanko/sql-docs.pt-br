@@ -1,5 +1,5 @@
 ---
-title: 'Propriedades do trabalho: Novo trabalho (página destinos) | Microsoft Docs'
+title: 'Propriedades do Trabalho: Novo trabalho (página destinos) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f47054e2f0260db272ad25cbed549fd14df8c8e8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62695443"
 ---
-# <a name="job-properties-new-job-targets-page"></a>Propriedades do trabalho: Novo trabalho (página destinos)
+# <a name="job-properties-new-job-targets-page"></a>Propriedades do Trabalho: Novo Trabalho (página Destinos)
   Use essa página para gerenciar os servidores de destino para o trabalho.  
   
 ## <a name="options"></a>Opções  

@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4ceb9402780788d3a2a45e8d2b838c156c28faab
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832603"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Opções da solicitação de perfil Padrão de Coluna (tarefa Criação de Perfil de Dados)
   Use o painel **Propriedades da Solicitação** da página **Solicitações de Perfil** para definir as opções da **Solicitação de Perfil de Padrão de Coluna** selecionada no painel de solicitações. Um perfil de Padrão de Coluna informa um conjunto de expressões regulares que cobrem a porcentagem especificada de valores em uma coluna de cadeia de caracteres. Esse perfil pode ajudá-lo a identificar problemas em seus dados, como cadeias de caracteres inválidas, além de sugerir expressões regulares que podem ser usadas posteriormente para validar novos valores. Por exemplo, um perfil de padrão de uma coluna Códigos Postais dos Estados Unidos pode produzir as expressões regulares: \d{5}-\d{4}, \d{5} e \d{9}. Se você vir outras expressões regulares, seus dados provavelmente conterão valores inválidos ou que estão em um formato incorreto.  
@@ -46,9 +46,9 @@ ms.locfileid: "58388994"
 |Marca|Termo|  
 |---------|----------|  
 |Direção|Leste|  
-|Direção|Oeste|  
-|Direção|Norte|  
-|Direção|Sul|  
+|Direction|Oeste|  
+|Direction|Norte|  
+|Direction|Sul|  
   
  Também seria possível usar outra marca para agrupar as palavras que especificam o logradouro em endereços:  
   

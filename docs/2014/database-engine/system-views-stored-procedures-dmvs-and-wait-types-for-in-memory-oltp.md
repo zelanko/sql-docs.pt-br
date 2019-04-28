@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d047cbc4fe3ba3f4945acd9da4f627a05992e779
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842395"
 ---
 # <a name="system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp"></a>Exibições do sistema, procedimentos armazenados, tipos de espera e DMVs para OLTP in-memory
   Este tópico fornece descrições breves e links para vários objetos de banco de dados que dão suporte a OLTP na memória.  
@@ -29,7 +29,7 @@ ms.locfileid: "52406153"
 |[sys.parameters &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-parameters-transact-sql)|Verifique se o parâmetro não é anulável (para uma execução mais eficiente de um procedimento armazenado compilado nativamente).|**is_nullable** coluna.|  
 |[sys.all_sql_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-all-sql-modules-transact-sql)|Verifique se algum procedimento armazenado foi originalmente compilado.|**uses_native_compilation** coluna.|  
 |[sys.sql_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql)|Verifique se algum procedimento armazenado foi originalmente compilado.|**uses_native_compilation** coluna.|  
-|[table_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-table-types-transact-sql)|Verifique se uma tabela tem otimização de memória.|**is_memory_optimized** coluna.|  
+|[sys.table_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-table-types-transact-sql)|Verifique se uma tabela tem otimização de memória.|**is_memory_optimized** coluna.|  
 |[sys.tables &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-tables-transact-sql)|Verifique se uma tabela tem otimização de memória e verifique a configuração de durabilidade de uma tabela.|**durabilidade**, **durability_desc**, e **is_memory_optimized** colunas.|  
 |[sys.hash_indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-hash-indexes-transact-sql)|Mostre os índices de hash de uma tabela com otimização de memória.|Específico para OLTP na memória.|  
   
@@ -44,11 +44,11 @@ ms.locfileid: "52406153"
   
 |Procedimento armazenado|Descrição|  
 |----------------------|-----------------|  
-|[sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql)|Associa um banco de dados de OLTP na memória para um pool de recursos.|  
+|[sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql)|Associa um banco de dados de OLTP na memória para um pool de recursos.|  
 |[sys.sp_xtp_checkpoint_force_garbage_collection &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-checkpoint-force-garbage-collection-transact-sql)|Inicia a coleta de lixo em um banco de dados de OLTP na memória.|  
-|[sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql)|Habilita a coleta de estatísticas para procedimentos armazenados compilados nativamente.|  
-|[sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql)|Habilita a coleta de estatísticas por consulta para procedimentos armazenados compilados nativamente.|  
-|[sp_xtp_merge_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql)|Mescla dados e arquivos delta.|  
+|[sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql)|Habilita a coleta de estatísticas para procedimentos armazenados compilados nativamente.|  
+|[sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql)|Habilita a coleta de estatísticas por consulta para procedimentos armazenados compilados nativamente.|  
+|[sys.sp_xtp_merge_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql)|Mescla dados e arquivos delta.|  
 |[sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql)|Remove a associação entre um banco de dados e um pool de recursos.|  
   
 ## <a name="dynamic-management-views-dmvs"></a>DMVs (exibições de gerenciamento dinâmico)  

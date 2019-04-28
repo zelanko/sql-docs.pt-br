@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d7c4a8d59a150e159a5eab99fbedd777a241b58
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703266"
 ---
 # <a name="mining-model-properties-dialog-box-analysis-services---data-mining"></a>Caixa de Diálogo Propriedades do Modelo de Mineração (Analysis Services – Mineração de Dados)
   Utilize a caixa de diálogo **Propriedades do Modelo de Mineração** no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para definir as propriedades de um modelo de mineração em um banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Você pode exibir a caixa de diálogo **Propriedades do Modelo de Mineração** clicando com o botão direito do mouse em um modelo de mineração no **Pesquisador de Objetos** e selecionando **Propriedades**.  
@@ -34,7 +34,7 @@ ms.locfileid: "48179916"
 |**Descrição**|Exibe a descrição do modelo de mineração.|  
 |**Criar Carimbo de Data/Hora**|Exibe a data e hora em que foi criado o modelo de mineração.|  
 |**Última Atualização de Esquema**|Exibe a data e a hora em que os metadados do modelo de mineração foram atualizados pela última vez.|  
-|**Estado**|Exibe o estado de processamento do modelo de mineração. Para obter mais informações sobre os valores para essa propriedade, consulte <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
+|**Estado**|Exibe o estado de processamento do modelo de mineração. Para obter mais informações sobre os valores dessa propriedade, consulte <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
 |**Último processamento**|Exibe a data e a hora em que o modelo de mineração foi processado pela última vez.|  
   
 ## <a name="see-also"></a>Consulte também  

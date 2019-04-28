@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7febab9f8ecf6cae4df08f110a16c0bdc512a948
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711431"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>Configuração de modos de quorum WSFC e votação (SQL Server)
   Tanto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] quanto as instâncias de cluster de failover (FCI) AlwaysOn utilizam o Windows Server Failover Clustering (WSFC) como tecnologia de plataforma.  O WSFC usa uma abordagem baseada em quorum para monitorar integridade de cluster geral e maximizar a tolerância a falhas no nível do nó. Um entendimento fundamental dos modos de quorum do WSFC e a configuração de votação de nó são muito importantes para o design, a operação e a resolução de problemas da sua solução de alta disponibilidade e recuperação de desastre AlwaysOn.  
@@ -48,7 +48,7 @@ ms.locfileid: "53349937"
 > [!IMPORTANT]  
 >  Se um cluster WSFC for definido offline devido a uma falha de quorum, a intervenção manual será necessária para colocá-lo online novamente.  
 >   
->  Para obter mais informações, consulte: [Recuperação de desastres WSFC por meio de Quorum forçado &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md).  
+>  Para obter mais informações, consulte: [Recuperação de desastres do WSFC por meio de quorum forçado &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md).  
   
 ##  <a name="QuorumModes"></a> Modos de quorum  
  Um *modo de quorum* é configurado no nível do cluster WSFC que dita a metodologia usada para votação de quorum.  O utilitário Gerenciador de Cluster de Failover recomendará um modo de quorum com base no número de nós no cluster.  
@@ -87,7 +87,7 @@ ms.locfileid: "53349937"
 > [!IMPORTANT]  
 >  Para usar configurações de NodeWeight, é necessário aplicar o seguinte hotfix para todos os servidores no cluster WSFC:  
 >   
->  [KB2494036](https://support.microsoft.com/kb/2494036): Há um hotfix disponível para permitir que você configure um nó de cluster que não tenha votos de quorum em [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] e em [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
+>  [KB2494036](https://support.microsoft.com/kb/2494036): Um hotfix está disponível para permitir que você configure um nó de cluster que não tem votos de quorum em [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] e, em [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
   
 ##  <a name="RecommendedAdjustmentstoQuorumVoting"></a> Ajustes indicados para votação de quorum  
  Ao habilitar ou desabilitar o voto de um nó WSFC específico, siga estas diretrizes:  
@@ -128,9 +128,9 @@ ms.locfileid: "53349937"
   
 -   [Verificação de configuração de voto de quorum nos assistentes de grupo de disponibilidade do AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/archive/2012/03/13/quorum-vote-configuration-check-in-alwayson-availability-group-wizards-andy-jing.aspx)  
   
--   [Tecnologias do Windows Server:  Clusters de failover](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
+-   [Tecnologias do Windows Server:  clusters de failover](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
   
--   [Guia passo a passo de Cluster de failover: Configurando o Quorum em um Cluster de Failover](https://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
+-   [Failover Cluster Step-by-Step Guide: Configuring the Quorum in a Failover Cluster](https://technet.microsoft.com/library/cc770620\(WS.10\).aspx) (Guia passo a passo de cluster de failover: configurando o quorum em um cluster de failover)  
   
 ## <a name="see-also"></a>Consulte também  
  [Recuperação de desastres do WSFC por meio de quorum forçado &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   

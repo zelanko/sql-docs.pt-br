@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 939e3befd0cbec87dbba7046761637c4b7655e22
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812729"
 ---
 # <a name="change-source-control"></a>Alterar Controle do Código-Fonte
   Cria e gerencia as conexões e associações que vinculam uma solução ou projeto salvo localmente com uma pasta do banco de dados de controle do código fonte.  
@@ -31,7 +31,7 @@ ms.locfileid: "48092536"
 >  Esta caixa de diálogo também está disponível clicando com o botão direito do mouse no item no Gerenciador de Soluções.  
   
 ## <a name="options"></a>Opções  
- **associar**  
+ **Bind**  
  Associe itens selecionados com um local de servidor de controle do código fonte especificado. Por exemplo, você pode usar esse botão para associar à última pasta de servidor de controle do código fonte conhecida e ao banco de dados. Se uma pasta de servidor ou banco de dados recente não puder ser localizada, você será solicitado a especificar outra.  
   
  **Procurar**  

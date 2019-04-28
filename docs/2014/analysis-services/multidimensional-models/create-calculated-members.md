@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a80226e3e82dec9e3c163ed96106d1b24846fca0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700200"
 ---
 # <a name="create-calculated-members"></a>Criar membros calculados
   É possível criar medidas ou membro de dimensão personalizados, chamados membros calculados, combinando dados de cubo, operadores aritméticos, números e funções. Por exemplo, você pode criar um membro calculado chamado Euros que converte dólares em euros multiplicando uma medida existente em dólar pela taxa de conversão. Euros pode então ser exibido aos usuários finais em uma linha ou coluna separada.  

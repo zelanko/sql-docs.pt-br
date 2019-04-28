@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bce3bd6862e612a8cefa35d1c981d608bf2c341c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842939"
 ---
 # <a name="source-control-basics"></a>Noções básicas de controle do código-fonte
   O controle do código-fonte recorre a um sistema em que uma parte central do software de servidor armazena e rastreia versões de arquivos e também controla o acesso a eles. Um sistema de controle do código-fonte típico inclui um provedor de controle do código-fonte, e dois ou mais clientes de controle do código-fonte.  

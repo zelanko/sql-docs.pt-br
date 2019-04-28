@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0cef8a7e8a64935cca6b378e14c00eb0d80f6b8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721147"
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Inicializar uma assinatura transacional sem um instantâneo
   Por padrão, uma assinatura a uma publicação transacional é inicializada com um instantâneo, que é gerado pelo Agente de Instantâneo e aplicado pelo Agente de Distribuição. Em alguns cenários, como os que envolvem grandes conjuntos de dados iniciais, é preferível inicializar uma assinatura usando outro método. Outros métodos de inicializar um Assinante incluem:  

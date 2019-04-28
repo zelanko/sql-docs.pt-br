@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9109f47ba1173c115234f9040445fb110e3f0e3c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680870"
 ---
 # <a name="classify-wizard-data-mining-add-ins-for-excel"></a>Assistente de Classificação (Suplementos de Mineração de Dados para Excel)
   ![Assistente de classificar na faixa de opções mineração de dados](media/dmc-classify.gif "Assistente classificar na faixa de opções mineração de dados")  

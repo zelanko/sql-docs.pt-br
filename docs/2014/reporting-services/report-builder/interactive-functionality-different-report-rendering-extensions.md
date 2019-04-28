@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b566b27ca060f84fe976a3827e5f657ca43bf741
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59960332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62688777"
 ---
 # <a name="interactive-functionality-for-different-report-rendering-extensions-report-builder-and-ssrs"></a>Funcionalidade interativa para extensões de renderização de relatório diferentes (Construtor de Relatórios e SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece recursos interativos para relatórios que permitem trabalhar em tempo de execução com um relatório. Nem todos os formatos de renderização de relatório dão suporte a uma gama completa de recursos interativos. Você pode usar a tabela a seguir para entender como cada recurso interativo funciona em formatos específicos.  

@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9b5da9ff28dc658f870033a02fe88b14ea442c51
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832868"
 ---
 # <a name="bulk-insert-task"></a>Tarefa Inserção em Massa
   A tarefa Inserção em Massa fornece uma maneira eficiente de copiar grandes volumes de dados em uma tabela ou exibição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por exemplo, suponha que a empresa armazena sua lista de produtos em milhões de linhas em um sistema de mainframe, mas o sistema de comércio eletrônico da empresa usa o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para preencher páginas da Web. Você deve atualizar a tabela de produtos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] todas as noites com a lista principal de produtos do mainframe. Para atualizar a tabela, você salva a lista de produtos em um formato delimitado por guia e usa a tarefa de inserção em massa para copiar os dados diretamente na tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

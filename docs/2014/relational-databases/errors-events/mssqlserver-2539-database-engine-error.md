@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_2539 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: sql-server-2014
+ms.date: 04/04/2017
+ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: language-reference
 helpviewer_keywords:
 - 2539 (Database Engine error)
 ms.assetid: e638efcc-56f4-40f9-9740-17ef67b47d79
@@ -13,14 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d65b0b0f9707eb137ab3c76cae350d265f3fc971
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62868837"
 ---
 # <a name="mssqlserver2539"></a>MSSQLSERVER_2539
-    
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  
 ## <a name="details"></a>Detalhes  
   
 |||  
@@ -33,9 +34,8 @@ ms.locfileid: "48184686"
 |Texto da mensagem|O número total de extensões = EXTENTS, páginas usadas = USED_PAGES, páginas reservadas = RESERVED_PAGES neste banco de dados.|  
   
 ## <a name="explanation"></a>Explicação  
- Essas informações fazem parte da saída do comando DBCC CHECKALLOC. Elas são um resumo de extensões alocadas, páginas usadas e páginas reservadas para o banco de dados especificado.  
+Essas informações fazem parte da saída do comando DBCC CHECKALLOC. Elas são um resumo de extensões alocadas, páginas usadas e páginas reservadas para o banco de dados especificado.  
   
 ## <a name="user-action"></a>Ação do usuário  
- None  
-  
+None  
   

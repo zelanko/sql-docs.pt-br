@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c254e5c9cefa8a7e65b18fa25cc597ab3afc642
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58373825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835738"
 ---
 # <a name="manage-a-cdc-service"></a>Gerenciar um serviço CDC
   Você pode usar o CDC Designer Console para exibir os serviços criados com o Console de Configuração do Serviço CDC e gerenciou todas as instâncias no Serviço Oracle CDC.  

@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 05bd3c59428b719e5d292dd3d122e5c8af0b7b79
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62826667"
 ---
 # <a name="clientnetworkprotocolproperty-class"></a>Classe ClientNetworkProtocolProperty
   A [classe ClientNetworkProtocolProperty Classe](clientnetworkprotocolproperty-class.md) representa propriedades de um protocolo de rede do cliente.  

@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3f6123f66d687327ba56601419328e44fd920a2a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62815742"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Grupos de Disponibilidade AlwaysOn: Interoperabilidade (SQL Server)
   Este tópico documenta interoperabilidade do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] com outros recursos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -36,7 +36,7 @@ ms.locfileid: "53367989"
 |Criptografia de banco de dados|[Bancos de dados com grupos de disponibilidade do AlwaysOn criptografados &#40;SQL Server&#41;](encrypted-databases-with-always-on-availability-groups-sql-server.md)|  
 |Instantâneos do banco de dados|[Instantâneos com grupos de disponibilidade AlwaysOn do banco de dados &#40;SQL Server&#41;](database-snapshots-with-always-on-availability-groups-sql-server.md)|  
 |FILESTREAM e FileTable|[FILESTREAM e FileTable com grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](filestream-and-filetable-with-always-on-availability-groups-sql-server.md)|  
-|Pesquisa de texto completo|Observação: Os índices de texto completo são sincronizados com bancos de dados secundários AlwaysOn.|  
+|Pesquisa de texto completo|Observação: Índices de texto completo são sincronizados com bancos de dados secundários AlwaysOn.|  
 |Envio de logs|[Pré-requisitos para migrar de envio de logs para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)|  
 |RBS (Armazenamento de Blob Remoto)|[Remote Blob Store &#40;RBS&#41; e os grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](remote-blob-store-rbs-and-always-on-availability-groups-sql-server.md)|  
 |Replicação[configurar a replicação para grupos de disponibilidade AlwaysOn (SQL Server)](configure-replication-for-always-on-availability-groups-sql-server.md)<br /><br /> [Mantendo um banco de dados de publicação AlwaysOn &#40;SQL Server&#41;](maintaining-an-always-on-publication-database-sql-server.md)<br /><br /> [A replicação, controle de alterações, Change Data Capture e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)<br /><br /> [Assinantes de replicação e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)|  

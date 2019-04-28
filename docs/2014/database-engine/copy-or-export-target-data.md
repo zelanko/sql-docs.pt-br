@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 749af9366ef78ef182ad037258eb75603333195f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808201"
 ---
 # <a name="copy-or-export-target-data"></a>Copiar ou exportar dados de destino
   Você pode copiar seus dados de destino e também exportá-los para um arquivo .CSV.  

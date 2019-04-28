@@ -28,11 +28,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 645aee1374f7dbf3c290500bb35ca47115983670
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62809564"
 ---
 # <a name="server-configuration-options-sql-server"></a>Opções de configuração do servidor (SQL Server)
   É possível gerenciar e otimizar recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio de opções de configuração usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o procedimento armazenado do sistema sp_configure. As opções de configuração de servidor usadas com mais frequência estão disponíveis no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]; todas as opções de configuração podem ser acessadas pelo sp_configure. Avalie atentamente os efeitos dessas opções no sistema antes de defini-las. Para obter mais informações, veja [Exibir ou alterar propriedades de servidor &#40;SQL Server&#41;](view-or-change-server-properties-sql-server.md).  

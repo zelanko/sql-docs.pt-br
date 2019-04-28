@@ -12,14 +12,14 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 69127078f72eeab296c754dfce666804dcdda53d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62837686"
 ---
 # <a name="getting-assistance-sql-server-2014"></a>Obtendo assistência (SQL Server 2014)
-  Existem três origens principais de informações da [!INCLUDE[msCoName](../includes/msconame-md.md)] sobre o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
+  Existem três origens principais de informações da [!INCLUDE[msCoName](../includes/msconame-md.md)] sobre o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
 -   A documentação e os tutoriais instalados com o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
@@ -27,7 +27,7 @@ ms.locfileid: "48134878"
   
 -   Informações do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em outros sites da [!INCLUDE[msCoName](../includes/msconame-md.md)].  
   
- Se não localizar a informações que está procurando nessas origens, você poderá postar perguntas nos fóruns e grupos de notícias da comunidade do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou abrir um caso de suporte com o suporte da [!INCLUDE[msCoName](../includes/msconame-md.md)].  
+ Se não localizar a informações que está procurando nessas origens, você poderá postar perguntas nos fóruns e grupos de notícias da comunidade do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou abrir um caso de suporte com o suporte da [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Obtendo assistência do SQL Server](../../2014/getting-started/getting-sql-server-assistance.md)  

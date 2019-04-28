@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7cf56b6614587c333f473136f1cafc72128846a2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719761"
 ---
 # <a name="datacontrol-object-error-codes"></a>Códigos de erro do objeto DataControl
 A seguinte tabela lista o [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) códigos de erro do objeto. A conversão decimal positiva de dois bytes baixa, a conversão decimal negativa do código de erro completa e os valores hexadecimais são mostrados.

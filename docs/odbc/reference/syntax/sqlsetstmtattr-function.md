@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f22051ca07dbdb732cfcda2f8200b7375f593463
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982158"
 ---
 # <a name="sqlsetstmtattr-function"></a>Função SQLSetStmtAttr
 **Conformidade com**  
@@ -98,7 +98,7 @@ SQLRETURN SQLSetStmtAttr(
 |SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
 |01000|Aviso geral|Mensagem informativa de específicos do driver. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
-|01S02|Valor de opção alterado|O driver não oferecia suporte para o valor especificado na *ValuePtr*, ou o valor especificado em *ValuePtr* era inválido devido a condições de trabalho de implementação, portanto, o driver substituído um valor semelhante. (**SQLGetStmtAttr** pode ser chamado para determinar o valor substituído temporariamente.) O valor de substituição é válido para o *StatementHandle* até que o cursor seja fechado, ponto em que o atributo de instrução será revertido para seu valor anterior. Os atributos de instrução que podem ser alterados são:<br /><br /> SQL _ ATTR_CONCURRENCY SQL _ ATTR_CURSOR_TYPE SQL _ ATTR_KEYSET_SIZE SQL _ ATTR_MAX_LENGTH SQL _ ATTR_MAX_ROWS SQL _ ATTR_QUERY_TIMEOUT SQL_ATTR_ROW_ARRAY_SIZE SQL _ ATTR_SIMULATE_CURSOR<br /><br /> (A função retornará SQL_SUCCESS_WITH_INFO.)|  
+|01S02|Valor de opção alterado|O driver não oferecia suporte para o valor especificado na *ValuePtr*, ou o valor especificado em *ValuePtr* era inválido devido a condições de trabalho de implementação, portanto, o driver substituído um valor semelhante. (**SQLGetStmtAttr** pode ser chamado para determinar o valor substituído temporariamente.) O valor de substituição é válido para o *StatementHandle* até que o cursor seja fechado, ponto em que o atributo de instrução será revertido para seu valor anterior. Os atributos de instrução que podem ser alterados são:<br /><br /> SQL_ ATTR_CONCURRENCY SQL_ ATTR_CURSOR_TYPE SQL_ ATTR_KEYSET_SIZE SQL_ ATTR_MAX_LENGTH SQL_ ATTR_MAX_ROWS SQL_ ATTR_QUERY_TIMEOUT  SQL_ATTR_ROW_ARRAY_SIZE SQL_ ATTR_SIMULATE_CURSOR<br /><br /> (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |08S01|Falha de link de comunicação|Falha do link de comunicação entre o driver e a fonte de dados ao qual o driver foi conectado antes do processamento da função foi concluída.|  
 |24000|Estado de cursor inválido|O *atributo* era SQL_ATTR_CURSOR_TYPE, SQL_ATTR_CONCURRENCY, SQL_ATTR_SIMULATE_CURSOR ou SQL_ATTR_USE_BOOKMARKS, e o cursor foi aberto.|  
 |HY000|Erro geral|Ocorreu um erro para o qual não houve nenhum SQLSTATE específico e para o qual não foi definida nenhuma SQLSTATE específicos de implementação. A mensagem de erro retornada por **SQLGetDiagRec** na  *\*MessageText* buffer descreve o erro e sua causa.|  

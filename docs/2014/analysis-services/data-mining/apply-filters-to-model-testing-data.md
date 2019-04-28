@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 967de27eb9bc1f191b138e8b5962b04c145fe191
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689364"
 ---
 # <a name="apply-filters-to-model-testing-data"></a>Aplicar filtros a dados de testes de modelo
   Quando você especifica uma fonte de dados externa a ser usada para testar um modelo, pode opcionalmente aplicar um filtro para restringir os dados de entrada. Por exemplo, talvez queira testar o modelo especificamente para previsões sobre clientes com determinada faixa de renda.  

@@ -33,11 +33,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fc69e3683656c5705e7e82df27b80a8a41cb81a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807358"
 ---
 # <a name="create-an-extended-events-session-using-the-wizard-object-explorer"></a>Criar uma sessão de Eventos Estendidos usando o assistente (Pesquisador de Objetos)
   Para ajudar você a selecionar e capturar eventos no servidor, os Eventos Estendidos incluem um Assistente para Nova Sessão que o guiará pelas etapas de criação de uma sessão de Eventos Estendidos. O Assistente para Nova Sessão expõe a maioria da funcionalidade de Eventos Estendidos. A caixa de diálogo [Nova Sessão](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md) também permite definir uma sessão de Eventos Estendidos que captura, exibe e analisa seus dados. A caixa de diálogo Nova Sessão expõe toda a funcionalidade de Eventos Estendidos.  

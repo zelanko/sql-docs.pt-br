@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 331a7c4df759114e18fd47007058ddc38b2f77d9
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724883"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Referência técnica do algoritmo MSC
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "52418377"
  Aplica-se à coluna da estrutura de mineração.  
   
  MODEL_EXISTENCE_ONLY  
- Significa que a coluna será tratada como se tivesse dois estados possíveis: **Faltando** e **existentes**. Um valor nulo é tratado como **Missing** .  
+ Significa que a coluna será tratada como tendo dois estados possíveis: **Faltando** e **existentes**. Um valor nulo é tratado como **Missing** .  
   
  Aplica-se à coluna do modelo de mineração.  
   

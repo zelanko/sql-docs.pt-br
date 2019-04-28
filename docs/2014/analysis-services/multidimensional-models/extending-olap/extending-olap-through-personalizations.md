@@ -13,11 +13,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74c5b777dda06cf70a6afa2e6384eb2a3587d431
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725980"
 ---
 # <a name="extending-olap-through-personalizations"></a>Estendendo OLAP por meio de personalizações
   O Microsoft [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] fornece muitas funções intrínsecas para uso com as linguagens MDX e DMX. Essas funções são designadas para executar todas as operações, desde cálculos estatísticos padrão ao desvio de membros em uma hierarquia. No entanto, como em qualquer outro produto complexo, há sempre a necessidade de estender a funcionalidade para o produto.  

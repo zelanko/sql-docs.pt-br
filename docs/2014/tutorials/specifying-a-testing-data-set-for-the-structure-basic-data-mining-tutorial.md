@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 21eaa86fb1ff594e8b9d2b779b787276ee13ab4b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720103"
 ---
 # <a name="specifying-a-testing-data-set-for-the-structure-basic-data-mining-tutorial"></a>Especificando um conjunto de dados de teste para a estrutura (Tutorial de mineração de dados básico)
   Nas últimas telas do Assistente de Mineração de Dados, você dividirá seus dados entre um conjunto de teste e um conjunto de treinamento. Em seguida, dará um nome à sua estrutura e habilitará o detalhamento do modelo.  

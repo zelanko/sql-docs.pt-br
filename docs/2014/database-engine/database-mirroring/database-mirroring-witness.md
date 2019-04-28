@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 682a3692414f89beb0c5e0f0204bc1a69b532e64
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807613"
 ---
 # <a name="database-mirroring-witness"></a>Testemunha de espelhamento de banco de dados
   Para dar suporte a failover automático, a sessão de espelhamento de banco de dados deve ser configurada em modo de alta segurança e também deve possuir uma terceira instância de servidor, conhecida como *testemunha*. A testemunha é uma instância opcional do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que permite ao servidor espelho, em uma sessão de modo de alta segurança, reconhecer se um failover automático deve ser iniciado. Ao contrário dos dois parceiros, a testemunha não atende ao banco de dados. O suporte ao failover automático é a única função da testemunha.  
@@ -62,7 +62,7 @@ ms.locfileid: "48183826"
   
 -   Se o servidor espelho estiver desconectado da testemunha e também do servidor principal, não será possível o failover automático, independentemente do estado do servidor principal.  
   
- O requisito de que pelo menos duas das instâncias de servidor estejam conectadas é conhecido como *quorum*. O quorum assegura que o banco de dados só possa ser atendido por um parceiro de cada vez. Para obter informações sobre como o quorum funciona e seu impacto sobre uma sessão, veja [Quorum: como uma testemunha afeta a disponibilidade do banco de dados &#40;Espelhamento de Banco de Dados&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ O requisito de que pelo menos duas das instâncias de servidor estejam conectadas é conhecido como *quorum*. O quorum assegura que o banco de dados só possa ser atendido por um parceiro de cada vez. Para obter informações sobre como o quorum funciona e seu impacto em uma sessão, consulte [Quorum: Como uma testemunha afeta a disponibilidade do banco de dados &#40;Espelhamento de Banco de Dados&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 ##  <a name="AddRemoveWitness"></a> Para adicionar ou remover uma testemunha  
  **Para adicionar uma testemunha**  
@@ -78,7 +78,7 @@ ms.locfileid: "48183826"
 ## <a name="see-also"></a>Consulte também  
  [Troca de função durante uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Modos de operação de espelhamento de banco de dados](database-mirroring-operating-modes.md)   
- [Quorum: como uma testemunha afeta a disponibilidade do banco de dados &#40;Espelhamento de Banco de Dados&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)   
+ [Quorum: Como uma testemunha afeta a disponibilidade do banco de dados &#40;espelhamento de banco de dados&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)   
  [Possíveis falhas durante o espelhamento de banco de dados](possible-failures-during-database-mirroring.md)   
  [Estados de espelhamento &#40;SQL Server&#41;](mirroring-states-sql-server.md)  
   

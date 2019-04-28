@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c5288fe363350aebacba436cef388ae51e2bdd73
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982175"
 ---
 # <a name="sqlsetdescrec-function"></a>Função SQLSetDescRec
 **Conformidade com**  
- Versão introduziu: Conformidade de padrões 3.0 ODBC: ISO 92  
+ Versão introduzida: Conformidade com padrões 3.0 ODBC: ISO 92  
   
  **Resumo**  
  O **SQLSetDescRec** função define vários campos de descritor que afetam o tipo de dados e buffer associados a uma coluna ou parâmetro de dados.  
@@ -90,7 +90,7 @@ SQLRETURN SQLSetDescRec(
 ## <a name="diagnostics"></a>Diagnóstico  
  Quando **SQLSetDescRec** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtida chamando **SQLGetDiagRec** com um *HandleType* de SQL _ HANDLE_DESC e uma *manipular* dos *DescriptorHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLSetDescRec** e explica cada uma no contexto dessa função; a notação "(DM)" precede as descrições das SQLSTATEs retornados pelo Gerenciador de Driver. O código de retorno associado com cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
-|SQLSTATE|Erro|Description|  
+|SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
 |01000|Aviso geral|Mensagem informativa de específicos do driver. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |07009|Índice de descritor inválido|O *RecNumber* argumento foi definido como 0 e o *DescriptorHandle* chamado um identificador IPD.<br /><br /> O *RecNumber* argumento era menor que 0.<br /><br /> O *RecNumber* argumento era maior que o número máximo de colunas ou parâmetros que pode dar suporte a fonte de dados, e o *DescriptorHandle* argumento era um APD, IPD ou descartar.<br /><br /> O *RecNumber* argumento era igual a 0 e o *DescriptorHandle* argumento chamado um APD implicitamente alocado. (Esse erro não ocorre com um descritor de aplicativo explicitamente alocados porque não se sabe se um descritor de aplicativo explicitamente alocados é um APD ou descartar até que o tempo de execução.)|  

@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1bef947b8cad04acc69afe005a04747ceb85c3d2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691703"
 ---
 # <a name="results-detailed-view-dialog-box"></a>Caixa de diálogo Exibição Detalhada de Resultados
   Esta caixa de diálogo mostra os resultados da avaliação da política após você ter executado uma política usando a caixa de diálogo **Avaliar Políticas** e ter clicado em **Avaliar**. Esta caixa de diálogo é somente leitura e ajuda a entender qual parte de uma expressão de propriedade poderia estar falhando.  

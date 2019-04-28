@@ -15,23 +15,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3b064db7ff0e496ea7a46085825afc202fced605
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726355"
 ---
 # <a name="define-cube-hierarchy-properties"></a>Definir propriedades de hierarquia de cubo
   As propriedades de hierarquia de cubo permitem a especificação de configurações exclusivas para hierarquias definidas pelo usuário em dimensões de cubo com base na mesma dimensão do banco de dados. A tabela a seguir descreve as propriedades de uma hierarquia de cubo.  
   
-|Propriedade|Description|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |`Enabled`|Determina se a hierarquia está habilitada para a dimensão de cubo.|  
 |`HierarchyID`|Contém o identificador exclusivo (ID) da hierarquia.|  
-|`OptimizedState`|Determina o nível de otimização aplicado à hierarquia. Essa propriedade pode ter os seguintes valores:<br /><br /> `FullyOptimized`: A instância cria índices para a hierarquia melhorar o desempenho da consulta. Este é o valor padrão.<br /><br /> `NotOptimized`: A instância não compila índices adicionais.|  
+|`OptimizedState`|Determina o nível de otimização aplicado à hierarquia. Essa propriedade pode ter os seguintes valores:<br /><br /> `FullyOptimized`: A instância cria índices para a hierarquia a fim de melhorar o desempenho das consultas. Este é o valor padrão.<br /><br /> `NotOptimized`: A instância não cria índices adicionais.|  
 |`Visible`|Determina a visibilidade da hierarquia de cubo. O valor padrão é `True`.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Hierarquias de usuário](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)  
+ [Hierarquias do usuário](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)  
   
   

@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b05aec565feb655f9c66df928656ecef4bc675f1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689478"
 ---
 # <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>Procurar um modelo usando o Visualizador MTS
   O Visualizador Time Series da [!INCLUDE[msCoName](../../includes/msconame-md.md)] no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exibe modelos de mineração que são criados com o algoritmo MTS da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . O algoritmo MTS da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é um algoritmo de regressão que cria modelos de mineração de dados para previsão de colunas contínuas, tais como vendas de produtos, em um cenário de previsão. Esses modelos de série temporal podem incluir informações baseadas em diferentes algoritmos:  
@@ -87,9 +87,9 @@ ms.locfileid: "48137548"
  [Voltar ao Início](#BKMK_ViewerTabs)  
   
 ## <a name="see-also"></a>Consulte também  
- [Tarefas do Visualizador do modelo e instruções de mineração](mining-model-viewer-tasks-and-how-tos.md)   
+ [Tarefas e instruções do visualizador do modelo de mineração](mining-model-viewer-tasks-and-how-tos.md)   
  [Algoritmo MTS](microsoft-time-series-algorithm.md)   
- [Exemplos de consulta de modelo de série temporal](time-series-model-query-examples.md)   
- [Visualizadores do modelo de Mineração de dados](data-mining-model-viewers.md)  
+ [Exemplos de consulta de um modelo de série temporal](time-series-model-query-examples.md)   
+ [Visualizadores do Modelo de Mineração de Dados](data-mining-model-viewers.md)  
   
   

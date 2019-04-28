@@ -24,11 +24,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 030318d65d469546f946679e9c9173bfdb1a3f36
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828047"
 ---
 # <a name="data-flow-performance-features"></a>Recursos de desempenho de fluxo de dados
   Este tópico fornece sugestões sobre como projetar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para evitar problemas comuns de desempenho. Este tópico também provê informações sobre recursos e ferramentas que podem ser usados para diagnosticar o desempenho de pacotes.  
@@ -143,7 +143,7 @@ ms.locfileid: "58392774"
   
  Normalmente, os componentes mais lentos na transformação Dimensão Alteração Lenta são as transformações Comando de OLE DB que executam UPDATEs (atualizações) em apenas uma linha por vez. Portanto, a forma mais eficaz de melhorar o desempenho da transformação Dimensão Alteração Lenta é substituir as transformações Comando de OLE DB. Essas transformações podem ser substituídas por componentes de destino que salvam todas as linhas que serão atualizadas para uma tabela de preparação. Por isso, é possível adicionar uma tarefa Executar SQL que desenvolva uma única instrução UPDATE Transact-SQL com base no conjunto em todas as linhas ao mesmo tempo.  
   
- Usuários avançados podem criar um fluxo de dados personalizado para alterar o processamento da dimensão que é otimizada lentamente em dimensões maiores. Para uma discussão e exemplo dessa abordagem, consulte a seção "cenário de dimensão exclusiva" no white paper, [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602).  
+ Usuários avançados podem criar um fluxo de dados personalizado para alterar o processamento da dimensão que é otimizada lentamente em dimensões maiores. Para ver uma discussão e um exemplo desta abordagem, confira a seção "Cenário de dimensão exclusivo", no white paper, [Projeto REAL: Práticas de design ETL de Business Intelligence](https://go.microsoft.com/fwlink/?LinkId=96602).  
   
 ### <a name="destinations"></a>Destinos  
  Para atingir um melhor desempenho com destinos, considere o uso de um destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e teste o desempenho do destino.  
@@ -166,9 +166,9 @@ ms.locfileid: "58392774"
 ## <a name="related-content"></a>Conteúdo relacionado  
  **Artigos e postagens de blog**  
   
--   Artigo técnico, [SQL Server 2005 Integration Services: A Strategy for Performance](https://go.microsoft.com/fwlink/?LinkId=98899), em technet.microsoft.com  
+-   Artigo técnico, [SQL Server 2005 Integration Services: A Strategy for Performance](https://go.microsoft.com/fwlink/?LinkId=98899), no technet.microsoft.com  
   
--   Artigo técnico, [Integration Services: Performance Tuning Techniques](https://go.microsoft.com/fwlink/?LinkId=98900), em technet.microsoft.com  
+-   Artigo técnico, [Integration Services: Performance Tuning Techniques](https://go.microsoft.com/fwlink/?LinkId=98900), no technet.microsoft.com  
   
 -   Artigo técnico sobre como [aumentar o rendimento dos pipelines dividindo transformações síncronas em várias tarefas](http://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx), em sqlcat.com  
   

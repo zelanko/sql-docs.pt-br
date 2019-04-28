@@ -15,18 +15,18 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4271188149c8bafaaf256fa5056dd25ffc39aa38
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843118"
 ---
 # <a name="about-the-sql-server-license-terms"></a>Sobre os termos de licença do SQL Server
   Os Termos da Licença de Software do [!INCLUDE[msCoName](../includes/msconame-md.md)] são copiados para o computador local quando o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é instalado. Quando várias instâncias da mesma edição e do mesmo idioma do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] estão instaladas no mesmo computador, uma única cópia dos termos de licença será aplicável a todas as instâncias dessa edição e idioma. Os arquivos são gravados em: % ProgramFiles %\\[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\120\License Terms\ ou % % de ProgramFiles(x86) \ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\120\License termos\\.  
   
  Quando várias instâncias da mesma edição e do mesmo idioma do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] estão instaladas no mesmo computador, uma única cópia dos termos da licença é aplicável a todas as instâncias dessa edição e idioma.  
   
- O nome do arquivo de termos de licença indica a edição do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], bem como a edição do idioma do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instalada. O nome de arquivo dos Termos de licença está no formato: SQLServer2014_License_Edition_\<tipo > _\<LCID >. rtf. Por exemplo:  
+ O nome do arquivo de termos de licença indica a edição do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], bem como a edição do idioma do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instalada. O nome de arquivo de termos de licença está no formato: SQLServer2014_License_Edition_\<TYPE>_\<LCID>.rtf. Por exemplo:  
   
 -   SQLServer2014_License_DEV_1033.rtf para [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Developer, edição do idioma inglês.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "53354602"
   
  TYPE indica a edição do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Os seguintes segmentos de nome de arquivo são usados para identificar as edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] :  
   
--   ENT – edição Enterprise: Licenciamento da Licença de Acesso Servidor/Cliente (CAL)  
+-   ENT – edição Enterprise: Acesso de servidor/cliente de licenciamento CAL (licença)  
   
 -   ENTCORE – edição Enterprise: Licenciamento baseado em núcleo  
   

@@ -19,11 +19,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 97ad8e64260d337135a1b0d5cda739d8c81b1799
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62707153"
 ---
 # <a name="clr-table-valued-functions"></a>Funções com valor de tabela CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ Public Shared Sub FillRow ( <Out()> ByRef value As SqlInt32)
 ```  
   
 ### <a name="defining-a-table-valued-function-in-transact-sql"></a>Definindo uma função com valor de tabela no Transact-SQL  
- A sintaxe para definir uma função com valor de tabela do CLR é semelhante de um [!INCLUDE[tsql](../../includes/tsql-md.md)] função com valor de tabela, com a adição do **EXTERNAL NAME** cláusula. Por exemplo:  
+ A sintaxe para definir uma função com valor de tabela do CLR é semelhante de um [!INCLUDE[tsql](../../includes/tsql-md.md)] função com valor de tabela, com a adição do **EXTERNAL NAME** cláusula. Por exemplo:   
   
 ```  
 CREATE FUNCTION GetEmpFirstLastNames()  

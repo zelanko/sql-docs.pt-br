@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fc1fc6573b977a0f959aef51c960182904f660d0
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834348"
 ---
 # <a name="configure-data-viewer-general-tab"></a>Configurar Visualizador de Dados (guia Geral)
   Um visualizador de dados exibe os dados conforme eles migram pelo caminho que conecta dois componentes de fluxo de dados durante uma execução de pacote.  

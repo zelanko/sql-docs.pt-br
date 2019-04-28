@@ -20,16 +20,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a03735b1d412a7501ab59f88288c32ef7ec5514c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726330"
 ---
 # <a name="understanding-the-input-files-used-to-create-the-deployment-script"></a>Compreendendo os arquivos de entrada usados para criar o script de implantação
-  Quando você cria um projeto do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] gera arquivos XML para o projeto. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] coloca esses arquivos XML na pasta de saída do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] projeto. Por padrão, a saída está fora na pasta \Lixeira. A tabela a seguir lista os arquivos XML criados pelo [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
+  Quando você cria um projeto do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] gera arquivos XML para o projeto. O [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] coloca esses arquivos XML na pasta de saída do projeto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Por padrão, a saída está fora na pasta \Lixeira. A tabela a seguir lista os arquivos XML criados pelo [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
   
-|Arquivo XMLA|Description|  
+|Arquivo XMLA|Descrição|  
 |---------------|-----------------|  
 |\<*nome do projeto*>. asdatabase|Contém as definições declarativas para todos os objetos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no projeto.|  
 |\<*nome do projeto*>. deploymenttargets|Contém o nome da instância e do banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em que os objetos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] serão criados.|  
@@ -37,7 +37,7 @@ ms.locfileid: "48165806"
 |\<*nome do projeto*>. deploymentoptions|Contém opções de implantação como se a implantação é transacional e se objetos implantados deveriam ser processados depois da implantação.|  
   
 > [!NOTE]  
->  O [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] nunca armazena senhas em seus arquivos de projeto.  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] nunca armazena senhas em seus arquivos de projeto.  
   
 ## <a name="modifying-the-input-files"></a>Modificando os arquivos de entrada  
  Modificar os valores nos arquivos de entrada, ou os valores recuperados dos arquivos de entrada, torna possível alterar o destino de implantação, os parâmetros de configuração e opções de implantação sem editar todo o \< *projeto nome da*>. asdatabase (ou todo arquivo de script XMLA se você gerar um script de uma já existente [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados). A possibilidade de modificar arquivos individuais permite que você crie com facilidade scripts de implantação para diferentes finalidades.  
@@ -53,7 +53,7 @@ ms.locfileid: "48165806"
 -   [Especificando opções de processamento](deployment-script-files-specifying-processing-options.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Executando o Assistente de implantação do Analysis Services](running-the-analysis-services-deployment-wizard.md)   
- [Noções básicas sobre o script de implantação do Analysis Services](understanding-the-analysis-services-deployment-script.md)  
+ [Executando o Assistente para Implantação do Analysis Services](running-the-analysis-services-deployment-wizard.md)   
+ [Compreendendo o script de implantação do Analysis Services](understanding-the-analysis-services-deployment-script.md)  
   
   

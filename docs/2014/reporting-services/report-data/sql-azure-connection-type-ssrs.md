@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: be11683abe087942f5008760a5cbe83c1b27328c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59937323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720621"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>Tipo de conexão do SQL Azure (SSRS)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] é um banco de dados relacional hospedado baseado em nuvem, baseado nas tecnologias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para incluir dados de um cubo do [!INCLUDE[ssSDS](../../includes/sssds-md.md)] no seu relatório, é necessário ter um conjunto de dados baseado na fonte de dados do relatório do tipo [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Esse tipo de fonte de dados interna é baseado na extensão de dados do [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Use esse tipo de fonte de dados para se conectar a e recuperar dados do [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  

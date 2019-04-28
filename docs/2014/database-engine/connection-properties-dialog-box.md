@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 350e48c225814052655e4fced89d2f934efa188f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808394"
 ---
 # <a name="connection-properties-dialog-box"></a>caixa de diálogo Propriedades da conexão
   Use essa caixa de diálogo para exibir as propriedades da conexão atual. Essa caixa de diálogo está disponível quando você clica em **Exibir propriedades da conexão** em várias caixas de diálogo do Pesquisador de Objetos. As propriedades exibidas nessa página são somente leitura.  
@@ -62,7 +62,7 @@ ms.locfileid: "48155896"
  Se a conexão atual é criptografada. Para alterar isso, conecte novamente com as propriedades de conexão desejadas.  
   
 ## <a name="product-category"></a>Product Category  
- Exiba as propriedades do produto para a conexão atual. Essas propriedades descrevem o produto de servidor, versão, nome de instância e agrupamento. As propriedades são definidas durante a instalação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+ Exiba as propriedades do produto para a conexão atual. Essas propriedades descrevem o produto de servidor, versão, nome de instância e ordenação. As propriedades são definidas durante a instalação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **Nome do produto**  
  O nome do produto do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -79,8 +79,8 @@ ms.locfileid: "48155896"
  **Idioma**  
  A versão do idioma do produto do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- **Agrupamento**  
- O agrupamento do servidor.  
+ **Ordenação**  
+ A ordenação do servidor.  
   
 ## <a name="server-environment-category"></a>Categoria do ambiente do servidor  
  Exiba propriedades do ambiente do servidor para a conexão atual relacionadas ao hardware do servidor e sistema operacional. As propriedades não podem ser configuradas pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

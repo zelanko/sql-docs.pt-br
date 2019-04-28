@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 2a27b2e7c915a1ac13050d0ed188002cd42746c8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705929"
 ---
 # <a name="mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql"></a>Mapear esquemas ASE do Sybase para esquemas do SQL Server (SybaseToSQL)
 No Sybase Adaptive Server Enterprise (ASE), cada banco de dados tem um ou mais esquemas. Por padrão, o SSMA migra todos os objetos dentro de um banco de dados e esquema para o mesmo banco de dados e esquema em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. No entanto, você pode personalizar o mapeamento entre o ASE e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou bancos de dados do SQL Azure e esquemas.  

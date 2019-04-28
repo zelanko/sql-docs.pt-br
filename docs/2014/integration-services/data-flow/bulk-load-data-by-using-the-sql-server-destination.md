@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ad0e0c5fc4aec54e9da3333994bf25a34d51acd1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828132"
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>Carregar dados em massa por meio do destino do SQL Server
   Para adicionar e configurar um destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o pacote já deve incluir pelo menos uma tarefa de Fluxo de Dados e uma fonte de dados.  
@@ -54,7 +54,7 @@ ms.locfileid: "58387403"
     > [!NOTE]  
     >  O destino mapeia colunas do mesmo nome automaticamente.  
   
-9. Clique em **avançado** e defina as opções de carregamento em massa: **Manter identidade**, **manter nulos**, **bloqueio de tabela**, **restrições de verificação**, e **acionadores**.  
+9. Clique em **Avançado** e defina as opções de carregamento em massa: **Manter identidade**, **Manter nulos**, **Bloqueio de tabela**, **Verificar restrições**e **Gatilhos**.  
   
      Opcionalmente, especifique a primeira e a última linha de entrada a serem inseridas, o número máximo de erros que podem acontecer antes da operação de inserção ser interrompida e as colunas em que a inserção é classificada.  
   

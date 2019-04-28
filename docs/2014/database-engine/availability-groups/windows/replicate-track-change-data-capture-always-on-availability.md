@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c52283ce9d512da6dc2e5ad05a4c8356524bef01
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62814038"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>Replicação, controle de alterações, Change Data Capture e grupos de disponibilidade AlwaysOn (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Há suporte para a replicação, a CDC (captura de dados de alteração) e o CT (controle de alterações) no [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] fornece alta disponibilidade e recursos adicionais de recuperação de banco de dados.  
@@ -191,9 +191,9 @@ ms.locfileid: "57579316"
   
 -   Ao usar a replicação de mesclagem e o banco de dados de publicação estiver em um grupo de disponibilidade:  
   
-    -   Assinatura por push: o publicador e o distribuidor devem ser executados pelo menos no [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
+    -   Assinatura Push: O publicador e o distribuidor devem executar pelo menos [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
-    -   Assinatura por pull: os bancos de dados publicador, distribuidor e assinante devem estar pelo menos no [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Isso ocorre porque o agente de mesclagem no assinante deve entender como um grupo de disponibilidade pode fazer failover para seu secundário.  
+    -   Assinatura Pull: Os bancos de dados do publicador, distribuidor e assinante devem ter pelo menos [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Isso ocorre porque o agente de mesclagem no assinante deve entender como um grupo de disponibilidade pode fazer failover para seu secundário.  
   
 -   Não há suporte à colocação do banco de dados de distribuição em um grupo de disponibilidade.  
   

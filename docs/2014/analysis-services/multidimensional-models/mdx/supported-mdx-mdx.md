@@ -15,18 +15,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9f3ab7c0ebe10537e3c84bd532f83791a6d193b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725440"
 ---
 # <a name="supported-mdx-mdx"></a>Suporte para MDX (MDX)
   As instruções e funções a seguir são suportadas em scripts MDX:  
   
  [&#40;Comentário&#41; &#40;MDX&#41;](/sql/mdx/comment-mdx)  
   
- [– &#40;Comentário&#41; &#40;MDX&#41;](/sql/mdx/comment-mdx)  
+ [-- &#40;Comentário&#41; &#40;MDX&#41;](/sql/mdx/comment-mdx)  
   
  [Comentário &#40;MDX&#41;](/sql/mdx/comment-mdx)  
   
@@ -49,9 +49,9 @@ ms.locfileid: "48099246"
   
  [Instrução FREEZE &#40;MDX&#41;](/sql/mdx/mdx-scripting-freeze)  
   
- [Se instrução &#40;MDX&#41;](/sql/mdx/mdx-scripting-if)  
+ [Instrução IF &#40;MDX&#41;](/sql/mdx/mdx-scripting-if)  
   
- [Isso &#40;MDX&#41;](/sql/mdx/this-mdx)  
+ [Este &#40;MDX&#41;](/sql/mdx/this-mdx)  
   
 > [!NOTE]  
 >  A linguagem MDX oferece suporte a atribuição das seguintes propriedades de célula: `BACK_COLOR`, `FORE_COLOR`, `FORMAT_STRING`, `FONT_FLAGS`, `FONT_NAME` e `FONT_SIZE`. Para obter mais informações, consulte [Como usar propriedades da célula &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md). MDX também dá suporte à atribuição para o `NON_EMPTY_BEHAVIOR` propriedade do [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member) instrução.  
@@ -59,6 +59,6 @@ ms.locfileid: "48099246"
  [Instrução SCOPE &#40;MDX&#41;](/sql/mdx/mdx-scripting-scope)  
   
 ## <a name="see-also"></a>Consulte também  
- [O Script básico MDX &#40;MDX&#41;](the-basic-mdx-script-mdx.md)  
+ [O script básico de MDX &#40;MDX&#41;](the-basic-mdx-script-mdx.md)  
   
   

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1c3b42834bc12048680c97465810832f5431441d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680430"
 ---
 # <a name="configure-dedicated-data-refresh-or-query-only-processing-powerpivot-for-sharepoint"></a>Configurar o processamento dedicado de atualização de dados ou de somente consulta (PowerPivot para SharePoint)
   No modo integrado do SharePoint, uma instância do servidor do Analysis Services pode ser configurada para dar suporte a um tipo específico de solicitação de processamento, como processamento de atualização de dados ou de somente consulta. Por padrão, os dois tipos de solicitação de carregamento estão habilitados. Você pode desativar qualquer um dos tipos para criar um mecanismo de consulta ou servidor de atualização de dados dedicado.  
@@ -60,7 +60,7 @@ ms.locfileid: "48168176"
   
  Você poderá aumentar o número de trabalhos de atualização de dados que podem ser executados ao mesmo tempo se o sistema tiver a capacidade para dar suporte à carga adicional.  
   
-|Configuração|Valores válidos|Description|  
+|Configuração|Valores válidos|Descrição|  
 |-------------|------------------|-----------------|  
 |Valor padrão|Calculado com base na RAM.|O valor padrão é baseado na quantidade de memória disponível dividida por 4 gigabytes. O padrão é calculado por uma fórmula de maneira que as configurações possam ser ajustadas de acordo com as funcionalidades do sistema.<br /><br /> Observação: O divisor de 4 gigabytes foi selecionado com base no uso de RAM para uma amostragem grande de fontes de dados PowerPivot reais. Não se baseia na arquitetura física ou lógica do PowerPivot.|  
 |Valor máximo|Calculado com base no número de CPUs.|O número máximo de trabalhos simultâneos que podem ser especificados tem como base o número de processadores no computador. Por exemplo, em um computador quad core de 4 soquetes, o número máximo de trabalhos que podem ser executados simultaneamente é 16.|  
@@ -70,14 +70,14 @@ ms.locfileid: "48168176"
   
 |RAM real (em gigabytes)|Valor padrão calculado|Número real de CPUs|Valor máximo calculado|Aumentar trabalhos simultâneos?|  
 |---------------------------------|------------------------------|------------------------|------------------------------|-------------------------------|  
-|4|1|1|1|Nenhum. Os números padrão e máximo são iguais.|  
+|4|1|1|1|Não. Os números padrão e máximo são iguais.|  
 |4|1|4|4|Sim. Você pode aumentar o número de trabalhos simultâneos para 2, 3 ou 4.|  
 |8|2|4|4|Sim. Você pode aumentar o número de trabalhos simultâneos para 3 ou 4.|  
-|16|4|4|4|Nenhum. Os números padrão e máximo são iguais.|  
-|32|Usando a fórmula que calcula o valor padrão, o padrão seria 8. Como o padrão é superior ao máximo permitido, o padrão calculado não é usado neste caso.|4|4|Nenhum. Embora a RAM grande indique um padrão de 8 trabalhos simultâneos, um computador que tenha apenas 4 processadores somente dará suporte a um máximo de 4 trabalhos simultâneos.|  
-|32|8|8|8|Nenhum.|  
+|16|4|4|4|Não. Os números padrão e máximo são iguais.|  
+|32|Usando a fórmula que calcula o valor padrão, o padrão seria 8. Como o padrão é superior ao máximo permitido, o padrão calculado não é usado neste caso.|4|4|Não. Embora a RAM grande indique um padrão de 8 trabalhos simultâneos, um computador que tenha apenas 4 processadores somente dará suporte a um máximo de 4 trabalhos simultâneos.|  
+|32|8|8|8|Não.|  
 |32|8|16|16|Sim.|  
-|64|16|16|16|Nenhum.|  
+|64|16|16|16|Não.|  
   
  Como não há como saber com antecedência se vários trabalhos podem executar com êxito ao mesmo tempo, você deve aumentar o número de trabalhos simultâneos apenas depois de analisar o consumo de memória ao longo do tempo e determinar se a memória do servidor geralmente é subutilizada.  
   

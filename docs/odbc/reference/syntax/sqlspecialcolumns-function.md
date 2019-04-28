@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f44ae90a82e778bf8e8564b719aa6b9f0157a05a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982383"
 ---
 # <a name="sqlspecialcolumns-function"></a>Função SQLSpecialColumns
 **Conformidade com**  
@@ -172,7 +172,7 @@ SQLRETURN SQLSpecialColumns(
 |COLUMN_SIZE (ODBC 1.0)|5|Integer|O tamanho da coluna na fonte de dados. Para obter mais informações sobre o tamanho da coluna, consulte [tamanho da coluna, dígitos decimais, o comprimento do octeto de transferência e o tamanho de exibição](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
 |BUFFER_LENGTH (ODBC 1.0)|6|Integer|O comprimento em bytes dos dados transferidos em uma **SQLGetData** ou **SQLFetch** operação se SQL_C_DEFAULT for especificado. Para dados numéricos, esse tamanho pode ser diferente do que o tamanho dos dados armazenados na fonte de dados. Esse valor é o mesmo que a coluna COLUMN_SIZE para caracteres ou dados binários. Para obter mais informações, consulte [tamanho da coluna, dígitos decimais, o comprimento do octeto de transferência e o tamanho de exibição](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
 |DECIMAL_DIGITS (ODBC 1.0)|7|Smallint|Os dígitos decimais da coluna na fonte de dados. NULL é retornado para os tipos de dados em que os dígitos decimais não são aplicáveis. Para obter mais informações sobre os dígitos decimais, consulte [tamanho da coluna, dígitos decimais, o comprimento do octeto de transferência e o tamanho de exibição](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
-|PSEUDO_COLUMN (ODBC 2.0)|8|Smallint|Indica se a coluna é uma coluna de pseudo, como Oracle ROWID:<br /><br /> SQL_PC_UNKNOWN SQL_PC_NOT_PSEUDO SQL_PC_PSEUDO **Observação:**  Para interoperabilidade máxima, pseudo colunas devem não ser colocado entre aspas com o caractere de aspas de identificador retornado por **SQLGetInfo**.|  
+|PSEUDO_COLUMN (ODBC 2.0)|8|Smallint|Indica se a coluna é uma coluna de pseudo, como Oracle ROWID:<br /><br /> SQL_PC_UNKNOWN SQL_PC_NOT_PSEUDO SQL_PC_PSEUDO **Note:**  Para interoperabilidade máxima, pseudo colunas devem não ser colocado entre aspas com o caractere de aspas de identificador retornado por **SQLGetInfo**.|  
   
  Depois que o aplicativo recupera os valores para SQL_BEST_ROWID, o aplicativo pode usar esses valores para selecionar novamente essa linha dentro do escopo definido. O **selecionar** é a garantia de instrução para retornar nenhuma linha ou uma linha.  
   

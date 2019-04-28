@@ -15,18 +15,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f18cd30d13e38ff8a58a381d8d8f81aa81dab376
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725110"
 ---
 # <a name="multidimensional-model-solutions-ssas"></a>Soluções em modelo multidimensional (SSAS)
     
 ## <a name="in-this-section"></a>Nesta seção  
  Estes tópicos fornecem instruções passo por passo sobre como projetar objetos multidimensionais do banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
- [Bancos de dados modelo multidimensionais &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
+ [Bancos de dados de modelo multidimensional &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
  Descreve como definir um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  [Fontes de dados com suporte no &#40;Multidimensional do SSAS&#41;](supported-data-sources-ssas-multidimensional.md)  
@@ -41,7 +41,7 @@ ms.locfileid: "48126696"
  [Cubos em modelos multidimensionais](cubes-in-multidimensional-models.md)  
  Descreve como projetar objetos de cubo do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
- [Assistente de geração de esquema &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
+ [Assistente de Geração de Esquema &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
  Descreve como projetar objetos multidimensionais do banco de dados sem um esquema relacional existente.  
   
  [Extensões de personalização do Analysis Services](extending-olap/analysis-services-personalization-extensions.md)  

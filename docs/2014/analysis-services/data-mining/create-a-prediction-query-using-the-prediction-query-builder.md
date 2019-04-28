@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6a3211e342528cea6b26630d06ae7b42baf5a6c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715143"
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>Criar uma consulta de previsão usando o construtor de consultas de previsão
   Você pode criar consultas de previsão enquanto estiver criando uma solução de mineração de dados no BI Development Studio, ou clicar com o botão direito em um modelo de mineração existente no SQL Server Management Studio e, em seguida, escolher a opção **Criar Consulta de Previsão**.  
@@ -92,7 +92,7 @@ ms.locfileid: "48189674"
 8.  Execute a consulta clicando no primeiro botão da barra de ferramentas da guia **Previsão do Modelo de Mineração** e selecione **Resultado**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Criar uma consulta Singleton no Designer de mineração de dados](create-a-singleton-query-in-the-data-mining-designer.md)   
+ [Criar uma consulta Singleton no Designer de Mineração de Dados](create-a-singleton-query-in-the-data-mining-designer.md)   
  [Consultas de mineração de dados](data-mining-queries.md)  
   
   

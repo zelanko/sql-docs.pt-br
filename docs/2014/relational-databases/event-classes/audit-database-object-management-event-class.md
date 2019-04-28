@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 19cb23baa6df69de9a73595dd81f8c1a095d7224
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62698996"
 ---
 # <a name="audit-database-object-management-event-class"></a>Classe de evento Audit Database Object Management
   A classe de evento **Audit Database Object Management** ocorre quando uma instrução CREATE, ALTER ou DROP é executada em objetos de banco de dados, como esquemas.  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 260767c88fdf980466a21d4cc9658b259b91c854
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690643"
 ---
 # <a name="odbc-driver-architecture"></a>Arquitetura do driver ODBC
 Gravadores de driver devem estar cientes de que a arquitetura do driver pode afetar se um aplicativo pode usar o SQL específicas do DBMS.  
@@ -45,11 +45,11 @@ Gravadores de driver devem estar cientes de que a arquitetura do driver pode afe
   
  Para obter mais informações sobre problemas de driver podem ser encontradas nas localizações descritas na tabela a seguir.  
   
-|Problema|Tópico|Local|  
+|Problema|Tópico|Location|  
 |-----------|-----------|--------------|  
 |Problemas de compatibilidade com aplicativos e drivers|[Compatibilidade de aplicativo/Driver](../../../odbc/reference/develop-app/application-and-driver-compatibility.md)|[Considerações sobre programação](../../../odbc/reference/develop-app/programming-considerations.md), na referência do programador de ODBC|  
 |Drivers ODBC de gravação|[Gravando drivers 3.x ODBC](../../../odbc/reference/develop-app/writing-odbc-3-x-drivers.md)|[Considerações sobre programação](../../../odbc/reference/develop-app/programming-considerations.md), na referência do programador de ODBC|  
-|Diretrizes de driver para compatibilidade com versões anteriores|[Diretrizes de driver para compatibilidade com versões anteriores](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)|[Apêndice g: diretrizes de Driver para compatibilidade com versões anteriores](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md), na referência do programador de ODBC|  
+|Diretrizes de driver para compatibilidade com versões anteriores|[Diretrizes de driver para compatibilidade com versões anteriores](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)|[Apêndice g: Diretrizes de driver para compatibilidade com versões anteriores](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md), na referência do programador de ODBC|  
 |Conectar-se a um driver|[Escolhendo uma fonte de dados ou um driver](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)|[Conectar-se aos dados de um fonte ou Driver](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md), na referência do programador de ODBC|  
 |Identificação de drivers|[Exibindo drivers](../../../odbc/admin/viewing-drivers.md)|[Exibindo Drivers](../../../odbc/admin/viewing-drivers.md), na Ajuda online do administrador de fonte de dados do Microsoft ODBC|  
 |Habilitando o pooling de conexão|[Pooling de Conexão ODBC](../../../odbc/reference/develop-app/driver-manager-connection-pooling.md)|[Conectar-se aos dados de um fonte ou Driver](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md), na referência do programador de ODBC|  

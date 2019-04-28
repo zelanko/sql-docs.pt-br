@@ -20,11 +20,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 68113c6de003aea94924f6e220373664212becf1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843477"
 ---
 # <a name="set-and-retrieve-version-information"></a>Definir e recuperar informações de versão
   As informações de versão incluem o histórico e o status atual de um arquivo com controle do código-fonte. Para todo arquivo com controle do código-fonte, o [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe mantém um histórico abrangente, de forma que você pode localizar a evolução de um ou mais arquivos com o passar do tempo. Você também pode usar essas informações para recuperar uma cópia local de qualquer versão do arquivo ou comparar duas versões de arquivos.  

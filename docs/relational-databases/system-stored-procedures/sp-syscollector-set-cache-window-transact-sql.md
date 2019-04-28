@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fd261178b852e8e890dd654893ce8fc167a15915
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63004300"
 ---
 # <a name="spsyscollectorsetcachewindow-transact-sql"></a>sp_syscollector_set_cache_window (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_syscollector_set_cache_window [ @cache_window = ] cache_window
  [ @cache_window = ] *cache_window*  
  É o número de vezes em que, depois de uma falha, há uma nova tentativa de carregamento de dados no data warehouse de gerenciamento sem perda dos dados. *cache_window* está **int** com um valor padrão de 1. *cache_window* pode ter um dos seguintes valores:  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |-1|Armazena em cache todos os dados de carregamento de falhas de carregamento anteriores.|  
 |0|Não armazena em cache quaisquer dados de uma falha de carregamento.|  

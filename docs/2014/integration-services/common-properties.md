@@ -21,11 +21,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ab92e158fe5da6312959cc0797ff48e1c44e0080
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835192"
 ---
 # <a name="common-properties"></a>Propriedades comuns
   Os objetos de fluxo de dados no modelo de objeto do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] têm propriedades comuns e personalizadas no componente, na entrada e saída e nos níveis de colunas de entrada e saída. Muitas propriedades têm valores somente leitura, atribuídos em tempo de execução pelo mecanismo de fluxo de dados.  
@@ -116,7 +116,7 @@ ms.locfileid: "58378874"
 |IsSorted|Booliano|Indica se os dados na entrada são classificados.|  
 |Nome|Cadeia de caracteres|Nome da entrada.|  
 |SourceLocale|Integer|ID de localidade (LCID) dos dados de entrada.|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que determina como o componente manipula os truncamentos que ocorrem no processamento de linhas. para obter informações sobre a ferramenta de configuração e recursos adicionais. Os valores são `Fail component`, `Ignore failure` e `Redirect row`.|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que determina como o componente manipula os truncamentos que ocorrem no processamento de linhas. . Os valores são `Fail component`, `Ignore failure` e `Redirect row`.|  
   
  Os destinos e algumas transformações não oferecem suporte a saídas de erro e as propriedades ErrorRowDisposition e TruncationRowDisposition dos componentes são somente leitura.  
   

@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d71ffe723df317733841450713ddccc3d03ddb36
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834289"
 ---
 # <a name="configure-the-ole-db-command-transformation"></a>Configurar a transformação Comando OLE DB
   Para adicionar e configurar uma transformação Comando OLE DB, o pacote já deve incluir pelo menos uma tarefa Fluxo de Dados e uma origem, como, por exemplo, uma origem de arquivo simples ou uma origem de OLE DB. Essa transformação é normalmente usada para executar consultas parametrizadas.  

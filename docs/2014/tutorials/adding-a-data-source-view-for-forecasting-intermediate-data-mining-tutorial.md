@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: f60ea2b2a642cf9435ed8366c42e43abb927e426
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62823126"
 ---
 # <a name="adding-a-data-source-view-for-forecasting-intermediate-data-mining-tutorial"></a>Adicionando uma exibição da fonte de dados para previsão (Tutorial de mineração de dados intermediário)
   Nesta tarefa, você adiciona uma exibição da fonte de dados que será usada no cenário de previsão. Um modelo de previsão exige que os dados contenham uma coluna que possa ser usada na identificação das etapas de uma série temporal. Se você planeja analisar várias séries de dados, todas elas deverão terminar na mesma data ou período.  

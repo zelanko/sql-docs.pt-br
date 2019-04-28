@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5b370c8f3fb3c8a672f832c13ba89381f475733f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733336"
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>Estruturas de mineração (Analysis Services – Mineração de dados)
   A estrutura de mineração define os dados a partir dos quais os modelos de mineração são criados. Ela especifica a exibição da fonte de dados, o número e tipo de colunas e uma partição opcional nos conjuntos de treinamento e teste. Uma única estrutura de mineração pode oferecer suporte a vários modelos de mineração que compartilham o mesmo domínio. O diagrama a seguir mostra a relação da estrutura de mineração de dados com a fonte de dados e com os modelos de mineração de dados que a compõe.  
@@ -94,7 +94,7 @@ ms.locfileid: "48172516"
 ### <a name="processing-mining-structures"></a>Processando estruturas de mineração  
  Uma estrutura de mineração é apenas um contêiner de metadados até ser processado. Quando você processa uma estrutura de mineração, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cria um cache local que armazena estatísticas sobre os dados, informações sobre como qualquer atributo contínuo é discretizado e outras informações que serão usadas posteriormente pelos modelos de mineração. O próprio modelo de mineração não armazena estas informações de resumo, mas referencia as informações que foram armazenadas em cache quando a estrutura de mineração foi processada. No entanto, você não precisa reprocessar a estrutura cada vez que adiciona um novo modelo a uma estrutura existente; você poderá processar somente o modelo.  
   
- Você pode optar por descartar este cache depois de processar, se o cache for muito grande ou você desejar remover dados detalhados. Se não quiser que os dados sejam armazenados em cache, poderá alterar a propriedade `CacheMode` da estrutura de mineração como `ClearAfterProcessing`. Isso destruirá o cache depois que qualquer modelo for processado. Definindo o `CacheMode` propriedade para `ClearAfterProcessing` desabilitará o detalhamento do modelo de mineração.  
+ Você pode optar por descartar este cache depois de processar, se o cache for muito grande ou você desejar remover dados detalhados. Se não quiser que os dados sejam armazenados em cache, poderá alterar a propriedade `CacheMode` da estrutura de mineração como `ClearAfterProcessing`. Isso destruirá o cache depois que qualquer modelo for processado. A definição da propriedade `CacheMode` como `ClearAfterProcessing` desabilitará o detalhamento do modelo de mineração.  
   
  No entanto, depois de destruir o cache, você não será capaz de adicionar novos modelos à estrutura de mineração. Ao adicionar um novo modelo de mineração à estrutura, ou alterar as propriedades de modelos existentes, você precisará reprocessar a estrutura de mineração primeiro. Para obter mais informações, consulte [Requisitos e considerações sobre processamento &#40;Mineração de dados&#41;](processing-requirements-and-considerations-data-mining.md).  
   
@@ -122,7 +122,7 @@ ms.locfileid: "48172516"
 |Trabalhar com as fontes de dados subjacentes e atualizar dados de origem|[Editar a exibição da fonte de dados usada para a estrutura de mineração](edit-the-data-source-view-used-for-a-mining-structure.md)<br /><br /> [Processar uma estrutura de mineração](process-a-mining-structure.md)|  
   
 ## <a name="see-also"></a>Consulte também  
- [Objetos de banco de dados &#40; Analysis Services - dados multidimensionais &#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [Modelos de mineração &#40;Analysis Services - mineração de dados&#41;](mining-models-analysis-services-data-mining.md)  
+ [Objetos de banco de dados &#40;Analysis Services – Dados Multidimensionais&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
+ [Modelos de mineração &#40;Analysis Services – Data Mining&#41;](mining-models-analysis-services-data-mining.md)  
   
   

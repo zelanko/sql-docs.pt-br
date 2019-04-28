@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bbeceddb135649223be29956d0796e76fd5d57f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62816595"
 ---
 # <a name="sqlgetinfo-returned-values-for-text-files"></a>Valores retornados SQLGetInfo para Arquivos de texto
 A tabela a seguir lista a linguagem C# defines para o *fInfoType* argumento e os valores correspondentes retornados pelo **SQLGetInfo**. Essas informações podem ser recuperadas, passando a linguagem listada C# defines **SQLGetInfo** na *fInfoType* argumento. Para obter mais informações sobre os valores retornados pelo **SQLGetInfo**, consulte o [referência do programador de ODBC](../../odbc/reference/odbc-programmer-s-reference.md).  
@@ -30,7 +30,7 @@ A tabela a seguir lista a linguagem C# defines para o *fInfoType* argumento e os
 > [!NOTE]  
 >  Em que **SQLGetInfo** retorna um bitmask de 32 bits, uma barra vertical (&#124;) representa um OR bit a bit.  
   
-|tipo de informação|Valor retornado|  
+|InfoType|Valor retornado|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"N"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
@@ -87,7 +87,7 @@ A tabela a seguir lista a linguagem C# defines para o *fInfoType* argumento e os
 |SQL_DATABASE_NAME|Diretório de banco de dados atual|  
 |SQL_DATETIME_LITERALS|0|  
 |SQL_DBMS_NAME|"TEXTO"|  
-|SQL_DBMS_VER|ISAM: texto<br /><br /> Versão: 1.0<br /><br /> Formato de número de versão: 01.00.0000|  
+|SQL_DBMS_VER|ISAM: Text<br /><br /> Versão: 1.0<br /><br /> Formato de número de versão: 01.00.0000|  
 |SQL_DDL_INDEX|0|  
 |SQL_DEFAULT_TXN_ISOLATION|0|  
 |SQL_DESCRIBE_PARAMETER|0|  

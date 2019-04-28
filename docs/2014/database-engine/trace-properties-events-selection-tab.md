@@ -16,18 +16,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d86ae88fba4cb817ea7966daa60932238c7f0460
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842425"
 ---
 # <a name="trace-properties-events-selection-tab"></a>Propriedades do Rastreamento (guia Seleção de Eventos)
   Use a guia **Seleção de Eventos** da caixa de diálogo **Propriedades do Rastreamento** para exibir ou especificar eventos do rastreamento e colunas de dados.  
   
 ## <a name="options"></a>Opções  
  Coluna**Eventos**   
- Especifique os eventos do rastreamento marcando ou desmarcando a caixa de seleção na coluna de eventos. Os**Eventos** são organizados por categoria de evento. As classes de evento especificadas no modelo são selecionadas automaticamente. Para obter mais informações, confira [SQL Server Event Class Reference](../relational-databases/event-classes/sql-server-event-class-reference.md).  
+ Especifique os eventos do rastreamento marcando ou desmarcando a caixa de seleção na coluna de eventos. Os**Eventos** são organizados por categoria de evento. As classes de evento especificadas no modelo são selecionadas automaticamente. Para obter mais informações, confira [Referência de classe de evento do SQL Server](../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
  Colunas de dados  
  Especifique as colunas de dados do rastreamento marcando a caixa correspondente ao evento e a coluna de dados necessária. Por padrão, todas as colunas de dados pertinentes são marcadas para cada evento incluído no rastreamento.  

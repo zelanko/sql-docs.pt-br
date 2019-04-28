@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1292037036ef32564115cf4d575929abc8b66d47
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62845649"
 ---
 # <a name="modify-a-trace-template-sql-server-profiler"></a>Modificar um modelo de rastreamento (SQL Server Profiler)
   Este tópico descreve como modificar um modelo de rastreamento usando o [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)].  

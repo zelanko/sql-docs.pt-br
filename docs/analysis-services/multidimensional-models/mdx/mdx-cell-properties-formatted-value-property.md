@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1ad2038e28afb455dd1ad239a2bf02cab99ed4d9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807540"
 ---
-# <a name="mdx-cell-properties---formattedvalue-property"></a>Propriedades de célula MDX - propriedade FORMATTED_VALUE
+# <a name="mdx-cell-properties---formattedvalue-property"></a>Propriedades de célula MDX – propriedade FORMATTED_VALUE
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   A propriedade FORMATTED_VALUE é criada com base nas interações das propriedades VALUE, FORMAT_STRING e LANGUAGE da célula. Este tópico explica como essas propriedades interagem para criar a propriedade FORMATTED_VALUE.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "34026953"
   
 |Membro|FORMATTED_VALUE|Explicação|  
 |------------|----------------------|-----------------|  
-|A|$5.040,00|FORMAT_STRING é definido como `Currency` e LANGUAGE é `1033`, informações herdadas do valor de localidade do sistema|  
+|Um|$5.040,00|FORMAT_STRING é definido como `Currency` e LANGUAGE é `1033`, informações herdadas do valor de localidade do sistema|  
 |B|€ 5.040,00|FORMAT_STRING é definido como `Currency` (herdado de A) e LANGUAGE é definido explicitamente como `1034` (Spain), daí o sinal de Euro, o separador decimal e de milhar diferente.|  
 |C|$ 5.040,00|FORMAT_STRING é definido como `$#,##0.00` , uma substituição para Moeda, de A, e LANGUAGE é definido explicitamente para `1034` (Spain). Como a propriedade FORMAT_STRING define explicitamente o símbolo de moeda como $, FORMATTED_VALUE é apresentado com o sinal $. No entanto, como `.` (ponto) e `,` (vírgula) são espaços reservados para separadores de decimal e de milhar, a especificação de idioma os afeta gerando uma saída localizada para separadores decimal e de milhar.|  
 |D|5.04E+03|FORMAT_STRING é definido como `Scientific` e LANGUAGE é definido como `1033`, herdados do valor de localidade do sistema, por isso o `.` (ponto) é o separador decimal.|  
@@ -142,9 +142,9 @@ ms.locfileid: "34026953"
 |L|06:30|FORMAT_STRING é definido explicitamente para `Short Time` e LANGUAGE é explicitamente `1041` (Japanese).|  
   
 ## <a name="see-also"></a>Consulte também  
- [Conteúdo de FORMAT_STRING & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)   
- [Usando propriedades de célula & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
- [Criando e usando valores de propriedade & #40; MDX & #41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)   
- [Conceitos básicos de consulta MDX & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Conteúdo de FORMAT_STRING &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)   
+ [Usando propriedades da célula &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
+ [Criando e usando valores de propriedade &#40;MDX&#41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)   
+ [Conceitos básicos de consulta MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

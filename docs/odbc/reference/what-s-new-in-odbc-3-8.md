@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a333aa44d0424c0fe612b7790ce77cabe6fca585
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714013"
 ---
 # <a name="what39s-new-in-odbc-38"></a>O que&#39;novo no ODBC 3.8
 Windows 8 inclui uma versão atualizada do ODBC 3.8. O ODBC 3.8 no Windows 8 inclui os seguintes recursos:  
@@ -35,7 +35,7 @@ Windows 8 inclui uma versão atualizada do ODBC 3.8. O ODBC 3.8 no Windows 8 inc
   
 -   Parâmetros de saída em fluxo. Para obter mais informações, consulte [Recuperando parâmetros de saída usando SQLGetData](../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md).  
   
--   Extensibilidade de tipo de dados ODBC C. Para obter mais informações, consulte [tipos de dados C em ODBC](../../odbc/reference/develop-app/c-data-types-in-odbc.md).  
+-   Extensibilidade de tipo de dados ODBC C. Para obter mais informações, consulte [Tipos de dados C em ODBC](../../odbc/reference/develop-app/c-data-types-in-odbc.md).  
   
  Gravadores de driver devem ler [atualizando um Driver 3.5 para um Driver 3.8](../../odbc/reference/develop-driver/upgrading-a-3-5-driver-to-a-3-8-driver.md).  
   

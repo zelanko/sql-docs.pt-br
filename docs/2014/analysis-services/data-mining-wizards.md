@@ -15,18 +15,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e74e63268a79915413955e33fdb2ed9f714f8a12
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689489"
 ---
 # <a name="data-mining-wizards"></a>Assistentes de mineração de dados
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornece assistentes para uso em [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
  A tabela seguinte descreve os assistentes que você pode usar para criar fontes de mineração de dados, exibições e objetos.  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Ajuda F1 do Assistente de fonte de dados &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)|Use o Assistente para Fontes de Dados para definir uma nova fonte de dados.|  
 |[Ajuda de F1 do Assistente de exibição de fonte de dados &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)|Use o Assistente de Exibição da Fonte de Dados para definir uma nova exibição da fonte de dados.|  
@@ -40,7 +40,7 @@ ms.locfileid: "48099226"
   
 ## <a name="see-also"></a>Consulte também  
  [Ferramentas de mineração de dados](data-mining/data-mining-tools.md)   
- [Tutorial de mineração de dados básicos](../../2014/tutorials/basic-data-mining-tutorial.md)   
+ [Tutorial de mineração de dados básico](../../2014/tutorials/basic-data-mining-tutorial.md)   
  [Criar uma estrutura de mineração OLAP](data-mining/create-an-olap-mining-structure.md)   
  [Criar uma estrutura de mineração relacional](data-mining/create-a-relational-mining-structure.md)   
  [Criar uma nova estrutura de mineração relacional](data-mining/create-a-new-relational-mining-structure.md)   

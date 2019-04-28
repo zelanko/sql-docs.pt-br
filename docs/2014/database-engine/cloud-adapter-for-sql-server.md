@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9dd6b8e754ea4bc56884b456d673e5af31a013d5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812630"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>Adaptador de nuvem para SQL Server
   O serviço de Adaptador de Nuvem é criado como parte do provisionamento do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em uma máquina virtual do Windows Azure. O serviço de Adaptador de Nuvem gera um certificado SSL autoassinado como parte da sua primeira execução e é executado como uma conta **Sistema Local** . Ele gera um arquivo de configuração que é usado para autoconfiguração. O Adaptador de Nuvem também cria uma regra de Firewall do Windows para permitir suas conexões TCP de entrada na porta padrão 11435.  
@@ -48,23 +48,23 @@ ms.locfileid: "52518264"
   
 -   **Parâmetros do arquivo de configuração** -  
   
-    -   \<Configuração >  
+    -   \<configuration>  
   
-        -   \<appSettings >  
+        -   \<appSettings>  
   
-            -   \<Adicionar chave = valor "WebServicePort" = "" / >  
+            -   \<add key="WebServicePort" value="" />  
   
-            -   \<Adicionar chave = valor "WebServiceCertificate" = "GUID" / >  
+            -   \<add key="WebServiceCertificate" value="GUID" />  
   
-            -   \<Adicionar chave = valor "ExposeExceptionDetails" = "true" / >  
+            -   \<add key="ExposeExceptionDetails" value="true" />  
   
-        -   \</appSettings >  
+        -   \</appSettings>  
   
-    -   \</ Configuração >  
+    -   \</configuration>  
   
 -   **Detalhes do certificado** -o certificado tem os seguintes valores:  
   
-    -   Assunto – "CN = CloudAdapter\<VMName >, DC = SQL Server, DC = Microsoft"  
+    -   Subject - "CN=CloudAdapter\<VMName>, DC=SQL Server, DC=Microsoft"  
   
     -   O certificado deve ter somente o EKU da Autenticação do Servidor habilitado.  
   

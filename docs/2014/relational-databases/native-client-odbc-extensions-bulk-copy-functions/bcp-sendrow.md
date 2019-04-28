@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3e8ef7aa7a4354f5a3fbc334504512b2ee8d131b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62688837"
 ---
 # <a name="bcpsendrow"></a>bcp_sendrow
   Envia uma linha de dados de variáveis de programa para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -40,20 +40,20 @@ hdbc
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *HDBC*  
+ *hdbc*  
  É o identificador de conexão ODBC habilitado para cópia em massa.  
   
 ## <a name="returns"></a>Retorna  
  SUCCEED ou FAIL.  
   
 ## <a name="remarks"></a>Comentários  
- O **bcp_sendrow** função compila uma linha de variáveis de programa e envia-o para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ A função **bcp_sendrow** compila uma linha de variáveis de programa e a envia para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Antes de chamar **bcp_sendrow**, você deve fazer chamadas para [bcp_bind](bcp-bind.md) para especificar as variáveis de programa que contém dados de linha.  
+ Antes de chamar **bcp_sendrow**, você deve fazer chamadas para [bcp_bind](bcp-bind.md) para especificar as variáveis de programa que contêm os dados da linha.  
   
- Caso **bcp_bind** seja chamado especificando um tipo de dados longo de comprimento variável, por exemplo um parâmetro *eDataType* de SQLTEXT e um parâmetro *pData* diferente de NULL, **bcp_sendrow** envia todo o valor de dados, exatamente como faz para qualquer outro tipo de dados. Se, no entanto, **bcp_bind** tem um valor nulo *pData* parâmetro **bcp_sendrow** retorna o controle para o aplicativo imediatamente após todas as colunas com os dados especificados serem enviadas ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O aplicativo pode, em seguida, chamar [bcp_moretext](bcp-moretext.md) repetidamente para enviar os dados longos de comprimento variável para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], uma parte de cada vez. Para obter mais informações, consulte [bcp_moretext](bcp-moretext.md).  
+ Caso **bcp_bind** seja chamado especificando um tipo de dados longo de comprimento variável, por exemplo um parâmetro *eDataType* de SQLTEXT e um parâmetro *pData* diferente de NULL, **bcp_sendrow** envia todo o valor de dados, exatamente como faz para qualquer outro tipo de dados. Entretanto, se **bcp_bind** tiver um parâmetro *pData* igual a NULL, **bcp_sendrow** retorna o controle para o aplicativo imediatamente após todas as colunas com os dados especificados serem enviadas ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Então, o aplicativo pode chamar [bcp_moretext](bcp-moretext.md) repetidamente para enviar os dados longos de comprimento variável para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], uma parte de cada vez. Para obter mais informações, consulte [bcp_moretext](bcp-moretext.md).  
   
- Quando **bcp_sendrow** é usado para copiar linhas de variáveis de programa em massa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabelas, linhas serão confirmadas apenas quando o usuário chama [bcp_batch](bcp-batch.md) ou [bcp_done](bcp-done.md) . O usuário pode escolher chamar **bcp_batch** uma vez a cada *n* linhas ou quando houver uma pausa entre períodos de dados de entrada. Se **bcp_batch** nunca for chamado, as linhas serão confirmadas quando **bcp_done** for chamado.  
+ Quando **bcp_sendrow** for usado para copiar linhas em massa de variáveis do programa para tabelas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , as linhas são confirmadas somente quando o usuário chamar [bcp_batch](bcp-batch.md) ou [bcp_done](bcp-done.md). O usuário pode escolher chamar **bcp_batch** uma vez a cada *n* linhas ou quando houver uma pausa entre períodos de dados de entrada. Se **bcp_batch** nunca for chamado, as linhas serão confirmadas quando **bcp_done** for chamado.  
   
  Para obter informações sobre uma grande alteração no copiando em massa a partir [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], consulte [executando operações de cópia em massa &#40;ODBC&#41;](../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
   

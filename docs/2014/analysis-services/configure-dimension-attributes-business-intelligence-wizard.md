@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6992d667383539092f13602c277eec4ee2f7c7f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680501"
 ---
 # <a name="configure-dimension-attributes-business-intelligence-wizard"></a>Configurar Atributos de Dimensão (Assistente de Business Intelligence)
   Use a página **Configurar Atributos de Dimensão** para mapear atributos de dimensão para os tipos atributos usados pelo [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para identificar atributos para dimensões de conta.  
@@ -49,7 +49,7 @@ ms.locfileid: "48133678"
 >  Essa opção não será exibida se o Assistente de Business Intelligence tiver sido iniciado no Designer de Dimensão ou clicando com o botão direito do mouse em uma dimensão no Gerenciador de Soluções no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="see-also"></a>Consulte também  
- [Ajuda de F1 do Assistente do Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [Ajuda F1 do Assistente de Business Intelligence](business-intelligence-wizard-f1-help.md)   
  [Designer de cubo &#40;Analysis Services - dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Designer de dimensão &#40;Analysis Services - dados multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

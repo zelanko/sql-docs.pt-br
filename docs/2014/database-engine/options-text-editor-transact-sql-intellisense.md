@@ -17,11 +17,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 5472e7d0c910c03f49425c263293fd721320eba9
-ms.sourcegitcommit: 31c8f9eab00914e056e9219093dbed1b0b4542a6
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55484625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844345"
 ---
 # <a name="options-text-editor-transact-sql-intellisense"></a>Opções (Editor de texto-Transact-SQL – IntelliSense)
   A caixa de diálogo **Opções** permite que você altere as configurações do IntelliSense para o Editor de Consultas [!INCLUDE[ssDE](../includes/ssde-md.md)]. Essas configurações estão disponíveis quando, no menu **Ferramentas**, você clica em **Opções**, expande a pasta **Editor de Texto**, expande a pasta **Transact-SQL** e, em seguida, clica em **Avançado**.  

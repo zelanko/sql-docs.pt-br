@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 96b34d8b3fd2dce31f604c50a7431b993a29beca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699579"
 ---
 # <a name="creating-session-scoped-named-sets-mdx"></a>Criando conjuntos nomeados no escopo da sessão (MDX)
   Para criar um conjunto nomeado que esteja disponível por meio de uma sessão da linguagem MDX, use a instrução [CREATE SET](/sql/mdx/mdx-data-definition-create-set). Um conjunto nomeado criado com a instrução CREATE SET não será removido até que a sessão MDX seja encerrada.  
@@ -54,6 +54,6 @@ select SetCities_2_3 on 0 from [Store]
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Criando no escopo da consulta conjuntos nomeados &#40;MDX&#41;](mdx-named-sets-creating-query-scoped-named-sets.md)  
+ [Criando conjuntos nomeados no escopo da consulta &#40;MDX&#41;](mdx-named-sets-creating-query-scoped-named-sets.md)  
   
   

@@ -14,11 +14,11 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 96fd36d1710a166285fecba092735c7d2495271e
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690451"
 ---
 # <a name="sysdmpdwdmsworkers-transact-sql"></a>sys.dm_pdw_dms_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "58658240"
 |dms_step_index|**int**|Etapa no plano de DMS que este trabalhador está executando.<br /><br /> request_id, step_index e dms_step_index formam a chave para esta exibição.||  
 |pdw_node_id|**int**|Nó que o trabalhador está sendo executado.|Consulte node_id na [sys.dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
 |distribution_id|**Int**|Distribuição em que o trabalhador está em execução, se houver.|Consulte distribution_id na [sys.pdw_distributions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md).|  
-|Tipo|**nvarchar(32)**|Tipo de thread de trabalho do DMS que essa entrada representa.|'DIRECT_CONVERTER', 'DIRECT_READER', 'FILE_READER', 'HASH_CONVERTER', 'HASH_READER', 'ROUNDROBIN_CONVERTER', 'EXPORT_READER', 'EXTERNAL_READER', 'EXTERNAL_WRITER', 'PARALLEL_COPY_READER', 'REJECT_WRITER', 'WRITER'|  
+|type|**nvarchar(32)**|Tipo de thread de trabalho do DMS que essa entrada representa.|'DIRECT_CONVERTER', 'DIRECT_READER', 'FILE_READER', 'HASH_CONVERTER', 'HASH_READER', 'ROUNDROBIN_CONVERTER', 'EXPORT_READER', 'EXTERNAL_READER', 'EXTERNAL_WRITER', 'PARALLEL_COPY_READER', 'REJECT_WRITER', 'WRITER'|  
 |status|**nvarchar(32)**|Status do trabalho DMS.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |bytes_per_sec|**bigint**|Taxa de transferência de leitura ou gravação no último segundo.|Maior que ou igual a 0. NULL se a consulta foi cancelada ou falha antes de executar o trabalho.|  
 |bytes_processed|**bigint**|Total de bytes processados por este trabalhador.|Maior que ou igual a 0. NULL se a consulta foi cancelada ou falha antes de executar o trabalho.|  

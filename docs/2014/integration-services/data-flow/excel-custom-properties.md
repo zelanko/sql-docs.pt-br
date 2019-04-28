@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d8d556a199b608659a9ceaaeb3b7036155886d6c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62827229"
 ---
 # <a name="excel-custom-properties"></a>Propriedades personalizadas do Excel
   **Propriedades personalizadas de fontes**  
@@ -47,11 +47,11 @@ ms.locfileid: "58391075"
 |Nome da propriedade|Tipo de Dados|Descrição|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Inteiro (enumeração)|Um valor que especifica como o destino acessa o seu banco de dados de destino.<br /><br /> Essa propriedade pode ter um dos seguintes valores:<br /><br /> `OpenRowset` (0) – você fornecer o nome de uma tabela ou exibição.<br /><br /> `OpenRowset from Variable` (1)-você fornecer o nome de uma variável que contém o nome de uma tabela ou exibição.<br /><br /> `OpenRowset Using Fastload` (3)-você fornecer o nome de uma tabela ou exibição.<br /><br /> `OpenRowset Using Fastload from Variable` (4)-você fornecer o nome de uma variável que contém o nome de uma tabela ou exibição.<br /><br /> `SQL Command` (2) – forneça uma instrução SQL.|  
-|CommandTimeOut|Integer|O número máximo de segundos em que o comando SQL pode ser executado antes que o tempo limite seja excedido. O valor **0** indica que não há limite de tempo. O valor padrão dessa propriedade é **0**.<br /><br /> Observação: Essa propriedade não está disponível na **Editor de destino do Excel**, mas pode ser definida usando o **Editor Avançado**.|  
+|CommandTimeOut|Integer|O número máximo de segundos em que o comando SQL pode ser executado antes que o tempo limite seja excedido. O valor **0** indica que não há limite de tempo. O valor padrão dessa propriedade é **0**.<br /><br /> Observação: Essa propriedade não está disponível no **Editor de Destinos Excel**, mas pode ser definida no **Editor Avançado**.|  
 |FastLoadKeepIdentity|Booliano|Um valor que especifica se os valores de identidade devem ser copiados quando os dados são carregados. Essa propriedade só está disponível quando uma das opções de carregamento rápido é usada. O valor padrão dessa propriedade é **False**.|  
 |FastLoadKeepNulls|Booliano|Um valor que especifica se os valores Nulos devem ser copiados quando os dados são carregados. Essa propriedade só está disponível com uma das opções de carregamento rápido. O valor padrão dessa propriedade é **False**.|  
 |FastLoadMaxInsertCommitSize|Integer|Um valor que especifica o tamanho do lote que o destino Excel tenta confirmar durante as operações de carregamento rápido. O valor padrão é **2147483647**. Um valor de **0** indica uma única operação de confirmação após o processamento de todas as linhas.|  
-|FastLoadOptions|Cadeia de caracteres|Uma coleção de opções de carregamento rápido. As opções de carregamento rápido incluem o bloqueio de tabelas e a verificação de restrições. É possível especificar uma, ambas ou nenhuma.<br /><br /> Observação: Algumas opções para essa propriedade não estão disponíveis na **Editor de destino do Excel**, mas pode ser definida usando o **Editor Avançado**.|  
+|FastLoadOptions|Cadeia de caracteres|Uma coleção de opções de carregamento rápido. As opções de carregamento rápido incluem o bloqueio de tabelas e a verificação de restrições. É possível especificar uma, ambas ou nenhuma.<br /><br /> Observação: Algumas opções dessa propriedade não estão disponíveis no **Editor de Destinos Excel**, mas podem ser definidas no **Editor Avançado**.|  
 |OpenRowset|Cadeia de caracteres|Quando AccessMode é `OpenRowset`, o nome da tabela ou exibição acessada pelo destino Excel.|  
 |OpenRowsetVariable|Cadeia de caracteres|Quando AccessMode é `OpenRowset from Variable`, o nome da variável que contém o nome da tabela ou exibição acessada pelo destino Excel.|  
 |SqlCommand|Cadeia de caracteres|Quando AccessMode é `SQL Command`, a instrução Transact-SQL que o destino do Excel usa para especificar as colunas de destino para os dados.|  

@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f8ecb517174c8cd8189ad2f7382c774df3545620
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864943"
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>Extrair dados por meio da origem ODBC
   Este procedimento descreve como extrair dados usando uma fonte ODBC. Para adicionar e configurar uma origem ODBC, o pacote já deve incluir pelo menos uma tarefa de Fluxo de Dados.  
@@ -32,11 +32,11 @@ ms.locfileid: "58376114"
   
 5.  Selecione o método de acesso de dados.  
   
-    -   **Nome da tabela**: Selecione uma tabela ou exibição no banco de dados ou digite uma expressão regular para identificar a tabela à qual o Gerenciador de conexão ODBC se conecta.  
+    -   **Nome da tabela**: selecione uma tabela ou exibição no banco de dados ou digite uma expressão regular para identificar a tabela à qual o gerenciador de conexão ODBC se conecta.  
   
          Essa lista contém apenas as primeiras 1.000 tabelas. Se o banco de dados contiver mais de 1.000 tabelas, você poderá digitar o início do nome de uma tabela ou usar o curinga (*) para inserir qualquer parte do nome para exibir a tabela ou tabelas desejadas.  
   
-    -   **Comando SQL**: Digite um comando SQL ou clique em **procurar** para carregar a consulta SQL de um arquivo de texto.  
+    -   **Comando SQL**: digite um Comando SQL ou clique em **Procurar** para carregar a consulta SQL de um arquivo de texto.  
   
 6.  É possível clicar em **Visualizar** para exibir até 200 linhas dos dados extraídos pela origem ODBC.  
   

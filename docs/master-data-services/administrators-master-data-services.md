@@ -16,11 +16,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 85ad4589ef25042498b132475af39cb36fd1b2bc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62817940"
 ---
 # <a name="administrators-master-data-services"></a>Administradores (Master Data Services)
 
@@ -74,7 +74,7 @@ ms.locfileid: "52783188"
 ## <a name="external-resources"></a>Recursos externos  
  Postagem do blog, [Aprimoramentos de Segurança](https://go.microsoft.com/fwlink/p/?LinkId=615376), em msdn.com.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Criar um administrador de modelo &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   
  [Criar um banco de dados do Master Data Services](../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [Notificações &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  

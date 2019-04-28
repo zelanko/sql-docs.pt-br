@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8f6817e1fd906a577801625b4ab4320cc957e539
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704911"
 ---
 # <a name="facet-properties-dialog-box-dependent-policies-page"></a>Caixa de diálogo Propriedades da Faceta, página Políticas Dependentes
   Use esta caixa de diálogo para exibir uma lista de políticas que atualmente fazem referência a esta faceta do Gerenciamento Baseado em Políticas.  

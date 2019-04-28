@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6e4cf182d303d2fc671b5b6003483781e2d3a4aa
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733471"
 ---
 # <a name="training-and-testing-data-sets"></a>Conjuntos de dados de teste e treinamento
   A separação de dados em conjuntos de teste e treinamento é uma parte importante da avaliação de modelos de mineração de dados. Normalmente, quando você separa um conjunto de dados em um conjunto de treinamentos e um conjunto de testes, a maior parte dos dados é usada para treinamento e uma parte menor dos dados é usada para teste. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] faz a amostra aleatória dos dados para ajudar a garantir que as partições de teste e de treinamento são similares. Usando dados semelhantes para treinamento e teste, você pode minimizar os efeitos das discrepâncias de dados e entender melhor as características do modelo.  
@@ -52,7 +52,7 @@ ms.locfileid: "50144991"
 ### <a name="modifying-structure-properties-to-create-a-test-data-set"></a>Modificando propriedades de estrutura para criar um conjunto de dados de teste  
  Se você criar e processar uma estrutura de mineração e posteriormente decidir que deseja definir separadamente um conjunto de dados de teste, poderá modificar as propriedades da estrutura de mineração. Para alterar a maneira que os dados são particionados, edite as seguintes propriedades:  
   
-|Propriedade|Description|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |`HoldoutMaxCases`|Especifica o número máximo de casos a serem incluídos no conjunto de teste.|  
 |`HoldoutMaxPercent`|Especifica o número de casos a serem incluídos no conjunto de teste como uma porcentagem do conjunto de dados completo. Para não ter nenhum conjunto de dados, especifique 0.|  

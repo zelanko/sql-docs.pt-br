@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6de68556d6bbd7277324e6083d70f979fa1303fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725540"
 ---
 # <a name="creating-query-scoped-calculated-members-mdx"></a>Criando membros calculados no escopo da consulta (MDX)
   Se um membro calculado for necessário para uma única consulta de expressões multidimensionais (MDX), é possível defini-lo usando a palavra-chave WITH. O membro calculado criado com a palavra-chave WITH deixará de existir ao fim da execução da consulta.  
@@ -92,8 +92,8 @@ WHERE [Product].[Category].[Bikes]
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência da função MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
+ [Referência da Função MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
  [Instrução SELECT &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
- [No escopo da sessão de criação de membros calculados &#40;MDX&#41;](mdx-calculated-members-session-scoped-calculated-members.md)  
+ [Criando membros calculados no escopo da sessão &#40;MDX&#41;](mdx-calculated-members-session-scoped-calculated-members.md)  
   
   

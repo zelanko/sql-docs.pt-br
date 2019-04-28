@@ -1,31 +1,23 @@
 ---
 title: Perspectivas | Microsoft Docs
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: sql-server-2014
-ms.reviewer: ''
+ms.date: 05/02/2018
+ms.prod: sql
 ms.technology: analysis-services
-ms.topic: reference
-helpviewer_keywords:
-- ready-only cube view
-- OLAP objects [Analysis Services], perspectives
-- storing data [Analysis Services], perspectives
-- perspectives [Analysis Services]
-- cubes [Analysis Services], perspectives
-- visibility [Analysis Services]
-- storage [Analysis Services], perspectives
-ms.assetid: b064171e-b1b4-4f32-95e5-59e1b831c4c9
-author: minewiskan
+ms.custom: olap
+ms.topic: conceptual
 ms.author: owend
-manager: craigg
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ms.openlocfilehash: 2856bca26e8a49ffdb2ed5187479434c7762015b
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702633"
 ---
 # <a name="perspectives"></a>perspectivas
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Uma perspectiva é uma definição que permite os usuários visualizem um cubo de um modo mais simples. Uma perspectiva é um subconjunto dos recursos de um cubo. Uma perspectiva permite que os administradores criem exibições do cubo, ajudando outros usuários a se concentrarem nos dados mais relevantes. Uma perspectiva contém subconjuntos de todos os objetos de um cubo. Uma perspectiva não pode incluir elementos que não estão definidos no cubo pai.  
   
  Um simples objeto <xref:Microsoft.AnalysisServices.Perspective> é composto de: informações básicas, dimensões, grupos de medidas, cálculos, KPIs e ações. As informações básicas incluem o nome e a medida padrão da perspectiva. As dimensões são um subconjunto das dimensões do cubo. Os grupos de medidas são um subconjunto dos grupos de medidas do cubo. Os cálculos são um subconjunto dos cálculos do cubo. Os KPIs são um subconjunto dos KPIs do cubo. As ações são um subconjunto das ações do cubo.  

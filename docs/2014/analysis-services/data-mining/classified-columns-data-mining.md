@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d4a0fc7a0eeb0cabd07a38f77d5024aac0eaebb8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715173"
 ---
 # <a name="classified-columns-data-mining"></a>Colunas classificadas [mineração de dados]
   Quando você define uma coluna classificada, cria uma relação entre a coluna atual e outra coluna na estrutura de mineração. Os dados na coluna da estrutura de mineração que você designa como a coluna classificada contém informações categóricas que descrevem os valores em outra coluna na estrutura de mineração.  
@@ -60,8 +60,8 @@ ms.locfileid: "48193746"
  O valor na coluna é o peso ou o fator de replicação do caso do valor associado.  
   
 ## <a name="see-also"></a>Consulte também  
- [Tipos de conteúdo &#40;mineração de dados&#41;](content-types-data-mining.md)   
- [Estruturas de mineração &#40;Analysis Services - mineração de dados&#41;](mining-structures-analysis-services-data-mining.md)   
- [Tipos de dados &#40;mineração de dados&#41;](data-types-data-mining.md)  
+ [Tipos de conteúdo &#40;Data Mining&#41;](content-types-data-mining.md)   
+ [Estruturas de Mineração &#40;Analysis Services – Data Mining&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Tipos de dados &#40;Mineração de dados&#41;](data-types-data-mining.md)  
   
   

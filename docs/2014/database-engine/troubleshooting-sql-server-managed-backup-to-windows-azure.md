@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd68f6f8bcb83bfbc980be0809e12141403e4012
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842573"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-windows-azure"></a>Solucionar problemas de Backup Gerenciado do SQL Server para Microsoft Azure
   Este tópico descreve as tarefas e as ferramentas que você pode usar para solucionar erros que podem ocorrer durante as operações do [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)].  
@@ -56,7 +56,7 @@ ms.locfileid: "52522527"
   
 1.  **Erros ao habilitar ou configurar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]:**  
   
-     Erro: 0x%x. " Falha ao acessar a URL de armazenamento... Forneça uma credencial SQL válida...": Você pode ver esse e outros erros similares em relação às credenciais SQL.  Nesses casos, examine o nome da credencial do SQL que você forneceu e também as informações armazenadas na credencial do SQL - o nome da conta de armazenamento e a chave de acesso de armazenamento e certifique-se de que eles estão atualizados e válidos.  
+     Erro: " Falha ao acessar a URL de armazenamento... Forneça uma credencial SQL válida...": Você pode ver esse e outros erros similares em relação às credenciais SQL.  Nesses casos, examine o nome da credencial do SQL que você forneceu e também as informações armazenadas na credencial do SQL - o nome da conta de armazenamento e a chave de acesso de armazenamento e certifique-se de que eles estão atualizados e válidos.  
   
      Erro: "... não é possível configurar o banco de dados... porque ele é um banco de dados do sistema": Você verá esse erro se você tentar habilitar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para um banco de dados do sistema.  O [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] não oferece suporte a backups para bancos de dados do sistema.  Para configurar o backup para um banco de dados do sistema, use outras tecnologias de Backup do SQL Server como planos de manutenção.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "52522527"
   
 2.  **Erros de notificação de email:**  
   
-     Erro: 0x%x. "O database Mail não está habilitado..." – você verá esse erro se você habilitar notificações por email, mas o Database Mail não está configurado na instância. Você deve configurar o Database Mail na instância para que possa receber a notificação sobre o status de integridade do [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Para obter informações sobre como habilitar o database mail, consulte [configurar o Database Mail](../relational-databases/database-mail/configure-database-mail.md). Você também deve habilitar o SQL Server Agent para usar o Database Mail para notificações. Para obter mais informações, consulte [antes de começar](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md#BeforeYouBegin).  
+     Erro: "O database Mail não está habilitado..." – você verá esse erro se você habilitar notificações por email, mas o Database Mail não está configurado na instância. Você deve configurar o Database Mail na instância para que possa receber a notificação sobre o status de integridade do [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Para obter informações sobre como habilitar o database mail, consulte [configurar o Database Mail](../relational-databases/database-mail/configure-database-mail.md). Você também deve habilitar o SQL Server Agent para usar o Database Mail para notificações. Para obter mais informações, consulte [antes de começar](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md#BeforeYouBegin).  
   
      Esta é uma lista dos números de erro que você possivelmente verá e que estão associados às notificações por email:  
   

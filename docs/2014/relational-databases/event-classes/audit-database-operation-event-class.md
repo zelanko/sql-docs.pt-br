@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 24599cad44366b0a0af6d3328f64b07b248f2e7c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62698858"
 ---
 # <a name="audit-database-operation-event-class"></a>Classe de evento Audit Database Operation
   A classe de evento **Audit Database Operation** acontece quando ocorrem operações em um banco de dados, como uma notificação de consulta de ponto de verificação e assinatura.  

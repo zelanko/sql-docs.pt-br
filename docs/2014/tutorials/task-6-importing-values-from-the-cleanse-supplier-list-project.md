@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0780636d3bcaecfe0519192bd450bb538d78bbf9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866764"
 ---
-# <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>Tarefa 6: Importando valores do projeto Limpar Lista de Fornecedores
+# <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>Tarefa 6: Importar valores do projeto Limpar Lista de Fornecedores
   Nesta tarefa, você importará o conhecimento de qualidade de dados adquirido durante o processo de limpeza. Ver [importar valores de projeto de limpeza para um domínio](https://msdn.microsoft.com/library/hh479581.aspx) tópico para obter mais detalhes. Também é exportar a base de conhecimento em um arquivo DQS antes de publicar atualizada **fornecedores** da Base de dados de Conhecimento.  
   
 1.  Na página principal do **cliente DQS**, clique em **seta para a direita** lado **fornecedores** sob **Bases de dados de Conhecimento recentes** e clique em **Gerenciamento de domínio**.  
