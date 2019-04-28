@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ae414d3108e694bf565a6411e1835892f3df4a98
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680317"
 ---
 # <a name="connect-to-a-db2-database-ssas"></a>Conectar a um banco de dados DB2 (SSAS)
   Esta página do **Assistente de Importação de Tabela** permite que você especifique as configurações de conexão a um banco de dados DB2. Para acessar o assistente do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], no menu **Modelo** , clique em **Importar de Fonte de Dados**.  

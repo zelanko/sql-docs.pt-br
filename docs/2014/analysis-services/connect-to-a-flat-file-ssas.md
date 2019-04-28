@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1b3fa68b63e9ccf1a11712192d675c46ece7a86b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680303"
 ---
 # <a name="connect-to-a-flat-file-ssas"></a>Conectar a um arquivo simples (SSAS)
   Esta página do **Assistente de Importação de Tabela** o habilita a se conectar a um arquivo simples (.txt), um arquivo separado por tabulações (.tab) ou um arquivo separado por vírgulas (.csv). Para acessar o assistente do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], no menu **Modelo** , clique em **Importar de Fonte de Dados**.  
@@ -41,7 +41,7 @@ ms.locfileid: "48148946"
  **Separador de coluna**  
  Selecione de uma lista de separadores de colunas disponíveis. Escolha um separador com pouca probabilidade de ocorrer no texto.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |Tabulação (t)|As colunas são separadas por uma tabulação (t).|  
 |Vírgula (,)|As colunas são separadas por uma vírgula (,).|  
@@ -62,7 +62,7 @@ ms.locfileid: "48148946"
 > [!NOTE]  
 >  São exibidas somente as primeiras 50 linhas do arquivo nesta visualização.  
   
-|Opção|Description|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |**Caixa de seleção no cabeçalho da coluna**|Marque a caixa de seleção para incluir a coluna na importação de dados. Desmarque a caixa de seleção para remover a coluna da importação de dados.|  
 |**Botão de seta para baixo no cabeçalho da coluna**|Classifique e filtre dados na coluna.|  

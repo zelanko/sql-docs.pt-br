@@ -1,5 +1,5 @@
 ---
-title: Configurações (sincronização) (SybaseToSQL) do projeto | Microsoft Docs
+title: Project Settings (Synchronization) (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 0a221d5c24606707ba9876e0980e6c28d2dacc67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667967"
 ---
 # <a name="project-settings-synchronization-sybasetosql"></a>Configurações do projeto (sincronização) (SybaseToSQL)
 A página de sincronização do **configurações do projeto** caixa de diálogo contém configurações que personalizam como SSMA carrega os objetos de banco de dados, como tabelas e procedimentos armazenados, em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure.  

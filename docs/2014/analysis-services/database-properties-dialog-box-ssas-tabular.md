@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f8204913babd9b52caf2edcaa2de8feae76c70d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732298"
 ---
 # <a name="database-properties-dialog-box-ssas---tabular"></a>Caixa de diálogo Propriedades de Banco de Dados (SSAS - Tabela)
   Esta caixa de diálogo fornece carimbos de data/hora e outras informações descritivas, mais propriedades personalizáveis que determinam se o banco de dados usa dados armazenados em cache. Outras propriedades personalizáveis incluem a alteração do nome do banco de dados e a especificação das opções de representação.  

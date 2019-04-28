@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 148180d95bcbff1626069e72fb66dd9a3ca859c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667916"
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>Configurações do projeto (mapeamento de tipo) (SybaseToSQL)
 A página de mapeamento de tipo de **configurações do projeto** caixa de diálogo contém configurações que personalizam como SSMA converte tipos de dados do Sybase Adaptive Server Enterprise (ASE) em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados.  
@@ -54,32 +54,32 @@ A tabela a seguir contém o mapeamento de tipo padrão entre o ASE e [!INCLUDE[s
 |-----------------|------------------------|  
 |**bigint**|**bigint**|  
 |**binary**|**binary**|  
-|**binário [\*... 8000]**|**binary[\*]**|  
+|**binary[\*..8000]**|**binary[\*]**|  
 |**binary[8001..\*]**|**varbinary(max)**|  
 |**bit**|**bit**|  
 |**char**|**char**|  
 |**char varying**|**varchar**|  
 |**variando de char [\*... 8000]**|**varchar[\*]**|  
 |**variando de char [8001...\*]**|**varchar(max)**|  
-|**char [\*... 8000]**|**char[\*]**|  
+|**char[\*..8000]**|**char[\*]**|  
 |**char[8001..\*;]**|**varchar(max)**|  
 |**character**|**char**|  
 |**a variável de caractere**|**varchar**|  
 |**a variável de caractere [\*... 8000]**|**varchar[\*]**|  
 |**a variável de caractere [8001...\*]**|**varchar(max)**|  
-|**caracteres [\*... 8000]**|**char[\*]**|  
+|**character[\*..8000]**|**char[\*]**|  
 |**caracteres [8001...\*]**|**varchar(max)**|  
 |**date**|**date**|  
 |**datetime**|**datetime2[3]**|  
 |**dec**|**decimal**|  
-|**DEC [\*... \*]**|**decimal[\*]**|  
+|**dec[\*..\*]**|**decimal[\*]**|  
 |**dec[\*..\*][\*..\*]**|**decimal[\*][\*]**|  
 |**decimal**|**decimal**|  
 |**decimal[\*..\*]**|**decimal[\*]**|  
 |**decimal[\*..\*][\*..\*]**|**decimal[\*][\*]**|  
 |**precisão dupla**|**float[53]**|  
 |**float**|**float[53]**|  
-|**float [\*... 15]**|**float[24]**|  
+|**float[\*..15]**|**float[24]**|  
 |**float [16...\*]**|**float[53]**|  
 |**image**|**image**|  
 |**int**|**int**|  
@@ -98,33 +98,33 @@ A tabela a seguir contém o mapeamento de tipo padrão entre o ASE e [!INCLUDE[s
 |**a variável de caracteres nacionais**|**nvarchar**|  
 |**a variável de caractere nacional [\*... 4000]**|**nvarchar[\*]**|  
 |**a variável de caractere nacional [4001...\*]**|**nvarchar(max)**|  
-|**varchar nacional**|**nvarchar**|  
-|**varchar nacional [\*... 4000]**|**nvarchar[\*]**|  
+|**national varchar**|**nvarchar**|  
+|**national varchar[\*..4000]**|**nvarchar[\*]**|  
 |**varchar nacional [4001...\*]**|**nvarchar(max)**|  
 |**nchar**|**nchar**|  
-|**nchar variados**|**nvarchar**|  
+|**nchar varying**|**nvarchar**|  
 |**nchar variados [\*... 4000]**|**nvarchar[\*]**|  
 |**nchar variados [4001...\*]**|**nvarchar(max)**|  
-|**nchar [\*... 4000]**|**nchar[\*]**|  
+|**nchar[\*..4000]**|**nchar[\*]**|  
 |**nchar[4001..\*]**|**nvarchar(max)**|  
 |**numeric**|**numeric**|  
 |**numeric[\*..\*]**|**numeric[\*]**|  
 |**numeric[\*..\*][\*..\*]**|**numeric[\*][\*]**|  
 |**nvarchar**|**nvarchar**|  
-|**nvarchar [\*... 4000]**|**nvarchar[\*]**|  
+|**nvarchar[\*..4000]**|**nvarchar[\*]**|  
 |**nvarchar[4001..\*]**|**nvarchar(max)**|  
 |**real**|**float[24]**|  
 |**smalldatetime**|**smalldatetime**|  
 |**smallint**|**smallint**|  
 |**smallmoney**|**smallmoney**|  
 |**sysname**|**nvarchar[128]**|  
-|**sysname [\*... \*]**|**nvarchar[255]**|  
+|**sysname[\*..\*]**|**nvarchar[255]**|  
 |**text**|**text**|  
 |**time**|**time[3]**|  
 |**timestamp**|**rowversion**|  
 |**tinyint**|**tinyint**|  
 |**unichar**|**nchar**|  
-|**UNICHAR variados**|**nvarchar**|  
+|**unichar varying**|**nvarchar**|  
 |**variando UNICHAR [\*... 4000]**|**nvarchar[\*]**|  
 |**variando UNICHAR [4001...\*]**|**nvarchar(max)**|  
 |**unichar[\*..4000]**|**nchar[\*]**|  
@@ -133,14 +133,14 @@ A tabela a seguir contém o mapeamento de tipo padrão entre o ASE e [!INCLUDE[s
 |**univarchar**|**nvarchar**|  
 |**univarchar[\*..4000]**|**nvarchar[\*]**|  
 |**univarchar[4001..\*]**|**nvarchar(max)**|  
-|**bigint sem sinal**|**numeric[20][0]**|  
-|**int sem sinal**|**bigint**|  
-|**smallint não assinado**|**int**|  
+|**unsigned bigint**|**numeric[20][0]**|  
+|**unsigned int**|**bigint**|  
+|**unsigned smallint**|**int**|  
 |**tinyint sem sinal**|**tinyint**|  
 |**varbinary**|**varbinary**|  
-|**varbinary [\*... 8000]**|**varbinary[\*]**|  
+|**varbinary[\*..8000]**|**varbinary[\*]**|  
 |**varbinary[8001..\*]**|**varbinary(max)**|  
 |**varchar**|**varchar**|  
-|**varchar [\*... 8000]**|**varchar[\*]**|  
-|**varchar [8001...\*]**|**varchar(max)**|  
+|**varchar[\*..8000]**|**varchar[\*]**|  
+|**varchar[8001..\*]**|**varchar(max)**|  
   

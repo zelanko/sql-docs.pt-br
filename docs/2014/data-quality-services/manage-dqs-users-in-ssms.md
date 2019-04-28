@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d8d7e0c31b1e022445006598f791716d765b98c9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792381"
 ---
 # <a name="manage-dqs-users-in-ssms"></a>Gerenciar usuários de DQS em SSMS
   Este tópico descreve como criar usuários adicionais na instância do SQL Server usando o SQL Server Management Studio e como concedê-los funções DQS apropriadas do [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] no banco de dados DQS_MAIN.  
@@ -42,7 +42,7 @@ ms.locfileid: "56027977"
   
 5.  Depois que o usuário for validado, clique na página **Mapeamento de Usuário** no painel esquerdo.  
   
-6.  No painel direito, marque a caixa de seleção sob o **mapa** coluna para o **DQS_MAIN** do banco de dados e, em seguida, selecione o **dqs_administrator**, **dqs_kb_editor** , ou **dqs_kb_operator** caixa de seleção o **associação de função para o banco de dados: DQS_MAIN** painel, dependendo do nível de acesso necessário para o usuário.  
+6.  No painel direito, marque a caixa de seleção na coluna **Mapa** do banco de dados **DQS_MAIN** e, depois, marque a caixa de seleção **dqs_administrator**, **dqs_kb_editor** ou **dqs_kb_operator** no painel **Associação à função de banco de dados para: DQS_MAIN**, dependendo do nível de acesso necessário para o usuário.  
   
 7.  Na caixa de diálogo **Logon – Novo**, clique em **OK** para aplicar as alterações.  
   

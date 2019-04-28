@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dbc6e6fe3c45a6395620e017decef285ae9dd51a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62672522"
 ---
 # <a name="asynchronous-execution"></a>Execução assíncrona
 ODBC dá suporte a operações assíncronas para operações de instrução e conexão. Há duas maneiras de determinar quando uma operação assíncrona é concluída:  

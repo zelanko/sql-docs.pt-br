@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 580ac26d2478de1f42800d6f8d6704f26bc6fff4
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62660797"
 ---
 # <a name="sphelpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,22 +43,22 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @publication **=** ] **'**_publicação_**'**  
+ [ @publication**=** ] **'**_publication_**'**  
  O nome da publicação. *publicação*está **sysname**, com um padrão de **%**, que retorna informações sobre todas as publicações de mesclagem no banco de dados atual.  
   
  [ @found **=** ] **'***encontrado***'** saída  
  Um sinalizador para indicar linhas de retorno. *encontrado*está **int** e um parâmetro de saída, com um padrão NULL. **1** indica que a publicação foi localizada. **0** indica a publicação não foi encontrada.  
   
- [ @publication_id **=**] **'***publication_id***'** saída  
+ [ @publication_id**=**] **'***publication_id***'** OUTPUT  
  O número de identificação da publicação. *publication_id* está **uniqueidentifier** e um parâmetro de saída, com um padrão NULL.  
   
  [ @reserved **=**] **'***reservado***'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *reservado* está **nvarchar (20)**, com um padrão NULL.  
   
- [ @publisher **=** ] **'***publisher***'**  
+ [ @publisher**=** ] **'***publisher***'**  
  O nome do publicador. *Publisher* está **sysname**, com um padrão NULL.  
   
- [@publisher_db **=** ] **'***publisher_db***'**  
+ [@publisher_db**=** ] **'***publisher_db***'**  
  O nome do banco de dados de publicação. *publisher_db* está **sysname**, com um padrão NULL.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
@@ -67,7 +67,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |-----------------|---------------|-----------------|  
 |id|**int**|Ordem sequencial da publicação na lista de conjunto de resultados.|  
 |nome|**sysname**|Nome da publicação.|  
-|descrição|**nvarchar(255)**|Descrição da publicação.|  
+|description|**nvarchar(255)**|Descrição da publicação.|  
 |status|**tinyint**|Indica quando os dados da publicação estão disponíveis.|  
 |retenção|**int**|O tempo para salvar metadados sobre alterações para artigos na publicação. As unidades desse período de tempo podem ser dias, semanas, meses ou anos. Para obter informações sobre unidades, consulte a coluna retention_period_unit.|  
 |sync_mode|**tinyint**|O modo de sincronização dessa publicação:<br /><br /> **0** = programa de cópia em massa nativa (**bcp** utilitário)<br /><br /> **1** = cópia em massa de caracteres|  
@@ -93,11 +93,11 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |ftp_subdirectory|**nvarchar(255)**|Especifica onde os arquivos de instantâneo de publicação estão disponíveis para serem retirados pelo Agente de Mesclagem quando o instantâneo é entregue por meio do FTP.|  
 |ftp_login|**sysname**|O nome de usuário é usado para se conectar ao serviço FTP.|  
 |conflict_retention|**int**|Especifica o período de retenção, em dias, durante o qual os conflitos são retidos. Quando o número de dias especificado for ultrapassado, a linha de conflito será limpa na tabela de conflitos.|  
-|keep_partition_changes|**int**|Especifica se otimização de sincronização está ocorrendo para esta publicação. **keep_partition_changes** tem um padrão de **0**. Um valor de **0** significa que a sincronização não é otimizada e as partições enviadas a todos os assinantes são verificadas quando dados são alterados em uma partição.<br /><br /> **1** significa que a sincronização é otimizada e somente assinantes com linhas nas partições alteradas são afetados.<br /><br /> Observação: Por padrão, as publicações de mesclagem usam partições pré-calculadas que fornecem um grau maior de otimização do que essa opção. Para obter mais informações, consulte [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md) e [otimizar o desempenho de filtro parametrizado com partições pré-computadas](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).|  
+|keep_partition_changes|**int**|Especifica se otimização de sincronização está ocorrendo para esta publicação. **keep_partition_changes** tem um padrão de **0**. Um valor de **0** significa que a sincronização não é otimizada e as partições enviadas a todos os assinantes são verificadas quando dados são alterados em uma partição.<br /><br /> **1** significa que a sincronização é otimizada e somente assinantes com linhas nas partições alteradas são afetados.<br /><br /> Observação: Por padrão, as publicações de mesclagem usam partições pré-calculadas que fornecem um grau maior de otimização que essa opção. Para obter mais informações, consulte [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md) e [otimizar o desempenho de filtro parametrizado com partições pré-computadas](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).|  
 |allow_subscription_copy|**int**|Especifica se a capacidade para copiar os bancos de dados de assinatura que assinam esta publicação foi habilitada. Um valor de **0** significa que não é permitido copiar.|  
 |allow_synctoalternate|**int**|Especifica se um parceiro de sincronização alternativo tem permissão para sincronizar com esse Publicador. Um valor de **0** significa um parceiro de sincronização não é permitido.|  
 |validate_subscriber_info|**nvarchar(500)**|Lista as funções que estão sendo usadas para recuperar informações do Assinante e validar os critérios de filtragem de linha com parâmetros no Assinante. Ajuda a verificar se as informações estão consistentemente particionadas com cada mesclagem.|  
-|backward_comp_level|**int**|O nível de compatibilidade do banco de dados, podendo ser um dos seguintes:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+|backward_comp_level|**int**|O nível de compatibilidade do banco de dados, podendo ser um dos seguintes:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_activedirectory|**bit**|Especifica se as informações de publicação são publicadas para o Active Directory. Um valor de **0** significa que as informações de publicação não estão disponíveis a partir do Active Directory.<br /><br /> Esse parâmetro foi preterido e tem suporte somente para a compatibilidade com versões anteriores de scripts. Você não pode mais adicionar informações de publicação no Active Directory.|  
 |max_concurrent_merge|**int**|O número de processos de mesclagem simultâneos. Se **0**, não há nenhum limite para o número de processos de mesclagem simultâneos em execução em um determinado momento.|  
 |max_concurrent_dynamic_snapshots|**int**|O número máximo de sessões de instantâneo de dados filtrados simultâneas que pode ser executado na publicação de mesclagem. Se **0**, não há nenhum limite para o número máximo de sessões de instantâneo de dados filtrados simultâneas que podem ser executados simultaneamente na publicação, em um determinado momento.|  

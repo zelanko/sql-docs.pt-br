@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 53299289e4daf504eef9cb382469225d14efd698
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732617"
 ---
 # <a name="view-or-change-modeling-flags-data-mining"></a>Exibir ou alterar sinalizadores de modelagem (mineração de dados)
   Sinalizadores de modelagem são propriedades que você define em uma coluna da estrutura de mineração ou em colunas do modelo de mineração para controlar como o algoritmo processa os dados durante a análise.  
@@ -52,7 +52,7 @@ ms.locfileid: "48050122"
     ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Tarefas e tarefas do modelo de mineração](mining-model-tasks-and-how-tos.md)   
- [Sinalizadores de modelagem &#40;mineração de dados&#41;](modeling-flags-data-mining.md)  
+ [Tarefas e instruções do modelo de mineração](mining-model-tasks-and-how-tos.md)   
+ [Sinalizadores de modelagem &#40;Mineração de dados&#41;](modeling-flags-data-mining.md)  
   
   

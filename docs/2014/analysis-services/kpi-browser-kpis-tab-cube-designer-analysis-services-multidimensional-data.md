@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d399ec2f3388f61b8b8fdcd7f81cb0deeeaa8081
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730615"
 ---
 # <a name="kpi-browser-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Navegador KPI (guia KPIs, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel **Navegador de KPI** na guia **KPIs** do Designer de Cubo para exibir e testar os resultados dos KPIs (indicadores chave de desempenho). Os KPIs devem ser implantados primeiro em uma instância do [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] antes da navegação.  
@@ -39,9 +39,9 @@ ms.locfileid: "48174596"
  **Operador**  
  Selecione o operador que define como a expressão na **Expressão de Filtro** é aplicada à hierarquia selecionada. A tabela a seguir descreve os operadores disponíveis.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|**igual**|Os resultados são restringidos ao conjunto definido na **Expressão de Filtro**.|  
+|**Equal**|Os resultados são restringidos ao conjunto definido na **Expressão de Filtro**.|  
 |**Não é igual**|Os resultados são restringidos aos membros excluídos pelo conjunto definido na **Expressão de Filtro**.|  
 |**Entrada**|Os resultados são restringidos ao conjunto nomeado escolhido na **Expressão de Filtro**.|  
 |**Não está em**|Os resultados são restringidos aos membros excluídos pelo conjunto nomeado escolhido na **Expressão de Filtro**.|  
@@ -72,7 +72,7 @@ ms.locfileid: "48174596"
  **Status**  
  Exibe o gráfico de status do KPI.  
   
- **Tendência**  
+ **Trend**  
  Exibe o gráfico de tendências do KPI.  
   
  **Weight**  

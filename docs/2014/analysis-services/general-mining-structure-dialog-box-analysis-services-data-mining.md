@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 82c8ee7fcc998f8c8524cfe4d09474a707d0051a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730974"
 ---
 # <a name="general-mining-structure-dialog-box-analysis-services---data-mining"></a>Geral (Caixa de diálogo Estrutura de Mineração) (Analysis Services – Mineração de Dados)
   Use a página **Geral** da caixa de diálogo **Propriedades da Estrutura de Mineração** no **SQL Server Management Studio** para definir as propriedades gerais de uma estrutura de mineração em um banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -32,10 +32,10 @@ ms.locfileid: "48099216"
 |**Descrição**|Exibe a descrição da estrutura de mineração.|  
 |**Criar Carimbo de Data/Hora**|Exibe a data e hora em que foi criada a estrutura de mineração.|  
 |**Última Atualização de Esquema**|Exibe a data e a hora em que os metadados da estrutura de mineração foram atualizados pela última vez.|  
-|**Estado**|Exibe o estado de processamento da estrutura de mineração. Para obter mais informações sobre os valores para essa propriedade, consulte <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
+|**Estado**|Exibe o estado de processamento da estrutura de mineração. Para obter mais informações sobre os valores dessa propriedade, consulte <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
 |**Último processamento**|Exibe a data e a hora em que a estrutura de mineração foi processada pela última vez.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Estruturas de mineração &#40;Analysis Services - mineração de dados&#41;](data-mining/mining-structures-analysis-services-data-mining.md)  
+ [Estruturas de Mineração &#40;Analysis Services – Data Mining&#41;](data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

@@ -12,11 +12,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 70689ff767661409dce982d7bb294d0b620838e2
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774030"
 ---
 # <a name="options-text-editor---xml---miscellaneous-page"></a>Opções (página Editor de texto – XML – Diversos)
 
@@ -44,5 +44,5 @@ A caixa de diálogo **Opções** permite alteração das configurações de pree
  Ativa o recurso de estrutura de tópicos quando um arquivo é aberto. Esta caixa de seleção fica marcada por padrão.  
   
 ## <a name="caching"></a>Cache  
- **Esquemas**  
+ **Schemas**  
  Especifica o local do cache de esquema. O botão Procurar (...) abre o local d cache de esquema atual em uma janela nova. O local padrão é  *\<diretório de instalação do Management Studio >* \XML\Schemas.  

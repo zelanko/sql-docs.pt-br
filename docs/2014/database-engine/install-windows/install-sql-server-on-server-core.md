@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 29523dba8417a89261fed72da801898513796c17
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775758"
 ---
 # <a name="install-sql-server-2014-on-server-core"></a>Instalar o SQL Server 2014 no Server Core
   Você pode instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instalação do Server Core do [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 ou do [!INCLUDE[win8srv](../../includes/win8srv-md.md)]. Este tópico apresenta detalhes de configuração específicos sobre a instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no Server Core.  
@@ -44,7 +44,7 @@ ms.locfileid: "53364028"
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Não|  
 |SSDT ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools)|Não|  
 |Conectividade das ferramentas de cliente|Sim|  
-|Servidor do Integration Services<sup>[1]</sup>|Sim|  
+|Integration Services Server<sup>[1]</sup>|Sim|  
 |Compatibilidade das ferramentas de cliente com versões anteriores|Não|  
 |SDK de Ferramentas de cliente|Não|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manuais Online|Não|  

@@ -1,5 +1,5 @@
 ---
-title: 'Página especificar réplicas (Assistente de novo grupo de disponibilidade: Assistente para adicionar réplica) | Microsoft Docs'
+title: 'Página Especificar réplicas (Assistente de novo grupo de disponibilidade: assistente para adicionar réplica) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be6ddc45dd2f37b5a4a29f0e3fee4a9c44f723ba
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788331"
 ---
-# <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Página especificar réplicas (Assistente de novo grupo de disponibilidade: Assistente para adicionar réplica)
+# <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Página Especificar réplicas (Assistente de novo grupo de disponibilidade: assistente para adicionar réplica)
   Este tópico descreve as opções da página **Especificar Réplicas** . Essa página aplica-se ao [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] e ao [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Use a página **Especificar Réplicas** para especificar e configurar uma ou mais réplicas de disponibilidade para adicionar o grupo de disponibilidade. Essa página contém quatro guias que são apresentadas na tabela a seguir. Clique no nome de uma guia na tabela para ir para a seção correspondente, mais adiante neste tópico.  
   
 |Tab|Descrição breve|  
@@ -38,7 +38,7 @@ ms.locfileid: "53371568"
  Se uma instância de servidor que você usa para hospedar uma réplica secundária não estiver listada na grade **Réplicas de Disponibilidade** , clique no botão **Adicionar Réplica** . Se você estiver configurando um grupo de disponibilidade em um ambiente de TI híbrido (consulte [Alta disponibilidade e recuperação de desastre para SQL Server nas Máquinas Virtuais do Microsoft Azure](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)), clique no botão **Adicionar Réplica do Azure** para criar máquinas virtuais com réplicas secundárias no Microsoft Azure.  
   
  **Função inicial**  
- Indica a função que a nova réplica executará inicialmente: **Primário** ou **secundário**.  
+ Indica a função que a nova réplica executará inicialmente: **Primária** ou **secundária**.  
   
  **Failover automático (até 2)**  
  Marque esta caixa de seleção se você desejar que esta réplica de disponibilidade seja um parceiro de failover automático. Para configurar o failover automático, você deve escolher essa opção para a réplica primária inicial e para uma réplica secundária. Essas duas réplicas usarão o modo de disponibilidade da confirmação síncrona. Apenas duas réplicas podem dar suporte a failover automático.  
@@ -122,7 +122,7 @@ ms.locfileid: "53371568"
  Especifica que você prefere que trabalhos de backup ignorem a função das réplicas de disponibilidade ao escolher a réplica para executar backups. Observe que os trabalhos de backup podem avaliar outros fatores, como prioridade de backup de cada réplica de disponibilidade em combinação com seu estado operacional e estado conectado.  
   
 > [!IMPORTANT]  
->  Não há nenhuma imposição da configuração de preferência de backup. A interpretação dessa preferência depende da lógica, se houver, que você usa para o script em trabalhos de backup para os bancos de dados em um determinado grupo de disponibilidade. Para obter mais informações, consulte [secundárias ativas: Backup em réplicas secundárias (grupos de disponibilidade AlwaysOn)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+>  Não há nenhuma imposição da configuração de preferência de backup. A interpretação dessa preferência depende da lógica, se houver, que você usa para o script em trabalhos de backup para os bancos de dados em um determinado grupo de disponibilidade. Para obter mais informações, confira [Secundárias ativas: Backup em réplicas secundárias (grupos de disponibilidade AlwaysOn)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
 ### <a name="replica-backup-priorities-grid"></a>Grade Prioridades de backup de réplica  
  Use a grade **Prioridades de backup de réplica** para especificar suas prioridades de backup para cada uma das réplicas do grupo de disponibilidade. Essa grade contém as seguintes colunas:  

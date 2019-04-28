@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f907a03df66970d69fe4c6b0379d735af987102
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732192"
 ---
 # <a name="dependency-network-tab-mining-model-viewer"></a>Guia Rede de Dependências (Visualizador do Modelo de Mineração)
   A guia **Rede de Dependências** provê uma exibição gráfica de todos os atributos que o modelo de mineração contém, e mostra como os atributos estão relacionados.  
@@ -65,7 +65,7 @@ ms.locfileid: "48226166"
  Uma regra geral para todos os tipos de modelos é que, quanto mais forte o link, mais forte a relação previsível entre os dois atributos.  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visualizadores do modelo de mineração &#40; Designer do modelo de mineração de dados &#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizadores do modelo de Mineração de dados](data-mining/data-mining-model-viewers.md)  
   

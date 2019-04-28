@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e52a160dd72e541e51a57a002919aa2cc251e7e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731508"
 ---
 # <a name="find-node-dialog-box-mining-model-viewer"></a>Caixa de diálogo Localizar Nó (Visualizador do Modelo de Mineração)
   Use a caixa de diálogo **Localizar Nó** , disponível na guia **Rede de Dependência** de um modelo, para localizar um nó específico. Este recurso é útil em diagramas complexos que contêm muitos nós ou conjuntos de itens.  
@@ -37,7 +37,7 @@ ms.locfileid: "48218527"
   
 ## <a name="see-also"></a>Consulte também  
  [Visualizadores do modelo de mineração &#40; Designer do modelo de mineração de dados &#41;](mining-model-viewers-data-mining-model-designer.md)   
- [Visualizadores do modelo de mineração de dados](data-mining/data-mining-model-viewers.md)   
- [Algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [Visualizadores do Modelo de Mineração de Dados](data-mining/data-mining-model-viewers.md)   
+ [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
   

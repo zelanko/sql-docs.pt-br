@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8fef73519d067218a152e35bad2db9e1bae3372c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789214"
 ---
 # <a name="reporting-services-with-alwayson-availability-groups-sql-server"></a>Reporting Services com grupos de disponibilidade AlwaysOn (SQL Server)
   Este tópico contém informações sobre como configurar o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para funcionar com o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] (AG) no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Os três cenários para usar o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] são bancos de dados para fontes de dados de relatório, bancos de dados do servidor de relatório e design de relatório. A funcionalidade com suporte e a configuração exigida é diferente para os três cenários.  
@@ -32,7 +32,7 @@ ms.locfileid: "53370219"
 ##  <a name="bkmk_requirements"></a> Requisitos para usar o Reporting Services e grupos de disponibilidade AlwaysOn  
  Para usar o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] com o [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], você precisa baixar e instalar um hotfix para .Net 3.5 SP1. O hotfix adiciona suporte a Cliente SQL para os recursos do AG e suporte das propriedades da cadeia de conexão **ApplicationIntent** e **MultiSubnetFailover**. Se o Hotfix não estiver instalado em cada computador que hospeda um servidor de relatório, os usuários que tentarem visualizar relatórios verão uma mensagem de erro semelhante à seguinte, e a mensagem de erro será gravada no log de rastreamento do servidor de relatório:  
   
-> **Mensagem de erro:** "Não tem suportada de palavra-chave 'applicationintent'"  
+> **Mensagem de erro:** “Não há suporte para a palavra-chave 'applicationintent'"  
   
  A mensagem ocorre quando você inclui uma das propriedades do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] na cadeia de conexão do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , mas o servidor não reconhece a propriedade. A mensagem de erro destacada será vista quando você clicar no botão 'Testar Conexão' nas interfaces de usuário do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e quando você visualizar o relatório se os erros remotos estiverem habilitados nos servidores de relatórios.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "53370219"
   
  Dependendo de como seus relatórios são criados e publicados, isso determinará onde você editará a cadeia de conexão:  
   
--   **Modo Nativo:** use o Gerenciador de Relatórios para fontes de dados compartilhadas e relatórios que já estão publicados em um servidor de relatório de modo nativo.  
+-   **Modo Nativo:** Use o Gerenciador de relatórios para fontes de dados compartilhadas e relatórios que já estão publicados em um servidor de relatório do modo nativo.  
   
 -   **Modo do SharePoint:** use as páginas de configuração do SharePoint dentro das bibliotecas de documentos para relatórios que já estão publicados em um servidor do SharePoint.  
   
@@ -93,9 +93,9 @@ ms.locfileid: "53370219"
   
 -   **Visualização local:** [!INCLUDE[ssRBDenali](../../../includes/ssrbdenali-md.md)] e o [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] usam o .NET Framework 4.0 e dão suporte às propriedades de cadeia de conexão do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
   
--   **Visualização de modo remoto ou de servidor:** se, depois de publicar relatórios no servidor de relatório ou usar a visualização no [!INCLUDE[ssRBDenali](../../../includes/ssrbdenali-md.md)], você vir um erro semelhante ao seguinte, isso será uma indicação de que você está visualizando relatórios no servidor de relatório e no Hotfix do .Net Framework 3.5 SP1 porque o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] não foi instalado no servidor de relatório.  
+-   **Visualização do modo remoto ou de servidor:** se, depois de publicar relatórios no servidor de relatório ou usar a visualização no [!INCLUDE[ssRBDenali](../../../includes/ssrbdenali-md.md)], você vir um erro semelhante ao seguinte, isso será uma indicação de que você está visualizando relatórios no servidor de relatório e no Hotfix do .Net Framework 3.5 SP1 porque o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] não foi instalado no servidor de relatório.  
   
-> **Mensagem de erro:** "Não tem suportada de palavra-chave 'applicationintent'"  
+> **Mensagem de erro:** “Não há suporte para a palavra-chave 'applicationintent'"  
   
 ##  <a name="bkmk_reportserverdatabases"></a> Bancos de dados do servidor de relatório e grupos de disponibilidade  
  O Reporting Services oferece suporte limitado para usar o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] com bancos de dados do servidor de relatório. Os bancos de dados do servidor de relatórios podem ser configurados no AG para fazer parte de uma réplica; porém, o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] não usará automaticamente uma réplica diferente para os bancos de dados do servidor de relatório quando um failover ocorrer.  

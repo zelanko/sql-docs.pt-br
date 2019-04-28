@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4b6b4aeb4059ba659a3188712b1ce76f10efd030
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771032"
 ---
 # <a name="odata-source"></a>Origem do OData
   Você usa o componente de origem OData em um pacote do SSIS para consumir os dados dos serviços do OData (protocolo Open Data). O componente oferece suporte aos protocolos v2 e v3 do OData, bem como os formatos de dados ATOM e JSON.  

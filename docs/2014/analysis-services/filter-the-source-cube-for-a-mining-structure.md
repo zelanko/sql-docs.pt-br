@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5c7d3208729ec225c25d1616e7a2052245e6ed25
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731338"
 ---
 # <a name="filter-the-source-cube-for-a-mining-structure"></a>Filtrar o cubo de origem para uma estrutura de mineração
   Quando você cria uma estrutura de mineração se baseia nos dados em um modelo multidimensional (um cubo OLAP), você pode *fatia* a estrutura de mineração com base no cubo. A divisão permite criar subconjuntos de dados, como um tipo de filtro nos dados que são usados para treinar o modelo de mineração.  
@@ -53,7 +53,7 @@ ms.locfileid: "48123517"
      O cubo de origem agora é filtrado do modo definido pela fatia de cubo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Tarefas de estrutura de mineração e instruções](data-mining/mining-structure-tasks-and-how-tos.md)   
+ [Tarefas e instruções da estrutura de mineração](data-mining/mining-structure-tasks-and-how-tos.md)   
  [Criar uma nova estrutura de mineração OLAP](data-mining/create-a-new-olap-mining-structure.md)  
   
   

@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a47a205ca7d216f17ec8a5893483180235b775a5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792497"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>Executar o DQSInstaller.exe para concluir a instalação do Data Quality Server
   Para concluir a instalação do [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] , você terá de executar o arquivo DQSInstaller.exe depois de instalar o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Este tópico descreve como executar o DQSInstaller.exe na tela **Iniciar** , menu **Iniciar** , Windows Explorer ou Prompt de comando; você pode escolher qualquer uma das formas de executar o arquivo DQSInstaller.exe.  
@@ -32,7 +32,7 @@ ms.locfileid: "56026317"
   
 1.  No computador onde você decidiu instalar o [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)], execute o arquivo DQSInstaller.exe usando qualquer um destes procedimentos, conforme aplicável:  
   
-    -   **Tela de início**: Sobre o **começar** tela, clique em **instalador do Data Quality.**  
+    -   **Tela Iniciar**: Na tela **Iniciar**, clique em **Instalador do Servidor do Data Quality.**  
   
     -   **Menu Iniciar**: Na barra de tarefas, clique em **inicie**, aponte para **todos os programas**, clique em **Microsoft SQL Server 2014**. Sob **Microsoft SQL Server 2014**, clique em **Data Quality Services**e, em seguida, clique em **instalador do Data Quality.**  
   
@@ -52,7 +52,7 @@ ms.locfileid: "56026317"
 3.  Você é solicitado a digitar uma senha para a chave mestra de banco de dados. A chave mestra de banco de dados é exigida criptografar o provedor de serviço de dados de referência tecla que será armazenada no DQS_MAIN banco de dados quando você configurar provedores de dados de referência posteriormente no [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS)  
   
     > [!IMPORTANT]  
-    >  A senha deve ter pelo menos oito caracteres e deve conter caracteres de três das quatro categorias a seguir: Letras maiusculas do inglês (A, B, C,... Z), letras minúsculas do inglês (a, b, c,... z), numeral (0, 1, 2,... 9) e caractere não alfanumérico ou especial (~!@#$%^&*()_-+=|\\{}[]:;"'<>,.?/). Por exemplo: P@ssword. O instalador o solicitará inserir outra senha se a senha atual não corresponder ao requisito.  
+    >  A senha deve ter pelo menos 8 caracteres e deve conter caracteres de três das quatro categorias a seguir: Letras maiúsculas do inglês (A, B, C,... Z), letras minúsculas do inglês (a, b, c,... z), numeral (0, 1, 2,... 9) e caractere não alfanumérico ou especial (~!@#$%^&*()_-+=|\\{}[]:;"'<>,.?/). Por exemplo: P@ssword. O instalador o solicitará inserir outra senha se a senha atual não corresponder ao requisito.  
   
 4.  Forneça uma senha, confirme a senha e pressione a ENTER para continuar com a instalação.  
   
@@ -87,9 +87,9 @@ ms.locfileid: "56026317"
   
 3.  No prompt de comando, execute DQSInstaller.exe com ou sem parâmetros de linha de comando:  
   
-    -   **Sem o parâmetro de linha de comando**: Digite `dqsinstaller.exe` e pressione ENTER.  
+    -   **Sem parâmetro de linha de comando**: Digite `dqsinstaller.exe` e pressione ENTER.  
   
-    -   **Com o parâmetro de linha de comando**: Digite o comando exigido conforme mencionado na tabela acima e pressione ENTER.  
+    -   **Com parâmetro de linha de comando**: Digite o comando exigido conforme mencionado na tabela acima e, em seguida, pressione ENTER.  
   
 4.  As ações exigidas são executadas com base no comando especificado. Se você prefere instalar o [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] sem parâmetros de linha de comando, o restante das etapas são as mesmas, conforme descrito nas etapas 2 a 6 na seção anterior, [Executar o DQSInstaller.exe na tela Iniciar, no menu Iniciar ou no Windows Explorer](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#WindowsExplorer).  
   

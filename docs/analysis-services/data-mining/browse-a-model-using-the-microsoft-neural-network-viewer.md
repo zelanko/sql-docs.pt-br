@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 280e8fa3702868ff36c799443b87b0827a962a89
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676079"
 ---
 # <a name="browse-a-model-using-the-microsoft-neural-network-viewer"></a>Procurar um modelo usando o Visualizador de Rede Neural da Microsoft
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -62,17 +62,17 @@ ms.locfileid: "34014543"
  [Voltar ao Início](#BKMK_ViewerTabs)  
   
 ###  <a name="BKMK_Characteristics"></a> Variáveis  
- A grade na guia **Variáveis** contém as seguintes colunas: **Atributo**, **Valor**, **Preferências [valor 1]** e **Preferências [valor 2]**. Por padrão, as colunas são classificadas pela força de **Preferências [valor 1]**. Clicar no cabeçalho de uma coluna altera a ordem de classificação para a coluna selecionada.  
+ A grade na **variáveis** guia contém as seguintes colunas: **Atributo**, **valor**, **preferências [valor 1]**, e **preferências [valor 2]**. Por padrão, as colunas são classificadas pela força de **Preferências [valor 1]**. Clicar no cabeçalho de uma coluna altera a ordem de classificação para a coluna selecionada.  
   
  Uma barra à direita do atributo mostra qual estado do atributo de saída o estado atributo de entrada especificado prefere. O tamanho da barra mostra como o estado de saída favorece significativamente o estado de entrada.  
   
  [Voltar ao Início](#BKMK_ViewerTabs)  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmo rede Neural da Microsoft](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
- [Tarefas do Visualizador do modelo e instruções de mineração](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Tarefas do Visualizador do modelo e instruções de mineração](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Microsoft Neural Network Algorithm](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
+ [Tarefas e instruções do visualizador do modelo de mineração](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Tarefas e instruções do visualizador do modelo de mineração](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Ferramentas de mineração de dados](../../analysis-services/data-mining/data-mining-tools.md)   
- [Visualizadores do modelo de mineração de dados](../../analysis-services/data-mining/data-mining-model-viewers.md)  
+ [Visualizadores do modelo de Mineração de dados](../../analysis-services/data-mining/data-mining-model-viewers.md)  
   
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e7cca289615e94cd4ccfbcee038e002c33700be8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732301"
 ---
 # <a name="define-currency-conversion-business-intelligence-wizard"></a>Definir Conversão de Moeda (Assistente de Business Intelligence)
   Use a página **Definir Conversão de Moeda** para examinar o script MDX que contém a funcionalidade de conversão de moeda gerada pelo Assistente de Business Intelligence. Em seguida, é possível usar esse script MDX gerado pelo assistente para substituir ou acrescentar a funcionalidade de conversão de moeda definida anteriormente no script MDX do cubo.  
@@ -52,7 +52,7 @@ ms.locfileid: "48099236"
  Selecione a seção do script MDX existente que contém a funcionalidade de conversão de moeda definida anteriormente a ser substituída ou acrescentada.  
   
 ## <a name="see-also"></a>Consulte também  
- [Ajuda de F1 do Assistente do Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [Ajuda F1 do Assistente de Business Intelligence](business-intelligence-wizard-f1-help.md)   
  [Designer de cubo &#40;Analysis Services - dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Designer de dimensão &#40;Analysis Services - dados multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 87d3273367196d2c0c60780a3f1fa125c0b3bf8e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731319"
 ---
 # <a name="filter-dialog-box-mining-accuracy-chart"></a>Caixa de diálogo Filtro (gráfico de precisão de mineração)
   A caixa de diálogo **Filtro** o ajuda a criar condições que você pode aplicar em um conjunto de dados. O conjunto de dados pode ser um conjunto externo usado para teste ou os dados de caso usados para treinar um modelo de mineração. Essa caixa de diálogo ajuda a criar critérios que podem ser salvos como parte de critérios de filtragem mais complexos na caixa de diálogo **Filtro de Conjunto de Dados** ou na caixa de diálogo **Filtro de Modelos** .  
@@ -33,13 +33,13 @@ ms.locfileid: "48060157"
   
  Se você aplicar o filtro ao novo conjunto de dados, o modelo de mineração de dados existente será usado para avaliar somente os casos do conjunto de dados que satisfaçam as condições. No entanto, se você aplicar o filtro ao próprio modelo de mineração, a precisão do modelo será avaliada apenas para os casos do modelo de mineração que satisfazem esses critérios.  
   
- **Para obter mais informações:**  [Teste e validação &#40;Mineração de dados&#41;](data-mining/testing-and-validation-data-mining.md)  
+ **Para obter mais informações, consulte:** [Teste e validação &#40;Mineração de dados&#41;](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>Opções  
  **Condições**  
  Uma grade que contém colunas nas quais são especificadas condições para as colunas da tabela selecionada na caixa de diálogo **Filtro de Conjunto de Dados** .  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**E/Ou**|Clique para especificar se o operador AND ou OR deve ser aplicado à condição desta linha. Esses valores só ficam disponíveis depois que você seleciona uma coluna da lista **Coluna da Estrutura de Mineração** .|  
 |**Coluna de estrutura de mineração**|Clique para selecionar uma coluna na lista de colunas contidas na tabela selecionada na fonte de dados na caixa de diálogo **Filtro de Conjunto de Dados** .|  

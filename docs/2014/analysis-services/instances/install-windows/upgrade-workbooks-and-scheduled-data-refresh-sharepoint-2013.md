@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3ed3fc8546ef7bd85934d8b127ff124acc095e29
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730190"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>Atualizar pastas de trabalho e atualização de dados agendada (SharePoint 2013)
   Este tópico explica a experiência do usuário das pastas de trabalho criadas em ambientes anteriores do PowerPivot e como atualizar pastas de trabalho PowerPivot de forma que você possa aproveitar os novos recursos introduzidos nesta versão. Para saber mais sobre os novos recursos, consulte [Novidades no PowerPivot](https://go.microsoft.com/fwlink/?LinkID=203917).  
@@ -53,14 +53,14 @@ ms.locfileid: "53373931"
 |Criado em|\<|Suporte e comportamento|>|  
 |----------------|--------|--------------------------|--------|  
 ||**2008 R2 PowerPivot para SharePoint 2010**|**2012 PowerPivot para SharePoint 2010**|**2012 SP1 PowerPivot para SharePoint 2013**|  
-|**2008 R2 PowerPivot para Excel 2010**|Todos os recursos|**Experiência:** Os usuários podem interagir com a pasta de trabalho no navegador e usá-la como uma fonte de dados para outras soluções.<br /><br /> **Atualização:** As pastas de trabalho serão atualizadas automaticamente na biblioteca de documentos se a Atualização Automática estiver habilitada para o serviço do sistema do PowerPivot no farm do SharePoint.<br /><br /> **Agendar atualização de dados:** SEM suporte. A pasta de trabalho precisa ser atualizada.|**Experiência:** Os usuários podem interagir com a pasta de trabalho e usá-la como uma fonte de dados para outras soluções.<br /><br /> **Atualização:** A atualização automática não está disponível. Os usuários devem atualizar manualmente suas pastas de trabalho do 2008 R2 para a versão 2012 ou para a versão 2013 do Office.<br /><br /> **Agendar atualização de dados:** SEM suporte. A pasta de trabalho precisa ser atualizada.|  
-|**2012 PowerPivot para Excel**|Sem suporte|Todos os recursos|**Experiência:** Os usuários podem interagir com a pasta de trabalho no navegador e usá-la como uma fonte de dados para outras soluções. A atualização de dados agendada está disponível.<br /><br /> **Atualização:** A atualização automática não tem suporte. Os usuários podem atualizar manualmente suas pastas de trabalho para a versão 2013 do Office.<br /><br /> **Atualização de dados agendada:** com suporte.|  
+|**2008 R2 PowerPivot para Excel 2010**|Todos os recursos|**Experiência:** Os usuários podem interagir com a pasta de trabalho no navegador e usá-lo como uma fonte de dados para outras soluções.<br /><br /> **Atualização:** Pastas de trabalho serão atualizadas automaticamente na biblioteca de documentos se a atualização automática está habilitada para o serviço no farm do SharePoint, do sistema PowerPivot<br /><br /> **Agendar atualização de dados:** NÃO tem suporte. A pasta de trabalho precisa ser atualizada.|**Experiência:** Os usuários podem interagir com a pasta de trabalho e usá-lo como uma fonte de dados para outras soluções.<br /><br /> **Atualização:** Atualização automática não está disponível. Os usuários devem atualizar manualmente suas pastas de trabalho do 2008 R2 para a versão 2012 ou para a versão 2013 do Office.<br /><br /> **Agendar atualização de dados:** NÃO tem suporte. A pasta de trabalho precisa ser atualizada.|  
+|**2012 PowerPivot para Excel**|Sem suporte|Todos os recursos|**Experiência:** Os usuários podem interagir com a pasta de trabalho no navegador e usá-lo como uma fonte de dados para outras soluções. A atualização de dados agendada está disponível.<br /><br /> **Atualização:** Não há suporte para atualização automática. Os usuários podem atualizar manualmente suas pastas de trabalho para a versão 2013 do Office.<br /><br /> **Atualização de dados agendada:** com suporte.|  
 |**Excel 2013**|Sem suporte|Sem suporte|Todos os recursos|  
   
 ##  <a name="bkmk_to_2012sp1_from_2008r2"></a> Atualizar para pastas de trabalho do SQL Server 2012 Service Pack 1 (SP1) de pastas de trabalho do 2008 R2  
  Esta seção descreve como atualizar para pastas de trabalho do SQL Server 2012 SP1 PowerPivot para Excel 2013 de pastas de trabalho do SQL Server 2008 R2 PowerPivot para Excel 2010.  
   
- **Alteração de comportamento:** As pastas de trabalho do SQL Server 2008 R2 PowerPivot não serão atualizadas automaticamente quando são usadas no SQL Server 2012 SP1 PowerPivot para SharePoint 2013. Portanto, as atualizações de dados agendadas não funcionarão para pastas de trabalho do SQL Server 2008 R2 PowerPivot  
+ **Alteração de comportamento:** Pastas de trabalho do SQL Server 2008 R2 PowerPivot não serão automaticamente atualizadas quando elas são usadas no SQL Server 2012 SP1 PowerPivot para SharePoint 2013. Portanto, as atualizações de dados agendadas não funcionarão para pastas de trabalho do SQL Server 2008 R2 PowerPivot  
   
  As pastas de trabalho do 2008 R2 serão abertas no PowerPivot para SharePoint 2013, porém as atualizações de dados agendadas não funcionarão. Se você revisar o histórico de atualização, verá uma mensagem de erro semelhante à seguinte:  
   
@@ -70,7 +70,7 @@ ms.locfileid: "53373931"
   
 -   SQL Server 2012 PowerPivot para Excel 2013.  
   
- **Como atualizar uma pasta de trabalho:** A atualização de dados agendada não funcionará até você atualizar para uma pasta de trabalho do 2012. Para atualizar a pasta de trabalho e o modelos que ela contém, siga um destes procedimentos:  
+ **Como atualizar uma pasta de trabalho:** A atualização de dados agendada não funcionará até você atualizar a pasta de trabalho para uma pasta de trabalho do 2012. Para atualizar a pasta de trabalho e o modelos que ela contém, siga um destes procedimentos:  
   
 -   Baixe e abra a pasta de trabalho no Microsoft Excel 2010 com o suplemento SQL Server 2012 PowerPivot para Excel instalado.  
   

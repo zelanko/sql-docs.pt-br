@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: e02b80c1967059f91e3a97fb940a2715c6beebb8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62656731"
 ---
 # <a name="install-powerpivot-for-sharepoint-2010"></a>Instale o PowerPivot para SharePoint 2010
   O [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] é uma coleção de serviços de camada intermediária e backend que fornece acesso a dados PowerPivot em um farm do SharePoint 2010. Se sua organização usa o aplicativo cliente, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel 2010, para criar pastas de trabalho contendo dados analíticos, você precisa ter o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] para acessar esses dados em um ambiente de servidor. Este tópico orienta você pelo processo básico de instalação e vincula a tópicos adicionais para ajudar a configurar o PowerPivot.  
@@ -51,7 +51,7 @@ ms.locfileid: "53356800"
   
     -   [Orientação para usar os recursos de BI do SQL Server em um farm do SharePoint 2010](../../../2014/sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md)  
   
-##  <a name="InstallSQL"></a> Etapa 1: Instale o PowerPivot para SharePoint  
+##  <a name="InstallSQL"></a> Etapa 1: Instalar o PowerPivot para SharePoint  
  Nesta etapa, você executa o SQL Server para instalar o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. Em uma etapa subsequente, você configurará o servidor como uma tarefa de post-instalação.  
   
 1.  Insira a mídia de instalação ou abra uma pasta que contém os arquivos de instalação do SQL Server e clique duas vezes em **setup.exe**.  
@@ -116,12 +116,12 @@ ms.locfileid: "53356800"
 > [!TIP]  
 >  Se você precisar solucionar problemas de instalação do SQL Server, consulte [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
-##  <a name="bkmk_config"></a> Etapa 2: Configure o servidor  
+##  <a name="bkmk_config"></a> Etapa 2: Configurar o servidor  
   
 > [!IMPORTANT]  
 >  O SharePoint 2010 SP2 deve ser instalado antes da configuração do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] ou de um farm do SharePoint que use um servidor de banco de dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Se você ainda não instalou o service pack; faça isso agora, antes de começar a configurar o servidor.  
   
- Instalação não é completa até que o servidor é configurado. Nesta versão, a configuração do servidor é executada sempre como tarefa de pós-instalação, usando uma das seguintes abordagens: [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Ferramenta de Configuração, Administração Central ou PowerShell. Para continuar, escolha uma das seguintes abordagens:  
+ Instalação não é completa até que o servidor é configurado. Nesta versão, configuração do servidor é executada sempre como tarefa de pós-instalação, usando uma das seguintes abordagens: [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Ferramenta de configuração, Administração Central ou PowerShell. Para continuar, escolha uma das seguintes abordagens:  
   
 -   [Configurar ou reparar o PowerPivot para SharePoint 2010 &#40;ferramenta de configuração do PowerPivot&#41;](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md)  
   
@@ -131,7 +131,7 @@ ms.locfileid: "53356800"
   
  **Conectar-se à instância do mecanismo de banco de dados.** Quando você instalar o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], a Instalação do SQL Server dá a opção de adicionar uma instância do Mecanismo de Banco de Dados a sua instalação. Você pode ter adicionado uma instância do mecanismo de banco de dados à sua instalação se você estiver configurando um novo farm e precisar de um servidor de banco de dados para executar a configuração e a bancos de dados de conteúdo do farm. Se você adicionou o Mecanismo de Banco de Dados, ele foi instalado como uma instância nomeada do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Sempre que você precisa especificar uma conexão a essa instância (por exemplo, no farm configuration wizard se você estiver usando o Assistente para configurar o farm), lembre-se de inserir o nome do banco de dados neste formato: <`servername`> \powerpivot.  
   
-##  <a name="bkmk_redist"></a> Etapa 3: Instale os provedores OLE DB do Analysis Services nos servidores de aplicativo dos Serviços do Excel  
+##  <a name="bkmk_redist"></a> Etapa 3: Instalar provedores de OLE DB do Analysis Services em servidores de aplicativos de serviços do Excel  
  As etapas de instalação adicionais serão necessárias se você executar os Serviços de Cálculo do Excel e o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em servidores de aplicativo separados. Nos servidores de aplicativo que executam os Serviços de Cálculo do Excel, instale a versão apropriada do provedor OLE DB do Analysis Services (MSOLAP).  
   
 -   A versão [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] do MSOLAP é incluída na Instalação do SQL Server, portanto, instalar explicitamente a versão [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] do MSOLAP só será necessária se o servidor de aplicativo não for um servidor de aplicativo do PowerPivot.  

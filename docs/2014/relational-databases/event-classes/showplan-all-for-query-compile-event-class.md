@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 398b24ddbb9d128446012d36f4b691596433054c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662220"
 ---
 # <a name="showplan-all-for-query-compile-event-class"></a>Classe de evento Showplan All for Query Compile
   A classe de evento Showplan All for Query Compile ocorre quando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compila uma instrução SQL. Inclua essa classe de evento para identificar os operadores Showplan. As informações incluídas são um subconjunto das informações disponíveis na classe de evento Showplan XML For Query Compile.  

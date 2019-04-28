@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 40b08c40b8b327ad26bb2974627e81000846a1b4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730318"
 ---
 # <a name="clear-the-analysis-services-caches"></a>Limpar os caches do Analysis Services
   O Analysis Services armazena dados em cache dados para melhorar o desempenho da consulta. Este tópico fornece recomendações para usar o comando XMLA ClearCache para limpar caches que foram criados em resposta a uma consulta MDX. Os efeitos da execução de ClearCache variam dependendo se você está usando um modelo tabular ou multidimensional.  
@@ -53,7 +53,7 @@ ms.locfileid: "53350657"
   
 2.  Para obter a ID do grupo de medidas, clique com o botão direito do mouse no grupo de medidas e selecione **Script de Grupo de Medidas como**. Escolha **Criar** ou **Alterar**e envie a consulta para uma janela. A ID do grupo de medidas ficará visível na definição do objeto. Copie a ID da definição do objeto.  
   
-#### <a name="step-2-run-the-query"></a>Etapa 2: Executar a consulta  
+#### <a name="step-2-run-the-query"></a>Etapa 2: Execute a consulta  
   
 1.  No [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], clique com o botão direito do mouse em um banco de dados, aponte para **Nova Consulta**e selecione **XMLA**.  
   

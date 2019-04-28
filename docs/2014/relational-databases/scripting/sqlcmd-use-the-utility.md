@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3647937630b259d60670cc470bbd1014dd288404
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666901"
 ---
 # <a name="use-the-sqlcmd-utility"></a>Usar o utilitário sqlcmd
   O utilitário `sqlcmd` é um utilitário de linha de comando para execução interativa ad hoc dos scripts e instruções [!INCLUDE[tsql](../../includes/tsql-md.md)], e para automatização das tarefas de script do [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para usar o `sqlcmd` de forma interativa ou para criar arquivos de script para serem executados com o `sqlcmd`, os usuários devem entender o [!INCLUDE[tsql](../../includes/tsql-md.md)]. O utilitário `sqlcmd` é normalmente usado das seguintes maneiras:  
@@ -104,7 +104,7 @@ ms.locfileid: "52513336"
     >  Para consultar uma lista das opções que têm suporte no utilitário `sqlcmd`, execute `sqlcmd -?`.  
   
 ## <a name="running-transact-sql-statements-interactively-by-using-sqlcmd"></a>Executando instruções Transact-SQL interativamente usando o sqlcmd  
- Você pode usar o utilitário `sqlcmd` interativamente para executar instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] em uma janela de prompt de comando. Para executar interativamente [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções usando `sqlcmd`, execute o utilitário sem usar o **-Q**, **- q**, **-Z**, ou **- i** as opções para especificar qualquer entrada arquivos ou consultas. Por exemplo:  
+ Você pode usar o utilitário `sqlcmd` interativamente para executar instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] em uma janela de prompt de comando. Para executar interativamente [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções usando `sqlcmd`, execute o utilitário sem usar o **-Q**, **- q**, **-Z**, ou **- i** as opções para especificar qualquer entrada arquivos ou consultas. Por exemplo:   
   
  `sqlcmd -S <ComputerName>\<InstanceName>`  
   
@@ -119,7 +119,7 @@ ms.locfileid: "52513336"
 ## <a name="quoted-strings"></a>Cadeia de caracteres entre aspas  
  Os caracteres entre aspas são usados sem nenhum pré-processamento adicional, a não ser quando as aspas podem ser inseridas em uma cadeia de caracteres através de duas aspas consecutivas. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trata esta sequência de caracteres como uma aspa. (Porém, a tradução acontece no servidor.) Não serão expandidas variáveis de script quando elas aparecerem dentro de uma cadeia de caracteres.  
   
- Por exemplo:  
+ Por exemplo:   
   
  `sqlcmd`  
   
@@ -251,7 +251,7 @@ ms.locfileid: "52513336"
   
  `(3 rows affected)`  
   
-### <a name="b-using-sqlcmd-with-a-dedicated-administrative-connection"></a>b. Usando o sqlcmd com uma conexão administrativa dedicada  
+### <a name="b-using-sqlcmd-with-a-dedicated-administrative-connection"></a>B. Usando o sqlcmd com uma conexão administrativa dedicada  
  No exemplo a seguir, `sqlcmd` é usado para se conectar a um servidor que tem um problema de bloqueio utilizando a conexão de administrador dedicada (DAC).  
   
  `C:\>sqlcmd -S ServerName -A`  

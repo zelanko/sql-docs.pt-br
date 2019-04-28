@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 739723a42580c404d0529a6d84d907cf665f8270
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731131"
 ---
 # <a name="data-providers-used-for-analysis-services-connections"></a>Provedores de dados usados para conexões do Analysis Services
   O Analysis Services fornece três provedores de dados do servidor e acesso a dados. Todos os aplicativos que se conectam ao Analysis Services fazem isso usando um desses provedores. Dois dos provedores, ADOMD.NET e AMO (objetos de gerenciamento do Analysis Services), são provedores de dados gerenciados. O provedor OLE DB do Analysis Services (MSOLAP DLL) é um provedor de dados nativo.  
@@ -87,7 +87,7 @@ ms.locfileid: "53368503"
   
  MSOLAP130.dll é a versão do provedor OLE DB para Analysis Services fornecida com o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Outras versões anteriores recentes incluem o MSOLAP10.dll (para SQL Server 2008 e 2008 R2) e o MSOLAP90.dll (para SQL Server 2005).  
   
- Provedores de OLE DB costumam ser especificados em cadeias de conexão. Uma cadeia de caracteres de conexão do Analysis Services usa uma nomenclatura diferente para referenciar o provedor OLE DB: MSOLAP. \<versão >. dll  
+ Provedores de OLE DB costumam ser especificados em cadeias de conexão. Uma cadeia de caracteres de conexão do Analysis Services usa uma nomenclatura diferente para referenciar o provedor OLE DB: MSOLAP.\<version>.dll  
   
  O MSOLAP.5.dll é o provedor OLE DB atual do Analysis Services instalado com o Excel 2013. As versões anteriores, como MSOLAP.4.dll ou MSOLAP.3.dll, geralmente são encontradas em estações de trabalho que executam versões anteriores do Excel. Alguns recursos do Analysis Services, como o suplemento PowerPivot, exigem versões específicas do provedor OLE DB. Consulte [Propriedades da cadeia de conexão &#40;Analysis Services&#41;](connection-string-properties-analysis-services.md) para obter mais informações.  
   

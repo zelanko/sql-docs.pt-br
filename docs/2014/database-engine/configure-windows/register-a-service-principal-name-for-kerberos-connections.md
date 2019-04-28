@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5acd507be99d7ff36245e723d20aebc36f42a917
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781991"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Registrar um nome de entidade de serviço para conexões de Kerberos
   Para usar a autenticação Kerberos com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , é preciso satisfazer estas duas condições:  
@@ -158,8 +158,8 @@ WHERE session_id = @@SPID;
   
 |Cenário|Método de autenticação|  
 |--------------|---------------------------|  
-|O SPN faz o mapeamento para a conta de domínio correta, conta virtual, MSA ou conta interna. Por exemplo, Sistema Local ou SERVIÇO DE REDE.<br /><br /> Observação: Correto significa que a conta mapeada pelo SPN registrado é a conta na qual o serviço do SQL Server está em execução.|Conexões locais usam NTLM, conexões remotas usam Kerberos.|  
-|O SPN faz o mapeamento para a conta de domínio correta, conta virtual, MSA ou conta interna.<br /><br /> Observação: Correto significa que a conta mapeada pelo SPN registrado é a conta na qual o serviço do SQL Server está em execução.|Conexões locais usam NTLM, conexões remotas usam Kerberos.|  
+|O SPN faz o mapeamento para a conta de domínio correta, conta virtual, MSA ou conta interna. Por exemplo, Sistema Local ou SERVIÇO DE REDE.<br /><br /> Observação: Correto significa que a conta mapeada pelo SPN registrado é a conta que o serviço do SQL Server está sendo executado.|Conexões locais usam NTLM, conexões remotas usam Kerberos.|  
+|O SPN faz o mapeamento para a conta de domínio correta, conta virtual, MSA ou conta interna.<br /><br /> Observação: Correto significa que a conta mapeada pelo SPN registrado é a conta que o serviço do SQL Server está sendo executado.|Conexões locais usam NTLM, conexões remotas usam Kerberos.|  
 |O SPN faz o mapeamento para a conta de domínio incorreta, conta virtual, MSA ou conta interna.|A autenticação falha.|  
 |A pesquisa de SPN falha ou não faz o mapeamento para uma conta de domínio correta, conta virtual, MSA ou conta interna ou não é uma conta de domínio correta, conta virtual, MSA ou conta interna.|Conexões locais e remotas usam NTLM.|  
   

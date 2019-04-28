@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fb970a24faf35b269af2c9972e4d604be57d0f88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096346"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679861"
 ---
 # <a name="create-testing-set-data-mining-wizard"></a>Criar Conjunto de Testes (Assistente de Mineração de Dados)
   Use a página **Criar Conjunto de Testes** para especificar a quantidade de dados que precisa ser usada para treinamento e a quantidade que precisa ser reservada para uso como um conjunto de testes. Separando os dados em um conjunto de treinamento e outro de teste ao criar uma estrutura de mineração, você facilita a avaliação da precisão dos modelos de mineração que criar depois.  
@@ -35,7 +35,7 @@ ms.locfileid: "48096346"
   
 -   Você não pode particionar dados se estiver tentando prever um valor armazenado em uma tabela aninhada.  
   
- **Para obter mais informações:** [Teste e validação &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md), [Criar uma estrutura de mineração relacional](data-mining/create-a-relational-mining-structure.md), [Tutorial básico de Data Mining](../../2014/tutorials/basic-data-mining-tutorial.md)  
+ **Para obter mais informações:** [Teste e validação &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md), [criar uma estrutura de mineração relacional](data-mining/create-a-relational-mining-structure.md), [Tutorial de mineração de dados básicos](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
 ## <a name="options"></a>Opções  
  **Porcentagem de dados de teste**  

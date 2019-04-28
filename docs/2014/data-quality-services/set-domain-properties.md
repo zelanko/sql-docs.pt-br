@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 9766aa397b5fb89a3b664cc75e473abbb1d062ca
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792238"
 ---
 # <a name="set-domain-properties"></a>Definir propriedades do domínio
   Este tópico descreve como definir propriedades de domínio no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
@@ -40,7 +40,7 @@ ms.locfileid: "56015472"
   
 3.  Clique em **Concluir** para concluir a atividade de gerenciamento de domínio, conforme descrito em [Terminar a atividade Gerenciamento de Domínio](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
-##  <a name="FollowUp"></a> Acompanhamento: Após definir propriedades de domínio  
+##  <a name="FollowUp"></a> Acompanhamento: Depois de definir as propriedades do domínio  
  Após definir propriedades de domínio, você poderá executar outras tarefas de gerenciamento de domínio, executar a descoberta da base de dados de conhecimento para adicionar conhecimento ao domínio ou adicionar uma política de correspondência ao domínio. Para obter mais informações, consulte [Executar a descoberta de conhecimento](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../../2014/data-quality-services/managing-a-domain.md) ou [Criar uma política de conciliação](../../2014/data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Properties"></a> Propriedades do Domínio  
@@ -49,7 +49,7 @@ ms.locfileid: "56015472"
  Quando um domínio é criado, o nome ou a descrição do domínio pode ser alterado. O nome do domínio deve ser exclusivo para a base de dados de conhecimento. A descrição pode ter até 256 caracteres.  
   
 ###  <a name="Type"></a> Tipo de Dados  
- Quando você cria o domínio, selecione um dos seguintes tipos de dados para os valores no domínio: **Cadeia de caracteres** (padrão), **data**, **inteiro**, ou **Decimal**. Depois de criar o domínio, você poderá exibir o tipo de dados, mas não poderá alterá-lo O tipo de dados selecionado para um domínio define o tipo de dados de origem que pode ser mapeado para o domínio. Para obter informações sobre tipos de dados com suporte em cada um dos quatro tipos de dados de domínio no DQS, consulte [Tipos de dados do SQL Server e do SSIS com suporte para domínios do DQS](../../2014/data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
+ Quando você cria o domínio, selecione um dos seguintes tipos de dados para os valores no domínio: **Cadeia de Caracteres** (o padrão), **Data**, **Inteiro** ou **Decimal**. Depois de criar o domínio, você poderá exibir o tipo de dados, mas não poderá alterá-lo O tipo de dados selecionado para um domínio define o tipo de dados de origem que pode ser mapeado para o domínio. Para obter informações sobre tipos de dados com suporte em cada um dos quatro tipos de dados de domínio no DQS, consulte [Tipos de dados do SQL Server e do SSIS com suporte para domínios do DQS](../../2014/data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
 ###  <a name="Leading"></a> Usar Valores Principais  
  Marque esta caixa de seleção para especificar que o valor principal em um grupo de sinônimos será gerado, e não um valor que é sinônimo dele. Cancele a seleção de **Usar Valores Principais** para especificar que cada valor de sinônimo seja gerado em sua forma correta ou corrigida, e não seja substituído pelo valor principal do seu grupo.  

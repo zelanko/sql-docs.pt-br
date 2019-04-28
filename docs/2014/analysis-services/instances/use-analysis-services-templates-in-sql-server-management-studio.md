@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b2f65e31a6a1c42d4d2bfd79f6daf0139edcd49f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729835"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Usar modelos do Analysis Services no SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornece um conjunto de modelos para ajudá-lo a criar rapidamente scripts XMLA, consultas DMX ou MDX, criar KPIs em um cubo ou modelo de tabela, backup de script e operações de restauração e executar muitas outras tarefas. Os modelos estão localizados no **Gerenciador de Modelos** no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
@@ -166,7 +166,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ##  <a name="bkmk_Ref"></a> Referência de modelo do Analysis Services  
  Os seguintes modelos são fornecidos para funcionar com bancos de dados do Analysis Services e os objetos no banco de dados, incluindo estruturas e modelos de mineração, cubos e modelos de tabela:  
   
-|Categoria|Modelo de item|Descrição|  
+|Category|Modelo de item|Descrição|  
 |--------------|-------------------|-----------------|  
 |DMX\Conteúdo do modelo|Consulta de conteúdo|Demonstra como usar o DMX SELECT FROM  *\<modelo >*. Instrução de conteúdo para recuperar o conteúdo do conjunto de linhas de esquema do modelo de mineração para um modelo de mineração especificado.|  
 ||Valores de Coluna Contínuos|Demonstra como usar o DMX SELECT DISTINCT FROM  *\<modelo >* instrução com o DMX `RangeMin` e `RangeMax` funções para recuperar um conjunto de valores de um determinado intervalo de colunas contínuas em um modelo de mineração especificado.|  

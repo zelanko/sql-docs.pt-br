@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c85b6983cbff901ae39c365503a6ab1ae0fcede1
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662361"
 ---
 # <a name="lockescalation-event-class"></a>Classe de evento Lock:Escalation
   A classe de evento **Lock:Escalation** indica que um bloqueio mais refinado foi convertido em um bloqueio mais rústico; por exemplo, um bloqueio de linha que é convertido em um bloqueio de objeto. A classe de evento do escalonamento é ID de evento 60.  
@@ -49,7 +49,7 @@ ms.locfileid: "53980172"
 |**NTUserName**|`nvarchar`|Nome do usuário do Windows.|6|Sim|  
 |**ObjectID**|`int`|ID atribuída pelo sistema da tabela para a qual o escalonamento de bloqueios foi acionado.|22|Sim|  
 |**ObjectID2**|`bigint`|ID do objeto ou entidade relacionado. (ID do HOBT para o qual o escalonamento de bloqueios foi acionado.)|56|Sim|  
-|**Deslocamento**|`int`|Deslocamento inicial de instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] .|61|Sim|  
+|**Offset**|`int`|Deslocamento inicial de instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] .|61|Sim|  
 |**OwnerID**|`int`|1=TRANSACTION<br /><br /> 2=CURSOR<br /><br /> 3=SESSION<br /><br /> 4=SHARED_TRANSACTION_WORKSPACE<br /><br /> 5=EXCLUSIVE_TRANSACTION_WORKSPACE<br /><br /> 6=WAITFOR_QUERY|58|Sim|  
 |**RequestID**|`int`|ID da solicitação que contém a instrução.|49|Sim|  
 |**ServerName**|`nvarchar`|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  

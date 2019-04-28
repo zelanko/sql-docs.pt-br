@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 386e07bd1be4eaac4c75541665fc6951e2a24fd3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789286"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-availability-group-sql-server"></a>Executar um failover manual planejado de um grupo de disponibilidade (SQL Server)
   Este tópico descreve como fazer um failover manual sem perda de dados (um *failover manual planejado*) em um grupo de disponibilidade AlwaysOn usando o[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou o PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Um grupo de disponibilidade faz failover no nível de uma réplica de disponibilidade. Um failover manual planejado, como qualquer failover do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , faz a transição de uma réplica secundária e, simultaneamente, faz a transição da réplica primária antiga para a função secundária.  
@@ -91,10 +91,10 @@ ms.locfileid: "48155336"
   
 1.  Altere o diretório (`cd`) para a instância do servidor que hospeda a réplica secundária de destino.  
   
-2.  Use o `Switch-SqlAvailabilityGroup` cmdlet.  
+2.  Use o cmdlet `Switch-SqlAvailabilityGroup`.  
   
     > [!NOTE]  
-    >  Para exibir a sintaxe de um cmdlet, use o `Get-Help` cmdlet no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ambiente do PowerShell. Para obter mais informações, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Para exibir a sintaxe de um cmdlet, use o cmdlet `Get-Help` no ambiente do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell. Para obter mais informações, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
      O exemplo a seguir faz o failover manual do grupo de disponibilidade *MyAg* para a réplica secundária com o caminho especificado.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "48155336"
   
 -   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
-##  <a name="FollowUp"></a> Acompanhamento: após o failover manual de um grupo de disponibilidade  
+##  <a name="FollowUp"></a> Acompanhamento: Após o failover manual de um grupo de disponibilidade  
  Se você fez failover fora do [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] do grupo de disponibilidade, ajuste os votos de quorum dos nós WSFC para refletir sua nova configuração de grupo de disponibilidade. Para obter mais informações, consulte [Clustering de Failover do Windows Server &#40;WSFC&#41; com SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md).  
   
 ## <a name="see-also"></a>Consulte também  

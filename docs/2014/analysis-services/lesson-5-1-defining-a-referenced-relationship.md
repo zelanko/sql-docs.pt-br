@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4b006a2d5ef8c6de9b915f73fe68223329c6393d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728648"
 ---
 # <a name="defining-a-referenced-relationship"></a>Definindo uma relação referenciada
   Até este ponto no tutorial, cada dimensão de cubo que você definiu teve como base uma tabela que estava diretamente vinculada à tabela de fatos de um grupo de medidas por uma relação de chave primária para chave estrangeira. Nas tarefas deste tópico, você vinculará a dimensão **Geografia** à tabela de fatos para vendas do revendedor por meio da dimensão **Revendedor** , conhecida como *dimensão de referência*. Isso permite aos usuários dimensionar as vendas do revendedor por geografia. Para obter mais informações, consulte [Definir uma relação referenciada e as propriedades da relação referenciada](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).  

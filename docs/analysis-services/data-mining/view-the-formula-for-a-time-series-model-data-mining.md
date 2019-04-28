@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0aaa1be07dcd5857585e7db3dbd4a78a44d41ff3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659702"
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>Exibir a fórmula para um modelo de série temporal (mineração de dados)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "34017223"
   
      A fórmula ARTXP é exibida na primeira metade da **Legenda de Mineração**, como a **Equação de nó de árvore**.  
   
-     ![Exibir a fórmula da série de tempo na legenda](../../analysis-services/data-mining/media/ssdm-timeserieslegend.png "exibir a fórmula da série de tempo na legenda")  
+     ![Exibir a fórmula da série na legenda](../../analysis-services/data-mining/media/ssdm-timeserieslegend.png "exibindo a fórmula da série na legenda")  
   
 ### <a name="to-view-the-arima-formula-for-a-time-series-model"></a>Para exibir a fórmula de ARIMA para um modelo de série temporal  
   
@@ -80,7 +80,7 @@ ms.locfileid: "34017223"
     >  Se você procurar o conteúdo de um modelo misto que use ambos os modelos ARIMA e ARTXP, os dois modelos estarão em árvores separadas e unidas no nó raiz que representa o modelo. Embora os modelos ARIMA e ARTXP sejam apresentados em um visualizador para sua conveniência, as estruturas são muito diferentes, assim como as equações, que não podem ser combinadas ou comparadas. A árvore ARTXP na verdade é mais como uma árvore de decisão, enquanto a árvore ARIMA representa uma série de médias móveis.  
   
 ## <a name="see-also"></a>Consulte também  
- [Tarefas do Visualizador do modelo e instruções de mineração](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Procurar um modelo usando o visualizador MTS](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
+ [Tarefas e instruções do visualizador do modelo de mineração](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Procurar um modelo usando o Visualizador MTS](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   
   

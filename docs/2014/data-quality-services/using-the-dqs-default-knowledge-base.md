@@ -11,30 +11,30 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 40a69447a0aff678cfd53a75603200b467a542c7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62791726"
 ---
 # <a name="using-the-dqs-default-knowledge-base"></a>Usando a base de dados de conhecimento padrão do DQS
   Este tópico descreve a base de dados de conhecimento padrão, os **Dados do DQS**que são instalados com o [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Esta é uma base de conhecimento padrão pré-criada que contém os seguintes domínios:  
   
--   **País/região**: Contém o convencionais longos (nome oficial conforme designado pelo país/região) e nomes curtos (nome comum usado em listas, mapas, etc.), abreviação de duas letras, abreviação de três letras e código de três dígitos para cada local.  O valor principal é definido como o nome longo do país.  
+-   **País/região**: contêm os nomes convencionais longos (nome oficial conforme designado pelo país/região) e nomes curtos (nome comum usado em listas, mapas, etc.), abreviação de duas letras, abreviação de três letras e código de três dígitos para cada local.  O valor principal é definido como o nome longo do país.  
   
--   **País/região (três letras)**: Contém o convencionais longos (nome oficial conforme designado pelo país/região) e nomes curtos (nome comum usado em listas, mapas e assim por diante), abreviação de duas letras, abreviação de três letras e código de três dígitos para cada local.  Os valores principais são definidos como uma abreviação de três letras do Município.  
+-   **País/região (início com três letras)**: contêm os nomes convencionais longos (nome oficial conforme designado pelo país/região) e nomes curtos (nome comum usado em listas, mapas e assim por diante), abreviação de duas letras, abreviação de três letras e código de três dígitos para cada local.  Os valores principais são definidos como uma abreviação de três letras do Município.  
   
--   **País/região (duas letras)**: Contém o convencionais longos (nome oficial conforme designado pelo país/região) e nomes curtos (nome comum usado em listas, mapas, etc.), abreviação de duas letras, abreviação de três letras e código de três dígitos para cada local.  O valor principal é definido como uma abreviação de duas letras do País.  
+-   **País/região (início com duas letras)**: contêm os nomes convencionais longos (nome oficial conforme designado pelo país/região) e nomes curtos (nome comum usado em listas, mapas, etc.), abreviação de duas letras, abreviação de três letras e código de três dígitos para cada local.  O valor principal é definido como uma abreviação de duas letras do País.  
   
--   **EUA - municípios**: Contém uma lista de municípios de EUA.  
+-   **EUA – Municípios**: contém uma lista de municípios dos EUA.  
   
--   **EUA - Sobrenome**: Contém uma lista de sobrenomes (sobrenomes) que ocorrem 100 ou mais vezes no censo 2000.  
+-   **EUA – Sobrenome**: contém uma lista de sobrenomes que ocorreram 100 ou mais vezes no Censo 2000.  
   
--   **EUA - locais**: Contém uma lista de locais para os 50 estados, o Distrito de Columbia e Porto Rico extraídos do censo 2010.  
+-   **EUA – Locais**: contém uma lista de locais para os 50 estados, o Distrito de Colúmbia e Porto Rico extraídos do Censo 2010.  
   
--   **EUA - estado**: Contém o convencional longo (oficial) nome e a abreviação de duas letras para cada estado nos EUA. O valor principal é definido como o nome convencional do estado.  
+-   **EUA – Estado**: contém o nome convencional longo (oficial) e a abreviação de duas letras para cada estado nos EUA. O valor principal é definido como o nome convencional do estado.  
   
--   **EUA - estado (título com 2 letras)**: Contém o convencional longo (oficial) nome e a abreviação de duas letras para cada estado nos EUA. O valor principal é definido como um nome de estado com abreviação de duas letras.  
+-   **EUA – Estado (título com duas letras)**: contém o nome convencional longo (oficial) e a abreviação de duas letras para cada estado nos EUA. O valor principal é definido como um nome de estado com abreviação de duas letras.  
   
 ## <a name="using-the-default-knowledge-base"></a>Usando a base de dados de conhecimento padrão  
  Você pode usar a base de dados de conhecimento padrão do DQS, os Dados do DQS, das seguintes formas:  

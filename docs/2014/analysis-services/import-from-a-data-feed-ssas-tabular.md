@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 27c22caf9c3b6dfebede60cd795496496562c19b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099836"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730762"
 ---
 # <a name="import-from-a-data-feed-ssas-tabular"></a>Importar de um feed de dados (SSAS tabular)
   Feeds de dados são um ou mais fluxos de dados XML gerados a partir de uma fonte de dados online e transmitidos para um documento ou aplicativo de destino. Você pode importar dados de um feed de dados para o modelo usando o Assistente de Importação de Tabela.  
@@ -45,7 +45,7 @@ ms.locfileid: "48099836"
  **Feeds Atom**  
  O feed deve ser um feed Atom. Não há suporte para RSS feeds. O feed deve estar publicamente disponível ou você deve ter permissão para se conectar a ele com a conta do Windows com a qual você está conectado.  
   
- Os dados de um feed de dados são adicionados em um modelo uma vez durante a importação. Para obter dados atualizados do feed, você poderá atualizar os dados do designer de modelo ou configurar uma agenda de atualização de dados para o modelo depois que for implantado em uma instância de produção do Analysis Services. Para obter mais informações, consulte [Processar dados &#40;SSAS tabular&#41;](process-data-ssas-tabular.md).  
+ Os dados de um feed de dados são adicionados em um modelo uma vez durante a importação. Para obter dados atualizados do feed, você poderá atualizar os dados do designer de modelo ou configurar uma agenda de atualização de dados para o modelo depois que for implantado em uma instância de produção do Analysis Services. Para obter mais informações, consulte [Processar dados &#40;SSAS de Tabela&#41;](process-data-ssas-tabular.md).  
   
 ##  <a name="azure"></a> Importe os dados de um conjunto de dados do Azure DataMarket  
  Você pode importar dados de um Azure DataMarket como uma tabela em seu modelo.  
@@ -191,10 +191,10 @@ ms.locfileid: "48099836"
 12. Na página **Selecionar Tabelas e Exibições** , clique em **Concluir**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Fontes de dados com suporte no &#40;Tabular do SSAS&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
- [Tipos de dados com suporte &#40;Tabular do SSAS&#41;](tabular-models/data-types-supported-ssas-tabular.md)   
- [Representação &#40;Tabular do SSAS&#41;](tabular-models/impersonation-ssas-tabular.md)   
- [Processar dados de &#40;Tabular do SSAS&#41;](process-data-ssas-tabular.md)   
- [Importar dados &#40;Tabular do SSAS&#41;](import-data-ssas-tabular.md)  
+ [Fontes de dados com suporte &#40;SSAS de Tabela&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
+ [Tipos de dados com suporte &#40;SSAS de Tabela&#41;](tabular-models/data-types-supported-ssas-tabular.md)   
+ [Representação &#40;SSAS tabular&#41;](tabular-models/impersonation-ssas-tabular.md)   
+ [Processar dados &#40;SSAS de Tabela&#41;](process-data-ssas-tabular.md)   
+ [Importar dados &#40;SSAS de Tabela&#41;](import-data-ssas-tabular.md)  
   
   
