@@ -32,11 +32,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 91e7c73f0db30078dfaa884c110f2d813359bc22
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717463"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>Modelo de objeto de carregamento em massa de XML do SQL Server (SQLXML 4.0)
   A Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consiste em modelo de objeto de carregamento em massa de XML do objeto SQLXMLBulkLoad. Esse objeto suporta os métodos e propriedades a seguir.  
@@ -46,7 +46,7 @@ ms.locfileid: "52750468"
  Carrega em massa os dados usando o arquivo de esquema e o arquivo de dados (ou fluxo) que são fornecidos como parâmetros.  
   
 ## <a name="properties"></a>Propriedades  
- Carregamento em massa  
+ BulkLoad  
  Especifica se um Carregamento em Massa deveria ser executado. Essa propriedade é útil se você quiser gerar esquemas (consulte as propriedades SchemaGen, SGDropTables e SGUseID que seguem) e não executar um carregamento em massa. Essa é uma propriedade booliana. Quando a propriedade é definida como TRUE, o Carregamento em Massa de XML é executado. Quando é definida como FALSE, o Carregamento em Massa de XML não é executado.  
   
  O valor padrão é TRUE.  
@@ -137,7 +137,7 @@ ms.locfileid: "52750468"
  O valor padrão é FALSE.  
   
  TempFilePath  
- Especifica o caminho do arquivo onde o Carregamento em Massa de XML cria os arquivos temporários para um carregamento em massa transacionado. (Essa propriedade só é útil quando a propriedade de Transação é definida como TRUE.) Você precisa garantir que a conta [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usada para o Carregamento em Massa de XML tenha acesso a esse caminho. Se essa propriedade não for definida, o Carregamento em Massa de XML armazenará os arquivos temporários no local especificado na variável de ambiente TEMP.  
+ Especifica o caminho do arquivo onde o Carregamento em Massa de XML cria os arquivos temporários para um carregamento em massa transacionado. (Essa propriedade é útil somente quando a propriedade de transação é definida como TRUE.) Você deve garantir que o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] conta que é usada para o XML Bulk Load tenha acesso a esse caminho. Se essa propriedade não for definida, o Carregamento em Massa de XML armazenará os arquivos temporários no local especificado na variável de ambiente TEMP.  
   
  Transaction  
  Especifica se o Carregamento em Massa deveria ser executado como uma transação, caso em que a reversão será garantida se houver falha do Carregamento em Massa. Essa é uma propriedade booliana. Se a propriedade for definida como TRUE, o Carregamento em Massa ocorrerá em um contexto transacional. A propriedade TempFilePath é útil somente quando a transação é definida como TRUE.  

@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dc9b89f4c1d3a1a44d5a568a47d16276639bb4cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726730"
 ---
 # <a name="create-a-currency-type-dimension"></a>Criar uma dimensão de tipo de moeda
   No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], uma dimensão de tipo de moeda é aquela cujos atributos representam uma lista de moedas para uso em relatórios financeiros.  
@@ -34,14 +34,14 @@ ms.locfileid: "48140386"
   
  Com essas informações, o Assistente de Business Intelligence criará o processo de conversão de moedas que identificará a dimensão da moeda de destino apropriada (a dimensão de moeda que representa as moedas de destino). Dependendo do número de conversões de moeda que a solução de business intelligence precisar, o Assistente de Business Intelligence pode definir várias dimensões de moeda de destino. Para obter mais informações sobre como definir conversões de moeda, consulte [Conversões de moeda &#40;Analysis Services&#41;](../currency-conversions-analysis-services.md).  
   
- Para identificar uma dimensão como dimensão de moeda, defina as `Type` propriedade da dimensão como `Currency`.  
+ Para identificar uma dimensão como dimensão de moeda, defina a propriedade `Type` da dimensão como `Currency`.  
   
 ## <a name="dimension-structure"></a>Estrutura da Dimensão  
  Uma dimensão de moeda contém, no mínimo, um atributo de chave que identifica cada moeda da tabela de dimensões da dimensão de moeda. O valor do atributo de chave é diferente nas dimensões de moeda de origem e destino:  
   
 -   Para identificar um atributo como atributo de chave de uma dimensão de moeda de origem, defina a propriedade `Type` do atributo como `CurrencySource`.  
   
--   Para identificar um atributo como dimensão de moeda de destino, defina as `Type` propriedade do atributo a ser `CurrencyDestination`.  
+-   Para identificar um atributo como dimensão da moeda de destino, defina a propriedade `Type` do atributo como `CurrencyDestination`.  
   
  Para geração de relatório, tanto a dimensão de moeda de origem como a de destino podem conter, opcionalmente, os seguintes atributos:  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48140386"
   
 -   Um código de moeda da Organização de Padronização Internacional (ISO).  
   
-     Para identificar um atributo como atributo de código ISO da moeda, defina as `Type` propriedade do atributo a ser `CurrencyIsoCode`.  
+     Para identificar um atributo como atributo de código ISO da moeda, defina a propriedade `Type` do atributo como `CurrencyIsoCode`.  
   
  Para obter mais informações sobre tipos de atributos, consulte [Configurar tipos de atributo](attribute-properties-configure-attribute-types.md).  
   
@@ -63,8 +63,8 @@ ms.locfileid: "48140386"
  Depois de configurar a dimensão de conta e adicioná-la a um cubo, você pode usar o Assistente de Business Intelligence para adicionar à dimensão funcionalidades de inteligência de conta, como identificação e mapeamento de tipos de conta. Para obter mais informações, consulte [Adicionar inteligência de conta a uma dimensão](bi-wizard-add-account-intelligence-to-a-dimension.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Atributos e hierarquias de atributo](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
- [Ajuda de F1 do Assistente do Business Intelligence](../business-intelligence-wizard-f1-help.md)   
+ [Atributos e hierarquias de atributos](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
+ [Ajuda F1 do Assistente de Business Intelligence](../business-intelligence-wizard-f1-help.md)   
  [Tipos de dimensão](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  
   
   

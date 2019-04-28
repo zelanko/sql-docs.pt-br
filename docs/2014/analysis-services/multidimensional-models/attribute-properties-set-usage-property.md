@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f2ab9f98018e421bd14012af7d8bd1cb5da3a71c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187196"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701699"
 ---
 # <a name="set-usage-property"></a>Definir propriedade de uso
   Você pode definir o uso de um atributo empregando a exibição **Estrutura da Dimensão** do Designer de Dimensão, acessado pelo [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -41,7 +41,7 @@ ms.locfileid: "48187196"
     -   **Pai**  
   
 ## <a name="see-also"></a>Consulte também  
- [Atributos e hierarquias de atributo](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
+ [Atributos e hierarquias de atributos](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
  [Adicionar um atributo a uma dimensão](attribute-properties-add-an-attribute-to-a-dimension.md)  
   
   

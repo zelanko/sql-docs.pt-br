@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a0351173100703b8b78f7b4b019fcd2c63688918
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843682"
 ---
 # <a name="query-options-results-grid-page"></a>Resultados das opções de consultas (Página Grade)
   Use esta página para especificar as opções de exibição de um conjunto de resultados da consulta em formato de grade.  

@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 55bdeb41ed62fd727a6e5eb637734a67d21660fe
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732427"
 ---
 # <a name="decision-tree-diagram-walkthrough--data-mining-add-ins"></a>Passo a passo o diagrama de árvore de decisão (suplementos de mineração de dados)
   Se você criou um modelo de árvore de decisão, pode criar um diagrama personalizado no Visio usando a forma da Árvore de Decisão ou a forma de Rede de Dependências. Este tópico descreve as personalizações que você pode executar usando o **árvore de decisão** forma e esses controles:  
@@ -41,7 +41,7 @@ ms.locfileid: "52391219"
   
 1.  Se você não vir **formas de mineração de dados do Microsoft** na **formas** , clique em **mais formas**, selecione **Abrir estêncil**e abra o modelo do local de instalação padrão.  
   
-     \<unidade >: \Program files (x85) \Microsoft SQL Server 2012 DM Add-Ins  
+     \<drive>:\Program files (x85)\Microsoft SQL Server 2012 DM Add-Ins  
   
 2.  Arraste o **árvore de decisão** forma na página.  
   

@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5a47d893aa1020112290c31c7e6b645a29aaccb5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733326"
 ---
 # <a name="mining-model-properties"></a>Propriedades do modelo de mineração
   Os modelos de mineração têm os seguintes tipos de propriedades:  
@@ -40,7 +40,7 @@ ms.locfileid: "48171376"
 ## <a name="properties-of-models"></a>Propriedades de modelos  
  A tabela a seguir descreve as propriedades que são específicas para modelos de mineração. Adicionalmente, há propriedades que você pode definir em colunas individuais na mineração  
   
-|Propriedade|Description|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |**Algoritmo**|Define o tipo de algoritmo do modelo de mineração.|  
 |**AlgorithmParameters**|Define valores para os parâmetros dos algoritmos disponíveis para cada tipo de algoritmo.|  
@@ -51,7 +51,7 @@ ms.locfileid: "48171376"
 ## <a name="properties-of-model-columns"></a>Propriedades das colunas de modelo  
  Você pode definir as seguintes propriedades específicas da mineração de dados para cada coluna em um modelo de mineração. Você pode definir essas propriedades com um valor diferente em cada modelo de mineração em uma estrutura de mineração.  
   
-|Propriedade|Description|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |**Descrição**|Descreve a finalidade da coluna de mineração.|  
 |**Nome**|Define o nome da coluna do modelo de mineração. Você pode digitar um novo nome, para fornecer um alias à coluna do modelo de mineração.|  
@@ -61,8 +61,8 @@ ms.locfileid: "48171376"
   
 ## <a name="see-also"></a>Consulte também  
  [Colunas do modelo de mineração](mining-model-columns.md)   
- [Estruturas de mineração &#40;Analysis Services - mineração de dados&#41;](mining-structures-analysis-services-data-mining.md)   
- [Tarefas e tarefas do modelo de mineração](mining-model-tasks-and-how-tos.md)   
+ [Estruturas de Mineração &#40;Analysis Services – Data Mining&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Tarefas e instruções do modelo de mineração](mining-model-tasks-and-how-tos.md)   
  [Alterar as propriedades de um modelo de mineração](change-the-properties-of-a-mining-model.md)   
  [Ferramentas de mineração de dados](data-mining-tools.md)   
  [Criar uma estrutura de mineração relacional](create-a-relational-mining-structure.md)   

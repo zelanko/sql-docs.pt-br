@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 5463ac19caf9a82e48dd59c4ba05873587b74324
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714723"
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>Funções determinísticas e não determinísticas
   As funções determinísticas sempre retornam o mesmo resultado quando são chamadas com o uso de um conjunto específico de valores de entrada e quando recebem o mesmo estado do banco de dados. As funções não determinísticas podem retornar resultados diferentes cada vez que são chamadas com um conjunto específico de valores de entrada, mesmo que o estado do banco de dados que elas acessam permaneça o mesmo. Por exemplo, a função AVG sempre retorna o mesmo resultado, dadas as qualificações declaradas acima, mas a função GETDATE, que retorna o valor datetime atual, sempre retorna um resultado diferente.  
@@ -57,7 +57,7 @@ ms.locfileid: "48214706"
 |--------------|--------------|  
 |todas as funções de agregação|Todas as funções de agregação são determinísticas, a menos que sejam especificadas com as cláusulas OVER e ORDER BY. Para obter uma lista dessas funções, consulte [Funções de agregação &#40;Transact-SQL&#41;](/sql/t-sql/functions/aggregate-functions-transact-sql).|  
 |CAST|Determinística, a menos que usada com `datetime`, `smalldatetime` ou `sql_variant`.|  
-|CONVERT|Determinística, a menos que um destas condições exista:<br /><br /> O tipo de origem é `sql_variant`.<br /><br /> Tipo de destino é `sql_variant` e seu tipo de origem é não determinístico.<br /><br /> O tipo de origem ou de destino é `datetime` ou `smalldatetime`, o outro tipo de origem ou destino é uma cadeia de caracteres, e um estilo não determinístico é especificado. Para ser determinístico, o parâmetro de estilo deve ser uma constante. Além disso, estilos menores ou iguais a 100 são não determinísticos, com exceção dos estilos 20 e 21. Estilos maiores que 100 são determinísticos, com exceção dos estilos 106, 107, 109 e 113.|  
+|CONVERT|Determinística, a menos que um destas condições exista:<br /><br /> O tipo de origem é `sql_variant`.<br /><br /> O tipo de destino é `sql_variant` e seu tipo de origem é não determinístico.<br /><br /> O tipo de origem ou de destino é `datetime` ou `smalldatetime`, o outro tipo de origem ou destino é uma cadeia de caracteres, e um estilo não determinístico é especificado. Para ser determinístico, o parâmetro de estilo deve ser uma constante. Além disso, estilos menores ou iguais a 100 são não determinísticos, com exceção dos estilos 20 e 21. Estilos maiores que 100 são determinísticos, com exceção dos estilos 106, 107, 109 e 113.|  
 |CHECKSUM|Determinístico, com a exceção de CHECKSUM(*).|  
 |ISDATE|Determinístico somente se usado com a função CONVERT, o parâmetro de estilo CONVERT é especificado e o estilo não é igual a 0, 100, 9 ou 109.|  
 |RAND|RAND só é determinística quando um parâmetro *seed* é especificado.|  

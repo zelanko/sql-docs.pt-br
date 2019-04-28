@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: af4604c6a645c181aab1b95db99d545ae0bb5221
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795353"
 ---
 # <a name="change-table-column-or-row-filter-mappings-ssas-tabular"></a>Alterar os mapeamentos de tabela, coluna ou filtro de linha (SSAS tabular)
   Esse tópico descreve como alterar tabela, coluna ou mapeamentos de filtro de linha usando a visualização de tabela ou editor de consulta SQL na caixa de diálogo **Editar Propriedades de Tabela** no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
@@ -45,6 +45,6 @@ ms.locfileid: "48201486"
          Se você cometer um erro e precisa recomeçar, clique em **Limpar Filtros de Linha**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Editar caixa de diálogo de propriedades de tabela &#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)  
+ [Caixa de diálogo Editar Propriedades da Tabela &#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)  
   
   

@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ef46b33beeb57267ad5a06d1d3b1c5788439c027
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62831420"
 ---
 # <a name="expression-task"></a>Tarefa de Expressão
   A Tarefa de Expressão cria e avalia expressões que definem valores de variáveis em tempo de execução, usando o Construtor de Expressões. Quando você edita a tarefa, o [Expression Builder](../expressions/expression-builder.md) é iniciado.  

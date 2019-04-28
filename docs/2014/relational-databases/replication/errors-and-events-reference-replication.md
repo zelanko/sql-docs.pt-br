@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f9323b5d28c0b41b56f4b6fb78c39d8bfacf0ba8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721322"
 ---
 # <a name="errors-and-events-reference-replication"></a>Referência de erros e eventos (replicação)
   Esta seção da documentação contém informações sobre causa e resolução de diversos erros relacionados à replicação.  

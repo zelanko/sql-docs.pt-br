@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e8850ce0f77b69be681bf99bcdcaeddc5234656c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700997"
 ---
 # <a name="set-custom-member-formulas-for-attributes-in-a-dimension"></a>Definir fórmulas de membro personalizado para os atributos de uma dimensão
   Adicione um aprimoramento de fórmula de membro personalizado a um cubo ou a uma dimensão para substituir as agregações padrão associadas a um membro da dimensão pelos resultados de uma expressão MDX. (Esse aprimoramento define a propriedade `CustomRollupColumn` em um atributo especificado de uma dimensão.)  

@@ -1,5 +1,5 @@
 ---
-title: sys. Indexes (Transact-SQL) | Microsoft Docs
+title: sys.indexes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/18/2017
 ms.prod: sql
@@ -22,37 +22,37 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f65371e31362524a5a909d1fdda4a047b2525966
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63004239"
 ---
 # <a name="sysindexes-transact-sql"></a>sys.indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Contém uma linha por índice ou heap de um objeto tabular, como uma tabela, exibição ou função com valor de tabela.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID do objeto ao qual este índice pertence.|  
 |**name**|**sysname**|Nome do índice. **nome** só é exclusivo dentro do objeto.<br /><br /> NULL = Heap|  
-|**index_id**|**int**|ID do índice. **index_id** é exclusivo somente dentro do objeto.<br /><br /> 0 = Heap<br /><br /> 1 = Índice clusterizado<br /><br /> > 1 = Índice não clusterizado|  
+|**index_id**|**int**|ID do índice. **index_id** é exclusivo somente dentro do objeto.<br /><br /> 0 = Heap<br /><br /> 1 = Índice clusterizado<br /><br /> > 1 = índice não clusterizado|  
 |**type**|**tinyint**|Tipo de índice:<br /><br /> 0 = Heap<br /><br /> 1 = Clusterizado<br /><br /> 2 = Não clusterizado<br /><br /> 3 = XML<br /><br /> 4 = Espacial<br /><br /> 5 = índice columnstore clusterizado. **Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 6 = índice columnstore não clusterizado. **Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 7 = índice nonclustered hash. **Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
-|**type_desc**|**nvarchar(60)**|Descrição de tipo de índice:<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> XML<br /><br /> SPATIAL<br /><br /> COLUMNSTORE CLUSTERIZADO - **aplica-se ao**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> COLUMNSTORE não CLUSTERIZADO - **aplica-se ao**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> HASH não CLUSTERIZADOS: Os índices NONCLUSTERED HASH têm suporte apenas em tabelas com otimização de memória. A exibição sys.hash_indexes mostra os índices de hash atuais e as propriedades de hash. Para obter mais informações, consulte [hash_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md). **Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**type_desc**|**nvarchar(60)**|Descrição de tipo de índice:<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> XML<br /><br /> SPATIAL<br /><br /> COLUMNSTORE CLUSTERIZADO - **aplica-se ao**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> COLUMNSTORE não CLUSTERIZADO - **aplica-se ao**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> HASH NÃO CLUSTERIZADOS: Os índices NONCLUSTERED HASH têm suporte apenas em tabelas com otimização de memória. A exibição sys.hash_indexes mostra os índices de hash atuais e as propriedades de hash. Para obter mais informações, consulte [hash_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md). **Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**is_unique**|**bit**|1 = O índice é exclusivo.<br /><br /> 0 = O índice não é exclusivo.<br /><br /> Sempre 0 para índices columnstore clusterizados.|  
 |**data_space_id**|**int**|A ID do espaço de dados deste índice. O espaço de dados é um grupo de arquivos ou um esquema de partição.<br /><br /> 0 = **object_id** é uma função com valor de tabela ou índice na memória.|  
 |**ignore_dup_key**|**bit**|1 = IGNORE_DUP_KEY está ON.<br /><br /> 0 = IGNORE_DUP_KEY está OFF.|  
 |**is_primary_key**|**bit**|1 = O índice faz parte de uma restrição PRIMARY KEY.<br /><br /> Sempre 0 para índices columnstore clusterizados.|  
 |**is_unique_constraint**|**bit**|1 = O índice faz parte de uma restrição UNIQUE.<br /><br /> Sempre 0 para índices columnstore clusterizados.|  
-|**fill_factor**|**tinyint**|>0 = Porcentagem de FILLFACTOR usada quando o índice foi criado ou reconstruído.<br /><br /> 0 = Valor padrão<br /><br /> Sempre 0 para índices columnstore clusterizados.|  
+|**fill_factor**|**tinyint**|> 0 = porcentagem de FILLFACTOR usada quando o índice foi criado ou reconstruído.<br /><br /> 0 = Valor padrão<br /><br /> Sempre 0 para índices columnstore clusterizados.|  
 |**is_padded**|**bit**|1 = PADINDEX está ON.<br /><br /> 0 = PADINDEX está OFF.<br /><br /> Sempre 0 para índices columnstore clusterizados.|  
 |**is_disabled**|**bit**|1 = O índice está desabilitado.<br /><br /> 0 = O índice não está desabilitado.|  
 |**is_hypothetical**|**bit**|1 = O índice é hipotético e não pode ser usado diretamente como um caminho de acesso a dados. Índices hipotéticos mantêm estatísticas em nível de coluna.<br /><br /> 0 = O índice não é hipotético.|  
 |**allow_row_locks**|**bit**|1 = O índice permite bloqueios de linha.<br /><br /> 0 = O índice não permite bloqueios de linha.<br /><br /> Sempre 0 para índices columnstore clusterizados.|  
 |**allow_page_locks**|**bit**|1 = O índice permite bloqueios de página.<br /><br /> 0 = O índice não permite bloqueios de página.<br /><br /> Sempre 0 para índices columnstore clusterizados.|  
 |**has_filter**|**bit**|1 = O índice tem um filtro e só contém linhas que atendem à definição do filtro.<br /><br /> 0 = O índice não tem um filtro.|  
-|**filter_definition são**|**nvarchar(max)**|Expressão do subconjunto de linhas incluído no índice filtrado.<br /><br /> NULL para índice heap ou não filtrado.|  
+|**filter_definition**|**nvarchar(max)**|Expressão do subconjunto de linhas incluído no índice filtrado.<br /><br /> NULL para índice heap ou não filtrado.|  
 |**auto_created**|**bit**|1 = o índice foi criado pelo ajuste automático.<br /><br />0 = índice foi criado pelo usuário.
   
 ## <a name="permissions"></a>Permissões  

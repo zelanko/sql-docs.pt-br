@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 989b84d027db5dc1f5956aab6e2e4fec84ae6461
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732535"
 ---
 # <a name="data-source-view-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Exibição da Fonte de Dados (guia Estrutura da Dimensão, Designer de Dimensão) (Analysis Services - Dados Multidimensionais)
   Use o painel **Exibição da Fonte de Dados** para exibir tabelas e colunas da exibição da fonte de dados associada à dimensão selecionada. Esse painel é usado para criar atributos, propriedades de membros, hierarquias e níveis arrastando colunas do painel **Exibição da Fonte de Dados** para o painel **Atributos** ou **Hierarquias e Níveis** .  

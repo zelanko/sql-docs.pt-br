@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c22babc0f8a4ff56ef845ca0fc0b5cd2b31475e1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792937"
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>Importar um domínio de um arquivo .dqs
   Este tópico descreve como importar um domínio de um arquivo .dqs para uma base de dados de conhecimento existente no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Um arquivo de dados .dqs é criado por meio da exportação de um domínio ou de uma base de dados de conhecimento do aplicativo [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . Um arquivo de dados .dqs é criptografado e, portanto, não pode ser exibido.  
@@ -51,7 +51,7 @@ ms.locfileid: "56011468"
   
 6.  Verifique se o domínio que você importou é exibido na lista **Domínio** . Se você importou um domínio composto, verifique se o domínio composto e os domínios únicos contidos nele estão na lista **Domínio** .  
   
-##  <a name="FollowUp"></a> Acompanhamento: Depois de importar um domínio de um arquivo. DQS  
+##  <a name="FollowUp"></a> Acompanhamento: depois de importar um domínio de um arquivo .dqs  
  Depois que você importar um domínio de um arquivo .dqs, poderá adicionar conhecimento ao domínio ou usar o domínio em um projeto de limpeza ou de correspondência, dependendo do conteúdo do domínio. Para obter mais informações, consulte [Executar a descoberta de conhecimento](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../../2014/data-quality-services/managing-a-domain.md), [Gerenciando um domínio de composição](../../2014/data-quality-services/managing-a-composite-domain.md), [Criar uma política de conciliação](../../2014/data-quality-services/create-a-matching-policy.md), [Limpeza de dados](../../2014/data-quality-services/data-cleansing.md) ou [Correspondência de dados](../../2014/data-quality-services/data-matching.md).  
   
   

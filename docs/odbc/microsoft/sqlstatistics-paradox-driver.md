@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 634fbcdbf78515e59295e679072ffa5fd08e4823
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62686933"
 ---
 # <a name="sqlstatistics-paradox-driver"></a>SQLStatistics (Driver do Paradox)
 > [!NOTE]  

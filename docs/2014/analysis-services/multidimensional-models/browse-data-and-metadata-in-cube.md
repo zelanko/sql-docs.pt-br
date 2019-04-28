@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c062137987a8ee1499449425d8e02df0d203050
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700943"
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>Procurar dados e metadados no Cubo
   Use a guia **Navegador** do Designer de Cubo para procurar dados do cubo. Você pode usar esta exibição para examinar a estrutura de um cubo e verificar dados, cálculo, formatação e segurança de objetos de banco de dados. Você pode examinar rapidamente um cubo como usuários finais o veem em ferramentas de relatório ou outros aplicativos cliente. Quando você procurar dados do cubo, poderá exibir dimensões diferentes, detalhar os membros e segmentar as dimensões.  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 500a3e38599b0041b036eb148f837afc67260849
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719841"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>Microsoft Cursor Service para visão geral do OLE DB
 O Microsoft Cursor Service para OLE DB complementa as funções de suporte de cursor de provedores de dados. Como resultado, o usuário percebe a funcionalidade relativamente uniforme de todos os provedores de dados.
@@ -57,7 +57,7 @@ Recordset1.Properties.Item("Command Time out") = 50
 > [!NOTE]
 >  Não há suporte para a propriedade dinâmica DBPROP_SERVERDATAONINSERT pelo serviço de cursor, mesmo se for suportado pelo provedor de dados subjacente.
 
-|Nome da propriedade|Description|
+|Nome da propriedade|Descrição|
 |-------------------|-----------------|
 |Recálculo automático (DBPROP_ADC_AUTORECALC)|Para conjuntos de registros criados com o Data Shaping Service, esse valor indica a frequência com que as colunas calculadas e de agregação são calculadas. O padrão (valor = 1) é recalcular sempre que o Data Shaping Service determina que os valores foram alterados. Se o valor for 0, as colunas calculadas ou de agregação só são calculadas quando a hierarquia é inicialmente criada.|
 |Tamanho do lote (DBPROP_ADC_BATCHSIZE)|Indica o número de instruções de atualização que podem ser enviadas em lote antes de serem enviados ao armazenamento de dados. As instruções mais em um lote, as menos viagens de ida e aos dados armazenar.|
@@ -83,7 +83,7 @@ rs.Properties("Optimize") = True
 ## <a name="built-in-property-behavior"></a>Comportamento de propriedade interna
  O Cursor Service para OLE DB também afeta o comportamento de determinadas propriedades internas.
 
-|Nome da propriedade|Description|
+|Nome da propriedade|Descrição|
 |-------------------|-----------------|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|Complementa os tipos de cursores que estão disponíveis para um **conjunto de registros**.|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|Complementa os tipos de bloqueios disponíveis para um **conjunto de registros**. Permite o atualizações em lotes.|

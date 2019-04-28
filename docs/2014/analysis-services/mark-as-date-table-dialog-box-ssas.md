@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7cb946a717399ee58b06ed4bf0af783170f6e4bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728012"
 ---
 # <a name="mark-as-date-table-dialog-box-ssas"></a>Caixa de diálogo Marcar Como Tabela de Data (SSAS)
   A caixa de diálogo **Marcar como Tabela de Data** aparece quando você clica no menu **Tabela** e, depois, em **Data**e em **Marcar como Tabela de Data**. As tabelas de data são usadas com funções de inteligência de tempo. Para criar uma relação com uma tabela de dados, você deve especificar uma coluna com valores exclusivos a serem usados como um identificador exclusivo para a tabela.  
   
- **Date**  
+ **Data**  
  A caixa de listagem Data lista todas as colunas na tabela. Para selecionar uma coluna a ser usada como um identificador exclusivo, você deve selecionar uma coluna do tipo de dados data e ela deve conter valores exclusivos.  
   
   

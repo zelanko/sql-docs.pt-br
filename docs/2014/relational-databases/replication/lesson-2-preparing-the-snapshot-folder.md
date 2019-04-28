@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 5ec45b0a29f9f4c8fb1e6a9b683e47797f194885
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721017"
 ---
 # <a name="lesson-2-preparing-the-snapshot-folder"></a>Lição 2: Preparando a pasta de instantâneo
   Nesta lição, você aprenderá a configurar a pasta do instantâneo, usada para criar e armazenar o instantâneo de publicação.  
@@ -51,7 +51,7 @@ ms.locfileid: "54128486"
 10. Clique em **OK** para fechar a caixa de diálogo **Propriedades de repldata** e criar o compartilhamento de repldata.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- Você configurou com êxito o compartilhamento da pasta de instantâneo. A seguir, você configurará a distribuição. Consulte [lição 3: Configurando a distribuição](lesson-3-configuring-distribution.md).  
+ Você configurou com êxito o compartilhamento da pasta de instantâneo. A seguir, você configurará a distribuição. Confira [Lição 3: Configurando a distribuição](lesson-3-configuring-distribution.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Proteger uma pasta de instantâneo](security/secure-the-snapshot-folder.md)  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 62b4102ba7a8b1ff2d5c833001b90dd74707fdc5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728132"
 ---
 # <a name="lesson-8-create-key-performance-indicators"></a>Lição 8: Criar indicadores chave de desempenho
   Nesta lição, você criará KPIs (indicadores chave de desempenho). Os KPIs são usados para medir o desempenho de um valor, definido por uma medida *Base* , em relação a um valor de *Destino* , também definido por uma medida ou um valor absoluto. Nos aplicativos cliente de relatório, os KPIs podem proporcionar aos profissionais comerciais um modo rápido e fácil de entender um resumo de êxito comercial ou identificar tendências. Para obter mais informações, consulte [KPIs &#40;SSAS Tabular&#41;](tabular-models/kpis-ssas-tabular.md).  
@@ -24,7 +24,7 @@ ms.locfileid: "48120663"
  Tempo estimado para concluir esta lição: **15 minutos**  
   
 ## <a name="prerequisites"></a>Prerequisites  
- Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas desta lição, você deverá ter concluído a lição anterior: [Lição 7: Criar medidas](lesson-6-create-measures.md).  
+ Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [Lição 7: Criar medidas](lesson-6-create-measures.md).  
   
 ## <a name="create-key-performance-indicators"></a>Criar indicadores chave de desempenho  
   

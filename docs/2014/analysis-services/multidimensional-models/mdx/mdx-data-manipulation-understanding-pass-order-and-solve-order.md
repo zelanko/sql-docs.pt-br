@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9531b22e8154796f4f36a5b5bca04d510877d0ba
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725464"
 ---
 # <a name="understanding-pass-order-and-solve-order-mdx"></a>Entendendo a ordem de passagem e a ordem de resolução (MDX)
   Quando um cubo é calculado como resultado de um script MDX, ele pode passar por várias fases de cálculo dependendo do uso de diversos recursos relacionados ao cálculo. Cada uma dessas fases é chamada de fase de cálculo.  

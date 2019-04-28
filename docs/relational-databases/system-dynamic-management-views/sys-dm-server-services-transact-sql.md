@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8acb2fae0aa0edadf1995a0a103ff60b66a912a9
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62686228"
 ---
 # <a name="sysdmserverservices-transact-sql"></a>sys.dm_server_services (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,20 +32,20 @@ ms.locfileid: "49072130"
   Retorna informações sobre os serviços do SQL Server, Texto Completo e do SQL Server Agent na instância atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use essa exibição de gerenciamento dinâmico para relatar informações de status sobre esses serviços.  
   
  
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |servicename|**nvarchar(256)**|Nome da [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], texto completo ou o serviço SQL Server Agent. Não pode ser nulo.|  
-|startup_type|**int**|Indica o modo inicial do serviço. A seguir estão os valores possíveis e suas descrições correspondentes.<br /><br /> 0: outras<br />1: outras<br />2: automático<br />3: manual<br />4: desabilitado<br /><br /> Permite valor nulo.|  
-|startup_desc|**nvarchar(256)**|Descreve o modo inicial do serviço. A seguir estão os valores possíveis e suas descrições correspondentes.<br /><br /> Outros: Outros (iniciar reinicialização)<br />Outros: Outros (Iniciar sistema)<br />Automático: O início automático<br />Manual: Solicitação de inicialização<br />Desabilitado: desabilitado<br /><br /> Não pode ser nulo.|  
-|status|**int**|Indica o status atual do serviço. A seguir estão os valores possíveis e suas descrições correspondentes.<br /><br /> 1: parado<br />2: outro (início pendente)<br />3: outra (parada pendente)<br />4: executando<br />5: outros (continuação pendente)<br />6: outra (pausa pendente)<br />7: em pausa<br /><br /> Permite valor nulo.|  
-|status_desc|**nvarchar(256)**|Descreve o status atual do serviço. A seguir estão os valores possíveis e suas descrições correspondentes.<br /><br /> Parado: O serviço é interrompido.<br />Outro (início de operação pendente): O serviço está iniciando.<br />Outra (parada de operação pendente): O serviço está no processo de parada.<br />Está em execução: O serviço está em execução.<br />Outros (continuar operações pendente): O serviço está em um estado pendente.<br />Outra (pausa pendente): O serviço está no processo de pausa.<br />Em pausa: O serviço está em pausa.<br /><br /> Não pode ser nulo.|  
+|startup_type|**int**|Indica o modo inicial do serviço. A seguir estão os valores possíveis e suas descrições correspondentes.<br /><br /> 0: Outro<br />1: Outro<br />2: Automatic<br />3: Manual<br />4: Desabilitado<br /><br /> Permite valor nulo.|  
+|startup_desc|**nvarchar(256)**|Descreve o modo inicial do serviço. A seguir estão os valores possíveis e suas descrições correspondentes.<br /><br /> Outros: Outros (iniciar reinicialização)<br />Outros: Outros (Iniciar sistema)<br />Automático: Inicialização automática<br />Manual: Iniciar por demanda<br />Desabilitado: Desabilitado<br /><br /> Não pode ser nulo.|  
+|status|**int**|Indica o status atual do serviço. A seguir estão os valores possíveis e suas descrições correspondentes.<br /><br /> 1: Stopped (parado)<br />2: Outros (início pendente)<br />3: Outros (parada pendente)<br />4: Executando<br />5: Outros (continuação pendente)<br />6: Outros (pausa pendente)<br />7: Em Pausa<br /><br /> Permite valor nulo.|  
+|status_desc|**nvarchar(256)**|Descreve o status atual do serviço. A seguir estão os valores possíveis e suas descrições correspondentes.<br /><br /> Interrompido: O serviço foi interrompido.<br />Outros (início de operação pendente): O serviço está iniciando.<br />Outros (parada de operação pendente): O serviço está no processo de parada.<br />Executando: O serviço está sendo executado.<br />Outros (continuar operações pendente): O serviço está em um estado pendente.<br />Outros (pausa pendente): O serviço está no processo de pausa.<br />Em pausa: O serviço foi pausado.<br /><br /> Não pode ser nulo.|  
 |process_id|**int**|A ID do processo do serviço. Não pode ser nulo.|  
 |last_startup_time|**datetimeoffset(7)**|A data e a hora em que o serviço foi iniciado pela última vez. Permite valor nulo.|  
 |service_account|**nvarchar(256)**|A conta autorizada para controlar o serviço. Essa conta pode iniciar ou parar o serviço, ou modificar as propriedades do serviço. Não pode ser nulo.|  
 |filename|**nvarchar(256)**|O caminho e o nome do arquivo do serviço executável. Não pode ser nulo.|  
 |is_clustered|**nvarchar(1)**|Indica se o serviço é instalado como um recurso de um servidor clusterizado. Não pode ser nulo.|  
 |cluster_nodename|**nvarchar(256)**|O nome do nó de cluster no qual o serviço está instalado. Permite valor nulo.|
-|instant_file_initialization_enabled|**nvarchar(1)**|Especifica se a inicialização instantânea de arquivo está habilitada para o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service.<br /><br />Y = inicialização instantânea de arquivo está habilitada para o serviço.<br /><br />N = inicialização instantânea de arquivo está desabilitada para o serviço.<br /><br /> Permite valor nulo.<br /><br /> **Observação:** não se aplica a outros serviços, como o SQL Server Agent.<br /><br /> **Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com o [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).|  
+|instant_file_initialization_enabled|**nvarchar(1)**|Especifica se a inicialização instantânea de arquivo está habilitada para o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service.<br /><br />Y = inicialização instantânea de arquivo está habilitada para o serviço.<br /><br />N = inicialização instantânea de arquivo está desabilitada para o serviço.<br /><br /> Permite valor nulo.<br /><br /> **Observação:** Não se aplica a outros serviços, como o SQL Server Agent.<br /><br /> **Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando com [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).|  
 
 ## <a name="security"></a>Segurança  
   

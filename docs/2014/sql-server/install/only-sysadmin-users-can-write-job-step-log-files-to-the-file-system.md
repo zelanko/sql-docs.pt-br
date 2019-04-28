@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2cb21caf909303fb751d9d616ef67efbac355425
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62806024"
 ---
 # <a name="only-sysadmin-users-can-write-job-step-log-files-to-the-file-system"></a>Somente usuários sysadmin podem gravar arquivos de log da etapa de trabalho no sistema de arquivos
   O [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] grava, opcionalmente, um log para cada etapa de trabalho.  
@@ -28,7 +28,7 @@ ms.locfileid: "48166226"
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrição  
  Na [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pode gravar logs de sistema de arquivos para trabalhos que são de propriedade de membros da **sysadmin** função de servidor fixa. Se o proprietário do trabalho não for um membro do **sysadmin** função e se a conta proxy está habilitada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pode gravar logs no sistema de arquivos usando as credenciais da conta proxy.  
   
  Após a atualização, os trabalhos pertencentes a usuários que não são membros do **sysadmin** função fixa de servidor não pode gravar logs no sistema de arquivos. Em vez disso, esses usuários podem selecionar a opção para gravar seus logs em uma tabela na **msdb** banco de dados. Os membros de **sysadmin** função ainda pode gravar arquivos de log do sistema de arquivos.  

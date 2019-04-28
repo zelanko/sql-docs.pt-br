@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5941b15c0aea7319d132e05b902133d3d8b986fa
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62823693"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>Usar relatórios personalizados com propriedades de nó do Pesquisador de Objetos
   Os relatórios personalizados podem ser executados no contexto de um nó selecionado do Pesquisador de objetos se eles referenciarem os parâmetros de relatório desse nó. Isso permite que um relatório personalizado use o contexto atual, por exemplo, o banco de dados atual, ou um banco de dados ou objeto de servidor  

@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84b5d71a14c08c47d630ed834ef0a6e436b52edd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726283"
 ---
 # <a name="define-semiadditive-behavior"></a>Definir um comportamento semiaditivo
   Medidas semiaditivas, que não agregam uniformemente todas as dimensões, são muito comuns em muitos cenários empresariais. Todo cubo que se baseia em instantâneos de balanços, com o decorrer do tempo, apresenta esse problema. Você encontra esses instantâneos em aplicativos que cuidam de títulos, saldos de contas, orçamentos, recursos humanos, apólices de seguros e sinistros e em vários outros domínios empresariais.  
@@ -35,7 +35,7 @@ ms.locfileid: "48190266"
  Na página **Definir Comportamento Semiaditivo** do assistente, selecione como definir o aspecto semiaditivo selecionando uma destas opções:  
   
  **Desativar comportamento semiaditivo**  
- Remove o comportamento semiaditivo de um cubo no qual ele foi previamente definido. Essa seleção redefinirá uma medida para `SUM` se ele for definido como qualquer um dos seguintes tipos de função de agregação:  
+ Remove o comportamento semiaditivo de um cubo no qual ele foi previamente definido. Essa seleção redefinirá uma medida como `SUM` se ela estiver configurada como algum destes tipos de função de agregação:  
   
 -   Por Conta  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48190266"
   
  Essa opção não altera as medidas com uma função de agregação regular: `Sum`, `Min`, `Max`, `Count`, ou `Distinct``Count`.  
   
- **O assistente detectou a dimensão de conta 'Conta", que contém membros semiaditivos. O servidor agregará membros dessa dimensão de acordo com o comportamento semiaditivo especificado para cada tipo de conta.**  
+ **O assistente detectou a ' conta "dimensão de conta, que contém membros semiaditivos. O servidor agregará membros dessa dimensão de acordo com o comportamento semiaditivo especificado para cada tipo de conta.**  
  Faz com que o sistema configure todas as medidas de um grupo de medidas de uma dimensão por uma dimensão do tipo Conta para a função de agregação Por Conta e o servidor agregará os membros da dimensão de acordo com o comportamento semiaditivo especificado para cada tipo de conta.  
   
 > [!NOTE]  
@@ -67,7 +67,7 @@ ms.locfileid: "48190266"
   
  Para cada medida, você pode selecionar um dos tipos de funcionalidade semiaditiva descritos na tabela a seguir.  
   
-|Função semiaditiva|Description|  
+|Função semiaditiva|Descrição|  
 |---------------------------|-----------------|  
 |Average of Children|A agregação de um membro é a média de seus filhos.|  
 |ByAccount|O sistema lê o comportamento de semiaditivo especificado para o tipo de conta.|  

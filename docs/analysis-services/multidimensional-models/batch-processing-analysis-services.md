@@ -1,5 +1,5 @@
 ---
-title: Processamento em lotes (Analysis Services) | Microsoft Docs
+title: Lote de processamento (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6d2f72dd0c7b380391a7b500d494d5aac83c4c6f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717683"
 ---
 # <a name="batch-processing-analysis-services"></a>Processamento em lotes (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "34023643"
 ##  <a name="bkmk_ssdt"></a> Processamento em lotes em Ferramentas de Dados do SQL Server  
  Antes que os objetos possam ser processados no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], o projeto que contém os objetos deve ser implantado. Para obter mais informações, consulte [Implantar projetos do Analysis Services &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md).  
   
-1.  Abra o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
+1.  Abra [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
 2.  Abra um projeto que foi implantado.  
   

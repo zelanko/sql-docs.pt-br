@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0afcf50aea6efc0d52adf0b1a82a317e9ec94d08
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736754"
 ---
 # <a name="remote-processing-analysis-services"></a>Processamento remoto (Analysis Services)
   Você pode executar processamento em um controle remoto agendado ou autônomo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instância, em que a solicitação de processamento origina-se de um computador, mas é executada em outro computador na mesma rede.  

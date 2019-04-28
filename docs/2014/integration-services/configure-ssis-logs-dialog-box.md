@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dbba1b7712bcbdccc821e419b3101065c3164913
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834557"
 ---
 # <a name="configure-ssis-logs-dialog-box"></a>caixa de diálogo Configurar Logs do SSIS
   Use a caixa de diálogo **Configurar Logs de SSIS** para definir as opções do log para um pacote.  
@@ -76,7 +76,7 @@ ms.locfileid: "58375204"
  **Configuração**  
  Selecione um gerenciador de conexões existente na lista ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões. Dependendo do tipo de provedor de log, você poderá configurar um gerenciador de conexões OLE DB ou um gerenciador de conexões Arquivo. O provedor de log do [!INCLUDE[msCoName](../includes/msconame-md.md)] Log de Eventos do Windows não requer conexão.  
   
- Tópicos relacionados: [Gerenciador de Conexão do OLE DB](connection-manager/ole-db-connection-manager.md) manager, [Gerenciador de Conexão de arquivo](connection-manager/file-connection-manager.md)  
+ Tópicos relacionados: [Gerenciador de conexões OLE DB](connection-manager/ole-db-connection-manager.md) , [Gerenciador de Conexões de Arquivos](connection-manager/file-connection-manager.md)  
   
  **Delete (excluir)**  
  Selecione um provedor de log e clique em **Excluir**.  

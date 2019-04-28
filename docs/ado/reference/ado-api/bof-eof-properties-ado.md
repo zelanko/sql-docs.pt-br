@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 72954cb199976f05eacd7c79ba0e89cab0a45bbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62821437"
 ---
 # <a name="bof-eof-properties-ado"></a>Propriedades BOF, EOF (ADO)
 -   **BOF** indica que a posição do registro atual está antes do primeiro registro em um [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
@@ -51,7 +51,7 @@ ms.locfileid: "47748114"
 ||MoveFirst,<br /><br /> MoveLast|MovePrevious,<br /><br /> Mover < 0|Mover 0|MoveNext,<br /><br /> Mover > 0|  
 |------|-----------------------------|---------------------------------|------------|-----------------------------|  
 |**BOF**=**verdadeiro**, **EOF**=**False**|Allowed (permitido)|Erro|Erro|Allowed (permitido)|  
-|**BOF**=**falso**, **EOF**=**True**|Allowed (permitido)|Allowed (permitido)|Erro|Erro|  
+|**BOF**=**False**, **EOF**=**True**|Allowed (permitido)|Allowed (permitido)|Erro|Erro|  
 |Ambos **True**|Erro|Erro|Erro|Erro|  
 |Ambos **False**|Allowed (permitido)|Allowed (permitido)|Allowed (permitido)|Allowed (permitido)|  
   
@@ -62,9 +62,9 @@ ms.locfileid: "47748114"
 ||BOF|EOF|  
 |------|---------|---------|  
 |**MoveFirst**, **MoveLast**|Definido como **True**|Definido como **True**|  
-|**Mover** 0|Nenhuma alteração|Nenhuma alteração|  
+|**Move** 0|Nenhuma alteração|Nenhuma alteração|  
 |**MovePrevious**, **mover** < 0|Definido como **True**|Nenhuma alteração|  
-|**MoveNext**, **mover** > 0|Nenhuma alteração|Definido como **True**|  
+|**MoveNext**, **Move** > 0|Nenhuma alteração|Definido como **True**|  
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

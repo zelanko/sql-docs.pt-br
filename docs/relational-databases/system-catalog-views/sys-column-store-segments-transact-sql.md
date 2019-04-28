@@ -1,5 +1,5 @@
 ---
-title: sys. column_store_segments (Transact-SQL) | Microsoft Docs
+title: sys.column_store_segments (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/15/2018
 ms.prod: sql
@@ -21,18 +21,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: df7698d222c2c2f0f68138eaa5f6289106b97659
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62799875"
 ---
 # <a name="syscolumnstoresegments-transact-sql"></a>sys.column_store_segments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
 Retorna uma linha para cada segmento de coluna em um índice columnstore. Há um segmento de coluna por coluna por rowgroup. Por exemplo, uma tabela com 10 rowgroups e 34 colunas retorna linhas de 340. 
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**partition_id**|**bigint**|Indica a ID da partição. É exclusivo em um banco de dados.|  
 |**hobt_id**|**bigint**|A ID do heap ou o índice de árvore B (hobt) para a tabela que tem seu índice columnstore.|  

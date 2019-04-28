@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 56157ce2c29a95d35198ab44835b50e45d7831a4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62827199"
 ---
 # <a name="plan-guide-successful-event-class"></a>classe de evento Plan Guide Successful
   A classe de evento Plan Guide Successful indica que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] produziu com êxito um plano de execução para uma consulta ou lote que continha uma guia de plano. O evento dispara quando as seguintes condições forem verdadeiras:  

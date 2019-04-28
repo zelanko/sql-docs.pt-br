@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b424c87993de202f0164a1e407cda5a203bed6d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733306"
 ---
 # <a name="mining-structure-columns"></a>Colunas da estrutura de mineração
   Você define as colunas em uma estrutura de mineração quando cria a estrutura de mineração, escolhendo colunas de dados externos e especificando como os dados serão usados na modelagem. Portanto, colunas de estrutura de mineração são mais do que cópias de dados de uma fonte de dados: elas definem como os dados da fonte serão usados pelo modelo de mineração. Você pode atribuir propriedades que determinam como os dados são discretizados, propriedades que descrevem como os valores de dados são distribuídos  
@@ -33,13 +33,13 @@ ms.locfileid: "48159786"
   
  A definição de uma coluna de estrutura de mineração deve conter as seguintes informações:  
   
--   **ID**: O nome exclusivo da coluna, que costuma ser igual ao nome. Isso não pode ser alterado após a criação da estrutura de mineração, mas o nome pode ser alterado.  
+-   **ID**: O nome exclusivo da coluna, geralmente o mesmo que o nome. Isso não pode ser alterado após a criação da estrutura de mineração, mas o nome pode ser alterado.  
   
--   **Nome**: Um nome ou alias para a coluna.  
+-   **Nome**: Um nome ou alias da coluna.  
   
 -   **Conteúdo**: Uma enumeração que descreve se os dados são discretos ou contínuos.  
   
--   **Tipo**: Uma enumeração que indica o tipo de dados geral.  
+-   **Digitar**: Uma enumeração que indica o tipo de dados geral.  
   
 -   **Distribuição**: Uma enumeração que descreve a distribuição esperada de valores. A distribuição será incluída se a coluna for contínua.  
   
@@ -56,17 +56,17 @@ ms.locfileid: "48159786"
   
 |Tópico|Links|  
 |-----------|-----------|  
-|Descreve os tipos de dados que você pode utilizar para definir uma coluna da estrutura de mineração.|[Tipos de dados &#40;mineração de dados&#41;](data-types-data-mining.md)|  
-|Descreve os tipos de conteúdo que estão disponíveis para cada tipo de dados contido em uma coluna de estrutura de mineração. Tipos de conteúdo são dependentes do tipo de dados. O tipo de conteúdo é atribuído ao nível de modelo e determina como os dados de coluna são usados pelo modelo.|[Tipos de conteúdo &#40;mineração de dados&#41;](content-types-data-mining.md)|  
-|Apresenta o conceito de tabelas aninhadas e explica como tabelas aninhadas podem ser adicionadas à fonte de dados como colunas de estrutura de mineração.|[Colunas classificadas &#40;mineração de dados&#41;](classified-columns-data-mining.md)|  
-|Lista e explica as propriedades de distribuição que você pode definir em uma coluna de estrutura de mineração para especificar a distribuição esperada de valores na coluna.|[Distribuições de colunas &#40;mineração de dados&#41;](column-distributions-data-mining.md)|  
-|Explica o conceito de discretização (às vezes chamado de *compartimentalização*) e descreve os métodos que o Analysis Services fornece para discretizar dados numéricos contínuos.|[Métodos de discretização &#40;mineração de dados&#41;](discretization-methods-data-mining.md)|  
-|Descreve os sinalizadores de modelagem que você pode definir em uma coluna da estrutura de mineração.|[Sinalizadores de modelagem &#40;mineração de dados&#41;](modeling-flags-data-mining.md)|  
-|Descreve as colunas classificadas, que são um tipo especial de coluna a ser usada para relacionar uma coluna da estrutura de mineração a outra.|[Colunas classificadas &#40;mineração de dados&#41;](classified-columns-data-mining.md)|  
+|Descreve os tipos de dados que você pode utilizar para definir uma coluna da estrutura de mineração.|[Tipos de dados &#40;Mineração de dados&#41;](data-types-data-mining.md)|  
+|Descreve os tipos de conteúdo que estão disponíveis para cada tipo de dados contido em uma coluna de estrutura de mineração. Tipos de conteúdo são dependentes do tipo de dados. O tipo de conteúdo é atribuído ao nível de modelo e determina como os dados de coluna são usados pelo modelo.|[Tipos de conteúdo &#40;Data Mining&#41;](content-types-data-mining.md)|  
+|Apresenta o conceito de tabelas aninhadas e explica como tabelas aninhadas podem ser adicionadas à fonte de dados como colunas de estrutura de mineração.|[Colunas classificadas &#40;Mineração de dados&#41;](classified-columns-data-mining.md)|  
+|Lista e explica as propriedades de distribuição que você pode definir em uma coluna de estrutura de mineração para especificar a distribuição esperada de valores na coluna.|[Distribuições de colunas &#40;Mineração de dados&#41;](column-distributions-data-mining.md)|  
+|Explica o conceito de discretização (às vezes chamado de *compartimentalização*) e descreve os métodos que o Analysis Services fornece para discretizar dados numéricos contínuos.|[Métodos de discretização &#40;Mineração de dados&#41;](discretization-methods-data-mining.md)|  
+|Descreve os sinalizadores de modelagem que você pode definir em uma coluna da estrutura de mineração.|[Sinalizadores de modelagem &#40;Mineração de dados&#41;](modeling-flags-data-mining.md)|  
+|Descreve as colunas classificadas, que são um tipo especial de coluna a ser usada para relacionar uma coluna da estrutura de mineração a outra.|[Colunas classificadas &#40;Mineração de dados&#41;](classified-columns-data-mining.md)|  
 |Saiba como adicionar e modificar colunas de estrutura de mineração.|[Tarefas e instruções da estrutura de mineração](mining-structure-tasks-and-how-tos.md)|  
   
 ## <a name="see-also"></a>Consulte também  
- [Estruturas de mineração &#40;Analysis Services - mineração de dados&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Estruturas de Mineração &#40;Analysis Services – Data Mining&#41;](mining-structures-analysis-services-data-mining.md)   
  [Colunas do modelo de mineração](mining-model-columns.md)  
   
   

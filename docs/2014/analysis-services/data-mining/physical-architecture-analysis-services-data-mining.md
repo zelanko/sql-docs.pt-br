@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a147330733efe641b8baf844723e4027e7ada5bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733227"
 ---
 # <a name="physical-architecture-analysis-services---data-mining"></a>Arquitetura física (Analysis Services – Mineração de Dados)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa componentes cliente e de servidor para fornecer funcionalidades de mineração de dados para aplicativos de Business Intelligence:  
@@ -52,6 +52,6 @@ ms.locfileid: "48094142"
  Todas as comunicações entre um cliente e o servidor do Analysis Services usam XMLA, que é um protocolo independente de plataforma e de idioma. Quando é recebida uma solicitação de um cliente, o Analysis Services determina se ela está relacionada ao OLAP ou à mineração de dados e roteia a solicitação adequadamente. Para obter mais informações, consulte [Componentes de servidor do mecanismo OLAP](../multidimensional-models/olap-physical/olap-engine-server-components.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Arquitetura lógica &#40;Analysis Services - mineração de dados&#41;](logical-architecture-analysis-services-data-mining.md)  
+ [Arquitetura lógica &#40;Analysis Services – Mineração de dados&#41;](logical-architecture-analysis-services-data-mining.md)  
   
   

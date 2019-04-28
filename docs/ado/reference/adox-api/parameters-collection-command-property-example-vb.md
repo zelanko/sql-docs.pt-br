@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 84091a0d01f23fe870f6f0dbfb01bced2bff3e0c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62710224"
 ---
 # <a name="parameters-collection-command-property-example-vb"></a>Exemplo da propriedade Command, coleção Parameters (VB)
 O código a seguir demonstra como usar o [comando](../../../ado/reference/adox-api/command-property-adox.md) propriedade com o [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto para recuperar informações de parâmetro para o procedimento.  

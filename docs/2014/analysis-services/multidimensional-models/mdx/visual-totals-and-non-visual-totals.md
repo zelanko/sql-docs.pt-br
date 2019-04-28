@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc4d831d2c6b42a591dff5fc3c8424a55ac91062
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725134"
 ---
 # <a name="visual-totals-and-non-visual-totals"></a>Totais visuais e totais não visuais
   Totais visuais são totais no final de uma coluna ou linha que somam todos os itens visíveis na coluna ou linha. Esse é o comportamento padrão da maioria das tabelas ao serem exibidas. Porém, ocasionalmente o usuário desejará exibir somente certas colunas em uma tabela, mas manter os totais da linha inteira, inclusive das colunas que não são exibidas. Esses são chamados de `Non Visual Totals`, porque o total provém de valores tanto visíveis como não visíveis.  
@@ -100,10 +100,10 @@ ms.locfileid: "48197046"
 ## <a name="see-also"></a>Consulte também  
  [Principais conceitos em MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [Autoexists](autoexists.md)   
- [Trabalhando com membros, tuplas e conjuntos de &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
+ [Trabalhando com membros, tuplas e conjuntos &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
  [Conceitos básicos de consulta MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
- [A consulta MDX básica &#40;MDX&#41;](mdx-query-the-basic-query.md)   
- [Restringindo a consulta com eixos de consulta e segmentação de dados &#40;MDX&#41;](mdx-query-and-slicer-axes-restricting-the-query.md)   
+ [A consulta básica de MDX &#40;MDX&#41;](mdx-query-the-basic-query.md)   
+ [Restringindo a consulta com os eixos de consulta e segmentação &#40;MDX&#41;](mdx-query-and-slicer-axes-restricting-the-query.md)   
  [Estabelecendo o contexto de cubo em uma consulta &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)  
   
   

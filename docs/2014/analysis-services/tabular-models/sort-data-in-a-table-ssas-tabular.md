@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4fd42458d59f7d591bf7de8279e983e30f754164
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794357"
 ---
 # <a name="sort-data-in-a-table-ssas-tabular"></a>Classificar dados em uma tabela (SSAS tabular)
   É possível classificar dados por texto (de A a Z ou de Z a A) e por números (do menor para o maior ou vice-versa) em uma ou mais colunas.  
@@ -48,8 +48,8 @@ ms.locfileid: "48081846"
     >  Se os resultados não forem os esperados, a coluna poderá conter números armazenados como texto e não como números. Por exemplo, os números negativos importados de alguns sistemas de contabilidade ou um número inserido com um ' (apóstrofo) à esquerda são armazenados como texto.  
   
 ## <a name="see-also"></a>Consulte também  
- [Filtrar e classificar dados &#40;Tabular do SSAS&#41;](../filter-and-sort-data-ssas-tabular.md)   
- [Perspectivas &#40;Tabular do SSAS&#41;](perspectives-ssas-tabular.md)   
- [As funções &#40;Tabular do SSAS&#41;](roles-ssas-tabular.md)  
+ [Filtrar e classificar dados &#40;SSAS de Tabela&#41;](../filter-and-sort-data-ssas-tabular.md)   
+ [Perspectivas &#40;SSAS de Tabela&#41;](perspectives-ssas-tabular.md)   
+ [Funções &#40;SSAS de Tabela&#41;](roles-ssas-tabular.md)  
   
   

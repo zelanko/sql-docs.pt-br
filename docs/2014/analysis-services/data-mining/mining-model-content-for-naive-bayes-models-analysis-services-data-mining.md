@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 378f59e4cf37328178cc537fde4c797badc927f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733599"
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>Conteúdo do modelo de mineração para modelos Naive Bayes (Analysis Services – Mineração de Dados)
   Este tópico descreve o conteúdo do modelo de mineração específico para modelos que usam o algoritmo Naive Bayes da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obter uma explicação de como interpretar as estatísticas e a estrutura compartilhada por todos os tipos de modelos, e definições gerais dos termos relacionados ao conteúdo do modelo de mineração, consulte [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -73,7 +73,7 @@ ms.locfileid: "48197326"
  NODE_TYPE  
  Um modelo Naive Bayes gera os seguintes tipos de nó:  
   
-|ID do tipo de nó|Description|  
+|ID do tipo de nó|Descrição|  
 |------------------|-----------------|  
 |26 (NaiveBayesMarginalStatNode)|Contém estatísticas que descrevem todo o conjunto de casos de treinamento do modelo.|  
 |9 (Atributo previsível)|Contém o nome do atributo previsível.|  
@@ -190,7 +190,7 @@ ms.locfileid: "48197326"
 |---------------|----------------------------|  
 |Raiz do modelo (1)|Sempre 0.|  
 |Nó de estatísticas marginais (26)|Um valor de ID arbitrário.|  
-|Atributo previsível (9)|Número hexadecimal que inicia com 10000000<br /><br /> Exemplo: 100000001 e 10000000b|  
+|Atributo previsível (9)|Número hexadecimal que inicia com 10000000<br /><br /> Exemplo: 100000001, 10000000b|  
 |Atributo de entrada (10)|Um número hexadecimal de duas partes, onde a primeira parte é sempre 20000000 e a segunda inicia com o identificador hexadecimal do atributo previsível relacionado.<br /><br /> Exemplo: 20000000b00000000<br /><br /> Nesse caso, o atributo previsível relacionado é 10000000b.|  
 |Estado do atributo de entrada (11)|Um número hexadecimal de três partes, onde a primeira parte é sempre 30000000, a segunda inicia com o identificador hexadecimal do atributo previsível relacionado e a terceira representa o identificador do valor.<br /><br /> Exemplo: 30000000b00000000200000000<br /><br /> Nesse caso, o atributo previsível relacionado é 10000000b.|  
   
@@ -264,7 +264,7 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
 |Bike Buyer -> Estado Civil = S|Bike Buyer|0|3783|0.472934117|4|  
 |Bike Buyer -> Estado Civil = S|Bike Buyer|1|4216|0.527065883|4|  
   
- Nesses resultados, o valor da coluna SUPPORT indica a você o número de clientes com o estado civil especificado que compraram uma bicicleta. A coluna PROBABILITY contém a probabilidade de cada valor de atributo, conforme calculado apenas para este nó. Para obter definições gerais dos termos usados na tabela NODE_DISTRIBUTION, consulte [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
+ Nesses resultados, o valor da coluna SUPPORT indica a você o número de clientes com o estado civil especificado que compraram uma bicicleta. A coluna PROBABILITY contém a probabilidade de cada valor de atributo, conforme calculado apenas para este nó. Para obter definições gerais dos termos usados na tabela NODE_DISTRIBUTION, consulte [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
 ###  <a name="bkmk_margstats"></a> Informações no nó de estatísticas marginais  
  Em um modelo Naive Bayes, a tabela aninhada para nós de estatísticas marginais contém a distribuição dos valores para todo o conjunto de dados de treinamento. Por exemplo, a tabela a seguir contém uma lista parcial das estatísticas na tabela NODE_DISTRIBUTION aninhada para o modelo `TM_NaiveBayes`.  
@@ -286,12 +286,12 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  No modelo Naive Bayes, não pode haver atributos contínuos. Portanto, todos os dados numéricos são representados como discretos (VALUE_TYPE = 4) ou diferenciados (VALUE_TYPE = 5).  
   
- Um `Missing` valor (VALUE_TYPE = 1) é adicionado a cada atributo de entrada e saído para representar valores potenciais que não estavam presentes nos dados de treinamento. Você deve ter cuidado para distinguir "missing" como uma cadeia de caracteres e o padrão `Missing` valor. Para obter mais informações, consulte [Missing Values &#40;Analysis Services - Data Mining&#41;](missing-values-analysis-services-data-mining.md).  
+ Um valor `Missing` (VALUE_TYPE = 1) é adicionado a cada atributo de entrada e de saída para representar valores potenciais que não estavam presentes nos dados de treinamento. Você deve ter cuidado para distinguir "missing" como uma cadeia de caracteres e o valor padrão `Missing`. Para obter mais informações, consulte [Valores ausentes &#40;Analysis Services – Data Mining&#41;](missing-values-analysis-services-data-mining.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Conteúdo do modelo de mineração &#40;Analysis Services - mineração de dados&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Visualizadores do modelo de mineração de dados](data-mining-model-viewers.md)   
+ [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Visualizadores do Modelo de Mineração de Dados](data-mining-model-viewers.md)   
  [Consultas de mineração de dados](data-mining-queries.md)   
- [Referência técnica do algoritmo Naive Bayes da Microsoft](microsoft-naive-bayes-algorithm.md)  
+ [Algoritmo Naïve Bayes da Microsoft](microsoft-naive-bayes-algorithm.md)  
   
   

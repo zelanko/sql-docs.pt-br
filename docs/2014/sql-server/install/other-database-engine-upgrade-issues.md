@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4fe890744f546e02c91630c5bb0115f5b5c8cb9a
-ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52321632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62805634"
 ---
 # <a name="other-database-engine-upgrade-issues"></a>Outros problemas de atualização do Mecanismo de Banco de Dados
   Os problemas de atualização a seguir não podem ser detectados pela versão atual do Supervisor de Atualização. Revise os problemas listados abaixo para avaliar o impacto deles em seus sistemas.  
@@ -57,7 +57,7 @@ ms.locfileid: "52321632"
   
 -   Geografia  
   
--   Geometria  
+-   Geometry  
   
 -   Datetime2  
   

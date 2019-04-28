@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7949729f3ebee87d06e5e591c46513c111b70016
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62718173"
 ---
 # <a name="classification-matrix-analysis-services---data-mining"></a>Matriz de classificação (Analysis Services - Mineração de dados)
   Uma *matriz de classificação* é criada classificando-se todos os casos do modelo em categorias, determinando se o valor previsto correspondeu ao valor real. Todos os casos em cada categoria são contabilizados e os totais são exibidos na matriz. A matriz de classificação é uma ferramenta padrão para avaliação de modelos estatísticos e é muitas vezes chamada de *matriz de confusão*.  

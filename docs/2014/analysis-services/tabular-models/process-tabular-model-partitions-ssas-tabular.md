@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 04f2f2c71c3560fe892d63dd5263b8b6f846a241
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794536"
 ---
 # <a name="process-tabular-model-partitions-ssas-tabular"></a>Processar partições de modelo tabular (SSAS tabular)
   As partições dividem uma tabela em partes lógicas. Cada partição pode ser processada (Atualizada) independentemente de outras partições. As tarefas neste tópico descrevem como processar partições em um banco de dados modelo usando a caixa de diálogo **Processar Partições** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -29,7 +29,7 @@ ms.locfileid: "51638613"
   
 3.  No **processar partições** na caixa de **modo** caixa de listagem, selecione um dos seguintes modos de processo:  
   
-    |Modo|Description|  
+    |Modo|Descrição|  
     |----------|-----------------|  
     |**Processar Padrão**|Detecta o estado de processamento de um objeto de partição e realiza o processamento necessário para passar os objetos de partição não processados ou parcialmente processados para um estado completamente processado. Os dados para tabelas vazias e partições são carregados; hierarquias, colunas calculadas e relações são criadas ou recriadas.|  
     |**Processar Completo**|Processa um objeto de partição e todos os objetos que ele contém. Quando o comando Processar Completo for executado para um objeto que já foi processado, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] removerá todos os dados do objeto e processará o objeto. Esse tipo de processamento é necessário quando uma alteração estrutural é feita em um objeto.|  

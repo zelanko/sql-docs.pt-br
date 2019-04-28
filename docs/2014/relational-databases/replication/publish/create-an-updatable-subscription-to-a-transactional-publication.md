@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f9c04c03c08f118314dc96c8b491e61be317f40c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691590"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication-management-studio"></a>Como criar uma assinatura atualizável para uma publicação transacional (Management Studio)
 
@@ -29,7 +29,7 @@ A replicação transacional permite que mudanças sejam realizadas em um Assinan
 
 Configurar assinaturas atualizáveis no página **Assinaturas Atualizáveis** do **Assistente para Nova Assinatura**. Esta página só estará disponível quando uma publicação transacional tiver sido ativada para assinaturas atualizáveis. Para obter mais informações sobre como habilitar assinaturas atualizáveis, consulte [Habilitar atualização de assinaturas para publicações transacionais](enable-updating-subscriptions-for-transactional-publications.md).   
   
-## <a name="configure-an-updatable-subscription-from-the-publisher"></a>Configurar uma assinatura atualizável do publicador  
+## <a name="configure-an-updatable-subscription-from-the-publisher"></a>Configurar uma assinatura atualizável do Editor  
 
 1. Conecte-se ao Publicador no Microsoft SQL Server Management Studio e, em seguida, expanda o nó de servidor.
 2. Expanda a pasta **Replicação** e, em seguida, a pasta **Publicações Locais** .
@@ -52,7 +52,7 @@ Configurar assinaturas atualizáveis no página **Assinaturas Atualizáveis** do
 
 8. Conclua o assistente.
 
-## <a name="configure-an-updatable-subscription-from-the-subscriber"></a>Configurar uma assinatura atualizável no assinante
+## <a name="configure-an-updatable-subscription-from-the-subscriber"></a>Configurar uma assinatura atualizável do Assinante
 
 
 1. Conecte-se ao Assinante no SQL Server Management Studio e, em seguida, expanda o nó de servidor.
@@ -200,7 +200,7 @@ Isto registra a assinatura pull no Publicador.
 1. No Publicador, verifique se a publicação tem suporte para assinaturas de atualização em fila executando [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql). 
 
     * Se o valor de allow_queued_tran no conjunto de resultados for 1, a publicação tem suporte para assinaturas de atualização imediata.
-    * Se o valor de allow_queued_tran no conjunto de resultados for 0, a publicação deverá ser recriada com as assinaturas de atualização em fila habilitadas. Para obter mais informações, consulte como: Habilite atualização de assinaturas para publicações transacionais (programação Transact-SQL de replicação).
+    * Se o valor de allow_queued_tran no conjunto de resultados for 0, a publicação deverá ser recriada com as assinaturas de atualização em fila habilitadas. Para obter mais informações, confira Como Habilitar atualização de assinaturas para publicações transacionais (Programação Transact-SQL de replicação).
 
 2. No Publicador, verifique se a publicação tem suporte para assinaturas push executando [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql). 
 

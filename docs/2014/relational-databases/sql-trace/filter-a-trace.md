@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 381007cb26f74cdf945900436d8a9fcea5a4ef39
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714713"
 ---
 # <a name="filter-a-trace"></a>Filtrar um rastreamento
   Os filtros limitam os eventos coletados em um rastreamento. Se não houver um filtro definido, serão retornados todos os eventos das classes de evento selecionadas na saída do rastreamento. Por exemplo, limitar os nomes de usuário do Windows em um rastreamento a usuários específicos restringe os dados de saída apenas a esses usuários.  
@@ -110,7 +110,7 @@ ms.locfileid: "52761208"
 |**ObjectID2**|=, <>, >=, <=|  
 |**ObjectName**|LIKE, NOT LIKE|  
 |**ObjectType**|=, <>, >=, <=|  
-|**Deslocamento**|=, <>, >=, <=|  
+|**Offset**|=, <>, >=, <=|  
 |**OwnerID**|=, <>, >=, <=|  
 |**OwnerName**|LIKE, NOT LIKE|  
 |**ParentName**|LIKE, NOT LIKE|  

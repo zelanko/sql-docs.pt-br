@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bf246256471931292d6dfcee8a83386bce256e08
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62816903"
 ---
 # <a name="msdbmsdatatype-transact-sql"></a>MSdbms_datatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "52810538"
 |**datatype_id**|**int**|Identifica cada tipo de dados exclusivo.|  
 |**dbms_id**|**int**|Identifica o DBMS ao qual o tipo pertence.|  
 |**type**|**sysname**|Nome do tipo de dados (nativo).|  
-|**createparams**|**int**|Bitmap que descreve qual a combinação de comprimento, precisão e escala é aplicável a cada tipo de dados, incluindo:<br /><br /> **0x1** = precisão.<br /><br /> **0x2** = escala.<br /><br /> **0x4** = comprimento.|  
+|**createparams**|**int**|Bitmap que descreve qual a combinação de comprimento, precisão e escala é aplicável a cada tipo de dados, incluindo:<br /><br /> **0x1** = PRECISION.<br /><br /> **0x2** = SCALE.<br /><br /> **0x4** = LENGTH.|  
   
 ## <a name="remarks"></a>Comentários  
  Esta tabela contém entradas para tipos de dados do SQL Server porque uma instância do SQL Server pode se inscrever em um banco de dados do SQL Server e publicar para um assinante não SQL Server.  

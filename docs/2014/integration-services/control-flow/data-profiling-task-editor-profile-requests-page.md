@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6deb484f6e213e7089c3aef272ebaebeba13a913
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832060"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Data Profiling Task Editor (Profile Requests Page)
   Use a página **Solicitações de Perfil** do **Editor da Tarefa Criação de Perfil de Dados** para selecionar e configurar os perfis que deseja computar. Em uma tarefa Criação de Perfil de Dados simples, você pode calcular várias perfis para várias colunas ou combinações de colunas em várias tabelas ou exibições.  
@@ -48,15 +48,15 @@ ms.locfileid: "58385584"
 ### <a name="requests-pane-columns"></a>Colunas do painel de solicitações  
  As colunas exibidas pelo painel de solicitações dependem da **Exibição** selecionada:  
   
--   Se você optar por exibir **todas as solicitações**, o painel de solicitações terá duas colunas: **Tipo de perfil** e **ID da solicitação**.  
+-   Se **Todas as Solicitações**for selecionado, o painel de solicitações terá duas colunas: **Tipo de Perfil** e **ID da Solicitação**.  
   
--   Se você selecionar para exibir um dos cinco perfis de coluna, o painel de solicitações terá quatro colunas: **Tipo de perfil**, **tabela ou exibição**, **coluna**, e **ID da solicitação**.  
+-   Se desejar exibir um dos cinco perfis de coluna, o painel de solicitações terá quatro colunas: **Tipo de Perfil**, **Tabela ou Exibição**, **Coluna** e **ID da Solicitação**.  
   
--   Se você selecionar para exibir um perfil chave candidata, o painel de solicitações tem quatro colunas: **Tipo de perfil**, **tabela ou exibição**, **KeyColumns**, e **ID da solicitação**.  
+-   Se optar por exibir um perfil Chave Candidata, o painel de solicitações terá quatro colunas: **Tipo de Perfil**, **Tabela ou Exibição**, **Colunas de Chave**e **ID da Solicitação**.  
   
--   Se você selecionar para exibir um perfil dependência funcional, o painel de solicitações terá cinco colunas: **Tipo de perfil**, **tabela ou exibição**, **colunas determinantes**, **coluna dependente**, e **ID da solicitação**.  
+-   Se você optar por exibir um perfil Dependência Funcional, o painel de solicitações terá cinco colunas: **Tipo de Perfil**, **Tabela ou Exibição**, **Colunas Determinantes**, **Coluna Dependente**, e **ID da Solicitação**.  
   
--   Se você optar por exibir um perfil de inclusão de valor, o painel de solicitações terá seis colunas: **Tipo de perfil**, **tabela lateral de subconjunto ou exibição**, **tabela lateral de superconjunto ou exibição**, **colunas laterais de subconjunto**, **colunas laterais de superconjunto**, e **ID da solicitação**.  
+-   Se você optar por exibir um perfil Inclusão de Valor, o painel de solicitações terá seis colunas: **Tipo de Perfil**, **Tabela Lateral de Subconjunto ou Exibição**, **Tabela Lateral de Superconjunto ou Exibição**, **Colunas Laterais de Subconjunto**, **Colunas Laterais de Superconjunto**e **ID da Solicitação**.  
   
  As seções a seguir descrevem cada dessas colunas.  
   

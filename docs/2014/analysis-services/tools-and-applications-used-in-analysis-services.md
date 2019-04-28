@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6e8425b3d6fdb461b369c2311ba415dd8f032293
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794618"
 ---
 # <a name="tools-and-applications-used-in-analysis-services"></a>Ferramentas e aplicativos usados no Analysis Services
   Encontre as ferramentas e aplicativos que você precisa para a criação de modelos do Analysis Services e o gerenciamento de bancos de dados associados em uma instância do Analysis Services.  

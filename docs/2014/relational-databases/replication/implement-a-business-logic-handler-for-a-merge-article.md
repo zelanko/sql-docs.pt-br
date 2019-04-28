@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 659bba7156ccc1c3a60bef38a51fd983554e4ead
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721196"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>Implementar um manipulador de lógica de negócios para um artigo de mesclagem
   Este tópico descreve como implementar um manipulador de lógica de negócios para um artigo de mesclagem no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] a programação de replicação o RMO (Replication Management Objects).  
@@ -58,7 +58,7 @@ ms.locfileid: "52816888"
   
 2.  Adicione referências ao projeto para os seguintes namespaces.  
   
-    |Referência de assembly|Local padrão|  
+    |Referência de assembly|Location|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (instalação padrão)|  
     |<xref:System.Data>|GAC (componente do .NET Framework)|  
@@ -131,7 +131,7 @@ ms.locfileid: "52816888"
   
 2.  Adicione referências ao projeto para os seguintes namespaces.  
   
-    |Referência de assembly|Local padrão|  
+    |Referência de assembly|Location|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (instalação padrão)|  
     |<xref:System.Data>|GAC (componente do .NET Framework)|  

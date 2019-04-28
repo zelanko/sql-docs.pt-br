@@ -25,11 +25,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2f7b0d8a4c5e3403e326cd88d2a7eafa5726addb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689419"
 ---
 # <a name="browse-a-model-using-the-microsoft-tree-viewer"></a>Procurar um modelo usando a Exibição de Árvore da Microsoft
   O Visualizador de Árvore da [!INCLUDE[msCoName](../../includes/msconame-md.md)] no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exibe árvores de decisão criadas com o algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . O algoritmo Árvores de Decisão [!INCLUDE[msCoName](../../includes/msconame-md.md)] é um algoritmo de árvore de decisão híbrido que oferece suporte tanto à classificação quanto regressão. Portanto, você também pode usar esse visualizador para exibir modelos com base no algoritmo Regressão Linear [!INCLUDE[msCoName](../../includes/msconame-md.md)] . O algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é usado para modelagem preditiva de atributos discretos e contínuos. Para obter mais informações sobre esse algoritmo, consulte [Referência técnica do algoritmo Árvores de Decisão da Microsoft](microsoft-decision-trees-algorithm.md).  
@@ -105,9 +105,9 @@ ms.locfileid: "48104726"
  [Voltar ao Início](#BKMK_TabsPanes)  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmo de árvores de decisão da Microsoft](microsoft-decision-trees-algorithm.md)   
+ [Referência técnica do algoritmo Árvores de Decisão da Microsoft](microsoft-decision-trees-algorithm.md)   
  [Visualizadores do modelo de mineração &#40; Designer do modelo de mineração de dados &#41;](../mining-model-viewers-data-mining-model-designer.md)   
- [Tarefas do Visualizador do modelo e instruções de mineração](mining-model-viewer-tasks-and-how-tos.md)   
+ [Tarefas e instruções do visualizador do modelo de mineração](mining-model-viewer-tasks-and-how-tos.md)   
  [Ferramentas de mineração de dados](data-mining-tools.md)   
  [Visualizadores do modelo de Mineração de dados](data-mining-model-viewers.md)  
   

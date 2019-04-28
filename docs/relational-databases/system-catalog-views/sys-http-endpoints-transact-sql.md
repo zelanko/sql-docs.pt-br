@@ -1,5 +1,5 @@
 ---
-title: sys. http_endpoints (Transact-SQL) | Microsoft Docs
+title: sys.http_endpoints (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,24 +21,24 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1bd36b58fc3a98e0c123e37a3b98c18077ac19ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63004704"
 ---
 # <a name="syshttpendpoints-transact-sql"></a>sys.http_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contém uma linha para cada ponto de extremidade criado no servidor que usa o protocolo HTTP.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**< colunas herdadas >**||Herda colunas de [Endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
-|**Site**|**nvarchar(128)**|Nome do computador host do site, como especificado na opção SITE =.|  
+|**site**|**nvarchar(128)**|Nome do computador host do site, como especificado na opção SITE =.|  
 |**url_path**|**nvarchar(4000)**|Parte apenas do caminho da URL para este ponto de extremidade HTTP, como especificado pela opção PATH=.|  
 |**is_clear_port_enabled**|**bit**|1 = Limpar porta é habilitado por meio da opção PORT = CLEAR.|  
-|**parâmetro clear_port**|**int**|Número de porta especificado na opção CLEAR PORT =.<br /><br /> NULL = Não especificado.|  
+|**clear_port**|**int**|Número de porta especificado na opção CLEAR PORT =.<br /><br /> NULL = Não especificado.|  
 |**is_ssl_port_enabled**|**bit**|1 = A porta SSL é habilitada por meio da opção PORT = SSL.|  
 |**ssl_port**|**int**|Valor de número de porta especificado na opção SSL PORT =.<br /><br /> NULL = Não especificado.|  
 |**is_anonymous_enabled**|**bit**|1 = O acesso anônimo é habilitado por meio da opção AUTHENTICATION = ANONYMOUS.|  

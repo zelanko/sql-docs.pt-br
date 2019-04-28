@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ed99b26641b6d87fa6fe3bf07f47c21eacb96d89
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795313"
 ---
 # <a name="data-types-supported-ssas-tabular"></a>Tipos de dados com suporte (SSAS tabular)
   Este artigo descreve os tipos de dados que podem ser usados em modelos tabulares e discute a conversão implícita de tipos de dados quando dados são calculados ou usados em uma fórmula DAX (Data Analysis Expressions).  
@@ -42,7 +42,7 @@ ms.locfileid: "52405471"
 |Número Inteiro|Um valor inteiro de 64 bits (oito bytes) <sup>1, 2</sup>|Números sem casas decimais. Inteiros podem ser números positivos ou negativos, mas devem ser números inteiros entre -9.223.372.036.854.775.808 (-2^63) e 9.223.372.036.854.775.807 (2^63-1).|  
 |Número Decimal|Um número real de 64 bits (oito bytes) <sup>1, 2</sup>|Números reais são números que podem ter casas decimais. Os números reais abrangem uma grande variedade de valores:<br /><br /> Valores negativos de -1,79E +308 a -2,23E -308<br /><br /> Zero<br /><br /> Valores positivos de 2,23E -308 a 1,79E + 308<br /><br /> No entanto, o número de dígitos significativos está limitado a 17 dígitos decimais.|  
 |Booliano|Booliano|Um valor True ou False.|  
-|Texto|Cadeia de caracteres|Uma cadeia de caracteres de dados de caractere Unicode. Podem ser cadeias de caracteres, números ou datas representados em um formato de texto.|  
+|Text|Cadeia de caracteres|Uma cadeia de caracteres de dados de caractere Unicode. Podem ser cadeias de caracteres, números ou datas representados em um formato de texto.|  
 |data|Data/hora|Datas e horas em uma representação de data-hora aceita.<br /><br /> As datas válidas são todas as datas depois de 1º de março de 1900.|  
 |CURRENCY|CURRENCY|O tipo de dados de moeda permite valores entre -922.337.203.685.477,5808 e 922.337.203.685.477,5807 com quatro dígitos decimais de precisão fixa.|  
 |N/D|Em branco|Um espaço em branco é um tipo de dados no DAX que representa e substitui nulos SQL. É possível criar um espaço em branco usando a função BLANK e testar se há espaços em branco usando a função lógica, ISBLANK.|  
@@ -74,7 +74,7 @@ ms.locfileid: "52405471"
 ##  <a name="bkmk_implicit"></a> Conversão implícita e explícita de tipos de dados em fórmulas DAX  
  Cada função DAX tem requisitos específicos quanto aos tipos de dados que são usados como entradas e saídas. Por exemplo, algumas funções exigem inteiros para alguns argumentos e datas para outros; outras funções exigem texto ou tabelas.  
   
- Se os dados na coluna especificada como um argumento forem incompatíveis com o tipo de dados exigido pela função, em muitos casos DAX retornará um erro. Entretanto, sempre que possível, DAX tentará converter implicitamente os dados no tipo de dados exigido. Por exemplo:  
+ Se os dados na coluna especificada como um argumento forem incompatíveis com o tipo de dados exigido pela função, em muitos casos DAX retornará um erro. Entretanto, sempre que possível, DAX tentará converter implicitamente os dados no tipo de dados exigido. Por exemplo:   
   
 -   Você pode digitar um número, por exemplo "123", como uma cadeia de caracteres. O DAX analisará a cadeia de caracteres e tentará especificá-la como um tipo de dados numérico.  
   

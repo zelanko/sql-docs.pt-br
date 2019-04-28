@@ -21,25 +21,25 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b919289d49901f64b26db0aa2d4b71eeb0e132a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62960808"
 ---
 # <a name="replication-agent-security-model"></a>Modelo de segurança do agente de replicação
-  O modelo de segurança do agente de replicação permite controle refinado sobre as contas sob as quais os agentes de replicação executam e fazem conexões: Uma conta diferente pode ser especificada para cada agente. Para obter mais informações sobre como especificar contas, consulte [Gerenciar logons e senhas na replicação](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication).  
+  O modelo de segurança do agente de replicação permite um controle refinado das contas nas quais os agentes de replicação executam e efetuam conexões: Uma conta diferente pode ser especificada para cada agente. Para obter mais informações sobre como especificar contas, consulte [Gerenciar logons e senhas na replicação](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication).  
   
 > [!IMPORTANT]  
 >  Quando um membro da função fixa do servidor **sysadmin** configura a replicação, os agentes de replicação podem ser configurados para representar a conta do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent Isso é realizado não especificando um logon nem uma senha para um agente de replicação, contudo, não recomendamos essa abordagem. Em vez disso, como a melhor prática de segurança, recomendamos especificar uma conta para cada agente que tenha as permissões mínimas descritas na seção "Permissões exigidas pelos agentes", mais adiante nesse tópico.  
   
  Os agentes de replicação, como todos os executáveis, são executados sob o contexto de uma conta do Windows. Os agentes fazem conexões de Segurança Integrada do Windows usando essa conta. A conta sob a qual o agente executa depende de como o agente é iniciado:  
   
--   Iniciando o agente de um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] trabalho do agente, o padrão: Quando um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] trabalho do agente é usado para iniciar um agente de replicação, o agente é executado sob o contexto de uma conta que você especificar ao configurar a replicação. Para obter mais informações sobre o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent e replicação, consulte a seção "Segurança do Agente sob SQL Server Agent", mais adiante nesse tópico. Para obter informações sobre as permissões necessárias para a conta na qual o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent é executado, consulte [Configurar o SQL Server Agent](../../../ssms/agent/configure-sql-server-agent.md).  
+-   Iniciando o agente de um trabalho do Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o padrão: quando um trabalho do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent é usado para iniciar um agente de replicação, o agente executa sob o contexto de uma conta que é especificada quando a replicação é configurada. Para obter mais informações sobre o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent e replicação, consulte a seção "Segurança do Agente sob SQL Server Agent", mais adiante nesse tópico. Para obter informações sobre as permissões necessárias para a conta na qual o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent é executado, consulte [Configurar o SQL Server Agent](../../../ssms/agent/configure-sql-server-agent.md).  
   
--   Iniciando o agente de uma linha de comando do MS-DOS, diretamente ou através de um script: O agente é executado sob o contexto da conta do usuário que está executando o agente na linha de comando.  
+-   Iniciando o agente de uma linha de comando do MS-DOS, seja diretamente ou por meio de um script: O agente é executado no contexto da conta do usuário que está executando o agente na linha de comando.  
   
--   Iniciando o agente de um aplicativo que usa objetos RMO (Replication Management) ou um controle ActiveX: O agente é executado sob o contexto do aplicativo que está chamando o RMO ou o controle ActiveX.  
+-   Iniciando o agente de um aplicativo que usa objetos RMO ( Replication Management Objects) ou um controle ActiveX: O agente é executado no contexto do aplicativo que está chamando o RMO ou o controle ActiveX.  
   
     > [!NOTE]  
     >  Os controles ActiveX são preteridos.  

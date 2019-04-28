@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d018fb391c7633877f985b4e5e0798bfd803a5fc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680352"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>Atualizar uma instância de cluster de failover do SQL Server (instalação)
   Você pode atualizar um cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para um cluster de failover do [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] com o Assistente de Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou com um prompt de comando.  
@@ -78,9 +78,9 @@ ms.locfileid: "53363708"
 ## <a name="upgrading-to-a-includesssql14includessssql14-mdmd-multi-subnet-failover-cluster"></a>Atualizando para um cluster de failover de várias sub-redes do [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]  
  Há dois possíveis cenários para atualizações:  
   
-1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cluster de failover está atualmente configurado em uma única sub-rede: você deve atualizar primeiro o cluster existente para o [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] iniciando a instalação e seguindo o processo de atualização. Concluída a atualização do cluster de failover existente, adicione um nó que esteja em uma sub-rede diferente usando a funcionalidade AddNode. Confirme a alteração da dependência do recurso de endereço IP para OR na página de configuração de rede de cluster. Agora você tem um cluster de failover de várias sub-redes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cluster de failover está atualmente configurado em uma única sub-rede: Você deve atualizar primeiro o cluster existente para [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] iniciando a instalação e seguindo o processo de atualização. Concluída a atualização do cluster de failover existente, adicione um nó que esteja em uma sub-rede diferente usando a funcionalidade AddNode. Confirme a alteração da dependência do recurso de endereço IP para OR na página de configuração de rede de cluster. Agora você tem um cluster de failover de várias sub-redes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-2.  O cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está atualmente configurado em várias sub-redes que usam a tecnologia V-LAN expansível: você deve atualizar primeiro o cluster existente para o [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. Como a tecnologia V-LAN expansível configura uma única sub-rede, a configuração de rede deve ser alterada para várias sub-redes. Altere a dependência do recurso de endereço IP com a ferramenta de administração de Cluster de Failover do Windows e altere a dependência de IP para OR.  
+2.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cluster de failover está atualmente configurado em várias sub-redes usando a tecnologia V-LAN de ampliação: Você deve atualizar primeiro o cluster existente para [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. Como a tecnologia V-LAN expansível configura uma única sub-rede, a configuração de rede deve ser alterada para várias sub-redes. Altere a dependência do recurso de endereço IP com a ferramenta de administração de Cluster de Failover do Windows e altere a dependência de IP para OR.  
   
 ###  <a name="BestPractices"></a> Práticas recomendadas antes de atualizar um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Cluster de Failover  
  Para eliminar tempo de inatividade inesperado causado por uma reinicialização, pré-instale o pacote de não reinicialização para .NET Framework 4.0 em todos os nós de cluster de failover antes de executar a atualização nos nós de cluster. É recomendável seguir estas etapas para pré-instalar os pré-requisitos:  

@@ -22,14 +22,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b3b9d48c6bcdfd07599ded1b4a92955cc45abfec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721950"
 ---
 # <a name="microsoft-clustering-algorithm"></a>Algoritmo Microsoft Clustering
-  O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering é um algoritmo de segmentação fornecido pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. O algoritmo usa técnicas iterativas para agrupar casos em um conjunto de dados em clusters que contenham características semelhantes. Esses agrupamentos são úteis para explorar dados, identificando anomalias nos dados e criar previsões.  
+  O algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering é um algoritmo de segmentação fornecido pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. O algoritmo usa técnicas iterativas para agrupar casos em um conjunto de dados em clusters que contenham características semelhantes. Esses agrupamentos são úteis para explorar dados, identificando anomalias nos dados e criar previsões.  
   
  Modelos de clustering identificam as relações em um conjunto de dados que não podem ser derivados de forma lógica através de observação casual. Por exemplo, você pode discernir logicamente que pessoas que se vão para o trabalho de bicicleta normalmente não moram longe do local onde trabalham. Porém, o algoritmo pode encontrar outras características dos usuários de bicicleta que não são tão óbvias. No diagrama a seguir, o cluster A representa dados sobre pessoas que pretendem ir de carro para o trabalho, enquanto o cluster B representa dados sobre pessoas que pretendem ir de bicicleta para o trabalho.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48195096"
   
 -   **Colunas de entrada** Cada modelo deve conter pelo menos uma coluna de entrada contendo os valores que serão usados para criar os clusters. Você pode ter quantas colunas de entrada desejar, mas, dependendo do número de valores em cada coluna, a inclusão de colunas extras pode aumentar o tempo que leva para treinar o modelo.  
   
--   **Coluna previsível opcional** O algoritmo não precisa de uma coluna previsível para criar o modelo, mas você pode adicionar uma coluna previsível de praticamente qualquer tipo de dados. Os valores da coluna previsível podem ser tratados como entrada para o modelo de clustering ou você pode especificar que ela deve ser usada somente para previsão. Por exemplo, se você deseja prever a renda do cliente pelo clustering de dados demográficos, como região ou idade, você poderia especificar a receita como `PredictOnly` e adicionar todas as outras colunas, como região ou idade, como entradas.  
+-   **Coluna previsível opcional** O algoritmo não precisa de uma coluna previsível para criar o modelo, mas você pode adicionar uma coluna previsível de praticamente qualquer tipo de dados. Os valores da coluna previsível podem ser tratados como entrada para o modelo de clustering ou você pode especificar que ela deve ser usada somente para previsão. Por exemplo, para prever a receita de clientes ao agrupá-los por dados demográficos, como região ou idade, você poderia especificar a receita como `PredictOnly` e adicionar todas as outras colunas, como região e idade, como entradas.  
   
  Para obter informações mais detalhadas sobre os tipos de conteúdo e de dados com suporte pelos modelos de clustering, consulte a seção Requisitos de [Referência técnica do algoritmo Microsoft Clustering](microsoft-clustering-algorithm-technical-reference.md).  
   
@@ -83,9 +83,9 @@ ms.locfileid: "48195096"
 -   Dá suporte ao uso de modelos de mineração OLAP e à criação de dimensões de mineração de dados.  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Microsoft Clustering Algorithm Technical Reference](microsoft-clustering-algorithm-technical-reference.md)   
- [Conteúdo do modelo de mineração para modelos de Clustering &#40;Analysis Services - mineração de dados&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)   
+ [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Referência técnica do algoritmo Microsoft Clustering](microsoft-clustering-algorithm-technical-reference.md)   
+ [Conteúdo do modelo de mineração para modelos de clustering &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)   
  [Exemplos de consulta de modelo de clustering](clustering-model-query-examples.md)  
   
   

@@ -17,11 +17,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8e5167948e456b721ba831bd8a3d637bb7ea3d3b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62985759"
 ---
 # <a name="row-level-security"></a>Segurança em nível de linha
   Segurança em nível de linha permite aos clientes controlar o acesso às linhas em uma tabela de banco de dados com base nas características do usuário executando uma consulta (por exemplo, associação a grupo ou contexto de execução). A segurança em nível de linha está disponível agora no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016. Consulte [Segurança em nível de linha](https://msdn.microsoft.com/library/dn765131.aspx) na documentação atual para obter a descrição atual desse recurso.  

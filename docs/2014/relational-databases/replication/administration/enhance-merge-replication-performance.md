@@ -20,11 +20,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e9db5352c80cfc45fd6856339e2aaf680b631a47
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62805872"
 ---
 # <a name="enhance-merge-replication-performance"></a>Aprimorar o desempenho de replicação de mesclagem
   Após considerar as dicas para o desempenho geral descritas em [Aprimorando o Desempenho Geral da Replicação](enhance-general-replication-performance.md), considere estas áreas adicionais específicas da replicação de mesclagem.  
@@ -53,7 +53,7 @@ ms.locfileid: "54129116"
   
      O período de retenção da publicação, que é a quantidade máxima de tempo antes que a assinatura tenha de ser sincronizada, determina por quanto tempo os metadados de controle são armazenados. Um valor alto pode afetar armazenamento e o desempenho do processamento. Para obter mais informações sobre como definir o período de retenção de publicação, consulte [Subscription Expiration and Deactivation](../subscription-expiration-and-deactivation.md).  
   
--   Use artigos de somente download nessas tabelas que só são alteradas no Publicador. Para obter mais informações, consulte [Optimize Merge Replication Performance with Download-Only Articles](../merge/optimize-merge-replication-performance-with-download-only-articles.md) (Otimizar o desempenho da replicação de mesclagem com artigos somente para download).  
+-   Use artigos de somente download nessas tabelas que só são alteradas no Publicador. Para obter mais informações, consulte [Otimizar o desempenho da replicação de mesclagem com artigos somente para download](../merge/optimize-merge-replication-performance-with-download-only-articles.md).  
   
 ### <a name="filter-design-and-use"></a>Design e uso de filtro  
   
@@ -140,10 +140,10 @@ ms.locfileid: "54129116"
   
 -   Esporadicamente, indexe novamente as tabelas do sistema de replicação de mesclagem.  
   
-     Como parte da manutenção de replicação de mesclagem, verifique esporadicamente o crescimento das tabelas do sistema associadas à replicação de mesclagem: **MSmerge_contents**, **MSmerge_genhistory**, e **MSmerge_tombstone**, **MSmerge_current_partition_mappings**, e **msmerge _ past_partition_mappings**. Periodicamente, indexe novamente essas tabelas. Para obter mais informações, veja [Reorganizar e recriar índices](../../indexes/reorganize-and-rebuild-indexes.md).  
+     Como parte da manutenção para replicação de mesclagem, verifique ocasionalmente o crescimento das tabelas do sistema associado à replicação de mesclagem: **MSmerge_contents**, **MSmerge_genhistory** e **MSmerge_tombstone**, **MSmerge_current_partition_mappings** e **MSmerge_past_partition_mappings**. Periodicamente, indexe novamente essas tabelas. Para obter mais informações, veja [Reorganizar e recriar índices](../../indexes/reorganize-and-rebuild-indexes.md).  
   
 -   Monitore o desempenho de sincronização usando a guia **Histórico de Sincronização** no Replication Monitor.  
   
-     Para a replicação de mesclagem, o Replication Monitor exibe as estatísticas detalhadas na guia **Histórico de Sincronizações** para cada artigo processado durante a sincronização, incluindo tempo gasto em cada fase do processamento (carregar alterações, baixar alterações e assim por diante). Ajuda a definir tabelas específicas que estão causando lentidão e é o melhor local para a solução de problemas de desempenho com assinaturas de mesclagem. Para obter mais informações sobre como exibir estatísticas detalhadas, consulte [exibir informações e executar tarefas usando o Replication Monitor](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+     Para a replicação de mesclagem, o Replication Monitor exibe as estatísticas detalhadas na guia **Histórico de Sincronizações** para cada artigo processado durante a sincronização, incluindo tempo gasto em cada fase do processamento (carregar alterações, baixar alterações e assim por diante). Ajuda a definir tabelas específicas que estão causando lentidão e é o melhor local para a solução de problemas de desempenho com assinaturas de mesclagem. Para obter mais informações sobre como exibir estatísticas detalhadas, confira [Exibir informações e executar tarefas usando o Replication Monitor](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
   

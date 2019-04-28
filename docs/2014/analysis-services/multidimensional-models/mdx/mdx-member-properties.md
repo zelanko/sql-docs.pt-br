@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e650ee07183123f5c90e24129282820825cee652
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725450"
 ---
 # <a name="using-member-properties-mdx"></a>Usando propriedades do membro (MDX)
   As propriedades do membro incluem informações básicas sobre cada membro de cada tupla. Entre as informações básicas estão nome do membro, nível pai, número de filhos, e assim por diante. As propriedades do membro estão disponíveis para todos os membros de um determinado nível. Em termos de organização, elas são tratadas como dados organizados dimensionalmente, armazenados em uma única dimensão.  
@@ -44,7 +44,7 @@ ms.locfileid: "48075537"
  Ambas as propriedades do membro intrínsecas e definidas pelo usuário podem ser recuperadas por meio do uso do `PROPERTIES` palavra-chave ou o [propriedades](/sql/mdx/properties-mdx) função.  
   
 ## <a name="using-the-properties-keyword"></a>Usando a palavra-chave PROPERTIES  
- O `PROPERTIES` palavra-chave especifica as propriedades de membro que devem ser usados para uma determinada dimensão de eixo. O `PROPERTIES` palavra-chave é inserida na `<axis specification>` cláusula do MDX [selecione](/sql/mdx/mdx-data-manipulation-select) instrução:  
+ A palavra-chave `PROPERTIES` especifica as propriedades do membro que serão usadas em uma determinada dimensão de eixo. O `PROPERTIES` palavra-chave é inserida na `<axis specification>` cláusula do MDX [selecione](/sql/mdx/mdx-data-manipulation-select) instrução:  
   
 ```  
 SELECT [<axis_specification>  
@@ -62,7 +62,7 @@ SELECT [<axis_specification>
 > [!NOTE]  
 >  Para obter mais informações sobre os valores `<set>` e `<axis_name>`, consulte [Especificando o conteúdo de um eixo de consulta &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md).  
   
- O `<dim_props>` cláusula permite consulta de uma dimensão, nível e propriedades do membro usando o `PROPERTIES` palavra-chave. A sintaxe a seguir mostra a formatação da cláusula `<dim_props>` :  
+ A cláusula `<dim_props>` permite a consulta de uma dimensão, de um nível e de propriedades do membro usando a palavra-chave `PROPERTIES`. A sintaxe a seguir mostra a formatação da cláusula `<dim_props>` :  
   
 ```  
 <dim_props> ::= [DIMENSION] PROPERTIES <property> [,<property>...]  
@@ -75,6 +75,6 @@ SELECT [<axis_specification>
 -   Propriedades do membro definidas pelo usuário devem ser precedidas pelo nome do nível no qual residem. Para obter mais informações sobre como usar o `PROPERTIES` palavra-chave com as propriedades do membro definidas pelo usuário, consulte [propriedades do membro definidas pelo usuário &#40;MDX&#41;](mdx-member-properties-user-defined-member-properties.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Criando e usando valores da propriedade &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)  
+ [Criando e usando valores de propriedade &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)  
   
   

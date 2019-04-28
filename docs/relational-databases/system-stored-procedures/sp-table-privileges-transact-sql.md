@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dcc3d02505a1bd568d440d5b70fc06bcfff93ae9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62688365"
 ---
 # <a name="sptableprivileges-transact-sql"></a>sp_table_privileges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,18 +43,18 @@ sp_table_privileges [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @table_name=] '*table_name*'  
+ [ @table_name= ] '*table_name*'  
  É a tabela usada para retornar informações do catálogo. *table_name* está **nvarchar (** 384 **)**, sem padrão. Há suporte para a correspondência do padrão curinga.  
   
- [ @table_owner=] '*table_owner*'  
+ [ @table_owner= ] '*table_owner*'  
  É o proprietário da tabela usada para retornar informações de catálogo. *table_owner*está **nvarchar (** 384 **)**, com um padrão NULL. Há suporte para a correspondência do padrão curinga. Se o proprietário não for especificado, serão aplicadas as regras de visibilidade de tabela padrão do DBMS subjacente.  
   
  Se o usuário atual possuir uma tabela com o nome especificado, as colunas dessa tabela são retornadas. Se *proprietário* não for especificado e o usuário atual não possuir uma tabela com especificado *nome*, esse procedimento procurará uma tabela com especificado *table_name* pertencentes a proprietário do banco de dados. Caso exista, as colunas dessa tabela serão retornadas.  
   
- [ @table_qualifier=] '*table_qualifier*'  
+ [ @table_qualifier= ] '*table_qualifier*'  
  É o nome do qualificador da tabela. *table_qualifier* está **sysname**, com um padrão NULL. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (*qualificador*). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Em alguns produtos, ele representa o nome do servidor do ambiente de banco de dados da tabela.  
   
- [ @fUsePattern=] '*fUsePattern*'  
+ [ @fUsePattern= ] '*fUsePattern*'  
  Determina se o caractere de sublinhado (_), porcentagem (%)) e entre colchetes ([ou]) caracteres são interpretados como caracteres curinga. Os valores válidos são 0 (correspondência de padrão desativada) e 1 (correspondência de padrão ativada). *fUsePattern* está **bit**, com um padrão de 1.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -62,7 +62,7 @@ sp_table_privileges [ @table_name = ] 'table_name'
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |TABLE_QUALIFIER|**sysname**|Nome do qualificador de tabela. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Esse campo pode ser NULL.|  
 |TABLE_OWNER|**sysname**|Nome do proprietário de tabela. Esse campo sempre retorna um valor.|  

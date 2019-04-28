@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0abd1541baeda6152a80980e85e6c902b45e886c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705165"
 ---
 # <a name="detect-failed-input-output-request"></a>Detectar a solicitação de entrada e saída com falha
   Esta regra verifica o log de eventos do sistema para o EventId 50. Este erro é causado por uma falha na solicitação de E/S.  

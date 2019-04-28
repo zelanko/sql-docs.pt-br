@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 6968331bc7699334f61997ec6a16e521c158078a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54123967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721053"
 ---
 # <a name="lesson-3-validating-the-subscription-and-measuring-latency"></a>Lição 3: Validando a assinatura e medindo a latência
   Nesta lição, você usará tokens de rastreadores para verificar se as alterações estão sendo replicadas para o Assinante e para determinar: a latência, o tempo decorrido entre o momento em que a alteração é feita no Publicador, e o momento em que ela aparece no Assinante. Esta lição exige que você tenha concluído a lição anterior, [lição 2: Criando uma assinatura na publicação transacional](lesson-2-creating-a-subscription-to-the-transactional-publication.md).  
@@ -34,7 +34,7 @@ ms.locfileid: "54123967"
   
 4.  Clique em **Inserir Rastreador**.  
   
-5.  Exibição de tempo decorrido para o token de rastreamento nas seguintes colunas: **Publicador para distribuidor**, **distribuidor para assinante**, **latência Total**. Um valor de **Pendente** indica que o token não alcançou um determinado ponto.  
+5.  Exibição de tempo decorrido para o token de rastreamento nas seguintes colunas: **Editor para Distribuidor**, **Distribuidor para Editor**, **Latência Total**. Um valor de **Pendente** indica que o token não alcançou um determinado ponto.  
   
 ## <a name="next-steps"></a>Próximas etapas  
  Nessa lição, você usou tokens de rastreador com êxito, para validar que as alterações de dados sejam replicadas do Publicador para o Assinante. É igualmente possível inserir, atualizar ou excluir dados da tabela **Product** do Publicador e consultar a tabela **Product** do Assinante para exibir essas alterações após serem replicadas.  

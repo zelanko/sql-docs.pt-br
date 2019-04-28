@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8f5776d2a7523f4d56bb48926a8f0bf0929e87f1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732878"
 ---
 # <a name="sequence-clustering-model-query-examples"></a>Sequence Clustering Model Query Examples
   Quando você cria uma consulta referente a um modelo de mineração de dados, pode criar uma consulta de conteúdo, que fornece detalhes sobre as informações armazenadas no modelo ou pode criar uma consulta de previsão, que usa os padrões no modelo para fazer previsões com base nos novos dados fornecidos. Para um modelo de clusterização de sequência, as consultas de conteúdo geralmente fornecem mais detalhes sobre os clusters encontrados ou as transições dentro desses clusters. Você também pode recuperar metadados sobre o modelo usando uma consulta.  
@@ -44,7 +44,7 @@ ms.locfileid: "48118116"
 ##  <a name="bkmk_ContentQueries"></a> Localizando informações sobre o Modelo de Clustering de Sequências  
  Para criar consultas significativas sobre o conteúdo de um modelo de mineração, você deve entender a estrutura do conteúdo do modelo e quais tipos de nós armazenam quais tipos de informações. Para obter mais informações, consulte [Conteúdo do modelo de mineração para modelos de clustering de sequência &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-sequence-clustering-models.md).  
   
-###  <a name="bkmk_Query1"></a> Exemplo de consulta 1: Usando o conjunto de linhas do esquema de mineração de dados para retornar parâmetros do modelo  
+###  <a name="bkmk_Query1"></a> Consulta de exemplo 1: Usando os conjunto de linhas de esquema de mineração de dados para retornar parâmetros de modelo  
  Ao consultar o conjunto de linhas do esquema de mineração de dados, você pode encontrar vários tipos de informações sobre o modelo, inclusive metadados básicos, a data e a hora de criação e do último processamento do modelo, o nome da estrutura de mineração na qual o modelo se baseia e a coluna usada como o atributo previsível.  
   
  A consulta a seguir retorna os parâmetros que foram usados para criar e treinar o modelo, `[Sequence Clustering]`. Você pode criar este modelo na Lição 5 do [Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md).  
@@ -67,7 +67,7 @@ WHERE MODEL_NAME = 'Sequence Clustering'
   
  O valor de 10 é usado por padrão porque reduzir o número de clusters torna mais fácil para a maioria das pessoas procurar e entender os agrupamentos nos dados. Entretanto, cada modelo e conjunto de dados é diferente. Talvez você queira fazer experiências com números de clusters diferentes para verificar qual valor de parâmetro gera o modelo mais preciso.  
   
-###  <a name="bkmk_Query2"></a> Exemplo de consulta 2: Obtendo uma lista de sequências para um estado  
+###  <a name="bkmk_Query2"></a> Consulta de exemplo 2: Obtendo uma lista de sequências para um estado  
  O conteúdo do modelo de mineração armazena as sequências encontradas nos dados de treinamento como um primeiro estado associado a uma lista de todos os segundos estados relacionados. O primeiro estado é usado como o rótulo da sequência e os segundos estados relacionados são denominados transições.  
   
  Por exemplo, a consulta a seguir retorna a lista completa de primeiros estados no modelo, antes do agrupamento de sequências em clusters.  Você pode obter essa lista retornando a lista de sequências (NODE_TYPE = 13) que têm o nó raiz do modelo como pai (PARENT_UNIQUE_NAME = 0). A palavra-chave FLATTENED torna os resultados mais fáceis de ler.  
@@ -96,7 +96,7 @@ AND [PARENT_UNIQUE_NAME] = 0
 |1081327|(linhas 4 a 36 omitidas)|||  
 |1081327|Women's Mountain Shorts|506|0.03307|  
   
- A lista de sequências no modelo sempre é classificada alfabeticamente em ordem crescente. A ordem das sequências é importante porque você pode encontrar as transições relacionadas examinando o número de ordem de sequência. O `Missing` valor sempre é a transição 0.  
+ A lista de sequências no modelo sempre é classificada alfabeticamente em ordem crescente. A ordem das sequências é importante porque você pode encontrar as transições relacionadas examinando o número de ordem de sequência. O valor `Missing` sempre é a transição 0.  
   
  Por exemplo, nos resultados anteriores, o produto "Women Mountain Shorts" é a sequência número 37 no modelo. Você pode usar essa informação para exibir todos os produtos que já foram comprados depois de "Women Mountain Shorts".  
   
@@ -143,7 +143,7 @@ WHERE NODE_UNIQUE_NAME = '1081365'
   
  Por exemplo, se houver quatro clusters, uma determinada sequência pode ter uma possibilidade de 40% de pertencer ao cluster 1, 30% de pertencer ao cluster 2, 20% de pertencer ao cluster 3 e 10% de pertencer ao cluster 4. Depois que o algoritmo determinar a qual cluster a transição tem maior probabilidade de pertencer, ele avaliará as probabilidades dentro do cluster pela probabilidade de precedência de cluster.  
   
-###  <a name="bkmk_Query3"></a> Exemplo de consulta 3: Usando procedimentos armazenados de sistema  
+###  <a name="bkmk_Query3"></a> Consulta de exemplo 3: Usando o sistema de procedimentos armazenados  
  Com esses exemplos de consulta, você pode observar que as informações armazenadas no modelo são complexas e que talvez seja preciso criar várias consultas para obter os dados necessários. No entanto, o visualizador MSC fornece um conjunto avançado de ferramentas para navegação gráfica pelas informações contidas em um modelo de clusterização de sequência e você ainda pode usar esse visualizador para consultar e detalhar o modelo.  
   
  Na maioria dos casos, as informações apresentadas no visualizador MSC são criadas com o uso de procedimentos armazenados de sistema do Analysis Services para consultar o modelo. Você pode escrever consultas DMX referentes ao conteúdo do modelo para recuperar as mesmas informações, mas os procedimentos armazenados de sistema do Analysis Services fornecem um atalho prático para explorar ou testar modelos.  
@@ -185,7 +185,7 @@ SELECT * FROM [Sequence Clustering].SAMPLE_CASES WHERE IsInNode('12')
  Para obter mais informações, consulte [SELECT FROM &#60;model&#62;.SAMPLE CASES &#40;DMX&#41;](/sql/dmx/select-from-model-dmx).  
   
 #### <a name="cluster-characteristics-and-cluster-discrimination"></a>Características e discriminação do cluster  
- A guia **Características do Cluster** resume os atributos principais de cada cluster, classificados por probabilidade. Você pode descobrir quantos casos pertencem a um cluster e como é a distribuição de casos no cluster: cada característica tem um certo suporte. Para visualizar as características de um cluster específico, você deve saber a ID do cluster.  
+ A guia **Características do Cluster** resume os atributos principais de cada cluster, classificados por probabilidade. Você pode descobrir quantos casos pertencem a um cluster e o que a distribuição de casos é no cluster: Cada característica tem um certo suporte. Para visualizar as características de um cluster específico, você deve saber a ID do cluster.  
   
  Os exemplos a seguir usam o procedimento armazenado de sistema `GetClusterCharacteristics`para retornar todas as características de Cluster 12 que têm uma pontuação de probabilidade acima do limite especificado de 0,0005.  
   
@@ -215,7 +215,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDi
 ## <a name="using-the-model-to-make-predictions"></a>Usando o modelo para fazer previsões  
  As consultas de previsão em um modelo de clusterização de sequência podem usar muitas das funções de previsão utilizadas com outros modelos de clusterização. Além disso, é possível usar a função de previsão especial, [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx), para fazer recomendações ou para prever os próximos estados.  
   
-###  <a name="bkmk_Query4"></a> Exemplo de consulta 4: Prever o próximo estado ou estados  
+###  <a name="bkmk_Query4"></a> Consulta de exemplo 4: Prever o próximo estado ou estados  
  Você pode usar a função [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) para prever o próximo estado mais provável, dado um valor. Também é possível prever vários estados seguintes: por exemplo, você pode retornar uma lista dos três principais produtos que um cliente provavelmente compra, para apresentar uma lista de recomendações.  
   
  O exemplo de consulta a seguir é uma consulta de previsão singleton que retorna as cinco previsões principais, junto com sua probabilidade. Como o modelo inclui uma tabela aninhada, você deve usar a tabela aninhada `[v Assoc Seq Line Items]`como a referência de coluna ao fazer previsões. Além disso, quando você fornece valores como entrada, é necessário juntar as colunas da tabela de caixa e da tabela aninhada, conforme mostrado pelas instruções SELECT aninhadas.  
@@ -274,8 +274,8 @@ AS t
   
 ## <a name="see-also"></a>Consulte também  
  [Consultas de mineração de dados](data-mining-queries.md)   
- [Referência técnica do algoritmo de Clustering de sequência da Microsoft](microsoft-sequence-clustering-algorithm-technical-reference.md)   
- [Algoritmo msc](microsoft-sequence-clustering-algorithm.md)   
- [Mining Model Content para modelos de Clustering de sequência &#40;Analysis Services - mineração de dados&#41;](mining-model-content-for-sequence-clustering-models.md)  
+ [Referência técnica do algoritmo MSC](microsoft-sequence-clustering-algorithm-technical-reference.md)   
+ [Microsoft Sequence Clustering Algorithm](microsoft-sequence-clustering-algorithm.md)   
+ [Conteúdo do modelo de mineração para modelos de clustering de sequência &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-sequence-clustering-models.md)  
   
   

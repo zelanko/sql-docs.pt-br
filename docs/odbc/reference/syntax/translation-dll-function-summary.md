@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 40405d6bbdc4c1444a85ef77557346b9a35eb54d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720312"
 ---
 # <a name="translation-dll-function-summary"></a>Resumo de funções de DLL da conversão
 A tabela a seguir descreve as funções de DLL de conversão. Para obter mais informações sobre a sintaxe e semântica para cada função, consulte [referência de função de DLL de conversão](../../../odbc/reference/syntax/translation-dll-api-reference.md).  

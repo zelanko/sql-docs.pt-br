@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c9225b2eb95d267c78caaf7521a8dee0b436db08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163996"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733675"
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>Exibir a fórmula para um modelo de série temporal (mineração de dados)
   O [!INCLUDE[msCoName](../../includes/msconame-md.md)] inData do Visualizador de série temporal Designer de mineração fornece a maneira mais fácil de exibir os detalhes da equação de regressão usada em um modelo de série temporal.  
@@ -79,8 +79,8 @@ ms.locfileid: "48163996"
 5.  Se a **Legenda de Mineração** não estiver disponível, clique com o botão direito do mouse no nó e selecione **Mostrar Legenda**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Tarefas do Visualizador do modelo e instruções de mineração](mining-model-viewer-tasks-and-how-tos.md)   
- [Procurar um modelo usando o visualizador MTS](browse-a-model-using-the-microsoft-time-series-viewer.md)   
+ [Tarefas e instruções do visualizador do modelo de mineração](mining-model-viewer-tasks-and-how-tos.md)   
+ [Procurar um modelo usando o Visualizador MTS](browse-a-model-using-the-microsoft-time-series-viewer.md)   
  [Exemplos de consulta de modelos de série temporal](time-series-model-query-examples.md)  
   
   

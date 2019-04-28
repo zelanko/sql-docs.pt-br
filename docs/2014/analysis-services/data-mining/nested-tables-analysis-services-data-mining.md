@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 278244f5cf8f7a25f497ece40490920c7a8a9c8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733250"
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>Tabelas aninhadas (Analysis Services - Mineração de Dados)
   No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], os dados devem ser alimentados com um algoritmo de mineração de dados como uma série de casos contidos em uma tabela de casos. No entanto, nem todos os casos podem ser descritos por uma única linha de dados. Por exemplo, um caso pode ser derivado de duas tabelas: uma contendo informações sobre o cliente e outra as compras do cliente. Um único cliente na tabela de informações de clientes pode ter vários itens na tabela de compras do cliente, o que dificulta a descrição dos dados em uma única linha. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece um método exclusivo para tratar desses casos, com o uso de *tabelas aninhadas*. O conceito de uma tabela aninhada é demonstrado na ilustração a seguir.  
@@ -42,7 +42,7 @@ ms.locfileid: "48121086"
  É possível criar tabelas aninhadas programaticamente usando extensões DMX ou Objetos de Gerenciamento de Análise (AMO) ou o Assistente de Mineração de Dados e o Designer de Mineração de Dados no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="using-nested-table-columns-in-a-mining-model"></a>Usando colunas da tabela aninhada em um modelo de mineração  
- Na tabela de casos, com frequência, a chave é uma ID de cliente, um nome de produto ou uma data em uma série: dados que identificam de forma exclusiva uma linha da tabela. para obter informações sobre a ferramenta de configuração e recursos adicionais. No entanto, em tabelas aninhadas, geralmente a chave não é a chave relacional (ou chave estrangeira), mas sim a coluna que representa o atributo que você está modelando.  
+ Na tabela de casos, com frequência, a chave é uma ID de cliente, um nome de produto ou uma data em uma série: dados que identificam de forma exclusiva uma linha da tabela. . No entanto, em tabelas aninhadas, geralmente a chave não é a chave relacional (ou chave estrangeira), mas sim a coluna que representa o atributo que você está modelando.  
   
  Por exemplo, se a tabela de casos contiver pedidos e a tabela aninhada os itens do pedido, seria interessante modelar a relação entre os itens armazenados nas tabelas aninhadas de vários pedidos, que são armazenados na tabela de casos. Sendo assim, embora a tabela aninhada **Items** esteja unida à tabela de casos **Orders** pela chave relacional **OrderID**, você não deve usar **OrderID** como chave da tabela aninhada. Em vez disso, selecione a coluna **Items** como chave da tabela aninhada, pois ela contém os dados que você deseja modelar. Na maioria das vezes, é possível ignorar com segurança **OrderID** no modelo de mineração porque a relação entre a tabela de casos e a tabela aninhada já foi estabelecida pela definição da exibição da fonte de dados.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48121086"
  Para obter mais informações sobre como criar e usar filtros de modelo, consulte [Filtros para modelos de mineração &#40;Analysis Services – Data Mining&#41;](mining-models-analysis-services-data-mining.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Estruturas de mineração &#40;Analysis Services - mineração de dados&#41;](mining-structures-analysis-services-data-mining.md)  
+ [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Estruturas de Mineração &#40;Analysis Services – Data Mining&#41;](mining-structures-analysis-services-data-mining.md)  
   
   

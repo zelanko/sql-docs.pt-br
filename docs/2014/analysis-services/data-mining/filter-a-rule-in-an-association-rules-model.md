@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 509f9f08449499e2cf4bd155aa468b165fb9a689
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722478"
 ---
 # <a name="filter-a-rule-in-an-association-rules-model"></a>Filtrar uma regra em um modelo de regras de associação
   Você pode usar a filtragem com modelos de associação para restringir os resultados a apenas as associações do seu interesse. Por exemplo, você pode filtrar as regras para mostrar apenas aquelas que incluem um produto específico.  
@@ -44,7 +44,7 @@ ms.locfileid: "48118626"
   
 5.  Para **Importância mínima**, aumente o valor da importância para exibir menos regras ou diminua o valor para exibir mais regras.  
   
-6.  Para **Mostrar**, selecione um das seguintes opções: **Mostrar nome e valor do atributo**, **Mostrar apenas o nome de atributo**ou **Mostrar apenas o valor de atributo**.  
+6.  Para **Mostrar**, selecione uma das seguintes opções: **Mostrar nome de atributo e valor**, **Mostrar apenas nome de atributo**, ou **Mostrar apenas o valor do atributo**.  
   
 7.  Para **Máximo de linhas**, aumente o valor para aumentar o número total de regras que atendem às condições especificadas ou diminua o valor para limitar o número de regras retornadas. As regras são ordenadas por probabilidade, assim você poderia eliminar regras adicionais que atendem às condições especificadas de probabilidade ou importância.  
   
@@ -60,8 +60,8 @@ ms.locfileid: "48118626"
 -   [Exemplos de consulta de um modelo de associação](association-model-query-examples.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Tarefas do Visualizador do modelo e instruções de mineração](mining-model-viewer-tasks-and-how-tos.md)   
- [Procurar um modelo usando o Visualizador de regras de associação da Microsoft](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
+ [Tarefas e instruções do visualizador do modelo de mineração](mining-model-viewer-tasks-and-how-tos.md)   
+ [Procurar um modelo usando o Visualizador de Regras de Associação da Microsoft](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
  [Lição 3: Criando um cenário de cesta de compras &#40;Tutorial de mineração de dados intermediário&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

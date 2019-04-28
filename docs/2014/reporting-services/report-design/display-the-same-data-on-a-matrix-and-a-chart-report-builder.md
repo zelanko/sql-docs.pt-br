@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c446593803d54a3829c024f590eaf95250d7cfe6
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956552"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62825642"
 ---
 # <a name="display-the-same-data-on-a-matrix-and-a-chart-report-builder"></a>Exibir os mesmos dados em uma matriz e um gráfico (Construtor de Relatórios)
   Quando quiser mostrar os mesmos dados em uma matriz e em um gráfico, defina propriedades em ambas as regiões de dados para especificar o mesmo conjunto de dados, além das mesmas expressões para filtros, grupos, classificações e dados.  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ff10d4c1c2c70049549d848dd31736dbd898fb28
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702737"
 ---
 # <a name="move-table-dialog-box-ssas"></a>Caixa de diálogo Mover Tabela (SSAS)
   A caixa de diálogo **Mover Tabela** permite alterar a ordem em que as tabelas aparecem no designer de modelo. Para acessar essa caixa de diálogo, clique com o botão direito do mouse na guia, na parte inferior da tabela que você deseja mover, e selecione **Mover**.  

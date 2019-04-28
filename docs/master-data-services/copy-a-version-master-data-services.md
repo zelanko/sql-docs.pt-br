@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8ea81dff0f7c302395e4577d0b336b06f7c5d3fc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678544"
 ---
 # <a name="copy-a-version-master-data-services"></a>Copiar uma versão (Master Data Services)
 
@@ -49,11 +49,11 @@ ms.locfileid: "52806328"
   
 4.  Na caixa de diálogo de confirmação, clique em **OK**.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Próximas etapas  
   
 -   [Alterar o nome de uma versão &#40;Master Data Services&#41;](../master-data-services/change-a-version-name-master-data-services.md)  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Versões &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   
   

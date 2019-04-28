@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 124795b07c79d0b2478bb91121d37783a48a1782
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725850"
 ---
 # <a name="grant-permissions-on-a-data-source-object-analysis-services"></a>Conceder permissões em um objeto de fonte de dados (Analysis Services)
   Normalmente, a maioria dos usuários do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] não precisa de acesso às fontes de dados subjacentes a um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Os usuários normalmente só consultam os dados no banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Porém, no contexto de mineração de dados, como executar previsões com base em um modelo de mineração, um usuário tem que unir os dados obtidos de um modelo de mineração com os dados fornecidos pelo usuário. Para conectar-se à fonte de dados que contém os dados fornecidos pelo usuário, o usuário usa uma consulta DMX (extensões DMX) que contém as cláusulas [OPENQUERY &#40;DMX&#41;](/sql/dmx/source-data-query-openquery) e [OPENROWSET &#40;DMX&#41;](/sql/dmx/source-data-query-openrowset).  
@@ -56,10 +56,10 @@ ms.locfileid: "48126256"
   
 ## <a name="see-also"></a>Consulte também  
  [Fontes de dados em modelos multidimensionais](data-sources-in-multidimensional-models.md)   
- [Propriedades de cadeia de caracteres de Conexão &#40;Analysis Services&#41;](../instances/connection-string-properties-analysis-services.md)   
+ [Propriedades de cadeia de conexão &#40;Analysis Services&#41;](../instances/connection-string-properties-analysis-services.md)   
  [Metodologias de autenticação com suporte no Analysis Services](../instances/authentication-methodologies-supported-by-analysis-services.md)   
  [Conceder acesso personalizado a dados da dimensão &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
- [Conceder permissões de cubo ou modelo de &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
- [Conceder acesso personalizado a dados da célula &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
+ [Conceder permissões de cubo ou modelo &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
+ [Conceder acesso personalizado a dados de célula &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   
   

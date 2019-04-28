@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 82b2d4a687c490ed1909a27fc55fdece9cc3662c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794356"
 ---
 # <a name="set-the-data-type-of-a-column-ssas-tabular"></a>Definir o tipo de dados de uma coluna (SSAS tabular)
   Quando você importa ou cola dados em um modelo, o designer de modelo detectará automaticamente e aplicará os tipos dos dados. Depois que adicionar dados ao modelo, você poderá modificar manualmente o tipo de dados de uma coluna para alterar o modo como os dados são armazenados. Se você deseja apenas alterar o formato de exibição dos dados sem alterar o modo como são armazenados, faça isso.  
@@ -69,6 +69,6 @@ ms.locfileid: "48083206"
  Para obter informações detalhadas sobre os tipos de dados usados em modelos semânticos de business intelligence, como eles são convertidos implicitamente e como tipos de dados diferentes são usados em fórmulas, consulte [Data Types Supported &#40;SSAS Tabular&#41;](data-types-supported-ssas-tabular.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Tipos de dados com suporte &#40;Tabular do SSAS&#41;](data-types-supported-ssas-tabular.md)  
+ [Tipos de dados com suporte &#40;SSAS de Tabela&#41;](data-types-supported-ssas-tabular.md)  
   
   

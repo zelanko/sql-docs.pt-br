@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 56942ebc74e1a0b49303f842ec2668a46f6f209f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689344"
 ---
 # <a name="change-the-properties-of-a-mining-structure"></a>Alterar as propriedades de uma estrutura de mineração
   Há dois tipos de propriedades em uma estrutura de mineração e ambos podem ser modificados:  

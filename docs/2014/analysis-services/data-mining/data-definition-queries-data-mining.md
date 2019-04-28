@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf9674f348541e0c4d8fe4f8c6c35740124b91d2
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62723118"
 ---
 # <a name="data-definition-queries-data-mining"></a>Consultas de definição de dados (mineração de dados)
   Para mineração de dados, a categoria *consulta de definição de dados* significa instruções DMX ou comandos XMLA que fazem o seguinte:  

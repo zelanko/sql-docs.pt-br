@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e7f7f04b04792167fe9c4733f3e066c362f3cae4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843050"
 ---
 # <a name="using-in-memory-oltp-in-a-vm-environment"></a>Usando OLTP na Memória em um Ambiente de VM
   A virtualização do servidor pode ajudá-lo a diminuir os custos operacionais e de capital com a TI, e atingir uma maior eficiência de TI com processos de provisionamento de aplicativo, manutenção, disponibilidade e backup/recuperação aprimorados. Com os avanços tecnológicos recentes, as cargas de trabalho de banco de dados complexas podem mais ser prontamente consolidadas usando a virtualização. Este tópico sobre as práticas recomendadas para usar o [!INCLUDE[hek_1](../includes/hek-1-md.md)] em um ambiente virtualizado.  

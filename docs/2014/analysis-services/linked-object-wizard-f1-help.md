@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e6d1cb71991f8fd45d4cad0de48e7dbd266a6032
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728363"
 ---
 # <a name="linked-object-wizard-f1-help"></a>Ajuda F1 do Assistente para Objetos Vinculados
   Use o Assistente para Objetos Vinculados para vincular ou importar de objetos em outros bancos de dados do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , da mesma ou de outra instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , para o projeto atual do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Os objetos vinculados continuam a refletir as alterações em seus bancos de dados de origem do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , enquanto os objetos importados não refletem as alterações feitas em seu banco de dados de origem. Dimensões e grupos de medidas, inclusive as medidas associadas, podem ser vinculados. Ações, KPIs (indicadores chave de desempenho) e cálculos podem ser importados.  

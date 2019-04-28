@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 50cd0b4e2336b20ab12b8c5e6fda6615af03abd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722682"
 ---
 # <a name="deployment-of-data-mining-solutions"></a>Implantação de soluções de mineração de dados
   A última etapa no processo de mineração de dados é implantar os modelos para um ambiente de produção. A implantação é importante porque torna os modelos disponíveis para usuários, para que você possa executar qualquer uma das tarefas a seguir:  
@@ -44,7 +44,7 @@ ms.locfileid: "48087636"
  [Recursos relacionados](#bkmk_Resources)  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Implantar uma solução de Mineração de dados em versões anteriores do SQL Server](deploy-a-data-mining-solution-to-previous-versions-of-sql-server.md)  
+ [Implantar uma solução de mineração de dados em versões anteriores do SQL Server](deploy-a-data-mining-solution-to-previous-versions-of-sql-server.md)  
   
  [Exportar e importar objetos de Mineração de dados](export-and-import-data-mining-objects.md)  
   
@@ -85,6 +85,6 @@ ms.locfileid: "48087636"
 ## <a name="see-also"></a>Consulte também  
  [Processamento de objetos de modelo multidimensional](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Interfaces de consulta de mineração de dados](data-mining-query-tools.md)   
- [Requisitos e considerações de processamento &#40;mineração de dados&#41;](processing-requirements-and-considerations-data-mining.md)  
+ [Requisitos e considerações de processamento &#40;Mineração de dados&#41;](processing-requirements-and-considerations-data-mining.md)  
   
   

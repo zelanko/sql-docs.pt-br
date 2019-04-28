@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e3d93d564dedbb5a08cf403d771a6f8e794fb498
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733451"
 ---
 # <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>Conteúdo do modelo de mineração para modelos de clustering (Analysis Services – Mineração de Dados)
   Este tópico descreve o conteúdo do modelo de mineração que é específico para modelos que usam o algoritmo Microsoft Clustering. Para obter uma explicação geral sobre o conteúdo do modelo de mineração para todos os tipos de modelo, consulte [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -51,7 +51,7 @@ ms.locfileid: "48190276"
 > [!NOTE]  
 >  A variância representa a variação total do cluster. Quando esse valor é pequeno, indica que a maioria dos valores da coluna estão bem próximos da média. Para obter o desvio padrão, calcule a raiz quadrada da variância.  
   
- Observe que para cada atributo existe um `Missing` tipo que informa quantos casos não tinham dados para o atributo de valor. Dados ausentes podem ser importantes e afetar os cálculos de várias formas, dependendo do tipo de dados. Para obter mais informações, consulte [Missing Values &#40;Analysis Services - Data Mining&#41;](missing-values-analysis-services-data-mining.md).  
+ Observe que para cada atributo existe um tipo de valor `Missing` que indica quantos casos não tinham dados para esse atributo. Dados ausentes podem ser importantes e afetar os cálculos de várias formas, dependendo do tipo de dados. Para obter mais informações, consulte [Valores ausentes &#40;Analysis Services – Data Mining&#41;](missing-values-analysis-services-data-mining.md).  
   
 ## <a name="model-content-for-a-clustering-model"></a>Conteúdo do modelo para um modelo de clustering  
  Esta seção fornece detalhes e exemplos somente para as colunas de conteúdo do modelo de mineração que são relevantes para os modelos de clustering.  
@@ -76,7 +76,7 @@ ms.locfileid: "48190276"
  NODE_TYPE  
  Um modelo de clustering gera os seguintes tipos de nó:  
   
-|ID e nome do nó|Description|  
+|ID e nome do nó|Descrição|  
 |----------------------|-----------------|  
 |1 (Modelo)|Nó raiz do modelo.|  
 |5 (Cluster)|Contém a contagem de casos do cluster, as características dos casos do cluster e estatísticas que descrevem os valores do cluster.|  
@@ -149,7 +149,7 @@ ms.locfileid: "48190276"
  MSOLAP_NODE_SHORT_CAPTION  
  Um rótulo usado para exibição. Não é possível alterar essa legenda.  
   
- **Nó pai** O tipo de modelo: modelo de clustering  
+ **Nó pai** o tipo de modelo: Modelo de cluster  
   
  **Nós de cluster** O nome do cluster. Exemplo: Cluster 1.  
   
@@ -160,8 +160,8 @@ ms.locfileid: "48190276"
 >  A estrutura e o conteúdo do modelo permanecem inalterados, independentemente do método ou dos parâmetros de clustering usados.  
   
 ## <a name="see-also"></a>Consulte também  
- [Conteúdo do modelo de mineração &#40;Analysis Services - mineração de dados&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Visualizadores do modelo de mineração de dados](data-mining-model-viewers.md)   
+ [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Visualizadores do Modelo de Mineração de Dados](data-mining-model-viewers.md)   
  [Algoritmo Microsoft Clustering](microsoft-clustering-algorithm.md)   
  [Consultas de mineração de dados](data-mining-queries.md)  
   

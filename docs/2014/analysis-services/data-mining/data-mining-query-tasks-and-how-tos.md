@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cfa2d33d949aad49701e5294329349dc231965db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722822"
 ---
 # <a name="data-mining-query-tasks-and-how-tos"></a>Tarefas e instruções de consulta de Data Mining
   A capacidade de criar consultas será essencial se você for utilizar seus modelos de mineração de dados. Esta seção contém links para exemplos sobre como criar consultas em um modelo de mineração de dados usando as ferramentas fornecidas no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Se precisar de mais informações sobre a definição de uma consulta de mineração de dados ou sobre os diferentes tipos de consultas que você pode criar, consulte [Consultas de mineração de dados](data-mining-queries.md).  
@@ -28,7 +28,7 @@ ms.locfileid: "48189636"
   
 -   [Criar uma consulta de previsão usando o Construtor de Consultas de previsão](create-a-prediction-query-using-the-prediction-query-builder.md)  
   
--   [Criar uma consulta Singleton no Designer de Mineração de dados](create-a-singleton-query-in-the-data-mining-designer.md)  
+-   [Criar uma consulta Singleton no Designer de Mineração de Dados](create-a-singleton-query-in-the-data-mining-designer.md)  
   
 -   [Criar uma consulta de previsão usando o Construtor de Consultas de previsão](create-a-prediction-query-using-the-prediction-query-builder.md)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "48189636"
  [Criar uma consulta de previsão Singleton a partir de um modelo](create-a-singleton-prediction-query-from-a-template.md)  
  Descreve como usar as ferramentas do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para criar e executar uma consulta de previsão.  
   
- [Criar uma consulta de previsão Singleton a partir de um modelo](create-a-singleton-prediction-query-from-a-template.md)  
+ [Criar uma consulta de previsão singleton a partir de um modelo](create-a-singleton-prediction-query-from-a-template.md)  
  Descreve como usar os modelos fornecidos no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para adicionar parâmetros a uma consulta de previsão.  
   
  [Alterar o valor do tempo limite de consultas de mineração de dados](change-the-time-out-value-for-data-mining-queries.md)  
@@ -59,7 +59,7 @@ ms.locfileid: "48189636"
  Descreve como criar uma consulta no conteúdo do modelo de mineração usando os modelos XMLA do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de linguagem de expressão e de consulta &#40;Analysis Services&#41;](https://msdn.microsoft.com/library/gg492188(SQL.130).aspx)   
- [Procedimentos armazenados da mineração de dados &#40;Analysis Services - mineração de dados&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
+ [Referência à linguagem de consulta e expressão &#40;Analysis Services&#41;](https://msdn.microsoft.com/library/gg492188(SQL.130).aspx)   
+ [Procedimentos armazenados da mineração de dados &#40;Analysis Services – Mineração de dados&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
   

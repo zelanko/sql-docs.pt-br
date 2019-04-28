@@ -18,14 +18,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4cdbacc27816464440fe57db7c7d727026754220
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733559"
 ---
 # <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>Conteúdo do modelo de mineração para modelos de associação (Analysis Services – Mineração de Dados)
-  Este tópico descreve o conteúdo do modelo de mineração específico para modelos que usam o algoritmo Regras de Associação da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obter uma explicação sobre a terminologia geral e estatística relacionada ao conteúdo do modelo de mineração que se aplica a todos os tipos de modelo, consulte [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
+  Este tópico descreve o conteúdo do modelo de mineração específico para modelos que usam o algoritmo Regras de Associação da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obter uma explicação sobre a terminologia geral e estatística relacionada ao conteúdo do modelo de mineração que se aplica a todos os tipos de modelo, consulte [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-an-association-model"></a>Entendendo a estrutura de um modelo de associação  
  Um modelo de associação tem uma estrutura simples. Cada modelo tem um único nó pai que representa o modelo e seus metadados, e cada nó pai possui uma lista simples de conjuntos de itens e regras. Os conjuntos de itens e as regras não são organizados em árvores, são ordenados com os conjuntos de itens primeiro e depois as regras, como mostra o diagrama a seguir.  
@@ -41,7 +41,7 @@ ms.locfileid: "48135056"
 ## <a name="model-content-for-an-association-model"></a>Conteúdo de um modelo de associação  
  Esta seção fornece detalhes e exemplos somente para as colunas de conteúdo do modelo de mineração que são relevantes para os modelos de associação.  
   
- Para obter informações sobre as colunas de uso general no conjunto de linhas de esquema, como MODEL_CATALOG e MODEL_NAME, consulte [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
+ Para obter informações sobre as colunas de uso general no conjunto de linhas de esquema, como MODEL_CATALOG e MODEL_NAME, consulte [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
  MODEL_CATALOG  
  Nome do banco de dados no qual o modelo é armazenado.  
@@ -96,18 +96,18 @@ ms.locfileid: "48135056"
   
  **Nó pai** Inclui uma lista separada por vírgula das seguintes informações sobre o modelo:  
   
-|Item|Description|  
+|Item|Descrição|  
 |----------|-----------------|  
 |ITEMSET_COUNT|Contagem de todos os conjuntos de itens do modelo.|  
 |RULE_COUNT|Contagem de todas as regras do modelo.|  
 |MIN_SUPPORT|O suporte mínimo localizado para qualquer conjunto de itens único.<br /><br /> **Observação** Esse valor pode ser diferente daquele que você definiu para o parâmetro *MINIMUM_SUPPORT* .|  
 |MAX_SUPPORT|O suporte máximo localizado para qualquer conjunto de itens único.<br /><br /> **Observação** Esse valor pode ser diferente daquele que você definiu para o parâmetro *MAXIMUM_SUPPORT* .|  
-|MIN_ITEMSET_SIZE|O tamanho do menor conjunto de itens, representado por uma contagem de itens.<br /><br /> Um valor de 0 indica que o `Missing` estado foi tratado como um item independente.<br /><br /> **Observação** O valor padrão do parâmetro *MINIMUM_ITEMSET_SIZE* é 1.|  
+|MIN_ITEMSET_SIZE|O tamanho do menor conjunto de itens, representado por uma contagem de itens.<br /><br /> Um valor de 0 indica que o estado `Missing` foi tratado como um item independente.<br /><br /> **Observação** O valor padrão do parâmetro *MINIMUM_ITEMSET_SIZE* é 1.|  
 |MAX_ITEMSET_SIZE|Indica o tamanho do maior conjunto de dados localizado.<br /><br /> **Observação** Esse valor é restrito pelo valor que você definiu para o parâmetro *MAX_ITEMSET_SIZE* ao criar o modelo. Esse valor nunca pode exceder aquele valor; no entanto, pode ser menor. O valor padrão é 3.|  
-|MIN_PROBABILITY|A probabilidade mínima detectada para qualquer conjunto de itens único ou regra do modelo.<br /><br /> Exemplo: 0,400390625<br /><br /> **Observação** Para conjuntos de itens, esse valor é sempre maior que valor que você definiu para o parâmetro *MINIMUM_PROBABILITY* ao criar o modelo.|  
-|MAX_PROBABILITY|A probabilidade máxima detectada para qualquer conjunto de itens único ou regra do modelo.<br /><br /> Example: 1<br /><br /> **Observação** Não há nenhum parâmetro para restringir a probabilidade máxima de conjuntos de itens. Para eliminar itens que são muito frequentes, use o parâmetro *MAXIMUM_SUPPORT* .|  
-|MIN_LIFT|O valor mínimo de comparação de precisão fornecido pelo modelo para qualquer conjunto de itens.<br /><br /> Exemplo: 0,14309369632511<br /><br /> Observação: saber o valor mínimo de comparação de precisão pode ajudar a determinar se a comparação de precisão de algum conjunto de dados é significativa.|  
-|MAX_LIFT|O valor máximo de comparação de precisão fornecido pelo modelo para qualquer conjunto de itens.<br /><br /> Exemplo: 1,95758227647523 **Observação** Saber o valor máximo de comparação de precisão pode ajudar a determinar se a comparação de precisão de qualquer conjunto de dados é significante.|  
+|MIN_PROBABILITY|A probabilidade mínima detectada para qualquer conjunto de itens único ou regra do modelo.<br /><br /> Exemplo: 0.400390625<br /><br /> **Observação** Para conjuntos de itens, esse valor é sempre maior que valor que você definiu para o parâmetro *MINIMUM_PROBABILITY* ao criar o modelo.|  
+|MAX_PROBABILITY|A probabilidade máxima detectada para qualquer conjunto de itens único ou regra do modelo.<br /><br /> Exemplo: 1<br /><br /> **Observação** Não há nenhum parâmetro para restringir a probabilidade máxima de conjuntos de itens. Para eliminar itens que são muito frequentes, use o parâmetro *MAXIMUM_SUPPORT* .|  
+|MIN_LIFT|O valor mínimo de comparação de precisão fornecido pelo modelo para qualquer conjunto de itens.<br /><br /> Exemplo: 0.14309369632511<br /><br /> Observação: Conhecer a comparação de precisão mínima pode ajudar a determinar se a comparação de precisão de qualquer conjunto de dados é significante.|  
+|MAX_LIFT|O valor máximo de comparação de precisão fornecido pelo modelo para qualquer conjunto de itens.<br /><br /> Exemplo: 1,95758227647523 **Observação** saber a comparação de precisão máximo pode ajudá-lo a determinar se a comparação de precisão de qualquer conjunto de dados é significante.|  
   
  **Nó do conjunto de itens** Os nós de conjuntos de itens contêm uma lista dos itens, exibida como uma cadeia de caracteres de texto separada por vírgula.  
   
@@ -194,8 +194,8 @@ ms.locfileid: "48135056"
  Em branco.  
   
 ## <a name="see-also"></a>Consulte também  
- [Conteúdo do modelo de mineração &#40;Analysis Services - mineração de dados&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Algoritmo associação da Microsoft](microsoft-association-algorithm.md)   
- [Exemplos de consulta de um modelo de associação](association-model-query-examples.md)  
+ [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Algoritmo Associação da Microsoft](microsoft-association-algorithm.md)   
+ [Exemplos de consulta de um modelo associação](association-model-query-examples.md)  
   
   

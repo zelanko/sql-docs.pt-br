@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 873aaee7641c84ad3e204c860a61ea5bc138fae6
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835748"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity-f1-help-reference"></a>Referência da Ajuda F1 Change Data Capture Designer para Oracle da Attunity
   O Change Data Capture Designer para Oracle da Attunity é usado para criar e gerenciar a Instância Oracle CDC. Os tópicos nesta seção explicam como realizar as tarefas disponíveis no CDC Designer Console.  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0c1ae3f098aea3886d5cb84a0bfcb7553a8181fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719732"
 ---
 # <a name="the-driver-manager"></a>O Gerenciador de Driver
 O *Gerenciador de Driver* é uma biblioteca que gerencia a comunicação entre aplicativos e drivers. Por exemplo, nas plataformas do Microsoft® Windows®, o Gerenciador de Driver é uma biblioteca de vínculo dinâmico (DLL) que é escrita pela Microsoft e pode ser redistribuída por usuários de que o SDK do MDAC 2.8 SP1 do redistribuível.  
@@ -32,7 +32,7 @@ O *Gerenciador de Driver* é uma biblioteca que gerencia a comunicação entre a
   
  O Gerenciador de Driver resolve esse problema, fornecendo um único lugar para chamar cada função. O aplicativo está vinculado às funções de ODBC Driver Manager e chamadas no Gerenciador de Driver, não o driver. O aplicativo identifica a fonte de dados e driver de destino com um *identificador de conexão*. Quando ele carregar um driver, o Gerenciador de Driver cria uma tabela de ponteiros para as funções no driver. Ele usa o identificador de conexão passado pelo aplicativo para localizar o endereço da função no driver de destino e chama essa função por endereço.  
   
- Geralmente, o Gerenciador de Driver passa apenas chamadas de função do aplicativo para o driver correto. No entanto, ele também implementa algumas funções (**SQLDataSources**, **SQLDrivers**, e **SQLGetFunctions**) e executa a verificação de erros básicos. Por exemplo, o Gerenciador de Driver verifica que os identificadores não são ponteiros nulos, que são chamadas de funções na ordem correta e que determinados argumentos de função são válidos. Para obter uma descrição completa dos erros verificados pelo Gerenciador de Driver, consulte a seção de referência para cada função e [apêndice b: tabelas de transição de estado de ODBC](../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
+ Geralmente, o Gerenciador de Driver passa apenas chamadas de função do aplicativo para o driver correto. No entanto, ele também implementa algumas funções (**SQLDataSources**, **SQLDrivers**, e **SQLGetFunctions**) e executa a verificação de erros básicos. Por exemplo, o Gerenciador de Driver verifica que os identificadores não são ponteiros nulos, que são chamadas de funções na ordem correta e que determinados argumentos de função são válidos. Para obter uma descrição completa dos erros verificados pelo Gerenciador de Driver, consulte a seção de referência para cada função e [apêndice b: Tabelas de transição de estado ODBC](../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
  A função de principal do Gerenciador de Driver final é carregar e descarregar drivers. O aplicativo carrega e descarrega apenas o Gerenciador de Driver. Quando desejar usar um driver específico, ele chama uma função de conexão (**SQLConnect**, **SQLDriverConnect**, ou **SQLBrowseConnect**) no Gerenciador de Driver e especifica o nome de uma determinada fonte de dados ou driver, como "Contabilidade" ou "SQL Server". O Gerenciador de Driver usando esse nome, procura informações de fonte de dados para o nome de arquivo do driver, como Sqlsrvr.dll. Em seguida, carrega o driver (supondo que não tenha sido carregado), armazena o endereço de cada função no driver e chama a função de conexão no driver, que, em seguida, inicializa a próprio e conecta-se à fonte de dados.  
   

@@ -16,11 +16,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dff9b07ddf0bd5062c1e10a2d31fe2fe1fa5c50f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793092"
 ---
 # <a name="create-a-data-quality-project"></a>Criar um projeto de qualidade de dados
   Este tópico descreve como criar um projeto de qualidade de dados usando o [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Um projeto de qualidade de dados é usado para executar a atividade de limpeza ou correspondência no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
@@ -51,13 +51,13 @@ ms.locfileid: "56020167"
   
     4.  Na área **Selecionar Atividade** , clique em uma atividade que você deseja executar usando este projeto de qualidade de dados:  
   
-        -   **Limpeza**: Selecione esta atividade para limpar os dados de origem.  
+        -   **Limpeza**: selecione esta atividade para limpar os dados de origem.  
   
-        -   **Correspondência**: Selecione esta atividade para fazer a correspondência. Esta atividade só estará disponível se a base de dados de conhecimento selecionada para o projeto de qualidade de dados contiver uma política de correspondência.  
+        -   **Correspondência**: selecione esta atividade para fazer a correspondência. Esta atividade só estará disponível se a base de dados de conhecimento selecionada para o projeto de qualidade de dados contiver uma política de correspondência.  
   
 4.  Clique em **Criar** para criar um projeto de qualidade de dados.  
   
-##  <a name="FollowUp"></a> Acompanhamento: Depois de criar um projeto de qualidade de dados  
+##  <a name="FollowUp"></a> Acompanhamento: Após criar um projeto de qualidade de dados  
  Depois que você criar um projeto de qualidade de dados, verá um assistente que deverá ser usado para executar a atividade selecionada: limpeza ou correspondência. Para obter mais informações sobre a limpeza e correspondência de atividades, consulte [Limpeza de dados](../../2014/data-quality-services/data-cleansing.md) e [Correspondência de dados](../../2014/data-quality-services/data-matching.md).  
   
   

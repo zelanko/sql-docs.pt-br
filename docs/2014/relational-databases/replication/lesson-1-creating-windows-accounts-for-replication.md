@@ -14,16 +14,16 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a1457a6d407b2b20c28e93c0ed681ab1dc8109d4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721164"
 ---
 # <a name="lesson-1-creating-windows-accounts-for-replication"></a>Lição 1: Criando Windows contas para replicação
   Nesta lição, você criará contas de Windows para executar os agentes de replicação. Você criará uma conta de Windows separada no servidor local para os seguintes agentes:  
   
-|Agente|Local padrão|Nome da conta|  
+|Agente|Location|Nome da conta|  
 |-----------|--------------|------------------|  
 |Snapshot Agent|Publicador|\<*machine_name*>\repl_snapshot|  
 |Agente de Leitor de Log|Publicador|\<*machine_name*>\repl_logreader|  
@@ -62,7 +62,7 @@ ms.locfileid: "54127446"
 6.  Clique em **Fechar**.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- Você criou contas de Windows com sucesso para os agentes de replicação. A seguir, você configurará a pasta de instantâneo. Consulte [lição 2: Preparando a pasta de instantâneo](lesson-2-preparing-the-snapshot-folder.md).  
+ Você criou contas de Windows com sucesso para os agentes de replicação. A seguir, você configurará a pasta de instantâneo. Veja a [Lição 2: Preparando a pasta de instantâneo](lesson-2-preparing-the-snapshot-folder.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral dos agentes de replicação.](agents/replication-agents-overview.md)  

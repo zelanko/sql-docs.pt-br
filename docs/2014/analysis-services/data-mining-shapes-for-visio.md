@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 92630f90d7b18ad668dcffc02feeb65990cf3c84
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689991"
 ---
 # <a name="data-mining-shapes-for-visio"></a>Formas de mineração de dados para o Visio
   As Formas de Mineração de Dados para o Visio fornecem modelos personalizados para exibir modelos de mineração de dados. Usando esses modelos, é possível se conectar a um modelo que você criou, e criar apresentações interativas para ilustrar os resultados da mineração de dados.  

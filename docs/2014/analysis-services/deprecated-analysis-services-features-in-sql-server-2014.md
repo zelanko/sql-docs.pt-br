@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 620e74b3854b5cc590ffb84e2b8b70b33d0bfcd3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732202"
 ---
 # <a name="deprecated-analysis-services-features-in-sql-server-2014"></a>Recursos do Analysis Services preteridos no SQL Server 2014
   Este tópico descreve os recursos substituídos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que ainda estão disponíveis no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Esses recursos estão programados para serem removidos em uma versão futura do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Recursos preteridos não devem ser usados em aplicativos novos.  
@@ -29,7 +29,7 @@ ms.locfileid: "48067706"
 ## <a name="features-not-supported-in-the-next-version-of-sql-server"></a>Recursos sem suporte na próxima versão do SQL Server  
  Os recursos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a seguir não terão suporte na próxima versão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Não use esses recursos em novo trabalho de desenvolvimento e, assim que possível, modifique os aplicativos que os utilizam atualmente.  
   
-|Categoria|Recurso substituído|Substituição|  
+|Category|Recurso substituído|Substituição|  
 |--------------|------------------------|-----------------|  
 |Função MDX|Função CalculationPassValue|Nenhum. O mecanismo OLAP gerencia a fase de cálculo. Essa função não é mais necessária.|  
 |Função MDX|Função CalculationCurrentPass|Nenhum. O mecanismo OLAP gerencia a fase de cálculo. Essa função não é mais necessária.|  
@@ -40,16 +40,16 @@ ms.locfileid: "48067706"
 ## <a name="features-not-supported-in-a-future-version-of-sql-server"></a>Recursos sem suporte em uma versão futura do SQL Server  
  Os recursos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a seguir terão suporte na próxima versão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], mas serão removidos em uma versão posterior. A versão específica do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não foi determinada.  
   
-|Categoria|Recurso substituído|Substituição|  
+|Category|Recurso substituído|Substituição|  
 |--------------|------------------------|-----------------|  
 |Modelos multidimensionais|Partições remotas|Nenhum. Use partições locais. Ver [criar e gerenciar uma partição Local &#40;Analysis Services&#41; ](multidimensional-models/create-and-manage-a-local-partition-analysis-services.md) para obter mais informações.|  
-|Modelos multidimensionais|Grupos de medidas vinculados remotos|Um grupo de medidas vinculado remoto é um grupo de medidas vinculado que usa uma fonte de dados em um servidor remoto. A capacidade de usar uma fonte de dados remotos para um grupo de medidas vinculado está agendada para substituição.<br /><br /> Não há substituição para esse recurso. Recomendamos usar grupos de medidas vinculados locais nesse caso. Ver [grupos de medidas vinculado](multidimensional-models/linked-measure-groups.md) para obter mais informações.|  
+|Modelos multidimensionais|Grupos de medidas vinculados remotos|Um grupo de medidas vinculado remoto é um grupo de medidas vinculado que usa uma fonte de dados em um servidor remoto. A capacidade de usar uma fonte de dados remotos para um grupo de medidas vinculado está agendada para substituição.<br /><br /> Não há substituição para esse recurso. Recomendamos usar grupos de medidas vinculados locais nesse caso. Consulte [Linked Measure Groups](multidimensional-models/linked-measure-groups.md) para obter mais informações.|  
 |Modelos multidimensionais|Write-back dimensional|Nenhum. Use o write-back de partição se você precisar do recurso de write-back. Ver [Set Partition Writeback](multidimensional-models/set-partition-writeback.md) para obter mais informações.|  
 |Modelos multidimensionais|Dimensões vinculadas|Nenhum. Considere copiar dimensões para modelos adicionais, em vez de vincular a uma dimensão em outro modelo.|  
 |MDX|Propriedade Non_Empty_Behavior|Nenhum. Ao criar um membro calculado, definir essa propriedade de forma incorreta aumenta a probabilidade de retorno de resultados inválidos. Otimizações recentes para o mecanismo OLAP melhoraram operações em conjuntos de dados esparsos, tornando essa propriedade menos relevante.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Compatibilidade com versões anteriores do Analysis Services](analysis-services-backward-compatibility.md)   
+ [Analysis Services Backward Compatibility](analysis-services-backward-compatibility.md)   
  [Funcionalidade descontinuada do Analysis Services no SQL Server 2014](discontinued-analysis-services-functionality-in-sql-server-2014.md)  
   
   

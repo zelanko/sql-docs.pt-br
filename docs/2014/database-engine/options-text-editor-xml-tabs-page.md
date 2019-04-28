@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 30842eec745c87848e4eb1c78c4806639da3ac0b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843681"
 ---
 # <a name="options-text-editorxmltabs-page"></a>Opções (página Editor de Texto/XML/Guias)
   Essa caixa de diálogo permite alterar o comportamento de tabulação do Editor de XML, que é usado para editar documentos XML. Para exibir essas configurações, clique em **Opções** no menu **Ferramentas** , expanda a pasta **Editor de Texto** , expanda a subpasta **XML** e, então, clique em **Tabulações**.  
@@ -27,13 +27,13 @@ ms.locfileid: "48050146"
  As opções do Editor de XML também podem ser definidas na caixa de diálogo **Todos os Idiomas - Geral** . Ao usar as caixas de diálogo **Todos os Idiomas** para definir diferentes opções para os outros editores do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , como o DMX ou MDX, você deverá redefinir as opções do Editor de XML usando essa caixa de diálogo.  
   
 ## <a name="indenting"></a>Recuo  
- **Nenhuma**  
+ **Nenhum**  
  Quando essa opção estiver selecionada, a nova linha criada ao se pressionar ENTER não ficará recuada. O cursor é colocado na primeira coluna da nova linha.  
   
  **Bloco**  
  Quando esta opção estiver selecionada, a nova linha criada ao se pressionar ENTER ficará recuada automaticamente com a mesma distância da linha anterior.  
   
- **Inteligente**  
+ **Smart**  
  Quando essa opção é selecionada, a nova linha criada ao se pressionar ENTER é posicionada de acordo com o contexto. Por exemplo, depois de um colchete de abertura ({), as linhas incluídas são automaticamente recuadas para uma parada de tabulação extra. O colchete de fechamento correspondente (}) é realinhado com seu colchete de abertura.  
   
 ## <a name="tabs"></a>Tabulações  

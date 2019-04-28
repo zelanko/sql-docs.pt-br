@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 653d8a4f5fa8e0580e8b56a136cf2ca97c3e705a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700066"
 ---
 # <a name="define-logical-primary-keys-in-a-data-source-view-analysis-services"></a>Definir chaves primárias lógicas em uma exibição da fonte de dados (Analysis Services)
   O Assistente de Exibição da Fonte de Dados e o Designer de Exibição da Fonte de Dados definem automaticamente uma chave primária para uma tabela que é adicionada a uma exibição da fonte de dados baseada na tabela do banco de dados subjacente.  
@@ -46,7 +46,7 @@ ms.locfileid: "48142502"
      Observe que, depois que você define a chave, agora um ícone de chave identifica as colunas de chave primária.  
   
 ## <a name="see-also"></a>Consulte também  
- [Exibições da fonte de dados em modelos multidimensionais](data-source-views-in-multidimensional-models.md)   
+ [Exibições de fontes de dados em modelos multidimensionais](data-source-views-in-multidimensional-models.md)   
  [Definir cálculos nomeados em uma exibição da fonte de dados &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

@@ -14,23 +14,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ccf4e335f3b6d700fd47e1073e4f9432cc81cd29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732563"
 ---
 # <a name="using-sql-server-profiler-to-monitor-data-mining-analysis-services---data-mining"></a>Usando o SQL Server Profiler para monitorar a mineração de dados (Analysis Services - Mineração de dados)
   Se tiver as permissões necessárias, você poderá usar o SQL Server Profiler para monitorar as atividades de mineração de dados emitidas como solicitações enviadas a uma instância do SQL Server Analysis Services. A atividade de mineração de dados pode incluir o processamento de modelos ou estruturas, consultas de previsão ou consultas de conteúdo ou a criação de novos modelos ou estruturas.  
   
- SQL Server Profiler usa um `trace` para monitorar as solicitações enviadas de vários clientes, incluindo [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], SQL Server Management Studio, serviços da Web ou os Data Mining Add-ins para o Excel, contanto que todas as atividades usam a mesma instância do SQL Server Analysis Services. Você deve criar um rastreamento separado para cada instância do SQL Server Analysis Services que deseja monitorar. Para obter informações gerais sobre rastreamentos e como usar o SQL Server Profiler, consulte [Usar o SQL Server Profiler para monitorar o Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md).  
+ O SQL Server Profiler usa um `trace` para monitorar as solicitações enviadas de vários clientes, incluindo o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], o SQL Server Management Studio, serviços da Web ou Suplementos de Mineração de Dados para o Excel, contanto que todas as atividades usem a mesma instância do SQL Server Analysis Services. Você deve criar um rastreamento separado para cada instância do SQL Server Analysis Services que deseja monitorar. Para obter informações gerais sobre rastreamentos e como usar o SQL Server Profiler, consulte [Usar o SQL Server Profiler para monitorar o Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md).  
   
  Para obter orientações específicas sobre os tipos de eventos capturados, consulte [Criar rastreamentos do Profiler para reprodução &#40;Analysis Services&#41;](../instances/create-profiler-traces-for-replay-analysis-services.md).  
   
 ## <a name="using-traces-to-monitor-data-mining"></a>Usando rastreamentos para monitorar a mineração de dados  
  Ao capturar informações em um rastreamento, você pode especificar se as informações estão salvas em um arquivo ou em uma tabela em uma instância do SQL Server. Independentemente do método usado para armazenar os dados, você pode usar o SQL Server Profiler para exibir o rastreamento e aplicar filtros por eventos. A tabela a seguir lista alguns eventos e subclasses do rastreamento padrão do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que são de interesse para a mineração de dados.  
   
-|EventClass|EventSubclass|Description|  
+|EventClass|EventSubclass|Descrição|  
 |----------------|-------------------|-----------------|  
 |**Query Begin**<br /><br /> **Query End**|**0 - MDXQuery**|Contém o texto de todas as chamadas para os procedimentos armazenados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |**Query Begin**<br /><br /> **Query End**|**1 - DMXQuery**|Contém o texto e os resultados das instruções DMX.|  
@@ -43,7 +43,7 @@ ms.locfileid: "48139896"
  Exibindo as instruções de comando no log de rastreamento, você também pode ver a sintaxe de instruções complexas enviadas pelo cliente ao servidor do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , incluindo as chamadas aos procedimentos armazenados do sistema. Essas informações podem ser úteis para depuração ou você pode usar instruções válidas como um modelo para criar novos modelos ou consultas de previsão. Para obter alguns exemplos de chamadas de procedimento armazenado que podem ser capturadas por um rastreamento, consulte [Exemplos de consulta de modelo de clustering](clustering-model-query-examples.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Monitorar uma instância do Analysis Services](../instances/monitor-an-analysis-services-instance.md)   
+ [Monitor an Analysis Services Instance](../instances/monitor-an-analysis-services-instance.md)   
  [Usar eventos estendidos do SQL Server &#40;XEvents&#41; monitorar o Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)  
   
   

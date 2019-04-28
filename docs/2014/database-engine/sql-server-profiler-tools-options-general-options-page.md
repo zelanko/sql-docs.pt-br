@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e0dbabfc0564d1338fb4eec8b9688acd99538576
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844923"
 ---
 # <a name="sql-server-profiler---tools-options-general-options-page"></a>SQL Server Profiler - Ferramentas-Opções (página de opções geral)
   Use a caixa de diálogo **Opções Gerais** para exibir ou especificar as opções a seguir.  
@@ -61,7 +61,7 @@ ms.locfileid: "48113056"
  O [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] pergunta antes de adicionar um arquivo de substituição quando um arquivo de rastreamento é aberto.  
   
  **Nunca carregar arquivos de substituição subsequentes**  
- O [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] nunca carrega arquivos de substituição subsequentes quando um arquivo de rastreamento é aberto.  
+ [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] nunca carrega arquivos de substituição posteriores quando um arquivo de rastreamento é aberto.  
   
 ### <a name="replay-options"></a>Opções de Repetição  
  **Número padrão de threads de repetição**  
@@ -74,9 +74,9 @@ ms.locfileid: "48113056"
  Especifica o intervalo de sondagem do monitor de integridade durante a repetição, em segundos. O padrão é 60 segundos. Este valor permite que o usuário configure com que frequência o monitor de integridade sonda candidatos a conclusão.  
   
 ## <a name="see-also"></a>Consulte também  
- [Iniciar um rastreamento automaticamente após a conexão a um servidor &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
+ [Iniciar um rastreamento automaticamente após a conexão com um servidor &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
  [Definir padrões de exibição de rastreamento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
- [Repetir uma tabela de rastreamento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
+ [Reproduzir uma tabela de rastreamento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
  [Reproduzir um arquivo de rastreamento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
  [Repetir rastreamentos](../tools/sql-server-profiler/replay-traces.md)   
  [Definir opções de rastreamento Global &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/set-global-trace-options-sql-server-profiler.md)   

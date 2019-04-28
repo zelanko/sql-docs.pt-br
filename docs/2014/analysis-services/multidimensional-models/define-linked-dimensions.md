@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 409cdbaa10dc93c5cb659961f084d76bc3370bde
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726470"
 ---
 # <a name="define-linked-dimensions"></a>Definir dimensões vinculadas
   Uma dimensão vinculada baseia-se uma dimensão criada e armazenada em outro banco de dados do Analysis Services na mesma versão e no mesmo nível de compatibilidade. Usando uma dimensão vinculada, você pode criar, armazenar e manter uma dimensão em um banco de dados, ao mesmo tempo disponibilizando-o para usuários de vários bancos de dados. Para usuários, uma dimensão vinculada aparece como qualquer outra dimensão.  

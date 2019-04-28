@@ -15,18 +15,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3e604ee6aac125f366ac2fca6444527340213019
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721486"
 ---
 # <a name="distribution-agent-security"></a>Segurança do Distribution Agent
   A caixa de diálogo **Segurança do Distribution Agent** permite especificar a conta do Windows na qual o Distribution Agent é executado. O Distribution Agent é executado no Distribuidor para assinaturas push e no Assinante para assinaturas pull. A conta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows é também referida como *conta do processo*, porque o processo do agente é executado nessa conta. Opções adicionais disponíveis na caixa de diálogo dependem de como você a acessa:  
   
 -   Se a caixa de diálogo for acessada do Assistente para Nova Assinatura, também permitirá que você especifique o contexto no qual o Distribution Agent fará conexões com o Assinante (para assinaturas push) ou com o Publicador e o Distribuidor (para assinaturas pull). A conexão pode ser feita representando a conta do Windows ou no contexto de uma conta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificada por você.  
   
--   Se a caixa de diálogo for acessada da caixa de diálogo **Propriedades da Assinatura** , especifique o contexto no qual o Distribution Agent faz conexões, clicando no botão de propriedades (**...**) na linha **Conexão do Assinante** ou **Conexão do Publicador** daquela caixa de diálogo. Para obter mais informações sobre como acessar o **propriedades da assinatura** caixa de diálogo, consulte [exibir e modificar propriedades de assinatura Push](view-and-modify-push-subscription-properties.md) e como: [Exibir e modificar propriedades de assinatura Pull](view-and-modify-pull-subscription-properties.md).  
+-   Se a caixa de diálogo for acessada da caixa de diálogo **Propriedades da Assinatura** , especifique o contexto no qual o Distribution Agent faz conexões, clicando no botão de propriedades (**...**) na linha **Conexão do Assinante** ou **Conexão do Publicador** daquela caixa de diálogo. Para obter mais informações sobre como acessar a caixa de diálogo **Propriedades da Assinatura**, confira [Exibir e modificar propriedades da assinatura push](view-and-modify-push-subscription-properties.md) e como [Exibir e modificar propriedades de assinatura pull](view-and-modify-pull-subscription-properties.md).  
   
  Todas as contas devem ser válidas, com a senha correta especificada para cada conta. Contas e senhas não são validadas até que um agente seja executado.  
   

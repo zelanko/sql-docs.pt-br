@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9a06c6b71be6e889cc223aa72338ae70f0ea82e3
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834371"
 ---
 # <a name="configure-data-viewer-column-chart-tab"></a>Configurar Visualizador de Dados (guia Gráfico de Colunas)
   Use a guia **Gráfico de Colunas** da caixa de diálogo **Configurar Visualizador de Dados** para especificar uma coluna a ser exibida como barras em um gráfico. O número de barras mostra o número de valores de dados distintos na coluna e a altura da barra mostra o número de instâncias de cada valor. O gráfico reflete o conteúdo de apenas um buffer.  

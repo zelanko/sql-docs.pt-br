@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4f5ff9f8c153ab80adf5bc19fa5f78f58ddb58b1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704732"
 ---
 # <a name="example-constructing-siblings-with-explicit-mode"></a>Exemplo: Construindo irmãos com o modo EXPLICIT
   Assuma que você quer construir XML que forneça informações de pedidos de vendas. Observe que os elementos <`SalesPerson`> e <`OrderDetail`> são irmãos. Cada Pedido tem um elemento <`OrderHeader`>, um elemento <`SalesPerson`> e um ou mais elementos <`OrderDetail`>.  

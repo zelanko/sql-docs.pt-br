@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: de560c0638da3a55a045342f08ded333ce952e2a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792998"
 ---
 # <a name="export-a-knowledge-base-to-a-dqs-file"></a>Exportar uma base de dados de conhecimento para um arquivo .dqs
   Este tópico descreve como exportar uma base de dados de conhecimento inteira para um arquivo de dados .dqs no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Você pode exportar um domínio ou uma base de dados de conhecimento inteira para um arquivo de dados. Para obter informações sobre como exportar um domínio, consulte [Exportar um domínio para um arquivo .dqs](../../2014/data-quality-services/export-a-domain-to-a-dqs-file.md).  
@@ -46,7 +46,7 @@ ms.locfileid: "56041337"
   
 5.  Na caixa de diálogo **Exportar Base de Dados de Conhecimento** , verifica se a linha de status indica que a exportação foi concluída. Clique em **OK**.  
   
-##  <a name="FollowUp"></a> Acompanhamento: Depois de exportar um domínio para um arquivo. DQS  
+##  <a name="FollowUp"></a> Acompanhamento: Após exportar um domínio para um arquivo .dqs  
  Após exportar uma base de dados de conhecimento para um arquivo .dqs, você poderá importar a base de dados de conhecimento para o mesmo [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] (com um novo nome) ou para outro [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)].  
   
   

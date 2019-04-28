@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 361d29ca1051fd045e36fb1f23f9a5c08abef925
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62710104"
 ---
 # <a name="parameters-collection-command-property-example-vc"></a>Exemplos da propriedade Command, coleção Parameters (VC++)
 O código a seguir demonstra como usar o [comando](../../../ado/reference/adox-api/command-property-adox.md) propriedade com o [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto para recuperar informações de parâmetro para o procedimento.  

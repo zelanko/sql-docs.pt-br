@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5366db29a8e3fbfc286684b372c9f71d0cf6a7ff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727912"
 ---
 # <a name="mining-legend-dialog-box-mining-model-viewer"></a>Caixa de diálogo Legenda de mineração (Visualizador do modelo de mineração)
   Use a caixa de diálogo **Legenda de Mineração** para obter mais informações detalhadas sobre o nó ou item selecionado em um visualizador do modelo de mineração.  
@@ -54,7 +54,7 @@ ms.locfileid: "48218716"
  [Procurar um modelo usando a Exibição de Árvore da Microsoft](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visualizadores do modelo de mineração &#40; Designer do modelo de mineração de dados &#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizadores do modelo de Mineração de dados](data-mining/data-mining-model-viewers.md)  
   

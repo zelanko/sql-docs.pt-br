@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f89e4b5e6d209efeb3fd37661a5f4b925aaeb63
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795401"
 ---
 # <a name="create-a-newtabular-model-project-ssas-tabular"></a>Criar um projeto de modelo NewTabular (SSAS tabular)
   Este tópico descreve como criar um novo projeto de modelo tabular e em branco no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Depois que um novo projeto modelo foi criado, você poderá começar a criar seu projeto de modelo com a importação dos dados das fontes de dados.  
@@ -32,7 +32,7 @@ ms.locfileid: "48171536"
  Depois que seu novo projeto for criado, é importante definir as propriedades do projeto e do modelo. Para obter mais informações, consulte [Project Properties &#40;SSAS Tabular&#41;](properties-ssas-tabular.md) e [Model Properties &#40;SSAS Tabular&#41;](model-properties-ssas-tabular.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Propriedades do projeto &#40;Tabular do SSAS&#41;](properties-ssas-tabular.md)   
- [Propriedades de modelo &#40;Tabular do SSAS&#41;](model-properties-ssas-tabular.md)  
+ [Propriedades de projeto &#40;SSAS de Tabela&#41;](properties-ssas-tabular.md)   
+ [Propriedades de modelo &#40;SSAS de Tabela&#41;](model-properties-ssas-tabular.md)  
   
   

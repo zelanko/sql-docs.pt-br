@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6cfe1f291bd6a045bea635ea4501e76854d32e47
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794546"
 ---
 # <a name="process-database-table-or-partition"></a>Processar banco de dados, tabela ou partição
   As tarefas neste tópico descrevem como processar um banco de dados do modelo de tabela, tabela ou partições manualmente usando o **processo \<objeto >** da caixa de diálogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -33,7 +33,7 @@ ms.locfileid: "48067716"
   
 2.  Na caixa de diálogo **Processar Banco de Dados** , na caixa de listagem **Modo** , selecione um dos modos de processamento a seguir:  
   
-    |Modo|Description|  
+    |Modo|Descrição|  
     |----------|-----------------|  
     |**Processar Padrão**|Detecta o estado de processamento de objetos de banco de dados e realiza o processamento necessário para passar os objetos não processados ou parcialmente processados para um estado completamente processado. Os dados das tabelas vazias e das partições são carregados; hierarquias, colunas calculadas e relações são criadas ou recriadas (recalculadas).|  
     |**Processar Completo**|Processa um banco de dados e todos os objetos que ele contém. Quando o comando Processar Completo for executado para um objeto que já foi processado, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] removerá todos os dados do objeto e processará o objeto. Esse tipo de processamento é necessário quando uma alteração estrutural é feita em um objeto. Esta opção requer a maioria dos recursos.|  
@@ -48,7 +48,7 @@ ms.locfileid: "48067716"
   
 2.  Na caixa de diálogo **Processar Tabela** , na caixa de listagem **Modo** , selecione um dos modos de processamento a seguir:  
   
-    |Modo|Description|  
+    |Modo|Descrição|  
     |----------|-----------------|  
     |**Processar Padrão**|Detecta o estado de processamento de um objeto de tabela e realiza o processamento necessário para passar os objetos não processados ou parcialmente processados para um estado completamente processado. Os dados das tabelas vazias e das partições são carregados; hierarquias, colunas calculadas e relações são criadas ou recriadas (recalculadas).|  
     |**Processar Completo**|Processa um objeto de tabela e todos os objetos que ele contém. Quando o comando Processar Completo for executado para um objeto que já foi processado, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] removerá todos os dados do objeto e processará o objeto. Esse tipo de processamento é necessário quando uma alteração estrutural é feita em um objeto. Esta opção requer a maioria dos recursos.|  
@@ -66,7 +66,7 @@ ms.locfileid: "48067716"
   
 3.  Na caixa de diálogo **Processar Partição** , na caixa de listagem **Modo** , selecione um dos modos de processamento a seguir:  
   
-    |Modo|Description|  
+    |Modo|Descrição|  
     |----------|-----------------|  
     |**Processar Padrão**|Detecta o estado de processamento de um objeto de partição e realiza o processamento necessário para passar os objetos de partição não processados ou parcialmente processados para um estado completamente processado. Os dados das tabelas vazias e das partições são carregados; hierarquias, colunas calculadas e relações são criadas ou recriadas (recalculadas).|  
     |**Processar Completo**|Processa um objeto de partição e todos os objetos que ele contém. Quando o comando Processar Completo for executado para um objeto que já foi processado, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] removerá todos os dados do objeto e processará o objeto. Esse tipo de processamento é necessário quando uma alteração estrutural é feita em um objeto.|  
@@ -77,7 +77,7 @@ ms.locfileid: "48067716"
 4.  Na coluna da caixa de seleção **Processar** , selecione as partições que você deseja processar com o modo selecionado e clique em **Ok**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Partições de modelo de tabela &#40;Tabular do SSAS&#41;](tabular-model-partitions-ssas-tabular.md)   
- [Criar e gerenciar partições de modelo de tabela &#40;Tabular do SSAS&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)  
+ [Partições de modelo de tabela &#40;SSAS de Tabela&#41;](tabular-model-partitions-ssas-tabular.md)   
+ [Criar e gerenciar partições de modelos de tabela &#40;SSAS de Tabela&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)  
   
   

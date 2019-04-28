@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c39ec7718ee2d79ab95c13ebfd3e30afc189d805
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733629"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>Conteúdo do modelo de mineração para modelos de regressão linear (Analysis Services – Mineração de Dados)
   Este tópico descreve o conteúdo do modelo de mineração específico para modelos que usam o algoritmo Regressão Linear da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obter uma explicação geral sobre o conteúdo do modelo de mineração para todos os tipos de modelo, consulte [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -46,9 +46,9 @@ ms.locfileid: "49120033"
  Nome do modelo.  
   
  ATTRIBUTE_NAME  
- **Nó raiz:** em branco  
+ **Nó raiz:** Em branco  
   
- **Nó de regressão** O nome do atributo previsível.  
+ **Nó de regressão:** O nome do atributo previsível.  
   
  NODE_NAME  
  Sempre igual a NODE_UNIQUE_NAME.  
@@ -59,16 +59,16 @@ ms.locfileid: "49120033"
  NODE_TYPE  
  Um modelo de regressão linear gera os seguintes tipos de nó:  
   
-|ID do tipo de nó|Tipo|Description|  
+|ID do tipo de nó|Tipo|Descrição|  
 |------------------|----------|-----------------|  
 |25|Raiz da árvore de regressão|Contém a fórmula que descreve a relação entre a variável de entrada e saída.|  
   
  NODE_CAPTION  
  Um rótulo ou uma legenda associada ao nó. Essa propriedade é usada principalmente para exibição.  
   
- **Nó raiz:** em branco  
+ **Nó raiz:** Em branco  
   
- **Nó de regressão:** Tudo.  
+ **Nó de regressão:** Todos.  
   
  CHILDREN_CARDINALITY  
  Uma estimativa do número de filhos do nó.  
@@ -83,9 +83,9 @@ ms.locfileid: "49120033"
  NODE_DESCRIPTION  
  Uma descrição do nó.  
   
- **Nó raiz:** em branco  
+ **Nó raiz:** Em branco  
   
- **Nó de regressão:** Tudo.  
+ **Nó de regressão:** Todos.  
   
  NODE_RULE  
  Não é usado em modelos de regressão linear.  
@@ -128,7 +128,7 @@ ms.locfileid: "49120033"
   
  **Nó raiz:** 0  
   
- **Nó de regressão:** Contagem dos casos de treinamento.  
+ **Nó de regressão:** Contagem de casos de treinamento.  
   
  MSOLAP_MODEL_COLUMN  
  Nome do atributo previsível.  

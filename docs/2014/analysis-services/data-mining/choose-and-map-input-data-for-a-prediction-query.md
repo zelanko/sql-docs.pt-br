@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e7741d2acf1e26e4e5a424c823a435fb37ff1d71
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705769"
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>Escolher e mapear dados de entrada para uma consulta de previsão
   Quando você cria previsões de um modelo de mineração, geralmente o faz alimentando novos dados no modelo. (A exceção são modelos de série temporal, que só podem fazer previsões com base em dados históricos.) Para oferecer novos dados ao modelo, verifique se os dados estão disponíveis como parte de uma exibição da fonte de dados. Se souber antecipadamente os dados que serão usados na previsão, você poderá incluí-los na exibição de fonte de dados usada para criar o modelo. Caso contrário, talvez precise criar uma nova exibição da fonte de dados. Para obter mais informações, consulte [Exibições de fontes de dados em modelos multidimensionais](../multidimensional-models/data-source-views-in-multidimensional-models.md).  
@@ -119,6 +119,6 @@ ms.locfileid: "48119056"
      Se já existir uma relação, as colunas no modelo de mineração serão mapeados automaticamente para as colunas que possuem o mesmo nome na tabela de entrada. É possível modificar a relação entre a tabela aninhada e a tabela de casos clicando em **Modificar Junção**, que abre a caixa de diálogo **Criar Relação** .  
   
 ## <a name="see-also"></a>Consulte também  
- [Consultas de previsão &#40;mineração de dados&#41;](prediction-queries-data-mining.md)  
+ [Consultas de previsão &#40;Mineração de dados&#41;](prediction-queries-data-mining.md)  
   
   

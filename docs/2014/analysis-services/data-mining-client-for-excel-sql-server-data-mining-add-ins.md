@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e61ae53ee78574351545109f75cebd88827c404b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62692016"
 ---
 # <a name="data-mining-client-for-excel-sql-server-data-mining-add-ins"></a>Cliente de Mineração de Dados para Excel (Suplementos de Mineração de Dados do SQL Server)
   O Cliente de Mineração de Dados para Excel é um conjunto de ferramentas que permite realizar tarefas comuns de mineração de dados, desde a limpeza de dados até a criação de modelos e de consultas de previsão. Você pode usar dados nas tabelas ou nos intervalos do Excel, ou acessar fontes de dados externas.  
@@ -77,12 +77,12 @@ ms.locfileid: "48063547"
  [Assistente para classificar &#40;Data Mining Add-ins para Excel&#41;](classify-wizard-data-mining-add-ins-for-excel.md)  
  O **classificar** assistente o ajuda a criar um modelo de classificação com base nos dados existentes em uma tabela do Excel, um intervalo do Excel ou uma fonte de dados externa. Um modelo de classificação extrai padrões nos dados que indicam similaridades e o ajudam a fazer previsões com base nos agrupamentos de valores. Por exemplo, um modelo de classificação talvez seja usado para prever o risco com base em padrões de renda ou gastos.  
   
- O **classificar** Assistente suporta o uso desses algoritmos de mineração de dados da Microsoft: algoritmo de árvores de decisão, Regressão logística, Naïve Bayesiana, redes neurais.  
+ O **classificar** Assistente suporta o uso desses algoritmos de mineração de dados da Microsoft: Algoritmo de árvores, Regressão logística, Naïve Bayesiana, redes neurais de decisão.  
   
  [Assistente de estimativa &#40;Data Mining Add-ins para Excel&#41;](estimate-wizard-data-mining-add-ins-for-excel.md)  
  O **estimativa** assistente o ajuda a criar um modelo de estimativa. Um modelo de estimativa extrai padrões de dados e usa esses padrões para prever um resultado numérico, como moeda, quantidade de vendas, data ou hora.  
   
- O **estimativa** assistente usa esses algoritmos de mineração de dados da Microsoft: árvores de decisão, Regressão Linear, Regressão logística e redes neurais.  
+ O **estimativa** assistente usa esses algoritmos de mineração de dados da Microsoft: Árvores de decisão, Regressão Linear, Regressão logística e redes neurais.  
   
  [Analisar os influenciadores principais &#40;ferramentas de análise de tabela para Excel&#41;](analyze-key-influencers-table-analysis-tools-for-excel.md)  
  O assistente para Cluster ajuda você a criar um modelo de cluster. Um modelo de clustering detecta grupos de linhas que compartilham características semelhantes. Esse assistente é útil para explorar padrões em todos os tipos de dados.  

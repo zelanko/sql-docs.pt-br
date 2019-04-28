@@ -12,14 +12,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4195e8f17f822bc84bf72bb41420a477ab683017
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795461"
 ---
 # <a name="analyze-in-excel-ssas-tabular"></a>Analisar no Excel (SSAS tabular)
-  O recurso Analisar no Excel, no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], fornece a autores de modelos de tabela um modo de analisar projetos de modelo rapidamente durante o desenvolvimento. O recurso Analisar no Excel abre o Microsoft Excel, cria uma conexão da fonte de dados para o banco de dados de espaço de trabalho modelo e automaticamente adiciona uma Tabela Dinâmica à planilha. Os objetos de banco de dados de espaço de trabalho (tabelas, colunas e medidas) são incluídos como campos na Lista de campos da Tabela Dinâmica. Os objetos e os dados podem então ser exibidos dentro do contexto do usuário efetivo ou função e perspectiva.  
+  O recurso Analisar no Excel, no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], fornece a autores de modelos de tabela um modo de analisar projetos de modelo rapidamente durante o desenvolvimento. O recurso Analisar no Excel abre o Microsoft Excel, cria uma conexão da fonte de dados para o banco de dados de workspace modelo e automaticamente adiciona uma Tabela Dinâmica à planilha. Os objetos de banco de dados de workspace (tabelas, colunas e medidas) são incluídos como campos na Lista de campos da Tabela Dinâmica. Os objetos e os dados podem então ser exibidos dentro do contexto do usuário efetivo ou função e perspectiva.  
   
  Este tópico pressupõe que você já esteja familiarizado com o Microsoft Excel, Tabelas Dinâmicas e Gráficos Dinâmicos. Para saber mais sobre o uso do Excel, consulte a Ajuda do Excel.  
   
@@ -33,9 +33,9 @@ ms.locfileid: "48081718"
  O recurso Analisar no Excel fornece aos autores de modelo a capacidade para testar a eficácia de um projeto de modelo usando o aplicativo comum de análise de dados, Microsoft Excel. Para usar o recurso Analisar no Excel, você deve ter o Microsoft Office 2003 ou superior instalado no mesmo computador que o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 > [!NOTE]  
->  Se o Office não estiver instalado no mesmo computador como [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], você poderá usar o Excel em outro computador para conectar-se ao banco de dados de espaço de trabalho como uma fonte de dados. Você pode então adicionar manualmente uma Tabela Dinâmica à planilha.  
+>  Se o Office não estiver instalado no mesmo computador como [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], você poderá usar o Excel em outro computador para conectar-se ao banco de dados de workspace como uma fonte de dados. Você pode então adicionar manualmente uma Tabela Dinâmica à planilha.  
   
- O recurso Analisar no Excel abre o Excel e cria uma nova pasta de trabalho do Excel (.xls). Uma conexão de dados da pasta de trabalho para o banco de dados de espaço de trabalho modelo é criada. Uma Tabela Dinâmica em branco é adicionada à planilha e os metadados de objeto modelo são populados na lista de Campo de Tabela Dinâmica. Você pode então adicionar dados visíveis e segmentações de dados à Tabela Dinâmica.  
+ O recurso Analisar no Excel abre o Excel e cria uma nova pasta de trabalho do Excel (.xls). Uma conexão de dados da pasta de trabalho para o banco de dados de workspace modelo é criada. Uma Tabela Dinâmica em branco é adicionada à planilha e os metadados de objeto modelo são populados na lista de Campo de Tabela Dinâmica. Você pode então adicionar dados visíveis e segmentações de dados à Tabela Dinâmica.  
   
  Ao usar o recurso Analisar no Excel, por padrão, a conta de usuário atualmente conectada é o usuário efetivo. Esta conta é geralmente um Administrador sem restrições de exibição para objetos modelo ou dados. Porém, você pode especificar um nome de usuário ou função efetivo diferente. Isto permite que você navegue em um projeto de modelo no Excel dentro do contexto de um usuário ou função específico. Especificar o usuário efetivo inclui as opções a seguir:  
   
@@ -54,11 +54,11 @@ ms.locfileid: "48081718"
   
 |**Tópico**|**Descrição**|  
 |---------------|---------------------|  
-|[Analisar um modelo Tabular no Excel &#40;Tabular do SSAS&#41;](analyze-a-tabular-model-in-excel-ssas-tabular.md)|Esse tópico descreve como usar o recurso Analisar no Excel no designer de modelo para abrir o Excel, criar uma conexão da fonte de dados para o banco de dados de espaço de trabalho modelo e adicionar uma Tabela Dinâmica à planilha.|  
+|[Analisar um modelo de tabela no Excel &#40;SSAS de Tabela&#41;](analyze-a-tabular-model-in-excel-ssas-tabular.md)|Esse tópico descreve como usar o recurso Analisar no Excel no designer de modelo para abrir o Excel, criar uma conexão da fonte de dados para o banco de dados de workspace modelo e adicionar uma Tabela Dinâmica à planilha.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Analisar um modelo Tabular no Excel &#40;Tabular do SSAS&#41;](analyze-a-tabular-model-in-excel-ssas-tabular.md)   
- [As funções &#40;Tabular do SSAS&#41;](roles-ssas-tabular.md)   
- [Perspectivas &#40;Tabular do SSAS&#41;](perspectives-ssas-tabular.md)  
+ [Analisar um modelo de tabela no Excel &#40;SSAS de Tabela&#41;](analyze-a-tabular-model-in-excel-ssas-tabular.md)   
+ [Funções &#40;SSAS de Tabela&#41;](roles-ssas-tabular.md)   
+ [Perspectivas &#40;SSAS de Tabela&#41;](perspectives-ssas-tabular.md)  
   
   

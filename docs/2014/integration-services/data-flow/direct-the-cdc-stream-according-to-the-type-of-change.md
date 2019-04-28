@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2ee2b3238a66000546619815a886fc6017c51fe6
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62827393"
 ---
 # <a name="direct-the-cdc-stream-according-to-the-type-of-change"></a>Direcionar o fluxo de CDC de acordo com o tipo de alteração
   Para adicionar e configurar uma Transformação de separador de CDC, o pacote deverá conter pelo menos uma tarefa de Fluxo de Dados e uma origem CDC.  
@@ -36,11 +36,11 @@ ms.locfileid: "58377264"
   
 6.  Selecione uma das saídas a seguir:  
   
-    -   Exclua saída: A saída em que linhas de alteração DELETE são direcionadas.  
+    -   Excluir saída: a saída para onde as linhas de alteração DELETE são direcionadas.  
   
-    -   Inserir saída: A saída em que as linhas de alteração INSERT são direcionadas.  
+    -   Inserir saída: a saída para onde as linhas de alteração INSERT são direcionadas.  
   
-    -   Atualizar saída: A saída onde antes/depois da alteração na atualização linhas e mesclagem linhas de alteração são direcionadas.  
+    -   Atualizar saída: a saída para onde as linhas de alteração UPDATE antes/depois e as linhas de alteração Mesclar são direcionadas.  
   
 7.  Opcionalmente, você pode configurar as propriedades avançadas usando a caixa de diálogo **Editor Avançado** .  
   

@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fad4cf000bda343970c0c2b6c18adb8f5e7fb548
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59946692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711216"
 ---
 # <a name="design-view"></a>Modo Design
   Use o modo Design para organizar itens no relatório. O modo Design também é chamado de superfície de design ou modo de layout.  

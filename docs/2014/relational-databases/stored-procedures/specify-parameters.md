@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f936853c284196b05b6da6369f4410bed2297d4d
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736359"
 ---
 # <a name="specify-parameters"></a>Especificar parâmetros
   Ao especificar parâmetros de procedimento, programas de chamada podem passar valores para o corpo do procedimento. Esses valores podem ser usados com vários propósitos durante a execução do procedimento. Parâmetros de procedimento também retornam valores ao programa de chamada quando o parâmetro é marcado como um parâmetro OUTPUT.  

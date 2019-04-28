@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 612a997e51e23c6b8d3b1860fbc74df79de6c73c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731951"
 ---
 # <a name="general-partition-properties-dialog-box-ssms"></a>Geral (caixa de diálogo Propriedades da Partição) (SSMS)
   Use a página **Geral** da caixa de diálogo **Propriedades da Partição** no SQL Server Management Studio para definir as propriedades gerais de uma partição em um grupo de medidas para um cubo em um banco de dados do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -30,7 +30,7 @@ ms.locfileid: "48211096"
 |**ID de Design de agregação**|Exibe o identificador do design de agregação usado pela partição.|  
 |**Prefixo de agregação**|Exibe o prefixo padrão de instâncias de agregação que são contidas pela partição.|  
 |**Criar Carimbo de Data/Hora**|Exibe a data e a hora de criação da partição.|  
-|**Modo de armazenamento atual**|Exibe o modo de armazenamento atual da partição.<br /><br /> Observação: esse modo pode variar dependendo das configurações do cache pró-ativo da partição. Para obter mais informações sobre cache pró-ativo, consulte [Cache pró-ativo &#40;Partições&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).|  
+|**Modo de armazenamento atual**|Exibe o modo de armazenamento atual da partição.<br /><br /> Observação: Esse modo pode variar dependendo das configurações do cache pró-ativo da partição. Para obter mais informações sobre cache pró-ativo, consulte [Cache pró-ativo &#40;Partições&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).|  
 |**Descrição**|Digite para alterar a descrição da partição.|  
 |**Linhas estimadas**|Digite o número estimado de linhas na fonte de dados subjacente representada pela partição. Esse valor é usado durante o processamento para estimar o tempo e o armazenamento necessários para processar a partição.|  
 |**Tamanho estimado**|Exibe o tamanho estimado da partição.|  
@@ -39,15 +39,15 @@ ms.locfileid: "48211096"
 |**Última Atualização de Esquema**|Exibe a data e a hora da última atualização dos metadados da partição.|  
 |**Nome**|Exibe o nome da partição.|  
 |**Modo de processamento**|Selecione o modo de processamento da partição. Para obter mais informações sobre modos de processamento para [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objetos, consulte [processamento de objeto de modelo Multidimensional](multidimensional-models/processing-a-multidimensional-model-analysis-services.md).|  
-|**ID da fonte de dados remotos**|Exibe o identificador da fonte de dados remota da qual são recuperados os dados de origem da partição.<br /><br /> Observação: essa propriedade contém um valor apenas para partições remotas.|  
+|**ID da fonte de dados remotos**|Exibe o identificador da fonte de dados remota da qual são recuperados os dados de origem da partição.<br /><br /> Observação: Esta propriedade contém um valor apenas para partições remotas.|  
 |**fatia**|Exibe a expressão que identifica a fatia de dados representada pela partição.|  
 |**Origem**|Exibe a tabela ou consulta que fornece os dados de origem da partição.|  
 |**Estado**|Exibe o estado do processamento atual da partição.|  
-|**Local de armazenamento**|Exibe a pasta na qual são armazenados os dados da partição.<br /><br /> Observação: essa propriedade conterá um valor apenas se um local de armazenamento diferente do local de armazenamento padrão for especificado para a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
+|**Local de armazenamento**|Exibe a pasta na qual são armazenados os dados da partição.<br /><br /> Observação: Esta propriedade contém um valor somente se um local de armazenamento diferente do local de armazenamento padrão para o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] for especificada uma instância.|  
 |**Tipo**|Exibe o tipo da partição.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Partições &#40;Analysis Services - dados multidimensionais&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Partições &#40;Analysis Services – Dados Multidimensionais&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [Partições remotas](multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
  [Caixa de diálogo Propriedades de partição &#40;SSMS&#41;](partition-properties-dialog-box-ssms.md)   
  [Seleção de &#40;caixa de diálogo Propriedades de partição&#41; &#40;SSMS&#41;](selection-partition-properties-dialog-box-ssms.md)   

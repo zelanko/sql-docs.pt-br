@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 01060e5161071a06a0fb2c269af5f5a3e14c31b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795293"
 ---
 # <a name="delete-a-column-ssas-tabular"></a>Excluir uma coluna (SSAS tabular)
   Este tópico descreve como excluir uma coluna de uma tabela de modelo de tabela.  
@@ -39,7 +39,7 @@ ms.locfileid: "48178474"
 3.  Na caixa de diálogo **Editar Propriedades da Tabela** , na janela de visualização de tabela, desmarque a coluna a ser excluída e clique em **OK**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Adicionar colunas a uma tabela &#40;Tabular do SSAS&#41;](add-columns-to-a-table-ssas-tabular.md)   
- [Partições &#40;Tabular do SSAS&#41;](partitions-ssas-tabular.md)  
+ [Adicionar colunas a uma tabela &#40;SSAS de Tabela&#41;](add-columns-to-a-table-ssas-tabular.md)   
+ [Partições &#40;SSAS de Tabela&#41;](partitions-ssas-tabular.md)  
   
   

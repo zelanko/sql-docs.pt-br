@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 934ad51c8855b5b4aadd49af628ee8348bf960d9
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794583"
 ---
 # <a name="properties-ssas-tabular"></a>Propriedades (SSAS tabular)
   Os projetos de modelo tabular no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] têm várias propriedades que definem comportamentos para o projeto, o modelo, a relação e a implantação. As configurações de propriedades são armazenadas em formato XML no arquivo Model.bim, porém, todas as propriedades descritas nesta seção podem ser configuradas nas janelas de **Propriedades** no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  

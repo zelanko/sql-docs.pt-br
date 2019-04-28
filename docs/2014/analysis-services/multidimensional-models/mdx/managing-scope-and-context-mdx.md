@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5bcaff42dd71f1c278c390d06240657f5f80f112
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118106"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725666"
 ---
 # <a name="managing-scope-and-context-mdx"></a>Gerenciando escopo e contexto (MDX)
   No [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], um script de expressões multidimensionais (MDX) pode ser aplicado ao cubo inteiro ou a partes específicas dele, a pontos específicos da execução do script. O script MDX pode adotar uma abordagem em camadas dos cálculos em um cubo usando passagens de cálculo.  
@@ -31,7 +31,7 @@ ms.locfileid: "48118106"
 > [!NOTE]  
 >  Para obter mais informações sobre como as passagens de cálculo podem afetar os cálculos, consulte [Noções básicas sobre a ordem de passagem e a ordem de resolução &#40;MDX&#41;](mdx-data-manipulation-understanding-pass-order-and-solve-order.md).  
   
- Para controlar a passagem de cálculo, o escopo e contexto de um script MDX, use especificamente a instrução CACULATE, a `This` função e a instrução SCOPE.  
+ Para controlar a passagem de cálculo, o escopo e o contexto de um script MDX, use especificamente a instrução CACULATE, a função `This` e a instrução SCOPE.  
   
 ## <a name="using-the-calculate-statement"></a>Usando a instrução CALCULATE  
  A instrução CALCULATE preenche cada célula do cubo com dados agregados. Por exemplo, o script MDX padrão possui uma única instrução CALCULATE no início do script.  
@@ -42,13 +42,13 @@ ms.locfileid: "48118106"
 >  Se o script contiver uma instrução SCOPE com uma instrução CALCULATE, a linguagem MDX avaliará a instrução CALCULATE no contexto do subcubo definido pela instrução SCOPE e não com relação ao cubo inteiro.  
   
 ## <a name="using-the-this-function"></a>Usando a função This  
- A função `This` permite a recuperação do subcubo atual dentro de um script MDX. Você pode usar o `This` função para configurar rapidamente o valor de células do subcubo atual para uma expressão MDX. Você geralmente usa o `This` função em conjunto com a instrução SCOPE para alterar o conteúdo de um subcubo específico durante uma passagem de cálculo específico.  
+ A função `This` permite a recuperação do subcubo atual dentro de um script MDX. Use a função `This` para configurar rapidamente o valor de células do subcubo atual para uma expressão MDX. Com frequência, você usará a função `This` em conjunto com a instrução SCOPE para alterar o conteúdo de um subcubo específico durante uma passagem de cálculo específica.  
   
 > [!NOTE]  
->  Se o script contiver uma instrução de escopo que contém um `This` função, o MDX avalia o `This` função dentro do contexto do subcubo definido pela instrução SCOPE e não em relação ao cubo inteiro.  
+>  Se o script contiver uma instrução SCOPE com uma função `This`, o MDX avaliará a função `This` no contexto do subcubo definido pela instrução SCOPE e não com relação ao cubo inteiro.  
   
 ### <a name="this-function-example"></a>Exemplo da função This  
- O seguinte exemplo de comando de script MDX usa o `This` função para aumentar o valor da medida Amount, no grupo de medidas finanças do [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] cubo de exemplo, 10% mais alto para os filhos do membro Redmond da dimensão Customer:  
+ O exemplo de comando de script MDX a seguir utiliza a função `This` para aumentar o valor da medida Amount, no grupo de medidas Finanças do cubo de exemplo [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)], em 10% para os filhos do membro Redmond da dimensão Customer:  
   
 ```  
 /* This SCOPE statement defines the current subcube */  
@@ -116,7 +116,7 @@ END SCOPE;
   
 ## <a name="see-also"></a>Consulte também  
  [Referência da linguagem MDX &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
- [O Script básico MDX &#40;MDX&#41;](the-basic-mdx-script-mdx.md)   
+ [O script básico de MDX &#40;MDX&#41;](the-basic-mdx-script-mdx.md)   
  [Conceitos básicos de consulta MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

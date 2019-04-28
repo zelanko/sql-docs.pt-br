@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 176d5a6586008d49ece1430ec03e2c54278eebce
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52809198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62695401"
 ---
 # <a name="specify-multiple-search-conditions-for-one-column-visual-database-tools"></a>Especificar várias condições de pesquisa para uma coluna (Visual Database Tools)
   Em algumas instâncias, você pode querer aplicar vários critérios de pesquisa à mesma coluna de dados. Por exemplo, você pode querer:  

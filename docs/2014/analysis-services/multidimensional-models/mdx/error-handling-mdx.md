@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 57b7320e8d09a3106d29a7f4c53c14a52afaadd7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725658"
 ---
 # <a name="error-handling-mdx"></a>Tratamento de erros (MDX)
-  Cada cubo pode controlar como são tratados os erros em um script MDX. Tratamento de erro é feito por meio de `ScriptErrorHandlingMode` enumerador. Os valores possíveis para esse enumerador são:  
+  Cada cubo pode controlar como são tratados os erros em um script MDX. O tratamento de erro é feito pelo enumerador `ScriptErrorHandlingMode`. Os valores possíveis para esse enumerador são:  
   
  `IgnoreNone`  
  Faz com que o servidor produza um erro se o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] localizar algum erro no script MDX.  

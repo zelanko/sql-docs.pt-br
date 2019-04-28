@@ -43,11 +43,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8f79b36232ef099ee211a9f718668d02cb7992ab
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62837999"
 ---
 # <a name="getting-sql-server-assistance"></a>Obtendo assistência do SQL Server
   Existem três origens principais de informações da [!INCLUDE[msCoName](../includes/msconame-md.md)] sobre o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
@@ -78,7 +78,7 @@ ms.locfileid: "53355112"
   
  A tabela a seguir descreve esses recursos e o público-alvo.  
   
-|Recurso|Público|  
+|Resource|Público|  
 |--------------|--------------|  
 |[SQL Server Developer Center](https://msdn.microsoft.com/sqlserver/)|Desenvolvedores que estão criando bancos de dados, sistemas de relatórios e soluções de business intelligence do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e estão habilitando seus aplicativos e sites para usar esses sistemas.|  
 |[XML Developer Center](https://go.microsoft.com/fwlink/?LinkId=42458)|Criadores de site e desenvolvedores de aplicativos cujos sites e aplicativos utilizam XML para armazenamento e manipulação de dados.|  
@@ -87,7 +87,7 @@ ms.locfileid: "53355112"
 ## <a name="additional-online-information"></a>Informações online adicionais  
  Informações adicionais sobre o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] estão disponíveis nestes sites da [!INCLUDE[msCoName](../includes/msconame-md.md)].  
   
-|Recurso|Descrição|  
+|Resource|Descrição|  
 |--------------|-----------------|  
 |[Microsoft SQL Server](https://go.microsoft.com/fwlink/?linkid=8504)|Fornece informações de pré-venda sobre como avaliar o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] como um armazenamento de dados e ferramenta de business intelligence.|  
 |[Base de Conhecimento Microsoft](https://go.microsoft.com/fwlink/?LinkId=42461)|Fornece um repositório pesquisável de artigos sobre o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] escritos por suporte da [!INCLUDE[msCoName](../includes/msconame-md.md)].|    

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6152b183e00ca429efb817b9b19cdc0a7a1f77c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689400"
 ---
 # <a name="change-the-colors-used-in-the-data-mining-viewer"></a>Alterar as cores usadas no Visualizador de Mineração de Dados
   Você pode alterar as cores usadas nos visualizadores de mineração de dados para exibir séries de dados, nós ou clusters. Isso pode ser feito pela definição de opções no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Depois de alterar as configurações, a seleções de cores se aplicarão a todos os modelos exibidos pelo [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]; no entanto, será preciso fechar o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e reabrir o modelo no visualizador para ver as novas cores.  

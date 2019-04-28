@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e35d5ae9390a6b316ec41ce20a2983c1c78a1696
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793239"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>Limpar dados usando o conhecimento (externo) dos dados de referência
   Este tópico descreve como limpar dados usando o conhecimento dos provedores de dados de referência. Embora todas as etapas de execução de uma atividade de limpeza permaneçam inalteradas para a limpeza dos dados usando o conhecimento dos provedores de dados de referência, conforme explicado em [Limpar dados usando o conhecimento &#40;interno&#41; do DQS](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md), este tópico fornece informações específicas à limpeza de dados usando o serviço de dados de referência no DQS ([!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)]).  
@@ -35,7 +35,7 @@ ms.locfileid: "56029527"
     > [!NOTE]  
     >  Os valores de limite especificados durante o mapeamento de um domínio para um serviço de dados de referência são aplicados durante a limpeza dos dados através do conhecimento no serviço de dados de referência, e não os especificados na guia **Configurações Gerais** da seção **Configuração** . Para obter informações sobre como especificar valores de limite para limpeza de dados de referência, consulte a etapa 9 na [anexar um domínio ou domínio composto para dados de referência](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
   
--   Valores de domínio são categorizadas da seguinte forma: **Sugerido**, **novos**, **inválido**, **corrigido**, e **correto**.  
+-   Os valores de domínio são categorizados da seguinte forma: **Sugerido**, **Novo**, **Inválido**, **Corrigido** ou **Correto**.  
   
 -   Os dados adicionais são acrescentados à origem, e as informações estão disponíveis junto com os dados limpos para exportação.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "56029527"
   
 1.  Crie um projeto de qualidade de dados e selecione a atividade **Limpeza** . Consulte [Create a Data Quality Project](../../2014/data-quality-services/create-a-data-quality-project.md).  
   
-2.  Sobre o **mapa** página, os seguintes 4 domínios com as colunas apropriadas na fonte de dados do mapa: **Linha de endereço**, **City**, **estado**, e **Zip**. Clique em **Avançar**.  
+2.  Na página **Mapa**, mapeie os quatro domínios a seguir com as colunas apropriadas nos dados de origem: **Linha de endereço**, **Cidade**, **Estado** e **CEP**. Clique em **Avançar**.  
   
     > [!NOTE]  
     >  Como você mapeou os quatro domínios do domínio composto **Verificação de Endereço** , a limpeza de dados será feita no nível do domínio composto, e não no nível do domínio individual.  
@@ -64,7 +64,7 @@ ms.locfileid: "56029527"
     > [!NOTE]  
     >  Na página **Limpar** , o DQS exibirá informações sobre os domínios anexados ao serviço de dados de referência de duas maneiras:  
     >   
-    >  -   Uma mensagem é exibida abaixo de **iniciar** botão: "Domínios \<domínio1 >, \<domínio2 >,... \<DomainN> são limpos com o uso do provedor de serviços de dados de referência". Neste exemplo, a seguinte mensagem será exibida: "Verificação de domínio de endereço é limpa usando o provedor de serviços de dados de referência".  
+    >  -   Uma mensagem é exibida embaixo do botão **Iniciar**: "Os domínios \<Domain1>, \<Domain2>,... \<DomainN> são limpos com o uso do provedor de serviços de dados de referência". Neste exemplo, a seguinte mensagem será exibida: "A verificação do endereço de domínio foi limpa usando o provedor de serviço de dados de referência."  
     > -   Um ícone, ![O domínio está anexado ao RDS](../../2014/data-quality-services/media/dqs-rdsindicator.JPG "Domain is attached to RDS"), é exibido na área **Criador de Perfil** nos domínios anexados ao provedor de serviços de dados de referência. Neste exemplo, o ícone será exibido no domínio composto **Verificação de Endereço** .  
   
 4.  Na página **Gerenciar e exibir resultados** , revise seus valores de domínio. O serviço de dados de referência pode exibir mais de uma sugestão, se disponível, para um valor, dependendo do número máximo de sugestões especificado na caixa **Candidatos Sugeridos** durante o mapeamento do domínio para o serviço de dados de referência. Por exemplo, são exibidas duas sugestões para os seguintes endereços americanos:  

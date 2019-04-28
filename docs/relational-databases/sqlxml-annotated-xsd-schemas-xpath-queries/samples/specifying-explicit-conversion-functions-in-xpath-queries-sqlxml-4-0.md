@@ -18,11 +18,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 543f0d0234c6f4bc2f34904bda0cd6b0019aaaa0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62737415"
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>Especificando funções de conversão explícitas em consultas XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "56030696"
 </ROOT>  
 ```  
   
-### <a name="b-use-the-string-explicit-conversion-function"></a>b. Use a função de conversão explícita string()  
+### <a name="b-use-the-string-explicit-conversion-function"></a>B. Use a função de conversão explícita string()  
  O **String ()** função converte um argumento em uma cadeia de caracteres.  
   
  A seguinte consulta converte **ContactID** como uma cadeia de caracteres e compara-a com a cadeia de caracteres de valor "4". A consulta retorna todos os  **\<funcionário >** filhos do elemento do nó de contexto com um **ContactID** com um valor de cadeia de caracteres de "4":  

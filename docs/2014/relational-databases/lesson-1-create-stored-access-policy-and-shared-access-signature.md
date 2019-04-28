@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7ddcef5d5e0695041742784151103c358a973d55
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62806687"
 ---
 # <a name="lesson-2-create-a-policy-on-container-and-generate-a-shared-access-signature-sas-key"></a>Lição 2. Criar uma política no contêiner e gerenciar uma chave SAS (assinatura de acesso compartilhado)
   Nesta lição, você aprenderá a criar uma política no contêiner do Blob e também gerará uma chave de SAS.  
@@ -25,7 +25,7 @@ ms.locfileid: "48124076"
   
  Você pode criar uma política e uma assinatura de acesso compartilhado usando um destes métodos:  
   
--   Operações da API de REST do Windows Azure: [criar contêiner](https://msdn.microsoft.com/library/azure/dd179468.aspx), [definir ACL do contêiner](https://msdn.microsoft.com/library/azure/dd179391.aspx), e [obter ACL do contêiner](https://msdn.microsoft.com/library/azure/dd179469.aspx).  
+-   Operações da API de REST do Windows Azure: [Criar contêiner](https://msdn.microsoft.com/library/azure/dd179468.aspx), [definir ACL do contêiner](https://msdn.microsoft.com/library/azure/dd179391.aspx), e [obter ACL do contêiner](https://msdn.microsoft.com/library/azure/dd179469.aspx).  
   
 -   [Método GetSharedAccessSignature](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storageclient.cloudblobcontainer.getsharedaccesssignature.aspx) nas janelas do SDK do Azure.  
   
@@ -45,6 +45,6 @@ ms.locfileid: "48124076"
   
  **Próxima lição:**  
   
- [Lição 3: criar uma credencial do SQL Server](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
+ [Lição 3: Criar uma credencial do SQL Server](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
   
   

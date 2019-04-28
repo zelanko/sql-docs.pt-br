@@ -21,11 +21,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0a5846f45a2919bf5d2de2e94e205bfd59b0fe94
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62737426"
 ---
 # <a name="specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-40"></a>Especificando predicados com valor booliano em consultas XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "56036240"
   
      Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-     Aqui está o resultado:  
+     Este é o resultado:  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -91,7 +91,7 @@ ms.locfileid: "56036240"
     </ROOT>  
     ```  
   
-### <a name="b-specify-successive-and-nested-predicates"></a>b. Especificar predicados sucessivos e aninhados  
+### <a name="b-specify-successive-and-nested-predicates"></a>B. Especificar predicados sucessivos e aninhados  
  A consulta a seguir mostra o uso de predicados sucessivos. A consulta retorna todos os as  **\<cliente >** elementos filho do nó de contexto que têm ambos um **SalesPersonID** atributo com um valor 277 e um **TerritoryID**atributo com um valor de 3:  
   
 ```  
@@ -205,7 +205,7 @@ ms.locfileid: "56036240"
   
      Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Aqui está o resultado parcial:  
+ Este é o resultado parcial:  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

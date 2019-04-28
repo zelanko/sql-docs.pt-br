@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 840379944950b83fe301929ba20c35678564b02f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736009"
 ---
 # <a name="numberofflags-property-serversettings-class"></a>Propriedade NumberOfFlags (classe ServerSettings)
   Obtém o número de sinalizadores gerais associados com a instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

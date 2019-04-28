@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 704b775a881bc3c08f9789229231e05b56005257
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736784"
 ---
 # <a name="processing-analysis-services-objects"></a>Processando objetos do Analysis Services
   O processamento afeta os seguintes tipos de objeto do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] : bancos de dados, cubos, dimensões, grupos de medidas, partições e estruturas e modelos de mineração de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para cada objeto, é possível especificar o nível de processamento ou selecionar a opção Processar Padrão para habilitar o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a selecionar automaticamente o nível ideal de processamento. Para obter mais informações sobre os diferentes níveis de processamento para cada objeto, consulte [Processamento de opções e configurações &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md).  
@@ -73,7 +73,7 @@ ms.locfileid: "48050966"
   
  O processamento da dimensão não cria nem atualiza membros calculados, que são definidos no nível do cubo. Os membros calculados são afetados quando a definição de cubo é atualizada. Além disso, o processamento da dimensão não cria nem atualiza agregações. No entanto, o processamento pode provocar o descarte de agregações. As agregações são criadas ou atualizadas somente durante o processamento da partição.  
   
- Ao processar uma dimensão, observe que a dimensão pode ser usada em vários cubos. Durante o processamento, esses cubos são marcados como não processados e se tornam indisponíveis para consultas. Para processar simultaneamente a dimensão e os cubos relacionados, use as configurações de processamento em lotes. Para obter mais informações, consulte [Batch Processing &#40;Analysis Services&#41;](batch-processing-analysis-services.md).  
+ Ao processar uma dimensão, observe que a dimensão pode ser usada em vários cubos. Durante o processamento, esses cubos são marcados como não processados e se tornam indisponíveis para consultas. Para processar simultaneamente a dimensão e os cubos relacionados, use as configurações de processamento em lotes. Para obter mais informações, consulte [Processamento em lotes &#40;Analysis Services&#41;](batch-processing-analysis-services.md).  
   
 ##  <a name="bkmk_procmeasure"></a> Processando um grupo de medidas  
  Ao processar um grupo de medidas, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] processa algumas ou todas as partições do grupo e todas as dimensões não processadas que participam do grupo de medidas. As especificações do trabalho de processamento dependem da opção de processamento selecionada. É possível processar um ou mais grupos de medidas no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sem afetar outros grupos de medidas em um cubo.  
@@ -94,8 +94,8 @@ ms.locfileid: "48050966"
  Para obter mais informações sobre os modelos e estruturas de mineração de processamento, consulte [Requisitos e considerações de processamento &#40;Data Mining&#41;](../data-mining/processing-requirements-and-considerations-data-mining.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Ferramentas e abordagens para processamento de &#40;Analysis Services&#41;](tools-and-approaches-for-processing-analysis-services.md)   
- [O processamento em lotes &#40;Analysis Services&#41;](batch-processing-analysis-services.md)   
+ [Ferramentas e abordagens para processamento &#40;Analysis Services&#41;](tools-and-approaches-for-processing-analysis-services.md)   
+ [Processamento em lotes &#40;Analysis Services&#41;](batch-processing-analysis-services.md)   
  [Processamento de objetos de modelo multidimensional](processing-a-multidimensional-model-analysis-services.md)  
   
   

@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 001238b4e5d47b22ca991efcd8b4ee28971d7af7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982303"
 ---
 # <a name="sqlfetch-function"></a>Função SQLFetch
 **Conformidade com**  
@@ -107,7 +107,7 @@ SQLRETURN SQLFetch(
 |Condição|Primeira linha do novo conjunto de linhas|  
 |---------------|-----------------------------|  
 |Antes de iniciar|1|  
-|*CurrRowsetStart* \< =  *LastResultRow - RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
+|*CurrRowsetStart* \<= *LastResultRow - RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
 |*CurrRowsetStart* > *LastResultRow - RowsetSize*[1]|Após o fim|  
 |Após o fim|Após o fim|  
   
@@ -183,8 +183,8 @@ SQLRETURN SQLFetch(
 |SQL_ROW_SUCCESS_WITH_INFO|A linha foi obtida com êxito e não foi alterado desde que foi buscada pela última vez deste conjunto de resultados. No entanto, um aviso sobre a linha foi retornado.|  
 |SQL_ROW_ERROR|Ocorreu um erro ao buscar a linha.|  
 |SQL_ROW_UPDATED [1], [2] e [3]|A linha foi obtida com êxito e foi alterado desde que foi buscada pela última vez deste conjunto de resultados. Se a linha é novamente buscada deste conjunto de resultados ou é atualizada pelo **SQLSetPos**, o status é alterado para o status de nova da linha.|  
-|SQL_ROW_DELETED [3]|A linha foi excluída desde que foi buscada pela última vez deste conjunto de resultados.|  
-|SQL_ROW_ADDED [4]|A linha foi inserida pela **SQLBulkOperations**. Se a linha é novamente buscada deste conjunto de resultados ou é atualizada pelo **SQLSetPos**, seu status é SQL_ROW_SUCCESS.|  
+|SQL_ROW_DELETED[3]|A linha foi excluída desde que foi buscada pela última vez deste conjunto de resultados.|  
+|SQL_ROW_ADDED[4]|A linha foi inserida pela **SQLBulkOperations**. Se a linha é novamente buscada deste conjunto de resultados ou é atualizada pelo **SQLSetPos**, seu status é SQL_ROW_SUCCESS.|  
 |SQL_ROW_NOROW|O conjunto de linhas sobrepostas final do conjunto de resultados e nenhuma linha foi retornada que correspondeu a esse elemento da matriz de status de linha.|  
   
  [1] para o conjunto de chaves, mistos e dinâmicos cursores, se um valor de chave for atualizado, a linha de dados é considerada para ter sido excluída e uma nova linha adicionada.  
@@ -232,7 +232,7 @@ SQLRETURN SQLFetch(
   
 |Campo do descritor|Desc.|Campo em|Definido por meio de|  
 |----------------------|-----------|--------------|-----------------|  
-|SQL_DESC_ARRAY_SIZE|DESCARTAR|Cabeçalho|Atributo de instrução SQL_ATTR_ROW_ARRAY_SIZE|  
+|SQL_DESC_ARRAY_SIZE|DESCARTAR|Cabeçalho|SQL_ATTR_ROW_ARRAY_SIZE statement attribute|  
 |SQL_DESC_ARRAY_STATUS_PTR|IRD|Cabeçalho|Atributo de instrução SQL_ATTR_ROW_STATUS_PTR|  
 |SQL_DESC_BIND_OFFSET_PTR|DESCARTAR|Cabeçalho|Atributo de instrução SQL_ATTR_ROW_BIND_OFFSET_PTR|  
 |SQL_DESC_BIND_TYPE|DESCARTAR|Cabeçalho|Atributo de instrução SQL_ATTR_ROW_BIND_TYPE|  

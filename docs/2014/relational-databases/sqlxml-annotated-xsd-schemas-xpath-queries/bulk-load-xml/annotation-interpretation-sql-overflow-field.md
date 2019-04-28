@@ -1,5 +1,5 @@
 ---
-title: 'SQL: overflow-field (SQLXML 4.0) | Microsoft Docs'
+title: sql:overflow-field (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 935f1c9ea98c28b7f75e1665de7445f779af41d9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717763"
 ---
 # <a name="sqloverflow-field-sqlxml-40"></a>sql:overflow-field (SQLXML 4.0)
   Em um esquema, você pode identificar uma coluna de estouro para receber todos os dados não consumidos do documento XML. Essa coluna é especificada no esquema usando a anotação `sql:overflow-field`. É possível ter várias colunas de estouro.  

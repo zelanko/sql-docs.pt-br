@@ -1,5 +1,5 @@
 ---
-title: sys. identity_columns (Transact-SQL) | Microsoft Docs
+title: sys.identity_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6d6c97b167cb69eec72ad771504a1070ed59e4f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63004358"
 ---
 # <a name="sysidentitycolumns-transact-sql"></a>sys.identity_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47709594"
   
  O **sys. identity_columns** herda linhas das **sys. Columns** modo de exibição. O **sys. identity_columns** retorna as colunas na **sys. Columns** modo de exibição, mais o **seed_value**, **increment_value**, **last_value**, e **is_not_for_replication** colunas. Para obter mais informações, veja [Exibições de catálogo e&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md).  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**\<colunas herdadas de sys. Columns >**||O **sys. identity_columns** retorna todas as colunas na **sys. Columns** modo de exibição. Ela também retorna as colunas adicionais descritas abaixo. Para obter uma descrição das colunas que o **sys. identity_columns** exibição herda **sys. Columns**, consulte [sys. Columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md).|  
 |**seed_value**|**sql_variant**|Valor de semente para esta coluna de identidade. O tipo de dados do valor de semente é igual ao tipo de dados da própria coluna.|  

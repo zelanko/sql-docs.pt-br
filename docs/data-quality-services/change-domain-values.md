@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 30624ce9283c9604af12497ffbd8d3e17979be8c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62862600"
 ---
 # <a name="change-domain-values"></a>Alterar valores de domínio
 

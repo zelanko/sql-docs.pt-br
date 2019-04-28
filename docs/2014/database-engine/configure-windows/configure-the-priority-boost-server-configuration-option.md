@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d75f292ea86b4b619fec81ea7a6f7aafc83fdc15
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812268"
 ---
 # <a name="configure-the-priority-boost-server-configuration-option"></a>Configurar a opção de configuração de servidor de aumento de prioridade
   Este tópico descreve como configurar a opção de configuração **aumento de prioridade** no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Use a opção **aumento de prioridade** para especificar se o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser executado em uma prioridade mais alta de agendamento do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2008 ou Windows 2008 R2 do que outros processos no mesmo computador. Se você definir essa opção como 1, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executará em uma base de prioridade de 13 no agendador do Windows 2008 ou do Windows Server 2008 R2. O padrão é 0, que é uma base de prioridade de 7.  

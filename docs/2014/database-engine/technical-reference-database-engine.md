@@ -15,11 +15,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: de3e5f300c5e0c955989d8282a3a1c000c615299
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843013"
 ---
 # <a name="technical-reference-database-engine"></a>Referência técnica (Mecanismo de Banco de Dados)
   Localize as ferramentas, linguagens e documentação de referência para programação de administração do [!INCLUDE[ssDE](../includes/ssde-md.md)] no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  

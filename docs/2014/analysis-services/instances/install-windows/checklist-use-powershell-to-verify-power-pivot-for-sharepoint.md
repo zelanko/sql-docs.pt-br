@@ -12,13 +12,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fe75fc89ffa1642ebc3fa4301cb0a80c83895141
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730008"
 ---
-# <a name="checklist-use-powershell-to-verify-powerpivot-for-sharepoint"></a>Lista de verificação: Use o PowerShell para verificar o PowerPivot para SharePoint
+# <a name="checklist-use-powershell-to-verify-powerpivot-for-sharepoint"></a>Lista de verificação: Usar o PowerShell para verificar o PowerPivot para SharePoint
   Nenhuma instalação do [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] ou operação de recuperação será completa sem um teste de verificação rigoroso que confirme o funcionamento correto dos serviços e dos dados. Neste artigo, mostramos como executar essas etapas usando o Windows PowerShell. Colocamos cada etapa em sua própria seção para que você possa ir diretamente para as tarefas específicas. Por exemplo, execute o script na seção [Bancos de dados](#bkmk_databases) deste tópico para verificar o nome dos bancos de dados de conteúdo e aplicativo de serviço se quiser agendá-los para manutenção ou backup.  
   
 |||  
@@ -29,7 +29,7 @@ ms.locfileid: "55087785"
 |-|  
 |**[!INCLUDE[applies](../../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|  
   
- **Neste tópico**: os itens indicados por letras após o sumário correspondem às áreas do diagrama. O diagrama ilustra os  
+ **Neste tópico**: Os itens indicados após o Sumário correspondem às áreas do diagrama. O diagrama ilustra os  
   
 |||  
 |-|-|  
@@ -42,7 +42,7 @@ ms.locfileid: "55087785"
   
  Abra uma janela do PowerShell ou o ISE (Ambiente de Script Integrado) do PowerShell com **privilégios administrativos**. Se você não tiver privilégios administrativos ao executar comandos, receberá uma mensagem de erro semelhante à seguinte:  
   
- Get-SPLogEvent: Você precisa ter **privilégios de administrador** para executar este cmdlet.  
+ Get-SPLogEvent : Você precisa ter **privilégios de administrador** para executar este cmdlet.  
   
  **Módulo do SharePoint e do [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)]**  
   
@@ -288,7 +288,7 @@ MidTierAcctReadPermissionRule    True PowerPivot: MidTier process account should
   
  **Nome do serviço:** MSOLAP$POWERPIVOT  
   
- **Nome de exibição nos serviços do Windows:** SQL Server Analysis Services (PowerPivot)  
+ **Nome de exibição nos serviços do Windows:** SQL Server Analysis Services (POWERPIVOT)  
   
 ```  
 Get-EventLog "application" | Where-Object {$_.source -like "msolap`$powerpivot*"}  |select timegenerated, entrytype , source, message | format-table -property * -autosize | out-default  

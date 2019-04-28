@@ -13,13 +13,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8267f70049d0ef37c0ce80bc594dff25d53f15fd
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721086"
 ---
-# <a name="lesson-1-publishing-data-using-transactional-replication"></a>Lição 1: Publicando dados que usam replicação transacional
+# <a name="lesson-1-publishing-data-using-transactional-replication"></a>Lição 1: Publicando dados usando a replicação transacional
   Nesta lição, você aprenderá a criar uma publicação transacional usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para publicar um subconjunto filtrado da tabela **Produto** no banco de dados de exemplo do [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Você também adicionará o logon do SQL Server usado pelo Distribution Agent à PAL (lista de acesso à publicação). Antes de iniciar este tutorial, você deverá ter completado o tutorial anterior, [Preparando o servidor para replicação](tutorial-preparing-the-server-for-replication.md).  
   
 ### <a name="to-create-a-publication-and-define-articles"></a>Para criar uma publicação e definir artigos  
@@ -79,7 +79,7 @@ ms.locfileid: "54125966"
 4.  Na caixa de diálogo **Adicionar Acesso à Publicação**, selecione _<Machine_Name>_**\repl_distribution** e clique em **OK**. Clique em **OK**.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- Você criou a publicação transacional com êxito. A seguir, você assinará essa publicação. Consulte [lição 2: Criando uma assinatura na publicação transacional](lesson-2-creating-a-subscription-to-the-transactional-publication.md).  
+ Você criou a publicação transacional com êxito. A seguir, você assinará essa publicação. Veja a [Lição 2: Criando uma assinatura na publicação transacional](lesson-2-creating-a-subscription-to-the-transactional-publication.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Filtrar os dados publicados](publish/filter-published-data.md)   

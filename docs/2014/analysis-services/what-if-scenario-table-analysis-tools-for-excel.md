@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e8355c828cdc3479b108a693b07b3dfb5a92a289
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793218"
 ---
 # <a name="what-if-scenario-table-analysis-tools-for-excel"></a>Cenário E-Se (Ferramentas de Análise de Tabela para Excel)
   ![Que botão cenário se nas ferramentas de análise de tabela](media/tat-whatif.gif "botão cenário e se nas ferramentas de análise de tabela")  
@@ -84,7 +84,7 @@ ms.locfileid: "48140356"
   
  **'Compras de bicicletas' = Sim**  
   
- **Confiança: razoável**  
+ **Confiança: Fair**  
   
  Como esse resultado se baseia em uma linha existente na tabela de dados, isso significa que, para um determinado cliente, se todos os dados referentes ao cliente permanecerem iguais, mas a idade do cliente aumentar para 25, ele provavelmente comprará uma bicicleta.  
   

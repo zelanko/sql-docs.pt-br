@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4f8f7f1304b0d72cf59467aee16c04481fbd51ad
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721192"
 ---
 # <a name="hostname-values"></a>Valores HOST_NAME
   Asp ublicações de mesclagem com filtros com parâmetros usam a função SUSER_SNAME() e/ou a função HOST_NAME() para filtrar dados. A função é especificada no Assistente para Nova Publicação ou na caixa de diálogo **Propriedades de Publicação** .  
@@ -32,7 +32,7 @@ ms.locfileid: "52752198"
  Insira um valor para cada Assinante na coluna **Valor de HOST_NAME** ou aceite o padrão, que é o nome do computador do Assinante.  
   
 ## <a name="see-also"></a>Consulte também  
- [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [Criar uma assinatura pull](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
  [Exibir e modificar propriedades de assinatura pull](view-and-modify-pull-subscription-properties.md)   
  [Exibir e modificar propriedades de assinatura push](view-and-modify-push-subscription-properties.md)   

@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 94224bbc5c254b01fab49c850b554427757b714b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733421"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models-analysis-services---data-mining"></a>Conteúdo do modelo de mineração para modelos de clustering de sequências (Analysis Services – Mineração de Dados)
   Este tópico descreve o conteúdo do modelo de mineração que é específico para modelos que usam o algoritmo MSC (Microsoft Sequence Clustering). Para obter uma explicação sobre a terminologia geral e estatística relacionada ao conteúdo do modelo de mineração que se aplica a todos os tipos de modelo, consulte [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -54,7 +54,7 @@ ms.locfileid: "48105668"
  NODE_TYPE  
  Um modelo de clustering de sequência gera os seguintes tipos de nó:  
   
-|ID do tipo de nó|Description|  
+|ID do tipo de nó|Descrição|  
 |------------------|-----------------|  
 |1 (Modelo)|Nó raiz do modelo.|  
 |5 (Cluster)|Contém a contagem de transições no cluster, uma lista dos atributos e estatísticas que descrevem os valores no cluster.|  
@@ -231,7 +231,7 @@ ORDER BY Count(*) DESC
   
  A tabela a seguir mostra os resultados da tabela NODE_DISTRIBUTION juntamente com os valores de probabilidade arredondados que são exibidos no visualizador gráfico.  
   
-|Product|Suporte (tabela NODE_DISTRIBUTION)|Probabilidade (tabela NODE_DISTRIBUTION))|Probabilidade (do gráfico)|  
+|Produto|Suporte (tabela NODE_DISTRIBUTION)|Probabilidade (tabela NODE_DISTRIBUTION))|Probabilidade (do gráfico)|  
 |-------------|------------------------------------------|------------------------------------------------|--------------------------------|  
 |Missing|48.447887|0.138028169|(não exibido)|  
 |Capacete para Ciclismo|10.876056|0.030985915|0.03|  
@@ -262,8 +262,8 @@ ORDER BY Count(*) DESC
  Para saber como obter a lista dos caminhos observados ao consultar o conteúdo do modelo e para verificar exemplos de consultas em um modelo de clustering de sequência, consulte [Exemplos de consulta de modelo de clustering em sequência](clustering-model-query-examples.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Conteúdo do modelo de mineração &#40;Analysis Services - mineração de dados&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Algoritmo msc](microsoft-sequence-clustering-algorithm.md)   
- [Exemplos de consulta dos modelos de clustering de sequências](clustering-model-query-examples.md)  
+ [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Microsoft Sequence Clustering Algorithm](microsoft-sequence-clustering-algorithm.md)   
+ [Exemplos de consulta de modelo de clustering em sequência](clustering-model-query-examples.md)  
   
   

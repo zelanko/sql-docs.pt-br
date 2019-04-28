@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9235b9e3531e2ca40cabe211d85c077e629dacee
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62806118"
 ---
-# <a name="mdx-calculated-members---building-calculated-members"></a>MDX calculadas membros - Criando membros calculados
+# <a name="mdx-calculated-members---building-calculated-members"></a>Membros calculados MDX – Criar membros calculados
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Na linguagem MDX, um membro calculado é aquele resolvido pelo cálculo de uma expressão MDX para retornar um valor. Essa simples definição abrange uma quantidade enorme implicações. A capacidade de construir e usar membros calculados em uma consulta MDX proporciona uma grande capacidade de manipulação de dados multidimensionais.  
   
@@ -33,8 +33,8 @@ ms.locfileid: "34021783"
      Para obter mais informações sobre como usar a instrução CREATE MEMBER para criar membros calculados em uma sessão, consulte [Criando membros calculados no escopo da sessão &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Criar declaração de membro & #40; MDX & #41;](../../../mdx/mdx-data-definition-create-member.md)   
- [Referência de função MDX & #40; MDX & #41;](../../../mdx/mdx-function-reference-mdx.md)   
- [Instrução SELECT & #40; MDX & #41;](../../../mdx/mdx-data-manipulation-select.md)  
+ [Instrução CREATE MEMBER &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-member.md)   
+ [Referência da Função MDX &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md)   
+ [Instrução SELECT &#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md)  
   
   

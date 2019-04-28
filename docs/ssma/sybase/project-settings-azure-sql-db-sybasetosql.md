@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 14fa0cb949505ab2aeb15d1236add9acba9a1ab1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703724"
 ---
 # <a name="project-settings-azure-sql-db--sybasetosql"></a>Configurações do projeto (BD SQL do Azure) (SybaseToSQL)
 As configurações de projeto de BD SQL do Azure permitem que você configurar o sufixo do banco de dados SQL do Azure a serem adicionados na caixa de diálogo de conexão e também permite implementar o mecanismo de pulsação na conexão de BD SQL do Azure.  

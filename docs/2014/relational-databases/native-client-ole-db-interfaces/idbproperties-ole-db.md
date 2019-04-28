@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3b6dada26e15fc83d890b270ad553eb051bb08fa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62692188"
 ---
 # <a name="idbproperties-ole-db"></a>IDBProperties (OLE DB)
   A especificação OLE DB padrão permite que os provedores especifiquem VT_EMPTY para `DBPROPINFO::vValues`. No entanto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB do Native Client sempre retorna o VT_EMPTY ao chamar `IDBProperties::GetPropertyInfo` com `DBPROPSET_ROWSETALL` para recuperar as propriedades do conjunto de linhas.  

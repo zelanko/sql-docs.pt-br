@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d8f64172685c42a5dde8de9027c8c7e621ddd9f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62735062"
 ---
 # <a name="transfer-octet-length"></a>Comprimento do octeto de transferência
 O comprimento do octeto de transferência de uma coluna é o número máximo de bytes retornados para o aplicativo quando os dados são transferidos para seu tipo de dados C padrão. Para dados de caractere, o comprimento do octeto de transferência não inclui espaço para o caractere nulo de terminação. O comprimento do octeto de transferência de uma coluna pode ser diferente do número de bytes necessários para armazenar os dados na fonte de dados.  

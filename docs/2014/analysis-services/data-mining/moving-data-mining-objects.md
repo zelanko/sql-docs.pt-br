@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a73a9b7fa99e42ff9846faafee6de5258e03ba7c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733374"
 ---
 # <a name="moving-data-mining-objects"></a>Movendo objetos de mineração de dados
   Os cenários mais comuns para mover objetos de mineração de dados são implantar um modelo de um ambiente de teste ou análise para um ambiente de produção ou compartilhar modelos com outros usuários.  
@@ -50,9 +50,9 @@ ms.locfileid: "48071840"
 ### <a name="scripting"></a>Script  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece vários idiomas que você pode usar para criar script de objetos.  
   
--   **XMLA**: você pode criar scripts de objetos usando o XMLA clicando com o botão direito do mouse nos objetos no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para executar o script, abra-o na janela **Consulta XMLA** no servidor de destino.  
+-   **XMLA**: Você pode criar scripts de objetos usando o XMLA clicando com o objetos em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para executar o script, abra-o na janela **Consulta XMLA** no servidor de destino.  
   
--   **DMX**: você pode criar scripts usando modelos ou um dos construtores de consulta fornecidos no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] e no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+-   **DMX**: Você pode criar scripts usando modelos ou um dos construtores de consulta fornecidos no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] e [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  Observe, no entanto, que há diferenças nas tarefas que você pode executar com cada linguagem de scripts:  
   
@@ -74,9 +74,9 @@ ms.locfileid: "48071840"
 ### <a name="exporting-and-importing"></a>Exportando e importando  
  Exportar e, em seguida, reimportar os modelos e as estruturas de mineração usando instruções DMX é a maneira mais fácil de mover ou fazer backup de objetos de mineração de dados relacionais individuais. Para obter mais informações sobre a sintaxe DMX para essas operações, consulte os seguintes tópicos:  
   
--   [EXPORTAR &AMP;#40;DMX&AMP;#41;](/sql/dmx/export-dmx)  
+-   [EXPORT &#40;DMX&#41;](/sql/dmx/export-dmx)  
   
--   [IMPORTAÇÃO &AMP;#40;DMX&AMP;#41;](/sql/dmx/import-dmx)  
+-   [IMPORT &#40;DMX&#41;](/sql/dmx/import-dmx)  
   
  Se você especificar a opção INCLUDE DEPENDENCIES, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] também exportará a definição de qualquer exibição da fonte de dados necessária e, quando você importar o modelo ou a estrutura, ele recriará a exibição da fonte de dados no servidor de destino. Depois que você terminar de importar o modelo, defina as permissões de mineração necessárias no objeto.  
   
@@ -84,6 +84,6 @@ ms.locfileid: "48071840"
 >  Não é possível exportar e importar modelos OLAP usando DMX. Se o modelo de mineração se basear em um cubo OLAP, você deverá usar a funcionalidade fornecida pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para fazer backup e restauração de um banco de dados inteiro, ou reimplantar o cubo e seus modelos.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gerenciamento de soluções de Mineração de dados e objetos](management-of-data-mining-solutions-and-objects.md)  
+ [Gerenciamento de soluções de mineração de dados e objetos](management-of-data-mining-solutions-and-objects.md)  
   
   

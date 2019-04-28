@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d8f7e9df6417334b814e71664b2a164dd76a9642
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726951"
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>Criar medidas e grupos de medidas em modelos multidimensionais
   Uma *medida* é uma agregação de valores de dados numéricos, como soma, contagem, mínima, máxima, média ou uma expressão MDX personalizada criada por você. Um *grupo de medidas* é um contêiner para uma ou mais medidas. Todas as medidas existem em um grupo de medidas, mesmo que haja somente uma medida. Um cubo deve ter pelo menos uma medida e um grupo de medidas.  
@@ -42,7 +42,7 @@ ms.locfileid: "48060358"
 |-|-|  
 |Assistente para Cubos|Execute o Assistente de cubo no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para criar um cubo.<br /><br /> No Gerenciador de Soluções, clique com o botão direito do mouse em **Cubos** e selecione **Novo Cubo**. Consulte [Modelagem Multidimensional &#40;Tutorial do Adventure Works&#41;](../multidimensional-modeling-adventure-works-tutorial.md) se precisar de ajuda com estas etapas.<br /><br /> Quando você cria um cubo com base em tabelas por meio de um data warehouse existente, as definições para as medidas e o grupo de medidas se materializam como parte do processo de criação do cubo. No assistente, você escolherá quais fatos e tabelas de fatos usar como base para a medida e os objetos do grupo de medidas em seu cubo.|  
 |Caixa de diálogo Nova medida|Supondo que o cubo já existe no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], clique duas vezes no nome do cubo no Gerenciador de Soluções para abri-lo no Designer de Cubo. No painel Medidas, clique com o botão direito do mouse no nó superior para criar um novo grupo de medidas, ou novas medidas, especificando uma tabela de origem, uma coluna e um tipo de agregação. O uso dessa abordagem requer que você escolha o método de agregação em uma lista fixa de funções pré-compiladas. Consulte [Use Aggregate Functions](use-aggregate-functions.md) para obter uma discussão das agregações usadas com mais frequência.|  
-|membro calculado|Os membros calculados adicionam flexibilidade e capacidade de análise para um cubo no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , pois você pode controlar quando e como eles são criados. Às vezes, você só precisa de uma medida temporária, pela duração de uma sessão de usuário ou no Management Studio como parte de uma investigação.<br /><br /> Em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra a guia Cálculos para criar um novo membro calculado.<br /><br /> Escolha essa abordagem ao basear uma medida em uma expressão MDX. Consulte estes tópicos para obter mais informações: [Compilando medidas em MDX](mdx/mdx-building-measures.md), [Cálculos](../multidimensional-models-olap-logical-cube-objects/calculations.md), [Cálculos em modelos multidimensionais](calculations-in-multidimensional-models.md) e [Conceitos básicos do script MDX &#40;Analysis Services&#41;](mdx/mdx-scripting-fundamentals-analysis-services.md).|  
+|membro calculado|Os membros calculados adicionam flexibilidade e capacidade de análise para um cubo no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , pois você pode controlar quando e como eles são criados. Às vezes, você só precisa de uma medida temporária, pela duração de uma sessão de usuário ou no Management Studio como parte de uma investigação.<br /><br /> Em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra a guia Cálculos para criar um novo membro calculado.<br /><br /> Escolha essa abordagem ao basear uma medida em uma expressão MDX. Consulte estes tópicos para obter mais informações: [Compilando medidas em MDX](mdx/mdx-building-measures.md), [cálculos](../multidimensional-models-olap-logical-cube-objects/calculations.md), [cálculos em modelos multidimensionais](calculations-in-multidimensional-models.md) e [conceitos básicos de script MDX &#40;do Analysis Services&#41; ](mdx/mdx-scripting-fundamentals-analysis-services.md).|  
 |MDX ou XMLA|No SQL Server Management Studio, você pode executar o MDX ou XMLA para alterar um banco de dados para incluir uma nova medida calculada. Essa abordagem é útil para teste ad hoc de dados, depois que a solução for implantada em um servidor. Consulte [Document and Script an Analysis Services Database](document-and-script-an-analysis-services-database.md).|  
   
 ##  <a name="bkmk_comps"></a> Componentes de uma medida  
@@ -87,6 +87,6 @@ ms.locfileid: "48060358"
   
 ## <a name="see-also"></a>Consulte também  
  [Cubos em modelos multidimensionais](cubes-in-multidimensional-models.md)   
- [Medidas e grupos de medidas](measures-and-measure-groups.md)  
+ [Medidas e Grupos de Medidas](measures-and-measure-groups.md)  
   
   

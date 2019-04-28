@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e0db81314355b987d139b678d292f5cfe293a7e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982374"
 ---
 # <a name="sqlforeignkeys-function"></a>Função SQLForeignKeys
 **Conformidade com**  
@@ -194,7 +194,7 @@ SQLRETURN SQLForeignKeys(
 |ORDERID|ORDERID|CUSTID|  
 |CUSTID|LINHAS|NAME|  
 |OPENDATE|PARTID|ENDEREÇO|  
-|VENDEDOR|QUANTIDADE|TELEFONE|  
+|SALESPERSON|QUANTIDADE|TELEFONE|  
 |STATUS|||  
   
  Na tabela de pedidos, CUSTID identifica o cliente a quem a venda foi feita. É uma chave estrangeira que se refere ao CUSTID na tabela CUSTOMERS.  

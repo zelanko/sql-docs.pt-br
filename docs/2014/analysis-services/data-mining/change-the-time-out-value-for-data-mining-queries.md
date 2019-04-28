@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11480432c19f84d58c5804927c3c22ac31be4342
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711810"
 ---
 # <a name="change-the-time-out-value-for-data-mining-queries"></a>Alterar o valor do tempo limite de consultas de mineração de dados
   Às vezes, quando é criado um gráfico de comparação de precisão ou é executada uma consulta de previsão, a geração de todos os dados necessários para a previsão pode demorar. Para evitar que o tempo limite da consulta seja ultrapassado, você pode alterar o valor que controla o tempo em que o servidor [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] permanecerá em espera para concluir uma consulta.  
@@ -36,7 +36,7 @@ ms.locfileid: "48077446"
 3.  Clique na caixa de texto **Tempo Limite da Consulta** e digite um valor para a quantidade de segundos.  
   
 ## <a name="see-also"></a>Consulte também  
- [Tarefas e tarefas de consulta de mineração de dados](data-mining-query-tasks-and-how-tos.md)   
+ [Tarefas e instruções de consulta de Data Mining](data-mining-query-tasks-and-how-tos.md)   
  [Consultas de mineração de dados](data-mining-queries.md)  
   
   

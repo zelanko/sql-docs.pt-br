@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 35e720872257f1a1c96d8aa50aef8458daf574ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699826"
 ---
 # <a name="creating-query-scoped-cell-calculations-mdx"></a>Criando cálculos de célula no escopo da consulta (MDX)
-  Use a palavra-chave `WITH` em expressões multidimensionais (MDX) para descrever células calculadas no contexto de uma consulta. O `WITH` palavra-chave tem a seguinte sintaxe:  
+  Use a palavra-chave `WITH` em expressões multidimensionais (MDX) para descrever células calculadas no contexto de uma consulta. A sintaxe da palavra-chave `WITH` é:  
   
 ```  
 WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression  
@@ -30,7 +30,7 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
   
  O valor `CellCalc_Identifier` é o nome das células calculadas. O valor `String_Expression` contém uma lista de expressões de conjunto MDX ortogonais e unidimensionais. Cada uma delas deve resolver uma das categorias listadas na tabela a seguir.  
   
-|Categoria|Description|  
+|Category|Descrição|  
 |--------------|-----------------|  
 |Conjunto vazio|Uma expressão de conjunto MDX resolvida em um conjunto vazio. Nesse caso, o escopo da célula calculada é o cubo inteiro.|  
 |Conjunto de membro único|Uma expressão de conjunto MDX resolvida em um único membro.|  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c687f2b7a11dba37c05412c03cf14da4a3daa543
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62863868"
 ---
 # <a name="maxrecords-property-example-vb"></a>Exemplo da propriedade MaxRecords (VB)
 Este exemplo usa o [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) para abrir um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) que contém os títulos mais caros 10 no ***títulos*** tabela.  

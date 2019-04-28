@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3b447531f813d55be8f5318b192909c21e42e78d
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701934"
 ---
 # <a name="actions-in-multidimensional-models"></a>Ações em modelos multidimensionais
   Uma ação é uma operação iniciada pelo usuário final em um cubo selecionado ou em parte de um cubo. A operação pode iniciar um aplicativo com o item selecionado como parâmetro ou pode recuperar informações sobre o item selecionado. Para obter mais informações sobre ações, consulte [Ações &#40;Analysis Services – Dados Multidimensionais&#41;](actions-analysis-services-multidimensional-data.md).  
@@ -58,7 +58,7 @@ ms.locfileid: "50146421"
  **Conteúdo da Ação**  
  Selecione o tipo de ação. A tabela a seguir resume os tipos disponíveis:  
   
-|Tipo|Description|  
+|Tipo|Descrição|  
 |----------|-----------------|  
 |Conjunto de Dados|Recupera um conjunto de dados.|  
 |Proprietário|Executa uma operação usando uma interface diferente das listadas nesta tabela.|  
@@ -71,7 +71,7 @@ ms.locfileid: "50146421"
  **Propriedades Adicionais**  
  Selecione a propriedade. A tabela a seguir resume as propriedades disponíveis:  
   
-|Propriedade|Description|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |**Invocação**|Especifica como a ação é executada. Interativo, o padrão, especifica que a ação será executada quando um usuário acessar um objeto. Os configurações possíveis são:<br /><br /> Lote<br /><br /> Interativo<br /><br /> Em Aberto|  
 |**Aplicativo**|Descreve o aplicativo da ação.|  
@@ -88,7 +88,7 @@ ms.locfileid: "50146421"
  **Servidor de relatório**  
  As propriedades descritas na tabela a seguir são especificadas para o servidor de relatório.  
   
-|Propriedade|Description|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |**Nome do servidor**|O nome do computador que executa o servidor de relatório.|  
 |**Caminho do servidor**|O caminho exibido pelo servidor de relatório.|  
@@ -112,7 +112,7 @@ parametervalue1
 & ...  
 ```  
   
- Por exemplo:  
+ Por exemplo:   
   
 ```  
 http://localhost/ReportServer/Sales/YearlySalesByCategory?rs:Command=Render&Region=West  

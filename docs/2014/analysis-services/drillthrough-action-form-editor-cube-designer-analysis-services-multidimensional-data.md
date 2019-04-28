@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8589c743e926b6654cfba123ef7a47a85c0e95d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731703"
 ---
 # <a name="drillthrough-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor de Formulário de Ação de Extração de Detalhes (guia Ações, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel **Editor de Formulário de Ação de Extração de Detalhes** na guia **Ações** no Designer de Cubo para modificar a ação de extração de detalhes selecionada no painel **Organizador de Ações** . Para obter mais informações sobre ações de detalhamento, consulte [Ações &#40;Analysis Services – Dados Multidimensionais&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md).  
@@ -49,7 +49,7 @@ ms.locfileid: "48213226"
   
  A grade contém as seguintes colunas:  
   
-|coluna|Description|  
+|coluna|Descrição|  
 |------------|-----------------|  
 |**Dimensions**|Selecione a dimensão da qual o atributo retornado é derivado. Selecione MEDIDAS para extração de detalhes em medidas.|  
 |**Colunas de retorno**|Selecione o atributo ou medida da dimensão selecionada a ser retornada quando a ação for executada.|  
@@ -76,7 +76,7 @@ ms.locfileid: "48213226"
   
  A tabela a seguir descreve as configurações disponíveis.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |Lote|A ação deve ser executada como parte de uma operação em lote ou de uma tarefa do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .|  
 |Interativo|A ação é executada quando o usuário a invoca.|  
@@ -104,7 +104,7 @@ ms.locfileid: "48213226"
  Selecione **Verdadeiro** para indicar que a **Legenda** contém uma expressão MDX que retorna uma cadeia de caracteres que representa uma legenda a ser exibida para a ação no aplicativo cliente. A expressão MDX deve ser resolvida antes da ação ser retornada ao aplicativo cliente.  
   
 ## <a name="see-also"></a>Consulte também  
- [Expressões multidimensionais &#40;MDX&#41; referência](/sql/mdx/multidimensional-expressions-mdx-reference)   
+ [Referência de expressões multidimensionais &#40;MDX&#41;](/sql/mdx/multidimensional-expressions-mdx-reference)   
  [Ações &#40;Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
  [Barra de ferramentas &#40;guia Ações, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Organizador de ações &#40;guia Ações, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   

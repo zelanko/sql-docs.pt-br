@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c027b6648da799be5a2b9381a0f19dc437563242
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62806363"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>Criar um ponto de controle do Utilitário do SQL Server (Utilitário do SQL Server)
   Uma empresa pode ter vários Utilitários do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , e cada Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode gerenciar várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e aplicativos da camada de dados. Cada Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem apenas um UCP (ponto de controle do utilitário). Você deve criar um novo UCP para cada Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cada instância gerenciada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e cada aplicativo da camada de dados é membro somente de um Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , e é gerenciada por um único UCP.  
@@ -76,7 +76,7 @@ ms.locfileid: "53377658"
   
 -   Esse procedimento deve ser executado por um usuário com permissões de sysadmin, as mesmas permissões necessárias para criar um UCP.  
   
--   Todas as instâncias gerenciadas do SQL Server devem ser removidas do UCP. Observe que o UCP é uma instância gerenciada do SQL Server. Para obter mais informações, consulte [como: Remover uma instância do SQL Server do utilitário do SQL Server](https://go.microsoft.com/fwlink/?LinkId=169392).  
+-   Todas as instâncias gerenciadas do SQL Server devem ser removidas do UCP. Observe que o UCP é uma instância gerenciada do SQL Server. Para obter mais informações, confira [Como Remover uma instância do SQL Server do utilitário do SQL Server](https://go.microsoft.com/fwlink/?LinkId=169392).  
   
  Use este procedimento para remover um SQL Server UCP do Utilitário do SQL Server. Após a conclusão da operação, um UCP pode ser novamente criado na instância do SQL Server.  
   

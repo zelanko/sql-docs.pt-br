@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 871919554975f04fae0aeaa1b8e6ec684c6650a4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714143"
 ---
 # <a name="why-was-odbc-created"></a>Por que o ODBC foi criado?
-Historicamente, as empresas usavam um único DBMS. Todo o acesso de banco de dados foi feito por meio de front-end de sistema ou de aplicativos escritos para trabalhar exclusivamente com esse sistema. No entanto, conforme o uso de computadores cresceu e mais hardware e software que se tornaram disponíveis, as empresas iniciado para adquirir DBMSs diferentes. Os motivos foram muitas: pessoas que compraram o que era mais barato, o que era mais rápido, o que eles já sabiam, o que era mais recente do mercado, o que funcionou melhor para um único aplicativo. Outros motivos eram reorganizações e fusões, em que os departamentos que anteriormente tinham um DBMS único agora tinham vários.  
+Historicamente, as empresas usavam um único DBMS. Todo o acesso de banco de dados foi feito por meio de front-end de sistema ou de aplicativos escritos para trabalhar exclusivamente com esse sistema. No entanto, conforme o uso de computadores cresceu e mais hardware e software que se tornaram disponíveis, as empresas iniciado para adquirir DBMSs diferentes. Os motivos eram muitos: As pessoas que compraram o que era mais barato, o que era mais rápido, o que eles já sabiam, o que era mais recente do mercado, o que funcionou melhor para um único aplicativo. Outros motivos eram reorganizações e fusões, em que os departamentos que anteriormente tinham um DBMS único agora tinham vários.  
   
  O problema aumentou ainda mais complexo com o advento dos computadores pessoais. Esses computadores colocados em um host de ferramentas para consultar, analisar e exibir dados, junto com um número de bancos de dados de baixo custo, fácil de usar. Daí em seguida diante, uma empresa geralmente tinha dados espalhados por uma grande variedade de áreas de trabalho, servidores e minicomputadores, armazenados em uma variedade de bancos de dados incompatíveis e acessados por um grande número de ferramentas diferentes, alguns dos quais podem chegar a todos os dados.  
   

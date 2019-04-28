@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cab3797092b4f87c9831dcfe5fd26d77b5ec2884
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62814473"
 ---
 # <a name="failover-and-failover-modes-alwayson-availability-groups"></a>Failover e modos de failover (grupos de disponibilidade AlwaysOn)
   Dentro do contexto de um grupo de disponibilidade, as funções primária e secundária das réplicas de disponibilidade, normalmente, são intercambiáveis em um processo conhecido como *failover*. Existem três formas de failover: failover automático (sem perda de dados), failover manual planejado (sem perda de dados) e failover manual forçado (com possível perda de dados), geralmente chamado de *failover forçado*. Os failovers automáticos e manuais planejados preservam todos os seus dados. Um grupo de disponibilidade faz failover no nível da réplica de disponibilidade. Ou seja, um grupo de disponibilidade realiza failover em uma de suas réplicas secundárias (o *destino de failover*atual).  
@@ -82,7 +82,7 @@ ms.locfileid: "53359238"
   
 -   **[!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)] (opcional):**  Em um grupo de disponibilidade específico, um conjunto de duas ou três réplicas de disponibilidade (inclusive a réplica primária atual) que estão configuradas para o modo de confirmação síncrona, se houver. Um conjunto de failover de confirmação síncrona terá efeito se as réplicas secundárias estiverem configuradas para o modo de failover manual e pelo menos uma réplica secundária estiver SYNCHRONIZED no momento com a réplica primária.  
   
--   **[!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)] :**  Dentro de um determinado grupo de disponibilidade, o conjunto de todas as réplicas de disponibilidade cujo estado operacional é ONLINE no momento, independentemente do modo de disponibilidade e do modo de failover. O conjunto de failover inteiro se tornará relevante quando nenhuma réplica secundária estiver SYNCHRONIZED no momento com a réplica primária.  
+-   **[!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)]:**  Dentro de um determinado grupo de disponibilidade, o conjunto de todas as réplicas de disponibilidade cujo estado operacional é ONLINE no momento, independentemente do modo de disponibilidade e do modo de failover. O conjunto de failover inteiro se tornará relevante quando nenhuma réplica secundária estiver SYNCHRONIZED no momento com a réplica primária.  
   
  Quando você configura uma réplica de disponibilidade como confirmação síncrona com failover automático, a réplica de disponibilidade se torna parte do [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)]. Porém, se a definição entra em vigor ou não depende da primária atual. Os formulários de failover que são realmente possíveis em um determinado momento dependem de quais conjuntos de failover estão em vigor atualmente.  
   
@@ -226,7 +226,7 @@ ms.locfileid: "53359238"
 ###  <a name="WhyFFoPostForcedQuorum"></a> Por que o failover forçado é necessário após um quorum forçado  
  Depois de forçar o quorum no cluster WSFC (*quorum forçado*), é necessário realizar um failover forçado (com possível perda de dados) em cada grupo de disponibilidade. O failover forçado é necessário porque o estado real dos valores do cluster WSFC pode ter sido perdido. É necessário evitar failovers normais após um quorum forçado devido à possibilidade de que uma réplica secundária não sincronizada apareça para ser sincronizada no cluster WSFC reconfigurado.  
   
- Por exemplo, considere um cluster do WSFC que hospeda um grupo de disponibilidade em três nós:  Nó A hospeda a réplica primária e o nó B e C hospedam, cada uma réplica secundária. O nó C é desconectado do cluster WSFC enquanto a réplica secundária local é SYNCHRONIZED.  Mas os nós A e B retêm um quorum íntegro e o grupo de disponibilidade permanece online. No nó A, a réplica primária continua a aceitar atualizações e, no nó B, a réplica secundária continua a sincronizar com a réplica primária. A réplica secundária no nó C se torna não sincronizada e fica bem atrás da réplica primária. Entretanto, como o nó C é desconectado, a réplica permanece, incorretamente, no estado SYNCHRONIZED.  
+ Por exemplo, considere um cluster WSFC que hospeda um grupo de disponibilidade em três nós:  O nó A hospeda a réplica primária e os nós B e C hospedam, cada um, uma réplica secundária. O nó C é desconectado do cluster WSFC enquanto a réplica secundária local é SYNCHRONIZED.  Mas os nós A e B retêm um quorum íntegro e o grupo de disponibilidade permanece online. No nó A, a réplica primária continua a aceitar atualizações e, no nó B, a réplica secundária continua a sincronizar com a réplica primária. A réplica secundária no nó C se torna não sincronizada e fica bem atrás da réplica primária. Entretanto, como o nó C é desconectado, a réplica permanece, incorretamente, no estado SYNCHRONIZED.  
   
  Se o quorum for perdido e, em seguida, forçado no Nó A, o estado de sincronização do grupo de disponibilidade no cluster WSFC deverá estar correto – com a réplica secundária no Nó C mostrada como UNSYNCHRONIZED. No entanto, se o quorum for forçado no nó C, a sincronização do grupo de disponibilidade estará incorreta. A sincronização no cluster será revertida ao estado de quando o Nó C foi desconectado, ou seja, com a réplica secundária no Nó C mostrada *incorretamente* como SYNCHRONIZED. Como os failovers manuais planejados garantem a segurança dos dados, eles não têm permissão para recolocar um grupo de disponibilidade online após o quorum ser forçado.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Apêndice b: erros de ADO | Microsoft Docs'
+title: 'Apêndice B: Erros ADO | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 392b14a057c42091acb6b92e0c64d41d94b8eb10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719932"
 ---
-# <a name="appendix-b-ado-error-codes"></a>Apêndice b: códigos de erro do ADO
+# <a name="appendix-b-ado-error-codes"></a>Apêndice B: Códigos de erro ADO
 Consulte os tópicos a seguir para obter mais informações sobre mensagens de erro específico:
 
 -   [Códigos de erro ADO](../../../ado/guide/appendixes/ado-error-codes.md)

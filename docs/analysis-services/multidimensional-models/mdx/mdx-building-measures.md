@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c2095d3bde254a59c5b2edbe8ebb117854ab7777
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62806116"
 ---
-# <a name="mdx-building-measures"></a>Medidas de construção de MDX
+# <a name="mdx-building-measures"></a>Medidas de criação MDX
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Nas expressões MDX, uma medida é uma expressão DAX nomeada que é resolvida pelo cálculo da expressão para retornar um valor em um Modelo de Tabela. Essa simples definição abrange uma quantidade enorme implicações. A capacidade de construir e usar medidas em uma consulta MDX proporciona uma grande capacidade de manipulação de dados de tabela.  
   
@@ -43,8 +43,8 @@ from [Model]
 |2004|25808962.34||  
   
 ## <a name="see-also"></a>Consulte também  
- [Criar declaração de membro & #40; MDX & #41;](../../../mdx/mdx-data-definition-create-member.md)   
- [Referência de função MDX & #40; MDX & #41;](../../../mdx/mdx-function-reference-mdx.md)   
- [Instrução SELECT & #40; MDX & #41;](../../../mdx/mdx-data-manipulation-select.md)  
+ [Instrução CREATE MEMBER &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-member.md)   
+ [Referência da Função MDX &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md)   
+ [Instrução SELECT &#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md)  
   
   

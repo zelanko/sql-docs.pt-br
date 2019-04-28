@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84a7ae52cf3556d7c79e3b9ca8d6027f8a5f14db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180406"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62734123"
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Algoritmo Regressão Linear da Microsoft
   O algoritmo Regressão Linear da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é uma variação do algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] que o ajuda a calcular uma relação linear entre uma variável dependente e uma independente e, depois, a usar aquela relação para previsão.  
@@ -78,9 +78,9 @@ ms.locfileid: "48180406"
 -   Suporta o uso de modelos de mineração OLAP.  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Referência técnica do algoritmo de regressão Linear de Microsoft](microsoft-linear-regression-algorithm-technical-reference.md)   
+ [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Referência técnica do algoritmo Regressão Linear da Microsoft](microsoft-linear-regression-algorithm-technical-reference.md)   
  [Exemplos de consulta de modelo de regressão linear](linear-regression-model-query-examples.md)   
- [Mining Model Content para modelos de regressão Linear &#40;Analysis Services - mineração de dados&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Conteúdo do modelo de mineração para modelos de regressão linear &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

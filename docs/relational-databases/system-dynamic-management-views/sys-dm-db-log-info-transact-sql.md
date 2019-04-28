@@ -21,11 +21,11 @@ ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 50549b10793346331d2e5cb8668243db615a443b
-ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49411143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719516"
 ---
 # <a name="sysdmdbloginfo-transact-sql"></a>sys.dm_db_log_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ sys.dm_db_log_info ( database_id )
 ``` 
 
 ## <a name="arguments"></a>Argumentos  
- *database_id* | NULO | PADRÃO  
+ *database_id* | NULL | DEFAULT  
  É a ID do banco de dados. *database_id* é **int**. As entradas válidas são o número de identificação de um banco de dados, NULL ou padrão. O padrão é NULO. NULO e DEFAULT são valores equivalentes no contexto do banco de dados atual.
  
  Especifique NULL para retornar informações de VLF do banco de dados atual.
@@ -48,7 +48,7 @@ sys.dm_db_log_info ( database_id )
 
 ## <a name="table-returned"></a>Tabela retornada  
 
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|ID do banco de dados.|
 |file_id|**smallint**|Id do arquivo de log de transações.|  

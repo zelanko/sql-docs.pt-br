@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: a485cc23a399496a4c86cc2eab0e8d26b360066e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62735870"
 ---
 # <a name="setcurrentcertificate-method-serversettings-class"></a>Método SetCurrentCertificate (classe ServerSettings)
   Define o certificado de segurança atual.  

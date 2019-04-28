@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c5180ab3b7b633916f51b4a35a5128dc017cd751
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62863997"
 ---
 # <a name="marshaloptions-property-example-vc"></a>Exemplo da propriedade MarshalOptions (VC++)
 Este exemplo usa o [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) propriedade para especificar quais linhas são enviadas de volta para o servidor - todas as linhas ou apenas as linhas modificadas.  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b6c4601553392a2e11bf6ab77063552c2a58e939
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795433"
 ---
 # <a name="power-view-reporting-properties-ssas-tabular"></a>Propriedades de relatório de Power View (SSAS tabular)
   [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] oferece relatórios ad hoc intuitivos para usuários comerciais, tais como analistas de dados, tomadores de decisões de negócios e operadores de informações. Eles podem criar e interagir facilmente com exibição de dados de modelos tabulares com base em pastas de trabalho PowerPivot publicadas em uma Galeria do PowerPivot ou modelos de tabela criados usando o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e, em seguida, implantados em instâncias do Analysis Services do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] é um aplicativo do Silverlight baseado no navegador, iniciado no SharePoint Server 2010 ou posterior.  
@@ -25,9 +25,9 @@ ms.locfileid: "48152786"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
-|[Configurar conjunto de campo padrão para relatórios do Power View &#40;Tabular do SSAS&#41;](power-view-configure-default-field-set-for-reports.md)|Descreve como configurar um Conjunto de Campo Padrão; uma lista predefinida de colunas e medidas que são adicionadas automaticamente a uma tela de relatório do [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] quando a tabela é selecionada na lista de campos de relatório.|  
-|[Configurar propriedades de comportamento de tabela para relatórios do Power View &#40;Tabular do SSAS&#41;](power-view-configure-table-behavior-properties-for-reports.md)|Descreve como configurar as propriedades de comportamento da tabela que expõem linhas de detalhes um nível mais granular. Definir as propriedades do comportamento da tabela altera o comportamento do agrupamento das linhas de detalhes e produz uma melhor colocação padrão de identificação de informações em layouts de peça, cartão e gráfico.|  
+|[Configurar conjunto de campo padrão para relatórios de Power View &#40;SSAS Tabular&#41;](power-view-configure-default-field-set-for-reports.md)|Descreve como configurar um Conjunto de Campo Padrão; uma lista predefinida de colunas e medidas que são adicionadas automaticamente a uma tela de relatório do [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] quando a tabela é selecionada na lista de campos de relatório.|  
+|[Configurar propriedades de comportamento de tabela para relatórios de Power View &#40;SSAS Tabular&#41;](power-view-configure-table-behavior-properties-for-reports.md)|Descreve como configurar as propriedades de comportamento da tabela que expõem linhas de detalhes um nível mais granular. Definir as propriedades do comportamento da tabela altera o comportamento do agrupamento das linhas de detalhes e produz uma melhor colocação padrão de identificação de informações em layouts de peça, cartão e gráfico.|  
   
   

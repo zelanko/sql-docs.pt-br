@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 5da7978db04b0fdf6e1d4f7740857fc5c0cf90ed
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62823296"
 ---
 # <a name="adding-a-data-source-view-for-call-center-data-intermediate-data-mining-tutorial"></a>Adicionando uma exibição da fonte de dados aos dados de call center (Tutorial de mineração de dados intermediário)
   Nesta tarefa, você adiciona uma exibição da fonte de dados que será usada para acessar os dados do call center. Os mesmos dados serão usados para criar o modelo de rede neural inicial para exploração e o modelo de regressão logística que você usará para fazer recomendações.  

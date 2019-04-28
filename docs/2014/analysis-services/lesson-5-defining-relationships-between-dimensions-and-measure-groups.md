@@ -12,13 +12,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aaac863432c5ba289be43f24a384d392f0b42697
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728122"
 ---
-# <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>Lição 5: Definindo relações entre grupos de medidas e dimensões
+# <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>Lição 5: Como definir relações entre grupos de medidas e dimensões
   Nas lições anteriores neste tutorial, você aprendeu que as dimensões de banco de dados adicionadas a um cubo podem ser usadas como base para uma ou mais dimensões de cubo. Nesta lição, você aprenderá a definir diferentes tipos de relações entre dimensões de cubo e grupos de medidas, além de especificar as propriedades dessas relações.  
   
  Para obter mais informações, consulte [Relações de dimensão](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  

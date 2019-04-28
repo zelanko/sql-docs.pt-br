@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 539b47ebbd8f4a2374849c0b1d5244d187cdd3df
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721528"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Configurar o IIS 7 para sincronização da Web
   Os procedimentos deste tópico guiarão você pelo processo de configuração manual do Serviços de Informações da Internet (IIS) versão 7 e mais recentes da [!INCLUDE[msCoName](../../includes/msconame-md.md)] para uso com sincronização da Web para replicação de mesclagem. 
@@ -28,7 +28,7 @@ ms.locfileid: "52819328"
  Para obter uma visão geral de todo o processo de configuração, consulte [Configurar Sincronização da Web](configure-web-synchronization.md).  
   
 > [!IMPORTANT]  
->  Certifique-se de que seu aplicativo use apenas versões [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] ou posteriores e que as versões anteriores do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] não estejam instaladas no servidor IIS. Versões anteriores do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] podem causar erros, tais como: "Formato inválido de uma mensagem durante a sincronização da Web. Verifique se os componentes de replicação estão adequadamente configurados no servidor Web".  
+>  Certifique-se de que seu aplicativo use apenas versões [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] ou posteriores e que as versões anteriores do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] não estejam instaladas no servidor IIS. Versões anteriores do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] podem causar erros, tais como: "O formato de uma mensagem durante a sincronização da Web era inválido. Verifique se os componentes de replicação estão adequadamente configurados no servidor Web".  
   
  Para usar a sincronização da Web, é necessário configurar o IIS 7 concluindo as etapas a seguir. Cada etapa é descrita em detalhes neste tópico.  
   

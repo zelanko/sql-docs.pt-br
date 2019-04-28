@@ -1,5 +1,5 @@
 ---
-title: Criando no escopo da consulta calculados membros (MDX) | Microsoft Docs
+title: Criando no escopo da consulta calculado membros (MDX) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dd315d5c7c7cc2e3cc9839c8831c5356fa3e8ac5
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62802678"
 ---
-# <a name="mdx-calculated-members---query-scoped-calculated-members"></a>MDX calculadas membros - membros calculados no escopo da consulta
+# <a name="mdx-calculated-members---query-scoped-calculated-members"></a>Membros - membros calculados no escopo da consulta calculados MDX
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Se um membro calculado for necessário para uma única consulta de expressões multidimensionais (MDX), é possível defini-lo usando a palavra-chave WITH. O membro calculado criado com a palavra-chave WITH deixará de existir ao fim da execução da consulta.  
   
@@ -88,8 +88,8 @@ WHERE [Product].[Category].[Bikes]
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX & #40; MDX & #41;](../../../mdx/mdx-function-reference-mdx.md)   
- [Instrução SELECT & #40; MDX & #41;](../../../mdx/mdx-data-manipulation-select.md)   
- [Criando no escopo da sessão calculados membros & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md)   
+ [Instrução SELECT &#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md)   
+ [Criando membros calculados no escopo da sessão &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md)  
   
   

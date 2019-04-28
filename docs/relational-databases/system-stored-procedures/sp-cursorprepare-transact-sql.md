@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d1f26ada2f116d684091f7e5e928d04e3530567f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724121"
 ---
 # <a name="spcursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +114,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 |-----------|-----------------|  
 |0|Êxito|  
 |0x0001|Failure|  
-|1FF6|Não foi possível retornar metadados.<br /><br /> Observação: A razão para isso é que a instrução não gera um conjunto de resultados; por exemplo, é uma instrução INSERT ou DDL.|  
+|1FF6|Não foi possível retornar metadados.<br /><br /> Observação: A razão para isso é que a instrução não produz um conjunto de resultados; Por exemplo, é uma instrução INSERT ou DDL.|  
   
 ## <a name="examples"></a>Exemplos  
  Quando *stmt* é parametrizado e o *scrollopt* valor PARAMETERIZED_STMT for ON, o formato da cadeia de caracteres é da seguinte maneira:  

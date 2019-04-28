@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d4a5067598b475ed8fe103606088d0e4d6d0554
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689414"
 ---
 # <a name="bcpwritefmt"></a>bcp_writefmt
   Cria um arquivo de formato que contém uma descrição do formato do arquivo de dados de cópia em massa atual.  
@@ -43,7 +43,7 @@ szFormatFile
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *HDBC*  
+ *hdbc*  
  É o identificador de conexão ODBC habilitado para cópia em massa.  
   
  *szFormatFile*  
@@ -60,7 +60,7 @@ szFormatFile
  Para carregar um arquivo de formato salvo, use [bcp_readfmt](bcp-readfmt.md).  
   
 > [!NOTE]  
->  O arquivo de formato gerado por **bcp_writefmt** só é suportado por versões dos **bcp** utilitário distributed com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versão 7.0 e versões posterior.  
+>  O arquivo de formato gerado por **bcp_writefmt** só é suportado por versões do utilitário **bcp** distribuídas com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versão 7.0 e posterior.  
   
 ## <a name="example"></a>Exemplo  
   

@@ -25,11 +25,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3bf6919230c1621d2b81eb41cd715fc1878a90c5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721878"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Referência técnica do algoritmo Microsoft Clustering
   Esta seção explica a implementação do algoritmo de clustering [!INCLUDE[msCoName](../../includes/msconame-md.md)] , inclusive os parâmetros que podem ser usados para controlar o comportamento de modelos de clustering. Ela também fornece orientação sobre como melhorar o desempenho ao criar e processar modelos de clustering.  

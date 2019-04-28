@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f8868957d7c479de3a51a599deed42c34d6676eb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721579"
 ---
 # <a name="create-a-pull-subscription"></a>Create a Pull Subscription
   Este tópico descreve como criar uma assinatura pull no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou RMO (Replication Management Objects).  
@@ -80,7 +80,7 @@ ms.locfileid: "52753488"
   
 7.  Complete as páginas no Assistente para Novas Assinaturas.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  As assinaturas pull podem ser criadas de forma programada, usando os procedimentos de replicação armazenados. Os procedimentos armazenados usados dependem do tipo de publicação ao qual a assinatura pertence.  
   
 #### <a name="to-create-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>Para criar uma assinatura pull em um instantâneo ou em uma publicação transacional  
@@ -269,7 +269,7 @@ ms.locfileid: "52753488"
  [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
  [Exibir e modificar propriedades de assinatura pull](view-and-modify-pull-subscription-properties.md)   
  [Configure Web Synchronization](configure-web-synchronization.md)   
- [Subscribe to Publications](subscribe-to-publications.md)   
+ [Assinar publicações](subscribe-to-publications.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)  
   
   
