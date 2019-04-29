@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ca5966492ac83599cd4a053ea526e2ce366e4b0e
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181619"
 ---
 # <a name="calculationpassvalue-mdx"></a>CalculationPassValue (MDX)
 
@@ -42,7 +42,7 @@ CalculationPassValue(String_Expression ,Pass_Value [, ABSOLUTE | RELATIVE [,ALL]
  Uma expressão numérica válida que especifica o número de fase de cálculo.  
   
  ABSOLUTE  
- Um valor de sinalizador de acesso que especifica que o *Pass_Value* parâmetro contém o índice com base em zero da fase de cálculo. ABSOLUTE é o valor padrão se nenhum valor de sinalizador de acesso for especificado.  
+ Um valor de sinalizador de acesso que especifica que o *Pass_Value* parâmetro contém o índice baseado em zero da fase de cálculo. ABSOLUTE é o valor padrão se nenhum valor de sinalizador de acesso for especificado.  
   
  RELATIVE  
  Um valor de sinalizador de acesso que especifica que o *Pass_Value* parâmetro contém um desvio relativo da fase de cálculo de disparo. Se o desvio for resolvido em um índice de fase de cálculo inferior a 0, a fase de cálculo 0 será usada e nenhum erro ocorrerá.  
@@ -50,19 +50,19 @@ CalculationPassValue(String_Expression ,Pass_Value [, ABSOLUTE | RELATIVE [,ALL]
  ALL  
  Quando esse sinalizador é definido, todos os valores são nulos, com exceção dos carregados pelo mecanismo de armazenamento. Quando não é definido, os valores são agregados sem nenhum cálculo aplicado.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se uma expressão numérica for fornecida, a função retornará um valor numérico avaliando a expressão numérica MDX especificada na fase de cálculo e modificada (opcional) por um sinalizador de acesso e um modificador de sinalizador de acesso.  
   
- Se uma expressão de cadeia de caracteres for fornecida, a função retornará um valor de cadeia de caracteres avaliando a expressão de cadeia de caracteres MDX especificada na fase de cálculo especificada e, opcionalmente modificado por um sinalizador de acesso e um modificador de sinalizador de acesso *.*  
+ Se uma expressão de cadeia de caracteres for fornecida, a função retorna um valor de cadeia de caracteres avaliando a expressão de cadeia de caracteres MDX especificada na fase de cálculo especificada e, opcionalmente modificado por um sinalizador de acesso e um modificador de sinalizador de acesso *.*  
   
  Com a resolução de recursão automática em [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], essa função tem pouco uso prático.  
   
 > [!NOTE]  
->  Somente os administradores podem usar o **CalculationPassValue** função dentro de um script MDX. Um erro ocorre se um script MDX que contém essa função é executado no contexto de uma função que não tem privilégios de administrador.  
+>  Somente administradores podem usar o **CalculationPassValue** função dentro de um script MDX. Um erro ocorre se um script MDX que contém essa função é executado no contexto de uma função que não tem privilégios de administrador.  
   
 ## <a name="see-also"></a>Consulte também  
  [CalculationCurrentPass &#40;MDX&#41;](../mdx/calculationcurrentpass-mdx.md)   
  [IIf &#40;MDX&#41;](../mdx/iif-mdx.md)   
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd051d018cb6f53b8c08110e26bc66910e3ca4c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63045513"
 ---
 # <a name="other-driver-architectures"></a>Outras arquiteturas do driver
 Alguns drivers ODBC não estritamente em conformidade com a arquitetura descrita anteriormente. Isso pode ocorrer porque os drivers de realizar tarefas diferentes daqueles de um driver ODBC tradicional ou não são drivers no sentido de normal.  

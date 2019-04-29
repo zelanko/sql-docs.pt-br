@@ -14,16 +14,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 1d68b9452a03c127fe39018c19abab1073dae7c5
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046118"
 ---
 # <a name="manage-and-monitor-semantic-search"></a>Gerenciar e monitorar a pesquisa semântica
   Descreve o processo de indexação semântica e as tarefas relacionadas ao gerenciamento e monitoramento dos índices.  
   
-##  <a name="HowToMonitorStatus"></a> Como: Verificar o status da indexação semântica  
+##  <a name="HowToMonitorStatus"></a> Como: Verificar o Status da indexação semântica  
  **A primeira fase da indexação semântica está concluída?**  
  Consulte a exibição de gerenciamento dinâmico [sys.dm_fts_index_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql) e verifique as colunas **status** e **status_description**.  
   
@@ -50,7 +50,7 @@ SELECT * FROM sys.dm_fts_semantic_similarity_population WHERE table_id = OBJECT_
 GO  
 ```  
   
-##  <a name="HowToCheckSize"></a> Como: Verificar o tamanho dos índices semânticos  
+##  <a name="HowToCheckSize"></a> Como: Verifique o tamanho dos índices semânticos  
  **O que é o tamanho lógico de um índice de frases-chave semântico ou um índice de similaridade semântica de documentos?**  
  Consulte a exibição de gerenciamento dinâmico [sys.dm_db_fts_index_physical_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql).  
   

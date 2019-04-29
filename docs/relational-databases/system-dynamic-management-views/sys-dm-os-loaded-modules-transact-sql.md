@@ -1,5 +1,5 @@
 ---
-title: DM os_loaded_modules (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_loaded_modules (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3967e3f8548a7b8ef804d054cf746243a8fb5b96
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63047183"
 ---
 # <a name="sysdmosloadedmodules-transact-sql"></a>sys.dm_os_loaded_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,19 +34,19 @@ ms.locfileid: "47794314"
 > [!NOTE]  
 >  Chamá-lo partir [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o nome **sys.dm_pdw_nodes_os_loaded_modules**.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**base_address**|**varbinary(8)**|Endereço do módulo no processo.|  
 |**file_version**|**varchar(23)**|Versão do arquivo Aparece no seguinte formato:<br /><br /> x.x:x.x|  
 |**product_version**|**varchar(23)**|Versão do produto. Aparece no seguinte formato:<br /><br /> x.x:x.x|  
-|**Depurar**|**bit**|1 = O módulo é uma versão de depuração do módulo carregado.|  
-|**corrigido**|**bit**|1 = O módulo foi corrigido.|  
+|**debug**|**bit**|1 = O módulo é uma versão de depuração do módulo carregado.|  
+|**patched**|**bit**|1 = O módulo foi corrigido.|  
 |**prerelease**|**bit**|1 = O módulo é uma versão de pré-lançamento do módulo carregado.|  
 |**private_build**|**bit**|1 = O módulo é uma compilação privada do módulo carregado.|  
 |**special_build**|**bit**|1 = módulo é uma versão especial do módulo carregado.|  
 |**language**|**int**|Idioma das informações de versão do módulo.|  
 |**Empresa**|**nvarchar(256)**|Nome da empresa que criou o módulo.|  
-|**Descrição**|**nvarchar(256)**|Descrição do módulo.|  
+|**description**|**nvarchar(256)**|Descrição do módulo.|  
 |**name**|**nvarchar(255)**|Nome do módulo. Inclui o caminho completo do módulo.|  
 |**pdw_node_id**|**int**|**Aplica-se ao**: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
   

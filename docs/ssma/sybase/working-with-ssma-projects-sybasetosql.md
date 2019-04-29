@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 7e1be086b891d6888c6509b15adc6664b3022978
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187133"
 ---
 # <a name="working-with-ssma-projects-sybasetosql"></a>Trabalhar com projetos do SSMA (SybaseToSQL)
 Migrar bancos de dados do Sybase Adaptive Server Enterprise (ASE) para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, você primeiro crie um projeto do SSMA. O projeto é um arquivo que contém metadados sobre os bancos de dados do ASE que você deseja migrar para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do SQL Azure, metadados sobre a instância de destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do SQL Azure que receberá os dados, e os objetos migrados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure informações de conexão e configurações do projeto.  
@@ -97,7 +97,7 @@ Quando você salvar um projeto, o SSMA retém as configurações de projeto e, o
   
         Salvando metadados pode levar vários minutos. Se você não quiser salvar os metadados no momento, não selecione as caixas de seleção.  
   
-    2.  Clique o **salvar** botão.  
+    2.  Clique no botão **Salvar**.  
   
         O SSMA analisará os esquemas ASE do Sybase e salvar os metadados para o arquivo de projeto.  
   

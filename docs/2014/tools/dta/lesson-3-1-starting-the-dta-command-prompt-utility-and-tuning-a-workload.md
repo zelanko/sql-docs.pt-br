@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dcd89e7473ba2fb2a27b827da26f3654ea9d9b87
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171106"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63048963"
 ---
 # <a name="starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>Iniciando o utilitário de prompt de comando dta e ajustando uma carga de trabalho
   Essa tarefa descreve a inicialização do utilitário **dta**, a exibição da Ajuda e o uso do utilitário para ajustar uma carga de trabalho no prompt de comando. Ela usa a carga de trabalho MyScript.sql, criada para a prática [Ajustando uma carga de trabalho](lesson-1-1-tuning-a-workload.md)da GUI (interface gráfica do usuário) do Orientador de Otimização do Mecanismo de Banco de Dados.  
@@ -63,7 +63,7 @@ ms.locfileid: "48171106"
   
 -   [dta Utility](dta-utility.md) para obter material de referência sobre o utilitário de prompt de comando e o arquivo XML opcional que você pode usar para controlar a operação do utilitário.  
   
- Para retornar ao início do tutorial, consulte [Tutorial: Orientador de Otimização do Mecanismo de Banco de Dados](tutorial-database-engine-tuning-advisor.md).  
+ Para retornar ao início do tutorial, consulte [Tutorial: Orientador de otimização do mecanismo de banco de dados](tutorial-database-engine-tuning-advisor.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Tutoriais do Mecanismo de Banco de Dados](../../relational-databases/database-engine-tutorials.md)  

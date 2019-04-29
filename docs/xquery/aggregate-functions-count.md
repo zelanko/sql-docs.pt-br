@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 30ec1817d4f22ff8ee23746f925943397981382f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046899"
 ---
 # <a name="aggregate-functions---count"></a>Funções de Agregação – count
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -65,11 +65,11 @@ WHERE Production.ProductModel.ProductModelID=7
   
 -   O **namespace** palavra-chave na [prólogo do XQuery](../xquery/modules-and-prologs-xquery-prolog.md) define um prefixo de namespace. O prefixo é então usado no corpo do XQuery.  
   
--   A consulta constrói XML que inclui o elemento <`NoOfWorkStations`>.  
+-   A consulta constrói XML que inclui o <`NoOfWorkStations`> elemento.  
   
 -   O **Count ()** funcionam no corpo do XQuery conta o número de <`Location`> elementos.  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 ProductModelID   Name                 WorkCtrCount       
@@ -92,7 +92,7 @@ FROM Production.ProductModel
 WHERE Production.ProductModel.ProductModelID= 7  
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 <NoOfWorkStations ProductModelID="7"   
@@ -110,7 +110,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 ProductModelID    Name            WorkCtrCount  

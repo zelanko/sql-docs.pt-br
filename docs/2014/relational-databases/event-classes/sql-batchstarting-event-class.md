@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ae174bad657020f226f9a7cda2224770be312f97
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63050773"
 ---
 # <a name="sqlbatchstarting-event-class"></a>Classe de evento SQL:BatchStarting
   A classe de evento SQL:BatchStarting indica que um lote [!INCLUDE[tsql](../../includes/tsql-md.md)] está iniciando.  

@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 1623f824c062c270268323fd45ebf0e9533c8788
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63044171"
 ---
 # <a name="time-series-prediction-dmx-tutorial"></a>Tutorial DMX de previsão de série temporal
   Neste tutorial, você aprenderá a criar uma estrutura de mineração de série temporal, a criar três modelos de mineração de série temporal e a fazer previsões usando esses modelos.  

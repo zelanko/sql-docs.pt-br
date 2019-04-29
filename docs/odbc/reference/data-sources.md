@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eb02dd54ea57af668e56fe910ca92830fb09c418
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186286"
 ---
 # <a name="data-sources"></a>Fontes de dados
 Um *fonte de dados* é simplesmente a origem dos dados. Ele pode ser um arquivo, um determinado banco de dados em um DBMS, ou até mesmo um feed de dados ao vivo. Os dados podem ser localizados no mesmo computador que o programa, ou em outro computador em algum lugar em uma rede. Por exemplo, uma fonte de dados pode ser um DBMS Oracle em execução em um sistema de operacional OS/2®, acessado por® do Novell Netware; um DBMS de DB2 da IBM acessados por meio de um gateway. uma coleção de arquivos do Xbase em um diretório de servidor; ou um arquivo de banco de dados local do Microsoft® Access.  
