@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: fea64ffe80475bf1dca380c3ca416a9e2a449213
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62911703"
 ---
 # <a name="isreadonly-property-sqlserviceadvancedproperty-class"></a>Propriedades IsReadOnly (classe SqlServiceAdvancedProperty)
   Obtém ou define a propriedade booliana que especifica se a propriedade avançada é somente leitura ou não.  

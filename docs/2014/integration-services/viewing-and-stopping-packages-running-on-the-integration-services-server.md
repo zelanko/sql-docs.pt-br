@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ac4874c47f4aae25b87a72b1a6a62ddeb3f7962c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877947"
 ---
 # <a name="viewing-and-stopping-packages-running-on-the-integration-services-server"></a>Exibindo e parando pacotes que são executados no servidor do Integration Services
   O banco de dados do `SSISDB` armazena o histórico da execução em tabelas internas que não são visíveis aos usuários. Porém, ele expõe as informações necessárias por meio de exibições públicas que você pode consultar. Ele também fornece procedimentos armazenados que você pode chamar para executar tarefas comuns relacionadas a pacotes.  

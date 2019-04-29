@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 36b0d8b5d91b18ad4b97ac873ad3073ca97b133e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871980"
 ---
 # <a name="database-properties-files-page"></a>Propriedades do Banco de Dados (página Arquivos)
   Use esta página para criar um novo banco de dados ou para exibir ou modificar as propriedades do banco de dados selecionado. Este tópico se aplica às **Propriedades do Banco de Dados (página Arquivos)** de bancos de dados existentes e ao **Novo Banco de Dados (página Geral)**.  

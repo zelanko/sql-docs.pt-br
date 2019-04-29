@@ -13,11 +13,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 85901ba63607de721259431ab83d3a0cd3a3185d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011717"
 ---
 # <a name="create-identical-symmetric-keys-on-two-servers"></a>Criar chaves simétricas idênticas em dois servidores
   Este tópico descreve como criar chaves simétricas idênticas em dois servidores diferentes no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Para descriptografar texto cifrado, você precisa da chave que foi usada para criptografá-lo. Quando ocorrem criptografia e descriptografia em um único banco de dados, a chave é armazenada no banco de dados e fica disponível, dependendo das permissões, tanto para criptografia quanto para descriptografia. Mas quando a criptografia e a descriptografia ocorrem em bancos de dados ou servidores separados, a chave armazenada em um banco de dados não estará disponível para uso no segundo banco de dados  

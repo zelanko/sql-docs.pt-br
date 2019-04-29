@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 087ee4fbc65fbd3762c531478b5ef25dcbe16804
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900112"
 ---
 # <a name="fixed-and-changing-attribute-options-slowly-changing-dimension-wizard"></a>Opções de Atributo Fixo e de Alteração (Assistente para Dimensões de Alteração Lenta)
   Use a caixa de diálogo **Opções de Atributo Fixo e de Alteração** para especificar como responder a mudanças nos atributos fixos e de alteração.  

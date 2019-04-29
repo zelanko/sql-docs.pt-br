@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5bfff87c2b1e37b238d2f5a46581f3da8ceb2f3e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889229"
 ---
 # <a name="select-script-component-type"></a>Selecionar Tipo de Componente do Script
   Use a caixa de diálogo **Selecionar Tipo de Componente do Script** para especificar se deve ser criada uma Transformação Scripts pré-configurada para uso como origem, transformação ou destino.  

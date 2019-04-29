@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3dd2fd95b1ad2d239d055b2b49b991860a58d338
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380444"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891398"
 ---
-# <a name="step-3-adding-error-flow-redirection"></a>Etapa 3: Adicionando redirecionamento de fluxo de erro
+# <a name="step-3-adding-error-flow-redirection"></a>Etapa 3: Adicionar redirecionamento de fluxo de erro
   Conforme mostrado na tarefa anterior, a transformação Pesquisa de Códigos de Moeda não pode gerar uma correspondência quando a transformação tenta processar o arquivo simples de amostra corrompido que produziu um erro. Como a transformação usa as configurações padrão da saída de erro, qualquer erro faz a transformação falhar. Quando a transformação falha, o resto do pacote também falha.  
   
  Em vez de permitir a falha da transformação, você pode configurar o componente para redirecionar a linha com falha para outro caminho de processamento usando a saída de erro. O uso de um caminho de tratamento separado de erro permite que você faça várias coisas. Por exemplo, você pode tentar limpar os dados e depois reprocessar a linha com falha. Também é possível salvar a linha com falha junto com informações de erro adicionais para verificação e reprocessamento posteriores.  

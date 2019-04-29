@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 73d0cf3a374a7f3dda7797238d2c1702360aa955
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872320"
 ---
 # <a name="check-the-status-of-e-mail-messages-sent-with-database-mail"></a>Verificar o status de mensagens de email enviadas por Database Mail
   Este tópico descreve como verificar o status da mensagem de email enviada usando o Database no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] com [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -32,7 +32,7 @@ ms.locfileid: "52775888"
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
  O Database Mail mantém cópias das mensagens de email enviadas, que podem ser visualizadas nas exibições **sysmail_allitems**, **sysmail_sentitems**, **sysmail_unsentitems**e **sysmail_faileditems** do banco de dados **msdb** . O programa externo do Database Mail registra a atividade e exibe o log por meio do Log de Eventos de Aplicativos do Windows e da exibição **sysmail_event_log** do banco de dados **msdb** . Para verificar o status de uma mensagem de email, execute uma consulta para essa exibição. São quatro os status possíveis das mensagens de email: **sent**(enviada), **unsent**(não enviada), **retrying**(tentando novamente) e **failed**(falhou).  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para exibir o status do email enviado usando Database Mail**  
   
 > [!NOTE]  

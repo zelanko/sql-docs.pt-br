@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 96926b2c7c305bf685bc91206072755081ed35a4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011231"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Configurar um servidor de relatório no modo nativo para a Administração Local (SSRS)
   A implantação de um servidor de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em um dos seguintes sistemas operacionais exigirá mais etapas de configuração se você desejar administrar localmente a instância do servidor de relatório. Este tópico explica como configurar o servidor de relatório para administração local. Se você ainda não tiver instalado ou configurado o servidor de relatório, consulte [instalar o SQL Server 2014 do Assistente de instalação do &#40;instalação&#41; ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) e [gerenciar um Reporting Services modo de servidor de relatório nativo](manage-a-reporting-services-native-mode-report-server.md).  

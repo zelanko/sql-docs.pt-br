@@ -14,11 +14,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 6ea074466c8075b7fb1746b7d3eb8741425b44c5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011323"
 ---
 # <a name="service-master-key"></a>SMK (chave mestra de serviço)
   A chave mestra de serviço é a raiz da hierarquia de criptografia do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Ela é gerada automaticamente na primeira vez que é necessária para criptografar outra chave. Por padrão, a Chave Mestra do Serviço é criptografada com o uso da API de proteção aos dados do Windows e da chave da máquina local. A chave mestra de serviço só pode ser aberta pela conta de serviço do Windows na qual ela foi criada ou por uma entidade que tenha acesso ao nome e à senha da conta de serviço.  

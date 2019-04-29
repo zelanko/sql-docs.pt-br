@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d5783f393cbbe70e89e2d1ee4b7e05481fdc3ab9
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922097"
 ---
 # <a name="enable-or-disable-backup-checksums-during-backup-or-restore-sql-server"></a>Habilitar ou desabilitar as somas de verificação de backup durante backup ou restauração (SQL Server)
   Este tópico descreve como habilitar ou desabilitar somas de verificação de backup durante processos de backup ou restauração de bancos de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  

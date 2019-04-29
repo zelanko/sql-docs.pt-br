@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1bedefd277f1be7f44d807e6539097dd24f5ab2f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900906"
 ---
 # <a name="raw-file-source"></a>Origem do arquivo bruto
   A fonte Arquivo Bruto lê dados brutos de um arquivo. Como a representação dos dados é nativa à fonte, os dados não necessitam de conversão e praticamente nenhuma análise. Isso significa que a fonte de arquivo bruto pode ler dados mais rapidamente do que outras fontes, como o arquivo simples e as fontes OLE DB.  

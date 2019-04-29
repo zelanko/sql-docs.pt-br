@@ -21,18 +21,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1b33e0d78dfe308c537ea5297b55415bce304474
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918058"
 ---
 # <a name="register-a-database-as-a-dac"></a>Registrar um banco de dados como um DAC
   Use o **registrar Data-tier Application Wizard** ou um Windows script do PowerShell para compilar uma definição de DAC (aplicativo) de camada de dados que descreve os objetos no banco de dados existente e registre a definição do DAC na `msdb` banco de dados do sistema (**mestre** em [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).  
   
--   **Antes de começar:**  [Limitações e restrições](#LimitationsRestrictions), [permissões](#Permissions)  
+-   **Antes de começar:**  [Limitações e Restrições](#LimitationsRestrictions), [Permissões](#Permissions)  
   
--   **Para atualizar um DAC, usando:**  [O Assistente de aplicativo da camada de dados de registro](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
+-   **Para atualizar um DAC, usando:**  [O Assistente de Aplicativo da Camada de Dados de Registro](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
   
 ## <a name="before-you-begin"></a>Antes de começar  
  O processo de registro cria uma definição do DAC que define os objetos no banco de dados. A combinação da definição do DAC e do banco de dados forma uma instância do DAC. Se você registrar um banco de dados como um DAC em uma instância gerenciada do Mecanismo de Banco de Dados, o DAC registrado será incorporado ao Utilitário do SQL Server na próxima vez que o conjunto de coleta do utilitário for enviado da instância para o Ponto de Controle do Utilitário. O DAC estará presente no nó **Aplicativos da Camada de Dados Implantados** do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Aplicativos da Camada de Dados Implantados** details page.  

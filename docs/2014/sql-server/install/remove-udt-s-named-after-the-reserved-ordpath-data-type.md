@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b98fa9765a40d3eb9c05852e9c20c05c4bb818a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856318"
 ---
 # <a name="remove-udt39s-named-after-the-reserved-ordpath-data-type"></a>Remover a UDT&#39;s nomeada com o tipo de dados ORDPATH reservado
   O Supervisor de Atualização detectou um tipo definido pelo usuário (UDT) que tem o mesmo nome de um termo reservado para o tipo de dados `ORDPATH`.  
@@ -24,7 +24,7 @@ ms.locfileid: "48209266"
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrição  
  Os termos usados para tipos de dados internos não devem ser utilizados como nomes de UDTs de alias ou CLR.  
   
 ## <a name="corrective-action"></a>Ação corretiva  

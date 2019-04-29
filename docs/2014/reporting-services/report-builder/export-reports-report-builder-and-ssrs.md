@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 91d702b8b5b3402783fb47819bdd18d552682931
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59961822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62987889"
 ---
 # <a name="exporting-reports-report-builder-and-ssrs"></a>Exportando relatórios (Construtor de Relatórios e SSRS)
   Depois que você executar um relatório, poderá exportá-lo para outro formato, como Excel ou PDF, ou exportá-lo gerando um documento do serviço Atom, listando os feeds de dados em conformidade com o Atom disponíveis no relatório.  

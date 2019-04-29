@@ -22,11 +22,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76625dc956ff36788f52c5da4106b7ac5eb8c2ab
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62896162"
 ---
 # <a name="connecting-to-data-sources-in-a-custom-task"></a>Conectando a fontes de dados em uma tarefa personalizada
   As tarefas conectam-se a fontes de dados externas para recuperar ou salvar dados por meio de um gerenciador de conexões. Em tempo de design, um gerenciador de conexões representa uma conexão lógica e descreve informações chave como o nome do servidor e qualquer propriedade de autenticação. Em tempo de execução, as tarefas chamam o método <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> do gerenciador de conexões para estabelecer a conexão física com a fonte de dados.  

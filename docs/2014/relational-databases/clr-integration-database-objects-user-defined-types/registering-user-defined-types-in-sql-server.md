@@ -34,11 +34,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 19ea6e9f077b5097b8c5daa6d967a17336553ba7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919946"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>Registrando tipos definidos pelo usuário no SQL Server
   Para usar um tipo definido pelo usuário (UDT) em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você deve registrá-lo. O registro de um UDT envolve o registro do assembly e a criação do tipo no banco de dados em que deseja usá-lo. Os UDTs têm escopo em um único banco de dados e não podem ser usados em vários bancos de dados, a menos que o assembly e a UDT idênticos sejam registrados em cada banco de dados. Quando o assembly do UDT é registrado e o tipo é criado, você pode usar a UDT no [!INCLUDE[tsql](../../includes/tsql-md.md)] e em código de cliente. Para obter mais informações, veja [Tipos CLR definidos pelo usuário](clr-user-defined-types.md).  

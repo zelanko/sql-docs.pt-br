@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 12695fbbaf796097f7273134dbc5db4e294ce508
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63010664"
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>Configurar um servidor de relatórios (modo nativo do Reporting Services)
   Dependendo das opções selecionadas durante a instalação, o Servidor de Relatórios possivelmente exigir uma configuração adicional para que você possa usá-lo. A configuração de um servidor de relatório é formada no mínimo por estes itens:  

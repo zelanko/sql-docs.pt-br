@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 3408a729c21f9e420d90e5e38a41b09b766b6b81
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856548"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxmloledb-provider"></a>Executando consultas XPath com namespaces (provedor SQLXMLOLEDB)
   As consultas XPath podem incluir namespaces. Se os elementos de esquema forem qualificados por namespace (ou seja, se incluírem um namespace de destino), as consultas XPath com relação ao esquema precisarão especificar esse namespace.  

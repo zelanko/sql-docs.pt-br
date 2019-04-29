@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c7e529850f1d6e476004409a3484f0627446bc24
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889333"
 ---
 # <a name="save-a-copy-of-a-package"></a>Salvar uma cópia de um pacote
   Este procedimento descreve como salvar uma cópia de um pacote no sistema de arquivos, no armazenamento do pacote ou no banco de dados **msdb** no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Ao especificar um local para salvar a cópia do pacote, também é possível atualizar o nome do pacote.  

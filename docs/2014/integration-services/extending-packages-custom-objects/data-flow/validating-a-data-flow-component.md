@@ -22,11 +22,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f7d2d611ab4292f96db13305571e8b3fa16d4702
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62896214"
 ---
 # <a name="validating-a-data-flow-component"></a>Validando um componente de fluxo de dados
   O método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A> da classe base <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> é fornecido para impedir a execução de um componente que não está configurado corretamente. Utilize esse método para verificar se um componente possui o número esperado de objetos de entrada e saída, se as propriedades personalizadas do componente possuem valores aceitáveis e se há conexões especificadas, caso necessário. Utilize esse método também para verificar se as colunas nas coleções de entrada e saída possuem os tipos de dados corretos e se o <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSUsageType> de cada coluna está definido adequadamente para o componente. A implementação da classe base ajuda no processo de validação pois verifica a coleção de colunas de entrada do componente e se cada coluna da coleção se refere a uma coluna do <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100> do componente upstream.  

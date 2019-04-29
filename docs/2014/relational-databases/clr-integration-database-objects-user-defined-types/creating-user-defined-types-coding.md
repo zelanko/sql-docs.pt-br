@@ -32,11 +32,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1df89052e33f75921a45f124739e2a375dc2d2ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919942"
 ---
 # <a name="coding-user-defined-types"></a>codificando tipos definidos pelo usuário
   Ao codificar a definição UDT (tipo definido pelo usuário), você deve implementar vários recursos, dependendo da implementação da UDT como classe ou estrutura, bem como das opções de formato e de serialização escolhidas.  
@@ -138,7 +138,7 @@ public static Point Null
 }  
 ```  
   
-### <a name="is-null-vs-isnull"></a>IS NULL e IsNull  
+### <a name="is-null-vs-isnull"></a>IS NULL vs. IsNull  
  Considere uma tabela que contém o esquema Points(id int, location Point), em que `Point` é uma UDT CLR, além das seguintes consultas:  
   
 ```  
@@ -493,7 +493,7 @@ public Int32 Y
  Durante a codificação dos métodos de UDT, considere se o algoritmo usado pode ser alterado com o passar do tempo. Em caso positivo, você talvez queira considerar a criação de uma classe separada para os métodos usados pela UDT. Caso o algoritmo seja alterado, é possível recompilar a classe com o novo código e carregar o assembly em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sem afetar a UDT. Em muitos casos, as UDTs podem ser recarregadas usando a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY, mas isso pode causar problemas nos dados existentes. Por exemplo, o `Currency` UDT incluído com o **AdventureWorks** usos do banco de dados de exemplo uma **ConvertCurrency** de função para converter valores de moeda, que é implementado em uma classe separada. É possível que algoritmos de conversão sejam alterados de maneiras imprevisíveis no futuro, ou que uma nova funcionalidade seja obrigatória. Separando o **ConvertCurrency** função do `Currency` implementação de UDT fornece maior flexibilidade ao planejar alterações futuras.  
   
 ### <a name="example"></a>Exemplo  
- O `Point` classe contém três métodos simples para calcular a distância: **distância**, **DistanceFrom** e **DistanceFromXY**. Cada um retorna `double` que calcula a distância entre `Point` e zero, a distância entre um ponto especificado e `Point`, além da distância entre as coordenadas X e Y e `Point`. **Distância** e **DistanceFrom** cada chamada **DistanceFromXY**e demonstram como usar argumentos diferentes para cada método.  
+ O `Point` classe contém três métodos simples para calcular a distância: **Distância**, **DistanceFrom** e **DistanceFromXY**. Cada um retorna `double` que calcula a distância entre `Point` e zero, a distância entre um ponto especificado e `Point`, além da distância entre as coordenadas X e Y e `Point`. **Distância** e **DistanceFrom** cada chamada **DistanceFromXY**e demonstram como usar argumentos diferentes para cada método.  
   
 ```vb  
 ' Distance from 0 to Point.  
@@ -543,7 +543,7 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  A classe `Microsoft.SqlServer.Server.SqlMethodAttribute` fornece atributos personalizados que podem ser usados para marcar definições de método a fim de especificar determinismo, comportamento em chamada nula e determinar se um método é um modificador. Os valores padrão dessas propriedades são pressupostos, e o atributo personalizado só é usado quando um valor não padrão é necessário.  
   
 > [!NOTE]  
->  A classe `SqlMethodAttribute` é herdada da classe `SqlFunctionAttribute`, assim `SqlMethodAttribute` herda os campos `FillRowMethodName` e `TableDefinition` de `SqlFunctionAttribute`. Isso indica que é possível escrever um método com valor de tabela, o que não é o caso. O método compila e o assembly implanta, mas um erro sobre o `IEnumerable` retornar o tipo é gerado em tempo de execução com a seguinte mensagem: "método, propriedade ou campo '\<nome >' em classe\<classe >' no assembly '\<assembly >' tem o tipo de retorno inválido. "  
+>  A classe `SqlMethodAttribute` é herdada da classe `SqlFunctionAttribute`, assim `SqlMethodAttribute` herda os campos `FillRowMethodName` e `TableDefinition` de `SqlFunctionAttribute`. Isso indica que é possível escrever um método com valor de tabela, o que não é o caso. O método compila e o assembly implanta, mas um erro sobre o `IEnumerable` retornar o tipo é gerado em tempo de execução com a seguinte mensagem: "Método, propriedade ou campo '\<nome >' em classe\<classe >' no assembly '\<assembly >' tem o tipo de retorno inválido."  
   
  A seguinte tabela descreve algumas das propriedades `Microsoft.SqlServer.Server.SqlMethodAttribute` relevantes que podem ser usadas em métodos de UDT, além de listar os valores padrão.  
   

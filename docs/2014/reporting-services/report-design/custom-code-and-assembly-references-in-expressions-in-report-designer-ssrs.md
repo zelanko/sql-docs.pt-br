@@ -21,11 +21,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ea0a963781d4f0864f6aa02d8276bab1386a979d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020457"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>Referências a código personalizado e assemblies em expressões no Designer de Relatórios (SSRS)
   É possível adicionar referências ao código personalizado inserido em um relatório ou aos assemblies personalizados criados e salvos em seu computador e implantá-los no servidor de relatório. Use o código inserido para constantes personalizadas, funções complexas ou funções usadas várias vezes em um mesmo relatório. Use assemblies de código personalizado para manter o código em um único local e compartilhá-lo para uso em vários relatórios. O código personalizado pode incluir novas constantes, variáveis, funções ou sub-rotinas personalizadas. É possível incluir referências somente leitura em coleções internas, como a coleção de Parâmetros. No entanto, não é possível passar conjuntos de valores de dados do relatório para funções personalizadas. Especificamente, não há suporte para agregações personalizadas.  

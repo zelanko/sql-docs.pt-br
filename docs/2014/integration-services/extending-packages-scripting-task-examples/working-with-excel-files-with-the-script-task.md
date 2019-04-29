@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 10fcf850a770296a81c99bc9b8168857b443df41
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62894780"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Trabalhando com arquivos do Excel com a tarefa Script
   O [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece o gerenciador de conexões do Excel, a origem do Excel e o destino do Excel para trabalhar com dados armazenados em planilhas no formato de arquivo do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. As técnicas descritas neste tópico utilizam a tarefa Script para obter informações sobre bancos de dados (arquivos de pasta de trabalho) e tabelas (planilhas e intervalos nomeados) do Excel disponíveis. Esses exemplos podem ser facilmente modificados para funcionar com quaisquer das outras fontes de dados com base em arquivo suportadas pelo Provedor OLE DB [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet.  
@@ -74,7 +74,7 @@ ms.locfileid: "58376085"
   
 5.  Defina a linguagem de scripts padrão para o componente Script usando a opção **Linguagem de scripts** na página **Geral** da caixa de diálogo **Opções**. Para obter mais informações, consulte [General Page](../general-page-of-integration-services-designers-options.md).  
   
-##  <a name="example1"></a> Descrição do exemplo 1: Verifique se existe um arquivo do Excel  
+##  <a name="example1"></a> Descrição do exemplo 1: verificar se existe um arquivo do Excel  
  Esse exemplo determina se o arquivo da pasta de trabalho do Excel especificado na variável `ExcelFile` existe, e define o valor booliano da variável `ExcelFileExists` para o resultado. Você pode usar esse valor booliano para ramificar no fluxo de trabalho do pacote.  
   
 #### <a name="to-configure-this-script-task-example"></a>Para configurar esse exemplo de tarefa Script  
@@ -144,7 +144,7 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example2"></a> Descrição do exemplo 2: Verifique se existe uma tabela do Excel  
+##  <a name="example2"></a> Descrição do exemplo 2: verificar se existe uma tabela do Excel  
  Esse exemplo determina se a planilha ou intervalo nomeado do Excel especificado na variável `ExcelTable` existe no arquivo da pasta de trabalho do Excel especificado na variável `ExcelFile`, e define o valor booliano da variável `ExcelTableExists` para o resultado. Você pode usar esse valor booliano para ramificar no fluxo de trabalho do pacote.  
   
 #### <a name="to-configure-this-script-task-example"></a>Para configurar esse exemplo de tarefa Script  
@@ -251,7 +251,7 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example3"></a> Exemplo 3 Descrição: Obter uma lista de arquivos do Excel em uma pasta  
+##  <a name="example3"></a> Descrição do exemplo 3: obter uma lista de arquivos do Excel em uma pasta  
  Esse exemplo preenche uma matriz com a lista de arquivos do Excel encontrada na pasta especificada no valor da variável `ExcelFolder`, e copia a matriz para a variável `ExcelFiles`. Você pode usar o Enumerador Foreach de Variável para repetir nos arquivos da matriz.  
   
 #### <a name="to-configure-this-script-task-example"></a>Para configurar esse exemplo de tarefa Script  
@@ -323,7 +323,7 @@ public class ScriptMain
 ### <a name="alternate-solution"></a>Solução alternada  
  Em vez de usar uma tarefa Script para reunir uma lista de arquivos do Excel em uma matriz, você também pode usar o Enumerador de Arquivo Foreach para repetir em todos os arquivos do Excel em uma pasta. Para obter mais informações, consulte [Executar um loop por meio de arquivos e tabelas do Excel usando um contêiner do Loop Foreach](../control-flow/foreach-loop-container.md).  
   
-##  <a name="example4"></a> Descrição do exemplo 4: Obter uma lista de tabelas em um arquivo do Excel  
+##  <a name="example4"></a> Descrição do exemplo 4: obter uma lista de tabelas em um arquivo do Excel  
  Esse exemplo preenche uma matriz com a lista de planilhas e intervalos nomeados encontrados no arquivo da pasta de trabalho especificado pelo valor da variável `ExcelFile`, e copia a matriz para a variável `ExcelTables`. Você pode usar o Enumerador Foreach de Variável para repetir nas tabelas da matriz.  
   
 > [!NOTE]  

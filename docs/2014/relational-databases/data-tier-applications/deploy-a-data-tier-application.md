@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ded740286ac86deee92d6822aaa5b3130f796849
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918179"
 ---
 # <a name="deploy-a-data-tier-application"></a>Implantar um aplicativo da camada de dados
   Você pode implantar um DAC (aplicativo da camada de dados) de um pacote de DAC para uma instância existente do [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou do [!INCLUDE[ssSDS](../../includes/sssds-md.md)] usando um assistente ou um script do PowerShell. O processo de implantação registra uma instância do DAC armazenando a definição do DAC no banco de dados do sistema **msdb** (**master** em [!INCLUDE[ssSDS](../../includes/sssds-md.md)]), cria um banco de dados e o preenche com todos os objetos de banco de dados definidos no DAC.  
@@ -51,7 +51,7 @@ ms.locfileid: "52529542"
   
  Algumas opções de banco de dados, como TRUSTWORTHY, DB_CHAINING e HONOR_BROKER_PRIORITY, não podem ser ajustadas como parte do processo de implantação. Propriedades físicas, como o número de grupos de arquivos ou os números e os tamanhos de arquivos, não podem ser alteradas como parte do processo de implantação. Após a conclusão da implantação, você pode usar a instrução ALTER DATABASE, o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ou o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell para personalizar o banco de dados.  
   
-###  <a name="LimitationsRestrictions"></a> Limitações e Restrições  
+###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
  Um DAC pode ser implantado no [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ou em uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] executando o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) ou posterior. Se você criar um DAC usando uma versão posterior, o DAC poderá conter objetos sem suporte do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Você não pode implantar esses DACs nas instâncias do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
 ###  <a name="Prerequisites"></a> Pré-requisitos  

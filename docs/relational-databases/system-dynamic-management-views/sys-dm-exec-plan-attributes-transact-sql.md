@@ -1,5 +1,5 @@
 ---
-title: exec_plan_attributes (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_plan_attributes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/20/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c17f1ba2b6e57fe9194d4cbf4a6e365e65a89d6c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013219"
 ---
 # <a name="sysdmexecplanattributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +41,11 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 ## <a name="arguments"></a>Argumentos  
  *plan_handle*  
- Identifica exclusivamente um plano de consulta de um lote que foi executado e cujo plano reside no cache de plano. *plan_handle* está **varbinary(64)**. O identificador de plano pode ser obtido de [DM exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) exibição de gerenciamento dinâmico.  
+ Identifica exclusivamente um plano de consulta de um lote que foi executado e cujo plano reside no cache de plano. *plan_handle* is **varbinary(64)**. O identificador de plano pode ser obtido de [DM exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) exibição de gerenciamento dinâmico.  
   
 ## <a name="table-returned"></a>Tabela retornada  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |atributo|**varchar(128)**|O nome do atributo associado com este plano. A tabela imediatamente abaixo deste lista os atributos possíveis, seus tipos de dados e suas descrições.|  
 |value|**sql_variant**|Valor do atributo que é associado ao plano.|  
@@ -53,7 +53,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 
 Na tabela acima, **atributo** pode ter os seguintes valores:
 
-|attribute|Tipo de dados|Description|  
+|attribute|Tipo de dados|Descrição|  
 |---------------|---------------|-----------------|  
 |set_options|**int**|Indica os valores de opção com os quais o plano foi compilado.|  
 |objectid|**int**|Uma das chaves principais usadas para pesquisar um objeto no cache. Esse é o objeto ID armazenada na [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) para objetos de banco de dados (procedimentos, exibições, gatilhos e assim por diante). Para planos do tipo "Adhoc" ou "Preparado", é um hash interno do texto de lote.|  

@@ -11,11 +11,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: fbea11b0500c075105bff885cdb1cd8264b320d6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62931630"
 ---
 # <a name="lesson-2-create-a-sql-server-credential"></a>Lição 2: Criar uma credencial do SQL Server
   **Credencial:** Uma credencial do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é um objeto usado para armazenar as informações de autenticação necessárias para se conectar a um recurso fora do SQL Server.  Aqui, os processos de backup e restauração do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usam a credencial para autenticação no serviço de armazenamento de Blob do Windows Azure. A Credencial armazena o nome da conta de armazenamento e os valores de **access key** da conta de armazenamento. Depois que a credencial for criada, ela deverá ser especificada na opção WITH CREDENTIAL ao emitir instruções BACKUP/RESTORE. Para obter mais informações sobre como exibir, copiar ou gerar novamente as **access keys**da conta de armazenamento, consulte [Chaves de acesso da conta de armazenamento](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx).  

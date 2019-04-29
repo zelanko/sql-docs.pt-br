@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_1205 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: sql-server-2014
+ms.date: 04/04/2017
+ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: language-reference
 helpviewer_keywords:
 - 1205 (Database Engine error)
 ms.assetid: 9fe3f67c-df3c-4642-a3a4-ccc0e138b632
@@ -13,14 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ef8a59c98bc6669a13b5a4ffeb516b4063db23c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62915887"
 ---
 # <a name="mssqlserver1205"></a>MSSQLSERVER_1205
-    
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  
 ## <a name="details"></a>Detalhes  
   
 |||  
@@ -33,7 +34,7 @@ ms.locfileid: "48092176"
 |Texto da mensagem|A transação (ID do processo %d) entrou em deadlock em %.*ls recursos com outro processo e foi escolhida como a vítima do deadlock. Execute a transação novamente.|  
   
 ## <a name="explanation"></a>Explicação  
- Os recursos foram acessados em ordem conflitante em transações separadas, causando um deadlock. Por exemplo:  
+Os recursos foram acessados em ordem conflitante em transações separadas, causando um deadlock. Por exemplo:  
   
 -   Transaction1 atualiza **Table1.Row1**, enquanto Transaction2 atualiza **Table2.Row2**.  
   
@@ -43,11 +44,10 @@ ms.locfileid: "48092176"
   
 -   Um deadlock acontece porque a Transação1 está esperando a conclusão da Transação2, mas a Transação2 está esperando a conclusão da Transação1.  
   
- O sistema detectará esse deadlock, escolherá uma das transações envolvidas como 'vítima', emitirá essa mensagem e reverterá a transação da vítima.  
+O sistema detectará esse deadlock, escolherá uma das transações envolvidas como 'vítima', emitirá essa mensagem e reverterá a transação da vítima.  
   
 ## <a name="user-action"></a>Ação do usuário  
- Execute a transação novamente. Você também pode revisar o aplicativo para evitar deadlocks. A transação escolhida como vítima pode ser testada novamente e, provavelmente, terá êxito, dependendo de quais operações estiverem sendo executadas simultaneamente.  
+Execute a transação novamente. Você também pode revisar o aplicativo para evitar deadlocks. A transação escolhida como vítima pode ser testada novamente e, provavelmente, terá êxito, dependendo de quais operações estiverem sendo executadas simultaneamente.  
   
- Para impedir ou evitar a ocorrência de deadlocks, faça com que todas as transações acessem as linhas na mesma ordem (**Table1** e, depois, **Table2**); desse modo, embora possa acontecer um bloqueio, não ocorrerá um deadlock.  
-  
+Para impedir ou evitar a ocorrência de deadlocks, faça com que todas as transações acessem as linhas na mesma ordem (**Table1** e, depois, **Table2**); desse modo, embora possa acontecer um bloqueio, não ocorrerá um deadlock.  
   

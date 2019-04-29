@@ -14,11 +14,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ad5135eb8141cc84bc6e5bddc8bd8477f4699b9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874925"
 ---
 # <a name="designing-assemblies"></a>Criação de Assemblies
   Este tópico descreve os seguintes fatores que você deve considerar ao projetar assemblies:  
@@ -39,7 +39,7 @@ ms.locfileid: "48196236"
 -   Se uma parte do código gerenciado requerer permissão mais alta, será melhor separar aquele código em um assembly separado do código que não requer tal permissão.  
   
 ## <a name="managing-assembly-security"></a>Gerenciando segurança de assembly  
- Você pode controlar quanto um assembly pode acessar recursos protegidos por Código de .NET Access Security quando executar código gerenciado. Você faz isto especificando um de três conjuntos de permissão quando você cria ou modifica um assembly: SAFE, EXTERNAL_ACCESS ou UNSAFE.  
+ Você pode controlar quanto um assembly pode acessar recursos protegidos por Código de .NET Access Security quando executar código gerenciado. Você pode fazer isso especificando um dos três conjuntos de permissões ao criar ou modificar um assembly: -SAFE, EXTERNAL_ACCESS ou UNSAFE.  
   
 ### <a name="safe"></a>SAFE  
  SAFE é o conjunto de permissões padrão e é o mais restritivo. Código executado por um assembly com permissões SAFE não pode acessar recursos do sistema externo, como arquivos, rede, variáveis de ambiente ou Registro. O código SAFE pode acessar dados dos bancos de dados locais do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou pode executar computações e lógica empresarial que não envolvam acesso de recursos fora dos bancos de dados locais.  

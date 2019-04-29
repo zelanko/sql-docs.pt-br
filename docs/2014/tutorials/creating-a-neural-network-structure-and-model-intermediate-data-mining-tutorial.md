@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 6787db165770f944838a312ecd3e0386d161da38
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856328"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>Criando uma estrutura e um modelo de rede neural (Tutorial de mineração de dados intermediário)
   Para criar um modelo de mineração de dados, primeiro você deve usar o Assistente de Mineração de Dados para criar uma nova estrutura de mineração com base na nova exibição da fonte de dados. Nessa tarefa, você usará o assistente para criar uma estrutura de mineração e, ao mesmo tempo, um modelo de mineração associado baseado no algoritmo Rede Neural da [!INCLUDE[msCoName](../includes/msconame-md.md)].  
@@ -96,15 +96,15 @@ ms.locfileid: "56037717"
     |AutomaticResponses|Contínuo|Longo|  
     |AverageTimePerIssue|Contínuo|Longo|  
     |Chamadas|Contínuo|Longo|  
-    |DayOfWeek|Discreto|Texto|  
+    |DayOfWeek|Discreto|Text|  
     |FactCallCenterID|Chave|Longo|  
     |IssuesRaised|Contínuo|Longo|  
     |LevelOneOperators|Contínuo|Longo|  
     |LevelTwoOperators|Contínuo|Longo|  
     |Orders|Contínuo|Longo|  
     |ServiceGrade|Contínuo|Double|  
-    |Turno|Discreto|Texto|  
-    |WageType|Discreto|Texto|  
+    |Turno|Discreto|Text|  
+    |WageType|Discreto|Text|  
   
 13. No **criar o teste definido** página, desmarque a caixa de texto para a opção **porcentagem de dados de teste**. Clique em **Avançar**.  
   

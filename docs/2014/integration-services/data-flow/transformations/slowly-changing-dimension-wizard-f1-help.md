@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5ccb8df947d31376707f81c0ce7cd7c28cc62d6c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900009"
 ---
 # <a name="slowly-changing-dimension-wizard-f1-help"></a>Ajuda F1 do Assistente de dimensão de alteração lenta
   Use o **Assistente de Dimensão de Alteração Lenta** para configurar o carregamento de dados em vários tipos de dimensões de alteração lenta. Essa seção fornece a Ajuda F1 para as páginas do **Assistente de Dimensão de Alteração Lenta**. A tabela a seguir descreve os tópicos dessa seção.  

@@ -20,11 +20,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 47b04c547700eda94d4c4f19b4a1211f8cdbf694
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900217"
 ---
 # <a name="lookup-transformation"></a>transformação Pesquisa
   A transformação Pesquisa executa pesquisas unindo dados em colunas de entrada com colunas em um conjunto de dados de referência. Você usa a pesquisa para acessar informações adicionais em uma tabela relacionada que tem como base valores de colunas comuns.  
@@ -129,11 +129,11 @@ ms.locfileid: "58386544"
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
--   Vídeo, [Como Implementar uma transformação pesquisa em modo Cache cheio](https://go.microsoft.com/fwlink/?LinkId=131031), em msdn.microsoft.com  
+-   Vídeo, [Como implementar a transformação Pesquisa no modo de Cache Cheio](https://go.microsoft.com/fwlink/?LinkId=131031), em msdn.microsoft.com  
   
 -   Entrada de blog, [Práticas recomendadas para usar os modos de cache de transformação de pesquisa](https://go.microsoft.com/fwlink/?LinkId=146623), em blogs.msdn.com  
   
--   Entrada de blog, [padrão de pesquisa: Diferencia maiusculas de minúsculas](https://go.microsoft.com/fwlink/?LinkId=157782), em blogs.msdn.com  
+-   Entrada de blog, [Padrão de pesquisa: não diferencia maiúsculas e minúsculas](https://go.microsoft.com/fwlink/?LinkId=157782), em blogs.msdn.com  
   
 -   Exemplo [Transformação de Pesquisa](https://go.microsoft.com/fwlink/?LinkId=267528), em msftisprodsamples.codeplex.com.  
   

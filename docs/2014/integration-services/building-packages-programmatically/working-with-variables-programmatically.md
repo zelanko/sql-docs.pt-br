@@ -23,11 +23,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4833ee0dd6514b6a05118b80b756c5fd2de069a3
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62836774"
 ---
 # <a name="working-with-variables-programmatically"></a>Trabalhando com variáveis programaticamente
   As variáveis são uma forma de definir valores e controlar processos dinamicamente em pacotes, contêineres, tarefas e manipuladores de eventos. As variáveis também podem ser usadas por restrições de precedência para controlar a direção do fluxo de dados para tarefas diferentes. As variáveis têm uma série de usos:  

@@ -24,18 +24,18 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2f86941149741caee7849c579e32ad070d7a3dec
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013399"
 ---
 # <a name="sysdmexecdistributedsqlrequests-transact-sql"></a>sys.dm_exec_distributed_sql_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Contém informações sobre todas as distribuições de consulta SQL como parte de uma etapa SQL na consulta.  Essa exibição mostra os dados das últimas 1000 solicitações; solicitações ativas sempre têm os dados presentes nesta exibição.  
   
-|Nome da coluna|Tipo de dados|Description|Intervalo|  
+|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|**nvarchar(32)**|execution_id e step_index constituem a chave para esta exibição. Id numérico exclusivo associado com a solicitação.|Consulte a ID na [. DM exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
 |step_index|**int**|Índice da etapa de consulta que essa distribuição é parte do.|Consulte step_index na [DM exec_distributed_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md).|  

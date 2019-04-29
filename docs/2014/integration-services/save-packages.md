@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0e4e9c8ea3300c35cb75d451206ab9869f932814
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889319"
 ---
 # <a name="save-packages"></a>Salvar pacotes
   No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , você cria pacotes usando o Designer do [!INCLUDE[ssIS](../includes/ssis-md.md)] e salva os pacotes no sistema de arquivos como arquivos XML (arquivos .dtsx). Você também pode salvar cópias do arquivo XML de pacote no banco de dados msdb no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou no repositório de pacotes. O repositório de pacotes representa as pastas no local do sistema de arquivos que o serviço do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] gerencia.  

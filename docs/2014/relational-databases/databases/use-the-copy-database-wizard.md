@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e72b960db0fd5b733119cafeca98f124eaa15f38
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871133"
 ---
 # <a name="use-the-copy-database-wizard"></a>Usar o Assistente para Copiar Banco de Dados
   O Assistente para Copiar Banco de Dados lhe permite migrar ou copiar bancos de dados e seus objetos facilmente de um servidor para outro, sem inatividade do servidor. Também é possível atualizar bancos de dados de uma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Com esse assistente, é possível fazer o seguinte:  
@@ -71,7 +71,7 @@ ms.locfileid: "52759108"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   O Assistente para Copiar Banco de Dados não está disponível na edição Express.  
   
@@ -228,7 +228,7 @@ ms.locfileid: "52759108"
      **Local da pasta**  
      Especifique o local dos arquivos de banco de dados de origem no sistema de arquivos.  
   
-     Por exemplo: Server\MSSQL110 SQL do C:\Program Files\Microsoft. MSSQLSERVER\MSSQL\DATA  
+     Por exemplo: C:\Program Files\Microsoft SQL Server\MSSQL110.MSSQLSERVER\MSSQL\DATA  
   
      **Compartilhamento de arquivo no servidor de origem**  
      Especifique o local dos arquivos de banco de dados de origem como um caminho de compartilhamento de arquivos.  
@@ -278,7 +278,7 @@ ms.locfileid: "52759108"
      **Mensagem**  
      Fornece qualquer mensagem que retornou de cada etapa.  
   
-##  <a name="FollowUp"></a> Acompanhar: Depois de atualizar um banco de dados do SQL Server  
+##  <a name="FollowUp"></a> Acompanhamento: Depois de atualizar um banco de dados do SQL Server  
  Após o uso do Assistente para Copiar Banco de Dados para atualizar um banco de dados de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o banco de dados é disponibilizado imediatamente e é atualizado de forma automática. Se o banco de dados tiver índices de texto completo, o processo de atualização importará, redefinirá ou recriará esses índices dependendo da configuração da propriedade de servidor **Opção de Atualização de Texto Completo** . Se a opção de atualização for definida como **Importar** ou **Recriar**, os índices de texto completo permanecerão indisponíveis durante a atualização. Dependendo da quantidade de dados a serem indexados, a importação pode levar várias horas, e a recriação pode ser até dez vezes mais demorada. Lembre-se também de que, quando a opção de atualização estiver definida como **Importar**, se não houver um catálogo de texto completo disponível, os índices de texto completo associados serão recompilados. Para obter informações sobre como exibir ou alterar a configuração da propriedade **Full-Text Upgrade Option** , veja [Gerenciar e monitorar a pesquisa de texto completo para uma instância de servidor](../search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
  Se o nível de compatibilidade de um banco de dados de usuário era 100 ou mais alto antes da atualização, ele permanecerá o mesmo depois da atualização. Se o nível de compatibilidade era 90, no banco de dados atualizado, o nível de compatibilidade será definido como 100, que é o nível de compatibilidade mais baixo com suporte no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter mais informações, veja [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).  

@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8df7e950f300028b2246450bf29ed0e8776f2cd4
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703677"
 ---
 # <a name="grant-server-administrator-permissions-analysis-services"></a>Conceder permissões de administrador do servidor (Analysis Services)
   Os membros da função de administrador de servidor em uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] têm acesso ilimitado a todos os objetos e dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nessa instância. O usuário deve ser membro da função de administrador de servidor para realizar qualquer tarefa em todo o servidor, como criar ou processar um banco de dados, modificar propriedades do servidor ou iniciar um rastreamento (em vez de eventos de processamento).  

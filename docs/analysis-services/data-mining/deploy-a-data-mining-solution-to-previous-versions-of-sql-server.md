@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: df527197f0ddd1eacc2e86e59092f45b1ac78c9a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011020"
 ---
 # <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>Implantar uma solução de mineração de dados em versões anteriores do SQL Server
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -48,11 +48,11 @@ ms.locfileid: "34015093"
  Se o provedor usado para a fonte de dados do modelo for SQL Client Data Provider 10, você também deve modificar a definição de fonte de dados para especificar a versão anterior do SQL Server Native Client. Caso contrário, o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] gera um erro que declara que o provedor não é registrado.  
   
 ##  <a name="bkmk_Holdout"></a> Implantando modelos com controle  
- Se você criar uma estrutura de mineração que contém uma partição de controle usada para testar modelos de mineração de dados, a estrutura de mineração pode ser implantada em uma instância do SQL Server 2005, mas as informações de partição serão perdidas.  
+ Se você criar uma estrutura de mineração que contém uma partição de validação usada para testar modelos de mineração de dados, a estrutura de mineração pode ser implantada em uma instância do SQL Server 2005, mas as informações de partição serão perdidas.  
   
  Ao abrir a estrutura de mineração no SQL Server 2005 Analysis Services, o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] gera um erro e, em seguida, gera novamente a estrutura para remover a partição de controle.  
   
- Depois que a estrutura é recriada, o tamanho da partição de exibição não está mais disponível na janela Propriedades. No entanto, o valor \<ddl100_100: holdoutmaxpercent > 30\</ddl100_100:HoldoutMaxPercent >) ainda pode estar presente no arquivo de script ASSL.  
+ Depois que a estrutura é recriada, o tamanho da partição de exibição não está mais disponível na janela Propriedades. No entanto, o valor \<ddl100_100:HoldoutMaxPercent > 30\</ddl100_100:HoldoutMaxPercent >) ainda podem estar presentes no arquivo de script ASSL.  
   
 ##  <a name="bkmk_Filter"></a> Implantando modelos com filtros  
  Se você aplicar um filtro a um modelo de mineração, o modelo pode ser implantado em uma instância do SQL Server 2005, mas o filtro não será aplicado.  
@@ -70,6 +70,6 @@ ms.locfileid: "34015093"
  Se você tentar sincronizar um banco de dados [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , o servidor retornará um erro e a sincronização do banco de dados falhará.  
   
 ## <a name="see-also"></a>Consulte também  
- [Compatibilidade com versões anteriores do Analysis Services](../../analysis-services/analysis-services-backward-compatibility.md)  
+ [Analysis Services Backward Compatibility](../../analysis-services/analysis-services-backward-compatibility.md)  
   
   

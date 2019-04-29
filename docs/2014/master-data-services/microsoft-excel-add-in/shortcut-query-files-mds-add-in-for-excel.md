@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e966260ac9880ffbdc722abca8eef86c5409da6a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62923601"
 ---
 # <a name="shortcut-query-files-mds-add-in-for-excel"></a>Arquivos de consulta de atalho (suplemento MDS para Excel)
   No [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], use arquivos de consulta de atalho para conectar e carregar dados usados frequentemente de forma rápida. Você também pode usá-los quando desejar compartilhar dados do MDS com outros usuários. Em vez de salvar a planilha e enviá-la por email, você deve salvar um arquivo de consulta de atalho e enviá-lo por email. Isso garante que vocês se conectem ao repositório do MDS para obter os dados mais recentes.  

@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8e227e4d382dac627626b977427aae05d0295744
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855316"
 ---
 # <a name="rename-user-sys"></a>Renomear usuário sys
   O Supervisor de Atualização detectou o nome de usuário **sys** em um banco de dados. Esse nome é reservado. Renomeie o usuário antes de atualizar. Se isso não for feito, o banco de dados ficará em estado suspeito após o processo de atualização e não estará disponível até que banco de dados fique online novamente.  

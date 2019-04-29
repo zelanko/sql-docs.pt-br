@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec7f81ec412a2ed597f8cd282b637fc5adf73ebf
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62892637"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Referência de mensagens e erros do Integration Services
   As tabelas a seguir listam erros, advertências e mensagens informativas do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , em ordem numérica crescente, dentro de cada categoria, acompanhados de seus códigos numéricos e nomes simbólicos. Cada um desses erros está definido como um campo da classe <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> no namespace <xref:Microsoft.SqlServer.Dts.Runtime> .  
@@ -375,7 +375,7 @@ ms.locfileid: "58394584"
 |0xC00220E4|-1073602332|DTS_E_TKEXECPACKAGE_UNABLETOLOAD|Erro 0x%1!8.8X! ao preparar para carregar o pacote. %2.|  
 |0xC0024102|-1073594110|DTS_E_TASKVALIDATIONFAILED|Falha do método Validate na tarefa com o código de erro 0x%1!8.8X! (%2). O método Validate deve ter êxito e indicar o resultado usando um parâmetro "out".|  
 |0xC0024104|-1073594108|DTS_E_TASKEXECUTEFAILED|O método Execute na tarefa retornou o código de erro 0x%1!8.8X! (%2). O método Execute deve ter êxito e indicar o resultado usando um parâmetro "out".|  
-|0xC0024105|-1073594107|DTS_E_RETRIEVINGDEPENDENCIES|Ocorreu uma falha na tarefa "%1": 0x%2!8.8x! ao recuperar dependências. O tempo de execução estava recuperando as dependências da coleção de dependências da tarefa quando ocorreu o erro. A tarefa pode ter implementado incorretamente uma das interfaces de dependência.|  
+|0xC0024105|-1073594107|DTS_E_RETRIEVINGDEPENDENCIES|Falha na tarefa "%1": 0x%2!8.8X! ao recuperar dependências. O tempo de execução estava recuperando as dependências da coleção de dependências da tarefa quando ocorreu o erro. A tarefa pode ter implementado incorretamente uma das interfaces de dependência.|  
 |0xC0024107|-1073594105|DTS_E_TASKVALIDATIONERROR|Houve erros durante a validação da tarefa.|  
 |0xC0024108|-1073594104|DTS_E_CONNECTIONSTRINGFORMAT|O formato de cadeia de caracteres de conexão não é válido. Ele deve consistir em um ou mais componentes do formato X=Y, separados por ponto-e-vírgulas. Esse erro ocorre quando uma cadeia de caracteres de conexão sem nenhum componente é definida em um gerenciador de conexões de banco de dados.|  
 |0xC0024109|-1073594103|DTS_E_UNQUOTEDSEMICOLON|Os componentes da cadeia de caracteres de conexão não podem conter ponto-e-vírgulas sem-aspas. Se o valor tiver que conter ponto e vírgula, coloque todo esse valor entre aspas. Esse erro ocorre quando os valores na cadeia de caracteres de conexão contêm ponto-e-vírgulas sem-aspas, como na propriedade InitialCatalog.|  
@@ -789,7 +789,7 @@ ms.locfileid: "58394584"
 |0xC00292A8|-1073573208|DTS_E_TRANSFERDBTASK_MUSTHAVESOURCEFILES|É necessário especificar pelo menos um arquivo de origem.|  
 |0xC00292A9|-1073573207|DTS_E_TRANSFERDBTASKS_SRCFILENOTFOUND|Não foi possível encontrar o arquivo "%1" no banco de dados de origem "%2".|  
 |0xC00292B3|-1073573197|DTS_E_MSMQTASK_FIPS1402COMPLIANCE|A operação solicitada não é permitida em sistemas em conformidade com U.S. FIPS 140-2.|  
-|0xC002F210|-1073548784|DTS_E_SQLTASK_ERROREXECUTINGTHEQUERY|Falha na execução da consulta "%1", com o erro a seguir: "%2". Possíveis razões da falha: Problemas com a consulta, propriedade "ResultSet" não definida corretamente, parâmetros não definidos corretamente ou conexão não estabelecida corretamente.|  
+|0xC002F210|-1073548784|DTS_E_SQLTASK_ERROREXECUTINGTHEQUERY|Falha na execução da consulta "%1", com o erro a seguir: "%2". Possíveis razões da falha: problemas com a consulta, propriedade "ResultSet" não definida corretamente, parâmetros não definidos corretamente ou conexão não estabelecida corretamente.|  
 |0xC002F300|-1073548544|DTS_E_TRANSFERSPTASK_ERRORREADINGSPNAMES|Erro ao ler os nomes de procedimento armazenado do arquivo xml.|  
 |0xC002F301|-1073548543|DTS_E_TRANSFERSPTASK_INVALIDDATANODE|Nó de dados inválido para a tarefa Transferir Procedimento Armazenado.|  
 |0xC002F302|-1073548542|DTS_E_TRANSFERTASKS_CONNECTIONTYPEISNOTSMOSERVER|A conexão "%1" não é do tipo "SMOServer".|  
@@ -1113,7 +1113,7 @@ ms.locfileid: "58394584"
 |0xC00470F4|-1073450764|DTS_E_EXPREVALINVALIDNULLSCALE|O valor é %1!d! especificado como parâmetro de escala da função NULL com o tipo de dados %2 está fora do intervalo. A escala deve ficar no intervalo de %3!d! a %4!d!. A escala não deve exceder a precisão e não deve ser negativa.|  
 |0xC00470F5|-1073450763|DTS_E_EXPREVALINVALIDNULLLENGTH|O valor é %1!d! especificado como parâmetro de comprimento da função "NULL" com o tipo de dados %2 é negativo e inválido. O comprimento deve ser positivo.|  
 |0xC00470F6|-1073450762|DTS_E_NEGATIVESNOTALLOWED|Não pode ser atribuído valor negativo a %1.|  
-|0xC00470F7|-1073450761|DTS_E_FASTPARSENOTALLOWED|A propriedade personalizada "%1" para "%2" não pode ser definida como verdadeira.  O tipo de dados de coluna deve ser um destes procedimentos:  DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4, DT_UI8, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAMPOFFSET, DT_DATE, DT_DBDATE, DT_DBTIME, DT_DBTIME2 ou DT_FILETIME.|  
+|0xC00470F7|-1073450761|DTS_E_FASTPARSENOTALLOWED|A propriedade personalizada "%1" para "%2" não pode ser definida como verdadeira.  O tipo de dados de coluna deve ser um destes:  DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4, DT_UI8, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAMPOFFSET, DT_DATE, DT_DBDATE, DT_DBTIME, DT_DBTIME2 ou DT_FILETIME.|  
 |0xC00470F8|-1073450760|DTS_E_CANNOTREATTACHPATH|Não é possível reanexar "%1". Exclua o caminho, adicione um novo e anexe.|  
 |0xC00470F9|-1073450759|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSPLURALSINGULAR|A função "%1" requer %2!d! parâmeros, não %3!d! parâmetro. O nome da função foi reconhecido, mas o número de parâmetros não é válido.|  
 |0xC00470FA|-1073450758|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSSINGULARPLURAL|A função "%1" requer %2!d! parâmetro, não %3!d! parâmetros. O nome da função foi reconhecido, mas o número de parâmetros não é válido.|  
@@ -1236,14 +1236,14 @@ ms.locfileid: "58394584"
 |0xC00490F5|-1073442571|DTS_E_TXLOOKUP_CANCEL_REQUESTED|A transformação da pesquisa recebeu do usuário uma solicitação de cancelamento.|  
 |0xC00490F6|-1073442570|DTS_E_LOBLENGTHLIMITEXCEEDED|O processamento de dados de caractere ou de LOB (objeto binário grande) foi interrompido porque o limite de 4 GB foi alcançado.|  
 |0xC00490F7|-1073442569|DTS_E_CANNOTLOADCOMPONENT|O componente de pipeline gerenciado "%1" não pôde ser carregado.  A exceção foi %2.|  
-|0xC00F9304|-1072721148|DTS_E_OLEDB_EXCEL_NOT_SUPPORTED|Código de erro SSIS DTS_E_OLEDB_EXCEL_NOT_SUPPORTED: Não há suporte para o Gerenciador de Conexão do Excel na versão de 64 bits do SSIS, pois nenhum provedor do OLE DB está disponível.|  
+|0xC00F9304|-1072721148|DTS_E_OLEDB_EXCEL_NOT_SUPPORTED|Código de erro SSIS DTS_E_OLEDB_EXCEL_NOT_SUPPORTED: não há suporte para o Gerenciador de conexões do Excel nas versões de 64 bits do SSIS, pois não há um provedor OLE DB disponível.|  
 |0xC00F9310|-1072721136|DTS_E_CACHEBADHEADER|O arquivo de cache está danificado ou não foi criado usando o gerenciador de conexões do Cache.  Forneça um arquivo de cache válido.|  
 |0xC0202001|-1071636479|DTS_E_MISSINGSQLCOMMAND|O comando SQL não foi definido corretamente. Verifique a propriedade SQLCommand.|  
-|0xC0202002|-1071636478|DTS_E_COMERROR|Estão disponíveis informações de objeto de erro COM.  Origem: "%1" código de erro: 0x%2!8.8x!  Descrição: "%3".|  
+|0xC0202002|-1071636478|DTS_E_COMERROR|Estão disponíveis informações de objeto de erro COM.  Origem: "%1" código de erro: 0x%2!8.8X!  Descrição: "%3".|  
 |0xC0202003|-1071636477|DTS_E_ACQUIREDCONNECTIONUNAVAILABLE|Não é possível acessar as conexões adquiridas.|  
 |0xC0202004|-1071636476|DTS_E_INCORRECTCOLUMNCOUNT|O número de colunas está incorreto.|  
 |0xC0202005|-1071636475|DTS_E_COLUMNNOTFOUND|Não é possível encontrar a coluna "%1" na fonte de dados.|  
-|0xC0202007|-1071636473|DTS_E_OLEDBRECORD|Está disponível um registro OLE DB.  Origem: "%1" Hresult: 0x%2!8.8x!  Descrição: "%3".|  
+|0xC0202007|-1071636473|DTS_E_OLEDBRECORD|Está disponível um registro OLE DB.  Origem: "%1"  Hresult: 0x%2!8.8X!  Descrição: "%3".|  
 |0xC0202009|-1071636471|DTS_E_OLEDBERROR|Código de Erro SSIS DTS_E_OLEDBERROR.  Ocorreu um erro OLE DB. Código de erro: 0x%1!8.8X!.|  
 |0xC020200A|-1071636470|DTS_E_ALREADYCONNECTED|O componente já está conectado. O componente precisa ser desconectado antes de tentar conectá-lo.|  
 |0xC020200B|-1071636469|DTS_E_INCORRECTSTOCKPROPERTYVALUE|O valor da propriedade "%1" está incorreto.|  
@@ -2124,7 +2124,7 @@ ms.locfileid: "58394584"
 |0x8004801E|-2147188706|DTS_W_COULDNOTFINDCURRENTVERSION|Não é possível encontrar o valor "%1" para o componente %2. O valor de CurrentVersion para o componente não pode ser localizado. Esse erro ocorrerá se o componente não tiver definido suas informações de Registro para que contenham um valor de CurrentVersion na seção DTSInfo. Essa mensagem ocorre durante o desenvolvimento do componente, ou quando o componente é usado em um pacote, se o componente não for corretamente registrado.|  
 |0x80049300|-2147183872|DTS_W_BUFFERGETTEMPFILENAME|O gerenciador de buffer não pôde adquirir um nome de arquivo temporário.|  
 |0x80049301|-2147183871|DTS_W_UNUSABLETEMPORARYPATH|O gerenciador de buffer não criou um arquivo temporário no caminho "%1". O caminho não será considerado novamente para armazenamento temporário.|  
-|0x80049304|-2147183868|DTS_W_DF_PERFCOUNTERS_DISABLED|Aviso: Não foi possível abrir a memória compartilhada global para se comunicar com o desempenho DLL; contadores de desempenho de fluxo de dados não estão disponíveis.  Para resolver, execute este pacote como um administrador ou no console do sistema.|  
+|0x80049304|-2147183868|DTS_W_DF_PERFCOUNTERS_DISABLED|Aviso: não foi possível abrir a memória compartilhada global para se comunicar com o desempenho DLL; contadores de desempenho de fluxo de dados não estão disponíveis.  Para resolver, execute este pacote como um administrador ou no console do sistema.|  
 |0x8020200F|-2145378289|DTS_W_PARTIALROWFOUNDATENDOFFILE|Existe uma linha parcial no final do arquivo.|  
 |0x8020202B|-2145378261|DTS_W_ENDOFFILEREACHWHILEREADINGHEADERROWS|O final do arquivo de dados foi atingido durante a leitura das linhas de cabeçalho. Verifique se o delimitador de linha de cabeçalho e o número de linhas de cabeçalho a serem ignoradas estão corretos.|  
 |0x80202066|-2145378202|DTS_W_CANTRETRIEVECODEPAGEFROMOLEDBPROVIDER|Não é possível recuperar as informações da página de código de coluna do provedor OLE DB.  Se o componente fornecer suporte à propriedade "%1", a página de código dessa propriedade será usada.  Altere o valor da propriedade se os valores da página de código de cadeia de caracteres atuais estiverem incorretos.  Se o componente não fornecer suporte à propriedade, a página de código da identificação de localidade do componente será usada.|  

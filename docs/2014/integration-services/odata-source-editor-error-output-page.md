@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76a14639eb57645849deab4a11ef13a80cad2648
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890528"
 ---
 # <a name="odata-source-editor-error-output-page"></a>Editor de Origem do OData (página Saída de Erro)
   Use a página **Saída de Erro** da caixa de diálogo **Editor de Origem OData** para selecionar opções de tratamento de erros e definir propriedades em colunas de saída de erros.  

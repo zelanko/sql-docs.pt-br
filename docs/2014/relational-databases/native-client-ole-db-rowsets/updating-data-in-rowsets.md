@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f68e4f2be641d6c6aeaf8bbbfcc8cad81ab1a39a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62938677"
 ---
 # <a name="updating-data-in-rowsets"></a>Atualizando dados em conjuntos de linhas
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as atualizações do provedor OLE DB do Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dados quando um consumidor atualiza um conjunto de linhas modificável que contém os dados. Um conjunto de linhas modificável é criado quando o consumidor solicita suporte para a interface **IRowsetChange** ou **IRowsetUpdate**.  

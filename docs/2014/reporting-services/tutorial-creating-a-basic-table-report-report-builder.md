@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fa3c6f3f6d1a0870fca88871ad3effe642f547e6
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59959542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62651456"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Tutorial: Criar um relatório de tabela básico (Construtor de Relatórios)
   Este tutorial ensina a criar um relatório de tabela básico com base em dados de vendas de exemplo. A ilustração a seguir mostra o relatório que você criará.  

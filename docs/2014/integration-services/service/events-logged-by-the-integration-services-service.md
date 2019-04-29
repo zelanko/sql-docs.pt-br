@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dedffe0f30c62399e4d694f7ee1bf5247222e87d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889265"
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>Eventos registrados em log pelo serviço Integration Services Service
   O serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] registra várias mensagens no log de eventos de Aplicativo do Windows. O serviço registra essas mensagens quando é iniciado e interrompido e quando ocorrem determinados problemas.  
@@ -31,7 +31,7 @@ ms.locfileid: "58392944"
 ## <a name="messages-about-the-status-of-the-service"></a>Mensagens sobre o status do serviço  
  Quando você seleciona o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para instalação, o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] é instalado e iniciado e o Tipo de Inicialização é definido como Automático.  
   
-|ID do evento|Nome simbólico|Texto|Observações|  
+|ID do evento|Nome simbólico|Text|Observações|  
 |--------------|-------------------|----------|-----------|  
 |256|DTS_MSG_SERVER_STARTING|Iniciando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] Service.|O serviço está prestes a iniciar.|  
 |257|DTS_MSG_SERVER_STARTED|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] Service iniciado.|O serviço foi iniciado.|  
@@ -42,7 +42,7 @@ ms.locfileid: "58392944"
 ## <a name="messages-about-the-configuration-file"></a>Mensagens sobre o arquivo de configuração  
  As configurações do serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] são armazenadas em um arquivo XML que pode ser modificado. Para obter mais informações, consulte [Configurando o Serviço Integration Services &#40;Serviço SSIS#41;](../configuring-the-integration-services-service-ssis-service.md).  
   
-|ID do evento|Nome simbólico|Texto|Observações|  
+|ID do evento|Nome simbólico|Text|Observações|  
 |--------------|-------------------|----------|-----------|  
 |274|DTS_MSG_SERVER_MISSING_CONFIG_REG|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] Serviço: %na configuração de Registro que especifica o arquivo de configuração não existe. %nTentando carregar o arquivo de configuração padrão.|A entrada do Registro que contém o caminho do arquivo de configuração não existe ou está vazia.|  
 |272|DTS_MSG_SERVER_MISSING_CONFIG|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] O arquivo de configuração de serviço não existe.%nCarregando com as configurações padrão.|O arquivo de configuração não existe no local especificado.|  
@@ -50,7 +50,7 @@ ms.locfileid: "58392944"
   
 ## <a name="other-messages"></a>Outras mensagens  
   
-|ID do evento|Nome simbólico|Texto|Observações|  
+|ID do evento|Nome simbólico|Text|Observações|  
 |--------------|-------------------|----------|-----------|  
 |336|DTS_MSG_SERVER_STOPPING_PACKAGE|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] Serviço: interrompendo a execução do pacote.%nIdentificação de instância do pacote: %1%nIdentificação do pacote: %2%nNome do pacote: %3%nDescrição do pacote: %4%nPacote|O serviço está tentando interromper um pacote em execução. Você pode monitorar e interromper pacotes em execução no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Para obter informações sobre como gerenciar pacotes no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], consulte [Gerenciamento de pacotes &#40;Serviço SSIS&#41;](package-management-ssis-service.md).|  
   

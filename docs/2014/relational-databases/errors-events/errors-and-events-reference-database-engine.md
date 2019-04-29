@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 537ea93edb56b84be0cbeff5633b943252a98ff8
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62870898"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>Referência de erros e eventos (Mecanismo de Banco de Dados)
 
@@ -35,7 +35,7 @@ Esta seção contém mensagens de erro de mecanismo de banco de dados selecionad
   
  A tabela a seguir contém links para esses recursos e os descreve.  
   
-|Recurso|Descrição|  
+|Resource|Descrição|  
 |--------------|-----------------|  
 |[SQL Server Community](https://go.microsoft.com/fwlink/?LinkId=42455)|Esse site contém links para grupos de notícias e fóruns monitorados pela comunidade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Também lista fontes de informações da comunidade, como blogs e sites da Web. A comunidade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é muito útil ao responder perguntas, embora não haja nenhuma garantia para as respostas dadas.|  
 |[SQL Server Developer Center Community](https://go.microsoft.com/fwlink/?LinkId=42456)|Esse site enfoca grupos de notícias, fóruns e outros recursos de comunidade que são úteis a desenvolvedores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  

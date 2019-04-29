@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1312312718a082aaf5b7f6a1e798d29db83a8bb8
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.openlocfilehash: f74b6b9fe659f6d2af0f30bd6a2b629939fc5628
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013552"
 ---
 # <a name="sysdmexeccachedplandependentobjects-transact-sql"></a>sys.dm_exec_cached_plan_dependent_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sys.dm_exec_cached_plan_dependent_objects(plan_handle)
   
 ## <a name="arguments"></a>Argumentos  
 *plan_handle*  
-Identifica exclusivamente um plano de execução de consulta para um lote que foi executado e seu plano reside no cache de plano. *plan_handle* is **varbinary(64)**.   
+É um token que identifica exclusivamente um plano de execução de consulta para um lote que foi executado e seu plano reside no cache de plano. *plan_handle* is **varbinary(64)**.   
 
 O *plan_handle* pode ser obtido dos seguintes objetos de gerenciamento dinâmico:  
   
@@ -64,7 +64,7 @@ O *plan_handle* pode ser obtido dos seguintes objetos de gerenciamento dinâmico
 |**cacheobjtype**|**nvarchar(50)**|O tipo de objeto do cache do plano. A coluna não é anulável. Os valores possíveis são:<br /><br /> Plano executável<br /><br /> Função compilada CLR <br /><br /> Procedimento compilado<br /><br /> Cursor|  
   
 ## <a name="permissions"></a>Permissões  
- , é necessário ter permissão VIEW SERVER STATE no servidor.  
+ Requer a permissão `VIEW SERVER STATE` no servidor.  
   
 ## <a name="physical-joins"></a>Junções físicas  
  ![Diagrama de relação](../../relational-databases/system-dynamic-management-views/media/dm-dependent-objects.gif "diagrama de relação")  

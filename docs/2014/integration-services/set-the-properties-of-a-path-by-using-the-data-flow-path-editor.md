@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6cbb4037e44e4e4c906617baf9c40e77019f7e9a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58383885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62888879"
 ---
 # <a name="set-the-properties-of-a-path-by-using-the-data-flow-path-editor"></a>Definir as propriedades de um caminho por meio do Editor de Caminho do Fluxo de Dados
   Os caminhos conectam dois componentes de fluxos de dados. Antes de você poder definir as propriedades do caminho, o fluxo de dados deve conter pelo menos dois componentes de fluxo de dados conectados. Para obter mais informações, consulte [Adicionar ou excluir um componente em um fluxo de dados](data-flow/add-or-delete-a-component-in-a-data-flow.md) e [Conectar componentes em um fluxo de dados](data-flow/connect-components-in-a-data-flow.md).  

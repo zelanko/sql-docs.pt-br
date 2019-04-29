@@ -1,5 +1,5 @@
 ---
-title: database_credentials (Transact-SQL) | Microsoft Docs
+title: sys.database_credentials (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/27/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 46c055e017c2cf5c06993f3e117010ac1621e175
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62936728"
 ---
-# <a name="sysdatabasecredentials-transact-sql"></a>database_credentials (Transact-SQL)
+# <a name="sysdatabasecredentials-transact-sql"></a>sys.database_credentials (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Retorna uma linha para cada banco de dados com escopo de credencial no banco de dados.  
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md) em vez disso.    
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |credential_id|**int**|ID da credencial no escopo do banco de dados. É exclusivo no banco de dados.|  
 |nome|**sysname**|Credencial no escopo do nome do banco de dados. É exclusivo no banco de dados.|  

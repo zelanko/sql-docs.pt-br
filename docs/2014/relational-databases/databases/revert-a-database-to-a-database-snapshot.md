@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 357030c913888d299cbec06c212eb049383b4526
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62916704"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Reverter um banco de dados a um instantâneo do banco de dados
   Se os dados em um banco de dados online forem danificados, em alguns casos, reverter o banco de dados para um instantâneo do banco de dados que preceda o dano pode ser uma alternativa apropriada para restaurar o banco de dados de um backup. Por exemplo, reverter um banco de dados pode ser útil para reverter um erro sério recente de usuário, como uma tabela descartada. Porém, todas as mudanças feitas depois que o instantâneo foi criado serão perdidas.  
@@ -31,11 +31,11 @@ ms.locfileid: "54125646"
   
      [Segurança](#Security)  
   
--   **Para reverter um banco de dados para um instantâneo de banco de dados, usando:**  [Transact-SQL](#TsqlProcedure)  
+-   **Para reverter um banco de dados para um instantâneo do banco de dados usando:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
  Não há suporte para a reversão nas seguintes condições:  
   
 -   O banco de dados deve ter somente um instantâneo do banco de dados no momento, para o qual você planeja reverter.  
@@ -46,7 +46,7 @@ ms.locfileid: "54125646"
   
  Antes de reverter um banco de dados, considere as seguintes limitações:  
   
--   Reverter não é destinado à recuperação de mídia. para obter informações sobre a ferramenta de configuração e recursos adicionais. Um instantâneo do banco de dados é uma cópia incompleta dos arquivos de banco de dados. Assim, se o banco de dados ou o instantâneo do banco de dados estiver corrompido, reverter de um instantâneo será praticamente impossível. Além disso, mesmo quando isso é possível, é improvável que a reversão corrija o problema no caso de corrupção. Portanto, é essencial fazer backups e testar regularmente seu plano de restauração para proteger um banco de dados. Para obter mais informações, consulte [Back Up and Restore of SQL Server Databases](../backup-restore/back-up-and-restore-of-sql-server-databases.md).  
+-   Reverter não é destinado à recuperação de mídia. . Um instantâneo do banco de dados é uma cópia incompleta dos arquivos de banco de dados. Assim, se o banco de dados ou o instantâneo do banco de dados estiver corrompido, reverter de um instantâneo será praticamente impossível. Além disso, mesmo quando isso é possível, é improvável que a reversão corrija o problema no caso de corrupção. Portanto, é essencial fazer backups e testar regularmente seu plano de restauração para proteger um banco de dados. Para obter mais informações, consulte [Back Up and Restore of SQL Server Databases](../backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
     > [!NOTE]  
     >  Se você precisa ser capaz de restaurar o banco de dados de origem para o momento determinado em que o instantâneo do banco de dados foi criado, use um modelo de recuperação completo e implemente uma política de backup que permita fazer isso.  
@@ -122,7 +122,7 @@ ms.locfileid: "54125646"
   
 -   A. [Revertendo um instantâneo no banco de dados AdventureWorks](#Reverting_AW)  
   
--   b. [Revertendo um instantâneo no banco de dados Sales](#Reverting_Sales)  
+-   B. [Revertendo um instantâneo no banco de dados Sales](#Reverting_Sales)  
   
 ####  <a name="Reverting_AW"></a> A. Revertendo um instantâneo no banco de dados AdventureWorks  
  Este exemplo presume que existe apenas um instantâneo atualmente no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Por obter o exemplo que cria o instantâneo para o qual o banco de dados é revertido, veja [Criar um instantâneo de banco de dados &#40;Transact-SQL&#41;](create-a-database-snapshot-transact-sql.md).  

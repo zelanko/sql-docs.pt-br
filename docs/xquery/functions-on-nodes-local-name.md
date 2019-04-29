@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 93f289ed165742ae8fdf8d49732186161a4a8b5d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62936391"
 ---
 # <a name="functions-on-nodes---local-name"></a>Funções em Nós – local-name
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ WHERE ProductModelID=7
 ```  
   
 ### <a name="b-using-local-name-without-argument-in-a-predicate"></a>B. Usando o local-name sem argumento em um predicado  
- A consulta a seguir é especificada na coluna Instructions, digitado **xml** coluna da tabela ProductModel. A expressão retorna todos os filhos do elemento do elemento <`root`> cuja parte do nome local do QName é "Location". O **example** função é especificada no predicado e não tem nenhum argumento, o nó de contexto é usado pela função.  
+ A consulta a seguir é especificada na coluna Instructions, digitado **xml** coluna da tabela ProductModel. A expressão retorna todos os filhos do elemento de <`root`> elemento cuja parte do nome local do QName é "Local". O **example** função é especificada no predicado e não tem nenhum argumento, o nó de contexto é usado pela função.  
   
 ```  
 SELECT Instructions.query('  
@@ -82,7 +82,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- A consulta retorna todos os filhos do elemento <`Location`> do elemento <`root`>.  
+ A consulta retorna todos os <`Location`> filhos do elemento de <`root`> elemento.  
   
 ## <a name="see-also"></a>Consulte também  
  [Funções em nós](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   

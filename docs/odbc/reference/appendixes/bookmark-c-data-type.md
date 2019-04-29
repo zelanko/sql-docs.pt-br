@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b81acf6c60bd11e03a598e349e145dbf72e174b4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026946"
 ---
 # <a name="bookmark-c-data-type"></a>Tipo de dados do indicador C
 O indicador de tipo de dados C permite que um aplicativo recupere um indicador. Os tipos de indicador C são usados apenas para recuperar valores de indicador que podem ser variável em comprimento; eles não devem ser convertidos em outros tipos de dados. Um aplicativo recupera um indicador de coluna 0 do resultado definido com **SQLBulkOperations** (com uma operação de SQL_ADD), **SQLFetch**, **SQLFetchScroll**, ou **SQLGetData**. Para obter mais informações, consulte [indicadores](../../../odbc/reference/develop-app/bookmarks-odbc.md).  

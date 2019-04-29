@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1345051d06493a456172a183defce3a8bd555ca
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872050"
 ---
 # <a name="contained-database-collations"></a>Ordenações de banco de dados independentes
   Várias propriedades afetam a ordem de classificação e a semântica de igualdade dos dados textuais, incluindo diferenciação de maiúsculas e minúsculas, distinção de acentos e o idioma base em uso. Essas qualidades são demonstradas para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pela escolha da ordenação dos dados. Para obter uma discussão mais detalhada sobre as ordenações, consulte [Suporte a ordenações e a Unicode](../collations/collation-and-unicode-support.md).  

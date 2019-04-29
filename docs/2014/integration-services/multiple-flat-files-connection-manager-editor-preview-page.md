@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 410846777858b8c0923c544d33656e76b1199301
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890539"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-preview-page"></a>Editor do Gerenciador de Conexões de Vários Arquivos Simples (página Visualização)
   Use a página **Visualização** da caixa de diálogo **Editor do Gerenciador de Conexões de Vários Arquivos Simples** para ver o conteúdo do primeiro arquivo de origem selecionado, dividido em colunas conforme definido por você.  

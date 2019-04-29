@@ -1,5 +1,5 @@
 ---
-title: 'Etapa 2: Executar o Assistente de instalação de pacotes | Microsoft Docs'
+title: 'Etapa 2: executar o Assistente de Instalação de Pacotes | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0fe0862438943fec36728a3c4e6c796061c86593
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891574"
 ---
-# <a name="step-2-running-the-package-installation-wizard"></a>Etapa 2: Executando o Assistente de Instalação de Pacotes
+# <a name="step-2-running-the-package-installation-wizard"></a>Etapa 2: Executar o Assistente de Instalação de Pacotes
   Nesta tarefa, você executará o Assistente de Instalação de Pacotes para implantar os pacotes do projeto Tutorial de Implantação em uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Somente pacotes podem ser instalados na tabela sysssispackages no banco de dados msdb do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Os arquivos que dão suporte incluídos no pacote de implantação serão implantados no sistema de arquivos.  
   
  O Assistente de Instalação de Pacotes o guiará pelas etapas para instalar e configurar os pacotes. Você instalará os pacotes em uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no computador de destino (o computador em que você copiou o pacote de implantação). Você também criará uma pasta, C:\DeploymentTutorialInstall, em que o assistente instalará os arquivos que não são pacotes.  
@@ -85,7 +85,7 @@ ms.locfileid: "58385534"
   
     -   Falha ao carregar pelo menos uma das entradas de configuração no pacote. Verifique as entradas de configuração e os avisos anteriores para ver a descrição da configuração em que houve falha.  
   
-    -   O arquivo de configuração: "C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig não é válido. Verifique o nome do arquivo de configuração.  
+    -   O arquivo de configuração: "C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig" não é válido. Verifique o nome do arquivo de configuração.  
   
     -   Falha ao carregar pelo menos uma das entradas de configuração no pacote. Verifique as entradas de configuração e os avisos anteriores para ver a descrição da configuração em que houve falha.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "58385534"
     >  Um arquivo de log temporário é criado para ser usado na validação do pacote. Esse arquivo não é usado quando o pacote é executado.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Etapa 3: Testando os pacotes implantados](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
+ [Etapa 3: testar os pacotes implantados](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
   
 ![Ícone do Integration Services (pequeno)](media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   

@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4890f4c56e207432a5b64cd04a0bfeac15135b1b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877685"
 ---
 # <a name="web-service-task-editor-general-page"></a>Editor da Tarefa Serviço da Web (página Geral)
   Use a página **Geral** da caixa de diálogo **Editor da Tarefa Serviços da Web** para especificar um gerenciador de conexões HTTP, o local do arquivo WSDL (linguagem WSDL) usado pela tarefa, descrever a tarefa Serviços da Web e baixar o arquivo WSDL.  
@@ -34,7 +34,7 @@ ms.locfileid: "58374744"
 > [!IMPORTANT]  
 >  O gerenciador de conexões HTTP dá suporte apenas para autenticação anônima e autenticação básica. Ele não suporta a Autenticação do Windows.  
   
- **Tópicos relacionados:**  [Gerenciador de Conexão HTTP](connection-manager/http-connection-manager.md), [Editor do Gerenciador de Conexão HTTP &#40;página de servidor&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
+ **Tópicos relacionados:**  [Gerenciador de Conexões de HTTP](connection-manager/http-connection-manager.md), [Editor do Gerenciador de Conexões de HTTP &#40;página Servidor&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
   
  **WSDLFile**  
  Digite o caminho totalmente qualificado de um arquivo WSDL que é local para o computador ou clique no botão Procurar **(…)** e localize esse arquivo.  

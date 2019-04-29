@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3d20276a90a64ca414b8bb6253b03df08908a1f1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62921234"
 ---
 # <a name="restore-a-database-backup-sql-server-management-studio"></a>Restaurar um backup de banco de dados (SQL Server Management Studio)
   Este tópico explica como restaurar um backup de banco de dados completo.  
@@ -57,13 +57,13 @@ ms.locfileid: "48111955"
   
          Após adicionar os dispositivos desejados à caixa de listagem **Mídia de backup** , clique em **OK** para voltar à página **Geral** .  
   
-         Na caixa de listagem **Origem: Dispositivo: Banco de Dados** , selecione o nome do banco de dados que deve ser restaurado.  
+         Na caixa de listagem **Fonte: Dispositivo: Banco de Dados**, selecione o nome do banco de dados que deve ser restaurado.  
   
         > [!NOTE]  
         >  Essa lista estará disponível apenas quando **Dispositivo** for selecionado. Apenas os bancos de dados que têm backups no dispositivo selecionado estarão disponíveis.  
   
          **Mídia de backup**  
-         Selecione a mídia da operação de restauração: **arquivo**, **fita**, **URL**ou **dispositivo de Backup**. A opção **Fita** só aparece se houver uma unidade de fita montada no computador, e a opção **Dispositivo de backup** só aparece se houver, no mínimo, um dispositivo de backup.  
+         Selecione a mídia da operação de restauração: **Arquivo**, **fita**, **URL**ou **dispositivo de Backup**. A opção **Fita** só aparece se houver uma unidade de fita montada no computador, e a opção **Dispositivo de backup** só aparece se houver, no mínimo, um dispositivo de backup.  
   
          **Local de backup**  
          Exibir, adicionar ou remover mídia para a operação de restauração. A lista pode conter até 64 arquivos, fitas ou dispositivos de backup.  
@@ -71,7 +71,7 @@ ms.locfileid: "48111955"
          **Adicionar**  
          Adiciona o local de um dispositivo de backup para o **local do Backup** lista. Dependendo do tipo de mídia selecionado no campo **Mídia do backup** , clicar **em Adicionar** abre uma das caixas de diálogo a seguir.  
   
-        |Típo de mídia|Caixa de diálogo|Description|  
+        |Típo de mídia|Caixa de diálogo|Descrição|  
         |----------------|----------------|-----------------|  
         |**File**|**Localizar o arquivo de backup**|Nessa caixa de diálogo, você pode selecionar um arquivo local da árvore ou pode especificar um arquivo remoto que use o seu nome totalmente qualificado da UNC (Convenção Universal de Nomenclatura). Para obter mais informações, consulte [Dispositivos de backup &#40;SQL Server&#41;](backup-devices-sql-server.md).|  
         |**Dispositivo**|**Selecionar Dispositivo de Backup**|Nessa caixa de diálogo você pode selecionar em uma lista de dispositivos lógicos de backup, definida na instância de servidor.|  
@@ -96,7 +96,7 @@ ms.locfileid: "48111955"
   
 9. Para exibir ou selecionar as opções avançadas, na página **Opções** , no painel **Opções de restauração** , você pode selecionar qualquer uma das seguintes opções, de acordo com sua situação:  
   
-    1.  `WITH` Opções (não obrigatório):  
+    1.  Opções `WITH` (não necessárias):  
   
         -   **Substituir o banco de dados existente (WITH REPLACE)**  
   

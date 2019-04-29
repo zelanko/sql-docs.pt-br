@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 7063448da86c97a7e3ff88899a9488915a055c71
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62875026"
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>Evitar conflitos com operações de banco de dados em aplicativos de FILESTREAM
   Os aplicativos que usam SqlOpenFilestream() para abrir identificadores de arquivo do Win32 para ler ou gravar dados BLOB FILESTREAM podem apresentar erros de conflito com instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] gerenciadas em uma transação em comum. Isso inclui consultas [!INCLUDE[tsql](../../includes/tsql-md.md)] ou MARS cuja execução demora muito tempo para ser concluída. Os aplicativos devem ser criados cautelosamente para evitar esses tipos de conflitos.  
@@ -61,7 +61,7 @@ CloseHandle(dstHandle);
 //is returned with the updateData applied.  
 ```  
   
-### <a name="b-opening-a-filestream-blob-for-read-access"></a>b. Abrindo um BLOB FILESTREAM para acesso de leitura  
+### <a name="b-opening-a-filestream-blob-for-read-access"></a>B. Abrindo um BLOB FILESTREAM para acesso de leitura  
  O exemplo a seguir mostra o efeito de abrir um arquivo para acesso apenas de leitura.  
   
 ```  

@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: fc89a5677cd412a75acc8c75d0d57f38291f6c30
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922867"
 ---
 # <a name="validation-statuses-master-data-services"></a>Status da validação (Master Data Services)
   Na área funcional **Gerenciamento de Versões** , na página **Validar Versão** , os seguintes status são possíveis.  

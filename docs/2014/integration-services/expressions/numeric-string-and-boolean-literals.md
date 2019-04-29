@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9b307c48da04e32691afa12ff1b05f6a4e8c33d8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59949992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62897460"
 ---
 # <a name="literals-ssis"></a>Literais (SSIS)
   Expressões podem incluir literais numérico, de cadeia de caracteres e boolianos. O avaliador de expressão aceita uma variedade de literais numéricos como inteiros, decimais e constantes de ponto flutuante. O avaliador de expressão também dá suporte a sufixos longos e flutuantes, que especificam como o avaliador de expressão trata os valores, e uma notação científica em literais numéricos.  

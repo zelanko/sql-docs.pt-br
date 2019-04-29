@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 80dfa890b16b27ac00218f9e9e7895411c8ac9eb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890633"
 ---
 # <a name="microsoft-connector-11-for-sap-bw-f1-help"></a>Ajuda F1 do Microsoft Connector 1.1 for SAP BW
   Esta seção contém os tópicos de Ajuda F1 para os três componentes do [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 para SAP BW. Estes tópicos também estão disponíveis na interface do usuário, pressionando a tecla F1 ou clicando em Ajuda nas páginas e caixas de diálogo do assistente.  

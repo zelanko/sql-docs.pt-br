@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8e4e798100c4cf972949dc91dd7aeb5648a28275
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877543"
 ---
 # <a name="wmi-data-reader-task-editor-wmi-options-page"></a>Editor da Tarefa Leitor de Dados do WMI (página Opções do WMI)
   Use a página **Opções do WMI** da caixa de diálogo **Editor da Tarefa Leitor de Dados do WMI** para especificar a origem da consulta da linguagem WQL e o destino do resultado da consulta.  
@@ -31,7 +31,7 @@ ms.locfileid: "58376771"
  **WMIConnectionName**  
  Selecione um gerenciador de conexões WMI na lista ou clique em \<**Nova Conexão WMI...**> para criar um novo gerenciador de conexões.  
   
- **Tópicos relacionados:** [Gerenciador de Conexão do WMI](connection-manager/wmi-connection-manager.md), [Editor do Gerenciador de Conexão de WMI](../../2014/integration-services/wmi-connection-manager-editor.md)  
+ **Tópicos relacionados:** [Gerenciador de Conexões WMI](connection-manager/wmi-connection-manager.md), [Editor do Gerenciador de Conexões WMI](../../2014/integration-services/wmi-connection-manager-editor.md)  
   
  **WQLQuerySourceType**  
  Selecione o tipo de origem da consulta WQL que a tarefa executa. As opções dessa propriedade são listadas na tabela a seguir.  
@@ -66,13 +66,13 @@ ms.locfileid: "58376771"
  **WQLQuerySource**  
  Selecione um gerenciador de conexões de arquivos na lista ou clique em \<**Nova conexão…**> para criar um novo gerenciador de conexões.  
   
- **Tópicos relacionados:** [Gerenciador de Conexão de arquivos](connection-manager/file-connection-manager.md), [Editor do Gerenciador de Conexão de arquivos](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Tópicos relacionados:** [Gerenciador de conexões de arquivos](connection-manager/file-connection-manager.md), [Editor do Gerenciador de conexões de Arquivos](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="wqlquerysourcetype--variable"></a>WQLQuerySourceType = Variável  
  **WQLQuerySource**  
  Selecione uma variável na lista ou clique em \<**Nova variável...**> para criar uma nova variável.  
   
- **Tópicos relacionados:** [Serviços de integração &#40;SSIS&#41; variáveis](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md)  
+ **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md)  
   
 ## <a name="destinationtype-dynamic-options"></a>Opções dinâmicas de DestinationType  
   
@@ -80,13 +80,13 @@ ms.locfileid: "58376771"
  **Destino**  
  Selecione um gerenciador de conexões de arquivos na lista ou clique em \<**Nova conexão…**> para criar um novo gerenciador de conexões.  
   
- **Tópicos relacionados:** [Gerenciador de Conexão de arquivos](connection-manager/file-connection-manager.md), [Editor do Gerenciador de Conexão de arquivos](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Tópicos relacionados:** [Gerenciador de conexões de arquivos](connection-manager/file-connection-manager.md), [Editor do Gerenciador de conexões de Arquivos](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="destinationtype--variable"></a>DestinationType = Variável  
  **Destino**  
  Selecione uma variável na lista ou clique em \<**Nova variável...**> para criar uma nova variável.  
   
- **Tópicos relacionados:** [Serviços de integração &#40;SSIS&#41; variáveis](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md)  
+ **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   

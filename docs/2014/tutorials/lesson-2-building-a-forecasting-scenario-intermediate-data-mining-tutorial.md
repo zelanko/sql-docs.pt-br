@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ee814dc0891e70dfeccf2b96383d1d7b5c324aa8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62931526"
 ---
 # <a name="lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial"></a>Lição 2: Criando um cenário de previsão (Tutorial de mineração de dados intermediário)
   Como analista de vendas da [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], foi solicitado que você fizesse a previsão das vendas de produtos para o próximo ano. Em particular, você deverá comparar previsões para regiões e linhas de produto diferentes. Adicionalmente, foi pedido que você determinasse se há variação nas vendas de produtos diferentes, dependendo da época do ano.  

@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: d8719a91fada156d74003231abea67f2ae55f35c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844292"
 ---
 # <a name="options-query-results-sql-server-results-to-grid-page"></a>Opções (resultados SQL Server – resultados da consulta para a página de grade)
   Use esta página para especificar as opções de exibição de um conjunto de resultados da consulta em formato de grade. As alterações feitas nessas opções são aplicadas apenas a novas consultas do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para alterar as opções das consultas atuais, clique em **Opções de Consulta** no menu **Consulta** ou clique com o botão direito do mouse na janela Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e selecione **Opções de Consulta**. No painel esquerdo da caixa de diálogo **Opções de Consulta**, abaixo de **Resultados**, clique em **Grade**.  

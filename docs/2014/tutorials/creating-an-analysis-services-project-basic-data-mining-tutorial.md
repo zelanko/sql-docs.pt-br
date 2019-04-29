@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ee6c1a8b765843304d25f1e2ad485ede2badcba4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855190"
 ---
 # <a name="creating-an-analysis-services-project-basic-data-mining-tutorial"></a>Criando um projeto do Analysis Services (Tutorial de mineração de dados básico)
   Cada projeto do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] define os objetos em um único banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Um banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pode conter muitos tipos diferentes de objetos  

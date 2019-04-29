@@ -24,11 +24,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 101ac93ba885ebcd571387785aa814ddef873619
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876233"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Conjuntos de mídias, famílias de mídia e conjuntos de backup (SQL Server)
   Este tópico apresenta a terminologia básica de mídia de backup da restauração e do backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], e destina-se a leitores que não têm experiência com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este tópico descreve o formato que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa na mídia de backup, a correspondência entre mídia de backup e dispositivos de backup, a organização dos backups na mídia de backup, e as várias considerações sobre conjuntos de mídias e famílias de mídia. O tópico também descreve as etapas de inicialização ou formatação de mídia de backup antes que você use isso pela primeira vez ou substitua um conjunto de mídias antigo por um novo conjunto de mídias, como substituir conjuntos de backup antigos em um conjunto de mídias, e como acrescentar novos conjuntos de backup a um conjunto de mídias.  

@@ -16,11 +16,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: d1c846f7ed60bbecac64021e9a881312e1f1f64c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011343"
 ---
 # <a name="join-a-role"></a>unir uma função
   Este tópico descreve como atribuir funções a logons e usuários de banco de dados no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Use funções em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para gerenciar permissões de maneira eficiente. Atribua permissões a funções e adicione e remova usuários e logons de funções. Com o uso de funções, as permissões não precisam ser mantidas individualmente para cada usuário.  
@@ -53,7 +53,7 @@ ms.locfileid: "54134116"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   A alteração do nome de uma função de banco de dados não altera o número da ID, o proprietário ou as permissões da função.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "54134116"
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-add-a-member-to-a-fixed-server-role"></a>Para adicionar um membro a uma função de servidor fixa  
   

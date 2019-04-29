@@ -13,11 +13,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: e214a46adece1bcee940f57805db897d1c8c76db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011313"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>Chaves de criptografia do SQL Server e banco de dados (Mecanismo de Banco de Dados)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa chaves de criptografia para ajudar a proteger dados, credenciais e informações de conexão armazenados em um banco de dados de servidor. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tem dois tipos de chaves: *simétrica* e *asimétrica*. As chaves simétricas usam a mesma senha para criptografar e descriptografar dados. As chaves assimétricas usam uma senha para criptografar dados (chamada chave *pública* ) e outra para descriptografar dados (chamada chave *privada* ).  
@@ -31,9 +31,9 @@ ms.locfileid: "48160696"
   
  A chave mestra de banco de dados é uma chave simétrica usada para proteger as chaves privadas dos certificados e as chaves assimétricas presentes no banco de dados. Ela também pode ser usada para criptografar dados, mas tem limitações de comprimento que a tornam pouco prática para os dados do que usar uma chave simétrica.  
   
- Quando é criada, a chave mestra é criptografada com o algoritmo DES Triplo e uma senha fornecida pelo usuário. Para habilitar a descriptografia automática da chave mestra, uma cópia da chave é criptografada com o uso da SMK. Ela é armazenada no banco de dados em que é usada e no `master` banco de dados do sistema.  
+ Quando é criada, a chave mestra é criptografada com o algoritmo DES Triplo e uma senha fornecida pelo usuário. Para habilitar a descriptografia automática da chave mestra, uma cópia da chave é criptografada com o uso da SMK. Ela é armazenada no banco de dados em que é usada e no banco de dados `master` do sistema.  
   
- A cópia da DMK armazenada no `master` banco de dados do sistema é silenciosamente atualizado sempre que a DMK é alterada. No entanto, esse padrão pode ser alterado usando o `DROP ENCRYPTION BY SERVICE MASTER KEY` opção do `ALTER MASTER KEY` instrução. Uma DMK não criptografada pela chave mestra de serviço deve ser aberta com a instrução `OPEN MASTER KEY` e uma senha.  
+ A cópia da DMK armazenada no banco de dados `master` do sistema é silenciosamente atualizada sempre que a DMK é alterada. No entanto, esse padrão pode ser alterado com o uso da opção `DROP ENCRYPTION BY SERVICE MASTER KEY` da instrução `ALTER MASTER KEY`. Uma DMK não criptografada pela chave mestra de serviço deve ser aberta com a instrução `OPEN MASTER KEY` e uma senha.  
   
 ## <a name="managing-sql-server-and-database-keys"></a>Gerenciando o SQL Server e chaves de banco de dados  
  O gerenciamento de chaves de criptografia consiste na criação de novas chaves de banco de dados, na criação de um backup das chaves de servidor e de banco de dados, além de saber quando e como restaurar, excluir ou alterar as chaves.  

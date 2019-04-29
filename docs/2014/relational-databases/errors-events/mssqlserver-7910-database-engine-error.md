@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 427223e6c11d47091741e032dc79b0ecafef1d00
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913485"
 ---
 # <a name="mssqlserver7910"></a>MSSQLSERVER_7910
     
@@ -30,7 +30,7 @@ ms.locfileid: "48130206"
 |Origem do evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC2_REPAIR_PAGE_ALLOCATED|  
-|Texto da mensagem|Correção: a página P_ID foi alocada para a ID de objeto O_ID, ID de índice I_ID, ID de partição PN_ID, ID de unidade de alocação A_ID (tipo TYPE).|  
+|Texto da mensagem|Reparar: A página P_ID foi alocada para a ID de objeto O_ID, ID de índice I_ID, ID de partição PN_ID, unidade de alocação A_ID ID (tipo TYPE).|  
   
 ## <a name="explanation"></a>Explicação  
  Essa é uma mensagem informativa da cláusula REPAIR que afirma que uma página foi alocada para a matriz de slot com uma única página de uma página IAM.  

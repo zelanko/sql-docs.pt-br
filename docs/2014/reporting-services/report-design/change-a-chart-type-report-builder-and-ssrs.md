@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d998c2f9ecc19167f34530e6fa2d0190f71287ce
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020834"
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>Alterar um tipo de gráfico (Construtor de Relatórios e SSRS)
   Quando você primeiro inserir um gráfico em um relatório, o **Selecionar tipo de gráfico** caixa de diálogo é exibida. Se você cancelar essa caixa de diálogo, um tipo de gráfico Coluna será adicionado por padrão.  

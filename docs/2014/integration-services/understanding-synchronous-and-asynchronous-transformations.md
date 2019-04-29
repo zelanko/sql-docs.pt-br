@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8d0ae065c411214a1b86aff29917a34cdcff0e0a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62878044"
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>Compreendendo as transformações síncronas e assíncronas
   Para compreender a diferença entre uma transformação síncrona e uma assíncrona no [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], é mais fácil começar com a transformação síncrona. Se uma transformação síncrona não satisfizer suas necessidades, seu design poderá exigir uma transformação assíncrona.  
@@ -41,7 +41,7 @@ ms.locfileid: "58389824"
   
 -   Não há nenhuma correspondência um-para-um entre linhas de entrada e linhas de saída. Um exemplo é a transformação Agregação, onde o componente tem que acrescentar uma linha à saída para reter os valores de agregação computados.  
   
- No script e na programação do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], você especifica uma transformação assíncrona atribuindo um valor 0 à propriedade `SynchronousInputID` das saídas do componente. para obter informações sobre a ferramenta de configuração e recursos adicionais. Dessa forma, o mecanismo de fluxo de dados é informado para enviar cada linha automaticamente para as saídas. Em seguida, você deve gravar código para enviar cada linha de maneira explícita para a saída apropriada, adicionando-o ao novo buffer de saída que é criado para a saída de uma transformação assíncrona.  
+ No script e na programação do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], você especifica uma transformação assíncrona atribuindo um valor 0 à propriedade `SynchronousInputID` das saídas do componente. . Dessa forma, o mecanismo de fluxo de dados é informado para enviar cada linha automaticamente para as saídas. Em seguida, você deve gravar código para enviar cada linha de maneira explícita para a saída apropriada, adicionando-o ao novo buffer de saída que é criado para a saída de uma transformação assíncrona.  
   
 > [!NOTE]  
 >  Como um componente de origem também deve adicionar explicitamente cada linha que lê na fonte de dados para seus buffers de saída, uma fonte parecerá uma transformação com saídas assíncronas.  

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0541f066c653a233508a48d7b8f02504d36f25b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913271"
 ---
 # <a name="mssqlserver7987"></a>MSSQLSERVER_7987
     
@@ -30,7 +30,7 @@ ms.locfileid: "48130487"
 |Origem do evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC2_PRE_CHECKS_CHAIN_LINKAGE_MISMATCH|  
-|Texto da mensagem|Verificações prévias de tabela do sistema: a ID de objeto O_ID tem incompatibilidade de vínculos de cadeia. P_ID1 ->next = P_ID2, mas P_ID2 ->prev = P_ID3. Instrução de verificação encerrada devido a um erro irreparável.|  
+|Texto da mensagem|Verificações prévias de tabela do sistema: ID de objeto O_ID tem incompatibilidade de vínculos de cadeia. P_ID1 ->next = P_ID2, mas P_ID2 ->prev = P_ID3. Instrução de verificação encerrada devido a um erro irreparável.|  
   
 ## <a name="explanation"></a>Explicação  
  A primeira fase de um DBCC CHECKDB envolve a execução de verificações primitivas nas páginas de dados das tabelas de sistema críticas. Se forem encontrados erros, não será possível corrigi-los; por isso, DBCC CHECKDB é encerrado imediatamente.  

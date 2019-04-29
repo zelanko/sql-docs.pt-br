@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa75b3a71832eaba4064de5a9dd90e73236e8177
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891052"
 ---
-# <a name="step-2-enabling-and-configuring-package-configurations"></a>Etapa 2: Configurando e habilitando configurações de pacote
+# <a name="step-2-enabling-and-configuring-package-configurations"></a>Etapa 2: Habilitar e configurar configurações de pacote
   Nesta tarefa, você converterá o projeto no Modelo de Implantação de Pacote e habilitará configurações de pacote usando o Assistente de Configuração de Pacotes. Você usará esse assistente para gerar um arquivo de configuração XML que contenha definições de configuração para a propriedade `Directory` do contêiner Loop Foreach. O valor da propriedade de diretório é fornecido por uma nova variável de nível de pacote que você pode atualizar no tempo de execução. Adicionalmente, você populará uma pasta de dados de exemplo para usar durante o teste.  
   
 ### <a name="to-create-a-new-package-level-variable-mapped-to-the-directory-property"></a>Para criar uma nova variável de nível de pacote mapeada para a propriedade de diretório  

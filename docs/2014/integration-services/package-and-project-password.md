@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8f53b9972bfc9207bb7b9b06b7438e5fb8039ffd
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890289"
 ---
 # <a name="package-and-project-password"></a>Senha do Pacote e do Projeto
   Use a caixa de diálogo **Senha do Pacote** para digitar a senha de um pacote criptografado com uma senha. É necessário digitar uma senha se o pacote usar o nível de proteção **Criptografar dados confidenciais com senha**ou **Criptografar tudo com senha** .  

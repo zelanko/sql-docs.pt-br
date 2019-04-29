@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 05dc6188a46e0e2d43b7a4bc3275fae7d4cd8da6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917545"
 ---
 # <a name="change-the-configuration-settings-for-a-database"></a>Alterar as definições de configuração de um banco de dados
   Este tópico descreve como alterar opções em nível de banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Essas opções são exclusivas de cada banco de dados e não afetam outros bancos de dados.  
@@ -40,7 +40,7 @@ ms.locfileid: "52822820"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   Apenas o administrador do sistema, proprietário do banco de dados, membros das funções de servidor fixas **sysadmin** e **dbcreator** e da função de banco de dados fixa **db_owner** podem modificar essas opções.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "52822820"
   
 2.  Na caixa de diálogo **Propriedades de Banco de Dados** , clique em **Opções** para acessar a maioria das definições de configuração. As configurações de arquivo e grupo de arquivos, espelhamento e envio de logs estão em suas páginas respectivas.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-change-the-option-settings-for-a-database"></a>Para alterar as configurações de opção para um banco de dados  
   

@@ -18,18 +18,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a5560379c07e3f6a5ff21ca2db19dbe0e8a420a1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917848"
 ---
 # <a name="validate-a-dac-package"></a>Validar um pacote de DAC
   Esta é uma prática recomendada para revisar o conteúdo de um pacote de DAC antes de implantá-lo em produção e também para validar as ações de atualização antes de atualizar um DAC existente. Isso é especialmente válido durante a implantação de pacotes que não foram desenvolvidos em sua organização.  
   
 1.  **Antes de começar:**  [Pré-requisitos](#Prerequisites)  
   
-2.  **Para atualizar um DAC, usando:**  [Exibir o conteúdo de um DAC](#ViewDACContents), [exibir alterações do banco de dados](#ViewDBChanges), [exibir ações de atualização](#ViewUpgradeActions), [comparar DACs](#CompareDACs)  
+2.  **Para atualizar um DAC, usando:**  [Exibir o Conteúdo de um DAC](#ViewDACContents), [Exibir Alterações no Banco de Dados](#ViewDBChanges), [Exibir Ações de Atualização](#ViewUpgradeActions), [Compare DACs](#CompareDACs)  
   
 ##  <a name="Prerequisites"></a> Pré-requisitos  
  Recomendamos não implantar um pacote de DAC de origens desconhecidas ou não confiáveis. Como os DACs podem conter código mal-intencionado que pode executar código [!INCLUDE[tsql](../../includes/tsql-md.md)] sem finalidade ou provocar erros modificando o esquema. Antes de usar um DAC de uma origem desconhecida ou não confiável, implante-o em uma instância de teste isolada do [!INCLUDE[ssDE](../../includes/ssde-md.md)], execute [DBCC CHECKDB &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) no banco de dados. Além disso, examine o código, como procedimentos armazenados ou outro código definido pelo usuário, no banco de dados.  

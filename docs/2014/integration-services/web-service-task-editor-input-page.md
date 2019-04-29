@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 29ca581697231a3aa70aa6f4342fcea3408d6c99
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62926248"
 ---
 # <a name="web-service-task-editor-input-page"></a>Editor da Tarefa Serviço da Web (página Entrada)
   Use a página **Entrada** da caixa de diálogo do **Editor da Tarefa Serviço da Web** para especificar o Serviço da Web, o método Web e os valores a serem fornecidos ao método Web como entrada. Os valores podem ser fornecidos digitando cadeias de caracteres diretamente na coluna Valor ou selecionando variáveis na coluna Valor.  

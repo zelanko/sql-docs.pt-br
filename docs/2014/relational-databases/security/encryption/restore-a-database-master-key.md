@@ -13,11 +13,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 8cd45bd5a03cd50053ffe436fbf62d01019c2ae7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011556"
 ---
 # <a name="restore-a-database-master-key"></a>Restaurar uma chave mestra de banco de dados
   Este tópico descreve como restaurar a chave mestra de banco de dados no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  

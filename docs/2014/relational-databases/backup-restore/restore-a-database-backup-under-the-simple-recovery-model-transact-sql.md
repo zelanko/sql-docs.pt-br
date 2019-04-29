@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e2fd00fd96fe9b0bf7e1b605d935908970d0c1fc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62875624"
 ---
 # <a name="restore-a-database-backup-under-the-simple-recovery-model-transact-sql"></a>Restaurar um backup de banco de dados no modelo de recuperação simples (Transact-SQL)
   Este tópico explica como restaurar um backup de banco de dados completo.  
@@ -67,7 +67,7 @@ ms.locfileid: "48107592"
   
 ## <a name="example"></a>Exemplo  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descrição  
  Este exemplo restaura o backup de banco de dados completo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] a partir da fita.  
   
 ### <a name="example"></a>Exemplo  

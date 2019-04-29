@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dfbfa64cb61332591fadef874b8c73da3ce1e7c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913743"
 ---
 # <a name="mssqlserver5228"></a>MSSQLSERVER_5228
     
@@ -30,7 +30,7 @@ ms.locfileid: "48150937"
 |Origem do evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC4_ANTIMATTER_COLUMN_DETECTED|  
-|Texto da mensagem|Erro de tabela: ID de objeto O_ID, ID de índice I_ID, ID de partição PN_ID, ID de unidade de alocação A_ID (tipo TYPE), página PG_ID, linha R_ID. DBCC detectou limpeza incompleta de uma operação de criação de índice online. (O valor de coluna de antimatéria é VALUE.)|  
+|Texto da mensagem|Erro de tabela: ID de objeto O_ID, ID de índice I_ID, ID PN_ID, unidade de alocação A_ID ID (tipo TYPE), página PG_ID, linha R_ID de partição. DBCC detectou limpeza incompleta de uma operação de criação de índice online. (O valor de coluna de antimatéria é VALUE.)|  
   
 ## <a name="explanation"></a>Explicação  
  O build não concluído de um índice online foi detectada para o objeto *O_ID*, o índice *I_ID* e a partição *PN_ID*. Isso é manifesto pela presença de uma coluna de antimatéria na linha *R_ID*. Uma coluna de antimatéria é usada para reconciliar registros de diversas origens durante a criação de um índice online. A mensagem de erro também indica o valor da coluna de antimatéria.  

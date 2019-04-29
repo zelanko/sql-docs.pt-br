@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b87a950c29cf202124e27b319eb56fb6a6e1857d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62914911"
 ---
 # <a name="mssqlserver208"></a>MSSQLSERVER_208
     
@@ -55,17 +55,17 @@ ms.locfileid: "48143016"
   
 -   O objeto está contido no esquema padrão do usuário. Se ele não estiver, o objeto deverá ser especificado no formato de duas partes *schema_name.object_name*. Observe que as funções com valor escalar sempre devem ser chamadas usando-se pelo menos um nome de duas partes.  
   
--   A diferenciação de maiúsculas e minúsculas do agrupamento de banco de dados.  
+-   A diferenciação de maiúsculas e minúsculas da ordenação de banco de dados.  
   
-     Quando um banco de dados usa um agrupamento com diferenciação de maiúsculas e minúsculas, o nome do objeto deve corresponder ao uso de maiúsculas e minúsculas do objeto no banco de dados. Por exemplo, quando um objeto for especificado como **MyTable** em um banco de dados com um agrupamento com diferenciação de maiúsculas e minúsculas, as consultas que fizerem referência ao objeto como **mytable** ou **Mytable** retornarão o erro 208, pois os nomes dos objetos não são correspondentes.  
+     Quando um banco de dados usa uma ordenação com diferenciação de maiúsculas e minúsculas, o nome do objeto deve corresponder ao uso de maiúsculas e minúsculas do objeto no banco de dados. Por exemplo, quando um objeto for especificado como **MyTable** em um banco de dados com uma ordenação com diferenciação de maiúsculas e minúsculas, as consultas que fizerem referência ao objeto como **mytable** ou **Mytable** retornarão o erro 208, pois os nomes dos objetos não são correspondentes.  
   
-     Você pode verificar o agrupamento de banco de dados executando a instrução a seguir.  
+     Você pode verificar a ordenação de banco de dados executando a instrução a seguir.  
   
     ```  
     SELECT collation_name FROM sys.databases WHERE name = 'database_name';  
     ```  
   
-     A abreviação CS no nome do agrupamento indica que ele diferencia maiúsculas de minúsculas. Por exemplo, Latin1_General_CS_AS é um agrupamento que tem diferenciação de maiúsculas e minúsculas e também de acentos. CI indica um agrupamento sem diferenciação de maiúsculas e minúsculas.  
+     A abreviação CS no nome da ordenação indica que ela diferencia maiúsculas de minúsculas. Por exemplo, Latin1_General_CS_AS é uma ordenação que tem diferenciação de maiúsculas e minúsculas e também de acentos. CI indica uma ordenação sem diferenciação de maiúsculas e minúsculas.  
   
 -   O usuário tem permissão para acessar o objeto. Para verificar as permissões do usuário no objeto, use a função de sistema **Has_Perms_By_Name**.  
   

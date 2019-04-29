@@ -28,11 +28,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1985e7c3fc55f6783c88569c196713050fa40287
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918953"
 ---
 # <a name="collation-and-unicode-support"></a>Suporte a ordenações e a Unicode
   As ordenações em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornecem propriedades de regras de classificação, de diferenciação de maiúsculas e minúsculas e de diferenciação de acentos para seus dados. As ordenações utilizadas com tipos de dados de caractere, como `char` e `varchar`, determinam a página de código e os caracteres correspondentes que podem ser representados para esse tipo de dados. Independentemente de você estar instalando uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], restaurando um backup de banco de dados ou conectando o servidor a bancos de dados cliente, é importante estar ciente dos requisitos de localidade, ordem de classificação e distinção de maiúsculas e minúsculas e de acentos dos dados com os quais trabalhará. Para listar as ordenações disponíveis na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja [sys.fn_helpcollations &amp;#40;Transact-SQL&amp;#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql).  
@@ -53,7 +53,7 @@ ms.locfileid: "53377866"
 |------------|-----------------|  
 |Case-sensitive (_CS)|Faz distinção entre letras maiúscula e minúsculas. Se selecionada, as letras minúsculas são ordenadas à frente das versões em letras maiúsculas. Se esta opção não for selecionada, a ordenação será sem diferenciação de maiúsculas e minúsculas. Ou seja, o SQL Server considera as versões de letras maiúsculas e minúsculas como idênticas para fins de classificação. Você pode selecionar caso explicitamente a não diferenciação de maiúsculas e minúsculas especificando _CI.|  
 |Accent-sensitive (_AS)|Faz distinção entre caracteres acentuados e não acentuados. Por exemplo, 'a 'não é igual a'???'. Se esta opção não for selecionada, a ordenação não diferenciará acentos. Ou seja, o SQL Server considera as versões com e sem acentos como idênticas para fins de classificação. Você pode selecionar a não diferenciação de acentos especificando _AI.|  
-|Kana-sensitive (_KS)|Distingue entre os dois tipos de caracteres kana japoneses: hiragana e katakana. Se esta opção não for selecionada, a ordenação não fará diferenciação de Kana. Ou seja, o SQL Server considera que caracteres hiragana e katakana são iguais para fins de classificação. A omissão desta opção é o único método de especificar a não diferenciação de Kana.|  
+|Kana-sensitive (_KS)|Distingue entre os dois tipos de caracteres kana japoneses: Hiragana e Katakana. Se esta opção não for selecionada, a ordenação não fará diferenciação de Kana. Ou seja, o SQL Server considera que caracteres hiragana e katakana são iguais para fins de classificação. A omissão desta opção é o único método de especificar a não diferenciação de Kana.|  
 |Width-sensitive (_WS)|Faz distinção entre caracteres de largura inteira e de meia largura. Se esta opção não for selecionada, o SQL Server considerará as representações de largura inteira e de meia largura do mesmo caractere como iguais para fins de classificação. A omissão desta opção é o único método de especificar a não diferenciação de largura.|  
   
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte aos seguintes conjuntos de ordenação:  
@@ -219,6 +219,6 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 ## <a name="see-also"></a>Consulte também  
  [Ordenações de banco de dados independentes](../databases/contained-database-collations.md)   
  [Escolher um idioma ao criar um índice de texto completo](../search/choose-a-language-when-creating-a-full-text-index.md)   
- [sys. fn_helpcollations (Transact-SQL)](https://msdn.microsoft.com/library/ms187963(SQL.130).aspx)  
+ [sys.fn_helpcollations (Transact-SQL)](https://msdn.microsoft.com/library/ms187963(SQL.130).aspx)  
   
   

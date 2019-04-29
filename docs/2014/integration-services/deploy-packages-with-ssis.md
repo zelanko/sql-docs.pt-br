@@ -21,13 +21,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3752c7e0f99a62534a670743c0ee7deb3c2e07a8
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62899004"
 ---
-# <a name="ssis-tutorial-deploying-packages"></a>Tutorial do SSIS: Implantando pacotes
+# <a name="ssis-tutorial-deploying-packages"></a>Tutorial do SSIS: Como implantar pacotes
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece ferramentas que facilitam a implantação de pacotes em outro computador. As ferramentas de implantação também gerenciam qualquer dependência, como configurações e arquivos que o pacote precisa. Neste tutorial, você aprenderá a usar essas ferramentas para instalar pacotes e suas dependências em um computador de destino.  
   
  Primeiro, você executará as tarefas para preparar a implantação. Você criará um novo projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] e adicionará pacotes e arquivos de dados existentes ao projeto. Você não criará nenhum pacote a partir do zero; em vez disso, apenas trabalhará com pacotes concluídos criados apenas para este tutorial. Você não modificará a funcionalidade dos pacotes neste tutorial; porém, após adicionar os pacotes ao projeto, poderá achar útil abrir os pacotes no Designer [!INCLUDE[ssIS](../includes/ssis-md.md)] e revisar o conteúdo de cada pacote. Ao examinar os pacotes, aprenderá sobre as dependências dos pacotes, como arquivos de log, e sobre outros recursos interessantes dos pacotes.  

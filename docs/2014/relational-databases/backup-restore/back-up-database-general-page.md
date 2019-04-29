@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3206052455ff1d1bd5db14f6c53507ec9f00a7eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877052"
 ---
 # <a name="back-up-database-general-page"></a>Backup do banco de dados (página Geral)
   Use a página **Geral** da caixa de diálogo **Backup de Banco de Dados** para exibir ou modificar as configurações de uma operação de backup de banco de dados.  
@@ -42,7 +42,7 @@ ms.locfileid: "48050058"
   
 ## <a name="options"></a>Opções  
   
-### <a name="source"></a>Origem  
+### <a name="source"></a>Source  
  As opções do painel **Origem** identificam o banco de dados e especificam o tipo de backup e o componente para a operação de backup.  
   
  **Backup de banco de dados**  
@@ -88,7 +88,7 @@ ms.locfileid: "48050058"
 |||  
 |-|-|  
 |**Disco**|Faz o backup em disco. Pode ser um arquivo de sistema ou um dispositivo de backup lógico baseado em disco criado para o banco de dados. Os discos atualmente selecionados são exibidos na lista **Backup em** . Você pode selecionar até 64 dispositivos de disco para a operação de backup.|  
-|**Tape**|Faz o backup em fita. Pode ser uma unidade de fita local ou um dispositivo de backup lógico baseado em fita criado para o banco de dados. As fitas atualmente selecionadas são exibidas na lista **Backup em** . O número máximo é 64. Se não houver nenhum dispositivo de fita anexado ao servidor, essa opção será desativada. As fitas selecionadas são incluídas na lista **Backup em** .<br /><br /> Observação: o suporte para dispositivos de backup em fita será removido em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.|  
+|**Tape**|Faz o backup em fita. Pode ser uma unidade de fita local ou um dispositivo de backup lógico baseado em fita criado para o banco de dados. As fitas atualmente selecionadas são exibidas na lista **Backup em** . O número máximo é 64. Se não houver nenhum dispositivo de fita anexado ao servidor, essa opção será desativada. As fitas selecionadas são incluídas na lista **Backup em** .<br /><br /> Observação: O suporte a dispositivos de backup em fita será removido em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.|  
 |**URL**|Faz backup no armazenamento de Blob do Windows Azure.|  
   
  O próximo conjunto de opções exibido depende do tipo de destino selecionado. Se você selecionar Disco ou Fita, as opções a seguir são exibidas.  

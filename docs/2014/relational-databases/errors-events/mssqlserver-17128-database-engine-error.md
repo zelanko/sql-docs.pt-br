@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a73f2469c38d611b95e3446e80755687f40346e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62869704"
 ---
 # <a name="mssqlserver17128"></a>MSSQLSERVER_17128
     
@@ -30,7 +30,7 @@ ms.locfileid: "52507039"
 |Origem do evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|INIT_NOBUFSPACE|  
-|Texto da mensagem|initdata: Sem memória para buffers de kernel.|  
+|Texto da mensagem|initdata: sem memória para buffers de kernel.|  
   
 ## <a name="explanation"></a>Explicação  
  Falha nas alocações ou reservas de memória iniciais do pool de buffers. O SQL Server foi encerrado.  

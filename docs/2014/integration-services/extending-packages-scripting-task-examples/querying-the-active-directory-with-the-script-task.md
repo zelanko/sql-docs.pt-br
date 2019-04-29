@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bbcea29ad75eb84b9c8099e5998e307ecbd7943c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62895025"
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>Consultando o Active Directory com a tarefa Script
   Aplicativos de processamento de dados corporativos, como pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], em geral, precisam processar dados de forma diferente com base na classificação, no nome do cargo ou em outras características dos funcionários armazenadas no Active Directory. O Active Directory é um serviço de diretório do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows que fornece um repositório centralizado de metadados, não apenas sobre usuários, mas também sobre outros ativos organizacionais como computadores e impressoras. O namespace `System.DirectoryServices` no Microsoft .NET Framework fornece classes para trabalhar com o Active Directory, a fim de ajudar você a direcionar o fluxo de processamento de dados com base nas informações que ele armazena.  
@@ -43,7 +43,7 @@ ms.locfileid: "58392064"
   
 4.  No projeto de script, acrescente uma referência ao namespace `System.DirectoryServices`.  
   
-5.  para obter informações sobre a ferramenta de configuração e recursos adicionais. Em seu código, use uma instrução `Imports` para importar o namespace `DirectoryServices`.  
+5.  . Em seu código, use uma instrução `Imports` para importar o namespace `DirectoryServices`.  
   
 > [!NOTE]  
 >  Para executar esse script com sucesso, sua empresa deve usar o Active Directory em sua rede e armazenar as informações do funcionário que este exemplo usa.  

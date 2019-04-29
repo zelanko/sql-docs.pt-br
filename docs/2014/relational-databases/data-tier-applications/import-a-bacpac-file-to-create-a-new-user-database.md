@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 12e5d699615018c2d9e20a8fd49953931850a106
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918176"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importar um arquivo BACPAC para criar um novo banco de dados de usuário
   Importar um arquivo DAC (aplicativo da camada de dados) – um arquivo .bacpac – para criar uma cópia do banco de dados original, com os dados, em uma nova instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. As operações de importação-exportação podem ser combinadas para migrar um DAC ou banco de dados entre instâncias ou para criar um backup lógico, como criar uma cópia no local de um banco de dados implantado no [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  

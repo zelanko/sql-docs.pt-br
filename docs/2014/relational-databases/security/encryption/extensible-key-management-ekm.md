@@ -15,11 +15,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 42ec76542ffdf382c10c48cd107765d312ed1781
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011671"
 ---
 # <a name="extensible-key-management-ekm"></a>Gerenciamento extensível de chaves (EKM)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferece funcionalidades de criptografia de dados com o *EKM* (Gerenciador Extensível de Chaves), usando o provedor *Microsoft Cryptographic API* (MSCAPI) para criptografia e geração de chave. As chaves de criptografia de dados e a criptografia da chave são criadas em contêineres chaves e devem ser exportadas por um provedor antes de serem armazenadas no banco de dados. Essa abordagem habilita o gerenciamento de chave, que inclui uma hierarquia de chave de criptografia e backup da chave, para ser tratado pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

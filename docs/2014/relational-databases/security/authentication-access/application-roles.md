@@ -21,11 +21,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 56f075ff4a26af4913d792c20a8d7c1d6a58fcb0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011677"
 ---
 # <a name="application-roles"></a>Funções de aplicativo
   Uma função de aplicativo é uma entidade de banco de dados que permite que um aplicativo execute com suas próprias permissões de usuário. As funções de aplicativos podem ser usadas para habilitar acesso a dados específicos somente aos usuários que se conectam por um aplicativo específico. Diferentemente de funções de banco de dados, funções de aplicativo não contêm membros e são inativas por padrão. Funções de aplicativo trabalham com ambos os modos de autenticação. Funções de aplicativo são habilitadas usando **sp_setapprole**, que requer uma senha. Como as funções de aplicativo são uma entidade de nível de banco de dados, elas só podem acessar outros bancos de dados através de permissões concedidas nesses bancos de dados como **convidado**. Portanto, qualquer banco de dados no qual o **convidado** tenha sido desabilitado estará inacessível a funções de aplicativo em outros bancos de dados.  

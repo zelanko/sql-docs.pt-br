@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f0cab4451b78b662a426612aee0f0a72aae8cf80
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62896056"
 ---
 # <a name="additional-script-component-examples"></a>Exemplos de componentes Script adicionais
   O componente de Script é uma ferramenta configurável que pode ser usada no fluxo de dados de um pacote para atender a quase todos os requisitos não atendidos pelas fontes, transformações e destinos incluídos no [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Essa seção contém amostras de código do componente Script que demonstram os vários tipos de funcionalidade disponíveis.  

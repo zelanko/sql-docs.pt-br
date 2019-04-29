@@ -14,18 +14,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a286c7d4c0ff42389830713a6c42c89a7273f1d1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917723"
 ---
 # <a name="create-a-database-mail-account"></a>Criar uma conta do Database Mail
   Use o **Assistente para Configuração do Database Mail** ou o [!INCLUDE[tsql](../../includes/tsql-md.md)] para criar uma conta do Database Mail.  
   
 -   **Antes de começar:**  [Pré-requisitos](#Prerequisites)  
   
--   **Para criar um conta do Database Mail usando:**  [Assistente de configuração de email de banco de dados](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Para criar um conta do Database Mail usando:**  [Assistente de Configuração do Database Mail](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 -   **Acompanhamento:**  [Próximas etapas para configurar o Database Mail](#FollowUp)  
   
@@ -54,7 +54,7 @@ ms.locfileid: "52798358"
   
 -   Na página **Concluir o Assistente** , examine as ações a serem executadas e clique em **Concluir** para concluir a criação da nova conta.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para criar uma conta do Database Mail usando Transact-SQL**  
   
  Execute o procedimento armazenado **msdb.dbo.sysmail_add_account_sp** para criar a conta e especifique as seguintes informações:  
@@ -84,7 +84,7 @@ EXECUTE msdb.dbo.sysmail_add_account_sp
     @mailserver_name = 'smtp.Adventure-Works.com' ;  
 ```  
   
-##  <a name="FollowUp"></a> Acompanhar: Próximas etapas para configurar o Database Mail  
+##  <a name="FollowUp"></a> Acompanhamento: Próximas etapas para configurar o Database Mail  
   
 -   [Criar um perfil do Database Mail](create-a-database-mail-profile.md)  
   

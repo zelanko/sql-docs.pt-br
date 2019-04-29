@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 80bb427800f57ddaa07e5e53f21b03df9e8317d3
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62933695"
 ---
 # <a name="functions-on-sequences---id"></a>Funções em Sequências – ID
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ fn:id($arg as xs:IDREF*) as element()*
  Este tópico fornece exemplos de XQuery contra instâncias XML armazenadas em várias **xml** colunas de tipo a [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] banco de dados.  
   
 ### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>A. Recuperando elementos com base no valor do atributo IDREF  
- O exemplo a seguir usa fn:id para recuperar os elementos <`employee`>, com base no atributo gerente IDREF. Neste exemplo, o atributo gerente é um atributo do tipo IDREF e o atributo eid é um atributo do tipo do ID.  
+ O exemplo a seguir usa FN: ID para recuperar o <`employee`> elementos, com base no atributo gerente IDREF. Neste exemplo, o atributo gerente é um atributo do tipo IDREF e o atributo eid é um atributo do tipo do ID.  
   
  Para um valor de atributo gerente específico, o **ID ()** função localiza o <`employee`> elemento cujo valor do atributo de tipo ID corresponda ao valor IDREF de entrada. Em outras palavras, para um funcionário específico, o **ID ()** função retornará o gerente do funcionário.  
   
@@ -98,8 +98,8 @@ Go
   
  A consulta retorna "Dave" como o valor. Isso indica que Dave é o gerente de Joe.  
   
-### <a name="b-retrieving-elements-based-on-the-orderlist-idrefs-attribute-value"></a>b. Recuperando elementos com base no valor do atributo IDREFS de OrderList  
- No exemplo a seguir, o atributo OrderList do elemento <`Customer`> é um atributo do tipo IDREFS. Ele relaciona os ids de ordem desse cliente específico. Para cada id de ordem, há um filho do elemento <`Order`> em <`Customer`> fornecendo o valor de ordem.  
+### <a name="b-retrieving-elements-based-on-the-orderlist-idrefs-attribute-value"></a>B. Recuperando elementos com base no valor do atributo IDREFS de OrderList  
+ No exemplo a seguir, o atributo OrderList da <`Customer`> elemento é um atributo de tipo IDREFS. Ele relaciona os ids de ordem desse cliente específico. Para cada id de ordem, há um <`Order`> filho do elemento sob o <`Customer`> fornecendo o valor de ordem.  
   
  A expressão de consulta, `data(CustOrders:Customers/Customer[1]/@OrderList)[1]`, recupera o primeiro valor da lista IDRES para o primeiro cliente. Esse valor é então passado para o **ID ()** função. A função então localiza o <`Order`> elemento cujo valor de atributo OrderID corresponde à entrada para o **ID ()** função.  
   

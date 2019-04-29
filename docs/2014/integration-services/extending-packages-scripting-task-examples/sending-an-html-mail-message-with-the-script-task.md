@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 254f1fcb701fd11b22e35def915b09b537c4b33a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62894985"
 ---
 # <a name="sending-an-html-mail-message-with-the-script-task"></a>Enviando uma mensagem de email HTML com a tarefa Script
   A tarefa SendMail do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] oferece suporte apenas a mensagens de email em formato de texto sem formatação. Porém, você pode enviar mensagens de email HTML facilmente usando a tarefa Script e as capacidades de email do .NET Framework.  
@@ -36,7 +36,7 @@ ms.locfileid: "58392204"
   
 1.  Crie variáveis de cadeia de caracteres denominadas `HtmlEmailTo`, `HtmlEmailFrom` e `HtmlEmailSubject` e atribua a elas valores apropriados para uma mensagem de teste válida.  
   
-2.  Crie uma variável String denominada `HtmlEmailBody` e atribua a ela uma cadeia de caracteres de marcação HTML. Por exemplo:  
+2.  Crie uma variável String denominada `HtmlEmailBody` e atribua a ela uma cadeia de caracteres de marcação HTML. Por exemplo:   
   
     ```  
     <html><body><h1>Testing</h1><p>This is a <b>test</b> message.</p></body></html>  

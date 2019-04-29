@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f54ae14c13d58c75da0ddd6eb69a9d9d7527991f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349996"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877088"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Práticas recomendadas e solução de problemas de backup do SQL Server para URL
   Este tópico inclui práticas recomendadas e dicas de solução de problemas para backup e restaurações do SQL Server no serviço de Blob do Windows Azure.  
@@ -24,7 +24,7 @@ ms.locfileid: "53349996"
   
 -   [Backup e restauração do SQL Server com o serviço de armazenamento de Blob do Microsoft Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
--   [Tutorial: SQL Server Backup e restauração para o serviço de armazenamento de BLOBs do Azure do Windows](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Tutorial: Backup e restauração do SQL Server para o serviço de Armazenamento de Blobs do Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="managing-backups"></a>Gerenciando backups  
  A lista a seguir inclui recomendações gerais para gerenciar backups:  
@@ -98,7 +98,7 @@ ms.locfileid: "53349996"
   
          Para corrigir esse erro, emita novamente a instrução `BACKUP` com `BLOCKSIZE = 65536` especificada.  
   
--   Erro durante o backup devido a blobs que têm a concessão ativa neles: Atividade de backup com falha pode resultar em blobs com concessões ativas.  
+-   Erro durante o backup devido a blobs que têm concessão ativa: A atividade de backup com falha pode resultar em blobs com concessões ativas.  
   
      Se houver uma nova tentativa de uso de uma instrução de backup, a operação de backup pode falhar com um erro semelhante ao seguinte:  
   
@@ -117,7 +117,7 @@ ms.locfileid: "53349996"
   
  Os servidores proxy podem ter configurações que limitam o número de conexões por minuto. O processo de Backup para URL é multi-threaded e, portanto, pode ir além desse limite. Se isso acontecer, o servidor proxy elimina a conexão. Para resolver esse problema, altere as configurações de proxy para que o SQL Server não use o proxy.   A seguir estão alguns exemplos dos tipos ou mensagens de erro que você pode ver no log de erros:  
   
--   Gravar em "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak" falhou: A opção backup a URL recebeu uma exceção do ponto de extremidade remoto. Mensagem de exceção: Não é possível ler dados de conexão de transporte: A conexão foi encerrada.  
+-   Gravar em "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak" falhou: Backup para URL recebeu uma exceção do ponto de extremidade remoto. Mensagem de exceção: Não é possível ler dados de conexão de transporte: A conexão foi fechada.  
   
 -   Ocorreu um erro de E/S não recuperável no arquivo “http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:” Não foi possível coletar o erro do ponto de extremidade remoto.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "53349996"
   
      BACKUP DATABASE está sendo encerrado de forma anormal.  
   
--   Backupiorequest: Reportioerror: Falha na gravação no dispositivo de backup http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak'. Erro de sistema operacional: a opção Backup para URL recebeu uma exceção do ponto de extremidade remoto. Mensagem de exceção: Não é possível ler dados de conexão de transporte: A conexão foi encerrada.  
+-   Backupiorequest: Reportioerror: Falha na gravação no dispositivo de backup http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak'. Erro de sistema operacional: a opção Backup para URL recebeu uma exceção do ponto de extremidade remoto. Mensagem de exceção: Não é possível ler dados de conexão de transporte: A conexão foi fechada.  
   
  Se você ativar o log detalhado usando o sinalizador de rastreamento 3051, também poderá ver a seguinte mensagem nos logs:  
   
@@ -151,7 +151,7 @@ ms.locfileid: "53349996"
   
     ```  
   
-2.  Coloque o arquivo de configuração na pasta Binn da instância do SQL Server. Por exemplo, se o SQL Server está instalado na unidade C do computador, coloque o arquivo de configuração aqui: *Server\MSSQL12 SQL do C:\Program Files\Microsoft. \<InstanceName > \MSSQL\Binn*.  
+2.  Coloque o arquivo de configuração na pasta Binn da instância do SQL Server. Por exemplo, se o SQL Server está instalado na unidade C do computador, coloque o arquivo de configuração aqui: *C:\Program Files\Microsoft SQL Server\MSSQL12.\<InstanceName>\MSSQL\Binn*.  
   
 ## <a name="troubleshooting-sql-server-managed-backup-to-windows-azure"></a>Solucionando problemas de Backup Gerenciado do SQL Server para Windows Azure  
  Como o backup gerenciado do SQL Server é criado com base no Backup para URL, as dicas de solução de problemas descritas nas seções anteriores aplicam-se a bancos de dados ou instâncias que usam o Backup Gerenciado do SQL Server.  Informações sobre como solucionar problemas de SQL Server Managed Backup to Windows Azure são descritas detalhadamente no [de solução de problemas SQL Server Managed Backup to Windows Azure](sql-server-managed-backup-to-microsoft-azure.md).  

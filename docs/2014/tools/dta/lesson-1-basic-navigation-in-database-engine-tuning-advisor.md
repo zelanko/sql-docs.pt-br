@@ -1,5 +1,5 @@
 ---
-title: 'Lição 1: Orientador de otimização do mecanismo de navegação básica no banco de dados | Microsoft Docs'
+title: 'Lição 1: Navegação básica no Orientador de Otimização do Mecanismo de Banco de Dados | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fb0e6219d06b83de9311099189dd1cbab31dd2f7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63010745"
 ---
-# <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>Lição 1: Navegação básica no orientador de otimização do mecanismo de banco de dados
+# <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>Lição 1: Navegação básica no Orientador de Otimização do Mecanismo de Banco de Dados
   O Orientador de Otimização do Mecanismo de Banco de Dados fornece um modo baseado em GUI (Interface gráfica do usuário) para exibir sessões de ajuste e relatórios de recomendações. Esta lição mostra como iniciar a ferramenta e como configurar a exibição. Ao término desta lição, você saberá as diversas maneiras de iniciar a ferramenta e como configurar sua exibição para dar suporte às tarefas de ajuste que você executa regularmente.  
   
  Eis os tópicos desta lição:  

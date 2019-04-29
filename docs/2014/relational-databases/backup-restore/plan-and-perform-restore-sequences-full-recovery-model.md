@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 08898d4c7a324a97fc0e44ef45b15dba90d42a1d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62921840"
 ---
 # <a name="plan-and-perform-restore-sequences-full-recovery-model"></a>Planejar e executar sequências de restauração (modelo de recuperação completa)
   Este tópico explica como planejar e executar uma sequência de restauração para bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que normalmente usam o modelo de recuperação completa. Uma *sequência de restauração* é uma sequência de uma ou mais instruções [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) . Geralmente, uma sequência de restauração inicializa os conteúdos do banco de dados, arquivos, e/ou páginas sendo restaurados (a fase de cópia de dados), efetua roll forward das transações registradas (a fase refazer) e reverte as transações não confirmadas (a fase desfazer).  

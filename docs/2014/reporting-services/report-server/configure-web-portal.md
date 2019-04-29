@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8bea75455bca695baa949d70bcef3909ac729cb7
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011425"
 ---
 # <a name="configure-report-manager-native-mode"></a>Configurar o Gerenciador de Relatórios (modo nativo)
   O Gerenciador de Relatórios é um aplicativo de front-end da Web usado para exibir relatórios, gerenciar o conteúdo do servidor de relatórios e conceder a um usuário o acesso ao servidor de relatórios no modo nativo. O Gerenciador de Relatórios será instalado com o serviço Web Servidor de Relatório na mesma instância do servidor de relatório e, opcionalmente, configurado se você selecionar a opção **Instalar na configuração de modo nativo padrão** na Instalação. Também é possível configurar o Gerenciador de Relatórios como uma tarefa posterior à instalação. Este tópico fornece informações sobre os seguintes cenários de configuração do Gerenciador de Relatórios:  

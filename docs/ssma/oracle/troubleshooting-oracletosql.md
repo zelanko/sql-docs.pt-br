@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 3b52dd2347e4c7b22e273abde4d6687a520d5b19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62991246"
 ---
 # <a name="troubleshooting-oracletosql"></a>Solução de problemas (OracleToSQL)
 Não é incomum enfrentar midway de problemas de migração executando os comandos ou scripts do console.  

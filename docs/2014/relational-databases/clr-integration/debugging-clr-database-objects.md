@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 70b092f81030c7905fe1d771844369f2d59317b9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354168"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919014"
 ---
 # <a name="debugging-clr-database-objects"></a>Depurando objetos de banco de dados CLR
   O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferece suporte para depurar o [!INCLUDE[tsql](../../../includes/tsql-md.md)] e objetos CLR (Common Language Runtime) no banco de dados. Os principais aspectos da depuração no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] são a facilidade de configuração e uso, e a integração do depurador do SQL Server com o depurador do Microsoft Visual Studio. Além disso, a depuração funciona entre idiomas. Os usuários podem entrar diretamente em objetos CLR do [!INCLUDE[tsql](../../../includes/tsql-md.md)] e vice-versa. O depurador Transact-SQL no SQL Server Management Studio não pode ser usado para depurar objetos de banco de dados gerenciados, mas você pode depurar os objetos por meio dos depuradores do Visual Studio. A depuração de objetos de banco de dados gerenciados no Visual Studio oferece suporte a todos os recursos de depuração comuns, tais como as instruções de "depuração parcial" e "depuração completa" dentro de rotinas executadas no servidor. Os depuradores podem definir pontos de interrupção, inspecionar a pilha de chamadas, inspecionar variáveis e modificar valores de variáveis durante a depuração. Observe que o Visual Studio .NET 2003 não pode ser usado na programação de integração ou na depuração do CLR. O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornece o .NET Framework pré-instalado, e o Visual Studio .NET 2003 não pode usar os assemblies do .NET Framework 2.0.  

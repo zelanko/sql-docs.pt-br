@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 37df9ccdd0bc2b44384bb9fd3d130c8d3bf8ca36
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873435"
 ---
 # <a name="configure-properties-of-a-data-collector"></a>Configurar propriedades de um coletor de dados
   Este tópico discute como você pode configurar as propriedades de um coletor de dados.  

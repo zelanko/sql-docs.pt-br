@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e36b6c114e7e5f2f95c0747d6e36e4dabc118daa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876207"
 ---
 # <a name="deferred-transactions-sql-server"></a>Transações adiadas (SQL Server)
   No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise, uma transação corrompida poderá ser adiada se os dados necessários na reversão (desfazer) estiverem offline durante a inicialização do banco de dados. Uma *transação adiada* é uma transação que não está confirmada no término da fase de roll forward e que encontrou um erro que impede a reversão. Como a transação não pode ser revertida, é adiada.  
@@ -39,7 +39,7 @@ ms.locfileid: "48074186"
 |Ação|Resolução (se ocorrerem problemas de E/S ou se os dados exigidos estiverem offline)|  
 |------------|-----------------------------------------------------------------------|  
 |Inicialização do servidor|transação adiada|  
-|Restaurar|Transações adiadas|  
+|Restaurar|transação adiada|  
 |Anexar|Falha ao anexar|  
 |Reinicialização automática|transação adiada|  
 |Criar banco de dados ou instantâneo do banco de dados|Falha ao criar|  
@@ -84,7 +84,7 @@ ms.locfileid: "48074186"
   
          Para obter informações sobre o modo de emergência, consulte [Database States](../databases/database-states.md).  
   
-    -   Em seguida, repare o banco de dados usando a opção DBCC REPAIR_ALLOW_DATA_LOSS em uma das seguintes instruções DBCC: [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql), [DBCC CHECKALLOC](/sql/t-sql/database-console-commands/dbcc-checkalloc-transact-sql)ou [DBCC CHECKTABLE](/sql/t-sql/database-console-commands/dbcc-checktable-transact-sql).  
+    -   Em seguida, repare o banco de dados usando a opção DBCC REPAIR_ALLOW_DATA_LOSS em uma das seguintes instruções DBCC: [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql), [DBCC CHECKALLOC](/sql/t-sql/database-console-commands/dbcc-checkalloc-transact-sql), ou [DBCC CHECKTABLE](/sql/t-sql/database-console-commands/dbcc-checktable-transact-sql).  
   
          Quando a DBCC encontra a página corrompida, anula sua alocação e repara qualquer erro relacionado. Essa abordagem permite que o banco de dados seja colocado novamente online, em um estado fisicamente consistente. Porém, dados adicionais também podem ser perdidos; portanto essa abordagem deve ser usada como último recurso.  
   

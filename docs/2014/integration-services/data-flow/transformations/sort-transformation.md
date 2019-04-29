@@ -20,11 +20,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dba1f3598abb8877721ff77d3dabcc8af8e0b94a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62899879"
 ---
 # <a name="sort-transformation"></a>Transformação Classificação
   A transformação Classificação ordena os dados de entrada de modo crescente ou decrescente e os copia na saída da transformação. Você pode aplicar várias classificações a uma entrada. Cada classificação é identificada por um numeral que determina a ordem de classificação. A coluna com o número mais baixo é classificada primeiro, a com o segundo número mais baixo é classificada em seguida e assim por diante. Por exemplo, se uma coluna denominada **CountryRegion** tiver uma ordem de classificação 1 e uma coluna denominada **City** tiver uma ordem de classificação 2, a saída será ordenada por país/região e depois por cidade. Um número positivo indica que a classificação está aumentando, e um negativo que está diminuindo. As colunas que não forem classificadas terão a ordem de classificação 0. As colunas que não forem selecionadas para classificação serão automaticamente copiadas para a saída de transformação junto com as colunas classificadas.  

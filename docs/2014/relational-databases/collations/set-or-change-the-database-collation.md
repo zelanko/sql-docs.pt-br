@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 38c29f8d70b3cc72baf81e2ae23082fe270ba573
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874033"
 ---
 # <a name="set-or-change-the-database-collation"></a>Definir ou alterar a ordenação de banco de dados
   Este tópico descreve como definir e alterar a ordenação de banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Se nenhuma ordenação for especificada, será usada a ordenação do servidor.  

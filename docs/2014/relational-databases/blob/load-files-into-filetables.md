@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 04f32e1f1d0bc67e567a2a4d30779f13af6c68a6
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874747"
 ---
 # <a name="load-files-into-filetables"></a>Carregar arquivos em FileTables
   Descreve como carregar ou migrar arquivos para FileTables.  
@@ -97,7 +97,7 @@ UPDATE PhotoMetadata
   
     -   INSERT INTO... SELECT * FROM OPENROWSET(BULK ...) com a cláusula IGNORE_CONSTRAINTS.  
   
-###  <a name="HowToBulkLoad"></a> Como: Carregar arquivos em massa em uma nova FileTable  
+###  <a name="HowToBulkLoad"></a> Como: Arquivos de carregamento em massa em uma FileTable  
  Você pode usar vários métodos para carregar arquivos em massa em uma FileTable:  
   
 -   **bcp**  

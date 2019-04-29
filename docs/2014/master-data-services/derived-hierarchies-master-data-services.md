@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 786c075fa30819c84827bf57ea33a91213ced856
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62924690"
 ---
 # <a name="derived-hierarchies-master-data-services"></a>Hierarquias derivadas (Master Data Services)
   Uma hierarquia derivada do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] é derivada de relações de atributos baseados em domínio que já existem entre entidades em um modelo.  

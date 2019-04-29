@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c6cd41be722d80baf442db907d6fdab9f334859
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891785"
 ---
-# <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>Etapa 2: Adicionando e configurando um gerenciador de conexões de arquivo simples
+# <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>Etapa 2: Adicionar e configurar um gerenciador de conexões de arquivo simples
   Nesta tarefa, você adiciona um gerenciador de conexões de Arquivos Simples ao pacote que acabou de criar. Um gerenciador de conexões de Arquivos Simples habilita um pacote para extrair dados de um arquivo simples. Com o gerenciador de conexões de Arquivos Simples, você pode especificar o nome e o local do arquivo, a localidade e a página de códigos e o formato do arquivo, incluindo os delimitadores de coluna, a serem aplicados quando o pacote extrai os dados do arquivo simples. Além disso, é possível especificar manualmente o tipo de dados das colunas individuais ou usar a caixa de diálogo **Sugerir Tipos de Coluna** para mapear automaticamente as colunas de dados extraídos para os tipos de dados [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
  Você deve criar um novo gerenciador de conexões de Arquivos Simples para cada formato de arquivo com os quais você trabalha. Como este tutorial extrai dados de vários arquivos simples que apresentam exatamente o mesmo formato de dados, será preciso adicionar e configurar apenas um gerenciador de conexões de Arquivos Simples para seu pacote.  
@@ -87,7 +87,7 @@ ms.locfileid: "58385258"
     |----------------------|--------------------|------------------------|----------------------|  
     |AverageRate|float [DT_R4]|FactCurrency.AverageRate|FLOAT|  
     |CurrencyID|string [DT_STR]|DimCurrency.CurrencyAlternateKey|nchar(3)|  
-    |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|Data|  
+    |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|date|  
     |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|FLOAT|  
   
      O tipo de dados sugerido para o `CurrencyID` coluna é incompatível com o tipo de dados do campo na tabela de destino. Porque o tipo de dados `DimCurrency.CurrencyAlternateKey` é nchar (3), `CurrencyID` deve ser alterado de cadeia de caracteres [DT_STR] para cadeia de caracteres [DT_WSTR]. Além disso, o campo `DimDate.FullDateAlternateKey` é definido como um tipo de dados de data; portanto, `CurrencyDate` precisa ser alterado da data [DT_Date] para a data do banco de dados [DT_DBDATE].  

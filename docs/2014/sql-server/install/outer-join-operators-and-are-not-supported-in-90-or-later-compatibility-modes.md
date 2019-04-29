@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 01584c368f9af43a8e63ec04d3eaf4f9228d9c96
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63010778"
 ---
 # <a name="outer-join-operators--and--are-not-supported-in-90-or-later-compatibility-modes"></a>Os operadores de junção externa \*= e =\* não são compatíveis com o modo de compatibilidade 90 ou posterior
   O Supervisor de atualização detectou o uso de operadores de junção externa \*= e =\*. Esses operadores não são aceitos no modo de compatibilidade 90 ou posterior. Quando você faz a atualização, os bancos de dados de usuários mantêm seus modos de compatibilidade. As instruções que usam esses operadores falhará.  

@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 751ace509744cdfbaee7b6b4c262988a92652c88
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62878023"
 ---
 # <a name="sql-destination-editor-advanced-page"></a>Editor de Destino SQL (página Avançado)
   Use a página **Avançado** da caixa de diálogo **Editor de Destino SQL** para especificar opções avançadas de inserção em massa.  

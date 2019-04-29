@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f13b7f6a2e34d7819b930d919e9fd773e2c993d7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63010679"
 ---
 # <a name="reconcile-changes-made-by-multiple-users-visual-database-tools"></a>Reconciliar alterações feitas por vários usuários (Visual Database Tools)
   Em um ambiente multiusuário, é possível ter vários usuários fazendo alterações no mesmo objeto simultaneamente. Isso pode acontecer quando você estiver trabalhando na estrutura do objeto nos designers de diagrama de banco de dados ou tabela, ou pode ocorrer em valores nos resultados retornados no painel de resultados dos Designers de Consulta e Exibição. Isso pode causar conflitos que devem ser resolvidos.  

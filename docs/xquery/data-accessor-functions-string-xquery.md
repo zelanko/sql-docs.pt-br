@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4df87a9fedffa701858fef9101c58db12c1c3bf2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62934740"
 ---
 # <a name="data-accessor-functions---string-xquery"></a>Funções do Acessador de Dados – string (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ fn:string($arg as item()?) as xs:string
  Este tópico fornece exemplos de XQuery contra instâncias XML armazenadas em várias **xml** colunas de tipo de banco de dados AdventureWorks.  
   
 ### <a name="a-using-the-string-function"></a>A. Usando a função string  
- A consulta a seguir recupera o nó do elemento filho <`Features`> do elemento <`ProductDescription`>.  
+ A seguinte consulta recupera o <`Features`> nó do elemento filho de <`ProductDescription`> elemento.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -119,7 +119,7 @@ just text
 select @x.query('string(/)')  
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 This is a comment 10  
@@ -139,7 +139,7 @@ select @x.query('string(/processing-instruction()[1])')
 select @x.query('string(/comment()[1])')  
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 This is a comment   

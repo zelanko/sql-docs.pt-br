@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: bcf462f82d7455f83bb0bee8a3b0af991ec2e7db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920061"
 ---
 # <a name="sqlpipe-object"></a>Objeto SqlPipe
   Nas versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], era muito comum gravar um procedimento armazenado (ou um procedimento armazenado estendido) para enviar resultados ou parâmetros de saída ao cliente que fez a chamada.  

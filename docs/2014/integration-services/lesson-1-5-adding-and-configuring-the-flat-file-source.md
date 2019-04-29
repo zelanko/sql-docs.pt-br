@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 32b95a5d156ae52394b7128b024c86b9a7e308b1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891534"
 ---
-# <a name="step-5-adding-and-configuring-the-flat-file-source"></a>Etapa 5: Adicionando e configurando a fonte de arquivo simples
+# <a name="step-5-adding-and-configuring-the-flat-file-source"></a>Etapa 5: Adicionar e configurar a fonte de arquivo simples
   Nesta tarefa, você irá adicionar e configurar uma fonte de arquivo simples ao seu pacote. Uma fonte de arquivo simples é um componente de fluxo de dados que usa metadados definidos por um gerenciador de conexões de arquivo simples para especificar o formato e a estrutura dos dados que serão extraídos do arquivo simples por um processo de transformação. Uma fonte de arquivo simples pode ser configurada para extrair dados de uma única fonte de arquivo simples usando a definição de formato de arquivo fornecida pelo gerenciador de conexões do arquivo simples.  
   
  Para este tutorial, você irá configurar a fonte de arquivo simples para usar o `Sample Flat File Source Data` Gerenciador de conexão que você criou anteriormente.  

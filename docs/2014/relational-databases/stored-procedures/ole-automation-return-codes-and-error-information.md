@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 34744bedb701155d2695f6efc5aab3c493e6cf48
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011265"
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>Informações sobre erros e códigos de retorno de automação OLE
-  O sistema de automação OLE procedimentos armazenados retornam um `int` código de retorno que é o HRESULT retornado pela operação de automação OLE adjacente. O HRESULT de 0 indica sucesso. HRESULT diferente de zero é um código de erro OLE de formato hexadecimal 0x800*nnnnn*, mas quando retornado como um `int` valor em um código de retorno do procedimento armazenado, HRESULT tem o formato 214*nnnnnnn*.  
+  Os procedimentos armazenados do sistema de automação OLE retornam um código de retorno `int` que é o HRESULT retornado pela operação de automação OLE subjacente. O HRESULT de 0 indica sucesso. HRESULT diferente de zero é um código de erro OLE de formato hexadecimal 0x800*nnnnn*, mas quando retornado como um `int` valor em um código de retorno do procedimento armazenado, HRESULT tem o formato 214*nnnnnnn*.  
   
  Por exemplo, passar um nome de objeto inválido (SQLDMO. Xyzzy) para sp_OACreate faz com que o procedimento retornar um `int` HRESULT de 2147221005, que é 0x800401f3 em número hexadecimal.  
   

@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 30f5a68f51bf501f243bd129d11051d63a6efabd
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877296"
 ---
 # <a name="set-the-expiration-date-on-a-backup-sql-server"></a>Definir a data de validade em um backup (SQL Server)
   Este tópico descreve como definir a data de validade em um backup no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  

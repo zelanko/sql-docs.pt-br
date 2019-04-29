@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ed3a5a48a4c327decc75e37142c77d7d4ee52f1d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62914642"
 ---
 # <a name="mssqlserver2534"></a>MSSQLSERVER_2534
     
@@ -30,7 +30,7 @@ ms.locfileid: "48141097"
 |Origem do evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC_PAGE_ALLOCATED_TO_OTHER_OBJECT|  
-|Texto da mensagem|Erro de tabela: a página P_ID, cujo cabeçalho indica que está alocada na ID de objeto O_ID, ID de índice I_ID, ID de partição PN_ID, ID de unidade de alocação A_ID (tipo TYPE), está alocada por outro objeto.|  
+|Texto da mensagem|Erro de tabela: Page P_ID, cujo cabeçalho indica que ela está alocada na ID de objeto O_ID, ID de índice I_ID, ID de partição PN_ID, ID A_ID (tipo TYPE), de unidade de alocação é alocada por outro objeto.|  
   
 ## <a name="explanation"></a>Explicação  
  O cabeçalho da página contém a ID de unidade de alocação *A_ID*, mas nenhuma das páginas IAM dessa unidade de alocação alocou a página. Por isso, o cabeçalho da página contém a ID de unidade de alocação errada, e a página terá um erro de compatibilidade MSSQLServer_2533 que corresponde à ID de unidade de alocação para a qual a página está efetivamente alocada.  

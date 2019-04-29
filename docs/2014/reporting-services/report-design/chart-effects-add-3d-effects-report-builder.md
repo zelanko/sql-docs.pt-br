@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: de398500fb9511ae083277e1c23087a743f3d8e3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020622"
 ---
 # <a name="add-3d-effects-to-a-chart-report-builder-and-ssrs"></a>Adicionar efeitos 3D a um gráfico (Construtor de Relatórios e SSRS)
   É possível usar efeitos tridimensionais (3D) para fornecer intensidade e adicionar impacto visual ao seu gráfico. Por exemplo, para enfatizar uma fatia específica de um gráfico de pizza destacada, você pode girar e alterar a perspectiva do gráfico de modo que as pessoas observem essa fatia primeiro. Quando efeitos 3D são aplicados ao gráfico, todas as cores de gradiente e estilos de hachurado são desabilitados.  

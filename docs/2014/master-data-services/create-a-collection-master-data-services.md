@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1c0e899ebc7180fdfbe234c893cb364d3f9d01ee
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62925495"
 ---
 # <a name="create-a-collection-master-data-services"></a>Criar uma coleção (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], crie uma coleção quando desejar criar listas simples de membros folha e consolidados. Coleções não precisam incluir todos os membros da entidade.  

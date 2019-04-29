@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d92557b37cac982a70d5b3203472c40a2fd72ce4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922877"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Expressões de consultas e nomes de recursos uniformes
   Os modelos SMO ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object) e os snap-ins do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell utilizam dois tipos de cadeia de caracteres de expressão semelhantes às expressões XPath. As expressões de consulta são cadeias de caracteres que especificam um conjunto de critérios para enumerar um ou mais objetos em uma hierarquia de modelo de objetos. Um URN (Uniform Resource Name) é um tipo específico de cadeia de caracteres de expressão de consulta que identifica exclusivamente um único objeto.  
@@ -122,7 +122,7 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012']/Table[@Name='Sal
 Server[@Name='MYCOMPUTER']/Database[@AutoClose=false()]  
 ```  
   
-### <a name="b-enumerating-objects-using-contains"></a>b. Enumerando objetos usando contains  
+### <a name="b-enumerating-objects-using-contains"></a>B. Enumerando objetos usando contains  
  Esta expressão de consulta enumera todos os bancos de dados que não diferenciam maiúsculas de minúsculas e têm o caractere 'm' no nome.  
   
 ```  

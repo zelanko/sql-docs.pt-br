@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b4c9a3160224078b908059c3902e66ef59608bac
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872245"
 ---
 # <a name="attach-a-database"></a>Anexar um banco de dados
   Este tópico descreve como anexar um banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Você pode usar este recurso para copiar, mover ou atualizar um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -136,7 +136,7 @@ Requer permissão `CREATE DATABASE`, `CREATE ANY DATABASE` ou `ALTER ANY DATABAS
      **Mensagem**  
      Exibe uma mensagem em branco ou um hiperlink “**Arquivo não encontrado**”.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 ### <a name="to-attach-a-database"></a>Para anexar um banco de dados  
   
@@ -158,7 +158,7 @@ Requer permissão `CREATE DATABASE`, `CREATE ANY DATABASE` ou `ALTER ANY DATABAS
     > [!NOTE]  
     > Se desejar, você poderá usar o procedimento armazenado [sp_attach_db](/sql/relational-databases/system-stored-procedures/sp-attach-db-transact-sql) ou [sp_attach_single_file_db](/sql/relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql) . No entanto, esses procedimentos armazenados estendidos são removidos de uma versão futura do Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. É recomendável que você use CREATE DATABASE... FOR ATTACH em vez disso.  
   
-##  <a name="FollowUp"></a> Acompanhar: Depois de atualizar um banco de dados do SQL Server  
+##  <a name="FollowUp"></a> Acompanhamento: Depois de atualizar um banco de dados do SQL Server  
  termina após você atualizar um banco de dados usando o método anexar, o banco de dados será disponibilizado imediatamente e será atualizado automaticamente. Se o banco de dados tiver índices de texto completo, o processo de atualização importará, redefinirá ou recriará esses índices dependendo da configuração da propriedade de servidor **Opção de Atualização de Texto Completo** . Se a opção de atualização for definida como **Importar** ou **Recriar**, os índices de texto completo permanecerão indisponíveis durante a atualização. Dependendo da quantidade de dados a serem indexados, a importação pode levar várias horas, e a recriação pode ser até dez vezes mais demorada. Lembre-se também de que, quando a opção de atualização estiver definida como **Importar**, se não houver um catálogo de texto completo disponível, os índices de texto completo associados serão recompilados.  
   
 Se o nível de compatibilidade de um banco de dados de usuário for 100 ou mais alto antes da atualização, ele permanecerá o mesmo depois da atualização. Se o nível de compatibilidade for 90 ou inferior antes da atualização, no banco de dados atualizado, o nível de compatibilidade será definido como 100, que é o nível de compatibilidade mais baixo com suporte no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter mais informações, veja [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).  

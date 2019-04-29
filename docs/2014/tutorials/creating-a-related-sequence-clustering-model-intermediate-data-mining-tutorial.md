@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 71db7ba5246e151bbca8a52972a2ba835b80ddb6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855873"
 ---
 # <a name="creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Criando um modelo de clustering de sequências relacionado (Tutorial de mineração de dados intermediário)
   Por meio da sua exploração do modelo de clustering de sequências, você aprendeu que outros atributos, como Região ou Rendimento, têm um efeito muito forte sobre os modelos e, portanto, para compreender melhor as sequências, será preciso criar um modelo de clustering de sequências relacionado e remover os atributos relacionados aos dados demográficos do cliente.  

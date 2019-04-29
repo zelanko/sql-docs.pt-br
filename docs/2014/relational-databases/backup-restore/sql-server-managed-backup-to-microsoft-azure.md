@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b4071bee5e13f415be90328bb7ff0b55ff91087c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877125"
 ---
 # <a name="sql-server-managed--backup-to-windows-azure"></a>Backup Gerenciado do SQL Server para Microsoft Azure
   O [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] gerenciar e automatiza os backups do SQL Server no serviço de armazenamento de Blob do Windows Azure. A estratégia de backup usada pelo [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] baseia-se no período de retenção e na carga de trabalho da transação no banco de dados. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] oferece suporte para restauração pontual durante o período de retenção especificado.   
@@ -75,14 +75,14 @@ O [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pode ser habil
 |[smart_admin.set_db_backup &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/dn451013(v=sql.120).aspx)|Procedimento armazenado do sistema para habilitar e configurar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para um banco de dados.|  
 |[smart_admin.set_instance_backup &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/dn451009(v=sql.120).aspx)|Procedimento para habilitar e configurar as configurações padrão armazenado do sistema [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para a instância do SQL Server.|  
 |[smart_admin.sp_ backup_master_switch &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-master-switch-transact-sql)|Procedimento armazenado do sistema para pausar e retomar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
-|[sp_set_parameter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-set-parameter-transact-sql)|Procedimento armazenado do sistema para habilitar e configurar o monitoramento para o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Exemplos: habilitação de eventos estendidos, configurações de email para notificações.|  
+|[smart_admin.sp_set_parameter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-set-parameter-transact-sql)|Procedimento armazenado do sistema para habilitar e configurar o monitoramento para o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Exemplos: habilitação de eventos estendidos, configurações de email para notificações.|  
 |[smart_admin.sp_backup_on_demand &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-on-demand-transact-sql)|Sistema de procedimento armazenado que é usado para executar um backup ad hoc para um banco de dados está habilitado para usar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] sem interromper a cadeia de log.|  
 |[smart_admin.fn_backup_db_config &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-backup-db-config-transact-sql)|Função de sistema que retorna atual [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] valores de status e a configuração para um banco de dados, ou para todos os bancos de dados na instância.|  
-|[fn_is_master_switch_on &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-is-master-switch-on-transact-sql)|Função do sistema que retorna o status da opção mestra.|  
-|[sp_get_backup_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-get-backup-diagnostics-transact-sql)|Procedimento armazenado do sistema usado para retornar os eventos registrados pelos Eventos Estendidos.|  
+|[smart_admin.fn_is_master_switch_on &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-is-master-switch-on-transact-sql)|Função do sistema que retorna o status da opção mestra.|  
+|[smart_admin.sp_get_backup_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-get-backup-diagnostics-transact-sql)|Procedimento armazenado do sistema usado para retornar os eventos registrados pelos Eventos Estendidos.|  
 |[smart_admin.fn_get_parameter &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-get-parameter-transact-sql)|Função do sistema que retorna os valores atuais de configurações do sistema de backup como configurações de monitoramento e de email para alertas.|  
-|[fn_available_backups &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-available-backups-transact-sql)|Procedimento armazenado usado para recuperar backups disponíveis para um banco de dados especificado ou para todos os bancos de dados em uma instância.|  
-|[fn_get_current_xevent_settings &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-get-current-xevent-settings-transact-sql)|Função do sistema que retorna as configurações atuais do evento estendido.|  
+|[smart_admin.fn_available_backups &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-available-backups-transact-sql)|Procedimento armazenado usado para recuperar backups disponíveis para um banco de dados especificado ou para todos os bancos de dados em uma instância.|  
+|[smart_admin.fn_get_current_xevent_settings &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-get-current-xevent-settings-transact-sql)|Função do sistema que retorna as configurações atuais do evento estendido.|  
 |[smart_admin.fn_get_health_status &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-get-health-status-transact-sql)|A função do sistema que retorna as contagens agregadas dos erros registrados pelos Eventos Estendidos por um período especificado.|  
 |[Monitorar o Backup Gerenciado do SQL Server para Microsoft Azure](sql-server-managed-backup-to-microsoft-azure.md)|Eventos Estendidos para monitoramento, notificação por email dos erros e avisos, gerenciamento baseado em políticas do SQL Server para [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
   
@@ -95,7 +95,7 @@ O [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pode ser habil
   
  O [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] nomeia o contêiner de armazenamento do Windows Azure usando o nome de instância do SQL Server para todos os bancos de dados, exceto os bancos de dados de disponibilidade.  Para bancos de dados de disponibilidade, o GUID do Grupo de Disponibilidade é usado para nomear o contêiner de armazenamento do Windows Azure.  
   
- O arquivo de backup para bancos de dados não disponíveis são nomeados usando a seguinte convenção: O nome é criado usando os primeiros 40 caracteres do nome do banco de dados, o GUID do banco de dados sem o '-' e o carimbo de hora. O caractere de sublinhado é inserido entre segmentos como separadores. A extensão de arquivo **.bak** é usada no backup completo e a extensão de arquivo **.log** é usada nos backups de log. Para bancos de dados do Grupo de Disponibilidade, além da convenção de nomenclatura de arquivo descrita acima, o GUID do banco de dados do Grupo de Disponibilidade é adicionado após os 40 caracteres do nome do banco de dados. O valor de GUID do banco de dados do Grupo de Disponibilidade é o valor para o group_database_id em sys.databases.  
+ O arquivo de backup para bancos de dados não são de disponibilidade são nomeados usando a seguinte convenção: O nome é criado usando os primeiros 40 caracteres do nome do banco de dados, o GUID do banco de dados sem o '-' e o carimbo de hora. O caractere de sublinhado é inserido entre segmentos como separadores. A extensão de arquivo **.bak** é usada no backup completo e a extensão de arquivo **.log** é usada nos backups de log. Para bancos de dados do Grupo de Disponibilidade, além da convenção de nomenclatura de arquivo descrita acima, o GUID do banco de dados do Grupo de Disponibilidade é adicionado após os 40 caracteres do nome do banco de dados. O valor de GUID do banco de dados do Grupo de Disponibilidade é o valor para o group_database_id em sys.databases.  
   
  **Backup completo do banco de dados:** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] agente agendará um backup de banco de dados completo se qualquer uma das seguintes opções for verdadeira.  
   
@@ -118,7 +118,7 @@ O [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pode ser habil
 -   Quando o backup de log de transações está atrás de um backup completo de banco de dados. A meta é manter a cadeia de logs à frente do backup completo.  
   
 #### <a name="retention-period-settings"></a>Configurações de período de retenção  
- Ao habilitar o backup, você deve definir o período de retenção em dias: O valor mínimo é 1 dia e o máximo, 30 dias.  
+ Ao habilitar o backup, você deve definir o período de retenção em dias: O mínimo é 1 dia e o máximo é de 30 dias.  
   
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] , com base nas configurações de período de retenção, avalia a capacidade de recuperação para um momento específico, a fim de determinar quais arquivos de backup serão mantidos e identificar os arquivos de backup a serem excluídos. A backup_finish_date do backup é usada para determinar e associar o tempo especificado pelas configurações de período de retenção.  
   
@@ -132,7 +132,7 @@ O [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pode ser habil
 ###  <a name="support_limits"></a> Limitações de suporte  
  As limitações a seguir são específicas para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]:  
   
--   O agente [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] oferece suporte somente para backups de banco de dados: Backups completos e de log.  Não há suporte para a automação de backups de arquivo.  
+-   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] Agent dá suporte a apenas os backups de banco de dados: Completos e Backups de Log.  Não há suporte para a automação de backups de arquivo.  
   
 -   No momento, as operações do [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] têm suporte por meio do Transact-SQL. O monitoramento e a solução de problemas podem ser feitos com o uso de Eventos Estendidos. O suporte ao PowerShell e ao SMO está limitado à definição das configurações padrão de período de retenção e armazenamento de uma instância do SQL Server, e ao monitoramento do status de backup e da integridade geral com base nas políticas de Gerenciamento Baseado em Políticas do SQL Server.  
   
@@ -142,7 +142,7 @@ O [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pode ser habil
   
 -   Atualmente, o tamanho máximo de arquivo permitido para um blob de página no armazenamento do Windows Azure é 1 TB. Os arquivos de backup superiores a 1 TB apresentarão falha. Para evitar essa situação, é recomendável que, para bancos de dados grandes, você use a compactação e teste o tamanho do arquivo de backup antes de configurar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Você pode realizar o teste fazendo backup para um disco local ou fazendo o backup manual do armazenamento do Windows Azure usando a instrução Transact-SQL `BACKUP TO URL`. Para saber mais, confira [SQL Server Backup to URL](sql-server-backup-to-url.md).  
   
--   Modelos de recuperação: somente os bancos de dados definidos como modelo completo ou bulk-logged têm suporte.  Os bancos de dados definidos como modelo de recuperação simples não têm suporte.  
+-   Modelos de recuperação: Somente bancos de dados definidos como modelo completo ou Bulk-logged têm suporte.  Os bancos de dados definidos como modelo de recuperação simples não têm suporte.  
   
 -   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pode ter algumas limitações quando configurado com outras tecnologias com suporte para backup, alta disponibilidade ou recuperação de desastres. Para obter mais informações, consulte [SQL Server Managed Backup to Windows Azure: Interoperabilidade e coexistência](../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md).  
   
@@ -152,8 +152,8 @@ O [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pode ser habil
 |-|-|  
 |**Descrições de tarefa**|**Tópico**|  
 |As tarefas básicas, como configurar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para um banco de dados ou definir as configurações padrão no nível da instância, desabilitando o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] no nível da instância ou do banco de dados, pausando e reiniciando o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|[Backup gerenciado do SQL Server no Microsoft Azure – Configurações de retenção e armazenamento](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)|  
-|**Tutorial:** passo a passo para configurar e monitorar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|[Configurando o Backup Gerenciado do SQL Server para Microsoft Azure](enable-sql-server-managed-backup-to-microsoft-azure.md)|  
-|**Tutorial:** passo a passo para configurar e monitorar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para bancos de dados no grupo de disponibilidade.|[Configurando o Backup Gerenciado do SQL Server para Microsoft Azure para Grupos de Disponibilidade](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)|  
+|**Tutorial:** Instruções passo a passo para configurar e monitorar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|[Configurando o Backup Gerenciado do SQL Server para Microsoft Azure](enable-sql-server-managed-backup-to-microsoft-azure.md)|  
+|**Tutorial:** Instruções passo a passo para configurar e monitorar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para bancos de dados no grupo de disponibilidade.|[Configurando o Backup Gerenciado do SQL Server para Microsoft Azure para Grupos de Disponibilidade](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)|  
 |Ferramentas e conceitos, e tarefas relacionadas ao monitoramento do [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|[Monitorar o Backup Gerenciado do SQL Server para Microsoft Azure](sql-server-managed-backup-to-microsoft-azure.md)|  
 |Ferramentas e etapas para a solução de problemas do [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|[Solucionando problemas de Backup Gerenciado do SQL Server para Microsoft Azure](../../database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md)|  
   

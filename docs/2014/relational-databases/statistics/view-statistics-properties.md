@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8db42e567b80ca282b89d9be29fffff3e643ea7a
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54099961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63015643"
 ---
 # <a name="view-statistics-properties"></a>Exibir propriedades de estatísticas
   Você pode exibir estatísticas de otimização de consulta atuais para uma tabela ou exibição indexada no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Os objetos de estatísticas incluem um cabeçalho com metadados sobre as estatísticas, um histograma com a distribuição de valores na primeira coluna de chave do objeto de estatísticas e um vetor de densidade para medir a correlação entre colunas. Para obter mais informações sobre histogramas e vetores de densidade, consulte [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql)  
@@ -69,7 +69,7 @@ ms.locfileid: "54099961"
      Exibe o nome do objeto de banco de dados onde as estatísticas são armazenadas.  
   
      **Estatísticas para INDEXstatistics_name**  
-     Esta caixa de texto mostra as propriedades retornadas do objeto de estatísticas. Estas propriedades são divididas em três seções: Cabeçalho de estatísticas, vetor de densidade e histograma.  
+     Esta caixa de texto mostra as propriedades retornadas do objeto de estatísticas. Essas propriedades são divididas em três seções: Cabeçalho de Estatísticas, Vetor de Densidade e Histograma.  
   
      As informações a seguir descrevem as colunas retornadas no conjunto de resultados do Cabeçalho de Estatísticas.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "54099961"
   
 7.  Clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-view-statistics-properties"></a>Para exibir propriedades de estatísticas  
   

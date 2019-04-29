@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 832ea48478eb28b94caf292067344a3754040b2b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62901788"
 ---
 # <a name="integration-services-paths"></a>Caminhos do Integration Services
   Um caminho conecta dois componentes em um fluxo de dados conectando a saída de um componente de fluxo de dados à entrada de outro componente. Um caminho tem uma origem e um destino. Por exemplo, se um caminho conectar uma origem OLE DB e uma transformação Classificação, a origem OLE DB será a origem do caminho e a transformação Classificação será o destino do caminho. A origem é o componente onde o caminho inicia, e o destino é o componente onde o caminho termina.  

@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a78b177b1fb429535a4bb9b271d0b1dbc4eedc79
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62921933"
 ---
 # <a name="file-restores-full-recovery-model"></a>Restaurações de arquivo (modelo de recuperação completa)
   Este tópico é relevante apenas para bancos de dados que contêm vários arquivos ou grupos de arquivos sob o modelo de recuperação completa ou de carregamento em massa.  
@@ -50,7 +50,7 @@ ms.locfileid: "48141246"
      Para obter informações sobre o suporte para restauração de arquivo e de página online, consulte [Recursos com suporte nas edições do SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Para obter mais informações sobre restaurações online, veja [Restauração online &#40;SQL Server&#41;](online-restore-sql-server.md).  
   
     > [!TIP]  
-    >  Se quiser que o banco de dados fique offline para uma restauração de arquivo, coloque o banco de dados offline antes de iniciar a sequência de restauração, executando a seguinte instrução [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options) : ALTER DATABASE *database_name* SET OFFLINE.  
+    >  Se você deseja que o banco de dados esteja offline para uma restauração arquivo, coloque o banco de dados offline antes de iniciar a sequência de restauração executando a seguinte instrução [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options): ALTER DATABASE *database_name* SET OFFLINE.  
   
   
   
@@ -116,7 +116,7 @@ RESTORE LOG database_name FROM <tail_log_backup>
   
 -   [Exemplo: restauração online de um arquivo de leitura/gravação #40;Modelo de recuperação completa&#41;](example-online-restore-of-a-read-write-file-full-recovery-model.md)  
   
--   [Exemplo: restauração online de um arquivo somente leitura &#40;Modelo de recuperação completa&#41;](example-online-restore-of-a-read-only-file-full-recovery-model.md)  
+-   [Exemplo: restauração online de um arquivo somente leitura #40;Modelo de recuperação completa&#41;](example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
 -   [Exemplo: restauração offline do grupo de arquivos primário e mais um &#40;Modelo de recuperação completa&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
@@ -132,7 +132,7 @@ RESTORE LOG database_name FROM <tail_log_backup>
 
   
 ## <a name="see-also"></a>Consulte também  
- [Backup e restauração: interoperabilidade e coexistência &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
+ [Backup e Restauração: Interoperabilidade e Coexistência &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [Backups diferenciais &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [Backups completos de arquivos &#40;SQL Server&#41;](full-file-backups-sql-server.md)   
  [Visão geral do backup &#40;SQL Server&#41;](backup-overview-sql-server.md)   

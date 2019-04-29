@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 31b22b1dce53bb82f85ae946290024408d2facd3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874476"
 ---
 # <a name="requirements-for-clr-user-defined-aggregates"></a>Requisitos para agregações CLR definidas pelo usuário
   Um tipo em um assembly do CLR pode ser registrado como uma função de agregação definida pelo usuário, desde que implemente o contrato de agregação necessário. Esse contrato consiste no atributo `SqlUserDefinedAggregate` e os métodos de contrato de agregação. O contrato de agregação inclui o mecanismo para salvar o estado intermediário da agregação e o mecanismo para acumular novos valores, o qual consiste em quatro métodos: `Init`, `Accumulate`, `Merge` e `Terminate`. Quando você tiver atendido esses requisitos, você poderá aproveitar ao máximo de agregações definidas pelo usuário no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. As seguintes seções deste tópico fornecem detalhes adicionais sobre como criar e trabalhar com agregações definidas pelo usuário. Por exemplo, consulte [funções de agregação Invoking CLR User-Defined](clr-user-defined-aggregate-invoking-functions.md).  
@@ -38,7 +38,7 @@ ms.locfileid: "53376059"
   
 |Método|Sintaxe|Descrição|  
 |------------|------------|-----------------|  
-|`Init`|public void init ();|O processador de consultas usa esse método para inicializar a computação da agregação. Ele é invocado uma vez para cada grupo que o processador de consultas está agregando. O processador de consultas pode optar por reutilizar a mesma instância da classe de agregação para computar agregações de grupos vários. O método `Init` deve executar qualquer limpeza, conforme necessário, de usos anteriores desta instância e habilitá-la para que uma nova computação de agregação seja reiniciada.|  
+|`Init`|public void Init();|O processador de consultas usa esse método para inicializar a computação da agregação. Ele é invocado uma vez para cada grupo que o processador de consultas está agregando. O processador de consultas pode optar por reutilizar a mesma instância da classe de agregação para computar agregações de grupos vários. O método `Init` deve executar qualquer limpeza, conforme necessário, de usos anteriores desta instância e habilitá-la para que uma nova computação de agregação seja reiniciada.|  
 |`Accumulate`|público Accumulate void (valor do tipo de entrada [, valor de tipo de entrada...]);|Um ou mais parâmetros que representam os parâmetros da função. *input_type* deve ser gerenciado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados equivalente ao nativo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados especificado por *input_sqltype* no `CREATE AGGREGATE` instrução. Para obter mais informações, consulte [Mapeando dados de parâmetro CLR](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).<br /><br /> Para UDTs (tipos definidos pelo usuário), o tipo de entrada é o mesmo que o tipo do UDT. O processador de consultas usa esse método para acumular os valores de agregação. Ele é invocado uma vez para obter cada valor no grupo que está sendo agregado. O processador de consultas o chama somente depois de chamar o método `Init` na instância determinada da classe de agregação. A implementação desse método deve atualizar o estado da instância para refletir o acúmulo do valor do argumento que é passado.|  
 |`Merge`|Mesclagem public void (valor udagg_class);|Esse método pode ser usado para mesclar outra instância desta classe de agregação com a instância atual. O processador de consultas usa esse método para mesclar várias computações parciais de uma agregação.|  
 |`Terminate`|público return_type conter Terminate ();|Esse método completa a computação de agregações e retorna o resultado da agregação. O *return_type* deve ser gerenciado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados que é o equivalente gerenciado *return_sqltype* especificado no `CREATE AGGREGATE` instrução. O *return_type* também pode ser um tipo definido pelo usuário.|  

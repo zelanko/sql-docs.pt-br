@@ -18,11 +18,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6fbd4e3191f1cf115f157f7ff56c55f7b9ed96bc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62926306"
 ---
 # <a name="attributes-master-data-services"></a>Atributos (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , atributos são objetos contidos em entidades. Os valores de atributos descrevem os membros da entidade. Um atributo pode ser usado para descrever um membro folha, um membro consolidado ou uma coleção.  
@@ -58,7 +58,7 @@ ms.locfileid: "52748058"
 -   Um valor poderá não fazer uma *viagem de ida e volta* se um número de ponto flutuante estiver envolvido. Diz-se que um valor faz uma viagem de ida e volta quando uma operação converte um número de ponto flutuante original para outra forma, uma operação inversa transforma a forma convertida de volta para um número de ponto flutuante e o número de ponto flutuante final é igual ao número de ponto flutuante original. A viagem de ida e volta pode falhar porque um ou mais dígitos menos significantes são perdidos ou alterados na conversão.  
   
 ## <a name="attribute-examples"></a>Exemplos de atributos  
- No exemplo a seguir, a entidade tem os atributos: Nome, código, Subcategory, StandardCost, ListPrice e FilePhoto. Esses atributos descrevem os membros, Cada membro é representado por uma única linha de valores de atributo.  
+ No seguinte exemplo, a entidade tem os atributos: Name, Code, Subcategory, StandardCost, ListPrice e FilePhoto. Esses atributos descrevem os membros, Cada membro é representado por uma única linha de valores de atributo.  
   
  ![Tabela de entidade de produto de bicicleta](../../2014/master-data-services/media/mds-conc-entity-table-w-data.gif "Tabela de entidade de produto de bicicleta")  
   

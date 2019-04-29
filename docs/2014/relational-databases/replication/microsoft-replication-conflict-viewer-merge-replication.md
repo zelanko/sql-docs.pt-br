@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e28a5077057c9a02a3b45de6a88180eab5c87b2b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62938578"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Visualizador de Conflitos de Replicação da Microsoft (replicação de mesclagem)
   O Visualizador de Conflitos de Replicação permite exibir qualquer conflito ocorrido durante a sincronização de replicação. Os conflitos ocorrem quando os mesmos dados são modificados em dois servidores separados, por exemplo, no Publicador e no Assinante, ou em dois Assinantes diferentes. A replicação resolve conflitos automaticamente usando o resolvedor de conflitos que você selecionou quando o artigo foi criado. No entanto, o Visualizador de Conflitos de Replicação permite escolher uma resolução diferente para o conflito quando necessário. Podem ocorrer os seguintes conflitos:  
@@ -71,7 +71,7 @@ ms.locfileid: "52756228"
  Selecione para exibir as primeiras cinco colunas e qualquer coluna com conflitos. Isso é útil quando a tabela tem um grande número de colunas, mas você quer ver apenas as mais relevantes para resolver o conflito. As primeiras cinco colunas sempre são incluídas nessa exibição, como campos que identificam uma linha, como chave primária ou campo de nomes, estão sempre entre as primeiras colunas da tabela.  
   
  **Exibir Informações da Coluna** (**...**)  
- Clique para exibir informações de coluna: **Nome da tabela**, **nome da coluna**, **tipo de dados**, e **o valor da coluna**. **Valor da Coluna** é editável, a menos que o valor seja exibido como somente leitura.  
+ Clique para exibir informações de coluna: **Nome da Tabela**, **Nome da Coluna**, **Tipo de Dados** e **Valor da Coluna**. **Valor da Coluna** é editável, a menos que o valor seja exibido como somente leitura.  
   
  **Enviar Vencedor**  
  Clique para manter a linha que o resolvedor de conflitos determinou como vencedora. O valor de qualquer coluna que não é exibido como somente leitura pode ser alterado antes de clicar nesse botão.  

@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 33ea6f845c323a858d1bd89318f2b8e07b734edd
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62896092"
 ---
 # <a name="upgrading-the-version-of-a-data-flow-component"></a>Atualizando a versão de um componente de fluxo de dados
   Pacotes criados com uma versão mais antiga do seu componente podem conter metadados que não são mais válidos, como propriedades personalizadas cujo uso foi modificado em versões mais recentes do componente. É possível substituir o método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A> da classe base <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> para atualizar os metadados salvos anteriormente em pacotes mais antigos, a fim de refletir as propriedades atuais do seu componente.  

@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 60aa1e7f4e671540d8ece08a24696a3a46998c82
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832623"
 ---
 # <a name="control-flow"></a>Fluxo de controle
   Um pacote consiste em um fluxo de controle e, opcionalmente, em um ou mais fluxos de dados. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornece três tipos diferentes de elementos de fluxo de controle: contêineres, que fornecem estruturas em pacotes, tarefas, que oferecem funcionalidade e restrições de precedência, que conectam os executáveis, os contêineres e as tarefas em um fluxo de controle ordenado.  

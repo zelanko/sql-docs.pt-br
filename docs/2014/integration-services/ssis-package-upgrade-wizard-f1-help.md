@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 56aa708d39756932d28c8a94da534cb758916fcd
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889359"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>Ajuda F1 do Assistente de Atualização de Pacotes SSIS
   Use o Assistente de atualização de pacotes do SSIS para atualizar [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] pacotes e [!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)] pacotes para o formato de pacote para a versão atual do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  

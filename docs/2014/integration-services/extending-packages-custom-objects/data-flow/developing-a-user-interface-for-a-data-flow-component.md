@@ -23,11 +23,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 273e0343fc57af419a349725482047df08619cdd
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62896318"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>Desenvolvendo uma interface do usuário para um componente de fluxo de dados
   Os desenvolvedores de componentes podem fornecer uma interface de usuário personalizada para um componente, que é exibida no [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] quando o componente é editado. A implementação de uma interface de usuário personalizada fornece a você uma notificação quando o componente é adicionado a ou excluído de uma tarefa de fluxo de dados, e quando é solicitada ajuda para o componente.  

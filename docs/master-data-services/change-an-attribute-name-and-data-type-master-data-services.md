@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: erikre
 ms.openlocfilehash: 6348cc9a2b64501f7a639d480a7112bf28923585
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637624"
 ---
 # <a name="change-an-attribute-name-and-data-type-master-data-services"></a>Alterar um Nome de Atributo e um Tipo de Dados (Master Data Services)
 
@@ -59,7 +59,7 @@ ms.locfileid: "52785268"
   
 9. Clique em **Salvar**.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Criar um atributo de texto &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
  [Excluir um atributo &#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-master-data-services.md)   
  [Atributos &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  

@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1137fa6847cf851a6cb56ffd8a0da10032decc7a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62897405"
 ---
 # <a name="--negate-ssis-expression"></a>- (Negação) (Expressão SSIS)
   Nega uma expressão numérica.  

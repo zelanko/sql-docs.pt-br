@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7700a2d1da4349bd1bc652badc1c2cdd89dc6550
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873260"
 ---
 # <a name="disable-compression-on-a-table-or-index"></a>Desabilitar a compactação em uma tabela ou índice
   Este tópico descreve como desabilitar a compactação em uma tabela ou índice no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -38,7 +38,7 @@ ms.locfileid: "52510563"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   Se a tabela for um heap, a operação de reconstrução para o modo ONLINE será um thread único. Use o modo OFFLINE para uma operação de reconstrução de um heap multi-threaded. Para obter mais informações sobre compactação de dados, veja [Compactação de dados](data-compression.md).  
   
@@ -132,7 +132,7 @@ ms.locfileid: "52510563"
   
                 -   Se você selecionar **Dia**, digite o dia do mês que você deseja que a agenda de trabalho seja executada e a frequência com que a agenda de trabalho se repete em meses. Por exemplo, se desejar que a agenda de trabalho seja executada no 15º dia do mês a cada dois meses, selecione **Dia** e digite "15" na primeira caixa e "2" na segunda caixa. Observe que o maior número permitido na segunda caixa é "99".  
   
-                -   Se você selecionar **O**, selecione o dia específico da semana no mês que você deseja que a agenda de trabalho seja executada e a frequência com que a agenda de trabalho se repete em meses. Por exemplo, se você desejar que a agenda de trabalho seja executada no último dia da semana do mês a cada dois meses, selecione **Dia**, selecione **último** na primeira lista e **dia da semana** na segunda lista e depois digite “2” na última caixa. Você também pode selecionar **primeira**, **segundo**, **terceira**, ou **quarto**, bem como dias específicos da semana (por exemplo: Domingo ou quarta-feira) nas primeiras duas listas. Observe que o maior número permitido na última caixa é "99".  
+                -   Se você selecionar **O**, selecione o dia específico da semana no mês que você deseja que a agenda de trabalho seja executada e a frequência com que a agenda de trabalho se repete em meses. Por exemplo, se você desejar que a agenda de trabalho seja executada no último dia da semana do mês a cada dois meses, selecione **Dia**, selecione **último** na primeira lista e **dia da semana** na segunda lista e depois digite “2” na última caixa. Você também pode selecionar **primeiro**, **segundo**, **terceiro** ou **quarto**, bem como dias específicos da semana (por exemplo: domingo ou quarta-feira) nas primeiras duas listas. Observe que o maior número permitido na última caixa é "99".  
   
         2.  Em **Frequência diária**, especifique a frequência com que a agenda de trabalho se repete no dia da execução da agenda de trabalho:  
   
@@ -187,7 +187,7 @@ ms.locfileid: "52510563"
   
      Quando terminar, clique em **Fechar**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-disable-compression-on-a-table"></a>Para desabilitar a compactação em uma tabela  
   

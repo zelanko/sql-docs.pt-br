@@ -14,11 +14,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1b3c24b5c3f86e26d8a98e0c1ec59e10e441c5cc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843777"
 ---
 # <a name="sql-server-database-engine"></a>Mecanismo de Banco de Dados do SQL Server
   O [!INCLUDE[ssDE](../includes/ssde-md.md)] é o serviço principal para armazenamento, processamento e segurança de dados. O [!INCLUDE[ssDE](../includes/ssde-md.md)] fornece acesso controlado e processamento rápido de transações para atender aos requisitos dos mais exigentes aplicativos de consumo de dados dentro de sua empresa.  

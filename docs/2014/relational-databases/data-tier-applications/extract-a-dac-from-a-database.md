@@ -22,23 +22,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7fc0aab989eb46b64ef6b9919f999ba13c4ef74f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872849"
 ---
 # <a name="extract-a-dac-from-a-database"></a>Extrair um DAC de um banco de dados
   Use o **Assistente para Extrair um Aplicativo da Camada de Dados** ou um script do Windows PowerShell para extrair um pacote de DAC (aplicativo da camada de dados) de um banco de dados do SQL Server existente. O processo de extração cria um arquivo de pacote de DAC que contém definições dos objetos de banco de dados e os elementos em nível de instância relacionados. Por exemplo, um arquivo de pacote de DAC contém as tabelas do banco de dados, os procedimentos armazenados, as exibições e os usuários junto com os logons que mapeiam para os usuários de banco de dados.  
   
--   **Antes de começar:**  [Limitações e restrições](#LimitationsRestrictions), [permissões](#Permissions)  
+-   **Antes de começar:**  [Limitações e Restrições](#LimitationsRestrictions), [Permissões](#Permissions)  
   
 -   **Para extrair um DAC, usando:**  [O Extract Data-tier Application Wizard](#UsingDACExtractWizard), [PowerShell](#ExtractDACPowerShell)  
   
 ## <a name="before-you-begin"></a>Antes de começar  
  É possível extrair um DAC de bancos de dados que residam em instâncias do [!INCLUDE[ssSDS](../../includes/sssds-md.md)], do [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 4 ou posterior. Se o processo de extração for executado em um banco de dados que foi implantado de um DAC, só serão extraídas as definições dos objetos no banco de dados. O processo não referencia o DAC registrado em `msdb` (**mestre** em [!INCLUDE[ssSDS](../../includes/sssds-md.md)]). O processo de extração não registra a definição do DAC na instância atual do Mecanismo de Banco de Dados. Para obter mais informações sobre como registrar um DAC, consulte [Register a Database As a DAC](register-a-database-as-a-dac.md).  
   
-###  <a name="LimitationsRestrictions"></a> Limitações e Restrições  
+###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
  Um DAC só pode ser extraído de um banco de dados no [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ou [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) ou posterior. Você não poderá extrair um DAC se o banco de dados tiver objetos que não tenham suporte em um DAC ou usuários contidos. Para obter mais informações sobre os tipos de objetos com suporte em um DAC, consulte [DAC Support For SQL Server Objects and Versions](dac-support-for-sql-server-objects-and-versions.md).  
   
 ###  <a name="Permissions"></a> Permissões  

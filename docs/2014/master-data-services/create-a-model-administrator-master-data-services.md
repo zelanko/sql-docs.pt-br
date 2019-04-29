@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6c0ef9c1b18c38b38ddefe900018bd0323956c88
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62925333"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>Criar um administrador de modelo (Master Data Services)
   Na [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], crie um administrador de modelo quando desejar que um grupo ou usuário ter **atualização** permissão a todos os objetos em um ou mais modelos.  

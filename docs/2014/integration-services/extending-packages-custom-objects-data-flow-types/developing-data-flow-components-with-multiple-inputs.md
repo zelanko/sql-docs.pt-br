@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 74bcf1549cdd97752c805f1c6a9cc774ef1a9e52
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62896026"
 ---
 # <a name="developing-data-flow-components-with-multiple-inputs"></a>Desenvolvendo componentes de fluxo de dados com várias entradas
   Um componente de fluxo de dados com várias entradas poderá consumir memória excessiva se suas várias entradas gerarem dados em taxas desiguais. Ao desenvolver um componente de fluxo de dados personalizado que dá suporte a duas ou mais entradas, você pode gerenciar essa pressão de memória com o uso dos seguintes membros no namespace Microsoft.SqlServer.Dts.Pipeline:  

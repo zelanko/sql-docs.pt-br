@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 524e6d8e5ec987a20d693cb1f7e06b30bc27c0b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876688"
 ---
 # <a name="backup-device-media-contents-page"></a>Dispositivo de backup (página Conteúdo da Mídia)
   Use a caixa de diálogo **Dispositivo de Backup** para exibir as informações de backup. As informações descrevem o dispositivo, a mídia, o conjunto de mídias e o conjunto ou conjuntos de backups.  
@@ -58,12 +58,12 @@ ms.locfileid: "48130486"
 |Cabeçalho|Valores|  
 |------------|------------|  
 |**Nome**|O nome do conjunto de backup.|  
-|**Tipo**|O objeto armazenado em backup: banco de dados, arquivo ou *\<em branco>* (para logs de transação).|  
-|**Componente**|O tipo de backup efetuado: Completo, Diferencial ou Log de Transações.|  
+|**Tipo**|O objeto de backup: Banco de dados, arquivo, ou  *\<em branco >* (para logs de transação).|  
+|**Componente**|O tipo de backup realizado: Completo, diferencial ou Log de transações.|  
 |**Servidor**|O nome da instância de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que realizou a operação de backup.|  
 |**Backup de banco de dados**|O nome do banco de dados cujo backup foi efetuado.|  
 |**Posição**|A posição do conjunto de backup no volume.|  
-|**Date**|A data e hora da conclusão da operação de backup, apresentadas na configuração regional do cliente.|  
+|**Data**|A data e hora da conclusão da operação de backup, apresentadas na configuração regional do cliente.|  
 |**Tamanho**|O tamanho do conjunto de backup em bytes.|  
 |**Nome do Usuário**|O nome do usuário que realizou a operação de backup.|  
 |**Validade**|A data e hora de validade do conjunto de backup.|  

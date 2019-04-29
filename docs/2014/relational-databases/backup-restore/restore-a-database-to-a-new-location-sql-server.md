@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7a50004cfb39b93ecd0c144fb0d92d37545c83ee
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62921186"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>Restaurar um banco de dados em um novo local (SQL Server)
   Este tópico descreve como restaurar um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um novo local e, opcionalmente, renomear o banco de dados, no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Você pode mover um banco de dados para um novo caminho ou criar uma cópia de um banco de dados na mesma instância do servidor ou em uma instância de servidor diferente.  

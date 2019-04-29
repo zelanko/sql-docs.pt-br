@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7ca0db131690b0b734d7e42175f4ccfb4df6a381
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013210"
 ---
 # <a name="sysdmexecqueryoptimizerinfo-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47718634"
 > [!NOTE]  
 >  Chamá-lo partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o nome **sys.dm_pdw_nodes_exec_query_optimizer_info**.  
   
-|Nome|Tipo de dados|Description|  
+|Nome|Tipo de dados|Descrição|  
 |----------|---------------|-----------------|  
 |**counter**|**nvarchar(4000)**|Nome do evento de estatísticas do otimizador.|  
 |**ocorrência**|**bigint**|Número de ocorrências do evento de otimização para este contador.|  
@@ -78,7 +78,7 @@ Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STA
 |contém subconsulta|Número de otimizações para uma consulta que contém ao menos uma subconsulta.|Não aplicável|  
 |unnest falhou|Somente interno|Somente interno|  
 |tabelas|Número total de otimizações.|Calcule o número médio de tabelas referenciadas por consulta otimizada.|  
-|dicas|Número de vezes que alguma dica foi especificada. Dicas contadas incluem: dicas de consulta JOIN, GROUP, UNION e FORCE ORDER, a opção definida FORCE PLAN e dicas de associação.|Não aplicável|  
+|dicas|Número de vezes que alguma dica foi especificada. As dicas contadas incluem: Dicas de consulta de junção, grupo, UNION e FORCE ORDER, a opção definida FORCE PLAN e dicas de junção.|Não aplicável|  
 |dica order|Número de vezes que dica de ordem de força foi especificada.|Não aplicável|  
 |dica de associação|Número de vezes que o algoritmo de junção foi forçado por uma dica de associação.|Não aplicável|  
 |exibir referência|Número de vezes que uma exibição foi referenciada em uma consulta.|Não aplicável|  

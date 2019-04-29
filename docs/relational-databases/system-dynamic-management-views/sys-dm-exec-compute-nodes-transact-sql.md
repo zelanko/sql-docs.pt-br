@@ -1,5 +1,5 @@
 ---
-title: DM exec_compute_nodes (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_compute_nodes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9f82087cc2549871147d0a85d6c36e9d8d211979
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013486"
 ---
 # <a name="sysdmexeccomputenodes-transact-sql"></a>sys.dm_exec_compute_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "52416847"
 |Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|**int**|Id numérico exclusivo associado ao nó. A chave para este modo de exibição.|Exclusivo em todo o cluster de escala horizontal, independentemente do tipo.|  
-|Tipo|**nvarchar(32)**|Tipo de nó.|'CALCULAR', 'PRINCIPAL'|  
+|type|**nvarchar(32)**|Tipo de nó.|'CALCULAR', 'PRINCIPAL'|  
 |nome|**nvarchar(32)**|Nome lógico do nó.|Qualquer cadeia de caracteres de tamanho apropriado.|  
 |address|**nvarchar(32)**|Endereço P deste nó.|Intervalo de endereços IP|  
   

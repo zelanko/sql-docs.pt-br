@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b22e25ad9053ed4da0187035cff00ff7e3ca70af
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898894"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Constantes enumeradas em expressões de propriedade
   Se as expressões de propriedade incluírem valores de uma lista de membros de enumerador, a expressão deverá usar o valor numérico do membro de enumerador em vez do nome amigável do membro. Por exemplo, se uma expressão definir a propriedade `LoggingMode`, use o valor numérico 2 em vez do nome amigável Desabilitada.  
@@ -587,7 +587,7 @@ ms.locfileid: "58386564"
 |Nome amigável em DTSLoggingMode|Valor numérico|  
 |-------------------------------------|-------------------|  
 |UseParentSetting|0|  
-|Habilitado|1|  
+|Enabled|1|  
 |Desabilitado|2|  
   
  `TransactionOption` Conjunto de propriedades usando valores do `DTSTransactionOption` enumeração.  

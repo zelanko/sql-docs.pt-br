@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: cf5c0b6c7004f458e424e58d738cce22e97afa2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919596"
 ---
 # <a name="clr-scalar-valued-functions"></a>Funções de valor escalar CLR
   Uma função de valor escalar (SVF) retorna um único valor, como uma cadeia de caracteres, um inteiro ou um valor de bit. Você pode criar funções de valor escalar definidas pelo usuário em código gerenciado usando qualquer linguagem de programação do .NET Framework. Essas funções são acessíveis a [!INCLUDE[tsql](../../includes/tsql-md.md)] ou outro código gerenciado. Para obter informações sobre as vantagens da integração CLR e escolhendo entre o código gerenciado e [!INCLUDE[tsql](../../includes/tsql-md.md)], consulte [visão geral da integração CLR](../clr-integration/clr-integration-overview.md).  
@@ -38,7 +38,7 @@ ms.locfileid: "48157356"
 >  Não marque uma função como determinística se ela sempre produzir os mesmos valores de saída, considerando os mesmos valores de entrada e o mesmo estado do banco de dados. A marcação de uma função como determinística, quando a função, de fato, não é pode resultar em exibições indexadas e colunas computadas danificadas. Você marca uma função como determinística definindo a propriedade `IsDeterministic` como true.  
   
 ### <a name="table-valued-parameters"></a>Parâmetros com valor de tabela  
- Os TVPs (parâmetros com valor de tabela), ou seja, tipos de tabela definidos pelo usuário transmitidos para um procedimento ou uma função, oferecem uma maneira eficiente de passar várias linhas de dados para o servidor. Os TVPs proporcionam funcionalidade semelhante para matrizes de parâmetro, porém com maior flexibilidade e integração com [!INCLUDE[tsql](../../includes/tsql-md.md)]. Eles também fornecem o potencial para melhor desempenho. Os TVPs também ajudam a reduzir o número de viagens de ida e volta para o servidor. Em vez de enviar várias solicitações ao servidor, como com uma lista de parâmetros escalares, os dados podem ser enviados ao servidor como um TVP. Um tipo de tabela definido pelo usuário não pode ser passado como um parâmetro com valor de tabela para, ou ser retornado de, um procedimento armazenado ou uma função gerenciada(o) que é executada(o) no processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre TVPs, consulte [usar parâmetros &#40;mecanismo de banco de dados&#41;](../tables/use-table-valued-parameters-database-engine.md).  
+ Os TVPs (parâmetros com valor de tabela), ou seja, tipos de tabela definidos pelo usuário transmitidos para um procedimento ou uma função, oferecem uma maneira eficiente de passar várias linhas de dados para o servidor. Os TVPs proporcionam funcionalidade semelhante para matrizes de parâmetro, porém com maior flexibilidade e integração com [!INCLUDE[tsql](../../includes/tsql-md.md)]. Eles também fornecem o potencial para melhor desempenho. Os TVPs também ajudam a reduzir o número de viagens de ida e volta para o servidor. Em vez de enviar várias solicitações ao servidor, como com uma lista de parâmetros escalares, os dados podem ser enviados ao servidor como um TVP. Um tipo de tabela definido pelo usuário não pode ser passado como um parâmetro com valor de tabela para, ou ser retornado de, um procedimento armazenado ou uma função gerenciada(o) que é executada(o) no processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações sobre TVPs, consulte [usar parâmetros &#40;mecanismo de banco de dados&#41;](../tables/use-table-valued-parameters-database-engine.md).  
   
 ## <a name="example-of-a-clr-scalar-valued-function"></a>Exemplo de uma função de valor escalar do CLR  
  Eis uma SVF simples que acessa dados e retorna um valor inteiro:  
