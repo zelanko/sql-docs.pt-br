@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d434df95a26485d4d7795d3ab960b8d2457b8ff6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185578"
 ---
 # <a name="basic-data-mining-tutorial"></a>Tutorial de mineração de dados básico
   Bem-vindo ao Tutorial básico de mineração de dados do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Fornece um ambiente integrado para criação de modelos de mineração de dados e fazer previsões. Neste tutorial, você concluirá um cenário para uma campanha de mala direta na qual usará o aprendizado automatizado para analisar e prever o comportamento de compra do cliente. O tutorial demonstra como usar três dos algoritmos de mineração de dados mais importantes: clustering, árvores de decisão, e Naive Bayes. Você também aprenderá como analisar os resultados usando os visualizadores de modelo de mineração, e como criar previsões e gráficos de precisão usando as ferramentas de mineração de dados incluídas no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. A empresa fictícia, [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], é usada para todos os exemplos.  

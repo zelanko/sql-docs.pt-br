@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1834a4d3044dc8c444486d727274d6fa72a56a2b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63023430"
 ---
 # <a name="lockdeadlock-event-class"></a>Classe de evento Lock:Deadlock
   A classe de evento Lock:Deadlock é produzida quando é cancelada uma tentativa para adquirir um bloqueio, porque a tentativa fazia parte de um deadlock e foi escolhida como a vítima de deadlock.  

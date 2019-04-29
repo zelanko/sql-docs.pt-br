@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 44cda6a2ecb8cd81d477c87de0f52a3a9b80b657
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920651"
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>Habilitar os pré-requisitos para FileTable
   Descreve como habilitar os pré-requisitos para criar e usar FileTables.  
@@ -45,7 +45,7 @@ ms.locfileid: "58538138"
   
  Quando você chama o `sp_configure` para habilitar o FILESTREAM no nível de instância, precisa definir a opção filestream_access_level como 2. Para obter mais informações, veja [Opção filestream access level de configuração de servidor](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md).  
   
-###  <a name="firewall"></a> Como: Permitir o FILESTREAM através do firewall  
+###  <a name="firewall"></a> Como: Permitir o FILESTREAM através do Firewall  
  Para obter informações sobre como permitir o FILESTREAM através do firewall, consulte [Configure a Firewall for FILESTREAM Access](configure-a-firewall-for-filestream-access.md).  
   
 ##  <a name="filegroup"></a> Fornecendo um grupo de arquivos FILESTREAM no nível de banco de dados  
@@ -54,7 +54,7 @@ ms.locfileid: "58538138"
 ##  <a name="BasicsNTAccess"></a> Habilitando o acesso não transacional em nível de banco de dados  
  As FileTables permitem que os aplicativos do Windows obtenham um identificador de arquivo do Windows para dados de FILESTREAM sem precisar de uma transação. Para permitir esse acesso não transacional a arquivos armazenados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você deve especificar o nível desejado de acesso não transacional no nível de banco de dados para cada banco de dados que conterá FileTables.  
   
-###  <a name="HowToCheckAccess"></a> Como: Verificar se o acesso não transacional está habilitado em bancos de dados  
+###  <a name="HowToCheckAccess"></a> Como: Verifique se o acesso não transacional está habilitado em bancos de dados  
  Consulte a exibição de catálogo [sys.database_filestream_options &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql) e verifique as colunas **non_transacted_access** e **non_transacted_access_desc**.  
   
 ```sql  
@@ -63,7 +63,7 @@ SELECT DB_NAME(database_id), non_transacted_access, non_transacted_access_desc
 GO  
 ```  
   
-###  <a name="HowToNTAccess"></a> Como: Habilitar o acesso não transacional no nível de banco de dados  
+###  <a name="HowToNTAccess"></a> Como: Habilitar o acesso não transacional no nível do banco de dados  
  Os níveis disponíveis de acesso não transacional são FULL, READ_ONLY e OFF.  
   
  **Especificar o nível de acesso não transacional usando Transact-SQL**  

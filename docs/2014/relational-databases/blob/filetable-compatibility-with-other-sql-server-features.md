@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 8ab7963d83937c3572363ea921724cefb8b4adff
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920797"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>Compatibilidade do FileTable com outros recursos do SQL Server
   Descreve como as FileTables funcionam com outros recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -87,7 +87,7 @@ ms.locfileid: "52507693"
   
 -   A exibição pode ser atualizada com base na semântica de "exibição atualizável", mas as restrições de tabela subjacentes podem rejeitar as atualizações, como na tabela.  
   
--   Você pode visualizar o caminho de um arquivo na exibição adicionando-o como uma coluna explícita na exibição. Por exemplo:  
+-   Você pode visualizar o caminho de um arquivo na exibição adicionando-o como uma coluna explícita na exibição. Por exemplo:   
   
      `CREATE VIEW MP3FILES AS SELECT column1, column2, ..., GetFileNamespacePath() AS PATH, column3,...  FROM Documents`  
   

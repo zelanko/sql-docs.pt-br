@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3663c9cdb9fd83dc0caa4298a81f73adcae87cd
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59970562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185799"
 ---
 # <a name="datasources-and-datasets-collection-references-report-builder-and-ssrs"></a>Referências de coleções DataSources e DataSets (Construtor de Relatórios e SSRS)
   A coleção `DataSources` representa todas as fontes de dados usadas em um relatório. De maneira semelhante, a coleção de `DataSets` representa todos os conjuntos de dados para todas as fontes de dados em um relatório. Use o painel **Dados do Relatório** para obter uma exibição hierárquica dos conjuntos de dados do relatório organizados sob a fonte de dados a qual eles fazem referência. Se você incluir referências nessas coleções, não poderá ver os valores ao visualizar o relatório. Essas coleções estão disponíveis apenas após o relatório ter sido publicado em um servidor de relatório.  

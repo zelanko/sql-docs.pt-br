@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 84752b7e23c5394757764bf5ade57cb54004b01a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62943142"
 ---
 # <a name="duplicated-features"></a>Recursos duplicados
 A seguir ODBC 2. *x* funções foram duplicadas em ODBC 3. *x* funções. Como resultado, o ODBC 2. *x* funções foram preteridas em ODBC 3. *x*. O ODBC 3. *x* funções são referidas como funções de substituição.  
@@ -33,9 +33,9 @@ A seguir ODBC 2. *x* funções foram duplicadas em ODBC 3. *x* funções. Como r
   
 |ODBC 2. *x* função|ODBC 3. *x* função|  
 |-------------------------|-------------------------|  
-|**SQLAllocConnect**|**Falha de SQLAllocHandle**|  
-|**SQLAllocEnv**|**Falha de SQLAllocHandle**|  
-|**SQLAllocStmt**|**Falha de SQLAllocHandle**|  
+|**SQLAllocConnect**|**SQLAllocHandle**|  
+|**SQLAllocEnv**|**SQLAllocHandle**|  
+|**SQLAllocStmt**|**SQLAllocHandle**|  
 |**SQLColAttributes**|**SQLColAttribute**|  
 |**SQLError**|**SQLGetDiagRec**|  
 |**SQLExtendedFetch**[1]|**SQLFetchScroll**|  

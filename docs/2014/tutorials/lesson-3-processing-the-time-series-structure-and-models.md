@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 493d27c9836eb765c655eba5bbb004e4d48cde40
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042872"
 ---
-# <a name="lesson-3-processing-the-time-series-structure-and-models"></a>Lição 3: A série de tempo de processamento estrutura e modelos
+# <a name="lesson-3-processing-the-time-series-structure-and-models"></a>Lição 3: Como processar a estrutura e os modelos de série temporal
   Nesta lição, você aprenderá a usar o [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) instrução para processar a série temporal, estruturas de mineração e modelos de mineração que você criou.  
   
  Ao processar uma estrutura de mineração, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] lê os dados de origem e compila as estruturas que dão suporte a modelos de mineração. Sempre será necessário processar um modelo e uma estrutura de mineração em sua criação. Se você especificar a estrutura de mineração ao usar INSERT INTO, a instrução processará a estrutura de mineração e todos os seus modelos de mineração associados.  

@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 65797fdf770196723a74510501d381fb608ad2ff
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011639"
 ---
 # <a name="overview-of-sql-server-servicing-installation"></a>Visão geral da instalação de manutenção do SQL Server
   Você pode aplicar uma atualização a qualquer componente do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instalado com uma atualização de manutenção do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Se o nível da versão de um componente existente do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] for posterior ao da versão de atualização, o programa de Instalação o excluirá da atualização. Para obter mais informações sobre como aplicar uma manutenção de atualização, consulte [instalar o SQL Server 2014 atualizações de serviço](../../database-engine/install-windows/install-sql-server-servicing-updates.md).  
@@ -36,7 +36,7 @@ ms.locfileid: "53369058"
 ## <a name="requirements-and-known-issues"></a>Requisitos e problemas conhecidos  
  Os requisitos de espaço em disco recomendados são, aproximadamente, 2,5 vezes o tamanho do pacote para instalação, download e extração do pacote. Após instalar um service pack, você pode remover o pacote baixado. Todos os arquivos temporários serão removidos automaticamente.  
   
- **Examine os problemas conhecidos:** para obter mais informações sobre os problemas conhecidos da versão atual, consulte o tópico de notas de versão correspondentes aqui: [Notas de versão do SQL Server](https://msdn.microsoft.com/f617a0af-92dd-47aa-82c3-f51b1346bcd8).  
+ **Examine os problemas conhecidos:** Para obter mais informações sobre os problemas conhecidos da versão atual, consulte o tópico notas versão correspondentes aqui: [Notas de versão do SQL Server](https://msdn.microsoft.com/f617a0af-92dd-47aa-82c3-f51b1346bcd8).  
   
 ## <a name="installation-overview"></a>Visão geral da instalação  
  Esta seção aborda a instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para atualizações cumulativas e service packs, inclusive como fazer o seguinte:  
@@ -88,15 +88,15 @@ ms.locfileid: "53369058"
 #### <a name="starting-a-includesscurrentincludessscurrent-mdmd-update"></a>Iniciando uma atualização do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Para instalar uma atualização do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , execute o arquivo de pacote autoextraível.  
   
- Pacote de atualização cumulativa (CU): \<Lt;sqlserver2014 > - KBxxxxxx -*PPP*.exe  
+ Pacote de atualização cumulativa (CU): \<SQLServer2014>-KBxxxxxx-*PPP*.exe  
   
- Pacote de service pack (PCU): \<Lt;sqlserver2014 >\<SPx > - KBxxxxxx-PPP-LLL.exe  
+ Pacote de service pack (PCU): \<SQLServer2014>\<SPx> -KBxxxxxx-PPP-LLL.exe  
   
 -   x indica o número do service pack  
   
 -   PPP indica a plataforma específica.  
   
--   LLL indica a abreviação de caracteres do idioma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], por exemplo: o LLL do inglês é ENU.  
+-   LLL indica a abreviação de caracteres para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] idioma, por exemplo: LLL do inglês é ENU.  
   
  Para aplicar as atualizações aos componentes do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que fazem parte de um cluster de failover, consulte a seção sobre a instalação de cluster de failover. Para obter mais informações sobre como executar uma instalação de atualização no modo autônomo, consulte [instalar o SQL Server 2014 do Prompt de comando](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   

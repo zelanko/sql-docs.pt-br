@@ -20,18 +20,18 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 93c72834a7299129109074c2cbaf14760fd34ae8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62943032"
 ---
 # <a name="smo-programming-languages"></a>Linguagens de programação de SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   Esta seção descreve como programar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) no [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual c# .NET.
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Guia de Introdução ao Visual C&#35; .NET](../../relational-databases/server-management-objects-smo/smo-programming-getting-started-in-visual-csharp-net.md)|Fornece informações sobre como começar a escrever um programa de SMO no Visual c# .NET|  
   

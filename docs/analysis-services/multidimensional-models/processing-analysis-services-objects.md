@@ -1,5 +1,5 @@
 ---
-title: Processamento do Analysis Services objetos | Microsoft Docs
+title: Processando do Analysis Services objetos | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d1cd8be08afc7ea0e8e7bf811db4e26208a2feae
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62930930"
 ---
 # <a name="processing-analysis-services-objects"></a>Processando objetos do Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -53,9 +53,9 @@ ms.locfileid: "34026983"
   
 |País|Região de vendas|Estado|  
 |-------------|------------------|-----------|  
-|United States|Oeste|Califórnia|  
-|United States|Oeste|Oregon|  
-|United States|Oeste|Washington|  
+|Estados Unidos|Oeste|Califórnia|  
+|Estados Unidos|Oeste|Oregon|  
+|Estados Unidos|Oeste|Washington|  
   
  O próprio processamento transforma os dados da tabela em hierarquias utilizáveis. Essas hierarquias são nomes de membro completamente articulados que são representados internamente através de caminhos numéricos exclusivos. O exemplo a seguir é uma representação de texto de uma hierarquia.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "34026983"
   
 ## <a name="see-also"></a>Consulte também  
  [Ferramentas e abordagens para processamento &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/tools-and-approaches-for-processing-analysis-services.md)   
- [Processamento em lotes & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
+ [Processamento em lotes &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
  [Processar um modelo multidimensional &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

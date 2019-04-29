@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 142dd6544cafde4cea2839f955f23685a3a673f5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022502"
 ---
 # <a name="create-a-publication"></a>Create a Publication
   Este tópico descreve como criar uma publicação no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou RMO (Replication Management Objects).  
@@ -43,9 +43,9 @@ ms.locfileid: "53365959"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
--   Os nomes de publicação e de artigo não podem incluir nenhum dos seguintes caracteres: % , \* , [ , ] , | , : , " , ? , ', \, /, \< , >. Se os objetos do banco de dados incluírem algum desses caracteres e você desejar replicá-los, será necessário especificar um nome de artigo que seja diferente do nome do objeto na caixa de diálogo **Propriedades do Artigo – \<Artigo>**, disponível na página **Artigos** no assistente.  
+-   Os nomes de publicação e de artigo não podem incluir nenhum dos seguintes caracteres: % , \* , [ , ] , | , : , " , ? , ' , \ , / , \< , >. Se os objetos do banco de dados incluírem algum desses caracteres e você desejar replicá-los, será necessário especificar um nome de artigo que seja diferente do nome do objeto na caixa de diálogo **Propriedades do Artigo – \<Artigo>**, disponível na página **Artigos** no assistente.  
   
 ###  <a name="Security"></a> Segurança  
  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for preciso armazenar credenciais, use os serviços [criptográficos](https://go.microsoft.com/fwlink/?LinkId=34733) fornecidos pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework do Windows.  
@@ -95,7 +95,7 @@ ms.locfileid: "53365959"
   
     -   Especifique um nome para a publicação.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  Publicações podem ser criadas programaticamente usando procedimentos armazenados de replicação. Os procedimentos armazenados a serem usados dependerão do tipo de publicação a ser criada.  
   
 #### <a name="to-create-a-snapshot-or-transactional-publication"></a>Para criar uma publicação de instantâneo ou transacional  

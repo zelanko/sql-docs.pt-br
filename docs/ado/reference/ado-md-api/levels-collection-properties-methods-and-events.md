@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 22fe9f04ea03769cbdc2f100ec6284d17deff097
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043841"
 ---
 # <a name="levels-collection-properties-methods-and-events"></a>Propriedades, métodos e eventos da coleção Levels
 ## <a name="properties"></a>Propriedades  

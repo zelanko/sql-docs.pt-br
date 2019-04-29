@@ -1,5 +1,5 @@
 ---
-title: Utilitário SqlLocalDB | Microsoft Docs
+title: SqlLocalDB Utility | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f13a16e7c8f507914abe8529e02b76161072c5bc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035395"
 ---
 # <a name="sqllocaldb-utility"></a>Utilitário SqlLocalDB
   Use o `SqlLocalDB` utilitário para criar uma instância do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)] **LocalDB**. O `SqlLocalDB` utilitário (SqlLocalDB.exe) é uma ferramenta de linha de comando simples para permitir que os usuários e desenvolvedores criar e gerenciar uma instância do [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB**. Para obter informações sobre como usar **LocalDB**, consulte [SQL Server 2014 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md).  
@@ -88,7 +88,7 @@ SqlLocalDB.exe
 SqlLocalDB.exe create "DEPARTMENT" 12.0 -s  
 ```  
   
-### <a name="b-working-with-a-shared-instance-of-localdb"></a>b. Trabalhando com uma instância compartilhada do LocalDB  
+### <a name="b-working-with-a-shared-instance-of-localdb"></a>B. Trabalhando com uma instância compartilhada do LocalDB  
  Abrir um prompt de comando usando privilégios de administrador.  
   
 ```  

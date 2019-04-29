@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: be88f92c6dbf2a2fc0f04c3f29c54816174aafa0
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63033612"
 ---
 # <a name="create-statistics"></a>Criar estatísticas
   Você pode criar estatísticas de otimização de consulta em uma ou mais colunas de uma tabela ou exibição indexada no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para a maioria das consultas, o otimizador de consulta já gera as estatísticas necessárias para um plano de consulta de alta qualidade; em alguns casos, é necessário criar estatísticas adicionais.  
@@ -44,7 +44,7 @@ ms.locfileid: "54133466"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   Antes de criar estatísticas com a instrução de CREATE STATISTICS, verifique se a opção AUTO_CREATE_STATISTICS está definida no nível do banco de dados. Isso assegurará que o otimizador de consulta continue criando rotineiramente estatísticas de coluna única para colunas de predicado de consulta.  
   
@@ -141,7 +141,7 @@ ms.locfileid: "54133466"
   
 7.  Na caixa de diálogo **Novas Estatísticas na Tabela**_table_name_ , clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-create-statistics"></a>Para criar estatísticas  
   
