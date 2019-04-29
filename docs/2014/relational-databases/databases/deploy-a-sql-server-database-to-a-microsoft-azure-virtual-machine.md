@@ -44,11 +44,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 40f1bf8c37ab27bc00fd291d6687737215519259
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871675"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Implantar um banco de dados do SQL Server em uma máquina virtual do Microsoft Azure
   Use o assistente para **Implantar um Banco de dados do SQL Server em uma VM do Windows Azure** para implantar um banco de dados de uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma Máquina Virtual (VM) do Windows Azure. O assistente utiliza uma operação de backup completo de banco de dados, de modo que sempre copia o esquema de banco de dados completo e os dados de um banco de dados de usuário do SQL Server. O assistente também faz toda a configuração da VM do Azure para você, de modo que nenhuma configuração prévia de VM é necessária.  
@@ -89,11 +89,11 @@ ms.locfileid: "53357896"
   
  Em computadores que executam sistemas operacionais do Windows Server, você deverá usar os seguintes parâmetros de configuração para executar esse assistente:  
   
--   Desativar a configuração de segurança aprimorada:  Use o Gerenciador do servidor > servidor Local para definir a configuração de segurança reforçada (ESC) do Internet Explorer **OFF**.  
+-   Desative a configuração de segurança aprimorada:  Use o Gerenciador do servidor > servidor Local para definir a configuração de segurança reforçada (ESC) do Internet Explorer **OFF**.  
   
--   Habilitar o JavaScript:  Internet Explorer > Opções da Internet > Segurança > Nível do Cliente > Scripts > Scripts Ativos: **Habilitar**.  
+-   Habilite o JavaScript:  Internet Explorer > Opções da Internet > Segurança > nível do cliente > Scripts > scripts ativos: **Habilitar**.  
   
-###  <a name="limitations"></a> Limitações e Restrições  
+###  <a name="limitations"></a> Limitações e restrições  
  A limitação de tamanho do banco de dados para essa operação é de 1 TB.  
   
  Esse recurso de implantação está disponível no SQL Server Management Studio para o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  

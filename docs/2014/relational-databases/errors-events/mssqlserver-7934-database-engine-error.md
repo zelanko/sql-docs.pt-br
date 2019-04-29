@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1306c4463544d2aee882645a2f0a9401a8fb3a60
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913168"
 ---
 # <a name="mssqlserver7934"></a>MSSQLSERVER_7934
     
@@ -30,7 +30,7 @@ ms.locfileid: "48227866"
 |Origem do evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC2_FS_MISSING_ROWSET_DIRECTORY|  
-|Texto da mensagem|Erro de tabela: ID de diretório de Filestream F_ID para a ID de objeto O_ID, ID de índice I_ID, ID de partição PN_ID não encontrada.|  
+|Texto da mensagem|Erro de tabela: O diretório de Filestream F_ID da ID da ID de objeto O_ID, ID de índice I_ID, ID de partição PN_ID não foi encontrado.|  
   
 ## <a name="explanation"></a>Explicação  
  Durante DBCC CHECKDB, foi encontrada uma partição; entretanto, o diretório de conjunto de linhas FILESTREAM correspondente não foi localizado no espaço de dados FILESTREAM.  

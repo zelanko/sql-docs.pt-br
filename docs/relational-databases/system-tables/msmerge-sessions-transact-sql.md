@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4290f3d41cf4e5210a7fde98132db533f8336810
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62903690"
 ---
 # <a name="msmergesessions-transact-sql"></a>MSmerge_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "52817498"
 |**download_rows_retried**|**int**|O número de linhas baixado no Assinante em nova tentativa.|  
 |**schema_changes**|**int**|O número de alterações de esquema aplicado durante a sessão.|  
 |**metadata_rows_cleanedup**|**int**|O número de linhas de metadados limpos durante a sessão.|  
-|**runstatus**|**int**|O status da execução:<br /><br /> **1** = início.<br /><br /> **2** = êxito.<br /><br /> **3** = em andamento.<br /><br /> **4** = ocioso.<br /><br /> **5** = repetição.<br /><br /> **6** = falha.|  
+|**runstatus**|**int**|O status da execução:<br /><br /> **1** = Start.<br /><br /> **2** = êxito.<br /><br /> **3** = em andamento.<br /><br /> **4** = ocioso.<br /><br /> **5** = repetição.<br /><br /> **6** = Fail.|  
 |**estimated_upload_changes**|**int**|O número estimado de alterações que precisa ser aplicado ao Publicador.|  
 |**estimated_download_changes**|**int**|O número estimado de alterações que precisa ser aplicado ao Assinante.|  
 |**connection_type**|**int**|A conexão usada durante o carregamento:<br /><br /> **1** = rede local (LAN).<br /><br /> **2** = conexão de rede dial-up.<br /><br /> **3** = sincronização da web.|  

@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4f1b4823db4ae961024ac2a786c948d8349f31be
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919630"
 ---
 # <a name="nullability-and-three-value-logic-comparisons"></a>Comparações de lógica de três valores e nulidade
   Se estiver familiarizado com os tipos de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você achará a semântica e a precisão semelhantes no `System.Data.SqlTypes` namespace de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. No entanto, há algumas diferenças, e este tópico aborda a mais importante delas.  

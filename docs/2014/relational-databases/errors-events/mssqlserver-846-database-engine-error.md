@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 840898cb41274a1871e5d087e2be1d2ab9e39e23
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913181"
 ---
 # <a name="mssqlserver846"></a>MSSQLSERVER_846
     
@@ -29,7 +29,7 @@ ms.locfileid: "48181566"
 |ID do evento|846|  
 |Origem do evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
-|Nome simbólico|N/A|  
+|Nome simbólico|N/D|  
 |Texto da mensagem|Tempo limite excedido ao aguardar por fechamento do buffer -- tipo %d, bp %p, página %d:%d, stat %#x, id do banco de dados %d; id da unidade de alocação: %I64d%ls, tarefa 0x%p: %d, tempo de espera %d, sinalizadores 0x%I64x, tarefa proprietária 0x%p. Sem continuação de espera.|  
   
 ## <a name="explanation"></a>Explicação  

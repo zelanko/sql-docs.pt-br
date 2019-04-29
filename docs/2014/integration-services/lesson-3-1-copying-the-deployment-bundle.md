@@ -1,5 +1,5 @@
 ---
-title: 'Etapa 1: Copiando o pacote de implantação | Microsoft Docs'
+title: 'Etapa 1: Copiar o pacote de implantação | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1d28a85e4dccaa6165d96046848513879998136f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891679"
 ---
-# <a name="step-1-copying-the-deployment-bundle"></a>Etapa 1: Copiando o pacote de implantação
+# <a name="step-1-copying-the-deployment-bundle"></a>Etapa 1: Copiar o pacote de implantação
   Nesta tarefa, você copiará o pacote de implantação no computador de destino.  
   
  O modo mais fácil de copiar o pacote de implantação no computador de destino é primeiro criar um compartilhamento público no computador de destino, mapear uma unidade para o compartilhamento público e, depois, copiar o pacote de implantação no compartilhamento. Se você não souber criar e configurar pastas públicas ou unidades de mapa, consulte a documentação do Windows.  
@@ -33,7 +33,7 @@ ms.locfileid: "58376494"
 3.  Localize o compartilhamento público para o qual você deseja copiar a pasta no computador de destino e clique em **Colar**.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Etapa 2: Executar o Assistente de instalação de pacotes](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  
+ [Etapa 2: Executar o Assistente de Instalação de Pacotes](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  
   
 ![Ícone do Integration Services (pequeno)](media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   

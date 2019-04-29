@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 209bc81c63998cea299d2c377175955ee99470c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62875718"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>Recuperação de bancos de dados relacionados que contêm transação marcada
   Este tópico é relevante apenas para os bancos de dados que contêm transações marcadas e que usam modelos de recuperação bulk-logged ou completos.  
@@ -54,12 +54,12 @@ ms.locfileid: "48187136"
 BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'    
 ```  
   
- O log de transações registra o nome da marca (nome de transação), a descrição, o banco de dados, o usuário, `datetime` informações e o número de sequência de log (LSN). O `datetime` informações são usadas com o nome da marca para identificar exclusivamente a marca.  
+ O log de transações registra o nome da marca (nome da transação), descrição, banco de dados, usuário, informações `datetime` e o LSN (Log Sequence Number). As informações `datetime` são usadas com o nome da marca exclusivamente para identificar a marca.  
   
  Para obter informações sobre como inserir uma marca em uma transação que abrange vários bancos de dados, veja [Usar transações marcadas para recuperar bancos de dados relacionados de forma consistente &#40;Modelo de recuperação completa&#41;](use-marked-transactions-to-recover-related-databases-consistently.md).  
   
 ## <a name="transact-sql-syntax-for-recovering-to-a-mark"></a>Sintaxe Transact-SQL para recuperar a uma marca  
- Quando você assinala uma transação marcada usando uma instrução [RESTORE LOG](/sql/t-sql/statements/restore-statements-transact-sql), é possível usar uma das seguintes cláusulas para parar na marca ou imediatamente antes dela:  
+ Quando você assinala uma transação marcada usando uma instrução[RESTORE LOG](/sql/t-sql/statements/restore-statements-transact-sql), é possível usar uma das seguintes cláusulas para parar na marca ou imediatamente antes dela:  
   
 -   Use a cláusula WITH STOPATMARK = **'*`<mark_name>`*'** cláusula para especificar que a transação marcada é o ponto de recuperação.  
   

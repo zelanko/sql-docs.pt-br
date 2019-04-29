@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 278a85ddce309f276f61603961169529ffcdfe67
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62896338"
 ---
 # <a name="upper-ssis-expression"></a>UPPER (Expressão SSIS)
   Retorna uma expressão de caractere depois de converter caracteres minúsculos em maiúsculos.  

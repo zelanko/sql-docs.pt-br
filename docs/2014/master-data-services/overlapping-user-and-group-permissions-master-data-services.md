@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3f68f367f782a28f062ea807fb0b7680df15c69d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62923125"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>Sobrepondo permissões de usuário e grupo (Serviços de Dados Mestre)
   As permissões de um usuário são baseadas em:  
@@ -50,7 +50,7 @@ ms.locfileid: "52799258"
   
  Grupo 2 tem **somente leitura** permissão para a entidade produto.  
   
- Resultado: Permissão efetiva do usuário está **atualização** para a entidade produto.  
+ Resultado: A permissão efetiva do usuário é **Atualizar** na entidade Product.  
   
 ## <a name="example-2"></a>Exemplo 2  
  ![mds_conc_user_group_ex_2](../../2014/master-data-services/media/mds-conc-user-group-ex-2.gif "mds_conc_user_group_ex_2")  
@@ -63,7 +63,7 @@ ms.locfileid: "52799258"
   
  O Grupo 2 tem permissão **Negar** para a entidade Produto.  
   
- Resultado: Permissão efetiva do usuário está **Deny** para a entidade produto.  
+ Resultado: A permissão efetiva do usuário é **Negar** na entidade Product.  
   
 ## <a name="example-3"></a>Exemplo 3  
  ![mds_conc_user_group_ex_3](../../2014/master-data-services/media/mds-conc-user-group-ex-3.gif "mds_conc_user_group_ex_3")  
@@ -76,7 +76,7 @@ ms.locfileid: "52799258"
   
  Grupo 2 tem **somente leitura** permissão a um grupo de membros em um nó de hierarquia.  
   
- Resultado: Permissão efetiva do usuário está **atualização** aos membros.  
+ Resultado: A permissão efetiva do usuário é **Atualizar** nos membros.  
   
 ## <a name="see-also"></a>Consulte também  
  [Como as permissões são determinadas &#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md)   

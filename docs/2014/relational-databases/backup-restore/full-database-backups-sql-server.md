@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bad28d9b10d09cbf08e3568d9f994c7d5b84dfda
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922032"
 ---
 # <a name="full-database-backups-sql-server"></a>Backups de bancos de dados completos (SQL Server)
   Um backup completo de banco de dados faz o backup de todo o banco de dados. Isso inclui parte do log de transações de modo que o banco de dados completo possa ser recuperado depois que um backup completo de banco de dados for restaurado. Backups completos de banco de dados representam o banco de dados no momento em que o backup foi concluído.  
@@ -50,7 +50,7 @@ ms.locfileid: "53205375"
   
  ![Mostra a exposição da perda de trabalho entre backups de banco de dados](../../database-engine/media/bnr-rmsimple-1-fulldb-backups.gif "Mostra a exposição da perda de trabalho entre backups de banco de dados")  
   
-### <a name="example--includetsqlincludestsql-mdmd"></a>Exemplo ( [!INCLUDE[tsql](../../../includes/tsql-md.md)])  
+### <a name="example--includetsqlincludestsql-mdmd"></a>Exemplo ([!INCLUDE[tsql](../../../includes/tsql-md.md)])  
  O exemplo a seguir mostra como criar um backup de banco de dados completo usando WITH FORMAT para substituir qualquer backup existente e criar um novo conjunto de mídias.  
   
 ```  
@@ -68,7 +68,7 @@ GO
   
  Para obter informações sobre como criar backups de logs, veja [Backups do log de transações &#40;SQL Server&#41;](transaction-log-backups-sql-server.md).  
   
-### <a name="example--includetsqlincludestsql-mdmd"></a>Exemplo ( [!INCLUDE[tsql](../../../includes/tsql-md.md)])  
+### <a name="example--includetsqlincludestsql-mdmd"></a>Exemplo ([!INCLUDE[tsql](../../../includes/tsql-md.md)])  
  O exemplo a seguir mostra como criar um backup de banco de dados completo usando WITH FORMAT para substituir qualquer backup existente e criar um novo conjunto de mídias. Assim, o exemplo faz o backup do log de transações. Em uma situação da vida real, você teria de executar uma série de backups regulares de log. Para esse exemplo, o banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] deve ser definido para usar o modelo de recuperação completa.  
   
 ```  

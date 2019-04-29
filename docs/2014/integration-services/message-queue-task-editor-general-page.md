@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7668cf38f01f049b95423547430e1027a4ab6090
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890412"
 ---
 # <a name="message-queue-task-editor-general-page"></a>Editor da Tarefa Fila de Mensagens (página Geral)
   Use a **página Geral** da caixa de diálogo do **Editor da Tarefa Fila de Mensagens** para nomear e descrever a tarefa Fila de Mensagens, especificar o formato da mensagem e indicar se a tarefa envia ou recebe mensagens.  
@@ -43,7 +43,7 @@ ms.locfileid: "58375854"
  **MSMQConnection**  
  Selecione um gerenciador de conexões de MSMQ existente ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
   
- **Tópicos relacionados**: [Gerenciador de Conexão do MSMQ](connection-manager/msmq-connection-manager.md), [Editor do Gerenciador de Conexão MSMQ](../../2014/integration-services/msmq-connection-manager-editor.md)  
+ **Tópicos relacionados**: [Gerenciador de conexões MSMQ](connection-manager/msmq-connection-manager.md), [Editor do Gerenciador de conexões MSMQ](../../2014/integration-services/msmq-connection-manager-editor.md)  
   
  **Mensagem**  
  Especifique se a tarefa Fila de Mensagens envia ou recebe mensagens. Se você selecionar **Enviar mensagem**, será listada a página Enviar no painel esquerdo da caixa de diálogo; se você selecionar **Receber mensagem**, será listada a página Receber. Por padrão, esse valor está definido como **Enviar mensagem**.  

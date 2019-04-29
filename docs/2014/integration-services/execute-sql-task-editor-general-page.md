@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 559f13c3c777931270f4bc289f890f2360361030
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898834"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>Editor da Tarefa Executar SQL (página Geral)
   Use a página **Geral** da caixa de diálogo **Editor da Tarefa Executar SQL** para configurar a tarefa Executar SQL e fornecer a instrução SQL executada pela tarefa.  
@@ -55,7 +55,7 @@ ms.locfileid: "58382265"
  **ConnectionType**  
  Escolha o tipo de gerenciador de conexões a ser usado para conectar-se à fonte de dados. Os tipos de conexão disponíveis incluem **OLE DB**, **ODBC**, **ADO**, **ADO.NET** e **SQLMOBILE**.  
   
- **Tópicos relacionados:** [Gerenciador de Conexão do OLE DB](connection-manager/ole-db-connection-manager.md), [Gerenciador de Conexão ODBC](connection-manager/odbc-connection-manager.md), [Gerenciador de Conexão do ADO](connection-manager/ado-connection-manager.md), [Gerenciador de Conexão ADO.NET](connection-manager/ado-net-connection-manager.md), [do SQL Server Gerenciador de Conexão do Compact Edition](connection-manager/sql-server-compact-edition-connection-manager.md)  
+ **Tópicos relacionados:** [Gerenciador de conexões do OLE DB](connection-manager/ole-db-connection-manager.md)e [Gerenciador de conexões ODBC](connection-manager/odbc-connection-manager.md)e [Gerenciador de conexões ADO](connection-manager/ado-connection-manager.md)e [Gerenciador de conexões ADO.NET](connection-manager/ado-net-connection-manager.md)e [Gerenciador de conexões do SQL Server Compact Edition](connection-manager/sql-server-compact-edition-connection-manager.md)  
   
  **Conexão**  
  Escolha a conexão a partir de uma lista definida de gerenciadores de conexões. Para criar uma nova conexão, selecione \<**Nova conexão…**>.  
@@ -104,13 +104,13 @@ ms.locfileid: "58382265"
  **FileConnection**  
  Selecione um gerenciador de conexões de arquivos existente ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
   
- **Tópicos relacionados:** [Gerenciador de Conexão de arquivos](connection-manager/file-connection-manager.md), [Editor do Gerenciador de Conexão de arquivos](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Tópicos relacionados:** [Gerenciador de conexões de arquivos](connection-manager/file-connection-manager.md), [Editor do Gerenciador de conexões de Arquivos](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="sqlsourcetype--variable"></a>SQLSourceType = Variável  
  **SourceVariable**  
  Selecione uma variável existente ou clique em \<**Nova variável...**> para criar uma nova variável.  
   
- **Tópicos relacionados:** [Serviços de integração &#40;SSIS&#41; variáveis](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md)  
+ **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   

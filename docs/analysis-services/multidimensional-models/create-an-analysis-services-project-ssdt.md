@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4fe65216ad293786496f412c9cc1451e6b92a7bf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866956"
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>Criar um Projeto de Analysis Services (SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -143,7 +143,7 @@ ms.locfileid: "52503389"
   
  Os modelos de item, listados na tabela a seguir, estão disponíveis na categoria Itens de Projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] na caixa de diálogo **Adicionar Novo Item** .  
   
-|Categoria|Modelo de item|Descrição|  
+|Category|Modelo de item|Descrição|  
 |--------------|-------------------|-----------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Itens de projeto|Cube|Inicia o Assistente para Cubos para adicionar um cubo novo ao projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 ||fonte de dados|Inicia o Assistente para Fonte de Dados para adicionar uma nova fonte de dados ao projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  

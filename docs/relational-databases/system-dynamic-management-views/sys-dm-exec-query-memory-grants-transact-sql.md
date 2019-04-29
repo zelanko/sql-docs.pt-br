@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2332e4f80e0dded930b22d9f0faf76d80ec09141
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013230"
 ---
 # <a name="sysdmexecquerymemorygrants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,9 +53,9 @@ ms.locfileid: "52413403"
 |**max_used_memory_kb**|**bigint**|Máximo de memória física usada até este momento em quilobytes.|  
 |**query_cost**|**float**|Custo de consulta estimado.|  
 |**timeout_sec**|**int**|Tempo limite em segundos antes de esta consulta desistir da solicitação de concessão de memória.|  
-|**resource_semaphore_id**|**smallint**|ID não exclusivo do semáforo do recurso no qual esta consulta está aguardando.<br /><br /> **Observação:** Este ID é exclusivo em versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Essa alteração pode afetar a execução de consulta de solução de problemas. Para obter mais informações, consulte "Comentários", posteriormente neste tópico.|  
+|**resource_semaphore_id**|**smallint**|ID não exclusivo do semáforo do recurso no qual esta consulta está aguardando.<br /><br /> **Observação:** Essa ID é exclusiva em versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Essa alteração pode afetar a execução de consulta de solução de problemas. Para obter mais informações, consulte "Comentários", posteriormente neste tópico.|  
 |**queue_id**|**smallint**|ID da fila de espera em que esta consulta aguarda concessões de memória. NULL se a memória já tiver sido concedida.|  
-|**wait_order**|**int**|Ordem sequencial das consultas de espera dentro do especificado **queue_id**. Esse valor poderá ser alterado para uma determinada consulta se outras consultas obtiverem concessões de memória ou tempo limite. NULL se a memória já tiver sido concedida.|  
+|**wait_order**|**int**|Ordem sequencial das consultas de espera dentro do especificado **queue_id**. Esse valor pode mudar para uma determinada consulta se outras consultas obtiverem concessões de memória ou tempo limite. NULL se a memória já tiver sido concedida.|  
 |**is_next_candidate**|**bit**|Candidato para a próxima concessão de memória.<br /><br /> 1 = Sim<br /><br /> 0 = Não<br /><br /> NULL = Se a memória já tiver sido concedida.|  
 |**wait_time_ms**|**bigint**|Tempo de espera em milissegundos. NULL se a memória já tiver sido concedida.|  
 |**plan_handle**|**varbinary(64)**|Identificador para este plano de consulta. Use **. DM exec_query_plan** para extrair o plano XML real.|  

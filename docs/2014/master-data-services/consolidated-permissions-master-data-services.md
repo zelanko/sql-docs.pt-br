@@ -17,11 +17,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 91c00dc638369d46986ee3757a6d889ed5a1439f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62925403"
 ---
 # <a name="consolidated-permissions-master-data-services"></a>Permissões consolidadas (Serviços de Dados Mestre)
   Permissões consolidadas se aplicam aos valores de atributos para todos os membros consolidados de uma entidade.  
@@ -47,7 +47,7 @@ ms.locfileid: "56042897"
 |----------------|-----------------|  
 |**Somente leitura**|O atributo é exibido, mas o usuário não pode alterar valores de atributo.|  
 |**Update (atualizar)**|O atributo é exibido e o usuário pode alterar valores de atributo.|  
-|**Deny**|O atributo não é exibido.<br /><br /> Observação: Você não pode negar acesso explicitamente para os atributos Name e Code.|  
+|**Deny**|O atributo não é exibido.<br /><br /> Observação: Você não pode negar acesso explicitamente para atributos Name e Code.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Atribuir permissões de objeto de modelo &#40;Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)   

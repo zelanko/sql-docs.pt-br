@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f2d95909e76c6b5c3665926783fb42ff247d1ba9
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62894054"
 ---
 # <a name="foreach-loop-editor-variable-mappings-page"></a>Editor de Loop Foreach (página Mapeamentos de Variáveis)
   Use a página **Mapeamentos de Variáveis** da caixa de diálogo **Editor de Loop Foreach** para mapear variáveis para o valor da coleção. O valor da variável é atualizado com os valores da coleção em cada iteração do loop.  
@@ -34,7 +34,7 @@ ms.locfileid: "58386694"
 > [!NOTE]  
 >  Depois que você mapeia uma variável, uma nova linha é adicionada automaticamente à lista **Variável**.  
   
- **Tópicos relacionados**: [Serviços de integração &#40;SSIS&#41; variáveis](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md)  
+ **Tópicos relacionados**: [Variáveis do Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md)  
   
  **Index**  
  Se estiver usando o Enumerador de Item Foreach, especifique o índice da coluna no valor da coleção para mapear para a variável. Em outros tipos de enumerador, o índice é somente leitura.  

@@ -38,11 +38,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 3df05bddf37970ce0ff0d796bc2b5d93d309b4dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011729"
 ---
 # <a name="database-level-roles"></a>Funções de nível de banco de dados
   Para gerenciar facilmente as permissões em seus bancos de dados, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornece várias *funções* , que são entidades de segurança que agrupam outras entidades. Elas são como ***grupos*** no sistema operacional [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. As funções de nível de banco de dados são permitidas em todo banco de dados em seus escopos de permissões.  
@@ -58,7 +58,7 @@ ms.locfileid: "48104108"
   
  A tabela a seguir mostra as funções de nível de banco de dados fixas e seus recursos. Essas funções existem em todos os bancos de dados.  
   
-|Nome da função no nível do banco de dados|Description|  
+|Nome da função no nível do banco de dados|Descrição|  
 |-------------------------------|-----------------|  
 |**db_owner**|Os membros da função de banco de dados fixa **db_owner** podem executar todas as atividades de configuração e manutenção no banco de dados, bem como descartar o banco de dados.|  
 |**db_securityadmin**|Os membros da função de banco de dados fixa **db_securityadmin** podem modificar a associação de funções e gerenciar permissões. A adição de entidades nesta função pode habilitar o escalonamento não intencional de privilégios.|  
@@ -73,7 +73,7 @@ ms.locfileid: "48104108"
 ## <a name="msdb-roles"></a>Funções msdb  
  O banco de dados msdb contém as funções com finalidade especial que são mostradas na tabela a seguir.  
   
-|Nome da função msdb|Description|  
+|Nome da função msdb|Descrição|  
 |--------------------|-----------------|  
 |`db_ssisadmin`<br /><br /> **db_ssisoperator**<br /><br /> **db_ssisltduser**|Os membros dessas funções de banco de dados podem administrar e usar o [!INCLUDE[ssIS](../../../includes/ssis-md.md)]. As instâncias do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que são atualizadas de uma versão anterior podem conter uma versão mais antiga da função que foi nomeada com o DTS (Data Transformation Services), e não com o [!INCLUDE[ssIS](../../../includes/ssis-md.md)]. Para obter mais informações, veja [Funções do Integration Services &#40;Serviço do SSIS&#41;](../../../integration-services/security/integration-services-roles-ssis-service.md).|  
 |`dc_admin`<br /><br /> **dc_operator**<br /><br /> **dc_proxy**|Os membros dessas funções de banco de dados podem administrar e usar o coletor de dados. Para obter mais informações, consulte [Data Collection](../../data-collection/data-collection.md).|  
@@ -87,7 +87,7 @@ ms.locfileid: "48104108"
 ## <a name="working-with-database-level-roles"></a>Trabalhando com funções de nível de banco de dados  
  A tabela a seguir explica os comandos, exibições e funções para trabalhar com funções de nível de banco de dados.  
   
-|Recurso|Tipo|Description|  
+|Recurso|Tipo|Descrição|  
 |-------------|----------|-----------------|  
 |[sp_helpdbfixedrole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql)|Metadados|Retorna uma lista das funções de banco de dados fixas.|  
 |[sp_dbfixedrolepermission &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql)|Metadados|Exibe as permissões de uma função de banco de dados fixa.|  

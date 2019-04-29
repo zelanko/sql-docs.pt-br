@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ebc7288bd7c72ce76df69d11c7a9fb0771764fca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856141"
 ---
 # <a name="remove-statements-that-modify-system-objects"></a>Remover instruções que modificam objetos do sistema
   O Supervisor de Atualização detectou instruções que atualizam o catálogo do sistema. Atualizações diretas no catálogo do sistema não são permitidas. Modifique seus scripts SQL para usar APIs oficiais e documentadas.  
@@ -27,7 +27,7 @@ ms.locfileid: "48079946"
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrição  
  Atualizações diretas no catálogo do sistema não são permitidas. Qualquer tentativa para fazer essas atualizações gerará o erro seguinte:  
   
  `Server: Msg 259, Level 16, State 1, Line 1`  

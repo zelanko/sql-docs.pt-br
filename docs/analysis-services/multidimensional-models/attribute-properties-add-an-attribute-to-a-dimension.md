@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 02773eadf282fe9ac25fa96543a86c5d3e77da4c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020619"
 ---
-# <a name="attribute-properties---add-an--attribute-to-a-dimension"></a>Atributo propriedades - adicionar um atributo a uma dimensão
+# <a name="attribute-properties---add-an--attribute-to-a-dimension"></a>Propriedades do atributo – Adicionar um atributo a uma dimensão
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Você pode adicionar um atributo a uma dimensão automática ou manualmente no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   

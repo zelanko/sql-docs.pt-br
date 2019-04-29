@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2dfc75b2af19165931dc50e76f04bc7362b59ea8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873027"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Implantar um banco de dados usando um DAC
   Use o Assistente **Implantar Banco de Dados no SQL Azure** para implantar um banco de dados entre uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e um servidor [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ou entre dois servidores [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
@@ -36,7 +36,7 @@ ms.locfileid: "53362808"
   
  As opções de banco de dados, como TRUSTWORTHY, DB_CHAINING e HONOR_BROKER_PRIORITY, não podem ser ajustadas como parte do processo de implantação. Propriedades físicas, como o número de grupos de arquivos ou os números e os tamanhos de arquivos, não podem ser alteradas como parte do processo de implantação. Após a conclusão da implantação, você pode usar a instrução ALTER DATABASE, o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ou o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell para personalizar o banco de dados.  
   
-###  <a name="LimitationsRestrictions"></a> Limitações e Restrições  
+###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
  O assistente para **Implantar Banco de Dados** oferece suporte à implantação de um banco de dados:  
   
 -   De uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  

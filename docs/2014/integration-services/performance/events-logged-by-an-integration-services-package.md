@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ef709a48f0c5c162e971cebbdf5d49c4417250ed
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889828"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Eventos registrados em log por um pacote do Integration Services
   Um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] registra várias mensagens de eventos no log de eventos de Aplicativo do Windows. Um pacote registra estas mensagens quando é iniciado e interrompido e quando ocorrem determinados problemas.  
@@ -35,7 +35,7 @@ ms.locfileid: "58378984"
 > [!NOTE]  
 >  O pacote registrará em log as mensagens listadas na tabela abaixo mesmo que você não tenha habilitado o log no pacote.  
   
-|ID do evento|Nome simbólico|Texto|Observações|  
+|ID do evento|Nome simbólico|Text|Observações|  
 |--------------|-------------------|----------|-----------|  
 |12288|DTS_MSG_PACKAGESTART|Pacote "" iniciado.|A execução do pacote foi iniciada.|  
 |12289|DTS_MSG_PACKAGESUCCESS|Pacote "" concluído com êxito.|O pacote foi executado com êxito e não está mais sendo executado.|  
@@ -55,7 +55,7 @@ ms.locfileid: "58378984"
   
 ### <a name="messages-about-the-stages-of-package-execution"></a>Mensagens sobre os estágios da execução do pacote.  
   
-|ID do evento|Nome simbólico|Texto|Observações|  
+|ID do evento|Nome simbólico|Text|Observações|  
 |--------------|-------------------|----------|-----------|  
 |12544|DTS_MSG_EVENTLOGENTRY|Nome do Evento: %1%r Mensagem: %9%r Operador: %2%r Nome da Origem: %3%r ID da Origem: %4%r ID de Execução: %5%r Hora de Início: %6%r Hora de Término: %7%r Código de Dados: %8|Quando você configura o log de pacotes para o log de eventos de Aplicativo, várias mensagens usam esse formato genérico.|  
 |12556|DTS_MSG_EVENTLOGENTRY_PACKAGESTART|Nome do Evento: %1%r Mensagem: %9%r Operador: %2%r Nome da Origem: %3%r ID da Origem: %4%r ID de Execução: %5%r Hora de Início: %6%r Hora de Término: %7%r Código de Dados: %8|O pacote foi iniciado.|  
@@ -68,7 +68,7 @@ ms.locfileid: "58378984"
 ### <a name="messages-about-events-that-occur"></a>Mensagens sobre eventos que ocorrem  
  A tabela a seguir lista apenas algumas das mensagens geradas por eventos. Para obter uma lista mais completa de erros, avisos e mensagens informativas usados pelo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consulte [Referência de mensagens e erros do Integration Services](../integration-services-error-and-message-reference.md).  
   
-|ID do evento|Nome simbólico|Texto|Observações|  
+|ID do evento|Nome simbólico|Text|Observações|  
 |--------------|-------------------|----------|-----------|  
 |12251|DTS_MSG_EVENTLOGENTRY_TASKFAILED|Nome do Evento: %1%r Mensagem: %9%r Operador: %2%r Nome da Origem: %3%r ID da Origem: %4%r ID de Execução: %5%r Hora de Início: %6%r Hora de Término: %7%r Código de Dados: %8|A tarefa falhou.|  
 |12250|DTS_MSG_EVENTLOGENTRY_ERROR|Nome do Evento: %1%r Mensagem: %9%r Operador: %2%r Nome da Origem: %3%r ID da Origem: %4%r ID de Execução: %5%r Hora de Início: %6%r Hora de Término: %7%r Código de Dados: %8|Esta mensagem reporta um erro ocorrido.|  

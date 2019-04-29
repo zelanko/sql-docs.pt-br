@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 209462ef2a49a29e5c5216ba1ce89887079bd824
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62925954"
 ---
 # <a name="change-a-user39s-email-address-master-data-services"></a>Alterar o endereço de email de um usuário (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], você pode alterar o endereço de email para o qual são enviadas notificações e o formato padrão dos emails de notificação.  

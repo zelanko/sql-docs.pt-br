@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 9763c0a12bd9af232c8a2c3d6b7194e901ca5c3f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62925949"
 ---
 # <a name="change-a-version-name-master-data-services"></a>Alterar o nome de uma versão (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], altere o nome da versão para personalizá-la para sua organização.  

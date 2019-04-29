@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 66393f8b48c9075c3200b1c56b8447410e143c57
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62921061"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>Restaurar um banco de dados do SQL Server até um ponto determinado (modelo de recuperação completa)
   Este tópico descreve como restaurar um banco de dados em um determinado ponto no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Este tópico é relevante apenas para os bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usam o modelo de recuperação completa ou bulk-logged.  
@@ -78,7 +78,7 @@ ms.locfileid: "52506818"
   
          Após adicionar os dispositivos desejados à caixa de listagem **Mídia de backup** , clique em **OK** para voltar à página **Geral** .  
   
-         No **fonte: Dispositivo: Banco de dados** caixa de listagem, selecione o nome do banco de dados que deve ser restaurado.  
+         Na caixa de listagem **Fonte: Dispositivo: Banco de Dados**, selecione o nome do banco de dados que deve ser restaurado.  
   
          **Observação** Essa lista estará disponível apenas quando **Dispositivo** for selecionado. Apenas os bancos de dados que têm backups no dispositivo selecionado estarão disponíveis.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "52506818"
   
 14. Selecione **Perguntar antes de restaurar cada backup** para que você seja solicitado entre cada operação de restauração. Isso normalmente só é necessário quando o banco de dados é grande e você deseja monitorar o status da operação de restauração.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Before you begin**  
   
  Um momento especificado sempre é restaurado a partir de um backup de log. Em cada instrução RESTORE LOG da sequência de restauração, especifique a transação ou o tempo de destino em uma cláusula STOPAT idêntica. Como um pré-requisito para uma restauração pontual, você deve restaurar primeiro um backup de banco de dados completo cujo ponto de extremidade seja anterior ao tempo de recuperação designado. Esse backup de banco de dados completo pode ser anterior ao backup de banco de dados completo mais recente desde que você depois restaure todos os backups de log subsequentes, até o backup de log que contém o tempo determinado.  

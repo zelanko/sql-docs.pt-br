@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 55eab0bbfacdde17ff69dd36a0641561695bc14d
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872202"
 ---
 # <a name="create-a-database-mail-profile"></a>Criar um perfil do Database Mail
   Use o **Assistente para Configuração do Database Mail** ou o [!INCLUDE[tsql](../../includes/tsql-md.md)] para criar perfis públicos e privados do Database Mail.  
@@ -52,7 +52,7 @@ ms.locfileid: "53979132"
   
 -   Na página **Gerenciar Perfis e Contas** , selecione a opção **Criar um novo perfil** e clique em **Avançar**.  
   
--   Sobre o **novo perfil** página, especifique o nome do perfil, descrição e adicione contas a ser incluído no perfil e, em seguida, clique em **próxima**.  
+-   Na página **Novo Perfil**, especifique o nome do Perfil, a Descrição e adicione contas a serem incluídas no perfil; depois, clique em **Avançar**.  
   
 -   Na página **Concluir o Assistente** , examine as ações a serem executadas e clique em **Concluir** para concluir a criação de um novo perfil.  
   

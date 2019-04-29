@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 03a747825c20b1183977b6c5b8e7f46ef2aa034f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922570"
 ---
 # <a name="use-powershell-to-backup-multiple-databases-to-windows-azure-blob-storage-service"></a>Usar o PowerShell para fazer backup de vários bancos de dados no serviço de armazenamento de Blob do Windows Azure
   Este tópico fornece scripts de exemplo que podem ser usados para automatizar backups no serviço do armazenamento do Blob do Windows Azure usando os cmdlets do PowerShell.  
@@ -49,7 +49,7 @@ ms.locfileid: "52519539"
   
  Estas são as considerações sobre os exemplos de script:  
   
-1.  **Navegando nos caminhos do SQL Server PowerShell:** Windows PowerShell implementa cmdlets para navegar no caminho que representa a hierarquia de objetos com suporte por um provedor do PowerShell. Ao navegar até um nó do caminho, você pode usar outros cmdlets para executar operações básicas no objeto atual.  
+1.  **Navegar em caminhos do SQL Server PowerShell:** O Windows PowerShell implementa cmdlets para navegar na estrutura do caminho que representa a hierarquia de objetos por um provedor do PowerShell. Ao navegar até um nó do caminho, você pode usar outros cmdlets para executar operações básicas no objeto atual.  
   
 2.  `Get-ChildItem` cmdlet: As informações retornadas pelo `Get-ChildItem` depende do local em um caminho do SQL Server PowerShell. Por exemplo, se o local estiver no nível do computador, esse cmdlet retornará todas as instâncias do mecanismo de banco de dados do SQL Server instaladas no computador. Como outro exemplo, se o local estiver no nível do objeto, como os bancos de dados, este cmdlet retornará uma lista de objetos de banco de dados.  Por padrão, o cmdlet `Get-ChildItem` não retorna nenhum objeto do sistema.  Usando o parâmetro -Force, você poderá ver os objetos do sistema.  
   

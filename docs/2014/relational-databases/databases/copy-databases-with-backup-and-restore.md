@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a35156a465e521ceea60fa090142836da6a4c1a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917463"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Copiar bancos de dados com backup e restauração
   No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], é possível criar um novo banco de dados por meio da restauração de um backup de um banco de dados do usuário criado por meio do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou de uma versão posterior. No entanto, backups de **master**, **model** e **msdb** que foram criados em uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não podem ser restaurados pelo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Além disso, backups do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] não podem ser restaurados por nenhuma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -62,7 +62,7 @@ ms.locfileid: "52787828"
  Para evitar erros e consequências não intencionais, antes da operação de restauração, você pode usar o [backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql) tabela de histórico para descobrir os arquivos de log e banco de dados no backup que você planeja restaurar.  
   
 ## <a name="moving-the-database-files"></a>Movendo os arquivos do banco de dados  
- Se os arquivos que estão no backup do banco de dados não puderem ser restaurados no computador de destino pelas razões mencionadas anteriormente, será necessário mover os arquivos para um novo local enquanto estiverem sendo restaurados. Por exemplo:  
+ Se os arquivos que estão no backup do banco de dados não puderem ser restaurados no computador de destino pelas razões mencionadas anteriormente, será necessário mover os arquivos para um novo local enquanto estiverem sendo restaurados. Por exemplo:   
   
 -   Você deseja restaurar um banco de dados de backups criado no local padrão da versão anterior.  
   

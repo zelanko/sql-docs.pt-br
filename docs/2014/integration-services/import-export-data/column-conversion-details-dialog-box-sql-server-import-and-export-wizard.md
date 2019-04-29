@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9ac9035865a472b4f6c019124f6b3fd337e27f77
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62893165"
 ---
 # <a name="column-conversion-details-dialog-box-sql-server-import-and-export-wizard"></a>Caixa de diálogo Detalhes da Conversão de Coluna (Assistente de Importação e Exportação do SQL Server)
   Use o **detalhes da conversão de coluna** caixa de diálogo para examinar as informações detalhadas de conversão sobre uma coluna individual. Essas informações de conversão contêm o tipo de dados da coluna na origem e no destino, além da conversão a ser realizada pelo assistente. Essa página também relaciona os arquivos de mapeamento de tipo de dados usados pelo assistente para determinar as conversões de tipo de dados necessárias. O [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instala esses tipos de dados com o mapeamento de arquivos durante a instalação.  

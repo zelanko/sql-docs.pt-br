@@ -18,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 24e88abe61ef373cb93449d44d40c47742f95898
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59936682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631754"
 ---
 # <a name="technical-reference-ssrs"></a>Referência técnica (SSRS)
   Localize as ferramentas e a documentação de referência do PowerShell para usar ou administrar o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  

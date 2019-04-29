@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 098fc44f4a46a821c3e0f6d17d150d34f3d0d967
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913138"
 ---
 # <a name="mssqlserver7914"></a>MSSQLSERVER_7914
     
@@ -30,7 +30,7 @@ ms.locfileid: "48113376"
 |Origem do evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC2_REPAIR_ALLOCATION_PAGE_REBUILT|  
-|Texto da mensagem|Correção: a página PAGE_TYPE em P_ID foi recriada.|  
+|Texto da mensagem|Reparar: A página PAGE_TYPE em P_ID foi recriada.|  
   
 ## <a name="explanation"></a>Explicação  
  Essa é uma mensagem informativa da cláusula REPAIR que afirma que uma página GAM ou SGAM foi reconstruída usando-se os dados da página PFS.  

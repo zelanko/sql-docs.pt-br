@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 114460af84d4e820ccd263fc4bf5188b65775c85
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62902180"
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>Carregar dados por meio do destino OLE DB
   Para adicionar e configurar um destino OLE DB, o pacote já deve incluir pelo menos uma tarefa de Fluxo de Dados e uma fonte.  
@@ -42,7 +42,7 @@ ms.locfileid: "58376713"
   
     -   **Tabela ou exibição** Selecione uma tabela ou exibição no banco de dados que contém os dados.  
   
-    -   **Tabela ou exibição – carregamento rápido** selecione uma tabela ou exibição no banco de dados que contém os dados e, em seguida, defina as opções de carregamento rápido: **Manter identidade**, **manter nulos**, **bloqueio de tabela**, **restrição de verificação**, **linhas por lote**, ou **máximo Insira o tamanho de confirmação**.  
+    -   **Tabela ou exibição – carregamento rápido** Selecione uma tabela ou exibição no banco de dados que contém os dados, depois defina as opções de carregamento rápido: **Manter identidade**, **Manter nulos**, **Bloqueio de tabela**, **Restrição de verificação**, **Linhas por lote** ou **Tamanho máximo de confirmação de inserção**.  
   
     -   **Variável de nome da tabela ou exibição** Selecione a variável definida pelo usuário que contém o nome da tabela ou da exibição no banco de dados.  
   

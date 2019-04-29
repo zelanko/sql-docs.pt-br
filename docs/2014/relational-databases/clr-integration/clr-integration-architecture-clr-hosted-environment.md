@@ -28,11 +28,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dbbc884a32f892830ec4b7b66e3a67c45fc37416
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922560"
 ---
 # <a name="clr-hosted-environment"></a>Ambiente hospedado de CLR
   O CLR (Common Language Runtime) do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework é um ambiente que executa várias linguagens de programação modernas, incluindo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic e [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C++. O CLR tem memória com coleta de lixo, threading preemptivo, serviços de metadados (reflexão de tipo), capacidade de verificação de código e segurança de acesso ao código. Ele usa metadados para localizar e carregar classes, distribuir as instâncias na memória, resolver invocações de métodos, gerar código nativo, impor a segurança e definir limites de contexto em tempo de execução.  
@@ -100,7 +100,7 @@ ms.locfileid: "48129146"
 ## <a name="how-sql-server-and-the-clr-work-together"></a>Como o SQL Server e o CLR trabalham juntos  
  Esta seção discute como o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] integra os modelos de threading, agendamento, sincronização e gerenciamento de memória do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e do CLR. Em particular, esta seção examina a integração sob o ponto de vista das metas de escalabilidade, confiabilidade e segurança. O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] atua essencialmente como o sistema operacional para o CLR quando este é hospedado no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O CLR chama rotinas de baixo nível implementadas pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para threading, agendamento e gerenciamento de memória. Elas são as mesmas primitivas que o restante do mecanismo do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa. Esta abordagem fornece vários benefícios de escalabilidade, confiabilidade e segurança.  
   
-###### <a name="scalability-common-threading-scheduling-and-synchronization"></a>Escalabilidade: Threading, agendamento e sincronização comuns  
+###### <a name="scalability-common-threading-scheduling-and-synchronization"></a>Escalabilidade: Comuns de threading, agendamento e sincronização  
  O CLR chama as APIs do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para criar threads, tanto para executar código de usuário quanto para seu próprio uso interno. Para fazer a sincronização de vários threads, o CLR chama objetos de sincronização do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Isto permite que o agendador [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para agende outras tarefas quando um thread estiver esperando um objeto de sincronização. Por exemplo, quando o CLR iniciar a coleta de lixo, todos os seus threads esperam a coleta de lixo terminar. Como os threads do CLR e os objetos de sincronização pelos quais eles estão esperando são conhecidos para o agendador do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pode agendar threads que estão executando outras tarefas do banco de dados que não envolvem o CLR. Isto também permite que o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] detecte deadlocks que envolvem bloqueios tomados pelos objetos de sincronização CLR e utilize técnicas tradicionais para remoção de deadlock.  
   
  O código gerenciado é executado preventivamente no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O agendador do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tem a capacidade de detectar e parar threads que não tenham sido executados durante um tempo significativo. A capacidade de conectar threads do CLR a threads do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implica que o agendador do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pode identificar threads “fugitivos” no CLR e gerenciar sua prioridade. Tais threads fugitivos são suspensos e devolvidos à fila. Os threads que são identificados repetidamente como fugitivos não recebem permissão de execução por um determinado período de tempo, para que outros trabalhos possam ser executados.  
@@ -116,16 +116,16 @@ ms.locfileid: "48129146"
   
  Quando é feita hospedagem no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], essas anulações de thread são manipuladas da seguinte forma: o CLR detecta qualquer estado compartilhado no domínio do aplicativo no qual a anulação de thread ocorre. Ele faz isto verificando para a presença de objetos de sincronização. Se houver um estado compartilhado no domínio do aplicativo, então o próprio domínio do aplicativo será descarregado. A descarga do domínio do aplicativo para transações de banco de dados que estão em execução no momento, naquele domínio de aplicativo. Como a presença do estado compartilhado pode ampliar o impacto de tais exceções críticas para as sessões de usuário que não são aquela que está disparando a exceção, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e o CLR tomaram medidas para reduzir a probabilidade de estado compartilhado. Para obter mais informações, consulte a documentação do .NET Framework.  
   
-###### <a name="security-permission-sets"></a>Segurança: conjuntos de permissões  
- O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite que os usuários especifiquem os requisitos de confiabilidade e segurança para o código implantado no banco de dados. Quando os assemblies são carregados no banco de dados, o autor do assembly pode especificar um dos três conjuntos de permissões para esse assembly: SAFE, EXTERNAL_ACCESS e UNSAFE.  
+###### <a name="security-permission-sets"></a>Segurança: Conjuntos de permissões  
+ O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite que os usuários especifiquem os requisitos de confiabilidade e segurança para o código implantado no banco de dados. Quando os assemblies são carregados no banco de dados, o autor do assembly pode especificar um dos três conjuntos de permissões para esse assembly: -SAFE, EXTERNAL_ACCESS e UNSAFE.  
   
 |||||  
 |-|-|-|-|  
 |Conjunto de permissões|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |Segurança de Acesso do Código|Somente execução|Execução + acesso a recursos externos|Irrestrito|  
 |Restrições do modelo de programação|Sim|Sim|Sem restrições|  
-|Requisito de verificabilidade|Sim|Sim|não|  
-|Capacidade de chamar código nativo|não|não|Sim|  
+|Requisito de verificabilidade|Sim|Sim|Não|  
+|Capacidade de chamar código nativo|Não|Não|Sim|  
   
  SAFE é o modo mais confiável e seguro, com restrições associadas ao modelo de programação permitido. Assemblies SAFE recebem permissão suficiente para executar, realizar cálculos e ter acesso ao banco de dados local. Assemblies SAFE precisam ser seguros do tipo verificável e não têm permissão para chamar código não gerenciado.  
   

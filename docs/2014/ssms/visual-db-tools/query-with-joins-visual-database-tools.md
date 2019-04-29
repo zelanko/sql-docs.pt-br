@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 89eebf359167559357ef9c3aadf7599b77c8d376
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52809788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63010761"
 ---
 # <a name="query-with-joins-visual-database-tools"></a>Consultar com junções (Visual Database Tools)
   Um resultado de consulta pode incluir dados de várias tabelas ou objetos com valor de tabela. Para combinar dados de vários objetos com valor de tabela, você usa a operação JOIN do SQL.  

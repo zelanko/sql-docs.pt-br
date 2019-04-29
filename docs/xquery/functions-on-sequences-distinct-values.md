@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 48b338416b7bd464a69c424354f4029c719fef33
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62939089"
 ---
 # <a name="functions-on-sequences---distinct-values"></a>Funções em Sequências – distinct-values
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ select @x.query('
 ') as result  
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 111-111-1111 222-222-2222    

@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 58f946f89691a6e26ba4402166b8ad725e7a977c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62925044"
 ---
 # <a name="deploying-models-master-data-services"></a>Implantando modelos (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], um pacote é um arquivo XML que contém uma estrutura de modelo implantável, e opcionalmente, dados do modelo. Use pacotes modelo para mover cópias de modelos de um ambiente MDS para outro, ou crie novos modelos em seu ambiente MDS existente.  
@@ -29,11 +29,11 @@ ms.locfileid: "52761778"
 ## <a name="tools-for-deploying-models"></a>Ferramentas para implantar modelos  
  Para trabalhar com pacotes de modelo, você pode usar uma das três ferramentas, dependendo de suas necessidades.  
   
--   **Ferramenta MDSModelDeploy**: Para criar e implantar dados e objetos de modelo, use a ferramenta MDSModelDeploy.exe. Se você selecionou o caminho padrão ao instalar o MDS, essa ferramenta está localizada em *unidade*: \Program Files\Microsoft SQL Server\120\Master Data services\configuration.  
+-   **Ferramenta MDSModelDeploy**: Para criar e implantar objetos de modelo e dados, use a ferramenta MDSModelDeploy.exe. Se você selecionou o caminho padrão ao instalar o MDS, essa ferramenta está localizada em *unidade*: \Program Files\Microsoft SQL Server\120\Master Data services\configuration.  
   
--   **Assistente de implantação de modelo**: Para criar e implantar pacotes de apenas a estrutura do modelo, use o assistente no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] aplicativo web. Você não pode usar esse assistente para implantar dados.  
+-   **Assistente de Implantação de Modelo**: Para criar e implantar pacotes somente da estrutura de modelo, use o assistente no aplicativo Web do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]. Você não pode usar esse assistente para implantar dados.  
   
--   **Editor de pacote de modelo**: Para editar um pacote de modelo, use o ModelPackageEditor.exe que inicia o Assistente de Editor de pacote de modelo. Use esse assistente para editar um pacote criado pela ferramenta MDSModelDeploy ou pelo assistente de Implantação de Modelo. Se você selecionou o caminho padrão ao instalar o MDS, essa ferramenta está localizada em *unidade*: \Program Files\Microsoft SQL Server\120\Master Data services\configuration.  
+-   **Editor de Pacote de Modelo**: Para editar um pacote de modelo, use o ModelPackageEditor.exe, que inicia o assistente do Editor de Pacote de Modelo. Use esse assistente para editar um pacote criado pela ferramenta MDSModelDeploy ou pelo assistente de Implantação de Modelo. Se você selecionou o caminho padrão ao instalar o MDS, essa ferramenta está localizada em *unidade*: \Program Files\Microsoft SQL Server\120\Master Data services\configuration.  
   
 > [!IMPORTANT]  
 >  Você pode usar o MDSDeployModel para criar um novo modelo, criar um clone de um modelo ou atualizar um modelo existente e seus dados. Se você usar a ferramenta MDSModelDeploy para atualizar um modelo existente e seus dados, e o pacote não contiver uma entidade, um atributo ou um membro que exista no modelo de destino, MDSModelDeploy não excluirá a entidade, o atributo ou o membro do modelo.  

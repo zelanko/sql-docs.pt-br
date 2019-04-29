@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cb8c77ba54e25c574d5f751febe8bdac3ba1dfbf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775338"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62911245"
 ---
 # <a name="msmergepartitiongroups-transact-sql"></a>MSmerge_partition_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  O **MSmerge_partition_groups** tabela armazena uma linha para cada partição pré-computada em um determinado banco de dados. Além das colunas listadas, uma coluna é adicionada a essa tabela, para cada função usada em um filtro de linha com parâmetros. Por exemplo, uma coluna denominada **HOST_NAME_FN** é adicionada à tabela, se um filtro usa o [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) função. Uma linha é armazenada para cada conjunto exclusivo de valores de função, que sincronizaram com esse Publicador. Dois ou mais Assinantes sincronizando com o mesmo valor exatamente, para todas essas funções, compartilharão a mesma linha nessa tabela e, portanto, compartilharão a mesma ID de partição. Essa tabela é armazenada no banco de dados de publicação.  
+  O **MSmerge_partition_groups** tabela armazena uma linha para cada partição pré-computada em um determinado banco de dados. Além das colunas listadas, uma coluna é adicionada a essa tabela, para cada função usada em um filtro de linha com parâmetros. Por exemplo, uma coluna denominada **HOST_NAME_FN** é adicionada à tabela, se um filtro usa o [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) função. Uma linha é armazenada para cada conjunto exclusivo de valores de função, que sincronizaram com esse Publicador. Dois ou mais assinantes sincronizando com o mesmo valor para todas essas funções compartilharão a mesma linha nessa tabela e serão, portanto, todos compartilham a mesma id de partição. Essa tabela é armazenada no banco de dados de publicação.  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  

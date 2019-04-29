@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 349a100a295ef00b19b2de69214fdd7af8bd2d32
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62897345"
 ---
 # <a name="replicate-ssis-expression"></a>REPLICATE (Expressão SSIS)
   Retorna uma expressão de caractere que é replicada várias vezes. O argumento *times* deve ser avaliado como um inteiro.  

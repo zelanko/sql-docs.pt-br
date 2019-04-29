@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5d39cfd6ca3eba8222dda09a83fdd809bb7d00e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62915046"
 ---
 # <a name="mssqlserver207"></a>MSSQLSERVER_207
     
@@ -37,7 +37,7 @@ ms.locfileid: "48050156"
   
 -   O nome da coluna foi digitado incorretamente ou a coluna não existe em nenhuma das tabelas especificadas.  
   
--   O agrupamento do banco de dados diferencia maiúsculas e minúsculas e as maiúsculas e minúsculas do nome da coluna especificado na consulta não correspondem às maiúsculas e minúsculas definidas na tabela. Por exemplo, quando uma coluna estiver definida em uma tabela como **LastName** e o banco de dados usar um agrupamento com diferenciação de maiúsculas e minúsculas, as consultas que fizerem referência à coluna como **Lastname** ou **lastname** retornarão o erro 207, pois o nome da coluna não é correspondente.  
+-   A ordenação do banco de dados diferencia maiúsculas e minúsculas e as maiúsculas e minúsculas do nome da coluna especificado na consulta não correspondem às maiúsculas e minúsculas definidas na tabela. Por exemplo, quando uma coluna estiver definida em uma tabela como **LastName** e o banco de dados usar uma ordenação com diferenciação de maiúsculas e minúsculas, as consultas que fizerem referência à coluna como **Lastname** ou **lastname** retornarão o erro 207, pois o nome da coluna não é correspondente.  
   
 -   Um alias de coluna definido na cláusula SELECT é referenciado em outra cláusula, como em uma cláusula WHERE ou GROUP BY. Por exemplo, a consulta a seguir define o alias de coluna `Year` na cláusula SELECT e faz referência a ele na cláusula GROUP BY.  
   
@@ -86,13 +86,13 @@ ms.locfileid: "48050156"
     SELECT name FROM sys.columns WHERE object_id = OBJECT_ID('schema_name.table_name');  
     ```  
   
--   A diferenciação de maiúsculas e minúsculas do agrupamento de banco de dados. A instrução a seguir retorna o agrupamento do banco de dados especificado.  
+-   A diferenciação de maiúsculas e minúsculas da ordenação de banco de dados. A instrução a seguir retorna a ordenação do banco de dados especificado.  
   
     ```  
     SELECT collation_name FROM sys.databases WHERE name = 'database_name';  
     ```  
   
-     A abreviação CS no nome do agrupamento indica que ele diferencia maiúsculas de minúsculas. Por exemplo, Latin1_General_CS_AS é um agrupamento que tem diferenciação de maiúsculas e minúsculas e de acentos. Modifique o nome da coluna para que coincida com as maiúsculas e minúsculas do nome da coluna conforme definido na tabela.  
+     A abreviação CS no nome da ordenação indica que ela diferencia maiúsculas de minúsculas. Por exemplo, Latin1_General_CS_AS é uma ordenação que tem diferenciação de maiúsculas e minúsculas e de acentos. Modifique o nome da coluna para que coincida com as maiúsculas e minúsculas do nome da coluna conforme definido na tabela.  
   
 -   O alias de uma coluna está referenciado incorretamente. Modifique a instrução repetindo a expressão que define o alias na cláusula adequada ou usando uma tabela derivada. O exemplo a seguir repete as expressões que definem o alias `Year` na cláusula GROUP BY.  
   

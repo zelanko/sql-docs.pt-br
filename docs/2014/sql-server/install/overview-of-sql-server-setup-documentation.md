@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 284c02898bb0ba51b7e99a2ba259f06d4092a23f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63010943"
 ---
 # <a name="overview-of-sql-server-setup-documentation"></a>Visão geral da documentação de instalação do SQL Server
   A documentação de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está disponível online e na mídia de instalação.  

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b46cd9ea4d461b4b6f5755e8fb9bb9199d1bdbbb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913148"
 ---
 # <a name="mssqlserver7912"></a>MSSQLSERVER_7912
     
@@ -30,7 +30,7 @@ ms.locfileid: "48133527"
 |Origem do evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC2_REPAIR_EXTENT_ALLOCATED|  
-|Texto da mensagem|Correção: a extensão P_ID foi alocada para a ID de objeto O_ID, ID de índice I_ID, ID de partição PN_ID, ID de unidade de alocação A_ID (tipo TYPE).|  
+|Texto da mensagem|Reparar: A extensão P_ID foi alocada à ID de objeto O_ID, ID de índice I_ID, ID de partição PN_ID, unidade de alocação A_ID ID (tipo TYPE).|  
   
 ## <a name="explanation"></a>Explicação  
  Essa é uma mensagem informativa da cláusula REPAIR que afirma que uma extensão foi alocada para o objeto especificado.  

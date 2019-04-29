@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 14ead76661b6818ac2daf6a3aa250dddb348745d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876127"
 ---
 # <a name="full-file-backups-sql-server"></a>Backups completos de arquivos (SQL Server)
   Este tópico é relevante para bancos de dados [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que contêm vários arquivos ou grupos de arquivos.  
@@ -99,7 +99,7 @@ ms.locfileid: "48097492"
 ## <a name="see-also"></a>Consulte também  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [Visão geral do backup &#40;SQL Server&#41;](backup-overview-sql-server.md)   
- [Backup e restauração: interoperabilidade e coexistência &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
+ [Backup e Restauração: Interoperabilidade e Coexistência &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [Backups diferenciais &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [Restaurações de arquivos &#40;Modelo de recuperação simples&#41;](file-restores-simple-recovery-model.md)   
  [Restaurações de arquivo &#40;Modelo de recuperação completa&#41;](file-restores-full-recovery-model.md)   

@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 18c269bfa245135e95a101d725ed4a592889e7a4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900196"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>transformação Dimensão de Alteração Lenta
   A transformação Dimensão de Alteração Lenta coordena a atualização e a inserção de registros em tabelas de dimensão do data warehouse. Por exemplo, você pode usar essa transformação para configurar as saídas de transformação que inserem e atualizam registros na tabela DimProduct do banco de dados OLAP da [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] com dados da tabela Production.Products no banco de dados OLTP da AdventureWorks.  
@@ -46,7 +46,7 @@ ms.locfileid: "58388234"
   
 -   Alterar atributos de alteração substitui registros existentes. Esse tipo de alteração é equivalente a uma alteração do Tipo 1. A transformação Dimensão de Alteração Lenta dirige estas linhas a uma saída nomeada **Saída de Atualizações de Atributos de Alteração**.  
   
--   As alterações de atributos históricos criam registros novos em vez de atualizar registros existentes. A única alteração que é permitida em um registro existente é uma atualização de uma coluna que indica se o registro é atual ou expirado. Esse tipo de alteração é equivalente a uma alteração do Tipo 2. A transformação dimensão de alteração lenta dirige estas linhas a duas saídas: **Saída de inserções de atributo histórico** e **nova saída**.  
+-   As alterações de atributos históricos criam registros novos em vez de atualizar registros existentes. A única alteração que é permitida em um registro existente é uma atualização de uma coluna que indica se o registro é atual ou expirado. Esse tipo de alteração é equivalente a uma alteração do Tipo 2. A transformação Dimensão de Alteração Lenta direciona estas linhas para duas saídas: **Saída de Inserções de Atributo de Histórico** e **Nova Saída**.  
   
 -   Alterações de atributo fixo indicam que o valor da coluna não deve ser alterado. A transformação Dimensão de Alteração Lenta detecta as alterações e pode direcionar as linhas com alterações a uma saída nomeada **Saída de Atributos Fixos**.  
   

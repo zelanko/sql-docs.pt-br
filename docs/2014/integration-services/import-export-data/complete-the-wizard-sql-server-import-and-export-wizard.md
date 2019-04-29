@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7119b421f1207a60970e14077bc8c316e998e13f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62893067"
 ---
 # <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>Concluir o Assistente (Assistente de Importação e Exportação do SQL Server)
   Use o **concluir o assistente** página para confirmar as opções que você fez no assistente, antes de copiar os dados.  

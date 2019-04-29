@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d9b4a0e07f32e074ff7e8875c263615bcebc12d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874874"
 ---
 # <a name="select-backup-destination"></a>Selecionar destino do backup
   Use a caixa de diálogo **Selecionar Destino do Backup** para selecionar um dispositivo como seu destino de backup. Um destino de backup pode ser tanto um disco quanto um dispositivo de backup lógico.  
@@ -41,15 +41,15 @@ ms.locfileid: "48061006"
 |||  
 |-|-|  
 |**Nome do arquivo**|Escolha esta opção para digitar na caixa de texto um arquivo local ou remoto como o destino de backup.<br /><br /> Para especificar um arquivo local, clique no botão Procurar à direita da caixa de texto e navegue para um arquivo nas unidades fixas do computador que está executando o servidor, ou digite diretamente o caminho completo e nome de arquivo; por exemplo, `C:\Program Files\Microsoft SQL Server\MSSQL\Backup\AdventureWorksBackup.bak`.<br /><br /> Para especificar um arquivo remoto como seu destino de backup, digite o nome da Convenção Universal de Nomenclatura (UNC) totalmente qualificada. Para obter mais informações, consulte [Dispositivos de backup &#40;SQL Server&#41;](backup-devices-sql-server.md).<br /><br /> **\*\* Importante \*\*** Backups de dados em uma rede podem estar sujeitos a erros de rede; assim, recomendamos que você verifique a operação de backup quando ela estiver concluída. Para obter mais informações, consulte [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql).|  
-|**Dispositivo de backup**|Escolha esta opção para selecionar um dispositivo de backup lógico.<br /><br /> Observação: para obter informações sobre como criar um dispositivo de backup em disco, consulte [Definir um dispositivo de backup lógico para um arquivo de disco &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md).|  
+|**Dispositivo de backup**|Escolha esta opção para selecionar um dispositivo de backup lógico.<br /><br /> Observação: Para obter informações sobre como criar um dispositivo de backup de disco, consulte [definir um dispositivo de Backup lógico para um arquivo de disco &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md).|  
   
  **Destino em fita**  
  Especifique um destino de backup em uma unidade de fita conectada fisicamente ao computador que está executando o servidor (ou seja, a instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]). Escolha uma das opções a seguir.  
   
 |||  
 |-|-|  
-|**Unidade de fita**|Escolha esta opção para selecionar uma unidade de fita como destino de backup da lista de unidades de fita conectadas fisicamente ao computador que está executando a instância do servidor.<br /><br /> Observação: dispositivos de backup em fita em computadores remotos não são destinos de backup válidos.|  
-|**Dispositivo de backup**|Escolha esta opção para selecionar um dispositivo de backup lógico existente. Esses dispositivos de backup lógicos correspondem a unidades de fita conectadas fisicamente ao computador que está executando a instância do servidor.<br /><br /> Observação: para obter informações sobre como criar um dispositivo de backup em fita, consulte [Definir um dispositivo de backup lógico para uma unidade de fita &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md).|  
+|**Unidade de fita**|Escolha esta opção para selecionar uma unidade de fita como destino de backup da lista de unidades de fita conectadas fisicamente ao computador que está executando a instância do servidor.<br /><br /> Observação: Dispositivos de backup em fita em computadores remotos não são destinos de backup válidos.|  
+|**Dispositivo de backup**|Escolha esta opção para selecionar um dispositivo de backup lógico existente. Esses dispositivos de backup lógicos correspondem a unidades de fita conectadas fisicamente ao computador que está executando a instância do servidor.<br /><br /> Observação: Para obter informações sobre como criar um dispositivo de backup de fita, consulte [definir um dispositivo de Backup lógico para uma unidade de fita &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md).|  
   
 ## <a name="see-also"></a>Consulte também  
  [Dispositivos de backup &#40;SQL Server&#41;](backup-devices-sql-server.md)   

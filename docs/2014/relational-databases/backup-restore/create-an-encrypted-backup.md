@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3959e998111d5fa45eee45b3d7de35501f86f794
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876504"
 ---
 # <a name="create-an-encrypted-backup"></a>Criar um backup criptografado
   Este tópico descreve as etapas necessárias para criar um backup criptografado usando Transact-SQL.  
@@ -88,7 +88,7 @@ ms.locfileid: "52531846"
     , SECRET = '<storage account access key>' - this should be either the Primary or Secondary Access Key for the storage account  
     ```  
   
-2.  **Crie uma chave mestra de banco de dados:** Escolha uma senha por criptografar a cópia da chave mestra que será armazenada no banco de dados. Conecte-se ao mecanismo de banco de dados, inicie uma nova janela de consulta, copie e cole o exemplo a seguir e clique em **Executar**.  
+2.  **Criar uma chave mestra de banco de dados:** Escolha uma senha por criptografar a cópia da chave mestra que será armazenada no banco de dados. Conecte-se ao mecanismo de banco de dados, inicie uma nova janela de consulta, copie e cole o exemplo a seguir e clique em **Executar**.  
   
     ```  
     -- Creates a database master key.  
@@ -100,7 +100,7 @@ ms.locfileid: "52531846"
   
     ```  
   
-3.  **Crie um certificado de Backup:** Crie um Certificado de backup no banco de dados mestre. Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**.  
+3.  **Crie um certificado de Backup:** Crie um certificado de Backup no banco de dados mestre. Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**.  
   
     ```  
     USE Master;  
@@ -111,7 +111,7 @@ ms.locfileid: "52531846"
   
     ```  
   
-4.  **Faça backup do banco de dados:** Especifique o algoritmo de criptografia e o certificado a ser utilizado. Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**.  
+4.  **Faça backup do banco de dados:** Especifique o algoritmo de criptografia e o certificado a ser usado. Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**.  
   
     ```  
     BACKUP DATABASE [MyTestDB]  

@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6802a5950a8b366fe8989137da4ec4de70e9e605
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62924626"
 ---
 # <a name="enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services"></a>Habilitar uma entidade para hierarquias explícitas e coleções (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], habilite uma entidade para hierarquias explícitas e coleções, de modo que você possa criar hierarquias explícitas e coleções para a entidade.  
