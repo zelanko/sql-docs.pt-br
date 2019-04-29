@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bb1835a67ca1f909bf382fd227783cb0a20bbbf5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59934762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63025728"
 ---
 # <a name="security-properties-page-items-report-manager"></a>Página Propriedades de Segurança, Itens (Gerenciador de Relatórios)
   Use a página Propriedades de Segurança para exibir ou modificar as definições de segurança que determinam acesso a pastas, relatórios, modelos, recursos e fontes de dados compartilhadas. Essa página está disponível para itens que você tem permissão para proteger.  

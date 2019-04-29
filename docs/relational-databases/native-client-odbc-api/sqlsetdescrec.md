@@ -15,11 +15,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d6ee8de284043d3acf3c0d58eed51e6710ffe51f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63014159"
 ---
 # <a name="sqlsetdescrec"></a>SQLSetDescRec
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,9 +50,9 @@ ms.locfileid: "52536839"
   
 ||*Tipo*|*SubType*|*Comprimento*|*Precisão*|*Escala*|  
 |-|------------|---------------|--------------|-----------------|-------------|  
-|DATETIME|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
+|datetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  
-|Data|SQL_DATETIME|SQL_CODE_DATE|6|0|0|  
+|date|SQL_DATETIME|SQL_CODE_DATE|6|0|0|  
 |time|SQL_SS_TIME2|0|10|0..7|0..7|  
 |datetime2|SQL_DATETIME|SQL_CODE_TIMESTAMP|16|0..7|0..7|  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET|0|20|0..7|0..7|  

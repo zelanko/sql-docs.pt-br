@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2ee874caeaa8be9e7b050336f74bab9487f15884
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035295"
 ---
 # <a name="ltaliasgt-properties-alias-tab"></a>Propriedades de &lt;alias&gt; (guia Alias)
   O alias é um nome alternativo que pode ser usado para fazer uma conexão. Ele encapsula os elementos necessários de uma cadeia de conexão, expondo-os com um nome escolhido pelo usuário. Use a página **Alias** na caixa de diálogo de **\<** Nome do alias **> Propriedades** para exibir ou especificar os elementos da cadeia de conexão de um Alias.  

@@ -1,5 +1,5 @@
 ---
-title: plan_guides (Transact-SQL) | Microsoft Docs
+title: sys.plan_guides (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,18 +22,18 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 75d95fbe9c289eab419360bef35263b41930c9f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032978"
 ---
 # <a name="sysplanguides-transact-sql"></a>sys.plan_guides (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Contém uma linha para cada guia de plano no banco de dados.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**plan_guide_id**|**int**|Identificador exclusivo do guia de plano no banco de dados.|  
 |**name**|**sysname**|Nome do guia de plano.|  
@@ -46,7 +46,7 @@ ms.locfileid: "47696475"
 |**scope_object_id**|**Int**|object_id do objeto que definirá o escopo do guia de plano se o escopo for OBJECT.<br /><br /> NULL se o guia de plano não tiver nenhum escopo para OBJECT.|  
 |**scope_batch**|**nvarchar(max)**|Texto em lotes, se **scope_type** é SQL.<br /><br /> NULL se tipo de lote não for SQL.<br /><br /> Se for NULL e **scope_type** é o valor do SQL **query_text** se aplica.|  
 |**parameters**|**nvarchar(max)**|A cadeia de caracteres que define a lista de parâmetros associada ao guia de plano.<br /><br /> NULL = Nenhuma lista de parâmetros está associada ao guia de plano.|  
-|**dicas**|**nvarchar(max)**|Dicas da cláusula OPTION associadas ao guia de plano.|  
+|**hints**|**nvarchar(max)**|Dicas da cláusula OPTION associadas ao guia de plano.|  
   
 ## <a name="permissions"></a>Permissões  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

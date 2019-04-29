@@ -13,11 +13,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3aeb3065f9c032585dd4c445cecdd1e7c148b007
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62943152"
 ---
 # <a name="overview-smo"></a>Visão geral (SMO)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -32,9 +32,9 @@ ms.locfileid: "47763204"
   
 -   Modelo de objeto armazenado em cache e criação de instância de objeto otimizada. Os objetos são carregados somente quando especificamente referenciados. As propriedades do objeto são parcialmente carregadas apenas quando o objeto é criado. Os objetos e propriedades restantes são carregados quando referenciados diretamente.  
   
--   Execução processada em lotes de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)]. As instruções são processadas em lote para melhorar o desempenho de rede.  
+-   Execução processada em lotes de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] . As instruções são processadas em lote para melhorar o desempenho de rede.  
   
--   Captura de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)]. Permite capturar qualquer operação em um script. O [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] usa esse recurso para executar uma operação em script, em vez de executá-la imediatamente.  
+-   Captura de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] . Permite capturar qualquer operação em um script. O [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] usa esse recurso para executar uma operação em script, em vez de executá-la imediatamente.  
   
 -   Gerenciamento de serviços [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com o Provedor de WMI. Os serviços [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser iniciados, interrompidos e pausados de modo programático.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "47763204"
   
 -   Pontos de extremidade de HTTP para o gerenciamento de solicitações de SOAP. Para obter mais informações, consulte [Implementing Endpoints](../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md).  
   
--   Isolamento de instantâneo e versão do nível de linha para aprimoramento de simultaneidade. Para obter mais informações, confira [Trabalhando com o isolamento de instantâneos](../../relational-databases/native-client/features/working-with-snapshot-isolation.md).  
+-   Isolamento de instantâneo e versão do nível de linha para aprimoramento de simultaneidade. Para obter mais informações, consulte [Working with Snapshot Isolation](../../relational-databases/native-client/features/working-with-snapshot-isolation.md).  
   
 -   A coleção do esquema XML, os índices XML e o tipo de dados XML fornecem validação e armazenamento dos dados de XML. Para obter mais informações, consulte [coleções de esquema XML &#40;SQL Server&#41; ](../../relational-databases/xml/xml-schema-collections-sql-server.md) e [Using XML Schemas](../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md).  
   
@@ -56,19 +56,19 @@ ms.locfileid: "47763204"
   
 -   Suporte do [!INCLUDE[ssSB](../../includes/sssb-md.md)] para comunicação baseada em mensagem. Para obter mais informações, consulte [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md).  
   
--   Suporte de sinônimo para vários nomes de objetos de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [sinônimos &#40;mecanismo de banco de dados&#41;](../../relational-databases/synonyms/synonyms-database-engine.md).  
+-   Suporte de sinônimo para vários nomes de objetos de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [sinônimos &#40;mecanismo de banco de dados&#41;](../../relational-databases/synonyms/synonyms-database-engine.md).  
   
 -   O gerenciamento de Banco de Dados de Email permite criar servidores de email, perfis de email e contas de email no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Database Mail](../../relational-databases/database-mail/database-mail.md).  
   
--   Servidores registrados dão suporte para registrar informações de conexão. Para obter mais informações, consulte [registrar servidores](../../tools/sql-server-management-studio/register-servers.md).  
+-   Servidores registrados dão suporte para registrar informações de conexão. Para obter mais informações, consulte [Register Servers](../../tools/sql-server-management-studio/register-servers.md).  
   
--   Rastreamento e repetição de eventos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md), [rastreamento do SQL](../../relational-databases/sql-trace/sql-trace.md), [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md), e [Extended Events](../../relational-databases/extended-events/extended-events.md).  
+-   Rastreamento e repetição de eventos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md), [SQL Trace](../../relational-databases/sql-trace/sql-trace.md), [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)e [Extended Events](../../relational-databases/extended-events/extended-events.md).  
   
--   Suporte a certificados e chaves para controle de segurança. Para obter mais informações, consulte [hierarquia de criptografia](../../relational-databases/security/encryption/encryption-hierarchy.md).  
+-   Suporte a certificados e chaves para controle de segurança. Para obter mais informações, consulte [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md).  
   
 -   Gatilhos DDL para adicionar funcionalidade quando ocorrerem eventos de DDL. Para obter mais informações, consulte [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md).  
   
- O namespace do SMO é <xref:Microsoft.SqlServer.Management.Smo>. O SMO é implementado como um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assembly. Isso significa que o common language runtime do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] versão 2.0 deve ser instalado antes de usar os objetos do SMO. Os assemblies do SMO são instalados por padrão no GAC (cache de assembly global) com o a opção SDK do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os assemblies estão localizados em C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\. Para obter mais informações, consulte o [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] documentação.  
+ O namespace do SMO é <xref:Microsoft.SqlServer.Management.Smo>. O SMO é implementado como um assembly do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Isso significa que o Common Language Runtime do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] versão 2.0 deve ser instalado antes da utilização dos objetos do SMO. Os assemblies do SMO são instalados por padrão no GAC (cache de assembly global) com o a opção SDK do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Os assemblies estão localizados em C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\. Para obter mais informações, consulte o [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] documentação.  
   
 ## <a name="smo-classes"></a>Classes do SMO  
  As classes do SMO incluem duas categorias: classes de instância e classes de utilitário.  
@@ -106,7 +106,7 @@ ms.locfileid: "47763204"
   
  **Provedor WMI**  
   
- Os objetos do Provedor WMI são quebrados pelo SMO. Isso fornece ao programador de SMO um modelo de objeto simples que é muito similar a classes de SMO, sem a necessidade de compreender o modelo de programação representado pelo namespace e os detalhes do Provedor WMI do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O Provedor WMI permite configurar serviços, aliases e bibliotecas de rede do servidor e do cliente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Os objetos do Provedor WMI são quebrados pelo SMO. Isso fornece ao programador de SMO um modelo de objeto simples que é muito similar a classes de SMO, sem a necessidade de compreender o modelo de programação representado pelo namespace e os detalhes do Provedor WMI do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O Provedor WMI permite configurar serviços, aliases e bibliotecas de rede do servidor e do cliente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Script**  
   
@@ -141,7 +141,7 @@ ms.locfileid: "47763204"
   
  O particionamento de tabela e índice permite gerenciar a expansão de dados em tabelas e índices por grupos de arquivos. Esse recurso novo é representado por objetos do SMO.  
   
- **Pontos de extremidade**  
+ **EndPoints**  
   
  As solicitações de espelhamento de banco de dados e SOAP são manipuladas por pontos de extremidade que usam o objeto <xref:Microsoft.SqlServer.Management.Smo.Endpoint>.  
   

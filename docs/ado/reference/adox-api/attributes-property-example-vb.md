@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 010093a600b5432ae7ff7454cacba914d5bb8442
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184192"
 ---
 # <a name="attributes-property-example-vb"></a>Exemplo da propriedade Attributes (VB)
 Este exemplo demonstra a [atributos](../../../ado/reference/adox-api/attributes-property-adox.md) propriedade de uma [coluna](../../../ado/reference/adox-api/column-object-adox.md). Definindo-o como **adColNullable** permite que o usuário definir o valor de uma [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) [campo](../../../ado/reference/ado-api/field-object.md) para uma cadeia de caracteres vazia. Nessa situação, o usuário pode distinguir entre um registro de onde os dados não são conhecidos e um registro de onde os dados não se aplica.  

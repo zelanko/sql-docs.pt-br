@@ -11,22 +11,22 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: acb2a812f2e3c29a56916c671d76d91c676272d6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049489"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>Definir configurações da propriedade HealthCheckTimeout
   A configuração HealthCheckTimeout é usada para especificar o tempo, em milissegundos, que a DLL de recursos do SQL Server deve aguardar por informações retornadas pelo procedimento armazenado [sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) antes de relatar a FCI (Instância de Cluster de Failover) AlwaysOn como sem resposta. As alterações feitas nas configurações de tempo limite entram em vigor imediatamente e não requerem uma reinicialização do recurso do SQL Server.  
   
--   **Antes de começar:**  [Limitações e restrições](#Limits), [segurança](#Security)  
+-   **Antes de começar:**  [Limitações e Restrições](#Limits), [Segurança](#Security)  
   
 -   **Para configurar a configuração HeathCheckTimeout usando:**  [PowerShell](#PowerShellProcedure), [Gerenciador de Cluster de Failover](#WSFC), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Limits"></a> Limitações e Restrições  
+###  <a name="Limits"></a> Limitações e restrições  
  O valor padrão dessa propriedade é 60.000 milissegundos (60 segundos). O valor mínimo é 15.000 milissegundos (15 segundos).  
   
 ###  <a name="Security"></a> Segurança  
@@ -77,7 +77,7 @@ Get-ClusterResource $fci | Set-ClusterParameter HealthCheckTimeout 60000
   
 4.  Selecione a guia **Propriedades** , insira o valor desejado para a propriedade **HealthCheckTimeout** e clique em **OK** para aplicar a alteração.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  Usando a instrução [ALTER SERVER CONFIGURATION](/sql/t-sql/statements/alter-server-configuration-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] , você pode especificar o valor da propriedade HealthCheckTimeOut.  
   
 ###  <a name="TsqlExample"></a> Exemplo (Transact-SQL)  

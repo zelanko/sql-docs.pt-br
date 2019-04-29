@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7acd72b5386eed5e78ddcd2fe1cd0344905fa833
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63050972"
 ---
 # <a name="spstmtstarting-event-class"></a>Classe de evento SP: StmtStarting
   A classe de evento SP:StmtStarting indica que uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] em um procedimento armazenado foi iniciada.  
@@ -47,7 +47,7 @@ ms.locfileid: "52761488"
 |ObjectID|`int`|ID de objeto atribuída pelo sistema.|22|Sim|  
 |ObjectName|`nvarchar`|Nome do objeto que está sendo referenciado.|34|Sim|  
 |ObjectType|`int`|Valor que representa o tipo do objeto envolvido no evento. Esse valor corresponde à coluna do tipo na exibição do catálogo sys.objects. Para obter valores, consulte [Coluna de evento de rastreamento ObjectType](objecttype-trace-event-column.md).|28|Sim|  
-|Deslocamento|`int`|O deslocamento inicial da instrução no lote ou procedimento armazenado.|61|Sim|  
+|Offset|`int`|O deslocamento inicial da instrução no lote ou procedimento armazenado.|61|Sim|  
 |RequestID|`int`|ID da solicitação que contém a instrução.|49|Sim|  
 |ServerName|`nvarchar`|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
 |SessionLoginName|`nvarchar`|Nome de logon do usuário que originou a sessão. Por exemplo, ao se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, SessionLoginName mostrará o Logon1 e LoginName mostrará o Logon2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  

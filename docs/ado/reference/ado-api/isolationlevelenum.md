@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 366892f51207e7d89f643510f9becb664bb098c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027924"
 ---
 # <a name="isolationlevelenum"></a>IsolationLevelEnum
 Especifica o nível de isolamento da transação para um [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto.  
   
-|Constante|Valor|Description|  
+|Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
 |**adXactUnspecified**|-1|Indica que o provedor está usando um nível de isolamento diferente do que o especificado, mas que não é possível determinar o nível.|  
 |**adXactChaos**|16|Indica que alterações pendentes de transações maior isolamento não pode ser substituído.|  
@@ -39,7 +39,7 @@ Especifica o nível de isolamento da transação para um [Conexão](../../../ado
 |**adXactSerializable**|1048576|Mesmo que **adXactIsolated**.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
- Pacote: **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14b9cda05bca998bd113a316692c4c2c2111d091
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035049"
 ---
 # <a name="sqllogship-application"></a>Aplicativo sqllogship
   O aplicativo **sqllogship** realiza uma operação de backup, cópia ou restauração e as tarefas de limpeza associadas de uma configuração de envio de logs. A operação é realizada em uma instância específica do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para um banco de dados específico.  
@@ -52,7 +52,7 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
   
  Qualquer arquivo de backup no diretório de destino criado após o ponto de restauração mais recente é restaurado no banco de dados ou bancos de dados secundários. O aplicativo **sqllogship** limpa os arquivos de backup antigos, com base no período de retenção dos arquivos. Em seguida, o aplicativo registra o histórico da operação de backup no servidor primário e o servidor monitor. Por fim, o aplicativo executa **sp_cleanup_log_shipping_history**, que limpa as informações do histórico antigo, com base no período de retenção.  
   
- **-verboselevel** _nível_  
+ **-verboselevel** _level_  
  Especifica o nível das mensagens adicionadas ao histórico do envio de logs. *level* é um dos seguintes inteiros:  
   
 |level|Descrição|  

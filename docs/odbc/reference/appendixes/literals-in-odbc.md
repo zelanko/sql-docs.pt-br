@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 73f0a50b1ab06eeea97b54b6776135e35e56520e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181406"
 ---
 # <a name="literals-in-odbc"></a>Literais no ODBC
-A sintaxe nas seções a seguir é usada para o intervalo e literais numéricos no ODBC. Essa sintaxe é fornecido como um auxílio para gravadores de driver quando conversões são executadas a partir de um tipo de cadeia de caracteres de caractere para um tipo numérico ou intervalo ou um tipo numérico ou de intervalo em um tipo de cadeia de caracteres de caractere. Para obter mais informações, consulte [literais de intervalo](../../../odbc/reference/appendixes/interval-literals.md) e [literais numéricos](../../../odbc/reference/appendixes/numeric-literals.md) apêndice d: tipos de dados.  
+A sintaxe nas seções a seguir é usada para o intervalo e literais numéricos no ODBC. Essa sintaxe é fornecido como um auxílio para gravadores de driver quando conversões são executadas a partir de um tipo de cadeia de caracteres de caractere para um tipo numérico ou intervalo ou um tipo numérico ou de intervalo em um tipo de cadeia de caracteres de caractere. Para obter mais informações, consulte [literais de intervalo](../../../odbc/reference/appendixes/interval-literals.md) e [literais numéricos](../../../odbc/reference/appendixes/numeric-literals.md) no Apêndice d: Tipos de dados.  
   
  Este apêndice contém os tópicos a seguir.  
   

@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a8c468b71b4c4126386d75c02b368cba9965fe1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043331"
 ---
 # <a name="connecting-to-a-data-source-or-driver"></a>Conectar-se a uma fonte de dados ou a um driver
 Um aplicativo pode ser conectado a qualquer número de drivers e fontes de dados. Eles podem ser uma variedade de drivers e fontes de dados, o mesmo driver e uma variedade de fontes de dados ou até mesmo várias conexões com o mesmo driver e a fonte de dados.  

@@ -17,11 +17,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: df2b73b8c3289844f8660d46629449d570a44ec5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63025494"
 ---
 # <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>Usando um diagrama de atualização em um aplicativo ASP de exemplo (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

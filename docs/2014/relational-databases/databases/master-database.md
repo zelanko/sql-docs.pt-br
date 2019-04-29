@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 767d77eefe8c54fe5a3d584c670cc991b284178e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917039"
 ---
 # <a name="master-database"></a>Banco de dados mestre
   O banco de dados **master** registra todas as informações no nível de sistema para um sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Isto inclui metadados de ampla instância como contas de logon, pontos de extremidade, servidores vinculados e parâmetros de configuração de sistema. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], os objetos de sistema não são mais armazenados no banco de dados **mestre** ; em vez disso, eles são armazenados no [Banco de dados de recurso](resource-database.md). Além disso, **mestre** é o banco de dados que registra a existência de todos os outros bancos de dados e o local desses arquivos de bancos de dados, e registra as informações de inicialização para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Portanto, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não poderá iniciar se o banco de dados **mestre** não estiver disponível.  

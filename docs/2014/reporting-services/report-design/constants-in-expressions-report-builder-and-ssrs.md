@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ae4079f0f7be0bb854a8c77737251fdfd09ca0b6
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59959862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185559"
 ---
 # <a name="constants-in-expressions-report-builder-and-ssrs"></a>Constantes em expressões (Construtor de Relatórios e SSRS)
   Uma constante consiste em texto literal ou texto predefinido. O processador de relatório tem acesso às constantes predefinidas; portanto, quando elas são incluídas em uma expressão, os valores que elas representam são substituídos na expressão antes de ela ser avaliada.  

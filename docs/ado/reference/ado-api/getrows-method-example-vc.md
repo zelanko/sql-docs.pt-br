@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 254cb5e6ca4572b0a38ea5f5b6beaab1a78162d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027961"
 ---
 # <a name="getrows-method-example-vc"></a>Exemplo do método GetRows (VC++)
 Este exemplo usa o [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) método para recuperar um número especificado de linhas de uma [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e preencher uma matriz com os dados resultantes. O **GetRows** método será menor que o número desejado de linhas retornado nos dois casos: ambos if [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) tiver sido atingido, ou se **GetRows** tentou recuperar um registro que foi excluído por outro usuário. A função retornará **falsos** somente se o segundo caso ocorre. A função GetRowsOK é necessária executar este procedimento.  

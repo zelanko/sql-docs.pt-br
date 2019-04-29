@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6da8f9de22f1b3191d6fba1918e8c05a64d062f2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920678"
 ---
 # <a name="tail-log-backups-sql-server"></a>Backups da parte final do log (SQL Server)
   Este tópico é relevante apenas para o backup e a restauração dos bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que estão usando modelos de recuperação completa ou bulk-logged.  

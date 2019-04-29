@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 611d23ad84df3087a259cbaf60870129b841715b
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63047610"
 ---
 # <a name="boolean-constructor-functions---true-xquery"></a>Funções do Construtor Booliano – true (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,9 +48,9 @@ go
 -- result = 1  
 ```  
   
- No exemplo a seguir, a consulta é especificada em relação a um tipado **xml** coluna. A expressão `if` verifica o valor Booliano digitado do elemento <`ROOT`> e retorna o XML construído. O exemplo executa o seguinte:  
+ No exemplo a seguir, a consulta é especificada em relação a um tipado **xml** coluna. O `if` expressão verifica o valor booliano digitado da <`ROOT`> elemento e retorna o XML construído adequadamente. O exemplo executa o seguinte:  
   
--   Cria uma coleção de esquemas XML que define o elemento <`ROOT`> do tipo xs:boolean.  
+-   Cria uma coleção de esquema XML que define o <`ROOT`> elemento do tipo xs: Boolean.  
   
 -   Cria uma tabela com um tipado **xml** coluna usando a coleção de esquemas XML.  
   

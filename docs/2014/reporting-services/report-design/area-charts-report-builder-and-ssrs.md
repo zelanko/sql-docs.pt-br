@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f8970e77cf6ab77dc5dd4cc0544237d6a1269db2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59959012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185830"
 ---
 # <a name="area-charts-report-builder-and-ssrs"></a>Gráficos de área (Construtor de Relatórios e SSRS)
   Um gráfico de área exibe uma série como um conjunto de pontos conectados por uma linha, com toda a área preenchida abaixo da linha. Para obter mais informações sobre como adicionar dados a um gráfico de área, consulte [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md).  

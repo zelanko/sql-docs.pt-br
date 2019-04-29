@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 287d565947a13621fd3ba39cff6437ff76894c03
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63021694"
 ---
 # <a name="publication-information-tracer-tokens-transactional-publication-sql-server-2005-and-later"></a>Informações da Publicação, Tokens de Rastreamento (publicação transacional, SQL Server 2005 e versões posteriores)
   A guia **Tokens de Rastreamento** permite validar conexões e medir a latência de um sistema que usa replicação transacional. Um token (uma quantidade pequena de dados) é gravado no log de transações do banco de dados de publicação, marcado como se fosse uma transação replicada comum e enviado pelo sistema, permitindo um cálculo de:  
@@ -35,13 +35,13 @@ ms.locfileid: "52792063"
 ## <a name="options"></a>Opções  
  Para alterar a forma como a grade exibe os dados, clique com o botão direito do mouse na grade e clique em uma destas opções:  
   
--   **Classificação**: Classifique uma ou mais colunas na **classificar colunas** caixa de diálogo.  
+-   **Classificar**: classifique uma ou mais colunas na caixa de diálogo **Classificar Colunas**.  
   
--   **Selecionar colunas para mostrar**: Selecione quais colunas devem ser exibidas e a ordem na qual para exibi-los de **escolher colunas** caixa de diálogo.  
+-   **Escolher Colunas para Mostrar**: selecione quais colunas devem ser exibidas e a ordem em que devem ser exibidas, na caixa de diálogo **Selecionar Colunas**.  
   
--   **Filtro**: Filtrar linhas na grade com base em valores de colunas de **configurações de filtro** caixa de diálogo.  
+-   **Filtrar**: filtre linhas na grade com base em valores de colunas da caixa de diálogo **Configurações de Filtro**.  
   
--   **Limpar filtro**: Limpe as configurações de filtro da grade.  
+-   **Limpar Filtro**: Limpe todas as configurações de filtro para a grade.  
   
  As configurações de filtro são específicas de cada grade. A seleção e a classificação da coluna são aplicadas a todas as grades do mesmo tipo, como a grade de publicações de cada Publicador.  
   

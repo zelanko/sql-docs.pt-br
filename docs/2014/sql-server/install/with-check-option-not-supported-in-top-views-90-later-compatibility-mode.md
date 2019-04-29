@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0b91a4b5bb42ebc86e72d532b9f8d210fbba5506
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184367"
 ---
 # <a name="with-check-option-is-not-supported-in-views-that-contain-top-in-90-or-later-compatibility-modes"></a>Não há suporte para WITH CHECK OPTION em exibições que contenham TOP no modo de compatibilidade 90 ou posterior
   O Supervisor de Atualização detectou uma exibição que usa o WITH CHECK OPTION e uma cláusula TOP na instrução SELECT da exibição ou em uma exibição referenciada. Exibições definidas dessa forma permitem, incorretamente, que os dados sejam modificados através da exibição; isso pode gerar resultados imprecisos quando o modo de compatibilidade do banco de dados está definido como 80 ou anterior. Não é possível inserir ou atualizar dados através de uma exibição que usa WITH CHECK OPTION quando a exibição ou uma exibição referenciada usa a cláusula TOP e o modo de compatibilidade do banco de dados está definido como 90 ou posterior.  

@@ -16,11 +16,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 153b5f73ea753639a7617f5de6d942dae40fadda
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63014451"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "51660534"
 > [!NOTE]  
 >  O atributo de conexão ODBC padrão SQL_ATTR_CONNECTION_DEAD retorna o estado mais recente da conexão. Esse talvez não seja o estado da conexão atual.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |SQL_CD_TRUE|A conexão com o servidor foi perdida.|  
 |SQL_CD_FALSE|A conexão está aberta e disponível ao processamento de instrução.|  
@@ -52,7 +52,7 @@ ms.locfileid: "51660534"
   
  Para obter mais informações, consulte [acessando informações de diagnóstico no Log de eventos estendidos](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |SQL_ERROR|Falha na conexão.|  
 |SQL_SUCCESS|A conexão foi bem-sucedida. A ID de conexão de cliente será localizada no buffer de saída.|  
@@ -60,7 +60,7 @@ ms.locfileid: "51660534"
 ## <a name="sqlcoptssperfdata"></a>SQL_COPT_SS_PERF_DATA  
  O atributo SQL_COPT_SS_PERF_DATA retorna um ponteiro para uma estrutura SQLPERF que contém as estatísticas de desempenho do driver atuais. **SQLGetConnectAttr** retornará NULL se registro em log do desempenho não for habilitado. As estatísticas na estrutura SQLPERF não são atualizadas dinamicamente pelo driver. Chame **SQLGetConnectAttr** sempre que as estatísticas de desempenho precisarem ser atualizadas.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |NULL|O registro em log de desempenho não está habilitado.|  
 |Qualquer outro valor|Um ponteiro para uma estrutura SQLPERF.|  
@@ -71,7 +71,7 @@ ms.locfileid: "51660534"
 ## <a name="sqlcoptssuserdata"></a>SQL_COPT_SS_USER_DATA  
  O atributo SQL_COPT_SS_USER_DATA recupera o ponteiro dos dados de usuário. Os dados de usuário são armazenados na memória do cliente e registrados por conexão. Caso o ponteiro de dados do usuário não seja definido, SQL_UD_NOTSET, um ponteiro NULL, é retornado.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |SQL_UD_NOTSET|Nenhum ponteiro de dados do usuário é definido.|  
 |Qualquer outro valor|Um ponteiro para os dados do usuário.|  

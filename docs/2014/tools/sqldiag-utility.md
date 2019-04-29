@@ -30,11 +30,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a024e2fc4cb7afaecdc6e84ae6dba4f3a2700d8b
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035403"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag Utility
   O utilitário **SQLdiag** é um utilitário de coleta de diagnósticos para fins gerais que pode ser executado como um aplicativo do console ou um serviço. É possível usar o **SQLdiag** para coletar logs e arquivos de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e de outros tipos de servidores, e usá-lo para monitorar os servidores ao longo do tempo ou para solucionar problemas específicos com seus servidores. O**SQLdiag** foi criado para agilizar e simplificar a coleta de informações de diagnóstico para os Serviços de Atendimento ao Cliente da [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
@@ -111,7 +111,7 @@ ms.locfileid: "53590250"
 > [!NOTE]  
 >  O**SQLdiag** não anexa a saída à pasta de saída atual quando é iniciado. Ele pode apenas substituir a pasta de saída padrão (opção 1) ou renomear a pasta (opção 2) e, em seguida, gravar a saída na nova pasta de saída padrão SQLDIAG.  
   
- **/M** _machine1_ [ *machine2 * * machineN*] | *@machinelistfile*  
+ **/M** _machine1_ [ *machine2**machineN*] | *@machinelistfile*  
  Substitui as máquinas especificadas no arquivo de configuração. Por padrão, o arquivo de configuração é SQLDiag.Xml ou é definido com o parâmetro **/I** . Ao especificar mais de uma máquina, separe cada nome de máquina com um espaço.  
   
  Usar o *@machinelistfile* especifica um nome de arquivo de lista de máquina a ser armazenado no arquivo de configuração.  
@@ -158,7 +158,7 @@ ms.locfileid: "53590250"
   
  *SQLdiag_application_name* pode ser usado para iniciar ou interromper uma instância específica de serviço do **SQLdiag** .  
   
- Por exemplo:  
+ Por exemplo:   
   
  **SQLDIAG START /A** _SQLdiag_application_name_  
   
@@ -221,7 +221,7 @@ ms.locfileid: "53590250"
  **START** | **STOP** | **STOP_ABORT**  
  Inicia ou interrompe o serviço do **SQLdiag** . **STOP_ABORT** força o serviço a desligar o mais rápido possível sem terminar a coleção de diagnóstico atual.  
   
- Quando esses argumentos de controle de serviço forem usados, eles deverão ser o primeiro argumento usado na linha de comando. Por exemplo:  
+ Quando esses argumentos de controle de serviço forem usados, eles deverão ser o primeiro argumento usado na linha de comando. Por exemplo:   
   
  **SQLDIAG START**  
   

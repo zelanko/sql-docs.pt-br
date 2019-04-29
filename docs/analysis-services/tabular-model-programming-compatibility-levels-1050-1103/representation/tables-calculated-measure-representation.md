@@ -1,5 +1,5 @@
 ---
-title: Calculado a representação de medida (tabela) | Microsoft Docs
+title: Calculado a representação de medida (Tabular) | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,22 +10,22 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eb14a3114edde51f55a0d540a9ab7c8aa7578de2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019281"
 ---
-# <a name="tables---calculated-measure-representation"></a>Tabelas - representação de medida calculada
+# <a name="tables---calculated-measure-representation"></a>Tabelas – Representação de medida calculada
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Uma medida calculada é uma expressão DAX nomeada avaliada toda vez que é usada.  
   
 ## <a name="calculated-measure-representation"></a>Representação de medida calculada  
   
 ### <a name="calculated-measure-in-amo"></a>Medidas calculadas no AMO  
- Ao usar o AMO para gerenciar uma medida calculada de modelo de tabela, há uma correspondência um-para-um entre o objeto de Medida Calculada lógica e uma medida definida em um objeto <xref:Microsoft.AnalysisServices.Command> do objeto <xref:Microsoft.AnalysisServices.MdxScript>. Cada **medida calculada** é definido como um **criar medidas** expressão dentro de um <xref:Microsoft.AnalysisServices.Command> de objeto e separados por ponto e vírgula. Todas as medidas calculadas em um modelo de tabela correspondem à coleção **criar medidas** cadeia de caracteres em um objeto de comando em um <xref:Microsoft.AnalysisServices.MdxScript> objeto. Para cada medida calculada, há um mapeamento um para um com <xref:Microsoft.AnalysisServices.CalculationProperty>.  
+ Ao usar o AMO para gerenciar uma medida calculada de modelo de tabela, há uma correspondência um-para-um entre o objeto de Medida Calculada lógica e uma medida definida em um objeto <xref:Microsoft.AnalysisServices.Command> do objeto <xref:Microsoft.AnalysisServices.MdxScript>. Cada **medida calculada** é definido como um **CREATE MEASURE** expressão dentro de um <xref:Microsoft.AnalysisServices.Command> do objeto e separados por ponto e vírgula. Todas as medidas calculadas em um modelo de tabela correspondem à coleção **CREATE MEASURE** cadeia de caracteres em um objeto de comando em um <xref:Microsoft.AnalysisServices.MdxScript> objeto. Para cada medida calculada, há um mapeamento um para um com <xref:Microsoft.AnalysisServices.CalculationProperty>.  
   
- O trecho de código a seguir mostra como criar uma medida calculada.  
+ O snippet de código a seguir mostra como criar uma medida calculada.  
   
 ```  
   

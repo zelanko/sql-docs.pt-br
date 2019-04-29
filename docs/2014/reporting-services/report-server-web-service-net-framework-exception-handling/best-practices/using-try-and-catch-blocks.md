@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 774894c374edf4e57d1c297f981d423a7fabd4ee
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020081"
 ---
 # <a name="using-try-and-catch-blocks"></a>Usando blocos Try e Catch
   Depois de limitar solicitações inválidas feitas ao servidor de relatório ao adicionar instruções condicionais ao seu código, forneça a manipulação de exceções adequada usando blocos try/catch. Essa técnica oferece outra camada de proteção contra solicitações que não são válidas. Se uma solicitação feita ao servidor de relatório for encapsulada em um bloco try e se essa solicitação fizer com que o servidor de relatório lance uma exceção, a exceção será capturada em um bloco catch, impedindo que o seu aplicativo seja interrompido inesperadamente. Depois que a exceção tiver sido capturada, você poderá usá-la para instruir o usuário a fazer algo diferente ou simplesmente avisá-lo, de uma forma amigável, de que houve um erro. Por fim, você poderá usar um bloco finally para limpar qualquer recurso. Idealmente, você deve gerar um plano de manipulação de exceções gerais para evitar a duplicação desnecessária de blocos try/catch.  

@@ -24,11 +24,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a53a32f01dcf4646ee0bc12843c188b9b0e8e4c0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013191"
 ---
 # <a name="sysdmexecexternalwork-transact-sql"></a>sys.dm_exec_external_work (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -41,9 +41,9 @@ ms.locfileid: "52418617"
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|**nvarchar(32)**|Identificador exclusivo para a consulta do PolyBase associado.|Ver *request_ID* na [. DM exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
 |step_index|**int**|A solicitação em que este trabalhador está executando.|Ver *step_index* na [. DM exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
-|dms_step_index|**int**|Etapa no plano de DMS que este trabalhador está em execução.|Ver [sys.dm_exec_dms_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md).|  
-|compute_node_id|**int**|O nó do trabalhador está em execução.|Ver [DM exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
-|Tipo|**nvarchar(60)**|O tipo de trabalho externo.|Divisão de arquivos|  
+|dms_step_index|**int**|Etapa no plano de DMS que este trabalhador está em execução.|See [sys.dm_exec_dms_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md).|  
+|compute_node_id|**int**|O nó do trabalhador está em execução.|See [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
+|type|**nvarchar(60)**|O tipo de trabalho externo.|Divisão de arquivos|  
 |work_id|**int**|ID da divisão real.|Maior que ou igual a 0.|  
 |input_name|**nvarchar(4000)**|Nome da entrada a ser lido|Nome do arquivo quando o uso do Hadoop.|  
 |read_location|**bigint**|Deslocamento ou ler local.|Deslocamento do arquivo a ser lido.|  

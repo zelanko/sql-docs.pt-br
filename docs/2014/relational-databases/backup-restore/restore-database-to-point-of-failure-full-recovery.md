@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 83319e8eb1fe692bc55b764445ac155d9e1ad38d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920989"
 ---
 # <a name="restore-a-database-to-the-point-of-failure-under-the-full-recovery-model-transact-sql"></a>Restaurar um banco de dados até o ponto de falha no modelo de recuperação completa (Transact-SQL)
   Este tópico explica como restaurar até o ponto de falha. O tópico é relevante apenas para bancos de dados que estejam usando modelos de recuperação completa ou com bulk-logged.  

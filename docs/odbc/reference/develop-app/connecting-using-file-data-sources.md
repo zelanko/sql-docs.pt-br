@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6fec2cea71ba818e955e0b6c2ce31c58f2c07357
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043881"
 ---
 # <a name="connecting-using-file-data-sources"></a>Conectar-se usando fontes de dados de arquivo
 As informações de conexão para uma fonte de dados de arquivo são armazenadas em um arquivo. DSN. Como resultado, a cadeia de caracteres de conexão pode ser usada repetidamente por um único usuário ou compartilhada entre vários usuários se eles tiverem o driver apropriado instalado. O arquivo contém um nome de driver (ou outro nome de fonte de dados no caso de uma fonte de dados de arquivos não compartilháveis) e, opcionalmente, uma cadeia de conexão que pode ser usada por **SQLDriverConnect**. O Gerenciador de Driver cria a cadeia de caracteres de conexão para a chamada para **SQLDriverConnect** de palavras-chave no arquivo. DSN.  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6788a2bdec8007b317e4f737ece44d8bd87dd3d9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63012153"
 ---
 # <a name="audit-login-gdr-event-class"></a>Classe de evento Audit Login GDR
   A classe de evento **Audit Login GDR** ocorre sempre que um direito de logon do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows é adicionado ou removido. Essa classe de evento refere-se aos procedimentos armazenados **sp_grantlogin**, **sp_revokelogin**e **sp_denylogin** .  

@@ -17,11 +17,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 0ffc525e4d9ab516481eadf4cc303a704ce56da6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63033605"
 ---
 # <a name="configure-a-service-account-ssrs-configuration-manager"></a>Configurar uma conta de serviço (Gerenciador de configurações do SSRS)
   Em uma instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], o serviço Web Servidor de Relatório, o Gerenciador de Relatórios e o aplicativo de processamento em segundo plano são executados em um único serviço. A conta em que o serviço é executado é definida durante a Instalação quando você especifica a conta na página Identidade do Serviço, mas é possível usar a ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se desejar usar uma conta diferente ou atualizar a senha.  
@@ -65,9 +65,9 @@ ms.locfileid: "48136367"
 -   Podem ocorrer erros de reserva de URL ao atualizar a conta de serviço. Cada reserva de URL inclui um descritor de segurança que inclui uma DACL (Lista de Controle de Acesso Discricionário) que concede permissão à conta de serviço para aceitar solicitações na URL. Quando você atualizar a conta, a URL deverá ser recriada a fim de atualizar a DACL com as novas informações de conta. Se a reserva de URL não puder ser recriada e você souber que a conta é válida, tente reiniciar o computador. Se o erro persistir, tente usar uma conta diferente.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gerenciador de configuração do Reporting Services &#40;modo nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Configurar a conta de serviço do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [Configurar uma Conexão de banco de dados do servidor de relatório &#40;Configuration Manager do SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Configurar uma conexão de banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Conta de serviço &#40;modo nativo do SSRS&#41;](../../../2014/sql-server/install/service-account-ssrs-native-mode.md)   
  [Configurar e gerenciar chaves de criptografia &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   

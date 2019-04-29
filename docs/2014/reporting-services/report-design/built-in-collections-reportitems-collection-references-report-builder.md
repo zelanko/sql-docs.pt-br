@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 684ee8c4738b2cc46cb847820a2408365c1a5cd1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59962152"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185733"
 ---
 # <a name="reportitems-collection-references-report-builder-and-ssrs"></a>Referências de coleções ReportItems (Construtor de Relatórios e SSRS)
   A coleção interna de `ReportItems` é o conjunto de caixas de texto de itens de relatório, como linhas de uma região de dados ou caixas de texto na superfície de design de relatório. A coleção de `ReportItems` inclui caixas de texto que estão no escopo atual de um cabeçalho de página, rodapé de página ou corpo de relatório. Essa coleção é determinada em tempo de execução pelo processador de relatório e pelo renderizador de relatório. O escopo atual é alterado conforme o processador de relatório combina dados de relatório e os elementos de layout do item de relatório sucessivamente conforme o usuário exibe páginas de um relatório. É possível usar a coleção interna de `ReportItems` para produzir cabeçalhos de páginas em estilo de dicionário que mostram o primeiro e o último item em cada página.  

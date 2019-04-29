@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 17edc0c7156513befd584f411c2598fc9fc70bcd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046199"
 ---
 # <a name="optimize-parameterized-row-filters"></a>Otimizar filtros de linha com parâmetros
   Este tópico descreve como otimizar filtros de linha com parâmetros no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -115,7 +115,7 @@ ms.locfileid: "52772308"
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  Para definições sobre as opções de filtragem de **@keep_partition_changes** e **@use_partition_groups**, consulte [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql).  
   
 #### <a name="to-specify-merge-filter-optimizations-when-creating-a-new-publication"></a>Para especificar otimizações de filtro de mesclagem ao criar uma nova publicação  

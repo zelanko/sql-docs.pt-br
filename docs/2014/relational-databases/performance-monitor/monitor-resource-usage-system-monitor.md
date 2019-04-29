@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8bd4676eed22cea99808d87016231dbd2ebaf4cc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032090"
 ---
 # <a name="monitor-resource-usage-system-monitor"></a>Monitorar o uso de recursos (Monitor do Sistema)
   Se estiver executando o sistema operacional Microsoft Windows Server, use a ferramenta gráfica Monitor do Sistema para avaliar o desempenho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. É possível visualizar objetos, contadores de desempenho e o comportamento de outros objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , como processadores, memória, cache, threads e processos. Cada um desses objetos possui um conjunto de contadores associado para medir o uso de dispositivos, o comprimento de filas, demoras e outros indicadores da taxa de transferência e do congestionamento interno.  

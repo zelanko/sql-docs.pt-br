@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cede9be7c484d40c2220fc891779f7dfb6e5a8df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028143"
 ---
 # <a name="filter-property"></a>Propriedade Filter
 Indica um filtro para os dados em um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -30,9 +30,9 @@ Indica um filtro para os dados em um [conjunto de registros](../../../ado/refere
 
 Define ou retorna um **Variant** valor, que pode conter um dos seguintes itens:  
   
--   **Cadeia de caracteres de critérios:** composta por uma ou mais cláusulas individuais concatenadas com uma cadeia de caracteres **AND** ou **OR** operadores.  
+-   **Cadeia de caracteres de critérios:** Uma cadeia de caracteres composta de uma ou mais cláusulas individuais concatenadas com **AND** ou **OR** operadores.  
   
--   **Matriz de indicadores:** que apontam para os registros em valores de uma matriz de indicador exclusivo a **Recordset** objeto.  
+-   **Matriz de indicadores:** Uma matriz de indicador exclusivo valores que apontam para os registros na **Recordset** objeto.  
   
 -   Um [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) valor.  
   
@@ -46,7 +46,7 @@ A cadeia de caracteres de critérios é composta por cláusulas no formulário *
   
 -   Operador deve ser um dos seguintes: \<, >, \<=, > =, <>, =, ou **como**.  
   
--   Valor é o valor com o qual você irá comparar os valores de campo (por exemplo, 'Smith', # #8/24/95, 12.345 ou US $50,00). Use aspas simples com cadeias de caracteres e sinais de sustenido (#) com datas. Para números, você pode usar a notação científica, cifrões e pontos decimais. Se o operador está **como**, valor pode usar caracteres curinga. Somente o asterisco (*) e os curingas de sinal de porcentagem (%) são permitidas, e eles devem ser o último caractere na cadeia de caracteres. Valor não pode ser nulo.  
+-   Valor é o valor com o qual você irá comparar os valores de campo (por exemplo, 'Smith', # #8/24/95, 12.345 ou US $50,00). Use aspas simples com cadeias de caracteres e sinais de sustenido (#) com datas. Para números, você pode usar a notação científica, cifrões e pontos decimais. Se o operador está **como**, valor pode usar caracteres curinga. Somente o asterisco (*) e o sinal de porcentagem (%) caracteres curinga é permitida, e eles devem ser o último caractere na cadeia de caracteres. Valor não pode ser nulo.  
   
 > [!NOTE]
 >  Para incluir aspas simples (') no filtro de valor, use duas aspas simples para representar um. Por exemplo, para filtrar o ' Malley, a cadeia de caracteres de critérios deve ser `"col1 = 'O''Malley'"`. Para incluir aspas no início e final do valor do filtro, coloque a cadeia de caracteres com sinais de sustenido (#). Por exemplo, para filtrar '1', a cadeia de caracteres de critérios deve ser `"col1 = #'1'#"`.  
@@ -94,8 +94,8 @@ A tabela a seguir resume os efeitos das **adFilterPendingRecords** em combinaç�
 ||Não chaves|Chave única|Várias chaves|
 |-|--------------|----------------|-------------------|
 |**Não chaves**|+|+|+|
-|**Chave única**|+|-|N/A|
-|**Várias chaves**|+|N/A|+|
+|**Chave única**|+|-|N/D|
+|**Várias chaves**|+|N/D|+|
 |||||
   
 ## <a name="applies-to"></a>Aplica-se a

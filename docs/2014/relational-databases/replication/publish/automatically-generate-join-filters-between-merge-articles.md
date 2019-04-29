@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66c32615b3fd9f417eab27f156b2645c2c89593b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770128"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020972"
 ---
 # <a name="automatically-generate-a-set-of-join-filters-between-merge-articles-sql-server-management-studio"></a>Gerar automaticamente um conjunto de filtros de junção entre artigos de mesclagem (SQL Server Management Studio)
   Gere automaticamente um conjunto de filtros de junção na página **Filtrar Linhas da Tabela** no Assistente para Nova Publicação ou na página **Filtrar Linhas** da caixa de diálogo **Propriedades de Publicação – \<Publicação>**. Para obter mais informações sobre como usar o assistente e acessar a caixa de diálogo, consulte [Criar uma publicação](create-a-publication.md) e [Exibir e modificar as propriedades da publicação](view-and-modify-publication-properties.md).  

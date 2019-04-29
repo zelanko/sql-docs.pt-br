@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: d4c51002c8c829417c63a0dd6c59a3538604fd81
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042502"
 ---
-# <a name="lesson-3-load-a-report-definition-from-the-report-server"></a>Lição 3: Carregar uma definição de relatório do servidor de relatório
+# <a name="lesson-3-load-a-report-definition-from-the-report-server"></a>Lição 3: Carregar uma definição de relatório do Servidor de Relatório
   Depois que você criar seu projeto e gerar as classes do esquema RDL, estará pronto para carregar uma definição de relatório do servidor de relatório.  
   
 ### <a name="to-load-a-report-definition"></a>Para carregar uma definição de relatório  
@@ -97,7 +97,7 @@ ms.locfileid: "56025637"
     ```  
   
 ## <a name="next-lesson"></a>Próxima lição  
- Na próxima lição, você escreverá código para atualizar a definição de relatório carregada do servidor de relatório. Consulte [lição 4: Atualizar a definição de relatório de modo programático](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md).  
+ Na próxima lição, você escreverá código para atualizar a definição de relatório carregada do servidor de relatório. Confira [Lição 4: Atualizar a definição de relatório de modo programático](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Atualizando relatórios por meio de Classes geradas a partir do esquema RDL &#40;Tutorial do SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

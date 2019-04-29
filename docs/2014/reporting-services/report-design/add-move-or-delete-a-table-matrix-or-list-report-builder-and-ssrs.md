@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eb60f8152ad49b68723367cfb4f9f3941511954e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59938922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020891"
 ---
 # <a name="add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs"></a>Adicionar, mover ou excluir uma tabela, matriz ou lista (Construtor de Relatórios e SSRS)
   Uma região de dados exibe dados a partir de um conjunto de dados de relatório. As regiões de dados incluem tabela, matriz, gráfico e medidor. Para aninhar uma região de dados dentro de outra, adicione cada uma separadamente e arraste a região de dados filho para a região de dados pai.  

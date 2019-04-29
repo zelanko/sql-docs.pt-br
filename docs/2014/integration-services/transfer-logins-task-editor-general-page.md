@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 559347a0e092797732a4f3bffe424aac7dfe360f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62926485"
 ---
 # <a name="transfer-logins-task-editor-general-page"></a>Editor da Tarefa Transferir Logons (página Geral)
   Use a página **Geral** da caixa de diálogo do **Editor da Tarefa Transferir Logons** para nomear e descrever a tarefa Transferir Logons. Para obter mais informações sobre essa tarefa, consulte [Tarefa Transferir Logons](control-flow/transfer-logins-task.md).  

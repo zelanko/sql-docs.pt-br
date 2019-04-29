@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 65aa1b0531eb4ba30875e53a77551383b3f38579
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042352"
 ---
-# <a name="lesson-3-matching-data-to-remove-duplicates-from-supplier-list"></a>Lição 3: Correspondendo dados para remover duplicatas da lista de fornecedores
+# <a name="lesson-3-matching-data-to-remove-duplicates-from-supplier-list"></a>Lição 3: Corresponder dados para remover duplicatas da lista de fornecedores
   Você prepara a base de dados de conhecimento para executar uma atividade de correspondência criando uma política de correspondência na base de dados de conhecimento. Pode haver apenas uma política de correspondência em uma base de dados de conhecimento. Uma política de correspondência consiste em uma ou mais regras de correspondência. Uma regra identifica os domínios envolvidos no processo de correspondência e especifica o peso que cada valor de domínio tem na avaliação de correspondência. Você especifica na regra se os valores do domínio precisam ser uma correspondência exata ou se podem ser semelhantes, e com que grau de semelhança. Você também especifica se a correspondência de domínio é um pré-requisito para o processo de correspondência. Você pode testar cada regra separadamente e testar toda a política em relação aos dados de exemplo. O processo de testes exibe os registros cujas pontuações correspondentes são maiores que o **pontuação mínima de registro** limite especificado na configuração do DQS em um cluster (grupo). Você poderá continuar ajustando as regras na política até ficar satisfeito.  
   
  Depois de definir a política, crie um Projeto de Qualidade de Dados para executar a atividade de correspondência. O projeto de correspondência aplica as regras de correspondência da política de correspondência à fonte de dados a ser avaliada. Esse processo avalia a probabilidade de quaisquer duas linhas serem correspondências. Quando o DQS executa a análise de correspondência, cria clusters de registros considerados como correspondências pelo DQS. O DQS identifica aleatoriamente um dos registros como um registro dinâmico. Você pode verificar e rejeitar qualquer registro que não seja uma correspondência apropriada para o cluster. Ver [criar uma política de conciliação](https://msdn.microsoft.com/library/hh270290.aspx) tópico para obter mais detalhes.  

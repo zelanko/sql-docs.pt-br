@@ -23,11 +23,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: b765248e43dc66b9e1c038df27ca9a8b6135706d
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63012024"
 ---
 # <a name="create-a-login"></a>Crie um logon
   Este tópico descreve como criar um logon no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Um logon é a identidade da pessoa ou do processo que está se conectando a uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -73,7 +73,7 @@ ms.locfileid: "54131586"
   
      Se você clicar em **Pesquisar...**:  
   
-    1.  Sob **Selecione este tipo de objeto**, clique em **tipos de objeto...**  para abrir o **tipos de objeto** caixa de diálogo caixa e selecione todos ou qualquer um dos seguintes: **Entidades de segurança internas**, **grupos**, e **usuários**. **Entidades de segurança internas** e **Usuários** estão selecionados por padrão. Quando terminar, clique em **OK**.  
+    1.  Em **Selecionar este tipo de objeto**, clique em **Tipos de Objeto...** para abrir a caixa de diálogo **Tipos de Objeto** e selecione uma ou todas as seguintes opções: **Entidades de segurança internas**, **Grupos** e **Usuários**. **Entidades de segurança internas** e **Usuários** estão selecionados por padrão. Quando terminar, clique em **OK**.  
   
     2.  Em **Desta localização**, clique em **Localizações...** para abrir a caixa de diálogo **Localizações** e selecione um dos locais de servidor disponíveis. Quando terminar, clique em **OK**.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "54131586"
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Opções adicionais  
- O **logon - novo** caixa de diálogo também oferece opções em quatro páginas adicionais: **Funções de servidor**, **mapeamento de usuário**, **protegíveis**, e **Status**.  
+ A caixa de diálogo **Logon – Novo** também oferece opções em quatro páginas adicionais: **Funções de Servidor**, **Mapeamento de Usuário**, **Protegíveis** e **Status**.  
   
 ### <a name="server-roles"></a>Funções de Servidor  
  A página **Funções de Servidor** lista todas as funções possíveis que podem ser atribuídas ao novo logon. As seguintes opções estão disponíveis:  
@@ -176,7 +176,7 @@ ms.locfileid: "54131586"
   
 1.  Clique em **Pesquisar**.  
   
-2.  No **adicionar objetos** caixa de diálogo, selecione uma das seguintes opções: **Objetos específicos...** , **Todos os objetos dos tipos...** , ou **o servidor**_nome_do_servidor_. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  Na caixa de diálogo **Adicionar Objetos**, selecione uma das seguintes opções: **Objetos específicos...** , **Todos os objetos dos tipos...** , ou **o servidor**_nome_do_servidor_. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     > [!NOTE]  
     >  A seleção de **O servidor**_server_name_ preenche automaticamente a grade superior com os objetos protegíveis de todos os servidores.  
@@ -185,7 +185,7 @@ ms.locfileid: "54131586"
   
     1.  Na caixa de diálogo **Selecionar Objetos**, em **Selecionar estes tipos de objeto**, clique em **Tipos de Objeto...**.  
   
-    2.  No **selecionar tipos de objeto** caixa de diálogo, selecione um ou todos os tipos de objetos a seguir: **Pontos de extremidade**, **logons**, **servidores**, **grupos de disponibilidade**, e **funções de servidor**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+    2.  Na caixa de diálogo **Selecionar Tipos de Objeto**, selecione um ou todos os seguintes tipos de objeto: **Pontos de extremidade**, **Logons**, **Servidores**, **Grupos de Disponibilidade** e **Funções de servidor**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     3.  Em **Inserir os nomes de objeto a serem selecionados (exemplos)**, clique em **Procurar...**.  
   
@@ -193,7 +193,7 @@ ms.locfileid: "54131586"
   
     5.  Na caixa de diálogo **Selecionar Objetos** , clique em **OK**.  
   
-4.  Se você selecionar **todos os objetos dos tipos...** , no **selecionar tipos de objeto** caixa de diálogo, selecione um ou todos os tipos de objetos a seguir: **Pontos de extremidade**, **logons**, **servidores**, **grupos de disponibilidade**, e **funções de servidor**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Se você selecionar **Todos os objetos dos tipos...**, na caixa de diálogo **Selecionar Tipos de Objeto**, selecione um ou todos os seguintes tipos de objeto: **Pontos de extremidade**, **Logons**, **Servidores**, **Grupos de Disponibilidade** e **Funções de servidor**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
  **Nome**  
  O nome de cada entidade ou protegível que é adicionado à grade.  
@@ -239,7 +239,7 @@ ms.locfileid: "54131586"
  **SQL Server Authentication**  
  A caixa de seleção **O logon está bloqueado** só estará disponível se o logon selecionado se conectar usando a Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e se estiver bloqueado. Esta configuração é somente leitura. Para desbloquear um logon bloqueado, execute ALTER LOGIN com a opção UNLOCK.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-create-a-login-using-windows-authentication"></a>Para criar um logon usando a Autenticação do Windows  
   
@@ -278,7 +278,7 @@ ms.locfileid: "54131586"
   
  Para obter mais informações, veja [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql).  
   
-##  <a name="FollowUp"></a> Acompanhar: etapas a serem executadas após criar um logon  
+##  <a name="FollowUp"></a> Acompanhamento: Etapas a serem executadas após criar um logon  
  Após ser criado, o logon pode se conectar ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], mas não necessariamente tem permissão suficiente para executar qualquer trabalho útil. A lista a seguir fornece links a ações de logon comuns.  
   
 -   Para associar o logon a uma função, veja [Unir uma função](join-a-role.md).  

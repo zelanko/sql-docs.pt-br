@@ -1,5 +1,5 @@
 ---
-title: 'Apêndice e: Funções escalares | Microsoft Docs'
+title: 'Apêndice E: Funções escalares | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 71c80efdb2f4a87537d472ee4b6dc6bdc65af70f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026678"
 ---
-# <a name="appendix-e-scalar-functions"></a>Apêndice e: Funções escalares
+# <a name="appendix-e-scalar-functions"></a>Apêndice E: Funções escalares
 ODBC Especifica os seguintes tipos de funções escalares, com informações detalhadas sobre cada um desses tipos de função fornecidos nas seções correspondentes neste apêndice. As descrições de função incluem sintaxe associada.  
   
  Este apêndice contém os tópicos a seguir.  

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bffa36106278b8913a9ecb042e94318c41ce87b5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022599"
 ---
 # <a name="configure-an-oracle-publisher"></a>Configurar um publicador Oracle
   As publicações dos Editores Oracle são criadas da mesma forma que são criados os instantâneos e as publicações transacionais mas, antes de criar uma publicação de um Publicador Oracle, você deverá completar as etapas a seguir (etapas um, três e quatro que estão detalhadamente descritas neste tópico):  
@@ -122,7 +122,7 @@ ms.locfileid: "52804427"
 > [!NOTE]  
 >  Um Publicador Oracle não pode ter o mesmo nome do Distribuidor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou o mesmo nome de um dos Editores [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , usando o mesmo Distribuidor.  
   
- Ao identificar o banco de dados Oracle como um publicador, você deve escolher um opção de publicação do Oracle: Completa ou Oracle Gateway. Depois que um Publicador é identificado, essa opção não pode ser alterada sem descartar e reconfigurar o Publicador. A opção Completa é projetada para fornecer instantâneos e publicações transacionais com o conjunto completo de recursos com suporte para publicações Oracle. A opção Gateway fornece otimizações de projeto específicas para aprimorar o desempenho de casos em que a replicação serve como um gateway entre sistemas.  
+ Quando você identifica o banco de dados Oracle como sendo um Publicador, é necessário escolher uma opção de edição Oracle: Completa ou Oracle Gateway. Depois que um Publicador é identificado, essa opção não pode ser alterada sem descartar e reconfigurar o Publicador. A opção Completa é projetada para fornecer instantâneos e publicações transacionais com o conjunto completo de recursos com suporte para publicações Oracle. A opção Gateway fornece otimizações de projeto específicas para aprimorar o desempenho de casos em que a replicação serve como um gateway entre sistemas.  
   
  Após o Publicador Oracle ser identificado no Distribuidor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , a replicação cria um servidor vinculado com o mesmo nome como o nome do serviço TNS do banco de dados Oracle. Esse servidor vinculado só pode ser usado por replicação. Se você precisar se conectar ao Publicador Oracle usando uma conexão de servidor vinculado, crie outro nome de serviço TNS e use esse nome ao chamar [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql).  
   

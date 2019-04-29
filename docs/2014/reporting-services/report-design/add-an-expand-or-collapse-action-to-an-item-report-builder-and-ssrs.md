@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 21726a3f57db48a9dd1ec163de7ece3ba5e544c4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186062"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>Adicionar uma ação de expandir ou recolher a um item (Construtor de Relatórios e SSRS)
   Você pode permitir que um usuário expanda ou recolha interativamente itens de relatório ou expanda ou recolha linhas e colunas associadas a um grupo para uma tabela ou matriz. Para permitir que os usuários expandam ou recolham um item, defina as propriedades de visibilidade do item. A definição de trabalhos de visibilidade em um visualizador de relatórios HTML às vezes é chamada de uma ação de *detalhamento* .  

@@ -20,24 +20,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6cecc7fcd5ffa7234544dd0a9bc10407b1ea5cb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032832"
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>Mapear funções de substituição para compatibilidade com versões anteriores de aplicativos
 Um ODBC 3 *. x* aplicativo funcionando por meio de ODBC 3 *. x* Gerenciador de Driver funcionará contra um ODBC 2. *x* driver, desde que não há novos recursos são usados. Ambos duplicado funcionalidades e alterações de comportamento, no entanto, afetam a maneira que o ODBC 3. *x* aplicativo funciona em um ODBC 2. *x* driver. Ao trabalhar com um ODBC 2. *x* driver, o Gerenciador de Driver mapeia os seguintes ODBC 3. *x* funções, que substituíram um ou mais ODBC 2. *x* funções, em correspondente ODBC 2. *x* funções.  
   
 |ODBC 3. *x* função|ODBC 2. *x* função|  
 |-------------------------|-------------------------|  
-|**Falha de SQLAllocHandle**|**SQLAllocEnv**, **SQLAllocConnect**, ou **SQLAllocStmt**|  
+|**SQLAllocHandle**|**SQLAllocEnv**, **SQLAllocConnect**, ou **SQLAllocStmt**|  
 |**SQLBulkOperations**|**SQLSetPos**|  
 |**SQLColAttribute**|**SQLColAttributes**|  
 |**SQLEndTran**|**SQLTransact**|  
 |**SQLFetch**|**SQLExtendedFetch**|  
 |**SQLFetchScroll**|**SQLExtendedFetch**|  
-|**SQLFreeHandle**|**SQLFreeEnv**, **SQLFreeConnect**, ou **SQLFreeStmt**|  
+|**SQLFreeHandle**|**SQLFreeEnv**, **SQLFreeConnect**, or **SQLFreeStmt**|  
 |**SQLGetConnectAttr**|**SQLGetConnectOption**|  
 |**SQLGetDiagRec**|**SQLError**|  
 |**SQLGetStmtAttr**|**SQLGetStmtOption**[1]|  
@@ -46,7 +46,7 @@ Um ODBC 3 *. x* aplicativo funcionando por meio de ODBC 3 *. x* Gerenciador de D
   
  [1] outras ações também podem ser executadas, dependendo do atributo que está sendo solicitado.  
   
-## <a name="sqlallochandle"></a>Falha de SQLAllocHandle  
+## <a name="sqlallochandle"></a>SQLAllocHandle  
  O Gerenciador de Driver é mapeado para **SQLAllocEnv**, **SQLAllocConnect**, ou **SQLAllocStmt**, conforme apropriado. A seguinte chamada para **SQLAllocHandle**:  
   
 ```  
@@ -98,7 +98,7 @@ SQLColAttribute(StatementHandle, ColumnNumber, FieldIdentifier, CharacterAttribu
   
 1.  Se *FieldIdentifier* é um dos seguintes:  
   
-     SQL_DESC_PRECISION, SQL_DESC_SCALE, SQL_DESC_LENGTH, SQL_DESC_OCTET_LENGTH, SQL_DESC_UNNAMED, SQL_DESC_BASE_COLUMN_NAME, SQL_DESC_LITERAL_PREFIX, SQL_DESC_LITERAL_SUFFIX ou SQL_DESC_LOCAL_TYPE_NAME  
+     SQL_DESC_PRECISION, SQL_DESC_SCALE, SQL_DESC_LENGTH, SQL_DESC_OCTET_LENGTH, SQL_DESC_UNNAMED, SQL_DESC_BASE_COLUMN_NAME, SQL_DESC_LITERAL_PREFIX, SQL_DESC_LITERAL_SUFFIX, or SQL_DESC_LOCAL_TYPE_NAME  
   
      o Gerenciador de Driver retornará SQL_ERROR com SQLSTATE HY091 (identificador de campo de descritor inválido). Nenhuma regra adicional desta seção se aplicam.  
   
@@ -281,7 +281,7 @@ SQLGetStmtAttr(StatementHandle, Attribute, ValuePtr, BufferLength, StringLengthP
   
 3.  O Gerenciador de Driver executa as verificações necessárias para ver se SQLSTATE HY010 (erro de sequência de função) precisa ser gerado. Se assim, o Gerenciador de Driver retornará SQL_ERROR e SQLSTATE HY010 (erro de sequência de função). Nenhuma regra adicional desta seção se aplicam.  
   
-4.  Se *atributo* é igual a SQL_ATTR_ROWS_FETCHED_PTR, a retorna um ponteiro para o *cRow* da variável do Gerenciador de Driver interno, que ele usou ou usará em uma chamada para **SQLExtendedFetch**. Nenhuma regra adicional desta seção se aplicam.  
+4.  Se *atributo* é igual a SQL_ATTR_ROWS_FETCHED_PTR, a retorna um ponteiro em Gerenciador de Driver à variável interna do Gerenciador de Driver *galinha*, que ele usou ou usará em uma chamada para  **SQLExtendedFetch**. Nenhuma regra adicional desta seção se aplicam.  
   
 5.  Se *atributo* é igual para SQL_DESC_FETCH_BOOKMARK_PTR, o Gerenciador de Driver retorna o ponteiro apropriado que ele tivesse armazenado em cache durante uma chamada para **SQLSetStmtAttr**.  
   
@@ -452,11 +452,11 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 |Buffer|Valor|  
 |------------|-----------|  
 |ColumnName|"" (cadeia de caracteres vazia)|  
-|* NameLengthPtr|0|  
-|* DataTypePtr|SQL_BINARY|  
-|* ColumnSizePtr|4|  
-|* DecimalDigitsPtr|0|  
-|* NullablePtr|SQL_NO_NULLS|  
+|*NameLengthPtr|0|  
+|*DataTypePtr|SQL_BINARY|  
+|*ColumnSizePtr|4|  
+|*DecimalDigitsPtr|0|  
+|*NullablePtr|SQL_NO_NULLS|  
   
 ### <a name="sqlgetdata"></a>SQLGetData  
  Quando um ODBC 3. *x* aplicativo trabalhar com um ODBC 2. *x* driver faz a chamada seguinte para **SQLGetData** para recuperar um indicador:  

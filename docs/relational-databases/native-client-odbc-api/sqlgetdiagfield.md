@@ -16,11 +16,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6f0d131422aa9d901e6a92cb5c9e573a076b1e71
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63014415"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "51675422"
 
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client Especifica os campos de diagnósticos adicionais a seguir para **SQLGetDiagField**. Esses campos suportam relatórios bem-elaborados de erros para os aplicativos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e estão disponíveis em todos os registros de diagnóstico gerados em identificadores de conexão conectados ODBC e identificadores de instrução ODBC. Os campos são definidos em sqlncli.h.  
   
-|Campo de registro de diagnóstico|Description|  
+|Campo de registro de diagnóstico|Descrição|  
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|Informa o número da linha de um procedimento armazenado que gera um erro. O valor de SQL_DIAG_SS_LINE só será útil se SQL_DIAG_SS_PROCNAME retornar um valor. O valor é retornado como um inteiro de 16 bits sem-sinal.|  
 |SQL_DIAG_SS_MSGSTATE|O estado de uma mensagem de erro. Para obter informações sobre o estado da mensagem de erro, consulte [RAISERROR](../../t-sql/language-elements/raiserror-transact-sql.md). O valor é retornado como um inteiro de 32 bits com assinatura.|  
@@ -40,7 +40,7 @@ ms.locfileid: "51675422"
   
  O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client informa os códigos de função dinâmicos adicionais a seguir que identificam a última instrução do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tentada. O código de função dinâmico é retornado no cabeçalho (record 0) do registro de diagnóstico definido e, portanto, está disponível em cada execução (bem-sucedida ou não).  
   
-|Código de função dinâmico|Origem|  
+|Código de função dinâmico|Source|  
 |---------------------------|------------|  
 |SQL_DIAG_DFC_SS_ALTER_DATABASE|instrução ALTER DATABASE|  
 |SQL_DIAG_DFC_SS_CHECKPOINT|Instrução CHECKPOINT|  

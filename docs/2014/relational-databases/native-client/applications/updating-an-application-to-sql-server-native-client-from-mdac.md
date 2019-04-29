@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d2c8afa1fbbb51947bef28ae45cabd445aaf0bf2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046399"
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>Atualizando um aplicativo do MDAC para o SQL Server Native Client
   Há várias diferenças entre o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client e o MDAC (Microsoft Data Access Components); a partir do Windows Vista, os componentes de acesso aos dados agora são chamados de Windows DAC ou de Windows Data Access Components). Ainda que ambos forneçam acesso a dados em bancos de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client foi especificamente projetado para expor os novos recursos do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], ao mesmo tempo em que mantém a compatibilidade com versões anteriores.  
@@ -108,7 +108,7 @@ ms.locfileid: "52541920"
   
 -   Com [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, ITransactionLocal::BeginTransaction fará com que uma transação seja iniciada imediatamente. Com o MDAC, o início da transação foi atrasado até que o aplicativo executasse uma instrução que exigia uma transação em modo de transação implícita. Para obter mais informações, confira [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-implicit-transactions-transact-sql).  
   
--   Você pode encontrar erros ao usar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver do Native Client com System.Data.Odbc para acessar uma [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] computador do servidor que expõe novos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-tipos de dados específicos ou recursos. System.Data.Odbc fornece uma implementação de ODBC genérica e, posteriormente, não expõe funcionalidades específicas de fornecedor ou extensões. (O driver do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client é atualizado para oferecer suporte nativo aos recursos mais recentes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].) Para solucionar esse problema, você pode voltar ao MDAC ou migrar para o System.Data.SqlClient.  
+-   Você pode encontrar erros ao usar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver do Native Client com System.Data.Odbc para acessar uma [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] computador do servidor que expõe novos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-tipos de dados específicos ou recursos. System.Data.Odbc fornece uma implementação de ODBC genérica e, posteriormente, não expõe funcionalidades específicas de fornecedor ou extensões. (O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver do Native Client é atualizado para dão suporte nativo a versão mais recente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] recursos.) Para solucionar esse problema, você pode voltar ao MDAC ou migrar para o System.Data.SqlClient.  
   
  Tanto o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client quanto o MDAC oferecem suporte ao isolamento de transação de leitura confirmada usando controle de versão de linha, mas apenas o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client oferece suporte ao isolamento da transação de instantâneo. (Em termos de programação, o isolamento de transação de leitura confirmada por meio do controle de versão de linha é igual à transação de leitura confirmada.)  
   

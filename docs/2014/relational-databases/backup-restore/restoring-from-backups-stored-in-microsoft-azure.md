@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 549efcd796d9cef721995b48fc5e7b3cc02403a7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920639"
 ---
 # <a name="restoring-from-backups-stored-in-windows-azure"></a>Restaurando de backups armazenados no Windows Azure
   Este tópico descreve o que você deve considerar ao restaurar um banco de dados usando um backup armazenado no serviço de armazenamento de Blob do Windows Azure. Isso se aplica aos backups criados através do Backup do SQL Server para URL ou pelo [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
@@ -40,7 +40,7 @@ ms.locfileid: "53354409"
   
  Para reduzir o tempo de restauração, recomendamos o uso de backups compactados.  Para os tamanhos de backup superiores a 25 GB, use o [utilitário AzCopy](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx) para baixar à unidade local e execute a restauração. Para outras práticas recomendadas de backup e recomendações, consulte [SQL Server Backup to URL Best Practices and Troubleshooting](sql-server-backup-to-url-best-practices-and-troubleshooting.md).  
   
- Você também pode ativar o sinalizador de rastreamento 3051 ao fazer a restauração para gerar um log detalhado. Este arquivo de log é colocado no diretório de log e nomeado usando o formato: BackupToUrl -\<instancename >-\<dbname > - action -\<PID >. log. O arquivo de log inclui informações sobre cada viagem de ida e volta para o armazenamento do Windows Azure, inclusive o controle de tempo que pode ser útil para diagnosticar o problema.  
+ Você também pode ativar o sinalizador de rastreamento 3051 ao fazer a restauração para gerar um log detalhado. Esse arquivo de log é colocado no diretório de log e nomeado usando o formato: BackupToUrl-\<instancename>-\<dbname>-action-\<PID>.log. O arquivo de log inclui informações sobre cada viagem de ida e volta para o armazenamento do Windows Azure, inclusive o controle de tempo que pode ser útil para diagnosticar o problema.  
   
 ### <a name="topics-on-performing-restore-operations"></a>Tópicos sobre a execução de operações de restauração  
   

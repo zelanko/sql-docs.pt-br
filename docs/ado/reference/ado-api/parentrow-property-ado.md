@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9ea31baf4b215a6a516c13b438b526b8e9d8b612
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027874"
 ---
 # <a name="parentrow-property-ado"></a>Propriedade ParentRow (ADO)
 Define o contêiner de um banco de dados OLE **linha** do objeto em um **ADORecordConstruction** objeto, de modo que o pai da linha é transformado em ADO **registro** objeto.  

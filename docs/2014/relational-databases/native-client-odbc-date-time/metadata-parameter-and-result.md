@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b4e7650f6b36ddbfb8c06ebe6c9f776cfee5ea0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032331"
 ---
 # <a name="parameter-and-result-metadata"></a>Parâmetro e metadados de resultado
   Este tópico descreve o que é retornado nos campos IPD (descritor de parâmetro de implementação) e IRD (descritor de linha de implementação) dos tipos de dados de data e hora.  
@@ -25,7 +25,7 @@ ms.locfileid: "52410033"
 ## <a name="information-returned-in-ipd-fields"></a>Informações retornadas nos campos IPD  
  As seguintes informações são retornadas nos campos IPD:  
   
-|Tipo de parâmetro|Data|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|Tipo de parâmetro|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |SQL_DESC_CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |SQL_DESC_CONCISE_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
@@ -71,7 +71,7 @@ ms.locfileid: "52410033"
 ## <a name="information-returned-in-ird-fields"></a>Informações retornadas nos campos IRD  
  As seguintes informações são retornadas nos campos IRD:  
   
-|Tipo de coluna|Data|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|Tipo de coluna|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |-----------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |SQL_DESC_CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  

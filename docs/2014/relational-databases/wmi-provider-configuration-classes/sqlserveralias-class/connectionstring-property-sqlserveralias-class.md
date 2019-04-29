@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 647fb88b6af501ad17dcf64738d72679f36e704e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035605"
 ---
 # <a name="connectionstring-property-sqlserveralias-class"></a>Propriedade ConnectionString (classe SqlServerAlias)
   Obtém a cadeia de conexão que é usada para estabelecer a conexão para o alias de conexão do servidor.  

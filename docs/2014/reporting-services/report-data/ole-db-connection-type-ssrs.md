@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 34c3551fca12694b25a731bf1e18c913e4591299
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59949262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63044187"
 ---
 # <a name="ole-db-connection-type-ssrs"></a>Tipo de conexão OLE DB (SSRS)
   Para incluir dados de um provedor de dados OLE DB, é necessário ter um conjunto de dados baseado em uma fonte de dados de relatório do tipo OLE DB. Esse tipo de fonte de dados interna tem como base a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] extensão de processamento de dados OLE DB.  

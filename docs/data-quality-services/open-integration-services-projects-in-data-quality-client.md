@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 60923181e553fe0fb5cb35de2201718e2a155d79
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019211"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>Abrir projetos do Integration Services no cliente Data Quality
 
@@ -26,7 +26,7 @@ ms.locfileid: "56041547"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="LimitationsRestrictions"></a> Limitações e Restrições  
+###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
   
 -   Somente projetos concluídos do Integration Services estão disponíveis na tela **Abrir projeto** no [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Os projetos que falharam ou que estão em execução não estão disponíveis na tela **Abrir projeto** .  
   
@@ -64,7 +64,7 @@ ms.locfileid: "56041547"
 6.  Depois de exportar os dados, clique em **Concluir** para fechar o projeto do Integration Services.  
 
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Transformação de Limpeza do DQS](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)   
  [Projetos do SSIS (Integration Services)](../integration-services/integration-services-ssis-projects-and-solutions.md)  
   

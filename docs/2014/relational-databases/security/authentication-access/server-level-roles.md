@@ -23,11 +23,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 95ffdd52ff4c71039a87f177e67d51cb81830c68
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011921"
 ---
 # <a name="server-level-roles"></a>Funções de nível de servidor
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornece funções do nível de servidor para ajudar a gerenciar as permissões em um servidor. Estas funções são entidades de segurança que agrupam outras entidades de segurança. Essas funções abrangem todo o servidor em seus escopos de permissões. (As*funções* são como *grupos* no sistema operacional Windows.)  
@@ -57,7 +57,7 @@ ms.locfileid: "58531848"
  Cada função de servidor fixa tem certas permissões atribuídas a ela. Para um gráfico das permissões atribuídas às funções de servidor, consulte [Funções fixas de servidor e de banco de dados do Mecanismo de Banco de Dados](https://social.technet.microsoft.com/wiki/contents/articles/2024.database-engine-fixed-server-and-fixed-database-roles.aspx).  
   
 > [!IMPORTANT]  
->  A permissão `CONTROL SERVER` é semelhante, mas não idêntica à função de servidor fixa do `sysadmin`. As permissões não implicam associações de função e as associações de função não concedem permissões. (Por ex.: `CONTROL SERVER` não implica a associação na função de servidor fixa `sysadmin`.) No entanto, às vezes é possível representar entre funções e permissões equivalentes. A maioria dos comandos `DBCC` e muitos procedimentos do sistema requerem associação na função de servidor fixa `sysadmin`. Para obter uma lista do sistema 171 procedimentos armazenados que exigem `sysadmin` associação, confira a seguinte postagem de Andreas Wolter [CONTROL SERVER vs. sysadmin/sa: permissões, procedimentos do sistema, DBCC, criação de esquema automático e privilégios advertências de escalonamento -](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats).  
+>  A permissão `CONTROL SERVER` é semelhante, mas não idêntica à função de servidor fixa do `sysadmin`. As permissões não implicam associações de função e as associações de função não concedem permissões. (Por ex.: `CONTROL SERVER` não implica a associação no `sysadmin` função de servidor fixa.) No entanto, às vezes é possível representar entre funções e permissões equivalentes. A maioria dos comandos `DBCC` e muitos procedimentos do sistema requerem associação na função de servidor fixa `sysadmin`. Para obter uma lista do sistema 171 procedimentos armazenados que exigem `sysadmin` associação, confira a seguinte postagem de Andreas Wolter [CONTROL SERVER vs. sysadmin/sa: permissões, procedimentos do sistema, DBCC, criação de esquema automático e privilégios advertências de escalonamento -](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats).  
   
 ## <a name="server-level-permissions"></a>Permissão em nível de servidor  
  Somente podem ser acrescentadas permissões do nível de servidor a funções de servidor definidas pelo usuário. Para listar as permissões em nível de servidor, execute a instrução a seguir. As permissões em nível de servidor são:  

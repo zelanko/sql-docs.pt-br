@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5fcd3d72ef3e716cd640d35505b82df459eb37b7
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920785"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Usar o Administrador de Recursos para limitar o uso de CPU por meio de compactação de backup (Transact-SQL)
   Por padrão, a compactação de backup aumenta consideravelmente o uso de CPU, e o consumo adicional da CPU por parte do processo de compactação pode afetar negativamente as operações simultâneas. Portanto, convém criar um backup compactado de baixa prioridade em uma sessão cujo uso de CPU seja limitado pelo[Administrador de Recursos](../resource-governor/resource-governor.md) quando houver contenção de CPU. Este tópico apresenta um cenário que classifica as sessões de um usuário específico do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mapeando-as para um grupo de carga de trabalho do Administrador de Recursos que limita o uso de CPU em casos como esse.  
@@ -76,7 +76,7 @@ ms.locfileid: "58531448"
   
      Para obter mais informações, consulte [Permissões de principal do banco de dados GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-database-principal-permissions-transact-sql).  
   
-### <a name="example-a-setting-up-a-login-and-user-transact-sql"></a>Exemplo A: Configurando um logon e um usuário (Transact-SQL)  
+### <a name="example-a-setting-up-a-login-and-user-transact-sql"></a>Exemplo a: Configurando um logon e um usuário (Transact-SQL)  
  O exemplo a seguir é relevante apenas se você optar por criar um novo logon e usuário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para backups de baixa prioridade. Alternativamente, você pode usar um logon e um usuário existentes, se forem apropriados.  
   
 > [!IMPORTANT]  
@@ -183,7 +183,7 @@ GO
     ALTER RESOURCE GOVERNOR RECONFIGURE;  
     ```  
   
-### <a name="example-b-configuring-resource-governor-transact-sql"></a>Exemplo B: Configurando o Resource Governor (Transact-SQL)  
+### <a name="example-b-configuring-resource-governor-transact-sql"></a>Exemplo b: Configurando o Resource Governor (Transact-SQL)  
  O exemplo a seguir executa as seguintes etapas em uma única transação:  
   
 1.  Cria o pool de recursos `pMAX_CPU_PERCENT_20` .  
@@ -261,7 +261,7 @@ GO
 ##  <a name="creating_compressed_backup"></a> Compactando backups usando uma sessão com CPU limitada  
  Para criar um backup compactado em uma sessão com uma CPU máxima limitada, faça logon como o usuário especificado na função de classificação. No comando de backup, especifique WITH COMPRESSION ([!INCLUDE[tsql](../../includes/tsql-md.md)]) ou selecione **Compactar backup** ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]). Para criar um backup de banco de dados compactado, consulte [Criar um backup completo de banco de dados &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md).  
   
-### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>Exemplo C: Criando um backup compactado (Transact-SQL)  
+### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>Exemplo c: Criando um backup compactado (Transact-SQL)  
  O exemplo de [BACKUP](/sql/t-sql/statements/backup-transact-sql) a seguir cria um backup completo compactado do banco de dados [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] em um arquivo de backup recém-formatado, `Z:\SQLServerBackups\AdvWorksData.bak`.  
   
 ```sql  

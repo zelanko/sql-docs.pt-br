@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 164ddc7f11b37ce7b6325f177713e6d3eca8635b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022493"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Criar e gerenciar índices de texto completo
   As informações contidas em índices de texto completo são usadas pelo Mecanismo de Texto Completo para compilar consultas de texto completo que podem procurar determinadas palavras ou combinações de palavras rapidamente em uma tabela. Um índice de texto completo armazena informações sobre palavras importantes e sua localização em uma ou mais colunas de uma tabela de banco de dados. Um índice de texto completo consiste em um tipo especial de índice funcional com base em token que é criado e mantido pelo Mecanismo de Texto Completo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O processo de criação de um índice de texto completo é diferente da criação de outros tipos de índices. Em vez de criar uma estrutura de árvore B com base em um valor armazenado em uma linha específica, o Mecanismo de Texto Completo cria uma estrutura de índice compactada, empilhada e invertida com base em tokens individuais do texto que está sendo indexado.  O tamanho de um índice de texto completo é limitado apenas pelos recursos de memória disponíveis do computador no qual a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo executada.  
@@ -27,7 +27,7 @@ ms.locfileid: "48054726"
 > [!NOTE]  
 >  No [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e em versões posteriores, o Mecanismo de Texto Completo reside no processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e não em um serviço separado. A integração do Mecanismo de Texto Completo ao Mecanismo de Banco de Dados melhora a capacidade de gerenciamento de texto completo, a otimização de consultas mistas e o desempenho como um todo.  
   
- Só é permitido um índice de texto completo por tabela. Para que um índice de texto completo seja criado em uma tabela, a tabela deve ter uma única coluna não nula exclusiva. Você pode criar um índice de texto completo em colunas do tipo `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, `varbinary`, e `varbinary(max)` podem ser indexadas para pesquisa de texto completo. Criando um índice de texto completo em uma coluna cujos dados é do tipo `varbinary`, `varbinary(max)`, `image`, ou `xml` exige que você especifique uma coluna de tipo. Uma *coluna de tipo* consiste em uma coluna de tabela em que você armazena a extensão de arquivo (.doc, .pdf, .xls, etc.) do documento em cada linha.  
+ Só é permitido um índice de texto completo por tabela. Para que um índice de texto completo seja criado em uma tabela, a tabela deve ter uma única coluna não nula exclusiva. Você pode criar um índice de texto completo em colunas do tipo `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, `varbinary` e `varbinary(max)`, que podem ser indexadas para pesquisa de texto completo. A criação de um índice de texto completo em uma coluna cujo tipo de dados é `varbinary`, `varbinary(max)`, `image` ou `xml` requer que você especifique uma coluna de tipo. Uma *coluna de tipo* consiste em uma coluna de tabela em que você armazena a extensão de arquivo (.doc, .pdf, .xls, etc.) do documento em cada linha.  
   
  O processo de criar e manter um índice de texto completo é chamado de *população* (também conhecido como *rastreamento*). Existem três tipos de população de índice de texto completo: população completa, população com base em controle de alterações e população incremental com base em carimbo de data e hora. Para obter mais informações, veja [Popular índices de texto completo](populate-full-text-indexes.md).  
   

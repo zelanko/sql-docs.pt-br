@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 207f934a9fba6e60bf1903544b12c88b4924dc23
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63021312"
 ---
 # <a name="change-publication-and-article-properties"></a>Alterar propriedades da publicação e do artigo
   Depois que uma publicação foi criada, a maior parte das propriedades de publicação e do artigo podem ser alteradas, mas algumas requerem que um novo instantâneo seja gerado e/ou que as assinaturas sejam reinicializadas. Este tópico fornece informações sobre todas as propriedades que requerem uma ou ambas as ações, se forem alteradas.  
@@ -93,7 +93,7 @@ ms.locfileid: "54135806"
 |Alterar o proprietário da tabela de destino.|**sp_changemergearticle**|**destination_owner**|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Perguntas frequentes sobre administração de replicação](../administration/frequently-asked-questions-for-replication-administrators.md)   
+ [Perguntas Frequentes sobre Administração de Replicação](../administration/frequently-asked-questions-for-replication-administrators.md)   
  [Criar e aplicar o instantâneo](../create-and-apply-the-snapshot.md)   
  [Reinicializar as assinaturas](../reinitialize-subscriptions.md)   
  [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql)   

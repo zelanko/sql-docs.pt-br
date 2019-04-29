@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6e151d06d086569b16fcdf1dc3570f9b220dfcd6
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62928153"
 ---
 # <a name="using-string-functions"></a>Usando as funções de cadeia de caracteres
 
 
   Você pode usar as funções de cadeia de caracteres em praticamente todos os objetos em Multidimensional Expressions (MDX). Em procedimentos armazenados, use as funções de cadeia de caracteres principalmente para converter o objeto em uma representação de cadeia de caracteres. Também é possível usar as funções de cadeia de caracteres para avaliar uma expressão de cadeia de caracteres sobre um objeto para retornar um valor.  
   
- As funções de cadeia de caracteres mais amplamente utilizadas são **nome** e **Uniquename**. Respectivamente, estas funções retornam o nome e o nome exclusivo de um objeto. Elas são usadas principalmente ao depurar cálculos para identificar qual membro está sendo retornando por uma função.  
+ As funções de cadeia de caracteres mais amplamente usados são **nome** e **Uniquename**. Respectivamente, estas funções retornam o nome e o nome exclusivo de um objeto. Elas são usadas principalmente ao depurar cálculos para identificar qual membro está sendo retornando por uma função.  
   
 ## <a name="examples"></a>Exemplos  
  As consultas de exemplo a seguir mostram como usar estas funções:  
@@ -72,7 +72,7 @@ ms.locfileid: "34743817"
   
  `FROM [Adventure Works]`  
   
- Outro grupo de funções de cadeia de caracteres usadas com frequência são as que permitem converter uma cadeia de caracteres que contém o nome exclusivo de um objeto ou uma expressão que resolve o objeto no próprio objeto. A consulta de exemplo a seguir demonstra como o **StrToMember** e **StrToSet** funções fazer isso:  
+ Outro grupo de funções de cadeia de caracteres usadas com frequência são as que permitem converter uma cadeia de caracteres que contém o nome exclusivo de um objeto ou uma expressão que resolve o objeto no próprio objeto. A consulta de exemplo a seguir demonstra como o **StrToMember** e **StrToSet** funções fazem isso:  
   
  `SELECT`  
   
@@ -102,8 +102,8 @@ ms.locfileid: "34743817"
 >  O **StrToMember** e **StrToSet** funções devem ser usadas com cuidado. Elas podem gerar um desempenho de consulta insatisfatório se forem usadas em definições de cálculo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gerar &#40;MDX&#41;](../mdx/generate-mdx.md)   
- [Nome &#40;MDX&#41;](../mdx/name-mdx.md)   
+ [Generate &#40;MDX&#41;](../mdx/generate-mdx.md)   
+ [Name &#40;MDX&#41;](../mdx/name-mdx.md)   
  [UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)   
  [Funções &#40;sintaxe MDX&#41;](../mdx/functions-mdx-syntax.md)   
  [Usando procedimentos armazenados &#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md)   

@@ -12,25 +12,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4934ed875a427e68938ed09d4353b7fe14f3aee2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181295"
 ---
 # <a name="odbc-appendixes"></a>Apêndices do ODBC
 Detalhes técnicos relacionados à interface do Microsoft ODBC estão contidos nos seguintes apêndices:  
   
--   [Apêndice A: Códigos de erro ODBC](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)  
+-   [Apêndice a: Códigos de erro ODBC](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)  
   
--   [Apêndice B: Tabelas de transição de estado ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)  
+-   [Apêndice b: Tabelas de transição de estado ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)  
   
--   [Apêndice C: Gramática SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)  
+-   [Apêndice c: Gramática SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)  
   
--   [Apêndice D: Tipos de dados](../../../odbc/reference/appendixes/appendix-d-data-types.md)  
+-   [Apêndice d: Tipos de dados](../../../odbc/reference/appendixes/appendix-d-data-types.md)  
   
--   [Apêndice E: Funções escalares](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)  
+-   [Apêndice e: Funções escalares](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)  
   
--   [Apêndice F: Biblioteca de cursores ODBC](../../../odbc/reference/appendixes/appendix-f-odbc-cursor-library.md)  
+-   [Apêndice f: Biblioteca de cursores ODBC](../../../odbc/reference/appendixes/appendix-f-odbc-cursor-library.md)  
   
--   [Apêndice G: Diretrizes de driver para compatibilidade com versões anteriores](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)
+-   [Apêndice g: Diretrizes de driver para compatibilidade com versões anteriores](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)

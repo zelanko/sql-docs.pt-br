@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f9508b85bc73ebbec82ad7d3bea5af5148d7c674
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184802"
 ---
 # <a name="execute-method-ado-command"></a>Método Execute (comando ADO)
 Executa a consulta, a instrução SQL ou o procedimento armazenado especificado na [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) ou [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) propriedade do [objeto de comando](../../../ado/reference/ado-api/command-object-ado.md).  

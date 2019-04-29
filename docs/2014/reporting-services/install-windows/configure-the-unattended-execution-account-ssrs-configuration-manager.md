@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2d79a28204600adbe247864df68853b24bf8cf51
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59946922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63182963"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Configurar a conta de execução autônoma (Gerenciador de configurações do SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece uma conta especial que é usada para o processamento autônomo de relatórios e para enviar solicitações de conexão pela rede. A conta é usada das seguintes maneiras:  

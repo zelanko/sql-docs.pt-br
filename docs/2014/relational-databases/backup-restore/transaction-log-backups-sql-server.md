@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6dc94409e607c91944a2263ac5dfb3e8a3f4ce54
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920682"
 ---
 # <a name="transaction-log-backups-sql-server"></a>Backups de log de transações (SQL Server)
   Este tópico é relevante apenas para bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que estejam usando modelos de recuperação completa ou bulk-logged. Este tópico descreve o backup do log de transações de um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -72,7 +72,7 @@ ms.locfileid: "48168636"
   
 ## <a name="see-also"></a>Consulte também  
  [O log de transações &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   
- [Backup e Restauração de bancos de dados do SQL Server](back-up-and-restore-of-sql-server-databases.md)   
+ [Fazer backup e restaurar bancos de dados do SQL Server](back-up-and-restore-of-sql-server-databases.md)   
  [Backups da parte final do log &#40;SQL Server&#41;](tail-log-backups-sql-server.md)   
  [Aplicar backups de log de transações &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)  
   

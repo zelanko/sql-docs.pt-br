@@ -20,11 +20,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f5e514307e1427cea0ea1bb4d75e7bf0806fd516
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017760"
 ---
 # <a name="sphelp-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ sp_help [ [ @objname = ] 'name' ]
     |**Comprimento**|**smallint**|O comprimento físico do tipo de dados (em bytes).|  
     |**prec**|**int**|Precisão (número total de dígitos).|  
     |**Escala**|**int**|Número de dígitos à direita da casa decimal.|  
-    |**Permite valor nulo**|**varchar(** 35 **)**|Indica se valores NULL são permitidos: Sim ou Não.|  
+    |**Permite valor nulo**|**varchar(** 35 **)**|Indica se valores nulos são permitidos: Sim ou não.|  
     |**Default_name**|**nvarchar(** 128 **)**|Nome de uma associação padrão para esse tipo.<br /><br /> NULL = Nenhum padrão é associado.|  
     |**Rule_name**|**nvarchar(** 128 **)**|Nome de uma associação de regra para esse tipo.<br /><br /> NULL = Nenhum padrão é associado.|  
     |**Ordenação**|**sysname**|Ordenação do tipo de dados. NULL para tipos de dados de não caracteres.|  
@@ -92,11 +92,11 @@ sp_help [ [ @objname = ] 'name' ]
         |-----------------|---------------|-----------------|  
         |**Column_name**|**nvarchar(** 128 **)**|Nome da coluna.|  
         |**Tipo**|**nvarchar(** 128 **)**|Tipo de dados da coluna.|  
-        |**Computado**|**varchar(** 35 **)**|Indica se os valores na coluna são computados: Sim ou Não.|  
+        |**Computado**|**varchar(** 35 **)**|Indica se os valores na coluna são computados: Sim ou não.|  
         |**Comprimento**|**int**|Comprimento da coluna em bytes.<br /><br /> Observação: Se o tipo de dados é um tipo de valor grande (**varchar (max)**, **nvarchar (max)**, **varbinary (max)**, ou **xml**), o valor será Exibir como -1.|  
         |**prec**|**char(** 5 **)**|Precisão da coluna.|  
         |**Escala**|**char(** 5 **)**|Escala da coluna.|  
-        |**Permite valor nulo**|**varchar(** 35 **)**|Indica se são permitidos valores NULL na coluna: Sim ou Não.|  
+        |**Permite valor nulo**|**varchar(** 35 **)**|Indica se valores nulos são permitidos na coluna: Sim ou não.|  
         |**TrimTrailingBlanks**|**varchar(** 35 **)**|Exclui os espaços em branco à direita. Retorna Sim ou Não.|  
         |**FixedLenNullInSource**|**varchar(** 35 **)**|Somente para compatibilidade com versões anteriores.|  
         |**Ordenação**|**sysname**|Ordenação da coluna. NULL para tipos de dados não caracteres.|  
@@ -120,7 +120,7 @@ sp_help [ [ @objname = ] 'name' ]
   
         |Nome da coluna|Tipo de dados|Descrição|  
         |-----------------|---------------|-----------------|  
-        |**Data_located_on_filegroup**|**nvarchar(** 128 **)**|Grupo de arquivos no qual os dados estão localizados: Primário, Secundário ou Log de Transações.|  
+        |**Data_located_on_filegroup**|**nvarchar(** 128 **)**|O grupo de arquivos no qual os dados estão localizados: Primário, secundário ou Log de transações.|  
   
     -   Conjunto de resultados adicionais retornado em índices:  
   
@@ -136,9 +136,9 @@ sp_help [ [ @objname = ] 'name' ]
         |-----------------|---------------|-----------------|  
         |**constraint_type**|**nvarchar(** 146 **)**|Tipo de restrição.|  
         |**constraint_name**|**nvarchar(** 128 **)**|Nome da restrição.|  
-        |**delete_action**|**nvarchar(** 9 **)**|Indica se a ação DELETE é: NO_ACTION, CASCADE, SET_NULL, SET_DEFAULT ou N/A.<br /><br /> Aplicável somente para restrições FOREIGN KEY.|  
-        |**update_action**|**nvarchar(** 9 **)**|Indica se a ação UPDATE é: NO_ACTION, CASCADE, SET_NULL, SET_DEFAULT ou N/A.<br /><br /> Aplicável somente para restrições FOREIGN KEY.|  
-        |**status_enabled**|**varchar(** 8 **)**|Indica se a restrição está habilitada: Habilitada, Desabilitada ou N/A.<br /><br /> Aplicável somente para restrições CHECK e FOREIGN KEY.|  
+        |**delete_action**|**nvarchar(** 9 **)**|Indica se a ação de exclusão é: NO_ACTION, CASCADE, SET_NULL, SET_DEFAULT ou n/d.<br /><br /> Aplicável somente para restrições FOREIGN KEY.|  
+        |**update_action**|**nvarchar(** 9 **)**|Indica se a ação UPDATE é: NO_ACTION, CASCADE, SET_NULL, SET_DEFAULT ou n/d.<br /><br /> Aplicável somente para restrições FOREIGN KEY.|  
+        |**status_enabled**|**varchar(** 8 **)**|Indica se a restrição está habilitada: Habilitado, desabilitado ou n/d.<br /><br /> Aplicável somente para restrições CHECK e FOREIGN KEY.|  
         |**status_for_replication**|**varchar(** 19 **)**|Indica se a restrição é para replicação.<br /><br /> Aplicável somente para restrições CHECK e FOREIGN KEY.|  
         |**constraint_keys**|**nvarchar(** 2078 **)**|Os nomes das colunas que compõem a restrição ou, no caso de padrões e regras, do texto que define o padrão ou a regra.|  
   

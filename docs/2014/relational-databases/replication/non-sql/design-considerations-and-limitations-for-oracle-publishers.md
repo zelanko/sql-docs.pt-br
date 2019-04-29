@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 043bf26fb17a3433e59623b5b3bfddaaea8bc89f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022519"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Considerações de design e limitações para Publicadores Oracle
   A publicação de um banco de dados Oracle é projetada para funcionar de forma praticamente idêntica à publicação de um banco de dados [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Porém, deve-se estar atento às seguintes limitações e problemas:  
@@ -103,7 +103,7 @@ ms.locfileid: "54136056"
   
  Considere também os seguintes problemas:  
   
--   Oracle e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tratam o NULL diferentemente: Oracle permite várias linhas com valores NULL para colunas que permitem NULL e são incluídas em restrições ou índices exclusivos. O[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] impõe exclusividade permitindo somente uma única linha com um valor nulo para a mesma coluna. Não é possível publicar uma restrição ou índice exclusivo que permita NULL uma vez que haveria uma violação de restrição no Assinante se a tabela publicada tiver várias linhas com valores NULL para qualquer uma das colunas incluídas no índice ou restrição.  
+-   Oracle e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tratam o NULL de modo diferente: a Oracle permite várias linhas com valores nulos para colunas que permitem o NULL e são incluídas em restrições ou índices exclusivos. O[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] impõe exclusividade permitindo somente uma única linha com um valor nulo para a mesma coluna. Não é possível publicar uma restrição ou índice exclusivo que permita NULL uma vez que haveria uma violação de restrição no Assinante se a tabela publicada tiver várias linhas com valores NULL para qualquer uma das colunas incluídas no índice ou restrição.  
   
 -   Ao testar exclusividade, espaços em branco em um campo são ignorados por [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mas não pelo Oracle.  
   

@@ -12,13 +12,13 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 7bef5104038dad251927c6afff613f248f4a6a47
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63025699"
 ---
-# <a name="deployment-checklist-scale-out-by-adding-powerpivot-servers-to-a-sharepoint-2010-farm"></a>Lista de verificação de implantação: Expansão adicionando servidores do PowerPivot a um farm do SharePoint 2010
+# <a name="deployment-checklist-scale-out-by-adding-powerpivot-servers-to-a-sharepoint-2010-farm"></a>Lista de verificação de implantação: Expandir adicionando servidores do PowerPivot a um farm do SharePoint 2010
   Se você antecipar um alto volume de solicitações para o processamento de consultas PowerPivot em um farm do SharePoint, poderá adicionar uma instância extra do PowerPivot para SharePoint para adicionar diretamente o suporte para a nova consulta e o processamento de dados.  
   
  Depois que instalar uma nova instância, você terá capacidade adicional para consultar dados PowerPivot ou processar trabalhos de atualização de dados PowerPivot. Opcionalmente, você poderá configurar cada servidor para manipular um tipo de solicitação: consulta ou atualização de dados.  

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d735fc81e38354630eb4486bbf6ca2bdae570e6d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022232"
 ---
 # <a name="performance-tuning-for-oracle-publishers"></a>Ajuste de desempenho para Editores Oracle
   A arquitetura de publicação Oracle é semelhante à arquitetura de publicação do [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , entretanto, a primeira etapa é ajustar a replicação Oracle para requisitos de desempenho, seguindo as recomendações gerais de ajuste encontradas em [Enhance General Replication Performance](../administration/enhance-general-replication-performance.md).  

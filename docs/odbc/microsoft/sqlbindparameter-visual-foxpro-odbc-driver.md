@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 78d39c0357a22d3d48e10fa546efdae32e0d431a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63050154"
 ---
 # <a name="sqlbindparameter-visual-foxpro-odbc-driver"></a>SQLBindParameter (Driver ODBC do Visual FoxPro)
 > [!NOTE]  
 >  Este tópico contém informações específicas de Driver ODBC do Visual FoxPro. Para obter informações gerais sobre essa função, consulte o tópico apropriado sob [referência da API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Suporte: completo  
+ Suporte a: Completo  
   
- Conformidade com a API ODBC: 1 de nível  
+ Conformidade com a API ODBC: Nível 1  
   
  Associa um buffer com um marcador de parâmetro em uma instrução SQL. O Driver de ODBC do Visual FoxPro dá suporte a parâmetros de entrada conforme especificado pelo *fParamType* argumento.  
   

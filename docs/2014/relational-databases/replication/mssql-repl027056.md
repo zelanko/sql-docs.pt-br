@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd6f1d63b0de5e8ce0fda7ab4fbc727c70f67bbd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022739"
 ---
 # <a name="mssqlrepl027056"></a>MSSQL_REPL027056
     
@@ -48,7 +48,7 @@ ms.locfileid: "52794368"
   
 2.  Especifique a menor definição possível para o período de retenção de publicação. Para obter mais informações, consulte [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md).  
   
-3.  Como parte da manutenção de replicação de mesclagem, verifique esporadicamente o crescimento das tabelas do sistema associadas à replicação de mesclagem: **MSmerge_contents**, **MSmerge_genhistory**, e **MSmerge_tombstone**, **MSmerge_current_partition_mappings**, e **msmerge _ past_partition_mappings**. Periodicamente, indexe novamente essas tabelas. Para obter mais informações, veja [Reorganizar e recriar índices](../indexes/indexes.md).  
+3.  Como parte da manutenção para replicação de mesclagem, verifique ocasionalmente o crescimento das tabelas do sistema associado à replicação de mesclagem: **MSmerge_contents**, **MSmerge_genhistory** e **MSmerge_tombstone**, **MSmerge_current_partition_mappings** e **MSmerge_past_partition_mappings**. Periodicamente, indexe novamente essas tabelas. Para obter mais informações, veja [Reorganizar e recriar índices](../indexes/indexes.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de erros e eventos &#40;Replicação&#41;](errors-and-events-reference-replication.md)  

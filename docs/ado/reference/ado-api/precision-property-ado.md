@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9819567ebe48a7654ee7a90f516ba14c8062bdcf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027861"
 ---
 # <a name="precision-property-ado"></a>Propriedade Precision (ADO)
 Indica o grau de precisão para valores numéricos em uma [parâmetro](../../../ado/reference/ado-api/parameter-object.md) objeto ou de numérica [campo](../../../ado/reference/ado-api/field-object.md) objetos.  

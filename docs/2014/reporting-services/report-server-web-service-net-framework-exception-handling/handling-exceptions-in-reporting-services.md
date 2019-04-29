@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1d887853b475f7b4d673d7b04343ae9bc71644d3
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046038"
 ---
 # <a name="handling-exceptions-in-reporting-services"></a>Manipulando exceções no Reporting Services
   Quando uma solicitação de cliente API SOAP do Reporting Services não pode ser concluída, o servidor de relatório retorna um erro em vez dos resultados esperados da chamada. Quando uma chamada não pode ser concluída, é retornado um erro para o serviço Web Servidor de Relatórios como um elemento XML **Falha** de SOAP. O principal elemento descritivo da falha é o elemento **detail**, que inclui todas as informações de erro fornecidas pelo servidor de relatório, além de informações adicionais de erro do serviço Web. A principal informação do elemento **detail** é o código de erro do servidor de relatório. com base na mensagem e no código de erro, você poderá determinar a próxima ação apropriada a ser tomada levar em seus aplicativos. Para saber mais sobre falhas SOAP, veja o site do W3C (World Wide Web Consortium), http://www.w3.org/TR/SOAP.  

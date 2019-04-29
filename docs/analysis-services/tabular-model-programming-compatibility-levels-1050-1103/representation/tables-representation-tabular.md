@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f84aed71870e71416b108f0348840f4cce983cd5
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34043680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019272"
 ---
 # <a name="tables-representation-tabular"></a>Representação de tabelas (de tabela)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34043680"
   
  De uma perspectiva procedural, uma Exibição da Fonte de Dados precisa ser criada antes que qualquer outro objeto seja definido. O objeto de exibição da fonte de dados contém o mapeamento para todos os objetos relevantes na fonte de dados. O mapeamento do modelo relacional é inserido na exibição da fonte de dados como objeto .Net DataSet e armazenado na propriedade Schema do DSV.  
   
- O trecho de código a seguir presume que você tenha uma cadeia de conexão de cliente SQL, um dicionário de instruções Select que mapeie para todas as tabelas no modelo relacional que você pretende representar em seu modelo de tabela e uma variável newDataSourceViewName com o nome da exibição da fonte de dados (geralmente o nome de seu banco de dados relacional).  
+ O snippet de código a seguir presume que você tenha uma cadeia de conexão de cliente SQL, um dicionário de instruções Select que mapeie para todas as tabelas no modelo relacional que você pretende representar em seu modelo de tabela e uma variável newDataSourceViewName com o nome da exibição da fonte de dados (geralmente o nome de seu banco de dados relacional).  
   
 ```  
   
@@ -54,7 +54,7 @@ newDatasourceView.Update();
   
 ```  
   
- Quando a Exibição da Fonte de Dados tiver sido criada e atualizada, o objeto de cubo precisará ser criado, mas não atualizado no servidor até que a primeira tabela seja criada. Um objeto de cubo não pode ser criado vazio. O trecho de código a seguir mostra como criar um cubo; o trecho presume que você tenha uma cadeia de caracteres newCubeName não vazia com o nome do cubo já validado para duplicatas também.  
+ Quando a Exibição da Fonte de Dados tiver sido criada e atualizada, o objeto de cubo precisará ser criado, mas não atualizado no servidor até que a primeira tabela seja criada. Um objeto de cubo não pode ser criado vazio. O snippet de código a seguir mostra como criar um cubo; o snippet presume que você tenha uma cadeia de caracteres newCubeName não vazia com o nome do cubo já validado para duplicatas também.  
   
 ```  
   
@@ -93,7 +93,7 @@ mdxScript.Commands.Add(new AMO.Command(initialCommand.ToString()));
   
 9. Atualizar banco de dados.  
   
- O trecho de código a seguir mostra como criar uma tabela:  
+ O snippet de código a seguir mostra como criar uma tabela:  
   
 ```  
   
@@ -260,6 +260,6 @@ private Boolean CreateTable(
 ```  
   
 > [!CAUTION]  
->  O trecho de código acima não tem nenhum procedimento de verificação de erros ou limpeza em caso de falha.  
+>  O snippet de código acima não tem nenhum procedimento de verificação de erros ou limpeza em caso de falha.  
   
   

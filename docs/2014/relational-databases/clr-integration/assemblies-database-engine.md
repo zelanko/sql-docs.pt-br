@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4830a677125cb03e2c53ed78065d94d5265d4a83
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920777"
 ---
 # <a name="assemblies-database-engine"></a>Assemblies (Mecanismo de Banco de Dados)
   Os tópicos desta seção fornecem informações para ajudá-lo a entender, projetar e implementar assemblies.  
@@ -50,7 +50,7 @@ ms.locfileid: "48208426"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Criação de Assemblies](assemblies-designing.md)|Explica o que levar em consideração antes de criar um assembly. Inclui assemblies de empacotamento, permissões de acesso a código e outras restrições.|  
 |[Implementando assemblies](assemblies-implementing.md)|Explica como criar e eliminar assemblies, como e quando modificar assemblies e como recuperar metadados sobre assemblies.|  

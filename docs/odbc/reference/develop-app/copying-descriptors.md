@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: da22ba86ea49532f460b081b13e18d6b7d95211c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042752"
 ---
 # <a name="copying-descriptors"></a>Copiar descritores
 O **SQLCopyDesc** função é chamada para copiar os campos de descritor de um descritor de outro. Campos podem ser copiados apenas a um descritor de aplicativo ou um IPD, mas não a um IRD. Campos podem ser copiados de qualquer tipo de descritor. Apenas os campos que são definidos para descritores de origem e destino são copiados. **SQLCopyDesc** não copia o campo SQL_DESC_ALLOC_TYPE, porque o tipo de alocação de um descritor não pode ser alterado. Campos copiados substituem os campos existentes.  

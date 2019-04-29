@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ebcb8171ef63411fface757d2e6000e95eec6822
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017187"
 ---
 # <a name="osql-utility"></a>Utilitário osql
   O utilitário **osql** permite inserir instruções [!INCLUDE[tsql](../includes/tsql-md.md)] , procedimentos de sistema e arquivos de script. Esse utilitário usa o ODBC para comunicar-se com o servidor.  
@@ -109,7 +109,7 @@ C:\>osql
  Especifica o número de segundos antes de um comando expirar. Se não for especificado um valor de *time_out* , os comandos não vão atingir o tempo limite.  
   
  **-h** _headers_  
- Especifica o número de linhas a imprimir entre cabeçalhos de coluna. O padrão é imprimir títulos uma vez para cada conjunto de resultados de consulta. Use -1 para especificar que nenhum cabeçalho será impresso. Se -1 for usado, não deve haver nenhum espaço entre o parâmetro e a configuração (**-h-1**, e não **-h -1**).  
+ Especifica o número de linhas a imprimir entre cabeçalhos de coluna. O padrão é imprimir títulos uma vez para cada conjunto de resultados de consulta. Use -1 para especificar que nenhum cabeçalho será impresso. Se -1 for usado, não deverá haver nenhum espaço entre o parâmetro e a configuração (**-h-1**, não **-h -1**).  
   
  **-s** _col_separator_  
  Especifica o caractere do separador de colunas que, por padrão, é um espaço em branco. Para usar caracteres que têm um significado especial para o sistema operacional (por exemplo, |; & \< >), coloque-o entre aspas duplas (").  
@@ -268,13 +268,13 @@ osql -E -i titles.qry -o titles.res
 EXIT ( < query > )  
 ```  
   
- Por exemplo:  
+ Por exemplo:   
   
 ```  
 EXIT(SELECT @@ROWCOUNT)  
 ```  
   
- É possível incluir também o parâmetro EXIT como parte de um arquivo em lote. Por exemplo:  
+ É possível incluir também o parâmetro EXIT como parte de um arquivo em lote. Por exemplo:   
   
 ```  
 osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"  
@@ -302,7 +302,7 @@ osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"
 -   RAISERROR com estado de 127  
   
 > [!NOTE]  
->  Se for usado RAISERROR em um script **osql** e ocorrer um estado 127, o **osql** sairá e retornará a ID da mensagem para o cliente. Por exemplo:  
+>  Se for usado RAISERROR em um script **osql** e ocorrer um estado 127, o **osql** sairá e retornará a ID da mensagem para o cliente. Por exemplo:   
   
 ```  
 RAISERROR(50001, 10, 127)  

@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: fe12f1c4ca1c0946572c61e89f4f4edb8ba9a762
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185645"
 ---
 # <a name="market-basket-dmx-tutorial"></a>Tutorial de DMX do Market Basket
   Nesse tutorial, você aprenderá como criar, treinar e explorar modelos de mineração de dados, utilizando a linguagem de consulta DMX. Você então utilizará esses modelos de mineração de dados para criar previsões que descrevem quais produtos tendem a ser adquiridos ao mesmo tempo.  

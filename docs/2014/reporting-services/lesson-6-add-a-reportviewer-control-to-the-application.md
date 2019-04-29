@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86a68dfd8a84892ba3706250dfdde612a429c765
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63182833"
 ---
 # <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>Lição 6: Adicionar um controle ReportViewer ao aplicativo
   Depois que você criar o relatório filho usando o Assistente de Relatório, a próxima etapa será adicionar um controle ReportViewer ao aplicativo de site.  

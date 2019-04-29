@@ -14,11 +14,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 42027a48803cd5269d5ab2d69452352bdbe62bc5
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134996"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63012051"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Mover um banco de dados protegido por TDE para outro SQL Server
   Este tópico descreve como proteger um banco de dados usando a TDE (Transparent Data Encryption) e, em seguida, mover o banco de dados para outra instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../../includes/tsql-md.md)]. A TDE realiza a criptografia e a descriptografia de E/S em tempo real dos arquivos de dados e de log. A criptografia usa uma DEK (chave de criptografia do banco de dados), que é armazenada no registro de inicialização do banco de dados para disponibilidade durante a recuperação. A DEK é uma chave simétrica protegida por um certificado armazenado no banco de dados `master` do servidor ou uma chave assimétrica protegida por um módulo EKM.  
@@ -45,7 +45,7 @@ ms.locfileid: "54134996"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   Ao mover um banco de dados protegido por TDE, é necessário também mover o certificado ou a chave assimétrica que é usada para abrir a DEK. O certificado ou chave assimétrica deve ser instalado na `master` banco de dados do servidor de destino, para que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pode acessar os arquivos de banco de dados. Para obter mais informações, veja [TDE &#40;Transparent Data Encryption&#41;](transparent-data-encryption.md).  
   
@@ -184,14 +184,14 @@ ms.locfileid: "54134996"
      Por padrão, a operação desanexar mantém qualquer catálogo de texto completo que esteja associado ao banco de dados. Para removê-los, desmarque a caixa de seleção **Manter Catálogos de Texto Completo** . Essa opção é exibida apenas quando você está atualizando um banco de dados do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
      **Status**  
-     Exibe um dos estados a seguir: **Pronto** ou **não está pronto**.  
+     Exibe um dos seguintes estados: **Pronto** ou **Não pronto**.  
   
      **Mensagem**  
      A coluna **Mensagem** pode exibir informações sobre o banco de dados, da seguinte forma:  
   
     -   Quando um banco de dados estiver envolvido com replicação, o **Status** será **Não pronto** e a coluna **Mensagem** exibirá **Banco de Dados replicado**.  
   
-    -   Quando um banco de dados tem uma ou mais conexões ativas, o **Status** é **não está pronto** e o **mensagem** coluna exibe _< number_of_active_connections >_**Ativa** , por exemplo: **1 conexão ativa**. Antes de desanexar o banco de dados, você deverá cancelar qualquer conexão ativa selecionando **Cancelar Conexões**.  
+    -   Quando um banco de dados tem uma ou mais conexões ativas, o **Status** é **não está pronto** e o **mensagem** coluna exibe _< number_of_active_connections >_**Ativa** , por exemplo: **1 Conexão ativa**. Antes de desanexar o banco de dados, você deverá cancelar qualquer conexão ativa selecionando **Cancelar Conexões**.  
   
      Para obter mais informações sobre a mensagem, clique o texto com hiperlink para abrir o Monitor de atividades.  
   

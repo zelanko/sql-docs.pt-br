@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: f44ef4421419d3b3dd452fb7fab2e4a8768f1b06
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183106"
 ---
 # <a name="data-migration-report--mysqltosql"></a>Relatório de migração de dados (MySQLToSQL)
 O **relatório de migração de dados** caixa de diálogo é exibida após a migração de dados a serem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

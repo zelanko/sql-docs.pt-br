@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 65067452553f3a0c44259e12b294bc795baa9d12
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62931406"
 ---
 # <a name="rds-returns-quotstream-not-readquot-error"></a>Retorna RDS &quot;Stream não leitura&quot; erro
 "O objeto Stream não foi possível ler porque ele está vazio ou a posição atual está no final o Stream. Para fluxos de não vazio, defina a posição atual com a propriedade Position. Para determinar se um Stream está vazio, verifique a propriedade de tamanho."  

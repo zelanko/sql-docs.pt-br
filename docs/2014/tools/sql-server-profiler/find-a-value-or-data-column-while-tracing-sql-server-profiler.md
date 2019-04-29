@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4cc5088fdb0bc78a2befff241854e4a2bc354a22
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52821970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035027"
 ---
 # <a name="find-a-value-or-data-column-while-tracing-sql-server-profiler"></a>Localizar um valor ou coluna de dados durante um rastreamento (SQL Server Profiler)
   Este tópico descreve como pesquisar uma coluna de dados ou valor específico na saída do rastreamento em execução usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

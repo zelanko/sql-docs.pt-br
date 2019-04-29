@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be4125f417b6333bfcb3002b15f1319f484d22a1
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049451"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>Clustering de várias sub-redes do SQL Server (SQL Server)
   Um cluster de failover de várias sub-redes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é uma configuração em que cada nó de cluster de failover é conectado a uma sub-rede diferente ou a um conjunto diferente de sub-redes. Essas sub-redes podem estar no mesmo local ou em sites geograficamente dispersos. O clustering em sites geograficamente dispersos é às vezes chamado de clusters expansíveis. Como não há um armazenamento compartilhado que todos os nós possam acessar, os dados devem ser replicados entre o armazenamento de dados nas várias sub-redes. Com a replicação de dados, há mais de uma cópia dos dados disponíveis. Portanto, um cluster de failover de várias sub-redes fornece uma solução de recuperação de desastres além de alta disponibilidade.  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5f427074f7cd7153f448aaef43bc4ac5dca84c01
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186317"
 ---
 # <a name="data-source-example"></a>Exemplo de fonte de dados
 Em computadores que executam o Microsoft® Windows NT® Server/Windows 2000 Server, Microsoft Windows NT da estação de trabalho/Windows 2000 Professional ou Microsoft Windows® 95/98, dados da máquina informações de origem são armazenadas no registro. Dependendo de qual registro chave as informações são armazenadas em, a fonte de dados é conhecida como um *fonte de dados de usuário* ou um *fonte de dados do sistema*. Fontes de dados do usuário são armazenadas na chave HKEY_CURRENT_USER e estão disponíveis somente para o usuário atual. Fontes de dados do sistema são armazenadas na chave HKEY_LOCAL_MACHINE e podem ser usadas por mais de um usuário em um único computador. Eles também podem ser usados pelos serviços de todo o sistema, que podem então obter acesso à fonte de dados, mesmo se nenhum usuário está conectado à máquina. Para obter mais informações sobre fontes de dados do sistema e de usuário, consulte [SQLManageDataSources](../../odbc/reference/syntax/sqlmanagedatasources.md).  

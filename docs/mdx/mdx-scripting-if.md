@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4975c455b942f053287b344a956a0083c8ca4e1a
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187508"
 ---
-# <a name="mdx-scripting---if"></a>Script MDX - se
+# <a name="mdx-scripting---if"></a>Script MDX – IF
 
 
   Executa uma instrução se a condição for verdadeira.  
@@ -32,10 +32,10 @@ IF expression THEN assignment END IF
  *Expressão*  
  Uma expressão MDX (Multidimensional Expressions) avaliada como um booliano que retorna verdadeiro ou falso.  
   
- *Atribuição*  
+ *assignment*  
  Uma expressão MDX que atribui um valor a um subcubo ou uma propriedade calculada.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Use a instrução IF para fluxo de controle, que é diferente de [IIf &#40;MDX&#41; ](../mdx/iif-mdx.md) função e o [instrução CASE &#40;MDX&#41; ](../mdx/case-statement-mdx.md) que só pode ser usado para retornar valores ou objetos.  
   
 ## <a name="examples"></a>Exemplos  
@@ -48,6 +48,6 @@ IF expression THEN assignment END IF
  `END SCOPE`;  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

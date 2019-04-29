@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 88a9d564b297d277d1566152cc11599bec912ddc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185431"
 ---
 # <a name="lesson-5-testing-models-basic-data-mining-tutorial"></a>Lição 5: Testando modelos (Tutorial de mineração de dados básico)
   Agora que você processou o modelo usando o conjunto de treinamentos de cenário de mala direta, verificará os seus modelos usando um conjunto de testes. A validação é uma etapa importante do processo de mineração de dados. É importante saber como é o desempenho dos seus modelos de mineração de mala direta usando dados reais antes de implantá-los em um ambiente de produção.  

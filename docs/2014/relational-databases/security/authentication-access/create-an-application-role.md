@@ -15,11 +15,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 032c371fd37bb66392761fff24bd30efb2bd5b37
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532444"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011942"
 ---
 # <a name="create-an-application-role"></a>Criar uma função de aplicativo
   Este tópico descreve como criar uma função de aplicativo no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. As funções de aplicativo restringem o acesso do usuário a um banco de dados exceto quando feito por aplicativos específicos. As funções de aplicativo não têm nenhum usuário, assim a lista **Membros da Função** não é exibida quando é selecionada a **Função de aplicativo** .  
@@ -75,7 +75,7 @@ ms.locfileid: "52532444"
   
 -   A página **Propriedades estendidas** permite adicionar propriedades personalizadas a usuários de banco de dados.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-create-an-application-role"></a>Para criar uma função de aplicativo  
   

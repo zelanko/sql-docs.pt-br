@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2dc086f25ca4da2a64a5edde2422f1fe33fcc444
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63045461"
 ---
 # <a name="multiple-hstmts-paradox-driver"></a>Vários hstmts (Driver do Paradox)
 Quando o driver do Paradox ODBC é usado, se você quiser usar mais de uma *hstmt* para executar consultas em uma tabela, a tabela deve ter um índice exclusivo (chave primária do Paradox).

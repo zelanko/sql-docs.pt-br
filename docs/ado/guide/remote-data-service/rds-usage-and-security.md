@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2abbebbf03984e3950ae9fadac1b574db64990ef
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62929842"
 ---
 # <a name="rds-usage-and-security"></a>Segurança e uso RDS
 Use as informações nesta seção para configurar seu servidor e usar o RDS rapidamente. Esta seção inclui etapas de configuração específicos que você talvez precise executar ao implementar RDS, descreve algumas das relações de chave entre RDS e outras tecnologias e ajuda a identificar soluções para problemas que você pode encontrar ao configurar um Solução RDS.  

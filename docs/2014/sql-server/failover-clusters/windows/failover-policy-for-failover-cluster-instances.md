@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e9df2b0158504577630caa6830687a2665c91327
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63050076"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Política de failover para instâncias de cluster de failover
   Em uma FCI (instância de cluster de failover) do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , somente um nó pode ter o grupo de recursos de cluster do WSFC (Windows Server Failover Cluster) em um determinado momento. As solicitações do cliente são atendidas por esse nó na FCI. Em caso de falha e uma reinicialização malsucedida, a propriedade de grupo é movida para outro nó do WSFC na FCI. Esse processo é chamado de failover. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] aumenta a confiabilidade de detecção de falha e fornece uma política de failover flexível.  

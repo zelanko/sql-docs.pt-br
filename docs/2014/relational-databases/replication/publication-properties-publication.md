@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 17b2e566be6bedbb032b7a4fc06c938075bd32e8
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022458"
 ---
 # <a name="sql-server-replication-publication-properties"></a>Propriedades de publicação de replicação do SQL Server 
   Esta seção fornece informações sobre todas as páginas do **propriedades de publicação** caixa de diálogo. 
@@ -47,7 +47,7 @@ ms.locfileid: "54128376"
  O tipo da publicação (somente leitura).  
   
  **Validade da assinatura**  
- Selecione uma das opções para validade da assinatura: **As assinaturas nunca expiram** ou **as assinaturas expiram**, com um período de tempo explícito (**intervalo**).  
+ Selecione uma das opções para término da assinatura: **Assinaturas nunca expiram** ou **Assinaturas expiram** com um período explícito (**intervalo**).  
   
  Para publicações de instantâneo e transacionais, o [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda que você aceite o padrão de **As assinaturas nunca expiram**.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "54128376"
  Esse painel é populado com filtros à medida que são adicionados a artigos de tabela na publicação. Tabelas com filtros de linha são mostradas como nós de alto nível no painel. Para publicações de mesclagem, tabelas para as quais a filtragem foi estendida através de um filtro de junção são mostradas como nós filhos.  
   
  **Adicionar**  
- Clique em **Adicionar** para iniciar uma caixa de diálogo que permite filtrar artigos de tabela. Clicar em **Adicionar** para um instantâneo ou uma publicação transacional inicia imediatamente uma caixa de diálogo. Clicando em **adicionar** para uma mesclagem publicação exibe três opções: **Adicionar filtro**; **Adicionar junção para estender o filtro selecionado**; **Gerar automaticamente filtros**.  
+ Clique em **Adicionar** para iniciar uma caixa de diálogo que permite filtrar artigos de tabela. Clicar em **Adicionar** para um instantâneo ou uma publicação transacional inicia imediatamente uma caixa de diálogo. Clicar em **Adicionar** para uma publicação de mesclagem exibe três opções: **Adicionar Filtro**; **Adicionar junção para estender o filtro selecionado**; **Gerar filtros automaticamente**.  
   
 -   Selecione **Adicionar Filtro** para iniciar a caixa de diálogo **Adicionar filtro** . Essa caixa de diálogo permite aplicar filtros de linha a um artigo de tabela. Na caixa de diálogo **Adicionar Filtro** você pode, por exemplo, especificar que uma tabela com dados de cliente só contenha dados de clientes franceses quando for replicada para Assinantes.  
   
@@ -182,7 +182,7 @@ Essa página permite:
  **Configurações de segurança** ou **Criar Agente**  
  Se um trabalho de agente tiver sido criado, clique em **Configurações de segurança** para acessar a caixa de diálogo que permite alterar as configurações de segurança de um agente. Se um trabalho de agente não tiver sido criado, clique em **Criar Agente** para criar um e especificar as configurações de segurança.  
 
-## <a name="data-partitions"></a>Partições de dados
+## <a name="data-partitions"></a>Partições de Dados
   A página **Partições de Dados** da caixa de diálogo **Propriedades de Publicação** permite definir partições de dados para publicações de mesclagem que usam filtragem com parâmetros. Depois de definir as partições, você pode gerar instantâneos para essas partições, fornecendo conjuntos de dados iniciais diferentes para Assinantes diferentes, com base nas propriedades de conexão (logon e/ou nome de computador) dos Assinantes. Você pode também selecionar para permitir aos Assinantes solicitarem a entrega e a geração de instantâneo, se não tiverem um instantâneo disponível para a partição, na primeira vez em que sincronizarem. Para obter mais informações, consulte [Criar um instantâneo para uma publicação de mesclagem com filtros com parâmetros](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ### <a name="options"></a>Opções  

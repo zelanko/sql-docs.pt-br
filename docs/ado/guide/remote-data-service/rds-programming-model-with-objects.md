@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b60f402cdc7ba861a0d0550a92d16fa7dd1f59b7
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62931411"
 ---
 # <a name="rds-programming-model-with-objects"></a>Modelo de programação do RDS com objetos
 O objetivo do RDS é acessar e atualizar fontes de dados por meio de um intermediário, como o IIS. O modelo de programação Especifica a sequência de atividades necessárias para atingir essa meta. O modelo de objeto Especifica os objetos cujos métodos e propriedades afetam o modelo de programação.  

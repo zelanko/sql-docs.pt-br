@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e971e3c50cbda2253529b67c3e7b59ee4e5155a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63033348"
 ---
 # <a name="parentsameasprev-property-ado-md"></a>Propriedade ParentSameAsPrev (ADO MD)
 Indica se o pai nessa posição [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) é o mesmo que o pai do membro imediatamente anterior.  

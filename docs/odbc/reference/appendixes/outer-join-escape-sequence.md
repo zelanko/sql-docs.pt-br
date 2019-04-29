@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ba08d33efca6fa90531f89bd57a307f42f343ebd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63018363"
 ---
 # <a name="outer-join-escape-sequence"></a>Sequência de escape de junção externa
 ODBC usa sequências de escape de junções externas. A sintaxe dessa sequência de escape é da seguinte maneira:  
@@ -36,15 +36,15 @@ ODBC usa sequências de escape de junções externas. A sintaxe dessa sequência
   
  *Iniciador do ODBC-esc* oj *junção externa ODBC esc terminador*  
   
- *junção externa* :: = *nome da tabela* [*nome de correlação*] {esquerda &#124; direita &#124; completo}  
+ *outer-join* ::= *table-name* [*correlation-name*] {LEFT &#124; RIGHT &#124; FULL}  
   
- JUNÇÃO externa {*nome da tabela* [*nome de correlação*] &#124; *junção externa*} ON  
+ OUTER JOIN{*table-name* [*correlation-name*] &#124; *outer-join*} ON  
   
- *pesquisa-*  
+ *search-*  
   
  *Condição*  
   
- *nome de correlação* :: = *nome definido pelo usuário*  
+ *correlation-name* ::= *user-defined-name*  
   
  *Iniciador do ODBC-esc* :: = {  
   

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 33e447048f7058ee81b0b144f0aa94a370f6d670
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046258"
 ---
 # <a name="filestream-support"></a>Suporte a FILESTREAM
   FILESTREAM é uma forma de armazenar e acessar valores altos de binário, por meio do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou por acesso direto ao sistema de arquivos do Windows. Um valor binário grande é um valor superior a 2 gigabytes (GB). Para obter mais informações sobre suporte a FILESTREAM aprimorado, consulte [FILESTREAM &#40;SQL Server&#41;](../../blob/filestream-sql-server.md).  
@@ -27,7 +27,7 @@ ms.locfileid: "48068276"
   
  Também é possível acessar e atualizar colunas FILESTREAM usando as APIs do sistema de arquivos do Windows.  
   
- Para obter mais informações, consulte os tópicos a seguir:  
+ Para mais informações, consulte os seguintes tópicos:  
   
 -   [Suporte a FILESTREAM &#40;OLE DB&#41;](../ole-db/filestream-support-ole-db.md)  
   

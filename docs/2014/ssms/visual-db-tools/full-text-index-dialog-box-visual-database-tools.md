@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: adb00f8b0e7cb009420e9843532c3f3d4deb0833
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028403"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>Caixa de diálogo Índice de Texto Completo (Visual Database Tools)
   Essa caixa de diálogo permite que você crie um índice de texto completo, para executar pesquisas de texto completo em colunas baseadas em texto nas suas tabelas de banco de dados. Um índice de texto completo baseia-se em um índice regular, assim você deve criá-lo primeiro. O índice regular deve ser criado em uma coluna não nula exclusiva, e é melhor escolher uma coluna com valores baixos em vez de uma coluna com valores altos.  
@@ -63,7 +63,7 @@ ms.locfileid: "52822740"
  Indica se você pode executar uma pesquisa de texto completo usando este índice de texto completo.  
   
  **Definição de Rastreamento de alterações**  
- Descreve o status de controle de alterações para este índice: Manual, automático ou desligado.  
+ Descreve o status do controle de alterações deste índice: Manual, automático ou desabilitado.  
   
  **Rastreamento Concluído**  
  Mostra se o rastreamento mais recente foi concluído. Se este valor de propriedade for Não, um rastreamento está em progresso no momento.  
@@ -87,7 +87,7 @@ ms.locfileid: "52822740"
  Exibe a data e a hora em que o próximo rastreamento iniciará.  
   
  **Tipo do Rastreamento Atual ou Último**  
- Exibe o tipo do rastreamento atual ou mais recente: Completo, Incremental, atualização ou propagação automática.  
+ Exibe o tipo do rastreamento atual ou mais recente: Completo, Incremental, Atualização ou Propagação Automática.  
   
  **Nome do Índice Exclusivo**  
  Exibe uma lista de todos os nomes de colunas neste banco de dados que têm índices de uma única coluna exclusivos. Estas colunas podem ser usadas para criar um índice de texto completo.  

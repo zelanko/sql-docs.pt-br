@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 11e5b26a9e2a953aff319b41749d2c12be1a880e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017104"
 ---
 # <a name="change-an-operator39s-availability"></a>Alterar a disponibilidade de um operador
   Este tópico descreve como alterar a agenda de um operador para receber notificações de alerta no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -67,7 +67,7 @@ ms.locfileid: "54135676"
   
 6.  Clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-change-an-operators-availability"></a>Para alterar a disponibilidade de um operador  
   

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 85e0008e22e38b82fbd006a91eca80f67d7d8289
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046721"
 ---
 # <a name="sqlmoreresults"></a>SQLMoreResults
   **SQLMoreResults** permite que o aplicativo recupere vários conjuntos de linhas de resultado. Uma instrução SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)] que contém uma cláusula COMPUTE ou um lote enviado de ODBC ou instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] , faz o driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client gerar vários conjuntos de resultados. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não permite criar um cursor de servidor para processar os resultados em nenhum caso. Portanto, o desenvolvedor deve assegurar que a instrução ODBC esteja bloqueando. O desenvolvedor deve esvaziar os dados retornados ou cancelar a instrução ODBC antes de processar dados de outras instruções ativas na conexão.  

@@ -17,26 +17,26 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a3ecee500204303dfcbcd8e179b9cb9cb0a94bae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032927"
 ---
 # <a name="rules-for-conversions"></a>Regras para conversões
 As regras nesta seção se aplicam para conversões que envolvem literais numéricos. Para fins dessas regras, os seguintes termos são definidos:  
   
--   *Atribuição de Store:* ao enviar dados para uma coluna de tabela em um banco de dados. Isso ocorre durante chamadas para **SQLExecute**, **SQLExecDirect**, e **SQLSetPos**. Durante a atribuição de armazenamento, "target" refere-se a uma coluna de banco de dados e "fonte" refere-se aos dados em buffers do aplicativo.  
+-   *Atribuição de Store:* Ao enviar dados para uma coluna de tabela em um banco de dados. Isso ocorre durante chamadas para **SQLExecute**, **SQLExecDirect**, e **SQLSetPos**. Durante a atribuição de armazenamento, "target" refere-se a uma coluna de banco de dados e "fonte" refere-se aos dados em buffers do aplicativo.  
   
--   *Atribuição de recuperação:* ao recuperar dados do banco de dados em buffers do aplicativo. Isso ocorre durante chamadas para **SQLFetch**, **SQLGetData**, **SQLFetchScroll**, e **SQLSetPos**. Durante a atribuição de recuperação "target" refere-se aos buffers de aplicativo e "fonte" refere-se para a coluna de banco de dados.  
+-   *Atribuição de recuperação:* Ao recuperar dados do banco de dados em buffers do aplicativo. Isso ocorre durante chamadas para **SQLFetch**, **SQLGetData**, **SQLFetchScroll**, e **SQLSetPos**. Durante a atribuição de recuperação "target" refere-se aos buffers de aplicativo e "fonte" refere-se para a coluna de banco de dados.  
   
--   *CS:* o valor na fonte de caractere.  
+-   *CS:* O valor na fonte de caractere.  
   
--   *NT:* o valor no destino numérico.  
+-   *NT:* O valor no destino numérico.  
   
--   *NS:* o valor na fonte de numérico.  
+-   *NS:* O valor na fonte de numérico.  
   
--   *CT:* o valor no destino de caractere.  
+-   *CT:* O valor no destino de caractere.  
   
 -   Precisão de um literal numérico exato: o número de dígitos que ele contém.  
   
@@ -76,7 +76,7 @@ As regras nesta seção se aplicam para conversões que envolvem literais numér
   
     -   Se NS é menor que 0, em seguida, permitir que Y seja o resultado de:  
   
-         '-' &AMP;#124; &AMP;#124; YP  
+         '-' &#124;&#124; YP  
   
          em que '&#124;&#124;' é o operador de concatenação de cadeia de caracteres.  
   

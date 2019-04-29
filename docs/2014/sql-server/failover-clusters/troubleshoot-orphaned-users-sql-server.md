@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 38a33b34b64cf285e94f66c547b2309b8daf1ae8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035644"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>Solução de problemas de usuários órfãos (SQL Server)
   Para fazer logon em uma instância do Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], uma entidade deve ter um logon válido no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse logon é usado no processo de autenticação que verifica se a entidade tem permissão para conectar-se à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logons em uma instância de servidor são visíveis na **sys. server_principals** exibição de catálogo e o **sys. syslogins** exibição de compatibilidade.  
@@ -100,6 +100,6 @@ GO;
  [sp_grantlogin &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-grantlogin-transact-sql)   
  [sp_password &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-password-transact-sql)   
  [sys.sysusers &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-sysusers-transact-sql)   
- [sys. syslogins &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslogins-transact-sql)  
+ [sys.syslogins &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslogins-transact-sql)  
   
   

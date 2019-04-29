@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 23dd1efa80cab8301c0a361c4e8486f036baf6f7
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046301"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>Gerenciar e monitorar a pesquisa de texto completo em uma instância do servidor
   A administração de texto completo para uma instância de servidor inclui:  
@@ -72,7 +72,7 @@ ms.locfileid: "48906366"
   
  A tabela a seguir lista propriedades de texto completo de uma instância de servidor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e suas funções [!INCLUDE[tsql](../../../includes/tsql-md.md)] relacionadas.  
   
-|Propriedade|Description|Função|  
+|Propriedade|Descrição|Função|  
 |--------------|-----------------|--------------|  
 |`IsFullTextInstalled`|Se o componente de texto completo está instalado com a instância atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[FULLTEXTSERVICEPROPERTY](/sql/t-sql/functions/fulltextserviceproperty-transact-sql)<br /><br /> [SERVERPROPERTY](/sql/t-sql/functions/serverproperty-transact-sql)|  
 |`LoadOSResources`|Se os separadores de palavras e os filtros do sistema operacional estão registrados e são usados com essa instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|FULLTEXTSERVICEPROPERTY|  

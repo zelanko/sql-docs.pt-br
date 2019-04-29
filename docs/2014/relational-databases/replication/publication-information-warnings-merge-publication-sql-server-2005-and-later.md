@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f849394a4a77091f92ee66857b4d5263875fdea3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63021682"
 ---
 # <a name="publication-information-warnings-merge-publication-sql-server-2005-and-later"></a>Informações da Publicação, Avisos (publicação de mesclagem, SQL Server 2005 e versões posteriores)
   A guia **Avisos** está disponível para Distribuidores que estão executando [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores. A guia **Avisos** permite executar as seguintes tarefas para a publicação selecionada:  

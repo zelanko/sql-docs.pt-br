@@ -18,15 +18,15 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 253e29ffb6b0723d672fdbf4de8a3cd6aff334d4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63007969"
 ---
 # <a name="null-handling-sqlxml-40"></a>Manipulação de NULL (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  A sintaxe XML indica NULL como uma ausência. (Por exemplo, se o valor de um atributo ou elemento for NULL, esse atributo ou elemento estará ausente do documento XML.) Na [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML, o **updg: NullValue** atributo permite especificar NULL para um valor de elemento ou atributo.  
+  A sintaxe XML indica NULL como uma ausência. (Por exemplo, se um valor de atributo ou elemento for NULL, esse atributo ou elemento estiver ausente do documento XML.) Na [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML, o **updg: NullValue** atributo permite especificar NULL para um valor de elemento ou atributo.  
   
  Por exemplo, o seguinte diagrama de atualização garante que o **Title** o valor de um contato com **ContactID** 64 seja NULL e, em seguida, atualiza o **título** valor para "SR." para esse contato.  
   

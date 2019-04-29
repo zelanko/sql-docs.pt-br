@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 928be152faec37ed1f954561a7f14f176c92cfbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027910"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel e modo propriedades (VC + +)
 Este exemplo usa o [modo](../../../ado/reference/ado-api/mode-property-ado.md) para abrir uma conexão exclusiva e o [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) propriedade para abrir uma transação que é realizada em isolamento de outras transações.  
@@ -227,7 +227,7 @@ void PrintComError(_com_error &e) {
  **Modo de Conexão é exclusivo**  
 **Transação é isolada**  
 **Guia do ocupado executivo de banco de dados - business**  
-**Culinária com computadores: balanços ilegais - business**  
+**Culinária com computadores: Balanços ilegais - business**  
 **Você pode combater o estresse de computador! -business**  
 **Reta falar sobre computadores - business**  
 **Vale do silício Gastronomia trata - mod_cook**  
@@ -236,12 +236,12 @@ void PrintComError(_com_error &e) {
 **Mas é amigável de usuário? -popular_comp**  
 **Segredos do vale do silício - popular_comp**  
 **Etiqueta de NET - popular_comp**  
-**Com aversão do computador e indivíduos com aversão ao não: Variações de comportamento - self_help**  
+**Indivíduos Phobic e não com aversão ao computador: Variações de comportamento - self_help**  
 **É raiva o inimigo? -self_help**  
 **Vida sem medo - self_help**  
 **Deprivation prolongada de dados: Quatro estudos de caso - self_help**  
 **Segurança emocional: Um novo algoritmo - self_help**  
-**Onions, Leeks e Garlic: cozinhar segredos de Mediterrâneo - trad_cook**  
+**Onions, Leeks e Garlic: Culinária segredos de Mediterrâneo - trad_cook**  
 **50 anos em Buckingham Palace cozinhas - trad_cook**  
 **Sushi, qualquer pessoa? -trad_cook**   
 ## <a name="see-also"></a>Consulte também  

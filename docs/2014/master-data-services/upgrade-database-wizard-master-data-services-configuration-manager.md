@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f55a722f54b6697aacf7fea87e436d33a5479afb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62923489"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>Atualizar Assistente para Banco de Dados (Gerenciador de Configuração do Master Data Services)
   Use o **Assistente para Atualizar Banco de Dados** para atualizar um banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  

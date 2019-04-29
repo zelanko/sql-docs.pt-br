@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7ee139dd652204c750c99d8bad8ab2b17c7c1ba1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63007802"
 ---
 # <a name="calling-sqlclosecursor"></a>Calling SQLCloseCursor
 Porque **SQLCloseCursor** é quase o mesmo que **SQLFreeStmt** com SQL_CLOSE, o Gerenciador de Driver não mapeie essa função. Funções de substituição são mapeadas para que o existente ODBC 2 *. x* aplicativos podem mover facilmente para ODBC 3. *x* usando as novas funções. Uma movimentação desse tipo torna mais fácil para esses aplicativos começar a usar o novo ODBC 3. *x* funcionalidade dentro do código condicional de uma maneira modular. **SQLCloseCursor** não representa nenhuma nova funcionalidade. Um aplicativo não receberá qualquer vantagem ao mudar para **SQLCloseCursor** partir **SQLFreeStmt** com SQL_CLOSE.

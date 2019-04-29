@@ -14,17 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e34929315d3a3548799bc605dbb8f3c4a2f665d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62928169"
 ---
 # <a name="sqlcolattributes-visual-foxpro-odbc-driver"></a>SQLColAttributes (Driver ODBC do Visual FoxPro)
 > [!NOTE]  
 >  Este tópico contém informações específicas de Driver ODBC do Visual FoxPro. Para obter informações gerais sobre essa função, consulte o tópico apropriado sob [referência da API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Suporte: completo  
+ Suporte a: Completo  
   
  Conformidade com a API ODBC: Nível de núcleo  
   

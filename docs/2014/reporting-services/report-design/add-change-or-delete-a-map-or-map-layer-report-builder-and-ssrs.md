@@ -29,11 +29,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 35860cfd893342d76074b6d49d0417484672030c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59936652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186151"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>Adicionar, alterar ou excluir um mapa ou uma camada do mapa (Construtor de Relatórios e SSRS)
   Um mapa é uma coleção de camadas. Quando você adiciona um mapa a um relatório, define a primeira camada. Você pode criar mais camadas usando o assistente de camada do mapa.  

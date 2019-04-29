@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e91f82595c8e4f6fe07969960959a12464bf53a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63033398"
 ---
 # <a name="recordstatusenum"></a>RecordStatusEnum
 Especifica o [status](../../../ado/reference/ado-api/status-property-ado-recordset.md) de um registro em relação a atualizações em lotes e outras operações em massa.  
   
-|Constante|Valor|Description|  
+|Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
 |**adRecCanceled**|0x100|Indica que o registro não foi salva porque a operação foi cancelada.|  
 |**adRecCantRelease**|0x400|Indica que o novo registro não foi salva porque o registro existente foi bloqueado.|  
@@ -50,7 +50,7 @@ Especifica o [status](../../../ado/reference/ado-api/status-property-ado-records
 ## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
  AdoEnums.RecordStatus.  
   
- Pacote: **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

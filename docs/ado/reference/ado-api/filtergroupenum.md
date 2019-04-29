@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 89cab313736a8d5acf2f7796ea79fb5649f85ab2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028116"
 ---
 # <a name="filtergroupenum"></a>FilterGroupEnum
 Especifica o grupo de registros a serem filtrados de um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -35,7 +35,7 @@ Especifica o grupo de registros a serem filtrados de um [conjunto de registros](
 |**adFilterPendingRecords**|1|Filtros para exibir apenas os registros que foram alterados, mas ainda não foram enviados ao servidor. Aplicável somente para o modo de atualização em lotes.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
- Pacote: **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

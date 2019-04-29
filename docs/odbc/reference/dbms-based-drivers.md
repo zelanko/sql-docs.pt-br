@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc35f7bceff2d9e92b70448040bb602117b76c84
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186289"
 ---
 # <a name="dbms-based-drivers"></a>Drivers baseados em DBMS
 Drivers baseados em DBMS são usados com fontes de dados como Oracle ou SQL Server que fornecem um mecanismo de banco de dados autônomo para o driver a ser usado. Esses drivers acessam os dados físicos por meio do mecanismo autônomo; ou seja, eles enviar instruções SQL para e recuperar os resultados do mecanismo.  

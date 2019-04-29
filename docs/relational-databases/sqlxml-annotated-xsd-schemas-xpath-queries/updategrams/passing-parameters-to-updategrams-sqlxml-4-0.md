@@ -19,11 +19,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 501ee9f2bde6d77e8f07fcbdfa6a43a0fa6f3b3a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63007298"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>Transmitindo parâmetros a diagramas de atualização (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "56041567"
     cmd.Parameters.Append cmd.CreateParameter("@Name",   200, 1, 50, "New Name")  
     ```  
   
-### <a name="b-passing-null-as-a-parameter-value-to-an-updategram"></a>b. Passando NULL como um valor de parâmetro para um updategram  
+### <a name="b-passing-null-as-a-parameter-value-to-an-updategram"></a>B. Passando NULL como um valor de parâmetro para um updategram  
  Na execução de um updategram, o valor "isnull" é atribuído ao parâmetro que você deseja definir como NULL. O diagrama de atualização converte o valor do parâmetro "isnulll" em NULL e o processa de acordo.  
   
  O seguinte diagrama de atualização define um cargo de funcionário como NULL:  

@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a851e7fe24def1b3853590360047ed753a8cdd20
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62924133"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>Proteger um aplicativo Web Master Data Manager
   Você pode proteger o aplicativo Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] com HTTPS.  

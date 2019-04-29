@@ -1,5 +1,5 @@
 ---
-title: 'Etapa 4: O servidor retorna o conjunto de registros (Tutorial RDS) | Microsoft Docs'
+title: 'Etapa 4: Servidor retorna o conjunto de registros (Tutorial RDS) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f111fab97b81ed847870f6535399c58bd856ab99
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62955797"
 ---
 # <a name="step-4-server-returns-the-recordset-rds-tutorial"></a>Etapa 4: O servidor retorna um conjunto de registros (Tutorial RDS)
 > [!IMPORTANT]
@@ -39,5 +39,5 @@ Sub RDSTutorial4()
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Etapa 5: O DataControl é tornado utilizável (Tutorial RDS)](../../../ado/guide/remote-data-service/step-5-datacontrol-is-made-usable-rds-tutorial.md)   
+ [Etapa 5: DataControl é tornado utilizável (Tutorial RDS)](../../../ado/guide/remote-data-service/step-5-datacontrol-is-made-usable-rds-tutorial.md)   
  [Tutorial RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

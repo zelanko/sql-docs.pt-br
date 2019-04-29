@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 36f91ea537b1ad2a5e52221400f41bf88dc544b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028032"
 ---
 # <a name="idsoshapeextensions-interface"></a>Interface IDSOShapeExtensions
 Obtém o objeto OLE DB fonte de dados subjacente para o provedor SHAPE.  
@@ -42,7 +42,7 @@ public:
 |[Método GetDataProviderDSO](../../../ado/reference/ado-api/getdataproviderdso-method.md)|Recupera o objeto OLE DB fonte de dados subjacente do provedor de forma.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Versão:** ADO 2.0 e posterior  
+ **Versão:** O ADO 2.0 e posterior  
   
  **Biblioteca:** msado15.dll  
   

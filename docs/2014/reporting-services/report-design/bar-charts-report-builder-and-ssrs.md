@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a09af051826fc771f37a912f5266554f7d98fe1c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59961242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63021079"
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>Gráficos de barras (Construtor de Relatórios e SSRS)
   Um gráfico de barras exibe as séries como conjuntos de barras horizontais. O gráfico de barras plano está bem relacionado ao gráfico de colunas, que exibe uma série como conjuntos de barras verticais e o gráfico de barras de intervalo, que exibe uma série como conjuntos de barras horizontais com pontos de início e término variáveis.  

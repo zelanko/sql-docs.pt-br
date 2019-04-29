@@ -16,39 +16,39 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 18b1c144e84bf0be5aaeb68b66660f7bc7865ade
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181283"
 ---
 # <a name="numeric-literal-syntax"></a>Sintaxe literal numérica
 A sintaxe a seguir é usada para literais numéricos no ODBC:  
   
- *numérico literal* :: = *literal assinados de numeric &#124; literal não assinado de numérico*  
+ *numeric-literal* ::= *signed-numeric-literal &#124; unsigned-numeric-literal*  
   
- *literal assinados de numérico* :: = [*sinal*] *literal não assinado de numérico*  
+ *signed-numeric-literal* ::= [*sign*] *unsigned-numeric-literal*  
   
- *literal não assinado de numérico* :: = *exato numérico-literal &#124; literal aproximar de numérico*  
+ *unsigned-numeric-literal* ::= *exact-numeric-literal &#124; approximate-numeric-literal*  
   
- *exato numérico-literal* :: = *inteiro não assinado* [*período*[*inteiro sem sinal*]]  *&#124;Períoda inteira não assinada*  
+ *exact-numeric-literal* ::= *unsigned-integer* [*period*[*unsigned-integer*]] *&#124;period unsigned-integer*  
   
- *sinal* :: = *sinal &#124; sinal de subtração*  
+ *sign* ::= *plus-sign &#124; minus-sign*  
   
  *aproximar-numeric-literal* :: = *expoente mantissa E*  
   
- *mantissa* :: = *literal exato de numérico*  
+ *mantissa* ::= *exact-numeric-literal*  
   
- *expoente* :: = *inteiro assinado*  
+ *exponent* ::= *signed-integer*  
   
- *inteiro assinado* :: = [*sinal*] *inteiro não assinado*  
+ *signed-integer* ::= [*sign*] *unsigned-integer*  
   
- *inteiro sem sinal* :: = *dígito...*  
+ *unsigned-integer* ::= *digit...*  
   
- *sinal de adição* :: = *+*  
+ *plus-sign* ::= *+*  
   
- *sinal de subtração* :: = -  
+ *minus-sign* ::= -  
   
- *Dígito* :: = 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; 0  
+ *digit* ::= 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; 0  
   
  *período* :: =.

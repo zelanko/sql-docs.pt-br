@@ -22,11 +22,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ebe4126d0fb64cceea5bc0c9dbfd5be83f9fc165
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187086"
 ---
 # <a name="enhance-general-replication-performance"></a>Aprimorar o desempenho geral da replicação
   É possível melhorar o desempenho geral para todos os tipos de replicação no seu aplicativo e na rede, por meio das diretrizes descritas neste tópico.  

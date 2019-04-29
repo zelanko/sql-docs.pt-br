@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 392cd07148516c4c61ed39cba4b34d81bcf4c5c3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63012422"
 ---
 # <a name="audit-server-principal-management-event-class"></a>Classe de evento Audit Server Principal Management
   A classe de evento **Audit Server Principal Management** ocorre quando entidades do servidor são criadas, alteradas ou descartadas.  

@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0bb38a73008d86144751ee324eb442bf711d65a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027677"
 ---
 # <a name="propertyattributesenum"></a>PropertyAttributesEnum
 Especifica os atributos de uma [propriedade](../../../ado/reference/ado-api/property-object-ado.md) objeto.  
   
-|Constante|Valor|Description|  
+|Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
 |**adPropNotSupported**|0|Indica que a propriedade não é suportada pelo provedor.|  
 |**adPropRequired**|1|Indica que o usuário deve especificar um valor para essa propriedade antes que a fonte de dados seja inicializada.|  
@@ -35,7 +35,7 @@ Especifica os atributos de uma [propriedade](../../../ado/reference/ado-api/prop
 |**adPropWrite**|1024|Indica que o usuário pode definir a propriedade.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
- Pacote: **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

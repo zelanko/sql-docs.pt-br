@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 08b853d57068121fccb4db2341754eea0af7f734
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185862"
 ---
 # <a name="warning-about-client-side-usage-of-geometry-geography-and-hierarchyid"></a>Aviso sobre uso no lado do cliente de GEOMETRY, GEOGRAPHY e HIERARCHYID
   O assembly **Types**, que contém os tipos de dados espaciais foi atualizado da versão 10.0 para a versão 11.0. Aplicativos personalizados que referenciam esse assembly poderão falhar quando certas condições forem verdadeiras.  

@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 03830b00df02332069383e496c0b22d198b95d7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013010"
 ---
 # <a name="sysdmosprocessmemory-transact-sql"></a>sys.dm_os_process_memory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47597017"
 > [!NOTE]  
 >  Chamá-lo partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o nome **sys.dm_pdw_nodes_os_process_memory**.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**physical_memory_in_use_kb**|**bigint**|Indica o conjunto de trabalho do processo em KB, conforme relatado pelo sistema operacional, assim como alocações rastreadas por meio de APIs de página grande. Não permite valor nulo.|  
 |**large_page_allocations_kb**|**bigint**|Especifica a memória física alocada com o uso de APIs de página grande. Não permite valor nulo.|  
@@ -48,7 +48,7 @@ ms.locfileid: "47597017"
 |**total_virtual_address_space_kb**|**bigint**|Indica o tamanho total da parte de modo de usuário do espaço de endereço virtual. Não permite valor nulo.|  
 |**virtual_address_space_reserved_kb**|**bigint**|Indica o espaço total do endereço virtual reservado pelo processo. Não permite valor nulo.|  
 |**virtual_address_space_committed_kb**|**bigint**|Indica o espaço de endereço virtual reservado que foi confirmado ou mapeado para páginas físicas. Não permite valor nulo.|  
-|**virtual_address_space_available_kb**|**bigint**|Indica o espaço de endereço virtual atualmente livre. Não permite valor nulo.<br /><br /> **Observação:** livre regiões menores que a granularidade de alocação pode existir. Essas regiões não estão disponível para alocações.|  
+|**virtual_address_space_available_kb**|**bigint**|Indica o espaço de endereço virtual atualmente livre. Não permite valor nulo.<br /><br /> **Observação:** Regiões livres menores que a granularidade de alocação podem existir. Essas regiões não estão disponível para alocações.|  
 |**page_fault_count**|**bigint**|Indica o número de falhas de página incorridas pelo processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Não permite valor nulo.|  
 |**memory_utilization_percentage**|**int**|Especifica a porcentagem de memória confirmada que está no conjunto de trabalho. Não permite valor nulo.|  
 |**available_commit_limit_kb**|**bigint**|Indica a quantidade de memória disponível para ser confirmada pelo processo. Não permite valor nulo.|  
@@ -57,7 +57,7 @@ ms.locfileid: "47597017"
 |**pdw_node_id**|**int**|**Aplica-se ao**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
   
 ## <a name="permissions"></a>Permissões  
- Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requer a permissão VIEW SERVER STATE no servidor.  
+ No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], é necessária a permissão VIEW SERVER STATE no servidor.  
   
 Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
 Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` permissão no banco de dados.   

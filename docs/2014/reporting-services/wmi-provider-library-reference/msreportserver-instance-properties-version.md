@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ff82109bc54fb1360df0f9280a196c547e53039b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020192"
 ---
 # <a name="version-property-wmi-msreportserverinstance"></a>Propriedade Version (WMI MSReportServer_Instance)
   Retorna a versão do servidor de relatório no formato Major.Minor.Build.Revision. Somente leitura.  

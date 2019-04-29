@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 88c798ce1bd5f25b1a844894b8aa609a4c641e4c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185597"
 ---
 # <a name="hide-legend-items-on-the-chart-report-builder-and-ssrs"></a>Ocultar itens de legenda no gráfico (Construtor de Relatórios e SSRS)
   Por padrão, qualquer série adicionada a um gráfico que não seja de forma é adicionada como um item na legenda. Para gráficos de pizza, de rosca, de funil e de pirâmide, qualquer série adicionada ao gráfico adicionará pontos de dados individuais na legenda.  

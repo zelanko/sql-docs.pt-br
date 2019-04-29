@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 12891d7ee674167157bcb02300d2e4181ef51734
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63012111"
 ---
 # <a name="concurrency-types"></a>Tipos de simultaneidade
 Para resolver o problema de redução de simultaneidade em cursores, ODBC expõe quatro tipos diferentes de simultaneidade do cursor:  
@@ -31,6 +31,6 @@ Para resolver o problema de redução de simultaneidade em cursores, ODBC expõe
   
 -   **Bloqueio** o cursor usa o nível mais baixo de bloqueio necessário para garantir que ele pode atualizar ou excluir linhas no conjunto de resultados. Isso geralmente resulta em níveis de simultaneidade muito baixa, especialmente em níveis de isolamento de transação Repeatable Read e Serializable.  
   
--   **Usando as versões de linha de simultaneidade otimista e simultaneidade otimista usando valores** o cursor usa a simultaneidade otimista: ele atualiza ou exclui linhas somente se eles não foram alterados desde que eles foram lidos pela última vez. Para detectar alterações, ele compara as versões de linha ou valores. Não há nenhuma garantia de que o cursor será possível atualizar ou excluir uma linha, mas a simultaneidade for muito maior do que quando o bloqueio é usado. Para obter mais informações, consulte a seção a seguir, [simultaneidade otimista](../../../odbc/reference/develop-app/optimistic-concurrency.md).  
+-   **Usando as versões de linha de simultaneidade otimista e simultaneidade otimista usando valores** o cursor usa a simultaneidade otimista: Ele atualiza ou exclui linhas somente se eles não foram alterados desde que eles foram lidos pela última vez. Para detectar alterações, ele compara as versões de linha ou valores. Não há nenhuma garantia de que o cursor será possível atualizar ou excluir uma linha, mas a simultaneidade for muito maior do que quando o bloqueio é usado. Para obter mais informações, consulte a seção a seguir, [simultaneidade otimista](../../../odbc/reference/develop-app/optimistic-concurrency.md).  
   
  Um aplicativo especifica qual tipo de simultaneidade ele deseja que o cursor a ser usado com o atributo de instrução SQL_ATTR_CONCURRENCY. Para determinar quais tipos têm suporte, ele chama **SQLGetInfo** com a opção SQL_SCROLL_CONCURRENCY.

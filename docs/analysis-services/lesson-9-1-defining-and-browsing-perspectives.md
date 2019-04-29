@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 46ce0cb6005ce6465c623fa51286061e8f1e89c5
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017364"
 ---
-# <a name="lesson-9-1---defining-and-browsing-perspectives"></a>Lição 9-1-Definindo e procurando perspectivas
+# <a name="lesson-9-1---defining-and-browsing-perspectives"></a>Lição 9-1: definindo e procurando perspectivas
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Uma perspectiva pode simplificar a exibição de um cubo para propósitos específicos. Por padrão, os usuários podem ver todos os elementos em um cubo para o qual têm permissões. O quê os usuários visualizam ao exibir um cubo completo do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] é a perspectiva padrão para o cubo. Uma exibição de todo o cubo pode ser muito complexa para os usuários pesquisarem, principalmente para usuários que precisam apenas interagir com uma pequena parte do cubo para satisfazer seus requisitos de inteligência empresarial e geração de relatórios.  
@@ -171,7 +171,7 @@ Nas tarefas deste tópico, você definirá várias perspectivas diferentes e dep
   
 4.  A análise no Excel avisa para você escolher quais perspectivas devem ser usadas ao procurar o modelo no Excel, conforme mostrado na imagem a seguir.  
   
-    ![Objetos da perspectiva de vendas pela Internet](../analysis-services/media/l9-perspectives-3.gif "objetos para a perspectiva de vendas pela Internet")  
+    ![Objetos para a perspectiva de vendas pela Internet](../analysis-services/media/l9-perspectives-3.gif "objetos para a perspectiva de vendas pela Internet")  
   
 5.  Como alternativa, você pode iniciar o Excel no menu Iniciar do Windows, definir uma conexão com o banco de dados de tutorial do Analysis Services no localhost, e pode escolher uma perspectiva no assistente de Conexão de Dados, como mostrado na imagem a seguir.  
   

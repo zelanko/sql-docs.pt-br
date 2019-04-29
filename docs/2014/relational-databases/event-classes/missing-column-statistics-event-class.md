@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 43a83d0b20bbcdb0b95dd727a51d59353f7675bc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63023417"
 ---
 # <a name="missing-column-statistics-event-class"></a>Classe de evento Missing Column Statistics
   A classe de evento Missing Column Statistics indica que as estatísticas de coluna que podiam ter sido úteis para o otimizador, não estão disponíveis.  

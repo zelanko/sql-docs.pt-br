@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4fe48814f8d707b0feeacf7a9a84c79df0ffe71
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63036192"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>Especificar fator de preenchimento para um índice
   Este tópico descreve o que é fator de preenchimento e como especificar um valor de fator de preenchimento em um índice no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -99,7 +99,7 @@ ms.locfileid: "54100711"
   
 8.  Clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-specify-a-fill-factor-in-an-existing-index"></a>Para especificar um fator de preenchimento em um índice existente  
   

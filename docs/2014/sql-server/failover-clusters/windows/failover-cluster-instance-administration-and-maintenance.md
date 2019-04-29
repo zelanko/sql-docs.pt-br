@@ -24,14 +24,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 402e9e0d787d6f60e069625e908faee4fbecaeca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049431"
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>Administração e manutenção da instância de cluster de failover
-  Tarefas de manutenção como adicionar ou remover nós de uma existente AlwaysOn Failover Cluster FCI (instância) são realizadas usando o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] programa de instalação. Outras tarefas de administração como alterar o recurso de endereço IP e recuperar de certos cenários de FCI são realizadas com o uso do snap-in Gerenciador de Cluster de Failover, que é o snap-in de gerenciamento do serviço WSFC (Windows Server Failover Clustering).  
+  Tarefas de manutenção como adicionar ou remover nós de uma FCI (instância de cluster de failover) AlwaysOn do programa de instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Outras tarefas de administração como alterar o recurso de endereço IP e recuperar de certos cenários de FCI são realizadas com o uso do snap-in Gerenciador de Cluster de Failover, que é o snap-in de gerenciamento do serviço WSFC (Windows Server Failover Clustering).  
   
 ## <a name="maintaining-a-failover-cluster-instance"></a>Mantendo uma instância de cluster de failover  
  Depois que você instalar uma FCI, poderá alterá-la ou repará-la usando o programa de Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Por exemplo, você também pode adicionar mais nós a uma FCI, executar uma FCI como uma instância autônoma ou remover um nó de uma configuração de FCI.  
@@ -57,7 +57,7 @@ ms.locfileid: "48110536"
 |Descrição da tarefa|Link do tópico|  
 |----------------------|----------------|  
 |Descreve como adicionar dependências a um recurso do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Adicionar dependências a um recurso do SQL Server](add-dependencies-to-a-sql-server-resource.md)|  
-|Kerberos é um protocolo de autenticação de rede cuja finalidade é oferecer autenticação forte para aplicativos cliente/servidor. O Kerberos proporciona uma base para interoperabilidade e ajuda a melhorar a segurança da autenticação na rede da empresa inteira. Você pode usar a autenticação Kerberos com [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instâncias autônomas ou com FCIs AlwaysOn.|[Registrar um nome da entidade de serviço para conexões de Kerberos](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).|  
+|Kerberos é um protocolo de autenticação de rede cuja finalidade é oferecer autenticação forte para aplicativos cliente/servidor. O Kerberos proporciona uma base para interoperabilidade e ajuda a melhorar a segurança da autenticação na rede da empresa inteira. Você pode usar a autenticação Kerberos com instâncias autônomas do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou com FCIs AlwaysOn.|[Registrar um nome da entidade de serviço para conexões de Kerberos](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).|  
 |Fornece links para conteúdo que descreve como habilitar a autenticação Kerberos||  
 |Descreve o procedimento usado para recuperar-se de uma falha de cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Recuperar-se de uma falha na instância do cluster de failover](recover-from-failover-cluster-instance-failure.md)|  
 |Descreva o procedimento usado para alterar o recurso de endereço IP para uma instância de cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Alterar o endereço IP de uma instância do cluster de failover](change-the-ip-address-of-a-failover-cluster-instance.md)|  

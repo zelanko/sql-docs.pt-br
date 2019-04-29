@@ -14,20 +14,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 674f6f53610c8bf864aba5a2b5c7310c10f969c2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049479"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>Forçar um cluster WSFC para iniciar sem um quorum
   Este tópico descreve como forçar um nó de cluster WSFC (Windows Server Failover Clustering) a iniciar sem um quorum.  Talvez isso seja necessário na recuperação de desastre e em cenários com várias sub-redes para recuperar dados e restabelecer totalmente a alta disponibilidade para o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e instâncias de cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
--   **Antes de começar:**  [Recomendações](#Recommendations), [segurança](#Security)  
+-   **Antes de iniciar:**  [Recomendações](#Recommendations), [segurança](#Security)  
   
 -   **Para forçar um cluster a iniciar sem um quorum usando:**  [Usando o Gerenciador de Cluster de Failover](#FailoverClusterManagerProcedure), [usando o Powershell](#PowerShellProcedure), [usando Net.exe](#CommandPromptProcedure)  
   
--   **Acompanhar:**  [Acompanhamento: Depois de forçar o Cluster a iniciar sem um Quorum](#FollowUp)  
+-   **Acompanhar:**  [Acompanhar: Depois de forçar o Cluster a iniciar sem um Quorum](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de iniciar  
   
@@ -102,7 +102,7 @@ net.exe stop clussvc
 net.exe start clussvc /forcequorum  
 ```  
   
-##  <a name="FollowUp"></a> Acompanhar: Depois de forçar o cluster a iniciar sem um quorum  
+##  <a name="FollowUp"></a> Acompanhamento: Depois de forçar o Cluster a iniciar sem um Quorum  
   
 -   Você deve reavaliar e reconfigurar valores de NodeWeight para construir corretamente um novo quorum antes de colocar os outros nós online novamente. Caso contrário, o cluster talvez fique offline novamente.  
   

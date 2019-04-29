@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7d6b2e91504c2c9ba796d2c0a55ba19fb3f6493e
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181691"
 ---
 # <a name="avg-mdx"></a>Avg (MDX)
 
@@ -35,10 +35,10 @@ Avg( Set_Expression [ , Numeric_Expression ] )
  *Numeric_Expression*  
  Uma expressão numérica válida, geralmente uma linguagem MDX de coordenadas de célula, que retorna um número.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se um conjunto de tuplas vazias ou um conjunto vazio for especificado, o **Avg** função retorna um valor vazio.  
   
- O **Avg** função calcula a média de valores não vazios de células no conjunto especificado pelo primeiro calcula a soma dos valores em células no conjunto especificado e, em seguida, dividindo a soma calculada pela contagem de células não vazias no conjunto especificado.  
+ O **Avg** função calcula a média dos valores não vazios de células no conjunto especificado pelo primeiro calcula a soma dos valores em todas as células no conjunto especificado e, em seguida, dividindo a soma calculada pela contagem de células não vazias no o conjunto especificado.  
   
 > [!NOTE]  
 >  O [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ignora nulos ao calcular o valor médio em um conjunto de números.  
@@ -46,9 +46,9 @@ Avg( Set_Expression [ , Numeric_Expression ] )
  Se uma expressão numérica específica (normalmente uma medida) não for especificada, o **Avg** função calcula a média de cada medida dentro do contexto de consulta atual. Se uma medida específica for fornecida, o **Avg** função primeiro avalia a medida no conjunto e, em seguida, a função calcula a média com base na medida especificada.  
   
 > [!NOTE]  
->  Ao usar o **CurrentMember** função em uma declaração de membro calculado, você deve especificar uma expressão numérica como não existe nenhuma medida padrão para a coordenada atual em tal contexto de consulta.  
+>  Ao usar o **CurrentMember** função em uma declaração de membro calculado, você deve especificar uma expressão numérica porque existe nenhuma medida padrão para a coordenada atual em tal contexto de consulta.  
   
- Para forçar a inclusão de células vazias, o aplicativo deve usar o [CoalesceEmpty](../mdx/coalesceempty-mdx.md) de função ou especificar uma opção válida *Numeric_Expression* que fornece um valor de zero (0) para valores vazios. Para obter mais informações sobre células vazias, consulte a documentação OLE DB.  
+ Para forçar a inclusão de células vazias, o aplicativo deve usar o [CoalesceEmpty](../mdx/coalesceempty-mdx.md) funcionar ou especificar um usuário válido *Numeric_Expression* que forneça um valor de zero (0) para valores vazios. Para obter mais informações sobre células vazias, consulte a documentação OLE DB.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna a média para uma medida em um determinado conjunto. Observe que a medida especificada pode ser a medida padrão para os membros do conjunto especificado ou uma medida especificada.  
@@ -81,7 +81,7 @@ Avg( Set_Expression [ , Numeric_Expression ] )
   
  `WHERE ([Geography].[Geography].[NW Region Avg])`  
   
- O exemplo a seguir retorna a média diária do `Measures.[Gross Profit Margin]` medida calculada nos dias de cada mês do ano fiscal de 2003, a partir de **Adventure Works** cubo. O **Avg** função calcula a média do conjunto de dias em que estão contidos em cada mês do `[Ship Date].[Fiscal Time]` hierarquia. A primeira versão do cálculo mostra o comportamento padrão da função Avg ao excluir os dias em que nenhuma venda foi registrada a partir da média e a segunda versão mostra como incluir os dias sem venda na média.  
+ O exemplo a seguir retorna a média diária do `Measures.[Gross Profit Margin]` medida, calculada nos dias de cada mês do ano fiscal de 2003, a partir de **Adventure Works** cubo. O **Avg** função calcula a média do conjunto de dias em que estão contidos em cada mês do `[Ship Date].[Fiscal Time]` hierarquia. A primeira versão do cálculo mostra o comportamento padrão da função Avg ao excluir os dias em que nenhuma venda foi registrada a partir da média e a segunda versão mostra como incluir os dias sem venda na média.  
   
  `WITH MEMBER Measures.[Avg Gross Profit Margin] AS`  
   
@@ -127,7 +127,7 @@ Avg( Set_Expression [ , Numeric_Expression ] )
   
  `WHERE([Product].[Product Categories].[Product].&[344])`  
   
- O exemplo a seguir retorna a média diária do `Measures.[Gross Profit Margin]` medida calculada nos dias de cada semestre do ano fiscal de 2003, a partir de **Adventure Works** cubo.  
+ O exemplo a seguir retorna a média diária do `Measures.[Gross Profit Margin]` medida, calculada nos dias de cada semestre do ano fiscal de 2003, a partir de **Adventure Works** cubo.  
   
 ```  
 WITH MEMBER Measures.[Avg Gross Profit Margin] AS  
@@ -146,6 +146,6 @@ FROM
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

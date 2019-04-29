@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 03ac60e59b1859ed4e77f3db5e355a1fb9f556f3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59949702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186516"
 ---
 # <a name="controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs"></a>Controlando quebras de páginas, títulos, colunas e linhas (Construtor de Relatórios e SSRS)
   Uma quebra de página divide um relatório em páginas separadas para exibição e impressão. As quebras de página determinam como o conteúdo é colocado em uma página de relatório para visualização ideal quando você visualiza um relatório ou exporta-o para outro formato de arquivo.  

@@ -1,8 +1,9 @@
 ---
 title: Monitorar o uso da CPU | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 03/14/2017
+ms.prod: sql
+ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
@@ -19,17 +20,18 @@ helpviewer_keywords:
 - CPU [SQL Server], monitoring
 - monitoring server performance [SQL Server], CPU usage
 ms.assetid: 2a02a3b6-07b2-4ad0-8a24-670414d19812
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ms.openlocfilehash: e46610823432efde0cc757e3dff317227b7548ac
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032091"
 ---
 # <a name="monitor-cpu-usage"></a>Monitorar o uso da CPU
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Monitore uma instância do Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] periodicamente para determinar se as taxas de uso de CPU estão dentro dos intervalos normais. Uma taxa de uso de CPU continuamente alta pode indicar a necessidade de atualizar a CPU ou de adicionar vários processadores. Alternativamente, uma taxa de uso de CPU alta pode indicar um aplicativo mal-ajustado ou malprojetado. Otimizar o aplicativo pode baixar a utilização de CPU.  
   
  Um modo eficiente de determinar o uso de CPU é usar o contador **Processador: %tempo de processador** do Monitor do Sistema. Esse contador monitora o tempo gasto pela CPU para executar um thread que não está ocioso. Um estado consistente de 80 a 90 por cento pode indicar a necessidade de atualizar a CPU ou de adicionar mais processadores. Para sistemas com vários processadores, monitore uma instância separada desse contador para cada processador. Esse valor representa a soma do tempo de processador em um processador específico. Para determinar a média de todos os processadores, use o contador **Sistema: %tempo total de processador** .  
@@ -47,7 +49,7 @@ ms.locfileid: "52747698"
   
      Corresponde à porcentagem de tempo que o processador gasta na execução de processos de usuário, como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   **Sistema: Comprimento da fila de processador**  
+-   **Sistema: Extensão da Fila do Processador**  
   
      Corresponde ao número de threads que esperam por tempo de processador. Um gargalo de processador acontece quando os threads de um processo exigem mais ciclos de processador do que os disponíveis. Se muitos processos tentarem utilizar o tempo de processador, pode ser necessário instalar um processador mais rápido. Caso seja um sistema com vários processadores, você pode adicionar um processador.  
   

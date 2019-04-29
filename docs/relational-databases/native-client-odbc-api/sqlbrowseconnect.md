@@ -16,11 +16,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 32741a2efaa3d7903c45d978c72f1ccc6867b1ba
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63014718"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,24 +30,24 @@ ms.locfileid: "51660565"
   
 ## <a name="level-1"></a>Nível 1  
   
-|Palavra-chave|Lista retornada?|Opcional?|Description|  
+|Palavra-chave|Lista retornada?|Opcional?|Descrição|  
 |-------------|--------------------|---------------|-----------------|  
-|DSN|N/A|não|Nome da fonte de dados retornada por **SQLDataSources**. A palavra-chave DSN não poderá ser usada se a palavra-chave DRIVER for usada.|  
-|DRIVER|N/A|não|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nome do driver ODBC do Native Client é {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}. A palavra-chave DRIVER não pode ser usada se a palavra-chave DSN for usada.|  
+|DSN|N/D|Não|Nome da fonte de dados retornada por **SQLDataSources**. A palavra-chave DSN não poderá ser usada se a palavra-chave DRIVER for usada.|  
+|DRIVER|N/D|Não|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nome do driver ODBC do Native Client é {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}. A palavra-chave DRIVER não pode ser usada se a palavra-chave DSN for usada.|  
   
 ## <a name="level-2"></a>Nível 2  
   
-|Palavra-chave|Lista retornada?|Opcional?|Description|  
+|Palavra-chave|Lista retornada?|Opcional?|Descrição|  
 |-------------|--------------------|---------------|-----------------|  
-|SERVER|Sim|não|O nome do servidor na rede onde a fonte de dados reside. O termo "(local)" pode ser inserido como o servidor; nesse caso uma cópia local do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ser usada, mesmo quando se trata de uma versão sem-rede.|  
-|UID|não|Sim|ID de logon do usuário.|  
-|PWD|não|Sim (depende do usuário)|Senha especificada pelo usuário.|  
-|APP|não|Sim|Nome do aplicativo que chama **SQLBrowseConnect**.|  
-|WSID|não|Sim|ID da estação de trabalho. Normalmente, é o nome de rede do computador no qual o aplicativo é executado.|  
+|SERVER|Sim|Não|O nome do servidor na rede onde a fonte de dados reside. O termo "(local)" pode ser inserido como o servidor; nesse caso uma cópia local do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ser usada, mesmo quando se trata de uma versão sem-rede.|  
+|UID|Não|Sim|ID de logon do usuário.|  
+|PWD|Não|Sim (depende do usuário)|Senha especificada pelo usuário.|  
+|APP|Não|Sim|Nome do aplicativo que chama **SQLBrowseConnect**.|  
+|WSID|Não|Sim|ID da estação de trabalho. Normalmente, é o nome de rede do computador no qual o aplicativo é executado.|  
   
 ## <a name="level-3"></a>Nível 3  
   
-|Palavra-chave|Lista retornada?|Opcional?|Description|  
+|Palavra-chave|Lista retornada?|Opcional?|Descrição|  
 |-------------|--------------------|---------------|-----------------|  
 |DATABASE|Sim|Sim|O nome do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |LANGUAGE|Sim|Sim|O idioma nacional usado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -56,7 +56,7 @@ ms.locfileid: "51660565"
   
  Os seguintes atributos são definidos chamando [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md), determinar o conjunto de resultados retornado por **SQLBrowseConnect**.  
   
-|attribute|Description|  
+|attribute|Descrição|  
 |---------------|-----------------|  
 |SQL_COPT_SS_BROWSE_CONNECT|Se ele for definido como SQL_MORE_INFO_YES, **SQLBrowseConnect** retorna uma cadeia de caracteres estendida de propriedades do servidor.<br /><br /> A seguir está um exemplo de cadeia de caracteres estendida retornada por **SQLBrowseConnect**:<br /><br /> <br /><br /> `ServerName\InstanceName;Clustered:No;Version:8.00.131`<br /><br /> <br /><br /> Nessa cadeia de caracteres, ponto-e-vírgulas separam várias partes das informações sobre o servidor. Use vírgulas para separar diferentes instâncias do servidor.|  
 |SQL_COPT_SS_BROWSE_SERVER|Se um nome de servidor for especificado, **SQLBrowseConnect** retornará informações para o servidor especificado. Se SQL_COPT_SS_BROWSE_SERVER estiver definido como NULL, **SQLBrowseConnect** retorna informações para todos os servidores no domínio.<br /><br /> <br /><br /> Observe que, devido a problemas de rede **SQLBrowseConnect** pode não receber uma resposta oportuna de todos os servidores. Portanto, a lista de servidores retornada pode variar para cada solicitação.|  

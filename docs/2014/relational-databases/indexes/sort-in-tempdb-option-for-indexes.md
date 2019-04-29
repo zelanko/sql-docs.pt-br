@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 49a10795cbb9177837960739890baebc221c0712
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035595"
 ---
 # <a name="sortintempdb-option-for-indexes"></a>Opção SORT_IN_TEMPDB para índices
   Quando você cria ou recria um índice, definindo a opção SORT_IN_TEMPDB como ON, você pode direcionar [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] para usar **tempdb** para armazenar os resultados intermediários de classificação utilizados para criar o índice. Embora essa opção aumente a quantidade de espaço temporário em disco usada para criar um índice, a opção pode reduzir o tempo necessário à criação ou recriação de um índice quando **tempdb** estiver em um conjunto de discos diferente do banco de dados do usuário. Para obter mais informações sobre **tempdb**, veja [Configurar a opção index create memory de configuração de servidor](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md).  
@@ -81,6 +81,6 @@ ms.locfileid: "48145248"
   
  [Configurar a opção index create memory de configuração de servidor](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)  
   
- [Requisitos de espaço em disco para operações de DDL de índice](disk-space-requirements-for-index-ddl-operations.md)  
+ [Requisitos de espaço em disco para operações de índice DDL](disk-space-requirements-for-index-ddl-operations.md)  
   
   

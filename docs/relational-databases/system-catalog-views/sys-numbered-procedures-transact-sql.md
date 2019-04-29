@@ -1,5 +1,5 @@
 ---
-title: numbered_procedures (Transact-SQL) | Microsoft Docs
+title: sys.numbered_procedures (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 926fc5a64e165360eac5e43704826ed4de816ff3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63018713"
 ---
 # <a name="sysnumberedprocedures-transact-sql"></a>sys.numbered_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -36,11 +36,11 @@ ms.locfileid: "47843754"
 > [!IMPORTANT]  
 >  Os procedimentos numerados são preteridos. O uso de procedimentos numerados é desaconselhável. Um evento DEPRECATION_ANNOUNCEMENT será acionado quando uma consulta que usa essa exibição do catálogo for compilada.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID do objeto do procedimento armazenado.|  
 |**procedure_number**|**smallint**|Número deste procedimento no objeto, 2 ou maior.|  
-|**Definição**|**nvarchar(max)**|O texto do SQL Server que define este procedimento.<br /><br /> NULL = criptografado.|  
+|**definition**|**nvarchar(max)**|O texto do SQL Server que define este procedimento.<br /><br /> NULL = criptografado.|  
   
 > [!NOTE]  
 >  Não há suporte para os parâmetros XML e CLR em procedimentos numerados.  

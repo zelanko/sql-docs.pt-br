@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dd8e26099ec7152aac08a11b6f7e38550834d248
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184249"
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>Criar autojunções manualmente (Visual Database Tools)
   A autojunção de uma tabela pode ser feita, mesmo se a tabela não tiver uma relação reflexiva no banco de dados. Por exemplo, você pode usar uma autojunção para encontrar pares de autores que moram na mesma cidade.  

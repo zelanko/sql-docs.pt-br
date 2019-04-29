@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 06cefcdac192b715fe843f842088456f769cdd24
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042568"
 ---
 # <a name="testing-accuracy-with-lift-charts-basic-data-mining-tutorial"></a>Testando a precisão com gráficos de comparação de precisão (Tutorial de mineração de dados básico)
   Sobre o **gráfico de precisão de mineração** guia do Designer de mineração de dados, você pode calcular quanto cada um dos seus modelos faz previsões e comparar os resultados de cada modelo diretamente com os resultados dos outros modelos. Esse método de comparação é conhecido como um *gráfico de comparação de precisão*. Normalmente, a precisão da previsão de um modelo de mineração é medida pela comparação de precisão ou pela precisão de classificação. Para este tutorial, só usaremos o gráfico de comparação de precisão.  

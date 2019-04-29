@@ -16,11 +16,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c1a6960eb368564c43556b59033ac24a878dd10c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63014369"
 ---
 # <a name="sqlgetstmtattr"></a>SQLGetStmtAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "51672345"
 ## <a name="sqlsoptssnocountstatus"></a>SQL_SOPT_SS_NOCOUNT_STATUS  
  O atributo SQL_SOPT_SS_NOCOUNT_STATUS indica a configuração atual da opção NOCOUNT, que controla se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relata o número de linhas afetadas por uma instrução quando [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md) é chamado. O valor *ValuePtr* é do tipo SQLLEN.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |SQL_NC_OFF|NOCOUNT é OFF. SQLRowCount retorna o número de linhas afetadas.|  
 |SQL_NC_ON|NOCOUNT é ON. O número de linhas afetadas não é retornado pelo SQLRowCount e o valor retornado é 0.|  

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99e1d1f0692e5460e2c7003b0ab8dca860deca4f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022144"
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>Objetos criados no Editor Oracle
   A replicação do[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instala objetos de banco de dados no Editor Oracle para habilitar controle e encaminhamento de alterações (o[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não instala nenhum arquivo binário no Editor Oracle). A tabela seguinte lista os objetos que são criados no Editor Oracle quando este é identificado como um Publicador no Distribuidor do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . As descrições de objeto são fornecidas apenas para fins informativos. Esses objetos não devem ser modificados.  

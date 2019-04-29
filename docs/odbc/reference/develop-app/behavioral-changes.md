@@ -16,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: abe670570dd2219247da0c70b2b62e1de4e60341
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181766"
 ---
 # <a name="behavioral-changes"></a>Alterações comportamentais
 Alterações de comportamento são essas alterações para o qual o *sintaxe* da interface permanece a mesma, mas o *semântica* foram alterados. Para que essas alterações, a funcionalidade usada no ODBC 2. *x* se comporta de forma diferente do que a mesma funcionalidade em ODBC 3. *x*.  
   
  Se um aplicativo exibe o ODBC 2. *x* comportamento ou o ODBC 3. *x* comportamento é determinado pelo atributo SQL_ATTR_ODBC_VERSION ambiente. Esse valor de 32 bits é definido como SQL_OV_ODBC2 exibem o ODBC 2. *x* comportamento e SQL_OV_ODBC3 exibem o ODBC 3. *x* comportamento.  
   
- O atributo de ambiente SQL_ATTR_ODBC_VERSION é definido por uma chamada para **SQLSetEnvAttr**. Depois que um aplicativo chama **SQLAllocHandle** para alocar um identificador de ambiente, ele deve chamar**SQLSetEnvAttr** imediatamente para definir o comportamento que ele exibe. (Como resultado, há um novo estado de ambiente para descrever o identificador de ambiente em um alocados, mas automáticas sem versão, estado.) Para obter mais informações, consulte [apêndice b: tabelas de transição de estado de ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
+ O atributo de ambiente SQL_ATTR_ODBC_VERSION é definido por uma chamada para **SQLSetEnvAttr**. Depois que um aplicativo chama **SQLAllocHandle** para alocar um identificador de ambiente, ele deve chamar**SQLSetEnvAttr** imediatamente para definir o comportamento que ele exibe. (Como resultado, há um novo estado de ambiente para descrever o identificador de ambiente em um alocados, mas automáticas sem versão, estado.) Para obter mais informações, consulte [apêndice b: Tabelas de transição de estado ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
  Um aplicativo declara que comportamento ele exibe um com o atributo de ambiente SQL_ATTR_ODBC_VERSION, mas o atributo não tem efeito sobre a conexão do aplicativo com um ODBC 2. *x* ou o ODBC 3. *x* driver. ODBC 3. *x* aplicativo pode se conectar a qualquer um uma ODBC 2. *x* ou 3. *x* driver, independentemente da configuração do atributo ambiente.  
   

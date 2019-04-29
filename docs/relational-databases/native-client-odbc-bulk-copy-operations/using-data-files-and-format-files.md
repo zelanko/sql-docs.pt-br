@@ -20,11 +20,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f4c377bbfbe4170b5631ba1ac9c017af1176b279
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013971"
 ---
 # <a name="using-data-files-and-format-files"></a>Usando arquivos de dados e de formato
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47831394"
   
  A instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] pode ser qualquer instrução que gera um conjunto de resultados. Será criado o arquivo de dados que contém o primeiro conjunto de resultados da instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]. A cópia em massa ignora qualquer conjunto de resultados após o primeiro se a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] gera vários conjuntos de resultados.  
   
- Para criar um arquivo de dados na qual coluna dados são armazenados em um formato diferente da tabela, chame [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) para especificar quantas colunas será alterado, em seguida, chame [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) para cada coluna cujo formato você deseja alterar. Isso é feito depois de chamar **bcp_init** , mas antes de chamar **bcp_exec**. **bcp_colfmt** Especifica o formato no qual os dados da coluna são armazenados no arquivo de dados. Ele pode ser usado na cópia em massa de entrada ou de saída. Você também pode usar **bcp_colfmt** para definir os terminadores de linha e coluna. Por exemplo, se seus dados não contiverem nenhum caractere de guia, você pode criar um arquivo delimitado por tabulação usando **bcp_colfmt** para definir o caractere de tabulação como terminador de cada coluna.  
+ Para criar um arquivo de dados na qual coluna dados são armazenados em um formato diferente da tabela, chame [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) para especificar quantas colunas será alterado, em seguida, chame [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) para cada coluna cujo formato você deseja alterar. Isso é feito depois de chamar **bcp_init** , mas antes de chamar **bcp_exec**. **bcp_colfmt** Especifica o formato no qual os dados da coluna são armazenados no arquivo de dados. Ele pode ser usado durante a cópia ou reduzir horizontalmente. Você também pode usar **bcp_colfmt** para definir os terminadores de linha e coluna. Por exemplo, se seus dados não contiverem nenhum caractere de guia, você pode criar um arquivo delimitado por tabulação usando **bcp_colfmt** para definir o caractere de tabulação como terminador de cada coluna.  
   
  Quando em massa copiando-out e usando **bcp_colfmt**, você pode criar facilmente um arquivo de formato que descreve o arquivo de dados criado chamando [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) após a última chamada para **bcp_colfmt**.  
   

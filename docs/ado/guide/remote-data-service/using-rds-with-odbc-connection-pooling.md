@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7fbc75772a48b4990ebbc31877a3f7a95b442087
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62955746"
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>Usar RDS com pool de conexões ODBC
 Se você estiver usando uma fonte de dados ODBC, você pode usar a opção no Internet Information Services (IIS) do pool de conexão para alcançar a manipulação de alto desempenho de carga do cliente. Pooling de Conexão é um Gerenciador de recursos para conexões, mantendo o estado aberto em conexões usadas com frequência.  
@@ -43,7 +43,7 @@ Se você estiver usando uma fonte de dados ODBC, você pode usar a opção no In
   
 ### <a name="to-specify-the-tcpip-socket-network-library-on-the-sql-server-computer"></a>Para especificar a biblioteca de rede de soquete TCP/IP no computador do SQL Server  
   
-### <a name="in-microsoft-sql-server-65"></a>No Microsoft SQL Server 6.5:  
+### <a name="in-microsoft-sql-server-65"></a>In Microsoft SQL Server 6.5:  
   
 1.  No menu Iniciar, aponte para programas, aponte para Microsoft SQL Server 6.5 e, em seguida, clique em instalação do SQL.  
   
@@ -55,7 +55,7 @@ Se você estiver usando uma fonte de dados ODBC, você pode usar a opção no In
   
 5.  Clique em Continuar para concluir e sair da instalação.  
   
-### <a name="in-microsoft-sql-server-70"></a>No Microsoft SQL Server 7.0:  
+### <a name="in-microsoft-sql-server-70"></a>In Microsoft SQL Server 7.0:  
   
 1.  No menu Iniciar, aponte para programas, aponte para Microsoft SQL Server 7.0 e, em seguida, clique em utilitário de rede do servidor.  
   
@@ -74,7 +74,7 @@ Se você estiver usando uma fonte de dados ODBC, você pode usar a opção no In
   
 ### <a name="to-configure-the-web-server-all-sql-servers"></a>Para configurar o servidor Web (todos os servidores SQL)  
   
-### <a name="for-microsoft-sql-server-65"></a>Para o Microsoft SQL Server 6.5:  
+### <a name="for-microsoft-sql-server-65"></a>For Microsoft SQL Server 6.5:  
   
 1.  No menu Iniciar, aponte para programas, aponte para Microsoft SQL Server 6.5 e, em seguida, clique em SQL Client Configuration Utility.  
   
@@ -84,7 +84,7 @@ Se você estiver usando uma fonte de dados ODBC, você pode usar a opção no In
   
 4.  Clique em concluído para salvar as alterações e sair do utilitário.  
   
-### <a name="for-microsoft-sql-server-70"></a>Para o Microsoft SQL Server 7.0:  
+### <a name="for-microsoft-sql-server-70"></a>For Microsoft SQL Server 7.0:  
   
 1.  No menu Iniciar, aponte para programas, aponte para Microsoft SQL Server 7.0 e, em seguida, clique em utilitário de rede do cliente.  
   
@@ -98,7 +98,7 @@ Se você estiver usando uma fonte de dados ODBC, você pode usar a opção no In
   
 ### <a name="to-configure-the-web-server-a-specific-sql-server"></a>Para configurar o servidor Web (um servidor específico do SQL)  
   
-### <a name="for-microsoft-sql-server-65"></a>Para o Microsoft SQL Server 6.5:  
+### <a name="for-microsoft-sql-server-65"></a>For Microsoft SQL Server 6.5:  
   
 1.  No menu Iniciar, aponte para programas, aponte para Microsoft SQL Server 6.5 e, em seguida, clique em SQL Client Configuration Utility.  
   
@@ -112,7 +112,7 @@ Se você estiver usando uma fonte de dados ODBC, você pode usar a opção no In
   
 6.  Clique em concluído.  
   
-### <a name="for-microsoft-sql-server-70"></a>Para o Microsoft SQL Server 7.0:  
+### <a name="for-microsoft-sql-server-70"></a>For Microsoft SQL Server 7.0:  
   
 1.  No menu Iniciar, aponte para programas, aponte para Microsoft SQL Server 7.0 e, em seguida, clique em utilitário de configuração do cliente.  
   

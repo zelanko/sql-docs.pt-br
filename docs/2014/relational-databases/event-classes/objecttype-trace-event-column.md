@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 31ba88f3bc49d78dc8c68ac77ba6bda90e63aad0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028373"
 ---
 # <a name="objecttype-trace-event-column"></a>Coluna de evento de rastreamento ObjectType
   A coluna Object Type é usada em diversos eventos de rastreamento. Este tópico descreve os possíveis valores dessa coluna e as definições a ela associadas.  

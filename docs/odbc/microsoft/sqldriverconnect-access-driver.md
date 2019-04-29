@@ -1,5 +1,5 @@
 ---
-title: SQLDriverConnect (Driver do Access) | Microsoft Docs
+title: SQLDriverConnect (Access Driver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9a71874c91e48c25072fbfed8f66a312d65b4697
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63048470"
 ---
 # <a name="sqldriverconnect-access-driver"></a>SQLDriverConnect (Driver do Access)
 > [!NOTE]  
@@ -37,4 +37,4 @@ ms.locfileid: "47626375"
   
 |Driver|Palavras-chave necessárias|Exemplos|  
 |------------|-----------------------|--------------|  
-|Microsoft Access|Driver, DBQ|Driver = {Driver do Microsoft Access (*. mdb)}; DBQ = c:\\\temp\\\sample.mdb|
+|Microsoft Access|Driver, DBQ|Driver={Microsoft Access Driver (*.mdb)}; DBQ=c:\\\temp\\\sample.mdb|

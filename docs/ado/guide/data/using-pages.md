@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c1eced0fae443a67c85cc1f3f8ec9b44867ce464
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184917"
 ---
 # <a name="using-pages"></a>Usar páginas
 Use o **PageCount** propriedade para determinar quantas páginas de dados estão na **Recordset** objeto. *Páginas* são grupos de registros cujo tamanho é igual a **PageSize** configuração da propriedade. Mesmo se a última página está incompleta porque há menos registros que o **PageSize** valor, ele contará como uma página adicional na **PageCount** valor. Se o **conjunto de registros** objeto não oferece suporte a essa propriedade, **PageCount** será -1 para indicar que o **PageCount** for indeterminável.  

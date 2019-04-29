@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 147daad87bf9ec77d2c686d44d367e85a07ab4c8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59971232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63021295"
 ---
 # <a name="add-html-into-a-report-report-builder-and-ssrs"></a>Adicionar um HTML a um relatório (Construtor de Relatórios e SSRS)
   Usando um espaço reservado, você pode importar HTML de um campo em seu conjunto de dados para usar no relatório. Por padrão, um espaço reservado representa texto sem-formatação, portanto você precisará alterar o tipo de marcação do espaço reservado para HTML. Para obter mais informações, consulte [Importando HTML para um relatório &#40;Construtor de Relatórios e SSRS&#41;](importing-html-into-a-report-report-builder-and-ssrs.md).  

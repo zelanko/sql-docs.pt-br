@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e4d6b6698f57184c0b1c4bc170e17c9fc11b9ea0
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62955796"
 ---
 # <a name="understanding-the-customization-file"></a>Noções básicas sobre o arquivo de personalização
 Cada cabeçalho de seção no arquivo de personalização é formado por colchetes (**[]**) que contém um tipo e o parâmetro. Os tipos de quatro seção são indicados por cadeias de caracteres literais **conectar-se**, **sql**, **userlist**, ou **logs**. O parâmetro é a cadeia de caracteres literal, o padrão, um identificador especificado pelo usuário ou nada.  

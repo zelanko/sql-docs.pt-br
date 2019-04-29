@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 074932c980ab047d734c21dfe8ba03bdb4b12393
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59965392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181466"
 ---
 # <a name="expression-dialog-box"></a>Caixa de diálogo Expressão
   Use a caixa de diálogo **Expressão** para escrever expressões do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] para propriedades de itens de relatório. É possível usar expressões para definir muitas propriedades, incluindo cor, fonte e bordas. Em tempo de execução, o processador de relatório avalia as expressões e substitui o resultado do valor da propriedade.  

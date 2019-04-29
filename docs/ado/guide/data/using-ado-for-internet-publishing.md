@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d779204046b9bca2591fbdc9459d7c6b53061ff4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184970"
 ---
 # <a name="using-ado-for-internet-publishing"></a>Usar o ADO para publicação na Internet
 [O provedor OLE DB para publicação na Internet](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md) mostra um exemplo específico de acesso aos dados heterogêneos com o ADO. Embora os exemplos nesta seção serão específicos usando o provedor de publicação de Internet, os princípios demonstrados devem ser semelhantes ao usar o ADO com outros provedores de dados heterogêneos, como um provedor para um armazenamento de email.  

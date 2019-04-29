@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e71776a43aa338246b4acb3b4d9f620c19234f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028123"
 ---
 # <a name="find-method-ado"></a>Método Find (ADO)
 Pesquisas de um [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) para a linha que satisfaz os critérios especificados. Opcionalmente, a direção da pesquisa, a linha inicial e deslocamento da linha inicial pode ser especificada. Se os critérios forem atendidos, a posição da linha atual é definida no registro encontrado; Caso contrário, a posição é definida até o final (ou inicial) do **conjunto de registros**.  

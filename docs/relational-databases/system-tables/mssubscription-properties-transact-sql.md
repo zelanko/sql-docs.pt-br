@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bc3e113ab9ace64cac0d41cb34bdec1c44355e48
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032989"
 ---
 # <a name="mssubscriptionproperties-transact-sql"></a>MSsubscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,12 +34,12 @@ ms.locfileid: "52779768"
 |-----------------|---------------|-----------------|  
 |**publisher**|**sysname**|O nome do publicador.|  
 |**publisher_db**|**sysname**|O nome do banco de dados Publicador.|  
-|**publicação**|**sysname**|O nome da publicação.|  
-|**publication_type**|**int**|O tipo de publicação:<br /><br /> **0** = transacional.<br /><br /> **2** = mesclagem.|  
+|**publication**|**sysname**|O nome da publicação.|  
+|**publication_type**|**int**|O tipo de publicação:<br /><br /> **0** = Transactional.<br /><br /> **2** = mesclagem.|  
 |**publisher_login**|**sysname**|A ID do logon usada no Publicador para Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**publisher_password**|**nvarchar(524)**|A senha (criptografada) usada no Publicador para Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**publisher_security_mode**|**int**|O modo de segurança implementado no Publicador.<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticação do SQL Server.<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticação do Windows.<br /><br /> **2** = os gatilhos de sincronização usam um estático **sysservers** entrada de fazer uma chamada de procedimento remoto (RPC), e *publisher* deve ser definido no **sysservers**tabela como um servidor remoto ou vinculado.|  
-|**distribuidor**|**sysname**|O nome do Distribuidor.|  
+|**distributor**|**sysname**|O nome do Distribuidor.|  
 |**distributor_login**|**sysname**|A ID de logon usada no distribuidor para autenticação do SQL Server.|  
 |**distributor_password**|**nvarchar(524)**|A senha (criptografada) usada no Distribuidor para Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**distributor_security_mode**|**int**|O modo de segurança implementado no Distribuidor.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação.<br /><br /> **1** = autenticação do Windows.|  
@@ -63,7 +63,7 @@ ms.locfileid: "52779768"
 |**internet_password**|**nvarchar(524)**|A senha do logon que o Merge Agent usa ao se conectar ao servidor da Web que está hospedando a sincronização da Web usando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação.|  
 |**internet_security_mode**|**int**|O modo de autenticação usado ao se conectar ao servidor Web que está hospedando a sincronização da Web, onde um valor de **1** significa autenticação do Windows e um valor de **0** significa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Autenticação.|  
 |**internet_timeout**|**int**|O período de tempo, em segundos, antes que uma solicitação de sincronização da Web expire.|  
-|**nome do host**|**sysname**|Especifica o valor para **HOST_NAME** quando essa função é usada na **onde** cláusula de um filtro de junção ou relação de registro lógico.|  
+|**hostname**|**sysname**|Especifica o valor para **HOST_NAME** quando essa função é usada na **onde** cláusula de um filtro de junção ou relação de registro lógico.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Tabelas de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

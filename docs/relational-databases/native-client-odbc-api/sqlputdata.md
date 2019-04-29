@@ -16,11 +16,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c8c8755b100fcfbdb8c1ca9e067a79eb09bd37ba
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63014253"
 ---
 # <a name="sqlputdata"></a>SQLPutData
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "51664215"
 ## <a name="diagnostics"></a>Diagnóstico  
  Há um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLSTATE específico do Native Client para o SQLPutData:  
   
-|SQLSTATE|Erro|Description|  
+|SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
 |22026|Incompatibilidade de comprimento de dados String|Se o comprimento dos dados em bytes a ser enviado tiver sido especificado por um aplicativo, por exemplo, com o SQL_LEN_DATA_AT_EXEC (*n*) em que *n* for maior que 0, o número total de bytes fornecido pelo aplicativo por meio de SQLPutData deve corresponder ao comprimento especificado.|  
   
@@ -55,7 +55,7 @@ ms.locfileid: "51664215"
   
  O *DataPtr* parâmetro é ignorado, mas deve ser definido como um valor não nulo. Para obter mais informações, consulte a seção sobre a associação de linha de variáveis TVP em [associação e Data Transfer of Table-Valued parâmetros e valores de coluna](../../relational-databases/native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md).  
   
- Se *StrLen_Or_Ind* tem qualquer valor diferente de SQL_DEFAULT_PARAM ou um número entre 0 e SQL_PARAMSET_SIZE (ou seja, o *ColumnSize* parâmetro de SQLBindParameter), é um erro. Esse erro faz SQLPutData retornar SQL_ERROR: SQLSTATE=HY090, "Comprimento de buffer ou de cadeia de caracteres inválido".  
+ Se *StrLen_Or_Ind* tem qualquer valor diferente de SQL_DEFAULT_PARAM ou um número entre 0 e SQL_PARAMSET_SIZE (ou seja, o *ColumnSize* parâmetro de SQLBindParameter), é um erro. Esse erro faz SQLPutData retornar SQL_ERROR: SQLSTATE SQLSTATE=hy090, "Comprimento inválido de buffer ou cadeia de caracteres".  
   
  Para obter mais informações sobre parâmetros com valor de tabela, consulte [parâmetros com valor de tabela &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   

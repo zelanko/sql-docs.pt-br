@@ -24,11 +24,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 60a93e4add862a1dca67e329a15fb575ad9a1292
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026524"
 ---
 # <a name="sysdmftsindexkeywordsbydocument-transact-sql"></a>sys.dm_fts_index_keywords_by_document (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -59,12 +59,12 @@ sys.dm_fts_index_keywords_by_document
  db_id('*database_name*')  
  Uma chamada para o [db_id ()](../../t-sql/functions/db-id-transact-sql.md) função. Essa função aceita um nome de banco de dados e retorna a ID do banco de dados, que sys.dm_fts_index_keywords_by_document usa para localizar o banco de dados especificado. Se *database_name* for omitido, a ID de banco de dados atual será retornada.  
   
- object_id ('*table_name*')  
+ object_id('*table_name*')  
  Uma chamada para o [object_id ()](../../t-sql/functions/object-id-transact-sql.md) função. Essa função aceita um nome de tabela e retorna a ID da tabela que contém o índice de texto completo a ser inspecionado.  
   
 ## <a name="table-returned"></a>Tabela retornada  
   
-|coluna|Data type|Description|  
+|coluna|Data type|Descrição|  
 |------------|---------------|-----------------|  
 |palavra-chave|**nvarchar(4000)**|A representação hexadecimal da palavra-chave armazenada no índice de texto completo.<br /><br /> Observação: OxFF representa o caractere especial que indica o final de um arquivo ou conjunto de dados.|  
 |display_term|**nvarchar(4000)**|O formato legível da palavra-chave. Esse formato é derivado do formato interno, que é armazenado no índice de texto completo.<br /><br /> Observação: OxFF representa o caractere especial que indica o final de um arquivo ou conjunto de dados.|  
@@ -81,7 +81,7 @@ sys.dm_fts_index_keywords_by_document
   
 -   Quantas vezes uma palavra-chave aparece no índice de texto completo inteiro; ou seja:  
   
-     ([Soma](../../t-sql/functions/sum-transact-sql.md)(**occurrence_count**) em que **palavra-chave**=*keyword_value* )  
+     ([SUM](../../t-sql/functions/sum-transact-sql.md)(**occurrence_count**) WHERE **keyword**=*keyword_value* )  
   
 -   Quantas vezes uma palavra-chave aparece em um determinado documento ou linha.  
   

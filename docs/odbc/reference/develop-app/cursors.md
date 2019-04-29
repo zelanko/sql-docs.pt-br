@@ -20,14 +20,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 91765f0572d8c880f7505948f7756b373fe28f62
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042122"
 ---
 # <a name="cursors"></a>Cursores
-Um aplicativo busca os dados com um *cursor*. Um cursor é diferente de um conjunto de resultados: um conjunto de resultados é o conjunto de linhas que corresponde aos critérios de pesquisa específica, enquanto um cursor é o software que retorna as linhas para o aplicativo. O nome *cursor,* como ele se aplica aos bancos de dados, provavelmente foi originado o cursor piscando em um terminal do computador. Assim como o cursor indica a posição atual na tela e onde as palavras digitadas aparecerá próximo, um cursor em um conjunto de resultados indica a posição atual no conjunto de resultados e quais linhas serão retornadas em seguida.  
+Um aplicativo busca os dados com um *cursor*. Um cursor é diferente de um conjunto de resultados: Um conjunto de resultados é o conjunto de linhas que corresponde aos critérios de pesquisa específica, enquanto que um cursor é o software que retorna as linhas para o aplicativo. O nome *cursor,* como ele se aplica aos bancos de dados, provavelmente foi originado o cursor piscando em um terminal do computador. Assim como o cursor indica a posição atual na tela e onde as palavras digitadas aparecerá próximo, um cursor em um conjunto de resultados indica a posição atual no conjunto de resultados e quais linhas serão retornadas em seguida.  
   
  O modelo de cursor ODBC baseia-se no modelo de cursor no embedded SQL. Uma diferença importante entre esses modelos é que as maneira como cursores são abertos. No embedded SQL, um cursor deve ser explicitamente declarado e aberto antes que ele pode ser usado. No ODBC, um cursor é aberto implicitamente quando uma instrução que cria um conjunto de resultados é executada. Quando o cursor é aberto, ele é posicionado antes da primeira linha do conjunto de resultados. No embedded SQL e ODBC, um cursor deve ser fechado depois que o aplicativo terminar de usá-lo.  
   

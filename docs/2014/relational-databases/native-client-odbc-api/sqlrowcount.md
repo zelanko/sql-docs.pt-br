@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4ff2a744f68cf6152330179eb8dcab1f33911914
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046601"
 ---
 # <a name="sqlrowcount"></a>SQLRowCount
   Quando matrizes de valores de parâmetro são associadas para execução da instrução, `SQLRowCount` retornará SQL_ERROR se qualquer linha de valores de parâmetro gerar uma condição de erro na execução da instrução. Nenhum valor é retornado pelo argumento *RowCountPtr* da função.  

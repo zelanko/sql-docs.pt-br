@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3aba02dfe34f91b12a98f4d557bdb2dc516b1b1f
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042462"
 ---
 # <a name="multidimensional-model-solution-deployment"></a>Implantação de solução de modelo multidimensional
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Depois de você ter concluído o desenvolvimento de um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , poderá implantar o banco de dados em um servidor do Analysis Services. O Analysis Services fornece seis métodos de implantação possíveis que podem ser usados para mover o banco de dados para um servidor de teste ou produção. Os métodos estão listados aqui em ordem de eficiência: automatização AMO, XMLA, Assistente para Implantação, Utilitário de Implantação, Assistente para Sincronizar, backup e restauração.  
+  Depois de você ter concluído o desenvolvimento de um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , poderá implantar o banco de dados em um servidor do Analysis Services. O Analysis Services fornece seis métodos de implantação possíveis que podem ser usados para mover o banco de dados para um servidor de teste ou produção. Os métodos estão listados aqui em ordem de eficiência: Automatização do AMO, XMLA, Assistente para implantação, utilitário de implantação, sincronize o assistente, Backup e restauração.  
   
  Este tópico inclui as seguintes seções:  
   
@@ -30,7 +30,7 @@ ms.locfileid: "50144821"
   
 ##  <a name="bkmk_meth"></a> Métodos de implantação  
   
-|Método|Description|Link|  
+|Método|Descrição|Link|  
 |------------|-----------------|----------|  
 |**Usando Automação AMO (Objetos de Gerenciamento de Análise)**|AMO fornece uma interface programática para o conjunto completo de comandos definidos para o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], incluindo comandos que podem ser usados para implantação de solução. Como uma abordagem para implantação de solução, a automação AMO é a mais flexível, mas também a que exige um esforço de programação.  Uma vantagem importante para usar AMO é que você pode usar o SQL Server Agent com o aplicativo AMO para executar a implantação em uma programação predefinida.|[Desenvolvendo com AMO &#40;Objetos de Gerenciamento de Análise&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)|  
 |**XMLA**|Use o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para gerar um script XMLA dos metadados de um banco de dados existente do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e, em seguida, executar esse script em outro servidor para recriar o banco de dados inicial. Os scripts XMLA são gerados facilmente no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ao definir o processo de implantação e, em seguida, codificá-lo e salvá-lo como um script XMLA. Quando o script XMLA está em um arquivo salvo, é possível executá-lo de acordo com uma programação ou inseri-lo em um aplicativo que se conecta diretamente em uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].<br /><br /> Também é possível executar scripts XMLA em uma base predefinida com o SQL Server Agent, mas não haverá a mesma flexibilidade do AMO. O AMO fornece uma amplitude maior de funcionalidade hospedando o espectro completo de comandos administrativos.|[Implantar soluções de modelo usando XMLA](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)|  

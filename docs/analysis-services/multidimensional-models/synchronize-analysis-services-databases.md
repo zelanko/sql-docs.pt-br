@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c1400d43f2736505e0b9ba2364909986d47923da
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020007"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Sincronizar bancos de dados do Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "50145911"
  Desative o processamento de agregação lento se ele estiver em uso no servidor de origem. As agregações que estão sendo processadas em segundo plano podem interferir na sincronização de banco de dados. Para obter mais informações sobre como definir esta propriedade de servidor, consulte [OLAP Properties](../../analysis-services/server-properties/olap-properties.md).  
   
 > [!NOTE]  
->  O tamanho do banco de dados é um fator para determinar se a sincronização é uma abordagem adequada. Não há requisitos de hardware, mas se a sincronização estiver muito lenta, considere a sincronização de vários servidores em paralelo, como descrito neste artigo técnico: [Práticas recomendadas de sincronização do Analysis Services](http://go.microsoft.com/fwlink/?LinkID=253136).  
+>  O tamanho do banco de dados é um fator para determinar se a sincronização é uma abordagem adequada. Não há nenhum requisito de disco rígido, mas se a sincronização estiver muito lenta, considere a sincronização de vários servidores em paralelo, conforme descrito neste artigo técnico: [Práticas recomendadas de sincronização do Analysis Services](http://go.microsoft.com/fwlink/?LinkID=253136).  
   
 ## <a name="synchronize-database-wizard"></a>Assistente para Sincronizar Banco de Dados  
  Use o Assistente para Sincronizar Banco de Dados para executar a sincronização unidirecional de um banco de dados de origem para um de destino ou para gerar um script que especifique uma operação de sincronização de banco de dados. Você pode sincronizar partições locais e remotas durante o processo de sincronização e optar ou não por incluir funções.  

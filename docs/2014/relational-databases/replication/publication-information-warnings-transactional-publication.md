@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e2ab1c4be29b87e1051daa702ce40905a95e34ab
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022004"
 ---
 # <a name="publication-information-warnings-transactional-publication-sql-server-2005-and-later"></a>Informações da Publicação, Avisos (publicação transacional, SQL Server 2005 e versões posteriores)
   A guia **Avisos** está disponível para Distribuidores que estão executando [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores. A guia **Avisos** permite executar as seguintes tarefas para a publicação selecionada:  

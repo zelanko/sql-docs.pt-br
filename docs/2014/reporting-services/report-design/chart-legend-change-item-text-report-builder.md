@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93a8d8b8c93dc340b4ffa0337f14478bc4bf910a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185622"
 ---
 # <a name="change-the-text-of-a-legend-item-report-builder-and-ssrs"></a>Alterar o texto de um item de legenda (Construtor de Relatórios e SSRS)
   Quando um campo é colocado na área Valores do gráfico, um item de legenda é gerado automaticamente contendo o nome desse campo. Cada item de legenda está conectado a uma série individual no gráfico, exceto para gráficos de forma, nos quais a legenda está conectada a pontos de dados individuais em vez de séries individuais.  

@@ -1,5 +1,5 @@
 ---
-title: sys. sysmessages (Transact-SQL) | Microsoft Docs
+title: sys.sysmessages (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: cb13b8e57b69c814f18c414dbc345e307d80085c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63018691"
 ---
 # <a name="syssysmessages-transact-sql"></a>sys.sysmessages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,12 +36,12 @@ ms.locfileid: "47645232"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**error**|**int**|Número de erro exclusivo.|  
 |**severity**|**tinyint**|Nível de severidade do erro.|  
 |**dlevel**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**Descrição**|**nvarchar(255)**|Explicação do erro com espaços reservados para parâmetros.|  
+|**description**|**nvarchar(255)**|Explicação do erro com espaços reservados para parâmetros.|  
 |**msglangid**|**smallint**|ID do grupo mensagens do sistema.|  
   
 ## <a name="see-also"></a>Consulte também  

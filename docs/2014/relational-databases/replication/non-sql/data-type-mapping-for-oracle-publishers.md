@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 463dd08cfa9434396a1afea1e4851549f16496cc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022649"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Mapeamento de tipo de dados para Publicadores Oracle
   Os tipos de dados Oracle e os tipos de dados [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nem sempre correspondem exatamente. Onde possível, o tipo de dados correspondente é selecionado automaticamente ao publicar uma tabela de Oracle. Em casos em que o mapeamento de um único tipo de dados não é claro, mapeamentos alternativos de tipo de dados são fornecidos. Para obter informações sobre como selecionar mapeamentos alternativos, consulte "Especificando Mapeamentos Alternativos de Tipos de Dados”, mais adiante neste tópico.  

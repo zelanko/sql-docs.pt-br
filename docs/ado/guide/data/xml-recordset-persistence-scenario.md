@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 65f4705eb926c116d935384163cffe4f33b11a88
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184831"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>Cenário de persistência do conjunto de registros XML
 Nesse cenário, você criará um aplicativo de Active Server Pages (ASP) que salva o conteúdo de um objeto Recordset diretamente para o objeto de resposta do ASP.  
@@ -41,7 +41,7 @@ Nesse cenário, você criará um aplicativo de Active Server Pages (ASP) que sal
 ## <a name="step-1-set-up-the-application"></a>Etapa 1: Configurar o aplicativo  
  Crie um diretório virtual do IIS denominado "XMLPersist" com permissões de script. Crie dois novos arquivos de texto na pasta para o qual o diretório virtual aponta, uma nomeada "XMLResponse.asp," a outros nomeado "default. htm."  
   
-## <a name="step-2-get-the-data"></a>Etapa 2: Obter dados  
+## <a name="step-2-get-the-data"></a>Etapa 2: Obter os dados  
  Nesta etapa, você irá escrever o código para abrir um conjunto de registros ADO e prepare para enviá-lo ao cliente. Abra o arquivo XMLResponse.asp com um editor de texto, como o bloco de notas e insira o código a seguir.  
   
 ```  

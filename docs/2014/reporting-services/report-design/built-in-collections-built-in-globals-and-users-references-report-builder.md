@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 268deacf076f7ea79222dd441777f1ad16149750
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59942282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022471"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>Referências globais internas e referências de usuários (Construtor de Relatórios e SSRS)
   A coleção de campos internos que inclui as coleções de `Globals` e de `User` representa valores globais fornecidos pelo Reporting Services quando um relatório é processado. A coleção de `Globals` fornece valores, como o nome do relatório, a hora em que o seu processamento foi iniciado e os números das páginas atuais para o cabeçalho ou o rodapé do relatório. A coleção de `User` fornece o identificador de usuário e configurações de idioma. Esses valores podem ser usados em expressões para filtrar resultados em um relatório.  

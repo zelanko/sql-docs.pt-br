@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 906cda310ff4478854d2b308332571fa6dbdd155
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59950132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185817"
 ---
 # <a name="dataset-fields-collection-references-report-builder-and-ssrs"></a>Referências de coleções de campos de conjuntos de dados (Construtor de Relatórios e SSRS)
   Cada conjunto de dados de um relatório contém uma coleção Fields. A coleção Fields é o conjunto de campos especificado pela consulta do conjunto de dados, além de qualquer campo calculado adicional que você criar. Assim que você criar um conjunto de dados, a coleção de campos aparecerá no painel **Dados do Relatório** .  

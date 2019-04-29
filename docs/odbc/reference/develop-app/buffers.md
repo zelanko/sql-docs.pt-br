@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 306632f544f144aa4b21e150543c2d4ca5a37d0e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63008009"
 ---
 # <a name="buffers"></a>Buffers
 Um buffer é qualquer parte da memória do aplicativo usada para passar dados entre o aplicativo e o driver. Por exemplo, buffers de aplicativo podem ser associados, ou *vinculados,* colunas com o conjunto de resultados **SQLBindCol**. Como cada linha for encontrada, os dados são retornados para cada coluna nesses buffers. *Buffers de entrada* são usados para transmitir dados do aplicativo para o driver; *buffers de saída* são usados para retornar dados do driver para o aplicativo.  

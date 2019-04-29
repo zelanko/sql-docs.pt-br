@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d4ce0eb96832f4a6b9c1953b0a9a9d0af65cb3b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187437"
 ---
 # <a name="data-type-limitations"></a>Limitações de tipo de dados
 Os Drivers de banco de dados de área de trabalho do Microsoft ODBC impõe as seguintes limitações nos tipos de dados:  
   
-|Tipo de dados|Description|  
+|Tipo de dados|Descrição|  
 |---------------|-----------------|  
 |Todos os tipos de dados|Falhas de conversão de tipo podem resultar na coluna afetada que está sendo definida como NULL.|  
 |BINARY|Na verdade, a criação de uma coluna BINÁRIA de comprimento zero retorna uma coluna BINÁRIA de 255 bytes.|  

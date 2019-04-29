@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 244161359910896533a1d7179f2ce80b5cb03d86
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52749420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046154"
 ---
 # <a name="query-with-full-text-search"></a>Query with Full-Text Search
   Para definir consultas de texto completo, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa os predicados de texto completo (CONTAINS e FREETEXT) e as funções (CONTAINSTABLE e FREETEXTTABLE). Elas dão suporte à avançada sintaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] que comporta uma variedade de formas de termos de consulta. Para gravar consultas de texto completo, você deve saber quando e como usar esses predicados e funções.  
@@ -66,7 +66,7 @@ WHERE ListPrice = 80.99
 GO  
 ```  
   
-#### <a name="b-using-freetext-to-search-for-words-containing-specified-character-values"></a>b. Usando FREETEXT para pesquisar palavras que contêm valores de caracteres especificados  
+#### <a name="b-using-freetext-to-search-for-words-containing-specified-character-values"></a>B. Usando FREETEXT para pesquisar palavras que contêm valores de caracteres especificados  
  As pesquisas de exemplo a seguir para todos os documentos que contêm as palavras relacionadas a componentes vitais, de segurança.  
   
 ```  
@@ -129,7 +129,7 @@ ORDER BY KEY_TBL.RANK DESC;
 GO  
 ```  
   
-#### <a name="b-using-freetexttable"></a>b. Usando FREETEXTTABLE  
+#### <a name="b-using-freetexttable"></a>B. Usando FREETEXTTABLE  
  O exemplo a seguir estende uma consulta FREETEXTTABLE para retornar primeiro as linhas com classificação mais alta e adicionar a classificação de cada linha à lista de seleção. Para especificar a consulta, você deve saber que **ProductDescriptionID** é a coluna de chave exclusiva para o `ProductDescription` tabela.  
   
 ```  

@@ -24,11 +24,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 9c167994c7145bce348b6959a57533e398e1d6bb
-ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56407546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035275"
 ---
 # <a name="choosing-a-network-protocol"></a>Escolhendo um protocolo de rede
   Para se conectar ao [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , você deve ter um protocolo de rede habilitado. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode atender a solicitações em vários protocolos ao mesmo tempo. Os clientes se conectam ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com um único protocolo. Se o programa cliente não souber qual protocolo o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está escutando, configure o cliente para tentar sequencialmente vários protocolos. Use o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager para habilitar, desabilitar e configurar os protocolos de rede.  

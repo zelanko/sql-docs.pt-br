@@ -16,11 +16,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0e27df2328474f4123daa9488af88eb7903832be
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63014150"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
 
@@ -98,7 +98,7 @@ SQLSetConnectAttr(SQL_ATTR_CURRENT_CATALOG, ...) // restores to pre-connect attr
 
 <a name="sqlcoptssapplicationintent"></a>
 ## <a name="sqlcoptssapplicationintent"></a>SQL_COPT_SS_APPLICATION_INTENT  
- Declara o tipo de carga de trabalho de aplicativo ao conectar-se a um servidor. Os valores possíveis são **Readonly** e **ReadWrite**. Por exemplo:  
+ Declara o tipo de carga de trabalho de aplicativo ao conectar-se a um servidor. Os valores possíveis são **Readonly** e **ReadWrite**. Por exemplo:   
   
 ```  
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NTS)  
@@ -207,7 +207,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 
 <a name="sqlcoptssmultisubnetfailover"></a>
 ## <a name="sqlcoptssmultisubnetfailover"></a>SQL_COPT_SS_MULTISUBNET_FAILOVER  
- Se o seu aplicativo estiver se conectando a um grupo de disponibilidade [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] em várias sub-redes, essa propriedade de conexão configurará o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client para fornecer detecção mais rápida do servidor ativo (atualmente) e conexão a ele. Por exemplo:  
+ Se o seu aplicativo estiver se conectando a um grupo de disponibilidade [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] em várias sub-redes, essa propriedade de conexão configurará o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client para fornecer detecção mais rápida do servidor ativo (atualmente) e conexão a ele. Por exemplo:   
   
 ```  
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTEGER)  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0913458d683d7641145b262552e147033dbfc054
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032846"
 ---
 # <a name="scalar-function-escape-sequence"></a>Sequência de escape de função escalar
 ODBC usa sequências de escape para funções escalares. A sintaxe dessa sequência de escape é da seguinte maneira:  
@@ -36,12 +36,12 @@ ODBC usa sequências de escape para funções escalares. A sintaxe dessa sequên
   
  *Iniciador do ODBC-esc* fn *função escalar ODBC esc terminador*  
   
- *função escalar* :: = *nome da função* (*lista de argumentos*)  
+ *scalar-function* ::= *function-name* (*argument-list*)  
   
- (As definições para os não terminais *nome da função* e *nome da função* (*lista de argumentos*) são derivados da lista de funções escalares em [ Apêndice e: funções escalares](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md).)  
+ (As definições para os não terminais *nome da função* e *nome da função* (*lista de argumentos*) são derivados da lista de funções escalares em [ Apêndice e: Funções escalares](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md).)  
   
  *Iniciador do ODBC-esc* :: = {  
   
  *Terminador de esc ODBC* :: =}  
   
- Para determinar se a fonte de dados oferece suporte aos procedimentos e o driver dá suporte a sintaxe de invocação de procedimento ODBC, um aplicativo pode chamar **SQLGetInfo**. Para obter mais informações, consulte [apêndice e: escalar funções](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md).
+ Para determinar se a fonte de dados oferece suporte aos procedimentos e o driver dá suporte a sintaxe de invocação de procedimento ODBC, um aplicativo pode chamar **SQLGetInfo**. Para obter mais informações, consulte [apêndice e: Funções escalares](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md).

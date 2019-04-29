@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8bfeb9ad607fc35c055e025fcc67435323d3143e
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62955713"
 ---
 # <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>Etapa 6: As alterações são enviadas ao servidor (Tutorial RDS)
 Se o **Recordset** objeto é editado, todas as alterações (ou seja, linhas que são adicionadas, alteradas ou excluídas) podem ser enviadas de volta para o servidor.  

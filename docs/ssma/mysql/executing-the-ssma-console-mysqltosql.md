@@ -19,11 +19,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 761cb5368c0b586b63f92952f3938d8708daaf86
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183064"
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>Executar o console do SSMA (MySQLToSQL)
 Microsoft fornece um conjunto robusto de script de comandos de arquivo para executar e controlar atividades do SSMA.  
@@ -33,7 +33,7 @@ O aplicativo de console usa determinados comandos do arquivo de script padrão c
 ## <a name="project--script-file-commands"></a>Comandos de arquivo de Script do projeto  
 **Comando**  
   
-Criar-novo projeto:   
+create-new-project:   
                    Cria um novo projeto SSMA.  
   
 Os comandos de projeto lidar com a criação de projetos, abrir, salvar e sair de projetos.  
@@ -94,7 +94,7 @@ Abrir projeto:
   
 **Comando**  
   
-Salvar projeto: Salva o projeto de migração.  
+save-project: Salva o projeto de migração.  
   
 **Script**  
   
@@ -105,7 +105,7 @@ Salvar projeto: Salva o projeto de migração.
 ```  
 **Comando**  
   
-Fechar projeto  
+close-project  
                   : Fecha o projeto de migração.  
   
 **Script**  
@@ -117,7 +117,7 @@ Fechar projeto
 ```  
 **Comando**  
   
-Fechar projeto  
+close-project  
                   : Fecha o projeto de migração.  
   
 **Script**  
@@ -184,7 +184,7 @@ Requer um ou vários nós de metabase como parâmetro de linha de comando.
 ```  
 **Comando**  
   
-Reconecte-origem-banco de dados  
+reconnect-source-database  
   
 1.  Reconecta-se à fonte de dados, mas não carrega todos os metadados ao contrário do comando connect-origem-banco de dados.  
   
@@ -235,7 +235,7 @@ Os comandos de relatório geram relatórios sobre o desempenho de várias ativid
   
 **Comando**  
   
-Gerar--relatório de avaliação  
+generate-assessment-report  
   
 1.  Gera relatórios de avaliação no banco de dados de origem.  
   
@@ -377,7 +377,7 @@ ou em
 ```  
 **Comando**  
   
-migrar dados  
+migrate-data  
   
 1.  Migra os dados de origem para o destino.  
   
@@ -467,7 +467,7 @@ Os comandos de capacidade de gerenciamento ajudam a sincronizar os objetos de ba
   
 **Comando**  
   
-Sincronizar de destino  
+synchronize-target  
   
 1.  Sincroniza os objetos de destino com o banco de dados de destino.  
   
@@ -532,7 +532,7 @@ ou em
 ```  
 **Comando**  
   
-atualização de banco de dados  
+refresh-from-database  
   
 1.  Atualiza os objetos de origem do banco de dados.  
   

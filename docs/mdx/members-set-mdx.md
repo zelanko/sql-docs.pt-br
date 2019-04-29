@@ -1,5 +1,5 @@
 ---
-title: Membros (conjunto) (MDX) | Microsoft Docs
+title: Members (conjunto) (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3bd4fe92c064f4665a4b397e47a45ae5bde50f39
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63048440"
 ---
 # <a name="members-set-mdx"></a>Members (Conjunto) (MDX)
 
@@ -33,13 +33,13 @@ Level_Expression.Members
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Expressão_Hierarquia*  
+ *Hierarchy_Expression*  
  Uma linguagem MDX válida que retorna uma hierarquia.  
   
  *Level_Expression*  
  Uma linguagem MDX válida que retorna um nível.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se uma expressão de hierarquia for especificada, o **Members (conjunto)** função retorna o conjunto de todos os membros dentro da hierarquia especificada, não incluindo os membros calculados. Para obter o conjunto de todos os membros, calculados ou caso contrário, em uma hierarquia, use o [AllMembers &#40;MDX&#41; ](../mdx/allmembers-mdx.md) função  
   
  Se uma expressão de nível for especificada, o **Members (conjunto)** função retorna o conjunto de todos os membros dentro do nível especificado.  
@@ -58,7 +58,7 @@ FROM
   
 ```  
   
- O exemplo a seguir retorna a quantidade de pedidos de 2003 para cada membro no nível `[Product].[Products].[Product Line]`. O **membros** função retorna um conjunto que representa todos os membros do nível.  
+ O exemplo a seguir retorna a quantidade de pedidos de 2003 para cada membro no nível `[Product].[Products].[Product Line]`. O **membros** função retorna um conjunto que representa todos os membros no nível.  
   
 ```  
 SELECT   
@@ -71,7 +71,7 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

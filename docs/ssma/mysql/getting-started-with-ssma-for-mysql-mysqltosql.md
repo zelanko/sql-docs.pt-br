@@ -15,11 +15,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 1ae91f90bf601e4ef17ae2f363260dbb47a2822e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187139"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>Introdução ao SSMA para MySQL (MySQLToSQL)
 SQL Server SSMA (Migration Assistant) para MySQL permite converter esquemas de banco de dados MySQL para esquemas SQL Server ou SQL do Azure, carregar os esquemas resultantes no SQL Server ou o Azure SQL DB e migrar dados do MySQL para o SQL Server ou SQL do Azure rapidamente.  
@@ -56,7 +56,7 @@ Para obter mais informações sobre essas tarefas e como realizá-las, consulte 
   
 As seções a seguir descrevem os recursos da interface do usuário do SSMA.  
   
-### <a name="metadata-explorers"></a>Gerenciadores de metadados  
+### <a name="metadata-explorers"></a>Metadata Explorers  
 O SSMA contém dois gerenciadores de metadados para procurar e executar ações nos bancos de dados MySQL e SQL Server.  
   
 ### <a name="mysql-metadata-explorer"></a>Gerenciador de metadados do MySQL  
@@ -76,7 +76,7 @@ Você pode usar esse gerenciador de metadados para selecionar objetos de banco d
 Para obter mais informações, consulte [sincronização (MySQL para o SQL Server / Azure SQL DB)](https://msdn.microsoft.com/ac993a6d-0283-4823-8793-6b217677dfa3)  
   
 ### <a name="metadata"></a>Metadados  
-À direita de cada Gerenciador de metadados são guias que descrevem o objeto selecionado. Por exemplo, se você selecionar uma tabela no Gerenciador de metadados do MySQL, as nove guias serão exibidas: **tabela**, **SQL**, **mapeamento de tipo**, **dados**,  **As configurações**, **mapeamento de conjunto de caracteres**, **modos SQL**, **propriedades**, e **relatório**. O **relatório** guia contém informações somente depois de criar um relatório que contém o objeto selecionado. Se você selecionar uma tabela no Gerenciador de metadados do SQL Server, aparecerá a três guias: **tabela**, **SQL** e **dados**.  
+À direita de cada Gerenciador de metadados são guias que descrevem o objeto selecionado. Por exemplo, se você selecionar uma tabela no Gerenciador de metadados do MySQL, guias de nove serão exibida: **Tabela**, **SQL**, **mapeamento de tipo**, **dados**, **configurações**, **Charset mapeamento**, **Modos SQL**, **Properties**, e **relatório**. O **relatório** guia contém informações somente depois de criar um relatório que contém o objeto selecionado. Se você selecionar uma tabela no Gerenciador de metadados do SQL Server, as três guias serão exibidas: **Tabela**, **SQL** e **dados**.  
   
 A maioria das configurações de metadados são somente leitura. No entanto, você pode alterar os metadados a seguir:  
   
@@ -97,7 +97,7 @@ A tabela a seguir mostra a migração de comandos da barra de ferramentas:
   
 |||  
 |-|-|  
-|**Botão**|**Função**|  
+|**Button**|**Função**|  
 |**Criar relatório**|Converte os objetos selecionados do MySQL em objetos do SQL Server ou SQL do Azure e, em seguida, cria um relatório que mostra a conversão foi bem-sucedida como.<br /><br />Este comando está desabilitado, a menos que os objetos selecionados no Gerenciador de metadados do MySQL.|  
 |**Converter esquema**|Converte os objetos selecionados do MySQL em objetos do SQL Server ou SQL do Azure.<br /><br />Este comando está desabilitado, a menos que os objetos selecionados no Gerenciador de metadados do MySQL.|  
 |**Migrar dados**|Migra dados do banco de dados MySQL para o SQL Server ou SQL do Azure. Antes de executar esse comando, você deve converter os esquemas do MySQL para esquemas SQL Server ou SQL do Azure e, em seguida, carregar os objetos no SQL Server ou SQL do Azure.<br /><br />Este comando está desabilitado, a menos que os objetos selecionados no Gerenciador de metadados do MySQL.|  

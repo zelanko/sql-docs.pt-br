@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b8f47fec03c992612f0139904bf869db549ec9b6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184545"
 ---
 # <a name="maintenance-plan-design-tab"></a>Plano de manutenção (Guia Design)
   Use o **Plano de Manutenção (Guia Design)** para especificar as propriedades de um plano de manutenção e seus subplanos. Arraste tarefas da caixa de ferramentas para o designer de plano. Clique com o botão direito do mouse em grupos de tarefas para criar caminhos de execução de ramificação. Os planos de manutenção são salvos como pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e são executados pelos trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  

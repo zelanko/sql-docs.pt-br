@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9476f4f928890514354f97ce604f871bd8a06d11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63007884"
 ---
 # <a name="catalog-and-schema-usage"></a>Catálogo e o uso do esquema
-Fontes de dados não suportam necessariamente nomes de catálogo e o esquema como identificadores de nome de objeto em todas as instruções SQL. Fontes de dados podem dar suporte a nomes de catálogo e esquema em uma ou mais das seguintes classes de instruções SQL: instruções de linguagem de manipulação de dados (DML), chamadas de procedimento, instruções de definição de tabela, as instruções de definição de índice e definição de privilégio instruções. Para determinar as classes de instruções SQL em qual catálogo e esquema de nomes podem ser usados, um aplicativo chama **SQLGetInfo** com as opções SQL_CATALOG_USAGE e SQL_SCHEMA_USAGE.
+Fontes de dados não suportam necessariamente nomes de catálogo e o esquema como identificadores de nome de objeto em todas as instruções SQL. Fontes de dados podem dar suporte a nomes de catálogo e esquema em uma ou mais das seguintes classes de instruções SQL: Instruções de manipulação DML (linguagem) de dados, chamadas de procedimento, instruções de definição de tabela, as instruções de definição de índice e instruções de definição de privilégio. Para determinar as classes de instruções SQL em qual catálogo e esquema de nomes podem ser usados, um aplicativo chama **SQLGetInfo** com as opções SQL_CATALOG_USAGE e SQL_SCHEMA_USAGE.

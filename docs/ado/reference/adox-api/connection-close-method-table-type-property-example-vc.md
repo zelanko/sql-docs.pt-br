@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 133e0c86db9216d4959d8ee81fdc48f62c64d4fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183878"
 ---
 # <a name="connection-close-method-table-type-property-example-vc"></a>Método Connection Close, exemplo da propriedade Table Type (VC++)
 Definindo o [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) propriedade **nada** deve "Fechar" o catálogo. Coleções associadas estará vazias. Todos os objetos que foram criados de objetos de esquema no catálogo se tornem órfãs. Quaisquer propriedades nesses objetos que tiverem sido armazenados em cache ainda estará disponíveis, mas falhará ao tentar ler as propriedades que exigem uma chamada para o provedor.  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eb59abed8be5649d9258bce0f279222e4498b547
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035659"
 ---
 # <a name="qndynamics-event-class"></a>Classe de evento QN:Dynamics
   A classe de evento QN:Dynamics fornece informações sobre a atividade de segundo plano que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] executa para dar suporte a notificações de consulta. Dentro do [!INCLUDE[ssDE](../../includes/ssde-md.md)], um thread em segundo plano monitora tempos-limite de assinatura, assinaturas pendentes a serem acionadas e destruição de tabela de parâmetros.  
@@ -34,7 +34,7 @@ ms.locfileid: "53365868"
 |DatabaseName|`nvarchar`|O nome do banco de dados no qual a instrução do usuário está sendo executada.|35|Sim|  
 |EventClass|`int`|Tipo de evento = 202|27|Não|  
 |EventSequence|`int`|Número de sequência para esse evento.|51|Não|  
-|EventSubClass|`nvarchar`|O tipo de subclasse de evento, fornecendo mais informações sobre cada classe de evento. Essa coluna pode conter os seguintes valores:<br /><br /> Execução do relógio iniciada: Indica que o thread em segundo plano no [!INCLUDE[ssDE](../../includes/ssde-md.md)] que programa tabelas de parâmetro expiradas para limpeza foi iniciado.<br /><br /> Execução do relógio concluída: Indica que o thread em segundo plano no [!INCLUDE[ssDE](../../includes/ssde-md.md)] que programa tabelas de parâmetro expiradas para limpeza foi concluído.<br /><br /> Tarefa mestre de limpeza iniciada: Indica quando a limpeza (coleta de lixo) para a remoção de dados expirados de assinatura de notificação de consulta é iniciada.<br /><br /> Tarefa mestre de limpeza concluída: Indica quando a limpeza (coleta de lixo) para a remoção de dados expirados de assinatura de notificação de consulta é concluída.<br /><br /> Tarefa mestre de Limpeza ignorada: Indica que [!INCLUDE[ssDE](../../includes/ssde-md.md)] não executou limpeza (coleta de lixo) para remoção de dados expirados de assinatura de notificação de consulta.|21|Sim|  
+|EventSubClass|`nvarchar`|O tipo de subclasse de evento, fornecendo mais informações sobre cada classe de evento. Essa coluna pode conter os seguintes valores:<br /><br /> Execução do relógio iniciada: Indica que o thread em segundo plano a [!INCLUDE[ssDE](../../includes/ssde-md.md)] que programa tabelas de parâmetro expiradas para limpeza foi iniciado.<br /><br /> Execução do relógio concluída: Indica que o thread em segundo plano a [!INCLUDE[ssDE](../../includes/ssde-md.md)] que programa tabelas de parâmetro expiradas para limpeza foi concluído.<br /><br /> Tarefa mestre de limpeza iniciada: Indica quando a limpeza (coleta de lixo) para remover dados de assinatura de notificação de consulta expirada é iniciada.<br /><br /> Tarefa mestre de limpeza concluída: Indica quando a limpeza (coleta de lixo) para remover dados de assinatura de notificação de consulta expirada é concluída.<br /><br /> Tarefa mestre de Limpeza ignorada: Indica que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] não executou limpeza (coleta de lixo) para remover dados de assinatura de notificação de consulta expirada.|21|Sim|  
 |GroupID|`int`|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  
 |HostName|`nvarchar`|O nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o nome do host for fornecido pelo cliente. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |IsSystem|`int`|Indica se o evento ocorreu em um processo do sistema ou do usuário.<br /><br /> 0 = usuário<br /><br /> 1 = sistema|60|Não|  

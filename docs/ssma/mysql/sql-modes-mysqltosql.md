@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 6965d67b6dae484b3fa72f215446682f9aa6760c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028363"
 ---
 # <a name="sql-modes-mysqltosql"></a>Modos SQL (MySQLToSQL)
 O SSMA para MySQL pode operar em diferentes modos SQL e pode aplicar esses modos de forma diferente para diferentes clientes.  

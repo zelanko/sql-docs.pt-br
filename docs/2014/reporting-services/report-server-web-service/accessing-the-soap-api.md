@@ -22,11 +22,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ab8db976275a60cfbf1e0afb78457afad18fc366
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63012259"
 ---
 # <a name="accessing-the-soap-api"></a>Acessando a API SOAP
   O serviço Web Serviço de Relatório usa o SOAP sobre HTTP e age como uma interface de comunicações entre programas cliente e o servidor de relatório. O serviço Web oferece dois pontos de extremidade - um para a execução de relatórios e outro para o gerenciamento de relatórios - e consiste em métodos e em um conjunto de objetos de tipo complexo que podem ser usados para o acesso da funcionalidade completa do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para chamar o serviço, referencie a WSDL (Reporting Services Web Services Description Language).  

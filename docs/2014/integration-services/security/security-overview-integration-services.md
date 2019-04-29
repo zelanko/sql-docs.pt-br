@@ -21,11 +21,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b2e86fff86e24668e7fe6382545e024bed1a4025
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62927051"
 ---
 # <a name="security-overview-integration-services"></a>Visão geral de segurança (Integration Services)
   A segurança no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] consiste em várias camadas que fornecem um ambiente de segurança rico e flexível. Estas camadas de segurança incluem o uso de assinaturas digitais, propriedades de pacote, funções de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e permissões do sistema operacional. A maioria desses recursos de segurança se enquadram nas categorias de identidade e controle de acesso.  

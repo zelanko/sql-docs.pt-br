@@ -1,5 +1,5 @@
 ---
-title: 'Apêndice d: Tipos de dados | Microsoft Docs'
+title: 'Apêndice D: Tipos de dados | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,13 +17,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 75ff7e83aa87bca9f33a3a8f44447af2eb60c581
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026769"
 ---
-# <a name="appendix-d-data-types"></a>Apêndice d: Tipos de dados
+# <a name="appendix-d-data-types"></a>Apêndice D: Tipos de dados
 ODBC define dois conjuntos de tipos de dados: Tipos de dados SQL e tipos de dados C. Tipos de dados SQL indicam o tipo de dados dos dados armazenados na fonte de dados. Tipos de dados C indicam o tipo de dados dos dados armazenados em buffers do aplicativo.  
   
  Tipos de dados SQL são definidos por cada DBMS de acordo com o padrão SQL-92. Para cada tipo de dados SQL especificado no padrão SQL-92, ODBC define um identificador de tipo, que é um **#define** valor que é passado como um argumento em funções ODBC ou retornada nos metadados de um conjunto de resultados. O SQL-92 somente tipos de dados não suportados pelo ODBC são BIT (o tipo de ODBC SQL_BIT tem características diferentes), BIT_VARYING, TIME_WITH_TIMEZONE, TIMESTAMP_WITH_TIMEZONE e NATIONAL_CHARACTER. Drivers são responsáveis por mapeamento de tipos de dados do SQL de específico da fonte de dados para identificadores de tipo de dados SQL ODBC e identificadores de tipo de dados SQL específica do driver. O tipo de dados SQL é especificado no campo SQL_DESC_CONCISE_TYPE de um descritor de implementação.  

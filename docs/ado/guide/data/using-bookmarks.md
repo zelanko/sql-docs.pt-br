@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a083f9d411474769335fdfae32bd59dfe455a9f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184927"
 ---
 # <a name="using-bookmarks"></a>Usar indicadores
 Geralmente é útil retornar diretamente a um registro específico após ter movidos a **Recordset** sem precisar rolar por todos os registros e comparar valores. Por exemplo, se você tentar procurar um registro usando o **encontrar** método, mas a pesquisa não retornar nenhum registro, são colocados automaticamente no final o **conjunto de registros**. Se seu provedor oferecer suporte a eles, os indicadores podem ser usados para marcar seu lugar antes de usar o **localizar** método para que você possa retornar para seu local. Um indicador é um **Variant** tipo de valor que identifica exclusivamente um registro em um **Recordset** objeto.  

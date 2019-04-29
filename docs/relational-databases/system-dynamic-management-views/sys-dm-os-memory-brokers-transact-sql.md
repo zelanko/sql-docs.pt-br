@@ -1,5 +1,5 @@
 ---
-title: DM os_memory_brokers (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_memory_brokers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3e8545fe1d612991eb79a7e75e896089b525a996
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906346"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63047104"
 ---
 # <a name="sysdmosmemorybrokers-transact-sql"></a>sys.dm_os_memory_brokers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +38,10 @@ ms.locfileid: "48906346"
 > [!NOTE]  
 >  Chamá-lo partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o nome **sys.dm_pdw_nodes_os_memory_brokers**.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**pool_id**|**int**|ID do pool de recursos caso seja associado a um pool do Administrador de recursos.|  
-|**memory_broker_type**|**nvarchar(60)**|Tipo de agente de memória. Atualmente, há três tipos de agentes de memória no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], listado abaixo, suas descrições.<br /><br /> **MEMORYBROKER_FOR_CACHE** : memória alocada para uso por armazenado em cache objetos (cache do Pool de buffers não).<br /><br /> **MEMORYBROKER_FOR_STEAL** : memória for roubada do pool de buffers. Essa memória não estará disponível para reutilização por outros componentes até ser liberada pelo proprietário atual.<br /><br /> **MEMORYBROKER_FOR_RESERVE** : memória reservada para uso futuro por solicitações atualmente em execução.|  
+|**memory_broker_type**|**nvarchar(60)**|Tipo de agente de memória. Atualmente, há três tipos de agentes de memória no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], listado abaixo, suas descrições.<br /><br /> **MEMORYBROKER_FOR_CACHE** : Memória alocada para uso por objetos armazenados em cache (cache do Pool de buffers não).<br /><br /> **MEMORYBROKER_FOR_STEAL** : Memória for roubada do pool de buffers. Essa memória não estará disponível para reutilização por outros componentes até ser liberada pelo proprietário atual.<br /><br /> **MEMORYBROKER_FOR_RESERVE** : Memória reservada para uso futuro por solicitações atualmente em execução.|  
 |**allocations_kb**|**bigint**|Quantidade de memória, em quilobytes (KB), alocada a este tipo de agente.|  
 |**allocations_kb_per_sec**|**bigint**|Taxa de alocações de memória em quilobytes (KB) por segundo. Esse valor pode ser negativo para desalocações de memória.|  
 |**predicted_allocations_kb**|**bigint**|Quantidade prevista de memória alocada pelo agente. Tem como base o padrão de uso da memória.|  

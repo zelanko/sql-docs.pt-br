@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d3911ab34a01b2da971aa602df37c8c559ed6390
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920740"
 ---
 # <a name="sql-server-backup-to-url"></a>Backup do SQL Server para URL
   Este tópico apresenta os conceitos, os requisitos e os componentes necessários para usar o serviço de armazenamento de Blob do Windows Azure como um destino de backup. A funcionalidade de backup e restauração tem o mesmo efeito de DISK ou TAPE, com algumas diferenças. As diferenças, todas as exceções notáveis e alguns exemplos de código são incluídos neste tópico.  
@@ -61,7 +61,7 @@ ms.locfileid: "53359288"
 ###  <a name="Blob"></a> Serviço de armazenamento de BLOBs do Azure do Windows  
  **Conta de armazenamento:** A conta de armazenamento é o ponto de partida de todos os serviços de armazenamento. Para acessar o serviço de armazenamento de Blob do Windows Azure, primeiro crie uma conta de armazenamento do Windows Azure. O **storage account name** e as respectivas propriedades de **access key** são necessários para realizar a autenticação no serviço de armazenamento de Blob do Windows Azure e seus componentes.  
   
- **Contêiner:** Um contêiner fornece o agrupamento de um conjunto de Blobs e pode armazenar um número ilimitado de Blobs. Para gravar um backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no serviço de Blob do Windows Azure, você deve ter pelo menos o contêiner raiz criado.  
+ **Contêiner:** Um contêiner fornece um agrupamento de um conjunto de Blobs e pode armazenar um número ilimitado de Blobs. Para gravar um backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no serviço de Blob do Windows Azure, você deve ter pelo menos o contêiner raiz criado.  
   
  **Blob:** Um arquivo de qualquer tipo e tamanho. Há dois tipos de blobs que podem ser armazenados no serviço de armazenamento de Blob do Windows Azure: blobs de bloco e de página. O backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa Blobs de página. BLOBs são endereçáveis usando o seguinte formato de URL: https://\<conta de armazenamento >.blob.core.windows.net/\<contêiner > /\<blob >  
   
@@ -214,11 +214,11 @@ ms.locfileid: "53359288"
   
  As etapas a seguir descrevem as alterações feitas na tarefa Backup de Banco de Dados para favorecer o backup no armazenamento do Windows Azure:  
   
-1.  Inicie o SQL Server Management Studio e conecte-se à instância do SQL Server.  Selecione um banco de dados que você deseja fazer backup e clique com botão direito **tarefas**e selecione **fazer backup...** . A caixa de diálogo Backup de Banco de Dados é aberta.  
+1.  Inicie o SQL Server Management Studio e conecte-se à instância do SQL Server.  Selecione um banco de dados que você deseja fazer backup e clique com botão direito **tarefas**e selecione **fazer backup...** . Isso abre a caixa de diálogo de backup do banco de dados.  
   
 2.  Na página Geral, a opção **URL** é usada para criar um backup no armazenamento do Windows Azure. Quando você selecionar essa opção, verá outras opções habilitadas na página:  
   
-    1.  **Nome do arquivo:** Nome do arquivo de backup.  
+    1.  **Nome de Arquivo:** Nome do arquivo de backup.  
   
     2.  **Credencial do SQL:** Você pode especificar uma credencial do SQL Server existente ou pode criar um novo clicando na **criar** ao lado da caixa credencial SQL.  
   
@@ -227,7 +227,7 @@ ms.locfileid: "53359288"
         >   
         >  Se você não tiver acesso ao certificado de gerenciamento ou perfil de publicação, poderá criar uma credencial de SQL especificando o nome da conta de armazenamento e as informações da chave de acesso usando Transact-SQL ou SQL Server Management Studio. Consulte o código de exemplo na seção [Criar uma credencial](#credential) para criar uma credencial usando Transact-SQL. Como alternativa, usando o SQL Server Management Studio, na instância do mecanismo de banco de dados, clique com o botão direito do mouse em **Segurança**, selecione **Novo**e **Credencial**. Especifique o nome da conta de armazenamento para **Identidade** e a chave de acesso no campo **Senha** .  
   
-    3.  **Contêiner de armazenamento do Azure:** O nome do contêiner de armazenamento do Microsoft Azure em que os arquivos de backup serão armazenados.  
+    3.  **Contêiner de armazenamento do Azure:** O nome do contêiner de armazenamento do Windows Azure para armazenar os arquivos de backup.  
   
     4.  **Prefixo da URL:** Isso é criado automaticamente usando as informações especificadas nos campos descritos nas etapas anteriores. Se você editar esse valor manualmente, verifique se ele corresponde às outras informações fornecidas anteriormente. Por exemplo, se você modificar a URL de armazenamento, verifique se a Credencial SQL será definida para ser autenticada na mesma conta de armazenamento.  
   
@@ -279,7 +279,7 @@ ms.locfileid: "53359288"
 ###  <a name="credential"></a> Criar uma credencial  
  O exemplo a seguir cria uma credencial que armazena as informações sobre autenticação do armazenamento do Windows Azure.  
   
-1.  **TSQL**  
+1.  **Tsql**  
   
     ```  
     IF NOT EXISTS  
@@ -324,7 +324,7 @@ ms.locfileid: "53359288"
 ###  <a name="complete"></a> Fazendo backup de um banco de dados completo  
  O exemplo a seguir faz backup do banco de dados AdventureWorks2012 no serviço do armazenamento de Blob do Windows Azure.  
   
-1.  **TSQL**  
+1.  **Tsql**  
   
     ```  
     BACKUP DATABASE AdventureWorks2012   
@@ -382,7 +382,7 @@ ms.locfileid: "53359288"
 ###  <a name="databaselog"></a> Fazendo backup do banco de dados e log  
  O exemplo a seguir faz backup do banco de dados de exemplo AdventureWorks2012, que, por padrão, usa o modelo de recuperação simples. Para oferecer suporte a backups de log, o banco de dados AdventureWorks2012 é modificado para usar o modelo de recuperação completa. Em seguida, o exemplo cria um backup de banco de dados completo no Blob do Windows Azure e, após um período de atividades de atualização, faz o backup do log. Esse exemplo cria um nome de arquivo de backup com um carimbo de data/hora.  
   
-1.  **TSQL**  
+1.  **Tsql**  
   
     ```  
     -- To permit log backups, before the full database backup, modify the database   
@@ -493,7 +493,7 @@ ms.locfileid: "53359288"
 ###  <a name="filebackup"></a> Criando um backup completo do arquivo do grupo de arquivos primário  
  O exemplo a seguir cria um backup de arquivo completo do grupo de arquivos primário.  
   
-1.  **TSQL**  
+1.  **Tsql**  
   
     ```  
     --Back up the files in Primary:  
@@ -560,7 +560,7 @@ ms.locfileid: "53359288"
 ###  <a name="differential"></a> Criando um backup de arquivo diferencial do grupo de arquivos primário  
  O exemplo a seguir cria um backup de arquivo diferencial do grupo de arquivos primário.  
   
-1.  **TSQL**  
+1.  **Tsql**  
   
     ```  
     --Back up the files in Primary:  
@@ -632,7 +632,7 @@ ms.locfileid: "53359288"
 ###  <a name="restoredbwithmove"></a> Restaurar um banco de dados e mover arquivos  
  Para restaurar um backup de banco de dados completo e mover o banco de dados restaurado para o diretório C:\Arquivos de Programas\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Data, execute as etapas a seguir.  
   
-1.  **TSQL**  
+1.  **Tsql**  
   
     ```  
     -- Backup the tail of the log first  
@@ -749,7 +749,7 @@ ms.locfileid: "53359288"
 ###  <a name="PITR"></a> Restauração pontual usando STOPAT  
  O exemplo a seguir restaura um banco de dados para seu estado em um determinado ponto e mostra uma operação de restauração.  
   
-1.  **TSQL**  
+1.  **Tsql**  
   
     ```  
     RESTORE DATABASE AdventureWorks FROM URL = 'https://mystorageaccount.blob.core.windows.net/mycontainer/AdventureWorks2012.bak'   
@@ -877,6 +877,6 @@ ms.locfileid: "53359288"
 ## <a name="see-also"></a>Consulte também  
  [Práticas recomendadas e solução de problemas de backup do SQL Server para URL](sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
  [Fazer backup e restaurar bancos de dados do sistema &#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   
- [Tutorial: SQL Server Backup e restauração para o serviço de armazenamento de BLOBs do Azure do Windows](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+ [Tutorial: Backup e restauração do SQL Server para o serviço de Armazenamento de Blobs do Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
   

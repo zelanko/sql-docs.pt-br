@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c9136f1fc1fdf7538744501984af50e2ca52f04
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62929885"
 ---
 # <a name="rds-tutorial"></a>Tutorial RDS
 Este tutorial ilustra como usar o modelo de programação do RDS para consultar e atualizar uma fonte de dados. Primeiro, ele descreve as etapas necessárias para realizar essa tarefa. Em seguida, o tutorial é repetido no Microsoft® Visual Basic Scripting Edition (apresentando o ADO para Windows Foundation Classes (ADO/WFC)).  
@@ -55,20 +55,20 @@ Este tutorial ilustra como usar o modelo de programação do RDS para consultar 
   
  Este tutorial contém os tópicos a seguir.  
   
--   [Etapa 1: Especificar um programa de servidor (Tutorial RDS)](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)  
+-   [Etapa 1: Especifique um programa de servidor (Tutorial RDS)](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)  
   
 -   [Etapa 2: Invocar o programa de servidor (Tutorial RDS)](../../../ado/guide/remote-data-service/step-2-invoke-the-server-program-rds-tutorial.md)  
   
--   [Etapa 3: O servidor obtém um conjunto de registros (Tutorial RDS)](../../../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md)  
+-   [Etapa 3: Servidor obtém um conjunto de registros (Tutorial RDS)](../../../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md)  
   
--   [Etapa 4: O servidor retorna um conjunto de registros (Tutorial RDS)](../../../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md)  
+-   [Etapa 4: Servidor retorna o conjunto de registros (Tutorial RDS)](../../../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md)  
   
--   [Etapa 5: O DataControl é tornado utilizável (Tutorial RDS)](../../../ado/guide/remote-data-service/step-5-datacontrol-is-made-usable-rds-tutorial.md)  
+-   [Etapa 5: DataControl é tornado utilizável (Tutorial RDS)](../../../ado/guide/remote-data-service/step-5-datacontrol-is-made-usable-rds-tutorial.md)  
   
 -   [Etapa 6: As alterações são enviadas ao servidor (Tutorial RDS)](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)  
   
 -   [Tutorial RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Etapa 1: Especificar um programa de servidor (Tutorial RDS)](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)   
+ [Etapa 1: Especifique um programa de servidor (Tutorial RDS)](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)   
  [Tutorial RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

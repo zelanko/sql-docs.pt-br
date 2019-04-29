@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab57e69118edfe4a647d6baeedf5a10ee8460247
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026461"
 ---
 # <a name="msmergetombstone-transact-sql"></a>MSmerge_tombstone (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,13 +32,13 @@ ms.locfileid: "52796248"
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**ROWGUID**|**uniqueidentifier**|O identificador de linha.|  
+|**rowguid**|**uniqueidentifier**|O identificador de linha.|  
 |**tablenick**|**int**|O apelido da tabela.|  
 |**type**|**tinyint**|O tipo de exclusão:<br /><br /> 1 = Exclusão de usuário.<br /><br /> 5 = A linha não mais pertence à partição filtrada.<br /><br /> 6 = Exclusão de sistema.|  
-|**linhagem**|**varbinary(249)**|Indica a versão do registro que foi excluído e quais atualizações eram conhecidas quando ele foi excluído. Permite regras de resolução consistente de um conflito quando um Assinante atualiza uma linha enquanto está sendo excluída em outro Assinante.|  
-|**geração**|**int**|É atribuído quando uma linha é excluída. Se um Assinante solicitar geração N, somente marcas para exclusão com geração >= N serão enviadas.|  
+|**lineage**|**varbinary(249)**|Indica a versão do registro que foi excluído e quais atualizações eram conhecidas quando ele foi excluído. Permite regras de resolução consistente de um conflito quando um Assinante atualiza uma linha enquanto está sendo excluída em outro Assinante.|  
+|**generation**|**int**|É atribuído quando uma linha é excluída. Se um assinante solicitar geração N, somente marcas para exclusão com geração > = N serão enviadas.|  
 |**logical_record_parent_rowguid**|**uniqueidentifier**|Identifica o registro lógico ao qual uma linha excluída pertence.|  
-|**logical_record_lineage**|**varbinary(501)**|O apelido do Assinante, pares de números de versão que são usados para manter um histórico das exclusões do registro lógico ao qual essa linha pertence.|  
+|**logical_record_lineage**|**Varbinary(501)**|O apelido do Assinante, pares de números de versão que são usados para manter um histórico das exclusões do registro lógico ao qual essa linha pertence.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Tabelas de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

@@ -29,11 +29,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 54aab33e754331482ef154d9172f0e41cd251db0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011913"
 ---
 # <a name="principals-database-engine"></a>Entidades (Mecanismo de Banco de Dados)
   *Entidades* são entidades que podem solicitar recursos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Como outros componentes do modelo de autorização do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , as entidades podem ser organizadas em uma hierarquia. O escopo de influência de uma entidade de segurança depende do escopo da definição da entidade de segurança: Windows, servidor, banco de dados; e se a entidade é indivisível ou uma coleção. Um logon do Windows é um exemplo de um principal indivisível, enquanto um Grupo do Windows é um exemplo de um principal que é uma coleção. Todas as entidades têm um SID (identificador de segurança).  

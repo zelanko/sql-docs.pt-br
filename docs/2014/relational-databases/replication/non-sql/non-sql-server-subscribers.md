@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8e5b7592ba97f779d3c1aeb83f34317ef7c6833d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022244"
 ---
 # <a name="non-sql-server-subscribers"></a>Non-SQL Server Subscribers
   Os seguintes Assinantes não[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] podem assinar as publicações de instantâneo e transacionais usando assinaturas push. As assinaturas oferecem suporte para as duas versões mais recentes de cada banco de dados listadas usando a mais recente versão do provedor OLE DB listado.  
@@ -69,7 +69,7 @@ ms.locfileid: "52763218"
   
 -   Se um artigo for adicionado ou excluído de uma publicação, assinaturas para Assinantes não[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] devem ser reinicializadas.  
   
--   As únicas restrições que tem suportadas para todos os não -[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] assinantes são: NULL e NOT NULL. As restrições de chave primária são replicadas como índices exclusivos.  
+-   As únicas restrições compatíveis para todos os Assinantes não [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] são: NULL e NOT NULL. As restrições de chave primária são replicadas como índices exclusivos.  
   
 -   O valor NULL é tratado de forma diferente por bancos de dados diferentes, o que afeta como um valor em branco, uma cadeia de caracteres vazia e um NULL são representados. Isto, por sua vez, afeta o comportamento de valores inseridos em colunas com restrições exclusivas definidas. Por exemplo, o Oracle permite valores múltiplos de NULL em uma coluna que é considerada exclusiva, enquanto o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite apenas um único valor NULL em uma coluna exclusiva.  
   

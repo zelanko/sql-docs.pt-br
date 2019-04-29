@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 58254a5c9f9031e4657f7a3a2eb5cb73be4fbdea
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62927215"
 ---
 # <a name="system-variables"></a>Variáveis do sistema
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece um conjunto de variáveis de sistema que armazena informações sobre o pacote em execução e seus objetos. Essas variáveis podem ser usadas em expressões e expressões de propriedade para personalizar pacotes, contêineres, tarefas e manipuladores de eventos.  
@@ -34,7 +34,7 @@ ms.locfileid: "58391254"
 |Variável do sistema|Tipo de dados|Descrição|  
 |---------------------|---------------|-----------------|  
 |**CancelEvent**|Int32|O manipulador de um objeto de Evento do Windows que a tarefa pode sinalizar para indicar que a execução da tarefa deve ser interrompida.|  
-|`ContainerStartTime`|DateTime|A hora de início do contêiner.|  
+|`ContainerStartTime`|Datetime|A hora de início do contêiner.|  
 |**CreationDate**|DateTime|A data em que o pacote foi criado.|  
 |`CreatorComputerName`|Cadeia de caracteres|O computador no qual o pacote foi criado.|  
 |**CreatorName**|Cadeia de caracteres|O nome da pessoa que criou o pacote.|  
@@ -47,7 +47,7 @@ ms.locfileid: "58391254"
 |**OfflineMode**|Booliano|Indica se o pacote está no modo offline. O modo offline não obtém conexões com fontes de dados.|  
 |**PackageID**|Cadeia de caracteres|O identificador exclusivo do pacote.|  
 |**PackageName**|Cadeia de caracteres|O nome do pacote.|  
-|**StartTime**|DateTime|A hora de início da execução do pacote.|  
+|**StartTime**|Datetime|A hora de início da execução do pacote.|  
 |`ServerExecutionID`|Int64|A ID da execução para o pacote executado no servidor do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .<br /><br /> O valor padrão é zero. O valor só será alterado se o pacote for executado pelo ISServerExec no [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Server. Quando houver um pacote filho, o valor será transmitido do pacote pai para o pacote filho.|  
 |**UserName**|Cadeia de caracteres|A conta do usuário que iniciou o pacote. O nome do usuário é qualificado pelo nome do domínio.|  
 |**VersionBuild**|Int32|A versão do pacote.|  
@@ -89,7 +89,7 @@ ms.locfileid: "58391254"
 |**ProgressCountHigh**|Int32|A parte alta de um valor de 64 bits que indica o número total de operações processadas pelo evento OnProgress.|Manipulador de eventos OnProgress|  
 |`ProgressCountLow`|Int32|A parte baixa de um valor de 64 bits que indica o número total de operações processadas pelo evento OnProgress.|Manipulador de eventos OnProgress|  
 |**ProgressDescription**|Cadeia de caracteres|Descrição do progresso.|Manipulador de eventos OnProgress|  
-|`Propagate`|Booliano|Indica se o evento é propagado para um manipulador de eventos de nível mais alto.<br /><br /> Observação: O valor da variável `Propagate` é desconsiderado durante a validação do pacote.<br /><br /> Se você definir `Propagate` como `False` em um pacote filho, isto não impedirá que um evento seja propagado até o pacote pai.|Todos os manipuladores de eventos|  
+|`Propagate`|Booliano|Indica se o evento é propagado para um manipulador de eventos de nível mais alto.<br /><br /> Observação: O valor da `Propagate` variável é desconsiderada durante a validação do pacote.<br /><br /> Se você definir `Propagate` como `False` em um pacote filho, isto não impedirá que um evento seja propagado até o pacote pai.|Todos os manipuladores de eventos|  
 |`SourceDescription`|Cadeia de caracteres|A descrição do executável no manipulador de eventos que ativou o evento.|Todos os manipuladores de eventos|  
 |`SourceID`|Cadeia de caracteres|O identificador exclusivo do executável no manipulador de eventos que ativou o evento.|Todos os manipuladores de eventos|  
 |**SourceName**|Cadeia de caracteres|O nome do executável no manipulador de eventos que ativou o evento.|Todos os manipuladores de eventos|  

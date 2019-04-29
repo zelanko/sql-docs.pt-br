@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ea6582aacefc7c17450e59689bec29c260a38d07
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62926818"
 ---
 # <a name="term-extraction-transformation-editor-advanced-tab"></a>Editor de Transformação Extração de Termos (guia Avançado)
   Use a guia **Avançado** da caixa de diálogo **Editor de Transformação de Extração de Termos** para especificar propriedades de extração, como frequência, comprimento e se devem ser extraídas palavras ou frases.  
@@ -41,7 +41,7 @@ ms.locfileid: "58385034"
  Especifique que a pontuação é a frequência do termo.  
   
  **TFIDF**  
- Especifique que a pontuação é o valor TFIDF do termo. A pontuação TFIDF é o produto da frequência do termo e a frequência de documento inversa, definido como: TFIDF de um termo T = (frequência de T) * log ((#rows na entrada) / (#rows com T))  
+ Especifique que a pontuação é o valor TFIDF do termo. A pontuação TFIDF é o produto da Frequência do Termo e da Frequência de Documento Inversa, definido como: TFIDF de um termo T = (frequência de T) * log( (nº de linhas na Entrada) / (nº de linhas com T) ).  
   
  **Limite de frequência**  
  Especifique o número de vezes que uma palavra ou frase deve aparecer antes de ser extraída. O valor padrão é 2.  

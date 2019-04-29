@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4bff4422d255359c575956768d40c53ef0e39cb6
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185910"
 ---
 # <a name="add-or-remove-margins-from-a-chart-report-builder-and-ssrs"></a>Adicionar ou remover margens de um gráfico (Construtor de Relatórios e SSRS)
   Nos tipos de gráfico de Colunas e Dispersão, o gráfico adiciona automaticamente margens laterais nas extremidades do eixo x. Nos tipos de gráfico de Barras, o gráfico adiciona automaticamente margens laterais nas extremidades do eixo y. Em todos os outros tipos de gráfico, as margens laterais não são adicionadas. Não é possível alterar o tamanho da margem.  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4eb82cba133f572e996f460be04661bfe511492e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020068"
 ---
 # <a name="create-named-sets"></a>Criar conjuntos nomeados
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "34021573"
  **Nome**  
  Selecione o nome do conjunto nomeado. Ele aparecerá para os usuários finais quando eles procurarem o cubo.  
   
- **Expressão**  
+ **Expression**  
  Especifique a expressão que produz o conjunto nomeado. Pode ser escrita em MDX. A expressão pode conter uma das seguintes opções:  
   
 -   Expressões de dados que representam componentes de cubo, como dimensões, níveis, medidas, etc.  

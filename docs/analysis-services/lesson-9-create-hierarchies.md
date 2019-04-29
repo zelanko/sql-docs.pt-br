@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: da8f3d0fb3f733c5a9307d633025bb67a1a4d8cb
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42791693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017256"
 ---
 # <a name="lesson-9-create-hierarchies"></a>Lição 9: Criar hierarquias
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -26,7 +26,7 @@ Para criar hierarquias, você usará o designer de modelo na *exibição de diag
 Tempo estimado para concluir esta lição: **20 minutos**  
   
 ## <a name="prerequisites"></a>Prerequisites  
-Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [lição 8: criar perspectivas](../analysis-services/lesson-8-create-perspectives.md).  
+Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [Lição 8: Criar perspectivas](../analysis-services/lesson-8-create-perspectives.md).  
   
 ## <a name="create-hierarchies"></a>Criar hierarquias  
   
@@ -45,7 +45,7 @@ Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluí
   
 5.  Clique com botão direito do **ModelName** coluna > **adicionar à hierarquia**e, em seguida, selecione **categoria**. Faça o mesmo para **EnglishProductName**. Renomeie as colunas na hierarquia **modelo** e **produto**.  
 
-    ![como tabular-lesson9-categoria](../analysis-services/media/as-tabular-lesson9-category.png)
+    ![as-tabular-lesson9-category](../analysis-services/media/as-tabular-lesson9-category.png)
   
 #### <a name="to-create-hierarchies-in-the-dimdate-table"></a>Para criar hierarquias na tabela DimDate  
   
@@ -73,6 +73,6 @@ Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluí
     *  DayNumberOfWeek
   
  ## <a name="whats-next"></a>O que vem a seguir?
-Vá para a próxima lição: [lição 10: criar partições](../analysis-services/lesson-10-create-partitions.md). 
+Vá para a próxima lição: [Lição 10: Criar partições](../analysis-services/lesson-10-create-partitions.md). 
   
   

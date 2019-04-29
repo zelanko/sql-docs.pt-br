@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1c29fb18431d1f02d82db76605a8a53752ea0357
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184902"
 ---
 # <a name="using-cachesize"></a>Usar CacheSize
 Use o **CacheSize** propriedade para controlar quantos registros devem ser recuperados por vez na memória local do provedor. Por exemplo, se o **CacheSize** for 10, após a primeira abertura a **conjunto de registros** do objeto, o provedor recupera os primeiros 10 registros na memória local. Conforme você percorrer as **Recordset** do objeto, o provedor retorna os dados do buffer de memória local. Assim que você move além do último registro no cache, o provedor recupera os próximos 10 registros da fonte de dados no cache.  

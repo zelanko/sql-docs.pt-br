@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 71438a61dcaec201d0b3ae21eb7e27d979029204
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046351"
 ---
 # <a name="installing-sql-server-native-client"></a>Instalando o SQL Server Native Client
   O Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 é instalado quando você instala o [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. Não há nenhum [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Native Client. Para obter mais informações, consulte [o que há de novo no SQL Server Native Client](../sql-server-native-client.md). Você também pode obter sqlncli.msi na página da Web do SQL Server 2012 Feature Pack. Para baixar a versão mais recente do SQL Server Native Client, vá para [Microsoft?? SQL Server?? 2012 SP2 Feature Pack](https://www.microsoft.com/en-us/download/details.aspx?id=43339). Se uma versão anterior do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client anterior ao SQL Server 2012 também estiver instalada no computador, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 será instalado lado a lado com a versão anterior.  
@@ -48,7 +48,7 @@ ms.locfileid: "53363018"
   
  As versões para x64 e Itanium de sqlncli.msi também instalam a versão de 32 bits do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Se o aplicativo foi projetado para uma plataforma diferente daquela em que foi desenvolvido, você poderá baixar as versões do sqlncli.msi para x64, Itanium e x86 do Centro de Download da Microsoft.  
   
- Quando você invoca o sqlncli.msi, só os componentes cliente são instalados por padrão. Os componentes de cliente são arquivos que dão suporte à execução de um aplicativo que foi desenvolvido usando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Para instalar também os componentes SDK, especifique `ADDLOCAL=All` na linha de comando. Por exemplo:  
+ Quando você invoca o sqlncli.msi, só os componentes cliente são instalados por padrão. Os componentes de cliente são arquivos que dão suporte à execução de um aplicativo que foi desenvolvido usando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Para instalar também os componentes SDK, especifique `ADDLOCAL=All` na linha de comando. Por exemplo:   
   
  `msiexec /i sqlncli.msi ADDLOCAL=ALL APPGUID={0CC618CE-F36A-415E-84B4-FB1BFF6967E1}`  
   

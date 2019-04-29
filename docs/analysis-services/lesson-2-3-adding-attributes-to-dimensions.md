@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 753aad68d1c6fc9fb6fe53efb3b73ae767b4570e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63045998"
 ---
-# <a name="lesson-2-3---adding-attributes-to-dimensions"></a>Lição 2-3-adicionar atributos às dimensões
+# <a name="lesson-2-3---adding-attributes-to-dimensions"></a>Lição 2-3: adicionando atributos para dimensões
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Agora que você definiu dimensões, pode populá-las com atributos que representam cada elemento de dados na dimensão. Os atributos geralmente são baseados em campos de uma exibição da fonte de dados. Ao adicionar atributos a uma dimensão, você pode incluir campos de qualquer tabela na exibição da fonte de dados.  

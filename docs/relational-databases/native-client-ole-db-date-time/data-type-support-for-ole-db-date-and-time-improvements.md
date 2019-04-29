@@ -16,11 +16,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 24661690a0252b1018e2ddc52ba99a44cb5cedbe
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63029044"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Suporte a tipos de dados para melhorias de data e hora do OLE DB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,9 +33,9 @@ ms.locfileid: "53207465"
   
 |Tipos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Tipo de dados OLE DB|Valor|  
 |-----------------------------------------|----------------------|-----------|  
-|DATETIME|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
+|datetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
-|Data|DBTYPE_DBDATE|133 (oledb.h)|  
+|date|DBTYPE_DBDATE|133 (oledb.h)|  
 |time|DBTYPE_DBTIME2|145 (sqlncli. h)|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 (sqlncli. h)|  
 |datetime2|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
@@ -44,9 +44,9 @@ ms.locfileid: "53207465"
   
 |Tipos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Tipo de dados OLE DB|Formato de cadeia de caracteres para conversões do cliente|  
 |-----------------------------------------|----------------------|------------------------------------------|  
-|DATETIME|DBTYPE_DBTIMESTAMP|'aaaa-mm-dd hh:mm:ss[.999]'<br /><br /> O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte a até três dígitos de fração de segundo para Datetime.|  
+|datetime|DBTYPE_DBTIMESTAMP|'aaaa-mm-dd hh:mm:ss[.999]'<br /><br /> O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte a até três dígitos de fração de segundo para Datetime.|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|'aaaa-mm-dd hh:mm:ss'<br /><br /> Este tipo de dados tem precisão de um minuto. O componente de segundos será zero na saída, sendo arredondado pelo servidor na entrada.|  
-|Data|DBTYPE_DBDATE|'aaaa-mm-dd'|  
+|date|DBTYPE_DBDATE|'aaaa-mm-dd'|  
 |time|DBTYPE_DBTIME2|'hh:mm:ss[.9999999]'<br /><br /> Opcionalmente, podem ser especificadas frações de segundo usando até sete dígitos.|  
 |datetime2|DBTYPE_DBTIMESTAMP|'aaaa-mm-dd hh:mm:ss[.fffffff]'<br /><br /> Opcionalmente, podem ser especificadas frações de segundo usando até sete dígitos.|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|'aaaa-mm-dd hh:mm:ss[.fffffff] +/-hh:mm'<br /><br /> Opcionalmente, podem ser especificadas frações de segundo usando até sete dígitos.|  
@@ -177,7 +177,7 @@ enum SQLVARENUM {
   
 |Tipo de dados OLE DB (*wType*)|Tipos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Observações|  
 |----------------------------------|-----------------------------------------|-----------|  
-|DBTYPE_DBDATE|Data||  
+|DBTYPE_DBDATE|date||  
 |DBTYPE_DBTIMESTAMP|**datetime2**(p)|O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client inspeciona os MEMBROS *bScale* membro para determinar a precisão de frações de segundo.|  
 |DBTYPE_DBTIME2|**time**(p)|O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client inspeciona os MEMBROS *bScale* membro para determinar a precisão de frações de segundo.|  
 |DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client inspeciona os MEMBROS *bScale* membro para determinar a precisão de frações de segundo.|  

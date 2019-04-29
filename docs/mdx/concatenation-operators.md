@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8eacfc08fdeb0f92874758d0f95e5cde3e6b295a
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181484"
 ---
 # <a name="concatenation-operators"></a>Operadores de concatenação
 
@@ -33,7 +33,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="language-considerations"></a>Considerações sobre idioma  
- Quando as duas cadeias de caracteres usadas em uma concatenação têm o mesmo agrupamento, a cadeia de caracteres concatenada resultante tem o mesmo agrupamento das entradas. Quando as cadeias de caracteres usadas em uma concatenação têm agrupamentos diferentes, as regras de prioridade de agrupamento determinam o agrupamento da cadeia de caracteres concatenada resultante. Para obter mais informações, consulte [Idiomas e agrupamentos &#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md).  
+ Quando as duas cadeias de caracteres usadas em uma concatenação têm a mesma ordenação, a cadeia de caracteres concatenada resultante tem a mesma ordenação das entradas. Quando as cadeias de caracteres usadas em uma concatenação têm ordenações diferentes, as regras de prioridade de ordenação determinam a ordenação da cadeia de caracteres concatenada resultante. Para obter mais informações, consulte [Idiomas e ordenações &amp;#40;Analysis Services&amp;#41;](../analysis-services/languages-and-collations-analysis-services.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de operador MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8648a1702dfb54f8272adfb84f2ee0e916ed3dbd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749344"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183891"
 ---
 # <a name="connection-close-method-table-type-property-example-vb"></a>Método Connection Close, Exemplo da propriedade Table Type (VB)
 Definindo o [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) propriedade **nada** deve fechar a conexão para o catálogo. Coleções associadas estará vazias. Todos os objetos que foram criados de objetos de esquema no catálogo se tornem órfãs. Quaisquer propriedades nesses objetos que tiverem sido armazenados em cache ainda estará disponíveis, mas uma tentativa de ler as propriedades que requer uma chamada para o provedor irá falhar.  

@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5055305259715c323e1f6cb26fc3428879acfddb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186982"
 ---
 # <a name="enable-coordinated-backups-for-transactional-replication-replication-transact-sql-programming"></a>Habilitar backups coordenados para a replicação transacional (Programação Transact-SQL de replicação)
   Quando habilitar um banco de dados para a replicação transacional, é possível especificar que seja efetuado um backup de todas as transações antes que elas sejam entregues ao banco de dados de distribuição. Você pode habilitar também um backup coordenado no banco de dados de distribuição de modo que o log de transações, para o banco de dados de publicação, não fique truncado até que seja efetuado o backup das transações que foram propagadas ao Distribuidor. Para obter mais informações, consulte [Estratégias para fazer backup e restaurar o instantâneo e a replicação transacional](strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md).  

@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f20945b6c4dc8fc1dda398c3dc9e721ff8b44d07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63047159"
 ---
 # <a name="spdepends-transact-sql"></a>sp_depends (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,19 +66,19 @@ sp_depends [ @objname = ] '<object>'
   
  O conjunto de resultados a seguir mostra os objetos nos quais  *\<objeto >* depende.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**name**|**nvarchar (257** **)**|Nome do item para o qual uma dependência existe.|  
+|**name**|**nvarchar(257** **)**|Nome do item para o qual uma dependência existe.|  
 |**type**|**nvarchar(16)**|Tipo do item.|  
-|**atualizado**|**nvarchar(7)**|Caso o item seja atualizado.|  
-|**Selecionado**|**nvarchar(8)**|Se o item é usado em uma instrução SELECT.|  
+|**updated**|**nvarchar(7)**|Caso o item seja atualizado.|  
+|**selected**|**nvarchar(8)**|Se o item é usado em uma instrução SELECT.|  
 |**column**|**sysname**|Coluna ou parâmetro em que a dependência existe.|  
   
  O conjunto de resultados a seguir mostra os objetos que dependem  *\<objeto >*.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**name**|**nvarchar (257** **)**|Nome do item para o qual uma dependência existe.|  
+|**name**|**nvarchar(257** **)**|Nome do item para o qual uma dependência existe.|  
 |**type**|**nvarchar(16)**|Tipo do item.|  
   
 ## <a name="permissions"></a>Permissões  

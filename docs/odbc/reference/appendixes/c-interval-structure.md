@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bbd920b77fd44eaf4765f0983d7d16feb31a4d91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026587"
 ---
 # <a name="c-interval-structure"></a>Estrutura de intervalo do C
 Cada um dos tipos de dados de intervalo de C listado na [tipos de dados C](../../../odbc/reference/appendixes/c-data-types.md) seção usa a mesma estrutura que contém os dados de intervalo. Quando **SQLFetch**, **SQLFetchScroll**, ou **SQLGetData** é chamado, o driver retorna dados na estrutura SQL_INTERVAL_STRUCT, usa o valor que foi especificado pelo aplicativo para os tipos de dados C (na chamada para **SQLBindCol**, **SQLGetData**, ou **SQLBindParameter**) para interpretar o conteúdo de SQL_INTERVAL_STRUCT e preenche o *interval_type* campo da estrutura com o *enum* valor correspondente ao tipo de C. Observe que os drivers não ler as *interval_type* campo para determinar o tipo do intervalo; eles recuperarem o valor do campo de descritor SQL_DESC_CONCISE_TYPE. Quando a estrutura é usada para dados de parâmetro, o driver usa o valor especificado pelo aplicativo no campo SQL_DESC_CONCISE_TYPE de APD para interpretar o conteúdo de SQL_INTERVAL_STRUCT, mesmo se o aplicativo define o valor da  *interval_type* campo para um valor diferente.  

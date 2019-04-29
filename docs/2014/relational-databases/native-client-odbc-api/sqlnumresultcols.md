@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 88edec63a97ff6c463f07add895ff8399fc4268a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046751"
 ---
 # <a name="sqlnumresultcols"></a>SQLNumResultCols
   Para instruções executadas, o driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client não visita o servidor para informar o número de colunas em um conjunto de resultados. Nesse caso, `SQLNumResultCols` não causa uma ida e volta do servidor. Como o [SQLDescribeCol](sqldescribecol.md) e [SQLColAttribute](sqlcolattribute.md), chamar `SQLNumResultCols` diante preparadas, mas instruções não executadas gera uma ida e volta do servidor.  

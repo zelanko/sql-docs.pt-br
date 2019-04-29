@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e02d42d6d63608ccb70dc984e05ae11578d3160
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049962"
 ---
 # <a name="data-buffer-type"></a>Tipo de buffer de dados
 O tipo de dados C de um buffer é especificado pelo aplicativo. Com uma única variável, isso ocorre quando o aplicativo aloca a variável. Com memória genérica - ou seja, memória apontado por um ponteiro de tipo void – isso ocorre quando o aplicativo converte a memória para um tipo específico. O driver detecta esse tipo de duas maneiras:  

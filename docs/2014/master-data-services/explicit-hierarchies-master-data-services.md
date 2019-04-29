@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 90153c2ed0524a486fe7014890e7e1a30d987d84
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52809268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62924532"
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>Hierarquias explícitas (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], uma hierarquia explícita organiza os membros de uma única entidade de qualquer maneira que você especifique. A estrutura pode ser desbalanceada e, ao contrário de hierarquias derivadas, hierarquias explícitas não são baseadas em relações de atributos baseadas em domínio.  
@@ -69,7 +69,7 @@ ms.locfileid: "52809268"
 |Pode ser irregular|Sempre contém um número consistente de níveis|  
   
 ## <a name="explicit-hierarchy-example"></a>Exemplo de hierarquia explícita  
- No exemplo seguinte, a entidade Produto contém estes membros folha: BK-M101 {Mountain-100}, BK-M201 {Mountain-200}, BK-M301 {Mountain-300}, BK-R150 {Road-150}, BK-R450 {Road-450} e BK-R650 {Road-650}.  
+ No exemplo a seguir, a entidade produto contém estes membros folha: BK-M101 {Mountain-100}, BK-M201 {Mountain-200}, BK-M301 {Mountain-300}, BK-R150 {Road-150}, BK-R450 {Road-450} e BK-R650 {Road-650}.  
   
  Para resumir esses membros folha a pontos de consolidação específicos, você pode criar membros consolidados na entidade Produto. Insira os membros consolidados em níveis na árvore hierárquica em que você deseja resumir os membros folha. Não há nenhuma limitação em relação a onde você insere seus membros consolidados; no entanto, cada membro (folha ou consolidado) só pode ser usado uma vez.  
   

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d7726cb0aeeade66870b1b3d175a9489a93bad09
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184955"
 ---
 # <a name="using-a-connection-object"></a>Usar um objeto Connection
 Antes de abrir um **Conexão** do objeto, você deve definir certas informações sobre a fonte de dados e o tipo de conexão. A maioria dessas informações é mantida pela *ConnectionString* parâmetro do [método Open](../../../ado/reference/ado-api/open-method-ado-connection.md) no **Conexão** objeto, ou pelo [ConnectionString propriedade](../../../ado/reference/ado-api/connectionstring-property-ado.md) sobre o **Conexão** objeto. Uma cadeia de caracteres de conexão consiste em uma lista de pares de valor do argumento separados por ponto e vírgula, com os valores entre aspas simples. Por exemplo:  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6155fa549918a9bb17d93c268681826d07581123
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63048490"
 ---
 # <a name="mdx-statement-reference-mdx"></a>Referência de instrução MDX (MDX)
 
@@ -23,13 +23,13 @@ ms.locfileid: "34742075"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Instruções de script MDX &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)|Contém informações sobre instruções de script MDX que gerenciam o contexto de consulta, o escopo e o controle de fluxo de scripts MDX.|  
 |[Instruções de definição de dados MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)|Contém informações sobre instruções de definição de dados MDX que criam, descartam e manipulam objetos multidimensionais.|  
-|[Instruções de manipulação de dados MDX &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)|Contém informações sobre instruções MDX de manipulação de dados que recuperam e manipulam dados de objetos multidimensionais.|  
+|[Instruções MDX de manipulação de dados &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)|Contém informações sobre instruções MDX de manipulação de dados que recuperam e manipulam dados de objetos multidimensionais.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de linguagem MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
+ [Referência da linguagem MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
   
   

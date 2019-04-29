@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 05cc6dc2647b5297b8d7176cd4bc70261b78cb71
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181417"
 ---
 # <a name="sqlgettypeinfo-visual-foxpro-odbc-driver"></a>SQLGetTypeInfo (Driver ODBC do Visual FoxPro)
 > [!NOTE]  
 >  Este tópico contém informações específicas de Driver ODBC do Visual FoxPro. Para obter informações gerais sobre essa função, consulte o tópico apropriado sob [referência da API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Suporte: completo  
+ Suporte a: Completo  
   
- Conformidade com a API ODBC: 1 de nível  
+ Conformidade com a API ODBC: Nível 1  
   
  Retorna informações sobre os tipos de dados compatíveis com uma fonte de dados. O driver retorna as informações em um conjunto de resultados SQL. A tabela a seguir lista os tipos de dados ODBC e o tipo de dados correspondente do Visual FoxPro.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "47733054"
 |SQL_BIT|Logical|  
 |SQL_CHAR|Caractere|  
 |SQL_DATE|data|  
-|SQL_DECIMAL|Numérico|  
+|SQL_DECIMAL|Numeric|  
 |SQL_DOUBLE|Double|  
 |SQL_FLOAT|Double|  
 |SQL_INTEGER|Integer|  
@@ -46,7 +46,7 @@ ms.locfileid: "47733054"
 |SQL_REAL|Double|  
 |SQL_SMALLINT|Integer|  
 |SQL_TIME|Sem suporte. Não há nenhum Visual FoxPro *tempo* tipo.|  
-|SQL_TIMESTAMP|DateTime|  
+|SQL_TIMESTAMP|Datetime|  
 |SQL_TINYINT|Integer|  
 |SQL_VARBINARY|Memorando (binário) *, geral|  
 |SQL_VARCHAR|Caractere|  

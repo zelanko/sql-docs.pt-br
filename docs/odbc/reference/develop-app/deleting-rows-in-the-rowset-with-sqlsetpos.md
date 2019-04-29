@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 78ee14838b467cfe6e555c97f1e74c65cccf98ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664106"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049826"
 ---
 # <a name="deleting-rows-in-the-rowset-with-sqlsetpos"></a>Excluir linhas no conjunto de linhas com SQLSetPos
 A operação de exclusão de **SQLSetPos** faz com que a fonte de dados exclua uma ou mais linhas selecionadas de uma tabela. Para excluir linhas com **SQLSetPos**, o aplicativo chama **SQLSetPos** com *operação* definido como SQL_DELETE e *RowNumber* definido como o número de linha a ser excluída. Se *RowNumber* for 0, todas as linhas no conjunto de linhas são excluídas.  

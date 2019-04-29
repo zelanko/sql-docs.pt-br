@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cd3c7f0bb394025581e4a2dffc8eb79a43acb498
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63036202"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>Mover um índice existente para um grupo de arquivos diferente
   Este tópico descreve como mover um índice existente do seu grupo de arquivos atual para um grupo de arquivos diferente no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -42,7 +42,7 @@ ms.locfileid: "54127916"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   Se uma tabela tiver um índice clusterizado, mover o índice clusterizado a um novo grupo de arquivos moverá a tabela àquele grupo de arquivos.  
   
@@ -141,7 +141,7 @@ ms.locfileid: "54127916"
 > [!NOTE]  
 >  Se um valor maior que o número de CPUs disponíveis for especificado, será usado o número real de CPUs disponíveis.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup"></a>Para mover um índice existente para um grupo de arquivos diferente  
   

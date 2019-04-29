@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b92eeb64b95d666b15c03c70d656d2309a63eabf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042182"
 ---
 # <a name="considering-database-features-to-use"></a>Considerar os recursos de banco de dados a serem usados
-Depois que o nível básico de interoperabilidade é conhecido, os recursos de banco de dados usados pelo aplicativo devem ser considerados. Por exemplo, quais instruções SQL o aplicativo executará? O aplicativo usará cursores roláveis? Transações? Procedimentos? Dados Long? Para sugestões sobre quais recursos podem não ter suporte por todos os DBMSs, consulte o [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), e [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) edescriçõesdefunção[ Apêndice c: gramática SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md). Os recursos necessários para um aplicativo podem eliminar alguns DBMSs da lista de destino DBMSs. Eles também podem mostrar que o aplicativo pode direcionar facilmente muitos DBMSs.  
+Depois que o nível básico de interoperabilidade é conhecido, os recursos de banco de dados usados pelo aplicativo devem ser considerados. Por exemplo, quais instruções SQL o aplicativo executará? O aplicativo usará cursores roláveis? Transações? Procedimentos? Dados Long? Para sugestões sobre quais recursos podem não ter suporte por todos os DBMSs, consulte o [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), e [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) edescriçõesdefunção[ Apêndice c: Gramática SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md). Os recursos necessários para um aplicativo podem eliminar alguns DBMSs da lista de destino DBMSs. Eles também podem mostrar que o aplicativo pode direcionar facilmente muitos DBMSs.  
   
- Por exemplo, se os recursos necessários são simples, eles geralmente podem ser implementados com um alto grau de interoperabilidade. Um aplicativo que executa um simples **selecionar** instrução e recupera resultados com um cursor somente de avanço é provavelmente será altamente interoperável em virtude de sua simplicidade: quase todos os drivers e DBMSs oferecem suporte à funcionalidade-lo precisa.  
+ Por exemplo, se os recursos necessários são simples, eles geralmente podem ser implementados com um alto grau de interoperabilidade. Um aplicativo que executa um simples **selecionar** instrução e recupera resultados com um cursor somente de avanço é provavelmente será altamente interoperável em virtude de sua simplicidade: Quase todos os drivers e DBMSs suportam a funcionalidade que ele precisa.  
   
  No entanto, se os recursos necessários são mais complexos, como atualização posicionada, cursores roláveis e instruções delete e procedimentos, compensações devem normalmente ser feitas. Existem várias possibilidades:  
   

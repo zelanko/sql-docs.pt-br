@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a3e8497e4f5a8b5e74b7bb0b5d9c01cef78e275d
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017167"
 ---
 # <a name="change-the-membership-of-a-job-category"></a>Change the Membership of a Job Category
   Este tópico descreve como alterar a associação da categoria de trabalho no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)]ou o SQL Server Management Objects.  
@@ -64,7 +64,7 @@ ms.locfileid: "54131076"
   
 7.  Feche a caixa de diálogo **Gerenciar Categorias de Trabalho**_server_name_ .  
   
-##  <a name="TSQL"></a> Usando Transact-SQL  
+##  <a name="TSQL"></a> Usando o Transact-SQL  
   
 #### <a name="to-change-the-membership-of-a-job-category"></a>Para alterar a associação de uma categoria de trabalho  
   

@@ -29,11 +29,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3dd81f9ff49b7b99baf6796b3030da1611d02b7f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59955682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185713"
 ---
 # <a name="formatting-the-legend-on-a-chart-report-builder-and-ssrs"></a>Formatando a legenda em um gráfico (Construtor de Relatórios e SSRS)
   A legenda do gráfico contém descrições de cada categoria em um gráfico. Uma legenda sempre contém um ou mais itens de legenda, no qual cada item de legenda é composto por uma caixa colorida que representa a série, e uma cadeia de caracteres de texto que descreve a série, conforme indicado na ilustração a seguir.  

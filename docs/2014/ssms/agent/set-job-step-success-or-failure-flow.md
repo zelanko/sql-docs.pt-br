@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c592964e5da7503c39b97db1f332a9420a1b53f0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63033718"
 ---
 # <a name="set-job-step-success-or-failure-flow"></a>Set Job Step Success or Failure Flow
   Ao criar trabalhos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, você pode especificar a ação a ser tomada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em caso de falha durante a execução do trabalho. Determine a ação a ser tomada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em caso de êxito ou falha de cada etapa de trabalho. Use o procedimento a seguir para configurar a lógica do fluxo de ações da etapa de trabalho, usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
@@ -70,7 +70,7 @@ ms.locfileid: "53366618"
   
 9. Se a lista **Executar como usuário** estiver disponível, selecione a conta proxy com as credenciais que o trabalho usará.  
   
-##  <a name="TSQL"></a> Usando Transact-SQL  
+##  <a name="TSQL"></a> Usando o Transact-SQL  
   
 #### <a name="to-set-job-step-success-or-failure-flow"></a>Para definir o fluxo da etapa de trabalho segundo o êxito ou falha  
   

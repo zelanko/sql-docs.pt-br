@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 558236f7034588a544aa4fb78091c19475cc8f4e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63025657"
 ---
 # <a name="complete-the-post-installation-steps"></a>Concluir as etapas de pós-instalação
   Depois de instalar o Distributed Replay, modifique as contas de serviços cliente e controlador do Distributed Replay.  

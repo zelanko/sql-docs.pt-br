@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 10a7097292562acd60e8b83af9a48bd61aeb8557
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62955736"
 ---
 # <a name="system-requirements-for-the-address-book-application"></a>Requisitos de sistema para o aplicativo de catálogo de endereços
 Para configurar o aplicativo de exemplo do catálogo de endereços, você precisa cumprir os seguintes requisitos de software e banco de dados:  

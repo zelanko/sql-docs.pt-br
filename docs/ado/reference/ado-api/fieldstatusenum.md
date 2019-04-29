@@ -17,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4e2f08868aa581136bc155011671e0b8b1c55e68
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028153"
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
 Especifica o [status](../../../ado/reference/ado-api/status-property-ado-field.md) de uma [objeto Field](../../../ado/reference/ado-api/field-object.md).  
   
  O **adFieldPending\***  valores indicam a operação que causou o status ser definido e pode ser combinada com outros valores de status.  
   
-|Constante|Valor|Description|  
+|Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
 |**adFieldAlreadyExists**|26|Indica que o campo especificado já existe.|  
 |**adFieldBadStatus**|12|Indica que um valor de status inválido foi enviado do ADO para o provedor OLE DB. Possíveis causas incluem um 1.0 OLE DB ou provedor 1.1 ou uma combinação incorreta dos [valor](../../../ado/reference/ado-api/value-property-ado.md) e [Status](../../../ado/reference/ado-api/status-property-ado-field.md).|  

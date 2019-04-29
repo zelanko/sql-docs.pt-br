@@ -12,13 +12,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 465928e8d7fc48785c5774a6bd50f457b0df58b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63182012"
 ---
-# <a name="lesson-4-create-a-database-in-windows-azure-storage"></a>Lição 4: Criar um banco de dados no Armazenamento do Windows Azure
+# <a name="lesson-4-create-a-database-in-windows-azure-storage"></a>Lição 4: Criar um banco de dados no Armazenamento do Microsoft Azure
   Nesta lição, você aprenderá a criar um banco de dados usando o recurso de arquivos de dados do SQL Server no Microsoft Azure. Observe que antes desta lição, você deverá concluir as lições 1, 2 e 3. A lição 3 é uma etapa muito importante, pois você precisa armazenar informações sobre o contêiner de armazenamento do Windows Azure, e seu nome de política e chave de SAS associados no repositório de credenciais do SQL Server antes da lição 4.  
   
  Para cada contêiner de armazenamento usado por um arquivo de dados ou de log, você deve criar uma Credencial do SQL Server cujo nome corresponda ao caminho do contêiner. Em seguida, você pode criar um novo banco de dados no Armazenamento do Windows Azure.  
@@ -86,7 +86,7 @@ ms.locfileid: "48063006"
   
  ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-2b.gif "SQL 14 CTP2")  
   
- **Observação:** se houver alguma referência ativa aos arquivos de dados em um contêiner, qualquer tentativa de excluir o servidor SQL associado credenciais apresentarão falha. Da mesma forma, se já houver uma concessão em um arquivo de banco de dados específico em um blob e você quiser excluí-lo, primeiro você precisa interromper a concessão no blob. Para interromper a concessão, você pode usar [Lease Blob](https://msdn.microsoft.com/library/azure/ee691972.aspx).  
+ **Observação:** Se houver alguma referência ativa aos arquivos de dados em um contêiner, qualquer tentativa de excluir a credencial associada do SQL Server falhará. Da mesma forma, se já houver uma concessão em um arquivo de banco de dados específico em um blob e você quiser excluí-lo, primeiro você precisa interromper a concessão no blob. Para interromper a concessão, você pode usar [Lease Blob](https://msdn.microsoft.com/library/azure/ee691972.aspx).  
   
  Usando esse novo recurso, você pode configurar o SQL Server de modo que qualquer instrução CREATE DATABASE assuma como padrão um banco de dados habilitado para nuvem. Em outras palavras, você pode definir locais de dados e log padrão nas propriedades de instância do SQL Server Management Studio Server para que, a qualquer momento que criar um banco de dados, todos os arquivos de banco de dados (.mdf, .ldf) sejam criados como blobs de página no Armazenamento do Windows Azure.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "48063006"
   
      ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-4.gif "SQL 14 CTP2")  
   
-     Para obter mais informações, consulte [Add Data or Log Files to a Database](databases/add-data-or-log-files-to-a-database.md).  
+     Para obter mais informações, consulte [adicionar dados ou arquivos de Log para um banco de dados](databases/add-data-or-log-files-to-a-database.md).  
   
 5.  Mantenha todos os outros valores padrão.  
   

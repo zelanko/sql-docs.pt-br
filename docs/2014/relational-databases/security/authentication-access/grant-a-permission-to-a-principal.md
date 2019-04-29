@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 9b0ff18a9b3c6ff338a2b827b91ff20bbc7b2ce9
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011953"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>Conceder uma permissão a uma entidade de segurança
   Este tópico descreve como conceder permissão a uma entidade de segurança no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -38,7 +38,7 @@ ms.locfileid: "54134916"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
  Considere as práticas recomendadas a seguir que podem facilitar o gerenciamento de permissões.  
   
 -   Conceda permissão para funções, em vez de logons individuais ou usuários. Quando um indivíduo for substituído por outro, remova o indivíduo que está deixando a função e adicione o novo indivíduo a ela. As muitas permissões que podem ser associadas à função estarão automaticamente disponíveis para o novo indivíduo. Se várias pessoas em uma organização precisarem das mesmas permissões, adicionar cada uma dessas pessoas à função concederá as mesmas permissões.  
@@ -69,7 +69,7 @@ ms.locfileid: "54134916"
   
 6.  Quando terminar, clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-grant-permission-to-a-principal"></a>Para conceder permissão a uma entidade de segurança  
   

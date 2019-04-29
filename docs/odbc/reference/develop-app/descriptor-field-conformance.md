@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 193bdadaf36e975b1f79327bfef161daaaed427b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049846"
 ---
 # <a name="descriptor-field-conformance"></a>Conformidade de campo de descritor
 A tabela a seguir indica o nível de conformidade de cada campo de cabeçalho do descritor ODBC, que isso é bem definido.  
@@ -47,8 +47,8 @@ A tabela a seguir indica o nível de conformidade de cada campo de cabeçalho do
 |SQL_DESC_CATALOG_NAME|Nível 2|  
 |SQL_DESC_CONCISE_TYPE|Núcleo|  
 |SQL_DESC_DATA_PTR|Núcleo|  
-|CÓDIGO DE SQL_DESC_DATETIME_INTERVAL_|Core [1]|  
-|PRECISÃO SQL_DESC_DATETIME_INTERVAL_|Core [1]|  
+|SQL_DESC_DATETIME_INTERVAL_ CODE|Core[1]|  
+|SQL_DESC_DATETIME_INTERVAL_ PRECISION|Core[1]|  
 |SQL_DESC_DISPLAY_SIZE|Núcleo|  
 |SQL_DESC_FIXED_PREC_SCALE|Núcleo|  
 |SQL_DESC_INDICATOR_PTR|Núcleo|  

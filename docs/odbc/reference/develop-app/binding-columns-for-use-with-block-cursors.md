@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c0ed819643e7ea818fc17c0fa317473afc8f5ca3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63007861"
 ---
 # <a name="binding-columns-for-use-with-block-cursors"></a>Colunas de associação para uso com cursores em bloco
 Como cursores em bloco retornam várias linhas, os aplicativos que utilizam devem associar uma matriz de variáveis para cada coluna em vez de uma única variável. Essas matrizes são conhecidas coletivamente como o *buffers rowset*. A seguir estão os dois estilos de associação:  

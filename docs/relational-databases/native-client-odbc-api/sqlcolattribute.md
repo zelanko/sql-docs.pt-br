@@ -16,11 +16,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1bb59a18dfd0a2952f3c5f23be9d0c12d9c35fd3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63014618"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51657436"
 > [!NOTE]  
 >  Os atributos do identificador de coluna ODBC não estão disponíveis em todos os conjuntos de resultados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Identificador de campo|Description|  
+|Identificador de campo|Descrição|  
 |----------------------|-----------------|  
 |SQL_COLUMN_TABLE_NAME|Disponível em conjuntos de resultados recuperados de instruções que geram cursores de servidor ou em instruções SELECT executadas que contêm uma cláusula FOR BROWSE.|  
 |SQL_DESC_BASE_COLUMN_NAME|Disponível em conjuntos de resultados recuperados de instruções que geram cursores de servidor ou em instruções SELECT executadas que contêm uma cláusula FOR BROWSE.|  
@@ -80,7 +80,7 @@ ms.locfileid: "51657436"
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduziu campos de descritor específicos de driver para fornecer informações adicionais para denotar o nome de coleção de esquemas XML, o nome do esquema e o nome do catálogo, respectivamente. Essas propriedades não exigem aspas ou um caractere de escape se eles contiverem caracteres não alfanuméricos. A tabela a seguir lista esses novos campos de descritor:  
   
-|Nome da coluna|Tipo|Description|  
+|Nome da coluna|Tipo|Descrição|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_CATALOG_NAME|CharacterAttributePtr|O nome do catálogo em que é definido um nome da coleção de esquemas XML. Se não for possível localizar o nome do catálogo, essa variável conterá uma cadeia de caracteres vazia.<br /><br /> Essas informações são retornadas do campo de registro SQL_DESC_SS_XML_SCHEMACOLLECTION_CATALOG_NAME do IRD, que é um campo de leitura-gravação.|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|CharacterAttributePtr|O nome do esquema no qual é definido um nome da coleção de esquemas XML. Se não for possível localizar o nome do esquema, essa variável conterá uma cadeia de caracteres vazia.<br /><br /> Essas informações são retornadas do campo de registro SQL_DESC_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME do IRD, que é um campo de leitura-gravação.|  
@@ -88,7 +88,7 @@ ms.locfileid: "51657436"
   
  Além disso, o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduziu campos de descritor específicos de driver para fornecer informações adicionais para uma coluna de UDT (tipo definido pelo usuário) de um conjunto de resultados ou um parâmetro de UDT de um procedimento armazenado ou consulta parametrizada. Essas propriedades não exigem aspas ou um caractere de escape se eles contiverem caracteres não alfanuméricos. A tabela a seguir lista esses novos campos de descritor:  
   
-|Nome da coluna|Tipo|Description|  
+|Nome da coluna|Tipo|Descrição|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_UDT_CATALOG_NAME|CharacterAttributePtr|O nome do catálogo que contém o UDT.|  
 |SQL_CA_SS_UDT_SCHEMA_NAME|CharacterAttributePtr|O nome do esquema que contém o UDT.|  

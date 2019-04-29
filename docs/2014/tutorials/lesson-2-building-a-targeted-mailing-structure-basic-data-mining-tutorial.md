@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 42893ce0b921f47a86e6a52f3262786ca8b82bb9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62931504"
 ---
 # <a name="lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial"></a>Lição 2: Criar uma estrutura de mala direta (Tutorial de mineração de dados básico)
   O departamento de Marketing da [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] quer aumentar as vendas, tendo como foco clientes específicos para uma campanha de mala direta. O banco de dados da empresa contém uma lista de clientes anteriores e uma lista de novos clientes em potencial. Investigando os atributos dos clientes antigos, a empresa espera descobrir padrões que eles podem, em seguida, aplicar a clientes em potencial. Por exemplo, eles podem usar as tendências do passado para prever quais clientes potenciais têm mais probabilidade de comprar uma bicicleta da [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], ou criar segmentos de cliente para futuras campanhas de marketing.  

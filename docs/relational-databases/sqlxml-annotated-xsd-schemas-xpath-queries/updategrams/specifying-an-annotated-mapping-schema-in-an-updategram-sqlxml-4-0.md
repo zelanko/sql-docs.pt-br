@@ -23,11 +23,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9e55ec7d8ed06914299f56b3d613186d8c612a05
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63025493"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Especificando um esquema de mapeamento anotado em um diagrama de atualização (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -115,7 +115,7 @@ ms.locfileid: "56015548"
    </Schema>   
 ```  
   
-### <a name="b-inserting-a-record-by-using-the-parent-child-relationship-specified-in-the-mapping-schema"></a>b. Inserindo um registro usando a relação pai-filho especificada no esquema de mapeamento  
+### <a name="b-inserting-a-record-by-using-the-parent-child-relationship-specified-in-the-mapping-schema"></a>B. Inserindo um registro usando a relação pai-filho especificada no esquema de mapeamento  
  Elementos de esquema podem ser relacionados. O  **\<SQL: Relationship >** elemento Especifica a relação de pai-filho entre os elementos do esquema. Essas informações são usadas para atualizar as tabelas correspondentes que têm relação chave primária/chave estrangeira.  
   
  O seguinte esquema de mapeamento (SampleSchema. xml) consiste em dois elementos,  **\<ordem >** e  **\<OD >**:  

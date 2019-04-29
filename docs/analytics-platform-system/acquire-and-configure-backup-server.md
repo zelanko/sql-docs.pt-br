@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: cba345eb7a5aec9ef857819a1f0499266649f6e4
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63040822"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>Adquirir e configurar um servidor de backup para Parallel Data Warehouse
 Este artigo descreve como configurar um sistema do Windows não seja de dispositivo como um servidor de backup para uso com os recursos de backup e restauração no Analytics Platform System (APS) e o Parallel Data Warehouse (PDW).  
@@ -101,7 +101,7 @@ PDW acessará o servidor de backup por meio de um compartilhamento de arquivo UN
   
     -   [sp_pdw_remove_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)  
   
-## <a name="Step5"></a>Etapa 5: Iniciar o backup dos dados  
+## <a name="Step5"></a>Etapa 5: Comece a fazer backup de seus dados  
 Agora você está pronto para começar a fazer backup dos dados para o servidor de backup.  
   
 Para fazer backup de dados, use um cliente de consulta para se conectar ao SQL Server PDW e, em seguida, enviar BACKUP banco de dados ou RESTAURAR banco de dados de comandos. Use o disco = cláusula para especificar o local de backup e o servidor de Backup.  
@@ -122,7 +122,7 @@ Para obter mais informações, consulte:
   
 -   [BANCO DE DADOS DE BACKUP](../t-sql/statements/backup-database-parallel-data-warehouse.md)   
   
--   [RESTAURAR BANCO DE DADOS](../t-sql/statements/restore-database-parallel-data-warehouse.md)  
+-   [RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)  
   
 ## <a name="Security"></a>Avisos de segurança  
 O servidor de backup não está unido ao domínio particular para o dispositivo. Ele está em sua própria rede, e não há nenhuma relação de confiança entre seu próprio domínio e privadas de dispositivo.  
@@ -147,7 +147,7 @@ Para listar todas as credenciais de rede armazenadas no SQL Server PDW, use o [D
 Operações no servidor de carregamento podem usar um caminho UNC para extrair dados de fora da rede interna confiável. Um invasor na rede ou com capacidade para influenciar a resolução de nomes pode interceptar ou modificar os dados enviados para o PDW. Isso apresenta um risco de divulgação de informações e falsificação. Para ajudar a reduzir o risco de violação:
 
 - Exigem a conexão de assinatura. 
-- No servidor de carregamento, defina a seguinte opção de diretiva de grupo em segurança Settings\Local Policies\Security Options: cliente de rede Microsoft: assinar comunicações digitalmente (sempre): habilitado.  
+- No servidor de carregamento, defina a seguinte opção de diretiva de grupo em segurança Settings\Local Policies\Security Options:  Cliente de rede Microsoft: Assinar digitalmente as comunicações (sempre): habilitada.  
   
 ## <a name="see-also"></a>Consulte também  
 [Backup e restauração](backup-and-restore-overview.md)  

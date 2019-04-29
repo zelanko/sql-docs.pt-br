@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e8c7c2f178391b93b1034d3e1bfb07ff9f7714ed
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52790038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63012570"
 ---
 # <a name="audit-logout-event-class"></a>Classe de evento Audit Logout
   A classe de evento **Audit Logout** indica que um usuário se desconectou (fez logoff) do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os eventos nesta classe são disparados por novas conexões ou por conexões reutilizadas de um pool de conexões.  

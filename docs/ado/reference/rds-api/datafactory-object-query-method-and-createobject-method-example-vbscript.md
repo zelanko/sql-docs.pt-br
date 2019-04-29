@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9d9a3984e956cd9e742bcc8a29accb7fe012b9e8
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043381"
 ---
 # <a name="datafactory-object-query-method-and-createobject-method-example-vbscript"></a>Exemplo do método CreateObject, do método Query e objeto DataFactory (VBScript)
 > [!IMPORTANT]

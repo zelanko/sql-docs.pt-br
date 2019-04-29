@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 985cb58b860c594e8cfc3e405934fafd9cfb245a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789444"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184960"
 ---
 # <a name="using-a-recordset-object"></a>Usar um objeto Recordset
 Como alternativa, você pode usar **Recordset.Open** implicitamente estabelecer uma conexão e emitir um comando ao longo dessa conexão em uma única operação. Por exemplo, no Visual Basic:  

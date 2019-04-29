@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7d8b89024d27626516f99a5237c0efcd593bad0f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63021785"
 ---
 # <a name="publication-information-agents-snapshot-publication"></a>Informações da Publicação, Agentes (publicação de instantâneo)
   A guia **Agentes** exibe informações resumidas sobre o Snapshot Agent para a publicação selecionada.  
@@ -25,13 +25,13 @@ ms.locfileid: "54135746"
 ## <a name="options"></a>Opções  
  Para obter informações mais detalhadas e tarefas relacionadas ao Snapshot Agent, clique com o botão direito do mouse na linha do agente e clique em uma opção no menu de atalho. Para alterar a forma como a grade exibe os dados, clique com o botão direito do mouse na grade e clique em uma destas opções:  
   
--   **Classificação**: Classifique uma ou mais colunas na **classificar colunas** caixa de diálogo.  
+-   **Classificar**: classifique uma ou mais colunas na caixa de diálogo **Classificar Colunas**.  
   
--   **Selecionar colunas para mostrar**: Selecione quais colunas devem ser exibidas e a ordem na qual para exibi-los de **escolher colunas** caixa de diálogo.  
+-   **Escolher Colunas para Mostrar**: selecione quais colunas devem ser exibidas e a ordem em que devem ser exibidas, na caixa de diálogo **Selecionar Colunas**.  
   
--   **Filtro**: Filtrar linhas na grade com base em valores de colunas de **configurações de filtro** caixa de diálogo.  
+-   **Filtrar**: filtre linhas na grade com base em valores de colunas da caixa de diálogo **Configurações de Filtro**.  
   
--   **Limpar filtro**: Limpe as configurações de filtro da grade.  
+-   **Limpar Filtro**: Limpe todas as configurações de filtro para a grade.  
   
  As configurações de filtro são específicas de cada grade. A seleção e a classificação da coluna são aplicadas a todas as grades do mesmo tipo, como a grade de publicações de cada Publicador.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "54135746"
 -   Concluído  
   
  **Agente**  
- O Snapshot Agent. Essa é a única publicação associada a uma publicação de instantâneo. O Distribution Agent é associado com assinaturas para essa publicação. Para obter mais informações, consulte [exibir informações e executar tarefas usando o Replication Monitor](monitor/view-information-and-perform-tasks-replication-monitor.md).  
+ O Snapshot Agent. Essa é a única publicação associada a uma publicação de instantâneo. O Distribution Agent é associado com assinaturas para essa publicação. Para obter mais informações, confira [Exibir informações e executar tarefas usando o Replication Monitor](monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
  **Última Hora de Início**  
  A última vez que o agente foi iniciado.  

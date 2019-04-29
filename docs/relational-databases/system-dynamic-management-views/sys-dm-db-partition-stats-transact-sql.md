@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0221361bb3b2bb33748b20353c71931e07568f3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63025090"
 ---
 # <a name="sysdmdbpartitionstats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,13 +36,13 @@ ms.locfileid: "47809174"
 > [!NOTE]  
 >  Chamá-lo partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o nome **DM pdw_nodes_db_partition_stats**.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**partition_id**|**bigint**|ID da partição. É exclusiva em um banco de dados. Isso é o mesmo valor que o **partition_id** na **sys. Partitions** exibição do catálogo|  
 |**object_id**|**int**|ID de objeto da tabela ou exibição indexada da qual a partição faz parte.|  
-|**index_id**|**int**|ID do heap ou índice do qual a partição faz parte.<br /><br /> 0 = Heap<br /><br /> 1 = Índice clusterizado.<br /><br /> > 1 = Índice não clusterizado|  
+|**index_id**|**int**|ID do heap ou índice do qual a partição faz parte.<br /><br /> 0 = Heap<br /><br /> 1 = Índice clusterizado.<br /><br /> > 1 = índice não clusterizado|  
 |**partition_number**|**int**|Número de partição com base 1 no índice ou heap.|  
-|**in_row_data_page_count**|**bigint**|Número de páginas em uso para armazenar dados em linha nesta partição. Se a partição fizer parte de um heap, o valor será o número de páginas de dados no heap. Se a partição fizer parte de um índice, o valor será o número de páginas no nível folha. (Páginas não folha na árvore B não são incluídas na contagem.) As páginas IAM não são incluídas em nenhum caso. Sempre 0 para um índice columnstore xVelocity de memória otimizada.|  
+|**in_row_data_page_count**|**bigint**|Número de páginas em uso para armazenar dados em linha nesta partição. Se a partição fizer parte de um heap, o valor será o número de páginas de dados no heap. Se a partição fizer parte de um índice, o valor será o número de páginas no nível folha. (Páginas não folha na árvore B não são incluídas na contagem.) As páginas IAM (Index Allocation Map) não são incluídas em ambos os casos. Sempre 0 para um índice columnstore xVelocity de memória otimizada.|  
 |**in_row_used_page_count**|**bigint**|Número total de páginas em uso para armazenar e gerenciar os dados em linha nesta partição. Essa contagem inclui páginas não folha de árvore B, as páginas IAM e todas as páginas incluídas na **in_row_data_page_count** coluna. Sempre 0 para um índice columnstore.|  
 |**in_row_reserved_page_count**|**bigint**|Número total de páginas reservadas para armazenar e gerenciar dados em linha nesta partição, independentemente do fato de as páginas estarem ou não em uso. Sempre 0 para um índice columnstore.|  
 |**lob_used_page_count**|**bigint**|Número de páginas em uso para armazenar e gerenciar fora de linha **texto**, **ntext**, **imagem**, **varchar (max)**, **nvarchar (máx.)** , **varbinary (max)**, e **xml** colunas dentro da partição. As páginas IAM são incluídas.<br /><br /> Número total de LOBs usados para armazenar e gerenciar o índice columnstore na partição.|  

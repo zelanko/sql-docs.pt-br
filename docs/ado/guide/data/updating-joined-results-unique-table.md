@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a01c9dd672193a91c494ccdf098375e9a64d5b3b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184977"
 ---
-# <a name="updating-joined-results-unique-table"></a>Atualizar resultados JOINed: tabela única
+# <a name="updating-joined-results-unique-table"></a>Atualizando resultados JOINed: Tabela única
 ADO permite que você atentamente as modificações de controle para uma tabela base específica em um conjunto de registros foi formada por uma operação de junção em várias tabelas base usando a propriedade dinâmica da tabela exclusiva. Para obter detalhes sobre como usar a tabela exclusiva, consulte os tópicos de referência do programador do ADO sobre as propriedades dinâmicas da tabela exclusiva e atualização de ressincronização.  
   
 ## <a name="see-also"></a>Consulte também  

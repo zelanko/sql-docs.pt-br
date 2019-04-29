@@ -1,9 +1,8 @@
 ---
 title: Processando XML no lado do cliente (Classes gerenciadas SQLXML) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
@@ -14,19 +13,17 @@ helpviewer_keywords:
 - SQLXML Managed Classes, client-side XML formatting
 - ClientSideXml property
 ms.assetid: 5e7ecf18-66fc-49ff-bc50-83635cd7ac0b
-author: MightyPen
-ms.author: genemi
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c91bb6f9c483922901a0fcd32517a2373ae1f6a8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63033171"
 ---
 # <a name="processing-xml-on-the-client-side-sqlxml-managed-classes"></a>Processando XML no cliente (classes gerenciadas SQLXML)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Este exemplo ilustra o uso da propriedade ClientSideXml. O aplicativo executa um procedimento armazenado no servidor. O resultado do procedimento armazenado (um conjunto de linhas de duas colunas) é processado no cliente para gerar um documento XML.  
   
  GetContacts o seguinte procedimento armazenado retorna **FirstName** e **Sobrenome** dos funcionários na tabela Person. Contact no banco de dados AdventureWorks.  

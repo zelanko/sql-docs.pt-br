@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7c9a628f912f382f3ee8a87276aa34d0e54e37ba
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63033619"
 ---
 # <a name="update-statistics"></a>Atualização de Estatísticas
   Você pode atualizar estatísticas de otimização de consulta em uma tabela ou exibição indexada no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Por padrão, o otimizador de consulta já atualiza estatísticas conforme necessário para melhorar o plano de consulta; em alguns casos, é possível melhorar o desempenho de consulta usando UPDATE STATISTICS ou o procedimento armazenado `sp_updatestats` para atualizar estatísticas com mais frequência do que as atualizações padrão.  
@@ -60,7 +60,7 @@ ms.locfileid: "54100811"
   
 6.  No **propriedades de estatísticas -**_statistics_name_ caixa de diálogo, selecione o **atualizar estatísticas destas colunas** caixa de seleção e, em seguida, clique em **Okey**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-update-a-specific-statistics-object"></a>Para atualizar um objeto de estatísticas específico  
   

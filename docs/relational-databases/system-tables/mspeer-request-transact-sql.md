@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 904919bfac6dc9fc0c5bf638605d363eba5a68f2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026376"
 ---
 # <a name="mspeerrequest-transact-sql"></a>MSpeer_request (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "52796250"
 |id|**int**|Identifica uma solicitação.|  
 |publication|**sysname**|Nome da publicação para a qual a solicitação de status foi iniciada.|  
 |sent_date|**datetime**|Data e hora em que a solicitação de status foi iniciada.|  
-|descrição|**nvarchar(4000)**|Informações definidas pelo usuário que podem ser usadas para identificar solicitações de status individuais.|  
+|description|**nvarchar(4000)**|Informações definidas pelo usuário que podem ser usadas para identificar solicitações de status individuais.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Tabelas de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

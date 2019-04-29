@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 1d9317b63b01a4d1e78f5c8d4818c63d9974be4f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187194"
 ---
 # <a name="installing-ssma-for-mysql-client-mysqltosql"></a>Instalar o SSMA para cliente MySQL (MySQLToSQL)
 O SSMA para cliente MySQL consiste em arquivos de programa que executam as seguintes tarefas:  
@@ -53,7 +53,7 @@ Antes de instalar o SSMA, certifique-se de que o computador atende aos seguintes
   
 -   4 GB de RAM são recomendados.  
   
-## <a name="installing-ssma-for-mysql-client"></a>Instalar o SSMA para cliente do MySQL  
+## <a name="installing-ssma-for-mysql-client"></a>Instalando SSMA para cliente do MySQL  
 O SSMA é um download da Web. Para baixar a versão mais recente, consulte o [página de download do SQL Server Migration Assistant](https://aka.ms/ssmaformysql).  
   
 Depois de baixar a versão mais recente, você deve extrair os arquivos de instalação antes de instalar o SSMA.  

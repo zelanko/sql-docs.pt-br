@@ -1,6 +1,6 @@
 ---
 title: Elementos de linguagem T-SQL - Parallel Data Warehouse | Microsoft Docs
-description: Elementos de linguagem T-SQL para analíticos Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
+description: Elementos de linguagem T-SQL para análise Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -10,21 +10,21 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: d9e2011ef30864e35245f59cab0861ea116d1502
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31539566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63034997"
 ---
 # <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>Elementos de linguagem T-SQL para Parallel Data Warehouse
-Elementos de linguagem T-SQL para analíticos Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
+Elementos de linguagem T-SQL para análise Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
 
-## <a name="core-elements"></a>Elementos principais
-* [convenções de sintaxe](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+## <a name="core-elements"></a>Principais elementos
+* [Convenções de sintaxe](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 * [regras de nomenclatura de objeto](../relational-databases/databases/database-identifiers.md)
-* [Palavras-chave reservadas](../t-sql/language-elements/reserved-keywords-transact-sql.md)
+* [palavras-chave reservadas](../t-sql/language-elements/reserved-keywords-transact-sql.md)
 * [Agrupamentos](https://msdn.microsoft.com/library/ff848763.aspx)
-* [Comentários](../t-sql/language-elements/comment-transact-sql.md)
+* [comments](../t-sql/language-elements/comment-transact-sql.md)
 * [constants](../t-sql/data-types/constants-transact-sql.md)
 * [Tipos de dados](../t-sql/data-types/data-types-transact-sql.md)
 * [EXECUTE](../t-sql/language-elements/execute-transact-sql.md)
@@ -58,9 +58,9 @@ Elementos de linguagem T-SQL para analíticos Platform System (APS) SQL Server P
 * [= (Igual a)](../t-sql/language-elements/equals-transact-sql.md)
 * [> (Maior que)](../t-sql/language-elements/greater-than-transact-sql.md)
 * [< (Menor que)](../t-sql/language-elements/less-than-transact-sql.md)
-* [> = (ótimo que ou igual a)](../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)
+* [> = (maior ou igual a)](../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)
 * [< = (menor ou igual a)](../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)
-* [<> (Igual a)](../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)
+* [<> (Não é igual a)](../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)
 * [\!= (Igual a)](../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)
 * [AND](../t-sql/language-elements/and-transact-sql.md)
 * [BETWEEN](../t-sql/language-elements/between-transact-sql.md)
@@ -69,12 +69,12 @@ Elementos de linguagem T-SQL para analíticos Platform System (APS) SQL Server P
 * [NÃO É](../t-sql/queries/is-null-transact-sql.md)
 * [LIKE](../t-sql/language-elements/like-transact-sql.md)
 * [NOT](../t-sql/language-elements/not-transact-sql.md)
-* [OU](../t-sql/language-elements/or-transact-sql.md)
+* [OR](../t-sql/language-elements/or-transact-sql.md)
 
 ### <a name="bitwise-operators"></a>Operadores bit a bit
 * [& (AND bit a bit)](../t-sql/language-elements/bitwise-and-transact-sql.md)
 * [| (OR bit a bit)](../t-sql/language-elements/bitwise-or-transact-sql.md)
-* [^ (Bit a bit exclusivo)](../t-sql/language-elements/bitwise-exclusive-or-transact-sql.md)
+* [^ (Bit a bit OR exclusivo)](../t-sql/language-elements/bitwise-exclusive-or-transact-sql.md)
 * [~ (NÃO bit a bit)](../t-sql/language-elements/bitwise-not-transact-sql.md)
 * [^= (OR EQUALS exclusivo bit a bit)](../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)
 * [|= (OR EQUALS bit a bit)](../t-sql/language-elements/bitwise-or-equals-transact-sql.md)
@@ -163,8 +163,8 @@ Elementos de linguagem T-SQL para analíticos Platform System (APS) SQL Server P
 * [OBJECT_NAME](../t-sql/functions/object-name-transact-sql.md)
 * [OBJECTPROPERTY](../t-sql/functions/objectproperty-transact-sql.md)
 * [OIBJECTPROPERTYEX](../t-sql/functions/objectpropertyex-transact-sql.md)
-* [Funções escalares ODBCS](../t-sql/functions/odbc-scalar-functions-transact-sql.md)
-* [A cláusula OVER](../t-sql/queries/select-over-clause-transact-sql.md)
+* [Funções escalares odbcs](../t-sql/functions/odbc-scalar-functions-transact-sql.md)
+* [Cláusula OVER](../t-sql/queries/select-over-clause-transact-sql.md)
 * [PARSENAME](../t-sql/functions/parsename-transact-sql.md)
 * [PATINDEX](../t-sql/functions/patindex-transact-sql.md)
 * [PERCENTILE_CONT](../t-sql/functions/percentile-cont-transact-sql.md)
@@ -224,7 +224,7 @@ Elementos de linguagem T-SQL para analíticos Platform System (APS) SQL Server P
 * [YEAR](../t-sql/functions/year-transact-sql.md)
 * [XACT_STATE](../t-sql/functions/xact-state-transact-sql.md)
 
-## <a name="transactions"></a>Transactions
+## <a name="transactions"></a>Transações
 * [Transações](../t-sql/language-elements/transactions-sql-data-warehouse.md)
 
 ## <a name="diagnostic-sessions"></a>Sessões de diagnóstico
@@ -266,17 +266,17 @@ Elementos de linguagem T-SQL para analíticos Platform System (APS) SQL Server P
 * [SET DATEFIRST](../t-sql/statements/set-datefirst-transact-sql.md)
 * [SET DATEFORMAT](../t-sql/statements/set-dateformat-transact-sql.md)
 * [SET FMTONLY](../t-sql/statements/set-fmtonly-transact-sql.md)
-* [CONJUNTO IMPLICIT_TRANSACITONS](../t-sql/statements/set-implicit-transactions-transact-sql.md)
+* [SET IMPLICIT_TRANSACITONS](../t-sql/statements/set-implicit-transactions-transact-sql.md)
 * [SET LOCK_TIMEOUT](../t-sql/statements/set-lock-timeout-transact-sql.md)
-* [CONJUNTO NUMBERIC_ROUNDABORT](../t-sql/statements/set-numeric-roundabort-transact-sql.md)
+* [SET NUMBERIC_ROUNDABORT](../t-sql/statements/set-numeric-roundabort-transact-sql.md)
 * [SET QUOTED_IDENTIFIER](../t-sql/statements/set-quoted-identifier-transact-sql.md)
-* [NÚMERO DE LINHAS DO CONJUNTO](../t-sql/statements/set-rowcount-transact-sql.md)
+* [SET ROWCOUNT](../t-sql/statements/set-rowcount-transact-sql.md)
 * [SET TEXTSIZE](../t-sql/statements/set-textsize-transact-sql.md)
-* [DEFINIR NÍVEL DE ISOLAMENTO DA TRANSAÇÃO](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)
+* [SET TRANSACTION ISOLATION LEVEL](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)
 * [SET XACT_ABORT](../t-sql/statements/set-xact-abort-transact-sql.md)
 
 ## <a name="next-steps"></a>Próximas etapas
-Para obter informações de referência, consulte [instruções T-SQL](tsql-statements.md) e [exibições do sistema do T-SQL](tsql-system-views.md).
+Para obter mais informações de referência, consulte [instruções T-SQL](tsql-statements.md) e [exibições do sistema T-SQL](tsql-system-views.md).
 
 <!--Image references-->
 

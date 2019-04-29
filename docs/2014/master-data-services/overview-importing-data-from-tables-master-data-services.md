@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a3f9d1589c9e7434b16ce3f500b44eb1d9374cd8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62923267"
 ---
 # <a name="data-import-master-data-services"></a>Importação de dados (Master Data Services)
   Depois de criar um modelo para seus dados no [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], você pode começar a adicionar dados e fazer alterações nos dados, no banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .   Você usa as tabelas de preparo do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , procedimentos armazenados e o Master Data Manager.  

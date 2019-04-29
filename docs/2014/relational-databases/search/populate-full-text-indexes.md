@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: c8e9ea6b068f39e9e1e63bb5e9831f977619367f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046148"
 ---
 # <a name="populate-full-text-indexes"></a>Popular índices de texto completo
   A criação e a manutenção de um índice de texto completo envolvem popular o índice usando um processo chamado *população* (também conhecido como *rastreamento*).  
@@ -123,7 +123,7 @@ GO
   
 ```  
   
-### <a name="b-running-a-full-population-on-table"></a>b. Executando uma população completa em tabela  
+### <a name="b-running-a-full-population-on-table"></a>B. Executando uma população completa em tabela  
  O exemplo a seguir executa uma população completa na tabela `Production.Document` do banco de dados de exemplo `AdventureWorks` .  
   
 ```  
@@ -211,7 +211,7 @@ GO
 ##  <a name="crawl"></a> Solucionando problemas de erros em uma população de texto completo (rastreamento)  
  Quando um erro ocorrer durante um rastreamento, o recurso de registro de rastreamento de pesquisa de texto completo cria e mantém um log de rastreamento, que é um texto sem-formatação. Cada log de rastreamento corresponde a um catálogo de texto completo específico. Por logs de rastreamento padrão para uma determinada instância, neste caso, a primeira instância, estão localizados em %ProgramFiles%\Microsoft SQL Server\MSSQL12. Pasta MSSQLSERVER\MSSQL\LOG. O arquivo de log de rastreamento segue o seguinte esquema de nomeação:  
   
- SQLFT\<DatabaseID >\<FullTextCatalogID >. LOG [\<n >]  
+ SQLFT\<DatabaseID>\<FullTextCatalogID>.LOG[\<n>]  
   
  <`DatabaseID`>  
  A ID de um banco de dados. <`dbid`> é um dígito cinco número com zeros à esquerda.  

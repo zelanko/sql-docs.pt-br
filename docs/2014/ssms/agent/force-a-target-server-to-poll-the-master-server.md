@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7e9580839c18ed40a6163ab933ce40276bc413ab
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63044051"
 ---
 # <a name="force-a-target-server-to-poll-the-master-server"></a>Forçar um servidor de destino a sondar o servidor mestre
   Este tópico descreve como obrigar um servidor de destino a sondar o servidor mestre. O servidor de destino deve estar registrado no servidor mestre.  
@@ -30,13 +30,13 @@ ms.locfileid: "52764208"
 > [!NOTE]  
 >  Se o servidor mestre não estiver acessível quando o servidor de destino tentar carregar o status do trabalho, este será colocado em spool até que o servidor mestre esteja novamente acessível.  
   
--   **Antes de começar:**  [Limitações e restrições](#Restrictions), [segurança](#Security)  
+-   **Antes de começar:**  [Limitações e Restrições](#Restrictions), [Segurança](#Security)  
   
 -   **Para forçar um servidor de destino a sondar o servidor mestre, usando:**  [SQL Server Management Studio](#SSMS)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
  O servidor de destino deve estar registrado no servidor mestre. Você deve executar as instruções fornecidas neste tópico do servidor mestre.  
   
 ###  <a name="Security"></a> Segurança  

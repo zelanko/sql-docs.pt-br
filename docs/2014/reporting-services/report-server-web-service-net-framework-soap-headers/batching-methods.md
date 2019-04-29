@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8b7ec19101b1abcb2e0fb825923cce7a237149dc
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60153582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020140"
 ---
 # <a name="batching-methods"></a>Métodos de processamento em lote
   O uso de cabeçalhos SOAP no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] permite que você inclua vários métodos de serviço Web em uma única operação. Os métodos são executados dentro do escopo de uma única transação de banco de dados, na ordem que são chamados.  

@@ -1,5 +1,5 @@
 ---
-title: crypt_properties (Transact-SQL) | Microsoft Docs
+title: sys.crypt_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,23 +22,23 @@ ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b006e2795a79f9a7cbaf3686113bb2f1c7ad8172
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049733"
 ---
 # <a name="syscryptproperties-transact-sql"></a>sys.crypt_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retorna uma linha para cada propriedade criptográfica associada a um item protegível.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**class**|**tinyint**|Identifica a classe na qual a propriedade existe.<br /><br /> 1 = Objeto ou coluna<br /> 5 = Assembly|  
 |**class_desc**|**nvarchar(60)**|Descrição da classe na qual a propriedade existe.<br /><br /> OBJECT_OR_COLUMN<br /> ASSEMBLY|  
 |**major_id**|**int**|ID na qual a propriedade existe, interpretada de acordo com a classe.|  
-|**impressão digital**|**varbinary(32)**|Hash SHA-1 do certificado ou chave assimétrica usado.|  
+|**thumbprint**|**varbinary(32)**|Hash SHA-1 do certificado ou chave assimétrica usado.|  
 |**crypt_type**|**char(4)**|Tipo de criptografia.<br /><br /> SPVC = Criptografado pela chave privada de certificado<br /><br /> SPVA = Criptografado pela chave privada assimétrica<br /><br /> CPVC = Assinatura do contador pela chave privada de certificado<br /><br /> CPVA = Assinatura do contador pela chave assimétrica|  
 |**crypt_type_desc**|**nvarchar(60)**|Descrição do tipo de criptografia.<br /><br /> SIGNATURE BY CERTIFICATE<br /><br /> SIGNATURE BY ASYMMETRIC KEY<br /><br /> COUNTER SIGNATURE BY CERTIFICATE<br /><br /> COUNTER SIGNATURE BY ASYMMETRIC KEY|  
 |**crypt_property**|**varbinary(max)**|Bits assinados ou criptografados.|  

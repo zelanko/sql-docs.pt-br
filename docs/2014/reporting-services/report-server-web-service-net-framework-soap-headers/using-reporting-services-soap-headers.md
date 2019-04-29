@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f48be183398d4d441b5781c9f9467178c3011e32
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63012285"
 ---
 # <a name="using-reporting-services-soap-headers"></a>Usando cabeçalhos SOAP do Reporting Services
   A comunicação com um método de serviço Web que usa o SOAP segue um formato padrão. Parte desse formato são os dados codificados em um documento XML. O documento XML consiste em um elemento raiz **Envelope** que, por sua vez, consiste em um elemento **Body** obrigatório e um elemento **Header** opcional. O elemento **Body** contém os dados específicos à mensagem. O elemento **Header** opcional pode conter informações adicionais que não estão diretamente relacionadas à mensagem específica. Cada elemento filho do elemento **Header** é chamado de cabeçalho SOAP.  

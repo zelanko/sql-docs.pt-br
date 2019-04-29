@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 851106109d195ae6f5d6f66d3944e486d58504c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027836"
 ---
 # <a name="persistformatenum"></a>PersistFormatEnum
 Especifica o formato no qual salvar uma [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
-|Constante|Valor|Description|  
+|Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
 |**adPersistADTG**|0|Indica o formato do Microsoft Advanced dados TableGram (ADTG).|  
 |**adPersistADO**|1|Indica que o formato de Extensible Markup Language (XML) do ADO será usado. Esse valor é o mesmo que adPersistXML e é incluído para compatibilidade com versões anteriores.|  
@@ -34,7 +34,7 @@ Especifica o formato no qual salvar uma [conjunto de registros](../../../ado/ref
 |**adPersistProviderSpecific**|2|Indica que o provedor será mantido o **Recordset** usando seu próprio formato.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
- Pacote: **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

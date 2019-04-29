@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2378d438c575ad54a89f09c4c9ddcb157c246ffd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184830"
 ---
 # <a name="working-with-recordsets"></a>Trabalhar com conjuntos de registros
 O **Recordset** objeto possui recursos internos que permitem a você reorganizar a ordem dos dados no conjunto de resultados, para procurar um registro específico com base em critérios fornecidos por você e até mesmo para otimizar as operações de pesquisa usando índices. Se esses recursos estão disponíveis para uso depende do provedor e em alguns casos – como do [índice](../../../ado/reference/ado-api/index-property.md) propriedade – a estrutura da fonte de dados em si.  
@@ -90,7 +90,7 @@ O **Recordset** objeto possui recursos internos que permitem a você reorganizar
   
 -   *Operador* deve ser um dos seguintes: **\<**, **>**, **\< =**, **>=** , **<>**, **=**, ou **como**.  
   
--   *Valor* é o valor com o qual você irá comparar os valores de campo (por exemplo, `'Smith'`, `#8/24/95#`, `12.345`, ou `$50.00`). Use aspas simples (') com cadeias de caracteres e sinais numéricos (`#`) com datas. Para números, você pode usar a notação científica, cifrões e pontos decimais. Se *operador* é **como**, *valor* pode usar caracteres curinga. Somente o asterisco (\*) curinga (%) são permitidos caracteres de sinal de porcentagem e eles devem ser o último caractere na cadeia de caracteres. *Valor* não pode ser nulo.  
+-   *Valor* é o valor com o qual você irá comparar os valores de campo (por exemplo, `'Smith'`, `#8/24/95#`, `12.345`, ou `$50.00`). Use aspas simples (') com cadeias de caracteres e sinais numéricos (`#`) com datas. Para números, você pode usar a notação científica, cifrões e pontos decimais. Se *operador* é **como**, *valor* pode usar caracteres curinga. Somente o asterisco (\*) e o sinal de porcentagem (%) caracteres curinga são permitidos, e eles devem ser o último caractere na cadeia de caracteres. *Valor* não pode ser nulo.  
   
     > [!NOTE]
     >  Para incluir aspas simples (') no filtro *valor*, use duas aspas simples para representar um. Por exemplo, para filtrar por *o ' Malley*, a cadeia de caracteres de critérios deve ser `"col1 = 'O''Malley'"`. Para incluir aspas no início e final do valor do filtro, coloque a cadeia de caracteres entre sinais de sustenido (#). Por exemplo, para filtrar por *'1'*, a cadeia de caracteres de critérios deve ser `"col1 = #'1'#"`.  

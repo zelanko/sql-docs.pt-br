@@ -16,11 +16,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3d23edc53d6eb4f27fa1e836b999dd86809bba9a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63014028"
 ---
 # <a name="sqltables"></a>SQLTables
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "51669265"
   
  Para relatar catálogos disponíveis, esquemas e tipos de tabela, SQLTables faz uso especial de cadeias de caracteres vazias (ponteiros de comprimento zero bytes). As cadeias de caracteres vazias não são os valores padrões (ponteiros NULL).  
   
- O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client dá suporte ao relatório de informações de tabelas em servidores vinculados, aceitando um nome de duas partes para o parâmetro *CatalogName* : *Linked_Server_Name.Catalog_Name*.  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client dá suporte a informações de relatórios para tabelas em servidores vinculados, aceitando um nome de duas partes para o *CatalogName* parâmetro: *Linked_server_name*.  
   
  SQLTables retorna informações sobre quaisquer tabelas cujo nomes correspondem ao *TableName* e são de propriedade do usuário atual.  
   

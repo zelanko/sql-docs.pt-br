@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 15ac62cd4c379d51bc537f0cdf83942bc334fdbb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184888"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Funções do Visual Basic for Applications
 Visual Basic a seguir para as funções de aplicativos podem ser usado em expressões de CÁLCULO de modelagem de dados:  
@@ -30,10 +30,10 @@ Visual Basic a seguir para as funções de aplicativos podem ser usado em expres
 |-|-|-|-|-|-|  
 |Abs|Asc|Atn|CBool|CByte|CCur|  
 |CDate|CDbl|Chr|ChrB|ChrW|Chr$|  
-|$ ChrB|CInt|CLng|Cos|CSng|CStr|  
+|ChrB$|CInt|CLng|Cos|CSng|CStr|  
 |Cvar|CVDate|CVErr|data|Date$|DateAdd|  
 |DateDiff|DatePart|DateSerial|DateValue|Day|DDB|  
-|Erro|Error$|Exp|Fix|Formato|Format$|  
+|Erro|Error$|Exp|Fix|Formatar|Format$|  
 |FV|Hex|Hex$|Hora|IIF|InStr|  
 |Int|IPmt|IRR|IsDate|IsEmpty|IsError|  
 |IsNull|IsNumeric|IsObject|LCase|LCase$|Left (à esquerda)|  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2d3659fd80d09f5f0b5ec17301606b23810df3fe
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043004"
 ---
 # <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>Definir cálculos de inteligência de tempo com o Assistente de Business Intelligence
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "34026913"
 ## <a name="viewing-the-time-intelligence-enhancement"></a>Exibindo o aprimoramento de inteligência de tempo  
  Na última página do Assistente de Business Intelligence, é possível exibir as alterações que serão feitas no banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para um aprimoramento de inteligência de tempo, o assistente mudará a dimensão de tempo selecionada, a exibição da fonte de dados associada e o cubo associado conforme descrito na tabela a seguir.  
   
-|Objeto|Alterar|  
+|Object|Alterar|  
 |------------|------------|  
 |Dimensão de tempo|Adicionar um atributo para cada cálculo (ou exibição).|  
 |Exibição da fonte de dados|Adiciona uma coluna calculada à tabela de tempo para cada novo atributo da dimensão de tempo.|  

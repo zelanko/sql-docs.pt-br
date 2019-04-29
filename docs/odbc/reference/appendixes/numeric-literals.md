@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1b2effb3900e4277d82edee70439628c8adc837d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181323"
 ---
 # <a name="numeric-literals"></a>Literais numéricos
 Literais numéricos são usados quando valores de dados numéricos são armazenados em cadeias de caracteres. Para conversão de dados numéricos do SQL para uma cadeia de caracteres SQL_C_CHAR ou conversão de dados numéricos do C em uma cadeia de caracteres SQL_CHAR ou SQL_VARCHAR, sintaxe de literais numéricos é usado para especificar o que é armazenado no destino. Para a conversão de um numérico armazenado como uma cadeia de caracteres SQL_C_CHAR para dados numéricos do SQL ou um numérico armazenado como uma cadeia de caracteres SQL_CHAR para dados numéricos de C, essa sintaxe é usada para validar o que é armazenado na fonte.  
   
- Literais numéricos devem estar de acordo com a sintaxe definida na seção [sintaxe de literais numéricos](../../../odbc/reference/appendixes/numeric-literal-syntax.md) na gramática do apêndice c: SQL.  
+ Literais numéricos devem estar de acordo com a sintaxe definida na seção [sintaxe de literais numéricos](../../../odbc/reference/appendixes/numeric-literal-syntax.md) no Apêndice c: Gramática SQL.  
   
  Esta seção contém os tópicos a seguir.  
   

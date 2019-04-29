@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1e33b0c3e957e13ea6178a3d7e65279a3be84794
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59960292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185926"
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>Adicionar classificação interativa a uma tabela ou matriz (Construtor de Relatórios e SSRS)
   Adicione botões de classificação interativa para permitir que os usuários alterem a ordem de classificação de linhas e colunas em tabelas e matrizes. Esse recurso só é suportado em formatos de renderização que dão suporte à interação do usuário, como o HTML.  

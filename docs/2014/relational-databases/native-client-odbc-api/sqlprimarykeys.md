@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a12392f9e70fec2fae3b7790b43f12779b8868b5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046668"
 ---
 # <a name="sqlprimarykeys"></a>SQLPrimaryKeys
   Uma tabela pode ter uma coluna ou colunas que podem servir como identificadores de linha exclusivos, e as tabelas criadas sem uma restrição PRIMARY KEY retornam um resultado vazio definido como SQLPrimaryKeys. A função ODBC [SQLSpecialColumns](sqlspecialcolumns.md) candidatos de identificador para tabelas sem chaves primárias de linhas de relatórios.  

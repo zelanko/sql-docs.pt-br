@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b512ff83d0002ef4a7c79b48cd8829fc2dbb9ba3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049772"
 ---
 # <a name="descriptor-fields"></a>Campos de descritor
 Os descritores de contêm *cabeçalho* e *registro* campos que descrevem completamente a colunas ou parâmetros.  

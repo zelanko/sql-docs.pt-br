@@ -13,19 +13,19 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 255cf7d05fad66976a0196b78212af2b9a780a94
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62942843"
 ---
 # <a name="smo-programming---getting-started-in-visual-c-net"></a>Programação de SMO – Introdução no Visual C# .NET
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  [!INCLUDE[csprcs](../../includes/csprcs-md.md)] .NET é uma das linguagens de programação gerenciadas que são suportadas pelo common language runtime (CLR) em [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET. Para obter mais informações sobre a linguagem c#, consulte o [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] documentação do .NET. Você pode usar o [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] e o [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] para desenvolver aplicativos SMO.  
+  [!INCLUDE[csprcs](../../includes/csprcs-md.md)] .NET é uma das linguagens de programação gerenciadas que são suportadas pelo common language runtime (CLR) em [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET. Para obter mais informações sobre a linguagem C#, consulte a documentação do [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET. Você pode usar o [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] e o [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] para desenvolver aplicativos SMO.  
   
 ## <a name="references-and-imports"></a>Referências e importações  
- Depois de iniciar o projeto do [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], adicione referências aos assemblies SMO. Então importe os namespaces obrigatórios para que seu programa possa reconhecer os tipos SMO.  
+ Depois de iniciar o projeto do [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , adicione referências aos assemblies SMO. Então importe os namespaces obrigatórios para que seu programa possa reconhecer os tipos SMO.  
   
  No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], os assemblies SMO estão localizados na pasta C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\.  
   

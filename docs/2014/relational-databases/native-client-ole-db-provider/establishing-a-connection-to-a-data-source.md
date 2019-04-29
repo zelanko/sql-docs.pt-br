@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 263728218fd032c0814d73197cde56fc2d661e9c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183741"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>Estabelecendo uma conexão com uma fonte de dados
   Para acessar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client, o consumidor deve primeiro criar uma instância de um objeto de fonte de dados chamando o **CoCreateInstance** método. Um CLSID (identificador de classe) exclusivo identifica cada provedor OLE DB. Para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client, o identificador de classe é CLSID_SQLNCLI10. Você também pode usar o símbolo SQLNCLI_CLSID será resolvido para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client que é usado no SQLNCLI. h que você faz referência.  
@@ -30,7 +30,7 @@ ms.locfileid: "48137542"
   
  Se houver várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em execução no computador, o nome do servidor será especificado como ServerName\InstanceName.  
   
- O objeto da fonte de dados também expõe a interface **IDBInitialize**. Depois que as propriedades são definidas, a conexão com a fonte de dados é estabelecida pela chamada ao método **IDBInitialize::Initialize**. Por exemplo:  
+ O objeto da fonte de dados também expõe a interface **IDBInitialize**. Depois que as propriedades são definidas, a conexão com a fonte de dados é estabelecida pela chamada ao método **IDBInitialize::Initialize**. Por exemplo:   
   
 ```  
 CoCreateInstance(CLSID_SQLNCLI10,   

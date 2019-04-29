@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 81cdf1738d35d89c35c34500900be79f7702f877
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63045948"
 ---
 # <a name="microsoft-odbc-desktop-database-drivers"></a>Drivers de banco de dados de área de trabalho do Microsoft ODBC
 O ODBC é uma API que usa SQL Structured Query Language () como a linguagem de acesso do banco de dados. Você pode acessar uma grande variedade de sistemas de gerenciamento de banco de dados (DBMSs) com o mesmo código de origem ODBC que é incorporado diretamente no código-fonte do aplicativo. Com os Drivers de banco de dados de área de trabalho do Microsoft ODBC, um usuário de um aplicativo habilitado para ODBC pode abrir, consulta e atualizar um banco de dados da área de trabalho por meio da interface do ODBC.  
@@ -38,7 +38,7 @@ O ODBC é uma API que usa SQL Structured Query Language () como a linguagem de a
   
 -   dBASE  
   
--   Texto  
+-   Text  
   
  Ver [Driver ODBC do Visual FoxPro](../../odbc/microsoft/visual-foxpro-odbc-driver.md) para obter documentação detalhada sobre o Driver de ODBC do Microsoft Visual FoxPro®.  
   

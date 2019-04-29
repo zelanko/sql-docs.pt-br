@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ae8fddf7e008c1c97c30c18deb2d8aec60b77415
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185744"
 ---
 # <a name="browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs"></a>Procurar partes de relatório e definir uma pasta padrão (Construtor de Relatórios e SSRS)
   O modo mais fácil de criar um relatório é adicionar partes de relatório existentes, como tabelas e gráficos, ao relatório a partir da Galeria de Partes de Relatório. Quando você adiciona uma parte de relatório a seu relatório, também está adicionando tudo que ele deve ter para funcionar. Por exemplo, qualquer parte de relatório que exiba dados depende de um conjunto de dados, ou seja, uma consulta e uma conexão com uma fonte de dados. Depois que você adicionar a parte de relatório a seu relatório, poderá modificá-la tanto quanto necessário.  

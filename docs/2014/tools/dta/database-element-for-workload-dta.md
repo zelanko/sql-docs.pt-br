@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9f5b5c233a482672a0cc225364dbf1e4f3b4b645
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185408"
 ---
 # <a name="database-element-for-workload-dta"></a>Elemento de banco de dados para carga de trabalho (DTA)
   Especifica o banco de dados em que se encontra a tabela de rastreamento da carga de trabalho.  

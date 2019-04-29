@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d3896473a1fa08f769f13d94bd1d81f373cf67c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026596"
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility"></a>Cursores em bloco, cursores roláveis e compatibilidade com versões anteriores
 A existência de ambos **SQLFetchScroll** e **SQLExtendedFetch** representa o limpar primeiro dividido entre o aplicativo de Interface de programação (API), que é o conjunto de funções ODBC a chamadas do aplicativo e o Service Provider Interface (SPI), que é o conjunto de funções implementa o driver. Essa divisão é necessário para que ODBC 3. *x*, que usa **SQLFetchScroll**, bealigned com os padrões e também ser compatível com ODBC 2. *x*, que usa **SQLExtendedFetch**.  

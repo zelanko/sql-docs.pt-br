@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c522a8d278080d9249761309d29f465befe217d8
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184790"
 ---
 # <a name="xslt-transformations"></a>Transformações XSLT
 XSLT pode ser aplicada para o XML gerado para transformá-lo em outro formato. Noções básicas sobre o formato XML no ADO ajuda no desenvolvimento de modelos XSLT que podem transformá-lo em um formulário mais amigável.  

@@ -1,5 +1,5 @@
 ---
-title: sys. conversation_priorities (Transact-SQL) | Microsoft Docs
+title: sys.conversation_priorities (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,18 +23,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cf94358d5d4f06f787546ab98a8cbfcab2693bcb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63051406"
 ---
 # <a name="sysconversationpriorities-transact-sql"></a>sys.conversation_priorities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contém uma linha para cada prioridade de conversa criada no banco de dados atual, conforme mostrado na tabela a seguir: 
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |Priority_id|**int**|Um número que identifica exclusivamente a prioridade de conversa. Não é NULLABLE.|  
 |nome|**sysname**|Nome da prioridade de conversa. Não é NULLABLE.|  

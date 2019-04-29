@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c3372cccc36bf84ae9efd4159b5452957dca4758
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035255"
 ---
 # <a name="analysis-server-ltservergt-sql-server-configuration-manager"></a>Analysis Server &lt;servidor&gt; (SQL Server Configuration Manager)
   Este é o serviço que dá suporte ao Microsoft [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para exibir as propriedades do serviço, clique nele com o botão direito do mouse no painel de detalhes e clique em **Propriedades**.  

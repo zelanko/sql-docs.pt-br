@@ -18,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 08230bedfa4c9e62a890a34db9ac12d99cae589a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59957002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011935"
 ---
 # <a name="enable-and-disable-my-reports"></a>Habilitar e desabilitar Meus Relatórios
   O recurso Meus Relatórios aloca armazenamento pessoal no banco de dados do servidor de relatório, para que os usuários possam salvar seus relatórios em uma pasta particular. Como um administrador do servidor de relatório, você pode habilitar ou desabilitar esse recurso ou alterar a maneira como ele funciona, por meio das configurações de segurança que controlam o que os usuários podem fazer com esse workspace.  

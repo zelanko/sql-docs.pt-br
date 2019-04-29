@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 49ea3e0e87d9594ff16b3512533597ea9a9ea37c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59943972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185510"
 ---
 # <a name="display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs"></a>Exibir rótulos de pontos de dados fora de um gráfico de pizza (Construtor de Relatórios e SSRS)
   No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], o rótulo do gráfico de pizza é otimizado para exibir rótulos apenas em várias fatias de dados. Os rótulos poderão ser sobrepostos, se o gráfico de pizza contiver muitas fatias. Uma solução é exibir os rótulos fora do gráfico de pizza, o que pode criar mais espaço para rótulos de dados mais longos. Se os rótulos ainda estiverem sobrepostos, você poderá criar mais espaço para eles habilitando 3D. Isso reduz o diâmetro do gráfico de pizza criando mais espaço em torno do gráfico.  

@@ -22,11 +22,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 29446f34777682ff98ef6ec7c438c72db58e7167
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63033009"
 ---
 # <a name="syssyslockinfo-transact-sql"></a>sys.syslockinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47780874"
 > [!IMPORTANT]  
 >  Esse recurso foi alterado em relação às versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [alterações recentes em recursos do mecanismo de banco de dados no SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**rsc_text**|**nchar(32)**|Descrição textual de um recurso de bloqueio. Contém uma parte do nome de recurso.|  
 |**rsc_bin**|**binary(16)**|Recurso de bloqueio binário. Contém o recurso de bloqueio real que está contido no administrador de bloqueio. Esta coluna é incluída para o recurso de bloqueio de ferramentas que conhecem o formato de recurso de bloqueio para gerar seus próprios formatado e para executar junções próprias em **syslockinfo**.|  

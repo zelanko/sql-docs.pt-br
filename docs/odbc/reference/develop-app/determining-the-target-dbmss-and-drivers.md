@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 92da788205213394edc75257d8266752a2a9d8df
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63034943"
 ---
 # <a name="determining-the-target-dbmss-and-drivers"></a>Determinar os drivers e DBMSs de destino
 A próxima questão a considerar é, quais são o DBMSs de destino para o aplicativo e quais drivers estão disponíveis que dão suporte a esses DBMSs? Como aplicativos genéricos tendem a ser altamente interoperável, a pergunta do DBMSs de destino é mais aplicável a aplicativos personalizados e verticais. No entanto, a questão dos drivers de destino se aplica a todos os aplicativos, porque os drivers variam enormemente em velocidade, qualidade, suporte ao recurso e disponibilidade. Além disso, se os drivers devem ser redistribuídos com o aplicativo, o custo e a disponibilidade dos planos de licenciamento precisam ser considerados.  

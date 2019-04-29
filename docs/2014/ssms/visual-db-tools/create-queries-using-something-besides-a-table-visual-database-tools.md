@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f6cd83135da7e5c9f4dac9e41ff562551d14ab20
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184328"
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>Criar consultas usando algo além de uma tabela (Visual Database Tools)
   Sempre que você escreve uma consulta de recuperação, você articula as colunas e as linhas que você quer, e onde o processador de consulta deve procurar os dados originais. Tipicamente, esses dados originais consistem em uma tabela ou várias tabelas unidas. Mas os dados originais podem vir de fontes diferentes de tabelas. Na realidade, podem vir de exibições, consultas, sinônimos ou funções definidas pelo usuário que retornam uma tabela.  

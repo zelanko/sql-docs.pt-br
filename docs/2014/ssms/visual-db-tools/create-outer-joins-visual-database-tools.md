@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cd5c9a9cb2e40c7b0a235ff848c1f9a0025773a5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184312"
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>Criar junções externas (Visual Database Tools)
   Por padrão, o [Designer de Consulta e Exibição](visual-database-tools.md) cria uma junção interna entre tabelas. As junções internas eliminam as linhas que não correspondem a uma linha da outra tabela. Entretanto, as junções externas retornam todas as linhas de pelo menos uma das tabelas ou exibições mencionadas na cláusula FROM, contanto que essas linhas atendam algum critério de pesquisa WHERE ou HAVING. Se você quiser incluir linhas de dados no conjunto de resultados que não tenha uma correspondência na tabela unida, será possível criar uma junção externa.  

@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 80ba5505204f592ef04c939b3e84b6f3ca3c7c89
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62916740"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>Estimar o tamanho de um heap
   Você pode usar as seguintes etapas para estimar a quantidade de espaço exigida para armazenar dados em um heap:  

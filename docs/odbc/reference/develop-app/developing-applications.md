@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 85cb08e40ddd98d01216707b954d46b924053fc1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63034883"
 ---
 # <a name="developing-applications"></a>Desenvolver aplicativos
 Esta seção contém informações sobre como desenvolver aplicativos que usam a interface ODBC e drivers de implementação-lo.  
@@ -47,7 +47,7 @@ Esta seção contém informações sobre como desenvolver aplicativos que usam a
   
 -   [Descritores](../../../odbc/reference/develop-app/descriptors.md)  
   
--   [Transações](../../../odbc/reference/develop-app/transactions-odbc.md)  
+-   [Transactions](../../../odbc/reference/develop-app/transactions-odbc.md)  
   
 -   [Diagnóstico](../../../odbc/reference/develop-app/diagnostics.md)  
   
