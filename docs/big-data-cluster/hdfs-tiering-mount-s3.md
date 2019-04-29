@@ -1,5 +1,5 @@
 ---
-title: Montagem S3 para camadas do HDFS
+title: S3 de montagem para disposição em camadas do HDFS
 titleSuffix: SQL Server big data clusters
 description: Este artigo explica como configurar o HDFS disposição em camadas para montar um sistema de arquivo externo do S3 no HDFS em um cluster de big data do SQL Server 2019 (visualização).
 author: nelgson
@@ -10,18 +10,18 @@ ms.date: 04/15/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cd4a5fc600a937b5cc29ea4356a7cc2eb14966b2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
-ms.translationtype: HT
+ms.openlocfilehash: 79c09d5bcff26c9f5867e5b0fb38bd019b681b5c
+ms.sourcegitcommit: 89abd4cd4323ae5ee284571cd69a9fe07d869664
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63317115"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64330601"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>Como montar S3 para o HDFS disposição em camadas em um cluster de big data
 
 As seções a seguir fornecem um exemplo de como configurar o HDFS disposição em camadas com uma fonte de dados do armazenamento de S3.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - [Cluster de big data implantados](deployment-guidance.md)
 - [Ferramentas de big data](deploy-big-data-tools.md)
@@ -30,7 +30,7 @@ As seções a seguir fornecem um exemplo de como configurar o HDFS disposição 
 - Criar e carregar dados para um bucket S3 
   - Carregar CSV ou Parquet arquivos para o bucket S3. Isso é que os dados externos do HDFS que serão montados no HDFS no cluster de big data.
 
-## <a name="access-keys"></a>Chaves de acesso
+## <a name="access-keys"></a>Teclas de acesso
 
 1. Abra um prompt de comando em um computador cliente que possa acessar seu cluster de big data.
 
@@ -42,7 +42,7 @@ As seções a seguir fornecem um exemplo de como configurar o HDFS disposição 
    ```
 
    > [!TIP]
-   > Para obter mais informações sobre como criar S3 chaves de acesso (`<s3-access-key>`), consulte [chaves de acesso do S3](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys).
+   > Para obter mais informações sobre como criar chaves de acesso de S3, confira [chaves de acesso do S3](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys).
 
 ## <a id="mount"></a> Montar o armazenamento HDFS remoto
 
