@@ -24,22 +24,22 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b5a11a5e7090f89f4a31ffd15f8ebbce78ea395a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013395"
 ---
 # <a name="sysdmexeccomputenodeerrors-transact-sql"></a>sys.dm_exec_compute_node_errors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Erros de retorna que ocorrem no PolyBase nós de computação.  
   
-|Nome da coluna|Tipo de dados|Description|Intervalo|  
+|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |error_id|**nvarchar(36)**|Id numérico exclusivo associado ao erro.|Exclusivo em todos os erros de consulta no sistema|  
 |origem|**nvarchar(255)**|Descrição da fonte de thread ou processo||  
-|Tipo|**nvarchar(255)**|Tipo de erro.||  
+|type|**nvarchar(255)**|Tipo de erro.||  
 |create_time|**datetime**|A hora da ocorrência do erro||  
 |compute_node_id|**int**|Identificador do nó de computação específico|Consulte compute_node_id dos [DM exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
 |rexecution_id|**nvarchar(36)**|Identificador da consulta do PolyBase, se houver.||  

@@ -17,11 +17,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 57029e2aad7497e68eba2b2007102654f6aa58e0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013349"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Introdução para usar consultas XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -112,14 +112,14 @@ ms.locfileid: "56041620"
 |Predicados de valor numérico||  
 |Operadores aritméticos|mod|  
 |Funções de nó|**ancestor**, **ancestor-or-self**, **descendant**, **descendant-or-self (//)**, **following**, **following-sibling**, **namespace**, **preceding**, **preceding-sibling**|  
-|Funções da cadeia de caracteres|**string()**, **concat()**, **starts-with()**, **contains()**, **substring-before()**, **substring-after()**, **substring()**, **string-length()**, **normalize()**, **translate()**|  
+|Funções de cadeia de caracteres|**string()**, **concat()**, **starts-with()**, **contains()**, **substring-before()**, **substring-after()**, **substring()**, **string-length()**, **normalize()**, **translate()**|  
 |funções boolianas|**lang()**|  
 |Funções numéricas|**sum()**, **floor()**, **ceiling()**, **round()**|  
 |operador Union|&#124;|  
   
  Ao especificar consultas XPath em um modelo, observe o seguinte comportamento:  
   
--   XPath pode conter caracteres como, por exemplo, < ou & que tenham significados especiais no XML (e o modelo é um documento XML). Você deve sair desses caracteres usando a codificação XML &- ou especificar o XPath na URL.  
+-   XPath pode conter caracteres como < ou & que têm significados especiais no XML (e o modelo é um documento XML). Você deve substituir esses caracteres usando XML &-codificação ou especificar o XPath na URL.  
   
 ## <a name="see-also"></a>Consulte também  
  [Usando consultas XPath no SQLXML 4.0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md)  

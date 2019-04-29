@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 156a8e765812c14da0888148505311d52c267916
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62782379"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>Conectar-se ao SQL Server quando os administradores do sistema estão bloqueados
   Este tópico descreve como você pode recuperar o acesso ao [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] como administrador do sistema. Um administrador do sistema pode perder o acesso a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devido a um dos seguintes motivos:  
@@ -61,7 +61,7 @@ ms.locfileid: "52641557"
 5.  Sobre o **parâmetros de inicialização** guia o **especificar um parâmetro de inicialização** , digite `-m` e, em seguida, clique em `Add`. (É um traço seguido da letra m minúscula.)  
   
     > [!NOTE]  
-    >  Em algumas versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , não há nenhuma guia **Parâmetros de Inicialização** . Nesse caso, na guia Avançado** , clique duas vezes em **Parâmetros de Inicialização**. Os parâmetros são abertos em uma janela muito pequena. Tenha cuidado para não alterar os parâmetros existentes. No final, adicione um novo parâmetro `;-m` e clique em `OK`. (É um ponto-e-vírgula seguido da letra m minúscula.)  
+    >  Em algumas versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , não há nenhuma guia **Parâmetros de Inicialização** . Nesse caso, na guia **Avançado** , clique duas vezes em **Parâmetros de Inicialização**. Os parâmetros são abertos em uma janela muito pequena. Tenha cuidado para não alterar os parâmetros existentes. No final, adicione um novo parâmetro `;-m` e clique em `OK`. (É um ponto-e-vírgula seguido da letra m minúscula.)  
   
 6.  Clique em `OK`e, após a mensagem de reinicialização, o nome do servidor com o botão direito e, em seguida, clique em **reiniciar**.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "52641557"
 11. Sobre o **parâmetros de inicialização** guia, o **parâmetros existentes** caixa, selecione `-m` e, em seguida, clique em `Remove`.  
   
     > [!NOTE]  
-    >  Em algumas versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , não há nenhuma guia **Parâmetros de Inicialização** . Nesse caso, na guia Avançado** , clique duas vezes em **Parâmetros de Inicialização**. Os parâmetros são abertos em uma janela muito pequena. Remover o `;-m` que você adicionou anteriormente e, em seguida, clique em `OK`.  
+    >  Em algumas versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , não há nenhuma guia **Parâmetros de Inicialização** . Nesse caso, na guia **Avançado** , clique duas vezes em **Parâmetros de Inicialização**. Os parâmetros são abertos em uma janela muito pequena. Remover o `;-m` que você adicionou anteriormente e, em seguida, clique em `OK`.  
   
 12. Clique com o botão direito do mouse no nome do servidor e clique em **Reiniciar**.  
   

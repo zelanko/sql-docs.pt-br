@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b9e26930db786b986fd1f4ba633e2cc5953f3df3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62910432"
 ---
 # <a name="records-and-streams"></a>Registros e fluxos
 Atualmente, o ADO fornece o [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto como o principal meio de acesso a informações em fontes de dados, como bancos de dados relacionais. No entanto, alguns provedores oferecem suporte a [registro](../../../ado/reference/ado-api/record-object-ado.md) e [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objetos como objetos alternativos ou complementares com a qual os dados de provedores podem ser manipulados. Para obter informações específicas sobre **registro** comportamento, consulte a documentação do provedor.  

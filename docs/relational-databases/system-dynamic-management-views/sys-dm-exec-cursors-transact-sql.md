@@ -1,5 +1,5 @@
 ---
-title: DM exec_cursors (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_cursors (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 24648d8c52134e572dce82cf37cb59717f139eb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013426"
 ---
 # <a name="sysdmexeccursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,12 +46,12 @@ dm_exec_cursors (session_id | 0 )
   
 ## <a name="table-returned"></a>Tabela retornada  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|ID da sessão que detém o cursor.|  
 |**cursor_id**|**int**|ID do objeto do cursor.|  
 |**name**|**nvarchar(256)**|Nome do cursor como definido pelo usuário.|  
-|**Propriedades**|**nvarchar(256)**|Especifica as propriedades do cursor. Os valores das seguintes propriedades são concatenados para formar o valor desta coluna:<br />Interface de declaração<br />Tipo de cursor <br />Simultaneidade de cursores<br />Escopo do cursor<br />Nível de aninhamento do cursor<br /><br /> Por exemplo, o valor retornado nesta coluna pode ser "TSQL &#124; dinâmico &#124; otimista &#124; Global (0)".|  
+|**properties**|**nvarchar(256)**|Especifica as propriedades do cursor. Os valores das seguintes propriedades são concatenados para formar o valor desta coluna:<br />Interface de declaração<br />Tipo de cursor <br />Simultaneidade de cursores<br />Escopo do cursor<br />Nível de aninhamento do cursor<br /><br /> Por exemplo, o valor retornado nesta coluna pode ser "TSQL &#124; dinâmico &#124; otimista &#124; Global (0)".|  
 |**sql_handle**|**varbinary(64)**|Identificador do texto do lote que declarou o cursor.|  
 |**statement_start_offset**|**int**|Número de caracteres no procedimento em lote ou armazenado atualmente em execução no qual a instrução atualmente em execução se inicia. Pode ser usada junto com o **sql_handle**, o **statement_end_offset**e o [DM exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) a função de gerenciamento dinâmico para recuperar o atualmente executar a instrução para a solicitação.|  
 |**statement_end_offset**|**int**|Número de caracteres no procedimento em lote ou armazenado atualmente em execução no qual a instrução atualmente em execução termina. Pode ser usada junto com o **sql_handle**, o **statement_start_offset**e o **DM exec_sql_text** a função de gerenciamento dinâmico para recuperar o atualmente executar a instrução para a solicitação.|  
@@ -66,7 +66,7 @@ dm_exec_cursors (session_id | 0 )
 |**ansi_position**|**int**|Posição de cursor dentro do buffer de busca.|  
 |**worker_time**|**bigint**|Tempo gasto, em microssegundos, pelos trabalhados que executam este cursor.|  
 |**reads**|**bigint**|Número de leituras executadas pelo cursor.|  
-|**gravações**|**bigint**|Número de gravações executadas pelo cursor.|  
+|**writes**|**bigint**|Número de gravações executadas pelo cursor.|  
 |**dormant_duration**|**bigint**|Milissegundos desde o início da última consulta (aberta ou de busca) neste cursor.|  
   
 ## <a name="permissions"></a>Permissões  
@@ -75,23 +75,23 @@ dm_exec_cursors (session_id | 0 )
 ## <a name="remarks"></a>Comentários  
  A tabela a seguir fornece informações sobre a interface de declaração de cursor e inclui os valores possíveis para a coluna de propriedades.  
   
-|Propriedade|Description|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |API|O cursor foi declarado usando uma das APIs de acesso a dados (ODBC, OLEDB).|  
 |TSQL|O cursor foi declarado usando a sintaxe DECLARE CURSOR de Transact-SQL.|  
   
  A tabela a seguir fornece informações sobre o tipo de cursor e inclui os valores possíveis para a coluna de propriedades.  
   
-|Tipo|Description|  
+|Tipo|Descrição|  
 |----------|-----------------|  
 |Keyset|O cursor foi declarado como Keyset (conjunto de chaves).|  
-|Dinâmicos|O cursor foi declarado como Dynamic (dinâmico).|  
+|Dinâmico|O cursor foi declarado como Dynamic (dinâmico).|  
 |Instantâneo|O cursor foi declarado como Snapshot (instantâneo) ou Static (estático).|  
 |Fast_Forward|O cursor foi declarado como Fast Forward (avanço rápido).|  
   
  A tabela a seguir fornece informações sobre o tipo de simultaneidade de cursores e inclui os valores possíveis para a coluna de propriedades.  
   
-|Simultaneidade|Description|  
+|Simultaneidade|Descrição|  
 |-----------------|-----------------|  
 |Somente Leitura|O cursor foi declarado como somente leitura.|  
 |Scroll Locks|O cursor usa bloqueios de rolagem.|  
@@ -99,7 +99,7 @@ dm_exec_cursors (session_id | 0 )
   
  A tabela a seguir fornece informações sobre o tipo de escopo de cursor e inclui os valores possíveis para a coluna de propriedades.  
   
-|Escopo|Description|  
+|Escopo|Descrição|  
 |-----------|-----------------|  
 |Local|Especifica que o escopo do cursor é local para o lote, procedimento armazenado ou gatilho no qual o cursor foi criado.|  
 |Global|Especifica que o escopo do cursor é global para a conexão.|  

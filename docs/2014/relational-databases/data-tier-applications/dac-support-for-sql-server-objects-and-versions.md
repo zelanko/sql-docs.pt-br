@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2c3cda314aacc2cc1f589fc762a21be411e16016
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918430"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>Suporte de DAC para objetos e versões do SQL Server
   Um aplicativo da camada de dados (DAC) dá suporte aos objetos do [!INCLUDE[ssDE](../../includes/ssde-md.md)] mais usados.  
@@ -38,20 +38,20 @@ ms.locfileid: "53361908"
   
 |||  
 |-|-|  
-|DATABASE ROLE|FUNÇÃO: Valor de tabela|  
-|FUNÇÃO: Várias instruções com valor de tabela|FUNÇÃO: Escalar|  
-|ÍNDICE: Clusterizado|ÍNDICE: Não clusterizados|  
-|ÍNDICE: Espacial|ÍNDICE: Exclusivo|  
+|DATABASE ROLE|FUNCTION: Com valor de tabela embutida|  
+|FUNCTION: Com valor de tabela de várias instruções|FUNCTION: Escalar|  
+|INDEX: Clusterizado|INDEX: Não clusterizado|  
+|INDEX: Espacial|INDEX: Exclusivo|  
 |Logon|Permissões|  
 |Associações de função|SCHEMA|  
-|Estatísticas|PROCEDIMENTO ARMAZENADO: Transact-SQL|  
-|Sinônimos|TABELA: Restrição CHECK|  
-|TABELA: Ordenação|TABELA: Coluna, incluindo colunas computadas|  
-|TABELA: Restrição, padrão|TABELA: Restrição de chave estrangeira|  
-|TABELA: Restrição de índice|TABELA: Restrição de chave primária|  
-|TABELA: Restrição, exclusiva|GATILHO: DML|  
-|TIPO: HIERARCHYID, GEOMETRY, GEOGRAPHY|TIPO: Tipo de dados definido pelo usuário|  
-|TIPO: Tipo de tabela definidos pelo usuário|Usuário|  
+|Estatísticas|STORED PROCEDURE: Transact-SQL|  
+|Sinônimos|TABLE: Restrição CHECK|  
+|TABLE: Ordenação|TABLE: Coluna, incluindo colunas computadas|  
+|TABLE: Restrição, Padrão|TABLE: Restrição, Chave Estrangeira|  
+|TABLE: Restrição, Índice|TABLE: Restrição, Chave Primária|  
+|TABLE: Restrição, Exclusiva|TRIGGER: DML|  
+|TYPE: HIERARCHYID, GEOMETRY, GEOGRAPHY|TYPE: Tipo de Dados definido pelo usuário|  
+|TYPE: Tipo de Tabela definido pelo usuário|Usuário|  
 |VIEW||  
   
 ##  <a name="SupportByVersion"></a> Suporte a aplicativo da camada de dados das versões do SQL Server  
@@ -82,32 +82,32 @@ ms.locfileid: "53361908"
 ##  <a name="DeploymentLimitations"></a> Limitações de implantação de dados  
  Observe estas limitações de fidelidade do mecanismo de implantação de dados da Estrutura DAC no SQL Server 2012 SP1. As limitações se aplicam às seguintes ações da Estrutura DAC: implantar ou publicar um arquivo .dacpac, e importar um arquivo .bacpac.  
   
-1.  A perda de metadados em certas condições e tipos de base nas colunas sql_variant. Nos casos afetados, você verá um aviso com a seguinte mensagem:  **Determinadas propriedades em alguns tipos de dados usados dentro de uma coluna sql_variant não são preservadas quando implantado pela estrutura DAC.**  
+1.  A perda de metadados em certas condições e tipos de base nas colunas sql_variant. Nos casos afetados, você verá um aviso com a seguinte mensagem:  **Algumas propriedades em alguns tipos de dados usados dentro de uma coluna sql_variant não são preservadas quando a implantação é feita pela Estrutura DAC.**  
   
-    -   MONEY, SMALLMONEY, NUMERIC, DECIMAL de tipos de base:  Precisão não é preservada.  
+    -   Tipos base MONEY, SMALLMONEY, NUMERIC, DECIMAL:  A precisão não é preservada.  
   
         -   Tipos de base DECIMAL/NUMERIC com precisão 38: os metadados de sql_variant “TotalBytes” são sempre definidos como 21.  
   
-    -   Todos os tipos de base de texto:  O agrupamento do banco de dados padrão é aplicado a todo o texto.  
+    -   Todos os tipos de base de texto:  A ordenação padrão de banco de dados é aplicada a todo o texto.  
   
-    -   Tipos de base BINARY:  Propriedade de comprimento máximo não é preservada.  
+    -   Tipos de base BINARY:  A propriedade de comprimento máximo não é preservada.  
   
-    -   TEMPO, tipos de base de DATETIMEOFFSET:  Precisão é sempre definida como 7.  
+    -   Tipos de base TIME, DATETIMEOFFSET:  A precisão é sempre definida como 7.  
   
-2.  Perda de dados nas colunas sql_variant. Nos casos afetados, você verá um aviso com a seguinte mensagem:  **Haverá perda de dados quando um valor em uma coluna sql_variant DATETIME2 com escala maior que 3 for implantado pela estrutura DAC. O valor DATETIME2 está limitado a uma escala igual a 3 durante a implantação.**  
+2.  Perda de dados nas colunas sql_variant. No caso afetado, você verá um aviso com a seguinte mensagem:  **Haverá perda de dados quando um valor em uma coluna sql_variant DATETIME2 com escala maior que 3 for implantado pela estrutura DAC. O valor DATETIME2 está limitado a uma escala igual a 3 durante a implantação.**  
   
     -   Tipo de base DATETIME2 com escala maior que 3: a escala é limitada ao valor igual a 3.  
   
-3.  Ocorre falha na operação de implantação com as condições em colunas sql_variant a seguir. Nos casos afetados, você verá uma caixa de diálogo com a seguinte mensagem:  **Falha na operação devido a limitações de dados na estrutura DAC.**  
+3.  Ocorre falha na operação de implantação com as condições em colunas sql_variant a seguir. Nos casos afetados, você verá uma caixa de diálogo com a seguinte mensagem:  **Falha na operação devido a limitações de dados na Estrutura DAC.**  
   
-    -   Tipos de base datetime2, SMALLDATETIME e DATE:  Se o valor está fora do intervalo de data e hora - por exemplo, o ano é anterior a 1753.  
+    -   Tipos base DATETIME2, SMALLDATETIME e DATE:  Se o valor estiver fora do intervalo de data e hora, por exemplo, o ano será anterior a 1753.  
   
     -   Tipo de base DECIMAL, NUMERIC: quando a precisão do valor é maior que 28.  
   
 ##  <a name="Considerations"></a> Considerações adicionais para ações de implantação  
  Observe as seguintes considerações para ações da implantação de dados da Estrutura DAC:  
   
--   **Extrair/Exportar** – Nas ações que usam a Estrutura DAC para criar um pacote de um banco de dados – por exemplo, extrair um arquivo .dacpac, exportar um arquivo .bacpac – essas restrições não se aplicam. Os dados no pacote são uma representação de fidelidade total dos dados no banco de dados de origem. Se alguma dessas condições estiver presente no pacote, o log de extração/exportação conterá um resumo dos problemas através das mensagens observadas anteriormente. Esse é um aviso ao usuário sobre problemas potenciais de implantação de dados com o pacote criado. O usuário também verá a seguinte mensagem de resumo no log:  **Essas limitações não afetam a fidelidade dos tipos de dados e valores armazenados no pacote de DAC criado pela estrutura DAC; eles se aplicam somente aos tipos de dados e valores resultantes da implantação de um pacote de DAC em um banco de dados. Para obter mais informações sobre os dados que são afetados e como contornar essa limitação, consulte** [este tópico](https://go.microsoft.com/fwlink/?LinkId=267086).  
+-   **Extrair/Exportar** – Nas ações que usam a Estrutura DAC para criar um pacote de um banco de dados – por exemplo, extrair um arquivo .dacpac, exportar um arquivo .bacpac – essas restrições não se aplicam. Os dados no pacote são uma representação de fidelidade total dos dados no banco de dados de origem. Se alguma dessas condições estiver presente no pacote, o log de extração/exportação conterá um resumo dos problemas através das mensagens observadas anteriormente. Esse é um aviso ao usuário sobre problemas potenciais de implantação de dados com o pacote criado. O usuário também verá a seguinte mensagem de resumo no log:  **Essas limitações não afetam a fidelidade dos tipos de dados e valores armazenados no pacote DAC que tenha sido criado pela Estrutura DAC; elas se aplicam apenas aos tipos de dados e valores resultantes da implantação de um pacote DAC em um banco de dados. Para obter mais informações sobre os dados que são afetados e como contornar essa limitação, consulte** [este tópico](https://go.microsoft.com/fwlink/?LinkId=267086).  
   
 -   **Implantar/Publicar/Importar** – Nas ações que usam a Estrutura DAC para implantar um pacote em um banco de dados, como implantar ou publicar um arquivo .dacpac, e importar um arquivo .bacpac, essas limitações se aplicam. Os dados que resultam no banco de dados de destino não podem conter uma representação de fidelidade total dos dados no pacote. O log Implantar/Importar conterá uma mensagem, observada acima, para cada instância em que o problema for encontrado. A operação será bloqueada por erros (consulte a categoria 3 anterior), mas continuará com os outros avisos.  
   

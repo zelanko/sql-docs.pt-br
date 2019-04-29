@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7b66614a40176a0c6ee0ac4b0b9283fc0415ecc1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728640"
 ---
 # <a name="defining-a-fact-relationship"></a>Definindo uma relação de fatos
   Algumas vezes, os usuários desejam dimensionar medidas por itens de dados que estão na tabela de fatos ou consultar a tabela de fatos em busca de informações relacionadas específicas, como, por exemplo, números de faturas ou de ordens de compra relacionados a determinados fatos de vendas. Ao definir uma dimensão com base em um item da tabela de fatos, a dimensão será chamada *dimensão de fatos*. As dimensões de fatos também são conhecidas como dimensões de degeneração. Elas são úteis para agrupar em conjunto as linhas de tabelas de fatos relacionadas, como, por exemplo, todas as linhas que estiverem relacionadas a um determinado número de fatura. Embora seja possível colocar essas informações em uma tabela de dimensões separada no banco de dados relacional, criar uma tabela de dimensões separada para essas informações não fornecerá benefício algum, pois a tabela de dimensões tende a aumentar na mesma proporção que a tabela de fatos, duplicando dados e tornando maior sua complexidade.  
@@ -66,7 +66,7 @@ ms.locfileid: "52530675"
   
 14. No **atributos** painel do Designer de dimensão para o **detalhes do pedido de vendas pela Internet** dimensão, selecione **Sales Order Number**e, em seguida, altere o  **Nome** propriedade na janela Propriedades para `Item Description.`  
   
-15. No **NameColumn** propriedade de célula, clique no botão Procurar **(...)** . Na caixa de diálogo Coluna de Nome , selecione Produto na lista **Tabela de origem** , selecione **EnglishProductName** na **Coluna de origem**e clique em **OK**.  
+15. No **NameColumn** propriedade de célula, clique no botão Procurar **(...)** . Na caixa de diálogo **Coluna de Nome** , selecione **Produto** na lista **Tabela de origem** , selecione **EnglishProductName** na **Coluna de origem**e clique em **OK**.  
   
 16. Adicione o atributo **Número do Pedido de Vendas** à dimensão arrastando a coluna **SalesOrderNumber** da tabela **InternetSales** no painel **Exibição da Fonte de Dados** até o painel **Atributos** .  
   

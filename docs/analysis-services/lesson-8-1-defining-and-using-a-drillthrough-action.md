@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3b57c18d159c677fe10d99fbae1ea9e4bffbed9a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011124"
 ---
 # <a name="lesson-8-1---defining-and-using-a-drillthrough-action"></a>Lição 8-1: definindo e usando uma ação de detalhamento
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

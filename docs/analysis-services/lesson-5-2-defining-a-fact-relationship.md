@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3133c92dd5bf9b8aeae01b69393d2874fd9afa24
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752675"
 ---
 # <a name="lesson-5-2---defining-a-fact-relationship"></a>Lição 5-2: definindo uma relação de fatos
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -66,7 +66,7 @@ Nas tarefas deste tópico, você adiciona uma nova dimensão de cubo com base na
   
 14. No painel **Atributos** do Designer de Dimensão na dimensão **Detalhes do Pedido de Vendas pela Internet** , selecione **Número do Pedido de Vendas**e altere a propriedade **Name** na janela Propriedades para **Descrição do Item**.  
   
-15. No **NameColumn** propriedade de célula, clique no botão Procurar **(...)** . Na caixa de diálogo Coluna de Nome , selecione Produto na lista **Tabela de origem** , selecione **EnglishProductName** na **Coluna de origem**e clique em **OK**.  
+15. No **NameColumn** propriedade de célula, clique no botão Procurar **(...)** . Na caixa de diálogo **Coluna de Nome** , selecione **Produto** na lista **Tabela de origem** , selecione **EnglishProductName** na **Coluna de origem**e clique em **OK**.  
   
 16. Adicione o atributo **Número do Pedido de Vendas** à dimensão arrastando a coluna **SalesOrderNumber** da tabela **InternetSales** no painel **Exibição da Fonte de Dados** até o painel **Atributos** .  
   

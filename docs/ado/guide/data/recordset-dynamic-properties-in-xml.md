@@ -14,18 +14,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 50841931d26847ba339d64634d3eff4d7a7efc1b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62910876"
 ---
 # <a name="recordset-dynamic-properties-in-xml"></a>Propriedades dinâmicas do conjunto de registros em XML
 Atualmente, as seguintes propriedades específicas do provedor de conjunto de registros (do mecanismo de Cursor de cliente) são persistidas no formato XML:  
   
 -   Ressincronização de atualização  
   
--   Tabela exclusiva  
+-   Tabela única  
   
 -   Esquema exclusivo  
   

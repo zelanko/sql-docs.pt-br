@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d2d4c40b3dc4fada31a7e09b080ed9b3f29236ef
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62911578"
 ---
 # <a name="propertystrvalue-property-sqlserviceadvancedproperty-class"></a>Propriedade PropertyStrValue (classe SqlServiceAdvancedProperty)
   Obtém o valor da cadeia de caracteres da propriedade avançada.  

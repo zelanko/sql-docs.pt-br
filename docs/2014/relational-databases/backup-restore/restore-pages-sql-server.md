@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f45fe94756ffa30a458aabbb078f6b01c9821918
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62921036"
 ---
 # <a name="restore-pages-sql-server"></a>Restaurar páginas (SQL Server)
   Este tópico descreve como restaurar páginas no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A meta da restauração de uma página é restaurar uma ou mais páginas danificadas sem restaurar todo o banco de dados. Geralmente, as páginas candidatas à restauração foram marcadas como "suspeitas" por causa de um erro encontrado durante seu acesso. Páginas suspeitas são identificadas na tabela [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) do banco de dados **msdb** .  
@@ -62,7 +62,7 @@ ms.locfileid: "58536388"
   
     -   Log de transações  
   
-    -   Páginas de alocação: páginas GAM (Global Allocation Map), páginas SGAM (Shared Global Allocation Map) e páginas PFS (Page Free Space).  
+    -   Páginas de alocação: Páginas de alocação GAM (Map) global, Global alocação Map páginas SGAM (Shared) e páginas PFS Page Free Space ().  
   
     -   Página 0 de todos os arquivos de dados (a página de inicialização de arquivo)  
   

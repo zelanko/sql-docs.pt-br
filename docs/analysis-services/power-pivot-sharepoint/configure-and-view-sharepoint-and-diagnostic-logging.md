@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e2df09cb9bf167c0af28c240ff69f8666cce01a6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62988649"
 ---
 # <a name="configure-and-view-sharepoint-and-diagnostic-logging"></a>Configurar e exibir o log de diagnóstico e SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -116,7 +116,7 @@ ms.locfileid: "52410413"
 #### <a name="entries-for-power-pivot-services"></a>Entradas para Serviços do Power Pivot  
  A tabela seguinte descreve entradas para operações de servidor do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] mais prováveis de serem localizadas em um arquivo de log do SharePoint.  
   
-|Processar|Área|Categoria|Nível|Mensagem|Detalhes|  
+|Processar|Área|Category|Nível|Mensagem|Detalhes|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
 |w3wp.exe|Serviço do[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] |Uso|Detalhado|Não há nenhuma estatística de solicitação atual, nada para registrar em log.|A intervalos predefinidos, o serviço reporta estatísticas de resposta de consulta como um evento de uso para o sistema de coleta de dados de uso. Esta mensagem indica que não havia nenhuma estatística de consulta para reportar.|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Serviço|Front-end da Web|Detalhado|Começando a localizar um servidor de aplicativos para fonte de dados =\<*caminho*>|Quando ele receber uma solicitação de conexão, o serviço [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] identifica um [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)] disponível para gerenciar a solicitação. Se houver somente um servidor no farm, o servidor local aceitará a solicitação em todos os casos.|  
