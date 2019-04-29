@@ -11,11 +11,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 45e4f0578d06eeafc545bea2b6374a37b8ef7cbc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874062"
 ---
 # <a name="what39s-new-in-clr-integration"></a>O que&#39;s novos na integração CLR
   Estes são os novos recursos da integração CLR no [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]:  

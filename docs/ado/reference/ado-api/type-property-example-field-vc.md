@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a3185f7666d628b6461c3ae3a432393a6965be89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62910430"
 ---
 # <a name="type-property-example-field-vc"></a>Exemplo da propriedade Type (Campo) (VC++)
 Este exemplo demonstra a [tipo](../../../ado/reference/ado-api/type-property-ado.md) propriedade exibindo o nome da constante que corresponde ao valor da **tipo** propriedade de todos os as [campo](../../../ado/reference/ado-api/field-object.md) objetos no ***Funcionários*** tabela. A função FieldType é necessária executar este procedimento.  
@@ -155,22 +155,22 @@ void PrintComError(_com_error &e) {
 ```  
   
  **Campos na tabela de funcionários:**  
- **Nome: emp_id**  
- **Tipo: adChar**  
+ **Name: emp_id**  
+ **Type: adChar**  
  **Nome: fname**  
- **Tipo: adVarChar**  
+ **Type: adVarChar**  
  **Nome: minit**  
- **Tipo: adChar**  
+ **Type: adChar**  
  **Nome: lname**  
- **Tipo: adVarChar**  
+ **Type: adVarChar**  
  **Nome: job_id**  
- **Tipo: adSmallInt**  
- **Nome: job_lvl**  
- **Tipo: adUnsignedTinyInt**  
- **Nome: pub_id**  
- **Tipo: adChar**  
- **Nome: hire_date**  
- **Tipo: adDBTimeStamp**   
+ **Type: adSmallInt**  
+ **Name: job_lvl**  
+ **Type: adUnsignedTinyInt**  
+ **Name: pub_id**  
+ **Type: adChar**  
+ **Name: hire_date**  
+ **Type: adDBTimeStamp**   
 ## <a name="see-also"></a>Consulte também  
  [Objeto Field](../../../ado/reference/ado-api/field-object.md)   
  [Propriedade Type (ADO)](../../../ado/reference/ado-api/type-property-ado.md)

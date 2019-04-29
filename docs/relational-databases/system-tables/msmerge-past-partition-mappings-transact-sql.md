@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7ad8c5db6a067477e3e4e5d349a8faa2adba5199
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62903601"
 ---
 # <a name="msmergepastpartitionmappings-transact-sql"></a>MSmerge_past_partition_mappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,9 +34,9 @@ ms.locfileid: "52775388"
 |-----------------|---------------|-----------------|  
 |**publication_number**|**smallint**|O número da publicação, que é armazenado em **sysmergepublications**.|  
 |**tablenick**|**int**|O apelido da tabela publicada.|  
-|**ROWGUID**|**uniqueidentifier**|O identificador para a linha determinada.|  
+|**rowguid**|**uniqueidentifier**|O identificador para a linha determinada.|  
 |**partition_id**|**int**|A ID da partição à qual a linha pertence. O valor é -1 se a alteração de linha for relevante para todos os assinantes.|  
-|**geração**|**bigint**|O valor da geração na qual a alteração de partição ocorreu.|  
+|**generation**|**bigint**|O valor da geração na qual a alteração de partição ocorreu.|  
 |**reason**|**tinyint**|Interno-somente para uso.|  
   
 ## <a name="see-also"></a>Consulte também  

@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ef7f15fc1b54d18c71d7fccfd379454911cb8961
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62875004"
 ---
 # <a name="restore-database-files-page"></a>Restaurar banco de dados (página de arquivos)
   Use a página **Arquivos** da caixa de diálogo **Restaurar Banco de Dados** para gerenciar os arquivos específicos escolhidos para restaurar no banco de dados.  
@@ -31,7 +31,7 @@ ms.locfileid: "48093602"
  **Realoque todos os arquivos para pasta**  
  Realoque os arquivos restaurados.  
   
-|Opção|Description|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |**Pasta Arquivo de dados**|Insira ou procure o nome de pasta de arquivo de dados para o qual o arquivo de dados restaurado ou arquivos devem ser realocados.|  
 |**Pasta Arquivo de log**|Insira ou procure o arquivo de log ou pasta de arquivos para o qual o arquivo de log deve ser realocado.|  

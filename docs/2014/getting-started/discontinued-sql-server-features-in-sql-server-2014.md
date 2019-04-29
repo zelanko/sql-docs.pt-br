@@ -12,11 +12,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 028d14230f0f48f04bd94f327c1e46c5bee42b56
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774703"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>Recursos do SQL Server descontinuados no SQL Server 2014
   Este tópico descreve os recursos que não estão mais disponíveis após a atualização para o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -29,7 +29,7 @@ ms.locfileid: "53351010"
 ### <a name="discontinued-active-directory-helper-service"></a>Serviço auxiliar do Active Directory descontinuado  
  O serviço auxiliar do Active Directory e os componentes relacionados foram removidos. A tabela a seguir lista os componentes associados que são removidos como consequência:  
   
-|Categoria|Recurso descontinuado|Substituição|  
+|Category|Recurso descontinuado|Substituição|  
 |--------------|--------------------------|-----------------|  
 |Procedimentos armazenados do sistema|sp_ActiveDirectory_Obj<br /><br /> sp_ActiveDirectory_SCP<br /><br /> sp_ActiveDirectory_Start|Não há substituição disponível.|  
   

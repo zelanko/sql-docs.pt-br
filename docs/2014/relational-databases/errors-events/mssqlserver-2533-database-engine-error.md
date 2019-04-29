@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0b1882c04d4aacd76b59cb952781205edac84012
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62914801"
 ---
 # <a name="mssqlserver2533"></a>MSSQLSERVER_2533
     
@@ -30,7 +30,7 @@ ms.locfileid: "48074426"
 |Origem do evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC_PAGE_WAS_NOT_SEEN|  
-|Texto da mensagem|Erro de tabela: a página P_ID alocada à ID de objeto O_ID, ID de índice I_ID, ID de partição PN_ID, ID de unidade de alocação A_ID (tipo TYPE) não foi vista. A página pode ser inválida ou ter uma ID de unidade de alocação incorreta em seu cabeçalho.|  
+|Texto da mensagem|Erro de tabela: Page P_ID alocada à ID de objeto O_ID, ID de índice I_ID, ID de partição PN_ID, unidade de alocação A_ID ID (tipo TYPE) não foi Vista. A página pode ser inválida ou ter uma ID de unidade de alocação incorreta em seu cabeçalho.|  
   
 ## <a name="explanation"></a>Explicação  
  Uma página é alocada para a ID de unidade de alocação, *A_ID*, mas essa ID não está no cabeçalho da página. O cabeçalho tem outra ID de unidade de alocação. Se a ID de unidade de alocação contida no cabeçalho da página for de um objeto válido, talvez a página tenha um erro de incompatibilidade MSSQLEngine_2534.  

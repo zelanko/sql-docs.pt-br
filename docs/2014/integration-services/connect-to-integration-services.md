@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 02ab48e21ff7c0f881cb0d0b830ce03207666c7c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62833878"
 ---
 # <a name="connect-to-integration-services"></a>Conectar-se ao Integration Services
   Antes de você se conectar ao serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , o administrador deve conceder a você acesso para o serviço. Para obter mais informações, consulte [Grant Permissions to Integration Services Service](../../2014/integration-services/grant-permissions-to-integration-services-service.md).  

@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_4846 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: sql-server-2014
+ms.date: 04/04/2017
+ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: language-reference
 helpviewer_keywords:
 - 4846 (Database Engine error)
 ms.assetid: a455e809-1883-4c7d-b3e3-835ee5bfe258
@@ -13,14 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5b43cd194a2bfcf93b74b53fa2e9cb3a6a3eaff2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913786"
 ---
 # <a name="mssqlserver4846"></a>MSSQLSERVER_4846
-    
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  
 ## <a name="details"></a>Detalhes  
   
 |||  
@@ -33,14 +34,14 @@ ms.locfileid: "48137856"
 |Texto da mensagem|Falha no provedor de dados em massa ao alocar memória.|  
   
 ## <a name="explanation"></a>Explicação  
- Falha na alocação de memória.  
+Falha na alocação de memória.  
   
 ## <a name="user-action"></a>Ação do usuário  
- Siga estas etapas gerais para solucionar os erros de memória:  
+Siga estas etapas gerais para solucionar os erros de memória:  
   
 1.  Verifique se outros aplicativos ou serviços estão consumindo memória neste servidor. Reconfigure os aplicativos ou serviços menos críticos de maneira que eles consumam menos memória.  
   
-2.  Comece a coletar contadores do monitor de desempenho relativos a **SQL Server: Gerenciador de Buffer**, **SQL Server: Gerenciador de Memória**.  
+2.  Iniciar a coleta de contadores de desempenho para **do SQL Server: Gerenciador de buffer**, **do SQL Server: Gerenciador de memória**.  
   
 3.  Verifique os seguintes parâmetros de configuração da memória do SQL Server:  
   
@@ -50,19 +51,19 @@ ms.locfileid: "48137856"
   
     -   **memória mínima por consulta**  
   
-     Observe todas as configurações incomuns. Corrija-as conforme necessário. Considere os requisitos de memória para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. As configurações padrão estão listadas em "Definindo opções de configuração do servidor" nos Manuais Online do SQL Server.  
+    Observe todas as configurações incomuns. Corrija-as conforme necessário. Considere os requisitos de memória para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. As configurações padrão estão listadas em "Definindo opções de configuração do servidor" nos Manuais Online do SQL Server.  
   
 4.  Observe o resultado do DBCC MEMORYSTATUS e a forma como ele se altera quando você vê essas mensagens de erro.  
   
 5.  Verifique a carga de trabalho (por exemplo, o número de sessões simultâneas e de consultas em execução).  
   
- As seguintes ações podem disponibilizar mais memória para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+As seguintes ações podem disponibilizar mais memória para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   Se outros aplicativos além do SQL Server estiverem consumindo recursos, tente parar a execução desses aplicativos ou considere a possibilidade de executá-los em outro servidor. Isso eliminará a pressão de memória externa.  
   
 -   Se você tiver configurado a opção **memória máxima do servidor**, aumente sua configuração.  
   
- Execute os comandos DBCC a seguir para liberar diversos caches de memória do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Execute os comandos DBCC a seguir para liberar diversos caches de memória do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   DBCC FREESYSTEMCACHE  
   
@@ -70,6 +71,5 @@ ms.locfileid: "48137856"
   
 -   DBCC FREEPROCCACHE  
   
- Se o problema persistir, será necessário aprofundar as investigações e possivelmente reduzir a carga de trabalho.  
-  
+Se o problema persistir, será necessário aprofundar as investigações e possivelmente reduzir a carga de trabalho.  
   

@@ -22,17 +22,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9f509b2a2544c67c9113bc700b7d98bfd4a24024
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753809"
 ---
 # <a name="clr-stored-procedures"></a>Procedimentos armazenados CLR
   Os procedimentos armazenados são rotinas que não podem ser usadas em expressões escalares. Diferentemente das funções escalares, eles podem retornar resultados tabulares e mensagens para o cliente, invocar instruções DDL (linguagem de definição de dados) e DML (linguagem de manipulação de dados) e retornar parâmetros de saída. Para obter informações sobre as vantagens da integração CLR e escolhendo entre o código gerenciado e [!INCLUDE[tsql](../../includes/tsql-md.md)], consulte [visão geral da integração CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
   
 ## <a name="requirements-for-clr-stored-procedures"></a>Requisitos dos procedimentos armazenados CLR  
- No common language runtime (CLR), procedimentos armazenados são implementados como métodos estáticos públicos em uma classe em um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assembly. O método estático pode ser declarado como nulo ou retornar um valor inteiro. Se retornar um valor inteiro, o inteiro retornado será tratado como o código de retorno do procedimento. Por exemplo:  
+ No common language runtime (CLR), procedimentos armazenados são implementados como métodos estáticos públicos em uma classe em um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assembly. O método estático pode ser declarado como nulo ou retornar um valor inteiro. Se retornar um valor inteiro, o inteiro retornado será tratado como o código de retorno do procedimento. Por exemplo:   
   
  `EXECUTE @return_status = procedure_name`  
   

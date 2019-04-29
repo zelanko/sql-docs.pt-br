@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4fca7dab7d99c3516d93cd090b4446180d2ebf63
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62938886"
 ---
 # <a name="audit-dbcc-event-class"></a>Classe de evento Audit DBCC
   A classe de evento **Audit DBCC** ocorre sempre que um comando DBCC é emitido.  

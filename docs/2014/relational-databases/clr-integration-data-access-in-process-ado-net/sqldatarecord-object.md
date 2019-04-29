@@ -1,5 +1,5 @@
 ---
-title: Objeto SqlDataRecord | Microsoft Docs
+title: SqlDataRecord Object | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,11 +14,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c688d41a1f27c6f3d620e9395d2a908d9b9cddd1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874679"
 ---
 # <a name="sqldatarecord-object"></a>Objeto SqlDataRecord
   O objeto `SqlDataRecord` representa uma única linha de dados, junto com seus metadados relacionados.  

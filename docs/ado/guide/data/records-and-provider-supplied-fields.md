@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6c64555e0035de8a06d3bb9227262f4202f73f9a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62910460"
 ---
 # <a name="records-and-provider-supplied-fields"></a>Registros e campos fornecidos pelo provedor
 Quando um [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto é aberto, sua origem pode ser a linha atual de um aberto [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md), uma URL absoluta ou uma URL relativa em conjunto com um aberto [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto .  
@@ -67,8 +67,8 @@ Quando um [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto
 |RESOURCE_CONTENTCLASS|AdVarWChar|Indica o tipo MIME do documento, que indica o formato como "`text/html`".|  
 |RESOURCE_CONTENTLANGUAGE|AdVarWChar|Indica o idioma no qual o conteúdo é armazenado.|  
 |RESOURCE_CREATIONTIME|adFileTime|Somente leitura. Indica uma estrutura FILETIME que contém a hora em que o recurso foi criado. A hora é relatada no formato Tempo Universal Coordenado (UTC).|  
-|RESOURCE_LASTACCESSTIME|adFileTime|Somente leitura. Indica uma estrutura FILETIME que contém a hora em que o recurso foi acessado pela última vez. A hora está no formato UTC. Os membros FILETIME são zero se o provedor não dá suporte a esse membro de tempo.|  
-|RESOURCE_LASTWRITETIME|adFileTime|Somente leitura. Indica uma estrutura FILETIME que contém a hora em que o recurso foi gravado pela última vez. A hora está no formato UTC. Os membros FILETIME são zero se o provedor não dá suporte a esse membro de tempo.|  
+|RESOURCE_LASTACCESSTIME|AdFileTime|Somente leitura. Indica uma estrutura FILETIME que contém a hora em que o recurso foi acessado pela última vez. A hora está no formato UTC. Os membros FILETIME são zero se o provedor não dá suporte a esse membro de tempo.|  
+|RESOURCE_LASTWRITETIME|AdFileTime|Somente leitura. Indica uma estrutura FILETIME que contém a hora em que o recurso foi gravado pela última vez. A hora está no formato UTC. Os membros FILETIME são zero se o provedor não dá suporte a esse membro de tempo.|  
 |RESOURCE_STREAMSIZE|asUnsignedBigInt|Somente leitura. Indica o tamanho do fluxo de padrão do recurso, em bytes.|  
 |RESOURCE_ISCOLLECTION|adBoolean|Somente leitura. True se o recurso é uma coleção, como um diretório. False se o recurso é um arquivo simple.|  
 |RESOURCE_ISSTRUCTUREDDOCUMENT|adBoolean|True se o recurso for um documento estruturado. False se o recurso não é um documento estruturado. Ele pode ser uma coleção ou um arquivo simples.|  

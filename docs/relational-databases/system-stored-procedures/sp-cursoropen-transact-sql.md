@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7410371f7d96f9770536a129de3a916b5f297a74
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724017"
 ---
 # <a name="spcursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ sp_cursoropen cursor OUTPUT, stmt
   
  Assim como acontece com *scrollopt*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode substituir o solicitada *ccopt* valores.  
   
- *número de linhas*  
+ *rowcount*  
  O número de linhas do buffer de busca a serem usadas com AUTO_FETCH. O padrão é 20 linhas. *número de linhas* tem um comportamento diferente quando atribuído como um valor de entrada versus um valor de retorno.  
   
 |Como valor de entrada|Como valor de retorno|  
@@ -146,7 +146,7 @@ sp_cursoropen cursor OUTPUT, stmt
  Um cursor de avanço foi fechado automaticamente.  
   
 > [!NOTE]  
->  Se o procedimento sp_cursoropen for executado com êxito, serão enviados os parâmetros de retorno RPC e um conjunto de resultados com informações de formato de coluna TDS (mensagens 0xa1 e 0xa0). Caso contrário, uma ou mais mensagens de erro TDS serão enviadas. Em ambos os casos, nenhum dado de linha será retornado e o *feito* contagem de mensagens será zero. Se você estiver usando uma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior à 7.0, 0xa0 e 0xa1 (padrão para instruções SELECT) serão retornadas junto com os fluxos de token 0xa5 e 0xa4. Se você estiver usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, 0x81 será retornado (padrão para instruções SELECT) junto com os fluxos de token 0xa5 e 0xa4.  
+>  Se o procedimento sp_cursoropen for executado com êxito, o RPC retornar parâmetros e um conjunto de resultados com informações de formato de coluna TDS (0xa0 e 0xa1 mensagens) são enviadas. Caso contrário, uma ou mais mensagens de erro TDS serão enviadas. Em ambos os casos, nenhum dado de linha será retornado e o *feito* contagem de mensagens será zero. Se você estiver usando uma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior à 7.0, 0xa0 e 0xa1 (padrão para instruções SELECT) serão retornadas junto com os fluxos de token 0xa5 e 0xa4. Se você estiver usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, 0x81 será retornado (padrão para instruções SELECT) junto com os fluxos de token 0xa5 e 0xa4.  
   
 ## <a name="remarks"></a>Comentários  
   
@@ -207,7 +207,7 @@ sp_cursoropen cursor OUTPUT, stmt
 ### <a name="boundparam-parameter"></a>Parâmetro bound_param  
  Quaisquer parâmetros após o quinto são passados para o plano de instrução como parâmetros de entrada. O primeiro desses parâmetros deve ser uma cadeia de caracteres neste formato:  
   
- *{nome da variável local de tipo de dados} [,... n].*  
+ *{nome da variável local de tipo de dados} [,... n]*  
   
  Os parâmetros subsequentes são usados para passar os valores a serem substituídos para o *nome da variável local* na instrução.  
   

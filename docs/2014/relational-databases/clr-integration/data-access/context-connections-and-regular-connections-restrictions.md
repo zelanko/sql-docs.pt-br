@@ -14,11 +14,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3b721409f0915cb1e13861f6481909e02af37cb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919165"
 ---
 # <a name="restrictions-on-regular-and-context-connections"></a>Restrições em conexões comuns e de contexto
   Este tópico discute as restrições associadas à execução de código no [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] processo por meio do contexto e conexões normais.  
@@ -47,7 +47,7 @@ ms.locfileid: "48163316"
 ## <a name="restrictions-on-regular-connections"></a>Restrições em conexões comuns  
  Ao desenvolver seu aplicativo, leve em consideração as restrições a seguir que se aplicam a conexões comuns:  
   
--   Não existe suporte para a execução assíncrona de comandos em servidores internos. Incluir "async=true" na cadeia de conexão de um comando e, depois, executar o comando resultará na geração de `System.NotSupportedException`. Esta mensagem será exibida: "Não existe suporte para processamento assíncrono quando executado dentro do processo do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Não existe suporte para a execução assíncrona de comandos em servidores internos. Incluir "async=true" na cadeia de conexão de um comando e, depois, executar o comando resultará na geração de `System.NotSupportedException`. Essa mensagem será exibida: "O processamento assíncrono não é suportado quando em execução dentro de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] processo."  
   
 -   Não existe suporte para o objeto `SqlDependency`.  
   

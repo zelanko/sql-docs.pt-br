@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8848497ed90909079b9c0142bc570f00466110b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027523"
 ---
 # <a name="status-property-example-vc"></a>Exemplo da propriedade Status (VC++)
 Este exemplo usa o [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) propriedade para exibir quais registros foram modificados em uma operação em lote antes de uma atualização em lotes tiver ocorrido.  

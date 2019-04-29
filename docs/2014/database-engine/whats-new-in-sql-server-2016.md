@@ -14,11 +14,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0650d15ece36593139ae804f6535315eacbf9294
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843436"
 ---
 # <a name="what39s-new-database-engine"></a>O que&#39;novo para s (mecanismo de banco de dados)
   Esta versão mais recente do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] apresenta novos recursos e aprimoramentos que aumentam o poder e a produtividade de arquitetos, desenvolvedores e administradores que criam, desenvolvem e mantêm sistemas de armazenamento de dados. Estas são as áreas nas quais o [!INCLUDE[ssDE](../includes/ssde-md.md)] foi aprimorado.  
@@ -94,7 +94,7 @@ ms.locfileid: "53371548"
   
      Use um índice columnstore clusterizado para melhorar a compactação de dados e o desempenho de consultas para cargas de trabalho de data warehouse que basicamente executam carregamentos em massa e consultas somente leitura. Uma vez que o índice columnstore clusterizado é atualizável, a carga de trabalho pode executar muitas operações de inserção, atualização e exclusão. Para obter mais informações, consulte [índices Columnstore descritos](../relational-databases/indexes/columnstore-indexes-described.md) e [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md).  
   
--   **PLANO DE EXECUÇÃO**  
+-   **SHOWPLAN**  
   
      SHOWPLAN exibe informações sobre índices columnstore. O **EstimatedExecutionMode** e **ActualExecutionMode** propriedades têm dois valores possíveis: **Em lotes** ou **linha**.  O **armazenamento** propriedade tem dois valores possíveis: **RowStore** e **ColumnStore**.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "53371548"
   
   
 ###  <a name="OnlineEvent"></a> Classe de evento de operação de índice online  
- O relatório de andamento para a classe de evento da operação de índice online agora tem duas novas colunas de dados: **PartitionId** e **PartitionNumber**. Para obter mais informações, consulte [Progress Report: Classe de evento de operação de índice online](../relational-databases/event-classes/progress-report-online-index-operation-event-class.md).  
+ O relatório de andamento para a classe de evento de operação de índice online agora tem duas novas colunas de dados: **PartitionId** e **PartitionNumber**. Para obter mais informações, consulte [Progress Report: Classe de evento de operação de índice online](../relational-databases/event-classes/progress-report-online-index-operation-event-class.md).  
   
   
 ###  <a name="Compat"></a> Nível de compatibilidade do banco de dados  

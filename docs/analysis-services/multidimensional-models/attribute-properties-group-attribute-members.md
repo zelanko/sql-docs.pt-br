@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 622258222ef4f9dc8e4e4944daf584bc5780ea6e
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63015689"
 ---
 # <a name="attribute-properties---group-attribute-members"></a>Propriedades do atributo – Agrupar membros do atributo
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,9 +22,9 @@ ms.locfileid: "51813709"
   
  A propriedade **DiscretizationMethod** de um atributo controla como os membros são agrupados.  
   
-|Configuração**DiscretizationMethod** |Description|  
+|Configuração**DiscretizationMethod** |Descrição|  
 |--------------------------------------|-----------------|  
-|**Nenhuma**|Exibe os membros.|  
+|**Nenhum**|Exibe os membros.|  
 |**Automático**|Seleciona o método que melhor representa os dados: o método **EqualAreas** ou o método **Clusters** .|  
 |**EqualAreas**|Tenta dividir os membros do atributo em grupos com o mesmo número de membros.|  
 |**Clusters**|Tenta dividir os membros do atributo em grupos por meio de amostragem dos dados de treinamento, inicializando um número aleatório de pontos e executando várias interações do algoritmo de clustering Expectation Maximization (EM).<br /><br /> Esse método é útil pois funciona com qualquer curva de distribuição, mas é mais dispendioso em termos de tempo de processamento.|  
@@ -58,7 +58,7 @@ ms.locfileid: "51813709"
   
  O parâmetro `<Bucket name>` é uma expressão de cadeia de caracteres que pode incorporar um conjunto de variáveis para representar informações de membros ou grupos de membros como parte do nome do grupo de membros:  
   
-|Variável|Description|  
+|Variável|Descrição|  
 |--------------|-----------------|  
 |% {Primeiro membro do bloco}|O nome do primeiro membro que será incluído no grupo de membros atual.|  
 |% {Último membro do bloco}|O nome do último membro que será incluído no grupo de membros atual.|  

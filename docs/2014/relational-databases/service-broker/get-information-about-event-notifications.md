@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9786faaf44724b1a2452bd5304b63deb2c9ea54e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63015305"
 ---
 # <a name="get-information-about-event-notifications"></a>Obter informações sobre notificações de eventos
   As exibições de catálogo a seguir estão disponíveis para consultar metadados sobre notificações de eventos.  
@@ -29,14 +29,14 @@ ms.locfileid: "48191476"
 -   [sys.event_notifications &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-event-notifications-transact-sql)  
   
 > [!NOTE]  
->  Para exibir metadados sobre qualquer notificação de eventos em **sys.event_notifications** criada no nível do banco de dados, é necessário ter, no mínimo, o seguinte: permissão CONTROL, ALTER, TAKE OWNERSHIP ou VIEW DEFINITION no banco de dados, permissão ALTER ANY DATABASE EVENT NOTIFICATION ou ser o proprietário da notificação de eventos. Para notificações de eventos criadas em uma fila específica, é necessário ter, no mínimo, o seguinte: permissão CONTROL, ALTER, TAKE OWNERSHIP ou VIEW DEFINITION no objeto, permissão ALTER ANY DATABASE EVENT NOTIFICATION ou ser o proprietário da notificação de eventos.  
+>  Para exibir metadados sobre qualquer notificação de evento em **event_notifications** criados no banco de dados do nível, no mínimo deve ter o seguinte: CONTROLAR, ALTER, TAKE OWNERSHIP ou exibir permissão DEFINITION no banco de dados, ser o proprietário da notificação de eventos ou ter a permissão ALTER ANY DATABASE EVENT NOTIFICATION. As notificações de eventos criadas em uma fila específica, no mínimo você deve ter o seguinte: CONTROLAR, ALTER, TAKE OWNERSHIP ou exibir permissão DEFINITION no objeto, ser o proprietário da notificação de eventos ou ter a permissão ALTER ANY DATABASE EVENT NOTIFICATION.  
   
  **Para obter informações sobre notificações de eventos em nível de servidor**  
   
 -   [sys.server_event_notifications &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql)  
   
 > [!NOTE]  
->  É necessário ter, no mínimo, o seguinte: permissão CONTROL ou VIEW ANY DEFINITION no servidor, permissão ALTER ANY EVENT NOTIFICATION ou ser o logon ou proprietário da notificação de eventos para poder exibir metadados sobre qualquer notificação de eventos em **sys.server_event_notifications**.  
+>  No mínimo, você deve ter o seguinte: CONTROLAR ou exibir qualquer permissão DEFINITION no servidor, ser o logon ou proprietário da notificação de eventos ou ter a permissão ALTER ANY EVENT NOTIFICATION para exibir metadados sobre qualquer notificação de evento em **server_event_notifications**.  
   
  **Para obter informações sobre todos os eventos que podem acionar notificações de eventos**  
   

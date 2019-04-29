@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 49ac59377001eb6007f7f647d3817993c6121b74
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866670"
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>Criar e gerenciar uma partição local (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "34024693"
   
 3.  Na coluna Origem, clique no botão Procurar (. .) para abrir a caixa de diálogo Origem da Partição.  
   
-     ![Coluna de origem no painel partição](../../analysis-services/multidimensional-models/media/ssas-partitionsource.png "coluna de origem no painel de partição")  
+     ![Coluna de origem no painel de partição](../../analysis-services/multidimensional-models/media/ssas-partitionsource.png "coluna de origem no painel de partição")  
   
 4.  No Tipo de Associação, selecione **Associação de Consulta**. A consulta SQL que seleciona os dados aparece automaticamente.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "34024693"
 > [!NOTE]  
 >  Em vez de filtrar dados em uma partição, é possível usar a mesma consulta para criar uma consulta nomeada na DSV e, em seguida, basear a partição na consulta nomeada.  
   
-## <a name="option-2-use-tables-views-or-named-queries"></a>Opção 2: Use tabelas, exibições ou consultas nomeadas  
+## <a name="option-2-use-tables-views-or-named-queries"></a>Opção 2: Usar tabelas, exibições ou consultas nomeadas  
  Se a DSV já organiza fatos em tabelas individuais (por exemplo, por ano ou trimestre), você pode criar partições baseadas em uma tabela individual, onde cada partição tem sua própria tabela de fonte de dados. É essencialmente dessa forma que grupos de medidas são particionados por padrão, mas, no caso de várias partições, você quebra a partição original em várias partições, e mapeia cada nova partição para a tabela de fonte de dados que fornece os dados.  
   
  As exibições e consultas nomeadas são equivalentes funcionais de tabelas, pois os três objetos são definidos na DSV e associados a uma partição usando a opção Associação de Tabela na caixa de diálogo Origem da Partição. Você pode criar uma exibição ou consulta nomeada para gerar o segmento de dados necessário a cada partição. Para obter mais informações, consulte [Definir consultas nomeadas em uma exibição da fonte de dados &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md).  
@@ -118,8 +118,8 @@ ms.locfileid: "34024693"
  Como etapa final, em geral você deseja remover a partição padrão que se baseava na própria tabela (caso ela ainda exista); caso contrário, a consulta baseada na tabela completa será sobreposta pelas partições baseadas na consulta.  
   
 ## <a name="see-also"></a>Consulte também  
- [Partições & #40; Analysis Services - dados multidimensionais & #41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Partições &#40;Analysis Services – Dados Multidimensionais&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [Partições remotas](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
- [Mesclar partições no Analysis Services & #40; SSAS Multidimensional & #41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [Mesclar partições no Analysis Services &#40;SSAS – Multidimensional&#41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

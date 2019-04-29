@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d559defe1dd08f26077738cdd0aea219e8f7554b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890541"
 ---
-# <a name="lesson-6-using-parameters-with-the-project-deployment-model"></a>Lição 6: Usando parâmetros com o modelo de implantação de projeto
+# <a name="lesson-6-using-parameters-with-the-project-deployment-model"></a>Lição 6: Como usar parâmetros com o modelo de implantação de projeto
   O SQL Server 2012 apresenta um novo modelo de implantação em que você pode implantar seus projetos no servidor do Integration Services. O servidor do Integration Services permite gerenciar e executar pacotes e configurar valores de tempo de execução para pacotes.  
   
  Nesta lição, você modificará o pacote que você criou na [lição 5: Adicionando configurações de pacote para o modelo de implantação de pacote](lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md) para usar o modelo de implantação do projeto. Você substitui o valor de configuração com um parâmetro para especificar o local de dados de exemplo. Você também pode copiar o pacote concluído da Lição 5 que está incluso no tutorial.  

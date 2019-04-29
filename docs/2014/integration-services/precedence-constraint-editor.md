@@ -16,21 +16,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 639436ec39301189ae172ce9cb7f58ea96c9cc11
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889448"
 ---
 # <a name="precedence-constraint-editor"></a>Editor de Restrição de Precedência
   Use a caixa de diálogo **Editor de Restrição de Precedência** para configurar as restrições de precedência.  
   
 ## <a name="options"></a>Opções  
  **Operação de avaliação**  
- Especifica a operação de avaliação usada pela restrição de precedência. As operações são: **Restrição**, **expressão**, **Expression and Constraint**, e **Expression or Constraint**.  
+ Especifica a operação de avaliação usada pela restrição de precedência. As operações são: **Constraint**, **Expression**, **Expression and Constraint** e **Expression or Constraint**.  
   
  **Value**  
- Especifique o valor de restrição: **Sucesso**, **falha**, ou **conclusão**.  
+ Especifique o valor de restrição: **Success**, **Failure** ou **Completion**.  
   
 > [!NOTE]  
 >  A linha de restrição de precedência é verde para **Sucesso**, realçado para **Falha**e azul para **Conclusão**.  

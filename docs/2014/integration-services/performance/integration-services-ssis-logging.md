@@ -25,11 +25,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2478f1605b7fb67d8328be905956cbaae8e3c243
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889686"
 ---
 # <a name="integration-services-ssis-logging"></a>Log do SSIS (Integration Services)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui provedores de log que você pode usar para implementar log em pacotes, contêineres e tarefas. Com o log, você pode capturar informações de tempo de execução sobre um pacote, que o ajudem a auditar e solucionar problemas de um pacote sempre que ele for executado. Por exemplo, um log pode capturar o nome do operador que executou o pacote e a hora em que o pacote começou e foi concluído.  
@@ -62,7 +62,7 @@ ms.locfileid: "58394304"
   
  A tabela a seguir lista o ProgID e o ClassID dos provedores de log incluídos pelo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , e o local dos logs nos quais os provedores de log gravam.  
   
-|Provedor de log|ProgID|ClassID|Local padrão|  
+|Provedor de log|ProgID|ClassID|Location|  
 |------------------|------------|-------------|--------------|  
 |Arquivo de texto|DTS.LogProviderTextFile|{0A039101-ACC1-4E06-943F-279948323883}|O gerenciador de conexões de arquivos usado pelo provedor de log especifica o caminho do arquivo de texto.|  
 |SQL Server Profiler|DTS.LogProviderSQLProfiler|{E93F6300-AE0C-4916-A7BF-A8D0CE12C77A}|O gerenciador de conexões de arquivos que o provedor de registro usa especifica o caminho usado pelo [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|  
@@ -96,7 +96,7 @@ ms.locfileid: "58394304"
 |Operador|A identidade do usuário que iniciou o pacote.|  
 |SourceName|O nome do contêiner ou tarefa no qual o evento de log ocorreu.|  
 |SourceID|O identificador exclusivo do pacote; o contêiner Loop For, Loop Foreach ou Sequência ou a tarefa na qual o evento de log ocorreu.|  
-|ExecutionID|O GUID da instância de execução do pacote.<br /><br /> Observação: A execução de um pacote simples pode criar entradas de log com valores diferentes para o elemento ExecutionID. Por exemplo, quando você executa um pacote no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], a fase de validação talvez crie entradas de log com um elemento ExecutionID que corresponde ao [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. No entanto, a fase de execução talvez crie entradas de log com um elemento ExecutionID correspondente a dtshost.exe. Para obter outro exemplo, quando você executa um pacote que contém tarefas Executar Pacote, cada uma dessas tarefas executa um pacote filho. Esses pacotes filho podem criar entradas de log com um elemento ExecutionID diferente do das entradas de log criadas pelo pacote pai.|  
+|ExecutionID|O GUID da instância de execução do pacote.<br /><br /> Observação: Execução de um pacote simples pode criar entradas de log com valores diferentes para o elemento ExecutionID. Por exemplo, quando você executa um pacote no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], a fase de validação talvez crie entradas de log com um elemento ExecutionID que corresponde ao [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. No entanto, a fase de execução talvez crie entradas de log com um elemento ExecutionID correspondente a dtshost.exe. Para obter outro exemplo, quando você executa um pacote que contém tarefas Executar Pacote, cada uma dessas tarefas executa um pacote filho. Esses pacotes filho podem criar entradas de log com um elemento ExecutionID diferente do das entradas de log criadas pelo pacote pai.|  
 |MessageText|Uma mensagem associada à entrada de log.|  
 |DataBytes|Uma matriz de bytes específica para a entrada de log. O significado deste campo varia de acordo com a entrada de log.|  
   
@@ -147,7 +147,7 @@ ms.locfileid: "58394304"
   
 1.  Habilite o pacote e suas tarefas para registrar. O registro pode ocorrer no nível de pacote, contêiner e tarefa. Você pode especificar logs diferentes para pacotes, contêineres e tarefas.  
   
-2.  Selecione um provedor de log e adicione um log ao pacote. Os logs podem ser criados apenas no nível de pacote, e uma tarefa ou contêiner deve usar um dos logs criados para esse pacote. Cada log está associado um dos seguintes provedores de log: Arquivo de texto [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Log de eventos do Windows ou o arquivo XML. Para obter mais informações, consulte [Habilitar o log de pacote no SQL Server Data Tools](../enable-package-logging-in-sql-server-data-tools.md).  
+2.  Selecione um provedor de log e adicione um log ao pacote. Os logs podem ser criados apenas no nível de pacote, e uma tarefa ou contêiner deve usar um dos logs criados para esse pacote. Cada log é associado a um dos seguintes provedores de log: arquivo de texto, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Log de Eventos do Windows ou arquivo XML. Para obter mais informações, consulte [Habilitar o log de pacote no SQL Server Data Tools](../enable-package-logging-in-sql-server-data-tools.md).  
   
 3.  Selecione os eventos e as informações de esquema de log sobre cada evento que você deseja capturar no log. Para obter mais informações, consulte [Configurar o log usando um arquivo de configuração salvo](../configure-logging-by-using-a-saved-configuration-file.md).  
   

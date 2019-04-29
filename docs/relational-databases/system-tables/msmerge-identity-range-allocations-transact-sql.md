@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 09544c1e8735c3a6ad4fd6abfca430e84fabd775
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52809688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62910168"
 ---
 # <a name="msmergeidentityrangeallocations-transact-sql"></a>MSmerge_identity_range_allocations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "52809688"
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|A ID do publicador.|  
 |**publisher_db**|**nvarchar(128)**|O nome do banco de dados de publicação.|  
-|**publicação**|**nvarchar(128)**|O nome da publicação.|  
+|**publication**|**nvarchar(128)**|O nome da publicação.|  
 |**article**|**nvarchar(128)**|O nome do artigo.|  
 |**Assinante**|**nvarchar(128)**|O nome do Assinante.|  
 |**subscriber_db**|**nvarchar(128)**|O nome do banco de dados de assinatura.|  

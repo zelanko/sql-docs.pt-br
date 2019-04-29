@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 947933540c992b063e88db01c6f84663483dd113
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898354"
 ---
 # <a name="derived-column-transformation-editor"></a>Editor de Transformação Colunas Derivadas
   Use a caixa de diálogo **Editor de Transformação Colunas Derivadas** para criar expressões que populem colunas novas ou de substituição.  
@@ -45,7 +45,7 @@ ms.locfileid: "58386674"
   
  O valor dessa propriedade pode ser especificado com uma expressão de propriedades.  
   
- **Tópicos relacionados**: [Serviços de integração &#40;SSIS&#41; expressões](expressions/integration-services-ssis-expressions.md), [operadores &#40;expressão do SSIS&#41;](expressions/operators-ssis-expression.md), e [funções &#40;expressão do SSIS&#41;](expressions/functions-ssis-expression.md)  
+ **Tópicos relacionados:** [Expressões do Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md), [Operadores &#40;Expressão SSIS&#41;](expressions/operators-ssis-expression.md) e [Funções &#40;Expressão SSIS&#41;](expressions/functions-ssis-expression.md)  
   
  **Tipo de Dados**  
  Se acrescentar dados a uma nova coluna, a caixa de diálogo **TransformationEditor de Coluna Derivada** avaliará a expressão automaticamente e definirá o tipo de dados adequadamente. O valor desta coluna é somente leitura. Para obter mais informações, consulte [Integration Services Data Types](data-flow/integration-services-data-types.md).  

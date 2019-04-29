@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 39bd24414e2382557a22469da502bad91abe20b7
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873404"
 ---
 # <a name="system-data-collection-set-reports"></a>Relatórios do conjuntos de coleta de dados do sistema
   O coletor de dados fornece um relatório histórico para cada um dos conjuntos de coleta de Dados do Sistema. Cada um dos relatórios a seguir usa dados que estão armazenados no data warehouse de gerenciamento:  
@@ -58,7 +58,7 @@ ms.locfileid: "54100491"
 #### <a name="disk-usage-for-database-databasename-subreport"></a>Sub-relatório Uso de Disco para o Banco de Dados: <database_name>.  
  O sub-relatório **Uso de disco para o banco de dados:**_<database_name>_ é exibido quando você clica no nome de um banco de dados na tabela de resumo do relatório Conjunto de Coleta de Uso do Disco. Esse relatório fornece uma análise numérica e gráfica do uso do espaço pelos arquivos de dados e log de transação do banco de dados. O uso de espaço para arquivos de dados é categorizado como uma porcentagem alocada a páginas de índice, espaço alocado, páginas de dados e espaço não utilizado. Essas categorias são definidas da seguinte forma:  
   
-|Categoria|Definição|  
+|Category|Definição|  
 |--------------|----------------|  
 |Índice|A quantidade de espaço em disco usada para manter páginas de índice.|  
 |Não alocado|A quantidade de espaço em disco disponível para o banco de dados, mas que ainda não foi alocada a objeto algum.|  
@@ -81,21 +81,21 @@ ms.locfileid: "54100491"
   
  **Controle de linha de tempo e botões de navegação**  
   
- Use controle da linha de tempo e os botões de navegação para movimentar-se pela linha do tempo ou selecione um intervalo de datas. Os botões de seta fornecem navegação para a esquerda e para a direita, assim você pode retroceder e avançar pela linha do tempo. Por padrão, o movimento das setas na linha do tempo é feito em incrementos de quatro horas. Usando os botões de Lente de aumento, você pode expandir ou recolher esse incremento de tempo para um dos seguintes valores: 15 minutos, 1 hora, 4 horas, 12 horas ou 24 horas. O intervalo de tempo selecionado é indicado pela parte destacada da linha do tempo e exibido no texto abaixo dela. Esses valores, bem como os dados do relatório, serão atualizados sempre que você clicar na linha do tempo ou usar os botões de navegação.  
+ Use controle da linha de tempo e os botões de navegação para movimentar-se pela linha do tempo ou selecione um intervalo de datas. Os botões de seta fornecem navegação para a esquerda e para a direita, assim você pode retroceder e avançar pela linha do tempo. Por padrão, o movimento das setas na linha do tempo é feito em incrementos de quatro horas. Usando os botões do ampliador, é possível expandir ou reduzir esse incremento de tempo para um destes valores: 15 minutos, 1 hora, 4 horas, 12 horas ou 24 horas. O intervalo de tempo selecionado é indicado pela parte destacada da linha do tempo e exibido no texto abaixo dela. Esses valores, bem como os dados do relatório, serão atualizados sempre que você clicar na linha do tempo ou usar os botões de navegação.  
   
  **Botão Calendário**  
   
  Use o botão de calendário para especificar a data e a hora de início e a duração dos dados que servirão de base para o relatório.  
   
 #### <a name="query-statistics-history-report"></a>Relatório histórico de estatísticas de consulta  
- O gráfico Principais Consultas por CPU Total mostra a despesa relativa de cada consulta para o intervalo de tempo selecionado com base no uso total da CPU. Para exibir uma exibição diferente da despesa relativa de consulta, clique em um dos hiperlinks fornecidos abaixo do gráfico: **Duração**, **Total de e/s**, **leituras físicas**, ou **gravações lógicas**.  
+ O gráfico Principais Consultas por CPU Total mostra a despesa relativa de cada consulta para o intervalo de tempo selecionado com base no uso total da CPU. Para mostrar uma exibição diferente da despesa relativa de consulta, clique em um dos hiperlinks fornecidos abaixo do gráfico: **Duração**, **E/S Total**, **Leituras Físicas** ou **Gravações Lógicas**.  
   
  A tabela abaixo do gráfico fornece dados de consulta adicionais. Ele lista o texto de cada consulta do gráfico juntamente com informações estatísticas detalhadas. Observe que as barras do gráfico são links ativos, assim como cada uma das consultas mostradas na tabela. Basta clicar em um link ativo para abrir o sub-relatório Detalhes da Consulta da consulta.  
   
 #### <a name="query-details-subreport"></a>Sub-relatório Detalhes da Consulta  
  O sub-relatório Detalhes da Consulta fornece o texto inteiro da consulta. Há um hiperlink **Editar Texto da Consulta** adjacente à consulta. Basta clicar nele para abrir a consulta no Editor de Consulta. A tabela abaixo da consulta fornece estatísticas de execução de consulta, como duração média por execução de consulta.  
   
- São exibidos um gráfico de planos de consulta e a duração média por execução. Para exibir uma exibição diferente do custo do plano de consulta relativa, clique em qualquer um dos hiperlinks exibidos abaixo do gráfico: **Duração**, **leituras físicas**, ou **gravações lógicas**. A linha de gráfico está ativa e você pode clicar em qualquer ponto para abrir o sub-relatório Detalhes do Plano de Consulta.  
+ São exibidos um gráfico de planos de consulta e a duração média por execução. Para mostrar uma exibição diferente do custo do plano de consulta relativo, clique em qualquer um dos hiperlinks exibidos abaixo do gráfico: **Duração**, **Leituras Físicas** ou **Gravações Lógicas**. A linha de gráfico está ativa e você pode clicar em qualquer ponto para abrir o sub-relatório Detalhes do Plano de Consulta.  
   
  A tabela abaixo do gráfico mostra os 10 principais planos de consulta baseados no uso de CPU por execução. Cada número na coluna **Nº de Plano** é um link ativo em que você clica para abrir o sub-relatório Detalhes do Plano de Consulta.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "54100491"
   
  **Controle de linha de tempo e botões de navegação**  
   
- Use controle da linha de tempo e os botões de navegação para movimentar-se pela linha do tempo ou selecione um intervalo de datas. Os botões de seta fornecem navegação para a esquerda e para a direita, assim você pode retroceder e avançar pela linha do tempo. Por padrão, o movimento das setas na linha do tempo é feito em incrementos de quatro horas. Usando os botões de Lente de aumento, você pode expandir ou recolher esse incremento de tempo para um dos seguintes valores: 15 minutos, 1 hora, 4 horas, 12 horas ou 24 horas. O intervalo de tempo selecionado é indicado pela parte destacada da linha do tempo e exibido no texto abaixo dela. Esses valores, bem como os dados do relatório, são atualizados sempre que você clica na linha do tempo ou usa os botões de navegação.  
+ Use controle da linha de tempo e os botões de navegação para movimentar-se pela linha do tempo ou selecione um intervalo de datas. Os botões de seta fornecem navegação para a esquerda e para a direita, assim você pode retroceder e avançar pela linha do tempo. Por padrão, o movimento das setas na linha do tempo é feito em incrementos de quatro horas. Usando os botões do ampliador, é possível expandir ou reduzir esse incremento de tempo para um destes valores: 15 minutos, 1 hora, 4 horas, 12 horas ou 24 horas. O intervalo de tempo selecionado é indicado pela parte destacada da linha do tempo e exibido no texto abaixo dela. Esses valores, bem como os dados do relatório, são atualizados sempre que você clica na linha do tempo ou usa os botões de navegação.  
   
  **Botão Calendário**  
   

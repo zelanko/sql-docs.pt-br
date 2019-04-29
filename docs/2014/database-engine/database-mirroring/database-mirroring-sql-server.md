@@ -152,7 +152,7 @@ ms.locfileid: "62807873"
  Para obter mais informações, consulte [Troca de função](#RoleSwitching), posteriormente neste tópico.  
   
 > [!NOTE]  
->  Estabelecer uma nova sessão de espelhamento ou adicionar uma testemunha para uma configuração de espelhamento existente exige que todas as instâncias de servidor envolvidas executem a mesma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No entanto, quando você estiver atualizando para o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou posterior, as versões das instâncias envolvidas podem variar. Para obter mais informações, consulte [Minimize Downtime for Mirrored Databases When Upgrading Server Instances](upgrading-mirrored-instances.md).  
+>  Estabelecer uma nova sessão de espelhamento ou adicionar uma testemunha para uma configuração de espelhamento existente exige que todas as instâncias de servidor envolvidas executem a mesma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No entanto, quando você estiver atualizando para o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou posterior, as versões das instâncias envolvidas podem variar. Para obter mais informações, consulte [Minimize Downtime for espelhado bancos de dados When Upgrading Server Instances](upgrading-mirrored-instances.md).  
   
 ####  <a name="TxnSafety"></a> Segurança de transação e modos de operação  
  O que vai determinar se um modo de operação é assíncrono ou síncrono é a configuração de segurança da transação. Caso somente o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] seja usado para configurar o espelhamento de banco de dados, as definições de segurança da transação serão configuradas automaticamente quando o modo de operação for selecionado.  

@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 95b9ddc6bfee2f33702a77fcfcf85f5dffddab0d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020440"
 ---
-# <a name="attribute-properties---bind-an-attribute-to-a-name-column"></a>Propriedades de atributo - associar um atributo a uma coluna de nome
+# <a name="attribute-properties---bind-an-attribute-to-a-name-column"></a>Propriedades do atributo – Associar um atributo a uma coluna de nome
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Este procedimento descreve como associar um atributo manualmente a uma coluna de nome, usando o painel **Atributos** no Designer de Dimensão e usando a caixa de diálogo **Associação de Objetos** .  
   

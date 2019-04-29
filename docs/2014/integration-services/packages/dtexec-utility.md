@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 540f600d5005e8288aafe19ef59d4b7e894a99b0
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890164"
 ---
 # <a name="dtexec-utility"></a>Utilitário dtexec
   O `dtexec` utilitário de prompt de comando é usado para configurar e executar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pacotes. O utilitário `dtexec` fornece acesso a toda a configuração e recursos de execução de pacotes, como parâmetros, conexões, propriedades, variáveis, logs e indicadores de progresso. O `dtexec` utilitário permite que você carregar pacotes destas origens: o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, um arquivo de projeto. ispac, um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados, o [!INCLUDE[ssIS](../../includes/ssis-md.md)] Store de pacote e o sistema de arquivos.  

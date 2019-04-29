@@ -21,11 +21,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4733ba204671ec3ed691e77626fb08861b7e6763
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020748"
 ---
 # <a name="report-and-group-variables-collections-references-report-builder-and-ssrs"></a>Referências de coleções de variáveis de grupo e de relatório (Construtor de Relatórios e SSRS)
   Quando há um cálculo complexo usado mais de uma vez em expressões em um relatório, convém criar uma variável. É possível criar uma variável do relatório ou uma variável do grupo. Os nomes de variável devem ser exclusivos em um relatório.  
@@ -58,7 +58,7 @@ ms.locfileid: "59969542"
 ## <a name="group-variables"></a>Variáveis do grupo  
  Use uma variável do grupo para calcular uma expressão complexa uma vez no escopo de um grupo. Uma variável do grupo é válida apenas no escopo do grupo e de seus grupos filho.  
   
- Por exemplo, suponha que uma região de dados exiba dados de inventário para itens que estão em categorias de impostos diferentes e você queira aplicar taxas de impostos distintas a cada categoria. Você agrupa os dados em Categoria e define uma variável *Tax* no grupo pai. Em seguida, você define uma variável de grupo para *ItemTax* para cada categoria de imposto e atribui cada um dos diferentes subgrupos de Categoria à variável do grupo correto. Por exemplo:  
+ Por exemplo, suponha que uma região de dados exiba dados de inventário para itens que estão em categorias de impostos diferentes e você queira aplicar taxas de impostos distintas a cada categoria. Você agrupa os dados em Categoria e define uma variável *Tax* no grupo pai. Em seguida, você define uma variável de grupo para *ItemTax* para cada categoria de imposto e atribui cada um dos diferentes subgrupos de Categoria à variável do grupo correto. Por exemplo:   
   
 -   Para o grupo pai baseado em `[Category]`, defina a variável *Tax* com um valor `[Tax]`. Suponha que os valores da categoria sejam Alimentos e Vestuário.  
   

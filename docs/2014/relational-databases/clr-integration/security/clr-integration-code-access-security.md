@@ -18,22 +18,22 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d829ef131bc8772ce2d84391513ffa52b2f2ff1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873735"
 ---
 # <a name="clr-integration-code-access-security"></a>Segurança de acesso a código da integração CLR
   O CLR (common language runtime) dá suporte a um modelo de segurança denominado segurança de acesso para código gerenciado. Nesse modelo, são concedidas permissões a assemblies com base na identidade do código. Para obter mais informações, consulte a seção "Segurança de acesso do código" no Software Development Kit do .NET Framework.  
   
  A política de segurança que determina as permissões concedidas a assemblies é definida em três locais diferentes:  
   
--   Política de máquina: trata-se da política em vigor para todo o código gerenciado em execução na máquina na qual o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está instalado.  
+-   Política do computador: Esta é a política em vigor para todo o código gerenciado em execução na máquina na qual [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está instalado.  
   
--   Política de usuário: trata-se da política em vigor para o código gerenciado hospedado por um processo. Para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] serviço está em execução.  
+-   Política de usuário: Esta é a política em vigor para código gerenciado hospedado por um processo. Para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] serviço está em execução.  
   
--   Política de host: trata-se da política configurada pelo host do CLR (nesse caso, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) em vigor para o código gerenciado em execução no host.  
+-   Política de host: Isso é a política configurada pelo host do CLR (nesse caso, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) que está em vigor para código gerenciado em execução nesse host.  
   
  O mecanismo da segurança de acesso do código para o qual o CLR oferece suporte se baseia na pressuposição de que o tempo de execução pode hospedar tanto o código totalmente confiável quanto o parcialmente confiável. Os recursos que são protegidos pela segurança de acesso do código CLR costumam estar em interfaces de programação de aplicativo gerenciado requirethe permissão correspondente antes de permitir o acesso ao recurso. O demandfor a permissão é atendido somente se todos os chamadores (no nível de assembly) na pilha de chamadas tiverem a permissão do recurso correspondente.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48075992"
 |Permissão|Valor(es)/descrição|  
 |----------------|-----------------------------|  
 |`SecurityPermission`|`Execution:` permissão para executar código gerenciado.|  
-|`SqlClientPermission`|`Context connection = true`, `context connection = yes`: apenas a conexão de contexto pode ser usada, e a cadeia de conexão só pode especificar um valor igual a "context connection=true" ou "context connection=yes".<br /><br /> **AllowBlankPassword = false:** senhas em branco não são permitidas.|  
+|`SqlClientPermission`|`Context connection = true`, `context connection = yes`: Apenas a conexão de contexto pode ser usado e a cadeia de caracteres de conexão só pode especificar um valor de "conexão de contexto = true" ou "conexão de contexto = yes".<br /><br /> **AllowBlankPassword = false:**  Senhas em branco não são permitidas.|  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  Assemblies EXTERNAL_ACCESS têm as mesmas permissões que `SAFE` assemblies, com a habilidade adicional para acessar recursos externos do sistema como arquivos, redes, variáveis de ambiente e o registro.  
@@ -108,9 +108,9 @@ ms.locfileid: "48075992"
 ||`SAFE`|`EXTERNAL_ACCESS`|`UNSAFE`|  
 |`Code Access Security Permissions`|Somente execução|Execução + acesso a recursos externos|Irrestrito (inclusive P/Invoke)|  
 |`Programming model restrictions`|Sim|Sim|Sem restrições|  
-|`Verifiability requirement`|Sim|Sim|não|  
+|`Verifiability requirement`|Sim|Sim|Não|  
 |`Local data access`|Sim|Sim|Sim|  
-|`Ability to call native code`|não|não|Sim|  
+|`Ability to call native code`|Não|Não|Sim|  
   
 ## <a name="see-also"></a>Consulte também  
  [Segurança da integração CLR](clr-integration-security.md)   

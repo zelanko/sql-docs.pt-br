@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 8c12736694451d1a6fd1dff34c4f883cb45694e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082196"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876908"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Acessar FileTables com APIs de entrada e saída de arquivo
   Descreve como a E/S do sistema de arquivos funciona em uma FileTable.  
@@ -105,25 +105,25 @@ ms.locfileid: "48082196"
 |Recurso|Supported|Comentários|  
 |----------------|---------------|--------------|  
 |**Oplocks**|Sim|Há suporte para oplocks de Nível 2, Nível 1, Lote e Filtro.|  
-|**Atributos estendidos**|não||  
-|**Pontos de reanálise**|não||  
-|**ACLs persistentes**|não||  
-|**Fluxos nomeados**|não||  
+|**Atributos estendidos**|Não||  
+|**Pontos de reanálise**|Não||  
+|**ACLs persistentes**|Não||  
+|**Fluxos nomeados**|Não||  
 |**Arquivos esparsos**|Sim|A dispersão pode ser definida somente em arquivos e afeta o armazenamento do fluxo de dados. Como os dados FILESTREAM são armazenados em volumes NTFS, o recurso FileTable oferece suporte a arquivos esparsos encaminhando as solicitações ao sistema de arquivos NTFS.|  
 |**Compactação**|Sim||  
 |**Criptografia**|Sim||  
-|**TxF**|não||  
-|**Ids de arquivo**|não||  
-|**Ids de objeto**|não||  
-|**Links simbólicos**|não||  
-|**Links físicos**|não||  
-|**Nomes curtos**|não||  
-|**Notificações de alteração de diretório**|não||  
+|**TxF**|Não||  
+|**Ids de arquivo**|Não||  
+|**Ids de objeto**|Não||  
+|**Links simbólicos**|Não||  
+|**Links físicos**|Não||  
+|**Nomes curtos**|Não||  
+|**Notificações de alteração de diretório**|Não||  
 |**Bloqueio de intervalo de bytes**|Sim|As solicitações de bloqueio de intervalo de bytes são passadas ao sistema de arquivos NTFS.|  
-|**Arquivos mapeados na memória**|não||  
+|**Arquivos mapeados na memória**|Não||  
 |**Cancelar E/S**|Sim||  
-|**Segurança**|não|A segurança em nível de compartilhamento do Windows e a segurança em nível de tabela e coluna do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são impostas.|  
-|**Diário USN**|não|As alterações de metadados em arquivos e diretórios de uma FileTable são operações DML em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Portanto, elas são registradas em log no arquivo de log de banco de dados correspondente. Entretanto, não são registradas no diário NTFS USN (com exceção de alterações de tamanho).<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser usados para capturar informações semelhantes.|  
+|**Segurança**|Não|A segurança em nível de compartilhamento do Windows e a segurança em nível de tabela e coluna do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são impostas.|  
+|**Diário USN**|Não|As alterações de metadados em arquivos e diretórios de uma FileTable são operações DML em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Portanto, elas são registradas em log no arquivo de log de banco de dados correspondente. Entretanto, não são registradas no diário NTFS USN (com exceção de alterações de tamanho).<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser usados para capturar informações semelhantes.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Carregar arquivos em FileTables](load-files-into-filetables.md)   

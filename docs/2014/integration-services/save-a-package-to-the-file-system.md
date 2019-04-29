@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 87aabe302817a8d71a5a92058004b6e92dd95b2c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889249"
 ---
 # <a name="save-a-package-to-the-file-system"></a>Salvar um pacote no sistema de arquivos
   Este procedimento descreve como salvar um pacote existente, no sistema de arquivos, como um arquivo tipo .dtsx.  

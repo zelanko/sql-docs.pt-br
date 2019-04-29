@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3066700945d2d6dad33f04c6bc905720daab61c3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876166"
 ---
 # <a name="deleting-backup-blob-files-with-active-leases"></a>Excluindo arquivos de blob de backup com arrendamentos ativos
   Ao fazer backup ou restauração no armazenamento do Windows Azure, o SQL Server adquirirá uma concessão infinita para bloquear o acesso exclusivo ao blob. Quando o processo de backup ou restauração for concluído com êxito, a concessão será liberada. Se um backup ou uma restauração falhar, o processo de backup tentará limpar qualquer blob inválido. Entretanto, se o backup falhar devido a uma falha de conectividade de rede prolongada ou contínua, o processo de backup pode não ser capaz de obter acesso ao blob e o blob pode permanecer órfão. Isso significa que o blob só poderá ser gravado ou excluído quando a concessão for liberada. Este tópico descreve como liberar a concessão e excluir o blob.  
@@ -29,7 +29,7 @@ ms.locfileid: "53352658"
 ## <a name="managing-orphaned-blobs"></a>Gerenciando blobs órfãos  
  As etapas a seguir descrevem como efetuar a limpeza após uma atividade de restauração ou backup com falha. Todas as etapas podem ser executadas por meio dos scripts do PowerShell. Um exemplo de código é fornecido na seção a seguir:  
   
-1.  **Identificando os blobs que têm arrendamentos:** Se você tiver um script ou um processo que executa os processos de backup, você poderá capturar a falha no script ou processo e usá-la para limpar os blobs.   Você também pode usar as propriedades LeaseStats e LeastState para identificar os blobs que têm arrendamentos neles. Após identificar os blobs, recomendamos que você examine a lista e verifique a validade do arquivo de backup antes de excluir o blob.  
+1.  **Identificando os blobs que têm arrendamentos:** Se houver um script ou um processo que execute os processos de backup, você poderá capturar a falha no script ou no processo e usá-la para limpar os blobs.   Você também pode usar as propriedades LeaseStats e LeastState para identificar os blobs que têm arrendamentos neles. Após identificar os blobs, recomendamos que você examine a lista e verifique a validade do arquivo de backup antes de excluir o blob.  
   
 2.  **Interrupção da concessão:** Uma solicitação autorizada pode interromper a concessão sem fornecer uma ID de concessão. Consulte [aqui](https://go.microsoft.com/fwlink/?LinkID=275664) para obter mais informações.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "53352658"
   
      **Interrompendo arrendamentos**  
   
-     **A concessão em \<URL do Blob > é uma concessão de restauração: Você verá esta mensagem somente se você tiver um blob com uma concessão de restauração que ainda está ativa.**  
+     **A concessão em \<URL do Blob> é uma concessão de restauração: Você verá essa mensagem somente se tiver um blob com uma concessão de restauração que ainda está ativa.**  
   
      **A concessão na \<URL do Blob> não é uma concessão de restauração Interrompendo concessão na \<URL do Bob>.**  
   

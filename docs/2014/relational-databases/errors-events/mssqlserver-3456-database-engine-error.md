@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b2077d736f15787fe35a4a18d5c03dbd9ddd36a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62914238"
 ---
 # <a name="mssqlserver3456"></a>MSSQLSERVER_3456
     
@@ -30,7 +30,7 @@ ms.locfileid: "48141186"
 |Origem do evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|REC_REDOLSNMISMATCH|  
-|Texto da mensagem|Não foi possível refazer o registro de log %S_LSN, para ID de transação %S_XID, na página %S_PGID, banco de dados '%.*ls' (ID de banco de dados %d). Página: LSN = %S_LSN, tipo = %ld. Log: OpCode = %ld, contexto %ld, PrevPageLSN: %S_LSN. Restaure de um backup do banco de dados ou repare o banco de dados.|  
+|Texto da mensagem|Não foi possível refazer o registro de log %S_LSN, para ID de transação %S_XID, na página %S_PGID, banco de dados '%.*ls' (ID de banco de dados %d). Página: LSN = %S_LSN, type = %ld. Log: OpCode = %ld, contexto %ld, PrevPageLSN: %S_LSN. Restaure de um backup do banco de dados ou repare o banco de dados.|  
   
 ## <a name="explanation"></a>Explicação  
  A operação de restauração não pôde refazer o log de transação. Esse erro colocou o banco de dados no estado SUSPECT. O grupo de arquivos primário, e possivelmente outros grupos de arquivos, estão sob suspeita e podem estar danificados. O banco de dados não pode ser recuperado durante a inicialização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e, portanto, não está disponível. Ação do usuário é necessária para resolver o problema.  

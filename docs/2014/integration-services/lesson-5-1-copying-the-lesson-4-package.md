@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3cf58665c69c744b35c8703f7f00fc07e0b8aafc
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891162"
 ---
-# <a name="step-1-copying-the-lesson-4-package"></a>Etapa 1: Copiando o pacote da lição 4
+# <a name="step-1-copying-the-lesson-4-package"></a>Etapa 1: Copiar o pacote da Lição 4
   Nesta tarefa, você criará uma cópia do pacote Lesson 4.dtsx criado na Lição 4. Como alternativa, é possível adicionar o pacote concluído da Lição 4 incluído no tutorial do projeto e copiá-lo. Você usará essa cópia nova durante toda a Lição 5.  
   
 ### <a name="to-copy-the-lesson-4-package"></a>Para copiar o pacote da Lição 4  

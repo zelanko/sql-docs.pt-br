@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 761d42ba234dceda7cd6689af89e6a3038b901eb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898946"
 ---
 # <a name="deprecated-integration-services-features-in-sql-server-2014"></a>Recursos dos serviços de integração preteridos no SQL Server 2014
   Este tópico descreve preteridas [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] recursos que ainda estão disponíveis na versão atual do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Esses recursos estão programados para serem removidos em uma versão futura do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Recursos preteridos não devem ser usados em aplicativos novos.  

@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b9731a25633b5bc127039ae81a31df8c69bb8ccb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873097"
 ---
 # <a name="data-tier-applications"></a>Aplicativos da camada de Dados
   Um aplicativo da camada de dados (DAC) é uma entidade de gerenciamento de banco de dados lógico que define todos os objetos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], assim como tabelas, exibições e objetos de instância, inclusive logons, associados do banco de dados do usuário. Um DAC é uma unidade autossuficiente de implantação de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que permite que desenvolvedores da camada de dados e administradores de banco de dados empacotem objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um artefato portátil chamado pacote de DAC, também conhecido como DACPAC.  
@@ -108,7 +108,7 @@ ms.locfileid: "52540118"
   
 -   **IMPORT** – o usuário pode importar o esquema e os dados em um novo banco de dados no servidor de host.  
   
- Estes recursos têm suporte pelas ferramentas de gerenciamento de banco de dados: Server Management Studio, o Portal de gerenciamento para SQL Azure e a API DACFx.  
+ Ambas as funcionalidades são compatíveis com as ferramentas de gerenciamento de banco de dados: Server Management Studio, o Portal de gerenciamento para SQL Azure e a API DACFx.  
   
 ## <a name="permissions"></a>Permissões  
  Você deve ser membro da função `dbmanager` ou ter permissões `CREATE DATABASE` atribuídas para criar um banco de dados, incluindo criar um banco de dados implantando um pacote de DAC. Você deve ser um membro da função `dbmanager` ou ter permissões `DROP DATABASE` atribuídas para remover um banco de dados.  

@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 2e8522cde5be0ccc34f858ce6bff945433af11ac
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874783"
 ---
 # <a name="manage-filetables"></a>Gerenciar FileTables
   Descreve tarefas administrativas comuns para gerenciar FileTables.  
@@ -79,7 +79,7 @@ GO
   
 -   Nenhum dos diretórios em nível de banco de dados na instância estará visível se FILESTREAM for desabilitado no nível de instância.  
   
-###  <a name="HowToDisable"></a> Como: Desabilitar e reabilitar o acesso não transacional no nível de banco de dados  
+###  <a name="HowToDisable"></a> Como: Desabilitar e reabilitar o acesso não transacional no nível do banco de dados  
  Para obter mais informações, veja [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
  **Para desabilitar o acesso não transacional**  
@@ -138,7 +138,7 @@ GO
   
 -   O diretório de FileTable, e seus arquivos e diretórios, ficam visíveis no sistema de arquivo e ficam disponíveis para o acesso de E/S de arquivo.  
   
-###  <a name="HowToEnableNS"></a> Como: Desabilitar e reabilitar o namespace FileTable no nível de tabela  
+###  <a name="HowToEnableNS"></a> Como: Desabilitar e reabilitar o Namespace FileTable no nível de tabela  
  Chame a instrução ALTER TABLE com a opção **{ ENABLE | DISABLE } FILETABLE_NAMESPACE** .  
   
  **Para desabilitar o namespace da FileTable**  

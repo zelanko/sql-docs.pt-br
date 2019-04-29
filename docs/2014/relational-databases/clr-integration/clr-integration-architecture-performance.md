@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: eced622903a0d68369f28d19ff521d99bcedbdc3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874519"
 ---
 # <a name="performance-of-clr-integration"></a>Desempenho da integração CLR
   Este tópico discute algumas das escolhas de design que aprimoram o desempenho das [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] integração com o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] do .NET Framework CLR common language runtime ().  

@@ -1,5 +1,5 @@
 ---
-title: 'Etapa 3: Testando os pacotes implantados | Microsoft Docs'
+title: 'Etapa 3: Testar os pacotes implantados | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 92055ceb4226406fe26d7ce23491c81606f292c5
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891796"
 ---
-# <a name="step-3-testing-the-deployed-packages"></a>Etapa 3: Testando os pacotes implantados
+# <a name="step-3-testing-the-deployed-packages"></a>Etapa 3: Testar os pacotes implantados
   Nesta tarefa, você testará os pacotes implantados em uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Em outros tutoriais do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , você executou pacotes no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], o ambiente de desenvolvimento do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], usando a opção **Iniciar Depuração** no menu **Depurar** . Desta vez você executará os pacotes de modo diferente.  

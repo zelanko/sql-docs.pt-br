@@ -50,7 +50,7 @@ As respostas de trabalho especificam ações que o serviço do [!INCLUDE[ssNoVer
 |-|-|  
 |**Descrição**|**Tópico**|  
 |Descreve como notificar um operador sobre o status do trabalho.|[Notify an Operator of Job Status](../../ssms/agent/notify-an-operator-of-job-status.md)|  
-|Descreve como gravar o status do trabalho no log de aplicativos do Windows.|[Write the Job Status to the Windows Application Log](../../ssms/agent/write-the-job-status-to-the-windows-application-log.md)|  
+|Descreve como gravar o status do trabalho no log de aplicativos do Windows.|[Para gravar o status do trabalho no log de aplicativos do Windows](../../ssms/agent/write-the-job-status-to-the-windows-application-log.md)|  
   
 ## <a name="see-also"></a>Consulte Também  
 [Monitorar e responder a eventos](../../ssms/agent/monitor-and-respond-to-events.md)  

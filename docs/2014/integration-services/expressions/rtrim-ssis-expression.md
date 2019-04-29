@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 53d9bfbb7418a3bc6727ccc7160a5364bac39f58
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768772"
 ---
 # <a name="rtrim-ssis-expression"></a>RTRIM (Expressão SSIS)
   Retorna uma expressão character depois de remover espaços em branco à direita.  
