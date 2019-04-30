@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b4db6133a486e77369630dc717fab02b3be7f8e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729292"
 ---
 # <a name="reviewing-cube-and-dimension-properties"></a>Revisando as propriedades de dimensão e cubo
   Depois que você definir um cubo, você pode revisar os resultados usando o Designer de Cubos. Na tarefa a seguir, você revisará a estrutura do cubo no projeto do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -35,7 +35,7 @@ ms.locfileid: "48196266"
   
 4.  No painel **Dimensões** da guia **Estrutura do Cubo** , expanda **Cliente**e depois clique em **Editar Cliente** para abrir a dimensão no Designer de Dimensão.  
   
-     O Designer de Dimensão contém as seguintes guias: **Estrutura da Dimensão**, **Relações de Atributo**, **Traduções**e **Navegador**. Observe que a guia **Estrutura da Dimensão** inclui três painéis: **Atributos**, **Hierarquias**e **Exibição da Fonte de Dados**. Os atributos da dimensão são exibidos no painel **Atributos** . Para obter mais informações, consulte [referência de propriedades de atributo de dimensão](multidimensional-models/dimension-attribute-properties-reference.md), [hierarquias definidas pelo usuário](multidimensional-models/user-defined-hierarchies-create.md).  
+     Designer de dimensão contém as seguintes guias: **Estrutura da dimensão**, **relações de atributo**, **traduções**, e **navegador**. Observe que o **estrutura da dimensão** guia inclui três painéis: **Atributos**, **hierarquias**, e **exibição da fonte de dados**. Os atributos da dimensão são exibidos no painel **Atributos** . Para obter mais informações, consulte [referência de propriedades de atributo de dimensão](multidimensional-models/dimension-attribute-properties-reference.md), [hierarquias definidas pelo usuário](multidimensional-models/user-defined-hierarchies-create.md).  
   
 5.  Para mudar para o Designer de Cubo, clique com o botão direito do mouse no cubo do **Tutorial do Analysis Services** do nó **Cubos** do Gerenciador de Soluções e clique em **Designer de Exibição**.  
   

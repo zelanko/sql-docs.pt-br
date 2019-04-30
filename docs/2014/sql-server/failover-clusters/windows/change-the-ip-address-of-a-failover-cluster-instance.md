@@ -16,19 +16,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9a9a93c9c6efdd5a864b5ab3ce0beacb7cbf1632
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049613"
 ---
 # <a name="change-the-ip-address-of-a-failover-cluster-instance"></a>Alterar o endereço IP de uma instância do cluster de failover
   Este tópico descreve como alterar o recurso de endereço IP em uma FCI (instância de cluster de failover) AlwaysOn usando o snap-in Gerenciador de Cluster de Failover. O snap-in Gerenciador de Cluster de Failover é o aplicativo de gerenciamento de cluster do serviço WSFC (Windows Server Failover Clustering).  
   
--   **Before you begin:**  [Security](#Security)  
+-   **Antes de começar:**  [Segurança](#Security)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
- Antes de começar, examine o seguinte tópico dos Manuais Online do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] : [Antes de instalar o Clustering de Failover](../install/before-installing-failover-clustering.md).  
+ Antes de começar, examine o seguinte [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tópico dos Manuais Online: [Before Installing Failover Clustering](../install/before-installing-failover-clustering.md).  
   
 ###  <a name="Security"></a> Segurança  
   

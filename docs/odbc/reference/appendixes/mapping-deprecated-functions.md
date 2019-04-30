@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b59d2604dd9d4b7c3166027c1917dea096b331d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181311"
 ---
 # <a name="mapping-deprecated-functions"></a>Funções preteridas de mapeamento
 Esta seção descreve as funções como preteridas são mapeados por ODBC 3 *. x* Gerenciador de Driver para garantir a compatibilidade com versões anteriores do ODBC 3 *. x* drivers que são usados com o ODBC 2. *x* aplicativos. O Gerenciador de Driver realiza esse mapeamento independentemente da versão do aplicativo. Porque cada um dos ODBC 2. *x* funções na lista a seguir é mapeado para o ODBC 3 correspondente *. x* funcionar quando chamado em um ODBC 3 *. x* driver, o ODBC 3 *. x*driver não precisa implementar o ODBC 2. *x* funções.  
@@ -34,9 +34,9 @@ Esta seção descreve as funções como preteridas são mapeados por ODBC 3 *. x
   
 |ODBC 2. *x* função|3 de ODBC *. x* função|  
 |-------------------------|-------------------------|  
-|**SQLAllocConnect**|**Falha de SQLAllocHandle**|  
-|**SQLAllocEnv**|**Falha de SQLAllocHandle**|  
-|**SQLAllocStmt**|**Falha de SQLAllocHandle**|  
+|**SQLAllocConnect**|**SQLAllocHandle**|  
+|**SQLAllocEnv**|**SQLAllocHandle**|  
+|**SQLAllocStmt**|**SQLAllocHandle**|  
 |**SQLBindParam**[1]|**SQLBindParameter**|  
 |**SQLColAttributes**|**SQLColAttribute**|  
 |**SQLError**|**SQLGetDiagRec**|  
@@ -54,7 +54,7 @@ Esta seção descreve as funções como preteridas são mapeados por ODBC 3 *. x
   
  [1], embora essa função não existe no ODBC 2 *. x*, trata-se nos padrões ISO e Open Group.  
   
- [2]] Essa é uma função de ODBC 1.0.  
+ [2] Essa é uma função de ODBC 1.0.  
   
  Esta seção contém os tópicos a seguir.  
   

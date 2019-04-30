@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3ed2bbf40ac333db34d3920b2ed2ec688c344bfe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63189001"
 ---
 # <a name="environment-transitions"></a>Transições de ambiente
 Ambientes de ODBC tem três estados.  
   
-|Estado|Description|  
+|Estado|Descrição|  
 |-----------|-----------------|  
 |E0|Ambiente não alocado|  
 |E1|Ambiente alocado, não alocado a conexão|  
@@ -33,13 +33,13 @@ Ambientes de ODBC tem três estados.
   
  As tabelas a seguir mostram como cada função ODBC afeta o estado do ambiente.  
   
-## <a name="sqlallochandle"></a>Falha de SQLAllocHandle  
+## <a name="sqlallochandle"></a>SQLAllocHandle  
   
 |E0<br /><br /> Não alocado|E1<br /><br /> alocado|E2<br /><br /> Conexão|  
 |------------------------|----------------------|-----------------------|  
-|E1 [1]|--[4]|--[4]|  
-|(IH) [2]|E2 [5]<br />(HY010) [6]|--[4]|  
-|(IH) [3]|(IH)|--[4]|  
+|E1[1]|--[4]|--[4]|  
+|(IH)[2]|E2[5]<br />(HY010)[6]|--[4]|  
+|(IH)[3]|(IH)|--[4]|  
   
  [1] essa linha mostra as transições quando *HandleType* foi SQL_HANDLE_ENV.  
   
@@ -57,7 +57,7 @@ Ambientes de ODBC tem três estados.
   
 |E0<br /><br /> Não alocado|E1<br /><br /> alocado|E2<br /><br /> Conexão|  
 |------------------------|----------------------|-----------------------|  
-|(IH)|--[1]<br />(HY010) [2]|--[1]<br />(HY010) [2]|  
+|(IH)|--[1]<br />(HY010)[2]|--[1]<br />(HY010)[2]|  
   
  [1] o atributo de ambiente SQL_ATTR_ODBC_VERSION tivesse sido definido no ambiente.  
   
@@ -67,8 +67,8 @@ Ambientes de ODBC tem três estados.
   
 |E0<br /><br /> Não alocado|E1<br /><br /> alocado|E2<br /><br /> Conexão|  
 |------------------------|----------------------|-----------------------|  
-|(IH) [1]|--[3]<br />(HY010) [4]|--[3]<br />(HY010) [4]|  
-|(IH) [2]|(IH)|--|  
+|(IH)[1]|--[3]<br />(HY010)[4]|--[3]<br />(HY010)[4]|  
+|(IH)[2]|(IH)|--|  
   
  [1] essa linha mostra as transições quando *HandleType* foi SQL_HANDLE_ENV.  
   
@@ -82,9 +82,9 @@ Ambientes de ODBC tem três estados.
   
 |E0<br /><br /> Não alocado|E1<br /><br /> alocado|E2<br /><br /> Conexão|  
 |------------------------|----------------------|-----------------------|  
-|(IH) [1]|E0|(HY010)|  
-|(IH) [2]|(IH)|--[4]<br />E1 [5]|  
-|(IH) [3]|(IH)|--|  
+|(IH)[1]|E0|(HY010)|  
+|(IH)[2]|(IH)|--[4]<br />E1[5]|  
+|(IH)[3]|(IH)|--|  
   
  [1] essa linha mostra as transições quando *HandleType* foi SQL_HANDLE_ENV.  
   
@@ -100,8 +100,8 @@ Ambientes de ODBC tem três estados.
   
 |E0<br /><br /> Não alocado|E1<br /><br /> alocado|E2<br /><br /> Conexão|  
 |------------------------|----------------------|-----------------------|  
-|(IH) [1]|--|--|  
-|(IH) [2]|(IH)|--|  
+|(IH)[1]|--|--|  
+|(IH)[2]|(IH)|--|  
   
  [1] essa linha mostra as transições quando *HandleType* foi SQL_HANDLE_ENV.  
   
@@ -111,7 +111,7 @@ Ambientes de ODBC tem três estados.
   
 |E0<br /><br /> Não alocado|E1<br /><br /> alocado|E2<br /><br /> Conexão|  
 |------------------------|----------------------|-----------------------|  
-|(IH)|--[1]<br />(HY010) [2]|--|  
+|(IH)|--[1]<br />(HY010)[2]|--|  
   
  [1] o atributo de ambiente SQL_ATTR_ODBC_VERSION tivesse sido definido no ambiente.  
   
@@ -121,11 +121,11 @@ Ambientes de ODBC tem três estados.
   
 |E0<br /><br /> Não alocado|E1<br /><br /> alocado|E2<br /><br /> Conexão|  
 |------------------------|----------------------|-----------------------|  
-|(IH)|--[1]<br />(HY010) [2]|(HY011)|  
+|(IH)|--[1]<br />(HY010)[2]|(HY011)|  
   
  [1] o atributo de ambiente SQL_ATTR_ODBC_VERSION tivesse sido definido no ambiente.  
   
- [2]] o *atributo* argumento não era SQL_ATTR_ODBC_VERSION e o atributo de ambiente de SQL_ATTR_ODBC_VERSION não tinha sido definido no ambiente.  
+ [2] o *atributo* argumento não era SQL_ATTR_ODBC_VERSION e o atributo de ambiente de SQL_ATTR_ODBC_VERSION não tinha sido definido no ambiente.  
   
 ## <a name="all-other-odbc-functions"></a>Todas as outras funções ODBC  
   
