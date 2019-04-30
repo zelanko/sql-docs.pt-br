@@ -6,23 +6,23 @@ author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 4dba3e620ae3e6cd9aa6c09eb6196ac37acd77a7
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: 3084d9ecc80dcd8f283a52ca5559783626a7ca4e
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583399"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472171"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>O que é o controlador em um cluster de big data do SQL Server?
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-O controlador hospeda a lógica básica para implantar e gerenciar um cluster de big data. Ele cuida de todas as interações com o Kubernetes, instâncias do SQL Server que fazem parte do cluster e outros componentes, como HDFS e Spark. 
+O controlador hospeda a lógica básica para implantar e gerenciar um cluster de big data. Ele cuida de todas as interações com o Kubernetes, instâncias do SQL Server que fazem parte do cluster e outros componentes, como HDFS e Spark.
 
 O serviço do controlador fornece as seguintes funcionalidades principais:
 
@@ -31,9 +31,10 @@ O serviço do controlador fornece as seguintes funcionalidades principais:
 - Gerenciar pools de computação, dados e armazenamento
 - Expor as ferramentas de monitoramento para observar o estado do cluster
 - Ferramentas de solução de problemas para detectar e reparar problemas inesperados de expor
-- Gerenciar a segurança de cluster: Certifique-se de pontos de extremidade do cluster seguro, gerenciar usuários e funções, configurar as credenciais para a comunicação dentro do cluster
-- Gerenciar o fluxo de trabalho de atualizações para que eles são implementados com segurança (não disponível no CTP 2.4)
-- Gerenciar a alta disponibilidade e recuperação de desastres para serviços com estado no cluster (não disponível no CTP 2.4)
+- Gerencie segurança de cluster:
+  - Certifique-se de pontos de extremidade do cluster seguro
+  - Gerenciar usuários e funções
+  - Configurar credenciais para a comunicação dentro do cluster
 
 ## <a name="deploying-the-controller-service"></a>Implantando o serviço do controlador
 

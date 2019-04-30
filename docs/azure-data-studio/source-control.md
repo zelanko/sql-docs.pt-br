@@ -12,11 +12,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5fb3c8dea11e570bba4452e181626625e31acbe0
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312038"
 ---
 #  <a name="using-source-control-in-includename-sosincludesname-sos-shortmd"></a>Uso do controle do código-fonte no [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

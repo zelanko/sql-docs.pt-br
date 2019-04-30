@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d70dcba3d373b195950f90b6ef82c3d670844bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63309211"
 ---
 # <a name="copyrecord-method-ado"></a>Método CopyRecord (ADO)
 Copia uma entidade representada por uma [registro](../../../ado/reference/ado-api/record-object-ado.md) para outro local.  

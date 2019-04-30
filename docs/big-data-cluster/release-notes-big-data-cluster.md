@@ -5,17 +5,17 @@ description: Este artigo descreve as últimas atualizações e problemas conheci
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/28/2018
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 3c999d82df4e8b73e290456ad5d3601712747ef9
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: a3148b9e3d7b2797684c2330e231640fb9ac2a1d
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860518"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473533"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Notas de versão para clusters de grandes dados no SQL Server
 
@@ -24,6 +24,99 @@ ms.locfileid: "58860518"
 Este artigo lista as atualizações e saiba que esses problemas para as versões mais recentes dos clusters de grandes dados do SQL Server.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
+
+## <a id="ctp25"></a> CTP 2.5 (abril)
+
+As seções a seguir descrevem os novos recursos e problemas conhecidos para clusters de grandes dados no SQL Server de 2019 CTP 2.5.
+
+### <a name="whats-new"></a>What's New
+
+| Novo recurso ou atualização | Detalhes |
+|:---|:---|
+| Perfis de implantação | Use o padrão e personalizadas [arquivos JSON de configuração de implantação](deployment-guidance.md#configfile) para implantações de cluster de big data, em vez de variáveis de ambiente. |
+| Implantações solicitadas | `mssqlctl cluster create` Agora solicitará qualquer configuração necessária para implantações de padrão. |
+| Alterações de nome de ponto de extremidade de serviço e de pod | Os seguintes pontos de extremidade externos foram alteradas nomes:<br/>&nbsp;&nbsp;&nbsp;- **endpoint-master-pool** => **master-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-controller** => **controller-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-service-proxy** => **mgmtproxy-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-security** => **gateway-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-app-service-proxy** => **appproxy-svc-external**|
+| **mssqlctl** melhorias | Use **mssqlctl** à [listar pontos de extremidade externos](deployment-guidance.md#endpoints) e verifique a versão do **mssqlctl** com o `--version` parâmetro. |
+| Instalação offline | Diretrizes para implantações de cluster de grandes dados off-line. |
+| Melhorias em camadas do HDFS | Suportam a disposição em camadas S3, cache de montagem e OAuth para Gen2 ADLS. |
+| Novo `mssql` conector do Spark SQL Server | |
+
+### <a name="known-issues"></a>Problemas conhecidos
+
+As seções a seguir descrevem os problemas conhecidos e as limitações desta versão.
+
+#### <a name="deployment"></a>Implantação
+
+- Não há suporte para atualizar um cluster de dados de grandes dados de uma versão anterior.
+
+   > [!IMPORTANT]
+   > Você deve fazer backup dos dados e, em seguida, exclua seu cluster de big data existente (usando a versão anterior do **mssqlctl**) antes de implantar a versão mais recente. Para obter mais informações, consulte [atualizar para uma nova versão](deployment-upgrade.md).
+
+- Depois de implantar no AKS, você poderá ver os seguintes dois eventos de aviso da implantação. Os dois eventos são problemas conhecidos, mas eles não evitam que você implantar com êxito o cluster de big data no AKS.
+
+   `Warning  FailedMount: Unable to mount volumes for pod "mssql-storage-pool-default-1_sqlarisaksclus(c83eae70-c81b-11e8-930f-f6b6baeb7348)": timeout expired waiting for volumes to attach or mount for pod "sqlarisaksclus"/"mssql-storage-pool-default-1". list of unmounted volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs]. list of unattached volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs storage-pool-java-storage secrets default-token-q9mlx]`
+
+   `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
+
+- Se uma implantação de cluster de big data falhar, o namespace associado não é removido. Isso pode resultar em um namespace órfão no cluster. Uma solução alternativa é excluir o namespace manualmente antes de implantar um cluster com o mesmo nome.
+
+
+
+#### <a id="externaltablesctp24"></a> Tabelas externas
+
+- Implantação de cluster de big data não cria mais o **SqlDataPool** e **SqlStoragePool** fontes de dados externas. Você pode criar essas fontes de dados manualmente para dar suporte à virtualização de dados para o pool de dados e o pool de armazenamento.
+
+   ```sql
+   -- Create the SqlDataPool data source:
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+     CREATE EXTERNAL DATA SOURCE SqlDataPool
+     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+
+   -- Create the SqlStoragePool data source:
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
+   BEGIN
+     CREATE EXTERNAL DATA SOURCE SqlStoragePool
+     WITH (LOCATION = 'sqlhdfs://nmnode-0-svc:50070');
+   END
+   ```
+
+- É possível criar uma tabela externa do pool de dados para uma tabela que tem sem suporte a tipos de coluna. Se você consultar a tabela externa, você receberá uma mensagem semelhante à seguinte:
+
+   `Msg 7320, Level 16, State 110, Line 44 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 105079; Columns with large object types are not supported for external generic tables.`
+
+- Se você consultar uma tabela externa do pool de armazenamento, você poderá receber um erro se o arquivo subjacente está sendo copiado no HDFS ao mesmo tempo.
+
+   `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
+
+- Se você estiver criando uma tabela externa para o Oracle que usam tipos de dados de caractere, o Assistente de virtualização do Azure Data Studio interpreta essas colunas como VARCHAR na definição da tabela externa. Isso causará uma falha na DDL da tabela externa. Modifique o esquema do Oracle para usar o tipo de NVARCHAR2, ou criar instruções de tabela externa manualmente e especificar NVARCHAR em vez de usar o assistente.
+
+#### <a name="application-deployment"></a>Implantação de aplicativo
+
+- Ao chamar um aplicativo de R, Python ou MLeap da API RESTful, a chamada expirará em 5 minutos.
+
+#### <a name="spark-and-notebooks"></a>Spark e notebooks
+
+- Endereços IP de POD podem mudar no ambiente do Kubernetes como reinicializações de PODs. No cenário em que o pod de mestre é reiniciado, a sessão do Spark pode falhar com `NoRoteToHostException`. Isso é causado por caches JVM que não são atualizados com o novo IP endereços.
+
+- Se você tiver o Jupyter já instalado e um Python separado no Windows, os blocos de anotações do Spark podem falhar. Para contornar esse problema, atualize o Jupyter para a versão mais recente.
+
+- Em um bloco de anotações, se você clicar na **adicionar texto** de comando, a célula de texto for adicionada no modo de visualização, em vez de modo de edição. Você pode clicar no ícone de visualização para alternar para modo de edição e editar a célula.
+
+#### <a name="hdfs"></a>HDFS
+
+- Se o botão direito do mouse em um arquivo no HDFS para visualizá-lo, você poderá ver o seguinte erro:
+
+   `Error previewing file: File exceeds max size of 30MB`
+
+   Atualmente não há nenhuma maneira de visualizar arquivos maiores do que 30 MB no estúdio de dados do Azure.
+
+- Não há suporte para alterações de configuração para o HDFS que envolvem alterações para o hdfs-site. XML.
+
+#### <a name="security"></a>Segurança
+
+- O SA_PASSWORD faz parte do ambiente e detectáveis (por exemplo, em um arquivo de despejo de cabo). Você deve redefinir o SA_PASSWORD na instância mestre após a implantação. Isso não é um bug, mas uma etapa de segurança. Para obter mais informações sobre como alterar o SA_PASSWORD em um contêiner do Linux, consulte [alterar a senha SA](../linux/quickstart-install-connect-docker.md#sapassword).
+
+- Logs AKS podem conter a senha SA para implantações de cluster de big data.
 
 ## <a id="ctp24"></a> CTP 2.4 (março)
 
@@ -49,7 +142,7 @@ As seções a seguir descrevem os problemas conhecidos e as limitações desta v
 - Não há suporte para atualizar um cluster de dados de grandes dados de uma versão anterior.
 
    > [!IMPORTANT]
-   > Você deve fazer backup dos dados e, em seguida, exclua seu cluster de big data existente (usando a versão anterior do **mssqlctl**) antes de implantar a versão mais recente. Para obter mais informações, consulte [atualizar para uma nova versão](deployment-guidance.md#upgrade).
+   > Você deve fazer backup dos dados e, em seguida, exclua seu cluster de big data existente (usando a versão anterior do **mssqlctl**) antes de implantar a versão mais recente. Para obter mais informações, consulte [atualizar para uma nova versão](deployment-upgrade.md).
 
 - Depois de implantar no AKS, você poderá ver os seguintes dois eventos de aviso da implantação. Os dois eventos são problemas conhecidos, mas eles não evitam que você implantar com êxito o cluster de big data no AKS.
 
@@ -193,7 +286,7 @@ As seções a seguir descrevem os problemas conhecidos e as limitações desta v
 - Não há suporte para atualizar um cluster de dados de grandes dados de uma versão anterior.
 
    > [!IMPORTANT]
-   > Você deve fazer backup dos dados e, em seguida, exclua seu cluster de big data existente (usando a versão anterior do **mssqlctl**) antes de implantar a versão mais recente. Para obter mais informações, consulte [atualizar para uma nova versão](deployment-guidance.md#upgrade).
+   > Você deve fazer backup dos dados e, em seguida, exclua seu cluster de big data existente (usando a versão anterior do **mssqlctl**) antes de implantar a versão mais recente. Para obter mais informações, consulte [atualizar para uma nova versão](deployment-upgrade.md).
 
 - O **ACCEPT_EULA** variável de ambiente deve ser "Sim" ou "Sim" para aceitar o EULA. Versões anteriores permitidas "y" e "Y", mas eles não serão mais aceitos e causarão falha na implantação.
 
@@ -243,7 +336,7 @@ Se você usar kubeadm implantar Kubernetes em vários computadores, o portal de 
    mssqlctl cluster create --name <cluster_name>
    ```
 
-- Para obter informações importantes sobre a atualização para a versão mais recente dos clusters de big data e **mssqlctl**, consulte [atualizar para uma nova versão](deployment-guidance.md#upgrade).
+- Para obter informações importantes sobre a atualização para a versão mais recente dos clusters de big data e **mssqlctl**, consulte [atualizar para uma nova versão](deployment-upgrade.md).
 
 #### <a name="external-tables"></a>Tabelas externas
 
@@ -302,7 +395,7 @@ As seções a seguir descrevem os problemas conhecidos e as limitações desta v
 
 #### <a name="deployment"></a>Implantação
 
-- Não há suporte para atualizar um cluster de dados de grandes dados de uma versão anterior. Você deve fazer backup e excluir qualquer cluster de big data existente antes de implantar a versão mais recente. Para obter mais informações, consulte [atualizar para uma nova versão](deployment-guidance.md#upgrade).
+- Não há suporte para atualizar um cluster de dados de grandes dados de uma versão anterior. Você deve fazer backup e excluir qualquer cluster de big data existente antes de implantar a versão mais recente. Para obter mais informações, consulte [atualizar para uma nova versão](deployment-upgrade.md).
 
 - Depois de implantar no AKS, você poderá ver os seguintes dois eventos de aviso da implantação. Os dois eventos são problemas conhecidos, mas eles não evitam que você implantar com êxito o cluster de big data no AKS.
 
@@ -370,7 +463,7 @@ As seções a seguir fornecem os problemas conhecidos para clusters de grandes d
 
 #### <a name="deployment"></a>Implantação
 
-- Não há suporte para atualizar um cluster de dados de grandes dados de uma versão anterior. Você deve fazer backup e excluir qualquer cluster de big data existente antes de implantar a versão mais recente. Para obter mais informações, consulte [atualizar para uma nova versão](deployment-guidance.md#upgrade).
+- Não há suporte para atualizar um cluster de dados de grandes dados de uma versão anterior. Você deve fazer backup e excluir qualquer cluster de big data existente antes de implantar a versão mais recente. Para obter mais informações, consulte [atualizar para uma nova versão](deployment-upgrade.md).
 
 - Depois de implantar no AKS, você poderá ver os seguintes dois eventos de aviso da implantação. Os dois eventos são problemas conhecidos, mas eles não evitam que você implantar com êxito o cluster de big data no AKS.
 

@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 26c5ebe206ed9d8530a7158b464e974920dd878e
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63284972"
 ---
-# <a name="mdx-data-definition---drop-set"></a>Definição de dados MDX - DROP SET
+# <a name="mdx-data-definition---drop-set"></a>Definição de dados MDX – DROP SET
 
 
   Remove um conjunto nomeado.  
@@ -40,7 +40,7 @@ DROP [SESSION] SET
  *Set_Name*  
  Uma expressão de cadeia de caracteres válida que fornece esse nome do conjunto nomeado a ser descartado.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Para obter mais informações sobre conjuntos nomeados, consulte [Criando conjuntos nomeados em MDX &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets.md).  
   
 ## <a name="see-also"></a>Consulte também  

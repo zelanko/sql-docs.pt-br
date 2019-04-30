@@ -1,5 +1,5 @@
 ---
-title: Modificar as opções de inicialização de instantâneo de replicação do SQL | Microsoft Docs
+title: Modificar opções de inicialização de instantâneo para Replicação do SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2a611de458537156740521dae8b732eed3e2653c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270250"
 ---
-# <a name="modify-snapshot-initialization-options-for-sql-replication"></a>Modificar as opções de inicialização de instantâneo de replicação do SQL
+# <a name="modify-snapshot-initialization-options-for-sql-replication"></a>Modificar as opções de inicialização de instantâneo para Replicação do SQL
 
 Este artigo descreve como modificar um número de opções quando [inicializando uma assinatura com um instantâneo](initialize-a-subscription-with-a-snapshot.md).
 
@@ -35,12 +35,12 @@ Este artigo descreve como modificar um número de opções quando [inicializando
 
 ## <a name="snapshot-folder-locations"></a>Locais de pasta de instantâneo
 
-### <a name="default-snapshot-location"></a>Local do instantâneo padrão
+### <a name="default-snapshot-location"></a>Localização do instantâneo padrão
 Especifique o local do instantâneo padrão (SQL Server Management Studio) local do instantâneo padrão na **pasta de instantâneo** página do Assistente para configurar a distribuição. Para obter mais informações sobre como usar o assistente, consulte [Configurar a publicação e a distribuição](configure-publishing-and-distribution.md). Se você criar uma publicação em um servidor que não esteja configurada como Distributor, especifique um local de instantâneo padrão na página **Pasta de Instantâneo** do Assistente para Novas Publicações. Para obter mais informações sobre como usar esse assistente, consulte [Criar uma publicação](publish/create-a-publication.md).  
   
  Modifique o local do instantâneo padrão na página **Publicadores** da caixa de diálogo **Propriedades do Distribuidor – \<Distribuidor>**. Para obter mais informações, consulte [Exibir e modificar as propriedades do Distribuidor e do Publicador](view-and-modify-distributor-and-publisher-properties.md). Defina a pasta de instantâneo para cada publicação na caixa de diálogo **Propriedades da Publicação – \<Publicação>**. Para obter mais informações, consulte [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
   
-#### <a name="modify-the-default-snapshot-location"></a>Modifique o local de instantâneo padrão  
+#### <a name="modify-the-default-snapshot-location"></a>Modificar a localização do instantâneo padrão  
   
 1.  Na página **Publicadores** da caixa de diálogo **Propriedades do Distribuidor – \<Distribuidor>**, clique no botão de propriedades (**...**) para o Publicador para o qual você deseja alterar a localização do instantâneo padrão.    
 2.  Na caixa de diálogo **Propriedades do Publicador – \<Publisher>**, digite um valor para a propriedade **Pasta de Instantâneo Padrão**.
@@ -80,7 +80,7 @@ Especifique que os arquivos devem ser compactados na página **Instantâneo** da
 2.  Selecione **Compactar arquivos de instantâneo nesta pasta**.    
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
-## <a name="execute-scripts-before-and-after-snapshot-is-applied"></a>Executar scripts antes e após a aplicação do instantâneo
+## <a name="execute-scripts-before-and-after-snapshot-is-applied"></a>Executar scripts antes e depois da aplicação do instantâneo
 
  É possível especificar scripts a serem executados no Assinante antes ou depois que o instantâneo é aplicado. Scripts podem ser usados por várias razões, tais como a criação de logon e esquemas (proprietários de objeto) em cada Assinante.  
   

@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a15bb67033b3524d511e3308b1a4243345dc5e88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63276565"
 ---
 # <a name="prepare-image-progress"></a>Progresso da Preparação de Imagem
   Use a página **Progresso da Preparação de Imagem** do Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para monitorar o status da instalação da preparação de imagem do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Após a conclusão dessa etapa, essa página listará o status para cada recurso do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] preparado durante este processo.  

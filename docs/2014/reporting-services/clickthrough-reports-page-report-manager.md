@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7f76a4c0d2e9cc3bd2d5591a704491a4bed0ebfb
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59937582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266136"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>Página Relatórios de Clickthrough (Gerenciador de Relatórios)
   Um relatório de clickthrough é aquele que exibe dados relacionados quando você clica nos dados interativos contidos no relatório. Esses relatórios são gerados pelo servidor de relatórios com base nas informações contidas no modelo usado para criar o relatório. Se você não quiser usar os relatórios de clickthrough gerados pelo servidor de relatórios, você pode criar relatórios personalizados publicados em um servidor de relatórios e mapear até pontos de dados interativos definidos no modelo. Os relatórios personalizados devem ser criados no Construtor de Relatórios do mesmo modelo e depois publicados no servidor de relatórios. Para mapear relatórios personalizados para itens no modelo, use a página Relatórios de Clickthrough no Gerenciador de Relatórios.  

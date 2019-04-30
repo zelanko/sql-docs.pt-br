@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6c1716049d16da49a95e2894c4458fe04b0a0f04
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59949292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306364"
 ---
 # <a name="report-properties-dialog-box-page-setup"></a>Caixa de diálogo Propriedades do Relatório, Configurar Página
   Selecione **Configurar página** sobre o **propriedades do relatório**, caixa de diálogo para definir opções de página para todo o relatório.  

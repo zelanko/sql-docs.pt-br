@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ba39c4bdc2bffc3198d780aa155e9ee60000d88a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308724"
 ---
 # <a name="cursoroptionenum"></a>CursorOptionEnum
 Especifica qual funcionalidade do [dá suporte a](../../../ado/reference/ado-api/supports-method.md) método deve testar.  
   
-|Constante|Valor|Description|  
+|Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
 |**adAddNew**|0x1000400|Dá suporte a [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) método para adicionar novos registros.|  
 |**adApproxPosition**|0x4000|Dá suporte a [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) e [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) propriedades.|  
@@ -43,7 +43,7 @@ Especifica qual funcionalidade do [dá suporte a](../../../ado/reference/ado-api
 |**adUpdateBatch**|0x10000|Dá suporte à atualização em lotes ([UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) e [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) métodos) para transmitir grupos de alterações no provedor.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
- Pacote: **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

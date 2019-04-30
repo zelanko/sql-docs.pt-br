@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8ca0a5094e40f13aef4b4f87d5642e51e7a9b765
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306297"
 ---
 # <a name="asynchronous-execution-polling-method"></a>Execução assíncrona (Método de Sondagem)
 Antes do ODBC 3.8 e o SDK do Windows 7, operações assíncronas eram permitidas apenas em funções de instrução. Para obter mais informações, consulte o **execução de operações de instrução assincronamente**, mais adiante neste tópico.  
@@ -86,7 +86,7 @@ while ((rc=SQLExecDirect(hstmt1,"SELECT * FROM Orders",SQL_NTS))==SQL_STILL_EXEC
   
 -   [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)  
   
--   [Falha de SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)  
+-   [SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)  
   
 -   [SQLGetEnvAttr](../../../odbc/reference/syntax/sqlgetenvattr-function.md)  
   

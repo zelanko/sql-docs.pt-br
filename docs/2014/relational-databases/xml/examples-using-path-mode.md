@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c5a566d9684341b7aa20342147aab950ebd4047c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287779"
 ---
-# <a name="examples-using-path-mode"></a>Exemplos: Usando o modo PATH
+# <a name="examples-using-path-mode"></a>Exemplos: uso do modo PATH
   Os exemplos a seguir ilustram o uso do modo PATH para gerar XML a partir de uma consulta SELECT. Muitas dessas consultas são especificadas em relação a documentos XML de instruções da fabricação de bicicletas que são armazenados na coluna Instructions da tabela ProductModel.  
   
 ## <a name="specifying-a-simple-path-mode-query"></a>Especificando uma consulta em modo PATH  

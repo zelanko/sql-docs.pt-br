@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f9115fc1e226e05c788206706d59a5435bfd1c5d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251471"
 ---
 # <a name="xor-mdx"></a>XOR (MDX)
 
@@ -37,10 +37,10 @@ Expression1 XOR Expression2
  Uma expressão MDX válida que retorna um valor numérico.  
   
 ## <a name="return-value"></a>Valor retornado  
- Um valor booliano que retorna **true** se apenas um argumento for avaliado como **true**; caso contrário, **false**.  
+ Um valor booliano que retorna **verdadeira** se apenas um argumento é avaliado como **verdadeiro**; caso contrário, **false**.  
   
-## <a name="remarks"></a>Remarks  
- O **XOR** operador trata ambos os parâmetros como valores boolianos (zero, 0, como **false**; caso contrário, **true**) antes do operador realizar a exclusão lógica. A tabela a seguir ilustra como o **XOR** operador realizar a exclusão lógica.  
+## <a name="remarks"></a>Comentários  
+ O **XOR** operador trata ambos os parâmetros como valores boolianos (zero, 0, como **falso**; caso contrário, **verdadeiro**) antes do operador realizar a exclusão lógica. A tabela a seguir ilustra como o **XOR** operador realizar a exclusão lógica.  
   
 |*Expression1*|*Expression2*|Valor retornado|  
 |-------------------|-------------------|------------------|  

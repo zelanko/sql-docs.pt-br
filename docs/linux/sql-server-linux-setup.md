@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: e400d73137750bda913003aed1717793634cfd41
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
-ms.translationtype: MT
+ms.openlocfilehash: 1edc63d4dc29e05a914bbfbd891df06a4b3a7255
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280620"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63455089"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Orientação de instalação do SQL Server no Linux
 
@@ -109,7 +109,7 @@ Esses comandos baixam o pacote mais recente e substitua os binários localizados
 
 A reversão ou fazer downgrade do SQL Server para uma versão anterior, use as seguintes etapas:
 
-1. Identifique o número de versão para o pacote do SQL Server que você deseja fazer o downgrade. Para obter uma lista de números de pacote, consulte o [notas de versão](sql-server-linux-release-notes.md).
+1. Identifique o número de versão para o pacote do SQL Server que você deseja fazer o downgrade. Para obter uma lista de números de pacote, consulte o [notas de versão](../linux/sql-server-linux-release-notes.md).
 
 1. Fazer downgrade para uma versão anterior do SQL Server. Nos comandos a seguir, substitua `<version_number>` com o número de versão do SQL Server identificado na etapa um.
 
@@ -178,7 +178,7 @@ Se sua máquina Linux não tem acesso aos repositórios online usados na [iníci
 > [!TIP]
 > Se você instalou com êxito com as etapas de início rápido, você precisa baixar ou instalar manualmente os pacotes do SQL Server. Esta seção é apenas para o cenário offline.
 
-1. **Baixe o pacote do mecanismo de banco de dados para sua plataforma**. Localize links de download do pacote na seção de detalhes do pacote do [notas de versão](sql-server-linux-release-notes.md).
+1. **Baixe o pacote do mecanismo de banco de dados para sua plataforma**. Localize links de download do pacote na seção de detalhes do pacote do [notas de versão](../linux/sql-server-linux-release-notes.md).
 
 1. **Mover o pacote baixado para seu computador Linux**. Se você usou um computador diferente para baixar os pacotes, uma maneira de mover os pacotes para sua máquina Linux é com o **scp** comando.
 

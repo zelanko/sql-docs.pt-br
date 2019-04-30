@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab0a4af42a6137a78d1d884d7f00dd37911f9ff4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316834"
 ---
 # <a name="rename-queries-visual-database-tools"></a>Renomear consultas (Visual Database Tools)
   Você pode renomear qualquer consulta que não esteja aberta atualmente para edição. O procedimento a seguir presume que a consulta que você deseja renomear está fechada.  

@@ -17,22 +17,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f05af48f2edcdcf2c6adc6e3617860fdad38bde7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63314745"
 ---
 # <a name="searchdirectionenum"></a>SearchDirectionEnum
 Especifica a direção de uma pesquisa de registro dentro de uma [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
-|Constante|Valor|Description|  
+|Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
 |**adSearchBackward**|-1|Parando no início de pesquisas com versões anteriores, o **conjunto de registros**. Se uma correspondência não for encontrada, o ponteiro de registro está posicionado em [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md).|  
 |**adSearchForward**|1|Encaminham pesquisas, parando no final de **conjunto de registros**. Se uma correspondência não for encontrada, o ponteiro de registro está posicionado em [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md).|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
- Pacote: **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

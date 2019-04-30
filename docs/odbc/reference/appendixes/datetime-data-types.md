@@ -23,16 +23,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4d546fff544c616d4f2750dba76c4b8e68d21aab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241010"
 ---
 # <a name="datetime-data-types"></a>Tipo de dados datetime
 Em ODBC 3 *. x*, os identificadores de data, hora e tipos de dados SQL de carimbo de hora foram alterados de SQL_DATE, SQL_TIME e SQL_TIMESTAMP (com instâncias de **#define** no arquivo de cabeçalho de 9, 10 e 11) para SQL _ TYPE_DATE, SQL_TYPE_TIME e SQL_TYPE_TIMESTAMP (com instâncias de **#define** no arquivo de cabeçalho de 91, 92 e 93), respectivamente. O tipo correspondente de C identificadores foram alterados de SQL_C_DATE, SQL_C_TIME e SQL_C_TIMESTAMP SQL_C_TYPE_DATE, SQL_C_TYPE_TIME e SQL_C_TYPE_TIMESTAMP, respectivamente e as instâncias de **#define** foram alterados adequadamente.  
   
- O tamanho da coluna e dígitos decimais retornados para os tipos de dados de data e hora do SQL no ODBC 3 *. x* são o mesmo que a precisão e escala retornou para elas no ODBC 2. *x*. Esses valores são diferentes dos valores nos campos de descritor de SQL_DESC_PRECISION e SQL_DESC_SCALE. (Para obter mais informações, consulte [tamanho da coluna, dígitos decimais, o comprimento do octeto de transferência e o tamanho de exibição](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) apêndice d: tipos de dados.)  
+ O tamanho da coluna e dígitos decimais retornados para os tipos de dados de data e hora do SQL no ODBC 3 *. x* são o mesmo que a precisão e escala retornou para elas no ODBC 2. *x*. Esses valores são diferentes dos valores nos campos de descritor de SQL_DESC_PRECISION e SQL_DESC_SCALE. (Para obter mais informações, consulte [tamanho da coluna, dígitos decimais, o comprimento do octeto de transferência e o tamanho de exibição](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) no Apêndice d: Tipos de dados).  
   
  Essas alterações afetam **SQLDescribeCol**, **SQLDescribeParam**, e **SQLColAttributes**; **SQLBindCol**, **SQLBindParameter**, e **SQLGetData**; e **SQLColumns**, **SQLGetTypeInfo** , **SQLProcedureColumns**, **SQLStatistics**, e **SQLSpecialColumns**.  
   

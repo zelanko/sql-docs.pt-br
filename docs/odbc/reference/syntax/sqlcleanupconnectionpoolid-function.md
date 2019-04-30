@@ -14,15 +14,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ce48e7aa89451131b7ed483fa5132af22565c170
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63252752"
 ---
 # <a name="sqlcleanupconnectionpoolid-function"></a>Função SQLCleanupConnectionPoolID
 **Conformidade com**  
- Versão introduziu: Conformidade de padrões 3.81 ODBC: ODBC  
+ Versão introduzida: Conformidade com padrões 3.81 ODBC: ODBC  
   
  **Resumo**  
  **SQLCleanupConnectionPoolID** informa um driver que uma ID do pool foi atingida. Um pool de ID podem tempo limite sempre que todas as conexões em um pool associado com essa ID do pool estavam atingiu o tempo limite. Ver [Pooling no Microsoft Data Access Components](https://msdn.microsoft.com/library/ms810829.aspx) para obter mais informações sobre o tempo limite da conexão.  

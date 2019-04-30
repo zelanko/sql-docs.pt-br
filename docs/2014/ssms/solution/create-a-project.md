@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a33663ff92a093ea63f183cf8efb901d133a5a27
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751738"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63460140"
 ---
 # <a name="create-a-project"></a>Criar um projeto
   Você pode criar um ou mais projetos dentro de uma solução existente.  
@@ -94,7 +94,7 @@ ms.locfileid: "52751738"
   
 4.  Clique em **OK**.  
   
- Você pode definir um nome para o projeto de script, mas os nomes de pastas são definidos pelo [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e não podem ser alterados. Você pode configurar a unidade e a especificação do caminho do conjunto comum de pastas usando a caixa de diálogo **Adicionar Novo Projeto** . No **Gerenciador de Soluções**, clique com o botão direito do mouse no ícone da solução e clique em **Adicionar**. O local padrão para pastas de projeto de script é: C:\Documents and Settings\\*nome de usuário*\My Documents\SQL Server Management Studio\Projects\\.  
+ Você pode definir um nome para o projeto de script, mas os nomes de pastas são definidos pelo [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e não podem ser alterados. Você pode configurar a unidade e a especificação do caminho do conjunto comum de pastas usando a caixa de diálogo **Adicionar Novo Projeto** . No **Gerenciador de Soluções**, clique com o botão direito do mouse no ícone da solução e clique em **Adicionar**. O local padrão das pastas do projeto de script é: C:\Documents and Settings\\*username*\Meus Documentos\SQL Server Management Studio\Projetos\\.  
   
 ## <a name="see-also"></a>Consulte também  
  [Gerenciador de soluções](solution-explorer.md)   

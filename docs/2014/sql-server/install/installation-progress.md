@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ff48c85e24c0f2c21e06fa868ee933e9455e25c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63244710"
 ---
 # <a name="installation-progress"></a>Andamento da Instalação
   Use a página **Andamento da Instalação** do Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para monitorar o status da Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

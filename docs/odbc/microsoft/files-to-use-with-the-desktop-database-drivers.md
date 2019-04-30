@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 42f22cc0214929f283209fa12542e9620dbdcc08
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63314224"
 ---
 # <a name="files-to-use-with-the-desktop-database-drivers"></a>Arquivos a usar com os drivers de banco de dados de área de trabalho
 Os Drivers de banco de dados de área de trabalho de ODBC são usados com o mecanismo de banco de dados Microsoft Jet, os arquivos ISAM instaláveis e os arquivos do Microsoft ODBC. Nem todos são necessária para a redistribuição do produto, e nem todos são componentes essenciais.  

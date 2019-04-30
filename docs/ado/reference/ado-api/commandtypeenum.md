@@ -17,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5ff7b6ecf919ab83340e49e4395f8c2d1701261d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316278"
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
 Especifica como um argumento de comando deve ser interpretado.  
   
  É importante validar o usuário forneceu *CommandString* valores para evitar que os usuários do aplicativo a oportunidade de injetar comandos potencialmente perigosos para ADO executar.  
   
-|Constante|Valor|Description|  
+|Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
 |**adCmdUnspecified**|-1|Não especifica o argumento de tipo de comando.|  
 |**adCmdText**|1|Avalia [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) como uma definição textual de um comando ou procedimento armazenado chamada.|  
@@ -39,7 +39,7 @@ Especifica como um argumento de comando deve ser interpretado.
 |**adCmdTableDirect**|512|Avalia **CommandText** como um nome de tabela cujas colunas são retornadas. Usado com **Recordset.Open** ou **Requery** apenas. Para usar o [Seek](../../../ado/reference/ado-api/seek-method.md) método, o **conjunto de registros** deve ser aberto com **adCmdTableDirect**.<br /><br /> Esse valor não pode ser combinado com o [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) valor **adAsyncExecute**.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
- Pacote: **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

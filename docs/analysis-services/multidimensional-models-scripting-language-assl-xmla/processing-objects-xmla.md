@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 59a581f7e70f3fc1afd7eb7c1eaf4751d32719d0
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261658"
 ---
 # <a name="processing-objects-xmla"></a>Processando objetos (XMLA)
   Na [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], o processamento é a etapa ou série de etapas que transformam dados em informações para análise de negócios. O processamento será diferente dependendo do tipo de objeto, mas sempre fará parte da transformação de dados em informações.  
@@ -100,7 +100,7 @@ ms.locfileid: "50145381"
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descrição  
  O exemplo a seguir processa totalmente o banco de dados [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] de exemplo do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ### <a name="code"></a>Código  
@@ -115,7 +115,7 @@ ms.locfileid: "50145381"
 </Process>  
 ```  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descrição  
  O exemplo a seguir processa incrementalmente a **Internet_Sales_2004** partição o **vendas pela Internet** grupo de medidas da **Adventure Works DW** cubo no [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] amostra [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados. O **processo** comando está adicionando agregações para ordem datas mais tarde do que 31 de dezembro de 2006 à partição usando uma associação de consulta fora de linha na **associações** propriedade do **processo**  comando para recuperar as linhas da tabela de fatos dos quais gerar agregações para adicionar à partição.  
   
 ### <a name="code"></a>Código  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 47bd8d2b6912d28d992a0655b33396ce9042c1af
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59935492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306360"
 ---
 # <a name="report-sections-dialog-box"></a>Caixa de diálogo Seções do Relatório
   Quando você abre um relatório, o Designer de relatórios verifica se o relatório contém apenas uma linguagem RDL (Report Definition)  **\<seção >** elemento. Não há suporte para a abertura de um relatório com vários elementos **\<Section>**.  

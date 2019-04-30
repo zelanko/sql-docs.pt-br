@@ -1,5 +1,5 @@
 ---
-title: Prever (MDX) | Microsoft Docs
+title: Predict (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ca47db953df9889cb1d72d0add45f2b0ed681980
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63277478"
 ---
 # <a name="predict-mdx"></a>Predict (MDX)
 
@@ -41,8 +41,8 @@ Predict(Mining_Model_Name,String_Expression)
  *String_Expression*  
  Uma expressão de cadeia de caracteres válida que avalia uma expressão DMX válida para o modelo de mineração especificado.  
   
-## <a name="remarks"></a>Remarks  
- O **prever** função avalia a expressão de cadeia de caracteres especificada dentro do contexto do modelo de mineração especificado.  
+## <a name="remarks"></a>Comentários  
+ O **Predict** função avalia a expressão de cadeia de caracteres especificada dentro do contexto do modelo de mineração especificado.  
   
  A sintaxe e as funções de mineração de dados são documentadas na refereência do DMS (Data Mining Expressions).  
   
@@ -60,6 +60,6 @@ WHERE([Customer].[Customer Geography].[Customer].&[12012])
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

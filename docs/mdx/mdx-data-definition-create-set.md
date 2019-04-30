@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4d1e58d016649c3c21a056a82315bd0d0fb3564f
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248382"
 ---
-# <a name="mdx-data-definition---create-set"></a>Definição de dados MDX - criar conjunto
+# <a name="mdx-data-definition---create-set"></a>Definição de dados MDX – CREATE SET
 
 
   Cria um conjunto nomeado com escopo de sessão para o cubo atual.  
@@ -47,14 +47,14 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
  *Property_Value*  
  Uma expressão escalar válida que define o valor de propriedade de conjunto.  
   
-## <a name="remarks"></a>Remarks  
- Um conjunto nomeado é um conjunto de membros de dimensão (ou uma expressão que define um conjunto) que você cria para usar novamente. Por exemplo, um conjunto nomeado possibilita a definição de um conjunto de membros de dimensão que consiste no conjunto das dez principais lojas por vendas. Esse conjunto pode ser definido estaticamente, ou por meio de uma função como [TopCount](../mdx/topcount-mdx.md). Esse conjunto nomeado pode ser usado onde quer que o conjunto das 10 lojas principais se faça necessário.  
+## <a name="remarks"></a>Comentários  
+ Um conjunto nomeado é um conjunto de membros de dimensão (ou uma expressão que define um conjunto) que você cria para usar novamente. Por exemplo, um conjunto nomeado possibilita a definição de um conjunto de membros de dimensão que consiste no conjunto das dez principais lojas por vendas. Esse conjunto pode ser definido estaticamente ou por meio de uma função como [TopCount](../mdx/topcount-mdx.md). Esse conjunto nomeado pode ser usado onde quer que o conjunto das 10 lojas principais se faça necessário.  
   
- A instrução CREATE SET cria um conjunto nomeado que permanece disponível durante a sessão e, portanto, pode ser usada em várias consultas em uma sessão. Para obter mais informações, consulte [membros calculados do Creating Session-Scoped &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md).  
+ A instrução CREATE SET cria um conjunto nomeado que permanece disponível durante a sessão e, portanto, pode ser usada em várias consultas em uma sessão. Para obter mais informações, consulte [membros calculados do criando &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md).  
   
- Também é possível definir um conjunto nomeado para ser usado por uma consulta única. Para definir tal conjunto, use a cláusula WITH na instrução SELECT. Para obter mais informações sobre a cláusula WITH, consulte [conjuntos nomeados de Creating Query-Scoped &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md).  
+ Também é possível definir um conjunto nomeado para ser usado por uma consulta única. Para definir tal conjunto, use a cláusula WITH na instrução SELECT. Para obter mais informações sobre a cláusula WITH, consulte [conjuntos nomeados de criando &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md).  
   
- O *Set_Expression* cláusula pode conter qualquer função que oferece suporte à sintaxe MDX. Conjuntos criados com a instrução CREATE SET que não especifiquem a cláusula SESSION têm escopo de sessão. Use a cláusula WITH para criar um conjunto com escopo de consulta.  
+ O *Set_Expression* cláusula pode conter qualquer função que dá suporte à sintaxe MDX. Conjuntos criados com a instrução CREATE SET que não especifiquem a cláusula SESSION têm escopo de sessão. Use a cláusula WITH para criar um conjunto com escopo de consulta.  
   
  A especificação de um cubo diferente daquele conectado no momento causa um erro. Portanto, deve-se usar CURRENTCUBE no lugar de um nome de cubo para indicar o cubo atual.  
   
@@ -62,10 +62,10 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
  Um conjunto definido pelo usuário pode ocorrer dentro de um dos escopos listados na tabela a seguir.  
   
  Escopo de consulta  
- A visibilidade e o tempo de vida do conjunto estão limitados à consulta. O conjunto é definido como uma consulta individual. Escopo de consulta substitui escopo de sessão. Para obter mais informações, consulte [conjuntos nomeados de Creating Query-Scoped &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md).  
+ A visibilidade e o tempo de vida do conjunto estão limitados à consulta. O conjunto é definido como uma consulta individual. Escopo de consulta substitui escopo de sessão. Para obter mais informações, consulte [conjuntos nomeados de criando &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md).  
   
  Escopo de sessão  
- A visibilidade e o tempo de vida do conjunto estão limitados à sessão em que são criados. (O tempo de vida é menor do que a duração de sessão se uma instrução DROP SET for emitida no conjunto.) A instrução CREATE SET cria um conjunto com escopo de sessão. Use a cláusula WITH para criar um conjunto com escopo de consulta.  
+ A visibilidade e o tempo de vida do conjunto estão limitados à sessão em que são criados. (O tempo de vida é menor que a duração da sessão se uma instrução DROP SET for emitida no conjunto.) A instrução CREATE SET cria um conjunto com escopo de sessão. Use a cláusula WITH para criar um conjunto com escopo de consulta.  
   
 ### <a name="example"></a>Exemplo  
  O exemplo a seguir cria um conjunto chamado Core Products. A consulta de SELECT demonstra isso chamando o conjunto recentemente criado. A instrução CREATE SET deve ser executada antes da execução da consulta SELECT – elas não podem ser executadas no mesmo lote.  
@@ -93,15 +93,15 @@ SELECT [Core Products] ON 0
  Especifica que o conjunto não é visível a usuários que consultam o cubo.  
   
 ## <a name="standard-properties"></a>Propriedades padrão  
- Cada conjunto tem um conjunto de propriedades padrão. Quando um aplicativo cliente está conectado à [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], as propriedades padrão são suportadas ou estão disponíveis para serem suportadas, conforme escolha do administrador.  
+ Cada conjunto tem um conjunto de propriedades padrão. Quando um aplicativo cliente está conectado a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], as propriedades padrão são suportadas ou disponível para receber suporte, como o administrador escolhe.  
   
 |Identificador de propriedade|Significado|  
 |-------------------------|-------------|  
 |CAPTION|Uma cadeia de caracteres que o aplicativo cliente usa como legenda para o conjunto.|  
-|DISPLAY_FOLDER|Uma cadeia de caracteres que identifica o caminho da pasta de exibição que o aplicativo cliente usa para mostrar o conjunto. O separador de nível de pasta é definido pelo aplicativo cliente. Para ferramentas e clientes fornecidos pelo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], a barra invertida (\\) é o separador de nível. Para fornecer várias pastas de exibição para um conjunto definido, use um ponto e vírgula (;) para separar as pastas.|  
+|DISPLAY_FOLDER|Uma cadeia de caracteres que identifica o caminho da pasta de exibição que o aplicativo cliente usa para mostrar o conjunto. O separador de nível de pasta é definido pelo aplicativo cliente. Para as ferramentas e clientes fornecidos pelo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], a barra invertida (\\) é o separador de nível. Para fornecer várias pastas de exibição para um conjunto definido, use um ponto e vírgula (;) para separar as pastas.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Instrução SET de SOLTAR &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md)   
+ [Instrução SET no menu &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md)   
  [Instruções de definição de dados MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ec549f256caeab598f6e49632b2a50cfa5841710
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63244609"
 ---
 # <a name="odbc-jet-error-messages"></a>Mensagens de erro do Jet do ODBC
 Para erros que ocorrem na fonte de dados, o driver ODBC retorna uma mensagem de erro retornada a ele pela biblioteca de arquivo ODBC. Para erros que ocorrem no driver ODBC ou o Gerenciador de Driver, os retornos de driver, uma mensagem de erro com base no texto associado com o SQLSTATE.  
@@ -36,4 +36,4 @@ Para erros que ocorrem na fonte de dados, o driver ODBC retorna uma mensagem de 
 |Mensagem de erro|Local do erro|  
 |-------------------|--------------------|  
 |[Microsoft] [Gerenciador de Driver ODBC] *texto da mensagem*|Gerenciador de driver (Odbc32. dll)|  
-|[Microsoft] [ODBC *nome do driver*]*texto da mensagem*|O driver ISAM (consulte ISAMs Driver)|
+|[Microsoft][ODBC *driver-name*]*message-text*|O driver ISAM (consulte ISAMs Driver)|

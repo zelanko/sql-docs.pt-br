@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a6aa4074aa04af86e478b57b1870fd0dd855bea8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315076"
 ---
 # <a name="exploring-the-call-center-model-intermediate-data-mining-tutorial"></a>Explorando o modelo de call center (Tutorial de mineração de dados intermediário)
   Agora que você criou o modelo exploratório, poderá usá-lo para saber mais sobre os dados utilizando as ferramentas a seguir fornecidas no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -43,7 +43,7 @@ ms.locfileid: "56037757"
     > [!NOTE]  
     >  Os valores exatos nesse intervalo podem variar de acordo com a configuração do modelo.  
   
-2.  Para **valor 2**, selecione o intervalo com os valores mais altos. Por exemplo, o intervalo com o valor >=0.12 representa as taxas de abandono mais altas e, portanto, a pior classificação de serviço. Em outras palavras, 12% dos clientes que telefonaram durante esse turno desligaram antes de falar com um atendente.  
+2.  Para **valor 2**, selecione o intervalo com os valores mais altos. Por exemplo, o intervalo com o valor > = gt;=0.12 representa as taxas de abandono mais altas e, portanto, a pior classificação de serviço. Em outras palavras, 12% dos clientes que telefonaram durante esse turno desligaram antes de falar com um atendente.  
   
      O conteúdo a **variáveis** painel são atualizados para comparar os atributos que contribuem para os valores de resultado. Assim, a coluna esquerda mostra os atributos associados à melhor classificação de serviço, e a coluna direita mostra o atributo associado à pior classificação do serviço.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "56037757"
   
  Entretanto, à medida que você examina a lista de fatores contribuintes, percebe alguns outros fatores  Por exemplo, o turno parece influenciar o serviço, mas as pontuações de comparação de precisão e as probabilidades relativas indicam que o turno não é um fator preponderante.  
   
-|attribute|Valor|Favorece \< 0,07|Favorece >= 0,12|  
+|attribute|Valor|Favorece \< 0,07|Favorece > = 0,12|  
 |---------------|-----------|--------------------|----------------------|  
 |Tempo médio por emissão|89.087 - 120.000||Pontuação:  100<br /><br /> Probabilidade de valor1: 4.45 %<br /><br /> Probabilidade de Value2: 51.94 %<br /><br /> Comparação de precisão de valor1: 0.19<br /><br /> Comparação de precisão para Value2: 1.94|  
 |Tempo médio por emissão|44.000 - 70.597|Pontuação: 92.35<br /><br /> Probabilidade de valor1: 60.06 %<br /><br /> Probabilidade de Value2: 8.30 %<br /><br /> Comparação de precisão de valor1: 2.61<br /><br /> Comparação de precisão para Value2: 0.31||  

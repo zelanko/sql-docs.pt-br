@@ -17,19 +17,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a3c5ad31437cf2639d6b8478d173c7522fa3e9fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63272937"
 ---
 # <a name="translator-specification-subkeys"></a>Subchaves de especificação do conversor
 Cada tradução listada na subchave de conversores ODBC tem uma subchave de seu próprio. Essa subchave tem o mesmo nome que o valor correspondente sob a subchave de conversores ODBC. Os valores sob essa subchave listam os caminhos completos do tradutor e DLLs de instalação de tradução e a contagem de uso. Os formatos de valores são conforme mostrado na tabela a seguir.  
   
-|Nome|Tipo de dados|data|  
+|Nome|Tipo de dados|Dados|  
 |----------|---------------|----------|  
-|Translator|REG_SZ|*caminho de DLL de tradução*|  
-|Instalação|REG_SZ|*caminho de DLL de instalação*|  
+|Translator|REG_SZ|*translator-DLL-path*|  
+|Configuração|REG_SZ|*setup-DLL-path*|  
 |UsageCount|REG_DWORD|*contagem*|  
   
  Para obter informações sobre contagens de uso, consulte [contagem de uso](../../../odbc/reference/install/usage-counting.md) anteriormente nesta seção.  

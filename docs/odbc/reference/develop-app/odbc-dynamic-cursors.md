@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 64215cff750e39dc78ad1a695bbe553d900f4120
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312866"
 ---
 # <a name="odbc-dynamic-cursors"></a>Cursores dinâmicos ODBC
-Um cursor dinâmico é exatamente isso: dinâmico. Ele pode detectar as alterações feitas para a associação, pedido e valores do conjunto de resultados depois que o cursor é aberto. Por exemplo, suponha que duas linhas de busca de um cursor dinâmico e o outro aplicativo, em seguida, atualiza uma dessas linhas e exclui a outra. Se o cursor dinâmico, em seguida, tenta buscar essas linhas novamente, ele não localizará a linha excluída, mas retornará os novos valores para a linha atualizada.  
+Um cursor dinâmico é exatamente isso: dinâmico. Ele pode detectar as alterações feitas para a associação, pedido e valores do conjunto de resultados depois que o cursor é aberto. Por exemplo, suponha que um cursor dinâmico busque duas linhas e outro aplicativo então atualize uma dessas linhas e exclua a outra. Se o cursor dinâmico, em seguida, tenta buscar essas linhas novamente, ele não localizará a linha excluída, mas retornará os novos valores para a linha atualizada.  
   
  Cursores dinâmicos detectam todas as atualizações, exclusões e inserções, ambos seus próprios e aquelas feitas por outras pessoas. (Isso está sujeito ao isolamento de nível da transação, conforme definido pelo atributo SQL_ATTR_TXN_ISOLATION conexão.) A matriz de status de linha especificada pelo atributo de instrução SQL_ATTR_ROW_STATUS_PTR reflete essas alterações e pode conter SQL_ROW_SUCCESS, SQL_ROW_SUCCESS_WITH_INFO, SQL_ROW_ERROR, SQL_ROW_UPDATED e SQL_ROW_ADDED. Ele não pode retornar SQL_ROW_DELETED porque um cursor dinâmico não retorna linhas excluídas fora do conjunto de linhas e, portanto, não reconhece a existência da linha excluída no conjunto de resultados ou seu elemento correspondente na matriz de status de linha. SQL_ROW_ADDED é retornado somente quando uma linha é atualizada por uma chamada para **SQLSetPos**, não quando ele é atualizado por outro cursor.  
   

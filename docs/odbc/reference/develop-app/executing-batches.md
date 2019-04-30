@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 53e1afcc780ff06d1d453f94deac984163099444
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248277"
 ---
 # <a name="executing-batches"></a>Lotes em execução
 Antes de um aplicativo executa um lote de instruções, ele deve primeiro verificar se eles têm suporte. Para fazer isso, o aplicativo chama **SQLGetInfo** com as opções SQL_BATCH_SUPPORT, SQL_PARAM_ARRAY_ROW_COUNTS e SQL_PARAM_ARRAY_SELECTS. A primeira opção retorna se geradores de contagem de linha e o resultado da geração de conjunto de instruções são suportadas em lotes explícitas e procedimentos, enquanto as duas últimas opções retornam informações sobre a disponibilidade de contagens de linhas e o resultado define em parametrizadas execução.  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4535b837d81db10f41f1445a7051678ce4fdd688
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63277856"
 ---
 # <a name="nextmember-mdx"></a>NextMember (MDX)
 
@@ -32,7 +32,7 @@ Member_Expression.NextMember
  *Member_Expression*  
  Uma linguagem MDX válida que retorna um membro.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O **NextMember** função retorna o próximo membro, no mesmo nível, que contém o membro especificado.  
   
 ## <a name="example"></a>Exemplo  
@@ -44,6 +44,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

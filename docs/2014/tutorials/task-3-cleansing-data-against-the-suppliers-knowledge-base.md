@@ -11,20 +11,20 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 53dde66e84dd7304f81c4b6fd7de8dbe939d22d4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250160"
 ---
-# <a name="task-3-cleansing-data-against-the-suppliers-knowledge-base"></a>Tarefa 3: Limpando dados em relação à base de dados de conhecimento Fornecedores
+# <a name="task-3-cleansing-data-against-the-suppliers-knowledge-base"></a>Tarefa 3: Limpar dados em relação à base de dados de conhecimento Fornecedores
   Nesta tarefa, você executará o processo de limpeza auxiliado por computador. O DQS usa algoritmos avançados e níveis de confiança baseados nos valores de limite especificados para analisar os dados em relação à base de dados de conhecimento selecionada e depois limpá-los. Ver [conhecimento de limpeza de dados usando o DQS (interno)](https://msdn.microsoft.com/library/hh213061.aspx) para obter mais detalhes.  
   
 1.  Clique em **iniciar** para iniciar o processo de limpeza auxiliada por computador.  
   
      ![Limpar página do processo de limpeza](../../2014/tutorials/media/et-cleansingdataagainstthesupplierkb-01.jpg "Limpar página do processo de limpeza")  
   
-2.  Quando o processo de limpeza for concluído, examine **estatísticas** na **Profiler** guia. As Estatísticas de Origem fornecem o número de registros processados, o número de registros considerados corretos, o número de registros que o DQS corrige, o número de registros que têm alterações sugeridas pelo DQS e o número de registros inválidos. Na caixa de listagem à direita, você pode visualizar os valores corrigidos, os valores sugeridos e a integridade (até que ponto os dados estão presentes) e a precisão (até que ponto os dados podem ser usados para os fins pretendidos) de valores para cada domínio envolvido no processo de limpeza.  
+2.  Quando o processo de limpeza for concluído, examine **estatísticas** na **Profiler** guia. As estatísticas de origem fornecem o número de registros processados, o número de registros considerados corretos, o número de registros que o DQS corrige, número de registros que têm alterações sugeridas pelo DQS e o número de registros que são inválidos. Na caixa de listagem à direita, você pode visualizar os valores corrigidos, os valores sugeridos e a integridade (até que ponto os dados estão presentes) e a precisão (até que ponto os dados podem ser usados para os fins pretendidos) de valores para cada domínio envolvido no processo de limpeza.  
   
      ![Os resultados da limpeza](../../2014/tutorials/media/et-cleansingdataagainstthesupplierkb-02.jpg "os resultados da limpeza")  
   

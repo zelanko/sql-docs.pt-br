@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ac218d0f95e16931f359bd183d4fe8a032f8c6cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63314787"
 ---
 # <a name="sort-property-example-vb"></a>Exemplo da propriedade Sort (VB)
 Este exemplo usa o [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) do objeto [classificação](../../../ado/reference/ado-api/sort-property.md) propriedade para reordenar as linhas de um **conjunto de registros** deriva o ***autores*** tabela de o ***Pubs*** banco de dados. Uma rotina de utilitário secundário imprime cada linha.  

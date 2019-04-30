@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a15613c61db7469b242bbd5b76e5d1e51912e6be
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52790388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270555"
 ---
 # <a name="customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools"></a>Personalizar o volume de informações exibidas em diagramas (Visual Database Tools)
   Quando você adiciona uma tabela a um diagrama de banco de dados, ela aparece com um número fixo de propriedades de exibição. Você pode escolher em um menu de variações o volume de informações a ser exibido ou pode criar um conjunto de propriedades personalizado.  

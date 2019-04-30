@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 63407f75c5bee03d24b5b3f69c2ef94cb38e177e
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315166"
 ---
 # <a name="source-property-ado-error"></a>Propriedade Source (Erro ADO)
 Indica o nome do objeto ou aplicativo que originalmente gerou um erro.  

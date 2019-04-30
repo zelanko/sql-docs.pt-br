@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 02ae773493258afa7c1e3b8e3074347ce08ff4cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316019"
 ---
 # <a name="comparebookmarks-method-example-vc"></a>Exemplo do método CompareBookmarks (VC++)
 Este exemplo demonstra a [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) método. O valor relativo de indicadores raramente é necessária, a menos que um indicador específico é alguma forma especial.  

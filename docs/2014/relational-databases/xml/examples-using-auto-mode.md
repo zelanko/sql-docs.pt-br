@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 93a26764a7111a01b07d23c61bfbfb5c4a728e72
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287804"
 ---
-# <a name="examples-using-auto-mode"></a>Exemplos: Usando o modo AUTO
+# <a name="examples-using-auto-mode"></a>Exemplos: uso do modo AUTO
   Os exemplos a seguir ilustram o uso do modo AUTO. Muitas dessas consultas são especificadas em relação a documentos XML de instruções da fabricação de bicicletas que são armazenados na coluna da tabela ProductModel no banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
-## <a name="example-retrieving-customer-order-and-order-detail-information"></a>Exemplo: Recuperando o cliente, pedido e informações de detalhes do pedido  
+## <a name="example-retrieving-customer-order-and-order-detail-information"></a>Exemplo: Recuperando informações de cliente, pedido e detalhes do pedido  
  Essa consulta recupera informações de cliente, pedido e detalhes do pedido de um cliente específico.  
   
 ```  
@@ -113,7 +113,7 @@ FOR XML AUTO;This is the partial result:
   
  `...`  
   
-## <a name="example-specifying-computed-columns-in-auto-mode"></a>Exemplo: Especificando colunas computadas em modo AUTO  
+## <a name="example-specifying-computed-columns-in-auto-mode"></a>Exemplo: Especificando colunas computadas no modo AUTO  
  Essa consulta retorna nomes de clientes individuais concatenados e informações de pedido. Porque a coluna computada é atribuída ao nível interno encontrado naquele ponto, o elemento <`SOH`> neste exemplo. Os nomes concatenados dos clientes são adicionados como atributos do elemento <`SOH`> no resultado.  
   
 ```  
@@ -203,7 +203,7 @@ FOR XML AUTO, BINARY BASE64;
   
  Por padrão, quando o modo AUTO é usado para recuperar dados binários, em vez dos dados binários, é retornada uma referência a uma URL relativa à raiz virtual do banco de dados onde a consulta foi executada. Isso acontecerá se a opção BINARY BASE64 não estiver especificada.  
   
- Quando o modo AUTO retorna uma referência de URL aos dados binários em bancos de dados que não diferenciam maiúsculas de minúsculas, a consulta é executada quando um nome de tabela ou coluna especificado na consulta não corresponde ao nome da tabela ou coluna do banco de dados. Porém, as maiúsculas e minúsculas retornadas na referência não são consistentes. Por exemplo:  
+ Quando o modo AUTO retorna uma referência de URL aos dados binários em bancos de dados que não diferenciam maiúsculas de minúsculas, a consulta é executada quando um nome de tabela ou coluna especificado na consulta não corresponde ao nome da tabela ou coluna do banco de dados. Porém, as maiúsculas e minúsculas retornadas na referência não são consistentes. Por exemplo:   
   
 ```  
 SELECT ProductPhotoID, ThumbnailPhoto  
@@ -222,7 +222,7 @@ FOR XML AUTO;
   
  Isso pode ser um problema, principalmente quando são executadas consultas de dbobject em um banco de dados que diferencia maiúsculas e minúsculas. Para evitar isso, as maiúsculas e minúsculas do nome da tabela ou coluna especificado nas consultas devem corresponder às maiúsculas e minúsculas do nome da tabela ou coluna do banco de dados.  
   
-## <a name="example-understanding-the-encoding"></a>Exemplo: Noções básicas sobre a codificação  
+## <a name="example-understanding-the-encoding"></a>Exemplo: Entendendo a codificação  
  Este exemplo mostra as várias codificações que ocorrem no resultado.  
   
  Crie esta tabela:  

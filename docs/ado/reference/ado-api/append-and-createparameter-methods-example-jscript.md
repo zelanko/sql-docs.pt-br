@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f9bd0c28d481ef107dc31e36e13582fba459b502
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248807"
 ---
 # <a name="append-and-createparameter-methods-example-jscript"></a>Acrescente e exemplo dos métodos CreateParameter (JScript)
 Este exemplo usa o [Append](../../../ado/reference/ado-api/append-method-ado.md) e [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) métodos para executar um procedimento armazenado com um parâmetro de entrada. Recortar e colar o seguinte código ao bloco de notas ou outro editor de texto e salve-o como **AppendJS.asp**.  

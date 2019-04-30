@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ae95160a11a965e47845726748c2b9449a819e8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63284959"
 ---
 # <a name="retrieving-the-values-in-descriptor-fields"></a>Recuperar os valores nos campos de descritor
 Um aplicativo pode chamar **SQLGetDescField** para obter um único campo de um registro do descritor. **SQLGetDescField** fornece ao aplicativo acesso para todos os campos de descritor definidos no ODBC e também campos definidos pelo driver.  

@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 2189c2efbdf7c67399c8a06e5823f073b69c82b4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63268607"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>Especificando operadores relacionais em consultas XPath (SQLXML 4.0)
   Os seguintes exemplos mostram como operadores relacionais são especificados em consultas XPath. As consultas XPath nesses exemplos são especificadas com relação ao esquema de mapeamento contido em SampleSchema1.xml. Para obter informações sobre esse esquema de exemplo, consulte [anotado de exemplo de esquema XSD para exemplos de XPath &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -78,7 +78,7 @@ ms.locfileid: "52804424"
 </ROOT>  
 ```  
   
-### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>b. Especifique o operador relacional na consulta XPath e use a função Booliano para comparar o resultado  
+### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>B. Especifique o operador relacional na consulta XPath e use a função Booliano para comparar o resultado  
  Esta consulta retorna todos os  **\<ordem >** filhos do elemento do nó de contexto que tenham um **SalesPersonID** valor inferior a 270 do atributo:  
   
 ```  
@@ -92,7 +92,7 @@ ms.locfileid: "52804424"
 ```  
   
 > [!NOTE]  
->  Quando essa consulta é especificada em um modelo, o caractere < deve ter a entidade codificada porque o caractere < tem um significado especial em um documento XML. Em um modelo, use `<` para especificar o caractere <.  
+>  Quando essa consulta é especificada em um modelo, o < caractere deve ser a entidade codificada porque o < caractere tem um significado especial em um documento XML. Em um modelo, use `<` para especificar o < caractere.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para testar a consulta XPath com relação ao esquema de mapeamento  
   

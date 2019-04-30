@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 26cf76200010edae7f85993ec33eb3722f35e94e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270494"
 ---
 # <a name="sql-minimum-grammar"></a>Gramática SQL mínima
 Esta seção descreve a sintaxe SQL mínima que deve dar suporte a um driver ODBC. A sintaxe descrita nesta seção é um subconjunto da sintaxe de nível de entrada do SQL-92.  
@@ -29,7 +29,7 @@ Esta seção descreve a sintaxe SQL mínima que deve dar suporte a um driver ODB
  Drivers que funcionam somente com fontes de dados somente leitura podem não oferecer suporte a essas partes da gramática incluídos nesta seção que lidam com dados de alteração. Um aplicativo pode determinar se uma fonte de dados é somente leitura, chamando **SQLGetInfo** com o tipo de informação SQL_DATA_SOURCE_READ_ONLY.  
   
 ## <a name="statement"></a>de  
- *instrução CREATE table* :: =  
+ *create-table-statement* ::=  
   
  CREATE TABLE *nome da tabela de base*  
   
@@ -38,47 +38,47 @@ Esta seção descreve a sintaxe SQL mínima que deve dar suporte a um driver ODB
 > [!IMPORTANT]  
 >  Como uma *tipo de dados* em um *-instrução create table*, aplicativos devem usar um tipo de dados da coluna de TYPE_NAME do conjunto de resultados retornado pela **SQLGetTypeInfo**.  
   
- *pesquisados de instrução de exclusão* :: =  
+ *delete-statement-searched* ::=  
   
- DELETE FROM *nome da tabela* [onde *critério de pesquisa*]  
+ DELETE FROM *table-name* [WHERE *search-condition*]  
   
- *instrução de drop-tabela* :: =  
+ *drop-table-statement* ::=  
   
  DROP TABLE *nome da tabela de base*  
   
- *instrução INSERT* :: =  
+ *insert-statement* ::=  
   
  INSERT INTO *nome da tabela* [( *identificador de coluna* [, *identificador de coluna*]...)]      VALORES (*valor de inserção*[, *Inserir valor*]...)  
   
- *instrução Select* :: =  
+ *select-statement* ::=  
   
- Selecione [todos os &#124; DISTINCT] *lista de select*  
+ SELECT [ALL &#124; DISTINCT] *select-list*  
   
- DE *lista de referências de tabela*  
+ FROM *table-reference-list*  
   
  [Onde *critério de pesquisa*]  
   
- [*ordem por cláusula*]  
+ [*order-by-clause*]  
   
- *instrução* :: = *-instrução create table*  
+ *statement* ::= *create-table-statement*  
   
- &#124;*pesquisados de instrução de exclusão*  
+ &#124; *delete-statement-searched*  
   
- &#124;*instrução de drop-tabela*  
+ &#124; *drop-table-statement*  
   
- &#124;*instrução insert*  
+ &#124; *insert-statement*  
   
- &#124;*instrução select*  
+ &#124; *select-statement*  
   
- &#124;*pesquisados de instrução de atualização*  
+ &#124; *update-statement-searched*  
   
- *pesquisados de instrução de atualização*  
+ *update-statement-searched*  
   
- ATUALIZAÇÃO *nome de tabela*  
+ UPDATE *table-name*  
   
- DEFINIR *identificador de coluna* = {*expressão* &#124; nulo}  
+ SET *column-identifier* = {*expression* &#124; NULL }  
   
- [, *identificador de coluna* = {*expressão* &#124; nulo}]...  
+ [, *column-identifier* = {*expression* &#124; NULL}]...  
   
  [Onde *critério de pesquisa*]  
   

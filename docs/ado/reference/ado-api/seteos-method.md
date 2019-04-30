@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0db8c7972d6b647cdd021d43dbb3cdee1ba0452
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63314741"
 ---
 # <a name="seteos-method"></a>Método SetEOS
 Define a posição em que é o final do fluxo.  

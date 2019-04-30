@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d461d0fad834dfc3c3c6f22ec64cc4987eca6fa5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240041"
 ---
 # <a name="optimize-property-dynamic-ado"></a>Otimizar a propriedade dinâmica (ADO)
 Especifica se um índice deve ser criado em uma [campo](../../../ado/reference/ado-api/field-object.md).  

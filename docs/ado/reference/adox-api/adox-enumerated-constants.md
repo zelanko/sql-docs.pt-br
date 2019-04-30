@@ -14,18 +14,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bdbd67d5e4d7d4647b92b32590a5258de038c80f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308297"
 ---
 # <a name="adox-enumerated-constants"></a>Constantes enumeradas ADOX
 Para ajudar a depuração, as constantes enumerada do ADOX listam um valor para cada constante. No entanto, esse valor é puramente comunicado e pode mudar de uma versão do ADOX para outro. Seu código deve depender somente o nome, não o valor real de constantes enumeradas.  
   
  As seguintes constantes enumeradas são definidas.  
   
-|Enumeração|Description|  
+|Enumeração|Descrição|  
 |-----------------|-----------------|  
 |[ActionEnum](../../../ado/reference/adox-api/actionenum.md)|Especifica o tipo de ação a ser executada quando **SetPermissions** é chamado.|  
 |[AllowNullsEnum](../../../ado/reference/adox-api/allownullsenum.md)|Especifica se os registros com valores nulos são indexados.|  

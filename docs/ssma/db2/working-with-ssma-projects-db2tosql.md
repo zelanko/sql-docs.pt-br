@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d3ccc9fe24d770fa64b2bef86feabab0dd2e7fba
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63244645"
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>Trabalhando com projetos do SSMA (DB2ToSQL)
 Migrar bancos de dados do DB2 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], primeiro você cria um projeto do SSMA. O projeto é um arquivo que contém as seguintes informações:  
@@ -96,7 +96,7 @@ Quando você salvar um projeto, o SSMA retém as configurações de projeto e, o
   
         Salvando metadados pode levar vários minutos. Se você não quiser salvar os metadados ainda, não selecione as caixas de seleção.  
   
-    2.  Clique o **salvar** botão.  
+    2.  Clique no botão **Salvar**.  
   
         O SSMA analisará os esquemas do DB2 e salvar os metadados para o arquivo de projeto.  
   

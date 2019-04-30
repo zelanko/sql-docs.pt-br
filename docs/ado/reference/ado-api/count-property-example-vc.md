@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c4dcaa288df7b6e232c187ae50dac3e4ac51d8be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308574"
 ---
 # <a name="count-property-example-vc"></a>Exemplo da propriedade Count (VC++)
 Este exemplo demonstra a [contagem](../../../ado/reference/ado-api/count-property-ado.md) propriedade com duas coleções na ***funcionário*** banco de dados. A propriedade obtém o número de objetos em cada coleção e define o limite superior para loops que enumerá-las.  

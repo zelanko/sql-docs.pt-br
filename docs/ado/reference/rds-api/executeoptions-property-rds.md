@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6ac7ee6c1f996294c1f8aa353719deb11d698e47
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308229"
 ---
 # <a name="executeoptions-property-rds"></a>Propriedade ExecuteOptions (RDS)
 Indica se a execução assíncrona está habilitada.  
@@ -30,7 +30,7 @@ Indica se a execução assíncrona está habilitada.
 ## <a name="settings-and-return-values"></a>As configurações e valores de retorno  
  Define ou retorna um dos valores a seguir.  
   
-|Constante|Description|  
+|Constante|Descrição|  
 |--------------|-----------------|  
 |**adcExecSync**|Executa a próxima atualização do [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) forma síncrona.|  
 |**adcExecAsync**|Padrão. Executa a próxima atualização do **Recordset** assincronamente.|  

@@ -11,18 +11,18 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: dd4b9edc8c054a7fa2ec84bdc8d892e5b5a903a3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316005"
 ---
-# <a name="lesson-2-adding-a-web-reference"></a>Lição 2: Adicionar uma referência Web
+# <a name="lesson-2-adding-a-web-reference"></a>Lição 2: Como adicionar uma referência da Web
   Descoberta de serviço Web é o processo pelo qual um cliente localiza um serviço Web e obtém a descrição desse serviço. O processo de descoberta de serviço Web no [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] envolve questionar um site que segue um algoritmo predeterminado. O objetivo do processo é localizar a descrição do serviço, que é um documento XML que usa linguagem WSDL.  
   
  A descrição do serviço descreve quais serviços estão disponíveis e como interagir com eles. Sem uma descrição de serviço, é impossível interagir programaticamente com um serviço Web.  
   
- Seu aplicativo deve ter meios para se comunicar com o serviço Web e localizá-lo em tempo de execução. A adição de uma referência da Web ao projeto para o serviço Web faz isso por meio da geração de uma classe proxy que executa a interface com o serviço Web e fornece uma representação local desse serviço. Para obter mais informações, consulte "Como: Gerar um Proxy do serviço Web XML"no seu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] documentação.  
+ Seu aplicativo deve ter meios para se comunicar com o serviço Web e localizá-lo em tempo de execução. A adição de uma referência da Web ao projeto para o serviço Web faz isso por meio da geração de uma classe proxy que executa a interface com o serviço Web e fornece uma representação local desse serviço. Para obter mais informações, consulte "como: Gerar um Proxy do serviço Web XML"no seu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] documentação.  
   
 ### <a name="to-add-a-web-reference"></a>Para adicionar uma referência da Web  
   

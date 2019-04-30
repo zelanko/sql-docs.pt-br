@@ -12,11 +12,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.openlocfilehash: b883883cbe201de32020e86ca2cd38746caf46be
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63309687"
 ---
 # <a name="sql-server-profiler-extension-preview"></a>Extensão do SQL Server Profiler (versão prévia)
 

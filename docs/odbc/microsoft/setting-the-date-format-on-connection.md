@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2e36192279bfc5730559c795ee076db11394ab94
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313444"
 ---
 # <a name="setting-the-date-format-on-connection"></a>Configurar o formato de data na conexão
 > [!IMPORTANT]  
@@ -27,7 +27,7 @@ ms.locfileid: "47654274"
   
  A nova versão do Driver Microsoft ODBC para Oracle não define automaticamente o formato de data para campos de data do Oracle. Quando o driver conectado, ele usava `ALTER SESSION SET NLS_DATE_FORMAT ='YYYY-MM-DD HH:MI:SS'`.  
   
- Para definir o formato de data, chamar ALTER sessão conjunto e, em seguida, execute a inserção. Por exemplo:  
+ Para definir o formato de data, chamar ALTER sessão conjunto e, em seguida, execute a inserção. Por exemplo:   
   
 ```  
 conn.Execute "ALTER SESSION SET NLS_DATE_FORMAT = 'YYYY-MM-DD HH:MI:SS' "  

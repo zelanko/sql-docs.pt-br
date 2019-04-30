@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db1a26c1cf83c94c9bafa3fbabe0af92b3d748e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855164"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301926"
 ---
 # <a name="call-statement-limitations"></a>Limitações da instrução CALL
 (Essa limitação se aplica somente do driver do Microsoft Access).  

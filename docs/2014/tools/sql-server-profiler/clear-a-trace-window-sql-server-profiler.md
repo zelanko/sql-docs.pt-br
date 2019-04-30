@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 442c8ffca93052235db69394ed71ad2ff3157dfe
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316207"
 ---
 # <a name="clear-a-trace-window-sql-server-profiler"></a>Limpar uma janela de rastreamento (SQL Server Profiler)
   Este tópico descreve como limpar a janela de um rastreamento que está em execução, usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

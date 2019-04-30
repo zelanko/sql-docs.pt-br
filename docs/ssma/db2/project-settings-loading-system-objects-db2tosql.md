@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 65f9070aabc6f64e1fc327abe67e595696c04423
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266457"
 ---
 # <a name="project-settingsloading-system-objects-db2tosql"></a>Configurações (Carregando objetos de sistema) do projeto (DB2ToSQL)
 A página de carregamento de objetos do sistema do **configurações do projeto** caixa de diálogo permite que você especifique quais objetos de sistema do DB2 SSMA converte e carrega em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -37,7 +37,7 @@ Converter objetos de sistema consome recursos do sistema e leva tempo. Para melh
   
 -   SYS. STANDARD  
   
--   SYS. UTL_FILE  
+-   SYS.UTL_FILE  
   
 -   SYS.DBMS_LOB  
   

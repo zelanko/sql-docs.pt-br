@@ -1,5 +1,5 @@
 ---
-title: 'SQL para c: Caractere | Microsoft Docs'
+title: 'SQL para C: Caractere | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e3a0a7036d67716a3d90bd8953a3c7ba2c575c92
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259507"
 ---
-# <a name="sql-to-c-character"></a>SQL para c: Caractere
+# <a name="sql-to-c-character"></a>SQL para C: Caractere
 
 Os identificadores para os tipos de dados SQL ODBC caracteres são os seguintes:
 
@@ -67,8 +67,8 @@ A tabela a seguir mostra os tipos de dados para o qual os dados SQL de caractere
 
 Espaços à direita e são ignoradas quando os dados de caractere SQL são convertidos em qualquer um dos seguintes tipos:
 
-- Data
-- NUMERIC
+- date
+- numeric
 - time
 - timestamp
 - dados de intervalo C

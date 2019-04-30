@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dab1a748eeda5f1b192010203bd59760942b3611
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63309193"
 ---
 # <a name="adox-objects"></a>Objetos ADOX
 ## <a name="adox-object-summary"></a>Resumo do objeto ADOX  
   
-|Object|Description|  
+|Object|Descrição|  
 |------------|-----------------|  
 |[Catálogo](../../../ado/reference/adox-api/catalog-object-adox.md)|Contém coleções que descrevem o catálogo de esquema de fonte de dados.|  
 |[Coluna](../../../ado/reference/adox-api/column-object-adox.md)|Representa uma coluna de uma tabela, índice ou chave.|  

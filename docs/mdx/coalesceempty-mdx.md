@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 78e4f59ab1e994e34a7f0b1a0c519f34e20a2bd4
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306701"
 ---
 # <a name="coalesceempty-mdx"></a>CoalesceEmpty (MDX)
 
@@ -45,8 +45,8 @@ CoalesceEmpty(String_Expression1 [ ,String_Expression2,...n] )
  *String_Expression2*  
  Uma expressão de cadeia de caracteres que geralmente é um valor de cadeia de caracteres especificado, substituída por um NULL retornado pela primeira expressão de cadeia de caracteres.  
   
-## <a name="remarks"></a>Remarks  
- Se uma ou mais expressões numéricas forem especificadas, o **CoalesceEmpty** função retorna o valor numérico da primeira expressão numérica (da esquerda para a direita) que pode ser resolvido para um valor não vazio. Se nenhuma das expressões numéricas especificadas puder ser resolvida para um valor não vazio, a função retornará o valor de célula vazio. Geralmente, o valor da segunda expressão numérica é o valor numérico substituído por um NULL retornado pela primeira expressão numérica.  
+## <a name="remarks"></a>Comentários  
+ Se um ou mais expressões numéricas forem especificadas, o **CoalesceEmpty** função retorna o valor numérico da primeira expressão numérica (da esquerda para a direita) que pode ser resolvido para um valor não vazio. Se nenhuma das expressões numéricas especificadas puder ser resolvida para um valor não vazio, a função retornará o valor de célula vazio. Geralmente, o valor da segunda expressão numérica é o valor numérico substituído por um NULL retornado pela primeira expressão numérica.  
   
  Se uma ou mais expressões de cadeia de caracteres forem especificadas, a função retornará o valor de cadeia de caracteres da primeira expressão de cadeia de caracteres (da esquerda para a direita) que pode ser resolvido como um valor não vazio. Se nenhuma das expressões de cadeia de caracteres especificadas puder ser resolvida para um valor não vazio, a função retornará o valor de célula vazio. Geralmente, o valor da segunda expressão de cadeia de caracteres é um valor de cadeia de caracteres, substituída por um NULL retornado pela primeira expressão de cadeia de caracteres.  
   
@@ -55,7 +55,7 @@ CoalesceEmpty(String_Expression1 [ ,String_Expression2,...n] )
  Para obter mais informações sobre células vazias, consulte a documentação OLE DB.  
   
 ## <a name="example"></a>Exemplo  
- A exemplo a seguir consulta o **Adventure Works** cubo. Esse exemplo retorna a quantidade de pedido de cada produto e a porcentagem de quantidades de pedidos por categoria. O **CoalesceEmpty** função garante que valores nulos são representados como zero (0) ao formatar os membros calculados.  
+ A exemplo a seguir consulta a **Adventure Works** cubo. Esse exemplo retorna a quantidade de pedido de cada produto e a porcentagem de quantidades de pedidos por categoria. O **CoalesceEmpty** função garante que os valores nulos são representados como zero (0) ao formatar os membros calculados.  
   
 ```  
 WITH   
@@ -79,6 +79,6 @@ WHERE {[Date].[Calendar Year].[Calendar Year].&[2003]}
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6570694bc38eb6f32f660006f1ed1b6797793b7b
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306338"
 ---
 # <a name="comment-mdx-double-slash"></a>Barras duplas de MDX de comentário
 
@@ -32,7 +32,7 @@ ms.locfileid: "34739515"
  *Comment_Text*  
  Cadeia de caracteres que contém o texto do comentário.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Os comentários podem ser inseridos em uma linha separada, aninhados no final de uma linha de script MDX ou aninhados em uma instrução MDX. O servidor não avalia o comentário.  
   
  Use // somente para comentários de linha única. Os comentários inseridos com // são delimitados pelo caractere de nova linha.  

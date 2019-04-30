@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 8e538b96c482a6a16fffcfdac197e62885426b52
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63243796"
 ---
 # <a name="workload-management-tasks-in-analytics-platform-system"></a>Tarefas de gerenciamento de carga de trabalho no Analytics Platform System
 Tarefas de gerenciamento de carga de trabalho no Analytics Platform System.

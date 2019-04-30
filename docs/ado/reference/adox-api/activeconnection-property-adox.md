@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a51f18109aef439576965e73782b7aa03a6a8b56
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308700"
 ---
 # <a name="activeconnection-property-adox"></a>Propriedade ActiveConnection (ADOX)
 Indica o ADO [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto ao qual o [catálogo](../../../ado/reference/adox-api/catalog-object-adox.md) pertence.  

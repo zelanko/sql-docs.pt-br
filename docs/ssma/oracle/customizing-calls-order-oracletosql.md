@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 6df6d5139ae74697e58ab2fc7b6962bab1588bc5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287254"
 ---
 # <a name="customizing-calls-order-oracletosql"></a>Personalizar a ordem das chamadas (OracleToSQL)
 Nesta etapa, você selecionar a ordem na qual os objetos a testar serão invocados.  

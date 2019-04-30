@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: efed0e6e396e83ba13aa058639e47e37dd376dde
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278017"
 ---
 # <a name="multidimensional-expressions-mdx-reference"></a>Referência de linguagem MDX
 
@@ -22,7 +22,7 @@ ms.locfileid: "50145331"
     
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Elementos de sintaxe MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)|Descreve os vários elementos de sintaxe disponíveis na linguagem MDX para expressões, instruções e scripts MDX.|  
 |[Referência da linguagem MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)|Descreve as instruções, os operadores e as funções que definem a linguagem MDX.|  

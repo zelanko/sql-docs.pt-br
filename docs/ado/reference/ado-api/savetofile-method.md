@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6afe36c7b3923c9ebf33fd615a1c21e34955e62d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315216"
 ---
 # <a name="savetofile-method"></a>Método SaveToFile
 Salva o conteúdo binário de um [Stream](../../../ado/reference/ado-api/stream-object-ado.md) para um arquivo.  

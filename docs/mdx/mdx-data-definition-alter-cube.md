@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f9a15108875c7e519948f0e73e0a87d08b70c975
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315293"
 ---
 # <a name="mdx-data-definition---alter-cube"></a>Definição de dados MDX – ALTER CUBE
 
 
-  Altera a estrutura de um cubo especificado, geralmente usado para oferecer suporte ao write-back de dimensão. Para obter mais informações sobre como usar o write-back em um aplicativo, consulte esta postagem de blog: [criando um aplicativo de write-back com o Analysis Services (blog)](https://go.microsoft.com/fwlink/?LinkId=394977)  
+  Altera a estrutura de um cubo especificado, geralmente usado para oferecer suporte ao write-back de dimensão. Para obter mais informações sobre como usar o write-back em um aplicativo, consulte este blog de postagem: [Criando um aplicativo de write-back com o Analysis Services (blog)](https://go.microsoft.com/fwlink/?LinkId=394977)  
   
  Observe que os write-backs de dimensão simultâneos podem resultar em um deadlock, onde o primeiro write-back é bloqueado de uma confirmação devido ao bloqueio compartilhado mantido pelo segundo write-back. Nenhum erro é gerado nessa situação, mas nenhuma operação pode avançar. Por fim, os dois write-backs expiram e as alterações são revertidas.  
   
@@ -92,7 +92,7 @@ CELL CALCULATION Calculation_Name
  *ParentName*  
  Uma expressão de cadeia de caracteres válida que fornece o nome do pai do novo membro de dimensão, a não ser que o membro esteja sendo criado na raiz.  
   
- *Nome do membro*  
+ *MemberName*  
  Uma expressão de cadeia de caracteres válida que fornece um nome de membro.  
   
  *Key_Value*  
@@ -140,7 +140,7 @@ CELL CALCULATION Calculation_Name
  *ParentName*  
  Uma expressão de cadeia de caracteres válida que fornece o nome do novo pai do membro de dimensão que está sendo movido.  
   
- *Nome do membro*  
+ *MemberName*  
  Uma expressão de cadeia de caracteres válida que fornece um nome de membro.  
   
  Unsigned_*inteiro*  
@@ -152,7 +152,7 @@ CELL CALCULATION Calculation_Name
  A cláusula UPDATE DIMENSION MEMBER permite modificar propriedades de um membro, bem como da fórmula de membro personalizado associada a um membro.  
   
 ### <a name="arguments"></a>Argumentos  
- *Nome do membro*  
+ *MemberName*  
  Uma expressão de cadeia de caracteres válida que fornece um nome de membro.  
   
  *MDX_Expression*  

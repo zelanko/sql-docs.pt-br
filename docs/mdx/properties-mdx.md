@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c29d9b29078d6097b512acb93ff47eef018592c8
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278448"
 ---
 # <a name="properties-mdx"></a>Properties (MDX)
 
@@ -35,17 +35,17 @@ Member_Expression.Properties(Property_Name [, TYPED])
  *Property_Name*  
  Uma expressão de cadeia de caracteres válida de um nome de propriedade de membro.  
   
-## <a name="remarks"></a>Remarks  
- O **propriedades** função retorna o valor do membro especificado para a propriedade do membro especificado. A propriedade de membro pode ser qualquer uma das propriedades intrínsecas do membro, como **nome**, **ID**, **chave**, ou **legenda**, ou pode ser uma propriedade do membro definidas pelo usuário. Para obter mais informações, consulte [propriedades intrínsecas do membro &#40;MDX&#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md) e [propriedades do membro definidas pelo usuário &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md).  
+## <a name="remarks"></a>Comentários  
+ O **propriedades** função retorna o valor do membro especificado para a propriedade do membro especificado. A propriedade do membro pode ser qualquer uma das propriedades intrínsecas do membro, como **nome**, **ID**, **chave**, ou **legenda**, ou pode ser um propriedade do membro definidas pelo usuário. Para obter mais informações, consulte [propriedades intrínsecas do membro &#40;MDX&#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md) e [propriedades do membro definidas pelo usuário &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md).  
   
- Por padrão, o valor é forçado a ser uma cadeia de caracteres. Se **TYPED** for especificado, o valor de retorno terá rigidez de tipos.  
+ Por padrão, o valor é forçado a ser uma cadeia de caracteres. Se **TYPED** for especificado, o valor de retorno é fortemente tipado.  
   
 -   Se o tipo de propriedade for intrínseco, a função retornará o tipo original de membro.  
   
 -   Se o tipo de propriedade é definida pelo usuário, o tipo do valor de retorno é o mesmo que o tipo do valor de retorno de **MemberValue** função.  
   
 > [!NOTE]  
->  Propriedades ('Key') retornam o mesmo resultado como Key0 com exceção de chaves compostas. Propriedades ('Key') retornarão nulo para chaves compostas. Use a chave*x* sintaxe para chaves compostas, conforme ilustrado no exemplo. Propriedades ('Key0'), Propriedades ('Key1'), Propriedades ('Key2') etc. formam coletivamente a chave composta.  
+>  Propriedades ('Key') retornam o mesmo resultado como Key0 com exceção de chaves compostas. Propriedades ('Key') retornarão nulo para chaves compostas. Use a tecla*x* sintaxe para chaves compostas, conforme ilustrado no exemplo. Propriedades ('Key0'), Propriedades ('Key1'), Propriedades ('Key2') etc. formam coletivamente a chave composta.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir retorna propriedades de membro intrínsecas e definidas pelo usuário, utilizando o argumento TYPED para retornar o valor com rigidez de tipos para a propriedade de membro Dia Nome.  
@@ -107,6 +107,6 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>Consulte também  
  [Usando propriedades do membro &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6612a90b94f10bdd08441d7814a7137121659045
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315994"
 ---
 # <a name="commandtype-property-ado"></a>Propriedade CommandType (ADO)
 Indica o tipo de um [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto.  

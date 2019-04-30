@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: eaafa011f1b99ea90afce2902c877d0a25b9e6e3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63269886"
 ---
 # <a name="work-with-change-data-sql-server"></a>Trabalhar com dados de alterações (SQL Server)
   Os dados de alteração ficam disponíveis para consumidores de Change Data Capture através das TVFs (funções com valor de tabela). Todas as consultas dessas funções exigem dois parâmetros para definir o intervalo de LSNs (números de sequência de log) qualificados para serem considerados no desenvolvimento do conjunto de dados retornado. Tanto o valor superior quanto o valor inferior do LSN indica que o limite do intervalo é considerado ao ser incluído no intervalo.  
@@ -112,7 +112,7 @@ ms.locfileid: "52811108"
   
  O nome da função usada para incluir a consulta de todas as alterações é fn_all_changes_ seguido pelo nome da instância de captura. O prefixo usado para o wrapper de alterações delta é fn_net_changes_. Ambas as funções usam três argumentos, assim como suas TVFs associadas do Change Data Capture. No entanto, o intervalo de consulta para os wrappers é vinculado por dois valores de data e hora, e não por dois valores LSN. O parâmetro @row_filter_option para os dois conjuntos de funções é o mesmo.  
   
- As funções de wrapper geradas dão suporte a seguinte convenção para percorrer sistematicamente a linha de tempo de captura de dados de alteração: Espera-se que o @end_time parâmetro do intervalo anterior seja usado como o @start_time parâmetro do intervalo subsequente. A função de wrapper mapeia os valores de data e hora para valores LSN e assegura que nenhum dado seja perdido ou repetido se esta convenção for seguida.  
+ As funções de wrapper geradas dão suporte à seguinte convenção para percorrer sistematicamente a linha de tempo de captura de dados de alterações: Espera-se que o parâmetro @end_time do intervalo anterior seja usado como o parâmetro @start_time do intervalo subsequente. A função de wrapper mapeia os valores de data e hora para valores LSN e assegura que nenhum dado seja perdido ou repetido se esta convenção for seguida.  
   
  Os wrappers podem ser gerados para dar suporte a um limite superior fechado e a um limite superior aberto na janela de consulta especificada. Ou seja, o chamador pode especificar se as entradas que têm uma hora de confirmação igual ao limite superior do intervalo de extração devem ser incluídas no intervalo. Por padrão, o limite superior é incluído.  
   

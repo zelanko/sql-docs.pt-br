@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c0bf63b831dace7678f5d3fdf952a9d6d5f60aa6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313386"
 ---
 # <a name="sql-conformance-levels-odbc-driver-for-oracle"></a>Níveis de conformidade do SQL (Driver ODBC para Oracle)
 > [!IMPORTANT]  
@@ -37,10 +37,10 @@ ms.locfileid: "47669364"
     |||||  
     |-|-|-|-|  
     |Abs|Log|round|tan|  
-    |Ceiling|LOG10|second|truncate|  
+    |Ceiling|Log10|second|truncate|  
     |Cos|Mod|logon||  
     |Exp|Pi|sin||  
-    |Floor|Potência|Sqrt||  
+    |Floor|Potência|sqrt||  
   
 -   Funções de data:  
   
@@ -55,7 +55,7 @@ ms.locfileid: "47669364"
   
     |||||  
     |-|-|-|-|  
-    |ASCII|Left (à esquerda)|Certo|UCase|  
+    |Ascii|Left (à esquerda)|Certo|UCase|  
     |Char|Comprimento|RTrim||  
     |Concat|Ltrim|Soundex||  
     |Lcase|Substituir|substring||  
@@ -71,4 +71,4 @@ ms.locfileid: "47669364"
     ||  
     |-|  
     |Ifnull|  
-    |Usuário|
+    |User|

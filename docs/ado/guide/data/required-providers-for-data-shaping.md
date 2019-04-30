@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7edd3b3cacd097380b5d14ad55ed115ff93cf072
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280501"
 ---
 # <a name="required-providers-for-data-shaping"></a>Provedores necessários para data shaping
 Formatação de dados normalmente requer que dois provedores. O provedor de serviço [Data Shaping Service para OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md), fornece os dados de modelagem de funcionalidade e um provedor de dados, como o provedor OLE DB para SQL Server, fornece linhas de dados para popular o moldado [conjunto de registros ](../../../ado/reference/ado-api/recordset-object-ado.md).  

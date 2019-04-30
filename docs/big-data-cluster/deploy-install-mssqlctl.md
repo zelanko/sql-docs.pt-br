@@ -5,16 +5,16 @@ description: Saiba como instalar a ferramenta mssqlctl para instalar e gerenciar
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d9c35971c0c0acf69065734cdcdbe670710ef5e4
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: 0d260ae91a5890938949525f34dfae20a81a8fea
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582380"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473507"
 ---
 # <a name="install-mssqlctl-to-manage-sql-server-big-data-clusters"></a>Instalar mssqlctl para gerenciar clusters de grandes dados do SQL Server
 
@@ -25,7 +25,7 @@ Este artigo descreve como instalar o **mssqlctl** ferramenta no Windows ou Linux
 **mssqlctl** é um utilitário de linha de comando escrito em Python que permite que os administradores para inicializar e gerenciar o cluster de big data por meio de APIs REST de cluster. A versão do Python mínima necessária é v 3.5. Você também deve ter `pip` que é usado para baixar e instalar **mssqlctl** ferramenta. As instruções a seguir fornecem exemplos para Windows e Ubuntu. Para instalar o Python em outras plataformas, consulte a [documentação do Python](https://wiki.python.org/moin/BeginnersGuide/Download).
 
 > [!IMPORTANT]
-> Se você estiver instalando uma versão mais recente dos clusters de big data, você deve fazer backup dos dados e excluir o cluster antigo *antes de* Atualizando **mssqlctl** e instalar a nova versão. Para obter mais informações, consulte [atualizar para uma nova versão](deployment-guidance.md#upgrade).
+> Se você estiver instalando uma versão mais recente dos clusters de big data, você deve fazer backup dos dados e excluir o cluster antigo *antes de* Atualizando **mssqlctl** e instalar a nova versão. Para obter mais informações, consulte [atualizar para uma nova versão](deployment-upgrade.md).
 
 ## <a id="windows"></a> Instalação do Windows mssqlctl
 
@@ -38,13 +38,13 @@ Este artigo descreve como instalar o **mssqlctl** ferramenta no Windows ou Linux
 
 1. Se você tiver quaisquer versões anteriores do **mssqlctl** instalado, é importante desinstalar **mssqlctl** primeiro antes de instalar a versão mais recente.
 
-   Se você estiver mssqlctl unisntalling correspondente a CTP versão 2.2 ou inferior execute:
+   Se você estiver desinstalando **mssqlctl** de execução correspondentes para o CTP versão 2.2 ou inferior:
 
    ```powershell
    pip3 uninstall mssqlctl
    ```
 
-   Para CTP2.3 ou execução de mais alto (substitua `ctp-2.3` no comando com a versão do mssqlctl estiver desinstalando):
+   Para o CTP 2.3 ou superior, execute o comando a seguir. Substitua `ctp-2.3` no comando com a versão do **mssqlctl** que você está desinstalando:
 
    ```powershell
    pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
@@ -53,7 +53,7 @@ Este artigo descreve como instalar o **mssqlctl** ferramenta no Windows ou Linux
 1. Instale **mssqlctl** com o seguinte comando:
 
    ```powershell
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.4/mssqlctl/requirements.txt
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt
    ```
 
 ## <a id="linux"></a> Instalação do Linux mssqlctl
@@ -76,22 +76,22 @@ No Linux, você deve instalar o Python 3.5 e, em seguida, atualizar o pip. O exe
 
 1. Se você tiver quaisquer versões anteriores do **mssqlctl** instalado, é importante desinstalar **mssqlctl** primeiro antes de instalar a versão mais recente.
 
-   Se você estiver mssqlctl unisntalling correspondente a CTP versão 2.2 ou inferior execute:
+   Se você estiver desinstalando **mssqlctl** de execução correspondentes para o CTP versão 2.2 ou inferior:
 
-   ```bash
+   ```powershell
    pip3 uninstall mssqlctl
    ```
 
-   Para CTP2.3 ou execução de mais alto (substitua `ctp-2.3` no comando com a versão do mssqlctl estiver desinstalando):
+   Para o CTP 2.3 ou superior, execute o comando a seguir. Substitua `ctp-2.3` no comando com a versão do **mssqlctl** que você está desinstalando:
 
-   ```bash
+   ```powershell
    pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
    ```
 
 1. Instale **mssqlctl** com o seguinte comando:
 
    ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.4/mssqlctl/requirements.txt --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt --user
    ```
 
    > [!NOTE]

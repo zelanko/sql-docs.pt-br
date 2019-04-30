@@ -13,14 +13,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 60347cbffcc169c47149e27cf1064cd9c68494f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249563"
 ---
 # <a name="ado-dynamic-property-index"></a>Índice da propriedade dinâmica do ADO
-Provedores de dados, provedores de serviços e componentes de serviço podem adicionar propriedades dinâmicas para o **propriedades** coleções da não abertos [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) e [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objetos. Um determinado provedor também pode inserir propriedades adicionais quando esses objetos são abertos. Algumas dessas propriedades são listadas na [propriedades dinâmicas do ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md) seção. Mais são listados sob os provedores específicos na [apêndice a: provedores](../../../ado/guide/appendixes/appendix-a-providers.md) seção.  
+Provedores de dados, provedores de serviços e componentes de serviço podem adicionar propriedades dinâmicas para o **propriedades** coleções da não abertos [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) e [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objetos. Um determinado provedor também pode inserir propriedades adicionais quando esses objetos são abertos. Algumas dessas propriedades são listadas na [propriedades dinâmicas do ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md) seção. Mais são listados sob os provedores específicos no [apêndice a: Provedores de](../../../ado/guide/appendixes/appendix-a-providers.md) seção.  
   
  As tabelas a seguir são cross-indexes dos nomes de ADO e OLE DB para cada propriedade dinâmico do provedor OLE DB padrão. Seus provedores podem adicionar mais propriedades do que listados aqui. Para obter informações específicas sobre propriedades dinâmicas específicas do provedor, consulte a documentação do provedor.  
   
@@ -52,7 +52,7 @@ Provedores de dados, provedores de serviços e componentes de serviço podem adi
 |Níveis de isolamento|DBPROP_SUPPORTEDTXNISOLEVELS|  
 |Retenção de isolamento|DBPROP_SUPPORTEDTXNISORETAIN|  
 |Identificador de Localidade|DBPROP_INIT_LCID|  
-|Local|DBPROP_INIT_LOCATION|  
+|Location|DBPROP_INIT_LOCATION|  
 |Tamanho máximo de índice|DBPROP_MAXINDEXSIZE|  
 |Tamanho máximo da linha|DBPROP_MAXROWSIZE|  
 |Tamanho máximo de linha inclui BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|  
@@ -196,7 +196,7 @@ Provedores de dados, provedores de serviços e componentes de serviço podem adi
 |Catálogo exclusivo|DBPROP_ADC_UNIQUECATALOG|  
 |Linhas exclusivas|DBPROP_UNIQUEROWS|  
 |Esquema exclusivo|DBPROP_ADC_UNIQUESCHEMA|  
-|Tabela exclusiva|DBPROP_ADC_UNIQUETABLE|  
+|Tabela única|DBPROP_ADC_UNIQUETABLE|  
 |Capacidade de atualização|DBPROP_UPDATABILITY|  
 |Critérios de atualização|DBPROP_ADC_UPDATECRITERIA|  
 |Ressincronização de atualização|DBPROP_ADC_UPDATERESYNC|  

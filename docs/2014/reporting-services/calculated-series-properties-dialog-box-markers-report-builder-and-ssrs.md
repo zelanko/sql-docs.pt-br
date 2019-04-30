@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2fdc0a6ee75b2d08b06d440a4d9dd6da48a6b6b7
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59971942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266356"
 ---
 # <a name="calculated-series-properties-dialog-box-markers-report-builder-and-ssrs"></a>Caixa de diálogo Propriedades da Série Calculada, Marcadores (Construtor de Relatórios e SSRS)
   Selecione **Marcadores** na caixa de diálogo **Propriedades da Série Calculada** para definir como os marcadores são exibidos em cada ponto de dados de uma série. Os marcadores estão disponíveis somente para determinados tipos de gráfico. Os seguintes tipos de gráficos oferecem suporte a marcadores: Área, barra, coluna, linha, Polar e dispersão. Para obter mais informações sobre os recursos de gráfico, consulte [Tipos de gráfico &#40;Construtor de Relatórios e SSRS&#41;](report-design/chart-types-report-builder-and-ssrs.md).  

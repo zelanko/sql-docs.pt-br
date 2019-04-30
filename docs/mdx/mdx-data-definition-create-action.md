@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1e55a35144fce7b90cf4bb33cbbb82f26d8db62c
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233619"
 ---
 # <a name="mdx-data-definition---create-action"></a>Definição de dados MDX – CREATE ACTION
 
@@ -81,30 +81,30 @@ FOR
 ## <a name="action-types"></a>Tipos de ação  
  A tabela a seguir descreve os diferentes tipos de ações disponíveis no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
-|Tipo de ação|Description|  
+|Tipo de ação|Descrição|  
 |-----------------|-----------------|  
-|**URL**|A cadeia de caracteres de ação retornada é uma URL que deve ser aberto usando um navegador de Internet.<br /><br /> Observação: Se essa ação não começa com `https://` ou `https://`, a ação estará disponível para o navegador, a menos que **SafetyOptions** está definida como **DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**.|  
+|**URL**|A cadeia de caracteres de ação retornada é uma URL que deve ser aberto usando um navegador de Internet.<br /><br /> Observação: Se essa ação não começa com `https://` ou `https://`, a ação estará disponível para o navegador, a menos que **SafetyOptions** está definido como **DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**.|  
 |**HTML**|A cadeia de caracteres de ação retornada é um script HTML. A cadeia de caracteres deve ser salva em um arquivo e o arquivo deve ser processado com um navegador de Internet. Neste caso, um script inteiro pode ser executado como parte do HTML gerado.|  
-|**INSTRUÇÃO**|A cadeia de caracteres de ação retornada é uma instrução que precisa ser executada, definindo o **ICommand::SetText** método de um objeto de comando para a cadeia de caracteres e a chamada a **ICommand:: execute**método. Se o comando não tiver êxito, um erro será retornado.|  
+|**STATEMENT**|A cadeia de caracteres de ação retornada é uma instrução que precisa ser executada, definindo o **ICommand::SetText** método de um objeto de comando para a cadeia de caracteres e a chamada a **ICommand:: execute**método. Se o comando não tiver êxito, um erro será retornado.|  
 |**CONJUNTO DE DADOS**|A cadeia de caracteres de ação retornada é uma instrução MDX que precisa ser executada, definindo o **ICommand::SetText** método de um objeto de comando para a cadeia de caracteres e a chamada a **ICommand:: execute** método. A interface solicitada IID (ID) deve ser **IDataset**. O comando terá êxito se um conjunto de dados tiver sido criado. O aplicativo cliente deve permitir que o usuário navegue pelo conjunto de dados retornado.|  
 |**CONJUNTO DE LINHAS**|Semelhante ao **DATASET**, mas em vez de solicitar uma IID de **IDataset**, o aplicativo cliente deve solicitar uma IID de **IRowset**. O comando terá êxito se um conjunto de linhas tiver sido criado. O aplicativo cliente deve permitir que o usuário navegue pelo conjunto de linhas retornado.|  
-|**LINHA DE COMANDO**|O aplicativo cliente deve executar a cadeia de caracteres de ação. A cadeia de caracteres é uma linha de comando.|  
+|**COMMANDLINE**|O aplicativo cliente deve executar a cadeia de caracteres de ação. A cadeia de caracteres é uma linha de comando.|  
 |**PROPRIETÁRIOS**|O aplicativo cliente não deve exibir nem executar a ação, a não ser que o aplicativo tenha um conhecimento personalizado e não genérico da ação específica. Ações proprietárias não são retornadas para o aplicativo cliente, a menos que o aplicativo cliente solicite explicitamente essas pela configuração da restrição apropriada na **APPLICATION_NAME**.|  
   
 ## <a name="invocation-types"></a>Tipos de invocação  
  A tabela a seguir descreve os diferentes tipos de invocação disponíveis no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. O tipo de invocação é usado somente pelo aplicativo cliente para ajudar a determinar quando a ação deve ser invocada. O tipo de invocação não determina realmente o comportamento de invocação da ação.  
   
-|Tipo de invocação|Description|  
+|Tipo de invocação|Descrição|  
 |---------------------|-----------------|  
 |**INTERATIVO**|A ação deve ser invocada pelo aplicativo cliente por meio da interação do usuário.|  
 |**ON_OPEN**|A ação deve ser invocada pelo aplicativo cliente quando o objeto de destino é aberto. Esse tipo de invocação não é implementado atualmente.|  
-|**LOTE**|A ação deve ser invocada pelo aplicativo cliente quando o objeto de destino é envolvido em uma operação em lotes, conforme determinado pelo aplicativo cliente. Esse tipo de invocação não é implementado atualmente.|  
+|**BATCH**|A ação deve ser invocada pelo aplicativo cliente quando o objeto de destino é envolvido em uma operação em lotes, conforme determinado pelo aplicativo cliente. Esse tipo de invocação não é implementado atualmente.|  
   
 ### <a name="scope"></a>Escopo  
  Cada ação é definida para um cubo específico e tem um nome exclusivo nesse cubo. Uma ação pode ter um dos escopos listados na tabela a seguir.  
   
  Escopo de cubo  
- Para ações independentes de dimensões, membros ou células específicos; por exemplo, “Lançar emulação terminal para o sistema de produção AS/400”.  
+ Para ações independentes de dimensões específicas, membros ou células; Por exemplo: "Lançar emulação terminal para AS / 400 sistema de produção".  
   
  Escopo de dimensão  
  A ação se aplica a uma dimensão específica. Essas ações não dependem da seleção específica de níveis ou membros.  

@@ -15,20 +15,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 30547551cc1793622eaa981c07bbc002d07a094d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312917"
 ---
 # <a name="like-predicate-escape-character"></a>Caractere de escape de predicado LIKE
-Em um **como** predicado, o sinal de porcentagem (%) correspondências zero ou mais de qualquer caractere e corresponde a qualquer caractere de sublinhado (_). Para corresponder a um sinal de porcentagem real ou sublinhado em uma **como** predicado, um caractere de escape deve vir antes do sinal de porcentagem ou um sublinhado. A sequência de escape que define o **como** caractere de escape de predicado é:  
+Em um **como** predicado, o sinal de porcentagem (%) corresponde a zero ou mais do qualquer caractere de sublinhado (_) corresponde a qualquer caractere. Para corresponder a um sinal de porcentagem real ou sublinhado em uma **como** predicado, um caractere de escape deve vir antes do sinal de porcentagem ou um sublinhado. A sequência de escape que define o **como** caractere de escape de predicado é:  
   
- **{escape '** *caractere de escape* **'}**  
+ **{escape '** *escape-character* **'}**  
   
  em que *caractere de escape* é qualquer caractere que tem suportada pela fonte de dados.  
   
- Para obter mais informações sobre o tipo de sequência de escape, consulte [como sequência de Escape](../../../odbc/reference/appendixes/like-escape-sequence.md) na gramática do apêndice c: SQL.  
+ Para obter mais informações sobre o tipo de sequência de escape, consulte [sequência de Escape, como](../../../odbc/reference/appendixes/like-escape-sequence.md) no Apêndice c: Gramática SQL.  
   
  Por exemplo, as seguintes instruções SQL criam o mesmo conjunto de resultados de cliente com nomes que começam com os caracteres "% AAA". A primeira instrução usa a sintaxe de sequência de escape. A segunda instrução usa a sintaxe de nativa para o Microsoft® Access e não é interoperável. Observe que a porcentagem do segundo caractere em cada **como** predicado é um caractere curinga que corresponde a zero ou mais de qualquer caractere.  
   

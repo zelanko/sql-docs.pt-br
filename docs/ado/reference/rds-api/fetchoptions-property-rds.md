@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 19b266474c348af50db26fddafeea79d4cf33ade
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308196"
 ---
 # <a name="fetchoptions-property-rds"></a>Propriedade FetchOptions (RDS)
 Indica o tipo de busca de maneira assíncrona.  
@@ -30,7 +30,7 @@ Indica o tipo de busca de maneira assíncrona.
 ## <a name="setting-and-return-values"></a>Configuração e valores de retorno  
  Define ou retorna um dos valores a seguir.  
   
-|Constante|Description|  
+|Constante|Descrição|  
 |--------------|-----------------|  
 |**adcFetchUpFront**|Todos os registros da [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) são buscadas antes que o controle é retornado ao aplicativo. A conclusão **Recordset** é buscado antes que o aplicativo tem permissão para fazer algo com ele.|  
 |**adcFetchBackground**|Controle pode retornar para o aplicativo assim que o primeiro lote de registros foi buscado. Uma leitura subsequente do **Recordset** que tenta acessar um registro não buscado no primeiro lote será adiada até o registro procurado, na verdade, é obtido, momento em que o controle retorna para o aplicativo.|  

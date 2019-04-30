@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 45853fc31ef6e18c3d64afacf9d5e998e6fc7855
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248166"
 ---
 # <a name="appendchunk-and-getchunk-methods-example-vc"></a>Exemplo dos métodos AppendChunk e GetChunk (VC++)
 Este exemplo usa o [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) e [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) métodos para preencher um campo de imagem com os dados de outro registro.  

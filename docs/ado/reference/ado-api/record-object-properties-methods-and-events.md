@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 34a3d44ecd85845a47923a7f26de7188b65df8e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239984"
 ---
 # <a name="record-object-properties-methods-and-events"></a>Propriedades, métodos e eventos do objeto Record
 ## <a name="propertiescollections"></a>Propriedades/coleções  

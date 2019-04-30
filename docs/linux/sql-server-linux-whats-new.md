@@ -4,18 +4,18 @@ description: Este artigo destaca o que há de novo para o SQL Server 2017 no Lin
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/21/2018
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
-ms.openlocfilehash: b248578015e8d821c3c76314ecbbabdf75600a52
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
-ms.translationtype: MT
+ms.openlocfilehash: 6ec87bdb2a1ca458893b65bc47e18a8f4664acb1
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160524"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63456726"
 ---
 # <a name="whats-new-for-sql-server-on-linux"></a>O que há de novo para o SQL Server no Linux
 
@@ -23,7 +23,7 @@ ms.locfileid: "53160524"
 
 Este artigo descreve os principais recursos e serviços disponíveis para o SQL Server 2017 em execução no Linux.
 
-Visualização de 2019 do SQL Server foi lançada. Este artigo não cobre versões de visualização do SQL Server de 2019. Para saber mais sobre visualização de 2019 do SQL Server, consulte [quais são as novidades na visualização de 2019 do SQL Server para Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux).
+Visualização de 2019 do SQL Server foi lançada. Este artigo não cobre versões de visualização do SQL Server de 2019. Para saber mais sobre visualização de 2019 do SQL Server, consulte [quais são as novidades na visualização de 2019 do SQL Server para Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sql-server-on-linux).
 
 > [!NOTE]
 > Além desses recursos neste artigo, as atualizações cumulativas são liberadas em intervalos regulares após a versão GA. Essas atualizações cumulativas fornecem várias melhorias e correções. Para obter informações sobre a versão CU mais recente, consulte [ https://aka.ms/sql2017cu ](https://aka.ms/sql2017cu). Para baixar os pacotes e problemas conhecidos, consulte o [notas de versão](sql-server-linux-release-notes.md).

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21975fb2442aea97e362cd71b24c087f58addc0f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248837"
 ---
 # <a name="adorecordconstruction-interface"></a>Interface ADORecordConstruction
 O **ADORecordConstruction**interface é usada para construir o ADO **registro** objeto a partir de um banco de dados OLE **linha** objeto em um aplicativo C/C++.  
@@ -33,7 +33,7 @@ O **ADORecordConstruction**interface é usada para construir o ADO **registro** 
 |||  
 |-|-|  
 |[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|Somente gravação.<br />Define o contêiner de um banco de dados OLE **linha** objeto esse ADO **registro** objeto.|  
-|[linha](../../../ado/reference/ado-api/row-property-ado.md)|Leitura/gravação.<br />Obtém/define um banco de dados OLE **linha** objeto de/nesse ADO **registro** objeto.|  
+|[Row](../../../ado/reference/ado-api/row-property-ado.md)|Leitura/gravação.<br />Obtém/define um banco de dados OLE **linha** objeto de/nesse ADO **registro** objeto.|  
   
 ## <a name="methods"></a>Métodos  
  Nenhum.  
@@ -72,7 +72,7 @@ O **ADORecordConstruction**interface é usada para construir o ADO **registro** 
  ADO **registro** objeto também pode ser construído a partir do contêiner de um banco de dados OLE **linha** objeto.  
   
 ## <a name="requirements"></a>Requisitos  
- **Versão:** ADO 2.0 e posterior  
+ **Versão:** O ADO 2.0 e posterior  
   
  **Biblioteca:** msado15.dll  
   

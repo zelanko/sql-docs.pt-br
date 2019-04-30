@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 397c66d85f326819714c497f7efb81d0f91282f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287267"
 ---
 # <a name="allocating-and-freeing-descriptors"></a>Alocar e liberar descritores
 Descritores são implicitamente ou explicitamente alocados, conforme descrito nas seções a seguir.  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d221287fc0a945b0325ef9bbb92c89888e130c7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281420"
 ---
 # <a name="views-and-fields-collections-example-vb"></a>Exemplo de coleções Views e Fields (VB)
 O código a seguir demonstra como usar o [comando](../../../ado/reference/adox-api/command-property-adox.md) propriedade e o [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto para recuperar informações de campo para o modo de exibição.  

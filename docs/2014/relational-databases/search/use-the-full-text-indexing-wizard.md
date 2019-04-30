@@ -24,11 +24,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 767c83b5eb6483ca4804e8602886932ff8e40793
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237819"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Usar o Assistente para Indexação de Texto Completo
   O Assistente para Indexação de Texto Completo guia você por uma série de etapas planejadas para ajudá-lo a criar um índice de texto completo.  
@@ -93,9 +93,9 @@ ms.locfileid: "48054296"
   
      Selecione um destes valores:  
   
-    |Valor|Description|  
+    |Valor|Descrição|  
     |-----------|-----------------|  
-    |**\<padrão >**|Se a tabela ou exibição não for particionada, selecione para usar o mesmo grupo de arquivos da tabela ou exibição subjacente. Se a tabela ou exibição for particionada, o grupo de arquivos primário será utilizado.|  
+    |**\<default>**|Se a tabela ou exibição não for particionada, selecione para usar o mesmo grupo de arquivos da tabela ou exibição subjacente. Se a tabela ou exibição for particionada, o grupo de arquivos primário será utilizado.|  
     |**PRIMARY**|Selecione para usar o grupo de arquivos primário para o novo índice de texto completo.|  
     |*grupo de arquivos padrão especificado pelo usuário*|Se existir uma lista de palavras irrelevantes padrão definida pelo usuário, selecione seu nome na lista para usar esse grupo de arquivos para o novo índice de texto completo.|  
   
@@ -106,10 +106,10 @@ ms.locfileid: "48054296"
   
      Selecione um destes valores:  
   
-    |Valor|Description|  
+    |Valor|Descrição|  
     |-----------|-----------------|  
-    |**\<sistema >**|Selecione para usar a lista de palavras irrelevantes do sistema no novo índice de texto completo. Esse é o padrão.|  
-    |**\<Desativar >**|Selecione para desabilitar as listas de palavras irrelevantes para o novo índice de texto completo.|  
+    |**\<system>**|Selecione para usar a lista de palavras irrelevantes do sistema no novo índice de texto completo. Esse é o padrão.|  
+    |**\<off>**|Selecione para desabilitar as listas de palavras irrelevantes para o novo índice de texto completo.|  
     |*user-defined-stoplist-name*|A lista exibe o nome de cada lista de palavras irrelevantes definida pelo usuário, se houver alguma, que foi criada no banco de dados. Selecione qualquer lista de palavras irrelevantes definida pelo usuário para usar no novo índice de texto completo.|  
   
 4.  Opcionalmente, defina a agenda de população. As operações de indexação começarão imediatamente, a menos que tenham sido agendadas para execução futura. Serão criadas agendas imediatamente, embora elas sejam executadas somente na hora agendada.  

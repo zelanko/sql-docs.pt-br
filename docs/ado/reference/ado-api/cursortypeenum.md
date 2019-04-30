@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 059d6bb8e621839ccf21bb4eb4251db08f427523
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308607"
 ---
 # <a name="cursortypeenum"></a>CursorTypeEnum
 Especifica o tipo de cursor usado em uma [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
   
-|Constante|Valor|Description|  
+|Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
 |**adOpenDynamic**|2|Usa um cursor dinâmico. Adições, alterações e exclusões por outros usuários estão visíveis e todos os tipos de movimento por meio de **conjunto de registros** são permitidos, exceto para os marcadores, se o provedor não dá suporte a eles.|  
 |**adOpenForwardOnly**|0|Padrão. Usa um cursor de somente avanço. Idêntico a um cursor estático, exceto que você só pode navegar para frente por meio de registros. Isso melhora o desempenho quando você precisa fazer apenas uma passar por uma **conjunto de registros**.|  
@@ -35,7 +35,7 @@ Especifica o tipo de cursor usado em uma [Recordset](../../../ado/reference/ado-
 |**adOpenUnspecified**|-1|Não especifica o tipo de cursor.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
- Pacote: **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

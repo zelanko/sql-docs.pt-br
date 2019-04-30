@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ab648d7fe60a27d36e55cd3d859d0a8c442eef50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240342"
 ---
 # <a name="recordopenoptionsenum"></a>RecordOpenOptionsEnum
 Especifica opções para abrir um [registro](../../../ado/reference/ado-api/record-object-ado.md). Esses valores podem ser combinados usando ou.  
   
-|Constante|Valor|Description|  
+|Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
 |**adDelayFetchFields**|0x8000|Indica ao provedor que os campos associados com o **registro** não precisam ser recuperados inicialmente, mas pode ser recuperado na primeira tentativa de acessar o campo. O comportamento padrão, indicado pela ausência desse sinalizador é recuperar todos os **registro** campos do objeto.|  
 |**adDelayFetchStream**|0x4000|Indica ao provedor que o fluxo padrão associado a **registro** não precisam ser recuperados inicialmente. O comportamento padrão, indicado pela ausência desse sinalizador é recuperar o fluxo padrão associado a **registro** objeto.|  

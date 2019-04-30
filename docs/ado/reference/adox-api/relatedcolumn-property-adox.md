@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6939c346283e14848e44a822e05d1a3140656183
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281848"
 ---
 # <a name="relatedcolumn-property-adox"></a>Propriedade RelatedColumn (ADOX)
 Indica o nome do relacionado [o objeto de coluna (ADOX)](../../../ado/reference/adox-api/column-object-adox.md) na tabela relacionada (somente colunas de chave).  

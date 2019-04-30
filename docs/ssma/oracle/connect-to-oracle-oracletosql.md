@@ -1,5 +1,5 @@
 ---
-title: Conectar-se ao Oracle (OracleToSQL) | Microsoft Docs
+title: Connect To Oracle (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: da846d4afb4ce8fe745b98c8503901fe804520e0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681104"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287737"
 ---
 # <a name="connect-to-oracle-oracletosql"></a>Conectar-se ao Oracle (OracleToSQL)
 Use o **conectar-se ao Oracle** caixa de diálogo para se conectar ao banco de dados Oracle que você deseja migrar.  
@@ -51,7 +51,7 @@ Insira o Oracle conectar-se o identificador. Esse é o alias do banco de dados, 
   
 Essa é uma opção de modo TNSNAME.  
   
-**SID do Oracle**  
+**Oracle SID**  
 Insira o SID para o banco de dados. O SID é um identificador que distingue o banco de dados Oracle em um computador. O padrão de SID para um banco de dados é os oito primeiros caracteres do nome do banco de dados.  
   
 Essa é uma opção de modo padrão.  

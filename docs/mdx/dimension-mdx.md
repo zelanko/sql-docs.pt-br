@@ -1,5 +1,5 @@
 ---
-title: Dimensão (MDX) | Microsoft Docs
+title: Função Dimension (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cee82f3baa95df1d8636e314bfbb0798efe9527a
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248214"
 ---
 # <a name="dimension-mdx"></a>Função Dimension (MDX)
 
@@ -37,7 +37,7 @@ Member_Expression.Dimension
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Expressão_Hierarquia*  
+ *Hierarchy_Expression*  
  Uma linguagem MDX válida que retorna uma hierarquia.  
   
  *Level_Expression*  
@@ -63,7 +63,7 @@ SELECT measures.x on 0
 FROM [Adventure Works]  
 ```  
   
- O exemplo a seguir usa o **dimensão** função, em conjunto com o **membros** e **contagem** funções para retornar o número de membros na hierarquia que contém o membro especificado.  
+ O exemplo a seguir usa o **dimensão** função, em conjunto com o **membros** e o **contagem** funções, para retornar o número de membros da hierarquia que contém o membro especificado.  
   
 ```  
 WITH member measures.x as [Product].[Product Model Lines].[Model].&[HL Road Tire].Dimension.Members.Count  
@@ -73,9 +73,9 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>Consulte também  
  [Contagem de &#40;níveis de hierarquia&#41; &#40;MDX&#41;](../mdx/count-hierarchy-levels-mdx.md)   
- [Contagem de &#40;definir&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
- [Níveis &#40;MDX&#41;](../mdx/levels-mdx.md)   
+ [Count &#40;Set&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
+ [Níveis de &#40;MDX&#41;](../mdx/levels-mdx.md)   
  [Membros &#40;definir&#41; &#40;MDX&#41;](../mdx/members-set-mdx.md)   
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

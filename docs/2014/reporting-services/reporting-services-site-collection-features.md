@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 43b45b7e1bd2d8a4ba10870cc442e73aecbbc618
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283589"
 ---
 # <a name="reporting-services-site-collection-features"></a>Recursos da coleção de sites do Reporting Services
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] O modo SharePoint fornece três recursos de coleção de sites do SharePoint. Os recursos dão suporte ao ambiente geral de relatório do modo do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint, [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], um recurso do Suplemento [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para [!INCLUDE[SPS2010](../includes/sps2010-md.md)] Enterprise Edition, bem como a operações de gerenciamento para o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] na Administração Central do SharePoint.  

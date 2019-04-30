@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a97f50030d123181b1b3c0d2a5fda59a0005188
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312849"
 ---
 # <a name="full-text-search-upgrade-issues"></a>Problemas de atualização da Pesquisa de Texto Completo
   Os tópicos nesta seção descrevem problemas da pesquisa de texto completo que podem afetar a atualização. Eles descrevem ações que podem ser tomadas para diminuir o efeito dessas alterações em seu ambiente.  

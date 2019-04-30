@@ -13,18 +13,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2b41519ee6a6d31be33d92c8fbdf2ab503c93ec1
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265076"
 ---
 # <a name="how-to-deploy-a-custom-report-item"></a>Como fazer: Implantar um item de relatório personalizado
   Para implantar um item de relatório personalizado no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], modifique os arquivos de configuração do servidor de relatório e copie os assemblies de componente em tempo de design e em tempo de execução nas pastas de aplicativo apropriadas para o Designer de Relatórios e o servidor de relatório.  
   
 ### <a name="to-deploy-a-custom-report-item"></a>Para implantar um item de relatório personalizado  
   
-1.  Edite o arquivo Rsreportdesigner.config para configurar os componentes de item de relatório personalizado em tempo de execução e tempo de design para uso no designer. Observe que a entrada `ReportItemName` deve corresponder ao atributo `CustomReportItemAttribute` usado em sua classe `CustomReportItemDesigner`. Por exemplo:   
+1.  Edite o arquivo Rsreportdesigner.config para configurar os componentes de item de relatório personalizado em tempo de execução e tempo de design para uso no designer. Observe que a entrada `ReportItemName` deve corresponder ao atributo `CustomReportItemAttribute` usado em sua classe `CustomReportItemDesigner`. Por exemplo:  
   
     ```  
     <ReportItems>  
@@ -38,7 +38,7 @@ ms.locfileid: "60158512"
     </ReportItemConverter>  
     ```  
   
-2.  Edite o arquivo Rsreportserver.config para registrar o componente de item de relatório personalizado em tempo de execução. Por exemplo:  
+2.  Edite o arquivo Rsreportserver.config para registrar o componente de item de relatório personalizado em tempo de execução. Por exemplo:   
   
     ```  
     <ReportItems>  
@@ -46,7 +46,7 @@ ms.locfileid: "60158512"
     </ReportItems>  
     ```  
   
-3.  Edite o arquivo Rsssrvpolicy.config para adicionar um `CodeGroup` que concede as permissões adequadas ao item de relatório personalizado. Por exemplo:  
+3.  Edite o arquivo Rsssrvpolicy.config para adicionar um `CodeGroup` que concede as permissões adequadas ao item de relatório personalizado. Por exemplo:   
   
     ```  
     <CodeGroup   

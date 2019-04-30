@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bf03b52495f572bf5dc9a82b289f15cb1c6146a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301945"
 ---
 # <a name="alter-table-statement"></a>Instrução ALTER TABLE
 Quando o Microsoft Access, dBASE ou Paradoxdriver é usado, a instrução ALTER TABLE é compatível com add e drop cláusulas de definição de restrição de tabela. (As instruções ALTER TABLE não têm suporte para os drivers do Microsoft Excel ou texto.)  

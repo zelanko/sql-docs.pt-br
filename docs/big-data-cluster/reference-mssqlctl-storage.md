@@ -5,16 +5,16 @@ description: Artigo de referência para comandos de armazenamento mssqlctl.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 47c4d331c2f1848265c1322bda88c358b61cf56a
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: 120f230fad10c968590ab7e5c1430433598ddcd6
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860608"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473201"
 ---
 # <a name="mssqlctl-storage"></a>Armazenamento do mssqlctl
 
@@ -22,11 +22,10 @@ ms.locfileid: "58860608"
 
 O artigo a seguir fornece referência para o **armazenamento** comandos na **mssqlctl** ferramenta. Para obter mais informações sobre outros **mssqlctl** comandos, consulte [mssqlctl referência](reference-mssqlctl.md).
 
-## <a id="commands"></a> Comandos
-
-|||
-|---|---|
-| [mount](reference-mssqlctl-storage-mount.md) | Gerencie a montagem de repositórios remotos no HDFS. |
+## <a name="commands"></a>Commands
+|     |     |
+| --- | --- |
+[montagem do armazenamento mssqlctl](reference-mssqlctl-storage-mount.md) | Gerencie a montagem de repositórios remotos no HDFS.
 
 ## <a name="next-steps"></a>Próximas etapas
 

@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5a0a8457dfde0090ac0d88d12079e88995b39efb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232391"
 ---
 # <a name="standard-database-access-architectures"></a>Arquiteturas de acesso ao banco de dados padrão
 Olhando para os componentes de acesso de banco de dados descritos na seção anterior, acontece que dois deles - programação interfaces e protocolos de fluxo de dados – são bons candidatos para padronização. Os outros dois componentes - mecanismo IPC e protocolos de rede - não apenas residem em um nível muito baixo, mas eles são altamente dependentes na rede e sistema operacional. Também há uma terceira abordagem - gateways, que oferece possibilidades para padronização.  

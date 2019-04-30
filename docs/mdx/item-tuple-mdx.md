@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 58cb48c467bbd3ca1c929da1fdff4881086d2e1d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273076"
 ---
 # <a name="item-tuple-mdx"></a>Item (Tupla) (MDX)
 
@@ -45,8 +45,8 @@ Set_Expression.Item(String_Expression1 [ ,String_Expression2,...n])
  *Index*  
  Uma expressão numérica válida que especifica a tupla específica através da posição dentro do conjunto a ser retornado.  
   
-## <a name="remarks"></a>Remarks  
- O **Item** função retorna uma tupla do conjunto especificado. Há três maneiras possíveis de chamar o **Item** função:  
+## <a name="remarks"></a>Comentários  
+ O **Item** função retorna uma tupla do conjunto especificado. Há três maneiras possíveis para chamar o **Item** função:  
   
 -   Se uma expressão única cadeia de caracteres for especificada, o **Item** função retorna a tupla especificada. Por exemplo, “([2005] .Q3, [Store05])”.  
   
@@ -59,7 +59,7 @@ Set_Expression.Item(String_Expression1 [ ,String_Expression2,...n])
   
  `{([1996],Sales), ([1997],Sales), ([1998],Sales)}.Item(0)`  
   
- O exemplo a seguir usa uma expressão de nível e retorna o Valor de Vendas pela Internet para cada Estado-Província da Austrália e seu percentual do Valor de Vendas pala Internet para a Austrália. Este exemplo usa a função Item para extrair a primeira (e apenas a tupla) do conjunto retornado pelo **ancestrais** função.  
+ O exemplo a seguir usa uma expressão de nível e retorna o Valor de Vendas pela Internet para cada Estado-Província da Austrália e seu percentual do Valor de Vendas pala Internet para a Austrália. Este exemplo usa a função Item para extrair a primeira (e apenas a tupla) do conjunto retornado pela **ancestrais** função.  
   
 ```  
 WITH MEMBER Measures.x AS [Measures].[Internet Sales Amount] /   
@@ -79,6 +79,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

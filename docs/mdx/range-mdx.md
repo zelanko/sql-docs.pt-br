@@ -1,5 +1,5 @@
 ---
-title: ': (Intervalo) (MDX) | Microsoft Docs'
+title: ': (Range) (MDX) | Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 882082d503bf88f21566ac79ea4393a24ee551e4
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63277895"
 ---
 # <a name="-range-mdx"></a>: (Intervalo) (MDX)
 
@@ -35,8 +35,8 @@ Member_Expression : Member_Expression
 ## <a name="return-value"></a>Valor retornado  
  Um conjunto que contém os membros especificados e todos os membros entre os membros especificados.  
   
-## <a name="remarks"></a>Remarks  
- Ambos os parâmetros devem especificar membros dentro do mesmo nível e hierarquia de uma determinada dimensão. Se ambos os parâmetros especificam o mesmo membro, o **: (intervalo)** retorna um conjunto que contém o membro especificado. Se o primeiro parâmetro for nulo, o conjunto irá conter todos os membros desde o início do nível do membro especificado no segundo parâmetro até e incluindo esse membro. Se o segundo parâmetro for nulo, o conjunto irá conter todos os membros do membro especificado no primeiro parâmetro até e incluindo o último membro no mesmo nível.  
+## <a name="remarks"></a>Comentários  
+ Ambos os parâmetros devem especificar membros dentro do mesmo nível e hierarquia de uma determinada dimensão. Se ambos os parâmetros especificam o mesmo membro, o **: (Intervalo)**  operador retorna um conjunto que contém o membro especificado. Se o primeiro parâmetro for nulo, o conjunto irá conter todos os membros desde o início do nível do membro especificado no segundo parâmetro até e incluindo esse membro. Se o segundo parâmetro for nulo, o conjunto irá conter todos os membros do membro especificado no primeiro parâmetro até e incluindo o último membro no mesmo nível.  
   
  Esse operador de conjunto não tem nenhum equivalente funcional no MDX.  
   

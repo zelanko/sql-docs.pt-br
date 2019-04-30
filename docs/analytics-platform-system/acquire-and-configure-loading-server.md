@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: da404aa881f3ff7af26a681751aae12a45f2628f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231101"
 ---
 # <a name="acquire-and-configure-a-loading-server-for-parallel-data-warehouse"></a>Adquirir e configurar um servidor de carregamento para Parallel Data Warehouse
 Este artigo descreve como adquirir e configurar um servidor de carregamento como um sistema do Windows não seja de dispositivo para o envio de cargas de dados para o Parallel Data Warehouse (PDW).  
@@ -107,7 +107,7 @@ Para reduzir os riscos de segurança com seus dados, recomendamos o seguinte:
   
 -   Designe um usuário do PDW que tenha permissões para carregar dados. Dependendo dos requisitos de segurança, você poderia ter um usuário específico por banco de dados.  
   
--   Operações no servidor de carregamento podem aceitar um caminho UNC do qual para extrair dados de fora da rede interna confiável. E um invasor na rede ou com capacidade para influenciar a resolução de nomes pode interceptar ou modificar os dados enviados para o SQL Server PDW. Isso apresenta um risco de divulgação de informações e falsificação. Deve ser reduzida a violação ao exigir que a conexão de assinatura. Para ajudar a reduzir esse risco, defina a seguinte opção de diretiva de grupo **segurança Settings\Local Policies\Security Options** no servidor de carregamento: **cliente de rede Microsoft: assinar comunicações digitalmente (sempre): Habilitado**  
+-   Operações no servidor de carregamento podem aceitar um caminho UNC do qual para extrair dados de fora da rede interna confiável. E um invasor na rede ou com capacidade para influenciar a resolução de nomes pode interceptar ou modificar os dados enviados para o SQL Server PDW. Isso apresenta um risco de divulgação de informações e falsificação. Deve ser reduzida a violação ao exigir que a conexão de assinatura. Para ajudar a reduzir esse risco, defina a seguinte opção de diretiva de grupo **segurança Settings\Local Policies\Security Options** no servidor de carregamento:  **Cliente de rede Microsoft: Assinar digitalmente as comunicações (sempre): habilitado**  
   
 -   Desative a inicialização instantânea de arquivo em Windows Server 2012 e versões posteriores. Isso é um equilíbrio entre desempenho e segurança, conforme observado na seção desempenho. Você precisa decidir o que é melhor de acordo com seus requisitos de segurança.  
   

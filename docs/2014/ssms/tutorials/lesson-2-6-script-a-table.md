@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 22fae65a5e62be579f751dd3d6d3d0c9a73e7409
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316402"
 ---
 # <a name="script-a-table"></a>Gerar script de uma tabela
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pode criar scripts para selecionar, inserir, atualizar e excluir tabelas, além de criar, alterar, remover ou executar procedimentos armazenados.  
@@ -26,9 +26,9 @@ ms.locfileid: "48091546"
   
 #### <a name="to-create-the-insert-script-for-a-table"></a>Para criar um script de inserção para uma tabela  
   
-1.  No Pesquisador de Objetos, expanda o servidor, expanda **Bancos de Dados**, [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], **Tabelas**, clique com o botão direito do mouse em **HumanResources.Employee** e aponte para **Criar Script de Tabela Como**.  
+1.  No Pesquisador de Objetos, expanda o servidor, expanda **Bancos de Dados**, [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], **Tabelas**, clique com o botão direito do mouse em **HumanResources.Employee**e aponte para **Criar Script de Tabela Como**.  
   
-2.  O menu de atalho tem sete opções de script disponíveis: **CREATE To**, **DROP To**, **DROP e CREATE To**, **SELECT To**, **INSERT To**, **UPDATE To**e **DELETE To**. Aponte para **UPDATE To**e clique em **Nova Janela do Editor de Consultas**.  
+2.  O menu de atalho tem sete opções de script disponíveis: **CRIAR para**, **SOLTE**, **DROP e CREATE para**, **Selecione para**, **inserir**, **atualização**, e **excluir para**. Aponte para **UPDATE To**e clique em **Nova Janela do Editor de Consultas**.  
   
 3.  Uma nova janela do Editor de Consultas é aberta, estabelece uma conexão e apresenta a instrução de atualização inteira.  
   

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0f556bfccdd117b23db36bb9551e885f4c38614e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241204"
 ---
 # <a name="retrieve-and-query-xml-data"></a>Recuperar e consultar dados XML
   Este tópico descreve as opções de consulta que você tem que especificar para consultar dados XML. Também descreve as partes de instâncias XML que não são preservadas quando são armazenadas em bancos de dados.  
@@ -27,7 +27,7 @@ ms.locfileid: "58526568"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] preserva o conteúdo da instância XML, mas não preserva aspectos da instância XML que não são considerados significativos no modelo de dados XML. Isso significa que uma instância XML recuperada pode não ser idêntica à instância que foi armazenada no servidor, mas conterá as mesmas informações.  
   
 ### <a name="xml-declaration"></a>Declaração XML  
- A declaração XML em uma instância não é preservada quando a instância é armazenada no banco de dados. Por exemplo:  
+ A declaração XML em uma instância não é preservada quando a instância é armazenada no banco de dados. Por exemplo:   
   
 ```  
 CREATE TABLE T1 (Col1 int primary key, Col2 xml)  
@@ -79,7 +79,7 @@ SELECT @x.query('/*')
 GO  
 ```  
   
- O prefixo de namespace no resultado pode ser diferente. Por exemplo:  
+ O prefixo de namespace no resultado pode ser diferente. Por exemplo:   
   
 ```  
 <p1:root xmlns:p1="abc"><p1:SomeElement/></p1:root>  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 013b7a7a2124788f3f1bcaa6d09b8ef7b10562e4
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248114"
 ---
 # <a name="descendants-mdx"></a>Descendants (MDX)
 
@@ -55,14 +55,14 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
  *Desc_Flag*  
  Uma expressão de cadeia de caracteres válida que especifica um sinalizador de descrição que distingue entre possíveis conjuntos de descendentes.  
   
-## <a name="remarks"></a>Remarks  
- Se um nível for especificado, o **descendentes** retorna um conjunto que contém descendentes do membro especificado ou os membros do conjunto especificado em um nível especificado, opcionalmente modificado por um sinalizador especificado em *Desc_Flag*.  
+## <a name="remarks"></a>Comentários  
+ Se um nível for especificado, o **descendentes** retorna um conjunto que contém descendentes do membro especificado ou os membros do conjunto especificado em um nível especificado, opcionalmente modificado por um sinalizador especificado em  *Desc_Flag*.  
   
- Se *distância* for especificado, o **descendentes** retorna um conjunto que contém descendentes do membro especificado ou os membros do conjunto especificado que são o número especificado de níveis fora da hierarquia do membro especificado, opcionalmente modificado por um sinalizador especificado em *Desc_Flag*. Normalmente, você usa esta função com o argumento Distance para lidar com hierarquias com rotas. Se a distância especificada for zero (0), a função retornará um conjunto composto apenas pelo membro especificado ou pelo conjunto especificado.  
+ Se *distância* for especificado, o **descendentes** função retorna um conjunto que contém descendentes do membro especificado ou membros do conjunto especificado que são o número especificado de níveis de distância no a hierarquia do membro especificado, opcionalmente modificado por um sinalizador especificado em *Desc_Flag*. Normalmente, você usa esta função com o argumento Distance para lidar com hierarquias com rotas. Se a distância especificada for zero (0), a função retornará um conjunto composto apenas pelo membro especificado ou pelo conjunto especificado.  
   
- Se uma expressão de conjunto for especificada, o **descendentes** função será resolvida individualmente para cada membro do conjunto, e o conjunto é criado novamente. Em outras palavras, a sintaxe usada para o **descendentes** função é funcionalmente equivalente à MDX [gerar](../mdx/generate-mdx.md) função.  
+ Se uma expressão de conjunto for especificada, o **descendentes** função é resolvida individualmente para cada membro do conjunto, e o conjunto é criado novamente. Em outras palavras, a sintaxe usada para o **descendentes** função é funcionalmente equivalente à MDX [gerar](../mdx/generate-mdx.md) função.  
   
- Se nenhum nível ou distância for especificada, o valor padrão para o nível usado pela função é determinado chamando o [nível](../mdx/level-mdx.md) função (<\<membro >>. Nível) para o membro especificado (se um membro for especificado) ou chamando o **nível** função para cada membro do conjunto especificado (se um conjunto estiver especificado). Se nenhuma expressão de nível, distância ou sinalizadores forem especificados, a função será executada como se a sintaxe seguinte fosse usada:  
+ Se nenhum nível ou distância for especificada, o valor padrão para o nível usado pela função é determinado por meio da chamada a [nível](../mdx/level-mdx.md) função (<\<membro >>. Nível) para o membro especificado (se um membro for especificado) ou chamando o **nível** de função para cada membro do conjunto especificado (se um conjunto é especificado). Se nenhuma expressão de nível, distância ou sinalizadores forem especificados, a função será executada como se a sintaxe seguinte fosse usada:  
   
  `Descendants`  
   
@@ -90,9 +90,9 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
   
  `)`  
   
- Alterando o valor do sinalizador de descrição, você pode incluir ou excluir descendentes no nível ou na distância especificada, o filho antes ou depois de um nível ou distância especificada (até o nó folha), e a folha filha, independentemente do nível ou da distância especificada. A tabela a seguir descreve os sinalizadores permitidos no *Desc_Flag* argumento.  
+ Alterando o valor do sinalizador de descrição, você pode incluir ou excluir descendentes no nível ou na distância especificada, o filho antes ou depois de um nível ou distância especificada (até o nó folha), e a folha filha, independentemente do nível ou da distância especificada. A tabela a seguir descreve os sinalizadores permitidos na *Desc_Flag* argumento.  
   
-|Sinalizador|Description|  
+|Sinalizador|Descrição|  
 |----------|-----------------|  
 |SELF|Só retorna membros descendentes do nível especificado ou à distância especificada. A função inclui o membro especificado, se o nível especificado for o nível do membro especificado.|  
 |AFTER|Retorna os membros descendentes de todos os níveis subordinados ao nível especificado ou à distância.|  
@@ -124,7 +124,7 @@ SELECT Descendants
 FROM [Adventure Works]   
 ```  
   
- O exemplo a seguir retorna a média diária do `Measures.[Gross Profit Margin]` medida calculada nos dias de cada mês do ano fiscal de 2003, a partir de **Adventure Works** cubo. O **descendentes** retorna um conjunto de dias determinado do membro atual do `[Date].[Fiscal]` hierarquia.  
+ O exemplo a seguir retorna a média diária do `Measures.[Gross Profit Margin]` medida, calculada nos dias de cada mês do ano fiscal de 2003, a partir de **Adventure Works** cubo. O **descendentes** função retorna um conjunto de dias determinado do membro atual do `[Date].[Fiscal]` hierarquia.  
   
 ```  
 WITH MEMBER Measures.[Avg Gross Profit Margin] AS Avg  
@@ -141,7 +141,7 @@ FROM [Adventure Works]
 WHERE ([Date].[Fiscal Year].&[2003])  
 ```  
   
- O exemplo a seguir usa uma expressão de nível e retorna o Valor de Vendas pela Internet para cada Estado-Província da Austrália, e retorna a porcentagem do total do Valor de Vendas pala Internet para a Austrália para cada Estado-Província. Este exemplo usa a função Item para extrair a primeira (e única) tupla do conjunto que é retornado pelo **ancestrais** função.  
+ O exemplo a seguir usa uma expressão de nível e retorna o Valor de Vendas pela Internet para cada Estado-Província da Austrália, e retorna a porcentagem do total do Valor de Vendas pala Internet para a Austrália para cada Estado-Província. Este exemplo usa a função Item para extrair a primeira (e única) tupla do conjunto retornado pela **ancestrais** função.  
   
 ```  
 WITH MEMBER Measures.x AS   
@@ -163,6 +163,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

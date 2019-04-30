@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0ae7b8eb0468dd401009ef58c83b87606b0679a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313065"
 ---
 # <a name="sqlgetfunctions-visual-foxpro-odbc-driver"></a>SQLGetFunctions (Driver ODBC do Visual FoxPro)
 > [!NOTE]  
 >  Este tópico contém informações específicas de Driver ODBC do Visual FoxPro. Para obter informações gerais sobre essa função, consulte o tópico apropriado sob [referência da API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Suporte: completo  
+ Suporte a: Completo  
   
- Conformidade com a API ODBC: 1 de nível  
+ Conformidade com a API ODBC: Nível 1  
   
  Retorna TRUE para todas as funções com suporte.  
   
@@ -34,22 +34,22 @@ ms.locfileid: "47628601"
   
 |*Função*|Tem suporte|  
 |----------------|---------------|  
-|SQL_API_SQLBROWSECONNECT|não|  
-|SQL_API_SQLCOLUMNPRIVELEGES|não|  
+|SQL_API_SQLBROWSECONNECT|Não|  
+|SQL_API_SQLCOLUMNPRIVELEGES|Não|  
 |SQL_API_SQLDATASOURCES|Sim|  
-|SQL_API_SQLDESCRIBEPARAM|não|  
+|SQL_API_SQLDESCRIBEPARAM|Não|  
 |SQL_API_SQLDRIVERS|Sim|  
 |SQL_API_SQLEXTENDEDFETCH|Sim|  
-|SQL_API_SQLFOREIGNKEYS|não|  
+|SQL_API_SQLFOREIGNKEYS|Não|  
 |SQL_API_SQLMORERESULTS|Sim|  
-|SQL_API_SQLNATIVESQL|não|  
+|SQL_API_SQLNATIVESQL|Não|  
 |SQL_API_SQLNUMPARAMS|Sim|  
 |SQL_API_SQLPARAMOPTIONS|Sim|  
 |SQL_API_SQLPRIMARYKEYS|Sim|  
-|SQL_API_SQLPROCEDURECOLUMNS|não|  
-|SQL_API_SQLPROCEDURES|não|  
+|SQL_API_SQLPROCEDURECOLUMNS|Não|  
+|SQL_API_SQLPROCEDURES|Não|  
 |SQL_API_SQLSETPOS|Sim|  
 |SQL_API_SQLSETSCROLLOPTIONS|Sim|  
-|SQL_API_SQLTABLEPRIVILEGES|não|  
+|SQL_API_SQLTABLEPRIVILEGES|Não|  
   
  Para obter mais informações, consulte [SQLGetFunctions](../../odbc/reference/syntax/sqlgetfunctions-function.md) na *referência do programador de ODBC*.

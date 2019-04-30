@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 875348a501c292e55b267ece769f16dd6bc9dbdd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792656"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270943"
 ---
 # <a name="supported-cursor-model-visual-foxpro-odbc-driver"></a>Modelo de cursor com suporte (Driver ODBC do Visual FoxPro)
 O Driver de ODBC do Visual FoxPro dá suporte a ambos *bloco* (*conjunto de linhas*) e *estático* cursores. Cursores estáticos são compatíveis com qualquer driver que está em conformidade com a conformidade de nível 1 ODBC. O driver não oferece suporte a dinâmicos, controlados por ou misto (conjunto de chaves e dinâmico) cursores.  

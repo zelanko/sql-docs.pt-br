@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4cb5d88243b604d7ca0fe40ee8b7f9a040380150
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63274408"
 ---
 # <a name="introduction-to-sql-and-odbc"></a>Introdução ao SQL e ao ODBC
 ODBC foi criado para fornecer um método uniforme de acesso para sistemas de gerenciamento de banco de dados heterogêneos, ou diferente (DBMSs). Esta introdução aborda conceitos relacionados ao desenvolvimento de ODBC.  

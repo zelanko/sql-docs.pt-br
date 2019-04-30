@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 288168b2a4b47c8a73612bd89a6f1987e2808475
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63314912"
 ---
 # <a name="saveoptionsenum"></a>SaveOptionsEnum
 Especifica se um arquivo deve ser criado ou substituído quando salvar uma [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objeto. Os valores podem ser **adSaveCreateNotExist** ou **adSaveCreateOverWrite**...  
   
-|Constante|Valor|Description|  
+|Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
 |**adSaveCreateNotExist**|1|Padrão. Cria um novo arquivo se o arquivo especificado o *FileName* parâmetro ainda não existir.|  
 |**adSaveCreateOverWrite**|2|Substitui o arquivo com os dados da aberto no momento **Stream** do objeto, se o arquivo especificado pela *Filename* parâmetro já existe. Se o arquivo especificado pela *Filename* parâmetro não existe, um novo arquivo é criado.|  

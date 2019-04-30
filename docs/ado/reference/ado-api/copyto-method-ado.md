@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01b2e7dc8b70c109fc6cf998cec2bbad1147692c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308905"
 ---
 # <a name="copyto-method-ado"></a>Método CopyTo (ADO)
 Copia o número especificado de caracteres ou bytes (dependendo da [tipo](../../../ado/reference/ado-api/type-property-ado-stream.md)) na [Stream](../../../ado/reference/ado-api/stream-object-ado.md) para outra **Stream** objeto.  

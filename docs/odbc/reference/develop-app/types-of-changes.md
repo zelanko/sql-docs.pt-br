@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ac92c6d40ea9ead6b8875e3338bb740b4bdf8523
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631814"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473178"
 ---
 # <a name="types-of-changes"></a>Tipos de alterações
 Três tipos de alterações são feitos em ODBC 3. *x* (e qualquer versão do ODBC). Cada uma dessas afeta a compatibilidade com versões anteriores de maneira diferente e é tratada de maneira diferente. Essas alterações são descritas na tabela a seguir.  
   
-|Tipo de alteração|Description|  
+|Tipo de alteração|Descrição|  
 |--------------------|-----------------|  
 |Novos recursos|Esses são recursos que são novos no ODBC 3. *x*, como associação fora de linha ou descritores. Eles são implementados somente quando o aplicativo e driver, bem como o Gerenciador de Driver são da versão 3 *. x*, portanto, não há nenhuma tentativa de fazer essas compatível com versões anteriores.|  
 |Recursos duplicados|Esses são recursos que existem no ODBC 2 *. x* e o ODBC 3. *x* , mas são implementados de maneiras diferentes em cada um. As funções **SQLAllocHandle** e **SQLAllocStmt** são um exemplo. Problemas de compatibilidade com versões anteriores para esses e outros recursos duplicados principalmente são manipulados pelos mapeamentos no Gerenciador de Driver.|  

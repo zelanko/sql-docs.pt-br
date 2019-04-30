@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 50ec2b9a4c35fdf16b8d7f696b9d227eb63ff7cb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63228462"
 ---
 # <a name="excluding-schema-elements-from-the-resulting-xml-document-using-sqlmapped-sqlxml-40"></a>Excluindo elementos de esquema do documento XML resultante usando sql:mapped (SQLXML 4.0)
   Todo elemento e atributo no esquema XSD é mapeado para uma tabela/exibição e uma coluna do banco de dados devido ao mapeamento padrão. Se desejar criar um elemento no esquema XSD que não é mapeado para nenhuma tabela (exibição) ou coluna do banco de dados e que não aparece no XML, é possível especificar a anotação `sql:mapped`.  

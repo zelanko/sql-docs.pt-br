@@ -15,11 +15,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 210f25b55c2cc2536d4c6f00f215b27eac5f7be0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287224"
 ---
 # <a name="executing-the-ssma-console-oracletosql"></a>Executar o console do SSMA (OracleToSQL)
 Microsoft fornece um conjunto robusto de script de comandos de arquivo para executar e controlar atividades do SSMA. O aplicativo de console usa determinados comandos do arquivo de script padrão como enumerado nesta seção.  
@@ -99,7 +99,7 @@ Salva o projeto de migração.
 ```  
 **Comando**  
   
-Fechar projeto  
+close-project  
   
 Fecha o projeto de migração.  
   
@@ -171,7 +171,7 @@ ou em
 ```  
 **Comando**  
   
-Reconecte-origem-banco de dados  
+reconnect-source-database  
   
 -   Reconecta-se à fonte de dados, mas não carrega todos os metadados ao contrário do comando connect-origem-banco de dados.  
   
@@ -222,7 +222,7 @@ Os comandos de relatório geram relatórios sobre o desempenho de várias ativid
   
 **Comando**  
   
-Gerar--relatório de avaliação  
+generate-assessment-report  
   
 -   Gera relatórios de avaliação no banco de dados de origem.  
   
@@ -364,7 +364,7 @@ ou em
 ```  
 **Comando**  
   
-migrar dados  
+migrate-data  
   
 Migra os dados de origem para o destino.  
   
@@ -463,7 +463,7 @@ Os comandos de capacidade de gerenciamento ajudam a sincronizar os objetos de ba
   
 **Comando**  
   
-Sincronizar de destino  
+synchronize-target  
   
 -   Sincroniza os objetos de destino com o banco de dados de destino.  
   
@@ -528,7 +528,7 @@ ou em
 ```  
 **Comando**  
   
-atualização de banco de dados  
+refresh-from-database  
   
 -   Atualiza os objetos de origem do banco de dados.  
   

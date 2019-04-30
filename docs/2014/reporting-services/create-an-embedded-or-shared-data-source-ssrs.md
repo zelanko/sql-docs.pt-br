@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e464af6b057465aec03a611ac741549c10de0638
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59960928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266178"
 ---
 # <a name="create-an-embedded-or-shared-data-source-ssrs"></a>Criar uma fonte de dados inserida ou compartilhada (SSRS)
   Uma fonte de dados de relatório especifica um nome e informações de conexão. O [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dá suporte a dois tipos de fontes de dados: inserida e compartilhada. Um fonte de dados inserida é definida em uma definição de relatório e usada apenas por esse relatório. Uma fonte de dados compartilhada é definida como um item separado e pode ser usada por vários relatórios. Para obter mais informações, consulte [fontes de dados e conexões de dados compartilhado ou inserido &#40;construtor de relatórios e SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md).  

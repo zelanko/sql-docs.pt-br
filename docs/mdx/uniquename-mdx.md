@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 41642dc8bcaed03faaffdf9a16d8fc465aa2d360
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306479"
 ---
 # <a name="uniquename-mdx"></a>UniqueName (MDX)
 
@@ -42,7 +42,7 @@ Member_Expression.UniqueName
  *Dimension_Expression*  
  Uma linguagem MDX válida que retorna uma expressão que será resolvida em uma dimensão.  
   
- *Expressão_Hierarquia*  
+ *Hierarchy_Expression*  
  Uma linguagem MDX válida que retorna uma hierarquia.  
   
  *Level_Expression*  
@@ -51,8 +51,8 @@ Member_Expression.UniqueName
  *Member_Expression*  
  Uma linguagem MDX válida que retorna um membro.  
   
-## <a name="remarks"></a>Remarks  
- O **UniqueName** função retorna o nome exclusivo do objeto, não o nome retornado pelo [nome](../mdx/name-mdx.md) função. O nome retornado não inclui o nome do cubo. Os resultados retornados dependem das configurações do servidor ou da propriedade de cadeia de conexão MDX Unique Name Style.  
+## <a name="remarks"></a>Comentários  
+ O **UniqueName** função retorna o nome exclusivo do objeto, não o nome retornado pela [nome](../mdx/name-mdx.md) função. O nome retornado não inclui o nome do cubo. Os resultados retornados dependem das configurações do servidor ou da propriedade de cadeia de conexão MDX Unique Name Style.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir retorna um valor de nome exclusivo para a dimensão Produto, a hierarquia Categorias de Produtos, nível Subcategoria e o membro Suportes para Bicicleta do cubo Adventure Works.  
@@ -76,6 +76,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,8 +1,9 @@
 ---
 title: Caixa de diálogo Alteração Necessária no Tipo de Dados (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 01/19/2017
+ms.prod: sql
+ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
@@ -14,20 +15,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b04814ed725dde1a579ed969000b280816c1880a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270565"
 ---
 # <a name="data-type-change-required-dialog-box-visual-database-tools"></a>Caixa de diálogo Alteração Necessária no Tipo de Dados (Visual Database Tools)
-  É exibida quando se altera o tipo de dados, comprimento, escala, precisão ou ordenação de uma coluna que integra uma relação.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+É exibida quando se altera o tipo de dados, comprimento, escala, precisão ou ordenação de uma coluna que integra uma relação.  
   
 ## <a name="options"></a>Opções  
- **Sim**  
- Altera a propriedade de tipo de dados das colunas relacionadas mostradas na lista, de modo que as relações existentes sejam preservadas.  
+**Sim**  
+Altera a propriedade de tipo de dados das colunas relacionadas mostradas na lista, de modo que as relações existentes sejam preservadas.  
   
- **Não**  
- Cancela a alteração do tipo de dados e restaura o tipo de dados anterior para a coluna recentemente alterada.  
-  
+**Não**  
+Cancela a alteração do tipo de dados e restaura o tipo de dados anterior para a coluna recentemente alterada.  
   

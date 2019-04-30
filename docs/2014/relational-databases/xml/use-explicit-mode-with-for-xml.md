@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8976b77bf0823c9735e6e6e67fc3159bcb54ecdf
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231288"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Usar o modo EXPLICIT com FOR XML
   Conforme descrito no tópico [Construindo XML usando FOR XML](../xml/for-xml-sql-server.md), os modos RAW e AUTO não fornecem muito controle sobre a forma do XML gerado de um resultado da consulta. No entanto o modo EXPLICIT fornece máxima flexibilidade para gerar o XML desejado de um resultado de consulta.  
@@ -161,7 +161,7 @@ ElementName!TagNumber!AttributeName!Directive
   
 -   [Exemplo: Especificando a diretiva HIDE](../xml/example-specifying-the-hide-directive.md)  
   
--   [Exemplo: Especificando a diretiva ELEMENT e codificação de entidade](../xml/example-specifying-the-element-directive-and-entity-encoding.md)  
+-   [Exemplo: Especificando a diretiva ELEMENT e a codificação de entidade](../xml/example-specifying-the-element-directive-and-entity-encoding.md)  
   
 -   [Exemplo: Especificando a diretiva CDATA](../xml/example-specifying-the-cdata-directive.md)  
   

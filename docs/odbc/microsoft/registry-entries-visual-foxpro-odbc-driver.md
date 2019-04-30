@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de287802693adb18e39509fdc0e7577d05984949
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316832"
 ---
 # <a name="registry-entries-visual-foxpro-odbc-driver"></a>Entradas do Registro (Driver ODBC do Visual FoxPro)
 Quando você instala o Driver de ODBC do Visual FoxPro, o programa de instalação de atualizações de registro do sistema, na chave do registro HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCInst.ini, para adicionar uma nova chave chamada de Driver do Microsoft Visual FoxPro. Sob essa chave, os valores descritos na tabela a seguir são adicionados.  
@@ -34,7 +34,7 @@ Quando você instala o Driver de ODBC do Visual FoxPro, o programa de instalaç�
 |DriverODBCVer|REG_SZ|"02.50"|  
 |FileExtns|REG_SZ|"*.dbf,\*.cdx,\*.fpt"|  
 |FileUsage|REG_SZ|"1"|  
-|Instalação|REG_SZ|Caminho do sistema para o arquivo vfpodbc|  
+|Configuração|REG_SZ|Caminho do sistema para o arquivo vfpodbc|  
 |SQLLevel|REG_SZ|"0"|  
   
  O programa de instalação também adiciona a chave "Visual FoxPro Files", que representa o driver do Visual FoxPro padrão, a chave de HKEY_CURRENT_USER\SOFTWARE\ODBC\Odbc.ini do seu sistema. Sob essa chave, o programa de instalação adiciona os valores descritos na tabela a seguir.  
@@ -48,7 +48,7 @@ Quando você instala o Driver de ODBC do Visual FoxPro, o programa de instalaç�
 |Nome do valor (palavra-chave)|Tipo de valor|Valor|  
 |----------------------------|----------------|-----------|  
 |Agrupar|REG_SQ|Nenhum suporte para a sequência de agrupamento|  
-|Description|REG_SZ|Descrição do usuário da fonte de dados|  
+|Descrição|REG_SZ|Descrição do usuário da fonte de dados|  
 |Driver||Caminho do sistema para o arquivo vfpodbc|  
 |Exclusive||Sim ou Não|  
 |BackgroundFetch||Sim ou Não|  

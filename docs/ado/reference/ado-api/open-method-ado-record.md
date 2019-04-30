@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b4d105d648c7877e7099dea637c2a2c6a094985f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241083"
 ---
 # <a name="open-method-ado-record"></a>Método Open (Registro do ADO)
 Abre um existente [registro](../../../ado/reference/ado-api/record-object-ado.md) do objeto ou cria um novo item representado pelo **registro**, como um arquivo ou diretório.  

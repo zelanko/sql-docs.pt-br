@@ -19,16 +19,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1905bc30afff4af0ffc74363b93f95732f4760f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63254177"
 ---
 # <a name="mixed-cursors"></a>Cursores mistos
 Um cursor misto é uma combinação de um cursor controlado por conjunto de chaves e um cursor dinâmico. Ele é usado quando o conjunto de resultados for muito grande para ser razoavelmente salvar chaves para o conjunto de resultados inteiro. Cursores mistos são implementados com a criação de um conjunto de chaves é menor do que o conjunto de resultados inteiro, mas maior do que o conjunto de linhas.  
   
- Desde que o aplicativo rola dentro do conjunto de chaves, o comportamento é controlado por conjunto de chaves. Quando o aplicativo rola fora do conjunto de chaves, o comportamento é dinâmico: cursor busca as linhas solicitadas e cria um novo conjunto de chaves. Depois que o novo conjunto de chaves é criado, o comportamento será revertido para cursores controlados por dentro desse conjunto de chaves.  
+ Desde que o aplicativo rola dentro do conjunto de chaves, o comportamento é controlado por conjunto de chaves. Quando o aplicativo rola fora do conjunto de chaves, o comportamento é dinâmico: O cursor busca as linhas solicitadas e cria um novo conjunto de chaves. Depois que o novo conjunto de chaves é criado, o comportamento será revertido para cursores controlados por dentro desse conjunto de chaves.  
   
  Por exemplo, suponha que um conjunto de resultados tem 1.000 linhas e usa um cursor misto com um tamanho de conjunto de chaves de 100 e um tamanho de conjunto de linhas de 10. Quando o primeiro conjunto de linhas for encontrado, o cursor cria um conjunto de chaves consistindo de chaves para as primeiras 100 linhas. Em seguida, ele retorna as primeiras 10 linhas, conforme solicitado.  
   

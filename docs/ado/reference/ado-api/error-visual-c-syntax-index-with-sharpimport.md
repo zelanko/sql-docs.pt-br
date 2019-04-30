@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a3a8bf1b5817156bb21b9ceddf9d68400d85d7b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63276256"
 ---
 # <a name="error-visual-c-syntax-index-with-import"></a>Erro (Visual C++ índice de sintaxe com #import)
 ## <a name="properties"></a>Propriedades  

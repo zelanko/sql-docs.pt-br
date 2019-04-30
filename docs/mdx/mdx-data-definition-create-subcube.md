@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2b505de916ba274ebb69137aa3f61fe384386829
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248308"
 ---
-# <a name="mdx-data-definition---create-subcube"></a>Definição de dados MDX - criar SUBCUBO
+# <a name="mdx-data-definition---create-subcube"></a>Definição de dados MDX – CREATE SUBCUBE
 
 
   Redefine o espaço de cubo de um cubo ou subcubo especificado em um subcubo especificado. Essa instrução altera o espaço de cubo aparente para operações subsequentes.  
@@ -36,18 +36,18 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
  *Select_Statement*  
  Uma expressão SELECT de linguagem MDX válida que não contém as cláusulas WITH, NON EMPTY ou HAVING e não solicita propriedades de dimensão ou célula.  
   
- Consulte [instrução SELECT &#40;MDX&#41; ](../mdx/mdx-data-manipulation-select.md) para obter uma explicação detalhada de sintaxe em instruções Select e o **NON VISUAL** cláusula.  
+ Ver [instrução SELECT &#40;MDX&#41; ](../mdx/mdx-data-manipulation-select.md) para obter uma explicação detalhada de sintaxe em instruções Select e o **NON VISUAL** cláusula.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Quando os membros padrão são excluídos na definição de um subcubo, as coordenadas são alteradas de modo correspondente. Para os atributos que podem ser agregados, o membro padrão é movido para o membro [All]. Para os atributos que não podem ser agregados, o membro padrão é movido para um membro que existe no subcubo. A tabela a seguir contém um exemplo de combinações de subcubo e membro padrão.  
   
 |Membro padrão original|Pode ser agregado|Subseleção|Membro padrão revisado|  
 |-----------------------------|-----------------------|---------------|----------------------------|  
 |Time.Year.All|Sim|{Time.Year.2003}|Nenhuma alteração|  
-|Time.Year. [1997]|Sim|{Time.Year.2003}|Time.Year.All|  
-|Time.Year. [1997]|não|{Time.Year.2003}|Time.Year. [2003]|  
-|Time.Year. [1997]|Sim|{Time.Year.2003, Time.Year.2004}|Time.Year.All|  
-|Time.Year. [1997]|não|{Time.Year.2003, Time.Year.2004}|Time.Year.[2003] ou<br /><br /> Time.Year.[2004]|  
+|Time.Year.[1997]|Sim|{Time.Year.2003}|Time.Year.All|  
+|Time.Year.[1997]|Não|{Time.Year.2003}|Time.Year.[2003]|  
+|Time.Year.[1997]|Sim|{Time.Year.2003, Time.Year.2004}|Time.Year.All|  
+|Time.Year.[1997]|Não|{Time.Year.2003, Time.Year.2004}|Time.Year.[2003] ou<br /><br /> Time.Year.[2004]|  
   
  Os membros [All] sempre existirão em um subcubo.  
   
@@ -56,7 +56,7 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
  Para obter mais informações sobre subcubos, consulte [criando subcubos em MDX &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir cria um subcubo que restringe o espaço de cubo aparente aos membros que existem com o país Canadá. Ele usa o **MEMBROS** função para retornar todos os membros do país da hierarquia Geografia do definido pelo usuário - retornando somente o Canadá.  
+ O exemplo a seguir cria um subcubo que restringe o espaço de cubo aparente aos membros que existem com o país Canadá. Ele usa o **MEMBROS** função para retornar todos os membros do país de nível de hierarquia Geografia do definido pelo usuário - retornando somente o Canadá.  
   
 ```  
 CREATE SUBCUBE [Adventure Works] AS  
@@ -129,7 +129,7 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
  A coluna e a linha [All Products] e [All Resellers], respectivamente, contêm totais de todos os membros, não só dos visíveis.  
   
 ## <a name="see-also"></a>Consulte também  
- [Principais conceitos em MDX &#40;do Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [Principais conceitos em MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [Instruções de script MDX &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
  [Instrução de SUBCUBO DROP &#40;MDX&#41;](../mdx/mdx-data-definition-drop-subcube.md)   
  [Instrução SELECT &#40;MDX&#41;](../mdx/mdx-data-manipulation-select.md)  

@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9f0c4b1dbdaa7a2b4a15dd8e28586b182d93374a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241160"
 ---
 # <a name="save-dialog-box-visual-database-tools"></a>Caixa de diálogo Salvar (Visual Database Tools)
   Exibida quando você salva seu trabalho no Designer de Tabela e esse trabalho afeta outras tabelas. Essa caixa de diálogo permite confirmar as tabelas que serão salvas.  

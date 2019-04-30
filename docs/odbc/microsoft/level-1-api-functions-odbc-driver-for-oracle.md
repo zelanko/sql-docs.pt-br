@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6a70116fb0e8ef1236b18cb478184e96fe08fce5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63262227"
 ---
 # <a name="level-1-api-functions-odbc-driver-for-oracle"></a>Funções de API de nível 1 (Driver ODBC para Oracle)
 > [!IMPORTANT]  
@@ -42,7 +42,7 @@ ms.locfileid: "47829414"
 |**SQLGetTypeInfo**|Retorna informações sobre os tipos de dados compatíveis com uma fonte de dados. O driver retorna as informações em um conjunto de resultados SQL.|  
 |**SQLParamData**|Usado em conjunto com **SQLPutData** para especificar dados de parâmetro durante o tempo de execução de instrução.|  
 |**SQLPutData**|Permite que um aplicativo enviar dados para uma coluna ou parâmetro para o driver durante o tempo de execução de instrução.|  
-|**SQLSetConnectOption**|Fornece acesso às opções que controlam aspectos da conexão. Essa função tem suporte parcial: O driver dá suporte a todos os valores para o *fOption* argumento, mas não dá suporte para alguns *vParam* os valores para o *fOption* argumento [SQL_TXN_ISOLATION](../../odbc/microsoft/connect-options.md). Para obter mais informações, consulte [opções de conexão de](../../odbc/microsoft/connect-options.md).|  
+|**SQLSetConnectOption**|Fornece acesso às opções que controlam aspectos da conexão. Essa função tem suporte parcial: O driver dá suporte a todos os valores para o *fOption* argumento, mas não dá suporte para alguns *vParam* os valores para o *fOption* argumento [SQL_TXN_ISOLATION ](../../odbc/microsoft/connect-options.md). Para obter mais informações, consulte [opções de conexão de](../../odbc/microsoft/connect-options.md).|  
 |**SQLSetStmtOption**|Define opções relacionadas a um identificador de instrução *hstmt*. Para obter mais informações, consulte [opções de instrução](../../odbc/microsoft/statement-options.md).|  
 |**SQLSpecialColumns**|Recupera o conjunto ideal de colunas que identifica exclusivamente uma linha na tabela.|  
 |**SQLStatistics**|Recupera uma lista de estatísticas sobre uma única tabela e os índices ou nomes de marca, associados à tabela. O driver retorna as informações como um conjunto de resultados.|  

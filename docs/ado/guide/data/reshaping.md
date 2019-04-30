@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 324801cbfc97db4e2a1137fa04df0c74dc1897a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280403"
 ---
 # <a name="reshaping"></a>Remodelagem
 Um **conjunto de registros** criado por uma cláusula de uma forma de comando pode ser atribuído uma *alias* nome (normalmente com a palavra-chave). O alias de um moldado **Recordset** pode ser referenciada em um comando completamente diferente. Ou seja, você pode reutilizar, ou *remodelar*, anteriormente moldado **conjunto de registros** em um novo comando de forma. Para dar suporte a esse recurso, o ADO oferece uma propriedade, [remodelar nome](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md).  

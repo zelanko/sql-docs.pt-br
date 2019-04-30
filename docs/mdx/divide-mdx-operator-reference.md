@@ -1,5 +1,5 @@
 ---
-title: (Divisão) (MDX) | Microsoft Docs
+title: (Divide) (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ba8cdf3a403d5673dc3114e88251f9b47f1f6e09
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248192"
 ---
 # <a name="divide---mdx-operator-reference"></a>Dividir - referência de operador MDX
 
@@ -29,19 +29,19 @@ Dividend / Divisor
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *dividendo*  
+ *Dividend*  
  Uma linguagem MDX válida que retorna um valor numérico.  
   
- *divisor*  
+ *Divisor*  
  Uma expressão MDX válida que retorna um valor numérico.  
   
 ## <a name="return-value"></a>Valor retornado  
  Um valor com o tipo de dados do parâmetro com prioridade maior.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O valor real retornado pelo **/ (divisão)** operador representa o quociente da primeira expressão dividido pela segunda expressão.  
   
- As duas expressões devem ser do mesmo tipo de dados ou uma expressão deve poder ser convertida implicitamente no tipo de dados da outra expressão. Se *Divisor* é avaliada como um valor nulo, o operador gerará um erro. Se ambos os *Divisor* e *dividendo* avaliar como um valor nulo, o operador retornará um valor nulo.  
+ As duas expressões devem ser do mesmo tipo de dados ou uma expressão deve poder ser convertida implicitamente no tipo de dados da outra expressão. Se *Divisor* é avaliada como um valor nulo, o operador gerará um erro. Se os dois *Divisor* e *dividendo* avaliar como um valor nulo, o operador retornará um valor nulo.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir demonstra o uso desse operador.  

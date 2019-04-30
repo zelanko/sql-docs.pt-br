@@ -1,5 +1,5 @@
 ---
-title: NÃO (MDX) | Microsoft Docs
+title: NOT (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3b70068562ff24e8a1619b85fe091ab3e17da173
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278503"
 ---
 # <a name="not-mdx"></a>NOT (MDX)
 
@@ -33,10 +33,10 @@ NOT Expression1
  Uma linguagem MDX válida que retorna um valor numérico.  
   
 ## <a name="return-value"></a>Valor retornado  
- Um valor booliano que retorna **false** se o argumento for avaliado como **true**; caso contrário, **true**.  
+ Um valor booliano que retorna **falsos** se o argumento for avaliado como **verdadeiro**; caso contrário, **verdadeiro**.  
   
-## <a name="remarks"></a>Remarks  
- O **não** operador trata a expressão como um valor booliano (zero, 0, como **false**; caso contrário, **true**) antes que o operador realize a negação lógica. A tabela a seguir ilustra como o **não** operador realize a negação lógica.  
+## <a name="remarks"></a>Comentários  
+ O **não** operador trata a expressão como um valor booliano (zero, 0, como **falso**; caso contrário, **verdadeiro**) antes que o operador realize a negação lógica. A tabela a seguir ilustra como o **não** operador executa a negação lógica.  
   
 |*Expression1*|Valor retornado|  
 |-------------------|------------------|  
