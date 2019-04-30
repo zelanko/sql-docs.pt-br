@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a765e7b856d79392fa9349f0f27dae89e9253248
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188581"
 ---
-# <a name="lesson-2-using-database-engine-tuning-advisor"></a>Lição 2: Usando o Orientador de Otimização do Mecanismo de Banco de Dados
+# <a name="lesson-2-using-database-engine-tuning-advisor"></a>Lição 2: uso do Orientador de Otimização do Mecanismo de Banco de Dados
   O Orientador de Otimização do Mecanismo de Banco de Dados permite gerenciar sessões de ajuste e exibir recomendações de ajuste. Usuários com conhecimento avançado de estruturas de design físico podem usar essa ferramenta para executar a análise exploratória de ajuste de banco de dados. Os iniciantes em ajuste de banco de dados também podem usar a ferramenta para encontrar a melhor configuração de estruturas de design físico para as cargas de trabalho que forem ajustar. Esta lição oferece a base prática para administradores de banco de dados que são novos usuários da interface gráfica do Orientador de Otimização do Mecanismo de Banco de Dados e para administradores de sistema que podem não ter conhecimento extenso de estruturas de design físico.  
   
  Ela contém os seguintes tópicos:  

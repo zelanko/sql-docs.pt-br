@@ -15,20 +15,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a2ff246d01254ceb2b526b5118553d72cc499046
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161631"
 ---
 # <a name="keyset-cursors"></a>Cursores do conjunto de chaves
-O cursor de conjunto de chaves fornece a funcionalidade entre um estático e um cursor dinâmico em sua capacidade de detectar alterações. Como um cursor estático, ele sempre detectar alterações para a associação e a ordem do conjunto de resultados. Como um cursor dinâmico, ele detectar alterações nos valores de linhas no conjunto de resultados.  
+O cursor de conjunto de chaves fornece a funcionalidade entre um estático e um cursor dinâmico em sua capacidade de detectar alterações. Como um cursor estático, ele nem sempre detecta alterações à associação e à ordem do conjunto de resultados. Como um cursor dinâmico, ele detecta alterações aos valores de linhas no conjunto de resultados.  
   
- Cursores controlados por conjunto de chaves são controlados por um conjunto de identificadores exclusivos (chaves), conhecido como o conjunto de chaves. As chaves são criadas a partir de um conjunto de colunas, que identificam exclusivamente as linhas no conjunto de resultados. O conjunto de chaves é o conjunto de valores de chave de todas as linhas retornadas pela instrução de consulta.  
+ Os cursores controlados por conjuntos de chaves são controlados por um conjunto exclusivo de identificadores (chaves) conhecido como conjunto de chaves. As chaves são criadas a partir de um conjunto de colunas, que identificam exclusivamente as linhas no conjunto de resultados. O conjunto de chaves é o conjunto de valores de chave de todas as linhas retornadas pela instrução de consulta.  
   
- Com cursores controlados por, uma chave é criada e salvo para cada linha do cursor e armazenada na estação de trabalho cliente ou no servidor. Quando você acessar cada linha, a chave armazenada é usada para buscar os valores de dados atual da fonte de dados. Em um cursor controlado por conjunto de chaves, a associação do conjunto de resultados é congelada quando o conjunto de chaves está completamente populado. Depois disso, adições ou atualizações que afetam a associação não fazem parte do resultado definido até que ele é reaberto.  
+ Com cursores controlados por conjunto de chaves, uma chave é criada e salva para cada linha do cursor e armazenada na estação de trabalho cliente ou no servidor. Quando você acessa cada linha, a chave armazenada é usada para buscar os valores de dados atual da fonte de dados. Em um cursor controlado por conjunto de chaves, a associação do conjunto de resultados é congelada quando o conjunto de chaves está completamente preenchido. Depois disso, adições ou atualizações que afetem a associação não farão parte do resultado definido até que ele seja reaberto.  
   
- Alterações nos valores de dados (feitas por outros processos ou o proprietário do conjunto de chaves) são visíveis como o usuário rola pelo conjunto de resultados. Inserções feitas fora do cursor (por outros processos) são visíveis apenas se o cursor for fechado e reaberto. Inserções feitas de dentro do cursor são visíveis no final do conjunto de resultados.  
+ Alterações nos valores de dados (feitas por outros processos ou o proprietário do conjunto de chaves) são visíveis como o usuário rola pelo conjunto de resultados. Inserções feitas fora do cursor (por outros processos) serão visíveis apenas se o cursor for fechado e reaberto. Inserções feitas de dentro do cursor são visíveis no final do conjunto de resultados.  
   
  Quando um cursor controlado por tenta recuperar uma linha que foi excluída, a linha é exibida como uma "brecha" no conjunto de resultados. A chave para a linha existe no conjunto de chaves, mas a linha não existe mais no conjunto de resultados. Se os valores de chave em uma linha forem atualizados, a linha é considerada foi excluído e, em seguida, inserida, para que essas linhas também aparecem como brechas no conjunto de resultados. Enquanto um cursor controlado por sempre pode detectar linhas excluídas por outros processos, ele pode, opcionalmente, remover as chaves para excluir a próprio de linhas. Cursores controlados por que isso não é possível detectar suas próprias exclusões porque a evidência foi removida.  
   

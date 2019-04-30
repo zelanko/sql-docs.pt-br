@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 703643f2c51ec86090cb03ba7089080dfe416620
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63137463"
 ---
-# <a name="lesson-4-update-the-report-definition-programmatically"></a>Lição 4: Atualizar a definição de relatório programaticamente
+# <a name="lesson-4-update-the-report-definition-programmatically"></a>Lição 4: Atualizar a definição do relatório programaticamente
   Agora que a definição do relatório foi carregada do servidor de relatório e você tem uma referência a ela que usa o campo de relatório, será necessário atualizar essa definição. Para este exemplo, você atualizará a propriedade `Description` do relatório.  
   
 ### <a name="to-update-the-report-definition"></a>Para atualizar a definição do relatório  
@@ -88,7 +88,7 @@ ms.locfileid: "56012697"
     ```  
   
 ## <a name="next-lesson"></a>Próxima lição  
- Na próxima lição, você salvará a definição do relatório atualizada no servidor de relatório. Consulte [lição 5: Publicar a definição de relatório no servidor de relatório](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md).  
+ Na próxima lição, você salvará a definição do relatório atualizada no servidor de relatório. Confira a [Lição 5: Publicar a definição de relatório no servidor de relatório](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Atualizando relatórios por meio de Classes geradas a partir do esquema RDL &#40;Tutorial do SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)  

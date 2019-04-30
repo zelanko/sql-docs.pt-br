@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 58d4d71189598a6fd101e6db0a40b8c8b0a3b903
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161862"
 ---
 # <a name="indexes"></a>Índices
   A tabela a seguir lista os tipos de índices disponíveis no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e fornece links para informações adicionais.  
   
-|Tipo de índice|Description|Informações adicionais|  
+|Tipo de índice|Descrição|Informações adicionais|  
 |----------------|-----------------|----------------------------|  
 |Hash|Com um índice de hash, os dados são acessados por meio de uma tabela de hash na memória. Os índices de hash consomem uma quantidade fixa de memória, que é uma função do número de buckets.|[Diretrizes para usar índices em tabelas com otimização de memória](../in-memory-oltp/memory-optimized-tables.md)|  
 |índices não clusterizados com otimização de memória|Para índices não clusterizados com otimização de memória, o consumo de memória é uma função da contagem de linhas e do tamanho das colunas de chave de índice.|[Diretrizes para usar índices em tabelas com otimização de memória](../in-memory-oltp/memory-optimized-tables.md)|  
@@ -34,7 +34,7 @@ ms.locfileid: "48101156"
 |Índice em colunas computadas.|Um índice em uma coluna que é derivada do valor de uma ou mais colunas ou certas entradas deterministas.|[Índices em colunas computadas](indexes-on-computed-columns.md)|  
 |Filtrado|Um índice não clusterizado aperfeiçoado, especialmente indicado para abranger consultas que selecionam de um subconjunto bem definido de dados. Ele usa um predicado de filtro para indexar uma parte das linhas da tabela. Um índice filtrado bem projetado pode melhorar o desempenho da consulta e reduzir os custos de manutenção e armazenamento do índice em comparação com os índices de tabela completa.|[Criar índices filtrados](create-filtered-indexes.md)|  
 |Espacial|Um índice espacial permite a execução de determinadas operações de forma mais eficiente em objetos espaciais (*dados espaciais*) em uma coluna do tipo de dados **geometry** . O índice espacial reduz o número de objetos nos quais operações espaciais relativamente dispendiosas precisam ser aplicadas.|[Visão geral de índices espaciais](../spatial/spatial-indexes-overview.md)|  
-|XML|Uma representação fragmentada e persistente, dos XML objetos binários grandes (BLOBs) no `xml` coluna de tipo de dados.|[Índices XML &#40;SQL Server&#41;](../xml/xml-indexes-sql-server.md)|  
+|XML|Uma representação fragmentada e persistente de BLOBS (objetos binários grandes) XML na coluna de tipo de dados `xml`.|[Índices XML &#40;SQL Server&#41;](../xml/xml-indexes-sql-server.md)|  
 |Texto completo|Um tipo especial de índice funcional com base em token que é criado e mantido pelo Mecanismo de Texto Completo da Microsoft para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ele fornece suporte eficiente para pesquisas sofisticadas de palavras em dados de cadeias de caracteres.|[Popular índices de texto completo](../search/populate-full-text-indexes.md)|  
   
 ## <a name="related-tasks"></a>Related Tasks  

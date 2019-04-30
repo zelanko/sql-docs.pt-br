@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 24d05ef704e37af9d0d8c1e2a9e9eefe0b20f1d8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63218659"
 ---
 # <a name="set-large-data-ole-db"></a>Definir dados grandes (OLE DB)
   Este exemplo mostra como definir dados de BLOB, criar uma tabela, adicionar um registro de exemplo, buscar esse registro no conjunto de linhas e definir o valor do campo BLOB. Este exemplo não tem suporte em IA64.  

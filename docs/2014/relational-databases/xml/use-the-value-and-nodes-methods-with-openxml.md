@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 377f9ecfd0f3d94388929d78a048bc65e5020a3e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63193237"
 ---
 # <a name="use-the-value-and-nodes-methods-with-openxml"></a>Usar os métodos value() e nodes() com OPENXML
   Você pode usar várias **Value ()** métodos em `xml` de tipo de dados em um **selecione** valores extraídos de cláusula para gerar um conjunto de linhas. O método **nodes()** produz uma referência interna para cada nó selecionado que pode ser usado para consulta adicional. A combinação dos métodos **nodes()** e **value()** pode ser mais eficiente para gerar o conjunto de linhas quando ele tem várias colunas e, talvez, quando as expressões de caminho usadas em sua geração são complexas.  
   
  O **Nodes ()** método produz instâncias de um especial `xml` tipo de dados, cada qual com seu contexto definido como um nó selecionado diferente. Esse tipo de instância XML dá suporte aos métodos **query()**, **value()**, **nodes()** e **exist()** e pode ser usado em agregações **count(\*)**. Todos os outros usos provocam um erro.  
   
-## <a name="example-using-nodes"></a>Exemplo: Usando Nodes)  
+## <a name="example-using-nodes"></a>Exemplo: Usando nodes()  
  Assuma que você deseja extrair os nomes e sobrenomes de autores e o nome não é "David". Além disso, você deseja extrair essas informações como um conjunto de linhas que contém duas colunas, FirstName e LastName. Usando os métodos **nodes()** e **value()** , isso pode ser feito da seguinte forma:  
   
 ```  
@@ -40,7 +40,7 @@ WHERE  nref.exist('first-name[. != "David"]') = 1
   
  O SQL Server 2000 fornece a capacidade de gerar um conjunto de linhas de uma instância XML usando **OpenXml()**. É possível especificar o esquema relacional do conjunto de linhas e como valores dentro da instância XML mapeiam para colunas no conjunto de linhas.  
   
-## <a name="example-using-openxml-on-the-xml-data-type"></a>Exemplo: Usando OPENXML () no tipo de dados xml  
+## <a name="example-using-openxml-on-the-xml-data-type"></a>Exemplo: Usando OpenXml() no tipo de dados xml  
  A consulta do exemplo anterior pode ser reescrita usando **OpenXml()** conforme mostrado a seguir. Isso é feito criando um cursor que lê cada instância XML em uma variável XML e, em seguida, aplica OpenXML a ela:  
   
 ```  

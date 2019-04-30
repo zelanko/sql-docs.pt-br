@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4596485b4eebeba66028d03f5a54b3ee2461205b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198868"
 ---
-# <a name="task-2-optional-creating-a-mds-subscription-view-using-master-data-manager"></a>Tarefa 2 (opcional): Criando uma exibição de assinatura do MDS usando o Master Data Manager
+# <a name="task-2-optional-creating-a-mds-subscription-view-using-master-data-manager"></a>Tarefa 2 (opcional): Criar uma exibição de assinatura do MDS usando o Master Data Manager
   Nesta tarefa, você criará uma exibição de assinatura para expor a **Supplier** entidade na **fornecedores** modelo para outros aplicativos. Você não utiliza essa exibição na versão atual do tutorial.  
   
 1.  Alterne para a página principal do **Master Data Manager** ([http://localhost/MDS](http://localhost/MDS)), clicando em **SQL Server 2012 Master Data Services** na parte superior.  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 66afa14ccb1953265f526f8c8861237638f569fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199034"
 ---
 # <a name="allocating-an-environment-handle"></a>Alocando um identificador de ambiente
   Antes que um aplicativo possa chamar qualquer função ODBC, ele deve inicializar o ambiente de ODBC e alocar um identificador de ambiente. Trata-se do identificador de contexto global e do espaço reservado para os demais identificadores no ODBC. Você pode fazer isso chamando **SQLAllocHandle** com o *HandleType* parâmetro definido como SQL_HANDLE_ENV e *InputHandle* definido como SQL_NULL_HANDLE.  

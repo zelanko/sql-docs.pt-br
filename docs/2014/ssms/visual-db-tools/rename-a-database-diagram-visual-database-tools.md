@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8f177f8b2c399be020817ccc4228c58f11976512
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791338"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63228345"
 ---
 # <a name="rename-a-database-diagram-visual-database-tools"></a>Renomear um diagrama de banco de dados (Visual Database Tools)
   Você pode renomear um diagrama de banco de dados no Pesquisador de Objetos. Requer a permissão ALTER no banco de dados.  

@@ -19,11 +19,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 746d547b680817868de33759983dc908e9806bb6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128761"
 ---
 # <a name="permissions-database-engine"></a>Permissões (Mecanismo de Banco de Dados)
   Todo protegível do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem permissões associadas que podem ser concedidas a uma entidade de segurança. Este tópico fornece as seguintes informações:  
@@ -407,7 +407,7 @@ SELECT * FROM fn_builtin_permissions(default);
 GO  
 ```  
   
-### <a name="b-returning-the-permissions-on-a-particular-class-of-objects"></a>b. Retornando permissões em uma classe específica de objetos  
+### <a name="b-returning-the-permissions-on-a-particular-class-of-objects"></a>B. Retornando permissões em uma classe específica de objetos  
  O exemplo a seguir usa `fn_builtin_permissions` para exibir todas as permissões que estão disponíveis para uma categoria de protegível. O exemplo retorna permissões em assemblies.  
   
 ```  

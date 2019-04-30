@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9fa024e9e744fd955e4ccc323919cb22a97b7dd3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151193"
 ---
 # <a name="create-a-new-plan-guide"></a>Criar um novo guia de plano
   Você pode criar um guia de plano no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Guias de plano influenciam a otimização de consulta, anexando a elas dicas de consulta ou um plano de consulta fixo. No guia de plano, especifica-se a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] que se deseja otimizar e uma cláusula OPTION que contenha as dicas de consulta que se deseja usar ou um plano de consulta específico que se queira usar para otimizar a consulta. Quando a consulta é executada, o otimizador de consultas faz a correspondência da instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] com o guia de plano, anexando a cláusula OPTION à consulta em tempo de execução ou usando o plano de consulta especificado.  
@@ -41,7 +41,7 @@ ms.locfileid: "52519869"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   Os argumentos para sp_create_plan_guide devem ser fornecidos na ordem em que aparecem. Quando você aplica valores para os parâmetros de `sp_create_plan_guide`, todos os nomes de parâmetros devem ser especificados explicitamente ou nenhum deles deve ser especificado. Por exemplo, se `@name =` for especificado, `@stmt =`, `@type =`, entre outros, também deverão ser. Da mesma forma, se `@name =` for omitido e apenas o valor de parâmetro for fornecido, os nomes de parâmetro restantes deverão ser omitidos também e apenas os seus valores, fornecidos. Os nomes de argumento são usados apenas para fins descritivos, para ajudar compreender a sintaxe. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não verifica se o nome de parâmetro especificado corresponde ao nome do parâmetro na posição em que o nome é usado.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "52519869"
   
 11. Clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-create-a-plan-guide"></a>Para criar um guia de plano  
   

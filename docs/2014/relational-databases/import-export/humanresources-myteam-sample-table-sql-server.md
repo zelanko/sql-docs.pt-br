@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 5628df909bc5d28706ab6c9032f6dc62a13489c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151080"
 ---
 # <a name="humanresourcesmyteam-sample-table-sql-server"></a>Tabela de exemplo HumanResources.myTeam (SQL Server)
   Muitos dos exemplos de código em [Importando e exportando dados em massa](bulk-import-and-export-of-data-sql-server.md) exigem uma tabela de teste com finalidade especial denominada **myTeam**. Antes de poder executar os exemplos, você deve criar a tabela **myTeam** no esquema **HumanResources** do banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
@@ -29,7 +29,7 @@ ms.locfileid: "48109426"
   
  A tabela **myTeam** contém as seguintes colunas.  
   
-|coluna|Tipo de dados|Nulidade|Description|  
+|coluna|Tipo de dados|Nulidade|Descrição|  
 |------------|---------------|-----------------|-----------------|  
 |**EmployeeID**|`smallint`|Não nulo|Chave primária para as linhas. A ID de funcionário de um membro da minha equipe.|  
 |**Nome**|`nvarchar(50)`|Não nulo|Nome de um membro de myTeam.|  

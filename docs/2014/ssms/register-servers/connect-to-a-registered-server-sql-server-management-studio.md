@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 789dc265513c4d0068c721e8cdefb07d7a3d5331
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63297904"
 ---
 # <a name="connect-to-a-registered-server-sql-server-management-studio"></a>Conectar-se a um servidor registrado (SQL Server Management Studio)
   Este tópico descreve como conectar-se a um servidor registrado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Se o servidor não estiver em execução ou não for encontrado na rede, os Servidores Registrados exibem um erro.  

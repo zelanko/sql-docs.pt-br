@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 065440d834033d1c1c999ea9d38d321be9a6278c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223325"
 ---
 # <a name="clustered-property-sqlservice-class"></a>Propriedade Clustered (classe SqlService)
   Obtém o valor booliano da propriedade que especifica se o serviço é parte de uma instância em cluster.  

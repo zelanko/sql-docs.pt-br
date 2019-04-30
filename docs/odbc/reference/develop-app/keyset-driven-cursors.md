@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: be6dc5a164220befb534368eace4f51f4dbd84e1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213443"
 ---
 # <a name="keyset-driven-cursors"></a>Cursores controlados por conjunto de chaves
-Um cursor controlado por conjunto de chaves se encontra entre um estático e um cursor dinâmico em sua capacidade de detectar alterações. Como um cursor estático, ele sempre detectar alterações para a associação e a ordem do conjunto de resultados. Como um cursor dinâmico, ele detectar alterações nos valores de linhas no resultado definido (sujeito ao nível de isolamento da transação, conforme definido pelo atributo SQL_ATTR_TXN_ISOLATION conexão).  
+Um cursor controlado por conjunto de chaves se encontra entre um estático e um cursor dinâmico em sua capacidade de detectar alterações. Como um cursor estático, ele nem sempre detecta alterações à associação e à ordem do conjunto de resultados. Como um cursor dinâmico, ele detectar alterações nos valores de linhas no resultado definido (sujeito ao nível de isolamento da transação, conforme definido pelo atributo SQL_ATTR_TXN_ISOLATION conexão).  
   
  Quando um cursor controlado por conjunto de chaves é aberto, ele salva as chaves para o conjunto de resultados inteiro; Isso corrige a associação aparente e a ordem do conjunto de resultados. Como o cursor percorre o conjunto de resultados, ele usa as chaves desta *keyset* para recuperar os valores de dados atual para cada linha. Por exemplo, suponha que um cursor controlado por busca uma linha e o outro aplicativo, em seguida, atualiza a linha. Se o cursor refetches a linha, os valores que ele vê são novos, porque ele refetched usando sua chave de linha. Por isso, os cursores controlados por sempre detectam as alterações feitas por si só e outras pessoas.  
   

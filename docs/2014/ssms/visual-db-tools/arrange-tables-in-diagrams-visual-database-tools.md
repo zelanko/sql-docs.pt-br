@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0fb65d55d2b6b135c562f9dd4b02170de6b7df3c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63297866"
 ---
 # <a name="arrange-tables-in-diagrams-visual-database-tools"></a>Organizar tabelas em diagramas (Visual Database Tools)
   Você pode organizar as tabelas rapidamente em um diagrama de banco de dados para visualizar claramente cada tabela e relação.  

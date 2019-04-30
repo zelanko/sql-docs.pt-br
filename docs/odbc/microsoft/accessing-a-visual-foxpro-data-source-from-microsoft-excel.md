@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 575ba4abf9ed20ffbc0f2602a91bee9776e42b05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198184"
 ---
 # <a name="accessing-a-visual-foxpro-data-source-from-microsoft-excel"></a>Acessar uma fonte de dados do Visual FoxPro do Microsoft Excel
 Se você tiver o Microsoft Query instalado, você pode criar uma fonte de dados no Microsoft Excel que se conecta a dados do Visual FoxPro.  

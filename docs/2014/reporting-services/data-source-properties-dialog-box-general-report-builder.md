@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a7f5aa4efa9170e9b51e583aedada909d756edeb
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59955742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164994"
 ---
 # <a name="data-source-properties-dialog-box-general-report-builder"></a>Caixa de diálogo Propriedades da Fonte de Dados, Geral (Construtor de Relatórios)
   Selecione **Geral** na caixa de diálogo **Propriedades da Fonte de Dados** para selecionar uma fonte de dados compartilhada em um servidor de relatório ou para criar ou modificar as informações de conexão de uma fonte de dados inserida no relatório.  

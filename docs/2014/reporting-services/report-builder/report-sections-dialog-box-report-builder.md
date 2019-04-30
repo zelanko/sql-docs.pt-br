@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a24b4a4dd0ffe0c4b4ba988460e10f6bf832766e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155568"
 ---
 # <a name="report-sections-dialog-box-report-builder"></a>Caixa de diálogo Seções do Relatório (Construtor de Relatórios)
   Quando você abre um relatório, o Construtor de Relatórios verifica se o relatório contém apenas um elemento **\<Section>** de linguagem RDL. Não há suporte para a abertura de um relatório com vários elementos **\<Section>**.  

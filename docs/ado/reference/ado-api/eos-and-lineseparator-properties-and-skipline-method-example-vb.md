@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 19bc563e6080d1eba9768e95db5315d1d808a9b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63180295"
 ---
 # <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>EOS e LineSeparator propriedades e exemplo de método SkipLine (VB)
 Este exemplo demonstra como manipular texto fluxos uma linha por vez. O efeito de alterar o separador de linha do padrão de carro retorno/avanço de linha (**adCRLF**) para simplesmente avanço de linha (**adLF**) ou o retorno de carro (**adCR**) é mostrada.  

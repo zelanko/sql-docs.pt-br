@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ebb09b3118c2d16041d4ca60bf738d0fda561346
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199086"
 ---
 # <a name="retrieving-output-parameters-using-sqlgetdata"></a>Recuperar parâmetros de saída usando SQLGetData
 Antes do ODBC 3.8, um aplicativo só foi possível recuperar os parâmetros de saída de uma consulta com um buffer de saída associadas. No entanto, é difícil alocar um buffer muito grande, quando o tamanho do valor do parâmetro é muito grande (por exemplo, uma imagem grande). O ODBC 3.8 introduz uma nova maneira de recuperar parâmetros de saída em partes. Um aplicativo pode chamar **SQLGetData** várias vezes com um buffer pequeno para recuperar um valor de parâmetro grande. Isso é semelhante à recuperação de dados de coluna grande.  
@@ -76,7 +76,7 @@ Antes do ODBC 3.8, um aplicativo só foi possível recuperar os parâmetros de s
   
  Após **SQLExecute**, **SQLExecDirect**, ou **SQLMoreResults** retorna SQL_PARAM_DATA_AVAILABLE, um erro de sequência de função ocorrerá se um aplicativo chama um função que não está na lista a seguir:  
   
--   **Falha de SQLAllocHandle** / **SQLAllocHandleStd**  
+-   **SQLAllocHandle** / **SQLAllocHandleStd**  
   
 -   **SQLDataSources** / **SQLDrivers**  
   
@@ -106,7 +106,7 @@ Antes do ODBC 3.8, um aplicativo só foi possível recuperar os parâmetros de s
   
 -   **SQLDisconnect**  
   
--   **SQLFreeHandle** (com HandleType = SQL_HANDLE_STMT)  
+-   **SQLFreeHandle** (with HandleType = SQL_HANDLE_STMT)  
   
 -   **SQLGetStmtAttr**  
   

@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7dbfff2a8db4405e19eb448e7bd7db5c8ac236f8
-ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52321792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63138612"
 ---
 # <a name="parameters-collection-ado"></a>Coleção Parameters (ADO)
 Contém todos os [parâmetro](../../../ado/reference/ado-api/parameter-object.md) objetos de uma [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto.  

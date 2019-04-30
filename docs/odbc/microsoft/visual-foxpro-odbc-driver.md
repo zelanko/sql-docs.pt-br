@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8899881a83137d4038cd3a04adf3df1feb08d981
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157810"
 ---
 # <a name="visual-foxpro-odbc-driver"></a>Driver ODBC do Visual FoxPro
 Microsoft Visual FoxPro é um poderoso ambiente orientado a objeto para o desenvolvimento de aplicativos e construção de banco de dados. O Driver ODBC do Microsoft Visual FoxPro permite que os aplicativos abrir, consulta e atualizar dados no Visual FoxPro e versões anteriores do FoxPro por meio da interface do banco de dados ODBC (conectividade aberta).  

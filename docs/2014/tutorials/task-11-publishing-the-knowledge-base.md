@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 345dd3670fe42789907a567fce4df4ad34ce3cd3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222485"
 ---
-# <a name="task-11-publishing-the-knowledge-base"></a>Tarefa 11: Publicando a base de dados de conhecimento
+# <a name="task-11-publishing-the-knowledge-base"></a>Tarefa 11: Publicar a base de dados de conhecimento
   Nesta tarefa, você publicará a base de dados de conhecimento. Uma base de dados de conhecimento publicada pode ser usada para a atividade de limpeza ou correspondência no projeto de qualidade de dados.  
   
 1.  Clique em **concluir** botão na parte inferior da janela.  

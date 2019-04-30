@@ -1,5 +1,5 @@
 ---
-title: 'Como: iniciar o Supervisor de atualização | Microsoft Docs'
+title: 'Como fazer: Iniciar o Supervisor de atualização | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,13 +17,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5523f40b556e654ee6ef71041c648b757a2d766a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63295118"
 ---
-# <a name="how-to-launch-upgrade-advisor"></a>Como iniciar o Supervisor de Atualização
+# <a name="how-to-launch-upgrade-advisor"></a>Como fazer: Para iniciar o Supervisor de Atualização
   O Supervisor de Atualização fornece um console central que pode ser usado para iniciar o Assistente para Análise do Supervisor de Atualização e o Visualizador de Relatórios do Supervisor de Atualização. Este tópico descreve como iniciar o Supervisor de Atualização.  
   
 ### <a name="to-launch-upgrade-advisor"></a>Para iniciar o Supervisor de Atualização  

@@ -12,18 +12,18 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: f01bec92621022c875ff43c479356df1a35b8157
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215132"
 ---
 # <a name="analysis-services-configuration---data-directories"></a>Configuração do Analysis Services - diretórios de dados
   Os diretórios padrão na tabela a seguir podem ser configurados pelo usuário durante a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A permissão para acessar esses arquivos é concedida a administradores locais e a membros do grupo de segurança SQLServerMSASUser$\<instância> que é criado e provisionado durante a instalação.  
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
   
-|Description|Diretório padrão|Recomendações|  
+|Descrição|Diretório padrão|Recomendações|  
 |-----------------|-----------------------|---------------------|  
 |Diretório raiz de dados|Server\MSAS12 SQL do C:\Program Files\Microsoft. \<InstanceID > \OLAP\Data\|Certifique-se de que a pasta \Program SQL Server \ está protegida com permissões limitadas. O desempenho do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] depende, em muitas configurações, do desempenho do armazenamento no qual o diretório de dados está localizado. Coloque esse diretório no armazenamento de melhor desempenho conectado ao sistema. Para instalações de cluster de failover, verifique se os diretórios de dados estão colocados no disco compartilhado.|  
 |Diretório do arquivo de log|Server\MSAS12 SQL do C:\Program Files\Microsoft. \<InstanceID > \olap\log.\|esse é o diretório para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] arquivos de log e inclui o log do FlightRecorder. Se você aumentar a duração do registrador de voo, atente para que o diretório de logs tenha espaço suficiente.|  

@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 0cfa89961d1f44f2263795f7815fb19e39978ba2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294777"
 ---
 # <a name="specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-40"></a>Especificando predicados com valor booliano em consultas XPath (SQLXML 4.0)
   Os exemplos a seguir mostram como os predicados com valor booliano são especificados em consultas XPath. As consultas XPath nesses exemplos são especificadas com relação ao esquema de mapeamento contido em SampleSchema1.xml. Para obter informações sobre esse esquema de exemplo, consulte [anotado de exemplo de esquema XSD para exemplos de XPath &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -67,7 +67,7 @@ ms.locfileid: "52788448"
   
      Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-     Aqui está o resultado:  
+     Este é o resultado:  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -88,7 +88,7 @@ ms.locfileid: "52788448"
     </ROOT>  
     ```  
   
-### <a name="b-specify-successive-and-nested-predicates"></a>b. Especificar predicados sucessivos e aninhados  
+### <a name="b-specify-successive-and-nested-predicates"></a>B. Especificar predicados sucessivos e aninhados  
  A consulta a seguir mostra o uso de predicados sucessivos. A consulta retorna todos os as  **\<cliente >** elementos filho do nó de contexto que têm ambos um **SalesPersonID** atributo com um valor 277 e um **TerritoryID**atributo com um valor de 3:  
   
 ```  
@@ -202,7 +202,7 @@ ms.locfileid: "52788448"
   
      Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Aqui está o resultado parcial:  
+ Este é o resultado parcial:  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

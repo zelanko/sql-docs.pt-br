@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3cd117a9f873de13938d8a6946faf4f1c00d522d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63064406"
 ---
 # <a name="cluster-network-configuration"></a>Configuração de rede do cluster
   Use a página **Seleção de Rede de Cluster** para especificar os recursos de rede para sua instância de cluster de failover.  
@@ -41,7 +41,7 @@ ms.locfileid: "48163017"
   
     -   Se você estiver adicionando um nó que tenha suporte para mais sub-redes de rede, mas que não tenha suporte para nenhuma das sub-redes aceitas pelos nós existentes no cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , será necessário adicionar mais endereços IP. A dependência de recurso de endereço IP é definida como OR para refletir que todos os endereços IP especificados não sejam válidos em todos os nós de cluster.  
   
--   Instalação Avançada: Durante a etapa Concluir da instalação, especifique o endereço IP de todos os nós e sub-redes da instância de cluster de failover. Você pode especificar vários endereços IP para um cluster de failover de várias sub-redes, mas há suporte para apenas um endereço IP por sub-rede. Cada nó preparado deve ser um possível proprietário de pelo menos um endereço IP. Se você tiver várias sub-redes em seu cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , será solicitado que defina a dependência de recurso de endereço IP como OR.Remove Node:  
+-   Instalação avançada: Durante a etapa concluir da instalação, especifique o endereço IP para todos os nós e sub-redes para a instância de cluster de failover. Você pode especificar vários endereços IP para um cluster de failover de várias sub-redes, mas há suporte para apenas um endereço IP por sub-rede. Cada nó preparado deve ser um possível proprietário de pelo menos um endereço IP. Se você tiver várias sub-redes em seu cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , será solicitado que defina a dependência de recurso de endereço IP como OR.Remove Node:  
   
     -   Se houver suporte para os endereços IP restantes em todos os outros nós, você deverá definir a dependência de recurso de endereço IP como AND.  
   

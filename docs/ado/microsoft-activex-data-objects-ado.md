@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b0994c4ee4c96e5ed9c373ec4bdc94b02ccddff7
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156262"
 ---
 # <a name="microsoft-activex-data-objects-ado"></a>Microsoft ADO (ActiveX Data Objects)
 

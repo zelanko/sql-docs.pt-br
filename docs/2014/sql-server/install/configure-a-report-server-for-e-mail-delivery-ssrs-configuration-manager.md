@@ -24,11 +24,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 04299edc56a8b09d47cfd82d41a348b8fe2f7778
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190240"
 ---
 # <a name="configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager"></a>Configurar um servidor de relatório para entrega de email (Gerenciador de Configurações do SSRS)
 
@@ -180,13 +180,13 @@ ms.locfileid: "56802442"
   
 2.  Abra o arquivo RSReportServer.config em um editor de texto.  
   
-3.  Verifique se <`UrlRoot`> está configurado como o endereço URL do servidor de relatório. Esse valor é definido quando você configura o servidor de relatório e já deveria estar preenchido. Se não estiver definido, digite o endereço da URL do servidor de relatório.  
+3.  Verifique <`UrlRoot`> é definido como o endereço de URL do servidor de relatório. Esse valor é definido quando você configura o servidor de relatório e já deveria estar preenchido. Se não estiver definido, digite o endereço da URL do servidor de relatório.  
   
-4.  Na seção Entrega, localize <`ReportServerEmail`>.  
+4.  Na seção entrega, localize <`ReportServerEmail`>.  
   
 5.  Em <`SMTPServer`>, digite o nome do servidor SMTP. Esse valor pode ser um endereço IP, um nome UNC de um computador em sua intranet corporativa ou um nome de domínio totalmente qualificado.  
   
-6.  Verifique que <`SendUsing`> esteja definido como 2. Se estiver definido como outro valor, o servidor de relatório não está configurado para usar um serviço SMTP remoto.  
+6.  Verifique <`SendUsing`> é definido como 2. Se estiver definido como outro valor, o servidor de relatório não está configurado para usar um serviço SMTP remoto.  
   
 7.  Em <`From`>, digite o nome de uma conta que tenha permissão para enviar email a partir do servidor SMTP.  
   

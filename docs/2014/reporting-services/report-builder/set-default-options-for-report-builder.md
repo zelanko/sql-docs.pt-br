@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d4540cdd9d0d8c196e9f304508fd60edd99f2174
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156555"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>Caixa de diálogo Opções do Construtor de Relatórios, Configurações (Construtor de Relatórios)
   Clique o **construtor de relatórios** botão e, em seguida, clique em **opções** para definir opções para mostrar arquivos e conexões recentes. Também é possível alterar o servidor de relatório padrão ou adicionar um se você não tiver um padrão.  

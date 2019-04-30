@@ -34,11 +34,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 257fdeadceb961fd9080956b3c6725c40e3c3c8e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63073869"
 ---
 # <a name="track-data-changes-sql-server"></a>Controle de alterações de dados (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fornece dois recursos que controlam alterações em dados de bancos de dados: [captura de dados de alterações](#Capture) e [controle de alterações](#Tracking). Esses recursos permitem que os aplicativos determinem as alterações de DML (operações de inserção, atualização e exclusão) que foram feitas em tabelas de usuários em um banco de dados. A captura de dados de alteração e o controle de alterações podem ser habilitados no mesmo banco de dados; nenhuma consideração especial necessária. Para as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que a alteração de suporte à captura de dados e controle de alterações, consulte [recursos compatíveis com as edições do SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -168,7 +168,7 @@ ms.locfileid: "53351698"
   
 -   [Microsoft Sync Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=108054)  
   
-     Fornece a documentação completa do [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] e do [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]. Na documentação do [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)], o tópico "como: Use SQL Server controle de alterações"contém exemplos detalhados de informações e o código.  
+     Fornece a documentação completa do [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] e do [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]. Na documentação do [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)], o tópico "Como usar o controle de alterações do SQL Server" contém informações detalhadas e exemplos de código.  
   
   
 ## <a name="related-tasks-required"></a>Tarefas relacionadas (necessárias)  

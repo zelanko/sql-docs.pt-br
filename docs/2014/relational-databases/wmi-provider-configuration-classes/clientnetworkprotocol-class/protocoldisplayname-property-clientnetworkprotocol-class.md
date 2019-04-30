@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 69e79a461be199cb0ed661ecf2bac876a2afaff9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192873"
 ---
 # <a name="protocoldisplayname-property-clientnetworkprotocol-class"></a>Propriedade ProtocolDisplayName (classe ClientNetworkProtocol)
   Obtém o nome de exibição do protocolo de rede de cliente especificado pelo [configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx).  

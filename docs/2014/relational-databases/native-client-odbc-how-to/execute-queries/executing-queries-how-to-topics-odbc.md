@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6b892adaf02f13ec7de150ae1de9966a65ac1d7b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200382"
 ---
 # <a name="executing-queries-how-to-topics-odbc"></a>Tópicos de instruções sobre a execução de consultas (ODBC)
   A execução de uma instrução SQL em um aplicativo ODBC exige a alocação de um identificador de instrução, a definição de atributos de instrução e a preparação e execução de instruções SQL.  

@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fc4b4c7a5c1074a62bf0e84d265840109f65ea55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126309"
 ---
 # <a name="dbase-data-types"></a>Tipos de dados do dBASE
 A tabela a seguir mostra como os tipos de dados do dBASE são mapeados para tipos de dados SQL ODBC. Observe que nem todos os tipos de dados ODBC SQL têm suporte.  
@@ -36,7 +36,7 @@ A tabela a seguir mostra como os tipos de dados do dBASE são mapeados para tipo
 |LÓGICA|SQL_BIT|  
 |MEMORANDO|SQL_LONGVARCHAR|  
 |NUMÉRICO (BCD)|SQL_DOUBLE|  
-|OLEOBJECT [1]|SQL_LONGBINARY|  
+|OLEOBJECT[1]|SQL_LONGBINARY|  
   
  [1] válido somente para a versão 5 do dBASE. *x*  
   
@@ -51,7 +51,7 @@ A tabela a seguir mostra como os tipos de dados do dBASE são mapeados para tipo
   
  A tabela a seguir mostra as limitações no dBASE, tipos de dados.  
   
-|Tipo de dados|Description|  
+|Tipo de dados|Descrição|  
 |---------------|-----------------|  
 |CHAR|Criação de uma coluna CHAR igual a zero ou comprimento não especificado, na verdade, retorna uma coluna de bytes de 254.|  
 |Dados criptografados|O driver do dBASE não oferece suporte a tabelas do dBASE criptografado.|  

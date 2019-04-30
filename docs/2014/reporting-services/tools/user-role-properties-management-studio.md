@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4409e62761018263b9ce78471661ae70afda1887
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59942582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190806"
 ---
 # <a name="user-role-properties-management-studio"></a>Propriedades de Função do Usuário (Management Studio)
   Use essa página para exibir quais tarefas são incluídas em uma definição de função de nível de item. Essa página também pode ser usada para alterar a lista de tarefas ou modificar uma descrição de função.  

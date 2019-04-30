@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6465432962ad02d4bc4035197f7fc04a30036b92
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57973995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125969"
 ---
 # <a name="internettimeout-property-example-vc"></a>Exemplo da propriedade InternetTimeout (VC++)
 > [!IMPORTANT]

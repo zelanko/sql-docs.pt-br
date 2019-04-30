@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21a66754a9259dadcb8788d6afef4947f9a69ad1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140475"
 ---
 # <a name="fetching-rows"></a>Buscando linhas
   A interface **IRowset** é a interface de conjunto de linhas base. A interface **IRowset** fornece métodos para buscar linhas em sequência, obter os dados dessas linhas e gerenciar linhas. Os consumidores usam os métodos em **IRowset** para todas as operações básicas de conjunto de linhas. Elas incluem a busca e a liberação de linhas e a obtenção de valores de coluna.  

@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1a2826bb0c9b542837e05b7f600c9ce7d934fd4e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63143058"
 ---
-# <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>Tarefa 5: Criando um atributo baseado em domínio com base no Excel
+# <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>Tarefa 5: Criar um atributo baseado em domínio com base no Excel
   Nesta tarefa, você deve converter o **estado** atributo da **Supplier** entidade como um **atributo baseado em domínio**. Depois de configurar o atributo de estado para ser um baseado em domínio e publicá-lo no MDS, uma nova entidade chamada **estado** será criado no servidor MDS com todos os valores na coluna e o **estado** atributo das **Supplier** será preenchida com valores da entidade a **estado** entidade. Agora, o **fornecedores** modelo deverá ter duas entidades: **Supplier** e **estado** onde a **estado** atributo do **Supplier** entidade é um atributo baseado em domínio que depende de **estado** entidade.  
   
 1.  Alterne para **Excel** janela que tem **Cleansed and Matched Suppliers** abrir.  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 706d08eb3c140571460f4ebccb541ac24a71160a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067656"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
   Você pode usar `SQLColAttribute` para recuperar um atributo de uma coluna do conjunto de resultados para instruções ODBC preparadas ou executadas. Chamando `SQLColAttribute` em instruções preparadas causa uma ida e volta ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client recebe os dados de coluna do conjunto de resultados como parte da execução da instrução, por isso a chamada `SQLColAttribute` após a conclusão da **SQLExecute** ou **SQLExecDirect** faz não envolvem uma ida e volta do servidor.  

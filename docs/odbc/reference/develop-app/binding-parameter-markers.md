@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c71967bd72f7f13a725d47517cb9e66eee7da87f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199399"
 ---
 # <a name="binding-parameter-markers"></a>Marcadores de parâmetro de associação
 O aplicativo associa parâmetros chamando **SQLBindParameter**. **SQLBindParameter** associa um parâmetro por vez. Com ele, o aplicativo especifica o seguinte:  
@@ -28,7 +28,7 @@ O aplicativo associa parâmetros chamando **SQLBindParameter**. **SQLBindParamet
   
 -   O tipo de parâmetro (entrada, entrada/saída ou de saída). Exceto para os parâmetros em chamadas de procedimento, todos os parâmetros são parâmetros de entrada. Para obter mais informações, consulte [parâmetros de procedimento](../../../odbc/reference/develop-app/procedure-parameters.md), mais adiante nesta seção.  
   
--   O comprimento C de byte, o endereço e o tipo de dados da variável é associado ao parâmetro. O driver deve ser capaz de converter os dados do tipo de dados C para o tipo de dados SQL ou um erro será retornado. Para obter uma lista de conversões com suporte, consulte [conversão de dados do C para tipos de dados SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) apêndice d: tipos de dados.  
+-   O comprimento C de byte, o endereço e o tipo de dados da variável é associado ao parâmetro. O driver deve ser capaz de converter os dados do tipo de dados C para o tipo de dados SQL ou um erro será retornado. Para obter uma lista de conversões com suporte, consulte [conversão de dados do C para tipos de dados SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) no Apêndice d: Tipos de dados.  
   
 -   O tipo de dados SQL, precisão e escala do parâmetro em si.  
   

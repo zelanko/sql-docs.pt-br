@@ -15,11 +15,11 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 933274c4e5084d50d530b1d90377648b793a6f86
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131784"
 ---
 # <a name="link-to-programming-samples"></a>Link para exemplos de programação
   A tabela a seguir lista exemplos de programação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) que estão disponíveis no diretório [!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)]Programmability\SMO. Esses exemplos estão disponíveis em ambas [!INCLUDE[csprcs](../../includes/csprcs-md.md)] e [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET.  

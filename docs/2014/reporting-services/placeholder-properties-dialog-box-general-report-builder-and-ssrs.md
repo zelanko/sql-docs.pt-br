@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5485a0b5ff39f8517ff6e73113f7405cab0a923c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59952302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188202"
 ---
 # <a name="placeholder-properties-dialog-box-general-report-builder-and-ssrs"></a>Caixa de diálogo Propriedades do Espaço Reservado, Geral (Construtor de Relatórios e SSRS)
   Use a caixa de diálogo **Propriedades do Espaço Reservado** para alterar o valor, a Dica de Ferramenta e as opções de marcação de um espaço reservado em uma caixa de texto.  

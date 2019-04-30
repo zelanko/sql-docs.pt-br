@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 204ffb54eb0a48f55d4ec1974b123ed4a0e430be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192843"
 ---
 # <a name="fieldenum"></a>FieldEnum
 Especifica os campos especiais referenciados em uma [registro](../../../ado/reference/ado-api/record-object-ado.md) do objeto [campos](../../../ado/reference/ado-api/fields-collection-ado.md) coleção.  
@@ -29,7 +29,7 @@ Especifica os campos especiais referenciados em uma [registro](../../../ado/refe
 ## <a name="remarks"></a>Comentários  
  Essas constantes fornecem um "atalho" para acessar campos especiais associados a um **registro**. Recuperar o [campo](../../../ado/reference/ado-api/field-object.md) objeto o **campos** coleção e, em seguida, obter seu conteúdo com o **campo** do objeto [valor](../../../ado/reference/ado-api/value-property-ado.md) propriedade.  
   
-|Constante|Valor|Description|  
+|Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
 |**adDefaultStream**|-1|Faz referência ao campo que contém o padrão [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objeto associado a um **registro**.|  
 |**adRecordURL**|-2|Faz referência ao campo que contém a cadeia de caracteres de URL absoluta para o atual **registro**.|

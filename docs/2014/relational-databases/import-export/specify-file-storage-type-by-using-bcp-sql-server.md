@@ -17,14 +17,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 307cc94aff7fb1e5f8f9bad99aac1c99c08fc293
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155830"
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>Especificar tipo de armazenamento de arquivo usando bcp (SQL Server)
-  O *tipo de armazenamento de arquivo* descreve como são armazenados os dados no arquivo de dados. Dados podem ser exportados para um arquivo de dados como seu tipo de tabela de banco de dados (formato nativo), em sua representação de caractere (formato de caractere) ou como qualquer tipo de dados onde há suporte para conversão implícita; Por exemplo, copiando um `smallint` como um `int`. Os tipos de dados definidos pelo usuário como tipos básicos são exportados.  
+  O *tipo de armazenamento de arquivo* descreve como são armazenados os dados no arquivo de dados. Podem ser exportados dados para um arquivo de dados como seu tipo de tabela de banco de dados (formato nativo), em sua representação de caractere (formato de caractere), ou como qualquer tipo de dados onde há suporte para conversão implícita; por exemplo, copiando um `smallint` como um `int`. Os tipos de dados definidos pelo usuário como tipos básicos são exportados.  
   
 ## <a name="the-bcp-prompt-for-file-storage-type"></a>Solicitação de bcp para o tipo de armazenamento de arquivo  
  Se um comando **bcp** interativo contiver a opção **in** ou **out** sem a opção do arquivo de formatos (**-f**) ou uma opção do formato de dados (**-n**, **-c**, **-w**ou **-N**), o comando solicitará o tipo de armazenamento de arquivos de cada campo de dados, da seguinte maneira:  
@@ -35,9 +35,9 @@ ms.locfileid: "48048436"
   
 -   Para exportar dados em massa de uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para um arquivo de dados no armazenamento mais compacto possível (formato de dados nativo), aceite os tipos de armazenamento de arquivos padrão fornecidos pelo **bcp**. Para obter uma lista de tipos de armazenamento de arquivos nativos, digite "Tipos de Armazenamento de Arquivos Nativos", mais adiante neste tópico.  
   
--   Para dados de exportação em massa de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para um arquivo de dados em formato de caractere, especifique `char` como o tipo de armazenamento de arquivos para todas as colunas na tabela.  
+-   Para agrupar dados exportados de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para um arquivo de dados no formato de caractere, especifique `char` como o tipo de armazenamento de arquivo para todas as colunas na tabela.  
   
--   Para importar em massa de dados a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um arquivo de dados, especifique o tipo de armazenamento de arquivo como `char` para tipos armazenados no caractere de formato e, para dados armazenados no formato de tipo de dados nativo, especifique um dos tipos de armazenamento de arquivo, conforme apropriado:  
+-   Para agrupar dados importados para uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um arquivo de dados, especifique o tipo de armazenamento de arquivo como `char` para tipos armazenados no formato de caractere; e para dados armazenados no formato de tipo de dados nativo, especifique um dos tipos de armazenamento de arquivo como apropriado:  
   
     |tipo de armazenamento de arquivo|Digite no prompt de comando|  
     |-----------------------|-----------------------------|  
@@ -120,7 +120,7 @@ ms.locfileid: "48048436"
   
 -   Se você inserir um tipo de armazenamento de arquivo que representa uma conversão implícita inválida **bcp** falhar; por exemplo, embora você possa especificar `int` para `smallint` dados, se você especificar `smallint` para `int` dados, Isso resultará em erros de estouro.  
   
--   Quando os dados não caracteres tipos, como `float`, `money`, `datetime`, ou `int` são armazenados como seus tipos de banco de dados, os dados são gravados para o arquivo de dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] formato nativo.  
+-   Quando tipos de dados que não são de caractere, como `float`, `money`, `datetime` ou `int`, são armazenados como seus tipos de bancos de dados, os dados são gravados para o arquivo de dados no formato nativo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
     > [!NOTE]  
     >  Depois que você especificar interativamente todos os campos em um comando **bcp**, o comando solicitará que salve suas respostas para cada campo em um arquivo de formato não XML. Para obter mais informações sobre arquivos de formato não XML, veja [Arquivos de formato não XML &#40;SQL Server&#41;](xml-format-files-sql-server.md).  

@@ -32,11 +32,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 90f9aa6a788296ff5fef05e96b7f46b56729ded9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298477"
 ---
 # <a name="delete-method-adox-collections"></a>Método Delete (Coleções do ADOX)
 Remove um objeto de uma coleção.  

@@ -1,5 +1,5 @@
 ---
-title: 'Nova atribuição de função: Editar página atribuição de função (Gerenciador de relatórios) | Microsoft Docs'
+title: 'Atribuição de Nova Função: Editar página atribuição de função (Gerenciador de relatórios) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fc4dd805faffb9fcf172f372f48d497a037fd16c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59950152"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188400"
 ---
-# <a name="new-role-assignment-edit-role-assignment-page-report-manager"></a>Nova atribuição de função: Editar página atribuição de função (Gerenciador de relatórios)
+# <a name="new-role-assignment-edit-role-assignment-page-report-manager"></a>Atribuição de Nova Função: Editar página atribuição de função (Gerenciador de relatórios)
   Use a página Atribuição de Nova Função ou Editar Atribuição de Função para conceder permissões a itens de servidor de relatório e operações. Cada usuário que solicita acesso a um servidor de relatórios deve ter uma atribuição de função que define o nível de acesso. Você pode criar atribuições de função no nó raiz ou em determinado relatório, modelo, pasta, recurso ou fonte de dados compartilhada. A segurança do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] é imposta pelas atribuições de função que você aplica aos itens. Uma atribuição de função faz a correspondência entre um grupo ou usuário e uma definição de função, sendo que cada definição identifica as tarefas que os grupos ou usuários podem executar em um item específico.  
   
  As atribuições de função no nível de item podem ter um grande impacto. Embora elas possam ser associadas a um único relatório ou pasta, também podem ser definidas em um nível mais alto na hierarquia de pastas e podem ser herdadas por pastas e itens que estão na parte inferior da árvore. Para obter mais informações, consulte [Conceder acesso ao usuário a um servidor de relatório &#40;Gerenciador de Relatórios&#41;](security/grant-user-access-to-a-report-server.md).  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bb4929b8d89ad5ef2d60fa623777a739002af72f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199587"
 ---
 # <a name="updatebatch-and-cancelbatch-methods-example-vc"></a>Exemplo dos métodos UpdateBatch CancelBatch (VC++)
 Este exemplo demonstra a [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) método junto com o [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) método.  

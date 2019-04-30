@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5472595383c7e4fcf448374c1fd85587246328f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199216"
 ---
 # <a name="c-data-types-in-odbc"></a>Tipos de dados do C em ODBC
-ODBC define os tipos de dados de C que são usados por variáveis de aplicativo e seus identificadores de tipo correspondente. Eles são usados pelos buffers associados a colunas do conjunto de resultados e parâmetros de instrução. Por exemplo, suponha que um aplicativo quiser recuperar dados de uma coluna do conjunto de resultados em formato de caractere. Ele declara uma variável com o SQLCHAR * tipo de dados e é associado a essa variável para a coluna do conjunto de resultados com um identificador de tipo de SQL_C_CHAR. Para obter uma lista completa de tipos de dados C e identificadores de tipo, consulte [tipos de dados do apêndice d:](../../../odbc/reference/appendixes/appendix-d-data-types.md).  
+ODBC define os tipos de dados de C que são usados por variáveis de aplicativo e seus identificadores de tipo correspondente. Eles são usados pelos buffers associados a colunas do conjunto de resultados e parâmetros de instrução. Por exemplo, suponha que um aplicativo quiser recuperar dados de uma coluna do conjunto de resultados em formato de caractere. Ele declara uma variável com o SQLCHAR * tipo de dados e é associado a essa variável para a coluna do conjunto de resultados com um identificador de tipo de SQL_C_CHAR. Para obter uma lista completa de tipos de dados C e identificadores de tipo, consulte [apêndice d: Tipos de dados](../../../odbc/reference/appendixes/appendix-d-data-types.md).  
   
  O ODBC também define um mapeamento de padrão de cada tipo de dados SQL para um tipo de dados C. Por exemplo, um inteiro de 2 bytes na fonte de dados é mapeado para um inteiro de 2 bytes no aplicativo. Para usar o mapeamento padrão, um aplicativo especifica o identificador de tipo SQL_C_DEFAULT. No entanto, o uso desse identificador é recomendado por motivos de interoperabilidade.  
   

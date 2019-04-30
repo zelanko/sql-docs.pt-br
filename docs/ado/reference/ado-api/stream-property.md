@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ddeaadb1f25c3ea50e59c20d48f14e31831f2639
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63180728"
 ---
 # <a name="stream-property"></a>Propriedade Stream
 Obtém ou define um banco de dados OLE **Stream** objeto de/em uma **ADOStreamConstruction** objeto.  

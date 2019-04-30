@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1823e1416f546105205782d313f75e148e0aa848
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206997"
 ---
 # <a name="data-type-support-for-odbc-date-and-time-improvements"></a>Suporte a tipos de dados para aprimoramentos de data e hora do ODBC
   Este tópico fornece informações sobre tipos de ODBC com suporte a tipos de dados de data e hora do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -34,9 +34,9 @@ ms.locfileid: "48052696"
   
 |Tipo de dados do SQL Server|Tipo de dados SQL|Valor|  
 |--------------------------|-------------------|-----------|  
-|DATETIME|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
+|Datetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
-|data|SQL_TYPE_DATE<br /><br /> SQL_DATE|91 (SQL)<br /><br /> 9 (sqlext. h)|  
+|data|SQL_TYPE_DATE<br /><br /> SQL_DATE|91 (sql.h)<br /><br /> 9 (sqlext. h)|  
 |Hora|SQL_SS_TIME2|-154 (SQLNCLI.h)|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|-155 (SQLNCLI.h)|  
 |Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
@@ -52,12 +52,12 @@ ms.locfileid: "48052696"
   
  Quando a associação SQL_C_BINARY é especificada, a verificação do alinhamento será executada e um erro relatado para alinhamento incorreto. O SQLSTATE para esse erro será IM016, com a mensagem "Alinhamento de estrutura incorreto".  
   
-## <a name="data-formats-strings-and-literals"></a>Formatos de dados: cadeias e literais  
+## <a name="data-formats-strings-and-literals"></a>Formatos de dados: Cadeias de caracteres e literais  
  A tabela seguinte mostra os mapeamentos entre tipos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tipos de dados ODBC e os literais da cadeia de caracteres ODBC.  
   
 |Tipo de dados do SQL Server|Tipo de dados ODBC|Formato de cadeia de caracteres para conversões do cliente|  
 |--------------------------|--------------------|------------------------------------------|  
-|DATETIME|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'aaaa-mm-dd hh:mm:ss[.999]'<br /><br /> O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte a até três dígitos de fração de segundo para Datetime.|  
+|Datetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'aaaa-mm-dd hh:mm:ss[.999]'<br /><br /> O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte a até três dígitos de fração de segundo para Datetime.|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'aaaa-mm-dd hh:hh:ss'<br /><br /> Este tipo de dados tem precisão de um minuto. O componente de segundos será zero na saída, sendo arredondado pelo servidor na entrada.|  
 |data|SQL_TYPE_DATE<br /><br /> SQL_DATE|'aaaa-mm-dd'|  
 |Hora|SQL_SS_TIME2|'hh:mm:ss[.9999999]'<br /><br /> Opcionalmente, podem ser especificadas frações de segundo usando até sete dígitos.|  
@@ -76,7 +76,7 @@ ms.locfileid: "48052696"
   
  Atualmente, o driver permite espaço em branco adicional ao redor de caracteres de pontuação e o espaço entre deslocamento de time e timezone é opcional. Porém, isto pode ser alterado em uma versão futura; aplicativos não devem confiar no comportamento atual.  
   
-## <a name="data-formats-data-structures"></a>Formatos de dados: estruturas de dados  
+## <a name="data-formats-data-structures"></a>Formatos de dados: Estruturas de dados  
  Nas estruturas descritas a seguir, ODBC especifica as seguintes restrições, que são obtidas do calendário gregoriano:  
   
 -   O intervalo de meses é de 1 a 12.  

@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aec0ec20c9bd46a06560f5ce6ebd374e937f0343
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63193242"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>Usar modo RAW com FOR XML
   O modo RAW transforma cada linha no conjunto de resultados da consulta em um elemento XML que tem o identificador genérico \<row> ou o nome do elemento fornecido opcionalmente. Por padrão, cada valor de coluna no conjunto de linhas que não é NULL é mapeado para um atributo do elemento \<row>. Se a diretiva ELEMENTS for adicionada à cláusula FOR XML, cada valor de coluna será mapeado para um subelemento do elemento \<row>. Em conjunto com a diretiva ELEMENTS, é possível especificar opcionalmente a opção XSINIL para mapear valores de coluna NULL no conjunto de resultados para um elemento que tem o atributo xsi:nil=`"`true`"`.  
@@ -35,7 +35,7 @@ ms.locfileid: "58537038"
 ## <a name="in-this-section"></a>Nesta seção  
  Esta seção contém os seguintes exemplos:  
   
--   [Exemplo: Recuperando informações de modelo de produto como XML](example-retrieving-product-model-information-as-xml.md)  
+-   [Exemplo: Recuperando informações de modelo do produto como XML](example-retrieving-product-model-information-as-xml.md)  
   
 -   [Exemplo: Especificando XSINIL com a diretiva ELEMENTS](example-specifying-xsinil-with-the-elements-directive.md)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "58537038"
   
 -   [Exemplo: Recuperando dados binários](example-retrieving-binary-data.md)  
   
--   [Exemplo: Renomear o &#60;linha&#62; elemento](example-renaming-the-row-element.md)  
+-   [Exemplo: Renomeando o elemento &#60;row&#62;](example-renaming-the-row-element.md)  
   
 -   [Exemplo: Especificando um elemento raiz para o XML gerado por FOR XML](example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
   

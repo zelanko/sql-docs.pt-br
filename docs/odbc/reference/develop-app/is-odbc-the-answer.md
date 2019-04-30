@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f90f2395eac5dce76848d7bc309f1a3d5ce289f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63179898"
 ---
 # <a name="is-odbc-the-answer"></a>O ODBC é a resposta?
-Antes de investigar a questão de interoperabilidade, considere a seguinte pergunta: o aplicativo deve usar ODBC em todos os? Isso pode parecer uma estranha pergunta a ser feita em um guia para ODBC, mas é, na verdade, uma legítima. ODBC não foi projetado para substituir completamente os APIs de banco de dados nativa, nem foi projetado para fornecer acesso de banco de dados em todas as circunstâncias. Ele foi projetado para fornecer uma interface comum para bancos de dados e foi destinado para liberar os programadores de aplicativos precise conhecer e manter os links para vários bancos de dados.  
+Antes de investigar a questão de interoperabilidade, considere a seguinte pergunta: O aplicativo deve usar o ODBC em todos os? Isso pode parecer uma estranha pergunta a ser feita em um guia para ODBC, mas é, na verdade, uma legítima. ODBC não foi projetado para substituir completamente os APIs de banco de dados nativa, nem foi projetado para fornecer acesso de banco de dados em todas as circunstâncias. Ele foi projetado para fornecer uma interface comum para bancos de dados e foi destinado para liberar os programadores de aplicativos precise conhecer e manter os links para vários bancos de dados.  
   
  Aplicativos personalizados são candidatos ideais para APIs de banco de dados nativo. O principal motivo é que os aplicativos personalizados geralmente funcionam com um DBMS único e não precisa ser interoperável. Banco de dados nativo APIs pode fazer um trabalho melhor que o ODBC de expor os recursos de um DBMS específico e pode expor recursos não são expostos pelo ODBC. Além disso, como os desenvolvedores de aplicativos personalizados são geralmente familiarizados com o banco de dados nativo API para seu DBMS, há poucos motivos para aprender o ODBC. No entanto, é interessante observar que, para alguns DBMSs, o ODBC é a API de banco de dados nativo.  
   

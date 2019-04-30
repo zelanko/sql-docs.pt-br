@@ -1,5 +1,5 @@
 ---
-title: 'Lição 2: Conectando de outro computador | Microsoft Docs'
+title: 'Lição 2: Conectando em outro computador | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: eedbde338ad3cc2af5477cc263eac7444707c0d8
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144800"
 ---
-# <a name="lesson-2-connecting-from-another-computer"></a>Lição 2: conectando de outro computador
+# <a name="lesson-2-connecting-from-another-computer"></a>Lição 2: conexão usando outro computador
   Para aumentar a segurança, o [!INCLUDE[ssDE](../includes/ssde-md.md)] das edições Developer, Express e Evaluation do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não pode ser acessado de outro computador quando inicialmente instalado. Esta lição mostra a você como habilitar os protocolos, configurar as portas e configurar o Firewall do Windows para se conectar de outros computadores.  
   
  Esta lição contém as seguintes tarefas:  
@@ -127,6 +127,6 @@ ms.locfileid: "54127206"
  Isso conclui esse breve tutorial em conectividade básica.  
   
 ## <a name="return-to-tutorials-portal"></a>Retorne ao portal Tutoriais  
- [Tutorial: Introdução ao mecanismo de banco de dados](tutorial-getting-started-with-the-database-engine.md)  
+ [Tutorial: Introdução ao Mecanismo de Banco de Dados](tutorial-getting-started-with-the-database-engine.md)  
   
   

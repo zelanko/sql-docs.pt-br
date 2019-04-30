@@ -1,5 +1,5 @@
 ---
-title: Mapeamento SQLFreeEnv | Microsoft Docs
+title: SQLFreeEnv Mapping | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5c1ab12a975d7b9c0aba77db9af31accac398a16
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199409"
 ---
 # <a name="sqlfreeenv-mapping"></a>Mapeamento SQLFreeEnv
 Quando um aplicativo chama **SQLFreeEnv** por meio de um ODBC 3 *. x* driver, a chamada para  

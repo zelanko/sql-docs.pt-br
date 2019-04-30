@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cccbbd4d87c930ac38aadd1ec9f58dab26bcce1a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062634"
 ---
 # <a name="axis-object-ado-md"></a>Objeto Axis (ADO MD)
 Representa um posicional ou eixo do filtro de um conjunto de células que contêm membros selecionados de uma ou mais dimensões.  

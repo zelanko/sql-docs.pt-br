@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 82f6c6d8e7ecfa3a1ca29805c186d601ed65bd00
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63060265"
 ---
 # <a name="introduction-to-updategrams-sqlxml-40"></a>Introdução aos diagramas de atualização (SQLXML 4.0)
   Você pode modificar (Inserir, atualizar ou excluir) um banco de dados [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de um existente documento XML usando um diagrama de atualização ou o OPENXML [!INCLUDE[tsql](../../../includes/tsql-md.md)] função.  
@@ -60,7 +60,7 @@ ms.locfileid: "52782928"
   
  As seguintes definições descrevem a função de cada um destes blocos:  
   
- **\<antes de >**  
+ **\<before>**  
  Identifica o estado existente (também chamado de "o estado antes") da instância de registro.  
   
  **\<after>**  

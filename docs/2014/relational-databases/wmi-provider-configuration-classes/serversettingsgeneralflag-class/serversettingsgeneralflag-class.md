@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 59bfe26d20ed244c6011a6f4d1f37deccf8607c4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63137287"
 ---
 # <a name="serversettingsgeneralflag-class"></a>Classe ServerSettingsGeneralFlag
   A [classe ServerSettingsGeneralFlag Classe](serversettingsgeneralflag-class.md) representa as configurações gerais de sinalizador em uma instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

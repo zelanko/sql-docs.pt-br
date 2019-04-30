@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: e0904239933361b80727700c94b03e379751251f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164058"
 ---
 # <a name="exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Explorando o modelo de clustering de sequências (Tutorial de mineração de dados intermediário)
   Agora que você criou o **Clustering de sequências com região** modelo, você pode explorá-lo usando o [!INCLUDE[msCoName](../includes/msconame-md.md)] Visualizador de Clustering de sequência no **Visualizador do modelo de mineração** guia do Designer de mineração de dados. O [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Cluster Viewer contém cinco guias: **Diagrama de cluster**, **perfis de Cluster**, **características de Cluster**, **ClusterDiscrimination**, e **detransiçõesdeestado**. Para obter mais informações sobre como usar esse visualizador, consulte [procurar um modelo usando o Microsoft Sequence Cluster Viewer](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md).  
@@ -149,7 +149,7 @@ ms.locfileid: "56024988"
   
 4.  Uma linha de transição contém o texto transição na **variáveis** coluna e uma combinação de valores de atributo sequencial a **valor** coluna. A sequência também pode conter pontos iniciais e valores ausentes.  
   
-     Por exemplo, suponha que a transição tenha o valor [Iniciar] -> Tubo de Pneu de Estrada. Isso significa que clientes deste cluster colocam com frequência o Tubo de Pneu de Estrada em sua cesta de compras. Isso poderia significar que o produto é um item popular e procurado primeiro por clientes, ou pode simplesmente indicar que o produto é fácil de localizar no site de compras.  
+     Por exemplo, suponha que a transição tenha o valor [Iniciar] -> tubo de pneu de estrada. Isso significa que clientes deste cluster colocam com frequência o Tubo de Pneu de Estrada em sua cesta de compras. Isso poderia significar que o produto é um item popular e procurado primeiro por clientes, ou pode simplesmente indicar que o produto é fácil de localizar no site de compras.  
   
 5.  Percorra a lista até encontrar a primeira transição que não tem **[Iniciar]** ou **ausente** nele.  
   
@@ -223,7 +223,7 @@ ms.locfileid: "56024988"
   
 8.  Clique no nó de Pneu de Passeio e mova o controle deslizante de volta à posição intermediária.  
   
-     A princípio, existem muitas linhas de transição conectando Pneu de Passeio a outros produtos, mas quando você sobe o limite de probabilidade, as transições menos prováveis são eliminadas do gráfico, deixando somente a transição Pneu de Passeio > Tubo de Pneu de Passeio. Essa transição significa que se um cliente colocar um Pneu de Passeio na cesta de compras, há uma grande probabilidade de que o cliente colocará em seguida um Tubo de Pneu de Passeio na cesta.  
+     Primeiro, há muitas linhas de transição conectando pneu de passeio a outros produtos, mas quando você aumenta o limite de probabilidade, as transições menos prováveis são eliminadas do gráfico, deixando somente a transição pneu de passeio > tubo de pneu de passeio. Essa transição significa que se um cliente colocar um Pneu de Passeio na cesta de compras, há uma grande probabilidade de que o cliente colocará em seguida um Tubo de Pneu de Passeio na cesta.  
   
  [Voltar ao Início](#bkmk_CDiagram)  
   

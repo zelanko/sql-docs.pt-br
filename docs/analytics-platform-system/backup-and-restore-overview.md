@@ -10,11 +10,11 @@ ms.date: 01/19/2019
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 0b95d18eb38bbe0012235304747ca80b3dc19a79
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200966"
 ---
 # <a name="backup-and-restore"></a>Backup e restauração
 
@@ -120,7 +120,7 @@ Ao restaurar os dados, o dispositivo detecta o número de nós de computação n
   
 5.  Cada nó de computação restaura sua parte do banco de dados do usuário. Se qualquer uma das restaurações não concluída com êxito, todos os bancos de dados são removidos e a restauração for concluído com êxito.  
   
-## <a name="restoring-to-an-appliance-with-a-larger-number-of-compute-nodes"></a>Restaurando para um dispositivo com um número maior de nós de computação  
+## <a name="restoring-to-an-appliance-with-a-larger-number-of-compute-nodes"></a>Restaurando para um dispositivo com um número maior de nós de Computação  
   
 A restauração de um backup em um dispositivo com um número maior de nós de Computação aumenta o tamanho do banco de dados alocado proporcionalmente ao número de nós de Computação.  
   

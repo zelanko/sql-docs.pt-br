@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e9bc721869c1287be709c594fd60aad511709e46
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198860"
 ---
-# <a name="task-2-mapping-excel-columns-to-dqs-domains"></a>Tarefa 2: Mapeando colunas do Excel para domínios do DQS
+# <a name="task-2-mapping-excel-columns-to-dqs-domains"></a>Tarefa 2: Mapear colunas do Excel para domínios do DQS
     
 1.  Na página **Mapear** , selecione **Arquivo do Excel** em **Fonte de Dados**.  
   

@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ae9d8c9b156b2b7b1655c0b854a4615264e56b3c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63143005"
 ---
 # <a name="legend-properties-dialog-box-general-report-builder-and-ssrs"></a>Caixa de diálogo Propriedades da Legenda, Geral (Construtor de Relatórios e SSRS)
   Use a caixa de diálogo **Legenda** para definir a aparência e o layout da legenda no gráfico. Para obter mais informações, consulte [formatando a legenda em um gráfico de &#40;construtor de relatórios e SSRS&#41;](report-design/chart-legend-formatting-report-builder.md).  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 16d0590d3297b52891bf399822ce984674022583
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188922"
 ---
 # <a name="interval-data-type-length"></a>Comprimento do tipo de dados de intervalo
 As regras a seguir são usadas para determinar o comprimento de um tipo de dados de intervalo em caracteres. Tamanho é expresso em número de caracteres. O número de bytes depende do conjunto de caracteres. O comprimento inclui os seguintes valores adicionados juntos:  

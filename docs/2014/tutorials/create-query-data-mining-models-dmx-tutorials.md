@@ -1,5 +1,5 @@
 ---
-title: 'Criando e consultando modelos de mineração de dados com DMX: Tutoriais (Analysis Services - mineração de dados) | Microsoft Docs'
+title: 'Como criar e consultar modelos de mineração de dados com DMX: Tutoriais (Analysis Services - mineração de dados) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 22ed01105a32f460bcbeb2c067299fdf62af2eed
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63180537"
 ---
-# <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>Criando e consultando modelos de mineração de dados com DMX: Tutoriais (Analysis Services - mineração de dados)
+# <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>Como criar e consultar modelos de mineração de dados com DMX: Tutoriais (Analysis Services - mineração de dados)
   Depois de criar uma solução de mineração de dados usando [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], você pode criar consultas em relação as modelos de mineração de dados para prever tendências, recuperar padrões nos dados e medir a precisão dos modelos de mineração.  
   
  Os tutoriais passo a passo na lista a seguir ajudam a aprender como compilar e executar consultas de mineração de dados usando [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para que você possa obter o máximo de seus dados.  

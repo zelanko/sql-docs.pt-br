@@ -15,13 +15,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 43deb215fded67055c069dd629dcb5553b663f71
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061343"
 ---
-# <a name="tm-promote-tran-starting-event-class"></a>TM: Classe de evento promote Tran Starting
+# <a name="tm-promote-tran-starting-event-class"></a>TM: Classe de evento Promote Tran Starting
   TM: Promote Tran Starting a classe de evento indica que uma solicitação PROMOTE TRANSACTION está iniciando. A solicitação é enviada do cliente pela interface de gerenciamento de transações.  
   
 ## <a name="tm-promote-tran-starting-event-class-data-columns"></a>TM: Promote Tran Starting colunas de dados de classe de evento  

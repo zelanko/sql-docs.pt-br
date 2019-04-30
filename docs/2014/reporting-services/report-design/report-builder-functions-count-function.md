@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4e1aaede74e9c9aa693a80149eebdc5aabb069ce
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59936642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63216211"
 ---
 # <a name="count-function-report-builder-and-ssrs"></a>função Count (Construtor de Relatórios e SSRS)
   Retorna uma contagem de valores não nulos especificados pela expressão, avaliados no contexto do escopo fornecido.  

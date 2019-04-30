@@ -18,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9eebb080589287839db8951bbac1e715585161e9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190973"
 ---
 # <a name="process-large-reports"></a>Processar relatórios grandes
   Relatórios grandes apresentam certos desafios de processamento e requerem certas configurações para que sejam executados corretamente. Relatórios grandes não devem ser executados sob demanda, salvo se estiverem configurados para oferecer suporte à paginação.  

@@ -1,5 +1,5 @@
 ---
-title: 'Como: Filtrar relatórios | Microsoft Docs'
+title: 'Como fazer: Filtrar relatórios | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8eb337798afec3311b6e31027b7acbff96b8d8a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294847"
 ---
-# <a name="how-to-filter-reports"></a>Como filtrar relatórios
+# <a name="how-to-filter-reports"></a>Como fazer: Para filtrar relatórios
   Este tópico descreve como você pode usar o Visualizador de relatórios do Supervisor de atualização para aplicar filtros a um relatório.  
   
 ### <a name="to-filter-reports"></a>Para filtrar relatórios  
   
-1.  No visualizador de relatório, exiba o relatório que você quer filtrar. Para obter instruções, consulte [como: exibir um relatório do Supervisor de atualização](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md).  
+1.  No visualizador de relatório, exiba o relatório que você quer filtrar. Para obter instruções, consulte [como: Exibir um relatório do Supervisor de atualização](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md).  
   
 2.  No **filtrar por** , selecione um tipo de problema para exibir:  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48222136"
     -   **Problemas não resolvidos**. Exibe todos os problemas que ainda não foram solucionados.  
   
 ## <a name="see-also"></a>Consulte também  
- [Como: executar o Assistente para análise do Supervisor de atualização](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
+ [Como: Execute o Assistente para análise do Supervisor de atualização](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [Solucionando problemas de atualização](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
  [Tópicos de instruções sobre o Supervisor de atualização](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
  [Trabalhando com o Supervisor de Atualização](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  

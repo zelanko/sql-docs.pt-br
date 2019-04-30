@@ -14,20 +14,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 69516a613cbd9071686067350ced2ce5ca166a27
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294449"
 ---
 # <a name="about-drivers-and-data-sources"></a>Sobre drivers e fontes de dados
 *Drivers* são os componentes que processam solicitações ODBC e retornam dados para o aplicativo. Se necessário, drivers de modificar uma solicitação de aplicativo em um formulário que é entendido pela fonte de dados. Você deve usar o programa de instalação do driver para adicionar ou excluir um driver do seu computador.  
   
  *Fontes de dados* são os bancos de dados ou arquivos acessados por um driver e são identificados por um nome de fonte de dados (DSN). Use o administrador de fonte de dados ODBC para adicionar, configurar e excluir fontes de dados do sistema. Os tipos de fontes de dados que podem ser usados são descritos na tabela a seguir.  
   
-|Fonte de dados|Description|  
+|Fonte de dados|Descrição|  
 |-----------------|-----------------|  
-|Usuário|DSNs do usuário são locais para um computador e podem ser usados somente pelo usuário atual. Eles são registrados na subárvore do registro HKEY_CURRENT_USER.|  
+|User|DSNs do usuário são locais para um computador e podem ser usados somente pelo usuário atual. Eles são registrados na subárvore do registro HKEY_CURRENT_USER.|  
 |Sistema|DSNs de sistema são locais para um computador, em vez de dedicado a um usuário. O sistema ou qualquer usuário com privilégios pode usar uma fonte de dados configurada com um DSN de sistema. DSNs de sistema são registrados na subárvore do Registro HKEY_LOCAL_MACHINE.|  
 |Arquivo|DSNs de arquivos são fontes com base em arquivo que podem ser compartilhados entre todos os usuários que têm os mesmos drivers instalados e, portanto, tem acesso ao banco de dados. Essas fontes de dados não precisam ser dedicadas a um usuário, nem ser local para um computador. Nomes de fonte de dados de arquivo não são identificados por entradas do registro dedicado; em vez disso, eles são identificados por um nome de arquivo com uma extensão. DSN.|  
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2a627ea8e5dd7a8f8266fcf0ea374e6abcde4bdc
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208793"
 ---
 # <a name="bottompercent-mdx"></a>BottomPercent (MDX)
 
@@ -38,11 +38,11 @@ BottomPercent(Set_Expression, Percentage, Numeric_Expression)
  *Numeric_Expression*  
  Uma expressão numérica válida, geralmente uma linguagem MDX de coordenadas de célula, que retorna um número.  
   
-## <a name="remarks"></a>Remarks  
- O **BottomPercent** função calcula a soma da expressão numérica especificada avaliada em um conjunto especificado, classificando o conjunto em ordem crescente. A função retorna os elementos com os valores mais baixos, cujo percentual cumulativo do valor total somado seja pelo menos o percentual especificado. Essa função retorna o subconjunto menor de um conjunto cujo total cumulativo é pelo menos o percentual especificado. Os elementos retornados são classificados do maior para menor.  
+## <a name="remarks"></a>Comentários  
+ O **BottomPercent** função calcula a soma da expressão numérica especificada avaliada sobre um conjunto especificado, classificando o conjunto em ordem crescente. A função retorna os elementos com os valores mais baixos, cujo percentual cumulativo do valor total somado seja pelo menos o percentual especificado. Essa função retorna o subconjunto menor de um conjunto cujo total cumulativo é pelo menos o percentual especificado. Os elementos retornados são classificados do maior para menor.  
   
 > [!IMPORTANT]  
->  O **BottomPercent** função, como o [TopPercent](../mdx/toppercent-mdx.md) funcionar, sempre quebra a hierarquia. Para obter mais informações, consulte Função Order.  
+>  O **BottomPercent** função, como o [TopPercent](../mdx/toppercent-mdx.md) de função, sempre quebra a hierarquia. Para obter mais informações, consulte Função Order.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir retorna, para a categoria Bicicleta, o menor conjunto de membros do nível Cidade na hierarquia Geografia, na dimensão Geografia, do ano fiscal de 2003, cujo total cumulativo que usa a medida Valor das Vendas do Revendedor é pelo menos 15% do total cumulativo (começando com os membros desse conjunto com o menor número de vendas).  
@@ -60,6 +60,6 @@ WHERE ([Measures].[Reseller Sales Amount],[Date].[Fiscal].[Fiscal Year].[FY 2003
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

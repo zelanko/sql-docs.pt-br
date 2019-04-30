@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e69a3ecab06b800ef1295c8c638b574135bf7b41
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63158714"
 ---
 # <a name="programming-specific-tasks"></a>Tarefas específicas de programação
   As tarefas específicas de programação que usam objetos SMO incluem assuntos complexos que apenas serão exigidos por programas com uma função específica, como backup, monitoramento de estatísticas, replicação, gerenciamento de objetos de instância e definição de opções de configuração.  

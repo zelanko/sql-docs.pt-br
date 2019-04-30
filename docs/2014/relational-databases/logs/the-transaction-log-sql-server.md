@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1b4a175ad850ccbb0711a0997c3658cf01497686
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144612"
 ---
 # <a name="the-transaction-log-sql-server"></a>O log de transações (SQL Server)
   Todo banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem um log de transações que registra todas as transações e modificações feitas no banco de dados a cada transação. O log de transações deve ser truncado regularmente para impedir o preenchimento. No entanto, alguns fatores podem atrasar o truncamento de log e, portanto, o monitoramento do tamanho do log é importante. Algumas operações podem ser registradas em log minimamente para reduzir o impacto no tamanho do log de transações.  
@@ -41,7 +41,7 @@ ms.locfileid: "52807008"
   
 -   [Tarefas relacionadas](#RelatedTasks)  
   
-##  <a name="Benefits"></a> Benefícios: Operações com suporte pelo log de transações  
+##  <a name="Benefits"></a> Benefícios: Operações com suporte pelo Log de transações  
  O log de transações dá suporte às seguintes operações:  
   
 -   Recuperação de transações individuais.  
@@ -93,7 +93,7 @@ ms.locfileid: "52807008"
 |12|-|Somente para uso interno|  
 |13|OLDEST_PAGE|Se um banco de dados estiver configurado para usar pontos de verificação indiretos, a página mais antiga no banco de dados poderá ser mais antiga do que o LSN do ponto de verificação. Nesse caso, a página mais antiga pode atrasar o truncamento de log. (Todos os modelos de recuperação)<br /><br /> Para obter informações sobre pontos de verificação indiretos, consulte [Database Checkpoints &#40;SQL Server&#41;](database-checkpoints-sql-server.md).|  
 |14|OTHER_TRANSIENT|Esse valor não é usado atualmente.|  
-|16|XTP_CHECKPOINT|Quando um banco de dados tem um grupo de arquivos com otimização de memória, o log de transações não pode truncar até o ponto de verificação automático [!INCLUDE[hek_2](../../includes/hek-2-md.md)] ser acionado (o que acontece a cada 512 MB de aumento do log).<br /><br /> Observação: Para truncar o log de transações antes de 512 MB de tamanho, dispare o comando Checkpoint manualmente para o banco de dados em questão.|  
+|16|XTP_CHECKPOINT|Quando um banco de dados tem um grupo de arquivos com otimização de memória, o log de transações não pode truncar até o ponto de verificação automático [!INCLUDE[hek_2](../../includes/hek-2-md.md)] ser acionado (o que acontece a cada 512 MB de aumento do log).<br /><br /> Observação: Para truncar o log de transações antes de 512 MB de tamanho, dispare o comando Checkpoint manualmente no banco de dados em questão.|  
   
 ##  <a name="MinimallyLogged"></a> Operações que podem ser minimamente registradas  
  O*registro mínimo em log* envolve o registro somente das informações que são necessárias para recuperar a transação sem oferecer suporte à recuperação pontual. Este tópico identifica as operações com registro mínimo em log no modelo de recuperação bulk-logged (como também no modelo de recuperação simples, exceto quando há um backup em execução).  

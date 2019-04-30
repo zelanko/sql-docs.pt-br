@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 11fe5ef40e06772c38390096363903113a28bd46
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63071805"
 ---
 # <a name="execute-requery-and-clear-methods-example-vb"></a>Execute, Requery e Clear exemplo dos métodos (VB)
 Este exemplo demonstra a **Execute** método quando executado tanto uma [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto e uma [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto. Ele também usa o [Requery](../../../ado/reference/ado-api/requery-method.md) método para recuperar os dados atuais em um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)e o [limpar](../../../ado/reference/ado-api/clear-method-ado.md) método para limpar o conteúdo do [erros](../../../ado/reference/ado-api/errors-collection-ado.md)coleção. (O **erros** coleção seja acessada por meio do **Conexão** objeto do [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) propriedade do [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).) Os procedimentos ExecuteCommand e PrintOutput são necessários executar este procedimento.  

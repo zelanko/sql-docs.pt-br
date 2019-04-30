@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: df5907c3d61de7e3d1ce552c65fb5188f1ab33f9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63228890"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Filtrando valores usando sql:limit-field e sql:limit-value (SQLXML 4.0)
   Você pode limitar as linhas retornadas de uma consulta de banco de dados com base em algum valor limitador. As anotações `sql:limit-field` e `sql:limit-value` são usadas para identificar a coluna de banco de dados que contém os valores limitadores e especificar um valor limitador específico a ser usado para filtrar os dados retornados.  
@@ -163,7 +163,7 @@ ms.locfileid: "52804458"
 </ROOT>  
 ```  
   
-### <a name="b-limiting-results-based-on-a-discount-value-of-type-real-data"></a>b. Limitar os resultados com base em um valor de desconto de dados de tipos reais  
+### <a name="b-limiting-results-based-on-a-discount-value-of-type-real-data"></a>B. Limitar os resultados com base em um valor de desconto de dados de tipos reais  
  Neste exemplo, um banco de dados contém duas tabelas:  
   
 -   Orders (OrderID)  
@@ -306,7 +306,7 @@ ms.locfileid: "52804458"
   
 ## <a name="see-also"></a>Consulte também  
  [float e real &#40;Transact-SQL&#41;](/sql/t-sql/data-types/float-and-real-transact-sql)   
- [nchar e nvarchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)   
+ [nchar and nvarchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)   
  [Instalando o SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
  [Usando anotados a esquemas XSD em consultas &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
   

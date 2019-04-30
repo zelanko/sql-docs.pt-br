@@ -24,11 +24,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 033e1852f076dde631a3ea1e9be1c8918eab042a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63158311"
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>Implantação de script e tarefas administrativas
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dá suporte ao uso de scripts para automatizar a instalação, a implantação e as tarefas administrativas de rotina. A implantação de um servidor de relatórios é um processo de várias etapas. É preciso usar diversos processos e ferramentas para configurar uma implantação. Não existe nenhum programa ou abordagem que possa ser usado para automatizar todas as tarefas.  

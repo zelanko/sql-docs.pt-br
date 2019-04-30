@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fa8edcf8af510a41affdcbcc9924edf69cf4c220
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63228052"
 ---
 # <a name="topcount-mdx"></a>TopCount (MDX)
 
@@ -32,19 +32,19 @@ TopCount(Set_Expression,Count [ ,Numeric_Expression ] )
  *Set_Expression*  
  Uma expressão MDX (Multidimensional Expressions) válida que retorna um conjunto.  
   
- *Contagem*  
+ *Count*  
  Uma expressão numérica válida que especifica o número de tuplas a ser retornado.  
   
  *Numeric_Expression*  
  Uma expressão numérica válida, geralmente uma linguagem MDX de coordenadas de célula, que retorna um número.  
   
-## <a name="remarks"></a>Remarks  
- Se uma expressão numérica for especificada, o **TopCount** função classificará, em ordem decrescente, as tuplas no conjunto especificado, o conjunto especificado de acordo com o valor especificado pela expressão numérica, conforme avaliado sobre o conjunto especificado. Depois de classificar o conjunto, o **TopCount** função retorna o número especificado de tuplas com o valor mais alto.  
+## <a name="remarks"></a>Comentários  
+ Se uma expressão numérica for especificada, o **TopCount** função classificará, em ordem decrescente, as tuplas no conjunto especificado pelo conjunto especificado de acordo com o valor especificado pela expressão numérica, conforme avaliado sobre especificado Defina. Depois de classificar o conjunto, o **TopCount** função, em seguida, retorna o número especificado de tuplas com o valor mais alto.  
   
 > [!IMPORTANT]  
 >  Como o [BottomCount](../mdx/bottomcount-mdx.md) função, o **TopCount** função sempre quebra a hierarquia.  
   
- Se uma expressão numérica não for especificada, a função retorna o conjunto de membros em ordem natural, sem qualquer classificação, se comportando como a [Head (MDX)](../mdx/head-mdx.md) função.  
+ Se uma expressão numérica não for especificada, a função retornará o conjunto de membros em ordem natural, sem qualquer classificação, se comportando como a [Head (MDX)](../mdx/head-mdx.md) função.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna as 10 datas mais significativas classificadas por Valor de Vendas pela Internet:  
@@ -72,6 +72,6 @@ WHERE([Product].[Product Categories].Bikes)
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

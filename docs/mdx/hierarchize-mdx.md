@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4478fb9657ef4577bcae8b5641f53154b2a0486c
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224900"
 ---
 # <a name="hierarchize-mdx"></a>Hierarquize (MDX)
 
@@ -32,15 +32,15 @@ Hierarchize(Set_Expression [ , POST ] )
  *Set_Expression*  
  Uma expressão MDX (Multidimensional Expressions) válida que retorna um conjunto.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O **Hierarchize** função organiza os membros do conjunto especificado em ordem hierárquica. A função sempre retém duplicatas.  
   
--   Se **POST** não for especificado, a função classificará os membros em um nível em sua ordem natural. Sua ordem natural é a ordem padrão dos membros na hierarquia quando nenhuma outra condição de classificação for especificada. Os membros filho seguem imediatamente seus membros pai.  
+-   Se **POST** não for especificado, a função classificará os membros em um nível na ordem natural. Sua ordem natural é a ordem padrão dos membros na hierarquia quando nenhuma outra condição de classificação for especificada. Os membros filho seguem imediatamente seus membros pai.  
   
--   Se **POST** for especificado, o **Hierarchize** função classifica os membros em um nível usando uma ordem pós-natural. Em outras palavras, os membros filho precedem seus pais.  
+-   Se **POST** for especificado, o **Hierarchize** função classifica os membros em um nível usando a ordem pós-natural. Em outras palavras, os membros filho precedem seus pais.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir faz drill up do membro Canadá. O **Hierarchize** função é usada para organizar os membros do conjunto especificado em ordem hierárquica, que é necessária a **DrillUpMember** função.  
+ O exemplo a seguir faz drill up do membro Canadá. O **Hierarchize** função é usada para organizar os membros do conjunto especificado em ordem hierárquica, que é necessário para o **DrillUpMember** função.  
   
 ```  
 SELECT DrillUpMember   
@@ -59,7 +59,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
- O exemplo a seguir retorna a soma da `Measures.[Order Quantity]` membro, agregado sobre os primeiros nove meses do ano calendário 2003 contidos no `Date` dimensão, do **Adventure Works** cubo. O **PeriodsToDate** função define as tuplas no conjunto sobre o qual a função Aggregate opera. O **Hierarchize** função organiza os membros do conjunto especificado de membros da dimensão de produto na ordem hierárquica.  
+ O exemplo a seguir retorna a soma do `Measures.[Order Quantity]` membro, agregado sobre os primeiros nove meses de 2003 contidos na `Date` dimensão, da **Adventure Works** cubo. O **PeriodsToDate** função define as tuplas no conjunto sobre o qual a função Aggregate opera. O **Hierarchize** função organiza os membros do conjunto especificado de membros da dimensão de produto na ordem hierárquica.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS Count  
@@ -87,6 +87,6 @@ WHERE ([Geography].[State-Province].x,
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

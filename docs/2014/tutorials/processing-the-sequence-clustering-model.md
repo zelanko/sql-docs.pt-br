@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 63f46f2d548437a707922bb9cf8b58727061253b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188148"
 ---
 # <a name="processing-the-sequence-clustering-model"></a>Processando o modelo de clustering de sequências
   Depois de criar uma nova estrutura de mineração, você deverá implantar as alterações feitas na solução de mineração de dados e processar a estrutura. Depois de processar a nova estrutura e quando o modelo de mineração estiver completo, você poderá navegar pelo  modelo de mineração.  

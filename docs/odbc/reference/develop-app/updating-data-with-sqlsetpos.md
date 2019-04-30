@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d1c31ef622281b4f52f62ca3867c5afa7dcae8ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63194416"
 ---
 # <a name="updating-data-with-sqlsetpos"></a>Atualizar dados com SQLSetPos
 Aplicativos podem atualizar ou excluir qualquer linha no conjunto de linhas com **SQLSetPos**. Chamando **SQLSetPos** é uma alternativa conveniente para construir e executar uma instrução SQL. Ele permite que um driver ODBC dão suporte a atualizações posicionadas até mesmo quando a fonte de dados não dá suporte a instruções de SQL posicionadas. Ele faz parte do paradigma de conseguir acesso completo de banco de dados por meio de chamadas de função.  

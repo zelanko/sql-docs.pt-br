@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: add4bbb072a91ad05d58d57f43821c441595afef
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58525838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157952"
 ---
 # <a name="implementing-sqlvariant-in-a-memory-optimized-table"></a>Implementando SQL_VARIANT em uma tabela com otimização de memória
   Considere um exemplo de uma tabela com a coluna `SQL_VARIANT`:  

@@ -14,13 +14,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f0f593b2488d9bb7226edad1f8d98a244f4df191
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164071"
 ---
-# <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>Como fazer: Implantar uma extensão de processamento de dados para um servidor de relatório
+# <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>Como fazer: Para implantar uma extensão de processamento de dados para um Servidor de Relatórios
   Servidores de relatórios usam extensões de processamento de dados por recuperar e processar dados em relatórios renderizados. Você deve implantar o seu assembly de extensão de processamento de dados para um servidor de relatório como um assembly privado. Também será preciso criar uma entrada no arquivo de configuração do servidor de relatório, RSReportServer.config.  
   
 ## <a name="procedures"></a>Procedimentos  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 926223ad0a5a8cdb1a5ff7aacfb7fdd7f84a8c57
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188332"
 ---
 # <a name="new-subscription-or-edit-subscription-page-report-manager"></a>Página Nova Assinatura ou Editar Assinatura (Gerenciador de Relatórios)
   Use a página Nova Assinatura ou Editar Assinatura para criar uma nova assinatura ou editar uma assinatura existente para um relatório. As opções nessa página variam, dependendo de sua atribuição de função. Os usuários com permissões avançadas podem trabalhar com opções adicionais.  

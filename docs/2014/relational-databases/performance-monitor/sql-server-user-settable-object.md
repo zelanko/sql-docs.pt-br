@@ -14,16 +14,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5ac802569356979f3a01da4c204a80272c2be43a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151090"
 ---
 # <a name="sql-server-user-settable-object"></a>SQL Server, objeto User Settable
   O objeto **User Settable** no Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite criar instâncias de contador personalizadas. Use instâncias de contador personalizadas para monitorar aspectos do servidor que escapam aos contadores existentes, como componentes exclusivos de seu banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por exemplo, o número de pedidos de clientes registrados em log ou o estoque de produtos).  
   
- O **definível pelo usuário** objeto contém 10 instâncias do contador de consulta: **Contador do usuário 1** por meio **contador do usuário 10**. Esses contadores são mapeados para os procedimentos armazenados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de **sp_user_counter1** a **sp_user_counter10**. À medida que esses procedimentos armazenados são executados por aplicativos do usuário, os valores definidos por eles são exibidos no Monitor do Sistema. Um contador pode monitorar qualquer valor inteiro individual (por exemplo, um procedimento armazenado que conta quantos pedidos de um produto em particular ocorreram em um dia).  
+ O objeto **Definível pelo Usuário** contém 10 instâncias do contador de consulta: **Contador de usuário 1** a **Contador do usuário 10**. Esses contadores são mapeados para os procedimentos armazenados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de **sp_user_counter1** a **sp_user_counter10**. À medida que esses procedimentos armazenados são executados por aplicativos do usuário, os valores definidos por eles são exibidos no Monitor do Sistema. Um contador pode monitorar qualquer valor inteiro individual (por exemplo, um procedimento armazenado que conta quantos pedidos de um produto em particular ocorreram em um dia).  
   
 > [!NOTE]  
 >  Os procedimentos armazenados de contadores do usuário não são sondados automaticamente pelo Monitor do Sistema. Eles devem ser executados explicitamente por um aplicativo de usuário para obter os valores de contador a serem atualizados. Use um gatilho para atualizar o valor do contador automaticamente. Por exemplo, para criar um contador que monitore o número de linhas em uma tabela, crie um gatilho INSERT e DELETE na tabela que executa a seguinte instrução: `SELECT COUNT(*) FROM table`. Sempre que o gatilho for acionado devido à ocorrência de operação INSERT ou DELETE na tabela, o contador do Monitor do Sistema será atualizado automaticamente.  

@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9123bf89f75fce68a6edd8ba1becd141821fe326
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63158756"
 ---
 # <a name="memory-optimized-tables"></a>Tabelas com otimização de memória
   O OLTP na memória do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ajuda a aumentar o desempenho de aplicativos OLTP por meio de acesso a dados com otimização de memória eficiente, compilação nativa de lógica de negócios e algoritmos livres de bloqueio e trava. O recurso OLTP na memória inclui tipos de tabela e tabelas com otimização de memória, bem como compilação nativa de procedimentos armazenados [!INCLUDE[tsql](../../includes/tsql-md.md)] para acesso eficiente a essas tabelas.  
@@ -46,9 +46,9 @@ ms.locfileid: "48227856"
   
      Detalha como as estatísticas são compiladas para tabelas com otimização de memória e como manter e atualizar estatísticas para tabelas com otimização de memória.  
   
--   [Páginas de código de agrupamentos](../../database-engine/collations-and-code-pages.md)  
+-   [Páginas de código de ordenações](../../database-engine/collations-and-code-pages.md)  
   
-     Detalha as restrições sobre agrupamentos com suporte e páginas de código para tabelas com otimização de memória.  
+     Detalha as restrições sobre ordenações com suporte e páginas de código para tabelas com otimização de memória.  
   
 -   [Tamanho da tabela e da linha em tabelas com otimização de memória](table-and-row-size-in-memory-optimized-tables.md)  
   

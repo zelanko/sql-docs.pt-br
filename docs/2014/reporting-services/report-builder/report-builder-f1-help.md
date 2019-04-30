@@ -18,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2ee42f145440c553422c2fac7f90a441ea00d9cc
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155198"
 ---
 # <a name="report-builder-f1-help"></a>Ajuda F1 do Construtor de Relatórios
   Esta seção contém ajuda para assistentes, exibições, painéis e caixas de diálogo do construtor de relatórios. Você também pode abrir a Ajuda pressionando F1 ou clicando no botão Ajuda em uma caixa de diálogo.  

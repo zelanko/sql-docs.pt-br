@@ -1,5 +1,5 @@
 ---
-title: 'Nova agenda: Editar agenda a página (Gerenciador de relatórios) | Microsoft Docs'
+title: 'Novo Agendamento: Editar agenda a página (Gerenciador de relatórios) | Microsoft Docs'
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a43744243713fb522356814df8fa80a3e11197bd
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188359"
 ---
-# <a name="new-schedule-edit-schedule-page-report-manager"></a>Nova agenda: Editar página de agenda (Gerenciador de relatórios)
+# <a name="new-schedule-edit-schedule-page-report-manager"></a>Novo Agendamento: Editar página de agenda (Gerenciador de relatórios)
   Use a página Nova Agenda / Editar Agenda para criar uma agenda para um relatório. As agendas são usadas com assinaturas para atualizar relatórios armazenados em cache e criar instantâneos como itens autônomos ou em histórico de relatório.  
   
 > [!NOTE]  

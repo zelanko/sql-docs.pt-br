@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 860732a8d694ee59dae05f76eb9cabe49ebc8c96
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161578"
 ---
 # <a name="hierarchical-recordsets-in-xml"></a>Conjuntos de registros hierárquicos em XML
 ADO permite a persistência de objetos de conjunto de registros hierárquicos em XML. Com objetos de conjunto de registros hierárquicos, o valor de um campo no conjunto de registros pai é outro conjunto de registros. Esses campos são representados como elementos filho em um fluxo XML em vez de um atributo.  

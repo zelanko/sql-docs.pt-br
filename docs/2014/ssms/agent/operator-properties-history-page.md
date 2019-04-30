@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 01ef137ef7297be5171bcfdcacd13c80e4da4624
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301726"
 ---
 # <a name="operator-properties-history-page"></a>Propriedades do operador (página Histórico)
   Use esta página para exibir a data, a hora e o tipo das notificações mais recentes enviadas ao operador.  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b92f317d72410a5dff56652dd9de1e3b2ba5c9cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199277"
 ---
 # <a name="binding-result-set-columns"></a>Associar colunas de conjunto de resultados
 Aplicativos podem associar como muitas ou poucas colunas do conjunto de resultados conforme desejarem, incluindo nenhuma coluna de associação em todos os. Quando uma linha de dados for encontrada, o driver retorna os dados para as colunas associadas ao aplicativo. Se o aplicativo associa todas as colunas no conjunto de resultados depende do aplicativo. Por exemplo, aplicativos que geram relatórios geralmente têm um formato fixo; tais aplicativos criar um conjunto de resultados que contém todas as colunas usadas no relatório e, em seguida, associar e recuperam os dados de todas essas colunas. Aplicativos que exibem as telas cheio de dados, às vezes, permitir que o usuário decidir quais colunas serão exibidas; tais aplicativos criam um conjunto de resultados contendo todas as colunas que o usuário pode desejar, mas associar e recuperar os dados somente para as colunas escolhidos pelo usuário.  

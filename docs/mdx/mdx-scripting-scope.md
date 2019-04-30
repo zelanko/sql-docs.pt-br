@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 497fdfb11ec186ffba56470f2b0ede2ed2f4221a
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187531"
 ---
-# <a name="mdx-scripting---scope"></a>Script MDX - escopo
+# <a name="mdx-scripting---scope"></a>Script MDX – SCOPE
 
 
   Limita o escopo de instruções MDX especificadas a um subcubo especificado.  
@@ -73,18 +73,18 @@ Limited_Set ::=
  *single_tuple*  
  Uma única tupla.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A instrução SCOPE determina o subcubo que será afetado pela execução de uma ou mais instruções MDX. A menos que uma instrução MDX seja incluída em uma instrução SCOPE, o escopo implícito de uma instrução MDX é o cubo inteiro.  
   
 > [!NOTE]  
 >  Membros escondidos estão expostos em instruções SCOPE.  
   
- Instruções SCOPE criarão subcubos que expõem "intervalos", independentemente do **compatibilidade MDX** configuração. Por exemplo, a instrução `Scope( Customer.State.members )` pode incluir os estados nos países ou regiões que não contêm os estados, mas para os quais os membros de placeholder invisíveis foram inseridos.  
+ Instruções SCOPE criarão subcubos que expõem "buracos" independentemente do **MDX Compatibility** configuração. Por exemplo, a instrução `Scope( Customer.State.members )` pode incluir os estados nos países ou regiões que não contêm os estados, mas para os quais os membros de placeholder invisíveis foram inseridos.  
   
  Os membros calculados e os conjuntos nomeados criados em uma instrução SCOPE não são afetados por essa instrução.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir, de script de cálculo MDX na solução de exemplo Adventure Works, define o escopo atual como o trimestre fiscal no ano fiscal de 2005 e a medida cota de vendas e, em seguida, atribui um valor para as células no escopo atual usando o **ParallelPeriod** função. O exemplo modifica o escopo usando outra instrução SCOPE e, em seguida, executa outra atribuição usando o [This (MDX)](../mdx/this-mdx.md) função.  
+ O exemplo a seguir, de script de cálculo MDX Adventure Works, solução de exemplo define o escopo atual como o trimestre fiscal no ano fiscal de 2005 e a medida cota de vendas e, em seguida, atribui um valor para as células no escopo atual, usando o  **ParallelPeriod** função. O exemplo modifica o escopo usando outra instrução SCOPE e, em seguida, executa outra atribuição usando o [This (MDX)](../mdx/this-mdx.md) função.  
   
 ```  
 Scope   

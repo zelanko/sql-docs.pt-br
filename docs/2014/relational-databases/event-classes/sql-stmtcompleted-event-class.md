@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 62dc29f8143f92fc9674ed10c092dc6ad08570fa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63060325"
 ---
 # <a name="sqlstmtcompleted-event-class"></a>Classe de evento SQL:StmtCompleted
   A classe de evento SQL:StmtCompleted indica que uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] foi concluída.  
@@ -48,7 +48,7 @@ ms.locfileid: "52767138"
 |NestLevel|`int`|O nível de aninhamento do procedimento armazenado se a instrução tiver sido executada em um procedimento armazenado.|29|Sim|  
 |NTDomainName|`nvarchar`|O domínio do Windows ao qual o usuário pertence.|7|Sim|  
 |NTUserName|`nvarchar`|Nome do usuário do Windows.|6|Sim|  
-|Deslocamento|`int`|O deslocamento inicial da instrução no lote ou procedimento armazenado.|61|Sim|  
+|Offset|`int`|O deslocamento inicial da instrução no lote ou procedimento armazenado.|61|Sim|  
 |Reads|`bigint`|Número de leituras de página emitidas pela instrução SQL.|16|Sim|  
 |RequestID|`int`|ID da solicitação que contém a instrução.|49|Sim|  
 |RowCounts|`bigint`|Número de linhas afetadas por um evento.|48|Sim|  

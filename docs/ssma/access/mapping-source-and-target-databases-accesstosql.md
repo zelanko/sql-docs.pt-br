@@ -19,11 +19,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d2be7854240a52edd8f3308ea92e3ea7eb25924f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299199"
 ---
 # <a name="mapping-source-and-target-databases-accesstosql"></a>Fonte de mapeamento e bancos de dados de destino (AccessToSQL)
 Quando você se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, você precisa especificar um banco de dados de destino para migração. Se você tiver vários bancos de dados de acesso você pode mapeá-los a vários [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bancos de dados (ou esquemas) ou a vários esquemas no banco de dados do SQL Azure conectado.  

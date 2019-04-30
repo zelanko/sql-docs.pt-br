@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 65447904f32b7e0457ed807f18e942b334ddc236
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188794"
 ---
 # <a name="like-escape-sequence"></a>Sequência de escape LIKE
 ODBC usa sequências de escape para a cláusula LIKE. A sintaxe dessa sequência de escape é da seguinte maneira:  
@@ -32,11 +32,11 @@ ODBC usa sequências de escape para a cláusula LIKE. A sintaxe dessa sequência
 ## <a name="remarks"></a>Comentários  
  Na notação BNF, a sintaxe é:  
   
- *Escape de ODBC-like* :: =  
+ *ODBC-like-escape* ::=  
   
  *Iniciador do ODBC-esc* escape '*caractere de escape*' *terminador de esc ODBC*  
   
- *caractere de escape* :: = *caractere*  
+ *escape-character* ::= *character*  
   
  *Iniciador do ODBC-esc* :: = {  
   

@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c9876003e57a69b8a1eacddaa3e41b681c806e7f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200990"
 ---
 # <a name="report-server-in-management-studio-f1-help"></a>Servidor de Relatório na ajuda F1 do Management Studio 
   Esta seção inclui tópicos sobre as caixas de diálogo no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] que podem ser usadas para gerenciar servidores de relatório.  

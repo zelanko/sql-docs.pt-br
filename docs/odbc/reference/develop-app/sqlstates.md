@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3ad31d9fd07e0b9f7bdf633f8ed546331880787c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149036"
 ---
 # <a name="sqlstates"></a>SQLSTATEs
 SQLSTATEs fornecem informações detalhadas sobre a causa de um aviso ou erro. Os SQLSTATEs neste manual baseadas nesses encontrada na especificação de CLI IEF/ISO, embora esses SQLSTATEs que começam com mensagens Instantâneas são específicas para ODBC.  

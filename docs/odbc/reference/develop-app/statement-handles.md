@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6f249bb13ece6382e96dfe953b1d3c1d96c7bf65
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63148998"
 ---
 # <a name="statement-handles"></a>Identificadores de instrução
 Um *instrução* é mais fácil pensar de como uma instrução SQL, tais como **selecionar \* do funcionário**. No entanto, uma instrução é mais do que apenas uma instrução SQL – ele consiste em todas as informações associadas a essa instrução SQL, como conjuntos de resultados criados pela instrução e os parâmetros usados na execução da instrução. Uma instrução não ainda precisa ter uma instrução de SQL definido pelo aplicativo. Por exemplo, quando uma função de catálogo, como **SQLTables** é executado em uma instrução, ele executa uma instrução SQL predefinida que retorna uma lista de nomes de tabela.  

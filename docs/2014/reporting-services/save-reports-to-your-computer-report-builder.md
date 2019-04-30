@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2962cd27e00ddc5dcf2f4b1cc83432fed49ffca4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190222"
 ---
 # <a name="save-reports-to-your-computer-report-builder"></a>Salvar relatórios no computador (Construtor de Relatórios)
   No Construtor de Relatórios, você pode salvar definições de relatório no seu computador. No entanto, quando são salvas no computador, outros usuários não podem exibir os relatórios e os relatórios que referenciam fontes de dados compartilhadas ou armazenam itens de relatório, como imagens e sub-relatórios externamente, talvez não sejam executados. É recomendável salvar relatórios em um servidor de relatório ou site do SharePoint.  

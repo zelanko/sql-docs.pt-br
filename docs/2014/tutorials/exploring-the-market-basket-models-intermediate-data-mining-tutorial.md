@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 8a7b2f97cbda0594698c6cbaa68019a6493f1e74
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224603"
 ---
 # <a name="exploring-the-market-basket-models-intermediate-data-mining-tutorial"></a>Explorando os modelos de cesta de compras (Tutorial de mineração de dados intermediário)
   Agora que você criou o `Association` modelo, você pode explorá-lo usando o [!INCLUDE[msCoName](../includes/msconame-md.md)] Visualizador de associação na **Visualizador do modelo de mineração** guia do Designer de mineração de dados. Este tutorial orienta você a usar o visualizador para explorar relacionamentos entre itens. O visualizador ajuda você a ver rapidamente quais produtos tendem a aparecer juntos e a obter uma ideia geral dos padrões emergentes.  
@@ -37,7 +37,7 @@ ms.locfileid: "56035297"
   
  Uma linha conectando dois itens significa que é provável que esses itens apareçam em uma transação juntos. Em outras palavras, é provável que os clientes comprem esses itens juntos. O controle deslizante está associado à probabilidade da regra. Mova o controle deslizante para cima ou para baixo para filtrar associações fracas, o que significa regras com probabilidade baixa.  
   
- O gráfico de rede de dependência mostra regras de pares, que podem ser representadas logicamente como A->B, ou seja, se o Produto A for comprado, então é provável que o Produto B também será. O grafo não pode mostrar regras do tipo AB->C. Se você mover o controle deslizante para mostrar todas as regras e ainda assim não ver linhas no gráfico, significa que não há regras de pares que atendam aos critérios dos parâmetros do algoritmo.  
+ O gráfico de rede de dependência mostra regras de pares, que podem ser representadas logicamente como A -> B, que significa se o produto A for comprado, então provavelmente produto B. O gráfico não pode mostrar regras do tipo AB -> C. Se você mover o controle deslizante para mostrar todas as regras e ainda assim não ver linhas no gráfico, significa que não há regras de pares que atendam aos critérios dos parâmetros do algoritmo.  
   
  Você também pode localizar nós pelo nome, digitando as primeiras letras do nome do atributo. Para obter mais informações, consulte [Caixa de diálogo Localizar Nó &#40;Visualizador do modelo de mineração&#41;](../../2014/analysis-services/find-node-dialog-box-mining-model-viewer.md).  
   

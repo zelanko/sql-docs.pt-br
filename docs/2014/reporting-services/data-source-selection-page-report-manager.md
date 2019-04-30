@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cf5feafd69cb16e1989496de90ce9e7af4df3687
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59937472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63165017"
 ---
 # <a name="data-source-selection-page-report-manager"></a>Página Seleção de Fonte de Dados (Gerenciador de Relatórios)
   Use a página Seleção de Fonte de Dados para selecionar um item de fonte de dados compartilhada existente a ser usado em um relatório ou modelo de relatório. Você também pode usar essa página para selecionar uma fonte de dados diferente. Para exibir o tipo de fonte de dados ou a cadeia de conexão, é necessário navegar até a fonte de dados compartilhada e abrir a página de propriedades.  

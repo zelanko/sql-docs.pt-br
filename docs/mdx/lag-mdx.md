@@ -1,5 +1,5 @@
 ---
-title: Latência (MDX) | Microsoft Docs
+title: Lag (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3c5479aa3ce855b554f34f72c5c86aa86eb04b9f
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63205829"
 ---
 # <a name="lag-mdx"></a>Latência (MDX)
 
@@ -35,16 +35,16 @@ Member_Expression.Lag(Index)
  *Index*  
  Uma expressão numérica válida que especifica o número de posições de membro a serem atrasadas.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  As posições de membros em um nível são determinadas pela ordem natural da hierarquia de atributo. A numeração das posições se baseia em zero.  
   
- Se o retardo especificado for zero, o **latência** função retorna o próprio membro especificado.  
+ Se o retardo especificado for zero, o **Lag** função retorna o próprio membro especificado.  
   
- Se o retardo especificado for negativo, o **latência** função retorna um membro subsequente.  
+ Se o retardo especificado for negativo, o **Lag** função retorna um membro subsequente.  
   
  `Lag(1)` é equivalente a [PrevMember](../mdx/prevmember-mdx.md) função. `Lag(-1)` é equivalente a [NextMember](../mdx/nextmember-mdx.md) função.  
   
- O **latência** função é semelhante ao [levar](../mdx/lead-mdx.md) funcionar, exceto que o **levar** função procura na direção oposta a **latência** função. Ou seja, `Lag(n)` é equivalente a `Lead(-n)`.  
+ O **Lag** função é semelhante ao [levar](../mdx/lead-mdx.md) funcionar, exceto que o **levar** função procura na direção oposta a **retardo** função. Ou seja, `Lag(n)` é equivalente a `Lead(-n)`.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir retorna o valor para dezembro de 2001:  
@@ -64,6 +64,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 102c3d72d811627074da570ee74902e51a4b86dc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162167"
 ---
 # <a name="how-online-index-operations-work"></a>Como funcionam as operações de índice online
   Esse tópico define as estruturas que existem durante uma operação de índice online e mostra as atividades associadas a elas.  

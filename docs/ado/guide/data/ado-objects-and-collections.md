@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5743e04b402302cc53b7694d8160edfb11769e0c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062912"
 ---
 # <a name="ado-objects-and-collections"></a>Objetos e coleções ADO
 ADO consiste em nove seguintes objetos e coleções de quatro.  
   
-|Objeto ou coleção|Description|  
+|Objeto ou coleção|Descrição|  
 |--------------------------|-----------------|  
 |**Conexão** objeto|Representa uma sessão exclusiva com uma fonte de dados. No caso de um sistema de banco de dados cliente/servidor, é equivalente a uma conexão de rede reais para o servidor. Dependendo da funcionalidade compatível com o provedor, algumas coleções, métodos ou propriedades de um **Conexão** objeto pode não estar disponível.|  
 |Objeto**Comando** |Usado para definir um comando específico, como uma consulta SQL, devem ser executados em relação a uma fonte de dados.|  

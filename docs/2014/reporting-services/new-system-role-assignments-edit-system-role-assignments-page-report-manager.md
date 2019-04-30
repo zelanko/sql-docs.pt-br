@@ -1,5 +1,5 @@
 ---
-title: 'Novas atribuições de função do sistema: Editar página de atribuições de função do sistema (Gerenciador de relatórios) | Microsoft Docs'
+title: 'Novas Atribuições de Função do Sistema: Editar página de atribuições de função do sistema (Gerenciador de relatórios) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 18adcf15f92ded91a4bacc5342162b82b4aec375
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59951532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188410"
 ---
-# <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>Novas atribuições de função do sistema: Editar página de atribuições de função do sistema (Gerenciador de relatórios)
+# <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>Novas Atribuições de Função do Sistema: Editar página de atribuições de função do sistema (Gerenciador de relatórios)
   Use a página Atribuição de Nova Função do Sistema ou Editar Atribuições de Função do Sistema para definir a segurança do servidor de relatório. Toda a segurança é definida por atribuições de função que mapeiam usuários específicos ou grupos até as tarefas que eles podem executar. A lista de tarefas é representada como uma definição de função que você seleciona ao fazer a atribuição da função.  
   
  No nível do sistema, as atribuições de função que você cria ou modifica se aplicam ao servidor de relatórios como um todo. Por exemplo, a capacidade de criar agendas compartilhadas é especificada no nível do sistema porque agendas compartilhadas são usadas em todo o sistema.  

@@ -15,17 +15,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b19a138e9e4d479e7fb9cb3f8b4e140838b43e8a
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188529"
 ---
 # <a name="rds-object-model-summary"></a>Resumo do modelo de objeto RDS
 > [!IMPORTANT]
 >  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
-|Object|Description|  
+|Object|Descrição|  
 |------------|-----------------|  
 |[RDS.DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)|Este objeto contém um método para obter um proxy do servidor. O proxy pode ser o padrão ou um programa de servidor personalizado (objeto de negócios). O programa de servidor pode ser invocado em Internet, intranet, uma rede local, ou ser uma biblioteca de vínculo dinâmico local.<br /><br /> O **DataSpace** objeto é seguro para script.|  
 |[RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|Este objeto representa o programa de servidor padrão. Ele executa o comportamento de recuperação e de atualização de dados do RDS padrão.<br /><br /> O **DataFactory** objeto não é seguro para script.|  

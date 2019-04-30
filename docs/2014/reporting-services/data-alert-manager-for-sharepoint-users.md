@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6db15f08718ef1636dcb617c95994d644582d45f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59958592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63165067"
 ---
 # <a name="data-alert-manager-for-sharepoint-users"></a>Gerenciador de Alertas de Dados para Usuários do SharePoint
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece o Gerenciador de Alertas de Dados para operadores de informações do SharePoint para gerenciar os alertas de dados. Eles podem exibir informações sobre os alertas que criaram, excluir alertas, abrir definições de alertas para edição e executar alertas sob demanda. Eles podem optar por exibir os alertas para um único relatório apenas ou os alertas de todos os relatórios. A imagem a seguir mostra os recursos disponíveis para os operadores de informações no Gerenciador de Alertas de Dados.  

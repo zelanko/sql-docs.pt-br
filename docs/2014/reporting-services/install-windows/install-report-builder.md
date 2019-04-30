@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 830854a26d3f9b05465ee37aac6a9b7584750fe2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063437"
 ---
 # <a name="install-the-stand-alone-version-of-report-builder-report-builder"></a>Instalar a versão autônoma do Construtor de Relatórios (Construtor de Relatórios)
   Você pode instalar o construtor de relatórios no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] pacote de recursos a [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=168472) ou em um local como pasta pública para o qual o ReportBuilder3_x86.msi, o pacote do instalador do Windows para o construtor de relatórios, tem foi baixado.  

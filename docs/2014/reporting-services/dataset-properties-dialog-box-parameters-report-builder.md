@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fe7194c8a6f54da50eeef21891bc1049735ddd1e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164990"
 ---
 # <a name="dataset-properties-dialog-box-parameters-report-builder"></a>Caixa de diálogo Propriedades do Conjunto de Dados, Parâmetros (Construtor de Relatórios)
   Selecione **parâmetros** sobre o **propriedades do conjunto de dados** caixa de diálogo para adicionar, alterar e excluir parâmetros de consulta.  

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6a1f8893351ceb68ebd7c42e3ac82c876c01c10b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198758"
 ---
 # <a name="managing-data-sources"></a>Gerenciar fontes de dados
 Depois de instalar um driver ODBC do programa de instalação do driver, você pode definir uma ou mais fontes de dados para ele. O nome da fonte de dados (DSN) deve fornecer uma descrição exclusiva dos dados. Por exemplo, *folha de pagamento* ou *contas a pagar*. As fontes de dados de usuário e do sistema que são definidas para todos os drivers instalados no momento são listadas na **DSN de usuário** ou **DSN de sistema** guias do **administrador de fonte de dados ODBC**caixa de diálogo. As fontes de dados de arquivo em um determinado diretório são listadas na **DSN de arquivo** guia; o diretório a ser mostrado é inserido na **examinar** caixa a **DSN de arquivo** guia.  
@@ -40,7 +40,7 @@ The specified DSN contains an architecture mismatch between the Driver and Appli
   
  Uma fonte de dados associa um determinado driver ODBC com os dados que você deseja acessar por meio do driver. Por exemplo, você pode criar uma fonte de dados para usar o driver do dBASE ODBC para acessar um ou mais arquivos dBASE encontrados em um diretório específico no seu disco rígido ou uma unidade de rede. Usando o administrador de fonte de dados ODBC, você pode adicionar, modificar e excluir fontes de dados, conforme descrito na tabela a seguir.  
   
-|Ação|Description|  
+|Ação|Descrição|  
 |------------|-----------------|  
 |Adicionando fontes de dados|É possível adicionar várias fontes de dados, cada um deles associando um driver com alguns dados que você deseja acessar usando esse driver. Dê um nome que identifica exclusivamente essa fonte de dados de cada fonte de dados. Por exemplo, se você criar uma fonte de dados para um conjunto de arquivos dBASE que contêm informações do cliente, você pode nomear a fonte de dados "Clientes". Aplicativos normalmente exibem nomes de fonte de dados para os usuários podem escolher.<br /><br /> Adicionando uma fonte de dados de arquivo é um pouco diferente da adição de usuário ou fontes de dados do sistema. Para obter mais informações, consulte o administrador de fonte de dados ODBC no arquivo de Ajuda.|  
 |Modificando fontes de dados|Dependendo dos seus requisitos, talvez seja necessário reconfigurar as fontes de dados. Você pode redefinir opções clicando **configurar** em qualquer caixa de diálogo de instalação do driver.|  

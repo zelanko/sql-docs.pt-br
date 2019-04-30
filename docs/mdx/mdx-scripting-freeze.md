@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cd652a9f308bd7a564a61d165f9c47875a900737
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187570"
 ---
-# <a name="mdx-scripting---freeze"></a>Script MDX - CONGELAR
+# <a name="mdx-scripting---freeze"></a>Script MDX – FREEZE
 
 
   Bloqueia os valores de célula de um subcubo especificado para seus valores atuais. Quando os valores de célula são bloqueados, as alterações nas outras células não têm nenhum efeito nas células que estão bloqueadas.  
@@ -32,8 +32,8 @@ FREEZE Subcube_Expression
  *Subcube_Expression*  
  Uma linguagem MDX válida que retorna um subcubo.  
   
-## <a name="remarks"></a>Remarks  
- O **CONGELAR** instrução bloqueia os valores de células em um subcubo especificado, impedindo que instruções subsequentes no MDX script alterem seus valores em cálculo subsequente passa.  
+## <a name="remarks"></a>Comentários  
+ O **CONGELAR** instrução bloqueia os valores de células em um subcubo especificado, impedindo que instruções subsequentes em um MDX script alterem seus valores em cálculo subsequente passa.  
   
  No exemplo a seguir, A e B representam subcubos em um script de cálculo MDX:  
   

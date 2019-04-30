@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3d127e2da3397e96059c7d04305a983766ca1db6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198341"
 ---
 # <a name="automatic-population-of-the-ipd"></a>Preenchimento automático do IPD
 Alguns drivers são capazes de definir os campos do IPD depois que uma consulta parametrizada preparada. Os campos de descritor são preenchidos automaticamente com informações sobre o parâmetro, incluindo o tipo de dados, precisão, escala e outras características. Isso é equivalente a dar suporte a **SQLDescribeParam**. Essas informações podem ser especialmente importantes para um aplicativo quando ele tiver nenhuma outra maneira de descobri-lo, como quando uma consulta ad hoc é executada com os parâmetros que o aplicativo não conhece.  

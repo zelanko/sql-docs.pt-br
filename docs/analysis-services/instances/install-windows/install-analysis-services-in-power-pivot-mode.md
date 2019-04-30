@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e3e973c30ea178a544b9da3501d88f43cf9b1ddb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63054762"
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>Instale o Analysis Services no modo do Power Pivot.
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "52527747"
   
 -   **Serviços de back-end:** Se você usar [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para Excel para criar pastas de trabalho que contêm dados analíticos, você deve ter [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint para acessar esses dados em um ambiente de servidor. Você pode executar a Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em um computador que tenha o SharePoint Server instalado, ou em um computador diferente que não tenha o SharePoint. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] não tem nenhuma dependência no SharePoint.  
   
-     **Observação:** Este tópico descreve a instalação do servidor do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e dos serviços de back-end.  
+     **Observação:** Este tópico descreve a instalação do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server e os serviços de back-end.  
   
 -   **Camada intermediária:** Aprimoramentos para o [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] experiências no SharePoint, incluindo [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] galeria, agendar a atualização de dados, painel de gerenciamento e provedores de dados. Para obter mais informações sobre como instalar e configurar a camada intermediária, consulte o seguinte:  
   
@@ -77,7 +77,7 @@ ms.locfileid: "52527747"
   
 9. Se outras **Regras de Suporte à Instalação**forem exibidas, examine os avisos e selecione **Avançar**.  
   
-     **Observação:** Como o Firewall do Windows está habilitado, será exibido um aviso solicitando a abertura das portas que habilitam o acesso remoto.  
+     **Observação:** Porque o Firewall do Windows estiver habilitado, você verá um aviso para abrir as portas para habilitar o acesso remoto.  
   
 10. Na página **Função de instalação** , selecione **Instalação de recurso do SQL Server**.  
   
@@ -218,7 +218,7 @@ ms.locfileid: "52527747"
 ##  <a name="bkmk_verify"></a> Etapa 3: Verifique a integração  
  As etapas a seguir conduzem você pela criação e pelo carregamento de uma nova pasta de trabalho para verificar a integração do Analysis Services. Você precisará de um banco de dados do SQL Server para concluir as etapas.  
   
-1.  **Observação:** Se você já tiver uma pasta de trabalho avançada com segmentações de dados ou filtros, poderá carregá-la para a biblioteca de documentos do SharePoint e verificar se consegue interagir com as segmentações de dados e os filtros na exibição da biblioteca de documentos.  
+1.  **Observação:** Se você já tiver uma pasta de trabalho avançada com segmentações de dados ou filtros, você pode carregá-lo à biblioteca de documentos do SharePoint e verificar se consegue interagir com os filtros e segmentações de dados do modo de exibição de biblioteca de documentos.  
   
 2.  Inicie a nova pasta de trabalho no Excel.  
   

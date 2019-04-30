@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 45f3dfbf7a4caa2744ef57a352b0434e7eb1bf37
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63193034"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Coleções de esquema XML (SQL Server)
   Conforme descrito no tópico [xml &#40;Transact-SQL&#41;](/sql/t-sql/xml/xml-transact-sql), o SQL Server fornece armazenamento nativo de dados XML por meio de `xml` tipo de dados. Opcionalmente, você pode associar esquemas XSD com uma variável ou uma coluna de `xml` tipo por meio de uma coleção de esquemas XML. A coleção de esquema XML armazena os esquemas XML importados e, em seguida, é usada para fazer o seguinte:  
@@ -111,7 +111,7 @@ ms.locfileid: "58533708"
   
 -   MODELGROUP  
   
- Por exemplo:  
+ Por exemplo:   
   
 -   **SomeAttribute** é um componente de ATTRIBUTE.  
   

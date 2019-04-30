@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c5a78fc65ee96439c6b6a4d7726e9a40522e5be4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144337"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Criar um plano de manutenção (Superfície de Design do Plano de Manutenção)
   Este tópico descreve como criar um plano de manutenção de servidor único ou vários servidores usando a Superfície de Design do Plano de Manutenção no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Embora o **Assistente de Plano de Manutenção** seja melhor para criar planos de manutenção básicos, a criação de planos usando a superfície de design permite utilizar o fluxo de trabalho aprimorado.  
@@ -34,7 +34,7 @@ ms.locfileid: "54132781"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   Para criar um plano de manutenção multisservidor, é necessário configurar um ambiente multisservidor contendo um servidor mestre e um ou mais servidores de destino. Devem ser criados e mantidos planos de manutenção multisservidor no servidor mestre. Os planos podem ser exibidos, mas não mantidos, nos servidores de destino.  
   
@@ -160,10 +160,10 @@ ms.locfileid: "54132781"
          Define como uma restrição funciona entre duas tarefas.  
   
          Lista**Operação de avaliação**    
-         Especifica a operação de avaliação usada pela restrição de precedência. As operações são: **Restrição**, **expressão**, **Expression and Constraint**, e **Expression or Constraint**.  
+         Especifica a operação de avaliação usada pela restrição de precedência. As operações são: **Constraint**, **Expression**, **Expression and Constraint** e **Expression or Constraint**.  
   
          Lista**Valor**   
-         Especifique o valor de restrição: **Sucesso**, **falha**, ou **conclusão**. **Êxito** é o padrão.  
+         Especifique o valor de restrição: **Success**, **Failure** ou **Completion**. **Êxito** é o padrão.  
   
         > [!NOTE]  
         >  A linha de restrição de precedência é verde para **Êxito**, vermelha para **Falha**e azul para **Conclusão**.  

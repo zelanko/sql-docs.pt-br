@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bfdce1925bc4c73894e1ff1a9bb0d69f6da94501
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150814"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitoring Performance By Using the Query Store
   O recurso repositório de consultas fornece aos DBAs insights sobre escolha e desempenho do plano de consulta. Ele simplifica a solução de problemas, permitindo que você localize rapidamente diferenças de desempenho causadas por alterações nos planos de consulta. O recurso captura automaticamente um histórico de consultas, planos e estatísticas de tempo de execução e os mantém para sua análise. Ele separa os dados por janelas de tempo, permitindo que você veja os padrões de uso do banco de dados e entenda quando as alterações aos planos de consulta ocorreram no servidor. O repositório de consultas pode ser configurado usando a opção [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options) .  
@@ -40,7 +40,7 @@ ms.locfileid: "52756608"
   
 #### <a name="by-using-transact-sql-statements"></a>Usando as instruções Transact-SQL  
   
-1.  Use a instrução `ALTER DATABASE` para habilitar o repositório de consultas. Por exemplo:  
+1.  Use a instrução `ALTER DATABASE` para habilitar o repositório de consultas. Por exemplo:   
   
     ```  
     ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;  
@@ -88,7 +88,7 @@ JOIN sys.query_store_query_text AS Txt
 ## <a name="using-the-regressed-queries-feature"></a>Usando o recurso de consultas regredidas  
  Depois de habilitar o repositório de consultas, atualize a parte do banco de dados do painel Pesquisador de Objetos para adicionar a seção **Repositório de Consultas** .  
   
- ![A QueryStore](../../database-engine/media/querystore.PNG "a QueryStore")  
+ ![QueryStore](../../database-engine/media/querystore.PNG "QueryStore")  
   
  A seleção de **Consultas Regredidas**abre o painel **Consultas Regredidas** no [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]. O painel Consultas Regredidas mostra consultas e planos no repositório de consultas. Caixas de listas suspensas na parte superior permitem que você selecione consultas com base em vários critérios. Selecione um plano para ver o plano de consulta gráfico. Botões estão disponíveis para exibir a consulta de origem, impor e cancelar a imposição de um plano de consulta e atualizar a exibição.  
   

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a548c521b7baa283a9cdf1572fbe8e42e1e6cf45
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061664"
 ---
 # <a name="fetching-data"></a>Buscar dados
 O processo de recuperação de linhas do conjunto de resultados e retorná-los para o aplicativo é chamado *buscando*. Esta seção descreve como buscar dados.  

@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d97fecf49f9d74e2a74444c12dfdf598fb1da469
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161908"
 ---
 # <a name="index-properties-f1-help"></a>Ajuda de F1 de Propriedades do Índice
   As seções neste tópico referem-se a várias propriedades de índice que estão disponíveis usando caixas de diálogo do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
@@ -52,7 +52,7 @@ ms.locfileid: "48084696"
  Exibe o nome do índice. Este campo é somente leitura para um índice existente. Ao criar um novo índice, digite o nome do índice.  
   
  **Tipo de índice**  
- Indica o tipo de índice. Para novos índices, indica o tipo de índice selecionado ao abrir a caixa de diálogo. Os índices podem ser: **Clusterizado**, **Não Clusterizado**, **XML Primário**, **XML Secundário**, **Espacial**, **Columnstore clusterizado**ou **Columnstore não clusterizado**.  
+ Indica o tipo de índice. Para novos índices, indica o tipo de índice selecionado ao abrir a caixa de diálogo. Os índices podem ser: **Clustered**, **Nonclustered**, **XML primário**, **XML secundário**, **espacial**, **em cluster ColumnStore**, ou **Columnstore não clusterizado**.  
   
  **Observação** É permitido somente um índice clusterizado para cada tabela. É permitido somente um índice columnstore xVelocity de memória otimizada para cada tabela.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "48084696"
 >  Esta opção não está disponível para índices XML ou se o índice for um índice clusterizadoF desabilitado.  
   
  **Definir grau máximo de paralelismo**  
- Limita o número de processadores a serem usados durante execução do plano paralelo. O valor padrão, 0, usa o número real de CPUs disponíveis. A definição do valor como 1 elimina a geração em plano paralelo; a definição do valor como um número maior que 1 restringe o número máximo de processadores usados por uma única execução da consulta. Esta opção ficará disponível apenas se a caixa de diálogo estiver no estado **Recriar** ou **Recriar** . Para obter mais informações, consulte [Definir o grau máximo da opção de paralelismo para obtenção do desempenho ideal](../policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md).  
+ Limita o número de processadores a serem usados durante execução do plano paralelo. O valor padrão, 0, usa o número real de CPUs disponíveis. A definição do valor como 1 elimina a geração em plano paralelo; a definição do valor como um número maior que 1 restringe o número máximo de processadores usados por uma única execução da consulta. Esta opção ficará disponível apenas se a caixa de diálogo estiver no estado **Recriar** ou **Recriar** . Para obter mais informações, consulte [definir o Max Degree of Parallelism opção para otimizar o desempenho](../policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md).  
   
 > [!NOTE]  
 >  Se um valor maior que o número de CPUs disponíveis for especificado, será usado o número real de CPUs disponíveis.  
@@ -199,7 +199,7 @@ ms.locfileid: "48084696"
  Indica o esquema de mosaico do índice. Os esquemas de mosaico com suporte são os seguintes:  
   
  **Grade geométrica**  
- Especifica o esquema de mosaico de grade geométrica, que se aplica a uma coluna do `geometry` tipo de dados.  
+ Especifica o esquema de mosaico de grade geométrica, que se aplica a uma coluna do tipo de dados `geometry`.  
   
  **Grade Automática de Geometria**  
  Esta opção é habilitada para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quando o nível de compatibilidade de banco de dados é definido como 110 ou superior.  

@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 14117ed4a3e3e7afc0152c5e659d1c7f040957e9
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150135"
 ---
 # <a name="stdevp-mdx"></a>StdevP (MDX)
 
 
-  Retorna o desvio padrão da população de uma expressão numérica avaliada em um conjunto, usando a fórmula de população polarizada (dividindo por *n*).  
+  Retorna o desvio padrão da população de uma expressão numérica avaliada sobre um conjunto, usando a fórmula de população polarizada (dividindo por *n*).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,7 +35,7 @@ StdevP(Set_Expression [ ,Numeric_Expression ] )
  *Numeric_Expression*  
  Uma expressão numérica válida, geralmente uma linguagem MDX de coordenadas de célula, que retorna um número.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O **StdevP** função usa a população polarizada fórmulas, enquanto o [Stdev](../mdx/stdev-mdx.md) função usa a fórmula de população não polarizada.  
   
 ## <a name="example"></a>Exemplo  
@@ -53,6 +53,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

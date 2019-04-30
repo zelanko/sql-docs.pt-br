@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b4e7850cb0c66b6acbc7be54178cbc9ace27ce72
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59961102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190897"
 ---
 # <a name="report-server-http-log"></a>Log HTTP do Servidor de Relatório
   O log HTTP do servidor de relatório [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mantém um registro de cada solicitação HTTP e resposta manipuladas pelo servidor de relatório. Como os erros de estouro e tempo limite de solicitação não atingem o servidor de relatório, eles não são registrados no arquivo de log.  

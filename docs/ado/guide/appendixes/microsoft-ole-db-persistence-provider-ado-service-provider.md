@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2550e36f977be13e10865d4bd238c8508c542091
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128513"
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Visão geral do provedor de persistência OLE DB da Microsoft
 O Microsoft OLE DB provedor de persistência permite que você salve uma [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) em um arquivo de objeto e restaurá-lo mais tarde **Recordset** objeto do arquivo. Informações de esquema, dados e as alterações pendentes são preservados.
@@ -37,7 +37,7 @@ O Microsoft OLE DB provedor de persistência permite que você salve uma [conjun
 ## <a name="errors"></a>Erros
  Os seguintes erros emitidos por esse provedor podem ser detectados em seu aplicativo.
 
-|Constante|Description|
+|Constante|Descrição|
 |--------------|-----------------|
 |E_BADSTREAM|O arquivo aberto não tem um formato válido (ou seja, o formato não é ADTG ou XML).|
 |E_CANTPERSISTROWSET|O **Recordset** objeto salvo tem características que impedem a serem armazenados.|

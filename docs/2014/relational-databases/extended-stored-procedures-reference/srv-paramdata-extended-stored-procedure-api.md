@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 0825b86cabf57df552063335a0870461cb8a5658
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127417"
 ---
 # <a name="srvparamdata-extended-stored-procedure-api"></a>srv_paramdata (API de procedimento armazenado estendido)
     
@@ -62,14 +62,14 @@ n
   
 |Novos tipos de dados|Comprimento dos dados de entrada|  
 |--------------------|-----------------------|  
-|BITN|**NULL:** VICE-PRESIDENTE, NULO<br /><br /> **ZERO:** VICE-PRESIDENTE, NULO<br /><br /> **> = 255:** N/D<br /><br /> **< 255:** N/D|  
-|BIGVARCHAR|**NULL:** NULL, N/D<br /><br /> **ZERO:** VICE-PRESIDENTE, NULO<br /><br /> **> = 255:** VP, 255 caracteres<br /><br /> **< 255:** VP, dados|  
-|BIGCHAR|**NULL:** NULL, N/D<br /><br /> **ZERO:** VP, 255 espaços<br /><br /> **> = 255:** VP, 255 caracteres<br /><br /> **< 255:** VP, dados + preenchimento (até 255)|  
-|BIGBINARY|**NULL:** NULL, N/D<br /><br /> **ZERO:** VP, 255 0X00<br /><br /> **> = 255:** VP, 255 bytes<br /><br /> **< 255:** VP, dados + preenchimento (até 255)|  
-|BIGVARBINARY|**NULL:** NULL, N/D<br /><br /> **ZERO:** VICE-PRESIDENTE, 0X00<br /><br /> **> = 255:** VP, 255 bytes<br /><br /> **< 255:** VP, dados|  
-|NCHAR|**NULL:** NULL, N/D<br /><br /> **ZERO:** VP, 255 espaços<br /><br /> **> = 255:** VP, 255 caracteres<br /><br /> **< 255:** VP, dados + preenchimento (até 255)|  
-|NVARCHAR|**NULL:** NULL, N/D<br /><br /> **ZERO:** VICE-PRESIDENTE, NULO<br /><br /> **> = 255:** VP, 255 caracteres<br /><br /> **< 255:** VP, dados|  
-|NTEXT|**NULL:** N/D<br /><br /> **ZERO:** N/D<br /><br /> **> = 255:** N/D<br /><br /> **\<255:** N/D|  
+|BITN|**NULO:** VP, NULO<br /><br /> **ZERO:** VP, NULO<br /><br /> **>=255:** N/D<br /><br /> **<255:** N/D|  
+|BIGVARCHAR|**NULO:** NULO, N/D<br /><br /> **ZERO:** VP, NULO<br /><br /> **>=255:** VP, 255 caracteres<br /><br /> **<255:** VP, dados reais|  
+|BIGCHAR|**NULO:** NULO, N/D<br /><br /> **ZERO:** VP, 255 espaços<br /><br /> **>=255:** VP, 255 caracteres<br /><br /> **<255:** VP, dados reais + preenchimento (até 255)|  
+|BIGBINARY|**NULO:** NULO, N/D<br /><br /> **ZERO:** VP, 255 0x00<br /><br /> **>=255:** VP, 255 bytes<br /><br /> **<255:** VP, dados reais + preenchimento (até 255)|  
+|BIGVARBINARY|**NULO:** NULO, N/D<br /><br /> **ZERO:** VP, 0x00<br /><br /> **>=255:** VP, 255 bytes<br /><br /> **<255:** VP, dados reais|  
+|NCHAR|**NULO:** NULO, N/D<br /><br /> **ZERO:** VP, 255 espaços<br /><br /> **>=255:** VP, 255 caracteres<br /><br /> **<255:** VP, dados reais + preenchimento (até 255)|  
+|NVARCHAR|**NULO:** NULO, N/D<br /><br /> **ZERO:** VP, NULO<br /><br /> **>=255:** VP, 255 caracteres<br /><br /> **<255:** VP, dados reais|  
+|NTEXT|**NULO:** N/D<br /><br /> **ZERO:** N/D<br /><br /> **>=255:** N/D<br /><br /> **\<255:** N/D|  
   
  \* Os dados não terminam em nulo; nenhum aviso é emitido no truncamento de dados >255 caracteres.  
   
@@ -79,7 +79,7 @@ n
  Quando uma chamada de procedimento armazenado remoto for feita com parâmetros, os parâmetros poderão ser passados pelo nome ou pela posição (sem-nome). Se a chamada de procedimento armazenado remoto for feita com alguns parâmetros transmitidos pelo nome e outros pela posição, ocorrerá um erro. Em caso de erro, o manipulador SRV_RPC ainda será chamado, mas aparecerá como se não houvesse parâmetros e **srv_rpcparams** retornará 0.  
   
 > [!IMPORTANT]  
->  Você deve examinar totalmente o código-fonte de procedimentos armazenados estendidos e deve testar as DLLs compiladas antes de instalá-las em um servidor de produção. Para obter informações sobre revisão e testes de segurança, consulte este [site da Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
+>  Você deve examinar totalmente o código-fonte de procedimentos armazenados estendidos e deve testar as DLLs compiladas antes de instalá-las em um servidor de produção. Para obter informações sobre revisão e testes de segurança, consulte este [site da Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
   
 ## <a name="see-also"></a>Consulte também  
  [srv_rpcparams &#40;API de Procedimento Armazenado Estendido&#41;](srv-rpcparams-extended-stored-procedure-api.md)  

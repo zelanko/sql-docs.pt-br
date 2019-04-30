@@ -18,18 +18,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a9a265979af780b1df3eedf18c14fd822a2983b1
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63136192"
 ---
 # <a name="search-text-with-regular-expressions"></a>Pesquisar texto com expressões regulares
   As expressões regulares são notação concisa e flexível para pesquisa e substituição de padrões de texto. Um conjunto específico de expressões regulares pode ser usado no campo **Localizar** da caixa de diálogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Find and Replace** dialog box.  
   
 #### <a name="to-find-using-regular-expressions"></a>Para fazer localização usando expressões regulares  
   
-1.  Para habilitar o uso de expressões regulares na **localizar** campo durante **QuickFind**, **FindinFiles**, **substituição rápida**, ou  **Substituir nos arquivos** operações, selecionadas o **uso** opção sob **opções de busca** e escolha **expressões regulares**.  
+1.  Para habilitar o uso de expressões regulares no campo **Localizar** durante as operações **QuickFind**, **FindinFiles**, **Substituição Rápida** ou **Substituir em Arquivos**, selecione a opção **Usar** em **Opções de Localização** e escolha **Expressões regulares**.  
   
 2.  O botão triangular **Lista de Referências** próximo ao campo **Localizar** torna-se disponível. Clique no botão para exibir uma lista das expressões regulares usadas frequentemente. Quando você seleciona qualquer item do Construtor de Expressões, o item é inserido na cadeia de caracteres **Localizar** .  
   
@@ -40,7 +40,7 @@ ms.locfileid: "53328306"
   
 |Expression|Sintaxe|Descrição|  
 |----------------|------------|-----------------|  
-|Qualquer caractere|para obter informações sobre a ferramenta de configuração e recursos adicionais.|Faz a correspondência de qualquer caractere único menos uma quebra de linha.|  
+|Qualquer caractere|.|Faz a correspondência de qualquer caractere único menos uma quebra de linha.|  
 |Zero ou mais|*|Faz a correspondência de zero ou mais ocorrências da expressão precedente, com todas as correspondentes possíveis.|  
 |Um ou mais|+|Faz a correspondência de pelo menos uma ocorrência da expressão precedente.|  
 |Início de linha|^|Ancora a cadeia de caracteres correspondente ao início de uma linha.|  
@@ -64,7 +64,7 @@ ms.locfileid: "53328306"
 |----------------|------------|-----------------|  
 |Mínimo – zero ou mais|@|Faz a correspondência de zero ou mais ocorrências da expressão precedente, correspondendo o mínimo de caracteres possível.|  
 |Mínimo – um ou mais|#|Faz a correspondência de uma ou mais ocorrências da expressão precedente, correspondendo o mínimo de caracteres possível.|  
-|Repetir n vezes|^n|Faz a correspondência de n ocorrências da expressão precedente. Por exemplo, [0-9] ^ 4 correspondem a qualquer sequência de quatro dígitos.|  
+|Repetir n vezes|^n|Faz a correspondência de n ocorrências da expressão precedente. Por exemplo, [0-9]^4 corresponde a qualquer sequência de quatro dígitos.|  
 |Agrupamento|()|Agrupa uma subexpressão.|  
 |Enésimo texto marcado|\n|Em uma expressão **Localizar e Substituir** , indica o texto correspondente da enésima expressão marcada, em que n é um número de 1 a 9.<br /><br /> Em uma expressão **Substituir** , \0 insere o texto inteiro correspondente.|  
 |Campo justificado à direita|\\(w,n)|Em uma expressão **Substituir** , justifica a enésima expressão marcada à direita em um campo de, pelo menos, *w* caracteres de largura.|  
@@ -122,7 +122,7 @@ ms.locfileid: "53328306"
 |Expression|Sintaxe|Descrição|  
 |----------------|------------|-----------------|  
 |Alfa|:Al|Faz a correspondência de qualquer caractere. Por exemplo: Alhe faz a correspondência de palavras como "The", "then", e "reached".|  
-|Numérico|:Nu|Faz a correspondência de qualquer número ou dígito.|  
+|Numeric|:Nu|Faz a correspondência de qualquer número ou dígito.|  
 |Pontuação|:Pu|Faz a correspondência de qualquer marca de pontuação, como?, @, ' etc.|  
 |Espaço em branco|:Wh|Faz a correspondência de todos os tipos de espaço em branco, inclusive espaços de publicação e ideográficos.|  
 |Bidi|:Bi|Faz a correspondência de caracteres de scripts da direita para esquerda, como árabe e hebreu.|  

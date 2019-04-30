@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8937c2b9c80209975d03963acb19ab5da9c99e39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63148910"
 ---
 # <a name="standards-compliant-applications-and-drivers"></a>Drivers e aplicativos em conformidade com padrões
-Um aplicativo compatível com os padrões ou o driver é aquele que está em conformidade com Open CAE Especificação do grupo de "dados de gerenciamento: SQL nível de chamada CLI (Interface)" e o ISO/IEC 9075-3:1995 Interface de nível de chamada (E) (SQL/CLI).  
+Um aplicativo compatível com os padrões ou o driver é aquele que está em conformidade com as especificações do Open grupo CAE "gerenciamento de dados: Interface de nível de chamada SQL (CLI)"e o ISO/IEC 9075-Interface de nível de chamada 3:1995 (E) (SQL/CLI).  
   
  3 de ODBC *. x* garante os seguintes recursos:  
   
@@ -37,7 +37,7 @@ Um aplicativo compatível com os padrões ou o driver é aquele que está em con
   
 -   Se um aplicativo compatível com os padrões chama **SQLAllocEnv** (que pode ocorrer porque **SQLAllocEnv** é uma função válida no Open Group e ISO CLI), a chamada é mapeada para  **SQLAllocHandleStd** em tempo de compilação. Como resultado, em tempo de execução, o aplicativo chama **SQLAllocHandleStd**. Durante o processamento desta chamada, o Gerenciador de Driver define o atributo de ambiente SQL_ATTR_ODBC_VERSION como SQL_OV_ODBC3. Uma chamada para **SQLAllocHandleStd** é equivalente a uma chamada para **SQLAllocHandle** com um *HandleType* SQL_HANDLE_ENV e uma chamada para **SQLSetEnvAttr** para definir SQL_ATTR_ODBC_VERSION como SQL_OV_ODBC3.  
   
--   Se um aplicativo compatível com os padrões chama **SQLBindParam** (que pode ocorrer porque **SQLBindParam** é uma função válida no Open Group e ISO CLI), o ODBC 3 *. x* Gerenciador de driver mapeia a chamada para a chamada equivalente no **SQLBindParameter**. (Consulte [mapeamento SQLBindParam](../../../odbc/reference/appendixes/sqlbindparam-mapping.md) no Apêndice g: Driver diretrizes para compatibilidade com versões anteriores.)  
+-   Se um aplicativo compatível com os padrões chama **SQLBindParam** (que pode ocorrer porque **SQLBindParam** é uma função válida no Open Group e ISO CLI), o ODBC 3 *. x* Gerenciador de driver mapeia a chamada para a chamada equivalente no **SQLBindParameter**. (Consulte [mapeamento SQLBindParam](../../../odbc/reference/appendixes/sqlbindparam-mapping.md) no Apêndice g: Diretrizes de driver para compatibilidade com versões anteriores.)  
   
 -   Para alinhar com a CLI do ISO, o ODBC 3 *. x* arquivos de cabeçalho contêm aliases para tipos de informações usados em chamadas aos **SQLGetInfo**. Um aplicativo compatível com os padrões pode usar esses aliases em vez de 3 a ODBC *. x* tipos de informações. Para obter mais informações, consulte o próximo tópico, [arquivos de cabeçalho](../../../odbc/reference/develop-app/header-files.md).  
   

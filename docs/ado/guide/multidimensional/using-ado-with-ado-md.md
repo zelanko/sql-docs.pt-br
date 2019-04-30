@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 69707e5026497a1f98ab168d71b4e6b286520fbe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63194896"
 ---
 # <a name="using-ado-with-ado-md"></a>Usar o ADO com ADO MD
 ADO e o ADO MD são modelos de objeto relacionado, mas separado. O ADO oferece objetos para se conectar a fontes de dados, execução de comandos, recuperando dados tabulares e metadados de esquema em um formato tabular e exibindo informações de erro do provedor. ADO MD oferece objetos para recuperar dados multidimensionais e exibição de metadados de esquema multidimensional.  

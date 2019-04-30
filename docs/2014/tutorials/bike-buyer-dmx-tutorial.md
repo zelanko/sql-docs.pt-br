@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3cf9a0c9e6059330c0b8edbd8228f617ba093564
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140537"
 ---
 # <a name="bike-buyer-dmx-tutorial"></a>Tutorial DMX Comprador de bicicleta
   Nesse tutorial, você aprenderá a criar, treinar e explorar modelos de mineração de dados com o uso da linguagem de consulta DMX (Extensões de Mineração de Dados). Você então utilizará esses modelos de mineração de dados para criar previsões que determinem se um cliente comprará uma bicicleta.  

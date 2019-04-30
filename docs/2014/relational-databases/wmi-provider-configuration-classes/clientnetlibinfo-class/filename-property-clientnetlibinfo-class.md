@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 770090cbef3c3e7b00d53164a986ffc80bfbd7c7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191176"
 ---
 # <a name="filename-property-clientnetlibinfo-class"></a>Propriedade FileName (classe ClientNetLibInfo)
   Obtém o nome do arquivo de biblioteca de rede do cliente.  

@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 90a47a7586d0f3c6b5bd0fee28ed01f3b292a92e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299463"
 ---
 # <a name="project-settings-loading-objects-accesstosql"></a>Configurações (carregar objetos) do projeto (AccessToSQL)
 As configurações do projeto ao carregar objetos permitem que você configure como os objetos de banco de dados do Access são sincronizados com os objetos de banco de dados do SQL Server.  

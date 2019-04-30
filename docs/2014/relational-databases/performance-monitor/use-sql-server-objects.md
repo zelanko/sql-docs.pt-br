@@ -31,11 +31,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 67edebf9b4adcf40c12190446997dbd7c4b6e57b
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151168"
 ---
 # <a name="use-sql-server-objects"></a>Usar objetos do SQL Server
   O Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece objetos e contadores que podem ser usados pelo Monitor do Sistema para monitorar a atividade em computadores que executem uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Um objeto é qualquer recurso do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , como um bloqueio do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou um processo do Windows. Cada objeto contém um ou mais contadores, que determinam vários aspectos dos objetos a monitorar. Por exemplo, o objeto **SQL Server Locks** contém contadores chamados **Número de deadlocks/segundo** e **Tempos limite de bloqueio/segundo**.  
@@ -105,13 +105,13 @@ ms.locfileid: "54100721"
 |[SQLServer:Locks](sql-server-locks-object.md)|Fornece informações sobre as solicitações de bloqueio individuais feitas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como tempos limite de bloqueio e deadlocks. Pode haver várias instâncias deste objeto.|  
 |[SQLServer:Memory Manager](sql-server-memory-manager-object.md)|Fornece informações sobre o uso de memória do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , como o número total de estruturas de bloqueio alocadas atualmente.|  
 |[SQLServer:Cache de planos](sql-server-plan-cache-object.md)|Fornece informações sobre o cache do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizado para armazenar objetos, como procedimentos armazenados, gatilhos e planos de consulta.|  
-|[SQLServer: Estatísticas de Pool de recursos](sql-server-resource-pool-stats-object.md)|Contém informações sobre estatísticas de pool de recursos do Administrador de Recursos.|  
+|[SQLServer: Estatísticas do Pool de Recursos](sql-server-resource-pool-stats-object.md)|Contém informações sobre estatísticas de pool de recursos do Administrador de Recursos.|  
 |[SQLServer:SQL Errors](sql-server-sql-errors-object.md)|Fornece informações sobre erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[SQLServer:SQL Statistics](sql-server-sql-statistics-object.md)|Fornece informações sobre aspectos de consultas do [!INCLUDE[tsql](../../includes/tsql-md.md)] , como o número de lotes de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] recebidos pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[SQLServer:Transactions](sql-server-transactions-object.md)|Fornece informações sobre as transações ativas no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como o número global de transações e o número de transações de instantâneo.|  
 |[SQLServer:User Settable](sql-server-user-settable-object.md)|Executa monitoramento personalizado. Cada contador pode ser um procedimento armazenado personalizado ou qualquer instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] que retorne um valor a ser monitorado.|  
-|[SQLServer: Estatísticas de espera](sql-server-wait-statistics-object.md)|Fornece informações sobre esperas.|  
-|[SQLServer: Estatísticas de grupo de carga de trabalho](sql-server-workload-group-stats-object.md)|Contém informações sobre estatísticas de grupo de cargas de trabalho do Administrador de Recursos.|  
+|[SQLServer: Estatísticas de Espera](sql-server-wait-statistics-object.md)|Fornece informações sobre esperas.|  
+|[SQLServer: Estatísticas de Grupo de Carga de Trabalho](sql-server-workload-group-stats-object.md)|Contém informações sobre estatísticas de grupo de cargas de trabalho do Administrador de Recursos.|  
   
 ##  <a name="SQLServerReplicationPOs"></a> Objetos de desempenho de replicação do SQL Server  
  A seguinte tabela lista os objetos de desempenho fornecidos para replicação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  

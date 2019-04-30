@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 660515f10797e1f11fac22c1baf4ed74e9f67c0c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157235"
 ---
 # <a name="supported-sql-server-features"></a>Recursos do SQL Server com suporte
   Este tópico aborda os recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com ou sem suporte para uso com objetos com otimização de memória.  
@@ -63,11 +63,11 @@ ms.locfileid: "53375028"
   
 -   Integração com AlwaysOn: o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece várias opções para a criação de alta disponibilidade de um servidor ou banco de dados, inclusive o AlwaysOn. Para obter mais informações, consulte [Soluções de alta disponibilidade &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md).  
   
--   Envio de logs: O envio de logs do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite o envio automático de backups do log de transações de um banco de dados primário em uma instância do servidor primário para um ou mais bancos de dados secundários em outras instâncias de servidor secundário. Para obter mais informações, consulte [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
+-   Envio de logs: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Permite o envio enviar automaticamente os backups de log de transações do banco de dados primário em uma instância do servidor primário para um ou mais bancos de dados secundários em instâncias separadas de servidor secundário. Para obter mais informações, consulte [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
 -   A replicação transacional para tabelas com otimização de memória em assinantes tem suporte com algumas restrições. Para obter mais informações, veja [Replicação para assinantes de tabela com otimização de memória](../replication/replication-to-memory-optimized-table-subscribers.md).  
   
--   Administrador de Recursos: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Administrador de recursos é um recurso que você pode usar para gerenciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consumo de recursos do sistema e de carga de trabalho. O Administrador de Recursos permite que você especifique os limites de quantidade de CPU, E/S física e memória que as solicitações recebidas de aplicativos podem usar. Para obter mais informações, consulte [Managing Memory for In-Memory OLTP](../../database-engine/managing-memory-for-in-memory-oltp.md) e [Resource Governor](../resource-governor/resource-governor.md).  
+-   Administrador de recursos: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Administrador de recursos é um recurso que você pode usar para gerenciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consumo de recursos do sistema e de carga de trabalho. O Administrador de Recursos permite que você especifique os limites de quantidade de CPU, E/S física e memória que as solicitações recebidas de aplicativos podem usar. Para obter mais informações, consulte [Managing Memory for In-Memory OLTP](../../database-engine/managing-memory-for-in-memory-oltp.md) e [Resource Governor](../resource-governor/resource-governor.md).  
   
 -   A OLTP na memória tem restrições nas páginas de código com suporte para colunas (var)char em tabelas com otimização de memória e ordenações com suporte usadas em índices e em procedimentos armazenados nativamente compilados. Para obter mais informações, consulte [Páginas de código de ordenações](../../database-engine/collations-and-code-pages.md).  
   

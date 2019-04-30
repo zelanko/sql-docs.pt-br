@@ -24,11 +24,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 047fffdc729b276979720e9d245862a692a86be0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162406"
 ---
 # <a name="disable-indexes-and-constraints"></a>Desabilitar índices e restrições
   Este tópico descreve como desabilitar um índice ou restrições no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A desabilitação de um índice impede que o usuário o acesse, e que índices clusterizados acessem os dados da tabela subjacente. A definição do índice permanece nos metadados e as estatísticas do índice são mantidas em índices não clusterizados. A desabilitação de um índice não clusterizado ou clusterizado em uma exibição exclui fisicamente os dados do índice. A desabilitação de um índice clusterizado em uma tabela impede o acesso aos dados; os dados ainda permanecem na tabela, mas ficam indisponíveis para operações DML (linguagem de manipulação de dados) até que o índice seja descartado ou recriado.  
@@ -127,7 +127,7 @@ ms.locfileid: "48050553"
  Exibe o nome da tabela ou exibição na qual o índice foi criado.  
   
  **Tipo de Índice**  
- Exibe o tipo de índice: **Clusterizado**, **Não clusterizado**, **Espacial**ou **XML**.  
+ Exibe o tipo do índice: **Clustered**, **Nonclustered**, **espacial**, ou **XML**.  
   
  **Status**  
  Exibe o status atual da operação de desabilitação. Os possíveis valores após a execução são:  

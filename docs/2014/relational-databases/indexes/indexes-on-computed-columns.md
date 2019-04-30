@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c5aa2bd118d99afea6a1ee6ea8f41c646146c32f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162459"
 ---
 # <a name="indexes-on-computed-columns"></a>Índices em colunas computadas
   Você pode definir índices em colunas computadas contanto que os seguintes requisitos sejam satisfeitos:  
@@ -60,7 +60,7 @@ ms.locfileid: "48049566"
 > [!NOTE]  
 >  Quando você se referir a literais de cadeia de caracteres do tipo de dados de data em colunas computadas indexadas no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], recomendamos que você converta explicitamente o literal para o tipo de data desejado, usando um estilo de formato de data determinístico. Para obter uma lista de estilos de formato de data determinísticos, veja [CAST e CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql). Expressões que envolvem conversão implícita de cadeias de caracteres para tipos de dados de data são consideradas não determinísticas, a menos que o nível de compatibilidade de banco de dados seja definido como 80 ou abaixo disso. Isso ocorre porque os resultados dependem das configurações de [LANGUAGE](/sql/t-sql/statements/set-language-transact-sql) e [DATEFORMAT](/sql/t-sql/statements/set-dateformat-transact-sql) da sessão de servidor. Por exemplo, os resultados da expressão `CONVERT (datetime, '30 listopad 1996', 113)` dependem da configuração LANGUAGE porque a cadeia de caracteres '`30 listopad 1996`' significa meses diferentes em idiomas. Semelhantemente, na expressão `DATEADD(mm,3,'2000-12-01')`, o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] interpreta a cadeia de caracteres `'2000-12-01'` com base na configuração DATEFORMAT.  
 >   
->  A conversão implícita de dados de caracteres não Unicode entre agrupamentos também é considerada não determinística, a menos que o nível de compatibilidade seja definido como 80 ou abaixo disso.  
+>  A conversão implícita de dados de caracteres não Unicode entre ordenações também é considerada não determinística, a menos que o nível de compatibilidade seja definido como 80 ou abaixo disso.  
 >   
 >  Quando o nível da configuração da compatibilidade de banco de dados é 90, você não pode criar índices em colunas computadas que contêm essas expressões. Porém, a existência de colunas computadas com essas expressões de um banco de dados atualizado é sustentável. Se você usar colunas computadas indexadas que contêm conversões implícitas de cadeia de caracteres para datas; para evitar possível corrupção de índice, verifique se as configurações LANGUAGE e DATEFORMAT estão consistentes em seus bancos de dados e aplicativos.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48049566"
   
 -   Não é uma expressão de tipos de dados `float` ou `real`.  
   
--   Ele não usa um `float` ou `real` tipo de dados em sua definição. Por exemplo, na instrução a seguir, coluna `y` é `int` e determinística mas não precisa.  
+-   Não usa `float` ou tipo de dados `real` em sua definição. Por exemplo, na instrução a seguir, a coluna `y` é `int` e determinística mas não é precisa.  
   
     ```  
     CREATE TABLE t2 (a int, b int, c int, x float,   
@@ -82,7 +82,7 @@ ms.locfileid: "48049566"
     ```  
   
 > [!NOTE]  
->  Qualquer `float` ou `real` expressão é considerada imprecisa e não pode ser uma chave de um índice; uma `float` ou `real` expressão pode ser usada em uma exibição indexada, mas não como uma chave. Isso também é verdade para colunas computadas. Qualquer função, expressão ou função definida pelo usuário será considerada imprecisa se contiver uma `float` ou `real` expressões. Isso inclui as lógicas (comparações).  
+>  Qualquer expressão `float` ou `real` é considerada imprecisa e não pode ser uma chave de um índice; uma expressão `float` ou `real` pode ser usada em uma exibição indexada mas não como uma chave. Isso também é verdade para colunas computadas. Qualquer função, expressão, ou função definida pelo usuário será considerada imprecisa se contiver qualquer expressão `float` ou `real`. Isso inclui as lógicas (comparações).  
   
  A propriedade **IsPrecise** da função COLUMNPROPERTY relata se uma *computed_column_expression* é precisa.  
   
@@ -90,9 +90,9 @@ ms.locfileid: "48049566"
   
 -   O *computed_column_expression* definido para a coluna computada não pode ser avaliada como o `text`, `ntext`, ou `image` tipos de dados.  
   
--   Colunas computadas derivadas dos `image`, `ntext`, `text`, `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, e `xml` tipos de dados podem ser indexados, desde que o tipo de dados de coluna computada seja permitido como uma coluna de chave de índice.  
+-   Colunas computadas derivadas de `image`, `ntext`, `text`, `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, e tipos de dados `xml` podem ser indexados contanto que o tipo de dados de coluna computada seja permitido como coluna de índice chave.  
   
--   Colunas computadas derivadas dos `image`, `ntext`, e `text` tipos de dados podem ser colunas (incluídas) em um índice não clusterizado, desde que o tipo de dados de coluna computada seja permitido como uma coluna de índice não chave.  
+-   Colunas computadas derivadas de `image`, `ntext`, e tipos de dados `text` podem ser colunas não chave (inclusas) em um índice não clusterizado contanto que o tipo de dados da coluna computada seja permitida como coluna de índice não chave.  
   
  **SET Option Requirements**  
   

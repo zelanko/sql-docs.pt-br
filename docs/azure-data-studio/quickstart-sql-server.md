@@ -1,5 +1,5 @@
 ---
-title: 'Guia de início rápido: Conectar e consultar o SQL Server'
+title: 'Início Rápido: Conectar e consultar o SQL Server'
 titleSuffix: Azure Data Studio
 description: Neste início rápido mostra como usar o Studio de dados do Azure para se conectar ao SQL Server e executar uma consulta
 ms.custom: seodec18
@@ -12,13 +12,13 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.openlocfilehash: 4dfe47c44a6bc5e706db3123d167802bfd74dddc
-ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63142382"
 ---
-# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Guia de início rápido: Conectar e consultar usando SQL Server [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Início Rápido: Conectar e consultar usando SQL Server [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 Neste início rápido mostra como usar [!INCLUDE[name-sos](../includes/name-sos-short.md)] para se conectar ao SQL Server e, em seguida, usar instruções Transact-SQL (T-SQL) para criar o *TutorialDB* usados em [!INCLUDE[name-sos](../includes/name-sos-short.md)] tutoriais.
 
 ## <a name="prerequisites"></a>Prerequisites

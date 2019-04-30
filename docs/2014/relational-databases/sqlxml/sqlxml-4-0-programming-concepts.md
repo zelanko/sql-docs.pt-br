@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 61464b771b0829dce2a60b3201c8846cf2f9bd0c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63295127"
 ---
 # <a name="sqlxml-40-programming-concepts"></a>Conceitos de programação do SQLXML 4.0
   O SQLXML 3.0 foi fornecido como uma versão da Web para oferecer funcionalidade XML do cliente e aprimoramentos adicionais aos recursos existentes, como esquemas XSD anotados, carregamento em massa XML, suporte a serviços Web (SOAP) e diagramas de atualização.  

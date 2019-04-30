@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e152c3147ab7c316494c6891424c0a7c8173f002
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062655"
 ---
 # <a name="the-field-object"></a>O objeto Field
 Cada **campo** objeto normalmente corresponde a uma coluna em uma tabela de banco de dados. No entanto, uma **campo** também pode representar um ponteiro para outro **conjunto de registros**, chamado de um capítulo. Exceções, como colunas de capítulo, serão abordadas posteriormente neste guia.  

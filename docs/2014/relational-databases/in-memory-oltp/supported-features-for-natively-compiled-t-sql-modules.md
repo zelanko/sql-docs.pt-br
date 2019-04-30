@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b4fd1a406848006739b83c1b8a0886d5c2d4bdfa
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155721"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>Construções com suporte nos procedimentos armazenados compilados de modo nativo
   Este tópico contém uma lista de recursos com suporte para procedimentos armazenados compilados nativamente ([CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)):  
@@ -81,9 +81,9 @@ ms.locfileid: "58527138"
 ##  <a name="bfncsp"></a> Funções internas em procedimentos armazenados compilados nativamente  
  As seguintes funções têm suporte em restrições padrão nas tabelas com otimização de memória e em procedimentos armazenados compilados nativamente.  
   
--   Funções matemáticas: ACOS, ASIN, ATAN, ATN2, COS, COT, DEGREES, EXP, LOG, LOG10, PI, POWER, RADIANS, RAND, SIN, SQRT, SQUARE e TAN  
+-   Funções matemáticas: ACOS, ASIN, ATAN, ATN2, COS, COT, graus, EXP, LOG, LOG10, PI, POWER, radianos, RAND, SIN, SQRT, SQUARE e TAN  
   
--   Funções de data: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME e YEAR.  
+-   Funções de data: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, dia, EOMONTH, GETDATE, GETUTCDATE, mês, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME e YEAR.  
   
 -   Funções de cadeia de caracteres: LEN, LTRIM, RTRIM e SUBSTRING  
   
@@ -172,13 +172,13 @@ ms.locfileid: "58527138"
 ##  <a name="los"></a> Limitações na classificação  
  Você pode classificar maior que 8.000 linhas em uma consulta que usa [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) e uma [Cláusula ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql). No entanto, sem a [Cláusula ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) pode classificar até 8.000 linhas (menos linhas se houver junções).  
   
- Se sua consulta usar o operador [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) e uma [Cláusula ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), você pode especificar até 8192 linhas para o operador TOP. Se você especificar mais de 8192 linhas, obterá a mensagem de erro: **Msg 41398, nível 16, estado 1, procedimento  *\<procedureName >*, linha  *\<lineNumber >* o operador TOP pode retornar no máximo 8192 linhas;  *\<número >* foi solicitado.**  
+ Se sua consulta usar o operador [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) e uma [Cláusula ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), você pode especificar até 8192 linhas para o operador TOP. Se você especificar mais de 8192 linhas, você receberá a mensagem de erro: **Msg 41398, nível 16, estado 1, procedimento  *\<procedureName >*, linha  *\<lineNumber >* o operador TOP pode retornar no máximo 8192 linhas;  *\<número >* foi solicitado.**  
   
  Se você não tiver uma cláusula TOP, poderá classificar qualquer número de linhas com ORDER BY.  
   
  Se você não usar uma cláusula ORDER BY, poderá usar qualquer valor inteiro com o operador TOP.  
   
- Exemplo com TOP N = 8192: compila  
+ Exemplo com TOP N = 8192: Compila  
   
 ```sql  
 CREATE PROCEDURE testTop  
@@ -191,7 +191,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```  
   
- Exemplo com TOP N > 8192: não compila.  
+ Exemplo com TOP N > 8192: Falha na compilação.  
   
 ```sql  
 CREATE PROCEDURE testTop  
@@ -206,7 +206,7 @@ GO
   
  A limitação de 8192 linhas só se aplica a `TOP N` onde `N` é uma constante, como nos exemplos anteriores.  Se você precisar de `N` maior que 8192, poderá atribuir o valor a uma variável e usar essa variável com `TOP`.  
   
- Exemplo que usa uma variável: compila  
+ Exemplo usando uma variável: Compila  
   
 ```sql  
 CREATE PROCEDURE testTop  
@@ -220,7 +220,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```  
   
- **Limitações nas linhas retornadas:** Há dois casos em que isso pode, potencialmente, reduzir o número de linhas a serem retornadas pelo operador TOP:  
+ **Limitações nas linhas retornadas:** Há dois casos em que podem reduzir o número de linhas que podem ser retornadas pelo operador TOP:  
   
 -   Uso de JOINs na consulta.  A influência de JOINs na limitação depende do plano de consulta.  
   

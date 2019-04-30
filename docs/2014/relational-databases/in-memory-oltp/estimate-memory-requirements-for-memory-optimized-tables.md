@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 15b3b27f859b2ea2ed3008d33f19a682aeef833b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157956"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Estimar requisitos de memória para tabelas com otimização de memória
   Se você estiver criando um novo [!INCLUDE[hek_2](../../includes/hek-2-md.md)] tabela com otimização de memória ou migrar uma tabela existente com base em disco para uma tabela com otimização de memória, é importante ter uma estimativa razoável das necessidades de memória de cada tabela, portanto, você pode provisionar o servidor com o suficiente memória. Esta seção descreve como estimar a quantidade de memória necessária para manter dados para uma tabela com otimização de memória.  
@@ -115,7 +115,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  Para obter informações sobre como os índices de hash funcionam em tabelas com otimização de memória [!INCLUDE[hek_2](../../includes/hek-2-md.md)] , veja [Índices de hash](../../database-engine/hash-indexes.md).  
   
- **Observação:** Você não pode alterar o tamanho da matriz de índice de hash rapidamente. Para alterar o tamanho da matriz de índice de hash é necessário remover a tabela, alterar o valor de bucket_count e recriar a tabela.  
+ **Observação:** Você não pode alterar dinamicamente o tamanho da matriz de índice de hash. Para alterar o tamanho da matriz de índice de hash é necessário remover a tabela, alterar o valor de bucket_count e recriar a tabela.  
   
  **Definindo o tamanho de matriz de índice de hash**  
   

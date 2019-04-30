@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d740148052712a69a39e0de314496733b3b26a8b
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63154633"
 ---
 # <a name="filter-mdx"></a>Filter (MDX)
 
@@ -35,10 +35,10 @@ Filter(Set_Expression, Logical_Expression )
  *Logical_Expression*  
  Uma expressão lógica MDX válida avaliada como verdadeira ou falsa.  
   
-## <a name="remarks"></a>Remarks  
- O **filtro** função avalia a expressão lógica especificada em relação a cada tupla no conjunto especificado. A função retorna um conjunto que consiste em cada tupla no conjunto especificado em que a expressão lógica é avaliada como **true**. Se nenhuma tupla for avaliada como **true**, um conjunto vazio será retornado.  
+## <a name="remarks"></a>Comentários  
+ O **filtro** função avalia a expressão lógica especificada em relação a cada tupla no conjunto especificado. A função retorna um conjunto que consiste em cada tupla no conjunto especificado em que a expressão lógica é avaliada como **verdadeira**. Se nenhuma tupla for avaliada como **verdadeira**, um conjunto vazio será retornado.  
   
- O **filtro** função funciona de maneira semelhante do [IIf](../mdx/iif-mdx.md) função. O **IIf** função retorna apenas uma das duas opções com base na avaliação de uma expressão lógica MDX, enquanto o **filtro** função retorna um conjunto de tuplas que atendem à condição de pesquisa especificada. Na verdade, o **filtro** função executa `IIf(Logical_Expression, Set_Expression.Current, NULL)` em cada tupla no conjunto e retorna o conjunto resultante.  
+ O **filtro** função funciona de maneira semelhante do [IIf](../mdx/iif-mdx.md) função. O **IIf** função retorna apenas uma das duas opções com base na avaliação de uma expressão lógica MDX, enquanto o **filtro** função retorna um conjunto de tuplas que atendem à condição de pesquisa especificado. Na verdade, o **filtro** função executa `IIf(Logical_Expression, Set_Expression.Current, NULL)` em cada tupla no conjunto e retorna o conjunto resultante.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir mostra o uso da função Filter no eixo Linhas de uma consulta para retornar somente as Datas em que o Valor das Vendas pela Internet é maior do que US$ 10.000:  
@@ -57,7 +57,7 @@ Filter(Set_Expression, Logical_Expression )
   
  `[Adventure Works]`  
   
- A função Filter também pode ser usada em definições de membro calculado. O exemplo a seguir retorna a soma da `Measures.[Order Quantity]` membro, agregado sobre os primeiros nove meses do ano calendário 2003 contidos no `Date` dimensão, do **Adventure Works** cubo. O **PeriodsToDate** função define as tuplas no conjunto sobre o qual o **agregação** função opera. O **filtro** função limita as tuplas sejam retornadas para aquelas com valores mais baixos para a medida quantidade de vendas de revendedor para o período de tempo anterior.  
+ A função Filter também pode ser usada em definições de membro calculado. O exemplo a seguir retorna a soma do `Measures.[Order Quantity]` membro, agregado sobre os primeiros nove meses de 2003 contidos na `Date` dimensão, da **Adventure Works** cubo. O **PeriodsToDate** função define as tuplas no conjunto sobre o qual o **agregação** função opera. O **filtro** função limita as tuplas sejam retornadas para aquelas com valores mais baixos para a medida de vendas do revendedor para o período de tempo anterior.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS Count  
@@ -85,6 +85,6 @@ WHERE ([Geography].[State-Province].x,
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

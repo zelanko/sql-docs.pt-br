@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 094ceed90543e61bf0577131508612244393cead
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63080667"
 ---
 # <a name="user-interface-reference-db2tosql"></a>Referência da Interface do usuário (DB2ToSQL)
 Esta seção inclui tópicos de ajuda para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) para DB2.  
@@ -25,7 +25,7 @@ A tabela a seguir lista as caixas de diálogo do SSMA:
   
 |||  
 |-|-|  
-|Tópico|Description|  
+|Tópico|Descrição|  
 |[Seleção de objetos avançada &#40;DB2ToSQL&#41;](../../ssma/db2/advanced-object-selection-db2tosql.md)|Use o **avançado objeto selecione** caixa de diálogo para localizar objetos de banco de dados usando critérios de filtro e, em seguida, marque ou desmarque esses objetos.|  
 |[Relatório de avaliação &#40;DB2ToSQL&#41;](../../ssma/db2/assessment-report-db2tosql.md)|Use o relatório de avaliação para exibir os resultados da conversão de DB2 objetos a serem [!INCLUDE[tsql](../../includes/tsql-md.md)] sintaxe e para estimar o tempo e a complexidade de uma migração para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Conectar-se ao banco de dados DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)|Use o **conectar-se ao DB2** caixa de diálogo para se conectar ao banco de dados DB2 que você deseja migrar.|  

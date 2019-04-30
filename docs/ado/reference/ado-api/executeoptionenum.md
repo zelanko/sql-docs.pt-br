@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7512f456d1423caf6318903119c2ad55c1938dec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301288"
 ---
 # <a name="executeoptionenum"></a>ExecuteOptionEnum
 Especifica como um provedor deve executar um comando.  
   
-|Constante|Valor|Description|  
+|Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
 |**adAsyncExecute**|0x10|Indica que o comando deve executar de forma assíncrona.<br /><br /> Esse valor não pode ser combinado com o [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) valor **adCmdTableDirect**.|  
 |**adAsyncFetch**|0x20|Indica que o restante linhas após a quantidade inicial especificada do [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) propriedade deve ser recuperada de maneira assíncrona.|  
@@ -37,7 +37,7 @@ Especifica como um provedor deve executar um comando.
 |**adOptionUnspecified**|-1|Indica que o comando é especificado.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
- Pacote: **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

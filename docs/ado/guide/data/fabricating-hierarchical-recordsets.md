@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 17cf661e092e253e206b595dec5d807a35b895fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161462"
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>Fabricar conjuntos de registros hierárquicos
 O exemplo a seguir mostra como fabricar um conjunto de registros hierárquico sem uma fonte de dados subjacente usando os dados de formatação a gramática para definir as colunas para o pai, filho e neto **conjuntos de registros**.  

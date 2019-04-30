@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 232b7c739e274ba9252c14dd28e739934cbd42e6
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63142965"
 ---
 # <a name="visual-c-ado-programming"></a>Programação ADO do Visual C++
 A referência de API ADO descreve a funcionalidade do ADO API (API) usando uma sintaxe semelhante para o Microsoft Visual Basic. Embora o público-alvo é todos os usuários, programadores ADO empregam diversas linguagens como Visual Basic, Visual C++ (com e sem o **#import** diretiva) e Visual J++ (com o pacote de classe do ADO/WFC).  
@@ -293,7 +293,7 @@ _variant_t  vtMissingYours(DISP_E_PARAMNOTFOUND, VT_ERROR); 
 Dim VariableName As Variant  
 ```
   
- No Visual C++, declarar uma variável como tipo **variant_t**. Alguns esquemático **variant_t** declarações são mostradas abaixo.  
+ No Visual C++, declare uma variável como tipo **variant_t**. Alguns esquemático **variant_t** declarações são mostradas abaixo.  
   
 > [!NOTE]
 >  Essas declarações simplesmente dar uma ideia do que você faria o código no seu programa. Para obter mais informações, consulte os exemplos a seguir e a documentação Visual C + +.  
@@ -325,7 +325,7 @@ Dim fld As ADODB.Field
 End Sub  
 ```
   
- O exemplo de Visual C++ a seguir demonstra o uso de um **SafeArray** usado com um **variant_t**.  
+ Visual a seguir C++ exemplo demonstra como usar um **SafeArray** usado com um **variant_t**.  
   
 #### <a name="notes"></a>Observações  
  As observações a seguir correspondem às seções comentadas no exemplo de código.  

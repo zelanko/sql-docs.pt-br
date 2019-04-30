@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 51492e55fd3c34c099a5f53187d1b2a9875ce7e3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188642"
 ---
 # <a name="sqltableprivileges"></a>SQLTablePrivileges
   **SQLTablePrivileges** pode ser executado em um cursor estático. Uma tentativa de executar **SQLTablePrivileges** em um cursor atualizável (controlado por conjunto de chaves ou dinâmico) retorna SQL_SUCCESS_WITH_INFO, indicando o tipo de cursor foi alterado.  
@@ -27,7 +27,7 @@ ms.locfileid: "53349011"
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client dá suporte a informações de relatórios para tabelas em servidores vinculados, aceitando um nome de duas partes para o *CatalogName* parâmetro: *Linked_server_name*.  
   
 ## <a name="see-also"></a>Consulte também  
- [Função SQLTablePrivileges] (https://go.microsoft.com/fwlink/?LinkId=59373\)   
+ [SQLTablePrivileges Function](https://go.microsoft.com/fwlink/?LinkId=59373\)   
  [Detalhes da implementação da API do ODBC](odbc-api-implementation-details.md)  
   
   

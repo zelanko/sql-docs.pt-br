@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ec21ff98d49cff26bde48452a30fd347c23782fe
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63216007"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
   O Agente de Mesclagem de Replicação é um executável utilitário que aplica o instantâneo inicial contido nas tabelas do banco de dados aos Assinantes. Ele também mescla as alterações incrementais de dados que ocorreram no Publicador depois que o instantâneo inicial foi criado e reconcilia conflitos de acordo com as regras que você configura ou usando um resolvedor personalizado que você cria.  
@@ -186,7 +186,7 @@ ms.locfileid: "54129536"
 |**2**|O agente deve baixar alterações de dados do Publicador para o Assinante.|  
 |**3** (padrão)|A agente deve primeiro carregar alterações de dados do Assinante ao Publicador e em seguida baixar alterações de dados do Publicador para o Assinante. Você deve usar essa opção com sincronização da Web.|  
   
- Artigos somente download permitem controlar o comportamento da sincronização de artigos individuais em uma publicação e podem beneficiar o desempenho. Para obter mais informações, consulte [Optimize Merge Replication Performance with Download-Only Articles](../merge/optimize-merge-replication-performance-with-download-only-articles.md) (Otimizar o desempenho da replicação de mesclagem com artigos somente para download).  
+ Artigos somente download permitem controlar o comportamento da sincronização de artigos individuais em uma publicação e podem beneficiar o desempenho. Para obter mais informações, consulte [Otimizar o desempenho da replicação de mesclagem com artigos somente para download](../merge/optimize-merge-replication-performance-with-download-only-articles.md).  
   
  Se você estiver usando o `ExchangeType` para separar a fase de upload e download da replicação de mesclagem em sessões separadas, deverá executar o agente de mesclagem com o `ExchangeType` definido como 1 primeiro e, em seguida, executar o agente de mesclagem novamente com o valor 2. Se houver falha ao executar o agente de mesclagem com ambos os parâmetros, isso fará os metadados serem excluídos e exigirá que você reinicialize a assinatura (sem carregamento).  
   

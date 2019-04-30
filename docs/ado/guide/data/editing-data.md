@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0c12692a6ebd1467148b52f993a77043ff495d43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161779"
 ---
 # <a name="editing-data"></a>Editar dados
 Ter explicamos como usar o ADO para conectar a uma fonte de dados, executar um comando, obter os resultados um **conjunto de registros** do objeto e navegar no **conjunto de registros**. Esta seção se concentra na próxima operação ADO fundamental: edição de dados.  
@@ -92,4 +92,4 @@ End Function
   
 -   [Excluindo registros usando o método Delete](../../../ado/guide/data/deleting-records-using-the-delete-method.md)  
   
--   [Alternativas: usando instruções SQL](../../../ado/guide/data/alternatives-using-sql-statements.md)
+-   [Alternativas: Usando instruções SQL](../../../ado/guide/data/alternatives-using-sql-statements.md)

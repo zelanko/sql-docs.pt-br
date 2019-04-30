@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 464f8504850c6aa13f1cf040f9429be56f7181be
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298497"
 ---
 # <a name="ancestor-mdx"></a>Ancestor (MDX)
 
@@ -42,18 +42,18 @@ Ancestor(Member_Expression, Distance)
  *distância*  
  Uma expressão numérica válida que especifica a distância do membro especificado.  
   
-## <a name="remarks"></a>Remarks  
- Com o **ancestral** função, que você fornecer a função com uma expressão de membro MDX e, em seguida, forneça o uma expressão MDX de um nível que é um ancestral do membro ou uma expressão numérica que representa o número de níveis acima daquele membro. Com essas informações, o **ancestrais** função retorna o membro ancestral nesse nível.  
+## <a name="remarks"></a>Comentários  
+ Com o **ancestral** função, você fornece a função com uma expressão de membro MDX e, em seguida, fornecer a uma expressão MDX de um nível que é um ancestral do membro ou uma expressão numérica que representa o número de níveis acima Esse membro. Com essas informações, o **ancestrais** função retorna o membro ancestral nesse nível.  
   
 > [!NOTE]  
 >  Para retornar um conjunto que contém o membro ancestral, em vez de apenas o membro ancestral, use o [ancestrais &#40;MDX&#41; ](../mdx/ancestors-mdx.md) função.  
   
- Se uma expressão de nível for especificada, o **ancestral** função retorna o ancestral de um membro especificado no nível especificado. Se o membro especificado não estiver dentro da mesma hierarquia que o nível especificado, a função retornará um erro.  
+ Se uma expressão de nível for especificada, o **ancestral** função retorna o ancestral do membro especificado no nível especificado. Se o membro especificado não estiver dentro da mesma hierarquia que o nível especificado, a função retornará um erro.  
   
- Se uma distância for especificada, o **ancestral** função retorna o ancestral do membro especificado é o número de etapas especificadas na hierarquia especificada por uma expressão de membro. Um membro pode ser especificado como um membro de uma hierarquia de atributo, uma hierarquia definida pelo usuário ou, em alguns casos, uma hierarquia pai-filho. Um número 1 retorna o pai de um membro e um número 2 retorna o avô do membro (se houver um). Zero retorna o membro em si.  
+ Se uma distância for especificada, o **ancestral** função retorna o ancestral do membro especificado que é o número de etapas especificadas na hierarquia especificada por uma expressão de membro. Um membro pode ser especificado como um membro de uma hierarquia de atributo, uma hierarquia definida pelo usuário ou, em alguns casos, uma hierarquia pai-filho. Um número 1 retorna o pai de um membro e um número 2 retorna o avô do membro (se houver um). Zero retorna o membro em si.  
   
 > [!NOTE]  
->  Use este formulário do **ancestral** função para casos em que o nível do pai é desconhecido ou não pode ser nomeado.  
+>  Use essa forma do **ancestral** função para casos em que o nível do pai é desconhecido ou não pode ser nomeado.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir usa uma expressão de nível e retorna o Valor de Vendas pela Internet para cada Estado-Província da Austrália e seu percentual do Valor de Vendas pala Internet para a Austrália.  
@@ -100,6 +100,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

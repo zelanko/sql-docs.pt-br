@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3128dee728cbb2e9eda6e87232675558fe9413e3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188511"
 ---
 # <a name="new-data-source-page-report-manager"></a>Página Nova Fonte de Dados (Gerenciador de Relatórios)
   Use a página Nova Fonte de Dados para criar um item fonte de dados compartilhada. Uma fonte de dados compartilhada define uma conexão com uma fonte de dados externa. Com uma fonte de dados compartilhada, você pode criar e manter as configurações de conexão da fonte de dados separadas dos relatórios, modelos e assinaturas controladas por dados que usam a fonte de dados.  

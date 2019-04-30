@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 84eda6f42b674ebde8793605816f98e82af350d8
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065034"
 ---
 # <a name="unknownmember-mdx"></a>UnknownMember (MDX)
 
@@ -36,10 +36,10 @@ Hierarchy_Expression.UnknownMember
  *Member_Expression*  
  Uma linguagem MDX válida que retorna um membro.  
   
- *Expressão_Hierarquia*  
+ *Hierarchy_Expression*  
  Uma linguagem MDX válida que retorna uma hierarquia.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Analysis Services cria um membro desconhecido para associar dados da tabela de fatos uma hierarquia quando a hierarquia não é conhecida. O membro desconhecido pode estar em um dos seguintes níveis:  
   
 -   No nível superior para hierarquias de atributo que não são agregadas.  
@@ -50,9 +50,9 @@ Hierarchy_Expression.UnknownMember
   
  Se uma expressão de membro for especificada, o **UnknownMember** função retorna o filho do membro desconhecido do membro especificado. Se o membro especificado não existir, a função retornará nulo.  
   
- Se uma expressão de hierarquia for especificada, o **UnknownMember** função retorna o membro desconhecido no nível superior, se houver.  
+ Se uma expressão de hierarquia for especificada, o **UnknownMember** função retorna o membro desconhecido no nível superior, se houver um.  
   
- Se o membro desconhecido não existe no nível ou membro, o **UnknownMember** função cria um membro nulo.  
+ Se o membro desconhecido não existir no nível ou membro, o **UnknownMember** função cria um membro nulo.  
   
 > [!NOTE]  
 >  Se o membro desconhecido não existir na hierarquia ou membro, um erro será gerado.  
@@ -81,6 +81,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

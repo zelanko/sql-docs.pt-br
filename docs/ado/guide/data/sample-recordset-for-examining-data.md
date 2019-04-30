@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bfae67a14fb312f1b396cfc60f69e8cbe8babdf7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063082"
 ---
 # <a name="sample-recordset-for-examining-data"></a>Conjunto de registros de exemplo para examinar dados
 Primeiro, vamos examinar a **Recordset** objeto conforme retornados usando a seguinte consulta SQL, executada nos dados de exemplo Northwind base no Microsoft SQL Server.  
@@ -38,7 +38,7 @@ WHERE CategoryID = 7
 |14|Bananas|23.2500|  
 |28|Rssle chucrute|45.6000|  
 |51|Maçãs Secas Manjimup|53.0000|  
-|74|Longlife Bananas|10.0000|  
+|74|Longlife Tofu|10.0000|  
   
  Se você estiver interessado em obter esses resultados por conta própria, experimente o seguinte exemplo de JScript:  
   

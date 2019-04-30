@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 01fcf6ef333a9b7c8a5c99630e6e9573f70d8059
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59955242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155312"
 ---
 # <a name="saving-reports-report-builder"></a>Salvando relatórios (Construtor de Relatórios)
   O Construtor de Relatórios permite salvar um relatório em um servidor de relatório, na biblioteca do SharePoint, no compartilhamento de arquivo no qual você tem permissão de gravação, ou no seu computador. É possível salvar um relatório no mesmo local do qual foi aberto, salvá-lo em outro local ou salvá-lo com um novo nome no mesmo local ou em outro local. Por padrão, um relatório é salvo novamente no local do qual foi aberto. Quando salva o relatório, na verdade, você está salvando a definição do relatório, que descreve o layout do relatório. Você não está salvando os dados. Sempre que o relatório é executado, seus dados são atualizados e é provável que sejam diferentes da execução anterior do relatório.  

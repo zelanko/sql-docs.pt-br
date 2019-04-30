@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: df7a2d036692cefcd1b2ea2338d51938a11ea85a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208421"
 ---
 # <a name="vertical-applications"></a>Aplicativos verticais
 Aplicativos verticais geralmente executam uma tarefa bem definida em relação a um único DBMS. Por exemplo, um aplicativo de entrada de pedidos rastreia os pedidos em uma empresa. O que esses tipos de aplicativos têm em comum é que o esquema de banco de dados geralmente é criado pelo desenvolvedor do aplicativo e, embora o aplicativo possa funcionar com um número de diferentes DBMSs, ele funciona com um DBMS único para um único cliente.  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0e545cb4b41f1a0d60e471c15753a82079978ee5
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149298"
 ---
 # <a name="settoarray-mdx"></a>SetToArray (MDX)
 
@@ -38,7 +38,7 @@ SetToArray(Set_Expression1 [ ,Set_Expression2,...n ][ ,Numeric_Expression ] )
  *Numeric_Expression*  
  Uma expressão numérica válida, geralmente uma linguagem MDX de coordenadas de célula, que retorna um número.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O **SetToArray** função converte um ou mais conjuntos em uma matriz para uso em uma função definida pelo usuário. O número de dimensões na matriz resultante é igual ao número de conjuntos especificados.  
   
  A expressão numérica opcional pode fornecer os valores nas células da matriz. Se uma expressão numérica não for especificada, a junção cruzada dos conjuntos será avaliada no contexto atual.  
@@ -51,7 +51,7 @@ SetToArray(Set_Expression1 [ ,Set_Expression2,...n ][ ,Numeric_Expression ] )
 ```  
   
 > [!NOTE]  
->  O tipo de retorno de **SetToArray** função é o tipo de VARIANTE, VT_ARRAY. Portanto, a saída de **SetToArray** função deve ser usada somente como entrada para uma função definida pelo usuário.  
+>  O tipo de retorno de **SetToArray** função é o tipo de VARIANTE, VT_ARRAY. Portanto, a saída do **SetToArray** função deve ser usada apenas como entrada para uma função definida pelo usuário.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir retorna uma matriz.  
@@ -61,6 +61,6 @@ SetToArray([Geography].[Geography].Members, [Measures].[Internet Sales Amount])
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d2d29838c371559c54163eb8e5488d198cf28345
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59943912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188548"
 ---
 # <a name="my-subscriptions-page-report-manager"></a>Página Minhas Assinaturas (Gerenciador de Relatórios)
   Use a página Minhas Assinaturas para exibir todas as suas assinaturas em um lugar. Desta página, você pode acessar e modificar ou excluir qualquer assinatura que possui. Você só possui as assinaturas que cria. Você não pode acessar as de outros usuários nem pode acessar assinaturas que você usa, mas não possui (por exemplo, se seu nome foi adicionado a uma assinatura existente definida por outro usuário). Você não pode criar assinaturas nesta página. Para obter mais informações sobre como criar assinaturas, consulte o [página nova assinatura ou Editar assinatura &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md).  

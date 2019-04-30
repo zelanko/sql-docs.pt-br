@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5c4aa7b22e2d7b419db0e80d723ab7b0d875c2a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201610"
 ---
 # <a name="batch-processing"></a>Processamento em lote
 Suporte a lotes de instruções SQL não é amplo, para que aplicativos interoperáveis devem usá-las de forma alguma ou condicionalmente. Para obter mais informações, consulte [executando lotes](../../../odbc/reference/develop-app/executing-batches.md).

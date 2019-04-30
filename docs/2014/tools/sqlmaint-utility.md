@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2e15dbb5b7cb21d29936fce5c9b0d1f215d244ac
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187000"
 ---
 # <a name="sqlmaint-utility"></a>utilitário sqlmaint
   O utilitário**sqlmaint** executa um conjunto especificado de operações de manutenção em um ou mais bancos de dados. Use o **sqlmaint** para executar verificações DBCC, fazer backup de um banco de dados e do respectivo log de transações, atualizar estatísticas e recompilar índices. Todas as atividades de manutenção de banco de dados geram um relatório que pode ser enviado a um arquivo de texto designado, arquivo HTML ou conta de email. O**sqlmaint** executa planos de manutenção de bancos de dados criados com versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para executar planos de manutenção do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no prompt de comando, use o [Utilitário dtexec](../integration-services/packages/dtexec-utility.md).  
@@ -120,7 +120,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
   
  O nome do arquivo UNC completo é necessário para *text_file* , quando **sqlmaint** acessa um servidor remoto.  
   
- **-Para** _operator_name_  
+ **-To** _operator_name_  
  Especifica o operador para quem o relatório gerado será enviado por meio do SQL Mail.  
   
  **-HtmlRpt** _html_file_  
@@ -251,7 +251,7 @@ dbname_log_yyyymmddhhmm.BAK
 sqlmaint -S MyServer -D AdventureWorks2012 -CkDB -CkAl -CkCat -Rpt C:\MyReports\AdvWks_chk.rpt  
 ```  
   
-### <a name="b-updating-statistics-using-a-15-sample-in-all-databases-in-a-plan-also-shrink-any-of-the-database-that-have-reached-110-mb-to-having-only-10-free-space"></a>b. Atualização de estatísticas usando uma amostra de 15% em todos os bancos de dados em um plano. Também, reduz qualquer banco de dados que tenha alcançado 110 MB para ter só 10% de espaço livre.  
+### <a name="b-updating-statistics-using-a-15-sample-in-all-databases-in-a-plan-also-shrink-any-of-the-database-that-have-reached-110-mb-to-having-only-10-free-space"></a>B. Atualização de estatísticas usando uma amostra de 15% em todos os bancos de dados em um plano. Também, reduz qualquer banco de dados que tenha alcançado 110 MB para ter só 10% de espaço livre.  
   
 ```  
 sqlmaint -S MyServer -PlanName MyUserDBPlan -UpdOptiStats 15 -RmUnusedSpace 110 10  

@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 057a39fd393be6cce9232d787b0d110a4be2035a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63060980"
 ---
 # <a name="connect-to-azure-sql-db--sybasetosql"></a>Conectar-se ao BD SQL do Azure (SybaseToSQL)
 Use a opção conectar à caixa de diálogo de BD SQL do Azure para se conectar ao banco de dados SQL do Azure que você deseja migrar.  
@@ -61,7 +61,7 @@ Para criar um novo banco de dados pela primeira vez, siga as etapas a seguir
   
 3.  No momento da criação do banco de dados, os dois parâmetros a seguir são fornecidos como entrada:  
   
-    1.  **Nome do banco de dados:** insira o nome do banco de dados.  
+    1.  **Nome do banco de dados:** Insira o nome do banco de dados.  
   
-    2.  **Tamanho do banco de dados:** selecione o tamanho do banco de dados que você precisa criar na conta do BD SQL do Azure.  
+    2.  **Tamanho do banco de dados:** Selecione o tamanho do banco de dados que você precisa criar na conta do BD SQL do Azure.  
   

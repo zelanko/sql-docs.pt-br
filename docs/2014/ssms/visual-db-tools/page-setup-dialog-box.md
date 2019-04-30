@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cf05de13f0aada12da055f2e9c1e5a3a0db1d1df
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63195025"
 ---
 # <a name="page-setup-dialog-box"></a>Caixa de diálogo Configurar Página
   Você pode personalizar o layout da sua página selecionando opções na caixa de diálogo **Configurar Página** . A disponibilidade de algumas opções depende das linguagens instaladas e habilitadas para edição.  

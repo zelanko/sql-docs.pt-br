@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e899951a5ec2a0c6dfe8388b5281768bfe7f9337
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190589"
 ---
 # <a name="complete---installation"></a>Instalação - Concluída
   Clique em **Fechar** para concluir a instalação.  

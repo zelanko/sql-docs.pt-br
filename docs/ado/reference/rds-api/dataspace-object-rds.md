@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d75a5dcd8a09388c031e4e01c8bb8b9c1d62bb80
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63134480"
 ---
 # <a name="dataspace-object-rds"></a>Objeto DataSpace (RDS)
 > [!IMPORTANT]
@@ -29,7 +29,7 @@ ms.locfileid: "51600556"
   
  Serviço de dados remoto precisa proxies de objeto de negócios para que os componentes do lado do cliente podem se comunicar com os objetos de negócios localizados na camada intermediária. Proxies de facilitam o empacotamento, a descompactação e do transporte (marshaling) do aplicativo [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dados entre os limites de processo ou computadores.  
   
- Serviço de dados remoto usa o **RDS. DataSpace** do objeto [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) método para criar proxies do objeto de negócios. O proxy do objeto de negócios é criado dinamicamente sempre que uma instância de sua contraparte do objeto de negócios de camada intermediária é criada. Serviço de dados remoto oferece suporte a protocolos a seguir: HTTP, HTTPS (HTTP Secure Sockets), DCOM e em processo (componentes do cliente e o objeto de negócios que residem no mesmo computador).  
+ Serviço de dados remoto usa o **RDS. DataSpace** do objeto [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) método para criar proxies do objeto de negócios. O proxy do objeto de negócios é criado dinamicamente sempre que uma instância de sua contraparte do objeto de negócios de camada intermediária é criada. Serviço de dados remoto dá suporte aos seguintes protocolos: HTTP, HTTPS (HTTP Secure Sockets), DCOM e em processo (componentes do cliente e o objeto de negócios que residem no mesmo computador).  
   
 > [!NOTE]
 >  RDS se comporta de maneira "sem monitoração de estado" quando o **RDS. DataSpace** objeto usa os protocolos HTTP ou HTTPS. Ou seja, todas as informações internas sobre uma solicitação do cliente serão descartadas após o servidor retorna uma resposta.  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 00bc66f116a489858d6383d90a17e730792e6325
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59941632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63165366"
 ---
 # <a name="data-sources-properties-page-report-manager"></a>Página Propriedades de Fontes de Dados (Gerenciador de Relatórios)
   Use a página de propriedades de Fontes de Dados para definir como o relatório atual se conecta a uma fonte de dados externa. Você pode substituir as informações de conexão de fonte de dados publicadas originalmente com o relatório. Se várias fontes de dados forem usadas em um relatório, cada fonte de dados terá sua própria seção na página de propriedades. As fontes de dados são listadas na ordem em que foram definidas no relatório.  

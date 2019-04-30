@@ -8,13 +8,13 @@ ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 13adf4e0-216a-4992-b13d-b7b1e1629e77
 ms.openlocfilehash: 1dc31f9b3df500e862236d4125fb1de99bc93eda
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191860"
 ---
-# <a name="task-15-building-and-running-the-ssis-project"></a>Tarefa 15: Compilando e executando o projeto SSIS
+# <a name="task-15-building-and-running-the-ssis-project"></a>Tarefa 15: Compilar e executar o projeto SSIS
   Nesta tarefa, você criará e executará o projeto SSIS. Se você tiver a versão de 64 bits do Excel 2010 instalado no seu computador, você deve definir o valor de **Run64BitRuntime** à **falso** para a origem do Excel trabalhar.  
   
 1.  No **Gerenciador de soluções** janela, clique em **Project** no menu e clique em **propriedades de CleanseAndCurateSuppliers**.  

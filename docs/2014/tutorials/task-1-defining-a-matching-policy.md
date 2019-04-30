@@ -11,14 +11,14 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 85a6ca52573bec3d7e6c19e68f809048ed0786db
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222768"
 ---
-# <a name="task-1-defining-a-matching-policy"></a>Tarefa 1: Definindo uma política de correspondência
-  Nesta tarefa, você criará uma política de correspondência com uma regra nela. A regra terá um pré-requisito: **Supplier ID**, que significa que as IDs de fornecedor deverão corresponder antes do uso de outros domínios na regra. A regra usa os outros dois domínios: **Nome do fornecedor** com **similaridade** valor definido como **70%** e **Contact Email** com **similaridade** valor definido como **30%**.  
+# <a name="task-1-defining-a-matching-policy"></a>Tarefa 1: Definir uma política de correspondência
+  Nesta tarefa, você criará uma política de correspondência com uma regra nela. A regra terá um pré-requisito: **Supplier ID**, que significa que as IDs de fornecedor deverão corresponder antes do uso de outros domínios na regra. A regra usa dois outros domínios: **Nome do fornecedor** com **similaridade** valor definido como **70%** e **Contact Email** com **similaridade** valor definido como **30%**.  
   
 1.  Na página principal do **cliente DQS**, clique em **seta para a direita** lado **fornecedores** knowledge base e selecione **política de correspondência**.  
   

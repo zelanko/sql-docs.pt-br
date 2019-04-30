@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 742f00402a553d8f918e0de0c3aad0f6c6e4af64
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63180182"
 ---
 # <a name="command-and-commandtext-properties-example-vb"></a>Exemplo da propriedade Command e CommandText (VB)
 O código a seguir demonstra como usar o [comando](../../../ado/reference/adox-api/command-property-adox.md) propriedade para atualizar o texto de um procedimento.  

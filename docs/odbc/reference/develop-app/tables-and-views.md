@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9949332d33f2d2a07e485bc0ff06c5c489df6440
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63148894"
 ---
 # <a name="tables-and-views"></a>Tabelas e Exibições
 Em funções ODBC, tabelas e exibições são intercambiáveis. O termo *tabela* é usado para tabelas e modos de exibição, exceto onde o termo *exibição* é usado explicitamente.

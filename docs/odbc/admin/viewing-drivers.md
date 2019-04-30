@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ab3a21bf110b26237858078d4b482328fc493f59
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198523"
 ---
 # <a name="viewing-drivers"></a>Exibir drivers
 Para configurar fontes de dados, você deve ter instalado pelo menos um driver em seu sistema. O **Drivers** guia o **administrador de fonte de dados ODBC** caixa de diálogo lista todos os drivers instalados no seu computador, incluindo o nome, versão, empresa, nome do arquivo e data de criação do arquivo de cada driver. Você deve usar o programa de instalação do driver para adicionar ou excluir um driver do sistema. Para obter mais informações sobre como modificar os drivers, consulte [gerenciar fontes de dados](../../odbc/admin/managing-data-sources.md).

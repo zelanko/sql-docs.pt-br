@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5c4f0b21bba9e56cad076ae08f5a561cc972d2ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213472"
 ---
 # <a name="using-32-bit-applications-with-32-bit-drivers"></a>Usar aplicativos de 32 bits com drivers de 32 bits
 Você pode executar aplicativos de 32 bits com drivers de 32 bits. Os aplicativos de 32 bits e os drivers de 32 bits usam a API do Win32®.  
@@ -38,10 +38,10 @@ Você pode executar aplicativos de 32 bits com drivers de 32 bits. Os aplicativo
 ## <a name="components"></a>Componentes  
  O componente ODBC inclui os seguintes arquivos para a execução de aplicativos de 32 bits com drivers de 32 bits. Esses componentes estão na pasta \Redist.  
   
-|Nome do arquivo|Description|  
+|Nome do arquivo|Descrição|  
 |---------------|-----------------|  
 |Odbc32.dll|Gerenciador de Driver de 32 bits|  
 |Odbccp32.dll|DLL do instalador de 32 bits|  
 |Odbcad32.exe|programa de administrador de ODBC de 32 bits|  
 |Odbcinst.hlp|Arquivo de Ajuda do instalador|  
-|Msvcrt40.|Biblioteca de tempo de execução do C|
+|Msvcrt40.dll|Biblioteca de tempo de execução do C|

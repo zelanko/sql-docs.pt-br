@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5b2b832fbd7eb83fa26353750770894bfb6f2a8a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59965702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63165147"
 ---
 # <a name="deprecated-features-in-sql-server-reporting-services-in-sql-server-2014"></a>Recursos preteridos no SQL Server Reporting Services do SQL Server 2014
   Este tópico descreve os recursos preteridos do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Os recursos ainda estão disponíveis na versão em que foram preteridos; porém, os recursos estão agendados para ser removidos em uma versão futura do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Recursos preteridos não devem ser usados em aplicativos novos.  

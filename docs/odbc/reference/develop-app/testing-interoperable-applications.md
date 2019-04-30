@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 509dd17efeeb982c51938d7a18fad99a2e84ba5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63148926"
 ---
 # <a name="testing-interoperable-applications"></a>Testar aplicativos interoperáveis
 Testando aplicativos interoperáveis na melhor das hipóteses é um demorado na pior das hipóteses impossível porque novos drivers continuamente aparecem no mercado e de negócios. No entanto, um nível razoável de testes é possível. Aplicativos com pouca ou limitada de interoperabilidade somente precisam ser testados em relação a esses drivers, que eles são garantidos para dar suporte. No entanto, eles devem ser testados totalmente em relação a esses drivers.  

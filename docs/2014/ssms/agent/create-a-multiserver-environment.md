@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c5c59a8802597b893110a5f2c26c919c16c8e83
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192965"
 ---
 # <a name="create-a-multiserver-environment"></a>Criar um ambiente multisservidor
   A administração multisservidor requer a configuração de um servidor mestre (MSX) e de um ou mais servidores de destino (TSX). Os trabalhos a serem processados em todos os servidores de destino são definidos primeiramente no servidor mestre e depois são baixados nos servidores de destino.  
@@ -35,14 +35,14 @@ ms.locfileid: "52795608"
 ## <a name="considerations-for-multiserver-environments"></a>Considerações para ambientes multisservidor  
  Consulte a tabela abaixo para verificar as configurações de MSX/TSX suportadas.  
   
-||**TSX = 7.0**|**TSX = 8.0 &LT; SP3**|**TSX = 8.0 SP3 ou superior**|**TSX = 9.0**|**TSX = 10.0**|**TSX = 10,5**|**TSX = 11.0**|  
+||**TSX = 7.0**|**TSX = 8.0 < SP3**|**TSX = 8.0 SP3 ou superior**|**TSX = 9.0**|**TSX= 10.0**|**TSX = 10.5**|**TSX = 11.0**|  
 |-|--------------------|---------------------------|----------------------------------|--------------------|--------------------|---------------------|---------------------|  
 |**MSX = 7.0**|Sim|Sim|Não|Não|Não|Não|Não|  
-|**MSX = 8.0 &LT; SP3**|Sim|Sim|Não|Não|Não|Não|Não|  
+|**MSX = 8.0 < SP3**|Sim|Sim|Não|Não|Não|Não|Não|  
 |**MSX = 8.0 SP3 ou superior**|Não|Não|Sim|Sim|Sim|Sim|Sim|  
 |**MSX = 9.0**|Não|Não|Não|Sim|Sim|Sim|Sim|  
 |**MSX = 10.0**|Não|Não|Não|Não|Sim|Sim|Sim|  
-|**MSX = 10,5**|Não|Não|Não|Não|Não|Sim|Sim|  
+|**MSX = 10.5**|Não|Não|Não|Não|Não|Sim|Sim|  
 |**MSX = 11.0**|Não|Não|Não|Não|Não|Não|Sim|  
   
  Considere as seguintes questões ao criar um ambiente multisservidor:  

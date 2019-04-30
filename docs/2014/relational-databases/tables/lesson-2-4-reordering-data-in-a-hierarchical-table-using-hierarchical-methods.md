@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d29af64209dfe11ed703f1cc42314fd6d849e771
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298960"
 ---
 # <a name="reordering-data-in-a-hierarchical-table-using-hierarchical-methods"></a>Reordenando dados em tabela hierárquica por meio de métodos hierárquicos
   Reorganizar uma hierarquia é uma tarefa de manutenção comum. Nesta tarefa, usaremos a instrução UPDATE com o método [GetReparentedValue](/sql/t-sql/data-types/getreparentedvalue-database-engine) para mover primeiramente uma única linha para um novo local da hierarquia. Em seguida, moveremos uma subárvore inteira para um novo local.  
@@ -124,6 +124,6 @@ Text_OrgNode OrgNode OrgLevel EmployeeID EmpName Title
  Para ver um procedimento armazenado que reorganiza uma seção de uma hierarquia, consulte a seção “Movendo subárvores” de [Movendo subárvores](../hierarchical-data-sql-server.md#BKMK_MovingSubtrees).  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Resumo: Gerenciando dados em uma tabela hierárquica](lesson-2-5-summary-managing-data-in-a-hierarchical-table.md)  
+ [Resumo: Gerenciamento de dados em uma tabela hierárquica](lesson-2-5-summary-managing-data-in-a-hierarchical-table.md)  
   
   

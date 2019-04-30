@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4be66faa119b4e89c05ffae149bc7a518323055c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63226152"
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>Concedendo, revogando e negando permissões
   O objeto <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> é usado para atribuir um conjunto de permissões ou uma permissão de servidor individual ao objeto <xref:Microsoft.SqlServer.Management.Smo.ServerPermissionSet>. Para permissões em nível de servidor, o usuário autorizado se refere a um logon. Logons autenticados pelo Windows são listados como nomes de usuários do Windows. Quando essa amostra de código é executada, ela revoga a permissão do usuário autorizado e verifica se ela foi removida com o método <xref:Microsoft.SqlServer.Management.Smo.Server.EnumServerPermissions%2A>.  

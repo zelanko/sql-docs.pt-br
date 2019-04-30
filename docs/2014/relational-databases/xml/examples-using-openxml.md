@@ -27,13 +27,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9887a9af6735b54a78dd72ed3a90aeff70c7990f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63205110"
 ---
-# <a name="examples-using-openxml"></a>Exemplos: Usando OPENXML
+# <a name="examples-using-openxml"></a>Exemplos: uso do OPENXML
   Os exemplos neste tópico mostram como o OPENXML é usado para criar uma exibição de conjunto de linhas de um documento XML. Para obter informações sobre a sintaxe do OPENXML, veja [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql). Os exemplos mostram todos os aspectos do OPENXML, mas não especificam metapropriedades no OPENXML. Para obter mais informações sobre como especificar metapropriedades no OPENXML, veja [Especificar metapropriedades no OPENXML](specify-metaproperties-in-openxml.md).  
   
 ## <a name="examples"></a>Exemplos  
@@ -442,7 +442,7 @@ FROM OPENXML (@docHandle, '/ROOT/Customer')
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- O resultado é retornado como uma tabela de borda. É possível escrever consultas em relação à tabela de borda para obter informações. Por exemplo:  
+ O resultado é retornado como uma tabela de borda. É possível escrever consultas em relação à tabela de borda para obter informações. Por exemplo:   
   
 -   A consulta a seguir retorna o número de nós **Customer** no documento. Como a cláusula WITH não é especificada, o OPENXML retorna uma tabela de borda. A instrução SELECT consulta a tabela de borda.  
   
@@ -523,7 +523,7 @@ ProdID      Qty         OID
 ```  
   
 ### <a name="h-specifying-an-xml-document-that-has-multiple-text-nodes"></a>H. Especificando um documento XML que tem vários nós de texto  
- Se você tiver vários nós de texto em um documento XML, uma instrução SELECT com um *ColPattern*, **text()**, retornará apenas o primeiro nó de texto, em vez de todos eles. Por exemplo:  
+ Se você tiver vários nós de texto em um documento XML, uma instrução SELECT com um *ColPattern*, **text()**, retornará apenas o primeiro nó de texto, em vez de todos eles. Por exemplo:   
   
 ```  
 DECLARE @h int  
