@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 332701caacd2eb4a813e8ec09ff66aa4dc4bf828
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225781"
 ---
 # <a name="dimension-object-ado-md"></a>Objeto Dimension (ADO MD)
 Representa uma das dimensões de um cubo multidimensional, que contém uma ou mais hierarquias de membros.  
@@ -39,12 +39,12 @@ Representa uma das dimensões de um cubo multidimensional, que contém uma ou ma
   
  O **propriedades** coleção contém propriedades fornecidos pelo provedor. A tabela a seguir lista as propriedades que podem estar disponíveis. A lista de propriedades reais pode diferir dependendo após a implementação do provedor. Consulte a documentação do seu provedor para obter uma lista completa de propriedades disponíveis.  
   
-|Nome|Description|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |CatalogName|O nome do catálogo ao qual pertence este cubo.|  
 |CubeName|O nome do cubo.|  
 |DefaultHierarchy|O nome exclusivo da hierarquia padrão.|  
-|Description|Uma descrição significativa do cubo.|  
+|Descrição|Uma descrição significativa do cubo.|  
 |DimensionCaption|Um rótulo ou legenda associada à dimensão.|  
 |DimensionCardinality|O número de membros na dimensão.|  
 |DimensionGUID|O GUID da dimensão.|  

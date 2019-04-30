@@ -1,5 +1,5 @@
 ---
-title: Aviso legal (DB2toSQL) | Microsoft Docs
+title: Legal Notice (DB2toSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,13 +11,13 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 4f5e5c052bb779ac6f6227aaf0b4b6a60a94110d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298726"
 ---
-# <a name="legal-notice-db2tosql"></a>Aviso legal (DB2toSQL)
+# <a name="legal-notice-db2tosql"></a>Legal Notice (DB2toSQL)
 Esta documentação, incluindo os aplicativos de exemplo nela mencionados, é fornecida apenas em caráter informativo e não estipula garantias expressas ou tácitas. As informações contidas nesta documentação, incluindo URLs e outras referências a sites da Internet, estão sujeitas a alterações sem aviso prévio. Todo o risco associado ao uso ou aos resultados do uso desta documentação é de responsabilidade do usuário.  
   
 A principal finalidade de um exemplo contido nesta documentação é ilustrar um conceito ou uso razoável de uma determinada instrução ou cláusula. A maioria dos exemplos não inclui todo o código geralmente encontrado em um sistema de produção completo, pois algumas das funções comuns de validação de dados e tratamento de erros foram removidas para focalizar o exemplo em um determinado conceito ou instrução. Não há suporte técnico para esses exemplos nem para quaisquer códigos-fonte incluídos.  

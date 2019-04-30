@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 661752a55b808b010f8a111bcc18e47048a3999b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065103"
 ---
 # <a name="visual-foxpro-odbc-driver-native-error-messages"></a>Mensagens de erro nativas do Driver ODBC do Visual FoxPro
 As tabelas a seguir listam as mensagens de erro nativas para o Driver de ODBC do Visual FoxPro.  
@@ -167,7 +167,7 @@ As tabelas a seguir listam as mensagens de erro nativas para o Driver de ODBC do
 |492|Não há colunas de chave são especificadas para a tabela de atualização \\ *valor*\\. Use a propriedade KeyFieldList do cursor.|  
 |493|Parâmetro SQL está ausente.|  
 |494|Definição da exibição foi alterada.|  
-|495|Aviso: A chave definida pela propriedade para a tabela KeyField *valor* não é exclusivo.|  
+|495|Aviso: A chave definida pela propriedade KeyField para a tabela *valor* não é exclusivo.|  
 |498|Instrução SQL SELECT é inválida.|  
 |499|Parâmetro SQL *valor* é inválido.|  
   
@@ -297,7 +297,7 @@ As tabelas a seguir listam as mensagens de erro nativas para o Driver de ODBC do
 |902|Falha do avaliador de expressão.|  
 |903|Cadeia de caracteres é muito grande para caber.|  
 |904|* * ou ^ erro de domínio.|  
-|905|Log (): Zero ou negativo, usado como argumento.|  
+|905|LOG (): Zero ou negativo, usado como argumento.|  
 |906|Argumento Sqrt () não pode ser negativo.|  
 |912|Operação é inválida para um campo geral.|  
 |914|Número de página de código é inválido.|  

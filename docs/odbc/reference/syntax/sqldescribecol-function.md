@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1b8453d76dc2af0499dc8d8af2ca1ec3024aee83
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061847"
 ---
 # <a name="sqldescribecol-function"></a>Função SQLDescribeCol
 **Conformidade com**  
@@ -86,7 +86,7 @@ SQLRETURN SQLDescribeCol(
  *NullablePtr*  
  [Saída] Ponteiro para um buffer no qual retornar um valor que indica se a coluna permite valores nulos. Esse valor é lido do campo SQL_DESC_NULLABLE do IRD. O valor é um dos seguintes:  
   
- SQL_NO_NULLS: A coluna não permite valores NULL.  
+ SQL_NO_NULLS: A coluna não permite valores nulos.  
   
  SQL_NULLABLE: A coluna permite valores nulos.  
   

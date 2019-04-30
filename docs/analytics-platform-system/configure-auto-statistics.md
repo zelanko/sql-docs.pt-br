@@ -11,11 +11,11 @@ ms.author: murshedz
 ms.reviewer: martinle
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
 ms.openlocfilehash: e48d40d78c25431fd6e5592dacfa410723b31f82
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057059"
 ---
 # <a name="configure-auto-statistics"></a>Configurar estatísticas automaticamente
 
@@ -32,7 +32,7 @@ Estatística automática é as estatísticas que o otimizador de consulta cria e
 Estatística automática inclui as três configurações a seguir: 
 
 ### <a name="autocreatestatistics"></a>AUTO_CREATE_STATISTICS
-Quando a criação automática de opção de estatísticas, AUTO_CREATE_STATISTICS, está ON, o otimizador de consulta cria estatísticas em colunas individuais no predicado da consulta, conforme necessário, para melhorar as estimativas de cardinalidade para o plano de consulta. Essas estatísticas de coluna única são criadas em colunas que ainda não têm um histograma em um objeto de estatísticas existente.
+Quando a opção de criação automática de estatísticas, AUTO_CREATE_STATISTICS, está ativada, o otimizador de consulta cria estatísticas em colunas individuais no predicado da consulta, conforme necessário, a fim de melhorar as estimativas de cardinalidade do plano de consulta. Essas estatísticas de coluna única são criadas em colunas que ainda não têm um histograma em um objeto de estatísticas existente.
 
 ### <a name="autoupdatestatistics"></a>AUTO_UPDATE_STATISTICS 
 Quando a opção de atualização automática de estatísticas, AUTO_UPDATE_STATISTICS, está ativada, o otimizador de consulta determina quando as estatísticas podem estar desatualizadas e as atualiza quando são usadas por uma consulta. As estatísticas ficam desatualizadas depois que operações de inserção, atualização, exclusão ou mesclagem alteram a distribuição dos dados na tabela ou na exibição indexada. O otimizador de consulta determina quando estatísticas podem estar desatualizadas contando o número de modificações de dados desde a última atualização das estatísticas e comparando o número de modificações a um limite. O limite se baseia no número de linhas na tabela ou na exibição indexada.

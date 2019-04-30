@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5c95c4e28a5f32131307daeaa61e214af887b577
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63069691"
 ---
 # <a name="odbc-core-subkey"></a>Subchave do núcleo ODBC
 O valor sob a subchave do núcleo de ODBC fornece a contagem de uso para os componentes principais (Gerenciador de Driver, biblioteca de cursores, DLL do instalador e assim por diante). O formato desse valor é mostrado na tabela a seguir.  
   
-|Nome|Tipo de dados|data|  
+|Nome|Tipo de dados|Dados|  
 |----------|---------------|----------|  
 |UsageCount|REG_DWORD|*contagem*|  
   

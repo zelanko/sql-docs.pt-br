@@ -18,17 +18,17 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 2cf8e07b15db7f4c2c7807c75a9862c26a92edcb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299100"
 ---
 # <a name="setting-conversion-and-migration-options-accesstosql"></a>Conversão de configuração e opções de migração (AccessToSQL)
 Para cada projeto do SSMA, você pode definir opções de nível de projeto. Essas opções especificam como os objetos são convertidos, como os dados são migrados e como os tipos de dados de origem são mapeados para tipos de dados de destino. Antes de converter objetos a serem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do SQL Azure ou migrar os dados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, verifique se as opções de configuração são adequadas para o projeto.  
   
 ## <a name="configuration-options-and-modes"></a>Modos e opções de configuração  
-O SSMA tem quatro conjuntos de definições de configuração e quatro modos para definir essas configurações: padrão, Optimistic, completo e personalizado. O modo padrão é recomendado para a maioria dos usuários. Use o modo otimista para conversões simples. Use o modo completo se você quiser ver todas as mensagens. No modo personalizado, você deve definir as opções.  
+O SSMA tem quatro conjuntos de definições de configuração e quatro modos para definir essas configurações: Padrão otimista, completo e personalizados. O modo padrão é recomendado para a maioria dos usuários. Use o modo otimista para conversões simples. Use o modo completo se você quiser ver todas as mensagens. No modo personalizado, você deve definir as opções.  
   
 As configurações são descritas na seção "Referência de Interface do usuário" desta documentação. Para obter mais informações sobre as configurações e como as configurações são aplicadas em cada modo, consulte os tópicos a seguir:  
   

@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 82de3d69201a26980936172b2b08dcda9900b7a9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214529"
 ---
 # <a name="sql-server-migration-assistant-for-sybase-sybasetosql"></a>Assistente de migração do SQL Server para Sybase (SybaseToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSMA (Migration Assistant) para Sybase Adaptive Server Enterprise (ASE) é uma ferramenta para migrar bancos de dados do ASE para [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 ou [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 ou [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 ou [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 ou [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 ou [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017 no Windows e Linux (visualização) ou [!INCLUDE[msCoName](../../includes/msconame_md.md)] BD SQL do Azure. SSMA para Sybase converte objetos de banco de dados ASE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos de banco de dados, cria esses objetos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o SQL Azure, e migra os dados do ASE para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o SQL Azure.  
@@ -24,7 +24,7 @@ Esta documentação apresenta o SSMA para Sybase e fornece instruções passo a 
   
 ## <a name="contents"></a>Sumário  
   
-|Seção|Description|  
+|Seção|Descrição|  
 |-----------|---------------|  
 |[Quais são as novidades do SSMA para Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/what-s-new-in-ssma-for-sybase-sybasetosql.md)|Lista as alterações para as versões SSMA.|  
 |[Instalar o SSMA para Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)|Contém tópicos que fornecem os pré-requisitos e instruções para instalar o SSMA para Sybase cliente e os componentes necessários no computador que está sendo executado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância.|  

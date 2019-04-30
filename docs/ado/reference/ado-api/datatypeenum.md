@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc18212852954accfddd9f3082b5c8f8a5485b58
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140281"
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 Especifica o tipo de dados de um [campo](../../../ado/reference/ado-api/field-object.md), [parâmetro](../../../ado/reference/ado-api/parameter-object.md), ou [propriedade](../../../ado/reference/ado-api/property-object-ado.md). O indicador de tipo OLE DB correspondente é mostrado entre parênteses na coluna Descrição da tabela a seguir.  
   
-|Constante|Valor|Description|  
+|Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
 |**AdArray**|0x2000|Um valor de sinalizador, sempre combinado com outro constante de tipo de dados, que indica uma matriz do tipo de dados. Não é aplicável para ADOX.|  
 |**adBigInt**|20|Indica um inteiro com sinal de oito bytes (DBTYPE_I8).|  
@@ -70,7 +70,7 @@ Especifica o tipo de dados de um [campo](../../../ado/reference/ado-api/field-ob
 |**adWChar**|130|Indica uma cadeia de caracteres do Unicode de terminada em nulo (DBTYPE_WSTR).|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
- Pacote: **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

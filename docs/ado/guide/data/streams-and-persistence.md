@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 80f81dcff4f6220257e1210f5bc9dad7baca0b03
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062624"
 ---
 # <a name="streams-and-persistence"></a>Fluxos e persistência
 O [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto [salve](../../../ado/reference/ado-api/save-method.md) armazenamentos de método, ou *persistir*, um **Recordset** em um arquivo e o [abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)restaurações de método de **Recordset** desse arquivo.  

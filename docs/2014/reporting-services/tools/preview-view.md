@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6a9b3f472d05c8d50a351323a0af794595c83f46
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59954632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201153"
 ---
 # <a name="preview-view"></a>Modo Visualizar
   Use o modo **Visualizar** para exibir o relatório renderizado. Quando um relatório é visualizado, o Designer de Relatórios o executa localmente e o exibe no modo Visualizar. Nesse modo de exibição, o relatório é processado por completo. Se o relatório tiver uma consulta complexa ou se contiver muitos dados, a visualização poderá demorar vários minutos para ser concluída na primeira vez. Nas alterações subsequentes que afetam apenas o formato do relatório, a visualização usa dados armazenados em cache.  

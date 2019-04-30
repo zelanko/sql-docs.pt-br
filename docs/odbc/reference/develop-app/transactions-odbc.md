@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f6ce5decd2744c0ce9d753e355321a40d00fd620
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63305808"
 ---
 # <a name="transactions-odbc"></a>Transações ODBC
 Um *transação* é uma unidade de trabalho que é feito como uma única operação atômica; ou seja, a operação for bem-sucedida ou falha como um todo. Por exemplo, considere transferir dinheiro de uma conta bancária para outra. Isso envolve duas etapas: Retirando o dinheiro da primeira conta e depositando-lo no segundo. É importante que as duas etapas é bem-sucedida; não é aceitável para uma etapa seja bem-sucedida e a outra falhe. Um banco de dados que oferece suporte a transações é capaz de garantir isso.  

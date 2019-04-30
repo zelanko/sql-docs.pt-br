@@ -1,23 +1,26 @@
 ---
 title: Propriedades do SQL Server Agent (guia Avançado) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 03/14/2017
+ms.prod: sql
+ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 588f886f-d6c8-48c8-893d-c2be43a97943
 author: stevestein
 ms.author: sstein
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
 ms.openlocfilehash: 898f16c0b0588fe61ae76e1e86e85713ba3f898a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63137489"
 ---
 # <a name="sql-server-agent-properties-advanced-tab"></a>Propriedades do SQL Server Agent (guia Avançado)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   Por padrão, cinco propriedades são exibidas na guia **Avançado** . Se as propriedades personalizadas estiverem definidas, elas também aparecerão nessa guia com seus valores.  
   
 ## <a name="options"></a>Opções  

@@ -16,18 +16,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 769bc3ad8b330afd81b14aed1340a67c1d7812ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63137596"
 ---
 # <a name="database-maintenance-plans-superseded"></a>Planos de manutenção de banco de dados substituídos
     
 ## <a name="component"></a>Componente  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrição  
  Os planos de manutenção de banco de dados são atualizados e continuam a funcionar. Porém, você não poderá criar novos planos de manutenção de banco de dados usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para exibir os planos de manutenção no Pesquisador de Objetos, expanda Gerenciamento e, em seguida, Herdado. Você pode migrar planos de manutenção de banco de dados existente para o novo formato, selecionando **Migrate** no menu de contexto para qualquer plano de manutenção de banco de dados. Como o novo recurso de plano de manutenção não é uma substituição direta para os planos de manutenção de banco de dados, existe a possibilidade de perder algumas funcionalidades após a migração. A migração de um plano de manutenção de banco de dados não exclui o plano anterior, portanto você pode testar sua funcionalidade como um plano de manutenção antes de remover o plano anterior.  
   
  Não há mais suporte para os seguintes recursos dentro dos planos de manutenção de banco de dados:  

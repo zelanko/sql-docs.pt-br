@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3b93ee4ab5b57414d8c8d640bc12a5ebbff882c6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206363"
 ---
 # <a name="ado-glossary"></a>Glossário ADO
 Este tópico define termos relevantes à ADO.  
@@ -49,7 +49,7 @@ Este tópico define termos relevantes à ADO.
  entrada de associação  
  Um mapeamento entre um campo em uma tabela e uma variável. Nas extensões do Visual C++ de ADO, **Recordset** campos são mapeados para variáveis de C/C++.  
   
- Máscara de bits  
+ bitmask  
  Um valor numérico destinado a uma comparação de valor de bit por bit com outros valores numéricos, normalmente para sinalizar opções em valores de retornados ou parâmetro. Normalmente, essa comparação é feita com operadores lógicos bit a bit, tal como **e** e **ou** no Visual Basic **&** e **&#124;** em C++.  
   
  Por exemplo, o ADO **FieldAttributeEnum** valores podem ser usados como máscaras de bits para determinar os atributos de um campo. Suponha que você quiser determinar se um campo era atualizável. Você pode testar isso com a seguinte expressão no Visual Basic:`Field.Attributes AND adFldUpdatable`  
@@ -183,7 +183,7 @@ Este tópico define termos relevantes à ADO.
  hierarquia  
  Em geral, uma hierarquia é uma estrutura com classificação com um top de nível e níveis subordinados. No ADO, hierárquico **conjuntos de registros** são usados para representar a relação de pai-filho entre um registro e um capítulo. Também no ADO, **registro** e **Stream** objetos podem ser usados para acessar estruturas de árvore hierárquica, como uma pasta e documentos. Também inclui ADO MD **hierarquia** objetos para representar uma relação entre os níveis de uma dimensão em um cubo OLAP. Consulte também conjuntos de registros hierárquicos, relação pai-filho, o capítulo, a árvore.  
   
-## <a name="i-l"></a>EU-L  
+## <a name="i-l"></a>I-L  
  ISAPI (Interface de programação de aplicativo de servidor da Internet)  
  Um conjunto de funções de servidores de Internet, como um Windows NT® Server/Windows 2000 Server executando o Microsoft® Internet Information Services (IIS).  
   
@@ -257,7 +257,7 @@ Este tópico define termos relevantes à ADO.
  fonte de dados remota  
  Uma fonte de dados que existe em um outro computador, em vez de no sistema local (em que o aplicativo cliente é executado).  
   
- registro de recurso  
+ resource record  
  Um registro de um provedor de origem de documento que contém campos para a definição e a descrição de uma pasta ou documento. O documento em si não está contido no registro de recurso, mas normalmente pode ser acessado por fluxo padrão ou um campo no registro de recurso que contém uma URL. Consulte também o provedor de código-fonte do documento, fluxo de padrão de URL.  
   
  conjunto de linhas  

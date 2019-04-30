@@ -17,11 +17,11 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 58bf23c84914d7df4b9f2637cc7682de2021bf08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109796"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155537"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
   O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *índice columnstore na memória* armazena e gerencia dados usando o armazenamento de dados com base em coluna e processamento de consulta baseado em coluna. Os índices columnstore funcionam bem para as cargas de trabalho de data warehouse que executam principalmente carregamentos em massa e consultas somente leitura. Use o índice columnstore para obter um ganho de **desempenho de consulta até 10 vezes maior** sobre o armazenamento tradicional orientado por linha e de **compactação de dados até 7 vezes maior** sobre o tamanho dos dados não compactados.  
@@ -40,7 +40,7 @@ ms.locfileid: "48109796"
 -   [Tarefas e tópicos relacionados](#related)  
   
 ##  <a name="basics"></a> Noções básicas  
- Um *columnstore index* é uma tecnologia para armazenamento, recuperação e gerenciamento de dados usando um formato de dados colunar, chamado columnstore. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dá suporte a índices columnstore clusterizados e não clusterizados. Ambos usam a mesma tecnologia de columnstore na memória, mas possuem diferenças na finalidade e nos recursos aos quais oferecem suporte.  
+ Um *columnstore index* é uma tecnologia para armazenamento, recuperação e gerenciamento de dados usando um formato de dados colunar, chamado columnstore. O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferece suporte a índices columnstore clusterizados e não clusterizados. Ambos usam a mesma tecnologia de columnstore na memória, mas possuem diferenças na finalidade e nos recursos aos quais oferecem suporte.  
   
 ###  <a name="benefits"></a> Benefícios  
  Os índices columnstore funcionam bem na maioria das consultas somente leitura que executam a análise em grandes conjuntos de dados. Geralmente, essas são consultas sobre cargas de trabalho de data warehousing. Os índices columnstore permitem ganhos de desempenho alto para consultas que usam digitalizações completas de tabela e não são apropriados para consultas que buscam nos dados, procurando um valor específico.  
@@ -102,7 +102,7 @@ ms.locfileid: "48109796"
  Os termos e conceitos principais a seguir estão associados aos índices columnstore.  
   
  índice columnstore  
- Um *columnstore index* é uma tecnologia para armazenamento, recuperação e gerenciamento de dados usando um formato de dados colunar, chamado columnstore. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dá suporte a índices columnstore clusterizados e não clusterizados. Ambos usam a mesma tecnologia de columnstore na memória, mas possuem diferenças na finalidade e nos recursos aos quais oferecem suporte.  
+ Um *columnstore index* é uma tecnologia para armazenamento, recuperação e gerenciamento de dados usando um formato de dados colunar, chamado columnstore. O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferece suporte a índices columnstore clusterizados e não clusterizados. Ambos usam a mesma tecnologia de columnstore na memória, mas possuem diferenças na finalidade e nos recursos aos quais oferecem suporte.  
   
  columnstore  
  Um *columnstore* são dados logicamente organizados como uma tabela com linhas e colunas e fisicamente armazenados em um formato de dados com reconhecimento de coluna.  
@@ -162,7 +162,7 @@ ms.locfileid: "48109796"
 ###  <a name="dataload_cci"></a> Carregar dados em um índice Columnstore clusterizado  
  ![Carregando em um índice columnstore clusterizado](../../database-engine/media/sql-server-pdw-columnstore-loadprocess.gif "Carregando em um índice columnstore clusterizado")  
   
- Como sugere o diagrama, para carregar dados em um índice columnstore clusterizado, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
+ Como sugere o diagrama, para carregar dados em um índice columnstore clusterizado, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
 1.  Insere rowgroups de tamanho máximo diretamente no columnstore. À medida que os dados são carregados, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] atribui as linhas de dados por ordem de chegada em um rowgroup aberto.  
   
@@ -182,7 +182,7 @@ ms.locfileid: "48109796"
   
     2.  Se o número de linhas for menor que o mínimo de linhas por rowgroup, as linhas serão adicionadas ao deltastore.  
   
- Para obter mais informações sobre os processos e tarefas de deltastore, consulte [Using Clustered Columnstore Indexes](../../database-engine/using-clustered-columnstore-indexes.md)  
+ Para obter mais informações sobre tarefas e processos de deltastore, consulte [Using Clustered Columnstore Indexes](../../database-engine/using-clustered-columnstore-indexes.md)  
   
 ##  <a name="performance"></a> Dicas de desempenho  
   
@@ -207,7 +207,7 @@ ms.locfileid: "48109796"
 ### <a name="clustered-columnstore-indexes"></a>Índices columnstore clusterizados  
  Para tarefas comuns, consulte [Using Clustered Columnstore Indexes](../../database-engine/using-clustered-columnstore-indexes.md).  
   
--   [CRIAR um índice COLUMNSTORE CLUSTERIZADO &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
+-   [CREATE CLUSTERED COLUMNSTORE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
   
 -   [ALTER INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-index-transact-sql) com REBUILD ou REORGANIZE.  
   

@@ -10,21 +10,21 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: bf07b9c27e08a49cb0866b177a0ec37fed4528a0
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31538536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213294"
 ---
 # <a name="master-database---parallel-data-warehouse"></a>Banco de dados mestre - Parallel Data Warehouse
-O banco de dados mestre do SQL Server PDW armazena informações de logon de nível de dispositivo e o catálogo de banco de dados. É um SQL Server banco de dados mestre que reside no nó de controle. Como tal, ele oferece funcionalidade semelhante para o SQL Server PDW como mestre fornece para o SQL Server.  
+O banco de dados mestre do SQL Server PDW armazena informações de logon de nível de dispositivo e o catálogo de banco de dados. É um SQL Server banco de dados mestre que reside no nó de controle. Como tal, ele fornece funcionalidade semelhante para o SQL Server PDW como mestre fornece ao SQL Server.  
   
 Para obter mais informações sobre bancos de dados do sistema, consulte [bancos de dados do sistema](system-databases.md).  
   
-## <a name="limitations-and-restrictions"></a>Limitações e restrições  
-A lista a seguir descreve as operações que você não pode executar o banco de dados mestre do SQL Server PDW.  
+## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
+A lista a seguir descreve as operações que você não pode executar no banco de dados mestre do SQL Server PDW.  
   
-Você *não pode:*  
+Você *não é possível:*  
   
 -   Execute um backup diferencial do mestre.  
   
@@ -34,19 +34,19 @@ Você *não pode:*
   
 -   Altere o proprietário do mestre.  
   
--   Remover ou renomear mestre.  
+-   Descarte ou renomeie o mestre.  
   
--   Modificar permissões para mestre.  
+-   Modificar permissões para o mestre.  
   
--   Executar **SHRINKLOG DBCC**.  
+-   Execute **DBCC SHRINKLOG**.  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
-|Tarefa|Description|  
+|Tarefa|Descrição|  
 |--------|---------------|  
 |Crie um backup completo do mestre.|Exemplo:<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />Para obter mais informações, consulte [banco de dados de BACKUP](../t-sql/statements/backup-database-parallel-data-warehouse.md).|  
-|Restaurar o banco de dados mestre|Para restaurar o banco de dados mestre, use o [restaurar o banco de dados mestre](restore-the-master-database.md) página ferramenta do Configuration Manager.|  
-|Exibir informações de catálogo de banco de dados.|`SELECT * FROM master.sys.databases;`|  
+|Restaurar o banco de dados mestre|Para restaurar o banco de dados mestre, use o [restaurar o banco de dados mestre](restore-the-master-database.md) página na ferramenta do Configuration Manager.|  
+|Exibir informações de catálogo do banco de dados.|`SELECT * FROM master.sys.databases;`|  
 |Exibir informações de logon e a permissão de todo o sistema.|`SELECT * FROM master.sys.server_permissions;`<br /><br />`SELECT * FROM master.sys.server_principals;`<br /><br />`SELECT * FROM master.sys.sql_logins;`|  
   
 <!-- MISSING LINKS 

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cbefab0f02f3229d8b4c0a62a568634ec222290b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825164"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63305665"
 ---
 # <a name="type-identifiers"></a>Identificadores de tipo
 Para descrever tipos de dados SQL e C, o ODBC define dois conjuntos de *identificadores de tipo*. Um identificador de tipo descreve o tipo de uma coluna de SQL ou um buffer de C. É um **#define** de valor e é geralmente passado como um argumento de função ou retornada nos metadados.  

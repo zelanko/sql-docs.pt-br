@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 18ccf4ad808c15945d82f1ca05616f0da878a7ca
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201620"
 ---
 # <a name="addcalculatedmembers-mdx"></a>AddCalculatedMembers (MDX)
 
@@ -32,8 +32,8 @@ AddCalculatedMembers(Set_Expression)
  *Set_Expression*  
  Uma expressão MDX (Multidimensional Expressions) válida que retorna um conjunto.  
   
-## <a name="remarks"></a>Remarks  
- Por padrão, a linguagem MDX exclui membros calculados quando resolve funções de conjunto. O **AddCalculatedMembers** função examina a expressão de conjunto especificada em *Set_Expression,* e inclui membros calculados são irmãos dos membros contidos no escopo dessa expressão de conjunto.  
+## <a name="remarks"></a>Comentários  
+ Por padrão, a linguagem MDX exclui membros calculados quando resolve funções de conjunto. O **AddCalculatedMembers** função examina a expressão de conjunto especificada em *Set_Expression,* e inclui membros calculados que são irmãos dos membros contidos dentro do escopo desse conjunto expressão.  
   
 > [!NOTE]  
 >  Essa função só pode ser usada com expressões de conjunto de uma dimensão.  
@@ -51,7 +51,7 @@ SELECT
 FROM [Adventure Works]   
 ```  
   
- O exemplo a seguir retorna o `Measures.[Unit Price]` membro, além de todos os membros calculados no **medidas** dimensão, do **Adventure Works** cubo.  
+ O exemplo a seguir retorna o `Measures.[Unit Price]` membro, além de todos os membros calculados na **medidas** dimensão, da **Adventure Works** cubo.  
   
 ```  
 SELECT  
@@ -61,6 +61,6 @@ FROM
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

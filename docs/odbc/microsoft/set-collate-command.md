@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 372d3b2df79d66084f5599b4ac098b8c273ee78a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127839"
 ---
 # <a name="set-collate-command"></a>Comando SET COLLATE
 Especifica uma sequência de agrupamento para campos de caractere em subsequentes de indexação e operações de classificação.  
@@ -34,7 +34,7 @@ SET COLLATE TO cSequenceName
  *cSequenceName*  
  Especifica uma sequência de agrupamento. As opções de sequência de agrupamento disponíveis são descritas na tabela a seguir.  
   
-|Opções|Linguagem|  
+|Opções|Idioma|  
 |-------------|--------------|  
 |HOLANDÊS|Holandês|  
 |GENERAL|Inglês, francês, alemão, espanhol moderno, português e outros idiomas da Europa Ocidental|  

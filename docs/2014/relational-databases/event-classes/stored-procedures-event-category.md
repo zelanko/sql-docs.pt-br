@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47dc8180fd6c8f59050520477724ff8adbc46a6a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061009"
 ---
 # <a name="stored-procedures-event-category"></a>Categoria de evento dos procedimentos armazenados
   A categoria de evento **Procedimentos armazenados** contém eventos de procedimentos gerais armazenados.  

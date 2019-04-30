@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 0805246d5b88138cfa97019d1e0cd524c82456c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63060999"
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>Conectar-se ao Sybase (SybaseToSQL)
 Use o **conectar-se ao Sybase** caixa de diálogo para se conectar à instância do Sybase Adaptive Server Enterprise (ASE) que você deseja migrar.  

@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfilee
 ms.openlocfilehash: 893067e234d868ae6dde2f93d93bfd50458bfeb2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217739"
 ---
 # <a name="creating-predictions-on-a-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Criando previsões em um modelo de cluster de sequências (Tutorial de mineração de dados intermediário)
   Depois de entender o modelo de sequence clustering melhor ao navegar por ele no visualizador, você pode criar consultas de previsão usando o construtor de consultas de previsão sobre a **previsão do modelo de mineração** guia no Designer de mineração de dados. Para criar uma previsão, primeiro selecione o modelo de clustering de sequências e selecione os dados de entrada. Para entradas, use uma fonte de dados externa ou crie uma consulta singleton e forneça valores em uma caixa de diálogo.  

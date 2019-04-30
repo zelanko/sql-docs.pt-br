@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d394dea5af4f2602918dc4b85b21e0cc4704eaba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200660"
 ---
 # <a name="parameterized-query-limitations"></a>Limitações da consulta parametrizada
-Quando o driver do Microsoft Access for usado, uma consulta parametrizada pode ser chamada usando a seguinte sintaxe: chamar *nome da consulta* [(*parâmetro*[,*parâmetro*]...)].
+Quando o driver do Microsoft Access for usado, uma consulta parametrizada pode ser chamada usando a seguinte sintaxe: CHAME *nome da consulta* [(*parâmetro*[,*parâmetro*]...)].

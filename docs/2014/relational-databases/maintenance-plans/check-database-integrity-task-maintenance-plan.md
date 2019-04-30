@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 42fa69e6456b23f95d6a203062b580bd04f443fa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144675"
 ---
 # <a name="check-database-integrity-task-maintenance-plan"></a>Tarefa Verificar Integridade do Banco de Dados (Plano de Manutenção)
   Use a caixa de diálogo **Tarefa Verificar Integridade do Banco de Dados** para verificar a alocação e integridade estrutural de tabelas do usuário e do sistema, além de índices no banco de dados, executando a instância `DBCC CHECKDB`[!INCLUDE[tsql](../../includes/tsql-md.md)] . A execução de `DBCC` garante que quaisquer problemas de integridade com o banco de dados sejam reportados, permitindo assim serem endereçados posteriormente por um administrador do sistema ou proprietário de banco de dados.  

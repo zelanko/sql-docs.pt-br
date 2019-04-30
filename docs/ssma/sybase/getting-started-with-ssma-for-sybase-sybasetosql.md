@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 7e308589ab565b5702bbf2cba939835a50c08d8e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126620"
 ---
 # <a name="getting-started-with-ssma-for-sap-ase-sybasetosql"></a>Introdução ao SSMA para SAP ASE (SybaseToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSMA (Migration Assistant) para o SAP ASE permite que você rapidamente esquemas de banco de dados do SAP Adaptive Server Enterprise (ASE) para converter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou esquemas de banco de dados SQL, carregar os esquemas resultantes em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou banco de dados SQL Azure, e migrar os dados SAP ASE para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou banco de dados SQL do Azure.  
@@ -64,7 +64,7 @@ Você pode usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o G
 Para obter mais informações, consulte [Carregando objetos de banco de dados convertidos no SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/loading-converted-database-objects-into-sql-server-sybasetosql.md).  
   
 ### <a name="metadata"></a>Metadados  
-À direita de cada Gerenciador de metadados são guias que descrevem o objeto selecionado. Por exemplo, se você selecionar uma tabela no Gerenciador de metadados do Sybase, seis guias aparecem: **tabela**, **SQL**, **mapeamento de tipo**, **dados**,  **As propriedades**, e **relatório**. O **relatório** guia contém informações somente depois de criar um relatório que contém o objeto selecionado. Se você selecionar uma tabela no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o Gerenciador de metadados do SQL Azure, três guias são exibidas: **tabela**, **SQL**, e **dados**.  
+À direita de cada Gerenciador de metadados são guias que descrevem o objeto selecionado. Por exemplo, se você selecionar uma tabela no Gerenciador de metadados do Sybase, seis guias aparecem: **Tabela**, **SQL**, **mapeamento de tipo**, **dados**, **propriedades**, e **relatório**. O **relatório** guia contém informações somente depois de criar um relatório que contém o objeto selecionado. Se você selecionar uma tabela no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Gerenciador de metadados do SQL Azure, três guias são exibidas: **Tabela**, **SQL**, e **dados**.  
   
 A maioria das configurações de metadados são somente leitura. No entanto, você pode alterar os metadados a seguir:  
   
@@ -93,7 +93,7 @@ A barra de ferramentas de migração contém os seguintes comandos:
 ### <a name="menus"></a>Menus  
 O SSMA contém os seguintes menus:  
   
-|Menu|Description|  
+|Menu|Descrição|  
 |--------|---------------|  
 |**File**|Contém comandos para trabalhar com projetos, conectar-se ao SAP ASE e conectar-se ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou banco de dados SQL.|  
 |**Editar**|Contém comandos para localizar e trabalhar com texto nas páginas de detalhes, como copiar [!INCLUDE[tsql](../../includes/tsql-md.md)] do painel de detalhes do SQL. Também contém o **gerenciar indicadores** opção, onde você pode ver uma lista de indicadores atuais. Você pode usar os botões no lado direito da caixa de diálogo para gerenciar os indicadores.|  

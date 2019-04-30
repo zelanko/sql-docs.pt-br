@@ -27,11 +27,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 24d0b4d15dd425bc58e307f5b3cc5ba765d1fa3a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808168"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131511"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>Atualizando dados que usam diagramas de atualização XML (SQLXML 4.0)
   Quando você atualiza os dados existentes, você deve especificar ambos os  **\<antes de >** e  **\<depois >** blocos. Os elementos especificados na  **\<antes de >** e  **\<depois >** blocos descrevem a alteração desejada. O diagrama usa o elemento (s) que é especificados na  **\<antes de >** bloco para identificar os registros existentes no banco de dados. O elemento (s) correspondente na  **\<depois >** bloco indicam como os registros devem aparecer depois de executar a operação de atualização. Com essas informações, o diagrama de atualização cria uma instrução SQL que corresponde a  **\<depois >** bloco. O diagrama de atualização usa esta instrução para atualizar o banco de dados.  
@@ -119,7 +119,7 @@ ms.locfileid: "52808168"
   
      Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-### <a name="b-updating-multiple-records-by-using-the-updgid-attribute"></a>b. Atualizando vários registros usando o atributo updg:id  
+### <a name="b-updating-multiple-records-by-using-the-updgid-attribute"></a>B. Atualizando vários registros usando o atributo updg:id  
  Neste exemplo, o diagrama de atualização executa duas atualizações na tabela HumanResources.Shift no banco de dados do AdventureWorks:  
   
 -   Ele altera o nome do turno do dia original que inicia às 7h00 do "Dia" até a "Madrugada".  

@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b42e515c4c124e19ad6079aca6ef68727fea3d2a
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601346"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062842"
 ---
 # <a name="shape-commands-in-general"></a>Modelar comandos em geral
 Formatação de dados define as colunas de uma forma **conjunto de registros**, as relações entre as entidades representadas por colunas e a maneira na qual o **Recordset** é preenchido com dados.  
   
  Um moldado **Recordset** pode conter os seguintes tipos de colunas.  
   
-|Tipo de coluna|Description|  
+|Tipo de coluna|Descrição|  
 |-----------------|-----------------|  
 |data|Campos de um **conjunto de registros** retornado por um comando de consulta para um provedor de dados, tabela ou em forma de anteriormente **conjunto de registros**.|  
 |Capítulo|Uma referência a outro **conjunto de registros**, chamado um *capítulo*. Colunas de capítulo tornam possível definir uma *pai-filho* relação em que o *pai* é o **Recordset** que contém a coluna de capítulo e o *filho* é o **Recordset** representado pelo capítulo.|  

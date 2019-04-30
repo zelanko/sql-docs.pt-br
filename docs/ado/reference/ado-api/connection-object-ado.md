@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4a3b13402f20c149c438aa5a2c678afb068fb0f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140221"
 ---
 # <a name="connection-object-ado"></a>Objeto Connection (ADO)
 Representa uma conexão aberta com uma fonte de dados.  
@@ -64,7 +64,7 @@ Representa uma conexão aberta com uma fonte de dados.
 >  Não use esse recurso (chamando um procedimento armazenado ou um comando nomeado como se fosse um método nativo na **Conexão** objeto) em um aplicativo do Microsoft® .NET Framework, porque a implementação subjacente dos conflitos de recurso com a maneira como o .NET Framework interopera com COM.  
   
 ## <a name="execute-a-command-as-a-native-method-of-a-connection-object"></a>Executar um comando como um método nativo de um objeto de Conexão  
- Para executar um comando, dê o comando a um nome usando o **comando** objeto [nome](../../../ado/reference/ado-api/name-property-ado.md) propriedade. Defina as **ActiveConnection** propriedade da **comando** objeto para a conexão. Em seguida, emitir uma instrução em que o nome do comando é usado como se fosse um método na **Conexão** objeto, seguido por quaisquer parâmetros e um **Recordset** se todas as linhas serão retornadas do objeto. Defina as **conjunto de registros** propriedades para personalizar resultante **conjunto de registros**. Por exemplo:  
+ Para executar um comando, dê o comando a um nome usando o **comando** objeto [nome](../../../ado/reference/ado-api/name-property-ado.md) propriedade. Defina as **ActiveConnection** propriedade da **comando** objeto para a conexão. Em seguida, emitir uma instrução em que o nome do comando é usado como se fosse um método na **Conexão** objeto, seguido por quaisquer parâmetros e um **Recordset** se todas as linhas serão retornadas do objeto. Defina as **conjunto de registros** propriedades para personalizar resultante **conjunto de registros**. Por exemplo:   
   
 ```  
 Dim cnn As New ADODB.Connection  
@@ -100,4 +100,4 @@ cnn. "parameter"
  [Coleção Errors (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [Coleção de propriedades (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Apêndice A: Provedores](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Apêndice a: provedores](../../../ado/guide/appendixes/appendix-a-providers.md)

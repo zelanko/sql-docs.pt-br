@@ -14,14 +14,14 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 9e85f9c17a28ba5c416bcab4853af9bdd823611f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126921"
 ---
 # <a name="restore-encryption-key-ssrs-native-mode"></a>Restaurar chave de criptografia (modo nativo do SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa uma chave de criptografia para proteger dados confidenciais armazenados no banco de dados de servidor de relatório. Para assegurar-se de que tenha acesso contínuo aos dados criptografados, é importante criar um backup da chave da criptografia, caso seja necessário restaurá-la posteriormente devido a alterações na conta de serviço ou como parte de uma migração planejada. Este tópico é uma visão geral de como usar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager para restaurar as chaves.  
+  O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa uma chave de criptografia para proteger dados confidenciais armazenados no banco de dados do servidor de relatório. Para assegurar-se de que tenha acesso contínuo aos dados criptografados, é importante criar um backup da chave da criptografia, caso seja necessário restaurá-la posteriormente devido a alterações na conta de serviço ou como parte de uma migração planejada. Este tópico é uma visão geral de como usar o Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para restaurar chaves.  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
@@ -29,19 +29,19 @@ ms.locfileid: "48220077"
   
  Para verificar se você restaurou uma chave válida, use o Gerenciador de Relatórios para exibir assinaturas ou qualquer relatório que tenha uma fonte de dados que use credenciais armazenadas. Se você receber o erro "O servidor de relatório não pode acessar dados criptografados" ao tentar abrir uma página de definição de assinatura ou se for solicitado a inserir credenciais ao abrir um relatório que anteriormente usava credenciais armazenadas para a fonte de dados do relatório, você restaurou uma chave inválida.  
   
- Se você restaurar uma chave inválida que seja diferente da usada para criptografar os dados, será impossível descriptografar os dados atualmente armazenados no banco de dados do servidor de relatório. Se você restaurar uma chave inválida, deverá imediatamente restaurar uma cópia de backup da chave correta, se estiver disponível. Se você não tiver uma cópia de backup da chave que foi usada para criptografar os dados, deverá excluir todos os dados criptografados. Clique o **excluir** botão a [chaves de criptografia](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md) página para executar esta etapa. Depois de excluir o conteúdo criptografado, você deverá atualizar manualmente todas as assinaturas e especificar novamente todas as credenciais armazenadas definidas para relatórios e assinaturas controladas por dados no servidor de relatório.  
+ Se você restaurar uma chave inválida que seja diferente da usada para criptografar os dados, será impossível descriptografar os dados atualmente armazenados no banco de dados do servidor de relatório. Se você restaurar uma chave inválida, deverá imediatamente restaurar uma cópia de backup da chave correta, se estiver disponível. Se você não tiver uma cópia de backup da chave que foi usada para criptografar os dados, deverá excluir todos os dados criptografados. Clique no botão **Excluir** da página [Chaves de Criptografia](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md) para executar essa etapa. Depois de excluir o conteúdo criptografado, você deverá atualizar manualmente todas as assinaturas e especificar novamente todas as credenciais armazenadas definidas para relatórios e assinaturas controladas por dados no servidor de relatório.  
   
 ## <a name="restore-encryption-key-dialog"></a>Caixa de diálogo Restaurar Chave de Criptografia  
  Para obter informações sobre onde encontrar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager, consulte [Reporting Services Configuration Manager &#40;nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
- Para abrir a caixa de diálogo Restaurar chave de criptografia, clique em **chaves de criptografia** no painel de navegação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager e depois clique em **restaurar**. Essa caixa de diálogo também é exibida quando você atualizar a conta de serviço usando a página de conta de serviço no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] do Configuration Manager. Para obter mais informações sobre  
+ Para abrir a caixa de diálogo Restaurar Chave de Criptografia, clique em **Chaves de Criptografia** no painel de navegação do Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e clique em **Restaurar**. Essa caixa de diálogo também é exibida quando você atualiza a conta de serviço usando a página Conta de Serviço no Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter mais informações sobre  
   
 ## <a name="options"></a>Opções  
  **Local do arquivo**  
  Selecione o arquivo protegido por senha que contém uma cópia da chave simétrica. A extensão padrão do arquivo é .snk.  
   
  **Senha**  
- Digite a senha que desbloqueia o arquivo. Somente os usuários que conhecem a senha podem restaurar a chave. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] impõe uma política de senha forte. A senha deve conter pelo menos 8 caracteres e incluir uma combinação de caracteres alfanuméricos maiúsculos e minúsculos e pelo menos um caractere de símbolo.  
+ Digite a senha que desbloqueia o arquivo. Somente os usuários que conhecem a senha podem restaurar a chave. O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] impõe uma política de senha forte. A senha deve conter pelo menos 8 caracteres e incluir uma combinação de caracteres alfanuméricos maiúsculos e minúsculos e pelo menos um caractere de símbolo.  
   
 ## <a name="see-also"></a>Consulte também  
  [Tópicos de Ajuda F1 do Configuration Manager do Reporting Services &#40;modo nativo do SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   

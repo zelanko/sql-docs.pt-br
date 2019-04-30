@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 89dd59aeff7a02f57ac0d34d347496cc97174e2e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298629"
 ---
 # <a name="use-column-sets"></a>Usar conjuntos de colunas
   As tabelas que usam colunas esparsas podem designar um conjunto de colunas para retornar todas as colunas esparsas na tabela. Um conjunto de colunas é uma representação em XML sem-tipo que combina todas as colunas esparsas de uma tabela em uma saída estruturada. Um conjunto de colunas é como uma coluna calculada em que o conjunto de colunas não é fisicamente armazenado na tabela. Um conjunto de colunas difere de uma coluna calculada em que o conjunto de colunas é diretamente atualizável.  
@@ -160,7 +160,7 @@ CREATE TABLE DocumentStoreWithColumnSet
 GO  
 ```  
   
-### <a name="b-inserting-data-to-a-table-by-using-the-names-of-the-sparse-columns"></a>b. Inserindo dados em uma tabela usando os nomes das colunas esparsas  
+### <a name="b-inserting-data-to-a-table-by-using-the-names-of-the-sparse-columns"></a>B. Inserindo dados em uma tabela usando os nomes das colunas esparsas  
  Os exemplos a seguir inserem duas linhas na tabela criada no exemplo A. Os exemplos usam os nomes das colunas esparsas e não referenciam o conjunto de colunas.  
   
 ```  

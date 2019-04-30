@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1350c25450dfae5ed02b9761ed79182ccac817d5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59958212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63216242"
 ---
 # <a name="multilookup-function-report-builder-and-ssrs"></a>Função Multilookup (Construtor de Relatórios e SSRS)
   Retorna o conjunto de primeiros valores correspondentes para o conjunto de nomes especificado de um conjunto de dados que contém pares de nome/valor.  

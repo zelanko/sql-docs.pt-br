@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 43f4c31abdfc27d980850aca36dc1e83c85a9e35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057798"
 ---
 # <a name="where-current-of-clause-limitations"></a>Limitações da cláusula WHERE CURRENT OF
 Sem suporte.

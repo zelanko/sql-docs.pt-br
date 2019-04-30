@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c644f7ad008efb10d0397cccb00432da684295fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201576"
 ---
 # <a name="backward-compatibility-and-standards-compliance"></a>Compatibilidade com versões anteriores e a conformidade com padrões
-Compatibilidade com versões anteriores é a capacidade dos componentes mais recentes do ODBC para trabalhar com componentes antigos do ODBC. As seções a seguir discutem como esses componentes são afetados pelas alterações no ODBC 3 *. x*. As informações contidas nelas, basicamente tratam a gravação de um ODBC 3 *. x* aplicativo e como para trás os problemas de compatibilidade são manipulados por drivers ODBC. Para obter diretrizes específicas sobre a compatibilidade com versões anteriores como problemas afetam a gravação de um ODBC 3 *. x* driver, consulte [apêndice g: Driver diretrizes para compatibilidade com versões anteriores](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md).  
+Compatibilidade com versões anteriores é a capacidade dos componentes mais recentes do ODBC para trabalhar com componentes antigos do ODBC. As seções a seguir discutem como esses componentes são afetados pelas alterações no ODBC 3 *. x*. As informações contidas nelas, basicamente tratam a gravação de um ODBC 3 *. x* aplicativo e como para trás os problemas de compatibilidade são manipulados por drivers ODBC. Para obter diretrizes específicas sobre a compatibilidade com versões anteriores como problemas afetam a gravação de um ODBC 3 *. x* driver, consulte [apêndice g: Diretrizes de driver para compatibilidade com versões anteriores](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md).  
   
  Esta seção contém os tópicos a seguir.  
   

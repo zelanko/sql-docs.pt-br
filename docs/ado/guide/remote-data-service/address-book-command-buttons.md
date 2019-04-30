@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5e3b29fd5f4fab7e487be5be18752ac7de892537
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222007"
 ---
 # <a name="address-book-command-buttons"></a>Botões de comando do catálogo de endereços
 O aplicativo de catálogo de endereços inclui os seguintes botões de comando:  

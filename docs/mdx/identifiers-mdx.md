@@ -1,5 +1,5 @@
 ---
-title: Identificadores (MDX) | Microsoft Docs
+title: Identifiers (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7562beb2cccd94853c346aaf2f1be1886a2e3ac5
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224952"
 ---
 # <a name="identifiers-mdx"></a>Identificadores (MDX)
 
 
-  Um identificador é o nome de um objeto do Analysis Services. Cada objeto podem e devem ter um identificador. Isto inclui cubos, dimensões, hierarquias, níveis, membros e assim por diante. Use o identificador de um objeto para fazer referência ao objeto em instruções MDX.  
+  Um identificador é o nome de um objeto do Analysis Services. Cada objeto pode e deve ter um identificador. Isto inclui cubos, dimensões, hierarquias, níveis, membros e assim por diante. Use o identificador de um objeto para fazer referência ao objeto em instruções MDX.  
   
  Dependendo de como o objeto for nomeado, o identificador será um identificador normal ou delimitado.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "34740805"
   
 1.  O primeiro caractere deve ser um dos seguintes:  
   
-    -   Uma letra, conforme definido pelo padrão Unicode 2.0. Além dos caracteres de letras de outros idiomas, a definição de letras do Unicode inclui caracteres latinos de a até z e de A até Z.  
+    -   Uma letra, conforme definido pelo Unicode Standard 2.0. Além dos caracteres de letras de outros idiomas, a definição de letras do Unicode inclui caracteres latinos de a até z e de A até Z.  
   
     -   O sublinhado (_).  
   
@@ -45,7 +45,7 @@ ms.locfileid: "34740805"
   
     -   O sublinhado (_).  
   
-3.  O identificador não deve ser uma palavra-chave MDX reservada. As palavras-chave reservadas fazem diferenciação entre maiúsculas e minúsculas em MDX. Para obter mais informações, consulte [palavras-chave reservadas &#40;sintaxe MDX&#41;](../mdx/reserved-keywords-mdx-syntax.md).  
+3.  O identificador não deve ser uma palavra-chave MDX reservada. As palavras-chave reservadas fazem diferenciação entre maiúsculas e minúsculas em MDX. Para obter mais informações, consulte [palavras-chave reservadas &#40;sintaxe de MDX&#41;](../mdx/reserved-keywords-mdx-syntax.md).  
   
 4.  Não são permitidos espaços ou caracteres especiais.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "34740805"
  O colchete esquerdo antes de `Domestic` não precisou ser alterado para criar o identificador delimitado. Porém, o colchete direito depois de `Domestic` precisou ser substituído por dois colchetes direitos.  
   
 ### <a name="delimiting-identifiers-with-multiple-parts"></a>Identificadores delimitados com várias partes  
- Quando você usar nomes de objeto qualificado, você terá que delimitar mais de um dos identificadores que compõem o nome do objeto. Por exemplo, o identificador Front Brakes no código a seguir precisa ser delimitado.  
+ Ao usar nomes de objeto qualificado pode ter que delimitar mais de um dos identificadores que compõem o nome do objeto. Por exemplo, o identificador Front Brakes no código a seguir precisa ser delimitado.  
   
  SELECT [Measures].MEMBERS ON COLUMNS,  
   
@@ -124,8 +124,8 @@ ms.locfileid: "34740805"
  Além disso, o identificador Measures no exemplo anterior foi delimitado para demonstrar a delimitação de mais de um identificador.  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de linguagem MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
- [Conceitos básicos de consulta MDX &#40;do Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [Referência da linguagem MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
+ [Conceitos básicos de consulta MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
  [Elementos de sintaxe MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

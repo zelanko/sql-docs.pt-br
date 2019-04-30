@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a284254c058eae0362fe23860e1b406a97f0bf49
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222483"
 ---
 # <a name="working-with-multidimensional-data"></a>Manipular dados multidimensionais
 Um *conjunto de células* é o resultado de uma consulta em dados multidimensionais. Ele consiste em uma coleção de eixos, normalmente não mais do que quatro eixos e normalmente apenas dois ou três. Uma *eixo* é uma coleção de membros de uma ou mais dimensões, que é usada para localizar ou filtrar valores específicos em um cubo.  

@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3c80f719bd756a0ad241ef270507e638b08c2081
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222645"
 ---
-# <a name="task-12-adding-derived-column-transform-to-add-columns-required-by-mds"></a>Tarefa 12: Adicionando a Transformação Coluna Derivada para adicionar as colunas necessárias para o MDS
+# <a name="task-12-adding-derived-column-transform-to-add-columns-required-by-mds"></a>Tarefa 12: Adicionar a Transformação Coluna Derivada para adicionar as colunas necessárias para o MDS
   Nesta tarefa, você adiciona a Transformação Coluna Derivada ao fluxo de dados. Você adiciona duas colunas derivadas, **ImportType** e **BatchTag**, para os registros passados a essa transformação. Você deve adicionar essas colunas antes de carregar os dados nas tabelas de preparo no MDS. Esses duas colunas são necessárias para as tabelas de preparo no MDS. Ver [tabelas de preparo de membros folha](../master-data-services/leaf-member-staging-table-master-data-services.md) para obter mais detalhes.  
   
 1.  Arrastar e soltar **transformação coluna derivada** de **comuns** seção os **caixa de ferramentas do SSIS** para o **de fluxo de dados** guia.  

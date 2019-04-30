@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 960bdc184d4d71015a3d5dd1530929ccb9b9f01e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209891"
 ---
 # <a name="menu-commands-and-other-shortcut-keysoracle-to-sql"></a>Comandos de menu e outras teclas de atalho (OracleToSQL)
 As seções a seguir descrevem os atalhos de teclado para acessar os comandos de menu e outras teclas de atalho usadas em várias caixas de diálogo do SSMA para aplicativo Oracle.  
@@ -47,7 +47,7 @@ Para acessar o menu Editar, o atalho de teclado usado é ALT + E. A tabela a seg
 |Exiba a caixa de diálogo Gerenciar indicadores.|ALT + E + B ou CTRL + X|  
 |Ir para linha|ALT + E + G ou CTRL + G|  
 |Salve as alterações feitas à instrução.|ALT + E + S ou CTRL + S|  
-|Submenu de localização de acesso.|E AS TECLAS ALT + F|  
+|Submenu de localização de acesso.|ALT + E + F|  
 |Localizar ou localização rápida.|ALT + E + F + F ou CTRL + F|  
 |Exiba a caixa de diálogo de pesquisa avançada.|ALT + E + F + A ou ALT + F12|  
 |Inicie a informações rápidas.|ALT + E + F + I ou CTRL + SHIFT + espaço|  

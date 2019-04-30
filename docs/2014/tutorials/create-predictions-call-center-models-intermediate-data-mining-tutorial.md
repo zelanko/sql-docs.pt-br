@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 30f24ab457669f572189d2eb13deca3f672f5e18
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217882"
 ---
 # <a name="creating-predictions-for-the-call-center-models-intermediate-data-mining-tutorial"></a>Criando previsões para modelos de call center (Tutorial de mineração de dados intermediário)
   Agora que aprendeu um pouco sobre as interações entre turnos, o número de operadores, as chamadas e a classificação do serviço, você está pronto para criar algumas consultas de previsão que podem ser usadas na análise e no planejamento empresarial. Primeiro, você criará algumas previsões com base no modelo exploratório para testar algumas suposições. Em seguida, você criará previsões em massa usando o modelo de regressão logística.  
@@ -183,9 +183,9 @@ ms.locfileid: "56025407"
 ## <a name="remarks"></a>Comentários  
  Os Suplementos de Mineração de Dados para Excel 2007 fornecem assistentes de regressão logística que facilitam a resposta de perguntas complexas, como quantos Operadores de Nível Dois seriam obrigatórios para melhorar a classificação do serviço visando um nível de destino para um turno específico. Os suplementos de mineração de dados são um download gratuito e incluem assistentes baseados nos algoritmos de rede neural ou regressão logística. Para obter mais informações, consulte os seguintes links:  
   
--   [SQL Server 2005 Data Mining Add-Ins para Office 2007](https://www.microsoft.com/sql/technologies/dm/addins.mspx): Análise dos cenários E se e Atingir meta  
+-   [SQL Server 2005 Data Mining Add-Ins para Office 2007](https://www.microsoft.com/sql/technologies/dm/addins.mspx): Meta a atingir e e se a análise de cenário  
   
--   [SQL Server 2008 Data Mining Add-Ins para Office 2007](https://go.microsoft.com/fwlink/?LinkID=117790): Análise do cenário Atingir Meta, análise do cenário E se e Cálculo de Previsão  
+-   [SQL Server 2008 Data Mining Add-Ins para Office 2007](https://go.microsoft.com/fwlink/?LinkID=117790): Meta a atingir análise do cenário, e se a análise de cenário e cálculo de previsão  
   
 ## <a name="conclusion"></a>Conclusão  
  Você aprendeu a criar, personalizar e interpretar modelos de mineração baseados nos algoritmos Rede Neural da Microsoft e Regressão Logística da Microsoft. Esses tipos de modelos são sofisticados e permitem uma variedade quase infinita em análise e, portanto, podem ser complexos e difíceis de dominar.  

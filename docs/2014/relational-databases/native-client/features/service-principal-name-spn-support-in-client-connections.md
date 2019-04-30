@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7f84968b9926240320f6d206aacffa1f18b4db03
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225638"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Suporte a SPN (Nome da entidade de serviço) em conexões com o cliente
   Do [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] em diante, o suporte para SPNs (nomes das entidades de serviço) foi estendido para habilitar a autenticação mútua em todos os protocolos. Em versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], apenas havia suporte para SPNs no Kerberos via TCP quando o SPN padrão da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] era registrado no Active Directory.  
@@ -72,7 +72,7 @@ ms.locfileid: "53980122"
  O novo comportamento de conexão é implementado pelo cliente; portanto, ele não é específico para uma versão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="linked-servers-and-delegation"></a>Servidores vinculados e delegação  
- Quando servidores vinculados são criados, o `@provstr` parâmetro de [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql) pode ser usado para especificar o servidor e os SPNs do parceiro de failover. Os benefícios de fazer isso são o mesmo que especificar SPNs em cadeias de conexão de cliente: É mais simples e confiável para estabelecer conexões que usam a autenticação Kerberos.  
+ Quando servidores vinculados são criados, o `@provstr` parâmetro de [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql) pode ser usado para especificar o servidor e os SPNs do parceiro de failover. Os benefícios de fazer isso são os mesmos que especificar SPNs em cadeias de conexão de cliente: É mais simples e confiável para estabelecer conexões que usam a autenticação Kerberos.  
   
  A delegação com servidores vinculados exige a autenticação Kerberos.  
   
@@ -81,9 +81,9 @@ ms.locfileid: "53980122"
   
 -   Segurança: O SPN especificado divulga informações protegidas?  
   
--   Confiabilidade: Para habilitar o uso de SPNs padrão, a conta de serviço em que a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é executada deve ter privilégios suficientes para atualizar o Active Directory no KDC.  
+-   Confiabilidade: Para habilitar o uso de SPNs padrão, a conta de serviço no qual o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] executa de instância deve ter privilégios suficientes para atualizar o Active Directory no KDC.  
   
--   Conveniência e transparência de local: Como os SPNs de um aplicativo serão afetados se seu banco de dados for movido para uma instância diferente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]? Isto se aplicará ao servidor principal e seu parceiro de failover se você usar espelhamento de banco de dados. Se uma alteração de servidor significar que os SPNs devem ser alterados, como isto afetará os aplicativos? Qualquer alteração será gerenciada?  
+-   Conveniência e transparência de local: Como os SPNs do aplicativo serão afetados se seu banco de dados for movido para outro [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instância? Isto se aplicará ao servidor principal e seu parceiro de failover se você usar espelhamento de banco de dados. Se uma alteração de servidor significar que os SPNs devem ser alterados, como isto afetará os aplicativos? Qualquer alteração será gerenciada?  
   
 ## <a name="specifying-the-spn"></a>Especificando o SPN  
  Você pode especificar um SPN em caixas de diálogo e em código. Esta seção discute como você pode especificar um SPN.  

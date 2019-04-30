@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cb15d3b64496374bed5b16f2661528c7ba1f9aae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201644"
 ---
 # <a name="basic-odbc-application-steps"></a>Etapas de aplicativo básico ODBC
 Esta seção descreve o fluxo geral de aplicativos de ODBC. É improvável que qualquer aplicativo chama todas essas funções exatamente nessa ordem. No entanto, a maioria dos aplicativos usa algumas variações dessas etapas. As etapas básicas de aplicativo são mostradas na ilustração a seguir.  
@@ -32,7 +32,7 @@ Esta seção descreve o fluxo geral de aplicativos de ODBC. É improvável que q
   
 -   [Etapa 2: Inicializar o aplicativo](../../../odbc/reference/develop-app/step-2-initialize-the-application.md)  
   
--   [Etapa 3: Criar e executar uma instrução SQL](../../../odbc/reference/develop-app/step-3-build-and-execute-an-sql-statement.md)  
+-   [Etapa 3: Compilar e executar uma instrução SQL](../../../odbc/reference/develop-app/step-3-build-and-execute-an-sql-statement.md)  
   
 -   [Etapa 4a: Buscar os resultados](../../../odbc/reference/develop-app/step-4a-fetch-the-results.md)  
   

@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8116f8a80a1fd614974d79516be2d4cd33eb660a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63204980"
 ---
 # <a name="display-query-and-view-designer-panes-visual-database-tools"></a>Exibir painéis do Designer de Consulta e Exibição (Visual Database Tools)
   O Designer de Consulta e Exibição é composto por quatro painéis separados: o painel Diagrama, o painel Critérios, o painel SQL e o painel Resultados. Normalmente quando você abre uma exibição ou cria uma nova consulta todas as quatro janelas são abertas, mas se houver necessidade de abrir qualquer uma delas, será possível fazer isso, desde que o Designer de Consulta e Exibição esteja aberto.  

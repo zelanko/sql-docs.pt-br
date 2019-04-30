@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5182ab1a72caac4181e50df2199f3e0457d3aaac
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200216"
 ---
 # <a name="autotranslation-of-character-data"></a>Tradução automática de dados de caracteres
   Dados de caractere, como ANSI de caracteres variáveis declaradas com SQL_C_CHAR ou dados armazenados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o **char**, **varchar**, ou **texto** tipos de dados, pode representa apenas um número limitado de caracteres. Os dados de caractere armazenados que usam um byte por caractere podem representar apenas 256 caracteres. Os valores armazenados em variáveis SQL_C_CHAR são interpretados usando a ACP (página de código ANSI) do computador cliente. Os valores armazenados usando **char**, **varchar**, ou **texto** tipos de dados no servidor são avaliados usando a ACP do servidor.  

@@ -1,23 +1,26 @@
 ---
 title: Propriedades do SQL Server Agent (guia Serviço) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 03/14/2017
+ms.prod: sql
+ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 452857fb-be1b-4e1e-851c-dd2216640f35
 author: stevestein
 ms.author: sstein
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
 ms.openlocfilehash: 6eb2a23761dc24243a7a10b0e4cdbeb5b9ffe58d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63137531"
 ---
 # <a name="sql-server-agent-properties-service-tab"></a>Propriedades do SQL Server Agent (guia Serviço)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   Este é o serviço [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Os valores de propriedade em cinza claro não podem ser alterados com o uso deste aplicativo.  
   
 ## <a name="options"></a>Opções  
@@ -45,11 +48,11 @@ ms.locfileid: "52775429"
  **Modo Inicial**  
  Defina este serviço com as seguintes opções:  
   
--   Manual: Esse serviço não é iniciado automaticamente na inicialização do computador. Você deve iniciá-lo usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager ou outra ferramenta.  
+-   Manual: Esse serviço não iniciar automaticamente quando o computador é iniciado. Você deve iniciá-lo usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager ou outra ferramenta.  
   
--   Automático: Este serviço tenta ser iniciado na inicialização do computador.  
+-   Automático: Este serviço tenta ser iniciado quando o computador é iniciado.  
   
--   Desabilitado: Esse serviço não pode ser iniciado.  
+-   Desabilitado: Este serviço não pode ser iniciado.  
   
  **Estado**  
  Indica se este serviço está sendo executado, se está parado ou desabilitado. "**...**" indica que há uma alteração de estado pendente.  

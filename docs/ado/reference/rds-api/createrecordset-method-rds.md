@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a8646fba41809fe3ed6a062e7a066ed0dce5c007
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298922"
 ---
 # <a name="createrecordset-method-rds"></a>Método CreateRecordset (RDS)
 Cria um vazio, desconectado [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  

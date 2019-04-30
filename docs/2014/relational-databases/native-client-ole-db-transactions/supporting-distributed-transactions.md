@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b35715487638a21e71f76788650b3238a3c9290c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213503"
 ---
 # <a name="supporting-distributed-transactions"></a>Dando suporte a transações distribuídas
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Consumidores do provedor de dados OLE DB nativos podem usar o **itransactionjoin:: Jointransaction** método participem de uma transação distribuída coordenada pelo Microsoft Distributed Transaction Coordinator (MS DTC).  
@@ -34,7 +34,7 @@ ms.locfileid: "48061087"
   
  Para transações distribuídas, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB do Native Client provedor implementa **itransactionjoin:: Jointransaction** parâmetros da seguinte maneira.  
   
-|Parâmetro|Description|  
+|Parâmetro|Descrição|  
 |---------------|-----------------|  
 |*punkTransactionCoord*|Um ponteiro para um objeto de transação do MS DTC.|  
 |*IsoLevel*|Ignorado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client. O nível de isolamento para transações coordenadas pelo MS DTC é determinado quando o consumidor faz a aquisição de um objeto de transação do MS DTC.|  
@@ -139,6 +139,6 @@ if (FAILED(pITransactionJoin->JoinTransaction(
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Transações](transactions.md)  
+ [Transactions](transactions.md)  
   
   

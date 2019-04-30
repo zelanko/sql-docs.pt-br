@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 33902bb9579d7b35c8b35bd6925c121607015067
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131148"
 ---
 # <a name="requirements-for-running-sqlxml-examples"></a>Requisitos para executar exemplos do SQLXML
   O [programação do SQLXML 4.0](sqlxml-4-0-programming-concepts.md) seção fornece vários exemplos. Este tópico lista os requisitos para criar exemplos funcionais.  

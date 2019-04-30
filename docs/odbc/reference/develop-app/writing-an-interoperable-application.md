@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8e559eab5787a64b6bdf0850147d7d9128fc435c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208572"
 ---
 # <a name="writing-an-interoperable-application"></a>Escrever um aplicativo interoperável
 Sempre que um aplicativo usa o mesmo código em relação a mais de um driver, que o código deve ser interoperável entre esses drivers. Na maioria dos casos, isso é uma tarefa fácil. Por exemplo, o código para buscar linhas com um cursor somente de avanço é o mesmo para todos os drivers. Em alguns casos, isso pode ser mais difícil. Por exemplo, o código para construir identificadores para uso em instruções SQL precisa considerar o caso do identificador, citando e convenções de nomenclatura de três partes de uma parte e duas partes.  

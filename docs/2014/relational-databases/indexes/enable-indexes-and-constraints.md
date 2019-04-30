@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7d68f329aecdd1284bac311db4139470bba55e41
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162385"
 ---
 # <a name="enable-indexes-and-constraints"></a>Habilitar índices e restrições
   Este tópico descreve como habilitar um índice desabilitado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Depois que um índice for desabilitado, ele permanecerá em estado desabilitado até que seja recriado ou descartado  
@@ -43,7 +43,7 @@ ms.locfileid: "52533141"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   Depois da reconstrução do índice, qualquer restrição que tiver sido desabilitada devido à desabilitação do índice deverá ser habilitada manualmente. As restrições PRIMARY KEY e UNIQUE são habilitadas reconstruindo o índice associado. Esse índice deve ser reconstruído (habilitado) antes de você poder habilitar restrições FOREIGN KEY que fazem referência à restrição PRIMARY KEY ou UNIQUE. Restrições FOREIGN KEY são habilitadas usando a instrução ALTER TABLE CHECK CONSTRAINT.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "52533141"
   
  As seguintes informações estão disponíveis na caixa de diálogo **Recriar Índices** :  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-enable-a-disabled-index-using-alter-index"></a>Para habilitar um índice desabilitado usando ALTER INDEX  
   

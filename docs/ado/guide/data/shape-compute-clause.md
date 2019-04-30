@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b78abac5ccbade0b686176f432618b4abc35ccab
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062812"
 ---
 # <a name="shape-compute-clause"></a>Cláusula COMPUTE de forma
 Uma cláusula COMPUTE de forma gera um pai **conjunto de registros**, cujas colunas consistem em uma referência para o filho **conjunto de registros**; opcional colunas cujo conteúdo é capítulo, novo, ou colunas calculadas, ou o resultado da execução de funções de agregação no filho **conjunto de registros** ou formatados anteriormente **conjunto de registros**; e todas as colunas de filho **Recordset** listados em o opcional pela cláusula.  
@@ -62,7 +62,7 @@ SHAPE child-command [AS] child-alias
   
  Se a cláusula BY for omitida, o filho todo **conjunto de registros** é tratado como um único grupo e o pai **Recordset** irá conter exatamente uma linha. Essa linha fará referência a inteiro filho **conjunto de registros**. Omitir a cláusula BY permite computar agregações de "total geral" ao longo de todo filho **conjunto de registros**.  
   
- Por exemplo:  
+ Por exemplo:   
   
 ```  
 SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.OrderAmount) as TotalSales         
@@ -83,7 +83,7 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders
 |OU|Medford|200,000|  
 |OU|Portland|400,000|  
 |CA|Los Angeles|800,000|  
-|CA|SAN Diego|600,000|  
+|CA|San Diego|600,000|  
 |WA|Tacoma|500,000|  
 |OU|Corvallis|300,000|  
   
@@ -116,7 +116,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
 |Estado|Cidade|População|  
 |-----------|----------|----------------|  
 |CA|Los Angeles|800,000|  
-|CA|SAN Diego|600,000|  
+|CA|San Diego|600,000|  
   
 ## <a name="child2"></a>Child2  
   

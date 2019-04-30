@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6aa634f154eb0594c76ae7e65b8d237175a3f92e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288514"
 ---
 # <a name="asynchronous-execution-notification-method"></a>Execução assíncrona (método de notificação)
 ODBC permite que a execução assíncrona da conexão e as operações de instrução. Um thread de aplicativo pode chamar uma função ODBC no modo assíncrono e a função pode retornar antes da operação for concluída, permitindo que o thread do aplicativo realizar outras tarefas. No SDK do Windows 7, para as operações de conexão, ou instrução assíncrona um aplicativo determinado que a operação assíncrona foi concluída usando o método de sondagem. Para obter mais informações, consulte [execução assíncrona (método de sondagem)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md). A partir do SDK do Windows 8, você pode determinar que uma operação assíncrona foi concluída usando o método de notificação.  
@@ -327,9 +327,9 @@ if (SQL_ASYNC_NOTIFICATION_CAPABLE == InfoValue)
   
  Atributos de Conexão SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE e SQL_ATTR_ASYNC_DBC_EVENT determinam se o ODBC é executado no modo assíncrono e se o ODBC habilita o modo de notificação para um identificador de conexão. Atributos de instrução SQL_ATTR_ASYNC_ENABLE e SQL_ATTR_ASYNC_STMT_EVENT determinam se o ODBC é executado no modo assíncrono e se o ODBC habilita o modo de notificação para um identificador de instrução.  
   
-|SQL_ATTR_ASYNC_ENABLE ou SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE|SQL_ATTR_ASYNC_STMT_EVENT ou SQL_ATTR_ASYNC_DBC_EVENT|Modo|  
+|SQL_ATTR_ASYNC_ENABLE ou SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE|SQL_ATTR_ASYNC_STMT_EVENT or SQL_ATTR_ASYNC_DBC_EVENT|Modo|  
 |-------------------------------------------------------------------------|-------------------------------------------------------------------|----------|  
-|Habilitar|não nulo|Notificação assíncrona|  
+|Habilitar|non-null|Notificação assíncrona|  
 |Habilitar|nulo|Sondagem assíncrono|  
 |Disable|any|Síncrona|  
   

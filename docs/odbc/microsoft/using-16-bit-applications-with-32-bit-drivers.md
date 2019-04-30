@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3ebd6f25758f73e75fd96abb734bc7b0347d5ee0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209988"
 ---
 # <a name="using-16-bit-applications-with-32-bit-drivers"></a>Usar aplicativos de 16 bits com drivers de 32 bits
 > [!IMPORTANT]  
@@ -47,7 +47,7 @@ ms.locfileid: "47752924"
 ## <a name="components"></a>Componentes  
  O componente ODBC do SDK MDAC 2.8 SP1 inclui os seguintes arquivos para a execução de aplicativos de 16 bits com drivers de 32 bits. Esses componentes estão na pasta \Redist.  
   
-|Nome do arquivo|Description|  
+|Nome do arquivo|Descrição|  
 |---------------|-----------------|  
 |Odbc16gt.dll|DLL de conversão genérico de ODBC 16 bits|  
 |Odbc32gt.dll|DLL de conversão genérico de ODBC 32-bit|  
@@ -55,12 +55,12 @@ ms.locfileid: "47752924"
 |Odbcad32.exe|programa de administrador de 32 bits|  
 |Odbcinst.hlp|Arquivo de Ajuda do instalador|  
 |Ds16gt.dll|instalação do driver de 16 bits genérica de DLL de conversão|  
-|CTL3D32|biblioteca de estilos de janela tridimensionais de 32 bits|  
+|Ctl3d32.dll|biblioteca de estilos de janela tridimensionais de 32 bits|  
   
  Além disso, os seguintes arquivos, juntamente com o Gerenciador de Driver ODBC para 2.10 16 bits, que não fazem parte do ODBC 3.51, são exigidos pelo e devem ser instalados com o aplicativo de 16 bits.  
   
-|Nome do arquivo|Description|  
+|Nome do arquivo|Descrição|  
 |---------------|-----------------|  
-|ODBC|Gerenciador de Driver de 16 bits|  
-|Odbcinst|DLL do instalador de 16 bits|  
+|Odbc.dll|Gerenciador de Driver de 16 bits|  
+|Odbcinst.dll|DLL do instalador de 16 bits|  
 |Odbcadm.exe|programa de administrador de ODBC de 16 bits|

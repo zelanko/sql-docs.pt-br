@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 70d574f867934af87ac7b5071b7f30bc9e89bccf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199441"
 ---
 # <a name="calling-sqlsetpos"></a>Chamar SQLSetPos
 No ODBC 2. *x*, o ponteiro para a matriz de status de linha era um argumento para **SQLExtendedFetch**. A matriz de status de linha fosse atualizada posteriormente por uma chamada para **SQLSetPos**. Alguns drivers têm contavam com o fato de que essa matriz não é alterado entre **SQLExtendedFetch** e **SQLSetPos**. Em ODBC 3. *x*, o ponteiro para a matriz de status é um campo de descritor e, portanto, o aplicativo pode alterá-la facilmente para apontar para uma matriz diferente. Isso pode ser um problema quando um ODBC 3. *x* aplicativo está funcionando com um ODBC 2. *x* driver, mas está chamando **SQLSetStmtAttr** para definir o ponteiro de status de matriz e está chamando **SQLFetchScroll** para buscar dados. O Gerenciador de Driver mapeia-os como uma sequência de chamadas para **SQLExtendedFetch**. No código a seguir, um erro teria normalmente gerado quando o Gerenciador de Driver mapeia o segundo **SQLSetStmtAttr** chamar ao trabalhar com um ODBC 2 *. x* driver:  

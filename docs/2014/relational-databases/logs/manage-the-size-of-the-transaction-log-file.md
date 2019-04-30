@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b2ebcd653adebed5541b1d2cdf814f638d0af683
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144327"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Gerenciar o tamanho do arquivo de log de transações
   Em alguns casos, pode ser útil reduzir ou expandir fisicamente o arquivo de log físico do log de transações de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este tópico contém informações sobre como monitorar o tamanho de um log de transações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , reduzir o log de transações, adicionar ou aumentar um arquivo de log de transações, otimizar a taxa de crescimento do log de transações **tempdb** e controlar o crescimento de um arquivo de log de transações.  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5f07e71e5b8314320f76be4496744da5a9d9e81a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208458"
 ---
 # <a name="tupletostr-mdx"></a>TupleToStr (MDX)
 
@@ -36,7 +36,7 @@ TupleToStr(Tuple_Expression)
  Essa função é usada para transferir uma representação de cadeia de caracteres de uma tupla para análise de uma função externa. A cadeia de caracteres retornada é colocada entre chaves {} e cada membro, se mais de um for expressamente definido na tupla, é separado por uma vírgula.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo seguinte retorna a cadeia de caracteres ([Date].[Calendar Year].&[2001],[Geography].[Geography].[Country].&[United States]):  
+ O exemplo a seguir retorna a cadeia de caracteres ([Date]. [ Ano civil]. & [2001], [Geography]. [Geography]. [Country]. & [United States]):  
   
 ```  
 WITH MEMBER Measures.x AS TupleToStr   

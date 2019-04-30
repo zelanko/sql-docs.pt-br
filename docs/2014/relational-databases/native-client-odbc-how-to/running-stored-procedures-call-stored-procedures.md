@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 58e5160065847d5729548702b5f1d65eb31bf694
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200268"
 ---
 # <a name="call-stored-procedures-odbc"></a>Chamar procedimentos armazenados (ODBC)
   Quando uma instrução SQL chama um procedimento armazenado usando a cláusula de escape CALL do ODBC, a Microsoft?? SQL Server??? driver envia o procedimento para o SQL Server usando o mecanismo RPC (chamada) de procedimento armazenado remoto. As solicitações de RPC ignoram grande parte da análise de instruções e do processamento de parâmetros no SQL Server e são mais rápidas do que a instrução EXECUTE do Transact-SQL.  

@@ -17,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 76fbb95117b1aae982242f24dc2cb1e815bc2356
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063092"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>Funções de agregação, a função CALC e a palavra-chave NEW
 Formatação de dados oferece suporte a funções a seguir. O nome atribuído o capítulo que contém a coluna a ser operado é o *capítulo alias*.  
   
  Um alias de capítulo pode ser totalmente qualificado, consistindo de cada nome de coluna de capítulo que levam a capítulo que contém o *nome de coluna,* todos separados por pontos. Por exemplo, se o capítulo pai, Cap1, contém um capítulo de filho, chap2, que tem uma coluna de quantidade amt, e o nome qualificado seria chap1.chap2.amt.  
   
-|Funções de agregação|Description|  
+|Funções de agregação|Descrição|  
 |-------------------------|-----------------|  
 |Soma (*capítulo alias*. *nome da coluna*)|Calcula a soma de todos os valores na coluna especificada.|  
 |AVG(*chapter-alias*.*column-name*)|Calcula a média de todos os valores na coluna especificada.|  
@@ -38,13 +38,13 @@ Formatação de dados oferece suporte a funções a seguir. O nome atribuído o 
 |STDEV(*chapter-alias*.*column-name*)|Calcula o desvio padrão da coluna especificada.|  
 |ANY(*chapter-alias*.*column-name*)|Um valor da coluna especificada. QUALQUER tem um valor previsível somente quando o valor da coluna é o mesmo para todas as linhas do capítulo.<br /><br /> **Observação** se a coluna não contiver o mesmo valor para todas as linhas do capítulo, o comando de forma arbitrariamente retorna um dos valores como o valor de qualquer função.|  
   
-|expressão calculada|Description|  
+|expressão calculada|Descrição|  
 |---------------------------|-----------------|  
-|CALC (*expressão*)|Calcula uma expressão arbitrária, mas apenas na linha do **Recordset** que contém a função CALC. Qualquer expressão usando esses [do Visual Basic for Applications (VBA) funções](../../../ado/guide/data/visual-basic-for-applications-functions.md) é permitido.|  
+|CALC(*expression*)|Calcula uma expressão arbitrária, mas apenas na linha do **Recordset** que contém a função CALC. Qualquer expressão usando esses [do Visual Basic for Applications (VBA) funções](../../../ado/guide/data/visual-basic-for-applications-functions.md) é permitido.|  
   
-|NOVA palavra-chave|Description|  
+|NOVA palavra-chave|Descrição|  
 |-----------------|-----------------|  
-|NOVOS *tipo de campo* [(*largura* &#124; *escala* &#124; *precisão* &#124; *erro*[, *escala* &#124; *erro*])]|Adiciona uma coluna vazia do tipo especificado para o **conjunto de registros**.|  
+|NEW *field-type* [(*width* &#124; *scale* &#124; *precision* &#124; *error* [, *scale* &#124; *error*])]|Adiciona uma coluna vazia do tipo especificado para o **conjunto de registros**.|  
   
  O *tipo de campo* transmitido com a nova palavra-chave pode ser qualquer um dos seguintes tipos de dados.  
   
@@ -60,7 +60,7 @@ Formatação de dados oferece suporte a funções a seguir. O nome atribuído o 
 |DBTYPE_I8|adBigInt|  
 |DBTYPE_UI8|adUnsignedBigInt|  
 |DBTYPE_GUID|adGuid|  
-|DBTYPE_BYTES|adLongVarBinary adBinary, AdVarBinary,|  
+|DBTYPE_BYTES|adBinary, AdVarBinary, adLongVarBinary|  
 |DBTYPE_STR|adChar, adVarChar, adLongVarChar|  
 |DBTYPE_WSTR|adWChar, adVarWChar, adLongVarWChar|  
 |DBTYPE_NUMERIC|adNumeric|  

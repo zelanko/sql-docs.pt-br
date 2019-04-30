@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: aa9460222d756c76e1ed6489688315ea8b7b0f18
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223252"
 ---
 # <a name="encryption-keys-ssrs-native-mode"></a>Chaves de Criptografia (modo nativo do SSRS)
   Use a página Chaves de Criptografia para gerenciar a chave simétrica usada para criptografar e descriptografar dados em um servidor de relatório. O gerenciamento das chaves de criptografia é uma parte importante da configuração do servidor de relatório. A chave simétrica é criada e aplicada automaticamente quando você cria o banco de dados do servidor de relatórios. Crie uma cópia de backup da chave simétrica de modo que você possa executar operações de manutenção rotineiras. As seguintes tarefas de manutenção requerem que você tenha uma cópia válida da chave simétrica:  
@@ -43,7 +43,7 @@ ms.locfileid: "48144226"
 > [!IMPORTANT]  
 >  A ação de excluir e recriar a chave simétrica não pode ser invertida ou desfeita. Excluir ou recriar a chave simétrica pode ter ramificações importantes em sua instalação atual. Se você excluir a chave, quaisquer dados existentes criptografados pela chave simétrica também serão excluídos. Os dados excluídos incluem cadeias de caracteres de conexão a fontes de dados de relatório externas, cadeias de caracteres de conexões armazenadas e algumas informações de assinatura.  
   
- Para abrir essa página, inicie o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] do Configuration Manager e selecione o link no painel de navegação. Para obter mais informações, consulte [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Para abrir essa página, inicie o Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e selecione o link no painel de navegação. Para obter mais informações, consulte [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Opções  
  **Backup**  

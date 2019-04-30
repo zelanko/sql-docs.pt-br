@@ -13,18 +13,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bd58bdb611a070c812364baf2fa3e1544c2ffdc9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63228961"
 ---
 # <a name="table-valued-parameter-descriptor-fields"></a>Campos do descritor de parâmetro com valor de tabela
   O suporte a parâmetros com valor de tabela inclui novos campos específicos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em APDs (descritores de parâmetro de aplicativo) e IPDs (descritores de parâmetro de implementação) ODBC.  
   
 ## <a name="remarks"></a>Comentários  
   
-|Nome|Local|Tipo|Description|  
+|Nome|Location|Tipo|Descrição|  
 |----------|--------------|----------|-----------------|  
 |SQL_CA_SS_TYPE_NAME|IPD|SQLTCHAR*|O nome do tipo de servidor do parâmetro com valor de tabela.<br /><br /> Quando um nome de tipo de parâmetro com valor de tabela é especificado em uma chamada para SQLBindParameter, ele sempre deve ser especificado como um valor Unicode, mesmo em aplicativos que são criados como aplicativos ANSI. O valor usado para o parâmetro *StrLen_or_IndPtr* deve ser SQL_NTS ou o comprimento da cadeia de caracteres do nome multiplicado por sizeof (WCHAR).<br /><br /> Quando um nome de tipo de parâmetro com valor de tabela é especificado por meio do SQLSetDescField, ele pode ser especificado usando um literal que esteja de acordo com a maneira como o aplicativo é compilado. O Gerenciador do Driver ODBC executará todas as conversões de Unicode necessárias.|  
 |SQL_CA_SS_TYPE_CATALOG_NAME (somente leitura)|IPD|SQLTCHAR*|O catálogo onde o tipo é definido.|  
@@ -34,9 +34,9 @@ ms.locfileid: "48138218"
   
  Os seguintes atributos de instrução e campos de cabeçalho do descritor se aplicam a parâmetros com valor de tabela quando o foco do parâmetro está definido como um parâmetro com valor de tabela:  
   
-|Nome|Local|Tipo|Description|  
+|Nome|Location|Tipo|Descrição|  
 |----------|--------------|----------|-----------------|  
-|SQL_ATTR_PARAMSET_SIZE<br /><br /> (É equivalente a SQL_DESC_ARRAY_SIZE no APD.)|APD|SQLUINTEGER|O tamanho das matrizes de buffers para um parâmetro com valor de tabela. Esse é o número máximo de linhas que os buffers irão conter ou o tamanho dos buffers em linhas; o próprio valor de parâmetro com valor de tabela pode ter mais ou menos linhas do que os buffers comportam. O padrão é 1. **Observação:** se SQL_SOPT_SS_PARAM_FOCUS for definido como seu valor padrão de 0, SQL_ATTR_PARAMSET_SIZE refere-se à instrução e especifica o número de conjuntos de parâmetros. Se SQL_SOPT_SS_PARAM_FOCUS for definido como o ordinal de um parâmetro com valor de tabela, ele fará referência ao parâmetro com valor de tabela e especificará o número de linhas por conjunto de parâmetros para o parâmetro com valor de tabela.|  
+|SQL_ATTR_PARAMSET_SIZE<br /><br /> (É equivalente a SQL_DESC_ARRAY_SIZE no APD.)|APD|SQLUINTEGER|O tamanho das matrizes de buffers para um parâmetro com valor de tabela. Esse é o número máximo de linhas que os buffers irão conter ou o tamanho dos buffers em linhas; o próprio valor de parâmetro com valor de tabela pode ter mais ou menos linhas do que os buffers comportam. O padrão é 1. **Observação:**  Se SQL_SOPT_SS_PARAM_FOCUS for definido como seu valor padrão de 0, SQL_ATTR_PARAMSET_SIZE refere-se à instrução e especifica o número de conjuntos de parâmetros. Se SQL_SOPT_SS_PARAM_FOCUS for definido como o ordinal de um parâmetro com valor de tabela, ele fará referência ao parâmetro com valor de tabela e especificará o número de linhas por conjunto de parâmetros para o parâmetro com valor de tabela.|  
 |SQL_ATTR_PARAM _BIND_TYPE|APD|SQLINTEGER|O padrão é SQL_PARAM_BIND_BY_COLUMN.<br /><br /> Para selecionar a associação de linha, este campo é definido como o comprimento da estrutura ou uma instância de um buffer que será associada a um conjunto de linhas de parâmetro com valor de tabela. Esse comprimento deve incluir espaço para todas as colunas associadas e qualquer preenchimento da estrutura ou do buffer. Isso garante que quando o endereço de uma coluna associada for incrementado com o comprimento especificado, o resultado apontará para o início da mesma coluna na linha seguinte. Quando o operador `sizeof` é usado em ANSI C, esse comportamento é garantido.|  
 |SQL_ATTR_PARAM_BIND_OFFSET_PTR|APD|SQLINTEGER*|O padrão é um ponteiro nulo.<br /><br /> Se este campo for não nulo, o driver cancelará o ponteiro, adicionará o valor cancelado a cada um dos campos adiados no registro do descritor (SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR, e SQL_DESC_OCTET_LENGTH_PTR) e usará os novos valores de ponteiro para acessar valores de dados.|  
   

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ef90025a129bc624377bfe7891f122a838180a51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199627"
 ---
 # <a name="sqlfreeconnect-mapping"></a>Mapeamento SQLFreeConnect
 Quando um aplicativo chama **SQLFreeConnect** por meio de um ODBC 3 *. x* driver, a chamada para  

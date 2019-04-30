@@ -19,14 +19,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c583ffad2267a82c39d4ab6c7cd71a1852c7cb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065454"
 ---
 # <a name="bcpcolfmt"></a>bcp_colfmt
-  Especifica o formato de origem ou de destino dos dados em um arquivo de usuário. Quando usado como um formato de origem **bcp_colfmt** Especifica o formato de um arquivo de dados existente usado como a fonte de dados em uma cópia em massa para uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabela. Quando usado como formato de destino, o arquivo de dados é criado usando os formatos de coluna especificados com **bcp_colfmt**.  
+  Especifica o formato de origem ou de destino dos dados em um arquivo de usuário. Quando usado como formato de origem, **bcp_colfmt** especifica o formato de um arquivo de dados existente usado como a fonte de dados em uma cópia em massa para uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando usado como formato de destino, o arquivo de dados é criado usando os formatos de coluna especificados com **bcp_colfmt**.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -61,7 +61,7 @@ idxServerCol
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *HDBC*  
+ *hdbc*  
  É o identificador de conexão ODBC habilitado para cópia em massa.  
   
  *idxUserDataCol*  
@@ -72,11 +72,11 @@ idxServerCol
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduziu o suporte para tokens de tipo de dados SQLXML e SQLUDT na *eUserDataType* parâmetro.  
   
- O *eUserDataType* parâmetro é enumerado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tokens de tipo de dados em SQLNCLI. h, não os enumeradores de tipo de dados ODBC C. Por exemplo, você pode especificar uma cadeia de caracteres, ODBC tipo SQL_C_CHAR, usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-tipo SQLCHARACTER específico.  
+ O parâmetro *eUserDataType* é enumerado pelos tokens de tipo de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em sqlncli.h e não pelos enumeradores de tipo de dados ODBC C. Por exemplo, você pode especificar uma cadeia de caracteres, o tipo ODBC SQL_C_CHAR, usando o tipo SQLCHARACTER específico do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Para especificar a representação de dados padrão do tipo de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], defina esse parâmetro como 0.  
+ Para especificar a representação de dados padrão do tipo de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , defina esse parâmetro como 0.  
   
- Para obter uma cópia em massa fora do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um arquivo, quando *eUserDataType* for SQLDECIMAL ou SQLNUMERIC:  
+ Para uma cópia em massa fora do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um arquivo, quando *eUserDataType* for SQLDECIMAL ou SQLNUMERIC:  
   
 -   Se a coluna de origem não for **decimal** ou **numeric**, serão usadas a precisão e escala padrão.  
   
@@ -98,9 +98,9 @@ idxServerCol
   
  A definição de *cbUserData* como SQL_NULL_DATA indica que todos os valores na coluna de arquivo de dados são ou deveriam ser definidos como NULL.  
   
- A definição de *cbUserData* como SQL_VARLEN_DATA indica que o sistema deve determinar o comprimento dos dados em cada coluna. Para algumas colunas, isso poderia significar que um indicador de comprimento/nulo é gerado para anteceder os dados em uma cópia do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou que o indicador é esperado nos dados copiados para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ A definição de *cbUserData* como SQL_VARLEN_DATA indica que o sistema deve determinar o comprimento dos dados em cada coluna. Para algumas colunas, isso poderia significar que um indicador de comprimento/nulo é gerado para anteceder os dados em uma cópia do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou que o indicador é esperado nos dados copiados para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] caractere e tipos de dados binários *cbUserData* pode ser SQL_VARLEN_DATA, SQL_NULL_DATA, 0 ou algum valor positivo. Se *cbUserData* for SQL_VARLEN_DATA, o sistema usará o indicador de comprimento, se houver, ou uma sequência de terminador para determinar o comprimento dos dados. Se forem fornecidos um indicador de comprimento e uma sequência de terminador, a cópia em massa usará aquele que resultar na menor quantidade de dados sendo copiados. Se *cbUserData* for SQL_VARLEN_DATA, os dados de tipo é um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] caractere ou tipo binário e nem um indicador de comprimento nem uma sequência de terminador for especificada, o sistema retornará uma mensagem de erro.  
+ Para os tipos de dados binary e character do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , *cbUserData* pode ser SQL_VARLEN_DATA, SQL_NULL_DATA, 0 ou algum valor positivo. Se *cbUserData* for SQL_VARLEN_DATA, o sistema usará o indicador de comprimento, se houver, ou uma sequência de terminador para determinar o comprimento dos dados. Se forem fornecidos um indicador de comprimento e uma sequência de terminador, a cópia em massa usará aquele que resultar na menor quantidade de dados sendo copiados. Se *cbUserData* for SQL_VARLEN_DATA, o tipo de dados for um tipo binary ou character do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e nem um indicador de comprimento nem uma sequência de terminador forem especificados, o sistema retornará uma mensagem de erro.  
   
  Se *cbUserData* for 0 ou um valor positivo, o sistema usará *cbUserData* como o comprimento de dados máximo. Entretanto, se, além de um *cbUserData*positivo, for fornecido um indicador de comprimento ou uma sequência de terminador, o sistema determinará o comprimento dos dados usando o método que resulta na menor quantidade de dados sendo copiados.  
   
@@ -141,7 +141,7 @@ idxServerCol
   
 -   O comprimento da sequência de bytes de encerramento opcional.  
   
- Cada chamada de **bcp_colfmt** especifica o formato de uma coluna do arquivo de usuário. Por exemplo, para alterar as configurações padrão para três colunas em um arquivo de dados de usuário de cinco colunas, primeiro chame [bcp_columns](bcp-columns.md)**(5)** e, em seguida, chame **bcp_colfmt** cinco vezes, com três dessas chamadas definindo o formato personalizado. Para as duas chamadas restantes, defina *eUserDataType* como 0 e defina *cbIndicator*, *cbUserData*e *cbUserDataTerm* respectivamente como 0, SQL_VARLEN_DATA e 0. Esse procedimento copia todas as cinco colunas, três com seu formato personalizado e duas com o formato padrão.  
+ Cada chamada de **bcp_colfmt** especifica o formato de uma coluna do arquivo de usuário. Por exemplo, para alterar as configurações padrão de três colunas em um arquivo de dados de usuário de cinco colunas, primeiro chame [bcp_columns](bcp-columns.md)**(5)** e, em seguida, chame **bcp_colfmt** cinco vezes, sendo três dessas chamadas para definir seu formato personalizado. Para as duas chamadas restantes, defina *eUserDataType* como 0 e defina *cbIndicator*, *cbUserData*e *cbUserDataTerm* respectivamente como 0, SQL_VARLEN_DATA e 0. Esse procedimento copia todas as cinco colunas, três com seu formato personalizado e duas com o formato padrão.  
   
  Para *cbIndicator*, um valor 8 indica que agora um tipo de valor grande é válido. Se o prefixo for especificado para um campo cuja coluna correspondente é um novo tipo max, ele poderá ser definido somente como 8. Para obter detalhes, consulte [bcp_bind](bcp-bind.md).  
   
@@ -151,9 +151,9 @@ idxServerCol
   
  Chamar **bcp_colfmt** mais de uma vez para qualquer coluna do arquivo de usuário gera um erro.  
   
- Você não precisa copiar todos os dados de um arquivo de usuário para a tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para ignorar uma coluna, especifique o formato dos dados da coluna, definindo o parâmetro *idxServerCol* como 0. Se desejar ignorar uma coluna, especifique seu tipo.  
+ Você não precisa copiar todos os dados de um arquivo de usuário para a tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para ignorar uma coluna, especifique o formato dos dados da coluna, definindo o parâmetro *idxServerCol* como 0. Se desejar ignorar uma coluna, especifique seu tipo.  
   
- O [bcp_writefmt](bcp-writefmt.md) função pode ser usada para persistir a especificação de formato.  
+ A função [bcp_writefmt](bcp-writefmt.md) pode ser usada para persistir a especificação de formato.  
   
 ## <a name="bcpcolfmt-support-for-enhanced-date-and-time-features"></a>Suporte do bcp_colfmt a recursos aprimorados de data e hora  
  Para informações aboutt ele digita usado com o *eUserDataType* parâmetro para tipos de data/hora, consulte [alterações de cópia em massa para tipos aprimorada de data e hora &#40;OLE DB e ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  

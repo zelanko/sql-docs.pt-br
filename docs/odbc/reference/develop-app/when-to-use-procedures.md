@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 82e71e6849902eb2f02423560c534056112a139a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208389"
 ---
 # <a name="when-to-use-procedures"></a>Quando usar procedimentos
 Há uma série de vantagens no uso de procedimentos, tudo com base no fato de que usando procedimentos move instruções SQL do aplicativo para a fonte de dados. O restante do aplicativo é uma chamada de procedimento interoperável. Essas vantagens incluem:  

@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f504928105f10b2b56bfa6989ff090f9f848bdd2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59963802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223204"
 ---
 # <a name="select-the-report-type"></a>Selecionar o tipo de relatório
   Use esta página do Assistente de Relatório para selecionar um relatório tabular ou um relatório de matriz.  

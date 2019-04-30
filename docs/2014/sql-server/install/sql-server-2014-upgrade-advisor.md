@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 18a88e4c6029705e5587dffce1803208186dfcd0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63137616"
 ---
 # <a name="sql-server-2014-upgrade-advisor"></a>Supervisor de Atualização do SQL Server 2014
   O Supervisor de Atualização do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] analisa a configuração dos componentes instalados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e gera um relatório de problemas que devem ser solucionados para uma atualização bem-sucedida.  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 154fdd7368835ba2a578d3ec641705c4064859ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149011"
 ---
 # <a name="step-1-connect-to-the-data-source"></a>Etapa 1: Conectar-se à fonte de dados
 É a primeira etapa em qualquer aplicativo para se conectar à fonte de dados. Nesta fase, incluindo as funções que requer, é mostrada na ilustração a seguir.  

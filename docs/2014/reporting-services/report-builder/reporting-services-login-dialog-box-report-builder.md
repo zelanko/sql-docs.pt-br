@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e82aefb411f35e5eb8ad33cb16650e6963a461d1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59949633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156643"
 ---
 # <a name="reporting-services-login-dialog-box-report-builder"></a>Caixa de diálogo Logon do Reporting Services (Construtor de Relatórios)
   Use a caixa de diálogo **Logon do Reporting Services** para fornecer credenciais para publicar relatórios no servidor de relatório. Para obter ajuda com essas credenciais, entre em contato o administrador do servidor de relatório.  

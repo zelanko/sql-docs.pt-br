@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 5640a50f50d113e21e276acdf09955a2cddedb57
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063996"
 ---
 # <a name="non-xml-format-files-sql-server"></a>Arquivos de formato não XML (SQL Server)
   No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], há suporte para dois tipos de arquivos de formato de exportação e importação em massa: *arquivos de formato não XML* e *arquivos de formato XML*.  
@@ -56,14 +56,14 @@ ms.locfileid: "48080476"
   
  Os campos **Versão** e **Número de Colunas** só ocorrem uma vez. Seus significados são descritos na tabela a seguir.  
   
-|Campo de arquivo de formato|Description|  
+|Campo de arquivo de formato|Descrição|  
 |------------------------|-----------------|  
-|Versão|O número de versão é reconhecido somente pelo **bcp**, não pelo [!INCLUDE[tsql](../../includes/tsql-md.md)]. Número de versão do utilitário **bcp** :<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]<br /><br /> Observação: a versão do utilitário **bcp** (Bcp.exe) usada para ler um arquivo de formato deve ser igual ou posterior à versão usada para criar o arquivo de formato. Por exemplo, o [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]**bcp** pode ler um arquivo de formato da versão 10.0, que é gerado pelo [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp**, mas o [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp** não pode ler um arquivo de formato da versão 12.0, que é gerado pelo [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]**bcp**.|  
+|Versão|O número de versão é reconhecido somente pelo **bcp**, não pelo [!INCLUDE[tsql](../../includes/tsql-md.md)]. Número de versão do utilitário **bcp** :<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]<br /><br /> Observação: A versão dos **bcp** utilitário (Bcp.exe) usado para ler um arquivo de formato deve ser igual ou uma versão mais recente que foi usado para criar o arquivo de formato. Por exemplo, o [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]**bcp** pode ler um arquivo de formato da versão 10.0, que é gerado pelo [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp**, mas o [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp** não pode ler um arquivo de formato da versão 12.0, que é gerado pelo [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]**bcp**.|  
 |Número de Colunas|Número de campos no arquivo de dados. Esse número deve ser o mesmo em todas as linhas.|  
   
  Os outros campos de arquivo de formato descrevem os campos de dados que devem ser importados ou exportados em massa. Cada campo de dados requer uma linha separada no arquivo de formato. Cada linha do arquivo de formato contém valores para os campos de arquivo de formato descritos na tabela a seguir.  
   
-|Campo de arquivo de formato|Description|  
+|Campo de arquivo de formato|Descrição|  
 |------------------------|-----------------|  
 |**Ordem de campo do arquivo host**|Um número que indica a posição de cada campo no arquivo de dados. O primeiro campo na linha é 1, e assim por diante.|  
 |**Tipo de dados do arquivo host**|Indica o tipo de dados que é armazenado em um determinado campo do arquivo de dados. Com arquivos de dados ASCII, use SQLCHAR; para arquivos de dados de formato nativo, use tipos de dados padrão. Para obter mais informações, veja [Especificar tipo de armazenamento de arquivo usando bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md).|  
@@ -72,7 +72,7 @@ ms.locfileid: "48080476"
 |**Terminador**|Delimitador para separar os campos em um arquivo de dados. Terminadores comuns são vírgula (,), tabulação (\t) e término de linha (\r\n). Para obter mais informações, veja [Especificar terminadores de campo e linha &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).|  
 |**Ordem de coluna de servidor**|A ordem de exibição das colunas na tabela [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Por exemplo, se o quarto campo no arquivo de dados mapear para a sexta coluna em uma tabela do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , a ordem da coluna no servidor para o quarto campo será 6.<br /><br /> Para evitar que uma coluna na tabela receba dados do arquivo de dados, defina o valor da ordem da coluna no servidor como 0.|  
 |**Nome de coluna de servidor**|Nome da coluna copiado da tabela do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . O nome atual do campo não é necessário, mas o campo no arquivo de formato não deve ficar em branco.|  
-|**Agrupamento de coluna**|O agrupamento usado para armazenar dados de caracteres e Unicode no arquivo de dados.|  
+|**Ordenação de coluna**|A ordenação usada para armazenar dados de caracteres e Unicode no arquivo de dados.|  
   
 > [!NOTE]  
 >  Você pode modificar um arquivo de formato para importar em massa de um arquivo de dados no qual o número ou a ordem dos campos difere do número ou da ordem das colunas na tabela. Para obter mais informações, consulte a lista de [Tarefas relacionadas](#RelatedTasks) , mais adiante neste tópico.  

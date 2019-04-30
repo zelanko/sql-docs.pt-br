@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 181d07e187c6b1091d38ebbe0018c61ae856caf3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63204990"
 ---
 # <a name="generate-xml-from-rowsets-with-for-xml"></a>Gerar XML de conjuntos de linhas com FOR XML
   Você pode gerar uma `xml` instância de tipo de dados de um conjunto de linhas usando FOR XML com o novo **tipo** diretiva.  
@@ -26,7 +26,7 @@ ms.locfileid: "58529058"
   
  A nova diretiva **FOR XML TYPE** pode ser usada para definir exibições XML de somente leitura sobre dados relacionais com sintaxe SQL. A exibição pode ser consultada com instruções SQL e XQuery inserido, conforme mostrado no exemplo a seguir. Também é possível fazer referência a essas exibições SQL em procedimentos armazenados.  
   
-## <a name="example-sql-view-returning-generated-xml-data-type"></a>Exemplo: Tipo de dados xml SQL exibição retornando gerada  
+## <a name="example-sql-view-returning-generated-xml-data-type"></a>Exemplo: Modo SQL que retorna o tipo de dados xml gerado  
  A definição da exibição SQL a seguir cria uma exibição XML sobre uma coluna relacional, pk, e autores de livros recuperados de uma coluna XML:  
   
 ```  

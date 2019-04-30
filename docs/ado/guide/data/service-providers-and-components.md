@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 050d1c9ec8aa5a158d5c08fb77d3743e55567699
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062862"
 ---
 # <a name="service-providers-and-components"></a>Provedores de serviços e componentes
 Provedores de serviço são componentes que estendem a funcionalidade dos provedores de dados com a implementação de interfaces estendidas que não são suportados nativamente pelo armazenamento de dados.  
@@ -29,4 +29,4 @@ Provedores de serviço são componentes que estendem a funcionalidade dos proved
   
  Por exemplo, um cursor do mecanismo, como [o Cursor Service para OLE DB](https://msdn.microsoft.com/57638feb-4ecd-4051-becb-8f828d21cf44), é um componente de serviço que pode consumir dados de um armazenamento de dados sequenciais, apenas de encaminhamento para gerar dados roláveis. Outros provedores de serviço usadas pelo ADO incluem o [provedor Microsoft OLE DB persistência (provedor de serviços do ADO)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md) (para salvar dados em um arquivo), o [Microsoft Data Shaping Service para OLE DB (provedor de serviços do ADO) ](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (para hierárquica **conjuntos de registros**) e o [provedor Microsoft OLE DB Remoting (provedor de serviços do ADO)](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md) (para invocar os provedores de dados em um computador remoto).  
   
- Para obter mais informações sobre os provedores de serviços e dados, consulte [apêndice a: provedores](../../../ado/guide/appendixes/appendix-a-providers.md).
+ Para obter mais informações sobre os provedores de serviços e dados, consulte [apêndice a: Provedores de](../../../ado/guide/appendixes/appendix-a-providers.md).

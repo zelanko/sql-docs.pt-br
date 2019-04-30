@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fa140a2c4311a3bfa77ba056fc957bacbb99e5d9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59945432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209082"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Layout de página e renderização (Construtor de Relatórios e SSRS)
   Quando você cria relatórios, é importante compreender o comportamento dos renderizadores do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para garantir que o relatório renderizado tenha a aparência desejada, incluindo o layout de página e as quebras de páginas. Provavelmente, você também deseja ter certeza de que o relatório renderizado se ajusta ao tamanho do papel geralmente usado na sua organização.  

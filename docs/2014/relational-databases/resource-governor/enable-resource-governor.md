@@ -13,18 +13,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5ef8d77de1df31387d33e6577fe84bd5ef9fa680
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63216021"
 ---
 # <a name="enable-resource-governor"></a>Habilitar Administrador de Recursos
   O Administrador de Recursos é desativado por padrão. Você pode habilitar o Administrador de Recursos usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou Transact-SQL.  
   
--   **Antes de começar:**  [Limitações e restrições](#LimitationsRestrictions), [permissões](#Permissions)  
+-   **Antes de começar:**  [Limitações e Restrições](#LimitationsRestrictions), [Permissões](#Permissions)  
   
--   **Para habilitar o administrador de recursos, usando:**  [Pesquisador de objetos](#RGOnObjEx), [propriedades do Resource Governor](#RGOnProp), [Transact-SQL](#RGOnTSQL)  
+-   **Para habilitar o Administrador de Recursos usando:**  [Pesquisador de Objetos](#RGOnObjEx), [Propriedades do Resource Governor](#RGOnProp), [Transact-SQL](#RGOnTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
  A habilitação do administrador de recursos gera os seguintes resultados:  
@@ -35,7 +35,7 @@ ms.locfileid: "52806178"
   
 -   As solicitações existentes antes da habilitação do Administrador de Recursos são afetadas por todas as alterações feitas na configuração quando o Administrador de Recursos foi desabilitado.  
   
-###  <a name="LimitationsRestrictions"></a> Limitações e Restrições  
+###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
  Você não pode usar a instrução `ALTER RESOURCE GOVERNOR` para habilitar o Administrador de Recursos quando estiver em uma transação de usuário.  
   
 ###  <a name="Permissions"></a> Permissões  

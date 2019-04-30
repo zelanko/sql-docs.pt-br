@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d0c5380a0006de82c39f532f1d87d6b7f33dd6d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125542"
 ---
 # <a name="commit-mode"></a>Modo de confirmação
 Transações em ODBC podem estar em um dos dois modos: modo de confirmação manual ou modo de confirmação automática.  

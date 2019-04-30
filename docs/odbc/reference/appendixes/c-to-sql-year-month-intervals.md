@@ -1,5 +1,5 @@
 ---
-title: 'C to SQL: intervalos de ano-mês | Microsoft Docs'
+title: 'C para SQL: Ano-mês | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,13 +17,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d12727f9298eb63fe10b44c48b9d3b7996a839d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63159285"
 ---
-# <a name="c-to-sql-year-month-intervals"></a>C para SQL: intervalos de ano-mês
+# <a name="c-to-sql-year-month-intervals"></a>C para SQL: Intervalos de ano-mês
 Os identificadores para os tipos de dados ODBC C ano-mês intervalo são:  
   
  SQL_C_INTERVAL_MONTH SQL_C_INTERVAL_YEAR SQL_C_INTERVAL_YEAR_TO_MONTH  
@@ -32,9 +32,9 @@ Os identificadores para os tipos de dados ODBC C ano-mês intervalo são:
   
 |Identificador de tipo SQL|Teste|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR [a]<br /><br /> SQL_VARCHAR [a]<br /><br /> SQL_LONGVARCHAR [a]|Comprimento de bytes da coluna > = comprimento de byte do caractere<br /><br /> Comprimento de bytes da coluna < caracteres de comprimento de bytes [a]<br /><br /> Valor de dados não é um literal de intervalo válido|n/d<br /><br /> 22001<br /><br /> 22015|  
-|SQL_WCHAR [a]<br /><br /> SQL_WVARCHAR [a]<br /><br /> SQL_WLONGVARCHAR [a]|Comprimento de caracteres da coluna > = comprimento de caracteres de dados<br /><br /> Comprimento de caracteres da coluna < caracteres de comprimento de dados [a]<br /><br /> Valor de dados não é um literal de intervalo válido|n/d<br /><br /> 22001<br /><br /> 22015|  
-|SQL_TINYINT [b]<br /><br /> SQL_SMALLINT [b]<br /><br /> SQL_INTEGER [b]<br /><br /> SQL_BIGINT [b]<br /><br /> SQL_NUMERIC [b]<br /><br /> SQL_DECIMAL [b]|Conversão de um único campo de intervalo não resultou em truncamento de dígitos inteiros<br /><br /> Conversão resultou em truncamento de dígitos inteiros|n/d<br /><br /> 22003|  
+|SQL_CHAR[a]<br /><br /> SQL_VARCHAR[a]<br /><br /> SQL_LONGVARCHAR[a]|Comprimento de bytes da coluna > = comprimento de byte do caractere<br /><br /> Comprimento de bytes da coluna < caracteres de comprimento de bytes [a]<br /><br /> Valor de dados não é um literal de intervalo válido|n/d<br /><br /> 22001<br /><br /> 22015|  
+|SQL_WCHAR[a]<br /><br /> SQL_WVARCHAR[a]<br /><br /> SQL_WLONGVARCHAR[a]|Comprimento de caracteres da coluna > = comprimento de caracteres de dados<br /><br /> Comprimento de caracteres da coluna < caracteres de comprimento de dados [a]<br /><br /> Valor de dados não é um literal de intervalo válido|n/d<br /><br /> 22001<br /><br /> 22015|  
+|SQL_TINYINT[b]<br /><br /> SQL_SMALLINT[b]<br /><br /> SQL_INTEGER[b]<br /><br /> SQL_BIGINT[b]<br /><br /> SQL_NUMERIC[b]<br /><br /> SQL_DECIMAL[b]|Conversão de um único campo de intervalo não resultou em truncamento de dígitos inteiros<br /><br /> Conversão resultou em truncamento de dígitos inteiros|n/d<br /><br /> 22003|  
 |SQL_INTERVAL_MONTH<br /><br /> SQL_INTERVAL_YEAR<br /><br /> SQL_INTERVAL_YEAR_TO_MONTH|Valor de dados foi convertido sem truncamento de todos os campos<br /><br /> Um ou mais campos de valor de dados foram truncados durante conversão|n/d<br /><br /> 22015|  
   
  [a] tipos de dados de intervalo de todos os C podem ser convertido em um tipo de dados de caractere.  

@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fdd07f8c0f8fba74432a08283c76341eb2707312
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59938622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223469"
 ---
 # <a name="select-color-dialog-box-report-builder-and-ssrs"></a>Caixa de diálogo Selecionar Cor (Construtor de Relatórios SSRS)
   Use a caixa de diálogo **Selecionar Cor** para especificar as opções de cor da tela de fundo de uma única ou de várias células em uma região de dados ou de uma caixa de texto, ou para um gráfico.  

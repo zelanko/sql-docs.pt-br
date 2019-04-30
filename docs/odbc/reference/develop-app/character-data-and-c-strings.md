@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 00daac655f0c435c1ee22239d3d4aafa23065997
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217780"
 ---
 # <a name="character-data-and-c-strings"></a>Dados de caractere e cadeias de caracteres C
 Parâmetros de entrada que se referem aos dados de caractere de comprimento variável (como nomes de colunas, parâmetros dinâmicos e valores de atributo de cadeia de caracteres) têm um parâmetro de comprimento associado. Se o aplicativo terminar de cadeias de caracteres com o caractere nulo, como é normal em C, ele fornece como um argumento seja o comprimento em bytes da cadeia de caracteres (não incluindo o terminador null) ou SQL_NTS (cadeia de caracteres Null-Terminated). Um argumento de comprimento não negativo especifica o comprimento real da cadeia de caracteres associado. O argumento de comprimento pode ser 0 para especificar uma cadeia de caracteres de comprimento zero, o que é diferente de um valor nulo. O valor negativo SQL_NTS direciona o driver para determinar o comprimento da cadeia de caracteres, localizando o caractere nulo de terminação.  

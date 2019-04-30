@@ -19,31 +19,31 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8e2f3b1e63578af7c0b42f00113fbb9e87cb8003
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208425"
 ---
 # <a name="paradox-data-types"></a>Tipos de dados Paradox
 O driver do Paradox ODBC mapeia tipos de dados do Paradox para tipos de dados SQL ODBC. A tabela a seguir lista todos os tipos de dados Paradox e mostra o SQL ODBC são mapeados para os tipos de dados.  
   
 |Tipo de dados Paradox|Tipo de dados ODBC|  
 |-----------------------|--------------------|  
-|ALFANUMÉRICO|SQL_VARCHAR|  
-|AUTOINCREMENT [1]|SQL_INTEGER|  
-|BCD [1]|SQL_DOUBLE|  
-|BYTES [1]|SQL_BINARY|  
+|ALPHANUMERIC|SQL_VARCHAR|  
+|AUTOINCREMENT[1]|SQL_INTEGER|  
+|BCD[1]|SQL_DOUBLE|  
+|BYTES[1]|SQL_BINARY|  
 |DATE|SQL_DATE|  
-|IMAGEM DE [2]|SQL_LONGVARBINARY|  
+|IMAGE[2]|SQL_LONGVARBINARY|  
 |LÓGICO [1]|SQL_BIT|  
-|LONGA [1]|SQL_INTEGER|  
+|LONG[1]|SQL_INTEGER|  
 |MEMORANDO [2]|SQL_LONGVARCHAR|  
 |MONEY [1]|SQL_DOUBLE|  
 |NUMBER|SQL_DOUBLE|  
 |CURTO|SQL_SMALLINT|  
-|TEMPO [1]|SQL_TIMESTAMP|  
-|CARIMBO DE HORA [1]|SQL_TIMESTAMP|  
+|TIME[1]|SQL_TIMESTAMP|  
+|TIMESTAMP[1]|SQL_TIMESTAMP|  
   
  [1] válido somente para versões do Paradox 5. *x*.  
   
@@ -54,9 +54,9 @@ O driver do Paradox ODBC mapeia tipos de dados do Paradox para tipos de dados SQ
   
  A tabela a seguir mostra as limitações nos tipos de dados Paradox.  
   
-|Tipo de dados|Description|  
+|Tipo de dados|Descrição|  
 |---------------|-----------------|  
-|ALFANUMÉRICO|Criando uma coluna de ALFANUMÉRICO de zero ou comprimento não especificado, na verdade, retorna uma coluna de 255 bytes.|  
+|ALPHANUMERIC|Criando uma coluna de ALFANUMÉRICO de zero ou comprimento não especificado, na verdade, retorna uma coluna de 255 bytes.|  
 |BYTES|Se você inserir NULL em uma coluna binária com o driver Paradox5, ele é alterado para 0.|  
 |LONG|O valor negativo máximo com suporte pelo driver do Paradox para o tipo de dados Long no Paradox 5. *x* não é -2 ^ 31 (-2147483648), como deveria ser desde muito mapeia para os dados ODBC digite SQL_INTEGER. O valor negativo máximo com suporte por muito tempo é realmente -2 ^ 31 + 1 (-2147483647).|  
 |timestamp|Quando um valor é inserido em uma coluna de carimbo de hora, o driver do Paradox, então, subsequentemente recuperado da coluna, o valor recuperado pode diferir do que o valor inserido pelo máximo de 1 segundo por causa de arredondamento.|  

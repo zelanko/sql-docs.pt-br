@@ -1,5 +1,5 @@
 ---
-title: Referência da Interface do usuário (OracleToSQL) | Microsoft Docs
+title: User Interface Reference (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 2acf2dca7b383d6ab579f46e33b10c10e541b88c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209917"
 ---
 # <a name="user-interface-reference-oracletosql"></a>Referência da interface do usuário (OracleToSQL)
 Esta seção inclui tópicos de ajuda para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) para Oracle.  
@@ -25,8 +25,8 @@ A tabela a seguir lista as caixas de diálogo do SSMA:
   
 |||  
 |-|-|  
-|Tópico|Description|  
-|[Seleção de objetos avançada &#40;OracleToSQL&#41;](../../ssma/oracle/advanced-object-selection-oracletosql.md)|Use o **avançado objeto selecione** caixa de diálogo para localizar objetos de banco de dados usando critérios de filtro e, em seguida, marque ou desmarque esses objetos.|  
+|Tópico|Descrição|  
+|[Advanced Object Selection  &#40;OracleToSQL&#41;](../../ssma/oracle/advanced-object-selection-oracletosql.md)|Use o **avançado objeto selecione** caixa de diálogo para localizar objetos de banco de dados usando critérios de filtro e, em seguida, marque ou desmarque esses objetos.|  
 |[Relatório de avaliação &#40;OracleToSQL&#41;](../../ssma/oracle/assessment-report-oracletosql.md)|Use o relatório de avaliação para exibir os resultados da conversão de objetos do Oracle para [!INCLUDE[tsql](../../includes/tsql-md.md)] sintaxe e para estimar o tempo e a complexidade de uma migração para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Conectar-se ao Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)|Use o **conectar-se ao Oracle** caixa de diálogo para se conectar ao banco de dados Oracle que você deseja migrar.|  
 |[Conectar-se ao SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-sql-server-oracletosql.md)|Use o **conectar-se ao SQL Server** caixa de diálogo para se conectar à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à qual você deseja migrar.|  

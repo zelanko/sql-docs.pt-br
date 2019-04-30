@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 359419f0da19151172689090272e0c42e18cc906
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193346"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200379"
 ---
 # <a name="odbc-how-to-topics"></a>Tópicos de instruções sobre ODBC
-  Para usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC, você deve ser capaz de criar fontes de dados ODBC e garantir que o servidor tenha a versão correta dos procedimentos armazenados do catálogo. Para codificar um aplicativo do SQL Server, você deve saber como alocar identificadores ODBC, definir atributos, se conectar a uma instância do SQL Server, executar consultas e processar resultados.  
+  Para usar o driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , você deve ser capaz de criar fontes de dados ODBC e garantir que o servidor tenha a versão correta dos procedimentos armazenados do catálogo. Para codificar um aplicativo do SQL Server, você deve saber como alocar identificadores ODBC, definir atributos, se conectar a uma instância do SQL Server, executar consultas e processar resultados.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   

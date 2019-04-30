@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2fed5ea04e15002d31e35e25fac405a729929be8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63305688"
 ---
 # <a name="transaction-support-in-dbmss"></a>Suporte à transação em DBMSs
 Alguns bancos de dados, especialmente da área de trabalho bancos de dados, como, Paradox, dBASE e Btrieve, damos suporte a transações. Até mesmo entre bancos de dados que oferecem suporte a transações, não há variação nas quais os tipos de instruções SQL podem ser em uma transação. Para obter mais informações, consulte a opção de SQL_TXN_CAPABLE na [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) descrição da função.

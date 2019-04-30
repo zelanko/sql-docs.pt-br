@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6449b073adb406d15f41cfe02d477a05ad8b0b31
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065476"
 ---
 # <a name="creating-a-valid-connection-string-using-tcp-ip"></a>Criando uma cadeia de conexão válida usando TCP/IP
   Para criar uma cadeia de conexão válida usando TCP/IP, deve você:  
@@ -37,7 +37,7 @@ ms.locfileid: "52764248"
  No momento da conexão, o componente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client lê os valores de servidor, protocolo e porta no Registro para o nome de alias especificado e cria uma cadeia de conexão no formato `tcp:<servername>[\<instancename>],<port>` ou `tcp:<IPAddress>[\<instancename>],<port>`.  
   
 > [!NOTE]  
->  O Firewall do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows fecha a porta 1433 por padrão. Como o [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se comunica pela porta 1433, você deverá reabri-la se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver configurado para escutar conexões de entrada de cliente usando TCP/IP. Para obter informações sobre como configurar um firewall, consulte "Como: Configurar um Firewall para acesso ao SQL Server" em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manuais Online ou revisar a documentação do firewall.  
+>  O Firewall do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows fecha a porta 1433 por padrão. Como o [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se comunica pela porta 1433, você deverá reabri-la se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver configurado para escutar conexões de entrada de cliente usando TCP/IP. Para obter informações sobre como configurar um firewall, consulte "como: Configurar um Firewall para acesso ao SQL Server"em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manuais Online ou revisar a documentação do firewall.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client dão suporte total ao protocolo IP versão 4 (IPv4) e versão 6 (IPv6). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Configuration Manager aceita os formatos IPv4 e IPv6 para endereços IP. Para obter informações sobre IPv6, consulte "Conectando com o uso de IPv6" nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -166,7 +166,7 @@ Server             .\<instancename>
 ```  
   
 > [!NOTE]  
->  Para obter informações sobre como especificar o protocolo de rede como uma **sqlcmd** parâmetro, consulte "como: Conectar-se ao mecanismo de banco de dados usando sqlcmd.exe"em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manuais Online.  
+>  Para obter informações sobre como especificar o protocolo de rede como um parâmetro **sqlcmd**, confira "Como: Conectar-se ao mecanismo de banco de dados usando sqlcmd.exe"em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manuais Online.  
   
 ## <a name="see-also"></a>Consulte também  
  [Criando uma cadeia de conexão válida usando o protocolo de memória compartilhada](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   

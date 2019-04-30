@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 4ef2127e3f554ac4d7bbd92e9d823ecd1e025fe9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131426"
 ---
 # <a name="architecture-of-client-side-and-server-side-xml-formatting-sqlxml-40"></a>Arquitetura de formatação XML no lado do cliente e no lado do servidor (SQLXML 4.0)
   A ilustração a seguir mostra a arquitetura de formatação XML no lado do servidor.  
@@ -40,7 +40,7 @@ ms.locfileid: "52750348"
   
  ![Arquitetura de formatação XML no lado do cliente. ](../../../database-engine/dev-guide/media/clientsidexml.gif "Formatação de arquitetura de XML no lado do cliente.")  
   
- Neste exemplo, o cliente usa o provedor SQLXMLOLEDB. Na cadeia de conexão, a propriedade de provedor de dados deve ser definida como SQLOLEDB. (Esse é o único valor aceito no SQLXML 4.0.) O comando executado no cliente é enviado ao servidor. O conjunto de linhas gerado no servidor é enviado ao cliente. A formatação do documento XML do conjunto de linhas é executada no cliente.  
+ Neste exemplo, o cliente usa o provedor SQLXMLOLEDB. Na cadeia de conexão, a propriedade de provedor de dados deve ser definida como SQLOLEDB. (Isso é o único valor aceito no SQLXML 4.0). O comando é executado no cliente é enviado ao servidor. O conjunto de linhas gerado no servidor é enviado ao cliente. A formatação do documento XML do conjunto de linhas é executada no cliente.  
   
  No SQLXML 4.0, tanto o provedor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) como o SQLOLEDB podem ser usados como o provedor de dados. Você pode acessar potencialmente qualquer fonte de dados. Contanto que a consulta retorne um único conjunto de linhas, a transformação XML pode ser aplicada no cliente.  
   

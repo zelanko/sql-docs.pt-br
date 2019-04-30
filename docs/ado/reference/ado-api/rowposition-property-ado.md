@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0e2e8bab73bfe93e8a78e013572a376b608ca9a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63180618"
 ---
 # <a name="rowposition-property-ado"></a>Propriedade RowPosition (ADO)
 Obtém ou define um banco de dados OLE **RowPosition** objeto de/em uma **ADORecordsetConstruction** objeto. Quando você usa **put_RowPosition** para definir o **RowPosition** objeto resultante **conjunto de registros** objeto usa o **RowPosition** objeto Determine a linha atual.  

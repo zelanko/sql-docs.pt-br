@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 893e72d73062dc78ddbe33deb9b66941c30fb2a5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209359"
 ---
 # <a name="startdate-property-securitycertificate-class"></a>Propriedade StartDate (classe SecurityCertificate)
   Obtém a data em que o certificado de segurança começa a ter efeito.  

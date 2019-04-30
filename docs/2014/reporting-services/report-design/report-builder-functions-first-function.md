@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e3aad13a60182b4fe040d21ce132763e55f412f3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59962933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215451"
 ---
 # <a name="first-function-report-builder-and-ssrs"></a>Função First (Construtor de Relatórios e SSRS)
   Retorna o primeiro valor no escopo fornecido da expressão especificada.  

@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 34f68c4604d70dc83579f8c9284802b82cc6291d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222578"
 ---
-# <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>Tarefa 13: Adicionando o destino OLE DB para gravar dados na tabela de preparo do MDS
+# <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>Tarefa 13: Adicionar o destino OLE DB para gravar dados na tabela de preparo do MDS
   Agora que você adicionou **ImportType** e **BatchTag** valores para todos os registros, você está pronto para enviá-los pelo MDS para preparação. Nesta tarefa, você deve usar o destino OLE DB para gravar os dados na **supplier_leaf** tabela de preparo.  
   
 1.  Arraste **destino OLE DB** de **outros destinos** seção o **caixa de ferramentas do SSIS** para o **de fluxo de dados** guia e solte-o sob  **Adicionar colunas exigidas pelo MDS**.  

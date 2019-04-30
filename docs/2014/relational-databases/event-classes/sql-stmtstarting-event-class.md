@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 95a2e4a2bc7caeaae04ac8aab245ccf7edbb6af7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061270"
 ---
 # <a name="sqlstmtstarting-event-class"></a>Classe de evento SQL:StmtStarting
   A classe de evento do SQL:StmtStarting indica que uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] foi iniciada.  
@@ -44,7 +44,7 @@ ms.locfileid: "52774468"
 |NestLevel|`int`|Nível de aninhamento do procedimento armazenado se a instrução SQL foi executada em um procedimento armazenado.|29|Sim|  
 |NTDomainName|`nvarchar`|O domínio do Windows ao qual o usuário pertence.|7|Sim|  
 |NTUserName|`nvarchar`|Nome do usuário do Windows.|6|Sim|  
-|Deslocamento|`int`|O deslocamento inicial da instrução no lote ou procedimento armazenado.|61|Sim|  
+|Offset|`int`|O deslocamento inicial da instrução no lote ou procedimento armazenado.|61|Sim|  
 |RequestID|`int`|ID da solicitação que contém a instrução.|49|Sim|  
 |ServerName|`nvarchar`|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
 |SessionLoginName|`nvarchar`|Nome de logon do usuário que originou a sessão. Por exemplo, ao se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, SessionLoginName mostrará o Logon1 e LoginName mostrará o Logon2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  

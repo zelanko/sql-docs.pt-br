@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6f47f3c40ed85cf0b38615176309f47bfb6ce542
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067542"
 ---
 # <a name="saving-to-the-xml-dom-object"></a>Salvar no objeto DOM XML
 Você pode salvar um conjunto de registros em formato XML a uma instância de um objeto DOM MSXML, conforme mostrado no código do Visual Basic a seguir:  

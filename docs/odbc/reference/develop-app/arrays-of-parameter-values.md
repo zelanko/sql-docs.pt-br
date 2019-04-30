@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 03479a0187c7720a595b550290a8f5ac8197fa9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288407"
 ---
 # <a name="arrays-of-parameter-values"></a>Matriz de valores de parâmetros
 Muitas vezes é útil para aplicativos para passar matrizes de parâmetros. Por exemplo, usando matrizes de parâmetros e um parametrizada **inserir** instrução, um aplicativo pode inserir um número de linhas ao mesmo tempo. Há diversas vantagens em usar matrizes. Primeiro, o tráfego de rede é reduzido porque os dados para muitas instruções são enviados em um único pacote (se a fonte de dados dá suporte a matrizes de parâmetro nativamente). Em segundo lugar, algumas fontes de dados podem executar instruções SQL usando matrizes mais rápido do que executar o mesmo número de instruções de SQL separadas. Por fim, quando os dados são armazenados em uma matriz, como é geralmente o caso para dados da tela, o aplicativo pode associar todas as linhas em uma determinada coluna com uma única chamada para **SQLBindParameter** e atualizá-los executando uma única instrução.  

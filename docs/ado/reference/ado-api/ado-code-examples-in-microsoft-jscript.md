@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 02dc045c97f79f70263d2ad2edabdbc2c0d2983f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065049"
 ---
 # <a name="ado-code-examples-in-microsoft-jscript"></a>Exemplos de código ADO no Microsoft JScript
 Use os exemplos de código a seguir para aprender a usar os métodos de ADO, propriedades e eventos ao gravar no JScript.  
@@ -60,4 +60,4 @@ Use os exemplos de código a seguir para aprender a usar os métodos de ADO, pro
  [Exemplos de código ADO no Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
  [Exemplos de código ADO VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
  [Exemplos de código ADO no Visual C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
- [Apêndice D: Exemplos de ADO](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
+ [Apêndice d: Exemplos de ADO](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f22d153d55674d5dd615ab50848e4a7fd85a6dcb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63075241"
 ---
 # <a name="give-others-ownership-of-a-job"></a>Give Others Ownership of a Job
   Este tópico descreve como reatribuir a propriedade de trabalhos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent a outro usuário.  
   
--   **Antes de começar:**  [Limitações e restrições](#Restrictions), [segurança](#Security)  
+-   **Antes de começar:**  [Limitações e Restrições](#Restrictions), [Segurança](#Security)  
   
 -   **Para conceder a propriedade de um trabalho a outros usando:**  
   
@@ -36,7 +36,7 @@ ms.locfileid: "52800228"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
  Para criar um trabalho, o usuário deve ser membro de uma das funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ou da função de servidor fixa **sysadmin** . Um trabalho só pode ser editado por seu proprietário ou por membros da função **sysadmin** . Para obter mais informações sobre as funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, consulte [Funções de banco de dados fixas do SQL Server Agent](sql-server-agent-fixed-database-roles.md).  
   
  Você precisa ser um administrador do sistema para alterar o proprietário de um trabalho.  
@@ -63,7 +63,7 @@ ms.locfileid: "52800228"
   
      Atribuir um trabalho a outro logon não garante que o novo proprietário tenha permissões adequadas para executar o trabalho com êxito.  
   
-##  <a name="TsqlProc2"></a> Usando Transact-SQL  
+##  <a name="TsqlProc2"></a> Usando o Transact-SQL  
  **Para conceder a propriedade de um trabalho a outros**  
   
 1.  No Pesquisador de Objetos, conecte-se a uma instância do Mecanismo de Banco de Dados e expanda-a.  

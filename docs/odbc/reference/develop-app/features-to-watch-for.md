@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fe5bce7a8a13c7296ce08f84ea4b0c60c2eb5261
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061604"
 ---
 # <a name="features-to-watch-for"></a>Recursos a serem inspecionados
 Esta seção descreve uma série de recursos que os desenvolvedores de aplicativos muitas vezes, considera natural. Na verdade, esses recursos variam muito em forma de suporte entre DBMSs; e suporte Falha ao código para que eles provavelmente causar problemas em aplicativos interoperáveis.  
   
- Esta seção não lista todos os recursos que os desenvolvedores de aplicativos precisam considerar. Para obter essas informações, consulte o [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md), e [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md) função descrições, [gramática de SQL apêndice c:](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)e as seções que abordam cada recurso deste manual.  
+ Esta seção não lista todos os recursos que os desenvolvedores de aplicativos precisam considerar. Para obter essas informações, consulte o [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md), e [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md) função descrições, [apêndice c: Gramática SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)e as seções que abordam cada recurso deste manual.  
   
  Esta seção contém os tópicos a seguir.  
   

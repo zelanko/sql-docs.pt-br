@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a85868cf22fa6d385c3bf75261e0f1cd54e4e1d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149079"
 ---
 # <a name="the-odbc-cursor-library"></a>A biblioteca de cursores ODBC
 > [!IMPORTANT]  
@@ -31,4 +31,4 @@ ms.locfileid: "47727366"
   
  Bloco e cursores roláveis são adições úteis para muitos aplicativos. No entanto, nem todos os drivers dão suporte a cursores roláveis e bloco. O mesmo é verdadeiro para atualização posicionadas e instruções delete e **SQLSetPos**, que são abordadas na atualização de dados. Portanto, o componente ODBC do SDK do Windows, anteriormente incluídas no Microsoft Data Access Components (MDAC) SDK, inclui uma biblioteca de cursor. A biblioteca de cursores implementa o bloco, Cursores estáticos, instruções de exclusão e atualização posicionadas e **SQLSetPos** para qualquer driver que satisfaça o nível de conformidade com a CLI de padrão de grupo aberto. A biblioteca de cursores pode ser redistribuída com aplicativos de ODBC; Consulte o contrato de licenciamento no SDK para obter mais informações.  
   
- Para usar a biblioteca de cursores, um aplicativo define o atributo de conexão SQL_ATTR_ODBC_CURSORS antes de se conectar à fonte de dados. Para obter mais informações sobre a biblioteca de cursores, consulte [biblioteca de cursores de ODBC apêndice f:](../../../odbc/reference/appendixes/appendix-f-odbc-cursor-library.md).
+ Para usar a biblioteca de cursores, um aplicativo define o atributo de conexão SQL_ATTR_ODBC_CURSORS antes de se conectar à fonte de dados. Para obter mais informações sobre a biblioteca de cursores, consulte [apêndice f: Biblioteca de cursores ODBC](../../../odbc/reference/appendixes/appendix-f-odbc-cursor-library.md).

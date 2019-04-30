@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3aded281e57e284253c5d0c122b377bddbe0eb0d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63165005"
 ---
 # <a name="dataset-properties-dialog-box-options"></a>Caixa de diálogo Propriedades do Conjunto de Dados, Opções
   Selecione **opções** sobre o **DatasetProperties** caixa de diálogo para alterar as opções de dados, como as opções de agrupamento e subtotais, para a consulta. Para obter mais informações, consulte [Suporte a agrupamentos e Unicode](../relational-databases/collations/collation-and-unicode-support.md).  

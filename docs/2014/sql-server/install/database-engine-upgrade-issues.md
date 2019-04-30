@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f6540789cbd05f2a7c5e5b61bf5597221dc3305f
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162473"
 ---
 # <a name="database-engine-upgrade-issues"></a>Problemas de atualização do Mecanismo de Banco de Dados
   Os tópicos desta seção descrevem problemas do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que podem afetar sua atualização para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Esses tópicos descrevem ações que podem ser tomadas para diminuir o efeito dessas alterações em seu ambiente.  

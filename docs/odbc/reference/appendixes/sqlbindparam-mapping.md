@@ -1,5 +1,5 @@
 ---
-title: Mapeamento SQLBindParam | Microsoft Docs
+title: SQLBindParam Mapping | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 57e0fe66d76f91c8cea35710e9d0245db7619628
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199717"
 ---
 # <a name="sqlbindparam-mapping"></a>Mapeamento SQLBindParam
 **SQLBindParam** não pode realmente ser chamado preterido porque nunca foi lá em ODBC; no entanto, ela ainda representa funções duplicadas – precisa exportá-lo porque o ISO e abra grupo compatível com aplicativos usará o Gerenciador de Driver. Porque **SQLBindParameter** contém toda a funcionalidade dos **SQLBindParam**, **SQLBindParam** serão mapeados na parte superior da **SQLBindParameter** (quando o driver subjacente é um ODBC 3 *. x* driver). Um ODBC 3 *. x* driver não precisa implementar **SQLBindParam**.  

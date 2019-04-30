@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: de65fb7a85154f607cd8f266faec4621cdc41476
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131743"
 ---
-# <a name="lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure"></a>Lição 2: Adicionando modelos de mineração à estrutura de mineração de comprador de bicicleta
+# <a name="lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure"></a>Lição 2: Como adicionar modelos de mineração à estrutura de mineração de Comprador de Bicicleta
   Nesta lição, você adicionará dois modelos de mineração à estrutura de mineração de comprador de bicicleta que você criou [lição 1: Criando a estrutura de mineração de comprador de bicicleta](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md). Esses modelos de mineração lhe permitirão explorar os dados usando um modelo e criar previsões usando outro.  
   
  Para explorar como os clientes potenciais podem ser categorizados por suas características, você criará um modelo de mineração com base nas [algoritmo Microsoft Clustering](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md). Em uma lição posterior, você explorará como esse algoritmo localiza clusters de clientes que compartilham características semelhantes. Por exemplo, você pode identificar que alguns clientes tendem a viver perto de outros, andar de bicicleta e ter formação acadêmica similar. É possível usar esses clusters para entender melhor como clientes diferentes estão relacionados e usar as informações para criar uma estratégia de marketing cujo alvo são clientes específicos.  

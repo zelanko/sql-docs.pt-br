@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dd96e467ce9f85c3ff62bb42b483f20fbae56204
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63305778"
 ---
 # <a name="transactions-in-odbc-odbc"></a>Transações em ODBC
 Transações em ODBC são concluídas no nível de conexão; ou seja, quando um aplicativo conclui uma transação, ele confirma ou reverte todo o trabalho feito por meio de todos os identificadores de instrução essa conexão.  

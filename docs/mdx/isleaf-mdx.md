@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 13b609d0abb7d032828dca78b185652ad138977b
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224543"
 ---
 # <a name="isleaf-mdx"></a>IsLeaf (MDX)
 
@@ -32,8 +32,8 @@ IsLeaf(Member_Expression)
  *Member_Expression*  
  Uma linguagem MDX válida que retorna um membro.  
   
-## <a name="remarks"></a>Remarks  
- O **IsLeaf** função retorna **true** se o membro especificado for um membro folha. Caso contrário, a função retorna **false**.  
+## <a name="remarks"></a>Comentários  
+ O **IsLeaf** retornos de função **verdadeiro** se o membro especificado for um membro folha. Caso contrário, a função retornará **falsos**.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir retorna TRUE se [Date].[Fiscal].CurrentMember for um membro folha:  
@@ -49,6 +49,6 @@ IsLeaf(Member_Expression)
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

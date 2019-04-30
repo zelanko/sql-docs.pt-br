@@ -1,5 +1,5 @@
 ---
-title: Relatório de migração de dados (SybaseToSQL) | Microsoft Docs
+title: Data Migration Report (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 3d70a2546a925474e0b80bb1d7cee4ee7ab2c266
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298532"
 ---
 # <a name="data-migration-report-sybasetosql"></a>Relatório de migração de dados (SybaseToSQL)
 O **relatório de migração de dados** caixa de diálogo é exibida após a migração de dados a serem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

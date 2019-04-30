@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7be2574e700e15373d57bf4132ee2c3dd955112b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63228387"
 ---
 # <a name="the-significance-of-cursor-location"></a>A importância da posição do cursor
 Cada cursor usa recursos temporários para armazenar seus dados. Esses recursos podem ser um arquivo de paginação de disco, memória, arquivos temporários no disco ou armazenamento temporário até mesmo no banco de dados. O cursor é chamado de um *cliente* cursor quando esses recursos estão localizados no computador cliente. O cursor é chamado de um *servidor* cursor quando esses recursos estão localizados no servidor.  

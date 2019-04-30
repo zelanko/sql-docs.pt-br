@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f4f39024817d3d0aa35c015ed815eb8f412f1c8e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63137511"
 ---
 # <a name="automatic-page-repair-for-availability-groups-and-database-mirroring"></a>Reparo automático de página (para grupos de disponibilidade e espelhamento de banco de dados)
   O reparo automático de página tem suporte do espelhamento de banco de dados e de [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Depois que certos tipos de erros corrompem uma página, tornando-a ilegível, um parceiro de espelhamento de banco de dados (entidade de segurança ou espelho) ou uma réplica de disponibilidade (primária ou secundária) tenta recuperar a página automaticamente. O parceiro/réplica que não puder ler a página solicitará uma cópia atualizada da página do seu parceiro ou de outra réplica. Se essa solicitação tiver êxito, a página ilegível será substituída pela cópia legível. Isso costuma resolver o erro.  
@@ -32,10 +32,10 @@ ms.locfileid: "48070577"
   
   
   
-##  <a name="ErrorTypes"></a> Error Types That Cause an Automatic Page-Repair Attempt  
+##  <a name="ErrorTypes"></a> Tipos de erro que causam uma tentativa de reparo automático de página  
  O reparo automático de página do espelhamento de banco de dados tenta reparar apenas páginas em um arquivo de dados no qual houve falha na operação de um dos erros listados na tabela a seguir.  
   
-|Número do erro|Description|Instâncias que causam uma tentativa de reparo automático de página|  
+|Número do erro|Descrição|Instâncias que causam uma tentativa de reparo automático de página|  
 |------------------|-----------------|---------------------------------------------------------|  
 |[823](../../relational-databases/errors-events/mssqlserver-823-database-engine-error.md)|Ação realizada apenas se o sistema operacional tiver executado uma CRC (verificação de redundância cíclica) que falhou nos dados.|ERROR_CRC. O valor do sistema operacional desse erro é 23.|  
 |[824](../../relational-databases/errors-events/mssqlserver-824-database-engine-error.md)|Erros lógicos.|Erros de dados lógicos, como gravação interrompida ou soma de verificação de página inválida.|  
@@ -45,18 +45,18 @@ ms.locfileid: "48070577"
   
   
   
-##  <a name="UnrepairablePageTypes"></a> Page Types That Cannot Be Automatically Repaired  
+##  <a name="UnrepairablePageTypes"></a> Tipos de página que não podem ser reparados automaticamente  
  O reparo automático de página não pode reparar os seguintes tipos de página de controle:  
   
 -   Página de cabeçalho do arquivo (ID da página 0).  
   
 -   Página 9 (a página de inicialização do banco de dados).  
   
--   Páginas de alocação: páginas GAM (Global Allocation Map), páginas SGAM (Shared Global Allocation Map) e páginas PFS (Page Free Space).  
+-   Páginas de alocação: Páginas de alocação GAM (Map) global, Global alocação Map páginas SGAM (Shared) e páginas PFS Page Free Space ().  
   
 
   
-##  <a name="PrimaryIOErrors"></a> Handling I/O Errors on the Principal/Primary Database  
+##  <a name="PrimaryIOErrors"></a> Manipulando erros de E/S no banco de dados principal/primário  
  No banco de dados principal/primário, haverá a tentativa de reparo automático de página apenas quando o estado do banco de dados for SYNCHRONIZED e o principal/primário ainda estiver enviando registros de log do banco de dados ao espelho/secundário. A sequência básica de ações em uma tentativa de reparo automático de página é a seguinte:  
   
 1.  Quando ocorre um erro de leitura em uma página de dados no banco de dados principal/primário, o principal/primário insere uma linha na tabela [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) com o status de erro apropriado. Para o espelhamento de banco de dados, o principal solicita uma cópia da página do espelho. Para [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], o primário transmite a solicitação a todos os secundários e obtém a página do primeiro a responder. A solicitação especifica a ID da página e o LSN que estão atualmente na parte final do log liberado. A página é marcada como *restauração pendente*. Isso a torna inacessível durante a tentativa de reparo automático de página. Ocorrerá falha com o erro 829 nas tentativas de acesso a essa página durante a tentativa de reparo (restauração pendente).  
@@ -71,7 +71,7 @@ ms.locfileid: "48070577"
   
 
   
-##  <a name="SecondaryIOErrors"></a> Handling I/O Errors on the Mirror/Secondary Database  
+##  <a name="SecondaryIOErrors"></a> Manipulando erros de E/S no banco de dados espelho/secundário  
  Os erros de E/S em páginas de dados que ocorrem no banco de dados espelho/secundário costumam ser tratados da mesma forma pelo espelhamento de banco de dados e pelo [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
 1.  Com o espelhamento de banco de dados, se o espelho encontrar um ou mais erros de E/S de página ao refazer um registro de log, a sessão de espelhamento entrará no estado SUSPENDED. Com o [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], se uma réplica secundária encontrar um ou mais erros de E/S de página ao refazer um registro de log, o banco de dados secundário entrará no estado SUSPENDED. Nesse ponto, o espelho/secundário insere uma linha na tabela **suspect_pages** com o status de erro apropriado. O espelho/secundário solicita uma cópia da página do principal/primário.  
@@ -88,7 +88,7 @@ ms.locfileid: "48070577"
   
 
   
-##  <a name="ViewAPRattempts"></a> How To: View Automatic Page-Repair Attempts  
+##  <a name="ViewAPRattempts"></a> Como: Tentativas de reparo automático de página de exibição  
  As exibições de gerenciamento dinâmico a seguir retornam linhas para as últimas tentativas de reparo automático de página em determinado banco de dados de disponibilidade ou banco de dados espelho, com um máximo de 100 linhas por banco de dados.  
   
 -   **Grupos de disponibilidade do AlwaysOn:**  

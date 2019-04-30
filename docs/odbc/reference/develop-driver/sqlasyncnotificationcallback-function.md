@@ -12,17 +12,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b78764e1dccb7118d43cc967f3b03838366d6eb0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224517"
 ---
 # <a name="sqlasyncnotificationcallback-function"></a>Função SQLAsyncNotificationCallback
 **Conformidade com**  
  Versão introduzida: ODBC 3.8  
   
- Conformidade com padrões: nenhum  
+ Conformidade com padrões: None  
   
  **Resumo**  
  **SQLAsyncNotificationCallback** permite que um driver de retorno de chamada para o Gerenciador de Driver quando há algum progresso da operação assíncrona atual depois que o driver retornará SQL_STILL_EXECUTING. **SQLAsyncNotificationCallback** pode apenas chamado pelo driver.  
@@ -54,7 +54,7 @@ typedef SQLRETURN (SQL_API *SQL_ASYNC_NOTIFICATION_CALLBACK)(
 ## <a name="diagnostics"></a>Diagnóstico  
  **SQLAsyncNotificationCallback** pode retornar SQL_ERROR para duas situações a seguir (eles indicam um problema de implementação no Gerenciador de Driver ou driver.  
   
-|Erro|Description|  
+|Erro|Descrição|  
 |-----------|-----------------|  
 |Conexão ou a instrução não solicitou a notificação.||  
 |Inválido *manipular*|O driver passado um identificador inválido, o que falhou nos testes de validação interno do Gerenciador de Driver.|  

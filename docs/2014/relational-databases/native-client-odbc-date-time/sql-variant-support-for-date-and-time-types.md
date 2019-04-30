@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0cbde879e2b7f215c5044936dfbdacab9196f02d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215959"
 ---
 # <a name="sqlvariant-support-for-date-and-time-types"></a>Suporte a Sql_variant para tipos de data e hora
   Este tópico descreve como o tipo de dados `sql_variant` oferece suporte à funcionalidade aprimorada de data e hora.  
@@ -26,7 +26,7 @@ ms.locfileid: "48150816"
   
  Os novos tipos SQL_SS_TIME2 e SQL_SS_TIMESTAMPOFFSET podem ser definidos por SQLColAttribute. SQL_CA_SS_VARIANT_SQL_TYPE pode ser retornado por SQLGetDescField.  
   
- Em colunas de resultado, o driver será convertido da variante em tipos de data/hora. Para obter mais informações, consulte [conversões de SQL para C](datetime-data-type-conversions-from-sql-to-c.md). Durante a associação a SQL_C_BINARY, o comprimento do buffer deve ser grande o suficiente para receber o struct correspondente ao tipo SQL.  
+ Em colunas de resultado, o driver será convertido da variante em tipos de data/hora. Para obter mais informações, consulte [conversões de SQL para C](datetime-data-type-conversions-from-sql-to-c.md). Quando a associação SQL_C_BINARY, o comprimento do buffer deve ser grande o suficiente para receber o struct que corresponde ao tipo SQL.  
   
  Para os parâmetros SQL_SS_TIME2 e SQL_SS_TIMESTAMPOFFSET, o driver converterá valores de C em valores `sql_variant`, conforme descrição na tabela abaixo. Se um parâmetro for associado como SQL_C_BINARY e o tipo de servidor for SQL_SS_VARIANT, ele será tratado como um valor binário, a menos que o aplicativo tenha definido SQL_CA_SS_VARIANT_SQL_TYPE como outro tipo SQL. Nesse caso, SQL_CA_SS_VARIANT_SQL_TYPE tem precedência; ou seja, caso SQL_CA_SS_VARIANT_SQL_TYPE seja definido, ele substitui o comportamento padrão de dedução do tipo SQL variável do tipo C.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48150816"
 |SQL_C_BINARY|varbinary|SQL_CA_SS_VARIANT_SQL_TYPE não é definido.|  
 |SQL_C_BINARY|time|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIME2<br /><br /> Escala é definida como SQL_DESC_PRECISION (o *DecimalDigits* parâmetro de `SQLBindParameter`).|  
 |SQL_C_BINARY|datetimeoffset|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIMESTAMPOFFSET<br /><br /> Escala é definida como SQL_DESC_PRECISION (o *DecimalDigits* parâmetro de `SQLBindParameter`).|  
-|SQL_C_TYPE_DATE|Data|SQL_CA_SS_VARIANT_SQL_TYPE é ignorado.|  
+|SQL_C_TYPE_DATE|date|SQL_CA_SS_VARIANT_SQL_TYPE é ignorado.|  
 |SQL_C_TYPE_TIME|time(0)|SQL_CA_SS_VARIANT_SQL_TYPE é ignorado.|  
 |SQL_C_TYPE_TIMESTAMP|datetime2|Escala é definida como SQL_DESC_PRECISION (o *DecimalDigits* parâmetro de `SQLBindParameter`).|  
 |SQL_C_NUMERIC|Decimal|Precisão é definida como SQL_DESC_PRECISION (o *ColumnSize* parâmetro de `SQLBindParameter`).<br /><br /> Escala definida como SQL_DESC_SCALE (o *DecimalDigits* parâmetro de SQLBindParameter).|  

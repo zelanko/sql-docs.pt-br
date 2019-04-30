@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 74de6c44aaf109a434f0cf76c6902abfba92efe1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63305765"
 ---
 # <a name="unicode-data"></a>Dados Unicode
 Tipos de dados SQL Unicode são fornecidos para descrever dados que residem no Unicode nativamente no DBMS. Um tipo de dados Unicode de C é fornecido para permitir que um aplicativo associar dados a um buffer de Unicode. O Gerenciador de Driver pode converter dados de um tipo de C Unicode (SQL_C_WCHAR) para torná-lo funcionar com um driver de ANSI.  

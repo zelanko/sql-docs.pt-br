@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0c13eda55eb5b0a3d6d0a7764df2def4972d3bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209643"
 ---
 # <a name="bookmarks-f1-help"></a>Ajuda de F1 de indicadores
   Esta seção contém a Ajuda F1 para as páginas **Indicadores** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

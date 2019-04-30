@@ -18,11 +18,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 1819fe94f3fac39d1697f2d4ee08738020e57d17
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63058124"
 ---
 # <a name="reporting-services-configuration-options-ssrs"></a>Opções de configuração do Reporting Services (SSRS)
   Use a página **Configuração do Reporting Services** do Assistente de Instalação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para especificar como um servidor de relatório é instalado e configurado. A disponibilidade de uma opção de instalação depende das opções escolhidas anteriormente na página **Seleção de Recursos** e se você também está instalando uma instância local do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] enquanto está instalando o servidor de relatório.  
@@ -49,7 +49,7 @@ ms.locfileid: "53375678"
 #### <a name="install-only"></a>Instalar somente  
  Instala os arquivos de programas do servidor de relatório, cria a conta do serviço Servidor de Relatório e registra o provedor WMI (Instrumentação de Gerenciamento do Windows) do servidor de relatório. Essa opção de instalação é chamada de instalação "somente arquivos". Selecione-a se você não quiser usar a configuração padrão. Se não for possível instalar a configuração padrão ou se você estiver instalando um cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que inclua o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], essa será a única opção disponível. Para obter mais informações sobre uma instalação somente arquivos, consulte [instalação somente de arquivos (Reporting Services)](https://go.microsoft.com/fwlink/?LinkId=199093) (https://go.microsoft.com/fwlink/?LinkId=199093).  
   
- Depois que a Instalação for concluída, você deverá criar o banco de dados do servidor de relatório e configurar o servidor de relatório antes que ele possa ser usado. Para configurar um servidor de relatório e criar o banco de dados, use a ferramenta Gerenciador de Configurações do Reporting Services. Para obter mais informações, consulte [como: Criar um banco de dados do servidor de relatório (configuração do Reporting Services)](https://go.microsoft.com/fwlink/?LinkId=199094) (https://go.microsoft.com/fwlink/?LinkId=199094) e [Configurando uma Conexão de banco de dados do servidor de relatório](https://go.microsoft.com/fwlink/?LinkId=199095) (https://go.microsoft.com/fwlink/?LinkId=199095).  
+ Depois que a Instalação for concluída, você deverá criar o banco de dados do servidor de relatório e configurar o servidor de relatório antes que ele possa ser usado. Para configurar um servidor de relatório e criar o banco de dados, use a ferramenta Gerenciador de Configurações do Reporting Services. Para obter mais informações, confira [Como Criar um banco de dados do servidor de relatório (configuração do Reporting Services)](https://go.microsoft.com/fwlink/?LinkId=199094) (https://go.microsoft.com/fwlink/?LinkId=199094) e [Configurando uma Conexão de banco de dados do servidor de relatório](https://go.microsoft.com/fwlink/?LinkId=199095) (https://go.microsoft.com/fwlink/?LinkId=199095).  
   
 ### <a name="reporting-services-sharepoint-mode"></a>Modo do SharePoint do Reporting Services  
   

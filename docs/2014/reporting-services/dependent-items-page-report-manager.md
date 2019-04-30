@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 80d69d377948ebb85c907edb195807abf26ee33b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59963733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63165117"
 ---
 # <a name="dependent-items-page-report-manager"></a>Página Itens Dependentes (Gerenciador de Relatórios)
   Use a página Itens Dependentes para exibir uma lista de relatórios e modelos que referenciam uma fonte de dados compartilhada. O ícone para cada tipo de item indica se é um relatório ou um modelo. Essa página pode ser exibida em exibição de lista ou exibição de detalhes. Use exibição de detalhes para mostrar mais informações sobre cada item. Opções adicionais de página estão disponíveis na exibição de detalhes. Para ajudar a gerenciar a fonte de dados compartilhada, essa página fornece links para relatórios e modelos que usam a fonte de dados, métricas de quando o relatório ou modelo foi executado ou modificado pela última vez e botões Excluir e Mover para que você possa facilmente remover relatórios e modelos que não são mais usados ou movê-los para um local diferente enquanto determina se eles ainda serão necessários.  

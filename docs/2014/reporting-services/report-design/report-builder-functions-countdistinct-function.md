@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5122fe6ddecacb492539573aa769e34164e699f2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59965222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63216099"
 ---
 # <a name="countdistinct-function-report-builder-and-ssrs"></a>Função CountDistinct (Construtor de Relatórios e SSRS)
   Retorna uma contagem de todos os valores não nulos distintos especificados pela expressão, avaliados no contexto do escopo fornecido.  

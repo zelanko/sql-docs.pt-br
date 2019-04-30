@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 22271cd37069123d0e11a3d0ab660134c61e283b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224463"
 ---
 # <a name="column-size"></a>Tamanho da coluna
 O tamanho de coluna (ou parâmetro) dos tipos de dados numéricos é definido como o número máximo de dígitos usado pelo tipo de dados da coluna ou parâmetro ou a precisão dos dados. Para tipos de caractere, esse é o comprimento em caracteres de dados; para tipos de dados binários, o tamanho da coluna é definido como o comprimento em bytes dos dados. Para o tempo, carimbo de hora e todos os tipos de dados de intervalo, isso é o número de caracteres na representação de caracteres de dados. O tamanho da coluna definido para cada tipo de dados SQL conciso é mostrado na tabela a seguir.  
@@ -30,23 +30,23 @@ O tamanho de coluna (ou parâmetro) dos tipos de dados numéricos é definido co
 |-------------------------|-----------------|  
 |Todos os tipos de caracteres [a] [b].|O tamanho da coluna definido ou máximo em caracteres da coluna ou parâmetro (como contido no campo de descritor SQL_DESC_LENGTH). Por exemplo, o tamanho da coluna de uma coluna de caractere de byte único definido como CHAR(10) é 10.|  
 |SQL_DECIMAL SQL_NUMERIC|O número definido de dígitos. Por exemplo, a precisão de uma coluna definida como NUMERIC(10,3) é 10.|  
-|SQL_BIT [c]|1|  
-|SQL_TINYINT [c]|3|  
-|SQL_SMALLINT [c]|5|  
-|SQL_INTEGER [c]|10|  
-|SQL_BIGINT [c]|19 (se tiver sinal) ou 20 (se não tiver sinal)|  
-|SQL_REAL [c]|7|  
-|SQL_FLOAT [c]|15|  
-|SQL_DOUBLE [c]|15|  
+|SQL_BIT[c]|1|  
+|SQL_TINYINT[c]|3|  
+|SQL_SMALLINT[c]|5|  
+|SQL_INTEGER[c]|10|  
+|SQL_BIGINT[c]|19 (se tiver sinal) ou 20 (se não tiver sinal)|  
+|SQL_REAL[c]|7|  
+|SQL_FLOAT[c]|15|  
+|SQL_DOUBLE[c]|15|  
 |Todos os tipos binários [a] [b].|O definido ou máximo comprimento em bytes da coluna ou parâmetro. Por exemplo, o comprimento de uma coluna definida como binário (10) é 10.|  
-|SQL_TYPE_DATE [c]|10 (o número de caracteres a *aaaa-mm-dd* formato).|  
-|SQL_TYPE_TIME [c]|8 (o número de caracteres na *hh-mm-ss* formato), ou 9 + *s* (o número de caracteres no *hh*formato [.... fff], onde *s*é a precisão de segundos).|  
+|SQL_TYPE_DATE[c]|10 (o número de caracteres a *aaaa-mm-dd* formato).|  
+|SQL_TYPE_TIME[c]|8 (o número de caracteres na *hh-mm-ss* formato), ou 9 + *s* (o número de caracteres no *hh*formato [.... fff], onde *s*é a precisão de segundos).|  
 |SQL_TYPE_TIMESTAMP|16 (o número de caracteres a *aaaa-mm-dd hh* formato)<br /><br /> 19 (o número de caracteres a *aaaa-mm-dd* *hh* formato)<br /><br /> ou em<br /><br /> 20 + *s* (o número de caracteres a *aaaa-mm-dd hh*formato [.... fff], onde *s* é a precisão de segundos).|  
 |SQL_INTERVAL_SECOND|Em que *p* é o intervalo de precisão inicial e *s* é a precisão de segundos *p* (se *s*= 0) ou *p* + *s*+ 1 (se *s*> 0). [ 1!d]|  
 |SQL_INTERVAL_DAY_TO_SECOND|Em que *p* é o intervalo de precisão inicial e *s* é a precisão de segundos, 9 +*p* (se *s*= 0) ou 10 +*p* + *s* (se *s*> 0). [ 1!d]|  
 |SQL_INTERVAL_HOUR_TO_SECOND|Em que *p* é o intervalo de precisão inicial e *s* é a precisão de segundos, 6 +*p* (se *s*= 0) ou 7 +*p* + *s* (se *s*> 0). [ 1!d]|  
 |SQL_INTERVAL_MINUTE_TO_SECOND|Em que *p* é o intervalo de precisão inicial e *s* é a precisão de segundos, 3 ou superior*p* (se *s*= 0) ou 4 +*p* + *s* (se *s*> 0). [ 1!d]|  
-|SQL_INTERVAL_YEAR SQL_INTERVAL_MONTH SQL_INTERVAL_DAY SQL_INTERVAL_HOUR SQL_INTERVAL_MINUTE|*p*, onde *p* é o intervalo de precisão inicial. [ 1!d]|  
+|SQL_INTERVAL_YEAR  SQL_INTERVAL_MONTH SQL_INTERVAL_DAY SQL_INTERVAL_HOUR SQL_INTERVAL_MINUTE|*p*, onde *p* é o intervalo de precisão inicial. [ 1!d]|  
 |SQL_INTERVAL_YEAR_TO_MONTH SQL_INTERVAL_DAY_TO_HOUR|3 +*p*, onde *p* é o intervalo de precisão inicial. [ 1!d]|  
 |SQL_INTERVAL_DAY_TO_MINUTE|6 +*p*, onde *p* é o intervalo de precisão inicial. [ 1!d]|  
 |SQL_INTERVAL_HOUR_TO_MINUTE|3 +*p*, onde *p* é o intervalo de precisão inicial. [ 1!d]|  

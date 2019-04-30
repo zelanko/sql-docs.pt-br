@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 31434e08443bc533c7e2ae14ed70d6962aea04cf
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558603"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214757"
 ---
 # <a name="datafactory-customization"></a>Personalização do DataFactory
 Serviço de dados remota (RDS) fornece uma maneira de executar facilmente o acesso a dados em um sistema de três camadas de cliente/servidor. Um controle de dados do cliente especifica os parâmetros de cadeia de caracteres de conexão e comando para executar uma consulta em uma fonte de dados remota ou a cadeia de caracteres de conexão e [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) parâmetros para executar uma atualização do objeto.  

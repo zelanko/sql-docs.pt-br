@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 852fb3c6cee7c65f8799102bbd65ab368cd0d9e2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63134373"
 ---
 # <a name="create-an-aps-domain-administrator"></a>Criar um administrador de domínio APS
 Algumas operações exigem privilégios de administrador de domínio do Analytics Platform System. Isso explica como criar os administradores de domínio de dispositivo adicionais.  

@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 624dfeeec691aeacecdc71f0b68d4ba0684f1567
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59581469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131058"
 ---
 # <a name="detach-database-id-32767"></a>Desanexar identificação 32767 do banco de dados
   O Supervisor de Atualização detectou um banco de dados com a identificação 32767. No [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e em versões posteriores, essa identificação do banco de dados é reservada. Desanexe o banco de dados antes da atualização. Isso pode ser feito também após a atualização.  

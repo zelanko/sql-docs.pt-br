@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 86a931c9132a23d9ceb3d46b48fbdce23bf76f92
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737344"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298860"
 ---
 # <a name="getting-started-with-ssma-for-db2-db2tosql"></a>Introdução ao SSMA para DB2 (DB2ToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) para DB2 permite que você rapidamente os esquemas de banco de dados do DB2 para converter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esquemas, carregar os esquemas resultantes em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e migrar dados do DB2 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -42,10 +42,10 @@ Para obter mais informações sobre essas tarefas e como realizá-las, consulte 
   
 As seções a seguir descrevem os recursos da interface do usuário do SSMA.  
   
-### <a name="metadata-explorers"></a>Gerenciadores de metadados  
+### <a name="metadata-explorers"></a>Metadata Explorers  
 O SSMA contém dois gerenciadores de metadados para procurar e executar ações no DB2 e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bancos de dados.  
   
-#### <a name="db2-metadata-explorer"></a>DB2 Gerenciador de metadados  
+#### <a name="db2-metadata-explorer"></a>DB2 Metadata Explorer  
 Gerenciador de metadados de DB2 mostra informações sobre esquemas do DB2. Usando o Gerenciador de metadados do DB2, você pode executar as seguintes tarefas:  
   
 -   Procure os objetos em cada esquema.  
@@ -60,7 +60,7 @@ Gerenciador de metadados de DB2 mostra informações sobre esquemas do DB2. Usan
 Você pode usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gerenciador de metadados para selecionar objetos de banco de dados convertidos do DB2 e, em seguida, sincronizar esses objetos com a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="metadata"></a>Metadados  
-À direita de cada Gerenciador de metadados são guias que descrevem o objeto selecionado. Por exemplo, se você selecionar uma tabela no Gerenciador de metadados do DB2, as seis guias serão exibidas: **tabela**, **SQL**, **mapeamento de tipo, o relatório**, **propriedades**, e **dados**. O **relatório** guia contém informações somente depois de criar um relatório que contém o objeto selecionado. Se você selecionar uma tabela no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gerenciador de metadados, são exibidas três guias: **tabela**, **SQL**, e **dados**.  
+À direita de cada Gerenciador de metadados são guias que descrevem o objeto selecionado. Por exemplo, se você selecionar uma tabela no Gerenciador de metadados do DB2, seis guias serão exibida: **Tabela**, **SQL**, **tipo de mapeamento, o relatório**, **propriedades**, e **dados**. O **relatório** guia contém informações somente depois de criar um relatório que contém o objeto selecionado. Se você selecionar uma tabela no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gerenciador de metadados, três guias serão exibida: **Tabela**, **SQL**, e **dados**.  
   
 A maioria das configurações de metadados são somente leitura. No entanto, você pode alterar os metadados a seguir:  
   
@@ -89,7 +89,7 @@ A tabela a seguir mostra a migração de comandos da barra de ferramentas:
 ### <a name="menus"></a>Menus  
 A tabela a seguir mostra os menus do SSMA.  
   
-|Menu|Description|  
+|Menu|Descrição|  
 |----|-----------|  
 |**File**|Contém comandos para trabalhar com projetos, conectar ao DB2 e conectar-se ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**Editar**|Contém comandos para localizar e trabalhar com texto nas páginas de detalhes, como copiar [!INCLUDE[tsql](../../includes/tsql-md.md)] do painel de detalhes do SQL. Também contém o **gerenciar indicadores** opção, onde você poderá ver uma lista de indicadores atuais. Você pode usar os botões no lado direito da caixa de diálogo para gerenciar os indicadores.|  

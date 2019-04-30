@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cb9d48156ecd1ca98dc36c10c2680883160582c1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157118"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Administrar servidores com Gerenciamento Baseado em Políticas
   O Gerenciamento Baseado em Políticas é um sistema para gerenciar uma ou mais instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando os administradores de políticas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usam o Gerenciamento Baseado em Políticas, eles usam o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para criar políticas para gerenciar entidades no servidor, como as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], bancos de dados ou outros objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

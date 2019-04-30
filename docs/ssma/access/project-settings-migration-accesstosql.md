@@ -1,5 +1,5 @@
 ---
-title: Configurações (migração) (AccessToSQL) do projeto | Microsoft Docs
+title: Project Settings (Migration) (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 441366208d2bfd886794dd7e50dca7e0aef7b3ff
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299287"
 ---
 # <a name="project-settings-migration-accesstosql"></a>Configurações do projeto (migração) (AccessToSQL)
 As configurações de projeto de migração permitem que você configure como os dados são migrados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure.  
@@ -33,20 +33,20 @@ O painel de migração está disponível na **configurações do projeto** e **c
 **Verificar restrições**  
 Especifica se o SSMA deve verificar restrições quando ele adiciona dados às tabelas.  
   
--   **Modo padrão**: False  
+-   **Modo padrão**: Falso  
   
 -   **Modo otimista**: True  
   
--   **Modo de inteira**: False  
+-   **Modo de inteira**: Falso  
   
 **Acionadores**  
 Especifica se o SSMA deve ativar gatilhos de inserção quando ele adiciona dados a serem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabelas.  
   
--   **Modo padrão**: False  
+-   **Modo padrão**: Falso  
   
 -   **Modo otimista**: True  
   
--   **Modo de inteira**: False  
+-   **Modo de inteira**: Falso  
   
 **Manter identidade**  
 Especifica se o SSMA preserva os valores de identidade de acesso quando ele adiciona dados a serem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se esse valor for False, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atribui valores de identidade.  
@@ -55,14 +55,14 @@ Especifica se o SSMA preserva os valores de identidade de acesso quando ele adic
   
 -   **Modo otimista**: True  
   
--   **Modo de inteira**: False  
+-   **Modo de inteira**: Falso  
   
 **Manter nulos**  
 Especifica se o SSMA preserva valores nulos na fonte de dados quando ele adiciona dados a serem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], independentemente dos valores padrão que são especificados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   **Modo padrão**: True  
   
--   **Modo otimista**: False  
+-   **Modo otimista**: Falso  
   
 -   **Modo de inteira**: True  
   

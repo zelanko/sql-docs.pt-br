@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 09329a12d62532ed27eabef0bff33d100737bf25
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63077851"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>Quais são as novidades do SSMA para DB2 (DB2ToSQL)
 Este artigo lista os SQL Server Migration Assistant (SSMA) do DB2 alterações em cada versão.

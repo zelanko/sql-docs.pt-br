@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c02447379b713a7d3b1c6dd72af8c3860098a68c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298136"
 ---
 # <a name="ado-glossary-terms"></a>Termos do glossário ADO
 Este tópico define termos relevantes à ADO.
@@ -137,7 +137,7 @@ Este tópico define termos relevantes à ADO.
 
  hierarquia em geral, uma hierarquia é uma estrutura com classificação com um top de nível e níveis subordinados. No ADO, hierárquico **conjuntos de registros** são usados para representar a relação de pai-filho entre um registro e um capítulo. Também no ADO, **registro** e **Stream** objetos podem ser usados para acessar estruturas de árvore hierárquica, como uma pasta e documentos. Também inclui ADO MD **hierarquia** objetos para representar uma relação entre os níveis de uma dimensão em um cubo OLAP. Consulte também conjuntos de registros hierárquicos, relação pai-filho, o capítulo, a árvore.
 
-## <a name="i-l"></a>EU-L
+## <a name="i-l"></a>I-L
  ISAPI (Internet Server Application Programming Interface) um conjunto de funções para servidores de Internet, como um Windows NT® Server/Windows 2000 Server executando o Microsoft® Internet Information Services (IIS).
 
  Uma coluna ou colunas que identificam exclusivamente uma linha; em uma tabela de chave geralmente usado para indexar uma tabela.

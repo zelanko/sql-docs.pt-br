@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: de5a49853f08541cd617afb20273820f956ee660
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061277"
 ---
 # <a name="sqltransaction-event-class"></a>classe de evento SQLTransaction
   Use a classe de evento SQLTransaction para monitorar quando transações começam e são concluídas, especialmente ao testar aplicativos, gatilhos ou procedimentos armazenados.  

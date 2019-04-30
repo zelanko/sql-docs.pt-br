@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c248afac72fac013759ad80f69dea199756a4010
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214883"
 ---
 # <a name="configuring-virtual-servers-on-iis"></a>Configurar servidores virtuais no IIS
 Ao criar servidores virtuais no Internet Information Services 4.0, as duas etapas extras necessárias para configurar o servidor virtual para trabalhar com o RDS:  

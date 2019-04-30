@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5efa6587ade3a15ce4b45b7247da1c3a896f69ee
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214761"
 ---
 # <a name="customization-file-sql-section"></a>Seção SQL do arquivo de personalização
 O **sql** seção pode conter uma nova cadeia de caracteres SQL que substitui a cadeia de caracteres de comando do cliente. Se não houver nenhuma cadeia de caracteres SQL na seção, a seção será ignorada.  
@@ -46,7 +46,7 @@ SQL = " "
  **SQL=**   
  ***sqlString***  
   
-|Parte|Description|  
+|Parte|Descrição|  
 |----------|-----------------|  
 |**SQL**|Uma cadeia de caracteres literal que indica que essa é uma entrada de seção SQL.|  
 |***sqlString***|Uma cadeia de caracteres SQL que substitui a cadeia de caracteres do cliente.|  

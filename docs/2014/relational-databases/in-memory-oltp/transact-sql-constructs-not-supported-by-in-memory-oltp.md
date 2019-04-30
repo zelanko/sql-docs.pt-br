@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dda74f247f9899b9e0a23d43143a5031574d8c13
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155306"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Construções do Transact-SQL sem suporte pelo OLTP na memória
   As tabelas com otimização de memória e os procedimentos armazenados nativamente compilados não oferecem suporte à área de superfície completa do [!INCLUDE[tsql](../../includes/tsql-md.md)] que tem suporte em tabelas com base em disco e procedimentos armazenados pelo [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado. Ao tentar usar um dos recursos sem suporte, o servidor retornará um erro.  

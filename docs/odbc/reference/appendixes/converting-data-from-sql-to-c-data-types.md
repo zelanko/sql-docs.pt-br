@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 553596f474cd8e7c4f4c91911b0167d5b1bc0b4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224478"
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>Converter dados de SQL para tipos de dados do C
 Quando um aplicativo chama **SQLFetch**, **SQLFetchScroll**, ou **SQLGetData**, o driver recupera os dados da fonte de dados. Se necessário, ele converte os dados do tipo de dados em que o driver recuperados-lo para o tipo de dados especificado pela *TargetType* argumento **SQLBindCol** ou **SQLGetData.** Por fim, ele armazena os dados no local apontado pela *TargetValuePtr* argumento **SQLBindCol** ou **SQLGetData** (e o campo SQL_DESC_DATA_PTR da descartar).  
@@ -49,28 +49,28 @@ Quando um aplicativo chama **SQLFetch**, **SQLFetchScroll**, ou **SQLGetData**, 
   
 -   **Bytes de comprimento de caracteres** é o número total de bytes necessários para exibir os dados em formato de caractere. Isso é, conforme definido para cada tipo de dados C na seção [exibir tamanho](../../../odbc/reference/appendixes/display-size.md), exceto que o comprimento de byte do caractere está em bytes e o tamanho da exibição está em caracteres.  
   
--   Palavras *itálico* representam argumentos de função ou elementos de gramática SQL. Para obter a sintaxe de elementos de gramática, consulte [apêndice c: SQL gramática](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
+-   Palavras *itálico* representam argumentos de função ou elementos de gramática SQL. Para obter a sintaxe de elementos de gramática, consulte [apêndice c: Gramática SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
   
  Esta seção contém os tópicos a seguir.  
   
--   [SQL to C: caractere](../../../odbc/reference/appendixes/sql-to-c-character.md)  
+-   [SQL para c: Caractere](../../../odbc/reference/appendixes/sql-to-c-character.md)  
   
--   [SQL to C: numérico](../../../odbc/reference/appendixes/sql-to-c-numeric.md)  
+-   [SQL para c: numérico](../../../odbc/reference/appendixes/sql-to-c-numeric.md)  
   
--   [SQL to C: bit](../../../odbc/reference/appendixes/sql-to-c-bit.md)  
+-   [SQL para c: Bit](../../../odbc/reference/appendixes/sql-to-c-bit.md)  
   
--   [SQL to C: binário](../../../odbc/reference/appendixes/sql-to-c-binary.md)  
+-   [SQL para c: binário](../../../odbc/reference/appendixes/sql-to-c-binary.md)  
   
--   [SQL to C: data](../../../odbc/reference/appendixes/sql-to-c-date.md)  
+-   [SQL para c: Data](../../../odbc/reference/appendixes/sql-to-c-date.md)  
   
--   [SQL to C: GUID](../../../odbc/reference/appendixes/sql-to-c-guid.md)  
+-   [SQL para c: GUID](../../../odbc/reference/appendixes/sql-to-c-guid.md)  
   
--   [SQL to C: hora](../../../odbc/reference/appendixes/sql-to-c-time.md)  
+-   [SQL para c: tempo](../../../odbc/reference/appendixes/sql-to-c-time.md)  
   
--   [SQL to C: carimbo de data/hora](../../../odbc/reference/appendixes/sql-to-c-timestamp.md)  
+-   [SQL para c: Timestamp](../../../odbc/reference/appendixes/sql-to-c-timestamp.md)  
   
--   [SQL to C: intervalos de ano-mês](../../../odbc/reference/appendixes/sql-to-c-year-month-intervals.md)  
+-   [SQL para c: Intervalos de ano / mês](../../../odbc/reference/appendixes/sql-to-c-year-month-intervals.md)  
   
--   [SQL to C: intervalos de tempo-dia](../../../odbc/reference/appendixes/sql-to-c-day-time-intervals.md)  
+-   [SQL para c: Intervalos de tempo do dia](../../../odbc/reference/appendixes/sql-to-c-day-time-intervals.md)  
   
 -   [Exemplos de conversão de dados SQL to C](../../../odbc/reference/appendixes/sql-to-c-data-conversion-examples.md)

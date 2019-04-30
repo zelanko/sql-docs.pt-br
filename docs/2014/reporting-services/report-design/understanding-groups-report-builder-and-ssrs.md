@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9b21947a879517196bc2447ae9a0cde0db1be6a8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59961582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63305206"
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>Compreendendo grupos (Construtor de Relatórios e SSRS)
   No Construtor de Relatórios, um grupo é um conjunto nomeado de dados do conjunto de dados de relatório associado a uma região de dados. Basicamente, um grupo organiza uma exibição de um conjunto de dados de relatório. Todos os grupos de uma região de dados especificam exibições diferentes do mesmo conjunto de dados de relatório.  

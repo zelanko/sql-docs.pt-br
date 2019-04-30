@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dc8bf49f6d25c4e00c2d5693ff6a9cf48d5450ee
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208751"
 ---
-# <a name="comment---mdx-operator-reference"></a>Comentário - referência de operador MDX
+# <a name="comment---mdx-operator-reference"></a>Comment - referência de operador MDX
 
 
   Indica o texto de comentário fornecido pelo usuário.  
@@ -32,7 +32,7 @@ ms.locfileid: "34739905"
  *Comment_Text*  
  Cadeia de caracteres que contém o texto do comentário.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Os comentários podem ser inseridos em uma linha separada, aninhados no final de uma linha de script MDX ou aninhados em uma instrução MDX. O servidor não avalia o comentário.  
   
  Use esse operador para comentários de linha única ou aninhados. Os comentários inseridos com -- são delimitados pelo caractere de nova linha.  

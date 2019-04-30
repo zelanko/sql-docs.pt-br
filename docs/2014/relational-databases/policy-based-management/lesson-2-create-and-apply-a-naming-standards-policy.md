@@ -11,13 +11,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6bf69e0baf86cf9e56eddcf926444776b4a2116d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206954"
 ---
-# <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>Lição 2: Criar e aplicar uma política de padrões de nomenclatura
+# <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>Lição 2: Criar e aplicar uma política de nomeação de padrões
   Alguns tipos de políticas de Gerenciamento Baseado em Políticas podem criar gatilhos para aplicar conformidade futura com a política. Nesta lição, você cria uma política que aplica uma nomeação padrão para tabelas. Então, você testa a política tentando criar uma tabela que viola a política.  
   
  Eis os tópicos desta lição:  

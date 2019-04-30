@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a18986af71f652a833f413ee1fa62ca2fd44ba06
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215990"
 ---
 # <a name="isolation-levels-ole-db"></a>Níveis de isolamento (OLE DB)
   Clientes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem controlar os níveis de isolamento de transação para uma conexão. Para controlar o nível de isolamento da transação, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consumidor do provedor de OLE DB do Native Client usa:  
@@ -39,6 +39,6 @@ ms.locfileid: "48188626"
 >  O [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduziu o nível de isolamento do instantâneo. Para obter mais informações, confira [Trabalhando com o isolamento de instantâneos](../native-client/features/working-with-snapshot-isolation.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Transações](transactions.md)  
+ [Transactions](transactions.md)  
   
   

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5c62d4244b025ab987100a58aef1b2a10a7efa17
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59966822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209224"
 ---
 # <a name="interactive-sort-report-builder-and-ssrs"></a>Classificação interativa (Construtor de Relatórios e SSRS)
   É possível adicionar botões de classificação interativos para permitir que um usuário alterne entres as ordens crescente e decrescente para linhas de uma tabela ou para linhas e colunas de uma matriz. O uso mais comum da classificação interativa é adicionar um botão de classificação a todos os cabeçalhos de coluna. Assim, o usuário pode escolher a coluna pela qual classificar.  

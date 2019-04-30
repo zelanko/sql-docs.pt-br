@@ -27,11 +27,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 673e96509061f3d4fdc808b4165ff56991baa8ad
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63228481"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Mapeamento padrão de atributos e elementos XSD para tabelas e colunas (SQLXML 4.0)
   Por padrão, um elemento de tipo complexo em um esquema XSD anotado é mapeado para a tabela (exibição) com o mesmo nome no banco de dados especificado, e um elemento ou atributo de tipo simples é mapeado para a coluna com o mesmo nome na tabela.  
@@ -90,7 +90,7 @@ ms.locfileid: "52793678"
 </ROOT>  
 ```  
   
-### <a name="b-mapping-an-xml-element-to-a-database-column"></a>b. Mapeando um elemento XML para uma coluna de banco de dados  
+### <a name="b-mapping-an-xml-element-to-a-database-column"></a>B. Mapeando um elemento XML para uma coluna de banco de dados  
  Neste exemplo, o mapeamento padrão acontece também porque nenhuma anotação é usada. O  **\<Person. Contact >** elemento é do tipo complexo e é mapeado para a tabela com o mesmo nome no banco de dados. Os elementos  **\<FirstName >** e  **\<LastName >** e o **EmployeeID** atributo são do tipo simples e, portanto, são mapeados para o colunas com os mesmos nomes. A única diferença entre isto e o exemplo anterior é que os elementos são usados para mapear os campos FirstName e LastName.  
   
 ```  

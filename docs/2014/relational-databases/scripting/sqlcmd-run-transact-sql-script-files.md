@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7dd52c6fb0c5533450a7e32ad68a156406873fdb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63136249"
 ---
 # <a name="run-transact-sql-script-files-using-sqlcmd"></a>Executar arquivos de script Transact-SQL usando sqlcmd
-  Você pode usar `sqlcmd` para executar um arquivo de script [!INCLUDE[tsql](../../includes/tsql-md.md)]. Um [!INCLUDE[tsql](../../includes/tsql-md.md)] arquivo de script é um arquivo de texto que pode conter uma combinação de [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções, `sqlcmd` comandos e variáveis de script.  
+  Você pode usar `sqlcmd` para executar um arquivo de script [!INCLUDE[tsql](../../includes/tsql-md.md)]. Um arquivo de script do [!INCLUDE[tsql](../../includes/tsql-md.md)] é um arquivo de texto que contém uma combinação de instruções do [!INCLUDE[tsql](../../includes/tsql-md.md)], comandos e variáveis de script do `sqlcmd`.  
   
  Para criar um arquivo simples de script do [!INCLUDE[tsql](../../includes/tsql-md.md)] usando o Bloco de Notas, siga estas etapas:  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48085366"
   
 1.  Abra uma janela do prompt de comando.  
   
-2.  Na janela do Prompt de comando, digite: `sqlcmd -S myServer\instanceName -i C:\myScript.sql`  
+2.  Na janela do prompt de comando, digite: `sqlcmd -S myServer\instanceName -i C:\myScript.sql`  
   
 3.  Pressione ENTER.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48085366"
   
 1.  Abra uma janela do prompt de comando.  
   
-2.  Na janela do Prompt de comando, digite: `sqlcmd -S myServer\instanceName -i C:\myScript.sql -o C:\EmpAdds.txt`  
+2.  Na janela do prompt de comando, digite: `sqlcmd -S myServer\instanceName -i C:\myScript.sql -o C:\EmpAdds.txt`  
   
 3.  Pressione ENTER.  
   

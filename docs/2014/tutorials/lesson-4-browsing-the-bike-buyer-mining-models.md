@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 709df371d840d4b24e420b4fcd08750fd31e8075
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63070871"
 ---
-# <a name="lesson-4-browsing-the-bike-buyer-mining-models"></a>Lição 4: Procurar os modelos de mineração de comprador de bicicleta
+# <a name="lesson-4-browsing-the-bike-buyer-mining-models"></a>Lição 4: Como explorar modelos de mineração Comprador de Bicicleta
   Nesta lição, você aprenderá a usar o [SELECT (DMX)](/sql/dmx/select-dmx) instrução para explorar o conteúdo na árvore de decisão e mineração de clustering de modelos que você criou no [lição 2: Adicionando modelos de mineração à estrutura de mineração preditiva](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
   
  As colunas contidas em um modelo de mineração não são as colunas definidas pela estrutura de mineração. Ao contrário, constituem um conjunto específico de colunas que descrevem as tendências e os padrões encontrados pelo algoritmo. Essas colunas do modelo de mineração são descritas na [conjunto de linhas DMSCHEMA_MINING_MODEL_CONTENT](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset) linhas de esquema. Por exemplo, a coluna de MODEL_NAME no conjunto de linhas de esquema de conteúdo traz o nome do modelo de mineração. Para um modelo de mineração de clustering, a coluna de NODE_CAPTION contém o nome de cada cluster e a coluna NODE_DESCRIPTION contém a descrição das características de cada cluster. Você pode procurar essas colunas usando SELECT FROM \<modelo >. Instrução CONTENT em DMX. Também pode usar essa instrução para explorar os dados usados para criar o modelo de mineração. O uso dessa instrução requer que as análises sejam habilitadas na estrutura de mineração. Para obter mais informações sobre a instrução, consulte [SELECT FROM &#60;modelo&#62;. CASOS de &#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx).  

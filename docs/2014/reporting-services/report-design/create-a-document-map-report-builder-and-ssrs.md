@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6b65d798c2de3cfe4b1fd14f50ea0dbb68bd624a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59941442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63135443"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Criar um mapa de documentos (Construtor de Relatórios e SSRS)
   O mapa do documento fornece um conjunto de links de navegação aos itens de relatório em um relatório renderizado. Ao exibir um relatório que inclui um mapa do documento, um painel lateral separado é exibido ao lado do relatório. Um usuário pode clicar nos links do mapa do documento para ir para a página de relatório que exibe esse item. Seções e grupos de relatórios são organizados em uma hierarquia de links. Clicar nos itens do mapa do documento atualiza o relatório e exibe a área do relatório que corresponde ao item no mapa do documento.  

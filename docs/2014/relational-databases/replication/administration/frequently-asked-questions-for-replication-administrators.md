@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce7e9249ec7ba97fdd159a743be30036847882b3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63207058"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Perguntas frequentes para os administradores de replicação
   As perguntas e as respostas a seguir fornecem orientação sobre várias tarefas enfrentadas pelos administradores de bancos de dados replicados.  
@@ -26,7 +26,7 @@ ms.locfileid: "54125846"
 ## <a name="configuring-replication"></a>Configurando a replicação.  
   
 ### <a name="does-activity-need-to-be-stopped-on-a-database-when-it-is-published"></a>A atividade precisa ser interrompida em um banco de dados quando é publicada?  
- Nenhum. A atividade pode continuar no banco de dados enquanto a publicação está sendo criada. Esteja ciente de que a produção de um instantâneo pode usar muitos recursos, portanto é melhor gerar instantâneos durante o período de pouca atividade no banco de dados (por padrão, um instantâneo é gerado quando o Assistente para Nova Publicação é concluído).  
+ Não. A atividade pode continuar no banco de dados enquanto a publicação está sendo criada. Esteja ciente de que a produção de um instantâneo pode usar muitos recursos, portanto é melhor gerar instantâneos durante o período de pouca atividade no banco de dados (por padrão, um instantâneo é gerado quando o Assistente para Nova Publicação é concluído).  
   
 ### <a name="are-tables-locked-during-snapshot-generation"></a>As tabelas são bloqueadas durante a geração de instantâneos?  
  O tempo dos bloqueios efetuados depende do tipo de replicação usado:  
@@ -42,7 +42,7 @@ ms.locfileid: "54125846"
 ### <a name="when-is-a-subscription-available-when-can-the-subscription-database-be-used"></a>Quando uma assinatura estará disponível e quando o banco de dados de assinatura poderá ser usado?  
  Uma assinatura está disponível após o instantâneo ter sido aplicado ao banco de dados de assinatura. Apesar do banco de dados de assinatura estar acessível antes disso, o banco de dados não deve ser utilizado até o instantâneo ter sido aplicado. Use o Replication Monitor para verificar o estado da geração e a aplicação do instantâneo:  
   
--   O instantâneo é gerado pelo Agente de Instantâneo. Exiba o estado da geração do instantâneo na guia **Agentes** para uma publicação no Replication Monitor. Para obter mais informações, consulte [exibir informações e executar tarefas usando o Replication Monitor](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+-   O instantâneo é gerado pelo Agente de Instantâneo. Exiba o estado da geração do instantâneo na guia **Agentes** para uma publicação no Replication Monitor. Para obter mais informações, confira [Exibir informações e executar tarefas usando o Replication Monitor](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 -   O instantâneo é aplicado pelo Agente de Distribuição ou pelo Agente de Mesclagem. Exiba o estado da aplicação do instantâneo na página **Agente de Distribuição** ou **Agente de Mesclagem** do Replication Monitor. 
   
@@ -94,7 +94,7 @@ ms.locfileid: "54125846"
  Essas informações estão disponíveis por meio do [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]e dos vários procedimentos de replicação armazenados. Para obter mais informações, consulte [Distributor and Publisher Information Script](distributor-and-publisher-information-script.md).  
   
 ### <a name="does-replication-encrypt-data"></a>A replicação criptografa dados?  
- Nenhum. A replicação não criptografa dados armazenados no banco de dados nem transferidos pela rede. Para obter mais informações, consulte a seção "Criptografia" do tópico [segurança de replicação do SQL Server](../security/view-and-modify-replication-security-settings.md).  
+ Não. A replicação não criptografa dados armazenados no banco de dados nem transferidos pela rede. Para obter mais informações, consulte a seção "Criptografia" do tópico [segurança de replicação do SQL Server](../security/view-and-modify-replication-security-settings.md).  
   
 ### <a name="how-do-i-replicate-data-over-the-internet"></a>Como posso replicar dados pela Internet?  
  Replique os dados pela Internet, por meio de:  
@@ -114,14 +114,14 @@ ms.locfileid: "54125846"
 ## <a name="logins-and-object-ownership"></a>Propriedade de logons e de objetos  
   
 ### <a name="are-logins-and-passwords-replicated"></a>Os logons e as senhas são replicados?  
- Nenhum. Você pode criar um pacote DTS para transferir os logons e as senhas do Publicador para um ou mais Assinantes.  
+ Não. Você pode criar um pacote DTS para transferir os logons e as senhas do Publicador para um ou mais Assinantes.  
   
 ### <a name="what-are-schemas-and-how-are-they-replicated"></a>O que são os esquemas e como eles são replicados?  
  A começar pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], *esquema* tem dois significados:  
   
 -   A definição de um objeto, como uma instrução CREATE TABLE. Por padrão, a replicação copia as definições de todos os objetos replicados para o Assinante.  
   
--   O namespace no qual um objeto é criado: \<Banco de dados >. \<Esquema >. \<Objeto >. Os esquemas são definidos usando a instrução CREATE SCHEMA.  
+-   O namespace no qual um objeto é criado: \<Banco de Dados>.\<Esquema>.\<Objeto>. Os esquemas são definidos usando a instrução CREATE SCHEMA.  
   
 -   A replicação tem o seguinte comportamento padrão no Assistente para Nova Publicação em relação à propriedade de esquemas e objetos:  
   
@@ -229,7 +229,7 @@ ms.locfileid: "54125846"
  Sim. Nenhuma consideração especial é exigida porque todos os dados são armazenados em um conjunto de discos no cluster.  
   
 ## <a name="see-also"></a>Consulte também  
- [Perguntas frequentes sobre administração de replicação](frequently-asked-questions-for-replication-administrators.md)   
+ [Perguntas Frequentes sobre Administração de Replicação](frequently-asked-questions-for-replication-administrators.md)   
  [Best Practices for Replication Administration](best-practices-for-replication-administration.md)  
   
   

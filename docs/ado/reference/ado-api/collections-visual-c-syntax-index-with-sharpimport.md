@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1fa18eeacad58195c42d03b12f03332c332b0a35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155221"
 ---
 # <a name="collections-visual-c-syntax-index-with-import"></a>Coleções (Visual C++ índice de sintaxe com #import)
 É útil saber que as coleções herdam certos métodos e propriedades comuns.  
@@ -79,7 +79,7 @@ long GetCount( ); __declspec(property(get=GetCount)) long Count;
 PropertyPtr GetItem( const _variant_t & Index ); __declspec(property(get=GetItem)) PropertyPtr Item[];  
 ```  
   
-## <a name="fields-collection"></a>Coleção Campos  
+## <a name="fields-collection"></a>Coleção de campos  
   
 ### <a name="methods"></a>Métodos  
   

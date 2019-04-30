@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 168fa55d89488277cd17f4bdca3105f7d879c8f8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224666"
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>Converter dados de C para tipos de dados SQL
 Quando um aplicativo chama **SQLExecute** ou **SQLExecDirect**, o driver recupera os dados para quaisquer parâmetros associados com **SQLBindParameter** nos locais de armazenamento em o aplicativo. Quando um aplicativo chama **SQLSetPos**, o driver recupera os dados para uma atualização ou operação de adição de colunas associadas **SQLBindCol**. Para parâmetros de dados em execução, o aplicativo envia os dados de parâmetro com **SQLPutData**. Se necessário, o driver converterá os dados do tipo de dados especificado pela *ValueType* argumento na **SQLBindParameter** para o tipo de dados especificado pelo *ParameterType*argumento na **SQLBindParameter**e, em seguida, envia os dados para a fonte de dados.  
@@ -72,7 +72,7 @@ Quando um aplicativo chama **SQLExecute** ou **SQLExecDirect**, o driver recuper
   
 -   [C to SQL: tempo](../../../odbc/reference/appendixes/c-to-sql-time.md)  
   
--   [C to SQL: carimbo de hora](../../../odbc/reference/appendixes/c-to-sql-timestamp.md)  
+-   [C to SQL: Timestamp](../../../odbc/reference/appendixes/c-to-sql-timestamp.md)  
   
 -   [C to SQL: Intervalos de ano / mês](../../../odbc/reference/appendixes/c-to-sql-year-month-intervals.md)  
   

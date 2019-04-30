@@ -1,5 +1,5 @@
 ---
-title: Gerar (MDX) | Microsoft Docs
+title: Generate (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 222479dd03263f61a603e30202f2abf54307b0bc
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224878"
 ---
 # <a name="generate-mdx"></a>Generate (MDX)
 
@@ -45,10 +45,10 @@ Generate( Set_Expression1 ,  String_Expression [ ,Delimiter ]  )
  *delimitador*  
  Um delimitador válido expresso como uma expressão de cadeia de caracteres.  
   
-## <a name="remarks"></a>Remarks  
- Se um segundo conjunto for especificado, o **gerar** função retorna um conjunto gerado aplicando as tuplas do segundo conjunto a cada tupla no primeiro conjunto *,* e, em seguida, associando os conjuntos resultantes por união. Se **todos os** for especificado, a função preservará as duplicações no conjunto resultante.  
+## <a name="remarks"></a>Comentários  
+ Se um segundo conjunto for especificado, o **Generate** função retorna um conjunto gerado aplicando as tuplas do segundo conjunto a cada tupla no primeiro conjunto *,* e, em seguida, associando os conjuntos resultantes por união. Se **todos os** for especificado, a função preservará as duplicações no conjunto resultante.  
   
- Se uma expressão de cadeia de caracteres for especificada, o **gerar** função retorna uma cadeia de caracteres gerada avaliando a expressão de cadeia de caracteres especificada em relação a cada tupla no primeiro conjunto *,* e concatenando os resultados. Opcionalmente, a cadeia de caracteres pode ser delimitada, separando-se cada resultado na cadeia de caracteres concatenada resultante.  
+ Se uma expressão de cadeia de caracteres for especificada, o **Generate** função retorna uma cadeia de caracteres gerada avaliando a expressão de cadeia de caracteres especificada em relação a cada tupla no primeiro conjunto *,* e, em seguida, concatenar a resultados. Opcionalmente, a cadeia de caracteres pode ser delimitada, separando-se cada resultado na cadeia de caracteres concatenada resultante.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -73,7 +73,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
- O uso prático mais comum de **gerar** é para avaliar um complexo conjunto de expressão, como TopCount, em um conjunto de membros. A consulta de exemplo a seguir exibe os 10 Produtos principais para cada Ano Civil em Linhas:  
+ O uso prático mais comum de **gerar** é avaliar um complexo definido expressão, como TopCount, ao longo de um conjunto de membros. A consulta de exemplo a seguir exibe os 10 Produtos principais para cada Ano Civil em Linhas:  
   
 ```  
 SELECT   
@@ -90,7 +90,7 @@ ON 1
 FROM [Adventure Works]  
 ```  
   
- Observe que a parte superior 10 diferente é exibido para cada ano e que o uso de **gerar** é a única maneira de obter esse resultado. Simplesmente unir os Anos Civis e o conjunto dos 10 Produtos principais exibirá os 10 Produtos principais para todo o período, repetido em cada ano, como mostra o exemplo a seguir:  
+ Observe que um diferente top 10 é exibida para cada ano e que o uso de **gerar** é a única maneira de obter esse resultado. Simplesmente unir os Anos Civis e o conjunto dos 10 Produtos principais exibirá os 10 Produtos principais para todo o período, repetido em cada ano, como mostra o exemplo a seguir:  
   
 ```  
 SELECT   
@@ -125,9 +125,9 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  Essa forma do **gerar** função pode ser útil ao depurar cálculos, pois permite retornar uma cadeia de caracteres que exibe os nomes de todos os membros em um conjunto. Isso pode ser mais fácil de ler do que a representação MDX rígida de um conjunto que o [SetToStr &#40;MDX&#41; ](../mdx/settostr-mdx.md) função retorna.  
+>  Essa forma do **gerar** função pode ser útil ao depurar cálculos, pois ele permite que você retorne uma cadeia de caracteres que exibe os nomes de todos os membros em um conjunto. Isso pode ser mais fácil de ler do que a representação MDX rígida de um conjunto que o [SetToStr &#40;MDX&#41; ](../mdx/settostr-mdx.md) retornos de função.  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

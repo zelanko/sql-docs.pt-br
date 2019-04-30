@@ -1,5 +1,5 @@
 ---
-title: 'Como: exportar relatórios | Microsoft Docs'
+title: 'Como fazer: Exportar relatórios | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,18 +19,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bef2324110534811770a1ea7d433cf5f779d4d63
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294768"
 ---
-# <a name="how-to-export-reports"></a>Como exportar relatórios
+# <a name="how-to-export-reports"></a>Como fazer: Exportar relatórios
   O Visualizador de Relatórios do Supervisor de Atualização permite que você exporte uma versão de arquivos simples do relatório. Isso permite que você visualize as informações em uma planilha ou em um documento de processamento de texto, ou ainda envie as informações por email para outras pessoas.  
   
 ### <a name="to-export-a-report"></a>Para exportar um relatório  
   
-1.  No visualizador de relatórios, exiba o relatório que você quer exportar. Para obter instruções, consulte [como: exibir um relatório do Supervisor de atualização](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md).  
+1.  No visualizador de relatórios, exiba o relatório que você quer exportar. Para obter instruções, consulte [como: Exibir um relatório do Supervisor de atualização](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md).  
   
 2.  Para filtrar o relatório, selecione um valor de **filtrar por** caixa.  
   
@@ -39,8 +39,8 @@ ms.locfileid: "48181826"
 4.  No **arquivo de exportação de relatório** caixa de diálogo, digite um nome de arquivo, escolha um destino e, em seguida, clique em **Okey**. O arquivo é salvo no formato CSV (valores separados por vírgula). Você pode usar o Microsoft Excel ou aplicativos semelhantes para abrir o arquivo. Se quiser os dados em outro formato, copie as informações do Excel para o Microsoft Word ou outro aplicativo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Como: iniciar o Supervisor de atualização](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)   
- [Como: executar o Assistente para análise do Supervisor de atualização](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
+ [Como: Iniciar o Supervisor de atualização](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)   
+ [Como: Execute o Assistente para análise do Supervisor de atualização](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [Solucionando problemas de atualização](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
  [Tópicos de instruções sobre o Supervisor de atualização](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
  [Trabalhando com o Supervisor de Atualização](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  

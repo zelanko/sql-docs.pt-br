@@ -15,20 +15,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 632a922abb544a379892dfa168f55efd605304c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125432"
 ---
 # <a name="closing-the-cursor"></a>Fechar o cursor
-Quando um aplicativo tiver terminado de usar um cursor, ele chama **SQLCloseCursor** para fechar o cursor. Por exemplo:  
+Quando um aplicativo tiver terminado de usar um cursor, ele chama **SQLCloseCursor** para fechar o cursor. Por exemplo:   
   
 ```  
 SQLCloseCursor(hstmt);  
 ```  
   
- Até que o aplicativo fecha o cursor, a instrução na qual o cursor é aberto não pode ser usada para a maioria das outras operações, como executar outra instrução SQL. Para obter uma lista completa de funções que podem ser chamados enquanto o cursor estiver aberto, consulte [apêndice b: tabelas de transição de estado de ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
+ Até que o aplicativo fecha o cursor, a instrução na qual o cursor é aberto não pode ser usada para a maioria das outras operações, como executar outra instrução SQL. Para obter uma lista completa de funções que podem ser chamados enquanto o cursor estiver aberto, consulte [apêndice b: Tabelas de transição de estado ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
 > [!NOTE]  
 >  Para fechar um cursor, um aplicativo deve chamar **SQLCloseCursor**, e não **SQLCancel**.  

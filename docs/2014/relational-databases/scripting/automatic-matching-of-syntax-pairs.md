@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c62ca169091e1ac33815c3c8a4b0c7bf771a1adf
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209417"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>Correspondência automática de pares de sintaxe
   A correspondência automática de pares de sintaxe informa imediatamente se os elementos de sintaxe que devem ser codificados em pares estão formando pares corretos. Isso é conhecido como correspondência de delimitadores no Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] , correspondência de colchetes no Editor de Consultas XMLA do Analysis Services e correspondência de parênteses nos editores MDX e DMX.  
@@ -70,6 +70,6 @@ ms.locfileid: "49085112"
 -   Aspas de abertura e fechamento em abributos.  
   
 ## <a name="mdx-and-dmx-editor-parenthesis-matching"></a>Correspondência de parênteses dos Editores MDX e DMX  
- As expressões multidimensionais (MDX) e editores de expressões DMX (Data Mining) correspondam automática de pares de parênteses nas funções.  
+ Os Editores MDX (Expressões Multidimensionais) e DMX (Expressões de Mineração de Dados) combinam automaticamente pares de parênteses nas funções.  
   
   

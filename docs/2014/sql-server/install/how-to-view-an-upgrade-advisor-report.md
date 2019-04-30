@@ -1,5 +1,5 @@
 ---
-title: 'Como: exibir um relatório do Supervisor de atualização | Microsoft Docs'
+title: 'Como fazer: Exibir um relatório do Supervisor de atualização | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,13 +18,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 90b9ca2879897bb427981e92d610a7f09916c68e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294545"
 ---
-# <a name="how-to-view-an-upgrade-advisor-report"></a>Como exibir um relatório do Supervisor de Atualização
+# <a name="how-to-view-an-upgrade-advisor-report"></a>Como fazer: Para exibir um relatório do Supervisor de Atualização
   O Supervisor de Atualização cria relatórios para cada componente que você seleciona para analisar. Este tópico descreve como exibir esses relatórios na página inicial do Supervisor de Atualização.  
   
 > [!IMPORTANT]  
@@ -74,8 +74,8 @@ ms.locfileid: "48201926"
 >  O relatório pode conter um item para problemas indetectáveis. Esses são os problemas que não podem ser detectados ou os que gerariam muitos resultados de falso positivo. Clique o **mais informações sobre esse problema e como resolvê-lo** link para ver uma lista dos problemas indetectáveis do componente.  
   
 ## <a name="see-also"></a>Consulte também  
- [Como: exportar relatórios](../../../2014/sql-server/install/how-to-export-reports.md)   
- [Como: executar o Assistente para análise do Supervisor de atualização](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
+ [Como: Exportar relatórios](../../../2014/sql-server/install/how-to-export-reports.md)   
+ [Como: Execute o Assistente para análise do Supervisor de atualização](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [Solucionando problemas de atualização](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
  [Tópicos de instruções sobre o Supervisor de atualização](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
  [Trabalhando com o Supervisor de Atualização](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  

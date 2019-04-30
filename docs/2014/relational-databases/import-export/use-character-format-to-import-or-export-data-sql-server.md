@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: e25c975dca01ee2787a598afbe1a67f09fbab0ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065754"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Usar o formato de caractere para importar ou exportar dados (SQL Server)
   Formato de caractere é recomendado quando você exporta dados em massa para um arquivo de texto que será usado em outro programa ou quando você importa dados em massa de um arquivo de texto que é gerado por outro programa.  
@@ -42,16 +42,16 @@ ms.locfileid: "48078436"
   
 -   Para evitar a perda de caracteres estendidos durante conversão, use formato de caractere Unicode ou especifique uma página de código.  
   
--   São armazenados quaisquer dados `sql_variant` em um arquivo do formato de caractere sem metadados. Cada valor de dados é convertido em `char` formato, de acordo com as regras de conversão implícita de dados. Quando importado em uma coluna `sql_variant`, os dados são importados como `char`. Quando importado em uma coluna com um tipo de dados diferente de `sql_variant`, os dados são convertidos de `char` usando conversão implícita. Para obter mais informações sobre conversão de dados, consulte [Conversão de tipo de dados &#40;Mecanismo do Banco de Dados &#41;](/sql/t-sql/data-types/data-type-conversion-database-engine).  
+-   São armazenados quaisquer dados `sql_variant` em um arquivo do formato de caractere sem metadados. Cada valor de dados é convertido ao formato `char`, de acordo com as regras de conversão de dados implícita. Quando importado em uma coluna `sql_variant`, os dados são importados como `char`. Quando importado em uma coluna com um tipo de dados diferente de `sql_variant`, os dados são convertidos de `char` usando conversão implícita. Para obter mais informações sobre conversão de dados, consulte [Conversão de tipo de dados &#40;Mecanismo do Banco de Dados &#41;](/sql/t-sql/data-types/data-type-conversion-database-engine).  
   
 -   O **bcp** exportações de utilitário `money` valores como arquivos de dados de formato de caractere com quatro dígitos após o ponto decimal e sem qualquer símbolo de agrupamento de dígito como separadores de vírgula. Por exemplo, uma coluna `money` que contém o valor 1,234,567.123456 é exportado em massa para um arquivo de dados como a cadeia de caracteres 1234567.1235.  
   
 ## <a name="command-options-for-character-format"></a>Opções de comando para formato de caractere  
- Você pode importar dados de formato de caractere em uma tabela que usa **bcp**, BULK INSERT ou INSERT ... SELECIONE \* DE OPENROWSET. Para um **bcp** comando ou a instrução BULK INSERT, você pode especificar o formato de dados na linha de comando. Para uma instrução INSERT ... instrução SELECT * FROM OPENROWSET(BULK...); é necessário especificar o formato dos dados em um arquivo de formato.  
+ Você pode importar dados de formato de caractere em uma tabela que usa **bcp**, BULK INSERT ou INSERT ... SELECIONE \* DE OPENROWSET. Para um comando **bcp** ou uma instrução BULK INSERT, você pode especificar o formato de dados na linha de comando. Para uma instrução INSERT ... instrução SELECT * FROM OPENROWSET(BULK...); é necessário especificar o formato dos dados em um arquivo de formato.  
   
  O formato de caractere tem suporte nas seguintes opções de linha de comando:  
   
-|Comando|Opção|Description|  
+|Comando|Opção|Descrição|  
 |-------------|------------|-----------------|  
 |**bcp**|**-c**|Faz com que o **bcp** utilitário use dados de caractere.<sup> 1</sup>|  
 |BULK INSERT|DATAFILETYPE **='char'**|Use o formato de caractere quando na importação em massa de dados.|  
@@ -67,7 +67,7 @@ ms.locfileid: "48078436"
  Os exemplos a seguir demonstram como exportar dados de caractere em massa usando **bcp** e importar os mesmos dados em massa usando BULK INSERT.  
   
 ### <a name="sample-table"></a>Tabela de exemplo  
- Os exemplos requerem que uma tabela denominada **myTestCharData** seja criada no banco de dados de exemplo **AdventureWorks** no esquema **dbo**. Antes de executar os exemplos, é necessário criar essa tabela. Para criar essa tabela, no SQL [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] Editor de consultas, execute:  
+ Os exemplos requerem que uma tabela denominada **myTestCharData** seja criada no banco de dados de exemplo **AdventureWorks** no esquema **dbo**. Antes de executar os exemplos, é necessário criar essa tabela. Para criar essa tabela, no Editor de Consultas do SQL[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], execute:  
   
 ```  
 USE AdventureWorks;  
@@ -94,10 +94,10 @@ SELECT Col1,Col2,Col3 FROM myTestCharData
 ### <a name="using-bcp-to-bulk-export-character-data"></a>Usando o bcp para exportar em massa dados de caractere  
  Para exportar dados da tabela para o arquivo de dados, use **bcp** com a opção **out** e os seguintes qualificadores:  
   
-|Qualificadores|Description|  
+|Qualificadores|Descrição|  
 |----------------|-----------------|  
 |**-c**|Especifica o formato do caractere.|  
-|**-t** `,`|Especifica uma vírgula (`,`) como terminador de campo.<br /><br /> Observação: o terminador de campo padrão é o caractere da guia (\t). Para obter mais informações, veja [Especificar terminadores de campo e linha &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).|  
+|**-t** `,`|Especifica uma vírgula (`,`) como terminador de campo.<br /><br /> Observação: O terminador de campo padrão é o caractere de tabulação (\t). Para obter mais informações, veja [Especificar terminadores de campo e linha &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).|  
 |**-T**|Especifica que o utilitário **bcp** se conecta ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com uma conexão confiável usando segurança integrada. Se **-T** não for especificado, será necessário especificar **-U** e **-P** para que o logon tenha êxito.|  
   
  O exemplo seguinte exporta em massa dados em formato de caractere da tabela `myTestCharData` em um arquivo de dados novo nomeado arquivo de dados `myTestCharData-c.Dat` que usa a vírgula (,) como terminador de campo. No prompt de comando do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, digite:  

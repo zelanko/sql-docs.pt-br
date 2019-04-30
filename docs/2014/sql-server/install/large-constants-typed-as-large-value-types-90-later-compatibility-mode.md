@@ -18,11 +18,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6c6b49beeea2039bc30081cc7cf054c3d269847a
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63302298"
 ---
 # <a name="large-constants-are-typed-as-large-value-types-in-90-or-later-compatibility-modes"></a>Constantes grandes são digitadas como tipos de valor grande no modo de compatibilidade 90 ou posterior
   O Supervisor de Atualização detectou a presença de constantes grandes. Constantes de cadeias de caracteres e constantes binárias maiores que 8.000 bytes são tratadas como tipos de dados de objeto grande no [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. No [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou em versões posteriores, caracteres grandes, Unicode e constantes binárias são digitadas como tipos do valor grande.  

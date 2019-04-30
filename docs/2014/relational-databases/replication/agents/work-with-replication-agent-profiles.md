@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b6f66d1bab70619db1631117268e5d62c24c943f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157120"
 ---
 # <a name="work-with-replication-agent-profiles"></a>Trabalhar com perfis do agente de replicação
   Este tópico descreve como trabalhar com perfis do Agente de Replicação no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o RMO (Replication Management Objects). O comportamento de cada agente de replicação é controlado por um conjunto de parâmetros que podem ser definidos através dos perfis de agente. Cada agente tem um perfil padrão, e alguns têm perfis adicionais predefinidos; em um determinado momento, apenas um perfil está ativo para um agente.  
@@ -61,7 +61,7 @@ ms.locfileid: "52772198"
   
     -   Exclua um perfil  
   
--   **Acompanhamento:**  [Depois de alterar parâmetros de agente](#FollowUp)  
+-   **Acompanhamento:**  [depois de alterar parâmetros de agente](#FollowUp)  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
@@ -132,7 +132,7 @@ ms.locfileid: "52772198"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 ###  <a name="Create_tsql"></a> Para criar um perfil novo de agente  
   
@@ -284,7 +284,7 @@ ms.locfileid: "52772198"
   
 5.  Chame o método <xref:Microsoft.SqlServer.Replication.AgentProfile.Remove%2A> para remover o perfil definido pelo usuário representado por esse objeto do servidor.  
   
-##  <a name="FollowUp"></a> Acompanhar: Depois de alterar parâmetros de agente  
+##  <a name="FollowUp"></a> Acompanhamento: depois de alterar parâmetros de agente  
  As alterações do parâmetro de agente entrarão em vigor na próxima vez o agente for iniciado. Se o agente ficar executando continuamente, será necessário parar e reiniciar o agente.  
   
 ## <a name="see-also"></a>Consulte também  

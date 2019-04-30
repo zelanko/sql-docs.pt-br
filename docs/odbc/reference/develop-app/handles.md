@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a205a23c4c7e7e45269fd00fc0923d4168ec7091
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061434"
 ---
 # <a name="handles"></a>Alças
 Os identificadores são opacos, 32 bits os valores que identificam um item em particular; no ODBC, este item pode ser um ambiente, a conexão, a instrução ou o descritor. Quando o aplicativo chama **SQLAllocHandle**, o Gerenciador de Driver ou driver cria um novo item do tipo especificado e retorna sua alça para o aplicativo. Posteriormente, o aplicativo usa o identificador para identificar o item ao chamar funções ODBC. O Gerenciador de Driver e o driver usam o identificador para localizar informações sobre o item.  
@@ -78,7 +78,7 @@ SQLCloseCursor(hstmtOrder);
   
  Posteriormente, quando o aplicativo chama **SQLExecute** para gerar o conjunto de resultados de números de linha para uma determinada ordem de venda, transmite o mesmo identificador. O driver usa o identificador para recuperar o identificador de plano de acesso da estrutura. Ele envia o identificador para a fonte de dados para informar a ele que planeja executar.  
   
- ODBC tem dois níveis de identificadores: identificadores de Gerenciador de Driver e identificadores de driver. O aplicativo usa identificadores de Gerenciador de Driver ao chamar funções ODBC, pois ele chama essas funções no Gerenciador de Driver. O Gerenciador de Driver usa esse identificador para localizar o identificador do driver correspondente e usa o identificador do driver ao chamar a função no driver. Para obter um exemplo de como o driver e o Gerenciador de Driver identificadores são usados, consulte [do Gerenciador de Driver de função no processo de Conexão](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md).  
+ ODBC tem dois níveis de identificadores: Identificadores de Gerenciador de driver e identificadores de driver. O aplicativo usa identificadores de Gerenciador de Driver ao chamar funções ODBC, pois ele chama essas funções no Gerenciador de Driver. O Gerenciador de Driver usa esse identificador para localizar o identificador do driver correspondente e usa o identificador do driver ao chamar a função no driver. Para obter um exemplo de como o driver e o Gerenciador de Driver identificadores são usados, consulte [do Gerenciador de Driver de função no processo de Conexão](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md).  
   
  Que há dois níveis de identificadores é um artefato da arquitetura ODBC; Na maioria dos casos, não é relevante para o aplicativo ou o driver. Embora normalmente não há nenhum motivo para fazer isso, é possível para o aplicativo determinar as alças de driver, chamando **SQLGetInfo**.  
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 853390f99f02352fd7814fcec208bba1508c03a7
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208822"
 ---
 # <a name="topsum-mdx"></a>TopSum (MDX)
 
@@ -38,8 +38,8 @@ TopSum(Set_Expression, Value, Numeric_Expression)
  *Numeric_Expression*  
  Uma expressão numérica válida que geralmente é uma linguagem MDX que retorna uma medida.  
   
-## <a name="remarks"></a>Remarks  
- O **TopSum** função calcula a soma de uma medida especificada avaliada em um conjunto especificado, classificando o conjunto em ordem decrescente. Em seguida, a função retorna os elementos com os valores mais altos, cujo total da expressão numérica especificada seja, pelo menos, o valor especificado. Essa função retorna o subconjunto menor de um conjunto cujo total cumulativo é pelo menos o valor especificado. Os elementos retornados são classificados do maior para menor.  
+## <a name="remarks"></a>Comentários  
+ O **TopSum** função calcula a soma de uma medida especificada avaliada sobre um conjunto especificado, classificando o conjunto em ordem decrescente. Em seguida, a função retorna os elementos com os valores mais altos, cujo total da expressão numérica especificada seja, pelo menos, o valor especificado. Essa função retorna o subconjunto menor de um conjunto cujo total cumulativo é pelo menos o valor especificado. Os elementos retornados são classificados do maior para menor.  
   
 > [!IMPORTANT]  
 >  Como o [BottomSum](../mdx/bottomsum-mdx.md) função, o **TopSum** função sempre quebra a hierarquia.  
@@ -59,6 +59,6 @@ WHERE([Product].[Product Categories].Bikes)
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

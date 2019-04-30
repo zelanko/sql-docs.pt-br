@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2dae0498da8fe1387b6b082d7cc6ae37af27d464
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59958524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206937"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Adicionar um hiperlink a uma URL (Construtor de Relatórios e SSRS)
   É possível adicionar um hiperlink a um item de relatório quando você deseja que os usuários possam clicar em um link de um relatório e abrir um navegador para a URL especificada. Um hiperlink pode ser uma URL estático ou uma expressão que seja avaliada como uma URL. Se você tiver um campo em um banco de dados que contenha URLs, a expressão poderá conter esse campo, resultando em uma lista dinâmica de hiperlinks no relatório. Os hiperlinks podem ser adicionados a caixas de texto, imagens, gráficos e medidores. Certifique-se de que o usuário tenha acesso ao URL fornecido.  

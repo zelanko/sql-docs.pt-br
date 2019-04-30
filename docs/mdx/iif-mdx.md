@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0b05929d24533e0bdcdbcac59820307a373428ff
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125472"
 ---
 # <a name="iif-mdx"></a>IIF (MDX)
 
@@ -34,10 +34,10 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
  *Logical_Expression*  
  Uma condição que é avaliada como **verdadeira** (1) ou **falso** (0). Ela deve ser uma expressão MDX lógica válida.  
   
- *Dica de Expression1 [adiantado | Estrito | Lazy]]*  
+ *Expression1 Hint [Eager|Strict|Lazy]]*  
  Usado quando a expressão lógica é avaliada como **verdadeira**. Expression1 deve ser uma expressão MDX válida.  
   
- *Dica Expression2 [adiantado | Estrito | Lazy]]*  
+ *Expression2 Hint [Eager|Strict|Lazy]]*  
  Usado quando a expressão lógica é avaliada como **falsos**. Expression2 deve ser uma expressão MDX válida.  
   
 ## <a name="remarks"></a>Comentários  

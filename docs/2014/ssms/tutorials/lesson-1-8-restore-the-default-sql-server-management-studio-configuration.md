@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1df89b0c8f9ee694fcb2a77b21c82c3d7839287d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151535"
 ---
 # <a name="restore-the-default-sql-server-management-studio-configuration"></a>Restaurar a configuração padrão do SQL Server Management Studio
   Usuários recentes do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] podem ter fechado ou ocultado janelas inadvertidamente e podem ter dificuldade em restaurar o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ao seu layout original. As etapas a seguir restauram o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ao layout padrão de ambiente.  

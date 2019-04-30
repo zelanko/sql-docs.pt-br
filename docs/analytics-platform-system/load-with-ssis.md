@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: b8a1ca0ec3662dddb2baa5fbac5fe01ed4d4f2e5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213378"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Carregar dados com o Integration Services para Parallel Data Warehouse
 Fornece informações de referência e a implantação para carregar dados no SQL Server Parallel Data Warehouse por meio de pacotes do SQL Server Integration Services (SSIS).  
@@ -218,9 +218,9 @@ Especifique o destino para o fluxo de dados.
   
 5.  Preencha as informações para o banco de dados do servidor, usuário, senha e destino com informações específicas para seu dispositivo. (Os exemplos são mostrados abaixo). Em seguida, clique em **OK**.  
   
-    Para conexões do InfiniBand **nome do servidor**: insira o < nome do dispositivo >-SQLCTL01, 17001.  
+    Para conexões do InfiniBand **nome do servidor**: Insira o < nome do dispositivo >-SQLCTL01, 17001.  
   
-    Para conexões de Ethernet **nome do servidor**: insira o endereço IP do cluster de nó de controle, vírgula, porta 17001. Por exemplo, 10.192.63.134,17001.  
+    Para conexões de Ethernet **nome do servidor**: Insira o endereço IP do cluster de nó de controle, vírgula, porta 17001. Por exemplo, 10.192.63.134,17001.  
   
     **Usuário:**`user1`  
   

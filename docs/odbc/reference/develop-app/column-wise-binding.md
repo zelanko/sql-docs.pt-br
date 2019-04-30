@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5f5a8237e32479bed033b8b9a8003726556a3b25
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126320"
 ---
 # <a name="column-wise-binding"></a>Associação de coluna
 Ao usar a associação, um aplicativo associa matrizes de três, um ou dois ou em alguns casos para cada coluna para a qual data será retornado. A primeira matriz contém os valores de dados e a segunda matriz armazena buffers de comprimento/indicador. Indicadores e os valores de comprimento podem ser armazenados em buffers separadas ao definir os campos de descritor SQL_DESC_INDICATOR_PTR e SQL_DESC_OCTET_LENGTH_PTR como valores diferentes; Se isso for feito, uma terceira matriz está associada. Cada matriz contém elementos tantas quantas forem as linhas no conjunto de linhas.  

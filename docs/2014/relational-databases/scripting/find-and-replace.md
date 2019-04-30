@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e6c2e057c542e6b3c0d9ff475b697efb7bea51b6
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225451"
 ---
 # <a name="find-and-replace"></a>Localizar e Substituir
   Use a caixa de diálogo **Localizar e Substituir** para localizar texto dentro de um arquivo e, opcionalmente, substituí-lo. Versões da caixa de diálogo **Localizar e Substituir** com opções ligeiramente diferentes podem aparecer, dependendo da maneira como a caixa de diálogo foi aberta. No menu **Editar** , aponte para **Localizar e Substituir**e clique em **Localização Rápida** para abrir a caixa de diálogo com opções de localização, mas sem opções de substituição. No menu **Editar** , aponte para **Localizar e Substituir**e clique em **Substituição Rápida** para abrir a caixa de diálogo com opções de localização e de substituição.  

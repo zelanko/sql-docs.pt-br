@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3dfee0dd00e30f6446430156617ba45a5a39b994
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288546"
 ---
 # <a name="argument-value-checks"></a>Verificações de valor de argumento
 O Gerenciador de Driver verifica os seguintes tipos de argumentos. A menos que indicado o contrário, o Gerenciador de Driver retornará SQL_ERROR para erros em valores de argumento.  

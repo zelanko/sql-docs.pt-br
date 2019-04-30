@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 237838d4d9780c6180adebcae264949b10af94e9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061230"
 ---
 # <a name="sqlstmtrecompile-event-class"></a>classe de evento SQL:StmtRecompile
   A classe de evento SQL:StmtRecompile indica recompilações em nível de instrução causadas por todos os tipos de lotes: procedimentos armazenados, gatilhos lotes ad hoc e consultas. Consultas podem ser submetidas usando-se sp_executesql, SQL dinâmico, métodos Preparar, métodos Executar ou interfaces semelhantes. A classe de evento SQL:StmtRecompile deve ser usada, em vez da classe de evento SP:Recompile.  
@@ -47,7 +47,7 @@ ms.locfileid: "52804048"
 |ObjectID|`int`|Identificador atribuído pelo sistema do objeto que contém a instrução que levou à recompilação. Esse objeto pode ser um procedimento armazenado, gatilho ou função definida pelo usuário. Para lotes ad hoc ou SQL preparado, ObjectID e ObjectName retornam um valor NULL.|22|Sim|  
 |ObjectName|`nvarchar`|Nome do objeto identificado por ObjectID.|34|Sim|  
 |ObjectType|`int`|Valor que representa o tipo do objeto envolvido no evento. Para obter mais informações, consulte [ObjectType Trace Event Column](objecttype-trace-event-column.md).|28|Sim|  
-|Deslocamento|`int`|Deslocamento inicial da instrução dentro do procedimento armazenado ou lote que levou à recompilação.|61|Sim|  
+|Offset|`int`|Deslocamento inicial da instrução dentro do procedimento armazenado ou lote que levou à recompilação.|61|Sim|  
 |RequestID|`int`|ID da solicitação que contém a instrução.|49|Sim|  
 |ServerName|`nvarchar`|Nome do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreado.|26|Não|  
 |SessionLoginName|`nvarchar`|Nome de logon do usuário que originou a sessão. Por exemplo, ao se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, SessionLoginName mostrará o Logon1 e LoginName mostrará o Logon2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  

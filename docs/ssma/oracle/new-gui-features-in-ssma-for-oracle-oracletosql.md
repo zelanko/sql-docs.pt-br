@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: ee8637bb85c390378dc5c886165ddfa12950e03b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664444"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209823"
 ---
 # <a name="new-gui-features-in-ssma-for-oracle-oracletosql"></a>Novos recursos de GUI no SSMA para Oracle (OracleToSQL)
 Este capítulo descreve os novos recursos da Interface de usuário do SSMA.  
@@ -48,7 +48,7 @@ Para abrir a caixa de diálogo Gerenciar Layouts, no menu Exibir, aponte para La
 ## <a name="bookmarks"></a>Indicadores  
 Esse recurso permite que você defina um ou mais indicadores na fonte ou código de destino, o rápido encontrado um indicador usando atalhos, gerenciar indicadores com uma caixa de diálogo amigável.  
   
-### <a name="toggle-bookmark"></a>Ativar/Desativar indicador  
+### <a name="toggle-bookmark"></a>Toggle Bookmark  
 Você pode definir/remover o indicador das seguintes maneiras:  
   
 -   Use o botão Ativar/Desativar indicador na parte superior da janela SQL de origem ou destino  

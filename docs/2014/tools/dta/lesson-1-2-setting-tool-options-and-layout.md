@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 023a38a1d3b5c09fc7e1447ecd026d133abca1db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63227017"
 ---
 # <a name="setting-tool-options-and-layout"></a>Definindo o layout e opções de ferramentas
   É possível definir as opções que configuram o que a GUI (interface gráfica do usuário) do Orientador de Otimização do Mecanismo de Banco de Dados exibe na inicialização, quais fontes ela usa e outra ferramenta de funcionalidade para oferecer o melhor suporte na hora de usá-la. As práticas nesta página irão familiarizá-lo com as opções de definição e como defini-las.  
@@ -44,6 +44,6 @@ ms.locfileid: "48166488"
     -   Por padrão, **Perguntar antes de parar a análise da sessão** está marcada para evitar parar uma sessão de ajuste acidentalmente antes que o Orientador de Otimização do Mecanismo de Banco de Dados termine de analisar uma carga de trabalho.  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 2: usar o Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [Lição 2: Usando o Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

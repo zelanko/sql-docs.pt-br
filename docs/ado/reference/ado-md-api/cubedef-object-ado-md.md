@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d1027fc76cb09f7b846e1b8edad52a3cb5dbf2bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225911"
 ---
 # <a name="cubedef-object-ado-md"></a>Objeto CubeDef (ADO MD)
 Representa um cubo de um esquema multidimensional, que contém um conjunto de dimensões relacionadas.  
@@ -39,7 +39,7 @@ Representa um cubo de um esquema multidimensional, que contém um conjunto de di
   
  O **propriedades** coleção contém propriedades fornecidos pelo provedor. A tabela a seguir lista as propriedades que podem estar disponíveis. A lista de propriedades reais pode diferir dependendo após a implementação do provedor. Consulte a documentação do seu provedor para obter uma lista completa de propriedades disponíveis.  
   
-|Nome|Description|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |CatalogName|O nome do catálogo ao qual pertence este cubo.|  
 |CreatedOn|Data e hora da criação do cubo.|  
@@ -47,7 +47,7 @@ Representa um cubo de um esquema multidimensional, que contém um conjunto de di
 |CubeName|O nome do cubo.|  
 |CubeType|O tipo do cubo.|  
 |DataUpdatedBy|ID de usuário da pessoa que faz a última atualização de dados.|  
-|Description|Uma descrição significativa do cubo.|  
+|Descrição|Uma descrição significativa do cubo.|  
 |LastSchemaUpdate|Data e hora da última atualização de esquema.|  
 |SchemaName|O nome do esquema ao qual pertence este cubo.|  
 |SchemaUpdatedBy|ID de usuário da pessoa que faz a última atualização de esquema.|  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f2442124889e6217edc730d4cd47b2c98fa1d2d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225806"
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vb"></a>Exemplo dos métodos GetObjectOwner e SetObjectOwner (VB)
 Este exemplo demonstra a [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) e [SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md) métodos. Esse código supõe a existência do grupo Contabilidade (consulte a [grupos e usuários Append, ChangePassword métodos de exemplo (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md) para ver como adicionar esse grupo para o sistema). O proprietário da tabela de categorias é definido como contabilidade.  

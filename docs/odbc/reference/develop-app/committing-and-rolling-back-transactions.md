@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 194a90482946814995ca1963f7c8fc4bce48d223
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126359"
 ---
 # <a name="committing-and-rolling-back-transactions"></a>Confirmar e reverter transações
 Para confirmar ou reverter uma transação em modo de confirmação manual, um aplicativo chama **SQLEndTran**. Drivers para DBMSs que dão suporte a transações normalmente implementam essa função, executando uma **COMMIT** ou **REVERSÃO** instrução. O Gerenciador de Driver não chama **SQLEndTran** quando a conexão está no modo de confirmação automática; ele simplesmente retorna SQL_SUCCESS, mesmo se o aplicativo tentará reverter a transação. Como os drivers para os que não dão suporte a transações sempre estão no modo de confirmação automática, podem implementar **SQLEndTran** para retornar SQL_SUCCESS sem fazer nada ou não implementá-lo.  

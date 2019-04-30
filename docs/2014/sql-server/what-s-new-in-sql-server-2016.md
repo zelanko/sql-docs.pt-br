@@ -18,11 +18,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 26d0c84194f6f2aafb8bc499ff5404a1438ee577
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578836"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63295236"
 ---
 # <a name="what39s-new-in-sql-server-2014"></a>O que&#39;s do SQL Server 2014
   Este tópico resume os links detalhadas aos novos recursos do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] e resume os pacotes de serviços para [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
@@ -77,7 +77,7 @@ ms.locfileid: "57578836"
 -   **Novo DMF para recuperar o buffer de entrada no SQL Server:** Um novo DMF para recuperar o buffer de entrada para uma sessão/solicitação (sys.dm_exec_input_buffer) agora está disponível. Isso é funcionalmente equivalente ao DBCC INPUTBUFFER. [Consulte o blog para obter mais informações](https://blogs.msdn.microsoft.com/sql_server_team/new-dmf-for-retrieving-input-buffer-in-sql-server/).
 -   **Mitigação para concessão de memória subestimada e supervalorizado:** Adicionadas novas dicas de consulta para o administrador de recursos por meio de MIN_GRANT_PERCENT e MAX_GRANT_PERCENT. Isso permite que você aproveite essas dicas ao executar consultas limitando suas concessões de memória para evitar a contenção de memória. Para obter mais informações, consulte [KB310740 de artigo da base de dados de Conhecimento](https://support.microsoft.com/en-us/kb/3107401)
 -   **Melhor diagnóstico de uso/concessão de memória:** Um novo evento estendido foi adicionado à lista de recursos de rastreamento no SQL Server (query_memory_grant_usage) para controlar as concessões de memória solicitadas e concedidas. Isso fornece maior capacidade de rastreamento e análise para solução de problemas de execução de consulta relacionados a concessões de memória. Para obter mais informações, consulte [artigo da base de dados de Conhecimento KB3107173](https://support.microsoft.com/en-us/kb/3107173).
--   **Consultar diagnóstico de execução para despejo de tempdb:**-aviso de Hash e avisos de classificação agora tem colunas adicionais para rastrear as estatísticas e/s física, memória usada e linhas afetadas. Também introduzimos um novo evento estendido de hash_spill_details. Agora você pode acompanhar informações mais detalhadas para avisos de hash e de classificação ([KB3107172](https://support.microsoft.com/en-us/kb/3107172)). Essa melhoria agora também é exposta por meio de planos de consulta XML na forma de um novo atributo para o tipo complexo de SpillToTempDbType ([KB3107400](https://support.microsoft.com/en-us/kb/3107400)). Defina as estatísticas em agora mostra estatísticas de tabela de trabalho de classificação. para obter informações sobre a ferramenta de configuração e recursos adicionais.
+-   **Consultar diagnóstico de execução para despejo de tempdb:**-aviso de Hash e avisos de classificação agora tem colunas adicionais para rastrear as estatísticas e/s física, memória usada e linhas afetadas. Também introduzimos um novo evento estendido de hash_spill_details. Agora você pode acompanhar informações mais detalhadas para avisos de hash e de classificação ([KB3107172](https://support.microsoft.com/en-us/kb/3107172)). Essa melhoria agora também é exposta por meio de planos de consulta XML na forma de um novo atributo para o tipo complexo de SpillToTempDbType ([KB3107400](https://support.microsoft.com/en-us/kb/3107400)). Defina as estatísticas em agora mostra estatísticas de tabela de trabalho de classificação. .
 -   **Diagnóstico aprimorado para planos de execução de consultas que envolvem a aplicação de predicado residual:** As leitura de linhas reais agora serão relatadas nos planos de execução de consulta para ajudar a melhorar a solução de problemas de desempenho de consulta. Isso deve negar a necessidade de capturar SET STATISTICS IO separadamente. Agora permite que você veja informações relacionadas a uma aplicação de predicado residual em um plano de consulta. Para obter mais informações, consulte [artigo da base de dados de Conhecimento KB3107397](https://support.microsoft.com/en-us/kb/3107397).
 
 

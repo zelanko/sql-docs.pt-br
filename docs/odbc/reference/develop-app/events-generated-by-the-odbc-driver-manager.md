@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 09e55da499359bfcb44cd794db1ba11503d1fc62
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061634"
 ---
 # <a name="events-generated-by-the-odbc-driver-manager"></a>Eventos gerados pelo Gerenciador de Driver ODBC
 > [!IMPORTANT]  
@@ -27,7 +27,7 @@ ms.locfileid: "47639834"
   
  Eventos gerados pelo Gerenciador de Driver ODBC serão registrados quando se clica no botão de iniciar o Visual Studio Analyzer. A ferramenta em si oferece eventos definidos pelo sistema e a capacidade de criar eventos personalizados. Para obter mais informações sobre eventos, consulte o *guia de referência do Visual Studio Analyzer* dentro do pacote da documentação do Visual Studio.  
   
-|Eventos do Visual Studio Analyzer|Description|  
+|Eventos do Visual Studio Analyzer|Descrição|  
 |----------------------------------|-----------------|  
 |**Chamada**|Gerado em todas as entradas de ODBC API.|  
 |**ReturnException**|Gerado em cada retorno de API ODBC se o código de retorno é SQL_ERROR.|  

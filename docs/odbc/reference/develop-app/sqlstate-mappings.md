@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 89be9c958cb848384a67e7eaf74cfecc72f07c35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63148878"
 ---
 # <a name="sqlstate-mappings"></a>Mapeamentos de SQLSTATE
-Este tópico discute os valores de SQLSTATE para ODBC 2. *x* e o ODBC 3. *x*. Para obter mais informações sobre o ODBC 3. *x* valores SQLSTATE, consulte [apêndice a: códigos de erro ODBC](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).  
+Este tópico discute os valores de SQLSTATE para ODBC 2. *x* e o ODBC 3. *x*. Para obter mais informações sobre o ODBC 3. *x* valores SQLSTATE, consulte [apêndice a: Códigos de erro ODBC](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).  
   
  Em ODBC 3. *x*HYxxx SQLSTATEs são retornados em vez de S1xxx e SQLSTATEs 42Sxx são retornados em vez de S00XX. Isso foi feito para alinhar com os padrões ISO e Open Group. Em muitos casos, o mapeamento não é um para um porque os padrões de tem redefinido a interpretação dos vários SQLSTATEs.  
   

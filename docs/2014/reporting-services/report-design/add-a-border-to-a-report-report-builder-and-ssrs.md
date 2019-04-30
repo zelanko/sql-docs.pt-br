@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1bb9deac03a2ba3683922a8c7e361cb908c787c0
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206909"
 ---
 # <a name="add-a-border-to-a-report-report-builder-and-ssrs"></a>Adicionar uma borda a um relatório (Construtor de Relatórios e SSRS)
   É possível adicionar uma borda a um relatório adicionando bordas aos próprios cabeçalhos, rodapés e corpo do relatório, sem adicionar linhas ou retângulos.  

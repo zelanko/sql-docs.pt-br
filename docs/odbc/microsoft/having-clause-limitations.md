@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c09a6bcc3d16e51f4c64d2749c9ecbcc714dda4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127313"
 ---
 # <a name="having-clause-limitations"></a>Limitações da cláusula HAVING
 O número máximo de condições de pesquisa em uma cláusula HAVING é 40.

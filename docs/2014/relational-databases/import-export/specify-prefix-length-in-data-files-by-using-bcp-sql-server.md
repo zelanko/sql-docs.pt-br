@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: b1f480c361c465f17fa50d2a13df29f44a56d131
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156689"
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>Especificar o tamanho de prefixo em arquivos de dados usando bcp (SQL Server)
   Para fornecer o armazenamento de arquivos mais compacto para a exportação de dados em massa no formato nativo para um arquivo de dados, o comando **bcp** precede cada campo com um ou mais caracteres que indicam o comprimento do campo. Esses caracteres são chamados *caracteres de prefixo de comprimento*.  
@@ -36,7 +36,7 @@ ms.locfileid: "48058756"
 >  Depois que você especificar interativamente todos os campos em um comando **bcp**, o comando solicitará que salve suas respostas para cada campo em um arquivo de formato não XML. Para obter mais informações sobre arquivos de formato não XML, veja [Arquivos de formato não XML &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
 ## <a name="overview-of-prefix-length"></a>Visão geral de tamanho de prefixo  
- Para armazenar o comprimento do prefixo de um campo, você precisa de bytes suficientes para representar o comprimento máximo do campo. O número de bytes que também são necessários depende do tipo de armazenamento de arquivo, da nulidade de uma coluna e do fato de os dados serem armazenados no arquivo de dados em seu nativo ou no formato de caractere. Por exemplo, uma `text` ou `image` tipo de dados requer quatro caracteres de prefixo para armazenar o comprimento do campo, mas um `varchar` tipo de dados requer dois caracteres. No arquivo de dados, estes caracteres de prefixo de comprimento são armazenados no formato de dados binário interno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Para armazenar o comprimento do prefixo de um campo, você precisa de bytes suficientes para representar o comprimento máximo do campo. O número de bytes que também são necessários depende do tipo de armazenamento de arquivo, da nulidade de uma coluna e do fato de os dados serem armazenados no arquivo de dados em seu nativo ou no formato de caractere. Por exemplo, um tipo de dados `text` ou `image` requer quatro caracteres de prefixo para armazenar o comprimento do campo, mas um tipo de dados `varchar` requer dois caracteres. No arquivo de dados, estes caracteres de prefixo de comprimento são armazenados no formato de dados binário interno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
 >  Quando você usa formato nativo usa prefixos de comprimento em vez de terminadores de campo. Dados de formato nativo podem conflitar com terminadores porque um arquivo de dados de formato nativo é armazenado no formato de dados binário interno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

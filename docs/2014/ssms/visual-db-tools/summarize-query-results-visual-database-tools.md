@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 25f79dee9adb9ac6e953a802d404597508e7abba
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63204545"
 ---
 # <a name="summarize-query-results-visual-database-tools"></a>Resumir resultados da consulta (Visual Database Tools)
   Quando você cria consultas de agregação, certos princípios lógicos se aplicam. Por exemplo, você não pode exibir o conteúdo de linhas individuais em uma consulta resumida. O Designer de Consulta e Exibição o ajuda a seguir esses princípios segundo a maneira como o [painel de Diagrama](visual-database-tools.md) e o [painel Critérios](criteria-pane-visual-database-tools.md) se comportam.  

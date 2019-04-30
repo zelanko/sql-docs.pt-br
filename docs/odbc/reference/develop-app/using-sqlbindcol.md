@@ -1,5 +1,5 @@
 ---
-title: Usando SQLBindCol | Microsoft Docs
+title: Using SQLBindCol | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c26aff8220d2ebaf4024a881e8b48f165999f8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208471"
 ---
 # <a name="using-sqlbindcol"></a>Usar SQLBindCol
 O aplicativo associa colunas chamando **SQLBindCol**. Essa função é associado a uma coluna por vez. Com ele, o aplicativo especifica o seguinte:  
   
 -   O número da coluna. A coluna 0 é a coluna de indicador; Esta coluna não está incluída em alguns conjuntos de resultados. Todas as outras colunas são numeradas começando com o número 1. É um erro para associar uma coluna de números maiores que as colunas no conjunto de resultados; Esse erro não pode ser detectado até que o conjunto de resultados tiver sido criado, portanto, ele é retornado por **SQLFetch**, e não **SQLBindCol**.  
   
--   O comprimento C de byte, o endereço e o tipo de dados da variável associada à coluna. É um erro para especificar um tipo de dados C para o qual o tipo de dados SQL da coluna não pode ser convertido; Esse erro não pode ser detectado até que o conjunto de resultados tiver sido criado, portanto, ele é retornado por **SQLFetch**, e não **SQLBindCol**. Para obter uma lista de conversões com suporte, consulte [conversão de dados do SQL para tipos de dados C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) apêndice d: tipos de dados. Para obter informações sobre o comprimento em bytes, consulte [comprimento do Buffer de dados](../../../odbc/reference/develop-app/data-buffer-length.md).  
+-   O comprimento C de byte, o endereço e o tipo de dados da variável associada à coluna. É um erro para especificar um tipo de dados C para o qual o tipo de dados SQL da coluna não pode ser convertido; Esse erro não pode ser detectado até que o conjunto de resultados tiver sido criado, portanto, ele é retornado por **SQLFetch**, e não **SQLBindCol**. Para obter uma lista de conversões com suporte, consulte [conversão de dados do SQL para tipos de dados C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) no Apêndice d: Tipos de dados. Para obter informações sobre o comprimento em bytes, consulte [comprimento do Buffer de dados](../../../odbc/reference/develop-app/data-buffer-length.md).  
   
 -   O endereço de um buffer de comprimento/indicador. O buffer de comprimento/indicador é opcional. Ele é usado para retornar o comprimento de byte de binário ou dados de caractere ou retorno SQL_NULL_DATA se os dados forem NULL. Para obter mais informações, consulte [usando valores de comprimento/indicador](../../../odbc/reference/develop-app/using-length-and-indicator-values.md).  
   

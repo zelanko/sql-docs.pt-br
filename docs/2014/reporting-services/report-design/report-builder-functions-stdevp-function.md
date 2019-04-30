@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b5f47bc3b365b2826202eda786afda8407fc77ef
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59936542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215281"
 ---
 # <a name="stdevp-function-report-builder-and-ssrs"></a>Função StDevP (Construtor de Relatórios e SSRS)
   Retorna o desvio padrão da população de todos os valores numéricos não nulos especificados pela expressão, avaliados no contexto do escopo fornecido.  

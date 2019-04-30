@@ -14,11 +14,11 @@ ms.author: ajaykar
 ms.reviewer: douglasl
 manager: craigg
 ms.openlocfilehash: 901d410fc7aa954dcd39a852f240168f2a690e3c
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "56987682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294515"
 ---
 # <a name="create-analysis-reports-in-database-experimentation-assistant"></a>Criar relatórios de análise no Assistente de experimentação do banco de dados
 
@@ -58,7 +58,7 @@ DEA usa testes estatísticos para analisar sua carga de trabalho e determinar co
     
 ### <a name="can-i-create-a-new-analysis-report-while-another-report-is-being-generated"></a>Posso criar um novo relatório de análise enquanto outro relatório está sendo gerado?
     
-Nenhum.  Atualmente, apenas um relatório pode ser gerado por vez para evitar conflitos. No entanto, você pode executar mais de uma captura e reprodução ao mesmo tempo.
+Não.  Atualmente, apenas um relatório pode ser gerado por vez para evitar conflitos. No entanto, você pode executar mais de uma captura e reprodução ao mesmo tempo.
 
 ### <a name="i-upgraded-dea-to-version-20-can-i-still-view-and-use-my-old-reports"></a>Atualizei DEA para a versão 2.0. Posso ainda exibir e usar meus relatórios antigos?
     

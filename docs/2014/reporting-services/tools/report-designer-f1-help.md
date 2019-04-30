@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 359acef5bc6f6015a6404a3cb4f3605cdcd07b4b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201175"
 ---
 # <a name="report-designer-f1-help"></a>Ajuda F1 do Designer de Relatórios
   Esta seção fornece Ajuda F1 para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] assistentes, exibições e caixas de diálogo do Designer de relatórios. Como alternativa, você pode abrir a Ajuda F1 ao trabalhar na caixa de diálogo, com o pressionamento de F1 ou com um clique no botão Ajuda exibido na caixa de diálogo.  

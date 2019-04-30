@@ -22,11 +22,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9fba325ab05844388ceceb1e53b6d4a8cf618468
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63058052"
 ---
 # <a name="upgrade-advisor-overview"></a>Visão geral do Supervisor de Atualização
   O Supervisor de Atualização fornece um console central para análise de componentes do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] e do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e para exibição de relatórios que contenham informações sobre os resultados da análise.  

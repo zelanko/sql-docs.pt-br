@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b9f681b3c99bd0e8351a844f28b16be6249de199
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288499"
 ---
 # <a name="designing-aggregations-xmla"></a>Criando agregações (XMLA)
   Designs de agregação estão associados a partições de um determinado grupo de medidas para garantir que as partições usem a mesma estrutura ao armazenarem agregações. Usando a mesma estrutura de armazenamento para partições permite que você defina com facilidade partições que podem ser mescladas posteriormente usando o [MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla) comando. Para obter mais informações sobre designs de agregação, consulte [agregações e Designs de agregação](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
@@ -92,7 +92,7 @@ ms.locfileid: "50147181"
 ## <a name="returning-design-statistics"></a>Retornando estatísticas de design  
  Quando o **DesignAggregations** comando retorna o controle para o aplicativo cliente, o comando retorna um conjunto de linhas que contém uma única linha que representa as estatísticas de design para o comando. O conjunto de linhas contém as colunas listadas na tabela a seguir.  
   
-|coluna|Data type|Description|  
+|coluna|Data type|Descrição|  
 |------------|---------------|-----------------|  
 |Etapas|Integer|O número de etapas executadas pelo comando antes que ele devolva o controle ao aplicativo cliente.|  
 |Hora|Long integer|O número de milissegundos que o comando leva antes de devolver o controle ao aplicativo cliente.|  

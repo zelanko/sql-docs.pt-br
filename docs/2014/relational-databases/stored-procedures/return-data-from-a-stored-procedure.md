@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6b11f924ce5692378896f1fd7d50186861abf223
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140436"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>Retornar dados de um procedimento armazenado
   Há duas formas de retornar conjuntos de resultados ou dados de um procedimento para um programa de chamada: parâmetros de saída e códigos de retorno. Este tópico fornece informações sobre as duas abordagens.  
@@ -74,10 +74,10 @@ GO
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] os procedimentos podem usar o `cursor` de tipo de dados somente para parâmetros de saída. Se o `cursor` tipo de dados é especificado para um parâmetro, palavras-chave VARYING e OUTPUT devem ser especificadas para esse parâmetro na definição do procedimento. Um parâmetro pode ser especificado como apenas OUTPUT, mas se a palavra-chave VARYING for especificada na declaração de parâmetro, o tipo de dados deve ser `cursor` e a palavra-chave OUTPUT também deverá ser especificado.  
   
 > [!NOTE]  
->  O `cursor` tipo de dados não pode ser associado a variáveis de aplicativo por meio de APIs, como OLE DB, ODBC, ADO e DB-Library do banco de dados. Como parâmetros de saída devem ser associados antes de um aplicativo pode executar um procedimento, os procedimentos com `cursor` parâmetros de saída não podem ser chamados a partir de APIs de banco de dados. Esses procedimentos podem ser chamados de [!INCLUDE[tsql](../../../includes/tsql-md.md)] lotes, procedimentos ou gatilhos somente quando o `cursor` variável de saída é atribuída a um [!INCLUDE[tsql](../../../includes/tsql-md.md)] local `cursor` variável.  
+>  O tipo de dados `cursor` não pode ser associado a variáveis de aplicativos por meio de APIs de banco de dados, como OLE DB, ODBC, ADO e DB-Library. Como os parâmetros OUTPUT devem ser associados antes de um aplicativo executar um procedimento, os procedimentos com parâmetros OUTPUT `cursor` não podem ser chamados das APIs do banco de dados. Esses procedimentos podem ser chamados de lotes, procedimentos ou gatilhos do [!INCLUDE[tsql](../../../includes/tsql-md.md)] apenas quando a variável OUTPUT de `cursor` é atribuída a uma variável [!INCLUDE[tsql](../../../includes/tsql-md.md)] `cursor` local.  
   
 ### <a name="rules-for-cursor-output-parameters"></a>Regras para parâmetros de saída de cursor  
- As regras seguintes pertencem aos `cursor` parâmetros de saída quando o procedimento é executado:  
+ As regras seguintes pertencem aos parâmetros de saída de `cursor` quando o procedimento é executado:  
   
 -   Para um cursor de somente avanço, as linhas retornadas no conjunto de resultados do cursor são apenas as que estão na posição do cursor na conclusão da execução do procedimento, por exemplo:  
   

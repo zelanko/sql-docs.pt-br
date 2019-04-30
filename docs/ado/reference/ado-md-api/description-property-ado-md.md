@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 643bcfef67b1f3c5434d7beaac46da2d46bbdd14
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225804"
 ---
 # <a name="description-property-ado-md"></a>Propriedade Description (ADO MD)
 Retorna uma explicação de texto do objeto atual.  

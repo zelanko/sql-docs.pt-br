@@ -1,5 +1,5 @@
 ---
-title: 'C to SQL: Bit | Microsoft Docs'
+title: 'C para SQL: Bit | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9eeeaeaa3bb4af7a244697e992e79e8c66c2a660
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201670"
 ---
 # <a name="c-to-sql-bit"></a>C para SQL: bit
 O identificador para o tipo de dados ODBC C bit é:  
@@ -31,7 +31,7 @@ O identificador para o tipo de dados ODBC C bit é:
   
 |Identificador de tipo SQL|Teste|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR<br /><br /> SQL_WVARCHAR SQL_WCHAR<br /><br /> SQL_WLONGVARCHAR|None|n/d|  
+|SQL_CHAR SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR<br /><br /> SQL_WCHAR SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|None|n/d|  
 |SQL_DECIMAL SQL_NUMERIC<br /><br /> SQL_TINYINT SQL_SMALLINT<br /><br /> SQL_INTEGER SQL_BIGINT<br /><br /> SQL_REAL SQL_FLOAT<br /><br /> SQL_DOUBLE|None|n/d|  
 |SQL_BIT|None|n/d|  
   

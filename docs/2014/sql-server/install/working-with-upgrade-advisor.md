@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b310b51c32e4a0b3254035311c7a10182c06e550
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63154727"
 ---
 # <a name="working-with-upgrade-advisor"></a>Trabalhando com o Supervisor de Atualização
   Para ajudar a assegurar que a atualização para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] seja bem-sucedida, o Supervisor de Atualização fornece um console central para identificar problemas que devem ser solucionados nas instalações antes da atualização para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -40,7 +40,7 @@ ms.locfileid: "48076246"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Visão geral do Supervisor de Atualização](../../../2014/sql-server/install/overview-of-upgrade-advisor.md)|Fornece uma visão geral do processo de atualização, do Assistente para Análise do Supervisor de Atualização e do Visualizador de Relatórios do Supervisor de Atualização.|  
 |[Tópicos de informações práticas do Supervisor de Atualização](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)|Fornece instruções para executar procedimentos comuns do Supervisor de Atualização.|  

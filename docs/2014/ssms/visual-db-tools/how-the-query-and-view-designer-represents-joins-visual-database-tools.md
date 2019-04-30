@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: abd8dd7c3c23a13b1cdff7a2d6f76fb99375a641
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155262"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>Como o Designer de Consulta e Exibição representa junções (Visual Database Tools)
   Se as tabelas forem unidas, o [Designer de Consulta e Exibição](visual-database-tools.md) representará a junção graficamente no [painel Diagrama](diagram-pane-visual-database-tools.md) e pelo uso da sintaxe SQL no [painel SQL](sql-pane-visual-database-tools.md).  

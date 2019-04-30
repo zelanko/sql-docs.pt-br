@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1763ee0cd8c5bc2017160de44b9c047781649eba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150027"
 ---
 # <a name="sql-type-identifiers"></a>Identificadores de tipo SQL
 Cada fonte de dados define seus próprios tipos de dados SQL. ODBC define os identificadores de tipo e descreve as características gerais dos tipos de dados SQL que podem ser mapeados para cada identificador de tipo. Ela é específica do driver como cada tipo de dados na fonte de dados subjacente é mapeado para um identificador de tipo SQL do ODBC.  
@@ -31,4 +31,4 @@ Cada fonte de dados define seus próprios tipos de dados SQL. ODBC define os ide
   
  ODBC define uma ampla variedade de identificadores de tipo SQL. No entanto, o driver não é necessário usar todos esses identificadores. Em vez disso, ele usa apenas esses identificadores que ele precisa expor os tipos de dados SQL com suporte pela fonte de dados subjacente. Se a fonte de dados subjacente der suporte a tipos de dados SQL para que nenhum identificador de tipo corresponde, o driver pode definir identificadores de tipo adicionais. Para obter mais informações, consulte [tipos de dados específicos do Driver, tipos de descritor, tipos de informação, tipos de diagnóstico e atributos](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md).  
   
- Para obter uma descrição completa de identificadores de tipo SQL, consulte [tipos de dados C](../../../odbc/reference/appendixes/c-data-types.md) apêndice d: tipos de dados.
+ Para obter uma descrição completa de identificadores de tipo SQL, consulte [tipos de dados C](../../../odbc/reference/appendixes/c-data-types.md) no Apêndice d: Tipos de dados.

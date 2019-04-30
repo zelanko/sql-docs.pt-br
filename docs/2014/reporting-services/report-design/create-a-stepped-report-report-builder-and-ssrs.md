@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f2e83f23870d355394241550ffab24838a6b43f1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59959742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206415"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>Criar um novo relatório de nível (Construtor de Relatórios e SSRS)
   Um relatório de nível mostra as linhas ou grupos filho de detalhes recuados sob um grupo pai na mesma coluna, conforme ilustrado no seguinte exemplo:  

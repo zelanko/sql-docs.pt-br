@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5370eb821ed018e451fbb3f1992ccbb3df22c834
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968168"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63216231"
 ---
 # <a name="varp-function-report-builder-and-ssrs"></a>Função VarP (Construtor de Relatórios e SSRS)
   Retorna a variação da população de todos os valores numéricos não nulos especificados pela expressão, avaliados no contexto do escopo fornecido.  

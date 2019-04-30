@@ -13,18 +13,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 75feaf114355c3a23abad6ec23be9011e0de5e06
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209718"
 ---
 # <a name="disable-resource-governor"></a>Desabilitar Administrador de Recursos
   Você pode desabilitar o Administrador de Recursos usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou Transact-SQL.  
   
--   **Antes de começar:**  [Limitações e restrições](#LimitationsRestrictions), [permissões](#Permissions)  
+-   **Antes de começar:**  [Limitações e Restrições](#LimitationsRestrictions), [Permissões](#Permissions)  
   
--   **Para desabilitar o administrador de recursos, usando:**  [Pesquisador de objetos](#RGOffObjEx), [propriedades do Resource Governor](#RGOffProp), [Transact-SQL](#RGOffTSQL)  
+-   **Para desabilitar o Administrador de Recursos usando:**  [Pesquisador de Objetos](#RGOffObjEx), [Propriedades do Resource Governor](#RGOffProp), [Transact-SQL](#RGOffTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
  A desabilitação do Administrador de Recursos gera os seguintes resultados:  
@@ -43,7 +43,7 @@ ms.locfileid: "52761416"
   
 -   Depois que o SQL Server for reiniciado, o Administrador de Recursos não carregará sua configuração, mas em vez disso terá apenas os grupos de cargas de trabalho e pools de recursos padrão e internos.  
   
-###  <a name="LimitationsRestrictions"></a> Limitações e Restrições  
+###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
  Você não pode usar a instrução `ALTER RESOURCE GOVERNOR` para desabilitar o Administrador de Recursos quando estiver em uma transação de usuário.  
   
 ###  <a name="Permissions"></a> Permissões  

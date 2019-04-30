@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b95e6f0bd2b702080b3580b8b9eeb80ac5b06e8d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063102"
 ---
-# <a name="alternatives-using-sql-statements"></a>Alternativas: usar instruções SQL
+# <a name="alternatives-using-sql-statements"></a>Alternativas: Usando instruções SQL
 ADO também permite usar comandos como alternativas para suas propriedades internas e métodos para a edição de dados. Dependendo do seu provedor, todas as operações mencionadas nesta seção também podem ser feitas passando comandos para sua fonte de dados. Por exemplo, instruções de atualização do SQL podem ser usadas para modificar os dados sem usar o **valor** propriedade de uma **campo**. Instruções SQL INSERT podem ser usadas para adicionar novos registros para uma fonte de dados, em vez do método ADO **AddNew**. Para obter mais informações sobre o SQL ou a linguagem de manipulação de dados do seu provedor, consulte a documentação da fonte de dados.  
   
  Por exemplo, você pode passar uma cadeia de caracteres SQL que contém uma instrução DELETE para um banco de dados, conforme mostrado no código a seguir:  
