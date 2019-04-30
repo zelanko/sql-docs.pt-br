@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cd0c7e3bc9ece2a6eafa9de1623bfa2b641e5e64
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59955572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63064064"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>Lição 2: Especificar informações de conexão (Reporting Services)
   Depois de adicionar um relatório ao projeto Tutorial, é necessário definir uma *fonte de dados*, que são informações de conexão usadas pelo relatório para acessar dados de um banco de dados relacional, banco de dados multidimensional ou outro recurso.  

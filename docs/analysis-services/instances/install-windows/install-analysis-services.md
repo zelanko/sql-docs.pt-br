@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0904dc53e17ed140310df38d1f63dc9fe3fc45cb
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63054281"
 ---
 # <a name="install-sql-server-analysis-services"></a>Instalar o SQL Server Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   SQL Server Analysis Services é um servidor de banco de dados analítico que hospeda modelos de tabela, cubos multidimensionais e modelos de mineração de dados que você pode acessar de relatórios, planilhas e painéis.  
   
- Analysis Services é várias instâncias, o que significa que você pode instalar mais de uma cópia em um único computador ou executar versões novas e antigas lado a lado. Qualquer instância de instalação é executada em um dos três modos, conforme determinado durante a instalação: Multidimensional e Mineração de Dados, Tabular ou SharePoint. Se você quiser usar vários modos, você precisará de uma instância separada para cada um.  
+ Analysis Services tem várias instâncias, o que significa que você pode instalar mais de uma cópia em um único computador ou executar versões novas e antigas lado a lado. Qualquer instância de que instalação é executada em um dos três modos, conforme determinado durante a instalação: Multidimensional e mineração, tabela de dados, ou o SharePoint. Se você quiser usar vários modos, você precisará de uma instância separada para cada um.  
   
  Depois de instalar o servidor em um modo específico, você poderá usá-lo para hospedar soluções que estejam em conformidade com esse modo. Por exemplo, um servidor de modo de tabela será exigido se você desejar acesso a dados de modelo de tabela pela rede.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "34708074"
   
 -   [Baixar o SQL Server Data Tools (SSDT)](../../../ssdt/download-sql-server-data-tools-ssdt.md)  
   
- Você precisará SSMS e SSDT para trabalhar com dados e instâncias do Analysis Services. Ferramentas podem ser instaladas em qualquer lugar, mas não se esqueça de configurar portas no servidor antes de tentar uma conexão. Veja [Configurar o Firewall do Windows para permitir o acesso ao Analysis Services](../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) para obter detalhes.  
+ Você precisará SSMS e SSDT para trabalhar com dados e instâncias do Analysis Services. As ferramentas podem ser instaladas em qualquer lugar, mas não se esqueça de configurar portas no servidor antes de tentar uma conexão. Veja [Configurar o Firewall do Windows para permitir o acesso ao Analysis Services](../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) para obter detalhes.  
   
 ## <a name="install-using-a-wizard"></a>Instalar usando um assistente  
  A lista a seguir mostra a você quais páginas no assistente de Instalação do SQL Server são usadas para instalar o Analysis Services.  
@@ -40,13 +40,13 @@ ms.locfileid: "34708074"
   
      ![Árvore de recursos de instalação mostrando o Analysis Services](../../../analysis-services/instances/install-windows/media/ssas-setupas.gif "árvore de recursos de instalação mostrando o Analysis Services")  
   
-2.  Na página Configuração do Analysis Services, selecione um modo. Modo de tabela é o padrão.  
+2.  Na página de configuração do Analysis Services, selecione um modo. Modo de tabela é o padrão...  
   
      ![Página de configuração com as opções de configuração do Analysis Services](../../../analysis-services/instances/install-windows/media/ssas-setupasconfig.png "página de configuração com as opções de configuração do Analysis Services")  
   
   O modo tabular usa o mecanismo de análise na memória xVelocity (VertiPaq), que é o armazenamento padrão para modelos de tabela. Depois de implantar modelos de tabela para o servidor, você pode configurar seletivamente soluções tabulares para usar o armazenamento em disco DirectQuery como uma alternativa ao armazenamento associado à memória.  
  
- Multidimensional e mineração de dados do modo use MOLAP como o armazenamento padrão para modelos implantados no Analysis Services. Depois de implantar para o servidor, você pode configurar uma solução para usar o ROLAP para executar consultas diretamente no banco de dados relacional, em vez de armazenar dados de consulta em um banco de dados multidimensional do Analysis Services.  
+ Multidimensional e mineração de dados de modo use MOLAP como o armazenamento padrão para modelos implantados no Analysis Services. Depois de implantar para o servidor, você pode configurar uma solução para usar o ROLAP para executar consultas diretamente no banco de dados relacional, em vez de armazenar dados de consulta em um banco de dados multidimensional do Analysis Services.  
   
 
   
@@ -66,7 +66,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
  **ASSERVERMODE** diferencia maiúsculas de minúsculas.  Todos os valores devem ser expressos em maiúsculas. A tabela a seguir descreve os valores válidos para **ASSERVERMODE**.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |TABULAR|Este é o valor padrão. Se você não definir **ASSERVERMODE**, o servidor está instalado no modo de tabela.|
 |MULTIDIMENSIONAL|Esse valor é opcional.|  

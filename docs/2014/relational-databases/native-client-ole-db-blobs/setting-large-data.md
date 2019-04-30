@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: da56cbf334bca884e71469c63429135d6db84953
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140623"
 ---
 # <a name="setting-large-data"></a>Definindo dados grandes
   Com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client, você pode definir dados de BLOB, passando um ponteiro para um objeto de armazenamento do consumidor.  
@@ -45,7 +45,7 @@ ms.locfileid: "48159186"
   
 2.  Defina as propriedades no grupo de propriedades DBPROPSET_ROWSET para que o conjunto de linhas seja atualizável.  
   
-3.  Crie um conjunto de associações (uma de cada coluna) usando uma matriz de estruturas DBBINDING. Defina o elemento *wType* na estrutura DBBINDING como DBTYPE_IUNKNOWN e o elemento *pObject* para que ele aponte para a estrutura DBOBJECT criada.  
+3.  Crie um conjunto de associações (uma de cada coluna) usando uma matriz de estruturas DBBINDING. Defina o elemento *wType* na estrutura DBBINDING como DBTYPE_IUNKNOWN e o elemento *pObject* para apontar para a estrutura DBOBJECT que você criou.  
   
 4.  Crie um acessador que usa as informações de associação na matriz de estruturas DBBINDINGS.  
   

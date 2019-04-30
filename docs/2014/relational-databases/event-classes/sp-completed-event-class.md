@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7bcc8cdc62616dd26eb714b78ad07296a794b55f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63050962"
 ---
 # <a name="spcompleted-event-class"></a>Classe de evento SP:Completed
   A classe de evento SP:Completed indica que o procedimento armazenado completou a execução.  

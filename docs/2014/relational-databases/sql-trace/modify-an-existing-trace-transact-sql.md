@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 56d4f7d922c0c229b1e2126f93611670adf7c702
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63135615"
 ---
 # <a name="modify-an-existing-trace-transact-sql"></a>Modificar um rastreamento existente (Transact-SQL)
   Este tópico descreve como usar procedimentos armazenados para modificar um rastreamento existente.  
@@ -47,7 +47,7 @@ ms.locfileid: "53591840"
     ||NOT NULL|A coluna é desativada para o evento especificado.|  
   
 > [!IMPORTANT]
->  Diferentemente dos procedimentos armazenados comuns, parâmetros de todos os [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] procedimentos armazenados (<strong>sp_trace*xx*</strong>) são estritamente tipados e não dão suporte a conversão de tipo de dados automática. Se esses parâmetros não forem chamados pelos tipos de dados com parâmetros de entrada corretos, como especificado na descrição do argumento, o procedimento armazenado retornará um erro.  
+>  Ao contrário dos procedimentos armazenados comuns, os parâmetros de todos os procedimentos armazenados do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] (<strong>sp_trace_*xx*</strong>) são estritamente tipados e não são compatíveis com a conversão automática de tipo de dados. Se esses parâmetros não forem chamados pelos tipos de dados com parâmetros de entrada corretos, como especificado na descrição do argumento, o procedimento armazenado retornará um erro.  
 
 ## <a name="see-also"></a>Consulte também  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   

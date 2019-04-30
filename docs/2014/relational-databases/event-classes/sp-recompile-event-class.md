@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f9d894eb3f38248e1f7af2b1f693f87bdfebefa9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63050912"
 ---
 # <a name="sprecompile-event-class"></a>classe de evento SP:Recompile
   A classe de evento SP:Recompile indica que um procedimento armazenado, gatilho ou função definida pelo usuário foi recompilado. Recompilações relatadas por essa classe de evento ocorrem ao nível de instrução.  
@@ -49,7 +49,7 @@ ms.locfileid: "52795659"
 |ObjectID|`int`|ID do procedimento armazenado, atribuído pelo sistema.|22|Sim|  
 |ObjectName|`nvarchar`|Nome do objeto que acionou a recompilação.|34|Sim|  
 |ObjectType|`int`|Valor que representa o tipo do objeto envolvido no evento. Para obter mais informações, consulte [ObjectType Trace Event Column](objecttype-trace-event-column.md).|28|Sim|  
-|Deslocamento|`int`|Deslocamento inicial da instrução dentro do procedimento armazenado ou lote que levou à recompilação.|61|Sim|  
+|Offset|`int`|Deslocamento inicial da instrução dentro do procedimento armazenado ou lote que levou à recompilação.|61|Sim|  
 |RequestID|`int`|ID da solicitação que contém a instrução.|49|Sim|  
 |ServerName|`nvarchar`|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
 |SessionLoginName|`nvarchar`|Nome de logon do usuário que originou a sessão. Por exemplo, ao se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, SessionLoginName mostrará o Logon1 e LoginName mostrará o Logon2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  

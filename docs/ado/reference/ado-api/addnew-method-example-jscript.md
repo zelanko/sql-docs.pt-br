@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 13e0fc40945e6cd8c68591a8f94cd9a052cda76e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065284"
 ---
 # <a name="addnew-method-example-jscript"></a>Exemplo do método AddNew (JScript)
 Este exemplo usa o [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) método para criar um novo registro com o nome especificado. Recortar e colar o seguinte código ao bloco de notas ou outro editor de texto e salve-o como **AddNewJS.asp**.  

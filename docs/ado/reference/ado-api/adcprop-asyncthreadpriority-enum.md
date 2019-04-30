@@ -17,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c0b9d4e0e6f844ef2dda18e95aadfcf3b910995d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065288"
 ---
 # <a name="adcpropasyncthreadpriorityenum"></a>ADCPROP_ASYNCTHREADPRIORITY_ENUM
 Para um RDS [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) de objeto, que especifica a prioridade de execução do thread assíncrona que recupera dados.  
   
  Usar essas constantes com a **conjunto de registros** "**prioridade de Thread em segundo plano**" propriedade dinâmica, que é referenciada no índice ADO para OLE DB de propriedade dinâmica e documentada no [ Microsoft Cursor Service para OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) documentação.  
   
-|Constante|Valor|Description|  
+|Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
 |**adPriorityAboveNormal**|4|Define a prioridade entre normal e o mais alto.|  
 |**adPriorityBelowNormal**|2|Define a prioridade entre mais baixa e normal.|  
@@ -37,7 +37,7 @@ Para um RDS [conjunto de registros](../../../ado/reference/ado-api/recordset-obj
 |**adPriorityNormal**|3|Define a prioridade como normal.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
- Pacote: **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

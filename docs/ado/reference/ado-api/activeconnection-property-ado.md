@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 951f43a2842162aa00f664dc83b754d06d8aafb2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065534"
 ---
 # <a name="activeconnection-property-ado"></a>Propriedade ActiveConnection (ADO)
 Indica para o qual [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) do objeto especificado [comando](../../../ado/reference/ado-api/command-object-ado.md), [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md), ou [registro](../../../ado/reference/ado-api/record-object-ado.md) no momento, o objeto pertence.  

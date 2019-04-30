@@ -16,22 +16,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9867946ce84163a504582c8a9575100c3c9aacd3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63069815"
 ---
 # <a name="odbc-data-sources-subkey"></a>Subchave de fontes de dados ODBC
 Os valores sob a subchave de fontes de dados ODBC listam as fontes de dados. O formato desses valores é conforme mostrado na tabela a seguir.  
   
-|Nome|Tipo de dados|data|  
+|Nome|Tipo de dados|Dados|  
 |----------|---------------|----------|  
-|*nome da fonte de dados*|REG_SZ|*Descrição do driver*|  
+|*data-source-name*|REG_SZ|*driver-description*|  
   
  O *nome da fonte de dados* valor é definido pelo programa de administração (que normalmente solicita ao usuário para ele), e *descrição do driver* é definido pelo desenvolvedor de driver (geralmente é o nome das DBMS associado com o driver).  
   
- Por exemplo, suponha que três fontes de dados tiverem sido definidos: inventário, que usa o SQL Server; Folha de pagamento, que usa dBASE; e pessoal, que usa formatadas em arquivos de texto. Os valores sob a subchave de fontes de dados ODBC podem ser da seguinte maneira:  
+ Por exemplo, suponha que três fontes foram definidas de dados: Inventário, que usa o SQL Server; Folha de pagamento, que usa dBASE; e pessoal, que usa formatadas em arquivos de texto. Os valores sob a subchave de fontes de dados ODBC podem ser da seguinte maneira:  
   
 ```  
 Inventory : REG_SZ : SQL Server  

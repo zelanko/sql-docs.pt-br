@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5567bf3cc460aac6abfc2979a14e124bfd9d4cac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061925"
 ---
 # <a name="resync-command-property-dynamic-ado"></a>Ressincronizar propriedade dinâmica do comando (ADO)
 Especifica um comando fornecido pelo usuário de cadeia de caracteres que o [ressincronizar](../../../ado/reference/ado-api/resync-method.md) problemas para atualizar os dados na tabela chamada no método da [tabela exclusiva](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) propriedade dinâmica.  

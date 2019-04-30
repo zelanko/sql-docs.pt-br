@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: be12a1af53957ab0d8f3347a0464dd987152bca0
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63129830"
 ---
 # <a name="union---mdx-operator-reference"></a>União - referência de operador MDX
 
@@ -35,8 +35,8 @@ Set_Expression + Set_Expression
 ## <a name="return-value"></a>Valor retornado  
  Um conjunto que contém os membros dos dois conjuntos especificados.  
   
-## <a name="remarks"></a>Remarks  
- O **+ (união)** operador é funcionalmente equivalente ao [união &#40;MDX&#41; ](../mdx/union-mdx.md) função.  
+## <a name="remarks"></a>Comentários  
+ O **+ (união)** operador é funcionalmente equivalente para o [união &#40;MDX&#41; ](../mdx/union-mdx.md) função.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir demonstra o uso desse operador.  

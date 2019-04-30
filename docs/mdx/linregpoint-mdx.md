@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cc47b5910f0d5323b1b7e29cd3313b36d615265c
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63136070"
 ---
 # <a name="linregpoint-mdx"></a>LinRegPoint (MDX)
 
@@ -41,8 +41,8 @@ LinRegPoint(Slice_Expression_x, Set_Expression, Numeric_Expression_y [ ,Numeric_
  *Numeric_Expression_x*  
  Uma expressão numérica válida, geralmente uma linguagem MDX de coordenadas de célula, que retorna um número que representa valores do eixo x.  
   
-## <a name="remarks"></a>Remarks  
- A regressão linear, que usa o método dos mínimos quadrados, calcula a equação de uma linha de regressão (ou seja, a linha mais adequada para uma série de pontos). A linha de regressão tem a seguinte equação, onde um é a inclinação e b é a interceptação:  
+## <a name="remarks"></a>Comentários  
+ A regressão linear, que usa o método dos mínimos quadrados, calcula a equação de uma linha de regressão (ou seja, a linha mais adequada para uma série de pontos). A linha de regressão tem a seguinte equação, em que um é a inclinação e b é a interceptação:  
   
  y = ax+b  
   
@@ -61,6 +61,6 @@ LinRegPoint([Measures].[Unit Sales],LastPeriods(10),[Measures].[Unit Sales],[Mea
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f1b91c1d46bc4a396a8b0358a1a3bf3aa8acbcd8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63135698"
 ---
 # <a name="subscribe-to-and-check-the-finance-name-policy"></a>Assinar e verificar a política Nome Financeiro
   Nesta tarefa, você configurará o banco de dados Finanças para assinar a categoria de políticas Finanças. Então, você testará a política Nome de Finanças.  
@@ -69,7 +69,7 @@ ms.locfileid: "48137076"
  Este tutorial mostrou como criar condições do Gerenciamento Baseado em Políticas, políticas e grupos de políticas e como aplicar filtros e verificar a compatibilidade de destinos de Gerenciamento Baseado em Políticas.  
   
 ## <a name="next"></a>Próximo  
- Este tutorial está concluído. Para retornar ao início, clique em [Tutorial: Administrando servidores com o Gerenciamento Baseado em Políticas](tutorial-administering-servers-by-using-policy-based-management.md).  
+ Este tutorial está concluído. Para retornar ao início, clique em [Tutorial: Administrando servidores com gerenciamento baseado em políticas](tutorial-administering-servers-by-using-policy-based-management.md).  
   
  Para obter uma lista de tutoriais, consulte [tutoriais para SQL Server 2014](../../tutorials/tutorials-for-sql-server-2014.md).  
   

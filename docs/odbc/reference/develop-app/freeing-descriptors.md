@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d643ccad0110796127524a10e82aef7c3339b163
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061484"
 ---
 # <a name="freeing-descriptors"></a>Liberar descritores
 Descritores explicitamente alocados podem ser liberado um explicitamente, chamando **SQLFreeHandle** com *HandleType* de SQL_HANDLE_DESC ou implicitamente, quando o identificador de conexão é liberado. Quando um descritor alocado explicitamente é liberado, todos os identificadores de instrução para o qual o descritor liberado aplicado automaticamente reverter para os descritores implicitamente alocados para eles.  

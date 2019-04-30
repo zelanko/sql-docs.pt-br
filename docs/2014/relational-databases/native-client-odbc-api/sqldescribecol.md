@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 95d367efc0bf3fb3e3a74bd0ba9d48b9d8f25be2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067762"
 ---
 # <a name="sqldescribecol"></a>SQLDescribeCol
   Para instruções executadas, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client não precisa consultar o servidor para descrever colunas em um conjunto de resultados. Nesse caso, `SQLDescribeCol` não causa uma ida e volta do servidor. Como o [SQLColAttribute](sqlnumresultcols.md), chamar `SQLDescribeCol` diante preparadas, mas instruções não executadas gera uma ida e volta do servidor.  
@@ -37,9 +37,9 @@ ms.locfileid: "53369838"
   
 ||*DataTypePtr*|*ColumnSizePtr*|*DecimalDigitsPtr*|  
 |-|-------------------|---------------------|------------------------|  
-|DATETIME|SQL_TYPE_TIMESTAMP|23|3|  
+|datetime|SQL_TYPE_TIMESTAMP|23|3|  
 |smalldatetime|SQL_TYPE_TIMESTAMP|16|0|  
-|Data|SQL_TYPE_DATE|10|0|  
+|date|SQL_TYPE_DATE|10|0|  
 |time|SQL_SS_TIME2|8, 10..16|0..7|  
 |datetime2|SQL_TYPE_TIMESTAMP|19, 21..27|0..7|  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET|26, 28..34|0..7|  

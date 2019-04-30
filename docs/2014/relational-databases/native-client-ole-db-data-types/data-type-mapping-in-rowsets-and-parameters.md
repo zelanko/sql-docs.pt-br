@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0979892b6770b9a9c2d0d9c4e8a0d734d873c085
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062183"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>Mapeamento de tipos de dados em conjuntos de linhas e parâmetros
   Em conjuntos de linhas e como valores de parâmetro, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client representa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] os dados usando o seguinte OLE DB definidos os tipos de dados, relatados nas funções **icolumnsinfo:: Getcolumninfo** e  **ICommandWithParameters:: Getparameterinfo**.  
@@ -89,7 +89,7 @@ ms.locfileid: "52766038"
   
 |||  
 |-|-|  
-|SSPROP_ALLOWNATIVEVARIANT|Digite: VT_BOOL<br /><br /> R/W: Leitura/Gravação<br /><br /> Padrão: VARIANT_FALSE<br /><br /> Descrição: Determina se os dados buscados como DBTYPE_VARIANT ou DBTYPE_SQLVARIANT.<br /><br /> VARIANT_TRUE: Tipo de coluna é retornado como DBTYPE_SQLVARIANT, nesse caso o buffer conterá a estrutura SSVARIANT.<br /><br /> VARIANT_FALSE: Tipo de coluna é retornado como DBTYPE_VARIANT e o buffer terá a estrutura VARIANT.|  
+|SSPROP_ALLOWNATIVEVARIANT|Digite: VT_BOOL<br /><br /> R/W: Leitura/gravação<br /><br /> Padrão: VARIANT_FALSE<br /><br /> Descrição: Determina se os dados buscados como DBTYPE_VARIANT ou DBTYPE_SQLVARIANT.<br /><br /> VARIANT_TRUE: Tipo de coluna é retornado como DBTYPE_SQLVARIANT, nesse caso o buffer conterá a estrutura SSVARIANT.<br /><br /> VARIANT_FALSE: Tipo de coluna é retornado como DBTYPE_VARIANT e o buffer terá a estrutura VARIANT.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Tipos de dados &#40;OLE DB&#41;](data-types-ole-db.md)  

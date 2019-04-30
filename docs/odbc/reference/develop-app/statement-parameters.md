@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b366ddd7a665112e6b40b814b13037a517d623a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149357"
 ---
 # <a name="statement-parameters"></a>Parâmetros de instrução
 Um *parâmetro* é uma variável em uma instrução SQL. Por exemplo, suponha que uma tabela de peças possui colunas nomeadas PartID, descrição e preço. Para adicionar uma parte sem parâmetros exigiria construindo uma instrução SQL, como:  
@@ -37,7 +37,7 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
   
  A instrução mostrada apenas pode ser embutido em código em um aplicativo de entrada de ordem para inserir uma nova linha. No entanto, marcadores de parâmetro não estão limitados a aplicativos verticais. Para qualquer aplicativo, eles facilitam a dificuldade de construindo instruções SQL em tempo de execução, evitando as conversões para e de texto. Por exemplo, a ID da parte apenas mostrada é mais provável armazenados no aplicativo como um número inteiro. Se a instrução SQL é construída sem marcadores de parâmetro, o aplicativo deve converter a ID da parte em texto e a fonte de dados necessário convertê-lo para um número inteiro. Usando um marcador de parâmetro, o aplicativo pode enviar a ID da parte do driver como um inteiro, que geralmente pode enviá-lo à fonte de dados como um número inteiro. Isso economiza duas conversões. Para obter valores de dados longo, isso é muito importante, porque as formas de texto de valores tão frequentemente excedem o comprimento permitido de uma instrução SQL.  
   
- Parâmetros são válidos somente em determinados locais em instruções SQL. Por exemplo, eles não são permitidos na lista de seleção (a lista de colunas a serem retornadas por uma **selecionar** instrução), nem que eles são permitidos como ambos os operandos de um operador binário, como o sinal de igual (=), pois ele seria impossível Determine o tipo de parâmetro. Em geral, os parâmetros são válidos somente em instruções de linguagem de manipulação de dados (DML) e não em instruções de linguagem de definição de dados (DDL). Para obter mais informações, consulte [marcadores de parâmetro](../../../odbc/reference/appendixes/parameter-markers.md) na gramática do apêndice c: SQL.  
+ Parâmetros são válidos somente em determinados locais em instruções SQL. Por exemplo, eles não são permitidos na lista de seleção (a lista de colunas a serem retornadas por uma **selecionar** instrução), nem que eles são permitidos como ambos os operandos de um operador binário, como o sinal de igual (=), pois ele seria impossível Determine o tipo de parâmetro. Em geral, os parâmetros são válidos somente em instruções de linguagem de manipulação de dados (DML) e não em instruções de linguagem de definição de dados (DDL). Para obter mais informações, consulte [marcadores de parâmetro](../../../odbc/reference/appendixes/parameter-markers.md) no Apêndice c: Gramática SQL.  
   
  Quando a instrução SQL chama um procedimento, parâmetros nomeado pode ser usado. Parâmetros nomeados são identificados por seus nomes, não por sua posição na instrução SQL. Eles podem ser vinculados por uma chamada para **SQLBindParameter**, mas o parâmetro é identificado pelo campo SQL_DESC_NAME do IPD (descritor de parâmetro de implementação), não pelo *ParameterNumber* argumento do **SQLBindParameter**. Elas também podem ser associadas ao chamar **SQLSetDescField** ou **SQLSetDescRec**. Para obter mais informações sobre parâmetros nomeados, consulte [associando parâmetros por nome (parâmetros nomeados)](../../../odbc/reference/develop-app/binding-parameters-by-name-named-parameters.md), mais adiante nesta seção. Para obter mais informações sobre descritores, consulte [descritores](../../../odbc/reference/develop-app/descriptors.md).  
   

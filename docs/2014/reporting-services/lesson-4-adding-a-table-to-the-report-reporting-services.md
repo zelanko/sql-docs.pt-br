@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d6255750df935fd3112f0e3b41941983a4882a0b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59933792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063393"
 ---
 # <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>Lição 4: como adicionar uma tabela ao relatório (Reporting Services)
   Depois de definir o conjunto de dados, você pode começar a criar o relatório. Um layout de relatório é criado arrastando e soltando regiões de dados, caixas de texto, imagens e outros itens que você deseja incluir no relatório na superfície de design.  

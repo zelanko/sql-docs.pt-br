@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 87bfaef1ad5dc4c9b1f907c27955ca3f156038a8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067802"
 ---
 # <a name="results-pane-visual-database-tools"></a>Painel de Resultados (Visual Database Tools)
   O painel Resultados mostra os resultados da consulta SELECT executada mais recentemente. (Os resultados de outros tipos de consultas são exibidos em caixas de mensagens.) Para abrir o painel Resultados, abra ou crie uma consulta ou exibição ou retorne os dados de uma tabela. Se o painel Resultados não for exibido por padrão, no menu **Designer de Consulta** , aponte para **Painel**e clique em **Resultados**.  

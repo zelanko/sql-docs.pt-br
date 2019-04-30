@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7667a086c8fb5b5f7b17e8baf237e14ffafa1188
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63055686"
 ---
 # <a name="spcacheinsert-event-class"></a>classe de evento SP:CacheInsert
   A classe de evento SP:CacheInsert indica que o procedimento armazenado foi inserido no cache de procedimento.  

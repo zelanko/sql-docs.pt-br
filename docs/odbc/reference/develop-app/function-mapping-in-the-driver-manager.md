@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 40dc214fa7f77dfb81c941095ecd71d3d4bf5a36
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061554"
 ---
 # <a name="function-mapping-in-the-driver-manager"></a>Mapeamento de função no Gerenciador de Driver
 O Gerenciador de driver dá suporte a dois pontos de entrada para as funções que usam argumentos de cadeia de caracteres. A função não decorada (**SQLDriverConnect**) é o formato ANSI da função. O formulário de Unicode é decorado com um *W* (**SQLDriverConnectW**.)  

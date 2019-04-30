@@ -13,11 +13,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6e390430115daf394c5e94267dad30a87851375d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128693"
 ---
 # <a name="sql-server-express-localdb-header-and-version-information"></a>Cabeçalho e informações de versão de LocalDB do SQL Server Express
   Não há nenhum arquivo de cabeçalho separado para a API da instância de LocalDB do SQL Server Express; as assinaturas e os códigos de erro da função LocalDB são definidos no arquivo de cabeçalho do SQL Server Native Client (sqlncli.h). Para usar a API de instância LocalDB, você deverá incluir o arquivo de cabeçalho sqlncli.h em seu projeto.  
@@ -25,9 +25,9 @@ ms.locfileid: "52795348"
 ## <a name="localdb-versioning"></a>Controle de versão de LocalDB  
  A instalação de LocalDB usa um único conjunto de binários por versão principal do SQL Server. Estas versões LocalDB são mantidas e corrigidas de maneira independente. Isto significa que o usuário tem que especificar qual versão de linha de base do LocalDB (quer dizer, a versão principal do SQL Server) ele ou ela estará usando. A versão é especificada no formato de versão padrão definido pelo .NET Framework **Version** classe:  
   
- *Revision]]*  
+ *major.minor[.build[.revision]]*  
   
- Os primeiros dois números na cadeia de caracteres de versão (*principais* e *secundárias*) são obrigatórios. Os dois últimos números na cadeia de caracteres de versão (*construir* e *revisão*) são opcionais e usarão zero como padrão se o usuário os omitir. Isto significa que, se o usuário especificar só "12.2" como o número de versão LocalDB, será tratado como se o usuário especificasse "12.2.0.0."  
+ Os primeiros dois números na cadeia de caracteres de versão (*principais* e *secundárias*) são obrigatórios. Os dois últimos números na cadeia de caracteres de versão (*construir* e *revisão*) são opcionais e usarão zero como padrão se o usuário os omitir. Isso significa que, se o usuário especificar só "12.2" como o número de versão LocalDB, ele será tratado como se o usuário especificasse "12.2.0.0".  
   
  A versão para a instalação do LocalDB é definida na chave do Registro MSSQLServer\CurrentVersion na chave do Registro da instância do SQL Server, por exemplo:  
   

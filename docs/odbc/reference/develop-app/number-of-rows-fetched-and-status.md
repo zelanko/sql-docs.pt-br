@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ab4830ddd56335959dd7049a1dabdcc3a0354213
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149326"
 ---
 # <a name="number-of-rows-fetched-and-status"></a>Número de linhas buscadas e status
 Se o atributo SQL_ATTR_ROWS_FETCHED_PTR de instrução tiver sido definido, ele especifica um buffer que retorna o número de linhas buscadas pela chamada para **SQLFetch** ou **SQLFetchScroll**e linhas de erro. (Esse número é uma contagem de todas as linhas que não têm o status SQL_ROW_NO_ROWS.) Após uma chamada para **SQLBulkOperations** ou **SQLSetPos**, o buffer contém o número de linhas que foram afetados por uma operação em massa executada pela função. Se o atributo da instrução SQL_ATTR_ROW_STATUS_PTR tiver sido definido, **SQLFetch** ou **SQLFetchScroll** retorna o *matriz de status de linha,* que fornece o status de cada linha retornada. Ambos os buffers apontados por esses campos são alocados pelo aplicativo e preenchidos pelo driver. Um aplicativo deve se certificar de que esses ponteiros permanecem válidos até que o cursor seja fechado.  

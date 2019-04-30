@@ -17,11 +17,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 889e5eee49363c71a18808e7c71434110241bc84
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63130524"
 ---
 # <a name="localdbgetinstanceinfo-function"></a>Função LocalDBGetInstanceInfo
   Retorna informações sobre a instância de LocalDB do SQL Server Express especificada, como se existe ou não, a versão do LocalDB usada, se está sendo executada ou não, e assim por diante.  

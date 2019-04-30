@@ -1,5 +1,5 @@
 ---
-title: 'Lição 1: navegação básica no SQL Server Management Studio | Microsoft Docs'
+title: 'Lição 1: Navegação básica no SQL Server Management Studio | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 09cccd43b4d20b5be2306c0922ff3bf40ff1b033
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151510"
 ---
 # <a name="lesson-1-basic-navigation-in-sql-server-management-studio"></a>Lição 1: Navegação básica no SQL Server Management Studio
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] é uma ferramenta poderosa e flexível. Porém, novos usuários do Microsoft Visual Studio podem ter dificuldade para encontrar o modo mais rápido de acessar o recurso correto. Esta lição mostra a você como as janelas trabalham em conjunto para apresentar uma superfície de design que torna seu trabalho mais fácil. Ao final desta lição, você saberá como eliminar janelas não desejadas, como exibir janelas rapidamente com as informações necessárias e como configurar a superfície padrão para oferecer suporte a tarefas executadas com mais frequência.  

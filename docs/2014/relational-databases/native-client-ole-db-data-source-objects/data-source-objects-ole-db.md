@@ -19,16 +19,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6b602695720e0d6567e44e4fbe8fd06b6d496a6e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63130595"
 ---
 # <a name="data-source-objects-ole-db"></a>Objetos de fonte de dados (OLE DB)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client usa o termo de fonte de dados para o conjunto de interfaces de OLE DB usado para estabelecer um link para um armazenamento de dados, tais como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Criar uma instância do objeto de fonte de dados do provedor é a primeira tarefa de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consumidor Native Client.  
   
- Todo provedor do OLE DB declara um identificador de classe (CLSID) para si mesmo. O CLSID para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client é o C/C++ GUID CLSID_SQLNCLI10 (o símbolo SQLNCLI_CLSID será resolvido para a correta progid no arquivo SQLNCLI. h que você faz referência). Com o CLSID, o consumidor usa a função **CoCreateInstance** do OLE para produzir uma instância do objeto de fonte de dados.  
+ Todo provedor do OLE DB declara um identificador de classe (CLSID) para si mesmo. O CLSID para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB do Native Client é C /C++ GUID CLSID_SQLNCLI10 (o símbolo SQLNCLI_CLSID será resolvido para a correta progid no arquivo SQLNCLI. h que você faz referência). Com o CLSID, o consumidor usa a função **CoCreateInstance** do OLE para produzir uma instância do objeto de fonte de dados.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client é um servidor em processo. Instâncias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos de provedor do OLE DB do Native Client são criados usando a macro CLSCTX_INPROC_SERVER para indicar o contexto executável.  
   

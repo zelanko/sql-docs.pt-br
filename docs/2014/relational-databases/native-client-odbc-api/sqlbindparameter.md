@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cba973be9b4dc2ec0da286b2d01b636f0ca4e2b4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067812"
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
   `SQLBindParameter` pode eliminar o peso da conversão de dados quando usado para fornecer dados para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client, resultando em ganhos significativos de desempenho para componentes de cliente e no servidor de aplicativos. Entre os outros benefícios está a menor perda de precisão ao inserir ou atualizar tipos de dados numéricos aproximados.  

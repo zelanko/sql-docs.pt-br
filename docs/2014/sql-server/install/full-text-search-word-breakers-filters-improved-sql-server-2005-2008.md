@@ -15,16 +15,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6c973b6c0868729c43b56f588aed944845ab898d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210406"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63130470"
 ---
 # <a name="full-text-search-word-breakers-and-filters-significantly-improved-in-sql-server-2005-and-sql-server-2008"></a>Significativa melhora nos separadores de palavras e filtros da Pesquisa de Texto Completo no SQL Server 2005 e SQL Server 2008
   Os separadores de palavras e os filtros foram alterados significativamente. Foram implementadas outras melhorias nos separadores de palavras, incluindo aperfeiçoamento com relação à abrangência do idioma e à confiabilidade.  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrição  
  Separadores de palavras e filtros usados pela Pesquisa de Texto Completo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] foram aperfeiçoados com relação à funcionalidade e à confiabilidade. Em alguns casos específicos, alterações em separadores de palavras podem impactar na geração de tokens de alguns dados. Os tokens criados no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] podem ser diferentes dos tokens criados no [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ou [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
  Para obter informações sobre separadores de palavras, consulte [configurar e gerenciar separadores de palavras e lematizadores para pesquisa](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  

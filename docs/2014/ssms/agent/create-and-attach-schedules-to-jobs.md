@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 414ff334139919e08b06291ec910f8531c70cd55
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63136281"
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>Criar e anexar agendas para trabalhos
   Agendar trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent significa definir as condições que fazem com que o trabalho comece a ser executado sem interação com o usuário. Você pode agendar um trabalho para execução automática criando uma nova agenda para ele ou anexando uma agenda existente para o trabalho.  
@@ -92,6 +92,6 @@ ms.locfileid: "52757530"
   
 ## <a name="see-also"></a>Consulte também  
  [sp_help_jobschedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobschedule-transact-sql)   
- [dbo. sysjobschedules &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobschedules-transact-sql)  
+ [dbo.sysjobschedules &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobschedules-transact-sql)  
   
   

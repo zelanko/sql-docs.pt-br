@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2e0a99559312704459c41514d53711cfbea4353e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057236"
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>Lição 1: Criar e aplicar uma política desativada por padrão
   Usando as políticas do Gerenciamento Baseado em Políticas, você pode administrar uma ou mais instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um ou mais objetos de instâncias, instâncias de servidor, bancos de dados ou objetos de bancos de dados. Como administrador de banco de dados, você deseja garantir que determinados servidores não tenham o Database Mail habilitado. Nesta lição, você criará uma condição e uma política que definirão essa opção de servidor. Você testará o servidor para ver se ele obedece a política. Então, você usará a política para reconfigurar o servidor para fins de conformidade.  
@@ -30,6 +30,6 @@ ms.locfileid: "52805368"
  [Criar a política desativada por padrão](lesson-1-1-create-the-off-by-default-policy.md)  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 2: Criar e aplicar uma política de padrões de nomenclatura](lesson-2-create-and-apply-a-naming-standards-policy.md)  
+ [Lição 2: Criar e aplicar uma política de nomeação de padrões](lesson-2-create-and-apply-a-naming-standards-policy.md)  
   
   

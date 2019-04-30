@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 59110f66c512845ff5ce1f2f246c05c63fa755b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061494"
 ---
 # <a name="generic-applications"></a>Aplicativos genéricos
 Aplicativos genéricos, às vezes, executam uma tarefa embutida, como uma planilha que recuperar dados de um banco de dados. Eles também podem executar uma variedade de tarefas definidas pelo usuário, como um aplicativo de consultas genérico, permitindo que o usuário inserir e executar uma instrução SQL. Quais aplicativos genéricos têm em comum é que eles devem trabalhar com uma variedade de diferentes DBMSs e que o desenvolvedor não sabe com antecedência quais serão esses DBMSs.  

@@ -11,11 +11,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e9ee204d55114b7e31a9a9550d86cae3baa4dffc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63130364"
 ---
 # <a name="capture-logon-trigger-event-data"></a>Capturar dados de eventos do gatilho de logon
   Para capturar dados XML sobre eventos LOGON para uso nos gatilhos de logon, use a função [EVENTDATA](/sql/t-sql/functions/eventdata-transact-sql) . O evento LOGON retorna o seguinte esquema de dados de evento:  

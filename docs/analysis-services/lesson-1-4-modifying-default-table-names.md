@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 40d580a79371cfb73dd38bc92a0dd69c50df1cd6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63053118"
 ---
-# <a name="lesson-1-4---modifying-default-table-names"></a>Lição 1-4 - modificando nomes de tabela padrão
+# <a name="lesson-1-4---modifying-default-table-names"></a>Lição 1-4: modificando nomes de tabela padrão
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Você pode alterar o valor da propriedade **FriendlyName** para objetos na exibição da fonte de dados para facilitar sua observação e uso.  
@@ -47,10 +47,10 @@ Na tarefa a seguir, você mudará o nome de cada tabela na exibição da fonte d
 7.  No menu **Arquivo** ou na barra de ferramentas do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], clique em **Salvar Tudo** para salvar as alterações feitas até este momento no projeto do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Se preferir, você pode parar o tutorial aqui e retomá-lo mais tarde.  
   
 ## <a name="next-lesson"></a>Próxima lição  
-[Lição 2: Definir e implantar um cubo](../analysis-services/lesson-2-defining-and-deploying-a-cube.md)  
+[Lição 2: Definindo e implantando um cubo](../analysis-services/lesson-2-defining-and-deploying-a-cube.md)  
   
 ## <a name="see-also"></a>Consulte também  
-[Exibições da fonte de dados em modelos multidimensionais](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
+[Exibições de fontes de dados em modelos multidimensionais](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
 [Alterar propriedades em uma exibição da fonte de dados &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
   
   
