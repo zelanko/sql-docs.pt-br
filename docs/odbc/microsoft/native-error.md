@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e1c09d9a90b94201642bcad5b3e0c3dbb20ef45
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273616"
 ---
 # <a name="native-error"></a>Erro nativo
 Códigos de erro nativo positivos são gerados pelos Drivers de banco de dados da área de trabalho. Códigos de erro negativos são gerados pelo Microsoft Jet. Para obter mais informações, consulte o *guia do programador do Microsoft Jet banco de dados Engine*.

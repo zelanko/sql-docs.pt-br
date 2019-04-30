@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 983e01046fd90fbaf8d9ff680492f1b385435f61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253583"
 ---
 # <a name="domain-accounts-required-for-sharepoint-farm-upgrade-advisor"></a>Contas de domínio necessárias ao farm do SharePoint (Supervisor de Atualização)
   Os produtos do SharePoint configurados para um ambiente de farm requerem o uso de contas de domínio.  
@@ -28,7 +28,7 @@ ms.locfileid: "48222258"
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssRS](../../includes/ssrs.md)]  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descrição  
  Os produtos do SharePoint configurados para um ambiente de farm requerem o uso de contas de domínio para conexões de serviços e bancos de dados. Isso inclui a conta especificada para a conta de serviço do Reporting Services.  
   
  Você encontrará problemas nas páginas de Administração Central do SharePoint 2010 se não estiver usando uma conta de usuário de domínio para o Reporting Services. Ao tentar configurar a integração do Reporting Services, você verá uma mensagem de erro similar ao seguinte:  

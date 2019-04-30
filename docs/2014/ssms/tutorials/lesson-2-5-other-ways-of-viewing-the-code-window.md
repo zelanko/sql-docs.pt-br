@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 537d7e48440e3c68639438068d7b3ff8bd7e9634
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63252681"
 ---
 # <a name="other-ways-of-viewing-the-code-window"></a>Outros modos de exibir a janela de código
   A janela de código pode ser configurada para exibir múltiplas janelas de código de vários modos.  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 132b237fd8baa9c50dc254b02d90ed95d7159a0c
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249617"
 ---
 # <a name="crossjoin----mdx-operator-reference"></a>Crossjoin - referência de operador MDX
 
@@ -35,8 +35,8 @@ Set_Expression * Set_Expression
 ## <a name="return-value"></a>Valor retornado  
  Um conjunto que contém o produto cruzado de ambos os parâmetros especificados.  
   
-## <a name="remarks"></a>Remarks  
- O  **\* (produto cruzado)** operador é funcionalmente equivalente ao [Crossjoin](../mdx/crossjoin-mdx.md) função.  
+## <a name="remarks"></a>Comentários  
+ O  **\* (Crossjoin)** operador é funcionalmente equivalente para o [Crossjoin](../mdx/crossjoin-mdx.md) função.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir demonstra o uso desse operador.  

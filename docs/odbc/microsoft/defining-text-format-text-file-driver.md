@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 00d20f8a6dd4d79b3100549d9286e7534bc8ce6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240378"
 ---
 # <a name="defining-text-format-text-file-driver"></a>Definir o formato de texto (Driver de Arquivo de texto)
 Quando o driver de texto é usado, você pode usar o **definir o formato de texto** caixa de diálogo para definir o formato para colunas em um arquivo selecionado. Essa caixa de diálogo permite que você especifique o esquema para cada tabela de dados. Essa informação é gravada em um arquivo Schema. ini no diretório de fonte de dados. Um arquivo Schema. ini separado é criado para cada diretório de fonte de dados de texto.  

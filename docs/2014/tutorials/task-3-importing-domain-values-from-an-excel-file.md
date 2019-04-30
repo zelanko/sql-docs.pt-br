@@ -8,13 +8,13 @@ ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 242e8309-1195-495b-9cd5-aa127748c185
 ms.openlocfilehash: 323f555337afa56b51ded0fb303f58960a52f310
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250177"
 ---
-# <a name="task-3-importing-domain-values-from-an-excel-file"></a>Tarefa 3: Importando valores de domínio de um arquivo do Excel
+# <a name="task-3-importing-domain-values-from-an-excel-file"></a>Tarefa 3: Importar valores de domínio de um arquivo do Excel
   Nesta tarefa, você importará valores para o domínio **State** de uma planilha de um arquivo do Excel.  
   
 1.  Clique no domínio **State** na **Lista de domínios**.  

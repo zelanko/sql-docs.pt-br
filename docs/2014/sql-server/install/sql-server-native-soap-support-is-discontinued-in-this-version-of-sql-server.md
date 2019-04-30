@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c9c3af432ac614a11bb6321af87e28f9675f806a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267548"
 ---
 # <a name="sql-server-native-soap-support-is-discontinued-in-this-version-of-sql-server"></a>O suporte a SOAP nativo do SQL Server foi descontinuado nesta versão do SQL Server.
   O Supervisor de Atualização detectou o uso de Serviços Web XML Nativos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -24,7 +24,7 @@ ms.locfileid: "48183806"
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrição  
  Os Serviços Web XML Nativos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] foram removidos nesta versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="discovering-where-you-use-native-xml-web-services"></a>Descobrindo onde os Serviços Web XML Nativos são usados  

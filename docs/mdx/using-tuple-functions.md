@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 578192fa982b8bbf65527f4ff1d71b6595a2400d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251643"
 ---
 # <a name="using-tuple-functions"></a>Usando funções de tupla
 

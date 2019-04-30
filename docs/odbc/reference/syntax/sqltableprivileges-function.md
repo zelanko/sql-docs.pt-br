@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fe1b3a3420ad882136b13b131938169dbdb224bd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233552"
 ---
 # <a name="sqltableprivileges-function"></a>Função SQLTablePrivileges
 **Conformidade com**  
@@ -126,7 +126,7 @@ SQLRETURN SQLTablePrivileges(
 |Nome da coluna|Número da coluna|Tipo de dados|Comentários|  
 |-----------------|-------------------|---------------|--------------|  
 |TABLE_CAT (ODBC 1.0)|1|Varchar|Nome do catálogo; NULL se não for aplicável à fonte de dados. Se um driver compatível com catálogos para algumas tabelas, mas não para outras pessoas, como quando o driver recupera os dados de diferentes DBMSs, ele retorna uma cadeia de caracteres vazia ("") para as tabelas que não têm catálogos.|  
-|TABLE_SCHEM (ODBC 1.0)|2|Varchar|Nome do esquema; NULL se não for aplicável à fonte de dados. Se um driver compatível com esquemas para algumas tabelas, mas não para outras pessoas, como quando o driver recupera os dados de diferentes DBMSs, ele retorna uma cadeia de caracteres vazia ("") para as tabelas que não tem esquemas.|  
+|TABLE_SCHEM  (ODBC 1.0)|2|Varchar|Nome do esquema; NULL se não for aplicável à fonte de dados. Se um driver compatível com esquemas para algumas tabelas, mas não para outras pessoas, como quando o driver recupera os dados de diferentes DBMSs, ele retorna uma cadeia de caracteres vazia ("") para as tabelas que não tem esquemas.|  
 |TABLE_NAME (ODBC 1.0)|3|Varchar não nulo|Nome da tabela.|  
 |CONCESSOR (ODBC 1.0)|4|Varchar|Nome do usuário que recebe o privilégio; NULL se não for aplicável à fonte de dados.<br /><br /> Para todas as linhas em que o valor na coluna usuário autorizado é o proprietário do objeto, a coluna GRANTOR será sistema".|  
 |USUÁRIO AUTORIZADO (ODBC 1.0)|5|Varchar não nulo|Nome do usuário a quem o privilégio foi concedido.|  

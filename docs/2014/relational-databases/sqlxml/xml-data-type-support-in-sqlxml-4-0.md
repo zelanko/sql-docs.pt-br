@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 1a0fa49a1dac16ed366c66c72f7d800ccc4aed8e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232710"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>Suporte ao tipo de dados xml no SQLXML 4.0
   Começando com [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a XML digitado dados usando o `xml` tipo de dados. Este tópico fornece informações sobre como o SQLXML 4.0 reconhece instâncias do tipo de dados `xml` e implementa o suporte para elas.  

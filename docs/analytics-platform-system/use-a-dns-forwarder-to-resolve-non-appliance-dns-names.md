@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 6ce978d7b05382b1a02018f3d5022b0f8bfaf585
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63243786"
 ---
 # <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>Usar um encaminhador DNS para resolver nomes DNS não seja de dispositivo no Analytics Platform System
 Um encaminhador DNS pode ser configurado em nós do Active Directory Domain Services (**_appliance\_domínio_-AD01** e  **_appliance\_ domínio_-AD02**) de seu dispositivo do Analytics Platform System para permitir que scripts e aplicativos de software para acessar servidores externos.  

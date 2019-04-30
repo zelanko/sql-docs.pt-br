@@ -11,11 +11,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: c9c561657767c1b1e593fa9dcd9702b72193004d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63272865"
 ---
 # <a name="lesson-5-publish-the-report-definition-to-the-report-server"></a>Lição 5: Publicar a definição de relatório no servidor de relatório
   A última etapa para atualizar a definição de relatório é publicá-la novamente no servidor de relatório.  
@@ -77,7 +77,7 @@ ms.locfileid: "56033608"
     ```  
   
 ## <a name="next-lesson"></a>Próxima lição  
- Na próxima lição, você compilará e executará o `SampleRDLSchema` aplicativo. Consulte [lição 6: Executar o aplicativo de esquema RDL &#40;VB-C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md).  
+ Na próxima lição, você compilará e executará o `SampleRDLSchema` aplicativo. Confira a [Lição 6: Executar o aplicativo de esquema RDL &#40;VB-C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Atualizando relatórios por meio de Classes geradas a partir do esquema RDL &#40;Tutorial do SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

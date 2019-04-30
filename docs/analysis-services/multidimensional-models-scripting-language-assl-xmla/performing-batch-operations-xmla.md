@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6c451d13016915c9218efb2963429f8f5a7709e2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261645"
 ---
 # <a name="performing-batch-operations-xmla"></a>Executando operações em lote (XMLA)
   Você pode usar o [lote](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/batch-element-xmla) comando XML for Analysis (XMLA) para executar vários comandos XMLA usando um único XMLA [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) método. Você pode executar vários comandos contidos na **lote** comando como uma única transação ou em transações individuais para cada comando, em série ou paralelamente. Você também pode especificar associações fora de linha e outras propriedades na **lote** comando para processar vários [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objetos.  
@@ -27,7 +27,7 @@ ms.locfileid: "52544229"
   
  Se algum comando falhar em um lote transacional, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] reverterá qualquer comando de **lote** comando executado antes do comando que falhou e o **lote** comando terminará imediatamente. Quaisquer comandos de **lote** comando ainda não foram executados não são executadas. Após o **lote** comando termina, o **lote** comando relata os erros que ocorreram para o comando com falha.  
   
- **Não transacional**  
+ **Nontransactional**  
  Se o **transação** atributo é definido como false, o **lote** comando executa cada comando contido pelo **lote** comando em um separado de uma transação  *não transacionais* em lotes. Se algum comando falhar em um lote não transacional, o **lote** comando continuará a executar comandos após o comando que falhou. Após o **lote** comando tenta executar todos os comandos que o **lote** comando contém, o **lote** comando relata os erros que ocorreram.  
   
  Todos os resultados retornados por comandos contidos em um **lote** comando são retornados na mesma ordem em que os comandos estão contidos na **lote** comando. Os resultados retornados por uma **lote** comando variam com base em se a **lote** comando é transacional ou não transacional.  

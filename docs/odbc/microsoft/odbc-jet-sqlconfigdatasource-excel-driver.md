@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dbad3b1e6dda82a9f9fc584683e53f8e2a109cca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233594"
 ---
 # <a name="odbc-jet-sqlconfigdatasource-excel-driver"></a>ODBC Jet SQLConfigDataSource (Driver do Excel)
 > [!NOTE]  
@@ -27,7 +27,7 @@ ms.locfileid: "47715384"
   
  O **SQLConfigDataSource** função que é usada para adicionar, modificar ou excluir uma fonte de dados usa as seguintes palavras-chave dinamicamente.  
   
-|Palavra-chave|Description|  
+|Palavra-chave|Descrição|  
 |-------------|-----------------|  
 |DBQ|Para o driver do Microsoft Excel ao acessar o Microsoft Excel 5.0 ou arquivos posteriores, o nome do arquivo de pasta de trabalho.<br /><br /> Isso define a mesma opção como **banco de dados** na caixa de diálogo de instalação.|  
 |DEFAULTDIR|A especificação de caminho para o diretório.<br /><br /> Isso define a mesma opção como **Selecionar diretório** ou **Selecionar pasta de trabalho** na caixa de diálogo de instalação.|  

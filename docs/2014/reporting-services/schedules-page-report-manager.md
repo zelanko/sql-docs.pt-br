@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3c232740598e1c9d1f8911c5fa5662d4ef82d5b2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237830"
 ---
 # <a name="schedules-page-report-manager"></a>Página Agendas (Gerenciador de Relatórios)
   Use a página Agendas para criar, modificar, excluir, pausar ou reiniciar agendas compartilhadas. Uma agenda compartilhada é uma agenda nomeada que você pode criar e gerenciar separadamente de relatórios, assinaturas e outros processos que consomem informações de agenda. Os usuários podem selecionar agendas compartilhadas que você fornece.  

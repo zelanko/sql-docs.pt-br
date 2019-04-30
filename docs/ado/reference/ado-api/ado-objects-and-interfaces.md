@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0bba8402bb49d481886e4c81071443873834c8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248896"
 ---
 # <a name="ado-objects-and-interfaces"></a>Objetos e interfaces do ADO
 As relações entre esses objetos são representadas na [modelo de objeto ADO](../../../ado/reference/ado-api/ado-object-model.md).  
@@ -48,7 +48,7 @@ As relações entre esses objetos são representadas na [modelo de objeto ADO](.
  [Coleções ADO](../../../ado/reference/ado-api/ado-collections.md)   
  [Propriedades dinâmicas do ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
  [Constantes enumeradas do ADO](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [Apêndice b: erros de ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [Apêndice b: Erros ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [Eventos ADO](../../../ado/reference/ado-api/ado-events.md)   
  [Métodos ADO](../../../ado/reference/ado-api/ado-methods.md)   
  [Modelo de objeto ADO](../../../ado/reference/ado-api/ado-object-model.md)   

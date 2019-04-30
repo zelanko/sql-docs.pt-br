@@ -12,11 +12,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 129e7de66e896e1f452c5d68fc4891d9cc5eafa3
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238291"
 ---
 # <a name="includeazure-data-studioincludesname-sosmd-faq"></a>[!INCLUDE[Azure Data Studio](../includes/name-sos.md)] PERGUNTAS FREQÜENTES
 
@@ -49,11 +49,11 @@ O código-fonte para o estúdio de dados do Azure e seus provedores de dados est
 
 ## <a name="do-we-plan-to-open-source-ssms"></a>Estamos planejando software livre SSMS?
 
-Nenhum. No entanto, última geração ferramentas CLI e GUI para vários sistemas operacionais são software livre. Por exemplo, a extensão mssql para VS Code, scripter mssql e msql-CLI são software livre no GitHub. O código-fonte para o Studio de dados do Azure está disponível no GitHub.  
+Não. No entanto, última geração ferramentas CLI e GUI para vários sistemas operacionais são software livre. Por exemplo, a extensão mssql para VS Code, scripter mssql e msql-CLI são software livre no GitHub. O código-fonte para o Studio de dados do Azure está disponível no GitHub.  
 
 ## <a name="now-that-there-is-azure-data-studio-does-microsoft-plan-to-deprecate-ssms-and-ssdt"></a>Agora que há Studio de dados do Azure, Microsoft pretende preterir o SSMS e SSDT? 
 
-Nenhum. Os investimentos em ferramentas do Windows principal (SSMS, SSDT, PowerShell) continuará além da próxima geração de vários sistemas operacionais e ferramentas CLI e GUI de multi-DB. O objetivo é oferecer aos clientes a opção de usar as ferramentas que eles querem nas plataformas de sua preferência para seus cenários. O estúdio de dados do Azure mais rigidamente se concentra nas experiências em torno de edição de consulta e desenvolvimento de dados, que pesquisa tenha mostrado é o recurso mais intensamente usado no SQL Server Management Studio em uma ordem de magnitude. Recursos administrativos adicionais do alto valor, como backup, restauração, gerenciamento de trabalho do agente e a criação de perfil de servidor também estão disponíveis como extensões no estúdio de dados do Azure. O estúdio de dados do Azure também é multiplataforma, o que permite aos usuários trabalhar em sua plataforma de preferência. No entanto, SQL Server Management Studio ainda oferece uma gama mais ampla de funções administrativas e permanece a ferramenta principal para tarefas de gerenciamento da plataforma. 
+Não. Os investimentos em ferramentas do Windows principal (SSMS, SSDT, PowerShell) continuará além da próxima geração de vários sistemas operacionais e ferramentas CLI e GUI de multi-DB. O objetivo é oferecer aos clientes a opção de usar as ferramentas que eles querem nas plataformas de sua preferência para seus cenários. O estúdio de dados do Azure mais rigidamente se concentra nas experiências em torno de edição de consulta e desenvolvimento de dados, que pesquisa tenha mostrado é o recurso mais intensamente usado no SQL Server Management Studio em uma ordem de magnitude. Recursos administrativos adicionais do alto valor, como backup, restauração, gerenciamento de trabalho do agente e a criação de perfil de servidor também estão disponíveis como extensões no estúdio de dados do Azure. O estúdio de dados do Azure também é multiplataforma, o que permite aos usuários trabalhar em sua plataforma de preferência. No entanto, SQL Server Management Studio ainda oferece uma gama mais ampla de funções administrativas e permanece a ferramenta principal para tarefas de gerenciamento da plataforma. 
 
 ## <a name="when-should-i-use-azure-data-studio-vs-sql-server-management-studio"></a>Quando devo usar o Azure Data Studio vs SQL Server Management Studio?
 
@@ -88,7 +88,7 @@ Nenhum. Os investimentos em ferramentas do Windows principal (SSMS, SSDT, PowerS
 |Extensões|Sim| |
 |Terminal integrado|Sim||
 |Pesquisador de Objetos|Sim|Sim|
-|Script de objeto|Sim|Sim|
+|Script de Objeto|Sim|Sim|
 |Sistema de projeto|Sim||
 |Selecionar da tabela|Sim|Sim|
 |Controle do código fonte|Sim||
@@ -160,7 +160,7 @@ Nenhum. Os investimentos em ferramentas do Windows principal (SSMS, SSDT, PowerS
 |Service Broker||Sim|
 |SQL Mail||Sim|
 |Explorador de Modelos||Sim|
-|Avaliação de vulnerabilidade||Sim|
+|Avaliação de Vulnerabilidade||Sim|
 |Gerenciamento de XEvent||Sim|
 
 

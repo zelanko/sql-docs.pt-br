@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 19aecc4dc642e9aee636c860f63b9b39e0471fa4
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278037"
 ---
 # <a name="prevmember-mdx"></a>PrevMember (MDX)
 
@@ -32,8 +32,8 @@ Member_Expression.PrevMember
  *Member_Expression*  
  Uma linguagem MDX válida que retorna um membro.  
   
-## <a name="remarks"></a>Remarks  
- O **PrevMember** função retorna o membro anterior no mesmo nível do membro especificado.  
+## <a name="remarks"></a>Comentários  
+ O **PrevMember** função retorna o membro anterior no mesmo nível que o membro especificado.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra uma consulta simples que usa o **PrevMember** função para exibir o nome do membro imediatamente antes do membro atual no eixo de linhas:  
@@ -77,6 +77,6 @@ WHERE ([Geography].[State-Province].x,
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

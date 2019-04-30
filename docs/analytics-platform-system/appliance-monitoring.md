@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 100a587814e62a6455d25e78a3defca973f39bf6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63276133"
 ---
 # <a name="appliance-monitoring-for-analytics-platform-system"></a>Monitoramento de dispositivo para o Analytics Platform System
 Este guia de monitoramento do dispositivo descreve as ferramentas e tarefas para monitorar o dispositivo do Analytics Platform System.  
@@ -63,7 +63,7 @@ Se sua solução de monitoramento não oferece suporte direto Transact\-consulta
    
 ## <a name="Tasks"></a>Relacionados a tarefas de monitoramento  
   
-|Tarefa de monitoramento|Description|  
+|Tarefa de monitoramento|Descrição|  
 |-------------------|---------------|  
 |Monitore o dispositivo usando o Console de administração.|[Monitorar o dispositivo usando o Console de administração do &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)|  
 |Monitore o dispositivo por meio de exibições do sistema.|[Monitorar o dispositivo por meio de exibições do sistema &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-views.md)|  

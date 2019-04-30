@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b76b7a550211522c2b2100776b88f311abb2b932
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233344"
 ---
 # <a name="sqltransact-function"></a>Função SQLTransact
 **Conformidade com**  
- Versão introduziu: Conformidade de padrões 1.0 ODBC: Deprecated  
+ Versão introduzida: Conformidade com padrões 1.0 ODBC: Preterido  
   
  **Resumo**  
  Em ODBC 3. *x*, o ODBC 2 *. x* função **SQLTransact** foi substituído pelo **SQLEndTran**. Para obter mais informações, consulte [SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).  

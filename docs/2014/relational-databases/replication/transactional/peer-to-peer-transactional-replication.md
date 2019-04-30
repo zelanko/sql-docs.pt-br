@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 133d44d233abdcffe7893ce29be5b462f4b16524
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63274374"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>Peer-to-Peer Transactional Replication
   A replicação ponto a ponto fornece uma a solução, expandida e de alta disponibilidade, para manter cópias de dados em várias instâncias de servidor, também denominadas *nós*. Criada na base da replicação transacional, a replicação ponto a ponto se propaga de forma transacional, de acordo com as alterações em tempo real. Ativa aplicativos que requerem operações expandidas de leitura para distribuir as leituras de clientes em vários nós. Como os dados são mantidos em todos os nós em tempo quase real, a replicação ponto a ponto fornece redundância de dados, o que amplia a disponibilidade de dados.  
@@ -72,7 +72,7 @@ ms.locfileid: "54127186"
   
  Cada local tem um banco de dados e um servidor de aplicativo, que são usados por engenheiros de suporte à medida que eles digitam e atualizam informações sobre as chamadas de cliente. A topologia é particionada por tempo. Por isso, as atualizações ocorrem apenas no nó que está atualmente aberto para negócios e, em seguida, elas fluem para outros bancos de dados participantes. Essa topologia oferece as seguintes vantagens:  
   
--   Independência sem isolamento: Cada escritório pode inserir, atualizar, ou excluir dados de forma independente, mas também pode compartilhar os dados porque ela é replicada para todos os outros bancos de dados participantes.  
+-   Independência sem isolamento: cada escritório pode inserir, atualizar ou excluir dados, de forma independente, mas também compartilhá-los, porque eles são replicados em todos os outros bancos de dados.  
   
 -   Disponibilidade superior no caso de falha ou permissão de manutenção em um ou mais dos bancos de dados participantes.  
   

@@ -16,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 43be1c5e75998903ff4e64fc5f4230818a873ffc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281131"
 ---
 # <a name="odbc-drivers-subkey"></a>Subchave de drivers ODBC
 Os valores sob a subchave de Drivers ODBC listam os drivers instalados. O formato desses valores é mostrado na tabela a seguir.  
   
-|Nome|Tipo de dados|data|  
+|Nome|Tipo de dados|Dados|  
 |----------|---------------|----------|  
-|*Descrição do driver*|REG_SZ|**instalado**|  
+|*driver-description*|REG_SZ|**instalado**|  
   
  O *descrição do driver* nome é definido pelo desenvolvedor de driver. Ele geralmente é o nome do DBMS associado com o driver.  
   

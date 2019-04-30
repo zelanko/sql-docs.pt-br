@@ -1,5 +1,5 @@
 ---
-title: Funções do VBA no MDX e DAX | Microsoft Docs
+title: As funções do VBA no MDX e DAX | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 327a801ce725987d68236efcfddbf8a4e7231ea9
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251547"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>Funções VBA no MDX e no DAX
 
 
-  Este documento contém uma referência cruzada de todas as funções VBA disponíveis em [do Visual Basic for Applications funções](https://msdn.microsoft.com/vba/language-reference-vba/articles/functions-visual-basic-for-applications) que têm suporte no MDX; Além disso, a lista inclui uma nota quando há uma equivalência funcional com a linguagem DAX .  
+  Este documento contém uma referência cruzada de todas as funções VBA disponíveis em [Visual Basic para aplicativos de funções](https://msdn.microsoft.com/vba/language-reference-vba/articles/functions-visual-basic-for-applications) que têm suporte no MDX; Além disso, a lista inclui uma nota quando há uma equivalência funcional com a linguagem DAX .  
   
 ## <a name="visual-basic-for-applications-functions-reference"></a>Referência a funções do Visual Basic for Applications  
   
@@ -52,7 +52,7 @@ ms.locfileid: "34743885"
 |CVar|Somente MDX||  
 |CVErr|Sem suporte||  
 |data|Somente MDX|**Aviso** DAX implementa uma função diferente com o mesmo nome; a função Data (ano, mês, dia), usado para gerar um valor de tipo de data dos argumentos determinados|  
-|DateAdd|Somente MDX|**Aviso** DAX implementa uma função diferente com o mesmo nome; a DATEADD (\<datas >, < number_of_intervals >\<intervalo >) função, usada para deslocar as datas determinadas por um número de intervalos determinados|  
+|DateAdd|Somente MDX|**Aviso** DAX implementa uma função diferente com o mesmo nome; a DATEADD (\<datas >, < number_of_intervals >\<intervalo >) função, usado para deslocar as datas determinadas por um número de intervalos determinados|  
 |DateDiff]|Somente MDX||  
 |DatePart|Somente MDX||  
 |DateSerial|Somente MDX||  
@@ -68,7 +68,7 @@ ms.locfileid: "34743885"
 |FileAttr|Sem suporte||  
 |FileDateTime|Sem suporte||  
 |FileLen|Sem suporte||  
-|Filtrar|Sem suporte|**Aviso** MDX implementa uma função diferente com o mesmo nome; a função FILTER (Set_Expression, Logical_Expression) retorna o conjunto resultante da filtragem de um conjunto especificado com base em um critério de pesquisa dos argumentos determinados<br /><br /> **Aviso** DAX implementa uma função diferente com o mesmo nome, o filtro (\<tabela >,\<filtro >) função retorna uma tabela que representa um subconjunto de outra tabela ou expressão dos argumentos determinados|  
+|Filtrar|Sem suporte|**Aviso** MDX implementa uma função diferente com o mesmo nome; a função FILTER (Set_Expression, Logical_Expression) retorna o conjunto resultante da filtragem de um conjunto especificado com base em um critério de pesquisa dos argumentos determinados<br /><br /> **Aviso** DAX implementa uma função diferente com o mesmo nome; o filtro (\<tabela >,\<filtro >) função retorna uma tabela que representa um subconjunto de outra tabela ou expressão dos argumentos determinados|  
 |Fix|Somente MDX||  
 |Formato (Visual Basic for Applications)|DAX, MDX||  
 |FormatCurrency|Sem suporte||  
@@ -148,7 +148,7 @@ ms.locfileid: "34743885"
 |StrConv|Somente MDX||  
 |Cadeia de caracteres]|Somente MDX||  
 |StrReverse|Sem suporte||  
-|Opção|Somente MDX||  
+|Alternar|Somente MDX||  
 |SYD|Somente MDX||  
 |Tab|Sem suporte||  
 |Tan|Somente MDX||  
@@ -156,7 +156,7 @@ ms.locfileid: "34743885"
 |Timer|Somente MDX||  
 |TimeSerial|Somente MDX||  
 |TimeValue|DAX, MDX||  
-|Corte]|DAX, MDX||  
+|Trim]|DAX, MDX||  
 |TypeName|Somente MDX||  
 |UBound|Sem suporte||  
 |UCase|Somente MDX||  

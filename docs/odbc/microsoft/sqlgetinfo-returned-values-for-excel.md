@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 71eec87e4cdf325a20e6ad213dd8f591a094f825
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267924"
 ---
 # <a name="sqlgetinfo-returned-values-for-excel"></a>Valores retornados SQLGetInfo para Excel
 A tabela a seguir lista a linguagem C# defines para o *fInfoType* argumento e os valores correspondentes retornados pelo **SQLGetInfo**. Essas informações podem ser recuperadas, passando a linguagem listada C# defines **SQLGetInfo** na *fInfoType* argumento. Para obter mais informações sobre os valores retornados pelo **SQLGetInfo**, consulte o *referência do programador de ODBC*.  
@@ -30,7 +30,7 @@ A tabela a seguir lista a linguagem C# defines para o *fInfoType* argumento e os
 > [!NOTE]  
 >  Em que **SQLGetInfo** retorna um bitmask de 32 bits, uma barra vertical (&#124;) representa um OR bit a bit.  
   
-|tipo de informação|Valor retornado|  
+|InfoType|Valor retornado|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"N"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e97cc3c5e758cd105fb01a471124fee4cd46665e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239543"
 ---
 # <a name="recordset-ado---wfc-syntax"></a>Conjunto de registros (ADO – Sintaxe WFC)
 ## <a name="package-commswfcdata"></a>pacote com.ms.wfc.data  

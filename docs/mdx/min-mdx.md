@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 85d48badaa1b50edec6a563decbead1a38f5fcb0
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278081"
 ---
 # <a name="min-mdx"></a>Min (MDX)
 
@@ -35,7 +35,7 @@ Min( Set_Expression [ , Numeric_Expression ] )
  *Numeric_Expression*  
  Uma expressão numérica válida, geralmente uma linguagem MDX de coordenadas de célula, que retorna um número.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se uma expressão numérica for especificada, essa expressão será avaliada pelo conjunto e retornará o valor mínimo da avaliação em questão. Se uma expressão numérica não for especificada, o conjunto especificado será avaliado no contexto atual dos membros do conjunto e retornarão o valor mínimo daquela avaliação.  
   
 > [!NOTE]  
@@ -59,6 +59,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

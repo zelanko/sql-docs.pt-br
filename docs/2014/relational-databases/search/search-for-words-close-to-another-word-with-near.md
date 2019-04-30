@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 3493657fb537057f7c0ff8e126582ceb6faccc11
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238398"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Procurar palavras perto de outra palavra com NEAR
   Você pode usar uma condição de proximidade (NEAR) em um predicado [CONTAINS](/sql/t-sql/queries/contains-transact-sql) ou uma função [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) para procurar palavras ou frases próximas umas das outras. Você também pode especificar o número máximo de condições não relacionadas à pesquisa que separam a primeira e a última condição da pesquisa. Além disso, você pode pesquisar palavras ou frases em qualquer ordem, ou pode pesquisar palavras ou frases na ordem em que especificá-las. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dá suporte a ambos cedo [de proximidade genérica](#Generic_NEAR), que agora está obsoleto e o [de proximidade personalizada](#Custom_NEAR), que é nova no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
@@ -51,11 +51,11 @@ ms.locfileid: "52502847"
   
  {  
   
- *search_term* [,... *n* ]  
+ *search_term* [ ,...*n* ]  
   
  |  
   
- (*search_term* [,... *n* ]) [, < maximum_distance > [, < match_order >]]  
+ (*search_term* [ ,...*n* ] ) [, <maximum_distance> [, <match_order> ] ]  
   
  }  
   
@@ -160,7 +160,7 @@ GO
   
  Um termo de proximidade genérico indica que todos os termos de pesquisa especificados devem ocorrer em um documento para que uma correspondência seja retornada, independentemente do número de termos não relacionados à pesquisa (a *distância*) entre os termos de pesquisa. A sintaxe básica é:  
   
- { *search_term* {NEAR | ~} *search_term* } [,... *n* ]  
+ { *search_term* { NEAR | ~ } *search_term* } [ ,...*n* ]  
   
  Por exemplo, nos exemplos a seguir, as palavras 'fox' e 'chicken' ambos devem aparecer, em qualquer ordem, para gerar uma correspondência:  
   
@@ -174,7 +174,7 @@ GO
  Para obter mais informações, veja “[Considerações adicionais sobre pesquisas de proximidade](#Additional_Considerations)”, mais adiante neste tópico.  
   
 ### <a name="combining-a-generic-proximity-term-with-other-terms"></a>Combinando uma condição de proximidade genérica com outras condições  
- Você pode usar AND (&), OR (|) ou AND NOT (&!) para combinar uma condição de proximidade genérica com outra, uma condição simples ou uma condição de prefixo. Por exemplo:  
+ Você pode usar AND (&), OR (|) ou AND NOT (&!) para combinar uma condição de proximidade genérica com outra, uma condição simples ou uma condição de prefixo. Por exemplo:   
   
 ```  
 CONTAINSTABLE (Production.ProductDescription,  

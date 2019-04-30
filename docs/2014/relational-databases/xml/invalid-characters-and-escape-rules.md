@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aafacefa7a5bab5f8bc828f48384a79e17a13b11
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241193"
 ---
 # <a name="invalid-characters-and-escape-rules"></a>Caracteres inválidos e regras de escape
   Este tópico descreve como caracteres XML inválidos são tratados pela cláusula FOR XML e lista as regras de escape para caracteres inválidos em nomes XML.  

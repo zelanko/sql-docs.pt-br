@@ -1,8 +1,9 @@
 ---
 title: Executando um diagrama de atualização usando OLE DB (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: sql-server-2014
+ms.date: 03/16/2017
+ms.prod: sql
+ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
@@ -12,17 +13,19 @@ helpviewer_keywords:
 - OLE DB, SQLXML
 - executing updategrams [SQLXML]
 ms.assetid: 4154c590-1541-49d0-8117-4ddf2ce5ccba
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7597df95cecaaab72eb4f23255a4607fa02f2e93
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63268487"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>Executando um diagrama de atualização usando OLE DB (SQLXML 4.0)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Este tópico fornece um exemplo de funcionamento de usingOLE DB para executar um diagrama de atualização.  
   
 ## <a name="using-icommandstream-to-set-an-xml-command"></a>Usando ICommandStream para definir um comando XML  

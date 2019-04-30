@@ -11,18 +11,18 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: f57d691587d658e968cd79cf4f4ab4731db29915
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267474"
 ---
 # <a name="filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial"></a>Filtrando uma tabela aninhada em um modelo de mineração (tutorial de mineração de dados intermediário)
   Após criar e explorar o modelo, você decide que deseja enfatizar um subconjunto dos dados do cliente. Por exemplo, talvez você queira analisar apenas as cestas que contêm um determinado item ou os dados demográficos de clientes que não compraram nada em um certo período.  
   
  O [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornece a capacidade para filtrar os dados que são usados em um modelo de mineração. Esse recurso é útil porque você não precisa configurar uma nova exibição da fonte de dados para usar dados diferentes. No Tutorial de mineração de dados básico, você aprendeu a filtrar dados de uma tabela simples aplicando condições à tabela de casos. Nesta tarefa, você criará um filtro que se aplica a uma tabela aninhada.  
   
-## <a name="filters-on-nested-vs-case-tables"></a>Filtra tabelas aninhadas versus tabelas de casos  
+## <a name="filters-on-nested-vs-case-tables"></a>Filtra tabelas aninhadas versus. Tabelas de casos  
  Se a sua exibição de fonte de dados contiver uma tabela de casos e uma tabela aninhada, como a exibição da fonte de dados usada no modelo de Associação, você poderá filtrar os valores da tabela de casos, a presença ou a ausência de um valor na tabela aninhada ou uma combinação de ambos.  
   
  Nesta tarefa, primeiro você fará uma cópia do modelo de Associação e depois adicionará os atributos IncomeGroup e Region ao novo modelo relacionado, para que possa filtrar os atributos na tabela de casos.  

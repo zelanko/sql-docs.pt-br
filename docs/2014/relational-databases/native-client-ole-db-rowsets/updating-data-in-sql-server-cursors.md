@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5c0b188d8fd45c1177cab77501bdf80fc550987
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242916"
 ---
 # <a name="updating-data-in-sql-server-cursors"></a>Atualizando dados em cursores do SQL Server
   Ao buscar e atualizar dados por meio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cursores, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplicativo de consumidor do provedor OLE DB do Native Client está ligado pelas mesmas considerações e restrições que se aplicam a qualquer outro aplicativo cliente.  

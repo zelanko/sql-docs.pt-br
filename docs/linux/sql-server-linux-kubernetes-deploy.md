@@ -11,11 +11,11 @@ ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 3a5bc7dfcfd36c16b6f281db8eb57e74e97601b6
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57974145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231378"
 ---
 # <a name="deploy-a-sql-server-always-on-availability-group-on-a-kubernetes-cluster"></a>Implantar um grupo de disponibilidade Always On do SQL Server em um cluster Kubernetes
 

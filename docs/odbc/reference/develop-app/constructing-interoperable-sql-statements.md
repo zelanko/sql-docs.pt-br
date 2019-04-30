@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dc8072a6d7291a546f0f12256aa4b336da037a83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809164"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281087"
 ---
 # <a name="constructing-interoperable-sql-statements"></a>Construir instruções SQL interoperáveis
 Conforme mencionado nas seções anteriores, os aplicativos interoperáveis devem usar a gramática SQL ODBC. Além de usar esta gramática, no entanto, uma série de problemas adicionais enfrentada por aplicativos interoperáveis. Por exemplo, o que um aplicativo faz se desejar usar um recurso, como junções externas, que não é suportado por todas as fontes de dados?  

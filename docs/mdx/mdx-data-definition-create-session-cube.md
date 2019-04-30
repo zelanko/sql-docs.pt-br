@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 09e093b46127090d232f023a7c7277c398ec349c
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248194"
 ---
-# <a name="mdx-data-definition---create-session-cube"></a>Definição de dados MDX - criar o cubo de sessão
+# <a name="mdx-data-definition---create-session-cube"></a>Definição de dados MDX – CREATE SESSION CUBE
 
 
   Cria e popula um cubo de sessão a partir de um cubo de servidor existente. O cubo de sessão só é visível dentro da sessão atual; ele não pode ser pesquisado ou consultado a partir de outra sessão. O cubo de sessão é excluído implicitamente quando a sessão é fechada.  
@@ -97,12 +97,12 @@ CREATE SESSION CUBE session_cube_name FROM <cube list> (<param list>)
  O nome da medida no cubo de sessão.  
   
  source_cube_name.dimension_name  
- O nome totalmente qualificado da dimensão de origem a serem incluída no cubo de sessão.  
+ O nome totalmente qualificado da dimensão de origem que está sendo incluída no cubo de sessão.  
   
  dimension_name  
  O nome da dimensão no cubo de sessão.  
   
- DE \<dim cláusula from >  
+ DE \<dim da cláusula >  
  Especificação válida somente para definição de dimensão derivada.  
   
  NOT_RELATED_TO_FACTS  
@@ -111,7 +111,7 @@ CREATE SESSION CUBE session_cube_name FROM <cube list> (<param list>)
  \<tipo de nível >  
  Especificação válida somente para definição de dimensão derivada.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Ao contrário do servidor e de cubos locais, um cubo de sessão não persiste além da sessão que criou o cubo de sessão. Um cubo de sessão é definido de acordo com as medidas e definições que o definem. Há dois tipos de dimensões:  
   
 -   Dimensões de origem – são dimensões que faziam parte de um de mais cubos de origem.  
@@ -125,7 +125,7 @@ CREATE SESSION CUBE session_cube_name FROM <cube list> (<param list>)
   
 -   Eliminar dimensões que existem no cubo de origem.  
   
--   Adicionar ou eliminar hierarquias de uma dimensão.  
+-   Adicionar ou eliminar hierarquias a partir de uma dimensão.  
   
 -   Eliminar grupos de medidas ou medidas específicas.  
   

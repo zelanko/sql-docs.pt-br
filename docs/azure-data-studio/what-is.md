@@ -12,11 +12,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f7369893be3cd42dab0e0c0cd870a52c639083b5
-ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161603"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239394"
 ---
 # <a name="what-is-azure-data-studio"></a>O que é o Studio de dados do Azure?
 
@@ -86,7 +86,7 @@ Para saber mais sobre a criação de extensões, consulte [criação de extensã
 |Extensões|Sim||
 |Terminal integrado|Sim||
 |Pesquisador de Objetos|Sim|Sim|
-|Script de objeto|Sim|Sim|
+|Script de Objeto|Sim|Sim|
 |Sistema de projeto|Sim||
 |Selecionar da tabela|Sim|Sim|
 |Controle do código fonte|Sim||
@@ -157,7 +157,7 @@ Para saber mais sobre a criação de extensões, consulte [criação de extensã
 |Service Broker||Sim|
 |SQL Mail||Sim|
 |Explorador de Modelos||Sim|
-|Avaliação de vulnerabilidade||Sim|
+|Avaliação de Vulnerabilidade||Sim|
 |Gerenciamento de XEvent||Sim|
 
 

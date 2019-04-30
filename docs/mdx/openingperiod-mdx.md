@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 01144d6a82319b7853ae60f901a5fc0ad3c78d6c
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63277959"
 ---
 # <a name="openingperiod-mdx"></a>OpeningPeriod (MDX)
 
@@ -35,17 +35,17 @@ OpeningPeriod( [ Level_Expression [ , Member_Expression ] ] )
  *Member_Expression*  
  Uma linguagem MDX válida que retorna um membro.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Essa função foi projetada para ser usada principalmente com a dimensão Tempo, mas pode ser usada com qualquer outra dimensão.  
   
 -   Se uma expressão de nível for especificada, o **OpeningPeriod** função usa a hierarquia que contém o nível especificado e retorna o primeiro irmão entre os descendentes do membro padrão no nível especificado.  
   
--   Se uma expressão de nível e uma expressão de membro for especificados, o **OpeningPeriod** função retorna o primeiro irmão entre os descendentes do membro especificado no nível especificado na hierarquia que contém o nível especificado.  
+-   Se uma expressão de nível e uma expressão de membro forem especificados, o **OpeningPeriod** função retorna o primeiro irmão entre os descendentes do membro especificado no nível especificado dentro da hierarquia que contém especificado nível.  
   
--   Se nem uma expressão de nível nem uma expressão de membro for especificada, o **OpeningPeriod** função usa o nível padrão e o membro da dimensão com um tipo de tempo.  
+-   Se uma expressão de nível nem uma expressão de membro é especificada, o **OpeningPeriod** função usa o nível padrão e um membro da dimensão com um tipo de tempo.  
   
 > [!NOTE]  
->  O [ClosingPeriod](../mdx/closingperiod-mdx.md) função é semelhante ao **OpeningPeriod** funcionar, exceto que o **ClosingPeriod** função retorna o último irmão em vez do primeiro.  
+>  O [ClosingPeriod](../mdx/closingperiod-mdx.md) função é semelhante ao **OpeningPeriod** funcionar, exceto que o **ClosingPeriod** função retorna o último irmão em vez da primeira irmão.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna o valor de medida padrão para o membro Ano fiscal 2002 da dimensão Data (que possui o tipo Tempo). Esse membro é retornado porque o nível Ano fiscal é o primeiro descendente do nível [All], a hierarquia Ano fiscal é a hierarquia padrão porque é a primeira hierarquia definida pelo usuário na coleção de hierarquias e o membro Ano fiscal 2002 é o primeiro irmão dessa hierarquia nesse nível.  
@@ -82,7 +82,7 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>Consulte também  
  [TopCount &#40;MDX&#41;](../mdx/topcount-mdx.md)   
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
  [FirstSibling &#40;MDX&#41;](../mdx/firstsibling-mdx.md)  
   
   

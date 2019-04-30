@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 410dd8785ce58f87b35c6c18b5c5dc00ffcd9faa
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240776"
 ---
 # <a name="reference-the-built-in-xml-schema-collection-sys"></a>Referenciar a coleção de esquemas XML interna (sys)
   Todo banco de dados que você cria tem uma coleção de esquema XML **sys** predefinido no esquema relacional **sys** . Ele reserva esses esquemas predefinidos que podem ser acessados de qualquer outra coleção de esquema XML criada pelo usuário. Os prefixos usados nesses esquemas predefinidos são significativos em XQuery. Apenas **xml** é um prefixo reservado.  

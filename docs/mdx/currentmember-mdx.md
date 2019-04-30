@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f7d47e12b95a92930bbdfceaba5cc8997c286eec
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248881"
 ---
 # <a name="currentmember-mdx"></a>Função CurrentMember (MDX)
 
@@ -29,17 +29,17 @@ Hierarchy_Expression.CurrentMember
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Expressão_Hierarquia*  
+ *Hierarchy_Expression*  
  Uma linguagem MDX válida que retorna uma hierarquia.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Durante a iteração de um conjunto de membros de hierarquia, em cada etapa da iteração, o membro que está sendo operado é o membro atual. O **CurrentMember** função retorna esse membro.  
   
 > [!IMPORTANT]  
 >  Quando uma dimensão contém apenas uma única hierarquia visível, a hierarquia pode ser mencionada pelo nome da dimensão ou pelo nome da hierarquia porque o nome da dimensão é resolvido apenas na hierarquia visível. Por exemplo, `Measures.CurrentMember` é uma expressão MDX válida porque é resolvida na única hierarquia da dimensão Measures.  
   
 ## <a name="examples"></a>Exemplos  
- A consulta a seguir mostra como **Currentmember** pode ser usado para localizar o membro atual de hierarquias em colunas, linhas e eixo de fatia:  
+ A consulta a seguir mostra como **Currentmember** pode ser usado para localizar o membro atual de hierarquias em colunas, linhas e o eixo de fatia:  
   
  `WITH MEMBER MEASURES.CURRENTDATE AS`  
   
@@ -75,7 +75,7 @@ Hierarchy_Expression.CurrentMember
   
  `WHERE([Customer].[Customer Geography].[Country].&[Australia])`  
   
- O membro atual é alterado em uma hierarquia usada em um eixo em uma consulta. Portanto, o membro atual em outras hierarquias na mesma dimensão que não são usados em um eixo também pode ser alterado; Esse comportamento é chamado de "auto-exists" e mais detalhes podem ser encontrados em [principais conceitos em MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md). Por exemplo, a consulta abaixo mostra como o membro atual na hierarquia Ano Civil da dimensão Data é alterado com o membro atual na hierarquia Calendário, quando este último é exibido no eixo Linhas:  
+ O membro atual é alterado em uma hierarquia usada em um eixo em uma consulta. Portanto, o membro atual em outras hierarquias na mesma dimensão que não são usados em um eixo também pode alterar; Esse comportamento é chamado de "auto-exists" e mais detalhes podem ser encontrados em [principais conceitos em MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md). Por exemplo, a consulta abaixo mostra como o membro atual na hierarquia Ano Civil da dimensão Data é alterado com o membro atual na hierarquia Calendário, quando este último é exibido no eixo Linhas:  
   
  `WITH MEMBER MEASURES.CURRENTYEAR AS`  
   
@@ -93,7 +93,7 @@ Hierarchy_Expression.CurrentMember
   
  `FROM [Adventure Works]`  
   
- **CurrentMember** é muito importante para que os cálculos reconheçam o contexto da consulta estão sendo usados no. O exemplo a seguir retorna a quantidade de pedidos de cada produto e a porcentagem da quantidade de pedidos por categoria e modelo, do **Adventure Works** cubo. O **CurrentMember** função identifica o produto cuja quantidade do pedido será usado durante o cálculo.  
+ **CurrentMember** é muito importante para que os cálculos reconheçam o contexto da consulta que estão sendo usados. O exemplo a seguir retorna a quantidade de pedidos de cada produto e a porcentagem de quantidades do pedido por categoria e modelo, do **Adventure Works** cubo. O **CurrentMember** função identifica o produto cuja quantidade do pedido deve ser usado durante o cálculo.  
   
 ```  
 WITH   
@@ -118,6 +118,6 @@ WHERE {[Date].[Calendar Year].[Calendar Year].&[2003]}
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

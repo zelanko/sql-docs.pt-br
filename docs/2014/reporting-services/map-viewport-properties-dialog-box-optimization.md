@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 833b60a0e96cc79c136a58bebca1c69486795e2b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278543"
 ---
 # <a name="map-viewport-properties-dialog-box-optimization"></a>Caixa de diálogo Propriedades do Visor do Mapa, Otimização
   Selecione **Otimização** para a caixa de diálogo **Propriedades do Visor do Mapa** para ajudar a controlar a resolução de exibição de um mapa em um relatório.  

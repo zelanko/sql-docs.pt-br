@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f5fae4c4351cc8e443523e54e2bc8b88f89ad098
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251497"
 ---
 # <a name="using-tuple-expressions"></a>Usando expressões de tupla
 
@@ -37,7 +37,7 @@ ms.locfileid: "34743685"
   
 -   Se a hierarquia mencionada implicitamente tiver um membro padrão, o membro padrão será adicionado à tupla.  
   
--   Se a hierarquia mencionada implicitamente não tem nenhum membro padrão, o **(All)** membro da hierarquia padrão é usado.  
+-   Se a hierarquia mencionada implicitamente não tem nenhum membro padrão, o **(All)** membro da hierarquia padrão será usado.  
   
 -   Se a hierarquia mencionada implicitamente não tiver nenhum membro padrão, o primeiro membro do nível mais alto da hierarquia será utilizado.  
   
@@ -46,6 +46,6 @@ ms.locfileid: "34743685"
   
 ## <a name="see-also"></a>Consulte também  
  [Expressões &#40;MDX&#41;](../mdx/expressions-mdx.md)   
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 336eebbc8bcc98ec684faaaa1092b511cf95f100
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248235"
 ---
-# <a name="mdx-data-definition---drop-kpi"></a>Definição de dados MDX - DROP KPI
+# <a name="mdx-data-definition---drop-kpi"></a>Definição de dados MDX – DROP KPI
 
 
   Elimina o KPI (indicador chave de desempenho) especificado do cubo mencionado.  

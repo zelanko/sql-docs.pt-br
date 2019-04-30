@@ -1,5 +1,5 @@
 ---
-title: SQL estático | Microsoft Docs
+title: Static SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cd82e2c3c44f05a27e9d14442d8d0fb58e1986cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232050"
 ---
 # <a name="static-sql"></a>SQL Estático
 O embedded SQL mostrado na [exemplo de SQL inserido](../../odbc/reference/embedded-sql-example.md) é conhecido como SQL estático. Ele é chamado SQL estático porque as instruções SQL no programa são estáticas; ou seja, elas não alteram cada vez que o programa é executado. Conforme descrito na seção anterior, essas instruções são compiladas quando o restante do programa é compilado.  

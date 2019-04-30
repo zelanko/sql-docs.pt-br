@@ -14,13 +14,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 58757aa0de2b13c68926cf596a8da702b972edf3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63256054"
 ---
-# <a name="tutorial-administering-servers-by-using-policy-based-management"></a>Tutorial: Administrando servidores com Gerenciamento Baseado em Políticas
+# <a name="tutorial-administering-servers-by-using-policy-based-management"></a>Tutorial: administração de servidores com Gerenciamento Baseado em Políticas
   Bem-vindo ao tutorial Administrando servidores com o uso do Gerenciamento Baseado em Políticas. Este tutorial é dirigido a usuários que estão familiarizado com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mas ainda não conhecem o Gerenciamento Baseado em Políticas.  
   
 ## <a name="what-you-will-learn"></a>O que você aprenderá  
@@ -31,7 +31,7 @@ ms.locfileid: "52754198"
  [Lição 1: Criar e aplicar uma política desativada por padrão](lesson-1-create-and-apply-an-off-by-default-policy.md)  
  Esta lição cria uma política que especifica que o Database Mail não está habilitado no servidor. Em seguida, ela verifica se o servidor está em conformidade com a política e configura o servidor desabilitando o Database Mail.  
   
- [Lição 2: Criar e aplicar uma política de padrões de nomenclatura](lesson-2-create-and-apply-a-naming-standards-policy.md)  
+ [Lição 2: Criar e aplicar uma política de nomeação de padrões](lesson-2-create-and-apply-a-naming-standards-policy.md)  
  Esta lição cria uma política que define e aplica uma nomeação padrão para tabelas.  
   
 ## <a name="requirements"></a>Requisitos  

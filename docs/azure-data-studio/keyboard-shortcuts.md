@@ -12,11 +12,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dd58bb28fe5969fcf0553576d70dd62314f5f974
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238929"
 ---
 # <a name="keyboard-shortcuts-in-includename-sosincludesname-sosmd"></a>Atalhos de teclado no [!INCLUDE[name-sos](../includes/name-sos.md)]
 

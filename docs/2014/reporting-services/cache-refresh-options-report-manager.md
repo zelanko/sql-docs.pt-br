@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 05f2cdfc40c8677bfa38c821cfd849c3ce483c31
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266466"
 ---
 # <a name="cache-refresh-options-report-manager"></a>Opções de Atualização do Cache (Gerenciador de Relatórios)
   Use a página Opções de Atualização do Cache para criar agendas para pré-carregamento do cache com cópias temporárias de dados para um relatório ou para um conjunto de dados compartilhado. Um plano de atualização inclui uma agenda e a opção para especificar ou substituir valores de parâmetros. Para um conjunto de dados compartilhado, você não pode substituir valores de parâmetros que estão marcados como somente leitura. Você pode criar e usar mais de um plano de atualização como parte da página de opções de atualização.  

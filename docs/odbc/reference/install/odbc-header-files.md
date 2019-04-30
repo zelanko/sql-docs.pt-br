@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8092f220d95847328e1cf37c2ca815f67f539b5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280987"
 ---
 # <a name="odbc-header-files"></a>Arquivos de cabeçalho ODBC
 > [!NOTE]  
@@ -28,17 +28,17 @@ ms.locfileid: "47722424"
   
  **Arquivos de cabeçalho**  
   
- Odbcinst  
+ Odbcinst.h  
   
- SQL  
+ Sql.h  
   
  Sqlext. h  
   
- SqlTypes  
+ Sqltypes.h  
   
- Sqlucode  
+ Sqlucode.h  
   
- MSDASQL.h  
+ Msdasql.h  
   
  Msdadc.h  
   

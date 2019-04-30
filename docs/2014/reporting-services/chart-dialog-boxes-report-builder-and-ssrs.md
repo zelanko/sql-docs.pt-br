@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7adf0b27a30b938904b73a75669a7fb2e7923ffb
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59937022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266245"
 ---
 # <a name="chart-dialog-boxes-report-builder-and-ssrs"></a>Caixas de diálogo de Gráfico (Construtor de Relatórios e SSRS)
   Esta seção contém Ajuda para algumas das caixas de diálogo de gráficos. De modo alternativo, você pode abrir a Ajuda pressionando F1 ou clicando no botão Ajuda exibido na caixa de diálogo.  

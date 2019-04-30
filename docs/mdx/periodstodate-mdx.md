@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e33ac5562e7304b71779134b02488733b9d576a4
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63277492"
 ---
 # <a name="periodstodate-mdx"></a>PeriodsToDate (MDX)
 
@@ -35,10 +35,10 @@ PeriodsToDate( [ Level_Expression [ ,Member_Expression ] ] )
  *Member_Expression*  
  Uma linguagem MDX válida que retorna um membro.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Dentro do escopo do nível especificado, o **PeriodsToDate** função retorna o conjunto de períodos no mesmo nível que o membro especificado, começando com o primeiro período e terminando com o membro especificado.  
   
--   Se um nível for especificado, o membro atual da hierarquia será *hierarquia*. **CurrentMember**, onde *hierarquia*é a hierarquia do nível especificado.  
+-   Se um nível for especificado, o membro atual da hierarquia é inferido *hierarquia*. **CurrentMember**, onde *hierarquia*é a hierarquia do nível especificado.  
   
 -   Se nem o nível nem o membro for especificado, o nível será o nível pai do membro atual da primeira hierarquia na primeira dimensão do tipo Tempo no grupo de medidas.  
   
@@ -47,7 +47,7 @@ PeriodsToDate( [ Level_Expression [ ,Member_Expression ] ] )
  `TopCount(Descendants(Ancestor(Member_Expression, Level_Expression), Member_Expression.Level), 1):Member_Expression`  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir retorna a soma da `Measures.[Order Quantity]` membro, agregado sobre os primeiros oito meses do ano calendário 2003 contidos no `Date` dimensão, do **Adventure Works** cubo.  
+ O exemplo a seguir retorna a soma do `Measures.[Order Quantity]` membro, agregado durante os primeiros oito meses do ano calendário 2003 contidos na `Date` dimensão, da **Adventure Works** cubo.  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  
@@ -87,6 +87,6 @@ WHERE
   
 ## <a name="see-also"></a>Consulte também  
  [TopCount &#40;MDX&#41;](../mdx/topcount-mdx.md)   
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 73c061718dc326e43f72be369a28ad12726a3cab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242362"
 ---
 # <a name="direct-execution-odbc"></a>Execução direta ODBC
 Execução direta é a maneira mais simples para executar uma instrução. Quando a instrução é enviada para execução, a fonte de dados compila em um plano de acesso e, em seguida, executa esse plano de acesso.  

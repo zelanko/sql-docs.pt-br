@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c940fbdc48d900da77d03dfb3b806080cff0c04e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249045"
 ---
 # <a name="ado-dynamic-properties"></a>Propriedades dinâmicas do ADO
 Propriedades dinâmicas podem ser adicionadas para o [propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) coleções da [Conexão](../../../ado/reference/ado-api/connection-object-ado.md), [comando](../../../ado/reference/ado-api/command-object-ado.md), ou [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objetos. O código-fonte para essas propriedades é qualquer um provedor de dados, como o [OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), ou um provedor de serviços, como o [Microsoft Cursor Service para OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md). Consulte a documentação do provedor de serviços para obter mais informações sobre uma propriedade dinâmica específica ou provedor de dados apropriado.  
@@ -41,7 +41,7 @@ Propriedades dinâmicas podem ser adicionadas para o [propriedades](../../../ado
  [Referência da API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
  [Coleções ADO](../../../ado/reference/ado-api/ado-collections.md)   
  [Constantes enumeradas do ADO](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [Apêndice b: erros de ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [Apêndice b: Erros ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [Eventos ADO](../../../ado/reference/ado-api/ado-events.md)   
  [Métodos ADO](../../../ado/reference/ado-api/ado-methods.md)   
  [Modelo de objeto ADO](../../../ado/reference/ado-api/ado-object-model.md)   

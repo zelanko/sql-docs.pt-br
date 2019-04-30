@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c61852c847231b412d3c4f63ee5b54f5d5947465
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239800"
 ---
 # <a name="cancel-method-example-vb"></a>Exemplo do método Cancel (VB)
 Este exemplo usa o [Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md) método para cancelar um comando em execução em um [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto se a conexão está ocupado.  

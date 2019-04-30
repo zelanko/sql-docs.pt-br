@@ -19,11 +19,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c402516980f5cf3e1790f8a5fa6d594c93b0e500
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63245955"
 ---
 # <a name="running-upgrade-advisor-user-interface"></a>Executando o Supervisor de Atualização (Interface do usuário)
   Você pode executar o Supervisor de Atualização para analisar componentes locais ou remotos durante o planejamento da atualização. O Supervisor de Atualização gera um relatório para cada componente e instância que é analisado.  
@@ -48,7 +48,7 @@ ms.locfileid: "48176097"
   
 6.  Gerar o relatório dos problemas de atualização.  
   
- Para obter mais informações sobre o Assistente de análise do Supervisor de atualização, consulte [como: executar o Assistente de análise do Supervisor de atualização](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md).  
+ Para obter mais informações sobre o Assistente de análise do Supervisor de atualização, consulte [como: Execute o Assistente para análise do Supervisor de atualização](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md).  
   
  Para obter informações específicas necessárias para cada etapa, consulte [Atualizar referência de Interface de usuário do Orientador de](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md).  
   
@@ -69,14 +69,14 @@ ms.locfileid: "48176097"
   
  Para verificar as instruções passo a passo de como usar o Visualizador de Relatórios, consulte os seguintes tópicos:  
   
--   [Como exibir um relatório do Supervisor de Atualização](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)  
+-   [Como: Exibir um relatório do Supervisor de atualização](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)  
   
--   [Como filtrar relatórios](../../../2014/sql-server/install/how-to-filter-reports.md)  
+-   [Como: Filtrar relatórios](../../../2014/sql-server/install/how-to-filter-reports.md)  
   
--   [Como exportar relatórios](../../../2014/sql-server/install/how-to-export-reports.md)  
+-   [Como: Exportar relatórios](../../../2014/sql-server/install/how-to-export-reports.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Como: executar o Assistente para análise do Supervisor de atualização](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
+ [Como: Execute o Assistente para análise do Supervisor de atualização](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [Referência de Interface de usuário do Supervisor de atualização](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)   
  [Solucionando problemas de atualização](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
  [Trabalhando com o Supervisor de Atualização](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  

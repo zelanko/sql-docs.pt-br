@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b095e034df987fd580b5f5855993c9cf070a1236
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51599837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278609"
 ---
 # <a name="readtext-method"></a>Método ReadText
 Lê um número especificado de caracteres de um texto [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objeto.  
@@ -47,7 +47,7 @@ String = Stream.ReadText ( NumChars)
 > [!NOTE]
 >  O **ReadText** método é usado com fluxos de texto ([tipo](../../../ado/reference/ado-api/type-property-ado-stream.md) está **adTypeText**). Para fluxos binários (**tipo** é **adTypeBinary**), use [leitura](../../../ado/reference/ado-api/read-method.md).  
   
- Consultas que resultaram em uma grande quantidade de dados XML que está sendo retornados por meio de **ReadText** método do objeto Stream ActiveX Data Object (ADO) pode levar a uma grande quantidade de tempo para ser executada; se isso for feito em um componente COM+ é chamado de um Página ASP, a sessão do usuário atinjam o tempo limite. ADO converte dados de objeto Stream de codificação UTF-8 para Unicode. a realocação de memória frequente envolvida na conversão de uma grande quantidade de dados ao mesmo tempo é muito demorada. Para resolver, fazer chamadas repetidas para o **ReadText** método do ADO objeto de comando e especifique um número menor de caracteres. Testes mostraram que um valor equivalente a 128K (131,072) é ideal. Tempo de resposta diminui à medida que esse valor é diminuído. Para obter mais informações, consulte o artigo da Base de dados de Conhecimento 280067, "PRB: recuperar documentos XML muito grandes do SQL Server 2000 usando o método ReadText do objeto de fluxo ADO pode ser lento", na Base de dados de Conhecimento Microsoft em https://support.microsoft.com.  
+ Consultas que resultaram em uma grande quantidade de dados XML que está sendo retornados por meio de **ReadText** método do objeto Stream ActiveX Data Object (ADO) pode levar a uma grande quantidade de tempo para ser executada; se isso for feito em um componente COM+ é chamado de um Página ASP, a sessão do usuário atinjam o tempo limite. ADO converte dados de objeto Stream de codificação UTF-8 para Unicode. a realocação de memória frequente envolvida na conversão de uma grande quantidade de dados ao mesmo tempo é muito demorada. Para resolver, fazer chamadas repetidas para o **ReadText** método do ADO objeto de comando e especifique um número menor de caracteres. Testes mostraram que um valor equivalente a 128K (131,072) é ideal. Tempo de resposta diminui à medida que esse valor é diminuído. Para obter mais informações, consulte o artigo da Base de dados de Conhecimento 280067, "PRB: Recuperando documentos XML muito grandes do SQL Server 2000 usando o método ReadText do objeto de fluxo ADO pode ser lenta", na Base de dados de Conhecimento Microsoft em https://support.microsoft.com.  
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  

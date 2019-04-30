@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7ab231da8d69c88521174813d1986b7f91e40139
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261968"
 ---
 # <a name="install-reporting-services-and-internet-information-services-side-by-side-ssrs-native-mode"></a>Instalar o Reporting Services e os Serviços de Informações da Internet lado a lado (Modo Nativo do SSRS)
   Você pode instalar e executar o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) e o IIS (Serviços de Informações da Internet) no mesmo computador. A versão do IIS utilizada determina os problemas de interoperabilidade a serem resolvidos.  

@@ -1,5 +1,5 @@
 ---
-title: Ordem (MDX) | Microsoft Docs
+title: Order (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 43a75f4a42193c231c1acc710512b05537675991
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63277853"
 ---
 # <a name="order-mdx"></a>Order (MDX)
 
@@ -45,13 +45,13 @@ Order(Set_Expression, String_Expression
  *String_Expression*  
  Uma expressão de cadeia de caracteres válida, geralmente uma expressão MDX válida de coordenadas de célula, que retorna um número expresso como uma cadeia de caracteres.  
   
-## <a name="remarks"></a>Remarks  
- O **ordem** função pode ser hierárquica (conforme especificado por meio a **ASC** ou **DESC** sinalizador) ou não hierárquico (conforme especificado por meio de **BASC** ou **BDESC** sinalizador; o **B** significa "quebra de hierarquia"). Se **ASC** ou **DESC** for especificado, o **ordem** função primeiro organizará os membros de acordo com sua posição na hierarquia e, em seguida, ordenará cada nível. Se **BASC** ou **BDESC** for especificado, o **ordem** função organiza os membros do conjunto independentemente da hierarquia. Nenhum sinalizador for especificado, **ASC** é o padrão.  
+## <a name="remarks"></a>Comentários  
+ O **ordem** função pode ser hierárquica (conforme especificado, usando o **ASC** ou **DESC** sinalizador) ou não hierárquico (conforme especificado por meio o **BASC**  ou **BDESC** sinalizador; o **B** significa "quebra de hierarquia"). Se **ASC** ou **DESC** for especificado, o **ordem** função primeiro organizará os membros de acordo com sua posição na hierarquia e, em seguida, ordenará cada nível. Se **BASC** ou **BDESC** for especificado, o **ordem** função organiza os membros no conjunto, independentemente da hierarquia. Nenhum sinalizador for especificado, **ASC** é o padrão.  
   
- Se o **ordem** função é usada com um conjunto onde duas ou mais hierarquias são interjuntadas e o **DESC** sinalizador for usado, somente os membros da última hierarquia no conjunto são ordenados. Esta é uma alteração do Analysis Services 2000 onde foram ordenadas todas as hierarquias no conjunto.  
+ Se o **ordem** função é usada com um conjunto onde duas ou mais hierarquias são interjuntadas e o **DESC** sinalizador é usado, somente os membros da última hierarquia no conjunto são ordenados. Esta é uma alteração do Analysis Services 2000 onde foram ordenadas todas as hierarquias no conjunto.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir retorna, do **Adventure Works** de cubo, o número de pedidos do revendedor para todos os trimestres do calendário da hierarquia de calendário na dimensão Data. O **ordem** função reordena o conjunto para o eixo de linhas. O **ordem** função ordena o conjunto por `[Reseller Order Count]` em ordem hierárquica descendente conforme determinado pelo `[Calendar]` hierarquia.  
+ O exemplo a seguir retorna, do **Adventure Works** do cubo, o número de pedidos do revendedor para todos os trimestres do calendário da hierarquia da dimensão Date. O **ordem** função reordena o conjunto para o eixo de linhas. O **ordem** função ordena o conjunto por `[Reseller Order Count]` em ordem hierárquica descendente conforme determinado pela `[Calendar]` hierarquia.  
   
  `SELECT`  
   
@@ -87,7 +87,7 @@ Order(Set_Expression, String_Expression
   
  `FROM [Adventure Works]`  
   
- O exemplo a seguir retorna a medida Valor das Vendas do Revendedor para as cinco subcategorias principais de vendas dos produtos, independentemente da hierarquia, com base no Lucro Bruto do Revendedor. O **subconjunto** função é usada para retornar somente as 5 primeiras tuplas no conjunto de após o resultado é ordenado com a **ordem** função.  
+ O exemplo a seguir retorna a medida Valor das Vendas do Revendedor para as cinco subcategorias principais de vendas dos produtos, independentemente da hierarquia, com base no Lucro Bruto do Revendedor. O **subconjunto** função é usada para retornar apenas as 5 primeiras tuplas no conjunto após o resultado é ordenado com o **ordem** função.  
   
  `SELECT Subset`  
   
@@ -109,7 +109,7 @@ Order(Set_Expression, String_Expression
   
  `FROM [Adventure Works]`  
   
- O exemplo a seguir usa o **classificação** função para classificar os membros da hierarquia cidade com base na medida do valor de vendas de revendedor e, em seguida, exibe-os na ordem de classificação. Usando o **ordem** funcionar para organizar pela primeira vez o conjunto de membros da hierarquia cidade, a classificação é feita apenas uma vez e, em seguida, seguida por uma verificação linear antes de ser apresentada na ordem de classificação.  
+ O exemplo a seguir usa o **classificação** função para classificar os membros da hierarquia cidade com base na medida vendas do revendedor e, em seguida, exibe-os em ordem de classificação. Usando o **ordem** o conjunto de membros da hierarquia cidade de função à primeira ordem, a classificação é feita apenas uma vez e, em seguida, seguida por uma verificação linear antes que está sendo apresentado na ordem de classificação.  
   
 ```  
 WITH   
@@ -175,7 +175,7 @@ FROM [Adventure Works]
   
 ```  
   
- No eixo de Linhas, você pode consultar que os Sales Territory Groups foram colocados em ordem decrescente por Tax Amount, como segue: North America, Europe, Pacific, NA. Agora veja o que acontece se nós interjuntarmos o conjunto de grupos de território de vendas com o conjunto de subcategorias de produtos e aplicar o **ordem** funcionam da mesma forma, da seguinte maneira:  
+ No eixo de linhas, você pode ver que os Sales Territory Groups foram colocados em ordem decrescente por Tax Amount, como segue: América do Norte, Europa, Pacific, NA. Agora veja o que acontece se nós interjuntarmos o conjunto de Sales Territory Groups com o conjunto de subcategorias de produtos e aplicar a **ordem** funcionar da mesma forma, da seguinte maneira:  
   
 ```  
   
@@ -191,7 +191,7 @@ FROM [Adventure Works]
   
 ```  
   
- Enquanto o conjunto de Product Subcategories foi colocado em ordem decrescente e hierárquica, os Sales Territory Groups agora não são classificados e aparecem na ordem que eles aparecem na hierarquia: Europe, NA, North America e Pacific. Isto é porque somente a última hierarquia no conjunto de tuplas, Product Subcategories, é classificado. Para reproduzir o comportamento do Analysis Services 2000, use uma série de aninhados **gerar** funções para classificar cada conjunto antes de interjuntar, por exemplo:  
+ Enquanto o conjunto de Product Subcategories foi colocado em decrescente ordem hierárquica, os Sales Territory Groups agora não são classificados e aparecem na ordem em que aparecem na hierarquia: Europa, NA, América do Norte e Pacífico. Isto é porque somente a última hierarquia no conjunto de tuplas, Product Subcategories, é classificado. Para reproduzir o comportamento do Analysis Services 2000, use uma série de aninhados **gerar** funções para classificar cada conjunto antes de interjuntar, por exemplo:  
   
 ```  
   
@@ -212,6 +212,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

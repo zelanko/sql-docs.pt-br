@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a29180fdaf90d7c9c43441f897820be69a9c009a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239841"
 ---
 # <a name="cachesize-property-example-vb"></a>Exemplo da propriedade CacheSize (VB)
 Este exemplo usa o [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) para mostrar a diferença de desempenho para uma operação executada com e sem um cache de registro de 30.  

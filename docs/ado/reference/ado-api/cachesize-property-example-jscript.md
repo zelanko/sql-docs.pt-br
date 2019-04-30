@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f8b5dfc7affb2a6db7db0b30fa95087b3e024e00
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239833"
 ---
 # <a name="cachesize-property-example-jscript"></a>Exemplo da propriedade CacheSize (JScript)
 Este exemplo usa o [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) para mostrar a diferença de desempenho para uma operação executada com e sem um cache de registro de 30. Recortar e colar o seguinte código ao bloco de notas ou outro editor de texto e salve-o como **CacheSizeJS.asp**.  

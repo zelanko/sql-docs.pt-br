@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 111c3aae92839ff9f1574da6420d096d31517c80
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241046"
 ---
 # <a name="lt-less-than-mdx"></a>&lt; (Menor que) (MDX)
 
@@ -35,9 +35,9 @@ MDX_Expression < MDX_Expression
 ## <a name="return-value"></a>Valor retornado  
  Um valor booliano baseado nas seguintes condições:  
   
--   **True** se ambos os parâmetros forem não nulos e o primeiro parâmetro tiver um valor menor que o valor do segundo parâmetro.  
+-   **True** se ambos os parâmetros forem não nulos e o primeiro parâmetro tiver um valor que é menor do que o valor do segundo parâmetro.  
   
--   **False** se ambos os parâmetros forem não nulos e o primeiro parâmetro tiver um valor que seja igual ou maior que o valor do segundo parâmetro.  
+-   **False** se ambos os parâmetros forem não nulos e o primeiro parâmetro tiver um valor que é igual ou maior que o valor do segundo parâmetro.  
   
 -   nulo se um ou os dois parâmetros forem avaliados como um valor nulo.  
   

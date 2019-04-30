@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c8a4377d11040abde228383ec35dd9284f14760a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278930"
 ---
 # <a name="protocols-for-ltservergt-sql-server-configuration-manager"></a>Protocolos para &lt;servidor&gt; (SQL Server Configuration Manager)
   Para configurar os protocolos usados pelo [!INCLUDE[ssDE](../../includes/ssde-md.md)], no painel do console, selecione **Protocolos** para a instância de servidor desejada, clique com o botão direito do mouse no protocolo apropriado no painel de detalhes e, em seguida, clique em **Propriedades**.  

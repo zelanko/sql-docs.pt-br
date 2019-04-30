@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d65b7f31010aeb768f7b04c06753f185d3cc792f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232043"
 ---
 # <a name="configdsn-function"></a>Função ConfigDSN
 **Conformidade com**  
@@ -49,7 +49,7 @@ BOOL ConfigDSN(
  *hwndParent*  
  [Entrada] Identificador de janela pai. A função não exibirá nenhuma caixa de diálogo se o identificador for nulo.  
   
- *Frequentes*  
+ *fRequest*  
  [Entrada] Tipo de solicitação. O *frequentes* argumento deve conter um dos seguintes valores:  
   
  ODBC_ADD_DSN: Adicione uma nova fonte de dados.  

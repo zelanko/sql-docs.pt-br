@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9edd9ae15e66a39abd84a8a6d8e50a83ed4a39ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259342"
 ---
 # <a name="using-sqlconfigdatasource-with-the-odbc-driver-for-oracle"></a>Usar SQLConfigDatasource com o driver ODBC para Oracle
 > [!IMPORTANT]  
@@ -33,24 +33,24 @@ ms.locfileid: "47779004"
   
  Na tabela a seguir *A/N* significa qualquer cadeia de caracteres alfanumérica válida até o comprimento máximo permitido. *max Len* (comprimento máximo) é o comprimento máximo permitido aceito pela configuração, incluindo o caractere terminador da cadeia de caracteres.  
   
-|Configuração|máx Len|Valor padrão|Valores válidos|Description|  
+|Configuração|máx Len|Valor padrão|Valores válidos|Descrição|  
 |-------------|-------------|-------------------|------------------|-----------------|  
 |BufferSize|7|65535|1.000|Até 65535 bytes de tamanho do buffer de busca mínimo|  
 |CatalogCap|2|1|0 ou 1|Se for 1, identificadores nonquoted será convertido em letras maiusculas no catálogo de funções.|  
-|ConnectString|128|""|N/A|Cadeia de conexão. Método necessário de especificar o nome do servidor com o driver Msorcl10.dll.|  
-|Description|256|""|N/A|Descrição.|  
-|DSN|33|""|N/A|Nome da fonte de dados.|  
-|GuessTheColDef|4|0|N/A|Retorna um valor diferente de zero para colunas sem escala definido pelo Oracle.|  
+|ConnectString|128|""|A/N|Cadeia de conexão. Método necessário de especificar o nome do servidor com o driver Msorcl10.dll.|  
+|Descrição|256|""|A/N|Descrição.|  
+|DSN|33|""|A/N|Nome da fonte de dados.|  
+|GuessTheColDef|4|0|A/N|Retorna um valor diferente de zero para colunas sem escala definido pelo Oracle.|  
 |NumberFloat|2|""|0 ou 1|Se for 0, FLOAT colunas são tratadas como SQL_FLOAT. Se for 1, FLOAT colunas são tratadas como SQL_DOUBLE.|  
-|PWD|30|""|N/A|Senha.|  
+|PWD|30|""|A/N|Senha.|  
 |RDOSupport|2|""|0 ou 1|Permite RDO chamar procedimentos do Oracle.|  
 |Comentários|2|0|0 ou 1|Inclua comentários em funções de catálogo.|  
 |RowLimit|4|""|0 a 99|Número máximo de linhas retornadas por uma instrução SELECT. Uma cadeia de caracteres de comprimento zero indica que nenhum limite é aplicado.|  
-|Servidor|128|""|N/A|Nome do servidor Oracle.|  
+|Servidor|128|""|A/N|Nome do servidor Oracle.|  
 |SynonymColumns|2|1|0 ou 1|Inclua sinônimos em SQLColumns.|  
 |SystemTable|2|""|0 ou 1|Se for 0, as tabelas do sistema não serão exibidas. Se for 1, tabelas do sistema serão exibidas.|  
-|TranslationDLL|33|""|N/A|Nome. dll de conversão.|  
-|TranslationName|33|""|N/A|Nome de tradução.|  
-|TranslationOption|33|""|N/A|Opção de conversão.|  
-|TxnCap|2|""|N/A|Compatível com a transação. Se for 0, o driver informa que ele não oferece suporte a transações. Se for 1, o driver informa que é capaz de realizar transações.|  
-|UID|30|""|N/A|Nome de usuário.|
+|TranslationDLL|33|""|A/N|Nome. dll de conversão.|  
+|TranslationName|33|""|A/N|Nome de tradução.|  
+|TranslationOption|33|""|A/N|Opção de conversão.|  
+|TxnCap|2|""|A/N|Compatível com a transação. Se for 0, o driver informa que ele não oferece suporte a transações. Se for 1, o driver informa que é capaz de realizar transações.|  
+|UID|30|""|A/N|Nome de usuário.|

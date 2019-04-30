@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d69db144a460bb2f662c8ba906bf0302cdf98388
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232077"
 ---
 # <a name="configdriver-function"></a>Função ConfigDriver
 **Conformidade com**  
- Versão introduziu: ODBC 2.5  
+ Versão introduzida: ODBC 2.5  
   
  **Resumo**  
  **ConfigDriver** permite que um programa de instalação realizar a instalar e desinstalar funções, sem a necessidade do programa chamar **ConfigDSN**. Essa função executará funções específicas de driver como criação de informações do sistema específicos do driver e executar conversões de DSN durante a instalação, bem como limpeza de modificações no sistema de informações durante a desinstalação. Essa função é exposta pela DLL de instalação do driver ou uma DLL de instalação separado.  
@@ -52,7 +52,7 @@ BOOL ConfigDriver(
  *hwndParent*  
  [Entrada] Identificador de janela pai. A função não exibirá nenhuma caixa de diálogo se o identificador for nulo.  
   
- *Frequentes*  
+ *fRequest*  
  [Entrada] Tipo de solicitação. O *frequentes* argumento deve conter um dos seguintes valores:  
   
  ODBC_INSTALL_DRIVER: Instale um novo driver.  
@@ -84,7 +84,7 @@ BOOL ConfigDriver(
 ## <a name="diagnostics"></a>Diagnóstico  
  Quando **ConfigDriver** retornar FALSE, um associado  *\*pfErrorCode* valor é postado no buffer de erro do instalador por uma chamada para **SQLPostInstallerError** e pode ser obtido chamando **SQLInstallerError**. A seguinte tabela lista os  *\*pfErrorCode* valores que podem ser retornados por **SQLInstallerError** e explica cada uma no contexto dessa função.  
   
-|*\*pfErrorCode*|Erro|Description|  
+|*\*pfErrorCode*|Erro|Descrição|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_INVALID_HWND|Identificador de janela inválido|O *hwndParent* argumento era inválido.|  
 |ODBC_ERROR_INVALID_REQUEST_TYPE|Tipo de solicitação inválido|O *frequentes* argumento não era um dos seguintes:<br /><br /> ODBC_INSTALL_DRIVER ODBC_REMOVE_DRIVER<br /><br /> A opção específica do driver era menor que ou igual a ODBC_CONFIG_DRIVER_MAX.|  

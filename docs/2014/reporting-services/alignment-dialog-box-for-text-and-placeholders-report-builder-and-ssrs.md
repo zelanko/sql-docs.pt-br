@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0663bfce435187be66889858316b5ced0573f149
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233459"
 ---
 # <a name="alignment-dialog-box-for-text-and-placeholders-report-builder-and-ssrs"></a>Caixa de diálogo Alinhamento para texto e espaços reservados (Construtor de Relatórios e SSRS)
   Selecione a guia **Alinhamento** para posicionar os valores dentro de uma célula ou região de dados selecionada. É possível formatar só o alinhamento horizontal de texto individual dentro de uma caixa de texto. Para definir valores de preenchimento na caixa de texto ou como o texto é alinhado verticalmente, use as propriedades correspondentes da caixa de texto. Para obter mais informações, consulte [caixa de diálogo de propriedades de caixa de texto, alinhamento &#40;construtor de relatórios e SSRS&#41;](../../2014/reporting-services/text-box-properties-dialog-box-alignment-report-builder-and-ssrs.md).  

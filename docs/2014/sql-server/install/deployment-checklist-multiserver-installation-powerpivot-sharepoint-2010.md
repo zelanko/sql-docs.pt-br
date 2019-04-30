@@ -12,13 +12,13 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 83d02accf46a1939a1bd90e6de4d61154ea8100f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237914"
 ---
-# <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>Lista de verificação de implantação: Instalação em vários servidores do PowerPivot para SharePoint 2010
+# <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>Lista de verificação de implantação: Instalação multisservidor do PowerPivot para SharePoint 2010
   Esta lista de verificação orienta você pelas etapas para adicionar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint para um farm do SharePoint 2010 de três camadas que você cria do zero. Um farm em três níveis contém os níveis de banco de dados, aplicativo e Web. Adicionando [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para esta topologia requer que você execute a instalação do SQL Server para instalar o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] na camada de aplicativo. Arquivos de programa do PowerPivot são adicionados na camada da web, mas somente como uma tarefa de pós-instalação quando você o implantar solução de aplicativo web. Embora haja etapas de instalação, não é necessário executar nenhuma etapa de instalação separada na camada da Web nem na camada de dados. A etapa de instalação somente que você precisa executar é instalar [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] nos servidores de aplicativos.  
   
 ||  
@@ -227,7 +227,7 @@ ms.locfileid: "53350539"
  Você pode definir um limite máximo de utilização de espaço em disco para arquivos de dados PowerPivot que são armazenados em cache no disco. O padrão é usar todo o espaço disponível em disco. Para obter instruções sobre como limitar o uso do espaço em disco, consulte [configurar o uso de espaço em disco &#40;PowerPivot para SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint.md).  
   
 ####  <a name="Upload"></a> Aumentar o tamanho máximo de carregamento de arquivo para aplicativos Web do SharePoint  
- Como as pastas de trabalho PowerPivot podem ser grandes, você pode aumentar o tamanho máximo do carregamento de arquivo. Há duas configurações de tamanho do arquivo para configurar: Tamanho máximo do carregamento para o aplicativo Web e tamanho máximo da pasta de trabalho nos serviços do Excel. O tamanho de arquivo máximo deve ser definido para o mesmo valor em ambos os aplicativos. Para obter instruções, consulte [configurar o tamanho máximo do arquivo de carregamento &#40;PowerPivot para SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md).  
+ Como as pastas de trabalho PowerPivot podem ser grandes, você pode aumentar o tamanho máximo do carregamento de arquivo. Há duas configurações de tamanho de arquivo para configurar: Tamanho máximo de carregamento para o aplicativo web e o tamanho máximo da pasta de trabalho nos serviços do Excel. O tamanho de arquivo máximo deve ser definido para o mesmo valor em ambos os aplicativos. Para obter instruções, consulte [configurar o tamanho máximo do arquivo de carregamento &#40;PowerPivot para SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md).  
   
 #### <a name="grant-sharepoint-permissions-to-workbook-users"></a>Conceder permissões do SharePoint a usuários de pastas de trabalho  
  Os usuários precisarão de permissões do SharePoint para publicar ou exibir pastas de trabalho. Certifique-se de conceder **modo de exibição** permissões para usuários que precisam exibir pastas de trabalho publicadas e **Contribute** permissões a usuários que publicam ou gerenciam pastas de trabalho. Você deve ser um administrador do conjunto de sites para conceder permissões.  

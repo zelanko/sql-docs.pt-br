@@ -35,11 +35,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 125b40193edca5dc60fa86fe5818f7722f5af91c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231187"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>Caixa de diálogo Propriedades de Ação (Construtor de Relatórios e SSRS)
   A caixa de diálogo **Ação** pode ser usada para habilitar opções de hiperlink para um gráfico, um medidor e elementos de mapa com suporte para links. Defina uma ação para que um usuário possa clicar no relatório e vincular a uma URL, para um relatório diferente no mesmo servidor de relatório ou em um site do SharePoint integrado a um servidor de relatório ou para um local diferente no mesmo relatório.  

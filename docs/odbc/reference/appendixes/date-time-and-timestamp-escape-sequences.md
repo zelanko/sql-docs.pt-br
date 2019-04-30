@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f6bd73a1bd7a9f41b20300e4abf47688a6c78794
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53200925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241017"
 ---
 # <a name="date-time-and-timestamp-escape-sequences"></a>Sequências de escape de data, hora e carimbo de data/hora
 ODBC define sequências de escape para data, hora e literais de carimbo de hora. A sintaxe dessas sequências de escape é da seguinte maneira:  

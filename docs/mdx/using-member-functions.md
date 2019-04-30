@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1c9979b6b9fcb04115695cbe8d9c224e1c6c1f57
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251602"
 ---
 # <a name="using-member-functions"></a>Usando as funções de membro
 
 
   Uma função de membro é uma função MDX válida que retorna um membro. As funções de membro, assim como as funções de tupla e de conjunto, são essenciais para negociar as estruturas multidimensionais encontradas no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
- De muitas funções de membro em MDX, o mais importante é o **CurrentMember** função, que é usada para determinar o membro atual em uma hierarquia. A consulta a seguir ilustra como usá-lo, juntamente com o **pai**, **ancestral**, e **Prevmember** funções:  
+ De muitas funções de membro em MDX, o mais importante é o **CurrentMember** função, que é usada para determinar o membro atual em uma hierarquia. A consulta a seguir ilustra como usá-lo, junto com o **pai**, **ancestral**, e **Prevmember** funções:  
   
  `WITH`  
   

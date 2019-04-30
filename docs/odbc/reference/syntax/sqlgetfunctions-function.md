@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7ac3d24b1213096be20658fb48dbfe9a6d39df8f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240233"
 ---
 # <a name="sqlgetfunctions-function"></a>Função SQLGetFunctions
 **Conformidade com**  
@@ -45,7 +45,7 @@ SQLRETURN SQLGetFunctions(
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Identificador da conexão*  
+ *ConnectionHandle*  
  [Entrada] Identificador de Conexão.  
   
  *FunctionId*  
@@ -122,7 +122,7 @@ SQLRETURN SQLGetFunctions(
 |-|-|  
 |SQL_API_SQLBINDPARAMETER|SQL_API_SQLNATIVESQL|  
 |SQL_API_SQLBROWSECONNECT|SQL_API_SQLNUMPARAMS|  
-|SQL_API_SQLBULKOPERATIONS [1]|SQL_API_SQLPRIMARYKEYS|  
+|SQL_API_SQLBULKOPERATIONS[1]|SQL_API_SQLPRIMARYKEYS|  
 |SQL_API_SQLCOLUMNPRIVILEGES|SQL_API_SQLPROCEDURECOLUMNS|  
 |SQL_API_SQLDESCRIBEPARAM|SQL_API_SQLPROCEDURES|  
 |SQL_API_SQLDRIVERCONNECT|SQL_API_SQLSETPOS|  
@@ -139,7 +139,7 @@ SQLRETURN SQLGetFunctions(
   
  [2] **SQLCancelHandle** serão retornados como tem suporte apenas se o driver dá suporte a ambos **SQLCancel** e **SQLCancelHandle**. Se **SQLCancel** tem suporte, mas **SQLCancelHandle** não for, o aplicativo ainda pode chamar **SQLCancelHandle** em um identificador de instrução, pois ele será mapeado para  **SQLCancel**.  
   
-## <a name="sqlfuncexists-macro"></a>Macro SQL_FUNC_EXISTS  
+## <a name="sqlfuncexists-macro"></a>SQL_FUNC_EXISTS Macro  
  O SQL_FUNC_EXISTS (*SupportedPtr*, *FunctionID*) macro é usada para determinar o suporte do ODBC 3 *. x* ou funções anteriores depois **SQLGetFunctions**  foi chamado com um *FunctionId* argumento de SQL_API_ODBC3_ALL_FUNCTIONS. O aplicativo chama SQL_FUNC_EXISTS com o *SupportedPtr* argumento definido como o *SupportedPtr* passado *SQLGetFunctions*e com o  *FunctionID* argumento definido como o **#define** para a função. SQL_FUNC_EXISTS SQL_TRUE se a função é suportada e SQL_FALSE caso contrário, retornará.  
   
 > [!NOTE]

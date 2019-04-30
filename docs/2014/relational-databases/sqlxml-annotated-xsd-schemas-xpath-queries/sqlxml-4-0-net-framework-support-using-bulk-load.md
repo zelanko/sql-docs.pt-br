@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 50b5630b3ee200f0eda402b62acc14ba458ebb84
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63268528"
 ---
 # <a name="using-sqlxml-bulk-load-in-the-net-environment"></a>Usando o Carregamento em Massa de SQLXML no ambiente .NET
   Este tópico explica como a funcionalidade de Carregamento em Massa de XML pode ser usada no ambiente .NET. Para obter informações detalhadas sobre o XML Bulk Load, consulte [execução de carregar dados em massa de XML &#40;SQLXML 4.0&#41;](bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md).  
@@ -139,7 +139,7 @@ ms.locfileid: "52807358"
 9. Para carregar o XML na tabela que você criou, compile e execute o projeto.  
   
     > [!NOTE]  
-    >  A referência para o componente de Carregamento em Massa (xblkld4.dll) também pode ser acionada usando a ferramenta tlbimp.exe, que está disponível como parte da estrutura .NET. Essa ferramenta cria um wrapper gerenciado para a DLL nativa (xblkld4.dll) que pode ser usada em qualquer projeto do .NET. Por exemplo:  
+    >  A referência para o componente de Carregamento em Massa (xblkld4.dll) também pode ser acionada usando a ferramenta tlbimp.exe, que está disponível como parte da estrutura .NET. Essa ferramenta cria um wrapper gerenciado para a DLL nativa (xblkld4.dll) que pode ser usada em qualquer projeto do .NET. Por exemplo:   
   
     ```  
     c:\>tlbimp xblkld4.dll  

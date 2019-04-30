@@ -12,11 +12,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.openlocfilehash: 6677119a35d1d51ac8b6563d9bd9b9f32668c273
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239370"
 ---
 # <a name="integrated-terminal"></a>Terminal integrado
 
@@ -96,15 +96,15 @@ Abaixo estão os atalhos de teclado para navegar rapidamente no terminal integra
 
 Chave|Comando
 ---|---
-**CTRL +'**|Mostrar o terminal integrado
-**Ctrl + Shift +'**|Criar um novo terminal
+**CTRL +'**| Mostrar o terminal integrado
+**Ctrl + Shift +'**| Criar um novo terminal
 **CTRL + seta para cima**|Role para cima
-**CTRL + seta para baixo**|Role para baixo
-**Ctrl + PageUp**|Rola página para cima
-**Ctrl + PageDown**|Rolar página para baixo
+**Ctrl+Down**|Role para baixo
+**Ctrl+PageUp**|Rola página para cima
+**Ctrl+PageDown**|Rolar página para baixo
 **CTRL + Home**|Role para cima
-**CTRL + End**|Role para baixo
-**CTRL + K**|Limpar o terminal
+**Ctrl+End**|Role para baixo
+**Ctrl+K**|Limpar o terminal
 
 Outros comandos de terminal estão disponíveis e podem ser associados a seus atalhos de teclado preferencial.
 

@@ -10,11 +10,11 @@ ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 58ed105619ca5ad5eadb00271e18ddaa10c6bfe3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266818"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>Planejando o suporte ao navegador do Reporting Services e do Power View (Reporting Services 2014)
   No [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], você usa um navegador da Web para exibir relatórios e executar o Gerenciador de Relatórios. Nem todos os navegadores dão suporte à funcionalidade de relatório. Este tópico descreve o suporte e os requisitos para os recursos de gerenciamento do Gerenciador de Relatórios, exibir relatórios, os controles do Visualizador de Relatórios no Visual Studio. O tópico também resume a disponibilidade de recursos para os navegadores com suporte, os requisitos de autenticação e os requisitos de script.  

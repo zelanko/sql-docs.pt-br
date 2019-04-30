@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 62d13bdc9d1a0fc030dc33bf982f6561b454c4ea
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232289"
 ---
 # <a name="create-table---sql-command"></a>CREATE TABLE – comando SQL
 Cria uma tabela que tem os campos especificados.  
@@ -50,12 +50,12 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
  CRIAR a tabela &#124; DBF *TableName1*  
  Especifica o nome da tabela a ser criada. As opções de tabela e DBF são idênticas.  
   
- NOME *LongTableName*  
+ NAME *LongTableName*  
  Especifica um nome longo para a tabela. Um nome de tabela longa pode ser especificado somente quando um banco de dados é aberto, como nomes de tabela longos são armazenados em bancos de dados.  
   
  Nomes longos podem conter até 128 caracteres e podem ser usados no lugar de nomes de arquivos curtos no banco de dados.  
   
- GRATUITO  
+ FREE  
  Especifica que a tabela não será adicionada a um banco de dados aberto. LIVRE não será necessária se um banco de dados não estiver aberto.  
   
  *(FieldName1 FieldType* [( *nFieldWidth* [, *nPrecision*])]  
@@ -76,10 +76,10 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
  VERIFICAR *lExpression1*  
  Especifica uma regra de validação para o campo. *lExpression1* pode ser uma função definida pelo usuário. Sempre que um registro em branco for anexado, a regra de validação é verificada. Um erro será gerado se a regra de validação não permite que um valor de campo em branco em um registro acrescentado.  
   
- Erro *cMessageText1*  
+ ERROR *cMessageText1*  
  Especifica a mensagem de erro que do Visual FoxPro exibe quando a regra de campo gera um erro. A mensagem é exibida somente quando dados são alterados dentro de uma janela Procurar ou uma janela de edição.  
   
- PADRÃO *eExpression1*  
+ DEFAULT *eExpression1*  
  Especifica um valor padrão para o campo. O tipo de dados *eExpression1* deve ser o mesmo tipo de dados do campo.  
   
  PRIMARY KEY  
@@ -93,7 +93,7 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
   
  Valores nulos e registros duplicados não são permitidos em um campo usado para um índice primárias ou candidatas. No entanto, do Visual FoxPro não gerará um erro se você criar um índice primárias ou candidatas para um campo que dá suporte a valores nulos. Do Visual FoxPro gerará um erro se você tentar inserir um valor nulo ou duplicado em um campo usado para um índice primárias ou candidatas.  
   
- As referências *TableName2*[marca *TagName1*]  
+ REFERENCES *TableName2*[TAG *TagName1*]  
  Especifica a tabela pai para o qual é estabelecida uma relação de persistente. Se você omitir a marca *TagName1*, a relação é estabelecida usando a chave de índice primário da tabela pai. Se a tabela pai não tiver um índice primário, o Visual FoxPro gerará um erro.  
   
  Marcação include *TagName1* para estabelecer uma relação com base em uma marca de índice existente para a tabela pai. Nomes de marca de índice podem conter até 10 caracteres.  
@@ -125,10 +125,10 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
  Você pode criar vários índices da tabela externos, mas as expressões de índice externo devem especificar campos diferentes na tabela.  
   
- As referências *TableName3*[marca *TagName5*]  
+ REFERENCES *TableName3*[TAG *TagName5*]  
  Especifica a tabela pai para o qual é estabelecida uma relação de persistente. Marcação include *TagName5* para estabelecer uma relação com base em uma marca de índice para a tabela pai. Nomes de marca de índice podem conter até 10 caracteres. Por padrão, se você omitir a marca *TagName5,* a relação é estabelecida usando a chave de índice primário da tabela pai.  
   
- Verifique *eExpression2*[erro *cMessageText2*]  
+ CHECK *eExpression2*[ERROR *cMessageText2*]  
  Especifica a regra de validação de tabela. Erro *cMessageText2* Especifica a mensagem de erro do Visual FoxPro exibe quando a regra de validação de tabela é executada. A mensagem é exibida somente quando os dados são alterados em uma janela Procurar ou janela de edição.  
   
  DA matriz *ArrayName*  
@@ -151,7 +151,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
 |Sintaxe de ODBC|Sintaxe do Visual FoxPro|  
 |-----------------|--------------------------|  
-|CREATE TABLE *nome da tabela de base*<br /><br /> (*tipo de dados de identificador de coluna*<br /><br /> [NOT NULL]<br /><br /> [,*tipo de dados de identificador de coluna*<br /><br /> [NOT NULL]...)|Criar tabela *TableName1* [nome *LongTableName*]<br /><br /> (*FieldName1* *FieldType*<br /><br /> [(*nFieldWidth* [, *nPrecision*])]<br /><br /> [NOT NULL])|  
+|CREATE TABLE *nome da tabela de base*<br /><br /> (*tipo de dados de identificador de coluna*<br /><br /> [NOT NULL]<br /><br /> [,*tipo de dados de identificador de coluna*<br /><br /> [NOT NULL]...)|CREATE TABLE *TableName1* [NAME *LongTableName*]<br /><br /> (*FieldName1* *FieldType*<br /><br /> [(*nFieldWidth* [, *nPrecision*])]<br /><br /> [NOT NULL])|  
   
  Quando você cria uma tabela usando o driver, o driver fecha a tabela imediatamente após a criação para permitir o acesso à tabela por outros usuários. Isso é diferente do Visual FoxPro, o que deixa a tabela aberta exclusivamente no momento da criação. No entanto, se um procedimento armazenado em sua fonte de dados que contém uma instrução CREATE TABLE for executada, a tabela é deixada aberta.  
   

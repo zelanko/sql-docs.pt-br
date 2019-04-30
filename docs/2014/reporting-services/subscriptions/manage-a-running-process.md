@@ -29,11 +29,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 12fa851a8f524bae83017042d01a7c7733225fd7
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59962512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237792"
 ---
 # <a name="manage-a-running-process"></a>Manage a Running Process
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] monitora o status dos trabalhos que estão em execução no servidor de relatório. Em intervalos regulares, o servidor de relatório examina os trabalhos em andamento e grava as informações de status no banco de dados do servidor de relatório ou os bancos de dados de aplicativo de serviço para o modo do SharePoint. Um trabalho está em andamento se algum dos seguintes processos estiver ocorrendo: execução de consulta em um servidor de banco de dados remoto ou local, processamento de relatórios e renderização de relatórios.  

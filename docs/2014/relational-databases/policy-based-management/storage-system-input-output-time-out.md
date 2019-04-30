@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9d349a21fdd522b5af299c3ad130cdce984f569c
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253166"
 ---
 # <a name="storage-system-input-output-time-out"></a>Tempo limite de entrada e saída dd sistema de armazenamento
   Esta regra verifica o log de eventos do sistema para o EventId 9. Esta mensagem indica que o tempo limite de E/S ocorreu no sistema de armazenamento.  

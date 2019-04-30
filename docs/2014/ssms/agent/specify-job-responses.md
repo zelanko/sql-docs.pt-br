@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9fa238a639321e9464ca3de2cc074b516f7df1e1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63246002"
 ---
 # <a name="specify-job-responses"></a>Especificar respostas de trabalho
   As respostas de trabalho especificam ações que o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve efetuar após a conclusão de um trabalho. As respostas de trabalho asseguram que os administradores de banco de dados saibam quando os trabalhos são concluídos e a frequência com que são executados. São respostas de trabalho típicas:  
@@ -43,7 +43,7 @@ ms.locfileid: "52771668"
 |-|-|  
 |**Descrição**|**Tópico**|  
 |Descreve como notificar um operador sobre o status do trabalho.|[Notify an Operator of Job Status](notify-an-operator-of-job-status.md)|  
-|Descreve como gravar o status do trabalho no log de aplicativos do Windows.|[Write the Job Status to the Windows Application Log](../../reporting-services/report-server/windows-application-log.md)|  
+|Descreve como gravar o status do trabalho no log de aplicativos do Windows.|[Para gravar o status do trabalho no log de aplicativos do Windows](../../reporting-services/report-server/windows-application-log.md)|  
   
 ## <a name="see-also"></a>Consulte também  
  [Monitorar e responder a eventos](monitor-and-respond-to-events.md)  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59225dd445ec2d075b9c7c8ca7eac52af2020a68
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273741"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Passo a passo: Adicionando e alterando um diagrama de banco de dados
   Este passo a passo ilustra como criar e modificar um diagrama de banco de dados e fazer alterações no banco de dados por meio do componente de diagramas de banco de dados. Você verá como adicionar tabelas a diagramas, criar relações entre tabelas, criar restrições e índices em colunas, e alterar o nível das informações exibidas em cada tabela.  
@@ -130,7 +130,7 @@ ms.locfileid: "52822620"
   
 2.  Arraste `T2col1` para `T1col1`.  
   
-     São exibidas duas caixas de diálogo: **Relação de chave estrangeira** em segundo plano e **tabelas e colunas** em primeiro plano.  
+     Duas caixas de diálogo são exibidas: **Relação de chave estrangeira** em segundo plano e **tabelas e colunas** em primeiro plano.  
   
 3.  Clique em **OK** para salvar a nova relação.  
   

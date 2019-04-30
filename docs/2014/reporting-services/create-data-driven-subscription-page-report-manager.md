@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 625afedabdb376f913d3353e2bda343bba66e3e1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265947"
 ---
 # <a name="create-data-driven-subscription-page-report-manager"></a>Página Criar Assinatura Controlada por Dados (Gerenciador de Relatórios)
   Use a página Criar Assinatura Controlada por Dados para criar ou modificar uma assinatura que consulta um banco de dados de assinante para informações de assinatura cada vez que a assinatura é executada. Assinaturas controladas por dados usam resultados de consulta para determinar os destinatários da assinatura, as configurações de entrega e os valores de parâmetro do relatório. Em tempo de execução, o servidor de relatórioss executa uma consulta para obter valores usados nas configurações da assinatura. Você pode usar a página Criar Assinatura Controlada por Dados para definir a consulta e atribuir valores de consulta às configurações de assinatura. Os valores e as opções especificadas para uma assinatura controlada por dados são divididos entre várias páginas, semelhantes a um assistente. Há sete páginas ao todo.  

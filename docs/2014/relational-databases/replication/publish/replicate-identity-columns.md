@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e89bfac90a0658c8f5ba839632451187ffa9760d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810948"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261898"
 ---
 # <a name="replicate-identity-columns"></a>Replicar colunas de identidade
   Quando se atribui uma propriedade IDENTITY a uma coluna, o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gera automaticamente números sequenciais para novas linhas inseridas na tabela que contém a coluna de identidade. Para obter mais informações, consulte [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property). Como as colunas de identidade podem ser incluídas como parte da chave primária, é importante evitar valores duplicados nas colunas de identidade. Para que colunas de identidade sejam usadas em uma topologia de replicação que tenha atualizações em mais de um nó, cada nó da topologia de replicação precisará usar um intervalo diferente de valores de identidade, de modo que não ocorram duplicatas.  

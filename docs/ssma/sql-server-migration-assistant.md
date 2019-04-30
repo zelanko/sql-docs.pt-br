@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: a5cc32ab3579555bff85e4e18052bd0126372517
-ms.sourcegitcommit: d040bab6f826f0c37cd207a6c7cef04a8963c5d3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54031712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240223"
 ---
 # <a name="sql-server-migration-assistant"></a>Assistente de Migração do SQL Server
 Microsoft SQL Server SSMA (Migration Assistant) é uma ferramenta projetada para automatizar a migração de banco de dados para o SQL Server do Microsoft Access, DB2, MySQL, Oracle e SAP ASE.  
@@ -82,7 +82,7 @@ A menos que indicado o contrário, os exemplos de empresas, organizações, prod
   
 A Microsoft pode ter patentes ou requisições para obtenção de patente, marcas comerciais, direitos autorais ou outros direitos de propriedade intelectual que abrangem o conteúdo desta documentação. A posse desta documentação não lhe confere nenhum direito sobre as citadas patentes, marcas comerciais, direitos autorais ou outros direitos de propriedade intelectual, salvo aqueles expressamente mencionados em um contrato de licença, por escrito, da Microsoft.  
   
-© Microsoft Corporation de 2019. Todos os direitos reservados.  
+© 2019 Microsoft Corporation. Todos os direitos reservados.  
   
 Microsoft, Windows, Windows NT, Windows Server, Active Directory, ActiveX, BackOffice, bCentral, BizTalk, DirectX, Excel, Hotmail, IntelliSense, J/Direct, Jscript, Microsoft Press, MSDN, MS-DOS, Outlook, Gráfico Dinâmico, Tabela Dinâmica, PowerPoint, SharePoint, SQL Server, Visual Basic, Visual C#, Visual C++, Visual FoxPro, Visual InterDev, Visual J#, Visual J++, Visual SourceSafe, Visual Studio, Win32, Win32s, Windows Mobile, Windows Server System e WinFX são marcas registradas ou comerciais da Microsoft Corporation nos Estados Unidos e/ou em outros países/regiões.  
   

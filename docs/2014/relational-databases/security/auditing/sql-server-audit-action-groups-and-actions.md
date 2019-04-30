@@ -22,11 +22,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: e204a1865c2a928079fcd9b32b31a8ae0c0bd0a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238130"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>Ações e grupos de ações de auditoria do SQL Server
   O recurso [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit permite auditar grupos de eventos e eventos individuais no nível do servidor e do banco de dados. Para obter mais informações, veja [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](sql-server-audit-database-engine.md).  
@@ -71,7 +71,7 @@ ms.locfileid: "48222986"
   
  A tabela a seguir descreve os grupos de ações de auditoria no nível do servidor e fornece a Classe de Evento SQL Server equivalente onde aplicável.  
   
-|Nome do grupo de ação|Description|  
+|Nome do grupo de ação|Descrição|  
 |-----------------------|-----------------|  
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|Esse evento é gerado sempre que uma senha é alterada por uma função de aplicativo. Equivalente a [Audit App Role Change Password Event Class](../../event-classes/audit-app-role-change-password-event-class.md).|  
 |AUDIT_CHANGE_GROUP|Esse evento é gerado sempre que uma auditoria é criada, modificada ou excluída. Esse evento é gerado sempre que qualquer especificação de auditoria é criada, modificada ou excluída. Qualquer alteração em uma auditoria é auditada nessa auditoria. Equivalente a [Audit Change Audit Event Class](../../event-classes/audit-change-audit-event-class.md).|  
@@ -80,8 +80,8 @@ ms.locfileid: "48222986"
 |DATABASE_CHANGE_GROUP|Esse evento é gerado quando um banco de dados é criado, alterado ou descartado. Esse evento é gerado sempre que um banco de dados é criado, alterado ou descartado. Equivalente a [Audit Database Management Event Class](../../event-classes/audit-database-management-event-class.md).|  
 |DATABASE_LOGOUT_GROUP|Esse evento é gerado quando um usuário de banco de dados independente faz logoff de um banco de dados. Equivalente à classe de evento Audit Database Logout.|  
 |DATABASE_MIRRORING_LOGIN_GROUP|Esse evento é gerado para relatar mensagens de auditoria relacionadas à segurança de transporte de espelhamento de banco de dados. Equivalente a [Audit Database Mirroring Login Event Class](../../event-classes/audit-database-mirroring-login-event-class.md).|  
-|DATABASE_OBJECT_ACCESS_GROUP|Esse evento é gerado sempre que objetos de banco de dados, como tipo de mensagem, assembly, contrato, são acessados.<br /><br /> Ele é gerado para qualquer acesso a qualquer banco de dados. **Observação:** isso poderia levar a registros de auditoria grandes. <br /><br /> Equivalente a [Audit Database Object Access Event Class](../../event-classes/audit-database-object-access-event-class.md).|  
-|DATABASE_OBJECT_CHANGE_GROUP|Esse evento é gerado quando uma instrução CREATE, ALTER ou DROP é executada em objetos de banco de dados, como esquemas. Ele é gerado sempre que um objeto de banco de dados é criado, alterado ou descartado. **Observação:** isso poderia gerar volumes muito grandes de registros de auditoria. <br /><br /> Equivalente a [Audit Database Object Management Event Class](../../event-classes/audit-database-object-management-event-class.md).|  
+|DATABASE_OBJECT_ACCESS_GROUP|Esse evento é gerado sempre que objetos de banco de dados, como tipo de mensagem, assembly, contrato, são acessados.<br /><br /> Ele é gerado para qualquer acesso a qualquer banco de dados. **Observação:**  Isso poderia levar a registros de auditoria grandes. <br /><br /> Equivalente a [Audit Database Object Access Event Class](../../event-classes/audit-database-object-access-event-class.md).|  
+|DATABASE_OBJECT_CHANGE_GROUP|Esse evento é gerado quando uma instrução CREATE, ALTER ou DROP é executada em objetos de banco de dados, como esquemas. Ele é gerado sempre que um objeto de banco de dados é criado, alterado ou descartado. **Observação:**  Isso pode levar a quantidades muito grandes de registros de auditoria. <br /><br /> Equivalente a [Audit Database Object Management Event Class](../../event-classes/audit-database-object-management-event-class.md).|  
 |DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP|Esse evento é gerado quando há uma alteração de proprietário para objetos dentro do escopo do banco de dados. Ele é gerado para qualquer alteração de propriedade de objeto em qualquer banco de dados no servidor. Equivalente a [Audit Database Object Take Ownership Event Class](../../event-classes/audit-database-object-take-ownership-event-class.md).|  
 |DATABASE_OBJECT_PERMISSION_CHANGE_GROUP|Esse evento é gerado quando GRANT, REVOKE ou DENY é emitido para objetos de banco de dados, como assemblies e esquemas. Ele é gerado para qualquer alteração de permissão de objeto em qualquer banco de dados no servidor. Equivalente a [Audit Database Object GDR Event Class](../../event-classes/audit-database-object-gdr-event-class.md).|  
 |DATABASE_OPERATION_GROUP|Esse evento é gerado quando ocorrem operações em um banco de dados, como um ponto de verificação ou uma notificação de consulta de assinatura. Esse evento é gerado em qualquer operação de banco de dados em qualquer banco de dados. Equivalente a [Audit Database Operation Event Class](../../event-classes/audit-database-operation-event-class.md).|  
@@ -125,7 +125,7 @@ ms.locfileid: "48222986"
   
  A tabela a seguir descreve os grupos de ações de auditoria no nível de banco de dados e fornece a Classe de Evento do SQL Server equivalente onde aplicável.  
   
-|Nome do grupo de ação|Description|  
+|Nome do grupo de ação|Descrição|  
 |-----------------------|-----------------|  
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|Esse evento é gerado sempre que uma senha é alterada por uma função de aplicativo. Equivalente a [Audit App Role Change Password Event Class](../../event-classes/audit-app-role-change-password-event-class.md).|  
 |AUDIT_CHANGE_GROUP|Esse evento é gerado sempre que uma auditoria é criada, modificada ou excluída. Esse evento é gerado sempre que qualquer especificação de auditoria é criada, modificada ou excluída. Qualquer alteração em uma auditoria é auditada nessa auditoria. Equivalente a [Audit Change Audit Event Class](../../event-classes/audit-change-audit-event-class.md).|  
@@ -155,12 +155,12 @@ ms.locfileid: "48222986"
 ## <a name="database-level-audit-actions"></a>Ações de auditoria no nível do banco de dados  
  Ações no nível do banco de dados oferecem suporte à auditoria de ações específicas diretamente no esquema do banco de dados e em objetos do esquema, como tabelas, exibições, procedimentos armazenados, funções, procedimentos armazenados estendidos, filas e sinônimos. Tipos, coleção de esquema XML, banco de dados e esquema não são auditados. A auditoria de objetos de esquema pode ser configurada no esquema e no banco de dados, o que indica que os eventos em todos os objetos do esquema contidos no esquema ou banco de dados especificado serão auditados. A tabela a seguir descreve ações de auditoria no nível de banco de dados.  
   
-|Ação|Description|  
+|Ação|Descrição|  
 |------------|-----------------|  
 |SELECT|Esse evento é gerado sempre que SELECT é emitido.|  
 |UPDATE|Esse evento é gerado sempre que UPDATE é emitido.|  
 |INSERT|Esse evento é gerado sempre que INSERT é emitido.|  
-|Delete (excluir)|Esse evento é gerado sempre que DELETE é emitido.|  
+|DELETE|Esse evento é gerado sempre que DELETE é emitido.|  
 |Execute|Esse evento é gerado sempre que EXECUTE é emitido.|  
 |RECEIVE|Esse evento é gerado sempre que RECEIVE é emitido.|  
 |REFERENCES|Esse evento é gerado sempre que uma permissão REFERENCES é verificada.|  
@@ -175,7 +175,7 @@ ms.locfileid: "48222986"
 ## <a name="audit-level-audit-action-groups"></a>Grupos de ação de auditoria no nível de auditoria  
  Também é possível auditar as ações no processo de auditoria. Isso pode ocorrer no escopo de servidor ou no escopo do banco de dados. No escopo do banco de dados, isso ocorre somente para especificações de auditoria de banco de dados. A tabela a seguir descreve grupos de ações de auditoria no nível da auditoria.  
   
-|Nome do grupo de ação|Description|  
+|Nome do grupo de ação|Descrição|  
 |-----------------------|-----------------|  
 |AUDIT_ CHANGE_GROUP|Esse evento é gerado sempre que um dos comandos a seguir é emitido:<br /><br /> -CRIAR AUDITORIA DE SERVIDOR<br />-ALTER SERVER AUDIT<br />-DROP SERVER AUDIT<br />-CRIAR ESPECIFICAÇÃO DE AUDITORIA DE SERVIDOR<br />-ALTER SERVER AUDIT SPECIFICATION<br />-DROP SERVER AUDIT SPECIFICATION<br />-CRIAR ESPECIFICAÇÃO DE AUDITORIA DE BANCO DE DADOS<br />-ALTER DATABASE AUDIT SPECIFICATION<br />-ESPECIFICAÇÃO DE AUDITORIA DE BANCO DE DADOS SOLTAR|  
   

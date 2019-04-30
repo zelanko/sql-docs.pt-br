@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 027b711c5c1a2cb2d35e65efdc2b00f441841d8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240976"
 ---
 # <a name="descriptor-transitions"></a>Transições de descritor
 Descritores ODBC tem três estados.  
   
-|Estado|Description|  
+|Estado|Descrição|  
 |-----------|-----------------|  
 |D0|Descritor não alocado|  
 |D1i|Descritor implicitamente alocado|  
@@ -33,12 +33,12 @@ Descritores ODBC tem três estados.
   
  As tabelas a seguir mostram como cada função ODBC afeta o estado do descritor.  
   
-## <a name="sqlallochandle"></a>Falha de SQLAllocHandle  
+## <a name="sqlallochandle"></a>SQLAllocHandle  
   
-|D0<br /><br /> Não alocado|D1i<br /><br /> Implícito|D1e<br /><br /> Explícito|  
+|D0<br /><br /> Não alocado|D1i<br /><br /> Implícita|D1e<br /><br /> Explícito|  
 |------------------------|----------------------|----------------------|  
-|D1i [1]|--|--|  
-|D1e [2]|--|--|  
+|D1i[1]|--|--|  
+|D1e[2]|--|--|  
   
  [1] essa linha mostra as transições quando *HandleType* foi SQL_HANDLE_STMT.  
   
@@ -46,16 +46,16 @@ Descritores ODBC tem três estados.
   
 ## <a name="sqlcopydesc"></a>SQLCopyDesc  
   
-|D0<br /><br /> Não alocado|D1i<br /><br /> Implícito|D1e<br /><br /> Explícito|  
+|D0<br /><br /> Não alocado|D1i<br /><br /> Implícita|D1e<br /><br /> Explícito|  
 |------------------------|----------------------|----------------------|  
 |(IH)|--|--|  
   
 ## <a name="sqlfreehandle"></a>SQLFreeHandle  
   
-|D0<br /><br /> Não alocado|D1i<br /><br /> Implícito|D1e<br /><br /> Explícito|  
+|D0<br /><br /> Não alocado|D1i<br /><br /> Implícita|D1e<br /><br /> Explícito|  
 |------------------------|----------------------|----------------------|  
 |--[1]|D0|--|  
-|(IH) [2]|(HY017)|D0|  
+|(IH)[2]|(HY017)|D0|  
   
  [1] essa linha mostra as transições quando *HandleType* foi SQL_HANDLE_STMT.  
   
@@ -63,20 +63,20 @@ Descritores ODBC tem três estados.
   
 ## <a name="sqlgetdescfield-and-sqlgetdescrec"></a>SQLGetDescField e SQLGetDescRec  
   
-|D0<br /><br /> Não alocado|D1i<br /><br /> Implícito|D1e<br /><br /> Explícito|  
+|D0<br /><br /> Não alocado|D1i<br /><br /> Implícita|D1e<br /><br /> Explícito|  
 |------------------------|----------------------|----------------------|  
 |(IH)|--|--|  
   
 ## <a name="sqlsetdescfield-and-sqlsetdescrec"></a>SQLSetDescField e SQLSetDescRec  
   
-|D0<br /><br /> Não alocado|D1i<br /><br /> Implícito|D1e<br /><br /> Explícito|  
+|D0<br /><br /> Não alocado|D1i<br /><br /> Implícita|D1e<br /><br /> Explícito|  
 |------------------------|----------------------|----------------------|  
-|(IH) [1]|--|--|  
+|(IH)[1]|--|--|  
   
  [1] essa linha mostra as transições quando *DescriptorHandle* era o identificador de APD, descartar ou IPD, ou (para **SQLSetDescField**) quando *DescriptorHandle* era o identificador de um IRD e *FieldIdentifier* era SQL_DESC_ARRAY_STATUS_PTR ou SQL_DESC_ROWS_PROCESSED_PTR.  
   
 ## <a name="all-other-odbc-functions"></a>Todas as outras funções ODBC  
   
-|D0<br /><br /> Não alocado|D1i<br /><br /> Implícito|D1e<br /><br /> Explícito|  
+|D0<br /><br /> Não alocado|D1i<br /><br /> Implícita|D1e<br /><br /> Explícito|  
 |------------------------|----------------------|----------------------|  
 |--|--|--|

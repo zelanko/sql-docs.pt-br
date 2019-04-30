@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c575683b5ec23c6739a37eae177be004efea0a57
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51599897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255726"
 ---
 # <a name="readystate-property-rds"></a>Propriedade ReadyState (RDS)
 Indica o progresso de uma [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) do objeto conforme ele recupera dados em seus [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
@@ -30,7 +30,7 @@ Indica o progresso de uma [DataControl](../../../ado/reference/rds-api/datacontr
 ## <a name="settings-and-return-values"></a>As configurações e valores de retorno  
  Define ou retorna um dos valores a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**adcReadyStateLoaded**|A consulta atual ainda está em execução e sem linhas foram buscadas. O **DataControl** do objeto **Recordset** não está disponível para uso.|  
 |**adcReadyStateInteractive**|Um conjunto inicial de linhas recuperadas pela consulta atual foi armazenado na **DataControl** do objeto **Recordset** e estão disponíveis para uso. As linhas restantes ainda estão sendo buscadas.|  

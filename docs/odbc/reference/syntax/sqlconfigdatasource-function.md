@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1ef74d98102c424a71ac1728d664fddbeac2296c
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63258857"
 ---
 # <a name="sqlconfigdatasource-function"></a>Função SQLConfigDataSource
 **Conformidade com**  
@@ -51,7 +51,7 @@ BOOL SQLConfigDataSource(
  *hwndParent*  
  [Entrada] Identificador de janela pai. A função não exibirá nenhuma caixa de diálogo se o identificador for nulo.  
   
- *Frequentes*  
+ *fRequest*  
  [Entrada] Tipo de solicitação. O *frequentes* argumento deve conter um dos seguintes valores:  
   
  ODBC_ADD_DSN: Adicione uma nova fonte de dados do usuário.  
@@ -98,7 +98,7 @@ BOOL SQLConfigDataSource(
   
  **SQLConfigDataSource** mapeia o DSN do sistema *frequentes*s para o DSN de usuário *frequentes*s (ODBC_ADD_SYS_DSN para ODBC_ADD_DSN, ODBC_CONFIG_SYS_DSN ODBC_CONFIG_DSN e ODBC_REMOVE_SYS_ DSN para ODBC_REMOVE_DSN). Para distinguir os DSNs de sistema e de usuário **SQLConfigDataSource** define o instalador do modo de configuração de acordo com a tabela a seguir. Antes de retornar, **SQLConfigDataSource** redefine o modo de configuração para BOTHDSN. **ConfigDSN** (implementado pelos drivers) deve chamar **SQLWriteDSNToIni** e **SQLWritePrivateProfileString** para dar suporte a um DSN de sistema. Para obter mais informações, consulte [função ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md).  
   
-|*Frequentes*|Modo de configuração|  
+|*fRequest*|Modo de configuração|  
 |----------------|------------------------|  
 |ODBC_ADD_DSN|USERDSN_ONLY|  
 |ODBC_CONFIG_DSN|USERDSN_ONLY|  

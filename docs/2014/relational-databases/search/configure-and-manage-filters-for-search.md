@@ -14,14 +14,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: eecfb2ef387bb5989f7c25a7bf7493d71899415b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281996"
 ---
 # <a name="configure-and-manage-filters-for-search"></a>Configurar e gerenciar filtros para pesquisa
-  Indexação de documentos em uma `varbinary`, `varbinary(max)`, `image`, ou `xml` coluna de tipo de dados exige processamento extra. Esse processamento deve ser realizado por um filtro. O filtro extrai as informações textuais do documento (removendo a formatação). Em seguida, o filtro envia o texto para o componente separador de palavras do idioma associado à coluna da tabela.  
+  A indexação de documentos em uma coluna de tipo de dados `varbinary`, `varbinary(max)`, `image` ou `xml` requer processamento extra. Esse processamento deve ser realizado por um filtro. O filtro extrai as informações textuais do documento (removendo a formatação). Em seguida, o filtro envia o texto para o componente separador de palavras do idioma associado à coluna da tabela.  
   
  Um determinado filtro é específico a um determinado tipo de documento (.doc, .pdf, .xls, .xml e assim por diante). Estes filtros implementam a interface IFilter. Para obter mais informações sobre estes tipos de documento, veja a exibição de catálogo [sys.fulltext_document_types](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql) .  
   

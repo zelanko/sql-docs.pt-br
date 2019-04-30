@@ -1,5 +1,5 @@
 ---
-title: Extensão do PostgreSQL (visualização)
+title: Extensão do PostgreSQL (versão prévia)
 titleSuffix: Azure Data Studio
 description: Extensão do PostgreSQL (visualização) para o Studio de dados do Azure
 ms.custom: seodec18
@@ -12,13 +12,13 @@ author: rachel-msft
 ms.author: raagyema
 manager: craigg
 ms.openlocfilehash: e25dd1c244766e1409e14747722fe53b3583c9a0
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63252825"
 ---
-# <a name="postgresql-extension-preview"></a>Extensão do PostgreSQL (visualização)
+# <a name="postgresql-extension-preview"></a>Extensão do PostgreSQL (versão prévia)
 
 A extensão do PostgreSQL (visualização) permite que você se conectar ao, consultar e desenvolver para Postgres usando os recursos do estúdio de dados do Azure. 
 

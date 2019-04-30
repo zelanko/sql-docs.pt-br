@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 788e749d7fbfe62e61bedb57b53c994351427be3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59962172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266287"
 ---
 # <a name="cube-selection-dialog-box-report-builder"></a>Caixa de diálogo Seleção de Cubo (Construtor de Relatórios)
   Use a caixa de diálogo **Seleção de Cubo** para selecionar um cubo diferente como uma fonte de dados para seu relatório. Selecionando um cubo diferente, sua consulta talvez não seja mais válida.  

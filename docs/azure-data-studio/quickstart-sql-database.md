@@ -1,5 +1,5 @@
 ---
-title: 'Guia de início rápido: Conectar e consultar um banco de dados SQL do Azure'
+title: 'Início Rápido: Conectar e consultar um banco de dados SQL do Azure'
 titleSuffix: Azure Data Studio
 description: Este início rápido mostra como usar o Studio de dados do Azure para se conectar a um banco de dados SQL e executar uma consulta
 ms.custom: seodec18
@@ -12,13 +12,13 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.openlocfilehash: d368f38589530f27db98c3c61b9cec4610818ae4
-ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255967"
 ---
-# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>Guia de início rápido: Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] para se conectar e consultar o banco de dados SQL do Azure
+# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>Início Rápido: Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] para se conectar e consultar o banco de dados SQL do Azure
 
 Neste início rápido, você usará [!INCLUDE[name-sos](../includes/name-sos-short.md)] para se conectar a um servidor de banco de dados SQL. Em seguida, você vai executar instruções Transact-SQL (T-SQL) para criar e consultar o banco de dados TutorialDB, que é usado em outros [!INCLUDE[name-sos](../includes/name-sos-short.md)] tutoriais.
 

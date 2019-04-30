@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 484919274e7b7df3c49ce03668950807c3627d30
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63268369"
 ---
 # <a name="tutorial-database-engine-tuning-advisor"></a>Tutorial: Database Engine Tuning Advisor
   Bem-vindo ao tutorial do Orientador de Otimização do Mecanismo de Banco de Dados. O Orientador de Otimização do Mecanismo de Banco de Dados examina como são processadas as consultas nos bancos de dados que você especifica e recomenda meios de aprimorar o desempenho de processamento de consultas, modificando as estruturas do banco de dados, como índices, exibições indexadas e particionamento.  
@@ -31,7 +31,7 @@ ms.locfileid: "52767608"
  [Lição 1: Navegação básica no orientador de otimização do mecanismo de banco de dados](../../relational-databases/performance/database-engine-tuning-advisor.md)  
  Nessa lição, você se acostumará com a nova interface gráfica do usuário do Orientador de Otimização do Mecanismo de Banco de Dados e aprenderá a definir opções de display e layout.  
   
- [Lição 2: Usando o orientador de otimização do mecanismo de banco de dados](lesson-2-using-database-engine-tuning-advisor.md)  
+ [Lição 2: Usando o Orientador de Otimização do Mecanismo de Banco de Dados](lesson-2-using-database-engine-tuning-advisor.md)  
  Nessa lição, você aprenderá a executar tarefas básicas de ajuste com a GUI do Orientador de Otimização do Mecanismo de Banco de Dados.  
   
  [Lição 3: Usando o utilitário de Prompt de comando dta](lesson-3-using-the-dta-command-prompt-utility.md)  

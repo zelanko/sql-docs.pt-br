@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ee695c62fc60b2ebb0ae9bb33ef9008ba617b49a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63254153"
 ---
 # <a name="driver-tasks"></a>Tarefas de driver
 As tarefas específicas realizadas por drivers incluem:  

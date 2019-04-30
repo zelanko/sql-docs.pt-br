@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e6e3ecc4b125d226fc2cdf6dbe241e0ce017eae6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63245935"
 ---
 # <a name="set-a-trace-filter-transact-sql"></a>Definir um filtro de rastreamento (Transact-SQL)
   Este tópico descreve como usar procedimentos armazenados para criar um filtro que recupera apenas as informações que você necessita em um evento que está sendo rastreado.  
@@ -30,7 +30,7 @@ ms.locfileid: "54126686"
 2.  Execute **sp_trace_setfilter** para configurar o tipo de informações para recuperar para o evento que está sendo rastreado.  
   
 > [!IMPORTANT]
->  Diferentemente dos procedimentos armazenados comuns, parâmetros de todos os [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] procedimentos armazenados (<strong>sp_trace*xx*</strong>) são estritamente tipados e não dão suporte a conversão de tipo de dados automática. Se esses parâmetros não forem chamados com os tipos de dados com parâmetro de entrada corretos, como especificado na descrição do argumento, o procedimento armazenado retornará um erro.  
+>  Ao contrário dos procedimentos armazenados comuns, os parâmetros de todos os procedimentos armazenados do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] (<strong>sp_trace_*xx*</strong>) são estritamente tipados e não são compatíveis com a conversão automática de tipo de dados. Se esses parâmetros não forem chamados com os tipos de dados com parâmetro de entrada corretos, como especificado na descrição do argumento, o procedimento armazenado retornará um erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [Filtrar um rastreamento](../../relational-databases/sql-trace/filter-a-trace.md)   

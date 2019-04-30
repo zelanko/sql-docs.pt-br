@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1a16262d562ca2088f38cd863a6f44e537e65d40
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622164"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63254207"
 ---
 # <a name="multithreading"></a>Multithreading
 Em sistemas operacionais de vários threads, os drivers devem ser thread-safe. Ou seja, deve ser possível que aplicativos usem o mesmo identificador em mais de um thread. Como isso é feito é específica do driver, e é provável que os drivers serão serializar qualquer tentativa de usar o mesmo identificador simultaneamente em dois threads diferentes.  

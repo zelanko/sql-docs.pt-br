@@ -1,5 +1,5 @@
 ---
-title: Função SUM (MDX) | Microsoft Docs
+title: Sum (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bdf003a65e6923acf2bbf5c17e93d412e2d194fa
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241375"
 ---
 # <a name="sum-mdx"></a>Função Sum (MDX)
 
@@ -35,7 +35,7 @@ Sum( Set_Expression [ , Numeric_Expression ] )
  *Numeric_Expression*  
  Uma expressão numérica válida, geralmente uma linguagem MDX de coordenadas de célula, que retorna um número.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se uma expressão numérica for especificada, a expressão numérica especificada será avaliada no conjunto e, em seguida, somada. Se uma expressão numérica não for especificada, o conjunto especificado será avaliado no contexto atual dos membros do conjunto e, em seguida, somado. Se a função SUM for aplicada a uma expressão não numérica, os resultados serão indefinidos.  
   
 > [!NOTE]  
@@ -67,7 +67,7 @@ SELECT Measures.x ON 0
 FROM [Adventure Works]  
 ```  
   
- O exemplo a seguir usa a palavra-chave WITH MEMBER e **soma** função para definir um membro calculado na dimensão de medidas que contém a soma da medida quantidade de vendas de revendedor para os membros Canadá e Estados Unidos da hierarquia de atributo país na dimensão Geografia.  
+ O exemplo a seguir usa a palavra-chave WITH MEMBER e o **soma** função para definir um membro calculado na dimensão de medidas que contém a soma da medida vendas do revendedor para os membros Canadá e Estados Unidos das Hierarquia de atributo país na dimensão Geografia.  
   
 ```  
 WITH MEMBER Measures.NorthAmerica AS SUM   
@@ -81,7 +81,7 @@ SELECT {[Measures].[NorthAmerica]} ON 0,
 FROM [Adventure Works]  
 ```  
   
- Geralmente, o **soma** função é usada com a **CURRENTMEMBER** função ou funções como **YTD** que retornam um conjunto que varia dependendo do currentmember de uma hierarquia. Por exemplo, a consulta seguinte retorna a soma da medida do Valor das Vendas pela Internet para todas as datas desde o início do ano civil à data exibida no eixo de Linhas:  
+ Muitas vezes, o **soma** função é usada com o **CURRENTMEMBER** função ou funções, como **YTD** que retornam um conjunto que varia dependendo do currentmember de uma hierarquia. Por exemplo, a consulta seguinte retorna a soma da medida do Valor das Vendas pela Internet para todas as datas desde o início do ano civil à data exibida no eixo de Linhas:  
   
  `WITH MEMBER MEASURES.YTDSUM AS`  
   
@@ -94,6 +94,6 @@ FROM [Adventure Works]
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

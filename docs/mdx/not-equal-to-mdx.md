@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ac3241e7d6acd8ba883cdd59f9410f4a0fd9187d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63277522"
 ---
 # <a name="ltgt-not-equal-to-mdx"></a>&lt;&gt; (Não igual a) (MDX)
 

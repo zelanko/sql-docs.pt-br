@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 98b10c951043416280c05fd6a0e5eeb5df92c104
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248138"
 ---
 # <a name="datamember-mdx"></a>DataMember (MDX)
 
@@ -32,8 +32,8 @@ Member_Expression.DataMember
  *Member_Expression*  
  Uma linguagem MDX válida que retorna um membro.  
   
-## <a name="remarks"></a>Remarks  
- Essa função opera em membros não folha em qualquer hierarquia e podem ser usada pelo [UPDATE CUBE instrução (MDX)](../mdx/mdx-data-manipulation-update-cube.md) comando write-back dados a um membro não folha diretamente, em vez de descendentes do membro folha.  
+## <a name="remarks"></a>Comentários  
+ Essa função opera em membros não folha em qualquer hierarquia e pode ser usada pela [instrução do UPDATE CUBE (MDX)](../mdx/mdx-data-manipulation-update-cube.md) comando aos dados de write-back para um membro não folha diretamente, em vez de descendentes do membro folha.  
   
 > [!NOTE]  
 >  Retorna o membro especificado se o membro especificado for um membro folha ou se o membro não folha não tiver um membro de dados associado.  
@@ -51,7 +51,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
- [Principais conceitos em MDX &#40;do Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
+ [Principais conceitos em MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
   
   

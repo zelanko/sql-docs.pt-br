@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5e03e29d5c9696efb55ef5ce6ec47fcf28fc0467
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249026"
 ---
 # <a name="append-method-ado"></a>Método Append (ADO)
 Acrescenta um objeto a uma coleção. Se a coleção estiver [campos](../../../ado/reference/ado-api/fields-collection-ado.md), uma nova [campo](../../../ado/reference/ado-api/field-object.md) objeto pode ser criado antes que ele é acrescentado à coleção.  
@@ -68,7 +68,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
   
  Usar o [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) método para criar **parâmetro** objetos com as configurações de propriedade apropriada e o uso de **Append** método para adicioná-los para o [ Parâmetros](../../../ado/reference/ado-api/parameters-collection-ado.md) coleção. Isso lhe permite definir e retornar valores de parâmetro sem a necessidade de chamar o provedor para obter as informações de parâmetro. Se você estiver escrevendo um provedor que não fornece informações de parâmetro, você deve usar esse método para preencher manualmente a **parâmetros** coleção para usar parâmetros em todos os.  
   
-## <a name="fields-collection"></a>Coleção Campos  
+## <a name="fields-collection"></a>Coleção de campos  
  O *FieldValue* parâmetro só é válido ao adicionar um **campo** do objeto para um [registro](../../../ado/reference/ado-api/record-object-ado.md) do objeto, não para um **Recordset** objeto. Com uma **registro** do objeto, você pode acrescentar campos e fornecer valores ao mesmo tempo. Com uma **conjunto de registros** do objeto, você deve criar campos durante a **conjunto de registros** é fechado e, em seguida, abra o **conjunto de registros** e atribuir valores aos campos.  
   
 > [!NOTE]

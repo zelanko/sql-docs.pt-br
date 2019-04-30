@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 88898800b2d24bcf6af7f421dc3ae6e91f123728
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59945582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63279005"
 ---
 # <a name="map-embedded-point-properties-dialog-box-marker"></a>Caixa de diálogo Mapear Propriedades de Ponto Inserido, Marcador
   Selecione **Marcador** na caixa de diálogo **Propriedades de Ponto Inserido** para alterar o tipo e as opções de tamanho de marcador dos seguintes elementos do mapa:  

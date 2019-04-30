@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 601573a34082f386bfee238308a8f97c41743e4b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239772"
 ---
 # <a name="chapter-property-ado"></a>Propriedade Chapter (ADO)
 Obtém ou define um banco de dados OLE **capítulo** objeto de/em uma [ADORecordsetConstruction Interface](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md) objeto. Quando você usa **put_Chapter** para definir o **capítulo** do objeto, um subconjunto de linhas é transformado em ADO [objeto Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto. Isso define o capítulo atual de **conjunto de linhas**objeto. Esta propriedade é leitura/gravação.  

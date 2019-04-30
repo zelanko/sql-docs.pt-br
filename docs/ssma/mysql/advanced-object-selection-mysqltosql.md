@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: c7c3d1f4ccc6b6a7fc9f398c528dcab79ffbd426
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253415"
 ---
 # <a name="advanced-object-selection--mysqltosql"></a>Seleção de objetos avançada (MySQLToSQL)
 O **seção de objeto avançado** caixa de diálogo permite que você filtre os objetos de banco de dados usando cadeias de caracteres e subcadeias de caracteres no nome do objeto e, em seguida, selecionar ou desmarcar esses objetos. O SSMA executa operações de conversão e a migração em objetos selecionados.  

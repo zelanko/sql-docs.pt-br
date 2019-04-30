@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0d25c44883c7f04f1543639ecc870c00ad5beb9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240003"
 ---
 # <a name="originalvalue-property-ado"></a>Propriedade OriginalValue (ADO)
 Indica o valor de uma [campo](../../../ado/reference/ado-api/field-object.md) que existiam no registro antes de todas as alterações foram feitas.  

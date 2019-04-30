@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5485da176b9bd4aa7afca7afa088e6932d6f0d58
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273299"
 ---
 # <a name="odbc-and-the-standard-cli"></a>ODBC e a CLI padrão
 ODBC alinha-se com as seguintes especificações e padrões que lidam com a Interface de nível de chamada (CLI). (Os recursos de ODBC são um subconjunto de cada um desses padrões.)  
   
--   A especificação do Open Group CAE "gerenciamento de dados: Interface de nível de chamada (CLI) do SQL"  
+-   A especificação do Open Group CAE "gerenciamento de dados: Interface de nível de chamada SQL (CLI)"  
   
 -   ISO/IEC 9075-Interface de nível de chamada 3:1995 (E) (SQL/CLI)  
   

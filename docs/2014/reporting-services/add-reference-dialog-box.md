@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 99094f6e0edc60dfa6ce77474c52f1cf9dfc50fa
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231291"
 ---
 # <a name="add-reference-dialog-box"></a>Caixa de diálogo Adicionar Referência
   Use a caixa de diálogo **Adicionar Referência** para adicionar referências a um assembly personalizado ou um componente [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] a um relatório. Depois de adicionar uma referência a um assembly, você pode gravar expressões ou código personalizado inserido que inclua referências totalmente qualificadas a classes ou métodos no assembly ou no componente. Para obter mais informações, consulte [Referências a código personalizado e assemblies em expressões no Designer de Relatórios &#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md) ou [Adicionar uma referência de assembly a um relatório &#40;SSRS&#41;](report-design/add-an-assembly-reference-to-a-report-ssrs.md).  

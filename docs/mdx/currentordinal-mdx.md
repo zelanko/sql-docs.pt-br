@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d6fe956591b6bde0c5e6b074115fec8724995a59
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248186"
 ---
 # <a name="currentordinal-mdx"></a>CurrentOrdinal (MDX)
 
@@ -32,11 +32,11 @@ Set_Expression.CurrentOrdinal
  *Set_Expression*  
  Uma expressão MDX (Multidimensional Expressions) válida que retorna um conjunto.  
   
-## <a name="remarks"></a>Remarks  
- Ao fazer a iteração por meio de um conjunto, como com o [Filter (MDX)](../mdx/filter-mdx.md) ou [Generate (MDX)](../mdx/generate-mdx.md) funções, o **CurrentOrdinal** função retorna o número de iteração.  
+## <a name="remarks"></a>Comentários  
+ Durante a iteração por meio de um conjunto, como com o [Filter (MDX)](../mdx/filter-mdx.md) ou [Generate (MDX)](../mdx/generate-mdx.md) funções, o **CurrentOrdinal** função retorna o número de iteração.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo simples a seguir mostra como **CurrentOrdinal** pode ser usado com **gerar** para retornar uma cadeia de caracteres que contém o nome de cada item em um conjunto junto com sua posição no conjunto de:  
+ O exemplo simples a seguir mostra como **CurrentOrdinal** pode ser usado com **gerar** para retornar uma cadeia de caracteres que contém o nome de cada item em um conjunto junto com sua posição no conjunto:  
   
  `WITH SET MySet AS [Customer].[Customer Geography].[Country].MEMBERS`  
   
@@ -83,6 +83,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

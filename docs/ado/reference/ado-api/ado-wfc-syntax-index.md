@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ce86f56f1436d3442cd974f77ed7b3047d6d23a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249114"
 ---
 # <a name="ado---wfc-syntax-index"></a>ADO – Índice de sintaxe WFC
 Referência de linguagem do ADO usa o Microsoft Visual Basic linguagem de programação para ilustrar a sintaxe de método e propriedade ADO. Esse índice é uma referência cruzada para os tópicos de referência de linguagem do ADO, com base em ADO para Windows Foundation Classes (ADO/WFC). Quando surgirem diferenças na sintaxe, use as assinaturas de função nesse índice, em vez das listagens de sintaxe no tópico de referência de linguagem.  
@@ -45,7 +45,7 @@ Referência de linguagem do ADO usa o Microsoft Visual Basic linguagem de progra
   
 ## <a name="remote-data-service"></a>Serviço de dados remotos  
   
--   [Espaço de dados](../../../ado/reference/ado-api/dataspace-ado-wfc-syntax.md)  
+-   [DataSpace](../../../ado/reference/ado-api/dataspace-ado-wfc-syntax.md)  
   
 -   [ObjectProxy](../../../ado/reference/ado-api/objectproxy-ado-wfc-syntax.md)  
   

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a324c96fcfb4f1e23157bf7a80506cdee209548a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281566"
 ---
 # <a name="sortorder-property-example-vb"></a>Exemplo da propriedade SortOrder (VB)
 Este exemplo demonstra a [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md) propriedade de uma [coluna](../../../ado/reference/adox-api/column-object-adox.md) que foi acrescentado para o [colunas](../../../ado/reference/adox-api/columns-collection-adox.md) coleção de um [índice](../../../ado/reference/adox-api/index-object-adox.md). O código acrescenta um índice em ordem crescente para a coluna de país na **funcionários** de tabela, em seguida, exibe os registros. Em seguida, o código acrescenta um índice decrescente para a coluna de país na **funcionários** de tabela e exibe os registros novamente. A diferença entre crescente e decrescente índices será mostrada.  
