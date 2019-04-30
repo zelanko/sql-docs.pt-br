@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 10aa1c7132126dd705986a55d5dc02d78a5263ef
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59955542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188427"
 ---
 # <a name="model-item-security-page-report-manager"></a>Página segurança de item de modelo (Gerenciador de Relatórios)
   Use essa página para proteger partes de um modelo concedendo ou revogando permissões somente leitura em itens específicos. A segurança de item de modelo afeta a exploração de dados ad hoc em tempo de execução e a capacidade de usar partes de um modelo publicado ao criar relatórios no Construtor de Relatórios. Para usar esse recurso, você deve ter permissões de Gerenciador de Conteúdo.  

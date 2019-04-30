@@ -16,17 +16,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc5d09bca83724bb956d39512c51c3dc47db1bad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188811"
 ---
 # <a name="interval-literals"></a>Literais de intervalo
 O ODBC exige que todos os drivers de suporte à conversão do tipo de dados SQL_CHAR ou SQL_VARCHAR todos os tipos de dados de intervalo de C. Se a fonte de dados subjacente não oferece suporte a tipos de dados de intervalo, no entanto, o driver precisa saber o formato correto do valor no campo SQL_CHAR para dar suporte a essas conversões. Da mesma forma, o ODBC exige que qualquer tipo ser conversível para SQL_CHAR ou SQL_VARCHAR, portanto, um driver precisa saber qual formato de um intervalo armazenado no campo de caractere do ODBC C deve ter. Esta seção descreve a sintaxe de literais de intervalo, o que o gravador de driver precisa ser usado para validar os campos SQL_CHAR durante a conversão para ou de tipos de dados de intervalo de C.  
   
 > [!NOTE]  
->  A sintaxe BNF completa para literais de intervalo é mostrada na seção [sintaxe de Literal de intervalo](../../../odbc/reference/appendixes/interval-literal-syntax.md) na gramática do apêndice c: SQL.  
+>  A sintaxe BNF completa para literais de intervalo é mostrada na seção [sintaxe de Literal de intervalo](../../../odbc/reference/appendixes/interval-literal-syntax.md) no Apêndice c: Gramática SQL.  
   
  Para passar os literais de intervalo como parte de uma instrução SQL, uma sintaxe da cláusula de escape é definida para literais de intervalo. Para obter mais informações, consulte [data, hora e literais de carimbo de hora](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md).  
   
@@ -93,5 +93,5 @@ INTERVAL[<sign>] 'value' <interval qualifier>
 |{HOUR(2) DE INTERVALO '163'}|A precisão de intervalo à esquerda é 2, mas o valor do campo à esquerda é 163.|  
 |{SECOND(2,2) DE INTERVALO '223.16'}<br /><br /> {SECOND(3,1) DE INTERVALO '223.16'}|No primeiro exemplo, a precisão à esquerda é muito pequena e, no segundo exemplo, a precisão de segundos é muito pequena.|  
 |{INTERVALO '223.16' SEGUNDO}<br /><br /> {INTERVALO '223' ANO}|Porque a precisão à esquerda não for especificada, o padrão é 2, que é muito pequeno para conter o literal especificado.|  
-|{INTERVALO '22.1234567' SEGUNDO}|A precisão de segundos é especificada, portanto, o padrão é 6. O literal tem sete dígitos após o ponto decimal.|  
+|{INTERVAL '22.1234567' SECOND}|A precisão de segundos é especificada, portanto, o padrão é 6. O literal tem sete dígitos após o ponto decimal.|  
 |{INTERVALO ' 163-13' YEAR(3) AO MÊS}<br /><br /> {INTERVALO ' 163 65' DAY(3) HORA}<br /><br /> {DAY(3) DO INTERVALO '163 62:39' MINUTO}<br /><br /> {DAY(3) DO INTERVALO '163 12:125:59.163' PARA SECOND(3)}<br /><br /> {INTERVALO '163:144' HOUR(3) MINUTO}<br /><br /> {INTERVALO '163:567:234.163' HOUR(3) PARA SECOND(4)}<br /><br /> {INTERVALO '163:591.163' MINUTE(3) PARA SECOND(5)}|O campo à direita não segue as regras do calendário gregoriano.|

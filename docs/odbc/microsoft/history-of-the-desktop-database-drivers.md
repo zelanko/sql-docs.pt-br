@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a77aeafff6b27b2de0b947700cef1c7251cd7548
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127262"
 ---
 # <a name="history-of-the-desktop-database-drivers"></a>Histórico de drivers de banco de dados de área de trabalho
 A tabela a seguir mostra o histórico de versões de Drivers de banco de dados de área de trabalho.  
   
-|Versão|Data de lançamento|Description|  
+|Versão|Data de lançamento|Descrição|  
 |-------------|------------------|-----------------|  
 |1.0|Agosto de 1993|Usaram o processador de consulta do SIMBA produzido pela PageAhead Software. Com a SIMBA recebeu chamadas ODBC e instruções SQL, processada-los em chamadas ISAM instaláveis do Microsoft Jet e, em seguida, a chamada de camada de expedição de ISAM do Microsoft Jet para carregar e chamar o driver ISAM instalável apropriado.|  
 |2.0|Dezembro de 1994|Usada com ODBC 2.0, que significativamente expandido de funcionalidade do ODBC. A principal alteração na versão 2.0 foi que o mecanismo de banco de dados Microsoft Jet substituído o processador de consultas com a SIMBA. Com o mecanismo de banco de dados Microsoft Jet, os Drivers de banco de dados de área de trabalho muito mais estreitamente integrado com os drivers ISAM instaláveis do Microsoft Jet e a tecnologia do Microsoft Access. Foram feitas melhorias significativas:<br /><br /> -Suporte nativo para cursores roláveis.<br />-Suporte nativo de junções externas, junções atualizáveis e heterogêneas e transações.<br />-as versões de 32 bits dos drivers para o Microsoft Windows NT.|  

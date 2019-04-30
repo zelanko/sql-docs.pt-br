@@ -14,15 +14,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 39b3d3d1ecdc21acee8b238f56cede0a59146bd2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63132700"
 ---
 # <a name="sqlgetpoolid-function"></a>Função SQLGetPoolID
 **Conformidade com**  
- Versão introduziu: Conformidade de padrões 3.81 ODBC: ODBC  
+ Versão introduzida: Conformidade com padrões 3.81 ODBC: ODBC  
   
  **Resumo**  
  **SQLGetPoolID** recupera a ID do pool.  

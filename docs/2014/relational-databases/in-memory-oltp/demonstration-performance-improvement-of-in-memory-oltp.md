@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8c9477a318d2cb4f9886d67da8a4f8b5967cc180
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63071781"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Demonstração: aprimoramento do desempenho do OLTP na memória
   Este exemplo mostra as melhorias de desempenho ao usar OLTP na Memória, comparando as diferenças nos tempos de resposta ao executar uma consulta Transact-SQL idêntica em tabelas baseadas em disco tradicionais e com otimização de memória. Além disso, um procedimento armazenado compilado nativamente também é criado (com base na mesma consulta) e executado para demonstrar que você normalmente obtém os melhores tempos de resposta ao consultar uma tabela com otimização de memória com um procedimento armazenado compilados nativamente. Este exemplo mostra apenas um aspecto das melhorias de desempenho ao acessar dados em tabelas com otimização de memória; a eficiência do acesso a dados ao executar inserções. Este exemplo é de thread único e não aproveita os benefícios de simultaneidade do OLTP na memória. Uma carga de trabalho que usa a simultaneidade apresentará um maior ganho de desempenho.  

@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 6cbdd0a1394114e3fdef0511c7ed14658f7dd9b0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126299"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>Executar o console do SSMA (SybaseToSQL)
 Microsoft fornece um conjunto robusto de script de comandos de arquivo para executar e controlar atividades do SSMA. Seções a seguir detalham os mesmos.  
@@ -94,7 +94,7 @@ Este comando salva o projeto de migração.
 <save-project/>  
 ```  
   
-### <a name="close-project"></a>Fechar projeto  
+### <a name="close-project"></a>close-project  
 Esse comando fecha o projeto de migração.  
   
 **Exemplo de sintaxe:**  
@@ -143,7 +143,7 @@ Este comando requer um ou vários nós de metabase como parâmetro de linha de c
 </force-load>  
 ```  
   
-### <a name="reconnect-source-database"></a>Reconecte-origem-banco de dados  
+### <a name="reconnect-source-database"></a>reconnect-source-database  
 Esse comando se reconecta ao banco de dados de origem, mas não carrega todos os metadados ao contrário do comando connect-origem-banco de dados.  
   
 Se não é possível estabelecer (conexão com a fonte de re), um erro será gerado e o aplicativo de console ainda mais para a execução.  
@@ -182,7 +182,7 @@ Se a (re) conexão para o destino não puder ser estabelecida, um erro será ger
 ## <a name="report-commands"></a>Comandos de relatório  
 Os comandos de relatório geram relatórios sobre o desempenho de várias atividades do Console do SSMA.  
   
-### <a name="generate-assessment-report"></a>Gerar--relatório de avaliação  
+### <a name="generate-assessment-report"></a>generate-assessment-report  
   
 Este comando gera relatórios de avaliação no banco de dados de origem.  
   
@@ -312,7 +312,7 @@ ou em
 </convert-schema>  
 ```  
   
-### <a name="migrate-data"></a>migrar dados  
+### <a name="migrate-data"></a>migrate-data  
 Esse comando migra os dados de origem ao destino.  
   
 -   `object-name:` Especifica os objetos de origem considerados para a migração de dados (dá suporte a nomes de objeto individual ou um nome de objeto de grupo).  
@@ -393,7 +393,7 @@ Os comandos de capacidade de gerenciamento ajudam a sincronizar os objetos de ba
 > [!NOTE]  
 > A saída do console padrão definindo para os comandos de migração é o relatório de saída 'Full' com nenhum relatório de erro detalhada: Resumo somente no nó de raiz da árvore de objeto de origem.  
   
-### <a name="synchronize-target"></a>Sincronizar de destino  
+### <a name="synchronize-target"></a>synchronize-target  
 Este comando sincroniza os objetos de destino com o banco de dados de destino.  
  
 Se esse comando for executado no banco de dados de origem, um erro for encontrado.  
@@ -454,7 +454,7 @@ ou em
 </synchronize-target>  
 ```  
   
-### <a name="refresh-from-database"></a>atualização de banco de dados  
+### <a name="refresh-from-database"></a>refresh-from-database  
 Esse comando atualiza os objetos de origem do banco de dados.  
   
 Se esse comando é executado no banco de dados de destino, um erro será gerado.  

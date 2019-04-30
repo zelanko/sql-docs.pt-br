@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1fb077261eda4b2e013abd6d87e894637a29216a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181235"
 ---
 # <a name="odbc-cursor-library-error-codes"></a>Códigos de erro da Biblioteca de cursores do ODBC
 > [!IMPORTANT]  
@@ -31,17 +31,17 @@ ms.locfileid: "47691124"
 > [!NOTE]  
 >  A biblioteca de cursores não ordena os registros de status; o Gerenciador de Driver e o ODBC 3. *x* drivers são responsáveis por ordem de registros de status.  
   
-|SQLSTATE|Description|Pode ser retornado de|  
+|SQLSTATE|Descrição|Pode ser retornado de|  
 |--------------|-----------------|--------------------------|  
 |01000|Cursor não é atualizável.|**SQLFetch**<br /><br /> **SQLFetchScroll**|  
 |01000|Biblioteca de cursores não usada. Falha ao carregar.|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
 |01000|Biblioteca de cursores não usada. Suporte a driver insuficientes.|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
 |01000|Biblioteca de cursores não usada. Incompatibilidade de versão com o Gerenciador de Driver.|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
 |01000|Driver retornou SQL_SUCCESS_WITH_INFO. A mensagem de aviso foi perdida.|**SQLFetch**<br /><br /> **SQLFetchScroll**|  
-|S1000|Erro geral: não é possível criar o buffer de arquivo.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
-|S1000|Erro geral: não é possível ler do buffer de arquivo.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
-|S1000|Erro geral: não é possível gravar no buffer de arquivo.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
-|S1000|Erro geral: não é possível fechar ou remover o buffer de arquivo.|**SQLFreeHandle**<br /><br /> **SQLFreeStmt**|  
+|S1000|Erro geral: Não é possível criar o buffer de arquivo.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
+|S1000|Erro geral: Não é possível ler do buffer de arquivo.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
+|S1000|Erro geral: Não é possível gravar no buffer de arquivo.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
+|S1000|Erro geral: Não é possível fechar ou remover o buffer de arquivo.|**SQLFreeHandle**<br /><br /> **SQLFreeStmt**|  
 |SL001|Solicitação posicionada não pode ser executada porque não há colunas pesquisáveis eram vinculadas.|**SQLExecDirect**<br /><br /> **SQLGetData**<br /><br /> **SQLPrepare**|  
 |SL002|Solicitação posicionada não pôde ser executada porque o conjunto de resultados foi criado por uma condição de junção.|**SQLExecute**<br /><br /> **SQLExecDirect**<br /><br /> **SQLGetData**|  
 |SL003|Buffer vinculado excede o tamanho máximo de segmento.|**SQLFetch**<br /><br /> **SQLFetchScroll**|  

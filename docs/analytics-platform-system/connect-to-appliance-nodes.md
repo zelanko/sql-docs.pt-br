@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: e8c61bebd6265d25e2c3fe0a14516e986f3ee414
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63134379"
 ---
 # <a name="connect-to-appliance-nodes-in-analytics-platform-system"></a>Conectar-se a nós de dispositivo no Analytics Platform System
 Este artigo explica as várias maneiras para se conectar a cada nó em que o dispositivo do Analytics Platform System.  

@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8c2d78e26309d5ea7dc5e6eed5a04e84a1651b33
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63305742"
 ---
 # <a name="sqlsetscrolloptions-visual-foxpro-odbc-driver"></a>SQLSetScrollOptions (Driver ODBC do Visual FoxPro)
 > [!NOTE]  
 >  Este tópico contém informações específicas de Driver ODBC do Visual FoxPro. Para obter informações gerais sobre essa função, consulte o tópico apropriado sob [referência da API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Suporte: parcial  
+ Suporte a: Parcial  
   
- Conformidade com a API ODBC: 2 de nível  
+ Conformidade com a API ODBC: Nível 2  
   
  Define opções que controlam o comportamento de cursores associado com um identificador de instrução *hstmt*.  
   

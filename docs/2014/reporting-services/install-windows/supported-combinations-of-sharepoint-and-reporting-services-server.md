@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 158110c1273c64cb9fdf86d1b9f4bc4a40d780a8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63143964"
 ---
 # <a name="supported-combinations-of-sharepoint-and-reporting-services-server-and-add-in-sql-server-2014"></a>Combinações do SharePoint e do servidor e suplemento do Reporting Services com suporte (SQL Server 2014)
   Servidores de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] podem ser instalados no modo do SharePoint e integrados com uma implantação do SharePoint. Nem todos os recursos são compatíveis em todas as combinações de servidor de relatório, suplemento Reporting Services para SharePoint e produtos do SharePoint. Este tópico resume as combinações com suporte. No [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], a integração é um resultado da combinação de:  

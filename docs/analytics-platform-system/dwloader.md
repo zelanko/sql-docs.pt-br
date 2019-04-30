@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: fbfc160f495f9717645c8417f11f67f572271d9b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157623"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>Carregador de linha de comando para Parallel Data Warehouse de dwloader
 **dwloader** é uma ferramenta de linha de comando do Parallel Data Warehouse (PDW) que carrega linhas da tabela em massa em uma tabela existente. Quando o carregamento de linhas, você pode adicionar todas as linhas ao final da tabela (*modo de acréscimo* ou *modo fastappend*), acrescentar novas linhas e atualizar as linhas existentes (*modo upsert*), ou excluir todos linhas antes do carregamento de existente e, em seguida, inserir todas as linhas em uma tabela vazia (*recarregar modo*).  
@@ -143,7 +143,7 @@ Exemplos:
   
 `rv=25`  
   
-**-S * * * target_appliance*  
+**-S***target_appliance*  
 Especifica o dispositivo de PDW do SQL Server que receberá os dados carregados.  
   
 *Para conexões do Infiniband*, *target_appliance* é especificado como o < nome do dispositivo >-SQLCTL01. Para configurar isso é chamado de conexão, consulte [configurar adaptadores de rede InfiniBand](configure-infiniband-network-adapters.md).  
@@ -215,7 +215,7 @@ As opções para um *source_data_file_name* que tem colunas delimitada por carac
   
 Para arquivos ASCII, valores nulos são representados por colocar delimitadores consecutivamente. Por exemplo, em um arquivo delimitado por pipe ("|"), um valor nulo é indicado por "| |". Em um arquivo delimitado por vírgula, um valor nulo é indicado por ",". Além disso, o **-E** (– emptyStringAsNull) opção deve ser especificada. Para obter mais informações sobre -E, consulte abaixo.  
   
-**-eletrônico** *character_encoding*  
+**-e** *character_encoding*  
 Especifica um tipo de codificação de caracteres para os dados a serem carregadas do arquivo de dados. As opções são ASCII (padrão), UTF8, UTF16 ou UTF16BE, onde UTF16 é pouco endian e UTF16BE for big endian. Essas opções diferenciam maiusculas de minúsculas.  
   
 **-t** *field_delimiter*  
@@ -227,7 +227,7 @@ O delimitador para cada campo (coluna) na linha. O delimitador de campo é um ou
 |Retorno de carro (CR)|\r|0x0D|  
 |Alimentação de linha (LF)|\n|0x0a|  
 |CRLF|\r\n|0x0d0x0a|  
-|Vírgula|','|0x2c|  
+|Comma|','|0x2c|  
 |aspas duplas|\\"|0x22|  
 |aspas simples|\\'|0x27|  
   
@@ -241,9 +241,9 @@ Exemplos:
   
 -t 0x0a  
   
-\t -t  
+-t \t  
   
--t ' ~ | ~'  
+-t '~|~'  
   
 **-r** *row_delimiter*  
 O delimitador para cada linha do arquivo de dados de origem. O delimitador de linha é um ou mais valores ASCII.  
@@ -258,13 +258,13 @@ Exemplos de CR + LF:
   
 Exemplos de CR:  
   
-\r - r  
+-r \r  
   
 -r 0x0d  
   
 Exemplos de LF:  
   
-\n - r  
+-r \n  
   
 -r 0x0a  
   
@@ -279,7 +279,7 @@ Exemplos:
   
 -s 0x22  
   
-< fixed_width_column_options >  
+< fixed_width_column_options>  
 As opções para um arquivo de dados de origem que tem colunas de comprimento fixo. Por padrão, *source_data_file_name* contém caracteres ASCII em colunas de comprimento variável.  
   
 Não há suporte para colunas de largura fixa quando -e é UTF8.  
@@ -309,7 +309,7 @@ No exemplo anterior, a primeira linha carregada terá SalesCode = '230' e SalesI
   
 Para obter informações sobre como lidar com a esquerda e à direita de conversão de tipo de dados ou espaços no modo de largura fixa, consulte [tipo de dados de regras de conversão para dwloader](dwloader-data-type-conversion-rules.md).  
   
-**-eletrônico** *character_encoding*  
+**-e** *character_encoding*  
 Especifica um tipo de codificação de caracteres para os dados a serem carregadas do arquivo de dados. As opções são ASCII (padrão), UTF8, UTF16 ou UTF16BE, onde UTF16 é pouco endian e UTF16BE for big endian. Essas opções diferenciam maiusculas de minúsculas.  
   
 Não há suporte para colunas de largura fixa quando -e é UTF8.  
@@ -327,22 +327,22 @@ Exemplos de CR + LF:
   
 Exemplos de CR:  
   
-\r - r  
+-r \r  
   
 -r 0x0d  
   
 Exemplos de LF:  
   
-\n - r  
+-r \n  
   
 -r 0x0a  
   
 Um LF é necessário para Unix. Uma CR é necessária para Windows.  
   
-**-D** { **ymd** | ydm | mdy | myd |  DMY | dym | *custom_date_format* }  
+**-D** { **ymd** | ydm | mdy | myd |  dmy | dym | *custom_date_format* }  
 Especifica a ordem de mês (m), (d) do dia e ano (y) para todos os campos de data e hora no arquivo de entrada. A ordem padrão é ymd. Para especificar vários formatos de ordem para o mesmo arquivo de origem, use a opção -dt.  
   
-YMD | DMY  
+ymd | dmy  
 ydm e dmy permitem que os mesmos formatos de entrada. Ambos permitem que o ano a ser no início ou no fim da data. Por exemplo, para ambos **ydm** e **dmy** data formatos, você poderia ter 2013-02-03 ou 02-03-2013 no arquivo de entrada.  
   
 ydm  
@@ -362,10 +362,10 @@ Exemplos de dados de entrada do MDA para 1 de janeiro de 1975:
 -   01011975  
   
 mad  
-Exemplos de arquivos de entrada para março 04,2010: 2010-03-04, 2010/3/4  
+Exemplos de arquivos de entrada para março 04,2010: 03-2010-04, 3/2010/4  
   
 dam  
-Exemplos de arquivo de entrada para 04 de março de 2010: 2010-04-03, 4/2010/3  
+Exemplos de arquivo de entrada para 04 de março de 2010: 04-2010-03, 4/2010/3  
   
 *custom_date_format*  
 *custom_date_format* é um formato de data personalizada (por exemplo, MM/dd/aaaa) e incluído para compatibilidade com versões anteriores. dwloader faz não enfoce o formato de data personalizado. Em vez disso, quando você especifica um formato de data personalizado **dwloader** irá convertê-lo para a configuração correspondente de ymd, ydm, mdy, myd, dym ou dmy.  
@@ -397,7 +397,7 @@ O carregador insere linhas no final de linhas existentes na tabela de destino.
 fastappend  
 O carregador insere linhas diretamente, sem usar uma tabela temporária, até o final de linhas existentes na tabela de destino. fastappend requer que a transação várias (-m) opção. Um banco de dados de preparo não pode ser especificado ao usar fastappend. Não há nenhuma reversão com fastappend, o que significa que a recuperação de uma carga anulada ou com falha deve ser tratada pelo seu próprio processo de carregamento.  
   
-upsert **-K***merge_column* [,... *n* ]    
+upsert **-K**  *merge_column* [ ,...*n* ]  
 O carregador usa a instrução de mesclagem do SQL Server para atualizar as linhas existentes e inserir novas linhas.  
   
 A opção -K Especifica a coluna ou colunas para basear a mesclagem. Essas colunas formam uma chave de mesclagem, que deve representar uma linha exclusiva. Se a chave de mesclagem existir na tabela de destino, a linha é atualizada. Se a chave de mesclagem não existe na tabela de destino, a linha é acrescentada.  
@@ -486,7 +486,7 @@ Ignorar carregamento de arquivos vazios. Isso também ignora descompactando arqu
 ## <a name="return-code-values"></a>Valores do código de retorno  
 0 (êxito) ou outro valor de inteiro (falha)  
   
-Em um arquivo de lote ou de janela de comando, use `errorlevel` para exibir o código de retorno. Por exemplo:  
+Em um arquivo de lote ou de janela de comando, use `errorlevel` para exibir o código de retorno. Por exemplo:   
   
 ```  
 dwloader  
@@ -593,7 +593,7 @@ Exemplo usando os argumentos para um arquivo de origem e o arquivo de erro.
 dwloader.exe -U mylogin -P 123jkl -S 10.192.63.148  -i C:\SQLData\AWDimEmployees.csv -T AdventureWorksPDW2012.dbo.DimEmployees -R C:\SQLData\LoadErrors  
 ```  
   
-### <a name="b-load-data-into-an-adventureworks-table"></a>b. Carregar dados em uma tabela da AdventureWorks  
+### <a name="b-load-data-into-an-adventureworks-table"></a>B. Carregar dados em uma tabela da AdventureWorks  
 O exemplo a seguir é parte de um script em lotes que carrega dados em **AdventureWorksPDW2012**.  Para exibir o script completo, abra o arquivo aw_create é fornecido com o **AdventureWorksPDW2012** pacote de instalação. 
 
 <!-- Missing link

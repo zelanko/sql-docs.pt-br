@@ -1,5 +1,5 @@
 ---
-title: StDev (MDX) | Microsoft Docs
+title: Stdev (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a1ef1d720928298e8a44e075f45937903d178ef6
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150248"
 ---
 # <a name="stdev-mdx"></a>Stdev (MDX)
 
@@ -35,7 +35,7 @@ Stdev(Set_Expression [ ,Numeric_Expression ] )
  *Numeric_Expression*  
  Uma expressão numérica válida, geralmente uma linguagem MDX de coordenadas de célula, que retorna um número.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O **Stdev** função usa a população não polarizada fórmulas, enquanto o [StdevP](../mdx/stdevp-mdx.md) função usa a fórmula de população polarizada.  
   
 ## <a name="example"></a>Exemplo  
@@ -53,6 +53,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

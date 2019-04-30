@@ -16,65 +16,65 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d477dbc6b54d7ebd82b7e2ef8611f5f6dd807e83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188821"
 ---
 # <a name="interval-literal-syntax"></a>Sintaxe literal de intervalo
 A sintaxe a seguir é usada para literais de intervalo em ODBC.  
   
- *literal de intervalo:: = intervalo* [+*&#124;*-] *qualificador de intervalo de cadeia de caracteres do intervalo*  
+ *interval-literal ::= INTERVAL* [+*&#124;*-] *interval-string interval-qualifier*  
   
- *intervalo de cadeia de caracteres* :: = *cotação* { *ano-mês-literal* &#124; *literal de hora do dia* } *aspas*  
+ *interval-string* ::= *quote* { *year-month-literal* &#124; *day-time-literal* } *quote*  
   
- *ano-mês-literal* :: = *valor de ano* &#124; [*valor de ano* -] *valor de meses*  
+ *year-month-literal* ::= *years-value* &#124; [*years-value* -] *months-value*  
   
- *literal de hora do dia* :: = *intervalo de tempo do dia* &#124; *intervalo de tempo*  
+ *day-time-literal* ::= *day-time-interval* &#124; *time-interval*  
   
- *intervalo de tempo do dia* :: = *valor de dias* [*valor de horas* [:*valor de minutos*[:*valor de segundos*]]]  
+ *day-time-interval* ::= *days-value* [*hours-value* [:*minutes-value*[:*seconds-value*]]]  
   
- *intervalo de tempo* :: = *valor de horas* [:*valor de minutos* [:*valor de segundos* ]]  
+ *time-interval* ::= *hours-value* [:*minutes-value* [:*seconds-value* ] ]  
   
- &#124;*valor de minutos* [:*valor de segundos* ]  
+ &#124; *minutes-value* [:*seconds-value* ]  
   
- &#124;*valor de segundos*  
+ &#124; *seconds-value*  
   
- *valor de ano* :: = *valor datetime*  
+ *years-value* ::= *datetime-value*  
   
- *valor de meses* :: = *valor datetime*  
+ *months-value* ::= *datetime-value*  
   
- *valor de dias* :: = *valor datetime*  
+ *days-value* ::= *datetime-value*  
   
- *valor de horas* :: = *valor datetime*  
+ *hours-value* ::= *datetime-value*  
   
- *valor de minutos* :: = *valor datetime*  
+ *minutes-value* ::= *datetime-value*  
   
- *valor de segundos* :: = *valor de inteiro de segundos* [. [ *fração de segundos*]]  
+ *seconds-value* ::= *seconds-integer-value* [.[*seconds-fraction*] ]  
   
- *valor de inteiro de segundos* :: = *inteiro não assinado*  
+ *seconds-integer-value* ::= *unsigned-integer*  
   
- *fração de segundos* :: = *inteiro não assinado*  
+ *seconds-fraction* ::= *unsigned-integer*  
   
- *valor de data e hora* :: = *inteiro não assinado*  
+ *datetime-value* ::= *unsigned-integer*  
   
- *intervalo-qualifier* :: = *campo inicial* TO *campo final* &#124; *único campo de data e hora*  
+ *interval-qualifier* ::= *start-field* TO *end-field* &#124; *single-datetime-field*  
   
- *campo de início* :: = *campo Data e hora que não é segundo* [(*intervalo líderes-campo precisão* )]  
+ *start-field* ::= *non-second-datetime-field* [(*interval-leading-field-precision* )]  
   
- *campo final* :: = *campo Data e hora que não é segundo* &#124; segundo [(*intervalo de--segundos-precisão fracionária*)]  
+ *end-field* ::= *non-second-datetime-field* &#124; SECOND[(*interval-fractional-seconds-precision*)]  
   
  *único campo de data e hora* :: = *campo Data e hora que não é segundo* [(*intervalo líderes-campo precisão*)] &#124; segundo [(*intervalo-líderes de campo de precisão*  [, (*intervalo de--segundos-precisão fracionária*)]  
   
- *campo de data e hora* :: = *campo Data e hora que não é segundo* &#124; segundo  
+ *datetime-field* ::= *non-second-datetime-field* &#124; SECOND  
   
- *campo Data e hora que não é segundo* :: = ano &#124; mês &#124; dia &#124; hora &#124; minuto  
+ *non-second-datetime-field* ::= YEAR &#124; MONTH &#124; DAY &#124; HOUR &#124; MINUTE  
   
- *intervalo de--segundos-precisão fracionária* :: = *inteiro não assinado*  
+ *interval-fractional-seconds-precision* ::= *unsigned-integer*  
   
- *intervalo-líderes de campo de precisão* :: = *inteiro não assinado*  
+ *interval-leading-field-precision* ::= *unsigned-integer*  
   
  *cotação* :: = '  
   
- *inteiro sem sinal* :: = *dígito...*
+ *unsigned-integer* ::= *digit...*

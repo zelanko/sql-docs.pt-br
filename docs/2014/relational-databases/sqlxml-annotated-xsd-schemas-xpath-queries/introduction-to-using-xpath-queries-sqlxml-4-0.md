@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 775e9ac76d6c3b16d2c9ba6ce688a2a3dfbf48d6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127705"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Introdução para usar consultas XPath (SQLXML 4.0)
   Uma consulta de linguagem XPath pode ser especificada como parte de uma URL ou em um modelo. O esquema de mapeamento determina a estrutura desse fragmento resultante, e os valores são recuperados no banco de dados. Conceitualmente, esse processo é semelhante a criar exibições que usem a instrução CREATE VIEW e escrever consultas SQL com base nelas.  
@@ -109,14 +109,14 @@ ms.locfileid: "52753368"
 |Predicados de valor numérico||  
 |Operadores aritméticos|mod|  
 |Funções de nó|`ancestor`, `ancestor-or-self`, `descendant`, `descendant-or-self (//)`, `following`, `following-sibling`, `namespace`, `preceding`, `preceding-sibling`|  
-|Funções da cadeia de caracteres|`string()`, `concat()`, `starts-with()`, `contains()`, `substring-before()`, `substring-after()`, `substring()`, `string-length()`, `normalize()`, `translate()`|  
+|Funções de cadeia de caracteres|`string()`, `concat()`, `starts-with()`, `contains()`, `substring-before()`, `substring-after()`, `substring()`, `string-length()`, `normalize()`, `translate()`|  
 |funções boolianas|`lang()`|  
 |Funções numéricas|`sum()`, `floor()`, `ceiling()`, `round()`|  
 |operador Union|&#124;|  
   
  Ao especificar consultas XPath em um modelo, observe o seguinte comportamento:  
   
--   XPath pode conter caracteres como, por exemplo, < ou & que tenham significados especiais no XML (e o modelo é um documento XML). Você deve sair desses caracteres usando a codificação XML &- ou especificar o XPath na URL.  
+-   XPath pode conter caracteres como < ou & que têm significados especiais no XML (e o modelo é um documento XML). Você deve substituir esses caracteres usando XML &-codificação ou especificar o XPath na URL.  
   
 ## <a name="see-also"></a>Consulte também  
  [Usando consultas XPath no SQLXML 4.0](using-xpath-queries-in-sqlxml-4-0.md)  

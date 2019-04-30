@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3a35d5cdb9db4c56579a4229b2d08014a99da542
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63072733"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Durabilidade de tabelas com otimização de memória
   [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] fornece a durabilidade completa para tabelas com otimização de memória. Quando uma transação que modificou uma tabela com otimização de memória é confirmada, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (como faz em tabelas baseadas em disco), garante que as alterações sejam permanentes (sobreviverão uma reinicialização do banco de dados), contanto que o armazenamento subjacente esteja disponível. Há dois principais componentes de durabilidade: log de transações e persistência das alterações de dados para armazenamento em disco.  
@@ -111,7 +111,7 @@ ms.locfileid: "52392020"
  Se necessário, uma mesclagem manual pode ser executada explicitamente chamando [sp_xtp_merge_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql).  
   
 ### <a name="life-cycle-of-a-cfp"></a>Ciclo de vida de um CFP  
- Transição de CPFs por vários estados antes de poderem ser desalocados. Em um determinado momento, os CFPs estão em uma das seguintes fases: PRECREATED, UNDER CONSTRUCTION, ACTIVE, MERGE TARGET, MERGED SOURCE, REQUIRED FOR BACKUP/HA, IN TRANSITION TO TOMBSTONE e TOMBSTONE. Para obter uma descrição dessas fases, veja [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql).  
+ Transição de CPFs por vários estados antes de poderem ser desalocados. Em um determinado momento, os CFPs estão em uma das seguintes fases: PRECREATED, UNDER CONSTRUCTION, ACTIVE, MERGE TARGET, MERGED SOURCE, REQUIRED FOR BACKUP/HA, IN TRANSITION TO TOMBSTONE e marca para exclusão. Para obter uma descrição dessas fases, veja [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql).  
   
  Após a contagem do armazenamento ocupado pelos CFPs em diversos estados, o armazenamento geral ocupado pelas tabelas com otimização de memória duráveis poderá ser muito maior do que 2 vezes o tamanho das tabelas na memória. O DMV [DM db_xtp_checkpoint_files &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql) pode ser consultado para listar todos os CFPs em arquivos com otimização de memória, incluindo a fase. A transição de estados de CFPs de MERGE SOURCE para TOMBSTONE e por fim a coleta de lixo pode demorar cinco pontos de verificação, com cada ponto de verificação seguido por um backup de log de transações, caso o banco de dados esteja configurado para o modelo de recuperação completa ou bulk-logged.  
   

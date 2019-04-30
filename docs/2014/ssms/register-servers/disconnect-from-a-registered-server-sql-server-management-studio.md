@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 216e0182c9226306fb2feafe9dee6e8fb13562ad
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298467"
 ---
 # <a name="disconnect-from-a-registered-server-sql-server-management-studio"></a>Desconectar-se de um Servidor Registrado (SQL Server Management Studio)
   Este tópico descreve como desconectar o Pesquisador de Objetos de um servidor a qualquer momento no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. A desconexão do Pesquisador de Objetos não desconecta outros componentes do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , como o Editor SQL.  

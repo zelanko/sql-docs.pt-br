@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d80de6087997b6af0202dafae7576ba442514abf
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062404"
 ---
 # <a name="sqldriverconnect-function"></a>Função SQLDriverConnect
 **Conformidade com**  
@@ -62,7 +62,7 @@ SQLRETURN SQLDriverConnect(
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Identificador da conexão*  
+ *ConnectionHandle*  
  [Entrada] Identificador de Conexão.  
   
  *WindowHandle*  
@@ -145,11 +145,11 @@ SQLRETURN SQLDriverConnect(
 ## <a name="comments"></a>Comentários  
  Uma cadeia de caracteres de conexão tem a seguinte sintaxe:  
   
- *cadeia de caracteres de conexão* :: = *cadeia de caracteres vazia*[;] &#124; *atributo*[;] &#124; *atributo*; *cadeia de caracteres de conexão*  
+ *connection-string* ::= *empty-string*[;] &#124; *attribute*[;] &#124; *attribute*; *connection-string*  
   
- *cadeia de caracteres vazia* :: =*atributo* :: = *palavra-chave de atributo*=*atributo-valor* &#124; DRIVER = [{}] *valor do atributo*[}]  
+ *empty-string* ::=*attribute* ::= *attribute-keyword*=*attribute-value* &#124; DRIVER=[{]*attribute-value*[}]  
   
- *palavra-chave de atributo* :: = DSN &#124; UID &#124; PWD &#124; *-definido-atributo-palavra-chave driver*  
+ *attribute-keyword* ::= DSN &#124; UID &#124; PWD &#124; *driver-defined-attribute-keyword*  
   
  *attribute-value* ::= *character-string*  
   

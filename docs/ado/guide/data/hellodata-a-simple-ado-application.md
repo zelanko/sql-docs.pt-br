@@ -15,13 +15,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ed92b3f83e865d2b8d4f3e3a3a3cb95e291d771e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162102"
 ---
-# <a name="hellodata-a-simple-ado-application"></a>HelloData: um aplicativo ADO simples
+# <a name="hellodata-a-simple-ado-application"></a>HelloData: Um aplicativo ADO simples
 Este aplicativo simples percorre cada uma das quatro principais operações ADO: Introdução, o exame, edição e atualização de dados. Essas operações são executadas em relação a dados de exemplo Northwind incluído com o Microsoft® SQL Server. Para se concentrar nos conceitos básicos do ADO e evitar a desordem de código, no exemplo de tratamento de erro é mínimo.  
   
 ### <a name="to-run-hellodata"></a>Para executar o HelloData  

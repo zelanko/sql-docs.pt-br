@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01a930bc571e84c6ecfd38ce8415493c90ebd377
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140360"
 ---
 # <a name="connectionstring-property-ado"></a>Propriedade ConnectionString (ADO)
 Indica as informações usadas para estabelecer uma conexão a uma fonte de dados.  
@@ -34,13 +34,13 @@ Indica as informações usadas para estabelecer uma conexão a uma fonte de dado
   
  ADO dá suporte a cinco argumentos para o **ConnectionString** propriedade; qualquer outra passagem de argumentos diretamente para o provedor sem qualquer processamento pelo ADO. O oferece suporte ao ADO de argumentos são da seguinte maneira.  
   
-|Argumento|Description|  
+|Argumento|Descrição|  
 |--------------|-----------------|  
 |*Provider=*|Especifica o nome de um provedor a ser usado para a conexão.|  
 |*Nome do arquivo =*|Especifica o nome de um arquivo específico do provedor (por exemplo, um objeto de fonte de dados persistentes) que contém informações de conexão predefinidos.|  
 |*Provedor remoto =*|Especifica o nome de um provedor a ser usado ao abrir uma conexão de cliente. (Apenas serviço de dados remotos.)|  
 |*Servidor remoto =*|Especifica o nome do caminho do servidor a ser usado ao abrir uma conexão de cliente. (Apenas serviço de dados remotos.)|  
-|*URL =*|Especifica a cadeia de caracteres de conexão como uma URL absoluta que identifica um recurso, como um arquivo ou diretório.|  
+|*URL=*|Especifica a cadeia de caracteres de conexão como uma URL absoluta que identifica um recurso, como um arquivo ou diretório.|  
   
  Depois de definir a **ConnectionString** propriedade e abra o [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) do objeto, o provedor pode alterar o conteúdo da propriedade, por exemplo, mapeando os nomes de argumentos definidos pelo ADO para seus equivalentes para o provedor específico.  
   
@@ -68,4 +68,4 @@ Indica as informações usadas para estabelecer uma conexão a uma fonte de dado
 ## <a name="see-also"></a>Consulte também  
  [ConnectionString, ConnectionTimeout e exemplo de propriedades de estado (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
  [ConnectionString, ConnectionTimeout e exemplo de propriedades de estado (VC + +)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
- [Apêndice A: Provedores](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Apêndice a: provedores](../../../ado/guide/appendixes/appendix-a-providers.md)

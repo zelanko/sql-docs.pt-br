@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 865534b607e8f8de0f0058f712ed12a87c50804d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198219"
 ---
 # <a name="configuring-data-sources"></a>Configurar fontes de dados
 Informações sobre fontes de dados são armazenadas no registro do sistema. Os usuários modificar informações de fonte de dados através de um programa de administração. Isso pode ser o administrador de ODBC, o dispositivo do painel de controle de ODBC ou um programa de administração, escrito por um desenvolvedor de aplicativo ou driver.  

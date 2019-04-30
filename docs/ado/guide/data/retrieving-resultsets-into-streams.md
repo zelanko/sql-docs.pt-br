@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3ad9c21deb365428a6642f3ee9b7f48396d7c4f9
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57973495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188110"
 ---
 # <a name="retrieving-resultsets-into-streams"></a>Recuperar conjuntos de resultados em fluxos
 Em vez de receber os resultados em tradicional **Recordset** objeto ADO em vez disso, pode recuperar os resultados da consulta em um fluxo. O ADO **Stream** objeto (ou outros objetos que dão suporte a COM **IStream** interface, como o ASP **solicitar** e **resposta** objetos ) pode ser usado para conter esses resultados. Um uso para esse recurso é para recuperar os resultados em formato XML. Com o SQL Server, por exemplo, resultados XML podem ser retornados de várias maneiras, como usar a cláusula FOR XML com uma consulta SQL SELECT ou usando uma consulta XPath.  

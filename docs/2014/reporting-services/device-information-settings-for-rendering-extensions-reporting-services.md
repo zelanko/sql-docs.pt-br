@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 336eae5accaf5fabed542012bbb4e5b6145a02c5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59958812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164666"
 ---
 # <a name="device-information-settings-for-rendering-extensions-reporting-services"></a>Configurações de informações de dispositivos para extensões de renderização (Reporting Services)
   No [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], as configurações de informações de dispositivo são usadas para passar parâmetros de renderização para uma extensão de renderização. Cada extensão de renderização aceita um conjunto específico de configurações.  

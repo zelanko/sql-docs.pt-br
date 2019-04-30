@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c8be5ffca0ad28793b1b5e22bbeabca05001e361
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127253"
 ---
 # <a name="implementing-desktop-database-drivers"></a>Implementar os drivers de banco de dados de área de trabalho
 Instruções e Observações técnicas sobre como implementar e configurar os Drivers de banco de dados de área de trabalho do Microsoft ODBC podem ser encontradas na Ajuda online do administrador de fonte de dados ODBC. Esse arquivo pode ser acessado durante rotinas de instalação do driver do [administrador de fonte de dados do Microsoft ODBC](../../odbc/admin/odbc-data-source-administrator.md).  
@@ -31,7 +31,7 @@ Instruções e Observações técnicas sobre como implementar e configurar os Dr
   
 -   [Arquivos de componentes ODBC](../../odbc/microsoft/odbc-component-files.md)  
   
--   [Requisitos de hardware e Software](../../odbc/microsoft/hardware-and-software-requirements-odbc.md)  
+-   [Requisitos de Hardware e Software](../../odbc/microsoft/hardware-and-software-requirements-odbc.md)  
   
 -   [Descritores com Drivers de banco de dados da área de trabalho](../../odbc/microsoft/descriptors-and-desktop-database-drivers.md)  
   

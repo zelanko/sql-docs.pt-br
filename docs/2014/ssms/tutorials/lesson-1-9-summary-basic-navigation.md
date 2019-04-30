@@ -1,5 +1,5 @@
 ---
-title: 'Resumo: navegação básica | Microsoft Docs'
+title: 'Resumo: Navegação básica | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f25cc02e61fceb42a8c02919d4deaab42c0ab586
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151506"
 ---
 # <a name="summary-basic-navigation"></a>Resumo: Navegação básica
   A superfície de design do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pode ser personalizada de acordo com sua preferência pessoal e seus requisitos de trabalho.  
   
- A seguir são apresentadas algumas práticas recomendadas para usar a área de trabalho do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] de forma eficiente:  
+ A seguir são apresentadas algumas práticas recomendadas para usar o workspace do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] de forma eficiente:  
   
 -   Feche as janelas que você não espera usar imediatamente.  
   

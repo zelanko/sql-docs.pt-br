@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2f50b0292b9139dcbb2b3a5652ad41136b31702a
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149866"
 ---
 # <a name="reserved-keywords-mdx-syntax"></a>Palavras-chave reservadas (Sintaxe MDX)
 
 
-  Analysis Services reserva determinadas palavras-chave para seu uso exclusivo. Para obter uma lista de palavras-chave reservadas, consulte [palavras reservadas MDX](../mdx/mdx-reserved-words.md).  
+  Analysis Services reserva determinadas palavras-chave para seu uso exclusivo. Para obter uma lista de palavras-chave reservadas, consulte [palavras reservadas do MDX](../mdx/mdx-reserved-words.md).  
   
  As palavras-chave reservadas seguem essas diretrizes:  
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: df58b5c7f6da05700f00b4ec5fd46b81926dd3bb
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150165"
 ---
 # <a name="set-operators"></a>Operadores de conjunto
 
@@ -23,15 +23,15 @@ ms.locfileid: "34742965"
   
  O MDX oferece suporte a operadores de conjunto listados na tabela a seguir.  
   
-|Operador|Description|  
+|Operador|Descrição|  
 |--------------|-----------------|  
-|[- (Exceto)](../mdx/except-mdx-operator.md)|Retorna a diferença entre dois conjuntos, removendo membros duplicados.<br /><br /> Esse operador é funcionalmente equivalente ao [exceto](../mdx/except-mdx-function.md) função.|  
-|[* (Produto cruzado)](../mdx/crossjoin-mdx-operator-reference.md)|Retorna o produto cruzado de dois conjuntos.<br /><br /> Esse operador é funcionalmente equivalente ao [Crossjoin](../mdx/crossjoin-mdx.md) função.|  
-|[: (Intervalo)](../mdx/range-mdx.md)|Retorna um conjunto ordenado naturalmente, com dois membros especificados como pontos de extremidade, e todos os membros entre os dois membros especificados incluídos como membros do conjunto.|  
-|[+ (União)](../mdx/union-mdx-operator-reference.md)|Retorna uma união de dois conjuntos, exceto membros duplicados.<br /><br /> Esse operador é funcionalmente equivalente ao [união &#40;MDX&#41; ](../mdx/union-mdx.md) função.|  
+|[- (Exceto)](../mdx/except-mdx-operator.md)|Retorna a diferença entre dois conjuntos, removendo membros duplicados.<br /><br /> Esse operador é funcionalmente equivalente para o [exceto](../mdx/except-mdx-function.md) função.|  
+|[* (Produto cruzado)](../mdx/crossjoin-mdx-operator-reference.md)|Retorna o produto cruzado de dois conjuntos.<br /><br /> Esse operador é funcionalmente equivalente para o [Crossjoin](../mdx/crossjoin-mdx.md) função.|  
+|[: (Range)](../mdx/range-mdx.md)|Retorna um conjunto ordenado naturalmente, com dois membros especificados como pontos de extremidade, e todos os membros entre os dois membros especificados incluídos como membros do conjunto.|  
+|[+ (União)](../mdx/union-mdx-operator-reference.md)|Retorna uma união de dois conjuntos, exceto membros duplicados.<br /><br /> Esse operador é funcionalmente equivalente para o [Union &#40;MDX&#41; ](../mdx/union-mdx.md) função.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
  [Referência de operador MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
  [Operadores &#40;sintaxe MDX&#41;](../mdx/operators-mdx-syntax.md)  
   

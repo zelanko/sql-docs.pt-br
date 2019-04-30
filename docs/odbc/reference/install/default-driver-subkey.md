@@ -17,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d78101fd564e18467e6833f480cec2409dc2c44b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198308"
 ---
 # <a name="default-driver-subkey"></a>Subchave do driver padrão
 A subchave padrão contém um único valor que descreve o driver usado pela fonte de dados padrão. O formato desse valor é mostrado na tabela a seguir.  
   
-|Nome|Tipo de dados|data|  
+|Nome|Tipo de dados|Dados|  
 |----------|---------------|----------|  
-|**Driver**|REG_SZ|*Descrição de driver padrão*|  
+|**Driver**|REG_SZ|*default-driver-description*|  
   
  O *descrição do driver de padrão* nome é igual ao nome do valor sob a subchave de Drivers ODBC que descreve o driver.  
   

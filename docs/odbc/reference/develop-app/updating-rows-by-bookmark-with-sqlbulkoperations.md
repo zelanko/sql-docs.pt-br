@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e9f0c59324542793301965c7d3555cf35ad40f5d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63194393"
 ---
 # <a name="updating-rows-by-bookmark-with-sqlbulkoperations"></a>Atualizar linhas por indicador com SQLBulkOperations
 Ao atualizar uma linha por indicador, **SQLBulkOperations** faz com que a fonte de dados atualize uma ou mais linhas da tabela. As linhas são identificadas pelo indicador em uma coluna de indicador associado. A linha é atualizada com o uso de dados nos buffers de aplicativo para cada coluna associada (exceto quando o valor no buffer de comprimento/indicador para uma coluna é SQL_COLUMN_IGNORE). Colunas não associadas não serão atualizadas.  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6c94b6c03cebb720fae7a64fe8c06ccea96e710f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140207"
 ---
 # <a name="connection-object-properties-methods-and-events"></a>Eventos, métodos e propriedades do objeto de Conexão
 ## <a name="propertiescollections"></a>Propriedades/coleções  
@@ -70,7 +70,7 @@ ms.locfileid: "47744024"
   
  [Evento InfoMessage](../../../ado/reference/ado-api/infomessage-event-ado.md)  
   
- [Evento WillConnect](../../../ado/reference/ado-api/willconnect-event-ado.md)  
+ [WillConnect Event](../../../ado/reference/ado-api/willconnect-event-ado.md)  
   
  [Evento WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Criar uma tarefa de script com o adaptador de destino do SSIS PDW | Microsoft Docs
+title: Crie uma tarefa de script com o adaptador de destino do PDW SSIS | Microsoft Docs
 desciption: This Integration Services (SSIS) package script code is a code example for using the SSIS PDW destination adaptor. The Integration Services Script Task allows you to perform virtually any operation that can be accomplished in a .Net application within the context of an SSIS control flow.
 author: mzaman1
 manager: craigg
@@ -10,14 +10,14 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 4f1f668c0fca14c81173141df3767319f987c9a9
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31538966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63142298"
 ---
-# <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>Criar uma tarefa de script que usa o adaptador de destino do SSIS Parallel Data Warehouse
-Esse código de script de pacote do SSIS é um exemplo de código para usar o adaptador de destino do SSIS PDW.  A tarefa de Script do Integration Services permite executar qualquer operação que pode ser realizada em um aplicativo .net dentro do contexto de um fluxo de controle do SSIS. 
+# <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>Criar uma tarefa de script que usa o adaptador de destino SSIS Parallel Data Warehouse
+Esse código de script de pacote do SSIS é um exemplo de código para usar o adaptador de destino SSIS PDW.  A tarefa de Script do Integration Services permite que você execute praticamente qualquer operação que pode ser feita em um aplicativo .net dentro do contexto de um fluxo de controle do SSIS. 
   
 ## <a name="sample-code"></a>Código de exemplo  
   
@@ -25,11 +25,11 @@ Esse código de script de pacote do SSIS é um exemplo de código para usar o ad
   
 2.  Abra a tarefa de **Editor da tarefa Script**e clique em **Editar Script**.  
   
-3.  Edite o script para usar o código fornecido abaixo. Personalizado o script para seu ambiente, fazendo as seguintes alterações:  
+3.  Edite o script para usar o código fornecido abaixo. Personalizado o script ao seu ambiente, fazendo as seguintes alterações:  
   
-    -   Você deve reter o namespace do script criado pela tarefa de script. Observe o nome do namespace `namespace ST_<GUID>` e edite o script abaixo, alterando *ST_<GUID>*  original *GUID* da tarefa de script.  
+    -   Você deve reter o namespace do script criado pela tarefa script. Anote o nome do namespace `namespace ST_<GUID>` e edite o script abaixo, alterando *ST_<GUID>*  original *GUID* da tarefa script.  
   
-    -   Substitua quatro ocorrências do valor de espaço reservado *XXXXXXXX* com os valores apropriados para seu ambiente e deve ser a ação.  
+    -   Substitua quatro ocorrências do valor de espaço reservado *XXXXXXXX* com os valores apropriados para sua ação pretendido e ambiente.  
   
     ```c#  
     #region Help:  Introduction to the script task  

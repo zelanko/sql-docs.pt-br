@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2267ff0af67682417b118e9fa01b2dceeb1454a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161443"
 ---
 # <a name="issuing-commands-to-the-underlying-data-provider"></a>Emitir comandos para o Provedor de Dados subjacente
 Qualquer comando que não começa com a forma é passado para o provedor de dados. Isso é equivalente a emitir um comando de forma na forma "Forma {comando do provedor}". Esses comandos fazer *não* deve produzir uma **conjunto de registros**. Por exemplo, "forma {DROP TABLE MyTable} é um comando de forma perfeitamente válida, supondo que o provedor de dados oferece suporte a DROP TABLE.  

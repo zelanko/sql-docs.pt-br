@@ -12,24 +12,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3118d85b3b17bef5a0095445f50b7193123e6d91
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144667"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>Gerar scripts (SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornece dois mecanismos para gerar scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] . Você pode criar scripts para vários objetos usando o **Assistente para Gerar e Publicar Scripts**. É possível gerar um script para objetos individuais ou para vários objetos usando o menu **Gerar script como** no **Pesquisador de Objetos**.  
   
-1.  **Escolha um método:**  [Assistente para Gerar e Publicar Scripts](#GenPubScriptWiz), [Menu Script Como do Pesquisador de Objetos](#OEScriptAsMenu)  
+1.  **Escolha um método:**  [Gerar e publicar Scripts assistente](#GenPubScriptWiz), [Explorer Menu Script como do objeto](#OEScriptAsMenu)  
   
-2.  **Para usar o menu Script Como:**  [Gerar script de um único objeto](#ScriptSingleObject), [Gerar script de dois objetos usando o Pesquisador de Objetos](#ScriptTwoObjectsOE), [Gerar script de dois objetos usando detalhes do Pesquisador de Objetos](#ScriptTwoObjectsOED)  
+2.  **Para usar o menu Script como:**  [Um único objeto de script](#ScriptSingleObject), [dois objetos usando o Pesquisador de objetos de Script](#ScriptTwoObjectsOE), [dois objetos usando detalhes do Pesquisador de objeto de Script](#ScriptTwoObjectsOED)  
   
 ## <a name="before-you-begin"></a>Antes de começar  
  Escolha o mecanismo que melhor satisfaz seus requisitos.  
   
 ###  <a name="GenPubScriptWiz"></a> Assistente para Gerar e Publicar Scripts  
- Use o **Assistente para Gerar e Publicar Scripts** para criar um script [!INCLUDE[tsql](../../includes/tsql-md.md)] para vários objetos. O assistente gera um script de todos os objetos de um banco de dados ou de um subconjunto dos objetos selecionado. O assistente tem muitas opções para seus scripts, por exemplo, se permissões, agrupamentos, restrições etc. devem ser incluídos. Para obter instruções sobre como usar o assistente, veja [Assistente para Gerar e Publicar Scripts](generate-and-publish-scripts-wizard.md).  
+ Use o **Assistente para Gerar e Publicar Scripts** para criar um script [!INCLUDE[tsql](../../includes/tsql-md.md)] para vários objetos. O assistente gera um script de todos os objetos de um banco de dados ou de um subconjunto dos objetos selecionado. O assistente tem muitas opções para seus scripts, por exemplo, se permissões, ordenações, restrições etc. devem ser incluídos. Para obter instruções sobre como usar o assistente, veja [Assistente para Gerar e Publicar Scripts](generate-and-publish-scripts-wizard.md).  
   
 ###  <a name="OEScriptAsMenu"></a> Menu Script Como do Pesquisador de Objetos  
  Você pode usar o menu **Gerar Script como do Pesquisador de Objetos** para gerar script de um único objeto, de vários objetos ou de várias instruções para um único objeto. É possível escolher um de vários tipos de scripts. Por exemplo, para criar, alterar ou descartar o objeto. É possível salvar o script em uma janela do Editor de Consultas em um arquivo ou na Área de Transferência. O script é criado em formato Unicode.  

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0fad1db10e40c71d22dd75417420c54cefa7803
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63194440"
 ---
 # <a name="connection-attributes"></a>Atributos de conexão
 Atributos de Conexão são características da conexão. Por exemplo, pelo fato de as transações ocorrerem no nível da conexão, o nível de isolamento da transação é um atributo de conexão. Da mesma forma, o tempo limite de logon, ou o número de segundos de espera ao tentar se conectar antes do tempo limite, é um atributo de conexão.  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ed769da991c54b4ae7bc85091a652a27f5399a73
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155187"
 ---
 # <a name="firstchild-mdx"></a>FirstChild (MDX)
 
@@ -42,6 +42,6 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>Consulte também  
  [LastChild &#40;MDX&#41;](../mdx/lastchild-mdx.md)   
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

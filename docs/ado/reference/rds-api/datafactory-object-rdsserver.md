@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 189dc8604883d8d91a8bc223c54dd3cb5c14969e
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51599817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63134351"
 ---
 # <a name="datafactory-object-rdsserver"></a>Objeto DataFactory (RDSServer)
 > [!IMPORTANT]

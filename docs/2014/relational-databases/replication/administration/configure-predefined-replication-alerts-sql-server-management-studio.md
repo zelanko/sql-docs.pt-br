@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 103f461c29e2bd7534ad5cb96836f06c972a6c5e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187265"
 ---
 # <a name="configure-predefined-replication-alerts-sql-server-management-studio"></a>Configurar alertas de replicação predefinidos (SQL Server Management Studio)
   A replicação oferece os seguintes alertas predefinidos que podem ser configurados para responder aos eventos de replicação:  
@@ -27,9 +27,9 @@ ms.locfileid: "54130306"
 -   **Replicação: falha do agente**    
 -   **Replicação: repetição do agente**    
 -   **Replicação: assinatura expirada cancelada**    
--   **Replicação: Assinatura reinicializada após falha de validação**    
--   **Replicação: Assinante Falha na validação de dados**    
--   **Replicação: Validação de dados do assinante**    
+-   **Replicação: assinatura reinicializada após falha de validação**    
+-   **Replicação: falha na validação de dados do assinante**    
+-   **Replicação: o assinante foi aprovado na validação de dados**    
 -   **Replicação: desligamento personalizado do agente**  
   
  Configure esses alertas na pasta **Alertas** no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou na guia **Avisos** no Replication Monitor. Para obter mais informações sobre como acessar essa guia, consulte [exibir informações e executar tarefas usando o Replication Monitor](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
@@ -45,7 +45,7 @@ ms.locfileid: "54130306"
     -   Na página **Geral** , clique em **Habilitar**; especifique em qual banco de dados deverá ser aplicado o alerta.    
     -   Na página **Resposta** , especifique se deve ser enviado um e-mail e/ou se deverá ser executado um trabalho.  
   
-         Se o alerta for **replicação: Assinante Falha na validação de dados**, você pode especificar o trabalho de resposta que a replicação fornecerá para este alerta: Selecione **executar trabalho**e, em seguida, clique no botão Procurar (**...** ). Na caixa de diálogo **Localizar trabalho** , clique em **Procurar**. Na caixa de diálogo **Procurar Objetos** , selecione **Reinicializar as assinaturas com falha na validação de dados**. Clique em **OK** em ambas as caixas de diálogo abertas. Quando o trabalho executar, usará um RPC (Remote Procedure Call) para um procedimento armazenado que reinicializará a assinatura. Se o Publicador selecionar um Distribuidor remoto, você deverá definir um logon de servidor remoto no Publicador, para que o RPC do Distribuidor ao Publicador possa ser realizado.   
+         Se o alerta for **Replicação: o assinante foi reprovado na validação de dados**, você poderá especificar o trabalho de resposta que a replicação fornecerá para este alerta: Selecione **executar trabalho**e, em seguida, clique no botão Procurar (**...** ). Na caixa de diálogo **Localizar trabalho** , clique em **Procurar**. Na caixa de diálogo **Procurar Objetos** , selecione **Reinicializar as assinaturas com falha na validação de dados**. Clique em **OK** em ambas as caixas de diálogo abertas. Quando o trabalho executar, usará um RPC (Remote Procedure Call) para um procedimento armazenado que reinicializará a assinatura. Se o Publicador selecionar um Distribuidor remoto, você deverá definir um logon de servidor remoto no Publicador, para que o RPC do Distribuidor ao Publicador possa ser realizado.   
     -   Na página **Opções** , personalize o texto da resposta.    
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -56,7 +56,7 @@ ms.locfileid: "54130306"
 3.  Defina opções na caixa de diálogo **Propriedades do alerta \<AlertName>**:    
     -   Na página **Geral** , clique em **Habilitar**; especifique em qual banco de dados deverá ser aplicado o alerta.    
     -   Na página **Resposta** , especifique se deve ser enviado um e-mail e/ou se deverá ser executado um trabalho.    
-         Se o alerta for **replicação: Assinante Falha na validação de dados**, você pode especificar o trabalho de resposta que a replicação fornecerá para este alerta: Selecione **executar trabalho**e, em seguida, clique no botão Procurar (**...** ). Na caixa de diálogo **Localizar trabalho** , clique em **Procurar**. Na caixa de diálogo **Procurar Objetos** , selecione **Reinicializar as assinaturas com falha na validação de dados**. Clique em **OK** em ambas as caixas de diálogo abertas. Quando o trabalho executar, usará um RPC (Remote Procedure Call) para um procedimento armazenado que reinicializará a assinatura. Se o Publicador selecionar um Distribuidor remoto, você deverá definir um logon de servidor remoto no Publicador, para que o RPC do Distribuidor ao Publicador possa ser realizado.   
+         Se o alerta for **Replicação: o assinante foi reprovado na validação de dados**, você poderá especificar o trabalho de resposta que a replicação fornecerá para este alerta: Selecione **executar trabalho**e, em seguida, clique no botão Procurar (**...** ). Na caixa de diálogo **Localizar trabalho** , clique em **Procurar**. Na caixa de diálogo **Procurar Objetos** , selecione **Reinicializar as assinaturas com falha na validação de dados**. Clique em **OK** em ambas as caixas de diálogo abertas. Quando o trabalho executar, usará um RPC (Remote Procedure Call) para um procedimento armazenado que reinicializará a assinatura. Se o Publicador selecionar um Distribuidor remoto, você deverá definir um logon de servidor remoto no Publicador, para que o RPC do Distribuidor ao Publicador possa ser realizado.   
     -   Na página **Opções** , personalize o texto da resposta.    
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]    
 5.  Clique em **Fechar**.  

@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b66a0c9efc94d648eba2f4d4f8cff779def413fe
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131800"
 ---
 # <a name="overview-smo"></a>Visão geral (SMO)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) são objetos criados para o gerenciamento programático do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você pode usar os SMO para compilar aplicativos de gerenciamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] personalizados. Embora o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] seja um aplicativo extenso e abrangente para o gerenciamento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pode haver vezes em que um aplicativo SMO funcione melhor.  
@@ -141,7 +141,7 @@ ms.locfileid: "52788158"
   
  O particionamento de tabela e índice permite gerenciar a expansão de dados em tabelas e índices por grupos de arquivos. Esse recurso novo é representado por objetos do SMO.  
   
- **Pontos de extremidade**  
+ **EndPoints**  
   
  As solicitações de espelhamento de banco de dados e SOAP são manipuladas por pontos de extremidade que usam o objeto <xref:Microsoft.SqlServer.Management.Smo.Endpoint>.  
   

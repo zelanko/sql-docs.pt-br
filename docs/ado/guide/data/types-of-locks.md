@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6b66b87b0c741bf943cc2558862a0e1853c386b5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63228058"
 ---
 # <a name="types-of-locks"></a>Tipos de bloqueios
 ## <a name="adlockbatchoptimistic"></a>adLockBatchOptimistic  

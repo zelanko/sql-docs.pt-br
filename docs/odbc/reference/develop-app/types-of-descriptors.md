@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a042229e3149f97b72b6e86b485771966eb80c30
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63305615"
 ---
 # <a name="types-of-descriptors"></a>Tipos de descritores
 Um descritor é usado para descrever um dos seguintes:  
@@ -46,7 +46,7 @@ Um descritor é usado para descrever um dos seguintes:
 |**Buffer de aplicativo**|descritor de linha de aplicativo (descartar)|parâmetro APD (descritor aplicativo)|  
 |**Buffer de implementação**|descritor de linha de implementação (IRD)|descritor de parâmetro de implementação (IPD)|  
   
- Para o parâmetro ou os buffers de linha, se o aplicativo especifica os diferentes tipos de dados em registros correspondentes dos descritores de implementação e de aplicativo, o driver executa a conversão de dados quando ele usa os descritores. Por exemplo, ele pode converter valores numéricos e de data e hora para o formato de cadeia de caracteres. (Para conversões válidas, consulte [tipos de dados do apêndice d:](../../../odbc/reference/appendixes/appendix-d-data-types.md).)  
+ Para o parâmetro ou os buffers de linha, se o aplicativo especifica os diferentes tipos de dados em registros correspondentes dos descritores de implementação e de aplicativo, o driver executa a conversão de dados quando ele usa os descritores. Por exemplo, ele pode converter valores numéricos e de data e hora para o formato de cadeia de caracteres. (Para conversões válidas, consulte [apêndice d: Tipos de dados](../../../odbc/reference/appendixes/appendix-d-data-types.md).)  
   
  Um descritor pode executar diferentes funções. Instruções diferentes podem compartilhar qualquer descritor que o aplicativo aloca explicitamente. Um descritor de linha em uma instrução pode servir como um descritor de parâmetro em outra instrução.  
   

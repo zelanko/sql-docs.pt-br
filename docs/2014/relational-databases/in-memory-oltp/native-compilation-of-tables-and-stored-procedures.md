@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e70ab55fedcc5053cf82a78c040c850a23824eb
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63075179"
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>Compilação nativa de tabelas e procedimentos armazenados
   O OLTP na memória apresenta o conceito de compilação nativa. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode compilar nativamente procedimentos armazenados que acessam tabelas com otimização de memória. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] também pode compilar nativamente tabelas com otimização de memória. A compilação nativa permite o acesso mais rápido a dados e a execução mais eficiente de consultas, em comparação ao [!INCLUDE[tsql](../../includes/tsql-md.md)]interpretado (tradicional). A compilação nativa de tabelas e procedimentos armazenados gera DLLs.  

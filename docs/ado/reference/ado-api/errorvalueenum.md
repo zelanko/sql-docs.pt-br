@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db2065bd599b1aca1542318bfab0d0ce57e2a938
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63070917"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 Especifica o tipo de erro de tempo de execução do ADO.  
@@ -32,7 +32,7 @@ Especifica o tipo de erro de tempo de execução do ADO.
   
 -   Negativo decimal: A conversão decimal do número de erro completa.  
   
--   Hexadecimal: A representação hexadecimal do número de erro completa. O código de recurso do Windows está em quarto dígito. É o código de recurso para os números de erro ADO *um*. Por exemplo: 0x800***um***0E7B.  
+-   Hexadecimal: A representação hexadecimal do número de erro completa. O código de recurso do Windows está em quarto dígito. É o código de recurso para os números de erro ADO *um*. Por exemplo: 0x800***A***0E7B.  
   
 > [!NOTE]
 >  Erros de OLE DB podem ser passados para o seu aplicativo do ADO. Normalmente, elas podem ser identificadas por um código de recurso do Windows do *4*. Por exemplo, 0x800***4***.  
@@ -46,8 +46,8 @@ Especifica o tipo de erro de tempo de execução do ADO.
 |**adErrCantConvertvalue**|3724 -2146824564 0x800A0E8C|Valor de dados não pode ser convertido por razões diferentes de estouro de dados ou de incompatibilidade de sinal. Por exemplo, a conversão pode ter truncado dados.|  
 |**adErrCantCreate**|3725 -2146824563 0x800A0E8D|Valor de dados não pode ser definido ou recuperado porque o tipo de dados do campo era desconhecido ou o provedor precisou recursos insuficientes para executar a operação.|  
 |**adErrCatalogNotSet**|3747 -2146824541 0x800A0EA3|Operação requer uma validade **ParentCatalog**.|  
-|**adErrColumnNotOnThisRow**|3726-2146824562 0x800A0E8E|Registro não contém esse campo.|  
-|**adErrDataConversion**|3421-2146824867 0x800A0D5D|Aplicativo usa um valor do tipo errado para a operação atual.|  
+|**adErrColumnNotOnThisRow**|3726 -2146824562 0x800A0E8E|Registro não contém esse campo.|  
+|**adErrDataConversion**|3421 -2146824867 0x800A0D5D|Aplicativo usa um valor do tipo errado para a operação atual.|  
 |**adErrDataOverflow**|3721 -2146824567 0x800A0E89|Valor de dados é muito grande para ser representado pelo tipo de dados do campo.|  
 |**adErrDelResOutOfScope**|3738 -2146824550 0x800A0E9A|URL do objeto a ser excluído está fora do escopo do registro atual.|  
 |**adErrDenyNotSupported**|3750 -2146824538 0x800A0EA6|Provedor não oferece suporte a restrições de compartilhamento.|  
@@ -56,7 +56,7 @@ Especifica o tipo de erro de tempo de execução do ADO.
 |**adErrFieldsUpdateFailed**|3749 -2146824539 0x800A0EA5|Falha na atualização de campos. Para obter mais informações, examine os **Status** propriedade dos objetos de campo individual.|  
 |**adErrIllegalOperation**|3219 -2146825069 0x800A0C93|Operação não é permitida neste contexto.|  
 |**adErrIntegrityViolation**|3719 -2146824569 0x800A0E87|Valor dos dados está em conflito com as restrições de integridade do campo.|  
-|**adErrInTransaction**|3246-2146825042 0x800A0CAE|**Conexão** objeto não pode ser fechado explicitamente enquanto estiver em uma transação.|  
+|**adErrInTransaction**|3246 -2146825042 0x800A0CAE|**Conexão** objeto não pode ser fechado explicitamente enquanto estiver em uma transação.|  
 |**adErrInvalidArgument**|3001 -2146825287 0x800A0BB9|Argumentos são do tipo errado, estão fora do intervalo aceitável ou estão em conflito com uma da outra.|  
 |**adErrInvalidConnection**|3709 -2146824579 0x800A0E7D|A conexão não pode ser usado para executar esta operação. Ele está fechado ou é inválido neste contexto.|  
 |**adErrInvalidParamInfo**|3708 -2146824580 0x800A0E7C|**Parâmetro** objeto está definido incorretamente. Informações inconsistentes ou incompletas foi fornecidas.|  
@@ -83,7 +83,7 @@ Especifica o tipo de erro de tempo de execução do ADO.
 |**adErrSchemaViolation**|3722 -2146824566 0x800A0E8A|Valor dos dados está em conflito com o tipo de dados ou as restrições do campo.|  
 |**adErrSignMismatch**|3723 -2146824565 0x800A0E8B|Falha na conversão porque o valor de dados estava assinado e o tipo de dados do campo usado pelo provedor não estava assinado.|  
 |**adErrStillConnecting**|3713 -2146824575 0x800A0E81|Operação não pode ser executada durante a conexão de forma assíncrona.|  
-|**adErrStillExecuting**|3711-2146824577 0x800A0E7F|Operação não pode ser executada durante a execução de forma assíncrona.|  
+|**adErrStillExecuting**|3711 -2146824577 0x800A0E7F|Operação não pode ser executada durante a execução de forma assíncrona.|  
 |**adErrTreePermissionDenied**|3728 -2146824560 0x800A0E90|Permissões são insuficientes para acessar a árvore ou uma subárvore.|  
 |**adErrUnavailable**|3736 -2146824552 0x800A0E98|Operação não foi concluída e o status não está disponível. O campo pode estar indisponível ou a operação não foi tentada.|  
 |**adErrUnsafeOperation**|3716 -2146824572 0x800A0E84|Configurações de segurança neste computador impedem o acesso a uma fonte de dados em outro domínio.|  
@@ -95,7 +95,7 @@ Especifica o tipo de erro de tempo de execução do ADO.
 |**adWrnSecurityDialogHeader**|3718 -2146824570 0x800A0E86|Somente para uso interno. Não use.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
- Pacote: **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
  Apenas os seguintes subconjuntos de equivalentes de ADO/WFC são definidos.  
   

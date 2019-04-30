@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5eec141a82b4cf7aca5fd8c112249c362a1242d4
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187583"
 ---
 # <a name="mdx-reserved-words"></a>Palavras reservadas para MDX
 
@@ -59,7 +59,7 @@ ms.locfileid: "34742285"
 |CHILDREN|HEAD|PARENT|UPDATE|  
 |CLEAR|HIDDEN|PASS|USE|  
 |CLOSINGPERIOD|HIERARCHIZE|PERIODSTODATE|USE_EQUAL_ALLOCATION|  
-|COALESCEEMPTY|HIERARCHY|POST|USE_WEIGHTED_ALLOCATION|  
+|COALESCEEMPTY|HIERARCHY|POSTAR|USE_WEIGHTED_ALLOCATION|  
 |COLUMN|IGNORE|PREDICT|USE_WEIGHTED_INCREMENT|  
 |COLUMNS|IIF|PREVMEMBER|USERNAME|  
 |CORRELATION|INCLUDEEMPTY|PROPERTIES|VALIDMEASURE|  
@@ -80,6 +80,6 @@ ms.locfileid: "34742285"
   
 ## <a name="see-also"></a>Consulte também  
  [Palavras-chave reservadas &#40;sintaxe MDX&#41;](../mdx/reserved-keywords-mdx-syntax.md)   
- [Referência de linguagem MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
+ [Referência da linguagem MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
   
   

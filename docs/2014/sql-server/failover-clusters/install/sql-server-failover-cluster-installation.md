@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 49fce70b4fc01f77fe7ca54e3951f0372ba18489
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067642"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>Instalação do cluster de failover do SQL Server
   Para instalar um cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , você deve criar e configurar uma instância de cluster de failover por meio da execução da Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -43,7 +43,7 @@ ms.locfileid: "52815726"
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-failover-cluster-installation-options"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Opções de instalações de cluster de failover  
   
-##### <a name="option-1-integrated-installation-with-add-node"></a>Opção 1: Instalação integrada com Adicionar nó  
+##### <a name="option-1-integrated-installation-with-add-node"></a>Opção 1: instalação integrada com Adicionar Nó  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consiste em duas etapas:  
   
 1.  Criar e configurar uma instância de cluster de failover de um único nó do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Ao concluir a configuração bem-sucedida de um nó, você tem uma instância de cluster de failover totalmente funcional. Neste momento ele não tem alta disponibilidade porque há apenas um nó no cluster de failover.  

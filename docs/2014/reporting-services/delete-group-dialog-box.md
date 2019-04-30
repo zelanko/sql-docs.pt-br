@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8532661c57901cd720e10b5d42047aa8f1071414
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59949599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63165466"
 ---
 # <a name="delete-group-dialog-box"></a>Caixa de diálogo Excluir Grupo
   Use a caixa de diálogo **Excluir Grupo** para excluir um grupo de uma tabela, matriz ou região de dados de lista. Caso haja linhas ou colunas associadas ao grupo, você também pode excluir essas estruturas.  

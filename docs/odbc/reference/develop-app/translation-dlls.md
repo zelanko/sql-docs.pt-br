@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ec1d0e23019f3e5b68ad38711c1f041b160ceb31
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63305747"
 ---
 # <a name="translation-dlls"></a>DLLs de conversão
 O aplicativo e a fonte de dados geralmente armazenam dados em conjuntos de caracteres diferentes. O ODBC fornece um mecanismo genérico que permite que o driver converter dados de um conjunto de caracteres para outra. Ele consiste em uma DLL que implementa as funções de conversão **SQLDriverToDataSource** e **SQLDataSourceToDriver**, que são chamados pelo driver para converter todos os dados fluindo entre a fonte de dados e o driver. Essa DLL pode ser escrito pelo desenvolvedor do aplicativo, o desenvolvedor de driver, ou por terceiros.  

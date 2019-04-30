@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 341f34afa1dbe65f4b83a46f461bb93f4fb4f4c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63148936"
 ---
 # <a name="step-5-commit-the-transaction"></a>Etapa 5: Confirmar a transação
 A próxima etapa é confirmar a transação, conforme mostrado na ilustração a seguir.  

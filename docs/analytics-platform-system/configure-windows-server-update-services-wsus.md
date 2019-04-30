@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 776859eb291004431a7e4e2743f1c008a7b752dd
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63134728"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Configurar o Windows Server Update Services (WSUS) no Analytics Platform System
 Essas instruções você percorrer as etapas para usar o Assistente de configuração do Windows Server Update Services (WSUS) para configurar o WSUS para o Analytics Platform System. Você precisa configurar o WSUS antes de aplicar as atualizações de software para o dispositivo. WSUS já está instalado na máquina virtual VMM do dispositivo.  
@@ -63,7 +63,7 @@ Para configurar o WSUS, você precisa:
   
     4.  Se esta for a primeira vez que você executou o Assistente do WSUS, você poderá ser solicitado a configurar um diretório para armazenar as atualizações. `C:\wsus` é um local apropriado; No entanto, você pode fornecer um caminho diferente.  
   
-        ![Caminho WSUS](./media/configure-windows-server-update-services-wsus/WSUS_Wiz1.png "WSUS_Wiz1")  
+        ![WSUS path](./media/configure-windows-server-update-services-wsus/WSUS_Wiz1.png "WSUS_Wiz1")  
   
     5.  Examine os **antes de começar** lista de itens a serem concluídos antes de concluir o assistente.  
   
@@ -71,7 +71,7 @@ Para configurar o WSUS, você precisa:
   
     6.  Sobre o **ingressar no programa de aperfeiçoamento do Microsoft Update** página, selecione **Sim, eu gostaria de ingressar no programa de aperfeiçoamento do Microsoft Update**e, em seguida, clique em **próxima**.  
   
-        ![Programa de aperfeiçoamento do WSUS](./media/configure-windows-server-update-services-wsus/WSUS_Wiz3.png "WSUS_Wiz3")  
+        ![WSUS Improvement Program](./media/configure-windows-server-update-services-wsus/WSUS_Wiz3.png "WSUS_Wiz3")  
   
     Agora você deve ver a **escolher servidor Upstream** página. Captura de tela a seguir é o ponto inicial do Assistente de configuração.  
   
@@ -99,7 +99,7 @@ Para configurar o WSUS, você precisa:
   
     3.  Se esse for um servidor de réplica, selecione a **esta é uma réplica do servidor upstream** caixa de seleção. É possível selecionar ambas **usar SSL ao sincronizar informações de atualização** e **esta é uma réplica do servidor upstream**.  
   
-        ![Réplica do servidor Upstream WSUS](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4d.png "WSUS_Wiz4d")  
+        ![WSUS Upstream Server Replica](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4d.png "WSUS_Wiz4d")  
   
     4.  Neste ponto, você terá concluído com a configuração do servidor upstream. Clique em **próxima**, ou selecione **especificar servidor de proxy** no painel de navegação à esquerda.  
   
@@ -107,7 +107,7 @@ Para configurar o WSUS, você precisa:
   
     Se este servidor requer um servidor proxy para acessar o Microsoft Update ou outro servidor upstream, você pode configurar as configurações do servidor proxy aqui; Caso contrário, clique em **próxima**.  
   
-    ![Proxy WSUS](./media/configure-windows-server-update-services-wsus/WSUS_Wiz5a.png "WSUS_Wiz5a")  
+    ![WSUS Proxy](./media/configure-windows-server-update-services-wsus/WSUS_Wiz5a.png "WSUS_Wiz5a")  
   
     #### <a name="to-configure-proxy-server-settings"></a>Para definir configurações de servidor proxy  
   
@@ -195,7 +195,7 @@ Depois de configurar o WSUS para o Analytics Platform System, a próxima etapa �
   
 5.  Selecione o novo grupo de computadores que você criou clicando na caixa de seleção e, em seguida, clicando em **Okey**.  
   
-    ![Associação de grupo de computadores do conjunto](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSetComputerGroupMembership.png "SQL_Server_PDW_WSUSSetComputerGroupMembership")  
+    ![Set Computer Group Membership](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSetComputerGroupMembership.png "SQL_Server_PDW_WSUSSetComputerGroupMembership")  
   
 6.  Selecione o novo grupo de computadores, altere sua **Status** à **qualquer**e, em seguida, clique em **atualizar**. Todos os computadores agora devem ser atribuídos a esse grupo e listados no painel à direita. Geralmente é seguro continuar quando nós mostram avisos, como **este nó não tenha comunicado seu status ainda**.  
   

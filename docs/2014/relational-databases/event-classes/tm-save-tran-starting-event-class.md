@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2b33f4a2d85f2613b238c9bd9b2e59415784b2a3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061318"
 ---
 # <a name="tm-save-tran-starting-event-class"></a>TM: Classe de evento Save Tran Starting
   TM: Save Tran Starting a classe de evento indica que uma solicitação SAVE TRANSACTION está iniciando. A solicitação é enviada do cliente pela interface de gerenciamento de transações.  

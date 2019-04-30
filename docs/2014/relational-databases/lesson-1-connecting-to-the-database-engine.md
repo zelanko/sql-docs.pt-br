@@ -1,5 +1,5 @@
 ---
-title: 'Lição 1: Conectando ao mecanismo de banco de dados | Microsoft Docs'
+title: 'Lição 1: Conectando ao Mecanismo de Banco de Dados | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 32b78c210647ab5b3722f01f334e9cb2e8bbfc13
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63145475"
 ---
-# <a name="lesson-1-connecting-to-the-database-engine"></a>Lição 1: conectando-se ao mecanismo de banco de dados
+# <a name="lesson-1-connecting-to-the-database-engine"></a>Lição 1: conexão ao mecanismo de banco de dados
   Quando você instala o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], as ferramentas instaladas dependem da edição e de suas opções de instalação. Esta lição analisa as principais ferramentas e mostra como conectar e executar uma função básica (autorizar mais usuários).  
   
   

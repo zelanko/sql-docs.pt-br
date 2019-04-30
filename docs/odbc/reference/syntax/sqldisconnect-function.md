@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 61e32c11aafeaf693188a96b48ddd60728ba5bc4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061454"
 ---
 # <a name="sqldisconnect-function"></a>Função SQLDisconnect
 **Conformidade com**  
@@ -43,7 +43,7 @@ SQLRETURN SQLDisconnect(
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Identificador da conexão*  
+ *ConnectionHandle*  
  [Entrada] Identificador de Conexão.  
   
 ## <a name="returns"></a>Retorna  

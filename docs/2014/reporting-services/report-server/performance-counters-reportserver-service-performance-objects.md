@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7fb15529a9547edc64ffe1a0a53d69e16a0618f4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191322"
 ---
 # <a name="performance-counters-for-the-reportserverservice--and-reportserversharepointservice-performance-objects"></a>Performance Counters for the ReportServer:Service  and ReportServerSharePoint:Service Performance Objects
   Este tópico descreve os contadores de desempenho dos seguintes objetos de desempenho do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] :  

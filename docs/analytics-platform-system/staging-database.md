@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 52ede16185515c3df00ff21ece784d62eec984ef
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157691"
 ---
 # <a name="using-a-staging-database-in-parallel-data-warehouse-pdw"></a>Usando um banco de dados de preparo no Parallel Data Warehouse (PDW)
 SQL Server Parallel Data Warehouse (PDW) usa um banco de dados de preparo para armazenar dados temporariamente durante o processo de carregamento. Por padrão, o SQL Server PDW usa o banco de dados de destino como o banco de dados temporário, que pode causar a fragmentação de tabela. Para reduzir a fragmentação de tabela, você pode criar um banco de dados de preparo definido pelo usuário. Ou, quando a reversão de uma falha de carregamento não for uma preocupação, você pode usar o fastappend ao carregar o modo para melhorar o desempenho ignorando a tabela temporária e carregando diretamente na tabela de destino.  

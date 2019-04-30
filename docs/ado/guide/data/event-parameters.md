@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2e44bc264b5fd3e21e35042243ee81f7834c60b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161636"
 ---
 # <a name="event-parameters"></a>Parâmetros de evento
 Cada manipulador de eventos tem um parâmetro de status que controla o manipulador de eventos. Para eventos de conclusão, esse parâmetro também é usado para indicar o êxito ou falha da operação que gerou o evento. Eventos mais completos também tem um parâmetro de erro para fornecer informações sobre qualquer erro que possam ter ocorrido e um ou mais parâmetros de objeto que se referem os objetos do ADO usados para executar a operação. Por exemplo, o [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md) evento inclui parâmetros de objeto para o **comando**, **conjunto de registros**, e **Conexão** objetos associado ao evento. No exemplo a seguir do Microsoft® Visual Basic®, você pode ver o pCommand, pRecordset e pConnection objetos que representam o **comando**, **conjunto de registros**, e **Conexão** objetos que são usados pelo **Execute** método.  
@@ -44,7 +44,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
 ## <a name="status-parameter"></a>Parâmetro de status  
  Quando a rotina do manipulador de eventos é chamada, o *Status* parâmetro é definido como um dos valores a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**adStatusOK**|Passado para será e eventos de conclusão. Esse valor significa que a operação que causou o evento foi concluído com êxito.|  
 |**adStatusErrorsOccurred**|Passado para apenas os eventos de conclusão. Esse valor significa que a operação que causou o evento não foi bem-sucedida, ou um evento será cancelou a operação. Verifique as *erro* parâmetro para obter mais detalhes.|  
@@ -54,7 +54,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
   
  Se você não deseja mais processar um evento, você pode definir *Status* à **adStatusUnwantedEvent** e seu aplicativo não receberá a notificação de que o evento. No entanto, lembre-se de que alguns eventos podem ser gerados por mais de um motivo. Nesse caso, você deve especificar **adStatusUnwantedEvent** para cada motivo possíveis. Por exemplo, para interromper o recebimento da notificação pendente **RecordChange** eventos, você deve definir o *Status* parâmetro **adStatusUnwantedEvent** para  **adRsnAddNew**, **adRsnDelete**, **adRsnUpdate**, **adRsnUndoUpdate**, **adRsnUndoAddNew**, **adRsnUndoDelete**, e **adRsnFirstChange** conforme elas ocorrem.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**adStatusUnwantedEvent**|Solicite que esse manipulador de eventos não receber nenhuma notificação adicional.|  
 |**adStatusCancel**|Solicite o cancelamento da operação que está prestes a ocorrer.|  

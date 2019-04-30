@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5ec9ec3dacc91fd36b64ec8b68ea66c42bdc3371
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150639"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados
   Este tópico descreve como iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter informações sobre como exibir e trabalhar com os resultados depois que você ajustar um banco de dados, veja [Exibir e trabalhar com a saída do Orientador de Otimização do Mecanismo de Banco de Dados](database-engine-tuning-advisor.md).  
@@ -443,7 +443,7 @@ database_name.owner_name.table_name
  Inclua apenas recomendações para adicionar exibições indexadas. Índices clusterizados e não clusterizados  não serão recomendados.  
   
  **Incluir índices filtrados**  
- Inclua recomendações para adicionar índices filtrados. Essa opção estará disponível se você selecionar uma destas estruturas de design físico: **Índices e exibições indexadas**, **índices**, ou **índices não clusterizados**.  
+ Inclua recomendações para adicionar índices filtrados. Essa opção estará disponível se você selecionar uma destas estruturas de design físico: **índices e exibições indexadas**, **índices** ou **índices não clusterizados**.  
   
  **Índices**  
  Inclua apenas recomendações para adicionar índices clusterizados e não clusterizados. Não serão recomendadas exibições indexadas.  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f83e66d238aa67b28bf547540c5a6b5dfcc9c92d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188291"
 ---
 # <a name="parameters-properties-page-report-manager"></a>Página Propriedades de Parâmetro (Gerenciador de Relatórios)
   Use página Propriedades de Parâmetro para exibir ou modificar configurações de parâmetro para um relatório com parâmetros.  

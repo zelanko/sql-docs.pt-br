@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 1211a1d5f22758b5c3732aa1b9843fe11ef8b3db
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540948"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63132300"
 ---
 # <a name="converting-mysql-databases-mysqltosql"></a>Converter bancos de dados MySQL (MySQLToSQL)
 Depois de se conectar ao MySQL, conectado ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do SQL Azure e defina o projeto e as opções de mapeamento de dados, você pode converter objetos de banco de dados MySQL para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou objetos de banco de dados do SQL Azure.  
@@ -35,7 +35,7 @@ A tabela a seguir mostra quais objetos de MySQL são convertidos e resultante [!
 |-|-|  
 |**Objetos do MySQL**|**Objetos do SQL Server resultantes**|  
 |Tabelas com objetos dependentes, como índices|O SSMA cria tabelas com objetos dependentes. Tabela for convertida com todos os índices e restrições. Os índices são convertidos em separado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos.<br /><br />**Mapeamento de tipo de dados espaciais** podem ser executadas somente no nível de nó de tabela.<br /><br />Para obter mais informações sobre as configurações de conversão de tabela, consulte [configurações de conversão](conversion-settings-mysqltosql.md)|  
-|Funções|Se a função pode ser convertida diretamente para o Transact-SQL, o SSMA cria uma função. Em alguns casos, a função deve ser convertida em um procedimento armazenado. Isso pode ser feito por meio **conversão de função** nas configurações do projeto. Nesse caso, o SSMA cria um procedimento armazenado e uma função que chama o procedimento armazenado.<br /><br />**Opções de dado:**<br /><br />Converter de acordo com as configurações de projeto<br /><br />Converter em função<br /><br />Converter em procedimento armazenado<br /><br />Para obter mais informações sobre configurações de função de conversão, consulte [configurações de conversão](conversion-settings-mysqltosql.md)|  
+|Funções|Se a função pode ser convertida diretamente para o Transact-SQL, o SSMA cria uma função. Em alguns casos, a função deve ser convertida em um procedimento armazenado. Isso pode ser feito por meio **conversão de função** nas configurações do projeto. Nesse caso, o SSMA cria um procedimento armazenado e uma função que chama o procedimento armazenado.<br /><br />**Choices Given:**<br /><br />Converter de acordo com as configurações de projeto<br /><br />Converter em função<br /><br />Converter em procedimento armazenado<br /><br />Para obter mais informações sobre configurações de função de conversão, consulte [configurações de conversão](conversion-settings-mysqltosql.md)|  
 |Procedimentos|Se o procedimento pode ser convertido diretamente para o Transact-SQL, o SSMA cria um procedimento armazenado. Em alguns casos, um procedimento armazenado deve ser chamado em uma transação autônoma. Nesse caso, o SSMA cria dois procedimentos armazenados: uma que implementa o procedimento e outro que é usada para chamar a implementação de procedimento armazenado.|  
 |Conversão de banco de dados|Bancos de dados como objetos de MySQL não são convertidos diretamente pelo SSMA para MySQL. Bancos de dados MySQL são tratados mais como nomes de esquema e todos os parâmetros físicos serão perdidos durante a conversão. SSMA para MySQL usa [mapeamento de bancos de dados MySQL para esquemas SQL Server &#40;MySQLToSQL&#41; ](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md) para mapear objetos de banco de dados MySQL para o par de banco de dados ou o esquema do SQL Server apropriado.|  
 |Conversão de gatilho|**O SSMA cria gatilhos com base nas seguintes regras:**<br /><br />ANTES dos gatilhos são convertidos em gatilhos INSTEAD OF T-SQL<br /><br />Gatilhos AFTER são convertidos em gatilhos depois de T-SQL com ou sem iterações por linhas.|  

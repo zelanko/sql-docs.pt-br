@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0cf2c598b358c5c43e9dc9717b012bc5c5f873d0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191124"
 ---
 # <a name="size-property-clientnetlibinfo-class"></a>Propriedade Size (classe ClientNetLibInfo)
   Obtém o tamanho da biblioteca de rede de cliente em quilobytes.  

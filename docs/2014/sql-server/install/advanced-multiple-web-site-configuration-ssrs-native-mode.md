@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: d6860e41991d00e6cd0c2869413dca110422c4e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63226008"
 ---
 # <a name="advanced-multiple-web-site-configuration-ssrs-native-mode"></a>Configuração avançada de vários sites (modo nativo do SSRS)
   Use esta caixa de diálogo para criar e gerenciar as URLs usadas para acessar um servidor de relatório ou um Gerenciador de Relatórios. A caixa de diálogo **Configuração Avançada de Vários Sites** é usada para criar URLs adicionais, URLs personalizadas que incluem um nome de cabeçalho de host ou para especificar um endereço IP no formato IPv4 ou IPv6.  
@@ -27,7 +27,7 @@ ms.locfileid: "48185366"
   
  A criação de várias URLs será útil se você deseja configurar formas diferentes para acessar um servidor de relatório. Por exemplo, o acesso ao servidor de relatório por uma conexão intranet e extranet normalmente requer a existência de URLs diferentes para cada tipo de conexão.  
   
- Para abrir o **configuração avançada de sites múltiplos** caixa de diálogo, clique em **avançado** no **URL do serviço Web** ou o **URL do Report Manager**página de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] do Configuration Manager. Depois que a caixa de diálogo **Configuração Avançada de Vários Sites** for aberta, você poderá clicar em **Adicionar** ou **Editar** para definir novas URLs, ou ainda modificar ou excluir URLs existentes.  
+ Para abrir a caixa de diálogo **Configuração Avançada de Vários Sites** , clique em **Avançada** na página **URL do Serviço Web** ou **URL do Gerenciador de Relatórios** no Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Depois que a caixa de diálogo **Configuração Avançada de Vários Sites** for aberta, você poderá clicar em **Adicionar** ou **Editar** para definir novas URLs, ou ainda modificar ou excluir URLs existentes.  
   
  Clique em **OK** para salvar as alterações. Se você adicionar ou remover URLs, mas depois fechar a caixa de diálogo sem primeiro clicar em **OK**, suas alterações serão perdidas.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48185366"
  Desmarque uma entrada de URL da lista.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gerenciador de configuração do Reporting Services &#40;modo nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Configurar uma URL &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [Configurar as URLs do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   

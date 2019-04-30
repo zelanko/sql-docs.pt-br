@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6e23f7b373eb0b1f089c2c38eb28027dedc48849
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161516"
 ---
 # <a name="handling-errors-in-other-languages"></a>Tratamento de erro em outras linguagens
 Até agora, esta seção discutiu erros de um ponto de vista do Microsoft® Visual Basic®. O restante desta seção lhe dará uma visão geral de tratamento de erros em idiomas diferentes do Visual Basic.  

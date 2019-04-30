@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d41a1150a2562779f233454ae32949310cde600e
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191771"
 ---
 # <a name="securing-rds-applications"></a>Proteger aplicativos RDS
 Este tópico fornece informações de segurança para RDS.  
@@ -42,6 +42,6 @@ Este tópico fornece informações de segurança para RDS.
  Consequentemente, o modo de autenticação do Windows NT de IIS desafio/resposta permite que as páginas HTML a ser criado sem que o usuário que está sendo solicitado explicitamente as informações de ID e a senha de usuário necessárias para fazer logon no banco de dados. Se a autenticação básica do IIS que estavam sendo usada, em seguida, isso também seria necessário.  
   
 ## <a name="password-authentication"></a>Autenticação de senha  
- RDS podem se comunicar com um servidor Web IIS em execução em qualquer um dos três modos de autenticação de senha: anônima, básica, ou a autenticação de desafio/resposta do NT (chamado de autenticação do Windows integrada no Windows 2000). Essas configurações definem como um servidor Web controla o acesso por meio dele, como exigir que um computador cliente tem privilégios de acesso explícitas no servidor Web do NT.
+ RDS podem se comunicar com um servidor Web IIS em execução em qualquer um dos três modos de autenticação de senha: Autenticação de desafio/resposta do NT, básico ou anônimo (chamada de autenticação do Windows integrada no Windows 2000). Essas configurações definem como um servidor Web controla o acesso por meio dele, como exigir que um computador cliente tem privilégios de acesso explícitas no servidor Web do NT.
 
 

@@ -1,5 +1,5 @@
 ---
-title: 'Etapa 3: Criar e executar uma instrução SQL | Microsoft Docs'
+title: 'Etapa 3: Compilar e executar uma instrução SQL | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a3427057e70ee27fe1108fde71c833f0c511836b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63148963"
 ---
 # <a name="step-3-build-and-execute-an-sql-statement"></a>Etapa 3: Criar e executar uma instrução SQL
 A terceira etapa é compilar e executar uma instrução SQL, conforme mostrado na ilustração a seguir. Os métodos usados para executar esta etapa provavelmente podem variar muito. O aplicativo pode solicitar que o usuário digite uma instrução SQL, crie uma instrução SQL com base na entrada do usuário, ou usar uma instrução de SQL embutido em código. Para obter mais informações, consulte [construindo instruções de SQL](../../../odbc/reference/develop-app/constructing-sql-statements.md).  
@@ -38,4 +38,4 @@ A terceira etapa é compilar e executar uma instrução SQL, conforme mostrado n
 |---------------------------|----------------|  
 |**Selecione** ou função de catálogo|[Etapa 4a: Buscar os resultados](../../../odbc/reference/develop-app/step-4a-fetch-the-results.md)|  
 |**ATUALIZAÇÃO**, **exclua**, ou **inserir**|[Etapa 4b: Buscar a contagem de linhas](../../../odbc/reference/develop-app/step-4b-fetch-the-row-count.md)|  
-|Todas as outras instruções SQL|Etapa 3: Criar e executar uma instrução SQL (neste tópico) ou [etapa 5: confirmar a transação](../../../odbc/reference/develop-app/step-5-commit-the-transaction.md)|
+|Todas as outras instruções SQL|Etapa 3: Compilar e executar uma instrução SQL (neste tópico) ou [etapa 5: Confirmar a transação](../../../odbc/reference/develop-app/step-5-commit-the-transaction.md)|

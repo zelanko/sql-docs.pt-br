@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 575c456736242bebfe23544c430efe414d5097d2
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: ec274af1b3674cb821f0f5a477d1f798c404000e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57974175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63154671"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Executar o Assistente de migração de dados da linha de comando
 Com a versão 2.1 e posterior, quando você instala o Assistente de migração de dados, ele também instalará dmacmd.exe na *% ProgramFiles %\\Assistente de migração de dados da Microsoft\\*. Use dmacmd.exe para avaliar seus bancos de dados em um modo autônomo e o resultado para o arquivo CSV ou JSON de saída. Esse método é especialmente útil ao avaliar vários bancos de dados ou bancos de dados grandes. 
@@ -46,8 +46,8 @@ DmaCmd.exe /AssessmentName="string"
 | `/help or /?`     | Como usar o texto de ajuda de dmacmd.exe        | N
 |`/AssessmentName`     |   Nome do projeto de avaliação   | S
 |`/AssessmentDatabases`     | Lista delimitada por espaço de cadeias de caracteres de conexão. Nome do banco de dados (catálogo inicial) diferencia maiusculas de minúsculas. | S
-|`/AssessmentSourcePlatform`     | Plataforma de origem para a avaliação, os valores com suporte: SqlOnPrem, RdsSqlServer. Avaliação de prontidão de destino também dão suporte a Cassandra como plataforma de origem. O padrão é SqlOnPrem   | N
-|`/AssessmentTargetPlatform`     | Plataforma de destino para a avaliação, os valores com suporte: AzureSqlDatabase, ManagedSqlServer, SqlServer2012, SqlServer2014, SqlServer2016, SqlServerLinux2017 and SqlServerWindows2017. Avaliação de prontidão de destino também dão suporte a cosmos DB como plataforma de destino. O padrão é SqlServerWindows2017   | N
+|`/AssessmentSourcePlatform`     | Plataforma de origem para a avaliação: <br>Valores com suporte para a avaliação: SqlOnPrem, RdsSqlServer (default) <br>Valores com suporte para a avaliação de prontidão de destino: SqlOnPrem RdsSqlServer (padrão), Cassandra (versão prévia)   | N
+|`/AssessmentTargetPlatform`     | Plataforma de destino para a avaliação:  <br> Valores com suporte para a avaliação: AzureSqlDatabase, ManagedSqlServer, SqlServer2012, lt;sqlserver2014, SqlServer2016, SqlServerLinux2017 e SqlServerWindows2017 (padrão)  <br> Valores com suporte para a avaliação de prontidão de destino: ManagedSqlServer (padrão), o cosmos DB (versão prévia)   | N
 |`/AssessmentEvaluateFeatureParity`  | Execute as regras de paridade de recurso. Se a plataforma de origem é RdsSqlServer, avaliação de paridade de recurso não tem suporte para a plataforma de destino AzureSqlDatabase  | N
 |`/AssessmentEvaluateCompatibilityIssues`     | Executar regras de compatibilidade  | S <br> (AssessmentEvaluateCompatibilityIssues ou AssessmentEvaluateRecommendations é necessário.)
 |`/AssessmentEvaluateRecommendations`     | Execute as recomendações de recurso        | S <br> (AssessmentEvaluateCompatibilityIssues ou AssessmentEvaluateRecommendationsis necessária)

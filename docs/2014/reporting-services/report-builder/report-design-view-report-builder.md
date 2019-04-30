@@ -23,11 +23,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 714fe10abac63da9abdb7c1415e8f6abbfba11b0
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156465"
 ---
 # <a name="report-design-view-report-builder"></a>Exibição do design de relatório (Construtor de Relatórios)
   A janela do Construtor de Relatórios foi criada para ajudá-lo a organizar facilmente seus recursos de relatório e criar rapidamente os relatórios de que você precisa. A superfície de design fica no centro da janela, com a Faixa de Opções acima e os painéis Dados do Relatório, Agrupamento e Propriedades, além da Galeria de Partes de Relatório, à esquerda, abaixo e à direita. A superfície de design é o local em que você adiciona e organiza seus itens de relatório. A Faixa de Opções organiza itens de menu tradicionais em categorias que você pode localizar e usar facilmente. Os painéis ajudam a adicionar, selecionar e organizar os recursos de relatório e alteram as propriedades de item de relatório.  

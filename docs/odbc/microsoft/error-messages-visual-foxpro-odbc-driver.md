@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0b24db48d6a76c221e72944e8e5e6826cb8d5d55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127983"
 ---
 # <a name="error-messages-visual-foxpro-odbc-driver"></a>Mensagens de erro (Driver ODBC do Visual FoxPro)
 Quando ocorre um erro, o driver do Visual FoxPro retorna as seguintes informações:  
@@ -43,14 +43,14 @@ Quando ocorre um erro, o driver do Visual FoxPro retorna as seguintes informaç�
 ## <a name="syntax"></a>Sintaxe  
  Mensagens de erro têm o seguinte formato:  
   
- **[** *fornecedor* **] [** *ODBC_component* **]** *error_message*  
+ **[** *vendor* **][** *ODBC_component* **]** *error_message*  
   
  Os prefixos de colchetes ([]) identificam a origem do erro, conforme definido na tabela a seguir.  
   
 |Fonte de dados|Prefixo|Valor|  
 |-----------------|------------|-----------|  
-|Gerenciador de Driver|[fornecedor]<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[Gerenciador de Driver ODBC]<br />N/A|  
-|Driver do Visual FoxPro|fornecedor]<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[Driver do Visual FoxPro do ODBC]<br />N/A|  
+|Gerenciador de Driver|[vendor]<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[Gerenciador de Driver ODBC]<br />N/D|  
+|Driver do Visual FoxPro|vendor]<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[Driver do Visual FoxPro do ODBC]<br />N/D|  
   
  Por exemplo, se o Driver de ODBC do Visual FoxPro não foi possível encontrar a Employee. dbf de arquivo, ele pode retornar a mensagem de erro a seguir:  
   

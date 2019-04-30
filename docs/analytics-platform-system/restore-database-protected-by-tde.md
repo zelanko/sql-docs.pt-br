@@ -1,6 +1,6 @@
 ---
 title: Restaurar um banco de dados protegido por TDE - Parallel Data Warehouse | Microsoft Docs
-description: Use as etapas a seguir para restaurar um banco de dados que é criptografado usando criptografia transparente de dados na análise de plataforma de sistema Parallel Data Warehouse.
+description: Use as etapas a seguir para restaurar um banco de dados é criptografado usando criptografia transparente de dados no Analytics Platform System Parallel Data Warehouse.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -10,16 +10,16 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: a791d4110dc70c506025f8f11fb06b9ba2e5dcb3
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31538606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157009"
 ---
 # <a name="restore-a-database-protected-by-tde-in-parallel-data-warehouse"></a>Restaurar um banco de dados protegido por TDE no Parallel Data Warehouse
-Use as etapas a seguir para restaurar um banco de dados que é criptografado usando criptografia transparente de dados.  
+Use as etapas a seguir para restaurar um banco de dados é criptografado usando criptografia transparente de dados.  
   
-O [usando criptografia transparente de dados](transparent-data-encryption.md#using-tde) exemplo tem o código para habilitar a TDE o `AdventureWorksPDW2012` banco de dados. O código a seguir continua este exemplo, criando um backup do banco de dados no dispositivo Analytics Platform System (APS) original e, em seguida, restaurar o certificado e o banco de dados em um dispositivo diferente.  
+O [usando Transparent Data Encryption](transparent-data-encryption.md#using-tde) exemplo tem o código para habilitar a TDE no `AdventureWorksPDW2012` banco de dados. O código a seguir continua esse exemplo, criando um backup do banco de dados no dispositivo do Analytics Platform System (APS) original e, em seguida, restaurando o certificado e o banco de dados em um dispositivo diferente.  
   
 A primeira etapa é criar um backup do banco de dados de origem.  
   
@@ -28,7 +28,7 @@ BACKUP DATABASE AdventureWorksPDW2012
 TO DISK = '\\SECURE_SERVER\Backups\AdventureWorksPDW2012';  
 ```  
   
-Prepare o novo SQL Server PDW para TDE, criando uma chave mestra, habilitando a criptografia e, em seguida, criando uma credencial de rede.  
+Prepare o novo SQL Server PDW para TDE, criando uma chave mestra, habilitando a criptografia e criar uma credencial de rede.  
   
 ```sql  
 USE master;  
@@ -64,5 +64,5 @@ RESTORE DATABASE AdventureWorksPDW2012
 [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)  
 [sp_pdw_database_encryption](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)  
 [CRIAR CERTIFICADO](../t-sql/statements/create-certificate-transact-sql.md)  
-[RESTAURAR BANCO DE DADOS](../t-sql/statements/restore-database-parallel-data-warehouse.md)
+[RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)
   

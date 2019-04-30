@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1bbd01a38e7e78d0db64d254b9574d23e7dfeffe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128065"
 ---
 # <a name="distinct-keyword-limitations"></a>Limitações da palavra-chave DISTINCT
 Não suportado para campos de texto longo (Microsoft Access) ou memorando (do dBASE).

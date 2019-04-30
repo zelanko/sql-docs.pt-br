@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de6a778f9cdbfb7ab916f40a5250ca4f9e20c811
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63072358"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Determinando se uma tabela ou um procedimento armazenado deve ser movido para o OLTP na memória
   O coletor de desempenho de transação em [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ajuda você a avaliar se o OLTP na memória melhorará o desempenho do seu aplicativo de banco de dados. O relatório de análise de desempenho da transação também indica quanto trabalho você deverá executar para habilitar o OLTP na Memória no seu aplicativo. Depois de identificar uma tabela baseada em disco a ser transportada para o OLTP in-memory, você poderá usar o [Orientador de Otimização da Memória](memory-optimization-advisor.md)para ajudar na migração da tabela. De maneira semelhante, o [Native Compilation Advisor](native-compilation-advisor.md) o ajudará a transportar um procedimento armazenado para um procedimento armazenado compilado nativamente.  
@@ -35,7 +35,7 @@ ms.locfileid: "53377488"
   
  O coletor de desempenho da transação e os relatórios de análise de desempenho da transação o ajudam a realizar as seguintes tarefas:  
   
--   Analisar sua carga de trabalho para determinar se o OLTP na memória melhorará o desempenho. O coletor de desempenho da transação coleta e avalia as características de desempenho de sua carga de trabalho. para obter informações sobre a ferramenta de configuração e recursos adicionais. Em seguida, o relatório de análise de desempenho da transação recomenda as tabelas e os procedimentos armazenados que serão mais beneficiados com a conversão em OLTP na memória.  
+-   Analisar sua carga de trabalho para determinar se o OLTP na memória melhorará o desempenho. O coletor de desempenho da transação coleta e avalia as características de desempenho de sua carga de trabalho. . Em seguida, o relatório de análise de desempenho da transação recomenda as tabelas e os procedimentos armazenados que serão mais beneficiados com a conversão em OLTP na memória.  
   
 -   Ajudar você a planejar e executar a migração para o OLTP na memória. O caminho de migração de uma tabela com base em disco para uma tabela com otimização de memória pode ser demorado. O Orientador de Otimização da Memória o ajuda a identificar as incompatibilidades na tabela que você deve remover antes de movê-la para o OLTP na memória. O Orientador de Otimização em Memória também ajuda a entender o impacto que a migração de uma tabela para uma tabela com otimização de memória terá no seu aplicativo.  
   

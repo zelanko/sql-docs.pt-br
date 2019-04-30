@@ -18,18 +18,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b0bc45169a3c5eee2e23f581a66d5232c22e89b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199265"
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility-for-odbc-3x-applications"></a>Cursores em bloco, cursores roláveis e compatibilidade com versões anteriores para aplicativos 3.x ODBC
 A existência de ambos **SQLFetchScroll** e **SQLExtendedFetch** representa o limpar primeiro dividido entre o aplicativo de Interface de programação (API), que é o conjunto de funções ODBC a chamadas do aplicativo e o Service Provider Interface (SPI), que é o conjunto de funções implementa o driver. Essa divisão é necessário para equilibrar o requisito em ODBC 3. *x*, que usa **SQLFetchScroll**, para alinhar com os padrões e ser compatível com ODBC 2. *x*, que usa **SQLExtendedFetch**.  
   
  O ODBC 3 *. x* API, que é o conjunto de funções o aplicativo chama, inclui **SQLFetchScroll** e relacionados a atributos de instrução. O ODBC 3 *. x* SPI, que é o conjunto de funções o driver implementa, inclui **SQLFetchScroll**, **SQLExtendedFetch**e relacionados a atributos de instrução. Como o ODBC não impõe formalmente essa divisão entre a API e o SPI, é possível para o ODBC 3 *. x* aplicativos chamem **SQLExtendedFetch** e relacionados a atributos de instrução. No entanto, não há nenhum motivo para o ODBC 3 *. x* aplicativos para fazer isso. Para obter mais informações sobre as APIs e SPIs, consulte a introdução [arquitetura ODBC](../../../odbc/reference/odbc-architecture.md).  
   
- Para obter informações sobre como o ODBC 3. *x* Gerenciador de Driver mapeia as chamadas para o ODBC 2. *x* e o ODBC 3. *x* drivers e quais funções e a instrução atributos um ODBC 3. *x* driver deve implementar para cursores roláveis e de bloco, consulte [o que o Driver faz](../../../odbc/reference/appendixes/what-the-driver-does.md) no Apêndice g: Driver diretrizes para compatibilidade com versões anteriores.  
+ Para obter informações sobre como o ODBC 3. *x* Gerenciador de Driver mapeia as chamadas para o ODBC 2. *x* e o ODBC 3. *x* drivers e quais funções e a instrução atributos um ODBC 3. *x* driver deve implementar para cursores roláveis e de bloco, consulte [o que o Driver faz](../../../odbc/reference/appendixes/what-the-driver-does.md) no Apêndice g: Diretrizes de driver para compatibilidade com versões anteriores.  
   
  A tabela a seguir resume quais funções e um ODBC 3 de atributos de instrução. *x* aplicativo deve usar com o bloco e cursores roláveis. Ela também lista as alterações entre o ODBC 2. *x* e o ODBC 3. *x* nessa área que ODBC 3. *x* aplicativos devem estar atento ser compatível com ODBC 2. *x* drivers.  
   

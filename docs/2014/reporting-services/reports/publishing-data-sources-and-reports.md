@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7ef2839bd49e48615ed77ab917a90169ac20bca3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188161"
 ---
 # <a name="publishing-data-sources-and-reports"></a>Publicando fontes de dados e relatórios
   Antes de publicar o relatório, é preciso visualizá-lo para ver qual será sua aparência quando ele for executado. Você pode continuar refinando o projeto até ficar satisfeito com os resultados.  

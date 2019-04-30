@@ -8,11 +8,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: fa0d9d4ed647a6616c525533e696960784d09290
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63142308"
 ---
 # <a name="extended-events-for-monitoring-predict-statements"></a>Eventos estendidos para monitoramento de instruções PREDICT
 
@@ -34,7 +34,7 @@ Os seguintes eventos estendidos estão disponíveis em todas as versões do SQL 
 
 A instrução T-SQL PREVER foi introduzida no SQL Server 2017. 
 
-|nome |object_type|descrição| 
+|nome |object_type|description| 
 |----|----|----|
 |predict_function_completed |event  |Divisão de tempo de execução interno|
 |predict_model_cache_hit |event|Ocorre quando um modelo é recuperado do cache de modelo da função PREDICT. Use esse evento junto com outros eventos predict_model_cache _ * para solucionar problemas causados pelo cache de modelo da função PREDICT.|

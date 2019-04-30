@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 884ef4e72b975de0eb9dd92e80ec3ce0d513546b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187784"
 ---
 # <a name="operation-of-non-parameterized-commands"></a>Operação de comandos não parametrizados
 Para os comandos não parametrizados, todos os comandos do provedor são executados e o **conjuntos de registros** são criados durante a execução do comando. Se o comando é executado de forma síncrona, todos os **conjuntos de registros** será totalmente preenchida. Se um modo de população assíncrona tiver sido selecionado, o estado de preenchida do **conjuntos de registros** dependerá do modo de preenchimento e o tamanho do **conjuntos de registros**.  

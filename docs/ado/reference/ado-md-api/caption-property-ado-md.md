@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9c1481faee1574f74e786a561c25ceb2ce8c4876
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062584"
 ---
 # <a name="caption-property-ado-md"></a>Propriedade Caption (ADO MD)
 Indica o texto da legenda a ser usado ao exibir uma [nível](../../../ado/reference/ado-md-api/level-object-ado-md.md) ou [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) objeto.  

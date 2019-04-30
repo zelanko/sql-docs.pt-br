@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b81d4e1aeb2192e6a32a34bed74b9cd55a1cb9a9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149703"
 ---
 # <a name="review-the-replay-results"></a>Revisar os resultados da reprodução
   Depois que o recurso [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay conclui uma reprodução distribuída, a atividade de reprodução para cada cliente pode ser capturada e salva em arquivos de rastreamento de resultado em cada cliente. Para capturar essa atividade, você deve usar o parâmetro **-o** ao executar a ferramenta de administração com a opção **reproduzir**. Para obter mais informações sobre a opção de reprodução, consulte [Opção Reprodução &#40;Ferramenta de administração de reprodução distribuída&#41;](replay-option-distributed-replay-administration-tool.md).  
@@ -29,7 +29,7 @@ ms.locfileid: "52792828"
 ## <a name="event-classes-captured-in-result-trace-files"></a>Classes de evento capturadas em arquivos de rastreamento de resultado  
  A tabela a seguir lista todas as classes de eventos que são capturadas nos dados de rastreamento de resultado.  
   
-|Categoria|Nome de EventClass|Frequência de captura|Ponto de captura|  
+|Category|Nome de EventClass|Frequência de captura|Ponto de captura|  
 |--------------|---------------------|-----------------------|----------------------|  
 |Eventos reproduzíveis|Audit Login|Uma vez para cada evento Audit Login nos dados de rastreamento originais|Na conclusão bem-sucedida ou na falha do evento|  
 ||Audit Logout|Uma vez para cada evento Audit Logout nos dados de rastreamento originais|Na conclusão bem-sucedida ou na falha do evento|  

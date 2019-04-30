@@ -15,13 +15,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 649ab6329c0bdc2f059b8be0e282e0e68f33e2d2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061317"
 ---
-# <a name="tm-begin-tran-starting-event-class"></a>TM: Begin Tran Starting a classe de evento
+# <a name="tm-begin-tran-starting-event-class"></a>TM: Classe de evento Begin Tran Starting
   TM: Classe de evento begin Tran Starting indica que uma solicitação BEGIN TRANSACTION está iniciando. A solicitação é enviada do cliente pela interface de gerenciamento de transações.  
   
 ## <a name="tm-begin-tran-starting-event-class-data-columns"></a>TM: Begin Tran Starting colunas de dados de classe de evento  

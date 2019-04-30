@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 2bcb706eda464730d978d0098281c2ebcd2336ed
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192174"
 ---
 # <a name="deployment-topologies-for-sql-server-bi-features-in-sharepoint"></a>Topologias de implantação para recursos de BI do SQL Server no SharePoint
   Este tópico descreve as topologias comuns para instalar recursos de Business Intelligence do SQL Server no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e [!INCLUDE[ssGeminiShortvnext](../../includes/ssgeminishortvnext-md.md)] em ambientes do SharePoint 2010 e do SharePoint 2013. Por exemplo, instalações de único servidor e de três níveis.  
@@ -169,7 +169,7 @@ ms.locfileid: "53365758"
 ##  <a name="bkmk_sharepoint2010_scaleserver"></a> Implantação de expansão de três camadas  
  Esta topologia ilustra uma implantação em expansão que executa o mesmo serviço compartilhado em vários servidores, atendendo um volume maior de solicitações e fornecendo mais capacidade de processamento aos dados PowerPivot ou aos relatórios do Reporting Services. No diagrama abaixo, há três clusters de servidor de aplicativo, cada um executando uma combinação diferente de serviços compartilhados. Em um ambiente do SharePoint, a descoberta e a disponibilidade de serviço são inseridas no farm. O balanceamento de carga em vários servidores físicos executando o mesmo aplicativo de serviço compartilhado faz parte da arquitetura do serviço compartilhado.  
   
- Ao implantar um farm de vários servidores, certifique-se de seguir as instruções neste artigo do SharePoint: [Vários servidores para um farm de três camadas (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?linkID=219834).  
+ Ao implantar um farm multisservidor, certifique-se de seguir as instruções neste artigo do SharePoint: [Vários servidores para um farm de três camadas (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?linkID=219834).  
   
  ![topologia de 5 servidores](../../../2014/sql-server/install/media/sql11bisetup-5server.gif "topologia de 5 servidores")  
   

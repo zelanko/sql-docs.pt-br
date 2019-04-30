@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2391c01d93c876562ab9d870ab0dba22bf74cea5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63189020"
 ---
 # <a name="executing-positioned-update-and-delete-statements"></a>Executar instruções de exclusão e atualização posicionadas
 > [!IMPORTANT]  
@@ -37,11 +37,11 @@ ms.locfileid: "47772044"
   
      **SET** *column-identifier* **=** {*expression* &#124; **NULL**}  
   
-     [**,** *identificador de coluna* **=** {*expressão* &#124; **nulo**}]  
+     [**,** *column-identifier* **=** {*expression* &#124; **NULL**}]  
   
      **WHERE CURRENT OF** *nome de cursor*  
   
-     **DELETE FROM** *nome da tabela* **WHERE CURRENT OF** *nome de cursor*  
+     **DELETE FROM** *table-name* **WHERE CURRENT OF** *cursor-name*  
   
      A maneira mais fácil para construir o **definir** cláusula em uma instrução de atualização posicionada é usar marcadores de parâmetro para cada coluna para ser atualizado e use **SQLBindParameter** associar esses para os buffers de conjunto de linhas para o linha a ser atualizada. Nesse caso, o tipo de dados C do parâmetro será o mesmo que o tipo de dados C do buffer de linhas.  
   

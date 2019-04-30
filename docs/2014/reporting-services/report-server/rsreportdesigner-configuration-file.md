@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b29e5020cbe552fac66f7bb4e621ce0eda6779a5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59946072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190784"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>arquivo de configuração RSReportDesigner
   O arquivo RSReportDesigner.config armazena configurações sobre as extensões de renderização e processamento de dados disponíveis no Designer de Relatórios. Informações de extensão de processamento de dados são armazenadas no elemento `Data`. Informações de extensão de renderização são armazenadas no elemento `Render`. O elemento `Designer` enumera os construtores de consulta usados no Designer de Relatórios.  

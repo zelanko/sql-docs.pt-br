@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0ec40b97f8953f114081292ac82069fd4a81692a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63132723"
 ---
 # <a name="sqlinstalldriverex-function"></a>Função SQLInstallDriverEx
 **Conformidade com**  
@@ -68,7 +68,7 @@ BOOL SQLInstallDriverEx(
  *pcbPathOut*  
  [Saída] Número total de bytes (exceto o caractere nulo de terminação) disponíveis para retornar na *lpszPathOut*. Se o número de bytes disponíveis para retornar for maior que ou igual a *cbPathOutMax*, o caminho de saída na *lpszPathOut* será truncado com *cbPathOutMax* menos o caractere de finalização null. O *pcbPathOut* argumento pode ser um ponteiro nulo.  
   
- *Frequentes*  
+ *fRequest*  
  [Entrada] Tipo de solicitação. O *frequentes* argumento deve conter um dos seguintes valores:  
   
  ODBC_INSTALL_INQUIRY: Pesquisa sobre onde um driver pode ser instalado.  
@@ -100,9 +100,9 @@ BOOL SQLInstallDriverEx(
 ## <a name="comments"></a>Comentários  
  O *lpszDriver* argumento é uma lista de atributos na forma de pares de palavra-chave-valor. Cada par é encerrada com um byte nulo e a lista inteira é encerrada com um byte nulo. (Ou seja, dois bytes nulos marcam o final da lista.) O formato dessa lista é da seguinte maneira:  
   
- _driver desc_ **\\**0Driver**=**_DLL-arquivo-driver_ **\\**0 [instalação**=**_DLL-arquivo-configuração_<b>\\</b>0]  
+ _driver-desc_ **\\**0Driver**=**_driver-DLL-filename_**\\**0[Setup**=**_setup-DLL-filename_<b>\\</b>0]  
   
- [_attr-driver-keyword1_**=**_value1_<b>\\</b>0] [_driver-attr-keyword2_  **=** _value2_<b>\\</b>0]... <b> \\ </b>0  
+ [_driver-attr-keyword1_**=**_value1_<b>\\</b>0][_driver-attr-keyword2_**=**_value2_<b>\\</b>0]...<b>\\</b>0  
   
  onde \0 é um byte nulo e *attr-driver-keywordn* é qualquer palavra-chave do atributo de driver. As palavras-chave deverá aparecer na ordem especificada. Por exemplo, suponha que um driver para arquivos de texto formatado tem DLLs de instalação e de driver separado e pode usar os arquivos com as extensões. txt e. csv. O *lpszDriver* argumento para esse driver pode ser da seguinte maneira:  
   

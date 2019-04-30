@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2ba956d2e442c914ddc50f2f023f225252fb1295
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161560"
 ---
 # <a name="field-related-error-information"></a>Informações de erro relacionadas ao campo
 Se um erro está diretamente relacionado a um campo - por exemplo, se os dados estão ausentes ou se ele é do tipo incorreto para o campo - você pode recuperar mais informações sobre a causa do problema examinando os **campo** do objeto **Status**  propriedade. Essa propriedade foi aprimorada para fornecer informações específicas sobre o problema. Portanto, por exemplo, quando uma chamada para **UpdateBatch** falhar, a causa do problema pode ser determinado examinando a **Status** propriedade do **campos** em cada uma da afetados registros. A propriedade conterá um dos valores de **FieldStatusEnum** constante. A tabela a seguir inclui os valores que são de especial interesse quando ocorre um erro.  

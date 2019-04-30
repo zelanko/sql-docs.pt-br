@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 2186599ac56be3d3adca986ae8f087ecb3b2218c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299091"
 ---
 # <a name="generating-reports-db2tosql"></a>Geração de relatórios (DB2ToSQL)
 Os relatórios de determinadas atividades executadas usando os comandos são gerados no Console do SSMA no nível da árvore de objeto.  
@@ -29,25 +29,25 @@ Use o procedimento a seguir para gerar relatórios:
     ||||  
     |-|-|-|  
     |**Sl. Não.**|**Comando**|**Título do relatório**|  
-    |1|Gerar--relatório de avaliação|AssessmentReport&lt;n&gt;.XML|  
+    |1|generate-assessment-report|AssessmentReport&lt;n&gt;.XML|  
     |2|convert-schema|SchemaConversionReport&lt;n&gt;.XML|  
-    |3|migrar dados|DataMigrationReport&lt;n&gt;.XML|  
+    |3|migrate-data|DataMigrationReport&lt;n&gt;.XML|  
     |4|convert-sql-statement|ConvertSQLReport&lt;n&gt;.XML|  
-    |5|Sincronizar de destino|TargetSynchronizationReport&lt;n&gt;.XML|  
-    |6|atualização de banco de dados|SourceDBRefreshReport&lt;n&gt;.XML|  
+    |5|synchronize-target|TargetSynchronizationReport&lt;n&gt;.XML|  
+    |6|refresh-from-database|SourceDBRefreshReport&lt;n&gt;.XML|  
   
     > [!IMPORTANT]  
     > Um relatório de saída é diferente do relatório de avaliação. O primeiro é um relatório sobre o desempenho de um comando executado ao mesmo tempo, o último é um relatório XML para consumo programático.  
   
-    Para as opções de comando para relatórios de saída (de Sl. Nenhum. 2 a 4 acima), consulte o [executar o Console do SSMA &#40;DB2ToSQL&#41; ](../../ssma/db2/executing-the-ssma-console-db2tosql.md) seção.  
+    Para as opções de comando para relatórios de saída (de Sl. Não. 2 a 4 acima), consulte o [executar o Console do SSMA &#40;DB2ToSQL&#41; ](../../ssma/db2/executing-the-ssma-console-db2tosql.md) seção.  
   
 2.  Indica que a extensão dos detalhes desejados no relatório de saída usando as configurações de detalhamento do relatório:  
   
     ||||  
     |-|-|-|  
     |**Sl. Não.**|**Comando e parâmetro**|**Descrição de saída**|  
-    |1|verbose = "false"|Gera um relatório resumido da atividade.|  
-    |2|verbose = "true"|Gera um relatório de status resumido e detalhado para cada atividade.|  
+    |1|verbose="false"|Gera um relatório resumido da atividade.|  
+    |2|verbose="true"|Gera um relatório de status resumido e detalhado para cada atividade.|  
   
     > [!NOTE]  
     > As configurações de detalhamento do relatório especificado acima são aplicáveis para gerar--relatório de avaliação, convert esquema, migrar dados e comandos de instrução de sql convert.  
@@ -57,8 +57,8 @@ Use o procedimento a seguir para gerar relatórios:
     ||||  
     |-|-|-|  
     |**Sl. Não.**|**Comando e parâmetro**|**Descrição de saída**|  
-    |1|relatório de erros = "false"|Não há detalhes sobre o erro / aviso / mensagens de informações.|  
-    |2|relatório de erros = "true"|Detalhes do erro / aviso / mensagens de informações.|  
+    |1|report-errors="false"|Não há detalhes sobre o erro / aviso / mensagens de informações.|  
+    |2|report-errors="true"|Detalhes do erro / aviso / mensagens de informações.|  
   
     > [!NOTE]  
     > As definições de relatório de erro especificado acima são aplicáveis para gerar--relatório de avaliação, convert esquema, migrar dados e comandos de instrução de sql convert.  
@@ -83,7 +83,7 @@ Use o procedimento a seguir para gerar relatórios:
    assessment-report-overwrite="<true/false>"/>  
 ```  
   
-### <a name="synchronize-target"></a>Sincronizar-target:  
+### <a name="synchronize-target"></a>synchronize-target:  
 O comando **destino sincronizar** tem **erros de relatório para** parâmetro, que especifica o local do relatório de erros para a operação de sincronização. Em seguida, um arquivo por nome **TargetSynchronizationReport&lt;n&gt;. XML** é criado no local especificado, onde **&lt;n&gt;** é o número de arquivo exclusivo que é incrementada com um dígito com cada execução do mesmo comando.  
   
 **Observação:** Se o caminho da pasta for fornecido, 'relatório-erros-to' parâmetro torna-se um atributo opcional para o destino do comando' Sincronizar-'.  
@@ -99,9 +99,9 @@ O comando **destino sincronizar** tem **erros de relatório para** parâmetro, q
   
    report-errors-to="<file-name/folder-name>"/>  
 ```  
-**nome do objeto:** Especifica os objetos considerados para sincronização (ele também pode ter nomes de objetos individuais ou um nome de objeto de grupo).  
+**object-name:** Especifica os objetos considerados para sincronização (ele também pode ter nomes de objetos individuais ou um nome de objeto de grupo).  
   
-**em caso de erro:** Especifica se deve especificar os erros de sincronização como avisos ou erros. Opções disponíveis para em caso de erro:  
+**on-error:** Especifica se deve especificar os erros de sincronização como avisos ou erros. Opções disponíveis para em caso de erro:  
   
 -   report-total-as-warning  
   
@@ -109,7 +109,7 @@ O comando **destino sincronizar** tem **erros de relatório para** parâmetro, q
   
 -   Falha-script  
   
-### <a name="refresh-from-database"></a>atualização-do-banco de dados:  
+### <a name="refresh-from-database"></a>refresh-from-database:  
 O comando **atualização de banco de dados** tem **erros de relatório para** parâmetro, que especifica o local do relatório de erros para a operação de atualização. Em seguida, um arquivo por nome **SourceDBRefreshReport&lt;n&gt;. XML** é criado no local especificado, onde **&lt;n&gt;** é o número de arquivo exclusivo que é incrementada com um dígito com cada execução do mesmo comando.  
   
 **Observação:** Se o caminho da pasta for fornecido, 'relatório-erros-to' parâmetro torna-se um atributo opcional para o destino do comando' Sincronizar-'.  
@@ -127,9 +127,9 @@ O comando **atualização de banco de dados** tem **erros de relatório para** p
   
    report-errors-to="<file-name/folder-name>"/>  
 ```  
-**nome do objeto:** Especifica os objetos considerados para a atualização (ele também pode ter nomes de objetos individuais ou um nome de objeto de grupo).  
+**object-name:** Especifica os objetos considerados para a atualização (ele também pode ter nomes de objetos individuais ou um nome de objeto de grupo).  
   
-**em caso de erro:** Especifica se deve especificar os erros de atualização como avisos ou erros. Opções disponíveis para em caso de erro:  
+**on-error:** Especifica se deve especificar os erros de atualização como avisos ou erros. Opções disponíveis para em caso de erro:  
   
 -   report-total-as-warning  
   

@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 232beed45a62ad9cef9f43b122d23cb4d0728a78
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191698"
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>Usar o Gerenciador do Utilitário para gerenciar o Utilitário do SQL Server
   O Gerenciador do Utilitário, um componente do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecta-se a instâncias do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para fornecer uma exibição de árvore de todos os objetos no Utilitário [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O painel de conteúdo do Gerenciador do Utilitário oferece várias formas de exibir dados resumidos e detalhados sobre o estado de integridade de instâncias gerenciadas do SQL Server. O Gerenciador do Utilitário também oferece uma interface do usuário para exibir e gerenciar definições de políticas. Os recursos de Gerenciador do Utilitário variam ligeiramente, dependendo dos objetos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility, mas em geral incluem objetos, dados e políticas gerenciados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility. Para obter mais informações, consulte [Recursos e tarefas do utilitário do SQL Server](sql-server-utility-features-and-tasks.md).  
@@ -37,7 +37,7 @@ ms.locfileid: "52759418"
 ### <a name="sql-server-utility-navigation-pane"></a>Painel de navegação do Utilitário do SQL Server  
  O painel de navegação do Gerenciador do Utilitário oferece uma exibição de árvore de objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility, agrupados por ponto de controle do utilitário. Para expandir pastas, clique no sinal de adição (+) ou clique duas vezes no nome do UCP no painel de navegação do Gerenciador do Utilitário. Clique com o botão direito do mouse em pastas ou objetos para executar tarefas comuns. Os nós na exibição de árvore são como se segue:  
   
--   O nó superior na exibição de árvore é o UCP (ponto de controle do utilitário). O nome do nó é criado como: "Nome_do_utilitário" (Nome_do_computador\Nome_da_instância_UCP). Se você não tiver um UCP, deverá criar um. Se você não estiver conectado a um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility, deverá conectar-se a um. Para obter mais informações, consulte [Recursos e tarefas do utilitário do SQL Server](sql-server-utility-features-and-tasks.md). Clique no nome do UCP na exibição de árvore para popular o painel de conteúdo do Gerenciador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility com dados na exibição de painel. Para obter mais informações, veja [Painel do Utilitário &#40;Utilitário do SQL Server&#41;](../../database-engine/utility-dashboard-sql-server-utility.md).  
+-   O nó superior na exibição de árvore é o UCP (ponto de controle do utilitário). O nome do nó é construído da seguinte: "Nome_do_utilitário" (nome_do_computador \ Nome_da_instância_ucp). Se você não tiver um UCP, deverá criar um. Se você não estiver conectado a um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility, deverá conectar-se a um. Para obter mais informações, consulte [Recursos e tarefas do utilitário do SQL Server](sql-server-utility-features-and-tasks.md). Clique no nome do UCP na exibição de árvore para popular o painel de conteúdo do Gerenciador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility com dados na exibição de painel. Para obter mais informações, veja [Painel do Utilitário &#40;Utilitário do SQL Server&#41;](../../database-engine/utility-dashboard-sql-server-utility.md).  
   
      Clique com o botão direito do mouse no nó UCP para atualizar dados no painel.  
   

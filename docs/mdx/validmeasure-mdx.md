@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ddcc65d93ebd9d1ea1e9465b40fe1e6027834e37
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140242"
 ---
 # <a name="validmeasure-mdx"></a>ValidMeasure (MDX)
 
@@ -32,14 +32,14 @@ ValidMeasure(Tuple_Expression)
  *Tuple_Expression*  
  Uma linguagem MDX válida que retorna uma tupla.  
   
-## <a name="remarks"></a>Remarks  
- O **ValidMeasure** função retorna o valor de uma tupla, ignorando atributos que não têm nenhuma relação com o grupo de medidas da medida cujo valor é retornado pela tupla. Um atributo pode não estar relacionado a uma medida por dois motivos:  
+## <a name="remarks"></a>Comentários  
+ O **ValidMeasure** função retorna o valor de uma tupla, ignorando atributos que não têm nenhuma relação com o grupo de medidas da medida cujo valor retorna de tupla. Um atributo pode não estar relacionado a uma medida por dois motivos:  
   
 -   A dimensão do atributo não tem relação com o grupo de medidas da medida na tupla.  
   
 -   A dimensão do atributo não tem uma relação com o grupo de medidas da medida, mas o atributo de granularidade não é o atributo de chave, e o atributo de granularidade não tem uma relação direta com o atributo na tupla.  
   
- O comportamento especificado por essa função é o comportamento padrão do servidor e é controlado pelo **IgnoreUnrelatedDimensions** propriedade no objeto de grupo de medidas.  
+ O comportamento especificado por essa função é o comportamento do lado do servidor padrão e é controlado pelo **IgnoreUnrelatedDimensions** propriedade no objeto de grupo de medidas.  
   
  Para cada atributo na tupla especificada com granularidade (ou seja, onde o membro na tupla não seja o membro Todos), a coordenada atual para cada atributo é movida da seguinte forma:  
   
@@ -70,6 +70,6 @@ FROM [Adventure Works]
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
