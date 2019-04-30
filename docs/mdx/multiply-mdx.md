@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3f752aec0a2e1b49fbf1145129876d2f8c5901ed
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742265"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63456590"
 ---
 # <a name="-multiply-mdx"></a>* (Multiplicação) (MDX)
 
@@ -35,7 +35,7 @@ Numeric_Expression * Numeric_Expression
 ## <a name="return-value"></a>Valor retornado  
  Um valor com o tipo de dados do parâmetro com prioridade maior.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  As duas expressões devem ser do mesmo tipo de dados ou uma expressão deve poder ser convertida implicitamente no tipo de dados da outra expressão. Se uma expressão for avaliada como um valor nulo, o operador retornará um valor nulo.  
   
 ## <a name="see-also"></a>Consulte também  

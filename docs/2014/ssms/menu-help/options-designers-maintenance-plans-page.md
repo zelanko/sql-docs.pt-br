@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4fe825b4f42f8899774cf0a33510ce095ca67939
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283174"
 ---
 # <a name="options-designers-maintenance-plans-page"></a>Opções (página de planos de manutenção de Designers)
   Use a caixa de diálogo **Opções** para determinar o comportamento padrão do designer quando novas formas forem adicionadas à superfície de design. No menu **Ferramentas** , clique em **Opções**, expanda **Designers**e selecione **Planos de Manutenção**.  

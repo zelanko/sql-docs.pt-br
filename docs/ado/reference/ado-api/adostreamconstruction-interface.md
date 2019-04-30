@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cf21be88854837ab2dff1a8bc8bc73f44a6e20c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248828"
 ---
 # <a name="adostreamconstruction-interface"></a>ADOStreamConstruction Interface
 O **ADOStreamConstruction** interface é usada para construir o ADO **Stream** objeto a partir de um banco de dados OLE **IStream** objeto em um aplicativo C/C++.  
@@ -67,7 +67,7 @@ adoStrConstruct->put_Stream(pUnk);
  O resultante `adoStr` objeto agora representa o ADO **Stream** objeto construído a partir do OLE DB **IStream** objeto.  
   
 ## <a name="requirements"></a>Requisitos  
- **Versão:** ADO 2.0 ou posterior  
+ **Versão:** O ADO 2.0 ou posterior  
   
  **Biblioteca:** msado15.dll  
   

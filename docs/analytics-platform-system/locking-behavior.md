@@ -1,6 +1,6 @@
 ---
-title: Comportamento de bloqueio - Parallel Data Warehouse | Microsoft Docs
-description: Saiba como Parallel Data Warehouse usa bloqueio para garantir a integridade de transações e manter a consistência de bancos de dados quando vários usuários estão acessando os dados ao mesmo tempo.
+title: Comportamento de bloqueio – Parallel Data Warehouse | Microsoft Docs
+description: Saiba como Parallel Data Warehouse usa bloqueio para garantir a integridade de transações e manter a consistência dos bancos de dados quando vários usuários estão acessando os dados ao mesmo tempo.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -10,48 +10,48 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 3f9862fed432036dcb4a3905fb3af1d3132349a5
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31539456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280888"
 ---
 # <a name="locking-behavior-in-parallel-data-warehouse"></a>Comportamento de bloqueio no Parallel Data Warehouse
-Saiba como Parallel Data Warehouse usa bloqueio para garantir a integridade de transações e manter a consistência de bancos de dados quando vários usuários estão acessando os dados ao mesmo tempo.  
+Saiba como Parallel Data Warehouse usa bloqueio para garantir a integridade de transações e manter a consistência dos bancos de dados quando vários usuários estão acessando os dados ao mesmo tempo.  
   
 ## <a name="Basics"></a>Noções básicas de bloqueio  
 **Modos**  
   
-SQL Server PDW dá suporte a quatro modos de bloqueio:  
+PDW do SQL Server dá suporte a quatro modos de bloqueio:  
   
 Exclusive  
-O bloqueio exclusivo impede a gravação ou leitura do objeto bloqueado até que a transação mantendo que o bloqueio exclusivo é concluída. Não há outros bloqueios de qualquer modo são permitidos enquanto o bloqueio exclusivo está em vigor. Por exemplo, DROP TABLE e CREATE DATABASE usam um bloqueio exclusivo.  
+O bloqueio exclusivo impede a gravar ou ler a partir do objeto bloqueado até que a transação que contém que o bloqueio exclusivo é concluída. Não há outros bloqueios de qualquer modo são permitidos enquanto o bloqueio exclusivo estiver em vigor. Por exemplo, DROP TABLE e CREATE DATABASE usam um bloqueio exclusivo.  
   
-Compartilhada  
-O bloqueio compartilhado impede a inicialização de um bloqueio exclusivo no objeto afetado, mas permite que todos os outros modos de bloqueio. Por exemplo, a instrução SELECT inicia um bloqueio compartilhado e, portanto, permite que várias consultas acessar os dados selecionados ao mesmo tempo, mas impede que atualizações para os registros sendo lidos, até que a instrução SELECT seja concluída.  
+Compartilhado  
+O bloqueio compartilhado impede a inicialização de um bloqueio exclusivo no objeto afetado, mas permite que todos os outros modos de bloqueio. Por exemplo, a instrução SELECT inicia um bloqueio compartilhado e, portanto, permite que várias consultas acessar os dados selecionados ao mesmo tempo, mas impede que atualizações para os registros que estão sendo lidos, até que a instrução SELECT seja concluída.  
   
 ExclusiveUpdate  
-O bloqueio de ExclusiveUpdate proíbe a gravação para o objeto bloqueado, mas permitir a leitura por meio do bloqueio compartilhado. Outros bloqueios não são permitidos enquanto o bloqueio de ExclusiveUpdate estiver em vigor. Por exemplo, o banco de dados de BACKUP e restauração do banco de dados usam um bloqueio de atualização exclusiva.  
+O bloqueio ExclusiveUpdate proíbe a gravação para o objeto bloqueado, mas permitir a leitura por meio do bloqueio compartilhado. Outros bloqueios não são permitidos enquanto o bloqueio ExclusiveUpdate estiver em vigor. Por exemplo, o banco de dados de BACKUP e RESTAURAR o banco de dados usam um bloqueio de atualização exclusiva.  
   
 SharedUpdate  
-O bloqueio de SharedUpdate proíbe modos de bloqueio exclusivo e ExclusiveUpdate e permite que os modos de bloqueio compartilhado e SharedUpdate no objeto. SharedUpdate modifica um objeto, mas não restringe o acesso de leitura a ele durante a modificação. Por exemplo, INSERT e UPDATE use um bloqueio de SharedUpdate.  
+O bloqueio de SharedUpdate proíbe os modos de bloqueio exclusivo e ExclusiveUpdate e permite que os modos de bloqueio compartilhado e SharedUpdate no objeto. SharedUpdate modifica um objeto, mas não restringe o acesso de leitura a ele durante a modificação. Por exemplo, INSERT e UPDATE usar um bloqueio de SharedUpdate.  
   
 **Classes de recursos**  
   
-Bloqueios são mantidos nos seguintes classes de objetos: banco de dados, esquema, objeto (tabela, exibição ou procedimento), (usado internamente) do aplicativo, EXTERNALDATASOURCE, SCHEMARESOLUTION e de EXTERNALFILEFORMAT (um nível de banco de dados de bloqueio obtido durante a criação, alteração, ou descarte de objetos de esquema ou os usuários de banco de dados). Essas classes de objeto podem aparecer na coluna object_type de [sys.dm_pdw_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md).  
+Bloqueios são mantidos nas seguintes classes de objetos: Banco de dados, esquema, a objeto (uma tabela, exibição ou procedimento), o aplicativo (usado internamente), a EXTERNALDATASOURCE, EXTERNALFILEFORMAT e SCHEMARESOLUTION (um banco de dados nível bloqueio tomado durante a criação, alterando ou removendo objetos de esquema ou os usuários de banco de dados). Essas classes de objeto podem aparecer na coluna de object_type [DM pdw_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md).  
   
 ## <a name="Remarks"></a>Comentários gerais  
 Bloqueios podem ser aplicados a bancos de dados, tabelas ou exibições.  
   
-SQL Server PDW não implementa os níveis de isolamento configurável. Ele dá suporte o nível de isolamento READ_UNCOMMITTED conforme definido pelo padrão ANSI. No entanto, desde que as operações são executadas em READ_UNCOMMITTED de leitura, poucas operações de bloqueio realmente ocorrerem ou levam à contenção no sistema.  
+SQL Server PDW não implementa quaisquer níveis de isolamento configurável. Ele suporta o nível de isolamento READ_UNCOMMITTED conforme definido pelo padrão ANSI. No entanto, desde a leitura de operações são executadas sob READ_UNCOMMITTED, poucas operações de bloqueio, na verdade, ocorrerem ou levam a contenção no sistema.  
   
-SQL Server PDW depende do mecanismo subjacente do SQL Server para implementar o controle de simultaneidade e bloqueio. Se operações levam a um deadlock subjacente do SQL Server no mesmo nó, o SQL Server PDW aproveita o recurso de detecção de deadlock do SQL Server e será encerrado uma das instruções de bloqueio.  
+SQL Server PDW se baseia no mecanismo do SQL Server subjacente para implementar o controle de simultaneidade e bloqueio. Se operações levam a um deadlock subjacente do SQL Server dentro do mesmo nó, o SQL Server PDW aproveita a capacidade de detecção de deadlock do SQL Server e encerra uma das instruções de bloqueio.  
   
 > [!NOTE]  
-> SQL Server não permite instruções que estão aguardando bloqueios sejam bloqueadas por solicitações de bloqueio mais recentes. SQL Server PDW não totalmente implementado esse processo. No SQL Server PDW, solicitações contínuas de novos bloqueios compartilhados às vezes podem bloquear uma solicitação anterior (mas espera) para um bloqueio exclusivo. Por exemplo, um **atualização** (que exige um bloqueio exclusivo) de instrução pode ser bloqueada por bloqueios compartilhados que são concedidos para a série de **selecione** instruções. Para resolver um processo bloqueado (identificado ao examinar o [sys.dm_pdw_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md) DVM), interrompa a enviar novas solicitações até que o bloqueio exclusivo foi atendido.  
+> SQL Server não permite declarações que estão aguardando bloqueios sejam bloqueadas por solicitações de bloqueio mais recentes. SQL Server PDW não totalmente implementado esse processo. Solicitações contínuas para novos bloqueios compartilhados do SQL Server PDW, às vezes, podem bloquear a uma solicitação anterior (mas aguardando) para um bloqueio exclusivo. Por exemplo, um **atualização** instrução (que exige um bloqueio exclusivo) pode ser bloqueada por bloqueios compartilhados que são concedidos para a série de **selecione** instruções. Para resolver um processo bloqueado (identificados examinando os [DM pdw_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md) DVM), pare de enviar novas solicitações até que o bloqueio exclusivo foi atendido.  
   
 ## <a name="lock-definition-table"></a>Tabela de definição de bloqueio  
-SQL Server suporta os seguintes tipos de bloqueios. Nem todos os tipos de bloqueio disponíveis no nó de controle, mas podem ocorrer em nós de computação.  
+SQL Server suporta os seguintes tipos de bloqueios. Nem todos os tipos de bloqueio estão disponíveis no nó de controle, mas pode ocorrer em nós de computação.  
   
 -   SCH-S (estabilidade do esquema). Assegura que um elemento de esquema, como uma tabela ou índice, não seja cancelado enquanto qualquer sessão mantém o bloqueio de estabilidade do esquema no elemento do esquema.  
   
@@ -71,13 +71,13 @@ SQL Server suporta os seguintes tipos de bloqueios. Nem todos os tipos de bloque
   
 -   SIU (atualização intencional compartilhada). Indica o acesso compartilhado a um recurso com a intenção de adquirir bloqueios de atualização em recursos subordinados na hierarquia de bloqueio.  
   
--   SEIS (exclusivo intencional de compartilhamento). Indica o acesso compartilhado a um recurso com a intenção de adquirir bloqueios exclusivos em recursos subordinados na hierarquia de bloqueio.  
+-   SIX (exclusivo intencional de compartilhamento). Indica o acesso compartilhado a um recurso com a intenção de adquirir bloqueios exclusivos em recursos subordinados na hierarquia de bloqueio.  
   
 -   UIX (exclusivo intencional de atualização). Indica a manutenção de um bloqueio de atualização de um recurso com a intenção de adquirir bloqueios exclusivos em recursos subordinados na hierarquia de bloqueio.  
   
--   ATUALIZAÇÃO EM MASSA. Usado por operações em massa.  
+-   BU. Usado por operações em massa.  
   
--   RangeS_S (intervalo de chave compartilhada e o recurso compartilhado bloqueio). Indica varredura de intervalo serializável.  
+-   RangeS_S (intervalo de chave compartilhada e Shared bloqueio de recurso). Indica varredura de intervalo serializável.  
   
 -   RangeS_U (intervalo de chave compartilhada e atualização de bloqueio de recurso). Indica verificação de atualização serializável.  
   
@@ -89,9 +89,9 @@ SQL Server suporta os seguintes tipos de bloqueios. Nem todos os tipos de bloque
   
 -   RangeI_X. Bloqueio de conversão de intervalo de chave criado por uma sobreposição dos bloqueios RangeI_N e X.  
   
--   Rangeix_s. Bloqueio de conversão de intervalo de chaves criado por uma sobreposição de bloqueios RangeI_N e RangeS-S.  
+-   RangeX_S. Bloqueio de conversão de intervalo de chaves criado por uma sobreposição de bloqueios RangeI_N e RangeS-S.  
   
--   Rangeix_u. Bloqueio de conversão de intervalo de chave criado por uma sobreposição dos bloqueios RangeI_N e RangeS_U.  
+-   RangeX_U. Bloqueio de conversão de intervalo de chave criado por uma sobreposição dos bloqueios RangeI_N e RangeS_U.  
   
 -   RangeX_X (bloqueio de intervalo de chave exclusivo e de recurso exclusivo). Este é um bloqueio de conversão usado na atualização de uma chave em um intervalo.  
   

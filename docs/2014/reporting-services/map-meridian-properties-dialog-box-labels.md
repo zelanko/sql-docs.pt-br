@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 892b53a2f7179fce18844085fe2c0edcaafb4c04
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278617"
 ---
 # <a name="map-meridian-properties-dialog-box-labels"></a>Caixa de diálogo Mapear Propriedades de Meridiano, Rótulos
   Use o **MapMeridian propriedades** caixa de diálogo para alterar as opções de rótulo para a grade vertical no visor do mapa. Um meridiano representa o valor seguinte, de acordo com o sistema de coordenadas especificado para o visor:  

@@ -16,17 +16,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 91046e19e77d3074a8ecef2163e8d46ab528bec9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259363"
 ---
 # <a name="sqlcompleteasync-function"></a>Função SQLCompleteAsync
 **Conformidade com**  
  Versão introduzida: ODBC 3.8  
   
- Conformidade com padrões: nenhum  
+ Conformidade com padrões: None  
   
  **Resumo**  
  **SQLCompleteAsync** pode ser usado para determinar quando uma função assíncrona é concluída usando qualquer processamento baseado em notificação ou sondagem. Para obter mais informações sobre as operações assíncronas, consulte [execução assíncrona](../../../odbc/reference/develop-app/asynchronous-execution.md).  
@@ -67,7 +67,7 @@ SQLRETURN SQLCompleteAsync(
   
  **SQLCompleteAsync** retorna um código diferente de SQL_SUCCESS para indicar que **SQLCompleteAsync** não é chamado. **SQLCompleteAsync** não postará nesse caso, qualquer registro de diagnóstico. Códigos de retorno possíveis são:  
   
--   SQL_INVALID_HANDLE: O identificador indicado por *HandleType* e *manipular* não é um identificador válido.  
+-   SQL_INVALID_HANDLE: O identificador é indicado por *HandleType* e *manipular* não é um identificador válido.  
   
 -   SQL_ERROR: *AsyncRetCodePtr* é NULL ou processamento assíncrono não está habilitado no identificador.  
   

@@ -6,17 +6,17 @@ author: yualan
 ms.author: alayu
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: fbb43d39e28a8b99e49a4dcaf0b2b4f0fc83e670
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: 3e0f3c939f4d20e65262453e23ac127b02c6d212
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582229"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472139"
 ---
 # <a name="how-to-use-the-cluster-administration-portal-to-monitor-a-sql-server-big-data-cluster"></a>Como usar o portal de administração de cluster para monitorar um cluster de big data do SQL Server
 
@@ -35,10 +35,10 @@ O portal de administração de cluster permite que você:
 
 Siga as [guia de início rápido para implantar o cluster de big data](quickstart-big-data-cluster-deploy.md) até chegar à **portal de administração de cluster** seção. Depois que o cluster de big data em execução com mssqlctl, siga estas instruções:
 
-Quando o pod de controlador estiver em execução, você pode usar o portal de administração de cluster para monitorar a implantação. Você pode acessar o portal usando o IP endereço e porta número externa para o `endpoint-service-proxy` (por exemplo: **https://\<endereço ip\>: 30777/portal**). As credenciais para acessar o portal de administração é os valores de `CONTROLLER_USERNAME` e `CONTROLLER_PASSWORD` variáveis de ambiente fornecidas acima.
+Quando o pod de controlador estiver em execução, você pode usar o portal de administração de cluster para monitorar a implantação. Você pode acessar o portal usando o IP endereço e porta número externa para o `mgmtproxy-svc-external` (por exemplo: **https://\<endereço ip\>: 30777/portal**). As credenciais para acessar o portal de administração é os valores de `CONTROLLER_USERNAME` e `CONTROLLER_PASSWORD` variáveis de ambiente fornecidas acima.
 
 > [!NOTE]
-> Para CTP 2.4, há um aviso de segurança ao acessar a página da web, pois ele está usando certificados gerados automaticamente SSL.
+> Para CTP 2.5, há um aviso de segurança ao acessar a página da web, pois ele está usando certificados gerados automaticamente SSL.
 
 ## <a name="overview"></a>Visão geral
 

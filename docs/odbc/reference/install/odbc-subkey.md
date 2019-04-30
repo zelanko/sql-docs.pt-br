@@ -16,19 +16,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ee7cf624e7c118a5d9ef36738c810aecc4ec5684
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281005"
 ---
 # <a name="odbc-subkey"></a>Subchave do ODBC
 Os valores na subchave ODBC especificam as opções de rastreamento de ODBC. Essas opções são definidas por meio da guia de rastreamento da caixa de diálogo Administrador de fonte de dados ODBC exibida pelo **SQLManageDataSources**. A subchave do ODBC em si é opcional. O formato desses valores é conforme mostrado na tabela a seguir.  
   
-|Nome|Tipo de dados|data|  
+|Nome|Tipo de dados|Dados|  
 |----------|---------------|----------|  
 |Trace|REG_SZ|**0** &#124; **1**|  
-|TraceFile|REG_SZ|*caminho de tracefile*|  
+|TraceFile|REG_SZ|*tracefile-path*|  
   
  Os valores possuem o significado descrito na tabela a seguir.  
   

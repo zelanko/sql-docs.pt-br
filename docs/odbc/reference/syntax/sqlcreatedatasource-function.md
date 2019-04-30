@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ba02c28f3243b623695e3e087490ef3f73c60385
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259481"
 ---
 # <a name="sqlcreatedatasource-function"></a>Função SQLCreateDataSource
 **Conformidade com**  
@@ -44,7 +44,7 @@ BOOL SQLCreateDataSource(
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *HWND*  
+ *hwnd*  
  [Entrada] Identificador de janela pai.  
   
  *lpszDS*  

@@ -30,11 +30,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47795998b019df22b01852519f75f6e8d3d274dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63269858"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>Suporte para regras, gatilhos, valores padrão e procedimentos armazenados (Driver ODBC do Visual FoxPro)
 Você não pode criar regras do Visual FoxPro, gatilhos, valores padrão ou procedimentos armazenados usando o Driver de ODBC do Visual FoxPro. No entanto, seu aplicativo pode interagir com os procedimentos armazenados, gatilhos, valores padrão ou as regras existentes, como ele insere, atualiza ou exclui dados do Visual FoxPro armazenados em um banco de dados.  
@@ -231,7 +231,7 @@ Você não pode criar regras do Visual FoxPro, gatilhos, valores padrão ou proc
 |Comando de filtro de conjunto|Comando de conjunto de fixo|Comando de caminho completo do conjunto|  
 |Comando FWEEK SET|DEFINIDAS horas de comando|Comando de conjunto de índice|  
 |Comando de bloqueio de conjunto|Comando MULTILOCKS SET|Definir próximo ao comando|  
-|Comando NOCPTRANS SET|Comando de notificação de conjunto|Comando SET NULL|  
+|SET NOCPTRANS Command|Comando de notificação de conjunto|Comando SET NULL|  
 |Comando de otimização do conjunto|Comando de ordem de conjunto|Comando SET PATH|  
 |Comando do conjunto de PROCEDURE|Comando de relação de conjunto|Definir relação OFF comando|  
 |Comando SET REPROCESS|DEFINIR o comando Ignorar|Comando UDFPARMS SET|  

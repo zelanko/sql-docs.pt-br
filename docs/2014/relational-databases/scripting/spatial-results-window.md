@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 626f125fff9b0dfb21e617166817fbc618f082a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278707"
 ---
 # <a name="spatial-results-window"></a>Janela Resultados Espaciais
   A janela **Resultados espaciais** fornece ferramentas de mapeamento visuais para exibição de dados espaciais. Para exibir resultados espaciais, os resultados da consulta devem incluir uma coluna espacial com dados de geometria ou de geografia.  
@@ -34,7 +34,7 @@ ms.locfileid: "48092857"
  Essa opção não estará disponível quando apenas instâncias de ponto forem retornadas em uma consulta.  
   
  **Selecionar projeção**  
- Exiba dados de geografia em uma de quatro projeções: Cilíndrica equidistante, Mercator, Robinson ou Bonne.  
+ Exibir dados de Geografia em um dos quatro projeções: Cilíndrica equidistante, Mercator, Robinson ou Bonne.  
   
  Essa opção não está disponível para dados de geometria.  
   

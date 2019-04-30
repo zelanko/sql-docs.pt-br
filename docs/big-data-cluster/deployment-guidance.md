@@ -1,78 +1,66 @@
 ---
-title: Como implantar
+title: Diretrizes de implantação
 titleSuffix: SQL Server big data clusters
 description: Aprenda a implantar clusters de big data de 2019 do SQL Server (versão prévia) no Kubernetes.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: b7ca08d7ab73cc90e90717b23d2e5b293022bb1c
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
-ms.translationtype: MT
+ms.openlocfilehash: a2ace569180006f54461631848ecbf5342b2c1e3
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671372"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472035"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Como implantar clusters de grandes dados do SQL Server no Kubernetes
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Cluster de big data do SQL Server pode ser implantado como contêineres do docker em um cluster Kubernetes. Isso é uma visão geral das etapas de instalação e configuração:
+Cluster de big data do SQL Server é implantado como contêineres do docker em um cluster Kubernetes. Isso é uma visão geral das etapas de instalação e configuração:
 
-- Configure o cluster Kubernetes em uma única VM, o cluster de VMs ou no serviço de Kubernetes do Azure (AKS).
+- Configure um cluster Kubernetes em uma única VM, o cluster de VMs ou no serviço de Kubernetes do Azure (AKS).
 - Instalar a ferramenta de configuração de cluster **mssqlctl** no computador cliente.
 - Implante um cluster de big data do SQL Server em um cluster Kubernetes.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## <a id="prereqs"></a> Pré-requisitos de cluster de Kubernetes
+## <a name="install-sql-server-2019-big-data-tools"></a>Instalar ferramentas do SQL Server 2019 big data
 
-Clusters de grandes dados do SQL Server requerem uma versão mínima do Kubernetes de pelo menos v 1.10 para servidor e cliente (kubectl).
+Antes de implantar um cluster de big data de 2019 do SQL Server, primeiro [instalar as ferramentas de big data](deploy-big-data-tools.md):
 
-> [!NOTE]
-> Observe que as versões de servidor e cliente Kubernetes devem ser + 1 ou -1, versão secundária. Para obter mais informações, consulte [Kubernetes suporte para versões e componente distorção](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
-
-## <a id="kubernetes"></a> Instalação de cluster do Kubernetes
-
-Se você já tiver um cluster do Kubernetes que atenda aos acima pré-requisitos, você poderá pular diretamente para o [etapa de implantação](#deploy). Esta seção pressupõe uma compreensão básica dos conceitos de Kubernetes.  Para obter informações detalhadas sobre Kubernetes, consulte o [documentação do Kubernetes](https://kubernetes.io/docs/home).
-
-Você pode optar por implantar Kubernetes em qualquer uma das três maneiras:
-
-| Implante Kubernetes em: | Descrição | Link |
-|---|---|---|
-| **Minikube** | Um cluster do Kubernetes de nó único em uma VM. | [Instruções](deploy-on-minikube.md) |
-| **Serviços de Kubernetes do Azure (AKS)** | Um serviço gerenciado de contêiner do Kubernetes no Azure. | [Instruções](deploy-on-aks.md) |
-| **Vários computadores** | Um cluster Kubernetes implantado em máquinas físicas ou virtuais usando **kubeadm** | [Instruções](deploy-with-kubeadm.md) |
-  
-> [!TIP]
-> Para um script de python de exemplo que implanta o cluster de big data do AKS e o SQL Server, consulte [implantar um cluster de big data no serviço de Kubernetes do Azure (AKS) do SQL Server](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks).
-
-## <a name="deploy-sql-server-2019-big-data-tools"></a>Implantar ferramentas de big data do SQL Server de 2019
-
-Antes de implantar o cluster de big data do SQL Server 2019, primeiramente [instalar as ferramentas de big data](deploy-big-data-tools.md):
 - **mssqlctl**
 - **kubectl**
 - **Azure Data Studio**
 - **Extensão do SQL Server de 2019**
 
-## <a id="deploy"></a> Implantar um cluster de big data do SQL Server
+## <a id="prereqs"></a> Pré-requisitos do Kubernetes
 
-Depois de configurar o cluster Kubernetes, você pode prosseguir com a implantação de cluster de big data do SQL Server. 
+Clusters de grandes dados do SQL Server requerem uma versão mínima do Kubernetes de pelo menos v 1.10 para servidor e cliente (kubectl).
 
 > [!NOTE]
-> Se você estiver atualizando de uma versão anterior, consulte o [atualizar a seção deste artigo](#upgrade).
+> Observe que as versões de servidor e cliente Kubernetes devem estar dentro de + 1 ou -1, versão secundária. Para obter mais informações, consulte [Kubernetes suporte para versões e componente distorção](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
 
-Para implantar um cluster de big data no Azure com todas as configurações padrão para um ambiente de desenvolvimento/teste, siga as instruções neste artigo:
+### <a id="kubernetes"></a> Instalação de cluster do Kubernetes
 
-[Guia de início rápido: Implantar um cluster de big data do SQL Server no Kubernetes](quickstart-big-data-cluster-deploy.md)
+Se você já tiver um cluster do Kubernetes que atende aos pré-requisitos acima e, em seguida, você poderá pular diretamente para o [etapa de implantação](#deploy). Esta seção pressupõe uma compreensão básica dos conceitos de Kubernetes.  Para obter informações detalhadas sobre Kubernetes, consulte o [documentação do Kubernetes](https://kubernetes.io/docs/home).
 
-Se você quiser personalizar sua implantação de cluster de big data de acordo com sua carga de trabalho necessidades de, siga as instruções no restante deste artigo.
+Você pode optar por implantar Kubernetes em qualquer uma das três maneiras:
 
-## <a name="verify-kubernetes-configuration"></a>Verifique se a configuração do kubernetes
+| Implante Kubernetes em: | Descrição | Link |
+|---|---|---|
+| **Serviços de Kubernetes do Azure (AKS)** | Um serviço gerenciado de contêiner do Kubernetes no Azure. | [Instruções](deploy-on-aks.md) |
+| **Várias máquinas (kubeadm)** | Um cluster Kubernetes implantado em máquinas físicas ou virtuais usando **kubeadm** | [Instruções](deploy-with-kubeadm.md) |
+| **Minikube** | Um cluster do Kubernetes de nó único em uma VM. | [Instruções](deploy-on-minikube.md) |
+
+> [!TIP]
+> Para um script de python de exemplo que implanta o AKS e um cluster de big data em uma etapa do SQL Server, consulte [guia de início rápido: Implantar o SQL Server no serviço de Kubernetes do Azure (AKS) de cluster de big data](quickstart-big-data-cluster-deploy.md).
+
+### <a name="verify-kubernetes-configuration"></a>Verifique se a configuração do Kubernetes
 
 Execute o **kubectl** comando para exibir a configuração do cluster. Certifique-se de que kubectl está apontada para o contexto do cluster correto.
 
@@ -80,299 +68,219 @@ Execute o **kubectl** comando para exibir a configuração do cluster. Certifiqu
 kubectl config view
 ```
 
-## <a id="env"></a> Definir variáveis de ambiente
+Depois de configurar o cluster Kubernetes, você pode continuar com a implantação de um novo cluster de big data do SQL Server. Se você estiver atualizando de uma versão anterior, consulte [como atualizar clusters de grandes dados do SQL Server](deployment-upgrade.md).
 
-A configuração do cluster pode ser personalizada usando um conjunto de variáveis de ambiente que são passados para o `mssqlctl create cluster` comando. A maioria das variáveis de ambiente é opcional com valores padrão, conforme descrito abaixo. Observe que há variáveis de ambiente, como as credenciais que exigem entrada do usuário.
+## <a id="deploy"></a> Visão geral da implantação
 
-| Variável de ambiente | Obrigatório | Valor padrão | Descrição |
-|---|---|---|---|
-| **ACCEPT_EULA** | Sim | N/D | Aceite o contrato de licença do SQL Server (por exemplo, 'Yes').  |
-| **CLUSTER_NAME** | Sim | N/D | O nome do namespace para implantar o SQLServer cluster de big data em Kubernetes. |
-| **CLUSTER_PLATFORM** | Sim | N/D | A plataforma em que o cluster Kubernetes é implantado. Pode ser `aks`, `minikube`, `kubernetes`|
-| **CLUSTER_COMPUTE_POOL_REPLICAS** | Não | 1 | O número de réplicas de pool de computação para criar. No CTP 2.4 apenas com o valor permitido é 1. |
-| **CLUSTER_DATA_POOL_REPLICAS** | Não | 2 | O número de dados do pool réplicas para criar. |
-| **CLUSTER_STORAGE_POOL_REPLICAS** | Não | 2 | O número de réplicas de pool de armazenamento para criar. |
-| **DOCKER_REGISTRY** | Sim | TBD | O registro privado onde as imagens usadas para implantar o cluster são armazenadas. |
-| **DOCKER_REPOSITORY** | Sim | TBD | O repositório privado dentro do registro acima, onde as imagens são armazenadas.  É necessário durante a versão prévia pública controlada. |
-| **DOCKER_USERNAME** | Sim | N/D | O nome de usuário para acessar as imagens de contêiner, caso eles são armazenados em um repositório privado. É necessário durante a versão prévia pública controlada. |
-| **DOCKER_PASSWORD** | Sim | N/D | A senha para acessar o repositório privado acima. É necessário durante a versão prévia pública controlada.|
-| **DOCKER_EMAIL** | Sim | N/D | Seu endereço de email. |
-| **DOCKER_IMAGE_TAG** | Não | mais recente | O rótulo usado para marcar as imagens. |
-| **DOCKER_IMAGE_POLICY** | Não | Always | Sempre force um pull das imagens.  |
-| **DOCKER_PRIVATE_REGISTRY** | Sim | N/D | Para o período de tempo da visualização pública restrito, você deve definir esse valor como "1". |
-| **CONTROLLER_USERNAME** | Sim | N/D | O nome de usuário para o administrador de cluster. |
-| **CONTROLLER_PASSWORD** | Sim | N/D | A senha para o administrador de cluster. |
-| **KNOX_PASSWORD** | Sim | N/D | A senha do usuário do Knox. |
-| **MSSQL_SA_PASSWORD** | Sim | N/D | A senha do usuário de SA para a instância mestre do SQL. |
-| **USE_PERSISTENT_VOLUME** | Não | true | `true` Para usar declarações de Volume persistente Kubernetes para o armazenamento de pod.  `false` Para usar o armazenamento efêmero host para o armazenamento de pod. Consulte a [persistência de dados](concept-data-persistence.md) artigo para obter mais detalhes. Se você implantar o cluster de big data no minikube do SQL Server e USE_PERSISTENT_VOLUME = true, você deve definir o valor para `STORAGE_CLASS_NAME=standard`. |
-| **STORAGE_CLASS_NAME** | Não | padrão | Se `USE_PERSISTENT_VOLUME` é `true` isso indica o nome de classe de armazenamento Kubernetes para usar. Consulte a [persistência de dados](concept-data-persistence.md) artigo para obter mais detalhes. Se você implantar o cluster de big data no minikube do SQL Server, o nome de classe de armazenamento padrão é diferente e você deve substituí-la definindo `STORAGE_CLASS_NAME=standard`. |
-| **CONTROLLER_PORT** | Não | 30080 | A porta de TCP/IP que o serviço do controlador escuta na rede pública. |
-| **MASTER_SQL_PORT** | Não | 31433 | A porta de TCP/IP que a instância mestre do SQL escuta na rede pública. |
-| **KNOX_PORT** | Não | 30443 | A porta de TCP/IP Knox Apache ouve na rede pública. |
-| **PROXY_PORT** | Não | 30777 | A porta TCP/IP que escuta do serviço de proxy na rede pública. Essa é a porta usada para computar o portal de URL. |
-| **GRAFANA_PORT** | Não | 30888 | A porta de TCP/IP que o aplicativo de monitoramento de Grafana escuta na rede pública. |
-| **KIBANA_PORT** | Não | 30999 | A porta de TCP/IP que o aplicativo de pesquisa de log do Kibana escuta na rede pública. |
+A partir do CTP 2.5, a maioria das configurações de cluster de big data são definidos em um arquivo de configuração de implantação de JSON. Você pode usar um perfil de implantação padrão para o AKS, kubeadm, ou minikube ou você pode personalizar o seu próprio arquivo de configuração de implantação para usar durante a instalação. Por motivos de segurança, as configurações de autenticação são passadas por meio de variáveis de ambiente.
 
+As seções a seguir fornecem mais detalhes sobre como configurar seu big data implantações, bem como exemplos de personalização comuns do cluster. Além disso, você sempre pode editar o arquivo de configuração de implantação personalizada usando um editor como o VSCode por exemplo.
 
-> [!IMPORTANT]
->1. Durante o período da visualização privada limitada, as credenciais para o registro privado do Docker serão fornecidas para você após a separação sua [registro EAP](https://aka.ms/eapsignup).
->1. Para um cluster local criada com **kubeadm**, o valor da variável de ambiente `CLUSTER_PLATFORM` é `kubernetes`. Além disso, quando `USE_PERSISTENT_VOLUME=true`, você deve pré-provisionar uma classe de armazenamento do Kubernetes e passá-lo por meio do usando o `STORAGE_CLASS_NAME`.
->1. Certifique-se de que encapsular as senhas entre aspas duplas se ele contiver caracteres especiais. Você pode definir o MSSQL_SA_PASSWORD para que você quiser, mas certifique-se de que eles são suficientemente complexos e não usam o `!`, `&` ou `'` caracteres. Observe que os delimitadores de aspas duplas funcionam somente em comandos de bash.
->1. O nome do cluster deve ser caracteres alfa-numéricos do apenas letras minúsculas, sem espaços. Todos os artefatos de Kubernetes (contêineres, pods, conjuntos com estado, serviços) para o cluster serão criados em um namespace com o mesmo nome que o cluster do nome especificado.
->1. O **SA** conta é um administrador do sistema na instância do SQL Server Master que é criada durante a instalação. Após a criação de seu contêiner do SQL Server, a variável de ambiente MSSQL_SA_PASSWORD especificada é detectável executando echo MSSQL_SA_PASSWORD $ no contêiner. Para fins de segurança, altere sua senha de SA, de acordo com práticas recomendadas documentadas [aqui](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
+## <a id="configfile"></a> Configurações padrão
 
-A seção a seguir detalha nas opções de configurações YARN. Observação: Essas são configurações de nível de especialistas. O usuário não é necessário especificar qualquer um desses valores, e nesse caso, os padrões em vigor. Yarn é o Resource Manager para o Spark. Spark é executado em compartimentos de armazenamento e que pode ser controlado por meio de CLUSTER_STORAGE_POOL_REPLICAS.
+As opções são definidas nos arquivos de configuração do JSON de implantação de cluster de big data. Há três perfis de implantação padrão com configurações padrão para ambientes de desenvolvimento/teste:
 
-| Variável de ambiente do yarn | Obrigatório | Valor padrão | Descrição |
-|---|---|---|---|
-| **HADOOP_HEAPSIZE** | Não | 2048  | Tamanho do heap para processos de nó de nome e os dados do HDFS |
-| **YARN_HEAPSIZE**   | Não | 2048  | Tamanho do heap para processos de RM do Yarn e NM |
-| **YARN_NODEMANAGER_RESOURCE_MEMORY** | Não | 18432  | Memória total máxima do Yarn pode usar por contêiner K8  |
-| **YARN_NODEMANAGER_RESOURCE_VCORES** | Não | 6  | Núcleos virtuais de max Yarn pode usar em um nó  |
-| **YARN_SCHEDULER_MAX_MEMORY** | Não | 18432  | Memória máxima em um contêiner do Yarn pode usar em um nó  |
-| **YARN_SCHEDULER_MAX_VCORES** | Não | 6  | Memória máxima um contêiner do Yarn pode usar em um aceno  |
-| **YARN_SCHEDULER_CAPACITY_MAX_AM_PERCENT** | Não | 0.3  | Taxa de memória total que pode usar o aplicativo mestre   |
+| Perfil de implantação | Ambiente do Kubernetes |
+|---|---|
+| **aks-dev-test.json** | Serviço de Kubernetes do Azure (AKS) |
+| **kubeadm-dev-test.json** | Várias máquinas (kubeadm) |
+| **minikube-dev-test.json** | minikube |
 
-Esta seção detalha em configurações do Spark opções. Observação: Essas são configurações de nível de especialistas. O usuário não é necessário especificar qualquer um desses valores, e nesse caso, os padrões em vigor. Em tempo de execução o usuário pode configurar por aplicativo por meio % % configure nos notebooks spark.
-
-| Variável de ambiente do Spark | Obrigatório | Valor padrão | Descrição |
-|---|---|---|---|
-| **SPARK_DRIVER_MEMORY** | Não | 2048  | Driver do Spark a memória usada  |
-| **SPARK_DRIVER_CORES** | Não | 1  | Número de núcleos usados pelo driver do Spark  |
-| **SPARK_EXECUTOR_INSTANCES** | Não | 3  | Driver do Spark a memória usada  |
-| **SPARK_EXECUTOR_MEMORY** | Não | 1536  | Memória usada executor Spark |
-| **SPARK_EXECUTOR_CORES** | Não | 1  | Número de núcleos usados pelos executores Spark  |
-
-
-Definir variáveis de ambiente necessárias para implantar um cluster de big data é diferente dependendo se você estiver usando o cliente Windows ou Linux.  Escolha as etapas a seguir dependendo de qual sistema operacional você está usando.
-
-Inicializar as variáveis de ambiente a seguir, eles são necessários para implantar o cluster:
-
-### <a name="windows"></a>Windows
-
-Usando uma janela CMD (não PowerShell), configure as seguintes variáveis de ambiente. Não use aspas ao redor dos valores.
-
-```cmd
-SET ACCEPT_EULA=yes
-SET CLUSTER_PLATFORM=<minikube or aks or kubernetes>
-
-SET CONTROLLER_USERNAME=<controller_admin_name - can be anything>
-SET CONTROLLER_PASSWORD=<controller_admin_password - can be anything, password complexity compliant>
-SET KNOX_PASSWORD=<knox_password - can be anything, password complexity compliant>
-SET MSSQL_SA_PASSWORD=<sa_password_of_master_sql_instance, password complexity compliant>
-
-SET DOCKER_REGISTRY=private-repo.microsoft.com
-SET DOCKER_REPOSITORY=mssql-private-preview
-SET DOCKER_USERNAME=<your username, credentials provided by Microsoft>
-SET DOCKER_PASSWORD=<your password, credentials provided by Microsoft>
-SET DOCKER_EMAIL=<your email address>
-SET DOCKER_PRIVATE_REGISTRY=1
-```
-
-### <a name="linux"></a>Linux
-
-Inicialize as variáveis de ambiente a seguir. No bash, você pode usar aspas em torno de cada valor.
+Você pode implantar um cluster de big data, executando **criar cluster mssqlctl**. Isso solicitará que você escolha uma das configurações padrão e orientará você durante a implantação.
 
 ```bash
-export ACCEPT_EULA="yes"
-export CLUSTER_PLATFORM="<minikube or aks or kubernetes>"
-
-export CONTROLLER_USERNAME="<controller_admin_name - can be anything>"
-export CONTROLLER_PASSWORD="<controller_admin_password - can be anything, password complexity compliant>"
-export KNOX_PASSWORD="<knox_password - can be anything, password complexity compliant>"
-export MSSQL_SA_PASSWORD="<sa_password_of_master_sql_instance, password complexity compliant>"
-
-export DOCKER_REGISTRY="private-repo.microsoft.com"
-export DOCKER_REPOSITORY="mssql-private-preview"
-export DOCKER_USERNAME="<your username, credentials provided by Microsoft>"
-export DOCKER_PASSWORD="<your password, credentials provided by Microsoft>"
-export DOCKER_EMAIL="<your email address>"
-export DOCKER_PRIVATE_REGISTRY="1"
+mssqlctl cluster create
 ```
 
-### <a name="minikube-settings"></a>Configurações do Minikube
+> [!TIP]
+> Neste exemplo, você será solicitado para todas as configurações que não fazem parte da configuração padrão, como senhas. Observe que as informações do Docker são fornecidas a você pela Microsoft como parte do SQL Server 2019 [programa de adoção antecipada](https://aka.ms/eapsignup).
 
-Se você estiver implantando em minikube e `USE_PERSISTENT_VOLUME=true` (padrão), você também deve substituir o valor padrão para `STORAGE_CLASS_NAME` variável de ambiente.
+## <a id="customconfig"></a> Configurações personalizadas
 
-Use o seguinte comando no Windows para implantações do minikube:
+Também é possível personalizar seu próprio arquivo de configuração de implantação. Você pode fazer isso com as seguintes etapas:
 
-```cmd
-SET STORAGE_CLASS_NAME=standard
-```
+1. Comece com um dos perfis de implantação padrão que correspondem ao seu ambiente de Kubernetes. Você pode usar o **lista de configuração de cluster mssqlctl** comando para listá-los:
 
-Use o seguinte comando no Linux para implantações do minikube:
+   ```bash
+   mssqlctl cluster config list
+   ```
+
+1. Para personalizar sua implantação, crie uma cópia do perfil de implantação com o **mssqlctl cluster config init** comando. Por exemplo, o comando a seguir cria uma cópia do **aks-dev-test.json** arquivo de configuração de implantação no diretório atual:
+
+   ```bash
+   mssqlctl cluster config init --src aks-dev-test.json --target custom.json
+   ```
+
+1. Para personalizar configurações no arquivo de configuração de implantação, você pode editá-lo em uma ferramenta que é bom para edição de documentos json como o VS Code. Para a automação com scripts, você pode editar o arquivo de configuração personalizada usando **conjunto de seção de configuração de cluster mssqlctl** comando. Por exemplo, o comando a seguir altera um arquivo de configuração personalizada para alterar o nome do cluster implantado do padrão (**mssql-cluster**) para **test-cluster**:  
+
+   ```bash
+   mssqlctl cluster config section set --config-file custom.json --json-values "metadata.name=test-cluster"
+   ```
+
+   > [!TIP]
+   > Uma ferramenta útil para encontrar caminhos JSON é o [avaliador on-line de JSONPath](https://jsonpath.com/).
+
+   Além de passar pares chave-valor, você pode também fornecer embutido valores JSON ou transmitir arquivos de patch JSON. Para obter mais informações, consulte [definir as configurações de implantação para clusters de big data](deployment-custom-configuration.md).
+
+1. Em seguida, passar o arquivo de configuração personalizada para **criar cluster mssqlctl**. Observe que você deve definir exigida [variáveis de ambiente](#env), caso contrário, você será solicitado para os valores:
+
+   ```bash
+   mssqlctl cluster create --config-file custom.json --accept-eula yes
+   ```
+
+> [!TIP]
+> Para obter mais informações sobre a estrutura de um arquivo de configuração de implantação, consulte o [referência de arquivo de configuração de implantação](reference-deployment-config.md). Para obter mais exemplos de configuração, consulte [definir as configurações de implantação para clusters de big data](deployment-custom-configuration.md).
+
+## <a id="env"></a> Variáveis de ambiente
+
+As seguintes variáveis de ambiente são usadas para configurações de segurança que não são armazenadas em um arquivo de configuração de implantação.
+
+| Variável de ambiente | Descrição |
+|---|---|---|---|
+| **DOCKER_REGISTRY** | O registro privado onde as imagens usadas para implantar o cluster são armazenadas. |
+| **DOCKER_REPOSITORY** | O repositório privado dentro do registro acima, onde as imagens são armazenadas. |
+| **DOCKER_USERNAME** | O nome de usuário para acessar as imagens de contêiner, caso eles são armazenados em um repositório privado. |
+| **DOCKER_PASSWORD** | A senha para acessar o repositório privado acima. |
+| **DOCKER_IMAGE_TAG** | O rótulo usado para marcar as imagens. O padrão é **mais recente**, mas é recomendável usar a marca correspondente para a versão para evitar problemas de incompatibilidade de versão. |
+| **CONTROLLER_USERNAME** | O nome de usuário para o administrador de cluster. |
+| **CONTROLLER_PASSWORD** | A senha para o administrador de cluster. |
+| **KNOX_PASSWORD** | A senha do usuário do Knox. |
+| **MSSQL_SA_PASSWORD** | A senha do usuário de SA para a instância mestre do SQL. |
+
+Essas variáveis de ambiente devem ser definidas antes de chamar **criar cluster mssqlctl**. Se qualquer variável não for definido, você será solicitado para ele.
+
+O exemplo a seguir mostra como definir as variáveis de ambiente para Linux (bash) e Windows (PowerShell):
 
 ```bash
-export STORAGE_CLASS_NAME=standard
+export CONTROLLER_USERNAME=<controller_user>
+export CONTROLLER_PASSWORD=<password>
+export DOCKER_REGISTRY=<docker-registry>
+export DOCKER_REPOSITORY=<docker-repository>
+export MSSQL_SA_PASSWORD=<password>
+export KNOX_PASSWORD=<password>
+export DOCKER_USERNAME=<docker-username>
+export DOCKER_PASSWORD=<docker-password>
+export DOCKER_IMAGE_TAG=ctp2.5
 ```
 
-Como alternativa, você pode suprimir usando volumes persistentes em minikube definindo `USE_PERSISTENT_VOLUME=false`.
-
-### <a name="kubadm-settings"></a>Configurações de Kubadm
-
-Se você estiver implantando com kubeadm em seu próprio máquinas físicas ou virtuais, você deve pré-provisionar uma classe de armazenamento do Kubernetes e passá-lo por meio do usando o `STORAGE_CLASS_NAME`. Como alternativa, você pode suprimir usando volumes persistentes definindo `USE_PERSISTENT_VOLUME=false`. Para obter mais informações sobre o armazenamento persistente, consulte [persistência de dados com o SQL Server, o cluster de big data no Kubernetes](concept-data-persistence.md).
-
-## <a name="deploy-sql-server-big-data-cluster"></a>Implantar o cluster de Big Data do SQL Server
-
-A API de criação do cluster é usada para inicializar o namespace do Kubernetes e implantar os pods de aplicativo para o namespace. Para implantar o cluster de big data do SQL Server no cluster do Kubernetes, execute o seguinte comando:
-
-```bash
-mssqlctl cluster create --name <your-cluster-name>
+```PowerShell
+SET CONTROLLER_USERNAME=admin
+SET CONTROLLER_PASSWORD=<password>
+SET DOCKER_REGISTRY=<docker-registry>
+SET DOCKER_REPOSITORY=<docker-repository>
+SET MSSQL_SA_PASSWORD=<password>
+SET KNOX_PASSWORD=<password>
+SET DOCKER_USERNAME=<docker-username>
+SET DOCKER_PASSWORD=<docker-password>
+SET DOCKER_IMAGE_TAG=ctp2.5
 ```
+
+Após definir as variáveis de ambiente, você deve executar `mssqlctl cluster create` para disparar a implantação. Este exemplo usa o arquivo de configuração de cluster criado acima:
+
+```
+mssqlctl cluster create --config-file custom.json --accept-eula yes
+```
+
+Observe as seguintes diretrizes:
+
+- Neste momento, as credenciais para o registro privado do Docker serão fornecidas para você após a separação sua [registro do programa de adoção antecipada](https://aka.ms/eapsignup). Registro do programa de adoção antecipado é necessária para testar a clusters de grandes dados do SQL Server.
+- Certifique-se de que encapsular as senhas entre aspas duplas se ele contiver caracteres especiais. Você pode definir as **MSSQL_SA_PASSWORD** para tudo o que você gosta, mas certifique-se a senha é suficientemente complexa e não usar o `!`, `&` ou `'` caracteres. Observe que os delimitadores de aspas duplas funcionam somente em comandos de bash.
+- O **SA** logon é um administrador do sistema na instância mestre do SQL Server que é criada durante a instalação. Depois de criar o contêiner do SQL Server, o **MSSQL_SA_PASSWORD** variável de ambiente especificada é detectável executando echo MSSQL_SA_PASSWORD $ no contêiner. Para fins de segurança, altere sua senha de SA, de acordo com práticas recomendadas documentadas [aqui](../linux/quickstart-install-connect-docker.md#sapassword).
+- O **DOCKER_IMAGE_TAG** neste exemplo, controles de qual versão você estão instalando. Neste exemplo, é a versão 2.5 do CTP.
+
+## <a id="unattended"></a> Instalação autônoma
+
+Para uma implantação autônoma, você deve definir todas as variáveis de ambiente necessárias, use um arquivo de configuração e chamada `mssqlctl cluster create` com o `--accept-eula yes` parâmetro. Os exemplos na seção anterior demonstram a sintaxe para uma instalação autônoma.
+
+## <a id="monitor"></a> Monitore a implantação
 
 Durante a inicialização do cluster, a janela de comando do cliente produzirá o status da implantação. Durante o processo de implantação, você deverá ver uma série de mensagens em que ele está aguardando o pod do controlador:
 
 ```output
-2018-11-15 15:42:02.0209 UTC | INFO | Waiting for controller pod to be up...
+2019-04-12 14:40:10.0129 UTC | INFO | Waiting for controller pod to be up...
 ```
 
-Depois de 10 a 20 minutos, você deve ser notificado se o pod de controlador está em execução:
+Em menos de 15 a 30 minutos, você deve ser notificado se o pod de controlador está em execução:
 
 ```output
-2018-11-15 15:50:50.0300 UTC | INFO | Controller pod is running.
-2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.111.111.111:30080
+2019-04-12 15:01:10.0809 UTC | INFO | Waiting for controller pod to be up. Checkthe mssqlctl.log file for more details.
+2019-04-12 15:01:40.0861 UTC | INFO | Controller pod is running.
+2019-04-12 15:01:40.0884 UTC | INFO | Controller Endpoint: https://<ip-address>:30080
 ```
 
 > [!IMPORTANT]
-> Toda a implantação pode levar muito tempo devido ao tempo necessário para baixar as imagens de contêiner para os componentes do cluster de big data. No entanto, ele não deve levar várias horas. Se você estiver tendo problemas com sua implantação, consulte o [solução de problemas](#troubleshoot) seção deste artigo para saber como monitorar e inspecionar a implantação.
+> Toda a implantação pode levar muito tempo devido ao tempo necessário para baixar as imagens de contêiner para os componentes do cluster de big data. No entanto, ele não deve levar várias horas. Se você estiver tendo problemas com sua implantação, consulte [monitoramento e solução de problemas de clusters de grandes dados do SQL Server](cluster-troubleshooting-commands.md).
 
 Quando a implantação for concluída, a saída notifica você de sucesso:
 
 ```output
-2018-11-15 16:10:25.0583 UTC | INFO | Cluster state: Ready
-2018-11-15 16:10:25.0583 UTC | INFO | Cluster deployed successfully.
+2019-04-12 15:37:18.0271 UTC | INFO | Monitor and track your cluster at the Portal Endpoint: https://<ip-address>:30777/portal/
+2019-04-12 15:37:18.0271 UTC | INFO | Cluster deployed successfully.
 ```
 
-## <a id="masterip"></a> Obter pontos de extremidade de cluster de big data
+Anote a URL da **ponto de extremidade do Portal** na saída anterior para uso na próxima seção.
 
-Depois que o script de implantação foi concluída com êxito, você pode obter o endereço IP da instância mestre do SQL Server usando as etapas descritas abaixo. Você usará esse endereço IP e porta número 31433 para se conectar a instância mestre do SQL Server (por exemplo:  **\<ip-address-of-endpoint-master-pool\>, 31433**). Da mesma forma, você pode se conectar ao SQL Server IP de cluster (Gateway HDFS/Spark) grande de dados associado a **segurança de ponto de extremidade** service.
+> [!TIP]
+> É o nome padrão para o cluster de big data implantados `mssql-cluster` , a menos que modificado por uma configuração personalizada.
 
-Os seguintes comandos kubectl recuperam pontos de extremidade comuns para o cluster de big data:
+## <a id="endpoints"></a> Recuperar pontos de extremidade
 
-```bash
-kubectl get svc endpoint-master-pool -n <your-cluster-name>
-kubectl get svc endpoint-security -n <your-cluster-name>
-kubectl get svc endpoint-service-proxy -n <your-cluster-name>
-```
+Depois que o script de implantação foi concluída com êxito, você pode obter os endereços IP dos pontos de extremidade externos para o cluster de big data usando as etapas a seguir.
 
-Procure os **External-IP** valor que é atribuído a cada serviço.
+1. Copie a saída de implantação, o **ponto de extremidade do Portal** e remova o `/portal/` no final. Esta é a URL do Proxy de gerenciamento (por exemplo, `https://<ip-address>:30777`).
 
-Todos os pontos de extremidade do cluster também são descritos os **pontos de extremidade de serviço** guia no Portal de administração de Cluster. Você pode acessar o portal usando o IP endereço e porta número externa para o `endpoint-service-proxy` (por exemplo: **https://\<ip-address-of-endpoint-service-proxy\>: 30777/portal**). As credenciais para acessar o portal de administração é os valores de `CONTROLLER_USERNAME` e `CONTROLLER_PASSWORD` variáveis de ambiente fornecidas acima. Você também pode usar o Portal de administração de Cluster para monitorar a implantação.
+   > [!TIP]
+   > Se você não tiver a saída de implantação, você pode obter o endereço IP para o Proxy de gerenciamento ao examinar a saída EXTERNAL-IP dos seguintes **kubectl** comando:
+   >
+   > ```bash
+   > kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
+   > ```
 
-Para obter mais informações sobre como se conectar, consulte [conectar-se a um SQL Server cluster de big data com o Azure Data Studio](connect-to-big-data-cluster.md).
+1. Faça logon no cluster de big data com **mssqlctl logon**. Defina as **– ponto de extremidade** parâmetro para o Proxy de gerenciamento.
+
+   ```bash
+   mssqlctl login --endpoint https://<ip-address>:30777
+   ```
+
+   Especifique o nome de usuário e a senha que você configurou para o controlador (CONTROLLER_USERNAME e CONTROLLER_PASSWORD) durante a implantação.
+
+1. Execute **lista de pontos de extremidade do cluster mssqlctl** para obter uma lista com uma descrição de cada ponto de extremidade e seus valores correspondentes de porta e endereço IP. Por exemplo, o exemplo a seguir exibe a saída para o ponto de extremidade do Portal de gerenciamento:
+
+   ```output
+   {
+     "description": "Management Portal",
+     "endpoint": "https://<ip-address>:30777/portal",
+     "ip": "<ip-address>",
+     "name": "portal",
+     "port": 30777,
+     "protocol": "https"
+   },
+   ```
+
+1. Todos os pontos de extremidade do cluster também são descritos os **pontos de extremidade de serviço** guia no Portal de administração de Cluster. Você pode acessar o portal usando o ponto de extremidade do Portal de gerenciamento na etapa anterior (por exemplo, `https://<ip-address>:30777/portal`). As credenciais para acessar o portal de administração são os valores para o controlador de nome de usuário e senha que você especificou durante a implantação. Você também pode usar o Portal de administração de Cluster para monitorar a implantação.
 
 ### <a name="minikube"></a>Minikube
 
-Se você estiver usando o Minikube, você precisa executar o seguinte comando para obter o endereço IP que você precisa para se conectar ao. Além de IP, especifique a porta para o ponto de extremidade que você precisa para se conectar ao. Para obter todos os pontos de extremidade serviço para 
+Se você estiver usando o minikube, você precisa executar o seguinte comando para obter o endereço IP que você precisa para se conectar ao. Além de IP, especifique a porta para o ponto de extremidade que você precisa para se conectar ao.
 
 ```bash
 minikube ip
 ```
 
 Independentemente da plataforma você está executando o cluster Kubernetes, para obter todos os pontos de serviço implantados para o cluster, execute o comando a seguir:
+
 ```bash
 kubectl get svc -n <your-cluster-name>
 ```
 
-## <a id="upgrade"></a> Atualizar para uma nova versão
+## <a id="connect"></a> Conectar-se ao cluster
 
-Atualmente, a única maneira de atualizar um cluster de big data para uma nova versão é remover e recriar o cluster manualmente. Cada versão tem uma versão exclusiva do **mssqlctl** que não é compatível com a versão anterior. Além disso, se tiver um cluster mais antigo baixar uma imagem em um novo nó, a imagem mais recente não ficará compatível com as imagens mais antigas no cluster. Para atualizar para a versão mais recente, use as seguintes etapas:
-
-1. Antes de excluir o cluster antigo, fazer backup dos dados na instância mestre do SQL Server e no HDFS. Para a instância mestre do SQL Server, você pode usar [SQL Server backup e restauração](data-ingestion-restore-database.md). Para o HDFS, você [pode copiar os dados com **curl**](data-ingestion-curl.md).
-
-1. Excluir o cluster antigo com o `mssqlctl delete cluster` comando.
-
-   ```bash
-    mssqlctl cluster delete --name <old-cluster-name>
-   ```
-
-   > [!Important]
-   > Use a versão do **mssqlctl** que corresponde ao seu cluster. Não exclua um cluster mais antigo com a versão mais recente do **mssqlctl**.
-
-1. Desinstale as versões antigas do **mssqlctl**.
-
-   ```bash
-   pip3 uninstall mssqlctl
-   ```
-
-   > [!IMPORTANT]
-   > Você não deve instalar a nova versão do **mssqlctl** sem desinstalar as versões mais antigas primeiro.
-
-1. Instale a versão mais recente do **mssqlctl**. 
-
-   **Windows:**
-
-   ```powershell
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.4/mssqlctl/requirements.txt
-   ```
-
-   **Linux:**
-
-   ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.4/mssqlctl/requirements.txt --user
-   ```
-
-   > [!IMPORTANT]
-   > Para cada versão, o caminho para **mssqlctl** alterações. Mesmo se você instalou anteriormente **mssqlctl**, você deverá reinstalar do caminho mais recente antes de criar o novo cluster.
-
-1. Instalar a versão mais recente usando as instruções na [implantar seção](#deploy) deste artigo. 
-
-## <a id="troubleshoot"></a> Monitorando e Solucionando problemas
-
-Para monitorar ou solucionar problemas de uma implantação, use **kubectl** para inspecionar o status do cluster e para detectar possíveis problemas. A qualquer momento durante a implantação, você pode abrir uma janela de comando diferente para executar os testes a seguir.
-
-1. Inspecione o status dos pods no cluster.
-
-   ```cmd
-   kubectl get pods -n <your-cluster-name>
-   ```
-
-   Durante a implantação, pods com um **STATUS** dos **ContainerCreating** ainda estão surgindo. Se a implantação trava por qualquer motivo, isso pode dar uma ideia em que o problema pode ser. Examine também os **pronto** coluna. Isso informa quantos contêineres começaram no pod. Observe que as implantações podem levar trinta minutos ou mais dependendo da sua rede e configuração. Grande parte desse tempo é gasto baixando as imagens de contêiner para diferentes componentes. A tabela a seguir mostra a saída de exemplo editado de dois contêineres durante a implantação:
-
-   ```output
-   PS C:\> kubectl get pods -n sbdc8
-   NAME                                     READY   STATUS              RESTARTS   AGE
-   mssql-controller-h79ft                   4/4     Running             0          13m
-   mssql-storage-pool-default-0             0/7     ContainerCreating   0          6m
-   ```
-
-1. Descreva um pod individual para obter mais detalhes. O comando a seguir inspeciona o `mssql-storage-pool-default-0` pod.
-
-   ```cmd
-   kubectl describe pod mssql-storage-pool-default-0 -n <your-cluster-name>
-   ```
-
-   Isso gera informações detalhadas sobre o pod, incluindo eventos recentes. Se tiver ocorrido um erro, você pode encontrar, às vezes, o erro aqui.
-
-1. Recupere os logs para contêineres em execução em um pod. O comando a seguir recupera os logs para todos os contêineres em execução no pod denominado `mssql-storage-pool-default-0` e gera como saída para um nome de arquivo `pod-logs.txt`:
-
-   ```cmd
-   kubectl logs mssql-storage-pool-default-0 --all-containers=true -n <your-cluster-name> > pod-logs.txt
-   ```
-
-1. Examine os serviços de cluster durante e após uma implantação com o seguinte comando:
-
-   ```cmd
-   kubectl get svc -n <your-cluster-name>
-   ```
-
-   Esses serviços oferecem suporte a conexões internas e externas para o cluster de big data. Conexões externas, são usados os seguintes serviços:
-
-   | Serviço | Descrição |
-   |---|---|
-   | **endpoint-master-pool** | Fornece acesso para a instância mestre.<br/>(**EXTERNAL-IP, 31433** e o **SA** usuário) |
-   | **endpoint-controller** | Dá suporte a ferramentas e clientes que gerenciam o cluster. |
-   | **endpoint-service-proxy** | Fornece acesso para o [Portal de administração de Cluster](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**:30777/portal)|
-   | **endpoint-security** | Fornece acesso para o gateway HDFS/Spark.<br/>(**EXTERNAL-IP** e o **raiz** usuário) |
-
-1. Use o [Portal de administração de Cluster](cluster-admin-portal.md) para monitorar a implantação na **implantação** guia. Você precisa esperar para o **ponto de extremidade de serviço de proxy** início antes de acessar esse portal, portanto, ele não estará disponível no início de uma implantação do serviço.
-
-> [!TIP]
-> Para obter mais informações sobre como solucionar problemas do cluster, consulte [comandos Kubectl para monitoramento e solução de problemas de clusters de grandes dados do SQL Server](cluster-troubleshooting-commands.md).
+Para obter mais informações sobre como se conectar ao cluster de big data, consulte [conectar-se a um SQL Server cluster de big data com o Azure Data Studio](connect-to-big-data-cluster.md).
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para saber mais sobre os clusters de grandes dados do SQL Server, consulte os seguintes recursos:
+Para saber mais sobre a implantação de cluster de big data, consulte os seguintes recursos:
 
-- [Quais são os clusters do SQL Server 2019 grandes dados?](big-data-cluster-overview.md)
+- [Definir as configurações de implantação para clusters de big data](deployment-custom-configuration.md)
+- [Executar uma implantação offline de um cluster de big data do SQL Server](deploy-offline.md)
 - [Workshop: Arquitetura de clusters de grandes dados do Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

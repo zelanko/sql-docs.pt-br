@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: ada3d2f782a33caf5334361a9682c53cf7cdec95
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63276043"
 ---
 # <a name="appliance-configuration-checklists-for-analytics-platform-system"></a>Listas de verificação de configuração de dispositivo para o Analytics Platform System
 Fornece listas de verificação para as tarefas necessárias para configurar o Analytics Platform System para seu próprio ambiente. Essas tarefas de configuração são necessárias antes de usar o dispositivo.  

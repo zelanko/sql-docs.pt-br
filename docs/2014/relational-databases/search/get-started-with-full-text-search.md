@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: b6dc03709ea16fb718ff93ed60f75ad4d1515eaf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273222"
 ---
 # <a name="get-started-with-full-text-search"></a>Iniciar a pesquisa de texto completo
   No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], por padrão, os bancos de dados são habilitados para texto completo. No entanto, para usar um índice de texto completo em uma tabela, você deve configurar o recurso de indexação de texto completo nas colunas das tabelas que deseja acessar usando o Mecanismo de Texto Completo.  

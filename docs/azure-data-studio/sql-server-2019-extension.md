@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 11dee99f7d0648a4c7fc701234796e6d552d47a9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: MT
+ms.openlocfilehash: fe3c7fa2a383ea7d8b969ed149a2a762531e0a84
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59934122"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472183"
 ---
 # <a name="sql-server-2019-extension-preview"></a>Extensão do SQL Server 2019 (visualização)
 
@@ -30,9 +30,9 @@ Para instalar a extensão de 2019 do SQL Server (versão prévia), baixe e insta
 
    |Plataforma|Download|Data de liberação|Versão
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087443)|18 de abril de 2019 |0.12.0
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087442)|18 de abril de 2019 |0.12.0
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087441)|18 de abril de 2019 |0.12.0
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087443)|18 de abril de 2019 |0.12.1
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087442)|18 de abril de 2019 |0.12.1
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087441)|18 de abril de 2019 |0.12.1
 
 1. No estúdio de dados do Azure, escolha **instalar a extensão do pacote VSIX** da **arquivo** menu e selecione o arquivo. VSIX baixado.
 
@@ -44,7 +44,7 @@ Para instalar a extensão de 2019 do SQL Server (versão prévia), baixe e insta
 
 1. Após as dependências de concluir a instalação, feche e reabra o estúdio de dados do Azure. O **cluster de big data do SQL Server** tipo de conexão não está disponível até que você reinicie o estúdio de dados do Azure.
 
-## <a name="changes-in-release-012"></a>Alterações de versão 0.12
+## <a name="changes-in-release-0121"></a>Alterações na versão 0.12.1
 
 * O **cluster de big data do SQL Server** tipo de conexão foi removido nesta versão. Todas as funcionalidades disponíveis anteriormente a conexão de cluster de big data do SQL Server agora está disponível na conexão do SQL Server.
 * HDFS navegação pode ser encontrado sob o **serviços de dados** pasta

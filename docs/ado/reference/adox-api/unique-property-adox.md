@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6069d7891e7f21dcd24cfbf4f5392912e8bc8ad8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281435"
 ---
 # <a name="unique-property-adox"></a>Propriedade Unique (ADOX)
 Indica se as chaves de índice devem ser exclusivas.  

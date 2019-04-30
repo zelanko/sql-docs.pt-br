@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 10cf92089a87f2d57fc303d8b722df70941fb455
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819494"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63453453"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-accesstosql"></a>Comandos de menu e outras teclas de atalho (AccessToSQL)
 As seções a seguir descrevem os atalhos de teclado para acessar os comandos de menu e outras teclas de atalho usadas em várias caixas de diálogo do SSMA para o aplicativo de acesso.  
@@ -50,7 +50,7 @@ Para acessar o menu Editar, o atalho de teclado usado é ALT + E. A tabela a seg
 |Exiba a caixa de diálogo Gerenciar indicadores.|ALT + E + B ou CTRL + X|  
 |Ir para linha|ALT + E + G ou CTRL + G|  
 |Salve as alterações feitas à instrução.|ALT + E + S ou CTRL + S|  
-|Submenu de localização de acesso.|E AS TECLAS ALT + F|  
+|Submenu de localização de acesso.|ALT + E + F|  
 |Localizar ou localização rápida.|ALT + E + F + F ou CTRL + F|  
 |Exiba a caixa de diálogo de pesquisa avançada.|ALT + E + F + A ou ALT + F12|  
 |Inicie a informações rápidas.|ALT + E + F + I ou CTRL + SHIFT + espaço|  

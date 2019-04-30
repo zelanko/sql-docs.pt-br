@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c83a7de609d200da2957a65b9325d031eda49780
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273039"
 ---
 # <a name="odbc-programmer39s-reference"></a>O programador ODBC&#39;referência de s
 O *referência do programador de ODBC* contém as seções a seguir.  
@@ -56,7 +56,7 @@ O *referência do programador de ODBC* contém as seções a seguir.
 |**SQLEndTran**|Em negrito indica que a sintaxe deve ser digitado exatamente como mostrados, incluindo nomes de função.|  
 |&#124;|Uma barra vertical separa duas opções mutuamente exclusivas em uma linha de sintaxe.|  
 |...|Uma elipse indica que os argumentos podem ser repetidos várias vezes.|  
-|para obter informações sobre a ferramenta de configuração e recursos adicionais. para obter informações sobre a ferramenta de configuração e recursos adicionais. para obter informações sobre a ferramenta de configuração e recursos adicionais.|Uma coluna de três pontos indica a continuação do anteriores linhas de código.|  
+|. . .|Uma coluna de três pontos indica a continuação do anteriores linhas de código.|  
   
 ## <a name="about-the-code-examples"></a>Sobre os exemplos de código  
  Os exemplos de código neste guia destinam-se apenas para fins ilustrativos. Porque eles são escritos principalmente para demonstrar os princípios ODBC, eficiência, às vezes, foi definida com o intuito de clareza. Além disso, todas seções de código, às vezes, foram omitidas por motivos de clareza. Isso inclui as definições de funções de não-ODBC (funções cujos nomes não começam com "SQL") e a maioria da manipulação de erro.  
@@ -76,19 +76,19 @@ O *referência do programador de ODBC* contém as seções a seguir.
   
 -   Data, J. C., com Darwen, Hugh: *Um guia para o padrão SQL* (Addison-Wesley, 1993).  
   
--   Sandra l, Emerson, Darnovsky, Marcy e Arqueiro com arco, Judith s: *Manual do SQL prático* (Addison-Wesley, 1989).  
+-   Emerson, Sandra L., Darnovsky, Marcy, and Bowman, Judith S.: *Manual do SQL prático* (Addison-Wesley, 1989).  
   
--   Groff, James r e Weinberg, N. de Paul: *Usando o SQL* (Osborne McGraw-Hill, 1990).  
+-   Groff, James R. and Weinberg, Paul N.: *Usando o SQL* (Osborne McGraw-Hill, 1990).  
   
 -   Gruber, Martin: *Noções básicas sobre o SQL* (Sybex, 1990).  
   
 -   Hursch, Jack l e j Carolyn.: *SQL, a linguagem de consulta estruturada* (guia de livros, 1988).  
   
--   Melton, Jim e Simon, Alan r: *Noções básicas sobre o novo SQL: Um guia completo* (Morgan Kaufmann Publishers, 1993).  
+-   Melton, Jim, and Simon, Alan R.: *Noções básicas sobre o novo SQL: Um guia completo* (Morgan Kaufmann Publishers, 1993).  
   
 -   Pascal, Fabian: *SQL e Noções básicas de relacionais* (M & T livros, 1990).  
   
--   Trimble, J. Harvey, Jr. e Chappell, David: *Uma introdução Visual ao SQL* (Wiley, 1989).  
+-   Trimble, J. Harvey, Jr. and Chappell, David: *Uma introdução Visual ao SQL* (Wiley, 1989).  
   
 -   Van der Lans, Rick F.: *Introdução ao SQL* (Addison-Wesley, 1988).  
   
@@ -98,9 +98,9 @@ O *referência do programador de ODBC* contém as seções a seguir.
   
  Para obter informações adicionais sobre o processamento de transações, consulte:  
   
--   Cinza, N. de J. e o sistema de dados, Andreas: *Processamento de transações: Conceitos e técnicas* (Morgan Kaufmann Publishers, 1993).  
+-   Gray, J. N. e o sistema de dados, Andreas: *Processamento de transações: Conceitos e técnicas* (Morgan Kaufmann Publishers, 1993).  
   
--   Hackathorn, Richard d: *Conectividade de banco de dados empresarial* (Wiley & Sons, 1993).  
+-   Hackathorn, Richard D.: *Conectividade de banco de dados empresarial* (Wiley & Sons, 1993).  
   
  Para obter mais informações sobre Interfaces de nível de chamada, os padrões a seguir estão disponíveis:  
   
@@ -116,7 +116,7 @@ O *referência do programador de ODBC* contém as seções a seguir.
   
 -   Johnston, Tom e Osborne, marque: *Guia de desenvolvedores do ODBC* (Howard W. Sams & Company, 1994).  
   
--   Centro-Norte, Ken: *Programação de Multi-DBMS do Windows: Usando C++, Visual Basic, ODBC, OLE 2 e ferramentas para projetos DBMS* (John Wiley & Sons, Inc., 1995).  
+-   North, Ken: *Programação de Multi-DBMS do Windows: Usando C++, Visual Basic, ODBC, OLE 2 e ferramentas para projetos DBMS* (John Wiley & Sons, Inc., 1995).  
   
 -   Stegman, ão Michael., Signore, Robert e Creamer, John: *A solução ODBC, conectividade aberta de banco de dados em ambientes de distribuídos* (McGraw-Hill, 1995).  
   

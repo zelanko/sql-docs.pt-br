@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 50344cc7152e1d91208e6bc2aa9f92d6d8895568
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267017"
 ---
 # <a name="field-object-properties-methods-and-events"></a>Eventos, métodos e propriedades do objeto Field
 ## <a name="propertiescollections"></a>Propriedades/coleções  

@@ -1,5 +1,5 @@
 ---
-title: Configurações (GUI) (AccessToSQL) do projeto | Microsoft Docs
+title: Project Settings (GUI) (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,13 +11,13 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d0c2fa02eaf5ec72c31bd733401ff93ee259a9cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754624"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63453484"
 ---
-# <a name="project-settings-gui-accesstosql"></a>Configurações de projeto (GUI) (AccessToSQL)
+# <a name="project-settings-gui-accesstosql"></a>Project Settings (GUI) (AccessToSQL)
 As configurações de projeto GUI permitem que você configure como os dados aparecem na **dados** guia e se é preciso incluir relatórios de dados com relatórios de avaliação.  
   
 O painel de interface gráfica do usuário está disponível na **configurações do projeto** e **configurações do projeto padrão** caixas de diálogo.  
@@ -30,15 +30,15 @@ O painel de interface gráfica do usuário está disponível na **configuraçõe
 **Número máximo de linhas de código-fonte**  
 Configura o número de linhas de dados exibidos na **dados** guia da tabela de origem selecionado.  
   
-**Padrão**: 100  
+**Default**: 100  
   
 **Número máximo de linhas de destino**  
 Configura o número de linhas de dados exibidos na **dados** guia da tabela de destino selecionado.  
   
-**Padrão**: 100  
+**Default**: 100  
   
 **Mostrar relatório após a conversão**  
 Para exibir um relatório depois de converter esquemas, selecione True. O relatório de conversão resultante contém o mesmo layout e informações que o relatório de avaliação.  
   
-**Padrão**: False  
+**Default**: Falso  
   

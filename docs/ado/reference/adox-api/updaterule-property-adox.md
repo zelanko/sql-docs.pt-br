@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7a5845f8f595ee58c0085f022eff7f7c499887a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281509"
 ---
 # <a name="updaterule-property-adox"></a>Propriedade UpdateRule (ADOX)
 Indica a ação executada quando um primário [chave](../../../ado/reference/adox-api/key-object-adox.md) é atualizado.  

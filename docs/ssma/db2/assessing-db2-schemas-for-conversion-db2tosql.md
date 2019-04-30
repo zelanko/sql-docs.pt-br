@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: fe66ff5b8902a737ff9a2ac0815069a4f01ea129
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608920"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63453425"
 ---
 # <a name="assessing-db2-schemas-for-conversion-db2tosql"></a>Avaliar esquemas do DB2 para conversão (DB2ToSQL)
 Antes de carregar objetos e migrar dados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você deve determinar o quão complexo será a migração e quanto tempo levará a migração. O SSMA pode criar um relatório de avaliação que mostra o percentual de objetos que serão convertidos com êxito. O SSMA também permite que você exiba os problemas específicos que causam falhas de conversão.  
@@ -35,7 +35,7 @@ Quando ele cria esse relatório de avaliação, o SSMA converte os objetos de ba
   
     O SSMA mostrará o progresso na barra de status na parte inferior da janela. Se o painel de saída estiver visível, você também verá mensagens no painel de saída.  
   
-    Quando a avaliação for concluída, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for DB2: janela de relatório de avaliação será exibida.  
+    Quando a avaliação for concluída, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for DB2: Janela de relatório de avaliação será exibida.  
   
 ## <a name="using-assessment-reports"></a>Usando relatórios de avaliação  
 A janela de relatório de avaliação contém três painéis:  

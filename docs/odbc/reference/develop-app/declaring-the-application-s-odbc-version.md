@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7c5bb124af74d1fa009a61237edb54a9c8baec74
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267689"
 ---
 # <a name="declaring-the-application39s-odbc-version"></a>Declarando o aplicativo&#39;s a versão do ODBC
 Antes de um aplicativo aloca uma conexão, ele deve definir o atributo de ambiente SQL_ATTR_ODBC_VERSION. Esse atributo declara que o aplicativo segue o ODBC 2. *x* ou o ODBC 3. *x* especificação ao usar os seguintes itens:  
@@ -32,7 +32,7 @@ Antes de um aplicativo aloca uma conexão, ele deve definir o atributo de ambien
   
 -   **Data, hora e identificadores de tipo Timestamp**. A tabela a seguir mostra os identificadores de tipo de data, hora e dados de carimbo de hora no ODBC 2. *x* e o ODBC 3. *x*.  
   
-    |ODBC 2. *x*|ODBC 3. *x*|  
+    |ODBC 2. *x*|ODBC 3.*x*|  
     |----------------|----------------|  
     |**Identificadores de tipo SQL**||  
     |SQL_DATE|SQL_TYPE_DATE|  

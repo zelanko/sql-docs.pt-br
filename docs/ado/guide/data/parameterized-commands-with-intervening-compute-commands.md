@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e892aed72ba1d74f9bdafc319c71a39546f4402
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63302477"
 ---
 # <a name="parameterized-commands-with-intervening-compute-commands"></a>Comandos parametrizados com comandos COMPUTE de intervenção
 Uma forma com parâmetros típica comando APPEND tem uma cláusula que cria um pai **conjunto de registros** com um comando de consulta e outra cláusula que cria um filho **Recordset** com um comando de consulta parametrizada - ou seja, um comando que contém um espaço reservado de parâmetro (um ponto de interrogação, "?"). Em forma resultante **Recordset** tem dois níveis, no qual o pai ocupa o nível superior e o filho ocupa um nível inferior.  

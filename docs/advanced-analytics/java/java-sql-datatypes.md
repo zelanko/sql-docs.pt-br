@@ -1,20 +1,20 @@
 ---
-title: Tipos de dados do Java com suporte no SQL Server 2019 - serviços do SQL Server Machine Learning
+title: Tipos de dados do Java com suporte no SQL Server 2019 – extensões de linguagem do SQL Server
 description: Mapear tipos de dados do Java para o SQL Server para estruturas de dados de entrada e saída e parâmetros de entrada na sp_execute_external_script.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4c0f691b8bb389c2da2001d19f0684b7f928f707
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
-ms.translationtype: MT
+ms.openlocfilehash: 14a2bc5594b16610dfb8278ab82a9e7b8b22fea6
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017812"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473598"
 ---
 # <a name="java-and-sql-server-supported-data-types"></a>Java e o SQL Server com suporte a tipos de dados
 
@@ -24,33 +24,10 @@ Este artigo mapeia tipos de dados do SQL Server para tipos de dados do Java para
 
 Atualmente, há suporte para os seguintes tipos de dados SQL e o Java para conjuntos de dados de entrada e saída.
 
-| Tipo de dados SQL        | Tipo de dados Java | Comentário | |
-| ------------- |-------------|-|
-| bit      | booleano | |
-| Tinyint      | short      | |
-| Smallint | short      | |
-| Int | INT      | |
-| Real | FLOAT      | |
-| Bigint | long      | |
-| FLOAT | double      | |
-| nchar(n) | Cadeia de caracteres      | |
-| nvarchar(n) | Cadeia de caracteres  | |
-| binary(n) | byte[]      | |
-| varbinary(n) | byte[]      | |
-| nvarchar(max) | Cadeia de caracteres | |
-| varbinary(max) | byte[] | |
-| UNIQUEIDENTIFIER | Cadeia de caracteres | |
-| char(n) | Cadeia de caracteres | Somente UTF8 cadeias de caracteres com suporte |
-| varchar(n) | Cadeia de caracteres | Somente UTF8 cadeias de caracteres com suporte |
-| varchar(max) | Cadeia de caracteres | Somente UTF8 cadeias de caracteres com suporte |
-
-## <a name="data-types-for-input-parameters"></a>Tipos de dados para parâmetros de entrada
-
-Atualmente, há suporte para os seguintes tipos de dados SQL e o Java para parâmetros de entrada.
 
 | Tipo de dados SQL        | Tipo de dados Java | Comentário | |
 | ------------- |-------------|-|-|
-| bit      | booleano | | |
+| bit      | boolean | | |
 | Tinyint      | short      | | |
 | Smallint | short      | | |
 | Int | INT      | | |
@@ -68,7 +45,31 @@ Atualmente, há suporte para os seguintes tipos de dados SQL e o Java para parâ
 | varchar(n) | Cadeia de caracteres | Somente UTF8 cadeias de caracteres com suporte | |
 | varchar(max) | Cadeia de caracteres | Somente UTF8 cadeias de caracteres com suporte | |
 
-## <a name="see-also"></a>Confira também
+## <a name="data-types-for-input-parameters"></a>Tipos de dados para parâmetros de entrada
+
+Atualmente, há suporte para os seguintes tipos de dados SQL e o Java para parâmetros de entrada.
+
+| Tipo de dados SQL        | Tipo de dados Java | Comentário | |
+| ------------- |-------------|-|-|
+| bit      | boolean | | |
+| Tinyint      | short      | | |
+| Smallint | short      | | |
+| Int | INT      | | |
+| Real | FLOAT      | | |
+| Bigint | long      | | |
+| FLOAT | double      | | |
+| nchar(n) | Cadeia de caracteres      | | |
+| nvarchar(n) | Cadeia de caracteres      | | |
+| binary(n) | byte[]      | | |
+| varbinary(n) | byte[]      | | |
+| nvarchar(max) | Cadeia de caracteres      | | |
+| varbinary(max) | byte[]      | | |
+| UNIQUEIDENTIFIER | Cadeia de caracteres | | |
+| char(n) | Cadeia de caracteres | Somente UTF8 cadeias de caracteres com suporte | |
+| varchar(n) | Cadeia de caracteres | Somente UTF8 cadeias de caracteres com suporte | |
+| varchar(max) | Cadeia de caracteres | Somente UTF8 cadeias de caracteres com suporte | |
+
+## <a name="next-steps"></a>Próximas etapas
 
 + [Como chamar o Java no SQL Server](howto-call-java-from-sql.md)
 + [Exemplo de Java no SQL Server](java-first-sample.md)

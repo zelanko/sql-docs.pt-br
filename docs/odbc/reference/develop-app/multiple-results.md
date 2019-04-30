@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47e1250a92b78aefdc1611fd88e0ee9b0f772ad0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63254172"
 ---
 # <a name="multiple-results"></a>Vários resultados
 Um *resultado* é algo retornado pela fonte de dados depois que uma instrução é executada. ODBC tem dois tipos de resultados: conjuntos de resultados e contagens de linhas. *Contagens de linhas* são o número de linhas afetadas por uma atualização, excluir ou inserir a instrução. Lotes, descrito em [Batches of SQL Statements](../../../odbc/reference/develop-app/batches-of-sql-statements.md), pode gerar vários resultados.  
@@ -31,8 +31,8 @@ Um *resultado* é algo retornado pela fonte de dados depois que uma instrução 
   
 |Tipo de lote|Contagens de linhas|Conjuntos de resultados|  
 |----------------|----------------|-----------------|  
-|Lote explícito|SQL_BATCH_ROW_COUNT [a]|– [b].|  
-|Procedimento|SQL_BATCH_ROW_COUNT [a]|– [b].|  
+|Lote explícito|SQL_BATCH_ROW_COUNT[a]|--[b]|  
+|Procedimento|SQL_BATCH_ROW_COUNT[a]|--[b]|  
 |Matrizes de parâmetros|SQL_PARAM_ARRAYS_ROW_COUNTS|SQL_PARAM_ARRAYS_SELECTS|  
   
  [a] linha gerando a contagem de instruções em um lote podem ter suporte, ainda que o retorno da contagem de linhas não tem suporte. A opção SQL_BATCH_SUPPORT **SQLGetInfo** indica se são permitidas instruções de geração de contagem de linhas em lotes; a opção SQL_BATCH_ROW_COUNTS indica se essas contagens de linhas são retornadas para o aplicativo.  

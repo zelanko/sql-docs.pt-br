@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1d6d7467da572d5d0552d400e2c05505c1bc0aaa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267557"
 ---
 # <a name="modify-stored-procedures-that-use-discontinued-full-text-search-properties"></a>Modificar procedimentos armazenados que usam propriedades de Pesquisa de Texto Completo descontinuadas
   Para assegurar que seus procedimentos armazenados tenham o desempenho esperado, você deve editar procedimentos existentes e remover aquelas propriedades e configurações relacionadas a texto completo que foram removidas ou substituídas.  
@@ -27,7 +27,7 @@ ms.locfileid: "48091519"
 ## <a name="component"></a>Componente  
  Pesquisa de Texto Completo  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrição  
  As seguintes propriedades e configurações relacionadas à Pesquisa de Texto Completo foram removidas.  
   
 -   **DataTimeout**  

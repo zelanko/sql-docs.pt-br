@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 22ee1b88ee6065a49c53ae7024c93e869099ca3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280341"
 ---
 # <a name="provider-property-ado"></a>Propriedade Provider (ADO)
 Indica o nome do provedor para uma [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto.  
@@ -45,4 +45,4 @@ Indica o nome do provedor para uma [Conexão](../../../ado/reference/ado-api/con
  [Provedor e o exemplo de propriedades de DefaultDatabase (VB)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)   
  [Provedor e o exemplo de propriedades de DefaultDatabase (VB)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)   
  [Provedor Microsoft OLE DB para ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)   
- [Apêndice A: Provedores](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Apêndice a: provedores](../../../ado/guide/appendixes/appendix-a-providers.md)

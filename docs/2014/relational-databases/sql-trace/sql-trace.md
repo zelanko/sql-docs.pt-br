@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a1dd2e117207f3737f54e2cd0269c51918a199f2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63286525"
 ---
 # <a name="sql-trace"></a>Rastreamento do SQL
   No Rastreamento do SQL, são coletados eventos se estes forem instâncias de classes de evento listadas na definição de rastreamento. Esses eventos podem ser filtrados do rastreamento ou colocados na fila para seus destinos. O destino pode ser um arquivo ou o SMO ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects), que pode usar as informações do rastreamento em aplicativos que gerenciam o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -91,7 +91,7 @@ ms.locfileid: "52823480"
 |**GUID**|54|Valor da GUID, que depende da classe de evento especificada no rastreamento.|  
 |**FileName**|36|O nome lógico do arquivo que é modificado.|  
 |**Handle**|33|O inteiro usado por ODBC, OLE DB ou DB-Library para coordenar execução de servidor.|  
-|**Nome do host** <sup>1</sup>|8|O nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o nome do host for fornecido pelo cliente. Para determinar o nome do host, use a função HOST_NAME.|  
+|**HostName** <sup>1</sup>|8|O nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o nome do host for fornecido pelo cliente. Para determinar o nome do host, use a função HOST_NAME.|  
 |**IndexID**|24|A ID do índice no objeto afetado pelo evento. Para determinar a ID do índice de um objeto, use a coluna **indid** da tabela do sistema **sysindexes** .|  
 |**IntegerData**|25|Valor inteiro dependente da classe de evento capturada no rastreamento.|  
 |**IntegerData2**|55|Valor inteiro dependente da classe de evento capturada no rastreamento.|  
@@ -109,7 +109,7 @@ ms.locfileid: "52823480"
 |**ObjectID2**|56|ID do objeto ou entidade relacionada, se disponível.|  
 |**ObjectName**|34|Nome do objeto referido.|  
 |**ObjectType** <sup>2</sup>|28|Valor que representa o tipo do objeto envolvido no evento. Este valor corresponde à coluna **type** em **sysobjects**.|  
-|**Deslocamento**|61|O deslocamento inicial da instrução no procedimento armazenado ou lote.|  
+|**Offset**|61|O deslocamento inicial da instrução no procedimento armazenado ou lote.|  
 |**OwnerID**|58|Apenas para eventos de bloqueio. O tipo do objeto que possui um bloqueio.|  
 |**OwnerName**|37|Nome de usuário de banco de dados do proprietário do objeto.|  
 |**ParentName**|59|O nome do esquema no qual reside o objeto.|  

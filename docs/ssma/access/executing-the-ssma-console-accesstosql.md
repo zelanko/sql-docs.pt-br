@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d1dbbb57527fc2d362837e0340f35a241d764b75
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408313"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473531"
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>Executar o Console do SSMA (AccessToSQL)
 Microsoft fornece um conjunto robusto de comandos do arquivo de script e opções de linha de comando para executar e controlar atividades do SSMA. Seções a seguir detalham os mesmos.  
@@ -25,7 +25,7 @@ Os comandos de projeto lidar com a criação de projetos, abrir, salvar e sair d
   
 **Comando**  
   
-Criar-novo projeto: Cria um novo projeto SSMA.  
+create-new-project: Cria um novo projeto SSMA.  
   
 **Script**  
   
@@ -95,7 +95,7 @@ Abrir projeto: Abre um projeto existente.
   
 **Comando**  
   
-Salvar projeto: Salva o projeto de migração.  
+save-project: Salva o projeto de migração.  
   
 **Script**  
   
@@ -106,7 +106,7 @@ Salvar projeto: Salva o projeto de migração.
 ```  
 **Comando**  
   
-Fechar projeto: Fecha o projeto de migração.  
+close-project: Fecha o projeto de migração.  
   
 **Script**  
   
@@ -203,7 +203,7 @@ ou em
 ```  
 **Comando**  
   
-Reconecte-origem-banco de dados  
+reconnect-source-database  
   
 -   Reconecta-se à fonte de dados, mas não carrega todos os metadados ao contrário do comando connect-origem-banco de dados.  
   
@@ -254,7 +254,7 @@ Os comandos de relatório geram relatórios sobre o desempenho de várias ativid
   
 **Comando**  
   
-Gerar--relatório de avaliação  
+generate-assessment-report  
   
 -   Gera relatórios de avaliação no banco de dados de origem.  
   
@@ -394,7 +394,7 @@ ou em
 ```  
 **Comando**  
   
-migrar dados  
+migrate-data  
   
 1.  Migra os dados de origem para o destino.  
   
@@ -508,7 +508,7 @@ O comando de preparação de migração inicia o mapeamento de esquema entre os 
   
 **Comando**  
   
-mapa de esquema: Mapeamento de esquema de banco de dados de origem ao esquema de destino.  
+map-schema: Mapeamento de esquema de banco de dados de origem ao esquema de destino.  
   
 **Script**  
   
@@ -531,7 +531,7 @@ A saída do console padrão definindo para os comandos de migração é o relat�
   
 **Comando**  
   
-Sincronizar de destino  
+synchronize-target  
   
 1.  Sincroniza os objetos de destino com o banco de dados de destino.  
   
@@ -596,7 +596,7 @@ ou em
 ```  
 **Comando**  
   
-atualização de banco de dados  
+refresh-from-database  
   
 -   Atualiza os objetos de origem do banco de dados.  
   

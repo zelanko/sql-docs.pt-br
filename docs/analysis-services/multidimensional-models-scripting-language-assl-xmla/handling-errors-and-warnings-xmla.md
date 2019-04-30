@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 884474398abc9f449e5f6bd82c9f4b981f9a3a43
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261703"
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>Manipulando erros e avisos (XMLA)
   Tratamento de erros é necessário quando um XML for Analysis (XMLA) [Discover](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover) ou [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) chamada de método não é executado, é executado com êxito, mas gera erros ou avisos, ou seja executado com êxito, mas retorna resultados que contêm erros.  
@@ -39,13 +39,13 @@ ms.locfileid: "50144921"
 ### <a name="fault-code-information"></a>Informações de código de falha  
  A tabela a seguir mostra as informações de código de falha XMLA contidas na sessão de detalhe da resposta SOAP. As colunas são os atributos de um erro na seção de detalhe de uma falha SOAP.  
   
-|Nome da coluna|Tipo|Description|Nulo permitido<sup>1</sup>|  
+|Nome da coluna|Tipo|Descrição|Nulo permitido<sup>1</sup>|  
 |-----------------|----------|-----------------|------------------------------|  
-|**ErrorCode**|**UnsignedInt**|Código de retorno que indica o êxito ou a falha do método. O valor hexadecimal deve ser convertido em um **UnsignedInt** valor.|não|  
+|**ErrorCode**|**UnsignedInt**|Código de retorno que indica o êxito ou a falha do método. O valor hexadecimal deve ser convertido em um **UnsignedInt** valor.|Não|  
 |**WarningCode**|**UnsignedInt**|Código de retorno que indica uma condição de aviso. O valor hexadecimal deve ser convertido em um **UnsignedInt** valor.|Sim|  
 |**Descrição**|**String**|Texto e descrição de erro ou de aviso retornadas pelo componente que gerou o erro.|Sim|  
 |**Origem**|**String**|Nome do componente que gerou o erro ou o aviso.|Sim|  
-|**Arquivo de ajuda**|**String**|Caminho ou URL para o arquivo de Ajuda ou tópico que descreve o erro ou o aviso.|Sim|  
+|**HelpFile**|**String**|Caminho ou URL para o arquivo de Ajuda ou tópico que descreve o erro ou o aviso.|Sim|  
   
  <sup>1</sup> indica se os dados é obrigatório e devem ser retornados, ou se os dados são opcionais e uma cadeia de caracteres nula será permitida se a coluna não se aplica.  
   

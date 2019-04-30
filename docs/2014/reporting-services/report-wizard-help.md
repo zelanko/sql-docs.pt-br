@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 869286901a428cf2b327fe65ba8c46877df092d3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59971582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255117"
 ---
 # <a name="report-wizard-help"></a>Ajuda do Assistente de Relatório
   Esta seção fornece Ajuda por meio da tecla F1 para o Assistente de Relatório. O Assistente de Relatório automatiza o processo de criação de relatórios tabulares e de matriz. A tabela a seguir descreve os tópicos dessa seção.  

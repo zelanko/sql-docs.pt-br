@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: ef7778854248f194c01254b9cd6f833f67e9cefc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63269995"
 ---
 # <a name="refresh-from-database-db2tosql"></a>Atualização do banco de dados (DB2ToSQL)
 O **Refresh do banco de dados** caixa de diálogo permite que você selecione quais objetos de atualização do banco de dados DB2. Linhas na caixa de diálogo são codificadas por cores com base no estado de metadados:  

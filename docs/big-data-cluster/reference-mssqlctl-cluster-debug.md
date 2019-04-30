@@ -1,20 +1,20 @@
 ---
 title: referência de depuração de cluster mssqlctl
 titleSuffix: SQL Server big data clusters
-description: Artigo de referência para os comandos de cluster mssqlctl.
+description: Artigo de referência para comandos de depuração de cluster mssqlctl.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b12b0421cf32a36cfd6d681bc90ad9ca7c3f9209
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: 5099a9ac611602e0c4c8d7f0103421e34b7fa8a2
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860547"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473290"
 ---
 # <a name="mssqlctl-cluster-debug"></a>Depuração de cluster do mssqlctl
 
@@ -22,54 +22,69 @@ ms.locfileid: "58860547"
 
 O artigo a seguir fornece referência para o **depuração de cluster** comandos na **mssqlctl** ferramenta. Para obter mais informações sobre outros **mssqlctl** comandos, consulte [mssqlctl referência](reference-mssqlctl.md).
 
-## <a id="commands"></a> Comandos
-
-|||
-|---|---|
-| [copy-logs](#copy-logs) | Copie os logs. |
-| [dump](#dump) | Despejo de registro em log do gatilho. |
-
-## <a id="copy-logs"></a> logs de cópia de depuração de cluster
-
-Copie os logs.
-
+## <a name="commands"></a>Commands
+|     |     |
+| --- | --- |
+[logs de cópia de depuração de cluster de mssqlctl](#mssqlctl-cluster-debug-copy-logs) | Copie os logs.
+[mssqlctl de despejo de depuração de cluster](#mssqlctl-cluster-debug-dump) | Despejo de registro em log do gatilho.
+## <a name="mssqlctl-cluster-debug-copy-logs"></a>logs de cópia de depuração de cluster de mssqlctl
+Copie os logs de depuração do cluster.
+```bash
+mssqlctl cluster debug copy-logs --namespace -n 
+                                 [--container -c]  
+                                 [--target-folder -d]  
+                                 [--pod -p]  
+                                 [--timeout -t]
 ```
-mssqlctl cluster debug copy-logs
-   --namespace
-   [--container]
-   [--pod]
-   [--target-folder]
-   [--timeout]
+### <a name="required-parameters"></a>Parâmetros necessários
+#### `--namespace -n`
+Nome do cluster, usado para o namespace de kubernetes.
+### <a name="optional-parameters"></a>Parâmetros opcionais
+#### `--container -c`
+Copiar os logs para os contêineres com nome semelhante, opcional, por padrão copia logs para todos os contêineres. Não pode ser especificado várias vezes. Se especificado várias vezes, pela última vez um será usado
+#### `--target-folder -d`
+Caminho da pasta para copiar logs de destino. Opcional, por padrão cria o resultado na pasta local.  Não pode ser especificado várias vezes. Se especificado várias vezes, pela última vez um será usado
+#### `--pod -p`
+Copie os logs para os pods com nome semelhante. Opcional, por padrão, copia os logs para todos os pods. Não pode ser especificado várias vezes. Se especificado várias vezes, pela última vez um será usado
+#### `--timeout -t`
+O número de segundos de espera para o comando ser concluído. O valor padrão é 0, que é ilimitado
+### <a name="global-arguments"></a>Argumentos globais
+#### `--debug`
+Aumente o nível de detalhes de registro em log para mostrar que todos os logs de depuração.
+#### `--help -h`
+Mostre esta mensagem de Ajuda e sair.
+#### `--output -o`
+Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
+#### `--query -q`
+Cadeia de caracteres de consulta JMESPath. Ver [ http://jmespath.org/ ](http://jmespath.org/]) para obter mais informações e exemplos.
+#### `--verbose`
+Aumente o nível de detalhes do registro em log. Use--debug para logs de depuração completos.
+## <a name="mssqlctl-cluster-debug-dump"></a>mssqlctl de despejo de depuração de cluster
+Disparar um despejo de registro em log e copiá-lo do contêiner.
+```bash
+mssqlctl cluster debug dump --namespace -n 
+                            --container -c  
+                            [--target-folder -d]
 ```
-
-### <a name="parameters"></a>Parâmetros
-
-| Parâmetros | Descrição |
-|---|---|
-| **--namespace -n** | Nome do cluster, usado para o namespace de kubernetes. Obrigatórios. |
-| **--container -c** | Copiar os logs para os contêineres com nome semelhante, opcional, por padrão copia logs para todos os contêineres. Não pode ser especificado várias vezes. Se especificado várias vezes, pela última vez um será usado. |
-| **– pod -p** | Copie os logs para os pods com nome semelhante. Opcional, por padrão, copia os logs para todos os pods. Não pode ser especificado várias vezes. Se especificado várias vezes, pela última vez um será usado. |
-| **– pasta de destino - d** | Caminho da pasta para copiar logs de destino. Opcional, por padrão cria o resultado na pasta local.  Não pode ser especificado várias vezes. Se especificado várias vezes, pela última vez um será usado. |
-| **-- timeout -t** | O número de segundos de espera para o comando ser concluído. O valor padrão é 0, que é ilimitado. |
-
-## <a id="dump"></a> despejo de depuração de cluster
-
-Despejo de registro em log do gatilho.
-
-```
-mssqlctl cluster debug dump
-   [--container]
-   [--namespace]
-   --target-folder
-```
-
-### <a name="parameters"></a>Parâmetros
-
-| Parâmetros | Descrição |
-|---|---|
-| **--container -c** | Copiar os logs para os contêineres com nome semelhante, opcional, por padrão copia logs para todos os contêineres. Não pode ser especificado várias vezes. Se especificado várias vezes, pela última vez um será usado.  Valores permitidos: mssql-controller. |
-| **--namespace -n** | Nome do cluster, usado para o namespace de kubernetes. Obrigatórios. |
-| **– pasta de destino - d** | Caminho da pasta para copiar logs de destino. Opcional, por padrão cria o resultado na pasta local.  Não pode ser especificado várias vezes. Se especificado várias vezes, pela última vez um será usado.  Padrão: `./output/dump`. Obrigatórios. |
+### <a name="required-parameters"></a>Parâmetros necessários
+#### `--namespace -n`
+Nome do cluster, usado para o namespace de kubernetes.
+#### `--container -c`
+Copiar os logs para os contêineres com nome semelhante, opcional, por padrão copia logs para todos os contêineres. Não pode ser especificado várias vezes. Se especificado várias vezes, pela última vez um será usado
+### <a name="optional-parameters"></a>Parâmetros opcionais
+#### `--target-folder -d`
+Caminho da pasta para copiar logs de destino. Opcional, por padrão cria o resultado na pasta local.  Não pode ser especificado várias vezes. Se especificado várias vezes, pela última vez um será usado `./output/dump`
+### <a name="global-arguments"></a>Argumentos globais
+#### `--debug`
+Aumente o nível de detalhes de registro em log para mostrar que todos os logs de depuração.
+#### `--help -h`
+Mostre esta mensagem de Ajuda e sair.
+#### `--output -o`
+Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
+#### `--query -q`
+Cadeia de caracteres de consulta JMESPath. Ver [ http://jmespath.org/ ](http://jmespath.org/]) para obter mais informações e exemplos.
+#### `--verbose`
+Aumente o nível de detalhes do registro em log. Use--debug para logs de depuração completos.
 
 ## <a name="next-steps"></a>Próximas etapas
 

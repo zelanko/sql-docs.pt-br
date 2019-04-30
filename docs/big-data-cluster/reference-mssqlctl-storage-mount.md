@@ -1,20 +1,20 @@
 ---
 title: referência de montagem do armazenamento mssqlctl
 titleSuffix: SQL Server big data clusters
-description: Artigo de referência para comandos de armazenamento mssqlctl.
+description: Artigo de referência para comandos de montagem do armazenamento mssqlctl.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3ad8a97bac1f708dcf01612368c76d584fa39f5c
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: 523253e8d1ff2d621d9f7a5ef90dbc957fba82ec
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860287"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473489"
 ---
 # <a name="mssqlctl-storage-mount"></a>Montagem do armazenamento do mssqlctl
 
@@ -22,98 +22,102 @@ ms.locfileid: "58860287"
 
 O artigo a seguir fornece referência para o **montagem do armazenamento** comandos na **mssqlctl** ferramenta. Para obter mais informações sobre outros **mssqlctl** comandos, consulte [mssqlctl referência](reference-mssqlctl.md).
 
-## <a id="commands"></a> Comandos
-
-|||
-|---|---|
-| [create](#create) | Crie repositórios remotos de montagens no HDFS. |
-| [delete](#delete) | Exclua montagens de repositórios remotos em HDFS. |
-| [status](#status) | Status do mount(s). |
-
-## <a id="create"></a> montagem do armazenamento mssqlctl criar
-
+## <a name="commands"></a>Commands
+|     |     |
+| --- | --- |
+[montagem do armazenamento mssqlctl criar](#mssqlctl-storage-mount-create) | Crie repositórios remotos de montagens no HDFS.
+[exclusão de montagem do armazenamento mssqlctl](#mssqlctl-storage-mount-delete) | Exclua montagens de repositórios remotos em HDFS.
+[status de montagem do armazenamento mssqlctl](#mssqlctl-storage-mount-status) | Status do mount(s).
+## <a name="mssqlctl-storage-mount-create"></a>montagem do armazenamento mssqlctl criar
 Crie repositórios remotos de montagens no HDFS.
-
+```bash
+mssqlctl storage mount create --remote-uri 
+                              --mount-path  
+                              [--credential-file]
 ```
-mssqlctl storage mount create
-   --local-path
-   --remote-uri
-   [--credential-file]
-```
-
-### <a name="parameters"></a>Parâmetros
-
-| Parâmetros | Descrição |
-|---|---|
-| **--local-path** | Caminho do HDFS em que a montagem deve ser criar (destino de montagem). Obrigatórios. |
-| **--remote-uri** | URI do repositório remoto que deve ser montado (fonte de montagem). Obrigatórios. |
-| **--credential-file** | Arquivo que contém as credenciais para acessar o armazenamento remoto. As credenciais devem ser especificados como chave = pares de valor com uma chave = valor por linha. Qualquer é igual a chaves ou valores precisa de escape. Por padrão, é necessária nenhuma credencial. As chaves necessárias dependem do tipo de armazenamento remoto que está sendo montado e o tipo de autorização usado. |
-
 ### <a name="examples"></a>Exemplos
-
-Para montar "dados" do contêiner na conta do ADLS Gen 2 "adlsv2example" no caminho do HDFS `/mounts/adlsv2/data` usando a chave compartilhada:
-
+Montar o contêiner "dados" na conta do ADLS Gen 2 "adlsv2example" em /mounts/adlsv2/data de caminho do HDFS usando a chave compartilhada
+```bash
+mssqlctl storage mount create --remote-uri abfs://data@adlsv2example.dfs.core.windows.net/
+    --mount-path /mounts/adlsv2/data --credentials credential_file
 ```
-mssqlctl storage mount create --remote-uri abfs://data@adlsv2example.dfs.core.windows.net/ --local-path /mounts/adlsv2/data --credentials credential_file
+Para montar um cluster remoto do HDFS (hdfs://namenode1:8080 /) no local HDFS caminho /mounts/hdfs /
+```bash
+mssqlctl storage mount create --remote-uri hdfs://namenode1:8080/ --mount-path /mounts/hdfs/
 ```
-
-Para montar um cluster remoto do HDFS (`hdfs://namenode1:8080/`) no caminho do HDFS local `/mounts/hdfs/`:
-
-```
-mssqlctl storage mount create --remote-uri hdfs://namenode1:8080/ --local-path /mounts/hdfs/
-```
-
-## <a id="delete"></a> exclusão de montagem do armazenamento mssqlctl
-
+### <a name="required-parameters"></a>Parâmetros necessários
+#### `--remote-uri`
+URI do repositório remoto que deve ser montado (fonte de montagem).
+#### `--mount-path`
+Caminho do HDFS onde montagem deve ser criado (destino de montagem).
+### <a name="optional-parameters"></a>Parâmetros opcionais
+#### `--credential-file`
+Arquivo que contém as credenciais para acessar o armazenamento remoto. As credenciais devem ser especificados como chave = pares de valor com uma chave = valor por linha. Qualquer é igual a chaves ou valores precisa de escape. Por padrão, é necessária nenhuma credencial. As chaves necessárias dependem do tipo de armazenamento remoto que está sendo montado e o tipo de autorização usado.
+### <a name="global-arguments"></a>Argumentos globais
+#### `--debug`
+Aumente o nível de detalhes de registro em log para mostrar que todos os logs de depuração.
+#### `--help -h`
+Mostre esta mensagem de Ajuda e sair.
+#### `--output -o`
+Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
+#### `--query -q`
+Cadeia de caracteres de consulta JMESPath. Ver [ http://jmespath.org/ ](http://jmespath.org/]) para obter mais informações e exemplos.
+#### `--verbose`
+Aumente o nível de detalhes do registro em log. Use--debug para logs de depuração completos.
+## <a name="mssqlctl-storage-mount-delete"></a>exclusão de montagem do armazenamento mssqlctl
 Exclua montagens de repositórios remotos em HDFS.
-
+```bash
+mssqlctl storage mount delete --mount-path 
+                              
 ```
-mssqlctl storage mount delete
-   --local-path
-```
-
-### <a name="parameters"></a>Parâmetros
-
-| Parâmetros | Descrição |
-|---|---|
-| **--local-path** | O caminho do HDFS correspondente para a montagem que deve ser excluídos. Obrigatórios. |
-
 ### <a name="examples"></a>Exemplos
-
 Exclua a montagem criada no /mounts/adlsv2/data para uma conta de armazenamento do ADLS Gen 2.
-
+```bash
+mssqlctl storage mount delete --mount-path /mounts/adlsv2/data
 ```
-mssqlctl storage mount delete --local-path /mounts/adlsv2/data
-```
-
-## <a id="status"></a> status de montagem do armazenamento mssqlctl
-
+### <a name="required-parameters"></a>Parâmetros necessários
+#### `--mount-path`
+O caminho do HDFS correspondente para a montagem que deve ser excluídos.
+### <a name="global-arguments"></a>Argumentos globais
+#### `--debug`
+Aumente o nível de detalhes de registro em log para mostrar que todos os logs de depuração.
+#### `--help -h`
+Mostre esta mensagem de Ajuda e sair.
+#### `--output -o`
+Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
+#### `--query -q`
+Cadeia de caracteres de consulta JMESPath. Ver [ http://jmespath.org/ ](http://jmespath.org/]) para obter mais informações e exemplos.
+#### `--verbose`
+Aumente o nível de detalhes do registro em log. Use--debug para logs de depuração completos.
+## <a name="mssqlctl-storage-mount-status"></a>status de montagem do armazenamento mssqlctl
 Status do mount(s).
-
+```bash
+mssqlctl storage mount status [--mount-path] 
+                              
 ```
-mssqlctl storage mount status
-   --local-path
-```
-
-### <a name="parameters"></a>Parâmetros
-
-| Parâmetros | Descrição |
-|---|---|
-| **--mount-path** | Caminho de montagem. Obrigatórios. |
-
 ### <a name="examples"></a>Exemplos
-
 Obter o status de montagem pelo caminho
-
-```
+```bash
 mssqlctl storage mount status --mount-path /mounts/hdfs
 ```
-
 Obter status de todas as montagens.
-
-```
+```bash
 mssqlctl storage mount status
 ```
+### <a name="optional-parameters"></a>Parâmetros opcionais
+#### `--mount-path`
+Caminho de montagem.
+### <a name="global-arguments"></a>Argumentos globais
+#### `--debug`
+Aumente o nível de detalhes de registro em log para mostrar que todos os logs de depuração.
+#### `--help -h`
+Mostre esta mensagem de Ajuda e sair.
+#### `--output -o`
+Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
+#### `--query -q`
+Cadeia de caracteres de consulta JMESPath. Ver [ http://jmespath.org/ ](http://jmespath.org/]) para obter mais informações e exemplos.
+#### `--verbose`
+Aumente o nível de detalhes do registro em log. Use--debug para logs de depuração completos.
 
 ## <a name="next-steps"></a>Próximas etapas
 

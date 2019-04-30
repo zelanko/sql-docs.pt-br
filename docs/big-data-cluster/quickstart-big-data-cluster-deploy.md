@@ -5,17 +5,17 @@ description: Passo a passo uma implantação de clusters de big data 2019 do SQL
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 854f49af195e465271e3cd14bf21c49dd3469495
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: 7ff31cac18eddcd45f310d78910ba83b783b1b1e
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582910"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473481"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Início Rápido: Implantar um cluster de big data do SQL Server no serviço de Kubernetes do Azure (AKS)
 
@@ -60,7 +60,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 
 ## <a name="run-the-deployment-script"></a>Execute o script de implantação
 
-Use as etapas a seguir para executar o script de implantação. Esse script criará um serviço AKS no Azure e, em seguida, implantar um cluster de big data 2019 do SQL Server no AKS. Você também pode modificar o script com os outros [variáveis de ambiente](deployment-guidance.md#env) para criar uma implantação personalizada.
+Use as etapas a seguir para executar o script de implantação. Esse script criará um serviço AKS no Azure e, em seguida, implantar um cluster de big data 2019 do SQL Server no AKS. Você também pode modificar o script com os outros [variáveis de ambiente](deployment-guidance.md#configfile) para criar uma implantação personalizada.
 
 1. Execute o script com o seguinte comando:
 
@@ -114,7 +114,7 @@ Depois de 10 a 20 minutos, você deve ser notificado se o pod de controlador est
 ```
 
 > [!IMPORTANT]
-> Toda a implantação pode levar muito tempo devido ao tempo necessário para baixar as imagens de contêiner para os componentes do cluster de big data. No entanto, ele não deve levar várias horas. Se você estiver tendo problemas com sua implantação, consulte o [solução de problemas de implantação](deployment-guidance.md#troubleshoot) seção do artigo de diretrizes de implantação.
+> Toda a implantação pode levar muito tempo devido ao tempo necessário para baixar as imagens de contêiner para os componentes do cluster de big data. No entanto, ele não deve levar várias horas. Se você estiver tendo problemas com sua implantação, consulte [monitoramento e solução de problemas de clusters de grandes dados do SQL Server](cluster-troubleshooting-commands.md).
 
 ## <a name="inspect-the-cluster"></a>Inspecione o cluster
 
@@ -149,20 +149,20 @@ Abra uma nova janela de comando para usar **kubectl** durante o processo de impl
    ```
 
 > [!TIP]
-> Para obter mais detalhes sobre como monitorar e solucionar problemas de uma implantação, consulte o [solução de problemas de implantação](deployment-guidance.md#troubleshoot) seção do artigo de diretrizes de implantação.
+> Para obter mais detalhes sobre como monitorar e solucionar problemas de uma implantação, consulte [monitoramento e solução de problemas de clusters de grandes dados do SQL Server](cluster-troubleshooting-commands.md).
 
 ### <a name="use-the-cluster-administration-portal"></a>Usar o Portal de administração de Cluster
 
-Quando o pod de controlador estiver em execução, você também pode usar o Portal de administração de Cluster para monitorar a implantação. Você pode acessar o portal usando o IP endereço e porta número externa para o `endpoint-service-proxy` (por exemplo: **https://\<endereço ip\>: 30777/portal**). As credenciais usadas para logon no portal correspondem aos valores para **usuário Controller** e **senha** que você especificou no script de implantação.
+Quando o pod de controlador estiver em execução, você também pode usar o Portal de administração de Cluster para monitorar a implantação. Você pode acessar o portal usando o IP endereço e porta número externa para o `mgmtproxy-svc-external` (por exemplo: **https://\<endereço ip\>: 30777/portal**). As credenciais usadas para logon no portal correspondem aos valores para **usuário Controller** e **senha** que você especificou no script de implantação.
 
-Você pode obter o endereço IP do **ponto de extremidade de serviço de proxy** serviço executando este comando em uma janela de bash ou cmd:
+Você pode obter o endereço IP do **mgmtproxy-svc-externo** serviço executando este comando em uma janela de bash ou cmd:
 
 ```bash
-kubectl get svc endpoint-service-proxy -n <your-cluster-name>
+kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
 ```
 
 > [!NOTE]
-> No CTP 2.4, você verá um aviso de segurança ao acessar a página da web, porque os clusters de big data está usando certificados gerados automaticamente SSL.
+> No CTP 2.5, você verá um aviso de segurança ao acessar a página da web, porque os clusters de big data está usando certificados gerados automaticamente SSL.
 
 ## <a name="connect-to-the-cluster"></a>Conectar-se ao cluster
 

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e0be564bb0ee1ae18817fb9ae011eb6a040a2ef8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59965472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266062"
 ---
 # <a name="choose-link-page-report-manager"></a>Página Escolher Link (Gerenciador de Relatórios)
   Use a página Escolher Link para escolher um relatório diferente no qual basear o relatório vinculado atualmente selecionado. Relatórios vinculados são baseados em outros relatórios já publicados em um servidor de relatórios. Um relatório vinculado usa o layout e os dados de um relatório base, mas tem páginas de propriedades separadas para que você possa personalizar propriedades de parâmetros, configurações de segurança, nome, descrição e local.  

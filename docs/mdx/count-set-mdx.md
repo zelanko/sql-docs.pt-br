@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 31e048329fde26d947b7d7978ee2d364d4901b34
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63284995"
 ---
 # <a name="count-set-mdx"></a>Count (Conjunto) (MDX)
 
@@ -36,10 +36,10 @@ Set_Expression.Count
  *Set_Expression*  
  Uma expressão MDX (Multidimensional Expressions) válida que retorna um conjunto.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O **Count (conjunto)** função inclui ou exclui células vazias, dependendo da sintaxe usada. Se a sintaxe padrão for usada, células vazias podem ser excluídas ou incluídas usando o **EXCLUDEEMPTY** ou **INCLUDEEMPTY** sinalizadores, respectivamente. Se a sintaxe alternativa for usada, a função sempre incluirá células vazias.  
   
- Para excluir células vazias na contagem de um conjunto, use a sintaxe padrão e opcional **EXCLUDEEMPTY** sinalizador.  
+ Para excluir células vazias na contagem de um conjunto, use a sintaxe padrão e opcionais **EXCLUDEEMPTY** sinalizador.  
   
 > [!NOTE]  
 >  O **Count (conjunto)** função conta células vazias por padrão. Em contraste, o **contagem** função no OLE DB que conta um conjunto exclui células vazias por padrão.  
@@ -61,7 +61,7 @@ Count(DrilldownLevel (
    [Product].[Product].[Product]))  
 ```  
   
- O exemplo a seguir retorna os revendedores com queda de vendas em comparação ao trimestre do calendário anterior, usando o **contagem** função em conjunto com o **filtro** função e um número de outras funções. Essa consulta usa o **agregação** função para dar suporte a seleção de vários membros de geografia, como a seleção em uma lista suspensa em um aplicativo cliente.  
+ O exemplo a seguir retorna os revendedores com queda de vendas em comparação ao trimestre do calendário anterior, usando o **contagem** função em conjunto com o **filtro** função e um número de outros funções. Essa consulta usa a **agregação** função para dar suporte a seleção de vários membros de geografia, como a seleção em uma lista suspensa em um aplicativo cliente.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS  
@@ -97,11 +97,11 @@ WHERE ([Geography].[State-Province].x,
  [Contagem de &#40;tupla&#41; &#40;MDX&#41;](../mdx/count-tuple-mdx.md)   
  [DrilldownLevel &#40;MDX&#41;](../mdx/drilldownlevel-mdx.md)   
  [AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)   
- [Hierarquize &#40;MDX&#41;](../mdx/hierarchize-mdx.md)   
- [Propriedades &#40;MDX&#41;](../mdx/properties-mdx.md)   
- [Agregação &#40;MDX&#41;](../mdx/aggregate-mdx.md)   
- [Filtro &#40;MDX&#41;](../mdx/filter-mdx.md)   
+ [Hierarchize &#40;MDX&#41;](../mdx/hierarchize-mdx.md)   
+ [Properties &#40;MDX&#41;](../mdx/properties-mdx.md)   
+ [Aggregate &#40;MDX&#41;](../mdx/aggregate-mdx.md)   
+ [Filter &#40;MDX&#41;](../mdx/filter-mdx.md)   
  [PrevMember &#40;MDX&#41;](../mdx/prevmember-mdx.md)   
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

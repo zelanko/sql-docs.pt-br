@@ -11,24 +11,24 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 21f0cf5a4d096bfa0f4b673fdd716e2e48ee1396
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250283"
 ---
-# <a name="task-2-testing-and-publishing-the-matching-policy"></a>Tarefa 2: Testando e publicando a política de correspondência
+# <a name="task-2-testing-and-publishing-the-matching-policy"></a>Tarefa 2: Testar e publicar a política de correspondência
   Nesta tarefa, você pode testar e publicar os **remover fornecedores duplicados** política de correspondência.  
   
 1.  No **resultados correspondentes** , clique em **iniciar** para testar a política inteira. No seu caso, você tem uma única regra na política; portanto, os resultados do teste da regra e da política devem ser os mesmos.  
   
 2.  Revise todos os registros correspondentes e sua pontuação na caixa de listagem. Um registro que tenha um **verde** ícone associado a ele é uma duplicata de registro dinâmico que o precede. Aqui estão os pares de exemplos:  
   
-    1.  O registro com **ID do Registro: 1000005** é uma correspondência do registro com **Id de registro: 1000004** com **pontuação: 100%** porque ambos os registros têm os mesmos valores para **SupplierID (pré-requisito)**, **Supplier Name**, e **ContactEmailAddress colunas**. O DQS escolherá aleatoriamente um registro como registro dinâmico de um cluster.  
+    1.  O registro com **ID de registro: 1000005** é uma correspondência do registro com **Id de registro: 1000004** com **pontuação: 100%** porque ambos os registros têm os mesmos valores para **SupplierID (pré-requisito)**, **Supplier Name**, e **ContactEmailAddress colunas**. O DQS escolherá aleatoriamente um registro como registro dinâmico de um cluster.  
   
     2.  O registro **1000023** é uma correspondência do registro **1000022** com a pontuação de correspondência: 93% porque os dois registros têm os mesmos valores para **SupplierID (pré-requisito)** e **Supplier Name** colunas, mas valores diferentes para o **ContactEmailAddress** coluna.  
   
-    3.  Role a tela até a parte inferior da lista para ver dois registros com as IDs: **1000051** e **1000052**. Registro **1000052** é considerada uma correspondência com a pontuação de correspondência **91%** porque os dois registros têm os mesmos valores para o **SupplierID** e  **ContactEmailAddress** colunas, mas valores diferentes para o **Supplier Name** coluna.  
+    3.  Role até a parte inferior da lista para ver dois registros com as IDs: **1000051** e **1000052**. Registro **1000052** é considerada uma correspondência com a pontuação de correspondência **91%** porque os dois registros têm os mesmos valores para o **SupplierID** e  **ContactEmailAddress** colunas, mas valores diferentes para o **Supplier Name** coluna.  
   
      ![Definição de política – resultados da política](../../2014/tutorials/media/et-testingandpublishingthematchingpolicy-01.jpg "definição de política – resultados da política")  
   

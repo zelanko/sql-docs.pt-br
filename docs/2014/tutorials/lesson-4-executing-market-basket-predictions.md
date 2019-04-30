@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3b49fc242eb8b2242269c5af33cc094937bbe0de
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312106"
 ---
-# <a name="lesson-4-executing-market-basket-predictions"></a>Lição 4: Execução de previsões de Market Basket
+# <a name="lesson-4-executing-market-basket-predictions"></a>Lição 4: Como executar previsões de Market Basket
   Nesta lição, você aprenderá a usar o DMX `SELECT` instrução para criar previsões com base na associação de modelos criada na [lição 2: Adicionando modelos de mineração à estrutura de mineração de Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Uma consulta de previsão é criada usando a instrução `SELECT` do DMX e adicionando uma cláusula `PREDICTION JOIN`. Para obter mais informações sobre a sintaxe de uma junção de previsão, consulte [SELECT FROM &#60;modelo&#62; PREDICTION JOIN &#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx).  
   
  O **SELECT FROM \<modelo > PREDICTION JOIN** forma do `SELECT` instrução contém três partes:  

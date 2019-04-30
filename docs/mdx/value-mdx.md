@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6eb91bb43407311a58e495b5f9391186821d3a67
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251421"
 ---
 # <a name="value-mdx"></a>Value (MDX)
 
@@ -32,8 +32,8 @@ Member_Expression[.Value]
  *Member_Expression*  
  Uma linguagem MDX válida que retorna um membro.  
   
-## <a name="remarks"></a>Remarks  
- O **valor** função retorna o valor do membro especificado como uma cadeia de caracteres. O **valor** argumento é opcional porque o valor de um membro é a propriedade padrão de um membro e é o valor retornado para um membro se nenhum outro valor é especificado. Para obter mais informações sobre propriedades de membros, consulte [propriedades intrínsecas do membro &#40;MDX&#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md) e [propriedades do membro definidas pelo usuário &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md).  
+## <a name="remarks"></a>Comentários  
+ O **valor** função retorna o valor do membro especificado como uma cadeia de caracteres. O **valor** argumento é opcional porque o valor de um membro é a propriedade padrão de um membro e é o valor retornado para um membro se nenhum outro valor for especificado. Para obter mais informações sobre as propriedades de membros, consulte [propriedades intrínsecas do membro &#40;MDX&#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md) e [propriedades do membro definidas pelo usuário &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md).  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna o valor de um membro e também retorna explicitamente o nome dele.  
@@ -55,9 +55,9 @@ from [Adventure Works]
   
 ## <a name="see-also"></a>Consulte também  
  [MemberValue &#40;MDX&#41;](../mdx/membervalue-mdx.md)   
- [Propriedades &#40;MDX&#41;](../mdx/properties-mdx.md)   
- [Nome &#40;MDX&#41;](../mdx/name-mdx.md)   
+ [Properties &#40;MDX&#41;](../mdx/properties-mdx.md)   
+ [Name &#40;MDX&#41;](../mdx/name-mdx.md)   
  [UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)   
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

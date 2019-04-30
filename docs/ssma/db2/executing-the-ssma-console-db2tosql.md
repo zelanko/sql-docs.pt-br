@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 6750e17b694086cf716e32629fcf3b3f3b48f486
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395189"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63453380"
 ---
 # <a name="executing-the-ssma-console-db2tosql"></a>Executar o Console do SSMA (DB2ToSQL)
 Microsoft fornece um conjunto robusto de script de comandos de arquivo para executar e controlar atividades do SSMA. Seções a seguir detalham os mesmos. O aplicativo de console usa determinados comandos do arquivo de script padrão como enumerado nesta seção.  
@@ -98,7 +98,7 @@ Salva o projeto de migração.
 ```  
 **Comando**  
   
-Fechar projeto  
+close-project  
   
 Fecha o projeto de migração.  
   
@@ -170,7 +170,7 @@ ou em
 ```  
 **Comando**  
   
-Reconecte-origem-banco de dados  
+reconnect-source-database  
   
 -   Reconecta-se à fonte de dados, mas não carrega todos os metadados ao contrário do comando connect-origem-banco de dados.  
   
@@ -221,7 +221,7 @@ Os comandos de relatório geram relatórios sobre o desempenho de várias ativid
   
 **Comando**  
   
-Gerar--relatório de avaliação  
+generate-assessment-report  
   
 -   Gera relatórios de avaliação no banco de dados de origem.  
   
@@ -361,7 +361,7 @@ ou em
 ```  
 **Comando**  
   
-migrar dados de: Migra os dados de origem para o destino.  
+migrate-data: Migra os dados de origem para o destino.  
   
 **Script**  
   
@@ -479,7 +479,7 @@ A saída do console padrão definindo para os comandos de migração é o relat�
   
 **Comando**  
   
-Sincronizar de destino  
+synchronize-target  
   
 -   Sincroniza os objetos de destino com o banco de dados de destino.  
   
@@ -544,7 +544,7 @@ ou em
 ```  
 **Comando**  
   
-atualização de banco de dados  
+refresh-from-database  
   
 -   Atualiza os objetos de origem do banco de dados.  
   

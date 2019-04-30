@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 96b60573b81625c8896fb9022a6a718770f349ed
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656133"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287178"
 ---
 # <a name="data-migration-settings-oracletosql"></a>Configurações de migração de dados (OracleToSQL)
   
@@ -48,9 +48,9 @@ ms.locfileid: "51656133"
   
 Há dois botões presentes sobre visualização.:  
   
--   **Aplicar:** clique em **aplicar** para aplicar as configurações que foram alteradas.  
+-   **Apply:** Clique em **aplicar** para aplicar as configurações que foram alteradas.  
   
--   **Cancelar:** clique em **Cancelar** para restaurar as configurações presentes antes que as alterações estavam sendo feitas.  
+-   **Cancelar:** Clique em **Cancelar** para restaurar as configurações presentes antes que as alterações estavam sendo feitas.  
   
 ## <a name="see-also"></a>Consulte também  
 [Migração de dados Oracle para o SQL Server](migrating-oracle-data-into-sql-server-oracletosql.md)  

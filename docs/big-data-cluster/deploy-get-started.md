@@ -5,16 +5,16 @@ description: Aprenda as etapas e os recursos de implantação de clusters de big
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/18/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 69b5d9b69536243d371cb45c1c46620f5194657d
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: 5aeb6f5f92eba1bad828455b472d25561570901a
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860427"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472252"
 ---
 # <a name="get-started-with-sql-server-big-data-clusters"></a>Introdução aos clusters de grandes dados do SQL Server
 
@@ -45,21 +45,23 @@ Clusters de big data são implantados como uma série de inter-relacionados cont
 
 - **Minikube**: Minikube permite que você executar o Kubernetes localmente em um único servidor. É uma boa opção se você estiver experimentando a clusters de dados grande ou precisar usá-lo em um cenário de teste ou desenvolvimento. Para obter mais informações sobre como usar o Minikube, consulte o [Minikube documentação](https://kubernetes.io/docs/setup/minikube/). Para obter requisitos específicos para usar o Minikube com clusters de big data, consulte [configurar o minikube para implantações de cluster de big data do SQL Server 2019](deploy-on-minikube.md).
 
-## <a name="deployment-scripts"></a>Scripts de implantação
-
-Scripts de implantação podem ajudar a implantar Kubernetes e clusters de big data em uma única etapa. Eles também costumam ser fornecerem valores padrão para as variáveis de ambiente necessárias. Para obter um exemplo de um script de implantação de cluster de big data no serviço de Kubernetes do Azure (AKS), consulte [implantar um servidor de SQL 2019 grandes dados de cluster com um script de implantação (AKS)](quickstart-big-data-cluster-deploy.md).
-
-Você pode personalizar qualquer script de implantação ao criar sua própria versão que configura as variáveis de ambiente de cluster de big data de forma diferente.
-
 ## <a name="deploy-a-big-data-cluster"></a>Implantar um cluster de Big Data
 
-Para implantar Kubernetes e um cluster de big data no AKS com um único script, consulte o exemplo a seguir:
+Depois de configurar o Kubernetes, você implanta um cluster de big data com o `mssqlctl cluster create` comando. Durante a implantação, você pode aproveitar as várias abordagens diferentes.
 
-- [Implantar um cluster de big data 2019 do SQL Server com um script de implantação (AKS)](quickstart-big-data-cluster-deploy.md)
+- Se você estiver implantando em um ambiente de desenvolvimento e teste, você pode optar por usar um dos [as configurações padrão](deployment-guidance.md#deploy) fornecidas pelo **mssqlctl**.
 
-Para diretrizes detalhadas de implantação para a implantação de clusters de big data usando o AKS, kubeadm e MiniKube, consulte o artigo a seguir:
+- Para personalizar sua implantação, você pode criar e usar seu próprio [arquivos de configuração de implantação](deployment-guidance.md#configfile). 
 
-- [Como implantar clusters de grandes dados do SQL Server no Kubernetes](deployment-guidance.md)
+- Para uma instalação totalmente autônoma, você pode passar todas as outras configurações em variáveis de ambiente. Para obter mais informações, consulte [implantações autônomas](deployment-guidance.md#unattended).
+
+## <a name="deployment-scripts"></a>Scripts de implantação
+
+Scripts de implantação podem ajudar a implantar Kubernetes e clusters de big data em uma única etapa. Eles também costumam ser fornecerem valores padrão para as configurações de cluster de big data. Para obter um exemplo de um script de implantação de cluster de big data no serviço de Kubernetes do Azure (AKS), consulte o artigo a seguir:
+
+[Implantar um servidor de SQL 2019 grandes dados de cluster com um script de implantação (AKS)](quickstart-big-data-cluster-deploy.md).
+
+Você pode personalizar qualquer script de implantação ao criar sua própria versão que configura as variáveis de ambiente de cluster de big data de forma diferente.
 
 ## <a name="next-steps"></a>Próximas etapas
 

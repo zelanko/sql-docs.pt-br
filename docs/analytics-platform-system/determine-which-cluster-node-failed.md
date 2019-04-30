@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 4fd739e55725a3138a22539ef837088f86c8d8b9
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283153"
 ---
 # <a name="determine-which-cluster-node-failed-for-analytics-platform-system"></a>Determinar qual cluster falha de nó para o Analytics Platform System
 Este tópico descreve como determinar o nome do nó do Analytics Platform System (APS) que apresentou falha após um failover de cluster ocorreu e foi gerado um alerta de failover de cluster. Como parte da solução de problemas de um cluster de failover, você deve determinar o nome do nó com falha antes de entrar em contato com a Microsoft para ajudar a resolver o problema.  

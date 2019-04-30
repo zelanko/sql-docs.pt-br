@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e22b5fa8d21ca693f0ea332714f2f594f8bd997c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239854"
 ---
 # <a name="referencing-the-ado-libraries"></a>Referenciar as bibliotecas ADO
 A versão mais recente do ADO é empacotada como *msado15.dll*. As versões mais recentes do ADO MD e ADOX são empacotadas como *msadom.dll* e *msadox.dll*, respectivamente. Essas bibliotecas são instaladas por padrão no *$installDir*, onde *$installDir* significa o caminho do diretório em que a biblioteca do ADO foi instalada no seu computador. Para usar as bibliotecas ADO em seu aplicativo, você precisa referenciá-los explicitamente no projeto de aplicativo.  

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d5f5f865c0b50ea75548bb3a409caef8acf64b51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281915"
 ---
 # <a name="registry-entries-for-data-sources"></a>Entradas do Registro para fontes de dados
 > [!NOTE]  
@@ -36,7 +36,7 @@ ms.locfileid: "47692914"
   
  ODBC  
   
- INI  
+ Odbc.ini  
   
  HKEY_CURRENT_USER  
   
@@ -44,7 +44,7 @@ ms.locfileid: "47692914"
   
  ODBC  
   
- INI  
+ Odbc.ini  
   
  Qual chave é usado depende se a fonte de dados é um *fonte de dados do sistema* que está disponível para todos os usuários, ou um *fonte de dados do usuário,* que está disponível somente para o usuário atual. Fontes de dados do sistema são armazenadas na árvore de HKEY_LOCAL_MACHINE e fontes de dados do usuário são armazenadas na árvore de HKEY_CURRENT_USER. Em todos os outros aspectos, as fontes de dados do sistema e fontes de dados do usuário são idênticas.  
   

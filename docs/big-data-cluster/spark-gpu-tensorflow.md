@@ -2,20 +2,20 @@
 title: Suporte de GPU e TensorFlow
 titleSuffix: SQL Server big data clusters
 description: Implantar um cluster de big data com suporte GPU e usar o TensorFlow em blocos de anotações do Azure Data Studio.
-author: lgongmsft
-ms.author: shivprashant
+author: inchiosa
+ms.author: marinch
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 682e68ede0646b9455bd9b4b759b4e3d760223d9
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
-ms.translationtype: MT
+ms.openlocfilehash: 4913526270e919e95c2ff6dad73fa4b67693a038
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59670874"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473308"
 ---
 # <a name="deploy-a-big-data-cluster-with-gpu-support-and-run-tensorflow"></a>Implantar um cluster de big data com suporte GPU e executar o TensorFlow
 

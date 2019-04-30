@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e4c86fd8fba66e6424b41fa4b80b42fc089e6d64
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287458"
 ---
 # <a name="alignment"></a>Alinhamento
 Os problemas de alinhamento em um aplicativo ODBC geralmente não são diferentes do que em qualquer outro aplicativo. Ou seja, a maioria dos aplicativos de ODBC tem problemas de poucas ou nenhuma com o alinhamento. As penalidades para alinhar não endereços variam de acordo com o hardware e sistema operacional e podem ser tão secundário, como uma pequena penalidade de desempenho ou como principal como um erro fatal de tempo de execução. Portanto, os aplicativos ODBC e os aplicativos ODBC portátil em particular, cuidado alinhar os dados corretamente.  

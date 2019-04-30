@@ -1,5 +1,5 @@
 ---
-title: WTD (MDX) | Microsoft Docs
+title: Wtd (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9a548f25d9114e9032f2462bbc97bda637abd6d9
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251528"
 ---
 # <a name="wtd-mdx"></a>Wtd (MDX)
 
@@ -32,15 +32,15 @@ Wtd( [ Member_Expression ] )
  *Member_Expression*  
  Uma linguagem MDX válida que retorna um membro.  
   
-## <a name="remarks"></a>Remarks  
- Se uma expressão de membro não for especificada, o padrão será o membro atual da primeira hierarquia com um nível de tipo semanas na primeira dimensão do tipo tempo (**Time.CurrentMember**) no grupo de medidas.  
+## <a name="remarks"></a>Comentários  
+ Se uma expressão de membro não for especificada, o padrão é o membro atual da primeira hierarquia com um nível de tipo semanas na primeira dimensão do tipo tempo (**Time.CurrentMember**) no grupo de medidas.  
   
  O **Wtd** é uma função de atalho para o [PeriodsToDate](../mdx/periodstodate-mdx.md) função em que o nível é definido como *semanas*. Ou seja, `Wtd(Member_Expression)` é equivalente a `PeriodsToDate(Week_Level_Expression,Member_Expression)`.  
   
 ## <a name="see-also"></a>Consulte também  
  [Qtd &#40;MDX&#41;](../mdx/qtd-mdx.md)   
- [MTD &#40;MDX&#41;](../mdx/mtd-mdx.md)   
- [Acumulado no ano &#40;MDX&#41;](../mdx/ytd-mdx.md)   
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Mtd &#40;MDX&#41;](../mdx/mtd-mdx.md)   
+ [Ytd &#40;MDX&#41;](../mdx/ytd-mdx.md)   
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

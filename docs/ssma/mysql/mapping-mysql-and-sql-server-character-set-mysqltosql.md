@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: cebdf2ed28287a59ec9d4f0daaa1d0c200f8fe20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312367"
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>Mapear o conjunto de caracteres do SQL Server e MySQL (MySQLToSQL)
 O conjunto de caracteres (Charset) pode ser especificado para tipos de dados de caractere do MySQL, expressões e literais.  
@@ -56,11 +56,11 @@ Mapeamento de conjunto de caracteres varia em diferentes níveis de nó, ou seja
 >   
 > São eles:  
 >   
-> 1.  **Se aplicam:** aplica as alterações feitas pelo usuário, habilitado apenas quando o mapeamento de conjunto de caracteres é editado e ainda não foi salvo.  
-> 2.  **Cancelar:** cancela as alterações feitas pelo usuário. O botão é habilitado quando o mapeamento de conjunto de caracteres é editado, mas não salvo.  
-> 3.  **Redefinir para padrão:** redefine todos os mapeamentos para os valores padrão.  
+> 1.  **Apply:** Aplica as alterações feitas pelo usuário, habilitado apenas quando o mapeamento de conjunto de caracteres é editado e ainda não foi salvo.  
+> 2.  **Cancelar:** Cancela as alterações feitas pelo usuário. O botão é habilitado quando o mapeamento de conjunto de caracteres é editado, mas não salvo.  
+> 3.  **Redefinir para padrão:** Redefine todos os mapeamentos para os valores padrão.  
   
-1.  **No nível de nó de metadados raiz:** grade de mapeamento de conjunto de caracteres contém a grade de conjunto de caracteres com uma coluna separada para cada conjunto de caracteres. As colunas da grade são:  
+1.  **No nível de nó de metadados da raiz:**  Grade de mapeamento de conjunto de caracteres contém a grade de conjunto de caracteres com uma coluna separada para cada conjunto de caracteres. As colunas da grade são:  
   
     1.  A primeira coluna da grade chamado **nome do conjunto de caracteres** contém o nome do conjunto de caracteres.  
   
@@ -83,41 +83,41 @@ Mapeamento de conjunto de caracteres varia em diferentes níveis de nó, ou seja
     |Big5|Chinês tradicional de Big5|NCHAR/NVARCHAR (padrão)|  
     |dec8|DEC oeste Europeu|CHAR/VARCHAR (padrão)|  
     |cp850|DOS oeste Europeu|CHAR/VARCHAR (padrão)|  
-    |hp8|HP oeste Europeu|CHAR/VARCHAR (padrão)|  
+    |hp8|HP West European|CHAR/VARCHAR (padrão)|  
     |koi8r|KOI8-R Relcom russo|CHAR/VARCHAR (padrão)|  
-    |Latino 1|CP1252 oeste Europeu|CHAR/VARCHAR (padrão)|  
-    |latin2|ISO 8859-2 Centro-europeu|CHAR/VARCHAR (padrão)|  
+    |Latino 1|cp1252 West European|CHAR/VARCHAR (padrão)|  
+    |latin2|ISO 8859-2 Central European|CHAR/VARCHAR (padrão)|  
     |swe7|7 bits sueco|CHAR/VARCHAR (padrão)|  
     |ascii|US ASCII|CHAR/VARCHAR (padrão)|  
     |ujis|Japonês EUC-JP|NCHAR/NVARCHAR (padrão)|  
-    |SJIS|Japonês Shift-JIS|NCHAR/NVARCHAR (padrão)|  
+    |sjis|Japonês Shift-JIS|NCHAR/NVARCHAR (padrão)|  
     |Hebraico|ISO 8859-8 Hebraico|CHAR/VARCHAR (padrão)|  
-    |tis620|TIS620 tailandês|CHAR/VARCHAR (padrão)|  
+    |tis620|TIS620 Thai|CHAR/VARCHAR (padrão)|  
     |euckr|Coreano Coreia EUC|NCHAR/NVARCHAR (padrão)|  
     |koi8u|Ucraniano KOI8-U|CHAR/VARCHAR (padrão)|  
     |gb2312|GB2312 Chinês simplificado|NCHAR/NVARCHAR (padrão)|  
     |Grego|ISO 8859-7 Grego|CHAR/VARCHAR (padrão)|  
     |cp 1250|Europeu Central do Windows|CHAR/VARCHAR (padrão)|  
-    |GBK|E chinês simplificado GBK|NCHAR/NVARCHAR (padrão)|  
+    |gbk|E chinês simplificado GBK|NCHAR/NVARCHAR (padrão)|  
     |latin5|ISO 8859-9 Turco|CHAR/VARCHAR (padrão)|  
     |armscii8|Armênio ARMSCII-8|CHAR/VARCHAR (padrão)|  
-    |UTF8|Unicode UTF-8|NCHAR/NVARCHAR (padrão)|  
+    |utf8|Unicode UTF-8|NCHAR/NVARCHAR (padrão)|  
     |ucs2|Unicode UCS-2|NCHAR/NVARCHAR (padrão)|  
     |cp866|Russo DOS|CHAR/VARCHAR (padrão)|  
-    |keybcs2|Tcheco-eslovaco do DOS Kamenicky|CHAR/VARCHAR (padrão)|  
+    |keybcs2|DOS Kamenicky Czech-Slovak|CHAR/VARCHAR (padrão)|  
     |macce|Europeu Central do Mac|CHAR/VARCHAR (padrão)|  
     |MacRoman|Mac oeste Europeu|CHAR/VARCHAR (padrão)|  
     |cp852|Europeu Central DOS|CHAR/VARCHAR (padrão)|  
-    |latin7|ISO 8859-13 báltico|CHAR/VARCHAR (padrão)|  
+    |latin7|ISO 8859-13 Baltic|CHAR/VARCHAR (padrão)|  
     |cp 1251|Windows cirílico|CHAR/VARCHAR (padrão)|  
     |cp 1256|Árabe do Windows|CHAR/VARCHAR (padrão)|  
     |cp 1257|Windows báltico|CHAR/VARCHAR (padrão)|  
-    |BINARY|Conjunto de caracteres binária pseudo|CHAR/VARCHAR (padrão)|  
+    |binary|Binary pseudo charset|CHAR/VARCHAR (padrão)|  
     |geostd8|Georgiano GEOSTD8|CHAR/VARCHAR (padrão)|  
     |cp932|SJIS para japonês do Windows|NCHAR/NVARCHAR (padrão)|  
     |eucjpms|UJIS para japonês do Windows|NCHAR/NVARCHAR (padrão)|  
   
-2.  **No banco de dados, categoria ou nos níveis de nó de objeto:** no nível de banco de dados, categoria ou nós de objeto, grade de mapeamento de conjunto de caracteres contém as mesmas linhas como um no nível do nó de metadados de raiz, sobre visualização.:  
+2.  **No banco de dados, categoria ou níveis de nó de objeto:** No nível de banco de dados, categoria ou nós de objeto, grade de mapeamento de conjunto de caracteres contém as mesmas linhas como um no nível do nó de metadados de raiz, sobre visualização.:  
   
     1.  A primeira coluna da grade intitulada **nome do conjunto de caracteres** contém o nome do conjunto de caracteres.  
   

@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: acb05f10772ebdf77355b78e1f4ce998cc6c8056
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657010"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63453547"
 ---
 # <a name="migration-wizard-accesstosql"></a>Migration Wizard (AccessToSQL)
 O Migration Wizard orienta a migração de um ou mais bancos de dados do Access para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do SQL Azure. Usando o assistente, você cria um projeto, adicionar bancos de dados para o projeto, selecione objetos para migrar e se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do SQL Azure. Você também irá converter, carregar e migrar dados e esquemas de acesso. Opcionalmente, você pode vincular a tabelas do Access para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabelas ou do SQL Azure.  

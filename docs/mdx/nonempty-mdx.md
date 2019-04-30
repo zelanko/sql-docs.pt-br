@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 91e6d478397cf9fa77a6ca33748b5a4515034471
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278515"
 ---
 # <a name="nonempty-mdx"></a>NonEmpty (MDX)
 
@@ -35,11 +35,11 @@ NONEMPTY(set_expression1 [,set_expression2])
  *set_expression2*  
  Uma expressão MDX (Multidimensional Expressions) válida que retorna um conjunto.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Essa função retorna as tuplas do primeiro conjunto especificado que não estão vazias, quando avaliadas pelas tuplas do segundo conjunto. O **NonEmpty** função leva em conta os cálculos e preserva as tuplas duplicadas. Se um segundo conjunto não for fornecido, a expressão será avaliada no contexto das coordenadas atuais dos membros das hierarquias de atributos e medidas no cubo.  
   
 > [!NOTE]  
->  Use essa função em vez de preterido [NonEmptyCrossjoin &#40;MDX&#41; ](../mdx/nonemptycrossjoin-mdx.md) função.  
+>  Use essa função em vez de preteridas [NonEmptyCrossjoin &#40;MDX&#41; ](../mdx/nonemptycrossjoin-mdx.md) função.  
   
 > [!IMPORTANT]  
 >  Não vazia é uma característica das referências de células pelas tuplas, não as próprias tuplas.  
@@ -61,7 +61,7 @@ NONEMPTY(set_expression1 [,set_expression2])
   
  `FROM [Adventure Works]`  
   
- O exemplo a seguir retorna o conjunto de tuplas contendo clientes e datas de compra, usando o **filtro** função e o **NonEmpty** funções para localizar a última data em que uma compra feita pelo cliente:  
+ O exemplo a seguir retorna o conjunto de tuplas contendo clientes e datas de compra, usando o **filtro** função e o **NonEmpty** funções para localizar a última data em que cada cliente compra feita:  
   
  `WITH SET MYROWS AS FILTER`  
   
@@ -89,9 +89,9 @@ NONEMPTY(set_expression1 [,set_expression2])
   
 ## <a name="see-also"></a>Consulte também  
  [DefaultMember &#40;MDX&#41;](../mdx/defaultmember-mdx.md)   
- [Filtro &#40;MDX&#41;](../mdx/filter-mdx.md)   
+ [Filter &#40;MDX&#41;](../mdx/filter-mdx.md)   
  [IsEmpty &#40;MDX&#41;](../mdx/isempty-mdx.md)   
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
  [NonEmptyCrossjoin &#40;MDX&#41;](../mdx/nonemptycrossjoin-mdx.md)  
   
   

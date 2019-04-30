@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 16bf79c185a23399d48d141b5d773e2e0d41dc3f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63269993"
 ---
 # <a name="setting-project-options-db2tosql"></a>Definir opções do projeto (DB2ToSQL)
 Para cada projeto do SSMA, você pode definir opções de nível de projeto. Essas opções especificam a conversão do objeto, o carregamento do objeto, configurações de migração de dados e interface do usuário. Antes de converter objetos a serem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou migrar os dados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], verifique se as opções de configuração são adequadas para o projeto.  
@@ -31,7 +31,7 @@ O SSMA tem cinco conjuntos de configurações do projeto:
   
 -   Synchronization  
   
--   INTERFACE GRÁFICA DO USUÁRIO  
+-   GUI  
   
 -   Mapeamento de tipo  
   

@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 14bfb87bca7a375ce471ed22dde4ee68714ed906
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63244679"
 ---
-# <a name="task-2-adding-domain-values-manually"></a>Tarefa 2: Adicionando valores de domínio manualmente
+# <a name="task-2-adding-domain-values-manually"></a>Tarefa 2: Adicionar valores de domínio manualmente
   Nesta tarefa, você adiciona um valor para o **país** domínio manualmente. Ver [Change Domain Values](https://msdn.microsoft.com/library/hh510408.aspx) tópico para obter mais detalhes sobre os campos nessa página.  
   
 1.  Clique em **país** domínio na **lista de domínios**.  

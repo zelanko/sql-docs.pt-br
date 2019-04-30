@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 35bed6e63aa352986e1072bfad1b5ddf836845e0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63268497"
 ---
 # <a name="permissions-and-visual-database-tools-visual-database-tools"></a>Permissões e Visual Database Tools (Visual Database Tools)
   As permissões, que permitem aos usuários acesso aos objetos de fonte de dados, são concedidas na fonte de dados, não no Visual Database Tools. As permissões de acesso concedidas em objetos de fonte de dados são controladas pela política de segurança da instalação. Se você não tiver permissão para acessar certos objetos de banco de dados, entre em contato com seu administrador de banco de dados.  

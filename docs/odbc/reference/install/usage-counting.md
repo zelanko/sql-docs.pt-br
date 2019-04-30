@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ca2a52eb08cdf1b1b9cb5a23805da34aab915b7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273385"
 ---
 # <a name="usage-counting"></a>Contagem de uso
 > [!NOTE]  
@@ -60,9 +60,9 @@ ms.locfileid: "47664624"
   
  O formato do valor de contagem de uso do arquivo é mostrado na tabela a seguir.  
   
-|Nome|Tipo de dados|data|  
+|Nome|Tipo de dados|Dados|  
 |----------|---------------|----------|  
-|*caminho completo*|REG_DWORD|*contagem*|  
+|*full-path*|REG_DWORD|*contagem*|  
   
  Por exemplo, suponha que um driver para o Informix usa os arquivos Infrmx32.dll e Infrmx32.hlp e suponha que esse driver foi instalado duas vezes. Os valores na subchave do driver Informix SharedDlls seria da seguinte maneira:  
   

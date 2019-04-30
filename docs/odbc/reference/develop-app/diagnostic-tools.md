@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7fe70b1e484039593c9bb02a28788259f9afaf18
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242364"
 ---
 # <a name="diagnostic-tools"></a>Ferramentas de Diagnóstico
 Duas instalações podem ajudar a diagnosticar problemas em aplicativos ODBC. Ambos estão disponíveis do administrador de ODBC e implementada pelo Gerenciador de Driver. *Rastreamento* fornece um meio para registrar um arquivo de log a sequência de chamadas de função. Analisador do Visual Studio permite que a análise de informações sobre a interação dos componentes em um ambiente distribuído.  

@@ -5,16 +5,16 @@ description: Artigo de referência para os comandos de cluster mssqlctl.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e4e54ac3c7206ad8a6592c8cfe0b45d9ea4b8fd8
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: c69aeced2378e018376172e1fb6370d56706ecb7
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860467"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473328"
 ---
 # <a name="mssqlctl-cluster"></a>Cluster do mssqlctl
 
@@ -22,48 +22,58 @@ ms.locfileid: "58860467"
 
 O artigo a seguir fornece referência para o **cluster** comandos na **mssqlctl** ferramenta. Para obter mais informações sobre outros **mssqlctl** comandos, consulte [mssqlctl referência](reference-mssqlctl.md).
 
-## <a id="commands"></a> Comandos
-
-|||
-|---|---|
-| [create](#create) | Crie o cluster. |
-| [delete](#delete) | Exclua o cluster. |
-| [config](reference-mssqlctl-cluster-config.md) | Comandos de configuração do cluster. |
-| [debug](reference-mssqlctl-cluster-debug.md) | Comandos de depuração. |
-
-## <a id="create"></a> Criar cluster mssqlctl
-
-Crie o cluster.
-
+## <a name="commands"></a>Commands
+|     |     |
+| --- | --- |
+[Criar cluster mssqlctl](#mssqlctl-cluster-create) | Crie o cluster.
+[exclusão de cluster mssqlctl](#mssqlctl-cluster-delete) | Exclua o cluster.
+[configuração de cluster mssqlctl](reference-mssqlctl-cluster-config.md) | Comandos de configuração do cluster.
+[depuração de cluster mssqlctl](reference-mssqlctl-cluster-debug.md) | Comandos de depuração.
+## <a name="mssqlctl-cluster-create"></a>Criar cluster mssqlctl
+Crie um Cluster de Big Data do SQL Server.
+```bash
+mssqlctl cluster create [--config-file -f] 
+                        [--accept-eula -e]  
 ```
-mssqlctl cluster create
-   --name
-   --accept-eula
+### <a name="optional-parameters"></a>Parâmetros opcionais
+#### `--config-file -f`
+Perfil de configuração, usado para implantar o cluster do cluster: ['aks-dev-test.json', ' kubeadm-dev-test.json', ' minikube-dev-test.json']
+#### `--accept-eula -e`
+Você aceita os termos de licença? [Sim/não].
+### <a name="global-arguments"></a>Argumentos globais
+#### `--debug`
+Aumente o nível de detalhes de registro em log para mostrar que todos os logs de depuração.
+#### `--help -h`
+Mostre esta mensagem de Ajuda e sair.
+#### `--output -o`
+Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
+#### `--query -q`
+Cadeia de caracteres de consulta JMESPath. Ver [ http://jmespath.org/ ](http://jmespath.org/]) para obter mais informações e exemplos.
+#### `--verbose`
+Aumente o nível de detalhes do registro em log. Use--debug para logs de depuração completos.
+## <a name="mssqlctl-cluster-delete"></a>exclusão de cluster mssqlctl
+Exclua o Cluster de Big Data do SQL Server.
+```bash
+mssqlctl cluster delete --name -n 
+                        [--force -f]
 ```
-
-### <a name="parameters"></a>Parâmetros
-
-| Parâmetros | Descrição |
-|---|---|
-| **--name -n** | Nome do cluster, usado para o namespace de kubernetes. |
-| **--accept-eula -e** | Você aceita os termos de licença? \[Sim/não\].  Valores permitidos: não, Sim. Obrigatórios. |
-
-## <a id="delete"></a> exclusão de cluster mssqlctl
-
-Exclua o cluster.
-
-```
-mssqlctl cluster delete
-   --name
-   [--force]
-```
-
-### <a name="parameters"></a>Parâmetros
-
-| Parâmetros | Descrição |
-|---|---|
-| **--name -n** | Nome do cluster, usado para o namespace de kubernetes. Obrigatórios. |
-| **--force -f** | Cluster de exclusão de força. |
+### <a name="required-parameters"></a>Parâmetros necessários
+#### `--name -n`
+Nome do cluster, usado para o namespace de kubernetes.
+### <a name="optional-parameters"></a>Parâmetros opcionais
+#### `--force -f`
+Cluster de exclusão de força.
+### <a name="global-arguments"></a>Argumentos globais
+#### `--debug`
+Aumente o nível de detalhes de registro em log para mostrar que todos os logs de depuração.
+#### `--help -h`
+Mostre esta mensagem de Ajuda e sair.
+#### `--output -o`
+Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
+#### `--query -q`
+Cadeia de caracteres de consulta JMESPath. Ver [ http://jmespath.org/ ](http://jmespath.org/]) para obter mais informações e exemplos.
+#### `--verbose`
+Aumente o nível de detalhes do registro em log. Use--debug para logs de depuração completos.
 
 ## <a name="next-steps"></a>Próximas etapas
 

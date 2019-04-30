@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: cddfa2e3fd5d1263bf4f9e5e0bb1fd4c6e8fe675
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520638"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63453420"
 ---
 # <a name="creating-script-files-db2tosql"></a>Criar arquivos de Script (DB2ToSQL)
 A primeira etapa antes de iniciar o aplicativo de console do SSMA é criar o arquivo de script e se for necessário criar o arquivo de valor da variável e o arquivo de conexão do servidor.  
@@ -24,9 +24,9 @@ O arquivo de script pode ser dividido em três seções, sobre visualização..,
   
 1.  **config:** Permite que o usuário definir os parâmetros de configuração para o aplicativo de console.  
   
-2.  **servidores:** Permite que o usuário defina definições de servidor de origem/destino. Isso também pode ser em um arquivo de conexão de servidor separado.  
+2.  **servers:** Permite que o usuário defina definições de servidor de origem/destino. Isso também pode ser em um arquivo de conexão de servidor separado.  
   
-3.  **comandos de script:** Permite que o usuário execute comandos de fluxo de trabalho do SSMA.  
+3.  **script-commands:** Permite que o usuário execute comandos de fluxo de trabalho do SSMA.  
   
 Cada seção é descrita em detalhes abaixo:  
   
@@ -43,7 +43,7 @@ As opções configuráveis pelo usuário incluem:
   
     -   nome do arquivo: O caminho do arquivo (opcional).  
   
-    -   Suprimir-messages: Suprime as mensagens do console. Isso é 'false', por padrão.  
+    -   suppress-messages: Suprime as mensagens do console. Isso é 'false', por padrão.  
   
     **Exemplo:**  
   
@@ -84,9 +84,9 @@ As opções configuráveis pelo usuário incluem:
   
     Apenas um ou outro atributo especificado pode ser usado ou seja:  
   
-    -   código-fonte-use-last-used = "true" (padrão) ou servidor de origem = "source_servername"  
+    -   source-use-last-used="true" (default) or source-server="source_servername"  
   
-    -   destino-use-last-used = "true" (padrão) ou servidor de destino = "target_servername"  
+    -   target-use-last-used="true" (default) or target-server="target_servername"  
   
     **Exemplo:**  
   
@@ -148,7 +148,7 @@ As opções configuráveis pelo usuário incluem:
   
     Os modos de reconexão são:  
   
-    -   reconectar-se a última-usado-servidor: Se a conexão não está ativo, ele tentará reconectar-se para o último servidor usado no máximo 5 vezes.  
+    -   reconnect-to-last-used-server: Se a conexão não está ativo, ele tentará reconectar-se para o último servidor usado no máximo 5 vezes.  
   
     -   Gerar-um-erro: Se a conexão não está ativa, um erro será gerado.  
   
@@ -196,7 +196,7 @@ As opções configuráveis pelo usuário incluem:
   
     -   Erro: O console exibe um erro e interrompe a execução.  
   
-    -   Substitua: Substitui os valores de objeto existentes. Essa ação é executada por padrão.  
+    -   overwrite: Substitui os valores de objeto existentes. Essa ação é executada por padrão.  
   
     -   Ignore: O console irá ignorar os objetos que já existem no banco de dados  
   
@@ -284,13 +284,13 @@ As opções configuráveis pelo usuário incluem:
   
     As opções de nível de agente de log incluem:  
   
-    -   Erro-fatal: Somente as mensagens de erro fatal são registradas.  
+    -   fatal-error: Somente as mensagens de erro fatal são registradas.  
   
     -   Erro: Apenas as mensagens de erro e fatal erro são registradas.  
   
     -   Aviso: Todos os níveis, exceto as mensagens de depuração e as informações são registradas.  
   
-    -   INFO: Todos os níveis, exceto as mensagens de depuração são registrados.  
+    -   info: Todos os níveis, exceto as mensagens de depuração são registrados.  
   
     -   Depure: Todos os níveis de mensagens registradas.  
   

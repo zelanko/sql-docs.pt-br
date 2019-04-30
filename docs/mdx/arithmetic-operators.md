@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c422df08152eaf9266a6ca3408bfce12e023c2a3
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63284519"
 ---
 # <a name="arithmetic-operators"></a>Operadores aritméticos
 
@@ -23,7 +23,7 @@ ms.locfileid: "34739455"
   
  O MDX oferece suporte para os operadores aritméticos listados na tabela a seguir.  
   
-|Operador|Description|  
+|Operador|Descrição|  
 |--------------|-----------------|  
 |[+ (Somar)](../mdx/add-mdx.md)|Soma dois números.|  
 |[/ (dividir)](../mdx/divide-mdx-operator-reference.md)|Divide um número pelo outro.|  
@@ -39,7 +39,7 @@ ms.locfileid: "34739455"
   
 -   Quando houver mais de um operador aritmético em uma expressão, o MDX efetua a multiplicação e a divisão primeiramente, seguidas da subtração e da adição.  
   
--   Quando todos os operadores aritméticos em uma expressão tem o mesmo nível de precedência, a ordem de execução é da esquerda para direita.  
+-   Quando todos os operadores aritméticos em uma expressão tem o mesmo nível de precedência, a ordem de execução é esquerda para a direita.  
   
 -   Expressões entre parênteses têm precedência sobre todas as outras operações.  
   

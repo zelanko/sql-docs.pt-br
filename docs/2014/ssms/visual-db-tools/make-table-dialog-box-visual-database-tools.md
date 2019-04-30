@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b9873268608072ed7f2d6cdb4d0026ba62e5d090
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810688"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63459975"
 ---
 # <a name="make-table-dialog-box-visual-database-tools"></a>Caixa de diálogo Criar tabela (Visual Database Tools)
   Permite nomear uma tabela criada na qual você copia linhas. Esta caixa de diálogo é exibida quando você altera um tipo de consulta para tornar-se uma consulta MAKE TABLE. Para alterar o tipo da consulta, no menu **Designer de Consultas** , aponte para **Alterar Tipo**, e em seguida clique em **Criar Tabela**.  

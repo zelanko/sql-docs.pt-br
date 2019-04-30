@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2523909f2719fb8316acecf8ad0b56ddbe086a36
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63260805"
 ---
 # <a name="general-properties-page-models-report-manager"></a>Página Propriedades Gerais, Modelos (Gerenciador de Relatórios)
   Use a página Propriedades Gerais para que os modelos de relatório renomeiem, movam ou substituam o arquivo de definição do modelo (.smdl). Os detalhes sobre quem criou ou modificou o modelo e quando as alterações ocorreram são indicados na parte superior da página.  

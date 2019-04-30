@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c44bc306aaa1e55aa5005663ecfcfbf261576593
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63260815"
 ---
 # <a name="general-properties-page-reports-report-manager"></a>Página Propriedades Gerais, Relatórios (Gerenciador de Relatórios)
   Use a página Propriedades Gerais para que os relatórios renomeiem, excluam, movam ou substituam a definição do relatório. Você também pode usar essa página para criar um relatório vinculado. Detalhes sobre quem criou ou modificou o relatório e quando as alterações ocorreram são indicados na parte superior da página.  

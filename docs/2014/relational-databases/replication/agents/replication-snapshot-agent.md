@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 12050c8d2e5d440ef8f4d7f6584f6c08c210f4f0
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250585"
 ---
 # <a name="replication-snapshot-agent"></a>Replication Snapshot Agent
   O Replication Snapshot Agent é um arquivo executável que prepara arquivos de instantâneo contendo esquema e dados de tabelas publicadas e objetos do banco de dados, armazena os arquivos na pasta de instantâneo e registra trabalhos de sincronização no banco de dados de distribuição.  
@@ -87,7 +87,7 @@ ms.locfileid: "54132276"
  **-70Subscribers**  
  Deve ser usado se qualquer Assinante estiver executando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] versão 7.0.  
   
- **-BcpBatchSize** _bcp_ \_ *lote* \_ *tamanho*  
+ **-BcpBatchSize** _bcp_\_ *batch*\_ *size*  
  É o número de linhas a ser enviado em uma operação de cópia em massa. Ao executar uma operação **bcp in** , o tamanho do lote é o número de linhas a ser enviado ao servidor como uma transação e também o número de linhas que deve ser enviado antes que o Agente de Distribuição registre uma mensagem de progresso **bcp** . Ao executar uma operação **bcp out** , um tamanho fixo de lote de 1000 é usado. Um valor de 0 indica que não houve registro de mensagem.  
   
  **-DefinitionFile** _def_path_and_file_name_  
@@ -109,7 +109,7 @@ ms.locfileid: "54132276"
  É o logon usado ao se conectar ao Distribuidor usando a Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  **-DistributorPassword** _distributor_password_  
- É a senha usada ao se conectar ao Distribuidor usando a Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . para obter informações sobre a ferramenta de configuração e recursos adicionais.  
+ É a senha usada ao se conectar ao Distribuidor usando a Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . .  
   
  **-DistributorSecurityMode** [ **0**| **1**]  
  Especifica o modo de segurança do Distribuidor. Um valor de **0** indica Modo (padrão) de Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e um valor de **1** indica Modo de Autenticação do Windows.  
@@ -196,7 +196,7 @@ ms.locfileid: "54132276"
 |**2**|Todas as mensagens de erro e mensagens de relatório de progresso são impressas, o que é útil na depuração.|  
 
  **-PrefetchTables** [ **0**| **1**]  
- Parâmetro opcional que especifica se será feita a pré-busca de objetos de tabela e se eles serão armazenados em cache.  O comportamento padrão é executar a pré-busca de determinadas propriedades de tabela usando o componente SMO com base em um cálculo interno.  Esse parâmetro pode ser útil em cenários em que o SMO pré-busca operação leva considerável mais para ser executado. Se esse parâmetro não for usado, essa decisão será tomada no tempo de execução com base na porcentagem de tabelas adicionadas como artigos na publicação.  
+ Parâmetro opcional que especifica se será feita a pré-busca de objetos de tabela e se eles serão armazenados em cache.  O comportamento padrão é executar a pré-busca de determinadas propriedades de tabela usando o componente SMO com base em um cálculo interno.  Esse parâmetro pode ser útil em cenários em que a operação de pré-busca de SMO leva um tempo consideravelmente maior para ser executada. Se esse parâmetro não for usado, essa decisão será tomada no tempo de execução com base na porcentagem de tabelas adicionadas como artigos na publicação.  
   
 |Valor OutputVerboseLevel|Descrição|  
 |------------------------------|-----------------|  
@@ -231,7 +231,7 @@ ms.locfileid: "54132276"
  É o logon usado ao se conectar ao Publicador usando a Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  **-PublisherPassword** _publisher_password_  
- É a senha usada ao se conectar ao Publicador usando a Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . para obter informações sobre a ferramenta de configuração e recursos adicionais.  
+ É a senha usada ao se conectar ao Publicador usando a Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . .  
   
  **-PublisherSecurityMode** [ **0**| **1**]  
  Especifica o modo de segurança do Publicador. Um valor de **0** indica Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (padrão), e um valor de **1** indica Modo de Autenticação do Windows.  

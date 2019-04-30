@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 12e678b8cd5210ba6db0cd326c0cd803ed210735
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058336"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63460050"
 ---
 # <a name="granting-access-to-a-database"></a>concedendo acesso a um banco de dados
   Mary agora tem acesso a esta instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], mas não tem permissão para acessar os bancos de dados. Ela não tem acesso nem mesmo ao seu banco de dados padrão **TestData** até que você a autorize como usuária de um banco de dados.  
@@ -40,6 +40,6 @@ ms.locfileid: "48058336"
      Agora, Mary tem acesso ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e ao banco de dados `TestData` .  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Criar exibições e procedimentos armazenados](lesson-2-3-creating-views-and-stored-procedures.md)  
+ [criando exibições e procedimentos armazenados](lesson-2-3-creating-views-and-stored-procedures.md)  
   
   

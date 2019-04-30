@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e7972fb72607edca8c1599c2d028b073c184642
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251478"
 ---
 # <a name="serializability"></a>Seriabilidade
 Idealmente, as transações devem ser *serializável*. As transações devem ser serializáveis se os resultados da execução simultânea de transações são os mesmos que os resultados da execução em série - ou seja, um após o outro. Não é importante saber qual transação executa primeiro, apenas que o resultado não reflete qualquer combinação das transações.  

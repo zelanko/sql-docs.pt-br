@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f1f28a5dfc7e8abb15d1adf2f457ab49b4fbdd9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839594"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63459879"
 ---
 # <a name="compareenum"></a>CompareEnum
 Especifica a posição relativa de dois registros representado por seus indicadores.  
   
-|Constante|Valor|Description|  
+|Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
 |**adCompareEqual**|1|Indica que os indicadores são iguais.|  
 |**adCompareGreaterThan**|2|Indica que o primeiro indicador é após o segundo.|  
@@ -35,7 +35,7 @@ Especifica a posição relativa de dois registros representado por seus indicado
 |**adCompareNotEqual**|3|Indica que os indicadores não são iguais e não ordenados.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
- Pacote: **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

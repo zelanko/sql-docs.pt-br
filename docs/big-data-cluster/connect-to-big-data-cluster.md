@@ -5,16 +5,16 @@ description: Saiba como se conectar a instância mestre do SQL Server e o gatewa
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ed563fe6d0bfd69ce5dfb7484d4213bc9a47dd54
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: 8291f2a192868544fb34da95d537f7a8a6b0f004
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860167"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472291"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Conectar a um cluster de big data do SQL Server com o Studio de dados do Azure
 
@@ -45,7 +45,7 @@ Para se conectar a um cluster de big data com o Azure Data Studio, faça uma nov
 1. Na linha de comando, localize o IP da sua instância mestre com o seguinte comando:
 
    ```
-   kubectl get svc endpoint-master-pool -n <your-cluster-name>
+   kubectl get svc master-svc-external -n <your-cluster-name>
    ```
 
 1. No Azure Data Studio, pressione **F1** > **nova Conexão**.
@@ -83,7 +83,7 @@ Na maioria dos casos, conectando-se a instância mestre do SQL Server fornece ac
 1. Na linha de comando, localize o endereço IP do seu gateway HDFS/Spark com um dos comandos a seguir.
 
    ```
-   kubectl get svc endpoint-security -n <your-cluster-name>
+   kubectl get svc gateway-svc-external -n <your-cluster-name>
    ```
  
 1. No Azure Data Studio, pressione **F1** > **nova Conexão**.

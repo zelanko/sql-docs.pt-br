@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 078b48c36d0ee2a1b3f368b8e6baf7346ed343fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248928"
 ---
 # <a name="adorecordsetconstruction-interface"></a>Interface ADORecordsetConstruction
 O **ADORecordsetConstruction** interface é usada para construir o ADO **conjunto de registros** objeto a partir de um banco de dados OLE **conjunto de linhas** objeto em um aplicativo C/C++.  
@@ -73,7 +73,7 @@ O **ADORecordsetConstruction** interface é usada para construir o ADO **conjunt
  Também é possível construir um ADO **conjunto de registros** objeto a partir de um banco de dados OLE **capítulo** ou **RowPosition** objeto.  
   
 ## <a name="requirements"></a>Requisitos  
- **Versão:** ADO 2.0 e posterior  
+ **Versão:** O ADO 2.0 e posterior  
   
  **Biblioteca:** msado15.dll  
   

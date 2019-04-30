@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1904a77ae104576f2a9f82fc09d8728e2ec88c11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281883"
 ---
 # <a name="rightsenum"></a>RightsEnum
 Especifica os direitos ou permissões para um grupo ou usuário em um objeto.  
   
-|Constante|Valor|Description|  
+|Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
 |**adRightCreate**|16384 (&H4000)|O usuário ou grupo tem permissão para criar novos objetos desse tipo.|  
 |**adRightDelete**|65536 (&H10000)|O usuário ou grupo tem permissão para excluir dados de um objeto. Para objetos, como **tabelas**, o usuário tem permissão para excluir os valores de dados dos registros.|  

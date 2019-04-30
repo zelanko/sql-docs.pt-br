@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 85ca76678c0d3e75a106164626c4e3c3a81bd7e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315982"
 ---
 # <a name="comparebookmarks-method-ado"></a>Método CompareBookmarks (ADO)
 Compara dois indicadores e retorna uma indicação dos valores relativos.  
@@ -52,7 +52,7 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
   
  Como o tipo de dados de um indicador é específico para cada provedor, o ADO expõe-o como uma **Variant**. Por exemplo, os indicadores do SQL Server são do tipo DBTYPE_R8 (**duplas**). ADO poderia expor esse tipo como uma **Variant** com um subtipo do **duplo**.  
   
- Ao comparar os indicadores, ADO não tenta fazer qualquer tipo de coerção. Os valores são simplesmente passados para o provedor de onde ocorre a comparação. Se os indicadores são passados para o **CompareBookmarks** método são armazenadas em variáveis de tipos diferentes, ele pode gerar o seguinte erro de incompatibilidade de tipo: "argumentos são do tipo errado, estão fora do intervalo aceitável ou estão em conflito uns com os outros."  
+ Ao comparar os indicadores, ADO não tenta fazer qualquer tipo de coerção. Os valores são simplesmente passados para o provedor de onde ocorre a comparação. Se os indicadores são passados para o **CompareBookmarks** método são armazenadas em variáveis de tipos diferentes, ele pode gerar o seguinte erro de incompatibilidade de tipo: "Argumentos são do tipo errado, estão fora do intervalo aceitável ou estão em conflito com uns aos outros."  
   
  Um indicador que não é válido ou formado incorretamente causará um erro.  
   

@@ -1,5 +1,5 @@
 ---
-title: Função ParallelPeriod (MDX) | Microsoft Docs
+title: ParallelPeriod (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c1f495ce1fad9a318ea5e6c1f3fadd88f8313cd6
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742365"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473080"
 ---
 # <a name="parallelperiod-mdx"></a>Função ParallelPeriod (MDX)
 
@@ -38,8 +38,8 @@ ParallelPeriod( [ Level_Expression [ ,Index [ , Member_Expression ] ] ] )
  *Member_Expression*  
  Uma linguagem MDX válida que retorna um membro.  
   
-## <a name="remarks"></a>Remarks  
- Embora seja similar do [primo](../mdx/cousin-mdx.md) função, o **ParallelPeriod** função está mais relacionada à série temporal. O **ParallelPeriod** função aproveita o ancestral do membro especificado no nível especificado, encontra o irmão do ancestral com a latência especificada e, finalmente, retorna o período paralelo do membro especificado entre os descendentes do irmão.  
+## <a name="remarks"></a>Comentários  
+ Embora seja semelhante do [primo](../mdx/cousin-mdx.md) função, o **ParallelPeriod** função está mais estreitamente relacionada à série temporal. O **ParallelPeriod** função aproveita o ancestral do membro especificado no nível especificado, encontra o irmão do ancestral com o atraso especificado e, finalmente, retorna o período paralelo do membro especificado entre o descendentes do irmão.  
   
  O **ParallelPeriod** função tem os seguintes padrões:  
   
@@ -77,6 +77,6 @@ SELECT ParallelPeriod ([Date].[Calendar].[Calendar Semester]
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

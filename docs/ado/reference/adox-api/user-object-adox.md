@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3acdea5ae284b2e9a0ac9c28fe8430a11de8fbd4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281574"
 ---
 # <a name="user-object-adox"></a>Objeto User (ADOX)
 Representa uma conta de usuário que tenha permissões de acesso dentro de um banco de dados protegido.  
