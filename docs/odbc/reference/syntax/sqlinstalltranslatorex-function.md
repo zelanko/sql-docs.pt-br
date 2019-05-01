@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 276b8627588bcd3472c12564db1e8c6e6af1ef2b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242322"
 ---
 # <a name="sqlinstalltranslatorex-function"></a>Função SQLInstallTranslatorEx
 **Conformidade com**  
@@ -56,7 +56,7 @@ BOOL SQLInstallTranslatorEx(
   
  O **tradutor** e **instalação** palavras-chave devem ser incluídas na *lpszTranslator* cadeia de caracteres. A tradução DLL está listado com o **tradutor** palavra-chave e a configuração de conversor DLL está listado com o **instalação** palavra-chave. Cada par é encerrada com um byte nulo e a lista inteira é encerrada com um byte nulo. (Ou seja, dois bytes NULL marcam o final da lista.) O formato do *lpszTranslator* é da seguinte maneira:  
   
- \0Translator=*DLL-arquivo-translator*\0[Setup=*DLL-arquivo-configuração*\0]\0  
+ \0Translator=*translator-DLL-filename*\0[Setup=*setup-DLL-filename*\0]\0  
   
  *lpszPathIn*  
  [Entrada] Caminho completo do qual o conversor deve ser instalado ou um ponteiro nulo. Se *lpszPath* for um ponteiro nulo, os tradutores serão instalados no diretório do sistema.  
@@ -70,7 +70,7 @@ BOOL SQLInstallTranslatorEx(
  *pcbPathOut*  
  [Saída] Número total de bytes disponíveis para retornar na *lpszPathOut*. Se o número de bytes disponíveis para retornar for maior que ou igual a *cbPathOutMax*, o caminho de saída na *lpszPathOut* será truncado com *pcbPathOutMax* menos o caractere de finalização null. O *pcbPathOut* argumento pode ser um ponteiro nulo.  
   
- *Frequentes*  
+ *fRequest*  
  [Entrada] Tipo de solicitação. *Frequentes* deve conter um dos seguintes valores:  
   
  ODBC_INSTALL_INQUIRY: Pesquisa sobre onde um tradutor pode ser instalado.  
