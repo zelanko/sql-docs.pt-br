@@ -1,5 +1,5 @@
 ---
-title: E (MDX) | Microsoft Docs
+title: AND (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 30cb8be449c58e10da5c2e91ebec936b3547581d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249878"
 ---
 # <a name="and-mdx"></a>AND (MDX)
 
@@ -36,10 +36,10 @@ Expression1 AND Expression2
  Uma expressão MDX válida que retorna um valor numérico.  
   
 ## <a name="return-value"></a>Valor retornado  
- Um valor booliano que retorna true se ambos os parâmetros forem avaliados como **true**; caso contrário, **false**.  
+ Um valor booliano que retorna true se ambos os parâmetros forem avaliados como **verdadeira**; caso contrário, **falso**.  
   
-## <a name="remarks"></a>Remarks  
- O **AND** operador trata as duas expressões como valores boolianos (zero, 0, como **false**; caso contrário, **true**) antes do operador realiza a conjunção lógica. A tabela a seguir ilustra como o **AND** operador executa a conjunção lógica.  
+## <a name="remarks"></a>Comentários  
+ O **AND** operador trata as duas expressões como valores boolianos (zero, 0, como **falso**; caso contrário, **verdadeiro**) antes do operador realiza a conjunção lógica. A tabela a seguir ilustra como o **AND** operador realiza a conjunção lógica.  
   
 |*Expression1*|*Expression2*|Valor retornado|  
 |-------------------|-------------------|------------------|  

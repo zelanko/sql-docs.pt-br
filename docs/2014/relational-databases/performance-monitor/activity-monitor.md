@@ -13,17 +13,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f2420a4df5b971ae2190b2a66f24b226f472fee2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249336"
 ---
 # <a name="activity-monitor"></a>Monitor de Atividade
   O Monitor de Atividade exibe informações sobre os processos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e como esses processos afetam a instância atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="benefits-of-activity-monitor"></a>Benefícios do Monitor de Atividade  
- Monitor de atividade é uma janela de documento com guias que tem os seguintes painéis expansíveis e recolhíveis: **Visão geral**, **tarefas do usuário do Active Directory**, **esperas recentes**, **e/s do arquivo de dados**, e **consultas caras recentes**. Quando qualquer painel é expandido, o Monitor de Atividade consulta a instância para obter informações. Quando um painel é recolhido, todas as atividades de consulta são interrompidas para esse painel. Também é possível expandir um ou mais painéis ao mesmo tempo para exibir diferentes tipos de atividades na instância.  
+ Monitor de atividade é uma janela de documento com guias que tem os seguintes painéis expansíveis e recolhíveis: **Visão Geral**, **Tarefas do Usuário Ativo**, **Esperas de Recurso**, **E/S do Arquivo de Dados** e **Consultas Dispendiosas Recentes**. Quando qualquer painel é expandido, o Monitor de Atividade consulta a instância para obter informações. Quando um painel é recolhido, todas as atividades de consulta são interrompidas para esse painel. Também é possível expandir um ou mais painéis ao mesmo tempo para exibir diferentes tipos de atividades na instância.  
   
  Para as colunas que estão incluídas na **tarefas do usuário ativo**, **esperas**, **e/s de arquivo de dados**, e **consultas caras recentes** painéis, você pode personalizar a exibição das seguintes maneiras:  
   

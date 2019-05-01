@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 230c8bbeb2736a3f9810a65dd445013d22e41f03
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249914"
 ---
-# <a name="task-3-verifying-the-data-in-master-data-manager"></a>Tarefa 3: Verificando os dados no Master Data Manager
+# <a name="task-3-verifying-the-data-in-master-data-manager"></a>Tarefa 3: Verificar os dados no Master Data Manager
   Nesta tarefa, você verifica se a entidade **Fornecedor** será criada no **MDS** usando o **Aplicativo Master Data Manager Web**.  
   
 1.  Se o **Master Data Manager** estiver aberto, clique em **SQL Server 2012 Master Data Services** na parte superior para navegar até a página inicial. Caso contrário, navegue até [ http://localhost/mds ](http://localhost/mds) para iniciar **Master Data Manager**.  

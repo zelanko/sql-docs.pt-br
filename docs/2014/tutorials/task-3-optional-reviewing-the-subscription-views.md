@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 27e7351f1643d18790d67703858ec6df7694ebd8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249994"
 ---
-# <a name="task-3-optional-reviewing-the-subscription-views"></a>Tarefa 3 (opcional): Examinando exibições de assinatura
+# <a name="task-3-optional-reviewing-the-subscription-views"></a>Tarefa 3 (opcional): Examinar as exibições de assinatura
   Nesta tarefa, você confirmará que as exibições SQL foram criadas usando o SQL Server Management Studio.  
   
 1.  Inicie **SQL Server Management Studio**. Clique o **inicie** , clique em **todos os programas**, clique em **Microsoft SQL Server 2012**e, em seguida, clique em **SQL Server Management Studio**.  

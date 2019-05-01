@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 21a7b32332c2fe8c4a37831a3fdd745016503087
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249940"
 ---
-# <a name="task-4-creating-an-ssis-project-using-sql-server-data-tools"></a>Tarefa 4: Criando um projeto SSIS usando o SQL Server Data Tools
+# <a name="task-4-creating-an-ssis-project-using-sql-server-data-tools"></a>Tarefa 4: Criar um projeto SSIS usando o SQL Server Data Tools
   Nesta tarefa, você criará um projeto do SSIS por meio **SQL Server Data Tools** para automatizar a limpeza e correspondência de dados do fornecedor.  
   
 1.  Inicie o **SQL Server Data Tools**. Clique em Iniciar, aponte para **todos os programas**, expanda **Microsoft SQL Server 2012**e clique em **SQL Server Data Tools**.  

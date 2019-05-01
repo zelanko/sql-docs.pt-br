@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: abca2dcf68472884eb3c1e42f0ff9c14004098c5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250015"
 ---
-# <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>Tarefa 3: Criando e executando um projeto de qualidade de dados para correspondência
+# <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>Tarefa 3: Criar e executar um projeto de qualidade de dados para correspondência
   Nesta tarefa, você criará um Projeto do Data Quality para a atividade de correspondência e executará o processo de correspondência nos dados de fornecedor limpos para remover as duplicatas nos dados.  
   
 1.  Na página principal do **cliente DQS**, clique em **novo projeto de qualidade de dados**.  

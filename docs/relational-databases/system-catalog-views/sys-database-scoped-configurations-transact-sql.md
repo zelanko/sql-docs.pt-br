@@ -1,5 +1,5 @@
 ---
-title: database_scoped_configurations (Transact-SQL) | Microsoft Docs
+title: sys.database_scoped_configurations (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/14/2018
 ms.prod: sql
@@ -19,12 +19,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 00cfd52bfd6293e6875054fb7b7746b1ac52a7cb
-ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
-ms.translationtype: MT
+ms.openlocfilehash: af6c2996877f4ab7d8a2305c4f6fe4b30a0127cc
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51947650"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473745"
 ---
 # <a name="sysdatabasescopedconfigurations-transact-sql"></a>sys.database_scoped_configurations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -38,15 +38,14 @@ ms.locfileid: "51947650"
 |**value**|**sqlvariant**|O valor definido para essa opção de configuração para a réplica primária.|  
 |**value_for_secondary**|**sqlvariant**|O valor definido para essa opção de configuração para as réplicas secundárias.|  
 |**is_value_default**|**bit** |Especifica se o valor definido é o valor padrão.|
-|**elevate_resumable**|nvarchar(60)|O banco de dados no escopo padrão definido para a opção retomável para operações de índice| 
   
 ##  <a name="Permissions"></a> Permissões  
- Requer associação à função **pública** .  
+Requer associação à função **pública** .  
   
 ## <a name="remarks"></a>Comentários  
- Quando NULL é retornado como o valor para **value_for_secondary**, isso significa que o secundário é definido como primário.  
+Quando NULL é retornado como o valor para **value_for_secondary**, isso significa que o secundário é definido como primário.  
  
- As definições de configurações no escopo do banco de dados serão transferidas para o banco de dados. Isso significa que quando um determinado banco de dados é restaurado ou anexado, as definições de configuração existentes permanecem.
+As definições de configurações no escopo do banco de dados serão transferidas para o banco de dados. Isso significa que quando um determinado banco de dados é restaurado ou anexado, as definições de configuração existentes permanecem.
   
 ## <a name="see-also"></a>Consulte também  
  [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)  

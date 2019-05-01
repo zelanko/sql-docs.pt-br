@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a63d8cb22a8533cf352acb690f87916e2e9d568d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249831"
 ---
 # <a name="using-logical-functions"></a>Usando funções lógicas
 
 
   Uma função lógica executa uma operação ou comparação lógica em objetos e expressões e retorna um valor booliano. As funções lógicas são essenciais na linguagem MDX para determinar a posição de um membro.  
   
- A função lógica mais comumente usada é a **IsEmpty** função. Para obter mais informações sobre como usar o **IsEmpty** funcionam, consulte [trabalhando com valores vazios](../mdx/working-with-empty-values.md).  
+ A função lógica mais comumente usada é a **IsEmpty** função. Para obter mais informações sobre como usar o **IsEmpty** , consulte [trabalhando com valores vazios](../mdx/working-with-empty-values.md).  
   
  A consulta a seguir mostra como usar o **IsLeaf** e **IsAncestor** funções:  
   

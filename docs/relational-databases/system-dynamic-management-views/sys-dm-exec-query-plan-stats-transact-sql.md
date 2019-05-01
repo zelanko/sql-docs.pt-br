@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_query_plan_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
@@ -17,15 +17,15 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfacb
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 62ddfda48429b99558b987cd06c95e96d62702fa
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: 89185976120c15f9d1fcdfef75f2bddb41415c65
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582084"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63474281"
 ---
 # <a name="sysdmexecqueryplanstats-transact-sql"></a>sys.dm_exec_query_plan_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
 
 Retorna o equivalente do último plano de execução real conhecido para um plano de consulta armazenados em cache anteriormente. 
 
@@ -64,7 +64,7 @@ O *plan_handle* pode ser obtido dos seguintes objetos de gerenciamento dinâmico
 ## <a name="remarks"></a>Comentários
 Essa função do sistema está disponível começando com [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4.
 
-Esse é um recurso opcional e requer que o [sinalizador de rastreamento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 esteja habilitado.   
+Esse é um recurso opcional e requer que o [sinalizador de rastreamento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 esteja habilitado. Começando com [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5 e, na [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], para fazer isso no nível do banco de dados, consulte a opção LAST_QUERY_PLAN_STATS [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
 Essa função do sistema funciona sob o **leve** infraestrutura de criação de perfil de estatísticas de execução de consulta. Para obter mais informações, confira [Infraestrutura de Criação de Perfil de Consulta](../../relational-databases/performance/query-profiling-infrastructure.md).  
 
@@ -80,7 +80,7 @@ Sob as seguintes condições, uma **simplificada <sup>1</sup>**  saída Showplan
     **AND**    
 -   A consulta é simple o suficiente, geralmente categorizados como parte de uma carga de trabalho OLTP.
 
-<sup>1</sup> isso se refere a um plano de execução que contém apenas o operador de nó raiz (Selecionar). Para [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4 apenas isso se refere ao plano de cache como disponível por meio do DM exec_cached_plans.
+<sup>1</sup> começando com [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5, isso se refere a um plano de execução que contém apenas o operador de nó raiz (Selecionar). Para [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] refere-se para o plano armazenado em cache como disponível por meio do CTP 2.4 `sys.dm_exec_cached_plans`.
 
 Nas seguintes condições **nenhuma saída é retornada** partir **sys.dm_exec_query_plan_stats**:
 
@@ -131,6 +131,16 @@ CROSS APPLY sys.dm_exec_query_plan_stats(plan_handle) AS qps
 WHERE st.text LIKE 'SELECT * FROM Person.Person%';  
 GO  
 ```   
+
+### <a name="d-look-at-cached-events-for-trigger"></a>D. Examinar eventos armazenados em cache para o gatilho
+
+```sql
+SELECT *
+FROM sys.dm_exec_cached_plans
+CROSS APPLY sys.dm_exec_query_plan_stats(plan_handle)
+WHERE objtype ='Trigger';
+GO
+```
 
 ## <a name="see-also"></a>Consulte também
   [Sinalizadores de rastreamento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  

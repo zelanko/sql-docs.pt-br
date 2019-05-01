@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 19e6683baeb0a82c77a858b04f18695ba7120b15
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250133"
 ---
 # <a name="inserting-and-updating-data-in-a-table-tutorial"></a>Inserindo e atualizando dados em uma tabela (tutorial)
   Agora que você criou a tabela **Products**, está pronto para inserir dados na tabela usando a instrução INSERT. Depois que os dados forem inseridos, você alterará o conteúdo de uma linha usando uma instrução UPDATE. Você usará a cláusula WHERE da instrução UPDATE para restringir a atualização a uma única linha. As quatro instruções inserem os dados a seguir.  
@@ -29,7 +29,7 @@ ms.locfileid: "48217626"
 |75|Tire Bar||Tool for changing tires.|  
 |3000|3mm Bracket|.52||  
   
- A sintaxe básica é: INSERT, nome da tabela, lista de colunas, VALUES e uma lista de valores a serem inseridos. Os dois hifens antes de uma linha indicam que a linha é um comentário e o texto será ignorado pelo compilador. Neste caso, o comentário descreve uma variação admissível da sintaxe.  
+ A sintaxe básica é: Inserir nome da tabela, lista de colunas, valores e, em seguida, uma lista dos valores a serem inseridos. Os dois hifens antes de uma linha indicam que a linha é um comentário e o texto será ignorado pelo compilador. Neste caso, o comentário descreve uma variação admissível da sintaxe.  
   
 ### <a name="to-insert-data-into-a-table"></a>Para inserir dados em uma tabela  
   

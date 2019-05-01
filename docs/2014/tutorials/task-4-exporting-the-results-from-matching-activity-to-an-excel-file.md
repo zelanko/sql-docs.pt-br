@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c9424f2ba21fb4b93e359c8662974a82c62b4895
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250885"
 ---
-# <a name="task-4-exporting-the-results-from-matching-activity-to-an-excel-file"></a>Tarefa 4: Exportando os resultados da atividade de correspondência para um arquivo do Excel
+# <a name="task-4-exporting-the-results-from-matching-activity-to-an-excel-file"></a>Tarefa 4: Exportar os resultados da atividade de correspondência para um arquivo do Excel
   Nesta tarefa, você exportará os resultados da atividade de correspondência para um arquivo do Excel.  
   
 1.  No **exportar** página, selecione **arquivo do Excel** para o **tipo de destino**.  
@@ -34,7 +34,7 @@ ms.locfileid: "56020437"
   
     2.  **Registro mais longo:** O registro sobrevivente é aquele com o maior número de termos nos campos de origem.  
   
-    3.  **Registro mais completo e mais longo:** O registro sobrevivente é aquele com o maior número de campos populados e que tem o maior número de termos em cada campo.  
+    3.  **Registro mais completo e mais longo:** O registro sobrevivente é aquele com o maior número de campos populados e com o maior número de termos em cada campo.  
   
      ![Exportar resultados da página correspondente](../../2014/tutorials/media/et-exportingtheresultsfrommatoanexcelfile.jpg "exportar resultados da página correspondente")  
   
