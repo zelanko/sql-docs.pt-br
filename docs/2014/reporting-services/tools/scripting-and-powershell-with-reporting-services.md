@@ -61,7 +61,7 @@ ms.locfileid: "63158817"
   
 ## <a name="rsexe-scripting-samples"></a>Exemplos de script RS.exe  
   
--   [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
+-   [Exemplo do Reporting Services rs.exe Script para migrar conteúdo entre servidores de relatório](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
 -   Para obter exemplos adicionais de extensão, aplicativos e scripts, consulte [SQL Server Reporting Services Product Samples (Amostras do produto SQL Server Reporting Services)](https://go.microsoft.com/fwlink/?LinkId=177889).  
   

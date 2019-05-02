@@ -60,7 +60,7 @@ ms.locfileid: "63265922"
   
 -   O banco de dados [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)], que fornece dados ao relatório de amostra.  
   
--   Uma atribuição de função que inclua a tarefa Gerenciar todas as assinaturas no relatório de amostra. Esta tarefa é obrigatória para definir uma assinatura controlada por dados. Se você for administrador no computador, a atribuição de função padrão para administradores locais fornecerá as permissões necessárias para criar assinaturas controladas por dados. Para obter mais informações, consulte [Granting Permissions on a Native Mode Report Server](security/granting-permissions-on-a-native-mode-report-server.md).  
+-   Uma atribuição de função que inclua a tarefa Gerenciar todas as assinaturas no relatório de amostra. Esta tarefa é obrigatória para definir uma assinatura controlada por dados. Se você for administrador no computador, a atribuição de função padrão para administradores locais fornecerá as permissões necessárias para criar assinaturas controladas por dados. Para obter mais informações, consulte [Concedendo permissões em um servidor de relatório no modo nativo](security/granting-permissions-on-a-native-mode-report-server.md).  
   
 -   Uma pasta compartilhada na qual você tenha permissões de gravação. A pasta compartilhada deve ser acessada por uma conexão de rede.  
   
