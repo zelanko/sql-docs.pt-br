@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 0548176a191d5c2b16b113b5a931a1ed0435741c
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: 51e6f11460e7a7c1f650b68624cc09d7cea76399
+ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63472299"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877658"
 ---
 # <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>Monitorar e solucionar problemas de clusters de grandes dados do SQL Server
 
@@ -244,7 +244,7 @@ az aks browse --resource-group <azure_resource_group> --name <aks_cluster_name>
 > [!Note]
 > Se você receber o erro a seguir: *Não é possível escutar na porta 8001: Todos os ouvintes Falha ao criar com os seguintes erros: Não é possível criar o ouvinte: Erro escutar tcp4 127.0.0.1:8001: > associar: Normalmente, o uso de apenas um de cada endereço de soquete (endereço de rede/protocolo/porta) é permitido. Não é possível criar o ouvinte: Erro escutar tcp6: endereço [[:: 1]]: 8001: faltando porta no > erro de endereço: Não é possível escutar em qualquer uma das portas solicitadas: [{8001 9090}]*, verifique se você não iniciou o painel já em outra janela.
 
-Quando você inicia o painel do navegador, você poderá receber avisos de permissão devido a RBAC que está sendo habilitada por padrão em clusters AKS e a conta de serviço usada pelo painel não tem permissões suficientes para acessar todos os recursos (por exemplo,  *é proibido pods: Usuário "system: serviceaccount:kube-sistema: kubernetes-painel" não é possível listar os pods no namespace "default"*). Execute o seguinte comando para conceder as permissões necessárias para `kubernetes-dashboard`e, em seguida, reinicie o painel:
+Quando você inicia o painel do navegador, você poderá receber avisos de permissão devido a RBAC que está sendo habilitada por padrão em clusters AKS e a conta de serviço usada pelo painel não tem permissões suficientes para acessar todos os recursos (por exemplo,  *é proibido pods: Usuário "system: serviceaccount:kube-sistema: kubernetes-painel de controle" não é possível listar os pods no namespace "default"*). Execute o seguinte comando para conceder as permissões necessárias para `kubernetes-dashboard`e, em seguida, reinicie o painel:
 
 ```bash
 kubectl create clusterrolebinding kubernetes-dashboard -n kube-system --clusterrole=cluster-admin --serviceaccount=kube-system:kubernetes-dashboard

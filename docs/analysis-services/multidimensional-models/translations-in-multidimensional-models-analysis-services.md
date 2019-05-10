@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b8511efe6b567fad82ab45f7f5a53188b0f13643
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: f25023f6a0191cb645134d327f40ea84ba64932f
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147071"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357308"
 ---
 # <a name="translations-in-multidimensional-models-analysis-services"></a>Traduções em modelos multidimensionais (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -36,8 +36,6 @@ ms.locfileid: "50147071"
 4.  Clique com o botão direito do mouse em qualquer campo e selecione **Explorar dados**. Você verá as traduções em francês, espanhol e inglês de cada membro.  
   
  Formatos de data, hora e moeda não são implementados por meio de traduções. Para fornecer dinamicamente formatos culturalmente específicos com base na localidade do cliente, use o Assistente de conversão de moeda e a propriedade **FormatString** . Consulte [Conversões de moeda e &#40;Analysis Services&#41;](../../analysis-services/currency-conversions-analysis-services.md) e [Elemento FormatString &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl) para obter detalhes.  
-  
- [Lesson 9: Defining Perspectives and Translations](../../analysis-services/lesson-9-defining-perspectives-and-translations.md) no Tutorial do Analysis Services orientará você pelas etapas de criação e teste de traduções.  
   
 ## <a name="defining-translations"></a>Definindo traduções  
   

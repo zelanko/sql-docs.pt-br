@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 56cb3c4fc617e4b158b974c82bec87401c01fca5
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: eb62c8cf4efb9a2ca2d59ea55ba194559eda9962
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63455150"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775411"
 ---
 # <a name="release-notes-for-sql-server-2019-preview-on-linux"></a>Notas de versão para versão prévia de 2019 do SQL Server no Linux
 
@@ -48,6 +48,7 @@ A tabela a seguir lista o histórico de versão de visualização do SQL Server 
 
 | Versão               | Versão       | Data de liberação |
 |-----------------------|---------------|--------------|
+| [CTP 2.5](#CTP25)     | 15.0.1500.28  | 2019-4-24    |
 | [CTP 2.4](#CTP24)     | 15.0.1400.75  | 2019-3-27    |
 | [CTP 2.3](#CTP23)     | 15.0.1300.359 | 2019-3-01    |
 | [CTP 2.2](#CTP22)     | 15.0.1200.24  | 2018-12-11   |
@@ -65,6 +66,27 @@ Se você estiver atualizando os pacotes existentes do SQL Server, execute o coma
 - [Instalar o SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [Instalar a visualização de 2019 do SQL Server R Services do Machine Learning e o suporte do Python no Linux](sql-server-linux-setup-machine-learning.md)
 - [Habilitar o SQL Server Agent](sql-server-linux-setup-sql-agent.md)
+- [Configuração do PolyBase Linux](../relational-databases/polybase/polybase-linux-setup.md)
+
+## <a id="CTP25"></a> CTP 2.5 (abril de 2019)
+
+As seções a seguir fornecem os locais de pacote e problemas conhecidos para o CTP 2.5 versão. Para saber mais sobre os novos recursos para Linux no SQL Server 2019, consulte o [o que há de novo no SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
+
+### <a name="package-details"></a>Detalhes do pacote
+
+Para instalações de pacote manual ou off-line, você pode baixar os pacotes Debian e RPM com as informações na tabela a seguir:
+
+| Pacote | Versão do pacote | Downloads |
+|-----|-----|-----|
+| Pacote RPM do Red Hat | 15.0.1500.28-1 | [Pacote RPM do mecanismo](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1500.28-1.x86_64.rpm)</br>[Pacote de alta disponibilidade RPM](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1500.28-1.x86_64.rpm)</br>[Pacote de RPM de pesquisa de texto completo](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1500.28-1.x86_64.rpm)</br>[Pacote RPM de extensibilidade](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1500.28-1.x86_64.rpm)</br>[Pacote RPM de extensibilidade do Java](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1500.28-1.x86_64.rpm)</br>[Pacote RPM do PolyBase](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-polybase-15.0.1500.28-1.x86_64.rpm)|
+| Pacote RPM SLES | 15.0.1500.28-1 | [pacote de RPM do mecanismo de MSSQL-server](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1500.28-1.x86_64.rpm)</br>[Pacote de alta disponibilidade RPM](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1500.28-1.x86_64.rpm)</br>[Pacote de RPM de pesquisa de texto completo](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1500.28-1.x86_64.rpm)</br>[Pacote RPM de extensibilidade](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1500.28-1.x86_64.rpm)</br>[Pacote RPM de extensibilidade do Java](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1500.28-1.x86_64.rpm)</br>[Pacote RPM do PolyBase](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-polybase-15.0.1500.28-1.x86_64.rpm)|
+| Pacote Debian do Ubuntu 16.04 | 15.0.1500.28-1 | [Pacote Debian do mecanismo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1500.28-1_amd64.deb)</br>[Pacote de alta disponibilidade de Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1500.28-1_amd64.deb)</br>[Pacote Debian de pesquisa de texto completo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1500.28-1_amd64.deb)</br>[Pacote Debian de extensibilidade](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1500.28-1_amd64.deb)</br>[Pacote Debian de extensibilidade de Java](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1500.28-1_amd64.deb)</br>[Pacote RPM do PolyBase](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.1500.28-1_amd64.deb)|
+
+### <a name="known-issues"></a>Problemas conhecidos
+
+#### <a id="msdtc"></a> Coordenador de transações distribuídas da Microsoft
+
+Atualmente, o MSDTC requer transações não autenticados. Por exemplo, se você estiver usando um servidor vinculado do SQL Server no Windows para o SQL Server no Linux ou usa um aplicativo de cliente do Windows para iniciar uma transação distribuída no SQL Server no Linux, em seguida, MSDTC no servidor/cliente Windows é necessário para usar a opção "não Autenticação necessária".
 
 ## <a id="CTP24"></a> CTP 2.4 (março de 2019)
 
@@ -174,7 +196,7 @@ Para começar, consulte os inícios rápidos a seguir:
 - [Instalar no SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Instalar no Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Executar no Docker](quickstart-install-connect-ubuntu.md)
-- [Provisionar uma VM SQL no Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
+- [Provisionar uma VM SQL no Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 - [Executar e conectar – Nuvem](quickstart-install-connect-clouds.md)
 
 Para obter respostas para perguntas frequentes, consulte o [SQL Server nas perguntas frequentes sobre o Linux](sql-server-linux-faq.md).

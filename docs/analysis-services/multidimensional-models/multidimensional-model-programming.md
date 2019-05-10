@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f24376d93f09066d68610e7ac5463945a6db7abd
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: f8bc4571d212f2722050818e8e591e48b63df06e
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147791"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449633"
 ---
 # <a name="multidimensional-model-programming"></a>Programação de modelo multidimensional
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,6 +37,6 @@ ms.locfileid: "50147791"
   
 ## <a name="see-also"></a>Consulte também  
  [Programação do modelo de tabela para compatibilidade níveis 1050 até 1103](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)   
- [Programação de mineração de dados](../../analysis-services/data-mining-programming.md)  
+ [Programação de mineração de dados](../../analysis-services/data-mining/data-mining-programming.md)  
   
   

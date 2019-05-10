@@ -18,12 +18,12 @@ ms.assetid: 240eeeb9-6d8b-4930-b912-1d273ca0ab38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0a8c87eb8ed41b1669cf423aaccb8b06ee8b0e54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6611998b8aa22242693ec5d44bf842671a777c98
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690004"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449720"
 ---
 # <a name="spoagetproperty-transact-sql"></a>sp_OAGetProperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_OAGetProperty objecttoken , propertyname
  *PropertyValue* **saída**  
  É o valor de propriedade retornado. Se for especificado, deverá ser uma variável local do tipo de dados apropriado.  
   
- Se a propriedade retorna um objeto OLE, *propertyvalue* deve ser uma variável local de tipo de dados **int**. Um token de objeto é armazenado na variável local e pode ser usado com outros procedimentos armazenados de automação OLE.  
+ Se a propriedade retorna um objeto OLE, *propertyvalue* deve ser uma variável local de tipo de dados **int**. Um token de objeto é armazenado na variável local, e esse token de objeto pode ser usado com outros procedimentos armazenados de automação OLE.  
   
  Se a propriedade retornar um único valor, especifique uma variável local para *propertyvalue*, que retorna a propriedade de valor na variável local; ou não especificar *propertyvalue*, que retorna o valor da propriedade para o cliente como um conjunto de resultados de coluna única e uma linha.  
   
@@ -83,7 +83,7 @@ sp_OAGetProperty objecttoken , propertyname
   
  Quando todos os valores de dados em uma coluna compartilharem o mesmo tipo de dados, esse tipo de dados será usado para a coluna inteira. Quando os valores de dados em uma coluna forem de tipos de dados diferentes, o tipo de dados da coluna inteira será escolhido com base no quadro a seguir.  
   
-||INT|FLOAT|money|DATETIME|varchar|NVARCHAR|  
+||INT|FLOAT|money|datetime|varchar|NVARCHAR|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
@@ -96,7 +96,7 @@ sp_OAGetProperty objecttoken , propertyname
  Você também pode usar **sp_OAMethod** para obter um valor da propriedade.  
   
 ## <a name="permissions"></a>Permissões  
- Exige associação à função de servidor fixa **sysadmin** .  
+ Requer associação na **sysadmin** função de servidor fixa ou permissão de execução diretamente nesse procedimento armazenado. `Ole Automation Procedures` configuração deve estar **habilitado** usar qualquer procedimento de sistema relacionado à automação OLE.  
   
 ## <a name="examples"></a>Exemplos  
   

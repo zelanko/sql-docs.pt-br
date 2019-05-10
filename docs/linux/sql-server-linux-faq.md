@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: e0f1b8a425e3b21ac1e36e0f301f3b380d791d1a
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: eafc21d079561b6024d23b3e90bd24dbf7b369fc
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566575"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64774740"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>SQL Server no Linux perguntas frequentes (FAQ)
 
@@ -85,7 +85,7 @@ As seções a seguir fornecem as perguntas e respostas comuns para o SQL Server 
 
 1. **Pode instalar o SQL Server no subsistema do Linux para Windows 10?**
 
-   Nenhum. Linux em execução no Windows 10 no momento, não é uma plataforma com suporte do SQL Server e ferramentas relacionadas.
+   Não. Linux em execução no Windows 10 no momento, não é uma plataforma com suporte do SQL Server e ferramentas relacionadas.
 
 1. **Quais sistemas de arquivos do Linux do SQL Server pode usar arquivos de dados?**
 
@@ -152,7 +152,7 @@ As seções a seguir fornecem as perguntas e respostas comuns para o SQL Server 
 
 1. **Posso migrar meus dados da Oracle e outros mecanismos de banco de dados para SQL Server no Linux?**
 
-   Sim. O SSMA dá suporte à migração de vários tipos de mecanismos de banco de dados: Microsoft Access, DB2, MySQL, Oracle e SAP ASE (anteriormente conhecido como o SAP Sybase ASE). Para obter um exemplo de como usar o SSMA, consulte [migrar um esquema do Oracle para o SQL Server no Linux com o SQL Server Migration Assistant](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=%2fsql%2flinux%2ftoc.json).
+   Sim. O SSMA dá suporte à migração de vários tipos de mecanismos de banco de dados: Microsoft Access, DB2, MySQL, Oracle e SAP ASE (anteriormente conhecido como o SAP Sybase ASE). Para obter um exemplo de como usar o SSMA, consulte [migrar um esquema do Oracle para o SQL Server no Linux com o SQL Server Migration Assistant](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=/sql/toc/toc.json).
 
 1. **Quais permissões são necessárias para arquivos do SQL Server?**
 

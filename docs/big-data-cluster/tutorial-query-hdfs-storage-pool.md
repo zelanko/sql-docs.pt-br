@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: c1c2ccf548b5df91420821a1865120c27edd2c02
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: add6dcd55db04fb5af00919b997ffa85c5e8faea
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59581259"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776222"
 ---
 # <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>Tutorial: Consulta HDFS em um cluster de big data do SQL Server
 
@@ -82,6 +82,9 @@ O pool de armazenamento contém dados de sequência de cliques da web em um arqu
      ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
        CREATE EXTERNAL DATA SOURCE SqlStoragePool
        WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
+     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.5'
+       CREATE EXTERNAL DATA SOURCE SqlStoragePool
+       WITH (LOCATION = 'sqlhdfs://nmnode-0-svc:50070');
    END
    ```
 

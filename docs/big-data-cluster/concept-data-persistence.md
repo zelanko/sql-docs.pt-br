@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: edef0fa21cc2a41785e14f7c96cf3c52b1e0bacb
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: d095af731e3c62ce24dd3d8cbf059aa6278dd22c
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63472198"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776162"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Persistência de dados com o cluster de big data do SQL Server no Kubernetes
 
@@ -49,19 +49,19 @@ Para usar o armazenamento persistente durante a implantação, defina os valores
 > [!WARNING]
 > A execução sem armazenamento persistente pode trabalhar em um ambiente de teste, mas isso poderá resultar em um cluster não funcional. Após a reinicialização de pod, dados de metadados e/ou usuário do cluster serão perdidos permanentemente. Não recomendamos executar nessa configuração. 
 
-Esta seção fornece mais exemplos sobre como definir as configurações de armazenamento para sua implantação de cluster de big data do SQL Server.
+[Configurar o armazenamento](#config-samples) seção fornece mais exemplos sobre como definir as configurações de armazenamento para sua implantação de cluster de big data do SQL Server.
 
 ## <a name="aks-storage-classes"></a>Classes de armazenamento do AKS
 
 Acompanha o AKS [duas classes de armazenamento interno](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) **padrão** e **premium gerenciados** juntamente com provisionador dinâmico para eles. Você pode especificar qualquer uma dessas ou criar sua própria classe de armazenamento para a implantação de cluster de big data com o armazenamento persistente habilitado. Por padrão, a interna no arquivo de configuração de cluster do aks *aks-dev-test.json* vem com configurações de armazenamento persistente para usar **premium gerenciados** classe de armazenamento.
 
 > [!WARNING]
-> Volumes persistentes criados com **padrão** classe de armazenamento têm uma política de recuperar de *excluir*. Portanto, no momento você excluir o cluster de big data do SQL Server, declarações de volume persistente obtém também os volumes excluídos e, em seguida, persistentes. **premium Managed** tem uma política de recuperar de *reter*. Você pode encontrar mais informações sobre classes de armazenamento no AKS e suas configurações no [isso](https://docs.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes) artigo.
+> Volumes persistentes criados com as classes de armazenamento interno **padrão** e **premium gerenciados** têm uma política de recuperar de *excluir*. Portanto, no momento você excluir o cluster de big data do SQL Server, declarações de volume persistente obtém também os volumes excluídos e, em seguida, persistentes. Você pode criar classes de armazenamento personalizado usando **disco do azure** privioner com um *reter* recuperar política, conforme mostrado na [isso](https://docs.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes) artigo.
 
 
 ## <a name="minikube-storage-class"></a>Classe de armazenamento do Minikube
 
-Minikube vem com uma classe de armazenamento interna chamada **standard** junto com um provedor dinâmico para ele. A configuração interna no arquivo para minikube *minikube-dev-test.json* tem as definições de configuração de armazenamento nas especificações do plano de controle. As mesmas configurações serão aplicadas a todas as especificações de pools. Você também pode personalizar uma cópia desse arquivo e usá-lo para sua implantação de cluster de big data no minikube. Manualmente, você pode editar o arquivo personalizado e alterar o tamanho das declarações de volumes persistentes para grupos específicos acomodar as cargas de trabalho que deseja executar. Ou, consulte esta seção para obter exemplos sobre como fazer edições usando *mssqlctl* comandos.
+Minikube vem com uma classe de armazenamento interna chamada **standard** junto com um provedor dinâmico para ele. A configuração interna no arquivo para minikube *minikube-dev-test.json* tem as definições de configuração de armazenamento nas especificações do plano de controle. As mesmas configurações serão aplicadas a todas as especificações de pools. Você também pode personalizar uma cópia desse arquivo e usá-lo para sua implantação de cluster de big data no minikube. Manualmente, você pode editar o arquivo personalizado e alterar o tamanho das declarações de volumes persistentes para grupos específicos acomodar as cargas de trabalho que deseja executar. Ou, consulte [configurar o armazenamento](#config-samples) seção para obter exemplos sobre como fazer edições usando *mssqlctl* comandos.
 
 ## <a name="kubeadm-storage-classes"></a>Classes de armazenamento Kubeadm
 
@@ -97,7 +97,7 @@ O exemplo a seguir atualiza o tamanho do volume persistente declarações para t
 mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type[*])].spec.storage.size=32Gi"
 ```
 
-### <a name="configure-storage-class"></a>Configurar classe de armazenamento
+### <a id="config-samples"></a> Configurar classe de armazenamento
 
 Exemplo a seguir mostra como modificar a classe de armazenamento para o plano de controle:
 

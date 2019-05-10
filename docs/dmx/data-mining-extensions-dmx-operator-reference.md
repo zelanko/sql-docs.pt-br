@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7a85644328591f037ee342866ca7dfb5e887ed17
 ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/11/2018
 ms.locfileid: "38006828"
@@ -33,9 +33,9 @@ ms.locfileid: "38006828"
 |[&#60;&#62;&#40;Não é igual a&#41; &#40;DMX&#41;](../dmx/not-equal-to-dmx.md)|Operador de comparação. Para argumentos que avaliam valores não nulos; que retornam TRUE se o valor do argumento da esquerda for diferente do valor do argumento da direita; que retornam FALSE se for o contrário. Se um ou ambos os argumentos forem avaliados como um valor nulo, o operador retornará um valor nulo.|  
 |[&#60;= &#40;Menor que ou igual a&#41; &#40;DMX&#41;](../dmx/less-than-or-equal-to-dmx.md)|Operador de comparação. Para argumentos que avaliam valores não nulos; que retornam TRUE se o valor do argumento da esquerda for menor ou igual ao valor do argumento da direita; que retornam FALSE se for o contrário. Se um ou ambos os argumentos forem avaliados como um valor nulo, o operador retornará um valor nulo.|  
 |[&#62;= &#40;Maior que ou igual a&#41; &#40;DMX&#41;](../dmx/greater-than-or-equal-to-dmx.md)|Operador de comparação. Para argumentos que avaliam valores não nulos; que retornam TRUE se o valor do argumento da esquerda for maior ou igual ao valor do argumento da direita; que retornam FALSE se for o contrário. Se um ou ambos os argumentos forem avaliados como um valor nulo, o operador retornará um valor nulo.|  
-|[E &AMP;#40;DMX&AMP;#41;](../dmx/and-dmx.md)|Operador lógico que executa uma conjunção ou duas expressões numéricas.|  
-|[NÃO &AMP;#40;DMX&AMP;#41;](../dmx/not-dmx.md)|Operador lógico que executa uma negação em uma expressão numérica.|  
-|[OU &AMP;#40;DMX&AMP;#41;](../dmx/or-dmx.md)|Operador lógico que executa uma disjunção em duas expressões numéricas.|  
+|[E &#40;DMX&#41;](../dmx/and-dmx.md)|Operador lógico que executa uma conjunção ou duas expressões numéricas.|  
+|[NÃO &#40;DMX&#41;](../dmx/not-dmx.md)|Operador lógico que executa uma negação em uma expressão numérica.|  
+|[OU &#40;DMX&#41;](../dmx/or-dmx.md)|Operador lógico que executa uma disjunção em duas expressões numéricas.|  
 |[+ &#40;Positivo&#41; &#40;DMX&#41;](../dmx/positive-dmx.md)|Operador unário que retorna um valor positivo de expressão numérica.|  
 |[- &#40;Negativo&#41; &#40;DMX&#41;](../dmx/negative-dmx.md)|Operador unário que retorna um valor negativo de expressão numérica.|  
 |[Barra dupla &#40;comentário&#41; &#40;DMX&#41;](../dmx/double-slash-comment-dmx.md)|Indica uma cadeia de caracteres de texto que o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] não deve executar. É possível aninhar comentários dentro de uma instrução DMX, incluí-los ao final de uma linha de código ou inseri-los em uma linha separada.|  

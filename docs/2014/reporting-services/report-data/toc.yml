@@ -153,8 +153,6 @@
       href: ../report-data/dataset-properties-dialog-box-parameters.md
     - name: 'Caixa de diálogo Propriedades do Conjunto de Dados, Consulta'
       href: ../dataset-properties-dialog-box-query.md
-    - name: Caixa de diálogo Definir Parâmetros de Consulta
-      href: define-query-parameters-dialog-box.md
     - name: Caixa de diálogo Inserir Credenciais da Fonte de Dados
       href: ../enter-data-source-credentials-dialog-box.md
     - name: 'Caixa de diálogo Propriedades da Fonte de Dados Compartilhada, Credenciais'
