@@ -3,17 +3,17 @@ title: Instalação do SQL Server 2016 R Services (no banco de dados) – SQL Se
 description: Adicione suporte a idiomas para um mecanismo de banco de dados no SQL Server 2016 R Services do Windows de programação R.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/01/2018
+ms.date: 05/03/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 787b26c401f825c6c74298a803a16d59f1a37d04
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 52935abf74fcf3ad7a4f7c8d78faa6b9b21d47e5
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748708"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095939"
 ---
 # <a name="install-sql-server-2016-r-services"></a>Instalar o SQL Server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -208,6 +208,7 @@ No nível de instância, configurações adicionais podem incluir:
 * [Configuração do firewall para serviços do SQL Server Machine Learning](../../advanced-analytics/security/firewall-configuration.md)
 * [Habilite os protocolos de rede adicionais](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [Habilitar conexões remotas](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
+* [Gerenciar cotas de disco](https://docs.microsoft.com/windows/desktop/fileio/managing-disk-quotas) para evitar a execução de tarefas que esgotar o espaço em disco de scripts externos
 
 <a name="bkmk_configureAccounts"></a>
 <a name="bkmk_AllowLogon"></a>

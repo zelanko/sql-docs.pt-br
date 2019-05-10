@@ -12,15 +12,15 @@ helpviewer_keywords:
 - administration
 - dqs,adminstration
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 43316ba8dad76417e48d6fdb4fefece87131041a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: e8eea75f4f92fc62275b1a2a32896f2673bfc3ef
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033137"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487319"
 ---
 # <a name="dqs-administration"></a>administração do dqs
 
@@ -84,7 +84,7 @@ ms.locfileid: "56033137"
 |Descreve como fazer backup e restaurar bancos de dados do DQS.|[Fazer backup e restaurar banco de dados do DQS](../data-quality-services/backing-up-and-restoring-dqs-databases.md)|  
 |Descreve como desanexar e anexar bancos de dados DQS.|[Desanexar e anexar bancos de dados do DQS](../data-quality-services/detaching-and-attaching-dqs-databases.md)|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Serviços de Dados de Referência no DQS](../data-quality-services/reference-data-services-in-dqs.md)   
  [Gerenciar arquivos de log do DQS](../data-quality-services/manage-dqs-log-files.md)   
  [Gerenciar bancos de dados do DQS](../data-quality-services/manage-dqs-databases.md)  

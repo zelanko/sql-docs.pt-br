@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - web configuration file [Master Data Services]
 ms.assetid: b8cc9a35-97ab-4fe0-ab4b-c07f13d9793a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e5f87caf233c5b2a0f7bedc50f5ab9b9f6f392f5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: ef92aa3410ee12fd5edc4ea602e64a6fa06fdc9c
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814248"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65477226"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>Referência de configuração da Web (Master Data Services)
 

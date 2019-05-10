@@ -2,21 +2,21 @@
 title: Criar trechos de código reutilizáveis
 titleSuffix: Azure Data Studio
 description: Saiba como criar e usar trechos de código SQL no estúdio de dados do Azure
-ms.custom: seodec18
-ms.date: 09/24/2018
-ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0e10b121ffc1afae83b767bcfdfe8e6765f990f4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.reviewer: alayu; sstein
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: 2c9e4b38fceedc9a2bfe7690cab759cdc77ea8f2
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63180654"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105333"
 ---
 # <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>Criar e usar trechos de código para criar rapidamente scripts Transact-SQL (T-SQL) [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 83a03b85-ea7f-4b4a-b19b-f7eca534ffae
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ad4ee1957f295bf13d0346590f621ca87dc6387f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 38d4b1e7f9bd3e76c00bb4228e53e09416ed8557
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823400"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488097"
 ---
 # <a name="test-a-user39s-permissions-master-data-services"></a>Testar permissões de um usuário (Master Data Services)
 
@@ -34,7 +34,7 @@ ms.locfileid: "52823400"
   
 4.  Da próxima vez que você abrir a janela do navegador, será solicitado a fornecer um nome de usuário e senha.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Segurança &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
   
   

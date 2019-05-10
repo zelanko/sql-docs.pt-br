@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 99e11038cbc7315ff485177f9270e6f0fba74142
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 9af16a2e8c1d967b42882cc84fae68f1920e9c28
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823690"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65478087"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Implantar um pacote de implantação de modelo usando MDSModelDeploy
 
@@ -113,12 +113,12 @@ ms.locfileid: "52823690"
   
      Na atualização de um modelo, se o processo falhar durante as três primeiras etapas, ele não continuará; no entanto, as alterações já feitas não serão revertidas. Se o processo falhar na etapa 4, os membros que podem ser atualizados serão atualizados.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Próximas etapas  
  Os atributos de arquivo e permissões de usuário e de grupo não estão incluídos em pacotes de implantação de modelo. Depois de implantar um modelo, você deve atualizar esses objetos manualmente. Para obter mais informações, consulte:  
   
 -   [Atribuir permissões de objeto de modelo &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Implantando modelos &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)  
   
   

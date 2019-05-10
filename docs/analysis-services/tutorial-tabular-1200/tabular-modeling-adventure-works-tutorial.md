@@ -1,6 +1,6 @@
 ---
-title: Analysis Services (nível de compatibilidade 1200) de modelagem de tabela | Microsoft Docs
-ms.date: 05/07/2019
+title: Tutorial do Analysis Services de vendas pela Internet (nível de compatibilidade 1200) | Microsoft Docs
+ms.date: 05/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7ae9dd208d151dc3b8fb8117ba6e672ada2aecdd
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
-ms.translationtype: HT
+ms.openlocfilehash: 06b3aace2320882d209e6a7ab0f67a16a6f8a6df
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65403348"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503617"
 ---
-# <a name="tabular-modeling-1200-compatibility-level"></a>Modelagem tabular (nível de compatibilidade 1200)
+# <a name="adventure-works-internet-sales-tutorial-1200"></a>Tutorial do Adventure Works Internet Sales (1200)
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 Este tutorial fornece lições sobre como criar um modelo de tabela do Analysis Services na [nível de compatibilidade 1200](../tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) usando [SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)e implantar o modelo para um Analysis Services servidor local ou no Azure.  
@@ -98,7 +98,7 @@ Este tutorial também inclui lições complementares. Os tópicos desta seção 
 |[Configurar propriedades de relatório para relatórios do Power View](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)|30 minutos| 
 
   
-## <a name="next-step"></a>Próxima etapa  
+## <a name="next-steps"></a>Próximas etapas  
 Para começar o tutorial, vá para a primeira lição: [Lição 1: Criar um novo projeto de modelo de tabela](lesson-1-create-a-new-tabular-model-project.md).  
   
   

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 89fce454-a816-4b33-a26a-d1b9741d269b
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7e987ab75413334865b5e7d577860c498540adcd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+ms.openlocfilehash: c134a2e540fd597c36f07bc312e2f67a73e07d28
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53200846"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65476967"
 ---
 # <a name="import-data-from-excel-to-master-data-services-mds-add-in-for-excel"></a>Importar dados do Excel para Master Data Services (suplemento do MDS para Excel)
 
@@ -50,10 +50,10 @@ ms.locfileid: "53200846"
 > [!NOTE]  
 >  Se você for adicionar novos membros (linhas) à sua planilha e não conseguir publicá-los com êxito no repositório do MDS, talvez você não tenha a permissão **Atualizar** para todos os atributos da planilha. Na guia **Revisão** , no grupo **Alterações** , clique em **Desproteger Planilha** e tente publicar novamente.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Próximas etapas  
  [Aplicar regras de negócio &#40;Suplemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/apply-business-rules-mds-add-in-for-excel.md)  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Visão geral: Importando dados do Excel &#40;Suplemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)   
  [Validando dados &#40;Suplemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md)  
   

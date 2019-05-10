@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a51b4a791de70421a80f7a62a1ab13b865688529
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
-ms.translationtype: HT
+ms.openlocfilehash: 08e73462f3536f1aff6aecbf44692a7f24f54aa9
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641467"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480173"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>Proteger um aplicativo Web Master Data Manager
 
@@ -65,7 +65,7 @@ ms.locfileid: "52641467"
 13. Salve o arquivo e feche-o. Se você receber um erro, pode ser porque o UAC está habilitado. Para obter mais informações, consulte [Desativar o controle de conta do usuário](http://technet.microsoft.com/library/cc709691\(WS.10\).aspx). Agora, os usuários devem ser capazes de usar HTTPS para acessar o site.  
 
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Criar um aplicativo Web do Master Data Manager &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
   
   

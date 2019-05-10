@@ -10,15 +10,15 @@ helpviewer_keywords:
 - attributes [Master Data Services], creating link attributes
 - creating link attributes [Master Data Services]
 ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 943cb761e9c456b0c9da24be3ef14e22a2310dde
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 055bb2e9bc0bc2f1ef70b8a7a7eee07071929ad9
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765859"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65479948"
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>Criar um atributo de link (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], crie um atributo de link quando desejar que os usuários insiram um hiperlink como um valor de atributo, como http://www.contoso.com.  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a2ace569180006f54461631848ecbf5342b2c1e3
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: 99e9c837250c6020bb91c376a6ec34c5e5847f2b
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63472035"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099482"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Como implantar clusters de grandes dados do SQL Server no Kubernetes
 
@@ -133,12 +133,12 @@ Também é possível personalizar seu próprio arquivo de configuração de impl
 
 ## <a id="env"></a> Variáveis de ambiente
 
-As seguintes variáveis de ambiente são usadas para configurações de segurança que não são armazenadas em um arquivo de configuração de implantação.
+As seguintes variáveis de ambiente são usadas para configurações de segurança que não são armazenadas em um arquivo de configuração de implantação. Observe que o Docker, exceto as credenciais podem ser definidas no arquivo de configuração.
 
 | Variável de ambiente | Descrição |
 |---|---|---|---|
-| **DOCKER_REGISTRY** | O registro privado onde as imagens usadas para implantar o cluster são armazenadas. |
-| **DOCKER_REPOSITORY** | O repositório privado dentro do registro acima, onde as imagens são armazenadas. |
+| **DOCKER_REGISTRY** | O registro privado onde as imagens usadas para implantar o cluster são armazenadas. Use *repo.microsoft.com privada* para o ducration da versão prévia pública controlada.|
+| **DOCKER_REPOSITORY** | O repositório privado dentro do registro acima, onde as imagens são armazenadas. Use *versão prévia privada mssql* durante a versão prévia pública controlada.|
 | **DOCKER_USERNAME** | O nome de usuário para acessar as imagens de contêiner, caso eles são armazenados em um repositório privado. |
 | **DOCKER_PASSWORD** | A senha para acessar o repositório privado acima. |
 | **DOCKER_IMAGE_TAG** | O rótulo usado para marcar as imagens. O padrão é **mais recente**, mas é recomendável usar a marca correspondente para a versão para evitar problemas de incompatibilidade de versão. |
@@ -152,12 +152,12 @@ Essas variáveis de ambiente devem ser definidas antes de chamar **criar cluster
 O exemplo a seguir mostra como definir as variáveis de ambiente para Linux (bash) e Windows (PowerShell):
 
 ```bash
-export CONTROLLER_USERNAME=<controller_user>
+export CONTROLLER_USERNAME=admin
 export CONTROLLER_PASSWORD=<password>
-export DOCKER_REGISTRY=<docker-registry>
-export DOCKER_REPOSITORY=<docker-repository>
 export MSSQL_SA_PASSWORD=<password>
 export KNOX_PASSWORD=<password>
+export DOCKER_REGISTRY=private-repo.microsoft.com
+export DOCKER_REPOSITORY=mssql-private-preview
 export DOCKER_USERNAME=<docker-username>
 export DOCKER_PASSWORD=<docker-password>
 export DOCKER_IMAGE_TAG=ctp2.5
@@ -166,10 +166,10 @@ export DOCKER_IMAGE_TAG=ctp2.5
 ```PowerShell
 SET CONTROLLER_USERNAME=admin
 SET CONTROLLER_PASSWORD=<password>
-SET DOCKER_REGISTRY=<docker-registry>
-SET DOCKER_REPOSITORY=<docker-repository>
 SET MSSQL_SA_PASSWORD=<password>
 SET KNOX_PASSWORD=<password>
+SET DOCKER_REGISTRY=private-repo.microsoft.com
+SET DOCKER_REPOSITORY=mssql-private-preview
 SET DOCKER_USERNAME=<docker-username>
 SET DOCKER_PASSWORD=<docker-password>
 SET DOCKER_IMAGE_TAG=ctp2.5

@@ -13,12 +13,12 @@ ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: e71c4c68a7f04e5f7f33b8635e660a84f501c263
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+ms.openlocfilehash: 3ab6fd05b0cf9486ded5b0e550101a374669be11
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671292"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65097235"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Tutorial: Usar autenticação do Active Directory com o SQL Server no Linux
 
@@ -117,9 +117,9 @@ Para configurar o arquivo keytab de serviço do SQL Server:
 1. Adicione entradas de keytab para cada SPN usando os seguintes comandos:
 
    ```bash
-   addent -password -p MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e aes256-cts-hmac -sha1-96
+   addent -password -p MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e aes256-cts-hmac-sha1-96
    addent -password -p MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e rc4-hmac
-   addent -password -p MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e aes256-cts-hmac -sha1-96
+   addent -password -p MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e aes256-cts-hmac-sha1-96
    addent -password -p MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e rc4-hmac
    ```
 

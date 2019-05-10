@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: c8f3fbae-02c4-464d-a35c-7108f48c58cb
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 343a5ea33ed805cc3e5f2c4ce6e91b7546276e00
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 96f3d36c77e12f69184a3f5644b6bbc3d52ac394
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015228"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487441"
 ---
 # <a name="upgrade-dqs-databases-schema-after-installing-sql-server-update"></a>Atualize o esquema de bancos de dados DQS depois de instalar a atualização do SQL Server
 
@@ -61,12 +61,12 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
   
 6.  Uma mensagem de conclusão é exibida depois da atualização bem-sucedida do esquema de bancos de dados do DQS.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Próximas etapas  
  Faça logon no Servidor do Data Quality de um aplicativo Cliente do Data Quality.  
   
  Para obter mais informações sobre como atualizar esquema de bancos de dados do DQS depois de instalar atualizações do SQL Server e etapas de solução de problemas associadas, veja [Atualizar DQS: Instalando atualizações cumulativas ou patches de hotfix no Data Quality Services](https://go.microsoft.com/fwlink/?LinkID=251565).  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Instalar o Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [Atualizar assemblies SQLCLR após atualizar o .NET Framework](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)  
   

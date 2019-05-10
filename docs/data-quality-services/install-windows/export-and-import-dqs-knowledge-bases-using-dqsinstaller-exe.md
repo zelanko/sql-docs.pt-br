@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 8234c63b-a018-4e55-8184-9a6bdf03274d
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1817e93c23ebe34b47d0deff65b871b725433075
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 79adb6a32992aa9a60b01a00b065c0e2c4c11440
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56009527"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487557"
 ---
 # <a name="export-and-import-dqs-knowledge-bases-using-dqsinstallerexe"></a>Export and Import DQS Knowledge Bases Using DQSInstaller.exe
 
@@ -58,7 +58,7 @@ dqsinstaller.exe -importkbs c:\DQSBackup.dqsb
   
  Se existirem bases de dados de conhecimento em seu [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] com o mesmo nome que aquelas importadas, os nomes das bases de dados de conhecimento importadas serão anexados com um sublinhado (_) seguido de um valor inteiro, começando em 1. Por exemplo, se o domínio "CompanyName" for duplicado, o nome de domínio importado será "CompanyName_1".  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Executar o DQSInstaller.exe para concluir a instalação do Data Quality Server](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
  [Instalar o Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [Exportar uma base de dados de conhecimento para um arquivo .dqs](../../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)   

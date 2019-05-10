@@ -12,15 +12,15 @@ helpviewer_keywords:
 - version flags [Master Data Services], creating
 - versions [Master Data Services], creating flags
 ms.assetid: 3067e1e3-05b7-4f11-9206-c612ef4e7e42
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 894c27e89f2dc9be90c792b4cce8db5690a32863
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: c541c61f32b24a2d32ee78d20a78a6f894a0dece
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769588"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65477076"
 ---
 # <a name="create-a-version-flag-master-data-services"></a>Criar um sinalizador de versão (Master Data Services)
 
@@ -55,11 +55,11 @@ ms.locfileid: "52769588"
   
 8.  Clique em **Salvar**.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Próximas etapas  
   
 -   [Atribuir um sinalizador a uma versão &#40;Master Data Services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Versões &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   
  [Alterar o nome de um sinalizador de versão &#40;Master Data Services&#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)  
   

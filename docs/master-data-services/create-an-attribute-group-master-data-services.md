@@ -11,15 +11,15 @@ helpviewer_keywords:
 - attribute groups [Master Data Services], creating
 - creating attribute groups [Master Data Services]
 ms.assetid: 798c325e-e8d8-412a-b02e-118f2741d1c7
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b53cff2104d5f510db446095a3a65c6be27be77d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: b32182dd1d75a35d42587c839c3f46c89654511b
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813298"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65477138"
 ---
 # <a name="create-an-attribute-group-master-data-services"></a>Criar um grupo de atributo (Master Data Services)
 
@@ -68,11 +68,11 @@ ms.locfileid: "52813298"
   
 12. Clique em **Salvar**.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Próximas etapas  
   
 -   [Tornar um grupo de atributos visível para os usuários &#40;Master Data Services&#41;](../master-data-services/make-an-attribute-group-visible-to-users-master-data-services.md)  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Grupos de atributos &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)   
  [Atributos &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
  [Alterar o nome de um grupo de atributos &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-group-name-master-data-services.md)   

@@ -2,26 +2,26 @@
 title: Execute blocos de anotações no estúdio de dados do Azure
 titleSuffix: SQL Server big data clusters
 description: Este artigo explica como executar o Jupyter Notebooks no estúdio de dados do Azure conectado a um cluster de big data do SQL Server de 2019.
-author: rothja
+author: achatter
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 05/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a220b78fe93b286837e0e235b881ffd1a612e512
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 6cc491ee2592ad68ff334e0c1b7287b5754220dc
+ms.sourcegitcommit: c1cc44c3b5ad030d8726be8819594341fc3d9f91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58859967"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65462056"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>Como usar blocos de anotações na visualização do SQL Server de 2019
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Este artigo descreve como iniciar a experiência de bloco de anotações no estúdio de dados do Azure e como começar a criar seus próprios blocos de anotações. Ele também mostra como gravar blocos de anotações usar kernels diferentes.
+Este artigo descreve como iniciar a experiência de bloco de anotações na versão mais recente do [ **Studio do Azure Data** ](../azure-data-studio/download.md) e como começar a criar seus próprios blocos de anotações. Ele também mostra como gravar blocos de anotações usar kernels diferentes.
 
 ## <a name="connect-to-sql-server"></a>Conecte-se ao SQL Server
 
@@ -48,7 +48,7 @@ Há várias maneiras de iniciar um novo bloco de anotações.
 
 A instalação do bloco de anotações no estúdio de dados do Azure dá suporte nativamente a Kernel de SQL. Se você for um desenvolvedor SQL e gostaria de usar blocos de anotações, então isso seria escolhido Kernel. 
 
-O Kernel de SQL também pode ser usado para se conectar a instâncias de servidor PostgreSQL. Se você for um desenvolvedor PostgreSQL e gostaria de se conectar ao servidor PostgreSQL, em seguida, baixe o [ **PostgreSQL extensão** ](../azure-data-studio/postgres-extension.md) no marketplace de extensão do estúdio de dados do Azure.
+O Kernel de SQL também pode ser usado para se conectar a instâncias de servidor PostgreSQL. Se você for um desenvolvedor PostgreSQL e gostaria de conectar os blocos de anotações ao seu servidor PostgreSQL, baixe o [ **PostgreSQL extensão** ](../azure-data-studio/postgres-extension.md) no marketplace de extensão do estúdio de dados do Azure e, em seguida, Inicie **novo Notebook** para abrir uma instância do bloco de anotações para se conectar ao servidor PostgreSQL.
 
 ![Conexão do PostgreSQL](media/notebooks-guidance/sql-kernel-dropdown.png)
 
@@ -73,6 +73,19 @@ Kernel de SQL para se conectar à instância do servidor PostgreSQL
 Resultados da consulta
 
 ![Resultados da consulta](media/notebooks-guidance/pgsql-cell-results.png)
+
+Se você gostaria de adicionar as células de texto a seu existente Notebook associado ao Kernel do SQL, clique no **+ texto** comando na barra de ferramentas.
+
+![Barra de ferramentas do bloco de anotações](media/notebooks-guidance/notebook-toolbar.png)
+
+O célula é alterado para modo de edição e digite agora markdown e você verá a visualização ao mesmo tempo
+
+![Célula de markdown](media/notebooks-guidance/notebook-markdown-cell.png)
+
+Ao clicar fora da célula de texto, você verá o texto do markdown.
+
+![Texto de markdown](media/notebooks-guidance/notebook-markdown-preview.png)
+
 
 ### <a name="configure-python-for-notebooks"></a>Configurar o Python para blocos de anotações
 
@@ -119,9 +132,27 @@ Blocos de anotações aberto no Studio de dados do Azure são o padrão **confi�
 
 Se você abrir um bloco de anotações de alguma outra origem, ele será aberto no **não confiáveis** modo e, em seguida, você pode torná-lo **confiáveis**.
 
+### <a name="run-cells"></a>Executar células
+Se você quiser executar todas as células no bloco de anotações e em seguida, clique no **células executar** botão na barra de ferramentas.
+
+![Texto de markdown](media/notebooks-guidance/run-cell.png)
+
+
+### <a name="clear-results"></a>Limpar Resultados
+
+Se você deseja limpar os resultados de todas as células executados no bloco de anotações e, em seguida, você pode clicar na **Limpar resultados** botão na barra de ferramentas.
+
+![Texto de markdown](media/notebooks-guidance/clear-results.png)
+
 ### <a name="save"></a>Salvar
 
-Você pode salvar o bloco de anotações pela **Ctrl + S** ou clicando o **salvar arquivo**, **salvar arquivo como...**  e **arquivo Salvar tudo** comandos no menu Arquivo e **arquivo: Salvar** comandos inseridos na paleta de comandos.
+Para salvar o bloco de anotações siga um destes procedimentos.
+
+- Selecione Ctrl + S
+- Clique em **arquivo** > **salvar**
+- Clique em **arquivo** > **Salvar como...**
+- Clique em **arquivo** > **Salvar tudo** 
+- Na paleta de comandos, digite **arquivo: Salvar** 
 
 ### <a name="pyspark3pyspark-kernel"></a>Kernel Pyspark3/PySpark
 

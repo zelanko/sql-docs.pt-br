@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - users [Master Data Services], changing e-mail address
 ms.assetid: 721277fd-84f0-41aa-8f2d-bc13a7221044
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 724c4d7ce6e9c2c72a918248db379b45912cf30e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0e143d970a09b41b0b9f955eed69edbe9546092e
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62637097"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485350"
 ---
 # <a name="change-a-user39s-email-address-master-data-services"></a>Alterar o endereço de email de um usuário (Master Data Services)
 

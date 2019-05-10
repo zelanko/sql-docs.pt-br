@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3129be8603d31a26978a1789be59f4d649da1b06
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7fb9e3cc9d500184e637284c4cfb8c65c48b43c1
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62755852"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481143"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>Limpar dados em um domínio composto
   Este tópico fornece informações sobre como limpar domínios compostos no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Um domínio composto consiste em dois ou mais domínios únicos, e é mapeado para um campo de dados que consiste em vários termos relacionados. Os domínios individuais em um domínio composto devem ter uma área comum de conhecimento. Para obter informações detalhadas sobre domínios compostos, consulte [Managing a Composite Domain](../../2014/data-quality-services/managing-a-composite-domain.md).  

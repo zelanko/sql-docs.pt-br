@@ -12,15 +12,15 @@ f1_keywords:
 - sql13.dqs.kb.kbmatchingpolicy.f1
 - sql13.dqs.kb.kbmatchingresults.f1
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 87ef5477bcff01caec7027bb5aac713fbc0ccc8a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 98557d690edfcb3148dbc0b876e7ff26804de7db
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023729"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480463"
 ---
 # <a name="create-a-matching-policy"></a>Criar uma política de correspondência
 

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 9e30eae0-776b-4a09-aac3-0c0249d92ca5
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: cc58f0809f830363586390b20da29603fd1b2bcb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 003cf7c4871b89067316d2331f658f95a179e37b
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853264"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488079"
 ---
 # <a name="filter-data-before-exporting-mds-add-in-for-excel"></a>Filtrar dados antes da exportação (Suplemento MDS para Excel)
 
@@ -51,11 +51,11 @@ ms.locfileid: "47853264"
     >  -   Somente os primeiros um milhão de membros serão carregados no Excel.  
     > -   Nas colunas que são listas restritas (atributos baseados em domínio), por padrão, somente os primeiros 25000 valores serão carregados.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Próximas etapas  
  [Importar dados do Excel para o Master Data Services &#40;Suplemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)  
   
-## <a name="see-also"></a>Consulte Também  
- [Visão geral: Exportando dados para o Excel &#40;Suplemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
+## <a name="see-also"></a>Consulte também  
+ [Visão geral: Exportando dados para Excel &#40;suplemento do MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
  [Caixa de diálogo Filtrar &#40;Suplemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/filter-dialog-box-mds-add-in-for-excel.md)   
  [Reordenar colunas &#40;Suplemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/reorder-columns-mds-add-in-for-excel.md)  
   

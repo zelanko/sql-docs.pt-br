@@ -10,15 +10,15 @@ helpviewer_keywords:
 - derived hierarchies, hiding levels
 - derived hierarchies, deleting levels
 ms.assetid: e00582b9-9415-4b66-b4a7-9f590d83875f
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6aaceb17e4a930e284101e54643e489d578fbfad
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d7e2dd9db5cfc9b86b1c29b165bd817ff5394798
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765179"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483026"
 ---
 # <a name="hide-or-delete-levels-in-a-derived-hierarchy-master-data-services"></a>Ocultar ou excluir níveis em uma hierarquia derivada (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], oculte um nível em uma hierarquia derivada quando você precisar agrupar o nível, mas não for necessário mostrar o nível. Exclua um nível quando você não quiser usá-lo para agrupamento.  

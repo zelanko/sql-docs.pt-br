@@ -12,15 +12,15 @@ helpviewer_keywords:
 - log files
 - dqs log files
 ms.assetid: 4fccfd24-aede-4882-be69-ec1e82682e16
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: eaf7ced1193059e9559749786f73703a4160a7a4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: de7325ccf703866355f7b1cc2699ea7ac5587fc0
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040257"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489259"
 ---
 # <a name="manage-dqs-log-files"></a>Gerenciar arquivos de log do DQS
 
@@ -50,7 +50,7 @@ ms.locfileid: "56040257"
   
 -   Classe e método  
   
--   Mensagem  
+-   Message  
   
  Além disso, o arquivo de log exibe também informações sobre a versão do aplicativo, o nome de computador, o nome do usuário e o sistema operacional.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "56040257"
 |Descreve como definir configurações de severidade de log para arquivos de log DQS usando o [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].|[Configurar níveis de severidade para arquivos de log do DQS](../data-quality-services/configure-severity-levels-for-dqs-log-files.md)|  
 |Descreve como definir manualmente configurações avançadas para arquivos de log DQS.|[Definir configurações avançadas para arquivos de log do DQS](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Administração do DQS](../data-quality-services/dqs-administration.md)  
   
   

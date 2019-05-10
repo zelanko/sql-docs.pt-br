@@ -11,15 +11,15 @@ helpviewer_keywords:
 - importing data [Master Data Services]
 - staging process [Master Data Services]
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a3f9d1589c9e7434b16ce3f500b44eb1d9374cd8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7f5f5e7d6c4706dee09c90237c2363f6cbf46b02
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62923267"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65479011"
 ---
 # <a name="data-import-master-data-services"></a>Importação de dados (Master Data Services)
   Depois de criar um modelo para seus dados no [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], você pode começar a adicionar dados e fazer alterações nos dados, no banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .   Você usa as tabelas de preparo do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , procedimentos armazenados e o Master Data Manager.  

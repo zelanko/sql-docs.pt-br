@@ -12,15 +12,15 @@ helpviewer_keywords:
 - e-mail [Master Data Services], configuring business rules
 - notifications [Master Data Services], configuring business rules
 ms.assetid: b24f7b11-ab53-4642-999c-e17b543b3558
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 25de38d04af8b98b600422a843c6b6fb6260d514
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 56c7203db3e7c32383b59a85d2bc7cb16cba4d0a
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783458"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484392"
 ---
 # <a name="configure-business-rules-to-send-notifications-master-data-services"></a>Configurar regras de negócio para enviar notificações (Master Data Services)
 
@@ -63,7 +63,7 @@ ms.locfileid: "52783458"
   
 10. Na caixa de diálogo de confirmação, clique em **OK**. O valor na coluna **Estado da Regra de Negócios** mudou para **Ativo** e a coluna **Notificação** mostra o usuário ou grupo selecionado ao qual enviar a notificação.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Próximas etapas  
   
 -   Aplique regras de negócio a dados seguindo um destes procedimentos:  
   
@@ -75,7 +75,7 @@ ms.locfileid: "52783458"
   
     -   [Configurar notificações por email &#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md)  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Notificações &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)   
  [Configurar notificações por email &#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md)  
   

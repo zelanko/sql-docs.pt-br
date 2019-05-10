@@ -13,15 +13,15 @@ helpviewer_keywords:
 - users [Master Data Services], deleting
 - deleting users [Master Data Services]
 ms.assetid: 0bbf9d2c-b826-48bb-8aa9-9905db6e717f
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 43401193273de1ee72fd6209694b31ea09e2680f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 66ecbfa946b894b3dcfad9befb63f30645f9c77d
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52765248"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65478096"
 ---
 # <a name="delete-users-or-groups-master-data-services"></a>Excluir usuários ou grupos (Master Data Services)
 
@@ -54,7 +54,7 @@ ms.locfileid: "52765248"
   
 5.  Na caixa de diálogo de confirmação, clique em **OK**.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Segurança &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
   
   

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 13a13f03-b307-4555-8e33-6d98c459d994
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 429608f066b0c99c9677a0e35f0b8925e58c7dff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2d27a5bcd87ffd84b33de229d955dc9494846a72
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63250073"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489278"
 ---
 # <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>Tarefa 4 (opcional): Combinar, corresponder e publicar o novo conjunto de dados
   Com o tempo, você desejará adicionar mais dados ao repositório do MDS. Antes de adicionar dados, ele pode ser útil comparar os novos dados aos dados que já são gerenciados no MDS, para garantir que você não está adicionando dados duplicados ou inexatos. No Suplemento Master Data Services para Excel, você pode combinar dados de duas planilhas e comparar esses dados para identificar e remover duplicatas antes de publicar os dados no MDS. O recurso de correspondência do Suplemento MDS do Excel usa a funcionalidade correspondente do DQS para identificar correspondências nos dados. Nesta tarefa, você combinará dados de duas planilhas em uma e executará a atividade de correspondência para identificar e remover duplicatas antes de publicar no MDS. Ver [correspondência de qualidade de dados em que o suplemento do MDS para Excel](https://msdn.microsoft.com/library/hh548681.aspx) e [combinar dados](https://msdn.microsoft.com/library/hh548680.aspx) tópicos para obter mais detalhes.  

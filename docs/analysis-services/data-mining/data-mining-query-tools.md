@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 67f58d5fea9da2df2e65d4085446f591ebd7ff25
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 697a1c06a2d30d5721c122c557f3e41836335b02
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147941"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449945"
 ---
 # <a name="data-mining-query-tools"></a>Ferramentas de Consulta de Mineração de Dados
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -53,13 +53,13 @@ ms.locfileid: "50147941"
 ##  <a name="bkmk_SSIS"></a> Componentes de mineração de dados do Integration Services  
  É possível também incluir consultas de previsão como parte de um pacote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . As tarefas e transformações no [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a seguir fornecem suporte para a criação e execução de consultas de previsão de DMX e instruções DMX.  
   
-|Componente|Description|  
+|Componente|Descrição|  
 |---------------|-----------------|  
 |Tarefa Consulta de Mineração de dados|Executa consultas DMX e outras instruções DMX como parte de um fluxo de controle.<br /><br /> O editor de tarefa fornece o Construtor de Consulta de Previsão e uma caixa de texto para modificar a consulta DMX manualmente. Porém, o editor de tarefa não pode validar a consulta em objetos em uma solução do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Portanto, é melhor criar uma consulta dentro do [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ou [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e, em seguida, colar o texto da instrução ou consulta no editor de tarefa.|  
 |Transformação Consulta de Mineração de Dados|Executa uma consulta de previsão dentro de um fluxo de dados, usando os dados fornecidos por uma fonte de fluxo de dados.<br /><br /> O editor de tarefa fornece o Construtor de Consulta de Previsão e uma caixa de texto para modificar a consulta DMX manualmente.<br /><br /> A transformação somente pode ser usada para criar consultas que usam dados no fluxo de dados; ou seja, consultas que usam a sintaxe PREDICTION JOIN. Este componente não pode ser usado para executar consultas de conteúdo ou outros tipos de instruções DMX.|  
   
 ##  <a name="bkmk_API"></a> Interfaces de programação de aplicativo  
- Você pode criar aplicativos personalizados que executam consultas em relação a modelos de mineração de dados usando uma variedade de linguagens de programação, em combinação com protocolos de servidor como OLE DB ou cliente ADOMD do Analysis Services. Para obter mais informações, consulte [Programação de Data Mining](../../analysis-services/data-mining-programming.md).  
+ Você pode criar aplicativos personalizados que executam consultas em relação a modelos de mineração de dados usando uma variedade de linguagens de programação, em combinação com protocolos de servidor como OLE DB ou cliente ADOMD do Analysis Services. Para obter mais informações, consulte [Programação de Data Mining](../../analysis-services/data-mining/data-mining-programming.md).  
   
  Porém, o XMLA constitui o formato de mensagem subjacente para todas as interações com um servidor do Analysis Service. Dentro de uma mensagem de XMLA, as consultas são representadas de maneira diferente dependendo se você está enviando uma consulta de previsão com base em DMX, uma consulta de conteúdo ou uma consulta que recupera metadados modelo usando os conjuntos de linhas de esquema de mineração de dados.  
   
