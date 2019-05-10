@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7e1d6e375a43592faeceab8da6bccfc8902c63bd
 ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/11/2018
 ms.locfileid: "37968178"
@@ -23,11 +23,11 @@ ms.locfileid: "37968178"
   
 |Tópico|Description|  
 |-----------|-----------------|  
-|[EXCLUIR &AMP;#40;DMX&AMP;#41;](../dmx/delete-dmx.md)|Desmarca o conteúdo treinado de um modelo de mineração.|  
-|[INSERIR NO &AMP;#40;DMX&AMP;#41;](../dmx/insert-into-dmx.md)|Treina modelos de mineração|  
-|[SELECIONE &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)|Pesquisa modelos de mineração.|  
+|[EXCLUIR &#40;DMX&#41;](../dmx/delete-dmx.md)|Desmarca o conteúdo treinado de um modelo de mineração.|  
+|[INSERIR NO &#40;DMX&#41;](../dmx/insert-into-dmx.md)|Treina modelos de mineração|  
+|[SELECIONE &#40;DMX&#41;](../dmx/select-dmx.md)|Pesquisa modelos de mineração.|  
 |[&#60;consulta de fonte de dados&#62;](../dmx/source-data-query.md)|Consulta fontes de dados para ambos **INSERT INTO** e **selecione** instruções.|  
-|[ATUALIZAÇÃO &AMP;#40;DMX&AMP;#41;](../dmx/update-dmx.md)|Altera conteúdos no modelo de mineração|  
+|[ATUALIZAÇÃO &#40;DMX&#41;](../dmx/update-dmx.md)|Altera conteúdos no modelo de mineração|  
   
 ## <a name="see-also"></a>Consulte também  
  [Extensões de mineração de dados &#40;DMX&#41; instruções de definição de dados](../dmx/dmx-statements-data-definition.md)   

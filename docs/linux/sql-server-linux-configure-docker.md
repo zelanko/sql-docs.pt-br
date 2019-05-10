@@ -11,12 +11,12 @@ ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 8b7f256aec6fc01500f5c98709086a69815fd6ef
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 7261d8b5b72b835c726a268477c44e4d0663f131
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59516512"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65376841"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Configurar imagens de contêiner do SQL Server no Docker
 
@@ -83,11 +83,11 @@ docker run --name sqlenterprise `
       -d "store/microsoft/mssql-server-linux:2017-latest"
  ```
 
-      > [!IMPORTANT]
-      > By passing the value **Y** to the environment variable **ACCEPT_EULA** and an edition value to **MSSQL_PID**, you are expressing that you have a valid and existing license for the edition and version of SQL Server that you intend to use. You also agree that your use of SQL Server software running in a Docker container image will be governed by the terms of your SQL Server license.
+> [!IMPORTANT]
+> Passando o valor **Y** à variável de ambiente **ACCEPT_EULA** e um valor de edição para **MSSQL_PID**, são expressar o que você tenha uma licença válida e existente para a edição e versão do SQL Server que você pretende usar. Você também concorda que seu uso do software SQL Server em execução em uma imagem de contêiner do Docker será regido pelos termos de licença do SQL Server.
 
-      > [!NOTE]
-      > For a full list of possible values for **MSSQL_PID**, see [Configure SQL Server settings with environment variables on Linux](sql-server-linux-configure-environment-variables.md).
+> [!NOTE]
+> Para obter uma lista completa de valores possíveis para **MSSQL_PID**, consulte [configurações de configurar o SQL Server com variáveis de ambiente no Linux](sql-server-linux-configure-environment-variables.md).
 
 ::: moniker-end
 
@@ -537,7 +537,7 @@ No Windows, verifique se que você estiver iniciando o PowerShell ou o prompt de
 
 Se o contêiner do SQL Server falhar na execução, tente os seguintes testes:
 
-- Se você receber um erro, como **' Falha ao criar o ponto de extremidade CONTAINER_NAME ponte de rede. Erro ao iniciar o proxy: bind do escuta tcp 0.0.0.0:1433: endereço já está em uso.'** , em seguida, você está tentando mapear a porta 1433 do contêiner para uma porta que já está em uso. Isso pode acontecer se você estiver executando o SQL Server localmente no computador host. Isso também pode acontecer se você iniciar dois contêineres do SQL Server e tente mapear ambos na mesma porta de host. Se isso acontecer, use o `-p` parâmetro para mapear a porta 1433 do contêiner para uma porta de host diferente. Por exemplo: 
+- Se você receber um erro, como **' Falha ao criar o ponto de extremidade CONTAINER_NAME ponte de rede. Erro ao iniciar o proxy: bind do escuta tcp 0.0.0.0:1433: endereço já está em uso.'** , em seguida, você está tentando mapear a porta 1433 do contêiner para uma porta que já está em uso. Isso pode acontecer se você estiver executando o SQL Server localmente no computador host. Isso também pode acontecer se você iniciar dois contêineres do SQL Server e tente mapear ambos na mesma porta de host. Se isso acontecer, use o `-p` parâmetro para mapear a porta 1433 do contêiner para uma porta de host diferente. Por exemplo:  
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
