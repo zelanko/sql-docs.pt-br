@@ -1,5 +1,5 @@
 ---
-title: Configuração de erro para o cubo, partição e processamento de dimensão | Microsoft Docs
+title: Configuração de erros para cubo, partição e processamento de dimensão | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 57ad330c44f378dd71cad1e02f3a5b3e6c63f38f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d8883d72ec5fcb15dfb1b827ea7e053a14568a48
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025543"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357346"
 ---
-# <a name="error-configuration-for-cube-partition-and-dimension-processing"></a>Configuração de erro para o cubo, partição e processamento de dimensão
+# <a name="error-configuration-for-cube-partition-and-dimension-processing"></a>Configuração de erros para cubo, partição e processamento de dimensão
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   As propriedades de configuração de erro no cubo, na partição ou nos objetos de dimensão determinam como o servidor responde quando ocorrem erros de integridade de dados durante o processamento. As chaves duplicadas, chaves ausentes e os valores nulos em uma coluna de chave normalmente disparam esses erros, e embora o registro que cause o erro não seja adicionado ao banco de dados, você pode definir propriedades que determinam o que acontece em seguida. Por padrão, o processamento para. No entanto, durante o desenvolvimento do cubo, talvez você queira que o processamento continue quando ocorrerem os erros de forma que você possa testar comportamentos do cubo com dados importados, mesmo se estiverem incompletos.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "34025543"
   
  **Resposta do servidor para erros específicos**  
   
-|Propriedade|Default|Outros valores|  
+|Propriedade|Padrão|Outros valores|  
 |--------------|-------------|------------------|  
 |**CalculationError**<br /><br /> Ocorre ao inicializar a configuração de erros.|**IgnoreError** não registra em log nem conta erros; o processamento continuará desde que a contagem de erro esteja abaixo do limite máximo.|**ReportAndContinue** registra em log e conta o erro.<br /><br /> **ReportAndStop** relata o erro e interrompe o processamento imediatamente, independentemente do limite de erros.|  
 |**KeyNotFound**<br /><br /> Ocorre quando uma chave estrangeira em uma tabela de fatos não tem uma chave primária correspondente em uma tabela de dimensões relacionada (por exemplo, uma tabela de fatos de vendas tem um registro com uma ID de produto que não existe na tabela de dimensões de produto). Esse erro pode ocorrer durante o processamento da partição ou o processamento de dimensões floco de neve.|**ReportAndContinue** registra em log e conta o erro.|**ReportAndStop** relata o erro e interrompe o processamento imediatamente, independentemente do limite de erros.<br /><br /> **IgnoreError** não registra em log nem conta erros; o processamento continuará desde que a contagem de erro esteja abaixo do limite máximo. Os registros que disparam esse erro são convertidos para o membro desconhecido por padrão, mas você pode alterar a propriedade **KeyErrorAction** para rejeitá-los.|  
@@ -142,7 +142,7 @@ ms.locfileid: "34025543"
   
 -   Defina **NullProcessing**=**Error** para excluir registros com valores nulos. Isso gera o erro **NullKeyNotAllowed** , que é registrado e contado até o limite de erros de chave. Você pode definir a propriedade de configuração de erro em **Chave Nula Não Permitida** como **IgnoreError** para permitir que o processamento continue.  
   
- Os nulos podem ser problema para campos de não chave, porque as consultas MDX retornam resultados diferentes dependendo se o nulo é interpretado como zero ou vazio. Por esse motivo, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece as opções de processamento nulo que permitem predefinir o comportamento de conversão que você deseja. Consulte [Definindo o membro desconhecido e as propriedades de processamento nulo](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) e <xref:Microsoft.AnalysisServices.NullProcessing> para obter detalhes.  
+ Os nulos podem ser problema para campos de não chave, porque as consultas MDX retornam resultados diferentes dependendo se o nulo é interpretado como zero ou vazio. Por esse motivo, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece as opções de processamento nulo que permitem predefinir o comportamento de conversão que você deseja.  
   
 #### <a name="set-nullprocessing-property-on-a-dimension-attribute"></a>Definir a propriedade NullProcessing em um atributo de dimensão  
   
@@ -174,10 +174,10 @@ ms.locfileid: "34025543"
 ##  <a name="bkmk_next"></a> Próxima etapa  
  Decida se os erros pararão o processamento ou serão ignorados. Lembre-se de que somente o erro será ignorado. O registro que causou o erro não é ignorado; ele é descartado ou convertido em um membro desconhecido. Os registros que violam as regras de integridade de dados nunca são adicionados ao banco de dados. Por padrão, o processamento para quando o primeiro erro ocorre, mas você pode alterar isso aumentando o limite de erros. No desenvolvimento do cubo, poderá ser útil relaxar as regras de configuração de erro, permitindo que o processamento continue, de modo que haja dados para testar.  
   
- Decida se deseja alterar os comportamentos padrão de processamento de nulos. Por padrão, os nulos em uma coluna de cadeia de caracteres são processados como valores vazios, enquanto que os nulos em uma coluna numérica são processados como zero. Consulte [Definindo o membro desconhecido e as propriedades de processamento nulo](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) para obter instruções sobre como definir o processamento nulo em um atributo.  
+ Decida se deseja alterar os comportamentos padrão de processamento de nulos. Por padrão, os nulos em uma coluna de cadeia de caracteres são processados como valores vazios, enquanto que os nulos em uma coluna numérica são processados como zero.  
   
 ## <a name="see-also"></a>Consulte também  
- [Propriedades de log](../../analysis-services/server-properties/log-properties.md)   
- [Definir o membro desconhecido e propriedades de processamento nulo](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
+ [Propriedades do log](../../analysis-services/server-properties/log-properties.md)   
+ [Definindo o membro desconhecido e as propriedades de processamento nulo](../multidimensional-tutorial/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
   
   

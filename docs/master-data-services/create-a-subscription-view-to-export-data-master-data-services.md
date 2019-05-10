@@ -11,15 +11,15 @@ helpviewer_keywords:
 - subscription views [Master Data Services], creating
 - creating subscription views [Master Data Services]
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f9619bca36ec488fdd5e25b5b9eb9a82370d7049
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 62118034106187081ba41be91026ecd6d7330ec5
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754668"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485059"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>Criar uma exibição de assinatura para exportar dados (Master Data Services)
 
@@ -75,7 +75,7 @@ ms.locfileid: "52754668"
 |Sinalizador de Versão|O nome do sinalizador de versão.|  
 |Hierarquia derivada|O nome da hierarquia derivada.|  
 |Entidade|O nome da entidade.|  
-|Formato|Especifica o tipo dos dados na exibição.|  
+|Formatar|Especifica o tipo dos dados na exibição.|  
 |Nível|Especifica o número de níveis na exibição, que é usado apenas para os formatos de Nível explícito ou Nível derivado|  
 |Incluir membros excluídos|Indica se membros excluídos de forma reversível são incluídos na exibição.|  
   
@@ -89,7 +89,7 @@ ms.locfileid: "52754668"
   
 -   **Em**: A data e a hora em que a exibição foi atualizada pela última vez.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Visão geral: Exportando dados &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   
  [Excluir uma exibição de assinatura &#40;Master Data Services&#41;](../master-data-services/delete-a-subscription-view-master-data-services.md)   
  [Criar um sinalizador de versão &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)  

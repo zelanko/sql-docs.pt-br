@@ -2,21 +2,21 @@
 title: 'Tutorial: Usar o editor Transact-SQL para criar objetos de banco de dados'
 titleSuffix: Azure Data Studio
 description: Este tutorial demonstra os principais recursos no estúdio de dados do Azure que simplificam o trabalho com o T-SQL.
-ms.custom: seodec18
-ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
 ms.topic: tutorial
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 04e6e366d1fd0a5d710296353d6326022f716199
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.reviewer: alayu; sstein
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: 3d227d308ba05a4c9336e2f5dcb728e85c18d7ed
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63240881"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65089702"
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Tutorial: Use o editor Transact-SQL para criar objetos de banco de dados- [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
