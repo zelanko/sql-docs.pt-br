@@ -1,7 +1,7 @@
 ---
 title: sys.dm_pdw_exec_requests (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/26/2019
+ms.date: 05/01/2019
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 72c449ee83798a99109029fc2d0b91e2b8c1e2b6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6e0dac258c03bafb0769e5abb1697be67b1289f2
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62691321"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105522"
 ---
 # <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -41,7 +41,7 @@ ms.locfileid: "62691321"
 |database_id|**int**|Identificador do banco de dados usado pelo contexto explícito (por exemplo, USE DB_X).|Consulte a ID na [sys. Databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |command|**nvarchar(4000)**|Contém o texto completo da solicitação enviado pelo usuário.|Qualquer texto de consulta ou de solicitação válido. Consultas que têm mais de 4000 bytes são truncadas.|  
 |resource_class|**nvarchar(20)**|A classe de recurso para esta solicitação. Consulte relacionados **concurrency_slots_used** na [sys.dm_pdw_resource_waits &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md).  Para obter mais informações sobre classes de recursos, consulte [gerenciamento de carga de trabalho e classes de recursos](https://docs.microsoft.com/azure/sql-data-warehouse/resource-classes-for-workload-management) |Classes de recurso estáticas</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>Classes de recurso dinâmicas</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
-|importância (classificação de carga de trabalho está disponível para visualização no SQL Data Warehouse Gen2. A versão prévia da Classificação e Importância do Gerenciamento de Carga de Trabalho destina-se a builds com datas de lançamento de 9 de abril de 2019 ou posterior.  Os usuários devem evitar usar builds anteriores a essa data no teste de gerenciamento de carga de trabalho.  Para determinar se a compilação for com capacidade de gerenciamento de carga de trabalho, execute select @@version quando conectado à instância do SQL Data Warehouse.)|**nvarchar(32)**|A importância de definição da solicitação foi enviada com. Solicitações com uma menor importância permanecerá na fila em estado suspenso, se as solicitações de importância mais alta são enviadas.  Solicitações com importância mais alta serão executadas antes de solicitações de prioridade inferiores que foram enviadas anteriormente.  Para obter mais informações sobre a importância, consulte [importância da carga de trabalho](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance).  |NULL</br>Baixa</br>below_normal</br>normal (padrão)</br>above_normal</br>Alta|
+|importance|**nvarchar(32)**|A importância de definição da solicitação foi enviada com. Solicitações com uma menor importância permanecerá na fila em estado suspenso, se as solicitações de importância mais alta são enviadas.  Solicitações com importância mais alta serão executadas antes de solicitações de prioridade inferiores que foram enviadas anteriormente.  Para obter mais informações sobre a importância, consulte [importância da carga de trabalho](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance).  |NULL</br>Baixa</br>below_normal</br>normal (padrão)</br>above_normal</br>Alta|
   
  Para obter informações sobre o máximo de linhas mantido por esta exibição, consulte a seção de metadados na [limites de capacidade](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) tópico.   
   

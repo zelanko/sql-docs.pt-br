@@ -8,21 +8,19 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d83bf40c6f5621f694f4ca6a5251dfb148c29ddf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: aaa80c3b66d7991414033c9c05c79b12681d4ef4
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764598"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488038"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Novidades no MDS (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-
-[!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
   Este tópico resume as alterações e atualizações na versão [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. 
   
@@ -229,12 +227,12 @@ ms.locfileid: "52764598"
  **Exemplo de pacotes de implantação de modelo atualizado**  
   
  Os pacotes de exemplo foram atualizados para compatibilidade com novos cenários. Para obter mais informações, confira [Amostras do SQL Server: MDS (Pacotes de Implantação de Modelo)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
-  
-## <a name="see-also"></a>Consulte Também  
- [Recursos de Master Data Services e Data Quality Services suportados pelas edições do SQL Server 2016](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
- [Recursos descontinuados do Master Data Services](../master-data-services/deprecated-master-data-services-features.md)   
- [Recursos descontinuados do Master Data Services](../master-data-services/discontinued-master-data-services-features.md)  
-  
-  
-[!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
+  
+## <a name="see-also"></a>Consulte também  
+ [Recursos de Master Data Services e Data Quality Services suportados pelas edições do SQL Server 2016](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
+ [Recursos preteridos do Master Data Services](../master-data-services/deprecated-master-data-services-features.md)  
+ [Recursos do Master Data Services descontinuados](../master-data-services/discontinued-master-data-services-features.md)

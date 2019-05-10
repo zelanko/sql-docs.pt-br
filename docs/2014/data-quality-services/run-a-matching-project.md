@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.dqs.matchingproject.export.f1
 - sql12.dqs.matchingproject.map.f1
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f020f30d651acd8ac9267b510d116af808d9b5e7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7c17f478c8c7735aca0100a2fd99d6315d923bad
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62792334"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481073"
 ---
 # <a name="run-a-matching-project"></a>Executar um projeto de correspondência
   Este tópico descreve como executar a correspondência de dados no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). O processo de correspondência identifica clusters de registros de correspondência com base em regras de correspondência na política de correspondência, designa um registro de cada cluster como o sobrevivente com base em uma regra de sobrevivência, e exporta os resultados. O DQS executa o processo de correspondência, também chamado de eliminação de duplicação, em um processo assistido por computador, mas você cria regras de correspondência interativamente e seleciona a regra de correspondência a partir de várias opções; assim, você controla o processo de correspondência.  

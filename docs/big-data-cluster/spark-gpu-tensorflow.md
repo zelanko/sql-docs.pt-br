@@ -10,12 +10,12 @@ ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4913526270e919e95c2ff6dad73fa4b67693a038
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: 2d31736ee4dd68857e3afce678b6dd806701a82b
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63473308"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64774946"
 ---
 # <a name="deploy-a-big-data-cluster-with-gpu-support-and-run-tensorflow"></a>Implantar um cluster de big data com suporte GPU e executar o TensorFlow
 
@@ -53,11 +53,11 @@ As etapas a seguir usam a CLI do Azure para criar um cluster do AKS que dá supo
 1. Criar um cluster Kubernetes no AKS com o [criar az aks](https://docs.microsoft.com/cli/azure/aks) comando. O exemplo a seguir cria um cluster Kubernetes chamado `gpucluster` no `sqlbigdatagroupgpu` grupo de recursos.
 
    ```azurecli
-   az aks create --name gpucluster --resource-group sqlbigdatagroupgpu --generate-ssh-keys --node-vm-size Standard_NC6 --node-count 3 --node-osdisk-size 50 --kubernetes-version 1.11.9 --location eastus
+   az aks create --name gpucluster --resource-group sqlbigdatagroupgpu --generate-ssh-keys --node-vm-size Standard_NC6s_v3 --node-count 3 --node-osdisk-size 50 --kubernetes-version 1.11.9 --location eastus
    ```
 
    > [!NOTE]
-   > Este cluster usa o **Standard_NC6** [tamanho da máquina de virtual otimizados para GPU](https://docs.microsoft.com/azure/virtual-machines/linux/sizes-gpu), que é uma das máquinas virtuais especializadas disponíveis com o único ou vários GPUs NVIDIA. Para obter mais informações, consulte [GPUs de uso para cargas de trabalho de computação intensa no serviço de Kubernetes do Azure (AKS)](https://docs.microsoft.com/azure/aks/gpu-cluster).
+   > Este cluster usa o **Standard_NC6s_v3** [tamanho da máquina de virtual otimizados para GPU](https://docs.microsoft.com/azure/virtual-machines/linux/sizes-gpu), que é uma das máquinas virtuais especializadas disponíveis com o único ou vários GPUs NVIDIA. Para obter mais informações, consulte [GPUs de uso para cargas de trabalho de computação intensa no serviço de Kubernetes do Azure (AKS)](https://docs.microsoft.com/azure/aks/gpu-cluster).
 
 1. Para configurar o kubectil para conectar-se ao cluster Kubernetes, execute as [az aks get-credentials](https://docs.microsoft.com/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials) comando.
 
@@ -69,7 +69,7 @@ As etapas a seguir usam a CLI do Azure para criar um cluster do AKS que dá supo
 
 1. Use **kubectl** para criar um namespace de Kubernetes chamado `gpu-resources`.
 
-   ```
+   ```bash
    kubectl create namespace gpu-resources
    ```
 
@@ -122,69 +122,31 @@ As etapas a seguir usam a CLI do Azure para criar um cluster do AKS que dá supo
 
 1. Enquanto, use o kubectl aplicar o comando para criar o DaemonSet. **NVIDIA-dispositivo-plugin-ds.yaml** deve estar no diretório de trabalho quando você executar o comando a seguir:
 
-   ```
+   ```bash
    kubectl apply -f nvidia-device-plugin-ds.yaml
    ```
 
 ## <a name="deploy-the-big-data-cluster"></a>Implantar o cluster de big data
 
-Para implantar um cluster de big data de 2019 do SQL Server (versão prévia) que dá suporte a GPUs, você deve implantar de um registro de docker específico e o repositório. Especificamente, você pode usar valores diferentes para **DOCKER_REGISTRY**, **DOCKER_REPOSITORY**, **DOCKER_USERNAME**, **DOCKER_PASSWORD**, e **DOCKER_EMAIL**. As seções a seguir fornecem exemplos de como definir as variáveis de ambiente. Use as seções de Windows ou Linux dependendo da plataforma do cliente que você está usando para implantar o cluster de big data.
+Para implantar um cluster de big data de 2019 do SQL Server (versão prévia) que dá suporte a GPUs, você deve implantar de um registro de docker específico e o repositório. As seguintes variáveis de ambiente são diferentes para uma implantação de GPU:
 
-### <a name="windows"></a>Windows
+| Variável de ambiente | Valor |
+|---|---|
+| **DOCKER_REGISTRY** | `marinchcreus3.azurecr.io` |
+| **DOCKER_REPOSITORY** | `ctp25-8-0-61-gpu` |
+| **DOCKER_USERNAME** | `<your username, gpu-specific credentials provided by Microsoft>` |
+| **DOCKER_PASSWORD** | `<your password, gpu-specific credentials provided by Microsoft>` |
 
-   1. Usando uma janela CMD (não PowerShell), configure as seguintes variáveis de ambiente. Não use aspas ao redor dos valores.
+Use **mssqlctl** para implantar o cluster, selecione a configuração do aks-dev-test.json e fonte personalizado valores acima, quando solicitado.
 
-      ```cmd
-      SET ACCEPT_EULA=yes
-      SET CLUSTER_PLATFORM=aks
+```bash
+mssqlctl cluster create
+```
 
-      SET CONTROLLER_USERNAME=<controller_admin_name - can be anything>
-      SET CONTROLLER_PASSWORD=<controller_admin_password - can be anything, password complexity compliant>
-      SET KNOX_PASSWORD=<knox_password - can be anything, password complexity compliant>
-      SET MSSQL_SA_PASSWORD=<sa_password_of_master_sql_instance, password complexity compliant>
+> [!TIP]
+> O nome padrão do cluster de big data é `mssql-cluster`.
 
-      SET DOCKER_REGISTRY=marinchcreus3.azurecr.io
-      SET DOCKER_REPOSITORY=ctp24-8-0-61-gpu
-      SET DOCKER_USERNAME=<your username, gpu-specific credentials provided by Microsoft>
-      SET DOCKER_PASSWORD=<your password, gpu-specific credentials provided by Microsoft>
-      SET DOCKER_EMAIL=<your email address>
-      SET DOCKER_PRIVATE_REGISTRY=1
-      SET STORAGE_SIZE=10Gi
-      ```
-
-   1. Implante o cluster de big data:
-
-      ```cmd
-      mssqlctl cluster create --name gpubigdatacluster
-      ```
-
-### <a name="linux"></a>Linux
-
-   1. Inicialize as variáveis de ambiente a seguir. No bash, você pode usar aspas em torno de cada valor.
-
-      ```bash
-      export ACCEPT_EULA=yes
-      export CLUSTER_PLATFORM="aks"
-
-      export CONTROLLER_USERNAME="<controller_admin_name - can be anything>"
-      export CONTROLLER_PASSWORD="<controller_admin_password - can be anything, password complexity compliant>"
-      export KNOX_PASSWORD="<knox_password - can be anything, password complexity compliant>"
-      export MSSQL_SA_PASSWORD="<sa_password_of_master_sql_instance, password complexity compliant>"
-
-      export DOCKER_REGISTRY="marinchcreus3.azurecr.io"
-      export DOCKER_REPOSITORY="ctp24-8-0-61-gpu"
-      export DOCKER_USERNAME="<your username, gpu-specific credentials provided by Microsoft>"
-      export DOCKER_PASSWORD="<your password, gpu-specific credentials provided by Microsoft>"
-      export DOCKER_EMAIL="<your email address>"
-      export DOCKER_PRIVATE_REGISTRY="1"
-      export STORAGE_SIZE="10Gi"
-      ```
-
-   1. Implante o cluster de big data:
-
-      ```bash
-      mssqlctl cluster create --name gpubigdatacluster
-      ```
+Você também pode personalizar ainda mais sua implantação, passando um arquivo de configuração de implantação personalizada. Para obter mais informações, consulte o [diretrizes de implantação](deployment-guidance.md#customconfig).
 
 ## <a name="run-the-tensorflow-example"></a>Executar o exemplo de TensorFlow
 
@@ -198,7 +160,7 @@ Os seguintes blocos de anotações de dois exemplo demonstram aos modelos de cla
 Coloque o arquivo de notebook apropriado para seu computador local e, em seguida, abrir e executá-lo no estúdio de dados do Azure usando o kernel PySpark3. A menos que você tenha uma necessidade específica para uma versão mais antiga do CUDA ou o TensorFlow, escolha CUDA 9/CUDNN 7/TensorFlow 1.12.0. Para obter mais informações sobre como usar blocos de anotações com clusters de big data, consulte [como usar blocos de anotações na visualização do SQL Server 2019](notebooks-guidance.md).
 
 > [!NOTE]
-> Observe que os blocos de anotações, instalar software em locais de sistema. Isso é possível porque os blocos de anotações, atualmente, executam com privilégios de raiz no CTP 2.4.
+> Observe que os blocos de anotações, instalar software em locais de sistema. Isso é possível porque os blocos de anotações, atualmente, executam com privilégios de raiz no CTP 2.5.
 
 Depois de instalar o TensorFlow e bibliotecas de GPU NVIDIA GPU, os blocos de anotações listam dispositivos GPU disponíveis. Em seguida, eles se ajustar e avaliar um modelo do TensorFlow para reconhecer usando o conjunto de dados MNIST de dígitos manuscritos. Depois de verificar o espaço em disco disponível, baixe e execute o exemplo de classificação de imagens CIFAR 10 da [ https://github.com/tensorflow/models.git ](https://github.com/tensorflow/models.git). Ao executar o exemplo de CIFAR 10 em clusters que tenham GPUs diferentes, você pode observar o aumento de velocidade oferecidas por cada geração de GPU disponível no Azure.
 
@@ -206,7 +168,7 @@ Depois de instalar o TensorFlow e bibliotecas de GPU NVIDIA GPU, os blocos de an
 
 Para excluir o cluster de big data, use o seguinte comando:
 
-```
+```bash
 mssqlctl cluster delete --name gpubigdatacluster
 ```
 
