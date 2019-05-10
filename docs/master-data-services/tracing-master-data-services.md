@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: c291ad016664cf8ac7dcbe2deb9cc04680a707c0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: f74158bcb8a83b65842d016f3dd8aeacf73f0427
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52765018"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485070"
 ---
 # <a name="tracing-master-data-services"></a>Rastreamento (Master Data Services)
 
@@ -62,11 +62,11 @@ ms.locfileid: "52765018"
   
     |Elemento|Descrição|  
     |-------------|-----------------|  
-    |Hora|Quando ocorre a entrada de rastreamento.|  
+    |Time|Quando ocorre a entrada de rastreamento.|  
     |CorrelationID|Uma ID de correlação é atribuída a cada solicitação. Todos os rastreamentos disparados por esta solicitação compartilharão a mesma ID de correlação.<br /><br /> Quando ocorre um erro na interface do usuário, a ID de correlação aparece na mensagem de erro.|  
     |Operação|Nome da operação de solicitação. Se a solicitação for uma solicitação de interface do usuário da Web, o nome da operação será a url. Se a solicitação for uma solicitação de API, o nome da operação será o nome do serviço.|  
     |Nível|Nível desta entrada de rastreamento.|  
-    |Mensagem|O corpo da mensagem do rastreamento|  
+    |Message|O corpo da mensagem do rastreamento|  
   
 ## <a name="external-resources"></a>Recursos externos  
  Postagem de blog, [Troubleshooting Logging Improvement (Aperfeiçoamento da Solução de Problemas de Log)](https://go.microsoft.com/fwlink/p/?LinkId=615377), no msdn.com.  

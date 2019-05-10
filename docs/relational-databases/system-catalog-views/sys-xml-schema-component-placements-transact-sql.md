@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -17,22 +16,23 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_component_placements catalog view
 ms.assetid: 2d3c8828-e4b3-423d-bf11-990464c1341b
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
-ms.openlocfilehash: 78403dd04dc4fb1e531032c9f80639134f58b6ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 05291044ba7b5e5b79b507c33a1f5f5bf31afa28
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818274"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64945935"
 ---
 # <a name="sysxmlschemacomponentplacements-transact-sql"></a>sys.xml_schema_component_placements (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna uma linha por colocação para componentes de esquema XML.  
    
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**xml_component_id**|**int**|ID do componente de esquema XML que possui esta colocação.|  
 |**placement_id**|**int**|ID da colocação. Isto é exclusivo dentro do componente de esquema XML proprietário.|  

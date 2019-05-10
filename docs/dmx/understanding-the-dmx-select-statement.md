@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: f76729b419fccf3d17e66ddd8ab00e8b54b1b264
 ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/27/2018
 ms.locfileid: "52398069"
@@ -85,7 +85,7 @@ ms.locfileid: "52398069"
   
 |Tipo de consulta|Descrição|  
 |----------------|-----------------|  
-|SELECT INTO  *\<novo modelo >*|Cria uma cópia do modelo de mineração.<br /><br /> O domínio para esse tipo de consulta é o modelo da mineração de dados.<br /><br /> [SELECT INTO &AMP;#40;DMX&AMP;#41;](../dmx/select-into-dmx.md)|  
+|SELECT INTO  *\<novo modelo >*|Cria uma cópia do modelo de mineração.<br /><br /> O domínio para esse tipo de consulta é o modelo da mineração de dados.<br /><br /> [SELECT INTO &#40;DMX&#41;](../dmx/select-into-dmx.md)|  
   
  [De volta aos tipos de Select](#Select_Types)  
   
