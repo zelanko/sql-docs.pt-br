@@ -2,17 +2,17 @@
 title: Problemas conhecidos para a linguagem R e a integração do Python - serviços do SQL Server Machine Learning
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2019
+ms.date: 04/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 19427de01c39dc4b4578fc31db1d610af829d770
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2b9ed73b2b4cb65696f9809d757eb901367dde63
+ms.sourcegitcommit: b6ca8596c040fa731efd397e683226516c9f8359
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62650697"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64906161"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Problemas conhecidos no serviços de Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -358,7 +358,7 @@ Por exemplo, suponha que você definiu duas funções, `f` e `g`, em seu ambient
 
 Para contornar esse problema, caso o encontre, incorpore a definição de `f` em qualquer local dentro da sua definição de `g`, antes que `g` possa chamar `f`normalmente.
 
-Por exemplo:
+Por exemplo: 
 
 ```R
 f <- function(x) { 2*x * 3 }
@@ -405,6 +405,29 @@ R --max-ppsize=500000
 Atualmente, a função `rxDTree` não tem suporte para transformações dentro da fórmula. Não temos suporte para o uso da sintaxe `F()` , em especial, para a criação de fatores dinâmicos. No entanto, os dados numéricos são automaticamente guardados.
 
 Os fatores ordenados são tratados da mesma forma que os fatores de todas as funções de análise RevoScaleR, exceto o `rxDTree`.
+
+### <a name="20-datatable-as-an-outputdataset-in-r"></a>20. Data como um OutputDataSet em R
+
+Usando o `data.table` como um `OutputDataSet` em R não há suporte no SQL Server 2017 cumulativa atualização 13 (CU13) e versões anteriores. A seguinte mensagem pode aparecer:
+
+```
+Msg 39004, Level 16, State 20, Line 2
+A 'R' script error occurred during execution of 
+'sp_execute_external_script' with HRESULT 0x80004004.
+Msg 39019, Level 16, State 2, Line 2
+An external script error occurred: 
+Error in alloc.col(newx) : 
+  Internal error: length of names (0) is not length of dt (11)
+Calls: data.frame ... as.data.frame -> as.data.frame.data.table -> copy -> alloc.col
+
+Error in execution.  Check the output for more information.
+Error in eval(expr, envir, enclos) : 
+  Error in execution.  Check the output for more information.
+Calls: source -> withVisible -> eval -> eval -> .Call
+Execution halted
+```
+
+`data.table` como um `OutputDataSet` em R tem suporte no SQL Server 2017 cumulativa atualização 14 (CU14) e posterior.
 
 ## <a name="python-script-execution-issues"></a>Problemas de execução de script do Python
 
@@ -465,8 +488,19 @@ Começando com o SQL Server 2017 CU2, a seguinte mensagem pode aparecer mesmo se
 >  *~PYTHON_SERVICES\lib\site-packages\revoscalepy\utils\RxTelemetryLogger*
 > *SyntaxWarning: telemetry_state é usado antes da declaração global*
 
-
 Esse problema foi corrigido no SQL Server 2017 atualização cumulativa 3 (CU3). 
+
+### <a name="5-numeric-decimal-and-money-data-types-not-supported"></a>5. Tipos de dados numeric, decimal e dinheiro não tem suportados
+
+Começando com o SQL Server 2017 cumulativa atualização 12 (CU12), tipos de dados numeric, decimal e dinheiro em com conjuntos de resultados não têm suportados ao usar o Python com `sp_execute_external_script`. As seguintes mensagens de erro podem aparecer:
+
+> *[Código: 39004, SQL State: S1000] 'Python' erro de script durante a execução de 'sp_execute_external_script' com HRESULT 0x80004004.*
+
+> *[Código: 39019, estado do SQL: S1000] Ocorreu um erro de script externo:*
+> 
+> *Erro SqlSatelliteCall: Tipo sem suporte no esquema de saída. Tipos com suporte: bit, smallint, int, datetime, smallmoney, real e float. char, varchar têm suporte parcial.*
+
+Esse problema foi corrigido no SQL Server 2017 cumulativa atualização 14 (CU14).
 
 ## <a name="revolution-r-enterprise-and-microsoft-r-open"></a>Revolution R Enterprise e Microsoft R Open
 

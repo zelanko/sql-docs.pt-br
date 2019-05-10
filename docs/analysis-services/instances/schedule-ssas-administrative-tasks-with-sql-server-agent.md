@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f0a8525196bacff6d0bf75b28a17c154a6eb919a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 171caf19d960533c1043cdbfaea7226207d277f5
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019113"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357508"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>Agendar tarefas administrativas do SSAS com o SQL Server Agent
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,12 +24,12 @@ ms.locfileid: "34019113"
   
  Este tópico é um passo a passo que mostra dois modos de usar o SQL Server Agent para executar um script XMLA. O primeiro exemplo demonstra como agendar o processamento de uma única dimensão. O segundo exemplo mostra como combinar tarefas de processamento em um único script executado com base em uma agenda. Para concluir essas etapas, você precisará atender aos pré-requisitos a seguir.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  O serviço SQL Server Agent deve ser instalado.  
   
- Por padrão, os trabalhos são executados na conta de serviço. A conta padrão do SQL Server Agent é NT Service\SQLAgent$\<nome_da_instância >. Para executar um backup ou uma tarefa de processamento, essa conta deve ser um administrador do sistema na instância do Analysis Services. Para obter mais informações, consulte [Conceder direitos de administração de servidor a uma instância do Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
+ Por padrão, os trabalhos são executados na conta de serviço. A conta padrão do SQL Server Agent é NT Service\SQLAgent$\<instancename >. Para executar um backup ou uma tarefa de processamento, essa conta deve ser um administrador do sistema na instância do Analysis Services. Para obter mais informações, consulte [Conceder direitos de administração de servidor a uma instância do Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
- Você também deveria ter um banco de dados de teste. Você pode implantar o banco de dados de exemplo multidimensional do AdventureWorks ou um projeto do tutorial multidimensional do Analysis Services para usar neste passo a passo. Para obter mais informações, consulte [Instalar dados de exemplo e projetos para o tutorial de modelagem multidimensional do Analysis Services](../../analysis-services/install-sample-data-and-projects.md).  
+ Você também deveria ter um banco de dados de teste. Você pode implantar o banco de dados de exemplo multidimensional do AdventureWorks ou um projeto do tutorial multidimensional do Analysis Services para usar neste passo a passo. Para obter mais informações, consulte [Instalar dados de exemplo e projetos para o tutorial de modelagem multidimensional do Analysis Services](../multidimensional-tutorial/install-sample-data-and-projects.md).  
   
 ## <a name="example-1-processing-a-dimension-in-a-scheduled-task"></a>Exemplo 1: Processando uma dimensão em uma tarefa agendada  
  Este exemplo demonstra como criar e agendar um trabalho que processa uma dimensão.  
@@ -105,7 +105,7 @@ ms.locfileid: "34019113"
   
 15. Quando o trabalho for concluído, clique em **Fechar**.  
   
-## <a name="example-2-batch-processing-a-dimension-and-a-partition-in-a-scheduled-task"></a>Exemplo 2: Processando uma dimensão e uma partição em lote em uma tarefa agendada  
+## <a name="example-2-batch-processing-a-dimension-and-a-partition-in-a-scheduled-task"></a>Exemplo 2: Uma dimensão e uma partição em uma tarefa agendada de processamento em lotes  
  Os procedimentos deste exemplo demonstram como criar e agendar um trabalho que processa uma dimensão de banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em lote e, ao mesmo tempo, processa uma partição de cubo que depende da dimensão para agregação. Para obter mais informações sobre processamento em lote de objetos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consulte [Processamento em lote &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md).  
   
 ###  <a name="bkmk_BatchProcess"></a> Criar um script para processamento de uma dimensão e uma partição em lote em um trabalho do SQL Server Agent  
@@ -222,6 +222,6 @@ ms.locfileid: "34019113"
 16. Quando o trabalho for concluído, clique em **Fechar**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Processando opções e configurações &#40;do Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
+ [Processando opções e configurações &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
   
   

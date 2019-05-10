@@ -11,15 +11,15 @@ helpviewer_keywords:
 - attributes [Master Data Services], creating number attributes
 - creating number attributes [Master Data Services]
 ms.assetid: c0dbb6d8-ba78-485a-a40d-6d5cb7e75d0a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 14c4d735b4bd295577b7e08a5ca6afdfed5aa95c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: f00183cdc91fabfcf168ceee8871b6033af2fdc3
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777108"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65477031"
 ---
 # <a name="create-a-numeric-attribute-master-data-services"></a>Criar um atributo numérico (Master Data Services)
 
@@ -98,7 +98,7 @@ ms.locfileid: "52777108"
   
 14. Clique em **Salvar**.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Atributos &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
  [Alterar um nome de atributo e um tipo de dados &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
  [Criar um atributo baseado em domínio &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   

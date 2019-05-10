@@ -11,16 +11,16 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: fe3c7fa2a383ea7d8b969ed149a2a762531e0a84
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: 72ba0ed0ba190f390f355b9a7fcf823b3d99d766
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63472183"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775360"
 ---
 # <a name="sql-server-2019-extension-preview"></a>Extensão do SQL Server 2019 (visualização)
 
-A extensão de 2019 do SQL Server (versão prévia) fornece suporte de visualização para novos recursos e ferramentas de envio suportados [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Isso inclui suporte para visualização [clusters do SQL Server 2019 big data](../big-data-cluster/big-data-cluster-overview.md), um integrada [experiência de notebook](../big-data-cluster/notebooks-guidance.md)e um PolyBase [assistente Create External Table](../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json).
+A extensão de 2019 do SQL Server (versão prévia) fornece suporte de visualização para novos recursos e ferramentas de envio suportados [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Isso inclui suporte para visualização [clusters do SQL Server 2019 big data](../big-data-cluster/big-data-cluster-overview.md), um integrada [experiência de notebook](../big-data-cluster/notebooks-guidance.md)e um PolyBase [assistente Create External Table](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json).
 
 ## <a name="install-the-sql-server-2019-extension-preview"></a>Instalar a extensão do SQL Server 2019 (visualização)
 

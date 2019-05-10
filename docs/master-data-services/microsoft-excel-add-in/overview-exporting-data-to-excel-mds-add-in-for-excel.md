@@ -1,5 +1,5 @@
 ---
-title: 'Visão geral: Exportando dados para o Excel (Suplemento MDS para Excel) | Microsoft Docs'
+title: 'Visão geral: Exportando dados para Excel (suplemento MDS para Excel) | Microsoft Docs'
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b628548b-982b-4e45-abf4-c8e83e3ab1c2
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 05b5eb61afee1c38c64c2b071efd7b808fade030
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: f155e6bf823c687a52939e68fcfe10329bd33a35
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396796"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65476737"
 ---
-# <a name="overview-exporting-data-to-excel-mds-add-in-for-excel"></a>Visão geral: Exportando dados para o Excel (Suplemento MDS para Excel)
+# <a name="overview-exporting-data-to-excel-mds-add-in-for-excel"></a>Visão geral: Exportar dados para o Excel (Suplemento MDS para Excel)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 

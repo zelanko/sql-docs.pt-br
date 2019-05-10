@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.dqs.dm.testdomainrule.f1
 - sql13.dqs.dm.rules.f1
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b7ff9b57b8b83b8850aac4a854a3fd7b04a76804
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: a81b217b00ead3f9c26915f19c540e1225a198c2
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030657"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65486352"
 ---
 # <a name="create-a-domain-rule"></a>Criar uma regra de domínio
 
@@ -124,8 +124,8 @@ ms.locfileid: "56030657"
 |Valor não contém|Somente os valores que não estão contidos no operando serão válidos.|Operando de exemplo: A1<br /><br /> Valores válidos: 1A, AA<br /><br /> Valores inválidos: A1, AA1|  
 |Valor começa com|Somente os valores que começam com os caracteres do operando serão válidos.|Operando de exemplo: AA<br /><br /> Valores válidos: AA1<br /><br /> Valores inválidos: 1AAB|  
 |Valor termina com|Somente os valores que terminam com os caracteres do operando serão válidos.|Operando de exemplo: AA<br /><br /> Valores válidos: 1AA<br /><br /> Valores inválidos: 1AAB|  
-|Valor é numérico|Somente os valores que têm um tipo de dados numérico do SQL Server serão válidos. Isso inclui int, decimal, float etc.|Operando de exemplo: N/A<br /><br /> Valores válidos: 1, 25, 345.1234<br /><br /> Valores inválidos: 2b, bcdef|  
-|Valor é data/hora|Somente os valores que têm um tipo de dados de data/hora do SQL Server serão válidos. Isso inclui datetime, time, date etc.|Operando de exemplo: N/A<br /><br /> Valores válidos: 1916-06-04; 1916-06-04 18:24:24; March 21, 2001; 5/18/2011; 18:24:24<br /><br /> Valores inválidos: March 213, 2006|  
+|Valor é numérico|Somente os valores que têm um tipo de dados numérico do SQL Server serão válidos. Isso inclui int, decimal, float etc.|Operando de exemplo: N/D<br /><br /> Valores válidos: 1, 25, 345.1234<br /><br /> Valores inválidos: 2b, bcdef|  
+|Valor é data/hora|Somente os valores que têm um tipo de dados de data/hora do SQL Server serão válidos. Isso inclui datetime, time, date etc.|Operando de exemplo: N/D<br /><br /> Valores válidos: 1916-06-04; 1916-06-04 18:24:24; March 21, 2001; 5/18/2011; 18:24:24<br /><br /> Valores inválidos: March 213, 2006|  
 |Valor está em|Somente os valores que estão no conjunto do operando serão válidos.<br /><br /> Para inserir os valores no conjunto, clique na caixa de texto do operando, insira o primeiro valor, pressione Enter, insira o segundo valor, repita o procedimento para tantos valores quanto você deseja inserir no conjunto e clique novamente na caixa de texto do operando. O DQS adicionará uma vírgula entre os valores do conjunto. Se você inserir uma cadeia de caracteres com vírgulas e nenhum retorno de carro (por exemplo, "A1, B1"), o DQS considerará essa cadeia de caracteres um único valor no conjunto.|Operando de exemplo: [A1, B1]<br /><br /> Valores válidos: A1, B1<br /><br /> Valores inválidos: AA, 11|  
 |Valor não está em|Somente os valores que não estão no conjunto do operando serão válidos.|Operando de exemplo: [A1, B1]<br /><br /> Valores válidos: AA, 11<br /><br /> Valores inválidos: A1, B1|  
 |Padrão de correspondências de valor|Somente os valores que correspondem ao padrão de caracteres, dígitos ou caracteres especiais do operando serão válidos.<br /><br /> Algumas letras (A...Z) podem ser usadas como um padrão para qualquer letra, sem diferenciação entre maiúsculas e minúsculas. Qualquer dígito (0...9) pode ser usado como um padrão para qualquer dígito. Qualquer caractere especial, exceto uma letra ou um dígito, pode ser usado como um padrão para si mesmo. Os colchetes, [], definem correspondência opcional.|Operando de exemplo: AA:000 (um padrão de *quaisquer* dois caracteres seguidos de dois-pontos (:), seguidos novamente de *quaisquer* três dígitos.<br /><br /> Valores válidos: AB:012, df:257<br /><br /> Valores inválidos: abc:123, FJ-369<br /><br /> Para obter mais informações sobre as regras do padrão no DQS e exemplos, consulte [Correspondência de padrão nas regras de domínio do DQS](https://blogs.msdn.com/b/dqs/archive/2012/10/08/pattern-matching-in-dqs-domain-rules.aspx).|  

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: bd5a24a76963532c7fa70100bfccc171ba3c90ff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5be0404cc35964573b8a66d7874c76a82e7c55f0
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62792404"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484468"
 ---
 # <a name="manage-dqs-databases"></a>Gerenciar bancos de dados do DQS
   Esta seção fornece informações sobre as atividades de gerenciamento de banco de dados que podem ser executadas nos bancos de dados DQS como backup/restauração ou anexar/desanexar.  

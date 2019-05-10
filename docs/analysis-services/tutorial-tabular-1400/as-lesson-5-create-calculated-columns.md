@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services lição 5 do tutorial: Criar colunas calculadas | Microsoft Docs'
-ms.date: 03/08/2019
+ms.date: 04/25/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: d1e2c4df54313ecc66e5e49904bdc40393c410f7
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: b56fe07237faa6570fd4b8c1adb31d3cce8e4540
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685549"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776075"
 ---
 # <a name="create-calculated-columns"></a>Criar colunas calculadas
 
@@ -47,7 +47,7 @@ Este artigo faz parte de um tutorial de modelagem de tabela, que deve ser conclu
   
     Uma nova coluna nomeada **Calculated Column 1** é inserida à esquerda da coluna **Calendar Quarter** .  
   
-4.  Na barra de fórmulas acima da tabela, digite a seguinte fórmula DAX: O recurso Preenchimento Automático ajuda a digitar os nomes totalmente qualificados de colunas e tabelas e lista as funções que estão disponíveis.  
+4.  Na barra de fórmulas acima da tabela, digite a seguinte fórmula DAX: Preenchimento Automático ajuda você a digitar os nomes totalmente qualificados de colunas e tabelas e lista as funções que estão disponíveis.  
   
     ```  
     =RIGHT(" " & FORMAT([MonthNumberOfYear],"#0"), 2) & " - " & [EnglishMonthName]  
@@ -85,7 +85,7 @@ A coluna calculada DayOfWeek fornece um nome classificável para o dia da semana
 #### <a name="create-a-productsubcategoryname-calculated-column-in-the-dimproduct-table"></a>Criar uma coluna calculada ProductSubcategoryName na tabela DimProduct  
   
   
-1.  No **DimProduct** tabela, role até a extrema direita da tabela. Observe que a coluna mais à direita é chamada **Adicionar Coluna** (em itálico); clique no título de coluna.  
+1.  No **DimProduct** tabela, role até a extrema direita da tabela. Observe que a coluna mais à direita é denominada ***adicionar coluna***, clique no título de coluna.  
   
 2.  Na barra de fórmulas, digite a fórmula a seguir:  
     

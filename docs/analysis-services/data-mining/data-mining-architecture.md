@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: dc79919837b1a50f9eb6335d12a13c7ea5389b50
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 29f1d0fb4a6cc2126feed494df0fb4d09ac61044
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019993"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450047"
 ---
 # <a name="data-mining-architecture"></a>Arquitetura de mineração de dados
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,18 +33,18 @@ ms.locfileid: "34019993"
  Para obter mais informações sobre como você pode implementar a mineração de dados em sua solução de business intelligence, consulte a seção Guias de Solução da Biblioteca MSDN.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Arquitetura lógica & #40; Analysis Services – mineração de dados & #41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
+ [Arquitetura lógica &#40;Analysis Services – Mineração de dados&#41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
   
- [Arquitetura física & #40; Analysis Services – mineração de dados & #41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)  
+ [Arquitetura física &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)  
   
  [Serviços de mineração de dados e fontes de dados](../../analysis-services/data-mining/data-mining-services-and-data-sources.md)  
   
- [Gerenciamento de soluções de mineração de dados e objetos](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
+ [Gerenciamento de soluções de Mineração de dados e objetos](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   
- [Visão geral de segurança & #40; mineração de dados & #41;](../../analysis-services/data-mining/security-overview-data-mining.md)  
+ [Visão geral de segurança &#40;Mineração de dados&#41;](../../analysis-services/data-mining/security-overview-data-mining.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Programação de modelo multidimensional](../../analysis-services/multidimensional-models/multidimensional-model-programming.md)   
- [Programação de mineração de dados](../../analysis-services/data-mining-programming.md)  
+ [Programação de mineração de dados](../../analysis-services/data-mining/data-mining-programming.md)  
   
   
