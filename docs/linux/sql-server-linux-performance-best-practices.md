@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: a9fdfb466f34e3eb40ad80d53c203f7ee8866f08
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7819d3dffbcfaef8a94a1644db1694d1f80ae060
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676895"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65106259"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Práticas recomendadas de desempenho e diretrizes de configuração do SQL Server no Linux
 
@@ -100,7 +100,7 @@ Use o **noatime** atributo com qualquer sistema de arquivos que é usado para ar
 
 A maioria das instalações do Linux deve ter essa opção em por padrão. É recomendável para a experiência de desempenho mais consistente deixar essa opção de configuração habilitada.
 
-### <a name="swapfile"></a>arquivo de permuta
+### <a name="swapfile"></a>swapfile
 
 Verifique se que você tiver um arquivo de permuta configurado corretamente para evitar quaisquer problemas de memória insuficiente. Consulte a documentação do Linux para saber como criar e dimensionar corretamente um arquivo de permuta.
 

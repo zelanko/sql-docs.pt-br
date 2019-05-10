@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a35880dd299cc9eff81643dd5d955101c5eec68
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 38428e0a95dcce39589310ee91be2a7d396c2f1e
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532478"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65088502"
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -101,6 +101,8 @@ sp_describe_undeclared_parameters
 -   Se a entrada [!INCLUDE[tsql](../../includes/tsql-md.md)] lote declara uma variável local de mesmo nome como um parâmetro declarado na \@params.  
   
 - Se a instrução faz referência a tabelas temporárias.
+
+- A consulta inclui a criação de uma tabela permanente que é então consultada.
   
  Se \@tsql não tem parâmetros, além daqueles declarados em \@params, o procedimento retornará um conjunto de resultados vazio.  
   
@@ -165,7 +167,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 -   Dedução simples  
   
-     Se E (\@p) = \@p e TT (\@p) existe, ou seja, se \@p for diretamente um argumento para uma das expressões listadas no início da etapa 2, o algoritmo de dedução de tipo deduz o tipo de dados de \@p para ser (TT \@p). Por exemplo:  
+     Se E (\@p) = \@p e TT (\@p) existe, ou seja, se \@p for diretamente um argumento para uma das expressões listadas no início da etapa 2, o algoritmo de dedução de tipo deduz o tipo de dados de \@p para ser (TT \@p). Por exemplo:   
   
     ```sql
     SELECT * FROM t WHERE c1 = @p1 AND @p2 = dbo.tbl(@p3)  
@@ -213,7 +215,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 1.  O tipo de dados que produza o menor número de conversões implícitas em E (\@p) é selecionado. Se um determinado tipo de dados produz um tipo de dados para E (\@p) que é diferente de TT (\@p), o algoritmo de dedução de tipo considerará isso uma conversão implícita extra do tipo de dados de E (\@p) para TT (\@p).  
   
-     Por exemplo:  
+     Por exemplo:   
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_Int + @p  
