@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: d8506bda-66dd-45a4-bfc9-3a10fa665acc
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: cee36fff695390d770a0dc65d3cbb7b321c3de4d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: d08fd9bbb91a3783cf176f150fc966d1b44a2fc4
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52765108"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485279"
 ---
 # <a name="deprecated-master-data-services-features"></a>Recursos preteridos do Master Data Services
 
@@ -55,7 +55,7 @@ O tipo de log de transações da entidade “Atributo” foi preterido. Migre pa
 ## <a name="external-resources"></a>Recursos externos  
  Postagem no blog, [Preterido: Hierarquias e coleções explícitas](https://go.microsoft.com/fwlink/p/?LinkId=615373), no msdn.com.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Recursos descontinuados do Master Data Services](../master-data-services/discontinued-master-data-services-features.md)  
   
   

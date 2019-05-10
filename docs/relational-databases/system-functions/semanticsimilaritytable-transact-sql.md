@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - semanticsimilaritytable function
 ms.assetid: b49d40ab-7552-438b-ad67-6237dcccb75b
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bca3fe143308bb7bf3d8a8e7754c018c749786cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0398f6d17e5825c68f26be00c5365f240d441307
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791174"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65103293"
 ---
 # <a name="semanticsimilaritytable-transact-sql"></a>semanticsimilaritytable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ SEMANTICSIMILARITYTABLE
   
  Documentos correspondidos serão retornados por coluna se os resultados forem solicitados de mais de uma coluna.  
   
-|Column_name|Tipo|Description|  
+|Column_name|Tipo|Descrição|  
 |------------------|----------|-----------------|  
 |**source_column_id**|**int**|ID da coluna da qual um documento de origem foi usado para localizar documentos semelhantes.<br /><br /> Consulte as funções COL_NAME e COLUMNPROPERTY para obter detalhes sobre como recuperar o nome da coluna do column_id e vice-versa.|  
 |**matched_column_id**|**int**|ID da coluna da qual um documento similar foi localizado.<br /><br /> Consulte as funções COL_NAME e COLUMNPROPERTY para obter detalhes sobre como recuperar o nome da coluna do column_id e vice-versa.|  
@@ -80,7 +80,7 @@ SEMANTICSIMILARITYTABLE
 ## <a name="general-remarks"></a>Comentários gerais  
  Para obter mais informações, consulte [localizar documentos semelhantes e relacionados com a pesquisa semântica](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  
   
-## <a name="limitations-and-restrictions"></a>Limitações e restrições  
+## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
  Não é possível consultar documentos similares em colunas. O **SEMANTICSIMILARITYTABLE** função recupera documentos similares apenas da mesma coluna que a coluna de origem, que é identificada pelo **source_key** argumento.  
   
 ## <a name="metadata"></a>Metadados  

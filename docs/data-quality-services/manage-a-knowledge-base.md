@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 00c70154e06cd5e16b687a7d6a9848216456a26b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 9cfa9f3770c0a9ce5b5ac6ae176a33f92d9b79c9
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028077"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488307"
 ---
 # <a name="manage-a-knowledge-base"></a>Gerenciar uma base de dados de conhecimento
 
@@ -46,15 +46,15 @@ ms.locfileid: "56028077"
   
     1.  **Abrir**: clique para abrir a base de dados de conhecimento na atividade selecionada no painel **Selecionar atividade**.  
   
-    2.  **Desbloquear**: Você pode desbloquear a base de dados de conhecimento se for o usuário que estava trabalhando nela em uma das etapas do gerenciamento de domínio, da descoberta de conhecimento e da atividade de política de correspondência, e a fechou. Se você descarregar a base de dados de conhecimento, outra pessoa poderá abri-la e trabalhar nela. Este comando não estará disponível se a base de dados de conhecimento não estiver no estado de uma atividade. Para obter mais informações, consulte [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
+    2.  **Desbloquear**: Você pode desbloquear a base de conhecimento se você for o usuário que estava trabalhando na base de dados de conhecimento em uma das etapas de gerenciamento de domínio, descoberta de conhecimento e a atividade de política de correspondência e fechá-la. Se você descarregar a base de dados de conhecimento, outra pessoa poderá abri-la e trabalhar nela. Este comando não estará disponível se a base de dados de conhecimento não estiver no estado de uma atividade. Para obter mais informações, consulte [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
   
-    3.  **Descartar trabalho**: Clique quando a base de dados de conhecimento estiver em um estado que indique que ela está sendo usada no momento, conforme mostrado com uma entrada no campo Estado da tabela. Este comando não estará disponível se a base de dados de conhecimento não estiver no estado de uma atividade e se a base de dados de conhecimento estiver bloqueada. Para obter mais informações, consulte [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
+    3.  **Descartar trabalho**: Clique quando a base de Conhecimento estiver em um estado que está sendo trabalhada, conforme mostrado com uma entrada no campo estado na tabela. Este comando não estará disponível se a base de dados de conhecimento não estiver no estado de uma atividade e se a base de dados de conhecimento estiver bloqueada. Para obter mais informações, consulte [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
   
-    4.  **Renomear**: Clique para tornar o campo Base de Dados de Conhecimento da tabela editável para a base de dados de conhecimento na qual você clicou com o botão direito do mouse. Altere o nome e clique nessa base de dados de conhecimento e em outra no campo p0ara aceitar a alteração do nome.  
+    4.  **Renomear**: Clique para tornar o campo de dados de Conhecimento da tabela editável para a base de dados de Conhecimento pequeno no. Altere o nome e clique nessa base de dados de conhecimento e em outra no campo p0ara aceitar a alteração do nome.  
   
-    5.  **Excluir**: Clique para remover a base de dados de conhecimento do banco de dados DQS_MAIN no [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)].  
+    5.  **Excluir**: Clique para remover a base de conhecimento do banco de dados DQS_MAIN no [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)].  
   
-    6.  **Propriedades**: Clique para exibir as propriedades do banco de dados em uma exibição somente leitura.  
+    6.  **Propriedades**: Clique para exibir as propriedades para o banco de dados em uma exibição somente leitura.  
   
         1.  **Base de Dados de Conhecimento de Origem**: a base de dados de conhecimento na qual este banco de dados se baseia. Isso é opcional.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "56028077"
   
         3.  **Está bloqueado**: **Verdadeiro** se a base de dados de conhecimento estava bloqueada, **Falso** caso contrário  
   
-        4.  **Contém conteúdo não publicado**: Verdadeiro se a base de dados de conhecimento contiver algum conteúdo que não foi salvo durante a publicação; caso contrário, será Falso.  
+        4.  **Contém conteúdo não publicado**: True se a base de Conhecimento contiver algum conteúdo que não foi salvo durante a publicação, False se não  
   
         5.  **Bloqueado por**: o nome do usuário que fechou a base de dados de conhecimento, bloqueando-a  
   
@@ -72,7 +72,7 @@ ms.locfileid: "56028077"
   
         8.  **Data de Criação**: data em que a criação foi realizada  
   
-##  <a name="FollowUp"></a> Acompanhamento: Após gerenciar uma base de dados de conhecimento  
+##  <a name="FollowUp"></a> Acompanhamento: Após gerenciar uma Base de Conhecimento  
  Depois que você gerenciar uma base de dados de conhecimento, a próxima etapa dependerá da ação executada na base de dados de conhecimento:  
   
 -   Se você abriu a base de dados de conhecimento, continuará na atividade que selecionou.  
