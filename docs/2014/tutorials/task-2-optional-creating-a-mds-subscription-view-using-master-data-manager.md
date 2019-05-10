@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: f3da8219-e0cb-4848-95ca-285a76ec1ba9
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4596485b4eebeba66028d03f5a54b3ee2461205b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e6cbed42d059714dde1c82dbb50edf8ccc1dd65b
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63198868"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484719"
 ---
 # <a name="task-2-optional-creating-a-mds-subscription-view-using-master-data-manager"></a>Tarefa 2 (opcional): Criar uma exibição de assinatura do MDS usando o Master Data Manager
   Nesta tarefa, você criará uma exibição de assinatura para expor a **Supplier** entidade na **fornecedores** modelo para outros aplicativos. Você não utiliza essa exibição na versão atual do tutorial.  

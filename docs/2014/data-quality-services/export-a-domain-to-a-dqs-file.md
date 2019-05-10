@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: eba10d3d-b5c4-447b-8a30-fa07996cb28e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 46f2cd765667a64062c3a47ac91973eed8c94664
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b5b12aa1456f7f4009f48a8c8609f296dfa4b27d
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62792733"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484338"
 ---
 # <a name="export-a-domain-to-a-dqs-file"></a>Exportar um domínio para um arquivo .dqs
   Este tópico descreve como exportar um domínio para um arquivo .dqs no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Você pode exportar um domínio ou uma base de dados de conhecimento inteira para um arquivo de dados. Para obter informações sobre como exportar uma base de dados de conhecimento, consulte [Exportar uma base de dados de conhecimento para um arquivo .dqs](../../2014/data-quality-services/export-a-knowledge-base-to-a-dqs-file.md).  

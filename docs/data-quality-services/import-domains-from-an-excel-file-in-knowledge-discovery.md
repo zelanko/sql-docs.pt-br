@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 4d3a3940-6c2a-4dc4-90eb-86f26012c165
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 08f18fb3c97bbbc5ee3ee4afcd2bb942ddbfef58
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 11a6a5406ff60520ede71ee8d9325991719b6f50
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016629"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487345"
 ---
 # <a name="import-domains-from-an-excel-file-in-knowledge-discovery"></a>Importar domínios de um arquivo do Excel na descoberta da base de dados de conhecimento
 

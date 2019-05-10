@@ -12,15 +12,15 @@ helpviewer_keywords:
 - e-mail [Master Data Services]
 - e-mail [Master Data Services], about e-mail notifications
 ms.assetid: d7ad32d5-9fe5-48fd-8c61-0b00c0aff082
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ac5fbbd7a2ea3988fab52aaf921a74ba36519c0c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 54f8cdc55322144414be11dd837bd723b4ed3c10
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62923295"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65478976"
 ---
 # <a name="notifications-master-data-services"></a>Notificações (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] pode ser configurado para enviar uma notificação por email quando ocorre falha na validação de regra de negócio ou o status de uma versão de modelo mudar.  

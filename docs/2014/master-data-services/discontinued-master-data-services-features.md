@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 3236cce0-cfd9-43f8-8be3-e8c8dff8f162
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1466883d27fb87aeae1e4b51f5826696abc3abb6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3f1eb85cb05c8284990d46241ed752515ef5504b
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62924840"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65479434"
 ---
 # <a name="discontinued-master-data-services-features-in-sql-server-2014"></a>Recursos do Master Data Services descontinuados no SQL Server 2014
   Este tópico descreve os recursos do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] que não estão mais disponíveis no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

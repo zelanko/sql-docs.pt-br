@@ -11,15 +11,15 @@ helpviewer_keywords:
 - attributes [Master Data Services], deleting
 - deleting attributes [Master Data Services]
 ms.assetid: ec3e66f7-0e35-43d7-a80d-64899948ebfe
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6967178e237f62695bc4843087e8ff8fe676fba7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: fdf3b766e48843a15e73b7a41b7c434ba604e0af
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819107"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65478220"
 ---
 # <a name="delete-an-attribute-master-data-services"></a>Excluir um atributo (Master Data Services)
 
@@ -61,7 +61,7 @@ ms.locfileid: "52819107"
   
 8.  Na caixa de diálogo de confirmação, clique em **OK**.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Atributos &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
  [Atributos baseados em domínio &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)   
  [Criar um atributo de texto &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   

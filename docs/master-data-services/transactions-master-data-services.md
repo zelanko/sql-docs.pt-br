@@ -11,15 +11,15 @@ helpviewer_keywords:
 - transactions [Master Data Services], about transactions
 - transactions [Master Data Services]
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 78badeae93c8fbcf7adf03638f22e62f591b56ce
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 887380136c96cb9cb1dbcd8d9d04b486daaf6659
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782728"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65486101"
 ---
 # <a name="transactions-master-data-services"></a>Transações (Master Data Services)
 

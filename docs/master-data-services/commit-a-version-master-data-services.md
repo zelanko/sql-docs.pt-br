@@ -11,15 +11,15 @@ helpviewer_keywords:
 - committing versions [Master Data Services]
 - versions [Master Data Services], committing
 ms.assetid: 6b967a39-b333-4b84-9e5f-4fb07e156826
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6dddedd419ca8d4a6bcdb25f67788926fbac36a5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: dc503340e741e2503803cc51ad4a57c15e2a8a7f
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766789"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484290"
 ---
 # <a name="commit-a-version-master-data-services"></a>Confirmar uma versão (Master Data Services)
 
@@ -52,7 +52,7 @@ ms.locfileid: "52766789"
   
 5.  Na caixa de diálogo de confirmação, clique em **OK**.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Próximas etapas  
   
 -   [Criar um sinalizador de versão &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
   
@@ -60,7 +60,7 @@ ms.locfileid: "52766789"
   
 -   [Copiar uma versão &#40;Master Data Services&#41;](../master-data-services/copy-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Versões &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   
   

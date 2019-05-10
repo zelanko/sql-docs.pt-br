@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - semanticsimilaritydetailstable function
 ms.assetid: 038d751a-fca5-4b4c-9129-cba741a4e173
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c7b6bdccdb0c9d84b7ad814c0342a6fe267522d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 680712fb2ac5b31484fc7650a8a4fab8047fc7af
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718054"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65103269"
 ---
 # <a name="semanticsimilaritydetailstable-transact-sql"></a>semanticsimilaritydetailstable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,9 +72,9 @@ SEMANTICSIMILARITYDETAILSTABLE
 ## <a name="table-returned"></a>Tabela retornada  
  A tabela a seguir descreve as informações sobre as frases-chave que podem ser retornadas por essa função de conjunto de linhas.  
   
-|Column_name|Tipo|Description|  
+|Column_name|Tipo|Descrição|  
 |------------------|----------|-----------------|  
-|**frases-chave**|**NVARCHAR**|A frase chave que contribui com a semelhança entre o documento original e o documento correspondente.|  
+|**keyphrase**|**NVARCHAR**|A frase chave que contribui com a semelhança entre o documento original e o documento correspondente.|  
 |**score**|**REAL**|Um valor relativo para essa frase-chave em sua relação com todas as outras frases-chave que são semelhantes entre os 2 documentos.<br /><br /> O valor é um valor decimal fracionário no intervalo de [0,0, 1,0] onde uma pontuação mais alta representa peso mais alto e 1,0 é a pontuação perfeita.|  
   
 ## <a name="general-remarks"></a>Comentários gerais  

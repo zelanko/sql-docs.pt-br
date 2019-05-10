@@ -15,15 +15,15 @@ helpviewer_keywords:
 - database [Master Data Services], logins
 - security [Master Data Services], database logins
 ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8780bd1545793f08e51e2e0804d03d8a3e98178e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: dcf080146f8eee0e03d0c7b22c391fd1ace54e85
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760158"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487721"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>Logons, usuários e funções de banco de dados (Master Data Services)
 
@@ -40,14 +40,14 @@ ms.locfileid: "52760158"
   
 ## <a name="msdb-users"></a>Usuários de msdb  
   
-|Usuário|Descrição|  
+|User|Descrição|  
 |----------|-----------------|  
 |**mds_clr_user**|Não usado. Mapeia para mds_dlp_login.|  
 |**mds_email_user**|Usado para notificações.<br /><br /> – Mapeado para mds_dlp_login.<br /><br /> - É um membro da função: DatabaseMailUserRole.|  
   
 ## <a name="master-data-services-database-users"></a>Usuários de banco de dados do Master Data Services  
   
-|Usuário|Descrição|  
+|User|Descrição|  
 |----------|-----------------|  
 |**mds_email_user**|Usado para notificações.<br /><br /> – Tem permissão SELECT para o esquema de mdm.<br /><br /> – Tem permissão EXECUTE para o tipo de tabela definida pelo usuário mdm.MemberGetCriteria.<br /><br /> – Tem permissão EXECUTE para o procedimento armazenado mdm.udpNotificationQueueActivate.|  
 |**mds_schema_user**|É proprietário dos esquemas mdm e mdq. O esquema padrão é mdm.<br /><br /> Não está associado a um logon.|  
@@ -67,7 +67,7 @@ ms.locfileid: "52760158"
 |**mdq**|Contém funções de banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] relacionadas aos resultados da filtragem de membros com base nas expressões regulares ou similaridade e para formatação de emails de notificação.|  
 |**stg**|Contém tabelas de banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , procedimentos armazenados e exibições relacionadas ao processo de preparo. Não exclua nenhum destes objetos. Para obter mais informações sobre o processo de preparo, confira [Visão geral: Importando dados de tabelas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Segurança de objeto de banco de dados &#40;Master Data Services&#41;](../master-data-services/database-object-security-master-data-services.md)  
   
   

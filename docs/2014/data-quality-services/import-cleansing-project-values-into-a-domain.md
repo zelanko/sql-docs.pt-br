@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.importprojectvalues.f1
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 07992b9a5150e6b81d869aa21831e019c32ae6e4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c5661d490f4669968b6d8198a7565fb5e5c8c218
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62792714"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484301"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>Importar valores de projeto de limpeza para um domínio
   No [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS), você pode importar conhecimento de qualidade de dados coletado durante o processo de limpeza em um projeto de limpeza de qualidade de dados ou um pacote do Integration Services que contém o componente de limpeza DQS em um domínio. Isto assegura que o conhecimento confiável não seja perdido, e que a base de dados de conhecimento seja aprimorada continuamente.  

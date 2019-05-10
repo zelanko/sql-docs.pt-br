@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: cff3b662-7876-4445-9bdd-96be35b3ca0c
-author: douglaslms
-ms.author: douglasl
+author: lrtoyou1223
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: c17508b14ba8352e8dd17e2e0c1322c0c1856ed6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
-ms.translationtype: MT
+ms.openlocfilehash: 37935ceb61b80c920ca78b18169f2bb7f2c13924
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63217795"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65094207"
 ---
 # <a name="task-8-creating-a-composite-domain-rule"></a>Tarefa 8: Criar uma regra de domínio composto
   Nesta tarefa, você pode criar uma regra para o **Address Validation** domínio composto. Defina uma regra de domínio cruzado: se **Cidade** é **Los Angeles**, **estado** deve ser **CA** onde **Cidade** e **estado** são dois domínios.  

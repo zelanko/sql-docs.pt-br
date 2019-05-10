@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: fdd0a3091440295e393d969f1b8161b83fb58d95
 ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/11/2018
 ms.locfileid: "38063956"
@@ -24,7 +24,7 @@ ms.locfileid: "38063956"
 ## <a name="query-types"></a>Tipos de consultas  
  As três modos mais comuns para especificar dados de origem são:  
   
- [OPENQUERY &AMP;#40;DMX&AMP;#41;](../dmx/source-data-query-openquery.md)  
+ [OPENQUERY &#40;DMX&#41;](../dmx/source-data-query-openquery.md)  
  Esta instrução consulta dados que são externos a uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], usando uma fonte de dados existente.  
   
  Embora **OPENQUERY** é semelhante à função para **OPENROWSET**, **OPENQUERY** tem os seguintes benefícios:  
@@ -33,10 +33,10 @@ ms.locfileid: "38063956"
   
 -   O administrador tem mais controle sobre como são acessados os dados no servidor. Por exemplo, o administrador pode controlar quais provedores são carregados no servidor e quais dados externos podem ser acessados.  
   
- [OPENROWSET &AMP;#40;DMX&AMP;#41;](../dmx/source-data-query-openrowset.md)  
+ [OPENROWSET &#40;DMX&#41;](../dmx/source-data-query-openrowset.md)  
  Esta instrução consulta dados que são externos a uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], usando uma fonte de dados existente.  
   
- [FORMA &AMP;#40;DMX&AMP;#41;](../dmx/source-data-query-shape.md)  
+ [FORMA &#40;DMX&#41;](../dmx/source-data-query-shape.md)  
  Esta instrução consulta múltiplas fontes de dados para criar uma tabela aninhada. Usando **forma**, você pode combinar dados de várias fontes em uma única tabela hierárquica. Isto permite a você aproveitar a capacidade do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de aninhar tabelas inserindo uma tabela dentro de outra.  
   
  Para especificar os dados de origem, você pode usar também as seguintes opções:  
