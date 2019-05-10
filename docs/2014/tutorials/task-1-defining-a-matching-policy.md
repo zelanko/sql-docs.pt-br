@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6f89a720-fce5-4f60-bef3-a159bbc9f25c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 85a6ca52573bec3d7e6c19e68f809048ed0786db
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3e4777cf05e7f3eab62c389ace8b8d8a96cae304
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63222768"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481311"
 ---
 # <a name="task-1-defining-a-matching-policy"></a>Tarefa 1: Definir uma política de correspondência
   Nesta tarefa, você criará uma política de correspondência com uma regra nela. A regra terá um pré-requisito: **Supplier ID**, que significa que as IDs de fornecedor deverão corresponder antes do uso de outros domínios na regra. A regra usa dois outros domínios: **Nome do fornecedor** com **similaridade** valor definido como **70%** e **Contact Email** com **similaridade** valor definido como **30%**.  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - recursive hierarchies [Master Data Services]
 - hierarchies [Master Data Services], recursive hierarchies
 ms.assetid: 9408c6ea-d9c4-4a0b-8a1b-1457fb6944af
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c62c04ccbfa6e4143277f09950f79e8b59a01f97
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0ebe093973174fe1e245ced134888d3e10417467
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62764095"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65478846"
 ---
 # <a name="recursive-hierarchies-master-data-services"></a>Hierarquias recursivas (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], uma hierarquia recursiva é uma hierarquia derivada que inclui uma relação recursiva. Uma relação recursiva existe quando uma entidade tem um atributo baseado em domínio com base na própria entidade.  

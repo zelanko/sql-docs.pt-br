@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - collections [Master Data Services], adding members
 ms.assetid: 1a7155e6-2d4a-4ed1-a72c-edb37fa1a46b
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5daf66aeb2eba3fd30302ef9e3e806c490f46e72
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3b5d76c06096dd2dab13bd6dcf7ff59fbd612302
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766009"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483759"
 ---
 # <a name="add-members-to-a-collection-master-data-services"></a>Adicionar membros a uma coleção (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], você pode adicionar membros folha e consolidados a uma coleção.  

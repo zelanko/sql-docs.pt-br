@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.mds.configmanager.dbmailprofileacct.f1
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 26128939285a16478b02de30ab17537c8fcafa14
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 9b8685f15ee926d4f92470980d818fc12f3b3105
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796788"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489646"
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box"></a>Caixa de diálogo Criar perfil e conta do Database Mail
 
@@ -55,12 +55,12 @@ ms.locfileid: "52796788"
 |------------------|-----------------|  
 |**Autenticação do Windows usando as credenciais do serviço Mecanismo de Banco de Dados**|Especifique que o Database Mail deve usar as credenciais da conta de serviço Windows do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] para autenticação no servidor SMTP.|  
 |**Autenticação Básica**|Especifique que o Database deve usar nome de usuário e senha específicos para autenticar no servidor SMTP. Estas informações são usadas somente para autenticação no servidor de email, e a conta não precisa corresponder a um usuário do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou ao usuário no computador que executa o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
-|**User name**|Digite o nome da conta de usuário que o Database Mail usa para fazer logon no servidor SMTP. Um nome do usuário será necessário se o servidor SMTP exigir autenticação básica.|  
+|**Nome de usuário**|Digite o nome da conta de usuário que o Database Mail usa para fazer logon no servidor SMTP. Um nome do usuário será necessário se o servidor SMTP exigir autenticação básica.|  
 |**Senha**|Digite a senha que o Database Mail usa para fazer logon no servidor SMTP. Uma senha será necessária se o servidor SMTP exigir autenticação básica.|  
 |**Confirmar senha**|Digite a senha novamente para confirmar.|  
 |**Autenticação anônima**|Especifique que o servidor SMTP não requer autenticação. O Database Mail não usará nenhuma credencial para a autenticação no servidor SMTP.|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Página Configuração do Banco de Dados &#40;Gerenciador de Configuração do Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
 [Instalação e configuração do Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)
   

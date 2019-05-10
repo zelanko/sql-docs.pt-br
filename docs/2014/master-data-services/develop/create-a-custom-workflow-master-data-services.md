@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: reference
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ebceefdc89494d65ea34d6c3d8f9ff81b71b139c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 58a542c8cbe72c420797f34280c2fb7422b82207
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62924718"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65479541"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Criar um fluxo de trabalho personalizado (Master Data Services)
   O [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] usa regras de negócio para criar soluções de fluxo de trabalho básicas, como atualizar automaticamente e validar dados e obter o envio de notificações por email, com base nas condições especificadas. Quando você requer processamento mais complexo do que o oferecido pelas ações de fluxo de trabalho internas, use um fluxo de trabalho personalizado. Um fluxo de trabalho personalizado é um assembly .NET que você cria. Quando seu assembly de fluxo de trabalho é chamado, seu código pode executar qualquer ação que sua situação exija. Por exemplo, se seu fluxo de trabalho exigir o processamento de eventos complexos, como aprovações em várias camadas ou árvores de decisão complicadas, você poderá configurar o [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] para iniciar um fluxo de trabalho personalizado que analisa os dados e determina para onde enviá-lo para aprovação.  
@@ -79,7 +79,7 @@ ms.locfileid: "62924718"
     </setting>  
     ```  
   
-3.  Sob a configuração "ConnectionString" adicione uma configuração "WorkflowTypeExtenders" para associar um nome de tag a seu assembly de manipulador de fluxo de trabalho. Por exemplo:   
+3.  Sob a configuração "ConnectionString" adicione uma configuração "WorkflowTypeExtenders" para associar um nome de tag a seu assembly de manipulador de fluxo de trabalho. Por exemplo:  
   
     ```xml  
     <setting name="WorkflowTypeExtenders" serializeAs="String">  

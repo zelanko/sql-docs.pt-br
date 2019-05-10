@@ -11,15 +11,15 @@ helpviewer_keywords:
 - creating date attributes [Master Data Services]
 - attributes [Master Data Services], creating date attributes
 ms.assetid: 22a8f1a3-b4f2-4cfa-8495-7daad5ce9d12
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8f7c2dece1ac25d99348080c9c6f338c7db8f50c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 9179b2f016fe2d720da1b82078c03f0e7cb3e67a
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753448"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487380"
 ---
 # <a name="create-a-date-attribute-master-data-services"></a>Criar um atributo de data (Master Data Services)
 
@@ -90,7 +90,7 @@ ms.locfileid: "52753448"
   
  A máscara de entrada é uma cadeia de caracteres de formato DateTime .NET personalizada. Para obter mais informações, consulte [Cadeias de caracteres personalizadas de formato data e hora](https://msdn.microsoft.com/library/8kb3ddd4\(v=vs.110\).aspx)  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Atributos &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
  [Alterar um nome de atributo e um tipo de dados &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
  [Criar um atributo baseado em domínio &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   

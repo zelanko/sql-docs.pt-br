@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 98385f84-67cc-421a-b729-91847954e03e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 600d5b5dfc42e52c4d4c04912530bf586fb569f8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bebddfcb9f6dc433831e2649428bd9c99646628f
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62923787"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65482860"
 ---
 # <a name="save-a-shortcut-query-file-mds-add-in-for-excel"></a>Salvar um arquivo de consulta de atalho (suplemento MDS para Excel)
   No [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], salve um arquivo de consulta de atalho quando você precisar acessar o mesmo conjunto de dados com frequência.  

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7f50c5e77e93fcddbf7eb6f1d16432dd54bc7625
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6b46b7d020e7a9ebd8bd0ac96d0971b63230c2b0
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62755804"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480763"
 ---
 # <a name="data-quality-client-application"></a>Aplicativo cliente Data Quality
   O aplicativo [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] permite executar operações de qualidade de dados usando uma ferramenta autônoma. Esse aplicativo permite criar bases de dados de conhecimento, criar e executar projetos de qualidade de dados e executar tarefas administrativas.  

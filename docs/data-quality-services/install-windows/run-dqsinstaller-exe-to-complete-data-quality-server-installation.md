@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7a8c96e0-1328-4f35-97fc-b6d9cb808bae
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 850af4e77b1fcaf8ffdaa0ede7bcaeba79695adc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: f16d39d738149d10a58dde8c01d8b447393ef9c6
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013417"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487538"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>Executar o DQSInstaller.exe para concluir a instalação do Data Quality Server
 
@@ -56,7 +56,7 @@ ms.locfileid: "56013417"
 3.  Você é solicitado a digitar uma senha para a chave mestra de banco de dados. A chave mestra de banco de dados é exigida criptografar o provedor de serviço de dados de referência tecla que será armazenada no DQS_MAIN banco de dados quando você configurar provedores de dados de referência posteriormente no [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS)  
   
     > [!IMPORTANT]  
-    >  A senha deve ter pelo menos oito caracteres e deve conter caracteres de três das quatro categorias a seguir: Letras maiúsculas do inglês (A, B, C,... Z), letras minúsculas do inglês (a, b, c,... z), numeral (0, 1, 2,... 9) e caractere não alfanumérico ou especial (~!@#$%^&*()_-+=|\\{}[]:;"'<>,.?/). Por exemplo: P@ssword. O instalador o solicitará inserir outra senha se a senha atual não corresponder ao requisito.  
+    >  A senha deve ter pelo menos 8 caracteres e deve conter caracteres de três das quatro categorias a seguir: Letras maiúsculas do inglês (A, B, C,... Z), letras minúsculas do inglês (a, b, c,... z), numeral (0, 1, 2,... 9) e caractere não alfanumérico ou especial (~!@#$%^&*()_-+=|\\{}[]:;"'<>,.?/). Por exemplo: P@ssword. O instalador o solicitará inserir outra senha se a senha atual não corresponder ao requisito.  
   
 4.  Forneça uma senha, confirme a senha e pressione a ENTER para continuar com a instalação.  
   
@@ -93,11 +93,11 @@ ms.locfileid: "56013417"
   
     -   **Sem parâmetro de linha de comando**: Digite `dqsinstaller.exe` e pressione ENTER.  
   
-    -   **Com parâmetro de linha de comando**: Digite o comando exigido conforme mencionado na tabela acima e pressione ENTER.  
+    -   **Com parâmetro de linha de comando**: Digite o comando exigido conforme mencionado na tabela acima e, em seguida, pressione ENTER.  
   
 4.  As ações exigidas são executadas com base no comando especificado. Se você prefere instalar o [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] sem parâmetros de linha de comando, o restante das etapas são as mesmas, conforme descrito nas etapas 2 a 6 na seção anterior, [Executar o DQSInstaller.exe na tela Iniciar, no menu Iniciar ou no Windows Explorer](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#WindowsExplorer).  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Próximas etapas  
   
 -   Conceda funções DQS apropriadas a usuários com base em seu perfil de trabalho. Veja [Conceder funções DQS a usuários](../../data-quality-services/install-windows/grant-dqs-roles-to-users.md).  
   
@@ -105,7 +105,7 @@ ms.locfileid: "56013417"
   
 -   Verifique se você pode acessar seus dados de origem para as operações do DQS e se pode exportar os dados processados para uma tabela em um banco de dados. Veja [Acessar dados para as operações do DQS](../../data-quality-services/install-windows/access-data-for-the-dqs-operations.md).  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [Atualizar assemblies SQLCLR após atualização do .NET Framework](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)   
  [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)  

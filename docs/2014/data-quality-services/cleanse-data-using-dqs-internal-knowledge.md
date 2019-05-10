@@ -12,15 +12,15 @@ f1_keywords:
 - sql12.dqs.dqproject.correction.f1
 - sql12.dqs.dqproject.interactivecleansing.f1
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: aa900fc136729eace74af6ceaf8d6f26b7900f99
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 26e4c7394f1af445534e32f9a960cb71480f72c9
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62755797"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481137"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>Limpar dados usando o conhecimento do DQS (interno)
   Este tópico descreve como limpar seus dados usando um projeto de qualidade de dados no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). A limpeza de dados é executada na fonte de dados com o uso de uma base de dados de conhecimento que foi criada no DQS a partir de um conjunto de dados de alta qualidade. Para obter mais informações, consulte [Criando uma base de dados de conhecimento](../../2014/data-quality-services/building-a-knowledge-base.md).  

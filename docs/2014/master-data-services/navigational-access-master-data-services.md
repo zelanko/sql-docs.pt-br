@@ -10,15 +10,15 @@ helpviewer_keywords:
 - navigational access [Master Data Services]
 - security [Master Data Services], navigational access
 ms.assetid: 3403b7b0-44e2-48c3-a1b7-9c4612b874b8
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 74e29a2e266dd525893e5b2fe54ba82414e046c9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1d190d55c45530adde1b41658c975bbfc19c0b91
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62763852"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65482632"
 ---
 # <a name="navigational-access-master-data-services"></a>Acesso de navegação (Master Data Services)
   O acesso de navegação se aplica à segurança do objeto do modelo que é atribuída na guia **Modelos** .  

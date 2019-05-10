@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 8234c63b-a018-4e55-8184-9a6bdf03274d
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: aeb4df3ea92cd6df608325a8b2ddb7ffaa285787
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cf8a8310abf9173f613549ef7f2776fc33ea690c
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62792526"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481273"
 ---
 # <a name="export-and-import-dqs-knowledge-bases-using-dqsinstallerexe"></a>Export and Import DQS Knowledge Bases Using DQSInstaller.exe
   Para uma instalação existente do DQS, você pode exportar de uma só vez todas as bases de dados de conhecimento de seu [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] para um arquivo de backup DQS (.dqsb) e, depois, usar o arquivo .dqsb para importar todas as bases de dados de conhecimento de uma só vez para um [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] diferente, executando o arquivo DQSInstaller.exe no prompt de comando. Para obter mais informações sobre a execução de DQSInstaller.exe do prompt de comando, consulte [Executar o DQSInstaller.exe do prompt de comando](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#CommandPrompt) em [Executar o DQSInstaller.exe para concluir a instalação do Data Quality Server](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md).  

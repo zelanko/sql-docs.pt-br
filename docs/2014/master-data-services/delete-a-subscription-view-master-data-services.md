@@ -10,15 +10,15 @@ helpviewer_keywords:
 - deleting subscription views [Master Data Services]
 - subscription views [Master Data Services], deleting
 ms.assetid: 14b09c81-1297-48b0-8fe5-991414b930e0
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e01209b78acb778d39d376172192ca7ee0f1a9e7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3ae447196ebef455406202615ce4aff50d3749c8
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62924905"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65479476"
 ---
 # <a name="delete-a-subscription-view-master-data-services"></a>Excluir uma exibição de assinatura (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], exclua uma exibição de assinatura quando ela não for mais necessária. A exclusão de uma exibição de assinatura no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] remove a exibição do banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  

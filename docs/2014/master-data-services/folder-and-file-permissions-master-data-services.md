@@ -11,16 +11,16 @@ helpviewer_keywords:
 - folders [Master Data Services]
 - files [Master Data Services]
 ms.assetid: 6402d81d-7349-47b1-95ca-99b0c0f4f373
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 robots: noindex,nofollow
-ms.openlocfilehash: 594ceb3c21dec321afb7b08a2a54e90571ec8f5f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 06ae01a097b164abb1b55267853ee99f7e5bf445
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765269"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483831"
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>Permissões de pasta e arquivo (Master Data Services)
   Quando você instala o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], as pastas e arquivos são instalados no sistema de arquivos no caminho de instalação especificado para recursos compartilhados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Se você usar o caminho de instalação padrão para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] recursos compartilhados, o caminho de instalação do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] é *unidade*: \Program Files\Microsoft SQL Server\120\Master Data Services. Embora seja possível alterar o caminho de instalação de recursos compartilhados, considere as permissões que são herdadas da pasta pai e as permissões que são definidas explicitamente para o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  

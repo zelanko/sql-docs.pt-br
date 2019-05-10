@@ -13,15 +13,15 @@ helpviewer_keywords:
 - monitoring activity
 - activity monitoring
 ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a9bc3aa9f703cc53b50bc499f44ffc6b7971dcfd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 308001ec4e6e903eadfcf203b6673e154de8faf7
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020398"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489194"
 ---
 # <a name="monitor-dqs-activities"></a>Monitorar atividade do DQS
 
@@ -31,7 +31,7 @@ ms.locfileid: "56020398"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="LimitationsRestrictions"></a> Limitações e Restrições  
+###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
  Somente os usuários com a função dqs_administrator no banco de dados DQS_Main podem encerrar uma atividade ou interromper um processo em uma atividade.  
   
 ###  <a name="Security"></a> Segurança  

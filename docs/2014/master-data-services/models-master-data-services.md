@@ -10,15 +10,15 @@ helpviewer_keywords:
 - models [Master Data Services], about models
 - models [Master Data Services]
 ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ed3a5bc74211fea8a397622d79cf6dd4d9a26df0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d202c04a41553b934c175edb7c0afcd907e846e5
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62923829"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65482545"
 ---
 # <a name="models-master-data-services"></a>Modelos (Master Data Services)
   Modelos são o nível mais alto da organização de dados no [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Um modelo define a estrutura de dados em sua solução de gerenciamento de dados mestre. Um modelo contém os seguintes objetos:  

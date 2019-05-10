@@ -8,15 +8,15 @@ ms.technology:
 - master-data-services
 ms.topic: conceptual
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 841f2383b47a40ffd4b8a5d5357b08a9504a30c2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 79a6d9c2d3010043daddab14dcaae51e58914fbb
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62764931"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65482771"
 ---
 # <a name="master-data-services"></a>Master Data Services
   O[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) é a solução do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para gerenciamento de dados mestre. O MDM (gerenciamento de dados mestre) descreve os esforços de uma organização para descobrir e definir listas não transacionais de dados, visando compilar listas mestre sustentáveis. Um projeto MDM em geral inclui uma avaliação e a reestruturação de processos comerciais internos, além da implementação de tecnologia de MDM. O resultado de uma solução MDM com êxito são dados confiáveis e centralizados que podem ser analisados, resultando em melhores decisões comerciais.  

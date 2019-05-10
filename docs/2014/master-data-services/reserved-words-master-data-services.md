@@ -10,15 +10,15 @@ helpviewer_keywords:
 - reserved words [Master Data Services]
 - Master Data Services, reserved words
 ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 49d4a633e7d03dc03e3eba95067e448cbb323e0a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5435c2a48417156abd6d4f831bf61c9ba6440fab
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62923208"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65482571"
 ---
 # <a name="reserved-words-master-data-services"></a>Palavras reservadas (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], quando você cria objetos ou membros de modelo, algumas palavras não podem ser usadas. Usar essas palavras pode causar erros.  

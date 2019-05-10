@@ -10,15 +10,15 @@ helpviewer_keywords:
 - attributes [Master Data Services], creating number attributes
 - creating number attributes [Master Data Services]
 ms.assetid: c0dbb6d8-ba78-485a-a40d-6d5cb7e75d0a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: adc2a5156c84545c90a9ae904749f96a729c251a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 484774165ea1997b98fc9dc0919f5be7450dd4c7
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62925103"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483361"
 ---
 # <a name="create-a-numeric-attribute-master-data-services"></a>Criar um atributo numérico (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], crie um atributo numérico quando desejar que os usuários insiram um número como valor de atributo.  

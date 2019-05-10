@@ -11,15 +11,15 @@ helpviewer_keywords:
 - explicit hierarchies, derived hierarchies with explicit caps
 - derived hierarchies, derived hierarchies with explicit caps
 ms.assetid: 6a82ff66-c137-4757-99bb-787d189b4295
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 89b4eccbe26817d25d8c80a56e602fcbc5ab6e8a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1b444e554fdaa58f8483a339df83bd59f768cef2
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765631"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483045"
 ---
 # <a name="derived-hierarchies-with-explicit-caps-master-data-services"></a>Hierarquias derivadas com nível superior (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], quando os níveis de uma hierarquia explícita são usados como os níveis mais altos de uma hierarquia derivada, isso é chamado de hierarquia derivada com níveis superiores.  

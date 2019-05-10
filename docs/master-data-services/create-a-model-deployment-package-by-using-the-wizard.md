@@ -12,15 +12,15 @@ helpviewer_keywords:
 - models [Master Data Services], creating a deployment package
 - creating packages [Master Data Services]
 ms.assetid: b24ec4c2-1378-4c72-ac69-4ec2647030f0
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d8511565ebaa757fb10d9f4b16ea2c973c3c94d4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 21303e8b4fbf6f1d03fa2487a31457355febc2a7
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754388"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487420"
 ---
 # <a name="create-a-model-deployment-package-by-using-the-wizard"></a>Criar um pacote de implantação de modelo usando o Assistente
 
@@ -55,11 +55,11 @@ ms.locfileid: "52754388"
   
 8.  Clique em **Fechar** para fechar o assistente.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Próximas etapas  
   
 -   [Implantar um pacote de implantação de modelo usando o Assistente](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Implantando modelos &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)  
   
   

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - permissions [Master Data Services], model objects
 - models [Master Data Services], object permissions
 ms.assetid: fab6335b-4cae-47de-ae7c-6c4743e0680f
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d9e2838e2ba3cfcb713c0353b89054ca549e4e5c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 94ad81913071a3bbd4aad33515c27c68b9e268e4
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62923565"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65482669"
 ---
 # <a name="model-object-permissions-master-data-services"></a>Permissões de objeto de modelo (Serviços de Dados Mestre)
   As permissões do objeto de modelo são obrigatórias. Elas determinam os atributos que um usuário pode acessar na área funcional **Explorer** da interface do usuário.  

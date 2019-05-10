@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 98385f84-67cc-421a-b729-91847954e03e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e725d3c1bce7e10b202751169ebaa88408ea129a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 142d2a0ba403600d45f338596b5a581980ec79f0
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714404"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65486097"
 ---
 # <a name="save-a-shortcut-query-file-mds-add-in-for-excel"></a>Salvar um arquivo de consulta de atalho (suplemento MDS para Excel)
 
@@ -35,13 +35,13 @@ ms.locfileid: "47714404"
   
 2.  Opcional. Para renomear a consulta, clique na seta sob **Salvar Consulta** e clique em **Gerenciar Consultas**. Selecione a consulta e clique em **Renomear**.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Próximas etapas  
   
 -   Clique na seta sob **Salvar Consulta** para exibir a consulta de atalho e abri-la.  
   
 -   [Enviar um arquivo de consulta de atalho por email &#40;Suplemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/email-a-shortcut-query-file-mds-add-in-for-excel.md)  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Arquivos de consulta de atalho &#40;Suplemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)  
   
   

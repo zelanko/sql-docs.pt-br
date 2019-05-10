@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 649d687b93a2eeff940c92c79b7b966511a1d79d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ad52c1f1d431e1ded8f63728bf17c951196c406d
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62792938"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480695"
 ---
 # <a name="data-quality-services-concepts"></a>Conceitos do Data Quality Services
   Este tópico fornece um resumo breve de conceitos do [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) em gerenciamento de conhecimento, projetos de qualidade de dados e administração de qualidade de dados.  

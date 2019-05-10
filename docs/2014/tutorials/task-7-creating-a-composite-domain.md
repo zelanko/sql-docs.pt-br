@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: ae778647-1df0-4952-9a69-0ef6177eea9c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c48144ca3720565c3c745ffd8aa39b0896e1fb66
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bbc00117e10e48adbde37b9f0561610feff8f87e
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62866269"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488961"
 ---
 # <a name="task-7-creating-a-composite-domain"></a>Tarefa 7: Criar um domínio composto
   Nesta tarefa, você criará um domínio composto, **Address Validation**, que inclui **Address Line**, **Cidade**, **estado**e  **ZIP** domínios. Um domínio composto permite definir uma regra entre domínios que envolve vários domínios em uma regra. Há outras vantagens para um domínio composto, como analisar um valor de campo em vários domínios.  Por exemplo, um valor para um campo Nome Completo pode ser analisado em domínios separados de Nome, Nome do Meio e Sobrenome. Neste tutorial, você define apenas uma regra entre domínios. Ver [Gerenciando um domínio composto](https://msdn.microsoft.com/library/hh510399.aspx) para obter mais detalhes.  

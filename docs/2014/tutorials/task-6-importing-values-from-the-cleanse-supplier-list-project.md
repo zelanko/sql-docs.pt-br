@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fec0deef-a729-4ff1-b709-72d2b3f407ac
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0780636d3bcaecfe0519192bd450bb538d78bbf9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f6b90a36238cd4a02e86d49125ee662f07d32882
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62866764"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489091"
 ---
 # <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>Tarefa 6: Importar valores do projeto Limpar Lista de Fornecedores
   Nesta tarefa, você importará o conhecimento de qualidade de dados adquirido durante o processo de limpeza. Ver [importar valores de projeto de limpeza para um domínio](https://msdn.microsoft.com/library/hh479581.aspx) tópico para obter mais detalhes. Também é exportar a base de conhecimento em um arquivo DQS antes de publicar atualizada **fornecedores** da Base de dados de Conhecimento.  

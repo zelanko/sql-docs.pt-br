@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.mds.configmanager.webconfigpg.f1
 ms.assetid: 7b900778-0169-4e42-9faf-98dc1c01313e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f04a620a16ae2389412280ebd6b6c1bdacb32d5e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 8e9036bbff7302a0580bcbc5370ba8c6e9f7835a
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52776988"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485524"
 ---
 # <a name="web-configuration-page-master-data-services-configuration-manager"></a>Página Configuração da Web (Gerenciador de Configuração do Master Data Services)
 
@@ -48,7 +48,7 @@ ms.locfileid: "52776988"
 |------------------|-----------------|  
 |**Habilitar a integração com o Data Quality Services**|Selecione esta opção para habilitar a funcionalidade Data Quality disponível no [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]. Para obter mais informações, consulte [Habilitar a integração do Data Quality Services com Master Data Services](../master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md).|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
 [Instalação e configuração do Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)[Requisitos do aplicativo Web &#40;Master Data Services&#41;](../master-data-services/install-windows/web-application-requirements-master-data-services.md)   
  [Criar um aplicativo Web do Master Data Manager &#40;Master Data Services&#41;](../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
   

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - permissions [Master Data Services], model and member overlaps
 - members [Master Data Services], effective permissions
 ms.assetid: 9fd7a555-43bf-4796-a8b6-1ca63a291216
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e70b6dab6399026606382396bded3a467a9b639c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ca57d34a3dda2880f3882d1940c6852af0729fb7
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62764218"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65482735"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>Sobrepondo permissões de modelo e membro (Serviços de Dados Mestre)
   A permissão atribuída a um membro pode sobrepor a permissão atribuída a um objeto de modelo. Quando ocorrem sobreposições, a permissão mais restritiva tem efeito.  

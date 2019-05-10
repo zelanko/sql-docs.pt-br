@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.dqs.dm.refdata.f1
 - sql12.dqs.dm.refcatalog.f1
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 254e1209a8198a6021222edc0b9b8abc72210884
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 153f4e25372a7cbb5e58f7fdc4d5a9134b60ed61
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62755894"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481110"
 ---
 # <a name="attach-a-domain-or-composite-domain-to-reference-data"></a>Anexar domínio ou domínio de composição a dados de referência
   Este tópico descreve como anexar domínios/domínios compostos em uma base de dados de conhecimento de qualidade de dados para um serviço de dados de referência, no Windows Azure Marketplace, a fim de compilar o conhecimento com base nos dados de referência de alta qualidade. Cada serviço de dados de referência contém um esquema (colunas de dados). Após anexar um domínio ou um domínio composto a um serviço de dados de referência, mapeie o domínio anexado ou os domínios individuais no domínio composto anexado para as colunas apropriadas em um esquema de serviço de dados de referência. Ao anexar um domínio composto a um serviço de dados de referência, você pode anexar apenas um domínio a um serviço de dados de referência e, em seguida, mapear os domínios individuais no domínio composto para as colunas apropriadas no esquema de serviço de dados de referência.  

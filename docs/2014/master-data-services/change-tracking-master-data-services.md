@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - change tracking [SQL Server]
 ms.assetid: 5e879c65-0d38-454f-9a20-62a6e72c89f7
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a5d07587aae5362fae6c92fafaf9345207e68369
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7b4b7d9d9d153456ca471196c6480465d057e412
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62925762"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483518"
 ---
 # <a name="change-tracking-master-data-services"></a>Controle de alterações (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], você pode usar grupos de controle de alterações para executar uma ação quando um valor de atributo muda. Use o controle de alterações quando você não souber qual será o novo valor, mas desejar saber se houve alterações.  

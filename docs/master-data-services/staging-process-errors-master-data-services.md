@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - staging process [Master Data Services], error messages
 ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6583bab946104e08e102c422373aa94ff2ee752b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 91e6ab46cb0171f3e0c16deb5a494ed1f644a660
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766128"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488028"
 ---
 # <a name="staging-process-errors-master-data-services"></a>Erros de processo de preparo (Master Data Services)
 
@@ -46,7 +46,7 @@ ms.locfileid: "52766128"
 |210047|O membro não pode ser um irmão de Unused.|Isso ocorre quando **RelationshipType** = **2** (irmão) e o **ParentCode** ou **ChildCode** é **Unused**. Os membros podem ser filhos apenas do nó Unused.|Relação|  
 |210048|**ParentCode** e **ChildCode** não podem ser iguais.|O valor de **ParentCode** é igual ao valor de **ChildCode** . Esses valores devem ser diferentes.|Relação|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Exibir erros que ocorrem durante o preparo &#40;Master Data Services&#41;](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)   
  [Visão geral: Importando dados de tabelas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   

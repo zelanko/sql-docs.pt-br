@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6da7d5b12dcd8e998a32403bc9f98ae3ceee121b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 4215753da5ef7f9bce51cd7bea8c87551e369da6
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797128"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488072"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>Mostrar relações muitos para muitos em Hierarquias Derivadas (Master Data Services)
 
@@ -92,7 +92,7 @@ Para obter instruções sobre como implantar o modelo de exemplo Cliente e outro
  ![mds_hierarchies_dh_screenshot](../master-data-services/media/mds-hierarchies-dh-screenshot.png "mds_hierarchies_dh_screenshot")  
   
 ##  <a name="bkmk_member_security"></a> Segurança do membro  
- Uma hierarquia que permite a duplicação do membro (permite que um membro tenha mais de um pai) não pode ser usada para atribuir permissões de segurança do membro. Por exemplo:  
+ Uma hierarquia que permite a duplicação do membro (permite que um membro tenha mais de um pai) não pode ser usada para atribuir permissões de segurança do membro. Por exemplo:   
   
 -   Uma RDH (Hierarquia Derivada Recursiva) que não ancora recursões nulas (cada membro no nível recursivo aparece sob ROOT e seu pai recursivo).  
   
@@ -103,7 +103,7 @@ Para obter instruções sobre como implantar o modelo de exemplo Cliente e outro
 ## <a name="collections"></a>Coleções  
  As Coleções e Hierarquias Explícitas foram preteridas. O procedimento armazenado de conversão (udpConvertCollectionAndConsolidatedMembersToLeaf) converte membros da coleção em membros folha e cria Hierarquias Derivadas muitos para muitos para capturar informações de associação de coleção.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Hierarquias derivadas &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
   
   

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid: ''
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 27ffbf76d0841479b10b515e0a66f14c8b6bfee3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+ms.openlocfilehash: 5833d918768d191302d477516faa1deb3acc57b4
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215815"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489603"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Alta disponibilidade e recuperação de desastres para Master Data Services
 

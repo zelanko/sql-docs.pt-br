@@ -10,15 +10,15 @@ helpviewer_keywords:
 - transactions [Master Data Services], about transactions
 - transactions [Master Data Services]
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b309669027da801681c1386abe604fce2f915f3d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8eebb47569a4ccc96437a3e16379c794b83642dd
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62923245"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65478503"
 ---
 # <a name="transactions-master-data-services"></a>Transações (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], uma transação é registrada sempre que uma ação é tomada em um membro. Transações podem ser exibidas por todos os usuários e revertidas por administradores. As transações mostram a data, a hora e o usuário que tomou a ação, além de outros detalhes. Usuários podem adicionar uma anotação a uma transação, para indicar por que uma transação aconteceu.  

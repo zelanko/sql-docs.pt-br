@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.values.f1
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ea3b91f72b3fdd836d0b5cdb3e73122570bdbfcf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 111b4dc0c1731b28da503794008be2b4d269094f
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62755818"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481121"
 ---
 # <a name="change-domain-values"></a>Alterar valores de domínio
   Este tópico descreve como alterar e aumentar os metadados em uma base de dados de conhecimento no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Depois que você gerar conhecimento através de descoberta de conhecimento, importar conhecimento para a base de dados de conhecimento ou domínios, ou utilizar outra base de dados de conhecimento como base para a base de dados de conhecimento, poderá alterar os valores de dados interativamente. A geração de base de dados de conhecimento não só aproveita processos assistidos por computador, mas lhe fornece os meios para usar seu próprio conhecimento para verificar valores de dados e alterá-los da seguinte forma:  

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 90189e37b486d712f0a1a93fccc42b101f90bdbb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: c45e7f7122aba245297a4ab6fe74ea978bb2a6ad
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027477"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480446"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
 
@@ -107,7 +107,7 @@ ms.locfileid: "56027477"
 |Descreve como limpar dados usando conhecimento do serviço de dados de referência.|[Limpar dados usando o conhecimento &#40;externo&#41; dos dados de referência](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
 |Descreve como limpar um domínio composto.|[Limpar dados em um domínio de composição](../data-quality-services/cleanse-data-in-a-composite-domain.md)|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Projetos de qualidade de dados &#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md)   
  [Correspondência de dados](../data-quality-services/data-matching.md)  
   

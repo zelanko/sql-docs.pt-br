@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.importprojectvalues.f1
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5ee0818babb7fb973aed7e61c5efc4b42600af5a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 5153aebb1598a3cba9ff860654e2dae9ae7f33d8
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031717"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487312"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>Importar valores de projeto de limpeza para um domínio
 
@@ -114,7 +114,7 @@ ms.locfileid: "56031717"
   
 -   Você pode importar valores de um projeto somente quando a base de dados de conhecimento tem um estado de em funcionamento e está bloqueada pelo usuário realizando a importação.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Limpeza de dados](../data-quality-services/data-cleansing.md)   
  [Transformação Limpeza DQS](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
   

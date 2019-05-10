@@ -10,15 +10,15 @@ helpviewer_keywords:
 - log files,advanced settings
 - dqs log files,advanced settings
 ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3fc2eec8064b9b5cad1f6a1875032f1d1158bc97
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1530594eefbb5c614901f2b8cb73030b989951fd
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62793248"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480970"
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>Definir configurações avançadas para arquivos de log do DQS
   Este tópico descreve como definir configurações avançadas para os arquivos de log do [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] e do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , como definir o limite de tamanho de arquivo de rolagem dos arquivos de log, definir o padrão de carimbo de data/hora dos eventos etc.  

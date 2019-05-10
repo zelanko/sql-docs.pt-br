@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 3a7162ba-cf2f-481f-830d-bb6a02823827
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f8816afcf44bdcb38f6513f61b3b88ce505dedc7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ea4397bddf9ab1c08c099df4c473a5e43c54c9ec
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62753169"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489073"
 ---
 # <a name="task-4-setting-domain-rules"></a>Tarefa 4: Definir regras de domínio
   Nesta tarefa, você pode criar uma regra para o **Contact Email** domínio para verificar se o endereço de email termina com **@adventure-works.com**. Ver [criando uma regra de domínio](https://msdn.microsoft.com/library/hh510397.aspx) tópico para obter mais detalhes sobre a página.  
