@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 5d46f20a-b04a-45c7-82af-02a2baaabbd7
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ed28d44aaa89e89ca4769007a5057a97577d2a05
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: 4e368a2957e8caf8b83541e8cf0e1fd158f8eeb8
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419297"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488065"
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>Enviar um arquivo de consulta de atalho por email (suplemento MDS para Excel)
 
@@ -37,11 +37,11 @@ ms.locfileid: "52419297"
   
 2.  No grupo **Salvar e Enviar**, clique em **Enviar Consulta**. Uma mensagem de email será aberta e o arquivo de consulta de atalho será anexado.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Próximas etapas  
   
 -   Para abrir o arquivo de consulta de atalho, o destinatário do email deve ter o MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] instalado. O destinatário pode clicar duas vezes no arquivo para abri-lo.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Arquivos de consulta de atalho &#40;Suplemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)  
   
   

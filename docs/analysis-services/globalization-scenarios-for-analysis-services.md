@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f9af9e0eaf06fca60da515a16e7e6830dcb8462d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5d708a2e3daca372bc336e91886889b79909627a
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62659691"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357398"
 ---
 # <a name="globalization-scenarios-for-analysis-services"></a>Cenários de globalização para o Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "62659691"
 |**Recurso**|**Tabular**|**Multidimensional**|  
 |[Idiomas e ordenações &amp;#40;Analysis Services&amp;#41;](../analysis-services/languages-and-collations-analysis-services.md)|Herdado do sistema operacional.|Herdado, mas com a capacidade de substituir o idioma e ordenação para os principais objetos na hierarquia de modelos.|  
 |Escopo do suporte à tradução|Legendas e descrições.|Traduções podem ser criadas para nomes de objeto, legendas, identificadores e descrições, e também podem estar em qualquer script e linguagem Unicode. Isso é verdadeiro mesmo quando as ferramentas e o ambiente estão em outro idioma. Por exemplo, em um ambiente de desenvolvimento que usa o idioma inglês e uma ordenação latina em toda a pilha, você pode incluir em seu modelo de um objeto que usa caracteres cirílicos no nome.|  
-|Implementando o suporte à tradução|Criar usando [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para gerar arquivos de tradução que você preenche e depois importa de volta para o modelo.<br /><br /> Consulte [Traduções em modelos de tabela &#40;Analysis Services&#41;](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md) para ver mais detalhes.|Crie usando [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para definir as traduções da legenda, descrição e tipos de conta para cubos e medidas, dimensão e atributos.<br /><br /> Consulte [Traduções em modelos multidimensionais &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md) para obter mais informações. Uma lição sobre como usar esse recurso pode ser encontrada em [lição 9: Definindo perspectivas e traduções](../analysis-services/lesson-9-defining-perspectives-and-translations.md) do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] tutorial.|  
+|Implementando o suporte à tradução|Criar usando [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para gerar arquivos de tradução que você preenche e depois importa de volta para o modelo.<br /><br /> Consulte [Traduções em modelos de tabela &#40;Analysis Services&#41;](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md) para ver mais detalhes.|Crie usando [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para definir as traduções da legenda, descrição e tipos de conta para cubos e medidas, dimensão e atributos.<br /><br /> Consulte [Traduções em modelos multidimensionais &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md) para obter mais informações. |  
 |Conversão de moeda|Não disponível.|A conversão de moeda é por meio de scripts MDX especializados que convertem medidas contendo dados de moeda. Você pode usar o Assistente de Business Intelligence em [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] para gerar um script MDX que usa uma combinação de dados e metadados de dimensões, atributos e grupos de medidas para converter medidas contendo dados de moeda. Consulte [Conversões de moeda &#40;Analysis Services&#41;](../analysis-services/currency-conversions-analysis-services.md).|  
   
 ## <a name="see-also"></a>Consulte também  
