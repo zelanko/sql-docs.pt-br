@@ -18,12 +18,12 @@ ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7819e14ccfea387a83e88f7aff8c81541968e89a
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 2f4ab09693234d72890524628f4def5afcf447ef
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589118"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450077"
 ---
 # <a name="spoageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,13 +50,13 @@ sp_OAGetErrorInfo [ objecttoken ]
  _código-fonte_ **saída**  
  É a origem das informações de erro. Se for especificado, ele deve ser um local **char**, **nchar**, **varchar**, ou **nvarchar** variável. O valor de retorno é truncado para se ajustar à variável local se necessário.  
   
- _Descrição_ **saída**  
+ _description_ **OUTPUT**  
  É a descrição do erro. Se for especificado, ele deve ser um local **char**, **nchar**, **varchar**, ou **nvarchar** variável. O valor de retorno é truncado para se ajustar à variável local se necessário.  
   
- _HelpFile_ **saída**  
+ _helpfile_ **OUTPUT**  
  É o arquivo de ajuda para o objeto OLE. Se for especificado, ele deve ser um local **char**, **nchar**, **varchar**, ou **nvarchar** variável. O valor de retorno é truncado para se ajustar à variável local se necessário.  
   
- _helpid_ **saída**  
+ _helpid_ **OUTPUT**  
  É a ID de contexto do arquivo de ajuda. Se for especificado, ele deve ser um local **int** variável.  
   
 > [!NOTE]  
@@ -75,7 +75,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 |**Erro**|**binary(4)**|Representação binária do número do erro.|  
 |**Origem**|**nvarchar(nn)**|A origem do erro.|  
 |**Descrição**|**nvarchar(nn)**|Descrição do erro.|  
-|**Arquivo de ajuda**|**nvarchar(nn)**|Arquivo de ajuda para a origem.|  
+|**Helpfile**|**nvarchar(nn)**|Arquivo de ajuda para a origem.|  
 |**HelpID**|**int**|ID de contexto de ajuda do arquivo de origem da Ajuda.|  
   
 ## <a name="remarks"></a>Comentários  
@@ -91,12 +91,12 @@ sp_OAGetErrorInfo [ objecttoken ]
 |**Execução do servidor falhou (0x80080005)**|O objeto OLE especificado foi registrado como um servidor OLE local (arquivo .exe), mas o arquivo .exe não pôde ser localizado ou iniciado.|  
 |**O módulo especificado não pôde ser localizado (0x8007007e)**|O objeto OLE especificado foi registrado como um servidor OLE em processo (arquivo .dll), mas o arquivo .dll não pôde ser localizado ou carregado.|  
 |**Incompatibilidade de (tipos 0x80020005)**|O tipo de dados de uma variável local [!INCLUDE[tsql](../../includes/tsql-md.md)] usado para armazenar um valor de propriedade retornado ou um valor de retorno do método não correspondeu ao tipo de dados [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] do valor de retorno da propriedade ou do método. Ou, o valor de retorno de uma propriedade ou de um método foi solicitado, mas não é retornado.|  
-|**Tipo de dados ou valor do parâmetro 'context' de sp_OACreate é inválido (0x8004275B)**|O valor do parâmetro de contexto deve ser um destes: 1, 4 ou 5.|  
+|**Tipo de dados ou o valor do parâmetro 'context' de sp_OACreate é inválido. (0x8004275B)**|O valor do parâmetro de contexto deve ser um destes: 1, 4 ou 5.|  
   
  Para obter mais informações sobre como processar códigos de retorno HRESULT, consulte [OLE automação códigos de retorno e informações de erro](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
 ## <a name="permissions"></a>Permissões  
- Exige associação à função de servidor fixa **sysadmin** .  
+ Requer associação na **sysadmin** função de servidor fixa ou permissão de execução diretamente nesse procedimento armazenado. `Ole Automation Procedures` configuração deve estar **habilitado** usar qualquer procedimento de sistema relacionado à automação OLE.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir exibe informações sobre erro de Automação OLE.  
