@@ -20,12 +20,12 @@ ms.assetid: bdedb044-8924-4ca4-85f3-8b37578e0257
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9f83b8ce83c1433ce7e20f00580100b65be84961
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: aef1e90053eba71db84e1fe89aa90684829a4941
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63132676"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65536543"
 ---
 # <a name="sqlgettypeinfo-function"></a>Função SQLGetTypeInfo
 **Conformidade com**  
@@ -39,7 +39,7 @@ ms.locfileid: "63132676"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetTypeInfo(  
      SQLHSTMT      StatementHandle,  

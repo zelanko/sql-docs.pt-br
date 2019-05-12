@@ -20,12 +20,12 @@ ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e769949c8c57bbec56055c58c9002494fc6d37be
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 86386460c3abc9ab7b6463b01ee4388e9186ad2b
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62982392"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65536314"
 ---
 # <a name="sqlsetpos-function"></a>Função SQLSetPos
 **Conformidade com**  
@@ -36,7 +36,7 @@ ms.locfileid: "62982392"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
   
 SQLRETURN SQLSetPos(  
       SQLHSTMT        StatementHandle,  
@@ -315,7 +315,7 @@ SQLRETURN SQLSetPos(
 ## <a name="code-example"></a>Exemplo de código  
  No exemplo a seguir, um aplicativo permite que um usuário procurar a tabela de pedidos e atualizar o status do pedido. O cursor é controlado por conjunto de chaves com um tamanho de conjunto de linhas de 20 e usa o controle de simultaneidade otimista comparando versões de linha. Depois de cada conjunto de linhas é buscado, o aplicativo imprime e permite que o usuário selecione e atualizar o status de um pedido. O aplicativo usa **SQLSetPos** para posicionar o cursor na linha selecionada e executa uma atualização posicionada da linha. (Tratamento de erros é omitido por motivos de clareza).  
   
-```  
+```cpp  
 #define ROWS 20  
 #define STATUS_LEN 6  
   

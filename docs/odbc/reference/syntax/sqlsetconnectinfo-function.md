@@ -13,12 +13,12 @@ ms.assetid: 0782a1c3-c5d1-499b-a8ba-134162db9990
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 88af314c1cca5ef2d7cdbdb2b5e555b81d02be01
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 448b0f5e34a6b7421c23a1267dd9cd68bd93ca6f
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63287305"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537177"
 ---
 # <a name="sqlsetconnectinfo-function"></a>Função SQLSetConnectInfo
 **Conformidade com**  
@@ -29,7 +29,8 @@ ms.locfileid: "63287305"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp
+  
 SQLRETURN  SQLSetConnectInfo(  
                 SQLHDBC_INFO_TOKEN   TokenHandle,  
                 WCHAR *              ServerName,  

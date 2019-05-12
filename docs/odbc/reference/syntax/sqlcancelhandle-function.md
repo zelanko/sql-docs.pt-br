@@ -15,12 +15,12 @@ ms.assetid: 16049b5b-22a7-4640-9897-c25dd0f19d21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 655c3c76794b170b113442b14ae75cf977ac024c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9f572e9e76f77b0c535cd57ff4ed6cd091aec0f5
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63253183"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537566"
 ---
 # <a name="sqlcancelhandle-function"></a>Função SQLCancelHandle
 **Conformidade com**  
@@ -35,7 +35,7 @@ ms.locfileid: "63253183"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
   
 SQLRETURN SQLCancelHandle(  
       SQLSMALLINT  HandleType,  

@@ -20,12 +20,12 @@ ms.assetid: b8efc247-27ab-4a00-92b6-1400785783fe
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ab39d1fca288196dcf42da70083dad323c406ba0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9f58d262f133fc242592e62e0bb5a4152877adf6
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62465952"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65536525"
 ---
 # <a name="sqlnativesql-function"></a>Função SQLNativeSql
 **Conformidade com**  
@@ -36,7 +36,7 @@ ms.locfileid: "62465952"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
   
 SQLRETURN SQLNativeSql(  
      SQLHDBC        ConnectionHandle,  
@@ -97,25 +97,25 @@ SQLRETURN SQLNativeSql(
 ## <a name="comments"></a>Comentários  
  Os seguintes são exemplos do que **SQLNativeSql** pode retornar para a seguinte entrada SQL cadeia de caracteres que contém a função escalar CONVERT. Suponha que a coluna empid é do tipo inteiro na fonte de dados:  
   
-```  
+```sql  
 SELECT { fn CONVERT (empid, SQL_SMALLINT) } FROM employee  
 ```  
   
  Um driver do Microsoft SQL Server pode retornar a cadeia de caracteres traduzida por SQL seguinte:  
   
-```  
+```sql  
 SELECT convert (smallint, empid) FROM employee  
 ```  
   
  Um driver para o servidor ORACLE pode retornar a cadeia de caracteres traduzida por SQL seguinte:  
   
-```  
+```sql  
 SELECT to_number (empid) FROM employee  
 ```  
   
  Um driver para Ingres pode retornar a cadeia de caracteres traduzida por SQL seguinte:  
   
-```  
+```sql  
 SELECT int2 (empid) FROM employee  
 ```  
   
