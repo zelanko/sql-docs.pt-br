@@ -20,12 +20,12 @@ ms.assetid: 60d5068a-7d7c-447c-acc6-f3f2cf73440c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dfe77cba535b78f387a786ddc56f65cf87172644
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2a69ffbde7ec4ff1d7eebbb73f0b60a619755c37
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63233360"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65536802"
 ---
 # <a name="sqltables-function"></a>Função SQLTables
 **Conformidade com**  
@@ -36,7 +36,7 @@ ms.locfileid: "63233360"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
   
 SQLRETURN SQLTables(  
      SQLHSTMT       StatementHandle,  
@@ -162,7 +162,7 @@ SQLRETURN SQLTables(
 ## <a name="example"></a>Exemplo  
  O código de exemplo a seguir não libera identificadores e conexões. Ver [função SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md) e [função SQLFreeStmt](../../../odbc/reference/syntax/sqlfreestmt-function.md) para obter exemplos de código liberar identificadores e instruções.  
   
-```  
+```cpp  
 // SQLTables.cpp  
 // compile with: user32.lib odbc32.lib  
 #include <windows.h>  

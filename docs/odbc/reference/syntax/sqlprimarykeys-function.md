@@ -20,12 +20,12 @@ ms.assetid: 3f809b09-3c1b-415e-80c5-a603e8e25d5b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 37d6bdb61e23c3a48b54aa7d0e6488122486ffe5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d213b0bfb108eec38fc524eece6626fd302d4267
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63186216"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65536649"
 ---
 # <a name="sqlprimarykeys-function"></a>Função SQLPrimaryKeys
 **Conformidade com**  
@@ -36,7 +36,7 @@ ms.locfileid: "63186216"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
   
 SQLRETURN SQLPrimaryKeys(  
      SQLHSTMT       StatementHandle,  

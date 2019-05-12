@@ -20,12 +20,12 @@ ms.assetid: 1dd74544-f4e9-46e1-9b5f-c11d84fdab4c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0ec40b97f8953f114081292ac82069fd4a81692a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5664a4cb745a250aa8db6d98b92a275bb91c7a8d
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63132723"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65536575"
 ---
 # <a name="sqlinstalldriverex-function"></a>Função SQLInstallDriverEx
 **Conformidade com**  
@@ -40,7 +40,7 @@ ms.locfileid: "63132723"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
   
 BOOL SQLInstallDriverEx(  
      LPCSTR    lpszDriver,  
