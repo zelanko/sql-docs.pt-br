@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a32bb1fef21b41fae6ef30dd011b5b7260203c94
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ccd9e4edc5a1238ba9c68f97de1d7f53fb899a74
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285984"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775530"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Expressões (Construtor de Relatórios e SSRS)
   As expressões são amplamente usadas em todos os relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] para recuperar, calcular, exibir, agrupar, classificar, filtrar, parametrizar e formatar dados. 
@@ -56,13 +56,9 @@ ms.locfileid: "56285984"
   
  Para obter mais informações, consulte [Formatando texto e espaços reservados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md).  
   
-### <a name="report-model-formulas"></a>Fórmulas de modelo de relatório  
- Quando você está criando uma consulta para um conjunto de dados que usa um modelo de relatório como fonte de dados, pode criar *fórmulas*. Fórmulas são cálculos executados em valores em um relatório com base nos dados de um modelo de relatório.  
-  
- Para obter mais informações, consulte [Fórmulas em consultas de modelo de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formulas-in-report-model-queries-report-builder-and-ssrs.md).  
-   
-##  <a name="DisplayText"></a> Compreendendo símbolos de prefixo em expressões simples  
- As expressões simples usam símbolos para indicar se a referência destina-se a um campo, a um parâmetro, a uma coleção interna ou à coleção ReportItems. A seguinte tabela mostra exemplos de texto de expressão e de exibição:  
+## <a name="DisplayText"></a> Compreendendo símbolos de prefixo em expressões simples  
+
+As expressões simples usam símbolos para indicar se a referência destina-se a um campo, a um parâmetro, a uma coleção interna ou à coleção ReportItems. A seguinte tabela mostra exemplos de texto de expressão e de exibição:  
   
 |Item|Exemplo de texto de exibição|Exemplo de texto de expressão|  
 |----------|--------------------------|-----------------------------|  
