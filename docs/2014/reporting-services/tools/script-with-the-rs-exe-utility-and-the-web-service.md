@@ -31,7 +31,7 @@ ms.locfileid: "63158290"
   
  Para exemplos de script, consulte o seguinte:  
   
- [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
+ [Exemplo do Reporting Services rs.exe Script para migrar conteúdo entre servidores de relatório](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
  [Amostras de produto do SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
