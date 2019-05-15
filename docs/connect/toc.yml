@@ -1,4 +1,4 @@
-- name: SQL Server ++
+- name: SQL Server >>
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
 - name: Programação para interagir com o SQL Server
   href: ../connect/homepage-sql-connection-programming.md

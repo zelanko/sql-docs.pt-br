@@ -491,7 +491,7 @@
                   href: ../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md
                 - name: PowerShell
                   href: ../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md
-                - name: Máquinas virtuais do Azure +
+                - name: Máquinas virtuais do Azure >
                   href: /azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-overview
         - name: Como fazer
           href: ../database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md
@@ -1946,9 +1946,9 @@
               href: ../relational-databases/xml/use-the-value-and-nodes-methods-with-openxml.md
 - name: Desenvolvimento
   items:
-    - name: Interação de programação ++
+    - name: Codificar um programa de cliente >>
+      displayName: 'ADO, ADO.NET, connect, C#, C++, Java, Node.js, ODBC, OLE DB, PHP, Python, Ruby'
       href: ../connect/index.md
-      displayName: 'Connectivity, Connect, Connection'
     - name: Aplicativos da camada de dados
       href: ../relational-databases/data-tier-applications/data-tier-applications.md
       items:
@@ -4432,12 +4432,12 @@
               href: ../database-engine/configure-windows/server-properties-advanced-page.md
 - name: Migrar e carregar dados
   items:
-    - name: SSIS (SQL Server Integration Services) ++
+    - name: SQL Server Integration Services (SSIS) >>
       href: ../integration-services/index.md
     - name: Utilitário de cópia em massa (bcp)
       href: ../tools/bcp-utility.md
-    - name: Serviços de Migração do Azure +
-      displayName: 'DMS, Data Migration Service'
+    - name: Serviços de Migração do Azure >
+      displayName: 'DMS, Data Migration Service, Azure Data Migration Service'
       href: /azure/dms/dms-overview
     - name: Data Quality Services (DQS)
       items:
@@ -4965,7 +4965,7 @@
               items:
                 - name: Assinantes de tabela com otimização de memória
                   href: ../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md
-                - name: Replicação para Banco de Dados SQL +
+                - name: Replicação para o banco de dados SQL >
                   href: /azure/sql-database/replication-to-sql-database
                 - name: Republicar dados
                   href: ../relational-databases/replication/republish-data.md
@@ -5315,7 +5315,7 @@
                     - name: Assinaturas de Mesclagem
                       href: ../relational-databases/replication/subscription-validation-options-merge-subscriptions.md
                 - name: Reinicializar assinaturas
-                  itmes:
+                  items:
                     - name: Todas as Assinaturas
                       href: ../relational-databases/replication/reinitialize-subscription-s-all-subscriptions.md
                     - name: Uma assinatura
@@ -5593,13 +5593,13 @@
                   href: ../sql-server/stretch-database/extended-events-for-stretch-database.md
         - name: Recursos
           items:
-            - name: Preços +
+            - name: Preço >
               href: 'https://azure.microsoft.com/pricing/details/sql-server-stretch-database/'
-            - name: Blog +
+            - name: Blog >
               href: 'https://blogs.technet.microsoft.com/dataplatforminsider/tag/stretch-database/'
-            - name: Atualizações de serviço +
+            - name: Atualizações de serviço >
               href: 'https://azure.microsoft.com/updates/?product=sql-server-stretch-database'
-            - name: Vídeos +
+            - name: Vídeos >
               href: 'https://azure.microsoft.com/documentation/videos/index/?services=sql-server-stretch-database'
     - name: Assistente de Experimentação de Banco de Dados
       href: ../dea/database-experimentation-assistant-overview.md
@@ -7310,15 +7310,15 @@
               href: ../relational-databases/polybase/polybase-type-mapping.md
         - name: Recursos
           items:
-            - name: DBA Stack Exchange +
+            - name: DBA Stack Exchange >
               href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
-            - name: Stack Overflow +
+            - name: Stack Overflow >
               href: 'https://stackoverflow.com/questions/tagged/sql-server'
-            - name: Fóruns do MSDN +
+            - name: Fóruns MSDN >
               href: 'https://social.msdn.microsoft.com/Forums/home?category=sqlserver'
-            - name: Enviar comentários +
+            - name: Enviar comentários >
               href: 'https://feedback.azure.com/forums/908035-sql-server'
-            - name: Reddit +
+            - name: Reddit >
               href: 'https://www.reddit.com/r/SQLServer'
     - name: Servidores vinculados
       href: ../relational-databases/linked-servers/linked-servers-database-engine.md
@@ -7414,16 +7414,17 @@
           href: ../relational-databases/synonyms/create-synonyms.md
 - name: Relatórios e análise
   items:
-    - name: Análise avançada e machine learning ++
+    - name: Análise Avançada e Machine learning >>
       href: ../advanced-analytics/index.md
-    - name: Sistema de plataforma de análise ++
+    - name: Analytics Platform System >>
       displayName: 'APS, PDW, Parallel Data Warehouse'
       href: ../analytics-platform-system/index.md
-    - name: SSAS (SQL Server Analysis Services) ++
+    - name: SQL Server Analysis Services (SSAS) >>
       href: ../analysis-services/index.md
-    - name: SSRS (SQL Server Reporting Services) ++
+    - name: SQL Server Reporting Services (SSAS) >>
       href: ../reporting-services/index.md
     - name: Master Data Services
+      displayName: MDS
       href: ../master-data-services/master-data-services-overview-mds.md
       items:
         - name: Guia de introdução
@@ -7951,11 +7952,11 @@
           items:
             - name: Conector do SQL Server com criptografia
               href: ../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md
-            - name: Bring your own key +
+            - name: Bring your own key >
               href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-configure
-            - name: Girar as chaves BYOK TDE +
+            - name: Girar as chaves BYOK TDE >
               href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation
-            - name: Remover o protetor TDE +
+            - name: Remover o protetor TDE >
               href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-remove-tde-protector
             - name: EKM usando o Azure Key Vault
               href: ../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
@@ -8024,10 +8025,10 @@
               href: ../relational-databases/security/encryption/encryption-hierarchy.md
             - name: Criptografia de Dados Transparente (TDE)
               href: ../relational-databases/security/encryption/transparent-data-encryption.md
-            - name: TDE com o Banco de Dados SQL do Azure +
+            - name: TDE com Banco de dados SQL do Azure >
               href: /azure/sql-database/transparent-data-encryption-azure-sql
               items:
-                - name: Bring your own key +
+                - name: Bring your own key >
                   href: /azure/sql-database/transparent-data-encryption-byok-azure-sql
             - name: Always Encrypted
               href: ../relational-databases/security/encryption/always-encrypted-database-engine.md
@@ -8153,13 +8154,13 @@
               href: ../azure-data-studio/extensibility-apis.md
         - name: Recursos
           items:
-            - name: Repositório do GitHub do Azure Data Studio +
+            - name: Repositório GitHub do Azure Data Studio >
               href: 'https://www.github.com/Microsoft/azuredatastudio'
-            - name: Blog do SQL Server +
+            - name: Blog do SQL Server >
               href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
             - name: PERGUNTAS FREQUENTES
               href: ../azure-data-studio/faq.md
-            - name: Relatar problemas e dar sugestões +
+            - name: Relatar problemas e fazer sugestões >
               href: 'https://github.com/microsoft/azuredatastudio/issues'
     - name: Utilitários do prompt de comando
       href: ../tools/command-prompt-utility-reference-database-engine.md
@@ -9045,8 +9046,8 @@
                       href: ../ssms/agent/job-categories-manage-job-categories.md
                     - name: Categoria de Novo Trabalho
                       href: ../ssms/agent/job-categories-properties-new-job-category.md
-                    - name: Propriedades do Trabalho
-                      items: null
+                - name: Propriedades do Trabalho
+                  items:
                     - name: Trabalhos que referenciam uma agenda
                       href: ../ssms/agent/jobs-that-reference-a-schedule.md
                     - name: Página de Alertas
@@ -10040,7 +10041,7 @@
           href: ../linux/quickstart-install-connect-ubuntu.md
         - name: Executar e conectar-se – Docker
           href: ../linux/quickstart-install-connect-docker.md
-        - name: Provisionar uma VM SQL no Azure +
+        - name: Provisionar uma VM do SQL no Azure >
           href: /azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine
         - name: Executar e conectar-se – Nuvem
           href: ../linux/quickstart-install-connect-clouds.md
@@ -10254,63 +10255,63 @@
       items:
         - name: Solucionar problemas
           href: ../linux/sql-server-linux-troubleshooting-guide.md
-        - name: Como licenciar
+        - name: Como licenciar >
           href: 'https://www.microsoft.com/sql-server/sql-server-2017-pricing'
-        - name: DBA Stack Exchange +
+        - name: DBA Stack Exchange >
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
-        - name: Stack Overflow +
+        - name: Stack Overflow >
           href: 'https://stackoverflow.com/questions/tagged/sql-server'
-        - name: Fóruns do MSDN +
+        - name: Fóruns MSDN >
           href: 'https://social.msdn.microsoft.com/Forums/home'
-        - name: Enviar comentários +
+        - name: Enviar comentários >
           href: 'https://feedback.azure.com/forums/908035-sql-server'
-        - name: Reddit +
+        - name: Reddit >
           href: 'https://www.reddit.com/r/SQLServer'
 - name: SQL no Azure
   items:
-    - name: Banco de Dados SQL do Azure +
+    - name: Banco de dados SQL do Azure >
       href: /azure/sql-database/
-    - name: SQL Data Warehouse do Azure +
+    - name: SQL Data Warehouse do Azure >
       href: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
-    - name: SQL Server em uma VM do Azure +
+    - name: SQL Server em uma VM do Azure >
       href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
 - name: Recursos
   items:
     - name: Saiba mais
       items:
-        - name: Microsoft Virtual Academy +
+        - name: Microsoft Virtual Academy >
           href: 'https://mva.microsoft.com/product-training/sql-server'
-        - name: SQL no Canal 9 +
+        - name: SQL no Canal 9 >
           href: 'https://channel9.msdn.com/Search'
     - name: Blogs
       items:
-        - name: SQL Server +
+        - name: SQL Server >
           href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
-        - name: Mecanismo de Banco de Dados do SQL Server +
+        - name: Mecanismo de banco de dados do SQL Server >
           href: 'https://blogs.msdn.microsoft.com/sqlserverstorageengine/'
-        - name: Segurança do SQL Server +
+        - name: Segurança do SQL Server >
           href: 'https://blogs.msdn.microsoft.com/sqlsecurity/'
-        - name: SQL Server Data Tools +
+        - name: SQL Server Data Tools >
           href: 'https://blogs.msdn.microsoft.com/ssdt/'
     - name: Ajuda e comentários
       items:
         - name: Obter ajuda
           href: ../sql-server/sql-server-get-help.md
-        - name: Comentários sobre o SQL Docs +
+        - name: Comentários para os docs do SQL >
           href: 'https://aka.ms/sqldocsfeedback'
-        - name: Comentários sobre o SQL Server (UserVoice) +
+        - name: Comentários para o SQL Server (UserVoice) >
           href: 'https://feedback.azure.com/forums/908035-sql-server'
-        - name: Pesquisa sobre o SQL Docs +
+        - name: Pesquisa de Docs do SQL >
           href: 'https://aka.ms/sqldocsurvey'
         - name: Contribua com a documentação do SQL!
           href: ../sql-server/sql-server-docs-contribute.md
-        - name: DBA Stack Exchange +
+        - name: DBA Stack Exchange >
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
-        - name: Stack Overflow +
+        - name: Stack Overflow >
           href: 'https://stackoverflow.com/questions/tagged/sql-server'
-        - name: Fóruns do MSDN +
+        - name: Fóruns MSDN >
           href: 'https://social.msdn.microsoft.com/Forums/home'
-        - name: Reddit +
+        - name: Reddit >
           href: 'https://www.reddit.com/r/SQLServer'
     - name: Parceiros
       items:
@@ -10328,14 +10329,14 @@
   items:
     - name: O SQL Docs inclui arquivos
       href: ../sql-server/applies-to-includes.md
-    - name: Conteúdo arquivado (SQL 2005 a 2012) +
-      displayName: '2005, 2008, 2008 r2, 2012'
+    - name: Conteúdo arquivado (SQL 2005 – 2012) >
+      displayName: '2005, 2008, 2008 r2, 2012, previous-versions'
       href: 'https://docs.microsoft.com/previous-versions/sql/'
     - name: Exemplos de banco de dados
       items:
         - name: Visão geral dos exemplos
           href: ../samples/sql-samples-where-are.md
-        - name: Todos os exemplos do Github+
+        - name: Todos os exemplos do Github >
           href: 'https://github.com/Microsoft/sql-server-samples/tree/master/samples'
         - name: AdventureWorks
           items:
@@ -17118,6 +17119,8 @@
                   href: ../t-sql/statements/set-quoted-identifier-transact-sql.md
                 - name: REMOTE_PROC_TRANSACTIONS
                   href: ../t-sql/statements/set-remote-proc-transactions-transact-sql.md
+                - name: CACHE DE CONJUNTO DE RESULTADOS
+                  href: ../t-sql/statements/set-result-set-caching-transact-sql.md
                 - name: ROWCOUNT
                   href: ../t-sql/statements/set-rowcount-transact-sql.md
                 - name: SHOWPLAN_ALL
