@@ -1,9 +1,8 @@
 ---
 title: Exibir servidores registrados no SQL Server Management Studio | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
@@ -15,15 +14,14 @@ ms.assetid: 0f70973e-34af-4805-aa27-5493673842e5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 03ff4ef697e9da8d26f2a5dd5c74811ae9ada327
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a45b5948f8e305b430e29f59ff46f5b41c126cb3
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738254"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65104282"
 ---
 # <a name="view-registered-servers-in-sql-server-management-studio"></a>Exibir Servidores Registrados no SQL Server Management Studio
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Este tópico descreve como exibir servidores registrados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ##  <a name="SSMSProcedure"></a>  
