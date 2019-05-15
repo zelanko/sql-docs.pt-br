@@ -12,16 +12,16 @@ helpviewer_keywords:
 - SQL Server Agent jobs, starting
 - starting jobs
 ms.assetid: cec9f7f7-d0a7-4239-9dc5-a69c011ebaa0
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4f3e9780b5eddc14464eb653afcf37770ee7ac86
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: e066799a528cea7fd99a51a56caf830f892760ae
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698394"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65089604"
 ---
 # <a name="start-a-job"></a>Start a Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ Um trabalho é uma série especificada de ações que o [!INCLUDE[ssNoVersion](.
 ## <a name="BeforeYouBegin"></a>Antes de começar  
   
 ### <a name="Security"></a>Segurança  
-Para obter informações detalhadas, consulte [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
+Para obter informações detalhadas, consulte [Implementar a segurança do SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ## <a name="SSMS"></a>Usando o SQL Server Management Studio  
   

@@ -2,7 +2,7 @@
 title: Referência de recursos (Reporting Services) | Microsoft Docs
 ms.date: 05/24/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - tools [Reporting Services]
 - F1 Help [Reporting Services]
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0c343a3a0326fe8da74ed475bc8dbf6b018a27f0
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 40e4fb9280d7ff9d05412966487997f507fb3dc7
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51811799"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503093"
 ---
 # <a name="feature-reference-reporting-services"></a>Referência de recurso (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] inclui várias ferramentas e aplicativos que podem ser usados para criar, gerenciar e exibir relatórios. Esta seção fornece tópicos específicos que descrevem as caixas de diálogo, as páginas da Web e os assistentes dessas ferramentas e desses aplicativos.  

@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 022113a9cabe678e3136d50beb3a87cd29fa07d4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 740dcc22d53ff6cd60bbc491fb6bb7b7f44947a8
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62628153"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577994"
 ---
 # <a name="sysdmosthreads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -70,6 +70,10 @@ ms.locfileid: "62628153"
 
 Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
 Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` permissão no banco de dados.   
+
+## <a name="notes-on-linux-version"></a>Notas de versão do Linux
+
+Devido a como o mecanismo do SQL funciona no Linux, algumas dessas informações não coincide com os dados de diagnóstico do Linux. Por exemplo, `os_thread_id` não coincide com o resultado de ferramentas, como `ps`,`top` ou o procfs (/proc/.`pid`).  Isso é devido a camada de abstração de plataforma (SQLPAL), uma camada entre componentes do SQL Server e o sistema operacional.
 
 ## <a name="examples"></a>Exemplos  
  Na inicialização, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicia threads e associa os trabalhadores a esses threads. Porém, componentes externos, como um procedimento armazenado estendido, podem iniciar threads sob o processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não tem nenhum controle desses threads. DM os_threads pode fornecer informações sobre threads não autorizados que consomem recursos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processo.  

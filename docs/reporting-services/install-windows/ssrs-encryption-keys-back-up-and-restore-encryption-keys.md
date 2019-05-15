@@ -10,14 +10,14 @@ helpviewer_keywords:
 - encryption keys [Reporting Services]
 - symmetric keys [Reporting Services]
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 13f213f9914245de11257c7fad17a30d1a24388e
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 3a1066e06ca5a526cbfa4cb6f7d54014e4ef520d
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306154"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502846"
 ---
 # <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>Chaves de criptografia do SSRS – Fazer backup e restaurar chaves de criptografia
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -25,6 +25,9 @@ ms.locfileid: "58306154"
   Um parte importante da configuração do servidor de relatório é a criação de uma cópia de backup da chave simétrica usada para criptografar informações confidenciais. Uma cópia de backup da chave é necessária para várias operações rotineiras, possibilitando que você reutilize um banco de dados de servidor de relatório existente em uma nova instalação.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] | Modo do SharePoint do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]   
+
+> [!NOTE]
+> A integração do Reporting Services ao SharePoint não está mais disponível após o SQL Server 2016.
   
  Será necessário restaurar a cópia de backup da chave de criptografia quando ocorrer quaisquer dos seguintes eventos:  
   
@@ -44,11 +47,15 @@ ms.locfileid: "58306154"
  O backup da chave simétrica é um processo que grava a chave em um arquivo especificado e codifica a chave usando uma senha que você fornecer. A chave simétrica nunca pode ser armazenada em um estado não criptografado, portanto você deve fornecer uma senha para codificar a chave ao salvá-la em disco. Depois que o arquivo for criado, você deverá armazená-lo em um local seguro **e lembrar-se da senha** usada para desbloquear o arquivo. Para fazer backup da chave simétrica, você pode usar as seguintes ferramentas:  
   
  **Modo nativo:** Gerenciador de configurações do Reporting Services ou o utilitário **rskeymgmt** .  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
  **O modo do SharePoint:** Páginas do PowerShell ou Administração Central do SharePoint.  
   
 ##  <a name="bkmk_backup_sharepoint"></a> Fazer backup dos servidores de relatório do modo SharePoint  
  Para servidores de relatório do modo do SharePoint, você pode usar os comandos do PowerShell ou as páginas de gerenciamento para o aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter mais informações, confira a seção “Gerenciamento de chaves” de [Gerenciar um aplicativo de serviço SharePoint do Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)  
+
+::: moniker-end
   
 ##  <a name="bkmk_backup_configuration_manager"></a> Fazer backup das chaves de criptografia - Gerenciador de configurações do Reporting Services (Modo Nativo)  
   

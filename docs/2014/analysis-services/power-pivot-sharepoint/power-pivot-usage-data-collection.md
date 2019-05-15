@@ -40,7 +40,7 @@ ms.locfileid: "62748927"
   
  **Observação:** Verifique se o uso de coleta de dados está habilitada. Para verificar, vá para **Monitoramento** na Administração Central do SharePoint. Para obter mais informações, consulte [configurar a coleta de dados de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
- ![Componentes e processos de coleta de dados de uso. ](../media/gmni-usagedata.gif "Componentes e processos de coleta de dados de uso.")  
+ ![Componentes e processos de coleta de dados de uso. ](../media/gmni-usagedata.gif "Componentes e processos de coleta de dados de uso")  
   
 |Fase|Descrição|  
 |-----------|-----------------|  
