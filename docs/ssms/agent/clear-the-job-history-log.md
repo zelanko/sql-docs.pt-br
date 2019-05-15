@@ -14,16 +14,16 @@ helpviewer_keywords:
 - SQL Server Agent jobs, history
 - historical information [SQL Server], jobs
 ms.assetid: 34b9398a-c409-4040-8ea1-0deceb18f961
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cf71491623cdac031632cfba2a3cc0b8860dde2c
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c548cb5ac6fcb722dc1130aea5317871592f8544
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701924"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105983"
 ---
 # <a name="clear-the-job-history-log"></a>Clear the Job History Log
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ Este tópico descreve como excluir o conteúdo do log do histórico de trabalhos
 ## <a name="BeforeYouBegin"></a>Antes de começar  
   
 ### <a name="Security"></a>Segurança  
-Para obter informações detalhadas, consulte [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
+Para obter informações detalhadas, consulte [Implementar a segurança do SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ## <a name="SSMS"></a>Usando o SQL Server Management Studio  
   

@@ -14,16 +14,16 @@ helpviewer_keywords:
 - jobs [SQL Server Agent], status
 - logs [SQL Server], jobs
 ms.assetid: 3b813702-8f61-40ec-bf3b-ce9deb7e68be
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 37077bd03ba42d81e2009c77f1e275712beeea4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7da43cc6b21f5d99aa58f152898211af805275a7
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816914"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65103217"
 ---
 # <a name="write-the-job-status-to-the-windows-application-log"></a>Write the Job Status to the Windows Application Log
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ As respostas de trabalho asseguram que os administradores de banco de dados saib
 ## <a name="BeforeYouBegin"></a>Antes de começar  
   
 ### <a name="Security"></a>Segurança  
-Para obter informações detalhadas, consulte [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
+Para obter informações detalhadas, consulte [Implementar a segurança do SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ## <a name="SSMS"></a>Usando o SQL Server Management Studio  
   

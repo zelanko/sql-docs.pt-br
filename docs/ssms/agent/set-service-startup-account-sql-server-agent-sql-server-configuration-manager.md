@@ -12,16 +12,16 @@ helpviewer_keywords:
 - startup accounts [SQL Server]
 - service startup accounts [SQL Server Agent]
 ms.assetid: 46ffe818-ebb5-43a0-840b-923f219a2472
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bb69a4c0adb6a86bd72d7a0f296502636f923f0a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 334153d45cbc2f4998fdef5902a3084f5912ad95
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528749"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090080"
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
