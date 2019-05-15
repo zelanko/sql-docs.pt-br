@@ -18,22 +18,22 @@ helpviewer_keywords:
 - Visual Database Tools [SQL Server], designers
 - Properties window [Visual Database Tools]
 ms.assetid: bd0ca68e-6f69-42dd-bcb5-ce511673769c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: fef194492c12d934112714934b4f7ad00413b0f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb86baacc6fc75aa5e41a5946e1761daa90ebc25
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753204"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105628"
 ---
 # <a name="visual-database-tool-designers"></a>Designers do Visual Database Tool
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 O Visual Database Tools é uma combinação de ferramentas de design que podem ser usadas para trabalhar com uma fonte de dados. Você pode usá-lo para criar consultas, criar ou modificar uma estrutura de banco de dados ou atualizar dados. As ferramentas são o Designer de Diagrama de Banco de Dados, o Designer de Tabelas e os Designers de Consulta e Exibição.  
   
 ## <a name="properties-window"></a>Janela Propriedades  
-A janela de propriedades não é específica do Visual Database Tools, mas é onde muitas modificações podem ser feitas. Ela mostra as propriedades atuais do item selecionado (como uma tabela) e permite a edição dessas propriedades (tudo, do nome das propriedades até o agrupamento de uma coluna). Algumas propriedades podem ser observadas na janela de propriedades, mas devem ser modificadas em outra ferramenta.  
+A janela de propriedades não é específica do Visual Database Tools, mas é onde muitas modificações podem ser feitas. Ela mostra as propriedades atuais do item selecionado (como uma tabela) e permite a edição dessas propriedades (tudo, do nome das propriedades até a ordenação de uma coluna). Algumas propriedades podem ser observadas na janela de propriedades, mas devem ser modificadas em outra ferramenta.  
   
 ## <a name="database-diagram-designer"></a>Designer do Diagrama de Banco de Dados  
 O Designer do Diagrama de Bancos de Dados fornece uma janela onde você pode criar, editar e mostrar visualmente tabelas e relações em um banco de dados.  

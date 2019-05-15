@@ -13,14 +13,14 @@ helpviewer_keywords:
 - accounts [Reporting Services]
 - reports [Reporting Services], processing
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ade8f4233e2cf830ecd17fe1626098f786312f01
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: cdaf6447080a82d5b58932e7e4987720a97963b6
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099907"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502944"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Configurar a conta de execução autônoma (Gerenciador de configurações do SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece uma conta especial que é usada para o processamento autônomo de relatórios e para enviar solicitações de conexão pela rede. A conta é usada das seguintes maneiras:  
@@ -75,6 +75,9 @@ ms.locfileid: "50099907"
  Para recuperar arquivos de imagem, o servidor de relatório usa automaticamente a conta e nenhuma ação específica é necessária de sua parte. Para usar a conta a fim de conectar-se a fontes de dados externas que forneçam dados para relatórios, você deve especificar uma opção **Tipo de Credencial** na página de propriedades da fonte de dados do relatório ou compartilhada:  
   
 -   No [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] ou em um site do SharePoint, selecione a opção **Credenciais não são necessárias** .  
+
+> [!NOTE]
+> A integração do Reporting Services ao SharePoint não está mais disponível após o SQL Server 2016.
   
  A conta de processamento autônomo de relatórios é usada principalmente para conectar-se a servidores externos, não como um logon para servidores de banco de dados. Para usar as credenciais de conta para fazer logon em um banco de dados, especifique as credenciais na cadeia de caracteres de conexão. Você poderá especificar **Integrated Security=SSPI** se o servidor de banco de dados der suporte à segurança integrada do Windows e se a conta usada para o processamento autônomo de relatórios tiver permissão para ler o banco de dados. Caso contrário, digite o nome do usuário e a senha na cadeia de conexão, onde ela aparecerá em texto não criptografado para qualquer usuário com permissão para editar propriedades da conexão da fonte de dados.  
   

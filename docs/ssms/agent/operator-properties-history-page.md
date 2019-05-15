@@ -10,16 +10,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.operator.history.f1
 ms.assetid: d25f79da-1ec1-4683-8ceb-5026b62b7364
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 236734ffb81e728704f87e72fd3bcefd40499425
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 099f576409f4f6052065cf6b3c8fc55bd03bfe03
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743704"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105407"
 ---
 # <a name="operator-properties-history-page"></a>Propriedades do operador (página Histórico)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

@@ -1,9 +1,9 @@
 ---
-title: Usar widgets de Insights para monitorar servidores e bancos de dados
+title: Usar os widgets de Insights no estúdio de dados do Azure para monitorar servidores e bancos de dados
 titleSuffix: Azure Data Studio
 description: Saiba mais sobre os widgets de Insights no estúdio de dados do Azure
-ms.custom: seodec18
-ms.date: 09/24/2018
+ms.custom: seodec18, sqlfreshmay19
+ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,18 +11,18 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7fa7317d048d2bb9e19b6e82f5323a3b8ed15751
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f5b52d54d60361b7572490da766b29eb5691efc0
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63238880"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620338"
 ---
 # <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>Gerenciar servidores e bancos de dados com os widgets de Insights em [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-Widgets de Insights levar as consultas Transact-SQL (T-SQL) que você usa para monitorar os servidores e bancos de dados e as transforma em visualizações interessantes. 
+Widgets de Insights levar as consultas Transact-SQL (T-SQL) que você usa para monitorar os servidores e bancos de dados e as transforma em visualizações interessantes.
 
-Insights são personalizáveis de gráficos que você adiciona ao servidor e painéis de monitoramento de banco de dados. Exibir informações de uma visão geral de seus servidores e bancos de dados, em seguida, analisar os detalhes mais e iniciar ações de gerenciamento que você definir. 
+Insights são personalizáveis de gráficos que você adiciona ao servidor e painéis de monitoramento de banco de dados. Exibir informações de uma visão geral de seus servidores e bancos de dados, em seguida, analisar os detalhes mais e iniciar ações de gerenciamento que você definir.
 
 Você pode compilar awesome banco de dados e servidor de gerenciamento painéis semelhantes ao exemplo a seguir:
 
@@ -33,11 +33,11 @@ Para entrar e iniciar a criação de diferentes tipos de widgets de Insights, co
 
 - [Criar um widget de visão personalizada](tutorial-build-custom-insight-sql-server.md)
 - *Habilitar widgets de Insights internos*
-   - [Habilitar informações de monitoramento de desempenho](tutorial-qds-sql-server.md)
-   - [Habilitar o insight de uso do espaço de tabela](tutorial-table-space-sql-server.md)
+  - [Habilitar informações de monitoramento de desempenho](tutorial-qds-sql-server.md)
+  - [Habilitar o insight de uso do espaço de tabela](tutorial-table-space-sql-server.md)
 
 
-## <a name="sql-queries"></a>Consultas SQL 
+## <a name="sql-queries"></a>Consultas SQL
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] tenta evitar introduzir ainda outro usuário de idioma ou com uso intenso de interface para que ele tenta usar o T-SQL tanto quanto possível com a configuração mínima do JSON. Configurar os widgets de Insights com o T-SQL aproveita o incontáveis número de fontes de consultas T-SQL úteis que podem ser ativadas em widgets criteriosos existentes.
 

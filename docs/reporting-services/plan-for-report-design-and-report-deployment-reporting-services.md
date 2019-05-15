@@ -2,18 +2,18 @@
 title: Planejar o design e a implantação de relatório | Reporting Services | Microsoft Docs
 ms.date: 09/12/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0910de2e41c28ea5faf61106e2fabb7d507d60e2
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 019a76f0df9884f788cb11de38ea14fdc723e701
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814229"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503690"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Planejar a criação e implantação de relatórios | Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece várias abordagens para criar e implantar relatórios paginados. Saiba como planejar ambientes de criação de relatório e de servidor de relatório que funcionam juntos.
@@ -51,8 +51,12 @@ Este tópico apresenta uma visão geral do suporte para definição de relatóri
 -   **Construtor de Relatórios:** salve um relatório no servidor de relatório do Construtor de Relatórios.  
   
 -   **Portal da Web:** carregue um relatório em um servidor de relatório de modo nativo do [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)].  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
 -   **SharePoint:** carregue um relatório em um site do SharePoint configurado com um servidor de relatório do modo do SharePoint.  
+
+::: moniker-end
   
 -   **Programaticamente:** publique programaticamente um relatório usando as interfaces API SOAP em um servidor de relatório. Para obter mais informações, consulte [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md).  
   
@@ -66,7 +70,13 @@ Este tópico apresenta uma visão geral do suporte para definição de relatóri
   
  Quando você carrega ou publica uma definição de relatório ou atualiza um servidor de relatório que contém os relatórios existentes, o servidor de relatório preserva a definição de relatório no formato original. **No primeiro uso**, o servidor de relatório atualiza o relatório no banco de dados do servidor de relatório para um formato binário preservado para exibições subsequentes. A própria definição de relatório (.rdl) não é atualizada.  
   
- Você pode extrair do servidor de relatório uma cópia somente leitura do arquivo de definição de relatório (.rdl). Em um servidor de relatório de modo nativo, procure o [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], selecione o relatório e clique em **Baixar**. Em uma implantação do modo do SharePoint, vá para a biblioteca de documentos, selecione o relatório e clique em **Baixar uma Cópia**.  
+ Você pode extrair do servidor de relatório uma cópia somente leitura do arquivo de definição de relatório (.rdl). Em um servidor de relatório de modo nativo, procure o [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], selecione o relatório e clique em **Baixar**. 
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
+Em uma implantação do modo do SharePoint, vá para a biblioteca de documentos, selecione o relatório e clique em **Baixar uma Cópia**.  
+
+::: moniker-end
   
  Para atualizar a definição de relatório, é necessário abrir o relatório em um ambiente de criação de relatório, como SQL Server Data Tools ou Construtor de Relatórios, e salvá-lo.  
   
