@@ -1,17 +1,17 @@
 ---
 title: srv_senddone (API de Procedimento Armazenado Estendido) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/04/2017
-ms.prod: sql
-ms.prod_service: database-engine
+ms.date: 04/27/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: stored-procedures
 ms.topic: reference
-apiname:
+api_name:
 - srv_senddone
-apilocation:
+api_location:
 - opends60.dll
-apitype: DLLExport
+topic_type:
+- apiref
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -28,7 +28,6 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "62745517"
 ---
 # <a name="srvsenddone-extended-stored-procedure-api"></a>srv_senddone (API de procedimento armazenado estendido)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use a Integração CLR.  
