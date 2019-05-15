@@ -11,15 +11,15 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], Help
 - SQL Server Management Studio Help [SQL Server], menu items
 ms.assetid: 5b8b2e45-bee6-42c8-93d6-31432f4d5699
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 419ac5b4cc088d379d21dc868f057955afc49ea7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9f5418312a86caa9c295400265c399eff9ce06d
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717224"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090069"
 ---
 # <a name="sql-server-management-studio-menu-help"></a>Ajuda do menu do SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
